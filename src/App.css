@@ -5490,7 +5490,7 @@ see layouts/panel
   background-color: white; }
 
 .fd-badge, .fd-label, .fd-tag,
-[class*='fd-button'], [class*='sap-icon'], [class*='fd-identifier'], [class*='fd-image'] {
+[class*='fd-button'], [class*='sap-icon'], [class*='fd-identifier'], [class*='fd-image'], [class*='fd-form'] {
   margin-right: 10px; }
 
 .fd-button--grouped {

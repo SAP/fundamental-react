@@ -7,6 +7,7 @@ import { AlertComponent } from './Alert/Alert.Component'
 import { BadgeComponent } from './Badge/Badge.Component'
 import { ButtonComponent } from './Button/Button.Component'
 import { DropdownComponent } from './Dropdown/Dropdown.Component'
+import { FormsComponent } from './Forms/Forms.Component'
 import { IconComponent } from './Icon/Icon.Component'
 import { IdentifierComponent } from './Identifier/Identifier.Component'
 import { ImageComponent } from './Image/Image.Component'
@@ -26,6 +27,7 @@ export default class Routes extends Component {
                 { url: '/badge', name: 'Badge and Label', component: BadgeComponent },
                 { url: '/button', name: 'Button', component: ButtonComponent },
                 { url: '/dropdown', name: 'Dropdown', component: DropdownComponent },
+                { url: '/forms', name: 'Forms', component: FormsComponent },
                 { url: '/icon', name: 'Icon', component: IconComponent },
                 { url: '/identifier', name: 'Identifier', component: IdentifierComponent },
                 { url: '/image', name: 'Image', component: ImageComponent },
