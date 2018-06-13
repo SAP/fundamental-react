@@ -5,6 +5,7 @@ import '../../node_modules/fundamental-ui/scss/components/button.scss';
 export class Dropdown extends Component {
     constructor(props) {
         super(props);
+        this.handleDropdown = this.handleDropdown.bind(this);
         this.state = {
             isExpanded: false,
             isContextual: false
