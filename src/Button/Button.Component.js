@@ -60,7 +60,9 @@ const buttonGroupCode = `<ButtonGroup>
                     { name: 'semantic', description: 'String - Semantic buttons. Semantic modifiers include \'positive\' and \'negative\'. Leave empty for no modifier.' },
                     { name: 'size', description: 'String - The size of the button. Options include \'xs\', \'s\', \'compact\', \'default\', and \'l\'. Leave empty for default.' },
                     { name: 'glyph', description: 'String - The icon to include in the button. See the icon page for the list of icons.' },
-                    { name: 'state', description: 'String - The state of the button. Options include \'normal\', \'selected\', and \'disabled\'. Leave empty for normal.' }
+                    { name: 'state', description: 'String - The state of the button. Options include \'normal\', \'selected\', and \'disabled\'. Leave empty for normal.' },
+                    { name: 'typeAttr', description: 'String - Specifies the type attribute for the button element. Options include \'button\', \'submit\', and \'reset\'.' },
+                    { name: 'onclick', description: 'Func - The function that is executed when the button is clicked.' }
 
                 ]} />
 

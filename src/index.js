@@ -13,6 +13,7 @@ import {FormSet, FormItem, FormLabel, FormInput, FormRadio, FormTextarea, FormMe
 import {Icon} from '../src/Icon/Icon'
 import {Identifier} from '../src/Identifier/Identifier'
 import {Image} from '../src/Image/Image'
+import {InputGroup, FormGroup } from '../src/InputGroup/InputGroup'
 import { ListGroup, ListGroupItem, ListGroupItemActions, ListGroupItemCheckbox } from '../src/ListGroup/ListGroup'
 import {Tag} from '../src/Tag/Tag'
 import {Tile, TileContent, TileMedia, TileActions, ProductTile, ProductTileMedia, TileGrid, ProductTileContent}from '../src/Tile/Tile'
@@ -59,6 +60,8 @@ export {
     Icon, 
     Identifier, 
     Image, 
+    InputGroup,
+    FormGroup,
     ListGroup, 
     ListGroupItem, 
     ListGroupItemActions, 

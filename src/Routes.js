@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch, Link } from 'react-router-dom'
 
-import { DemoComponent } from './_Demo/DemoComponent'
 import { ActionBarComponent } from './ActionBar/ActionBar.Component'
 import { AlertComponent } from './Alert/Alert.Component'
 import { BadgeComponent } from './Badge/Badge.Component'
@@ -11,6 +10,7 @@ import { FormsComponent } from './Forms/Forms.Component'
 import { IconComponent } from './Icon/Icon.Component'
 import { IdentifierComponent } from './Identifier/Identifier.Component'
 import { ImageComponent } from './Image/Image.Component'
+import { InputGroupComponent } from './InputGroup/InputGroup.Component'
 import { ListGroupComponent } from './ListGroup/ListGroup.Component'
 import { TagComponent } from './Tag/Tag.Component'
 import { TileComponent } from './Tile/Tile.Component'
@@ -21,7 +21,6 @@ export default class Routes extends Component {
         super(props);
         this.state = {
             routes: [
-                { url: '/', name: 'Demo', component: DemoComponent },
                 { url: '/actionBar', name: 'Action Bar', component: ActionBarComponent },
                 { url: '/alert', name: 'Alert', component: AlertComponent },
                 { url: '/badge', name: 'Badge and Label', component: BadgeComponent },
@@ -31,6 +30,7 @@ export default class Routes extends Component {
                 { url: '/icon', name: 'Icon', component: IconComponent },
                 { url: '/identifier', name: 'Identifier', component: IdentifierComponent },
                 { url: '/image', name: 'Image', component: ImageComponent },
+                { url: '/inputGroup', name: 'Input Group', component: InputGroupComponent },
                 { url: '/listGroup', name: 'List Group', component: ListGroupComponent },
                 { url: '/tag', name: 'Tag', component: TagComponent },
                 { url: '/tile', name: 'Tile', component: TileComponent },
