@@ -7,12 +7,14 @@ import registerServiceWorker from './registerServiceWorker';
 import {ActionBar} from '../src/ActionBar/ActionBar'
 import {Alert} from '../src/Alert/Alert'
 import {Badge, Label} from '../src/Badge/Badge'
+import {Breadcrumb, BreadcrumbItem} from '../src/Breadcrumb/Breadcrumb'
 import {Button, ButtonGroup, ButtonGrouped} from '../src/Button/Button'
 import {Dropdown, DropdownItem, DropdownGroup} from '../src/Dropdown/Dropdown'
 import {FormSet, FormItem, FormLabel, FormInput, FormRadio, FormTextarea, FormMessage, FormSelect, FormFieldset, FormLegend } from '../src/Forms/Forms'
 import {Icon} from '../src/Icon/Icon'
 import {Identifier} from '../src/Identifier/Identifier'
 import {Image} from '../src/Image/Image'
+import {InputGroup, FormGroup } from '../src/InputGroup/InputGroup'
 import { ListGroup, ListGroupItem, ListGroupItemActions, ListGroupItemCheckbox } from '../src/ListGroup/ListGroup'
 import {Tag} from '../src/Tag/Tag'
 import {Tile, TileContent, TileMedia, TileActions, ProductTile, ProductTileMedia, TileGrid, ProductTileContent}from '../src/Tile/Tile'
@@ -40,6 +42,8 @@ export {
     Alert,
     Badge, 
     Label, 
+    Breadcrumb,
+    BreadcrumbItem,
     Button, 
     ButtonGroup,
     ButtonGrouped,
@@ -59,6 +63,8 @@ export {
     Icon, 
     Identifier, 
     Image, 
+    InputGroup,
+    FormGroup,
     ListGroup, 
     ListGroupItem, 
     ListGroupItemActions, 
