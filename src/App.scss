@@ -6,14 +6,24 @@ $fd-icons-path: "../node_modules/fundamental-ui/scss/icons/";
   background-color: white;
 }
 
-.fd-badge, .fd-label, .fd-tag, 
-[class*='fd-button'], [class*='sap-icon'], [class*='fd-identifier'], [class*='fd-image'], [class*='fd-form'] {
-  margin-right: 10px;
+.fd-tile__content {
+  .fd-badge, .fd-label, .fd-tag, 
+  [class*='fd-button'], [class*='fd-identifier'], [class*='fd-image'], [class*='fd-form'] {
+    margin-right: 10px;
+  }
+
+  .fd-button--grouped {
+    margin-right: 0;
+  }
+
+  .fd-input-group {
+    [class*='fd-button'] {
+      margin-right: 0;
+    }
+  }
 }
 
-.fd-button--grouped {
-  margin-right: 0;
-}
+
 
 .docs-component {
   margin-bottom: -28px;
@@ -105,3 +115,10 @@ $fd-icons-path: "../node_modules/fundamental-ui/scss/icons/";
     margin: 12px 0;
   }
 
+input[type=text], input[type=password], 
+input[type=email], input[type=url], 
+input[type=search], input[type=tel], 
+input[type=number], input[type=date], 
+textarea {
+  border-radius: 0;
+}
