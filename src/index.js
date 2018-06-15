@@ -15,7 +15,8 @@ import {Icon} from '../src/Icon/Icon'
 import {Identifier} from '../src/Identifier/Identifier'
 import {Image} from '../src/Image/Image'
 import {InputGroup, FormGroup } from '../src/InputGroup/InputGroup'
-import { ListGroup, ListGroupItem, ListGroupItemActions, ListGroupItemCheckbox } from '../src/ListGroup/ListGroup'
+import {ListGroup, ListGroupItem, ListGroupItemActions, ListGroupItemCheckbox } from '../src/ListGroup/ListGroup'
+import {SideNav, SideNavList, SideNavItem, SideNavGroup} from '../src/SideNavigation/SideNavigation'
 import {Tag} from '../src/Tag/Tag'
 import {Tile, TileContent, TileMedia, TileActions, ProductTile, ProductTileMedia, TileGrid, ProductTileContent}from '../src/Tile/Tile'
 import {Toggle} from '../src/Toggle/Toggle'
@@ -69,6 +70,7 @@ export {
     ListGroupItem, 
     ListGroupItemActions, 
     ListGroupItemCheckbox,
+    SideNav, SideNavList, SideNavItem, SideNavGroup,
     Tag,
     Tile, 
     TileContent, 

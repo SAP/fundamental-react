@@ -5507,6 +5507,9 @@ see layouts/panel
   padding-bottom: 8px;
   border: 1px solid #ccc; }
 
+.fd-side-nav--icons {
+  max-width: 65px; }
+
 .container {
   display: flex;
   justify-content: space-between;
