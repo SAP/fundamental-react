@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Switch, Link } from 'react-router-dom'
 import { ActionBarComponent } from './ActionBar/ActionBar.Component'
 import { AlertComponent } from './Alert/Alert.Component'
 import { BadgeComponent } from './Badge/Badge.Component'
+import { BreadcrumbComponent } from './Breadcrumb/Breadcrumb.Component'
 import { ButtonComponent } from './Button/Button.Component'
 import { DropdownComponent } from './Dropdown/Dropdown.Component'
 import { FormsComponent } from './Forms/Forms.Component'
@@ -24,6 +25,7 @@ export default class Routes extends Component {
                 { url: '/actionBar', name: 'Action Bar', component: ActionBarComponent },
                 { url: '/alert', name: 'Alert', component: AlertComponent },
                 { url: '/badge', name: 'Badge and Label', component: BadgeComponent },
+                { url: '/breadcrumb', name: 'Breadcrumb', component: BreadcrumbComponent },
                 { url: '/button', name: 'Button', component: ButtonComponent },
                 { url: '/dropdown', name: 'Dropdown', component: DropdownComponent },
                 { url: '/forms', name: 'Forms', component: FormsComponent },

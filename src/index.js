@@ -7,6 +7,7 @@ import registerServiceWorker from './registerServiceWorker';
 import {ActionBar} from '../src/ActionBar/ActionBar'
 import {Alert} from '../src/Alert/Alert'
 import {Badge, Label} from '../src/Badge/Badge'
+import {Breadcrumb, BreadcrumbItem} from '../src/Breadcrumb/Breadcrumb'
 import {Button, ButtonGroup, ButtonGrouped} from '../src/Button/Button'
 import {Dropdown, DropdownItem, DropdownGroup} from '../src/Dropdown/Dropdown'
 import {FormSet, FormItem, FormLabel, FormInput, FormRadio, FormTextarea, FormMessage, FormSelect, FormFieldset, FormLegend } from '../src/Forms/Forms'
@@ -41,6 +42,8 @@ export {
     Alert,
     Badge, 
     Label, 
+    Breadcrumb,
+    BreadcrumbItem,
     Button, 
     ButtonGroup,
     ButtonGrouped,
