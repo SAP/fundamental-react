@@ -1,12 +1,12 @@
 import React from 'react'
 import { ActionBar } from '../'
 import { Button, Dropdown, DropdownItem } from '../'
-import { DocsTile, DocsText, Separator, Header, Description, Import, Properties, Playground } from '../'
+import { DocsTile, DocsText, Separator, Header, Description, Import, Properties } from '../'
 
 export const ActionBarComponent = () => {
     const titleActionBarCode = `<ActionBar title="Page Title"/>`
 
-    const mainActionsActionBarCode = `<ActionBar title="Page Title">
+    const mainActionsActionBarCode = `<ActionBar title="Page Title" hasActions={true}>
     <Button type="secondary">Cancel</Button>
     <Button type="main">Save</Button>
 </ActionBar>`

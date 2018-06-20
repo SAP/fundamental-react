@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 export const FormSet = (props) => {
-  const { type, children } = props;
+  const { children } = props;
   return (
     <div className="fd-form__set">{children}</div>
   );
@@ -23,7 +23,7 @@ FormItem.propTypes = {
 export const FormLabel = (props) => {
   const { type, forAttr, labelText, children } = props;
   return (
-    <label className={`fd-form__label${type ? ' is-' + type : ''}`} for={forAttr}>{labelText} {children}</label>
+    <label className={`fd-form__label${type ? ' is-' + type : ''}`} htmlFor={forAttr}>{labelText} {children}</label>
   );
 }
 
@@ -49,7 +49,7 @@ export class FormInput extends Component {
   }
 
   render() {
-    const { type, state, id, placeholder, name, value, disabled, readonly, checked } = this.props;
+    const { type, state, id, placeholder, name, value, disabled, readonly } = this.props;
 
     return (<input className={`fd-form__control${state ? ' is-' + state : ''}`} type={type} id={id} placeholder={placeholder} name={name} value={value} disabled={disabled ? true : ""} readOnly={readonly ? true : ""} />);
   }
@@ -85,16 +85,16 @@ export class FormRadio extends Component {
     let result;
 
     if (isInline) {
-      result = inputs.map(inputItem => <div className={`fd-form__item fd-form__item--check ${isInline ? ' fd-form__item--inline' : ''}`}>
-        <label className="fd-form__label" for={inputItem.id}>
+      result = inputs.map(inputItem => <div className={`fd-form__item fd-form__item--check ${isInline ? ' fd-form__item--inline' : ''}`} key={inputItem.id}>
+        <label className="fd-form__label" htmlFor={inputItem.id}>
           <input className="fd-form__control" type="radio" id={inputItem.id} name={inputItem.name} value={inputItem.value} disabled={disabled ? true : ""} onChange={this.handleChange} checked={this.state.selectedItem === inputItem.id} />
           {inputItem.labelText}
         </label>
       </div>)
     } else {
-      result = inputs.map(inputItem => <div className={`fd-form__item fd-form__item--check ${isInline ? ' fd-form__item--inline' : ''}`}>
+      result = inputs.map(inputItem => <div className={`fd-form__item fd-form__item--check ${isInline ? ' fd-form__item--inline' : ''}`} key={inputItem.id}>
         <input className="fd-form__control" type="radio" id={inputItem.id} name={inputItem.name} value={inputItem.value} disabled={disabled ? true : ""} onChange={this.handleChange} checked={this.state.selectedItem === inputItem.id} />
-        <label className="fd-form__label" for={inputItem.id}>{inputItem.labelText}</label>
+        <label className="fd-form__label" htmlFor={inputItem.id}>{inputItem.labelText}</label>
       </div>)
     }
 
@@ -109,7 +109,7 @@ export class FormRadio extends Component {
 
 
 export const FormTextarea = (props) => {
-  const { id, children } = props;
+  const { children } = props;
   return (
     <textarea className="fd-form__control" id="textarea-1">{children}</textarea>
   );
@@ -155,7 +155,7 @@ export const FormFieldset = (props) => {
 }
 
 export const FormLegend = (props) => {
-  const { legendText, children } = props;
+  const { legendText } = props;
   return (
     <legend className="fd-form__legend">
       {legendText}
