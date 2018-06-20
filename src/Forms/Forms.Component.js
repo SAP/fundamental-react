@@ -281,7 +281,7 @@ export const FormsComponent = () => {
                     <FormItem>
                         <FormLabel forAttr="input-5" labelText="Input with Help Message" />
                         <FormInput type="text" id="input-5"></FormInput>
-                        <span class="fd-form__message fd-form__message--help">
+                        <span className="fd-form__message fd-form__message--help">
                             Pellentesque metus lacus commodo eget justo ut rutrum varius nunc
                         </span>
                     </FormItem>

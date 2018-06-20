@@ -1,6 +1,6 @@
 import React from 'react'
 import { Toggle } from './Toggle'
-import { DocsTile, DocsText, Separator, Header, Description, Import, Properties, Playground } from '../'
+import { DocsTile, DocsText, Separator, Header, Description, Import, Properties } from '../'
 
 export const ToggleComponent = () => {
     const toggleCode = `<Toggle size="small" id="Yj07w605">Small toggle</Toggle>

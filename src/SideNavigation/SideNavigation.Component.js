@@ -1,7 +1,7 @@
 import React from 'react'
 import { } from '../'
 import { DocsTile, DocsText, Separator, Header, Description, Import, Properties } from '../'
-import { SideNav, SideNavList, SideNavItem, SideNavGroup } from '../'
+import { SideNav, SideNavList, SideNavGroup } from '../'
 
 export const SideNavigationComponent = () => {
     const sideNavOneLevelCode = `<SideNav>
@@ -93,7 +93,7 @@ export const SideNavigationComponent = () => {
         <div>
             <Header>Side Navigation</Header>
             <Description>The left navigation can always display or expand/collapse using the menu icon within the global navigation.</Description>
-            <Import module="" path="/react-fundamental/src/" />
+            <Import module="SideNav, SideNavList, SideNavGroup" path="/react-fundamental/src/" />
 
             <Separator />
 

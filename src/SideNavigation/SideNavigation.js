@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { BrowserRouter, Route, Switch, Link } from 'react-router-dom'
+import { BrowserRouter, Link } from 'react-router-dom'
 
 
 export const SideNav = (props) => {
@@ -37,7 +37,6 @@ export class SideNavList extends Component {
             selectedItem: 'item_2',
             itemStates: initialState
         }
-        console.log(this.state.itemStates)
     }
 
     handleSelectChild(e, id) {
@@ -55,7 +54,7 @@ export class SideNavList extends Component {
     }
 
     render() {
-        const { links, children } = this.props
+        const { links } = this.props
         return (
             <BrowserRouter>
                 <ul className="fd-side-nav__list">

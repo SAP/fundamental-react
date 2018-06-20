@@ -1,6 +1,6 @@
 import React from 'react'
 import { Badge, Label } from '../'
-import { DocsTile, DocsText, Separator, Header, Description, Import, Properties, Playground } from '../'
+import { DocsTile, DocsText, Separator, Header, Description, Import, Properties } from '../'
 
 export const BadgeComponent = () => {
     const defaultBadgeCode = `<Badge>Default</Badge>

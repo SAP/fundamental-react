@@ -121,7 +121,7 @@ export class InputGroup extends Component {
                     <div className="fd-input-group">
                         <input className="" type="search" id={inputId} name={inputName} value={this.state.searchValue} placeholder={inputPlaceholder} onChange={this.handleChange} />
                         <span className="fd-input-group__addon fd-input-group__addon--button">
-                            <button class="fd-input-group__button fd-input-group__button--clear" aria-label="Clear" onClick={this.handleClear}></button>
+                            <button className="fd-input-group__button fd-input-group__button--clear" aria-label="Clear" onClick={this.handleClear}></button>
                         </span>
                     </div>
                 );
