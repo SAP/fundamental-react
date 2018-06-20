@@ -1,6 +1,6 @@
 import React from 'react'
 import { Tag } from './Tag'
-import { DocsTile, DocsText, Separator, Header, Description, Import, Properties, Playground } from '../'
+import { DocsTile, DocsText, Separator, Header, Description, Import } from '../'
 
 export const TagComponent = () => {
     const tagCode = `<Tag>Bibendum</Tag>

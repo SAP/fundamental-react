@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { BrowserRouter, Route, Switch, Link } from 'react-router-dom'
+import { BrowserRouter, Link } from 'react-router-dom'
 
 export const Breadcrumb = (props) => {
     const { children } = props;
@@ -12,7 +12,7 @@ export const Breadcrumb = (props) => {
 }
 
 export const BreadcrumbItem = (props) => {
-    const { url, name, children } = props;
+    const { url, name } = props;
     return (
         <BrowserRouter>
             <li className="fd-breadcrumb__item">
