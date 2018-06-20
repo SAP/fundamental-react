@@ -6,7 +6,7 @@ import { DocsTile, DocsText, Separator, Header, Description, Import, Properties,
 export const ActionBarComponent = () => {
     const titleActionBarCode = `<ActionBar title="Page Title"/>`
 
-    const mainActionsActionBarCode = `<ActionBar title="Page Title">
+    const mainActionsActionBarCode = `<ActionBar title="Page Title" hasActions={true}>
     <Button type="secondary">Cancel</Button>
     <Button type="main">Save</Button>
 </ActionBar>`
