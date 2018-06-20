@@ -1,5 +1,47 @@
 @charset "UTF-8";
 @font-face {
+  font-family: '72Condensed';
+  src: url("../node_modules/fundamental-ui/dist/fonts/72/72-Condensed.woff2") format("woff2"), url("../node_modules/fundamental-ui/dist/fonts/72/72-Condensed.woff") format("woff"), url("../node_modules/fundamental-ui/dist/fonts/72/72-Condensed.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: '72Condensed';
+  src: url("../node_modules/fundamental-ui/dist/fonts/72/72-CondensedBold.woff2") format("woff2"), url("../node_modules/fundamental-ui/dist/fonts/72/72-CondensedBold.woff") format("woff"), url("../node_modules/fundamental-ui/dist/fonts/72/72-CondensedBold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal; }
+
+@font-face {
+  font-family: '72';
+  src: url("../node_modules/fundamental-ui/dist/fonts/72/72-Regular.woff2") format("woff2"), url("../node_modules/fundamental-ui/dist/fonts/72/72-Regular.woff") format("woff"), url("../node_modules/fundamental-ui/dist/fonts/72/72-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: '72';
+  src: url("../node_modules/fundamental-ui/dist/fonts/72/72-Italic.woff2") format("woff2"), url("../node_modules/fundamental-ui/dist/fonts/72/72-Italic.woff") format("woff"), url("../node_modules/fundamental-ui/dist/fonts/72/72-Italic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic; }
+
+@font-face {
+  font-family: '72';
+  src: url("../node_modules/fundamental-ui/dist/fonts/72/72-Light.woff2") format("woff2"), url("../node_modules/fundamental-ui/dist/fonts/72/72-Light.woff") format("woff"), url("../node_modules/fundamental-ui/dist/fonts/72/72-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: '72';
+  src: url("../node_modules/fundamental-ui/dist/fonts/72/72-Bold.woff2") format("woff2"), url("../node_modules/fundamental-ui/dist/fonts/72/72-Bold.woff") format("woff"), url("../node_modules/fundamental-ui/dist/fonts/72/72-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal; }
+
+@font-face {
+  font-family: '72';
+  src: url("../node_modules/fundamental-ui/dist/fonts/72/72-BoldItalic.woff2") format("woff2"), url("../node_modules/fundamental-ui/dist/fonts/72/72-BoldItalic.woff") format("woff"), url("../node_modules/fundamental-ui/dist/fonts/72/72-BoldItalic.ttf") format("truetype");
+  font-weight: 700;
+  font-style: italic; }
+
+@font-face {
   font-family: "SAP-icons";
   src: url("../node_modules/fundamental-ui/scss/icons/SAP-icons.woff") format("woff");
   font-weight: normal;
@@ -4805,12 +4847,8 @@ Inspired by line scale spinner from Load Awesome v1.1.0 (http://github.danielcar
     .fd-tag__title+()
 */
 .fd-tag {
-  font-size: 14px;
-  line-height: 1.42857;
-  color: #32363a;
   font-family: '72', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
   font-size: 0.85714rem;
-  line-height: 1.33333;
   font-weight: 400;
   color: #515559;
   background-color: rgba(10, 110, 209, 0.07);
@@ -4818,32 +4856,24 @@ Inspired by line scale spinner from Load Awesome v1.1.0 (http://github.danielcar
   vertical-align: middle;
   display: inline-block;
   padding-left: 8px;
-  padding-right: 8px;
   border-radius: 4px;
   border-width: 1px;
   border-style: solid;
   border-color: transparent;
-  cursor: pointer; }
-  .fd-tag::after {
-    font-family: "SAP-icons";
-    font-style: normal;
-    font-weight: normal;
-    text-align: center;
-    display: inline-block;
-    text-decoration: inherit;
-    text-transform: none;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    speak: none; }
-  .fd-tag::after {
-    content: ""; }
-  .fd-tag::after {
-    font-size: 0.85714rem;
-    line-height: 1; }
-  .fd-tag::after {
-    color: #0a6ed1;
-    margin-left: 4px; }
+  position: relative;
+  padding-right: 17px;
+  cursor: default;
+}
+
+.fd-tag > [class^="sap-icon"] {
+  position: absolute;
+  cursor: pointer;
+}
+
+.fd-tag > .sap-icon--m {
+  top: 3px;
+  right: 3px;
+}
 
 /*
 see layouts/panel-grid

@@ -1,8 +1,14 @@
 import React from 'react';
+import { Icon } from '../Icon/Icon';
+import PropTypes from 'prop-types';
+
 
 export const Tag = (props) => {
-    const { children } = props;
+    const { children, clickHandler } = props;
     return (
-        <span class="fd-tag" role="button">{children}</span>
+        <span className="fd-tag" role="button">
+            {children}
+            <Icon clickHandler={clickHandler} glyph="decline" size="m" />
+        </span>
     );
 }
