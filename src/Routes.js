@@ -13,9 +13,13 @@ import { IdentifierComponent } from './Identifier/Identifier.Component'
 import { ImageComponent } from './Image/Image.Component'
 import { InputGroupComponent } from './InputGroup/InputGroup.Component'
 import { ListGroupComponent } from './ListGroup/ListGroup.Component'
+import { MegaMenuComponent } from './MegaMenu/MegaMenu.Component'
+import { SideNavigationComponent } from './SideNavigation/SideNavigation.Component'
+import { TabsComponent } from './Tabs/Tabs.Component'
 import { TagComponent } from './Tag/Tag.Component'
 import { TileComponent } from './Tile/Tile.Component'
 import { ToggleComponent } from './Toggle/Toggle.Component'
+
 
 export default class Routes extends Component {
     constructor(props) {
@@ -34,6 +38,9 @@ export default class Routes extends Component {
                 { url: '/image', name: 'Image', component: ImageComponent },
                 { url: '/inputGroup', name: 'Input Group', component: InputGroupComponent },
                 { url: '/listGroup', name: 'List Group', component: ListGroupComponent },
+                { url: '/megaMenu', name: 'Mage Menu', component: MegaMenuComponent },
+                { url: '/sideNavigation', name: 'Side Navigation', component: SideNavigationComponent },
+                { url: '/tabs', name: 'Tabs', component: TabsComponent },
                 { url: '/tag', name: 'Tag', component: TagComponent },
                 { url: '/tile', name: 'Tile', component: TileComponent },
                 { url: '/toggle', name: 'Toggle', component: ToggleComponent }

@@ -15,11 +15,13 @@ import {Icon} from '../src/Icon/Icon'
 import {Identifier} from '../src/Identifier/Identifier'
 import {Image} from '../src/Image/Image'
 import {InputGroup, FormGroup } from '../src/InputGroup/InputGroup'
-import { ListGroup, ListGroupItem, ListGroupItemActions, ListGroupItemCheckbox } from '../src/ListGroup/ListGroup'
+import {ListGroup, ListGroupItem, ListGroupItemActions, ListGroupItemCheckbox } from '../src/ListGroup/ListGroup'
+import {MegaMenu, MegaMenuList, MegaMenuGroup} from '../src/MegaMenu/MegaMenu'
+import {SideNav, SideNavList, SideNavItem, SideNavGroup} from '../src/SideNavigation/SideNavigation'
+import {Tabs, TabComponent} from '../src/Tabs/Tabs'
 import {Tag} from '../src/Tag/Tag'
 import {Tile, TileContent, TileMedia, TileActions, ProductTile, ProductTileMedia, TileGrid, ProductTileContent}from '../src/Tile/Tile'
 import {Toggle} from '../src/Toggle/Toggle'
-
 
 import { DocsTile, DocsText } from '../src/documentation/DocsTile/DocsTile'
 import { Separator } from '../src/documentation/Separator/Separator'
@@ -69,6 +71,15 @@ export {
     ListGroupItem, 
     ListGroupItemActions, 
     ListGroupItemCheckbox,
+    MegaMenu, 
+    MegaMenuList, 
+    MegaMenuGroup,
+    SideNav, 
+    SideNavList, 
+    SideNavItem, 
+    SideNavGroup,
+    Tabs,
+    TabComponent,
     Tag,
     Tile, 
     TileContent, 

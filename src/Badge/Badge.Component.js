@@ -1,6 +1,6 @@
 import React from 'react'
 import { Badge, Label } from '../'
-import { DocsTile, DocsText, Separator, Header, Description, Import, Properties, Playground } from '../'
+import { DocsTile, DocsText, Separator, Header, Description, Import, Properties } from '../'
 
 export const BadgeComponent = () => {
     const defaultBadgeCode = `<Badge>Default</Badge>
@@ -41,7 +41,7 @@ export const BadgeComponent = () => {
             <Properties type="Inputs" properties=
                 {[
                     { name: 'type', description: 'String - The type indicates the status of the badge/label. Options include \'default\', \'success\', \'warning\', and \'error\'. Leave empty for default.' },
-                    { name: 'modifier', description: 'String - Modifiers can be \'pill\' and \filled\'. Leave empty for normal.' }
+                    { name: 'modifier', description: 'String - Modifiers can be \'pill\' and \'filled\'. Leave empty for normal.' }
                 ]} />
 
             <Separator />

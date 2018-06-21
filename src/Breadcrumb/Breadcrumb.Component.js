@@ -1,7 +1,6 @@
 import React from 'react'
 import { Breadcrumb, BreadcrumbItem } from '../'
-import { DocsTile, DocsText, Separator, Header, Description, Import, Properties, Playground } from '../'
-import { BrowserRouter, Route, Switch, Link } from 'react-router-dom'
+import { DocsTile, DocsText, Separator, Header, Description, Import } from '../'
 
 export const BreadcrumbComponent = () => {
     const breadcrumbCode = `<Breadcrumb>
