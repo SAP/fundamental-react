@@ -35,10 +35,10 @@ export default class Routes extends Component {
                 { url: '/image', name: 'Image', component: ImageComponent },
                 { url: '/inputGroup', name: 'Input Group', component: InputGroupComponent },
                 { url: '/listGroup', name: 'List Group', component: ListGroupComponent },
+                { url: '/tabs', name: 'Tabs', component: TabsComponent },
                 { url: '/tag', name: 'Tag', component: TagComponent },
                 { url: '/tile', name: 'Tile', component: TileComponent },
-                { url: '/toggle', name: 'Toggle', component: ToggleComponent },
-                { url: '/tabs', name: 'Tabs', component: TabsComponent }
+                { url: '/toggle', name: 'Toggle', component: ToggleComponent }
             ]
         }
     }
