@@ -15,10 +15,11 @@ import { InputGroupComponent } from './InputGroup/InputGroup.Component'
 import { ListGroupComponent } from './ListGroup/ListGroup.Component'
 import { MegaMenuComponent } from './MegaMenu/MegaMenu.Component'
 import { SideNavigationComponent } from './SideNavigation/SideNavigation.Component'
+import { TabsComponent } from './Tabs/Tabs.Component'
 import { TagComponent } from './Tag/Tag.Component'
 import { TileComponent } from './Tile/Tile.Component'
 import { ToggleComponent } from './Toggle/Toggle.Component'
-import { TabsComponent } from './Tabs/Tabs.Component'
+
 
 export default class Routes extends Component {
     constructor(props) {
