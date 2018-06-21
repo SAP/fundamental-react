@@ -24,7 +24,10 @@ $fd-fonts-path: "../node_modules/fundamental-ui/dist/fonts/";
   }
 }
 
-
+.fd-tabs__content {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
 
 .docs-component {
   margin-bottom: -28px;

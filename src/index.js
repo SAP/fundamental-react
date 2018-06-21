@@ -19,7 +19,7 @@ import { ListGroup, ListGroupItem, ListGroupItemActions, ListGroupItemCheckbox }
 import {Tag} from '../src/Tag/Tag'
 import {Tile, TileContent, TileMedia, TileActions, ProductTile, ProductTileMedia, TileGrid, ProductTileContent}from '../src/Tile/Tile'
 import {Toggle} from '../src/Toggle/Toggle'
-
+import {Tabs, TabComponent} from '../src/Tabs/Tabs'
 
 import { DocsTile, DocsText } from '../src/documentation/DocsTile/DocsTile'
 import { Separator } from '../src/documentation/Separator/Separator'
@@ -69,6 +69,8 @@ export {
     ListGroupItem, 
     ListGroupItemActions, 
     ListGroupItemCheckbox,
+    Tabs,
+    TabComponent,
     Tag,
     Tile, 
     TileContent, 
