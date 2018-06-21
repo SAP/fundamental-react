@@ -12,7 +12,7 @@ export const ActionBar = (props) => {
             </div>
             {
                 hasActions ? (
-                    <div class="fd-action-bar__actions">
+                    <div className="fd-action-bar__actions">
                 { children }
                     </div>
                 ) : null

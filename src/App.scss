@@ -36,6 +36,12 @@ $fd-fonts-path: "../node_modules/fundamental-ui/dist/fonts/";
   border-bottom-right-radius: 0;
   padding-bottom: 8px;
   border: 1px solid #ccc;
+
+
+}
+
+.fd-side-nav--icons {
+  max-width: 65px;
 }
 
 .container{
@@ -125,4 +131,8 @@ input[type=search], input[type=tel],
 input[type=number], input[type=date], 
 textarea {
   border-radius: 0;
+}
+
+.fd-side-nav {
+  max-width: 250px;
 }
