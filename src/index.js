@@ -9,7 +9,7 @@ import {Alert} from '../src/Alert/Alert'
 import {Badge, Label} from '../src/Badge/Badge'
 import {Breadcrumb, BreadcrumbItem} from '../src/Breadcrumb/Breadcrumb'
 import {Button, ButtonGroup, ButtonGrouped} from '../src/Button/Button'
-import {Dropdown, DropdownItem, DropdownGroup} from '../src/Dropdown/Dropdown'
+import {Dropdown, DropdownList, DropdownGroup} from '../src/Dropdown/Dropdown'
 import {FormSet, FormItem, FormLabel, FormInput, FormRadio, FormTextarea, FormMessage, FormSelect, FormFieldset, FormLegend } from '../src/Forms/Forms'
 import {Icon} from '../src/Icon/Icon'
 import {Identifier} from '../src/Identifier/Identifier'
@@ -50,7 +50,7 @@ export {
     ButtonGroup,
     ButtonGrouped,
     Dropdown, 
-    DropdownItem, 
+    DropdownList, 
     DropdownGroup, 
     FormSet, 
     FormItem, 
