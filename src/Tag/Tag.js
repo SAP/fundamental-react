@@ -6,9 +6,8 @@ import PropTypes from 'prop-types';
 export const Tag = (props) => {
     const { children, clickHandler } = props;
     return (
-        <span className="fd-tag" role="button">
+        <span className="fd-tag" role="button" onClick={clickHandler}>
             {children}
-            <Icon clickHandler={clickHandler} glyph="decline" size="m" />
         </span>
     );
 }
