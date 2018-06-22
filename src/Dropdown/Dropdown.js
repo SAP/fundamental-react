@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { BrowserRouter, Link } from 'react-router-dom'
 import '../../node_modules/fundamental-ui/scss/components/button.scss';
 
 export class Dropdown extends Component {
@@ -32,11 +33,9 @@ export class Dropdown extends Component {
                     )}
                 {
                     !!isExpanded && state !== 'disabled' ?
-                        <nav className="fd-dropdown__menu">
-                            <ul className="fd-dropdown__list">
-                                {children}
-                            </ul>
-                        </nav>
+                        (<nav className="fd-dropdown__menu">
+                            {children}
+                        </nav>)
                         : null
                 }
             </div>
@@ -52,18 +51,34 @@ Dropdown.propTypes = {
     isContextual: PropTypes.bool
 }
 
-export class DropdownItem extends Component {
+export class DropdownList extends Component {
+
+    constructor(props) {
+        super(props)
+    }
+
     render() {
-        const { link, text } = this.props;
+        const { links } = this.props;
         return (
-            <li><a href={link} className="fd-dropdown__item">{text}</a></li>
+            <BrowserRouter>
+                <ul className="fd-dropdown__list">
+                    {
+                        links.map(link => {
+                            return (
+                                <li className="fd-side-nav__item" key={link.id} >
+                                    <Link className="fd-dropdown__item" to={{ pathname: link.url }} >{link.name}</Link>
+                                </li>
+                            )
+                        })
+                    }
+
+                </ul>
+            </BrowserRouter>
         );
     }
 }
 
-DropdownItem.propTypes = {
-    link: PropTypes.string.isRequired,
-    text: PropTypes.string.isRequired
+DropdownList.propTypes = {
 }
 
 export class DropdownGroup extends Component {

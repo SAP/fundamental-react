@@ -1,6 +1,6 @@
 import React from 'react'
 import { ActionBar } from '../'
-import { Button, Dropdown, DropdownItem } from '../'
+import { Button, Dropdown, DropdownList } from '../'
 import { DocsTile, DocsText, Separator, Header, Description, Import, Properties } from '../'
 
 export const ActionBarComponent = () => {
@@ -13,9 +13,13 @@ export const ActionBarComponent = () => {
 
     const severalActionsActionBarCode = `<ActionBar title="Page Title" hasActions={true}>
     <Dropdown size="m" isContextual={true}>
-            <DropdownItem link="#" text="Option 1"></DropdownItem>
-            <DropdownItem link="#" text="Option 2"></DropdownItem>
-            <DropdownItem link="#" text="Option 3"></DropdownItem>
+        <DropdownList links=
+            {[
+                { id: 'item_1', url: '#', name: 'Option 1' },
+                { id: 'item_2', url: '#', name: 'Option 2' },
+                { id: 'item_3', url: '#', name: 'Option 3' }
+            ]}>
+        </DropdownList>
     </Dropdown>
 </ActionBar>`
 
@@ -65,9 +69,13 @@ export const ActionBarComponent = () => {
             <DocsTile>
                 <ActionBar title="Page Title" hasActions={true}>
                     <Dropdown size="m" isContextual={true}>
-                            <DropdownItem link="#" text="Option 1"></DropdownItem>
-                            <DropdownItem link="#" text="Option 2"></DropdownItem>
-                            <DropdownItem link="#" text="Option 3"></DropdownItem>
+                        <DropdownList links=
+                            {[
+                                { id: 'item_1', url: '#', name: 'Option 1' },
+                                { id: 'item_2', url: '#', name: 'Option 2' },
+                                { id: 'item_3', url: '#', name: 'Option 3' }
+                            ]}>
+                        </DropdownList>
                     </Dropdown>
                 </ActionBar>
             </DocsTile>

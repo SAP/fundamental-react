@@ -1,6 +1,6 @@
 import React from 'react'
 import { Tile, TileContent, TileMedia, TileActions, ProductTile, ProductTileContent, ProductTileMedia, TileGrid, Image, Identifier } from '../'
-import { Dropdown, DropdownItem } from '../'
+import { Dropdown, DropdownList } from '../'
 import { DocsTile, DocsText, Separator, Header, Description, Import, Properties } from '../'
 
 export const TileComponent = () => {
@@ -35,13 +35,17 @@ export const TileComponent = () => {
     </TileContent>
 </Tile>`
 
-const actionsTileCode = `<Tile>
+    const actionsTileCode = `<Tile>
     <TileContent title="Tile Title"></TileContent>
     <TileActions>
         <Dropdown size="m" isContextual={true}>
-            <DropdownItem link="#" text="Option 1"></DropdownItem>
-            <DropdownItem link="#" text="Option 2"></DropdownItem>
-            <DropdownItem link="#" text="Option 3"></DropdownItem>
+            <DropdownList links=
+                {[
+                    { id: 'item_1', url: '#', name: 'Option 1' },
+                    { id: 'item_2', url: '#', name: 'Option 2' },
+                    { id: 'item_3', url: '#', name: 'Option 3' }
+                ]}>
+            </DropdownList>
         </Dropdown>
     </TileActions>
 </Tile>`
@@ -102,21 +106,21 @@ const actionsTileCode = `<Tile>
             <Header>Tile and Tile Grid</Header>
             <Description>A Tile component can be used to display information in a simple container format. A collection of tile can be displayed using <code>fd-tile-grid</code> </Description>
             <Import module="Tile, TileContent, TileMedia, TileActions, ProductTile, ProductTileContent, ProductTileMedia, TileGrid" path="/react-fundamental/src/" />
-           
-            <Separator />
-            
-            <Properties type="Inputs" properties=
-            {[
-                {name: 'title', description: 'String - the title of the Tile Content'}, 
-                {name: 'isButton', description: 'Bool - when set to true, renders the tile as a button.'}, 
-                {name: 'disabled', description: 'Bool - when set to true, disables the tile.'}, 
-                {name: 'image', description: 'String (required) - url of the image used in Product Tile.'}, 
-                {name: 'rowSpan', description: 'Number - the number of rows the tile covers.'}, 
-                {name: 'columnSpan', description: 'Number - the number of columns the tile covers.'}, 
-                {name: 'colorAccent', description: 'Number - applies a background color. Options include numbers from 1 to 9.'}
 
-            ]}/>
-            
+            <Separator />
+
+            <Properties type="Inputs" properties=
+                {[
+                    { name: 'title', description: 'String - the title of the Tile Content' },
+                    { name: 'isButton', description: 'Bool - when set to true, renders the tile as a button.' },
+                    { name: 'disabled', description: 'Bool - when set to true, disables the tile.' },
+                    { name: 'image', description: 'String (required) - url of the image used in Product Tile.' },
+                    { name: 'rowSpan', description: 'Number - the number of rows the tile covers.' },
+                    { name: 'columnSpan', description: 'Number - the number of columns the tile covers.' },
+                    { name: 'colorAccent', description: 'Number - applies a background color. Options include numbers from 1 to 9.' }
+
+                ]} />
+
             <Separator />
 
 
@@ -171,9 +175,13 @@ const actionsTileCode = `<Tile>
                     </TileContent>
                     <TileActions>
                         <Dropdown size="m" isContextual={true}>
-                            <DropdownItem link="#" text="Option 1"></DropdownItem>
-                            <DropdownItem link="#" text="Option 2"></DropdownItem>
-                            <DropdownItem link="#" text="Option 3"></DropdownItem>
+                            <DropdownList links=
+                                {[
+                                    { id: 'item_1', url: '#', name: 'Option 1' },
+                                    { id: 'item_2', url: '#', name: 'Option 2' },
+                                    { id: 'item_3', url: '#', name: 'Option 3' }
+                                ]}>
+                            </DropdownList>
                         </Dropdown>
                     </TileActions>
                 </Tile>
