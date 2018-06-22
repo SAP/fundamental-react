@@ -95,6 +95,10 @@ $fd-fonts-path: "../node_modules/fundamental-ui/dist/fonts/";
     display: block;
   }
   
+  .nav-item--selected {
+    border-left: 6px solid #2fd0c8;
+  }
+
   .nav-item:hover,
   .nav-item--active {
     color: #424e5a;
