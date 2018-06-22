@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Route, Switch, Link } from 'react-router-dom'
+import { BrowserRouter, Route, Switch, Link, NavLink } from 'react-router-dom'
 
 import { ActionBarComponent } from './ActionBar/ActionBar.Component'
 import { AlertComponent } from './Alert/Alert.Component'
@@ -59,7 +59,7 @@ export default class Routes extends Component {
                             {
                                 this.state.routes.map(route => {
                                     return (
-                                        <Link className="nav-item" to={{ pathname: route.url }} key={route.url}>{route.name}</Link>
+                                        <NavLink className="nav-item" to={{ pathname: route.url }} key={route.url} activeClassName="nav-item--selected">{route.name}</NavLink>
                                     )
                                 })
                             }
