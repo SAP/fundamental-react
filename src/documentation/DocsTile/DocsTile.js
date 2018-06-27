@@ -1,4 +1,6 @@
 import React from 'react';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import {googlecode} from 'react-syntax-highlighter/styles/hljs';
 
 export const DocsTile = (props) => {
     const docsTileStyle = {
@@ -30,6 +32,6 @@ export const DocsText = (props) => {
     const { children } = props;
 
     return (
-        <pre style={docsTextStyle}>{children}</pre>
+        <pre style={docsTextStyle}><SyntaxHighlighter language='html' style={googlecode}>{children}</SyntaxHighlighter></pre>
     );
 }
