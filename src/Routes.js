@@ -20,7 +20,7 @@ import { TabsComponent } from './Tabs/Tabs.Component'
 import { TagComponent } from './Tag/Tag.Component'
 import { TileComponent } from './Tile/Tile.Component'
 import { ToggleComponent } from './Toggle/Toggle.Component'
-
+import { TreeComponent } from './Tree/Tree.Component'
 
 export default class Routes extends Component {
     constructor(props) {
@@ -45,7 +45,8 @@ export default class Routes extends Component {
                 { url: '/tabs', name: 'Tabs', component: TabsComponent },
                 { url: '/tag', name: 'Tag', component: TagComponent },
                 { url: '/tile', name: 'Tile', component: TileComponent },
-                { url: '/toggle', name: 'Toggle', component: ToggleComponent }
+                { url: '/toggle', name: 'Toggle', component: ToggleComponent },
+                { url: '/tree', name: 'Tree', component: TreeComponent }
             ]
         }
     }
