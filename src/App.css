@@ -5499,6 +5499,10 @@ see layouts/panel
 .fd-tile__content .fd-input-group [class*='fd-button'] {
   margin-right: 0; }
 
+.fd-tabs__content {
+  padding-top: 10px;
+  padding-bottom: 10px; }
+
 .docs-component {
   margin-bottom: -28px;
   border-radius: 4px;
