@@ -18,6 +18,7 @@ import {InputGroup, FormGroup } from '../src/InputGroup/InputGroup'
 import {ListGroup, ListGroupItem, ListGroupItemActions, ListGroupItemCheckbox } from '../src/ListGroup/ListGroup'
 import {MegaMenu, MegaMenuList, MegaMenuGroup} from '../src/MegaMenu/MegaMenu'
 import {SideNav, SideNavList, SideNavItem, SideNavGroup} from '../src/SideNavigation/SideNavigation'
+import {Table} from '../src/Table/Table'
 import {Tabs, TabComponent} from '../src/Tabs/Tabs'
 import {Tag} from '../src/Tag/Tag'
 import {Tile, TileContent, TileMedia, TileActions, ProductTile, ProductTileMedia, TileGrid, ProductTileContent}from '../src/Tile/Tile'
@@ -78,6 +79,7 @@ export {
     SideNavList, 
     SideNavItem, 
     SideNavGroup,
+    Table,
     Tabs,
     TabComponent,
     Tag,
