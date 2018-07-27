@@ -23,6 +23,7 @@ import {Tabs, TabComponent} from '../src/Tabs/Tabs'
 import {Tag} from '../src/Tag/Tag'
 import {Tile, TileContent, TileMedia, TileActions, ProductTile, ProductTileMedia, TileGrid, ProductTileContent}from '../src/Tile/Tile'
 import {Toggle} from '../src/Toggle/Toggle'
+import {Tree} from '../src/Tree/Tree'
 
 import { DocsTile, DocsText } from '../src/documentation/DocsTile/DocsTile'
 import { Separator } from '../src/documentation/Separator/Separator'
@@ -91,7 +92,8 @@ export {
     ProductTileMedia, 
     TileGrid, 
     ProductTileContent,
-    Toggle
+    Toggle,
+    Tree
 } 
 
 ReactDOM.render(<App />, document.getElementById('root'));

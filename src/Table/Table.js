@@ -18,19 +18,18 @@ export const Table = (props) => {
             <tbody>
                 {
                     tableData.map(row => {
-                        console.log(typeof(row));
-                            return (
-                                <tr>
-                                    {
-                                        row.rowData.map(rowData => {
-                                            return (
-                                                <td>{rowData}</td>
-                                            )
-                                        })
-                                    }
-    
-                                </tr>
-                            )
+                        return (
+                            <tr>
+                                {
+                                    row.rowData.map(rowData => {
+                                        return (
+                                            <td>{rowData}</td>
+                                        )
+                                    })
+                                }
+
+                            </tr>
+                        )
                     })
                 }
             </tbody>
@@ -40,21 +39,5 @@ export const Table = (props) => {
 Table.propTypes = {
     icons: PropTypes.bool
 }
-
-// export class TableList extends Component {
-//     constructor(props) {
-//         super(props)
-
-//     }
-
-//     render() {
-//         const { children } = this.props
-//         return (
-//             <div>
-//             {children}
-//         </div>
-//         );
-//     }
-// }
 
 
