@@ -4,7 +4,97 @@ import { DocsTile, DocsText, Separator, Header, Description, Import, Properties 
 import { Tree, TreeList } from '../'
 
 export const TreeComponent = () => {
-    const treeCode = ``
+    const treeCode = `headers={['Column Header', 'Column Header 1 ', 'Column Header 2', 'Status']}
+    treeData={[
+        {
+            id: '1', hasChildren: true,
+            values: ['First Level', 'Data Col 2', 'Data Col 3', 'INACTIVE'],
+            children: [
+                {
+                    id: '2', hasChildren: true,
+                    values: ['Child 1', 'Data Col 2', 'Data Col 3', 'INACTIVE'],
+                    children: [
+                        {
+                            id: '3', hasChildren: true,
+                            values: ['Grandchild 1', 'Data Col 2', 'Data Col 3', 'INACTIVE'],
+                            children: [
+                                {
+                                    id: '4', hasChildren: false,
+                                    values: ['GreatGrandchild 1', 'Data Col 2', 'Data Col 3', 'INACTIVE']
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    id: '7', hasChildren: false,
+                    values: ['Child 2', 'Data Col 2', 'Data Col 3', 'INACTIVE']
+                }
+            ]
+        },
+
+
+
+        {
+            id: '8', hasChildren: true,
+            values: ['Row 2', 'Data Col 2', 'Data Col 3', 'DEFAULT'],
+            children: [
+                {
+                    id: '9', hasChildren: false,
+                    values: ['Child 1', 'Data Col 2', 'Data Col 3', 'INACTIVE'],
+                },
+                {
+                    id: '10', hasChildren: false,
+                    values: ['Child 2', 'Data Col 2', 'Data Col 3', 'INACTIVE']
+                }
+            ]
+        },
+
+
+
+        {
+            id: '11', hasChild: true,
+            values: ['Row 3', 'Data Col 2', 'Data Col 3', 'INACTIVE']
+        },
+
+        {
+            id: '12', hasChildren: true,
+            values: ['Row 4', 'Data Col 2', 'Data Col 3', 'INACTIVE'],
+            children: [
+                {
+                    id: '13', hasChildren: false,
+                    values: ['Child 1', 'Data Col 2', 'Data Col 3', 'INACTIVE'],
+                }
+            ]
+        }
+    ]}`
+
+    const treeCodeUrl = `headers={['Column Header', 'Column Header 1 ', 'Column Header 2', 'Status']}
+    treeData={[
+        {
+            id: '1', hasChildren: true,
+            values: ['First Level', ' ', ' ', ' '],
+            children: [
+                {
+                    id: '2', hasChildren: false,
+                    values: [{
+                        display: ''
+                    },{
+                        displayText: 'Google',
+                        linkUrl: 'http://google.com',
+                    },
+                    {
+                        displayText: 'Bing',
+                        linkUrl: 'http://bing.com'
+                    },
+                    {
+                        displayText: 'Yahoo',
+                        linkUrl: 'http://yahoo.com'
+                    }]
+                }
+            ]
+        }
+    ]}`
 
 
     return (
@@ -17,7 +107,8 @@ export const TreeComponent = () => {
 
             <Properties type="Inputs" properties=
                 {[
-                    { name: '', description: '' }
+                    { name: 'headers', description: 'Array of strings for the column headers of the tree' },
+                    { name: 'treeData', description: 'Array of objects that contain several properties, id (the id of the row), values (an array of strings containing data for each column in the row), hasChildren(a boolean value whether the row contains children or not) and children (an array of objects containing additional rows).' }
                 ]} />
 
             <Separator />
@@ -25,22 +116,22 @@ export const TreeComponent = () => {
             <h2>Tree with multiple levels and actions</h2>
             <DocsTile>
                 <Tree
-                    headers={['Column Header', 'Column Header', 'Column Header', 'Status', ' ']}
+                    headers={['Column Header', 'Column Header 1 ', 'Column Header 2', 'Status']}
                     treeData={[
                         {
-                            id: 'R1', hasChildren: true,
+                            id: '1', hasChildren: true,
                             values: ['First Level', 'Data Col 2', 'Data Col 3', 'INACTIVE'],
                             children: [
                                 {
-                                    id: 'R1_Ch1', hasChildren: true,
+                                    id: '2', hasChildren: true,
                                     values: ['Child 1', 'Data Col 2', 'Data Col 3', 'INACTIVE'],
                                     children: [
                                         {
-                                            id: 'R1_GrCh1', hasChildren: true,
+                                            id: '3', hasChildren: true,
                                             values: ['Grandchild 1', 'Data Col 2', 'Data Col 3', 'INACTIVE'],
                                             children: [
                                                 {
-                                                    id: 'R1_GrGrCh1', hasChildren: false,
+                                                    id: '4', hasChildren: false,
                                                     values: ['GreatGrandchild 1', 'Data Col 2', 'Data Col 3', 'INACTIVE']
                                                 }
                                             ]
@@ -48,7 +139,7 @@ export const TreeComponent = () => {
                                     ]
                                 },
                                 {
-                                    id: 'R1_Ch2', hasChildren: false,
+                                    id: '7', hasChildren: false,
                                     values: ['Child 2', 'Data Col 2', 'Data Col 3', 'INACTIVE']
                                 }
                             ]
@@ -57,15 +148,36 @@ export const TreeComponent = () => {
 
 
                         {
-                            id: 'R2', hasChild: false,
-                            values: ['Row 2', 'Data Col 2', 'Data Col 3', 'DEFAULT']
+                            id: '8', hasChildren: true,
+                            values: ['Row 2', 'Data Col 2', 'Data Col 3', 'DEFAULT'],
+                            children: [
+                                {
+                                    id: '9', hasChildren: false,
+                                    values: ['Child 1', 'Data Col 2', 'Data Col 3', 'INACTIVE'],
+                                },
+                                {
+                                    id: '10', hasChildren: false,
+                                    values: ['Child 2', 'Data Col 2', 'Data Col 3', 'INACTIVE']
+                                }
+                            ]
                         },
 
 
 
                         {
-                            id: 'R3', hasChild: true,
+                            id: '11', hasChild: true,
                             values: ['Row 3', 'Data Col 2', 'Data Col 3', 'INACTIVE']
+                        },
+
+                        {
+                            id: '12', hasChildren: true,
+                            values: ['Row 4', 'Data Col 2', 'Data Col 3', 'INACTIVE'],
+                            children: [
+                                {
+                                    id: '13', hasChildren: false,
+                                    values: ['Child 1', 'Data Col 2', 'Data Col 3', 'INACTIVE'],
+                                }
+                            ]
                         }
                     ]}
                 >
@@ -73,18 +185,59 @@ export const TreeComponent = () => {
 
             </DocsTile>
             <DocsText>{treeCode}</DocsText>
+            <Separator />
+
+            <h2>Rich Tree</h2>
+            <Description>This is an example of a tree with rich cells, where the rowData is an array of objects, where each object can have one or both of the following properties:</Description>
+            <Properties type="Properties" properties=
+                {[
+                    { name: 'displayText', description: 'The text to display in the cell. If omitted, the link url will be displayed.' },
+                    { name: 'linkUrl', description: 'If provided, this is the URL the link will navigate to.' }
+
+                ]} />
+             <Properties type="Inputs" properties=
+                {[
+                    { name: 'headers', description: 'Array of strings for the column headers of the tree' },
+                    { name: 'treeData', description: '	Array of objects that contain several properties, id(the id of the row), hasChildren(a boolean value whether the row contains children or not), values (an array of objects containing data for each column in the row), and children (an array of objects containing additional rows).' }
+
+                ]} />
+             <Separator />
+             <DocsTile>
+                <Tree
+
+                    headers={['Column Header', 'Column Header 1 ', 'Column Header 2', 'Status']}
+                    treeData={[
+                        {
+                            id: '1', hasChildren: true,
+                            values: ['First Level', ' ', ' ', ' '],
+                            children: [
+                                {
+                                    id: '2', hasChildren: false,
+                                    values: [{
+                                        display: ''
+                                    },{
+                                        displayText: 'Google',
+                                        linkUrl: 'http://google.com',
+                                    },
+                                    {
+                                        displayText: 'Bing',
+                                        linkUrl: 'http://bing.com'
+                                    },
+                                    {
+                                        displayText: 'Yahoo',
+                                        linkUrl: 'http://yahoo.com'
+                                    }]
+                                }
+                            ]
+                        }
+                    ]}
+                >
+                </Tree>
+
+            </DocsTile>
+            <DocsText>{treeCodeUrl}</DocsText>
 
         </div>
     );
 }
 
-{/* <Dropdown isContextual={true}>
-    <DropdownList links=
-        {[
-            { id: '', url: '#', name: 'Edit' },
-            { id: '', url: '#', name: 'Lock' },
-            { id: '', url: '#', name: 'Duplicate' },
-            { id: '', url: '#', name: 'Delete' }
-        ]}>
-    </DropdownList>
-</Dropdown> */}

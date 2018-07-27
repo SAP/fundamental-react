@@ -1,14 +1,133 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { BrowserRouter, Link } from 'react-router-dom'
-
+import { Dropdown, DropdownList } from '../'
 
 export class Tree extends Component{
 
     constructor(props){
         super(props);
+        this.state = {
+            iStates: [],
+            expandAllClicked: false,
+            numberOfElements: 0
+        }
+        this.openAllList = this.openAllList.bind(this);
+
     }
-    // const { headers, treeData, children } = props
+
+    updateVisibility(selected) {
+        return() => {
+            let modifiedStates = this.state.iStates;
+
+            if(modifiedStates[selected]) {
+                modifiedStates[selected] = false;
+            }
+            else{
+                modifiedStates[selected] = true; 
+            }
+
+            this.setState({
+              iStates: modifiedStates
+            });
+        }
+    }
+
+    openAllList(treeData, e, numberOfElements=0) {
+
+        let modifiedStates = this.state.iStates;
+
+        if(this.state.numberOfElements == 0) {
+            treeData.map(row=>{
+                row.values.map(element=>{
+                    ++numberOfElements;
+                });
+                if (row.hasChildren) {
+                    this.openAllList(row.children, numberOfElements);
+                }
+                return;
+            });
+
+            for(let i = 0; i <= numberOfElements; i++) {
+                if(!this.state.expandAllClicked) {
+                    modifiedStates[i] = true;
+                }
+                else {
+                    modifiedStates[i] = false;
+                }
+            }
+        }
+        else {
+            for(let i = 0; i <= this.state.numberOfElements; i++){
+                if(!this.state.expandAllClicked) {
+                    modifiedStates[i] = true;
+                }
+                else {
+                    modifiedStates[i] = false;
+                }
+            }
+        }
+
+        this.setState({
+            iStates: modifiedStates,
+            expandAllClicked: !this.state.expandAllClicked,
+            numberOfElements: numberOfElements
+        })
+    }
+
+    //Going to loop recursively through each key, until it hits the bottom(when there's no more children)
+    createTreeList(treeData,isChild, depthLevel=0) {
+        const trees = treeData.map(row=>{
+
+            const parent = row.values.map(element=>{
+                //Checks if it has children and is first element
+                if (row.hasChildren & row.values.indexOf(element) === 0) {
+                    //Checks if the element is an object
+                    if (typeof element === 'object') {
+                        return <div className="fd-tree__col fd-tree__col--control"><button className="fd-tree__control" aria-label="expand" aria-controls="inYUX852" onClick={this.updateVisibility(row.id)} aria-pressed={this.state.iStates[row.id]}></button><a href={element.linkUrl} className="fd-has-font-weight-semi">{element.displayText?element.displayText:element.linkUrl}</a></div>
+                    }
+                        return <div className="fd-tree__col fd-tree__col--control"><button className="fd-tree__control" aria-label="expand" aria-controls="inYUX852" onClick={this.updateVisibility(row.id)} aria-pressed={this.state.iStates[row.id]}></button>{element}</div>
+                }
+
+                if(row.values.indexOf(element) === 0){
+                    return <div className="fd-tree__col fd-tree__col--control">{typeof element === 'object'?(<a href={element.linkUrl} className="fd-has-font-weight-semi">{element.displayText?element.displayText:element.linkUrl}</a>):element}</div>
+                }
+                    return <div className="fd-tree__col">{typeof element === 'object'?(<a href={element.linkUrl} className="fd-has-font-weight-semi">{element.displayText?element.displayText:element.linkUrl}</a>):element}</div>
+
+            });
+
+            let tree;
+
+            let displayLevel= "fd-tree__group fd-tree__group--sublevel-" + depthLevel;
+
+            if ((row.hasChildren) && this.state.iStates[row.id]) {
+                    depthLevel += 1;
+                    tree = this.createTreeList(row.children, true, depthLevel);
+            }
+            if (isChild){
+                return  (<ul className={displayLevel} role="group"><ul className="fd-tree-child"><li className="fd-tree__item" role="treeitem" aria-expanded="true" key={row.id}><div className="fd-tree__row">{parent}{<Dropdown isContextual={true}>
+                            <DropdownList links=
+                {[
+                    { id: '', url: '#', name: 'Edit' },
+                    { id: '', url: '#', name: 'Delete' }
+                ]}>
+            </DropdownList>
+            </Dropdown>}</div>{tree}</li></ul></ul>)
+
+            }
+            depthLevel = 0;
+            return (<li className="fd-tree__item" role="treeitem" aria-expanded="true" key={row.id}><div className="fd-tree__row">{parent}{<Dropdown isContextual={true}>
+            <DropdownList links=
+                {[
+                    { id: '', url: '#', name: 'Edit' },
+                    { id: '', url: '#', name: 'Delete' }
+                ]}>
+            </DropdownList>
+            </Dropdown>}</div>{tree}</li>)
+        });
+        
+        return trees
+    }
 
     render() {
         const {headers, treeData, children} = this.props;
@@ -18,6 +137,9 @@ export class Tree extends Component{
                     <div className="fd-tree__row fd-tree__row--header">
                         {
                             headers.map(header => {
+                                if (headers.indexOf(header) == 0) {
+                                    return (<div className="fd-tree__col fd-tree__col--control"><button className="fd-tree__control " aria-label="expand" aria-pressed={this.state.expandAllClicked} onClick={(e) => this.openAllList(treeData, e)}></button>{header}</div>)
+                                }
                                 return (
                                     <div className="fd-tree__col">{header}</div>
                                 )
@@ -25,32 +147,9 @@ export class Tree extends Component{
                         }
                     </div>
                 </div>
-                <ul className="fd-tree" id="" role="tree">
-                {console.log("TreeData")}
-                {console.log(treeData)}
-                    {
-                           treeData.map(row=>{
-                               (row.hasChildren)?(row.children.map(childs=>{
-                                {console.log("==================")}
-                                {console.log("CHILDS ARRAY:")}
-                                {console.log(childs)}
-                                {console.log("==================")}
-                                    <Tree treeData={row}/>
-                                    childs.values.map(element=>{
-                                        return(
-                                        <div className="fd-tree__col">
 
-                                        {console.log("ELEMENT:")}
-                                        {console.log(element)}
-                                        {console.log("==================")}
-                                        {console.log("CHILDS:")}
-                                        {console.log(childs)}
-                                        {element}
-                                        </div>)
-                                    })
-                               })):(null)
-                           })
-                    }
+                <ul className="fd-tree" id="" role="tree">
+                {this.createTreeList(treeData)}
                                     </ul>
                                     </div>
         );
@@ -60,95 +159,3 @@ export class Tree extends Component{
 Tree.propTypes = {
     id: PropTypes.string
 }
-
-// export class TreeList extends Component {
-//     constructor(props) {
-//         super(props)
-//         this.handleSelect = this.handleSelect.bind(this)
-//         this.handleSelectChild = this.handleSelectChild.bind(this)
-
-//         let initialState = []
-
-//         props.links.map(link => {
-//             if (link.hasChild) {
-//                 let id = link.id
-//                 let obj = {}
-
-//                 obj[id] = false
-//                 initialState.push(obj)
-//             }
-//         })
-
-//         this.state = {
-//             selectedItem: 'item_2',
-//             itemStates: initialState
-//         }
-//     }
-
-//     handleSelectChild(e, id) {
-//         this.setState({
-//             selectedItem: id
-//         })
-//     }
-
-//     handleSelect(e, id) {
-
-//         let iStates = Object.assign({}, this.state.itemStates)
-//         iStates[id] = !iStates[id]
-//         this.setState({ itemStates: iStates })
-//         this.setState({ selectedItem: id })
-//     }
-
-//     render() {
-//         const { links } = this.props
-//         return (
-//             <BrowserRouter>
-//                 <ul className="fd-mega-menu__list">
-//                     {
-//                         links.map(link => {
-//                             return (
-//                                 <li className="fd-mega-menu__item" key={link.id} >
-//                                     <Link className={`fd-mega-menu__link${(this.state.selectedItem === link.id) ? ' is-selected' : ''}${link.hasChild ? ' has-child' : ''}${(this.state.itemStates[link.id] && link.hasChild) ? ' is-expanded' : ''}`} to={{ pathname: link.url }} key={link.id} onClick={(e) => this.handleSelect(e, link.id)}>
-//                                         {link.name}
-//                                     </Link>
-//                                     {
-//                                         link.hasChild ? (
-//                                             <ul className="fd-mega-menu__sublist" id={link.id} aria-hidden={!this.state.itemStates[link.id]} aria-expanded={this.state.itemStates[link.id]}>
-//                                                 {
-//                                                     link.child.map(ch => {
-//                                                         return (
-//                                                             <li class="fd-mega-menu__subitem">
-//                                                                 <Link className={`fd-mega-menu__sublink${(this.state.selectedItem === ch.id) ? ' is-selected' : ''}`} to={{ pathname: ch.url }} key={ch.id} onClick={(e) => this.handleSelectChild(e, ch.id)}>
-//                                                                     {ch.name}
-//                                                                 </Link>
-//                                                             </li>
-//                                                         )
-//                                                     })
-//                                                 }
-//                                             </ul>
-//                                         ) : null
-//                                     }
-//                                 </li>
-//                             )
-//                         })
-//                     }
-//                 </ul>
-//             </BrowserRouter>
-//         );
-//     }
-// }
-// TreeList.propTypes = {
-//     links: PropTypes.array.isRequired
-// }
-
-/*
-                                        (row.hasChildren)?(
-                                            row.children.map(childs=>{
-                                            return(
-                                            <div class="fd-tree__row">{
-                                                childs.values.map(elements=>{
-                                                return(
-                                                <div className="fd-tree__col">{elements}</div>)
-                                            })}</div>)
-                                        })):(null)
-                                        */
