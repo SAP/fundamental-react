@@ -19,7 +19,6 @@ export class Tree extends Component{
     updateVisibility(selected) {
         return() => {
             let modifiedStates = this.state.iStates;
-
             if(modifiedStates[selected]) {
                 modifiedStates[selected] = false;
             }
@@ -100,9 +99,8 @@ export class Tree extends Component{
 
             let displayLevel= "fd-tree__group fd-tree__group--sublevel-" + depthLevel;
 
-            if ((row.hasChildren) && this.state.iStates[row.id]) {
-                    depthLevel += 1;
-                    tree = this.createTreeList(row.children, true, depthLevel);
+            if ((row.hasChildren) && (this.state.iStates[row.id])) {
+                    tree = this.createTreeList(row.children, true, depthLevel + 1);
             }
             if (isChild){
                 return  (<ul className={displayLevel} role="group"><ul className="fd-tree-child"><li className="fd-tree__item" role="treeitem" aria-expanded="true" key={row.id}><div className="fd-tree__row">{parent}{<Dropdown isContextual={true}>

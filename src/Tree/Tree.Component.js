@@ -27,7 +27,7 @@ export const TreeComponent = () => {
                     ]
                 },
                 {
-                    id: '7', hasChildren: false,
+                    id: '5', hasChildren: false,
                     values: ['Child 2', 'Data Col 2', 'Data Col 3', 'INACTIVE']
                 }
             ]
@@ -36,15 +36,15 @@ export const TreeComponent = () => {
 
 
         {
-            id: '8', hasChildren: true,
+            id: '6', hasChildren: true,
             values: ['Row 2', 'Data Col 2', 'Data Col 3', 'DEFAULT'],
             children: [
                 {
-                    id: '9', hasChildren: false,
+                    id: '7', hasChildren: false,
                     values: ['Child 1', 'Data Col 2', 'Data Col 3', 'INACTIVE'],
                 },
                 {
-                    id: '10', hasChildren: false,
+                    id: '8', hasChildren: false,
                     values: ['Child 2', 'Data Col 2', 'Data Col 3', 'INACTIVE']
                 }
             ]
@@ -53,16 +53,16 @@ export const TreeComponent = () => {
 
 
         {
-            id: '11', hasChild: true,
+            id: '9', hasChild: true,
             values: ['Row 3', 'Data Col 2', 'Data Col 3', 'INACTIVE']
         },
 
         {
-            id: '12', hasChildren: true,
+            id: '10', hasChildren: true,
             values: ['Row 4', 'Data Col 2', 'Data Col 3', 'INACTIVE'],
             children: [
                 {
-                    id: '13', hasChildren: false,
+                    id: '11', hasChildren: false,
                     values: ['Child 1', 'Data Col 2', 'Data Col 3', 'INACTIVE'],
                 }
             ]
@@ -139,7 +139,7 @@ export const TreeComponent = () => {
                                     ]
                                 },
                                 {
-                                    id: '7', hasChildren: false,
+                                    id: '5', hasChildren: false,
                                     values: ['Child 2', 'Data Col 2', 'Data Col 3', 'INACTIVE']
                                 }
                             ]
@@ -148,15 +148,15 @@ export const TreeComponent = () => {
 
 
                         {
-                            id: '8', hasChildren: true,
+                            id: '6', hasChildren: true,
                             values: ['Row 2', 'Data Col 2', 'Data Col 3', 'DEFAULT'],
                             children: [
                                 {
-                                    id: '9', hasChildren: false,
+                                    id: '7', hasChildren: false,
                                     values: ['Child 1', 'Data Col 2', 'Data Col 3', 'INACTIVE'],
                                 },
                                 {
-                                    id: '10', hasChildren: false,
+                                    id: '8', hasChildren: false,
                                     values: ['Child 2', 'Data Col 2', 'Data Col 3', 'INACTIVE']
                                 }
                             ]
@@ -165,16 +165,16 @@ export const TreeComponent = () => {
 
 
                         {
-                            id: '11', hasChild: true,
+                            id: '9', hasChild: true,
                             values: ['Row 3', 'Data Col 2', 'Data Col 3', 'INACTIVE']
                         },
 
                         {
-                            id: '12', hasChildren: true,
+                            id: '10', hasChildren: true,
                             values: ['Row 4', 'Data Col 2', 'Data Col 3', 'INACTIVE'],
                             children: [
                                 {
-                                    id: '13', hasChildren: false,
+                                    id: '11', hasChildren: false,
                                     values: ['Child 1', 'Data Col 2', 'Data Col 3', 'INACTIVE'],
                                 }
                             ]
