@@ -62,7 +62,7 @@ export default class Routes extends Component {
                             {
                                 this.state.routes.map(route => {
                                     return (
-                                        <NavLink className="nav-item" to={{ pathname: route.url }} key={route.url} activeClassName="nav-item--selected">{route.name}</NavLink>
+                                        <NavLink className="nav-item" to={{ pathname: route.url }} key={route.url} activeClassName="nav-item--active">{route.name}</NavLink>
                                     )
                                 })
                             }
