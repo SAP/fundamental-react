@@ -34,6 +34,29 @@ export const TabsComponent = () => {
             </Tabs>
         </DocsTile>
         <DocsText>{tabscomponentCode}</DocsText>
+
+        <Separator />
+
+        <h2>Playground</h2>
+        <Playground component="tabs" schema= {[
+            {
+                attribute: 'ids',
+                typeOfAttribute: 'lists',
+                enum: ['Tab 1', 'Tab 2', 'Tab 3']
+            },
+            {
+                attribute: 'content',
+                typeOfAttribute: 'listsContent',
+                enum: ['Tab 1', 'Tab 2', 'Tab 3']
+            }
+            ]}>
+                    <Tabs>
+                <TabComponent ids={[     {id : 'Tab 1', url:'#', name: 'Tab 1', content: 'Hello world', disabled: false},
+                                         {id : 'Tab 2', url:'#', name: 'Tab 2', content: 'Hello world 2', disabled: false},
+                                         {id : 'Tab 3', url:'#', name: 'Tab 3', content: 'Hello world 3', disabled: true}]}>
+                </TabComponent>
+            </Tabs>
+</Playground>
         </div>
     );
 }

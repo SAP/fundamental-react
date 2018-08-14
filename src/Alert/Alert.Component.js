@@ -1,6 +1,7 @@
 import React from 'react'
 import { Alert } from '../'
 import { DocsTile, DocsText, Separator, Header, Description, Import, Properties } from '../'
+import { Playground } from '../documentation/Playground/Playground';
 
 export const AlertComponent = () => {
     const defaultAlertCode = `<Alert  dismissable={true} link="#" linkText="link">Default alert with a </Alert>`
@@ -11,7 +12,7 @@ export const AlertComponent = () => {
 </Alert>`
 
     const errorAlertCode = `<Alert type="error"  dismissable={true} link="#" linkText="link">Error message with a </Alert>`
-
+    const json = ''
     return (
         <div>
             <Header>Alert</Header>
@@ -56,12 +57,24 @@ export const AlertComponent = () => {
             <h2>Error Alert</h2>
             <Description>This alert is triggered after the user entered data incorrectly or a system error has occurred. It should interrupt the user. A final action such as Submit cannot be carried out until the user has rectified the error. The user will need to dismiss the message. Apply type="error".</Description>
             <DocsTile>
-                <Alert type="error" dismissable={true} link="#" linkText="link">Error message with a </Alert>
+                <Alert type="error" dismissable={true} link="#" linkText="link" >Error message with a </Alert>
             </DocsTile>
             <DocsText>{errorAlertCode}</DocsText>
 
             <Separator />
 
+            <Separator />
+
+            <h2>Playground</h2>
+            <Playground component="alert" schema= {[{
+                        attribute: 'type',
+                        typeOfAttribute: 'string',
+                        enum: ['default', 'warning', 'error']
+                    }, {attribute: 'dismissable',
+                        typeOfAttribute: 'boolean'
+                    }]}>
+                <Alert type="default" dismissable={false} link="#" linkText="link">Default alert with a </Alert>
+            </Playground>
         </div>
     );
 }

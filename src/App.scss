@@ -140,3 +140,38 @@ textarea {
 .fd-side-nav {
   max-width: 250px;
 }
+
+.row {
+  display: flex;
+}
+
+.col {
+  padding-right: 15px;
+  padding-left: 15px;
+  -webkit-box-flex: 1;
+  flex: 1;
+}
+
+.form-group {
+  max-height: 500px;
+  overflow-y: scroll;
+  display: block;
+  padding: 20px;
+  border: 1px #eee solid;
+}
+
+.schema {
+  display: block;
+  padding: 20px;
+  border: 1px #eee solid;
+}
+
+.form-group-sublevel {
+  display: block;
+  padding: 20px;
+  border: 1px #eee solid;
+}
+
+.tn-form__label {
+  padding-left: 25px;
+}

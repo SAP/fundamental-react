@@ -2,6 +2,7 @@ import React from 'react'
 import { Tile, TileContent, TileMedia, TileActions, ProductTile, ProductTileContent, ProductTileMedia, TileGrid, Image, Identifier } from '../'
 import { Dropdown, DropdownList } from '../'
 import { DocsTile, DocsText, Separator, Header, Description, Import, Properties } from '../'
+import {Playground} from '../'
 
 export const TileComponent = () => {
     const simpleTileCode = `<Tile>
@@ -257,6 +258,30 @@ export const TileComponent = () => {
                 </TileGrid>
             </DocsTile>
             <DocsText>{tileGridCode}</DocsText>
+
+            <Separator />
+
+        <Playground component="tile" schema= {[
+                        {
+                            attribute: 'type',
+                            typeOfAttribute: 'component',
+                            enum: ['simple', 'media', 'product']
+                        },
+                        {
+                            attribute: 'title',
+                            typeOfAttribute: 'string'
+                        },
+                        {
+                            attribute: 'children',
+                            typeOfAttribute: 'string'
+                        }
+            ]}>
+            <Tile>
+                <TileContent title="Tile Title">
+                    <p>Tile Description</p>
+                </TileContent>
+            </Tile>
+        </Playground>
 
         </div>
     );
