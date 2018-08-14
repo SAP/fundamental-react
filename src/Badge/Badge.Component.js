@@ -1,6 +1,7 @@
 import React from 'react'
 import { Badge, Label } from '../'
 import { DocsTile, DocsText, Separator, Header, Description, Import, Properties } from '../'
+import { Playground } from '../documentation/Playground/Playground';
 
 export const BadgeComponent = () => {
     const defaultBadgeCode = `<Badge>Default</Badge>
@@ -93,14 +94,31 @@ export const BadgeComponent = () => {
 
             <Separator />
 
-            {/* <Playground schema =
-                {[
-                    { property: 'type', type: 'string', enum: ['success', 'warning', 'error'] },
-                    { property: 'modifier', type: 'string', enum: ['pill', 'filled'] },
-                    { property: 'color', type: 'number', enum: ['1', '2', '3', '4', '5'] },
-                    { property: 'size', type: 'string', initialValue: 'small' },
-                    { property: 'isButton', type: 'boolean' },
-                ]} /> */}
+
+            <h2>Playground</h2>
+            <Playground component="badge" schema= {[
+                    {
+                        attribute: 'children',
+                        typeOfAttribute: 'string'
+                    },
+                    {
+                        attribute: 'component',
+                        typeOfAttribute: 'string',
+                        enum: ['badge', 'label']
+                    },
+                    {
+                        attribute: 'type',
+                        typeOfAttribute: 'string',
+                        enum: ['default', 'success', 'warning', 'error']
+                    }, 
+                    {
+                        attribute: 'modifier',
+                        typeOfAttribute: 'string',
+                        enum: ['', 'pill', 'filled']
+                    }]}>
+                <Badge type="success" modifier="filled">Default</Badge>
+            </Playground>
+            <Separator />
         </div>
     );
 }
