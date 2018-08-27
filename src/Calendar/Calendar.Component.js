@@ -24,7 +24,9 @@ export const CalendarComponent = () => {
                 {name: 'disableWeekday', description: 'Array Strings - Disables dates of a calendar that match a weekday'},
                 {name: 'disablePastDates', description: 'Bool - Disables dates that comes before today date'},
                 {name: 'disableFutureDates', description: 'Bool - Disables dates that comes after the today date'},
-                {name: 'blockedDates', description: 'Array Dates - Blocks dates that are between in the blocked dates'}
+                {name: 'blockedDates', description: 'Array Dates - Blocks dates that are between in the blocked dates'},
+                {name: 'disabledDates', description: 'Array Dates - Disables dates that are between in the disabled dates'},
+                {name: 'enableRangeSelection', description: 'Bool - Enable to select two dates'}
             ]}/>
 
             <Separator />
