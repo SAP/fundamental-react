@@ -6,6 +6,8 @@ import { AlertComponent } from './Alert/Alert.Component'
 import { BadgeComponent } from './Badge/Badge.Component'
 import { BreadcrumbComponent } from './Breadcrumb/Breadcrumb.Component'
 import { ButtonComponent } from './Button/Button.Component'
+import { CalendarComponent } from './Calendar/Calendar.Component'
+import { DatePickerComponent } from './DatePicker/DatePicker.Component' 
 import { DropdownComponent } from './Dropdown/Dropdown.Component'
 import { FormsComponent } from './Forms/Forms.Component'
 import { IconComponent } from './Icon/Icon.Component'
@@ -32,6 +34,8 @@ export default class Routes extends Component {
                 { url: '/badge', name: 'Badge and Label', component: BadgeComponent },
                 { url: '/breadcrumb', name: 'Breadcrumb', component: BreadcrumbComponent },
                 { url: '/button', name: 'Button', component: ButtonComponent },
+                { url: '/calendar', name: 'Calendar', component: CalendarComponent},
+                { url: '/datepicker', name: 'Date Picker', component: DatePickerComponent},
                 { url: '/dropdown', name: 'Dropdown', component: DropdownComponent },
                 { url: '/forms', name: 'Forms', component: FormsComponent },
                 { url: '/icon', name: 'Icon', component: IconComponent },
