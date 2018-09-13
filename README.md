@@ -49,7 +49,7 @@ Builds the app for production to the `build` folder.
 
 ## Known Issues
 
-Click [here](https://github.com/SAP/fundamental-ngx/issues) to view the current issues.
+Click [here](https://github.com/SAP/fundamental-react/issues) to view the current issues.
 
 ## How to obtain support
 
