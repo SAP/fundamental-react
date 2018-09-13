@@ -1,9 +1,9 @@
 
-# Fundamental-react - React components for [Fundamental UI](https://github.com/SAP/fundamental)
+# Fundamental-react - React.JS components for [Fundamental UI](https://github.com/SAP/fundamental)
 
 ## Description
 
-Fundamental-react is a set of React components implmentation of Fundamental UI library.
+Fundamental-react is a set of React components implementation of Fundamental UI library.
 
 This project is bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
