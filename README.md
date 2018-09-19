@@ -55,6 +55,9 @@ Click [here](https://github.com/SAP/fundamental-react/issues) to view the curren
 
 If you encounter an issue, you can [create a ticket](https://github.com/SAP/fundamental-react/issues)
 
+## Contributing
+
+If you want to contribute, please check the [CONTRIBUTING.md](./CONTRIBUTING.md) documentation for contribution guidelines. 
 
 ## License
 
