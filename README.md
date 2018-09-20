@@ -16,7 +16,7 @@ Some prior knowledge of React is required for using this library.
 
 ## Available Scripts (Associated with Create React App)
 
-### `npm start`
+#### `npm start`
 
 Runs the app in the development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -24,11 +24,11 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will automatically reload on changes.<br>
 Lint errors are shown in the console.
 
-### `npm test`
+#### `npm test`
 
 Launches the test runner in the interactive watch mode.
 
-### `npm run build`
+#### `npm run build`
 
 Builds the app for production to the `build` folder.
 
