@@ -37,7 +37,7 @@ Builds the app for production to the `build` folder.
 
 #### 1. Download Fundamental UI:
 
-`npm install --save @ng-bootstrap/ng-bootstrap@2.2.2 fundamental-ui`
+`npm install --save fundamental-ui`
 
 
 #### 2. Include the Fundamental UI CSS in your React application. In your App.css or App.scss file include the following lines:
