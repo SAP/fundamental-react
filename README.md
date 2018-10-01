@@ -4,7 +4,7 @@
 ## Description
 
 Fundamental-react is a set of [React](https://reactjs.org/) components implementation of [Fundamental UI library](https://sap.github.io/fundamental/). Fundamental-UI is a Design System and HTML/CSS Component Library used to build modern Product User Experiences with the SAP look and feel.
-Fundamental-react is an open source library and it is open for contribution as long as you follow certain rules/guidelines.
+Fundamental-react is an open source library and it is open for contribution as long as you follow certain [rules/guidelines](./CONTRIBUTING.md).
 
 This project is bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
