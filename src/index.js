@@ -6,7 +6,7 @@ import registerServiceWorker from './registerServiceWorker';
 
 import {ActionBar} from '../src/ActionBar/ActionBar'
 import {Alert} from '../src/Alert/Alert'
-import {Badge, Label} from '../src/Badge/Badge'
+import {Badge, Label, Status} from '../src/Badge/Badge'
 import {Breadcrumb, BreadcrumbItem} from '../src/Breadcrumb/Breadcrumb'
 import {Button, ButtonGroup, ButtonGrouped} from '../src/Button/Button'
 import {Calendar} from '../src/Calendar/Calendar'
@@ -48,6 +48,7 @@ export {
     Alert,
     Badge, 
     Label, 
+    Status,
     Breadcrumb,
     BreadcrumbItem,
     Button, 

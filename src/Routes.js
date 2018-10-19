@@ -31,7 +31,7 @@ export default class Routes extends Component {
             routes: [
                 { url: '/actionBar', name: 'Action Bar', component: ActionBarComponent },
                 { url: '/alert', name: 'Alert', component: AlertComponent },
-                { url: '/badge', name: 'Badge and Label', component: BadgeComponent },
+                { url: '/badge', name: 'Badge, Label & Status', component: BadgeComponent },
                 { url: '/breadcrumb', name: 'Breadcrumb', component: BreadcrumbComponent },
                 { url: '/button', name: 'Button', component: ButtonComponent },
                 { url: '/calendar', name: 'Calendar', component: CalendarComponent},
