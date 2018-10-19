@@ -8,7 +8,7 @@ $fd-fonts-path: "../node_modules/fundamental-ui/dist/fonts/";
 }
 
 .fd-tile__content {
-  .fd-badge, .fd-label, .fd-tag, 
+  .fd-badge, .fd-label, .fd-status-label, .fd-tag, 
   [class*='fd-button'], [class*='fd-identifier'], [class*='fd-image'], [class*='fd-form'] {
     margin-right: 10px;
   }
