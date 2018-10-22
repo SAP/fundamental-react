@@ -15,7 +15,7 @@ const shapesImageCode = `<Image size="s" type="circle" photo="https://placeimg.c
         <div>
             <Header>Image</Header>
             <Description>When using images, use the following helpers classes to adjust the size and the shape.</Description>
-            <Import module="Image" path="/react-fundamental/src/" />
+            <Import module="Image" path="/fundamental-react/src/" />
             
             <Separator />
             

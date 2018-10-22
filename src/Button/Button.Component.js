@@ -51,7 +51,7 @@ const buttonGroupCode = `<ButtonGroup>
             <Header>Button</Header>
             <Description>The Buttons allow users to perform actions. The priority of buttons within a page should be considered. For instance, only use the main button once within a page or modal. Color is also important. For instance, the most important button has a blue background where as a red button should only be used if the action it performs is potentially destructive.
             </Description>
-            <Import module="Button, ButtonGroup, ButtonGrouped" path="/react-fundamental/src/" />
+            <Import module="Button, ButtonGroup, ButtonGrouped" path="/fundamental-react/src/" />
 
             <Separator />
 
