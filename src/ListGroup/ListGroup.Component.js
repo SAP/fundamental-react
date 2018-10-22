@@ -48,7 +48,7 @@ export const ListGroupComponent = () => {
             <Header>List Group</Header>
             <Description>Lists and tables are similar as both usually contain a vertical list of data, but lists generally contain basic data and tables tend to hold more complex data. If the list is a complex hierarchy, it is best to use a tree.
             </Description>
-            <Import module="ListGroup, ListGroupItem, ListGroupItemActions, ListGroupItemCheckbox" path="/react-fundamental/src/" />
+            <Import module="ListGroup, ListGroupItem, ListGroupItemActions, ListGroupItemCheckbox" path="/fundamental-react/src/" />
 
             <Separator />
 

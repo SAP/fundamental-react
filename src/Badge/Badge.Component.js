@@ -35,7 +35,7 @@ export const BadgeComponent = () => {
             Orange: a warning status or to indicate that an action can be taken;
             Red: error status.
             </Description>
-            <Import module="Badge, Label" path="/react-fundamental/src/" />
+            <Import module="Badge, Label" path="/fundamental-react/src/" />
 
             <Separator />
 

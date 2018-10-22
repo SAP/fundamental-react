@@ -644,7 +644,7 @@ export const IconComponent = () => {
         <div>
             <Header>Icon</Header>
             <Description>Icons are used throughout the UI to save space, allow for visual clarity and focus, and for fun. Icons can be used adaptively if desired, but at this point they are used more as visual elements within other components.</Description>
-            <Import module="Icon" path="/react-fundamental/src/" />
+            <Import module="Icon" path="/fundamental-react/src/" />
             
             <Separator />
 
