@@ -1,7 +1,7 @@
 {
-    "name": "react-fundamental",
+    "name": "fundamental-react",
     "version": "0.0.1-beta",
-    "private": true,
+    "private": false,
     "license": "Apache-2.0",
     "homepage": "https://github.wdf.sap.corp/pages/hybris-pd/fundamental-react/",
     "dependencies": {
