@@ -43,7 +43,7 @@ export const MegaMenuComponent = () => {
         <div>
             <Header>Mega Menu</Header>
             <Description>Mega menu is used in conjunction with Context Switcher within the Global Navigation (link to Global Nav page) and supports two levels within a hierarchy.</Description>
-            <Import module="MegaMenu, MegaMenuList, MegaMenuGroup" path="/react-fundamental/src/" />
+            <Import module="MegaMenu, MegaMenuList, MegaMenuGroup" path="/fundamental-react/src/" />
 
             <Separator />
 

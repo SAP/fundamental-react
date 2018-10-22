@@ -10,7 +10,7 @@ export const DatePickerComponent = () => {
     return(<div>
         <Header>DatePicker</Header>
         <Description>The date-picker component is an opinionated composition of the "input-group", "popover" and "calendar" components to accomplish the UI pattern for picking a date.</Description>
-        <Import module="DatePicker" path="/react-fundamental/src/" />
+        <Import module="DatePicker" path="/fundamental-react/src/" />
         
         <Separator />
 

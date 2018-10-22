@@ -17,7 +17,7 @@ export const TagComponent = () => {
             <Header>Tag</Header>
             <Description>Tags are used to represent contextualizing information. They can be useful to show applied filters, selected values for form field or object metadata.
             </Description>
-            <Import module="Tag" path="/react-fundamental/src/" />
+            <Import module="Tag" path="/fundamental-react/src/" />
 
             <Separator />
 

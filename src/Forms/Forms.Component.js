@@ -205,7 +205,7 @@ export const FormsComponent = () => {
             <Header>Forms</Header>
             <Description>Form elements include field layout, checkboxes, radio buttons and states of a field. Use these components along with inline help and error state.
             </Description>
-            <Import module="FormSet, FormItem, FormLabel, FormInput, FormRadio, FormTextarea, FormMessage, FormSelect, FormFieldset, FormLegend" path="/react-fundamental/src/" />
+            <Import module="FormSet, FormItem, FormLabel, FormInput, FormRadio, FormTextarea, FormMessage, FormSelect, FormFieldset, FormLegend" path="/fundamental-react/src/" />
 
             <Separator />
 

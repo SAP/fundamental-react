@@ -84,7 +84,7 @@ export const TableComponent = () => {
         <div>
             <Header>Table</Header>
             <Description>A table is a set tabular data. Line items can support data, images and actions.</Description>
-            <Import module="Table" path="/react-fundamental/src/" />
+            <Import module="Table" path="/fundamental-react/src/" />
 
             <Separator />
 
