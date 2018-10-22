@@ -13,6 +13,7 @@ import { FormsComponent } from './Forms/Forms.Component'
 import { IconComponent } from './Icon/Icon.Component'
 import { IdentifierComponent } from './Identifier/Identifier.Component'
 import { ImageComponent } from './Image/Image.Component'
+import { InlineHelpComponent} from './InlineHelp/InlineHelp.Component'
 import { InputGroupComponent } from './InputGroup/InputGroup.Component'
 import { ListGroupComponent } from './ListGroup/ListGroup.Component'
 import { MegaMenuComponent } from './MegaMenu/MegaMenu.Component'
@@ -42,6 +43,7 @@ export default class Routes extends Component {
                 { url: '/identifier', name: 'Identifier', component: IdentifierComponent },
                 { url: '/image', name: 'Image', component: ImageComponent },
                 { url: '/inputGroup', name: 'Input Group', component: InputGroupComponent },
+                { url: '/inlineHelp', name: 'Inline Help', component: InlineHelpComponent },
                 { url: '/listGroup', name: 'List Group', component: ListGroupComponent },
                 { url: '/megaMenu', name: 'Mega Menu', component: MegaMenuComponent },
                 { url: '/sideNavigation', name: 'Side Navigation', component: SideNavigationComponent },

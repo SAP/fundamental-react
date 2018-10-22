@@ -16,6 +16,7 @@ import {FormSet, FormItem, FormLabel, FormInput, FormRadio, FormTextarea, FormMe
 import {Icon} from '../src/Icon/Icon'
 import {Identifier} from '../src/Identifier/Identifier'
 import {Image} from '../src/Image/Image'
+import {InlineHelp} from '../src/InlineHelp/InlineHelp'
 import {InputGroup, FormGroup } from '../src/InputGroup/InputGroup'
 import {ListGroup, ListGroupItem, ListGroupItemActions, ListGroupItemCheckbox } from '../src/ListGroup/ListGroup'
 import {MegaMenu, MegaMenuList, MegaMenuGroup} from '../src/MegaMenu/MegaMenu'
@@ -71,6 +72,7 @@ export {
     Icon, 
     Identifier, 
     Image, 
+    InlineHelp,
     InputGroup,
     FormGroup,
     ListGroup, 
