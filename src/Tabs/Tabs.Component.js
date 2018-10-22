@@ -16,7 +16,7 @@ export const TabsComponent = () => {
     return(<div>
         <Header>Tabs</Header>
         <Description>Tabs are based on a folder metaphor and used to separate content into different sections. Tabs should be ordered to create a visual hierarchy based on priority.</Description>
-        <Import module="Tabs, TabsComponent" path="/react-fundamental/src/"/> <Separator/>
+        <Import module="Tabs, TabsComponent" path="/fundamental-react/src/"/> <Separator/>
         <Properties type="Inputs" properties=
             {[
                 {name: 'id', description: 'id of the tab'}, 

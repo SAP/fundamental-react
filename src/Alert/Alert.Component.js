@@ -17,7 +17,7 @@ export const AlertComponent = () => {
         <div>
             <Header>Alert</Header>
             <Description>Alerts provide messages within the application that are color-coded to emphasize the level of urgency.</Description>
-            <Import module="Alert" path="/react-fundamental/src/" />
+            <Import module="Alert" path="/fundamental-react/src/" />
             
             <Separator />
 
