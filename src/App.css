@@ -6295,8 +6295,14 @@ input-addon
 .App {
   background-color: white; }
 
-.fd-tile__content .fd-badge, .fd-tile__content .fd-label, .fd-tile__content .fd-tag,
-.fd-tile__content [class*='fd-button'], .fd-tile__content [class*='fd-identifier'], .fd-tile__content [class*='fd-image'], .fd-tile__content [class*='fd-form'] {
+.fd-tile__content .fd-badge,
+.fd-tile__content .fd-label,
+.fd-tile__content .fd-status-label,
+.fd-tile__content .fd-tag,
+.fd-tile__content [class*='fd-button'],
+.fd-tile__content [class*='fd-identifier'],
+.fd-tile__content [class*='fd-image'],
+.fd-tile__content [class*='fd-form'] {
   margin-right: 10px; }
 
 .fd-tile__content .fd-button--grouped {
@@ -6338,7 +6344,7 @@ input-addon
     color: inherit; }
 
 .logo-subtitle {
-  font-size: .75rem; }
+  font-size: 0.75rem; }
 
 .sidebar {
   color: #21262c;
@@ -6354,7 +6360,7 @@ input-addon
 .nav-item {
   display: block;
   color: #21262c;
-  font-size: .875rem;
+  font-size: 0.875rem;
   position: relative;
   padding: 13px 40px; }
 
@@ -6391,10 +6397,14 @@ input-addon
 .header {
   margin: 12px 0; }
 
-input[type=text], input[type=password],
-input[type=email], input[type=url],
-input[type=search], input[type=tel],
-input[type=number], input[type=date],
+input[type='text'],
+input[type='password'],
+input[type='email'],
+input[type='url'],
+input[type='search'],
+input[type='tel'],
+input[type='number'],
+input[type='date'],
 textarea {
   border-radius: 0; }
 
