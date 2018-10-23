@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch, Link, NavLink } from 'react-router-dom';
 
+
 import { ActionBarComponent } from './ActionBar/ActionBar.Component';
 import { AlertComponent } from './Alert/Alert.Component';
 import { BadgeComponent } from './Badge/Badge.Component';
@@ -43,6 +44,7 @@ export default class Routes extends Component {
                 { url: '/identifier', name: 'Identifier', component: IdentifierComponent },
                 { url: '/image', name: 'Image', component: ImageComponent },
                 { url: '/inputGroup', name: 'Input Group', component: InputGroupComponent },
+                { url: '/inlineHelp', name: 'Inline Help', component: InlineHelpComponent },
                 { url: '/listGroup', name: 'List Group', component: ListGroupComponent },
                 { url: '/megaMenu', name: 'Mega Menu', component: MegaMenuComponent },
                 { url: '/menu', name: 'Menu', component: MenuComponent },
