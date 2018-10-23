@@ -14,6 +14,7 @@ import { FormsComponent } from './Forms/Forms.Component';
 import { IconComponent } from './Icon/Icon.Component';
 import { IdentifierComponent } from './Identifier/Identifier.Component';
 import { ImageComponent } from './Image/Image.Component';
+import { InlineHelpComponent } from './InlineHelp/InlineHelp.Component';
 import { InputGroupComponent } from './InputGroup/InputGroup.Component';
 import { ListGroupComponent } from './ListGroup/ListGroup.Component';
 import { MegaMenuComponent } from './MegaMenu/MegaMenu.Component';
