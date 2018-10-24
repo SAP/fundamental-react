@@ -6,7 +6,7 @@ import registerServiceWorker from './registerServiceWorker';
 
 import {ActionBar} from '../src/ActionBar/ActionBar'
 import {Alert} from '../src/Alert/Alert'
-import {Badge, Label} from '../src/Badge/Badge'
+import {Badge, Label, Status} from '../src/Badge/Badge'
 import {Breadcrumb, BreadcrumbItem} from '../src/Breadcrumb/Breadcrumb'
 import {Button, ButtonGroup, ButtonGrouped} from '../src/Button/Button'
 import {Calendar} from '../src/Calendar/Calendar'
@@ -16,9 +16,11 @@ import {FormSet, FormItem, FormLabel, FormInput, FormRadio, FormTextarea, FormMe
 import {Icon} from '../src/Icon/Icon'
 import {Identifier} from '../src/Identifier/Identifier'
 import {Image} from '../src/Image/Image'
+import {InlineHelp} from '../src/InlineHelp/InlineHelp'
 import {InputGroup, FormGroup } from '../src/InputGroup/InputGroup'
 import {ListGroup, ListGroupItem, ListGroupItemActions, ListGroupItemCheckbox } from '../src/ListGroup/ListGroup'
 import {MegaMenu, MegaMenuList, MegaMenuGroup} from '../src/MegaMenu/MegaMenu'
+import {Menu, MenuList, MenuItem, MenuGroup} from '../src/Menu/Menu'
 import {Pagination} from '../src/Pagination/Pagination'
 import {SideNav, SideNavList, SideNavItem, SideNavGroup} from '../src/SideNavigation/SideNavigation'
 import {Table} from '../src/Table/Table'
@@ -49,6 +51,7 @@ export {
     Alert,
     Badge, 
     Label, 
+    Status,
     Breadcrumb,
     BreadcrumbItem,
     Button, 
@@ -72,6 +75,7 @@ export {
     Icon, 
     Identifier, 
     Image, 
+    InlineHelp,
     InputGroup,
     FormGroup,
     ListGroup, 
@@ -81,6 +85,10 @@ export {
     MegaMenu, 
     MegaMenuList, 
     MegaMenuGroup,
+    Menu, 
+    MenuList, 
+    MenuItem, 
+    MenuGroup,
     Pagination,
     SideNav, 
     SideNavList, 
