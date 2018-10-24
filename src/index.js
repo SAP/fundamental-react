@@ -19,6 +19,7 @@ import {Image} from '../src/Image/Image'
 import {InputGroup, FormGroup } from '../src/InputGroup/InputGroup'
 import {ListGroup, ListGroupItem, ListGroupItemActions, ListGroupItemCheckbox } from '../src/ListGroup/ListGroup'
 import {MegaMenu, MegaMenuList, MegaMenuGroup} from '../src/MegaMenu/MegaMenu'
+import {Pagination} from '../src/Pagination/Pagination'
 import {SideNav, SideNavList, SideNavItem, SideNavGroup} from '../src/SideNavigation/SideNavigation'
 import {Table} from '../src/Table/Table'
 import {Tabs, TabComponent} from '../src/Tabs/Tabs'
@@ -80,6 +81,7 @@ export {
     MegaMenu, 
     MegaMenuList, 
     MegaMenuGroup,
+    Pagination,
     SideNav, 
     SideNavList, 
     SideNavItem, 
