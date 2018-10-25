@@ -21,6 +21,7 @@ import {InputGroup, FormGroup } from '../src/InputGroup/InputGroup'
 import {ListGroup, ListGroupItem, ListGroupItemActions, ListGroupItemCheckbox } from '../src/ListGroup/ListGroup'
 import {MegaMenu, MegaMenuList, MegaMenuGroup} from '../src/MegaMenu/MegaMenu'
 import {Menu, MenuList, MenuItem, MenuGroup} from '../src/Menu/Menu'
+import {Pagination} from '../src/Pagination/Pagination'
 import {SideNav, SideNavList, SideNavItem, SideNavGroup} from '../src/SideNavigation/SideNavigation'
 import {Table} from '../src/Table/Table'
 import {Tabs, TabComponent} from '../src/Tabs/Tabs'
@@ -87,7 +88,8 @@ export {
     Menu, 
     MenuList, 
     MenuItem, 
-    MenuGroup, 
+    MenuGroup,
+    Pagination,
     SideNav, 
     SideNavList, 
     SideNavItem, 
