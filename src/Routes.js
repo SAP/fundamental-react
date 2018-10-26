@@ -18,6 +18,7 @@ import { InputGroupComponent } from './InputGroup/InputGroup.Component';
 import { ListGroupComponent } from './ListGroup/ListGroup.Component';
 import { MegaMenuComponent } from './MegaMenu/MegaMenu.Component';
 import { MenuComponent } from './Menu/Menu.Component';
+import { ModalComponent } from './Modal/Modal.Component';
 import { PaginationComponent } from './Pagination/Pagination.Component'
 import { SideNavigationComponent } from './SideNavigation/SideNavigation.Component';
 import { TableComponent } from './Table/Table.Component';
@@ -49,6 +50,7 @@ export default class Routes extends Component {
                 { url: '/listGroup', name: 'List Group', component: ListGroupComponent },
                 { url: '/megaMenu', name: 'Mega Menu', component: MegaMenuComponent },
                 { url: '/menu', name: 'Menu', component: MenuComponent },
+                { url: '/modal', name: 'Modal', component: ModalComponent },
                 { url: '/pagination', name: 'Pagination', component: PaginationComponent },
                 { url: '/sideNavigation', name: 'Side Navigation', component: SideNavigationComponent },
                 { url: '/table', name: 'Table', component: TableComponent },
