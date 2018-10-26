@@ -45,6 +45,7 @@ import {
     MegaMenuGroup
 } from '../src/MegaMenu/MegaMenu';
 import { Menu, MenuList, MenuItem, MenuGroup } from '../src/Menu/Menu';
+import { Modal } from '../src/Modal/Modal';
 import { Pagination } from '../src/Pagination/Pagination';
 import {
     SideNav,
@@ -126,6 +127,7 @@ export {
     MenuList,
     MenuItem,
     MenuGroup,
+    Modal,
     Pagination,
     SideNav,
     SideNavList,
