@@ -1,1 +1,34 @@
-"use strict";var precacheConfig=[["/pages/hybris-pd/fundamental-react/index.html","7a727a1e2b8f143d3f21f1bb77bbb83a"],["/pages/hybris-pd/fundamental-react/static/css/main.8adf7353.css","202459e4c9e095dbfe646fd7d53f7f6f"],["/pages/hybris-pd/fundamental-react/static/js/main.d1a65d61.js","6fe74f7bd7c6f99ff73bcf41d502e94a"],["/pages/hybris-pd/fundamental-react/static/media/72-Bold.1e678655.woff","1e678655fe64a8a126dd51619f22edde"],["/pages/hybris-pd/fundamental-react/static/media/72-Bold.317cde33.ttf","317cde33cde273c643e2f4bfe788eefe"],["/pages/hybris-pd/fundamental-react/static/media/72-Bold.85e09d64.woff2","85e09d643e5d4b5f98c3aaf365bd1c02"],["/pages/hybris-pd/fundamental-react/static/media/72-BoldItalic.1f13fc6d.woff","1f13fc6d938b5cda6bde9229f722ea8c"],["/pages/hybris-pd/fundamental-react/static/media/72-BoldItalic.266fd3d7.woff2","266fd3d74665316a027af275c204537d"],["/pages/hybris-pd/fundamental-react/static/media/72-BoldItalic.3ab665b6.ttf","3ab665b6d2fbcc13822abf07520f3972"],["/pages/hybris-pd/fundamental-react/static/media/72-Condensed.15d69c7c.woff2","15d69c7c6c46af899033b881f0786328"],["/pages/hybris-pd/fundamental-react/static/media/72-Condensed.c5f39800.woff","c5f39800983eb3eb97ed2ba72a5be4b7"],["/pages/hybris-pd/fundamental-react/static/media/72-Condensed.e2f76695.ttf","e2f76695560366054ce11dc7efc046fd"],["/pages/hybris-pd/fundamental-react/static/media/72-CondensedBold.2bf8d215.ttf","2bf8d215e6d4ac1b622728c4d2f06d4a"],["/pages/hybris-pd/fundamental-react/static/media/72-CondensedBold.56af1d33.woff2","56af1d33fbd8bf1d80afd53f3f1d01ca"],["/pages/hybris-pd/fundamental-react/static/media/72-CondensedBold.909707d4.woff","909707d4c2808b374157094c2950925e"],["/pages/hybris-pd/fundamental-react/static/media/72-Italic.6030ef45.woff2","6030ef457e70912083ef3154de684dc7"],["/pages/hybris-pd/fundamental-react/static/media/72-Italic.9b448770.woff","9b4487708ef140ace9dbc396a39bbf44"],["/pages/hybris-pd/fundamental-react/static/media/72-Italic.c58be3ff.ttf","c58be3ff685e0c820c8438bbf1579351"],["/pages/hybris-pd/fundamental-react/static/media/72-Light.1abad199.ttf","1abad19983bc369ee086769a8d503050"],["/pages/hybris-pd/fundamental-react/static/media/72-Light.7f6c7cb9.woff2","7f6c7cb94c0d8088b023553d46a64e07"],["/pages/hybris-pd/fundamental-react/static/media/72-Light.ab363ac3.woff","ab363ac31002ac1293658c71a84eef29"],["/pages/hybris-pd/fundamental-react/static/media/72-Regular.0072d92b.woff2","0072d92bfeaf57f02de04342d06a3463"],["/pages/hybris-pd/fundamental-react/static/media/72-Regular.48cb3e07.woff","48cb3e07e7e509d6c81c420507d7916b"],["/pages/hybris-pd/fundamental-react/static/media/72-Regular.a055c920.ttf","a055c920fa3948666fc4412d72aa94f3"],["/pages/hybris-pd/fundamental-react/static/media/SAP-icons.c1ba0da7.woff","c1ba0da78d7f6586cf5b00d5ef5eb806"],["/pages/hybris-pd/fundamental-react/static/media/button.b6b82295.scss","b6b822950aba765f5883a26996c7a593"]],cacheName="sw-precache-v3-sw-precache-webpack-plugin-"+(self.registration?self.registration.scope:""),ignoreUrlParametersMatching=[/^utm_/],addDirectoryIndex=function(e,a){var t=new URL(e);return"/"===t.pathname.slice(-1)&&(t.pathname+=a),t.toString()},cleanResponse=function(a){return a.redirected?("body"in a?Promise.resolve(a.body):a.blob()).then(function(e){return new Response(e,{headers:a.headers,status:a.status,statusText:a.statusText})}):Promise.resolve(a)},createCacheKey=function(e,a,t,n){var r=new URL(e);return n&&r.pathname.match(n)||(r.search+=(r.search?"&":"")+encodeURIComponent(a)+"="+encodeURIComponent(t)),r.toString()},isPathWhitelisted=function(e,a){if(0===e.length)return!0;var t=new URL(a).pathname;return e.some(function(e){return t.match(e)})},stripIgnoredUrlParameters=function(e,t){var a=new URL(e);return a.hash="",a.search=a.search.slice(1).split("&").map(function(e){return e.split("=")}).filter(function(a){return t.every(function(e){return!e.test(a[0])})}).map(function(e){return e.join("=")}).join("&"),a.toString()},hashParamName="_sw-precache",urlsToCacheKeys=new Map(precacheConfig.map(function(e){var a=e[0],t=e[1],n=new URL(a,self.location),r=createCacheKey(n,hashParamName,t,/\.\w{8}\./);return[n.toString(),r]}));function setOfCachedUrls(e){return e.keys().then(function(e){return e.map(function(e){return e.url})}).then(function(e){return new Set(e)})}self.addEventListener("install",function(e){e.waitUntil(caches.open(cacheName).then(function(n){return setOfCachedUrls(n).then(function(t){return Promise.all(Array.from(urlsToCacheKeys.values()).map(function(a){if(!t.has(a)){var e=new Request(a,{credentials:"same-origin"});return fetch(e).then(function(e){if(!e.ok)throw new Error("Request for "+a+" returned a response with status "+e.status);return cleanResponse(e).then(function(e){return n.put(a,e)})})}}))})}).then(function(){return self.skipWaiting()}))}),self.addEventListener("activate",function(e){var t=new Set(urlsToCacheKeys.values());e.waitUntil(caches.open(cacheName).then(function(a){return a.keys().then(function(e){return Promise.all(e.map(function(e){if(!t.has(e.url))return a.delete(e)}))})}).then(function(){return self.clients.claim()}))}),self.addEventListener("fetch",function(a){if("GET"===a.request.method){var e,t=stripIgnoredUrlParameters(a.request.url,ignoreUrlParametersMatching),n="index.html";(e=urlsToCacheKeys.has(t))||(t=addDirectoryIndex(t,n),e=urlsToCacheKeys.has(t));var r="/pages/hybris-pd/fundamental-react/index.html";!e&&"navigate"===a.request.mode&&isPathWhitelisted(["^(?!\\/__).*"],a.request.url)&&(t=new URL(r,self.location).toString(),e=urlsToCacheKeys.has(t)),e&&a.respondWith(caches.open(cacheName).then(function(e){return e.match(urlsToCacheKeys.get(t)).then(function(e){if(e)return e;throw Error("The cached response that was expected is missing.")})}).catch(function(e){return console.warn('Couldn\'t serve response for "%s" from cache: %O',a.request.url,e),fetch(a.request)}))}});
+/**
+ * Welcome to your Workbox-powered service worker!
+ *
+ * You'll need to register this file in your web app and you should
+ * disable HTTP caching for this file too.
+ * See https://goo.gl/nhQhGp
+ *
+ * The rest of the code is auto-generated. Please don't update this file
+ * directly; instead, make changes to your Workbox build configuration
+ * and re-run your build process.
+ * See https://goo.gl/2aRDsh
+ */
+
+importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
+
+importScripts(
+  "/fundamental-react/precache-manifest.d288a4cd63b6b0203ef1ecde5418e8f9.js"
+);
+
+workbox.clientsClaim();
+
+/**
+ * The workboxSW.precacheAndRoute() method efficiently caches and responds to
+ * requests for URLs in the manifest.
+ * See https://goo.gl/S9QRab
+ */
+self.__precacheManifest = [].concat(self.__precacheManifest || []);
+workbox.precaching.suppressWarnings();
+workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
+
+workbox.routing.registerNavigationRoute("/fundamental-react/index.html", {
+  
+  blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
+});
