@@ -1,155 +1,266 @@
-import React from 'react'
-import { Dropdown, DropdownList, DropdownGroup } from '../'
-import { DocsTile, DocsText, Separator, Header, Description, Import, Properties } from '../'
-import { Playground } from '../documentation/Playground/Playground';
+import React from 'react';
+import { Dropdown } from '../';
+import { DocsTile, DocsText, Separator, Header, Description, Import, Properties } from '../';
+import { Popover, Button, Menu, MenuList, MenuItem } from '../';
 
 export const DropdownComponent = () => {
-    const defaultDropdownCode = `<Dropdown buttonText="Select" size="m">
-    <DropdownList links=
-        {[
-            { id: 'item_1', url: '#', name: 'Option 1' },
-            { id: 'item_2', url: '#', name: 'Option 2' },
-            { id: 'item_3', url: '#', name: 'Option 3' }
-        ]}>
-    </DropdownList>
-</Dropdown>`
+    const defaultDropdownCode = `<Dropdown>
+    <Popover
+        control={<Button dropdown={true}>Select</Button>}
+        body={
+            <Menu>
+                <MenuList>
+                    <MenuItem url="/">Option 1</MenuItem>
+                    <MenuItem url="/">Option 2</MenuItem>
+                    <MenuItem url="/">Option 3</MenuItem>
+                    <MenuItem url="/">Option 4</MenuItem>
+                </MenuList>
+            </Menu>
+        }
+    />
+</Dropdown>`;
 
-    const iconDropdownCode = `<Dropdown buttonText="Select" buttonIcon="filter" size="m">
-    <DropdownList links=
-        {[
-            { id: 'item_1', url: '#', name: 'Option 1' },
-            { id: 'item_2', url: '#', name: 'Option 2' },
-            { id: 'item_3', url: '#', name: 'Option 3' }
-        ]}>
-    </DropdownList>
-</Dropdown>`
+    const iconDropdownCode = `<Dropdown>
+    <Popover
+        control={
+            <Button dropdown={true} glyph="filter">
+                Select
+            </Button>
+        }
+        body={
+            <Menu>
+                <MenuList>
+                    <MenuItem url="/">Option 1</MenuItem>
+                    <MenuItem url="/">Option 2</MenuItem>
+                    <MenuItem url="/">Option 3</MenuItem>
+                    <MenuItem url="/">Option 4</MenuItem>
+                </MenuList>
+            </Menu>
+        }
+    />
+</Dropdown>`;
 
-    const disabledDropdownCode = `<Dropdown buttonText="Select" buttonIcon="filter" size="m" state="disabled">
-    <DropdownList links=
-        {[
-            { id: 'item_1', url: '#', name: 'Option 1' },
-            { id: 'item_2', url: '#', name: 'Option 2' },
-            { id: 'item_3', url: '#', name: 'Option 3' }
-        ]}>
-    </DropdownList>
-</Dropdown>`
+    const toolbarDropdownCode = `<Dropdown>
+    <Popover
+        control={
+            <Button dropdown={true} toolbar={true}>
+                Select
+            </Button>
+        }
+        body={
+            <Menu>
+                <MenuList>
+                    <MenuItem url="/">Option 1</MenuItem>
+                    <MenuItem url="/">Option 2</MenuItem>
+                    <MenuItem url="/">Option 3</MenuItem>
+                    <MenuItem url="/">Option 4</MenuItem>
+                </MenuList>
+            </Menu>
+        }
+    />
+</Dropdown>`;
 
-    const sizesDropdownCode = `<Dropdown buttonText="Select" size="xs">
-    <DropdownList links=
-        {[
-            { id: 'item_1', url: '#', name: 'Option 1' },
-            { id: 'item_2', url: '#', name: 'Option 2' },
-            { id: 'item_3', url: '#', name: 'Option 3' }
-        ]}>
-    </DropdownList>
-</Dropdown>
-<Dropdown buttonText="Select" size="s">
-    <DropdownList links=
-        {[
-            { id: 'item_1', url: '#', name: 'Option 1' },
-            { id: 'item_2', url: '#', name: 'Option 2' },
-            { id: 'item_3', url: '#', name: 'Option 3' }
-        ]}>
-    </DropdownList>
-</Dropdown>
-<Dropdown buttonText="Select" size="compact">
-    <DropdownList links=
-        {[
-            { id: 'item_1', url: '#', name: 'Option 1' },
-            { id: 'item_2', url: '#', name: 'Option 2' },
-            { id: 'item_3', url: '#', name: 'Option 3' }
-        ]}>
-    </DropdownList>
-</Dropdown>
-<Dropdown buttonText="Select">
-    <DropdownList links=
-        {[
-            { id: 'item_1', url: '#', name: 'Option 1' },
-            { id: 'item_2', url: '#', name: 'Option 2' },
-            { id: 'item_3', url: '#', name: 'Option 3' }
-        ]}>
-    </DropdownList>
-</Dropdown>
-<Dropdown buttonText="Select" size="l">
-    <DropdownList links=
-        {[
-            { id: 'item_1', url: '#', name: 'Option 1' },
-            { id: 'item_2', url: '#', name: 'Option 2' },
-            { id: 'item_3', url: '#', name: 'Option 3' }
-        ]}>
-    </DropdownList>
-</Dropdown>`
+    const disabledDropdownCode = `<Dropdown>
+    <Popover
+        state="disabled"
+        control={
+            <Button dropdown={true} state="disabled">
+                Select
+            </Button>
+        }
+        body={
+            <Menu>
+                <MenuList>
+                    <MenuItem url="/">Option 1</MenuItem>
+                    <MenuItem url="/">Option 2</MenuItem>
+                    <MenuItem url="/">Option 3</MenuItem>
+                    <MenuItem url="/">Option 4</MenuItem>
+                </MenuList>
+            </Menu>
+        }
+    />
+</Dropdown>`;
 
-    const contextualDropdownCode = `<Dropdown buttonText="More" isContextual={true}>
-    <DropdownList links=
-        {[
-            { id: 'item_1', url: '#', name: 'Option 1' },
-            { id: 'item_2', url: '#', name: 'Option 2' },
-            { id: 'item_3', url: '#', name: 'Option 3' }
-        ]}>
-    </DropdownList>
+    const sizesDropdownCode = `<Dropdown>
+    <Popover
+        control={
+            <Button dropdown={true} size="xs">
+                Select
+            </Button>
+        }
+        body={
+            <Menu>
+                <MenuList>
+                    <MenuItem url="/">Option 1</MenuItem>
+                    <MenuItem url="/">Option 2</MenuItem>
+                    <MenuItem url="/">Option 3</MenuItem>
+                    <MenuItem url="/">Option 4</MenuItem>
+                </MenuList>
+            </Menu>
+        }
+    />
 </Dropdown>
-<Dropdown isContextual={true}>
-    <DropdownList links=
-        {[
-            { id: 'item_1', url: '#', name: 'Option 1' },
-            { id: 'item_2', url: '#', name: 'Option 2' },
-            { id: 'item_3', url: '#', name: 'Option 3' }
-        ]}>
-    </DropdownList>
+
+<Dropdown>
+    <Popover
+        control={
+            <Button dropdown={true} size="s">
+                Select
+            </Button>
+        }
+        body={
+            <Menu>
+                <MenuList>
+                    <MenuItem url="/">Option 1</MenuItem>
+                    <MenuItem url="/">Option 2</MenuItem>
+                    <MenuItem url="/">Option 3</MenuItem>
+                    <MenuItem url="/">Option 4</MenuItem>
+                </MenuList>
+            </Menu>
+        }
+    />
 </Dropdown>
-<Dropdown buttonText="More" isContextual={true} state="disabled">
-    <DropdownList links=
-        {[
-            { id: 'item_1', url: '#', name: 'Option 1' },
-            { id: 'item_2', url: '#', name: 'Option 2' },
-            { id: 'item_3', url: '#', name: 'Option 3' }
-        ]}>
-    </DropdownList>
+
+<Dropdown>
+    <Popover
+        control={
+            <Button dropdown={true} size="compact">
+                Select
+            </Button>
+        }
+        body={
+            <Menu>
+                <MenuList>
+                    <MenuItem url="/">Option 1</MenuItem>
+                    <MenuItem url="/">Option 2</MenuItem>
+                    <MenuItem url="/">Option 3</MenuItem>
+                    <MenuItem url="/">Option 4</MenuItem>
+                </MenuList>
+            </Menu>
+        }
+    />
 </Dropdown>
-<Dropdown isContextual={true} state="disabled">
-    <DropdownList links=
-        {[
-            { id: 'item_1', url: '#', name: 'Option 1' },
-            { id: 'item_2', url: '#', name: 'Option 2' },
-            { id: 'item_3', url: '#', name: 'Option 3' }
-        ]}>
-    </DropdownList>
-</Dropdown>`
+
+<Dropdown>
+    <Popover
+        control={
+            <Button dropdown={true} size="default">
+                Select
+            </Button>
+        }
+        body={
+            <Menu>
+                <MenuList>
+                    <MenuItem url="/">Option 1</MenuItem>
+                    <MenuItem url="/">Option 2</MenuItem>
+                    <MenuItem url="/">Option 3</MenuItem>
+                    <MenuItem url="/">Option 4</MenuItem>
+                </MenuList>
+            </Menu>
+        }
+    />
+</Dropdown>
+
+<Dropdown>
+    <Popover
+        control={
+            <Button dropdown={true} size="l">
+                Select
+            </Button>
+        }
+        body={
+            <Menu>
+                <MenuList>
+                    <MenuItem url="/">Option 1</MenuItem>
+                    <MenuItem url="/">Option 2</MenuItem>
+                    <MenuItem url="/">Option 3</MenuItem>
+                    <MenuItem url="/">Option 4</MenuItem>
+                </MenuList>
+            </Menu>
+        }
+    />
+</Dropdown>`;
+
+    const contextualMenuDropdownCode = `<Popover
+   control={<Button type="secondary" glyph="vertical-grip" />}
+   body={
+       <Menu>
+           <MenuList>
+               <MenuItem url="/">Option 1</MenuItem>
+               <MenuItem url="/">Option 2</MenuItem>
+               <MenuItem url="/">Option 3</MenuItem>
+               <MenuItem url="/">Option 4</MenuItem>
+           </MenuList>
+       </Menu>
+   }
+/>
+
+<Popover
+   control={<Button type="secondary">More</Button>}
+   body={
+       <Menu>
+           <MenuList>
+               <MenuItem url="/">Option 1</MenuItem>
+               <MenuItem url="/">Option 2</MenuItem>
+               <MenuItem url="/">Option 3</MenuItem>
+               <MenuItem url="/">Option 4</MenuItem>
+           </MenuList>
+       </Menu>
+   }
+/>
+
+<Popover
+   control={<Button>More</Button>}
+   body={
+       <Menu>
+           <MenuList>
+               <MenuItem url="/">Option 1</MenuItem>
+               <MenuItem url="/">Option 2</MenuItem>
+               <MenuItem url="/">Option 3</MenuItem>
+               <MenuItem url="/">Option 4</MenuItem>
+           </MenuList>
+       </Menu>
+   }
+/>`;
 
     return (
         <div>
             <Header>Dropdown</Header>
-            <Description>The dropdown component let the user select one of different options. It is more flexible than the normal Select.</Description>
-            <Import module="Dropdown, DropdownItem, DropdownGroup" path="/fundamental-react/src/" />
+            <Description>
+                The dropdown component let the user select one of different options. It is more flexible than the normal
+                Select.
+            </Description>
+            <Import module="Dropdown" path="/fundamental-react/src/" />
 
             <Separator />
 
-            <Properties type="Inputs" properties=
-                {[
-                    { name: 'buttonText', description: 'String - The text of the dropdown button.' },
-                    { name: 'size', description: 'String - Size of the dropdown. Options include \'xs\', \'s\', \'compact\', and \'l\'. If no size is provided, default (normal) will be used.' },
-                    { name: 'buttonIcon', description: 'String - The dropdown icon element.' },
-                    { name: 'state', description: 'String - Options include \'normal\', \'selected\', and \'disabled\'. Leave empty for normal.' },
-                    { name: 'isContextual', description: 'Bool - If set to \'true\' renders a contextual menu.' },
-                    { name: 'link', description: 'String (required) - Url' },
-                    { name: 'text', description: 'String (required) - Dropdown item text' }
-
-                ]} />
+            <Properties
+                type="Inputs"
+                properties={[
+                    { name: 'size', description: 'string - Options include xs, s, compact, default and l.' },
+                    { name: 'toolbar', description: "bool - set to 'true' to enable a dropdown for toolbar." },
+                    { name: 'state', description: "string - use 'disabled' to disable the dropdown " }
+                ]}
+            />
 
             <Separator />
 
             <h2>Default Dropdown</h2>
-            <Description>The dropdown is designed to look like the rest of input components. The options can be divided in groups, which are visually separated and can have a small Group header text.</Description>
             <DocsTile>
-                <Dropdown buttonText="Select" size="m">
-                    <DropdownList links=
-                        {[
-                            { id: 'item_1', url: '#', name: 'Option 1' },
-                            { id: 'item_2', url: '#', name: 'Option 2' },
-                            { id: 'item_3', url: '#', name: 'Option 3' }
-                        ]}>
-                    </DropdownList>
+                <Dropdown>
+                    <Popover
+                        control={<Button dropdown={true}>Select</Button>}
+                        body={
+                            <Menu>
+                                <MenuList>
+                                    <MenuItem url="/">Option 1</MenuItem>
+                                    <MenuItem url="/">Option 2</MenuItem>
+                                    <MenuItem url="/">Option 3</MenuItem>
+                                    <MenuItem url="/">Option 4</MenuItem>
+                                </MenuList>
+                            </Menu>
+                        }
+                    />
                 </Dropdown>
             </DocsTile>
             <DocsText>{defaultDropdownCode}</DocsText>
@@ -159,31 +270,80 @@ export const DropdownComponent = () => {
             <h2>Dropdown with Icon</h2>
             <Description>It can also include complementary information like an icon.</Description>
             <DocsTile>
-                <Dropdown buttonText="Select" buttonIcon="filter" size="m">
-                    <DropdownList links=
-                        {[
-                            { id: 'item_1', url: '#', name: 'Option 1' },
-                            { id: 'item_2', url: '#', name: 'Option 2' },
-                            { id: 'item_3', url: '#', name: 'Option 3' }
-                        ]}>
-                    </DropdownList>
+                <Dropdown>
+                    <Popover
+                        control={
+                            <Button dropdown={true} glyph="filter">
+                                Select
+                            </Button>
+                        }
+                        body={
+                            <Menu>
+                                <MenuList>
+                                    <MenuItem url="/">Option 1</MenuItem>
+                                    <MenuItem url="/">Option 2</MenuItem>
+                                    <MenuItem url="/">Option 3</MenuItem>
+                                    <MenuItem url="/">Option 4</MenuItem>
+                                </MenuList>
+                            </Menu>
+                        }
+                    />
                 </Dropdown>
             </DocsTile>
             <DocsText>{iconDropdownCode}</DocsText>
 
             <Separator />
 
-            <h2>Disabled State</h2>
-            <Description>Disabled state can be rendered with <code>state="disabled"</code> class.</Description>
+            <h2>Toolbar Dropdown</h2>
             <DocsTile>
-                <Dropdown buttonText="Select" buttonIcon="filter" size="m" state="disabled">
-                    <DropdownList links=
-                        {[
-                            { id: 'item_1', url: '#', name: 'Option 1' },
-                            { id: 'item_2', url: '#', name: 'Option 2' },
-                            { id: 'item_3', url: '#', name: 'Option 3' }
-                        ]}>
-                    </DropdownList>
+                <Dropdown>
+                    <Popover
+                        control={
+                            <Button dropdown={true} toolbar={true}>
+                                Select
+                            </Button>
+                        }
+                        body={
+                            <Menu>
+                                <MenuList>
+                                    <MenuItem url="/">Option 1</MenuItem>
+                                    <MenuItem url="/">Option 2</MenuItem>
+                                    <MenuItem url="/">Option 3</MenuItem>
+                                    <MenuItem url="/">Option 4</MenuItem>
+                                </MenuList>
+                            </Menu>
+                        }
+                    />
+                </Dropdown>
+            </DocsTile>
+            <DocsText>{toolbarDropdownCode}</DocsText>
+
+            <Separator />
+
+            <h2>Disabled State</h2>
+            <Description>
+                Disabled state can be rendered with <code>state="disabled"</code> class.
+            </Description>
+            <DocsTile>
+                <Dropdown>
+                    <Popover
+                        state="disabled"
+                        control={
+                            <Button dropdown={true} state="disabled">
+                                Select
+                            </Button>
+                        }
+                        body={
+                            <Menu>
+                                <MenuList>
+                                    <MenuItem url="/">Option 1</MenuItem>
+                                    <MenuItem url="/">Option 2</MenuItem>
+                                    <MenuItem url="/">Option 3</MenuItem>
+                                    <MenuItem url="/">Option 4</MenuItem>
+                                </MenuList>
+                            </Menu>
+                        }
+                    />
                 </Dropdown>
             </DocsTile>
             <DocsText>{disabledDropdownCode}</DocsText>
@@ -192,50 +352,100 @@ export const DropdownComponent = () => {
 
             <h2>Sizes</h2>
             <DocsTile>
-                <Dropdown buttonText="Select" size="xs">
-                    <DropdownList links=
-                        {[
-                            { id: 'item_1', url: '#', name: 'Option 1' },
-                            { id: 'item_2', url: '#', name: 'Option 2' },
-                            { id: 'item_3', url: '#', name: 'Option 3' }
-                        ]}>
-                    </DropdownList>
+                <Dropdown>
+                    <Popover
+                        control={
+                            <Button dropdown={true} size="xs">
+                                Select
+                            </Button>
+                        }
+                        body={
+                            <Menu>
+                                <MenuList>
+                                    <MenuItem url="/">Option 1</MenuItem>
+                                    <MenuItem url="/">Option 2</MenuItem>
+                                    <MenuItem url="/">Option 3</MenuItem>
+                                    <MenuItem url="/">Option 4</MenuItem>
+                                </MenuList>
+                            </Menu>
+                        }
+                    />
                 </Dropdown>
-                <Dropdown buttonText="Select" size="s">
-                    <DropdownList links=
-                        {[
-                            { id: 'item_1', url: '#', name: 'Option 1' },
-                            { id: 'item_2', url: '#', name: 'Option 2' },
-                            { id: 'item_3', url: '#', name: 'Option 3' }
-                        ]}>
-                    </DropdownList>
+                <Dropdown>
+                    <Popover
+                        control={
+                            <Button dropdown={true} size="s">
+                                Select
+                            </Button>
+                        }
+                        body={
+                            <Menu>
+                                <MenuList>
+                                    <MenuItem url="/">Option 1</MenuItem>
+                                    <MenuItem url="/">Option 2</MenuItem>
+                                    <MenuItem url="/">Option 3</MenuItem>
+                                    <MenuItem url="/">Option 4</MenuItem>
+                                </MenuList>
+                            </Menu>
+                        }
+                    />
                 </Dropdown>
-                <Dropdown buttonText="Select" size="compact">
-                    <DropdownList links=
-                        {[
-                            { id: 'item_1', url: '#', name: 'Option 1' },
-                            { id: 'item_2', url: '#', name: 'Option 2' },
-                            { id: 'item_3', url: '#', name: 'Option 3' }
-                        ]}>
-                    </DropdownList>
+                <Dropdown>
+                    <Popover
+                        control={
+                            <Button dropdown={true} size="compact">
+                                Select
+                            </Button>
+                        }
+                        body={
+                            <Menu>
+                                <MenuList>
+                                    <MenuItem url="/">Option 1</MenuItem>
+                                    <MenuItem url="/">Option 2</MenuItem>
+                                    <MenuItem url="/">Option 3</MenuItem>
+                                    <MenuItem url="/">Option 4</MenuItem>
+                                </MenuList>
+                            </Menu>
+                        }
+                    />
                 </Dropdown>
-                <Dropdown buttonText="Select">
-                    <DropdownList links=
-                        {[
-                            { id: 'item_1', url: '#', name: 'Option 1' },
-                            { id: 'item_2', url: '#', name: 'Option 2' },
-                            { id: 'item_3', url: '#', name: 'Option 3' }
-                        ]}>
-                    </DropdownList>
+                <Dropdown>
+                    <Popover
+                        control={
+                            <Button dropdown={true} size="default">
+                                Select
+                            </Button>
+                        }
+                        body={
+                            <Menu>
+                                <MenuList>
+                                    <MenuItem url="/">Option 1</MenuItem>
+                                    <MenuItem url="/">Option 2</MenuItem>
+                                    <MenuItem url="/">Option 3</MenuItem>
+                                    <MenuItem url="/">Option 4</MenuItem>
+                                </MenuList>
+                            </Menu>
+                        }
+                    />
                 </Dropdown>
-                <Dropdown buttonText="Select" size="l">
-                    <DropdownList links=
-                        {[
-                            { id: 'item_1', url: '#', name: 'Option 1' },
-                            { id: 'item_2', url: '#', name: 'Option 2' },
-                            { id: 'item_3', url: '#', name: 'Option 3' }
-                        ]}>
-                    </DropdownList>
+                <Dropdown>
+                    <Popover
+                        control={
+                            <Button dropdown={true} size="l">
+                                Select
+                            </Button>
+                        }
+                        body={
+                            <Menu>
+                                <MenuList>
+                                    <MenuItem url="/">Option 1</MenuItem>
+                                    <MenuItem url="/">Option 2</MenuItem>
+                                    <MenuItem url="/">Option 3</MenuItem>
+                                    <MenuItem url="/">Option 4</MenuItem>
+                                </MenuList>
+                            </Menu>
+                        }
+                    />
                 </Dropdown>
             </DocsTile>
             <DocsText>{sizesDropdownCode}</DocsText>
@@ -243,716 +453,57 @@ export const DropdownComponent = () => {
             <Separator />
 
             <h2>Contextual Menu</h2>
-            <Description>A More Options icon or the word "More" is used to indicate when there are more options than there is room to display them. On click or tap, the user access a contextual menu.</Description>
+            <Description>
+                The contextual menu component is an opinionated composition of the “popover” and “menu” components with
+                the use of a styled button. A More icon or the word, “More”, is used to indicate there are more options
+                than room to display them. On click or tap, a contextual menu opens. Composed by the “popover” and
+                “menu” components.
+            </Description>
             <DocsTile>
-                <Dropdown buttonText="More" isContextual={true}>
-                    <DropdownList links=
-                        {[
-                            { id: 'item_1', url: '#', name: 'Option 1' },
-                            { id: 'item_2', url: '#', name: 'Option 2' },
-                            { id: 'item_3', url: '#', name: 'Option 3' }
-                        ]}>
-                    </DropdownList>
-                </Dropdown>
-                <Dropdown isContextual={true}>
-                    <DropdownList links=
-                        {[
-                            { id: 'item_1', url: '#', name: 'Option 1' },
-                            { id: 'item_2', url: '#', name: 'Option 2' },
-                            { id: 'item_3', url: '#', name: 'Option 3' }
-                        ]}>
-                    </DropdownList>
-                </Dropdown>
-                <Dropdown buttonText="More" isContextual={true} state="disabled">
-                    <DropdownList links=
-                        {[
-                            { id: 'item_1', url: '#', name: 'Option 1' },
-                            { id: 'item_2', url: '#', name: 'Option 2' },
-                            { id: 'item_3', url: '#', name: 'Option 3' }
-                        ]}>
-                    </DropdownList>
-                </Dropdown>
-                <Dropdown isContextual={true} state="disabled">
-                    <DropdownList links=
-                        {[
-                            { id: 'item_1', url: '#', name: 'Option 1' },
-                            { id: 'item_2', url: '#', name: 'Option 2' },
-                            { id: 'item_3', url: '#', name: 'Option 3' }
-                        ]}>
-                    </DropdownList>
-                </Dropdown>
-            </DocsTile>
-            <DocsText>{contextualDropdownCode}</DocsText>
-
-            <Separator />
-
-            <h2>Playground</h2>
-
-
-
-                <Playground component="dropdown" schema= {[
-                    {
-                        attribute: 'state',
-                        typeOfAttribute: 'string',
-                        enum: ['disabled', 'enabled']
-                    },
-                    {
-                        attribute: 'isContextual',
-                        typeOfAttribute: 'boolean'
-                    },
-                    {
-                        attribute: 'buttonText',
-                        typeOfAttribute: 'string'
-                    },
-                    {
-                        attribute: 'buttonIcon',
-                        typeOfAttribute: 'string',
-                        enum: [                            '',
-                        'accelerated',
-                        'accept',
-                        'accidental-leave',
-                        'account',
-                        'accounting-document-verification',
-                        'action',
-                        'action-settings',
-                        'activate',
-                        'activities',
-                        'activity-2',
-                        'activity-assigned-to-goal',
-                        'activity-individual',
-                        'activity-items',
-                        'add',
-                        'add-activity',
-                        'add-activity-2',
-                        'add-contact',
-                        'add-coursebook',
-                        'add-document',
-                        'add-equipment',
-                        'add-favorite',
-                        'add-filter',
-                        'add-photo',
-                        'add-process',
-                        'add-product',
-                        'address-book',
-                        'addresses',
-                        'alert',
-                        'along-stacked-chart',
-                        'alphabetical-order',
-                        'appointment',
-                        'appointment-2',
-                        'approvals',
-                        'area-chart',
-                        'arobase',
-                        'arrow-bottom',
-                        'arrow-down',
-                        'arrow-left',
-                        'arrow-right',
-                        'arrow-top',
-                        'attachment',
-                        'attachment-audio',
-                        'attachment-e-pub',
-                        'attachment-html',
-                        'attachment-photo',
-                        'attachment-text-file',
-                        'attachment-video',
-                        'attachment-zip-file',
-                        'back-to-top',
-                        'background',
-                        'badge',
-                        'bar-chart',
-                        'bar-code',
-                        'basket',
-                        'batch-payments',
-                        'bbyd-active-sales',
-                        'bbyd-dashboard',
-                        'bed',
-                        'begin',
-                        'bell',
-                        'blank-tag',
-                        'blank-tag-2',
-                        'bo-strategy-management',
-                        'bold-text',
-                        'bookmark',
-                        'border',
-                        'broken-link',
-                        'bubble-chart',
-                        'building',
-                        'bullet-text',
-                        'burglary',
-                        'bus-public-transport',
-                        'business-by-design',
-                        'business-card',
-                        'business-objects-experience',
-                        'business-objects-explorer',
-                        'business-objects-mobile',
-                        'business-one',
-                        'calendar',
-                        'call',
-                        'camera',
-                        'cancel',
-                        'cancel-maintenance',
-                        'cancel-share',
-                        'capital-projects',
-                        'car-rental',
-                        'card',
-                        'cargo-train',
-                        'cart',
-                        'cart-2',
-                        'cart-3',
-                        'cart-4',
-                        'cart-5',
-                        'cart-approval',
-                        'cart-full',
-                        'cause',
-                        'chain-link',
-                        'chalkboard',
-                        'chart-axis',
-                        'chart-table-view',
-                        'Chart-Tree-Map',
-                        'check-availability',
-                        'checklist',
-                        'checklist-2',
-                        'checklist-item',
-                        'checklist-item-2',
-                        'chevron-phase',
-                        'chevron-phase-2',
-                        'choropleth-chart',
-                        'circle-task',
-                        'circle-task-2',
-                        'citizen-connect',
-                        'clear-filter',
-                        'clinical-order',
-                        'clinical-tast-tracker',
-                        'close-command-field',
-                        'cloud',
-                        'co',
-                        'collaborate',
-                        'collapse',
-                        'collapse-group',
-                        'collections-insight',
-                        'collections-management',
-                        'collision',
-                        'color-fill',
-                        'column-chart-dual-axis',
-                        'comment',
-                        'commission-check',
-                        'company-view',
-                        'compare',
-                        'compare-2',
-                        'competitor',
-                        'complete',
-                        'connected',
-                        'contacts',
-                        'copy',
-                        'course-book',
-                        'course-program',
-                        'create',
-                        'create-entry-time',
-                        'create-form',
-                        'create-leave-request',
-                        'create-session',
-                        'credit-card',
-                        'crm-sales',
-                        'crm-service-manager',
-                        'crop',
-                        'crossed-line-chart',
-                        'curriculum',
-                        'cursor',
-                        'customer',
-                        'customer-and-contacts',
-                        'customer-and-supplier',
-                        'customer-briefing',
-                        'customer-financial-fact-sheet',
-                        'customer-history',
-                        'customer-order-entry',
-                        'customer-view',
-                        'customize',
-                        'database',
-                        'date-time',
-                        'decision',
-                        'decline',
-                        'decrease-line-height',
-                        'delete',
-                        'detail-view',
-                        'developer-settings',
-                        'dimension',
-                        'disconnected',
-                        'discussion',
-                        'discussion-2',
-                        'dishwasher',
-                        'display',
-                        'display-more',
-                        'doc-attachment',
-                        'doctor',
-                        'document',
-                        'document-text',
-                        'documents',
-                        'donut-chart',
-                        'down',
-                        'download',
-                        'download-from-cloud',
-                        'draw-rectangle',
-                        'drill-down',
-                        'drill-up',
-                        'drop-down-list',
-                        'dropdown',
-                        'duplicate',
-                        'e-care',
-                        'e-learning',
-                        'eam-work-order',
-                        'edit',
-                        'edit-outside',
-                        'education',
-                        'electrocardiogram',
-                        'electronic-medical-record',
-                        'email',
-                        'email-read',
-                        'employee',
-                        'employee-approvals',
-                        'employee-lookup',
-                        'employee-pane',
-                        'employee-rejections',
-                        'end-user-experience-monitoring',
-                        'endoscopy',
-                        'energy-saving-lightbulb',
-                        'enter-more',
-                        'eraser',
-                        'error',
-                        'example',
-                        'excel-attachment',
-                        'exitfullscreen',
-                        'expand',
-                        'expand-group',
-                        'expense-report',
-                        'explorer',
-                        'factory',
-                        'fallback',
-                        'family-care',
-                        'family-protection',
-                        'favorite',
-                        'favorite-list',
-                        'fax-machine',
-                        'feed',
-                        'feeder-arrow',
-                        'filter',
-                        'filter-analytics',
-                        'filter-facets',
-                        'filter-fields',
-                        'flag',
-                        'flight',
-                        'fob-watch',
-                        'folder',
-                        'folder-blank',
-                        'folder-full',
-                        'form',
-                        'forward',
-                        'fridge',
-                        'full-screen',
-                        'full-stacked-chart',
-                        'full-stacked-column-chart',
-                        'functional-location',
-                        'future',
-                        'gantt-bars',
-                        'general-leave-request',
-                        'generate-shortcut',
-                        'geographic-bubble-chart',
-                        'globe',
-                        'goal',
-                        'goalseek',
-                        'grid',
-                        'group',
-                        'group-2',
-                        'header',
-                        'heading-1',
-                        'heading-2',
-                        'heading-3',
-                        'headset',
-                        'heating-cooling',
-                        'heatmap-chart',
-                        'hello-world',
-                        'hide',
-                        'hint',
-                        'history',
-                        'home',
-                        'home-share',
-                        'horizontal-bar-chart',
-                        'horizontal-bar-chart-2',
-                        'horizontal-bullet-chart',
-                        'horizontal-grip',
-                        'horizontal-stacked-chart',
-                        'horizontal-waterfall-chart',
-                        'hr-approval',
-                        'idea-wall',
-                        'image-viewer',
-                        'inbox',
-                        'incident',
-                        'incoming-call',
-                        'increase-line-height',
-                        'indent',
-                        'initiative',
-                        'inspect',
-                        'inspect-down',
-                        'inspection',
-                        'instance',
-                        'insurance-car',
-                        'insurance-house',
-                        'insurance-life',
-                        'internet-browser',
-                        'inventory',
-                        'ipad',
-                        'ipad-2',
-                        'iphone',
-                        'iphone-2',
-                        'it-host',
-                        'it-instance',
-                        'it-system',
-                        'italic-text',
-                        'jam',
-                        'journey-arrive',
-                        'journey-change',
-                        'journey-depart',
-                        'key',
-                        'key-user-settings',
-                        'kpi-corporate-performance',
-                        'kpi-managing-my-area',
-                        'lab',
-                        'laptop',
-                        'lateness',
-                        'lead',
-                        'lead-outdated',
-                        'leads',
-                        'learning-assistant',
-                        'legend',
-                        'less',
-                        'letter',
-                        'lightbulb',
-                        'line-chart',
-                        'line-chart-dual-axis',
-                        'line-chart-time-axis',
-                        'line-charts',
-                        'list',
-                        'loan',
-                        'locate-me',
-                        'locked',
-                        'log',
-                        'machine',
-                        'manager',
-                        'manager-insight',
-                        'map',
-                        'map-2',
-                        'map-3',
-                        'marketing-campaign',
-                        'master-task-triangle',
-                        'master-task-triangle-2',
-                        'meal',
-                        'measure',
-                        'measurement-document',
-                        'measuring-point',
-                        'media-forward',
-                        'media-pause',
-                        'media-play',
-                        'media-reverse',
-                        'media-rewind',
-                        'meeting-room',
-                        'menu',
-                        'menu2',
-                        'message-error',
-                        'message-information',
-                        'message-popup',
-                        'message-success',
-                        'message-warning',
-                        'microphone',
-                        'mileage',
-                        'minimize',
-                        'mirrored-task-circle',
-                        'mirrored-task-circle-2',
-                        'money-bills',
-                        'monitor-payments',
-                        'move',
-                        'mri-scan',
-                        'multiple-bar-chart',
-                        'multiple-line-chart',
-                        'multiple-pie-chart',
-                        'multiple-radar-chart',
-                        'multiselect',
-                        'multiselect-all',
-                        'multiselect-none',
-                        'my-sales-order',
-                        'my-view',
-                        'nav-back',
-                        'navigation-down-arrow',
-                        'navigation-left-arrow',
-                        'navigation-right-arrow',
-                        'navigation-up-arrow',
-                        'negative',
-                        'Netweaver-business-client',
-                        'newspaper',
-                        'notes',
-                        'notification-2',
-                        'number-sign',
-                        'numbered-text',
-                        'nurse',
-                        'nutrition-activity',
-                        'official-service',
-                        'offsite-work',
-                        'open-command-field',
-                        'open-folder',
-                        'opportunities',
-                        'opportunity',
-                        'order-status',
-                        'org-chart',
-                        'outbox',
-                        'outdent',
-                        'outgoing-call',
-                        'overflow',
-                        'overlay',
-                        'overview-chart',
-                        'paging',
-                        'paid-leave',
-                        'palette',
-                        'paper-plane',
-                        'passenger-train',
-                        'past',
-                        'paste',
-                        'pause',
-                        'payment-approval',
-                        'pdf-attachment',
-                        'pdf-reader',
-                        'pending',
-                        'per-diem',
-                        'performance',
-                        'permission',
-                        'person-placeholder',
-                        'personnel-view',
-                        'pharmacy',
-                        'phone',
-                        'photo-voltaic',
-                        'physical-activity',
-                        'picture',
-                        'pie-chart',
-                        'pipeline-analysis',
-                        'play',
-                        'pool',
-                        'popup-window',
-                        'positive',
-                        'post',
-                        'ppt-attachment',
-                        'present',
-                        'print',
-                        'private',
-                        'process',
-                        'product',
-                        'program-triangles',
-                        'program-triangles-2',
-                        'project-definition-triangle',
-                        'project-definition-triangle-2',
-                        'projector',
-                        'provision',
-                        'pull-down',
-                        'pushpin-off',
-                        'pushpin-on',
-                        'puzzle',
-                        'quality-issue',
-                        'question-mark',
-                        'radar-chart',
-                        'receipt',
-                        'record',
-                        'redo',
-                        'refresh',
-                        'repost',
-                        'request',
-                        'reset',
-                        'resize',
-                        'resize-corner',
-                        'resize-horizontal',
-                        'resize-vertical',
-                        'response',
-                        'restart',
-                        'retail-store',
-                        'retail-store-manager',
-                        'rhombus-milestone',
-                        'rhombus-milestone-2',
-                        'role',
-                        'sales-document',
-                        'sales-notification',
-                        'sales-order',
-                        'sales-order-item',
-                        'sales-quote',
-                        'sap-box',
-                        'sap-logo-shape',
-                        'sap-ui5',
-                        'save',
-                        'scatter-chart',
-                        'scissors',
-                        'screen-split-one',
-                        'screen-split-three',
-                        'screen-split-two',
-                        'search',
-                        'settings',
-                        'share',
-                        'share-2',
-                        'shelf',
-                        'shield',
-                        'shipping-status',
-                        'shortcut',
-                        'show',
-                        'signature',
-                        'simple-payment',
-                        'simulate',
-                        'slim-arrow-down',
-                        'slim-arrow-left',
-                        'slim-arrow-right',
-                        'slim-arrow-up',
-                        'soccor',
-                        'sonography',
-                        'sort',
-                        'sort-ascending',
-                        'sort-descending',
-                        'sorting-ranking',
-                        'sound',
-                        'sound-loud',
-                        'sound-off',
-                        'source-code',
-                        'status-critical',
-                        'status-inactive',
-                        'status-negative',
-                        'status-positive',
-                        'step',
-                        'stethoscope',
-                        'stop',
-                        'study-leave',
-                        'subway-train',
-                        'suitcase',
-                        'supplier',
-                        'survey',
-                        'switch-classes',
-                        'switch-views',
-                        'synchronize',
-                        'syntax',
-                        'syringe',
-                        'sys-add',
-                        'sys-back',
-                        'sys-back-2',
-                        'sys-cancel',
-                        'sys-cancel-2',
-                        'sys-enter',
-                        'sys-enter-2',
-                        'sys-find',
-                        'sys-find-next',
-                        'sys-first-page',
-                        'sys-help',
-                        'sys-help-2',
-                        'sys-last-page',
-                        'sys-minus',
-                        'sys-monitor',
-                        'sys-next-page',
-                        'sys-prev-page',
-                        'system-exit',
-                        'system-exit-2',
-                        'table-chart',
-                        'table-view',
-                        'tag',
-                        'tag-cloud-chart',
-                        'tags',
-                        'target-group',
-                        'task',
-                        'taxi',
-                        'technical-object',
-                        'temperature',
-                        'text-align-center',
-                        'text-align-justified',
-                        'text-align-left',
-                        'text-align-right',
-                        'text-formatting',
-                        'theater',
-                        'thing-type',
-                        'thumb-down',
-                        'thumb-up',
-                        'time-account',
-                        'time-entry-request',
-                        'time-overtime',
-                        'timesheet',
-                        'to-be-reviewed',
-                        'toaster-down',
-                        'toaster-top',
-                        'toaster-up',
-                        'tools-opportunity',
-                        'travel-expense',
-                        'travel-expense-report',
-                        'travel-itinerary',
-                        'travel-request',
-                        'tree',
-                        'trend-down',
-                        'trend-up',
-                        'trip-report',
-                        'ui-notifications',
-                        'umbrella',
-                        'underline-text',
-                        'undo',
-                        'unfavorite',
-                        'unlocked',
-                        'unpaid-leave',
-                        'unwired',
-                        'up',
-                        'upload',
-                        'upload-to-cloud',
-                        'upstacked-chart',
-                        'user-edit',
-                        'user-settings',
-                        'value-help',
-                        'vds-file',
-                        'vehicle-repair',
-                        'vertical-bar-chart',
-                        'vertical-bar-chart-2',
-                        'vertical-bullet-chart',
-                        'vertical-grip',
-                        'vertical-stacked-chart',
-                        'vertical-waterfall-chart',
-                        'video',
-                        'visits',
-                        'waiver',
-                        'wallet',
-                        'warning',
-                        'warning2',
-                        'washing-machine',
-                        'weather-proofing',
-                        'web-cam',
-                        'widgets',
-                        'windows-doors',
-                        'work-history',
-                        'workflow-tasks',
-                        'world',
-                        'wounds-doc',
-                        'wrench',
-                        'write-new',
-                        'write-new-document',
-                        'x-ray',
-                        'zoom-in',
-                        'zoom-out']
-                    }, 
-                    {
-                        attribute: 'size',
-                        typeOfAttribute: 'string',
-                        enum: ['xs', 's', 'compact', 'l']
-                    },
-                    {
-                        attribute: 'links',
-                        typeOfAttribute: 'lists',
-                        enum: ['item_1', 'item_2', 'item_3']
+                <Popover
+                    control={<Button type="secondary" glyph="vertical-grip" />}
+                    body={
+                        <Menu>
+                            <MenuList>
+                                <MenuItem url="/">Option 1</MenuItem>
+                                <MenuItem url="/">Option 2</MenuItem>
+                                <MenuItem url="/">Option 3</MenuItem>
+                                <MenuItem url="/">Option 4</MenuItem>
+                            </MenuList>
+                        </Menu>
                     }
-                    ]}>
-                <Dropdown buttonText="Select" buttonIcon="filter" size="m" state="disabled" isContextual={false}>
-                    <DropdownList links=
-                        {[
-                            { id: 'item_1', url: '#', name: 'Option 1' },
-                            { id: 'item_2', url: '#', name: 'Option 2' },
-                            { id: 'item_3', url: '#', name: 'Option 3' }
-                        ]}>
-                    </DropdownList>
-                </Dropdown>
-            </Playground>
-            
-            
+                />
+
+                <Popover
+                    control={<Button type="secondary">More</Button>}
+                    body={
+                        <Menu>
+                            <MenuList>
+                                <MenuItem url="/">Option 1</MenuItem>
+                                <MenuItem url="/">Option 2</MenuItem>
+                                <MenuItem url="/">Option 3</MenuItem>
+                                <MenuItem url="/">Option 4</MenuItem>
+                            </MenuList>
+                        </Menu>
+                    }
+                />
+
+                <Popover
+                    control={<Button>More</Button>}
+                    body={
+                        <Menu>
+                            <MenuList>
+                                <MenuItem url="/">Option 1</MenuItem>
+                                <MenuItem url="/">Option 2</MenuItem>
+                                <MenuItem url="/">Option 3</MenuItem>
+                                <MenuItem url="/">Option 4</MenuItem>
+                            </MenuList>
+                        </Menu>
+                    }
+                />
+            </DocsTile>
+            <DocsText>{contextualMenuDropdownCode}</DocsText>
+            <Separator />
         </div>
     );
-}
+};

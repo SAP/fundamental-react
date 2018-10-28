@@ -11,7 +11,8 @@ $fd-fonts-path: '../node_modules/fundamental-ui/dist/fonts/';
     .fd-label,
     .fd-status-label,
     .fd-tag,
-    [class*='fd-button'],
+    .fd-dropdown,
+    .fd-popover,
     [class*='fd-identifier'],
     [class*='fd-image'],
     [class*='fd-form'] {
@@ -26,6 +27,10 @@ $fd-fonts-path: '../node_modules/fundamental-ui/dist/fonts/';
         [class*='fd-button'] {
             margin-right: 0;
         }
+    }
+
+    .fd-doc__margin button {
+        margin-right: 10px;
     }
 }
 
