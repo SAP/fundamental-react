@@ -9,20 +9,23 @@ export class Popover extends Component {
         this.pressEsc = this.pressEsc.bind(this);
         this.handleOutsideClick = this.handleOutsideClick.bind(this);
         this.state = {
-            isExpanded: false
+            isExpanded: false,
+            isDisabled: this.props.state === 'disabled'
         };
     }
 
     triggerBody() {
-        if (!this.state.isExpanded) {
-            document.addEventListener('click', this.handleOutsideClick, false);
-        } else {
-            document.removeEventListener('click', this.handleOutsideClick, false);
-        }
+        if (!this.state.isDisabled) {
+            if (!this.state.isExpanded) {
+                document.addEventListener('click', this.handleOutsideClick, false);
+            } else {
+                document.removeEventListener('click', this.handleOutsideClick, false);
+            }
 
-        this.setState(prevState => ({
-            isExpanded: !prevState.isExpanded
-        }));
+            this.setState(prevState => ({
+                isExpanded: !prevState.isExpanded
+            }));
+        }
     }
 
     pressEsc(event) {
@@ -75,9 +78,14 @@ export class Popover extends Component {
     }
 }
 
+Popover.propTypes = {
+    id: PropTypes.string,
+    state: PropTypes.string
+};
+
 // ------------------------------------- Popover Control------------------------------------
 export const PopoverControl = props => {
-    const { id, expanded, trigger, disabled, isDropdown, glyph, size, btnType, children } = props;
+    const { id, expanded, trigger, children } = props;
     return (
         <div className="fd-popover__control" aria-expanded={expanded} onClick={trigger} aria-controls={id}>
             {children}
