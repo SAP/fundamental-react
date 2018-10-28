@@ -11,7 +11,7 @@ import { Breadcrumb, BreadcrumbItem } from '../src/Breadcrumb/Breadcrumb';
 import { Button, ButtonGroup, ButtonGrouped } from '../src/Button/Button';
 import { Calendar } from '../src/Calendar/Calendar';
 import { DatePicker } from '../src/DatePicker/DatePicker';
-import { Dropdown, DropdownList, DropdownGroup } from '../src/Dropdown/Dropdown';
+import { Dropdown } from '../src/Dropdown/Dropdown';
 import {
     FormSet,
     FormItem,
@@ -34,7 +34,7 @@ import { MegaMenu, MegaMenuList, MegaMenuGroup } from '../src/MegaMenu/MegaMenu'
 import { Menu, MenuList, MenuItem, MenuGroup } from '../src/Menu/Menu';
 import { Pagination } from '../src/Pagination/Pagination';
 import { Popover, PopoverControl, PopoverBody } from '../src/Popover/Popover';
-import { SideNav, SideNavItem, SideNavList, SideNavGroup } from '../src/SideNavigation/SideNavigation';
+import { SideNav, SideNavList, SideNavGroup } from '../src/SideNavigation/SideNavigation';
 import { Table } from '../src/Table/Table';
 import { Tabs, TabComponent } from '../src/Tabs/Tabs';
 import { Tag } from '../src/Tag/Tag';
@@ -81,8 +81,6 @@ export {
     Calendar,
     DatePicker,
     Dropdown,
-    DropdownList,
-    DropdownGroup,
     FormSet,
     FormItem,
     FormLabel,

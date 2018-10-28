@@ -2,7 +2,6 @@ import React from 'react';
 import { } from '../';
 import { DocsTile, DocsText, Separator, Header, Description, Import, Properties } from '..';
 import { Menu, MenuList, MenuItem, MenuGroup } from '..';
-import "fundamental-ui/scss/components/menu.scss";
 
 export const MenuComponent = () => {
     const menuCode = `<Menu>
