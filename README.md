@@ -1,6 +1,7 @@
 
 # Fundamental-react - React.JS components for [Fundamental UI](https://github.com/SAP/fundamental)
-# Fundamental-react [Live Demo](https://sap.github.io/fundamental-react/) 
+# Fundamental-react   [Live Demo](https://sap.github.io/fundamental-react/) 
+# Fundamental-react   [npm package](https://www.npmjs.com/package/fundamental-react)
 
 ## Description
 
