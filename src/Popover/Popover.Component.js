@@ -1,6 +1,7 @@
 import React from 'react';
 import { Popover, Image, Identifier, Icon, Menu, MenuList, MenuItem } from '../';
 import { DocsTile, DocsText, Separator, Header, Description, Import, Properties } from '../';
+import 'fundamental-ui/scss/components/popover.scss';
 
 export const PopoverComponent = () => {
     const popoverCode = `<Popover
