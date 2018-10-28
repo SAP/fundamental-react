@@ -1,11 +1,12 @@
 
-# Fundamental-react - React.JS components for [Fundamental UI](https://github.com/SAP/fundamental)
-# Fundamental-react   [Live Demo](https://sap.github.io/fundamental-react/) 
-# Fundamental-react   [npm package](https://www.npmjs.com/package/fundamental-react)
+# Fundamental-react
+React.JS components for [SAP Fiori Fundamentals](https://github.com/SAP/fundamental)
+[Live Demo](https://sap.github.io/fundamental-react/) 
+[npm package fundamental-react](https://www.npmjs.com/package/fundamental-react)
 
 ## Description
 
-Fundamental-react is a set of [React](https://reactjs.org/) components implementation of [Fundamental UI library](https://sap.github.io/fundamental/). Fundamental-UI is a Design System and HTML/CSS Component Library used to build modern Product User Experiences with the SAP look and feel. This will allow you to stay/use React for your application and get SAP look and feel.
+Fundamental-react is a set of [React](https://reactjs.org/) components implementation of [SAP Fiori Fundamentals library](https://sap.github.io/fundamental/). SAP Fiori Fundamentals library is a Design System and HTML/CSS Component Library used to build modern Product User Experiences with the SAP look and feel. This will allow you to stay/use React for your application and get SAP look and feel.
 Fundamental-react is an open source library and it is open for contribution as long as you follow certain [rules/guidelines](./CONTRIBUTING.md).
 
 ## Requirements
