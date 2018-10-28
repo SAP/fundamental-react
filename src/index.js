@@ -116,7 +116,6 @@ export {
     Pagination,
     SideNav,
     SideNavList,
-    SideNavItem,
     SideNavGroup,
     Table,
     Tabs,
