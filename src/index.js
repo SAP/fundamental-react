@@ -4,7 +4,12 @@ import './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
-import { ActionBar } from '../src/ActionBar/ActionBar';
+import {
+    ActionBar,
+    ActionBarBack,
+    ActionBarHeader,
+    ActionBarActions
+} from '../src/ActionBar/ActionBar';
 import { Alert } from '../src/Alert/Alert';
 import { Badge, Label, Status } from '../src/Badge/Badge';
 import { Breadcrumb, BreadcrumbItem } from '../src/Breadcrumb/Breadcrumb';
@@ -69,6 +74,9 @@ export {
     Properties,
     Playground,
     ActionBar,
+    ActionBarBack,
+    ActionBarHeader,
+    ActionBarActions,
     Alert,
     Badge,
     Label,
