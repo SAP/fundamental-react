@@ -58,16 +58,12 @@ export class Modal extends Component {
                     ) : (
                       ''
                     )}
-                    {primaryBtnText ? (
-                      <button
-                        className="fd-button--primary"
-                        onClick={() => this.handleCloseClick(primaryBtnText)}
-                      >
-                        {primaryBtnText}
-                      </button>
-                    ) : (
-                      ''
-                    )}
+                    <button
+                      className="fd-button--primary"
+                      onClick={() => this.handleCloseClick(primaryBtnText)}
+                    >
+                      {primaryBtnText}
+                    </button>
                   </div>
                 </footer>
               ) : (
