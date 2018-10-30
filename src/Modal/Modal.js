@@ -13,7 +13,6 @@ export class Modal extends Component {
 
   // check for Escape key press
   handleKeyPress = event => {
-    console.log(event.key);
     if (event.key === 'Escape' || event.key === 'Esc') {
       this.handleCloseClick();
     }
