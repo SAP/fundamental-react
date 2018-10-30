@@ -11,11 +11,7 @@ import { Breadcrumb, BreadcrumbItem } from '../src/Breadcrumb/Breadcrumb';
 import { Button, ButtonGroup, ButtonGrouped } from '../src/Button/Button';
 import { Calendar } from '../src/Calendar/Calendar';
 import { DatePicker } from '../src/DatePicker/DatePicker';
-import {
-    Dropdown,
-    DropdownList,
-    DropdownGroup
-} from '../src/Dropdown/Dropdown';
+import { Dropdown } from '../src/Dropdown/Dropdown';
 import {
     FormSet,
     FormItem,
@@ -33,25 +29,13 @@ import { Identifier } from '../src/Identifier/Identifier';
 import { Image } from '../src/Image/Image';
 import { InlineHelp } from '../src/InlineHelp/InlineHelp';
 import { InputGroup, FormGroup } from '../src/InputGroup/InputGroup';
-import {
-    ListGroup,
-    ListGroupItem,
-    ListGroupItemActions,
-    ListGroupItemCheckbox
-} from '../src/ListGroup/ListGroup';
-import {
-    MegaMenu,
-    MegaMenuList,
-    MegaMenuGroup
-} from '../src/MegaMenu/MegaMenu';
+import { ListGroup, ListGroupItem, ListGroupItemActions, ListGroupItemCheckbox } from '../src/ListGroup/ListGroup';
+import { MegaMenu, MegaMenuList, MegaMenuGroup } from '../src/MegaMenu/MegaMenu';
 import { Menu, MenuList, MenuItem, MenuGroup } from '../src/Menu/Menu';
 import { Modal } from '../src/Modal/Modal';
 import { Pagination } from '../src/Pagination/Pagination';
-import {
-    SideNav,
-    SideNavList,
-    SideNavGroup
-} from '../src/SideNavigation/SideNavigation';
+import { Popover, PopoverControl, PopoverBody } from '../src/Popover/Popover';
+import { SideNav, SideNavList, SideNavGroup } from '../src/SideNavigation/SideNavigation';
 import { Table } from '../src/Table/Table';
 import { Tabs, TabComponent } from '../src/Tabs/Tabs';
 import { Tag } from '../src/Tag/Tag';
@@ -98,8 +82,6 @@ export {
     Calendar,
     DatePicker,
     Dropdown,
-    DropdownList,
-    DropdownGroup,
     FormSet,
     FormItem,
     FormLabel,
@@ -128,6 +110,9 @@ export {
     MenuItem,
     MenuGroup,
     Modal,
+    Popover,
+    PopoverControl,
+    PopoverBody,
     Pagination,
     SideNav,
     SideNavList,

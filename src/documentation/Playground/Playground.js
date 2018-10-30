@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Alert } from '../../';
 import { Badge, Label, Status } from '../../';
 import { Button, ButtonGroup, ButtonGrouped } from '../../';
-import { Dropdown, DropdownList } from '../../';
+import { Dropdown} from '../../';
 import { Icon } from '../../';
 import { Identifier } from '../../';
 import { Image } from '../../';
@@ -399,7 +399,7 @@ export class Playground extends Component {
                             this.state.currentValues
                         )}
                     >
-                        <DropdownList links={this.state.childs.children.props.links} />
+                        
                     </Dropdown>
                 );
                 break;
@@ -521,13 +521,7 @@ export class Playground extends Component {
                             </TileContent>
                             <TileActions>
                                 <Dropdown size="m" isContextual={true}>
-                                    <DropdownList
-                                        links={[
-                                            { id: 'item_1', url: '#', name: 'Option 1' },
-                                            { id: 'item_2', url: '#', name: 'Option 2' },
-                                            { id: 'item_3', url: '#', name: 'Option 3' }
-                                        ]}
-                                    />
+                                   
                                 </Dropdown>
                             </TileActions>
                         </Tile>
@@ -547,13 +541,7 @@ export class Playground extends Component {
                             />
                             <TileActions>
                                 <Dropdown size="m" isContextual={true}>
-                                    <DropdownList
-                                        links={[
-                                            { id: 'item_1', url: '#', name: 'Option 1' },
-                                            { id: 'item_2', url: '#', name: 'Option 2' },
-                                            { id: 'item_3', url: '#', name: 'Option 3' }
-                                        ]}
-                                    />
+                                    
                                 </Dropdown>
                             </TileActions>
                         </Tile>

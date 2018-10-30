@@ -5535,7 +5535,6 @@ see layouts/panel
 .fd-tile__content .fd-label,
 .fd-tile__content .fd-status-label,
 .fd-tile__content .fd-tag,
-.fd-tile__content [class*='fd-button'],
 .fd-tile__content [class*='fd-identifier'],
 .fd-tile__content [class*='fd-image'],
 .fd-tile__content [class*='fd-form'] {
