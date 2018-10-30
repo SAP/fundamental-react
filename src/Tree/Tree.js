@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { BrowserRouter, Link } from 'react-router-dom'
-import { Dropdown, DropdownList } from '../'
+import { Dropdown } from '../'
 
 export class Tree extends Component{
 
@@ -104,23 +104,13 @@ export class Tree extends Component{
             }
             if (isChild){
                 return  (<ul className={displayLevel} role="group"><ul className="fd-tree-child"><li className="fd-tree__item" role="treeitem" aria-expanded="true" key={row.id}><div className="fd-tree__row">{parent}{<Dropdown isContextual={true}>
-                            <DropdownList links=
-                {[
-                    { id: '', url: '#', name: 'Edit' },
-                    { id: '', url: '#', name: 'Delete' }
-                ]}>
-            </DropdownList>
+                            
             </Dropdown>}</div>{tree}</li></ul></ul>)
 
             }
             depthLevel = 0;
             return (<li className="fd-tree__item" role="treeitem" aria-expanded="true" key={row.id}><div className="fd-tree__row">{parent}{<Dropdown isContextual={true}>
-            <DropdownList links=
-                {[
-                    { id: '', url: '#', name: 'Edit' },
-                    { id: '', url: '#', name: 'Delete' }
-                ]}>
-            </DropdownList>
+            
             </Dropdown>}</div>{tree}</li>)
         });
         
