@@ -1,48 +1,90 @@
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
+import PropTypes from 'prop-types';
 
 export class Modal extends Component {
-  //   constructor(props, context) {
-  //    super(props, context);
-  //   }
+  // select body element to add Modal component too
+  bodyElm = document.querySelector('body');
 
-  handleCloseClick = event => {
-    this.props.onCloseClick(event);
+  // send type of button (primary or secondary) text to onClose method
+  handleCloseClick = type => {
+    this.props.onClose(type);
   };
 
-  render() {
-    const {
-      children,
-      title,
-      secondaryBtnText = 'No',
-      primaryBtnText = 'Yes'
-    } = this.props;
+  // check for Escape key press
+  handleKeyPress = event => {
+    console.log(event.key);
+    if (event.key === 'Escape' || event.key === 'Esc') {
+      this.handleCloseClick();
+    }
+  };
 
-    return (
+  // add event listener for escape key
+  componentDidMount() {
+    document.addEventListener('keydown', this.handleKeyPress, false);
+  }
+
+  // remove event listener for escape key
+  componentWillUnmount() {
+    document.removeEventListener('keydown', this.handleKeyPress, false);
+  }
+
+  render() {
+    const { children, title, secondaryBtnText, primaryBtnText } = this.props;
+
+    return ReactDOM.createPortal(
       <div className="fd-ui__overlay fd-overlay fd-overlay--modal">
-        <div class="modal-demo-bg">
-          <div class="fd-modal">
-            <div class="fd-modal__content" role="document">
-              <div class="fd-modal__header">
-                <h1 class="fd-modal__title">{title}</h1>
+        <div className="modal-demo-bg">
+          <div className="fd-modal">
+            <div className="fd-modal__content" role="document">
+              <div className="fd-modal__header">
+                <h1 className="fd-modal__title">{title}</h1>
                 <button
-                  class="fd-button--secondary fd-modal__close"
+                  className="fd-button--secondary fd-modal__close"
                   aria-label="close"
                   onClick={this.handleCloseClick}
                 />
               </div>
-              <div class="fd-modal__body">{children}</div>
-              <footer class="fd-modal__footer">
-                <div class="fd-modal__actions">
-                  <button class="fd-button--secondary">
-                    {secondaryBtnText}
-                  </button>
-                  <button class="fd-button--primary">{primaryBtnText}</button>
-                </div>
-              </footer>
+              <div className="fd-modal__body">{children}</div>
+              {primaryBtnText ? (
+                <footer className="fd-modal__footer">
+                  <div className="fd-modal__actions">
+                    {secondaryBtnText ? (
+                      <button
+                        className="fd-button--secondary"
+                        onClick={() => this.handleCloseClick(secondaryBtnText)}
+                      >
+                        {secondaryBtnText}
+                      </button>
+                    ) : (
+                      ''
+                    )}
+                    {primaryBtnText ? (
+                      <button
+                        className="fd-button--primary"
+                        onClick={() => this.handleCloseClick(primaryBtnText)}
+                      >
+                        {primaryBtnText}
+                      </button>
+                    ) : (
+                      ''
+                    )}
+                  </div>
+                </footer>
+              ) : (
+                ''
+              )}
             </div>
           </div>
         </div>
-      </div>
+      </div>,
+      this.bodyElm
     );
   }
 }
+
+Modal.propTypes = {
+  title: PropTypes.string.isRequired,
+  primaryBtnText: PropTypes.string,
+  secondaryBtnText: PropTypes.string
+};
