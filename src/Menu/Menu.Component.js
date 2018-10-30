@@ -1,5 +1,5 @@
 import React from 'react';
-import {} from '..';
+import { } from '../';
 import { DocsTile, DocsText, Separator, Header, Description, Import, Properties } from '..';
 import { Menu, MenuList, MenuItem, MenuGroup } from '..';
 

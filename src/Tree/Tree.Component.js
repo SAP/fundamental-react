@@ -1,7 +1,6 @@
 import React from 'react'
-import { Dropdown, DropdownList } from '../'
 import { DocsTile, DocsText, Separator, Header, Description, Import, Properties } from '../'
-import { Tree, TreeList } from '../'
+import { Tree} from '../'
 
 export const TreeComponent = () => {
     const treeCode = `headers={['Column Header', 'Column Header 1 ', 'Column Header 2', 'Status']}
