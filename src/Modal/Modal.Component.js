@@ -126,9 +126,7 @@ export class ModalComponent extends Component {
         <Description>
           The modal is a container generally displayed in response to an action.
           It is used for short forms, confirmation messages or to display
-          contextual information that does not require a page. The modal should
-          always be used in conjunction with the Application Layout Containers.
-          See an example App layout page with Modal.
+          contextual information that does not require a page.
         </Description>
         <Import module="Modal" path="/fundamental-react/src/" />
 
