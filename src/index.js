@@ -37,6 +37,7 @@ import { InputGroup, FormGroup } from '../src/InputGroup/InputGroup';
 import { ListGroup, ListGroupItem, ListGroupItemActions, ListGroupItemCheckbox } from '../src/ListGroup/ListGroup';
 import { MegaMenu, MegaMenuList, MegaMenuGroup } from '../src/MegaMenu/MegaMenu';
 import { Menu, MenuList, MenuItem, MenuGroup } from '../src/Menu/Menu';
+import { Modal } from '../src/Modal/Modal';
 import { Pagination } from '../src/Pagination/Pagination';
 import { Popover, PopoverControl, PopoverBody } from '../src/Popover/Popover';
 import { SideNav, SideNavList, SideNavGroup } from '../src/SideNavigation/SideNavigation';
@@ -116,6 +117,7 @@ export {
     MenuList,
     MenuItem,
     MenuGroup,
+    Modal,
     Popover,
     PopoverControl,
     PopoverBody,
