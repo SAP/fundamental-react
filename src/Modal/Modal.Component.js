@@ -7,7 +7,8 @@ import {
   Description,
   Import,
   Properties,
-  Modal
+  Modal,
+  Button
 } from '../';
 
 export class ModalComponent extends Component {
@@ -38,25 +39,51 @@ export class ModalComponent extends Component {
   </div>
 </Modal>`;
 
-  confirmationModalCode = `<Modal title="Delete" onClose={this.showHideConfirmModal} primaryBtnText="Sure" secondaryBtnText="No Way">
+  confirmationModalCode = `<Modal title="Delete" 
+  onClose={this.showHideConfirmModal}
+  actions={
+    <React.Fragment>
+      <Button
+        type="secondary"
+        onclick={() => this.showHideConfirmModal('No Way')}
+      >
+        No Way
+      </Button>
+      <Button onclick={() => this.showHideConfirmModal('Sure')}>
+        Sure
+      </Button>
+    </React.Fragment>
+  }>
   <div>
     Do you want to delete item <b>X</b>?
   </div>
 </Modal>`;
 
-  formModalCode = `<Modal title="Invite user" onClose={this.showHideFormModal} primaryBtnText="Invite" secondaryBtnText="Cancel">
+  formModalCode = `<Modal title="Invite user" 
+  onClose={this.showHideFormModal}
+  actions={
+    <React.Fragment>
+      <Button
+        type="secondary"
+        onclick={() => this.showHideFormModal('Cancel')}
+      >
+        Cancel
+      </Button>
+      <Button onclick={() => this.showHideFormModal('Invite')}>
+        Invite
+      </Button>
+    </React.Fragment>
+  }>
   <div className="fd-form__group">
     <div className="fd-form__item">
       <label
         className="fd-form__label is-required"
-        htmlFor="input-2"
       >
-        Email*
+        Email
       </label>
       <input
         className="fd-form__control"
         type="text"
-        id="input-2"
       />
     </div>
   </div>
@@ -140,14 +167,9 @@ export class ModalComponent extends Component {
               description: 'String (required) - Title for modal dialog box'
             },
             {
-              name: 'primaryBtnText',
+              name: 'actions',
               description:
-                'String - Text to display on primary button in footer. Footer and buttons will not display unless "primaryBtnText" value is set.'
-            },
-            {
-              name: 'secondaryBtnText',
-              description:
-                'String - Text to display on secondary button in footer. Footer and buttons will not display unless "primaryBtnText" value is set.'
+                'React.Fragment which contains <Button /> controls to render in the footer'
             }
           ]}
         />
@@ -196,8 +218,19 @@ export class ModalComponent extends Component {
             <Modal
               title="Delete"
               onClose={this.showHideConfirmModal}
-              primaryBtnText="Sure"
-              secondaryBtnText="No Way"
+              actions={
+                <React.Fragment>
+                  <Button
+                    type="secondary"
+                    onclick={() => this.showHideConfirmModal('No Way')}
+                  >
+                    No Way
+                  </Button>
+                  <Button onclick={() => this.showHideConfirmModal('Sure')}>
+                    Sure
+                  </Button>
+                </React.Fragment>
+              }
             >
               <div>
                 Do you want to delete item <b>X</b>?
@@ -221,21 +254,26 @@ export class ModalComponent extends Component {
             <Modal
               title="Invite user"
               onClose={this.showHideFormModal}
-              primaryBtnText="Invite"
-              secondaryBtnText="Cancel"
+              actions={
+                <React.Fragment>
+                  <Button
+                    type="secondary"
+                    onclick={() => this.showHideFormModal('Cancel')}
+                  >
+                    Cancel
+                  </Button>
+                  <Button onclick={() => this.showHideFormModal('Invite')}>
+                    Invite
+                  </Button>
+                </React.Fragment>
+              }
             >
               <div className="fd-form__group">
                 <div className="fd-form__item">
-                  <label
-                    className="fd-form__label is-required"
-                    htmlFor="input-2"
-                  >
-                    Email*
-                  </label>
+                  <label className="fd-form__label is-required">Email</label>
                   <input
                     className="fd-form__control"
                     type="text"
-                    id="input-2"
                     value={this.state.emailAddress}
                     onChange={this.updateEmailAddress}
                     ref={this.txtEmailRef}
