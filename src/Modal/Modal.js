@@ -6,9 +6,8 @@ export class Modal extends Component {
   // select body element to add Modal component too
   bodyElm = document.querySelector('body');
 
-  // send type of button (primary or secondary) text to onClose method
-  handleCloseClick = type => {
-    this.props.onClose(type);
+  handleCloseClick = () => {
+    this.props.onClose();
   };
 
   // check for Escape key press
@@ -29,7 +28,7 @@ export class Modal extends Component {
   }
 
   render() {
-    const { children, title, secondaryBtnText, primaryBtnText } = this.props;
+    const { children, title, actions } = this.props;
 
     return ReactDOM.createPortal(
       <div className="fd-ui__overlay fd-overlay fd-overlay--modal">
@@ -45,26 +44,9 @@ export class Modal extends Component {
                 />
               </div>
               <div className="fd-modal__body">{children}</div>
-              {primaryBtnText ? (
+              {actions ? (
                 <footer className="fd-modal__footer">
-                  <div className="fd-modal__actions">
-                    {secondaryBtnText ? (
-                      <button
-                        className="fd-button--secondary"
-                        onClick={() => this.handleCloseClick(secondaryBtnText)}
-                      >
-                        {secondaryBtnText}
-                      </button>
-                    ) : (
-                      ''
-                    )}
-                    <button
-                      className="fd-button--primary"
-                      onClick={() => this.handleCloseClick(primaryBtnText)}
-                    >
-                      {primaryBtnText}
-                    </button>
-                  </div>
+                  <div className="fd-modal__actions">{actions}</div>
                 </footer>
               ) : (
                 ''
@@ -79,7 +61,5 @@ export class Modal extends Component {
 }
 
 Modal.propTypes = {
-  title: PropTypes.string.isRequired,
-  primaryBtnText: PropTypes.string,
-  secondaryBtnText: PropTypes.string
+  title: PropTypes.string.isRequired
 };
