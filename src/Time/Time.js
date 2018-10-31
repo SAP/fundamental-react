@@ -33,16 +33,16 @@ class TimeItem extends Component {
   };
   _onDown = () => {
     const { value, max, name, time } = this.props;
-    var aux = 0;
-    if (name != "meridiem" && value > 0 && value < parseInt(max)) {
+    var aux = max;
+    if (
+      name != "meridiem" &&
+      value != NaN &&
+      value > 0 &&
+      value <= parseInt(max)
+    ) {
       aux = parseInt(value) - 1;
     } else if (name == "meridiem") {
       aux = clock.indexOf(value) ? 0 : 1;
-      if (aux == 1) {
-        let h = time.hour - 12;
-        console.log(h);
-        this.props.updateTime(h, "hour");
-      }
     }
     this.props.updateTime(aux, name);
   };
