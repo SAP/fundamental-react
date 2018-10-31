@@ -21,6 +21,7 @@ import { MenuComponent } from './Menu/Menu.Component';
 import { ModalComponent } from './Modal/Modal.Component';
 import { PaginationComponent } from './Pagination/Pagination.Component'
 import { PopoverComponent } from './Popover/Popover.Component';
+import { SearchInputComponent } from './SearchInput/SearchInput.Component';
 import { SideNavigationComponent } from './SideNavigation/SideNavigation.Component';
 import { TableComponent } from './Table/Table.Component';
 import { TabsComponent } from './Tabs/Tabs.Component';
@@ -54,6 +55,7 @@ export default class Routes extends Component {
                 { url: '/modal', name: 'Modal', component: ModalComponent },
                 { url: '/pagination', name: 'Pagination', component: PaginationComponent },
                 { url: '/popover', name: 'Popover', component: PopoverComponent },
+                { url: '/searchInput', name: 'Search Input', component: SearchInputComponent },
                 { url: '/sideNavigation', name: 'Side Navigation', component: SideNavigationComponent },
                 { url: '/table', name: 'Table', component: TableComponent },
                 { url: '/tabs', name: 'Tabs', component: TabsComponent },
