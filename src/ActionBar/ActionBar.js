@@ -1,29 +1,50 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export const ActionBar = (props) => {
-    const { title, hasActions, children } = props;
+export const ActionBar = props => {
+    const { mobile, width, children } = props;
+
     return (
-        <div className="fd-action-bar">
-            <div className="fd-action-bar__header">
-                <h1 className="fd-action-bar__title">
-                    {title}
-                </h1>
-            </div>
-            {
-                hasActions ? (
-                    <div className="fd-action-bar__actions">
-                { children }
-                    </div>
-                ) : null
-            }
-        </div>
+        <React.Fragment>
+            {mobile ? (
+                <div style={{ width: width ? width : '319px' }}>
+                    <div className="fd-action-bar">{children}</div>
+                </div>
+            ) : (
+                <div className="fd-action-bar">{children}</div>
+            )}
+        </React.Fragment>
     );
-}
+};
 
 ActionBar.propTypes = {
-    title: PropTypes.string.isRequired,
-    hasActions: PropTypes.bool
-}
+    mobile: PropTypes.bool
+};
 
+export const ActionBarBack = props => {
+    return (
+        <div class="fd-action-bar__back">
+            <button class=" fd-button--secondary fd-button--compact sap-icon--nav-back" />
+        </div>
+    );
+};
 
+export const ActionBarHeader = props => {
+    const { title, description } = props;
+    return (
+        <div class="fd-action-bar__header">
+            <h1 class="fd-action-bar__title">{title}</h1>
+            <p class="fd-action-bar__description">{description} </p>
+        </div>
+    );
+};
+
+ActionBarHeader.propTypes = {
+    title: PropTypes.string,
+    description: PropTypes.string
+};
+
+export const ActionBarActions = props => {
+    const { children } = props;
+    return <div class="fd-action-bar__actions">{children}</div>;
+};
