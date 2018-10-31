@@ -4,11 +4,11 @@ import { DocsTile, DocsText, Separator, Header, Description, Import, Properties 
 import { Playground } from '../documentation/Playground/Playground';
 
 export const IconComponent = () => {
-    const iconsCode = ` <Icon glyph="cart" size="s" />
-                        <Icon glyph="cart" />
-                        <Icon glyph="cart" size="m" />
-                        <Icon glyph="cart" size="l" />
-                        <Icon glyph="cart" size="xl" />`
+    const iconsCode = `<Icon glyph="cart" size="s" />
+<Icon glyph="cart" />
+<Icon glyph="cart" size="m" />
+<Icon glyph="cart" size="l" />
+<Icon glyph="cart" size="xl" />`
 
     let listOfIcons = [
         'accelerated',
