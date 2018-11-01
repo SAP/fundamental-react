@@ -11,40 +11,115 @@ class TimeItem extends Component {
     id: "",
     value: null
   };
+  /**
+   * Constructor.
+   * @param {object} props - The x value.
+   */
   constructor(props) {
     super(props);
+    var aria = {};
+    if (this.props.name == "meridiem") {
+      aria = {
+        buttonUp: "Increase period",
+        buttonDown: "Decrease period"
+      };
+    } else {
+      aria = {
+        buttonUp: "Increase " + this.props.name + "s",
+        buttonDown: "Decrease " + this.props.name + "s"
+      };
+    }
     this.state = {
       value: this.props.value,
       min: 0,
-      style: "fd-form__control "
+      style: "fd-form__control ",
+      arialabel: aria
+
+      // this.state.arialabel.bu
     };
   }
-
+  /****
+   * Function to handle press even on increase button
+   * Increase time item(hour,minute,second,meridiem) value
+   */
   _onUp = () => {
-    const { value, max, name } = this.props;
+    const { value, max, name, time, format12Hours } = this.props;
     var aux = 0;
-    console.log(value);
-    if ((name != "meridiem") & (value != NaN) && value < parseInt(max)) {
+    var maxAux = this.setMax(name, max);
+    if ((name != "meridiem") & (value != NaN) && value < maxAux) {
       aux = parseInt(value) + 1;
+    } else if (value == maxAux) {
+      this.increaseTimeObj(name, time, format12Hours);
     } else if (name == "meridiem") {
       aux = clock.indexOf(value) ? 0 : 1;
     }
     this.props.updateTime(aux, name);
   };
+  /**
+   * Function to increase  time item
+   *@param {string} name
+   *@param {object} time
+   *@param {bool} format12Hours
+   */
+  increaseTimeObj = (name, time, format12Hours) => {
+    if (name == "second" && time["minute"] < 60) {
+      let newSecond = time["minute"] + 1;
+      this.props.updateTime(newSecond, "minute");
+    }
+    if (
+      (name == "minute" && format12Hours && time["hour"] < 12) ||
+      (name == "minute" && !format12Hours && time["hour"] < 24)
+    ) {
+      let newMinute = time["hour"] + 1;
+      this.props.updateTime(newMinute, "hour");
+    }
+  };
+  /**
+   * Function to decrease time item
+   *@param {string} name
+   *@param {object} time
+   *@param {bool} ormat12Hours
+   */
+  decreaseTimeObj = (name, time) => {
+    if (name == "second" && time["minute"] > 0) {
+      let newSecond = time["minute"] - 1;
+      this.props.updateTime(newSecond, "minute");
+    }
+    if (name == "minute" && time["hour"] > 0) {
+      let newMinute = time["hour"] - 1;
+      this.props.updateTime(newMinute, "hour");
+    }
+  };
+  /****
+   * Function to handle press even on decrease button
+   * Decrease time item(hour,minute,second,meridiem) value
+   */
   _onDown = () => {
     const { value, max, name, time } = this.props;
-    var aux = max;
+    var aux = max - 1;
+    //TODO: fix the Hour Time item (value 12 missing on down)
     if (
       name != "meridiem" &&
       value != NaN &&
       value > 0 &&
-      value <= parseInt(max)
+      value < parseInt(max)
     ) {
       aux = parseInt(value) - 1;
     } else if (name == "meridiem") {
       aux = clock.indexOf(value) ? 0 : 1;
+    } else if (value == 0) {
+      this.decreaseTimeObj(name, time);
     }
     this.props.updateTime(aux, name);
+  };
+  setMax = (name, max) => {
+    var maxAux;
+    if (name == "hour") {
+      maxAux = parseInt(max);
+    } else {
+      maxAux = parseInt(max) - 1;
+    }
+    return maxAux;
   };
   onChange = event => {
     const { style } = this.state;
@@ -69,7 +144,7 @@ class TimeItem extends Component {
     }
   };
   render() {
-    const { value, style } = this.state;
+    const { value, style, arialabel } = this.state;
     const { type, placeholder, name } = this.props;
     //TODO: handle aria labels
     return (
@@ -77,7 +152,7 @@ class TimeItem extends Component {
         <div className="fd-time__control">
           <button
             className=" fd-button--secondary fd-button--xs sap-icon--navigation-up-arrow"
-            aria-label="Increase hours"
+            aria-label={arialabel.buttonUp}
             onClick={this._onUp}
           />
         </div>
@@ -96,7 +171,7 @@ class TimeItem extends Component {
         <div className="fd-time__control">
           <button
             className=" fd-button--secondary fd-button--xs sap-icon--navigation-down-arrow"
-            aria-label="Decrease hours"
+            aria-label={arialabel.buttonDown}
             onClick={this._onDown}
           />
         </div>
@@ -140,6 +215,7 @@ export class Time extends Component {
 
   render() {
     const { showHour, showMinute, showSecond, format12Hours } = this.props;
+    const { time } = this.state;
     let max;
     if (format12Hours) {
       max = 12;
@@ -155,10 +231,12 @@ export class Time extends Component {
             defaultValue={1}
             type={"Hours"}
             max={max}
-            value={this.state.time.hour}
+            value={time.hour}
             onChange={this.onChange}
             updateTime={this.updateTime}
             name="hour"
+            time={time}
+            format12Hours={format12Hours}
           />
         ) : (
           ""
@@ -168,12 +246,14 @@ export class Time extends Component {
           <TimeItem
             placeholder={"mm"}
             defaultValue={1}
-            type={"Minute"}
+            type={"Minutes"}
             max={"60"}
             value={this.state.time.minute}
             onChange={this.onChange}
             updateTime={this.updateTime}
             name="minute"
+            time={time}
+            format12Hours={format12Hours}
           />
         ) : (
           ""
@@ -183,18 +263,21 @@ export class Time extends Component {
           <TimeItem
             placeholder={"ss"}
             defaultValue={1}
-            type={"Second"}
+            type={"Seconds"}
             max={"60"}
             value={this.state.time.second}
             onChange={this.onChange}
             updateTime={this.updateTime}
             name="second"
+            time={time}
+            format12Hours={format12Hours}
           />
         ) : (
           ""
         )}
         {format12Hours ? (
           <TimeItem
+            type={"Period"}
             max={"1"}
             time={this.state.time}
             value={clock[this.state.time.meridiem]}
