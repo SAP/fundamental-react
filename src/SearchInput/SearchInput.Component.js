@@ -130,6 +130,14 @@ export class SearchInputComponent extends Component {
   onSearch={this.performSearch}
 />`;
 
+  exampleAutoCompleteMethod = `performAutoComplete = searchTerm => {
+  const searchResults = this.data.filter(item => {
+    return item.toLowerCase().startsWith(searchTerm.toLowerCase());
+  });
+
+  this.setState({ data: searchResults });
+};`;
+
   performAutoComplete = searchTerm => {
     const searchResults = this.data.filter(item => {
       return item.toLowerCase().startsWith(searchTerm.toLowerCase());
@@ -201,7 +209,14 @@ export class SearchInputComponent extends Component {
           A text input with Search button that includes auto-complete
           functionality. Clicking on the Search button, selecting an
           auto-complete item or pressing the Enter key will execute the onSearch
-          method.
+          method. <br />
+          <br />
+          For the auto-complete functionality to work the parent component needs
+          to pass a method to the <b>onAutoComplete</b> property. The Search
+          Input component will pass to the onAutoComplete method the value
+          entered in to the search box. It is up to the parent component to
+          create the array of values to display and set it to the <b>data</b>{' '}
+          property of the Search Input component.
         </Description>
         <DocsTile>
           <div>
@@ -214,6 +229,12 @@ export class SearchInputComponent extends Component {
           </div>
         </DocsTile>
         <DocsText>{this.autoCompleteSearchInputCode}</DocsText>
+        <Separator />
+        <Description>
+          Sample auto-complete method which filters an array of fruit based on
+          the search input value.
+        </Description>
+        <DocsText>{this.exampleAutoCompleteMethod}</DocsText>
 
         <Separator />
       </div>
