@@ -160,7 +160,7 @@ export class SearchInputComponent extends Component {
                 'Func (Required) - Method to execute on click of Search icon, selection of auto-complete item or by pressing the Enter key.'
             },
             {
-              name: 'placeholder',
+              name: 'placeHolder',
               description:
                 'String - The text to use as placeholder when no text is entered.'
             },

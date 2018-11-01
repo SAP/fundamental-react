@@ -15,7 +15,7 @@ export class SearchInput extends Component {
   handleSearch = event => {
     const searchTerm = event.target.value;
 
-    // check if control is onAutoComplete
+    // check if control auto complete
     if (this.props.onAutoComplete) {
       if (searchTerm) {
         this.setState({ searchTerm: searchTerm, bShowList: true });
@@ -87,7 +87,7 @@ export class SearchInput extends Component {
   };
 
   // create auto complete search items
-  createSearchItems = data => {
+  createAutoCompleteItems = data => {
     return data.length > 0 ? (
       data.map((item, index) => {
         let classNames = 'fd-menu__item';
@@ -142,7 +142,7 @@ export class SearchInput extends Component {
             >
               <nav className="fd-menu">
                 <ul className="fd-menu__list">
-                  {this.createSearchItems(data)}
+                  {this.createAutoCompleteItems(data)}
                 </ul>
               </nav>
             </div>
