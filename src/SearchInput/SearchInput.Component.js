@@ -120,14 +120,14 @@ export class SearchInputComponent extends Component {
 
   searchInputCode = `<SearchInput
   placeHolder="Enter a fruit"
-  performSearch={this.performSearch}
+  onSearch={this.performSearch}
 />`;
 
   autoCompleteSearchInputCode = `<SearchInput
   placeHolder="Enter a fruit"
   data={this.state.data}
-  autoComplete={this.performAutoComplete}
-  performSearch={this.performSearch}
+  onAutoComplete={this.performAutoComplete}
+  onSearch={this.performSearch}
 />`;
 
   performAutoComplete = searchTerm => {
@@ -155,9 +155,9 @@ export class SearchInputComponent extends Component {
           type="Inputs"
           properties={[
             {
-              name: 'performSearch',
+              name: 'onSearch',
               description:
-                'Func (Required) - Method to execute on click of Search icon or selection of auto-complete item.'
+                'Func (Required) - Method to execute on click of Search icon, selection of auto-complete item or by pressing the Enter key.'
             },
             {
               name: 'placeholder',
@@ -168,6 +168,11 @@ export class SearchInputComponent extends Component {
               name: 'data',
               description:
                 'Array - Collection of items to display in auto-complete list.'
+            },
+            {
+              name: 'onAutoComplete',
+              description:
+                'Func - Method that receives search input box text, to perform auto complete query.'
             }
           ]}
         />
@@ -175,12 +180,15 @@ export class SearchInputComponent extends Component {
         <Separator />
 
         <h2>Default Search</h2>
-        <Description>A text input with Search button.</Description>
+        <Description>
+          A text input with Search button. Clicking on the Search button or
+          pressing the Enter key will execute the onSearch method.
+        </Description>
         <DocsTile>
           <div>
             <SearchInput
               placeHolder="Enter a fruit"
-              performSearch={this.performSearch}
+              onSearch={this.performSearch}
             />
           </div>
         </DocsTile>
@@ -191,15 +199,17 @@ export class SearchInputComponent extends Component {
         <h2>Auto Complete Search</h2>
         <Description>
           A text input with Search button that includes auto-complete
-          functionality
+          functionality. Clicking on the Search button, selecting an
+          auto-complete item or pressing the Enter key will execute the onSearch
+          method.
         </Description>
         <DocsTile>
           <div>
             <SearchInput
               placeHolder="Enter a fruit"
               data={this.state.data}
-              autoComplete={this.performAutoComplete}
-              performSearch={this.performSearch}
+              onAutoComplete={this.performAutoComplete}
+              onSearch={this.performSearch}
             />
           </div>
         </DocsTile>

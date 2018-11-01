@@ -15,15 +15,15 @@ export class SearchInput extends Component {
   handleSearch = event => {
     const searchTerm = event.target.value;
 
-    // check if control is autocomplete
-    if (this.props.autoComplete) {
+    // check if control is onAutoComplete
+    if (this.props.onAutoComplete) {
       if (searchTerm) {
         this.setState({ searchTerm: searchTerm, bShowList: true });
       } else {
         // no search term, remove text from search box and hide list
         this.setState({ searchTerm: searchTerm, bShowList: false });
       }
-      this.props.autoComplete(searchTerm);
+      this.props.onAutoComplete(searchTerm);
     } else {
       this.setState({ searchTerm: searchTerm });
     }
@@ -34,7 +34,7 @@ export class SearchInput extends Component {
     const searchTerm = event.target.innerText;
     this.setState({ searchTerm: searchTerm, bShowList: false });
 
-    this.props.performSearch(searchTerm);
+    this.props.onSearch(searchTerm);
   };
 
   // check for enter key
@@ -45,16 +45,16 @@ export class SearchInput extends Component {
       if (this.props.data && this.props.data.length > 0) {
         this.setState(
           { searchTerm: this.props.data[0], bShowList: false },
-          () => this.props.performSearch(this.state.searchTerm)
+          () => this.props.onSearch(this.state.searchTerm)
         );
       } else {
-        this.props.performSearch(this.state.searchTerm);
+        this.props.onSearch(this.state.searchTerm);
       }
     }
   };
 
   // create search box
-  createSearchInput = () => {
+  createSearchInput = onAutoComplete => {
     let searchInput = (
       <input
         type="text"
@@ -65,8 +65,8 @@ export class SearchInput extends Component {
       />
     );
 
-    // include auto complete functionality if autoComplete method is passed to component
-    if (this.props.autoComplete) {
+    // include auto complete functionality if onAutoComplete method is passed to component
+    if (onAutoComplete) {
       searchInput = (
         <input
           type="text"
@@ -112,7 +112,7 @@ export class SearchInput extends Component {
   };
 
   render() {
-    const { data, performSearch, autoComplete } = this.props;
+    const { data, onSearch, onAutoComplete } = this.props;
 
     return (
       <div className="fd-search-input">
@@ -125,17 +125,17 @@ export class SearchInput extends Component {
               aria-haspopup="true"
             >
               <div className="fd-input-group fd-input-group--after">
-                {this.createSearchInput()}
+                {this.createSearchInput(onAutoComplete)}
                 <span className="fd-input-group__addon fd-input-group__addon--after fd-input-group__addon--button">
                   <button
                     className=" fd-button--light sap-icon--search"
-                    onClick={() => performSearch(this.state.searchTerm)}
+                    onClick={() => onSearch(this.state.searchTerm)}
                   />
                 </span>
               </div>
             </div>
           </div>
-          {autoComplete ? (
+          {onAutoComplete ? (
             <div
               className="fd-popover__body fd-popover__body--no-arrow"
               aria-hidden={!this.state.bShowList}
@@ -156,8 +156,8 @@ export class SearchInput extends Component {
 }
 
 SearchInput.propTypes = {
-  performSearch: PropTypes.func.isRequired,
   placeHolder: PropTypes.string,
   data: PropTypes.array,
-  autoComplete: PropTypes.func
+  onSearch: PropTypes.func.isRequired,
+  onAutoComplete: PropTypes.func
 };
