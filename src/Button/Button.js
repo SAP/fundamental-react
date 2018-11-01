@@ -2,16 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 export const Button = props => {
-    const { type, semantic, size, glyph, dropdown, toolbar, state, typeAttr, onclick, children } = props;
+    const { option, type, size, glyph, dropdown, selected, disabled, typeAttr, onclick, children } = props;
     return (
         <button
-            className={`${dropdown ? 'fd-dropdown__control' : ''}
-            ${type ? ' fd-button--' + type : ' fd-button'}
-            ${toolbar ? 'fd-button--toolbar' : ''}
-            ${semantic ? ' fd-button--' + semantic : ''}
-            ${size ? ' fd-button--' + size : ''}
-            ${glyph ? ' sap-icon--' + glyph : ''}
-            ${state ? ' is-' + state : ''}`}
+            className={`${option ? 'fd-button--' + option : ' fd-button'}${type ? ' fd-button--' + type : ''}${dropdown ? 'fd-dropdown__control' : ''}${size ? ' fd-button--' + size : ''}${glyph ? ' sap-icon--' + glyph : ''}${selected ? ' is-selected' : ''}${disabled ? ' is-disabled' : ''}`}
+            aria-selected={selected ? selected : false}
+            aria-disabled={disabled ? disabled : false}
             type={typeAttr}
             onClick={onclick}
         >
@@ -21,13 +17,13 @@ export const Button = props => {
 };
 
 Button.propTypes = {
-    dropdown: PropTypes.bool,
-    toolbar: PropTypes.bool,
+    option: PropTypes.string,
     type: PropTypes.string,
-    semantic: PropTypes.string,
     size: PropTypes.string,
     glyph: PropTypes.string,
-    state: PropTypes.string,
+    dropdown: PropTypes.bool,
+    selected: PropTypes.bool,
+    disabled: PropTypes.bool,
     typeAttr: PropTypes.string,
     onclick: PropTypes.func
 };
@@ -39,23 +35,4 @@ export const ButtonGroup = props => {
             {children}
         </div>
     );
-};
-
-export const ButtonGrouped = props => {
-    const { size, glyph, state, children } = props;
-    return (
-        <button
-            className={`fd-button--grouped${size ? ' fd-button--' + size : ''}${glyph ? ' sap-icon--' + glyph : ''}${
-                state ? ' is-' + state : ''
-            }`}
-        >
-            {children}
-        </button>
-    );
-};
-
-ButtonGrouped.propTypes = {
-    size: PropTypes.string,
-    glyph: PropTypes.string,
-    state: PropTypes.string
 };

@@ -13,7 +13,7 @@ import {
 import { Alert } from '../src/Alert/Alert';
 import { Badge, Label, Status } from '../src/Badge/Badge';
 import { Breadcrumb, BreadcrumbItem } from '../src/Breadcrumb/Breadcrumb';
-import { Button, ButtonGroup, ButtonGrouped } from '../src/Button/Button';
+import { Button, ButtonGroup } from '../src/Button/Button';
 import { Calendar } from '../src/Calendar/Calendar';
 import { DatePicker } from '../src/DatePicker/DatePicker';
 import { Dropdown } from '../src/Dropdown/Dropdown';
@@ -87,7 +87,6 @@ export {
     BreadcrumbItem,
     Button,
     ButtonGroup,
-    ButtonGrouped,
     Calendar,
     DatePicker,
     Dropdown,

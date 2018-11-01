@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Alert } from '../../';
 import { Badge, Label, Status } from '../../';
-import { Button, ButtonGroup, ButtonGrouped } from '../../';
-import { Dropdown} from '../../';
+import { Button, ButtonGroup } from '../../';
+import { Dropdown } from '../../';
 import { Icon } from '../../';
 import { Identifier } from '../../';
 import { Image } from '../../';
@@ -329,53 +329,13 @@ export class Playground extends Component {
                     <Button
                         type={this.state.childs.type}
                         glyph={this.state.childs.glyph}
-                        semantic={this.state.childs.semantic}
+                        option={this.state.childs.option}
                         size={this.state.childs.size}
-                        state={this.state.childs.state}
+                        disabled={this.state.childs.disabled}
+                        selected={this.state.childs.selected}
                     >
                         {this.state.childs.children}
                     </Button>
-                );
-                break;
-            case 'buttongroup':
-                componentToGenerate = (
-                    <ButtonGroup>
-                        <ButtonGrouped
-                            size={this.retrieveValue(
-                                'size',
-                                this.state.childs.children[0].props.size,
-                                this.state.currentValues
-                            )}
-                        >
-                            Left
-                        </ButtonGrouped>
-                        <ButtonGrouped
-                            size={this.retrieveValue(
-                                'size',
-                                this.state.childs.children[1].props.size,
-                                this.state.currentValues
-                            )}
-                            glyph={this.retrieveValue(
-                                'glyph',
-                                this.state.childs.children[1].props.glyph,
-                                this.state.currentValues
-                            )}
-                            state={this.retrieveValue(
-                                'state',
-                                this.state.childs.children[1].props.state,
-                                this.state.currentValues
-                            )}
-                        />
-                        <ButtonGrouped
-                            size={this.retrieveValue(
-                                'size',
-                                this.state.childs.children[2].props.size,
-                                this.state.currentValues
-                            )}
-                        >
-                            Right
-                        </ButtonGrouped>
-                    </ButtonGroup>
                 );
                 break;
             case 'dropdown':
@@ -398,9 +358,7 @@ export class Playground extends Component {
                             this.state.childs.isContextual,
                             this.state.currentValues
                         )}
-                    >
-                        
-                    </Dropdown>
+                    />
                 );
                 break;
             case 'icon':
@@ -520,9 +478,7 @@ export class Playground extends Component {
                                 </p>
                             </TileContent>
                             <TileActions>
-                                <Dropdown size="m" isContextual={true}>
-                                   
-                                </Dropdown>
+                                <Dropdown size="m" isContextual={true} />
                             </TileActions>
                         </Tile>
                     );
@@ -540,9 +496,7 @@ export class Playground extends Component {
                                 )}
                             />
                             <TileActions>
-                                <Dropdown size="m" isContextual={true}>
-                                    
-                                </Dropdown>
+                                <Dropdown size="m" isContextual={true} />
                             </TileActions>
                         </Tile>
                     );
