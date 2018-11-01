@@ -118,18 +118,28 @@ export class SearchInputComponent extends Component {
     };
   }
 
-  defaultHelpPlacement = `<InlineHelp text="Lorem ipsum dolor sit amet, consectetur adipiscing." placement="bottom-right"/>`;
+  searchInputCode = `<SearchInput
+  placeHolder="Enter a fruit"
+  performSearch={this.performSearch}
+/>`;
 
-  doSearch = searchTerm => {
+  autoCompleteSearchInputCode = `<SearchInput
+  placeHolder="Enter a fruit"
+  data={this.state.data}
+  autoComplete={this.performAutoComplete}
+  performSearch={this.performSearch}
+/>`;
+
+  performAutoComplete = searchTerm => {
     const searchResults = this.data.filter(item => {
-      return item.startsWith(searchTerm);
+      return item.toLowerCase().startsWith(searchTerm.toLowerCase());
     });
 
     this.setState({ data: searchResults });
   };
 
-  performSearch = () => {
-    console.log('search fired');
+  performSearch = searchTerm => {
+    console.log(`search fired for ${searchTerm}`);
   };
 
   render() {
@@ -145,14 +155,19 @@ export class SearchInputComponent extends Component {
           type="Inputs"
           properties={[
             {
-              name: 'text',
+              name: 'performSearch',
               description:
-                'String - The text to display in the inline help pop-up.'
+                'Func (Required) - Method to execute on click of Search icon or selection of auto-complete item.'
             },
             {
-              name: 'placement',
+              name: 'placeholder',
               description:
-                'String - Location for where to display the inline help pop-up.'
+                'String - The text to use as placeholder when no text is entered.'
+            },
+            {
+              name: 'data',
+              description:
+                'Array - Collection of items to display in auto-complete list.'
             }
           ]}
         />
@@ -160,20 +175,35 @@ export class SearchInputComponent extends Component {
         <Separator />
 
         <h2>Default Search</h2>
+        <Description>A text input with Search button.</Description>
+        <DocsTile>
+          <div>
+            <SearchInput
+              placeHolder="Enter a fruit"
+              performSearch={this.performSearch}
+            />
+          </div>
+        </DocsTile>
+        <DocsText>{this.searchInputCode}</DocsText>
+
+        <Separator />
+
+        <h2>Auto Complete Search</h2>
         <Description>
-          The default positioning of inline help component is bottom right.
+          A text input with Search button that includes auto-complete
+          functionality
         </Description>
         <DocsTile>
           <div>
             <SearchInput
               placeHolder="Enter a fruit"
               data={this.state.data}
-              search={this.doSearch}
+              autoComplete={this.performAutoComplete}
               performSearch={this.performSearch}
             />
           </div>
         </DocsTile>
-        <DocsText>{this.defaultHelpPlacement}</DocsText>
+        <DocsText>{this.autoCompleteSearchInputCode}</DocsText>
 
         <Separator />
       </div>
