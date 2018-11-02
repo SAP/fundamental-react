@@ -49,7 +49,7 @@ export class MegaMenuList extends Component {
         let iStates = itemStates;
         iStates[id] = !iStates[id];
         Object.keys(iStates).map((key, item) => {
-            if (key == id) {
+            if (key === id) {
                 iStates[key] = true;
             } else {
                 iStates[key] = false;

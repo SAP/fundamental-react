@@ -125,6 +125,8 @@ export class InputGroup extends Component {
                         </span>
                     </div>
                 );
+            default: 
+                break;
         }
     }
 }

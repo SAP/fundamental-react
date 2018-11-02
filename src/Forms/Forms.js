@@ -129,7 +129,7 @@ export class FormRadio extends Component {
     }
 
     render() {
-        const { inputs, disabled, isInline, defaultChecked } = this.props;
+        const { inputs, disabled, isInline } = this.props;
         let result;
 
         if (isInline) {

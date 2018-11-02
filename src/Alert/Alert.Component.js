@@ -12,7 +12,7 @@ export const AlertComponent = () => {
 </Alert>`
 
     const errorAlertCode = `<Alert type="error"  dismissable={true} link="#" linkText="link">Error message with a </Alert>`
-    const json = ''
+    
     return (
         <div>
             <Header>Alert</Header>

@@ -29,9 +29,9 @@ export class Playground extends Component {
             !(this.state.childs.children instanceof Array || this.state.childs.children instanceof Object)
         ) {
             let childsProperties = Object.assign({}, this.state.childs);
-            if (event.target.checked && !(event.target.type == 'text')) {
+            if (event.target.checked && !(event.target.type === 'text')) {
                 childsProperties[event.target.name] = true;
-            } else if (event.target.checked == false && !(event.target.type == 'text')) {
+            } else if (event.target.checked === false && !(event.target.type === 'text')) {
                 childsProperties[event.target.name] = false;
             } else {
                 childsProperties[event.target.name] = event.target.value;
@@ -42,7 +42,7 @@ export class Playground extends Component {
             });
         }
         //Used for badge and label.
-        else if (event.target.name == 'component') {
+        else if (event.target.name === 'component') {
             let childsProperties = Object.assign({}, this.state.childs);
             childsProperties[event.target.name] = event.target.value;
             this.setState({
@@ -57,9 +57,9 @@ export class Playground extends Component {
             if (currentValuesArr.length > 0) {
                 let newCurrentValuesArr = currentValuesArr.map(element => {
                     if (event.target.name in element) {
-                        if (event.target.checked && !(event.target.type == 'text')) {
+                        if (event.target.checked && !(event.target.type === 'text')) {
                             element[event.target.name] = true;
-                        } else if (event.target.checked == false && !(event.target.type == 'text')) {
+                        } else if (event.target.checked === false && !(event.target.type === 'text')) {
                             element[event.target.name] = false;
                         } else {
                             element[event.target.name] = event.target.value;
@@ -79,9 +79,9 @@ export class Playground extends Component {
                     this.setState({ currentValues: newCurrentValuesArr });
                 }
             } else {
-                if (event.target.checked && !(event.target.type == 'text')) {
+                if (event.target.checked && !(event.target.type === 'text')) {
                     objAttrVal[event.target.name] = true;
-                } else if (event.target.checked == false && !(event.target.type == 'text')) {
+                } else if (event.target.checked === false && !(event.target.type === 'text')) {
                     objAttrVal[event.target.name] = false;
                 } else {
                     objAttrVal[event.target.name] = event.target.value;
@@ -160,7 +160,7 @@ export class Playground extends Component {
                 case 'string':
                     return (
                         <div className="form-group-sublevel" key={item.attribute}>
-                            <label>{item.attribute == 'children' ? 'content' : item.attribute}</label>
+                            <label>{item.attribute === 'children' ? 'content' : item.attribute}</label>
                             {item.enum ? (
                                 <select className="form-control" onChange={this.updateComponent} name={item.attribute}>
                                     {item.enum.map(enumItem => (
@@ -296,19 +296,19 @@ export class Playground extends Component {
                 );
                 break;
             case 'badge':
-                if (this.state.childs.component == 'badge') {
+                if (this.state.childs.component === 'badge') {
                     componentToGenerate = (
                         <Badge type={this.state.childs.type} modifier={this.state.childs.modifier}>
                             {this.state.childs.children}
                         </Badge>
                     );
-                } else if (this.state.childs.component == 'label') {
+                } else if (this.state.childs.component === 'label') {
                     componentToGenerate = (
                         <Label type={this.state.childs.type} modifier={this.state.childs.modifier}>
                             {this.state.childs.children}
                         </Label>
                     );
-                } else if (this.state.childs.component == 'status') {
+                } else if (this.state.childs.component === 'status') {
                     componentToGenerate = (
                         <Status type={this.state.childs.type} glyph={this.state.childs.glyph}>
                             {this.state.childs.children}
@@ -414,7 +414,7 @@ export class Playground extends Component {
                         modifier={this.state.childs.modifier}
                         color={this.state.childs.color}
                         glyph={
-                            this.retrieveValue('children', '', this.state.currentValues) == ''
+                            this.retrieveValue('children', '', this.state.currentValues) === ''
                                 ? this.state.childs.glyph
                                 : null
                         }
@@ -501,7 +501,7 @@ export class Playground extends Component {
                 );
                 break;
             case 'tile':
-                if (this.state.component == '' || this.state.component == 'simple') {
+                if (this.state.component === '' || this.state.component === 'simple') {
                     componentToGenerate = (
                         <Tile>
                             <TileContent
@@ -526,7 +526,7 @@ export class Playground extends Component {
                             </TileActions>
                         </Tile>
                     );
-                } else if (this.state.component == 'media') {
+                } else if (this.state.component === 'media') {
                     componentToGenerate = (
                         <Tile>
                             <TileMedia>
@@ -546,7 +546,7 @@ export class Playground extends Component {
                             </TileActions>
                         </Tile>
                     );
-                } else if (this.state.component == 'product') {
+                } else if (this.state.component === 'product') {
                     componentToGenerate = (
                         <Tile>
                             <ProductTile isButton="true">

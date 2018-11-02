@@ -1,9 +1,9 @@
-import React, { Component } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 
 
 export const Table = (props) => {
-    const { headers, tableData, children } = props
+    const { headers, tableData } = props
     return (
         <table className="fd-table">
             <thead>
