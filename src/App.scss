@@ -11,11 +11,10 @@ $fd-fonts-path: '../node_modules/fiori-fundamentals/dist/fonts/';
     .fd-label,
     .fd-status-label,
     .fd-tag,
-    .fd-dropdown,
     .fd-popover,
+    .fd-dropdown,
     .fd-button-group,
     [class*='fd-identifier'],
-    [class*='fd-image'],
     [class*='fd-form'] {
         margin-right: 20px;
     }
@@ -31,6 +30,10 @@ $fd-fonts-path: '../node_modules/fiori-fundamentals/dist/fonts/';
     }
 
     .fd-doc__margin button {
+        margin-right: 20px;
+    }
+
+    .fd-doc__margin [class*='fd-image'] {
         margin-right: 20px;
     }
 }
