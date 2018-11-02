@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { BrowserRouter, Link } from 'react-router-dom'
 import { Dropdown } from '../'
 
 export class Tree extends Component{
@@ -36,7 +35,7 @@ export class Tree extends Component{
 
         let modifiedStates = this.state.iStates;
 
-        if(this.state.numberOfElements == 0) {
+        if(this.state.numberOfElements === 0) {
             treeData.map(row=>{
                 row.values.map(element=>{
                     ++numberOfElements;
@@ -118,14 +117,14 @@ export class Tree extends Component{
     }
 
     render() {
-        const {headers, treeData, children} = this.props;
+        const {headers, treeData} = this.props;
         return (
             <div>
                 <div className="fd-tree fd-tree--header">
                     <div className="fd-tree__row fd-tree__row--header">
                         {
                             headers.map(header => {
-                                if (headers.indexOf(header) == 0) {
+                                if (headers.indexOf(header) === 0) {
                                     return (<div className="fd-tree__col fd-tree__col--control"><button className="fd-tree__control " aria-label="expand" aria-pressed={this.state.expandAllClicked} onClick={(e) => this.openAllList(treeData, e)}></button>{header}</div>)
                                 }
                                 return (

@@ -11,7 +11,7 @@ import {
     Image,
     Identifier
 } from '../';
-import { Dropdown, Popover, Button, Menu, MenuList, MenuItem } from '../';
+import { Popover, Button, Menu, MenuList, MenuItem } from '../';
 import { DocsTile, DocsText, Separator, Header, Description, Import, Properties } from '../';
 import { Playground } from '../';
 
