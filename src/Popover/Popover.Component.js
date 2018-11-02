@@ -3,65 +3,7 @@ import { Popover, Image, Identifier, Icon, Menu, MenuList, MenuItem } from '../'
 import { DocsTile, DocsText, Separator, Header, Description, Import, Properties } from '../';
 
 export const PopoverComponent = () => {
-    const popoverCode = `<Popover
-    id="jhqD0555"
-    control={<Image size="m" photo="https://placeimg.com/400/400/nature" />}
-    body={
-        <Menu>
-            <MenuList>
-                <MenuItem url="/">Option 1</MenuItem>
-                <MenuItem url="/">Option 2</MenuItem>
-                <MenuItem url="/">Option 3</MenuItem>
-                <MenuItem url="/">Option 4</MenuItem>
-            </MenuList>
-        </Menu>
-    }
-/>
-
-<Popover
-    id="jhqD0556"
-    control={<Image size="m" type="circle" photo="https://placeimg.com/400/400/nature" />}
-    body={
-        <Menu>
-            <MenuList>
-                <MenuItem url="/">Option 1</MenuItem>
-                <MenuItem url="/">Option 2</MenuItem>
-                <MenuItem url="/">Option 3</MenuItem>
-                <MenuItem url="/">Option 4</MenuItem>
-            </MenuList>
-        </Menu>
-    }
-/>
-
-<Popover
-    id="jhqD0557"
-    control={<Identifier size="m" glyph="money-bills" color="6" />}
-    body={
-        <Menu>
-            <MenuList>
-                <MenuItem url="/">Option 1</MenuItem>
-                <MenuItem url="/">Option 2</MenuItem>
-                <MenuItem url="/">Option 3</MenuItem>
-                <MenuItem url="/">Option 4</MenuItem>
-            </MenuList>
-        </Menu>
-    }
-/>
-
- <Popover
-    id="jhqD0558"
-    control={<Icon glyph="menu2" size="xl" />}
-    body={
-        <Menu>
-            <MenuList>
-                <MenuItem url="/">Option 1</MenuItem>
-                <MenuItem url="/">Option 2</MenuItem>
-                <MenuItem url="/">Option 3</MenuItem>
-                <MenuItem url="/">Option 4</MenuItem>
-            </MenuList>
-        </Menu>
-    }
-/>`;
+    const popoverCode = ``;
 
     return (
         <div>
@@ -103,7 +45,7 @@ export const PopoverComponent = () => {
             <DocsTile>
                 <Popover
                     id="jhqD0555"
-                    control={<Image size="m" photo="https://placeimg.com/400/400/nature" />}
+                    control={<Icon glyph="cart" size="xl" />}
                     body={
                         <Menu>
                             <MenuList>
@@ -118,6 +60,7 @@ export const PopoverComponent = () => {
 
                 <Popover
                     id="jhqD0556"
+                    bodyAlignment="right"
                     control={<Image size="m" type="circle" photo="https://placeimg.com/400/400/nature" />}
                     body={
                         <Menu>
@@ -134,6 +77,7 @@ export const PopoverComponent = () => {
                 <Popover
                     id="jhqD0557"
                     control={<Identifier size="m" glyph="money-bills" color="6" />}
+                    noBodyArrow={true}
                     body={
                         <Menu>
                             <MenuList>
@@ -149,6 +93,8 @@ export const PopoverComponent = () => {
                 <Popover
                     id="jhqD0558"
                     control={<Icon glyph="menu2" size="xl" />}
+                    bodyAlignment="right"
+                    noBodyArrow={true}
                     body={
                         <Menu>
                             <MenuList>
