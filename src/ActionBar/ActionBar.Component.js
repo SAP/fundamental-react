@@ -8,24 +8,16 @@ export const ActionBarComponent = () => {
     <ActionBarBack />
     <ActionBarHeader title={'Page Title'} description={'Action Bar Description'} />
     <ActionBarActions>
-        <Button type="primary" size="l">
-            Button
-        </Button>
-        <Button type="main" size="l">
-            Button
-        </Button>
+        <Button>Button</Button>
+        <Button option="emphasized">Button</Button>
     </ActionBarActions>
 </ActionBar>`;
 
     const actionBarNoBackBtnCode = `<ActionBar>
     <ActionBarHeader title={'Page Title'} description={'Action Bar Description'} />
     <ActionBarActions>
-        <Button type="primary" size="l">
-            Button
-        </Button>
-        <Button type="main" size="l">
-            Button
-        </Button>
+        <Button>Button</Button>
+        <Button option="emphasized">Button</Button>
     </ActionBarActions>
 </ActionBar>`;
 
@@ -33,7 +25,7 @@ export const ActionBarComponent = () => {
     <ActionBarHeader title={'Page Title'} description={'Action Bar Description'} />
     <ActionBarActions>
         <Popover
-            control={<Button type="secondary" glyph="vertical-grip" />}
+            control={<Button option="light" glyph="vertical-grip" />}
             body={
                 <Menu>
                     <MenuList>
@@ -53,7 +45,7 @@ export const ActionBarComponent = () => {
     <ActionBarHeader title={'Action Bar with description and back button'} />
     <ActionBarActions>
         <Popover
-            control={<Button type="secondary" glyph="vertical-grip" />}
+            control={<Button option="light" glyph="vertical-grip" />}
             body={
                 <Menu>
                     <MenuList>
@@ -126,12 +118,8 @@ export const ActionBarComponent = () => {
                     <ActionBarBack />
                     <ActionBarHeader title={'Page Title'} description={'Action Bar Description'} />
                     <ActionBarActions>
-                        <Button type="primary" size="l">
-                            Button
-                        </Button>
-                        <Button type="main" size="l">
-                            Button
-                        </Button>
+                        <Button>Button</Button>
+                        <Button option="emphasized">Button</Button>
                     </ActionBarActions>
                 </ActionBar>
             </DocsTile>
@@ -144,12 +132,8 @@ export const ActionBarComponent = () => {
                 <ActionBar>
                     <ActionBarHeader title={'Page Title'} description={'Action Bar Description'} />
                     <ActionBarActions>
-                        <Button type="primary" size="l">
-                            Button
-                        </Button>
-                        <Button type="main" size="l">
-                            Button
-                        </Button>
+                        <Button>Button</Button>
+                        <Button option="emphasized">Button</Button>
                     </ActionBarActions>
                 </ActionBar>
             </DocsTile>
@@ -168,7 +152,7 @@ export const ActionBarComponent = () => {
                     <ActionBarHeader title={'Page Title'} description={'Action Bar Description'} />
                     <ActionBarActions>
                         <Popover
-                            control={<Button type="secondary" glyph="vertical-grip" />}
+                            control={<Button option="light" glyph="vertical-grip" />}
                             body={
                                 <Menu>
                                     <MenuList>
@@ -197,7 +181,7 @@ export const ActionBarComponent = () => {
                     />
                     <ActionBarActions>
                         <Popover
-                            control={<Button type="secondary" glyph="vertical-grip" />}
+                            control={<Button option="light" glyph="vertical-grip" />}
                             body={
                                 <Menu>
                                     <MenuList>
@@ -226,7 +210,7 @@ export const ActionBarComponent = () => {
                     />
                     <ActionBarActions>
                         <Popover
-                            control={<Button type="secondary" glyph="vertical-grip" />}
+                            control={<Button option="light" glyph="vertical-grip" />}
                             body={
                                 <Menu>
                                     <MenuList>

@@ -317,7 +317,7 @@ export class DatePicker extends Component {
                                 </span>
                             </div>
                     </div>
-                    <div className="fd-popover__body" aria-hidden={this.state.hidden}>
+                    <div className="fd-popover__body fd-popover__body--right fd-popover__body--no-arrow" aria-hidden={this.state.hidden}>
                         <Calendar onChange={this.updateDate} enableRangeSelection={this.props.enableRangeSelection} customDate={this.props.enableRangeSelection?this.state.arrSelectedDates:this.state.selectedDate}/>
                     </div>
                     </div>
