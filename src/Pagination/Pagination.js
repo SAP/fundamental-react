@@ -31,7 +31,7 @@ export class Pagination extends Component {
 
     this.setState(
       prevState => {
-        selectedPage: prevState.selectedPage--;
+        return { selectedPage: --prevState.selectedPage };
       },
       () => this.props.onClick(this.state.selectedPage)
     );
@@ -45,7 +45,7 @@ export class Pagination extends Component {
 
     this.setState(
       prevState => {
-        selectedPage: prevState.selectedPage++;
+        return { selectedPage: ++prevState.selectedPage };
       },
       () => this.props.onClick(this.state.selectedPage)
     );
@@ -115,7 +115,7 @@ export class Pagination extends Component {
 }
 
 Pagination.propTypes = {
-  itemsPerPage: PropTypes.number.isRequired,
+  itemsPerPage: PropTypes.number,
   itemsTotal: PropTypes.number.isRequired,
   onClick: PropTypes.func.isRequired,
   initialPage: PropTypes.number,
