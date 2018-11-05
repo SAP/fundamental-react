@@ -20,7 +20,7 @@ export const PopoverComponent = () => {
 
 <Popover
     id="jhqD0556"
-    bodyAlignment="right"
+    alignment="right"
     control={<Image size="m" type="circle" photo="https://placeimg.com/400/400/nature" />}
     body={
         <Menu>
@@ -37,7 +37,7 @@ export const PopoverComponent = () => {
 <Popover
     id="jhqD0557"
     control={<Identifier size="m" glyph="money-bills" color="6" />}
-    noBodyArrow
+    noArrow
     body={
         <Menu>
             <MenuList>
@@ -53,8 +53,8 @@ export const PopoverComponent = () => {
 <Popover
     id="jhqD0558"
     control={<Icon glyph="menu2" size="xl" />}
-    bodyAlignment="right"
-    noBodyArrow
+    alignment="right"
+    noArrow
     body={
         <Menu>
             <MenuList>
@@ -95,11 +95,11 @@ export const PopoverComponent = () => {
                         description: 'Component - Wrapper that contains the popover content.'
                     },
                     {
-                        name: 'noBodyArrow',
+                        name: 'noArrow',
                         description: 'bool - Set to "true" to render a popover body without an arrow. The default option is a popover body with an arrow. Leave empty for default.'
                     },
                     {
-                        name: 'bodyAlignment',
+                        name: 'alignment',
                         description: 'string - The placement of the popover body. Options include "right" and "left". Leave empty for default/left placement.'
                     },
                     {
@@ -130,7 +130,7 @@ export const PopoverComponent = () => {
 
                 <Popover
                     id="jhqD0556"
-                    bodyAlignment="right"
+                    alignment="right"
                     control={<Image size="m" type="circle" photo="https://placeimg.com/400/400/nature" />}
                     body={
                         <Menu>
@@ -147,7 +147,7 @@ export const PopoverComponent = () => {
                 <Popover
                     id="jhqD0557"
                     control={<Identifier size="m" glyph="money-bills" color="6" />}
-                    noBodyArrow
+                    noArrow
                     body={
                         <Menu>
                             <MenuList>
@@ -163,8 +163,8 @@ export const PopoverComponent = () => {
                 <Popover
                     id="jhqD0558"
                     control={<Icon glyph="menu2" size="xl" />}
-                    bodyAlignment="right"
-                    noBodyArrow
+                    alignment="right"
+                    noArrow
                     body={
                         <Menu>
                             <MenuList>

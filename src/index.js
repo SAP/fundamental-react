@@ -39,7 +39,7 @@ import { MegaMenu, MegaMenuList, MegaMenuGroup } from '../src/MegaMenu/MegaMenu'
 import { Menu, MenuList, MenuItem, MenuGroup } from '../src/Menu/Menu';
 import { Modal } from '../src/Modal/Modal';
 import { Pagination } from '../src/Pagination/Pagination';
-import { Popover, PopoverControl, PopoverBody } from '../src/Popover/Popover';
+import { Popover } from '../src/Popover/Popover';
 import { SearchInput } from '../src/SearchInput/SearchInput';
 import { SideNav, SideNavList, SideNavGroup } from '../src/SideNavigation/SideNavigation';
 import { Table } from '../src/Table/Table';
@@ -119,8 +119,6 @@ export {
     MenuGroup,
     Modal,
     Popover,
-    PopoverControl,
-    PopoverBody,
     Pagination,
     SearchInput,
     SideNav,

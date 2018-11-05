@@ -46,58 +46,58 @@ export const ButtonComponent = () => {
 <Button size="compact">Compact</Button>`;
 
     const buttonStatesCode = `<Button option="emphasized">Normal State</Button>
-<Button option="emphasized" selected={true}>
+<Button option="emphasized" selected>
     Selected State
 </Button>
-<Button option="emphasized" disabled={true}>
+<Button option="emphasized" disabled>
     Disabled State
 </Button>
 
 <Button>Normal State</Button>
-<Button selected={true}>Selected State</Button>
-<Button disabled={true}>Disabled State</Button>
+<Button selected>Selected State</Button>
+<Button disabled>Disabled State</Button>
 
 <Button option="light">Normal State</Button>
-<Button option="light" selected={true}>
+<Button option="light" selected>
     Selected State
 </Button>
-<Button option="light" disabled={true}>
+<Button option="light" disabled>
     Disabled State
 </Button>
 
 <Button type="standard">Normal State</Button>
-<Button type="standard" selected={true}>
+<Button type="standard" selected>
     Selected State
 </Button>
-<Button type="standard" disabled={true}>
+<Button type="standard" disabled>
     Disabled State
 </Button>
 
 <Button type="positive">Normal State</Button>
-<Button type="positive" selected={true}>
+<Button type="positive" selected>
     Selected State
 </Button>
-<Button type="positive" disabled={true}>
+<Button type="positive" disabled>
     Disabled State
 </Button>
 
 <Button type="negative">Normal State</Button>
-<Button type="negative" selected={true}>
+<Button type="negative" selected>
     Selected State
 </Button>
-<Button type="negative" disabled={true}>
+<Button type="negative" disabled>
     Disabled State
 </Button>`;
 
     const buttonGroupCode = `<ButtonGroup>
     <Button glyph="survey" />
-    <Button glyph="pie-chart" selected={true}/>
+    <Button glyph="pie-chart" selected/>
     <Button glyph="pool" />
 </ButtonGroup>
 
 <ButtonGroup>
     <Button size="compact">Left</Button>
-    <Button size="compact" selected={true}>Middle</Button>
+    <Button size="compact" selected>Middle</Button>
     <Button size="compact">Right</Button>
 </ButtonGroup>`;
 
@@ -262,51 +262,51 @@ export const ButtonComponent = () => {
             <DocsTile centered>
                 <div class="fd-doc__margin">
                     <Button option="emphasized">Normal State</Button>
-                    <Button option="emphasized" selected={true}>
+                    <Button option="emphasized" selected>
                         Selected State
                     </Button>
-                    <Button option="emphasized" disabled={true}>
+                    <Button option="emphasized" disabled>
                         Disabled State
                     </Button>
                     <br />
                     <br />
                     <Button>Normal State</Button>
-                    <Button selected={true}>Selected State</Button>
-                    <Button disabled={true}>Disabled State</Button>
+                    <Button selected>Selected State</Button>
+                    <Button disabled>Disabled State</Button>
                     <br />
                     <br />
                     <Button option="light">Normal State</Button>
-                    <Button option="light" selected={true}>
+                    <Button option="light" selected>
                         Selected State
                     </Button>
-                    <Button option="light" disabled={true}>
+                    <Button option="light" disabled>
                         Disabled State
                     </Button>
                     <br />
                     <br />
                     <Button type="standard">Normal State</Button>
-                    <Button type="standard" selected={true}>
+                    <Button type="standard" selected>
                         Selected State
                     </Button>
-                    <Button type="standard" disabled={true}>
+                    <Button type="standard" disabled>
                         Disabled State
                     </Button>
                     <br />
                     <br />
                     <Button type="positive">Normal State</Button>
-                    <Button type="positive" selected={true}>
+                    <Button type="positive" selected>
                         Selected State
                     </Button>
-                    <Button type="positive" disabled={true}>
+                    <Button type="positive" disabled>
                         Disabled State
                     </Button>
                     <br />
                     <br />
                     <Button type="negative">Normal State</Button>
-                    <Button type="negative" selected={true}>
+                    <Button type="negative" selected>
                         Selected State
                     </Button>
-                    <Button type="negative" disabled={true}>
+                    <Button type="negative" disabled>
                         Disabled State
                     </Button>
                 </div>
@@ -320,13 +320,13 @@ export const ButtonComponent = () => {
             <DocsTile centered>
                 <ButtonGroup>
                     <Button glyph="survey" />
-                    <Button glyph="pie-chart" selected={true}/>
+                    <Button glyph="pie-chart" selected/>
                     <Button glyph="pool" />
                 </ButtonGroup>
 
                <ButtonGroup>
                     <Button size="compact">Left</Button>
-                    <Button size="compact" selected={true}>Middle</Button>
+                    <Button size="compact" selected>Middle</Button>
                     <Button size="compact">Right</Button>
                 </ButtonGroup>
             </DocsTile>
