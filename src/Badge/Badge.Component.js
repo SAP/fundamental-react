@@ -76,7 +76,7 @@ export const BadgeComponent = () => {
             <Separator />
 
             <h2>Default Badge</h2>
-            <DocsTile>
+            <DocsTile centered>
                 <Badge>Default</Badge>
                 <Badge type="success">Default</Badge>
                 <Badge type="warning">Default</Badge>
@@ -90,7 +90,7 @@ export const BadgeComponent = () => {
             <Description>
                 Apply <code>modifier="pill"</code> to render a pill version of the badge.
             </Description>
-            <DocsTile>
+            <DocsTile centered>
                 <Badge modifier="pill">Default</Badge>
                 <Badge type="success" modifier="pill">
                     Default
@@ -110,7 +110,7 @@ export const BadgeComponent = () => {
             <Description>
                 Apply <code>modifier="filled"</code> to render a filled version of the badge.
             </Description>
-            <DocsTile>
+            <DocsTile centered>
                 <Badge modifier="filled">Default</Badge>
                 <Badge type="success" modifier="filled">
                     Default
@@ -127,7 +127,7 @@ export const BadgeComponent = () => {
             <Separator />
 
             <h2>Label</h2>
-            <DocsTile>
+            <DocsTile centered>
                 <Label>Default</Label>
                 <Label type="success">Default</Label>
                 <Label type="warning">Default</Label>
@@ -138,7 +138,7 @@ export const BadgeComponent = () => {
             <Separator />
 
             <h2>Status Indicator Label with build in status icons</h2>
-            <DocsTile>
+            <DocsTile centered>
                 <Status>Default</Status>
                 <Status type="success">Default</Status>
                 <Status type="warning">Default</Status>
@@ -153,7 +153,7 @@ export const BadgeComponent = () => {
             <DocsText>{statusCode}</DocsText>
             <Separator />
             <h2>Status Indicator Label with any icons</h2>
-            <DocsTile>
+            <DocsTile centered>
                 <Status glyph="history">Custom Icon</Status>
                 <Status glyph="message-success">Success</Status>
                 <Status glyph="message-warning">Warning</Status>

@@ -37,7 +37,7 @@ export const ImageComponent = () => {
             <Separator />
 
             <h2>Sizes</h2>
-            <DocsTile>
+            <DocsTile centered>
                 <div class="fd-doc__margin">
                     <Image size="s" photo="https://placeimg.com/400/400/nature" />
                     <Image size="m" photo="https://placeimg.com/400/400/nature" />
@@ -49,7 +49,7 @@ export const ImageComponent = () => {
             <Separator />
 
             <h2>Shapes</h2>
-            <DocsTile>
+            <DocsTile centered>
                 <div class="fd-doc__margin">
                     <Image size="s" type="circle" photo="https://placeimg.com/400/400/nature" />
                     <Image size="m" type="circle" photo="https://placeimg.com/400/400/nature" />
