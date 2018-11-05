@@ -72,7 +72,7 @@ export const PaginationComponent = () => {
       <Description>
         When the first page is active, the Back arrow should be disabled.
       </Description>
-      <DocsTile>
+      <DocsTile centered>
         <Pagination itemsTotal={101} onClick={handleClick} />
       </DocsTile>
       <DocsText
@@ -83,7 +83,7 @@ export const PaginationComponent = () => {
       <Description>
         When the last page is active, the Next arrow should be disabled.
       </Description>
-      <DocsTile>
+      <DocsTile centered>
         <Pagination itemsTotal={101} initialPage={11} onClick={handleClick} />
       </DocsTile>
       <DocsText
@@ -92,7 +92,7 @@ export const PaginationComponent = () => {
 
       <h2>Items per Page</h2>
       <Description>Set how many items per page.</Description>
-      <DocsTile>
+      <DocsTile centered>
         <Pagination
           itemsTotal={101}
           itemsPerPage={25}
@@ -107,7 +107,7 @@ export const PaginationComponent = () => {
 
       <h2>Set Initial Page</h2>
       <Description>Set initial page to be selected</Description>
-      <DocsTile>
+      <DocsTile centered>
         <Pagination itemsTotal={101} initialPage={6} onClick={handleClick} />
       </DocsTile>
       <DocsText
@@ -118,7 +118,7 @@ export const PaginationComponent = () => {
       <Description>
         Only show page numbers, Previous and Next controls
       </Description>
-      <DocsTile>
+      <DocsTile centered>
         <Pagination
           itemsTotal={101}
           displayTotal={false}
@@ -131,15 +131,14 @@ export const PaginationComponent = () => {
 
       <h2>Total Text</h2>
       <Description>Customize text to show next to item total</Description>
-      <DocsTile>
+      <DocsTile centered>
         <Pagination
           itemsTotal={101}
           onClick={handleClick}
           totalText="Dalmations"
         />
       </DocsTile>
-      <DocsText
-      >{`<Pagination itemsTotal={101} totalText="Dalmations" onClick={handleClick}/>`}</DocsText>
+      <DocsText centered> {`<Pagination itemsTotal={101} totalText="Dalmations" onClick={handleClick}/>`}</DocsText>
       <Separator />
     </div>
   );

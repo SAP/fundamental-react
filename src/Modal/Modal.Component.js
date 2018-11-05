@@ -181,7 +181,7 @@ export class ModalComponent extends Component {
           This is used to present information to the user but the Alert
           Component doesn’t fit all the information.
         </Description>
-        <DocsTile>
+        <DocsTile centered>
           <button onClick={this.showHideModal}>Show Information Modal</button>
           {this.state.bShowInfoModal ? (
             <Modal title="Product Added" onClose={this.showHideModal}>
@@ -210,7 +210,7 @@ export class ModalComponent extends Component {
           destructive or complex action. In this case, the modal has action
           buttons at the bottom.
         </Description>
-        <DocsTile>
+        <DocsTile centered>
           <button onClick={this.showHideConfirmModal}>
             Show Confirmation Modal
           </button>
@@ -248,7 +248,7 @@ export class ModalComponent extends Component {
           This is used for short forms in order to collect information from the
           user.
         </Description>
-        <DocsTile>
+        <DocsTile centered>
           <button onClick={this.showHideFormModal}>Show Form Modal</button>
           {this.state.bShowFormModal ? (
             <Modal
