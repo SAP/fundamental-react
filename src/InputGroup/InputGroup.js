@@ -55,7 +55,7 @@ export class InputGroup extends Component {
 
 
     render() {
-        const { inputType, inputId, inputName, inputValue, inputPlaceholder, addonPos, addon, glyph, actions, children } = this.props;
+        const { inputType, inputId, inputName, inputValue, inputPlaceholder, addonPos, addon, glyph, actions, compact, children } = this.props;
 
 
         switch (inputType) {
@@ -63,7 +63,7 @@ export class InputGroup extends Component {
                 {
                     if (addonPos === 'before') {
                         return (
-                            <div className="fd-input-group fd-input-group--before">
+                            <div className={`fd-input-group fd-input-group--before${compact ? ' fd-input-group--compact' : ''}`}>
                                 {actions ? (
                                     <span className="fd-input-group__addon fd-input-group__addon--button fd-input-group__addon--before">
                                         {children}
@@ -79,13 +79,13 @@ export class InputGroup extends Component {
                                             }
                                         </span>
                                     )}
-                                <input className="" type="text" id={inputId} name={inputName} value={inputValue} />
+                                <input className={`${compact ? 'fd-input fd-input--compact' : ''}`} type="text" id={inputId} name={inputName} value={inputValue} />
                             </div>
                         );
                     } else {
                         return (
-                            <div className="fd-input-group fd-input-group--before">
-                                <input className="" type="text" id={inputId} name={inputName} value={inputValue} />
+                            <div className={`fd-input-group fd-input-group--after${compact ? ' fd-input-group--compact' : ''}`}>
+                                <input className={`${compact ? 'fd-input fd-input--compact' : ''}`} type="text" id={inputId} name={inputName} value={inputValue} />
                                 {actions ? (
                                     <span className="fd-input-group__addon fd-input-group__addon--button fd-input-group__addon--after">
                                         {children}
@@ -107,19 +107,19 @@ export class InputGroup extends Component {
                 }
             case 'number':
                 return (
-                    <div className="fd-input-group fd-input-group--after">
-                        <input className="" type="number" id={inputId} name={inputName} value={this.state.value} />
+                    <div className={`fd-input-group fd-input-group--after${compact ? ' fd-input-group--compact' : ''}`}>
+                        <input className={`${compact ? 'fd-input fd-input--compact' : ''}`} type="number" id={inputId} name={inputName} value={this.state.value} />
                         <span className="fd-input-group__addon fd-input-group__addon--button fd-input-group__addon--after">
-                            <button className="fd-input-group__button fd-input-group__button--step-up" aria-label="Step up" onClick={this.handleUp}></button>
-                            <button className="fd-input-group__button fd-input-group__button--step-down" aria-label="Step down" onClick={this.handleDown}></button>
+                            <button className="fd-input-group__button fd-input-group__button--step-up sap-icon--slim-arrow-up" aria-label="Step up" onClick={this.handleUp}></button>
+                            <button className="fd-input-group__button fd-input-group__button--step-down sap-icon--slim-arrow-down" aria-label="Step down" onClick={this.handleDown}></button>
                         </span>
                     </div>
                 );
 
             case 'search':
                 return (
-                    <div className="fd-input-group">
-                        <input className="" type="search" id={inputId} name={inputName} value={this.state.searchValue} placeholder={inputPlaceholder} onChange={this.handleChange} />
+                    <div className={`fd-input-group${compact ? ' fd-input-group--compact' : ''}`}>
+                        <input className={`${compact ? 'fd-input fd-input--compact' : ''}`} type="search" id={inputId} name={inputName} value={this.state.searchValue} placeholder={inputPlaceholder} onChange={this.handleChange} />
                         <span className="fd-input-group__addon fd-input-group__addon--button">
                             <button className="fd-input-group__button fd-input-group__button--clear" aria-label="Clear" onClick={this.handleClear}></button>
                         </span>
@@ -139,5 +139,6 @@ InputGroup.propTypes = {
     addonPos: PropTypes.string,
     addon: PropTypes.string,
     glyph: PropTypes.string,
-    actions: PropTypes.bool
+    actions: PropTypes.bool,
+    compact: PropTypes.bool
 }

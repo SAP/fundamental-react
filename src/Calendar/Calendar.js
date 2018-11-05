@@ -427,18 +427,18 @@ export class Calendar extends Component {
           <header className="fd-calendar__header">
           <div className="fd-calendar__navigation">
             <div className="fd-calendar__action">
-              <button className="fd-button--toolbar fd-button--xs sap-icon--slim-arrow-left" onClick={this.previous}>
+              <button className="fd-button--standard fd-button--light fd-button--compact sap-icon--slim-arrow-left" onClick={this.previous}>
               </button>
             </div>
             <div className="fd-calendar__action">
-              <button className="fd-button--secondary fd-button--s" onClick={this.showMonths}>
+              <button className="fd-button--light fd-button--compact" onClick={this.showMonths}>
                 <span>
                     {months[this.state.currentDateDisplayed.getMonth()]}
                 </span>
               </button>
             </div>
             <div className="fd-calendar__action">
-              <button className="fd-button--secondary fd-button--s" onClick={this.showYears}>
+              <button className="fd-button--light fd-button--compact" onClick={this.showYears}>
                 <span>
                     {this.state.currentDateDisplayed.getFullYear()}
                 </span>
@@ -446,7 +446,7 @@ export class Calendar extends Component {
             </div>
 
             <div className="fd-calendar__action" onClick={this.next}>
-              <button className="fd-button--toolbar fd-button--xs sap-icon--slim-arrow-right"></button>
+              <button className="fd-button--standard fd-button--light fd-button--compact sap-icon--slim-arrow-right"></button>
             </div>
           </div>
           </header>
