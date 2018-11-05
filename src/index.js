@@ -44,7 +44,7 @@ import { SearchInput } from '../src/SearchInput/SearchInput';
 import { SideNav, SideNavList, SideNavGroup } from '../src/SideNavigation/SideNavigation';
 import { Table } from '../src/Table/Table';
 import { Tabs, TabComponent } from '../src/Tabs/Tabs';
-import { Tag } from '../src/Tag/Tag';
+import { Token } from './Token/Token';
 import {
     Tile,
     TileContent,
@@ -129,7 +129,7 @@ export {
     Table,
     Tabs,
     TabComponent,
-    Tag,
+    Token,
     Tile,
     TileContent,
     TileMedia,

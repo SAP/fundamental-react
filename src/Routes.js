@@ -19,13 +19,13 @@ import { ListGroupComponent } from './ListGroup/ListGroup.Component';
 import { MegaMenuComponent } from './MegaMenu/MegaMenu.Component';
 import { MenuComponent } from './Menu/Menu.Component';
 import { ModalComponent } from './Modal/Modal.Component';
-import { PaginationComponent } from './Pagination/Pagination.Component'
+import { PaginationComponent } from './Pagination/Pagination.Component';
 import { PopoverComponent } from './Popover/Popover.Component';
 import { SearchInputComponent } from './SearchInput/SearchInput.Component';
 import { SideNavigationComponent } from './SideNavigation/SideNavigation.Component';
 import { TableComponent } from './Table/Table.Component';
 import { TabsComponent } from './Tabs/Tabs.Component';
-import { TagComponent } from './Tag/Tag.Component';
+import { TokenComponent } from './Token/Token.Component';
 import { TileComponent } from './Tile/Tile.Component';
 import { ToggleComponent } from './Toggle/Toggle.Component';
 import { TreeComponent } from './Tree/Tree.Component';
@@ -59,9 +59,9 @@ export default class Routes extends Component {
                 { url: '/sideNavigation', name: 'Side Navigation', component: SideNavigationComponent },
                 { url: '/table', name: 'Table', component: TableComponent },
                 { url: '/tabs', name: 'Tabs', component: TabsComponent },
-                { url: '/tag', name: 'Tag', component: TagComponent },
                 { url: '/tile', name: 'Tile', component: TileComponent },
                 { url: '/toggle', name: 'Toggle', component: ToggleComponent },
+                { url: '/token', name: 'Token', component: TokenComponent },
                 { url: '/tree', name: 'Tree', component: TreeComponent }
             ]
         };

@@ -162,7 +162,7 @@ export const ButtonComponent = () => {
                 <strong>- Light Button</strong>: This is the lowest priority button and most often used with page
                 content like appearing in a table or list. There may be more than one on the page.
             </Description>
-            <DocsTile>
+            <DocsTile centered>
                 <div class="fd-doc__margin">
                     <Button option="emphasized">Emphasized Button</Button>
                     <Button>Regular Button</Button>
@@ -183,7 +183,7 @@ export const ButtonComponent = () => {
                 :Used for negative actions such as decline, cancel, no.
                 <br />
             </Description>
-            <DocsTile>
+            <DocsTile centered>
                 <div class="fd-doc__margin">
                     <Button>Action Button</Button>
                     <Button type="standard">Standard Button</Button>
@@ -201,7 +201,7 @@ export const ButtonComponent = () => {
                 Button can have an icon with text or just and icon. You can use <code> glyph="icon-name"</code> to
                 attach an icon to the button.
             </Description>
-            <DocsTile>
+            <DocsTile centered>
                 <div class="fd-doc__margin">
                     <Button option="emphasized" glyph="cart">
                         Add to Cart
@@ -245,7 +245,7 @@ export const ButtonComponent = () => {
                 There are two sizes. The <code>compact</code> size is only used on desktop and it is full size when used
                 on a touch device.
             </Description>
-            <DocsTile>
+            <DocsTile centered>
                 <div class="fd-doc__margin">
                     <Button>Default</Button>
                     <Button size="compact">Compact</Button>
@@ -259,7 +259,7 @@ export const ButtonComponent = () => {
             <Description>
                 There are three states: <code>normal</code> (default), <code>selected</code>, and <code>disabled</code>.
             </Description>
-            <DocsTile>
+            <DocsTile centered>
                 <div class="fd-doc__margin">
                     <Button option="emphasized">Normal State</Button>
                     <Button option="emphasized" selected={true}>
@@ -317,7 +317,7 @@ export const ButtonComponent = () => {
 
             <h2>Button Group</h2>
 
-            <DocsTile>
+            <DocsTile centered>
                 <ButtonGroup>
                     <Button glyph="survey" />
                     <Button glyph="pie-chart" selected={true}/>
