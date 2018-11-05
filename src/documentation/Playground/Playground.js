@@ -417,7 +417,7 @@ export class Playground extends Component {
                                 actions={true}
                             >
                                 <Button
-                                    type="secondary"
+                                    option="light"
                                     glyph={this.retrieveValue(
                                         'glyph',
                                         this.state.childs.children[1].props.children.props.children.props.glyph,
@@ -446,7 +446,7 @@ export class Playground extends Component {
                             )}
                             <ListGroupItemActions>
                                 <Button
-                                    type="secondary"
+                                    option="light"
                                     glyph={this.retrieveValue(
                                         'glyph',
                                         this.state.childs.children.props.children[1].props.children.props.glyph,
