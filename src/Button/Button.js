@@ -6,8 +6,8 @@ export const Button = props => {
     return (
         <button
             className={`${option ? 'fd-button--' + option : ' fd-button'}${type ? ' fd-button--' + type : ''}${dropdown ? ' fd-dropdown__control' : ''}${size ? ' fd-button--' + size : ''}${glyph ? ' sap-icon--' + glyph : ''}${selected ? ' is-selected' : ''}${disabled ? ' is-disabled' : ''}`}
-            aria-selected={selected ? selected : false}
-            aria-disabled={disabled ? disabled : false}
+            selected={selected ? selected : false}
+            disabled={disabled ? disabled : false}
             type={typeAttr}
             onClick={onclick}
         >
