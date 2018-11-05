@@ -4,224 +4,17 @@ import { DocsTile, DocsText, Separator, Header, Description, Import, Properties 
 import { Popover, Button, Menu, MenuList, MenuItem } from '../';
 
 export const DropdownComponent = () => {
-    const defaultDropdownCode = `<Dropdown>
-    <Popover
-        control={<Button dropdown={true}>Select</Button>}
-        body={
-            <Menu>
-                <MenuList>
-                    <MenuItem url="/">Option 1</MenuItem>
-                    <MenuItem url="/">Option 2</MenuItem>
-                    <MenuItem url="/">Option 3</MenuItem>
-                    <MenuItem url="/">Option 4</MenuItem>
-                </MenuList>
-            </Menu>
-        }
-    />
-</Dropdown>`;
+    const defaultDropdownCode = ``;
 
-    const iconDropdownCode = `<Dropdown>
-    <Popover
-        control={
-            <Button dropdown={true} glyph="filter">
-                Select
-            </Button>
-        }
-        body={
-            <Menu>
-                <MenuList>
-                    <MenuItem url="/">Option 1</MenuItem>
-                    <MenuItem url="/">Option 2</MenuItem>
-                    <MenuItem url="/">Option 3</MenuItem>
-                    <MenuItem url="/">Option 4</MenuItem>
-                </MenuList>
-            </Menu>
-        }
-    />
-</Dropdown>`;
+    const iconDropdownCode = ``;
 
-    const toolbarDropdownCode = `<Dropdown>
-    <Popover
-        control={
-            <Button dropdown={true} toolbar={true}>
-                Select
-            </Button>
-        }
-        body={
-            <Menu>
-                <MenuList>
-                    <MenuItem url="/">Option 1</MenuItem>
-                    <MenuItem url="/">Option 2</MenuItem>
-                    <MenuItem url="/">Option 3</MenuItem>
-                    <MenuItem url="/">Option 4</MenuItem>
-                </MenuList>
-            </Menu>
-        }
-    />
-</Dropdown>`;
+    const toolbarDropdownCode = ``;
 
-    const disabledDropdownCode = `<Dropdown>
-    <Popover
-        state="disabled"
-        control={
-            <Button dropdown={true} state="disabled">
-                Select
-            </Button>
-        }
-        body={
-            <Menu>
-                <MenuList>
-                    <MenuItem url="/">Option 1</MenuItem>
-                    <MenuItem url="/">Option 2</MenuItem>
-                    <MenuItem url="/">Option 3</MenuItem>
-                    <MenuItem url="/">Option 4</MenuItem>
-                </MenuList>
-            </Menu>
-        }
-    />
-</Dropdown>`;
+    const disabledDropdownCode = ``;
 
-    const sizesDropdownCode = `<Dropdown>
-    <Popover
-        control={
-            <Button dropdown={true} size="xs">
-                Select
-            </Button>
-        }
-        body={
-            <Menu>
-                <MenuList>
-                    <MenuItem url="/">Option 1</MenuItem>
-                    <MenuItem url="/">Option 2</MenuItem>
-                    <MenuItem url="/">Option 3</MenuItem>
-                    <MenuItem url="/">Option 4</MenuItem>
-                </MenuList>
-            </Menu>
-        }
-    />
-</Dropdown>
+    const sizesDropdownCode = ``;
 
-<Dropdown>
-    <Popover
-        control={
-            <Button dropdown={true} size="s">
-                Select
-            </Button>
-        }
-        body={
-            <Menu>
-                <MenuList>
-                    <MenuItem url="/">Option 1</MenuItem>
-                    <MenuItem url="/">Option 2</MenuItem>
-                    <MenuItem url="/">Option 3</MenuItem>
-                    <MenuItem url="/">Option 4</MenuItem>
-                </MenuList>
-            </Menu>
-        }
-    />
-</Dropdown>
-
-<Dropdown>
-    <Popover
-        control={
-            <Button dropdown={true} size="compact">
-                Select
-            </Button>
-        }
-        body={
-            <Menu>
-                <MenuList>
-                    <MenuItem url="/">Option 1</MenuItem>
-                    <MenuItem url="/">Option 2</MenuItem>
-                    <MenuItem url="/">Option 3</MenuItem>
-                    <MenuItem url="/">Option 4</MenuItem>
-                </MenuList>
-            </Menu>
-        }
-    />
-</Dropdown>
-
-<Dropdown>
-    <Popover
-        control={
-            <Button dropdown={true} size="default">
-                Select
-            </Button>
-        }
-        body={
-            <Menu>
-                <MenuList>
-                    <MenuItem url="/">Option 1</MenuItem>
-                    <MenuItem url="/">Option 2</MenuItem>
-                    <MenuItem url="/">Option 3</MenuItem>
-                    <MenuItem url="/">Option 4</MenuItem>
-                </MenuList>
-            </Menu>
-        }
-    />
-</Dropdown>
-
-<Dropdown>
-    <Popover
-        control={
-            <Button dropdown={true} size="l">
-                Select
-            </Button>
-        }
-        body={
-            <Menu>
-                <MenuList>
-                    <MenuItem url="/">Option 1</MenuItem>
-                    <MenuItem url="/">Option 2</MenuItem>
-                    <MenuItem url="/">Option 3</MenuItem>
-                    <MenuItem url="/">Option 4</MenuItem>
-                </MenuList>
-            </Menu>
-        }
-    />
-</Dropdown>`;
-
-    const contextualMenuDropdownCode = `<Popover
-   control={<Button type="secondary" glyph="vertical-grip" />}
-   body={
-       <Menu>
-           <MenuList>
-               <MenuItem url="/">Option 1</MenuItem>
-               <MenuItem url="/">Option 2</MenuItem>
-               <MenuItem url="/">Option 3</MenuItem>
-               <MenuItem url="/">Option 4</MenuItem>
-           </MenuList>
-       </Menu>
-   }
-/>
-
-<Popover
-   control={<Button type="secondary">More</Button>}
-   body={
-       <Menu>
-           <MenuList>
-               <MenuItem url="/">Option 1</MenuItem>
-               <MenuItem url="/">Option 2</MenuItem>
-               <MenuItem url="/">Option 3</MenuItem>
-               <MenuItem url="/">Option 4</MenuItem>
-           </MenuList>
-       </Menu>
-   }
-/>
-
-<Popover
-   control={<Button>More</Button>}
-   body={
-       <Menu>
-           <MenuList>
-               <MenuItem url="/">Option 1</MenuItem>
-               <MenuItem url="/">Option 2</MenuItem>
-               <MenuItem url="/">Option 3</MenuItem>
-               <MenuItem url="/">Option 4</MenuItem>
-           </MenuList>
-       </Menu>
-   }
-/>`;
+    const contextualMenuDropdownCode = ``;
 
     return (
         <div>
@@ -246,10 +39,30 @@ export const DropdownComponent = () => {
             <Separator />
 
             <h2>Default Dropdown</h2>
-            <DocsTile>
+            <DocsTile centered>
                 <Dropdown>
                     <Popover
-                        control={<Button dropdown={true}>Select</Button>}
+                        id="jhqD0555"
+                        control={<Button dropdown>Select</Button>}
+                        noBodyArrow
+                        body={
+                            <Menu>
+                                <MenuList>
+                                    <MenuItem url="/">Option 1</MenuItem>
+                                    <MenuItem url="/">Option 2</MenuItem>
+                                    <MenuItem url="/">Option 3</MenuItem>
+                                    <MenuItem url="/">Option 4</MenuItem>
+                                </MenuList>
+                            </Menu>
+                        }
+                    />
+                </Dropdown>
+
+                <Dropdown>
+                    <Popover
+                        id="jhqD0555"
+                        control={<Button dropdown size="compact">Select</Button>}
+                        noBodyArrow
                         body={
                             <Menu>
                                 <MenuList>
@@ -269,14 +82,30 @@ export const DropdownComponent = () => {
 
             <h2>Dropdown with Icon</h2>
             <Description>It can also include complementary information like an icon.</Description>
-            <DocsTile>
+            <DocsTile centered>
+            <Dropdown>
+                    <Popover
+                        id="jhqD0555"
+                        control={<Button dropdown glyph="filter">Select</Button>}
+                        noBodyArrow
+                        body={
+                            <Menu>
+                                <MenuList>
+                                    <MenuItem url="/">Option 1</MenuItem>
+                                    <MenuItem url="/">Option 2</MenuItem>
+                                    <MenuItem url="/">Option 3</MenuItem>
+                                    <MenuItem url="/">Option 4</MenuItem>
+                                </MenuList>
+                            </Menu>
+                        }
+                    />
+                </Dropdown>
+
                 <Dropdown>
                     <Popover
-                        control={
-                            <Button dropdown={true} glyph="filter">
-                                Select
-                            </Button>
-                        }
+                        id="jhqD0555"
+                        control={<Button dropdown size="compact" glyph="filter">Select</Button>}
+                        noBodyArrow
                         body={
                             <Menu>
                                 <MenuList>
@@ -295,26 +124,8 @@ export const DropdownComponent = () => {
             <Separator />
 
             <h2>Toolbar Dropdown</h2>
-            <DocsTile>
-                <Dropdown>
-                    <Popover
-                        control={
-                            <Button dropdown={true} toolbar={true}>
-                                Select
-                            </Button>
-                        }
-                        body={
-                            <Menu>
-                                <MenuList>
-                                    <MenuItem url="/">Option 1</MenuItem>
-                                    <MenuItem url="/">Option 2</MenuItem>
-                                    <MenuItem url="/">Option 3</MenuItem>
-                                    <MenuItem url="/">Option 4</MenuItem>
-                                </MenuList>
-                            </Menu>
-                        }
-                    />
-                </Dropdown>
+            <DocsTile centered>
+                
             </DocsTile>
             <DocsText>{toolbarDropdownCode}</DocsText>
 
@@ -324,129 +135,16 @@ export const DropdownComponent = () => {
             <Description>
                 Disabled state can be rendered with <code>state="disabled"</code> class.
             </Description>
-            <DocsTile>
-                <Dropdown>
-                    <Popover
-                        state="disabled"
-                        control={
-                            <Button dropdown={true} state="disabled">
-                                Select
-                            </Button>
-                        }
-                        body={
-                            <Menu>
-                                <MenuList>
-                                    <MenuItem url="/">Option 1</MenuItem>
-                                    <MenuItem url="/">Option 2</MenuItem>
-                                    <MenuItem url="/">Option 3</MenuItem>
-                                    <MenuItem url="/">Option 4</MenuItem>
-                                </MenuList>
-                            </Menu>
-                        }
-                    />
-                </Dropdown>
+            <DocsTile centered>
+               
             </DocsTile>
             <DocsText>{disabledDropdownCode}</DocsText>
 
             <Separator />
 
             <h2>Sizes</h2>
-            <DocsTile>
-                <Dropdown>
-                    <Popover
-                        control={
-                            <Button dropdown={true} size="xs">
-                                Select
-                            </Button>
-                        }
-                        body={
-                            <Menu>
-                                <MenuList>
-                                    <MenuItem url="/">Option 1</MenuItem>
-                                    <MenuItem url="/">Option 2</MenuItem>
-                                    <MenuItem url="/">Option 3</MenuItem>
-                                    <MenuItem url="/">Option 4</MenuItem>
-                                </MenuList>
-                            </Menu>
-                        }
-                    />
-                </Dropdown>
-                <Dropdown>
-                    <Popover
-                        control={
-                            <Button dropdown={true} size="s">
-                                Select
-                            </Button>
-                        }
-                        body={
-                            <Menu>
-                                <MenuList>
-                                    <MenuItem url="/">Option 1</MenuItem>
-                                    <MenuItem url="/">Option 2</MenuItem>
-                                    <MenuItem url="/">Option 3</MenuItem>
-                                    <MenuItem url="/">Option 4</MenuItem>
-                                </MenuList>
-                            </Menu>
-                        }
-                    />
-                </Dropdown>
-                <Dropdown>
-                    <Popover
-                        control={
-                            <Button dropdown={true} size="compact">
-                                Select
-                            </Button>
-                        }
-                        body={
-                            <Menu>
-                                <MenuList>
-                                    <MenuItem url="/">Option 1</MenuItem>
-                                    <MenuItem url="/">Option 2</MenuItem>
-                                    <MenuItem url="/">Option 3</MenuItem>
-                                    <MenuItem url="/">Option 4</MenuItem>
-                                </MenuList>
-                            </Menu>
-                        }
-                    />
-                </Dropdown>
-                <Dropdown>
-                    <Popover
-                        control={
-                            <Button dropdown={true} size="default">
-                                Select
-                            </Button>
-                        }
-                        body={
-                            <Menu>
-                                <MenuList>
-                                    <MenuItem url="/">Option 1</MenuItem>
-                                    <MenuItem url="/">Option 2</MenuItem>
-                                    <MenuItem url="/">Option 3</MenuItem>
-                                    <MenuItem url="/">Option 4</MenuItem>
-                                </MenuList>
-                            </Menu>
-                        }
-                    />
-                </Dropdown>
-                <Dropdown>
-                    <Popover
-                        control={
-                            <Button dropdown={true} size="l">
-                                Select
-                            </Button>
-                        }
-                        body={
-                            <Menu>
-                                <MenuList>
-                                    <MenuItem url="/">Option 1</MenuItem>
-                                    <MenuItem url="/">Option 2</MenuItem>
-                                    <MenuItem url="/">Option 3</MenuItem>
-                                    <MenuItem url="/">Option 4</MenuItem>
-                                </MenuList>
-                            </Menu>
-                        }
-                    />
-                </Dropdown>
+            <DocsTile centered>
+                
             </DocsTile>
             <DocsText>{sizesDropdownCode}</DocsText>
 
@@ -460,47 +158,7 @@ export const DropdownComponent = () => {
                 “menu” components.
             </Description>
             <DocsTile>
-                <Popover
-                    control={<Button type="secondary" glyph="vertical-grip" />}
-                    body={
-                        <Menu>
-                            <MenuList>
-                                <MenuItem url="/">Option 1</MenuItem>
-                                <MenuItem url="/">Option 2</MenuItem>
-                                <MenuItem url="/">Option 3</MenuItem>
-                                <MenuItem url="/">Option 4</MenuItem>
-                            </MenuList>
-                        </Menu>
-                    }
-                />
-
-                <Popover
-                    control={<Button type="secondary">More</Button>}
-                    body={
-                        <Menu>
-                            <MenuList>
-                                <MenuItem url="/">Option 1</MenuItem>
-                                <MenuItem url="/">Option 2</MenuItem>
-                                <MenuItem url="/">Option 3</MenuItem>
-                                <MenuItem url="/">Option 4</MenuItem>
-                            </MenuList>
-                        </Menu>
-                    }
-                />
-
-                <Popover
-                    control={<Button>More</Button>}
-                    body={
-                        <Menu>
-                            <MenuList>
-                                <MenuItem url="/">Option 1</MenuItem>
-                                <MenuItem url="/">Option 2</MenuItem>
-                                <MenuItem url="/">Option 3</MenuItem>
-                                <MenuItem url="/">Option 4</MenuItem>
-                            </MenuList>
-                        </Menu>
-                    }
-                />
+               
             </DocsTile>
             <DocsText>{contextualMenuDropdownCode}</DocsText>
             <Separator />

@@ -10,13 +10,16 @@ $fd-fonts-path: '../node_modules/fiori-fundamentals/dist/fonts/';
     .fd-badge,
     .fd-label,
     .fd-status-label,
-    .fd-tag,
-    .fd-popover,
+    .fd-token,
     .fd-dropdown,
     .fd-button-group,
     [class*='fd-identifier'],
     [class*='fd-form'] {
         margin-right: 20px;
+    }
+
+    .fd-popover {
+        margin-right: 60px;
     }
 
     .fd-button--grouped {
@@ -141,18 +144,6 @@ $fd-fonts-path: '../node_modules/fiori-fundamentals/dist/fonts/';
     margin: 12px 0;
 }
 
-input[type='text'],
-input[type='password'],
-input[type='email'],
-input[type='url'],
-input[type='search'],
-input[type='tel'],
-input[type='number'],
-input[type='date'],
-textarea {
-    border-radius: 0;
-}
-
 .fd-side-nav {
     max-width: 250px;
 }
@@ -197,6 +188,10 @@ textarea {
 }
 
 .fd-date-picker {
+    display: inline-block;
+}
+
+.fd-calendar {
     display: inline-block;
 }
 

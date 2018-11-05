@@ -2,9 +2,6 @@ import React from 'react';
 import { InlineHelp } from '../';
 import { DocsTile, DocsText, Separator, Header, Description, Import, Properties } from '../';
 
-const centerStyle = {
-    textAlign: 'center'
-};
 
 export const InlineHelpComponent = () => {
     const defaultHelpPlacement = `<InlineHelp text="Lorem ipsum dolor sit amet, consectetur adipiscing." placement="bottom-right"/>`;
@@ -41,44 +38,36 @@ export const InlineHelpComponent = () => {
 
             <h2>Default Position</h2>
             <Description>The default positioning of inline help component is bottom right.</Description>
-            <DocsTile>
-                <div style={centerStyle}>
-                    Bottom Right (Default) &nbsp;
-                    <InlineHelp text="Lorem ipsum dolor sit amet, consectetur adipiscing." placement="bottom-right" />
-                </div>
+            <DocsTile centered>
+                Bottom Right (Default) &nbsp;
+                <InlineHelp text="Lorem ipsum dolor sit amet, consectetur adipiscing." placement="bottom-right" />
             </DocsTile>
             <DocsText>{defaultHelpPlacement}</DocsText>
-            
+
             <Separator />
-            
+
             <h2>Bottom Left Position</h2>
-            <DocsTile>
-                <div style={centerStyle}>
-                    Bottom Left &nbsp;
-                    <InlineHelp text="Lorem ipsum dolor sit amet, consectetur adipiscing." placement="bottom-left" />
-                </div>
+            <DocsTile centered>
+                Bottom Left &nbsp;
+                <InlineHelp text="Lorem ipsum dolor sit amet, consectetur adipiscing." placement="bottom-left" />
             </DocsTile>
             <DocsText>{bottomLeftHelpPlacement}</DocsText>
-            
+
             <Separator />
-            
+
             <h2>Right Position</h2>
-            <DocsTile>
-                <div style={centerStyle}>
-                    Right &nbsp;
-                    <InlineHelp text="Lorem ipsum dolor sit amet, consectetur adipiscing." placement="right" />
-                </div>
+            <DocsTile centered>
+                Right &nbsp;
+                <InlineHelp text="Lorem ipsum dolor sit amet, consectetur adipiscing." placement="right" />
             </DocsTile>
             <DocsText>{rightHelpPlacement}</DocsText>
-            
+
             <Separator />
-           
+
             <h2>Left Position</h2>
-            <DocsTile>
-                <div style={centerStyle}>
-                    Left &nbsp;
-                    <InlineHelp text="Lorem ipsum dolor sit amet, consectetur adipiscing." placement="left" />
-                </div>
+            <DocsTile centered>
+                Left &nbsp;
+                <InlineHelp text="Lorem ipsum dolor sit amet, consectetur adipiscing." placement="left" />
             </DocsTile>
             <DocsText>{leftHelpPlacement}</DocsText>
 

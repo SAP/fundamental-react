@@ -5,7 +5,7 @@ export const Button = props => {
     const { option, type, size, glyph, dropdown, selected, disabled, typeAttr, onclick, children } = props;
     return (
         <button
-            className={`${option ? 'fd-button--' + option : ' fd-button'}${type ? ' fd-button--' + type : ''}${dropdown ? 'fd-dropdown__control' : ''}${size ? ' fd-button--' + size : ''}${glyph ? ' sap-icon--' + glyph : ''}${selected ? ' is-selected' : ''}${disabled ? ' is-disabled' : ''}`}
+            className={`${option ? 'fd-button--' + option : ' fd-button'}${type ? ' fd-button--' + type : ''}${dropdown ? ' fd-dropdown__control' : ''}${size ? ' fd-button--' + size : ''}${glyph ? ' sap-icon--' + glyph : ''}${selected ? ' is-selected' : ''}${disabled ? ' is-disabled' : ''}`}
             aria-selected={selected ? selected : false}
             aria-disabled={disabled ? disabled : false}
             type={typeAttr}
