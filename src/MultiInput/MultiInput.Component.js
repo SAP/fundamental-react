@@ -45,6 +45,13 @@ export class MultiInputComponent extends Component {
   placeHolder="Select a Fruit"
 />`;
 
+  multiInputCompactCode = `<MultiInput
+data={this.data}
+onTagsUpdate={this.performTagsUpdate}
+placeHolder="Select a Fruit"
+compact={true}
+/>`;
+
   render() {
     return (
       <div>
@@ -71,6 +78,11 @@ export class MultiInputComponent extends Component {
               name: 'onTagsUpdate',
               description:
                 'Func - Method to fire on add or remove of tag. Component returns array of tags selected.'
+            },
+            {
+              name: 'compact',
+              description:
+                'Bool - true: display compact style, false: default style'
             }
           ]}
         />
@@ -91,6 +103,25 @@ export class MultiInputComponent extends Component {
           </div>
         </DocsTile>
         <DocsText>{this.multiInputCode}</DocsText>
+
+        <Separator />
+
+        <h2>Compact Style</h2>
+        <Description>
+          A text input when on focus will show list of items to select, but with
+          a compact input box.
+        </Description>
+        <DocsTile>
+          <div>
+            <MultiInput
+              data={this.data}
+              onTagsUpdate={this.performTagsUpdate}
+              placeHolder="Select a Fruit"
+              compact={true}
+            />
+          </div>
+        </DocsTile>
+        <DocsText>{this.multiInputCompactCode}</DocsText>
 
         <Separator />
       </div>
