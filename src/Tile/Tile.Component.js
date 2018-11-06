@@ -1,15 +1,26 @@
-import React from 'react'
-import { Tile, TileContent, TileMedia, TileActions, ProductTile, ProductTileContent, ProductTileMedia, TileGrid, Image, Identifier } from '../'
-import { Dropdown, DropdownList } from '../'
-import { DocsTile, DocsText, Separator, Header, Description, Import, Properties } from '../'
-import {Playground} from '../'
+import React from 'react';
+import {
+    Tile,
+    TileContent,
+    TileMedia,
+    TileActions,
+    ProductTile,
+    ProductTileContent,
+    ProductTileMedia,
+    TileGrid,
+    Image,
+    Identifier
+} from '../';
+import { Popover, Button, Menu, MenuList, MenuItem } from '../';
+import { DocsTile, DocsText, Separator, Header, Description, Import, Properties } from '../';
+import { Playground } from '../';
 
 export const TileComponent = () => {
     const simpleTileCode = `<Tile>
     <TileContent title="Tile Title">
         <p>Tile Description</p>
     </TileContent>
-</Tile>`
+</Tile>`;
     const mediaTileCode = `<Tile>
     <TileMedia>
         <Image size="m" photo="https://placeimg.com/400/400/nature"></Image>
@@ -34,22 +45,26 @@ export const TileComponent = () => {
     <TileContent title="Tile Title">
         <p>Tile Description</p>
     </TileContent>
-</Tile>`
+</Tile>`;
 
     const actionsTileCode = `<Tile>
-    <TileContent title="Tile Title"></TileContent>
+    <TileContent title="Tile Title" />
     <TileActions>
-        <Dropdown size="m" isContextual={true}>
-            <DropdownList links=
-                {[
-                    { id: 'item_1', url: '#', name: 'Option 1' },
-                    { id: 'item_2', url: '#', name: 'Option 2' },
-                    { id: 'item_3', url: '#', name: 'Option 3' }
-                ]}>
-            </DropdownList>
-        </Dropdown>
+        <Popover
+            control={<Button type="secondary" glyph="vertical-grip" />}
+            body={
+                <Menu>
+                    <MenuList>
+                        <MenuItem url="/">Option 1</MenuItem>
+                        <MenuItem url="/">Option 2</MenuItem>
+                        <MenuItem url="/">Option 3</MenuItem>
+                        <MenuItem url="/">Option 4</MenuItem>
+                    </MenuList>
+                </Menu>
+            }
+        />
     </TileActions>
-</Tile>`
+</Tile>`;
 
     const productTileCode = `<ProductTile isButton="true">
     <ProductTileMedia image="https://techne.yaas.io/images/product-thumbnail-wide.png"></ProductTileMedia>
@@ -63,7 +78,7 @@ export const TileComponent = () => {
     <ProductTileContent title="Tile Title">
         <p>Tile Description</p>
     </ProductTileContent>
-</ProductTile>`
+</ProductTile>`;
     const tileGridCode = `<TileGrid col={4}>
     <Tile rowSpan={2} colorAccent={7}>
         <TileContent title="Tile Title">
@@ -100,30 +115,39 @@ export const TileComponent = () => {
             <p>Tile Description</p>
         </TileContent>
     </Tile>
-</TileGrid>`
+</TileGrid>`;
 
     return (
         <div>
             <Header>Tile and Tile Grid</Header>
-            <Description>A Tile component can be used to display information in a simple container format. A collection of tile can be displayed using <code>fd-tile-grid</code> </Description>
-            <Import module="Tile, TileContent, TileMedia, TileActions, ProductTile, ProductTileContent, ProductTileMedia, TileGrid" path="/fundamental-react/src/" />
+            <Description>
+                A Tile component can be used to display information in a simple container format. A collection of tile
+                can be displayed using <code>fd-tile-grid</code>{' '}
+            </Description>
+            <Import
+                module="Tile, TileContent, TileMedia, TileActions, ProductTile, ProductTileContent, ProductTileMedia, TileGrid"
+                path="/fundamental-react/src/"
+            />
 
             <Separator />
 
-            <Properties type="Inputs" properties=
-                {[
+            <Properties
+                type="Inputs"
+                properties={[
                     { name: 'title', description: 'String - the title of the Tile Content' },
                     { name: 'isButton', description: 'Bool - when set to true, renders the tile as a button.' },
                     { name: 'disabled', description: 'Bool - when set to true, disables the tile.' },
                     { name: 'image', description: 'String (required) - url of the image used in Product Tile.' },
                     { name: 'rowSpan', description: 'Number - the number of rows the tile covers.' },
                     { name: 'columnSpan', description: 'Number - the number of columns the tile covers.' },
-                    { name: 'colorAccent', description: 'Number - applies a background color. Options include numbers from 1 to 9.' }
-
-                ]} />
+                    {
+                        name: 'colorAccent',
+                        description: 'Number - applies a background color. Options include numbers from 1 to 9.'
+                    }
+                ]}
+            />
 
             <Separator />
-
 
             <h2>Simple Tile</h2>
             <DocsTile>
@@ -141,15 +165,14 @@ export const TileComponent = () => {
             <DocsTile>
                 <Tile>
                     <TileMedia>
-                        <Image size="m" photo="https://placeimg.com/400/400/nature"></Image>
+                        <Image size="m" photo="https://placeimg.com/400/400/nature" />
                     </TileMedia>
-                    <TileContent title="Tile Title">
-                    </TileContent>
+                    <TileContent title="Tile Title" />
                 </Tile>
                 <br />
                 <Tile isButton="true">
                     <TileMedia>
-                        <Image size="l" type="circle" photo="https://placeimg.com/400/400/nature"></Image>
+                        <Image size="l" type="circle" photo="https://placeimg.com/400/400/nature" />
                     </TileMedia>
                     <TileContent title="Tile Title">
                         <p>Tile Description</p>
@@ -158,7 +181,7 @@ export const TileComponent = () => {
                 <br />
                 <Tile isButton="true">
                     <TileMedia>
-                        <Identifier size="m" glyph="home" color="3"></Identifier>
+                        <Identifier size="m" glyph="home" color="3" />
                     </TileMedia>
                     <TileContent title="Tile Title">
                         <p>Tile Description</p>
@@ -172,18 +195,21 @@ export const TileComponent = () => {
             <h2>Actions Tile</h2>
             <DocsTile>
                 <Tile>
-                    <TileContent title="Tile Title">
-                    </TileContent>
+                    <TileContent title="Tile Title" />
                     <TileActions>
-                        <Dropdown size="m" isContextual={true}>
-                            <DropdownList links=
-                                {[
-                                    { id: 'item_1', url: '#', name: 'Option 1' },
-                                    { id: 'item_2', url: '#', name: 'Option 2' },
-                                    { id: 'item_3', url: '#', name: 'Option 3' }
-                                ]}>
-                            </DropdownList>
-                        </Dropdown>
+                        <Popover
+                            control={<Button type="secondary" glyph="vertical-grip" />}
+                            body={
+                                <Menu>
+                                    <MenuList>
+                                        <MenuItem url="/">Option 1</MenuItem>
+                                        <MenuItem url="/">Option 2</MenuItem>
+                                        <MenuItem url="/">Option 3</MenuItem>
+                                        <MenuItem url="/">Option 4</MenuItem>
+                                    </MenuList>
+                                </Menu>
+                            }
+                        />
                     </TileActions>
                 </Tile>
             </DocsTile>
@@ -195,7 +221,7 @@ export const TileComponent = () => {
             <DocsTile>
                 <div>
                     <ProductTile isButton="true">
-                        <ProductTileMedia image="https://techne.yaas.io/images/product-thumbnail-wide.png"></ProductTileMedia>
+                        <ProductTileMedia image="https://techne.yaas.io/images/product-thumbnail-wide.png" />
                         <ProductTileContent title="Tile Title">
                             <p>Tile Description</p>
                         </ProductTileContent>
@@ -204,7 +230,7 @@ export const TileComponent = () => {
                     <br />
 
                     <ProductTile disabled="true">
-                        <ProductTileMedia image="https://techne.yaas.io/images/product-thumbnail-wide.png"></ProductTileMedia>
+                        <ProductTileMedia image="https://techne.yaas.io/images/product-thumbnail-wide.png" />
                         <ProductTileContent title="Tile Title">
                             <p>Tile Description</p>
                         </ProductTileContent>
@@ -227,7 +253,7 @@ export const TileComponent = () => {
                     </Tile>
                     <Tile>
                         <TileMedia>
-                            <Image size="l" type="circle" photo="https://placeimg.com/400/400/nature"></Image>
+                            <Image size="l" type="circle" photo="https://placeimg.com/400/400/nature" />
                         </TileMedia>
                         <TileContent title="Tile Title">
                             <p>Tile Description</p>
@@ -240,12 +266,11 @@ export const TileComponent = () => {
                     </Tile>
                     <Tile isButton="true">
                         <TileMedia>
-                            <Identifier size="l" glyph="home" color="3"></Identifier>
+                            <Identifier size="l" glyph="home" color="3" />
                         </TileMedia>
-                        <TileContent title="Tile Title">
-                        </TileContent>
+                        <TileContent title="Tile Title" />
                     </Tile>
-                    <Tile >
+                    <Tile>
                         <TileContent title="Tile Title">
                             <p>Tile Description</p>
                         </TileContent>
@@ -261,28 +286,30 @@ export const TileComponent = () => {
 
             <Separator />
 
-        <Playground component="tile" schema= {[
-                        {
-                            attribute: 'type',
-                            typeOfAttribute: 'component',
-                            enum: ['simple', 'media', 'product']
-                        },
-                        {
-                            attribute: 'title',
-                            typeOfAttribute: 'string'
-                        },
-                        {
-                            attribute: 'children',
-                            typeOfAttribute: 'string'
-                        }
-            ]}>
-            <Tile>
-                <TileContent title="Tile Title">
-                    <p>Tile Description</p>
-                </TileContent>
-            </Tile>
-        </Playground>
-
+            <Playground
+                component="tile"
+                schema={[
+                    {
+                        attribute: 'type',
+                        typeOfAttribute: 'component',
+                        enum: ['simple', 'media', 'product']
+                    },
+                    {
+                        attribute: 'title',
+                        typeOfAttribute: 'string'
+                    },
+                    {
+                        attribute: 'children',
+                        typeOfAttribute: 'string'
+                    }
+                ]}
+            >
+                <Tile>
+                    <TileContent title="Tile Title">
+                        <p>Tile Description</p>
+                    </TileContent>
+                </Tile>
+            </Playground>
         </div>
     );
-}
+};
