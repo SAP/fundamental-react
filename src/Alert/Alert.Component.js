@@ -6,7 +6,7 @@ import { Playground } from '../documentation/Playground/Playground';
 export const AlertComponent = () => {
     const defaultAlertCode = `<Alert dismissable link="#" linkText="link">Default alert with a </Alert>
  
-<Alert dismissable linkText="link" rtl>تم. بسبب أمام وشعار ولم بـ. أحكم والكساد ما فقد. كل وعُرفت الإنزال مدن. انهa </Alert>`;
+<Alert dismissable linkText="link" rtl>تم. بسبب أمام وشعار ولم بـ. أحكم والكساد ما فقد. كل وعُرفت الإنزال مدن. انه </Alert>`;
 
     const warningAlertCode = `<Alert type="warning" dismissable>
     <h3>A dismissible error type alert with template.</h3>
@@ -24,8 +24,6 @@ export const AlertComponent = () => {
 <Alert type="error" dismissable rtl>
     تم. بسبب أمام وشعار ولم بـ. أحكم والكساد ما فقد. كل وعُرفت الإنزال مدن. انه
 </Alert>`;
-
-    const errorAlertCode = `<Alert type="error"  dismissable={true} link="#" linkText="link">Error message with a </Alert>`;
     
     return (
         <div>
@@ -73,7 +71,7 @@ export const AlertComponent = () => {
                 </Alert>
                 <br />
                 <Alert dismissable linkText="link" rtl>
-                    تم. بسبب أمام وشعار ولم بـ. أحكم والكساد ما فقد. كل وعُرفت الإنزال مدن. انهa{' '}
+                    تم. بسبب أمام وشعار ولم بـ. أحكم والكساد ما فقد. كل وعُرفت الإنزال مدن. انه
                 </Alert>
             </DocsTile>
             <DocsText>{defaultAlertCode}</DocsText>
