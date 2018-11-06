@@ -31,8 +31,7 @@ export class MultiInputComponent extends Component {
     super(props);
 
     this.state = {
-      data: [],
-      tags: ['Apple']
+      data: []
     };
   }
 
