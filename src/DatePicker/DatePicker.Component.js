@@ -2,13 +2,11 @@ import React from 'react';
 import { DocsTile, DocsText, Separator, Header, Description, Import, Properties } from '../';
 import { DatePicker } from '../';
 
-const centerStyle = {
-    textAlign: 'center'
-};
-
 export const DatePickerComponent = () => {
-    const defaultDatePickerCode = `<DatePicker/>`;
-    const enableRangeSelectionDatePickerCode = `<DatePicker enableRangeSelection={true}/>`;
+    const defaultDatePickerCode = `<DatePicker />
+<DatePicker compact />`;
+    const enableRangeSelectionDatePickerCode = `<DatePicker enableRangeSelection />
+<DatePicker enableRangeSelection compact />`;
 
     return (
         <div>

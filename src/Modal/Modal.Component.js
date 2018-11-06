@@ -44,7 +44,7 @@ export class ModalComponent extends Component {
   actions={
     <React.Fragment>
       <Button
-        type="secondary"
+        option="light"
         onclick={() => this.showHideConfirmModal('No Way')}
       >
         No Way
@@ -64,7 +64,7 @@ export class ModalComponent extends Component {
   actions={
     <React.Fragment>
       <Button
-        type="secondary"
+        option="light"
         onclick={() => this.showHideFormModal('Cancel')}
       >
         Cancel
@@ -182,7 +182,7 @@ export class ModalComponent extends Component {
           Component doesn’t fit all the information.
         </Description>
         <DocsTile centered>
-          <button onClick={this.showHideModal}>Show Information Modal</button>
+          <button class="fd-button" onClick={this.showHideModal}>Show Information Modal</button>
           {this.state.bShowInfoModal ? (
             <Modal title="Product Added" onClose={this.showHideModal}>
               <div>
@@ -211,7 +211,7 @@ export class ModalComponent extends Component {
           buttons at the bottom.
         </Description>
         <DocsTile centered>
-          <button onClick={this.showHideConfirmModal}>
+          <button class="fd-button" onClick={this.showHideConfirmModal}>
             Show Confirmation Modal
           </button>
           {this.state.bShowComfirmModal ? (
@@ -221,7 +221,7 @@ export class ModalComponent extends Component {
               actions={
                 <React.Fragment>
                   <Button
-                    type="secondary"
+                    option="light"
                     onclick={() => this.showHideConfirmModal('No Way')}
                   >
                     No Way
@@ -249,7 +249,7 @@ export class ModalComponent extends Component {
           user.
         </Description>
         <DocsTile centered>
-          <button onClick={this.showHideFormModal}>Show Form Modal</button>
+          <button class="fd-button" onClick={this.showHideFormModal}>Show Form Modal</button>
           {this.state.bShowFormModal ? (
             <Modal
               title="Invite user"
@@ -257,7 +257,7 @@ export class ModalComponent extends Component {
               actions={
                 <React.Fragment>
                   <Button
-                    type="secondary"
+                    option="light"
                     onclick={() => this.showHideFormModal('Cancel')}
                   >
                     Cancel
