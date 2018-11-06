@@ -46,10 +46,10 @@ export class MultiInputComponent extends Component {
 />`;
 
   multiInputCompactCode = `<MultiInput
-data={this.data}
-onTagsUpdate={this.performTagsUpdate}
-placeHolder="Select a Fruit"
-compact={true}
+  data={this.data}
+  onTagsUpdate={this.performTagsUpdate}
+  placeHolder="Select a Fruit"
+  compact={true}
 />`;
 
   render() {
