@@ -37,16 +37,16 @@ Builds the app for production to the `build` folder.
 
 ## Download and Installation
 
-#### 1. Download Fundamental UI:
+#### 1. Download Fiori Fundamentals:
 
-`npm install --save fundamental-ui`
+`npm install --save fiori-fundamentals`
 
 
-#### 2. Include the Fundamental UI CSS in your React application. In your App.css or App.scss file include the following lines:
+#### 2. Include the Fiori Fundamentals CSS in your React application. In your App.css or App.scss file include the following lines:
 
-`@import '../node_modules/fundamental-ui/scss/icons/'`
-`@import '../node_modules/fundamental-ui/dist/fonts/'`
-`@import '../node_modules/fundamental-ui/scss/all.scss'`
+`@import '../node_modules/fiori-fundamentals/scss/icons/'`
+`@import '../node_modules/fiori-fundamentals/dist/fonts/'`
+`@import '../node_modules/fiori-fundamentals/scss/all.scss'`
 
 
 ## Known Issues
