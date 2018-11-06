@@ -113,7 +113,13 @@ export class MultiInput extends Component {
   };
 
   render() {
-    const { placeHolder, data } = this.props;
+    const { placeHolder, data, compact } = this.props;
+
+    const inputGroupClassNames = `fd-input-group fd-input-group--after${
+      compact ? ' fd-input-group--compact' : ''
+    }`;
+
+    const inputClassNames = `fd-input${compact ? ' fd-input--compact' : ''}`;
 
     return (
       <div className="fd-multi-input">
@@ -126,10 +132,10 @@ export class MultiInput extends Component {
                 aria-expanded={this.state.bShowList}
                 aria-haspopup="true"
               >
-                <div className="fd-input-group fd-input-group--after">
+                <div className={inputGroupClassNames}>
                   <input
                     type="text"
-                    className="fd-input"
+                    className={inputClassNames}
                     placeholder={placeHolder}
                     onClick={this.showHideTagList}
                   />
@@ -169,5 +175,6 @@ export class MultiInput extends Component {
 MultiInput.propTypes = {
   placeHolder: PropTypes.string,
   data: PropTypes.array.isRequired,
-  onTagsUpdate: PropTypes.func
+  onTagsUpdate: PropTypes.func,
+  compact: PropTypes.boolean
 };
