@@ -6,7 +6,7 @@ import { MegaMenu, MegaMenuList, MegaMenuGroup } from '../'
 export const MegaMenuComponent = () => {
     const defaultMegaMenuCode = `<MegaMenu>
     <MegaMenuGroup title="Group Title">
-        <MegaMenuList links=
+        <MegaMenuList items=
             {[
                 { id: 'item_1', url: '#', name: 'Link Item' },
                 { id: 'item_2', url: '#', name: 'Link Item', hasChild: true, child: [
@@ -21,17 +21,17 @@ export const MegaMenuComponent = () => {
         </MegaMenuList>
     </MegaMenuGroup>
     <MegaMenuGroup title="Group Title">
-        <MegaMenuList links=
+        <MegaMenuList items=
             {[
-                { id: 'item_6', url: '#', name: 'Link Item' },
-                { id: 'item_7', url: '#', name: 'Link Item' },
-                { id: 'item_8', url: '#', name: 'Link Item', hasChild: true, child: [
-                    { id: 'subitem_81', url: '#', name: 'Link' },
-                    { id: 'subitem_82', url: '#', name: 'Link' },
-                    { id: 'subitem_83', url: '#', name: 'Link' },
-                    { id: 'subitem_84', url: '#', name: 'Link' }]
+                { id: 'item_6', link: '#', name: 'Link Item' },
+                { id: 'item_7', link: '#', name: 'Link Item' },
+                { id: 'item_8', link: '#', name: 'Link Item', hasChild: true, child: [
+                    { id: 'subitem_81', link: '#', name: 'Link' },
+                    { id: 'subitem_82', link: '#', name: 'Link' },
+                    { id: 'subitem_83', link: '#', name: 'Link' },
+                    { id: 'subitem_84', link: '#', name: 'Link' }]
                 },
-                { id: 'item_9', url: '#', name: 'Link Item' },
+                { id: 'item_9', link: '#', name: 'Link Item' },
                 
             ]}>
         </MegaMenuList>
@@ -49,12 +49,13 @@ export const MegaMenuComponent = () => {
 
             <Properties type="Inputs" properties=
                 {[
-                    { name: 'links', description: 'Array - an array of objects with keys \'id\', \'url\', \'name\', \'hasChild\', and \'child\' setting the attributes of the links.' },
-                    { name: 'id', description: 'String - the \'id\' of the link.' },
-                    { name: 'url', description: 'String - the \'url\' of the link.' },
-                    { name: 'name', description: 'String - the \'name\' of the link.' },
-                    { name: 'hasChild', description: 'Bool - when set to \'true\' enables a second level of navigation.' },
-                    { name: 'child', description: 'Array - an array of objects with keys \'id\', \'url\', and \'name\' setting the attributes of the sublinks' }
+                    { name: 'items', description: 'array - an array of objects with keys \'id\', \'url\' or \'link\', \'name\', \'hasChild\', and \'child\' setting the attributes of the items.' },
+                    { name: 'id', description: 'string - the \'id\' of the link.' },
+                    { name: 'url', description: "string - href attribute of <a> tag. Use either 'url' or 'link'." },
+                    { name: 'link', description: "string - a router link. Use either 'url' or 'link'." },
+                    { name: 'name', description: 'string - the \'name\' of the link.' },
+                    { name: 'hasChild', description: 'bool - when set to \'true\' enables a second level of navigation.' },
+                    { name: 'child', description: 'array - an array of objects with keys \'id\', \'url\' or \'link\', and \'name\' setting the attributes of the subitems.' }
 
                 ]} />
 
@@ -64,7 +65,7 @@ export const MegaMenuComponent = () => {
             <DocsTile>
                 <MegaMenu>
                     <MegaMenuGroup title="Group Title">
-                        <MegaMenuList links=
+                        <MegaMenuList items=
                             {[
                                 { id: 'item_1', url: '#', name: 'Link Item' },
                                 { id: 'item_2', url: '#', name: 'Link Item', hasChild: true, child: [
@@ -79,17 +80,17 @@ export const MegaMenuComponent = () => {
                         </MegaMenuList>
                     </MegaMenuGroup>
                     <MegaMenuGroup title="Group Title">
-                        <MegaMenuList links=
+                        <MegaMenuList items=
                             {[
-                                { id: 'item_6', url: '#', name: 'Link Item' },
-                                { id: 'item_7', url: '#', name: 'Link Item' },
-                                { id: 'item_8', url: '#', name: 'Link Item', hasChild: true, child: [
-                                    { id: 'subitem_81', url: '#', name: 'Link' },
-                                    { id: 'subitem_82', url: '#', name: 'Link' },
-                                    { id: 'subitem_83', url: '#', name: 'Link' },
-                                    { id: 'subitem_84', url: '#', name: 'Link' }]
+                                { id: 'item_6', link: '#', name: 'Link Item' },
+                                { id: 'item_7', link: '#', name: 'Link Item' },
+                                { id: 'item_8', link: '#', name: 'Link Item', hasChild: true, child: [
+                                    { id: 'subitem_81', link: '#', name: 'Link' },
+                                    { id: 'subitem_82', link: '#', name: 'Link' },
+                                    { id: 'subitem_83', link: '#', name: 'Link' },
+                                    { id: 'subitem_84', link: '#', name: 'Link' }]
                                 },
-                                { id: 'item_9', url: '#', name: 'Link Item' },
+                                { id: 'item_9', link: '#', name: 'Link Item' },
                                 
                             ]}>
                         </MegaMenuList>

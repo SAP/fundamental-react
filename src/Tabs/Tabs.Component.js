@@ -1,8 +1,6 @@
 import React from 'react'
 import { Tabs, TabComponent} from '../'
 import { DocsTile, DocsText, Separator, Header, Description, Import, Properties, Playground } from '../'
-import { BrowserRouter, Route, Switch, Link } from 'react-router-dom'
-
 
 export const TabsComponent = () => {
     const tabscomponentCode= `
