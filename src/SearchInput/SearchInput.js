@@ -88,7 +88,7 @@ export class SearchInput extends Component {
 
   // create auto complete search items
   createAutoCompleteItems = data => {
-    return data.length > 0 ? (
+    return data && data.length > 0 ? (
       data.map((item, index) => {
         let classNames = 'fd-menu__item';
         if (index === 0) {
@@ -135,7 +135,7 @@ export class SearchInput extends Component {
               </div>
             </div>
           </div>
-          {onAutoComplete ? (
+          {data && onAutoComplete ? (
             <div
               className="fd-popover__body fd-popover__body--no-arrow"
               aria-hidden={!this.state.bShowList}
