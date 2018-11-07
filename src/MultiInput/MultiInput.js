@@ -176,5 +176,5 @@ MultiInput.propTypes = {
   placeHolder: PropTypes.string,
   data: PropTypes.array.isRequired,
   onTagsUpdate: PropTypes.func,
-  compact: PropTypes.boolean
+  compact: PropTypes.bool
 };
