@@ -10,7 +10,7 @@ export class Popover extends Component {
         this.handleOutsideClick = this.handleOutsideClick.bind(this);
         this.state = {
             isExpanded: false,
-            isDisabled: this.props.state === 'disabled'
+            isDisabled: this.props.disabled
         };
     }
 
@@ -58,21 +58,32 @@ export class Popover extends Component {
     }
 
     render() {
-        const { id, control, body } = this.props;
+        const { id, alignment, noArrow, control, body } = this.props;
         return (
             <div
-                className="fd-popover"
+                className={`fd-popover${alignment ? ' fd-popover--' + alignment : ''}`}
                 ref={this.setWrapperRef}
                 ref={node => {
                     this.node = node;
                 }}
             >
-                <PopoverControl id={id} trigger={this.triggerBody} expanded={this.state.isExpanded}>
+                <div
+                    className="fd-popover__control"
+                    aria-expanded={this.state.isExpanded}
+                    onClick={this.triggerBody}
+                    aria-controls={id}
+                >
                     {control}
-                </PopoverControl>
-                <PopoverBody id={id} hidden={!this.state.isExpanded}>
+                </div>
+                <div
+                    className={`fd-popover__body${alignment ? ' fd-popover__body--' + alignment : ''}${
+                        noArrow ? ' fd-popover__body--no-arrow' : ''
+                    }`}
+                    aria-hidden={!this.state.isExpanded}
+                    id={id}
+                >
                     {body}
-                </PopoverBody>
+                </div>
             </div>
         );
     }
@@ -80,25 +91,8 @@ export class Popover extends Component {
 
 Popover.propTypes = {
     id: PropTypes.string,
-    state: PropTypes.string
-};
-
-// ------------------------------------- Popover Control------------------------------------
-export const PopoverControl = props => {
-    const { id, expanded, trigger, children } = props;
-    return (
-        <div className="fd-popover__control" aria-expanded={expanded} onClick={trigger} aria-controls={id}>
-            {children}
-        </div>
-    );
-};
-
-// -------------------------------------- Popover Body--------------------------------------
-export const PopoverBody = props => {
-    const { id, hidden, children } = props;
-    return (
-        <div className="fd-popover__body" aria-hidden={hidden} id={id}>
-            {children}
-        </div>
-    );
+    state: PropTypes.string,
+    alignment: PropTypes.string,
+    noArrow: PropTypes.bool,
+    disabled: PropTypes.bool
 };

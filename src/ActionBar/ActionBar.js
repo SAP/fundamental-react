@@ -24,7 +24,7 @@ ActionBar.propTypes = {
 export const ActionBarBack = props => {
     return (
         <div class="fd-action-bar__back">
-            <button class=" fd-button--secondary fd-button--compact sap-icon--nav-back" />
+             <button class="fd-button--light fd-button--compact sap-icon--nav-back"></button>
         </div>
     );
 };

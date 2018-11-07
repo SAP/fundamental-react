@@ -13,7 +13,7 @@ import {
 import { Alert } from '../src/Alert/Alert';
 import { Badge, Label, Status } from '../src/Badge/Badge';
 import { Breadcrumb, BreadcrumbItem } from '../src/Breadcrumb/Breadcrumb';
-import { Button, ButtonGroup, ButtonGrouped } from '../src/Button/Button';
+import { Button, ButtonGroup } from '../src/Button/Button';
 import { Calendar } from '../src/Calendar/Calendar';
 import { DatePicker } from '../src/DatePicker/DatePicker';
 import { Dropdown } from '../src/Dropdown/Dropdown';
@@ -40,12 +40,12 @@ import { Menu, MenuList, MenuItem, MenuGroup } from '../src/Menu/Menu';
 import { Modal } from '../src/Modal/Modal';
 import { MultiInput } from '../src/MultiInput/MultiInput';
 import { Pagination } from '../src/Pagination/Pagination';
-import { Popover, PopoverControl, PopoverBody } from '../src/Popover/Popover';
+import { Popover } from '../src/Popover/Popover';
 import { SearchInput } from '../src/SearchInput/SearchInput';
 import { SideNav, SideNavList, SideNavGroup } from '../src/SideNavigation/SideNavigation';
 import { Table } from '../src/Table/Table';
 import { Tabs, TabComponent } from '../src/Tabs/Tabs';
-import { Tag } from '../src/Tag/Tag';
+import { Token } from './Token/Token';
 import {
     Tile,
     TileContent,
@@ -88,7 +88,6 @@ export {
     BreadcrumbItem,
     Button,
     ButtonGroup,
-    ButtonGrouped,
     Calendar,
     DatePicker,
     Dropdown,
@@ -122,8 +121,6 @@ export {
     Modal,
     MultiInput,
     Popover,
-    PopoverControl,
-    PopoverBody,
     Pagination,
     SearchInput,
     SideNav,
@@ -132,7 +129,7 @@ export {
     Table,
     Tabs,
     TabComponent,
-    Tag,
+    Token,
     Tile,
     TileContent,
     TileMedia,
