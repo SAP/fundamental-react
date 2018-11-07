@@ -21,7 +21,7 @@ import { MegaMenuComponent } from './MegaMenu/MegaMenu.Component';
 import { MenuComponent } from './Menu/Menu.Component';
 import { ModalComponent } from './Modal/Modal.Component';
 import { MultiInputComponent } from './MultiInput/MultiInput.Component';
-import { PaginationComponent } from './Pagination/Pagination.Component'
+import { PaginationComponent } from './Pagination/Pagination.Component';
 import { PopoverComponent } from './Popover/Popover.Component';
 import { SearchInputComponent } from './SearchInput/SearchInput.Component';
 import { SideNavigationComponent } from './SideNavigation/SideNavigation.Component';
@@ -73,7 +73,7 @@ export default class Routes extends Component {
 
     render() {
         return (
-            <BrowserRouter>
+            <BrowserRouter basename={process.env.PUBLIC_URL}>
                 <div className="container">
                     <div className="sidebar">
                         <h1 className="logo">FUNDAMENTAL REACT</h1>
