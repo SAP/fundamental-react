@@ -28,6 +28,9 @@ export class Modal extends Component {
   }
 
   render() {
+    if (!this.props.show) {
+      return null;
+    }
     const { children, title, actions } = this.props;
 
     return ReactDOM.createPortal(
@@ -61,5 +64,6 @@ export class Modal extends Component {
 }
 
 Modal.propTypes = {
+  show: PropTypes.bool,
   title: PropTypes.string.isRequired
 };

@@ -20,7 +20,8 @@ import { ListGroupComponent } from './ListGroup/ListGroup.Component';
 import { MegaMenuComponent } from './MegaMenu/MegaMenu.Component';
 import { MenuComponent } from './Menu/Menu.Component';
 import { ModalComponent } from './Modal/Modal.Component';
-import { PaginationComponent } from './Pagination/Pagination.Component';
+import { MultiInputComponent } from './MultiInput/MultiInput.Component';
+import { PaginationComponent } from './Pagination/Pagination.Component'
 import { PopoverComponent } from './Popover/Popover.Component';
 import { SearchInputComponent } from './SearchInput/SearchInput.Component';
 import { SideNavigationComponent } from './SideNavigation/SideNavigation.Component';
@@ -55,6 +56,7 @@ export default class Routes extends Component {
                 { url: '/megaMenu', name: 'Mega Menu', component: MegaMenuComponent },
                 { url: '/menu', name: 'Menu', component: MenuComponent },
                 { url: '/modal', name: 'Modal', component: ModalComponent },
+                { url: '/multiInput', name: 'Multi Input', component: MultiInputComponent },
                 { url: '/pagination', name: 'Pagination', component: PaginationComponent },
                 { url: '/popover', name: 'Popover', component: PopoverComponent },
                 { url: '/searchInput', name: 'Search Input', component: SearchInputComponent },
