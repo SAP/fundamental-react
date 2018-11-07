@@ -189,8 +189,8 @@ export class ModalComponent extends Component {
           This is used to present information to the user but the Alert
           Component doesn’t fit all the information.
         </Description>
-        <DocsTile>
-          <button onClick={this.showHideModal}>Show Information Modal</button>
+        <DocsTile centered>
+          <button class="fd-button" onClick={this.showHideModal}>Show Information Modal</button>
           <Modal
             show={this.state.bShowInfoModal}
             title="Product Added"
@@ -255,8 +255,8 @@ export class ModalComponent extends Component {
           This is used for short forms in order to collect information from the
           user.
         </Description>
-        <DocsTile>
-          <button onClick={this.showHideFormModal}>Show Form Modal</button>
+        <DocsTile centered>
+          <button class="fd-button" onClick={this.showHideFormModal}>Show Form Modal</button>
           <Modal
             show={this.state.bShowFormModal}
             title="Invite user"
