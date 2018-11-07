@@ -13,14 +13,15 @@ export class MultiInput extends Component {
 
   // create tags to display in dropdown list
   createTagList = data => {
+    const randNum = Math.floor(Math.random() * 1000000 + 1);
     return data && data.length > 0 ? (
       data.map((item, index) => (
         <li key={index}>
-          <label htmlFor={index} className="fd-menu__item">
+          <label htmlFor={index + `_${randNum}`} className="fd-menu__item">
             <input
               type="checkbox"
               className="fd-checkbox"
-              id={index}
+              id={index + `_${randNum}`}
               value={item}
               onChange={this.updateSelectedTags}
               checked={this.isChecked(item)}
