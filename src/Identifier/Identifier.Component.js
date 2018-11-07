@@ -47,7 +47,7 @@ export const IdentifierComponent = () => {
             <Separator />
 
             <h2>Icon</h2>
-            <DocsTile>
+            <DocsTile centered>
                 <Identifier size="s" glyph="washing-machine" />
                 <Identifier size="m" glyph="washing-machine" />
                 <Identifier size="l" glyph="washing-machine" />
@@ -57,7 +57,7 @@ export const IdentifierComponent = () => {
             <Separator />
 
             <h2>Initials</h2>
-            <DocsTile>
+            <DocsTile centered>
                 <Identifier size="s" label="Wendy Wallace">WW</Identifier>
                 <Identifier size="m" label="Wendy Wallace">WW</Identifier>
                 <Identifier size="l" label="Wendy Wallace">WW</Identifier>
@@ -67,7 +67,7 @@ export const IdentifierComponent = () => {
             <Separator />
 
             <h2>Circle</h2>
-            <DocsTile>
+            <DocsTile centered>
                 <Identifier size="s" glyph="washing-machine" modifier="circle" />
                 <Identifier size="m" glyph="washing-machine" modifier="circle" />
                 <Identifier size="l" glyph="washing-machine" modifier="circle" />
@@ -77,7 +77,7 @@ export const IdentifierComponent = () => {
             <Separator />
 
             <h2>Transparent</h2>
-            <DocsTile>
+            <DocsTile centered>
                 <Identifier size="m" label="Wendy Wallace" modifier="transparent">WW</Identifier>
                 <Identifier size="l" glyph="washing-machine" modifier="transparent"></Identifier>
             </DocsTile>
@@ -86,7 +86,7 @@ export const IdentifierComponent = () => {
             <Separator />
 
             <h2>Accent Colors</h2>
-            <DocsTile>
+            <DocsTile centered>
                 <Identifier size="m" glyph="money-bills" color={1}></Identifier>
                 <Identifier size="m" glyph="money-bills" color={2}></Identifier>
                 <Identifier size="m" glyph="money-bills" color={3}></Identifier>

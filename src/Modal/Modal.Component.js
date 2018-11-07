@@ -44,7 +44,7 @@ export class ModalComponent extends Component {
   actions={
     <React.Fragment>
       <Button
-        type="secondary"
+        option="light"
         onclick={() => this.showHideConfirmModal('No Way')}
       >
         No Way
@@ -64,7 +64,7 @@ export class ModalComponent extends Component {
   actions={
     <React.Fragment>
       <Button
-        type="secondary"
+        option="light"
         onclick={() => this.showHideFormModal('Cancel')}
       >
         Cancel
@@ -208,6 +208,7 @@ export class ModalComponent extends Component {
               <br />
             </div>
           </Modal>
+
         </DocsTile>
         <DocsText>{this.informationModalCode}</DocsText>
         <Separator />
@@ -218,8 +219,8 @@ export class ModalComponent extends Component {
           destructive or complex action. In this case, the modal has action
           buttons at the bottom.
         </Description>
-        <DocsTile>
-          <button onClick={this.showHideConfirmModal}>
+        <DocsTile centered>
+          <button class="fd-button" onClick={this.showHideConfirmModal}>
             Show Confirmation Modal
           </button>
           <Modal
@@ -244,6 +245,7 @@ export class ModalComponent extends Component {
               Do you want to delete item <b>X</b>?
             </div>
           </Modal>
+
         </DocsTile>
         <DocsText>{this.confirmationModalCode}</DocsText>
         <Separator />

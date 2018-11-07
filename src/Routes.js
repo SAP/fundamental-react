@@ -7,6 +7,7 @@ import { BadgeComponent } from './Badge/Badge.Component';
 import { BreadcrumbComponent } from './Breadcrumb/Breadcrumb.Component';
 import { ButtonComponent } from './Button/Button.Component';
 import { CalendarComponent } from './Calendar/Calendar.Component';
+import { ContextualMenuComponent } from './ContextualMenu/ContextualMenu.Component';
 import { DatePickerComponent } from './DatePicker/DatePicker.Component';
 import { DropdownComponent } from './Dropdown/Dropdown.Component';
 import { FormsComponent } from './Forms/Forms.Component';
@@ -26,7 +27,7 @@ import { SearchInputComponent } from './SearchInput/SearchInput.Component';
 import { SideNavigationComponent } from './SideNavigation/SideNavigation.Component';
 import { TableComponent } from './Table/Table.Component';
 import { TabsComponent } from './Tabs/Tabs.Component';
-import { TagComponent } from './Tag/Tag.Component';
+import { TokenComponent } from './Token/Token.Component';
 import { TileComponent } from './Tile/Tile.Component';
 import { ToggleComponent } from './Toggle/Toggle.Component';
 import { TreeComponent } from './Tree/Tree.Component';
@@ -42,6 +43,7 @@ export default class Routes extends Component {
                 { url: '/breadcrumb', name: 'Breadcrumb', component: BreadcrumbComponent },
                 { url: '/button', name: 'Button', component: ButtonComponent },
                 { url: '/calendar', name: 'Calendar', component: CalendarComponent },
+                { url: '/contextualMenu', name: 'Contextual Menu', component: ContextualMenuComponent },
                 { url: '/datepicker', name: 'Date Picker', component: DatePickerComponent },
                 { url: '/dropdown', name: 'Dropdown', component: DropdownComponent },
                 { url: '/forms', name: 'Forms', component: FormsComponent },
@@ -61,9 +63,9 @@ export default class Routes extends Component {
                 { url: '/sideNavigation', name: 'Side Navigation', component: SideNavigationComponent },
                 { url: '/table', name: 'Table', component: TableComponent },
                 { url: '/tabs', name: 'Tabs', component: TabsComponent },
-                { url: '/tag', name: 'Tag', component: TagComponent },
                 { url: '/tile', name: 'Tile', component: TileComponent },
                 { url: '/toggle', name: 'Toggle', component: ToggleComponent },
+                { url: '/token', name: 'Token', component: TokenComponent },
                 { url: '/tree', name: 'Tree', component: TreeComponent }
             ]
         };

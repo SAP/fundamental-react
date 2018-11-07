@@ -32,7 +32,7 @@ export const CalendarComponent = () => {
             <Separator />
 
             <h2>Default Calendar</h2>
-            <DocsTile>
+            <DocsTile centered>
                 <Calendar/>
             </DocsTile>
             <DocsText>{defaultCalendarCode}</DocsText>
@@ -40,7 +40,7 @@ export const CalendarComponent = () => {
             <Separator />
             
             <h2>Calendar with disabled weekends and disabled before a date</h2>
-            <DocsTile>
+            <DocsTile centered>
                 {<Calendar disableBeforeDate={new Date(2018,7,3,0,0,0,0)} disableWeekends={true}/>}
             </DocsTile>
             <DocsText>{calendarDisabledWeekendsBeforeDate}</DocsText>
@@ -48,7 +48,7 @@ export const CalendarComponent = () => {
             <Separator />
             
             <h2>Calendar with disabled weekdays and blocked dates</h2>
-            <DocsTile>
+            <DocsTile centered>
                 {<Calendar disableWeekday={["Monday", "Tuesday"]} blockedDates={[new Date(2018, 1, 1, 0,0, 0,0), new Date(2018, 3, 3, 0,0,0,0)]}/>}
             </DocsTile>
             <DocsText>{calendarDisabledWeekdaysBlockedDates}</DocsText>
@@ -56,7 +56,7 @@ export const CalendarComponent = () => {
             <Separator />
             
             <h2>Calendar with range selection</h2>
-            <DocsTile>
+            <DocsTile centered>
             {<Calendar enableRangeSelection={true}/>}
             </DocsTile>
             <DocsText>{calendarAllOptions}</DocsText>

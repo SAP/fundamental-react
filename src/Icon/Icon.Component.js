@@ -657,7 +657,7 @@ export const IconComponent = () => {
             
             <Separator />
             
-            <DocsTile>
+            <DocsTile centered>
                 <Icon glyph="cart" size="s" />
                 <Icon glyph="cart" />
                 <Icon glyph="cart" size="m" />
