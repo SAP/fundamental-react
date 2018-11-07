@@ -154,6 +154,10 @@ export class ModalComponent extends Component {
           The modal is a container generally displayed in response to an action.
           It is used for short forms, confirmation messages or to display
           contextual information that does not require a page.
+          <br />
+          To display the Modal control, pass a boolean value to the "show"
+          property of the component. It is recommended to store this value as a
+          state property in the Parent control.
         </Description>
         <Import module="Modal" path="/fundamental-react/src/" />
 
@@ -164,7 +168,7 @@ export class ModalComponent extends Component {
           properties={[
             {
               name: 'show',
-              description: 'Bool - true: show modal, false: hide modal'
+              description: 'Bool - true: show modal, false: hide modal.'
             },
             {
               name: 'title',
