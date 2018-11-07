@@ -25,7 +25,7 @@ export class ModalComponent extends Component {
     this.txtEmailRef = React.createRef();
   }
 
-  informationModalCode = `<Modal title="Product Added" onClose={this.showHideModal}>
+  informationModalCode = `<Modal show={this.state.bShowInfoModal} title="Product Added" onClose={this.showHideModal}>
   <div>
     <b>The new product have been added to your catalog.</b>
     <br />
@@ -39,7 +39,7 @@ export class ModalComponent extends Component {
   </div>
 </Modal>`;
 
-  confirmationModalCode = `<Modal title="Delete" 
+  confirmationModalCode = `<Modal show={this.state.bShowComfirmModal} title="Delete" 
   onClose={this.showHideConfirmModal}
   actions={
     <React.Fragment>
@@ -59,7 +59,7 @@ export class ModalComponent extends Component {
   </div>
 </Modal>`;
 
-  formModalCode = `<Modal title="Invite user" 
+  formModalCode = `<Modal show={this.state.bShowFormModal} title="Invite user" 
   onClose={this.showHideFormModal}
   actions={
     <React.Fragment>
@@ -154,6 +154,10 @@ export class ModalComponent extends Component {
           The modal is a container generally displayed in response to an action.
           It is used for short forms, confirmation messages or to display
           contextual information that does not require a page.
+          <br />
+          To display the Modal control, pass a boolean value to the "show"
+          property of the component. It is recommended to store this value as a
+          state property in the Parent control.
         </Description>
         <Import module="Modal" path="/fundamental-react/src/" />
 
@@ -162,6 +166,10 @@ export class ModalComponent extends Component {
         <Properties
           type="Inputs"
           properties={[
+            {
+              name: 'show',
+              description: 'Bool - true: show modal, false: hide modal.'
+            },
             {
               name: 'title',
               description: 'String (required) - Title for modal dialog box'
@@ -181,25 +189,26 @@ export class ModalComponent extends Component {
           This is used to present information to the user but the Alert
           Component doesn’t fit all the information.
         </Description>
-        <DocsTile centered>
-          <button class="fd-button" onClick={this.showHideModal}>Show Information Modal</button>
-          {this.state.bShowInfoModal ? (
-            <Modal title="Product Added" onClose={this.showHideModal}>
-              <div>
-                <b>The new product have been added to your catalog.</b>
-                <br />
-                <br />
-                Automatic Product ID: <b>PD-3465334</b>
-                <br />
-                <br />
-                Expiration date: <b>13/03/2018</b>
-                <br />
-                <br />
-              </div>
-            </Modal>
-          ) : (
-            ''
-          )}
+        <DocsTile>
+          <button onClick={this.showHideModal}>Show Information Modal</button>
+          <Modal
+            show={this.state.bShowInfoModal}
+            title="Product Added"
+            onClose={this.showHideModal}
+          >
+            <div>
+              <b>The new product have been added to your catalog.</b>
+              <br />
+              <br />
+              Automatic Product ID: <b>PD-3465334</b>
+              <br />
+              <br />
+              Expiration date: <b>13/03/2018</b>
+              <br />
+              <br />
+            </div>
+          </Modal>
+
         </DocsTile>
         <DocsText>{this.informationModalCode}</DocsText>
         <Separator />
@@ -214,31 +223,29 @@ export class ModalComponent extends Component {
           <button class="fd-button" onClick={this.showHideConfirmModal}>
             Show Confirmation Modal
           </button>
-          {this.state.bShowComfirmModal ? (
-            <Modal
-              title="Delete"
-              onClose={this.showHideConfirmModal}
-              actions={
-                <React.Fragment>
-                  <Button
-                    option="light"
-                    onclick={() => this.showHideConfirmModal('No Way')}
-                  >
-                    No Way
-                  </Button>
-                  <Button onclick={() => this.showHideConfirmModal('Sure')}>
-                    Sure
-                  </Button>
-                </React.Fragment>
-              }
-            >
-              <div>
-                Do you want to delete item <b>X</b>?
-              </div>
-            </Modal>
-          ) : (
-            ''
-          )}
+          <Modal
+            show={this.state.bShowComfirmModal}
+            title="Delete"
+            onClose={this.showHideConfirmModal}
+            actions={
+              <React.Fragment>
+                <Button
+                  type="secondary"
+                  onclick={() => this.showHideConfirmModal('No Way')}
+                >
+                  No Way
+                </Button>
+                <Button onclick={() => this.showHideConfirmModal('Sure')}>
+                  Sure
+                </Button>
+              </React.Fragment>
+            }
+          >
+            <div>
+              Do you want to delete item <b>X</b>?
+            </div>
+          </Modal>
+
         </DocsTile>
         <DocsText>{this.confirmationModalCode}</DocsText>
         <Separator />
@@ -248,42 +255,39 @@ export class ModalComponent extends Component {
           This is used for short forms in order to collect information from the
           user.
         </Description>
-        <DocsTile centered>
-          <button class="fd-button" onClick={this.showHideFormModal}>Show Form Modal</button>
-          {this.state.bShowFormModal ? (
-            <Modal
-              title="Invite user"
-              onClose={this.showHideFormModal}
-              actions={
-                <React.Fragment>
-                  <Button
-                    option="light"
-                    onclick={() => this.showHideFormModal('Cancel')}
-                  >
-                    Cancel
-                  </Button>
-                  <Button onclick={() => this.showHideFormModal('Invite')}>
-                    Invite
-                  </Button>
-                </React.Fragment>
-              }
-            >
-              <div className="fd-form__group">
-                <div className="fd-form__item">
-                  <label className="fd-form__label is-required">Email</label>
-                  <input
-                    className="fd-form__control"
-                    type="text"
-                    value={this.state.emailAddress}
-                    onChange={this.updateEmailAddress}
-                    ref={this.txtEmailRef}
-                  />
-                </div>
+        <DocsTile>
+          <button onClick={this.showHideFormModal}>Show Form Modal</button>
+          <Modal
+            show={this.state.bShowFormModal}
+            title="Invite user"
+            onClose={this.showHideFormModal}
+            actions={
+              <React.Fragment>
+                <Button
+                  type="secondary"
+                  onclick={() => this.showHideFormModal('Cancel')}
+                >
+                  Cancel
+                </Button>
+                <Button onclick={() => this.showHideFormModal('Invite')}>
+                  Invite
+                </Button>
+              </React.Fragment>
+            }
+          >
+            <div className="fd-form__group">
+              <div className="fd-form__item">
+                <label className="fd-form__label is-required">Email</label>
+                <input
+                  className="fd-form__control"
+                  type="text"
+                  value={this.state.emailAddress}
+                  onChange={this.updateEmailAddress}
+                  ref={this.txtEmailRef}
+                />
               </div>
-            </Modal>
-          ) : (
-            ''
-          )}
+            </div>
+          </Modal>
         </DocsTile>
         <DocsText>{this.formModalCode}</DocsText>
         <Separator />
