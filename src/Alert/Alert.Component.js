@@ -17,7 +17,7 @@ export const AlertComponent = () => {
     تم. بسبب أمام وشعار ولم بـ. أحكم والكساد ما فقد. كل وعُرفت الإنزال مدن. انه
 </Alert>`;
 
-    const errorAlertCode = ` <Alert type="error" dismissable link="#" linkText="link">
+    const errorAlertCode = `<Alert type="error" dismissable link="#" linkText="link">
     Error message with a
 </Alert>
 
