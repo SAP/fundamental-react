@@ -1,10 +1,10 @@
 self.__precacheManifest = [
   {
-    "revision": "a055c920fa3948666fc4412d72aa94f3",
-    "url": "/fundamental-react/static/media/72-Regular.a055c920.ttf"
+    "revision": "6030ef457e70912083ef3154de684dc7",
+    "url": "/fundamental-react/static/media/72-Italic.6030ef45.woff2"
   },
   {
-    "revision": "5bc7e81e44d71c2c616c",
+    "revision": "d282bb45e2c117e40649",
     "url": "/fundamental-react/static/css/main.1269fc7b.chunk.css"
   },
   {
@@ -16,12 +16,12 @@ self.__precacheManifest = [
     "url": "/fundamental-react/static/js/runtime~main.11730625.js"
   },
   {
-    "revision": "15d69c7c6c46af899033b881f0786328",
-    "url": "/fundamental-react/static/media/72-Condensed.15d69c7c.woff2"
-  },
-  {
     "revision": "c1ba0da78d7f6586cf5b00d5ef5eb806",
     "url": "/fundamental-react/static/media/SAP-icons.c1ba0da7.woff"
+  },
+  {
+    "revision": "15d69c7c6c46af899033b881f0786328",
+    "url": "/fundamental-react/static/media/72-Condensed.15d69c7c.woff2"
   },
   {
     "revision": "c5f39800983eb3eb97ed2ba72a5be4b7",
@@ -52,24 +52,24 @@ self.__precacheManifest = [
     "url": "/fundamental-react/static/media/72-Regular.48cb3e07.woff"
   },
   {
-    "revision": "5bc7e81e44d71c2c616c",
-    "url": "/fundamental-react/static/js/main.5bc7e81e.chunk.js"
+    "revision": "d282bb45e2c117e40649",
+    "url": "/fundamental-react/static/js/main.d282bb45.chunk.js"
   },
   {
-    "revision": "6030ef457e70912083ef3154de684dc7",
-    "url": "/fundamental-react/static/media/72-Italic.6030ef45.woff2"
+    "revision": "a055c920fa3948666fc4412d72aa94f3",
+    "url": "/fundamental-react/static/media/72-Regular.a055c920.ttf"
   },
   {
     "revision": "9b4487708ef140ace9dbc396a39bbf44",
     "url": "/fundamental-react/static/media/72-Italic.9b448770.woff"
   },
   {
-    "revision": "7f6c7cb94c0d8088b023553d46a64e07",
-    "url": "/fundamental-react/static/media/72-Light.7f6c7cb9.woff2"
-  },
-  {
     "revision": "c58be3ff685e0c820c8438bbf1579351",
     "url": "/fundamental-react/static/media/72-Italic.c58be3ff.ttf"
+  },
+  {
+    "revision": "7f6c7cb94c0d8088b023553d46a64e07",
+    "url": "/fundamental-react/static/media/72-Light.7f6c7cb9.woff2"
   },
   {
     "revision": "ab363ac31002ac1293658c71a84eef29",
@@ -104,7 +104,7 @@ self.__precacheManifest = [
     "url": "/fundamental-react/static/media/72-BoldItalic.3ab665b6.ttf"
   },
   {
-    "revision": "aaaeb56f177f351d20c6eedf59d845cd",
+    "revision": "97ec8959ae875e036fd84d7431b7a54f",
     "url": "/fundamental-react/index.html"
   }
 ];
