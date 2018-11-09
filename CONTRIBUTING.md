@@ -28,9 +28,9 @@ GitHub offers labels to categorize issues. You can use the following labels:
 
 Labels for issue categories:
 
--   bug: Issues in the code.
--   documentation: Issues with the documentation.
--   enhancement: Enhancement requests.
+-   bug: Something isn't working / Issues in the code.
+-   documentation: Issues with the documentation (repo and website documentation).
+-   enhancement: New feature or enhancement requests.
 
 Status of open issues:
 
