@@ -1,5 +1,5 @@
-import React from "react";
-import { Time } from "./Time";
+import React from 'react';
+import { Time } from './Time';
 // import { DocsTile, DocsText, Separator, Header, Description, Import,
 // Properties } from '../';
 import {
@@ -10,7 +10,7 @@ import {
   Description,
   Import,
   Properties
-} from "../";
+} from '../';
 
 export const TimeComponent = () => {
   const state = {
@@ -21,11 +21,11 @@ export const TimeComponent = () => {
     alert(
       `close ${name}! You can work with the event itself using the callback.`
     );
-  const tagsNames = ["Bibendum", "Lorem", "Dolor", "Filter"];
+  const tagsNames = ['Bibendum', 'Lorem', 'Dolor', 'Filter'];
   const time = {
-    hour: "02",
-    minute: "23",
-    second: "23"
+    hour: '02',
+    minute: '23',
+    second: '23'
   };
   const time2 = {};
   const defaultTimeCode = `<Time />`;
@@ -43,41 +43,41 @@ export const TimeComponent = () => {
         be rare to see this component used outside of it being composed in the
         time-picker component.
       </Description>
-      <Import module="Time" path="/fundamental-react/src/" />
-      <Separator />{" "}
+      <Import module='Time' path='/fundamental-react/src/' />
+      <Separator />{' '}
       <Properties
-        type="Inputs"
+        type='Inputs'
         properties={[
           {
-            name: "id",
-            description: "String - Id for time component"
+            name: 'id',
+            description: 'String - Id for time component'
           },
           {
-            name: "showHour",
-            description: "Bool - Enables the input for hours. Default true "
+            name: 'showHour',
+            description: 'Bool - Enables the input for hours. Default true '
           },
           {
-            name: "showMinute",
-            description: "Bool - Enables the input for minutes. Default true "
+            name: 'showMinute',
+            description: 'Bool - Enables the input for minutes. Default true '
           },
           {
-            name: "showSecond:",
-            description: "Bool - Enables the input seconds. Default true"
+            name: 'showSecond:',
+            description: 'Bool - Enables the input seconds. Default true'
           },
           {
-            name: "disabled",
+            name: 'disabled',
             description:
-              "Bool - Disables the time component, the inputs will be readonly"
+              'Bool - Disables the time component, the inputs will be readonly'
           },
           {
-            name: "format12Hours",
+            name: 'format12Hours',
             description:
-              "Bool - When set to true, uses the 12 hour clock (hours ranging from 01 to 12) and it displays a period control. Default is false"
+              'Bool - When set to true, uses the 12 hour clock (hours ranging from 01 to 12) and it displays a period control. Default is false'
           },
           {
-            name: "time",
+            name: 'time',
             description:
-              "Object - The time component values , contains four properties: hour with values from 01 to 12 when format12Hours is true or 00 to 23 when format12Hours is false, minute with values from 00 to 59, second with values from 00 to 59, meridiem with values 0(am), 1(pm)"
+              'Object - The time component values , contains four properties: hour with values from 01 to 12 when format12Hours is true or 00 to 23 when format12Hours is false, minute with values from 00 to 59, second with values from 00 to 59, meridiem with values 0(am), 1(pm)'
           }
         ]}
       />
@@ -92,7 +92,7 @@ export const TimeComponent = () => {
       {/* 12 hours Clocl */}
       <h2>12-Hour Clock</h2>
       <Description>
-        You can use a Meridian 12-hour clock by setting format12Hours to true{" "}
+        You can use a Meridian 12-hour clock by setting format12Hours to true{' '}
       </Description>
       <DocsTile>
         <Time format12Hours={true} />
