@@ -21,6 +21,7 @@ import { MegaMenuComponent } from './MegaMenu/MegaMenu.Component';
 import { MenuComponent } from './Menu/Menu.Component';
 import { ModalComponent } from './Modal/Modal.Component';
 import { MultiInputComponent } from './MultiInput/MultiInput.Component';
+import { NavbarComponent } from './Navbar/Navbar.Component';
 import { PaginationComponent } from './Pagination/Pagination.Component';
 import { PopoverComponent } from './Popover/Popover.Component';
 import { SearchInputComponent } from './SearchInput/SearchInput.Component';
@@ -34,6 +35,7 @@ import { TreeComponent } from './Tree/Tree.Component';
 import { TimeComponent } from './Time/Time.Component';
 
 export default class Routes extends Component {
+
   constructor(props) {
     super(props);
     this.state = {
@@ -98,6 +100,10 @@ export default class Routes extends Component {
           name: 'Multi Input',
           component: MultiInputComponent
         },
+        { 
+          url: '/navbar', 
+          name: 'Navigation Bar', 
+          component: NavbarComponent },
         {
           url: '/pagination',
           name: 'Pagination',
