@@ -40,6 +40,7 @@ import { Menu, MenuList, MenuItem, MenuGroup } from '../src/Menu/Menu';
 import { Modal } from '../src/Modal/Modal';
 import { MultiInput } from '../src/MultiInput/MultiInput';
 import { Pagination } from '../src/Pagination/Pagination';
+import { Panel, PanelGrid, PanelBody, PanelHeader, PanelHead, PanelActions, PanelFilters, PanelContent, PanelFooter } from '../src/Panel/Panel';
 import { Popover } from '../src/Popover/Popover';
 import { SearchInput } from '../src/SearchInput/SearchInput';
 import { SideNav, SideNavList, SideNavGroup } from '../src/SideNavigation/SideNavigation';
@@ -122,6 +123,15 @@ export {
     MultiInput,
     Popover,
     Pagination,
+    Panel, 
+    PanelGrid, 
+    PanelBody, 
+    PanelHeader, 
+    PanelHead, 
+    PanelActions, 
+    PanelFilters, 
+    PanelContent, 
+    PanelFooter,
     SearchInput,
     SideNav,
     SideNavList,
