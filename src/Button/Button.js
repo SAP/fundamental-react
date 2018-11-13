@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 export const Button = props => {
-    const { option, type, size, glyph, dropdown, selected, disabled, typeAttr, onclick, children } = props;
+    const { option, type, size, glyph, dropdown, navbar, selected, disabled, typeAttr, onclick, children } = props;
     return (
         <button
-            className={`${option ? 'fd-button--' + option : ' fd-button'}${type ? ' fd-button--' + type : ''}${dropdown ? ' fd-dropdown__control' : ''}${size ? ' fd-button--' + size : ''}${glyph ? ' sap-icon--' + glyph : ''}${selected ? ' is-selected' : ''}${disabled ? ' is-disabled' : ''}`}
+            className={`${option ? 'fd-button--' + option : ' fd-button'}${type ? ' fd-button--' + type : ''}${dropdown ? ' fd-dropdown__control' : ''}${size ? ' fd-button--' + size : ''}${glyph ? ' sap-icon--' + glyph : ''}${navbar ? ' fd-global-nav__btn' : ''}${selected ? ' is-selected' : ''}${disabled ? ' is-disabled' : ''}`}
             selected={selected ? selected : false}
             disabled={disabled ? disabled : false}
             type={typeAttr}
@@ -21,6 +21,7 @@ Button.propTypes = {
     type: PropTypes.string,
     size: PropTypes.string,
     glyph: PropTypes.string,
+    navbar: PropTypes.bool,
     dropdown: PropTypes.bool,
     selected: PropTypes.bool,
     disabled: PropTypes.bool,
