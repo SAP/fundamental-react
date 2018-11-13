@@ -14,27 +14,21 @@ export class MultiInput extends Component {
   // create tags to display in dropdown list
   createTagList = data => {
     const randNum = Math.floor(Math.random() * 1000000 + 1);
-    return data && data.length > 0 ? (
-      data.map((item, index) => (
-        <li key={index}>
-          <label htmlFor={index + `_${randNum}`} className="fd-menu__item">
-            <input
-              type="checkbox"
-              className="fd-checkbox"
-              id={index + `_${randNum}`}
-              value={item}
-              onChange={this.updateSelectedTags}
-              checked={this.isChecked(item)}
-            />
-            {item}
-          </label>
-        </li>
-      ))
-    ) : (
-      <li>
-        <label className="fd-menu__item">No results found</label>
+    return data.map((item, index) => (
+      <li key={index}>
+        <label htmlFor={index + `_${randNum}`} className="fd-menu__item">
+          <input
+            type="checkbox"
+            className="fd-checkbox"
+            id={index + `_${randNum}`}
+            value={item}
+            onChange={this.updateSelectedTags}
+            checked={this.isChecked(item)}
+          />
+          {item}
+        </label>
       </li>
-    );
+    ));
   };
 
   // create tag elements to display below input box
@@ -53,31 +47,29 @@ export class MultiInput extends Component {
 
   // add/remove tag to tag collection
   updateSelectedTags = event => {
-    const tag = event.target.value || event.target.innerText;
+    const tag = event.target.value;
 
-    if (tag) {
-      if (this.state.tags.indexOf(tag) === -1) {
-        this.setState(
-          prevState => {
-            const tags = prevState.tags;
-            tags.push(tag);
+    if (this.state.tags.indexOf(tag) === -1) {
+      this.setState(
+        prevState => {
+          const tags = prevState.tags;
+          tags.push(tag);
 
-            return { tags: tags };
-          },
-          () => this.props.onTagsUpdate(this.state.tags)
-        );
-      } else {
-        this.setState(
-          prevState => {
-            let tags = prevState.tags.filter(item => {
-              return item.toLowerCase() !== tag.toLowerCase();
-            });
+          return { tags: tags };
+        },
+        () => this.props.onTagsUpdate(this.state.tags)
+      );
+    } else {
+      this.setState(
+        prevState => {
+          let tags = prevState.tags.filter(item => {
+            return item.toLowerCase() !== tag.toLowerCase();
+          });
 
-            return { tags: tags };
-          },
-          () => this.props.onTagsUpdate(this.state.tags)
-        );
-      }
+          return { tags: tags };
+        },
+        () => this.props.onTagsUpdate(this.state.tags)
+      );
     }
   };
 
@@ -92,11 +84,11 @@ export class MultiInput extends Component {
 
   // remove/close tag
   removeTag = event => {
-    const tag = event.target.value || event.target.innerText;
+    const tag = event.target.innerText;
 
     this.setState(
       prevState => {
-        let tags = prevState.tags.filter(item => {
+        const tags = prevState.tags.filter(item => {
           return item.toLowerCase() !== tag.toLowerCase();
         });
 
@@ -145,7 +137,7 @@ export class MultiInput extends Component {
                             fd-input-group__addon--button"
                   >
                     <button
-                      className=" fd-button--light sap-icon--navigation-down-arrow"
+                      className="fd-button--light sap-icon--navigation-down-arrow"
                       onClick={this.showHideTagList}
                     />
                   </span>
@@ -162,8 +154,7 @@ export class MultiInput extends Component {
             </div>
           </div>
         </div>
-
-        {this.state.tags ? (
+        {this.state.tags.length > 0 ? (
           <div className="fd-multi-input-tags">{this.createTags()}</div>
         ) : (
           ''
