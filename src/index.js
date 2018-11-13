@@ -38,7 +38,7 @@ import { ListGroup, ListGroupItem, ListGroupItemActions, ListGroupItemCheckbox }
 import { MegaMenu, MegaMenuList, MegaMenuGroup } from '../src/MegaMenu/MegaMenu';
 import { Menu, MenuList, MenuItem, MenuGroup } from '../src/Menu/Menu';
 import { Modal } from '../src/Modal/Modal';
-import { Navbar } from '../src/Navbar/Navbar';
+import { Navbar, NavbarGroup, NavbarActions, NavbarElement } from '../src/Navbar/Navbar';
 import { MultiInput } from '../src/MultiInput/MultiInput';
 import { Pagination } from '../src/Pagination/Pagination';
 import { Popover } from '../src/Popover/Popover';
@@ -122,6 +122,9 @@ export {
     Modal,
     MultiInput,
     Navbar,
+    NavbarGroup, 
+    NavbarActions, 
+    NavbarElement,
     Popover,
     Pagination,
     SearchInput,
