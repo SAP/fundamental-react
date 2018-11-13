@@ -52,7 +52,7 @@ export class Pagination extends Component {
   };
 
   // create pagination links
-  createPaginationLinks = (numberOfPages = 1, initialPage = 1) => {
+  createPaginationLinks = numberOfPages => {
     // create an array with number of pages and fill it with links
     const aPages = Array(numberOfPages)
       .fill()
@@ -74,13 +74,15 @@ export class Pagination extends Component {
     const {
       itemsTotal,
       itemsPerPage = 10,
-      initialPage,
       displayTotal = true,
       totalText
     } = this.props;
 
     // calculate number of pages based on item total and items per page
-    this.numberOfPages = Math.ceil(itemsTotal / itemsPerPage);
+    // check to make sure itemsPerPage != 0
+    this.numberOfPages = Math.ceil(
+      itemsTotal / (itemsPerPage ? itemsPerPage : 10)
+    );
 
     return (
       <div className="fd-pagination">
@@ -100,7 +102,7 @@ export class Pagination extends Component {
             aria-disabled={this.state.selectedPage === 1}
             onClick={this.navigateBack}
           />
-          {this.createPaginationLinks(this.numberOfPages, initialPage)}
+          {this.createPaginationLinks(this.numberOfPages)}
           <a
             href="#"
             className="fd-pagination__link fd-pagination__link--next"

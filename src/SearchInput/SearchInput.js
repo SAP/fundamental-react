@@ -128,7 +128,7 @@ export class SearchInput extends Component {
                 {this.createSearchInput(onAutoComplete)}
                 <span className="fd-input-group__addon fd-input-group__addon--after fd-input-group__addon--button">
                   <button
-                    className=" fd-button--light sap-icon--search"
+                    className="fd-button--light sap-icon--search"
                     onClick={() => onSearch(this.state.searchTerm)}
                   />
                 </span>

@@ -1,7 +1,8 @@
-
 # Fundamental-react
+
 React.JS components for [SAP Fiori Fundamentals](https://github.com/SAP/fundamental)
-- [Playground](https://sap.github.io/fundamental-react/) 
+
+- [Playground](https://sap.github.io/fundamental-react/)
 - [npm package fundamental-react](https://www.npmjs.com/package/fundamental-react)
 
 ## Description
@@ -30,10 +31,13 @@ Lint errors are shown in the console.
 
 Launches the test runner in the interactive watch mode.
 
+#### `npm test -- --coverage`
+
+Launches the test runner and display code coverage report.
+
 #### `npm run build`
 
 Builds the app for production to the `build` folder.
-
 
 ## Download and Installation
 
@@ -41,13 +45,11 @@ Builds the app for production to the `build` folder.
 
 `npm install --save fiori-fundamentals`
 
-
 #### 2. Include the Fiori Fundamentals CSS in your React application. In your App.css or App.scss file include the following lines:
 
 `@import '../node_modules/fiori-fundamentals/scss/icons/'`
 `@import '../node_modules/fiori-fundamentals/dist/fonts/'`
 `@import '../node_modules/fiori-fundamentals/scss/all.scss'`
-
 
 ## Known Issues
 
@@ -59,7 +61,7 @@ If you encounter an issue, you can [create a ticket](https://github.com/SAP/fund
 
 ## Contributing
 
-If you want to contribute, please check the [CONTRIBUTING.md](./CONTRIBUTING.md) documentation for contribution guidelines. 
+If you want to contribute, please check the [CONTRIBUTING.md](./CONTRIBUTING.md) documentation for contribution guidelines.
 
 ## License
 
