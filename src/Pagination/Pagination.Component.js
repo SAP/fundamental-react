@@ -75,8 +75,7 @@ export const PaginationComponent = () => {
       <DocsTile centered>
         <Pagination itemsTotal={101} onClick={handleClick} />
       </DocsTile>
-      <DocsText
-      >{`<Pagination itemsTotal={101} onClick={handleClick}/>`}</DocsText>
+      <DocsText>{`<Pagination itemsTotal={101} onClick={handleClick}/>`}</DocsText>
       <Separator />
 
       <h2>Last Page</h2>
@@ -86,22 +85,15 @@ export const PaginationComponent = () => {
       <DocsTile centered>
         <Pagination itemsTotal={101} initialPage={11} onClick={handleClick} />
       </DocsTile>
-      <DocsText
-      >{`<Pagination itemsTotal={101} initalPage={11} onClick={handleClick}/>`}</DocsText>
+      <DocsText>{`<Pagination itemsTotal={101} initalPage={11} onClick={handleClick}/>`}</DocsText>
       <Separator />
 
       <h2>Items per Page</h2>
       <Description>Set how many items per page.</Description>
       <DocsTile centered>
-        <Pagination
-          itemsTotal={101}
-          itemsPerPage={25}
-          displayTotal={false}
-          onClick={handleClick}
-        />
+        <Pagination itemsTotal={101} itemsPerPage={25} onClick={handleClick} />
       </DocsTile>
-      <DocsText
-      >{`<Pagination itemsTotal={101} itemsPerPage={25} displayTotal={false} onClick={handleClick}/>`}</DocsText>
+      <DocsText>{`<Pagination itemsTotal={101} itemsPerPage={25} onClick={handleClick}/>`}</DocsText>
 
       <Separator />
 
@@ -110,8 +102,7 @@ export const PaginationComponent = () => {
       <DocsTile centered>
         <Pagination itemsTotal={101} initialPage={6} onClick={handleClick} />
       </DocsTile>
-      <DocsText
-      >{`<Pagination itemsTotal={101} initalPage={6} onClick={handleClick}/>`}</DocsText>
+      <DocsText>{`<Pagination itemsTotal={101} initalPage={6} onClick={handleClick}/>`}</DocsText>
       <Separator />
 
       <h2>Hide Total</h2>
@@ -125,8 +116,7 @@ export const PaginationComponent = () => {
           onClick={handleClick}
         />
       </DocsTile>
-      <DocsText
-      >{`<Pagination itemsTotal={101} displayTotal={false} onClick={handleClick}/>`}</DocsText>
+      <DocsText>{`<Pagination itemsTotal={101} displayTotal={false} onClick={handleClick}/>`}</DocsText>
       <Separator />
 
       <h2>Total Text</h2>
@@ -138,7 +128,10 @@ export const PaginationComponent = () => {
           totalText="Dalmations"
         />
       </DocsTile>
-      <DocsText centered> {`<Pagination itemsTotal={101} totalText="Dalmations" onClick={handleClick}/>`}</DocsText>
+      <DocsText centered>
+        {' '}
+        {`<Pagination itemsTotal={101} totalText="Dalmations" onClick={handleClick}/>`}
+      </DocsText>
       <Separator />
     </div>
   );
