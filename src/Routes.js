@@ -7,6 +7,7 @@ import { BadgeComponent } from './Badge/Badge.Component';
 import { BreadcrumbComponent } from './Breadcrumb/Breadcrumb.Component';
 import { ButtonComponent } from './Button/Button.Component';
 import { CalendarComponent } from './Calendar/Calendar.Component';
+import { ComboboxInputComponent } from './ComboboxInput/ComboboxInput.Component';
 import { ContextualMenuComponent } from './ContextualMenu/ContextualMenu.Component';
 import { DatePickerComponent } from './DatePicker/DatePicker.Component';
 import { DropdownComponent } from './Dropdown/Dropdown.Component';
@@ -43,6 +44,7 @@ export default class Routes extends Component {
                 { url: '/breadcrumb', name: 'Breadcrumb', component: BreadcrumbComponent },
                 { url: '/button', name: 'Button', component: ButtonComponent },
                 { url: '/calendar', name: 'Calendar', component: CalendarComponent },
+                { url: '/comboboxInput', name: 'Combobox Input', component: ComboboxInputComponent },
                 { url: '/contextualMenu', name: 'Contextual Menu', component: ContextualMenuComponent },
                 { url: '/datepicker', name: 'Date Picker', component: DatePickerComponent },
                 { url: '/dropdown', name: 'Dropdown', component: DropdownComponent },
