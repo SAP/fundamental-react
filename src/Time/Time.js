@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import PropTypes from "prop-types";
-const INVALID = "is-invalid";
-const CLOCK = ["am", "pm"];
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+const INVALID = 'is-invalid';
+const CLOCK = ['am', 'pm'];
 class TimeItem extends Component {
   static propTypes = {
     value: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
@@ -9,9 +9,9 @@ class TimeItem extends Component {
     arialabel: PropTypes.string
   };
   static defaultProps = {
-    id: "",
+    id: '',
     value: null,
-    arialabel: ""
+    arialabel: ''
   };
   /**
    * Constructor.
@@ -20,24 +20,24 @@ class TimeItem extends Component {
   constructor(props) {
     super(props);
     var aria = {};
-    if (this.props.name == "meridiem") {
+    if (this.props.name === 'meridiem') {
       aria = {
-        buttonUp: "Increase period",
-        buttonDown: "Decrease period"
+        buttonUp: 'Increase period',
+        buttonDown: 'Decrease period'
       };
     } else {
       aria = {
-        buttonUp: "Increase " + this.props.name + "s",
-        buttonDown: "Decrease " + this.props.name + "s"
+        buttonUp: 'Increase ' + this.props.name + 's',
+        buttonDown: 'Decrease ' + this.props.name + 's'
       };
     }
     this.state = {
       value: this.props.value,
-      style: "fd-form__control ",
+      style: 'fd-form__control ',
       arialabel: aria
     };
     if (this.props.disabled) {
-      this.state.style = this.state.style + "is-disabled";
+      this.state.style = this.state.style + 'is-disabled';
     }
   }
 
@@ -48,7 +48,7 @@ class TimeItem extends Component {
     const { value, max, name, time, format12Hours } = this.props;
     var aux;
     //find the min value
-    if (format12Hours && name === "hour") {
+    if (format12Hours && name === 'hour') {
       //for 12h clock we are skipping to display 00 value
       aux = 1;
     } else {
@@ -56,16 +56,16 @@ class TimeItem extends Component {
       aux = 0;
     }
     var maxAux = this.setMax(name, max);
-    if ((name !== "meridiem") & !isNaN(value) && parseInt(value) < maxAux) {
+    if ((name !== 'meridiem') & !isNaN(value) && parseInt(value) < maxAux) {
       aux = parseInt(value) + 1;
-    } else if (value == maxAux) {
+    } else if (value === maxAux) {
       this.increaseTimeObj(name, time, format12Hours);
-    } else if (name === "meridiem") {
+    } else if (name === 'meridiem') {
       aux = CLOCK.indexOf(value) ? 0 : 1;
     }
-    if (format12Hours && name === "hour" && aux === 12) {
-      let newMeridiem = time["meridiem"] ? 0 : 1;
-      this.props.updateTime(newMeridiem, "meridiem");
+    if (format12Hours && name === 'hour' && aux === 12) {
+      let newMeridiem = time['meridiem'] ? 0 : 1;
+      this.props.updateTime(newMeridiem, 'meridiem');
     }
     this.props.updateTime(aux, name);
   };
@@ -78,23 +78,23 @@ class TimeItem extends Component {
    *@param {bool} format12Hours - 12 hours time format
    */
   increaseTimeObj = (name, time, format12Hours) => {
-    if (name === "second" && parseInt(time["minute"]) < 60) {
-      let newMinute = parseInt(time["minute"]) + 1;
+    if (name === 'second' && parseInt(time['minute']) < 60) {
+      let newMinute = parseInt(time['minute']) + 1;
       let newHour;
       if (newMinute === 60) {
         newMinute = 0;
-        newHour = parseInt(time["hour"]) + 1;
+        newHour = parseInt(time['hour']) + 1;
         this.increaseHour(format12Hours, newHour, time);
       }
-      this.props.updateTime(newMinute, "minute");
+      this.props.updateTime(newMinute, 'minute');
     }
-    if (name === "minute") {
-      let newHour = parseInt(time["hour"]) + 1;
+    if (name === 'minute') {
+      let newHour = parseInt(time['hour']) + 1;
       this.increaseHour(format12Hours, newHour, time);
     }
-    if (name === "hour" && !format12Hours) {
+    if (name === 'hour' && !format12Hours) {
       let newHour = 0;
-      this.props.updateTime(newHour, "hour");
+      this.props.updateTime(newHour, 'hour');
     }
   };
   /**
@@ -106,21 +106,21 @@ class TimeItem extends Component {
   increaseHour = (format12Hours, newHour, time) => {
     if (format12Hours && newHour < 12) {
       newHour = 1;
-      this.props.updateTime(newHour, "hour");
+      this.props.updateTime(newHour, 'hour');
     } else if (format12Hours && newHour === 12) {
-      this.props.updateTime(newHour, "hour");
-      let newMeridiem = time["meridiem"] ? 0 : 1;
-      this.props.updateTime(newMeridiem, "meridiem");
+      this.props.updateTime(newHour, 'hour');
+      let newMeridiem = time['meridiem'] ? 0 : 1;
+      this.props.updateTime(newMeridiem, 'meridiem');
     } else if (
       (format12Hours && newHour <= 12) ||
       (!format12Hours && newHour < 24)
     ) {
-      this.props.updateTime(newHour, "hour");
+      this.props.updateTime(newHour, 'hour');
     }
     //if hour value to max value (24) then reset to 0 because we are not displaying value 24
     if (!format12Hours && newHour >= 24) {
       newHour = 0;
-      this.props.updateTime(newHour, "hour");
+      this.props.updateTime(newHour, 'hour');
     }
   };
   /**
@@ -130,35 +130,35 @@ class TimeItem extends Component {
    *@param {bool} format12Hours - 12 hours time format
    */
   decreaseTimeObj = (name, time) => {
-    if (name === "second") {
-      let newMinute = parseInt(time["minute"]) - 1;
-      if (parseInt(time["minute"]) === 0) {
+    if (name === 'second') {
+      let newMinute = parseInt(time['minute']) - 1;
+      if (parseInt(time['minute']) === 0) {
         newMinute = 59;
       }
-      this.props.updateTime(newMinute, "minute");
+      this.props.updateTime(newMinute, 'minute');
       if (newMinute === 59) {
-        let newHour = parseInt(time["hour"]) - 1;
+        let newHour = parseInt(time['hour']) - 1;
         if (newHour === 0 && this.props.format12Hours) {
           newHour = 12;
         } else if (newHour < 0 && !this.props.format12Hours) {
           newHour = 23;
-        } else if (newHour == 11 && this.props.format12Hours) {
-          let newMeridiem = time["meridiem"] ? 0 : 1;
-          this.props.updateTime(newMeridiem, "meridiem");
+        } else if (newHour === 11 && this.props.format12Hours) {
+          let newMeridiem = time['meridiem'] ? 0 : 1;
+          this.props.updateTime(newMeridiem, 'meridiem');
         }
-        this.props.updateTime(newHour, "hour");
+        this.props.updateTime(newHour, 'hour');
       }
     }
-    if (name === "minute" && parseInt(time["hour"]) > 0) {
-      let newHour = parseInt(time["hour"]) - 1;
+    if (name === 'minute' && parseInt(time['hour']) > 0) {
+      let newHour = parseInt(time['hour']) - 1;
       if (newHour === 0 && this.props.format12Hours) {
         newHour = 12;
         //change meridiem
       } else if (newHour === 11 && this.props.format12Hours) {
-        let newMeridiem = time["meridiem"] ? 0 : 1;
-        this.props.updateTime(newMeridiem, "meridiem");
+        let newMeridiem = time['meridiem'] ? 0 : 1;
+        this.props.updateTime(newMeridiem, 'meridiem');
       }
-      this.props.updateTime(newHour, "hour");
+      this.props.updateTime(newHour, 'hour');
     }
   };
   /****
@@ -170,23 +170,23 @@ class TimeItem extends Component {
 
     var aux = this.setMax(name, max);
     if (
-      name !== "meridiem" &&
+      name !== 'meridiem' &&
       !isNaN(value) &&
       parseInt(value) > 0 &&
       value <= parseInt(max)
     ) {
       aux = parseInt(value) - 1;
-      if (aux === 0 && name === "hour" && format12Hours) {
+      if (aux === 0 && name === 'hour' && format12Hours) {
         aux = max;
       }
-    } else if (name == "meridiem") {
+    } else if (name === 'meridiem') {
       aux = CLOCK.indexOf(value) ? 0 : 1;
-    } else if (value == 0) {
+    } else if (value === 0) {
       this.decreaseTimeObj(name, time);
     }
-    if (name === "hour" && aux === 11 && format12Hours) {
-      let newMeridiem = time["meridiem"] ? 0 : 1;
-      this.props.updateTime(newMeridiem, "meridiem");
+    if (name === 'hour' && aux === 11 && format12Hours) {
+      let newMeridiem = time['meridiem'] ? 0 : 1;
+      this.props.updateTime(newMeridiem, 'meridiem');
     }
     this.props.updateTime(aux, name);
   };
@@ -197,7 +197,7 @@ class TimeItem extends Component {
    */
   setMax = (name, max) => {
     var maxAux;
-    if (name == "hour" && this.props.format12Hours) {
+    if (name === 'hour' && this.props.format12Hours) {
       maxAux = parseInt(max);
     } else {
       maxAux = parseInt(max) - 1;
@@ -212,8 +212,8 @@ class TimeItem extends Component {
     const { style } = this.state;
     const { name, max } = this.props;
     let aux;
-    if (name !== "meridiem") {
-      aux = event.target.value.replace(/\D/, "");
+    if (name !== 'meridiem') {
+      aux = event.target.value.replace(/\D/, '');
       this.updateStyle(style, aux, max);
       this.setState({ value: aux });
     } else {
@@ -228,7 +228,7 @@ class TimeItem extends Component {
    */
   updateStyle = (style, aux, max) => {
     if (parseInt(aux) > max) {
-      if (style.indexOf(INVALID) == -1) {
+      if (style.indexOf(INVALID) === -1) {
         this.setState({
           style: style.concat(INVALID)
         });
@@ -236,33 +236,33 @@ class TimeItem extends Component {
     } else {
       if (style.indexOf(INVALID) > -1) {
         this.setState({
-          style: style.replace(INVALID, "")
+          style: style.replace(INVALID, '')
         });
       }
     }
   };
   render() {
-    const { value, style, arialabel } = this.state;
-    const { type, placeholder, name, disabled, spinners } = this.props;
+    const { style, arialabel } = this.state;
+    const { type, placeholder, disabled, spinners } = this.props;
     return (
-      <div className="fd-time__item">
+      <div className='fd-time__item'>
         {spinners ? (
-          <div className="fd-time__control">
+          <div className='fd-time__control'>
             <button
-              className=" fd-button--light fd-button--xs sap-icon--navigation-up-arrow "
+              className=' fd-button--light fd-button--xs sap-icon--navigation-up-arrow '
               aria-label={arialabel.buttonUp}
               disabled={disabled}
               onClick={this._onUp}
             />
           </div>
         ) : (
-          ""
+          ''
         )}
-        <div className="fd-time__input">
+        <div className='fd-time__input'>
           <input
             className={style}
-            type="text"
-            maxLength="2"
+            type='text'
+            maxLength='2'
             placeholder={placeholder}
             onChange={this.onChange}
             value={this.props.value}
@@ -272,16 +272,16 @@ class TimeItem extends Component {
           />
         </div>
         {spinners ? (
-          <div className="fd-time__control">
+          <div className='fd-time__control'>
             <button
-              className=" fd-button--light fd-button--xs sap-icon--navigation-down-arrow"
+              className=' fd-button--light fd-button--xs sap-icon--navigation-down-arrow'
               aria-label={arialabel.buttonDown}
               disabled={disabled}
               onClick={this._onDown}
             />
           </div>
         ) : (
-          ""
+          ''
         )}
       </div>
     );
@@ -300,7 +300,7 @@ export class Time extends Component {
     time: PropTypes.object
   };
   static defaultProps = {
-    id: "",
+    id: '',
     showHour: true,
     showMinute: true,
     showSecond: true,
@@ -308,18 +308,18 @@ export class Time extends Component {
     disabled: false,
     spinners: true,
     time: {
-      hour: "00",
-      minute: "00",
-      second: "00",
+      hour: '00',
+      minute: '00',
+      second: '00',
       meridiem: 0
     }
   };
   constructor(props) {
     super(props);
     const { time } = this.props;
-    if (time.hour !== "00") {
+    if (time.hour !== '00') {
     } else {
-      time.hour = this.props.format12Hours ? "12" : "00";
+      time.hour = this.props.format12Hours ? '12' : '00';
     }
     this.state = {
       time: {
@@ -336,9 +336,9 @@ export class Time extends Component {
    * @param {string} name
    */
   formatValue = (value, name) => {
-    if (name !== "meridiem" && parseInt(value) < 10) {
+    if (name !== 'meridiem' && parseInt(value) < 10) {
       //using parseInt here to remove the zeroes before concatenating one
-      value = "0".concat(parseInt(value));
+      value = '0'.concat(parseInt(value));
     }
     return value;
   };
@@ -373,75 +373,75 @@ export class Time extends Component {
       max = 24;
     }
     return (
-      <div id={id} className="fd-time">
+      <div id={id} className='fd-time'>
         {/* Hours */}
         {showHour ? (
           <TimeItem
             disabled={disabled}
-            placeholder={"hh"}
+            placeholder={'hh'}
             defaultValue={1}
-            type={"Hours"}
+            type={'Hours'}
             max={max}
             value={time.hour}
             updateTime={this.updateTime}
-            name="hour"
+            name='hour'
             time={time}
             format12Hours={format12Hours}
             spinners={spinners}
           />
         ) : (
-          ""
+          ''
         )}
         {/* Minutes */}
         {showMinute ? (
           <TimeItem
             disabled={disabled}
-            placeholder={"mm"}
+            placeholder={'mm'}
             defaultValue={1}
-            type={"Minutes"}
-            max={"60"}
+            type={'Minutes'}
+            max={'60'}
             value={this.state.time.minute}
             updateTime={this.updateTime}
-            name="minute"
+            name='minute'
             time={time}
             format12Hours={format12Hours}
             spinners={spinners}
           />
         ) : (
-          ""
+          ''
         )}
         {/* Seconds */}
         {showSecond ? (
           <TimeItem
             disabled={disabled}
-            placeholder={"ss"}
+            placeholder={'ss'}
             defaultValue={1}
-            type={"Seconds"}
-            max={"60"}
+            type={'Seconds'}
+            max={'60'}
             value={this.state.time.second}
             updateTime={this.updateTime}
-            name="second"
+            name='second'
             time={time}
             format12Hours={format12Hours}
             spinners={spinners}
           />
         ) : (
-          ""
+          ''
         )}
         {/* Meridiem */}
         {format12Hours ? (
           <TimeItem
             disabled={disabled}
-            type={"Period"}
-            max={"1"}
+            type={'Period'}
+            max={'1'}
             time={this.state.time}
             value={CLOCK[this.state.time.meridiem]}
             updateTime={this.updateTime}
-            name="meridiem"
+            name='meridiem'
             spinners={spinners}
           />
         ) : (
-          ""
+          ''
         )}
       </div>
     );
