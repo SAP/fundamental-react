@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Route, Switch, NavLink } from 'react-router-dom';
+import { BrowserRouter, Route, Switch, NavLink, Redirect } from 'react-router-dom';
 
 import { ActionBarComponent } from './ActionBar/ActionBar.Component';
 import { AlertComponent } from './Alert/Alert.Component';
@@ -160,15 +160,18 @@ export default class Routes extends Component {
             <div className='content-margin'>
               <Switch>
                 {this.state.routes.map(route => {
-                  return (
-                    <Route
-                      key={route.url}
-                      exact
-                      path={route.url}
-                      component={route.component}
-                    />
-                  );
-                })}
+                    return (
+                      <Route
+                        key={route.url}
+                        exact
+                        path={route.url}
+                        component={route.component}
+                      />
+                    );
+                  }
+                  
+                )}
+                <Redirect from="" exact to="/actionBar" />
               </Switch>
             </div>
           </div>
