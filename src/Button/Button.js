@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 export const Button = props => {
-    const { option, type, size, glyph, dropdown, navbar, selected, disabled, typeAttr, onclick, children } = props;
+    const { option, type, compact, glyph, dropdown, navbar, selected, disabled, typeAttr, onclick, children } = props;
     return (
         <button
-            className={`${option ? 'fd-button--' + option : ' fd-button'}${type ? ' fd-button--' + type : ''}${dropdown ? ' fd-dropdown__control' : ''}${size ? ' fd-button--' + size : ''}${glyph ? ' sap-icon--' + glyph : ''}${navbar ? ' fd-global-nav__btn' : ''}${selected ? ' is-selected' : ''}${disabled ? ' is-disabled' : ''}`}
+            className={`${option ? 'fd-button--' + option : ' fd-button'}${type ? ' fd-button--' + type : ''}${dropdown ? ' fd-dropdown__control' : ''}${compact ? ' fd-button--compact' : ''}${glyph ? ' sap-icon--' + glyph : ''}${navbar ? ' fd-global-nav__btn' : ''}${selected ? ' is-selected' : ''}${disabled ? ' is-disabled' : ''}`}
             selected={selected ? selected : false}
             disabled={disabled ? disabled : false}
             type={typeAttr}
@@ -19,7 +19,7 @@ export const Button = props => {
 Button.propTypes = {
     option: PropTypes.string,
     type: PropTypes.string,
-    size: PropTypes.string,
+    compact: PropTypes.bool,
     glyph: PropTypes.string,
     navbar: PropTypes.bool,
     dropdown: PropTypes.bool,
