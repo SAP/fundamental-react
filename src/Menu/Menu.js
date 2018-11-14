@@ -25,17 +25,17 @@ export const MenuList = props => {
 
 // ---------------------------------------- Menu Item ----------------------------------------
 export const MenuItem = props => {
-    const { url, link, separator, addon, children } = props;
+    const { url, link, isLink, separator, addon, children } = props;
     return (
         <React.Fragment>
             <li>
                 {addon ? (
-                    <div class="fd-menu__addon-before">{addon ? <span className={'sap-icon--' + addon} /> : null}</div>
+                    <div className="fd-menu__addon-before">{addon ? <span className={'sap-icon--' + addon} /> : null}</div>
                 ) : null}
-                {link ? (<Link to={link} class="fd-menu__item">
+                {link ? (<Link to={link} className={`fd-menu__item${isLink ? ' fd-menu__link':''}`}>
                     {children}
                 </Link>):null}
-                {url ? (<a href={url} className="fd-menu__item">{children}</a>):null}
+                {url ? (<a href={url} className={`fd-menu__item${isLink ? ' fd-menu__link':''}`}>{children}</a>):null}
             </li>
             {separator ? <hr /> : null}
         </React.Fragment>
@@ -45,7 +45,8 @@ export const MenuItem = props => {
 MenuItem.propTypes = {
     url: PropTypes.string,
     separator: PropTypes.bool,
-    addon: PropTypes.string
+    addon: PropTypes.string,
+    isLink: PropTypes.bool
 };
 
 // ---------------------------------------- Menu Group ----------------------------------------
