@@ -330,7 +330,7 @@ export class Playground extends Component {
                         type={this.state.childs.type}
                         glyph={this.state.childs.glyph}
                         option={this.state.childs.option}
-                        size={this.state.childs.size}
+                        compact={this.state.childs.compact}
                         disabled={this.state.childs.disabled}
                         selected={this.state.childs.selected}
                     >

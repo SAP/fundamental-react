@@ -26,7 +26,7 @@ export const DropdownComponent = () => {
     <Popover
         id="jhqD0556"
         control={
-            <Button dropdown size="compact">
+            <Button dropdown compact>
                 Select
             </Button>
         }
@@ -70,7 +70,7 @@ export const DropdownComponent = () => {
     <Popover
         id="jhqD0558"
         control={
-            <Button dropdown size="compact" glyph="filter">
+            <Button dropdown compact glyph="filter">
                 Select
             </Button>
         }
@@ -114,7 +114,7 @@ export const DropdownComponent = () => {
     <Popover
         id="jhqD0560"
         control={
-            <Button dropdown size="compact" type="standard">
+            <Button dropdown compact type="standard">
                 Select
             </Button>
         }
@@ -199,7 +199,7 @@ export const DropdownComponent = () => {
                     <Popover
                         id="jhqD0556"
                         control={
-                            <Button dropdown size="compact">
+                            <Button dropdown compact>
                                 Select
                             </Button>
                         }
@@ -250,7 +250,7 @@ export const DropdownComponent = () => {
                     <Popover
                         id="jhqD0558"
                         control={
-                            <Button dropdown size="compact" glyph="filter">
+                            <Button dropdown compact glyph="filter">
                                 Select
                             </Button>
                         }
@@ -300,7 +300,7 @@ export const DropdownComponent = () => {
                     <Popover
                         id="jhqD0560"
                         control={
-                            <Button dropdown size="compact" type="standard">
+                            <Button dropdown compact type="standard">
                                 Select
                             </Button>
                         }
