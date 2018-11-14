@@ -43,7 +43,7 @@ export const ButtonComponent = () => {
 <Button option="emphasized" type="negative" glyph="decline" />`;
 
     const buttonSizesCode = `<Button>Default</Button>
-<Button size="compact">Compact</Button>`;
+<Button compact>Compact</Button>`;
 
     const buttonStatesCode = `<Button option="emphasized">Normal State</Button>
 <Button option="emphasized" selected>
@@ -96,9 +96,9 @@ export const ButtonComponent = () => {
 </ButtonGroup>
 
 <ButtonGroup>
-    <Button size="compact">Left</Button>
-    <Button size="compact" selected>Middle</Button>
-    <Button size="compact">Right</Button>
+    <Button compact>Left</Button>
+    <Button compact selected>Middle</Button>
+    <Button compact>Right</Button>
 </ButtonGroup>`;
 
     return (
@@ -128,9 +128,9 @@ export const ButtonComponent = () => {
                             "string - the type of the button. Options include 'standard', 'positive', 'medium', and 'negative'. Leave empty for default/action button."
                     },
                     {
-                        name: 'size',
+                        name: 'compact',
                         description:
-                            "string - the size of the button. There are two sizes. Use 'compact' for compact size. Leave empty for default."
+                            "bool - set to true to enable compact mode for the button."
                     },
                     {
                         name: 'glyph',
@@ -248,7 +248,7 @@ export const ButtonComponent = () => {
             <DocsTile centered>
                 <div class="fd-doc__margin">
                     <Button>Default</Button>
-                    <Button size="compact">Compact</Button>
+                    <Button compact>Compact</Button>
                 </div>
             </DocsTile>
             <DocsText>{buttonSizesCode}</DocsText>
@@ -325,9 +325,9 @@ export const ButtonComponent = () => {
                 </ButtonGroup>
 
                <ButtonGroup>
-                    <Button size="compact">Left</Button>
-                    <Button size="compact" selected>Middle</Button>
-                    <Button size="compact">Right</Button>
+                    <Button compact>Left</Button>
+                    <Button compact selected>Middle</Button>
+                    <Button compact>Right</Button>
                 </ButtonGroup>
             </DocsTile>
             <DocsText>{buttonGroupCode}</DocsText>
@@ -351,11 +351,9 @@ export const ButtonComponent = () => {
                         typeOfAttribute: 'string',
                         enum: ['', 'standard', 'positive', 'medium', 'negative']
                     },
-                    
                     {
-                        attribute: 'size',
-                        typeOfAttribute: 'string',
-                        enum: ['', 'compact']
+                        attribute: 'compact',
+                        typeOfAttribute: 'boolean'
                     },
                     {
                         attribute: 'glyph',
@@ -995,7 +993,7 @@ export const ButtonComponent = () => {
                     }
                 ]}
             >
-                <Button type="standard" glyph="" option="light" size="" selected={false} disabled={false}>
+                <Button type="standard" glyph="" option="light" compact={false} selected={false} disabled={false}>
                     BUTTON
                 </Button>
             </Playground>

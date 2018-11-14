@@ -35,7 +35,7 @@ export const PanelComponent = () => {
     <PanelHeader>
         <PanelHead title={'Panel Header with Actions'} description="Panel Description" />
         <PanelActions>
-            <Button size="compact" glyph="add">
+            <Button compact glyph="add">
                 Add New Button
             </Button>
         </PanelActions>
@@ -299,7 +299,7 @@ export const PanelComponent = () => {
                     <PanelHeader>
                         <PanelHead title={'Panel Header with Actions'} description="Panel Description" />
                         <PanelActions>
-                            <Button size="compact" glyph="add">
+                            <Button compact glyph="add">
                                 Add New Button
                             </Button>
                         </PanelActions>
