@@ -1,6 +1,19 @@
 import React from 'react';
 import {} from '../';
-import { DocsTile, DocsText, Separator, Header, Description, Import, Properties, Button } from '..';
+import {
+    DocsTile,
+    DocsText,
+    Separator,
+    Header,
+    Description,
+    Import,
+    Properties,
+    Button,
+    Popover,
+    Menu,
+    MenuItem,
+    MenuList
+} from '..';
 import {
     Panel,
     PanelGrid,
@@ -9,18 +22,73 @@ import {
     PanelHead,
     PanelActions,
     PanelFilters,
-    PanelContent,
-    PanelFooter
+    PanelFooter,
+    Tile,
+    TileMedia,
+    TileContent,
+    Image,
+    Token
 } from '..';
 
 export const PanelComponent = () => {
-    const panelCode = `<Panel>
+    const panelExampleCode = `<Panel>
     <PanelHeader>
-        <PanelHead title="Panel Title" description="Panel Description" />
-        <PanelActions>Panel Actions</PanelActions>
+        <PanelHead title={'Panel Header with Actions'} description="Panel Description" />
+        <PanelActions>
+            <Button size="compact" glyph="add">
+                Add New Button
+            </Button>
+        </PanelActions>
     </PanelHeader>
-    <PanelFilters>Panel Filters</PanelFilters>
-    <PanelBody>Panel Body</PanelBody>
+    <PanelFilters>
+        <div>Panel Filters</div>
+        <br /> 
+        <Popover
+            control={<Button>Color</Button>}
+            body={
+                <Menu>
+                    <MenuList>
+                        <MenuItem url="/">Option 1</MenuItem>
+                        <MenuItem url="/">Option 2</MenuItem>
+                        <MenuItem url="/">Option 3</MenuItem>
+                        <MenuItem url="/">Option 4</MenuItem>
+                    </MenuList>
+                </Menu>
+            }
+            noArrow
+        />
+        <Popover
+            control={<Button>Size</Button>}
+            body={
+                <Menu>
+                    <MenuList>
+                        <MenuItem url="/">Option 1</MenuItem>
+                        <MenuItem url="/">Option 2</MenuItem>
+                        <MenuItem url="/">Option 3</MenuItem>
+                        <MenuItem url="/">Option 4</MenuItem>
+                    </MenuList>
+                </Menu>
+            }
+            noArrow
+        />
+    </PanelFilters>
+    <PanelBody>
+    <div>Panel Body</div>     
+    <br />               
+        <Tile>
+            <TileMedia>
+                <Image size="l" type="circle" photo="https://placeimg.com/400/400/nature" />
+            </TileMedia>
+            <TileContent title="Tile Title">
+                <p>Tile Description</p>
+            </TileContent>
+        </Tile>
+        <br />
+        <Token>Bibendum</Token>
+        <Token>Lorem</Token>
+        <Token>Dolor</Token>
+        <Token>Filter</Token>
+    </PanelBody>
     <PanelFooter>Panel Footer</PanelFooter>
 </Panel>`;
 
@@ -158,7 +226,10 @@ export const PanelComponent = () => {
         <div>
             <Header>Panel</Header>
             <Description />
-            <Import module="Panel, PanelGrid, PanelBody, PanelHeader, PanelHead, PanelActions, PanelFilters, PanelContent, PanelFooter" path="/fundamental-react/src/" />
+            <Import
+                module="Panel, PanelGrid, PanelBody, PanelHeader, PanelHead, PanelActions, PanelFilters, PanelContent, PanelFooter"
+                path="/fundamental-react/src/"
+            />
 
             <Separator />
 
@@ -226,15 +297,66 @@ export const PanelComponent = () => {
             <DocsTile>
                 <Panel>
                     <PanelHeader>
-                        <PanelHead title="Panel Title" description="Panel Description" />
-                        <PanelActions>Panel Actions</PanelActions>
+                        <PanelHead title={'Panel Header with Actions'} description="Panel Description" />
+                        <PanelActions>
+                            <Button size="compact" glyph="add">
+                                Add New Button
+                            </Button>
+                        </PanelActions>
                     </PanelHeader>
-                    <PanelFilters>Panel Filters</PanelFilters>
-                    <PanelBody>Panel Body</PanelBody>
+                    <PanelFilters>
+                        <div>Panel Filters</div>
+                        <br />
+                        <Popover
+                            control={<Button>Color</Button>}
+                            body={
+                                <Menu>
+                                    <MenuList>
+                                        <MenuItem url="/">Option 1</MenuItem>
+                                        <MenuItem url="/">Option 2</MenuItem>
+                                        <MenuItem url="/">Option 3</MenuItem>
+                                        <MenuItem url="/">Option 4</MenuItem>
+                                    </MenuList>
+                                </Menu>
+                            }
+                            noArrow
+                        />
+                        <Popover
+                            control={<Button>Size</Button>}
+                            body={
+                                <Menu>
+                                    <MenuList>
+                                        <MenuItem url="/">Option 1</MenuItem>
+                                        <MenuItem url="/">Option 2</MenuItem>
+                                        <MenuItem url="/">Option 3</MenuItem>
+                                        <MenuItem url="/">Option 4</MenuItem>
+                                    </MenuList>
+                                </Menu>
+                            }
+                            noArrow
+                        />
+                    </PanelFilters>
+                    <PanelBody>
+                        <div>Panel Body</div>
+                        <br />
+                        <Tile>
+                            <TileMedia>
+                                <Image size="l" type="circle" photo="https://placeimg.com/400/400/nature" />
+                            </TileMedia>
+                            <TileContent title="Tile Title">
+                                <p>Tile Description</p>
+                            </TileContent>
+                        </Tile>
+                        <br />
+                        <Token>Bibendum</Token>
+                        <Token>Lorem</Token>
+                        <Token>Dolor</Token>
+                        <Token>Filter</Token>
+                    </PanelBody>
                     <PanelFooter>Panel Footer</PanelFooter>
                 </Panel>
             </DocsTile>
-            <DocsText>{panelCode}</DocsText>
+            <DocsText>{panelExampleCode}</DocsText>
 
             <Separator />
 
@@ -388,7 +510,7 @@ export const PanelComponent = () => {
                     <Panel>
                         <PanelBody>Panel</PanelBody>
                     </Panel>
-                    
+
                     <Panel colSpan={6}>
                         <PanelBody>Panel with colSpan=6</PanelBody>
                     </Panel>
