@@ -24,6 +24,7 @@ import { ModalComponent } from './Modal/Modal.Component';
 import { MultiInputComponent } from './MultiInput/MultiInput.Component';
 import { NavbarComponent } from './Navbar/Navbar.Component';
 import { PaginationComponent } from './Pagination/Pagination.Component';
+import { PanelComponent } from './Panel/Panel.Component';
 import { PopoverComponent } from './Popover/Popover.Component';
 import { SearchInputComponent } from './SearchInput/SearchInput.Component';
 import { SideNavigationComponent } from './SideNavigation/SideNavigation.Component';
@@ -110,6 +111,7 @@ export default class Routes extends Component {
           name: 'Pagination',
           component: PaginationComponent
         },
+        { url: '/panel', name: 'Panel', component: PanelComponent },
         { url: '/popover', name: 'Popover', component: PopoverComponent },
         {
           url: '/searchInput',
