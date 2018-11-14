@@ -1,10 +1,10 @@
 # Unit Testing
 
-To help improve the stability of the Fundamental React components, unit testing and code coverage reports are created using Jest (https://jestjs.io/) and Enzyme (https://github.com/airbnb/enzyme)
+To help improve the stability of the Fundamental React components, unit testing and code coverage reports are created using [Jest](https://jestjs.io/) and [Enzyme](https://github.com/airbnb/enzyme)
 
 - [Set-up](#set-up)
 - [Running Tests and Code Coverage](#running-tests-and-code-coverage)
-- [Contribute Code](#contribute-code)
+- [Creating a unit test](#creating-a-unit-test)
 
 ## Set-up
 
@@ -25,7 +25,9 @@ Launches the test runner and display code coverage report. The code coverage rep
 
 If you meet the above criteria, you can submit issues with our [GitHub issue tracker](https://github.com/SAP/fundamental-react/issues/new). Please use [labels](#usage-of-labels) to categorize your issue.
 
-## Feature Requests
+## Creating a Unit Test
+
+Depending on the component, there are different approaches to creating unit tests. The easiest way to make sure that a component is rendered with the desired output is by creating a [snapshot](https://jestjs.io/docs/en/tutorial-react#snapshot-testing). The first time a snapshot is created it will render the component based off the prop values sent to the component. Each subsequent unit test will check against the snapshot to make sure the component is rendering exactly as before.
 
 You can also use the issue tracker to request a new feature or enhancement. Even if you want to implement the feature yourself, please first submit an issue detailing your proposal so that we may discuss it with you and the community before moving forward. Please use [labels](#usage-of-labels) when creating feature requests.
 
