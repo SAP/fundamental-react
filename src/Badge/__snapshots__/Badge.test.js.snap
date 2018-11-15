@@ -18,7 +18,7 @@ exports[`<Badge /> create badges, pills and filled badges 2`] = `
 
 exports[`<Badge /> create badges, pills and filled badges 3`] = `
 <span
-  className="fd-badge"
+  className="fd-badge fd-badge--pill"
 >
   Default
 </span>
@@ -26,7 +26,7 @@ exports[`<Badge /> create badges, pills and filled badges 3`] = `
 
 exports[`<Badge /> create badges, pills and filled badges 4`] = `
 <span
-  className="fd-badge fd-badge--success"
+  className="fd-badge fd-badge--success fd-badge--pill"
 >
   Default
 </span>

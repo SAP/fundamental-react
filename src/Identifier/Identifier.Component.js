@@ -16,15 +16,15 @@ export const IdentifierComponent = () => {
 <Identifier size="l" glyph="washing-machine" modifier="circle" />`
     const transparentCode = `<Identifier size="m" label="Wendy Wallace" modifier="transparent">WW</Identifier>
 <Identifier size="l" glyph="washing-machine" modifier="transparent"></Identifier>`
-    const accentColorsCode = `<Identifier size="m" glyph="money-bills" color="1"></Identifier>
-<Identifier size="m" glyph="money-bills" color="2"></Identifier>
-<Identifier size="m" glyph="money-bills" color="3"></Identifier>
-<Identifier size="m" glyph="money-bills" color="4"></Identifier>
-<Identifier size="m" glyph="money-bills" color="5"></Identifier>
-<Identifier size="m" glyph="money-bills" color="6"></Identifier>
-<Identifier size="m" glyph="money-bills" color="7"></Identifier>
-<Identifier size="m" glyph="money-bills" color="8"></Identifier>
-<Identifier size="m" glyph="money-bills" color="9"></Identifier>`
+    const accentColorsCode = `<Identifier size="m" glyph="money-bills" color={1}></Identifier>
+<Identifier size="m" glyph="money-bills" color={2}></Identifier>
+<Identifier size="m" glyph="money-bills" color={3}></Identifier>
+<Identifier size="m" glyph="money-bills" color={4}></Identifier>
+<Identifier size="m" glyph="money-bills" color={5}></Identifier>
+<Identifier size="m" glyph="money-bills" color={6}></Identifier>
+<Identifier size="m" glyph="money-bills" color={7}></Identifier>
+<Identifier size="m" glyph="money-bills" color={8}></Identifier>
+<Identifier size="m" glyph="money-bills" color={9}></Identifier>`
 
     return (
         <div>
@@ -748,7 +748,7 @@ export const IdentifierComponent = () => {
                         typeOfAttribute: 'string',
                         enum: ['circle', 'transparent']
                     }]}>
-                    <Identifier size="s" label="Wendy Wallace" glyph="money-bills" color="1" modifier="circle"></Identifier>
+                    <Identifier size="s" label="Wendy Wallace" glyph="money-bills" color={1} modifier="circle"></Identifier>
             </Playground>
         </div>
     );
