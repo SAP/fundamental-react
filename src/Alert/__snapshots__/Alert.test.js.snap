@@ -1,0 +1,111 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Alert /> create basic alert 1`] = `
+<div>
+  <div
+    className="fd-alert fd-alert--dismissible"
+    id="j2ALl423"
+    role="alert"
+  >
+    <button
+      aria-controls="j2ALl423"
+      aria-label="Close"
+      className="fd-alert__close"
+      onClick={[Function]}
+    />
+    Default alert with a
+    <a
+      className="fd-link"
+      href="#"
+    >
+      link
+       
+      <span
+        className="sap-icon--arrow-right sap-icon--s"
+      />
+    </a>
+  </div>
+</div>
+`;
+
+exports[`<Alert /> create basic alert 2`] = `
+<div>
+  <div
+    className="fd-alert fd-alert--dismissible fd-alert--error"
+    id="j2ALl423"
+    role="alert"
+  >
+    <button
+      aria-controls="j2ALl423"
+      aria-label="Close"
+      className="fd-alert__close"
+      onClick={[Function]}
+    />
+    Error message with a
+  </div>
+</div>
+`;
+
+exports[`<Alert /> create basic alert 3`] = `
+<div>
+  <div
+    className="fd-alert fd-alert--dismissible"
+    dir="rtl"
+    id="j2ALl423"
+    role="alert"
+  >
+    <button
+      aria-controls="j2ALl423"
+      aria-label="Close"
+      className="fd-alert__close"
+      onClick={[Function]}
+    />
+    Error message with a
+    <a
+      className="fd-link"
+      href="#"
+    >
+      link
+       
+      <span
+        className="sap-icon--arrow-right sap-icon--s"
+      />
+    </a>
+  </div>
+</div>
+`;
+
+exports[`<Alert /> create basic alert 4`] = `
+<div>
+  <div
+    className="fd-alert fd-alert--warning"
+    dir="rtl"
+    id="j2ALl423"
+    role="alert"
+  >
+    Default alert that cannot be dismissed
+  </div>
+</div>
+`;
+
+exports[`<Alert /> create non-dismissable alert 1`] = `
+<div>
+  <div
+    className="fd-alert"
+    id="j2ALl423"
+    role="alert"
+  >
+    Default alert that cannot be dismissed
+    <a
+      className="fd-link"
+      href="#"
+    >
+      link
+       
+      <span
+        className="sap-icon--arrow-right sap-icon--s"
+      />
+    </a>
+  </div>
+</div>
+`;
