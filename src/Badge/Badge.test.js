@@ -38,13 +38,13 @@ describe('<Badge />', () => {
     tree = component.toJSON();
     expect(tree).toMatchSnapshot();
 
-    // create default badge
-    component = renderer.create(defaultBadge);
+    // create default pill
+    component = renderer.create(defaultPill);
     tree = component.toJSON();
     expect(tree).toMatchSnapshot();
 
-    // create success type badge
-    component = renderer.create(typeBadge);
+    // create success type pill
+    component = renderer.create(typePill);
     tree = component.toJSON();
     expect(tree).toMatchSnapshot();
 
