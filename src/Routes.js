@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Route, Switch, NavLink } from 'react-router-dom';
+import { BrowserRouter, Route, Switch, NavLink, Redirect } from 'react-router-dom';
 
 import { ActionBarComponent } from './ActionBar/ActionBar.Component';
 import { AlertComponent } from './Alert/Alert.Component';
@@ -24,6 +24,7 @@ import { ModalComponent } from './Modal/Modal.Component';
 import { MultiInputComponent } from './MultiInput/MultiInput.Component';
 import { NavbarComponent } from './Navbar/Navbar.Component';
 import { PaginationComponent } from './Pagination/Pagination.Component';
+import { PanelComponent } from './Panel/Panel.Component';
 import { PopoverComponent } from './Popover/Popover.Component';
 import { SearchInputComponent } from './SearchInput/SearchInput.Component';
 import { SideNavigationComponent } from './SideNavigation/SideNavigation.Component';
@@ -110,6 +111,7 @@ export default class Routes extends Component {
           name: 'Pagination',
           component: PaginationComponent
         },
+        { url: '/panel', name: 'Panel', component: PanelComponent },
         { url: '/popover', name: 'Popover', component: PopoverComponent },
         {
           url: '/searchInput',
@@ -158,15 +160,18 @@ export default class Routes extends Component {
             <div className='content-margin'>
               <Switch>
                 {this.state.routes.map(route => {
-                  return (
-                    <Route
-                      key={route.url}
-                      exact
-                      path={route.url}
-                      component={route.component}
-                    />
-                  );
-                })}
+                    return (
+                      <Route
+                        key={route.url}
+                        exact
+                        path={route.url}
+                        component={route.component}
+                      />
+                    );
+                  }
+                  
+                )}
+                <Redirect from="" exact to="/actionBar" />
               </Switch>
             </div>
           </div>

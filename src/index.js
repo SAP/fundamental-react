@@ -37,6 +37,7 @@ import { Modal } from '../src/Modal/Modal';
 import { Navbar, NavbarGroup, NavbarActions, NavbarElement } from '../src/Navbar/Navbar';
 import { MultiInput } from '../src/MultiInput/MultiInput';
 import { Pagination } from '../src/Pagination/Pagination';
+import { Panel, PanelGrid, PanelBody, PanelHeader, PanelHead, PanelActions, PanelFilters, PanelContent, PanelFooter } from '../src/Panel/Panel';
 import { Popover } from '../src/Popover/Popover';
 import { SearchInput } from '../src/SearchInput/SearchInput';
 import { SideNav, SideNavList, SideNavGroup } from '../src/SideNavigation/SideNavigation';
@@ -124,6 +125,15 @@ export {
     NavbarElement,
     Popover,
     Pagination,
+    Panel, 
+    PanelGrid, 
+    PanelBody, 
+    PanelHeader, 
+    PanelHead, 
+    PanelActions, 
+    PanelFilters, 
+    PanelContent, 
+    PanelFooter,
     SearchInput,
     SideNav,
     SideNavList,
