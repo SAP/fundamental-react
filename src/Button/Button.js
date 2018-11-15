@@ -5,7 +5,7 @@ export const Button = props => {
   const {
     option,
     type,
-    size,
+    compact,
     glyph,
     dropdown,
     navbar,
@@ -20,7 +20,7 @@ export const Button = props => {
       className={`${option ? 'fd-button--' + option : ' fd-button'}${
         type ? ' fd-button--' + type : ''
       }${dropdown ? ' fd-dropdown__control' : ''}${
-        size ? ' fd-button--' + size : ''
+        compact ? ' fd-button--compact' : ''
       }${glyph ? ' sap-icon--' + glyph : ''}${
         navbar ? ' fd-global-nav__btn' : ''
       }${selected ? ' is-selected' : ''}${disabled ? ' is-disabled' : ''}`}
@@ -37,7 +37,7 @@ export const Button = props => {
 Button.propTypes = {
   option: PropTypes.string,
   type: PropTypes.string,
-  size: PropTypes.string,
+  compact: PropTypes.bool,
   glyph: PropTypes.string,
   navbar: PropTypes.bool,
   dropdown: PropTypes.bool,
