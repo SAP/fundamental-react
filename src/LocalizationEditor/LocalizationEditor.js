@@ -2,36 +2,34 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Popover } from '../';
 
-export interface LocalizationEditorControl {
-    label: string,
-    placeholder: string,
-    language: string
-}
-
-export interface LocalizationEditorMenuItem {
-    placeholder: string,
-    language: string
-}
-
 // ------------------------------------------- Menu ------------------------------------------
 export const LocalizationEditor = props => {
-    const { control, menu, id, compact } = props;
+    const { control, menu, id, compact, textarea } = props;
+
     return (
         <div className="fd-localization-editor">
             <Popover
                 id={id}
                 control={
                     <div>
-                        <label className="fd-form__label" for={id}>
+                        <label className="fd-form__label" htmlFor={id}>
                             {control.label}
                         </label>
-                        <div className={`fd-input-group${compact ? ' fd-input-group--compact':''} fd-input-group--after`}>
-                            <input
-                                type="text"
-                                className={compact ? 'fd-input fd-input--compact' : ''}
-                                placeholder={control.placeholder}
-                            />
-                            <span className="fd-input-group__addon fd-input-group__addon--after fd-input-group__addon--button">
+                        <div
+                            className={`fd-input-group${
+                                compact && !textarea ? ' fd-input-group--compact' : ''
+                            } fd-input-group--after`}
+                        >
+                            {textarea ? (
+                                <textarea />
+                            ) : (
+                                <input
+                                    type="text"
+                                    className={compact ? 'fd-input fd-input--compact' : ''}
+                                    placeholder={control.placeholder}
+                                />
+                            )}
+                            <span className={`fd-input-group__addon fd-input-group__addon--after fd-input-group__addon--button${ textarea ? ' fd-input-group__addon--textarea' : ''}`}>
                                 <button className="fd-button--light fd-localization-editor__button">
                                     {control.language}
                                 </button>
@@ -45,14 +43,21 @@ export const LocalizationEditor = props => {
                             {menu.map((item, index) => {
                                 return (
                                     <li key={index}>
-                                        <div className={`fd-input-group${compact ? ' fd-input-group--compact':''} fd-input-group--after`}>
-                                            <input
-                                                type="text"
-                                                className={compact ? 'fd-input fd-input--compact' : ''}
-                                                id=""
-                                                placeholder={item.placeholder}
-                                            />
-                                            <span className="fd-input-group__addon fd-input-group__addon--after">
+                                        <div
+                                            className={`fd-input-group${
+                                                compact && !textarea ? ' fd-input-group--compact' : ''
+                                            } fd-input-group--after`}
+                                        >
+                                            {textarea ? (
+                                                <textarea />
+                                            ) : (
+                                                <input
+                                                    type="text"
+                                                    className={compact ? 'fd-input fd-input--compact' : ''}
+                                                    placeholder={item.placeholder}
+                                                />
+                                            )}
+                                            <span className={`fd-input-group__addon fd-input-group__addon--after${ textarea ? ' fd-input-group__addon--textarea' : ''}`}>
                                                 {item.language}
                                             </span>
                                         </div>
@@ -68,10 +73,19 @@ export const LocalizationEditor = props => {
     );
 };
 
-LocalizationEditor.propTypes = {};
-
-control: PropTypes.shape({
-    label: PropTypes.string,
-    placeholder: PropTypes.string,
-    language: PropTypes.string
-})
+LocalizationEditor.propTypes = {
+    control: PropTypes.shape({
+        label: PropTypes.string,
+        placeholder: PropTypes.string,
+        language: PropTypes.string
+    }).isRequired,
+    menu: PropTypes.arrayOf(
+        PropTypes.shape({
+            placeholder: PropTypes.string,
+            language: PropTypes.string
+        }).isRequired
+    ).isRequired,
+    id: PropTypes.string,
+    compact: PropTypes.bool,
+    textarea: PropTypes.bool
+};
