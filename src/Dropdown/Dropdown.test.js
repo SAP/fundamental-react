@@ -1,13 +1,9 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import Enzyme, { shallow } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
 import { Dropdown } from './Dropdown';
 import { Popover } from '../Popover/Popover';
 import { Menu, MenuItem, MenuList } from '../Menu/Menu';
 import { Button } from '../Button/Button';
-
-Enzyme.configure({ adapter: new Adapter() });
 
 describe('<Dropdown />', () => {
   const defaultDropdown = (
