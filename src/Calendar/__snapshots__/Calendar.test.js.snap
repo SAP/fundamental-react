@@ -345,7 +345,7 @@ exports[`<Calendar /> Create calendars 1`] = `
               </span>
             </td>
             <td
-              className="fd-calendar__item fd-calendar__item fd-calendar__item--current    "
+              className="fd-calendar__item fd-calendar__item     "
               onClick={[Function]}
               role="gridcell"
             >
@@ -356,7 +356,7 @@ exports[`<Calendar /> Create calendars 1`] = `
               </span>
             </td>
             <td
-              className="fd-calendar__item fd-calendar__item     "
+              className="fd-calendar__item fd-calendar__item fd-calendar__item--current    "
               onClick={[Function]}
               role="gridcell"
             >
@@ -892,7 +892,7 @@ exports[`<Calendar /> Create calendars 2`] = `
               </span>
             </td>
             <td
-              className="fd-calendar__item fd-calendar__item fd-calendar__item--current    "
+              className="fd-calendar__item fd-calendar__item     "
               onClick={[Function]}
               role="gridcell"
             >
@@ -903,7 +903,7 @@ exports[`<Calendar /> Create calendars 2`] = `
               </span>
             </td>
             <td
-              className="fd-calendar__item fd-calendar__item     "
+              className="fd-calendar__item fd-calendar__item fd-calendar__item--current    "
               onClick={[Function]}
               role="gridcell"
             >
@@ -1439,7 +1439,7 @@ exports[`<Calendar /> Create calendars 3`] = `
               </span>
             </td>
             <td
-              className="fd-calendar__item fd-calendar__item fd-calendar__item--current    "
+              className="fd-calendar__item fd-calendar__item     "
               onClick={[Function]}
               role="gridcell"
             >
@@ -1450,7 +1450,7 @@ exports[`<Calendar /> Create calendars 3`] = `
               </span>
             </td>
             <td
-              className="fd-calendar__item fd-calendar__item     "
+              className="fd-calendar__item fd-calendar__item fd-calendar__item--current    "
               onClick={[Function]}
               role="gridcell"
             >
@@ -1986,7 +1986,7 @@ exports[`<Calendar /> Create calendars 4`] = `
               </span>
             </td>
             <td
-              className="fd-calendar__item fd-calendar__item fd-calendar__item--current    is-disabled "
+              className="fd-calendar__item fd-calendar__item     is-disabled "
               onClick={[Function]}
               role="gridcell"
             >
@@ -1997,7 +1997,7 @@ exports[`<Calendar /> Create calendars 4`] = `
               </span>
             </td>
             <td
-              className="fd-calendar__item fd-calendar__item     is-disabled "
+              className="fd-calendar__item fd-calendar__item fd-calendar__item--current    is-disabled "
               onClick={[Function]}
               role="gridcell"
             >
@@ -2533,7 +2533,7 @@ exports[`<Calendar /> Create calendars 5`] = `
               </span>
             </td>
             <td
-              className="fd-calendar__item fd-calendar__item fd-calendar__item--current    "
+              className="fd-calendar__item fd-calendar__item     is-disabled "
               onClick={[Function]}
               role="gridcell"
             >
@@ -2544,7 +2544,7 @@ exports[`<Calendar /> Create calendars 5`] = `
               </span>
             </td>
             <td
-              className="fd-calendar__item fd-calendar__item     "
+              className="fd-calendar__item fd-calendar__item fd-calendar__item--current    "
               onClick={[Function]}
               role="gridcell"
             >
@@ -3080,7 +3080,7 @@ exports[`<Calendar /> Create calendars 6`] = `
               </span>
             </td>
             <td
-              className="fd-calendar__item fd-calendar__item fd-calendar__item--current    "
+              className="fd-calendar__item fd-calendar__item     "
               onClick={[Function]}
               role="gridcell"
             >
@@ -3091,7 +3091,7 @@ exports[`<Calendar /> Create calendars 6`] = `
               </span>
             </td>
             <td
-              className="fd-calendar__item fd-calendar__item     is-disabled "
+              className="fd-calendar__item fd-calendar__item fd-calendar__item--current    "
               onClick={[Function]}
               role="gridcell"
             >
@@ -3627,7 +3627,7 @@ exports[`<Calendar /> Create calendars 7`] = `
               </span>
             </td>
             <td
-              className="fd-calendar__item fd-calendar__item fd-calendar__item--current    "
+              className="fd-calendar__item fd-calendar__item     "
               onClick={[Function]}
               role="gridcell"
             >
@@ -3638,7 +3638,7 @@ exports[`<Calendar /> Create calendars 7`] = `
               </span>
             </td>
             <td
-              className="fd-calendar__item fd-calendar__item     "
+              className="fd-calendar__item fd-calendar__item fd-calendar__item--current    "
               onClick={[Function]}
               role="gridcell"
             >
@@ -4174,7 +4174,7 @@ exports[`<Calendar /> Create calendars 8`] = `
               </span>
             </td>
             <td
-              className="fd-calendar__item fd-calendar__item fd-calendar__item--current    "
+              className="fd-calendar__item fd-calendar__item     "
               onClick={[Function]}
               role="gridcell"
             >
@@ -4185,7 +4185,7 @@ exports[`<Calendar /> Create calendars 8`] = `
               </span>
             </td>
             <td
-              className="fd-calendar__item fd-calendar__item     "
+              className="fd-calendar__item fd-calendar__item fd-calendar__item--current    "
               onClick={[Function]}
               role="gridcell"
             >
@@ -4721,7 +4721,7 @@ exports[`<Calendar /> Create calendars 9`] = `
               </span>
             </td>
             <td
-              className="fd-calendar__item fd-calendar__item fd-calendar__item--current    "
+              className="fd-calendar__item fd-calendar__item     "
               onClick={[Function]}
               role="gridcell"
             >
@@ -4732,7 +4732,7 @@ exports[`<Calendar /> Create calendars 9`] = `
               </span>
             </td>
             <td
-              className="fd-calendar__item fd-calendar__item     "
+              className="fd-calendar__item fd-calendar__item fd-calendar__item--current    "
               onClick={[Function]}
               role="gridcell"
             >
@@ -5268,7 +5268,7 @@ exports[`<Calendar /> Create calendars 10`] = `
               </span>
             </td>
             <td
-              className="fd-calendar__item fd-calendar__item fd-calendar__item--current    "
+              className="fd-calendar__item fd-calendar__item     "
               onClick={[Function]}
               role="gridcell"
             >
@@ -5279,7 +5279,7 @@ exports[`<Calendar /> Create calendars 10`] = `
               </span>
             </td>
             <td
-              className="fd-calendar__item fd-calendar__item     "
+              className="fd-calendar__item fd-calendar__item fd-calendar__item--current    "
               onClick={[Function]}
               role="gridcell"
             >
