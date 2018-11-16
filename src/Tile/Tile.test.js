@@ -1,7 +1,5 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import Enzyme, { shallow } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
 import {
   Tile,
   TileContent,
@@ -16,8 +14,6 @@ import { Popover } from '../Popover/Popover';
 import { Button } from '../Button/Button';
 import { Identifier } from '../Identifier/Identifier';
 import { Menu, MenuList, MenuItem } from '../Menu/Menu';
-
-Enzyme.configure({ adapter: new Adapter() });
 
 describe('<Tile />', () => {
   const simpleTile = (

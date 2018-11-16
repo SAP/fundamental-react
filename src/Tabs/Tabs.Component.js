@@ -5,10 +5,10 @@ import { DocsTile, DocsText, Separator, Header, Description, Import, Properties,
 export const TabsComponent = () => {
     const tabscomponentCode= `
     <Tabs>
-    <TabPanelComponent ids={[{id : '1', url:'#', name: 'Tab 1', content: 'Hello world', disabled: false},
+    <TabComponent ids={[{id : '1', url:'#', name: 'Tab 1', content: 'Hello world', disabled: false},
                              {id : '2', url:'#', name: 'Tab 2', content: 'Hello world 2', disabled: false},
                              {id : '3', url:'#', name: 'Tab 3', content: 'Hello world 3', disabled: true}]}>
-    </TabPanelComponent>
+    </TabComponent>
     </Tabs>`
 
     return(<div>
