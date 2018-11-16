@@ -35,6 +35,10 @@ Launches the test runner in the interactive watch mode.
 
 Launches the test runner and display code coverage report.
 
+#### `npm test -- --coverage --watch`
+
+Launches the test runner and display code coverage report and interactive watch mode.
+
 #### `npm run build`
 
 Builds the app for production to the `build` folder.
