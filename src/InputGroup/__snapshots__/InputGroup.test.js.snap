@@ -129,7 +129,7 @@ exports[`<InputGroup /> create input group items 7`] = `
     onChange={[Function]}
     placeholder="Search Term"
     type="search"
-    value="search me"
+    value=""
   />
   <span
     className="fd-input-group__addon fd-input-group__addon--button"
@@ -294,6 +294,21 @@ exports[`<InputGroup /> create input group items 14`] = `
 
 exports[`<InputGroup /> create input group items 15`] = `
 <div
+  className="fd-input-group fd-input-group--before"
+>
+  <span
+    className="fd-input-group__addon fd-input-group__addon--button fd-input-group__addon--before"
+  />
+  <input
+    className=""
+    type="text"
+    value="1234567890"
+  />
+</div>
+`;
+
+exports[`<InputGroup /> create input group items 16`] = `
+<div
   className="fd-form__group"
 >
   <div
@@ -313,4 +328,4 @@ exports[`<InputGroup /> create input group items 15`] = `
 </div>
 `;
 
-exports[`<InputGroup /> create input group items 16`] = `"<InputGroup inputType=\\"foobar\\"/>"`;
+exports[`<InputGroup /> create input group items 17`] = `"<InputGroup />"`;

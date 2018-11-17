@@ -47,11 +47,7 @@ describe('<InputGroup />', () => {
     <InputGroup inputType="number" inputValue={100} compact />
   );
   const searchText = (
-    <InputGroup
-      inputType="search"
-      inputValue="search me"
-      inputPlaceholder="Search Term"
-    />
+    <InputGroup inputType="search" inputPlaceholder="Search Term" />
   );
   const searchTextCompact = (
     <InputGroup
@@ -115,6 +111,15 @@ describe('<InputGroup />', () => {
     >
       <Button option="light">Button</Button>
     </InputGroup>
+  );
+
+  const inputWithActionsNoButtons = (
+    <InputGroup
+      inputType="text"
+      addonPos="before"
+      inputValue="1234567890"
+      actions
+    />
   );
   const formGroup = <FormGroup>{inputTextPosAfter}</FormGroup>;
 
@@ -189,12 +194,18 @@ describe('<InputGroup />', () => {
     tree = component.toJSON();
     expect(tree).toMatchSnapshot();
 
+    // create input actions but no buttons
+    component = renderer.create(inputWithActionsNoButtons);
+    tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+
     // create form group
     component = renderer.create(formGroup);
     tree = component.toJSON();
     expect(tree).toMatchSnapshot();
 
-    component = renderer.create('<InputGroup inputType="foobar"/>');
+    // default input group
+    component = renderer.create('<InputGroup />');
     tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
