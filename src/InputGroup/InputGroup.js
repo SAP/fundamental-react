@@ -64,7 +64,62 @@ export class InputGroup extends Component {
     } = this.props;
 
     switch (inputType) {
-      case 'text': {
+      case 'number':
+        return (
+          <div
+            className={`fd-input-group fd-input-group--after${
+              compact ? ' fd-input-group--compact' : ''
+            }`}
+          >
+            <input
+              className={`${compact ? 'fd-input fd-input--compact' : ''}`}
+              type="number"
+              id={inputId}
+              name={inputName}
+              value={this.state.value}
+            />
+            <span className="fd-input-group__addon fd-input-group__addon--button fd-input-group__addon--after">
+              <button
+                className="fd-input-group__button fd-input-group__button--step-up sap-icon--slim-arrow-up"
+                aria-label="Step up"
+                onClick={this.handleUp}
+              />
+              <button
+                className="fd-input-group__button fd-input-group__button--step-down sap-icon--slim-arrow-down"
+                aria-label="Step down"
+                onClick={this.handleDown}
+              />
+            </span>
+          </div>
+        );
+
+      case 'search':
+        return (
+          <div
+            className={`fd-input-group${
+              compact ? ' fd-input-group--compact' : ''
+            }`}
+          >
+            <input
+              className={`${compact ? 'fd-input fd-input--compact' : ''}`}
+              type="search"
+              id={inputId}
+              name={inputName}
+              value={this.state.searchValue}
+              placeholder={inputPlaceholder}
+              onChange={this.handleChange}
+            />
+            <span className="fd-input-group__addon fd-input-group__addon--button">
+              <button
+                className="fd-input-group__button fd-input-group__button--clear"
+                aria-label="Clear"
+                onClick={this.handleClear}
+              />
+            </span>
+          </div>
+        );
+      case 'text':
+      default: {
         if (addonPos === 'before') {
           return (
             <div
@@ -131,62 +186,6 @@ export class InputGroup extends Component {
           );
         }
       }
-      case 'number':
-        return (
-          <div
-            className={`fd-input-group fd-input-group--after${
-              compact ? ' fd-input-group--compact' : ''
-            }`}
-          >
-            <input
-              className={`${compact ? 'fd-input fd-input--compact' : ''}`}
-              type="number"
-              id={inputId}
-              name={inputName}
-              value={this.state.value}
-            />
-            <span className="fd-input-group__addon fd-input-group__addon--button fd-input-group__addon--after">
-              <button
-                className="fd-input-group__button fd-input-group__button--step-up sap-icon--slim-arrow-up"
-                aria-label="Step up"
-                onClick={this.handleUp}
-              />
-              <button
-                className="fd-input-group__button fd-input-group__button--step-down sap-icon--slim-arrow-down"
-                aria-label="Step down"
-                onClick={this.handleDown}
-              />
-            </span>
-          </div>
-        );
-
-      case 'search':
-        return (
-          <div
-            className={`fd-input-group${
-              compact ? ' fd-input-group--compact' : ''
-            }`}
-          >
-            <input
-              className={`${compact ? 'fd-input fd-input--compact' : ''}`}
-              type="search"
-              id={inputId}
-              name={inputName}
-              value={this.state.searchValue}
-              placeholder={inputPlaceholder}
-              onChange={this.handleChange}
-            />
-            <span className="fd-input-group__addon fd-input-group__addon--button">
-              <button
-                className="fd-input-group__button fd-input-group__button--clear"
-                aria-label="Clear"
-                onClick={this.handleClear}
-              />
-            </span>
-          </div>
-        );
-      default:
-        break;
     }
   }
 }
