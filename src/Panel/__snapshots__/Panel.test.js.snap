@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Panel /> create panel 1`] = `
+<div
+  className="fd-panel"
+>
+  <div
+    className="fd-panel__header"
+  >
+    <div
+      className="fd-panel__head"
+    >
+      <h1
+        className="fd-panel__title"
+      >
+        Panel Header with Actions
+      </h1>
+      <p
+        className="fd-panel__description"
+      >
+        Panel Description
+      </p>
+    </div>
+    <div
+      className="fd-panel__actions"
+    >
+      <button
+        className=" fd-button fd-button--compact sap-icon--add"
+        disabled={false}
+        selected={false}
+      >
+        Add New Button
+      </button>
+    </div>
+  </div>
+  <div
+    className="fd-panel__filters"
+    id=""
+  >
+    <div>
+      Panel Filters
+    </div>
+    <br />
+  </div>
+  <div
+    className="fd-panel__body"
+  >
+    <div>
+      Panel Body
+    </div>
+  </div>
+  <div
+    className="fd-panel__footer"
+  >
+    Panel Footer
+  </div>
+</div>
+`;
