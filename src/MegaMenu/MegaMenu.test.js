@@ -74,33 +74,47 @@ describe('<MegaMenu />', () => {
     expect(tree).toMatchSnapshot();
   });
 
-  test('click on menu item', () => {
+  test('click on URL menu item', () => {
     // url click on mega menu
     const urlWrapper = mount(menuListURL);
+
+    expect(urlWrapper.state('selectedItem')).toEqual('item_2');
     urlWrapper
       .find('a.fd-mega-menu__link')
-      .at(0)
-      .simulate('click', [{}, { id: 3 }]);
+      .at(2)
+      .simulate('click', [{}, { id: 'item_3' }]);
+    expect(urlWrapper.state('selectedItem')).toEqual('item_3');
+
+    urlWrapper
+      .find('a.fd-mega-menu__link')
+      .at(1)
+      .simulate('click', [{}, { id: 'item_2' }]);
 
     // sub url click on mega menu
     urlWrapper
       .find('a.fd-mega-menu__sublink')
-      .at(0)
-      .simulate('click', [{}, { id: 3 }]);
+      .at(1)
+      .simulate('click', [{}, { id: 'subitem_22' }]);
 
-    console.log(urlWrapper.state('itemStates'));
+    expect(urlWrapper.state('selectedItem')).toEqual('subitem_22');
+  });
 
+  test('click on LINK menu item', () => {
     // link on mega menu
     const linkWrapper = mount(menuListLink);
+
+    expect(linkWrapper.state('selectedItem')).toEqual('item_2');
     linkWrapper
       .find('a.fd-mega-menu__link')
-      .at(0)
-      .simulate('click', [{}, { id: 3 }]);
+      .at(2)
+      .simulate('click', [{}, { id: 'item_8' }]);
+    expect(linkWrapper.state('selectedItem')).toEqual('item_8');
 
     // sub link on mega menu
     linkWrapper
       .find('a.fd-mega-menu__sublink')
-      .at(0)
-      .simulate('click', [{}, { id: 3 }]);
+      .at(1)
+      .simulate('click', [{}, { id: 'subitem_82' }]);
+    expect(linkWrapper.state('selectedItem')).toEqual('subitem_82');
   });
 });
