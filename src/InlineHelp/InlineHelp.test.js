@@ -22,6 +22,13 @@ describe('<InlineHelp />', () => {
     />
   );
 
+  const inlineHelpBottomCenter = (
+    <InlineHelp
+      text="Lorem ipsum dolor sit amet, consectetur adipiscing."
+      placement="bottom-center"
+    />
+  );
+
   const inlineHelpLeft = (
     <InlineHelp
       text="Lorem ipsum dolor sit amet, consectetur adipiscing."
@@ -50,6 +57,13 @@ describe('<InlineHelp />', () => {
     expect(tree).toMatchSnapshot();
   });
 
+  test('create Bottom Center InlineHelp component', () => {
+    const component = renderer.create(inlineHelpBottomCenter);
+    const tree = component.toJSON();
+
+    expect(tree).toMatchSnapshot();
+  });
+  
   test('create Left InlineHelp component', () => {
     const component = renderer.create(inlineHelpLeft);
     const tree = component.toJSON();
