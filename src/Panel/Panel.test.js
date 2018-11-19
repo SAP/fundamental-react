@@ -10,7 +10,8 @@ import {
   PanelHead,
   PanelActions,
   PanelFilters,
-  PanelFooter
+  PanelFooter,
+  PanelContent
 } from './Panel';
 import { Button } from '../Button/Button';
 
@@ -37,12 +38,92 @@ describe('<Panel />', () => {
       <PanelBody>
         <div>Panel Body</div>
       </PanelBody>
+      <PanelContent>
+        <div>Panel Content</div>
+      </PanelContent>
       <PanelFooter>Panel Footer</PanelFooter>
     </Panel>
   );
-  test('create panel', () => {
-    const component = renderer.create(panel);
-    const tree = component.toJSON();
+
+  const panelGrid = (
+    <PanelGrid>
+      <Panel colSpan={2}>
+        <PanelHead title={'Panel Header with Actions'} />
+        <PanelBody>Panel</PanelBody>
+      </Panel>
+      <Panel>
+        <PanelHead description="Panel Description" />
+        <PanelBody>Panel</PanelBody>
+      </Panel>
+      <Panel>
+        <PanelHead />
+        <PanelBody>Panel</PanelBody>
+      </Panel>
+      <Panel>
+        <PanelBody>Panel</PanelBody>
+      </Panel>
+      <Panel>
+        <PanelBody>Panel</PanelBody>
+      </Panel>
+    </PanelGrid>
+  );
+
+  const panelGridNoGap = (
+    <PanelGrid nogap={true}>
+      <Panel>
+        <PanelBody>Panel</PanelBody>
+      </Panel>
+      <Panel>
+        <PanelBody>Panel</PanelBody>
+      </Panel>
+      <Panel>
+        <PanelBody>Panel</PanelBody>
+      </Panel>
+      <Panel>
+        <PanelBody>Panel</PanelBody>
+      </Panel>
+      <Panel>
+        <PanelBody>Panel</PanelBody>
+      </Panel>
+    </PanelGrid>
+  );
+
+  const panelGridSpan = (
+    <PanelGrid cols={2}>
+      <Panel>
+        <PanelBody>Panel</PanelBody>
+      </Panel>
+      <Panel>
+        <PanelBody>Panel</PanelBody>
+      </Panel>
+      <Panel>
+        <PanelBody>Panel</PanelBody>
+      </Panel>
+      <Panel>
+        <PanelBody>Panel</PanelBody>
+      </Panel>
+    </PanelGrid>
+  );
+
+  test('create panels', () => {
+    // create panel
+    let component = renderer.create(panel);
+    let tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+
+    // panel grid
+    component = renderer.create(panelGrid);
+    tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+
+    // panel with span
+    component = renderer.create(panelGridSpan);
+    tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+
+    // panel with no gap
+    component = renderer.create(panelGridNoGap);
+    tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
 });
