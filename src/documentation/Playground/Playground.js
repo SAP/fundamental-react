@@ -211,8 +211,8 @@ export class Playground extends Component {
                             <p>Names</p>
                             {item.enum ? (
                                 <div>
-                                    {item.enum.map(enumItem => (
-                                        <div>
+                                    {item.enum.map((enumItem, index) => (
+                                        <div key={index}>
                                             <label>{enumItem}</label>
                                             <input
                                                 type="text"
@@ -232,8 +232,8 @@ export class Playground extends Component {
                             <p>Content</p>
                             {item.enum ? (
                                 <div>
-                                    {item.enum.map(enumItem => (
-                                        <div>
+                                    {item.enum.map((enumItem, index) => (
+                                        <div key={index}>
                                             <label>{enumItem}</label>
                                             <input
                                                 type="text"

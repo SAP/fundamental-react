@@ -17,6 +17,7 @@ export class TabComponent extends Component {
       let id = ids.id;
       obj[id] = false;
       initialStates.push(obj);
+      
     });
     this.state = {
       selectedTab: '1',
