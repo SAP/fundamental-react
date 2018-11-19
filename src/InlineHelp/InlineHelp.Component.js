@@ -8,6 +8,7 @@ export const InlineHelpComponent = () => {
     const bottomLeftHelpPlacement = `<InlineHelp text="Lorem ipsum dolor sit amet, consectetur adipiscing." placement="bottom-left"/>`;
     const rightHelpPlacement = `<InlineHelp text="Lorem ipsum dolor sit amet, consectetur adipiscing." placement="right"/>`;
     const leftHelpPlacement = `<InlineHelp text="Lorem ipsum dolor sit amet, consectetur adipiscing." placement="left"/>`;
+    const centerHelpPlacement = `<InlineHelp text="Lorem ipsum dolor sit amet, consectetur adipiscing." placement="bottom-center" />`;
 
     return (
         <div>
@@ -25,11 +26,11 @@ export const InlineHelpComponent = () => {
                 properties={[
                     {
                         name: 'text',
-                        description: 'String - The text to display in the inline help pop-up.'
+                        description: 'string (required) - The text to display in the inline help pop-up.'
                     },
                     {
                         name: 'placement',
-                        description: 'String - Location for where to display the inline help pop-up.'
+                        description: "string (required) - Location for where to display the inline help pop-up. Options include:  'bottom-right', 'bottom-left', 'bottom-center', 'right', and 'left' "
                     }
                 ]}
             />
@@ -52,6 +53,15 @@ export const InlineHelpComponent = () => {
                 <InlineHelp text="Lorem ipsum dolor sit amet, consectetur adipiscing." placement="bottom-left" />
             </DocsTile>
             <DocsText>{bottomLeftHelpPlacement}</DocsText>
+
+            <Separator />
+
+             <h2>Bottom Center Position</h2>
+            <DocsTile centered>
+                Bottom Center &nbsp;
+                <InlineHelp text="Lorem ipsum dolor sit amet, consectetur adipiscing." placement="bottom-center" />
+            </DocsTile>
+            <DocsText>{centerHelpPlacement}</DocsText>
 
             <Separator />
 
