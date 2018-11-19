@@ -98,17 +98,17 @@ describe('<Modal />', () => {
     expect(component.prop('onClose')).toBeCalledTimes(1);
 
     // handle esc key
-    var event = new KeyboardEvent('keydown', { key: 'Escape' });
+    let event = new KeyboardEvent('keydown', { key: 'Escape' });
     document.dispatchEvent(event);
     expect(component.prop('onClose')).toBeCalledTimes(2);
 
     // handle esc key
-    var event = new KeyboardEvent('keydown', { key: 'Esc' });
+    event = new KeyboardEvent('keydown', { key: 'Esc' });
     document.dispatchEvent(event);
     expect(component.prop('onClose')).toBeCalledTimes(3);
 
     // testing when a key besides Escape/Esc is pressed
-    var event = new KeyboardEvent('keydown', { key: 'Enter' });
+    event = new KeyboardEvent('keydown', { key: 'Enter' });
     document.dispatchEvent(event);
     expect(component.prop('onClose')).toBeCalledTimes(3);
   });

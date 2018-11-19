@@ -1,7 +1,5 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import Enzyme, { shallow } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
 import {
   Panel,
   PanelGrid,
@@ -14,8 +12,6 @@ import {
   PanelContent
 } from './Panel';
 import { Button } from '../Button/Button';
-
-Enzyme.configure({ adapter: new Adapter() });
 
 describe('<Panel />', () => {
   const panel = (
