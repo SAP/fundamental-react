@@ -531,7 +531,7 @@ export class Playground extends Component {
         }
 
         return (
-            <div class="row general">
+            <div className="row general">
                 <div className="col">{componentToGenerate}</div>
                 <div className="col">
                     <div className="schema">{data}</div>
