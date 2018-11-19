@@ -12,7 +12,7 @@ export class TabComponent extends Component {
     super(props);
     let initialStates = [];
 
-    props.ids.map(ids => {
+    props.ids.forEach(ids => {
       let obj = {};
       let id = ids.id;
       obj[id] = false;

@@ -29,7 +29,7 @@ export const TileComponent = () => {
     </TileContent>
 </Tile>
 
-<Tile isButton="true">
+<Tile isButton={true}>
     <TileMedia>
         <Image size="l" type="circle" photo="https://placeimg.com/400/400/nature"></Image>
     </TileMedia>
@@ -38,9 +38,9 @@ export const TileComponent = () => {
     </TileContent>
 </Tile>
 
-<Tile isButton="true">
+<Tile isButton={true}>
     <TileMedia>
-        <Identifier size="m" glyph="home" color="3"></Identifier>
+        <Identifier size="m" glyph="home" color={3}></Identifier>
     </TileMedia>
     <TileContent title="Tile Title">
         <p>Tile Description</p>
@@ -66,14 +66,14 @@ export const TileComponent = () => {
     </TileActions>
 </Tile>`;
 
-    const productTileCode = `<ProductTile isButton="true">
+    const productTileCode = `<ProductTile isButton={true}>
     <ProductTileMedia image="https://techne.yaas.io/images/product-thumbnail-wide.png"></ProductTileMedia>
     <ProductTileContent title="Tile Title">
         <p>Tile Description</p>
     </ProductTileContent>
 </ProductTile>
 
-<ProductTile disabled="true">
+<ProductTile disabled={true}>
     <ProductTileMedia image="https://techne.yaas.io/images/product-thumbnail-wide.png"></ProductTileMedia>
     <ProductTileContent title="Tile Title">
         <p>Tile Description</p>
@@ -98,9 +98,9 @@ export const TileComponent = () => {
             <p>Tile Description</p>
         </TileContent>
     </Tile>
-    <Tile isButton="true">
+    <Tile isButton={true}>
         <TileMedia>
-            <Identifier size="l" glyph="home" color="3"></Identifier>
+            <Identifier size="l" glyph="home" color={3}></Identifier>
         </TileMedia>
         <TileContent title="Tile Title">
         </TileContent>
@@ -134,15 +134,15 @@ export const TileComponent = () => {
             <Properties
                 type="Inputs"
                 properties={[
-                    { name: 'title', description: 'String - the title of the Tile Content' },
-                    { name: 'isButton', description: 'Bool - when set to true, renders the tile as a button.' },
-                    { name: 'disabled', description: 'Bool - when set to true, disables the tile.' },
-                    { name: 'image', description: 'String (required) - url of the image used in Product Tile.' },
-                    { name: 'rowSpan', description: 'Number - the number of rows the tile covers.' },
-                    { name: 'columnSpan', description: 'Number - the number of columns the tile covers.' },
+                    { name: 'title', description: 'string - the title of the Tile Content' },
+                    { name: 'isButton', description: 'bool - when set to true, renders the tile as a button.' },
+                    { name: 'disabled', description: 'bool - when set to true, disables the tile.' },
+                    { name: 'image', description: 'string (required) - url of the image used in Product Tile.' },
+                    { name: 'rowSpan', description: 'number - the number of rows the tile covers.' },
+                    { name: 'columnSpan', description: 'number - the number of columns the tile covers.' },
                     {
                         name: 'colorAccent',
-                        description: 'Number - applies a background color. Options include numbers from 1 to 9.'
+                        description: 'number - applies a background color. Options include numbers from 1 to 9.'
                     }
                 ]}
             />
@@ -170,7 +170,7 @@ export const TileComponent = () => {
                     <TileContent title="Tile Title" />
                 </Tile>
                 <br />
-                <Tile isButton="true">
+                <Tile isButton={true}>
                     <TileMedia>
                         <Image size="l" type="circle" photo="https://placeimg.com/400/400/nature" />
                     </TileMedia>
@@ -179,9 +179,9 @@ export const TileComponent = () => {
                     </TileContent>
                 </Tile>
                 <br />
-                <Tile isButton="true">
+                <Tile isButton={true}>
                     <TileMedia>
-                        <Identifier size="m" glyph="home" color="3" />
+                        <Identifier size="m" glyph="home" color={3} />
                     </TileMedia>
                     <TileContent title="Tile Title">
                         <p>Tile Description</p>
@@ -198,7 +198,7 @@ export const TileComponent = () => {
                     <TileContent title="Tile Title" />
                     <TileActions>
                         <Popover
-                            control={<Button type="secondary" glyph="vertical-grip" />}
+                            control={<Button option="light" glyph="vertical-grip" />}
                             body={
                                 <Menu>
                                     <MenuList>
@@ -220,7 +220,7 @@ export const TileComponent = () => {
             <h2>Product Tile</h2>
             <DocsTile>
                 <div>
-                    <ProductTile isButton="true">
+                    <ProductTile isButton={true}>
                         <ProductTileMedia image="https://techne.yaas.io/images/product-thumbnail-wide.png" />
                         <ProductTileContent title="Tile Title">
                             <p>Tile Description</p>
@@ -229,7 +229,7 @@ export const TileComponent = () => {
 
                     <br />
 
-                    <ProductTile disabled="true">
+                    <ProductTile disabled={true}>
                         <ProductTileMedia image="https://techne.yaas.io/images/product-thumbnail-wide.png" />
                         <ProductTileContent title="Tile Title">
                             <p>Tile Description</p>
@@ -264,9 +264,9 @@ export const TileComponent = () => {
                             <p>Tile Description</p>
                         </TileContent>
                     </Tile>
-                    <Tile isButton="true">
+                    <Tile isButton={true}>
                         <TileMedia>
-                            <Identifier size="l" glyph="home" color="3" />
+                            <Identifier size="l" glyph="home" color={3} />
                         </TileMedia>
                         <TileContent title="Tile Title" />
                     </Tile>

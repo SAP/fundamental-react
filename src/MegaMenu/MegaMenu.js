@@ -22,7 +22,7 @@ export class MegaMenuList extends Component {
 
         let initialState = [];
 
-        props.items.map(item => {
+        props.items.forEach(item => {
             if (item.hasChild) {
                 let id = item.id;
                 let obj = {};
@@ -107,26 +107,30 @@ export class MegaMenuList extends Component {
                                         {item.child.map(ch => {
                                             return (
                                                 <li className="fd-mega-menu__subitem" key={ch.id}>
-                                                   {ch.link ? ( <Link
-                                                        className={`fd-mega-menu__sublink${
-                                                            this.state.selectedItem === ch.id ? ' is-selected' : ''
-                                                        }`}
-                                                        to={{ pathname: ch.link }}
-                                                        key={ch.id}
-                                                        onClick={e => this.handleSelectChild(e, ch.id)}
-                                                    >
-                                                        {ch.name}
-                                                    </Link>) : null}
-                                                    {ch.url ? ( <a
-                                                        className={`fd-mega-menu__sublink${
-                                                            this.state.selectedItem === ch.id ? ' is-selected' : ''
-                                                        }`}
-                                                        href={ch.url}
-                                                        key={ch.id}
-                                                        onClick={e => this.handleSelectChild(e, ch.id)}
-                                                    >
-                                                        {ch.name}
-                                                    </a>) : null}
+                                                    {ch.link ? (
+                                                        <Link
+                                                            className={`fd-mega-menu__sublink${
+                                                                this.state.selectedItem === ch.id ? ' is-selected' : ''
+                                                            }`}
+                                                            to={{ pathname: ch.link }}
+                                                            key={ch.id}
+                                                            onClick={e => this.handleSelectChild(e, ch.id)}
+                                                        >
+                                                            {ch.name}
+                                                        </Link>
+                                                    ) : null}
+                                                    {ch.url ? (
+                                                        <a
+                                                            className={`fd-mega-menu__sublink${
+                                                                this.state.selectedItem === ch.id ? ' is-selected' : ''
+                                                            }`}
+                                                            href={ch.url}
+                                                            key={ch.id}
+                                                            onClick={e => this.handleSelectChild(e, ch.id)}
+                                                        >
+                                                            {ch.name}
+                                                        </a>
+                                                    ) : null}
                                                 </li>
                                             );
                                         })}
