@@ -76,7 +76,7 @@ export class InputGroup extends Component {
               type="number"
               id={inputId}
               name={inputName}
-              value={this.state.value}
+              defaultValue={this.state.value}
             />
             <span className="fd-input-group__addon fd-input-group__addon--button fd-input-group__addon--after">
               <button
@@ -105,7 +105,7 @@ export class InputGroup extends Component {
               type="search"
               id={inputId}
               name={inputName}
-              value={this.state.searchValue}
+              defaultValue={this.state.searchValue}
               placeholder={inputPlaceholder}
               onChange={this.handleChange}
             />
@@ -148,7 +148,7 @@ export class InputGroup extends Component {
                 type="text"
                 id={inputId}
                 name={inputName}
-                value={inputValue}
+                defaultValue={inputValue}
               />
             </div>
           );
@@ -164,7 +164,7 @@ export class InputGroup extends Component {
                 type="text"
                 id={inputId}
                 name={inputName}
-                value={inputValue}
+                defaultValue={inputValue}
               />
               {actions ? (
                 <span className="fd-input-group__addon fd-input-group__addon--button fd-input-group__addon--after">
@@ -191,12 +191,12 @@ export class InputGroup extends Component {
 }
 
 InputGroup.propTypes = {
-  inputType: PropTypes.string,
+  inputType: PropTypes.oneOf(['text', 'number', 'search']),
   inputId: PropTypes.string,
   inputName: PropTypes.string,
   inputValue: PropTypes.any,
   inputPlaceholder: PropTypes.string,
-  addonPos: PropTypes.string,
+  addonPos: PropTypes.oneOf(['before', 'after']),
   addon: PropTypes.string,
   glyph: PropTypes.string,
   actions: PropTypes.bool,
