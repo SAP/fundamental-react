@@ -18,7 +18,8 @@ export const ActionBar = props => {
 };
 
 ActionBar.propTypes = {
-    mobile: PropTypes.bool
+    mobile: PropTypes.bool,
+    width: PropTypes.string
 };
 
 export const ActionBarBack = props => {
