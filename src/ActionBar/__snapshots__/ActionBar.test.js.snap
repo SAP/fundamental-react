@@ -5,29 +5,29 @@ exports[`<ActionBar /> create basic Action Bar 1`] = `
   className="fd-action-bar"
 >
   <div
-    class="fd-action-bar__back"
+    className="fd-action-bar__back"
   >
     <button
-      class="fd-button--light fd-button--compact sap-icon--nav-back"
+      className="fd-button--light fd-button--compact sap-icon--nav-back"
     />
   </div>
   <div
-    class="fd-action-bar__header"
+    className="fd-action-bar__header"
   >
     <h1
-      class="fd-action-bar__title"
+      className="fd-action-bar__title"
     >
       Page Title
     </h1>
     <p
-      class="fd-action-bar__description"
+      className="fd-action-bar__description"
     >
       Action Bar Description
        
     </p>
   </div>
   <div
-    class="fd-action-bar__actions"
+    className="fd-action-bar__actions"
   >
     <button>
       Button
@@ -48,29 +48,29 @@ exports[`<ActionBar /> create basic mobile Action Bar 1`] = `
     className="fd-action-bar"
   >
     <div
-      class="fd-action-bar__back"
+      className="fd-action-bar__back"
     >
       <button
-        class="fd-button--light fd-button--compact sap-icon--nav-back"
+        className="fd-button--light fd-button--compact sap-icon--nav-back"
       />
     </div>
     <div
-      class="fd-action-bar__header"
+      className="fd-action-bar__header"
     >
       <h1
-        class="fd-action-bar__title"
+        className="fd-action-bar__title"
       >
         Page Title
       </h1>
       <p
-        class="fd-action-bar__description"
+        className="fd-action-bar__description"
       >
         Action Bar Description
          
       </p>
     </div>
     <div
-      class="fd-action-bar__actions"
+      className="fd-action-bar__actions"
     >
       <button>
         Button
