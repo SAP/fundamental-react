@@ -47,3 +47,15 @@ exports[`<InlineHelp /> create default InlineHelp component 1`] = `
   </span>
 </span>
 `;
+
+exports[`<InlineHelp /> create Bottom Center InlineHelp component 1`] = `
+<span
+  className="fd-inline-help"
+>
+  <span
+    className="fd-inline-help__content fd-inline-help__content--bottom-center"
+  >
+    Lorem ipsum dolor sit amet, consectetur adipiscing.
+  </span>
+</span>
+`;

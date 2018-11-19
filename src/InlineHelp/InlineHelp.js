@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 export const InlineHelp = props => {
   const { text, placement } = props;
@@ -12,3 +13,11 @@ export const InlineHelp = props => {
     </span>
   );
 };
+
+
+InlineHelp.propTypes = {
+  placement: PropTypes.oneOf([
+    'bottom-right', 'bottom-left', 'right', 'left', 'bottom-center'
+  ]).isRequired,
+  text: PropTypes.string.isRequired
+}
