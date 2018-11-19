@@ -30,7 +30,6 @@ export class Tree extends Component {
 
     openAllList(treeData, e, numberOfElements = 0) {
         let modifiedStates = this.state.iStates;
-
         if (this.state.numberOfElements === 0) {
             treeData.forEach(row => {
                 row.values.forEach(element => {
@@ -40,6 +39,7 @@ export class Tree extends Component {
                     this.openAllList(row.children, numberOfElements);
                 }
             });
+
 
             for (let i = 0; i <= numberOfElements; i++) {
                 if (!this.state.expandAllClicked) {
