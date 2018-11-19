@@ -340,7 +340,7 @@ exports[`<SideNavigation /> create side navigation 3`] = `
     >
       <a
         className="fd-side-nav__link"
-        href="#"
+        href="/"
         onClick={[Function]}
       >
         Link Item
@@ -645,7 +645,7 @@ exports[`<SideNavigation /> create side navigation 6`] = `
   >
     <a
       className="fd-side-nav__link"
-      href="#"
+      href="/"
       onClick={[Function]}
     >
       Link Item
