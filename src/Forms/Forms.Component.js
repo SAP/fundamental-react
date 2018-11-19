@@ -68,7 +68,7 @@ export const FormsComponent = () => {
     <FormItem>
         <FormLabel forAttr="input-5">Input with Help Message</FormLabel>
         <FormInput type="text" id="input-5" />
-        <FormMessage type="help">
+        <FormMessage msgType="help">
             Pellentesque metus lacus commodo eget justo ut rutrum varius nunc
         </FormMessage>
     </FormItem>
@@ -93,7 +93,7 @@ export const FormsComponent = () => {
     <FormItem>
         <FormLabel forAttr="OatmD554">Invalid Input</FormLabel>
         <FormInput type="text" state="invalid" id="OatmD554" placeholder="Field placeholder text" />
-        <FormMessage type="error">
+        <FormMessage msgType="error">
             Pellentesque metus lacus commodo eget justo ut rutrum varius nunc
         </FormMessage>
     </FormItem>
@@ -103,7 +103,7 @@ export const FormsComponent = () => {
     <FormItem>
         <FormLabel forAttr="OatmD555">Warning Input</FormLabel>
         <FormInput type="text" state="warning" id="OatmD555" placeholder="Field placeholder text" />
-        <FormMessage type="warning">
+        <FormMessage msgType="warning">
             Pellentesque metus lacus commodo eget justo ut rutrum varius nunc
         </FormMessage>
     </FormItem>
@@ -113,7 +113,7 @@ export const FormsComponent = () => {
     <FormItem>
         <FormLabel forAttr="OatmD556">Field Label</FormLabel>
         <FormInput type="text" state="help" id="OatmD556" placeholder="Field placeholder text" />
-        <FormMessage type="help">
+        <FormMessage msgType="help">
             Pellentesque metus lacus commodo eget justo ut rutrum varius nunc
         </FormMessage>
     </FormItem>
@@ -291,7 +291,7 @@ export const FormsComponent = () => {
                         description: "bool - set to 'true' for required input fields. Used in FormLabel."
                     },
                     {
-                        name: 'type',
+                        name: 'msgType',
                         description:
                             "string - when used in FormMessage this property sets the type of the message. The options include 'error', 'warning', and 'help'."
                     },
@@ -388,7 +388,7 @@ export const FormsComponent = () => {
                     <FormItem>
                         <FormLabel forAttr="input-5">Input with Help Message</FormLabel>
                         <FormInput type="text" id="input-5" />
-                        <FormMessage type="help">
+                        <FormMessage msgType="help">
                             Pellentesque metus lacus commodo eget justo ut rutrum varius nunc
                         </FormMessage>
                     </FormItem>
@@ -434,7 +434,7 @@ export const FormsComponent = () => {
                     <FormItem>
                         <FormLabel forAttr="OatmD554">Invalid Input</FormLabel>
                         <FormInput type="text" state="invalid" id="OatmD554" placeholder="Field placeholder text" />
-                        <FormMessage type="error">
+                        <FormMessage msgType="error">
                             Pellentesque metus lacus commodo eget justo ut rutrum varius nunc
                         </FormMessage>
                     </FormItem>
@@ -444,7 +444,7 @@ export const FormsComponent = () => {
                     <FormItem>
                         <FormLabel forAttr="OatmD555">Warning Input</FormLabel>
                         <FormInput type="text" state="warning" id="OatmD555" placeholder="Field placeholder text" />
-                        <FormMessage type="warning">
+                        <FormMessage msgType="warning">
                             Pellentesque metus lacus commodo eget justo ut rutrum varius nunc
                         </FormMessage>
                     </FormItem>
@@ -454,7 +454,7 @@ export const FormsComponent = () => {
                     <FormItem>
                         <FormLabel forAttr="OatmD556">Field Label</FormLabel>
                         <FormInput type="text" state="help" id="OatmD556" placeholder="Field placeholder text" />
-                        <FormMessage type="help">
+                        <FormMessage msgType="help">
                             Pellentesque metus lacus commodo eget justo ut rutrum varius nunc
                         </FormMessage>
                     </FormItem>

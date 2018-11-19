@@ -41,7 +41,7 @@ describe('<Forms />', () => {
         <FormTextarea id="textarea-1">
           Pellentesque metus lacus commodo eget justo ut rutrum varius nunc.
         </FormTextarea>
-        <FormMessage type="help">
+        <FormMessage msgType="help">
           Pellentesque metus lacus commodo eget justo ut rutrum varius nunc
         </FormMessage>
         <FormMessage>
