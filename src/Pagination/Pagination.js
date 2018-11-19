@@ -59,9 +59,9 @@ export class Pagination extends Component {
       .map((link, index) => (
         <a
           key={index}
-          href="#"
+          href={link}
           className="fd-pagination__link"
-          aria-selected={this.state.selectedPage === index + 1}
+          selected={this.state.selectedPage === index + 1}
           onClick={this.pageClicked}
         >
           {index + 1}

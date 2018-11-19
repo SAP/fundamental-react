@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Alert } from '../../';
 import { Badge, Label, Status } from '../../';
-import { Button, ButtonGroup } from '../../';
+import { Button } from '../../';
 import { Dropdown } from '../../';
 import { Icon } from '../../';
 import { Identifier } from '../../';
@@ -100,7 +100,7 @@ export class Playground extends Component {
     retrieveValue(attribute, defaultValue, lists) {
         let value = defaultValue;
         if (lists.length > 0) {
-            lists.map(element => {
+            lists.forEach(element => {
                 if (attribute in element) {
                     value = element[attribute];
                 }
@@ -113,13 +113,13 @@ export class Playground extends Component {
         let childsProperties = Object.assign({}, this.state.childs);
 
         if ('ids' in childsProperties.children.props) {
-            childsProperties.children.props.ids.map(element => {
+            childsProperties.children.props.ids.forEach(element => {
                 if (event.target.name === element.id) {
                     element.name = event.target.value;
                 }
             });
         } else if ('links' in childsProperties.children.props) {
-            childsProperties.children.props.links.map(element => {
+            childsProperties.children.props.links.forEach(element => {
                 if (event.target.name === element.id) {
                     element.name = event.target.value;
                 }
@@ -135,13 +135,13 @@ export class Playground extends Component {
         let childsProperties = Object.assign({}, this.state.childs);
 
         if ('ids' in childsProperties.children.props) {
-            childsProperties.children.props.ids.map(element => {
+            childsProperties.children.props.ids.forEach(element => {
                 if (event.target.name === element.id) {
                     element.content = event.target.value;
                 }
             });
         } else if ('links' in childsProperties.children.props) {
-            childsProperties.children.props.links.map(element => {
+            childsProperties.children.props.links.forEach(element => {
                 if (event.target.name === element.id) {
                     element.content = event.target.value;
                 }

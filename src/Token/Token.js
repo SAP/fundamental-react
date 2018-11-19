@@ -1,5 +1,5 @@
 import React from 'react';
-
+import PropTypes from 'prop-types';
 
 export const Token = (props) => {
     const { children, clickHandler } = props;
@@ -9,3 +9,7 @@ export const Token = (props) => {
         </span>
     );
 }
+
+Token.propTypes = {
+    clickHandler: PropTypes.func
+};

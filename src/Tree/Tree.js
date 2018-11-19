@@ -32,14 +32,13 @@ export class Tree extends Component {
     let modifiedStates = this.state.iStates;
 
     if (this.state.numberOfElements === 0) {
-      treeData.map(row => {
+      treeData.forEach(row => {
         row.values.forEach(element => {
           ++numberOfElements;
         });
         if (row.hasChildren) {
           this.openAllList(row.children, numberOfElements);
         }
-        return;
       });
 
       for (let i = 0; i <= numberOfElements; i++) {
