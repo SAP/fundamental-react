@@ -30,7 +30,7 @@ export const ImageComponent = () => {
                             "String (required)- the size of the image. Size options include 's' (24x24), 'm' (36x36), and 'l' (48x48)."
                     },
                     { name: 'photo', description: 'String (required) - picture url.' },
-                    { name: 'type', description: 'String - When set to true renders a round image.' }
+                    { name: 'type', description: "String - When set to 'circle' renders a round image." }
                 ]}
             />
 
@@ -38,7 +38,7 @@ export const ImageComponent = () => {
 
             <h2>Sizes</h2>
             <DocsTile centered>
-                <div class="fd-doc__margin">
+                <div className="fd-doc__margin">
                     <Image size="s" photo="https://placeimg.com/400/400/nature" />
                     <Image size="m" photo="https://placeimg.com/400/400/nature" />
                     <Image size="l" photo="https://placeimg.com/400/400/nature" />
@@ -50,7 +50,7 @@ export const ImageComponent = () => {
 
             <h2>Shapes</h2>
             <DocsTile centered>
-                <div class="fd-doc__margin">
+                <div className="fd-doc__margin">
                     <Image size="s" type="circle" photo="https://placeimg.com/400/400/nature" />
                     <Image size="m" type="circle" photo="https://placeimg.com/400/400/nature" />
                     <Image size="l" type="circle" photo="https://placeimg.com/400/400/nature" />
