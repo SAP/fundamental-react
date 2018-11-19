@@ -37,7 +37,7 @@ describe('<SideNavigation />', () => {
             { id: 'subitem-44', url: '#', name: 'Item 4' }
           ]
         },
-        { id: 'item-5', url: '#', name: 'Link Item' }
+        { id: 'item-5', link: '/', name: 'Link Item' }
       ]}
     />
   );
@@ -159,29 +159,38 @@ describe('<SideNavigation />', () => {
   });
 
   test('handle side nav list link click', () => {
-    const wrapper = mount(sideNavList);
+    const wrapper = mount(subSideNavList);
 
-    expect(wrapper.state('itemStates')).toEqual([]);
+    expect(wrapper.state('itemStates')).toEqual([
+      { 'item-2': false },
+      { 'item-4': false }
+    ]);
     expect(wrapper.state('selectedItem')).toEqual('item_2');
 
     wrapper
       .find('.fd-side-nav__link')
-      .at(0)
-      .simulate('click');
-
-    expect(wrapper.state('itemStates')).toEqual({ 'item-1': true });
-    expect(wrapper.state('selectedItem')).toEqual('item-1');
-
-    wrapper
-      .find('.fd-side-nav__link')
-      .at(5)
+      .at(1)
       .simulate('click');
 
     expect(wrapper.state('itemStates')).toEqual({
-      'item-1': true,
-      'item-6': true
+      '0': { 'item-2': false },
+      '1': { 'item-4': false },
+      'item-2': true
     });
-    expect(wrapper.state('selectedItem')).toEqual('item-6');
+    expect(wrapper.state('selectedItem')).toEqual('item-2');
+
+    wrapper
+      .find('.fd-side-nav__link')
+      .at(4)
+      .simulate('click');
+
+    expect(wrapper.state('itemStates')).toEqual({
+      '0': { 'item-2': false },
+      '1': { 'item-4': false },
+      'item-2': true,
+      'item-4': true
+    });
+    expect(wrapper.state('selectedItem')).toEqual('item-4');
   });
 
   test('handle side nav sub link click', () => {

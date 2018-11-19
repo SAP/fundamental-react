@@ -112,6 +112,13 @@ exports[`<MegaMenu /> create mega menu 1`] = `
       </li>
     </ul>
   </div>
+</nav>
+`;
+
+exports[`<MegaMenu /> create mega menu 2`] = `
+<nav
+  className="fd-mega-menu"
+>
   <div
     className="fd-mega-menu__group"
   >
