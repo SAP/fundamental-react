@@ -68,6 +68,7 @@ describe('<Alert />', () => {
     test('create non-dismissable alert', () => {
         const component = renderer.create(nonDismissableAlert);
         const tree = component.toJSON();
+
         expect(tree).toMatchSnapshot();
 
         // const wrapper = shallow(basicAlert);
