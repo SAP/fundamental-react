@@ -41,7 +41,7 @@ export const AlertComponent = () => {
                     {
                         name: 'type',
                         description:
-                            "String - Determines the type of alert - 'error' (red) or 'warning' (orange). Defaults to white if no type is provided."
+                            "string - Determines the type of alert - 'error' (red) or 'warning' (orange). Defaults to white if no type is provided."
                     },
                     {
                         name: 'dismissible',

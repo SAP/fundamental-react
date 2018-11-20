@@ -36,11 +36,11 @@ export const IdentifierComponent = () => {
 
             <Properties type="Inputs" properties=
             {[
-                {name: 'size', description: 'String - Three sizes are available: s (small) - 24px, m (medium) - 36px, and l  (large) - 48px.'}, 
-                {name: 'glyph', description: 'String - The name of the icon to include. See the icon page for the list of icons.'},
-                {name: 'label', description: 'String - Label text'},
-                {name: 'modifier', description: 'String - Can be \'circle\' or \'transparent\'.'},
-                {name: 'color', description: 'Number - Applies a background color. Options include numbers from 1 to 9'}
+                {name: 'size', description: 'string (required)- Three sizes are available: s (small) - 24px, m (medium) - 36px, and l  (large) - 48px.'}, 
+                {name: 'glyph', description: 'string - The name of the icon to include. See the icon page for the list of icons.'},
+                {name: 'label', description: 'string - Label text'},
+                {name: 'modifier', description: 'string - Can be \'circle\' or \'transparent\'.'},
+                {name: 'color', description: 'number - Applies a background color. Options include numbers from 1 to 9'}
                 
             ]}/>
             

@@ -44,8 +44,8 @@ export const ToggleComponent = () => {
             <Properties
                 type="Inputs"
                 properties={[
-                    { name: 'size', description: 'String - The size of the toggle.' },
-                    { name: 'id', description: 'String - The id of the toggle.' }
+                    { name: 'size', description: 'string - The size of the toggle.' },
+                    { name: 'id', description: 'string - The id of the toggle.' }
                 ]}
             />
 

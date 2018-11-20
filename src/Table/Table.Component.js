@@ -134,11 +134,11 @@ export const TableComponent = () => {
             <Properties
                 type="Inputs"
                 properties={[
-                    { name: 'headers', description: 'Array of strings for the column headers of the table' },
+                    { name: 'headers', description: 'array of strings for the column headers of the table' },
                     {
                         name: 'tableData',
                         description:
-                            'Array of objects that contain two properties, rowData (an array of strings containing data for each column in the row), and children (an array of objects containing additional rows).'
+                            'array of objects that contain two properties, rowData (an array of strings containing data for each column in the row), and children (an array of objects containing additional rows).'
                     }
                 ]}
             />

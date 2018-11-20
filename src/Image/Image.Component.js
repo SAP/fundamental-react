@@ -27,10 +27,10 @@ export const ImageComponent = () => {
                     {
                         name: 'size',
                         description:
-                            "String (required)- the size of the image. Size options include 's' (24x24), 'm' (36x36), and 'l' (48x48)."
+                            "string (required)- the size of the image. Size options include 's' (24x24), 'm' (36x36), and 'l' (48x48)."
                     },
-                    { name: 'photo', description: 'String (required) - picture url.' },
-                    { name: 'type', description: "String - When set to 'circle' renders a round image." }
+                    { name: 'photo', description: 'string (required) - picture url.' },
+                    { name: 'type', description: "string - When set to 'circle' renders a round image." }
                 ]}
             />
 
