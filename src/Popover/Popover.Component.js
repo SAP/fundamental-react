@@ -146,7 +146,7 @@ export const PopoverComponent = () => {
 
                 <Popover
                     id="jhqD0557"
-                    control={<Identifier size="m" glyph="money-bills" color="6" />}
+                    control={<Identifier size="m" glyph="money-bills" color={6} />}
                     noArrow
                     body={
                         <Menu>
