@@ -76,7 +76,7 @@ export class InputGroup extends Component {
               type="number"
               id={inputId}
               name={inputName}
-              defaultValue={this.state.value}
+              value={this.state.value}
             />
             <span className="fd-input-group__addon fd-input-group__addon--button fd-input-group__addon--after">
               <button
@@ -105,7 +105,7 @@ export class InputGroup extends Component {
               type="search"
               id={inputId}
               name={inputName}
-              defaultValue={this.state.searchValue}
+              value={this.state.searchValue}
               placeholder={inputPlaceholder}
               onChange={this.handleChange}
             />
@@ -148,7 +148,7 @@ export class InputGroup extends Component {
                 type="text"
                 id={inputId}
                 name={inputName}
-                defaultValue={inputValue}
+                value={inputValue}
               />
             </div>
           );
@@ -164,7 +164,7 @@ export class InputGroup extends Component {
                 type="text"
                 id={inputId}
                 name={inputName}
-                defaultValue={inputValue}
+                value={inputValue}
               />
               {actions ? (
                 <span className="fd-input-group__addon fd-input-group__addon--button fd-input-group__addon--after">
