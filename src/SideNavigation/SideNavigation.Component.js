@@ -105,26 +105,26 @@ export const SideNavigationComponent = () => {
                 properties={[
                     {
                         name: 'icons',
-                        description: "Bool - when set to 'true' enables side navigation collapsed with icons."
+                        description: "bool - when set to 'true' enables side navigation collapsed with icons."
                     },
                     {
                         name: 'items',
                         description:
-                            "Array - an array of objects with keys 'id', 'url', 'name', 'hasChild', 'child', and 'glyph' setting the attributes of the items."
+                            "array - an array of objects with keys 'id', 'url', 'name', 'hasChild', 'child', and 'glyph' setting the attributes of the items."
                     },
-                    { name: 'id', description: "String - the 'id' of the link." },
-                    { name: 'url', description: "String - the 'url' of the link." },
-                    { name: 'name', description: "String - the 'name' of the link." },
+                    { name: 'id', description: "string - the 'id' of the link." },
+                    { name: 'url', description: "string - the 'url' of the link." },
+                    { name: 'name', description: "string - the 'name' of the link." },
                     {
                         name: 'hasChild',
-                        description: "Bool - when set to 'true' enables a second level of navigation."
+                        description: "bool - when set to 'true' enables a second level of navigation."
                     },
                     {
                         name: 'child',
                         description:
-                            "Array - an array of objects with keys 'id', 'url', and 'name' setting the attributes of the subitems"
+                            "array - an array of objects with keys 'id', 'url', and 'name' setting the attributes of the subitems"
                     },
-                    { name: 'glyph', description: 'String - the name of the icon for navigation list with icons.' }
+                    { name: 'glyph', description: 'string - the name of the icon for navigation list with icons.' }
                 ]}
             />
 

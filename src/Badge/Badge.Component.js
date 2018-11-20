@@ -69,17 +69,17 @@ export const BadgeComponent = () => {
           {
             name: 'type',
             description:
-              "String - The type indicates the status of the badge/label. Options include 'default', 'success', 'warning', and 'error'. Leave empty for default. For status label with build in status icons use the 'available', 'away', 'busy' and 'offline'."
+              "string - The type indicates the status of the badge/label. Options include 'default', 'success', 'warning', and 'error'. Leave empty for default. For status label with build in status icons use the 'available', 'away', 'busy' and 'offline'."
           },
           {
             name: 'modifier',
             description:
-              "String - Modifiers can be 'pill' and 'filled'. Leave empty for normal."
+              "string - Modifiers can be 'pill' and 'filled'. Leave empty for normal."
           },
           {
             name: 'glyph',
             description:
-              'String - The icon to include in the status indicator. See the icon page for the list of icons.'
+              'string - The icon to include in the status indicator. See the icon page for the list of icons.'
           }
         ]}
       />

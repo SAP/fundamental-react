@@ -67,22 +67,22 @@ export class MultiInputComponent extends Component {
             {
               name: 'data',
               description:
-                'Array (Required) - Collection of items to display in the list.'
+                'array (Required) - Collection of items to display in the list.'
             },
             {
               name: 'placeHolder',
               description:
-                'String - The text to use as placeholder when no text is entered.'
+                'string - The text to use as placeholder when no text is entered.'
             },
             {
               name: 'onTagsUpdate',
               description:
-                'Func - Method to fire on add or remove of tag. Component returns array of tags selected.'
+                'func - Method to fire on add or remove of tag. Component returns array of tags selected.'
             },
             {
               name: 'compact',
               description:
-                'Bool - true: display compact style, false: default style'
+                'bool - true: display compact style, false: default style'
             }
           ]}
         />

@@ -67,20 +67,20 @@ export const MenuComponent = () => {
             <Properties
                 type="Inputs"
                 properties={[
-                    { name: 'url', description: "String - href attribute of <a> tag. Use either 'url' or 'link'" },
-                    { name: 'link', description: "String - a router link. Use either 'url' or 'link'" },
-                    { name: 'separator', description: 'Bool - when set to true, adds a horizontal line (separator).' },
+                    { name: 'url', description: "string - href attribute of <a> tag. Use either 'url' or 'link'" },
+                    { name: 'link', description: "string - a router link. Use either 'url' or 'link'" },
+                    { name: 'separator', description: 'bool - when set to true, adds a horizontal line (separator).' },
                     {
                         name: 'title',
-                        description: 'String - group header title.'
+                        description: 'string - group header title.'
                     },
                     {
                         name: 'addonBefore',
-                        description: 'Bool - when set to true, enables menu items with addon before.'
+                        description: 'bool - when set to true, enables menu items with addon before.'
                     },
                     {
                         name: 'addon',
-                        description: 'String - the name of the SAP icon to be applied as an addon before.'
+                        description: 'string - the name of the SAP icon to be applied as an addon before.'
                     }
                 ]}
             />

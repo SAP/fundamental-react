@@ -22,7 +22,7 @@ export class SideNavList extends Component {
 
     let initialState = [];
 
-    props.items.map(item => {
+    props.items.forEach(item => {
       if (item.hasChild) {
         let id = item.id;
         let obj = {};

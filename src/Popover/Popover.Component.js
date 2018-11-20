@@ -88,11 +88,11 @@ export const PopoverComponent = () => {
                 properties={[
                     {
                         name: 'control',
-                        description: 'Component - Control element to toggle the display of the popover.'
+                        description: 'component - Control element to toggle the display of the popover.'
                     },
                     {
                         name: 'body',
-                        description: 'Component - Wrapper that contains the popover content.'
+                        description: 'component - Wrapper that contains the popover content.'
                     },
                     {
                         name: 'noArrow',
@@ -146,7 +146,7 @@ export const PopoverComponent = () => {
 
                 <Popover
                     id="jhqD0557"
-                    control={<Identifier size="m" glyph="money-bills" color="6" />}
+                    control={<Identifier size="m" glyph="money-bills" color={6} />}
                     noArrow
                     body={
                         <Menu>

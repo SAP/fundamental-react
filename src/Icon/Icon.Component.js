@@ -667,11 +667,11 @@ export const IconComponent = () => {
       <Properties
         type="Inputs"
         properties={[
-          { name: 'glyph', description: 'String (required) - Icon name.' },
+          { name: 'glyph', description: 'string (required) - Icon name.' },
           {
             name: 'size',
             description:
-              "String - Size of the icon. Options include 'xs', 's', 'compact', and 'l'. If no size is provided, default (normal) will be used."
+              "string - Size of the icon. Options include 'xs', 's', 'compact', and 'l'. If no size is provided, default (normal) will be used."
           }
         ]}
       />

@@ -36,32 +36,32 @@ export const PaginationComponent = () => {
           {
             name: 'itemsTotal',
             description:
-              'Number (required) - Total number of items. itemsTotal / itemsPerPage calculates how many navigation items should be shown in the control.'
+              'number (required) - Total number of items. itemsTotal / itemsPerPage calculates how many navigation items should be shown in the control.'
           },
           {
             name: 'onClick',
             description:
-              'Func (required) - Function to execute on click of page number, previous or next indicator. Page number value is sent to function.'
+              'func (required) - Function to execute on click of page number, previous or next indicator. Page number value is sent to function.'
           },
           {
             name: 'itemsPerPage',
             description:
-              'Number (default: 10) - Number of items to display on page.'
+              'number (default: 10) - Number of items to display on page.'
           },
           {
             name: 'initialPage',
             description:
-              'Number (default: page 1) - Initial page to be selected.'
+              'number (default: page 1) - Initial page to be selected.'
           },
           {
             name: 'displayTotal',
             description:
-              'Boolean (default: true) - Boolean value for whether or not to show total number of items. true - show total number and totalText string, false - hide total number and totalText string.'
+              'bool (default: true) - Boolean value for whether or not to show total number of items. true - show total number and totalText string, false - hide total number and totalText string.'
           },
           {
             name: 'totalText',
             description:
-              'String (default: "items") - String to display next to the total number of items.'
+              'string (default: "items") - String to display next to the total number of items.'
           }
         ]}
       />
