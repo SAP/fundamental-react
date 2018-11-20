@@ -165,22 +165,22 @@ export class SearchInputComponent extends Component {
             {
               name: 'onSearch',
               description:
-                'Func (Required) - Method to execute on click of Search icon, selection of auto-complete item or by pressing the Enter key.'
+                'func (Required) - Method to execute on click of Search icon, selection of auto-complete item or by pressing the Enter key.'
             },
             {
               name: 'placeHolder',
               description:
-                'String - The text to use as placeholder when no text is entered.'
+                'string - The text to use as placeholder when no text is entered.'
             },
             {
               name: 'data',
               description:
-                'Array - Collection of items to display in auto-complete list.'
+                'array - Collection of items to display in auto-complete list.'
             },
             {
               name: 'onAutoComplete',
               description:
-                'Func - Method that receives search input box text, to perform auto complete query.'
+                'func - Method that receives search input box text, to perform auto complete query.'
             }
           ]}
         />

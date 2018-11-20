@@ -50,34 +50,34 @@ export const TimeComponent = () => {
         properties={[
           {
             name: 'id',
-            description: 'String - Id for time component'
+            description: 'string - Id for time component'
           },
           {
             name: 'showHour',
-            description: 'Bool - Enables the input for hours. Default true '
+            description: 'bool - Enables the input for hours. Default true '
           },
           {
             name: 'showMinute',
-            description: 'Bool - Enables the input for minutes. Default true '
+            description: 'bool - Enables the input for minutes. Default true '
           },
           {
             name: 'showSecond:',
-            description: 'Bool - Enables the input seconds. Default true'
+            description: 'bool - Enables the input seconds. Default true'
           },
           {
             name: 'disabled',
             description:
-              'Bool - Disables the time component, the inputs will be readonly'
+              'bool - Disables the time component, the inputs will be readonly'
           },
           {
             name: 'format12Hours',
             description:
-              'Bool - When set to true, uses the 12 hour clock (hours ranging from 01 to 12) and it displays a period control. Default is false'
+              'bool - When set to true, uses the 12 hour clock (hours ranging from 01 to 12) and it displays a period control. Default is false'
           },
           {
             name: 'time',
             description:
-              'Object - The time component values , contains four properties: hour with values from 01 to 12 when format12Hours is true or 00 to 23 when format12Hours is false, minute with values from 00 to 59, second with values from 00 to 59, meridiem with values 0(am), 1(pm)'
+              'object - The time component values , contains four properties: hour with values from 01 to 12 when format12Hours is true or 00 to 23 when format12Hours is false, minute with values from 00 to 59, second with values from 00 to 59, meridiem with values 0(am), 1(pm)'
           }
         ]}
       />
