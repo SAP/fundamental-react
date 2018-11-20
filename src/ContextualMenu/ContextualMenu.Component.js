@@ -1,5 +1,5 @@
 import React from 'react';
-import { DocsTile, DocsText, Separator, Header, Description, Import, Properties } from '..';
+import { DocsTile, DocsText, Separator, Header, Description } from '..';
 import { Popover, Button, Menu, MenuList, MenuItem } from '..';
 
 export const ContextualMenuComponent = () => {

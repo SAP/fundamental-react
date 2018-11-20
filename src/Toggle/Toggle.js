@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
 export class Toggle extends React.Component {
@@ -17,7 +17,7 @@ export class Toggle extends React.Component {
 
         return (
             <div className="fd-form__item fd-form__item--check">
-                <label className="fd-form__label" for={id}>
+                <label className="fd-form__label" htmlFor={id}>
                     <span className={`fd-toggle${size ? ' fd-toggle--' + size : ''} fd-form__control`}>
                         <input
                             type="checkbox"
@@ -36,6 +36,7 @@ export class Toggle extends React.Component {
 }
 
 Toggle.propTypes = {
-    size: PropTypes.string,
-    id: PropTypes.string
+    size: PropTypes.oneOf(['', 'xs', 's', 'l']),
+    id: PropTypes.string,
+    disabled: PropTypes.bool
 };
