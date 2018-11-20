@@ -33,7 +33,7 @@ export class Tree extends Component {
 
     if (this.state.numberOfElements === 0) {
       treeData.map(row => {
-        row.values.map(element => {
+        row.values.forEach(element => {
           ++numberOfElements;
         });
         if (row.hasChildren) {
@@ -217,5 +217,14 @@ export class Tree extends Component {
   }
 }
 Tree.propTypes = {
+  headers: PropTypes.arrayOf(PropTypes.string),
+  treeData: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      hasChildren: PropTypes.bool,
+      values: PropTypes.array.isRequired,
+      children: PropTypes.array
+    }).isRequired
+  ).isRequired,
   id: PropTypes.string
 };
