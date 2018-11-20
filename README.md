@@ -1,9 +1,9 @@
 # Fundamental-react
-
 React.JS components for [SAP Fiori Fundamentals](https://github.com/SAP/fundamental)
 
 - [Playground](https://sap.github.io/fundamental-react/)
 - [npm package fundamental-react](https://www.npmjs.com/package/fundamental-react)
+- [![Build Status](https://travis-ci.org/SAP/fundamental-react.svg?branch=develop)](https://travis-ci.org/SAP/fundamental-react)
 
 ## Description
 
