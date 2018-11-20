@@ -20,8 +20,8 @@ export const Identifier = props => {
 
 Identifier.propTypes = {
   glyph: PropTypes.string,
-  size: PropTypes.string,
-  modifier: PropTypes.string,
-  color: PropTypes.number,
+  size: PropTypes.oneOf(['s', 'm', 'l']).isRequired,
+  modifier: PropTypes.oneOf(['', 'circle', 'transparent']),
+  color: PropTypes.oneOf([1, 2, 3, 4, 5, 6, 7, 8, 9]),
   label: PropTypes.string
 };

@@ -163,7 +163,7 @@ export const ButtonComponent = () => {
                 content like appearing in a table or list. There may be more than one on the page.
             </Description>
             <DocsTile centered>
-                <div class="fd-doc__margin">
+                <div className="fd-doc__margin">
                     <Button option="emphasized">Emphasized Button</Button>
                     <Button>Regular Button</Button>
                     <Button option="light">Light Button</Button>
@@ -184,7 +184,7 @@ export const ButtonComponent = () => {
                 <br />
             </Description>
             <DocsTile centered>
-                <div class="fd-doc__margin">
+                <div className="fd-doc__margin">
                     <Button>Action Button</Button>
                     <Button type="standard">Standard Button</Button>
                     <Button type="positive">Positive Button</Button>
@@ -202,7 +202,7 @@ export const ButtonComponent = () => {
                 attach an icon to the button.
             </Description>
             <DocsTile centered>
-                <div class="fd-doc__margin">
+                <div className="fd-doc__margin">
                     <Button option="emphasized" glyph="cart">
                         Add to Cart
                     </Button>
@@ -246,7 +246,7 @@ export const ButtonComponent = () => {
                 on a touch device.
             </Description>
             <DocsTile centered>
-                <div class="fd-doc__margin">
+                <div className="fd-doc__margin">
                     <Button>Default</Button>
                     <Button compact>Compact</Button>
                 </div>
@@ -260,7 +260,7 @@ export const ButtonComponent = () => {
                 There are three states: <code>normal</code> (default), <code>selected</code>, and <code>disabled</code>.
             </Description>
             <DocsTile centered>
-                <div class="fd-doc__margin">
+                <div className="fd-doc__margin">
                     <Button option="emphasized">Normal State</Button>
                     <Button option="emphasized" selected>
                         Selected State

@@ -21,7 +21,7 @@ export const DatePickerComponent = () => {
 
             <Properties
                 type="Inputs"
-                properties={[{ name: 'enableRangeSelection', description: 'Bool - Enable to select two dates' }]}
+                properties={[{ name: 'enableRangeSelection', description: 'bool - Enable to select two dates' }]}
             />
 
             <Separator />

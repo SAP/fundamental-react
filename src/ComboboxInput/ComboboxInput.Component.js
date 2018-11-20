@@ -1,6 +1,6 @@
 import React from 'react';
 import {} from '../';
-import { DocsTile, DocsText, Separator, Header, Description, Import, Properties } from '..';
+import { DocsTile, DocsText, Separator, Header, Import, Properties } from '..';
 import { Menu, MenuItem, MenuList, ComboboxInput } from '..';
 
 export const ComboboxInputComponent = () => {

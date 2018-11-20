@@ -168,11 +168,11 @@ export class ModalComponent extends Component {
           properties={[
             {
               name: 'show',
-              description: 'Bool - true: show modal, false: hide modal.'
+              description: 'bool - true: show modal, false: hide modal.'
             },
             {
               name: 'title',
-              description: 'String (required) - Title for modal dialog box'
+              description: 'string (required) - Title for modal dialog box'
             },
             {
               name: 'actions',
