@@ -106,8 +106,8 @@ export const TreeComponent = () => {
 
             <Properties type="Inputs" properties=
                 {[
-                    { name: 'headers', description: 'Array of strings for the column headers of the tree' },
-                    { name: 'treeData', description: 'Array of objects that contain several properties, id (the id of the row), values (an array of strings containing data for each column in the row), hasChildren(a boolean value whether the row contains children or not) and children (an array of objects containing additional rows).' }
+                    { name: 'headers', description: 'array of strings for the column headers of the tree' },
+                    { name: 'treeData', description: 'array of objects that contain several properties, id (the id of the row), values (an array of strings containing data for each column in the row), hasChildren(a boolean value whether the row contains children or not) and children (an array of objects containing additional rows).' }
                 ]} />
 
             <Separator />

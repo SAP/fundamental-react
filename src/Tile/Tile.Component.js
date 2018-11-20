@@ -134,15 +134,15 @@ export const TileComponent = () => {
             <Properties
                 type="Inputs"
                 properties={[
-                    { name: 'title', description: 'String - the title of the Tile Content' },
-                    { name: 'isButton', description: 'Bool - when set to true, renders the tile as a button.' },
-                    { name: 'disabled', description: 'Bool - when set to true, disables the tile.' },
-                    { name: 'image', description: 'String (required) - url of the image used in Product Tile.' },
-                    { name: 'rowSpan', description: 'Number - the number of rows the tile covers.' },
-                    { name: 'columnSpan', description: 'Number - the number of columns the tile covers.' },
+                    { name: 'title', description: 'string - the title of the Tile Content' },
+                    { name: 'isButton', description: 'bool - when set to true, renders the tile as a button.' },
+                    { name: 'disabled', description: 'bool - when set to true, disables the tile.' },
+                    { name: 'image', description: 'string (required) - url of the image used in Product Tile.' },
+                    { name: 'rowSpan', description: 'number - the number of rows the tile covers.' },
+                    { name: 'columnSpan', description: 'number - the number of columns the tile covers.' },
                     {
                         name: 'colorAccent',
-                        description: 'Number - applies a background color. Options include numbers from 1 to 9.'
+                        description: 'number - applies a background color. Options include numbers from 1 to 9.'
                     }
                 ]}
             />
