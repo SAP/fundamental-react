@@ -1,5 +1,11 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Route, Switch, NavLink, Redirect } from 'react-router-dom';
+import {
+  BrowserRouter,
+  Route,
+  Switch,
+  NavLink,
+  Redirect
+} from 'react-router-dom';
 
 import { ActionBarComponent } from './ActionBar/ActionBar.Component';
 import { AlertComponent } from './Alert/Alert.Component';
@@ -18,7 +24,7 @@ import { ImageComponent } from './Image/Image.Component';
 import { InlineHelpComponent } from './InlineHelp/InlineHelp.Component';
 import { InputGroupComponent } from './InputGroup/InputGroup.Component';
 import { ListGroupComponent } from './ListGroup/ListGroup.Component';
-import { LocalizationEditorComponent } from './LocalizationEditor/LocalizationEditor.Component'
+import { LocalizationEditorComponent } from './LocalizationEditor/LocalizationEditor.Component';
 import { MegaMenuComponent } from './MegaMenu/MegaMenu.Component';
 import { MenuComponent } from './Menu/Menu.Component';
 import { ModalComponent } from './Modal/Modal.Component';
@@ -36,6 +42,7 @@ import { TileComponent } from './Tile/Tile.Component';
 import { ToggleComponent } from './Toggle/Toggle.Component';
 import { TreeComponent } from './Tree/Tree.Component';
 import { TimeComponent } from './Time/Time.Component';
+import { TimePickerComponent } from './TimePicker/TimePicker.Component';
 
 export default class Routes extends Component {
   constructor(props) {
@@ -60,7 +67,11 @@ export default class Routes extends Component {
         },
         { url: '/button', name: 'Button', component: ButtonComponent },
         { url: '/calendar', name: 'Calendar', component: CalendarComponent },
-        { url: '/comboboxInput', name: 'Combobox Input', component: ComboboxInputComponent },
+        {
+          url: '/comboboxInput',
+          name: 'Combobox Input',
+          component: ComboboxInputComponent
+        },
         {
           url: '/contextualMenu',
           name: 'Contextual Menu',
@@ -108,10 +119,11 @@ export default class Routes extends Component {
           name: 'Multi Input',
           component: MultiInputComponent
         },
-        { 
-          url: '/navbar', 
-          name: 'Navigation Bar', 
-          component: NavbarComponent },
+        {
+          url: '/navbar',
+          name: 'Navigation Bar',
+          component: NavbarComponent
+        },
         {
           url: '/pagination',
           name: 'Pagination',
@@ -133,6 +145,11 @@ export default class Routes extends Component {
         { url: '/tabs', name: 'Tabs', component: TabsComponent },
         { url: '/tile', name: 'Tile', component: TileComponent },
         { url: '/time', name: 'Time', component: TimeComponent },
+        {
+          url: '/timepicker',
+          name: 'TimePicker',
+          component: TimePickerComponent
+        },
         { url: '/toggle', name: 'Toggle', component: ToggleComponent },
         { url: '/token', name: 'Token', component: TokenComponent },
         { url: '/tree', name: 'Tree', component: TreeComponent }
@@ -166,18 +183,16 @@ export default class Routes extends Component {
             <div className='content-margin'>
               <Switch>
                 {this.state.routes.map(route => {
-                    return (
-                      <Route
-                        key={route.url}
-                        exact
-                        path={route.url}
-                        component={route.component}
-                      />
-                    );
-                  }
-                  
-                )}
-                <Redirect from="" exact to="/actionBar" />
+                  return (
+                    <Route
+                      key={route.url}
+                      exact
+                      path={route.url}
+                      component={route.component}
+                    />
+                  );
+                })}
+                <Redirect from='' exact to='/actionBar' />
               </Switch>
             </div>
           </div>
