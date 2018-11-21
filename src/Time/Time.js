@@ -332,6 +332,17 @@ export class Time extends Component {
       format12Hours: props.format12Hours
     };
   }
+  /**
+   *
+   * @param {object} nextProps
+   * Change the time state values from parent component with the new values from props
+   */
+  componentWillReceiveProps(nextProps) {
+    // check if props are different than the current state to prevent an unneeded render
+    if (nextProps.time !== this.state.time) {
+      this.setState({ time: nextProps.time });
+    }
+  }
   /** Add 0 to values < 10
    * @param {string} value
    * @param {string} name
@@ -359,7 +370,9 @@ export class Time extends Component {
       this.props.onChange(this.state.time);
     }
   };
-
+  onUpdateTime = () => {
+    this.props.onUpdateTime();
+  };
   render() {
     const {
       showHour,
