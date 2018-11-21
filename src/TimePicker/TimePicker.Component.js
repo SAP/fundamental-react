@@ -1,5 +1,5 @@
 import React from 'react';
-import { TimePicker } from '../';
+import {TimePicker} from '../';
 
 import {
   DocsTile,
@@ -15,8 +15,7 @@ export const TimePickerComponent = () => {
   return (
     <div>
       <Header>Time</Header>
-      <TimePicker format12Hours={true} />
-      {/* <Description />{' '} */}
+      <TimePicker format12Hours={true}/> {/* <Description />{' '} */}
     </div>
   );
 };
