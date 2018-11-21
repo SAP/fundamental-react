@@ -49,7 +49,7 @@ exports[`<Tile /> create tile component 3`] = `
     className="fd-tile__media"
   >
     <span
-      className=" fd-identifier--m sap-icon--home fd-has-background-color-accent-3"
+      className="fd-identifier--m sap-icon--home fd-has-background-color-accent-3"
       role="presentation"
     />
   </div>
@@ -94,7 +94,7 @@ exports[`<Tile /> create tile component 4`] = `
         onClick={[Function]}
       >
         <button
-          className=" fd-button fd-button--secondary sap-icon--vertical-grip"
+          className=" fd-button fd-button--standard sap-icon--vertical-grip"
           disabled={false}
           selected={false}
         />

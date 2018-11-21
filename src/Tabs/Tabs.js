@@ -12,11 +12,11 @@ export class TabComponent extends Component {
     super(props);
     let initialStates = [];
 
-    props.ids.forEach(ids => {
+    initialStates = props.ids.forEach(ids => {
       let obj = {};
       let id = ids.id;
       obj[id] = false;
-      initialStates.push(obj);
+      return obj;
     });
     this.state = {
       selectedTab: '1',
