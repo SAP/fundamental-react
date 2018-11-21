@@ -179,7 +179,7 @@ exports[`<Navbar /> create navbar 1`] = `
         selected={false}
       >
         <span
-          className=" fd-identifier--s fd-identifier--circle"
+          className="fd-identifier--s fd-identifier--circle"
           role=""
         >
           WW
