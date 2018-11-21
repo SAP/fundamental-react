@@ -48,7 +48,7 @@ describe('<Tile />', () => {
       <TileContent title="Tile Title" />
       <TileActions>
         <Popover
-          control={<Button type="secondary" glyph="vertical-grip" />}
+          control={<Button type="standard" glyph="vertical-grip" />}
           body={
             <Menu>
               <MenuList>

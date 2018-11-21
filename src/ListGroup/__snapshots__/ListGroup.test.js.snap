@@ -55,7 +55,7 @@ exports[`<ListGroup /> create list group 2`] = `
       className="fd-list-group__action"
     >
       <button
-        className=" fd-button fd-button--light sap-icon--edit"
+        className=" fd-button fd-button--standard sap-icon--edit"
         disabled={false}
         selected={false}
       />
