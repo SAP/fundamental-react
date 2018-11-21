@@ -17,7 +17,7 @@ describe('<Identifier />', () => {
     <Identifier size="m" glyph="washing-machine" modifier="circle" />
   );
   const transparent = (
-    <Identifier glyph="washing-machine" modifier="transparent" />
+    <Identifier glyph="washing-machine" modifier="transparent" size="m" />
   );
   const accentColor = <Identifier size="m" glyph="money-bills" color={9} />;
 

@@ -13,7 +13,7 @@ exports[`<Image /> create image 1`] = `
 
 exports[`<Image /> create image 2`] = `
 <span
-  className="m fd-image--circle"
+  className="fd-image--m fd-image--circle"
   style={
     Object {
       "backgroundImage": "url(https://placeimg.com/400/400/nature)",

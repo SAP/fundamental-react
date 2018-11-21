@@ -5,7 +5,7 @@ export const Identifier = props => {
   const { glyph, size, modifier, color, label, children } = props;
   return (
     <span
-      className={`${size ? ' fd-identifier--' + size : ''}${
+      className={`${'fd-identifier--' + size}${
         glyph ? ' sap-icon--' + glyph : ''
       }${modifier ? ' fd-identifier--' + modifier : ''}${
         color ? ' fd-has-background-color-accent-' + color : ''

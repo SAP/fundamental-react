@@ -30,7 +30,7 @@ describe('<ListGroup />', () => {
       <ListGroupItem>
         List item 1
         <ListGroupItemActions>
-          <Button type="light" glyph="edit" />
+          <Button type="standard" glyph="edit" />
         </ListGroupItemActions>
       </ListGroupItem>
     </ListGroup>
