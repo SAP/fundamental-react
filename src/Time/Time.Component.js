@@ -1,7 +1,5 @@
 import React from 'react';
 import { Time } from './Time';
-// import { DocsTile, DocsText, Separator, Header, Description, Import,
-// Properties } from '../';
 import {
   DocsTile,
   DocsText,
@@ -13,21 +11,6 @@ import {
 } from '../';
 
 export const TimeComponent = () => {
-  const state = {
-    date: new Date()
-  };
-
-  const closeAction = (name, event) =>
-    alert(
-      `close ${name}! You can work with the event itself using the callback.`
-    );
-  const tagsNames = ['Bibendum', 'Lorem', 'Dolor', 'Filter'];
-  const time = {
-    hour: '02',
-    minute: '23',
-    second: '23'
-  };
-  const time2 = {};
   const defaultTimeCode = `<Time />`;
   const format12hoursTimeCode = `<Time format12Hours={true} />`;
   const noSpinnersTimeCode = `<Time spinners={false} />`;
@@ -89,7 +72,7 @@ export const TimeComponent = () => {
       </DocsTile>
       <DocsText>{defaultTimeCode}</DocsText>
       <Separator />
-      {/* 12 hours Clocl */}
+      {/* 12 hours Clock */}
       <h2>12-Hour Clock</h2>
       <Description>
         You can use a Meridian 12-hour clock by setting format12Hours to true{' '}
