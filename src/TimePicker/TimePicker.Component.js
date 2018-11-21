@@ -30,7 +30,7 @@ export const TimePickerComponent = () => {
         properties={[
           {
             name: 'id',
-            description: 'string - Id for time component'
+            description: 'string - Id for time picker component'
           },
           {
             name: 'showHour',
@@ -47,7 +47,7 @@ export const TimePickerComponent = () => {
           {
             name: 'disabled',
             description:
-              'bool - Disables the time component, the inputs will be readonly'
+              'bool - Disables the time picker component, the inputs will be readonly'
           },
           {
             name: 'format12Hours',
