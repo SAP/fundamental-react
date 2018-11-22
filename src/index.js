@@ -4,15 +4,40 @@ import './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
-import { ActionBar, ActionBarBack, ActionBarHeader, ActionBarActions } from '../src/ActionBar/ActionBar';
-import { Alert } from '../src/Alert/Alert';
-import { Badge, Label, Status } from '../src/Badge/Badge';
-import { Breadcrumb, BreadcrumbItem } from '../src/Breadcrumb/Breadcrumb';
-import { Button, ButtonGroup } from '../src/Button/Button';
-import { Calendar } from '../src/Calendar/Calendar';
-import { ComboboxInput } from '../src/ComboboxInput/ComboboxInput';
-import { DatePicker } from '../src/DatePicker/DatePicker';
-import { Dropdown } from '../src/Dropdown/Dropdown';
+import {
+    ActionBar,
+    ActionBarBack,
+    ActionBarHeader,
+    ActionBarActions
+} from '../src/ActionBar/ActionBar';
+import {
+    Alert
+} from '../src/Alert/Alert';
+import {
+    Badge,
+    Label,
+    Status
+} from '../src/Badge/Badge';
+import {
+    Breadcrumb,
+    BreadcrumbItem
+} from '../src/Breadcrumb/Breadcrumb';
+import {
+    Button,
+    ButtonGroup
+} from '../src/Button/Button';
+import {
+    Calendar
+} from '../src/Calendar/Calendar';
+import {
+    ComboboxInput
+} from '../src/ComboboxInput/ComboboxInput';
+import {
+    DatePicker
+} from '../src/DatePicker/DatePicker';
+import {
+    Dropdown
+} from '../src/Dropdown/Dropdown';
 import {
     FormSet,
     FormItem,
@@ -25,19 +50,57 @@ import {
     FormFieldset,
     FormLegend
 } from '../src/Forms/Forms';
-import { Icon } from '../src/Icon/Icon';
-import { Identifier } from '../src/Identifier/Identifier';
-import { Image } from '../src/Image/Image';
-import { InlineHelp } from '../src/InlineHelp/InlineHelp';
-import { InputGroup, FormGroup } from '../src/InputGroup/InputGroup';
-import { ListGroup, ListGroupItem, ListGroupItemActions, ListGroupItemCheckbox } from '../src/ListGroup/ListGroup';
-import { LocalizationEditor } from '../src/LocalizationEditor/LocalizationEditor';
-import { MegaMenu, MegaMenuList, MegaMenuGroup } from '../src/MegaMenu/MegaMenu';
-import { Menu, MenuList, MenuItem, MenuGroup } from '../src/Menu/Menu';
-import { Modal } from '../src/Modal/Modal';
-import { Navbar, NavbarGroup, NavbarActions, NavbarElement } from '../src/Navbar/Navbar';
-import { MultiInput } from '../src/MultiInput/MultiInput';
-import { Pagination } from '../src/Pagination/Pagination';
+import {
+    Icon
+} from '../src/Icon/Icon';
+import {
+    Identifier
+} from '../src/Identifier/Identifier';
+import {
+    Image
+} from '../src/Image/Image';
+import {
+    InlineHelp
+} from '../src/InlineHelp/InlineHelp';
+import {
+    InputGroup,
+    FormGroup
+} from '../src/InputGroup/InputGroup';
+import {
+    ListGroup,
+    ListGroupItem,
+    ListGroupItemActions,
+    ListGroupItemCheckbox
+} from '../src/ListGroup/ListGroup';
+import {
+    LocalizationEditor
+} from '../src/LocalizationEditor/LocalizationEditor';
+import {
+    MegaMenu,
+    MegaMenuList,
+    MegaMenuGroup
+} from '../src/MegaMenu/MegaMenu';
+import {
+    Menu,
+    MenuList,
+    MenuItem,
+    MenuGroup
+} from '../src/Menu/Menu';
+import {
+    Modal
+} from '../src/Modal/Modal';
+import {
+    Navbar,
+    NavbarGroup,
+    NavbarActions,
+    NavbarElement
+} from '../src/Navbar/Navbar';
+import {
+    MultiInput
+} from '../src/MultiInput/MultiInput';
+import {
+    Pagination
+} from '../src/Pagination/Pagination';
 import {
     Panel,
     PanelGrid,
@@ -49,12 +112,27 @@ import {
     PanelContent,
     PanelFooter
 } from '../src/Panel/Panel';
-import { Popover } from '../src/Popover/Popover';
-import { SearchInput } from '../src/SearchInput/SearchInput';
-import { SideNav, SideNavList, SideNavGroup } from '../src/SideNavigation/SideNavigation';
-import { Table } from '../src/Table/Table';
-import { Tabs, TabComponent } from '../src/Tabs/Tabs';
-import { Token } from './Token/Token';
+import {
+    Popover
+} from '../src/Popover/Popover';
+import {
+    SearchInput
+} from '../src/SearchInput/SearchInput';
+import {
+    SideNav,
+    SideNavList,
+    SideNavGroup
+} from '../src/SideNavigation/SideNavigation';
+import {
+    Table
+} from '../src/Table/Table';
+import {
+    Tabs,
+    TabComponent
+} from '../src/Tabs/Tabs';
+import {
+    Token
+} from './Token/Token';
 import {
     Tile,
     TileContent,
@@ -65,16 +143,40 @@ import {
     TileGrid,
     ProductTileContent
 } from '../src/Tile/Tile';
-import { Toggle } from '../src/Toggle/Toggle';
-import { Tree } from '../src/Tree/Tree';
-
-import { DocsTile, DocsText } from '../src/documentation/DocsTile/DocsTile';
-import { Separator } from '../src/documentation/Separator/Separator';
-import { Header } from '../src/documentation/Header/Header';
-import { Description } from '../src/documentation/Description/Description';
-import { Import } from '../src/documentation/Import/Import';
-import { Properties } from '../src/documentation/Properties/Properties';
-import { Playground } from '../src/documentation/Playground/Playground';
+import {
+    Toggle
+} from '../src/Toggle/Toggle';
+import {
+    Tree
+} from '../src/Tree/Tree';
+import {
+    Time
+} from '../src/Time/Time';
+import {
+    TimePicker
+} from '../src/TimePicker/TimePicker';
+import {
+    DocsTile,
+    DocsText
+} from '../src/documentation/DocsTile/DocsTile';
+import {
+    Separator
+} from '../src/documentation/Separator/Separator';
+import {
+    Header
+} from '../src/documentation/Header/Header';
+import {
+    Description
+} from '../src/documentation/Description/Description';
+import {
+    Import
+} from '../src/documentation/Import/Import';
+import {
+    Properties
+} from '../src/documentation/Properties/Properties';
+import {
+    Playground
+} from '../src/documentation/Playground/Playground';
 
 export {
     DocsTile,
@@ -158,6 +260,8 @@ export {
     TileContent,
     TileMedia,
     TileActions,
+    Time,
+    TimePicker,
     ProductTile,
     ProductTileMedia,
     TileGrid,
@@ -166,5 +270,5 @@ export {
     Tree
 };
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render( < App / > , document.getElementById('root'));
 registerServiceWorker();
