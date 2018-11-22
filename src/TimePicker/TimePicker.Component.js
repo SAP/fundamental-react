@@ -7,14 +7,12 @@ import {
   Separator,
   Header,
   Description,
-  Import,
   Properties
 } from '../';
 
 export const TimePickerComponent = () => {
   const defaultTimeCode = `<TimePicker />`;
   const format12hoursTimeCode = `<TimePicker format12Hours={true} />`;
-  const noSpinnersTimeCode = `<TimePicker spinners={false} />`;
   const noSecondsTimeCode = `<TimePicker showSecond={false} />`;
   const disabledStateTimeCode = `<TimePicker disabled={true} />`;
   return (
