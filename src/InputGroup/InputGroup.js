@@ -13,9 +13,10 @@ export class InputGroup extends Component {
     this.handleDown = this.handleDown.bind(this);
     this.handleClear = this.handleClear.bind(this);
     this.handleChange = this.handleChange.bind(this);
+    this.handleTextChange = this.handleTextChange.bind(this);
 
     this.state = {
-      value: this.props.inputValue,
+      value: this.props.inputValue || '',
       searchValue: this.props.inputValue || ''
     };
   }
@@ -48,12 +49,18 @@ export class InputGroup extends Component {
     });
   }
 
+  handleTextChange(e) {
+    e.preventDefault();
+    this.setState({
+      value: e.target.value
+    });
+  }
+
   render() {
     const {
       inputType,
       inputId,
       inputName,
-      inputValue,
       inputPlaceholder,
       addonPos,
       addon,
@@ -77,6 +84,7 @@ export class InputGroup extends Component {
               id={inputId}
               name={inputName}
               value={this.state.value}
+              onChange={this.handleTextChange}
             />
             <span className="fd-input-group__addon fd-input-group__addon--button fd-input-group__addon--after">
               <button
@@ -148,7 +156,8 @@ export class InputGroup extends Component {
                 type="text"
                 id={inputId}
                 name={inputName}
-                value={inputValue}
+                value={this.state.value}
+                onChange={this.handleTextChange}
               />
             </div>
           );
@@ -164,7 +173,8 @@ export class InputGroup extends Component {
                 type="text"
                 id={inputId}
                 name={inputName}
-                value={inputValue}
+                value={this.state.value}
+                onChange={this.handleTextChange}
               />
               {actions ? (
                 <span className="fd-input-group__addon fd-input-group__addon--button fd-input-group__addon--after">
