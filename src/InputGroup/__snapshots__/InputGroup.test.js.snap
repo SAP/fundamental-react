@@ -11,6 +11,7 @@ exports[`<InputGroup /> create input group items 1`] = `
   </span>
   <input
     className=""
+    onChange={[Function]}
     type="text"
     value="1234567890"
   />
@@ -23,6 +24,7 @@ exports[`<InputGroup /> create input group items 2`] = `
 >
   <input
     className=""
+    onChange={[Function]}
     type="text"
     value="1234567890"
   />
@@ -45,6 +47,7 @@ exports[`<InputGroup /> create input group items 3`] = `
   </span>
   <input
     className="fd-input fd-input--compact"
+    onChange={[Function]}
     type="text"
     value="1234567890"
   />
@@ -57,6 +60,7 @@ exports[`<InputGroup /> create input group items 4`] = `
 >
   <input
     className="fd-input fd-input--compact"
+    onChange={[Function]}
     type="text"
     value="1234567890"
   />
@@ -74,6 +78,7 @@ exports[`<InputGroup /> create input group items 5`] = `
 >
   <input
     className=""
+    onChange={[Function]}
     type="number"
     value={100}
   />
@@ -100,6 +105,7 @@ exports[`<InputGroup /> create input group items 6`] = `
 >
   <input
     className="fd-input fd-input--compact"
+    onChange={[Function]}
     type="number"
     value={100}
   />
@@ -180,6 +186,7 @@ exports[`<InputGroup /> create input group items 9`] = `
   </span>
   <input
     className=""
+    onChange={[Function]}
     type="text"
     value="1234567890"
   />
@@ -200,6 +207,7 @@ exports[`<InputGroup /> create input group items 10`] = `
   </span>
   <input
     className="fd-input fd-input--compact"
+    onChange={[Function]}
     type="text"
     value="1234567890"
   />
@@ -212,6 +220,7 @@ exports[`<InputGroup /> create input group items 11`] = `
 >
   <input
     className=""
+    onChange={[Function]}
     type="text"
     value="1234567890"
   />
@@ -232,6 +241,7 @@ exports[`<InputGroup /> create input group items 12`] = `
 >
   <input
     className="fd-input fd-input--compact"
+    onChange={[Function]}
     type="text"
     value="1234567890"
   />
@@ -252,6 +262,7 @@ exports[`<InputGroup /> create input group items 13`] = `
 >
   <input
     className=""
+    onChange={[Function]}
     type="text"
     value="1234567890"
   />
@@ -275,6 +286,7 @@ exports[`<InputGroup /> create input group items 14`] = `
 >
   <input
     className="fd-input fd-input--compact"
+    onChange={[Function]}
     type="text"
     value="1234567890"
   />
@@ -301,6 +313,7 @@ exports[`<InputGroup /> create input group items 15`] = `
   />
   <input
     className=""
+    onChange={[Function]}
     type="text"
     value="1234567890"
   />
@@ -316,6 +329,7 @@ exports[`<InputGroup /> create input group items 16`] = `
   >
     <input
       className=""
+      onChange={[Function]}
       type="text"
       value="1234567890"
     />
