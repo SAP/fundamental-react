@@ -210,6 +210,18 @@ describe('<InputGroup />', () => {
     expect(tree).toMatchSnapshot();
   });
 
+  test('input text entered', () => {
+    const wrapper = mount(inputTextPosBefore);
+
+    // click up
+    wrapper.setState({ value: '' });
+    wrapper
+      .find('input[type="text"]')
+      .simulate('change', { target: { value: 'hello' } });
+
+    expect(wrapper.state('value')).toEqual('hello');
+  });
+
   test('search input then clear button click', () => {
     const wrapper = mount(searchText);
 
