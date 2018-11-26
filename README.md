@@ -4,7 +4,8 @@ React.JS components for [SAP Fiori Fundamentals](https://github.com/SAP/fundamen
 - [Playground](https://sap.github.io/fundamental-react/)
 - [npm package fundamental-react](https://www.npmjs.com/package/fundamental-react)
 - [![Build Status](https://travis-ci.org/SAP/fundamental-react.svg?branch=develop)](https://travis-ci.org/SAP/fundamental-react)
-- [![Downloads](https://npmcharts.com/compare/fundamental-vue?periodLength=30)]
+- [GitHub repo of Angular implementation of SAP Fiori Fundamentals](https://github.com/SAP/fundamental-ngx)
+- [GitHub repo of Vue implementation of SAP Fiori Fundamentals](https://github.com/SAP/fundamental-vue)
 
 ## Description
 
