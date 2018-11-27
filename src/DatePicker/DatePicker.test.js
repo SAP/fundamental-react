@@ -43,6 +43,10 @@ describe('<DatePicker />', () => {
 
     expect(wrapper.state('hidden')).toBeFalsy();
 
+    wrapper.find('input[type="text"]').simulate('click', { type: 'input' });
+
+    expect(wrapper.state('hidden')).toBeFalsy();
+
     wrapper.instance().componentWillMount();
 
     let event = new MouseEvent('mousedown', {
@@ -87,6 +91,19 @@ describe('<DatePicker />', () => {
 
     let arrDates = [startRangeDate, endRangeDate];
     wrapper.instance().updateDate(arrDates);
+
+    document.dispatchEvent(event);
+
+    // make start date bigger than end date
+    arrDates = [endRangeDate, startRangeDate];
+    wrapper.instance().updateDate(arrDates);
+
+    let switchFormattedDate = `${endRangeDate.getMonth() +
+      1}/${endRangeDate.getDate()}/${endRangeDate.getFullYear()}-${startRangeDate.getMonth() +
+      1}/${startRangeDate.getDate()}/${startRangeDate.getFullYear()}`;
+
+    expect(wrapper.state('formattedDate')).toEqual(switchFormattedDate);
+    expect(wrapper.state('arrSelectedDates').length).toEqual(2);
 
     document.dispatchEvent(event);
   });
@@ -149,6 +166,19 @@ describe('<DatePicker />', () => {
 
     wrapper.find('input[type="text"]').simulate('keypress', { key: 'Enter' });
 
+    // make start date bigger than end date
+    arrDates = [endRangeDate, startRangeDate];
+    wrapper.instance().updateDate(arrDates);
+
+    let switchFormattedDate = `${endRangeDate.getMonth() +
+      1}/${endRangeDate.getDate()}/${endRangeDate.getFullYear()}-${startRangeDate.getMonth() +
+      1}/${startRangeDate.getDate()}/${startRangeDate.getFullYear()}`;
+
+    expect(wrapper.state('formattedDate')).toEqual(switchFormattedDate);
+    expect(wrapper.state('arrSelectedDates').length).toEqual(2);
+
+    wrapper.find('input[type="text"]').simulate('keypress', { key: 'Enter' });
+
     wrapper = mount(defaultDatePicker);
     const date = new Date();
     wrapper.instance().updateDate(date);
@@ -186,5 +216,13 @@ describe('<DatePicker />', () => {
     expect(wrapper.instance().formatDate(startRangeDate)).toEqual('');
 
     arrDates = [startRangeDate];
+  });
+
+  test('modify date on change', () => {
+    wrapper = mount(defaultDatePicker);
+    wrapper
+      .find('input[type="text"]')
+      .simulate('change', { target: { value: '05/04/2018' } });
+    expect(wrapper.state('formattedDate')).toEqual('05/04/2018');
   });
 });
