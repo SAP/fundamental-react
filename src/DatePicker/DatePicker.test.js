@@ -1,0 +1,192 @@
+import React from 'react';
+import renderer from 'react-test-renderer';
+import Enzyme, { mount } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
+import { DatePicker } from '../DatePicker/DatePicker';
+
+Enzyme.configure({ adapter: new Adapter() });
+
+describe('<DatePicker />', () => {
+  const defaultDatePicker = <DatePicker />;
+  const compactDatePicker = <DatePicker compact />;
+  const rangeDatePicker = <DatePicker enableRangeSelection />;
+  const compactRangeDatepicker = <DatePicker enableRangeSelection compact />;
+  let wrapper;
+
+  afterAll(() => {
+    wrapper.unmount();
+  });
+
+  test('create Date picker components', () => {
+    mount(defaultDatePicker);
+    mount(compactDatePicker);
+    mount(rangeDatePicker);
+    mount(compactRangeDatepicker);
+  });
+
+  test('open/close by calendar icon button', () => {
+    wrapper = mount(defaultDatePicker);
+    expect(wrapper.state('hidden')).toBeTruthy();
+
+    wrapper
+      .find('button.fd-popover__control.fd-button--light.sap-icon--calendar')
+      .simulate('click', { type: 'input' });
+
+    expect(wrapper.state('hidden')).toBeFalsy();
+  });
+
+  test('open/close calendar', () => {
+    wrapper = mount(defaultDatePicker);
+    expect(wrapper.state('hidden')).toBeTruthy();
+
+    wrapper.find('input[type="text"]').simulate('click', { type: 'input' });
+
+    expect(wrapper.state('hidden')).toBeFalsy();
+
+    wrapper.instance().componentWillMount();
+
+    let event = new MouseEvent('mousedown', {
+      target: document.querySelector('body')
+    });
+    document.dispatchEvent(event);
+
+    expect(wrapper.state('hidden')).toBeTruthy();
+
+    wrapper.find('input[type="text"]').simulate('click', { type: '' });
+
+    expect(wrapper.state('hidden')).toBeFalsy();
+  });
+
+  test('open/close range calendar', () => {
+    wrapper = mount(rangeDatePicker);
+    //open date picker calendar
+    expect(wrapper.state('hidden')).toBeTruthy();
+
+    wrapper.find('input[type="text"]').simulate('click', { type: 'input' });
+
+    expect(wrapper.state('hidden')).toBeFalsy();
+
+    wrapper.instance().componentWillMount();
+
+    let event = new MouseEvent('mousedown', {
+      target: document.querySelector('body')
+    });
+    document.dispatchEvent(event);
+
+    expect(wrapper.state('hidden')).toBeTruthy();
+
+    // show date picker, select date range then close
+    wrapper.find('input[type="text"]').simulate('click', { type: '' });
+
+    expect(wrapper.state('hidden')).toBeFalsy();
+
+    wrapper = mount(rangeDatePicker);
+    let startRangeDate = new Date();
+    let endRangeDate = new Date();
+    endRangeDate.setDate(endRangeDate.getDate() + 3);
+
+    let arrDates = [startRangeDate, endRangeDate];
+    wrapper.instance().updateDate(arrDates);
+
+    document.dispatchEvent(event);
+  });
+
+  test('update date method', () => {
+    // choose one day in default picker
+    wrapper = mount(defaultDatePicker);
+    const date = new Date();
+    wrapper.instance().updateDate(date);
+    expect(wrapper.state('selectedDate')).toEqual(date);
+    let formattedDate = `${date.getMonth() +
+      1}/${date.getDate()}/${date.getFullYear()}`;
+    expect(wrapper.state('formattedDate')).toEqual(formattedDate);
+
+    // choose 1 day in range picker
+    wrapper = mount(rangeDatePicker);
+    let startRangeDate = new Date();
+
+    let arrDates = [startRangeDate];
+    wrapper.instance().updateDate(arrDates);
+
+    formattedDate = `${startRangeDate.getMonth() +
+      1}/${startRangeDate.getDate()}/${startRangeDate.getFullYear()}`;
+    expect(wrapper.state('formattedDate')).toEqual(formattedDate);
+    expect(wrapper.state('arrSelectedDates').length).toEqual(1);
+
+    // choose 2 days in range picker
+    wrapper = mount(rangeDatePicker);
+    startRangeDate = new Date();
+    let endRangeDate = new Date();
+    endRangeDate.setDate(endRangeDate.getDate() + 3);
+
+    arrDates = [startRangeDate, endRangeDate];
+    wrapper.instance().updateDate(arrDates);
+
+    formattedDate = `${startRangeDate.getMonth() +
+      1}/${startRangeDate.getDate()}/${startRangeDate.getFullYear()}-${endRangeDate.getMonth() +
+      1}/${endRangeDate.getDate()}/${endRangeDate.getFullYear()}`;
+
+    expect(wrapper.state('formattedDate')).toEqual(formattedDate);
+    expect(wrapper.state('arrSelectedDates').length).toEqual(2);
+  });
+
+  test('enter date value', () => {
+    wrapper = mount(rangeDatePicker);
+
+    let startRangeDate = new Date();
+    let endRangeDate = new Date();
+    endRangeDate.setDate(endRangeDate.getDate() + 3);
+
+    let arrDates = [startRangeDate, endRangeDate];
+    wrapper.instance().updateDate(arrDates);
+
+    let formattedDate = `${startRangeDate.getMonth() +
+      1}/${startRangeDate.getDate()}/${startRangeDate.getFullYear()}-${endRangeDate.getMonth() +
+      1}/${endRangeDate.getDate()}/${endRangeDate.getFullYear()}`;
+
+    expect(wrapper.state('formattedDate')).toEqual(formattedDate);
+    expect(wrapper.state('arrSelectedDates').length).toEqual(2);
+
+    wrapper.find('input[type="text"]').simulate('keypress', { key: 'Enter' });
+
+    wrapper = mount(defaultDatePicker);
+    const date = new Date();
+    wrapper.instance().updateDate(date);
+    expect(wrapper.state('selectedDate')).toEqual(date);
+    formattedDate = `${date.getMonth() +
+      1}/${date.getDate()}/${date.getFullYear()}`;
+    expect(wrapper.state('formattedDate')).toEqual(formattedDate);
+    wrapper.find('input[type="text"]').simulate('keypress', { key: 'Enter' });
+
+    // press Esc key
+    wrapper.find('input[type="text"]').simulate('keypress', { key: 'Esc' });
+  });
+
+  test('format date', () => {
+    wrapper = mount(rangeDatePicker);
+    let startRangeDate = new Date();
+    let endRangeDate = new Date();
+    endRangeDate.setDate(endRangeDate.getDate() + 3);
+
+    let formattedDate = `${startRangeDate.getMonth() +
+      1}/${startRangeDate.getDate()}/${startRangeDate.getFullYear()}-${endRangeDate.getMonth() +
+      1}/${endRangeDate.getDate()}/${endRangeDate.getFullYear()}`;
+
+    let arrDates = [startRangeDate, endRangeDate];
+    expect(wrapper.instance().formatDate(arrDates)).toEqual(formattedDate);
+
+    expect(wrapper.instance().formatDate([])).toEqual('');
+
+    wrapper = mount(defaultDatePicker);
+    startRangeDate = new Date();
+
+    formattedDate = `${startRangeDate.getMonth() +
+      1}/${startRangeDate.getDate()}/${startRangeDate.getFullYear()}`;
+
+    expect(wrapper.instance().formatDate(startRangeDate)).toEqual('');
+
+    arrDates = [startRangeDate];
+    console.log(wrapper.instance().formatDate(arrDates));
+    // expect(wrapper.instance().formatDate('04/10/1980')).toEqual(formattedDate);
+  });
+});
