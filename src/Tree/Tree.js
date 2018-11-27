@@ -139,7 +139,7 @@ export class Tree extends Component {
       }
       if (isChild) {
         return (
-          <ul className={displayLevel} role="group">
+          <ul key={row.id} className={displayLevel} role="group">
             <ul className="fd-tree-child">
               <li
                 className="fd-tree__item"

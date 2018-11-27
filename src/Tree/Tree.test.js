@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import Enzyme, { shallow } from 'enzyme';
+import Enzyme, { mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import { Tree } from './Tree';
 
@@ -149,5 +149,34 @@ describe('<Tree />', () => {
     component = renderer.create(richTree);
     tree = component.toJSON();
     expect(tree).toMatchSnapshot();
+  });
+
+  test('open all tree from header', () => {
+    let wrapper = mount(multiLevelTree);
+
+    wrapper
+      .find('button.fd-tree__control')
+      .at(0)
+      .simulate('click');
+
+    // check that all open
+    expect(wrapper.state('expandAllClicked')).toBeTruthy();
+
+    wrapper
+      .find('button.fd-tree__control')
+      .at(0)
+      .simulate('click');
+
+    // check that all open
+    expect(wrapper.state('expandAllClicked')).toBeFalsy();
+  });
+
+  test('expand tree from row', () => {
+    let wrapper = mount(multiLevelTree);
+
+    wrapper
+      .find('button.fd-tree__control')
+      .at(1)
+      .simulate('click');
   });
 });
