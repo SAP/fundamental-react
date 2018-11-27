@@ -81,18 +81,57 @@ describe('<TimePicker />', () => {
 
   test('changing a value', () => {
     let wrapper = mount(defaultTimePicker);
-    const time = {
-      hour: '12',
-      minute: '29',
-      second: '34',
-      meridiem: 'am'
-    };
     wrapper
       .find('input[type="text"]')
       .at(0)
       .simulate('change', { target: { value: '12:34:56' } });
 
     expect(wrapper.state('value')).toEqual('12:34:56');
+
+    wrapper = mount(
+      <TimePicker
+        format12Hours={false}
+        showHour={true}
+        showMinute={true}
+        showSecond={true}
+      />
+    );
+    wrapper
+      .find('input[type="text"]')
+      .at(0)
+      .simulate('change', { target: { value: '12:34 am' } });
+
+    expect(wrapper.state('value')).toEqual('12:34 am');
+
+    wrapper = mount(
+      <TimePicker
+        format12Hours={true}
+        showHour={false}
+        showMinute={true}
+        showSecond={true}
+      />
+    );
+    wrapper
+      .find('input[type="text"]')
+      .at(0)
+      .simulate('change', { target: { value: '12:34 am' } });
+
+    expect(wrapper.state('value')).toEqual('12:34 am');
+
+    wrapper = mount(
+      <TimePicker
+        format12Hours={true}
+        showHour={false}
+        showMinute={true}
+        showSecond={false}
+      />
+    );
+    wrapper
+      .find('input[type="text"]')
+      .at(0)
+      .simulate('change', { target: { value: '4:12:00 am' } });
+
+    expect(wrapper.state('value')).toEqual('4:12:00 am');
 
     wrapper = mount(twelveHourTime);
     wrapper
