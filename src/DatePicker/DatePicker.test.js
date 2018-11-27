@@ -186,7 +186,5 @@ describe('<DatePicker />', () => {
     expect(wrapper.instance().formatDate(startRangeDate)).toEqual('');
 
     arrDates = [startRangeDate];
-    console.log(wrapper.instance().formatDate(arrDates));
-    // expect(wrapper.instance().formatDate('04/10/1980')).toEqual(formattedDate);
   });
 });
