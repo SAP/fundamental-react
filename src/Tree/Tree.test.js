@@ -178,5 +178,13 @@ describe('<Tree />', () => {
       .find('button.fd-tree__control')
       .at(1)
       .simulate('click');
+
+    expect(wrapper.state('iStates')[1]).toBeTruthy();
+
+    wrapper
+      .find('button.fd-tree__control')
+      .at(1)
+      .simulate('click');
+    expect(wrapper.state('iStates')[1]).toBeFalsy();
   });
 });
