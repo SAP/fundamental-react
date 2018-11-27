@@ -278,3 +278,87 @@ exports[`<Tree /> create tree component 2`] = `
   </ul>
 </div>
 `;
+
+exports[`<Tree /> create tree component 3`] = `
+<div>
+  <div
+    className="fd-tree fd-tree--header"
+  >
+    <div
+      className="fd-tree__row fd-tree__row--header"
+    >
+      <div
+        className="fd-tree__col fd-tree__col--control"
+      >
+        <button
+          aria-label="expand"
+          aria-pressed={false}
+          className="fd-tree__control "
+          onClick={[Function]}
+        />
+        Column Header
+      </div>
+      <div
+        className="fd-tree__col"
+      >
+        Column Header 1 
+      </div>
+      <div
+        className="fd-tree__col"
+      >
+        Column Header 2
+      </div>
+      <div
+        className="fd-tree__col"
+      >
+        Status
+      </div>
+    </div>
+  </div>
+  <ul
+    className="fd-tree"
+    id=""
+    role="tree"
+  >
+    <li
+      aria-expanded="true"
+      className="fd-tree__item"
+      role="treeitem"
+    >
+      <div
+        className="fd-tree__row"
+      >
+        <div
+          className="fd-tree__col fd-tree__col--control"
+        >
+          <button
+            aria-controls="inYUX852"
+            aria-label="expand"
+            className="fd-tree__control"
+            onClick={[Function]}
+          />
+          First Level
+        </div>
+        <div
+          className="fd-tree__col"
+        >
+           
+        </div>
+        <div
+          className="fd-tree__col"
+        >
+           
+        </div>
+        <div
+          className="fd-tree__col"
+        >
+           
+        </div>
+        <div
+          className="fd-dropdown"
+        />
+      </div>
+    </li>
+  </ul>
+</div>
+`;
