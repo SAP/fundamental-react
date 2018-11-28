@@ -85,7 +85,16 @@ describe('<Tree />', () => {
         {
           id: '10',
           hasChildren: true,
-          values: ['Row 4', 'Data Col 2', 'Data Col 3', 'INACTIVE'],
+          values: [
+            {
+              displayText: '',
+              linkUrl: 'http://me.com'
+            },
+            ,
+            'Data Col 2',
+            'Data Col 3',
+            'INACTIVE'
+          ],
           children: [
             {
               id: '11',
@@ -110,14 +119,23 @@ describe('<Tree />', () => {
         {
           id: '1',
           hasChildren: true,
-          values: ['First Level', ' ', ' ', ' '],
+          values: [
+            {
+              displayText: 'First Level',
+              linkUrl: 'http://me.com'
+            },
+            ' ',
+            ' ',
+            ' '
+          ],
           children: [
             {
               id: '2',
               hasChildren: false,
               values: [
                 {
-                  display: ''
+                  displayText: 'Amazon',
+                  linkUrl: 'http://amazon.com'
                 },
                 {
                   displayText: 'Google',
@@ -130,6 +148,24 @@ describe('<Tree />', () => {
                 {
                   displayText: 'Yahoo',
                   linkUrl: 'http://yahoo.com'
+                },
+                { displayText: '', linkUrl: 'http://sap.com' }
+              ]
+            }
+          ]
+        },
+        {
+          id: '2',
+          hasChildren: true,
+          values: ['Second Level', ' ', ' ', ' '],
+          children: [
+            {
+              id: '2',
+              hasChildren: false,
+              values: [
+                {
+                  displayText: '',
+                  linkUrl: 'http://amazon.com'
                 }
               ]
             }
@@ -152,7 +188,7 @@ describe('<Tree />', () => {
   });
 
   test('open all tree from header', () => {
-    let wrapper = mount(multiLevelTree);
+    let wrapper = mount(richTree);
 
     wrapper
       .find('button.fd-tree__control')
