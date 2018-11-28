@@ -169,7 +169,12 @@ exports[`<Tree /> create tree component 1`] = `
             className="fd-tree__control"
             onClick={[Function]}
           />
-          Row 4
+          <a
+            className="fd-has-font-weight-semi"
+            href="http://me.com"
+          >
+            http://me.com
+          </a>
         </div>
         <div
           className="fd-tree__col"
@@ -253,7 +258,51 @@ exports[`<Tree /> create tree component 2`] = `
             className="fd-tree__control"
             onClick={[Function]}
           />
-          First Level
+          <a
+            className="fd-has-font-weight-semi"
+            href="http://me.com"
+          >
+            First Level
+          </a>
+        </div>
+        <div
+          className="fd-tree__col"
+        >
+           
+        </div>
+        <div
+          className="fd-tree__col"
+        >
+           
+        </div>
+        <div
+          className="fd-tree__col"
+        >
+           
+        </div>
+        <div
+          className="fd-dropdown"
+        />
+      </div>
+    </li>
+    <li
+      aria-expanded="true"
+      className="fd-tree__item"
+      role="treeitem"
+    >
+      <div
+        className="fd-tree__row"
+      >
+        <div
+          className="fd-tree__col fd-tree__col--control"
+        >
+          <button
+            aria-controls="inYUX852"
+            aria-label="expand"
+            className="fd-tree__control"
+            onClick={[Function]}
+          />
+          Second Level
         </div>
         <div
           className="fd-tree__col"
