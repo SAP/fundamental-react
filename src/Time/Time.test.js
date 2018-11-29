@@ -400,6 +400,22 @@ describe('<Time />', () => {
 
     wrapper = mount(
       <Time
+        format12Hours={false}
+        time={{ hour: 23, minute: 0, second: 0, meridiem: 0 }}
+        name="meridiem"
+      />
+    );
+    expect(wrapper.state('time').hour).toEqual(23);
+    wrapper
+      .find(
+        'button.fd-button--light.fd-button--xs.sap-icon--navigation-up-arrow'
+      )
+      .at(0)
+      .simulate('click');
+    expect(wrapper.state('time').hour).toEqual('00');
+
+    wrapper = mount(
+      <Time
         format12Hours={true}
         time={{ hour: 1, minute: 0, second: 0, meridiem: 0 }}
         name="meridiem"
@@ -435,6 +451,23 @@ describe('<Time />', () => {
     expect(wrapper.state('time').minute).toEqual(0);
     expect(wrapper.state('time').second).toEqual(0);
     expect(wrapper.state('time').meridiem).toEqual(0);
+
+    wrapper = mount(
+      <Time
+        format12Hours={true}
+        time={{ hour: 11, minute: 0, second: 0, meridiem: 0 }}
+        name="meridiem"
+      />
+    );
+    expect(wrapper.state('time').hour).toEqual(11);
+    wrapper
+      .find(
+        'button.fd-button--light.fd-button--xs.sap-icon--navigation-up-arrow'
+      )
+      .at(0)
+      .simulate('click');
+    expect(wrapper.state('time').hour).toEqual(12);
+    expect(wrapper.state('time').meridiem).toEqual(1);
   });
 
   test('clicking up on minutes', () => {
@@ -458,6 +491,23 @@ describe('<Time />', () => {
 
     wrapper = mount(
       <Time
+        format12Hours={false}
+        time={{ hour: 24, minute: 59, second: 0, meridiem: 0 }}
+        name="meridiem"
+      />
+    );
+    expect(wrapper.state('time').minute).toEqual(59);
+    wrapper
+      .find(
+        'button.fd-button--light.fd-button--xs.sap-icon--navigation-up-arrow'
+      )
+      .at(1)
+      .simulate('click');
+    expect(wrapper.state('time').hour).toEqual('00');
+    expect(wrapper.state('time').minute).toEqual('00');
+
+    wrapper = mount(
+      <Time
         format12Hours={true}
         time={{ hour: 1, minute: 0, second: 0, meridiem: 0 }}
         name="meridiem"
@@ -474,6 +524,45 @@ describe('<Time />', () => {
     expect(wrapper.state('time').minute).toEqual('01');
     expect(wrapper.state('time').second).toEqual(0);
     expect(wrapper.state('time').meridiem).toEqual(0);
+
+    wrapper = mount(
+      <Time
+        format12Hours={true}
+        time={{ hour: 1, minute: 59, second: 0, meridiem: 0 }}
+        name="meridiem"
+      />
+    );
+    expect(wrapper.state('time').hour).toEqual(1);
+    expect(wrapper.state('time').minute).toEqual(59);
+
+    wrapper
+      .find(
+        'button.fd-button--light.fd-button--xs.sap-icon--navigation-up-arrow'
+      )
+      .at(1)
+      .simulate('click');
+    expect(wrapper.state('time').hour).toEqual('01');
+    expect(wrapper.state('time').minute).toEqual('00');
+
+    wrapper = mount(
+      <Time
+        format12Hours={true}
+        time={{ hour: 11, minute: 59, second: 0, meridiem: 0 }}
+        name="meridiem"
+      />
+    );
+    expect(wrapper.state('time').hour).toEqual(11);
+    expect(wrapper.state('time').minute).toEqual(59);
+
+    wrapper
+      .find(
+        'button.fd-button--light.fd-button--xs.sap-icon--navigation-up-arrow'
+      )
+      .at(1)
+      .simulate('click');
+    expect(wrapper.state('time').hour).toEqual(12);
+    expect(wrapper.state('time').minute).toEqual('00');
+    expect(wrapper.state('time').meridiem).toEqual(1);
 
     wrapper = mount(
       <Time
