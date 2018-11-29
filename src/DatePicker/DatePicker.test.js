@@ -180,7 +180,7 @@ describe('<DatePicker />', () => {
     wrapper.find('input[type="text"]').simulate('keypress', { key: 'Enter' });
 
     wrapper = mount(defaultDatePicker);
-    const date = new Date();
+    let date = new Date();
     wrapper.instance().updateDate(date);
     expect(wrapper.state('selectedDate')).toEqual(date);
     formattedDate = `${date.getMonth() +
@@ -207,6 +207,19 @@ describe('<DatePicker />', () => {
 
     expect(wrapper.instance().formatDate([])).toEqual('');
 
+    // enter end year of 3001
+    wrapper = mount(rangeDatePicker);
+
+    startRangeDate = new Date();
+    endRangeDate = new Date();
+    endRangeDate.setFullYear(3001);
+
+    arrDates = [startRangeDate, endRangeDate];
+    expect(wrapper.instance().formatDate(arrDates)).toEqual('');
+
+    expect(wrapper.instance().formatDate([])).toEqual('');
+
+    // default date picker format date
     wrapper = mount(defaultDatePicker);
     startRangeDate = new Date();
 
@@ -214,8 +227,6 @@ describe('<DatePicker />', () => {
       1}/${startRangeDate.getDate()}/${startRangeDate.getFullYear()}`;
 
     expect(wrapper.instance().formatDate(startRangeDate)).toEqual('');
-
-    arrDates = [startRangeDate];
   });
 
   test('modify date on change', () => {
