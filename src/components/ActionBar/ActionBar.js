@@ -23,11 +23,16 @@ ActionBar.propTypes = {
 };
 
 export const ActionBarBack = props => {
+    const { onclick } = props;
     return (
         <div className="fd-action-bar__back">
-            <button className="fd-button--light fd-button--compact sap-icon--nav-back" />
+            <button className="fd-button--light fd-button--compact sap-icon--nav-back" onClick={onclick} />
         </div>
     );
+};
+
+ActionBarBack.propTypes = {
+    onclick: PropTypes.func
 };
 
 export const ActionBarHeader = props => {
