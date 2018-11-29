@@ -16,38 +16,10 @@ export class Alert extends Component {
     }
 
     render() {
-        const { type, link, linkText, dismissable, rtl, children } = this.props;
+        const { type, link, linkText, dismissable, children } = this.props;
         return (
             <div>
-                {rtl
-                    ? this.state.isActive && (
-                          <div
-                              className={`fd-alert${dismissable ? ' fd-alert--dismissible' : ''}${
-                                  type ? ' fd-alert--' + type : ''
-                              }`}
-                              role="alert"
-                              id="j2ALl423"
-                              dir="rtl"
-                          >
-                              {dismissable ? (
-                                  <button
-                                      className="fd-alert__close"
-                                      aria-controls="j2ALl423"
-                                      aria-label="Close"
-                                      onClick={() => this.closeAlertHandler()}
-                                  />
-                              ) : null}
-                              {children}
-                              {link ? (
-                                  <a href={link} className="fd-link">
-                                      {linkText} <span className="sap-icon--arrow-right sap-icon--s" />
-                                  </a>
-                              ) : (
-                                  undefined
-                              )}
-                          </div>
-                      )
-                    : this.state.isActive && (
+                {this.state.isActive && (
                           <div
                               className={`fd-alert${dismissable ? ' fd-alert--dismissible' : ''}${
                                   type ? ' fd-alert--' + type : ''
@@ -82,6 +54,5 @@ Alert.propTypes = {
     type: PropTypes.oneOf(['', 'warning', 'error']),
     link: PropTypes.string,
     linkText: PropTypes.string,
-    dismissable: PropTypes.bool,
-    rtl: PropTypes.bool
+    dismissable: PropTypes.bool
 };

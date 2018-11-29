@@ -3,25 +3,15 @@ import { Alert } from '../../components';
 import { DocsTile, DocsText, Separator, Header, Description, Import, Properties, Playground } from '..';
 
 export const AlertComponent = () => {
-    const defaultAlertCode = `<Alert dismissable link="#" linkText="link">Default alert with a </Alert>
- 
-<Alert dismissable linkText="link" rtl>تم. بسبب أمام وشعار ولم بـ. أحكم والكساد ما فقد. كل وعُرفت الإنزال مدن. انه </Alert>`;
+    const defaultAlertCode = `<Alert dismissable link="#" linkText="link">Default alert with a </Alert>`;
 
     const warningAlertCode = `<Alert type="warning" dismissable>
     <h3>A dismissible error type alert with template.</h3>
     <p>More information...</p>
-</Alert>
-
-<Alert type="warning" dismissable rtl>
-    تم. بسبب أمام وشعار ولم بـ. أحكم والكساد ما فقد. كل وعُرفت الإنزال مدن. انه
 </Alert>`;
 
     const errorAlertCode = `<Alert type="error" dismissable link="#" linkText="link">
     Error message with a
-</Alert>
-
-<Alert type="error" dismissable rtl>
-    تم. بسبب أمام وشعار ولم بـ. أحكم والكساد ما فقد. كل وعُرفت الإنزال مدن. انه
 </Alert>`;
     
     return (
@@ -45,10 +35,6 @@ export const AlertComponent = () => {
                     {
                         name: 'dismissible',
                         description: 'bool - Shows a dismissible button if set to true. Default is false.'
-                    },
-                    {
-                        name: 'rtl',
-                        description: 'bool - Set to true to enable Right-to-Left support. Default is false.'
                     }
                 ]}
             />
@@ -69,9 +55,6 @@ export const AlertComponent = () => {
                     Default alert with a {' '}
                 </Alert>
                 <br />
-                <Alert dismissable linkText="link" rtl>
-                    تم. بسبب أمام وشعار ولم بـ. أحكم والكساد ما فقد. كل وعُرفت الإنزال مدن. انه
-                </Alert>
             </DocsTile>
             <DocsText>{defaultAlertCode}</DocsText>
 
@@ -89,10 +72,6 @@ export const AlertComponent = () => {
                 </Alert>
 
                 <br />
-
-                <Alert type="warning" dismissable rtl>
-                    تم. بسبب أمام وشعار ولم بـ. أحكم والكساد ما فقد. كل وعُرفت الإنزال مدن. انه
-                </Alert>
             </DocsTile>
             <DocsText>{warningAlertCode}</DocsText>
 
@@ -110,10 +89,6 @@ export const AlertComponent = () => {
                 </Alert>
 
                 <br />
-
-                <Alert type="error" dismissable rtl>
-                    تم. بسبب أمام وشعار ولم بـ. أحكم والكساد ما فقد. كل وعُرفت الإنزال مدن. انه
-                </Alert>
             </DocsTile>
             <DocsText>{errorAlertCode}</DocsText>
 
