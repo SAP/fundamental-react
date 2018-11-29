@@ -3,9 +3,13 @@ import { Button, ButtonGroup } from '../../components';
 import { DocsTile, DocsText, Separator, Header, Description, Import, Properties, Playground } from '..';
 
 export const ButtonComponent = () => {
-    const buttonOptionsCode = `<Button option="emphasized">Emphasized Button</Button>
+    const buttonOptionsCode = `<Button option="emphasized" onclick={handleClick}>Emphasized Button</Button>
 <Button>Regular Button</Button>
-<Button option="light">Light Button</Button>`;
+<Button option="light">Light Button</Button>
+
+const handleClick = () => {
+    alert("You clicked me!");
+}`;
 
     const buttonTypesCode = `<Button>Action Button</Button>
 <Button type="standard">Standard Button</Button>
@@ -100,6 +104,11 @@ export const ButtonComponent = () => {
     <Button compact>Right</Button>
 </ButtonGroup>`;
 
+
+const handleClick = () => {
+   alert("You clicked me!");
+}
+
     return (
         <div>
             <Header>Button</Header>
@@ -163,7 +172,7 @@ export const ButtonComponent = () => {
             </Description>
             <DocsTile centered>
                 <div className="fd-doc__margin">
-                    <Button option="emphasized">Emphasized Button</Button>
+                    <Button option="emphasized" onclick={handleClick}>Emphasized Button</Button>
                     <Button>Regular Button</Button>
                     <Button option="light">Light Button</Button>
                 </div>
