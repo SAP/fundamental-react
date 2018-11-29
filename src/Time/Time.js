@@ -246,11 +246,11 @@ class TimeItem extends Component {
     const { style, arialabel } = this.state;
     const { type, placeholder, disabled, spinners } = this.props;
     return (
-      <div className='fd-time__item'>
+      <div className="fd-time__item">
         {spinners ? (
-          <div className='fd-time__control'>
+          <div className="fd-time__control">
             <button
-              className=' fd-button--light fd-button--xs sap-icon--navigation-up-arrow '
+              className=" fd-button--light fd-button--xs sap-icon--navigation-up-arrow "
               aria-label={arialabel.buttonUp}
               disabled={disabled}
               onClick={this._onUp}
@@ -259,11 +259,11 @@ class TimeItem extends Component {
         ) : (
           ''
         )}
-        <div className='fd-time__input'>
+        <div className="fd-time__input">
           <input
             className={style}
-            type='text'
-            maxLength='2'
+            type="text"
+            maxLength="2"
             placeholder={placeholder}
             onChange={this.onChange}
             value={this.props.value}
@@ -273,9 +273,9 @@ class TimeItem extends Component {
           />
         </div>
         {spinners ? (
-          <div className='fd-time__control'>
+          <div className="fd-time__control">
             <button
-              className=' fd-button--light fd-button--xs sap-icon--navigation-down-arrow'
+              className=" fd-button--light fd-button--xs sap-icon--navigation-down-arrow"
               aria-label={arialabel.buttonDown}
               disabled={disabled}
               onClick={this._onDown}
@@ -370,9 +370,9 @@ export class Time extends Component {
       this.props.onChange(this.state.time);
     }
   };
-  onUpdateTime = () => {
-    this.props.onUpdateTime();
-  };
+  // onUpdateTime = () => {
+  //   this.props.onUpdateTime();
+  // };
   render() {
     const {
       showHour,
@@ -391,7 +391,7 @@ export class Time extends Component {
       max = 24;
     }
     return (
-      <div id={id} className='fd-time'>
+      <div id={id} className="fd-time">
         {/* Hours */}
         {showHour ? (
           <TimeItem
@@ -402,7 +402,7 @@ export class Time extends Component {
             max={max}
             value={time.hour}
             updateTime={this.updateTime}
-            name='hour'
+            name="hour"
             time={time}
             format12Hours={format12Hours}
             spinners={spinners}
@@ -420,7 +420,7 @@ export class Time extends Component {
             max={'60'}
             value={this.state.time.minute}
             updateTime={this.updateTime}
-            name='minute'
+            name="minute"
             time={time}
             format12Hours={format12Hours}
             spinners={spinners}
@@ -438,7 +438,7 @@ export class Time extends Component {
             max={'60'}
             value={this.state.time.second}
             updateTime={this.updateTime}
-            name='second'
+            name="second"
             time={time}
             format12Hours={format12Hours}
             spinners={spinners}
@@ -455,7 +455,7 @@ export class Time extends Component {
             time={this.state.time}
             value={CLOCK[this.state.time.meridiem]}
             updateTime={this.updateTime}
-            name='meridiem'
+            name="meridiem"
             spinners={spinners}
           />
         ) : (

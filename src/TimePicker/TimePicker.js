@@ -114,11 +114,12 @@ class TimePickerItem extends Component {
       //validate hh:mm and mm:ss
       let regex = new RegExp('(1[0-2]|0?[0-9]):([0-5][0-9])');
       this.inputCheck(regex, value);
-    } else if (showHour && showMinute && showSecond && !format12Hours) {
-      //validate hh:mm:ss
-      let regex = new RegExp('(1[0-2]|0?[0-9]):([0-5][0-9]):([0-5][0-9])');
-      this.inputCheck(regex, value);
     }
+    // else if (showHour && showMinute && showSecond && !format12Hours) {
+    //   //validate hh:mm:ss
+    //   let regex = new RegExp('(1[0-2]|0?[0-9]):([0-5][0-9]):([0-5][0-9])');
+    //   this.inputCheck(regex, value);
+    // }
   };
   /**
    *  @param {string} regex
@@ -353,9 +354,9 @@ export class TimePicker extends React.Component {
       return { time: time, value: value };
     });
   };
-  updateTime = time => {
-    this.setState({ time: time });
-  };
+  // updateTime = time => {
+  //   this.setState({ time: time });
+  // };
   updateValue = value => {
     this.setState({ value: value });
   };
@@ -379,22 +380,22 @@ export class TimePicker extends React.Component {
     }
     return value;
   };
-  formatPlaceHolder = () => {
-    let value = '';
-    if (this.state.showHour) {
-      value = 'hh';
-    }
-    if (this.state.showMinute) {
-      value = value ? value + ':mm' : 'mm';
-    }
-    if (this.state.showSecond) {
-      value = value ? value + ':ss' : 'ss';
-    }
-    if (this.state.format12Hours) {
-      value = value + ' am/pm';
-    }
-    return value;
-  };
+  // formatPlaceHolder = () => {
+  //   let value = '';
+  //   if (this.state.showHour) {
+  //     value = 'hh';
+  //   }
+  //   if (this.state.showMinute) {
+  //     value = value ? value + ':mm' : 'mm';
+  //   }
+  //   if (this.state.showSecond) {
+  //     value = value ? value + ':ss' : 'ss';
+  //   }
+  //   if (this.state.format12Hours) {
+  //     value = value + ' am/pm';
+  //   }
+  //   return value;
+  // };
   render() {
     const { id, ...props } = this.props;
     const { popoverId, timeId } = this.state;
