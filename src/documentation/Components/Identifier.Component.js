@@ -26,6 +26,13 @@ export const IdentifierComponent = () => {
 <Identifier size="xxl" glyph="washing-machine" modifier="circle" />`;
     const transparentCode = `<Identifier size="m" label="Wendy Wallace" modifier="transparent">WW</Identifier>
 <Identifier size="l" glyph="washing-machine" modifier="transparent"></Identifier>`;
+    const backgroundImageCode = `<Identifier size="xxs" modifier="circle" backgroundImageUrl="https://placeimg.com/400/400/nature" />
+<Identifier size="xs"  modifier="circle" backgroundImageUrl="https://placeimg.com/400/400/nature" />
+<Identifier size="s"   modifier="circle" backgroundImageUrl="https://placeimg.com/400/400/nature" />
+<Identifier size="m"   modifier="circle" backgroundImageUrl="https://placeimg.com/400/400/nature" />
+<Identifier size="l"   modifier="circle" backgroundImageUrl="https://placeimg.com/400/400/nature" />
+<Identifier size="xl"  modifier="circle" backgroundImageUrl="https://placeimg.com/400/400/nature" />
+<Identifier size="xxl" modifier="circle" backgroundImageUrl="https://placeimg.com/400/400/nature" />`;
     const accentColorsCode = `<Identifier size="m" glyph="money-bills" color={1}></Identifier>
 <Identifier size="m" glyph="money-bills" color={2}></Identifier>
 <Identifier size="m" glyph="money-bills" color={3}></Identifier>
@@ -84,14 +91,27 @@ export const IdentifierComponent = () => {
 
             <h2>Initials</h2>
             <DocsTile centered>
-                <Identifier size="xxs" label="Wendy Wallace">WW</Identifier>
-                <Identifier size="xs" label="Wendy Wallace">WW</Identifier>
-                <Identifier size="s" label="Wendy Wallace">WW</Identifier>
-                <Identifier size="m" label="Wendy Wallace">WW</Identifier>
-                <Identifier size="l" label="Wendy Wallace">WW</Identifier>
-                <Identifier size="xl" label="Wendy Wallace">WW</Identifier>
-                <Identifier size="xxl" label="Wendy Wallace">WW</Identifier>
-
+                <Identifier size="xxs" label="Wendy Wallace">
+                    WW
+                </Identifier>
+                <Identifier size="xs" label="Wendy Wallace">
+                    WW
+                </Identifier>
+                <Identifier size="s" label="Wendy Wallace">
+                    WW
+                </Identifier>
+                <Identifier size="m" label="Wendy Wallace">
+                    WW
+                </Identifier>
+                <Identifier size="l" label="Wendy Wallace">
+                    WW
+                </Identifier>
+                <Identifier size="xl" label="Wendy Wallace">
+                    WW
+                </Identifier>
+                <Identifier size="xxl" label="Wendy Wallace">
+                    WW
+                </Identifier>
             </DocsTile>
             <DocsText>{initialsCode}</DocsText>
 
@@ -119,6 +139,20 @@ export const IdentifierComponent = () => {
                 <Identifier size="l" glyph="washing-machine" modifier="transparent" />
             </DocsTile>
             <DocsText>{transparentCode}</DocsText>
+
+            <Separator />
+
+            <h2>Background image</h2>
+            <DocsTile centered>
+                <Identifier size="xxs" modifier="circle" backgroundImageUrl="https://placeimg.com/400/400/nature" />
+                <Identifier size="xs" modifier="circle" backgroundImageUrl="https://placeimg.com/400/400/nature" />
+                <Identifier size="s" modifier="circle" backgroundImageUrl="https://placeimg.com/400/400/nature" />
+                <Identifier size="m" modifier="circle" backgroundImageUrl="https://placeimg.com/400/400/nature" />
+                <Identifier size="l" modifier="circle" backgroundImageUrl="https://placeimg.com/400/400/nature" />
+                <Identifier size="xl" modifier="circle" backgroundImageUrl="https://placeimg.com/400/400/nature" />
+                <Identifier size="xxl" modifier="circle" backgroundImageUrl="https://placeimg.com/400/400/nature" />
+            </DocsTile>
+            <DocsText>{backgroundImageCode}</DocsText>
 
             <Separator />
 
