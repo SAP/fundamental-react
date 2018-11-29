@@ -1,0 +1,34 @@
+import React from 'react'
+import { Token } from '../../components'
+import { DocsTile, DocsText, Separator, Header, Description, Import } from '..'
+
+export const TokenComponent = () => {
+    const tokenCode = `<Token>Bibendum</Token>
+<Token>Lorem</Token>
+<Token>Dolor</Token>
+<Token>Filter</Token>`;
+
+    const closeAction = (name) => alert(`close ${name}! You can work with the event itself using the callback.`);
+    const tagsNames = ['Bibendum', 'Lorem', 'Dolor', 'Filter'];
+
+    return (
+        <div>
+
+            <Header>Token</Header>
+            <Description>Tokens are used to represent contextualizing information. They can be useful to show applied filters, selected values for form field or object metadata.
+            </Description>
+            <Import module="Token" path="/fundamental-react/src/components/" />
+
+            <Separator />
+
+            <DocsTile centered>
+                {
+                    tagsNames.map((name) => {
+                        return <Token clickHandler={(e) => closeAction(name, e)}>{name}</Token>
+                    })
+                }
+            </DocsTile>
+            <DocsText>{tokenCode}</DocsText>
+        </div>
+    );
+}
