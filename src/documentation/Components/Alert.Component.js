@@ -128,7 +128,7 @@ export const AlertComponent = () => {
                     {
                         attribute: 'type',
                         typeOfAttribute: 'string',
-                        enum: ['default', 'warning', 'error']
+                        enum: [' ', 'warning', 'error']
                     },
                     {
                         attribute: 'dismissable',
@@ -136,7 +136,7 @@ export const AlertComponent = () => {
                     }
                 ]}
             >
-                <Alert type="default" dismissable={false} link="#" linkText="link">
+                <Alert type="error" dismissable={true} link="#" linkText="link">
                     Default alert with a{' '}
                 </Alert>
             </Playground>
