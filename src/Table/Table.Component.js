@@ -1,8 +1,6 @@
 import React from 'react';
-import { Image, Popover, Button, Menu, MenuList, MenuItem } from '../';
-import {} from '../';
+import { Image, Popover, Button, Menu, MenuList, MenuItem, Table } from '../';
 import { DocsTile, DocsText, Separator, Header, Description, Import, Properties } from '../';
-import { Table } from '../';
 
 export const TableComponent = () => {
     const simpleTableCode = `<Table

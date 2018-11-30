@@ -1,19 +1,5 @@
 import React from 'react';
-import {} from '../';
-import {
-    DocsTile,
-    DocsText,
-    Separator,
-    Header,
-    Description,
-    Import,
-    Properties,
-    Button,
-    Popover,
-    Menu,
-    MenuItem,
-    MenuList
-} from '..';
+import { DocsTile, DocsText, Separator, Header, Description, Import, Properties } from '../';
 import {
     Panel,
     PanelGrid,
@@ -27,8 +13,13 @@ import {
     TileMedia,
     TileContent,
     Image,
-    Token
-} from '..';
+    Token,
+    Button,
+    Popover,
+    Menu,
+    MenuItem,
+    MenuList
+} from '../';
 
 export const PanelComponent = () => {
     const panelExampleCode = `<Panel>
