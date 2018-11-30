@@ -5,13 +5,17 @@ import { DocsTile, DocsText, Separator, Header, Description, Import, Properties 
 
 export const ActionBarComponent = () => {
     const actionBarBackBtnCode = `<ActionBar>
-    <ActionBarBack />
+    <ActionBarBack onclick={clickBackBtn}/>
     <ActionBarHeader title={'Page Title'} description={'Action Bar Description'} />
     <ActionBarActions>
         <Button>Button</Button>
         <Button option="emphasized">Button</Button>
     </ActionBarActions>
-</ActionBar>`;
+</ActionBar>
+
+const clickBackBtn = () => {
+    alert("You clicked me!");
+}`;
 
     const actionBarNoBackBtnCode = `<ActionBar>
     <ActionBarHeader title={'Page Title'} description={'Action Bar Description'} />
@@ -80,6 +84,10 @@ export const ActionBarComponent = () => {
     </ActionBarActions>
 </ActionBar>`;
 
+const clickBackBtn = () => {
+    alert("You clicked me!");
+}
+
     return (
         <div>
             <Header>Action Bar</Header>
@@ -106,6 +114,10 @@ export const ActionBarComponent = () => {
                     {
                         name: 'description',
                         description: 'string - Action bar description. Specified in ActionBarHeader.'
+                    },
+                    {
+                        name: 'onclick',
+                        description: 'func - The function that is executed when the back button is clicked.'
                     }
                 ]}
             />
@@ -115,7 +127,7 @@ export const ActionBarComponent = () => {
             <h2>Action bar with back button, description and action buttons.</h2>
             <DocsTile>
                 <ActionBar>
-                    <ActionBarBack />
+                    <ActionBarBack onclick={clickBackBtn}/>
                     <ActionBarHeader title={'Page Title'} description={'Action Bar Description'} />
                     <ActionBarActions>
                         <Button>Button</Button>
