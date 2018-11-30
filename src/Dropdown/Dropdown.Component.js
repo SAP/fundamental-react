@@ -1,7 +1,6 @@
 import React from 'react';
-import { Dropdown } from '../';
 import { DocsTile, DocsText, Separator, Header, Description, Import, Properties } from '../';
-import { Popover, Button, Menu, MenuList, MenuItem } from '../';
+import { Dropdown, Popover, Button, Menu, MenuList, MenuItem } from '../';
 
 export const DropdownComponent = () => {
     const defaultDropdownCode = `<Dropdown>
@@ -343,7 +342,7 @@ export const DropdownComponent = () => {
                                     <MenuItem url="/">Option 4</MenuItem>
                                 </MenuList>
                             </Menu>
-                        } 
+                        }
                     />
                 </Dropdown>
             </DocsTile>

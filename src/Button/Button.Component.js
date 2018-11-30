@@ -1,7 +1,6 @@
 import React from 'react';
 import { Button, ButtonGroup } from '../';
-import { DocsTile, DocsText, Separator, Header, Description, Import, Properties } from '../';
-import { Playground } from '../documentation/Playground/Playground';
+import { DocsTile, DocsText, Separator, Header, Description, Import, Properties, Playground } from '../';
 
 export const ButtonComponent = () => {
     const buttonOptionsCode = `<Button option="emphasized" onclick={() => clickBtnHandler('Emphasized')}>

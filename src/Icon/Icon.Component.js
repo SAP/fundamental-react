@@ -7,9 +7,9 @@ import {
   Header,
   Description,
   Import,
-  Properties
+  Properties,
+  Playground
 } from '../';
-import { Playground } from '../documentation/Playground/Playground';
 
 export const IconComponent = () => {
   const iconsCode = `<Icon glyph="cart" size="s" />

@@ -1,7 +1,6 @@
 import React from 'react';
-import { } from '../';
-import { DocsTile, DocsText, Separator, Header, Description, Import, Properties } from '..';
-import { Menu, MenuList, MenuItem, MenuGroup } from '..';
+import { DocsTile, DocsText, Separator, Header, Description, Import, Properties } from '../';
+import { Menu, MenuList, MenuItem, MenuGroup } from '../';
 
 export const MenuComponent = () => {
     const menuCode = `<Menu>

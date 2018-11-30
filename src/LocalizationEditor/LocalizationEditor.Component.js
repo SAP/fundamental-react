@@ -1,7 +1,6 @@
 import React from 'react';
-import {} from '../';
-import { DocsTile, DocsText, Separator, Header, Import, Properties } from '..';
-import { LocalizationEditor } from '..';
+import { DocsTile, DocsText, Separator, Header, Import, Properties } from '../';
+import { LocalizationEditor } from '../';
 
 export const LocalizationEditorComponent = () => {
     const localizationEditorCode = `<LocalizationEditor
