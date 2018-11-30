@@ -9,11 +9,14 @@ import {
     ProductTileMedia,
     TileGrid,
     Image,
-    Identifier
+    Identifier,
+    Popover,
+    Button,
+    Menu,
+    MenuList,
+    MenuItem
 } from '../';
-import { Popover, Button, Menu, MenuList, MenuItem } from '../';
-import { DocsTile, DocsText, Separator, Header, Description, Import, Properties } from '../';
-import { Playground } from '../';
+import { DocsTile, DocsText, Separator, Header, Description, Import, Properties, Playground } from '../';
 
 export const TileComponent = () => {
     const simpleTileCode = `<Tile>

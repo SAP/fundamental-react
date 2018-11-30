@@ -1,21 +1,18 @@
 import React from 'react';
 import {} from '../';
+import { DocsTile, DocsText, Separator, Header, Description, Import, Properties } from '..';
 import {
-    DocsTile,
-    DocsText,
-    Separator,
-    Header,
-    Description,
-    Import,
-    Properties,
     Button,
     Popover,
     Menu,
     MenuList,
     MenuItem,
-    Identifier
-} from '..';
-import { Navbar, NavbarGroup, NavbarActions, NavbarElement } from '..';
+    Identifier,
+    Navbar,
+    NavbarGroup,
+    NavbarActions,
+    NavbarElement
+} from '../';
 
 export const NavbarComponent = () => {
     const navbarCode = `<Navbar>
@@ -89,12 +86,30 @@ export const NavbarComponent = () => {
 
             <Separator />
 
-            <Properties type="Inputs" properties={[
-                { name: 'alignment', description: "string - The position of the group in the navigation bar. Oprions include 'left' and 'right'. For default (middle) leave empty." },
-                { name: 'launchpad', description: "bool - When set to true, renders a navigation group as a launchpad." },
-                { name: 'noMargin', description: "string - Renders the NavbarElement with no margin on either left or right side. Oprions include 'left' and 'right'. For default leave empty." },
-                { name: 'type', description: "string (required)- The type of the NavbarElement. Oprions include 'search', 'context-menu', 'product-name', 'logo', and 'side-menu'. " }
-            ]} />
+            <Properties
+                type="Inputs"
+                properties={[
+                    {
+                        name: 'alignment',
+                        description:
+                            "string - The position of the group in the navigation bar. Oprions include 'left' and 'right'. For default (middle) leave empty."
+                    },
+                    {
+                        name: 'launchpad',
+                        description: 'bool - When set to true, renders a navigation group as a launchpad.'
+                    },
+                    {
+                        name: 'noMargin',
+                        description:
+                            "string - Renders the NavbarElement with no margin on either left or right side. Oprions include 'left' and 'right'. For default leave empty."
+                    },
+                    {
+                        name: 'type',
+                        description:
+                            "string (required)- The type of the NavbarElement. Oprions include 'search', 'context-menu', 'product-name', 'logo', and 'side-menu'. "
+                    }
+                ]}
+            />
 
             <Separator />
 
@@ -109,24 +124,20 @@ export const NavbarComponent = () => {
                     </NavbarGroup>
 
                     <NavbarGroup launchpad>
-                            <Popover
-                                control={
-                                    <Button option="light">
-                                        Suite Name
-                                    </Button>
-                                }
-                                noArrow
-                                body={
-                                    <Menu>
-                                        <MenuList>
-                                            <MenuItem url="/">Option 1</MenuItem>
-                                            <MenuItem url="/">Option 2</MenuItem>
-                                            <MenuItem url="/">Option 3</MenuItem>
-                                            <MenuItem url="/">Option 4</MenuItem>
-                                        </MenuList>
-                                    </Menu>
-                                }
-                            />
+                        <Popover
+                            control={<Button option="light">Suite Name</Button>}
+                            noArrow
+                            body={
+                                <Menu>
+                                    <MenuList>
+                                        <MenuItem url="/">Option 1</MenuItem>
+                                        <MenuItem url="/">Option 2</MenuItem>
+                                        <MenuItem url="/">Option 3</MenuItem>
+                                        <MenuItem url="/">Option 4</MenuItem>
+                                    </MenuList>
+                                </Menu>
+                            }
+                        />
                     </NavbarGroup>
 
                     <NavbarGroup alignment="right">

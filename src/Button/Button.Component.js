@@ -1,12 +1,17 @@
 import React from 'react';
 import { Button, ButtonGroup } from '../';
-import { DocsTile, DocsText, Separator, Header, Description, Import, Properties } from '../';
-import { Playground } from '../documentation/Playground/Playground';
+import { DocsTile, DocsText, Separator, Header, Description, Import, Properties, Playground } from '../';
 
 export const ButtonComponent = () => {
-    const buttonOptionsCode = `<Button option="emphasized">Emphasized Button</Button>
-<Button>Regular Button</Button>
-<Button option="light">Light Button</Button>`;
+    const buttonOptionsCode = `<Button option="emphasized" onclick={() => clickBtnHandler('Emphasized')}>
+    Emphasized Button
+</Button>
+<Button onclick={() => clickBtnHandler('Regular')}>Regular Button</Button>
+<Button option="light" onclick={() => clickBtnHandler('Light')}>Light Button</Button>
+
+const clickBtnHandler = btn => {
+    alert(\`You clicked the \${btn} Button\`);
+};`;
 
     const buttonTypesCode = `<Button>Action Button</Button>
 <Button type="standard">Standard Button</Button>
@@ -101,6 +106,10 @@ export const ButtonComponent = () => {
     <Button compact>Right</Button>
 </ButtonGroup>`;
 
+    const clickBtnHandler = btn => {
+        alert(`You clicked the ${btn} Button`);
+    };
+
     return (
         <div>
             <Header>Button</Header>
@@ -129,8 +138,7 @@ export const ButtonComponent = () => {
                     },
                     {
                         name: 'compact',
-                        description:
-                            "bool - set to true to enable compact mode for the button."
+                        description: 'bool - set to true to enable compact mode for the button.'
                     },
                     {
                         name: 'glyph',
@@ -140,12 +148,12 @@ export const ButtonComponent = () => {
                     {
                         name: 'disabled',
                         description:
-                            "bool - disabled state of the button. Enabled by setting disabled property to true."
+                            'bool - disabled state of the button. Enabled by setting disabled property to true.'
                     },
                     {
                         name: 'selected',
                         description:
-                            "bool - selected state of the button. Enabled by setting selected property to true."
+                            'bool - selected state of the button. Enabled by setting selected property to true.'
                     },
                     { name: 'onclick', description: 'func - The function that is executed when the button is clicked.' }
                 ]}
@@ -164,9 +172,11 @@ export const ButtonComponent = () => {
             </Description>
             <DocsTile centered>
                 <div className="fd-doc__margin">
-                    <Button option="emphasized">Emphasized Button</Button>
-                    <Button>Regular Button</Button>
-                    <Button option="light">Light Button</Button>
+                    <Button option="emphasized" onclick={() => clickBtnHandler('Emphasized')}>
+                        Emphasized Button
+                    </Button>
+                    <Button onclick={() => clickBtnHandler('Regular')}>Regular Button</Button>
+                    <Button option="light" onclick={() => clickBtnHandler('Light')}>Light Button</Button>
                 </div>
             </DocsTile>
             <DocsText>{buttonOptionsCode}</DocsText>
@@ -320,13 +330,15 @@ export const ButtonComponent = () => {
             <DocsTile centered>
                 <ButtonGroup>
                     <Button glyph="survey" />
-                    <Button glyph="pie-chart" selected/>
+                    <Button glyph="pie-chart" selected />
                     <Button glyph="pool" />
                 </ButtonGroup>
 
-               <ButtonGroup>
+                <ButtonGroup>
                     <Button compact>Left</Button>
-                    <Button compact selected>Middle</Button>
+                    <Button compact selected>
+                        Middle
+                    </Button>
                     <Button compact>Right</Button>
                 </ButtonGroup>
             </DocsTile>

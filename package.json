@@ -20,7 +20,7 @@
         "deploy": "gh-pages -d build",
         "start": "react-scripts start",
         "build-doc": "react-scripts build",
-        "build": "rm -rf dist && NODE_ENV=production babel src --out-dir dist --copy-files --ignore __tests__,spec.js,test.js,__snapshots__",
+        "build": "rm -rf dist && NODE_ENV=production babel src --out-dir dist --copy-files --ignore __tests__,spec.js,test.js,__snapshots__,Component.js",
         "test": "react-scripts test",
         "eject": "react-scripts eject"
     },

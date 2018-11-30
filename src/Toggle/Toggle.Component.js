@@ -1,5 +1,5 @@
 import React from 'react';
-import { Toggle } from './Toggle';
+import { Toggle } from '../';
 import { DocsTile, DocsText, Separator, Header, Description, Import, Properties } from '../';
 
 export const ToggleComponent = () => {
