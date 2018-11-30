@@ -1,6 +1,5 @@
 import React from 'react';
-import { ActionBar, ActionBarBack, ActionBarHeader, ActionBarActions } from '../';
-import { Button, Popover, Menu, MenuList, MenuItem } from '../';
+import { ActionBar, ActionBarBack, ActionBarHeader, ActionBarActions, Button, Popover, Menu, MenuList, MenuItem  } from '../';
 import { DocsTile, DocsText, Separator, Header, Description, Import, Properties } from '../';
 
 export const ActionBarComponent = () => {
