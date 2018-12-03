@@ -211,7 +211,7 @@ describe('<Calendar />', () => {
     expect(wrapper.state('showYears')).toBeTruthy();
 
     let currentYearDisplayed = new Date(wrapper.state('currentYear'));
-    console.log(currentYearDisplayed.getFullYear());
+
     wrapper
       .find(
         'header.fd-calendar__header button.fd-button--light.fd-button--compact'
@@ -220,7 +220,7 @@ describe('<Calendar />', () => {
       .simulate('click');
 
     let newYearDisplayed = wrapper.state('currentYear');
-    console.log(newYearDisplayed.getFullYear());
+
     currentYearDisplayed.setFullYear(currentYearDisplayed.getFullYear() + 12);
     expect(newYearDisplayed.getFullYear()).toEqual(
       currentYearDisplayed.getFullYear()
