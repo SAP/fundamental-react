@@ -151,9 +151,10 @@ describe('<Calendar />', () => {
       .at(0)
       .simulate('click');
     let newDateDisplayed = wrapper.state('currentDateDisplayed');
+    currentDateDisplayed.setMonth(currentDateDisplayed.getMonth() - 1);
 
     expect(newDateDisplayed.getMonth()).toEqual(
-      currentDateDisplayed.getMonth() - 1
+      currentDateDisplayed.getMonth()
     );
 
     // previous button when year shown
@@ -175,9 +176,9 @@ describe('<Calendar />', () => {
       .simulate('click');
 
     let newYearDisplayed = wrapper.state('currentYear');
-
+    currentYearDisplayed.setFullYear(currentYearDisplayed.getFullYear() - 12);
     expect(newYearDisplayed.getFullYear()).toEqual(
-      currentYearDisplayed.getFullYear() - 12
+      currentYearDisplayed.getFullYear()
     );
   });
 
@@ -193,8 +194,10 @@ describe('<Calendar />', () => {
       .simulate('click');
     let newDateDisplayed = wrapper.state('currentDateDisplayed');
 
+    currentDateDisplayed.setMonth(currentDateDisplayed.getMonth() + 1);
+
     expect(newDateDisplayed.getMonth()).toEqual(
-      currentDateDisplayed.getMonth() + 1
+      currentDateDisplayed.getMonth()
     );
 
     // previous button when year shown
@@ -208,6 +211,7 @@ describe('<Calendar />', () => {
     expect(wrapper.state('showYears')).toBeTruthy();
 
     let currentYearDisplayed = new Date(wrapper.state('currentYear'));
+
     wrapper
       .find(
         'header.fd-calendar__header button.fd-button--light.fd-button--compact'
@@ -217,8 +221,9 @@ describe('<Calendar />', () => {
 
     let newYearDisplayed = wrapper.state('currentYear');
 
+    currentYearDisplayed.setFullYear(currentYearDisplayed.getFullYear() + 12);
     expect(newYearDisplayed.getFullYear()).toEqual(
-      currentYearDisplayed.getFullYear() + 12
+      currentYearDisplayed.getFullYear()
     );
   });
 
@@ -243,10 +248,9 @@ describe('<Calendar />', () => {
       .simulate('click');
 
     const newDateDisplayed = wrapper.state('selectedDate');
+    currentDateDisplayed.setDate(currentDateDisplayed.getDate() + 1);
 
-    expect(newDateDisplayed.getDate()).toEqual(
-      currentDateDisplayed.getDate() + 1
-    );
+    expect(newDateDisplayed.getDate()).toEqual(currentDateDisplayed.getDate());
   });
 
   test('click on day with range enabled', () => {
@@ -270,10 +274,8 @@ describe('<Calendar />', () => {
       .simulate('click');
 
     const newDateDisplayed = wrapper.state('selectedDate');
-
-    expect(newDateDisplayed.getDate()).toEqual(
-      currentDateDisplayed.getDate() + 4
-    );
+    currentDateDisplayed.setDate(currentDateDisplayed.getDate() + 4);
+    expect(newDateDisplayed.getDate()).toEqual(currentDateDisplayed.getDate());
 
     expect(wrapper.state('arrSelectedDates').length).toEqual(2);
   });
