@@ -37,3 +37,15 @@ exports[`<Identifier /> Create identifier 5`] = `
   role="presentation"
 />
 `;
+
+exports[`<Identifier /> Create identifier 6`] = `
+<span
+  className="fd-identifier fd-identifier--circle fd-identifier--thumbnail"
+  role="presentation"
+  style={
+    Object {
+      "backgroundImage": "url(https://placeimg.com/400/400/nature)",
+    }
+  }
+/>
+`;

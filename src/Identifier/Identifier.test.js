@@ -21,6 +21,13 @@ describe('<Identifier />', () => {
   );
   const accentColor = <Identifier size="m" glyph="money-bills" color={9} />;
 
+  const bgImage = (
+    <Identifier
+      backgroundImageUrl="https://placeimg.com/400/400/nature"
+      modifier="circle"
+    />
+  );
+
   test('Create identifier', () => {
     // create default icon
     let component = renderer.create(defaultIcon);
@@ -44,6 +51,11 @@ describe('<Identifier />', () => {
 
     // create accent color icon
     component = renderer.create(accentColor);
+    tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+
+    // create background image icon
+    component = renderer.create(bgImage);
     tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
