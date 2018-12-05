@@ -9,8 +9,8 @@ export const DatePickerComponent = () => {
     disableWeekday={['Monday', 'Tuesday']}
     blockedDates={[new Date(2018, 11, 1, 0, 0, 0, 0), new Date(2018, 11, 23, 0, 0, 0, 0)]}
 />`;
-    const enableRangeSelectionDatePickerCode = `<DatePicker enableRangeSelection />
-<DatePicker enableRangeSelection compact />`;
+    const enableRangeSelectionDatePickerCode = `<DatePicker enableRangeSelection disableFutureDates />
+<DatePicker enableRangeSelection disablePastDates compact />`;
 
     return (
         <div>
@@ -55,8 +55,8 @@ export const DatePickerComponent = () => {
 
             <h2>Range Date Picker</h2>
             <DocsTile centered>
-                <DatePicker enableRangeSelection />
-                <DatePicker enableRangeSelection compact />
+                <DatePicker enableRangeSelection disableFutureDates />
+                <DatePicker enableRangeSelection disablePastDates compact />
             </DocsTile>
             <DocsText>{enableRangeSelectionDatePickerCode}</DocsText>
         </div>
