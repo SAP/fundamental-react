@@ -156,6 +156,23 @@ import {
     TimePicker
 } from '../src/TimePicker/TimePicker';
 import {
+    Shellbar,
+    ShellbarLogo,
+    ShellbarTitle,
+    ProductMenu,
+    ProductMenuControl,
+    ShellbarSubtitle,
+    ShellbarAction,
+    UserMenu,
+    UserMenuControl,
+    ShellbarCollapse,
+    ShellbarCollapseControl,
+    ProductSwitcher,
+    ProductSwitcherBody,
+    ProductSwitcherProductIcon,
+    ProductSwitcherProductTitle
+} from '../src/Shellbar/Shellbar';
+import {
     DocsTile,
     DocsText
 } from '../src/documentation/DocsTile/DocsTile';
@@ -267,7 +284,22 @@ export {
     TileGrid,
     ProductTileContent,
     Toggle,
-    Tree
+    Tree,
+    Shellbar,
+    ShellbarLogo,
+    ShellbarTitle,
+    ProductMenu,
+    ProductMenuControl,
+    ShellbarSubtitle,
+    ShellbarAction,
+    UserMenu,
+    UserMenuControl,
+    ShellbarCollapse,
+    ShellbarCollapseControl,
+    ProductSwitcher,
+    ProductSwitcherBody,
+    ProductSwitcherProductIcon,
+    ProductSwitcherProductTitle
 };
 
 ReactDOM.render( < App / > , document.getElementById('root'));
