@@ -13,13 +13,13 @@ $fd-fonts-path: '../node_modules/fiori-fundamentals/dist/fonts/';
     .fd-token,
     .fd-dropdown,
     .fd-button-group,
-    [class*='fd-identifier'],
-    {
+    // [class*='fd-identifier'],
+ {
         margin-right: 20px;
     }
 
     .fd-popover {
-        margin-right: 60px;
+        // margin-right: 60px;
     }
 
     .fd-button--grouped {

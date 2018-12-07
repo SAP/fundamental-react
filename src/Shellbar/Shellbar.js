@@ -3,12 +3,13 @@ import PropTypes from 'prop-types';
 
 // ------------------------------------------- Shellbar ------------------------------------------
 export const Shellbar = props => {
-    const { logo, product, copilot, actions } = props;
+    const { logo, product, subtitle, copilot, actions } = props;
     return (
         <div className="fd-shellbar">
             <div className="fd-shellbar__group fd-shellbar__group--start">
                 {logo}
                 <div className="fd-shellbar__product">{product}</div>
+                {subtitle}
             </div>
             {copilot ? (
                 <div className="fd-shellbar__group fd-shellbar__group--middle">
@@ -29,33 +30,53 @@ Shellbar.propTypes = {
     copilot: PropTypes.bool
 };
 
-// ------------------------------------------- Shellbar Logo ------------------------------------------
+// ------------------------------------------- Shellbar Logo ---------------------------------------
 export const ShellbarLogo = props => {
-    const { href, children } = props;
+    const { href, imageReplaced, children } = props;
     return (
-        <a href={href ? href : '#'} className="fd-shellbar__logo">
+        <a
+            href={href ? href : '/'}
+            className={`fd-shellbar__logo${imageReplaced ? ' fd-shellbar__logo--image-replaced' : ''}`}
+        >
             {children}
         </a>
     );
 };
 
 ShellbarLogo.propTypes = {
-    href: PropTypes.string
+    href: PropTypes.string,
+    imageReplaced: PropTypes.bool
 };
 
-// ------------------------------------------- Shellbar Title ------------------------------------------
-export const ShellbarTitle = props => {
+// ---------------------------------------- Product Menu Control-----------------------------------
+export const ProductMenuControl = props => {
     const { children } = props;
-    return <span className="fd-shellbar__title">{children}</span>;
+    return (
+        <button className="fd-product-menu__control">
+            <span className="fd-shellbar__title fd-product-menu__title">{children}</span>
+        </button>
+    );
 };
 
-// ------------------------------------------- Shellbar Subtitle ------------------------------------------
+// ----------------------------------------- Product Menu -----------------------------------------
+export const ProductMenu = props => {
+    const { children } = props;
+    return <div className="fd-product-menu">{children}</div>;
+};
+
+// ------------------------------------------ Shellbar Subtitle -----------------------------------
 export const ShellbarSubtitle = props => {
     const { children } = props;
     return <div className="fd-shellbar__subtitle">{children}</div>;
 };
 
-// ------------------------------------------- Shellbar Action ------------------------------------------
+// ------------------------------------------- Shellbar Title -------------------------------------
+export const ShellbarTitle = props => {
+    const { children } = props;
+    return <span className="fd-shellbar__title">{children}</span>;
+};
+
+// ------------------------------------------- Shellbar Action ------------------------------------
 export const ShellbarAction = props => {
     const { showAlways, collapse, collapsible, children } = props;
     return (
@@ -69,41 +90,31 @@ export const ShellbarAction = props => {
     );
 };
 
-// ------------------------------------------- Shellbar Collapse ------------------------------------------
-export const ShellbarCollapse = props => {
-    const { children } = props;
-    return <div className="fd-shellbar-collapse">{children}</div>;
+ShellbarAction.propTypes = {
+    showAlways: PropTypes.bool,
+    collapse: PropTypes.bool,
+    collapsible: PropTypes.bool
 };
 
-// ------------------------------------------- Shellbar Collapse Control------------------------------------------
-export const ShellbarCollapseControl = props => {
+// ------------------------------------------- User Menu ------------------------------------
+export const UserMenu = props => {
     const { children } = props;
-    return <div className="fd-shellbar-collapse--control">{children}</div>;
+    return <div className="fd-user-menu">{children}</div>;
 };
 
-// ------------------------------------------- Product Menu ------------------------------------------
-export const ProductMenu = props => {
+// ------------------------------------------- User Menu Control-----------------------------
+export const UserMenuControl = props => {
     const { children } = props;
-    return <div className="fd-product-menu">{children}</div>;
+    return <div className="fd-user-menu__control">{children}</div>;
 };
 
-// ------------------------------------------- Product Menu Control------------------------------------------
-export const ProductMenuControl = props => {
-    const { children } = props;
-    return (
-        <button className="fd-product-menu__control">
-            <span className="fd-shellbar__title fd-product-menu__title">{children}</span>
-        </button>
-    );
-};
-
-// ------------------------------------------- Product Switcher ------------------------------------------
+// ----------------------------------------- Product Switcher -------------------------------
 export const ProductSwitcher = props => {
     const { children } = props;
     return <div className="fd-product-switcher">{children}</div>;
 };
 
-// ------------------------------------------- Product Switcher Body------------------------------------------
+// --------------------------------------- Product Switcher Body-----------------------------
 export const ProductSwitcherBody = props => {
     const { children } = props;
     return (
@@ -115,26 +126,46 @@ export const ProductSwitcherBody = props => {
     );
 };
 
-// ------------------------------------ Product Switcher Product Icon ----------------------------------------
+// ---------------------------------- Product Switcher Product Icon -------------------------
 export const ProductSwitcherProductIcon = props => {
     const { children } = props;
-    return <span class="fd-product-switcher__product-icon">{children}</span>;
+    return <span className="fd-product-switcher__product-icon">{children}</span>;
 };
 
-// ------------------------------------ Product Switcher Product Title ----------------------------------------
+// --------------------------------- Product Switcher Product Title -------------------------
 export const ProductSwitcherProductTitle = props => {
     const { children } = props;
-    return <span class="fd-product-switcher__product-title">{children}</span>;
+    return <span className="fd-product-switcher__product-title">{children}</span>;
 };
 
-// ------------------------------------------- User Menu ------------------------------------------
-export const UserMenu = props => {
+
+// ------------------------------------------------------------------------------------------------
+// ------------------------------------------------------------------------------------------------
+// ------------------------------------------------------------------------------------------------
+// ------------------------------------------------------------------------------------------------
+// ------------------------------------------------------------------------------------------------
+// ------------------------------------------------------------------------------------------------
+// ------------------------------------------------------------------------------------------------
+
+// ----------------------------------------- Shellbar Collapse ------------------------------------
+export const ShellbarCollapse = props => {
     const { children } = props;
-    return <div className="fd-user-menu">{children}</div>;
+    return <div className="fd-shellbar-collapse">{children}</div>;
 };
 
-// ------------------------------------------- User Menu Control------------------------------------------
-export const UserMenuControl = props => {
+// -------------------------------------- Shellbar Collapse Control -------------------------------
+export const ShellbarCollapseControl = props => {
     const { children } = props;
-    return <div className="fd-user-menu__control">{children}</div>;
+    return <div className="fd-shellbar-collapse--control">{children}</div>;
 };
+
+
+
+
+
+
+
+
+
+
+
