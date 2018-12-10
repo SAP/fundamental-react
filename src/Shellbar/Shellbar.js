@@ -1,34 +1,57 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 // ------------------------------------------- Shellbar ------------------------------------------
-export const Shellbar = props => {
-    const { logo, product, subtitle, copilot, actions } = props;
-    return (
-        <div className="fd-shellbar">
-            <div className="fd-shellbar__group fd-shellbar__group--start">
-                {logo}
-                <div className="fd-shellbar__product">{product}</div>
-                {subtitle}
-            </div>
-            {copilot ? (
-                <div className="fd-shellbar__group fd-shellbar__group--middle">
-                    <img
-                        src="//unpkg.com/fiori-fundamentals/dist/images/copilot.png"
-                        alt="CoPilot"
-                        height="30"
-                        width="30"
-                    />
-                </div>
-            ) : null}
-            <div className="fd-shellbar__group fd-shellbar__group--end">{actions}</div>
-        </div>
-    );
-};
 
-Shellbar.propTypes = {
-    copilot: PropTypes.bool
-};
+export class Shellbar extends Component {
+    static propTypes = {
+        copilot: PropTypes.bool
+    };
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            collapsed: false
+        };
+    }
+
+    componentDidMount() {
+        console.log("Resizing window...")
+        window.addEventListener('resize', this.onResize.bind(this));
+        this.onResize();
+    }
+
+    onResize() {
+        this.setState({ collapsed: window.innerWidth <= 1024 });
+    }
+
+    render() {
+        const { logo, product, subtitle, copilot, actions, actionsCollapsed } = this.props;
+        return (
+            <div className="fd-shellbar">
+                <div className="fd-shellbar__group fd-shellbar__group--start">
+                    {logo}
+                    <div className="fd-shellbar__product">{product}</div>
+                    {subtitle}
+                </div>
+                {copilot ? (
+                    <div className="fd-shellbar__group fd-shellbar__group--middle">
+                        <img
+                            src="//unpkg.com/fiori-fundamentals/dist/images/copilot.png"
+                            alt="CoPilot"
+                            height="30"
+                            width="30"
+                        />
+                    </div>
+                ) : null}
+                <div className="fd-shellbar__group fd-shellbar__group--end">
+                    {this.state.collapsed && actionsCollapsed}
+                    {actions}
+                </div>
+            </div>
+        );
+    }
+}
 
 // ------------------------------------------- Shellbar Logo ---------------------------------------
 export const ShellbarLogo = props => {
@@ -138,34 +161,31 @@ export const ProductSwitcherProductTitle = props => {
     return <span className="fd-product-switcher__product-title">{children}</span>;
 };
 
-
-// ------------------------------------------------------------------------------------------------
-// ------------------------------------------------------------------------------------------------
-// ------------------------------------------------------------------------------------------------
-// ------------------------------------------------------------------------------------------------
-// ------------------------------------------------------------------------------------------------
-// ------------------------------------------------------------------------------------------------
-// ------------------------------------------------------------------------------------------------
-
 // ----------------------------------------- Shellbar Collapse ------------------------------------
 export const ShellbarCollapse = props => {
     const { children } = props;
-    return <div className="fd-shellbar-collapse">{children}</div>;
+    return (
+        <div className="fd-shellbar__action ">
+            <div className="fd-shellbar-collapse">{children}</div>
+        </div>
+    );
 };
 
 // -------------------------------------- Shellbar Collapse Control -------------------------------
 export const ShellbarCollapseControl = props => {
-    const { children } = props;
-    return <div className="fd-shellbar-collapse--control">{children}</div>;
+    const { collapsedCount } = props;
+    return (
+        <div className="fd-shellbar-collapse--control">
+            <button className="fd-button--shell sap-icon--overflow">
+                {
+                    <span className="fd-counter" aria-label="Collapsed Count">
+                        {collapsedCount}
+                    </span>
+                }
+            </button>
+        </div>
+    );
 };
-
-
-
-
-
-
-
-
-
-
-
+ShellbarCollapseControl.propTypes = {
+    collapsedCount: PropTypes.number
+};

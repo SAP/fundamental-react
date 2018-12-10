@@ -19,7 +19,9 @@ import {
     ProductSwitcher,
     ProductSwitcherBody,
     ProductSwitcherProductIcon,
-    ProductSwitcherProductTitle
+    ProductSwitcherProductTitle,
+    ShellbarCollapse,
+    ShellbarCollapseControl
 } from '..';
 var images = require.context('../../assets', true);
 
@@ -48,6 +50,8 @@ export const ShellbarComponent = () => {
         { name: 'Cloud Portal', imagePath: images('./12.png') }
     ];
 
+    const collapsedItems = [{ name: 'Notifications' }, { name: 'Pool' }, { name: 'Product Switcher' }];
+
     return (
         <div>
             <Header>Shellbar</Header>
@@ -74,7 +78,7 @@ export const ShellbarComponent = () => {
                         <ShellbarLogo>
                             <img
                                 src="//unpkg.com/fiori-fundamentals/dist/images/sap-logo.png"
-                                srcset="//unpkg.com/fiori-fundamentals/dist/images/sap-logo@2x.png 1x, //unpkg.com/fiori-fundamentals/dist/images/sap-logo@3x.png 2x, //unpkg.com/fiori-fundamentals/dist/images/sap-logo@4x.png 3x"
+                                srcSet="//unpkg.com/fiori-fundamentals/dist/images/sap-logo@2x.png 1x, //unpkg.com/fiori-fundamentals/dist/images/sap-logo@3x.png 2x, //unpkg.com/fiori-fundamentals/dist/images/sap-logo@4x.png 3x"
                                 alt="SAP"
                             />
                         </ShellbarLogo>
@@ -102,14 +106,16 @@ export const ShellbarComponent = () => {
                         <React.Fragment>
                             <ShellbarAction collapsible>
                                 <Button option="shell" glyph="bell">
-                                    <span class="fd-counter fd-counter--notification" aria-label="Unread count">
+                                    <span className="fd-counter fd-counter--notification" aria-label="Unread count">
                                         25
                                     </span>
                                 </Button>
                             </ShellbarAction>
+
                             <ShellbarAction collapsible>
                                 <Button option="shell" glyph="pool" />
                             </ShellbarAction>
+
                             <ShellbarAction showAlways>
                                 <UserMenu>
                                     <Popover
@@ -132,6 +138,7 @@ export const ShellbarComponent = () => {
                                     />
                                 </UserMenu>
                             </ShellbarAction>
+
                             <ShellbarAction collapsible>
                                 <ProductSwitcher>
                                     <Popover
@@ -157,6 +164,23 @@ export const ShellbarComponent = () => {
                                 </ProductSwitcher>
                             </ShellbarAction>
                         </React.Fragment>
+                    }
+                    actionsCollapsed={
+                        <ShellbarCollapse>
+                            <Popover
+                                alignment="right"
+                                control={<ShellbarCollapseControl collapsedCount={collapsedItems.length}/>}
+                                body={
+                                    <Menu>
+                                        <MenuList>
+                                            {collapsedItems.map(item => {
+                                                return <MenuItem url="/">{item.name}</MenuItem>;
+                                            })}
+                                        </MenuList>
+                                    </Menu>
+                                }
+                            />
+                        </ShellbarCollapse>
                     }
                 />
             </DocsTile>
