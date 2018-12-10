@@ -10,15 +10,23 @@ export class Shellbar extends Component {
 
     constructor(props) {
         super(props);
-        this.state = {
+        this.state = {};
+        this.onResize = this.onResize.bind(this);
+    }
+
+    componentWillMount() {
+        this.setState({
             collapsed: false
-        };
+        })
     }
 
     componentDidMount() {
-        console.log("Resizing window...")
-        window.addEventListener('resize', this.onResize.bind(this));
+        window.addEventListener('resize', this.onResize);
         this.onResize();
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.onResize);
     }
 
     onResize() {
@@ -165,7 +173,7 @@ export const ProductSwitcherProductTitle = props => {
 export const ShellbarCollapse = props => {
     const { children } = props;
     return (
-        <div className="fd-shellbar__action ">
+        <div className="fd-shellbar__action fd-shellbar__action--collapse">
             <div className="fd-shellbar-collapse">{children}</div>
         </div>
     );
