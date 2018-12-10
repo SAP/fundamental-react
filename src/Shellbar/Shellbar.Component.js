@@ -57,9 +57,7 @@ export const ShellbarComponent = () => {
             <Header>Shellbar</Header>
             <Description />
             <Import module="Shellbar" path="/fundamental-react/src/" />
-
             <Separator />
-
             <Properties
                 type="Inputs"
                 properties={[
@@ -69,9 +67,7 @@ export const ShellbarComponent = () => {
                     }
                 ]}
             />
-
             <Separator />
-
             <DocsTile>
                 <Shellbar
                     logo={
@@ -111,11 +107,9 @@ export const ShellbarComponent = () => {
                                     </span>
                                 </Button>
                             </ShellbarAction>
-
                             <ShellbarAction collapsible>
                                 <Button option="shell" glyph="pool" />
                             </ShellbarAction>
-
                             <ShellbarAction showAlways>
                                 <UserMenu>
                                     <Popover
@@ -138,7 +132,6 @@ export const ShellbarComponent = () => {
                                     />
                                 </UserMenu>
                             </ShellbarAction>
-
                             <ShellbarAction collapsible>
                                 <ProductSwitcher>
                                     <Popover
@@ -169,7 +162,7 @@ export const ShellbarComponent = () => {
                         <ShellbarCollapse>
                             <Popover
                                 alignment="right"
-                                control={<ShellbarCollapseControl collapsedCount={collapsedItems.length}/>}
+                                control={<ShellbarCollapseControl collapsedCount={collapsedItems.length} />}
                                 body={
                                     <Menu>
                                         <MenuList>
@@ -185,7 +178,6 @@ export const ShellbarComponent = () => {
                 />
             </DocsTile>
             <DocsText>{shellbarExampleCode}</DocsText>
-
             <Separator />
         </div>
     );
