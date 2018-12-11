@@ -8,7 +8,7 @@ export class Shellbar extends Component {
     };
 
     static defaultProps = {
-        actions: []
+        actions: null
     };
 
     constructor(props) {
@@ -20,9 +20,11 @@ export class Shellbar extends Component {
     }
 
     getCollapsedActions = () => {
-        let collapsedList = [...this.props.actions];
-        collapsedList.push(this.props.productSwitcher);
-        return collapsedList;
+        if(this.props.actions) {
+            let collapsedList = [...this.props.actions];
+            collapsedList.push(this.props.productSwitcher);
+            return collapsedList;
+        } 
     };
 
     componentWillMount() {
@@ -160,7 +162,7 @@ export class Shellbar extends Component {
                                     </div>
                                 );
                             })}
-                        {this.state.collapsed && (
+                        {(this.state.collapsed && actions) && (
                             <div class="fd-shellbar__action fd-shellbar__action--collapse">
                                 <div class="fd-shellbar-collapse">
                                     <Popover
@@ -188,12 +190,6 @@ export class Shellbar extends Component {
                                                                     url={item.url}
                                                                     link={item.link}
                                                                 >
-                                                                    {item.glyph && (
-                                                                        <React.Fragment>
-                                                                            <Icon glyph={item.glyph} size={item.size} />
-                                                                            &nbsp;&nbsp;&nbsp;
-                                                                        </React.Fragment>
-                                                                    )}
                                                                     {item.label}
                                                                 </MenuItem>
                                                             );

@@ -4,6 +4,23 @@ import { Shellbar } from '..';
 var images = require.context('../../assets', true);
 
 export const ShellbarComponent = () => {
+    const simpleShellbarExampleCode = `<Shellbar
+    logo={<img src="//unpkg.com/fiori-fundamentals/dist/images/sap-logo.png" alt="SAP" />}
+    productTitle="Corporate Portal"
+    user={user}
+    userMenu={userMenu}
+/>
+    
+const user = {
+    initials: 'JS',
+    userName: 'John Snow'
+};
+
+const userMenu = [
+    { name: 'Settings', glyph: 'action-settings', size: 's', callback: () => alert('Settings selected!') },
+    { name: 'Sign Out', glyph: 'log', size: 's', callback: () => alert('Sign Out selected!') }
+];`;
+
     const shellbarExampleCode = `<Shellbar
     logo={<img src="//unpkg.com/fiori-fundamentals/dist/images/sap-logo.png" alt="SAP" />}
     productTitle="Corporate Portal"
@@ -25,7 +42,7 @@ const productMenu = [
 ];
 
 const actions = [
-    { glyph: 'bell', notificationCount: 21, label: 'Notification', callback: () => alert('Notification selected!')},
+    { glyph: 'bell', notificationCount: 21, label: 'Notifications', callback: () => alert('Notification selected!')},
     { glyph: 'post', notificationCount: 4, label: 'Post', callback: () => alert('Post selected!')},
     { glyph: 'settings', label: 'Settings', notificationCount: 0, callback: () => alert('Settings selected!'), menu: (
         <Menu>
@@ -74,7 +91,7 @@ const productSwitcherList = [
         {
             glyph: 'bell',
             notificationCount: 21,
-            label: 'Notification',
+            label: 'Notifications',
             callback: () => alert('Notification selected!')
         },
         {
@@ -144,24 +161,64 @@ const productSwitcherList = [
 
     return (
         <div>
-            <Header>Links with collapsible menu, CoPilot and Product Switcher</Header>
+            <Header>Shellbar</Header>
             <Description>
-                When a product has multiple links, the product links should collapse into an overflow menu on mobile
-                screens. All actions, except for the user menu, should be collapsed. See the placement of the{' '}
-                <code>&lt;fd-shellbar-collapse></code> container below.
+                The shellbar offers consistent, responsive navigation across all products and applications. Includes
+                support for branding, product navigation, search, notifications, user settings, and CoPilot. This is a
+                composite component comprised of mandatory and optional elements. Before getting started, here are some
+                things to know.
             </Description>
             <Import module="Shellbar" path="/fundamental-react/src/" />
             <Separator />
             <Properties
                 type="Inputs"
                 properties={[
+                    { name: 'logo', description: '(required) for company branding.' },
                     {
-                        name: '',
-                        description: ''
-                    }
+                        name: 'productTitle',
+                        description: '(required) displays the current application when no product menu is used.'
+                    },
+                    { name: 'productMenu', description: '(optional) holds product titles and navigation.' },
+                    {
+                        name: 'subtitle',
+                        description: '(optional) displays an application context. Should be used rarely.'
+                    },
+                    { name: 'copilot', description: '(optional) for use with applications that utilize CoPilot.' },
+                    { name: 'actions', description: '(required) holds all product actions and links.' },
+                    { name: 'user', description: '(required) user information like name, initials, etc.' },
+                    {
+                        name: 'userMenu',
+                        description: '(required) for user settings and application meta links such as Sign Out.'
+                    },
+                    { name: 'productSwitcher', description: '(optional) for navigating between products.' },
+                    { name: 'productSwitcherList', description: '(optional) list of the products.' }
                 ]}
             />
             <Separator />
+
+            <h2>Basic Shellbar</h2>
+            <Description>
+                This example shows the minimum shellbar for a single application product with only user settings. If no
+                user thumbnail is available then display initials.
+            </Description>
+            <DocsTile>
+                <Shellbar
+                    logo={<img src="//unpkg.com/fiori-fundamentals/dist/images/sap-logo.png" alt="SAP" />}
+                    productTitle="Corporate Portal"
+                    user={user}
+                    userMenu={userMenu}
+                />
+            </DocsTile>
+            <DocsText>{simpleShellbarExampleCode}</DocsText>
+
+            <Separator />
+
+            <h2>Links with collapsible menu, CoPilot and Product Switcher</h2>
+            <Description>
+                When a product has multiple links, the product links should collapse into an overflow menu on mobile
+                screens. All actions, except for the user menu, should be collapsed. See the placement of the{' '}
+                <code>&lt;fd-shellbar-collapse></code> container below.
+            </Description>
             <DocsTile>
                 <Shellbar
                     logo={<img src="//unpkg.com/fiori-fundamentals/dist/images/sap-logo.png" alt="SAP" />}
@@ -172,8 +229,8 @@ const productSwitcherList = [
                     actions={actions}
                     user={user}
                     userMenu={userMenu}
-                    productSwitcherList={productSwitcherList}
                     productSwitcher={productSwitcher}
+                    productSwitcherList={productSwitcherList}
                 />
             </DocsTile>
             <DocsText>{shellbarExampleCode}</DocsText>
