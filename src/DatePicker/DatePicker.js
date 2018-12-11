@@ -315,6 +315,8 @@ export class DatePicker extends Component {
   };
 
   updateDate(date) {
+    console.log("Inside updateDate function. The event is: ", date)
+    
     if (this.props.enableRangeSelection) {
       if (date.length == 2) {
         let firstDateMonth = date[0].getMonth() + 1;
@@ -407,6 +409,14 @@ export class DatePicker extends Component {
             <Calendar
               onChange={this.updateDate}
               enableRangeSelection={this.props.enableRangeSelection}
+              disableWeekends={this.props.disableWeekends}
+              disableBeforeDate={this.props.disableBeforeDate}
+              disableAfterDate={this.props.disableAfterDate}
+              disableWeekday={this.props.disableWeekday}
+              disablePastDates={this.props.disablePastDates}
+              disableFutureDates={this.props.disableFutureDates}
+              blockedDates={this.props.blockedDates}
+              disabledDates={this.props.disabledDates}
               customDate={
                 this.props.enableRangeSelection
                   ? this.state.arrSelectedDates
