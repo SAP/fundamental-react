@@ -13,7 +13,8 @@ export const ShellbarComponent = () => {
     
 const user1 = {
     initials: 'JS',
-    userName: 'John Snow'
+    userName: 'John Snow',
+    colorAccent: 11
 };
 
 const userMenu = [
@@ -119,7 +120,8 @@ const productSwitcherList = [
 
     const user1 = {
         initials: 'JS',
-        userName: 'John Snow'
+        userName: 'John Snow',
+        colorAccent: 11
     };
 
     const user = {
