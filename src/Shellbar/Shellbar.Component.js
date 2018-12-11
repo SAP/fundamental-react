@@ -1,61 +1,72 @@
 import React from 'react';
 import { DocsTile, DocsText, Separator, Header, Description, Import, Properties } from '..';
-import {
-    Button,
-    Popover,
-    Menu,
-    MenuList,
-    MenuItem,
-    Identifier,
-    Shellbar,
-    ShellbarLogo,
-    ShellbarTitle,
-    ProductMenu,
-    ProductMenuControl,
-    ShellbarSubtitle,
-    ShellbarAction,
-    UserMenu,
-    UserMenuControl,
-    ProductSwitcher,
-    ProductSwitcherBody,
-    ProductSwitcherProductIcon,
-    ProductSwitcherProductTitle,
-    ShellbarCollapse,
-    ShellbarCollapseControl
-} from '..';
+import { Shellbar } from '..';
 var images = require.context('../../assets', true);
 
 export const ShellbarComponent = () => {
     const shellbarExampleCode = ``;
 
-    const applicationList = [
-        { name: 'Application A' },
-        { name: 'Application B' },
-        { name: 'Application C' },
-        { name: 'Application D' }
+    const actions = [
+        {
+            glyph: 'bell',
+            notificationCount: 23,
+            label: 'Notification',
+            callback: () => alert('Notification button pressed')
+        },
+        {
+            glyph: 'pool',
+            label: 'Pool',
+            callback: () => alert('Pool button pressed')
+        },
+        {
+            glyph: 'flight',
+            notificationCount: 7,
+            label: 'Flight',
+            callback: () => alert('Flight button pressed')
+        }
+    ];
+
+    const user = {
+        initials: 'WW'
+    };
+
+    const userMenu = [
+        { text: 'Settings', callback: () => alert('Settings clicked!') },
+        { text: 'Sign Out', callback: () => alert('Sign Out clicked!') }
+    ];
+
+ 
+
+    const productMenu = [
+        { name: 'Application A', callback: () => alert('Application A clicked!') },
+        { name: 'Application B', callback: () => alert('Application B clicked!') },
+        { name: 'Application C', callback: () => alert('Application C clicked!') },
+        { name: 'Application D', callback: () => alert('Application D clicked!') }
     ];
 
     const productSwitcherList = [
-        { name: 'Fiori Home', imagePath: images('./01.png') },
-        { name: 'S/4 HANA Cloud', imagePath: images('./02.png') },
-        { name: 'Analytics Cloud', imagePath: images('./03.png') },
-        { name: 'Ariba', imagePath: images('./04.png') },
-        { name: 'SuccessFactors', imagePath: images('./05.png') },
-        { name: 'Commerce Cloud', imagePath: images('./06.png') },
-        { name: 'Gigya', imagePath: images('./07.png') },
-        { name: 'Callidus Cloud', imagePath: images('./08.png') },
-        { name: 'Fieldglass', imagePath: images('./09.png') },
-        { name: 'Concur', imagePath: images('./10.png') },
-        { name: 'Cloud for Customer', imagePath: images('./11.png') },
-        { name: 'Cloud Portal', imagePath: images('./12.png') }
+        { title: 'Fiori Home', image: images('./01.png') },
+        { title: 'S/4 HANA Cloud', image: images('./02.png') },
+        { title: 'Analytics Cloud', image: images('./03.png') },
+        { title: 'Ariba', image: images('./04.png') },
+        { title: 'SuccessFactors', image: images('./05.png') },
+        { title: 'Commerce Cloud', image: images('./06.png') },
+        { title: 'Gigya', image: images('./07.png') },
+        { title: 'Callidus Cloud', image: images('./08.png') },
+        { title: 'Fieldglass', image: images('./09.png') },
+        { title: 'Concur', image: images('./10.png') },
+        { title: 'Cloud for Customer', image: images('./11.png') },
+        { title: 'Cloud Portal', image: images('./12.png') }
     ];
-
-    const collapsedItems = [{ name: 'Notifications' }, { name: 'Pool' }, { name: 'Product Switcher' }];
 
     return (
         <div>
-            <Header>Shellbar</Header>
-            <Description />
+            <Header>Links with collapsible menu, CoPilot and Product Switcher</Header>
+            <Description>
+                When a product has multiple links, the product links should collapse into an overflow menu on mobile
+                screens. All actions, except for the user menu, should be collapsed. See the placement of the{' '}
+                <code>&lt;fd-shellbar-collapse></code> container below.
+            </Description>
             <Import module="Shellbar" path="/fundamental-react/src/" />
             <Separator />
             <Properties
@@ -71,114 +82,23 @@ export const ShellbarComponent = () => {
             <DocsTile>
                 <Shellbar
                     logo={
-                        <ShellbarLogo>
-                            <img
-                                src="//unpkg.com/fiori-fundamentals/dist/images/sap-logo.png"
-                                srcSet="//unpkg.com/fiori-fundamentals/dist/images/sap-logo@2x.png 1x, //unpkg.com/fiori-fundamentals/dist/images/sap-logo@3x.png 2x, //unpkg.com/fiori-fundamentals/dist/images/sap-logo@4x.png 3x"
-                                alt="SAP"
-                            />
-                        </ShellbarLogo>
+                        <img
+                            src="//unpkg.com/fiori-fundamentals/dist/images/sap-logo.png"
+                            srcSet="//unpkg.com/fiori-fundamentals/dist/images/sap-logo@2x.png 1x, //unpkg.com/fiori-fundamentals/dist/images/sap-logo@3x.png 2x, //unpkg.com/fiori-fundamentals/dist/images/sap-logo@4x.png 3x"
+                            alt="SAP"
+                        />
                     }
-                    product={
-                        <ProductMenu>
-                            <Popover
-                                alignment="right"
-                                control={<ProductMenuControl>Corporate Portal</ProductMenuControl>}
-                                body={
-                                    <Menu>
-                                        <MenuList>
-                                            {applicationList.map(item => {
-                                                return <MenuItem url="/">{item.name}</MenuItem>;
-                                            })}
-                                        </MenuList>
-                                    </Menu>
-                                }
-                            />
-                        </ProductMenu>
-                    }
-                    subtitle={<ShellbarSubtitle>Subtitle</ShellbarSubtitle>}
+                    productTitle='Corporate Portal'
+                    productMenu={productMenu}
+                    subtitle='Subtitle'
                     copilot
-                    actions={
-                        <React.Fragment>
-                            <ShellbarAction collapsible>
-                                <Button option="shell" glyph="bell">
-                                    <span className="fd-counter fd-counter--notification" aria-label="Unread count">
-                                        25
-                                    </span>
-                                </Button>
-                            </ShellbarAction>
-                            <ShellbarAction collapsible>
-                                <Button option="shell" glyph="pool" />
-                            </ShellbarAction>
-                            <ShellbarAction showAlways>
-                                <UserMenu>
-                                    <Popover
-                                        alignment="right"
-                                        control={
-                                            <UserMenuControl>
-                                                <Identifier size="s" color={1} modifier="circle">
-                                                    WW
-                                                </Identifier>
-                                            </UserMenuControl>
-                                        }
-                                        body={
-                                            <Menu>
-                                                <MenuList>
-                                                    <MenuItem url="/">Settings</MenuItem>
-                                                    <MenuItem url="/">Sign Out</MenuItem>
-                                                </MenuList>
-                                            </Menu>
-                                        }
-                                    />
-                                </UserMenu>
-                            </ShellbarAction>
-                            <ShellbarAction collapsible>
-                                <ProductSwitcher>
-                                    <Popover
-                                        alignment="right"
-                                        control={<Button option="shell" glyph="grid" />}
-                                        body={
-                                            <ProductSwitcherBody>
-                                                {productSwitcherList.map(product => {
-                                                    return (
-                                                        <li>
-                                                            <ProductSwitcherProductIcon>
-                                                                <img src={product.imagePath} />
-                                                            </ProductSwitcherProductIcon>
-                                                            <ProductSwitcherProductTitle>
-                                                                {product.name}
-                                                            </ProductSwitcherProductTitle>
-                                                        </li>
-                                                    );
-                                                })}
-                                            </ProductSwitcherBody>
-                                        }
-                                    />
-                                </ProductSwitcher>
-                            </ShellbarAction>
-                        </React.Fragment>
-                    }
-                    actionsCollapsed={
-                        <ShellbarCollapse>
-                            <Popover
-                                alignment="right"
-                                control={<ShellbarCollapseControl collapsedCount={collapsedItems.length} />}
-                                body={
-                                    <Menu>
-                                        <MenuList>
-                                            {collapsedItems.map(item => {
-                                                return <MenuItem url="/">{item.name}</MenuItem>;
-                                            })}
-                                        </MenuList>
-                                    </Menu>
-                                }
-                            />
-                        </ShellbarCollapse>
-                    }
+                    actions={actions}
+                    user={user}
+                    userMenu={userMenu}
+                    productSwitcher={productSwitcherList}
                 />
             </DocsTile>
             <DocsText>{shellbarExampleCode}</DocsText>
-            <Separator />
         </div>
     );
 };
