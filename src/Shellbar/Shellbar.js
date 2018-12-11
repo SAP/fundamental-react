@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-
-// ------------------------------------------- Shellbar ------------------------------------------
+import { Popover, Menu, MenuList, MenuItem, Identifier } from '../';
 
 export class Shellbar extends Component {
     static propTypes = {
-        copilot: PropTypes.bool
+        copilot: PropTypes.bool,
+        actions: PropTypes.array
+    };
+
+    static defaultProps = {
+        actions: []
     };
 
     constructor(props) {
@@ -17,7 +21,7 @@ export class Shellbar extends Component {
     componentWillMount() {
         this.setState({
             collapsed: false
-        })
+        });
     }
 
     componentDidMount() {
@@ -34,13 +38,56 @@ export class Shellbar extends Component {
     }
 
     render() {
-        const { logo, product, subtitle, copilot, actions, actionsCollapsed } = this.props;
+        const {
+            logo,
+            productTitle,
+            productMenu,
+            subtitle,
+            copilot,
+            actions,
+            customActions,
+            productSwitcher,
+            customProductSwitcher,
+            user,
+            userMenu
+        } = this.props;
         return (
             <div className="fd-shellbar">
                 <div className="fd-shellbar__group fd-shellbar__group--start">
-                    {logo}
-                    <div className="fd-shellbar__product">{product}</div>
-                    {subtitle}
+                    <a class="fd-shellbar__logo">{logo}</a>
+                    <div className="fd-shellbar__product">
+                        {productTitle && !productMenu && <span class="fd-shellbar__title">{productTitle}</span>}
+                        <div class="fd-product-menu">
+                            <Popover
+                                alignment="right"
+                                control={
+                                    <button class="fd-product-menu__control">
+                                        <span class="fd-shellbar__title fd-product-menu__title">{productTitle}</span>
+                                    </button>
+                                }
+                                body={
+                                    productMenu && (
+                                        <Menu>
+                                            <MenuList>
+                                                {productMenu.map(item => {
+                                                    return (
+                                                        <MenuItem
+                                                            onclick={item.callback}
+                                                            url={item.url}
+                                                            link={item.link}
+                                                        >
+                                                            {item.name}
+                                                        </MenuItem>
+                                                    );
+                                                })}
+                                            </MenuList>
+                                        </Menu>
+                                    )
+                                }
+                            />
+                        </div>
+                    </div>
+                    {subtitle && <div class="fd-shellbar__subtitle">{subtitle}</div>}
                 </div>
                 {copilot ? (
                     <div className="fd-shellbar__group fd-shellbar__group--middle">
@@ -53,147 +100,112 @@ export class Shellbar extends Component {
                     </div>
                 ) : null}
                 <div className="fd-shellbar__group fd-shellbar__group--end">
-                    {this.state.collapsed && actionsCollapsed}
-                    {actions}
+                    <div className="fd-shellbar__actions">
+                        {actions &&
+                            actions.map(action => {
+                                return (
+                                    <div className="fd-shellbar__action fd-shellbar__action--collapsible">
+                                        <button
+                                            className={` fd-button--shell sap-icon--${action.glyph}`}
+                                            aria-label={action.label}
+                                            onClick={action.callback}
+                                        >
+                                            {action.notificationCount && (
+                                                <span
+                                                    className="fd-counter fd-counter--notification"
+                                                    aria-label="Unread count"
+                                                >
+                                                    {action.notificationCount}
+                                                </span>
+                                            )}
+                                        </button>
+                                    </div>
+                                );
+                            })}
+                        {customActions}
+
+                        {user && (
+                            <div class="fd-shellbar__action fd-shellbar__action--show-always">
+                                <div class="fd-user-menu">
+                                    <Popover
+                                        alignment="right"
+                                        control={
+                                            user.image ? (
+                                                <Identifier
+                                                    size="xs"
+                                                    modifier="circle"
+                                                    backgroundImageUrl={user.image}
+                                                />
+                                            ) : (
+                                                <Identifier size="xs" modifier="circle">
+                                                    {user.initials}
+                                                </Identifier>
+                                            )
+                                        }
+                                        body={
+                                            userMenu && (
+                                                <Menu>
+                                                    <MenuList>
+                                                        {userMenu.map(item => {
+                                                            return (
+                                                                <MenuItem
+                                                                    onclick={item.callback}
+                                                                    url={item.url}
+                                                                    link={item.link}
+                                                                >
+                                                                    {item.text}
+                                                                </MenuItem>
+                                                            );
+                                                        })}
+                                                    </MenuList>
+                                                </Menu>
+                                            )
+                                        }
+                                    />
+                                </div>
+                            </div>
+                        )}
+                        {productSwitcher && (
+                            <div class="fd-shellbar__action fd-shellbar__action--collapsible">
+                                <div class="fd-product-switcher">
+                                    <Popover
+                                        alignment="right"
+                                        control={
+                                            <button
+                                                class=" fd-button--shell sap-icon--grid"
+                                                aria-controls="FAVDA565"
+                                                aria-haspopup="true"
+                                                aria-expanded="false"
+                                            />
+                                        }
+                                        body={
+                                            <div class="fd-product-switcher__body">
+                                                <nav>
+                                                    <ul>
+                                                        {productSwitcher.map(item => {
+                                                            return (
+                                                                <li>
+                                                                    <span class="fd-product-switcher__product-icon">
+                                                                        <img src={item.image} alt={item.title} />
+                                                                    </span>
+                                                                    <span class="fd-product-switcher__product-title">
+                                                                        {item.title}
+                                                                    </span>
+                                                                </li>
+                                                            );
+                                                        })}
+                                                    </ul>
+                                                </nav>
+                                            </div>
+                                        }
+                                    />
+                                </div>
+                            </div>
+                        )}
+                        {customProductSwitcher}
+                    </div>
                 </div>
             </div>
         );
     }
 }
-
-// ------------------------------------------- Shellbar Logo ---------------------------------------
-export const ShellbarLogo = props => {
-    const { href, imageReplaced, children } = props;
-    return (
-        <a
-            href={href ? href : '/'}
-            className={`fd-shellbar__logo${imageReplaced ? ' fd-shellbar__logo--image-replaced' : ''}`}
-        >
-            {children}
-        </a>
-    );
-};
-
-ShellbarLogo.propTypes = {
-    href: PropTypes.string,
-    imageReplaced: PropTypes.bool
-};
-
-// ---------------------------------------- Product Menu Control-----------------------------------
-export const ProductMenuControl = props => {
-    const { children } = props;
-    return (
-        <button className="fd-product-menu__control">
-            <span className="fd-shellbar__title fd-product-menu__title">{children}</span>
-        </button>
-    );
-};
-
-// ----------------------------------------- Product Menu -----------------------------------------
-export const ProductMenu = props => {
-    const { children } = props;
-    return <div className="fd-product-menu">{children}</div>;
-};
-
-// ------------------------------------------ Shellbar Subtitle -----------------------------------
-export const ShellbarSubtitle = props => {
-    const { children } = props;
-    return <div className="fd-shellbar__subtitle">{children}</div>;
-};
-
-// ------------------------------------------- Shellbar Title -------------------------------------
-export const ShellbarTitle = props => {
-    const { children } = props;
-    return <span className="fd-shellbar__title">{children}</span>;
-};
-
-// ------------------------------------------- Shellbar Action ------------------------------------
-export const ShellbarAction = props => {
-    const { showAlways, collapse, collapsible, children } = props;
-    return (
-        <div
-            className={`fd-shellbar__action${showAlways ? ' fd-shellbar__action--show-always' : ''}${
-                collapse ? ' fd-shellbar__action--collapse' : ''
-            }${collapsible ? ' fd-shellbar__action--collapsible' : ''}`}
-        >
-            {children}
-        </div>
-    );
-};
-
-ShellbarAction.propTypes = {
-    showAlways: PropTypes.bool,
-    collapse: PropTypes.bool,
-    collapsible: PropTypes.bool
-};
-
-// ------------------------------------------- User Menu ------------------------------------
-export const UserMenu = props => {
-    const { children } = props;
-    return <div className="fd-user-menu">{children}</div>;
-};
-
-// ------------------------------------------- User Menu Control-----------------------------
-export const UserMenuControl = props => {
-    const { children } = props;
-    return <div className="fd-user-menu__control">{children}</div>;
-};
-
-// ----------------------------------------- Product Switcher -------------------------------
-export const ProductSwitcher = props => {
-    const { children } = props;
-    return <div className="fd-product-switcher">{children}</div>;
-};
-
-// --------------------------------------- Product Switcher Body-----------------------------
-export const ProductSwitcherBody = props => {
-    const { children } = props;
-    return (
-        <div className="fd-product-switcher__body">
-            <nav>
-                <ul>{children}</ul>
-            </nav>
-        </div>
-    );
-};
-
-// ---------------------------------- Product Switcher Product Icon -------------------------
-export const ProductSwitcherProductIcon = props => {
-    const { children } = props;
-    return <span className="fd-product-switcher__product-icon">{children}</span>;
-};
-
-// --------------------------------- Product Switcher Product Title -------------------------
-export const ProductSwitcherProductTitle = props => {
-    const { children } = props;
-    return <span className="fd-product-switcher__product-title">{children}</span>;
-};
-
-// ----------------------------------------- Shellbar Collapse ------------------------------------
-export const ShellbarCollapse = props => {
-    const { children } = props;
-    return (
-        <div className="fd-shellbar__action fd-shellbar__action--collapse">
-            <div className="fd-shellbar-collapse">{children}</div>
-        </div>
-    );
-};
-
-// -------------------------------------- Shellbar Collapse Control -------------------------------
-export const ShellbarCollapseControl = props => {
-    const { collapsedCount } = props;
-    return (
-        <div className="fd-shellbar-collapse--control">
-            <button className="fd-button--shell sap-icon--overflow">
-                {
-                    <span className="fd-counter" aria-label="Collapsed Count">
-                        {collapsedCount}
-                    </span>
-                }
-            </button>
-        </div>
-    );
-};
-ShellbarCollapseControl.propTypes = {
-    collapsedCount: PropTypes.number
-};
