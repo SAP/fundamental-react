@@ -7,11 +7,11 @@ export const ShellbarComponent = () => {
     const simpleShellbarExampleCode = `<Shellbar
     logo={<img src="//unpkg.com/fiori-fundamentals/dist/images/sap-logo.png" alt="SAP" />}
     productTitle="Corporate Portal"
-    user={user}
+    user={user1}
     userMenu={userMenu}
 />
     
-const user = {
+const user1 = {
     initials: 'JS',
     userName: 'John Snow'
 };
@@ -57,7 +57,7 @@ const actions = [
 
 const user = {
     initials: 'JS',
-    userName: 'John Snow'
+    image: images('./headshot-male.jpg')
 };
 
 const userMenu = [
@@ -117,8 +117,13 @@ const productSwitcherList = [
         }
     ];
 
-    const user = {
+    const user1 = {
         initials: 'JS',
+        userName: 'John Snow'
+    };
+
+    const user = {
+        image: images('./headshot-male.jpg'),
         userName: 'John Snow'
     };
 
@@ -205,7 +210,7 @@ const productSwitcherList = [
                 <Shellbar
                     logo={<img src="//unpkg.com/fiori-fundamentals/dist/images/sap-logo.png" alt="SAP" />}
                     productTitle="Corporate Portal"
-                    user={user}
+                    user={user1}
                     userMenu={userMenu}
                 />
             </DocsTile>
