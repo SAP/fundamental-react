@@ -47,4 +47,5 @@ Ex: `import {Popover, Time} from '../';`
 
 The correct solution is to import the modules from their defined location.
 <br/><br/>
+
 Ex: `import {Popover} from '../Popover/Popover'; import {Time} from '../Time/Time';`
