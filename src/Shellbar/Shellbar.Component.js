@@ -121,7 +121,7 @@ const productSwitcherList = [
     const user1 = {
         initials: 'JS',
         userName: 'John Snow',
-        colorAccent: 11
+        colorAccent: 8
     };
 
     const user = {

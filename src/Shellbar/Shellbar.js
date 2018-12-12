@@ -20,11 +20,11 @@ export class Shellbar extends Component {
     }
 
     getCollapsedActions = () => {
-        if(this.props.actions) {
+        if (this.props.actions) {
             let collapsedList = [...this.props.actions];
             collapsedList.push(this.props.productSwitcher);
             return collapsedList;
-        } 
+        }
     };
 
     componentWillMount() {
@@ -62,16 +62,16 @@ export class Shellbar extends Component {
         return (
             <div className="fd-shellbar">
                 <div className="fd-shellbar__group fd-shellbar__group--start">
-                    <a class="fd-shellbar__logo">{logo}</a>
+                    <a className="fd-shellbar__logo">{logo}</a>
                     <div className="fd-shellbar__product">
-                        {productTitle && !productMenu && <span class="fd-shellbar__title">{productTitle}</span>}
+                        {productTitle && !productMenu && <span className="fd-shellbar__title">{productTitle}</span>}
                         {productMenu && (
-                            <div class="fd-product-menu">
+                            <div className="fd-product-menu">
                                 <Popover
                                     alignment="right"
                                     control={
-                                        <button class="fd-product-menu__control">
-                                            <span class="fd-shellbar__title fd-product-menu__title">
+                                        <button className="fd-product-menu__control">
+                                            <span className="fd-shellbar__title fd-product-menu__title">
                                                 {productTitle}
                                             </span>
                                         </button>
@@ -80,12 +80,13 @@ export class Shellbar extends Component {
                                         productMenu && (
                                             <Menu>
                                                 <MenuList>
-                                                    {productMenu.map(item => {
+                                                    {productMenu.map((item, index) => {
                                                         return (
                                                             <MenuItem
                                                                 onclick={item.callback}
                                                                 url={item.url}
                                                                 link={item.link}
+                                                                key={index}
                                                             >
                                                                 {item.glyph && (
                                                                     <React.Fragment>
@@ -105,7 +106,7 @@ export class Shellbar extends Component {
                             </div>
                         )}
                     </div>
-                    {subtitle && <div class="fd-shellbar__subtitle">{subtitle}</div>}
+                    {subtitle && <div className="fd-shellbar__subtitle">{subtitle}</div>}
                 </div>
                 {copilot ? (
                     <div className="fd-shellbar__group fd-shellbar__group--middle">
@@ -120,9 +121,9 @@ export class Shellbar extends Component {
                 <div className="fd-shellbar__group fd-shellbar__group--end">
                     <div className="fd-shellbar__actions">
                         {actions &&
-                            actions.map(action => {
+                            actions.map((action, index) => {
                                 return (
-                                    <div className="fd-shellbar__action fd-shellbar__action--collapsible">
+                                    <div className="fd-shellbar__action fd-shellbar__action--collapsible" key={index}>
                                         {action.menu ? (
                                             <Popover
                                                 alignment="right"
@@ -146,6 +147,7 @@ export class Shellbar extends Component {
                                         ) : (
                                             <button
                                                 className={` fd-button--shell sap-icon--${action.glyph}`}
+                                                key={index}
                                                 aria-label={action.label}
                                                 onClick={action.callback}
                                             >
@@ -162,16 +164,16 @@ export class Shellbar extends Component {
                                     </div>
                                 );
                             })}
-                        {(this.state.collapsed && actions) && (
-                            <div class="fd-shellbar__action fd-shellbar__action--collapse">
-                                <div class="fd-shellbar-collapse">
+                        {this.state.collapsed && actions && (
+                            <div className="fd-shellbar__action fd-shellbar__action--collapse">
+                                <div className="fd-shellbar-collapse">
                                     <Popover
                                         alignment="right"
                                         control={
-                                            <div class="fd-shellbar-collapse--control" role="button">
-                                                <button class=" fd-button--shell sap-icon--overflow">
+                                            <div className="fd-shellbar-collapse--control" role="button">
+                                                <button className=" fd-button--shell sap-icon--overflow">
                                                     <span
-                                                        class="fd-counter fd-counter--notification"
+                                                        className="fd-counter fd-counter--notification"
                                                         aria-label="Unread count"
                                                     >
                                                         {actions.reduce((r, d) => r + d.notificationCount, 0)}
@@ -203,8 +205,8 @@ export class Shellbar extends Component {
                             </div>
                         )}
                         {user && (
-                            <div class="fd-shellbar__action fd-shellbar__action--show-always">
-                                <div class="fd-user-menu">
+                            <div className="fd-shellbar__action fd-shellbar__action--show-always">
+                                <div className="fd-user-menu">
                                     <Popover
                                         alignment="right"
                                         control={
@@ -225,12 +227,13 @@ export class Shellbar extends Component {
                                                 <Menu>
                                                     <MenuList>
                                                         <MenuItem>{user.userName}</MenuItem>
-                                                        {userMenu.map(item => {
+                                                        {userMenu.map((item, index) => {
                                                             return (
                                                                 <MenuItem
                                                                     onclick={item.callback}
                                                                     url={item.url}
                                                                     link={item.link}
+                                                                    key={index}
                                                                 >
                                                                     {item.glyph && (
                                                                         <React.Fragment>
@@ -251,22 +254,22 @@ export class Shellbar extends Component {
                             </div>
                         )}
                         {productSwitcher && (
-                            <div class="fd-shellbar__action fd-shellbar__action--collapsible">
-                                <div class="fd-product-switcher">
+                            <div className="fd-shellbar__action fd-shellbar__action--collapsible">
+                                <div className="fd-product-switcher">
                                     <Popover
                                         alignment="right"
-                                        control={<button class=" fd-button--shell sap-icon--grid" />}
+                                        control={<button className=" fd-button--shell sap-icon--grid" />}
                                         body={
-                                            <div class="fd-product-switcher__body">
+                                            <div className="fd-product-switcher__body">
                                                 <nav>
                                                     <ul>
-                                                        {productSwitcherList.map(item => {
+                                                        {productSwitcherList.map((item, index) => {
                                                             return (
-                                                                <li onClick={item.callback}>
-                                                                    <span class="fd-product-switcher__product-icon">
+                                                                <li onClick={item.callback} key={index}>
+                                                                    <span className="fd-product-switcher__product-icon">
                                                                         <img src={item.image} alt={item.title} />
                                                                     </span>
-                                                                    <span class="fd-product-switcher__product-title">
+                                                                    <span className="fd-product-switcher__product-title">
                                                                         {item.title}
                                                                     </span>
                                                                 </li>
