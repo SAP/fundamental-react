@@ -16,7 +16,8 @@ import {
 import {
     Badge,
     Label,
-    Status
+    Status,
+    Counter
 } from '../src/Badge/Badge';
 import {
     Breadcrumb,
@@ -196,6 +197,7 @@ export {
     ComboboxInput,
     Label,
     Status,
+    Counter,
     Breadcrumb,
     BreadcrumbItem,
     Button,
