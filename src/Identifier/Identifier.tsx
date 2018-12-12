@@ -1,6 +1,7 @@
 import React, { CSSProperties } from 'react';
+import { ICommonProps } from '../common/common';
 
-interface IProps {
+interface IIdentifierProps extends ICommonProps {
   glyph?: string;
   size?: string;
   modifier?: '' | 'circle' | 'transparent';
@@ -9,8 +10,9 @@ interface IProps {
   backgroundImageUrl?: string;
 }
 
-export const Identifier: React.SFC<IProps> = props => {
+export function Identifier(props: IIdentifierProps): JSX.Element {
   const {
+    id,
     children,
     glyph,
     size,
@@ -26,6 +28,7 @@ export const Identifier: React.SFC<IProps> = props => {
 
   return (
     <span
+      id={id}
       className={`${size ? 'fd-identifier--' + size : 'fd-identifier'}${
         glyph ? ' sap-icon--' + glyph : ''
       }${modifier ? ' fd-identifier--' + modifier : ''}${
@@ -38,4 +41,4 @@ export const Identifier: React.SFC<IProps> = props => {
       {children}
     </span>
   );
-};
+}

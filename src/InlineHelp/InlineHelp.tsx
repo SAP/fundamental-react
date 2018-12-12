@@ -1,6 +1,7 @@
 import React from 'react';
+import { ICommonProps } from '../common/common';
 
-interface IProps {
+interface IInlineHelpProps extends ICommonProps {
   placement:
     | 'bottom-right'
     | 'bottom-left'
@@ -10,10 +11,10 @@ interface IProps {
   text: string;
 }
 
-export const InlineHelp: React.SFC<IProps> = props => {
-  const { text, placement } = props;
+export function InlineHelp(props: IInlineHelpProps): JSX.Element {
+  const { id, text, placement } = props;
   return (
-    <span className="fd-inline-help">
+    <span id={id} className="fd-inline-help">
       <span
         className={`fd-inline-help__content fd-inline-help__content--${placement}`}
       >
@@ -21,4 +22,4 @@ export const InlineHelp: React.SFC<IProps> = props => {
       </span>
     </span>
   );
-};
+}

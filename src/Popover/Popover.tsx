@@ -1,7 +1,7 @@
 import React, { Component, AnchorHTMLAttributes } from 'react';
+import { ICommonProps } from '../common/common';
 
-interface IProps {
-  id?: string;
+interface IPopoverProps extends ICommonProps {
   alignment?: '' | 'right';
   noArrow?: boolean;
   disabled?: boolean;
@@ -9,15 +9,15 @@ interface IProps {
   body?: any;
 }
 
-interface IState {
+interface IPopoverState {
   isExpanded?: boolean;
   isDisabled?: boolean;
 }
 
-export class Popover extends Component<IProps, IState> {
+export class Popover extends Component<IPopoverProps, IPopoverState> {
   private node: React.RefObject<HTMLDivElement>;
 
-  constructor(props: IProps) {
+  constructor(props: IPopoverProps) {
     super(props);
     this.triggerBody = this.triggerBody.bind(this);
     this.pressEsc = this.pressEsc.bind(this);
@@ -25,7 +25,7 @@ export class Popover extends Component<IProps, IState> {
     this.node = React.createRef();
   }
 
-  state: IState = {
+  state: IPopoverState = {
     isExpanded: false,
     isDisabled: this.props.disabled
   };

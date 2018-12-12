@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+import { ICommonProps } from '../common/common';
 
-interface IProps {
+interface IPaginationProps extends ICommonProps {
   itemsPerPage?: number;
   itemsTotal: number;
   onClick: (selectedPage: number) => void;
@@ -9,12 +10,12 @@ interface IProps {
   totalText?: string;
 }
 
-interface IState {
+interface IPaginationState {
   selectedPage: number;
 }
 
-export class Pagination extends Component<IProps, IState> {
-  state: IState = {
+export class Pagination extends Component<IPaginationProps, IPaginationState> {
+  state: IPaginationState = {
     selectedPage: this.props.initialPage || 1
   };
   numberOfPages: number = 0;
@@ -81,6 +82,7 @@ export class Pagination extends Component<IProps, IState> {
 
   render() {
     const {
+      id,
       itemsTotal,
       itemsPerPage = 10,
       displayTotal = true,
@@ -94,7 +96,7 @@ export class Pagination extends Component<IProps, IState> {
     );
 
     return (
-      <div className="fd-pagination">
+      <div id={id} className="fd-pagination">
         {displayTotal ? (
           <span className="fd-pagination__total">
             {itemsTotal} {totalText || 'items'}

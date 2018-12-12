@@ -1,19 +1,20 @@
 import React, { Component } from 'react';
+import { ICommonProps } from '../common/common';
 
-interface IProps {
+interface IMultiInputProps extends ICommonProps {
   placeHolder?: string;
   data: string[];
   onTagsUpdate: (tags: string[]) => void;
   compact?: boolean;
 }
 
-interface IState {
+interface IMultiInputState {
   bShowList: boolean;
   tags: string[];
 }
 
-export class MultiInput extends Component<IProps, IState> {
-  state: IState = {
+export class MultiInput extends Component<IMultiInputProps, IMultiInputState> {
+  state: IMultiInputState = {
     bShowList: false,
     tags: []
   };
@@ -115,7 +116,7 @@ export class MultiInput extends Component<IProps, IState> {
   };
 
   render() {
-    const { placeHolder, data, compact } = this.props;
+    const { id, placeHolder, data, compact } = this.props;
 
     const inputGroupClassNames = `fd-input-group fd-input-group--after${
       compact ? ' fd-input-group--compact' : ''
@@ -124,7 +125,7 @@ export class MultiInput extends Component<IProps, IState> {
     const inputClassNames = `fd-input${compact ? ' fd-input--compact' : ''}`;
 
     return (
-      <div className="fd-multi-input">
+      <div id={id} className="fd-multi-input">
         <div className="fd-multi-input-field">
           <div className="fd-popover">
             <div className="fd-popover__control">

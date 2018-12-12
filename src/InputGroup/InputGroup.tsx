@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+import { ICommonProps } from '../common/common';
 
-interface IProps {
+interface IInputGroupProps extends ICommonProps {
   inputType?: 'text' | 'number' | 'search';
   inputId?: string;
   inputName?: string;
@@ -13,13 +14,13 @@ interface IProps {
   compact?: boolean;
 }
 
-interface IState {
+interface IInputGroupState {
   value: string | number;
   searchValue: string;
 }
 
-export class InputGroup extends Component<IProps, IState> {
-  state: IState = {
+export class InputGroup extends Component<IInputGroupProps, IInputGroupState> {
+  state: IInputGroupState = {
     value: this.props.inputValue || '',
     searchValue: this.props.inputValue || ''
   };
@@ -67,6 +68,7 @@ export class InputGroup extends Component<IProps, IState> {
 
   render() {
     const {
+      id,
       children,
       inputType,
       inputId,
@@ -83,6 +85,7 @@ export class InputGroup extends Component<IProps, IState> {
       case 'number':
         return (
           <div
+            id={id}
             className={`fd-input-group fd-input-group--after${
               compact ? ' fd-input-group--compact' : ''
             }`}
@@ -113,6 +116,7 @@ export class InputGroup extends Component<IProps, IState> {
       case 'search':
         return (
           <div
+            id={id}
             className={`fd-input-group${
               compact ? ' fd-input-group--compact' : ''
             }`}
@@ -140,6 +144,7 @@ export class InputGroup extends Component<IProps, IState> {
         if (addonPos === 'before') {
           return (
             <div
+              id={id}
               className={`fd-input-group fd-input-group--before${
                 compact ? ' fd-input-group--compact' : ''
               }`}
@@ -173,6 +178,7 @@ export class InputGroup extends Component<IProps, IState> {
         } else {
           return (
             <div
+              id={id}
               className={`fd-input-group fd-input-group--after${
                 compact ? ' fd-input-group--compact' : ''
               }`}
@@ -209,7 +215,13 @@ export class InputGroup extends Component<IProps, IState> {
   }
 }
 
-export const FormGroup: React.SFC = props => {
-  const { children } = props;
-  return <div className="fd-form__group">{children}</div>;
-};
+interface IFormGroupProps extends ICommonProps {}
+
+export function FormGroup(props: IFormGroupProps): JSX.Element {
+  const { id, children } = props;
+  return (
+    <div id={id} className="fd-form__group">
+      {children}
+    </div>
+  );
+}

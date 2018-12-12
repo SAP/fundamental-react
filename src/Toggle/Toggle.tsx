@@ -1,22 +1,22 @@
 import React, { Component } from 'react';
+import { ICommonProps } from '../common/common';
 
-interface IProps {
+interface IToggleProps extends ICommonProps {
   size?: '' | 'xs' | 's' | 'l';
-  id?: string;
   disabled?: boolean;
   checked?: boolean;
 }
 
-interface IState {
+interface IToggleState {
   checked?: boolean;
 }
 
-export class Toggle extends Component<IProps, IState> {
-  state: IState = {
+export class Toggle extends Component<IToggleProps, IToggleState> {
+  state: IToggleState = {
     checked: false
   };
 
-  constructor(props: IProps) {
+  constructor(props: IToggleProps) {
     super(props);
     this.handleChange = this.handleChange.bind(this);
   }

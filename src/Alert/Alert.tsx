@@ -1,18 +1,19 @@
 import React, { Component } from 'react';
+import { ICommonProps } from '../common/common';
 
-interface IProps {
+interface IAlertProps extends ICommonProps {
   type?: '' | 'warning' | 'error';
   link?: string;
   linkText?: string;
   dismissable?: boolean;
 }
 
-interface IState {
+interface IAlertState {
   isActive: boolean;
 }
 
-export class Alert extends Component<IProps, IState> {
-  state: IState = {
+export class Alert extends Component<IAlertProps, IAlertState> {
+  state: IAlertState = {
     isActive: true
   };
 
@@ -23,9 +24,9 @@ export class Alert extends Component<IProps, IState> {
   }
 
   render() {
-    const { children, type, link, linkText, dismissable } = this.props;
+    const { id, children, type, link, linkText, dismissable } = this.props;
     return (
-      <div>
+      <div id={id}>
         {this.state.isActive && (
           <div
             className={`fd-alert${dismissable ? ' fd-alert--dismissible' : ''}${

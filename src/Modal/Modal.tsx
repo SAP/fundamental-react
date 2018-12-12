@@ -1,16 +1,17 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+import { ICommonProps } from '../common/common';
 
-interface IProps {
+interface IModalProps extends ICommonProps {
   show?: boolean;
   title: string;
   onClose: (response?: string) => void;
   actions?: any;
 }
 
-interface IState {}
+interface IModalState {}
 
-export class Modal extends Component<IProps, IState> {
+export class Modal extends Component<IModalProps, IModalState> {
   // select body element to add Modal component too
   bodyElm: HTMLBodyElement = document.querySelector('body')!;
 
@@ -39,10 +40,10 @@ export class Modal extends Component<IProps, IState> {
     if (!this.props.show) {
       return null;
     }
-    const { children, title, actions } = this.props;
+    const { id, children, title, actions } = this.props;
 
     return ReactDOM.createPortal(
-      <div className="fd-ui__overlay fd-overlay fd-overlay--modal">
+      <div id={id} className="fd-ui__overlay fd-overlay fd-overlay--modal">
         <div className="modal-demo-bg">
           <div className="fd-modal">
             <div className="fd-modal__content" role="document">

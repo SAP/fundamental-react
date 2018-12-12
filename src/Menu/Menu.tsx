@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { ICommonProps } from '../common/common';
 
 // ------------------------------------------- Menu ------------------------------------------
-interface IMenuProps {
-  id?: string;
+interface IMenuProps extends ICommonProps {
   addonBefore?: string;
 }
 
-export const Menu: React.SFC<IMenuProps> = props => {
+export function Menu(props: IMenuProps): JSX.Element {
   const { children, id, addonBefore } = props;
   return (
     <nav
@@ -17,18 +17,18 @@ export const Menu: React.SFC<IMenuProps> = props => {
       {children}
     </nav>
   );
-};
+}
 
 // ---------------------------------------- Menu List ----------------------------------------
-interface IMenuListProps {}
+interface IMenuListProps extends ICommonProps {}
 
-export const MenuList: React.SFC<IMenuListProps> = props => {
-  const { children } = props;
+export function MenuList(props: IMenuListProps): JSX.Element {
+  const { id, children } = props;
   return <ul className="fd-menu__list">{children}</ul>;
-};
+}
 
 // ---------------------------------------- Menu Item ----------------------------------------
-interface IMenuItemProps {
+interface IMenuItemProps extends ICommonProps {
   url?: string;
   separator?: boolean;
   addon?: string;
@@ -36,8 +36,8 @@ interface IMenuItemProps {
   link?: string;
 }
 
-export const MenuItem: React.SFC<IMenuItemProps> = props => {
-  const { children, url, link, isLink, separator, addon } = props;
+export function MenuItem(props: IMenuItemProps): JSX.Element {
+  const { id, children, url, link, isLink, separator, addon } = props;
   return (
     <React.Fragment>
       <li>
@@ -66,19 +66,19 @@ export const MenuItem: React.SFC<IMenuItemProps> = props => {
       {separator ? <hr /> : null}
     </React.Fragment>
   );
-};
+}
 
 // ---------------------------------------- Menu Group ----------------------------------------
-interface IMenuGroupProps {
+interface IMenuGroupProps extends ICommonProps {
   title?: string;
 }
 
-export const MenuGroup: React.SFC<IMenuGroupProps> = props => {
-  const { children, title } = props;
+export function MenuGroup(props: IMenuGroupProps): JSX.Element {
+  const { id, children, title } = props;
   return (
     <div className="fd-menu__group">
       <h1 className="fd-menu__title">{title}</h1>
       {children}
     </div>
   );
-};
+}

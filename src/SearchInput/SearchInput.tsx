@@ -1,19 +1,23 @@
 import React, { Component } from 'react';
+import { ICommonProps } from '../common/common';
 
-interface IProps {
+interface ISearchInputProps extends ICommonProps {
   placeHolder?: string;
   data?: string[];
   onSearch: (searchTerm: string) => void;
   onAutoComplete?: (searchTerm: string) => void;
 }
 
-interface IState {
+interface ISearchInputState {
   searchTerm: string;
   bShowList: boolean;
 }
 
-export class SearchInput extends Component<IProps, IState> {
-  state: IState = { searchTerm: '', bShowList: false };
+export class SearchInput extends Component<
+  ISearchInputProps,
+  ISearchInputState
+> {
+  state: ISearchInputState = { searchTerm: '', bShowList: false };
 
   handleSearch = (event: React.FormEvent<HTMLInputElement>) => {
     const { value }: any = event.target;
@@ -116,10 +120,10 @@ export class SearchInput extends Component<IProps, IState> {
   };
 
   render() {
-    const { data, onSearch, onAutoComplete } = this.props;
+    const { id, data, onSearch, onAutoComplete } = this.props;
 
     return (
-      <div className="fd-search-input">
+      <div id={id} className="fd-search-input">
         <div className="fd-popover">
           <div className="fd-popover__control">
             <div
