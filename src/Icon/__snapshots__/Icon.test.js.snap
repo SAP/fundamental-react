@@ -10,6 +10,5 @@ exports[`<Icon /> create icon 1`] = `
 exports[`<Icon /> create icon 2`] = `
 <span
   className="sap-icon--cart sap-icon--s"
-  onClick={[Function]}
 />
 `;

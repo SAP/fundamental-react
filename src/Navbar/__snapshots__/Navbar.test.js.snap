@@ -13,7 +13,6 @@ exports[`<Navbar /> create navbar 1`] = `
       <button
         className="fd-button--light sap-icon--menu2 fd-global-nav__btn"
         disabled={false}
-        selected={false}
       />
     </div>
     <div
@@ -39,7 +38,6 @@ exports[`<Navbar /> create navbar 1`] = `
         <button
           className="fd-button--light"
           disabled={false}
-          selected={false}
         >
           Suite Name
         </button>
@@ -108,7 +106,6 @@ exports[`<Navbar /> create navbar 1`] = `
           <button
             className="fd-button--light"
             disabled={false}
-            selected={false}
           >
             Context Switcher
           </button>
@@ -166,21 +163,23 @@ exports[`<Navbar /> create navbar 1`] = `
       <button
         className="fd-button--light sap-icon--search fd-global-nav__btn"
         disabled={false}
-        selected={false}
       />
       <button
         className="fd-button--light sap-icon--action-settings fd-global-nav__btn"
         disabled={false}
-        selected={false}
       />
       <button
         className="fd-button--light fd-global-nav__btn"
         disabled={false}
-        selected={false}
       >
         <span
           className="fd-identifier--s fd-identifier--circle"
           role=""
+          style={
+            Object {
+              "backgroundImage": "",
+            }
+          }
         >
           WW
         </span>

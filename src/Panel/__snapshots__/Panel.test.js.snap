@@ -27,7 +27,6 @@ exports[`<Panel /> create panels 1`] = `
       <button
         className=" fd-button fd-button--compact sap-icon--add"
         disabled={false}
-        selected={false}
       >
         Add New Button
       </button>

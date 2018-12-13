@@ -4,6 +4,11 @@ exports[`<Identifier /> Create identifier 1`] = `
 <span
   className="fd-identifier--s sap-icon--washing-machine"
   role="presentation"
+  style={
+    Object {
+      "backgroundImage": "",
+    }
+  }
 />
 `;
 
@@ -12,6 +17,11 @@ exports[`<Identifier /> Create identifier 2`] = `
   aria-label="Wendy Wallace"
   className="fd-identifier--m"
   role=""
+  style={
+    Object {
+      "backgroundImage": "",
+    }
+  }
 >
   WW
 </span>
@@ -21,6 +31,11 @@ exports[`<Identifier /> Create identifier 3`] = `
 <span
   className="fd-identifier--m sap-icon--washing-machine fd-identifier--circle"
   role="presentation"
+  style={
+    Object {
+      "backgroundImage": "",
+    }
+  }
 />
 `;
 
@@ -28,6 +43,11 @@ exports[`<Identifier /> Create identifier 4`] = `
 <span
   className="fd-identifier--m sap-icon--washing-machine fd-identifier--transparent"
   role="presentation"
+  style={
+    Object {
+      "backgroundImage": "",
+    }
+  }
 />
 `;
 
@@ -35,6 +55,11 @@ exports[`<Identifier /> Create identifier 5`] = `
 <span
   className="fd-identifier--m sap-icon--money-bills fd-has-background-color-accent-9"
   role="presentation"
+  style={
+    Object {
+      "backgroundImage": "",
+    }
+  }
 />
 `;
 

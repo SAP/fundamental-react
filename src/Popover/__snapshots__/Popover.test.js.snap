@@ -11,7 +11,6 @@ exports[`<Popover /> create Popover 1`] = `
   >
     <span
       className="sap-icon--cart sap-icon--xl"
-      onClick={[Function]}
     />
   </div>
   <div
@@ -73,7 +72,6 @@ exports[`<Popover /> create Popover 2`] = `
   >
     <span
       className="sap-icon--cart sap-icon--xl"
-      onClick={[Function]}
     />
   </div>
   <div
@@ -135,7 +133,6 @@ exports[`<Popover /> create Popover 3`] = `
   >
     <span
       className="sap-icon--cart sap-icon--xl"
-      onClick={[Function]}
     />
   </div>
   <div
@@ -197,7 +194,6 @@ exports[`<Popover /> create Popover 4`] = `
   >
     <span
       className="sap-icon--cart sap-icon--xl"
-      onClick={[Function]}
     />
   </div>
   <div
