@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { ICommonProps } from '../common/common';
 
 interface IAlertProps extends ICommonProps {
-  type?: '' | 'warning' | 'error';
+  type?: '' | 'warning' | 'error' | 'success' | 'information';
   link?: string;
   linkText?: string;
   dismissable?: boolean;
