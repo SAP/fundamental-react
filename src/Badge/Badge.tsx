@@ -93,3 +93,28 @@ export function Status(props: IStatusProps): JSX.Element {
     </span>
   );
 }
+
+// export const Counter = props => {
+//   const { notification, children } = props;
+//   return (
+//       <span className={`fd-counter${notification ? ' fd-counter--notification' : ''}`} aria-label="Unread count">
+//           {children}
+//       </span>
+//   );
+// };
+
+interface ICounterProps extends ICommonProps {
+  notification?: boolean;
+}
+
+export function Counter(props: ICounterProps): JSX.Element {
+  const { notification, children } = props;
+  return (
+    <span
+      className={`fd-counter${notification ? ' fd-counter--notification' : ''}`}
+      aria-label="Unread count"
+    >
+      {children}
+    </span>
+  );
+}

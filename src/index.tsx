@@ -11,7 +11,7 @@ import {
   ActionBarActions
 } from '../src/ActionBar/ActionBar';
 import { Alert } from '../src/Alert/Alert';
-import { Badge, Label, Status } from '../src/Badge/Badge';
+import { Badge, Label, Status, Counter } from '../src/Badge/Badge';
 import { Breadcrumb, BreadcrumbItem } from '../src/Breadcrumb/Breadcrumb';
 import { Button, ButtonGroup } from '../src/Button/Button';
 import { Calendar } from '../src/Calendar/Calendar';
@@ -117,6 +117,7 @@ export {
   Badge,
   ComboboxInput,
   Label,
+  Counter,
   Status,
   Breadcrumb,
   BreadcrumbItem,
