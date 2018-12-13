@@ -185,12 +185,13 @@ export class Shellbar extends Component {
                                             userMenu && (
                                                 <Menu>
                                                     <MenuList>
-                                                        {this.state.collapsedActions.map(item => {
+                                                        {this.state.collapsedActions.map((item, index) => {
                                                             return (
                                                                 <MenuItem
                                                                     onclick={item.callback}
                                                                     url={item.url}
                                                                     link={item.link}
+                                                                    key={index}
                                                                 >
                                                                     {item.label}
                                                                 </MenuItem>
