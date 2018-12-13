@@ -70,6 +70,7 @@ import {
 } from '../src/Panel/Panel';
 import { Popover } from '../src/Popover/Popover';
 import { SearchInput } from '../src/SearchInput/SearchInput';
+import { Shellbar } from '../src/Shellbar/Shellbar';
 import {
   SideNav,
   SideNavList,
@@ -172,6 +173,7 @@ export {
   PanelContent,
   PanelFooter,
   SearchInput,
+  Shellbar,
   SideNav,
   SideNavList,
   SideNavGroup,

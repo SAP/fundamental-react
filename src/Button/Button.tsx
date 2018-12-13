@@ -2,7 +2,7 @@ import React from 'react';
 import { ICommonProps } from '../common/common';
 
 interface IButtonProps extends ICommonProps {
-  option?: '' | 'emphasized' | 'light';
+  option?: '' | 'emphasized' | 'light' | 'shell';
   type?: '' | 'standard' | 'positive' | 'negative' | 'medium';
   compact?: boolean;
   glyph?: string;
