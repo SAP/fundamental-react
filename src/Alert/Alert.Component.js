@@ -1,7 +1,6 @@
 import React from 'react';
-import { Alert } from '../';
+import { Alert, Icon } from '../';
 import { DocsTile, DocsText, Separator, Header, Description, Import, Properties, Playground } from '../';
-
 
 export const AlertComponent = () => {
     const defaultAlertCode = `<Alert dismissable link="#" linkText="link">Default alert with a </Alert>`;
@@ -11,10 +10,27 @@ export const AlertComponent = () => {
     <p>More information...</p>
 </Alert>`;
 
-    const errorAlertCode = `<Alert type="error" dismissable link="#" linkText="link">
-    Error message with a
+    const errorAlertCode = `<Alert type="error" dismissable>
+    <Icon glyph="message-error" /> Error Message.
+    <a href="#" class="fd-link">
+        Learn More
+    </a>
 </Alert>`;
-    
+
+    const sucessAlertCode = `<Alert type="success" dismissable>
+    <Icon glyph="message-success" /> Message Success.
+    <a href="#" class="fd-link">
+        Learn More
+    </a>
+</Alert>`;
+
+    const informationAlertCode = `<Alert type="information" dismissable>
+    <Icon glyph="message-information" /> Information Message.
+    <a href="#" class="fd-link">
+        Learn More
+    </a>
+</Alert>`;
+
     return (
         <div>
             <Header>Alert</Header>
@@ -53,7 +69,7 @@ export const AlertComponent = () => {
             </Description>
             <DocsTile>
                 <Alert dismissable link="#" linkText=" link">
-                    Default alert with a {' '}
+                    Default alert with a{' '}
                 </Alert>
             </DocsTile>
             <DocsText>{defaultAlertCode}</DocsText>
@@ -82,13 +98,40 @@ export const AlertComponent = () => {
                 rectified the error. The user will need to dismiss the message. Apply type="error".
             </Description>
             <DocsTile>
-                <Alert type="error" dismissable link="#" linkText=" link">
-                    Error message with a {' '}
+                <Alert type="error" dismissable>
+                    <Icon glyph="message-error" /> Error Message.{' '}
+                    <a href="#" class="fd-link">
+                        Learn More
+                    </a>
                 </Alert>
             </DocsTile>
             <DocsText>{errorAlertCode}</DocsText>
 
             <Separator />
+
+            <h2>Success Alert</h2>
+            <DocsTile>
+                <Alert type="success" dismissable>
+                    <Icon glyph="message-success" /> Message Success.{' '}
+                    <a href="#" class="fd-link">
+                        Learn More
+                    </a>
+                </Alert>
+            </DocsTile>
+            <DocsText>{sucessAlertCode}</DocsText>
+
+            <Separator />
+
+            <h2>Information Alert</h2>
+            <DocsTile>
+                <Alert type="information" dismissable>
+                    <Icon glyph="message-information" /> Information Message.{' '}
+                    <a href="#" class="fd-link">
+                        Learn More
+                    </a>
+                </Alert>
+            </DocsTile>
+            <DocsText>{informationAlertCode}</DocsText>
 
             <Separator />
 
@@ -99,7 +142,7 @@ export const AlertComponent = () => {
                     {
                         attribute: 'type',
                         typeOfAttribute: 'string',
-                        enum: ['', 'warning', 'error']
+                        enum: ['', 'warning', 'error', 'information', 'success']
                     },
                     {
                         attribute: 'dismissable',

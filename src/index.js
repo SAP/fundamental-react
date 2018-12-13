@@ -4,15 +4,41 @@ import './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
-import { ActionBar, ActionBarBack, ActionBarHeader, ActionBarActions } from '../src/ActionBar/ActionBar';
-import { Alert } from '../src/Alert/Alert';
-import { Badge, Label, Status } from '../src/Badge/Badge';
-import { Breadcrumb, BreadcrumbItem } from '../src/Breadcrumb/Breadcrumb';
-import { Button, ButtonGroup } from '../src/Button/Button';
-import { Calendar } from '../src/Calendar/Calendar';
-import { ComboboxInput } from '../src/ComboboxInput/ComboboxInput';
-import { DatePicker } from '../src/DatePicker/DatePicker';
-import { Dropdown } from '../src/Dropdown/Dropdown';
+import {
+    ActionBar,
+    ActionBarBack,
+    ActionBarHeader,
+    ActionBarActions
+} from '../src/ActionBar/ActionBar';
+import {
+    Alert
+} from '../src/Alert/Alert';
+import {
+    Badge,
+    Label,
+    Status,
+    Counter
+} from '../src/Badge/Badge';
+import {
+    Breadcrumb,
+    BreadcrumbItem
+} from '../src/Breadcrumb/Breadcrumb';
+import {
+    Button,
+    ButtonGroup
+} from '../src/Button/Button';
+import {
+    Calendar
+} from '../src/Calendar/Calendar';
+import {
+    ComboboxInput
+} from '../src/ComboboxInput/ComboboxInput';
+import {
+    DatePicker
+} from '../src/DatePicker/DatePicker';
+import {
+    Dropdown
+} from '../src/Dropdown/Dropdown';
 import {
     FormSet,
     FormItem,
@@ -96,6 +122,7 @@ export {
     ComboboxInput,
     Label,
     Status,
+    Counter,
     Breadcrumb,
     BreadcrumbItem,
     Button,
