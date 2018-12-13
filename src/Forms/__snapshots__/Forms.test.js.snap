@@ -15,7 +15,25 @@ exports[`<Forms /> create form item 1`] = `
     </label>
     <input
       className="fd-form__control"
+      disabled={false}
       id="input-1"
+      placeholder="Field placeholder text"
+      type="text"
+    />
+  </div>
+  <div
+    className="fd-form__item fd-form__item--inline fd-form__item--check"
+  >
+    <label
+      className="fd-form__label"
+      htmlFor="input-2"
+    >
+      Disabled Input
+    </label>
+    <input
+      className="fd-form__control"
+      disabled={true}
+      id="input-2"
       placeholder="Field placeholder text"
       type="text"
     />
@@ -31,6 +49,7 @@ exports[`<Forms /> create form item 1`] = `
     </label>
     <input
       className="fd-form__control is-help"
+      disabled={false}
       id="input-1"
       placeholder="Field placeholder text"
       type="text"
@@ -358,6 +377,7 @@ exports[`<Forms /> create form item 2`] = `
   >
     <input
       className="fd-form__control"
+      disabled={false}
       id="checkbox-1"
       type="checkbox"
     />
