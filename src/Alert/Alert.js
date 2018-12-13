@@ -51,7 +51,7 @@ export class Alert extends Component {
 }
 
 Alert.propTypes = {
-    type: PropTypes.oneOf(['', 'warning', 'error']),
+    type: PropTypes.oneOf(['', 'warning', 'error', 'success', 'information']),
     link: PropTypes.string,
     linkText: PropTypes.string,
     dismissable: PropTypes.bool
