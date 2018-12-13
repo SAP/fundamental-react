@@ -1,10 +1,15 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { Popover } from '../Popover/Popover';
+import { ICommonProps } from '../common/common';
 
-// ------------------------------------------- Combobox Input ------------------------------------------
-export const ComboboxInput = props => {
-  const { id, placeholder, menu, compact } = props;
+interface IComboboxInputProps extends ICommonProps {
+  placeholder?: string;
+  menu: {};
+  compact?: boolean;
+}
+
+export function ComboboxInput(props: IComboboxInputProps): JSX.Element {
+  const { id, placeholder, menu, compact = false } = props;
   return (
     <div className="fd-combobox-input">
       <Popover
@@ -33,17 +38,4 @@ export const ComboboxInput = props => {
       />
     </div>
   );
-};
-
-ComboboxInput.propTypes = {
-  id: PropTypes.string,
-  placeholder: PropTypes.string,
-  menu: PropTypes.object.isRequired,
-  compact: PropTypes.bool
-};
-
-ComboboxInput.defaultTypes = {
-  compact: false,
-  id: '',
-  placeholder: ''
-};
+}
