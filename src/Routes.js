@@ -43,6 +43,7 @@ import { ToggleComponent } from './Toggle/Toggle.Component';
 import { TreeComponent } from './Tree/Tree.Component';
 import { TimeComponent } from './Time/Time.Component';
 import { TimePickerComponent } from './TimePicker/TimePicker.Component';
+import { ShellbarComponent } from './Shellbar/Shellbar.Component';
 
 export default class Routes extends Component {
   constructor(props) {
@@ -130,6 +131,11 @@ export default class Routes extends Component {
           url: '/searchInput',
           name: 'Search Input',
           component: SearchInputComponent
+        },
+        {
+          url: '/shellbar',
+          name: 'Shellbar',
+          component: ShellbarComponent
         },
         {
           url: '/sideNavigation',
