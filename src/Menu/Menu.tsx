@@ -4,7 +4,7 @@ import { ICommonProps } from '../common/common';
 
 // ------------------------------------------- Menu ------------------------------------------
 interface IMenuProps extends ICommonProps {
-  addonBefore?: string;
+  addonBefore?: boolean;
 }
 
 export function Menu(props: IMenuProps): JSX.Element {
