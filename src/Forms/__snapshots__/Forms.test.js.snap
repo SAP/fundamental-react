@@ -53,7 +53,7 @@ exports[`<Forms /> create form item 1`] = `
     </span>
     <select
       className="fd-form__control"
-      disabled=""
+      disabled={false}
       id="select-1"
     >
       <option
@@ -103,7 +103,7 @@ exports[`<Forms /> create form item 2`] = `
       <input
         checked={false}
         className="fd-form__control"
-        disabled=""
+        disabled={false}
         id="radio-1"
         name="radio-1"
         onChange={[Function]}
@@ -123,7 +123,7 @@ exports[`<Forms /> create form item 2`] = `
       <input
         checked={true}
         className="fd-form__control"
-        disabled=""
+        disabled={false}
         id="radio-2"
         name="radio-2"
         onChange={[Function]}
@@ -143,7 +143,7 @@ exports[`<Forms /> create form item 2`] = `
       <input
         checked={false}
         className="fd-form__control"
-        disabled=""
+        disabled={false}
         id="radio-3"
         name="radio-3"
         onChange={[Function]}
@@ -237,7 +237,7 @@ exports[`<Forms /> create form item 2`] = `
         <input
           checked={false}
           className="fd-form__control"
-          disabled=""
+          disabled={false}
           id="radio-7"
           name="radio-7"
           onChange={[Function]}
@@ -257,7 +257,7 @@ exports[`<Forms /> create form item 2`] = `
         <input
           checked={false}
           className="fd-form__control"
-          disabled=""
+          disabled={false}
           id="radio-8"
           name="radio-8"
           onChange={[Function]}
@@ -277,7 +277,7 @@ exports[`<Forms /> create form item 2`] = `
         <input
           checked={true}
           className="fd-form__control"
-          disabled=""
+          disabled={false}
           id="radio-9"
           name="radio-9"
           onChange={[Function]}
