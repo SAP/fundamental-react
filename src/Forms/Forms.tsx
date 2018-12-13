@@ -74,16 +74,18 @@ interface IFormInputProps extends ICommonProps {
   type?: string;
   state?: string;
   placeholder?: string;
+  disabled?: boolean;
 }
 
 export function FormInput(props: IFormInputProps): JSX.Element {
-  const { type, state, id, placeholder } = props;
+  const { type, state, id, placeholder, disabled } = props;
   return (
     <input
       className={`fd-form__control${state ? ' is-' + state : ''}`}
       type={type}
       id={id}
       placeholder={placeholder}
+      disabled={disabled ? true : false}
     />
   );
 }
