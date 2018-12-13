@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { Badge, Label, Status } from './Badge';
+import { Badge, Label, Status, Counter } from './Badge';
 
 describe('<Badge />', () => {
   const defaultBadge = <Badge>Default</Badge>;
@@ -26,6 +26,9 @@ describe('<Badge />', () => {
   const defaultStatus = <Status>Default</Status>;
   const typeStatus = <Status type="success">Default</Status>;
   const iconStatus = <Status glyph="history">Default</Status>;
+
+  const counter = <Counter>5</Counter>;
+  const counterNotification = <Counter notification>25</Counter>;
 
   test('create badges, pills and filled badges', () => {
     // create default badge
@@ -55,6 +58,16 @@ describe('<Badge />', () => {
 
     // create filled success type badge
     component = renderer.create(typeFillBadge);
+    tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+
+    // create counter
+    component = renderer.create(counter);
+    tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+
+    // create counter with notification
+    component = renderer.create(counterNotification);
     tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
