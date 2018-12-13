@@ -56,11 +56,6 @@ export default class Routes extends Component {
         },
         { url: '/alert', name: 'Alert', component: AlertComponent },
         {
-          url: '/badge',
-          name: 'Badge, Label & Status',
-          component: BadgeComponent
-        },
-        {
           url: '/breadcrumb',
           name: 'Breadcrumb',
           component: BreadcrumbComponent
@@ -140,6 +135,11 @@ export default class Routes extends Component {
           url: '/sideNavigation',
           name: 'Side Navigation',
           component: SideNavigationComponent
+        },
+        {
+          url: '/statusIndicators',
+          name: 'Status Indicators',
+          component: BadgeComponent
         },
         { url: '/table', name: 'Table', component: TableComponent },
         { url: '/tabs', name: 'Tabs', component: TabsComponent },
