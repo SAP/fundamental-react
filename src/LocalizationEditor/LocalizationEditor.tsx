@@ -1,9 +1,26 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { Popover } from '../Popover/Popover';
+import { ICommonProps } from '../common/common';
 
-// ------------------------------------------- Menu ------------------------------------------
-export const LocalizationEditor = props => {
+interface ILocalizationEditorProps extends ICommonProps {
+  control: {
+    label?: string;
+    placeholder?: string;
+    language?: string;
+  };
+  menu: [
+    {
+      placeholder?: string;
+      language?: string;
+    }
+  ];
+  compact?: boolean;
+  textarea?: boolean;
+}
+
+export function LocalizationEditor(
+  props: ILocalizationEditorProps
+): JSX.Element {
   const { control, menu, id, compact, textarea } = props;
 
   return (
@@ -81,21 +98,4 @@ export const LocalizationEditor = props => {
       />
     </div>
   );
-};
-
-LocalizationEditor.propTypes = {
-  control: PropTypes.shape({
-    label: PropTypes.string,
-    placeholder: PropTypes.string,
-    language: PropTypes.string
-  }).isRequired,
-  menu: PropTypes.arrayOf(
-    PropTypes.shape({
-      placeholder: PropTypes.string,
-      language: PropTypes.string
-    }).isRequired
-  ).isRequired,
-  id: PropTypes.string,
-  compact: PropTypes.bool,
-  textarea: PropTypes.bool
-};
+}
