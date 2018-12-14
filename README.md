@@ -1,8 +1,11 @@
-
 # Fundamental-react
 React.JS components for [SAP Fiori Fundamentals](https://github.com/SAP/fundamental)
-- [Playground](https://sap.github.io/fundamental-react/) 
+
+- [Playground](https://sap.github.io/fundamental-react/)
 - [npm package fundamental-react](https://www.npmjs.com/package/fundamental-react)
+- [![Build Status](https://travis-ci.org/SAP/fundamental-react.svg?branch=develop)](https://travis-ci.org/SAP/fundamental-react)
+- [GitHub repo of Angular implementation of SAP Fiori Fundamentals](https://github.com/SAP/fundamental-ngx)
+- [GitHub repo of Vue implementation of SAP Fiori Fundamentals](https://github.com/SAP/fundamental-vue)
 
 ## Description
 
@@ -30,24 +33,31 @@ Lint errors are shown in the console.
 
 Launches the test runner in the interactive watch mode.
 
+#### `npm test -- --coverage`
+
+Launches the test runner and display code coverage report.
+
+#### `npm test -- --coverage --watch`
+
+Launches the test runner and display code coverage report and interactive watch mode.
+
 #### `npm run build`
 
 Builds the app for production to the `build` folder.
 
-
 ## Download and Installation
 
-#### 1. Download Fundamental UI:
+#### 1. Download Fiori Fundamentals:
 
-`npm install --save fundamental-ui`
+`npm install --save fiori-fundamentals`
 
+#### 2. Include the Fiori Fundamentals CSS in your React application. In your App.css or App.scss file include the following lines:
 
-#### 2. Include the Fundamental UI CSS in your React application. In your App.css or App.scss file include the following lines:
-
-`@import '../node_modules/fundamental-ui/scss/icons/'`
-`@import '../node_modules/fundamental-ui/dist/fonts/'`
-`@import '../node_modules/fundamental-ui/scss/all.scss'`
-
+```
+$fd-icons-path: "~fiori-fundamentals/scss/icons/";
+$fd-fonts-path: "~fiori-fundamentals/scss/fonts/";
+@import '../node_modules/fiori-fundamentals/scss/all.scss';
+```
 
 ## Known Issues
 
@@ -59,7 +69,7 @@ If you encounter an issue, you can [create a ticket](https://github.com/SAP/fund
 
 ## Contributing
 
-If you want to contribute, please check the [CONTRIBUTING.md](./CONTRIBUTING.md) documentation for contribution guidelines. 
+If you want to contribute, please check the [CONTRIBUTING.md](./CONTRIBUTING.md) documentation for contribution guidelines.
 
 ## License
 

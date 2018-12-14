@@ -1,8 +1,6 @@
 import React from 'react';
-import { Image, Popover, Button, Menu, MenuList, MenuItem } from '../';
-import {} from '../';
+import { Image, Popover, Button, Menu, MenuList, MenuItem, Table } from '../';
 import { DocsTile, DocsText, Separator, Header, Description, Import, Properties } from '../';
-import { Table } from '../';
 
 export const TableComponent = () => {
     const simpleTableCode = `<Table
@@ -24,14 +22,14 @@ export const TableComponent = () => {
             rowData: [
                 <input type="checkbox" />,
                 <Image size="m" photo="https://robohash.org/green?size=50x50" />,
-                <a href="#" class="fd-has-font-weight-semi">
+                <a href="#" className="fd-has-font-weight-semi">
                     user.name@email.com
                 </a>,
                 'First Name',
                 'Last Name',
                 '01/26/17',
                 <Popover
-                    control={<Button type="secondary" glyph="vertical-grip" />}
+                    control={<Button option="light" glyph="vertical-grip" />}
                     body={
                         <Menu>
                             <MenuList>
@@ -49,14 +47,14 @@ export const TableComponent = () => {
             rowData: [
                 <input type="checkbox" />,
                 <Image size="m" photo="https://robohash.org/brown?size=50x50" />,
-                <a href="#" class="fd-has-font-weight-semi">
+                <a href="#" className="fd-has-font-weight-semi">
                     florence.garcia@qwerty.io
                 </a>,
                 'First Name',
                 'Last Name',
                 '07/29/18',
                 <Popover
-                    control={<Button type="secondary" glyph="vertical-grip" />}
+                    control={<Button option="light" glyph="vertical-grip" />}
                     body={
                         <Menu>
                             <MenuList>
@@ -74,14 +72,14 @@ export const TableComponent = () => {
             rowData: [
                 <input type="checkbox" />,
                 <Image size="m" photo="https://robohash.org/Q27.png?set=set1&size=50x50" />,
-                <a href="#" class="fd-has-font-weight-semi">
+                <a href="#" className="fd-has-font-weight-semi">
                     mark.helper@qwerty.io
                 </a>,
                 'First Name',
                 'Last Name',
                 '05/26/18',
                 <Popover
-                    control={<Button type="secondary" glyph="vertical-grip" />}
+                    control={<Button option="light" glyph="vertical-grip" />}
                     body={
                         <Menu>
                             <MenuList>
@@ -99,14 +97,14 @@ export const TableComponent = () => {
             rowData: [
                 <input type="checkbox" />,
                 <Image size="m" photo="https://robohash.org/water?&size=50x50" />,
-                <a href="#" class="fd-has-font-weight-semi">
+                <a href="#" className="fd-has-font-weight-semi">
                     user.name@email.com
                 </a>,
                 'First Name',
                 'Last Name',
                 '01/26/14',
                 <Popover
-                    control={<Button type="secondary" glyph="vertical-grip" />}
+                    control={<Button option="light" glyph="vertical-grip" />}
                     body={
                         <Menu>
                             <MenuList>
@@ -134,11 +132,11 @@ export const TableComponent = () => {
             <Properties
                 type="Inputs"
                 properties={[
-                    { name: 'headers', description: 'Array of strings for the column headers of the table' },
+                    { name: 'headers', description: 'array of strings for the column headers of the table' },
                     {
                         name: 'tableData',
                         description:
-                            'Array of objects that contain two properties, rowData (an array of strings containing data for each column in the row), and children (an array of objects containing additional rows).'
+                            'array of objects that contain two properties, rowData (an array of strings containing data for each column in the row), and children (an array of objects containing additional rows).'
                     }
                 ]}
             />
@@ -182,14 +180,14 @@ export const TableComponent = () => {
                             rowData: [
                                 <input type="checkbox" />,
                                 <Image size="m" photo="https://robohash.org/green?size=50x50" />,
-                                <a href="#" class="fd-has-font-weight-semi">
+                                <a href="#" className="fd-has-font-weight-semi">
                                     user.name@email.com
                                 </a>,
                                 'First Name',
                                 'Last Name',
                                 '01/26/17',
                                 <Popover
-                                    control={<Button type="secondary" glyph="vertical-grip" />}
+                                    control={<Button option="light" glyph="vertical-grip" />}
                                     body={
                                         <Menu>
                                             <MenuList>
@@ -207,14 +205,14 @@ export const TableComponent = () => {
                             rowData: [
                                 <input type="checkbox" />,
                                 <Image size="m" photo="https://robohash.org/brown?size=50x50" />,
-                                <a href="#" class="fd-has-font-weight-semi">
+                                <a href="#" className="fd-has-font-weight-semi">
                                     florence.garcia@qwerty.io
                                 </a>,
                                 'First Name',
                                 'Last Name',
                                 '07/29/18',
                                 <Popover
-                                    control={<Button type="secondary" glyph="vertical-grip" />}
+                                    control={<Button option="light" glyph="vertical-grip" />}
                                     body={
                                         <Menu>
                                             <MenuList>
@@ -232,14 +230,14 @@ export const TableComponent = () => {
                             rowData: [
                                 <input type="checkbox" />,
                                 <Image size="m" photo="https://robohash.org/Q27.png?set=set1&size=50x50" />,
-                                <a href="#" class="fd-has-font-weight-semi">
+                                <a href="#" className="fd-has-font-weight-semi">
                                     mark.helper@qwerty.io
                                 </a>,
                                 'First Name',
                                 'Last Name',
                                 '05/26/18',
                                 <Popover
-                                    control={<Button type="secondary" glyph="vertical-grip" />}
+                                    control={<Button option="light" glyph="vertical-grip" />}
                                     body={
                                         <Menu>
                                             <MenuList>
@@ -257,14 +255,14 @@ export const TableComponent = () => {
                             rowData: [
                                 <input type="checkbox" />,
                                 <Image size="m" photo="https://robohash.org/water?&size=50x50" />,
-                                <a href="#" class="fd-has-font-weight-semi">
+                                <a href="#" className="fd-has-font-weight-semi">
                                     user.name@email.com
                                 </a>,
                                 'First Name',
                                 'Last Name',
                                 '01/26/14',
                                 <Popover
-                                    control={<Button type="secondary" glyph="vertical-grip" />}
+                                    control={<Button option="light" glyph="vertical-grip" />}
                                     body={
                                         <Menu>
                                             <MenuList>

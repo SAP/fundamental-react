@@ -10,13 +10,35 @@ import {
     ActionBarHeader,
     ActionBarActions
 } from '../src/ActionBar/ActionBar';
-import { Alert } from '../src/Alert/Alert';
-import { Badge, Label, Status } from '../src/Badge/Badge';
-import { Breadcrumb, BreadcrumbItem } from '../src/Breadcrumb/Breadcrumb';
-import { Button, ButtonGroup, ButtonGrouped } from '../src/Button/Button';
-import { Calendar } from '../src/Calendar/Calendar';
-import { DatePicker } from '../src/DatePicker/DatePicker';
-import { Dropdown } from '../src/Dropdown/Dropdown';
+import {
+    Alert
+} from '../src/Alert/Alert';
+import {
+    Badge,
+    Label,
+    Status,
+    Counter
+} from '../src/Badge/Badge';
+import {
+    Breadcrumb,
+    BreadcrumbItem
+} from '../src/Breadcrumb/Breadcrumb';
+import {
+    Button,
+    ButtonGroup
+} from '../src/Button/Button';
+import {
+    Calendar
+} from '../src/Calendar/Calendar';
+import {
+    ComboboxInput
+} from '../src/ComboboxInput/ComboboxInput';
+import {
+    DatePicker
+} from '../src/DatePicker/DatePicker';
+import {
+    Dropdown
+} from '../src/Dropdown/Dropdown';
 import {
     FormSet,
     FormItem,
@@ -35,16 +57,30 @@ import { Image } from '../src/Image/Image';
 import { InlineHelp } from '../src/InlineHelp/InlineHelp';
 import { InputGroup, FormGroup } from '../src/InputGroup/InputGroup';
 import { ListGroup, ListGroupItem, ListGroupItemActions, ListGroupItemCheckbox } from '../src/ListGroup/ListGroup';
+import { LocalizationEditor } from '../src/LocalizationEditor/LocalizationEditor';
 import { MegaMenu, MegaMenuList, MegaMenuGroup } from '../src/MegaMenu/MegaMenu';
 import { Menu, MenuList, MenuItem, MenuGroup } from '../src/Menu/Menu';
 import { Modal } from '../src/Modal/Modal';
+import { Navbar, NavbarGroup, NavbarActions, NavbarElement } from '../src/Navbar/Navbar';
+import { MultiInput } from '../src/MultiInput/MultiInput';
 import { Pagination } from '../src/Pagination/Pagination';
-import { Popover, PopoverControl, PopoverBody } from '../src/Popover/Popover';
+import {
+    Panel,
+    PanelGrid,
+    PanelBody,
+    PanelHeader,
+    PanelHead,
+    PanelActions,
+    PanelFilters,
+    PanelContent,
+    PanelFooter
+} from '../src/Panel/Panel';
+import { Popover } from '../src/Popover/Popover';
 import { SearchInput } from '../src/SearchInput/SearchInput';
 import { SideNav, SideNavList, SideNavGroup } from '../src/SideNavigation/SideNavigation';
 import { Table } from '../src/Table/Table';
 import { Tabs, TabComponent } from '../src/Tabs/Tabs';
-import { Tag } from '../src/Tag/Tag';
+import { Token } from './Token/Token';
 import {
     Tile,
     TileContent,
@@ -57,7 +93,9 @@ import {
 } from '../src/Tile/Tile';
 import { Toggle } from '../src/Toggle/Toggle';
 import { Tree } from '../src/Tree/Tree';
-
+import { Time } from '../src/Time/Time';
+import { TimePicker } from '../src/TimePicker/TimePicker';
+import { Shellbar } from '../src/Shellbar/Shellbar';
 import { DocsTile, DocsText } from '../src/documentation/DocsTile/DocsTile';
 import { Separator } from '../src/documentation/Separator/Separator';
 import { Header } from '../src/documentation/Header/Header';
@@ -81,13 +119,14 @@ export {
     ActionBarActions,
     Alert,
     Badge,
+    ComboboxInput,
     Label,
     Status,
+    Counter,
     Breadcrumb,
     BreadcrumbItem,
     Button,
     ButtonGroup,
-    ButtonGrouped,
     Calendar,
     DatePicker,
     Dropdown,
@@ -111,6 +150,7 @@ export {
     ListGroupItem,
     ListGroupItemActions,
     ListGroupItemCheckbox,
+    LocalizationEditor,
     MegaMenu,
     MegaMenuList,
     MegaMenuGroup,
@@ -119,10 +159,22 @@ export {
     MenuItem,
     MenuGroup,
     Modal,
+    MultiInput,
+    Navbar,
+    NavbarGroup,
+    NavbarActions,
+    NavbarElement,
     Popover,
-    PopoverControl,
-    PopoverBody,
     Pagination,
+    Panel,
+    PanelGrid,
+    PanelBody,
+    PanelHeader,
+    PanelHead,
+    PanelActions,
+    PanelFilters,
+    PanelContent,
+    PanelFooter,
     SearchInput,
     SideNav,
     SideNavList,
@@ -130,17 +182,20 @@ export {
     Table,
     Tabs,
     TabComponent,
-    Tag,
+    Token,
     Tile,
     TileContent,
     TileMedia,
     TileActions,
+    Time,
+    TimePicker,
     ProductTile,
     ProductTileMedia,
     TileGrid,
     ProductTileContent,
     Toggle,
-    Tree
+    Tree,
+    Shellbar
 };
 
 ReactDOM.render(<App />, document.getElementById('root'));

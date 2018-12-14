@@ -18,23 +18,29 @@ export const ActionBar = props => {
 };
 
 ActionBar.propTypes = {
-    mobile: PropTypes.bool
+    mobile: PropTypes.bool,
+    width: PropTypes.string
 };
 
 export const ActionBarBack = props => {
+    const { onclick } = props;
     return (
-        <div class="fd-action-bar__back">
-            <button class=" fd-button--secondary fd-button--compact sap-icon--nav-back" />
+        <div className="fd-action-bar__back">
+            <button className="fd-button--light fd-button--compact sap-icon--nav-back" onClick={onclick} />
         </div>
     );
 };
 
+ActionBarBack.propTypes = {
+    onclick: PropTypes.func
+}
+
 export const ActionBarHeader = props => {
     const { title, description } = props;
     return (
-        <div class="fd-action-bar__header">
-            <h1 class="fd-action-bar__title">{title}</h1>
-            <p class="fd-action-bar__description">{description} </p>
+        <div className="fd-action-bar__header">
+            <h1 className="fd-action-bar__title">{title}</h1>
+            <p className="fd-action-bar__description">{description} </p>
         </div>
     );
 };
@@ -46,5 +52,5 @@ ActionBarHeader.propTypes = {
 
 export const ActionBarActions = props => {
     const { children } = props;
-    return <div class="fd-action-bar__actions">{children}</div>;
+    return <div className="fd-action-bar__actions">{children}</div>;
 };

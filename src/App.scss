@@ -1,22 +1,29 @@
-$fd-icons-path: '../node_modules/fundamental-ui/scss/icons/';
-$fd-fonts-path: '../node_modules/fundamental-ui/dist/fonts/';
-@import '../node_modules/fundamental-ui/scss/all.scss';
+$fd-icons-path: '../node_modules/fiori-fundamentals/scss/icons/';
+$fd-fonts-path: '../node_modules/fiori-fundamentals/dist/fonts/';
+@import '../node_modules/fiori-fundamentals/scss/all.scss';
 
 .App {
     background-color: white;
+}
+
+.fd-counter--notification {
+    position: relative;
 }
 
 .fd-tile__content {
     .fd-badge,
     .fd-label,
     .fd-status-label,
-    .fd-tag,
+    .fd-token,
     .fd-dropdown,
-    .fd-popover,
-    [class*='fd-identifier'],
-    [class*='fd-image'],
-    [class*='fd-form'] {
-        margin-right: 10px;
+    .fd-button-group,
+    .fd-counter,
+    [class*='fd-identifier'] {
+        margin-right: 20px;
+    }
+
+    .fd-popover {
+        // margin-right: 60px;
     }
 
     .fd-button--grouped {
@@ -30,7 +37,11 @@ $fd-fonts-path: '../node_modules/fundamental-ui/dist/fonts/';
     }
 
     .fd-doc__margin button {
-        margin-right: 10px;
+        margin-right: 20px;
+    }
+
+    .fd-doc__margin [class*='fd-image'] {
+        margin-right: 20px;
     }
 }
 
@@ -137,18 +148,6 @@ $fd-fonts-path: '../node_modules/fundamental-ui/dist/fonts/';
     margin: 12px 0;
 }
 
-input[type='text'],
-input[type='password'],
-input[type='email'],
-input[type='url'],
-input[type='search'],
-input[type='tel'],
-input[type='number'],
-input[type='date'],
-textarea {
-    border-radius: 0;
-}
-
 .fd-side-nav {
     max-width: 250px;
 }
@@ -193,6 +192,10 @@ textarea {
 }
 
 .fd-date-picker {
+    display: inline-block;
+}
+
+.fd-calendar {
     display: inline-block;
 }
 

@@ -1,0 +1,91 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ListGroup /> create list group 1`] = `
+<ul
+  className="fd-list-group"
+>
+  <li
+    className="fd-list-group__item"
+  >
+    <a
+      style={
+        Object {
+          "cursor": "pointer",
+        }
+      }
+    >
+      List item 1
+    </a>
+  </li>
+  <li
+    className="fd-list-group__item"
+  >
+    List item 2
+  </li>
+  <li
+    className="fd-list-group__item"
+  >
+    <a
+      style={
+        Object {
+          "cursor": "pointer",
+        }
+      }
+    >
+      List item3
+    </a>
+  </li>
+  <li
+    className="fd-list-group__item"
+  >
+    List item 4
+  </li>
+</ul>
+`;
+
+exports[`<ListGroup /> create list group 2`] = `
+<ul
+  className="fd-list-group"
+>
+  <li
+    className="fd-list-group__item"
+  >
+    List item 1
+    <span
+      className="fd-list-group__action"
+    >
+      <button
+        className=" fd-button fd-button--standard sap-icon--edit"
+        disabled={false}
+        selected={false}
+      />
+    </span>
+  </li>
+</ul>
+`;
+
+exports[`<ListGroup /> create list group 3`] = `
+<ul
+  className="fd-list-group"
+>
+  <li
+    className="fd-list-group__item"
+  >
+    <div
+      className="fd-form__item fd-form__item--check"
+    >
+      <label
+        className="fd-form__label"
+        for="CndSd399"
+      >
+        <input
+          className="fd-form__control"
+          id="CndSd399"
+          type="checkbox"
+        />
+        List item 1
+      </label>
+    </div>
+  </li>
+</ul>
+`;

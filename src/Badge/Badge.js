@@ -11,8 +11,8 @@ export const Badge = props => {
 };
 
 Badge.propTypes = {
-    type: PropTypes.string,
-    modifier: PropTypes.string
+    type: PropTypes.oneOf(['', 'success', 'warning', 'error']),
+    modifier: PropTypes.oneOf(['', 'pill', 'filled'])
 };
 
 export const Label = props => {
@@ -21,7 +21,7 @@ export const Label = props => {
 };
 
 Label.propTypes = {
-    type: PropTypes.string
+    type: PropTypes.oneOf(['', 'success', 'warning', 'error'])
 };
 
 export const Status = props => {
@@ -35,6 +35,19 @@ export const Status = props => {
     );
 };
 Status.propTypes = {
-    type: PropTypes.string,
+    type: PropTypes.oneOf(['', 'success', 'warning', 'error', 'available', 'away', 'busy', 'offline']),
     glyph: PropTypes.string
+};
+
+export const Counter = props => {
+    const { notification, children } = props;
+    return (
+        <span className={`fd-counter${notification ? ' fd-counter--notification' : ''}`} aria-label="Unread count">
+            {children}
+        </span>
+    );
+};
+
+Counter.propTypes = {
+    notification: PropTypes.bool
 };

@@ -1,0 +1,655 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SideNavigation /> create side navigation 1`] = `
+<nav
+  className="fd-side-nav"
+>
+  <ul
+    className="fd-side-nav__list"
+  >
+    <li
+      className="fd-side-nav__item"
+    >
+      <a
+        className="fd-side-nav__link"
+        href="#"
+        onClick={[Function]}
+      >
+        Link Item
+      </a>
+    </li>
+    <li
+      className="fd-side-nav__item"
+    >
+      <a
+        className="fd-side-nav__link"
+        href="#"
+        onClick={[Function]}
+      >
+        Link Item
+      </a>
+    </li>
+    <li
+      className="fd-side-nav__item"
+    >
+      <a
+        className="fd-side-nav__link"
+        href="#"
+        onClick={[Function]}
+      >
+        Link Item
+      </a>
+    </li>
+    <li
+      className="fd-side-nav__item"
+    >
+      <a
+        className="fd-side-nav__link"
+        href="#"
+        onClick={[Function]}
+      >
+        Link Item
+      </a>
+    </li>
+    <li
+      className="fd-side-nav__item"
+    >
+      <a
+        className="fd-side-nav__link"
+        href="#"
+        onClick={[Function]}
+      >
+        Link Item
+      </a>
+    </li>
+  </ul>
+</nav>
+`;
+
+exports[`<SideNavigation /> create side navigation 2`] = `
+<nav
+  className="fd-side-nav"
+>
+  <div
+    className="fd-side-nav__group"
+  >
+    <h1
+      className="fd-side-nav__title"
+    >
+      Group Title
+    </h1>
+    <ul
+      className="fd-side-nav__list"
+    >
+      <li
+        className="fd-side-nav__item"
+      >
+        <a
+          className="fd-side-nav__link"
+          href="/"
+          onClick={[Function]}
+        >
+          Link Item
+        </a>
+      </li>
+      <li
+        className="fd-side-nav__item"
+      >
+        <a
+          className="fd-side-nav__link is-selected"
+          href="/"
+          onClick={[Function]}
+        >
+          Link Item
+        </a>
+      </li>
+      <li
+        className="fd-side-nav__item"
+      >
+        <a
+          className="fd-side-nav__link"
+          href="/"
+          onClick={[Function]}
+        >
+          Link Item
+        </a>
+      </li>
+      <li
+        className="fd-side-nav__item"
+      >
+        <a
+          className="fd-side-nav__link"
+          href="/"
+          onClick={[Function]}
+        >
+          Link Item
+        </a>
+      </li>
+      <li
+        className="fd-side-nav__item"
+      >
+        <a
+          className="fd-side-nav__link"
+          href="/"
+          onClick={[Function]}
+        >
+          Link Item
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div
+    className="fd-side-nav__group"
+  >
+    <h1
+      className="fd-side-nav__title"
+    >
+      Group Title
+    </h1>
+    <ul
+      className="fd-side-nav__list"
+    >
+      <li
+        className="fd-side-nav__item"
+      >
+        <a
+          className="fd-side-nav__link"
+          href="/"
+          onClick={[Function]}
+        >
+          Link Item
+        </a>
+      </li>
+      <li
+        className="fd-side-nav__item"
+      >
+        <a
+          className="fd-side-nav__link"
+          href="/"
+          onClick={[Function]}
+        >
+          Link Item
+        </a>
+      </li>
+      <li
+        className="fd-side-nav__item"
+      >
+        <a
+          className="fd-side-nav__link"
+          href="/"
+          onClick={[Function]}
+        >
+          Link Item
+        </a>
+      </li>
+      <li
+        className="fd-side-nav__item"
+      >
+        <a
+          className="fd-side-nav__link"
+          href="/"
+          onClick={[Function]}
+        >
+          Link Item
+        </a>
+      </li>
+      <li
+        className="fd-side-nav__item"
+      >
+        <a
+          className="fd-side-nav__link"
+          href="/"
+          onClick={[Function]}
+        >
+          Link Item
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+`;
+
+exports[`<SideNavigation /> create side navigation 3`] = `
+<nav
+  className="fd-side-nav"
+>
+  <ul
+    className="fd-side-nav__list"
+  >
+    <li
+      className="fd-side-nav__item"
+    >
+      <a
+        className="fd-side-nav__link"
+        href="#"
+        onClick={[Function]}
+      >
+        Link Item 1
+      </a>
+    </li>
+    <li
+      className="fd-side-nav__item"
+    >
+      <a
+        className="fd-side-nav__link has-child"
+        href="#"
+        onClick={[Function]}
+      >
+        Link Item 2
+      </a>
+      <ul
+        aria-hidden={true}
+        className="fd-side-nav__sublist"
+        id="item-2"
+      >
+        <a
+          className="fd-side-nav__sublink"
+          href="#"
+          onClick={[Function]}
+        >
+          Item 1
+        </a>
+        <a
+          className="fd-side-nav__sublink"
+          href="#"
+          onClick={[Function]}
+        >
+          Item 2
+        </a>
+        <a
+          className="fd-side-nav__sublink"
+          href="#"
+          onClick={[Function]}
+        >
+          Item 3
+        </a>
+        <a
+          className="fd-side-nav__sublink"
+          href="#"
+          onClick={[Function]}
+        >
+          Item 4
+        </a>
+        <a
+          className="fd-side-nav__sublink"
+          href="/"
+          onClick={[Function]}
+        >
+          Item 5
+        </a>
+      </ul>
+    </li>
+    <li
+      className="fd-side-nav__item"
+    >
+      <a
+        className="fd-side-nav__link"
+        href="#"
+        onClick={[Function]}
+      >
+        Link Item 3
+      </a>
+    </li>
+    <li
+      className="fd-side-nav__item"
+    >
+      <a
+        className="fd-side-nav__link has-child"
+        href="/"
+        onClick={[Function]}
+      >
+        Link Item 4
+      </a>
+      <ul
+        aria-hidden={true}
+        className="fd-side-nav__sublist"
+        id="item-4"
+      >
+        <a
+          className="fd-side-nav__sublink"
+          href="#"
+          onClick={[Function]}
+        >
+          Item 1
+        </a>
+        <a
+          className="fd-side-nav__sublink"
+          href="#"
+          onClick={[Function]}
+        >
+          Item 2
+        </a>
+        <a
+          className="fd-side-nav__sublink"
+          href="#"
+          onClick={[Function]}
+        >
+          Item 3
+        </a>
+        <a
+          className="fd-side-nav__sublink"
+          href="#"
+          onClick={[Function]}
+        >
+          Item 4
+        </a>
+      </ul>
+    </li>
+    <li
+      className="fd-side-nav__item"
+    >
+      <a
+        className="fd-side-nav__link"
+        href="/"
+        onClick={[Function]}
+      >
+        Link Item
+      </a>
+    </li>
+  </ul>
+</nav>
+`;
+
+exports[`<SideNavigation /> create side navigation 4`] = `
+<nav
+  className="fd-side-nav"
+>
+  <ul
+    className="fd-side-nav__list"
+  >
+    <li
+      className="fd-side-nav__item"
+    >
+      <a
+        className="fd-side-nav__link"
+        href="/"
+        onClick={[Function]}
+      >
+        <span
+          className="fd-side-nav__icon sap-icon--home sap-icon--l"
+          role="presentation"
+        />
+        Link Item
+      </a>
+    </li>
+    <li
+      className="fd-side-nav__item"
+    >
+      <a
+        className="fd-side-nav__link is-selected"
+        href="/"
+        onClick={[Function]}
+      >
+        <span
+          className="fd-side-nav__icon sap-icon--home sap-icon--l"
+          role="presentation"
+        />
+        Link Item
+      </a>
+    </li>
+    <li
+      className="fd-side-nav__item"
+    >
+      <a
+        className="fd-side-nav__link"
+        href="/"
+        onClick={[Function]}
+      >
+        <span
+          className="fd-side-nav__icon sap-icon--home sap-icon--l"
+          role="presentation"
+        />
+        Link Item
+      </a>
+    </li>
+    <li
+      className="fd-side-nav__item"
+    >
+      <a
+        className="fd-side-nav__link"
+        href="/"
+        onClick={[Function]}
+      >
+        <span
+          className="fd-side-nav__icon sap-icon--home sap-icon--l"
+          role="presentation"
+        />
+        Link Item
+      </a>
+    </li>
+    <li
+      className="fd-side-nav__item"
+    >
+      <a
+        className="fd-side-nav__link"
+        href="/"
+        onClick={[Function]}
+      >
+        <span
+          className="fd-side-nav__icon sap-icon--home sap-icon--l"
+          role="presentation"
+        />
+        Link Item
+      </a>
+    </li>
+  </ul>
+</nav>
+`;
+
+exports[`<SideNavigation /> create side navigation 5`] = `
+<nav
+  className="fd-side-nav fd-side-nav--icons"
+>
+  <ul
+    className="fd-side-nav__list"
+  >
+    <li
+      className="fd-side-nav__item"
+    >
+      <a
+        className="fd-side-nav__link"
+        href="#"
+        onClick={[Function]}
+      >
+        <span
+          className="fd-side-nav__icon sap-icon--home sap-icon--l"
+          role="presentation"
+        />
+      </a>
+    </li>
+    <li
+      className="fd-side-nav__item"
+    >
+      <a
+        className="fd-side-nav__link"
+        href="#"
+        onClick={[Function]}
+      >
+        <span
+          className="fd-side-nav__icon sap-icon--home sap-icon--l"
+          role="presentation"
+        />
+      </a>
+    </li>
+    <li
+      className="fd-side-nav__item"
+    >
+      <a
+        className="fd-side-nav__link"
+        href="#"
+        onClick={[Function]}
+      >
+        <span
+          className="fd-side-nav__icon sap-icon--home sap-icon--l"
+          role="presentation"
+        />
+      </a>
+    </li>
+    <li
+      className="fd-side-nav__item"
+    >
+      <a
+        className="fd-side-nav__link"
+        href="#"
+        onClick={[Function]}
+      >
+        <span
+          className="fd-side-nav__icon sap-icon--home sap-icon--l"
+          role="presentation"
+        />
+      </a>
+    </li>
+    <li
+      className="fd-side-nav__item"
+    >
+      <a
+        className="fd-side-nav__link"
+        href="#"
+        onClick={[Function]}
+      >
+        <span
+          className="fd-side-nav__icon sap-icon--home sap-icon--l"
+          role="presentation"
+        />
+      </a>
+    </li>
+  </ul>
+</nav>
+`;
+
+exports[`<SideNavigation /> create side navigation 6`] = `
+<ul
+  className="fd-side-nav__list"
+>
+  <li
+    className="fd-side-nav__item"
+  >
+    <a
+      className="fd-side-nav__link"
+      href="#"
+      onClick={[Function]}
+    >
+      Link Item 1
+    </a>
+  </li>
+  <li
+    className="fd-side-nav__item"
+  >
+    <a
+      className="fd-side-nav__link has-child"
+      href="#"
+      onClick={[Function]}
+    >
+      Link Item 2
+    </a>
+    <ul
+      aria-hidden={true}
+      className="fd-side-nav__sublist"
+      id="item-2"
+    >
+      <a
+        className="fd-side-nav__sublink"
+        href="#"
+        onClick={[Function]}
+      >
+        Item 1
+      </a>
+      <a
+        className="fd-side-nav__sublink"
+        href="#"
+        onClick={[Function]}
+      >
+        Item 2
+      </a>
+      <a
+        className="fd-side-nav__sublink"
+        href="#"
+        onClick={[Function]}
+      >
+        Item 3
+      </a>
+      <a
+        className="fd-side-nav__sublink"
+        href="#"
+        onClick={[Function]}
+      >
+        Item 4
+      </a>
+      <a
+        className="fd-side-nav__sublink"
+        href="/"
+        onClick={[Function]}
+      >
+        Item 5
+      </a>
+    </ul>
+  </li>
+  <li
+    className="fd-side-nav__item"
+  >
+    <a
+      className="fd-side-nav__link"
+      href="#"
+      onClick={[Function]}
+    >
+      Link Item 3
+    </a>
+  </li>
+  <li
+    className="fd-side-nav__item"
+  >
+    <a
+      className="fd-side-nav__link has-child"
+      href="/"
+      onClick={[Function]}
+    >
+      Link Item 4
+    </a>
+    <ul
+      aria-hidden={true}
+      className="fd-side-nav__sublist"
+      id="item-4"
+    >
+      <a
+        className="fd-side-nav__sublink"
+        href="#"
+        onClick={[Function]}
+      >
+        Item 1
+      </a>
+      <a
+        className="fd-side-nav__sublink"
+        href="#"
+        onClick={[Function]}
+      >
+        Item 2
+      </a>
+      <a
+        className="fd-side-nav__sublink"
+        href="#"
+        onClick={[Function]}
+      >
+        Item 3
+      </a>
+      <a
+        className="fd-side-nav__sublink"
+        href="#"
+        onClick={[Function]}
+      >
+        Item 4
+      </a>
+    </ul>
+  </li>
+  <li
+    className="fd-side-nav__item"
+  >
+    <a
+      className="fd-side-nav__link"
+      href="/"
+      onClick={[Function]}
+    >
+      Link Item
+    </a>
+  </li>
+</ul>
+`;

@@ -1,0 +1,350 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Dropdown /> create dropdown component 1`] = `
+<div
+  className="fd-dropdown"
+>
+  <div
+    className="fd-popover"
+  >
+    <div
+      aria-expanded={false}
+      className="fd-popover__control"
+      onClick={[Function]}
+    >
+      <button
+        className=" fd-button fd-dropdown__control"
+        disabled={false}
+        selected={false}
+      >
+        Select
+      </button>
+    </div>
+    <div
+      aria-hidden={true}
+      className="fd-popover__body fd-popover__body--no-arrow"
+    >
+      <nav
+        className="fd-menu"
+      >
+        <ul
+          className="fd-menu__list"
+        >
+          <li>
+            <a
+              className="fd-menu__item"
+              href="/"
+            >
+              Option 1
+            </a>
+          </li>
+          <li>
+            <a
+              className="fd-menu__item"
+              href="/"
+            >
+              Option 2
+            </a>
+          </li>
+          <li>
+            <a
+              className="fd-menu__item"
+              href="/"
+            >
+              Option 3
+            </a>
+          </li>
+          <li>
+            <a
+              className="fd-menu__item"
+              href="/"
+            >
+              Option 4
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Dropdown /> create dropdown component 2`] = `
+<div
+  className="fd-dropdown"
+>
+  <div
+    className="fd-popover"
+  >
+    <div
+      aria-expanded={false}
+      className="fd-popover__control"
+      onClick={[Function]}
+    >
+      <button
+        className=" fd-button fd-dropdown__control fd-button--compact"
+        disabled={false}
+        selected={false}
+      >
+        Select
+      </button>
+    </div>
+    <div
+      aria-hidden={true}
+      className="fd-popover__body fd-popover__body--no-arrow"
+    >
+      <nav
+        className="fd-menu"
+      >
+        <ul
+          className="fd-menu__list"
+        >
+          <li>
+            <a
+              className="fd-menu__item"
+              href="/"
+            >
+              Option 1
+            </a>
+          </li>
+          <li>
+            <a
+              className="fd-menu__item"
+              href="/"
+            >
+              Option 2
+            </a>
+          </li>
+          <li>
+            <a
+              className="fd-menu__item"
+              href="/"
+            >
+              Option 3
+            </a>
+          </li>
+          <li>
+            <a
+              className="fd-menu__item"
+              href="/"
+            >
+              Option 4
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Dropdown /> create dropdown component 3`] = `
+<div
+  className="fd-dropdown fd-dropdown--standard"
+>
+  <div
+    className="fd-popover"
+  >
+    <div
+      aria-expanded={false}
+      className="fd-popover__control"
+      onClick={[Function]}
+    >
+      <button
+        className=" fd-button fd-button--standard fd-dropdown__control"
+        disabled={false}
+        selected={false}
+      >
+        Select
+      </button>
+    </div>
+    <div
+      aria-hidden={true}
+      className="fd-popover__body fd-popover__body--no-arrow"
+    >
+      <nav
+        className="fd-menu"
+      >
+        <ul
+          className="fd-menu__list"
+        >
+          <li>
+            <a
+              className="fd-menu__item"
+              href="/"
+            >
+              Option 1
+            </a>
+          </li>
+          <li>
+            <a
+              className="fd-menu__item"
+              href="/"
+            >
+              Option 2
+            </a>
+          </li>
+          <li>
+            <a
+              className="fd-menu__item"
+              href="/"
+            >
+              Option 3
+            </a>
+          </li>
+          <li>
+            <a
+              className="fd-menu__item"
+              href="/"
+            >
+              Option 4
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Dropdown /> create dropdown component 4`] = `
+<div
+  className="fd-dropdown"
+>
+  <div
+    className="fd-popover"
+  >
+    <div
+      aria-controls="jhqD0557"
+      aria-expanded={false}
+      className="fd-popover__control"
+      onClick={[Function]}
+    >
+      <button
+        className=" fd-button fd-dropdown__control sap-icon--filter"
+        disabled={false}
+        selected={false}
+      >
+        Select
+      </button>
+    </div>
+    <div
+      aria-hidden={true}
+      className="fd-popover__body fd-popover__body--no-arrow"
+      id="jhqD0557"
+    >
+      <nav
+        className="fd-menu"
+      >
+        <ul
+          className="fd-menu__list"
+        >
+          <li>
+            <a
+              className="fd-menu__item"
+              href="/"
+            >
+              Option 1
+            </a>
+          </li>
+          <li>
+            <a
+              className="fd-menu__item"
+              href="/"
+            >
+              Option 2
+            </a>
+          </li>
+          <li>
+            <a
+              className="fd-menu__item"
+              href="/"
+            >
+              Option 3
+            </a>
+          </li>
+          <li>
+            <a
+              className="fd-menu__item"
+              href="/"
+            >
+              Option 4
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Dropdown /> create dropdown component 5`] = `
+<div
+  className="fd-dropdown"
+>
+  <div
+    className="fd-popover"
+  >
+    <div
+      aria-controls="jhqD0561"
+      aria-expanded={false}
+      className="fd-popover__control"
+      onClick={[Function]}
+    >
+      <button
+        className=" fd-button fd-dropdown__control sap-icon--filter is-disabled"
+        disabled={true}
+        selected={false}
+      >
+        Select
+      </button>
+    </div>
+    <div
+      aria-hidden={true}
+      className="fd-popover__body fd-popover__body--no-arrow"
+      id="jhqD0561"
+    >
+      <nav
+        className="fd-menu"
+      >
+        <ul
+          className="fd-menu__list"
+        >
+          <li>
+            <a
+              className="fd-menu__item"
+              href="/"
+            >
+              Option 1
+            </a>
+          </li>
+          <li>
+            <a
+              className="fd-menu__item"
+              href="/"
+            >
+              Option 2
+            </a>
+          </li>
+          <li>
+            <a
+              className="fd-menu__item"
+              href="/"
+            >
+              Option 3
+            </a>
+          </li>
+          <li>
+            <a
+              className="fd-menu__item"
+              href="/"
+            >
+              Option 4
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
+`;

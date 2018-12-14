@@ -88,7 +88,7 @@ export class SearchInput extends Component {
 
   // create auto complete search items
   createAutoCompleteItems = data => {
-    return data.length > 0 ? (
+    return data && data.length > 0 ? (
       data.map((item, index) => {
         let classNames = 'fd-menu__item';
         if (index === 0) {
@@ -128,14 +128,14 @@ export class SearchInput extends Component {
                 {this.createSearchInput(onAutoComplete)}
                 <span className="fd-input-group__addon fd-input-group__addon--after fd-input-group__addon--button">
                   <button
-                    className=" fd-button--light sap-icon--search"
+                    className="fd-button--light sap-icon--search"
                     onClick={() => onSearch(this.state.searchTerm)}
                   />
                 </span>
               </div>
             </div>
           </div>
-          {onAutoComplete ? (
+          {data && onAutoComplete ? (
             <div
               className="fd-popover__body fd-popover__body--no-arrow"
               aria-hidden={!this.state.bShowList}

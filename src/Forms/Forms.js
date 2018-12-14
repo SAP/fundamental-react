@@ -48,7 +48,7 @@ export const FormMessage = props => {
 };
 
 FormMessage.propTypes = {
-    type: PropTypes.string
+    type: PropTypes.oneOf(['', 'error', 'warning', 'help'])
 };
 
 // ------------------------------------------------- Form Input ----------------------------------------------

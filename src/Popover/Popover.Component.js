@@ -5,7 +5,7 @@ import { DocsTile, DocsText, Separator, Header, Description, Import, Properties 
 export const PopoverComponent = () => {
     const popoverCode = `<Popover
     id="jhqD0555"
-    control={<Image size="m" photo="https://placeimg.com/400/400/nature" />}
+    control={<Icon glyph="cart" size="xl" />}
     body={
         <Menu>
             <MenuList>
@@ -20,6 +20,7 @@ export const PopoverComponent = () => {
 
 <Popover
     id="jhqD0556"
+    alignment="right"
     control={<Image size="m" type="circle" photo="https://placeimg.com/400/400/nature" />}
     body={
         <Menu>
@@ -36,6 +37,7 @@ export const PopoverComponent = () => {
 <Popover
     id="jhqD0557"
     control={<Identifier size="m" glyph="money-bills" color="6" />}
+    noArrow
     body={
         <Menu>
             <MenuList>
@@ -48,9 +50,11 @@ export const PopoverComponent = () => {
     }
 />
 
- <Popover
+<Popover
     id="jhqD0558"
     control={<Icon glyph="menu2" size="xl" />}
+    alignment="right"
+    noArrow
     body={
         <Menu>
             <MenuList>
@@ -84,11 +88,19 @@ export const PopoverComponent = () => {
                 properties={[
                     {
                         name: 'control',
-                        description: 'Component - Control element to toggle the display of the popover.'
+                        description: 'component - Control element to toggle the display of the popover.'
                     },
                     {
                         name: 'body',
-                        description: 'Component - Wrapper that contains the popover content.'
+                        description: 'component - Wrapper that contains the popover content.'
+                    },
+                    {
+                        name: 'noArrow',
+                        description: 'bool - Set to "true" to render a popover body without an arrow. The default option is a popover body with an arrow. Leave empty for default.'
+                    },
+                    {
+                        name: 'alignment',
+                        description: 'string - The placement of the popover body. Options include "right" and "left". Leave empty for default/left placement.'
                     },
                     {
                         name: 'id',
@@ -100,10 +112,10 @@ export const PopoverComponent = () => {
             <Separator />
 
             <h2>Popover Example</h2>
-            <DocsTile>
+            <DocsTile centered>
                 <Popover
                     id="jhqD0555"
-                    control={<Image size="m" photo="https://placeimg.com/400/400/nature" />}
+                    control={<Icon glyph="cart" size="xl" />}
                     body={
                         <Menu>
                             <MenuList>
@@ -118,6 +130,7 @@ export const PopoverComponent = () => {
 
                 <Popover
                     id="jhqD0556"
+                    alignment="right"
                     control={<Image size="m" type="circle" photo="https://placeimg.com/400/400/nature" />}
                     body={
                         <Menu>
@@ -133,7 +146,8 @@ export const PopoverComponent = () => {
 
                 <Popover
                     id="jhqD0557"
-                    control={<Identifier size="m" glyph="money-bills" color="6" />}
+                    control={<Identifier size="m" glyph="money-bills" color={6} />}
+                    noArrow
                     body={
                         <Menu>
                             <MenuList>
@@ -149,6 +163,8 @@ export const PopoverComponent = () => {
                 <Popover
                     id="jhqD0558"
                     control={<Icon glyph="menu2" size="xl" />}
+                    alignment="right"
+                    noArrow
                     body={
                         <Menu>
                             <MenuList>
