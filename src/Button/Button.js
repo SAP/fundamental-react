@@ -35,7 +35,7 @@ export const Button = props => {
 };
 
 Button.propTypes = {
-  option: PropTypes.oneOf(['', 'emphasized' , 'light']),
+  option: PropTypes.oneOf(['', 'emphasized' , 'light', 'shell']),
   type: PropTypes.oneOf(['', 'standard' , 'positive', 'negative', 'medium']),
   compact: PropTypes.bool,
   glyph: PropTypes.string,

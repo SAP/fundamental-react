@@ -6,6 +6,10 @@ $fd-fonts-path: '../node_modules/fiori-fundamentals/dist/fonts/';
     background-color: white;
 }
 
+.fd-counter--notification {
+    position: relative;
+}
+
 .fd-tile__content {
     .fd-badge,
     .fd-label,
@@ -13,13 +17,13 @@ $fd-fonts-path: '../node_modules/fiori-fundamentals/dist/fonts/';
     .fd-token,
     .fd-dropdown,
     .fd-button-group,
-    [class*='fd-identifier'],
-    {
+    .fd-counter,
+    [class*='fd-identifier'] {
         margin-right: 20px;
     }
 
     .fd-popover {
-        margin-right: 60px;
+        // margin-right: 60px;
     }
 
     .fd-button--grouped {
