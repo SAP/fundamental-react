@@ -22,7 +22,8 @@
         "build-doc": "react-scripts build",
         "build": "rm -rf dist && NODE_ENV=production babel src --out-dir dist --copy-files --ignore __tests__,spec.js,test.js,__snapshots__,Component.js",
         "test": "react-scripts test",
-        "eject": "react-scripts eject"
+        "eject": "react-scripts eject",
+        "std-version": "standard-version -m \"chore(release): version %s build ${TRAVIS_BUILD_NUMBER} [ci skip]\""
     },
     "devDependencies": {
         "@babel/cli": "^7.1.5",
@@ -34,7 +35,8 @@
         "react": "^16.6.3",
         "react-dom": "^16.6.3",
         "react-scripts": "^2.1.1",
-        "react-test-renderer": "^16.6.3"
+        "react-test-renderer": "^16.6.3",
+        "standard-version": "^4.4.0"
     },
     "browserslist": [
         ">0.2%",

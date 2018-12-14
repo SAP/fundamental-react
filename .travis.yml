@@ -17,3 +17,10 @@ notifications:
   email:
     on_failure: always
     on_success: change
+before_deploy:
+  - npm run build
+deploy:
+  provider: script
+  script: bash ./ci-scripts/publish.sh $TRAVIS_BRANCH $TRAVIS_BUILD_NUMBER
+  on:
+    branch: master
