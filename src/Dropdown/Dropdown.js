@@ -2,15 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 export const Dropdown = props => {
-    const { size, toolbar, children } = props;
+    const { standard, children } = props;
     return (
-        <div className={`fd-dropdown${size ? ' fd-dropdown--' + size : ''}${toolbar ? ' fd-dropdown--toolbar' : ''}`}>
+        <div className={`fd-dropdown${standard ? ' fd-dropdown--standard' : ''}`}>
             {children}
         </div>
     );
 };
 
 Dropdown.propTypes = {
-    size: PropTypes.string,
-    toolbar: PropTypes.bool
+    standard: PropTypes.bool
 };

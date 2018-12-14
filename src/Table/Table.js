@@ -1,43 +1,36 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
+import PropTypes from 'prop-types';
 
-
-export const Table = (props) => {
-    const { headers, tableData } = props
+export const Table = props => {
+    const { headers, tableData } = props;
     return (
         <table className="fd-table">
             <thead>
-                {
-                    headers.map(header => {
-                        return (
-                            <th>{header}</th>
-                        )
-                    })
-                }
+                <tr>
+                    {headers.map((header, index) => {
+                        return <th key={index}>{header}</th>;
+                    })}
+                </tr>
             </thead>
             <tbody>
-                {
-                    tableData.map(row => {
-                        return (
-                            <tr>
-                                {
-                                    row.rowData.map(rowData => {
-                                        return (
-                                            <td>{rowData}</td>
-                                        )
-                                    })
-                                }
-
-                            </tr>
-                        )
-                    })
-                }
+                {tableData.map((row, index) => {
+                    return (
+                        <tr key={index}>
+                            {row.rowData.map((rowData, index) => {
+                                return <td key={index}>{rowData}</td>;
+                            })}
+                        </tr>
+                    );
+                })}
             </tbody>
-        </table >
+        </table>
     );
-}
+};
 Table.propTypes = {
-    icons: PropTypes.bool
-}
-
-
+    headers: PropTypes.array,
+    tableData: PropTypes.arrayOf(
+        PropTypes.shape({
+            rowData: PropTypes.array
+        }).isRequired
+    ).isRequired
+};

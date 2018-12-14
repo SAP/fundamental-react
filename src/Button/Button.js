@@ -2,60 +2,56 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 export const Button = props => {
-    const { type, semantic, size, glyph, dropdown, toolbar, state, typeAttr, onclick, children } = props;
-    return (
-        <button
-            className={`${dropdown ? 'fd-dropdown__control' : ''}
-            ${type ? ' fd-button--' + type : ' fd-button'}
-            ${toolbar ? 'fd-button--toolbar' : ''}
-            ${semantic ? ' fd-button--' + semantic : ''}
-            ${size ? ' fd-button--' + size : ''}
-            ${glyph ? ' sap-icon--' + glyph : ''}
-            ${state ? ' is-' + state : ''}`}
-            type={typeAttr}
-            onClick={onclick}
-        >
-            {children}
-        </button>
-    );
+  const {
+    option,
+    type,
+    compact,
+    glyph,
+    dropdown,
+    navbar,
+    selected,
+    disabled,
+    typeAttr,
+    onclick,
+    children
+  } = props;
+  return (
+    <button
+      className={`${option ? 'fd-button--' + option : ' fd-button'}${
+        type ? ' fd-button--' + type : ''
+      }${dropdown ? ' fd-dropdown__control' : ''}${
+        compact ? ' fd-button--compact' : ''
+      }${glyph ? ' sap-icon--' + glyph : ''}${
+        navbar ? ' fd-global-nav__btn' : ''
+      }${selected ? ' is-selected' : ''}${disabled ? ' is-disabled' : ''}`}
+      selected={selected ? selected : false}
+      disabled={disabled ? disabled : false}
+      type={typeAttr}
+      onClick={onclick}
+    >
+      {children}
+    </button>
+  );
 };
 
 Button.propTypes = {
-    dropdown: PropTypes.bool,
-    toolbar: PropTypes.bool,
-    type: PropTypes.string,
-    semantic: PropTypes.string,
-    size: PropTypes.string,
-    glyph: PropTypes.string,
-    state: PropTypes.string,
-    typeAttr: PropTypes.string,
-    onclick: PropTypes.func
+  option: PropTypes.oneOf(['', 'emphasized' , 'light', 'shell']),
+  type: PropTypes.oneOf(['', 'standard' , 'positive', 'negative', 'medium']),
+  compact: PropTypes.bool,
+  glyph: PropTypes.string,
+  navbar: PropTypes.bool,
+  dropdown: PropTypes.bool,
+  selected: PropTypes.bool,
+  disabled: PropTypes.bool,
+  typeAttr: PropTypes.string,
+  onclick: PropTypes.func
 };
 
 export const ButtonGroup = props => {
-    const { children } = props;
-    return (
-        <div className="fd-button-group" role="group" aria-label="Group label">
-            {children}
-        </div>
-    );
-};
-
-export const ButtonGrouped = props => {
-    const { size, glyph, state, children } = props;
-    return (
-        <button
-            className={`fd-button--grouped${size ? ' fd-button--' + size : ''}${glyph ? ' sap-icon--' + glyph : ''}${
-                state ? ' is-' + state : ''
-            }`}
-        >
-            {children}
-        </button>
-    );
-};
-
-ButtonGrouped.propTypes = {
-    size: PropTypes.string,
-    glyph: PropTypes.string,
-    state: PropTypes.string
+  const { children } = props;
+  return (
+    <div className="fd-button-group" role="group" aria-label="Group label">
+      {children}
+    </div>
+  );
 };

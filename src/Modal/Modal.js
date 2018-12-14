@@ -28,6 +28,9 @@ export class Modal extends Component {
   }
 
   render() {
+    if (!this.props.show) {
+      return null;
+    }
     const { children, title, actions } = this.props;
 
     return ReactDOM.createPortal(
@@ -38,7 +41,7 @@ export class Modal extends Component {
               <div className="fd-modal__header">
                 <h1 className="fd-modal__title">{title}</h1>
                 <button
-                  className="fd-button--secondary fd-modal__close"
+                  className="fd-button--light fd-modal__close"
                   aria-label="close"
                   onClick={this.handleCloseClick}
                 />
@@ -61,5 +64,6 @@ export class Modal extends Component {
 }
 
 Modal.propTypes = {
+  show: PropTypes.bool,
   title: PropTypes.string.isRequired
 };

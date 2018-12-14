@@ -1,7 +1,6 @@
 import React from 'react';
-import { Badge, Label, Status } from '../';
-import { DocsTile, DocsText, Separator, Header, Description, Import, Properties } from '../';
-import { Playground } from '../documentation/Playground/Playground';
+import { Badge, Label, Status, Counter, Button } from '../';
+import { DocsTile, DocsText, Separator, Header, Description, Import, Properties, Playground } from '../';
 
 export const BadgeComponent = () => {
     const defaultBadgeCode = `<Badge>Default</Badge>
@@ -35,21 +34,36 @@ export const BadgeComponent = () => {
 <Status type="busy">Busy</Status>
 <Status type="offline">Appear Offline</Status>`;
 
-    const statusIconCode = `<Status icon="history">Custom Icon</Status>
-<Status icon="message-success">Success</Status>
-<Status icon="message-warning">Warning</Status>
-<Status icon="message-error">Error</Status>`;
+    const statusIconCode = `<Status glyph="history">Custom Icon</Status>
+<Status glyph="message-success">Success</Status>
+<Status glyph="message-warning">Warning</Status>
+<Status glyph="message-error">Error</Status>`;
+
+    const defaultCounterCode = `<Counter>5</Counter>
+<Counter>25</Counter>
+<Counter>101</Counter>
+<Counter>999+</Counter>`;
+
+    const notificationCounterCode = `<Button option="light" glyph="bell">
+  <Counter notification>5</Counter>
+</Button>
+<Button option="light" glyph="bell">
+  <Counter notification>25</Counter>
+</Button>
+<Button option="light" glyph="bell">
+  <Counter notification>101</Counter>
+</Button>
+<Button option="light" glyph="bell">
+  <Counter notification>999+</Counter>
+</Button>`;
+
+    const inlineCounterCode = `<p>Lorem ipsum <Counter>5</Counter></p>`;
 
     return (
         <div>
-            <Header>Badge and Label</Header>
-            <Description>
-                Badges and labels are used to indicate status. Colors, generally in combination with text, are used to
-                easily highlight the state of an object. The following colors should be used: Black: default or inactive
-                status; Green: positive status, used for active, published, approved; Orange: a warning status or to
-                indicate that an action can be taken; Red: error status.
-            </Description>
-            <Import module="Badge, Label, Status" path="/fundamental-react/src/" />
+            <Header>Status Indicators</Header>
+            <Description>Status Indicators are used to easily highlight the state of an object.</Description>
+            <Import module="Badge, Label, Status, Counter" path="/fundamental-react/src/" />
 
             <Separator />
 
@@ -59,16 +73,20 @@ export const BadgeComponent = () => {
                     {
                         name: 'type',
                         description:
-                            "String - The type indicates the status of the badge/label. Options include 'default', 'success', 'warning', and 'error'. Leave empty for default. For status label with build in status icons use the 'available', 'away', 'busy' and 'offline'."
+                            "string - The type indicates the status of the badge/label. Options include 'default', 'success', 'warning', and 'error'. Leave empty for default. For status label with build in status icons use the 'available', 'away', 'busy' and 'offline'."
                     },
                     {
                         name: 'modifier',
-                        description: "String - Modifiers can be 'pill' and 'filled'. Leave empty for normal."
+                        description: "string - Modifiers can be 'pill' and 'filled'. Leave empty for normal."
                     },
                     {
                         name: 'glyph',
                         description:
-                            'String - The icon to include in the status indicator. See the icon page for the list of icons.'
+                            'string - The icon to include in the status indicator. See the icon page for the list of icons.'
+                    },
+                    {
+                        name: 'notification',
+                        description: "bool - Set to 'true' to enable counter with notification. "
                     }
                 ]}
             />
@@ -76,7 +94,7 @@ export const BadgeComponent = () => {
             <Separator />
 
             <h2>Default Badge</h2>
-            <DocsTile>
+            <DocsTile centered>
                 <Badge>Default</Badge>
                 <Badge type="success">Default</Badge>
                 <Badge type="warning">Default</Badge>
@@ -90,7 +108,7 @@ export const BadgeComponent = () => {
             <Description>
                 Apply <code>modifier="pill"</code> to render a pill version of the badge.
             </Description>
-            <DocsTile>
+            <DocsTile centered>
                 <Badge modifier="pill">Default</Badge>
                 <Badge type="success" modifier="pill">
                     Default
@@ -110,7 +128,7 @@ export const BadgeComponent = () => {
             <Description>
                 Apply <code>modifier="filled"</code> to render a filled version of the badge.
             </Description>
-            <DocsTile>
+            <DocsTile centered>
                 <Badge modifier="filled">Default</Badge>
                 <Badge type="success" modifier="filled">
                     Default
@@ -127,7 +145,7 @@ export const BadgeComponent = () => {
             <Separator />
 
             <h2>Label</h2>
-            <DocsTile>
+            <DocsTile centered>
                 <Label>Default</Label>
                 <Label type="success">Default</Label>
                 <Label type="warning">Default</Label>
@@ -138,7 +156,7 @@ export const BadgeComponent = () => {
             <Separator />
 
             <h2>Status Indicator Label with build in status icons</h2>
-            <DocsTile>
+            <DocsTile centered>
                 <Status>Default</Status>
                 <Status type="success">Default</Status>
                 <Status type="warning">Default</Status>
@@ -153,13 +171,55 @@ export const BadgeComponent = () => {
             <DocsText>{statusCode}</DocsText>
             <Separator />
             <h2>Status Indicator Label with any icons</h2>
-            <DocsTile>
+            <DocsTile centered>
                 <Status glyph="history">Custom Icon</Status>
                 <Status glyph="message-success">Success</Status>
                 <Status glyph="message-warning">Warning</Status>
                 <Status glyph="message-error">Error</Status>
             </DocsTile>
             <DocsText>{statusIconCode}</DocsText>
+
+            <Separator />
+
+            <h2>Default Counter</h2>
+            <Description>Counter has a minimum value 1. Maximum display is 999+</Description>
+            <DocsTile centered>
+                <Counter>5</Counter>
+                <Counter>25</Counter>
+                <Counter>101</Counter>
+                <Counter>999+</Counter>
+            </DocsTile>
+            <DocsText>{defaultCounterCode}</DocsText>
+
+            <Separator />
+
+            <h2>Counter inline with a paragraph</h2>
+            <DocsTile centered>
+                <p>
+                    Lorem ipsum <Counter>5</Counter>
+                </p>
+            </DocsTile>
+            <DocsText>{inlineCounterCode}</DocsText>
+
+            <Separator />
+
+            <h2>Notification counter</h2>
+            <Description>Use the property 'notification' to enable notification counter.</Description>
+            <DocsTile centered>
+                <Button option="light" glyph="bell">
+                    <Counter notification>5</Counter>
+                </Button>
+                <Button option="light" glyph="bell">
+                    <Counter notification>25</Counter>
+                </Button>
+                <Button option="light" glyph="bell">
+                    <Counter notification>101</Counter>
+                </Button>
+                <Button option="light" glyph="bell">
+                    <Counter notification>999+</Counter>
+                </Button>
+            </DocsTile>
+            <DocsText>{notificationCounterCode}</DocsText>
 
             <Separator />
 

@@ -1,0 +1,329 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Tree /> create tree component 1`] = `
+<div>
+  <div
+    className="fd-tree fd-tree--header"
+  >
+    <div
+      className="fd-tree__row fd-tree__row--header"
+    >
+      <div
+        className="fd-tree__col fd-tree__col--control"
+      >
+        <button
+          aria-label="expand"
+          aria-pressed={false}
+          className="fd-tree__control "
+          onClick={[Function]}
+        />
+        Column Header
+      </div>
+      <div
+        className="fd-tree__col"
+      >
+        Column Header 1 
+      </div>
+      <div
+        className="fd-tree__col"
+      >
+        Column Header 2
+      </div>
+      <div
+        className="fd-tree__col"
+      >
+        Status
+      </div>
+    </div>
+  </div>
+  <ul
+    className="fd-tree"
+    id=""
+    role="tree"
+  >
+    <li
+      aria-expanded="true"
+      className="fd-tree__item"
+      role="treeitem"
+    >
+      <div
+        className="fd-tree__row"
+      >
+        <div
+          className="fd-tree__col fd-tree__col--control"
+        >
+          <button
+            aria-controls="inYUX852"
+            aria-label="expand"
+            className="fd-tree__control"
+            onClick={[Function]}
+          />
+          First Level
+        </div>
+        <div
+          className="fd-tree__col"
+        >
+          Data Col 2
+        </div>
+        <div
+          className="fd-tree__col"
+        >
+          Data Col 3
+        </div>
+        <div
+          className="fd-tree__col"
+        >
+          INACTIVE
+        </div>
+        <div
+          className="fd-dropdown"
+        />
+      </div>
+    </li>
+    <li
+      aria-expanded="true"
+      className="fd-tree__item"
+      role="treeitem"
+    >
+      <div
+        className="fd-tree__row"
+      >
+        <div
+          className="fd-tree__col fd-tree__col--control"
+        >
+          <button
+            aria-controls="inYUX852"
+            aria-label="expand"
+            className="fd-tree__control"
+            onClick={[Function]}
+          />
+          Row 2
+        </div>
+        <div
+          className="fd-tree__col"
+        >
+          Data Col 2
+        </div>
+        <div
+          className="fd-tree__col"
+        >
+          Data Col 3
+        </div>
+        <div
+          className="fd-tree__col"
+        >
+          DEFAULT
+        </div>
+        <div
+          className="fd-dropdown"
+        />
+      </div>
+    </li>
+    <li
+      aria-expanded="true"
+      className="fd-tree__item"
+      role="treeitem"
+    >
+      <div
+        className="fd-tree__row"
+      >
+        <div
+          className="fd-tree__col fd-tree__col--control"
+        >
+          Row 3
+        </div>
+        <div
+          className="fd-tree__col"
+        >
+          Data Col 2
+        </div>
+        <div
+          className="fd-tree__col"
+        >
+          Data Col 3
+        </div>
+        <div
+          className="fd-tree__col"
+        >
+          INACTIVE
+        </div>
+        <div
+          className="fd-dropdown"
+        />
+      </div>
+    </li>
+    <li
+      aria-expanded="true"
+      className="fd-tree__item"
+      role="treeitem"
+    >
+      <div
+        className="fd-tree__row"
+      >
+        <div
+          className="fd-tree__col fd-tree__col--control"
+        >
+          <button
+            aria-controls="inYUX852"
+            aria-label="expand"
+            className="fd-tree__control"
+            onClick={[Function]}
+          />
+          <a
+            className="fd-has-font-weight-semi"
+            href="http://me.com"
+          >
+            http://me.com
+          </a>
+        </div>
+        <div
+          className="fd-tree__col"
+        >
+          Data Col 2
+        </div>
+        <div
+          className="fd-tree__col"
+        >
+          Data Col 3
+        </div>
+        <div
+          className="fd-tree__col"
+        >
+          INACTIVE
+        </div>
+        <div
+          className="fd-dropdown"
+        />
+      </div>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`<Tree /> create tree component 2`] = `
+<div>
+  <div
+    className="fd-tree fd-tree--header"
+  >
+    <div
+      className="fd-tree__row fd-tree__row--header"
+    >
+      <div
+        className="fd-tree__col fd-tree__col--control"
+      >
+        <button
+          aria-label="expand"
+          aria-pressed={false}
+          className="fd-tree__control "
+          onClick={[Function]}
+        />
+        Column Header
+      </div>
+      <div
+        className="fd-tree__col"
+      >
+        Column Header 1 
+      </div>
+      <div
+        className="fd-tree__col"
+      >
+        Column Header 2
+      </div>
+      <div
+        className="fd-tree__col"
+      >
+        Status
+      </div>
+    </div>
+  </div>
+  <ul
+    className="fd-tree"
+    id=""
+    role="tree"
+  >
+    <li
+      aria-expanded="true"
+      className="fd-tree__item"
+      role="treeitem"
+    >
+      <div
+        className="fd-tree__row"
+      >
+        <div
+          className="fd-tree__col fd-tree__col--control"
+        >
+          <button
+            aria-controls="inYUX852"
+            aria-label="expand"
+            className="fd-tree__control"
+            onClick={[Function]}
+          />
+          <a
+            className="fd-has-font-weight-semi"
+            href="http://me.com"
+          >
+            First Level
+          </a>
+        </div>
+        <div
+          className="fd-tree__col"
+        >
+           
+        </div>
+        <div
+          className="fd-tree__col"
+        >
+           
+        </div>
+        <div
+          className="fd-tree__col"
+        >
+           
+        </div>
+        <div
+          className="fd-dropdown"
+        />
+      </div>
+    </li>
+    <li
+      aria-expanded="true"
+      className="fd-tree__item"
+      role="treeitem"
+    >
+      <div
+        className="fd-tree__row"
+      >
+        <div
+          className="fd-tree__col fd-tree__col--control"
+        >
+          <button
+            aria-controls="inYUX852"
+            aria-label="expand"
+            className="fd-tree__control"
+            onClick={[Function]}
+          />
+          Second Level
+        </div>
+        <div
+          className="fd-tree__col"
+        >
+           
+        </div>
+        <div
+          className="fd-tree__col"
+        >
+           
+        </div>
+        <div
+          className="fd-tree__col"
+        >
+           
+        </div>
+        <div
+          className="fd-dropdown"
+        />
+      </div>
+    </li>
+  </ul>
+</div>
+`;

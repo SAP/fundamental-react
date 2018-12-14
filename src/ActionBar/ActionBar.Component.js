@@ -1,31 +1,26 @@
 import React from 'react';
-import { ActionBar, ActionBarBack, ActionBarHeader, ActionBarActions } from '../';
-import { Button, Popover, Menu, MenuList, MenuItem } from '../';
+import { ActionBar, ActionBarBack, ActionBarHeader, ActionBarActions, Button, Popover, Menu, MenuList, MenuItem  } from '../';
 import { DocsTile, DocsText, Separator, Header, Description, Import, Properties } from '../';
 
 export const ActionBarComponent = () => {
     const actionBarBackBtnCode = `<ActionBar>
-    <ActionBarBack />
+    <ActionBarBack onclick={clickBackBtn}/>
     <ActionBarHeader title={'Page Title'} description={'Action Bar Description'} />
     <ActionBarActions>
-        <Button type="primary" size="l">
-            Button
-        </Button>
-        <Button type="main" size="l">
-            Button
-        </Button>
+        <Button>Button</Button>
+        <Button option="emphasized">Button</Button>
     </ActionBarActions>
-</ActionBar>`;
+</ActionBar>
+
+const clickBackBtn = () => {
+    alert("You clicked me!");
+}`;
 
     const actionBarNoBackBtnCode = `<ActionBar>
     <ActionBarHeader title={'Page Title'} description={'Action Bar Description'} />
     <ActionBarActions>
-        <Button type="primary" size="l">
-            Button
-        </Button>
-        <Button type="main" size="l">
-            Button
-        </Button>
+        <Button>Button</Button>
+        <Button option="emphasized">Button</Button>
     </ActionBarActions>
 </ActionBar>`;
 
@@ -33,7 +28,7 @@ export const ActionBarComponent = () => {
     <ActionBarHeader title={'Page Title'} description={'Action Bar Description'} />
     <ActionBarActions>
         <Popover
-            control={<Button type="secondary" glyph="vertical-grip" />}
+            control={<Button option="light" glyph="vertical-grip" />}
             body={
                 <Menu>
                     <MenuList>
@@ -53,7 +48,7 @@ export const ActionBarComponent = () => {
     <ActionBarHeader title={'Action Bar with description and back button'} />
     <ActionBarActions>
         <Popover
-            control={<Button type="secondary" glyph="vertical-grip" />}
+            control={<Button option="light" glyph="vertical-grip" />}
             body={
                 <Menu>
                     <MenuList>
@@ -88,6 +83,10 @@ export const ActionBarComponent = () => {
     </ActionBarActions>
 </ActionBar>`;
 
+const clickBackBtn = () => {
+    alert("You clicked me!");
+}
+
     return (
         <div>
             <Header>Action Bar</Header>
@@ -114,6 +113,10 @@ export const ActionBarComponent = () => {
                     {
                         name: 'description',
                         description: 'string - Action bar description. Specified in ActionBarHeader.'
+                    },
+                    {
+                        name: 'onclick',
+                        description: 'func - The function that is executed when the back button is clicked.'
                     }
                 ]}
             />
@@ -123,15 +126,11 @@ export const ActionBarComponent = () => {
             <h2>Action bar with back button, description and action buttons.</h2>
             <DocsTile>
                 <ActionBar>
-                    <ActionBarBack />
+                    <ActionBarBack onclick={clickBackBtn}/>
                     <ActionBarHeader title={'Page Title'} description={'Action Bar Description'} />
                     <ActionBarActions>
-                        <Button type="primary" size="l">
-                            Button
-                        </Button>
-                        <Button type="main" size="l">
-                            Button
-                        </Button>
+                        <Button>Button</Button>
+                        <Button option="emphasized">Button</Button>
                     </ActionBarActions>
                 </ActionBar>
             </DocsTile>
@@ -144,12 +143,8 @@ export const ActionBarComponent = () => {
                 <ActionBar>
                     <ActionBarHeader title={'Page Title'} description={'Action Bar Description'} />
                     <ActionBarActions>
-                        <Button type="primary" size="l">
-                            Button
-                        </Button>
-                        <Button type="main" size="l">
-                            Button
-                        </Button>
+                        <Button>Button</Button>
+                        <Button option="emphasized">Button</Button>
                     </ActionBarActions>
                 </ActionBar>
             </DocsTile>
@@ -168,7 +163,7 @@ export const ActionBarComponent = () => {
                     <ActionBarHeader title={'Page Title'} description={'Action Bar Description'} />
                     <ActionBarActions>
                         <Popover
-                            control={<Button type="secondary" glyph="vertical-grip" />}
+                            control={<Button option="light" glyph="vertical-grip" />}
                             body={
                                 <Menu>
                                     <MenuList>
@@ -197,7 +192,7 @@ export const ActionBarComponent = () => {
                     />
                     <ActionBarActions>
                         <Popover
-                            control={<Button type="secondary" glyph="vertical-grip" />}
+                            control={<Button option="light" glyph="vertical-grip" />}
                             body={
                                 <Menu>
                                     <MenuList>
@@ -226,7 +221,7 @@ export const ActionBarComponent = () => {
                     />
                     <ActionBarActions>
                         <Popover
-                            control={<Button type="secondary" glyph="vertical-grip" />}
+                            control={<Button option="light" glyph="vertical-grip" />}
                             body={
                                 <Menu>
                                     <MenuList>

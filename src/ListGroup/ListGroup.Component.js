@@ -1,7 +1,6 @@
 import React from 'react'
-import { ListGroup, ListGroupItem, ListGroupItemActions, ListGroupItemCheckbox } from '../'
+import { Button, ListGroup, ListGroupItem, ListGroupItemActions, ListGroupItemCheckbox } from '../'
 import { DocsTile, DocsText, Separator, Header, Description, Import, Playground } from '../'
-import { Button } from '../'
 
 export const ListGroupComponent = () => {
     const simpleListCode = `<ListGroup>
@@ -14,22 +13,22 @@ export const ListGroupComponent = () => {
     const actionsListCode = `<ListGroup>
     <ListGroupItem>List item 1
         <ListGroupItemActions>
-            <Button type="secondary" glyph="edit" />
+            <Button type="light" glyph="edit" />
         </ListGroupItemActions>
     </ListGroupItem>
     <ListGroupItem>List item 2
         <ListGroupItemActions>
-            <Button type="secondary" glyph="edit" />
+            <Button type="light" glyph="edit" />
         </ListGroupItemActions>
     </ListGroupItem>
     <ListGroupItem>List item 3
         <ListGroupItemActions>
-            <Button type="secondary" glyph="edit" />
+            <Button type="light" glyph="edit" />
         </ListGroupItemActions>
     </ListGroupItem>
     <ListGroupItem>List item 4
         <ListGroupItemActions>
-            <Button type="secondary" glyph="edit" />
+            <Button type="light" glyph="edit" />
         </ListGroupItemActions>
     </ListGroupItem>
 </ListGroup>`
@@ -72,22 +71,22 @@ export const ListGroupComponent = () => {
                 <ListGroup>
                     <ListGroupItem>List item 1
                         <ListGroupItemActions>
-                            <Button type="secondary" glyph="edit" />
+                            <Button type="light" glyph="edit" />
                         </ListGroupItemActions>
                     </ListGroupItem>
                     <ListGroupItem>List item 2
                         <ListGroupItemActions>
-                            <Button type="secondary" glyph="edit" />
+                            <Button type="light" glyph="edit" />
                         </ListGroupItemActions>
                     </ListGroupItem>
                     <ListGroupItem>List item 3
                         <ListGroupItemActions>
-                            <Button type="secondary" glyph="edit" />
+                            <Button type="light" glyph="edit" />
                         </ListGroupItemActions>
                     </ListGroupItem>
                     <ListGroupItem>List item 4
                         <ListGroupItemActions>
-                            <Button type="secondary" glyph="edit" />
+                            <Button type="light" glyph="edit" />
                         </ListGroupItemActions>
                     </ListGroupItem>
                 </ListGroup>
