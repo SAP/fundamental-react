@@ -4,6 +4,10 @@
   "private": false,
   "license": "Apache-2.0",
   "homepage": "http://sap.github.io/fundamental-react",
+  "repository": {
+    "type": "git",
+    "url": "http://sap.github.io/fundamental-react"
+  },
   "scripts": {
     "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
     "build-doc": "node scripts/build.js",
