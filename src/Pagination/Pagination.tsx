@@ -64,9 +64,10 @@ export class Pagination extends Component<IPaginationProps, IPaginationState> {
   // create pagination links
   createPaginationLinks = (numberOfPages: number) => {
     // create an array with number of pages and fill it with links
-    const aPages: JSX.Element[] = new Array(numberOfPages)
-      .fill({})
-      .map((link, index) => (
+    const aPages: JSX.Element[] = new Array(numberOfPages);
+
+    for (let index = 0; index < aPages.length; index++) {
+      aPages[index] = (
         <a
           key={index}
           href="#"
@@ -76,7 +77,8 @@ export class Pagination extends Component<IPaginationProps, IPaginationState> {
         >
           {index + 1}
         </a>
-      ));
+      );
+    }
     return aPages;
   };
 
