@@ -1,63 +1,75 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import { ICommonProps } from '../common/common';
 
-export const FormGroup = props => {
-  const { children } = props;
-  return <div className="fd-form__group">{children}</div>;
-};
+interface IInputGroupProps extends ICommonProps {
+  inputType?: 'text' | 'number' | 'search';
+  inputId?: string;
+  inputName?: string;
+  inputValue?: any;
+  inputPlaceholder?: string;
+  addonPos?: 'before' | 'after';
+  addon?: string;
+  glyph?: string;
+  actions?: boolean;
+  compact?: boolean;
+}
 
-export class InputGroup extends Component {
-  constructor(props) {
-    super(props);
-    this.handleUp = this.handleUp.bind(this);
-    this.handleDown = this.handleDown.bind(this);
-    this.handleClear = this.handleClear.bind(this);
-    this.handleChange = this.handleChange.bind(this);
-    this.handleTextChange = this.handleTextChange.bind(this);
+interface IInputGroupState {
+  value: string | number;
+  searchValue: string;
+}
 
-    this.state = {
-      value: this.props.inputValue || '',
-      searchValue: this.props.inputValue || ''
-    };
-  }
+export class InputGroup extends Component<IInputGroupProps, IInputGroupState> {
+  state: IInputGroupState = {
+    value: this.props.inputValue || '',
+    searchValue: this.props.inputValue || ''
+  };
 
-  handleUp(e) {
+  handleUp = (e: React.FormEvent<HTMLButtonElement>) => {
     e.preventDefault();
-    this.setState({
-      value: this.state.value + 1
-    });
-  }
+    if (typeof this.state.value === 'number') {
+      this.setState({
+        value: this.state.value + 1
+      });
+    }
+  };
 
-  handleDown(e) {
+  handleDown = (e: React.FormEvent<HTMLButtonElement>) => {
     e.preventDefault();
-    this.setState({
-      value: this.state.value - 1
-    });
-  }
+    if (typeof this.state.value === 'number') {
+      this.setState({
+        value: this.state.value - 1
+      });
+    }
+  };
 
-  handleClear(e) {
+  handleClear = (e: React.FormEvent<HTMLButtonElement>) => {
     e.preventDefault();
     this.setState({
       searchValue: ''
     });
-  }
+  };
 
-  handleChange(e) {
-    e.preventDefault();
+  handleChange = (e: React.FormEvent<HTMLInputElement>) => {
+    // e.preventDefault();
+    const { value }: any = e.target;
     this.setState({
-      searchValue: e.target.value
+      searchValue: value
     });
-  }
+  };
 
-  handleTextChange(e) {
-    e.preventDefault();
+  handleTextChange = (e: React.FormEvent<HTMLInputElement>) => {
+    // e.preventDefault();
+    const { value }: any = e.target;
     this.setState({
-      value: e.target.value
+      value: value
     });
-  }
+  };
 
   render() {
     const {
+      id,
+      children,
       inputType,
       inputId,
       inputName,
@@ -66,14 +78,14 @@ export class InputGroup extends Component {
       addon,
       glyph,
       actions,
-      compact,
-      children
+      compact
     } = this.props;
 
     switch (inputType) {
       case 'number':
         return (
           <div
+            id={id}
             className={`fd-input-group fd-input-group--after${
               compact ? ' fd-input-group--compact' : ''
             }`}
@@ -104,6 +116,7 @@ export class InputGroup extends Component {
       case 'search':
         return (
           <div
+            id={id}
             className={`fd-input-group${
               compact ? ' fd-input-group--compact' : ''
             }`}
@@ -131,6 +144,7 @@ export class InputGroup extends Component {
         if (addonPos === 'before') {
           return (
             <div
+              id={id}
               className={`fd-input-group fd-input-group--before${
                 compact ? ' fd-input-group--compact' : ''
               }`}
@@ -164,6 +178,7 @@ export class InputGroup extends Component {
         } else {
           return (
             <div
+              id={id}
               className={`fd-input-group fd-input-group--after${
                 compact ? ' fd-input-group--compact' : ''
               }`}
@@ -200,15 +215,13 @@ export class InputGroup extends Component {
   }
 }
 
-InputGroup.propTypes = {
-  inputType: PropTypes.oneOf(['text', 'number', 'search']),
-  inputId: PropTypes.string,
-  inputName: PropTypes.string,
-  inputValue: PropTypes.any,
-  inputPlaceholder: PropTypes.string,
-  addonPos: PropTypes.oneOf(['before', 'after']),
-  addon: PropTypes.string,
-  glyph: PropTypes.string,
-  actions: PropTypes.bool,
-  compact: PropTypes.bool
-};
+interface IFormGroupProps extends ICommonProps {}
+
+export function FormGroup(props: IFormGroupProps): JSX.Element {
+  const { id, children } = props;
+  return (
+    <div id={id} className="fd-form__group">
+      {children}
+    </div>
+  );
+}

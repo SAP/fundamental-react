@@ -1,19 +1,27 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import { ICommonProps } from '../common/common';
 
-export class SearchInput extends Component {
-  constructor(props) {
-    super(props);
+interface ISearchInputProps extends ICommonProps {
+  placeHolder?: string;
+  data?: string[];
+  onSearch: (searchTerm: string) => void;
+  onAutoComplete?: (searchTerm: string) => void;
+}
 
-    this.state = {
-      searchTerm: '',
-      bShowList: false
-    };
-  }
+interface ISearchInputState {
+  searchTerm: string;
+  bShowList: boolean;
+}
 
-  // fired on change of text input
-  handleSearch = event => {
-    const searchTerm = event.target.value;
+export class SearchInput extends Component<
+  ISearchInputProps,
+  ISearchInputState
+> {
+  state: ISearchInputState = { searchTerm: '', bShowList: false };
+
+  handleSearch = (event: React.FormEvent<HTMLInputElement>) => {
+    const { value }: any = event.target;
+    const searchTerm: string = value;
 
     // check if control auto complete
     if (this.props.onAutoComplete) {
@@ -29,16 +37,8 @@ export class SearchInput extends Component {
     }
   };
 
-  // fired on list item selection
-  selectTerm = event => {
-    const searchTerm = event.target.innerText;
-    this.setState({ searchTerm: searchTerm, bShowList: false });
-
-    this.props.onSearch(searchTerm);
-  };
-
   // check for enter key
-  checkKey = event => {
+  checkKey = (event: React.KeyboardEvent) => {
     const key = event.key;
 
     if (key === 'Enter') {
@@ -54,7 +54,7 @@ export class SearchInput extends Component {
   };
 
   // create search box
-  createSearchInput = onAutoComplete => {
+  createSearchInput = (onAutoComplete: any) => {
     let searchInput = (
       <input
         type="text"
@@ -87,7 +87,7 @@ export class SearchInput extends Component {
   };
 
   // create auto complete search items
-  createAutoCompleteItems = data => {
+  createAutoCompleteItems = (data: string[]) => {
     return data && data.length > 0 ? (
       data.map((item, index) => {
         let classNames = 'fd-menu__item';
@@ -111,11 +111,19 @@ export class SearchInput extends Component {
     );
   };
 
+  selectTerm = (event: React.FormEvent<HTMLAnchorElement>) => {
+    const { innerText }: any = event.target;
+    const searchTerm = innerText;
+    this.setState({ searchTerm: searchTerm, bShowList: false });
+
+    this.props.onSearch(searchTerm);
+  };
+
   render() {
-    const { data, onSearch, onAutoComplete } = this.props;
+    const { id, data, onSearch, onAutoComplete } = this.props;
 
     return (
-      <div className="fd-search-input">
+      <div id={id} className="fd-search-input">
         <div className="fd-popover">
           <div className="fd-popover__control">
             <div
@@ -154,10 +162,3 @@ export class SearchInput extends Component {
     );
   }
 }
-
-SearchInput.propTypes = {
-  placeHolder: PropTypes.string,
-  data: PropTypes.array,
-  onSearch: PropTypes.func.isRequired,
-  onAutoComplete: PropTypes.func
-};

@@ -1,8 +1,18 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { ICommonProps } from '../common/common';
 
-export const Tile = props => {
+interface ITileProps extends ICommonProps {
+  isButton?: boolean;
+  disabled?: boolean;
+  rowSpan?: number;
+  columnSpan?: number;
+  colorAccent?: number;
+  backgroundColor?: number;
+}
+
+export function Tile(props: ITileProps): JSX.Element {
   const {
+    id,
     isButton,
     disabled,
     rowSpan,
@@ -13,6 +23,7 @@ export const Tile = props => {
   } = props;
   return (
     <div
+      id={id}
       className={`fd-tile${disabled ? ' is-disabled' : ''}${
         rowSpan ? ' fd-has-grid-row-span-' + rowSpan : ''
       }${columnSpan ? ' fd-has-grid-column-span-' + columnSpan : ''}${
@@ -27,90 +38,102 @@ export const Tile = props => {
       {children}
     </div>
   );
-};
+}
 
-Tile.propTypes = {
-  isButton: PropTypes.bool,
-  disabled: PropTypes.bool,
-  rowSpan: PropTypes.number,
-  columnSpan: PropTypes.number,
-  colorAccent: PropTypes.number,
-  backgroundColor: PropTypes.number
-};
+interface ITileContentProps extends ICommonProps {
+  title?: string;
+}
 
-export const TileContent = props => {
-  const { title, children } = props;
+export function TileContent(props: ITileContentProps): JSX.Element {
+  const { id, title, children } = props;
   return (
-    <div className="fd-tile__content">
+    <div id={id} className="fd-tile__content">
       <h2 className="fd-tile__title">{title}</h2>
       {children}
     </div>
   );
-};
+}
 
-TileContent.propTypes = {
-  title: PropTypes.string
-};
+interface ITileMediaProps extends ICommonProps {}
 
-export const TileMedia = props => {
-  const { children } = props;
-  return <div className="fd-tile__media">{children}</div>;
-};
+export function TileMedia(props: ITileMediaProps): JSX.Element {
+  const { id, children } = props;
+  return (
+    <div id={id} className="fd-tile__media">
+      {children}
+    </div>
+  );
+}
 
-export const TileActions = props => {
-  const { children } = props;
-  return <div className="fd-tile__actions">{children}</div>;
-};
+interface ITileActionsProps extends ICommonProps {}
 
-export const ProductTile = props => {
-  const { isButton, disabled, children } = props;
+export function TileActions(props: ITileActionsProps): JSX.Element {
+  const { id, children } = props;
+  return (
+    <div id={id} className="fd-tile__actions">
+      {children}
+    </div>
+  );
+}
+
+interface IProductTileProps extends ICommonProps {
+  isButton?: boolean;
+  disabled?: boolean;
+}
+
+export function ProductTile(props: IProductTileProps): JSX.Element {
+  const { id, isButton, disabled, children } = props;
   return (
     <div
+      id={id}
       className={`fd-product-tile${disabled ? ' is-disabled' : ''}`}
       role={`${isButton ? 'button' : ''}`}
     >
       {children}
     </div>
   );
-};
+}
 
-ProductTile.propTypes = {
-  isButton: PropTypes.bool,
-  disabled: PropTypes.bool
-};
+interface IProductTileContentProps extends ICommonProps {
+  title?: string;
+}
 
-export const ProductTileContent = props => {
-  const { title, children } = props;
+export function ProductTileContent(
+  props: IProductTileContentProps
+): JSX.Element {
+  const { id, title, children } = props;
   return (
-    <div className="fd-product-tile__content">
+    <div id={id} className="fd-product-tile__content">
       <h2 className="fd-product-tile__title">{title}</h2>
       {children}
     </div>
   );
-};
+}
 
-ProductTileContent.propTypes = {
-  title: PropTypes.string
-};
+interface IProductTileMediaProps extends ICommonProps {
+  image: string;
+}
 
-export const ProductTileMedia = props => {
-  const { image } = props;
+export function ProductTileMedia(props: IProductTileMediaProps): JSX.Element {
+  const { id, image } = props;
   return (
     <div
+      id={id}
       className="fd-product-tile__media"
       style={{ backgroundImage: 'url(' + image + ')' }}
     />
   );
-};
+}
 
-ProductTileMedia.propTypes = {
-  image: PropTypes.string.isRequired
-};
+interface ITileGridProps extends ICommonProps {
+  col?: number;
+}
 
-export const TileGrid = props => {
-  const { col, children } = props;
+export function TileGrid(props: ITileGridProps): JSX.Element {
+  const { id, col, children } = props;
   return (
     <div
+      id={id}
       className={`fd-tile-grid${
         col ? ' fd-tile-grid--' + col + 'col' : 'fd-tile-grid--3col"'
       }`}
@@ -118,8 +141,4 @@ export const TileGrid = props => {
       {children}
     </div>
   );
-};
-
-TileGrid.propTypes = {
-  col: PropTypes.number
-};
+}

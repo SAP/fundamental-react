@@ -1,99 +1,109 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { ICommonProps } from '../common/common';
 
 // ------------------------------------------- Panel ------------------------------------------
-export const Panel = props => {
-    const { colSpan, children } = props;
-    return <div className={`fd-panel${colSpan ? ' fd-has-grid-column-span-' + colSpan : ''}`}>{children}</div>;
-};
+interface IPanelProps extends ICommonProps {
+  colSpan?: number;
+}
 
-Panel.propTypes = {
-    colSpan: PropTypes.number
-};
-
-Panel.defaultProps = {
-    colSpan: null
-};
+export function Panel(props: IPanelProps): JSX.Element {
+  const { colSpan = null, children } = props;
+  return (
+    <div
+      className={`fd-panel${
+        colSpan ? ' fd-has-grid-column-span-' + colSpan : ''
+      }`}
+    >
+      {children}
+    </div>
+  );
+}
 
 // ------------------------------------------- Panel Grid ------------------------------------------
-export const PanelGrid = props => {
-    const { nogap, cols, children } = props;
-    return (
-        <div
-            className={`fd-panel-grid${nogap ? ' fd-panel-grid--nogap' : ''}${
-                cols ? ' fd-panel-grid--' + cols + 'col' : ''
-            }`}
-        >
-            {children}
-        </div>
-    );
-};
+interface IPanelGridProps extends ICommonProps {
+  nogap?: boolean;
+  cols?: number;
+}
 
-PanelGrid.propTypes = {
-    nogap: PropTypes.bool,
-    cols: PropTypes.number
-};
-
-PanelGrid.defaultProps = {
-    nogap: false,
-    cols: null
-};
+export function PanelGrid(props: IPanelGridProps): JSX.Element {
+  const { nogap = false, cols = null, children } = props;
+  return (
+    <div
+      className={`fd-panel-grid${nogap ? ' fd-panel-grid--nogap' : ''}${
+        cols ? ' fd-panel-grid--' + cols + 'col' : ''
+      }`}
+    >
+      {children}
+    </div>
+  );
+}
 
 // ------------------------------------------- Panel Body ------------------------------------------
-export const PanelBody = props => {
-    const { children } = props;
-    return <div className="fd-panel__body">{children}</div>;
-};
+interface IPanelBodyProps extends ICommonProps {}
+
+export function PanelBody(props: IPanelBodyProps): JSX.Element {
+  const { children } = props;
+  return <div className="fd-panel__body">{children}</div>;
+}
 
 // ------------------------------------------- Panel Header ------------------------------------------
-export const PanelHeader = props => {
-    const { children } = props;
-    return <div className="fd-panel__header">{children}</div>;
-};
+interface IPanelHeaderProps extends ICommonProps {}
+
+export function PanelHeader(props: IPanelHeaderProps): JSX.Element {
+  const { children } = props;
+  return <div className="fd-panel__header">{children}</div>;
+}
 
 // ------------------------------------------- Panel Head ------------------------------------------
-export const PanelHead = props => {
-    const { title, description } = props;
-    return (
-        <div className="fd-panel__head">
-            {title ? <h1 className="fd-panel__title">{title}</h1> : null}
-            {description ? <p className="fd-panel__description">{description}</p> : null}
-        </div>
-    );
-};
+interface IPanelHeadProps extends ICommonProps {
+  title?: string;
+  description?: string;
+}
+
+export function PanelHead(props: IPanelHeadProps): JSX.Element {
+  const { title, description } = props;
+  return (
+    <div className="fd-panel__head">
+      {title ? <h1 className="fd-panel__title">{title}</h1> : null}
+      {description ? (
+        <p className="fd-panel__description">{description}</p>
+      ) : null}
+    </div>
+  );
+}
 
 // ------------------------------------------- Panel Actions ------------------------------------------
-export const PanelActions = props => {
-    const { children } = props;
-    return <div className="fd-panel__actions">{children}</div>;
-};
+interface IPanelActionsProps extends ICommonProps {}
+
+export function PanelActions(props: IPanelActionsProps): JSX.Element {
+  const { children } = props;
+  return <div className="fd-panel__actions">{children}</div>;
+}
 
 // ------------------------------------------- Panel Filters ------------------------------------------
-export const PanelFilters = props => {
-    const { id, children } = props;
-    return (
-        <div className="fd-panel__filters" id={id}>
-            {children}
-        </div>
-    );
-};
+interface IPanelFiltersProps extends ICommonProps {}
 
-PanelFilters.propTypes = {
-    id: PropTypes.string
-};
-
-PanelFilters.defaultProps = {
-    id: ''
-};
+export function PanelFilters(props: IPanelFiltersProps): JSX.Element {
+  const { id, children } = props;
+  return (
+    <div className="fd-panel__filters" id={id}>
+      {children}
+    </div>
+  );
+}
 
 // ------------------------------------------- Panel Content ------------------------------------------
-export const PanelContent = props => {
-    const { children } = props;
-    return <div className="fd-panel__content">{children}</div>;
-};
+interface IPanelContentProps extends ICommonProps {}
+
+export function PanelContent(props: IPanelContentProps): JSX.Element {
+  const { children } = props;
+  return <div className="fd-panel__content">{children}</div>;
+}
 
 // ------------------------------------------- Panel Footer ------------------------------------------
-export const PanelFooter = props => {
-    const { children } = props;
-    return <div className="fd-panel__footer">{children}</div>;
-};
+interface IPanelFooterProps extends ICommonProps {}
+
+export function PanelFooter(props: IPanelFooterProps): JSX.Element {
+  const { children } = props;
+  return <div className="fd-panel__footer">{children}</div>;
+}

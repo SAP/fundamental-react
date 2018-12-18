@@ -1,17 +1,26 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import PropTypes from 'prop-types';
+import { ICommonProps } from '../common/common';
 
-export class Modal extends Component {
+interface IModalProps extends ICommonProps {
+  show?: boolean;
+  title: string;
+  onClose: (response?: string) => void;
+  actions?: any;
+}
+
+interface IModalState {}
+
+export class Modal extends Component<IModalProps, IModalState> {
   // select body element to add Modal component too
-  bodyElm = document.querySelector('body');
+  bodyElm: HTMLBodyElement = document.querySelector('body')!;
 
   handleCloseClick = () => {
     this.props.onClose();
   };
 
   // check for Escape key press
-  handleKeyPress = event => {
+  handleKeyPress = (event: KeyboardEvent) => {
     if (event.key === 'Escape' || event.key === 'Esc') {
       this.handleCloseClick();
     }
@@ -31,10 +40,10 @@ export class Modal extends Component {
     if (!this.props.show) {
       return null;
     }
-    const { children, title, actions } = this.props;
+    const { id, children, title, actions } = this.props;
 
     return ReactDOM.createPortal(
-      <div className="fd-ui__overlay fd-overlay fd-overlay--modal">
+      <div id={id} className="fd-ui__overlay fd-overlay fd-overlay--modal">
         <div className="modal-demo-bg">
           <div className="fd-modal">
             <div className="fd-modal__content" role="document">
@@ -62,8 +71,3 @@ export class Modal extends Component {
     );
   }
 }
-
-Modal.propTypes = {
-  show: PropTypes.bool,
-  title: PropTypes.string.isRequired
-};

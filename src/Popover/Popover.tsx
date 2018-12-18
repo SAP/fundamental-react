@@ -1,18 +1,34 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React, { Component, AnchorHTMLAttributes } from 'react';
+import { ICommonProps } from '../common/common';
 
-// ---------------------------------------- Popover ----------------------------------------
-export class Popover extends Component {
-  constructor(props) {
+interface IPopoverProps extends ICommonProps {
+  alignment?: '' | 'right';
+  noArrow?: boolean;
+  disabled?: boolean;
+  control?: any;
+  body?: any;
+}
+
+interface IPopoverState {
+  isExpanded?: boolean;
+  isDisabled?: boolean;
+}
+
+export class Popover extends Component<IPopoverProps, IPopoverState> {
+  private node: React.RefObject<HTMLDivElement>;
+
+  constructor(props: IPopoverProps) {
     super(props);
     this.triggerBody = this.triggerBody.bind(this);
     this.pressEsc = this.pressEsc.bind(this);
     this.handleOutsideClick = this.handleOutsideClick.bind(this);
-    this.state = {
-      isExpanded: false,
-      isDisabled: this.props.disabled
-    };
+    this.node = React.createRef();
   }
+
+  state: IPopoverState = {
+    isExpanded: false,
+    isDisabled: this.props.disabled
+  };
 
   triggerBody() {
     if (!this.state.isDisabled) {
@@ -28,7 +44,7 @@ export class Popover extends Component {
     }
   }
 
-  pressEsc(event) {
+  pressEsc(event: KeyboardEvent) {
     if (event.keyCode === 27 && this.state.isExpanded === true) {
       this.setState({
         isExpanded: false
@@ -36,8 +52,10 @@ export class Popover extends Component {
     }
   }
 
-  handleOutsideClick(e) {
-    if (this.node && !this.node.contains(e.target)) {
+  handleOutsideClick(e: MouseEvent) {
+    const node = this.node.current;
+    const { target }: any = e;
+    if (node && !node.contains(target)) {
       if (this.state.isExpanded) {
         this.setState({
           isExpanded: false
@@ -62,9 +80,7 @@ export class Popover extends Component {
     return (
       <div
         className={`fd-popover${alignment ? ' fd-popover--' + alignment : ''}`}
-        ref={node => {
-          this.node = node;
-        }}
+        ref={this.node}
       >
         <div
           className="fd-popover__control"
@@ -87,10 +103,3 @@ export class Popover extends Component {
     );
   }
 }
-
-Popover.propTypes = {
-  id: PropTypes.string,
-  alignment: PropTypes.oneOf(['', 'right']),
-  noArrow: PropTypes.bool,
-  disabled: PropTypes.bool
-};

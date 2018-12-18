@@ -1,8 +1,56 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { ICommonProps } from '../common/common';
 
-export const Button = props => {
+interface IButtonProps extends ICommonProps {
+  option?: '' | 'emphasized' | 'light' | 'shell';
+  type?: '' | 'standard' | 'positive' | 'negative' | 'medium';
+  compact?: boolean;
+  glyph?: string;
+  navbar?: boolean;
+  dropdown?: boolean;
+  selected?: boolean;
+  disabled?: boolean;
+  typeAttr?: string;
+  onclick?: () => void;
+}
+
+// export const Button: React.SFC<IProps> = props => {
+//   const {
+//     children,
+//     option,
+//     type,
+//     compact,
+//     glyph,
+//     dropdown,
+//     navbar,
+//     selected,
+//     disabled,
+//     typeAttr,
+//     onclick
+//   } = props;
+
+//   return (
+//     <button
+//       className={`${option ? 'fd-button--' + option : ' fd-button'}${
+//         type ? ' fd-button--' + type : ''
+//       }${dropdown ? ' fd-dropdown__control' : ''}${
+//         compact ? ' fd-button--compact' : ''
+//       }${glyph ? ' sap-icon--' + glyph : ''}${
+//         navbar ? ' fd-global-nav__btn' : ''
+//       }${selected ? ' is-selected' : ''}${disabled ? ' is-disabled' : ''}`}
+//       disabled={disabled ? disabled : false}
+//       type={typeAttr}
+//       onClick={onclick}
+//     >
+//       {children}
+//     </button>
+//   );
+// };
+
+export function Button(props: IButtonProps): JSX.Element {
   const {
+    id,
+    children,
     option,
     type,
     compact,
@@ -12,11 +60,12 @@ export const Button = props => {
     selected,
     disabled,
     typeAttr,
-    onclick,
-    children
+    onclick
   } = props;
+
   return (
     <button
+      id={id}
       className={`${option ? 'fd-button--' + option : ' fd-button'}${
         type ? ' fd-button--' + type : ''
       }${dropdown ? ' fd-dropdown__control' : ''}${
@@ -24,7 +73,6 @@ export const Button = props => {
       }${glyph ? ' sap-icon--' + glyph : ''}${
         navbar ? ' fd-global-nav__btn' : ''
       }${selected ? ' is-selected' : ''}${disabled ? ' is-disabled' : ''}`}
-      selected={selected ? selected : false}
       disabled={disabled ? disabled : false}
       type={typeAttr}
       onClick={onclick}
@@ -32,26 +80,27 @@ export const Button = props => {
       {children}
     </button>
   );
-};
+}
 
-Button.propTypes = {
-  option: PropTypes.oneOf(['', 'emphasized' , 'light', 'shell']),
-  type: PropTypes.oneOf(['', 'standard' , 'positive', 'negative', 'medium']),
-  compact: PropTypes.bool,
-  glyph: PropTypes.string,
-  navbar: PropTypes.bool,
-  dropdown: PropTypes.bool,
-  selected: PropTypes.bool,
-  disabled: PropTypes.bool,
-  typeAttr: PropTypes.string,
-  onclick: PropTypes.func
-};
+// export const ButtonGroup: React.SFC<IProps> = props => {
+//   const { children } = props;
+//   return (
+//     <div className="fd-button-group" role="group" aria-label="Group label">
+//       {children}
+//     </div>
+//   );
+// };
 
-export const ButtonGroup = props => {
-  const { children } = props;
+export function ButtonGroup(props: IButtonProps): JSX.Element {
+  const { id, children } = props;
   return (
-    <div className="fd-button-group" role="group" aria-label="Group label">
+    <div
+      id={id}
+      className="fd-button-group"
+      role="group"
+      aria-label="Group label"
+    >
       {children}
     </div>
   );
-};
+}

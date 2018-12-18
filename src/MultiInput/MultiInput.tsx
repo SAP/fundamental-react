@@ -1,19 +1,27 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import { ICommonProps } from '../common/common';
 
-export class MultiInput extends Component {
-  constructor(props) {
-    super(props);
+interface IMultiInputProps extends ICommonProps {
+  placeHolder?: string;
+  data: string[];
+  onTagsUpdate: (tags: string[]) => void;
+  compact?: boolean;
+}
 
-    this.state = {
-      bShowList: false,
-      tags: []
-    };
-  }
+interface IMultiInputState {
+  bShowList: boolean;
+  tags: string[];
+}
+
+export class MultiInput extends Component<IMultiInputProps, IMultiInputState> {
+  state: IMultiInputState = {
+    bShowList: false,
+    tags: []
+  };
 
   // create tags to display in dropdown list
-  createTagList = data => {
-    const randNum = Math.floor(Math.random() * 1000000 + 1);
+  createTagList = (data: string[]) => {
+    const randNum: number = Math.floor(Math.random() * 1000000 + 1);
     return data.map((item, index) => (
       <li key={index}>
         <label htmlFor={index + `_${randNum}`} className="fd-menu__item">
@@ -32,7 +40,7 @@ export class MultiInput extends Component {
   };
 
   // create tag elements to display below input box
-  createTags = tags => {
+  createTags = () => {
     return this.state.tags.map((tag, index) => (
       <span
         key={index}
@@ -46,8 +54,9 @@ export class MultiInput extends Component {
   };
 
   // add/remove tag to tag collection
-  updateSelectedTags = event => {
-    const tag = event.target.value;
+  updateSelectedTags = (event: React.FormEvent<HTMLSpanElement>) => {
+    const { value }: any = event.target;
+    const tag = value;
 
     if (this.state.tags.indexOf(tag) === -1) {
       this.setState(
@@ -74,7 +83,7 @@ export class MultiInput extends Component {
   };
 
   // check to see if tag is should be checked in list
-  isChecked = tag => {
+  isChecked = (tag: string) => {
     if (this.state.tags.indexOf(tag) === -1) {
       return false;
     } else {
@@ -83,8 +92,9 @@ export class MultiInput extends Component {
   };
 
   // remove/close tag
-  removeTag = event => {
-    const tag = event.target.innerText;
+  removeTag = (event: React.FormEvent<HTMLSpanElement>) => {
+    const { innerText }: any = event.target;
+    const tag = innerText;
 
     this.setState(
       prevState => {
@@ -106,7 +116,7 @@ export class MultiInput extends Component {
   };
 
   render() {
-    const { placeHolder, data, compact } = this.props;
+    const { id, placeHolder, data, compact } = this.props;
 
     const inputGroupClassNames = `fd-input-group fd-input-group--after${
       compact ? ' fd-input-group--compact' : ''
@@ -115,7 +125,7 @@ export class MultiInput extends Component {
     const inputClassNames = `fd-input${compact ? ' fd-input--compact' : ''}`;
 
     return (
-      <div className="fd-multi-input">
+      <div id={id} className="fd-multi-input">
         <div className="fd-multi-input-field">
           <div className="fd-popover">
             <div className="fd-popover__control">
@@ -163,10 +173,3 @@ export class MultiInput extends Component {
     );
   }
 }
-
-MultiInput.propTypes = {
-  placeHolder: PropTypes.string,
-  data: PropTypes.array.isRequired,
-  onTagsUpdate: PropTypes.func,
-  compact: PropTypes.bool
-};

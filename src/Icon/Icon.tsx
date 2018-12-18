@@ -1,22 +1,19 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { ICommonProps } from '../common/common';
 
-export const Icon = props => {
-  const { glyph, size, clickHandler } = props;
+interface IIconProps extends ICommonProps {
+  glyph: string;
+  clickHandler?: () => void;
+  size?: string;
+}
+
+export function Icon(props: IIconProps): JSX.Element {
+  const { id, glyph, size, clickHandler } = props;
   return (
     <span
+      id={id}
       className={`${'sap-icon--' + glyph}${size ? ' sap-icon--' + size : ''}`}
       onClick={clickHandler}
     />
   );
-};
-
-Icon.defaultProps = {
-  clickHandler: () => {}
-};
-
-Icon.propTypes = {
-  size: PropTypes.string,
-  clickHandler: PropTypes.func,
-  glyph: PropTypes.string.isRequired
-};
+}

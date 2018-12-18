@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "es6",
     "allowJs": true,
     "skipLibCheck": false,
     "esModuleInterop": true,
@@ -14,7 +14,5 @@
     "noEmit": true,
     "jsx": "preserve"
   },
-  "include": [
-    "src"
-  ]
+  "include": ["src"]
 }

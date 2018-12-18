@@ -1,53 +1,120 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React, { ReactNode } from 'react';
+import { ICommonProps } from '../common/common';
 
-export const Badge = props => {
-    const { type, modifier, children } = props;
-    return (
-        <span className={`fd-badge${type ? ' fd-badge--' + type : ''}${modifier ? ' fd-badge--' + modifier : ''}`}>
-            {children}
-        </span>
-    );
-};
+interface IBadgeProps extends ICommonProps {
+  type?: '' | 'success' | 'warning' | 'error';
+  modifier?: '' | 'pill' | 'filled';
+}
 
-Badge.propTypes = {
-    type: PropTypes.oneOf(['', 'success', 'warning', 'error']),
-    modifier: PropTypes.oneOf(['', 'pill', 'filled'])
-};
+// export const Badge: React.SFC<IBadgeProps> = props => {
+//   const { children, type, modifier } = props;
+//   return (
+//     <span
+//       className={`fd-badge${type ? ' fd-badge--' + type : ''}${
+//         modifier ? ' fd-badge--' + modifier : ''
+//       }`}
+//     >
+//       {children}
+//     </span>
+//   );
+// };
 
-export const Label = props => {
-    const { type, children } = props;
-    return <span className={`fd-label${type ? ' fd-label--' + type : ''}`}>{children}</span>;
-};
+export function Badge(props: IBadgeProps): JSX.Element {
+  const { id, children, type, modifier } = props;
+  return (
+    <span
+      id={id}
+      className={`fd-badge${type ? ' fd-badge--' + type : ''}${
+        modifier ? ' fd-badge--' + modifier : ''
+      }`}
+    >
+      {children}
+    </span>
+  );
+}
 
-Label.propTypes = {
-    type: PropTypes.oneOf(['', 'success', 'warning', 'error'])
-};
+interface ILabelProps extends ICommonProps {
+  type?: '' | 'success' | 'warning' | 'error';
+}
 
-export const Status = props => {
-    const { type, glyph, children } = props;
-    return (
-        <span
-            className={`fd-status-label${type ? ' fd-status-label--' + type : ''}${glyph ? ' sap-icon--' + glyph : ''}`}
-        >
-            {children}
-        </span>
-    );
-};
-Status.propTypes = {
-    type: PropTypes.oneOf(['', 'success', 'warning', 'error', 'available', 'away', 'busy', 'offline']),
-    glyph: PropTypes.string
-};
+// export const Label: React.SFC<ILabelProps> = props => {
+//   const { children, type } = props;
+//   return (
+//     <span className={`fd-label${type ? ' fd-label--' + type : ''}`}>
+//       {children}
+//     </span>
+//   );
+// };
 
-export const Counter = props => {
-    const { notification, children } = props;
-    return (
-        <span className={`fd-counter${notification ? ' fd-counter--notification' : ''}`} aria-label="Unread count">
-            {children}
-        </span>
-    );
-};
+export function Label(props: ILabelProps): JSX.Element {
+  const { id, children, type } = props;
+  return (
+    <span id={id} className={`fd-label${type ? ' fd-label--' + type : ''}`}>
+      {children}
+    </span>
+  );
+}
 
-Counter.propTypes = {
-    notification: PropTypes.bool
-};
+interface IStatusProps extends ICommonProps {
+  type?:
+    | ''
+    | 'success'
+    | 'warning'
+    | 'error'
+    | 'available'
+    | 'away'
+    | 'busy'
+    | 'offline';
+  glyph?: string;
+}
+
+// export const Status: React.SFC<IStatusProps> = props => {
+//   const { children, type, glyph } = props;
+//   return (
+//     <span
+//       className={`fd-status-label${type ? ' fd-status-label--' + type : ''}${
+//         glyph ? ' sap-icon--' + glyph : ''
+//       }`}
+//     >
+//       {children}
+//     </span>
+//   );
+// };
+export function Status(props: IStatusProps): JSX.Element {
+  const { id, children, type, glyph } = props;
+  return (
+    <span
+      id={id}
+      className={`fd-status-label${type ? ' fd-status-label--' + type : ''}${
+        glyph ? ' sap-icon--' + glyph : ''
+      }`}
+    >
+      {children}
+    </span>
+  );
+}
+
+// export const Counter = props => {
+//   const { notification, children } = props;
+//   return (
+//       <span className={`fd-counter${notification ? ' fd-counter--notification' : ''}`} aria-label="Unread count">
+//           {children}
+//       </span>
+//   );
+// };
+
+interface ICounterProps extends ICommonProps {
+  notification?: boolean;
+}
+
+export function Counter(props: ICounterProps): JSX.Element {
+  const { notification, children } = props;
+  return (
+    <span
+      className={`fd-counter${notification ? ' fd-counter--notification' : ''}`}
+      aria-label="Unread count"
+    >
+      {children}
+    </span>
+  );
+}

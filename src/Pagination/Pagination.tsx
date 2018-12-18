@@ -1,23 +1,31 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import { ICommonProps } from '../common/common';
 
-export class Pagination extends Component {
-  constructor(props, context) {
-    super(props, context);
+interface IPaginationProps extends ICommonProps {
+  itemsPerPage?: number;
+  itemsTotal: number;
+  onClick: (selectedPage: number) => void;
+  initialPage?: number;
+  displayTotal?: boolean;
+  totalText?: string;
+}
 
-    this.state = {
-      selectedPage: this.props.initialPage || 1
-    };
-  }
+interface IPaginationState {
+  selectedPage: number;
+}
 
-  // number of pages to show
-  numberOfPages = 0;
+export class Pagination extends Component<IPaginationProps, IPaginationState> {
+  state: IPaginationState = {
+    selectedPage: this.props.initialPage || 1
+  };
+  numberOfPages: number = 0;
 
   // page directly clicked
-  pageClicked = event => {
+  pageClicked = (event: React.FormEvent<HTMLAnchorElement>) => {
+    const { text }: any = event.target;
     this.setState(
       {
-        selectedPage: +event.target.text
+        selectedPage: +text
       },
       () => this.props.onClick(this.state.selectedPage)
     );
@@ -31,7 +39,8 @@ export class Pagination extends Component {
 
     this.setState(
       prevState => {
-        return { selectedPage: --prevState.selectedPage };
+        let currentPage: number = prevState.selectedPage;
+        return { selectedPage: --currentPage };
       },
       () => this.props.onClick(this.state.selectedPage)
     );
@@ -45,17 +54,18 @@ export class Pagination extends Component {
 
     this.setState(
       prevState => {
-        return { selectedPage: ++prevState.selectedPage };
+        let currentPage: number = prevState.selectedPage;
+        return { selectedPage: ++currentPage };
       },
       () => this.props.onClick(this.state.selectedPage)
     );
   };
 
   // create pagination links
-  createPaginationLinks = numberOfPages => {
+  createPaginationLinks = (numberOfPages: number) => {
     // create an array with number of pages and fill it with links
-    const aPages = Array(numberOfPages)
-      .fill()
+    const aPages: JSX.Element[] = new Array(numberOfPages)
+      .fill({})
       .map((link, index) => (
         <a
           key={index}
@@ -72,6 +82,7 @@ export class Pagination extends Component {
 
   render() {
     const {
+      id,
       itemsTotal,
       itemsPerPage = 10,
       displayTotal = true,
@@ -85,7 +96,7 @@ export class Pagination extends Component {
     );
 
     return (
-      <div className="fd-pagination">
+      <div id={id} className="fd-pagination">
         {displayTotal ? (
           <span className="fd-pagination__total">
             {itemsTotal} {totalText || 'items'}
@@ -115,12 +126,3 @@ export class Pagination extends Component {
     );
   }
 }
-
-Pagination.propTypes = {
-  itemsPerPage: PropTypes.number,
-  itemsTotal: PropTypes.number.isRequired,
-  onClick: PropTypes.func.isRequired,
-  initialPage: PropTypes.number,
-  displayTotal: PropTypes.bool,
-  totalText: PropTypes.string
-};

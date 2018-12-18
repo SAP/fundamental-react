@@ -1,18 +1,19 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { ICommonProps } from '../common/common';
 
-export const Image = props => {
-  const { size, type, photo } = props;
+interface IImageProps extends ICommonProps {
+  size: 's' | 'm' | 'l';
+  type?: '' | 'circle';
+  photo: string;
+}
+
+export function Image(props: IImageProps): JSX.Element {
+  const { id, size, type, photo } = props;
   return (
     <span
+      id={id}
       className={`${'fd-image--' + size}${type ? ' fd-image--' + type : ''}`}
       style={{ backgroundImage: 'url(' + photo + ')' }}
     />
   );
-};
-
-Image.propTypes = {
-  size: PropTypes.oneOf(['s', 'm', 'l']).isRequired,
-  type: PropTypes.oneOf(['', 'circle']),
-  photo: PropTypes.string.isRequired
-};
+}

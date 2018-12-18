@@ -1,15 +1,18 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { ICommonProps } from '../common/common';
 
-export const Dropdown = props => {
-    const { standard, children } = props;
-    return (
-        <div className={`fd-dropdown${standard ? ' fd-dropdown--standard' : ''}`}>
-            {children}
-        </div>
-    );
-};
+interface IDropdownProps extends ICommonProps {
+  standard?: boolean;
+}
 
-Dropdown.propTypes = {
-    standard: PropTypes.bool
-};
+export function Dropdown(props: IDropdownProps): JSX.Element {
+  const { id, children, standard } = props;
+  return (
+    <div
+      id={id}
+      className={`fd-dropdown${standard ? ' fd-dropdown--standard' : ''}`}
+    >
+      {children}
+    </div>
+  );
+}

@@ -1,179 +1,223 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import { ICommonProps } from '../common/common';
 
 // ------------------------------------------------- Form Set -----------------------------------------------
-export const FormSet = props => {
-    const { children } = props;
-    return <div className="fd-form__set">{children}</div>;
-};
+interface IFormSetProps extends ICommonProps {}
+
+export function FormSet(props: IFormSetProps): JSX.Element {
+  const { id, children } = props;
+  return (
+    <div id={id} className="fd-form__set">
+      {children}
+    </div>
+  );
+}
 
 // ------------------------------------------------- Form Item -----------------------------------------------
-export const FormItem = props => {
-    const { isCheck, isInline, children } = props;
-    return (
-        <div
-            className={`fd-form__item${isInline ? ' fd-form__item--inline' : ''}${
-                isCheck ? ' fd-form__item--check' : ''
-            }`}
-        >
-            {children}
-        </div>
-    );
-};
+interface IFormItemProps extends ICommonProps {
+  isCheck?: boolean;
+  isInline?: boolean;
+}
 
-FormItem.propTypes = {
-    isCheck: PropTypes.bool,
-    isInline: PropTypes.bool
-};
+export function FormItem(props: IFormItemProps): JSX.Element {
+  const { id, isCheck, isInline, children } = props;
+  return (
+    <div
+      id={id}
+      className={`fd-form__item${isInline ? ' fd-form__item--inline' : ''}${
+        isCheck ? ' fd-form__item--check' : ''
+      }`}
+    >
+      {children}
+    </div>
+  );
+}
 
 // ------------------------------------------------- Form Label ----------------------------------------------
-export const FormLabel = props => {
-    const { required, forAttr, children } = props;
-    return (
-        <label className={`fd-form__label${required ? ' is-required' : ''}`} htmlFor={forAttr}>
-            {children}
-        </label>
-    );
-};
+interface IFormLabelProps extends ICommonProps {
+  required?: boolean;
+  forAttr?: string;
+}
 
-FormLabel.propTypes = {
-    required: PropTypes.bool,
-    forAttr: PropTypes.string
-};
+export function FormLabel(props: IFormLabelProps): JSX.Element {
+  const { id, required, forAttr, children } = props;
+  return (
+    <label
+      id={id}
+      className={`fd-form__label${required ? ' is-required' : ''}`}
+      htmlFor={forAttr}
+    >
+      {children}
+    </label>
+  );
+}
 
 // ------------------------------------------------- Form Message ----------------------------------------------
-export const FormMessage = props => {
-    const { type, children } = props;
-    return <span className={`fd-form__message${type ? '  fd-form__message--' + type : ''}`}>{children}</span>;
-};
+interface IFormMessageProps extends ICommonProps {
+  type: '' | 'error' | 'warning' | 'help';
+}
 
-FormMessage.propTypes = {
-    type: PropTypes.oneOf(['', 'error', 'warning', 'help'])
-};
+export function FormMessage(props: IFormMessageProps): JSX.Element {
+  const { id, type, children } = props;
+  return (
+    <span
+      id={id}
+      className={`fd-form__message${type ? '  fd-form__message--' + type : ''}`}
+    >
+      {children}
+    </span>
+  );
+}
 
 // ------------------------------------------------- Form Input ----------------------------------------------
-export const FormInput = props => {
-    const { type, state, id, placeholder } = props;
-    return (
-        <input
-            className={`fd-form__control${state ? ' is-' + state : ''}`}
-            type={type}
-            id={id}
-            placeholder={placeholder}
-        />
-    );
-};
+interface IFormInputProps extends ICommonProps {
+  type?: string;
+  state?: string;
+  placeholder?: string;
+  disabled?: boolean;
+}
 
-FormInput.propTypes = {
-    type: PropTypes.string,
-    state: PropTypes.string,
-    id: PropTypes.string,
-    placeholder: PropTypes.string
-};
+export function FormInput(props: IFormInputProps): JSX.Element {
+  const { type, state, id, placeholder, disabled } = props;
+  return (
+    <input
+      className={`fd-form__control${state ? ' is-' + state : ''}`}
+      type={type}
+      id={id}
+      placeholder={placeholder}
+      disabled={disabled ? true : false}
+    />
+  );
+}
 
 // ------------------------------------------------- Form Textarea ----------------------------------------------
-export const FormTextarea = props => {
-    const { id, children } = props;
-    return (
-        <textarea className="fd-form__control" id={id}>
-            {children}
-        </textarea>
-    );
-};
+interface IFormTextareaProps extends ICommonProps {}
 
-FormTextarea.propTypes = {
-    id: PropTypes.string
-};
+export function FormTextarea(props: IFormTextareaProps): JSX.Element {
+  const { id, children } = props;
+  return (
+    <textarea className="fd-form__control" id={id}>
+      {children}
+    </textarea>
+  );
+}
 
 // ------------------------------------------------- Form Fieldset ----------------------------------------------
-export const FormFieldset = props => {
-    const { children } = props;
-    return <fieldset className="fd-form__set">{children}</fieldset>;
-};
+interface IFormFieldsetProps extends ICommonProps {}
+
+export function FormFieldset(props: IFormFieldsetProps): JSX.Element {
+  const { children } = props;
+  return <fieldset className="fd-form__set">{children}</fieldset>;
+}
 
 // ------------------------------------------------- Form Legend ----------------------------------------------
-export const FormLegend = props => {
-    const { children } = props;
-    return <legend className="fd-form__legend">{children}</legend>;
-};
+interface IFormLegendProps extends ICommonProps {}
+
+export function FormLegend(props: IFormLegendProps): JSX.Element {
+  const { children } = props;
+  return <legend className="fd-form__legend">{children}</legend>;
+}
 
 // ------------------------------------------------- Form Select ----------------------------------------------
-export const FormSelect = props => {
-    const { id, name, disabled, children } = props;
-    return (
-        <select className="fd-form__control" id={id} name={name} disabled={disabled ? true : ''}>
-            {children}
-        </select>
-    );
-};
-FormSelect.propTypes = {
-    id: PropTypes.string,
-    name: PropTypes.string,
-    disabled: PropTypes.bool
-};
+interface IFormSelectProps extends ICommonProps {
+  name?: string;
+  disabled?: boolean;
+}
+
+export function FormSelect(props: IFormSelectProps): JSX.Element {
+  const { id, name, disabled, children } = props;
+  return (
+    <select
+      className="fd-form__control"
+      id={id}
+      name={name}
+      disabled={disabled ? true : false}
+    >
+      {children}
+    </select>
+  );
+}
 
 // ------------------------------------------------- Form Radio ----------------------------------------------
-export class FormRadio extends Component {
-    constructor(props) {
-        super(props);
-        this.handleChange = this.handleChange.bind(this);
-        this.state = {
-            selectedItem: this.props.defaultChecked
-        };
+interface IFormRadioProps extends ICommonProps {
+  defaultChecked?: string;
+  isInline?: boolean;
+  disabled?: boolean;
+  inputs: [
+    {
+      id: string;
+      name: string;
+      value: string;
+      label: string;
     }
-
-    handleChange(e) {
-        this.setState({
-            selectedItem: e.currentTarget.value
-        });
-    }
-
-    render() {
-        const { inputs, disabled, isInline } = this.props;
-        let result;
-
-        if (isInline) {
-            result = inputs.map(inputItem => (
-                <div className="fd-form__item fd-form__item--inline fd-form__item--check" key={inputItem.id}>
-                    <label className="fd-form__label" htmlFor={inputItem.id}>
-                        <input
-                            className="fd-form__control"
-                            type="radio"
-                            id={inputItem.id}
-                            name={inputItem.name}
-                            value={inputItem.value}
-                            disabled={disabled ? true : ''}
-                            onChange={this.handleChange}
-                            checked={this.state.selectedItem === inputItem.id}
-                        />
-                        {inputItem.label}
-                    </label>
-                </div>
-            ));
-        } else {
-            result = inputs.map(inputItem => (
-                <div className="fd-form__item fd-form__item--check" key={inputItem.id}>
-                    <input
-                        className="fd-form__control"
-                        type="radio"
-                        id={inputItem.id}
-                        name={inputItem.name}
-                        value={inputItem.value}
-                        disabled={disabled ? true : ''}
-                        onChange={this.handleChange}
-                        checked={this.state.selectedItem === inputItem.id}
-                    />
-                    <label className="fd-form__label" htmlFor={inputItem.id}>
-                        {inputItem.label}
-                    </label>
-                </div>
-            ));
-        }
-        return <div>{result}</div>;
-    }
+  ];
 }
-FormRadio.propTypes = {
-    defaultChecked: PropTypes.string,
-    isInline: PropTypes.bool,
-    disabled: PropTypes.bool
-};
+
+interface IFormRadioState {
+  selectedItem?: string;
+}
+
+export class FormRadio extends Component<IFormRadioProps, IFormRadioState> {
+  state: IFormRadioState = {
+    selectedItem: this.props.defaultChecked
+  };
+
+  constructor(props: IFormRadioProps) {
+    super(props);
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  handleChange(e: React.FormEvent) {
+    const { value }: any = e.currentTarget;
+    this.setState({
+      selectedItem: value
+    });
+  }
+
+  render() {
+    const { inputs, disabled, isInline } = this.props;
+    let result;
+
+    if (isInline) {
+      result = inputs.map(inputItem => (
+        <div
+          className="fd-form__item fd-form__item--inline fd-form__item--check"
+          key={inputItem.id}
+        >
+          <label className="fd-form__label" htmlFor={inputItem.id}>
+            <input
+              className="fd-form__control"
+              type="radio"
+              id={inputItem.id}
+              name={inputItem.name}
+              value={inputItem.value}
+              disabled={disabled ? true : false}
+              onChange={this.handleChange}
+              checked={this.state.selectedItem === inputItem.id}
+            />
+            {inputItem.label}
+          </label>
+        </div>
+      ));
+    } else {
+      result = inputs.map(inputItem => (
+        <div className="fd-form__item fd-form__item--check" key={inputItem.id}>
+          <input
+            className="fd-form__control"
+            type="radio"
+            id={inputItem.id}
+            name={inputItem.name}
+            value={inputItem.value}
+            disabled={disabled ? true : false}
+            onChange={this.handleChange}
+            checked={this.state.selectedItem === inputItem.id}
+          />
+          <label className="fd-form__label" htmlFor={inputItem.id}>
+            {inputItem.label}
+          </label>
+        </div>
+      ));
+    }
+    return <div>{result}</div>;
+  }
+}
