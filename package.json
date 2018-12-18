@@ -13,28 +13,44 @@
     },
     "scripts": {
         "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
-        "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive",
-        "start-js": "react-scripts start",
-        "build-js": "react-scripts build",
-        "predeploy": "npm run build",
-        "deploy": "gh-pages -d build",
-        "start": "react-scripts start",
         "build-doc": "react-scripts build",
+        "build-js": "react-scripts build",
+        "build:lint:fix": "eslint --fix 'src/**' --ext .js,.jsx --env browser,node",
+        "build:lint": "eslint 'src/**' --ext .js,.jsx --env browser,node",
         "build": "rm -rf dist && NODE_ENV=production babel src --out-dir dist --copy-files --ignore __tests__,spec.js,test.js,__snapshots__,Component.js",
+        "deploy": "gh-pages -d build",
+        "eject": "react-scripts eject",
+        "lint:fix": "npm run build:lint:fix",
+        "lint:pre-commit": "printf \"running pre-commit lint...\"  && npm run lint && printf \"done!\n\"",
+        "lint": "npm run build:lint",
+        "predeploy": "npm run build",
+        "start-js": "react-scripts start",
+        "start": "react-scripts start",
         "test": "react-scripts test",
-        "eject": "react-scripts eject"
+        "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive"
     },
     "devDependencies": {
         "@babel/cli": "^7.1.5",
-        "enzyme": "^3.7.0",
         "enzyme-adapter-react-16": "^1.7.0",
+        "enzyme": "^3.7.0",
+        "eslint-plugin-jsx-a11y": "^6.0.2",
+        "eslint-plugin-react": "7.7.0",
+        "eslint": "^4.18.0",
         "fiori-fundamentals": "^1.4.0",
         "gh-pages": "^2.0.1",
         "jest": "^23.6.0",
-        "react": "^16.6.3",
+        "pre-commit": "^1.2.2",
         "react-dom": "^16.6.3",
         "react-scripts": "^2.1.1",
-        "react-test-renderer": "^16.6.3"
+        "react-test-renderer": "^16.6.3",
+        "react": "^16.6.3"
+    },
+    "pre-commit": {
+        "colors": true,
+        "run": [
+            "lint:pre-commit"
+        ],
+        "silent": false
     },
     "browserslist": [
         ">0.2%",
