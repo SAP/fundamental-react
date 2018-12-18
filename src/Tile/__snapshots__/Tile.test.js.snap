@@ -51,6 +51,11 @@ exports[`<Tile /> create tile component 3`] = `
     <span
       className="fd-identifier--m sap-icon--home fd-has-background-color-accent-3"
       role="presentation"
+      style={
+        Object {
+          "backgroundImage": "",
+        }
+      }
     />
   </div>
   <div
@@ -96,7 +101,6 @@ exports[`<Tile /> create tile component 4`] = `
         <button
           className=" fd-button fd-button--standard sap-icon--vertical-grip"
           disabled={false}
-          selected={false}
         />
       </div>
       <div

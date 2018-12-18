@@ -28,6 +28,15 @@ describe('<Forms />', () => {
           placeholder="Field placeholder text"
         />
       </FormItem>
+      <FormItem isInline={true} isCheck={true}>
+        <FormLabel forAttr="input-2">Disabled Input</FormLabel>
+        <FormInput
+          type="text"
+          id="input-2"
+          placeholder="Field placeholder text"
+          disabled
+        />
+      </FormItem>
       <FormItem>
         <FormLabel forAttr="input-1" required={true}>
           Default Input

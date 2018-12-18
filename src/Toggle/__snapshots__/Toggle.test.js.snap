@@ -11,6 +11,7 @@ exports[`<Toggle /> create toggle component 1`] = `
       className="fd-toggle fd-form__control"
     >
       <input
+        checked={false}
         onChange={[Function]}
         type="checkbox"
       />
@@ -35,7 +36,7 @@ exports[`<Toggle /> create toggle component 2`] = `
       className="fd-toggle fd-toggle--s fd-form__control"
     >
       <input
-        checked={true}
+        checked={false}
         onChange={[Function]}
         type="checkbox"
       />
@@ -60,6 +61,7 @@ exports[`<Toggle /> create toggle component 3`] = `
       className="fd-toggle fd-form__control"
     >
       <input
+        checked={false}
         disabled={true}
         onChange={[Function]}
         type="checkbox"
@@ -85,7 +87,7 @@ exports[`<Toggle /> create toggle component 4`] = `
       className="fd-toggle fd-form__control"
     >
       <input
-        checked={true}
+        checked={false}
         disabled={true}
         onChange={[Function]}
         type="checkbox"
