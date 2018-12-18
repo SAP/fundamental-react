@@ -53,9 +53,11 @@ Builds the app for production to the `build` folder.
 
 #### 2. Include the Fiori Fundamentals CSS in your React application. In your App.css or App.scss file include the following lines:
 
-`@import '../node_modules/fiori-fundamentals/scss/icons/'`
-`@import '../node_modules/fiori-fundamentals/dist/fonts/'`
-`@import '../node_modules/fiori-fundamentals/scss/all.scss'`
+```
+$fd-icons-path: "~fiori-fundamentals/scss/icons/";
+$fd-fonts-path: "~fiori-fundamentals/scss/fonts/";
+@import '../node_modules/fiori-fundamentals/scss/all.scss';
+```
 
 ## Known Issues
 
