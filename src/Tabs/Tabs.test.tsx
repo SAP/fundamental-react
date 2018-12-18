@@ -2,56 +2,56 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import Enzyme, { mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
-import { Tabs, TabComponent } from './Tabs';
+import { Tabs, Tab } from './index';
+
+import { writeFile } from 'fs';
+import { JsxEmit } from 'typescript';
 
 Enzyme.configure({ adapter: new Adapter() });
 
 describe('<Tabs />', () => {
-  const tabComponent = (
-    <TabComponent
-      ids={[
-        {
-          id: '1',
-          url: '#',
-          name: 'Tab 1',
-          content: 'Hello world',
-          disabled: false
-        },
-        {
-          id: '2',
-          url: '#',
-          name: 'Tab 2',
-          content: 'Hello world 2',
-          disabled: false
-        },
-        {
-          id: '3',
-          url: '#',
-          name: 'Tab 3',
-          content: 'Hello world 3',
-          disabled: true
-        }
-      ]}
-    />
-  );
-
-  const defaultTabs = <Tabs>{tabComponent}</Tabs>;
+  function getTabs(additionalProps = {}) {
+    return (
+      <Tabs {...additionalProps}>
+        <Tab
+          key={'1'}
+          title={'Tab 1'}
+        >
+          Hello World
+      </Tab>
+        <Tab
+          key={'2'}
+          title={'Tab 2'}
+        >
+          Hello World 2
+      </Tab>
+        <Tab
+          key={'3'}
+          title={'Tab 3'}
+          disabled={false}
+        >
+          Hello World
+      </Tab>
+      </Tabs>
+    );
+  }
 
   test('create tabs component', () => {
-    let component = renderer.create(defaultTabs);
+    const tabs = getTabs();
+    let component = renderer.create(tabs);
     let tree = component.toJSON();
     expect(tree).toMatchSnapshot();
 
-    component = renderer.create(tabComponent);
+    component = renderer.create(tabs);
     tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
 
   test('tab selection', () => {
-    const wrapper = mount(tabComponent);
+    const onChangeFn = jest.fn();
+    const wrapper = mount(getTabs({ onChange: onChangeFn }));
 
-    // check selected tab
-    expect(wrapper.state(['selectedTab'])).toEqual('1');
+    expect((wrapper.state() as any)['activeKey']).toEqual('1');
 
     wrapper
       .find('ul.fd-tabs li.fd-tabs__item a.fd-tabs__link')
@@ -59,6 +59,7 @@ describe('<Tabs />', () => {
       .simulate('click');
 
     // check selected tab changed
-    expect(wrapper.state(['selectedTab'])).toEqual('2');
+    expect((wrapper.state() as any).activeKey).toEqual('2');
+    expect(onChangeFn).toHaveBeenCalledWith('2', '1');
   });
 });

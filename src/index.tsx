@@ -76,7 +76,7 @@ import {
   SideNavGroup
 } from '../src/SideNavigation/SideNavigation';
 import { Table } from '../src/Table/Table';
-import { Tabs, TabComponent } from '../src/Tabs/Tabs';
+import { Tabs, Tab } from '../src/Tabs';
 import { Token } from './Token/Token';
 import {
   Tile,
@@ -176,7 +176,7 @@ export {
   SideNavGroup,
   Table,
   Tabs,
-  TabComponent,
+  Tab,
   Token,
   Tile,
   TileContent,

@@ -1,14 +1,13 @@
 import React from 'react';
-import { Tabs, TabComponent } from '../';
-import { DocsTile, DocsText, Separator, Header, Description, Import, Properties, Playground } from '../';
+import { Tabs, Tab } from '.';
+import { DocsTile, DocsText, Separator, Header, Description, Import, Properties, Playground } from '..';
 
 export const TabsComponent = () => {
     const tabscomponentCode = `
     <Tabs>
-    <TabComponent ids={[{id : '1', url:'#', name: 'Tab 1', content: 'Hello world', disabled: false},
-                             {id : '2', url:'#', name: 'Tab 2', content: 'Hello world 2', disabled: false},
-                             {id : '3', url:'#', name: 'Tab 3', content: 'Hello world 3', disabled: true}]}>
-    </TabComponent>
+        <Tab key='1' title={'Tab 1'} content={'Hello World'} />
+        <Tab key='2' title={'Tab 2'} content={'Hello World 2'} />
+        <Tab key='3' title={'Tab 3'} content={'Hello World 3'} disabled={true} />
     </Tabs>`;
 
     return (
@@ -18,55 +17,25 @@ export const TabsComponent = () => {
                 Tabs are based on a folder metaphor and used to separate content into different sections. Tabs should be
                 ordered to create a visual hierarchy based on priority.
             </Description>
-            <Import module="Tabs, TabsComponent" path="/fundamental-react/src/" /> <Separator />
+            <Import module="Tabs, Tab" path="/fundamental-react/src/" /> <Separator />
             <Properties
                 type="Inputs"
                 properties={[
-                    { name: 'id', description: 'id of the tab' },
-                    { name: 'name', description: 'name of the tab' },
-                    { name: 'content', description: 'the content to display when the tab is pressed' },
-                    { name: 'disabled', description: 'disable the tab based on true or false' }
+                    { name: 'key', description: 'id of the tab' },
+                    { name: 'title', description: 'name of the tab' },
+                    { name: 'disabled', description: 'disable the tab based on true or false' },
+                    { name: 'children', description: 'the content to display when the tab is active' }
                 ]}
             />
             <DocsTile>
                 <Tabs>
-                    <TabComponent
-                        ids={[
-                            { id: '1', url: '#', name: 'Tab 1', content: 'Hello world', disabled: false },
-                            { id: '2', url: '#', name: 'Tab 2', content: 'Hello world 2', disabled: false },
-                            { id: '3', url: '#', name: 'Tab 3', content: 'Hello world 3', disabled: true }
-                        ]}
-                    />
+                    <Tab key='1' title={'Tab 1'}>Hello World</Tab>
+                    <Tab key='2' title={'Tab 2'}>Hello World 2</Tab>
+                    <Tab key='3' title={'Tab 3'} disabled={true}>Hello World 3</Tab>
                 </Tabs>
             </DocsTile>
             <DocsText>{tabscomponentCode}</DocsText>
             <Separator />
-            <h2>Playground</h2>
-            <Playground
-                component="tabs"
-                schema={[
-                    {
-                        attribute: 'ids',
-                        typeOfAttribute: 'lists',
-                        enum: ['Tab 1', 'Tab 2', 'Tab 3']
-                    },
-                    {
-                        attribute: 'content',
-                        typeOfAttribute: 'listsContent',
-                        enum: ['Tab 1', 'Tab 2', 'Tab 3']
-                    }
-                ]}
-            >
-                <Tabs>
-                    <TabComponent
-                        ids={[
-                            { id: 'Tab 1', url: '#', name: 'Tab 1', content: 'Hello world', disabled: false },
-                            { id: 'Tab 2', url: '#', name: 'Tab 2', content: 'Hello world 2', disabled: false },
-                            { id: 'Tab 3', url: '#', name: 'Tab 3', content: 'Hello world 3', disabled: true }
-                        ]}
-                    />
-                </Tabs>
-            </Playground>
         </div>
     );
 };

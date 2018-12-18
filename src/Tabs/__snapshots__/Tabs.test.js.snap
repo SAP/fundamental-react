@@ -1,101 +1,85 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Tabs /> create tabs component 1`] = `
-<ul
-  className="fd-tabs-container"
->
+Array [
   <ul
     className="fd-tabs"
+    role="tablist"
   >
     <li
       className="fd-tabs__item"
     >
       <a
         aria-disabled={false}
-        className="fd-tabs__link is-selected"
-        href="#"
+        className=" fd-tabs__link is-selected"
         onClick={[Function]}
-      >
-        Tab 1
-      </a>
-      <p
-        className="fd-tabs__content"
-      >
-        Hello world
-      </p>
+      />
     </li>
     <li
       className="fd-tabs__item"
     >
       <a
         aria-disabled={false}
-        className="fd-tabs__link"
-        href="#"
+        className=" fd-tabs__link"
         onClick={[Function]}
-      >
-        Tab 2
-      </a>
+      />
     </li>
     <li
       className="fd-tabs__item"
     >
       <a
-        aria-disabled={true}
-        className="fd-tabs__link"
-        href="#"
+        aria-disabled={false}
+        className=" fd-tabs__link"
         onClick={[Function]}
-      >
-        Tab 3
-      </a>
+      />
     </li>
-  </ul>
-</ul>
+  </ul>,
+  <div
+    className="fd-tabs__panel"
+  >
+    Hello World
+  </div>,
+]
 `;
 
 exports[`<Tabs /> create tabs component 2`] = `
-<ul
-  className="fd-tabs"
->
-  <li
-    className="fd-tabs__item"
+Array [
+  <ul
+    className="fd-tabs"
+    role="tablist"
   >
-    <a
-      aria-disabled={false}
-      className="fd-tabs__link is-selected"
-      href="#"
-      onClick={[Function]}
+    <li
+      className="fd-tabs__item"
     >
-      Tab 1
-    </a>
-    <p
-      className="fd-tabs__content"
+      <a
+        aria-disabled={false}
+        className=" fd-tabs__link is-selected"
+        onClick={[Function]}
+      />
+    </li>
+    <li
+      className="fd-tabs__item"
     >
-      Hello world
-    </p>
-  </li>
-  <li
-    className="fd-tabs__item"
+      <a
+        aria-disabled={false}
+        className=" fd-tabs__link"
+        onClick={[Function]}
+      />
+    </li>
+    <li
+      className="fd-tabs__item"
+    >
+      <a
+        aria-disabled={false}
+        className=" fd-tabs__link"
+        onClick={[Function]}
+      />
+    </li>
+  </ul>,
+  <div
+    className="fd-tabs__panel"
   >
-    <a
-      aria-disabled={false}
-      className="fd-tabs__link"
-      href="#"
-      onClick={[Function]}
-    >
-      Tab 2
-    </a>
-  </li>
-  <li
-    className="fd-tabs__item"
-  >
-    <a
-      aria-disabled={true}
-      className="fd-tabs__link"
-      href="#"
-      onClick={[Function]}
-    >
-      Tab 3
-    </a>
-  </li>
-</ul>
+    Hello World
+  </div>,
+]
 `;

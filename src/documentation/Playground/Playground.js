@@ -6,7 +6,7 @@ import { Dropdown } from '../../';
 import { Icon } from '../../';
 import { Identifier } from '../../';
 import { Image } from '../../';
-import { Tabs, TabComponent } from '../../';
+import { Tabs } from '../../';
 import { FormGroup, FormLabel, FormItem, InputGroup } from '../../';
 import { ListGroup, ListGroupItem, ListGroupItemActions } from '../../';
 import { Tile, TileContent, TileMedia, TileActions, ProductTile, ProductTileContent, ProductTileMedia } from '../../';
@@ -393,7 +393,7 @@ export class Playground extends Component {
             case 'tabs':
                 componentToGenerate = (
                     <Tabs>
-                        <TabComponent ids={this.state.childs.children.props.ids} />
+                        {this.state.childs.children}
                     </Tabs>
                 );
                 break;
