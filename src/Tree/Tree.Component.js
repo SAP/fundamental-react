@@ -152,7 +152,7 @@ export const TreeComponent = () => {
                             children: [
                                 {
                                     id: '7', hasChildren: false,
-                                    values: ['Child 1', 'Data Col 2', 'Data Col 3', 'INACTIVE'],
+                                    values: ['Child 1', 'Data Col 2', 'Data Col 3', 'INACTIVE']
                                 },
                                 {
                                     id: '8', hasChildren: false,
@@ -174,7 +174,7 @@ export const TreeComponent = () => {
                             children: [
                                 {
                                     id: '11', hasChildren: false,
-                                    values: ['Child 1', 'Data Col 2', 'Data Col 3', 'INACTIVE'],
+                                    values: ['Child 1', 'Data Col 2', 'Data Col 3', 'INACTIVE']
                                 }
                             ]
                         }
@@ -216,7 +216,7 @@ export const TreeComponent = () => {
                                         display: ''
                                     },{
                                         displayText: 'Google',
-                                        linkUrl: 'http://google.com',
+                                        linkUrl: 'http://google.com'
                                     },
                                     {
                                         displayText: 'Bing',

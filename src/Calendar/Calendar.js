@@ -14,7 +14,7 @@ export class Calendar extends Component {
             showMonths: false,
             showYears: false,
             currentYear: new Date(),
-            dateClick: false,
+            dateClick: false
         }
 
         this.generateNavigation = this.generateNavigation.bind(this);

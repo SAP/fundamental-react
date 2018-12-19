@@ -113,7 +113,7 @@ export const ListGroupComponent = () => {
             <Playground component="listgroup" schema= {[
                     {
                         attribute: 'children',
-                        typeOfAttribute: 'string',
+                        typeOfAttribute: 'string'
                     },
                     {
                         attribute: 'glyph',
