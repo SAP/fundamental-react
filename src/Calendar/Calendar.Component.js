@@ -16,8 +16,7 @@ export const CalendarComponent = () => {
 
         <Separator />
 
-        <Properties type='Inputs' properties=
-            {[
+        <Properties type='Inputs' properties={[
                 {name: 'disableWeekends', description: 'bool - Disable weekends'},
                 {name: 'disableBeforeDate', description: 'date - Disables dates of a calendar that comes before a specific date'},
                 {name: 'disableAfterDate', description: 'date - Disables dates of a calendar that comes after a specific date'},

@@ -110,7 +110,7 @@ export const ListGroupComponent = () => {
             <Separator />
 
             <h2>Playground</h2>
-            <Playground component='listgroup' schema= {[
+            <Playground component='listgroup' schema={[
                     {
                         attribute: 'children',
                         typeOfAttribute: 'string'

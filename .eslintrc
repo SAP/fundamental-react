@@ -108,7 +108,7 @@ rules:
     react/display-name: 2
     #react/jsx-boolean-value: 2
     #react/jsx-closing-bracket-location: [2, 'after-props']
-    #react/jsx-equals-spacing: [2, 'never']
+    react/jsx-equals-spacing: [2, 'never']
     react/jsx-indent: 2
     react/jsx-indent-props: 2
     react/jsx-max-props-per-line:  [2, { "maximum": 2 }]

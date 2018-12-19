@@ -46,8 +46,7 @@ export const MegaMenuComponent = () => {
 
             <Separator />
 
-            <Properties type='Inputs' properties=
-                {[
+            <Properties type='Inputs' properties={[
                     { name: 'items', description: 'array - an array of objects with keys \'id\', \'url\' or \'link\', \'name\', \'hasChild\', and \'child\' setting the attributes of the items.' },
                     { name: 'id', description: 'string - the \'id\' of the link.' },
                     { name: 'url', description: "string - href attribute of <a> tag. Use either 'url' or 'link'." },
@@ -64,8 +63,7 @@ export const MegaMenuComponent = () => {
             <DocsTile>
                 <MegaMenu>
                     <MegaMenuGroup title='Group Title'>
-                        <MegaMenuList items=
-                            {[
+                        <MegaMenuList items={[
                                 { id: 'item_1', url: '#', name: 'Link Item' },
                                 { id: 'item_2', url: '#', name: 'Link Item', hasChild: true, child: [
                                     { id: 'subitem_21', url: '#', name: 'Link' },
@@ -78,8 +76,7 @@ export const MegaMenuComponent = () => {
                             ]} />
                     </MegaMenuGroup>
                     <MegaMenuGroup title='Group Title'>
-                        <MegaMenuList items=
-                            {[
+                        <MegaMenuList items={[
                                 { id: 'item_6', link: '#', name: 'Link Item' },
                                 { id: 'item_7', link: '#', name: 'Link Item' },
                                 { id: 'item_8', link: '#', name: 'Link Item', hasChild: true, child: [
