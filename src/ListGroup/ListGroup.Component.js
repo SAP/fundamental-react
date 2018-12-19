@@ -98,7 +98,7 @@ export const ListGroupComponent = () => {
             <h2>List with Checkboxes</h2>
             <Description>Checkboxes can be include on the left of each line for such purposes as bulk actions.</Description>
             <DocsTile>
-                 <ListGroup>
+                <ListGroup>
                     <ListGroupItem><ListGroupItemCheckbox>List item 1</ListGroupItemCheckbox></ListGroupItem>
                     <ListGroupItem><ListGroupItemCheckbox>List item 2</ListGroupItemCheckbox></ListGroupItem>
                     <ListGroupItem><ListGroupItemCheckbox>List item 3</ListGroupItemCheckbox></ListGroupItem>
@@ -745,7 +745,7 @@ export const ListGroupComponent = () => {
 
                 <ListGroup>
                     <ListGroupItem>List item 1
-                    <ListGroupItemActions>
+                        <ListGroupItemActions>
                             <Button type='secondary' glyph='edit' />
                         </ListGroupItemActions>
                     </ListGroupItem>

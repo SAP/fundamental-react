@@ -16,22 +16,22 @@ describe('<Button />', () => {
   const navBarButton = <Button navbar>Navbar button</Button>;
 
   const selectedButton = (
-    <Button option='emphasized' selected>
+      <Button option='emphasized' selected>
       Selected State
-    </Button>
+      </Button>
   );
   const disabledButton = (
-    <Button option='emphasized' disabled>
+      <Button option='emphasized' disabled>
       Disabled State
-    </Button>
+      </Button>
   );
 
   const buttonGroup = (
-    <ButtonGroup>
-      <Button glyph='survey' />
-      <Button glyph='pie-chart' selected />
-      <Button glyph='pool' />
-    </ButtonGroup>
+      <ButtonGroup>
+          <Button glyph='survey' />
+          <Button glyph='pie-chart' selected />
+          <Button glyph='pool' />
+      </ButtonGroup>
   );
 
   test('create buttons', () => {

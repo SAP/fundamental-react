@@ -53,7 +53,7 @@ export const IdentifierComponent = () => {
             <Separator />
 
             <Properties type='Inputs' properties=
-            {[
+                {[
                 {name: 'size', description: 'string - These sizes are available: xxs (extra extra small) - 20px, xs (extra small) - 28px, s (small) - 32px, m (medium) - 48px, l (large) - 64px, xl (extra lagre) - 88px, and xxl (extra extra large). Default matches the base font size (14px).'},
                 {name: 'glyph', description: 'string - The name of the icon to include. See the icon page for the list of icons.'},
                 {name: 'label', description: 'string - Label text'},
@@ -818,9 +818,9 @@ export const IdentifierComponent = () => {
                         typeOfAttribute: 'string',
                         "enum": ['circle', 'transparent']
                     }]}>
-                    <Identifier size='s' label='Wendy Wallace'
-                        glyph='money-bills' color={1}
-                        modifier='circle' />
+                <Identifier size='s' label='Wendy Wallace'
+                    glyph='money-bills' color={1}
+                    modifier='circle' />
             </Playground>
         </div>
     );

@@ -16,21 +16,21 @@ export const Button = props => {
     children
   } = props;
   return (
-    <button
-        className={`${option ? 'fd-button--' + option : ' fd-button'}${
+      <button
+          className={`${option ? 'fd-button--' + option : ' fd-button'}${
         type ? ' fd-button--' + type : ''
       }${dropdown ? ' fd-dropdown__control' : ''}${
         compact ? ' fd-button--compact' : ''
       }${glyph ? ' sap-icon--' + glyph : ''}${
         navbar ? ' fd-global-nav__btn' : ''
       }${selected ? ' is-selected' : ''}${disabled ? ' is-disabled' : ''}`}
-        selected={selected ? selected : false}
-        disabled={disabled ? disabled : false}
-        type={typeAttr}
-        onClick={onclick}
+          selected={selected ? selected : false}
+          disabled={disabled ? disabled : false}
+          type={typeAttr}
+          onClick={onclick}
     >
-      {children}
-    </button>
+          {children}
+      </button>
   );
 };
 
@@ -50,9 +50,9 @@ Button.propTypes = {
 export const ButtonGroup = props => {
   const { children } = props;
   return (
-    <div className='fd-button-group' role='group'
-        aria-label='Group label'>
-      {children}
-    </div>
+      <div className='fd-button-group' role='group'
+          aria-label='Group label'>
+          {children}
+      </div>
   );
 };

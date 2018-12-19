@@ -10,13 +10,13 @@ export const CalendarComponent = () => {
     const calendarAllOptions = `<Calendar enableRangeSelection={true}/>`;
 
     return (<div>
-            <Header>Calendar</Header>
-            <Description>Commonly used as the contents of a popover when composing “date-picker”, rarely used on its own as a standalone component.</Description>
-            <Import module='Calendar' path='/fundamental-react/src/' />
+        <Header>Calendar</Header>
+        <Description>Commonly used as the contents of a popover when composing “date-picker”, rarely used on its own as a standalone component.</Description>
+        <Import module='Calendar' path='/fundamental-react/src/' />
 
-            <Separator />
+        <Separator />
 
-            <Properties type='Inputs' properties=
+        <Properties type='Inputs' properties=
             {[
                 {name: 'disableWeekends', description: 'bool - Disable weekends'},
                 {name: 'disableBeforeDate', description: 'date - Disables dates of a calendar that comes before a specific date'},
@@ -29,39 +29,39 @@ export const CalendarComponent = () => {
                 {name: 'enableRangeSelection', description: 'bool - Enable to select two dates'}
             ]} />
 
-            <Separator />
+        <Separator />
 
-            <h2>Default Calendar</h2>
-            <DocsTile centered>
-                <Calendar />
-            </DocsTile>
-            <DocsText>{defaultCalendarCode}</DocsText>
+        <h2>Default Calendar</h2>
+        <DocsTile centered>
+            <Calendar />
+        </DocsTile>
+        <DocsText>{defaultCalendarCode}</DocsText>
 
-            <Separator />
+        <Separator />
 
-            <h2>Calendar with disabled weekends and disabled before a date</h2>
-            <DocsTile centered>
-                {<Calendar disableBeforeDate={new Date(2018, 7, 3, 0, 0, 0, 0)} disableWeekends={true} />}
-            </DocsTile>
-            <DocsText>{calendarDisabledWeekendsBeforeDate}</DocsText>
+        <h2>Calendar with disabled weekends and disabled before a date</h2>
+        <DocsTile centered>
+            {<Calendar disableBeforeDate={new Date(2018, 7, 3, 0, 0, 0, 0)} disableWeekends={true} />}
+        </DocsTile>
+        <DocsText>{calendarDisabledWeekendsBeforeDate}</DocsText>
 
-            <Separator />
+        <Separator />
 
-            <h2>Calendar with disabled weekdays and blocked dates</h2>
-            <DocsTile centered>
-                {<Calendar disableWeekday={["Monday", "Tuesday"]} blockedDates={[new Date(2018, 1, 1, 0, 0, 0, 0), new Date(2018, 3, 3, 0, 0, 0, 0)]} />}
-            </DocsTile>
-            <DocsText>{calendarDisabledWeekdaysBlockedDates}</DocsText>
+        <h2>Calendar with disabled weekdays and blocked dates</h2>
+        <DocsTile centered>
+            {<Calendar disableWeekday={["Monday", "Tuesday"]} blockedDates={[new Date(2018, 1, 1, 0, 0, 0, 0), new Date(2018, 3, 3, 0, 0, 0, 0)]} />}
+        </DocsTile>
+        <DocsText>{calendarDisabledWeekdaysBlockedDates}</DocsText>
 
-            <Separator />
+        <Separator />
 
-            <h2>Calendar with range selection</h2>
-            <DocsTile centered>
+        <h2>Calendar with range selection</h2>
+        <DocsTile centered>
             {<Calendar enableRangeSelection={true} />}
-            </DocsTile>
-            <DocsText>{calendarAllOptions}</DocsText>
+        </DocsTile>
+        <DocsText>{calendarAllOptions}</DocsText>
 
-            <Separator />
+        <Separator />
     </div>);
 
 };

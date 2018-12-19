@@ -13,23 +13,23 @@ describe('<TimePicker />', () => {
   const showMinute = <TimePicker format12Hours={true} showMinute={true} />;
   const showSecond = <TimePicker format12Hours={true} showSecond={true} />;
   const showHourMinute = (
-    <TimePicker format12Hours={false} showHour={false}
-        showMinute={true} />
+      <TimePicker format12Hours={false} showHour={false}
+          showMinute={true} />
   );
   const showMinuteSecond = (
-    <TimePicker
-        format12Hours={true}
-        showHour={false}
-        showMinute={true}
-        showSecond={true}
+      <TimePicker
+          format12Hours={true}
+          showHour={false}
+          showMinute={true}
+          showSecond={true}
     />
   );
   const showHourSecond = (
-    <TimePicker
-        format12Hours={true}
-        showHour={true}
-        showMinute={false}
-        showSecond={true}
+      <TimePicker
+          format12Hours={true}
+          showHour={true}
+          showMinute={false}
+          showSecond={true}
     />
   );
   const noSecondTime = <TimePicker showSecond={false} />;
@@ -90,11 +90,11 @@ describe('<TimePicker />', () => {
     expect(wrapper.state('value')).toEqual('12:34:56');
 
     wrapper = mount(
-      <TimePicker
-          format12Hours={false}
-          showHour={true}
-          showMinute={true}
-          showSecond={true}
+        <TimePicker
+            format12Hours={false}
+            showHour={true}
+            showMinute={true}
+            showSecond={true}
       />
     );
     wrapper
@@ -105,11 +105,11 @@ describe('<TimePicker />', () => {
     expect(wrapper.state('value')).toEqual('12:34 am');
 
     wrapper = mount(
-      <TimePicker
-          format12Hours={true}
-          showHour={false}
-          showMinute={true}
-          showSecond={true}
+        <TimePicker
+            format12Hours={true}
+            showHour={false}
+            showMinute={true}
+            showSecond={true}
       />
     );
     wrapper
@@ -120,11 +120,11 @@ describe('<TimePicker />', () => {
     expect(wrapper.state('value')).toEqual('12:34 am');
 
     wrapper = mount(
-      <TimePicker
-          format12Hours={true}
-          showHour={false}
-          showMinute={true}
-          showSecond={false}
+        <TimePicker
+            format12Hours={true}
+            showHour={false}
+            showMinute={true}
+            showSecond={false}
       />
     );
     wrapper
@@ -144,11 +144,11 @@ describe('<TimePicker />', () => {
 
     // just hour and minute,  12 hr format
     wrapper = mount(
-      <TimePicker
-          format12Hours={true}
-          showHour={true}
-          showMinute={true}
-          showSecond={false}
+        <TimePicker
+            format12Hours={true}
+            showHour={true}
+            showMinute={true}
+            showSecond={false}
       />
     );
     wrapper
@@ -160,11 +160,11 @@ describe('<TimePicker />', () => {
 
     // just minute, 12 hr format
     wrapper = mount(
-      <TimePicker
-          format12Hours={true}
-          showHour={false}
-          showMinute={true}
-          showSecond={false}
+        <TimePicker
+            format12Hours={true}
+            showHour={false}
+            showMinute={true}
+            showSecond={false}
       />
     );
     wrapper
@@ -176,11 +176,11 @@ describe('<TimePicker />', () => {
 
     // just hour and minute, no 12 hr format
     wrapper = mount(
-      <TimePicker
-          format12Hours={false}
-          showHour={true}
-          showMinute={true}
-          showSecond={false}
+        <TimePicker
+            format12Hours={false}
+            showHour={true}
+            showMinute={true}
+            showSecond={false}
       />
     );
     wrapper
@@ -192,11 +192,11 @@ describe('<TimePicker />', () => {
 
     // just minute and second, no 12 hr format
     wrapper = mount(
-      <TimePicker
-          format12Hours={false}
-          showHour={false}
-          showMinute={true}
-          showSecond={true}
+        <TimePicker
+            format12Hours={false}
+            showHour={false}
+            showMinute={true}
+            showSecond={true}
       />
     );
 
@@ -217,11 +217,11 @@ describe('<TimePicker />', () => {
     };
     // just minute and second, no 12 hr format
     let wrapper = mount(
-      <TimePicker
-          format12Hours={true}
-          showHour={true}
-          showMinute={true}
-          showSecond={true}
+        <TimePicker
+            format12Hours={true}
+            showHour={true}
+            showMinute={true}
+            showSecond={true}
       />
     );
 

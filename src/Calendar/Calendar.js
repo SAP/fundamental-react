@@ -209,11 +209,11 @@ export class Calendar extends Component {
         });
 
         return (
-                <div className='fd-calendar__months'>
-                    <ul className='fd-calendar__list'>
-                        {listOfMonths}
-                    </ul>
-                </div>
+            <div className='fd-calendar__months'>
+                <ul className='fd-calendar__list'>
+                    {listOfMonths}
+                </ul>
+            </div>
                );
     }
 
@@ -426,31 +426,31 @@ export class Calendar extends Component {
         let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
         return (
-          <header className='fd-calendar__header'>
-          <div className='fd-calendar__navigation'>
-            <div className='fd-calendar__action'>
-              <button className='fd-button--standard fd-button--light fd-button--compact sap-icon--slim-arrow-left' onClick={this.previous} />
-            </div>
-            <div className='fd-calendar__action'>
-              <button className='fd-button--light fd-button--compact' onClick={this.showMonths}>
-                <span>
-                    {months[this.state.currentDateDisplayed.getMonth()]}
-                </span>
-              </button>
-            </div>
-            <div className='fd-calendar__action'>
-              <button className='fd-button--light fd-button--compact' onClick={this.showYears}>
-                <span>
-                    {this.state.currentDateDisplayed.getFullYear()}
-                </span>
-              </button>
-            </div>
+            <header className='fd-calendar__header'>
+                <div className='fd-calendar__navigation'>
+                    <div className='fd-calendar__action'>
+                        <button className='fd-button--standard fd-button--light fd-button--compact sap-icon--slim-arrow-left' onClick={this.previous} />
+                    </div>
+                    <div className='fd-calendar__action'>
+                        <button className='fd-button--light fd-button--compact' onClick={this.showMonths}>
+                            <span>
+                                {months[this.state.currentDateDisplayed.getMonth()]}
+                            </span>
+                        </button>
+                    </div>
+                    <div className='fd-calendar__action'>
+                        <button className='fd-button--light fd-button--compact' onClick={this.showYears}>
+                            <span>
+                                {this.state.currentDateDisplayed.getFullYear()}
+                            </span>
+                        </button>
+                    </div>
 
-            <div className='fd-calendar__action' onClick={this.next}>
-              <button className='fd-button--standard fd-button--light fd-button--compact sap-icon--slim-arrow-right' />
-            </div>
-          </div>
-          </header>
+                    <div className='fd-calendar__action' onClick={this.next}>
+                        <button className='fd-button--standard fd-button--light fd-button--compact sap-icon--slim-arrow-right' />
+                    </div>
+                </div>
+            </header>
         );
       }
 
@@ -460,11 +460,11 @@ export class Calendar extends Component {
 
           for (let index = 0; index < 7; index++) {
               weekDays.push(
-              <th className='fd-calendar__column-header' key={index}>
-                <span className='fd-calendar__day-of-week'>
-                    {daysName[index]}
-                </span>
-              </th>);
+                  <th className='fd-calendar__column-header' key={index}>
+                      <span className='fd-calendar__day-of-week'>
+                          {daysName[index]}
+                      </span>
+                  </th>);
           }
           return <tr className='fd-calendar__row'>{weekDays}</tr>;
 
@@ -511,24 +511,24 @@ export class Calendar extends Component {
 
       render() {
         return (
-          <div className='fd-calendar'>
-            {this.generateNavigation()}
-            <div className='fd-calendar__content'>
-            {
+            <div className='fd-calendar'>
+                {this.generateNavigation()}
+                <div className='fd-calendar__content'>
+                    {
                 this.state.showMonths ? this.generateMonths() :
                 this.state.showYears ? this.generateYears() :
                 <div className='fd-calendar__dates'>
-                <table className='fd-calendar__table'>
-                <thead className='fd-calendar__group'>
-                    {this.generateWeekdays()}
-                </thead>
-                    {this.generateDays()}
-                </table>
+                    <table className='fd-calendar__table'>
+                        <thead className='fd-calendar__group'>
+                            {this.generateWeekdays()}
+                        </thead>
+                        {this.generateDays()}
+                    </table>
                 </div>
             }
 
-          </div>
-          </div>
+                </div>
+            </div>
         );
       }
 

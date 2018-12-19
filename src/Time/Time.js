@@ -246,45 +246,45 @@ class TimeItem extends Component {
     const { style, arialabel } = this.state;
     const { type, placeholder, disabled, spinners } = this.props;
     return (
-      <div className='fd-time__item'>
-        {spinners ? (
-          <div className='fd-time__control'>
-            <button
-                className=' fd-button--light fd-button--xs sap-icon--navigation-up-arrow '
-                aria-label={arialabel.buttonUp}
-                disabled={disabled}
-                onClick={this._onUp}
+        <div className='fd-time__item'>
+            {spinners ? (
+                <div className='fd-time__control'>
+                    <button
+                        className=' fd-button--light fd-button--xs sap-icon--navigation-up-arrow '
+                        aria-label={arialabel.buttonUp}
+                        disabled={disabled}
+                        onClick={this._onUp}
             />
-          </div>
+                </div>
         ) : (
           ''
         )}
-        <div className='fd-time__input'>
-          <input
-              className={style}
-              type='text'
-              maxLength='2'
-              placeholder={placeholder}
-              onChange={this.onChange}
-              value={this.props.value}
-              aria-label={type}
-              name={this.props.name}
-              readOnly={disabled}
+            <div className='fd-time__input'>
+                <input
+                    className={style}
+                    type='text'
+                    maxLength='2'
+                    placeholder={placeholder}
+                    onChange={this.onChange}
+                    value={this.props.value}
+                    aria-label={type}
+                    name={this.props.name}
+                    readOnly={disabled}
           />
-        </div>
-        {spinners ? (
-          <div className='fd-time__control'>
-            <button
-                className=' fd-button--light fd-button--xs sap-icon--navigation-down-arrow'
-                aria-label={arialabel.buttonDown}
-                disabled={disabled}
-                onClick={this._onDown}
+            </div>
+            {spinners ? (
+                <div className='fd-time__control'>
+                    <button
+                        className=' fd-button--light fd-button--xs sap-icon--navigation-down-arrow'
+                        aria-label={arialabel.buttonDown}
+                        disabled={disabled}
+                        onClick={this._onDown}
             />
-          </div>
+                </div>
         ) : (
           ''
         )}
-      </div>
+        </div>
     );
   }
 }
@@ -391,77 +391,77 @@ export class Time extends Component {
       max = 24;
     }
     return (
-      <div id={id} className='fd-time'>
-        {/* Hours */}
-        {showHour ? (
-          <TimeItem
-              disabled={disabled}
-              placeholder={'hh'}
-              defaultValue={1}
-              type={'Hours'}
-              max={max}
-              value={time.hour}
-              updateTime={this.updateTime}
-              name='hour'
-              time={time}
-              format12Hours={format12Hours}
-              spinners={spinners}
+        <div id={id} className='fd-time'>
+            {/* Hours */}
+            {showHour ? (
+                <TimeItem
+                    disabled={disabled}
+                    placeholder={'hh'}
+                    defaultValue={1}
+                    type={'Hours'}
+                    max={max}
+                    value={time.hour}
+                    updateTime={this.updateTime}
+                    name='hour'
+                    time={time}
+                    format12Hours={format12Hours}
+                    spinners={spinners}
           />
         ) : (
           ''
         )}
-        {/* Minutes */}
-        {showMinute ? (
-          <TimeItem
-              disabled={disabled}
-              placeholder={'mm'}
-              defaultValue={1}
-              type={'Minutes'}
-              max={'60'}
-              value={this.state.time.minute}
-              updateTime={this.updateTime}
-              name='minute'
-              time={time}
-              format12Hours={format12Hours}
-              spinners={spinners}
+            {/* Minutes */}
+            {showMinute ? (
+                <TimeItem
+                    disabled={disabled}
+                    placeholder={'mm'}
+                    defaultValue={1}
+                    type={'Minutes'}
+                    max={'60'}
+                    value={this.state.time.minute}
+                    updateTime={this.updateTime}
+                    name='minute'
+                    time={time}
+                    format12Hours={format12Hours}
+                    spinners={spinners}
           />
         ) : (
           ''
         )}
-        {/* Seconds */}
-        {showSecond ? (
-          <TimeItem
-              disabled={disabled}
-              placeholder={'ss'}
-              defaultValue={1}
-              type={'Seconds'}
-              max={'60'}
-              value={this.state.time.second}
-              updateTime={this.updateTime}
-              name='second'
-              time={time}
-              format12Hours={format12Hours}
-              spinners={spinners}
+            {/* Seconds */}
+            {showSecond ? (
+                <TimeItem
+                    disabled={disabled}
+                    placeholder={'ss'}
+                    defaultValue={1}
+                    type={'Seconds'}
+                    max={'60'}
+                    value={this.state.time.second}
+                    updateTime={this.updateTime}
+                    name='second'
+                    time={time}
+                    format12Hours={format12Hours}
+                    spinners={spinners}
           />
         ) : (
           ''
         )}
-        {/* Meridiem */}
-        {format12Hours ? (
-          <TimeItem
-              disabled={disabled}
-              type={'Period'}
-              max={'1'}
-              time={this.state.time}
-              value={CLOCK[this.state.time.meridiem]}
-              updateTime={this.updateTime}
-              name='meridiem'
-              spinners={spinners}
+            {/* Meridiem */}
+            {format12Hours ? (
+                <TimeItem
+                    disabled={disabled}
+                    type={'Period'}
+                    max={'1'}
+                    time={this.state.time}
+                    value={CLOCK[this.state.time.meridiem]}
+                    updateTime={this.updateTime}
+                    name='meridiem'
+                    spinners={spinners}
           />
         ) : (
           ''
         )}
-      </div>
+        </div>
     );
   }
 }

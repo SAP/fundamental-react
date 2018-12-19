@@ -8,8 +8,8 @@ Enzyme.configure({ adapter: new Adapter() });
 
 describe('<Tabs />', () => {
   const tabComponent = (
-    <TabComponent
-        ids={[
+      <TabComponent
+          ids={[
         {
           id: '1',
           url: '#',

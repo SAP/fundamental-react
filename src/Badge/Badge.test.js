@@ -8,16 +8,16 @@ describe('<Badge />', () => {
 
   const defaultPill = <Badge modifier='pill'>Default</Badge>;
   const typePill = (
-    <Badge modifier='pill' type='success'>
+      <Badge modifier='pill' type='success'>
       Default
-    </Badge>
+      </Badge>
   );
 
   const defaultFilledBadge = <Badge modifier='filled'>Default</Badge>;
   const typeFillBadge = (
-    <Badge modifier='filled' type='success'>
+      <Badge modifier='filled' type='success'>
       Default
-    </Badge>
+      </Badge>
   );
 
   const defaultLabel = <Label>Default</Label>;

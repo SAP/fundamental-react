@@ -193,14 +193,14 @@ export const TreeComponent = () => {
                     { name: 'linkUrl', description: 'If provided, this is the URL the link will navigate to.' }
 
                 ]} />
-             <Properties type='Inputs' properties=
+            <Properties type='Inputs' properties=
                 {[
                     { name: 'headers', description: 'Array of strings for the column headers of the tree' },
                     { name: 'treeData', description: '	Array of objects that contain several properties, id(the id of the row), hasChildren(a boolean value whether the row contains children or not), values (an array of objects containing data for each column in the row), and children (an array of objects containing additional rows).' }
 
                 ]} />
-             <Separator />
-             <DocsTile>
+            <Separator />
+            <DocsTile>
                 <Tree
 
                     headers={['Column Header', 'Column Header 1 ', 'Column Header 2', 'Status']}

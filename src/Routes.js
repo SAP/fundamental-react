@@ -165,46 +165,46 @@ export default class Routes extends Component {
 
   render() {
     return (
-      <BrowserRouter basename={process.env.PUBLIC_URL}>
-        <div className='container'>
-          <div className='sidebar'>
-            <h1 className='logo'>FUNDAMENTAL REACT</h1>
-            <ul className='nav'>
-              <li className='side-nav__headers'>Components</li>
-              {this.state.routes.map(route => {
+        <BrowserRouter basename={process.env.PUBLIC_URL}>
+            <div className='container'>
+                <div className='sidebar'>
+                    <h1 className='logo'>FUNDAMENTAL REACT</h1>
+                    <ul className='nav'>
+                        <li className='side-nav__headers'>Components</li>
+                        {this.state.routes.map(route => {
                 return (
-                  <NavLink
-                      className='nav-item'
-                      to={{ pathname: route.url }}
-                      key={route.url}
-                      activeClassName='nav-item--active'
+                    <NavLink
+                        className='nav-item'
+                        to={{ pathname: route.url }}
+                        key={route.url}
+                        activeClassName='nav-item--active'
                   >
-                    {route.name}
-                  </NavLink>
+                        {route.name}
+                    </NavLink>
                 );
               })}
-            </ul>
-          </div>
-          <div className='content'>
-            <div className='content-margin'>
-              <Switch>
-                {this.state.routes.map(route => {
+                    </ul>
+                </div>
+                <div className='content'>
+                    <div className='content-margin'>
+                        <Switch>
+                            {this.state.routes.map(route => {
                   return (
-                    <Route
-                        key={route.url}
-                        exact
-                        path={route.url}
-                        component={route.component}
+                      <Route
+                          key={route.url}
+                          exact
+                          path={route.url}
+                          component={route.component}
                     />
                   );
                 })}
-                <Redirect from='' exact
-                    to='/actionBar' />
-              </Switch>
+                            <Redirect from='' exact
+                                to='/actionBar' />
+                        </Switch>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-      </BrowserRouter>
+        </BrowserRouter>
     );
   }
 }

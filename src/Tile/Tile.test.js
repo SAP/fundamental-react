@@ -17,91 +17,91 @@ import { Menu, MenuList, MenuItem } from '../Menu/Menu';
 
 describe('<Tile />', () => {
   const simpleTile = (
-    <Tile>
-      <TileContent title='Tile Title'>
-        <p>Tile Description</p>
-      </TileContent>
-    </Tile>
+      <Tile>
+          <TileContent title='Tile Title'>
+              <p>Tile Description</p>
+          </TileContent>
+      </Tile>
   );
 
   const disabledSimpleTile = (
-    <Tile disabled={true} columnSpan={3}
-        backgroundColor={8}>
-      <TileContent title='Tile Title'>
-        <p>Tile Description</p>
-      </TileContent>
-    </Tile>
+      <Tile disabled={true} columnSpan={3}
+          backgroundColor={8}>
+          <TileContent title='Tile Title'>
+              <p>Tile Description</p>
+          </TileContent>
+      </Tile>
   );
 
   const mediaTile = (
-    <Tile isButton={true}>
-      <TileMedia>
-        <Identifier size='m' glyph='home'
-            color={3} />
-      </TileMedia>
-      <TileContent title='Tile Title'>
-        <p>Tile Description</p>
-      </TileContent>
-    </Tile>
+      <Tile isButton={true}>
+          <TileMedia>
+              <Identifier size='m' glyph='home'
+                  color={3} />
+          </TileMedia>
+          <TileContent title='Tile Title'>
+              <p>Tile Description</p>
+          </TileContent>
+      </Tile>
   );
 
   const actionTile = (
-    <Tile>
-      <TileContent title='Tile Title' />
-      <TileActions>
-        <Popover
-            control={<Button type='standard' glyph='vertical-grip' />}
-            body={
-            <Menu>
-              <MenuList>
-                <MenuItem url='/'>Option 1</MenuItem>
-                <MenuItem url='/'>Option 2</MenuItem>
-                <MenuItem url='/'>Option 3</MenuItem>
-                <MenuItem url='/'>Option 4</MenuItem>
-              </MenuList>
-            </Menu>
+      <Tile>
+          <TileContent title='Tile Title' />
+          <TileActions>
+              <Popover
+                  control={<Button type='standard' glyph='vertical-grip' />}
+                  body={
+                      <Menu>
+                          <MenuList>
+                              <MenuItem url='/'>Option 1</MenuItem>
+                              <MenuItem url='/'>Option 2</MenuItem>
+                              <MenuItem url='/'>Option 3</MenuItem>
+                              <MenuItem url='/'>Option 4</MenuItem>
+                          </MenuList>
+                      </Menu>
           }
         />
-      </TileActions>
-    </Tile>
+          </TileActions>
+      </Tile>
   );
 
   const productMediaTile = (
-    <ProductTile isButton={true}>
-      <ProductTileMedia image='https://techne.yaas.io/images/product-thumbnail-wide.png' />
-      <ProductTileContent title='Tile Title'>
-        <p>Tile Description</p>
-      </ProductTileContent>
-    </ProductTile>
+      <ProductTile isButton={true}>
+          <ProductTileMedia image='https://techne.yaas.io/images/product-thumbnail-wide.png' />
+          <ProductTileContent title='Tile Title'>
+              <p>Tile Description</p>
+          </ProductTileContent>
+      </ProductTile>
   );
 
   const disabledProductMediaTile = (
-    <ProductTile disabled={true}>
-      <ProductTileMedia image='https://techne.yaas.io/images/product-thumbnail-wide.png' />
-      <ProductTileContent title='Tile Title'>
-        <p>Tile Description</p>
-      </ProductTileContent>
-    </ProductTile>
+      <ProductTile disabled={true}>
+          <ProductTileMedia image='https://techne.yaas.io/images/product-thumbnail-wide.png' />
+          <ProductTileContent title='Tile Title'>
+              <p>Tile Description</p>
+          </ProductTileContent>
+      </ProductTile>
   );
 
   const defaultTileGrid = (
-    <TileGrid>
-      <Tile rowSpan={2} colorAccent={7}>
-        <TileContent title='Tile Title'>
-          <p>Tile Description</p>
-        </TileContent>
-      </Tile>
-    </TileGrid>
+      <TileGrid>
+          <Tile rowSpan={2} colorAccent={7}>
+              <TileContent title='Tile Title'>
+                  <p>Tile Description</p>
+              </TileContent>
+          </Tile>
+      </TileGrid>
   );
 
   const tileGrid = (
-    <TileGrid col={4}>
-      <Tile rowSpan={2} colorAccent={7}>
-        <TileContent title='Tile Title'>
-          <p>Tile Description</p>
-        </TileContent>
-      </Tile>
-    </TileGrid>
+      <TileGrid col={4}>
+          <Tile rowSpan={2} colorAccent={7}>
+              <TileContent title='Tile Title'>
+                  <p>Tile Description</p>
+              </TileContent>
+          </Tile>
+      </TileGrid>
   );
 
   test('create tile component', () => {

@@ -11,22 +11,22 @@ describe('<Calendar />', () => {
   const defaultCalendar = <Calendar onChange={mockOnChange} />;
   const disabledWeekEnds = <Calendar disableWeekends={true} />;
   const disabledBeforeDay = (
-    <Calendar disableBeforeDate={new Date(2018, 7, 3, 0, 0, 0, 0)} />
+      <Calendar disableBeforeDate={new Date(2018, 7, 3, 0, 0, 0, 0)} />
   );
   const disabledAfterDay = (
-    <Calendar disableAfterDate={new Date(2018, 7, 3, 0, 0, 0, 0)} />
+      <Calendar disableAfterDate={new Date(2018, 7, 3, 0, 0, 0, 0)} />
   );
   const blockedDays = (
-    <Calendar
-        blockedDates={[
+      <Calendar
+          blockedDates={[
         new Date(2018, 1, 1, 0, 0, 0, 0),
         new Date(2018, 3, 3, 0, 0, 0, 0)
       ]}
     />
   );
   const disabledDates = (
-    <Calendar
-        disabledDates={[
+      <Calendar
+          disabledDates={[
         new Date(2018, 1, 1, 0, 0, 0, 0),
         new Date(2018, 3, 3, 0, 0, 0, 0)
       ]}
@@ -34,7 +34,7 @@ describe('<Calendar />', () => {
   );
   const disabledWeekDay = <Calendar disableWeekday={['Monday', 'Tuesday']} />;
   const rangeSelect = (
-    <Calendar enableRangeSelection={true} onChange={mockOnChange} />
+      <Calendar enableRangeSelection={true} onChange={mockOnChange} />
   );
   const disablePast = <Calendar disablePastDates={true} />;
   const disableFuture = <Calendar disableFutureDates={true} />;

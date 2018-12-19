@@ -56,7 +56,7 @@ export const InlineHelpComponent = () => {
 
             <Separator />
 
-             <h2>Bottom Center Position</h2>
+            <h2>Bottom Center Position</h2>
             <DocsTile centered>
                 Bottom Center &nbsp;
                 <InlineHelp text='Lorem ipsum dolor sit amet, consectetur adipiscing.' placement='bottom-center' />
