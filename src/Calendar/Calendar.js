@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 export class Calendar extends Component {
 
-    constructor(props){
+    constructor(props) {
         super(props);
 
         this.state = {
@@ -280,7 +280,7 @@ export class Calendar extends Component {
                 selectedDates = [];
                 selectedDates.push(day);
             }
-            else if (selectedDates[0] !== undefined && day.getTime() <= selectedDates[0].getTime()){
+            else if (selectedDates[0] !== undefined && day.getTime() <= selectedDates[0].getTime()) {
                 let newArr = [];
                 newArr.push(day);
                 newArr.push(selectedDates[0]);
@@ -305,7 +305,7 @@ export class Calendar extends Component {
         });
       };
 
-    retrieveStartOfWeek(date){
+    retrieveStartOfWeek(date) {
         let day = date.getDay();
         let difference = date.getDate() - day + (day === 0 ? -6:0);
         return new Date(date.setDate(difference));
@@ -327,7 +327,7 @@ export class Calendar extends Component {
         return result;
     }
 
-    retrieveEndOfWeek(date){
+    retrieveEndOfWeek(date) {
         let difference = date.getDate() + 6 - date.getDay();
         let newDate = new Date(date.getFullYear(), date.getMonth(), difference);
         return newDate;
@@ -340,7 +340,7 @@ export class Calendar extends Component {
         }
 
         if (isRangeEnabled !== undefined || isRangeEnabled) {
-            if (blockedDates[0].getTime() > blockedDates[1].getTime()){
+            if (blockedDates[0].getTime() > blockedDates[1].getTime()) {
                 return blockedDates[1].getTime() < date.getTime() && blockedDates[0].getTime() > date.getTime();
             }
         }
@@ -356,7 +356,7 @@ export class Calendar extends Component {
     disableWeekday(date, weekDays) {
         let daysName = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
-        if (weekDays === undefined){
+        if (weekDays === undefined) {
             return false;
         }
 
@@ -366,36 +366,36 @@ export class Calendar extends Component {
         return false;
     }
 
-    disableBeforeDate(date, beforeDate){
+    disableBeforeDate(date, beforeDate) {
         if (beforeDate === undefined) {
             return false;
         }
         return (date.getTime() < beforeDate.getTime());
     }
 
-    disableAfterDate(date, afterDate){
+    disableAfterDate(date, afterDate) {
 
-        if (afterDate === undefined){
+        if (afterDate === undefined) {
             return false;
         }
         return (date.getTime() > afterDate.getTime());
     }
 
-    disableBeforeTodayDate(date){
+    disableBeforeTodayDate(date) {
         let todayDate = new Date();
         todayDate.setHours(0, 0, 0, 0);
 
         return date.getTime() < todayDate.getTime();
     }
 
-    disableAfterTodayDate(date){
+    disableAfterTodayDate(date) {
         let todayDate = new Date();
         todayDate.setHours(0, 0, 0, 0);
 
         return date.getTime() > todayDate.getTime();
     }
 
-    selectRangeSelection(date){
+    selectRangeSelection(date) {
         let selectedDates = this.state.arrSelectedDates;
         if (selectedDates.length === 2) {
             selectedDates = [];
