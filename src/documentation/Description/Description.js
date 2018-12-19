@@ -7,7 +7,7 @@ export const Description = (props) => {
         fontWeight: '300'
     }
     const { children } = props;
-    
+
     return (
         <p className='description' style={descriptionStyle}>
             {children}

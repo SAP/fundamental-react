@@ -6,4 +6,4 @@ import { Import } from '../documentation/Import/Import'
 import { Playground } from '../documentation/Playground/Playground'
 import { Properties } from '../documentation/Properties/Properties'
 
-export {DocsTile, DocsText, Separator, Header, Description, Import, Playground, Properties } 
+export {DocsTile, DocsText, Separator, Header, Description, Import, Playground, Properties }

@@ -90,7 +90,7 @@ export const MegaMenuComponent = () => {
                                     { id: 'subitem_84', link: '#', name: 'Link' }]
                                 },
                                 { id: 'item_9', link: '#', name: 'Link Item' }
-                                
+
                             ]}>
                         </MegaMenuList>
                     </MegaMenuGroup>

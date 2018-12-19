@@ -27,7 +27,7 @@ export const DatePickerComponent = () => {
                 type='Inputs'
                 properties={[
                 { name: 'enableRangeSelection', description: 'bool - Enable to select two dates' },
-                {name: 'disableWeekends', description: 'bool - Disable weekends'}, 
+                {name: 'disableWeekends', description: 'bool - Disable weekends'},
                 {name: 'disableBeforeDate', description: 'date - Disables dates of a calendar that comes before a specific date'},
                 {name: 'disableAfterDate', description: 'date - Disables dates of a calendar that comes after a specific date'},
                 {name: 'disableWeekday', description: 'array of strings - Disables dates of a calendar that match a weekday'},

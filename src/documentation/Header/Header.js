@@ -6,7 +6,7 @@ export const Header = (props) => {
         fontSize: '2.2rem'
     }
     const { children } = props;
-    
+
     return (
         <h1 className='header' style={headerStyle}>
             {children}

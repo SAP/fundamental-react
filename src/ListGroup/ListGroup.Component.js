@@ -750,7 +750,7 @@ export const ListGroupComponent = () => {
                         </ListGroupItemActions>
                     </ListGroupItem>
                 </ListGroup>
-                
+
             </Playground>
         </div>
     );

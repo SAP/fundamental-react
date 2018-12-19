@@ -63,7 +63,7 @@ describe('<InlineHelp />', () => {
 
     expect(tree).toMatchSnapshot();
   });
-  
+
   test('create Left InlineHelp component', () => {
     const component = renderer.create(inlineHelpLeft);
     const tree = component.toJSON();
