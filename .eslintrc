@@ -126,7 +126,7 @@ rules:
     #react/react-in-jsx-scope: 2
     #react/self-closing-comp: 2
     #react/sort-prop-types: [2, { 'callbacksLast' : true, 'ignoreCase' : true, 'requiredFirst' : true, } ]
-    #semi-spacing: 2
+    semi-spacing: 2
     semi: 2
     #sort-imports: [2, { 'ignoreCase': true, 'ignoreMemberSort': false, 'memberSyntaxSortOrder': ['none', 'single', 'multiple', 'all'] }]
     space-before-blocks: 2

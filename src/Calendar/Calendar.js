@@ -220,7 +220,7 @@ export class Calendar extends Component {
 
         let year = this.state.currentYear.getFullYear();
         let years = [year];
-        for (let iterations = 1 ; iterations < 12; iterations++) {
+        for (let iterations = 1; iterations < 12; iterations++) {
             year = year + 1;
             years.push(year);
         }
