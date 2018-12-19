@@ -30,8 +30,8 @@ export const PanelGrid = props => {
 };
 
 PanelGrid.propTypes = {
-    nogap: PropTypes.bool,
-    cols: PropTypes.number
+    cols: PropTypes.number,
+    nogap: PropTypes.bool
 };
 
 PanelGrid.defaultProps = {

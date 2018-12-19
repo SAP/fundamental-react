@@ -35,7 +35,7 @@ export const BreadcrumbItem = props => {
 };
 
 BreadcrumbItem.propTypes = {
-    url: PropTypes.string,
+    name: PropTypes.string.isRequired,
     link: PropTypes.string,
-    name: PropTypes.string.isRequired
+    url: PropTypes.string
 };

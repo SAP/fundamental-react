@@ -156,8 +156,8 @@ export class SearchInput extends Component {
 }
 
 SearchInput.propTypes = {
-  placeHolder: PropTypes.string,
-  data: PropTypes.array,
   onSearch: PropTypes.func.isRequired,
+  data: PropTypes.array,
+  placeHolder: PropTypes.string,
   onAutoComplete: PropTypes.func
 };

@@ -7,12 +7,12 @@ const INVALID = 'is-invalid';
 const VALID = 'fd-input';
 class TimePickerItem extends Component {
   static propTypes = {
-    value: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-    inputId: PropTypes.string,
     buttonID: PropTypes.string,
-    style: PropTypes.string,
+    inputId: PropTypes.string,
     isValid: PropTypes.bool,
-    length: PropTypes.number
+    length: PropTypes.number,
+    style: PropTypes.string,
+    value: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
   };
   static defaultProps = {
     value: null,
@@ -281,12 +281,12 @@ class TimePickerItem extends Component {
 
 export class TimePicker extends React.Component {
   static propTypes = {
+    disabled: PropTypes.bool,
+    format12Hours: PropTypes.bool,
     id: PropTypes.string,
     showHour: PropTypes.bool,
     showMinute: PropTypes.bool,
     showSecond: PropTypes.bool,
-    format12Hours: PropTypes.bool,
-    disabled: PropTypes.bool,
     spinners: PropTypes.bool,
     time: PropTypes.object,
     value: PropTypes.string

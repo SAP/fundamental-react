@@ -36,10 +36,10 @@ export const ComboboxInput = props => {
 };
 
 ComboboxInput.propTypes = {
-  id: PropTypes.string,
-  placeholder: PropTypes.string,
   menu: PropTypes.object.isRequired,
-  compact: PropTypes.bool
+  compact: PropTypes.bool,
+  id: PropTypes.string,
+  placeholder: PropTypes.string
 };
 
 ComboboxInput.defaultTypes = {

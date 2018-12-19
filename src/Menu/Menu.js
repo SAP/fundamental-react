@@ -13,8 +13,8 @@ export const Menu = props => {
 };
 
 Menu.propTypes = {
-    id: PropTypes.string,
-    addonBefore: PropTypes.bool
+    addonBefore: PropTypes.bool,
+    id: PropTypes.string
 };
 
 // ---------------------------------------- Menu List ----------------------------------------
@@ -50,10 +50,10 @@ export const MenuItem = props => {
 };
 
 MenuItem.propTypes = {
-    url: PropTypes.string,
-    separator: PropTypes.bool,
     addon: PropTypes.string,
-    isLink: PropTypes.bool
+    isLink: PropTypes.bool,
+    separator: PropTypes.bool,
+    url: PropTypes.string
 };
 
 // ---------------------------------------- Menu Group ----------------------------------------

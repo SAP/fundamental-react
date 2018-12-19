@@ -11,8 +11,8 @@ export const Badge = props => {
 };
 
 Badge.propTypes = {
-    type: PropTypes.oneOf(['', 'success', 'warning', 'error']),
-    modifier: PropTypes.oneOf(['', 'pill', 'filled'])
+    modifier: PropTypes.oneOf(['', 'pill', 'filled']),
+    type: PropTypes.oneOf(['', 'success', 'warning', 'error'])
 };
 
 export const Label = props => {
@@ -35,8 +35,8 @@ export const Status = props => {
     );
 };
 Status.propTypes = {
-    type: PropTypes.oneOf(['', 'success', 'warning', 'error', 'available', 'away', 'busy', 'offline']),
-    glyph: PropTypes.string
+    glyph: PropTypes.string,
+    type: PropTypes.oneOf(['', 'success', 'warning', 'error', 'available', 'away', 'busy', 'offline'])
 };
 
 export const Counter = props => {

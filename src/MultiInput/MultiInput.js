@@ -165,8 +165,8 @@ export class MultiInput extends Component {
 }
 
 MultiInput.propTypes = {
-  placeHolder: PropTypes.string,
   data: PropTypes.array.isRequired,
-  onTagsUpdate: PropTypes.func,
-  compact: PropTypes.bool
+  compact: PropTypes.bool,
+  placeHolder: PropTypes.string,
+  onTagsUpdate: PropTypes.func
 };

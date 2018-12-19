@@ -37,8 +37,8 @@ export const FormLabel = props => {
 };
 
 FormLabel.propTypes = {
-    required: PropTypes.bool,
-    forAttr: PropTypes.string
+    forAttr: PropTypes.string,
+    required: PropTypes.bool
 };
 
 // ------------------------------------------------- Form Message ----------------------------------------------
@@ -65,10 +65,10 @@ export const FormInput = props => {
 };
 
 FormInput.propTypes = {
-    type: PropTypes.string,
-    state: PropTypes.string,
     id: PropTypes.string,
-    placeholder: PropTypes.string
+    placeholder: PropTypes.string,
+    state: PropTypes.string,
+    type: PropTypes.string
 };
 
 // ------------------------------------------------- Form Textarea ----------------------------------------------
@@ -107,9 +107,9 @@ export const FormSelect = props => {
     );
 };
 FormSelect.propTypes = {
+    disabled: PropTypes.bool,
     id: PropTypes.string,
-    name: PropTypes.string,
-    disabled: PropTypes.bool
+    name: PropTypes.string
 };
 
 // ------------------------------------------------- Form Radio ----------------------------------------------
@@ -174,6 +174,6 @@ export class FormRadio extends Component {
 }
 FormRadio.propTypes = {
     defaultChecked: PropTypes.string,
-    isInline: PropTypes.bool,
-    disabled: PropTypes.bool
+    disabled: PropTypes.bool,
+    isInline: PropTypes.bool
 };

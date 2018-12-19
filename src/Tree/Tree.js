@@ -217,7 +217,6 @@ export class Tree extends Component {
   }
 }
 Tree.propTypes = {
-  headers: PropTypes.arrayOf(PropTypes.string),
   treeData: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
@@ -226,5 +225,6 @@ Tree.propTypes = {
       children: PropTypes.array
     }).isRequired
   ).isRequired,
+  headers: PropTypes.arrayOf(PropTypes.string),
   id: PropTypes.string
 };

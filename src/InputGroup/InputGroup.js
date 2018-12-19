@@ -201,14 +201,14 @@ export class InputGroup extends Component {
 }
 
 InputGroup.propTypes = {
-  inputType: PropTypes.oneOf(['text', 'number', 'search']),
+  actions: PropTypes.bool,
+  addon: PropTypes.string,
+  addonPos: PropTypes.oneOf(['before', 'after']),
+  compact: PropTypes.bool,
+  glyph: PropTypes.string,
   inputId: PropTypes.string,
   inputName: PropTypes.string,
-  inputValue: PropTypes.any,
   inputPlaceholder: PropTypes.string,
-  addonPos: PropTypes.oneOf(['before', 'after']),
-  addon: PropTypes.string,
-  glyph: PropTypes.string,
-  actions: PropTypes.bool,
-  compact: PropTypes.bool
+  inputType: PropTypes.oneOf(['text', 'number', 'search']),
+  inputValue: PropTypes.any
 };

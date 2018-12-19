@@ -117,10 +117,10 @@ export class Pagination extends Component {
 }
 
 Pagination.propTypes = {
-  itemsPerPage: PropTypes.number,
   itemsTotal: PropTypes.number.isRequired,
   onClick: PropTypes.func.isRequired,
-  initialPage: PropTypes.number,
   displayTotal: PropTypes.bool,
+  initialPage: PropTypes.number,
+  itemsPerPage: PropTypes.number,
   totalText: PropTypes.string
 };

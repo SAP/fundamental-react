@@ -4,9 +4,9 @@ const INVALID = 'is-invalid';
 const CLOCK = ['am', 'pm'];
 class TimeItem extends Component {
   static propTypes = {
-    value: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+    arialabel: PropTypes.string,
     style: PropTypes.string,
-    arialabel: PropTypes.string
+    value: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
   };
   static defaultProps = {
     id: '',
@@ -291,12 +291,12 @@ class TimeItem extends Component {
 
 export class Time extends Component {
   static propTypes = {
+    disabled: PropTypes.bool,
+    format12Hours: PropTypes.bool,
     id: PropTypes.string,
     showHour: PropTypes.bool,
     showMinute: PropTypes.bool,
     showSecond: PropTypes.bool,
-    format12Hours: PropTypes.bool,
-    disabled: PropTypes.bool,
     spinners: PropTypes.bool,
     time: PropTypes.object
   };

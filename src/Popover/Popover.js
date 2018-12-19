@@ -89,8 +89,8 @@ export class Popover extends Component {
 }
 
 Popover.propTypes = {
-  id: PropTypes.string,
   alignment: PropTypes.oneOf(['', 'right']),
-  noArrow: PropTypes.bool,
-  disabled: PropTypes.bool
+  disabled: PropTypes.bool,
+  id: PropTypes.string,
+  noArrow: PropTypes.bool
 };

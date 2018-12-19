@@ -27,10 +27,10 @@ export const Table = props => {
     );
 };
 Table.propTypes = {
-    headers: PropTypes.array,
     tableData: PropTypes.arrayOf(
         PropTypes.shape({
             rowData: PropTypes.array
         }).isRequired
-    ).isRequired
+    ).isRequired,
+    headers: PropTypes.array
 };

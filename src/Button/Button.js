@@ -35,16 +35,16 @@ export const Button = props => {
 };
 
 Button.propTypes = {
-  option: PropTypes.oneOf(['', 'emphasized', 'light', 'shell']),
-  type: PropTypes.oneOf(['', 'standard', 'positive', 'negative', 'medium']),
   compact: PropTypes.bool,
+  disabled: PropTypes.bool,
+  dropdown: PropTypes.bool,
   glyph: PropTypes.string,
   navbar: PropTypes.bool,
-  dropdown: PropTypes.bool,
+  onclick: PropTypes.func,
+  option: PropTypes.oneOf(['', 'emphasized', 'light', 'shell']),
   selected: PropTypes.bool,
-  disabled: PropTypes.bool,
-  typeAttr: PropTypes.string,
-  onclick: PropTypes.func
+  type: PropTypes.oneOf(['', 'standard', 'positive', 'negative', 'medium']),
+  typeAttr: PropTypes.string
 };
 
 export const ButtonGroup = props => {

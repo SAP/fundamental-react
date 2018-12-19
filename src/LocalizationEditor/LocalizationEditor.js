@@ -95,7 +95,7 @@ LocalizationEditor.propTypes = {
       language: PropTypes.string
     }).isRequired
   ).isRequired,
-  id: PropTypes.string,
   compact: PropTypes.bool,
+  id: PropTypes.string,
   textarea: PropTypes.bool
 };

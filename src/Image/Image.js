@@ -12,7 +12,7 @@ export const Image = props => {
 };
 
 Image.propTypes = {
+  photo: PropTypes.string.isRequired,
   size: PropTypes.oneOf(['s', 'm', 'l']).isRequired,
-  type: PropTypes.oneOf(['', 'circle']),
-  photo: PropTypes.string.isRequired
+  type: PropTypes.oneOf(['', 'circle'])
 };

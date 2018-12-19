@@ -30,12 +30,12 @@ export const Tile = props => {
 };
 
 Tile.propTypes = {
-  isButton: PropTypes.bool,
-  disabled: PropTypes.bool,
-  rowSpan: PropTypes.number,
-  columnSpan: PropTypes.number,
+  backgroundColor: PropTypes.number,
   colorAccent: PropTypes.number,
-  backgroundColor: PropTypes.number
+  columnSpan: PropTypes.number,
+  disabled: PropTypes.bool,
+  isButton: PropTypes.bool,
+  rowSpan: PropTypes.number
 };
 
 export const TileContent = props => {
@@ -75,8 +75,8 @@ export const ProductTile = props => {
 };
 
 ProductTile.propTypes = {
-  isButton: PropTypes.bool,
-  disabled: PropTypes.bool
+  disabled: PropTypes.bool,
+  isButton: PropTypes.bool
 };
 
 export const ProductTileContent = props => {

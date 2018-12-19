@@ -16,7 +16,7 @@ Icon.defaultProps = {
 };
 
 Icon.propTypes = {
-  size: PropTypes.string,
+  glyph: PropTypes.string.isRequired,
   clickHandler: PropTypes.func,
-  glyph: PropTypes.string.isRequired
+  size: PropTypes.string
 };

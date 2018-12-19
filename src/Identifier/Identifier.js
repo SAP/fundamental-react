@@ -23,10 +23,10 @@ export const Identifier = props => {
 };
 
 Identifier.propTypes = {
-  glyph: PropTypes.string,
-  size: PropTypes.string,
-  modifier: PropTypes.oneOf(['', 'circle', 'transparent']),
+  backgroundImageUrl: PropTypes.string,
   color: PropTypes.oneOf([1, 2, 3, 4, 5, 6, 7, 8, 9]),
+  glyph: PropTypes.string,
   label: PropTypes.string,
-  backgroundImageUrl: PropTypes.string
+  modifier: PropTypes.oneOf(['', 'circle', 'transparent']),
+  size: PropTypes.string
 };

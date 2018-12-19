@@ -36,7 +36,7 @@ export class Toggle extends React.Component {
 }
 
 Toggle.propTypes = {
-    size: PropTypes.oneOf(['', 'xs', 's', 'l']),
+    disabled: PropTypes.bool,
     id: PropTypes.string,
-    disabled: PropTypes.bool
+    size: PropTypes.oneOf(['', 'xs', 's', 'l'])
 };
