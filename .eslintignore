@@ -1,5 +1,6 @@
 .idea/
-node_modules/**
-*.opts
 *.css
+*.opts
 *.scss
+*.snap
+node_modules/**
