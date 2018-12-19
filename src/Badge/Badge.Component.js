@@ -234,22 +234,22 @@ export const BadgeComponent = () => {
                     {
                         attribute: 'component',
                         typeOfAttribute: 'string',
-                        enum: ['badge', 'label', 'status']
+                        "enum": ['badge', 'label', 'status']
                     },
                     {
                         attribute: 'type',
                         typeOfAttribute: 'string',
-                        enum: ['default', 'success', 'warning', 'error', 'available', 'away', 'busy', 'offline']
+                        "enum": ['default', 'success', 'warning', 'error', 'available', 'away', 'busy', 'offline']
                     },
                     {
                         attribute: 'modifier',
                         typeOfAttribute: 'string',
-                        enum: ['', 'pill', 'filled']
+                        "enum": ['', 'pill', 'filled']
                     },
                     {
                         attribute: 'glyph',
                         typeOfAttribute: 'string',
-                        enum: [
+                        "enum": [
                             '',
                             'accelerated',
                             'accept',

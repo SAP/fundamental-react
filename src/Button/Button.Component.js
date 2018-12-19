@@ -356,12 +356,12 @@ const clickBtnHandler = btn => {
                     {
                         attribute: 'option',
                         typeOfAttribute: 'string',
-                        enum: ['', 'emphasized', 'light']
+                        "enum": ['', 'emphasized', 'light']
                     },
                     {
                         attribute: 'type',
                         typeOfAttribute: 'string',
-                        enum: ['', 'standard', 'positive', 'medium', 'negative']
+                        "enum": ['', 'standard', 'positive', 'medium', 'negative']
                     },
                     {
                         attribute: 'compact',
@@ -370,7 +370,7 @@ const clickBtnHandler = btn => {
                     {
                         attribute: 'glyph',
                         typeOfAttribute: 'string',
-                        enum: [
+                        "enum": [
                             '',
                             'accelerated',
                             'accept',

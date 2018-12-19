@@ -48,12 +48,12 @@ export const TabsComponent = () => {
                     {
                         attribute: 'ids',
                         typeOfAttribute: 'lists',
-                        enum: ['Tab 1', 'Tab 2', 'Tab 3']
+                        "enum": ['Tab 1', 'Tab 2', 'Tab 3']
                     },
                     {
                         attribute: 'content',
                         typeOfAttribute: 'listsContent',
-                        enum: ['Tab 1', 'Tab 2', 'Tab 3']
+                        "enum": ['Tab 1', 'Tab 2', 'Tab 3']
                     }
                 ]}
             >

@@ -142,7 +142,7 @@ export const AlertComponent = () => {
                     {
                         attribute: 'type',
                         typeOfAttribute: 'string',
-                        enum: ['', 'warning', 'error', 'information', 'success']
+                        "enum": ['', 'warning', 'error', 'information', 'success']
                     },
                     {
                         attribute: 'dismissable',

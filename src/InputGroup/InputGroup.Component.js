@@ -439,7 +439,7 @@ Compact mode:
           {
             attribute: 'addonPos',
             typeOfAttribute: 'string',
-            enum: ['after', 'before']
+            "enum": ['after', 'before']
           },
           {
             attribute: 'inputValue',
@@ -448,7 +448,7 @@ Compact mode:
           {
             attribute: 'glyph',
             typeOfAttribute: 'string',
-            enum: [
+            "enum": [
               '',
               'accelerated',
               'accept',

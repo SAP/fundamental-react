@@ -702,7 +702,7 @@ export const IconComponent = () => {
           {
             attribute: 'glyph',
             typeOfAttribute: 'string',
-            enum: [
+            "enum": [
               '',
               'accelerated',
               'accept',
@@ -1330,7 +1330,7 @@ export const IconComponent = () => {
           {
             attribute: 'size',
             typeOfAttribute: 'string',
-            enum: ['s', '', 'm', 'l', 'xl']
+            "enum": ['s', '', 'm', 'l', 'xl']
           }
         ]}
       >

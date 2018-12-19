@@ -65,7 +65,7 @@ export const ImageComponent = () => {
                     {
                         attribute: 'size',
                         typeOfAttribute: 'string',
-                        enum: ['s', 'm', 'l']
+                        "enum": ['s', 'm', 'l']
                     },
                     {
                         attribute: 'photo',
@@ -74,7 +74,7 @@ export const ImageComponent = () => {
                     {
                         attribute: 'type',
                         typeOfAttribute: 'string',
-                        enum: ['', 'circle']
+                        "enum": ['', 'circle']
                     }
                 ]}
             >
