@@ -7,10 +7,10 @@ export class Calendar extends Component {
         super(props);
 
         this.state = {
-            todayDate: new Date(new Date().getFullYear(),new Date().getMonth(),new Date().getDate(),0,0,0,0),
+            todayDate: new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate(), 0, 0, 0, 0),
             currentDateDisplayed: new Date(),
             arrSelectedDates: [],
-            selectedDate: new Date(0,0,0),
+            selectedDate: new Date(0, 0, 0),
             showMonths: false,
             showYears: false,
             currentYear: new Date(),
@@ -67,10 +67,10 @@ export class Calendar extends Component {
                     if (previousStates.dateClick) {
                         return ({dateClick: false});
                     }
-                    return ({currentDateDisplayed: new Date(), arrSelectedDates: [], selectedDate: new Date(0,0,0)})
+                    return ({currentDateDisplayed: new Date(), arrSelectedDates: [], selectedDate: new Date(0, 0, 0)})
                 }
                 //updates the calendar if the date from date picker is correct
-                return ({arrSelectedDates: updatedPropsParent.customDate, selectedDate: new Date(0,0,0)});
+                return ({arrSelectedDates: updatedPropsParent.customDate, selectedDate: new Date(0, 0, 0)});
             }
         }
         else if (updatedPropsParent.customDate !== previousStates.currentDateDisplayed) {
@@ -83,7 +83,7 @@ export class Calendar extends Component {
                 }
                 //If date was not clicked then the date is reset
                 if (!previousStates.dateClick) {
-                    return ({currentDateDisplayed: new Date(), selectedDate: new Date(0,0,0)});
+                    return ({currentDateDisplayed: new Date(), selectedDate: new Date(0, 0, 0)});
                 }
             }
             else {
@@ -245,7 +245,7 @@ export class Calendar extends Component {
         }
         else { 
             let copyDate = this.state.currentDateDisplayed;
-            let selectedDate = new Date(this.state.selectedDate.getFullYear(), this.state.selectedDate.getMonth(), this.state.selectedDate.getDate(), 0,0,0,0);
+            let selectedDate = new Date(this.state.selectedDate.getFullYear(), this.state.selectedDate.getMonth(), this.state.selectedDate.getDate(), 0, 0, 0, 0);
             copyDate.setMonth(copyDate.getMonth() + 1);
             this.setState({
                 currentDateDisplayed: copyDate, selectedDate: selectedDate, dateClick: true
@@ -262,7 +262,7 @@ export class Calendar extends Component {
         }
         else {
             let copyDate = this.state.currentDateDisplayed;
-            let selectedDate = new Date(this.state.selectedDate.getFullYear(), this.state.selectedDate.getMonth(), this.state.selectedDate.getDate(), 0,0,0,0);
+            let selectedDate = new Date(this.state.selectedDate.getFullYear(), this.state.selectedDate.getMonth(), this.state.selectedDate.getDate(), 0, 0, 0, 0);
             copyDate.setMonth(copyDate.getMonth() - 1);
 
             this.setState({
@@ -383,14 +383,14 @@ export class Calendar extends Component {
 
     disableBeforeTodayDate(date){
         let todayDate = new Date();
-        todayDate.setHours(0,0,0,0);
+        todayDate.setHours(0, 0, 0, 0);
 
         return date.getTime() < todayDate.getTime();
     }
 
     disableAfterTodayDate(date){
         let todayDate = new Date();
-        todayDate.setHours(0,0,0,0);
+        todayDate.setHours(0, 0, 0, 0);
 
         return date.getTime() > todayDate.getTime();
     }
@@ -455,7 +455,7 @@ export class Calendar extends Component {
     
       generateWeekdays() {
           let weekDays= [];
-          let daysName = ['S','M', 'T', 'W', 'T', 'F', 'S'];
+          let daysName = ['S', 'M', 'T', 'W', 'T', 'F', 'S'];
 
           for(let index  = 0; index < 7; index++) {
               weekDays.push(

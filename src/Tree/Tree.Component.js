@@ -214,7 +214,7 @@ export const TreeComponent = () => {
                                     id: '2', hasChildren: false,
                                     values: [{
                                         display: ''
-                                    },{
+                                    }, {
                                         displayText: 'Google',
                                         linkUrl: 'http://google.com'
                                     },
