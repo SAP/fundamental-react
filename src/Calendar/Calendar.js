@@ -103,7 +103,7 @@ export class Calendar extends Component {
     }
 
     displayBetweenRange(day) {
-        return this.props.enableRangeSelection && this.isDateBetween(day, this.state.arrSelectedDates, this.props.enableRangeSelection)? "is-selected-range" : "";
+        return this.props.enableRangeSelection && this.isDateBetween(day, this.state.arrSelectedDates, this.props.enableRangeSelection) ? "is-selected-range" : "";
     }
 
     displaySelectedRangeLast(day) {
@@ -124,7 +124,7 @@ export class Calendar extends Component {
                     && !(this.disableWeekday(day, this.props.disableWeekday))
                     && !(this.props.disablePastDates && (this.disableBeforeTodayDate(day)))
                     && !(this.props.disableFutureDates && this.disableAfterTodayDate(day))
-                    && !(this.isDateBetween(day, this.props.disabledDates)) ?"is-selected":"";
+                    && !(this.isDateBetween(day, this.props.disabledDates)) ? "is-selected" : "";
     }
 
     displaySelectedRangeFirst(day) {
@@ -132,7 +132,7 @@ export class Calendar extends Component {
     }
 
     displayDisabled(day) {
-        return (this.props.disableWeekends && (day.getDay() === 0 || day.getDay() === 6)) || (this.props.disablePastDates && (this.disableBeforeTodayDate(day))) || (this.props.disableFutureDates && this.disableAfterTodayDate(day)) ||(this.disableWeekday(day, this.props.disableWeekday)) || this.disableBeforeDate(day, this.props.disableBeforeDate) || this.disableAfterDate(day, this.props.disableAfterDate) || this.isDateBetween(day, this.props.disabledDates) ? " is-disabled": "";
+        return (this.props.disableWeekends && (day.getDay() === 0 || day.getDay() === 6)) || (this.props.disablePastDates && (this.disableBeforeTodayDate(day))) || (this.props.disableFutureDates && this.disableAfterTodayDate(day)) || (this.disableWeekday(day, this.props.disableWeekday)) || this.disableBeforeDate(day, this.props.disableBeforeDate) || this.disableAfterDate(day, this.props.disableAfterDate) || this.isDateBetween(day, this.props.disabledDates) ? " is-disabled" : "";
     }
 
 
@@ -307,7 +307,7 @@ export class Calendar extends Component {
 
     retrieveStartOfWeek(date) {
         let day = date.getDay();
-        let difference = date.getDate() - day + (day === 0 ? -6:0);
+        let difference = date.getDate() - day + (day === 0 ? -6 : 0);
         return new Date(date.setDate(difference));
     }
 
@@ -454,7 +454,7 @@ export class Calendar extends Component {
       }
 
       generateWeekdays() {
-          let weekDays= [];
+          let weekDays = [];
           let daysName = ['S', 'M', 'T', 'W', 'T', 'F', 'S'];
 
           for (let index = 0; index < 7; index++) {
@@ -489,7 +489,7 @@ export class Calendar extends Component {
             for (let iterations = 0; iterations < 7; iterations++) {
                 dateFormatted = day.getDate();
                 let copyDate = day;
-                days.push(<td className={`fd-calendar__item fd-calendar__item${this.displayIsDayOtherMonth(day)} ${this.state.todayDate.getTime() === copyDate.getTime() ? "fd-calendar__item--current":""} ${this.displayIsSelected(day)} ${this.displaySelectedRangeFirst(day)}${this.displaySelectedRangeLast(day)}${this.displayBetweenRange(day)} ${this.displayDisabled(day)} ${this.isDateBetween(day, blockedDates) ? "is-blocked": ""}` } role='gridcell' onClick={() => this.dateClick(copyDate, enableRangeSelection)} key={copyDate}><span className='fd-calendar__text'>{dateFormatted}</span>
+                days.push(<td className={`fd-calendar__item fd-calendar__item${this.displayIsDayOtherMonth(day)} ${this.state.todayDate.getTime() === copyDate.getTime() ? "fd-calendar__item--current" : ""} ${this.displayIsSelected(day)} ${this.displaySelectedRangeFirst(day)}${this.displaySelectedRangeLast(day)}${this.displayBetweenRange(day)} ${this.displayDisabled(day)} ${this.isDateBetween(day, blockedDates) ? "is-blocked" : ""}` } role='gridcell' onClick={() => this.dateClick(copyDate, enableRangeSelection)} key={copyDate}><span className='fd-calendar__text'>{dateFormatted}</span>
                 </td>);
                 day = this.addDays(day, 1);
             }
@@ -513,8 +513,8 @@ export class Calendar extends Component {
             {this.generateNavigation()}
             <div className='fd-calendar__content'>
             {
-                this.state.showMonths? this.generateMonths() :
-                this.state.showYears? this.generateYears() :
+                this.state.showMonths ? this.generateMonths() :
+                this.state.showYears ? this.generateYears() :
                 <div className='fd-calendar__dates'>
                 <table className='fd-calendar__table'>
                 <thead className='fd-calendar__group'>
