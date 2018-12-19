@@ -6,7 +6,6 @@ env:
 
 globals:
     $: true
-    widgets: true
 
 parser: 'babel-eslint'
 

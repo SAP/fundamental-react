@@ -10,9 +10,9 @@ branches:
   - "/^feature\\/.*$/"
 jobs:
   include:
-    - stage: "Lint"
+    - stage: "Fundamental-react: Lint"
       script: npm run lint
-    - stage: "Fundamental-react build"
+    - stage: "Fundamental-react: Build"
       name: "Unit tests"
       script: "./ci-scripts/unit-tests.sh"
 notifications:
