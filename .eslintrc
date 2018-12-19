@@ -11,8 +11,9 @@ globals:
 parser: 'babel-eslint'
 
 plugins:
-    - react
     - jsx-a11y
+    - loosely-restrict-imports
+    - react
 
 rules:
     #brace-style: 2
@@ -63,7 +64,7 @@ rules:
     jsx-quotes: [ 2, prefer-single ]
     key-spacing: 2
     keyword-spacing: [2, { 'before': true }]
-    #loosely-restrict-imports/loosely-restrict-imports: [2, '.jsx']
+    loosely-restrict-imports/loosely-restrict-imports: [2, '.jsx']
     new-cap: 2
     no-cond-assign: 2
     #no-console: 2
