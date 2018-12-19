@@ -126,7 +126,7 @@ const clickBackBtn = () => {
             <h2>Action bar with back button, description and action buttons.</h2>
             <DocsTile>
                 <ActionBar>
-                    <ActionBarBack onclick={clickBackBtn}/>
+                    <ActionBarBack onclick={clickBackBtn} />
                     <ActionBarHeader title={'Page Title'} description={'Action Bar Description'} />
                     <ActionBarActions>
                         <Button>Button</Button>

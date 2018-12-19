@@ -61,7 +61,7 @@ export const IdentifierComponent = () => {
                 {name: 'color', description: 'number - Applies a background color. Options include numbers from 1 to 9'},
                 {name: 'backgroundImageUrl', description: 'string - Image url.'}
 
-            ]}/>
+            ]} />
 
             <Separator />
 
