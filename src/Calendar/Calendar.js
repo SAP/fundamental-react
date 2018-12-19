@@ -54,7 +54,7 @@ export class Calendar extends Component {
     //Updates the states when the props of the parent component are changed.
     static getDerivedStateFromProps(updatedPropsParent, previousStates) {
 
-        if(updatedPropsParent.customDate === undefined) {
+        if (updatedPropsParent.customDate === undefined) {
             return null;
         }
 
@@ -220,7 +220,7 @@ export class Calendar extends Component {
         
         let year = this.state.currentYear.getFullYear();
         let years = [year];
-        for(let iterations  = 1 ; iterations < 12; iterations++) {
+        for (let iterations  = 1 ; iterations < 12; iterations++) {
             year = year + 1;
             years.push(year);
         }
@@ -238,7 +238,7 @@ export class Calendar extends Component {
 
     next() {
 
-        if(this.state.showYears) {
+        if (this.state.showYears) {
             let copyDate = this.state.currentYear;
             copyDate.setFullYear(copyDate.getFullYear() + 12);
             this.setState({currentYear: copyDate, dateClick: true});
@@ -255,7 +255,7 @@ export class Calendar extends Component {
 
     previous() {
 
-        if(this.state.showYears) {
+        if (this.state.showYears) {
             let copyDate = this.state.currentYear;
             copyDate.setFullYear(copyDate.getFullYear() - 12);
             this.setState({currentYear: copyDate, dateClick: true});
@@ -457,7 +457,7 @@ export class Calendar extends Component {
           let weekDays= [];
           let daysName = ['S', 'M', 'T', 'W', 'T', 'F', 'S'];
 
-          for(let index  = 0; index < 7; index++) {
+          for (let index  = 0; index < 7; index++) {
               weekDays.push(
               <th className="fd-calendar__column-header" key={index}>
                 <span className="fd-calendar__day-of-week">

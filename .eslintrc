@@ -62,7 +62,7 @@ rules:
     jsx-a11y/tabindex-no-positive: 2
     #jsx-quotes: [ 2, prefer-single ]
     key-spacing: 2
-    #keyword-spacing: [2, { 'before': true }]
+    keyword-spacing: [2, { 'before': true }]
     #loosely-restrict-imports/loosely-restrict-imports: [2, '.jsx']
     new-cap: 2
     no-cond-assign: 2
