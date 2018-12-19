@@ -85,7 +85,7 @@ const clickBackBtn = () => {
 
 const clickBackBtn = () => {
     alert("You clicked me!");
-}
+};
 
     return (
         <div>

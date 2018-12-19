@@ -1,6 +1,6 @@
-import React from 'react'
-import { Token } from './Token'
-import { DocsTile, DocsText, Separator, Header, Description, Import } from '..'
+import React from 'react';
+import { Token } from './Token';
+import { DocsTile, DocsText, Separator, Header, Description, Import } from '..';
 
 export const TokenComponent = () => {
     const tokenCode = `<Token>Bibendum</Token>
@@ -24,11 +24,11 @@ export const TokenComponent = () => {
             <DocsTile centered>
                 {
                     tagsNames.map((name) => {
-                        return <Token clickHandler={(e) => closeAction(name, e)}>{name}</Token>
+                        return <Token clickHandler={(e) => closeAction(name, e)}>{name}</Token>;
                     })
                 }
             </DocsTile>
             <DocsText>{tokenCode}</DocsText>
         </div>
     );
-}
+};

@@ -20,4 +20,4 @@ InlineHelp.propTypes = {
     'bottom-right', 'bottom-left', 'right', 'left', 'bottom-center'
   ]).isRequired,
   text: PropTypes.string.isRequired
-}
+};

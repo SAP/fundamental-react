@@ -5,7 +5,7 @@ export const Identifier = props => {
   const { glyph, size, modifier, color, label, backgroundImageUrl, children } = props;
   const styles = {
     backgroundImage: `url(${backgroundImageUrl})`
-  }
+  };
   return (
     <span
       className={`${size ? 'fd-identifier--' + size : 'fd-identifier'}${

@@ -33,7 +33,7 @@ export const ActionBarBack = props => {
 
 ActionBarBack.propTypes = {
     onclick: PropTypes.func
-}
+};
 
 export const ActionBarHeader = props => {
     const { title, description } = props;

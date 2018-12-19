@@ -4,7 +4,7 @@ export const Header = (props) => {
     const headerStyle = {
         marginTop: '2rem',
         fontSize: '2.2rem'
-    }
+    };
     const { children } = props;
 
     return (
@@ -12,4 +12,4 @@ export const Header = (props) => {
             {children}
         </h1>
     );
-}
+};

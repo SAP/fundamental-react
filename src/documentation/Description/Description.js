@@ -5,7 +5,7 @@ export const Description = (props) => {
         marginBottom: '1.5rem',
         fontSize: '1rem',
         fontWeight: '300'
-    }
+    };
     const { children } = props;
 
     return (
@@ -13,4 +13,4 @@ export const Description = (props) => {
             {children}
         </p>
     );
-}
+};

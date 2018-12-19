@@ -8,9 +8,9 @@ export const Import = (props) => {
     return (
         <code>import &#123; { module } &#125; from '{ path }';</code>
     );
-}
+};
 
 Import.propTypes = {
     module: PropTypes.string,
     path: PropTypes.string
-}
+};

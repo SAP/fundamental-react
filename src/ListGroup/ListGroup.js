@@ -7,7 +7,7 @@ export const ListGroup = (props) => {
             {children}
         </ul>
     );
-}
+};
 
 export const ListGroupItem = (props) => {
     const { children } = props;
@@ -17,7 +17,7 @@ export const ListGroupItem = (props) => {
         </li>
 
     );
-}
+};
 
 export const ListGroupItemActions = (props) => {
     const { children } = props;
@@ -26,7 +26,7 @@ export const ListGroupItemActions = (props) => {
             {children}
         </span>
     );
-}
+};
 
 export const ListGroupItemCheckbox = (props) => {
     const { children } = props;
@@ -38,4 +38,4 @@ export const ListGroupItemCheckbox = (props) => {
             </label>
         </div>
     );
-}
+};

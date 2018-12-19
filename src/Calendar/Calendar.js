@@ -15,7 +15,7 @@ export class Calendar extends Component {
             showYears: false,
             currentYear: new Date(),
             dateClick: false
-        }
+        };
 
         this.generateNavigation = this.generateNavigation.bind(this);
         this.generateWeekdays = this.generateWeekdays.bind(this);
@@ -67,7 +67,7 @@ export class Calendar extends Component {
                     if (previousStates.dateClick) {
                         return ({dateClick: false});
                     }
-                    return ({currentDateDisplayed: new Date(), arrSelectedDates: [], selectedDate: new Date(0, 0, 0)})
+                    return ({currentDateDisplayed: new Date(), arrSelectedDates: [], selectedDate: new Date(0, 0, 0)});
                 }
                 //updates the calendar if the date from date picker is correct
                 return ({arrSelectedDates: updatedPropsParent.customDate, selectedDate: new Date(0, 0, 0)});
@@ -79,7 +79,7 @@ export class Calendar extends Component {
             }
             else if (updatedPropsParent.customDate === "undefined") {
                 if (previousStates.selectedDate.getFullYear() !== 1899 && previousStates.dateClick) {
-                    return ({dateClick: false})
+                    return ({dateClick: false});
                 }
                 //If date was not clicked then the date is reset
                 if (!previousStates.dateClick) {
@@ -99,7 +99,7 @@ export class Calendar extends Component {
             showMonths: !this.state.showMonths,
             showYears: false,
             dateClick: true
-        })
+        });
     }
 
     displayBetweenRange(day) {
@@ -107,7 +107,7 @@ export class Calendar extends Component {
     }
 
     displaySelectedRangeLast(day) {
-        return this.props.enableRangeSelection && (this.state.arrSelectedDates[1] !== undefined && this.state.arrSelectedDates[1].getTime() === day.getTime()) ? " is-selected-range-last" : ""
+        return this.props.enableRangeSelection && (this.state.arrSelectedDates[1] !== undefined && this.state.arrSelectedDates[1].getTime() === day.getTime()) ? " is-selected-range-last" : "";
     }
 
     displayIsDayOtherMonth(day) {
@@ -124,15 +124,15 @@ export class Calendar extends Component {
                     && !(this.disableWeekday(day, this.props.disableWeekday))
                     && !(this.props.disablePastDates && (this.disableBeforeTodayDate(day)))
                     && !(this.props.disableFutureDates && this.disableAfterTodayDate(day))
-                    && !(this.isDateBetween(day, this.props.disabledDates)) ?"is-selected":""
+                    && !(this.isDateBetween(day, this.props.disabledDates)) ?"is-selected":"";
     }
 
     displaySelectedRangeFirst(day) {
-        return this.props.enableRangeSelection && (this.state.arrSelectedDates[0] !== undefined) && this.state.arrSelectedDates[0].getTime() === day.getTime() ? " is-selected-range-first " : ""
+        return this.props.enableRangeSelection && (this.state.arrSelectedDates[0] !== undefined) && this.state.arrSelectedDates[0].getTime() === day.getTime() ? " is-selected-range-first " : "";
     }
 
     displayDisabled(day) {
-        return (this.props.disableWeekends && (day.getDay() === 0 || day.getDay() === 6)) || (this.props.disablePastDates && (this.disableBeforeTodayDate(day))) || (this.props.disableFutureDates && this.disableAfterTodayDate(day)) ||(this.disableWeekday(day, this.props.disableWeekday)) || this.disableBeforeDate(day, this.props.disableBeforeDate) || this.disableAfterDate(day, this.props.disableAfterDate) || this.isDateBetween(day, this.props.disabledDates) ? " is-disabled": ""
+        return (this.props.disableWeekends && (day.getDay() === 0 || day.getDay() === 6)) || (this.props.disablePastDates && (this.disableBeforeTodayDate(day))) || (this.props.disableFutureDates && this.disableAfterTodayDate(day)) ||(this.disableWeekday(day, this.props.disableWeekday)) || this.disableBeforeDate(day, this.props.disableBeforeDate) || this.disableAfterDate(day, this.props.disableAfterDate) || this.isDateBetween(day, this.props.disabledDates) ? " is-disabled": "";
     }
 
 
@@ -141,7 +141,7 @@ export class Calendar extends Component {
             showMonths: false,
             showYears: !this.state.showYears,
             dateClick: true
-        })
+        });
     }
 
     showNextYears() {
@@ -163,13 +163,13 @@ export class Calendar extends Component {
                 dateClick: true
             }, function() {
                     this.returnDateSelected(date);
-            })
+            });
         }
         else {
             this.setState({
                 currentDateDisplayed: date,
                 dateClick: true
-            })
+            });
         }
     }
 
@@ -183,13 +183,13 @@ export class Calendar extends Component {
                 dateClick: true
             }, function() {
                     this.returnDateSelected(date);
-            })
+            });
         }
         else {
             this.setState({
                 currentDateDisplayed: date,
                 dateClick: true
-            })
+            });
         }
     }
 
@@ -204,7 +204,7 @@ export class Calendar extends Component {
                 shortenedNameMonth = element.substring(0, 3);
             }
 
-            return <li className={`fd-calendar__item${months[this.state.currentDateDisplayed.getMonth()] === element ? " is-selected" : ""}${months[this.state.todayDate.getMonth()] === element ? " fd-calendar__item--current" : ""}`} key={element} name={element} onClick={() => this.changeMonth(element)}>{shortenedNameMonth}</li>
+            return <li className={`fd-calendar__item${months[this.state.currentDateDisplayed.getMonth()] === element ? " is-selected" : ""}${months[this.state.todayDate.getMonth()] === element ? " fd-calendar__item--current" : ""}`} key={element} name={element} onClick={() => this.changeMonth(element)}>{shortenedNameMonth}</li>;
         });
 
         return (
@@ -213,7 +213,7 @@ export class Calendar extends Component {
                         {listOfMonths}
                     </ul>
                 </div>
-               )
+               );
     }
 
     generateYears() {
@@ -225,15 +225,15 @@ export class Calendar extends Component {
             years.push(year);
         }
         let listOfYears = years.map(element=>{
-            return <li className={`fd-calendar__item${this.state.currentDateDisplayed.getFullYear() === element ? " is-selected" : ""}${this.state.todayDate.getFullYear() === element ? " fd-calendar__item--current" : ""}`} key={element} name={element} onClick={() => this.changeYear(element)}>{element}</li>
-        })
+            return <li className={`fd-calendar__item${this.state.currentDateDisplayed.getFullYear() === element ? " is-selected" : ""}${this.state.todayDate.getFullYear() === element ? " fd-calendar__item--current" : ""}`} key={element} name={element} onClick={() => this.changeYear(element)}>{element}</li>;
+        });
         return (
             <div className='fd-calendar__months'>
                 <ul className='fd-calendar__list'>
                     {listOfYears}
                 </ul>
             </div>
-        )
+        );
     }
 
     next() {
@@ -249,7 +249,7 @@ export class Calendar extends Component {
             copyDate.setMonth(copyDate.getMonth() + 1);
             this.setState({
                 currentDateDisplayed: copyDate, selectedDate: selectedDate, dateClick: true
-            })
+            });
         }
     }
 
@@ -490,7 +490,7 @@ export class Calendar extends Component {
                 dateFormatted = day.getDate();
                 let copyDate = day;
                 days.push(<td className={`fd-calendar__item fd-calendar__item${this.displayIsDayOtherMonth(day)} ${this.state.todayDate.getTime() === copyDate.getTime() ? "fd-calendar__item--current":""} ${this.displayIsSelected(day)} ${this.displaySelectedRangeFirst(day)}${this.displaySelectedRangeLast(day)}${this.displayBetweenRange(day)} ${this.displayDisabled(day)} ${this.isDateBetween(day, blockedDates) ? "is-blocked": ""}` } role='gridcell' onClick={() => this.dateClick(copyDate, enableRangeSelection)} key={copyDate}><span className='fd-calendar__text'>{dateFormatted}</span>
-                </td>)
+                </td>);
                 day = this.addDays(day, 1);
             }
 
@@ -541,4 +541,4 @@ Calendar.propTypes = {
     disableFutureDates: PropTypes.bool,
     blockedDates: PropTypes.arrayOf(PropTypes.instanceOf(Date)),
     disabledDates: PropTypes.arrayOf(PropTypes.instanceOf(Date))
-}
+};

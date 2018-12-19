@@ -1,6 +1,6 @@
-import React from 'react'
-import { DocsTile, DocsText, Separator, Header, Description, Import, Properties } from '../'
-import { MegaMenu, MegaMenuList, MegaMenuGroup } from '../'
+import React from 'react';
+import { DocsTile, DocsText, Separator, Header, Description, Import, Properties } from '../';
+import { MegaMenu, MegaMenuList, MegaMenuGroup } from '../';
 
 export const MegaMenuComponent = () => {
     const defaultMegaMenuCode = `<MegaMenu>
@@ -35,7 +35,7 @@ export const MegaMenuComponent = () => {
             ]}>
         </MegaMenuList>
     </MegaMenuGroup>
-</MegaMenu>`
+</MegaMenu>`;
 
 
     return (
@@ -101,4 +101,4 @@ export const MegaMenuComponent = () => {
             <Separator />
         </div>
     );
-}
+};

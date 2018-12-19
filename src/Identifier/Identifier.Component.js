@@ -1,6 +1,6 @@
-import React from 'react'
-import { Identifier } from '../'
-import { DocsTile, DocsText, Separator, Header, Description, Import, Properties, Playground } from '../'
+import React from 'react';
+import { Identifier } from '../';
+import { DocsTile, DocsText, Separator, Header, Description, Import, Properties, Playground } from '../';
 
 
 export const IdentifierComponent = () => {
@@ -10,21 +10,21 @@ export const IdentifierComponent = () => {
 <Identifier size="m"   glyph="washing-machine" />
 <Identifier size="l"   glyph="washing-machine" />
 <Identifier size="xl"  glyph="washing-machine" />
-<Identifier size="xxl" glyph="washing-machine" />`
+<Identifier size="xxl" glyph="washing-machine" />`;
     const initialsCode = `<Identifier size="xxs" label="Wendy Wallace">WW</Identifier>
 <Identifier size="xs"  label="Wendy Wallace">WW</Identifier>
 <Identifier size="s"   label="Wendy Wallace">WW</Identifier>
 <Identifier size="m"   label="Wendy Wallace">WW</Identifier>
 <Identifier size="l"   label="Wendy Wallace">WW</Identifier>
 <Identifier size="xl"  label="Wendy Wallace">WW</Identifier>
-<Identifier size="xxl" label="Wendy Wallace">WW</Identifier>`
+<Identifier size="xxl" label="Wendy Wallace">WW</Identifier>`;
     const circleCode = `<Identifier size="xxs" glyph="washing-machine" modifier="circle" />
 <Identifier size="xs"  glyph="washing-machine" modifier="circle" />
 <Identifier size="s"   glyph="washing-machine" modifier="circle" />
 <Identifier size="m"   glyph="washing-machine" modifier="circle" />
 <Identifier size="l"   glyph="washing-machine" modifier="circle" />
 <Identifier size="xl"  glyph="washing-machine" modifier="circle" />
-<Identifier size="xxl" glyph="washing-machine" modifier="circle" />`
+<Identifier size="xxl" glyph="washing-machine" modifier="circle" />`;
     const backgroundImageCode = `<Identifier size="xxs" backgroundImageUrl="https://placeimg.com/400/400/nature" modifier="circle" />
 <Identifier size="xs"  backgroundImageUrl="https://placeimg.com/400/400/nature" modifier="circle" />
 <Identifier size="s"   backgroundImageUrl="https://placeimg.com/400/400/nature" modifier="circle" />
@@ -33,7 +33,7 @@ export const IdentifierComponent = () => {
 <Identifier size="xl"  backgroundImageUrl="https://placeimg.com/400/400/nature" modifier="circle" />
 <Identifier size="xxl" backgroundImageUrl="https://placeimg.com/400/400/nature" modifier="circle" />`;
     const transparentCode = `<Identifier size="m" label="Wendy Wallace" modifier="transparent">WW</Identifier>
-<Identifier size="l" glyph="washing-machine" modifier="transparent"></Identifier>`
+<Identifier size="l" glyph="washing-machine" modifier="transparent"></Identifier>`;
     const accentColorsCode = `<Identifier size="m" glyph="money-bills" color={1}></Identifier>
 <Identifier size="m" glyph="money-bills" color={2}></Identifier>
 <Identifier size="m" glyph="money-bills" color={3}></Identifier>
@@ -42,7 +42,7 @@ export const IdentifierComponent = () => {
 <Identifier size="m" glyph="money-bills" color={6}></Identifier>
 <Identifier size="m" glyph="money-bills" color={7}></Identifier>
 <Identifier size="m" glyph="money-bills" color={8}></Identifier>
-<Identifier size="m" glyph="money-bills" color={9}></Identifier>`
+<Identifier size="m" glyph="money-bills" color={9}></Identifier>`;
 
     return (
         <div>
@@ -797,4 +797,4 @@ export const IdentifierComponent = () => {
             </Playground>
         </div>
     );
-}
+};

@@ -8,4 +8,4 @@ export const Token = (props) => {
             {children}
         </span>
     );
-}
+};

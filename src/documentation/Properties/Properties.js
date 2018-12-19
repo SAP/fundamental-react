@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 export class Properties extends Component {
     constructor(props) {
         super(props);
-        this.state = { description: this.props.properties }
+        this.state = { description: this.props.properties };
     }
 
 
@@ -21,7 +21,7 @@ export class Properties extends Component {
                     </tbody>
                 </table>
             </div>
-        )
+        );
     }
 }
 

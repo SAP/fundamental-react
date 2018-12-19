@@ -1,6 +1,6 @@
-import React from 'react'
-import { Button, ListGroup, ListGroupItem, ListGroupItemActions, ListGroupItemCheckbox } from '../'
-import { DocsTile, DocsText, Separator, Header, Description, Import, Playground } from '../'
+import React from 'react';
+import { Button, ListGroup, ListGroupItem, ListGroupItemActions, ListGroupItemCheckbox } from '../';
+import { DocsTile, DocsText, Separator, Header, Description, Import, Playground } from '../';
 
 export const ListGroupComponent = () => {
     const simpleListCode = `<ListGroup>
@@ -8,7 +8,7 @@ export const ListGroupComponent = () => {
     <ListGroupItem>List item 2</ListGroupItem>
     <ListGroupItem><a style={{cursor: 'pointer'}}>List item3</a></ListGroupItem>
     <ListGroupItem>List item 4</ListGroupItem>
-</ListGroup>`
+</ListGroup>`;
 
     const actionsListCode = `<ListGroup>
     <ListGroupItem>List item 1
@@ -31,14 +31,14 @@ export const ListGroupComponent = () => {
             <Button type="light" glyph="edit" />
         </ListGroupItemActions>
     </ListGroupItem>
-</ListGroup>`
+</ListGroup>`;
 
     const checkboxListCode = `<ListGroup>
     <ListGroupItem><ListGroupItemCheckbox>List item 1</ListGroupItemCheckbox></ListGroupItem>
     <ListGroupItem><ListGroupItemCheckbox>List item 2</ListGroupItemCheckbox></ListGroupItem>
     <ListGroupItem><ListGroupItemCheckbox>List item 3</ListGroupItemCheckbox></ListGroupItem>
     <ListGroupItem><ListGroupItemCheckbox>List item 4</ListGroupItemCheckbox></ListGroupItem>
-</ListGroup>`
+</ListGroup>`;
 
 
     return (
@@ -754,4 +754,4 @@ export const ListGroupComponent = () => {
             </Playground>
         </div>
     );
-}
+};

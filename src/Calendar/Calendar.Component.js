@@ -1,10 +1,10 @@
-import React from 'react'
-import { DocsTile, DocsText, Separator, Header, Description, Import, Properties } from '../'
-import {Calendar} from '../'
+import React from 'react';
+import { DocsTile, DocsText, Separator, Header, Description, Import, Properties } from '../';
+import {Calendar} from '../';
 
 export const CalendarComponent = () => {
 
-    const defaultCalendarCode = `<Calendar />`
+    const defaultCalendarCode = `<Calendar />`;
     const calendarDisabledWeekendsBeforeDate = `<Calendar disableBeforeDate={new Date(2018,7,3,0,0,0,0)} disableWeekends={true}/>`;
     const calendarDisabledWeekdaysBlockedDates = `<Calendar disableWeekday={["Monday", "Tuesday"]} blockedDates={[new Date(2018, 1, 1, 0,0, 0,0), new Date(2018, 3, 3, 0,0,0,0)]}/>`;
     const calendarAllOptions = `<Calendar enableRangeSelection={true}/>`;
@@ -62,6 +62,6 @@ export const CalendarComponent = () => {
             <DocsText>{calendarAllOptions}</DocsText>
 
             <Separator />
-    </div>)
+    </div>);
 
-}
+};

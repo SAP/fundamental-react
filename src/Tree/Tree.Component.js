@@ -1,6 +1,6 @@
-import React from 'react'
-import { DocsTile, DocsText, Separator, Header, Description, Import, Properties } from '../'
-import { Tree} from '../'
+import React from 'react';
+import { DocsTile, DocsText, Separator, Header, Description, Import, Properties } from '../';
+import { Tree} from '../';
 
 export const TreeComponent = () => {
     const treeCode = `headers={['Column Header', 'Column Header 1 ', 'Column Header 2', 'Status']}
@@ -66,7 +66,7 @@ export const TreeComponent = () => {
                 }
             ]
         }
-    ]}`
+    ]}`;
 
     const treeCodeUrl = `headers={['Column Header', 'Column Header 1 ', 'Column Header 2', 'Status']}
     treeData={[
@@ -93,7 +93,7 @@ export const TreeComponent = () => {
                 }
             ]
         }
-    ]}`
+    ]}`;
 
 
     return (
@@ -238,5 +238,5 @@ export const TreeComponent = () => {
 
         </div>
     );
-}
+};
 
