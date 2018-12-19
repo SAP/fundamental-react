@@ -204,7 +204,7 @@ export class Calendar extends Component {
                 shortenedNameMonth = element.substring(0, 3);
             }
             
-            return <li className={`fd-calendar__item${months[this.state.currentDateDisplayed.getMonth()] === element ? " is-selected" : ""}${months[this.state.todayDate.getMonth()] === element ? " fd-calendar__item--current" : ""}`}  key={element}  name={element} onClick={() => this.changeMonth(element)}>{shortenedNameMonth}</li>
+            return <li className={`fd-calendar__item${months[this.state.currentDateDisplayed.getMonth()] === element ? " is-selected" : ""}${months[this.state.todayDate.getMonth()] === element ? " fd-calendar__item--current" : ""}`} key={element} name={element} onClick={() => this.changeMonth(element)}>{shortenedNameMonth}</li>
         });
 
         return (
@@ -220,12 +220,12 @@ export class Calendar extends Component {
         
         let year = this.state.currentYear.getFullYear();
         let years = [year];
-        for (let iterations  = 1 ; iterations < 12; iterations++) {
+        for (let iterations = 1 ; iterations < 12; iterations++) {
             year = year + 1;
             years.push(year);
         }
         let listOfYears = years.map(element=>{
-            return <li className={`fd-calendar__item${this.state.currentDateDisplayed.getFullYear() === element ? " is-selected" : ""}${this.state.todayDate.getFullYear() === element ? " fd-calendar__item--current" : ""}`}  key={element} name={element} onClick={() => this.changeYear(element)}>{element}</li>
+            return <li className={`fd-calendar__item${this.state.currentDateDisplayed.getFullYear() === element ? " is-selected" : ""}${this.state.todayDate.getFullYear() === element ? " fd-calendar__item--current" : ""}`} key={element} name={element} onClick={() => this.changeYear(element)}>{element}</li>
         })
         return (
             <div className='fd-calendar__months'>
@@ -457,7 +457,7 @@ export class Calendar extends Component {
           let weekDays= [];
           let daysName = ['S', 'M', 'T', 'W', 'T', 'F', 'S'];
 
-          for (let index  = 0; index < 7; index++) {
+          for (let index = 0; index < 7; index++) {
               weekDays.push(
               <th className='fd-calendar__column-header' key={index}>
                 <span className='fd-calendar__day-of-week'>
@@ -502,7 +502,7 @@ export class Calendar extends Component {
 
             days = [];
         }
-        return  <tbody className='fd-calendar__group'>{rows}</tbody>;
+        return <tbody className='fd-calendar__group'>{rows}</tbody>;
 
       }
 
