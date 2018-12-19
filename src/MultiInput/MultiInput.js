@@ -16,10 +16,10 @@ export class MultiInput extends Component {
     const randNum = Math.floor(Math.random() * 1000000 + 1);
     return data.map((item, index) => (
       <li key={index}>
-        <label htmlFor={index + `_${randNum}`} className="fd-menu__item">
+        <label htmlFor={index + `_${randNum}`} className='fd-menu__item'>
           <input
-            type="checkbox"
-            className="fd-checkbox"
+            type='checkbox'
+            className='fd-checkbox'
             id={index + `_${randNum}`}
             value={item}
             onChange={this.updateSelectedTags}
@@ -36,8 +36,8 @@ export class MultiInput extends Component {
     return this.state.tags.map((tag, index) => (
       <span
         key={index}
-        className="fd-token"
-        role="button"
+        className='fd-token'
+        role='button'
         onClick={this.removeTag}
       >
         {tag}
@@ -115,29 +115,29 @@ export class MultiInput extends Component {
     const inputClassNames = `fd-input${compact ? ' fd-input--compact' : ''}`;
 
     return (
-      <div className="fd-multi-input">
-        <div className="fd-multi-input-field">
-          <div className="fd-popover">
-            <div className="fd-popover__control">
+      <div className='fd-multi-input'>
+        <div className='fd-multi-input-field'>
+          <div className='fd-popover'>
+            <div className='fd-popover__control'>
               <div
-                className="fd-combobox-control"
-                aria-label="Image label"
+                className='fd-combobox-control'
+                aria-label='Image label'
                 aria-expanded={this.state.bShowList}
-                aria-haspopup="true"
+                aria-haspopup='true'
               >
                 <div className={inputGroupClassNames}>
                   <input
-                    type="text"
+                    type='text'
                     className={inputClassNames}
                     placeholder={placeHolder}
                     onClick={this.showHideTagList}
                   />
                   <span
-                    className="fd-input-group__addon fd-input-group__addon--after
-                            fd-input-group__addon--button"
+                    className='fd-input-group__addon fd-input-group__addon--after
+                            fd-input-group__addon--button'
                   >
                     <button
-                      className="fd-button--light sap-icon--navigation-down-arrow"
+                      className='fd-button--light sap-icon--navigation-down-arrow'
                       onClick={this.showHideTagList}
                     />
                   </span>
@@ -145,17 +145,17 @@ export class MultiInput extends Component {
               </div>
             </div>
             <div
-              className="fd-popover__body fd-popover__body--no-arrow"
+              className='fd-popover__body fd-popover__body--no-arrow'
               aria-hidden={!this.state.bShowList}
             >
-              <nav className="fd-menu">
-                <ul className="fd-menu__list">{this.createTagList(data)}</ul>
+              <nav className='fd-menu'>
+                <ul className='fd-menu__list'>{this.createTagList(data)}</ul>
               </nav>
             </div>
           </div>
         </div>
         {this.state.tags.length > 0 ? (
-          <div className="fd-multi-input-tags">{this.createTags()}</div>
+          <div className='fd-multi-input-tags'>{this.createTags()}</div>
         ) : (
           ''
         )}

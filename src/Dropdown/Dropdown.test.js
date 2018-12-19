@@ -14,10 +14,10 @@ describe('<Dropdown />', () => {
         body={
           <Menu>
             <MenuList>
-              <MenuItem url="/">Option 1</MenuItem>
-              <MenuItem url="/">Option 2</MenuItem>
-              <MenuItem url="/">Option 3</MenuItem>
-              <MenuItem url="/">Option 4</MenuItem>
+              <MenuItem url='/'>Option 1</MenuItem>
+              <MenuItem url='/'>Option 2</MenuItem>
+              <MenuItem url='/'>Option 3</MenuItem>
+              <MenuItem url='/'>Option 4</MenuItem>
             </MenuList>
           </Menu>
         }
@@ -37,10 +37,10 @@ describe('<Dropdown />', () => {
         body={
           <Menu>
             <MenuList>
-              <MenuItem url="/">Option 1</MenuItem>
-              <MenuItem url="/">Option 2</MenuItem>
-              <MenuItem url="/">Option 3</MenuItem>
-              <MenuItem url="/">Option 4</MenuItem>
+              <MenuItem url='/'>Option 1</MenuItem>
+              <MenuItem url='/'>Option 2</MenuItem>
+              <MenuItem url='/'>Option 3</MenuItem>
+              <MenuItem url='/'>Option 4</MenuItem>
             </MenuList>
           </Menu>
         }
@@ -52,7 +52,7 @@ describe('<Dropdown />', () => {
     <Dropdown standard>
       <Popover
         control={
-          <Button dropdown type="standard">
+          <Button dropdown type='standard'>
             Select
           </Button>
         }
@@ -60,10 +60,10 @@ describe('<Dropdown />', () => {
         body={
           <Menu>
             <MenuList>
-              <MenuItem url="/">Option 1</MenuItem>
-              <MenuItem url="/">Option 2</MenuItem>
-              <MenuItem url="/">Option 3</MenuItem>
-              <MenuItem url="/">Option 4</MenuItem>
+              <MenuItem url='/'>Option 1</MenuItem>
+              <MenuItem url='/'>Option 2</MenuItem>
+              <MenuItem url='/'>Option 3</MenuItem>
+              <MenuItem url='/'>Option 4</MenuItem>
             </MenuList>
           </Menu>
         }
@@ -74,9 +74,9 @@ describe('<Dropdown />', () => {
   const iconDropdown = (
     <Dropdown>
       <Popover
-        id="jhqD0557"
+        id='jhqD0557'
         control={
-          <Button dropdown glyph="filter">
+          <Button dropdown glyph='filter'>
             Select
           </Button>
         }
@@ -84,10 +84,10 @@ describe('<Dropdown />', () => {
         body={
           <Menu>
             <MenuList>
-              <MenuItem url="/">Option 1</MenuItem>
-              <MenuItem url="/">Option 2</MenuItem>
-              <MenuItem url="/">Option 3</MenuItem>
-              <MenuItem url="/">Option 4</MenuItem>
+              <MenuItem url='/'>Option 1</MenuItem>
+              <MenuItem url='/'>Option 2</MenuItem>
+              <MenuItem url='/'>Option 3</MenuItem>
+              <MenuItem url='/'>Option 4</MenuItem>
             </MenuList>
           </Menu>
         }
@@ -98,10 +98,10 @@ describe('<Dropdown />', () => {
   const disabledDropdown = (
     <Dropdown>
       <Popover
-        id="jhqD0561"
+        id='jhqD0561'
         disabled
         control={
-          <Button dropdown glyph="filter" disabled>
+          <Button dropdown glyph='filter' disabled>
             Select
           </Button>
         }
@@ -109,10 +109,10 @@ describe('<Dropdown />', () => {
         body={
           <Menu>
             <MenuList>
-              <MenuItem url="/">Option 1</MenuItem>
-              <MenuItem url="/">Option 2</MenuItem>
-              <MenuItem url="/">Option 3</MenuItem>
-              <MenuItem url="/">Option 4</MenuItem>
+              <MenuItem url='/'>Option 1</MenuItem>
+              <MenuItem url='/'>Option 2</MenuItem>
+              <MenuItem url='/'>Option 3</MenuItem>
+              <MenuItem url='/'>Option 4</MenuItem>
             </MenuList>
           </Menu>
         }

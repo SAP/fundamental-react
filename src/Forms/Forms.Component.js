@@ -251,14 +251,14 @@ export const FormsComponent = () => {
                 components along with inline help and error state.
             </Description>
             <Import
-                module="FormSet, FormItem, FormLabel, FormInput, FormRadio, FormTextarea, FormMessage, FormSelect, FormFieldset, FormLegend"
-                path="/fundamental-react/src/"
+                module='FormSet, FormItem, FormLabel, FormInput, FormRadio, FormTextarea, FormMessage, FormSelect, FormFieldset, FormLegend'
+                path='/fundamental-react/src/'
             />
 
             <Separator />
 
             <Properties
-                type="Child Components"
+                type='Child Components'
                 properties={[
                     { name: 'FormItem', description: 'An item of the form set.' },
                     { name: 'FormLabel', description: 'Label for the input field.' },
@@ -273,7 +273,7 @@ export const FormsComponent = () => {
             />
 
             <Properties
-                type="Inputs"
+                type='Inputs'
                 properties={[
                     {
                         name: 'isCheck',
@@ -323,35 +323,35 @@ export const FormsComponent = () => {
             <DocsTile>
                 <FormSet>
                     <FormItem>
-                        <FormLabel forAttr="input-1">Default Input</FormLabel>
-                        <FormInput type="text" id="input-1" placeholder="Field placeholder text" />
+                        <FormLabel forAttr='input-1'>Default Input</FormLabel>
+                        <FormInput type='text' id='input-1' placeholder='Field placeholder text' />
                     </FormItem>
                 </FormSet>
 
                 <FormSet>
                     <FormItem>
-                        <FormLabel forAttr="input-2" required={true}>
+                        <FormLabel forAttr='input-2' required={true}>
                             Required Input
                         </FormLabel>
-                        <FormInput type="text" id="input-2" placeholder="Field placeholder text" />
+                        <FormInput type='text' id='input-2' placeholder='Field placeholder text' />
                     </FormItem>
                 </FormSet>
 
                 <FormSet>
                     <FormItem>
-                        <FormLabel forAttr="input-3" required={true}>
+                        <FormLabel forAttr='input-3' required={true}>
                             Password
                         </FormLabel>
-                        <FormInput type="password" id="input-3" placeholder="Field placeholder text" />
+                        <FormInput type='password' id='input-3' placeholder='Field placeholder text' />
                     </FormItem>
                 </FormSet>
 
                 <FormSet>
                     <FormItem>
-                        <FormLabel forAttr="textarea-1" required={true}>
+                        <FormLabel forAttr='textarea-1' required={true}>
                             Text area
                         </FormLabel>
-                        <FormTextarea id="textarea-1">
+                        <FormTextarea id='textarea-1'>
                             Pellentesque metus lacus commodo eget justo ut rutrum varius nunc.
                         </FormTextarea>
                     </FormItem>
@@ -372,23 +372,23 @@ export const FormsComponent = () => {
             <DocsTile>
                 <FormSet>
                     <FormItem>
-                        <FormLabel forAttr="input-4">
+                        <FormLabel forAttr='input-4'>
                             Input with inline help
-                            <span className="fd-inline-help fd-has-float-right">
-                                <span className="fd-inline-help__content fd-inline-help__content--bottom-right">
+                            <span className='fd-inline-help fd-has-float-right'>
+                                <span className='fd-inline-help__content fd-inline-help__content--bottom-right'>
                                     Lorem ipsum dolor sit amet, consectetur adipiscing.
                                 </span>
                             </span>
                         </FormLabel>
-                        <FormInput type="text" id="input-4" />
+                        <FormInput type='text' id='input-4' />
                     </FormItem>
                 </FormSet>
 
                 <FormSet>
                     <FormItem>
-                        <FormLabel forAttr="input-5">Input with Help Message</FormLabel>
-                        <FormInput type="text" id="input-5" />
-                        <FormMessage type="help">
+                        <FormLabel forAttr='input-5'>Input with Help Message</FormLabel>
+                        <FormInput type='text' id='input-5' />
+                        <FormMessage type='help'>
                             Pellentesque metus lacus commodo eget justo ut rutrum varius nunc
                         </FormMessage>
                     </FormItem>
@@ -417,24 +417,24 @@ export const FormsComponent = () => {
             <DocsTile>
                 <FormSet>
                     <FormItem>
-                        <FormLabel forAttr="OatmD552">Normal Input</FormLabel>
-                        <FormInput type="text" id="OatmD552" placeholder="Field placeholder text" />
+                        <FormLabel forAttr='OatmD552'>Normal Input</FormLabel>
+                        <FormInput type='text' id='OatmD552' placeholder='Field placeholder text' />
                         <FormMessage>Pellentesque metus lacus commodo eget justo ut rutrum varius nunc</FormMessage>
                     </FormItem>
                 </FormSet>
 
                 <FormSet>
                     <FormItem>
-                        <FormLabel forAttr="OatmD553">Valid Input</FormLabel>
-                        <FormInput type="text" state="valid" id="OatmD553" placeholder="Field placeholder text" />
+                        <FormLabel forAttr='OatmD553'>Valid Input</FormLabel>
+                        <FormInput type='text' state='valid' id='OatmD553' placeholder='Field placeholder text' />
                     </FormItem>
                 </FormSet>
 
                 <FormSet>
                     <FormItem>
-                        <FormLabel forAttr="OatmD554">Invalid Input</FormLabel>
-                        <FormInput type="text" state="invalid" id="OatmD554" placeholder="Field placeholder text" />
-                        <FormMessage type="error">
+                        <FormLabel forAttr='OatmD554'>Invalid Input</FormLabel>
+                        <FormInput type='text' state='invalid' id='OatmD554' placeholder='Field placeholder text' />
+                        <FormMessage type='error'>
                             Pellentesque metus lacus commodo eget justo ut rutrum varius nunc
                         </FormMessage>
                     </FormItem>
@@ -442,9 +442,9 @@ export const FormsComponent = () => {
 
                 <FormSet>
                     <FormItem>
-                        <FormLabel forAttr="OatmD555">Warning Input</FormLabel>
-                        <FormInput type="text" state="warning" id="OatmD555" placeholder="Field placeholder text" />
-                        <FormMessage type="warning">
+                        <FormLabel forAttr='OatmD555'>Warning Input</FormLabel>
+                        <FormInput type='text' state='warning' id='OatmD555' placeholder='Field placeholder text' />
+                        <FormMessage type='warning'>
                             Pellentesque metus lacus commodo eget justo ut rutrum varius nunc
                         </FormMessage>
                     </FormItem>
@@ -452,9 +452,9 @@ export const FormsComponent = () => {
 
                 <FormSet>
                     <FormItem>
-                        <FormLabel forAttr="OatmD556">Field Label</FormLabel>
-                        <FormInput type="text" state="help" id="OatmD556" placeholder="Field placeholder text" />
-                        <FormMessage type="help">
+                        <FormLabel forAttr='OatmD556'>Field Label</FormLabel>
+                        <FormInput type='text' state='help' id='OatmD556' placeholder='Field placeholder text' />
+                        <FormMessage type='help'>
                             Pellentesque metus lacus commodo eget justo ut rutrum varius nunc
                         </FormMessage>
                     </FormItem>
@@ -462,12 +462,12 @@ export const FormsComponent = () => {
 
                 <FormSet>
                     <FormItem>
-                        <FormLabel forAttr="OatmD557">Disabled Input</FormLabel>
+                        <FormLabel forAttr='OatmD557'>Disabled Input</FormLabel>
                         <FormInput
-                            type="text"
-                            state="help"
-                            id="OatmD557"
-                            placeholder="Field placeholder text"
+                            type='text'
+                            state='help'
+                            id='OatmD557'
+                            placeholder='Field placeholder text'
                             disabled
                         />
                     </FormItem>
@@ -475,12 +475,12 @@ export const FormsComponent = () => {
 
                 <FormSet>
                     <FormItem>
-                        <FormLabel forAttr="OatmD558" labelText="Readonly Input" />
+                        <FormLabel forAttr='OatmD558' labelText='Readonly Input' />
                         <FormInput
-                            type="text"
-                            state="help"
-                            id="OatmD558"
-                            placeholder="Field placeholder text"
+                            type='text'
+                            state='help'
+                            id='OatmD558'
+                            placeholder='Field placeholder text'
                             readonly
                         />
                     </FormItem>
@@ -498,22 +498,22 @@ export const FormsComponent = () => {
             <DocsTile>
                 <FormSet>
                     <FormItem>
-                        <FormLabel forAttr="select-1" labelText="Default Select" />
-                        <FormSelect id="select-1">
-                            <option value="1">Duis malesuada odio volutpat elementum</option>
-                            <option value="2">Suspendisse ante ligula</option>
-                            <option value="3">Sed bibendum sapien at posuere interdum</option>
+                        <FormLabel forAttr='select-1' labelText='Default Select' />
+                        <FormSelect id='select-1'>
+                            <option value='1'>Duis malesuada odio volutpat elementum</option>
+                            <option value='2'>Suspendisse ante ligula</option>
+                            <option value='3'>Sed bibendum sapien at posuere interdum</option>
                         </FormSelect>
                     </FormItem>
                 </FormSet>
 
                 <FormSet>
                     <FormItem>
-                        <FormLabel forAttr="select-1" labelText="Default Select" />
-                        <FormSelect id="select-1" disabled>
-                            <option value="1">Duis malesuada odio volutpat elementum</option>
-                            <option value="2">Suspendisse ante ligula</option>
-                            <option value="3">Sed bibendum sapien at posuere interdum</option>
+                        <FormLabel forAttr='select-1' labelText='Default Select' />
+                        <FormSelect id='select-1' disabled>
+                            <option value='1'>Duis malesuada odio volutpat elementum</option>
+                            <option value='2'>Suspendisse ante ligula</option>
+                            <option value='3'>Sed bibendum sapien at posuere interdum</option>
                         </FormSelect>
                     </FormItem>
                 </FormSet>
@@ -537,12 +537,12 @@ export const FormsComponent = () => {
                             { id: 'radio-2', name: 'radio-2', value: 'radio-2', label: 'Option 2' },
                             { id: 'radio-3', name: 'radio-3', value: 'radio-3', label: 'Option 3' }
                         ]}
-                        defaultChecked="radio-2"
+                        defaultChecked='radio-2'
                     />
                 </FormFieldset>
 
                 <FormFieldset>
-                    <FormLegend legendText="Radio buttons disabled" />
+                    <FormLegend legendText='Radio buttons disabled' />
                     <FormRadio
                         disabled
                         inputs={[
@@ -550,12 +550,12 @@ export const FormsComponent = () => {
                             { id: 'radio-5', name: 'radio-5', value: 'radio-5', label: 'Option 2' },
                             { id: 'radio-6', name: 'radio-6', value: 'radio-6', label: 'Option 3' }
                         ]}
-                        defaultChecked="radio-4"
+                        defaultChecked='radio-4'
                     />
                 </FormFieldset>
 
                 <FormFieldset>
-                    <FormLegend legendText="Inline Radio buttons" />
+                    <FormLegend legendText='Inline Radio buttons' />
                     <FormRadio
                         isInline={true}
                         inputs={[
@@ -563,7 +563,7 @@ export const FormsComponent = () => {
                             { id: 'radio-8', name: 'radio-8', value: 'radio-8', label: 'Option 2' },
                             { id: 'radio-9', name: 'radio-9', value: 'radio-9', label: 'Option 3' }
                         ]}
-                        defaultChecked="radio-9"
+                        defaultChecked='radio-9'
                     />
                 </FormFieldset>
             </DocsTile>
@@ -579,38 +579,38 @@ export const FormsComponent = () => {
 
             <DocsTile>
                 <FormFieldset>
-                    <FormLegend legendText="Checkboxes" />
+                    <FormLegend legendText='Checkboxes' />
                     <FormItem isCheck={true}>
-                        <FormInput type="checkbox" id="checkbox-1" name="checkbox-name-1" value="" />
-                        <FormLabel forAttr="checkbox-1">Option One</FormLabel>
+                        <FormInput type='checkbox' id='checkbox-1' name='checkbox-name-1' value='' />
+                        <FormLabel forAttr='checkbox-1'>Option One</FormLabel>
                     </FormItem>
                     <FormItem isCheck={true}>
-                        <FormInput type="checkbox" id="checkbox-2" name="checkbox-name-2" value="" />
-                        <FormLabel forAttr="checkbox-2">Option Two</FormLabel>
+                        <FormInput type='checkbox' id='checkbox-2' name='checkbox-name-2' value='' />
+                        <FormLabel forAttr='checkbox-2'>Option Two</FormLabel>
                     </FormItem>
                     <FormItem isCheck={true}>
-                        <FormInput type="checkbox" id="checkbox-3" name="checkbox-name-3" value="" />
-                        <FormLabel forAttr="checkbox-3">Option Three</FormLabel>
+                        <FormInput type='checkbox' id='checkbox-3' name='checkbox-name-3' value='' />
+                        <FormLabel forAttr='checkbox-3'>Option Three</FormLabel>
                     </FormItem>
                 </FormFieldset>
 
                 <FormFieldset>
-                    <FormLegend legendText="Inline Checkbox buttons" />
+                    <FormLegend legendText='Inline Checkbox buttons' />
                     <FormItem isCheck={true} isInline={true}>
-                        <FormLabel forAttr="checkbox-4">
-                            <FormInput type="checkbox" id="checkbox-4" name="checkbox-name-4" value="" />
+                        <FormLabel forAttr='checkbox-4'>
+                            <FormInput type='checkbox' id='checkbox-4' name='checkbox-name-4' value='' />
                             Option One
                         </FormLabel>
                     </FormItem>
                     <FormItem isCheck={true} isInline={true}>
-                        <FormLabel forAttr="checkbox-5">
-                            <FormInput type="checkbox" id="checkbox-5" name="checkbox-name-5" value="" />
+                        <FormLabel forAttr='checkbox-5'>
+                            <FormInput type='checkbox' id='checkbox-5' name='checkbox-name-5' value='' />
                             Option Two
                         </FormLabel>
                     </FormItem>
                     <FormItem isCheck={true} isInline={true}>
-                        <FormLabel forAttr="checkbox-6">
-                            <FormInput type="checkbox" id="checkbox-6" name="checkbox-name-6" value="" />
+                        <FormLabel forAttr='checkbox-6'>
+                            <FormInput type='checkbox' id='checkbox-6' name='checkbox-name-6' value='' />
                             Option Three
                         </FormLabel>
                     </FormItem>

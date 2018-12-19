@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 // ------------------------------------------------- Form Set -----------------------------------------------
 export const FormSet = props => {
     const { children } = props;
-    return <div className="fd-form__set">{children}</div>;
+    return <div className='fd-form__set'>{children}</div>;
 };
 
 // ------------------------------------------------- Form Item -----------------------------------------------
@@ -75,7 +75,7 @@ FormInput.propTypes = {
 export const FormTextarea = props => {
     const { id, children } = props;
     return (
-        <textarea className="fd-form__control" id={id}>
+        <textarea className='fd-form__control' id={id}>
             {children}
         </textarea>
     );
@@ -88,20 +88,20 @@ FormTextarea.propTypes = {
 // ------------------------------------------------- Form Fieldset ----------------------------------------------
 export const FormFieldset = props => {
     const { children } = props;
-    return <fieldset className="fd-form__set">{children}</fieldset>;
+    return <fieldset className='fd-form__set'>{children}</fieldset>;
 };
 
 // ------------------------------------------------- Form Legend ----------------------------------------------
 export const FormLegend = props => {
     const { children } = props;
-    return <legend className="fd-form__legend">{children}</legend>;
+    return <legend className='fd-form__legend'>{children}</legend>;
 };
 
 // ------------------------------------------------- Form Select ----------------------------------------------
 export const FormSelect = props => {
     const { id, name, disabled, children } = props;
     return (
-        <select className="fd-form__control" id={id} name={name} disabled={disabled ? true : ''}>
+        <select className='fd-form__control' id={id} name={name} disabled={disabled ? true : ''}>
             {children}
         </select>
     );
@@ -134,11 +134,11 @@ export class FormRadio extends Component {
 
         if (isInline) {
             result = inputs.map(inputItem => (
-                <div className="fd-form__item fd-form__item--inline fd-form__item--check" key={inputItem.id}>
-                    <label className="fd-form__label" htmlFor={inputItem.id}>
+                <div className='fd-form__item fd-form__item--inline fd-form__item--check' key={inputItem.id}>
+                    <label className='fd-form__label' htmlFor={inputItem.id}>
                         <input
-                            className="fd-form__control"
-                            type="radio"
+                            className='fd-form__control'
+                            type='radio'
                             id={inputItem.id}
                             name={inputItem.name}
                             value={inputItem.value}
@@ -152,10 +152,10 @@ export class FormRadio extends Component {
             ));
         } else {
             result = inputs.map(inputItem => (
-                <div className="fd-form__item fd-form__item--check" key={inputItem.id}>
+                <div className='fd-form__item fd-form__item--check' key={inputItem.id}>
                     <input
-                        className="fd-form__control"
-                        type="radio"
+                        className='fd-form__control'
+                        type='radio'
                         id={inputItem.id}
                         name={inputItem.name}
                         value={inputItem.value}
@@ -163,7 +163,7 @@ export class FormRadio extends Component {
                         onChange={this.handleChange}
                         checked={this.state.selectedItem === inputItem.id}
                     />
-                    <label className="fd-form__label" htmlFor={inputItem.id}>
+                    <label className='fd-form__label' htmlFor={inputItem.id}>
                         {inputItem.label}
                     </label>
                 </div>

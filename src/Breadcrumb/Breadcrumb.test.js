@@ -6,18 +6,18 @@ import { Breadcrumb, BreadcrumbItem } from './Breadcrumb';
 describe('<Breadcrumb />', () => {
   const defaultBreadCrumb = (
     <Breadcrumb>
-      <BreadcrumbItem url="#" name="Link Text" />
-      <BreadcrumbItem url="#" name="Link Text" />
-      <BreadcrumbItem name="Link Text" />
+      <BreadcrumbItem url='#' name='Link Text' />
+      <BreadcrumbItem url='#' name='Link Text' />
+      <BreadcrumbItem name='Link Text' />
     </Breadcrumb>
   );
 
   const breadCrumbRouterLink = (
     <MemoryRouter>
       <Breadcrumb>
-        <BreadcrumbItem name="Link Text" />
-        <BreadcrumbItem link="/" name="Link Text" />
-        <BreadcrumbItem link="/" name="Link Text" />
+        <BreadcrumbItem name='Link Text' />
+        <BreadcrumbItem link='/' name='Link Text' />
+        <BreadcrumbItem link='/' name='Link Text' />
       </Breadcrumb>
     </MemoryRouter>
   );

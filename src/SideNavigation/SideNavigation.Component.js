@@ -95,12 +95,12 @@ export const SideNavigationComponent = () => {
                 The left navigation can always display or expand/collapse using the menu icon within the global
                 navigation.
             </Description>
-            <Import module="SideNav, SideNavList, SideNavGroup" path="/fundamental-react/src/" />
+            <Import module='SideNav, SideNavList, SideNavGroup' path='/fundamental-react/src/' />
 
             <Separator />
 
             <Properties
-                type="Inputs"
+                type='Inputs'
                 properties={[
                     {
                         name: 'icons',
@@ -151,7 +151,7 @@ export const SideNavigationComponent = () => {
             <Description>Use this to group navigation. Titles are not clickable.</Description>
             <DocsTile>
                 <SideNav>
-                    <SideNavGroup title="Group Title">
+                    <SideNavGroup title='Group Title'>
                         <SideNavList
                             items={[
                                 { id: 'item_1', link: '/', name: 'Link Item' },
@@ -162,7 +162,7 @@ export const SideNavigationComponent = () => {
                             ]}
                         />
                     </SideNavGroup>
-                    <SideNavGroup title="Group Title">
+                    <SideNavGroup title='Group Title'>
                         <SideNavList
                             items={[
                                 { id: 'item_6', link: '/', name: 'Link Item' },

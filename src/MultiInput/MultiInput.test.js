@@ -27,7 +27,7 @@ describe('MultiInput />', () => {
     <MultiInput
       data={data}
       onTagsUpdate={mockOnTagsUpdate}
-      placeHolder="Select a Fruit"
+      placeHolder='Select a Fruit'
     />
   );
 
@@ -35,7 +35,7 @@ describe('MultiInput />', () => {
     <MultiInput
       data={data}
       onTagsUpdate={mockOnTagsUpdate}
-      placeHolder="Select a Fruit"
+      placeHolder='Select a Fruit'
       compact={true}
     />
   );

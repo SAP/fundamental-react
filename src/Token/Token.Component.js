@@ -17,7 +17,7 @@ export const TokenComponent = () => {
             <Header>Token</Header>
             <Description>Tokens are used to represent contextualizing information. They can be useful to show applied filters, selected values for form field or object metadata.
             </Description>
-            <Import module="Token" path="/fundamental-react/src/" />
+            <Import module='Token' path='/fundamental-react/src/' />
 
             <Separator />
 

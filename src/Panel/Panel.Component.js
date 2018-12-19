@@ -218,14 +218,14 @@ export const PanelComponent = () => {
             <Header>Panel</Header>
             <Description />
             <Import
-                module="Panel, PanelGrid, PanelBody, PanelHeader, PanelHead, PanelActions, PanelFilters, PanelContent, PanelFooter"
-                path="/fundamental-react/src/"
+                module='Panel, PanelGrid, PanelBody, PanelHeader, PanelHead, PanelActions, PanelFilters, PanelContent, PanelFooter'
+                path='/fundamental-react/src/'
             />
 
             <Separator />
 
             <Properties
-                type="Inputs"
+                type='Inputs'
                 properties={[
                     {
                         name: 'nogap',
@@ -253,7 +253,7 @@ export const PanelComponent = () => {
             />
 
             <Properties
-                type="Child Components"
+                type='Child Components'
                 properties={[
                     { name: 'PanelBody', description: 'The panel body.' },
                     { name: 'PanelHeader', description: 'The panel header. Contains a panel head and panel actions.' },
@@ -288,9 +288,9 @@ export const PanelComponent = () => {
             <DocsTile>
                 <Panel>
                     <PanelHeader>
-                        <PanelHead title={'Panel Header with Actions'} description="Panel Description" />
+                        <PanelHead title={'Panel Header with Actions'} description='Panel Description' />
                         <PanelActions>
-                            <Button compact glyph="add">
+                            <Button compact glyph='add'>
                                 Add New Button
                             </Button>
                         </PanelActions>
@@ -303,10 +303,10 @@ export const PanelComponent = () => {
                             body={
                                 <Menu>
                                     <MenuList>
-                                        <MenuItem url="/">Option 1</MenuItem>
-                                        <MenuItem url="/">Option 2</MenuItem>
-                                        <MenuItem url="/">Option 3</MenuItem>
-                                        <MenuItem url="/">Option 4</MenuItem>
+                                        <MenuItem url='/'>Option 1</MenuItem>
+                                        <MenuItem url='/'>Option 2</MenuItem>
+                                        <MenuItem url='/'>Option 3</MenuItem>
+                                        <MenuItem url='/'>Option 4</MenuItem>
                                     </MenuList>
                                 </Menu>
                             }
@@ -317,10 +317,10 @@ export const PanelComponent = () => {
                             body={
                                 <Menu>
                                     <MenuList>
-                                        <MenuItem url="/">Option 1</MenuItem>
-                                        <MenuItem url="/">Option 2</MenuItem>
-                                        <MenuItem url="/">Option 3</MenuItem>
-                                        <MenuItem url="/">Option 4</MenuItem>
+                                        <MenuItem url='/'>Option 1</MenuItem>
+                                        <MenuItem url='/'>Option 2</MenuItem>
+                                        <MenuItem url='/'>Option 3</MenuItem>
+                                        <MenuItem url='/'>Option 4</MenuItem>
                                     </MenuList>
                                 </Menu>
                             }
@@ -332,9 +332,9 @@ export const PanelComponent = () => {
                         <br />
                         <Tile>
                             <TileMedia>
-                                <Image size="l" type="circle" photo="https://placeimg.com/400/400/nature" />
+                                <Image size='l' type='circle' photo='https://placeimg.com/400/400/nature' />
                             </TileMedia>
-                            <TileContent title="Tile Title">
+                            <TileContent title='Tile Title'>
                                 <p>Tile Description</p>
                             </TileContent>
                         </Tile>

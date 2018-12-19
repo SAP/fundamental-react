@@ -250,10 +250,10 @@ class TimePickerItem extends Component {
   render() {
     const { disabled } = this.props;
     return (
-      <div className="fd-popover__control">
-        <div className="fd-input-group fd-input-group--after">
+      <div className='fd-popover__control'>
+        <div className='fd-input-group fd-input-group--after'>
           <input
-            type="text"
+            type='text'
             className={this.state.style}
             id={this.state.inputId}
             placeholder={this.props.placeholder}
@@ -263,13 +263,13 @@ class TimePickerItem extends Component {
             onBlur={this.onBlur}
             readOnly={disabled}
           />
-          <span className="fd-input-group__addon fd-input-group__addon--after fd-input-group__addon--button ">
+          <span className='fd-input-group__addon fd-input-group__addon--after fd-input-group__addon--button '>
             <button
               id={this.state.buttonID}
-              className="fd-button--light fd-button--compact sap-icon--fob-watch fd-popover__control"
-              aria-controls="rthHR811"
-              aria-expanded="false"
-              aria-haspopup="true"
+              className='fd-button--light fd-button--compact sap-icon--fob-watch fd-popover__control'
+              aria-controls='rthHR811'
+              aria-expanded='false'
+              aria-haspopup='true'
               disabled={disabled}
             />
           </span>
@@ -400,8 +400,8 @@ export class TimePicker extends React.Component {
     const { id, ...props } = this.props;
     const { popoverId, timeId } = this.state;
     return (
-      <div id={id} className="fd-time-picker">
-        <div className="fd-popover fd-popover--no-arrow">
+      <div id={id} className='fd-time-picker'>
+        <div className='fd-popover fd-popover--no-arrow'>
           <Popover
             id={popoverId}
             noArrow={true}

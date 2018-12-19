@@ -59,8 +59,8 @@ export class Pagination extends Component {
       .map((link, index) => (
         <a
           key={index}
-          href="#"
-          className="fd-pagination__link"
+          href='#'
+          className='fd-pagination__link'
           aria-selected={this.state.selectedPage === index + 1}
           onClick={this.pageClicked}
         >
@@ -85,28 +85,28 @@ export class Pagination extends Component {
     );
 
     return (
-      <div className="fd-pagination">
+      <div className='fd-pagination'>
         {displayTotal ? (
-          <span className="fd-pagination__total">
+          <span className='fd-pagination__total'>
             {itemsTotal} {totalText || 'items'}
           </span>
         ) : (
           ''
         )}
 
-        <nav className="fd-pagination__nav">
+        <nav className='fd-pagination__nav'>
           <a
-            href="#"
-            className="fd-pagination__link fd-pagination__link--previous"
-            aria-label="Previous"
+            href='#'
+            className='fd-pagination__link fd-pagination__link--previous'
+            aria-label='Previous'
             aria-disabled={this.state.selectedPage === 1}
             onClick={this.navigateBack}
           />
           {this.createPaginationLinks(this.numberOfPages)}
           <a
-            href="#"
-            className="fd-pagination__link fd-pagination__link--next"
-            aria-label="Next"
+            href='#'
+            className='fd-pagination__link fd-pagination__link--next'
+            aria-label='Next'
             aria-disabled={this.state.selectedPage === this.numberOfPages}
             onClick={this.navigateForward}
           />

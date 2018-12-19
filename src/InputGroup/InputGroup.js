@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 export const FormGroup = props => {
   const { children } = props;
-  return <div className="fd-form__group">{children}</div>;
+  return <div className='fd-form__group'>{children}</div>;
 };
 
 export class InputGroup extends Component {
@@ -80,21 +80,21 @@ export class InputGroup extends Component {
           >
             <input
               className={`${compact ? 'fd-input fd-input--compact' : ''}`}
-              type="number"
+              type='number'
               id={inputId}
               name={inputName}
               value={this.state.value}
               onChange={this.handleTextChange}
             />
-            <span className="fd-input-group__addon fd-input-group__addon--button fd-input-group__addon--after">
+            <span className='fd-input-group__addon fd-input-group__addon--button fd-input-group__addon--after'>
               <button
-                className="fd-input-group__button fd-input-group__button--step-up sap-icon--slim-arrow-up"
-                aria-label="Step up"
+                className='fd-input-group__button fd-input-group__button--step-up sap-icon--slim-arrow-up'
+                aria-label='Step up'
                 onClick={this.handleUp}
               />
               <button
-                className="fd-input-group__button fd-input-group__button--step-down sap-icon--slim-arrow-down"
-                aria-label="Step down"
+                className='fd-input-group__button fd-input-group__button--step-down sap-icon--slim-arrow-down'
+                aria-label='Step down'
                 onClick={this.handleDown}
               />
             </span>
@@ -110,17 +110,17 @@ export class InputGroup extends Component {
           >
             <input
               className={`${compact ? 'fd-input fd-input--compact' : ''}`}
-              type="search"
+              type='search'
               id={inputId}
               name={inputName}
               value={this.state.searchValue}
               placeholder={inputPlaceholder}
               onChange={this.handleChange}
             />
-            <span className="fd-input-group__addon fd-input-group__addon--button">
+            <span className='fd-input-group__addon fd-input-group__addon--button'>
               <button
-                className="fd-input-group__button fd-input-group__button--clear"
-                aria-label="Clear"
+                className='fd-input-group__button fd-input-group__button--clear'
+                aria-label='Clear'
                 onClick={this.handleClear}
               />
             </span>
@@ -136,15 +136,15 @@ export class InputGroup extends Component {
               }`}
             >
               {actions ? (
-                <span className="fd-input-group__addon fd-input-group__addon--button fd-input-group__addon--before">
+                <span className='fd-input-group__addon fd-input-group__addon--button fd-input-group__addon--before'>
                   {children}
                 </span>
               ) : (
-                <span className="fd-input-group__addon fd-input-group__addon--before">
+                <span className='fd-input-group__addon fd-input-group__addon--before'>
                   {glyph ? (
                     <span
                       className={`${'sap-icon--' + glyph}`}
-                      role="presentation"
+                      role='presentation'
                     />
                   ) : (
                     addon
@@ -153,7 +153,7 @@ export class InputGroup extends Component {
               )}
               <input
                 className={`${compact ? 'fd-input fd-input--compact' : ''}`}
-                type="text"
+                type='text'
                 id={inputId}
                 name={inputName}
                 value={this.state.value}
@@ -170,22 +170,22 @@ export class InputGroup extends Component {
             >
               <input
                 className={`${compact ? 'fd-input fd-input--compact' : ''}`}
-                type="text"
+                type='text'
                 id={inputId}
                 name={inputName}
                 value={this.state.value}
                 onChange={this.handleTextChange}
               />
               {actions ? (
-                <span className="fd-input-group__addon fd-input-group__addon--button fd-input-group__addon--after">
+                <span className='fd-input-group__addon fd-input-group__addon--button fd-input-group__addon--after'>
                   {children}
                 </span>
               ) : (
-                <span className="fd-input-group__addon fd-input-group__addon--after">
+                <span className='fd-input-group__addon fd-input-group__addon--after'>
                   {glyph ? (
                     <span
                       className={`${'sap-icon--' + glyph}`}
-                      role="presentation"
+                      role='presentation'
                     />
                   ) : (
                     addon

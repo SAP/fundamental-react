@@ -40,12 +40,12 @@ export const ComboboxInputComponent = () => {
         <div>
             <Header>Combobox Input</Header>
 
-            <Import module="ComboboxInput, Menu, MenuItem, MenuList" path="/fundamental-react/src/" />
+            <Import module='ComboboxInput, Menu, MenuItem, MenuList' path='/fundamental-react/src/' />
 
             <Separator />
 
             <Properties
-                type="Inputs"
+                type='Inputs'
                 properties={[
                     { name: 'menu', description: 'object (required) - An object containing a Menu component. ' },
                     { name: 'id', description: 'string (optional) - The id of the component.' },
@@ -59,14 +59,14 @@ export const ComboboxInputComponent = () => {
             <h2>Combobox Input</h2>
             <DocsTile>
                 <ComboboxInput
-                    placeholder="Select Fruit"
+                    placeholder='Select Fruit'
                     menu={
                         <Menu>
                             <MenuList>
-                                <MenuItem url="/">Pear</MenuItem>
-                                <MenuItem url="/">Strawberry</MenuItem>
-                                <MenuItem url="/">Raspberry</MenuItem>
-                                <MenuItem url="/" isLink>
+                                <MenuItem url='/'>Pear</MenuItem>
+                                <MenuItem url='/'>Strawberry</MenuItem>
+                                <MenuItem url='/'>Raspberry</MenuItem>
+                                <MenuItem url='/' isLink>
                                     + New Item
                                 </MenuItem>
                             </MenuList>
@@ -77,15 +77,15 @@ export const ComboboxInputComponent = () => {
                 <br />
 
                 <ComboboxInput
-                    placeholder="Select Fruit"
+                    placeholder='Select Fruit'
                     compact
                     menu={
                         <Menu>
                             <MenuList>
-                                <MenuItem url="/">Pear</MenuItem>
-                                <MenuItem url="/">Strawberry</MenuItem>
-                                <MenuItem url="/">Raspberry</MenuItem>
-                                <MenuItem url="/" isLink>
+                                <MenuItem url='/'>Pear</MenuItem>
+                                <MenuItem url='/'>Strawberry</MenuItem>
+                                <MenuItem url='/'>Raspberry</MenuItem>
+                                <MenuItem url='/' isLink>
                                     + New Item
                                 </MenuItem>
                             </MenuList>

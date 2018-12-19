@@ -74,10 +74,10 @@ describe('<Modal />', () => {
         </React.Fragment>
       }
     >
-      <div className="fd-form__group">
-        <div className="fd-form__item">
-          <label className="fd-form__label is-required">Email</label>
-          <input className="fd-form__control" type="text" />
+      <div className='fd-form__group'>
+        <div className='fd-form__item'>
+          <label className='fd-form__label is-required'>Email</label>
+          <input className='fd-form__control' type='text' />
         </div>
       </div>
     </Modal>

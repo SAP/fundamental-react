@@ -7,12 +7,12 @@ describe('<Menu />', () => {
   const basicMenuCode = (
     <Menu>
       <MenuList>
-        <MenuItem url="/">Option 1</MenuItem>
-        <MenuItem url="/" isLink={true}>
+        <MenuItem url='/'>Option 1</MenuItem>
+        <MenuItem url='/' isLink={true}>
           Option 2
         </MenuItem>
-        <MenuItem url="/">Option 3</MenuItem>
-        <MenuItem url="/">Option 4</MenuItem>
+        <MenuItem url='/'>Option 3</MenuItem>
+        <MenuItem url='/'>Option 4</MenuItem>
       </MenuList>
     </Menu>
   );
@@ -21,17 +21,17 @@ describe('<Menu />', () => {
     <MemoryRouter>
       <Menu>
         <MenuList>
-          <MenuItem link="/">Option 1</MenuItem>
-          <MenuItem link="/" isLink={true}>
+          <MenuItem link='/'>Option 1</MenuItem>
+          <MenuItem link='/' isLink={true}>
             Option 2
           </MenuItem>
-          <MenuItem link="/">Option 3</MenuItem>
+          <MenuItem link='/'>Option 3</MenuItem>
         </MenuList>
-        <MenuGroup title="Group Header">
+        <MenuGroup title='Group Header'>
           <MenuList>
-            <MenuItem link="/">Option 4</MenuItem>
-            <MenuItem link="/">Option 5</MenuItem>
-            <MenuItem link="/">Option 6</MenuItem>
+            <MenuItem link='/'>Option 4</MenuItem>
+            <MenuItem link='/'>Option 5</MenuItem>
+            <MenuItem link='/'>Option 6</MenuItem>
           </MenuList>
         </MenuGroup>
       </Menu>
@@ -42,16 +42,16 @@ describe('<Menu />', () => {
     <MemoryRouter>
       <Menu>
         <MenuList>
-          <MenuItem link="/" separator={true}>
+          <MenuItem link='/' separator={true}>
             Option 1
           </MenuItem>
-          <MenuItem link="/" separator={true}>
+          <MenuItem link='/' separator={true}>
             Option 2
           </MenuItem>
-          <MenuItem link="/" separator={true}>
+          <MenuItem link='/' separator={true}>
             Option 3
           </MenuItem>
-          <MenuItem link="/">Option 4</MenuItem>
+          <MenuItem link='/'>Option 4</MenuItem>
         </MenuList>
       </Menu>
     </MemoryRouter>
@@ -61,12 +61,12 @@ describe('<Menu />', () => {
     <MemoryRouter>
       <Menu addonBefore={true}>
         <MenuList>
-          <MenuItem link="/">Option 1</MenuItem>
-          <MenuItem link="/" addon="accept">
+          <MenuItem link='/'>Option 1</MenuItem>
+          <MenuItem link='/' addon='accept'>
             Option 2
           </MenuItem>
-          <MenuItem link="/">Option 3</MenuItem>
-          <MenuItem link="/">Option 4</MenuItem>
+          <MenuItem link='/'>Option 3</MenuItem>
+          <MenuItem link='/'>Option 4</MenuItem>
         </MenuList>
       </Menu>
     </MemoryRouter>

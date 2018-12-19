@@ -55,10 +55,10 @@ export class SideNavList extends Component {
     const { items } = this.props;
     return (
       <BrowserRouter>
-        <ul className="fd-side-nav__list">
+        <ul className='fd-side-nav__list'>
           {items.map(item => {
             return (
-              <li className="fd-side-nav__item" key={item.id}>
+              <li className='fd-side-nav__item' key={item.id}>
                 {item.link ? (
                   <Link
                     className={`fd-side-nav__link${
@@ -76,7 +76,7 @@ export class SideNavList extends Component {
                       <span
                         className={`fd-side-nav__icon${' sap-icon--' +
                           item.glyph} sap-icon--l`}
-                        role="presentation"
+                        role='presentation'
                       />
                     ) : null}
                     {item.name}
@@ -100,7 +100,7 @@ export class SideNavList extends Component {
                       <span
                         className={`fd-side-nav__icon${' sap-icon--' +
                           item.glyph} sap-icon--l`}
-                        role="presentation"
+                        role='presentation'
                       />
                     ) : null}
                     {item.name}
@@ -109,7 +109,7 @@ export class SideNavList extends Component {
 
                 {item.hasChild ? (
                   <ul
-                    className="fd-side-nav__sublist"
+                    className='fd-side-nav__sublist'
                     id={item.id}
                     aria-hidden={!this.state.itemStates[item.id]}
                     aria-expanded={this.state.itemStates[item.id]}
@@ -166,8 +166,8 @@ SideNavList.propTypes = {
 export const SideNavGroup = props => {
   const { title, children } = props;
   return (
-    <div className="fd-side-nav__group">
-      <h1 className="fd-side-nav__title">{title}</h1>
+    <div className='fd-side-nav__group'>
+      <h1 className='fd-side-nav__title'>{title}</h1>
       {children}
     </div>
   );

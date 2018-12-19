@@ -17,12 +17,12 @@ export const InlineHelpComponent = () => {
                 Inline help is used to display help text in a popover, often inline with headers, body text and form
                 labels.
             </Description>
-            <Import module="InlineHelp" path="/fundamental-react/src/" />
+            <Import module='InlineHelp' path='/fundamental-react/src/' />
 
             <Separator />
 
             <Properties
-                type="Inputs"
+                type='Inputs'
                 properties={[
                     {
                         name: 'text',
@@ -41,7 +41,7 @@ export const InlineHelpComponent = () => {
             <Description>The default positioning of inline help component is bottom right.</Description>
             <DocsTile centered>
                 Bottom Right (Default) &nbsp;
-                <InlineHelp text="Lorem ipsum dolor sit amet, consectetur adipiscing." placement="bottom-right" />
+                <InlineHelp text='Lorem ipsum dolor sit amet, consectetur adipiscing.' placement='bottom-right' />
             </DocsTile>
             <DocsText>{defaultHelpPlacement}</DocsText>
 
@@ -50,7 +50,7 @@ export const InlineHelpComponent = () => {
             <h2>Bottom Left Position</h2>
             <DocsTile centered>
                 Bottom Left &nbsp;
-                <InlineHelp text="Lorem ipsum dolor sit amet, consectetur adipiscing." placement="bottom-left" />
+                <InlineHelp text='Lorem ipsum dolor sit amet, consectetur adipiscing.' placement='bottom-left' />
             </DocsTile>
             <DocsText>{bottomLeftHelpPlacement}</DocsText>
 
@@ -59,7 +59,7 @@ export const InlineHelpComponent = () => {
              <h2>Bottom Center Position</h2>
             <DocsTile centered>
                 Bottom Center &nbsp;
-                <InlineHelp text="Lorem ipsum dolor sit amet, consectetur adipiscing." placement="bottom-center" />
+                <InlineHelp text='Lorem ipsum dolor sit amet, consectetur adipiscing.' placement='bottom-center' />
             </DocsTile>
             <DocsText>{centerHelpPlacement}</DocsText>
 
@@ -68,7 +68,7 @@ export const InlineHelpComponent = () => {
             <h2>Right Position</h2>
             <DocsTile centered>
                 Right &nbsp;
-                <InlineHelp text="Lorem ipsum dolor sit amet, consectetur adipiscing." placement="right" />
+                <InlineHelp text='Lorem ipsum dolor sit amet, consectetur adipiscing.' placement='right' />
             </DocsTile>
             <DocsText>{rightHelpPlacement}</DocsText>
 
@@ -77,7 +77,7 @@ export const InlineHelpComponent = () => {
             <h2>Left Position</h2>
             <DocsTile centered>
                 Left &nbsp;
-                <InlineHelp text="Lorem ipsum dolor sit amet, consectetur adipiscing." placement="left" />
+                <InlineHelp text='Lorem ipsum dolor sit amet, consectetur adipiscing.' placement='left' />
             </DocsTile>
             <DocsText>{leftHelpPlacement}</DocsText>
 

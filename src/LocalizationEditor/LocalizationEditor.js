@@ -7,12 +7,12 @@ export const LocalizationEditor = props => {
   const { control, menu, id, compact, textarea } = props;
 
   return (
-    <div className="fd-localization-editor">
+    <div className='fd-localization-editor'>
       <Popover
         id={id}
         control={
           <div>
-            <label className="fd-form__label" htmlFor={id}>
+            <label className='fd-form__label' htmlFor={id}>
               {control.label}
             </label>
             <div
@@ -24,7 +24,7 @@ export const LocalizationEditor = props => {
                 <textarea />
               ) : (
                 <input
-                  type="text"
+                  type='text'
                   className={compact ? 'fd-input fd-input--compact' : ''}
                   placeholder={control.placeholder}
                 />
@@ -34,7 +34,7 @@ export const LocalizationEditor = props => {
                   textarea ? ' fd-input-group__addon--textarea' : ''
                 }`}
               >
-                <button className="fd-button--light fd-localization-editor__button">
+                <button className='fd-button--light fd-localization-editor__button'>
                   {control.language}
                 </button>
               </span>
@@ -42,8 +42,8 @@ export const LocalizationEditor = props => {
           </div>
         }
         body={
-          <nav className="fd-menu">
-            <ul className="fd-menu__list fd-localization-editor__list">
+          <nav className='fd-menu'>
+            <ul className='fd-menu__list fd-localization-editor__list'>
               {menu.map((item, index) => {
                 return (
                   <li key={index}>
@@ -56,7 +56,7 @@ export const LocalizationEditor = props => {
                         <textarea />
                       ) : (
                         <input
-                          type="text"
+                          type='text'
                           className={
                             compact ? 'fd-input fd-input--compact' : ''
                           }

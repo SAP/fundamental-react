@@ -16,12 +16,12 @@ export const ImageComponent = () => {
             <Description>
                 When using images, use the following helpers classes to adjust the size and the shape.
             </Description>
-            <Import module="Image" path="/fundamental-react/src/" />
+            <Import module='Image' path='/fundamental-react/src/' />
 
             <Separator />
 
             <Properties
-                type="Inputs"
+                type='Inputs'
                 properties={[
                     {
                         name: 'size',
@@ -37,10 +37,10 @@ export const ImageComponent = () => {
 
             <h2>Sizes</h2>
             <DocsTile centered>
-                <div className="fd-doc__margin">
-                    <Image size="s" photo="https://placeimg.com/400/400/nature" />
-                    <Image size="m" photo="https://placeimg.com/400/400/nature" />
-                    <Image size="l" photo="https://placeimg.com/400/400/nature" />
+                <div className='fd-doc__margin'>
+                    <Image size='s' photo='https://placeimg.com/400/400/nature' />
+                    <Image size='m' photo='https://placeimg.com/400/400/nature' />
+                    <Image size='l' photo='https://placeimg.com/400/400/nature' />
                 </div>
             </DocsTile>
             <DocsText>{sizesImageCode}</DocsText>
@@ -49,10 +49,10 @@ export const ImageComponent = () => {
 
             <h2>Shapes</h2>
             <DocsTile centered>
-                <div className="fd-doc__margin">
-                    <Image size="s" type="circle" photo="https://placeimg.com/400/400/nature" />
-                    <Image size="m" type="circle" photo="https://placeimg.com/400/400/nature" />
-                    <Image size="l" type="circle" photo="https://placeimg.com/400/400/nature" />
+                <div className='fd-doc__margin'>
+                    <Image size='s' type='circle' photo='https://placeimg.com/400/400/nature' />
+                    <Image size='m' type='circle' photo='https://placeimg.com/400/400/nature' />
+                    <Image size='l' type='circle' photo='https://placeimg.com/400/400/nature' />
                 </div>
             </DocsTile>
             <DocsText>{shapesImageCode}</DocsText>
@@ -60,7 +60,7 @@ export const ImageComponent = () => {
             <Separator />
             <h2>Playground</h2>
             <Playground
-                component="image"
+                component='image'
                 schema={[
                     {
                         attribute: 'size',
@@ -78,7 +78,7 @@ export const ImageComponent = () => {
                     }
                 ]}
             >
-                <Image size="s" type="" photo="https://placeimg.com/400/400/nature" />
+                <Image size='s' type='' photo='https://placeimg.com/400/400/nature' />
             </Playground>
         </div>
     );

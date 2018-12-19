@@ -60,7 +60,7 @@ rules:
     #jsx-a11y/role-supports-aria-props: 2
     jsx-a11y/scope: 2
     jsx-a11y/tabindex-no-positive: 2
-    #jsx-quotes: [ 2, prefer-single ]
+    jsx-quotes: [ 2, prefer-single ]
     key-spacing: 2
     keyword-spacing: [2, { 'before': true }]
     #loosely-restrict-imports/loosely-restrict-imports: [2, '.jsx']

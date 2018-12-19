@@ -7,7 +7,7 @@ import { TimePicker } from './TimePicker';
 Enzyme.configure({ adapter: new Adapter() });
 
 describe('<TimePicker />', () => {
-  const defaultTimePicker = <TimePicker id="myTime" />;
+  const defaultTimePicker = <TimePicker id='myTime' />;
   const twelveHourTime = <TimePicker format12Hours={true} />;
   const showHour = <TimePicker format12Hours={true} showHour={true} />;
   const showMinute = <TimePicker format12Hours={true} showMinute={true} />;

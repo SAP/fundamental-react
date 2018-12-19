@@ -63,12 +63,12 @@ export const BadgeComponent = () => {
         <div>
             <Header>Status Indicators</Header>
             <Description>Status Indicators are used to easily highlight the state of an object.</Description>
-            <Import module="Badge, Label, Status, Counter" path="/fundamental-react/src/" />
+            <Import module='Badge, Label, Status, Counter' path='/fundamental-react/src/' />
 
             <Separator />
 
             <Properties
-                type="Inputs"
+                type='Inputs'
                 properties={[
                     {
                         name: 'type',
@@ -96,9 +96,9 @@ export const BadgeComponent = () => {
             <h2>Default Badge</h2>
             <DocsTile centered>
                 <Badge>Default</Badge>
-                <Badge type="success">Default</Badge>
-                <Badge type="warning">Default</Badge>
-                <Badge type="error">Default</Badge>
+                <Badge type='success'>Default</Badge>
+                <Badge type='warning'>Default</Badge>
+                <Badge type='error'>Default</Badge>
             </DocsTile>
             <DocsText>{defaultBadgeCode}</DocsText>
 
@@ -109,14 +109,14 @@ export const BadgeComponent = () => {
                 Apply <code>modifier="pill"</code> to render a pill version of the badge.
             </Description>
             <DocsTile centered>
-                <Badge modifier="pill">Default</Badge>
-                <Badge type="success" modifier="pill">
+                <Badge modifier='pill'>Default</Badge>
+                <Badge type='success' modifier='pill'>
                     Default
                 </Badge>
-                <Badge type="warning" modifier="pill">
+                <Badge type='warning' modifier='pill'>
                     Default
                 </Badge>
-                <Badge type="error" modifier="pill">
+                <Badge type='error' modifier='pill'>
                     Default
                 </Badge>
             </DocsTile>
@@ -129,14 +129,14 @@ export const BadgeComponent = () => {
                 Apply <code>modifier="filled"</code> to render a filled version of the badge.
             </Description>
             <DocsTile centered>
-                <Badge modifier="filled">Default</Badge>
-                <Badge type="success" modifier="filled">
+                <Badge modifier='filled'>Default</Badge>
+                <Badge type='success' modifier='filled'>
                     Default
                 </Badge>
-                <Badge type="warning" modifier="filled">
+                <Badge type='warning' modifier='filled'>
                     Default
                 </Badge>
-                <Badge type="error" modifier="filled">
+                <Badge type='error' modifier='filled'>
                     Default
                 </Badge>
             </DocsTile>
@@ -147,9 +147,9 @@ export const BadgeComponent = () => {
             <h2>Label</h2>
             <DocsTile centered>
                 <Label>Default</Label>
-                <Label type="success">Default</Label>
-                <Label type="warning">Default</Label>
-                <Label type="error">Default</Label>
+                <Label type='success'>Default</Label>
+                <Label type='warning'>Default</Label>
+                <Label type='error'>Default</Label>
             </DocsTile>
             <DocsText>{labelCode}</DocsText>
 
@@ -158,24 +158,24 @@ export const BadgeComponent = () => {
             <h2>Status Indicator Label with build in status icons</h2>
             <DocsTile centered>
                 <Status>Default</Status>
-                <Status type="success">Default</Status>
-                <Status type="warning">Default</Status>
-                <Status type="error">Default</Status>
+                <Status type='success'>Default</Status>
+                <Status type='warning'>Default</Status>
+                <Status type='error'>Default</Status>
                 <br />
                 <br />
-                <Status type="available">Available</Status>
-                <Status type="away">Away</Status>
-                <Status type="busy">Busy</Status>
-                <Status type="offline">Appear Offline</Status>
+                <Status type='available'>Available</Status>
+                <Status type='away'>Away</Status>
+                <Status type='busy'>Busy</Status>
+                <Status type='offline'>Appear Offline</Status>
             </DocsTile>
             <DocsText>{statusCode}</DocsText>
             <Separator />
             <h2>Status Indicator Label with any icons</h2>
             <DocsTile centered>
-                <Status glyph="history">Custom Icon</Status>
-                <Status glyph="message-success">Success</Status>
-                <Status glyph="message-warning">Warning</Status>
-                <Status glyph="message-error">Error</Status>
+                <Status glyph='history'>Custom Icon</Status>
+                <Status glyph='message-success'>Success</Status>
+                <Status glyph='message-warning'>Warning</Status>
+                <Status glyph='message-error'>Error</Status>
             </DocsTile>
             <DocsText>{statusIconCode}</DocsText>
 
@@ -206,16 +206,16 @@ export const BadgeComponent = () => {
             <h2>Notification counter</h2>
             <Description>Use the property 'notification' to enable notification counter.</Description>
             <DocsTile centered>
-                <Button option="light" glyph="bell">
+                <Button option='light' glyph='bell'>
                     <Counter notification>5</Counter>
                 </Button>
-                <Button option="light" glyph="bell">
+                <Button option='light' glyph='bell'>
                     <Counter notification>25</Counter>
                 </Button>
-                <Button option="light" glyph="bell">
+                <Button option='light' glyph='bell'>
                     <Counter notification>101</Counter>
                 </Button>
-                <Button option="light" glyph="bell">
+                <Button option='light' glyph='bell'>
                     <Counter notification>999+</Counter>
                 </Button>
             </DocsTile>
@@ -225,7 +225,7 @@ export const BadgeComponent = () => {
 
             <h2>Playground</h2>
             <Playground
-                component="badge"
+                component='badge'
                 schema={[
                     {
                         attribute: 'children',
@@ -876,7 +876,7 @@ export const BadgeComponent = () => {
                     }
                 ]}
             >
-                <Badge type="success" modifier="filled" glyph="message-error">
+                <Badge type='success' modifier='filled' glyph='message-error'>
                     Default
                 </Badge>
             </Playground>

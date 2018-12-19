@@ -5,7 +5,7 @@ import { BrowserRouter, Link } from 'react-router-dom';
 export const MegaMenu = props => {
     const { id, children } = props;
     return (
-        <nav className="fd-mega-menu" id={id}>
+        <nav className='fd-mega-menu' id={id}>
             {children}
         </nav>
     );
@@ -63,10 +63,10 @@ export class MegaMenuList extends Component {
         const { items } = this.props;
         return (
             <BrowserRouter>
-                <ul className="fd-mega-menu__list">
+                <ul className='fd-mega-menu__list'>
                     {items.map(item => {
                         return (
-                            <li className="fd-mega-menu__item" key={item.id}>
+                            <li className='fd-mega-menu__item' key={item.id}>
                                 {item.link ? (
                                     <Link
                                         className={`fd-mega-menu__link${
@@ -99,14 +99,14 @@ export class MegaMenuList extends Component {
 
                                 {item.hasChild ? (
                                     <ul
-                                        className="fd-mega-menu__sublist"
+                                        className='fd-mega-menu__sublist'
                                         id={item.id}
                                         aria-hidden={!this.state.itemStates[item.id]}
                                         aria-expanded={this.state.itemStates[item.id]}
                                     >
                                         {item.child.map(ch => {
                                             return (
-                                                <li className="fd-mega-menu__subitem" key={ch.id}>
+                                                <li className='fd-mega-menu__subitem' key={ch.id}>
                                                    {ch.link ? ( <Link
                                                         className={`fd-mega-menu__sublink${
                                                             this.state.selectedItem === ch.id ? ' is-selected' : ''
@@ -147,8 +147,8 @@ MegaMenuList.propTypes = {
 export const MegaMenuGroup = props => {
     const { title, children } = props;
     return (
-        <div className="fd-mega-menu__group">
-            <h1 className="fd-mega-menu__title">{title}</h1>
+        <div className='fd-mega-menu__group'>
+            <h1 className='fd-mega-menu__title'>{title}</h1>
             {children}
         </div>
     );

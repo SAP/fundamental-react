@@ -17,13 +17,13 @@ export const DocsTile = props => {
     const { centered, children } = props;
 
     return (
-        <div className="fd-tile" style={docsTileStyle}>
+        <div className='fd-tile' style={docsTileStyle}>
             {centered ? (
-                <div className="fd-tile__content">
+                <div className='fd-tile__content'>
                     <div style={centerStyle}>{children}</div>
                 </div>
             ) : (
-                <div className="fd-tile__content">{children}</div>
+                <div className='fd-tile__content'>{children}</div>
             )}
         </div>
     );
@@ -42,7 +42,7 @@ export const DocsText = props => {
 
     return (
         <pre style={docsTextStyle}>
-            <SyntaxHighlighter language="html" style={googlecode}>
+            <SyntaxHighlighter language='html' style={googlecode}>
                 {children}
             </SyntaxHighlighter>
         </pre>

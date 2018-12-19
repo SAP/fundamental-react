@@ -75,26 +75,26 @@ export class Tree extends Component {
           //Checks if the element is an object
           if (typeof element === 'object') {
             return (
-              <div key={index} className="fd-tree__col fd-tree__col--control">
+              <div key={index} className='fd-tree__col fd-tree__col--control'>
                 <button
-                  className="fd-tree__control"
-                  aria-label="expand"
-                  aria-controls="inYUX852"
+                  className='fd-tree__control'
+                  aria-label='expand'
+                  aria-controls='inYUX852'
                   onClick={this.updateVisibility(row.id)}
                   aria-pressed={this.state.iStates[row.id]}
                 />
-                <a href={element.linkUrl} className="fd-has-font-weight-semi">
+                <a href={element.linkUrl} className='fd-has-font-weight-semi'>
                   {element.displayText ? element.displayText : element.linkUrl}
                 </a>
               </div>
             );
           }
           return (
-            <div key={index} className="fd-tree__col fd-tree__col--control">
+            <div key={index} className='fd-tree__col fd-tree__col--control'>
               <button
-                className="fd-tree__control"
-                aria-label="expand"
-                aria-controls="inYUX852"
+                className='fd-tree__control'
+                aria-label='expand'
+                aria-controls='inYUX852'
                 onClick={this.updateVisibility(row.id)}
                 aria-pressed={this.state.iStates[row.id]}
               />
@@ -105,9 +105,9 @@ export class Tree extends Component {
 
         if (row.values.indexOf(element) === 0) {
           return (
-            <div key={index} className="fd-tree__col fd-tree__col--control">
+            <div key={index} className='fd-tree__col fd-tree__col--control'>
               {typeof element === 'object' ? (
-                <a href={element.linkUrl} className="fd-has-font-weight-semi">
+                <a href={element.linkUrl} className='fd-has-font-weight-semi'>
                   {element.displayText ? element.displayText : element.linkUrl}
                 </a>
               ) : (
@@ -117,9 +117,9 @@ export class Tree extends Component {
           );
         }
         return (
-          <div key={index} className="fd-tree__col">
+          <div key={index} className='fd-tree__col'>
             {typeof element === 'object' ? (
-              <a href={element.linkUrl} className="fd-has-font-weight-semi">
+              <a href={element.linkUrl} className='fd-has-font-weight-semi'>
                 {element.displayText ? element.displayText : element.linkUrl}
               </a>
             ) : (
@@ -139,15 +139,15 @@ export class Tree extends Component {
       }
       if (isChild) {
         return (
-          <ul key={row.id} className={displayLevel} role="group">
-            <ul className="fd-tree-child">
+          <ul key={row.id} className={displayLevel} role='group'>
+            <ul className='fd-tree-child'>
               <li
-                className="fd-tree__item"
-                role="treeitem"
-                aria-expanded="true"
+                className='fd-tree__item'
+                role='treeitem'
+                aria-expanded='true'
                 key={row.id}
               >
-                <div className="fd-tree__row">
+                <div className='fd-tree__row'>
                   {parent}
                   {<Dropdown isContextual={true} />}
                 </div>
@@ -160,12 +160,12 @@ export class Tree extends Component {
       depthLevel = 0;
       return (
         <li
-          className="fd-tree__item"
-          role="treeitem"
-          aria-expanded="true"
+          className='fd-tree__item'
+          role='treeitem'
+          aria-expanded='true'
           key={row.id}
         >
-          <div className="fd-tree__row">
+          <div className='fd-tree__row'>
             {parent}
             {<Dropdown isContextual={true} />}
           </div>
@@ -181,18 +181,18 @@ export class Tree extends Component {
     const { headers, treeData } = this.props;
     return (
       <div>
-        <div className="fd-tree fd-tree--header">
-          <div className="fd-tree__row fd-tree__row--header">
+        <div className='fd-tree fd-tree--header'>
+          <div className='fd-tree__row fd-tree__row--header'>
             {headers.map((header, index) => {
               if (headers.indexOf(header) === 0) {
                 return (
                   <div
                     key={index}
-                    className="fd-tree__col fd-tree__col--control"
+                    className='fd-tree__col fd-tree__col--control'
                   >
                     <button
-                      className="fd-tree__control "
-                      aria-label="expand"
+                      className='fd-tree__control '
+                      aria-label='expand'
                       aria-pressed={this.state.expandAllClicked}
                       onClick={e => this.openAllList(treeData, e)}
                     />
@@ -201,7 +201,7 @@ export class Tree extends Component {
                 );
               }
               return (
-                <div key={index} className="fd-tree__col">
+                <div key={index} className='fd-tree__col'>
                   {header}
                 </div>
               );
@@ -209,7 +209,7 @@ export class Tree extends Component {
           </div>
         </div>
 
-        <ul className="fd-tree" id="" role="tree">
+        <ul className='fd-tree' id='' role='tree'>
           {this.createTreeList(treeData)}
         </ul>
       </div>

@@ -6,14 +6,14 @@ import { Menu, MenuItem, MenuList } from '../Menu/Menu';
 describe('<ComboboxInput />', () => {
   const defaultComboBoxInput = (
     <ComboboxInput
-      placeholder="Select Fruit"
+      placeholder='Select Fruit'
       menu={
         <Menu>
           <MenuList>
-            <MenuItem url="/">Pear</MenuItem>
-            <MenuItem url="/">Strawberry</MenuItem>
-            <MenuItem url="/">Raspberry</MenuItem>
-            <MenuItem url="/" isLink>
+            <MenuItem url='/'>Pear</MenuItem>
+            <MenuItem url='/'>Strawberry</MenuItem>
+            <MenuItem url='/'>Raspberry</MenuItem>
+            <MenuItem url='/' isLink>
               + New Item
             </MenuItem>
           </MenuList>
@@ -24,15 +24,15 @@ describe('<ComboboxInput />', () => {
 
   const compactComboBoxInput = (
     <ComboboxInput
-      placeholder="Select Fruit"
+      placeholder='Select Fruit'
       compact
       menu={
         <Menu>
           <MenuList>
-            <MenuItem url="/">Pear</MenuItem>
-            <MenuItem url="/">Strawberry</MenuItem>
-            <MenuItem url="/">Raspberry</MenuItem>
-            <MenuItem url="/" isLink>
+            <MenuItem url='/'>Pear</MenuItem>
+            <MenuItem url='/'>Strawberry</MenuItem>
+            <MenuItem url='/'>Raspberry</MenuItem>
+            <MenuItem url='/' isLink>
               + New Item
             </MenuItem>
           </MenuList>

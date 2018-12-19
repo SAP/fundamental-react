@@ -94,12 +94,12 @@ const clickBackBtn = () => {
                 The Action Bar is located at the top of the page and is used for Page title and Main Actions for the
                 page.
             </Description>
-            <Import module="ActionBar" path="/fundamental-react/src/" />
+            <Import module='ActionBar' path='/fundamental-react/src/' />
 
             <Separator />
 
             <Properties
-                type="Inputs"
+                type='Inputs'
                 properties={[
                     { name: 'mobile', description: 'bool - set to "true" for mobile view of the Action Bar.' },
                     {
@@ -130,7 +130,7 @@ const clickBackBtn = () => {
                     <ActionBarHeader title={'Page Title'} description={'Action Bar Description'} />
                     <ActionBarActions>
                         <Button>Button</Button>
-                        <Button option="emphasized">Button</Button>
+                        <Button option='emphasized'>Button</Button>
                     </ActionBarActions>
                 </ActionBar>
             </DocsTile>
@@ -144,7 +144,7 @@ const clickBackBtn = () => {
                     <ActionBarHeader title={'Page Title'} description={'Action Bar Description'} />
                     <ActionBarActions>
                         <Button>Button</Button>
-                        <Button option="emphasized">Button</Button>
+                        <Button option='emphasized'>Button</Button>
                     </ActionBarActions>
                 </ActionBar>
             </DocsTile>
@@ -163,14 +163,14 @@ const clickBackBtn = () => {
                     <ActionBarHeader title={'Page Title'} description={'Action Bar Description'} />
                     <ActionBarActions>
                         <Popover
-                            control={<Button option="light" glyph="vertical-grip" />}
+                            control={<Button option='light' glyph='vertical-grip' />}
                             body={
                                 <Menu>
                                     <MenuList>
-                                        <MenuItem url="/">Option 1</MenuItem>
-                                        <MenuItem url="/">Option 2</MenuItem>
-                                        <MenuItem url="/">Option 3</MenuItem>
-                                        <MenuItem url="/">Option 4</MenuItem>
+                                        <MenuItem url='/'>Option 1</MenuItem>
+                                        <MenuItem url='/'>Option 2</MenuItem>
+                                        <MenuItem url='/'>Option 3</MenuItem>
+                                        <MenuItem url='/'>Option 4</MenuItem>
                                     </MenuList>
                                 </Menu>
                             }
@@ -192,14 +192,14 @@ const clickBackBtn = () => {
                     />
                     <ActionBarActions>
                         <Popover
-                            control={<Button option="light" glyph="vertical-grip" />}
+                            control={<Button option='light' glyph='vertical-grip' />}
                             body={
                                 <Menu>
                                     <MenuList>
-                                        <MenuItem url="/">Option 1</MenuItem>
-                                        <MenuItem url="/">Option 2</MenuItem>
-                                        <MenuItem url="/">Option 3</MenuItem>
-                                        <MenuItem url="/">Option 4</MenuItem>
+                                        <MenuItem url='/'>Option 1</MenuItem>
+                                        <MenuItem url='/'>Option 2</MenuItem>
+                                        <MenuItem url='/'>Option 3</MenuItem>
+                                        <MenuItem url='/'>Option 4</MenuItem>
                                     </MenuList>
                                 </Menu>
                             }
@@ -213,7 +213,7 @@ const clickBackBtn = () => {
 
             <h2>Action bar mobile view with custom width</h2>
             <DocsTile>
-                <ActionBar mobile={true} width="768px">
+                <ActionBar mobile={true} width='768px'>
                     <ActionBarBack />
                     <ActionBarHeader
                         title={'Action Bar with description and back button'}
@@ -221,14 +221,14 @@ const clickBackBtn = () => {
                     />
                     <ActionBarActions>
                         <Popover
-                            control={<Button option="light" glyph="vertical-grip" />}
+                            control={<Button option='light' glyph='vertical-grip' />}
                             body={
                                 <Menu>
                                     <MenuList>
-                                        <MenuItem url="/">Option 1</MenuItem>
-                                        <MenuItem url="/">Option 2</MenuItem>
-                                        <MenuItem url="/">Option 3</MenuItem>
-                                        <MenuItem url="/">Option 4</MenuItem>
+                                        <MenuItem url='/'>Option 1</MenuItem>
+                                        <MenuItem url='/'>Option 2</MenuItem>
+                                        <MenuItem url='/'>Option 3</MenuItem>
+                                        <MenuItem url='/'>Option 4</MenuItem>
                                     </MenuList>
                                 </Menu>
                             }

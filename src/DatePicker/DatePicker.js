@@ -373,11 +373,11 @@ export class DatePicker extends Component {
   render() {
     return (
       <div
-        className="fd-date-picker"
+        className='fd-date-picker'
         ref={component => (this.component = component)}
       >
-        <div className="fd-popover">
-          <div className="fd-popover__control">
+        <div className='fd-popover'>
+          <div className='fd-popover__control'>
             <div
               className={`fd-input-group fd-input-group--after${
                 this.props.compact ? ' fd-input-group--compact' : ''
@@ -387,23 +387,23 @@ export class DatePicker extends Component {
                 className={`fd-input${
                   this.props.compact ? ' fd-input--compact' : ''
                 }`}
-                type="text"
-                placeholder="mm/dd/yyyy"
+                type='text'
+                placeholder='mm/dd/yyyy'
                 onClick={() => this.openCalendar('input')}
                 value={this.state.formattedDate}
                 onChange={this.modifyDate}
                 onKeyPress={this.sendUpdate}
               />
-              <span className="fd-input-group__addon fd-input-group__addon--after fd-input-group__addon--button">
+              <span className='fd-input-group__addon fd-input-group__addon--after fd-input-group__addon--button'>
                 <button
-                  className="fd-popover__control fd-button--light sap-icon--calendar"
+                  className='fd-popover__control fd-button--light sap-icon--calendar'
                   onClick={() => this.openCalendar()}
                 />
               </span>
             </div>
           </div>
           <div
-            className="fd-popover__body fd-popover__body--right fd-popover__body--no-arrow"
+            className='fd-popover__body fd-popover__body--right fd-popover__body--no-arrow'
             aria-hidden={this.state.hidden}
           >
             <Calendar

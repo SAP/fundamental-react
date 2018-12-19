@@ -16,10 +16,10 @@ export const TimeComponent = () => {
                 to assemble a clock time. A max of four will account for hours, minutes, seconds and period of the day.
                 It will be rare to see this component used outside of it being composed in the time-picker component.
             </Description>
-            <Import module="Time" path="/fundamental-react/src/" />
+            <Import module='Time' path='/fundamental-react/src/' />
             <Separator />{' '}
             <Properties
-                type="Inputs"
+                type='Inputs'
                 properties={[
                     {
                         name: 'id',

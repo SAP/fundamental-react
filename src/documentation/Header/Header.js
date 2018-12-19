@@ -8,7 +8,7 @@ export const Header = (props) => {
     const { children } = props;
     
     return (
-        <h1 className="header" style={headerStyle}>
+        <h1 className='header' style={headerStyle}>
             {children}
         </h1>
     );

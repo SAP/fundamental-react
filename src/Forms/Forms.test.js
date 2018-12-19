@@ -21,39 +21,39 @@ describe('<Forms />', () => {
   const formInput = (
     <FormSet>
       <FormItem isInline={true} isCheck={true}>
-        <FormLabel forAttr="input-1">Default Input</FormLabel>
+        <FormLabel forAttr='input-1'>Default Input</FormLabel>
         <FormInput
-          type="text"
-          id="input-1"
-          placeholder="Field placeholder text"
+          type='text'
+          id='input-1'
+          placeholder='Field placeholder text'
         />
       </FormItem>
       <FormItem>
-        <FormLabel forAttr="input-1" required={true}>
+        <FormLabel forAttr='input-1' required={true}>
           Default Input
         </FormLabel>
         <FormInput
-          type="text"
-          id="input-1"
-          state="help"
-          placeholder="Field placeholder text"
+          type='text'
+          id='input-1'
+          state='help'
+          placeholder='Field placeholder text'
         />
-        <FormTextarea id="textarea-1">
+        <FormTextarea id='textarea-1'>
           Pellentesque metus lacus commodo eget justo ut rutrum varius nunc.
         </FormTextarea>
-        <FormMessage type="help">
+        <FormMessage type='help'>
           Pellentesque metus lacus commodo eget justo ut rutrum varius nunc
         </FormMessage>
         <FormMessage>
           Pellentesque metus lacus commodo eget justo ut rutrum varius nunc
         </FormMessage>
-        <FormSelect id="select-1">
-          <option value="1">Duis malesuada odio volutpat elementum</option>
-          <option value="2">Suspendisse ante ligula</option>
-          <option value="3">Sed bibendum sapien at posuere interdum</option>
+        <FormSelect id='select-1'>
+          <option value='1'>Duis malesuada odio volutpat elementum</option>
+          <option value='2'>Suspendisse ante ligula</option>
+          <option value='3'>Sed bibendum sapien at posuere interdum</option>
         </FormSelect>
-        <FormSelect id="select-1" disabled={true}>
-          <option value="1">Duis malesuada odio volutpat elementum</option>
+        <FormSelect id='select-1' disabled={true}>
+          <option value='1'>Duis malesuada odio volutpat elementum</option>
         </FormSelect>
       </FormItem>
     </FormSet>
@@ -83,9 +83,9 @@ describe('<Forms />', () => {
             label: 'Option 3'
           }
         ]}
-        defaultChecked="radio-2"
+        defaultChecked='radio-2'
       />
-      <FormLegend legendText="Radio buttons disabled" />
+      <FormLegend legendText='Radio buttons disabled' />
       <FormRadio
         isInline={true}
         disabled={true}
@@ -109,9 +109,9 @@ describe('<Forms />', () => {
             label: 'Option 3'
           }
         ]}
-        defaultChecked="radio-4"
+        defaultChecked='radio-4'
       />
-      <FormLegend legendText="Inline Radio buttons" />
+      <FormLegend legendText='Inline Radio buttons' />
       <FormRadio
         isInline={true}
         inputs={[
@@ -134,7 +134,7 @@ describe('<Forms />', () => {
             label: 'Option 3'
           }
         ]}
-        defaultChecked="radio-9"
+        defaultChecked='radio-9'
       />
       <FormRadio
         disabled={true}
@@ -158,17 +158,17 @@ describe('<Forms />', () => {
             label: 'Option 3'
           }
         ]}
-        defaultChecked="radio-9"
+        defaultChecked='radio-9'
       />
-      <FormLegend legendText="Checkboxes" />
+      <FormLegend legendText='Checkboxes' />
       <FormItem isCheck={true}>
         <FormInput
-          type="checkbox"
-          id="checkbox-1"
-          name="checkbox-name-1"
-          value=""
+          type='checkbox'
+          id='checkbox-1'
+          name='checkbox-name-1'
+          value=''
         />
-        <FormLabel forAttr="checkbox-1">Option One</FormLabel>
+        <FormLabel forAttr='checkbox-1'>Option One</FormLabel>
       </FormItem>
     </FormFieldset>
   );
@@ -195,7 +195,7 @@ describe('<Forms />', () => {
           label: 'Option 3'
         }
       ]}
-      defaultChecked="radio-2"
+      defaultChecked='radio-2'
     />
   );
 

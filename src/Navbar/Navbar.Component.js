@@ -82,12 +82,12 @@ export const NavbarComponent = () => {
                 It allows for branding, application groupings, access to a left navigation, switch between applications,
                 contexts and access tooling such as search or a users’ profile.
             </Description>
-            <Import module="Navbar" path="/fundamental-react/src/" />
+            <Import module='Navbar' path='/fundamental-react/src/' />
 
             <Separator />
 
             <Properties
-                type="Inputs"
+                type='Inputs'
                 properties={[
                     {
                         name: 'alignment',
@@ -115,42 +115,42 @@ export const NavbarComponent = () => {
 
             <DocsTile>
                 <Navbar>
-                    <NavbarGroup alignment="left">
-                        <NavbarElement type="side-menu">
-                            <Button option="light" glyph="menu2" navbar />
+                    <NavbarGroup alignment='left'>
+                        <NavbarElement type='side-menu'>
+                            <Button option='light' glyph='menu2' navbar />
                         </NavbarElement>
-                        <NavbarElement type="logo" noMargin="left" />
-                        <NavbarElement type="product-name">Product Name</NavbarElement>
+                        <NavbarElement type='logo' noMargin='left' />
+                        <NavbarElement type='product-name'>Product Name</NavbarElement>
                     </NavbarGroup>
 
                     <NavbarGroup launchpad>
                         <Popover
-                            control={<Button option="light">Suite Name</Button>}
+                            control={<Button option='light'>Suite Name</Button>}
                             noArrow
                             body={
                                 <Menu>
                                     <MenuList>
-                                        <MenuItem url="/">Option 1</MenuItem>
-                                        <MenuItem url="/">Option 2</MenuItem>
-                                        <MenuItem url="/">Option 3</MenuItem>
-                                        <MenuItem url="/">Option 4</MenuItem>
+                                        <MenuItem url='/'>Option 1</MenuItem>
+                                        <MenuItem url='/'>Option 2</MenuItem>
+                                        <MenuItem url='/'>Option 3</MenuItem>
+                                        <MenuItem url='/'>Option 4</MenuItem>
                                     </MenuList>
                                 </Menu>
                             }
                         />
                     </NavbarGroup>
 
-                    <NavbarGroup alignment="right">
-                        <NavbarElement type="context-menu">
+                    <NavbarGroup alignment='right'>
+                        <NavbarElement type='context-menu'>
                             <Popover
-                                control={<Button option="light">Context Switcher</Button>}
+                                control={<Button option='light'>Context Switcher</Button>}
                                 body={
                                     <Menu>
                                         <MenuList>
-                                            <MenuItem url="/">Option 1</MenuItem>
-                                            <MenuItem url="/">Option 2</MenuItem>
-                                            <MenuItem url="/">Option 3</MenuItem>
-                                            <MenuItem url="/">Option 4</MenuItem>
+                                            <MenuItem url='/'>Option 1</MenuItem>
+                                            <MenuItem url='/'>Option 2</MenuItem>
+                                            <MenuItem url='/'>Option 3</MenuItem>
+                                            <MenuItem url='/'>Option 4</MenuItem>
                                         </MenuList>
                                     </Menu>
                                 }
@@ -158,10 +158,10 @@ export const NavbarComponent = () => {
                         </NavbarElement>
 
                         <NavbarActions>
-                            <Button option="light" glyph="search" navbar />
-                            <Button option="light" glyph="action-settings" navbar />
-                            <Button option="light" navbar>
-                                <Identifier size="s" modifier="circle">
+                            <Button option='light' glyph='search' navbar />
+                            <Button option='light' glyph='action-settings' navbar />
+                            <Button option='light' navbar>
+                                <Identifier size='s' modifier='circle'>
                                     WW
                                 </Identifier>
                             </Button>

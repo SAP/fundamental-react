@@ -47,7 +47,7 @@ export const ListGroupComponent = () => {
             <Header>List Group</Header>
             <Description>Lists and tables are similar as both usually contain a vertical list of data, but lists generally contain basic data and tables tend to hold more complex data. If the list is a complex hierarchy, it is best to use a tree.
             </Description>
-            <Import module="ListGroup, ListGroupItem, ListGroupItemActions, ListGroupItemCheckbox" path="/fundamental-react/src/" />
+            <Import module='ListGroup, ListGroupItem, ListGroupItemActions, ListGroupItemCheckbox' path='/fundamental-react/src/' />
 
             <Separator />
 
@@ -71,22 +71,22 @@ export const ListGroupComponent = () => {
                 <ListGroup>
                     <ListGroupItem>List item 1
                         <ListGroupItemActions>
-                            <Button type="light" glyph="edit" />
+                            <Button type='light' glyph='edit' />
                         </ListGroupItemActions>
                     </ListGroupItem>
                     <ListGroupItem>List item 2
                         <ListGroupItemActions>
-                            <Button type="light" glyph="edit" />
+                            <Button type='light' glyph='edit' />
                         </ListGroupItemActions>
                     </ListGroupItem>
                     <ListGroupItem>List item 3
                         <ListGroupItemActions>
-                            <Button type="light" glyph="edit" />
+                            <Button type='light' glyph='edit' />
                         </ListGroupItemActions>
                     </ListGroupItem>
                     <ListGroupItem>List item 4
                         <ListGroupItemActions>
-                            <Button type="light" glyph="edit" />
+                            <Button type='light' glyph='edit' />
                         </ListGroupItemActions>
                     </ListGroupItem>
                 </ListGroup>
@@ -110,7 +110,7 @@ export const ListGroupComponent = () => {
             <Separator />
 
             <h2>Playground</h2>
-            <Playground component="listgroup" schema= {[
+            <Playground component='listgroup' schema= {[
                     {
                         attribute: 'children',
                         typeOfAttribute: 'string'
@@ -746,7 +746,7 @@ export const ListGroupComponent = () => {
                 <ListGroup>
                     <ListGroupItem>List item 1
                     <ListGroupItemActions>
-                            <Button type="secondary" glyph="edit" />
+                            <Button type='secondary' glyph='edit' />
                         </ListGroupItemActions>
                     </ListGroupItem>
                 </ListGroup>

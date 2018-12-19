@@ -11,11 +11,11 @@ describe('<SearchInput />', () => {
   const mockOnAutoComplete = jest.fn();
   const data = ['apple', 'banana', 'orange'];
   const defaultSearchInput = (
-    <SearchInput placeHolder="Hello there" onSearch={mockOnSearch} />
+    <SearchInput placeHolder='Hello there' onSearch={mockOnSearch} />
   );
   const autoCompleteSearchInput = (
     <SearchInput
-      placeHolder="Hello there"
+      placeHolder='Hello there'
       onAutoComplete={mockOnAutoComplete}
       data={data}
       onSearch={mockOnSearch}
@@ -23,7 +23,7 @@ describe('<SearchInput />', () => {
   );
   const autoCompleteNoDataSearchInput = (
     <SearchInput
-      placeHolder="Hello there"
+      placeHolder='Hello there'
       data={[]}
       onAutoComplete={mockOnAutoComplete}
       onSearch={mockOnSearch}

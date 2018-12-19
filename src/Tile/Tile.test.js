@@ -18,7 +18,7 @@ import { Menu, MenuList, MenuItem } from '../Menu/Menu';
 describe('<Tile />', () => {
   const simpleTile = (
     <Tile>
-      <TileContent title="Tile Title">
+      <TileContent title='Tile Title'>
         <p>Tile Description</p>
       </TileContent>
     </Tile>
@@ -26,7 +26,7 @@ describe('<Tile />', () => {
 
   const disabledSimpleTile = (
     <Tile disabled={true} columnSpan={3} backgroundColor={8}>
-      <TileContent title="Tile Title">
+      <TileContent title='Tile Title'>
         <p>Tile Description</p>
       </TileContent>
     </Tile>
@@ -35,9 +35,9 @@ describe('<Tile />', () => {
   const mediaTile = (
     <Tile isButton={true}>
       <TileMedia>
-        <Identifier size="m" glyph="home" color={3} />
+        <Identifier size='m' glyph='home' color={3} />
       </TileMedia>
-      <TileContent title="Tile Title">
+      <TileContent title='Tile Title'>
         <p>Tile Description</p>
       </TileContent>
     </Tile>
@@ -45,17 +45,17 @@ describe('<Tile />', () => {
 
   const actionTile = (
     <Tile>
-      <TileContent title="Tile Title" />
+      <TileContent title='Tile Title' />
       <TileActions>
         <Popover
-          control={<Button type="standard" glyph="vertical-grip" />}
+          control={<Button type='standard' glyph='vertical-grip' />}
           body={
             <Menu>
               <MenuList>
-                <MenuItem url="/">Option 1</MenuItem>
-                <MenuItem url="/">Option 2</MenuItem>
-                <MenuItem url="/">Option 3</MenuItem>
-                <MenuItem url="/">Option 4</MenuItem>
+                <MenuItem url='/'>Option 1</MenuItem>
+                <MenuItem url='/'>Option 2</MenuItem>
+                <MenuItem url='/'>Option 3</MenuItem>
+                <MenuItem url='/'>Option 4</MenuItem>
               </MenuList>
             </Menu>
           }
@@ -66,8 +66,8 @@ describe('<Tile />', () => {
 
   const productMediaTile = (
     <ProductTile isButton={true}>
-      <ProductTileMedia image="https://techne.yaas.io/images/product-thumbnail-wide.png" />
-      <ProductTileContent title="Tile Title">
+      <ProductTileMedia image='https://techne.yaas.io/images/product-thumbnail-wide.png' />
+      <ProductTileContent title='Tile Title'>
         <p>Tile Description</p>
       </ProductTileContent>
     </ProductTile>
@@ -75,8 +75,8 @@ describe('<Tile />', () => {
 
   const disabledProductMediaTile = (
     <ProductTile disabled={true}>
-      <ProductTileMedia image="https://techne.yaas.io/images/product-thumbnail-wide.png" />
-      <ProductTileContent title="Tile Title">
+      <ProductTileMedia image='https://techne.yaas.io/images/product-thumbnail-wide.png' />
+      <ProductTileContent title='Tile Title'>
         <p>Tile Description</p>
       </ProductTileContent>
     </ProductTile>
@@ -85,7 +85,7 @@ describe('<Tile />', () => {
   const defaultTileGrid = (
     <TileGrid>
       <Tile rowSpan={2} colorAccent={7}>
-        <TileContent title="Tile Title">
+        <TileContent title='Tile Title'>
           <p>Tile Description</p>
         </TileContent>
       </Tile>
@@ -95,7 +95,7 @@ describe('<Tile />', () => {
   const tileGrid = (
     <TileGrid col={4}>
       <Tile rowSpan={2} colorAccent={7}>
-        <TileContent title="Tile Title">
+        <TileContent title='Tile Title'>
           <p>Tile Description</p>
         </TileContent>
       </Tile>

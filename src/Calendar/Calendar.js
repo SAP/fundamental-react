@@ -208,8 +208,8 @@ export class Calendar extends Component {
         });
 
         return (
-                <div className="fd-calendar__months">
-                    <ul className="fd-calendar__list">
+                <div className='fd-calendar__months'>
+                    <ul className='fd-calendar__list'>
                         {listOfMonths}
                     </ul>
                 </div>
@@ -228,8 +228,8 @@ export class Calendar extends Component {
             return <li className={`fd-calendar__item${this.state.currentDateDisplayed.getFullYear() === element ? " is-selected" : ""}${this.state.todayDate.getFullYear() === element ? " fd-calendar__item--current" : ""}`}  key={element} name={element} onClick={() => this.changeYear(element)}>{element}</li>
         })
         return (
-            <div className="fd-calendar__months">
-                <ul className="fd-calendar__list">
+            <div className='fd-calendar__months'>
+                <ul className='fd-calendar__list'>
                     {listOfYears}
                 </ul>
             </div>
@@ -424,29 +424,29 @@ export class Calendar extends Component {
         let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
         return (
-          <header className="fd-calendar__header">
-          <div className="fd-calendar__navigation">
-            <div className="fd-calendar__action">
-              <button className="fd-button--standard fd-button--light fd-button--compact sap-icon--slim-arrow-left" onClick={this.previous}>
+          <header className='fd-calendar__header'>
+          <div className='fd-calendar__navigation'>
+            <div className='fd-calendar__action'>
+              <button className='fd-button--standard fd-button--light fd-button--compact sap-icon--slim-arrow-left' onClick={this.previous}>
               </button>
             </div>
-            <div className="fd-calendar__action">
-              <button className="fd-button--light fd-button--compact" onClick={this.showMonths}>
+            <div className='fd-calendar__action'>
+              <button className='fd-button--light fd-button--compact' onClick={this.showMonths}>
                 <span>
                     {months[this.state.currentDateDisplayed.getMonth()]}
                 </span>
               </button>
             </div>
-            <div className="fd-calendar__action">
-              <button className="fd-button--light fd-button--compact" onClick={this.showYears}>
+            <div className='fd-calendar__action'>
+              <button className='fd-button--light fd-button--compact' onClick={this.showYears}>
                 <span>
                     {this.state.currentDateDisplayed.getFullYear()}
                 </span>
               </button>
             </div>
 
-            <div className="fd-calendar__action" onClick={this.next}>
-              <button className="fd-button--standard fd-button--light fd-button--compact sap-icon--slim-arrow-right"></button>
+            <div className='fd-calendar__action' onClick={this.next}>
+              <button className='fd-button--standard fd-button--light fd-button--compact sap-icon--slim-arrow-right'></button>
             </div>
           </div>
           </header>
@@ -459,13 +459,13 @@ export class Calendar extends Component {
 
           for (let index  = 0; index < 7; index++) {
               weekDays.push(
-              <th className="fd-calendar__column-header" key={index}>
-                <span className="fd-calendar__day-of-week">
+              <th className='fd-calendar__column-header' key={index}>
+                <span className='fd-calendar__day-of-week'>
                     {daysName[index]}
                 </span>
               </th>);
           }
-          return <tr className="fd-calendar__row">{weekDays}</tr>;
+          return <tr className='fd-calendar__row'>{weekDays}</tr>;
 
       }
     
@@ -489,35 +489,35 @@ export class Calendar extends Component {
             for (let iterations = 0; iterations < 7; iterations++) {
                 dateFormatted = day.getDate();
                 let copyDate = day;
-                days.push(<td className={`fd-calendar__item fd-calendar__item${this.displayIsDayOtherMonth(day)} ${this.state.todayDate.getTime() === copyDate.getTime() ? "fd-calendar__item--current":""} ${this.displayIsSelected(day)} ${this.displaySelectedRangeFirst(day)}${this.displaySelectedRangeLast(day)}${this.displayBetweenRange(day)} ${this.displayDisabled(day)} ${this.isDateBetween(day, blockedDates) ? "is-blocked": ""}` } role="gridcell" onClick={() => this.dateClick(copyDate, enableRangeSelection)} key={copyDate}><span className="fd-calendar__text">{dateFormatted}</span>
+                days.push(<td className={`fd-calendar__item fd-calendar__item${this.displayIsDayOtherMonth(day)} ${this.state.todayDate.getTime() === copyDate.getTime() ? "fd-calendar__item--current":""} ${this.displayIsSelected(day)} ${this.displaySelectedRangeFirst(day)}${this.displaySelectedRangeLast(day)}${this.displayBetweenRange(day)} ${this.displayDisabled(day)} ${this.isDateBetween(day, blockedDates) ? "is-blocked": ""}` } role='gridcell' onClick={() => this.dateClick(copyDate, enableRangeSelection)} key={copyDate}><span className='fd-calendar__text'>{dateFormatted}</span>
                 </td>)
                 day = this.addDays(day, 1);
             }
 
             rows.push(
-                <tr className="fd-calendar__row" key={day}>
+                <tr className='fd-calendar__row' key={day}>
                     {days}
                 </tr>
             );
 
             days = [];
         }
-        return  <tbody className="fd-calendar__group">{rows}</tbody>;
+        return  <tbody className='fd-calendar__group'>{rows}</tbody>;
 
       }
 
     
       render() {
         return (
-          <div className="fd-calendar">
+          <div className='fd-calendar'>
             {this.generateNavigation()}
-            <div className="fd-calendar__content">
+            <div className='fd-calendar__content'>
             {
                 this.state.showMonths? this.generateMonths() :
                 this.state.showYears? this.generateYears() :
-                <div className="fd-calendar__dates">
-                <table className="fd-calendar__table">
-                <thead className="fd-calendar__group">
+                <div className='fd-calendar__dates'>
+                <table className='fd-calendar__table'>
+                <thead className='fd-calendar__group'>
                     {this.generateWeekdays()}
                 </thead>
                     {this.generateDays()}

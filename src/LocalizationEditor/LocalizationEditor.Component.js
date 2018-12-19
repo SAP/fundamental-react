@@ -36,11 +36,11 @@ export const LocalizationEditorComponent = () => {
         <div>
             <Header>Localization Editor</Header>
 
-            <Import module="LocalizationEditor" path="/fundamental-react/src/" />
+            <Import module='LocalizationEditor' path='/fundamental-react/src/' />
 
             <Separator />
 
-            <Properties type="Inputs" properties={[
+            <Properties type='Inputs' properties={[
                 { name: 'control', description: 'object (required) - An object of shape "{ label: string, placeholder: string, language: string }" containing the values of the control localization editor.' },
                 { name: 'menu', description: 'array (required) - An array of objects that represent the values of the elements in the dropdown menu. The shape of the objects in the array is "{ placeholder: string, language: string }".' },
                 { name: 'id', description: 'string (optional) - The id of the Localization Editor.' },

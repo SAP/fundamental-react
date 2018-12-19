@@ -49,12 +49,12 @@ export class MultiInputComponent extends Component {
             <div>
                 <Header>Multi Input</Header>
                 <Description />
-                <Import module="MultiInput" path="/fundamental-react/src/" />
+                <Import module='MultiInput' path='/fundamental-react/src/' />
 
                 <Separator />
 
                 <Properties
-                    type="Inputs"
+                    type='Inputs'
                     properties={[
                         {
                             name: 'data',
@@ -85,7 +85,7 @@ export class MultiInputComponent extends Component {
                         <MultiInput
                             data={this.data}
                             onTagsUpdate={this.performTagsUpdate}
-                            placeHolder="Select a Fruit"
+                            placeHolder='Select a Fruit'
                         />
                     </div>
                 </DocsTile>
@@ -102,7 +102,7 @@ export class MultiInputComponent extends Component {
                         <MultiInput
                             data={this.data}
                             onTagsUpdate={this.performTagsUpdate}
-                            placeHolder="Select a Fruit"
+                            placeHolder='Select a Fruit'
                             compact={true}
                         />
                     </div>

@@ -24,7 +24,7 @@ describe('<Pagination />', () => {
   );
 
   const totalTextPagination = (
-    <Pagination itemsTotal={101} onClick={handleClick} totalText="Dalmations" />
+    <Pagination itemsTotal={101} onClick={handleClick} totalText='Dalmations' />
   );
 
   const itemsPerPageZeroPagination = (

@@ -41,8 +41,8 @@ Tile.propTypes = {
 export const TileContent = props => {
   const { title, children } = props;
   return (
-    <div className="fd-tile__content">
-      <h2 className="fd-tile__title">{title}</h2>
+    <div className='fd-tile__content'>
+      <h2 className='fd-tile__title'>{title}</h2>
       {children}
     </div>
   );
@@ -54,12 +54,12 @@ TileContent.propTypes = {
 
 export const TileMedia = props => {
   const { children } = props;
-  return <div className="fd-tile__media">{children}</div>;
+  return <div className='fd-tile__media'>{children}</div>;
 };
 
 export const TileActions = props => {
   const { children } = props;
-  return <div className="fd-tile__actions">{children}</div>;
+  return <div className='fd-tile__actions'>{children}</div>;
 };
 
 export const ProductTile = props => {
@@ -82,8 +82,8 @@ ProductTile.propTypes = {
 export const ProductTileContent = props => {
   const { title, children } = props;
   return (
-    <div className="fd-product-tile__content">
-      <h2 className="fd-product-tile__title">{title}</h2>
+    <div className='fd-product-tile__content'>
+      <h2 className='fd-product-tile__title'>{title}</h2>
       {children}
     </div>
   );
@@ -97,7 +97,7 @@ export const ProductTileMedia = props => {
   const { image } = props;
   return (
     <div
-      className="fd-product-tile__media"
+      className='fd-product-tile__media'
       style={{ backgroundImage: 'url(' + image + ')' }}
     />
   );

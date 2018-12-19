@@ -10,11 +10,11 @@ export class Properties extends Component {
     render() {
         const { type } = this.props;
 
-        const data = this.state.description.map(property => <tr className="property-row" key={property.name}><th className="property-header">{property.name}</th><td>{property.description}</td></tr>);
+        const data = this.state.description.map(property => <tr className='property-row' key={property.name}><th className='property-header'>{property.name}</th><td>{property.description}</td></tr>);
         
         return (
             <div>
-                <h3 className="header">@{type}</h3>
+                <h3 className='header'>@{type}</h3>
                 <table>
                     <tbody>
                         {data}

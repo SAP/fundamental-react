@@ -644,8 +644,8 @@ export const IconComponent = () => {
 
   let icons = listOfIcons.map((icon, index) => {
     return (
-      <div key={index} className="demo-icon-wrapper">
-        <Icon glyph={icon} size="xl" />
+      <div key={index} className='demo-icon-wrapper'>
+        <Icon glyph={icon} size='xl' />
         <h5>sap-icon--{icon}</h5>
       </div>
     );
@@ -660,12 +660,12 @@ export const IconComponent = () => {
         this point they are used more as visual elements within other
         components.
       </Description>
-      <Import module="Icon" path="/fundamental-react/src/" />
+      <Import module='Icon' path='/fundamental-react/src/' />
 
       <Separator />
 
       <Properties
-        type="Inputs"
+        type='Inputs'
         properties={[
           { name: 'glyph', description: 'string (required) - Icon name.' },
           {
@@ -679,11 +679,11 @@ export const IconComponent = () => {
       <Separator />
 
       <DocsTile centered>
-        <Icon glyph="cart" size="s" />
-        <Icon glyph="cart" />
-        <Icon glyph="cart" size="m" />
-        <Icon glyph="cart" size="l" />
-        <Icon glyph="cart" size="xl" />
+        <Icon glyph='cart' size='s' />
+        <Icon glyph='cart' />
+        <Icon glyph='cart' size='m' />
+        <Icon glyph='cart' size='l' />
+        <Icon glyph='cart' size='xl' />
       </DocsTile>
       <DocsText>{iconsCode}</DocsText>
 
@@ -697,7 +697,7 @@ export const IconComponent = () => {
 
       <h2>Playground Icon</h2>
       <Playground
-        component="icon"
+        component='icon'
         schema={[
           {
             attribute: 'glyph',
@@ -1334,7 +1334,7 @@ export const IconComponent = () => {
           }
         ]}
       >
-        <Icon glyph="cart" size="s" />
+        <Icon glyph='cart' size='s' />
       </Playground>
     </div>
   );

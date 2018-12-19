@@ -109,9 +109,9 @@ const productSwitcherList = [
             menu: (
                 <Menu>
                     <MenuList>
-                        <MenuItem url="/">Option 1</MenuItem>
-                        <MenuItem url="/">Option 2</MenuItem>
-                        <MenuItem url="/">Option 3</MenuItem>
+                        <MenuItem url='/'>Option 1</MenuItem>
+                        <MenuItem url='/'>Option 2</MenuItem>
+                        <MenuItem url='/'>Option 3</MenuItem>
                     </MenuList>
                 </Menu>
             )
@@ -175,10 +175,10 @@ const productSwitcherList = [
                 composite component comprised of mandatory and optional elements. Before getting started, here are some
                 things to know.
             </Description>
-            <Import module="Shellbar" path="/fundamental-react/src/" />
+            <Import module='Shellbar' path='/fundamental-react/src/' />
             <Separator />
             <Properties
-                type="Inputs"
+                type='Inputs'
                 properties={[
                     { name: 'logo', description: '(required) for company branding.' },
                     {
@@ -210,8 +210,8 @@ const productSwitcherList = [
             </Description>
             <DocsTile>
                 <Shellbar
-                    logo={<img src="//unpkg.com/fiori-fundamentals/dist/images/sap-logo.png" alt="SAP" />}
-                    productTitle="Corporate Portal"
+                    logo={<img src='//unpkg.com/fiori-fundamentals/dist/images/sap-logo.png' alt='SAP' />}
+                    productTitle='Corporate Portal'
                     user={user1}
                     userMenu={userMenu}
                 />
@@ -228,10 +228,10 @@ const productSwitcherList = [
             </Description>
             <DocsTile>
                 <Shellbar
-                    logo={<img src="//unpkg.com/fiori-fundamentals/dist/images/sap-logo.png" alt="SAP" />}
-                    productTitle="Corporate Portal"
+                    logo={<img src='//unpkg.com/fiori-fundamentals/dist/images/sap-logo.png' alt='SAP' />}
+                    productTitle='Corporate Portal'
                     productMenu={productMenu}
-                    subtitle="Subtitle"
+                    subtitle='Subtitle'
                     copilot
                     actions={actions}
                     user={user}

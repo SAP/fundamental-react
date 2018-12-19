@@ -30,7 +30,7 @@ describe('<MegaMenu />', () => {
   );
   const megaMenu = (
     <MegaMenu>
-      <MegaMenuGroup title="Group Title">{menuListURL}</MegaMenuGroup>
+      <MegaMenuGroup title='Group Title'>{menuListURL}</MegaMenuGroup>
     </MegaMenu>
   );
 
@@ -58,7 +58,7 @@ describe('<MegaMenu />', () => {
 
   const megaMenuLink = (
     <MegaMenu>
-      <MegaMenuGroup title="Group Title">{menuListLink}</MegaMenuGroup>
+      <MegaMenuGroup title='Group Title'>{menuListLink}</MegaMenuGroup>
     </MegaMenu>
   );
 

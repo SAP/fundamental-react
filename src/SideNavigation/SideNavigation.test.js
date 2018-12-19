@@ -58,7 +58,7 @@ describe('<SideNavigation />', () => {
 
   const sideNavWithTitle = (
     <SideNav>
-      <SideNavGroup title="Group Title">
+      <SideNavGroup title='Group Title'>
         <SideNavList
           items={[
             { id: 'item_1', link: '/', name: 'Link Item' },
@@ -69,7 +69,7 @@ describe('<SideNavigation />', () => {
           ]}
         />
       </SideNavGroup>
-      <SideNavGroup title="Group Title">
+      <SideNavGroup title='Group Title'>
         <SideNavList
           items={[
             { id: 'item_6', link: '/', name: 'Link Item' },

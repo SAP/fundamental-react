@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 export const Navbar = props => {
     const { children } = props;
     return (
-        <nav className="fd-global-nav">
+        <nav className='fd-global-nav'>
             {children}
         </nav>
     );

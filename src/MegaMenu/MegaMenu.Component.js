@@ -42,11 +42,11 @@ export const MegaMenuComponent = () => {
         <div>
             <Header>Mega Menu</Header>
             <Description>Mega menu is used in conjunction with Context Switcher within the Global Navigation (link to Global Nav page) and supports two levels within a hierarchy.</Description>
-            <Import module="MegaMenu, MegaMenuList, MegaMenuGroup" path="/fundamental-react/src/" />
+            <Import module='MegaMenu, MegaMenuList, MegaMenuGroup' path='/fundamental-react/src/' />
 
             <Separator />
 
-            <Properties type="Inputs" properties=
+            <Properties type='Inputs' properties=
                 {[
                     { name: 'items', description: 'array - an array of objects with keys \'id\', \'url\' or \'link\', \'name\', \'hasChild\', and \'child\' setting the attributes of the items.' },
                     { name: 'id', description: 'string - the \'id\' of the link.' },
@@ -63,7 +63,7 @@ export const MegaMenuComponent = () => {
             <h2>Default MegaMenu</h2>
             <DocsTile>
                 <MegaMenu>
-                    <MegaMenuGroup title="Group Title">
+                    <MegaMenuGroup title='Group Title'>
                         <MegaMenuList items=
                             {[
                                 { id: 'item_1', url: '#', name: 'Link Item' },
@@ -78,7 +78,7 @@ export const MegaMenuComponent = () => {
                             ]}>
                         </MegaMenuList>
                     </MegaMenuGroup>
-                    <MegaMenuGroup title="Group Title">
+                    <MegaMenuGroup title='Group Title'>
                         <MegaMenuList items=
                             {[
                                 { id: 'item_6', link: '#', name: 'Link Item' },

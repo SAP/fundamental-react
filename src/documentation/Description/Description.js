@@ -9,7 +9,7 @@ export const Description = (props) => {
     const { children } = props;
     
     return (
-        <p className="description" style={descriptionStyle}>
+        <p className='description' style={descriptionStyle}>
             {children}
         </p>
     );

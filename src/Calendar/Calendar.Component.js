@@ -12,11 +12,11 @@ export const CalendarComponent = () => {
     return (<div>
             <Header>Calendar</Header>
             <Description>Commonly used as the contents of a popover when composing “date-picker”, rarely used on its own as a standalone component.</Description>
-            <Import module="Calendar" path="/fundamental-react/src/" />
+            <Import module='Calendar' path='/fundamental-react/src/' />
             
             <Separator />
 
-            <Properties type="Inputs" properties=
+            <Properties type='Inputs' properties=
             {[
                 {name: 'disableWeekends', description: 'bool - Disable weekends'}, 
                 {name: 'disableBeforeDate', description: 'date - Disables dates of a calendar that comes before a specific date'},

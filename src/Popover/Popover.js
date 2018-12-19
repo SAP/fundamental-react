@@ -67,7 +67,7 @@ export class Popover extends Component {
         }}
       >
         <div
-          className="fd-popover__control"
+          className='fd-popover__control'
           aria-expanded={this.state.isExpanded}
           onClick={this.triggerBody}
           aria-controls={id}

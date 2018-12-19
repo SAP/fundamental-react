@@ -15,12 +15,12 @@ export const PaginationComponent = () => {
                 how to navigate through a collection. The handling of which items to display needs to be handled in the
                 function that is passed in the onClick method of the Pagination control.
             </Description>
-            <Import module="Pagination" path="/fundamental-react/src/" />
+            <Import module='Pagination' path='/fundamental-react/src/' />
 
             <Separator />
 
             <Properties
-                type="Inputs"
+                type='Inputs'
                 properties={[
                     {
                         name: 'itemsTotal',
@@ -98,7 +98,7 @@ export const PaginationComponent = () => {
             <h2>Total Text</h2>
             <Description>Customize text to show next to item total</Description>
             <DocsTile centered>
-                <Pagination itemsTotal={101} onClick={handleClick} totalText="Dalmations" />
+                <Pagination itemsTotal={101} onClick={handleClick} totalText='Dalmations' />
             </DocsTile>
             <DocsText centered>
                 {' '}

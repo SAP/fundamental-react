@@ -19,12 +19,12 @@ export const DatePickerComponent = () => {
                 The date-picker component is an opinionated composition of the "input-group", "popover" and "calendar"
                 components to accomplish the UI pattern for picking a date.
             </Description>
-            <Import module="DatePicker" path="/fundamental-react/src/" />
+            <Import module='DatePicker' path='/fundamental-react/src/' />
 
             <Separator />
 
             <Properties
-                type="Inputs"
+                type='Inputs'
                 properties={[
                 { name: 'enableRangeSelection', description: 'bool - Enable to select two dates' },
                 {name: 'disableWeekends', description: 'bool - Disable weekends'}, 

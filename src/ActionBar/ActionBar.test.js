@@ -35,7 +35,7 @@ describe('<ActionBar />', () => {
   );
 
   const mobileActionBarWidthSet = (
-    <ActionBar mobile={true} width="500px">
+    <ActionBar mobile={true} width='500px'>
       <ActionBarBack />
       <ActionBarHeader
         title={'Page Title'}
