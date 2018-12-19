@@ -7,6 +7,6 @@ export const Separator = (props) => {
         borderBottom: '1px solid #E3E3E3'
     };
     return (
-        <div style={separatorStyle}></div>
+        <div style={separatorStyle} />
     );
 };

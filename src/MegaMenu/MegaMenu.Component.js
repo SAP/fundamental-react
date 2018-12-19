@@ -75,8 +75,7 @@ export const MegaMenuComponent = () => {
                                 },
                                 { id: 'item_3', url: '#', name: 'Link Item' },
                                 { id: 'item_4', url: '#', name: 'Link Item' }
-                            ]}>
-                        </MegaMenuList>
+                            ]} />
                     </MegaMenuGroup>
                     <MegaMenuGroup title='Group Title'>
                         <MegaMenuList items=
@@ -91,8 +90,7 @@ export const MegaMenuComponent = () => {
                                 },
                                 { id: 'item_9', link: '#', name: 'Link Item' }
 
-                            ]}>
-                        </MegaMenuList>
+                            ]} />
                     </MegaMenuGroup>
                 </MegaMenu>
             </DocsTile>

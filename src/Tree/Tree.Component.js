@@ -179,8 +179,7 @@ export const TreeComponent = () => {
                             ]
                         }
                     ]}
-                >
-                </Tree>
+                 />
 
             </DocsTile>
             <DocsText>{treeCode}</DocsText>
@@ -230,8 +229,7 @@ export const TreeComponent = () => {
                             ]
                         }
                     ]}
-                >
-                </Tree>
+                 />
 
             </DocsTile>
             <DocsText>{treeCodeUrl}</DocsText>

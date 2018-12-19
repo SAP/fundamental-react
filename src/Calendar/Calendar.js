@@ -427,8 +427,7 @@ export class Calendar extends Component {
           <header className='fd-calendar__header'>
           <div className='fd-calendar__navigation'>
             <div className='fd-calendar__action'>
-              <button className='fd-button--standard fd-button--light fd-button--compact sap-icon--slim-arrow-left' onClick={this.previous}>
-              </button>
+              <button className='fd-button--standard fd-button--light fd-button--compact sap-icon--slim-arrow-left' onClick={this.previous} />
             </div>
             <div className='fd-calendar__action'>
               <button className='fd-button--light fd-button--compact' onClick={this.showMonths}>
@@ -446,7 +445,7 @@ export class Calendar extends Component {
             </div>
 
             <div className='fd-calendar__action' onClick={this.next}>
-              <button className='fd-button--standard fd-button--light fd-button--compact sap-icon--slim-arrow-right'></button>
+              <button className='fd-button--standard fd-button--light fd-button--compact sap-icon--slim-arrow-right' />
             </div>
           </div>
           </header>
