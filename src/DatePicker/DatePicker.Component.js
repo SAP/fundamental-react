@@ -42,7 +42,7 @@ export const DatePickerComponent = () => {
 
             <h2>Simple Date Picker</h2>
             <DocsTile centered>
-                <DatePicker disableBeforeDate={new Date(2018, 11, 24, 0, 0, 0, 0)} disableWeekends={true} />
+                <DatePicker disableBeforeDate={new Date(2018, 11, 24, 0, 0, 0, 0)} disableWeekends />
                 <DatePicker
                     compact
                     disableWeekday={['Monday', 'Tuesday']}

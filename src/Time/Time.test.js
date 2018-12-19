@@ -10,10 +10,10 @@ describe('<Time />', () => {
   const defaultTime = <Time />;
   const meridiemTime = <Time name='meridiem' />;
   const customTime = <Time name='custom' />;
-  const twelveHour = <Time format12Hours={true} />;
+  const twelveHour = <Time format12Hours />;
   const falseSpinners = <Time spinners={false} />;
   const hideSeconds = <Time showSecond={false} />;
-  const disabledTime = <Time disabled={true} />;
+  const disabledTime = <Time disabled />;
   const timeMeridiemSet = (
       <Time
           format12Hours={false}
@@ -166,7 +166,7 @@ describe('<Time />', () => {
   test('clicking down on meridiem', () => {
     let wrapper = mount(
         <Time
-            format12Hours={true}
+            format12Hours
             time={{ hour: 0, minute: 0, second: 0, meridiem: 0 }}
             name='meridiem' />
     );
@@ -202,7 +202,7 @@ describe('<Time />', () => {
 
     wrapper = mount(
         <Time
-            format12Hours={true}
+            format12Hours
             time={{ hour: 1, minute: 0, second: 0, meridiem: 0 }}
             name='meridiem' />
     );
@@ -220,7 +220,7 @@ describe('<Time />', () => {
 
     wrapper = mount(
         <Time
-            format12Hours={true}
+            format12Hours
             time={{ hour: 12, minute: 0, second: 0, meridiem: 0 }}
             name='meridiem' />
     );
@@ -257,7 +257,7 @@ describe('<Time />', () => {
 
     wrapper = mount(
         <Time
-            format12Hours={true}
+            format12Hours
             time={{ hour: 1, minute: 0, second: 0, meridiem: 0 }}
             name='meridiem' />
     );
@@ -275,7 +275,7 @@ describe('<Time />', () => {
 
     wrapper = mount(
         <Time
-            format12Hours={true}
+            format12Hours
             time={{ hour: 12, minute: 0, second: 0, meridiem: 0 }}
             name='meridiem' />
     );
@@ -312,7 +312,7 @@ describe('<Time />', () => {
 
     wrapper = mount(
         <Time
-            format12Hours={true}
+            format12Hours
             time={{ hour: 1, minute: 0, second: 0, meridiem: 0 }}
             name='meridiem' />
     );
@@ -330,7 +330,7 @@ describe('<Time />', () => {
 
     wrapper = mount(
         <Time
-            format12Hours={true}
+            format12Hours
             time={{ hour: 12, minute: 0, second: 0, meridiem: 0 }}
             name='meridiem' />
     );
@@ -351,7 +351,7 @@ describe('<Time />', () => {
   test('clicking up on meridiem', () => {
     let wrapper = mount(
         <Time
-            format12Hours={true}
+            format12Hours
             time={{ hour: 0, minute: 0, second: 0, meridiem: 0 }}
             name='meridiem' />
     );
@@ -402,7 +402,7 @@ describe('<Time />', () => {
 
     wrapper = mount(
         <Time
-            format12Hours={true}
+            format12Hours
             time={{ hour: 1, minute: 0, second: 0, meridiem: 0 }}
             name='meridiem' />
     );
@@ -420,7 +420,7 @@ describe('<Time />', () => {
 
     wrapper = mount(
         <Time
-            format12Hours={true}
+            format12Hours
             time={{ hour: 12, minute: 0, second: 0, meridiem: 0 }}
             name='meridiem' />
     );
@@ -438,7 +438,7 @@ describe('<Time />', () => {
 
     wrapper = mount(
         <Time
-            format12Hours={true}
+            format12Hours
             time={{ hour: 11, minute: 0, second: 0, meridiem: 0 }}
             name='meridiem' />
     );
@@ -489,7 +489,7 @@ describe('<Time />', () => {
 
     wrapper = mount(
         <Time
-            format12Hours={true}
+            format12Hours
             time={{ hour: 1, minute: 0, second: 0, meridiem: 0 }}
             name='meridiem' />
     );
@@ -507,7 +507,7 @@ describe('<Time />', () => {
 
     wrapper = mount(
         <Time
-            format12Hours={true}
+            format12Hours
             time={{ hour: 1, minute: 59, second: 0, meridiem: 0 }}
             name='meridiem' />
     );
@@ -525,7 +525,7 @@ describe('<Time />', () => {
 
     wrapper = mount(
         <Time
-            format12Hours={true}
+            format12Hours
             time={{ hour: 11, minute: 59, second: 0, meridiem: 0 }}
             name='meridiem' />
     );
@@ -544,7 +544,7 @@ describe('<Time />', () => {
 
     wrapper = mount(
         <Time
-            format12Hours={true}
+            format12Hours
             time={{ hour: 12, minute: 0, second: 0, meridiem: 0 }}
             name='meridiem' />
     );
@@ -562,7 +562,7 @@ describe('<Time />', () => {
 
     wrapper = mount(
         <Time
-            format12Hours={true}
+            format12Hours
             time={{ hour: 12, minute: 59, second: 0, meridiem: 0 }}
             name='meridiem' />
     );
@@ -616,7 +616,7 @@ describe('<Time />', () => {
 
     wrapper = mount(
         <Time
-            format12Hours={true}
+            format12Hours
             time={{ hour: 1, minute: 0, second: 0, meridiem: 0 }}
             name='meridiem' />
     );
@@ -634,7 +634,7 @@ describe('<Time />', () => {
 
     wrapper = mount(
         <Time
-            format12Hours={true}
+            format12Hours
             time={{ hour: 12, minute: 0, second: 0, meridiem: 0 }}
             name='meridiem' />
     );

@@ -328,7 +328,7 @@ export const FormsComponent = () => {
 
                 <FormSet>
                     <FormItem>
-                        <FormLabel forAttr='input-2' required={true}>
+                        <FormLabel forAttr='input-2' required>
                             Required Input
                         </FormLabel>
                         <FormInput type='text' id='input-2'
@@ -338,7 +338,7 @@ export const FormsComponent = () => {
 
                 <FormSet>
                     <FormItem>
-                        <FormLabel forAttr='input-3' required={true}>
+                        <FormLabel forAttr='input-3' required>
                             Password
                         </FormLabel>
                         <FormInput type='password' id='input-3'
@@ -348,7 +348,7 @@ export const FormsComponent = () => {
 
                 <FormSet>
                     <FormItem>
-                        <FormLabel forAttr='textarea-1' required={true}>
+                        <FormLabel forAttr='textarea-1' required>
                             Text area
                         </FormLabel>
                         <FormTextarea id='textarea-1'>
@@ -558,7 +558,7 @@ export const FormsComponent = () => {
                 <FormFieldset>
                     <FormLegend legendText='Inline Radio buttons' />
                     <FormRadio
-                        isInline={true}
+                        isInline
                         inputs={[
                             { id: 'radio-7', name: 'radio-7', value: 'radio-7', label: 'Option 1' },
                             { id: 'radio-8', name: 'radio-8', value: 'radio-8', label: 'Option 2' },
@@ -580,17 +580,17 @@ export const FormsComponent = () => {
             <DocsTile>
                 <FormFieldset>
                     <FormLegend legendText='Checkboxes' />
-                    <FormItem isCheck={true}>
+                    <FormItem isCheck>
                         <FormInput type='checkbox' id='checkbox-1'
                             name='checkbox-name-1' value='' />
                         <FormLabel forAttr='checkbox-1'>Option One</FormLabel>
                     </FormItem>
-                    <FormItem isCheck={true}>
+                    <FormItem isCheck>
                         <FormInput type='checkbox' id='checkbox-2'
                             name='checkbox-name-2' value='' />
                         <FormLabel forAttr='checkbox-2'>Option Two</FormLabel>
                     </FormItem>
-                    <FormItem isCheck={true}>
+                    <FormItem isCheck>
                         <FormInput type='checkbox' id='checkbox-3'
                             name='checkbox-name-3' value='' />
                         <FormLabel forAttr='checkbox-3'>Option Three</FormLabel>
@@ -599,21 +599,21 @@ export const FormsComponent = () => {
 
                 <FormFieldset>
                     <FormLegend legendText='Inline Checkbox buttons' />
-                    <FormItem isCheck={true} isInline={true}>
+                    <FormItem isCheck isInline>
                         <FormLabel forAttr='checkbox-4'>
                             <FormInput type='checkbox' id='checkbox-4'
                                 name='checkbox-name-4' value='' />
                             Option One
                         </FormLabel>
                     </FormItem>
-                    <FormItem isCheck={true} isInline={true}>
+                    <FormItem isCheck isInline>
                         <FormLabel forAttr='checkbox-5'>
                             <FormInput type='checkbox' id='checkbox-5'
                                 name='checkbox-name-5' value='' />
                             Option Two
                         </FormLabel>
                     </FormItem>
-                    <FormItem isCheck={true} isInline={true}>
+                    <FormItem isCheck isInline>
                         <FormLabel forAttr='checkbox-6'>
                             <FormInput type='checkbox' id='checkbox-6'
                                 name='checkbox-name-6' value='' />

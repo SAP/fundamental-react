@@ -20,7 +20,7 @@ Enzyme.configure({ adapter: new Adapter() });
 describe('<Forms />', () => {
   const formInput = (
       <FormSet>
-          <FormItem isInline={true} isCheck={true}>
+          <FormItem isInline isCheck>
               <FormLabel forAttr='input-1'>Default Input</FormLabel>
               <FormInput
                   type='text'
@@ -28,7 +28,7 @@ describe('<Forms />', () => {
                   placeholder='Field placeholder text' />
           </FormItem>
           <FormItem>
-              <FormLabel forAttr='input-1' required={true}>
+              <FormLabel forAttr='input-1' required>
           Default Input
               </FormLabel>
               <FormInput
@@ -50,7 +50,7 @@ describe('<Forms />', () => {
                   <option value='2'>Suspendisse ante ligula</option>
                   <option value='3'>Sed bibendum sapien at posuere interdum</option>
               </FormSelect>
-              <FormSelect id='select-1' disabled={true}>
+              <FormSelect id='select-1' disabled>
                   <option value='1'>Duis malesuada odio volutpat elementum</option>
               </FormSelect>
           </FormItem>
@@ -84,8 +84,8 @@ describe('<Forms />', () => {
               defaultChecked='radio-2' />
           <FormLegend legendText='Radio buttons disabled' />
           <FormRadio
-              isInline={true}
-              disabled={true}
+              isInline
+              disabled
               inputs={[
           {
             id: 'radio-4',
@@ -109,7 +109,7 @@ describe('<Forms />', () => {
               defaultChecked='radio-4' />
           <FormLegend legendText='Inline Radio buttons' />
           <FormRadio
-              isInline={true}
+              isInline
               inputs={[
           {
             id: 'radio-7',
@@ -132,7 +132,7 @@ describe('<Forms />', () => {
         ]}
               defaultChecked='radio-9' />
           <FormRadio
-              disabled={true}
+              disabled
               inputs={[
           {
             id: 'radio-7',
@@ -155,7 +155,7 @@ describe('<Forms />', () => {
         ]}
               defaultChecked='radio-9' />
           <FormLegend legendText='Checkboxes' />
-          <FormItem isCheck={true}>
+          <FormItem isCheck>
               <FormInput
                   type='checkbox'
                   id='checkbox-1'

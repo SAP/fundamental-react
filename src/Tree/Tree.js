@@ -147,7 +147,7 @@ export class Tree extends Component {
                         key={row.id}>
                         <div className='fd-tree__row'>
                             {parent}
-                            {<Dropdown isContextual={true} />}
+                            {<Dropdown isContextual />}
                         </div>
                         {tree}
                     </li>
@@ -164,7 +164,7 @@ export class Tree extends Component {
               key={row.id}>
               <div className='fd-tree__row'>
                   {parent}
-                  {<Dropdown isContextual={true} />}
+                  {<Dropdown isContextual />}
               </div>
               {tree}
           </li>

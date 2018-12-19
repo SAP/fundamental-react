@@ -171,7 +171,7 @@ export const TileComponent = () => {
                     <TileContent title='Tile Title' />
                 </Tile>
                 <br />
-                <Tile isButton={true}>
+                <Tile isButton>
                     <TileMedia>
                         <Image size='l' type='circle'
                             photo='https://placeimg.com/400/400/nature' />
@@ -181,7 +181,7 @@ export const TileComponent = () => {
                     </TileContent>
                 </Tile>
                 <br />
-                <Tile isButton={true}>
+                <Tile isButton>
                     <TileMedia>
                         <Identifier size='m' glyph='home'
                             color={3} />
@@ -222,7 +222,7 @@ export const TileComponent = () => {
             <h2>Product Tile</h2>
             <DocsTile>
                 <div>
-                    <ProductTile isButton={true}>
+                    <ProductTile isButton>
                         <ProductTileMedia image='https://techne.yaas.io/images/product-thumbnail-wide.png' />
                         <ProductTileContent title='Tile Title'>
                             <p>Tile Description</p>
@@ -231,7 +231,7 @@ export const TileComponent = () => {
 
                     <br />
 
-                    <ProductTile disabled={true}>
+                    <ProductTile disabled>
                         <ProductTileMedia image='https://techne.yaas.io/images/product-thumbnail-wide.png' />
                         <ProductTileContent title='Tile Title'>
                             <p>Tile Description</p>
@@ -267,7 +267,7 @@ export const TileComponent = () => {
                             <p>Tile Description</p>
                         </TileContent>
                     </Tile>
-                    <Tile isButton={true}>
+                    <Tile isButton>
                         <TileMedia>
                             <Identifier size='l' glyph='home'
                                 color={3} />

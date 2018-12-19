@@ -95,7 +95,7 @@ describe('<SideNavigation />', () => {
   );
 
   const sideNavCollapsed = (
-      <SideNav icons={true}>
+      <SideNav icons>
           <SideNavList
               items={[
           { id: 'item-1', url: '#', glyph: 'home' },

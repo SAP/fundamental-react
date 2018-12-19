@@ -27,7 +27,7 @@ describe('<Popover />', () => {
   const popOverDisabled = (
       <Popover
           control={<Icon glyph='cart' size='xl' />}
-          disabled={true}
+          disabled
           body={
               <Menu>
                   <MenuList>

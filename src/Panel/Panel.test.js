@@ -64,7 +64,7 @@ describe('<Panel />', () => {
   );
 
   const panelGridNoGap = (
-      <PanelGrid nogap={true}>
+      <PanelGrid nogap>
           <Panel>
               <PanelBody>Panel</PanelBody>
           </Panel>

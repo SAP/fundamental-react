@@ -408,7 +408,7 @@ export class Playground extends Component {
                                     this.state.childs.children[1].props.children.props.inputValue,
                                     this.state.currentValues
                                 )}
-                                actions={true}>
+                                actions>
                                 <Button
                                     option='light'
                                     glyph={this.retrieveValue(
@@ -468,7 +468,7 @@ export class Playground extends Component {
                                 </p>
                             </TileContent>
                             <TileActions>
-                                <Dropdown size='m' isContextual={true} />
+                                <Dropdown size='m' isContextual />
                             </TileActions>
                         </Tile>
                     );
@@ -485,7 +485,7 @@ export class Playground extends Component {
                                     this.state.currentValues
                                 )} />
                             <TileActions>
-                                <Dropdown size='m' isContextual={true} />
+                                <Dropdown size='m' isContextual />
                             </TileActions>
                         </Tile>
                     );

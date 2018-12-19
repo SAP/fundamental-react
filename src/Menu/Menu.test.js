@@ -8,7 +8,7 @@ describe('<Menu />', () => {
       <Menu>
           <MenuList>
               <MenuItem url='/'>Option 1</MenuItem>
-              <MenuItem url='/' isLink={true}>
+              <MenuItem url='/' isLink>
           Option 2
               </MenuItem>
               <MenuItem url='/'>Option 3</MenuItem>
@@ -22,7 +22,7 @@ describe('<Menu />', () => {
           <Menu>
               <MenuList>
                   <MenuItem link='/'>Option 1</MenuItem>
-                  <MenuItem link='/' isLink={true}>
+                  <MenuItem link='/' isLink>
             Option 2
                   </MenuItem>
                   <MenuItem link='/'>Option 3</MenuItem>
@@ -42,13 +42,13 @@ describe('<Menu />', () => {
       <MemoryRouter>
           <Menu>
               <MenuList>
-                  <MenuItem link='/' separator={true}>
+                  <MenuItem link='/' separator>
             Option 1
                   </MenuItem>
-                  <MenuItem link='/' separator={true}>
+                  <MenuItem link='/' separator>
             Option 2
                   </MenuItem>
-                  <MenuItem link='/' separator={true}>
+                  <MenuItem link='/' separator>
             Option 3
                   </MenuItem>
                   <MenuItem link='/'>Option 4</MenuItem>
@@ -59,7 +59,7 @@ describe('<Menu />', () => {
 
   const menuAddonBeforeCode = (
       <MemoryRouter>
-          <Menu addonBefore={true}>
+          <Menu addonBefore>
               <MenuList>
                   <MenuItem link='/'>Option 1</MenuItem>
                   <MenuItem link='/' addon='accept'>

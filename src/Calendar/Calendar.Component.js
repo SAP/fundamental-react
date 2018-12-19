@@ -40,7 +40,7 @@ export const CalendarComponent = () => {
 
         <h2>Calendar with disabled weekends and disabled before a date</h2>
         <DocsTile centered>
-            {<Calendar disableBeforeDate={new Date(2018, 7, 3, 0, 0, 0, 0)} disableWeekends={true} />}
+            {<Calendar disableBeforeDate={new Date(2018, 7, 3, 0, 0, 0, 0)} disableWeekends />}
         </DocsTile>
         <DocsText>{calendarDisabledWeekendsBeforeDate}</DocsText>
 
@@ -56,7 +56,7 @@ export const CalendarComponent = () => {
 
         <h2>Calendar with range selection</h2>
         <DocsTile centered>
-            {<Calendar enableRangeSelection={true} />}
+            {<Calendar enableRangeSelection />}
         </DocsTile>
         <DocsText>{calendarAllOptions}</DocsText>
 

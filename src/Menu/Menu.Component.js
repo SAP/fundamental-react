@@ -126,13 +126,13 @@ export const MenuComponent = () => {
             <DocsTile>
                 <Menu>
                     <MenuList>
-                        <MenuItem link='/' separator={true}>
+                        <MenuItem link='/' separator>
                             Option 1
                         </MenuItem>
-                        <MenuItem link='/' separator={true}>
+                        <MenuItem link='/' separator>
                             Option 2
                         </MenuItem>
-                        <MenuItem link='/' separator={true}>
+                        <MenuItem link='/' separator>
                             Option 3
                         </MenuItem>
                         <MenuItem link='/'>Option 4</MenuItem>
@@ -145,7 +145,7 @@ export const MenuComponent = () => {
             <h2>Menu w/ Addon Before</h2>
             <p>Menu items with an addon before.</p>
             <DocsTile>
-                <Menu addonBefore={true}>
+                <Menu addonBefore>
                     <MenuList>
                         <MenuItem link='/'>Option 1</MenuItem>
                         <MenuItem link='/' addon='accept'>

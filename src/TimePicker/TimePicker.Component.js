@@ -61,7 +61,7 @@ export const TimePickerComponent = () => {
         You can use a Meridian 12-hour clock by setting format12Hours to true{' '}
           </Description>
           <DocsTile>
-              <TimePicker format12Hours={true} />
+              <TimePicker format12Hours />
           </DocsTile>
           <DocsText>{format12hoursTimeCode}</DocsText>
           <Separator /> {/* Hide Seconds */}
@@ -80,7 +80,7 @@ export const TimePickerComponent = () => {
         true
           </Description>
           <DocsTile>
-              <TimePicker disabled={true} />
+              <TimePicker disabled />
           </DocsTile>
           <DocsText>{disabledStateTimeCode}</DocsText>
       </div>

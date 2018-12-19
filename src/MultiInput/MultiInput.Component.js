@@ -101,7 +101,7 @@ export class MultiInputComponent extends Component {
                             data={this.data}
                             onTagsUpdate={this.performTagsUpdate}
                             placeHolder='Select a Fruit'
-                            compact={true} />
+                            compact />
                     </div>
                 </DocsTile>
                 <DocsText>{this.multiInputCompactCode}</DocsText>

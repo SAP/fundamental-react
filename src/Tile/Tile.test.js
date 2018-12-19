@@ -25,7 +25,7 @@ describe('<Tile />', () => {
   );
 
   const disabledSimpleTile = (
-      <Tile disabled={true} columnSpan={3}
+      <Tile disabled columnSpan={3}
           backgroundColor={8}>
           <TileContent title='Tile Title'>
               <p>Tile Description</p>
@@ -34,7 +34,7 @@ describe('<Tile />', () => {
   );
 
   const mediaTile = (
-      <Tile isButton={true}>
+      <Tile isButton>
           <TileMedia>
               <Identifier size='m' glyph='home'
                   color={3} />
@@ -66,7 +66,7 @@ describe('<Tile />', () => {
   );
 
   const productMediaTile = (
-      <ProductTile isButton={true}>
+      <ProductTile isButton>
           <ProductTileMedia image='https://techne.yaas.io/images/product-thumbnail-wide.png' />
           <ProductTileContent title='Tile Title'>
               <p>Tile Description</p>
@@ -75,7 +75,7 @@ describe('<Tile />', () => {
   );
 
   const disabledProductMediaTile = (
-      <ProductTile disabled={true}>
+      <ProductTile disabled>
           <ProductTileMedia image='https://techne.yaas.io/images/product-thumbnail-wide.png' />
           <ProductTileContent title='Tile Title'>
               <p>Tile Description</p>

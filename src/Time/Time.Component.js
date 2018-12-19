@@ -64,7 +64,7 @@ export const TimeComponent = () => {
             <h2>12-Hour Clock</h2>
             <Description>You can use a Meridian 12-hour clock by setting format12Hours to true </Description>
             <DocsTile>
-                <Time format12Hours={true} />
+                <Time format12Hours />
             </DocsTile>
             <DocsText>{format12hoursTimeCode}</DocsText>
             <Separator />
@@ -88,7 +88,7 @@ export const TimeComponent = () => {
             <h2>Disabled State</h2>
             <Description>The Time component can be set to disabled state by setting disabled to true</Description>
             <DocsTile>
-                <Time disabled={true} />
+                <Time disabled />
             </DocsTile>
             <DocsText>{disabledStateTimeCode}</DocsText>
         </div>

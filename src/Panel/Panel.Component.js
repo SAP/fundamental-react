@@ -373,7 +373,7 @@ export const PanelComponent = () => {
 
             <h2>Panel Grid with no margins between the panels</h2>
             <DocsTile>
-                <PanelGrid nogap={true}>
+                <PanelGrid nogap>
                     <Panel>
                         <PanelBody>Panel</PanelBody>
                     </Panel>

@@ -182,7 +182,7 @@ const clickBackBtn = () => {
 
             <h2>Action bar mobile view</h2>
             <DocsTile>
-                <ActionBar mobile={true}>
+                <ActionBar mobile>
                     <ActionBarBack />
                     <ActionBarHeader
                         title={'Action Bar with description and back button'}
@@ -209,7 +209,7 @@ const clickBackBtn = () => {
 
             <h2>Action bar mobile view with custom width</h2>
             <DocsTile>
-                <ActionBar mobile={true} width='768px'>
+                <ActionBar mobile width='768px'>
                     <ActionBarBack />
                     <ActionBarHeader
                         title={'Action Bar with description and back button'}

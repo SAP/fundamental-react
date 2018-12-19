@@ -242,7 +242,7 @@ export const SideNavigationComponent = () => {
                 the user can only see one level of navigation when collapsed.
             </Description>
             <DocsTile>
-                <SideNav icons={true}>
+                <SideNav icons>
                     <SideNavList
                         items={[
                             { id: 'item_1', url: '#', glyph: 'home' },

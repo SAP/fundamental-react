@@ -402,7 +402,7 @@ export class TimePicker extends React.Component {
             <div className='fd-popover fd-popover--no-arrow'>
                 <Popover
                     id={popoverId}
-                    noArrow={true}
+                    noArrow
                     control={
                         <TimePickerItem
                             id={id}

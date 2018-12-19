@@ -9,7 +9,7 @@ Enzyme.configure({ adapter: new Adapter() });
 describe('<Calendar />', () => {
   const mockOnChange = jest.fn();
   const defaultCalendar = <Calendar onChange={mockOnChange} />;
-  const disabledWeekEnds = <Calendar disableWeekends={true} />;
+  const disabledWeekEnds = <Calendar disableWeekends />;
   const disabledBeforeDay = (
       <Calendar disableBeforeDate={new Date(2018, 7, 3, 0, 0, 0, 0)} />
   );
@@ -32,10 +32,10 @@ describe('<Calendar />', () => {
   );
   const disabledWeekDay = <Calendar disableWeekday={['Monday', 'Tuesday']} />;
   const rangeSelect = (
-      <Calendar enableRangeSelection={true} onChange={mockOnChange} />
+      <Calendar enableRangeSelection onChange={mockOnChange} />
   );
-  const disablePast = <Calendar disablePastDates={true} />;
-  const disableFuture = <Calendar disableFutureDates={true} />;
+  const disablePast = <Calendar disablePastDates />;
+  const disableFuture = <Calendar disableFutureDates />;
 
   test('create calendar components', () => {
     mount(defaultCalendar);

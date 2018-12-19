@@ -35,7 +35,7 @@ describe('MultiInput />', () => {
           data={data}
           onTagsUpdate={mockOnTagsUpdate}
           placeHolder='Select a Fruit'
-          compact={true} />
+          compact />
   );
 
   let wrapper;
