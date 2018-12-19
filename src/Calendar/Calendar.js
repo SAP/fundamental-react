@@ -347,7 +347,7 @@ export class Calendar extends Component {
         return blockedDates[0].getTime() < date.getTime() && blockedDates[1].getTime() > date.getTime();
     }
 
-    isSelected (date) {
+    isSelected(date) {
         return (this.state.selectedDate.getDate() === date.getDate() &&
         this.state.selectedDate.getMonth() === date.getMonth() &&
         this.state.selectedDate.getFullYear() === date.getFullYear());
