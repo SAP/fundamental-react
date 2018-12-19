@@ -44,7 +44,8 @@ describe('<InputGroup />', () => {
   );
   const numberInput = <InputGroup inputType='number' inputValue={100} />;
   const numberInputCompact = (
-    <InputGroup inputType='number' inputValue={100} compact />
+    <InputGroup inputType='number' inputValue={100}
+compact />
   );
   const searchText = (
     <InputGroup inputType='search' inputPlaceholder='Search Term' />

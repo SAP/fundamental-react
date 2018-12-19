@@ -96,7 +96,8 @@ export class SearchInput extends Component {
         }
         return (
           <li key={index}>
-            <a href='#' className={classNames} onClick={this.selectTerm}>
+            <a href='#' className={classNames}
+onClick={this.selectTerm}>
               {item}
             </a>
           </li>

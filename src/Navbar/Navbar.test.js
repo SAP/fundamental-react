@@ -15,7 +15,8 @@ describe('<Navbar />', () => {
     <Navbar>
       <NavbarGroup alignment='left'>
         <NavbarElement type='side-menu'>
-          <Button option='light' glyph='menu2' navbar />
+          <Button option='light' glyph='menu2'
+navbar />
         </NavbarElement>
         <NavbarElement type='logo' noMargin='left' />
         <NavbarElement type='product-name'>Product Name</NavbarElement>
@@ -56,8 +57,10 @@ describe('<Navbar />', () => {
         </NavbarElement>
 
         <NavbarActions>
-          <Button option='light' glyph='search' navbar />
-          <Button option='light' glyph='action-settings' navbar />
+          <Button option='light' glyph='search'
+navbar />
+          <Button option='light' glyph='action-settings'
+navbar />
           <Button option='light' navbar>
             <Identifier size='s' modifier='circle'>
               WW

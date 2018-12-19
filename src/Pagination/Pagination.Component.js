@@ -65,7 +65,8 @@ export const PaginationComponent = () => {
             <h2>Last Page</h2>
             <Description>When the last page is active, the Next arrow should be disabled.</Description>
             <DocsTile centered>
-                <Pagination itemsTotal={101} initialPage={11} onClick={handleClick} />
+                <Pagination itemsTotal={101} initialPage={11}
+onClick={handleClick} />
             </DocsTile>
             <DocsText>{`<Pagination itemsTotal={101} initalPage={11} onClick={handleClick}/>`}</DocsText>
             <Separator />
@@ -73,7 +74,8 @@ export const PaginationComponent = () => {
             <h2>Items per Page</h2>
             <Description>Set how many items per page.</Description>
             <DocsTile centered>
-                <Pagination itemsTotal={101} itemsPerPage={25} onClick={handleClick} />
+                <Pagination itemsTotal={101} itemsPerPage={25}
+onClick={handleClick} />
             </DocsTile>
             <DocsText>{`<Pagination itemsTotal={101} itemsPerPage={25} onClick={handleClick}/>`}</DocsText>
 
@@ -82,7 +84,8 @@ export const PaginationComponent = () => {
             <h2>Set Initial Page</h2>
             <Description>Set initial page to be selected</Description>
             <DocsTile centered>
-                <Pagination itemsTotal={101} initialPage={6} onClick={handleClick} />
+                <Pagination itemsTotal={101} initialPage={6}
+onClick={handleClick} />
             </DocsTile>
             <DocsText>{`<Pagination itemsTotal={101} initalPage={6} onClick={handleClick}/>`}</DocsText>
             <Separator />
@@ -90,7 +93,8 @@ export const PaginationComponent = () => {
             <h2>Hide Total</h2>
             <Description>Only show page numbers, Previous and Next controls</Description>
             <DocsTile centered>
-                <Pagination itemsTotal={101} displayTotal={false} onClick={handleClick} />
+                <Pagination itemsTotal={101} displayTotal={false}
+onClick={handleClick} />
             </DocsTile>
             <DocsText>{`<Pagination itemsTotal={101} displayTotal={false} onClick={handleClick}/>`}</DocsText>
             <Separator />
@@ -98,7 +102,8 @@ export const PaginationComponent = () => {
             <h2>Total Text</h2>
             <Description>Customize text to show next to item total</Description>
             <DocsTile centered>
-                <Pagination itemsTotal={101} onClick={handleClick} totalText='Dalmations' />
+                <Pagination itemsTotal={101} onClick={handleClick}
+totalText='Dalmations' />
             </DocsTile>
             <DocsText centered>
                 {' '}

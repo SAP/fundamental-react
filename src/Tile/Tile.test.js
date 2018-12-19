@@ -25,7 +25,8 @@ describe('<Tile />', () => {
   );
 
   const disabledSimpleTile = (
-    <Tile disabled={true} columnSpan={3} backgroundColor={8}>
+    <Tile disabled={true} columnSpan={3}
+backgroundColor={8}>
       <TileContent title='Tile Title'>
         <p>Tile Description</p>
       </TileContent>
@@ -35,7 +36,8 @@ describe('<Tile />', () => {
   const mediaTile = (
     <Tile isButton={true}>
       <TileMedia>
-        <Identifier size='m' glyph='home' color={3} />
+        <Identifier size='m' glyph='home'
+color={3} />
       </TileMedia>
       <TileContent title='Tile Title'>
         <p>Tile Description</p>

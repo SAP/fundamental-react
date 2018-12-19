@@ -876,7 +876,8 @@ export const BadgeComponent = () => {
                     }
                 ]}
             >
-                <Badge type='success' modifier='filled' glyph='message-error'>
+                <Badge type='success' modifier='filled'
+glyph='message-error'>
                     Default
                 </Badge>
             </Playground>

@@ -218,7 +218,8 @@ export class Shellbar extends Component {
                                                     backgroundImageUrl={user.image}
                                                 />
                                             ) : (
-                                                <Identifier size='xs' modifier='circle' color={user.colorAccent}>
+                                                <Identifier size='xs' modifier='circle'
+color={user.colorAccent}>
                                                     {user.initials}
                                                 </Identifier>
                                             )

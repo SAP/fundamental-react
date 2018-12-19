@@ -50,9 +50,12 @@ export const ImageComponent = () => {
             <h2>Shapes</h2>
             <DocsTile centered>
                 <div className='fd-doc__margin'>
-                    <Image size='s' type='circle' photo='https://placeimg.com/400/400/nature' />
-                    <Image size='m' type='circle' photo='https://placeimg.com/400/400/nature' />
-                    <Image size='l' type='circle' photo='https://placeimg.com/400/400/nature' />
+                    <Image size='s' type='circle'
+photo='https://placeimg.com/400/400/nature' />
+                    <Image size='m' type='circle'
+photo='https://placeimg.com/400/400/nature' />
+                    <Image size='l' type='circle'
+photo='https://placeimg.com/400/400/nature' />
                 </div>
             </DocsTile>
             <DocsText>{shapesImageCode}</DocsText>
@@ -78,7 +81,8 @@ export const ImageComponent = () => {
                     }
                 ]}
             >
-                <Image size='s' type='' photo='https://placeimg.com/400/400/nature' />
+                <Image size='s' type=''
+photo='https://placeimg.com/400/400/nature' />
             </Playground>
         </div>
     );

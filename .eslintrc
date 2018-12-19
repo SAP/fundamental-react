@@ -111,7 +111,7 @@ rules:
     #react/jsx-equals-spacing: [2, 'never']
     #react/jsx-indent: 2
     #react/jsx-indent-props: 2
-    #react/jsx-max-props-per-line:  [2, { "maximum": 2 }]
+    react/jsx-max-props-per-line:  [2, { "maximum": 2 }]
     react/jsx-no-undef: 2
     react/jsx-tag-spacing: [2, { "beforeSelfClosing": "always" }]
     #react/jsx-sort-props: 2

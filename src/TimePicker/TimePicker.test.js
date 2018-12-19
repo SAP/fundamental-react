@@ -13,7 +13,8 @@ describe('<TimePicker />', () => {
   const showMinute = <TimePicker format12Hours={true} showMinute={true} />;
   const showSecond = <TimePicker format12Hours={true} showSecond={true} />;
   const showHourMinute = (
-    <TimePicker format12Hours={false} showHour={false} showMinute={true} />
+    <TimePicker format12Hours={false} showHour={false}
+showMinute={true} />
   );
   const showMinuteSecond = (
     <TimePicker

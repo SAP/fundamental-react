@@ -285,7 +285,8 @@ Compact mode:
         <FormGroup>
           <FormLabel labelText='Right Aligned Text Addon' />
           <FormItem>
-            <InputGroup inputType='number' inputValue={100} compact />
+            <InputGroup inputType='number' inputValue={100}
+compact />
           </FormItem>
         </FormGroup>
       </DocsTile>
@@ -413,7 +414,8 @@ Compact mode:
         <FormGroup>
           <FormLabel labelText='Input with icon text action' />
           <FormItem>
-            <InputGroup inputType='text' addonPos='after' actions>
+            <InputGroup inputType='text' addonPos='after'
+actions>
               <Button option='light' glyph='navigation-down-arrow' />
             </InputGroup>
           </FormItem>
@@ -423,7 +425,8 @@ Compact mode:
         <FormGroup>
           <FormLabel labelText='Input with icon text action' />
           <FormItem>
-            <InputGroup inputType='text' addonPos='after' actions compact>
+            <InputGroup inputType='text' addonPos='after'
+actions compact>
               <Button option='light' glyph='navigation-down-arrow' />
             </InputGroup>
           </FormItem>

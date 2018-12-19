@@ -61,11 +61,13 @@ export const ToggleComponent = () => {
                 <Toggle size='xs' id='Yj07w604'>
                     Extra Small toggle
                 </Toggle>
-                <Toggle size='s' id='Yj07w605' checked>
+                <Toggle size='s' id='Yj07w605'
+checked>
                     Small toggle
                 </Toggle>
                 <Toggle id='Yj07w606'>Normal toggle</Toggle>
-                <Toggle size='l' id='Yj07w607' checked>
+                <Toggle size='l' id='Yj07w607'
+checked>
                     Large toggle
                 </Toggle>
             </DocsTile>
@@ -79,16 +81,19 @@ export const ToggleComponent = () => {
                 the 'disabled' parameter to the element.
             </Description>
             <DocsTile>
-                <Toggle size='xs' id='Yj07w608' disabled>
+                <Toggle size='xs' id='Yj07w608'
+disabled>
                     Extra Small toggle
                 </Toggle>
-                <Toggle size='s' id='Yj07w609' checked disabled>
+                <Toggle size='s' id='Yj07w609'
+checked disabled>
                     Small toggle
                 </Toggle>
                 <Toggle id='Yj07w610' disabled>
                     Normal toggle
                 </Toggle>
-                <Toggle size='l' id='Yj07w611' checked disabled>
+                <Toggle size='l' id='Yj07w611'
+checked disabled>
                     Large toggle
                 </Toggle>
             </DocsTile>

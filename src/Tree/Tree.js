@@ -139,7 +139,8 @@ export class Tree extends Component {
       }
       if (isChild) {
         return (
-          <ul key={row.id} className={displayLevel} role='group'>
+          <ul key={row.id} className={displayLevel}
+role='group'>
             <ul className='fd-tree-child'>
               <li
                 className='fd-tree__item'
@@ -209,7 +210,8 @@ export class Tree extends Component {
           </div>
         </div>
 
-        <ul className='fd-tree' id='' role='tree'>
+        <ul className='fd-tree' id=''
+role='tree'>
           {this.createTreeList(treeData)}
         </ul>
       </div>

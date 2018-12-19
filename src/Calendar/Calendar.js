@@ -204,7 +204,8 @@ export class Calendar extends Component {
                 shortenedNameMonth = element.substring(0, 3);
             }
 
-            return <li className={`fd-calendar__item${months[this.state.currentDateDisplayed.getMonth()] === element ? " is-selected" : ""}${months[this.state.todayDate.getMonth()] === element ? " fd-calendar__item--current" : ""}`} key={element} name={element} onClick={() => this.changeMonth(element)}>{shortenedNameMonth}</li>;
+            return (<li className={`fd-calendar__item${months[this.state.currentDateDisplayed.getMonth()] === element ? " is-selected" : ""}${months[this.state.todayDate.getMonth()] === element ? " fd-calendar__item--current" : ""}`} key={element}
+name={element} onClick={() => this.changeMonth(element)}>{shortenedNameMonth}</li>);
         });
 
         return (
@@ -225,7 +226,8 @@ export class Calendar extends Component {
             years.push(year);
         }
         let listOfYears = years.map(element=>{
-            return <li className={`fd-calendar__item${this.state.currentDateDisplayed.getFullYear() === element ? " is-selected" : ""}${this.state.todayDate.getFullYear() === element ? " fd-calendar__item--current" : ""}`} key={element} name={element} onClick={() => this.changeYear(element)}>{element}</li>;
+            return (<li className={`fd-calendar__item${this.state.currentDateDisplayed.getFullYear() === element ? " is-selected" : ""}${this.state.todayDate.getFullYear() === element ? " fd-calendar__item--current" : ""}`} key={element}
+name={element} onClick={() => this.changeYear(element)}>{element}</li>);
         });
         return (
             <div className='fd-calendar__months'>
@@ -488,7 +490,8 @@ export class Calendar extends Component {
             for (let iterations = 0; iterations < 7; iterations++) {
                 dateFormatted = day.getDate();
                 let copyDate = day;
-                days.push(<td className={`fd-calendar__item fd-calendar__item${this.displayIsDayOtherMonth(day)} ${this.state.todayDate.getTime() === copyDate.getTime() ? "fd-calendar__item--current" : ""} ${this.displayIsSelected(day)} ${this.displaySelectedRangeFirst(day)}${this.displaySelectedRangeLast(day)}${this.displayBetweenRange(day)} ${this.displayDisabled(day)} ${this.isDateBetween(day, blockedDates) ? "is-blocked" : ""}` } role='gridcell' onClick={() => this.dateClick(copyDate, enableRangeSelection)} key={copyDate}><span className='fd-calendar__text'>{dateFormatted}</span>
+                days.push(<td className={`fd-calendar__item fd-calendar__item${this.displayIsDayOtherMonth(day)} ${this.state.todayDate.getTime() === copyDate.getTime() ? "fd-calendar__item--current" : ""} ${this.displayIsSelected(day)} ${this.displaySelectedRangeFirst(day)}${this.displaySelectedRangeLast(day)}${this.displayBetweenRange(day)} ${this.displayDisabled(day)} ${this.isDateBetween(day, blockedDates) ? "is-blocked" : ""}` } role='gridcell'
+onClick={() => this.dateClick(copyDate, enableRangeSelection)} key={copyDate}><span className='fd-calendar__text'>{dateFormatted}</span>
                 </td>);
                 day = this.addDays(day, 1);
             }

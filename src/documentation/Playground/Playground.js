@@ -162,7 +162,8 @@ export class Playground extends Component {
                         <div className='form-group-sublevel' key={item.attribute}>
                             <label>{item.attribute === 'children' ? 'content' : item.attribute}</label>
                             {item.enum ? (
-                                <select className='form-control' onChange={this.updateComponent} name={item.attribute}>
+                                <select className='form-control' onChange={this.updateComponent}
+name={item.attribute}>
                                     {item.enum.map(enumItem => (
                                         <option key={enumItem} value={enumItem}>
                                             {enumItem}
@@ -186,13 +187,15 @@ export class Playground extends Component {
                         <div className='form-group-sublevel' key={item.attribute}>
                             <label>{item.attribute}</label>
                             {item.enum ? (
-                                <select className='form-control' onChange={this.updateComponent} name={item.attribute}>
+                                <select className='form-control' onChange={this.updateComponent}
+name={item.attribute}>
                                     {item.enum.map(enumItem => (
                                         <option key={enumItem}>{enumItem}</option>
                                     ))}
                                 </select>
                             ) : (
-                                <input type='text' className='form-control' value={item.initialValue} />
+                                <input type='text' className='form-control'
+value={item.initialValue} />
                             )}
                         </div>
                     );
@@ -201,7 +204,8 @@ export class Playground extends Component {
                     return (
                         <div className='form-group-sublevel' key={item.attribute}>
                             <div>Properties</div>
-                            <input type='checkbox' onChange={this.updateComponent} name={item.attribute} />
+                            <input type='checkbox' onChange={this.updateComponent}
+name={item.attribute} />
                             <label className='tn-form__label'>{item.attribute}</label>
                         </div>
                     );

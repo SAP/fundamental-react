@@ -178,7 +178,8 @@ export class ModalComponent extends Component {
                     <button className='fd-button' onClick={this.showHideModal}>
                         Show Information Modal
                     </button>
-                    <Modal show={this.state.bShowInfoModal} title='Product Added' onClose={this.showHideModal}>
+                    <Modal show={this.state.bShowInfoModal} title='Product Added'
+onClose={this.showHideModal}>
                         <div>
                             <b>The new product have been added to your catalog.</b>
                             <br />

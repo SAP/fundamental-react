@@ -68,7 +68,8 @@ export const AlertComponent = () => {
                 feedback that an action has been executed. The user will need to dismiss the message.
             </Description>
             <DocsTile>
-                <Alert dismissable link='#' linkText=' link'>
+                <Alert dismissable link='#'
+linkText=' link'>
                     Default alert with a{' '}
                 </Alert>
             </DocsTile>
@@ -150,7 +151,8 @@ export const AlertComponent = () => {
                     }
                 ]}
             >
-                <Alert type='' dismissable={false} link='#' linkText='link'>
+                <Alert type='' dismissable={false}
+link='#' linkText='link'>
                     Default alert with a{' '}
                 </Alert>
             </Playground>

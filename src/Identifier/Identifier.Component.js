@@ -95,13 +95,20 @@ export const IdentifierComponent = () => {
 
             <h2>Circle</h2>
             <DocsTile centered>
-                <Identifier size='xxs' glyph='washing-machine' modifier='circle' />
-                <Identifier size='xs' glyph='washing-machine' modifier='circle' />
-                <Identifier size='s' glyph='washing-machine' modifier='circle' />
-                <Identifier size='m' glyph='washing-machine' modifier='circle' />
-                <Identifier size='l' glyph='washing-machine' modifier='circle' />
-                <Identifier size='xl' glyph='washing-machine' modifier='circle' />
-                <Identifier size='xxl' glyph='washing-machine' modifier='circle' />
+                <Identifier size='xxs' glyph='washing-machine'
+modifier='circle' />
+                <Identifier size='xs' glyph='washing-machine'
+modifier='circle' />
+                <Identifier size='s' glyph='washing-machine'
+modifier='circle' />
+                <Identifier size='m' glyph='washing-machine'
+modifier='circle' />
+                <Identifier size='l' glyph='washing-machine'
+modifier='circle' />
+                <Identifier size='xl' glyph='washing-machine'
+modifier='circle' />
+                <Identifier size='xxl' glyph='washing-machine'
+modifier='circle' />
             </DocsTile>
             <DocsText>{circleCode}</DocsText>
 
@@ -109,13 +116,20 @@ export const IdentifierComponent = () => {
 
             <h2>Background image</h2>
             <DocsTile centered>
-                <Identifier size='xxs' backgroundImageUrl='https://placeimg.com/400/400/nature' modifier='circle' />
-                <Identifier size='xs' backgroundImageUrl='https://placeimg.com/400/400/nature' modifier='circle' />
-                <Identifier size='s' backgroundImageUrl='https://placeimg.com/400/400/nature' modifier='circle' />
-                <Identifier size='m' backgroundImageUrl='https://placeimg.com/400/400/nature' modifier='circle' />
-                <Identifier size='l' backgroundImageUrl='https://placeimg.com/400/400/nature' modifier='circle' />
-                <Identifier size='xl' backgroundImageUrl='https://placeimg.com/400/400/nature' modifier='circle' />
-                <Identifier size='xxl' backgroundImageUrl='https://placeimg.com/400/400/nature' modifier='circle' />
+                <Identifier size='xxs' backgroundImageUrl='https://placeimg.com/400/400/nature'
+modifier='circle' />
+                <Identifier size='xs' backgroundImageUrl='https://placeimg.com/400/400/nature'
+modifier='circle' />
+                <Identifier size='s' backgroundImageUrl='https://placeimg.com/400/400/nature'
+modifier='circle' />
+                <Identifier size='m' backgroundImageUrl='https://placeimg.com/400/400/nature'
+modifier='circle' />
+                <Identifier size='l' backgroundImageUrl='https://placeimg.com/400/400/nature'
+modifier='circle' />
+                <Identifier size='xl' backgroundImageUrl='https://placeimg.com/400/400/nature'
+modifier='circle' />
+                <Identifier size='xxl' backgroundImageUrl='https://placeimg.com/400/400/nature'
+modifier='circle' />
             </DocsTile>
             <DocsText>{backgroundImageCode}</DocsText>
 
@@ -123,8 +137,10 @@ export const IdentifierComponent = () => {
 
             <h2>Transparent</h2>
             <DocsTile centered>
-                <Identifier size='m' label='Wendy Wallace' modifier='transparent'>WW</Identifier>
-                <Identifier size='l' glyph='washing-machine' modifier='transparent' />
+                <Identifier size='m' label='Wendy Wallace'
+modifier='transparent'>WW</Identifier>
+                <Identifier size='l' glyph='washing-machine'
+modifier='transparent' />
             </DocsTile>
             <DocsText>{transparentCode}</DocsText>
 
@@ -132,15 +148,24 @@ export const IdentifierComponent = () => {
 
             <h2>Accent Colors</h2>
             <DocsTile centered>
-                <Identifier size='m' glyph='money-bills' color={1} />
-                <Identifier size='m' glyph='money-bills' color={2} />
-                <Identifier size='m' glyph='money-bills' color={3} />
-                <Identifier size='m' glyph='money-bills' color={4} />
-                <Identifier size='m' glyph='money-bills' color={5} />
-                <Identifier size='m' glyph='money-bills' color={6} />
-                <Identifier size='m' glyph='money-bills' color={7} />
-                <Identifier size='m' glyph='money-bills' color={8} />
-                <Identifier size='m' glyph='money-bills' color={9} />
+                <Identifier size='m' glyph='money-bills'
+color={1} />
+                <Identifier size='m' glyph='money-bills'
+color={2} />
+                <Identifier size='m' glyph='money-bills'
+color={3} />
+                <Identifier size='m' glyph='money-bills'
+color={4} />
+                <Identifier size='m' glyph='money-bills'
+color={5} />
+                <Identifier size='m' glyph='money-bills'
+color={6} />
+                <Identifier size='m' glyph='money-bills'
+color={7} />
+                <Identifier size='m' glyph='money-bills'
+color={8} />
+                <Identifier size='m' glyph='money-bills'
+color={9} />
             </DocsTile>
             <DocsText>{accentColorsCode}</DocsText>
 
@@ -793,7 +818,9 @@ export const IdentifierComponent = () => {
                         typeOfAttribute: 'string',
                         "enum": ['circle', 'transparent']
                     }]}>
-                    <Identifier size='s' label='Wendy Wallace' glyph='money-bills' color={1} modifier='circle' />
+                    <Identifier size='s' label='Wendy Wallace'
+glyph='money-bills' color={1}
+modifier='circle' />
             </Playground>
         </div>
     );

@@ -14,12 +14,15 @@ describe('<Identifier />', () => {
     </Identifier>
   );
   const circle = (
-    <Identifier size='m' glyph='washing-machine' modifier='circle' />
+    <Identifier size='m' glyph='washing-machine'
+modifier='circle' />
   );
   const transparent = (
-    <Identifier glyph='washing-machine' modifier='transparent' size='m' />
+    <Identifier glyph='washing-machine' modifier='transparent'
+size='m' />
   );
-  const accentColor = <Identifier size='m' glyph='money-bills' color={9} />;
+  const accentColor = (<Identifier size='m' glyph='money-bills'
+color={9} />);
 
   const bgImage = (
     <Identifier

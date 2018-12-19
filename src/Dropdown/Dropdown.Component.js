@@ -249,7 +249,8 @@ export const DropdownComponent = () => {
                     <Popover
                         id='jhqD0558'
                         control={
-                            <Button dropdown compact glyph='filter'>
+                            <Button dropdown compact
+glyph='filter'>
                                 Select
                             </Button>
                         }
@@ -299,7 +300,8 @@ export const DropdownComponent = () => {
                     <Popover
                         id='jhqD0560'
                         control={
-                            <Button dropdown compact type='standard'>
+                            <Button dropdown compact
+type='standard'>
                                 Select
                             </Button>
                         }
@@ -328,7 +330,8 @@ export const DropdownComponent = () => {
                         id='jhqD0561'
                         disabled
                         control={
-                            <Button dropdown glyph='filter' disabled>
+                            <Button dropdown glyph='filter'
+disabled>
                                 Select
                             </Button>
                         }

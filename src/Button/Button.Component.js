@@ -223,11 +223,13 @@ const clickBtnHandler = btn => {
                         Add to Cart
                     </Button>
 
-                    <Button option='emphasized' type='positive' glyph='accept'>
+                    <Button option='emphasized' type='positive'
+glyph='accept'>
                         Approve
                     </Button>
 
-                    <Button option='emphasized' type='negative' glyph='decline'>
+                    <Button option='emphasized' type='negative'
+glyph='decline'>
                         Reject
                     </Button>
 
@@ -241,9 +243,11 @@ const clickBtnHandler = btn => {
 
                     <Button option='light' glyph='filter' />
 
-                    <Button option='emphasized' type='positive' glyph='accept' />
+                    <Button option='emphasized' type='positive'
+glyph='accept' />
 
-                    <Button option='emphasized' type='negative' glyph='decline' />
+                    <Button option='emphasized' type='negative'
+glyph='decline' />
                 </div>
             </DocsTile>
             <DocsText>{buttonIconCode}</DocsText>
@@ -1005,7 +1009,9 @@ const clickBtnHandler = btn => {
                     }
                 ]}
             >
-                <Button type='standard' glyph='' option='light' compact={false} selected={false} disabled={false}>
+                <Button type='standard' glyph=''
+option='light' compact={false}
+selected={false} disabled={false}>
                     BUTTON
                 </Button>
             </Playground>

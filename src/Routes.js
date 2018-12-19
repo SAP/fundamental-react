@@ -198,7 +198,8 @@ export default class Routes extends Component {
                     />
                   );
                 })}
-                <Redirect from='' exact to='/actionBar' />
+                <Redirect from='' exact
+to='/actionBar' />
               </Switch>
             </div>
           </div>

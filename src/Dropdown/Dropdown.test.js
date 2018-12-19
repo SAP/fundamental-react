@@ -101,7 +101,8 @@ describe('<Dropdown />', () => {
         id='jhqD0561'
         disabled
         control={
-          <Button dropdown glyph='filter' disabled>
+          <Button dropdown glyph='filter'
+disabled>
             Select
           </Button>
         }

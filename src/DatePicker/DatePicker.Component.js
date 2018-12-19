@@ -56,7 +56,8 @@ export const DatePickerComponent = () => {
             <h2>Range Date Picker</h2>
             <DocsTile centered>
                 <DatePicker enableRangeSelection disableFutureDates />
-                <DatePicker enableRangeSelection disablePastDates compact />
+                <DatePicker enableRangeSelection disablePastDates
+compact />
             </DocsTile>
             <DocsText>{enableRangeSelectionDatePickerCode}</DocsText>
         </div>
