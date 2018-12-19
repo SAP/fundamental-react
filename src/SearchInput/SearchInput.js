@@ -61,8 +61,7 @@ export class SearchInput extends Component {
             className='fd-input'
             onChange={this.handleSearch}
             placeholder={this.props.placeHolder}
-            onKeyPress={this.checkKey}
-      />
+            onKeyPress={this.checkKey} />
     );
 
     // include auto complete functionality if onAutoComplete method is passed to component
@@ -78,8 +77,7 @@ export class SearchInput extends Component {
               onKeyPress={this.checkKey}
               onBlur={() => {
             this.setState({ bShowList: false });
-          }}
-        />
+          }} />
       );
     }
 
@@ -123,15 +121,13 @@ export class SearchInput extends Component {
                         className='fd-combobox-control'
                         aria-label='Image label'
                         aria-expanded={this.state.bShowList}
-                        aria-haspopup='true'
-            >
+                        aria-haspopup='true'>
                         <div className='fd-input-group fd-input-group--after'>
                             {this.createSearchInput(onAutoComplete)}
                             <span className='fd-input-group__addon fd-input-group__addon--after fd-input-group__addon--button'>
                                 <button
                                     className='fd-button--light sap-icon--search'
-                                    onClick={() => onSearch(this.state.searchTerm)}
-                  />
+                                    onClick={() => onSearch(this.state.searchTerm)} />
                             </span>
                         </div>
                     </div>
@@ -139,8 +135,7 @@ export class SearchInput extends Component {
                 {data && onAutoComplete ? (
                     <div
                         className='fd-popover__body fd-popover__body--no-arrow'
-                        aria-hidden={!this.state.bShowList}
-            >
+                        aria-hidden={!this.state.bShowList}>
                         <nav className='fd-menu'>
                             <ul className='fd-menu__list'>
                                 {this.createAutoCompleteItems(data)}

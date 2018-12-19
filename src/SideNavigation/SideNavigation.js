@@ -70,14 +70,12 @@ export class SideNavList extends Component {
                     }`}
                             to={{ pathname: item.link }}
                             key={item.id}
-                            onClick={e => this.handleSelect(e, item.id)}
-                  >
+                            onClick={e => this.handleSelect(e, item.id)}>
                             {item.glyph ? (
                                 <span
                                     className={`fd-side-nav__icon${' sap-icon--' +
                           item.glyph} sap-icon--l`}
-                                    role='presentation'
-                      />
+                                    role='presentation' />
                     ) : null}
                             {item.name}
                         </Link>
@@ -94,14 +92,12 @@ export class SideNavList extends Component {
                     }`}
                             href={item.url}
                             key={item.id}
-                            onClick={e => this.handleSelect(e, item.id)}
-                  >
+                            onClick={e => this.handleSelect(e, item.id)}>
                             {item.glyph ? (
                                 <span
                                     className={`fd-side-nav__icon${' sap-icon--' +
                           item.glyph} sap-icon--l`}
-                                    role='presentation'
-                      />
+                                    role='presentation' />
                     ) : null}
                             {item.name}
                         </a>
@@ -112,8 +108,7 @@ export class SideNavList extends Component {
                             className='fd-side-nav__sublist'
                             id={item.id}
                             aria-hidden={!this.state.itemStates[item.id]}
-                            aria-expanded={this.state.itemStates[item.id]}
-                  >
+                            aria-expanded={this.state.itemStates[item.id]}>
                             {item.child.map(ch => {
                       return (
                           <React.Fragment key={ch.id}>
@@ -126,8 +121,7 @@ export class SideNavList extends Component {
                               }`}
                                       to={{ pathname: ch.link }}
                                       key={ch.id}
-                                      onClick={e => this.handleSelectChild(e, ch.id)}
-                            >
+                                      onClick={e => this.handleSelectChild(e, ch.id)}>
                                       {ch.name}
                                   </Link>
                           ) : null}
@@ -141,8 +135,7 @@ export class SideNavList extends Component {
                               }`}
                                       href={ch.url}
                                       key={ch.id}
-                                      onClick={e => this.handleSelectChild(e, ch.id)}
-                            >
+                                      onClick={e => this.handleSelectChild(e, ch.id)}>
                                       {ch.name}
                                   </a>
                           ) : null}

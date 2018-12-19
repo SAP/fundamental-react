@@ -25,8 +25,7 @@ describe('<Forms />', () => {
               <FormInput
                   type='text'
                   id='input-1'
-                  placeholder='Field placeholder text'
-        />
+                  placeholder='Field placeholder text' />
           </FormItem>
           <FormItem>
               <FormLabel forAttr='input-1' required={true}>
@@ -36,8 +35,7 @@ describe('<Forms />', () => {
                   type='text'
                   id='input-1'
                   state='help'
-                  placeholder='Field placeholder text'
-        />
+                  placeholder='Field placeholder text' />
               <FormTextarea id='textarea-1'>
           Pellentesque metus lacus commodo eget justo ut rutrum varius nunc.
               </FormTextarea>
@@ -83,8 +81,7 @@ describe('<Forms />', () => {
             label: 'Option 3'
           }
         ]}
-              defaultChecked='radio-2'
-      />
+              defaultChecked='radio-2' />
           <FormLegend legendText='Radio buttons disabled' />
           <FormRadio
               isInline={true}
@@ -109,8 +106,7 @@ describe('<Forms />', () => {
             label: 'Option 3'
           }
         ]}
-              defaultChecked='radio-4'
-      />
+              defaultChecked='radio-4' />
           <FormLegend legendText='Inline Radio buttons' />
           <FormRadio
               isInline={true}
@@ -134,8 +130,7 @@ describe('<Forms />', () => {
             label: 'Option 3'
           }
         ]}
-              defaultChecked='radio-9'
-      />
+              defaultChecked='radio-9' />
           <FormRadio
               disabled={true}
               inputs={[
@@ -158,16 +153,14 @@ describe('<Forms />', () => {
             label: 'Option 3'
           }
         ]}
-              defaultChecked='radio-9'
-      />
+              defaultChecked='radio-9' />
           <FormLegend legendText='Checkboxes' />
           <FormItem isCheck={true}>
               <FormInput
                   type='checkbox'
                   id='checkbox-1'
                   name='checkbox-name-1'
-                  value=''
-        />
+                  value='' />
               <FormLabel forAttr='checkbox-1'>Option One</FormLabel>
           </FormItem>
       </FormFieldset>
@@ -195,8 +188,7 @@ describe('<Forms />', () => {
           label: 'Option 3'
         }
       ]}
-          defaultChecked='radio-2'
-    />
+          defaultChecked='radio-2' />
   );
 
   test('create form item', () => {

@@ -64,14 +64,12 @@ export class Popover extends Component {
             className={`fd-popover${alignment ? ' fd-popover--' + alignment : ''}`}
             ref={node => {
           this.node = node;
-        }}
-      >
+        }}>
             <div
                 className='fd-popover__control'
                 aria-expanded={this.state.isExpanded}
                 onClick={this.triggerBody}
-                aria-controls={id}
-        >
+                aria-controls={id}>
                 {control}
             </div>
             <div
@@ -79,8 +77,7 @@ export class Popover extends Component {
             alignment ? ' fd-popover__body--' + alignment : ''
           }${noArrow ? ' fd-popover__body--no-arrow' : ''}`}
                 aria-hidden={!this.state.isExpanded}
-                id={id}
-        >
+                id={id}>
                 {body}
             </div>
         </div>

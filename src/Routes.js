@@ -177,8 +177,7 @@ export default class Routes extends Component {
                         className='nav-item'
                         to={{ pathname: route.url }}
                         key={route.url}
-                        activeClassName='nav-item--active'
-                  >
+                        activeClassName='nav-item--active'>
                         {route.name}
                     </NavLink>
                 );
@@ -194,8 +193,7 @@ export default class Routes extends Component {
                           key={route.url}
                           exact
                           path={route.url}
-                          component={route.component}
-                    />
+                          component={route.component} />
                   );
                 })}
                             <Redirect from='' exact

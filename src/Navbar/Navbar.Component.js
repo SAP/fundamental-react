@@ -108,8 +108,7 @@ export const NavbarComponent = () => {
                         description:
                             "string (required)- The type of the NavbarElement. Oprions include 'search', 'context-menu', 'product-name', 'logo', and 'side-menu'. "
                     }
-                ]}
-            />
+                ]} />
 
             <Separator />
 
@@ -137,8 +136,7 @@ export const NavbarComponent = () => {
                                         <MenuItem url='/'>Option 4</MenuItem>
                                     </MenuList>
                                 </Menu>
-                            }
-                        />
+                            } />
                     </NavbarGroup>
 
                     <NavbarGroup alignment='right'>
@@ -154,8 +152,7 @@ export const NavbarComponent = () => {
                                             <MenuItem url='/'>Option 4</MenuItem>
                                         </MenuList>
                                     </Menu>
-                                }
-                            />
+                                } />
                         </NavbarElement>
 
                         <NavbarActions>

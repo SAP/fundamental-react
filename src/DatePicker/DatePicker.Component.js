@@ -36,8 +36,7 @@ export const DatePickerComponent = () => {
                 {name: 'blockedDates', description: 'array of dates - Blocks dates that are between in the blocked dates'},
                 {name: 'disabledDates', description: 'array of dates - Disables dates that are between in the disabled dates'},
                 {name: 'enableRangeSelection', description: 'bool - Enable to select two dates'}
-            ]}
-            />
+            ]} />
 
             <Separator />
 
@@ -47,8 +46,7 @@ export const DatePickerComponent = () => {
                 <DatePicker
                     compact
                     disableWeekday={['Monday', 'Tuesday']}
-                    blockedDates={[new Date(2018, 11, 1, 0, 0, 0, 0), new Date(2018, 11, 23, 0, 0, 0, 0)]}
-                />
+                    blockedDates={[new Date(2018, 11, 1, 0, 0, 0, 0), new Date(2018, 11, 23, 0, 0, 0, 0)]} />
             </DocsTile>
             <DocsText>{defaultDatePickerCode}</DocsText>
             <Separator />

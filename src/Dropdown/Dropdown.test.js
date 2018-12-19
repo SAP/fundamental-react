@@ -20,8 +20,7 @@ describe('<Dropdown />', () => {
                           <MenuItem url='/'>Option 4</MenuItem>
                       </MenuList>
                   </Menu>
-        }
-      />
+        } />
       </Dropdown>
   );
 
@@ -43,8 +42,7 @@ describe('<Dropdown />', () => {
                           <MenuItem url='/'>Option 4</MenuItem>
                       </MenuList>
                   </Menu>
-        }
-      />
+        } />
       </Dropdown>
   );
 
@@ -66,8 +64,7 @@ describe('<Dropdown />', () => {
                           <MenuItem url='/'>Option 4</MenuItem>
                       </MenuList>
                   </Menu>
-        }
-      />
+        } />
       </Dropdown>
   );
 
@@ -90,8 +87,7 @@ describe('<Dropdown />', () => {
                           <MenuItem url='/'>Option 4</MenuItem>
                       </MenuList>
                   </Menu>
-        }
-      />
+        } />
       </Dropdown>
   );
 
@@ -116,8 +112,7 @@ describe('<Dropdown />', () => {
                           <MenuItem url='/'>Option 4</MenuItem>
                       </MenuList>
                   </Menu>
-        }
-      />
+        } />
       </Dropdown>
   );
 

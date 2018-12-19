@@ -199,8 +199,7 @@ const productSwitcherList = [
                     },
                     { name: 'productSwitcher', description: '(optional) for navigating between products.' },
                     { name: 'productSwitcherList', description: '(optional) list of the products.' }
-                ]}
-            />
+                ]} />
             <Separator />
 
             <h2>Basic Shellbar</h2>
@@ -213,8 +212,7 @@ const productSwitcherList = [
                     logo={<img src='//unpkg.com/fiori-fundamentals/dist/images/sap-logo.png' alt='SAP' />}
                     productTitle='Corporate Portal'
                     user={user1}
-                    userMenu={userMenu}
-                />
+                    userMenu={userMenu} />
             </DocsTile>
             <DocsText>{simpleShellbarExampleCode}</DocsText>
 
@@ -237,8 +235,7 @@ const productSwitcherList = [
                     user={user}
                     userMenu={userMenu}
                     productSwitcher={productSwitcher}
-                    productSwitcherList={productSwitcherList}
-                />
+                    productSwitcherList={productSwitcherList} />
             </DocsTile>
             <DocsText>{shellbarExampleCode}</DocsText>
         </div>

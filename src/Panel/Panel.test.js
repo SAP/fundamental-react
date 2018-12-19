@@ -19,8 +19,7 @@ describe('<Panel />', () => {
           <PanelHeader>
               <PanelHead
                   title={'Panel Header with Actions'}
-                  description='Panel Description'
-        />
+                  description='Panel Description' />
               <PanelActions>
                   <Button compact glyph='add'>
             Add New Button

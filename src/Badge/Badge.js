@@ -28,8 +28,7 @@ export const Status = props => {
     const { type, glyph, children } = props;
     return (
         <span
-            className={`fd-status-label${type ? ' fd-status-label--' + type : ''}${glyph ? ' sap-icon--' + glyph : ''}`}
-        >
+            className={`fd-status-label${type ? ' fd-status-label--' + type : ''}${glyph ? ' sap-icon--' + glyph : ''}`}>
             {children}
         </span>
     );

@@ -51,8 +51,7 @@ export const ComboboxInputComponent = () => {
                     { name: 'id', description: 'string (optional) - The id of the component.' },
                     { name: 'placeholder', description: "string (optional) - Input 'placeholder' attribute. " },
                     { name: 'compact', description: 'bool (optional) - Set to true to enable compact mode.' }
-                ]}
-            />
+                ]} />
 
             <Separator />
 
@@ -71,8 +70,7 @@ export const ComboboxInputComponent = () => {
                                 </MenuItem>
                             </MenuList>
                         </Menu>
-                    }
-                />
+                    } />
 
                 <br />
 
@@ -90,8 +88,7 @@ export const ComboboxInputComponent = () => {
                                 </MenuItem>
                             </MenuList>
                         </Menu>
-                    }
-                />
+                    } />
             </DocsTile>
             <DocsText>{comboboxInputCode}</DocsText>
             <Separator />

@@ -49,8 +49,7 @@ export const PaginationComponent = () => {
                         name: 'totalText',
                         description: 'string (default: "items") - String to display next to the total number of items.'
                     }
-                ]}
-            />
+                ]} />
 
             <Separator />
 

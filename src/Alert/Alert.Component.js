@@ -53,12 +53,10 @@ export const AlertComponent = () => {
                         name: 'dismissible',
                         description: 'bool - Shows a dismissible button if set to true. Default is false.'
                     }
-                ]}
-            />
+                ]} />
             <Properties
                 type='Outputs'
-                properties={[{ name: 'close', description: 'Emitted when the close button is clicked.' }]}
-            />
+                properties={[{ name: 'close', description: 'Emitted when the close button is clicked.' }]} />
 
             <Separator />
 
@@ -149,8 +147,7 @@ export const AlertComponent = () => {
                         attribute: 'dismissable',
                         typeOfAttribute: 'boolean'
                     }
-                ]}
-            >
+                ]}>
                 <Alert type='' dismissable={false}
                     link='#' linkText='link'>
                     Default alert with a{' '}

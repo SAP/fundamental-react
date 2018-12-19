@@ -81,8 +81,7 @@ export const MenuComponent = () => {
                         name: 'addon',
                         description: 'string - the name of the SAP icon to be applied as an addon before.'
                     }
-                ]}
-            />
+                ]} />
 
             <Separator />
 

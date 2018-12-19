@@ -24,8 +24,7 @@ export class Toggle extends React.Component {
                             id={id}
                             checked={this.state.checked}
                             onChange={this.handleChange}
-                            disabled={disabled}
-                        />
+                            disabled={disabled} />
                         <span className='fd-toggle__switch' role='presentation' />
                     </span>
                     {children}

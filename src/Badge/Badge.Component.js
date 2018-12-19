@@ -88,8 +88,7 @@ export const BadgeComponent = () => {
                         name: 'notification',
                         description: "bool - Set to 'true' to enable counter with notification. "
                     }
-                ]}
-            />
+                ]} />
 
             <Separator />
 
@@ -874,8 +873,7 @@ export const BadgeComponent = () => {
                             'zoom-out'
                         ]
                     }
-                ]}
-            >
+                ]}>
                 <Badge type='success' modifier='filled'
                     glyph='message-error'>
                     Default

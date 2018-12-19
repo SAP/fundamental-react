@@ -102,8 +102,7 @@ describe('<Tree />', () => {
             }
           ]
         }
-      ]}
-    />
+      ]} />
   );
 
   const richTree = (
@@ -170,8 +169,7 @@ describe('<Tree />', () => {
             }
           ]
         }
-      ]}
-    />
+      ]} />
   );
 
   test('create tree component', () => {

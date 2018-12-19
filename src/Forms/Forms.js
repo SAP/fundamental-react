@@ -14,8 +14,7 @@ export const FormItem = props => {
         <div
             className={`fd-form__item${isInline ? ' fd-form__item--inline' : ''}${
                 isCheck ? ' fd-form__item--check' : ''
-            }`}
-        >
+            }`}>
             {children}
         </div>
     );
@@ -59,8 +58,7 @@ export const FormInput = props => {
             className={`fd-form__control${state ? ' is-' + state : ''}`}
             type={type}
             id={id}
-            placeholder={placeholder}
-        />
+            placeholder={placeholder} />
     );
 };
 
@@ -145,8 +143,7 @@ export class FormRadio extends Component {
                             value={inputItem.value}
                             disabled={disabled ? true : ''}
                             onChange={this.handleChange}
-                            checked={this.state.selectedItem === inputItem.id}
-                        />
+                            checked={this.state.selectedItem === inputItem.id} />
                         {inputItem.label}
                     </label>
                 </div>
@@ -162,8 +159,7 @@ export class FormRadio extends Component {
                         value={inputItem.value}
                         disabled={disabled ? true : ''}
                         onChange={this.handleChange}
-                        checked={this.state.selectedItem === inputItem.id}
-                    />
+                        checked={this.state.selectedItem === inputItem.id} />
                     <label className='fd-form__label' htmlFor={inputItem.id}>
                         {inputItem.label}
                     </label>

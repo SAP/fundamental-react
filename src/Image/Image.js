@@ -6,8 +6,7 @@ export const Image = props => {
   return (
       <span
           className={`${'fd-image--' + size}${type ? ' fd-image--' + type : ''}`}
-          style={{ backgroundImage: 'url(' + photo + ')' }}
-    />
+          style={{ backgroundImage: 'url(' + photo + ')' }} />
   );
 };
 

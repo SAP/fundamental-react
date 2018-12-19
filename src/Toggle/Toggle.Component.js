@@ -46,8 +46,7 @@ export const ToggleComponent = () => {
                 properties={[
                     { name: 'size', description: 'string - The size of the toggle.' },
                     { name: 'id', description: 'string - The id of the toggle.' }
-                ]}
-            />
+                ]} />
 
             <Separator />
 

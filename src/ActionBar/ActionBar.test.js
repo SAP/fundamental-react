@@ -13,8 +13,7 @@ describe('<ActionBar />', () => {
           <ActionBarBack />
           <ActionBarHeader
               title={'Page Title'}
-              description={'Action Bar Description'}
-      />
+              description={'Action Bar Description'} />
           <ActionBarActions>
               <button>Button</button>
           </ActionBarActions>
@@ -26,8 +25,7 @@ describe('<ActionBar />', () => {
           <ActionBarBack />
           <ActionBarHeader
               title={'Page Title'}
-              description={'Action Bar Description'}
-      />
+              description={'Action Bar Description'} />
           <ActionBarActions>
               <button>Button</button>
           </ActionBarActions>
@@ -39,8 +37,7 @@ describe('<ActionBar />', () => {
           <ActionBarBack />
           <ActionBarHeader
               title={'Page Title'}
-              description={'Action Bar Description'}
-      />
+              description={'Action Bar Description'} />
           <ActionBarActions>
               <button>Button</button>
           </ActionBarActions>

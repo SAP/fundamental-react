@@ -26,8 +26,7 @@ export const TabsComponent = () => {
                     { name: 'name', description: 'name of the tab' },
                     { name: 'content', description: 'the content to display when the tab is pressed' },
                     { name: 'disabled', description: 'disable the tab based on true or false' }
-                ]}
-            />
+                ]} />
             <DocsTile>
                 <Tabs>
                     <TabComponent
@@ -35,8 +34,7 @@ export const TabsComponent = () => {
                             { id: '1', url: '#', name: 'Tab 1', content: 'Hello world', disabled: false },
                             { id: '2', url: '#', name: 'Tab 2', content: 'Hello world 2', disabled: false },
                             { id: '3', url: '#', name: 'Tab 3', content: 'Hello world 3', disabled: true }
-                        ]}
-                    />
+                        ]} />
                 </Tabs>
             </DocsTile>
             <DocsText>{tabscomponentCode}</DocsText>
@@ -55,16 +53,14 @@ export const TabsComponent = () => {
                         typeOfAttribute: 'listsContent',
                         "enum": ['Tab 1', 'Tab 2', 'Tab 3']
                     }
-                ]}
-            >
+                ]}>
                 <Tabs>
                     <TabComponent
                         ids={[
                             { id: 'Tab 1', url: '#', name: 'Tab 1', content: 'Hello world', disabled: false },
                             { id: 'Tab 2', url: '#', name: 'Tab 2', content: 'Hello world 2', disabled: false },
                             { id: 'Tab 3', url: '#', name: 'Tab 3', content: 'Hello world 3', disabled: true }
-                        ]}
-                    />
+                        ]} />
                 </Tabs>
             </Playground>
         </div>

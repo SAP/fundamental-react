@@ -43,8 +43,7 @@ export class Modal extends Component {
                             <button
                                 className='fd-button--light fd-modal__close'
                                 aria-label='close'
-                                onClick={this.handleCloseClick}
-                />
+                                onClick={this.handleCloseClick} />
                         </div>
                         <div className='fd-modal__body'>{children}</div>
                         {actions ? (

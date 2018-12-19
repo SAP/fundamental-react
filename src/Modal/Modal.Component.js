@@ -164,8 +164,7 @@ export class ModalComponent extends Component {
                             name: 'actions',
                             description: 'React.Fragment which contains <Button /> controls to render in the footer'
                         }
-                    ]}
-                />
+                    ]} />
 
                 <Separator />
 
@@ -216,8 +215,7 @@ export class ModalComponent extends Component {
                                 </Button>
                                 <Button onclick={() => this.showHideConfirmModal('Sure')}>Sure</Button>
                             </React.Fragment>
-                        }
-                    >
+                        }>
                         <div>
                             Do you want to delete item <b>X</b>?
                         </div>
@@ -243,8 +241,7 @@ export class ModalComponent extends Component {
                                 </Button>
                                 <Button onclick={() => this.showHideFormModal('Invite')}>Invite</Button>
                             </React.Fragment>
-                        }
-                    >
+                        }>
                         <div className='fd-form__group'>
                             <div className='fd-form__item'>
                                 <label className='fd-form__label is-required'>Email</label>
@@ -253,8 +250,7 @@ export class ModalComponent extends Component {
                                     type='text'
                                     value={this.state.emailAddress}
                                     onChange={this.updateEmailAddress}
-                                    ref={this.txtEmailRef}
-                                />
+                                    ref={this.txtEmailRef} />
                             </div>
                         </div>
                     </Modal>

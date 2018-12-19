@@ -15,8 +15,7 @@ export const Identifier = props => {
       }${backgroundImageUrl ? ' fd-identifier--thumbnail' : ''}`}
           style={backgroundImageUrl && styles}
           role={`${!children ? 'presentation' : ''}`}
-          aria-label={label}
-    >
+          aria-label={label}>
           {children}
       </span>
   );

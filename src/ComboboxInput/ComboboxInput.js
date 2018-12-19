@@ -15,22 +15,19 @@ export const ComboboxInput = props => {
                       <div
                           className={`fd-input-group fd-input-group--after${
                 compact ? ' fd-input-group--compact' : ''
-              }`}
-            >
+              }`}>
                           <input
                               type='text'
                               className={`fd-input${compact ? ' fd-input--compact' : ''}`}
                               id=''
-                              placeholder={placeholder}
-              />
+                              placeholder={placeholder} />
                           <span className='fd-input-group__addon fd-input-group__addon--after fd-input-group__addon--button'>
                               <button className=' fd-button--light sap-icon--navigation-down-arrow' />
                           </span>
                       </div>
                   </div>
         }
-              body={menu}
-      />
+              body={menu} />
       </div>
   );
 };

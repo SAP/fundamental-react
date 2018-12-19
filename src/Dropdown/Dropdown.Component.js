@@ -169,8 +169,7 @@ export const DropdownComponent = () => {
                 type='Inputs'
                 properties={[
                     { name: 'standard', description: "bool - set to 'true' to enable a dropdown for toolbar." }
-                ]}
-            />
+                ]} />
 
             <Separator />
 
@@ -190,8 +189,7 @@ export const DropdownComponent = () => {
                                     <MenuItem url='/'>Option 4</MenuItem>
                                 </MenuList>
                             </Menu>
-                        }
-                    />
+                        } />
                 </Dropdown>
 
                 <Dropdown>
@@ -212,8 +210,7 @@ export const DropdownComponent = () => {
                                     <MenuItem url='/'>Option 4</MenuItem>
                                 </MenuList>
                             </Menu>
-                        }
-                    />
+                        } />
                 </Dropdown>
             </DocsTile>
             <DocsText>{defaultDropdownCode}</DocsText>
@@ -241,8 +238,7 @@ export const DropdownComponent = () => {
                                     <MenuItem url='/'>Option 4</MenuItem>
                                 </MenuList>
                             </Menu>
-                        }
-                    />
+                        } />
                 </Dropdown>
 
                 <Dropdown>
@@ -264,8 +260,7 @@ export const DropdownComponent = () => {
                                     <MenuItem url='/'>Option 4</MenuItem>
                                 </MenuList>
                             </Menu>
-                        }
-                    />
+                        } />
                 </Dropdown>
             </DocsTile>
             <DocsText>{iconDropdownCode}</DocsText>
@@ -292,8 +287,7 @@ export const DropdownComponent = () => {
                                     <MenuItem url='/'>Option 4</MenuItem>
                                 </MenuList>
                             </Menu>
-                        }
-                    />
+                        } />
                 </Dropdown>
 
                 <Dropdown standard>
@@ -315,8 +309,7 @@ export const DropdownComponent = () => {
                                     <MenuItem url='/'>Option 4</MenuItem>
                                 </MenuList>
                             </Menu>
-                        }
-                    />
+                        } />
                 </Dropdown>
             </DocsTile>
             <DocsText>{toolbarDropdownCode}</DocsText>
@@ -345,8 +338,7 @@ export const DropdownComponent = () => {
                                     <MenuItem url='/'>Option 4</MenuItem>
                                 </MenuList>
                             </Menu>
-                        }
-                    />
+                        } />
                 </Dropdown>
             </DocsTile>
             <DocsText>{disabledDropdownCode}</DocsText>

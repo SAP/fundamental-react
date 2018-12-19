@@ -253,8 +253,7 @@ class TimeItem extends Component {
                         className=' fd-button--light fd-button--xs sap-icon--navigation-up-arrow '
                         aria-label={arialabel.buttonUp}
                         disabled={disabled}
-                        onClick={this._onUp}
-            />
+                        onClick={this._onUp} />
                 </div>
         ) : (
           ''
@@ -269,8 +268,7 @@ class TimeItem extends Component {
                     value={this.props.value}
                     aria-label={type}
                     name={this.props.name}
-                    readOnly={disabled}
-          />
+                    readOnly={disabled} />
             </div>
             {spinners ? (
                 <div className='fd-time__control'>
@@ -278,8 +276,7 @@ class TimeItem extends Component {
                         className=' fd-button--light fd-button--xs sap-icon--navigation-down-arrow'
                         aria-label={arialabel.buttonDown}
                         disabled={disabled}
-                        onClick={this._onDown}
-            />
+                        onClick={this._onDown} />
                 </div>
         ) : (
           ''
@@ -405,8 +402,7 @@ export class Time extends Component {
                     name='hour'
                     time={time}
                     format12Hours={format12Hours}
-                    spinners={spinners}
-          />
+                    spinners={spinners} />
         ) : (
           ''
         )}
@@ -423,8 +419,7 @@ export class Time extends Component {
                     name='minute'
                     time={time}
                     format12Hours={format12Hours}
-                    spinners={spinners}
-          />
+                    spinners={spinners} />
         ) : (
           ''
         )}
@@ -441,8 +436,7 @@ export class Time extends Component {
                     name='second'
                     time={time}
                     format12Hours={format12Hours}
-                    spinners={spinners}
-          />
+                    spinners={spinners} />
         ) : (
           ''
         )}
@@ -456,8 +450,7 @@ export class Time extends Component {
                     value={CLOCK[this.state.time.meridiem]}
                     updateTime={this.updateTime}
                     name='meridiem'
-                    spinners={spinners}
-          />
+                    spinners={spinners} />
         ) : (
           ''
         )}

@@ -22,8 +22,7 @@ export const PanelGrid = props => {
         <div
             className={`fd-panel-grid${nogap ? ' fd-panel-grid--nogap' : ''}${
                 cols ? ' fd-panel-grid--' + cols + 'col' : ''
-            }`}
-        >
+            }`}>
             {children}
         </div>
     );

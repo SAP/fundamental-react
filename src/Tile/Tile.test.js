@@ -60,8 +60,7 @@ describe('<Tile />', () => {
                               <MenuItem url='/'>Option 4</MenuItem>
                           </MenuList>
                       </Menu>
-          }
-        />
+          } />
           </TileActions>
       </Tile>
   );

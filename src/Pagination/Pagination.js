@@ -62,8 +62,7 @@ export class Pagination extends Component {
               href='#'
               className='fd-pagination__link'
               aria-selected={this.state.selectedPage === index + 1}
-              onClick={this.pageClicked}
-        >
+              onClick={this.pageClicked}>
               {index + 1}
           </a>
       ));
@@ -100,16 +99,14 @@ export class Pagination extends Component {
                     className='fd-pagination__link fd-pagination__link--previous'
                     aria-label='Previous'
                     aria-disabled={this.state.selectedPage === 1}
-                    onClick={this.navigateBack}
-          />
+                    onClick={this.navigateBack} />
                 {this.createPaginationLinks(this.numberOfPages)}
                 <a
                     href='#'
                     className='fd-pagination__link fd-pagination__link--next'
                     aria-label='Next'
                     aria-disabled={this.state.selectedPage === this.numberOfPages}
-                    onClick={this.navigateForward}
-          />
+                    onClick={this.navigateForward} />
             </nav>
         </div>
     );

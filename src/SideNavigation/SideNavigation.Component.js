@@ -124,8 +124,7 @@ export const SideNavigationComponent = () => {
                             "array - an array of objects with keys 'id', 'url', and 'name' setting the attributes of the subitems"
                     },
                     { name: 'glyph', description: 'string - the name of the icon for navigation list with icons.' }
-                ]}
-            />
+                ]} />
 
             <Separator />
 
@@ -139,8 +138,7 @@ export const SideNavigationComponent = () => {
                             { id: 'item_3', url: '#', name: 'Link Item' },
                             { id: 'item_4', url: '#', name: 'Link Item' },
                             { id: 'item_5', url: '#', name: 'Link Item' }
-                        ]}
-                    />
+                        ]} />
                 </SideNav>
             </DocsTile>
             <DocsText>{sideNavOneLevelCode}</DocsText>
@@ -159,8 +157,7 @@ export const SideNavigationComponent = () => {
                                 { id: 'item_3', link: '/', name: 'Link Item' },
                                 { id: 'item_4', link: '/', name: 'Link Item' },
                                 { id: 'item_5', link: '/', name: 'Link Item' }
-                            ]}
-                        />
+                            ]} />
                     </SideNavGroup>
                     <SideNavGroup title='Group Title'>
                         <SideNavList
@@ -170,8 +167,7 @@ export const SideNavigationComponent = () => {
                                 { id: 'item_8', link: '/', name: 'Link Item' },
                                 { id: 'item_9', link: '/', name: 'Link Item' },
                                 { id: 'item_10', link: '/', name: 'Link Item' }
-                            ]}
-                        />
+                            ]} />
                     </SideNavGroup>
                 </SideNav>
             </DocsTile>
@@ -215,8 +211,7 @@ export const SideNavigationComponent = () => {
                                 ]
                             },
                             { id: 'item_5', url: '#', name: 'Link Item' }
-                        ]}
-                    />
+                        ]} />
                 </SideNav>
             </DocsTile>
             <DocsText>{sideNavMultiLevelCode}</DocsText>
@@ -233,8 +228,7 @@ export const SideNavigationComponent = () => {
                             { id: 'item_3', link: '/', name: 'Link Item', glyph: 'home' },
                             { id: 'item_4', link: '/', name: 'Link Item', glyph: 'home' },
                             { id: 'item_5', link: '/', name: 'Link Item', glyph: 'home' }
-                        ]}
-                    />
+                        ]} />
                 </SideNav>
             </DocsTile>
             <DocsText>{sideNavWithIconsCode}</DocsText>
@@ -256,8 +250,7 @@ export const SideNavigationComponent = () => {
                             { id: 'item_3', url: '#', glyph: 'home' },
                             { id: 'item_4', url: '#', glyph: 'home' },
                             { id: 'item_5', url: '#', glyph: 'home' }
-                        ]}
-                    />
+                        ]} />
                 </SideNav>
             </DocsTile>
             <DocsText>{sideNavCollapsedCode}</DocsText>

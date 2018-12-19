@@ -73,8 +73,7 @@ export class MultiInputComponent extends Component {
                             name: 'compact',
                             description: 'bool - true: display compact style, false: default style'
                         }
-                    ]}
-                />
+                    ]} />
 
                 <Separator />
 
@@ -85,8 +84,7 @@ export class MultiInputComponent extends Component {
                         <MultiInput
                             data={this.data}
                             onTagsUpdate={this.performTagsUpdate}
-                            placeHolder='Select a Fruit'
-                        />
+                            placeHolder='Select a Fruit' />
                     </div>
                 </DocsTile>
                 <DocsText>{this.multiInputCode}</DocsText>
@@ -103,8 +101,7 @@ export class MultiInputComponent extends Component {
                             data={this.data}
                             onTagsUpdate={this.performTagsUpdate}
                             placeHolder='Select a Fruit'
-                            compact={true}
-                        />
+                            compact={true} />
                     </div>
                 </DocsTile>
                 <DocsText>{this.multiInputCompactCode}</DocsText>

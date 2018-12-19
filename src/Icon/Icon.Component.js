@@ -673,8 +673,7 @@ export const IconComponent = () => {
             description:
               "string - Size of the icon. Options include 'xs', 's', 'compact', and 'l'. If no size is provided, default (normal) will be used."
           }
-        ]}
-      />
+        ]} />
 
           <Separator />
 
@@ -1332,8 +1331,7 @@ export const IconComponent = () => {
             typeOfAttribute: 'string',
             "enum": ['s', '', 'm', 'l', 'xl']
           }
-        ]}
-      >
+        ]}>
               <Icon glyph='cart' size='s' />
           </Playground>
       </div>

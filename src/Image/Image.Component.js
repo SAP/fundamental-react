@@ -30,8 +30,7 @@ export const ImageComponent = () => {
                     },
                     { name: 'photo', description: 'string (required) - picture url.' },
                     { name: 'type', description: "string - When set to 'circle' renders a round image." }
-                ]}
-            />
+                ]} />
 
             <Separator />
 
@@ -79,8 +78,7 @@ export const ImageComponent = () => {
                         typeOfAttribute: 'string',
                         "enum": ['', 'circle']
                     }
-                ]}
-            >
+                ]}>
                 <Image size='s' type=''
                     photo='https://placeimg.com/400/400/nature' />
             </Playground>

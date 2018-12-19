@@ -374,15 +374,13 @@ export class DatePicker extends Component {
     return (
         <div
             className='fd-date-picker'
-            ref={component => (this.component = component)}
-      >
+            ref={component => (this.component = component)}>
             <div className='fd-popover'>
                 <div className='fd-popover__control'>
                     <div
                         className={`fd-input-group fd-input-group--after${
                 this.props.compact ? ' fd-input-group--compact' : ''
-              }`}
-            >
+              }`}>
                         <input
                             className={`fd-input${
                   this.props.compact ? ' fd-input--compact' : ''
@@ -392,20 +390,17 @@ export class DatePicker extends Component {
                             onClick={() => this.openCalendar('input')}
                             value={this.state.formattedDate}
                             onChange={this.modifyDate}
-                            onKeyPress={this.sendUpdate}
-              />
+                            onKeyPress={this.sendUpdate} />
                         <span className='fd-input-group__addon fd-input-group__addon--after fd-input-group__addon--button'>
                             <button
                                 className='fd-popover__control fd-button--light sap-icon--calendar'
-                                onClick={() => this.openCalendar()}
-                />
+                                onClick={() => this.openCalendar()} />
                         </span>
                     </div>
                 </div>
                 <div
                     className='fd-popover__body fd-popover__body--right fd-popover__body--no-arrow'
-                    aria-hidden={this.state.hidden}
-          >
+                    aria-hidden={this.state.hidden}>
                     <Calendar
                         onChange={this.updateDate}
                         enableRangeSelection={this.props.enableRangeSelection}
@@ -421,8 +416,7 @@ export class DatePicker extends Component {
                 this.props.enableRangeSelection
                   ? this.state.arrSelectedDates
                   : this.state.selectedDate
-              }
-            />
+              } />
                 </div>
             </div>
         </div>

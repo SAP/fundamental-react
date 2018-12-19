@@ -27,8 +27,7 @@ describe('<Identifier />', () => {
   const bgImage = (
       <Identifier
           backgroundImageUrl='https://placeimg.com/400/400/nature'
-          modifier='circle'
-    />
+          modifier='circle' />
   );
 
   test('Create identifier', () => {

@@ -252,8 +252,7 @@ export const FormsComponent = () => {
             </Description>
             <Import
                 module='FormSet, FormItem, FormLabel, FormInput, FormRadio, FormTextarea, FormMessage, FormSelect, FormFieldset, FormLegend'
-                path='/fundamental-react/src/'
-            />
+                path='/fundamental-react/src/' />
 
             <Separator />
 
@@ -269,8 +268,7 @@ export const FormsComponent = () => {
                     { name: 'FormLegend', description: "Defines a caption for the fieldset element." },
                     { name: 'FormSelect', description: "The 'select' component is similar to a dropdown but is more commonly used within a form. It can also be set to a disabled state." },
                     { name: 'FormRadio', description: "Fieldset with Radio Buttons." }
-                ]}
-            />
+                ]} />
 
             <Properties
                 type='Inputs'
@@ -310,8 +308,7 @@ export const FormsComponent = () => {
                     { name: 'disabled', description: "bool - set to 'true' to disable the element." },
                     { name: 'name', description: 'string - the name property of select. Used in FormSelect.' },
                     { name: 'defaultChecked', description: 'string - the id of the element selected by default.' }
-                ]}
-            />
+                ]} />
 
             <Separator />
 
@@ -476,8 +473,7 @@ export const FormsComponent = () => {
                             state='help'
                             id='OatmD557'
                             placeholder='Field placeholder text'
-                            disabled
-                        />
+                            disabled />
                     </FormItem>
                 </FormSet>
 
@@ -489,8 +485,7 @@ export const FormsComponent = () => {
                             state='help'
                             id='OatmD558'
                             placeholder='Field placeholder text'
-                            readonly
-                        />
+                            readonly />
                     </FormItem>
                 </FormSet>
             </DocsTile>
@@ -545,8 +540,7 @@ export const FormsComponent = () => {
                             { id: 'radio-2', name: 'radio-2', value: 'radio-2', label: 'Option 2' },
                             { id: 'radio-3', name: 'radio-3', value: 'radio-3', label: 'Option 3' }
                         ]}
-                        defaultChecked='radio-2'
-                    />
+                        defaultChecked='radio-2' />
                 </FormFieldset>
 
                 <FormFieldset>
@@ -558,8 +552,7 @@ export const FormsComponent = () => {
                             { id: 'radio-5', name: 'radio-5', value: 'radio-5', label: 'Option 2' },
                             { id: 'radio-6', name: 'radio-6', value: 'radio-6', label: 'Option 3' }
                         ]}
-                        defaultChecked='radio-4'
-                    />
+                        defaultChecked='radio-4' />
                 </FormFieldset>
 
                 <FormFieldset>
@@ -571,8 +564,7 @@ export const FormsComponent = () => {
                             { id: 'radio-8', name: 'radio-8', value: 'radio-8', label: 'Option 2' },
                             { id: 'radio-9', name: 'radio-9', value: 'radio-9', label: 'Option 3' }
                         ]}
-                        defaultChecked='radio-9'
-                    />
+                        defaultChecked='radio-9' />
                 </FormFieldset>
             </DocsTile>
             <DocsText>{inputsRadioCode}</DocsText>

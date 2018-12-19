@@ -76,8 +76,7 @@ export class MegaMenuList extends Component {
                                         }`}
                                         to={{ pathname: item.link }}
                                         key={item.id}
-                                        onClick={e => this.handleSelect(e, item.id)}
-                                    >
+                                        onClick={e => this.handleSelect(e, item.id)}>
                                         {item.name}
                                     </Link>
                                 ) : null}
@@ -91,8 +90,7 @@ export class MegaMenuList extends Component {
                                         }`}
                                         href={item.url}
                                         key={item.id}
-                                        onClick={e => this.handleSelect(e, item.id)}
-                                    >
+                                        onClick={e => this.handleSelect(e, item.id)}>
                                         {item.name}
                                     </a>
                                 ) : null}
@@ -102,8 +100,7 @@ export class MegaMenuList extends Component {
                                         className='fd-mega-menu__sublist'
                                         id={item.id}
                                         aria-hidden={!this.state.itemStates[item.id]}
-                                        aria-expanded={this.state.itemStates[item.id]}
-                                    >
+                                        aria-expanded={this.state.itemStates[item.id]}>
                                         {item.child.map(ch => {
                                             return (
                                                 <li className='fd-mega-menu__subitem' key={ch.id}>
@@ -113,8 +110,7 @@ export class MegaMenuList extends Component {
                                                         }`}
                                                         to={{ pathname: ch.link }}
                                                         key={ch.id}
-                                                        onClick={e => this.handleSelectChild(e, ch.id)}
-                                                    >
+                                                        onClick={e => this.handleSelectChild(e, ch.id)}>
                                                         {ch.name}
                                                     </Link>) : null}
                                                     {ch.url ? ( <a
@@ -123,8 +119,7 @@ export class MegaMenuList extends Component {
                                                         }`}
                                                         href={ch.url}
                                                         key={ch.id}
-                                                        onClick={e => this.handleSelectChild(e, ch.id)}
-                                                    >
+                                                        onClick={e => this.handleSelectChild(e, ch.id)}>
                                                         {ch.name}
                                                     </a>) : null}
                                                 </li>

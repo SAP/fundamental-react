@@ -148,8 +148,7 @@ Compact mode:
           </Description>
           <Import
               module='FormItem, FormLabel, FormGroup, InputGroup'
-              path='/fundamental-react/src/'
-      />
+              path='/fundamental-react/src/' />
 
           <Separator />
 
@@ -197,8 +196,7 @@ Compact mode:
             name: 'compact',
             description: 'bool  - set to true to enable compact mode'
           }
-        ]}
-      />
+        ]} />
 
           <Separator />
 
@@ -216,8 +214,7 @@ Compact mode:
                           inputType='text'
                           addonPos='before'
                           inputValue='1234567890'
-                          addon='$'
-            />
+                          addon='$' />
                   </FormItem>
               </FormGroup>
               <br />
@@ -228,8 +225,7 @@ Compact mode:
                           inputType='text'
                           addonPos='after'
                           inputValue='1234567890'
-                          addon='€'
-            />
+                          addon='€' />
                   </FormItem>
               </FormGroup>
 
@@ -244,8 +240,7 @@ Compact mode:
                           addonPos='before'
                           inputValue='1234567890'
                           addon='$'
-                          compact
-            />
+                          compact />
                   </FormItem>
               </FormGroup>
               <br />
@@ -257,8 +252,7 @@ Compact mode:
                           addonPos='after'
                           inputValue='1234567890'
                           addon='€'
-                          compact
-            />
+                          compact />
                   </FormItem>
               </FormGroup>
           </DocsTile>
@@ -311,8 +305,7 @@ Compact mode:
                       <InputGroup
                           inputType='search'
                           inputPlaceholder='Search Term'
-                          compact
-            />
+                          compact />
                   </FormItem>
               </FormGroup>
               <br />
@@ -324,8 +317,7 @@ Compact mode:
                           inputType='text'
                           addonPos='before'
                           inputValue='1234567890'
-                          glyph='globe'
-            />
+                          glyph='globe' />
                   </FormItem>
               </FormGroup>
               <br />
@@ -338,8 +330,7 @@ Compact mode:
                           addonPos='before'
                           inputValue='1234567890'
                           glyph='globe'
-                          compact
-            />
+                          compact />
                   </FormItem>
               </FormGroup>
               <br />
@@ -351,8 +342,7 @@ Compact mode:
                           inputType='text'
                           addonPos='after'
                           inputValue='1234567890'
-                          glyph='hide'
-            />
+                          glyph='hide' />
                   </FormItem>
               </FormGroup>
               <br />
@@ -365,8 +355,7 @@ Compact mode:
                           addonPos='after'
                           inputValue='1234567890'
                           glyph='hide'
-                          compact
-            />
+                          compact />
                   </FormItem>
               </FormGroup>
           </DocsTile>
@@ -387,8 +376,7 @@ Compact mode:
                           inputType='text'
                           addonPos='after'
                           inputValue='1234567890'
-                          actions
-            >
+                          actions>
                           <Button option='light'>Button</Button>
                       </InputGroup>
                   </FormItem>
@@ -403,8 +391,7 @@ Compact mode:
                           addonPos='after'
                           inputValue='1234567890'
                           actions
-                          compact
-            >
+                          compact>
                           <Button option='light'>Button</Button>
                       </InputGroup>
                   </FormItem>
@@ -1080,8 +1067,7 @@ Compact mode:
             attribute: 'children',
             typeOfAttribute: 'string'
           }
-        ]}
-      >
+        ]}>
               <FormGroup>
                   <FormLabel labelText='Input with text action' />
                   <FormItem>
@@ -1090,8 +1076,7 @@ Compact mode:
                           addonPos='after'
                           inputValue='1234567890'
                           addon='$'
-                          actions
-            >
+                          actions>
                           <Button option='light' glyph='navigation-down-arrow'>
                 Button
                           </Button>

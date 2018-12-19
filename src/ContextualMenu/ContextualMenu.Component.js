@@ -75,8 +75,7 @@ export const ContextualMenuComponent = () => {
                                 <MenuItem url='/'>Option 4</MenuItem>
                             </MenuList>
                         </Menu>
-                    }
-                />
+                    } />
             </DocsTile>
             <DocsText>{contextualMenuIconCode}</DocsText>
             <Separator />
@@ -95,8 +94,7 @@ export const ContextualMenuComponent = () => {
                                 <MenuItem url='/'>Option 4</MenuItem>
                             </MenuList>
                         </Menu>
-                    }
-                />
+                    } />
 
                 <Popover
                     control={<Button option='light'>More</Button>}
@@ -110,8 +108,7 @@ export const ContextualMenuComponent = () => {
                                 <MenuItem url='/'>Option 4</MenuItem>
                             </MenuList>
                         </Menu>
-                    }
-                />
+                    } />
             </DocsTile>
             <DocsText>{contextualMenuMoreTextCode}</DocsText>
             <Separator />

@@ -18,8 +18,7 @@ describe('<LocalizationEditor />', () => {
         { placeholder: 'Enter Label', language: 'ES' },
         { placeholder: 'Enter Label', language: 'CH' },
         { placeholder: 'Enter Label', language: 'PL' }
-      ]}
-    />
+      ]} />
   );
 
   const localEditorCompact = (
@@ -34,8 +33,7 @@ describe('<LocalizationEditor />', () => {
         { placeholder: 'Enter Label', language: 'ES' },
         { placeholder: 'Enter Label', language: 'CH' },
         { placeholder: 'Enter Label', language: 'PL' }
-      ]}
-    />
+      ]} />
   );
 
   const localEditorTextArea = (
@@ -50,8 +48,7 @@ describe('<LocalizationEditor />', () => {
         { placeholder: 'Enter Label', language: 'ES' },
         { placeholder: 'Enter Label', language: 'CH' },
         { placeholder: 'Enter Label', language: 'PL' }
-      ]}
-    />
+      ]} />
   );
   test('create localization editor', () => {
     // localization editor

@@ -172,8 +172,7 @@ export class SearchInputComponent extends Component {
                             description:
                                 'func - Method that receives search input box text, to perform auto complete query.'
                         }
-                    ]}
-                />
+                    ]} />
 
                 <Separator />
 
@@ -208,8 +207,7 @@ export class SearchInputComponent extends Component {
                             placeHolder='Enter a fruit'
                             data={this.state.data}
                             onAutoComplete={this.performAutoComplete}
-                            onSearch={this.performSearch}
-                        />
+                            onSearch={this.performSearch} />
                     </div>
                 </DocsTile>
                 <DocsText>{this.autoCompleteSearchInputCode}</DocsText>

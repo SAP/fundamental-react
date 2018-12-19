@@ -25,8 +25,7 @@ describe('<MegaMenu />', () => {
         },
         { id: 'item_3', url: '#', name: 'Link Item' },
         { id: 'item_4', url: '#', name: 'Link Item' }
-      ]}
-    />
+      ]} />
   );
   const megaMenu = (
       <MegaMenu>
@@ -52,8 +51,7 @@ describe('<MegaMenu />', () => {
           ]
         },
         { id: 'item_9', link: '#', name: 'Link Item' }
-      ]}
-    />
+      ]} />
   );
 
   const megaMenuLink = (

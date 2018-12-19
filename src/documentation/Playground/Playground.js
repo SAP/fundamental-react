@@ -176,8 +176,7 @@ export class Playground extends Component {
                                     className='form-control'
                                     value={item.initialValue}
                                     onChange={this.updateComponent}
-                                    name={item.attribute}
-                                />
+                                    name={item.attribute} />
                             )}
                         </div>
                     );
@@ -222,8 +221,7 @@ export class Playground extends Component {
                                                 type='text'
                                                 className='form-control'
                                                 onChange={this.updateListsName}
-                                                name={enumItem}
-                                            />
+                                                name={enumItem} />
                                         </div>
                                     ))}
                                 </div>
@@ -243,8 +241,7 @@ export class Playground extends Component {
                                                 type='text'
                                                 className='form-control'
                                                 onChange={this.updateListsContent}
-                                                name={enumItem}
-                                            />
+                                                name={enumItem} />
                                         </div>
                                     ))}
                                 </div>
@@ -260,8 +257,7 @@ export class Playground extends Component {
                                 <select
                                     className='form-control'
                                     onChange={this.updateComponentType}
-                                    name={item.attribute}
-                                >
+                                    name={item.attribute}>
                                     {item.enum.map(enumItem => (
                                         <option key={enumItem} value={enumItem}>
                                             {enumItem}
@@ -274,8 +270,7 @@ export class Playground extends Component {
                                     className='form-control'
                                     value={item.initialValue}
                                     onChange={this.updateComponent}
-                                    name={item.attribute}
-                                />
+                                    name={item.attribute} />
                             )}
                         </div>
                     );
@@ -293,8 +288,7 @@ export class Playground extends Component {
                         type={this.state.childs.type}
                         dismissable={this.state.childs.dismissable}
                         link={this.state.childs.link}
-                        linkText={this.state.childs.linkText}
-                    >
+                        linkText={this.state.childs.linkText}>
                         Default alert with a{' '}
                     </Alert>
                 );
@@ -336,8 +330,7 @@ export class Playground extends Component {
                         option={this.state.childs.option}
                         compact={this.state.childs.compact}
                         disabled={this.state.childs.disabled}
-                        selected={this.state.childs.selected}
-                    >
+                        selected={this.state.childs.selected}>
                         {this.state.childs.children}
                     </Button>
                 );
@@ -361,8 +354,7 @@ export class Playground extends Component {
                             'isContextual',
                             this.state.childs.isContextual,
                             this.state.currentValues
-                        )}
-                    />
+                        )} />
                 );
                 break;
             case 'icon':
@@ -379,8 +371,7 @@ export class Playground extends Component {
                             this.retrieveValue('children', '', this.state.currentValues) === ''
                                 ? this.state.childs.glyph
                                 : null
-                        }
-                    >
+                        }>
                         {this.retrieveValue('children', this.state.childs.children, this.state.currentValues)}
                     </Identifier>
                 );
@@ -390,8 +381,7 @@ export class Playground extends Component {
                     <Image
                         size={this.state.childs.size}
                         type={this.state.childs.type}
-                        photo={this.state.childs.photo}
-                    />
+                        photo={this.state.childs.photo} />
                 );
                 break;
             case 'tabs':
@@ -418,16 +408,14 @@ export class Playground extends Component {
                                     this.state.childs.children[1].props.children.props.inputValue,
                                     this.state.currentValues
                                 )}
-                                actions={true}
-                            >
+                                actions={true}>
                                 <Button
                                     option='light'
                                     glyph={this.retrieveValue(
                                         'glyph',
                                         this.state.childs.children[1].props.children.props.children.props.glyph,
                                         this.state.currentValues
-                                    )}
-                                >
+                                    )}>
                                     {this.retrieveValue(
                                         'children',
                                         this.state.childs.children[1].props.children.props.children.props.children,
@@ -455,8 +443,7 @@ export class Playground extends Component {
                                         'glyph',
                                         this.state.childs.children.props.children[1].props.children.props.glyph,
                                         this.state.currentValues
-                                    )}
-                                />
+                                    )} />
                             </ListGroupItemActions>
                         </ListGroupItem>
                     </ListGroup>
@@ -471,8 +458,7 @@ export class Playground extends Component {
                                     'title',
                                     this.state.childs.children.props.title,
                                     this.state.currentValues
-                                )}
-                            >
+                                )}>
                                 <p>
                                     {this.retrieveValue(
                                         'children',
@@ -497,8 +483,7 @@ export class Playground extends Component {
                                     'title',
                                     this.state.childs.children.props.title,
                                     this.state.currentValues
-                                )}
-                            />
+                                )} />
                             <TileActions>
                                 <Dropdown size='m' isContextual={true} />
                             </TileActions>
@@ -514,8 +499,7 @@ export class Playground extends Component {
                                         'title',
                                         this.state.childs.children.props.title,
                                         this.state.currentValues
-                                    )}
-                                >
+                                    )}>
                                     <p>
                                         {this.retrieveValue(
                                             'children',

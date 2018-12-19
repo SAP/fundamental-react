@@ -13,16 +13,14 @@ describe('<InputGroup />', () => {
           inputType='text'
           addonPos='before'
           inputValue='1234567890'
-          addon='$'
-    />
+          addon='$' />
   );
   const inputTextPosAfter = (
       <InputGroup
           inputType='text'
           addonPos='after'
           inputValue='1234567890'
-          addon='€'
-    />
+          addon='€' />
   );
   const inputTextPosBeforeCompact = (
       <InputGroup
@@ -30,8 +28,7 @@ describe('<InputGroup />', () => {
           addonPos='before'
           inputValue='1234567890'
           addon='$'
-          compact
-    />
+          compact />
   );
   const inputTextPosAfterCompact = (
       <InputGroup
@@ -39,8 +36,7 @@ describe('<InputGroup />', () => {
           addonPos='after'
           inputValue='1234567890'
           addon='€'
-          compact
-    />
+          compact />
   );
   const numberInput = <InputGroup inputType='number' inputValue={100} />;
   const numberInputCompact = (
@@ -55,16 +51,14 @@ describe('<InputGroup />', () => {
           inputType='search'
           inputValue='search me'
           inputPlaceholder='Search Term'
-          compact
-    />
+          compact />
   );
   const inputWithIcon = (
       <InputGroup
           inputType='text'
           addonPos='before'
           inputValue='1234567890'
-          glyph='globe'
-    />
+          glyph='globe' />
   );
   const inputWithIconCompact = (
       <InputGroup
@@ -72,16 +66,14 @@ describe('<InputGroup />', () => {
           addonPos='before'
           inputValue='1234567890'
           glyph='globe'
-          compact
-    />
+          compact />
   );
   const inputWithIconAfter = (
       <InputGroup
           inputType='text'
           addonPos='after'
           inputValue='1234567890'
-          glyph='hide'
-    />
+          glyph='hide' />
   );
   const inputWithIconAfterCompact = (
       <InputGroup
@@ -89,16 +81,14 @@ describe('<InputGroup />', () => {
           addonPos='after'
           inputValue='1234567890'
           glyph='hide'
-          compact
-    />
+          compact />
   );
   const inputWithActions = (
       <InputGroup
           inputType='text'
           addonPos='after'
           inputValue='1234567890'
-          actions
-    >
+          actions>
           <Button option='light'>Button</Button>
       </InputGroup>
   );
@@ -108,8 +98,7 @@ describe('<InputGroup />', () => {
           addonPos='after'
           inputValue='1234567890'
           actions
-          compact
-    >
+          compact>
           <Button option='light'>Button</Button>
       </InputGroup>
   );
@@ -119,8 +108,7 @@ describe('<InputGroup />', () => {
           inputType='text'
           addonPos='before'
           inputValue='1234567890'
-          actions
-    />
+          actions />
   );
   const formGroup = <FormGroup>{inputTextPosAfter}</FormGroup>;
 

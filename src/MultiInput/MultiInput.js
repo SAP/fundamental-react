@@ -23,8 +23,7 @@ export class MultiInput extends Component {
                     id={index + `_${randNum}`}
                     value={item}
                     onChange={this.updateSelectedTags}
-                    checked={this.isChecked(item)}
-          />
+                    checked={this.isChecked(item)} />
                 {item}
             </label>
         </li>
@@ -38,8 +37,7 @@ export class MultiInput extends Component {
             key={index}
             className='fd-token'
             role='button'
-            onClick={this.removeTag}
-      >
+            onClick={this.removeTag}>
             {tag}
         </span>
     ));
@@ -123,31 +121,26 @@ export class MultiInput extends Component {
                             className='fd-combobox-control'
                             aria-label='Image label'
                             aria-expanded={this.state.bShowList}
-                            aria-haspopup='true'
-              >
+                            aria-haspopup='true'>
                             <div className={inputGroupClassNames}>
                                 <input
                                     type='text'
                                     className={inputClassNames}
                                     placeholder={placeHolder}
-                                    onClick={this.showHideTagList}
-                  />
+                                    onClick={this.showHideTagList} />
                                 <span
                                     className='fd-input-group__addon fd-input-group__addon--after
-                            fd-input-group__addon--button'
-                  >
+                            fd-input-group__addon--button'>
                                     <button
                                         className='fd-button--light sap-icon--navigation-down-arrow'
-                                        onClick={this.showHideTagList}
-                    />
+                                        onClick={this.showHideTagList} />
                                 </span>
                             </div>
                         </div>
                     </div>
                     <div
                         className='fd-popover__body fd-popover__body--no-arrow'
-                        aria-hidden={!this.state.bShowList}
-            >
+                        aria-hidden={!this.state.bShowList}>
                         <nav className='fd-menu'>
                             <ul className='fd-menu__list'>{this.createTagList(data)}</ul>
                         </nav>

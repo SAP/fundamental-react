@@ -11,36 +11,31 @@ describe('<InlineHelp />', () => {
   const defaultInlineHelp = (
       <InlineHelp
           text='Lorem ipsum dolor sit amet, consectetur adipiscing.'
-          placement='bottom-right'
-    />
+          placement='bottom-right' />
   );
 
   const inlineHelpBottomLeft = (
       <InlineHelp
           text='Lorem ipsum dolor sit amet, consectetur adipiscing.'
-          placement='bottom-left'
-    />
+          placement='bottom-left' />
   );
 
   const inlineHelpBottomCenter = (
       <InlineHelp
           text='Lorem ipsum dolor sit amet, consectetur adipiscing.'
-          placement='bottom-center'
-    />
+          placement='bottom-center' />
   );
 
   const inlineHelpLeft = (
       <InlineHelp
           text='Lorem ipsum dolor sit amet, consectetur adipiscing.'
-          placement='left'
-    />
+          placement='left' />
   );
 
   const inlineHelpRight = (
       <InlineHelp
           text='Lorem ipsum dolor sit amet, consectetur adipiscing.'
-          placement='right'
-    />
+          placement='right' />
   );
 
   test('create default InlineHelp component', () => {

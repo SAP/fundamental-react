@@ -27,8 +27,7 @@ describe('MultiInput />', () => {
       <MultiInput
           data={data}
           onTagsUpdate={mockOnTagsUpdate}
-          placeHolder='Select a Fruit'
-    />
+          placeHolder='Select a Fruit' />
   );
 
   const compactMultiInput = (
@@ -36,8 +35,7 @@ describe('MultiInput />', () => {
           data={data}
           onTagsUpdate={mockOnTagsUpdate}
           placeHolder='Select a Fruit'
-          compact={true}
-    />
+          compact={true} />
   );
 
   let wrapper;

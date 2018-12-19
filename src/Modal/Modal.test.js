@@ -56,8 +56,7 @@ describe('<Modal />', () => {
                   <button>No Way</button>
                   <button>Sure</button>
               </React.Fragment>
-      }
-    >
+      }>
           <div>
         Do you want to delete item <b>X</b>?
           </div>
@@ -74,8 +73,7 @@ describe('<Modal />', () => {
                   <button>Cancel</button>
                   <button>Invite</button>
               </React.Fragment>
-      }
-    >
+      }>
           <div className='fd-form__group'>
               <div className='fd-form__item'>
                   <label className='fd-form__label is-required'>Email</label>

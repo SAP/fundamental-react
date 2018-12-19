@@ -129,8 +129,7 @@ export const TileComponent = () => {
             </Description>
             <Import
                 module='Tile, TileContent, TileMedia, TileActions, ProductTile, ProductTileContent, ProductTileMedia, TileGrid'
-                path='/fundamental-react/src/'
-            />
+                path='/fundamental-react/src/' />
 
             <Separator />
 
@@ -147,8 +146,7 @@ export const TileComponent = () => {
                         name: 'colorAccent',
                         description: 'number - applies a background color. Options include numbers from 1 to 9.'
                     }
-                ]}
-            />
+                ]} />
 
             <Separator />
 
@@ -213,8 +211,7 @@ export const TileComponent = () => {
                                         <MenuItem url='/'>Option 4</MenuItem>
                                     </MenuList>
                                 </Menu>
-                            }
-                        />
+                            } />
                     </TileActions>
                 </Tile>
             </DocsTile>
@@ -309,8 +306,7 @@ export const TileComponent = () => {
                         attribute: 'children',
                         typeOfAttribute: 'string'
                     }
-                ]}
-            >
+                ]}>
                 <Tile>
                     <TileContent title='Tile Title'>
                         <p>Tile Description</p>

@@ -156,8 +156,7 @@ const clickBtnHandler = btn => {
                             'bool - selected state of the button. Enabled by setting selected property to true.'
                     },
                     { name: 'onclick', description: 'func - The function that is executed when the button is clicked.' }
-                ]}
-            />
+                ]} />
             <Separator />
 
             <h2>Button Options</h2>
@@ -1007,8 +1006,7 @@ const clickBtnHandler = btn => {
                         attribute: 'disabled',
                         typeOfAttribute: 'boolean'
                     }
-                ]}
-            >
+                ]}>
                 <Button type='standard' glyph=''
                     option='light' compact={false}
                     selected={false} disabled={false}>

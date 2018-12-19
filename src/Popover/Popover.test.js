@@ -21,8 +21,7 @@ describe('<Popover />', () => {
                       <MenuItem url='/'>Option 4</MenuItem>
                   </MenuList>
               </Menu>
-      }
-    />
+      } />
   );
 
   const popOverDisabled = (
@@ -38,8 +37,7 @@ describe('<Popover />', () => {
                       <MenuItem url='/'>Option 4</MenuItem>
                   </MenuList>
               </Menu>
-      }
-    />
+      } />
   );
 
   const popOverWithAlignment = (
@@ -55,8 +53,7 @@ describe('<Popover />', () => {
                       <MenuItem url='/'>Option 4</MenuItem>
                   </MenuList>
               </Menu>
-      }
-    />
+      } />
   );
 
   const popOverNoArrow = (
@@ -72,8 +69,7 @@ describe('<Popover />', () => {
                       <MenuItem url='/'>Option 4</MenuItem>
                   </MenuList>
               </Menu>
-      }
-    />
+      } />
   );
 
   test('create Popover', () => {

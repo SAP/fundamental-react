@@ -76,27 +76,23 @@ export class InputGroup extends Component {
             <div
                 className={`fd-input-group fd-input-group--after${
               compact ? ' fd-input-group--compact' : ''
-            }`}
-          >
+            }`}>
                 <input
                     className={`${compact ? 'fd-input fd-input--compact' : ''}`}
                     type='number'
                     id={inputId}
                     name={inputName}
                     value={this.state.value}
-                    onChange={this.handleTextChange}
-            />
+                    onChange={this.handleTextChange} />
                 <span className='fd-input-group__addon fd-input-group__addon--button fd-input-group__addon--after'>
                     <button
                         className='fd-input-group__button fd-input-group__button--step-up sap-icon--slim-arrow-up'
                         aria-label='Step up'
-                        onClick={this.handleUp}
-              />
+                        onClick={this.handleUp} />
                     <button
                         className='fd-input-group__button fd-input-group__button--step-down sap-icon--slim-arrow-down'
                         aria-label='Step down'
-                        onClick={this.handleDown}
-              />
+                        onClick={this.handleDown} />
                 </span>
             </div>
         );
@@ -106,8 +102,7 @@ export class InputGroup extends Component {
             <div
                 className={`fd-input-group${
               compact ? ' fd-input-group--compact' : ''
-            }`}
-          >
+            }`}>
                 <input
                     className={`${compact ? 'fd-input fd-input--compact' : ''}`}
                     type='search'
@@ -115,14 +110,12 @@ export class InputGroup extends Component {
                     name={inputName}
                     value={this.state.searchValue}
                     placeholder={inputPlaceholder}
-                    onChange={this.handleChange}
-            />
+                    onChange={this.handleChange} />
                 <span className='fd-input-group__addon fd-input-group__addon--button'>
                     <button
                         className='fd-input-group__button fd-input-group__button--clear'
                         aria-label='Clear'
-                        onClick={this.handleClear}
-              />
+                        onClick={this.handleClear} />
                 </span>
             </div>
         );
@@ -133,8 +126,7 @@ export class InputGroup extends Component {
               <div
                   className={`fd-input-group fd-input-group--before${
                 compact ? ' fd-input-group--compact' : ''
-              }`}
-            >
+              }`}>
                   {actions ? (
                       <span className='fd-input-group__addon fd-input-group__addon--button fd-input-group__addon--before'>
                           {children}
@@ -144,8 +136,7 @@ export class InputGroup extends Component {
                       {glyph ? (
                           <span
                               className={`${'sap-icon--' + glyph}`}
-                              role='presentation'
-                    />
+                              role='presentation' />
                   ) : (
                     addon
                   )}
@@ -157,8 +148,7 @@ export class InputGroup extends Component {
                       id={inputId}
                       name={inputName}
                       value={this.state.value}
-                      onChange={this.handleTextChange}
-              />
+                      onChange={this.handleTextChange} />
               </div>
           );
         } else {
@@ -166,16 +156,14 @@ export class InputGroup extends Component {
               <div
                   className={`fd-input-group fd-input-group--after${
                 compact ? ' fd-input-group--compact' : ''
-              }`}
-            >
+              }`}>
                   <input
                       className={`${compact ? 'fd-input fd-input--compact' : ''}`}
                       type='text'
                       id={inputId}
                       name={inputName}
                       value={this.state.value}
-                      onChange={this.handleTextChange}
-              />
+                      onChange={this.handleTextChange} />
                   {actions ? (
                       <span className='fd-input-group__addon fd-input-group__addon--button fd-input-group__addon--after'>
                           {children}
@@ -185,8 +173,7 @@ export class InputGroup extends Component {
                       {glyph ? (
                           <span
                               className={`${'sap-icon--' + glyph}`}
-                              role='presentation'
-                    />
+                              role='presentation' />
                   ) : (
                     addon
                   )}

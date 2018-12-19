@@ -219,8 +219,7 @@ export const PanelComponent = () => {
             <Description />
             <Import
                 module='Panel, PanelGrid, PanelBody, PanelHeader, PanelHead, PanelActions, PanelFilters, PanelContent, PanelFooter'
-                path='/fundamental-react/src/'
-            />
+                path='/fundamental-react/src/' />
 
             <Separator />
 
@@ -249,8 +248,7 @@ export const PanelComponent = () => {
                         name: 'description',
                         description: 'any - Part of PanelHead component. Specifies the description of the panel.'
                     }
-                ]}
-            />
+                ]} />
 
             <Properties
                 type='Child Components'
@@ -280,8 +278,7 @@ export const PanelComponent = () => {
                         description:
                             'Panel footer can be utilized for pagination, secondary actions, add more data, etc.'
                     }
-                ]}
-            />
+                ]} />
 
             <Separator />
 
@@ -310,8 +307,7 @@ export const PanelComponent = () => {
                                     </MenuList>
                                 </Menu>
                             }
-                            noArrow
-                        />
+                            noArrow />
                         <Popover
                             control={<Button>Size</Button>}
                             body={
@@ -324,8 +320,7 @@ export const PanelComponent = () => {
                                     </MenuList>
                                 </Menu>
                             }
-                            noArrow
-                        />
+                            noArrow />
                     </PanelFilters>
                     <PanelBody>
                         <div>Panel Body</div>

@@ -118,8 +118,7 @@ const clickBackBtn = () => {
                         name: 'onclick',
                         description: 'func - The function that is executed when the back button is clicked.'
                     }
-                ]}
-            />
+                ]} />
 
             <Separator />
 
@@ -173,8 +172,7 @@ const clickBackBtn = () => {
                                         <MenuItem url='/'>Option 4</MenuItem>
                                     </MenuList>
                                 </Menu>
-                            }
-                        />
+                            } />
                     </ActionBarActions>
                 </ActionBar>
             </DocsTile>
@@ -188,8 +186,7 @@ const clickBackBtn = () => {
                     <ActionBarBack />
                     <ActionBarHeader
                         title={'Action Bar with description and back button'}
-                        description={'Action Bar Description'}
-                    />
+                        description={'Action Bar Description'} />
                     <ActionBarActions>
                         <Popover
                             control={<Button option='light' glyph='vertical-grip' />}
@@ -202,8 +199,7 @@ const clickBackBtn = () => {
                                         <MenuItem url='/'>Option 4</MenuItem>
                                     </MenuList>
                                 </Menu>
-                            }
-                        />
+                            } />
                     </ActionBarActions>
                 </ActionBar>
             </DocsTile>
@@ -217,8 +213,7 @@ const clickBackBtn = () => {
                     <ActionBarBack />
                     <ActionBarHeader
                         title={'Action Bar with description and back button'}
-                        description={'Action Bar Description'}
-                    />
+                        description={'Action Bar Description'} />
                     <ActionBarActions>
                         <Popover
                             control={<Button option='light' glyph='vertical-grip' />}
@@ -231,8 +226,7 @@ const clickBackBtn = () => {
                                         <MenuItem url='/'>Option 4</MenuItem>
                                     </MenuList>
                                 </Menu>
-                            }
-                        />
+                            } />
                     </ActionBarActions>
                 </ActionBar>
             </DocsTile>

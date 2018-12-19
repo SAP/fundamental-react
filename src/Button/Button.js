@@ -27,8 +27,7 @@ export const Button = props => {
           selected={selected ? selected : false}
           disabled={disabled ? disabled : false}
           type={typeAttr}
-          onClick={onclick}
-    >
+          onClick={onclick}>
           {children}
       </button>
   );

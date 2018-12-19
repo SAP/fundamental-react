@@ -261,8 +261,7 @@ class TimePickerItem extends Component {
                     onChange={this.onChange}
                     onFocus={this.onFocus}
                     onBlur={this.onBlur}
-                    readOnly={disabled}
-          />
+                    readOnly={disabled} />
                 <span className='fd-input-group__addon fd-input-group__addon--after fd-input-group__addon--button '>
                     <button
                         id={this.state.buttonID}
@@ -270,8 +269,7 @@ class TimePickerItem extends Component {
                         aria-controls='rthHR811'
                         aria-expanded='false'
                         aria-haspopup='true'
-                        disabled={disabled}
-            />
+                        disabled={disabled} />
                 </span>
             </div>
         </div>
@@ -415,8 +413,7 @@ export class TimePicker extends React.Component {
                             onChange={this.onChange}
                             placeholder={this.state.placeholder}
                             disabled={this.state.disabled}
-                            updateTime={this.updateTime}
-              />
+                            updateTime={this.updateTime} />
             }
                     body={
                         <Time
@@ -428,10 +425,8 @@ export class TimePicker extends React.Component {
                             format12Hours={this.state.format12Hours}
                             disabled={this.state.disabled}
                             onChange={this.onChange}
-                            onUpdateTime={this.updateTime}
-              />
-            }
-          />
+                            onUpdateTime={this.updateTime} />
+            } />
             </div>
         </div>
     );

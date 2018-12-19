@@ -106,8 +106,7 @@ export const PopoverComponent = () => {
                         name: 'id',
                         description: 'string - optional. Element id.'
                     }
-                ]}
-            />
+                ]} />
 
             <Separator />
 
@@ -125,8 +124,7 @@ export const PopoverComponent = () => {
                                 <MenuItem url='/'>Option 4</MenuItem>
                             </MenuList>
                         </Menu>
-                    }
-                />
+                    } />
 
                 <Popover
                     id='jhqD0556'
@@ -142,8 +140,7 @@ export const PopoverComponent = () => {
                                 <MenuItem url='/'>Option 4</MenuItem>
                             </MenuList>
                         </Menu>
-                    }
-                />
+                    } />
 
                 <Popover
                     id='jhqD0557'
@@ -159,8 +156,7 @@ export const PopoverComponent = () => {
                                 <MenuItem url='/'>Option 4</MenuItem>
                             </MenuList>
                         </Menu>
-                    }
-                />
+                    } />
 
                 <Popover
                     id='jhqD0558'
@@ -176,8 +172,7 @@ export const PopoverComponent = () => {
                                 <MenuItem url='/'>Option 4</MenuItem>
                             </MenuList>
                         </Menu>
-                    }
-                />
+                    } />
             </DocsTile>
             <DocsText>{popoverCode}</DocsText>
             <Separator />

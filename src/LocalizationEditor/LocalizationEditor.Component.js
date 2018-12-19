@@ -57,8 +57,7 @@ export const LocalizationEditorComponent = () => {
                         { placeholder: 'Enter Label', language: 'ES' },
                         { placeholder: 'Enter Label', language: 'CH' },
                         { placeholder: 'Enter Label', language: 'PL' }
-                    ]}
-                />
+                    ]} />
                 <br />
                 <LocalizationEditor
                     compact
@@ -67,8 +66,7 @@ export const LocalizationEditorComponent = () => {
                         { placeholder: 'Enter Label', language: 'ES' },
                         { placeholder: 'Enter Label', language: 'CH' },
                         { placeholder: 'Enter Label', language: 'PL' }
-                    ]}
-                />
+                    ]} />
             </DocsTile>
             <DocsText>{localizationEditorCode}</DocsText>
 
@@ -83,8 +81,7 @@ export const LocalizationEditorComponent = () => {
                         { placeholder: 'Enter Label', language: 'ES' },
                         { placeholder: 'Enter Label', language: 'CH' },
                         { placeholder: 'Enter Label', language: 'PL' }
-                    ]}
-                />
+                    ]} />
             </DocsTile>
             <DocsText>{localizationEditorTextareaCode}</DocsText>
             <Separator />

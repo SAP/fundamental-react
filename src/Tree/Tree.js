@@ -81,8 +81,7 @@ export class Tree extends Component {
                         aria-label='expand'
                         aria-controls='inYUX852'
                         onClick={this.updateVisibility(row.id)}
-                        aria-pressed={this.state.iStates[row.id]}
-                />
+                        aria-pressed={this.state.iStates[row.id]} />
                     <a href={element.linkUrl} className='fd-has-font-weight-semi'>
                         {element.displayText ? element.displayText : element.linkUrl}
                     </a>
@@ -96,8 +95,7 @@ export class Tree extends Component {
                       aria-label='expand'
                       aria-controls='inYUX852'
                       onClick={this.updateVisibility(row.id)}
-                      aria-pressed={this.state.iStates[row.id]}
-              />
+                      aria-pressed={this.state.iStates[row.id]} />
                   {element}
               </div>
           );
@@ -146,8 +144,7 @@ export class Tree extends Component {
                         className='fd-tree__item'
                         role='treeitem'
                         aria-expanded='true'
-                        key={row.id}
-              >
+                        key={row.id}>
                         <div className='fd-tree__row'>
                             {parent}
                             {<Dropdown isContextual={true} />}
@@ -164,8 +161,7 @@ export class Tree extends Component {
               className='fd-tree__item'
               role='treeitem'
               aria-expanded='true'
-              key={row.id}
-        >
+              key={row.id}>
               <div className='fd-tree__row'>
                   {parent}
                   {<Dropdown isContextual={true} />}
@@ -189,14 +185,12 @@ export class Tree extends Component {
                 return (
                     <div
                         key={index}
-                        className='fd-tree__col fd-tree__col--control'
-                  >
+                        className='fd-tree__col fd-tree__col--control'>
                         <button
                             className='fd-tree__control '
                             aria-label='expand'
                             aria-pressed={this.state.expandAllClicked}
-                            onClick={e => this.openAllList(treeData, e)}
-                    />
+                            onClick={e => this.openAllList(treeData, e)} />
                         {header}
                     </div>
                 );

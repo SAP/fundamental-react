@@ -21,16 +21,14 @@ describe('<TimePicker />', () => {
           format12Hours={true}
           showHour={false}
           showMinute={true}
-          showSecond={true}
-    />
+          showSecond={true} />
   );
   const showHourSecond = (
       <TimePicker
           format12Hours={true}
           showHour={true}
           showMinute={false}
-          showSecond={true}
-    />
+          showSecond={true} />
   );
   const noSecondTime = <TimePicker showSecond={false} />;
   const disabledTime = <TimePicker disabled={true} />;
@@ -94,8 +92,7 @@ describe('<TimePicker />', () => {
             format12Hours={false}
             showHour={true}
             showMinute={true}
-            showSecond={true}
-      />
+            showSecond={true} />
     );
     wrapper
       .find('input[type="text"]')
@@ -109,8 +106,7 @@ describe('<TimePicker />', () => {
             format12Hours={true}
             showHour={false}
             showMinute={true}
-            showSecond={true}
-      />
+            showSecond={true} />
     );
     wrapper
       .find('input[type="text"]')
@@ -124,8 +120,7 @@ describe('<TimePicker />', () => {
             format12Hours={true}
             showHour={false}
             showMinute={true}
-            showSecond={false}
-      />
+            showSecond={false} />
     );
     wrapper
       .find('input[type="text"]')
@@ -148,8 +143,7 @@ describe('<TimePicker />', () => {
             format12Hours={true}
             showHour={true}
             showMinute={true}
-            showSecond={false}
-      />
+            showSecond={false} />
     );
     wrapper
       .find('input[type="text"]')
@@ -164,8 +158,7 @@ describe('<TimePicker />', () => {
             format12Hours={true}
             showHour={false}
             showMinute={true}
-            showSecond={false}
-      />
+            showSecond={false} />
     );
     wrapper
       .find('input[type="text"]')
@@ -180,8 +173,7 @@ describe('<TimePicker />', () => {
             format12Hours={false}
             showHour={true}
             showMinute={true}
-            showSecond={false}
-      />
+            showSecond={false} />
     );
     wrapper
       .find('input[type="text"]')
@@ -196,8 +188,7 @@ describe('<TimePicker />', () => {
             format12Hours={false}
             showHour={false}
             showMinute={true}
-            showSecond={true}
-      />
+            showSecond={true} />
     );
 
     wrapper
@@ -221,8 +212,7 @@ describe('<TimePicker />', () => {
             format12Hours={true}
             showHour={true}
             showMinute={true}
-            showSecond={true}
-      />
+            showSecond={true} />
     );
 
     wrapper

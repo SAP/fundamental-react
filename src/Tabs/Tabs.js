@@ -49,8 +49,7 @@ export class TabComponent extends Component {
                         to={{ pathname: id.url }}
                         onClick={e => {
                     !id.disabled && this.handleTabSelection(e, id, id.disabled);
-                  }}
-                >
+                  }}>
                         {id.name}
                     </Link>
                     {this.state.selectedTab === id.id ? (

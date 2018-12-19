@@ -35,8 +35,7 @@ describe('<Navbar />', () => {
                               <MenuItem url='/'>Option 4</MenuItem>
                           </MenuList>
                       </Menu>
-          }
-        />
+          } />
           </NavbarGroup>
 
           <NavbarGroup alignment='right'>
@@ -52,8 +51,7 @@ describe('<Navbar />', () => {
                                   <MenuItem url='/'>Option 4</MenuItem>
                               </MenuList>
                           </Menu>
-            }
-          />
+            } />
               </NavbarElement>
 
               <NavbarActions>

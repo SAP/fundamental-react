@@ -25,15 +25,13 @@ export class Alert extends Component {
                             type ? ' fd-alert--' + type : ''
                         }`}
                         role='alert'
-                        id='j2ALl423'
-                    >
+                        id='j2ALl423'>
                         {dismissable ? (
                             <button
                                 className='fd-alert__close'
                                 aria-controls='j2ALl423'
                                 aria-label='Close'
-                                onClick={() => this.closeAlertHandler()}
-                            />
+                                onClick={() => this.closeAlertHandler()} />
                         ) : null}
                         {children}
                         {link ? (

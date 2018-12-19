@@ -31,8 +31,7 @@ describe('<Tabs />', () => {
           content: 'Hello world 3',
           disabled: true
         }
-      ]}
-    />
+      ]} />
   );
 
   const defaultTabs = <Tabs>{tabComponent}</Tabs>;

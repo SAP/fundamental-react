@@ -138,8 +138,7 @@ export const TableComponent = () => {
                         description:
                             'array of objects that contain two properties, rowData (an array of strings containing data for each column in the row), and children (an array of objects containing additional rows).'
                     }
-                ]}
-            />
+                ]} />
 
             <Separator />
 
@@ -159,8 +158,7 @@ export const TableComponent = () => {
                         {
                             rowData: ['Data 5', 'Data 6', 'Data 7', 'Data 8']
                         }
-                    ]}
-                />
+                    ]} />
             </DocsTile>
             <DocsText>{simpleTableCode}</DocsText>
 
@@ -197,8 +195,7 @@ export const TableComponent = () => {
                                                 <MenuItem url='/'>Option 4</MenuItem>
                                             </MenuList>
                                         </Menu>
-                                    }
-                                />
+                                    } />
                             ]
                         },
                         {
@@ -222,8 +219,7 @@ export const TableComponent = () => {
                                                 <MenuItem url='/'>Option 4</MenuItem>
                                             </MenuList>
                                         </Menu>
-                                    }
-                                />
+                                    } />
                             ]
                         },
                         {
@@ -247,8 +243,7 @@ export const TableComponent = () => {
                                                 <MenuItem url='/'>Option 4</MenuItem>
                                             </MenuList>
                                         </Menu>
-                                    }
-                                />
+                                    } />
                             ]
                         },
                         {
@@ -272,12 +267,10 @@ export const TableComponent = () => {
                                                 <MenuItem url='/'>Option 4</MenuItem>
                                             </MenuList>
                                         </Menu>
-                                    }
-                                />
+                                    } />
                             ]
                         }
-                    ]}
-                />
+                    ]} />
             </DocsTile>
             <DocsText>{richTableCode}</DocsText>
         </div>

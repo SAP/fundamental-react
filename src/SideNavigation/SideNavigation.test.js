@@ -38,8 +38,7 @@ describe('<SideNavigation />', () => {
           ]
         },
         { id: 'item-5', link: '/', name: 'Link Item' }
-      ]}
-    />
+      ]} />
   );
 
   const oneLevelSideNav = (
@@ -51,8 +50,7 @@ describe('<SideNavigation />', () => {
           { id: 'item-3', url: '#', name: 'Link Item' },
           { id: 'item-4', url: '#', name: 'Link Item' },
           { id: 'item-5', url: '#', name: 'Link Item' }
-        ]}
-      />
+        ]} />
       </SideNav>
   );
 
@@ -66,8 +64,7 @@ describe('<SideNavigation />', () => {
             { id: 'item_3', link: '/', name: 'Link Item' },
             { id: 'item_4', link: '/', name: 'Link Item' },
             { id: 'item_5', link: '/', name: 'Link Item' }
-          ]}
-        />
+          ]} />
           </SideNavGroup>
           <SideNavGroup title='Group Title'>
               <SideNavList
@@ -77,8 +74,7 @@ describe('<SideNavigation />', () => {
             { id: 'item_8', link: '/', name: 'Link Item' },
             { id: 'item_9', link: '/', name: 'Link Item' },
             { id: 'item_10', link: '/', name: 'Link Item' }
-          ]}
-        />
+          ]} />
           </SideNavGroup>
       </SideNav>
   );
@@ -94,8 +90,7 @@ describe('<SideNavigation />', () => {
           { id: 'item_3', link: '/', name: 'Link Item', glyph: 'home' },
           { id: 'item_4', link: '/', name: 'Link Item', glyph: 'home' },
           { id: 'item_5', link: '/', name: 'Link Item', glyph: 'home' }
-        ]}
-      />
+        ]} />
       </SideNav>
   );
 
@@ -108,8 +103,7 @@ describe('<SideNavigation />', () => {
           { id: 'item-3', url: '#', glyph: 'home' },
           { id: 'item-4', url: '#', glyph: 'home' },
           { id: 'item-5', url: '#', glyph: 'home' }
-        ]}
-      />
+        ]} />
       </SideNav>
   );
 
@@ -122,8 +116,7 @@ describe('<SideNavigation />', () => {
         { id: 'item-4', url: '#', glyph: 'home' },
         { id: 'item-5', url: '#', glyph: 'home' },
         { id: 'item-6', link: '/', glyph: 'home' }
-      ]}
-    />
+      ]} />
   );
 
   test('create side navigation', () => {

@@ -18,16 +18,14 @@ describe('<SearchInput />', () => {
           placeHolder='Hello there'
           onAutoComplete={mockOnAutoComplete}
           data={data}
-          onSearch={mockOnSearch}
-    />
+          onSearch={mockOnSearch} />
   );
   const autoCompleteNoDataSearchInput = (
       <SearchInput
           placeHolder='Hello there'
           data={[]}
           onAutoComplete={mockOnAutoComplete}
-          onSearch={mockOnSearch}
-    />
+          onSearch={mockOnSearch} />
   );
   const searchInput = 'input[type="text"].fd-input';
 

@@ -86,8 +86,7 @@ export class Shellbar extends Component {
                                                                 onclick={item.callback}
                                                                 url={item.url}
                                                                 link={item.link}
-                                                                key={index}
-                                                            >
+                                                                key={index}>
                                                                 {item.glyph && (
                                                                     <React.Fragment>
                                                                         <Icon glyph={item.glyph} size={item.size} />
@@ -101,8 +100,7 @@ export class Shellbar extends Component {
                                                 </MenuList>
                                             </Menu>
                                         )
-                                    }
-                                />
+                                    } />
                             </div>
                         )}
                     </div>
@@ -114,8 +112,7 @@ export class Shellbar extends Component {
                             src='//unpkg.com/fiori-fundamentals/dist/images/copilot.png'
                             alt='CoPilot'
                             height='30'
-                            width='30'
-                        />
+                            width='30' />
                     </div>
                 ) : null}
                 <div className='fd-shellbar__group fd-shellbar__group--end'>
@@ -130,32 +127,27 @@ export class Shellbar extends Component {
                                                 control={
                                                     <button
                                                         className={` fd-button--shell sap-icon--${action.glyph}`}
-                                                        aria-label={action.label}
-                                                    >
+                                                        aria-label={action.label}>
                                                         {action.notificationCount > 0 && (
                                                             <span
                                                                 className='fd-counter fd-counter--notification'
-                                                                aria-label='Unread count'
-                                                            >
+                                                                aria-label='Unread count'>
                                                                 {action.notificationCount}
                                                             </span>
                                                         )}
                                                     </button>
                                                 }
-                                                body={action.menu}
-                                            />
+                                                body={action.menu} />
                                         ) : (
                                             <button
                                                 className={` fd-button--shell sap-icon--${action.glyph}`}
                                                 key={index}
                                                 aria-label={action.label}
-                                                onClick={action.callback}
-                                            >
+                                                onClick={action.callback}>
                                                 {action.notificationCount > 0 && (
                                                     <span
                                                         className='fd-counter fd-counter--notification'
-                                                        aria-label='Unread count'
-                                                    >
+                                                        aria-label='Unread count'>
                                                         {action.notificationCount}
                                                     </span>
                                                 )}
@@ -174,8 +166,7 @@ export class Shellbar extends Component {
                                                 <button className=' fd-button--shell sap-icon--overflow'>
                                                     <span
                                                         className='fd-counter fd-counter--notification'
-                                                        aria-label='Unread count'
-                                                    >
+                                                        aria-label='Unread count'>
                                                         {actions.reduce((r, d) => r + d.notificationCount, 0)}
                                                     </span>
                                                 </button>
@@ -191,8 +182,7 @@ export class Shellbar extends Component {
                                                                     onclick={item.callback}
                                                                     url={item.url}
                                                                     link={item.link}
-                                                                    key={index}
-                                                                >
+                                                                    key={index}>
                                                                     {item.label}
                                                                 </MenuItem>
                                                             );
@@ -200,8 +190,7 @@ export class Shellbar extends Component {
                                                     </MenuList>
                                                 </Menu>
                                             )
-                                        }
-                                    />
+                                        } />
                                 </div>
                             </div>
                         )}
@@ -215,8 +204,7 @@ export class Shellbar extends Component {
                                                 <Identifier
                                                     size='xs'
                                                     modifier='circle'
-                                                    backgroundImageUrl={user.image}
-                                                />
+                                                    backgroundImageUrl={user.image} />
                                             ) : (
                                                 <Identifier size='xs' modifier='circle'
                                                     color={user.colorAccent}>
@@ -235,8 +223,7 @@ export class Shellbar extends Component {
                                                                     onclick={item.callback}
                                                                     url={item.url}
                                                                     link={item.link}
-                                                                    key={index}
-                                                                >
+                                                                    key={index}>
                                                                     {item.glyph && (
                                                                         <React.Fragment>
                                                                             <Icon glyph={item.glyph} size={item.size} />
@@ -250,8 +237,7 @@ export class Shellbar extends Component {
                                                     </MenuList>
                                                 </Menu>
                                             )
-                                        }
-                                    />
+                                        } />
                                 </div>
                             </div>
                         )}
@@ -280,8 +266,7 @@ export class Shellbar extends Component {
                                                     </ul>
                                                 </nav>
                                             </div>
-                                        }
-                                    />
+                                        } />
                                 </div>
                             </div>
                         )}

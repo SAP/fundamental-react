@@ -18,8 +18,7 @@ describe('<ComboboxInput />', () => {
                       </MenuItem>
                   </MenuList>
               </Menu>
-      }
-    />
+      } />
   );
 
   const compactComboBoxInput = (
@@ -37,8 +36,7 @@ describe('<ComboboxInput />', () => {
                       </MenuItem>
                   </MenuList>
               </Menu>
-      }
-    />
+      } />
   );
   test('create combobox input', () => {
     // default combobox
