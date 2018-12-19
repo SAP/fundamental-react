@@ -3,11 +3,11 @@ import { Time } from '../';
 import { DocsTile, DocsText, Separator, Header, Description, Import, Properties } from '../';
 
 export const TimeComponent = () => {
-    const defaultTimeCode = `<Time />`;
-    const format12hoursTimeCode = `<Time format12Hours={true} />`;
-    const noSpinnersTimeCode = `<Time spinners={false} />`;
-    const noSecondsTimeCode = `<Time showSecond={false} />`;
-    const disabledStateTimeCode = `<Time disabled={true} />`;
+    const defaultTimeCode = '<Time />';
+    const format12hoursTimeCode = '<Time format12Hours={true} />';
+    const noSpinnersTimeCode = '<Time spinners={false} />';
+    const noSecondsTimeCode = '<Time showSecond={false} />';
+    const disabledStateTimeCode = '<Time disabled={true} />';
     return (
         <div>
             <Header>Time</Header>

@@ -129,12 +129,12 @@ const clickBtnHandler = btn => {
                     {
                         name: 'option',
                         description:
-                            "string - indicates the importance of the button. Options include 'emphasized' and 'light'. Leave empty for default."
+                            'string - indicates the importance of the button. Options include \'emphasized\' and \'light\'. Leave empty for default.'
                     },
                     {
                         name: 'type',
                         description:
-                            "string - the type of the button. Options include 'standard', 'positive', 'medium', and 'negative'. Leave empty for default/action button."
+                            'string - the type of the button. Options include \'standard\', \'positive\', \'medium\', and \'negative\'. Leave empty for default/action button.'
                     },
                     {
                         name: 'compact',
@@ -359,12 +359,12 @@ const clickBtnHandler = btn => {
                     {
                         attribute: 'option',
                         typeOfAttribute: 'string',
-                        "enum": ['', 'emphasized', 'light']
+                        'enum': ['', 'emphasized', 'light']
                     },
                     {
                         attribute: 'type',
                         typeOfAttribute: 'string',
-                        "enum": ['', 'standard', 'positive', 'medium', 'negative']
+                        'enum': ['', 'standard', 'positive', 'medium', 'negative']
                     },
                     {
                         attribute: 'compact',
@@ -373,7 +373,7 @@ const clickBtnHandler = btn => {
                     {
                         attribute: 'glyph',
                         typeOfAttribute: 'string',
-                        "enum": [
+                        'enum': [
                             '',
                             'accelerated',
                             'accept',

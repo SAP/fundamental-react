@@ -315,7 +315,7 @@ export class DatePicker extends Component {
   };
 
   updateDate(date) {
-    console.log("Inside updateDate function. The event is: ", date);
+    console.log('Inside updateDate function. The event is: ', date);
 
     if (this.props.enableRangeSelection) {
       if (date.length == 2) {

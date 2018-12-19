@@ -92,7 +92,7 @@ export const NavbarComponent = () => {
                     {
                         name: 'alignment',
                         description:
-                            "string - The position of the group in the navigation bar. Oprions include 'left' and 'right'. For default (middle) leave empty."
+                            'string - The position of the group in the navigation bar. Oprions include \'left\' and \'right\'. For default (middle) leave empty.'
                     },
                     {
                         name: 'launchpad',
@@ -101,12 +101,12 @@ export const NavbarComponent = () => {
                     {
                         name: 'noMargin',
                         description:
-                            "string - Renders the NavbarElement with no margin on either left or right side. Oprions include 'left' and 'right'. For default leave empty."
+                            'string - Renders the NavbarElement with no margin on either left or right side. Oprions include \'left\' and \'right\'. For default leave empty.'
                     },
                     {
                         name: 'type',
                         description:
-                            "string (required)- The type of the NavbarElement. Oprions include 'search', 'context-menu', 'product-name', 'logo', and 'side-menu'. "
+                            'string (required)- The type of the NavbarElement. Oprions include \'search\', \'context-menu\', \'product-name\', \'logo\', and \'side-menu\'. '
                     }
                 ]} />
 

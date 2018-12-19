@@ -296,7 +296,7 @@ export const TileComponent = () => {
                     {
                         attribute: 'type',
                         typeOfAttribute: 'component',
-                        "enum": ['simple', 'media', 'product']
+                        'enum': ['simple', 'media', 'product']
                     },
                     {
                         attribute: 'title',

@@ -265,9 +265,9 @@ export const FormsComponent = () => {
                     { name: 'FormInput', description: 'Input controls for user input data.' },
                     { name: 'FormTextarea', description: 'Multi-line text input control.' },
                     { name: 'FormFieldset', description: 'Fieldset - used to group related elements in a form.' },
-                    { name: 'FormLegend', description: "Defines a caption for the fieldset element." },
-                    { name: 'FormSelect', description: "The 'select' component is similar to a dropdown but is more commonly used within a form. It can also be set to a disabled state." },
-                    { name: 'FormRadio', description: "Fieldset with Radio Buttons." }
+                    { name: 'FormLegend', description: 'Defines a caption for the fieldset element.' },
+                    { name: 'FormSelect', description: 'The \'select\' component is similar to a dropdown but is more commonly used within a form. It can also be set to a disabled state.' },
+                    { name: 'FormRadio', description: 'Fieldset with Radio Buttons.' }
                 ]} />
 
             <Properties
@@ -276,36 +276,36 @@ export const FormsComponent = () => {
                     {
                         name: 'isCheck',
                         description:
-                            "bool - used in FormItem. When set to 'true', renders an input with type of checkbox."
+                            'bool - used in FormItem. When set to \'true\', renders an input with type of checkbox.'
                     },
                     {
                         name: 'isInline',
                         description:
-                            "bool - used in FormItem. Set to 'true' to display radio buttons and checkboxes in a row."
+                            'bool - used in FormItem. Set to \'true\' to display radio buttons and checkboxes in a row.'
                     },
-                    { name: 'forAttr', description: "string - input 'for' attribute. Used in FormLabel." },
+                    { name: 'forAttr', description: 'string - input \'for\' attribute. Used in FormLabel.' },
                     {
                         name: 'required',
-                        description: "bool - set to 'true' for required input fields. Used in FormLabel."
+                        description: 'bool - set to \'true\' for required input fields. Used in FormLabel.'
                     },
                     {
                         name: 'type',
                         description:
-                            "string - when used in FormMessage this property sets the type of the message. The options include 'error', 'warning', and 'help'."
+                            'string - when used in FormMessage this property sets the type of the message. The options include \'error\', \'warning\', and \'help\'.'
                     },
                     {
                         name: 'type',
                         description:
-                            "string - when used in FormInput this property sets the type of the input. Options include 'text', 'password', 'radio', 'checkbox', 'button'."
+                            'string - when used in FormInput this property sets the type of the input. Options include \'text\', \'password\', \'radio\', \'checkbox\', \'button\'.'
                     },
                     {
                         name: 'state',
                         description:
-                            "string - the state of the input. Options include 'normal', 'valid', 'invalid', 'warning', 'help', 'disabled', and 'readonly'. Leave empty for normal. Used in FormInput."
+                            'string - the state of the input. Options include \'normal\', \'valid\', \'invalid\', \'warning\', \'help\', \'disabled\', and \'readonly\'. Leave empty for normal. Used in FormInput.'
                     },
-                    { name: 'id', description: "string - 'id' attribute." },
-                    { name: 'placeholder', description: "string - input 'placeholder' attribute." },
-                    { name: 'disabled', description: "bool - set to 'true' to disable the element." },
+                    { name: 'id', description: 'string - \'id\' attribute.' },
+                    { name: 'placeholder', description: 'string - input \'placeholder\' attribute.' },
+                    { name: 'disabled', description: 'bool - set to \'true\' to disable the element.' },
                     { name: 'name', description: 'string - the name property of select. Used in FormSelect.' },
                     { name: 'defaultChecked', description: 'string - the id of the element selected by default.' }
                 ]} />

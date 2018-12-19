@@ -49,8 +49,8 @@ export const MegaMenuComponent = () => {
             <Properties type='Inputs' properties={[
                     { name: 'items', description: 'array - an array of objects with keys \'id\', \'url\' or \'link\', \'name\', \'hasChild\', and \'child\' setting the attributes of the items.' },
                     { name: 'id', description: 'string - the \'id\' of the link.' },
-                    { name: 'url', description: "string - href attribute of <a> tag. Use either 'url' or 'link'." },
-                    { name: 'link', description: "string - a router link. Use either 'url' or 'link'." },
+                    { name: 'url', description: 'string - href attribute of <a> tag. Use either \'url\' or \'link\'.' },
+                    { name: 'link', description: 'string - a router link. Use either \'url\' or \'link\'.' },
                     { name: 'name', description: 'string - the \'name\' of the link.' },
                     { name: 'hasChild', description: 'bool - when set to \'true\' enables a second level of navigation.' },
                     { name: 'child', description: 'array - an array of objects with keys \'id\', \'url\' or \'link\', and \'name\' setting the attributes of the subitems.' }

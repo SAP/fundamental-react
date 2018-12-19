@@ -3,7 +3,7 @@ import { Alert, Icon } from '../';
 import { DocsTile, DocsText, Separator, Header, Description, Import, Properties, Playground } from '../';
 
 export const AlertComponent = () => {
-    const defaultAlertCode = `<Alert dismissable link="#" linkText="link">Default alert with a </Alert>`;
+    const defaultAlertCode = '<Alert dismissable link="#" linkText="link">Default alert with a </Alert>';
 
     const warningAlertCode = `<Alert type="warning" dismissable>
     <h3>A dismissible error type alert with template.</h3>
@@ -47,7 +47,7 @@ export const AlertComponent = () => {
                     {
                         name: 'type',
                         description:
-                            "string - Determines the type of alert - 'error' (red) or 'warning' (orange). Defaults to white if no type is provided."
+                            'string - Determines the type of alert - \'error\' (red) or \'warning\' (orange). Defaults to white if no type is provided.'
                     },
                     {
                         name: 'dismissible',
@@ -141,7 +141,7 @@ export const AlertComponent = () => {
                     {
                         attribute: 'type',
                         typeOfAttribute: 'string',
-                        "enum": ['', 'warning', 'error', 'information', 'success']
+                        'enum': ['', 'warning', 'error', 'information', 'success']
                     },
                     {
                         attribute: 'dismissable',

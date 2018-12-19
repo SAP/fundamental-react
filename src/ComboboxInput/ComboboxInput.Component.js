@@ -49,7 +49,7 @@ export const ComboboxInputComponent = () => {
                 properties={[
                     { name: 'menu', description: 'object (required) - An object containing a Menu component. ' },
                     { name: 'id', description: 'string (optional) - The id of the component.' },
-                    { name: 'placeholder', description: "string (optional) - Input 'placeholder' attribute. " },
+                    { name: 'placeholder', description: 'string (optional) - Input \'placeholder\' attribute. ' },
                     { name: 'compact', description: 'bool (optional) - Set to true to enable compact mode.' }
                 ]} />
 

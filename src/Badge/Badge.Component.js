@@ -57,7 +57,7 @@ export const BadgeComponent = () => {
   <Counter notification>999+</Counter>
 </Button>`;
 
-    const inlineCounterCode = `<p>Lorem ipsum <Counter>5</Counter></p>`;
+    const inlineCounterCode = '<p>Lorem ipsum <Counter>5</Counter></p>';
 
     return (
         <div>
@@ -73,11 +73,11 @@ export const BadgeComponent = () => {
                     {
                         name: 'type',
                         description:
-                            "string - The type indicates the status of the badge/label. Options include 'default', 'success', 'warning', and 'error'. Leave empty for default. For status label with build in status icons use the 'available', 'away', 'busy' and 'offline'."
+                            'string - The type indicates the status of the badge/label. Options include \'default\', \'success\', \'warning\', and \'error\'. Leave empty for default. For status label with build in status icons use the \'available\', \'away\', \'busy\' and \'offline\'.'
                     },
                     {
                         name: 'modifier',
-                        description: "string - Modifiers can be 'pill' and 'filled'. Leave empty for normal."
+                        description: 'string - Modifiers can be \'pill\' and \'filled\'. Leave empty for normal.'
                     },
                     {
                         name: 'glyph',
@@ -86,7 +86,7 @@ export const BadgeComponent = () => {
                     },
                     {
                         name: 'notification',
-                        description: "bool - Set to 'true' to enable counter with notification. "
+                        description: 'bool - Set to \'true\' to enable counter with notification. '
                     }
                 ]} />
 
@@ -233,22 +233,22 @@ export const BadgeComponent = () => {
                     {
                         attribute: 'component',
                         typeOfAttribute: 'string',
-                        "enum": ['badge', 'label', 'status']
+                        'enum': ['badge', 'label', 'status']
                     },
                     {
                         attribute: 'type',
                         typeOfAttribute: 'string',
-                        "enum": ['default', 'success', 'warning', 'error', 'available', 'away', 'busy', 'offline']
+                        'enum': ['default', 'success', 'warning', 'error', 'available', 'away', 'busy', 'offline']
                     },
                     {
                         attribute: 'modifier',
                         typeOfAttribute: 'string',
-                        "enum": ['', 'pill', 'filled']
+                        'enum': ['', 'pill', 'filled']
                     },
                     {
                         attribute: 'glyph',
                         typeOfAttribute: 'string',
-                        "enum": [
+                        'enum': [
                             '',
                             'accelerated',
                             'accept',

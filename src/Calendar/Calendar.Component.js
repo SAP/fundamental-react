@@ -4,10 +4,10 @@ import {Calendar} from '../';
 
 export const CalendarComponent = () => {
 
-    const defaultCalendarCode = `<Calendar />`;
-    const calendarDisabledWeekendsBeforeDate = `<Calendar disableBeforeDate={new Date(2018,7,3,0,0,0,0)} disableWeekends={true}/>`;
-    const calendarDisabledWeekdaysBlockedDates = `<Calendar disableWeekday={["Monday", "Tuesday"]} blockedDates={[new Date(2018, 1, 1, 0,0, 0,0), new Date(2018, 3, 3, 0,0,0,0)]}/>`;
-    const calendarAllOptions = `<Calendar enableRangeSelection={true}/>`;
+    const defaultCalendarCode = '<Calendar />';
+    const calendarDisabledWeekendsBeforeDate = '<Calendar disableBeforeDate={new Date(2018,7,3,0,0,0,0)} disableWeekends={true}/>';
+    const calendarDisabledWeekdaysBlockedDates = '<Calendar disableWeekday={["Monday", "Tuesday"]} blockedDates={[new Date(2018, 1, 1, 0,0, 0,0), new Date(2018, 3, 3, 0,0,0,0)]}/>';
+    const calendarAllOptions = '<Calendar enableRangeSelection={true}/>';
 
     return (<div>
         <Header>Calendar</Header>
@@ -48,7 +48,7 @@ export const CalendarComponent = () => {
 
         <h2>Calendar with disabled weekdays and blocked dates</h2>
         <DocsTile centered>
-            {<Calendar disableWeekday={["Monday", "Tuesday"]} blockedDates={[new Date(2018, 1, 1, 0, 0, 0, 0), new Date(2018, 3, 3, 0, 0, 0, 0)]} />}
+            {<Calendar disableWeekday={['Monday', 'Tuesday']} blockedDates={[new Date(2018, 1, 1, 0, 0, 0, 0), new Date(2018, 3, 3, 0, 0, 0, 0)]} />}
         </DocsTile>
         <DocsText>{calendarDisabledWeekdaysBlockedDates}</DocsText>
 

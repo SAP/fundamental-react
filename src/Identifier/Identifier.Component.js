@@ -175,12 +175,12 @@ export const IdentifierComponent = () => {
                     {
                         attribute: 'size',
                         typeOfAttribute: 'string',
-                        "enum": ['xxs', 'xs', 's', 'm', 'l', 'xl', 'xxl']
+                        'enum': ['xxs', 'xs', 's', 'm', 'l', 'xl', 'xxl']
                     },
                     {
                         attribute: 'glyph',
                         typeOfAttribute: 'string',
-                        "enum": ['',
+                        'enum': ['',
                         'accelerated',
                         'accept',
                         'accidental-leave',
@@ -806,7 +806,7 @@ export const IdentifierComponent = () => {
                     {
                         attribute: 'color',
                         typeOfAttribute: 'number',
-                        "enum": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+                        'enum': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
                     },
                     {
                         attribute: 'children',
@@ -815,7 +815,7 @@ export const IdentifierComponent = () => {
                     {
                         attribute: 'modifier',
                         typeOfAttribute: 'string',
-                        "enum": ['circle', 'transparent']
+                        'enum': ['circle', 'transparent']
                     }]}>
                 <Identifier size='s' label='Wendy Wallace'
                     glyph='money-bills' color={1}

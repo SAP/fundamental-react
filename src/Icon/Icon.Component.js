@@ -671,7 +671,7 @@ export const IconComponent = () => {
           {
             name: 'size',
             description:
-              "string - Size of the icon. Options include 'xs', 's', 'compact', and 'l'. If no size is provided, default (normal) will be used."
+              'string - Size of the icon. Options include \'xs\', \'s\', \'compact\', and \'l\'. If no size is provided, default (normal) will be used.'
           }
         ]} />
 
@@ -701,7 +701,7 @@ export const IconComponent = () => {
           {
             attribute: 'glyph',
             typeOfAttribute: 'string',
-            "enum": [
+            'enum': [
               '',
               'accelerated',
               'accept',
@@ -1329,7 +1329,7 @@ export const IconComponent = () => {
           {
             attribute: 'size',
             typeOfAttribute: 'string',
-            "enum": ['s', '', 'm', 'l', 'xl']
+            'enum': ['s', '', 'm', 'l', 'xl']
           }
         ]}>
               <Icon glyph='cart' size='s' />

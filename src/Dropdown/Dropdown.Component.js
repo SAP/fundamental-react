@@ -168,7 +168,7 @@ export const DropdownComponent = () => {
             <Properties
                 type='Inputs'
                 properties={[
-                    { name: 'standard', description: "bool - set to 'true' to enable a dropdown for toolbar." }
+                    { name: 'standard', description: 'bool - set to \'true\' to enable a dropdown for toolbar.' }
                 ]} />
 
             <Separator />

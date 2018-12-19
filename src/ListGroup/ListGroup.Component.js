@@ -118,7 +118,7 @@ export const ListGroupComponent = () => {
                     {
                         attribute: 'glyph',
                         typeOfAttribute: 'string',
-                        "enum": ['',
+                        'enum': ['',
                         'accelerated',
                         'accept',
                         'accidental-leave',

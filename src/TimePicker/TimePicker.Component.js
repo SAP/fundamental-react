@@ -11,10 +11,10 @@ import {
 } from '../';
 
 export const TimePickerComponent = () => {
-  const defaultTimeCode = `<TimePicker />`;
-  const format12hoursTimeCode = `<TimePicker format12Hours={true} />`;
-  const noSecondsTimeCode = `<TimePicker showSecond={false} />`;
-  const disabledStateTimeCode = `<TimePicker disabled={true} />`;
+  const defaultTimeCode = '<TimePicker />';
+  const format12hoursTimeCode = '<TimePicker format12Hours={true} />';
+  const noSecondsTimeCode = '<TimePicker showSecond={false} />';
+  const disabledStateTimeCode = '<TimePicker disabled={true} />';
   return (
       <div>
           <Header>Time Picker</Header>

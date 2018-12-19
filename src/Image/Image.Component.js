@@ -26,10 +26,10 @@ export const ImageComponent = () => {
                     {
                         name: 'size',
                         description:
-                            "string (required)- the size of the image. Size options include 's' (24x24), 'm' (36x36), and 'l' (48x48)."
+                            'string (required)- the size of the image. Size options include \'s\' (24x24), \'m\' (36x36), and \'l\' (48x48).'
                     },
                     { name: 'photo', description: 'string (required) - picture url.' },
-                    { name: 'type', description: "string - When set to 'circle' renders a round image." }
+                    { name: 'type', description: 'string - When set to \'circle\' renders a round image.' }
                 ]} />
 
             <Separator />
@@ -67,7 +67,7 @@ export const ImageComponent = () => {
                     {
                         attribute: 'size',
                         typeOfAttribute: 'string',
-                        "enum": ['s', 'm', 'l']
+                        'enum': ['s', 'm', 'l']
                     },
                     {
                         attribute: 'photo',
@@ -76,7 +76,7 @@ export const ImageComponent = () => {
                     {
                         attribute: 'type',
                         typeOfAttribute: 'string',
-                        "enum": ['', 'circle']
+                        'enum': ['', 'circle']
                     }
                 ]}>
                 <Image size='s' type=''

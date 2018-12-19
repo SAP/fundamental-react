@@ -103,7 +103,7 @@ rules:
     no-unreachable: 2
     #no-unused-vars: [2, { ignoreRestSiblings: true }]
     quote-props: [2, 'as-needed', { 'keywords': true, 'unnecessary': false }]
-    #quotes: [2, 'single']
+    quotes: [2, 'single']
     #radix: 2
     react/display-name: 2
     react/jsx-boolean-value: 2

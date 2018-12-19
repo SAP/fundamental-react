@@ -66,8 +66,8 @@ export const MenuComponent = () => {
             <Properties
                 type='Inputs'
                 properties={[
-                    { name: 'url', description: "string - href attribute of <a> tag. Use either 'url' or 'link'" },
-                    { name: 'link', description: "string - a router link. Use either 'url' or 'link'" },
+                    { name: 'url', description: 'string - href attribute of <a> tag. Use either \'url\' or \'link\'' },
+                    { name: 'link', description: 'string - a router link. Use either \'url\' or \'link\'' },
                     { name: 'separator', description: 'bool - when set to true, adds a horizontal line (separator).' },
                     {
                         name: 'title',

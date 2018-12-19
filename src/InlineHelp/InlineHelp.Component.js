@@ -4,11 +4,11 @@ import { DocsTile, DocsText, Separator, Header, Description, Import, Properties 
 
 
 export const InlineHelpComponent = () => {
-    const defaultHelpPlacement = `<InlineHelp text="Lorem ipsum dolor sit amet, consectetur adipiscing." placement="bottom-right"/>`;
-    const bottomLeftHelpPlacement = `<InlineHelp text="Lorem ipsum dolor sit amet, consectetur adipiscing." placement="bottom-left"/>`;
-    const rightHelpPlacement = `<InlineHelp text="Lorem ipsum dolor sit amet, consectetur adipiscing." placement="right"/>`;
-    const leftHelpPlacement = `<InlineHelp text="Lorem ipsum dolor sit amet, consectetur adipiscing." placement="left"/>`;
-    const centerHelpPlacement = `<InlineHelp text="Lorem ipsum dolor sit amet, consectetur adipiscing." placement="bottom-center" />`;
+    const defaultHelpPlacement = '<InlineHelp text="Lorem ipsum dolor sit amet, consectetur adipiscing." placement="bottom-right"/>';
+    const bottomLeftHelpPlacement = '<InlineHelp text="Lorem ipsum dolor sit amet, consectetur adipiscing." placement="bottom-left"/>';
+    const rightHelpPlacement = '<InlineHelp text="Lorem ipsum dolor sit amet, consectetur adipiscing." placement="right"/>';
+    const leftHelpPlacement = '<InlineHelp text="Lorem ipsum dolor sit amet, consectetur adipiscing." placement="left"/>';
+    const centerHelpPlacement = '<InlineHelp text="Lorem ipsum dolor sit amet, consectetur adipiscing." placement="bottom-center" />';
 
     return (
         <div>
@@ -30,7 +30,7 @@ export const InlineHelpComponent = () => {
                     },
                     {
                         name: 'placement',
-                        description: "string (required) - Location for where to display the inline help pop-up. Options include:  'bottom-right', 'bottom-left', 'bottom-center', 'right', and 'left' "
+                        description: 'string (required) - Location for where to display the inline help pop-up. Options include:  \'bottom-right\', \'bottom-left\', \'bottom-center\', \'right\', and \'left\' '
                     }
                 ]} />
 
