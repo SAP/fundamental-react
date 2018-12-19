@@ -32,7 +32,7 @@ export const ListGroupItemCheckbox = (props) => {
     const { children } = props;
     return (
         <div className='fd-form__item fd-form__item--check'>
-            <label className='fd-form__label' for='CndSd399'>
+            <label className='fd-form__label' htmlFor='CndSd399'>
                 <input type='checkbox' className='fd-form__control' id='CndSd399' />
                 {children}
             </label>
