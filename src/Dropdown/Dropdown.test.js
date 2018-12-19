@@ -9,9 +9,9 @@ describe('<Dropdown />', () => {
   const defaultDropdown = (
     <Dropdown>
       <Popover
-        control={<Button dropdown>Select</Button>}
-        noArrow
-        body={
+          control={<Button dropdown>Select</Button>}
+          noArrow
+          body={
           <Menu>
             <MenuList>
               <MenuItem url='/'>Option 1</MenuItem>
@@ -28,13 +28,13 @@ describe('<Dropdown />', () => {
   const compactDropdown = (
     <Dropdown>
       <Popover
-        control={
+          control={
           <Button dropdown compact>
             Select
           </Button>
         }
-        noArrow
-        body={
+          noArrow
+          body={
           <Menu>
             <MenuList>
               <MenuItem url='/'>Option 1</MenuItem>
@@ -51,13 +51,13 @@ describe('<Dropdown />', () => {
   const toolbarDropdown = (
     <Dropdown standard>
       <Popover
-        control={
+          control={
           <Button dropdown type='standard'>
             Select
           </Button>
         }
-        noArrow
-        body={
+          noArrow
+          body={
           <Menu>
             <MenuList>
               <MenuItem url='/'>Option 1</MenuItem>
@@ -74,14 +74,14 @@ describe('<Dropdown />', () => {
   const iconDropdown = (
     <Dropdown>
       <Popover
-        id='jhqD0557'
-        control={
+          id='jhqD0557'
+          control={
           <Button dropdown glyph='filter'>
             Select
           </Button>
         }
-        noArrow
-        body={
+          noArrow
+          body={
           <Menu>
             <MenuList>
               <MenuItem url='/'>Option 1</MenuItem>
@@ -98,16 +98,16 @@ describe('<Dropdown />', () => {
   const disabledDropdown = (
     <Dropdown>
       <Popover
-        id='jhqD0561'
-        disabled
-        control={
+          id='jhqD0561'
+          disabled
+          control={
           <Button dropdown glyph='filter'
-disabled>
+              disabled>
             Select
           </Button>
         }
-        noArrow
-        body={
+          noArrow
+          body={
           <Menu>
             <MenuList>
               <MenuItem url='/'>Option 1</MenuItem>

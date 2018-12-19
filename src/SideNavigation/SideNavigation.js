@@ -61,22 +61,22 @@ export class SideNavList extends Component {
               <li className='fd-side-nav__item' key={item.id}>
                 {item.link ? (
                   <Link
-                    className={`fd-side-nav__link${
+                      className={`fd-side-nav__link${
                       this.state.selectedItem === item.id ? ' is-selected' : ''
                     }${item.hasChild ? ' has-child' : ''}${
                       this.state.itemStates[item.id] && item.hasChild
                         ? ' is-expanded'
                         : ''
                     }`}
-                    to={{ pathname: item.link }}
-                    key={item.id}
-                    onClick={e => this.handleSelect(e, item.id)}
+                      to={{ pathname: item.link }}
+                      key={item.id}
+                      onClick={e => this.handleSelect(e, item.id)}
                   >
                     {item.glyph ? (
                       <span
-                        className={`fd-side-nav__icon${' sap-icon--' +
+                          className={`fd-side-nav__icon${' sap-icon--' +
                           item.glyph} sap-icon--l`}
-                        role='presentation'
+                          role='presentation'
                       />
                     ) : null}
                     {item.name}
@@ -85,22 +85,22 @@ export class SideNavList extends Component {
 
                 {item.url ? (
                   <a
-                    className={`fd-side-nav__link${
+                      className={`fd-side-nav__link${
                       this.state.selectedItem === item.id ? ' is-selected' : ''
                     }${item.hasChild ? ' has-child' : ''}${
                       this.state.itemStates[item.id] && item.hasChild
                         ? ' is-expanded'
                         : ''
                     }`}
-                    href={item.url}
-                    key={item.id}
-                    onClick={e => this.handleSelect(e, item.id)}
+                      href={item.url}
+                      key={item.id}
+                      onClick={e => this.handleSelect(e, item.id)}
                   >
                     {item.glyph ? (
                       <span
-                        className={`fd-side-nav__icon${' sap-icon--' +
+                          className={`fd-side-nav__icon${' sap-icon--' +
                           item.glyph} sap-icon--l`}
-                        role='presentation'
+                          role='presentation'
                       />
                     ) : null}
                     {item.name}
@@ -109,24 +109,24 @@ export class SideNavList extends Component {
 
                 {item.hasChild ? (
                   <ul
-                    className='fd-side-nav__sublist'
-                    id={item.id}
-                    aria-hidden={!this.state.itemStates[item.id]}
-                    aria-expanded={this.state.itemStates[item.id]}
+                      className='fd-side-nav__sublist'
+                      id={item.id}
+                      aria-hidden={!this.state.itemStates[item.id]}
+                      aria-expanded={this.state.itemStates[item.id]}
                   >
                     {item.child.map(ch => {
                       return (
                         <React.Fragment key={ch.id}>
                           {ch.link ? (
                             <Link
-                              className={`fd-side-nav__sublink${
+                                className={`fd-side-nav__sublink${
                                 this.state.selectedItem === ch.id
                                   ? ' is-selected'
                                   : ''
                               }`}
-                              to={{ pathname: ch.link }}
-                              key={ch.id}
-                              onClick={e => this.handleSelectChild(e, ch.id)}
+                                to={{ pathname: ch.link }}
+                                key={ch.id}
+                                onClick={e => this.handleSelectChild(e, ch.id)}
                             >
                               {ch.name}
                             </Link>
@@ -134,14 +134,14 @@ export class SideNavList extends Component {
 
                           {ch.url ? (
                             <a
-                              className={`fd-side-nav__sublink${
+                                className={`fd-side-nav__sublink${
                                 this.state.selectedItem === ch.id
                                   ? ' is-selected'
                                   : ''
                               }`}
-                              href={ch.url}
-                              key={ch.id}
-                              onClick={e => this.handleSelectChild(e, ch.id)}
+                                href={ch.url}
+                                key={ch.id}
+                                onClick={e => this.handleSelectChild(e, ch.id)}
                             >
                               {ch.name}
                             </a>

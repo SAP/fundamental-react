@@ -9,12 +9,12 @@ Enzyme.configure({ adapter: new Adapter() });
 describe('<LocalizationEditor />', () => {
   const localEditor = (
     <LocalizationEditor
-      control={{
+        control={{
         label: 'Localization Editor Label',
         placeholder: 'Enter Label',
         language: 'EN*'
       }}
-      menu={[
+        menu={[
         { placeholder: 'Enter Label', language: 'ES' },
         { placeholder: 'Enter Label', language: 'CH' },
         { placeholder: 'Enter Label', language: 'PL' }
@@ -24,13 +24,13 @@ describe('<LocalizationEditor />', () => {
 
   const localEditorCompact = (
     <LocalizationEditor
-      compact
-      control={{
+        compact
+        control={{
         label: 'Localization Editor Compact Mode',
         placeholder: 'Enter Label',
         language: 'EN*'
       }}
-      menu={[
+        menu={[
         { placeholder: 'Enter Label', language: 'ES' },
         { placeholder: 'Enter Label', language: 'CH' },
         { placeholder: 'Enter Label', language: 'PL' }
@@ -40,13 +40,13 @@ describe('<LocalizationEditor />', () => {
 
   const localEditorTextArea = (
     <LocalizationEditor
-      textarea
-      control={{
+        textarea
+        control={{
         label: 'Localization Editor Label',
         placeholder: 'Enter Label',
         language: 'EN*'
       }}
-      menu={[
+        menu={[
         { placeholder: 'Enter Label', language: 'ES' },
         { placeholder: 'Enter Label', language: 'CH' },
         { placeholder: 'Enter Label', language: 'PL' }

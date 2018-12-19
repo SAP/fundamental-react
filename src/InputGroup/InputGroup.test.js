@@ -10,105 +10,105 @@ Enzyme.configure({ adapter: new Adapter() });
 describe('<InputGroup />', () => {
   const inputTextPosBefore = (
     <InputGroup
-      inputType='text'
-      addonPos='before'
-      inputValue='1234567890'
-      addon='$'
+        inputType='text'
+        addonPos='before'
+        inputValue='1234567890'
+        addon='$'
     />
   );
   const inputTextPosAfter = (
     <InputGroup
-      inputType='text'
-      addonPos='after'
-      inputValue='1234567890'
-      addon='€'
+        inputType='text'
+        addonPos='after'
+        inputValue='1234567890'
+        addon='€'
     />
   );
   const inputTextPosBeforeCompact = (
     <InputGroup
-      inputType='text'
-      addonPos='before'
-      inputValue='1234567890'
-      addon='$'
-      compact
+        inputType='text'
+        addonPos='before'
+        inputValue='1234567890'
+        addon='$'
+        compact
     />
   );
   const inputTextPosAfterCompact = (
     <InputGroup
-      inputType='text'
-      addonPos='after'
-      inputValue='1234567890'
-      addon='€'
-      compact
+        inputType='text'
+        addonPos='after'
+        inputValue='1234567890'
+        addon='€'
+        compact
     />
   );
   const numberInput = <InputGroup inputType='number' inputValue={100} />;
   const numberInputCompact = (
     <InputGroup inputType='number' inputValue={100}
-compact />
+        compact />
   );
   const searchText = (
     <InputGroup inputType='search' inputPlaceholder='Search Term' />
   );
   const searchTextCompact = (
     <InputGroup
-      inputType='search'
-      inputValue='search me'
-      inputPlaceholder='Search Term'
-      compact
+        inputType='search'
+        inputValue='search me'
+        inputPlaceholder='Search Term'
+        compact
     />
   );
   const inputWithIcon = (
     <InputGroup
-      inputType='text'
-      addonPos='before'
-      inputValue='1234567890'
-      glyph='globe'
+        inputType='text'
+        addonPos='before'
+        inputValue='1234567890'
+        glyph='globe'
     />
   );
   const inputWithIconCompact = (
     <InputGroup
-      inputType='text'
-      addonPos='before'
-      inputValue='1234567890'
-      glyph='globe'
-      compact
+        inputType='text'
+        addonPos='before'
+        inputValue='1234567890'
+        glyph='globe'
+        compact
     />
   );
   const inputWithIconAfter = (
     <InputGroup
-      inputType='text'
-      addonPos='after'
-      inputValue='1234567890'
-      glyph='hide'
+        inputType='text'
+        addonPos='after'
+        inputValue='1234567890'
+        glyph='hide'
     />
   );
   const inputWithIconAfterCompact = (
     <InputGroup
-      inputType='text'
-      addonPos='after'
-      inputValue='1234567890'
-      glyph='hide'
-      compact
+        inputType='text'
+        addonPos='after'
+        inputValue='1234567890'
+        glyph='hide'
+        compact
     />
   );
   const inputWithActions = (
     <InputGroup
-      inputType='text'
-      addonPos='after'
-      inputValue='1234567890'
-      actions
+        inputType='text'
+        addonPos='after'
+        inputValue='1234567890'
+        actions
     >
       <Button option='light'>Button</Button>
     </InputGroup>
   );
   const inputWithActionsCompact = (
     <InputGroup
-      inputType='text'
-      addonPos='after'
-      inputValue='1234567890'
-      actions
-      compact
+        inputType='text'
+        addonPos='after'
+        inputValue='1234567890'
+        actions
+        compact
     >
       <Button option='light'>Button</Button>
     </InputGroup>
@@ -116,10 +116,10 @@ compact />
 
   const inputWithActionsNoButtons = (
     <InputGroup
-      inputType='text'
-      addonPos='before'
-      inputValue='1234567890'
-      actions
+        inputType='text'
+        addonPos='before'
+        inputValue='1234567890'
+        actions
     />
   );
   const formGroup = <FormGroup>{inputTextPosAfter}</FormGroup>;

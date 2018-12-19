@@ -250,10 +250,10 @@ class TimeItem extends Component {
         {spinners ? (
           <div className='fd-time__control'>
             <button
-              className=' fd-button--light fd-button--xs sap-icon--navigation-up-arrow '
-              aria-label={arialabel.buttonUp}
-              disabled={disabled}
-              onClick={this._onUp}
+                className=' fd-button--light fd-button--xs sap-icon--navigation-up-arrow '
+                aria-label={arialabel.buttonUp}
+                disabled={disabled}
+                onClick={this._onUp}
             />
           </div>
         ) : (
@@ -261,24 +261,24 @@ class TimeItem extends Component {
         )}
         <div className='fd-time__input'>
           <input
-            className={style}
-            type='text'
-            maxLength='2'
-            placeholder={placeholder}
-            onChange={this.onChange}
-            value={this.props.value}
-            aria-label={type}
-            name={this.props.name}
-            readOnly={disabled}
+              className={style}
+              type='text'
+              maxLength='2'
+              placeholder={placeholder}
+              onChange={this.onChange}
+              value={this.props.value}
+              aria-label={type}
+              name={this.props.name}
+              readOnly={disabled}
           />
         </div>
         {spinners ? (
           <div className='fd-time__control'>
             <button
-              className=' fd-button--light fd-button--xs sap-icon--navigation-down-arrow'
-              aria-label={arialabel.buttonDown}
-              disabled={disabled}
-              onClick={this._onDown}
+                className=' fd-button--light fd-button--xs sap-icon--navigation-down-arrow'
+                aria-label={arialabel.buttonDown}
+                disabled={disabled}
+                onClick={this._onDown}
             />
           </div>
         ) : (
@@ -395,17 +395,17 @@ export class Time extends Component {
         {/* Hours */}
         {showHour ? (
           <TimeItem
-            disabled={disabled}
-            placeholder={'hh'}
-            defaultValue={1}
-            type={'Hours'}
-            max={max}
-            value={time.hour}
-            updateTime={this.updateTime}
-            name='hour'
-            time={time}
-            format12Hours={format12Hours}
-            spinners={spinners}
+              disabled={disabled}
+              placeholder={'hh'}
+              defaultValue={1}
+              type={'Hours'}
+              max={max}
+              value={time.hour}
+              updateTime={this.updateTime}
+              name='hour'
+              time={time}
+              format12Hours={format12Hours}
+              spinners={spinners}
           />
         ) : (
           ''
@@ -413,17 +413,17 @@ export class Time extends Component {
         {/* Minutes */}
         {showMinute ? (
           <TimeItem
-            disabled={disabled}
-            placeholder={'mm'}
-            defaultValue={1}
-            type={'Minutes'}
-            max={'60'}
-            value={this.state.time.minute}
-            updateTime={this.updateTime}
-            name='minute'
-            time={time}
-            format12Hours={format12Hours}
-            spinners={spinners}
+              disabled={disabled}
+              placeholder={'mm'}
+              defaultValue={1}
+              type={'Minutes'}
+              max={'60'}
+              value={this.state.time.minute}
+              updateTime={this.updateTime}
+              name='minute'
+              time={time}
+              format12Hours={format12Hours}
+              spinners={spinners}
           />
         ) : (
           ''
@@ -431,17 +431,17 @@ export class Time extends Component {
         {/* Seconds */}
         {showSecond ? (
           <TimeItem
-            disabled={disabled}
-            placeholder={'ss'}
-            defaultValue={1}
-            type={'Seconds'}
-            max={'60'}
-            value={this.state.time.second}
-            updateTime={this.updateTime}
-            name='second'
-            time={time}
-            format12Hours={format12Hours}
-            spinners={spinners}
+              disabled={disabled}
+              placeholder={'ss'}
+              defaultValue={1}
+              type={'Seconds'}
+              max={'60'}
+              value={this.state.time.second}
+              updateTime={this.updateTime}
+              name='second'
+              time={time}
+              format12Hours={format12Hours}
+              spinners={spinners}
           />
         ) : (
           ''
@@ -449,14 +449,14 @@ export class Time extends Component {
         {/* Meridiem */}
         {format12Hours ? (
           <TimeItem
-            disabled={disabled}
-            type={'Period'}
-            max={'1'}
-            time={this.state.time}
-            value={CLOCK[this.state.time.meridiem]}
-            updateTime={this.updateTime}
-            name='meridiem'
-            spinners={spinners}
+              disabled={disabled}
+              type={'Period'}
+              max={'1'}
+              time={this.state.time}
+              value={CLOCK[this.state.time.meridiem]}
+              updateTime={this.updateTime}
+              name='meridiem'
+              spinners={spinners}
           />
         ) : (
           ''

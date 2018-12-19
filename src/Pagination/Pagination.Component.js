@@ -66,7 +66,7 @@ export const PaginationComponent = () => {
             <Description>When the last page is active, the Next arrow should be disabled.</Description>
             <DocsTile centered>
                 <Pagination itemsTotal={101} initialPage={11}
-onClick={handleClick} />
+                    onClick={handleClick} />
             </DocsTile>
             <DocsText>{`<Pagination itemsTotal={101} initalPage={11} onClick={handleClick}/>`}</DocsText>
             <Separator />
@@ -75,7 +75,7 @@ onClick={handleClick} />
             <Description>Set how many items per page.</Description>
             <DocsTile centered>
                 <Pagination itemsTotal={101} itemsPerPage={25}
-onClick={handleClick} />
+                    onClick={handleClick} />
             </DocsTile>
             <DocsText>{`<Pagination itemsTotal={101} itemsPerPage={25} onClick={handleClick}/>`}</DocsText>
 
@@ -85,7 +85,7 @@ onClick={handleClick} />
             <Description>Set initial page to be selected</Description>
             <DocsTile centered>
                 <Pagination itemsTotal={101} initialPage={6}
-onClick={handleClick} />
+                    onClick={handleClick} />
             </DocsTile>
             <DocsText>{`<Pagination itemsTotal={101} initalPage={6} onClick={handleClick}/>`}</DocsText>
             <Separator />
@@ -94,7 +94,7 @@ onClick={handleClick} />
             <Description>Only show page numbers, Previous and Next controls</Description>
             <DocsTile centered>
                 <Pagination itemsTotal={101} displayTotal={false}
-onClick={handleClick} />
+                    onClick={handleClick} />
             </DocsTile>
             <DocsText>{`<Pagination itemsTotal={101} displayTotal={false} onClick={handleClick}/>`}</DocsText>
             <Separator />
@@ -103,7 +103,7 @@ onClick={handleClick} />
             <Description>Customize text to show next to item total</Description>
             <DocsTile centered>
                 <Pagination itemsTotal={101} onClick={handleClick}
-totalText='Dalmations' />
+                    totalText='Dalmations' />
             </DocsTile>
             <DocsText centered>
                 {' '}

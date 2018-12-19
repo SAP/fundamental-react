@@ -253,24 +253,24 @@ class TimePickerItem extends Component {
       <div className='fd-popover__control'>
         <div className='fd-input-group fd-input-group--after'>
           <input
-            type='text'
-            className={this.state.style}
-            id={this.state.inputId}
-            placeholder={this.props.placeholder}
-            value={this.props.value}
-            onChange={this.onChange}
-            onFocus={this.onFocus}
-            onBlur={this.onBlur}
-            readOnly={disabled}
+              type='text'
+              className={this.state.style}
+              id={this.state.inputId}
+              placeholder={this.props.placeholder}
+              value={this.props.value}
+              onChange={this.onChange}
+              onFocus={this.onFocus}
+              onBlur={this.onBlur}
+              readOnly={disabled}
           />
           <span className='fd-input-group__addon fd-input-group__addon--after fd-input-group__addon--button '>
             <button
-              id={this.state.buttonID}
-              className='fd-button--light fd-button--compact sap-icon--fob-watch fd-popover__control'
-              aria-controls='rthHR811'
-              aria-expanded='false'
-              aria-haspopup='true'
-              disabled={disabled}
+                id={this.state.buttonID}
+                className='fd-button--light fd-button--compact sap-icon--fob-watch fd-popover__control'
+                aria-controls='rthHR811'
+                aria-expanded='false'
+                aria-haspopup='true'
+                disabled={disabled}
             />
           </span>
         </div>
@@ -403,32 +403,32 @@ export class TimePicker extends React.Component {
       <div id={id} className='fd-time-picker'>
         <div className='fd-popover fd-popover--no-arrow'>
           <Popover
-            id={popoverId}
-            noArrow={true}
-            control={
+              id={popoverId}
+              noArrow={true}
+              control={
               <TimePickerItem
-                id={id}
-                {...props}
-                updateValue={this.updateValue}
-                time={this.state.time}
-                value={this.state.value}
-                onChange={this.onChange}
-                placeholder={this.state.placeholder}
-                disabled={this.state.disabled}
-                updateTime={this.updateTime}
+                  id={id}
+                  {...props}
+                  updateValue={this.updateValue}
+                  time={this.state.time}
+                  value={this.state.value}
+                  onChange={this.onChange}
+                  placeholder={this.state.placeholder}
+                  disabled={this.state.disabled}
+                  updateTime={this.updateTime}
               />
             }
-            body={
+              body={
               <Time
-                id={timeId}
-                time={this.state.time}
-                showHour={this.state.showHour}
-                showMinute={this.state.showMinute}
-                showSecond={this.state.showSecond}
-                format12Hours={this.state.format12Hours}
-                disabled={this.state.disabled}
-                onChange={this.onChange}
-                onUpdateTime={this.updateTime}
+                  id={timeId}
+                  time={this.state.time}
+                  showHour={this.state.showHour}
+                  showMinute={this.state.showMinute}
+                  showSecond={this.state.showSecond}
+                  format12Hours={this.state.format12Hours}
+                  disabled={this.state.disabled}
+                  onChange={this.onChange}
+                  onUpdateTime={this.updateTime}
               />
             }
           />

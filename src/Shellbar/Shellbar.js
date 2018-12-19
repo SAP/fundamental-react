@@ -219,7 +219,7 @@ export class Shellbar extends Component {
                                                 />
                                             ) : (
                                                 <Identifier size='xs' modifier='circle'
-color={user.colorAccent}>
+                                                    color={user.colorAccent}>
                                                     {user.initials}
                                                 </Identifier>
                                             )

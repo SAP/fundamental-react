@@ -224,12 +224,12 @@ const clickBtnHandler = btn => {
                     </Button>
 
                     <Button option='emphasized' type='positive'
-glyph='accept'>
+                        glyph='accept'>
                         Approve
                     </Button>
 
                     <Button option='emphasized' type='negative'
-glyph='decline'>
+                        glyph='decline'>
                         Reject
                     </Button>
 
@@ -244,10 +244,10 @@ glyph='decline'>
                     <Button option='light' glyph='filter' />
 
                     <Button option='emphasized' type='positive'
-glyph='accept' />
+                        glyph='accept' />
 
                     <Button option='emphasized' type='negative'
-glyph='decline' />
+                        glyph='decline' />
                 </div>
             </DocsTile>
             <DocsText>{buttonIconCode}</DocsText>
@@ -1010,8 +1010,8 @@ glyph='decline' />
                 ]}
             >
                 <Button type='standard' glyph=''
-option='light' compact={false}
-selected={false} disabled={false}>
+                    option='light' compact={false}
+                    selected={false} disabled={false}>
                     BUTTON
                 </Button>
             </Playground>

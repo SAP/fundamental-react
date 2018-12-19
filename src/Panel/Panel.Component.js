@@ -333,7 +333,7 @@ export const PanelComponent = () => {
                         <Tile>
                             <TileMedia>
                                 <Image size='l' type='circle'
-photo='https://placeimg.com/400/400/nature' />
+                                    photo='https://placeimg.com/400/400/nature' />
                             </TileMedia>
                             <TileContent title='Tile Title'>
                                 <p>Tile Description</p>

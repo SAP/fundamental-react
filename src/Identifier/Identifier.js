@@ -8,14 +8,14 @@ export const Identifier = props => {
   };
   return (
     <span
-      className={`${size ? 'fd-identifier--' + size : 'fd-identifier'}${
+        className={`${size ? 'fd-identifier--' + size : 'fd-identifier'}${
         glyph ? ' sap-icon--' + glyph : ''
       }${modifier ? ' fd-identifier--' + modifier : ''}${
         color ? ' fd-has-background-color-accent-' + color : ''
       }${backgroundImageUrl ? ' fd-identifier--thumbnail' : ''}`}
-      style={backgroundImageUrl && styles}
-      role={`${!children ? 'presentation' : ''}`}
-      aria-label={label}
+        style={backgroundImageUrl && styles}
+        role={`${!children ? 'presentation' : ''}`}
+        aria-label={label}
     >
       {children}
     </span>

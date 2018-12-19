@@ -325,7 +325,7 @@ export const FormsComponent = () => {
                     <FormItem>
                         <FormLabel forAttr='input-1'>Default Input</FormLabel>
                         <FormInput type='text' id='input-1'
-placeholder='Field placeholder text' />
+                            placeholder='Field placeholder text' />
                     </FormItem>
                 </FormSet>
 
@@ -335,7 +335,7 @@ placeholder='Field placeholder text' />
                             Required Input
                         </FormLabel>
                         <FormInput type='text' id='input-2'
-placeholder='Field placeholder text' />
+                            placeholder='Field placeholder text' />
                     </FormItem>
                 </FormSet>
 
@@ -345,7 +345,7 @@ placeholder='Field placeholder text' />
                             Password
                         </FormLabel>
                         <FormInput type='password' id='input-3'
-placeholder='Field placeholder text' />
+                            placeholder='Field placeholder text' />
                     </FormItem>
                 </FormSet>
 
@@ -422,7 +422,7 @@ placeholder='Field placeholder text' />
                     <FormItem>
                         <FormLabel forAttr='OatmD552'>Normal Input</FormLabel>
                         <FormInput type='text' id='OatmD552'
-placeholder='Field placeholder text' />
+                            placeholder='Field placeholder text' />
                         <FormMessage>Pellentesque metus lacus commodo eget justo ut rutrum varius nunc</FormMessage>
                     </FormItem>
                 </FormSet>
@@ -431,7 +431,7 @@ placeholder='Field placeholder text' />
                     <FormItem>
                         <FormLabel forAttr='OatmD553'>Valid Input</FormLabel>
                         <FormInput type='text' state='valid'
-id='OatmD553' placeholder='Field placeholder text' />
+                            id='OatmD553' placeholder='Field placeholder text' />
                     </FormItem>
                 </FormSet>
 
@@ -439,7 +439,7 @@ id='OatmD553' placeholder='Field placeholder text' />
                     <FormItem>
                         <FormLabel forAttr='OatmD554'>Invalid Input</FormLabel>
                         <FormInput type='text' state='invalid'
-id='OatmD554' placeholder='Field placeholder text' />
+                            id='OatmD554' placeholder='Field placeholder text' />
                         <FormMessage type='error'>
                             Pellentesque metus lacus commodo eget justo ut rutrum varius nunc
                         </FormMessage>
@@ -450,7 +450,7 @@ id='OatmD554' placeholder='Field placeholder text' />
                     <FormItem>
                         <FormLabel forAttr='OatmD555'>Warning Input</FormLabel>
                         <FormInput type='text' state='warning'
-id='OatmD555' placeholder='Field placeholder text' />
+                            id='OatmD555' placeholder='Field placeholder text' />
                         <FormMessage type='warning'>
                             Pellentesque metus lacus commodo eget justo ut rutrum varius nunc
                         </FormMessage>
@@ -461,7 +461,7 @@ id='OatmD555' placeholder='Field placeholder text' />
                     <FormItem>
                         <FormLabel forAttr='OatmD556'>Field Label</FormLabel>
                         <FormInput type='text' state='help'
-id='OatmD556' placeholder='Field placeholder text' />
+                            id='OatmD556' placeholder='Field placeholder text' />
                         <FormMessage type='help'>
                             Pellentesque metus lacus commodo eget justo ut rutrum varius nunc
                         </FormMessage>
@@ -590,17 +590,17 @@ id='OatmD556' placeholder='Field placeholder text' />
                     <FormLegend legendText='Checkboxes' />
                     <FormItem isCheck={true}>
                         <FormInput type='checkbox' id='checkbox-1'
-name='checkbox-name-1' value='' />
+                            name='checkbox-name-1' value='' />
                         <FormLabel forAttr='checkbox-1'>Option One</FormLabel>
                     </FormItem>
                     <FormItem isCheck={true}>
                         <FormInput type='checkbox' id='checkbox-2'
-name='checkbox-name-2' value='' />
+                            name='checkbox-name-2' value='' />
                         <FormLabel forAttr='checkbox-2'>Option Two</FormLabel>
                     </FormItem>
                     <FormItem isCheck={true}>
                         <FormInput type='checkbox' id='checkbox-3'
-name='checkbox-name-3' value='' />
+                            name='checkbox-name-3' value='' />
                         <FormLabel forAttr='checkbox-3'>Option Three</FormLabel>
                     </FormItem>
                 </FormFieldset>
@@ -610,21 +610,21 @@ name='checkbox-name-3' value='' />
                     <FormItem isCheck={true} isInline={true}>
                         <FormLabel forAttr='checkbox-4'>
                             <FormInput type='checkbox' id='checkbox-4'
-name='checkbox-name-4' value='' />
+                                name='checkbox-name-4' value='' />
                             Option One
                         </FormLabel>
                     </FormItem>
                     <FormItem isCheck={true} isInline={true}>
                         <FormLabel forAttr='checkbox-5'>
                             <FormInput type='checkbox' id='checkbox-5'
-name='checkbox-name-5' value='' />
+                                name='checkbox-name-5' value='' />
                             Option Two
                         </FormLabel>
                     </FormItem>
                     <FormItem isCheck={true} isInline={true}>
                         <FormLabel forAttr='checkbox-6'>
                             <FormInput type='checkbox' id='checkbox-6'
-name='checkbox-name-6' value='' />
+                                name='checkbox-name-6' value='' />
                             Option Three
                         </FormLabel>
                     </FormItem>

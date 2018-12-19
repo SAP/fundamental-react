@@ -250,7 +250,7 @@ export const DropdownComponent = () => {
                         id='jhqD0558'
                         control={
                             <Button dropdown compact
-glyph='filter'>
+                                glyph='filter'>
                                 Select
                             </Button>
                         }
@@ -301,7 +301,7 @@ glyph='filter'>
                         id='jhqD0560'
                         control={
                             <Button dropdown compact
-type='standard'>
+                                type='standard'>
                                 Select
                             </Button>
                         }
@@ -331,7 +331,7 @@ type='standard'>
                         disabled
                         control={
                             <Button dropdown glyph='filter'
-disabled>
+                                disabled>
                                 Select
                             </Button>
                         }

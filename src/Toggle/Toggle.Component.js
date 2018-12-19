@@ -62,12 +62,12 @@ export const ToggleComponent = () => {
                     Extra Small toggle
                 </Toggle>
                 <Toggle size='s' id='Yj07w605'
-checked>
+                    checked>
                     Small toggle
                 </Toggle>
                 <Toggle id='Yj07w606'>Normal toggle</Toggle>
                 <Toggle size='l' id='Yj07w607'
-checked>
+                    checked>
                     Large toggle
                 </Toggle>
             </DocsTile>
@@ -82,18 +82,18 @@ checked>
             </Description>
             <DocsTile>
                 <Toggle size='xs' id='Yj07w608'
-disabled>
+                    disabled>
                     Extra Small toggle
                 </Toggle>
                 <Toggle size='s' id='Yj07w609'
-checked disabled>
+                    checked disabled>
                     Small toggle
                 </Toggle>
                 <Toggle id='Yj07w610' disabled>
                     Normal toggle
                 </Toggle>
                 <Toggle size='l' id='Yj07w611'
-checked disabled>
+                    checked disabled>
                     Large toggle
                 </Toggle>
             </DocsTile>

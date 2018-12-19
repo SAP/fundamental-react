@@ -14,22 +14,22 @@ describe('<TimePicker />', () => {
   const showSecond = <TimePicker format12Hours={true} showSecond={true} />;
   const showHourMinute = (
     <TimePicker format12Hours={false} showHour={false}
-showMinute={true} />
+        showMinute={true} />
   );
   const showMinuteSecond = (
     <TimePicker
-      format12Hours={true}
-      showHour={false}
-      showMinute={true}
-      showSecond={true}
+        format12Hours={true}
+        showHour={false}
+        showMinute={true}
+        showSecond={true}
     />
   );
   const showHourSecond = (
     <TimePicker
-      format12Hours={true}
-      showHour={true}
-      showMinute={false}
-      showSecond={true}
+        format12Hours={true}
+        showHour={true}
+        showMinute={false}
+        showSecond={true}
     />
   );
   const noSecondTime = <TimePicker showSecond={false} />;
@@ -91,10 +91,10 @@ showMinute={true} />
 
     wrapper = mount(
       <TimePicker
-        format12Hours={false}
-        showHour={true}
-        showMinute={true}
-        showSecond={true}
+          format12Hours={false}
+          showHour={true}
+          showMinute={true}
+          showSecond={true}
       />
     );
     wrapper
@@ -106,10 +106,10 @@ showMinute={true} />
 
     wrapper = mount(
       <TimePicker
-        format12Hours={true}
-        showHour={false}
-        showMinute={true}
-        showSecond={true}
+          format12Hours={true}
+          showHour={false}
+          showMinute={true}
+          showSecond={true}
       />
     );
     wrapper
@@ -121,10 +121,10 @@ showMinute={true} />
 
     wrapper = mount(
       <TimePicker
-        format12Hours={true}
-        showHour={false}
-        showMinute={true}
-        showSecond={false}
+          format12Hours={true}
+          showHour={false}
+          showMinute={true}
+          showSecond={false}
       />
     );
     wrapper
@@ -145,10 +145,10 @@ showMinute={true} />
     // just hour and minute,  12 hr format
     wrapper = mount(
       <TimePicker
-        format12Hours={true}
-        showHour={true}
-        showMinute={true}
-        showSecond={false}
+          format12Hours={true}
+          showHour={true}
+          showMinute={true}
+          showSecond={false}
       />
     );
     wrapper
@@ -161,10 +161,10 @@ showMinute={true} />
     // just minute, 12 hr format
     wrapper = mount(
       <TimePicker
-        format12Hours={true}
-        showHour={false}
-        showMinute={true}
-        showSecond={false}
+          format12Hours={true}
+          showHour={false}
+          showMinute={true}
+          showSecond={false}
       />
     );
     wrapper
@@ -177,10 +177,10 @@ showMinute={true} />
     // just hour and minute, no 12 hr format
     wrapper = mount(
       <TimePicker
-        format12Hours={false}
-        showHour={true}
-        showMinute={true}
-        showSecond={false}
+          format12Hours={false}
+          showHour={true}
+          showMinute={true}
+          showSecond={false}
       />
     );
     wrapper
@@ -193,10 +193,10 @@ showMinute={true} />
     // just minute and second, no 12 hr format
     wrapper = mount(
       <TimePicker
-        format12Hours={false}
-        showHour={false}
-        showMinute={true}
-        showSecond={true}
+          format12Hours={false}
+          showHour={false}
+          showMinute={true}
+          showSecond={true}
       />
     );
 
@@ -218,10 +218,10 @@ showMinute={true} />
     // just minute and second, no 12 hr format
     let wrapper = mount(
       <TimePicker
-        format12Hours={true}
-        showHour={true}
-        showMinute={true}
-        showSecond={true}
+          format12Hours={true}
+          showHour={true}
+          showMinute={true}
+          showSecond={true}
       />
     );
 

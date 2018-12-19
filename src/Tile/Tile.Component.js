@@ -176,7 +176,7 @@ export const TileComponent = () => {
                 <Tile isButton={true}>
                     <TileMedia>
                         <Image size='l' type='circle'
-photo='https://placeimg.com/400/400/nature' />
+                            photo='https://placeimg.com/400/400/nature' />
                     </TileMedia>
                     <TileContent title='Tile Title'>
                         <p>Tile Description</p>
@@ -186,7 +186,7 @@ photo='https://placeimg.com/400/400/nature' />
                 <Tile isButton={true}>
                     <TileMedia>
                         <Identifier size='m' glyph='home'
-color={3} />
+                            color={3} />
                     </TileMedia>
                     <TileContent title='Tile Title'>
                         <p>Tile Description</p>
@@ -259,7 +259,7 @@ color={3} />
                     <Tile>
                         <TileMedia>
                             <Image size='l' type='circle'
-photo='https://placeimg.com/400/400/nature' />
+                                photo='https://placeimg.com/400/400/nature' />
                         </TileMedia>
                         <TileContent title='Tile Title'>
                             <p>Tile Description</p>
@@ -273,7 +273,7 @@ photo='https://placeimg.com/400/400/nature' />
                     <Tile isButton={true}>
                         <TileMedia>
                             <Identifier size='l' glyph='home'
-color={3} />
+                                color={3} />
                         </TileMedia>
                         <TileContent title='Tile Title' />
                     </Tile>

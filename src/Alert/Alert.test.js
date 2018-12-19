@@ -9,14 +9,14 @@ Enzyme.configure({ adapter: new Adapter() });
 describe('<Alert />', () => {
     const basicAlert = (
         <Alert dismissable link='#'
-linkText='link'>
+            linkText='link'>
             Default alert with a
         </Alert>
     );
 
     const basicErrorAlert = (
         <Alert dismissable type='error'
-linkText='link'>
+            linkText='link'>
             Error message with a
         </Alert>
     );

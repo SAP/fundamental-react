@@ -14,7 +14,7 @@ describe('<Modal />', () => {
   const modalFormTitle = 'Invite User';
   const infoModal = (
     <Modal show={bShow} title={modalInfoTitle}
-onClose={mockOnClose}>
+        onClose={mockOnClose}>
       <div>
         <b>The new product have been added to your catalog.</b>
         <br />
@@ -31,7 +31,7 @@ onClose={mockOnClose}>
 
   const infoNoShowModal = (
     <Modal show={false} title={modalInfoTitle}
-onClose={mockOnClose}>
+        onClose={mockOnClose}>
       <div>
         <b>The new product have been added to your catalog.</b>
         <br />
@@ -48,10 +48,10 @@ onClose={mockOnClose}>
 
   const confirmModal = (
     <Modal
-      show={bShow}
-      title={modalConfirmTitle}
-      onClose={mockOnClose}
-      actions={
+        show={bShow}
+        title={modalConfirmTitle}
+        onClose={mockOnClose}
+        actions={
         <React.Fragment>
           <button>No Way</button>
           <button>Sure</button>
@@ -66,10 +66,10 @@ onClose={mockOnClose}>
 
   const formModal = (
     <Modal
-      show={bShow}
-      title={modalFormTitle}
-      onClose={mockOnClose}
-      actions={
+        show={bShow}
+        title={modalFormTitle}
+        onClose={mockOnClose}
+        actions={
         <React.Fragment>
           <button>Cancel</button>
           <button>Invite</button>

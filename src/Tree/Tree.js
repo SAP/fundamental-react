@@ -77,11 +77,11 @@ export class Tree extends Component {
             return (
               <div key={index} className='fd-tree__col fd-tree__col--control'>
                 <button
-                  className='fd-tree__control'
-                  aria-label='expand'
-                  aria-controls='inYUX852'
-                  onClick={this.updateVisibility(row.id)}
-                  aria-pressed={this.state.iStates[row.id]}
+                    className='fd-tree__control'
+                    aria-label='expand'
+                    aria-controls='inYUX852'
+                    onClick={this.updateVisibility(row.id)}
+                    aria-pressed={this.state.iStates[row.id]}
                 />
                 <a href={element.linkUrl} className='fd-has-font-weight-semi'>
                   {element.displayText ? element.displayText : element.linkUrl}
@@ -92,11 +92,11 @@ export class Tree extends Component {
           return (
             <div key={index} className='fd-tree__col fd-tree__col--control'>
               <button
-                className='fd-tree__control'
-                aria-label='expand'
-                aria-controls='inYUX852'
-                onClick={this.updateVisibility(row.id)}
-                aria-pressed={this.state.iStates[row.id]}
+                  className='fd-tree__control'
+                  aria-label='expand'
+                  aria-controls='inYUX852'
+                  onClick={this.updateVisibility(row.id)}
+                  aria-pressed={this.state.iStates[row.id]}
               />
               {element}
             </div>
@@ -140,13 +140,13 @@ export class Tree extends Component {
       if (isChild) {
         return (
           <ul key={row.id} className={displayLevel}
-role='group'>
+              role='group'>
             <ul className='fd-tree-child'>
               <li
-                className='fd-tree__item'
-                role='treeitem'
-                aria-expanded='true'
-                key={row.id}
+                  className='fd-tree__item'
+                  role='treeitem'
+                  aria-expanded='true'
+                  key={row.id}
               >
                 <div className='fd-tree__row'>
                   {parent}
@@ -161,10 +161,10 @@ role='group'>
       depthLevel = 0;
       return (
         <li
-          className='fd-tree__item'
-          role='treeitem'
-          aria-expanded='true'
-          key={row.id}
+            className='fd-tree__item'
+            role='treeitem'
+            aria-expanded='true'
+            key={row.id}
         >
           <div className='fd-tree__row'>
             {parent}
@@ -188,14 +188,14 @@ role='group'>
               if (headers.indexOf(header) === 0) {
                 return (
                   <div
-                    key={index}
-                    className='fd-tree__col fd-tree__col--control'
+                      key={index}
+                      className='fd-tree__col fd-tree__col--control'
                   >
                     <button
-                      className='fd-tree__control '
-                      aria-label='expand'
-                      aria-pressed={this.state.expandAllClicked}
-                      onClick={e => this.openAllList(treeData, e)}
+                        className='fd-tree__control '
+                        aria-label='expand'
+                        aria-pressed={this.state.expandAllClicked}
+                        onClick={e => this.openAllList(treeData, e)}
                     />
                     {header}
                   </div>
@@ -211,7 +211,7 @@ role='group'>
         </div>
 
         <ul className='fd-tree' id=''
-role='tree'>
+            role='tree'>
           {this.createTreeList(treeData)}
         </ul>
       </div>

@@ -6,8 +6,8 @@ import { Menu, MenuItem, MenuList } from '../Menu/Menu';
 describe('<ComboboxInput />', () => {
   const defaultComboBoxInput = (
     <ComboboxInput
-      placeholder='Select Fruit'
-      menu={
+        placeholder='Select Fruit'
+        menu={
         <Menu>
           <MenuList>
             <MenuItem url='/'>Pear</MenuItem>
@@ -24,9 +24,9 @@ describe('<ComboboxInput />', () => {
 
   const compactComboBoxInput = (
     <ComboboxInput
-      placeholder='Select Fruit'
-      compact
-      menu={
+        placeholder='Select Fruit'
+        compact
+        menu={
         <Menu>
           <MenuList>
             <MenuItem url='/'>Pear</MenuItem>

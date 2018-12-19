@@ -24,8 +24,8 @@ export const TimePickerComponent = () => {
       </Description>
       <Separator />{' '}
       <Properties
-        type='Inputs'
-        properties={[
+          type='Inputs'
+          properties={[
         {
           name: 'id',
           description: 'string - Id for time picker component'

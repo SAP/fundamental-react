@@ -69,7 +69,7 @@ export const AlertComponent = () => {
             </Description>
             <DocsTile>
                 <Alert dismissable link='#'
-linkText=' link'>
+                    linkText=' link'>
                     Default alert with a{' '}
                 </Alert>
             </DocsTile>
@@ -152,7 +152,7 @@ linkText=' link'>
                 ]}
             >
                 <Alert type='' dismissable={false}
-link='#' linkText='link'>
+                    link='#' linkText='link'>
                     Default alert with a{' '}
                 </Alert>
             </Playground>

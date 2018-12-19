@@ -26,7 +26,7 @@ describe('<Tile />', () => {
 
   const disabledSimpleTile = (
     <Tile disabled={true} columnSpan={3}
-backgroundColor={8}>
+        backgroundColor={8}>
       <TileContent title='Tile Title'>
         <p>Tile Description</p>
       </TileContent>
@@ -37,7 +37,7 @@ backgroundColor={8}>
     <Tile isButton={true}>
       <TileMedia>
         <Identifier size='m' glyph='home'
-color={3} />
+            color={3} />
       </TileMedia>
       <TileContent title='Tile Title'>
         <p>Tile Description</p>
@@ -50,8 +50,8 @@ color={3} />
       <TileContent title='Tile Title' />
       <TileActions>
         <Popover
-          control={<Button type='standard' glyph='vertical-grip' />}
-          body={
+            control={<Button type='standard' glyph='vertical-grip' />}
+            body={
             <Menu>
               <MenuList>
                 <MenuItem url='/'>Option 1</MenuItem>

@@ -205,7 +205,7 @@ export class Calendar extends Component {
             }
 
             return (<li className={`fd-calendar__item${months[this.state.currentDateDisplayed.getMonth()] === element ? " is-selected" : ""}${months[this.state.todayDate.getMonth()] === element ? " fd-calendar__item--current" : ""}`} key={element}
-name={element} onClick={() => this.changeMonth(element)}>{shortenedNameMonth}</li>);
+                name={element} onClick={() => this.changeMonth(element)}>{shortenedNameMonth}</li>);
         });
 
         return (
@@ -227,7 +227,7 @@ name={element} onClick={() => this.changeMonth(element)}>{shortenedNameMonth}</l
         }
         let listOfYears = years.map(element=>{
             return (<li className={`fd-calendar__item${this.state.currentDateDisplayed.getFullYear() === element ? " is-selected" : ""}${this.state.todayDate.getFullYear() === element ? " fd-calendar__item--current" : ""}`} key={element}
-name={element} onClick={() => this.changeYear(element)}>{element}</li>);
+                name={element} onClick={() => this.changeYear(element)}>{element}</li>);
         });
         return (
             <div className='fd-calendar__months'>
@@ -491,7 +491,7 @@ name={element} onClick={() => this.changeYear(element)}>{element}</li>);
                 dateFormatted = day.getDate();
                 let copyDate = day;
                 days.push(<td className={`fd-calendar__item fd-calendar__item${this.displayIsDayOtherMonth(day)} ${this.state.todayDate.getTime() === copyDate.getTime() ? "fd-calendar__item--current" : ""} ${this.displayIsSelected(day)} ${this.displaySelectedRangeFirst(day)}${this.displaySelectedRangeLast(day)}${this.displayBetweenRange(day)} ${this.displayDisabled(day)} ${this.isDateBetween(day, blockedDates) ? "is-blocked" : ""}` } role='gridcell'
-onClick={() => this.dateClick(copyDate, enableRangeSelection)} key={copyDate}><span className='fd-calendar__text'>{dateFormatted}</span>
+                    onClick={() => this.dateClick(copyDate, enableRangeSelection)} key={copyDate}><span className='fd-calendar__text'>{dateFormatted}</span>
                 </td>);
                 day = this.addDays(day, 1);
             }

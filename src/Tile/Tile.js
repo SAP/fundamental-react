@@ -13,7 +13,7 @@ export const Tile = props => {
   } = props;
   return (
     <div
-      className={`fd-tile${disabled ? ' is-disabled' : ''}${
+        className={`fd-tile${disabled ? ' is-disabled' : ''}${
         rowSpan ? ' fd-has-grid-row-span-' + rowSpan : ''
       }${columnSpan ? ' fd-has-grid-column-span-' + columnSpan : ''}${
         colorAccent ? ' fd-has-background-color-accent-' + colorAccent : ''
@@ -22,7 +22,7 @@ export const Tile = props => {
           ? '  fd-has-background-color-background-' + backgroundColor
           : ''
       }`}
-      role={`${isButton ? 'button' : ''}`}
+        role={`${isButton ? 'button' : ''}`}
     >
       {children}
     </div>
@@ -66,8 +66,8 @@ export const ProductTile = props => {
   const { isButton, disabled, children } = props;
   return (
     <div
-      className={`fd-product-tile${disabled ? ' is-disabled' : ''}`}
-      role={`${isButton ? 'button' : ''}`}
+        className={`fd-product-tile${disabled ? ' is-disabled' : ''}`}
+        role={`${isButton ? 'button' : ''}`}
     >
       {children}
     </div>
@@ -97,8 +97,8 @@ export const ProductTileMedia = props => {
   const { image } = props;
   return (
     <div
-      className='fd-product-tile__media'
-      style={{ backgroundImage: 'url(' + image + ')' }}
+        className='fd-product-tile__media'
+        style={{ backgroundImage: 'url(' + image + ')' }}
     />
   );
 };
@@ -111,7 +111,7 @@ export const TileGrid = props => {
   const { col, children } = props;
   return (
     <div
-      className={`fd-tile-grid${
+        className={`fd-tile-grid${
         col ? ' fd-tile-grid--' + col + 'col' : 'fd-tile-grid--3col"'
       }`}
     >

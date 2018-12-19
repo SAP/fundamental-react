@@ -665,8 +665,8 @@ export const IconComponent = () => {
       <Separator />
 
       <Properties
-        type='Inputs'
-        properties={[
+          type='Inputs'
+          properties={[
           { name: 'glyph', description: 'string (required) - Icon name.' },
           {
             name: 'size',
@@ -697,8 +697,8 @@ export const IconComponent = () => {
 
       <h2>Playground Icon</h2>
       <Playground
-        component='icon'
-        schema={[
+          component='icon'
+          schema={[
           {
             attribute: 'glyph',
             typeOfAttribute: 'string',

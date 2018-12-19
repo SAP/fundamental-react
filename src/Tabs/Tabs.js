@@ -42,12 +42,12 @@ export class TabComponent extends Component {
             return (
               <li className='fd-tabs__item' key={id.id}>
                 <Link
-                  aria-disabled={id.disabled}
-                  className={`fd-tabs__link${
+                    aria-disabled={id.disabled}
+                    className={`fd-tabs__link${
                     this.state.selectedTab === id.id ? ' is-selected' : ''
                   }`}
-                  to={{ pathname: id.url }}
-                  onClick={e => {
+                    to={{ pathname: id.url }}
+                    onClick={e => {
                     !id.disabled && this.handleTabSelection(e, id, id.disabled);
                   }}
                 >

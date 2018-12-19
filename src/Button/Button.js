@@ -17,17 +17,17 @@ export const Button = props => {
   } = props;
   return (
     <button
-      className={`${option ? 'fd-button--' + option : ' fd-button'}${
+        className={`${option ? 'fd-button--' + option : ' fd-button'}${
         type ? ' fd-button--' + type : ''
       }${dropdown ? ' fd-dropdown__control' : ''}${
         compact ? ' fd-button--compact' : ''
       }${glyph ? ' sap-icon--' + glyph : ''}${
         navbar ? ' fd-global-nav__btn' : ''
       }${selected ? ' is-selected' : ''}${disabled ? ' is-disabled' : ''}`}
-      selected={selected ? selected : false}
-      disabled={disabled ? disabled : false}
-      type={typeAttr}
-      onClick={onclick}
+        selected={selected ? selected : false}
+        disabled={disabled ? disabled : false}
+        type={typeAttr}
+        onClick={onclick}
     >
       {children}
     </button>
@@ -51,7 +51,7 @@ export const ButtonGroup = props => {
   const { children } = props;
   return (
     <div className='fd-button-group' role='group'
-aria-label='Group label'>
+        aria-label='Group label'>
       {children}
     </div>
   );

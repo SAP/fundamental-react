@@ -18,7 +18,7 @@ describe('<Calendar />', () => {
   );
   const blockedDays = (
     <Calendar
-      blockedDates={[
+        blockedDates={[
         new Date(2018, 1, 1, 0, 0, 0, 0),
         new Date(2018, 3, 3, 0, 0, 0, 0)
       ]}
@@ -26,7 +26,7 @@ describe('<Calendar />', () => {
   );
   const disabledDates = (
     <Calendar
-      disabledDates={[
+        disabledDates={[
         new Date(2018, 1, 1, 0, 0, 0, 0),
         new Date(2018, 3, 3, 0, 0, 0, 0)
       ]}

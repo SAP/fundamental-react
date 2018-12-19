@@ -108,12 +108,12 @@ export class MegaMenuList extends Component {
                                             return (
                                                 <li className='fd-mega-menu__subitem' key={ch.id}>
                                                    {ch.link ? ( <Link
-                                                        className={`fd-mega-menu__sublink${
+                                                       className={`fd-mega-menu__sublink${
                                                             this.state.selectedItem === ch.id ? ' is-selected' : ''
                                                         }`}
-                                                        to={{ pathname: ch.link }}
-                                                        key={ch.id}
-                                                        onClick={e => this.handleSelectChild(e, ch.id)}
+                                                       to={{ pathname: ch.link }}
+                                                       key={ch.id}
+                                                       onClick={e => this.handleSelectChild(e, ch.id)}
                                                     >
                                                         {ch.name}
                                                     </Link>) : null}

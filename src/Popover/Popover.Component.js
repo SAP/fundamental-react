@@ -132,7 +132,7 @@ export const PopoverComponent = () => {
                     id='jhqD0556'
                     alignment='right'
                     control={<Image size='m' type='circle'
-photo='https://placeimg.com/400/400/nature' />}
+                        photo='https://placeimg.com/400/400/nature' />}
                     body={
                         <Menu>
                             <MenuList>
@@ -148,7 +148,7 @@ photo='https://placeimg.com/400/400/nature' />}
                 <Popover
                     id='jhqD0557'
                     control={<Identifier size='m' glyph='money-bills'
-color={6} />}
+                        color={6} />}
                     noArrow
                     body={
                         <Menu>

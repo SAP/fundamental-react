@@ -118,7 +118,7 @@ export const NavbarComponent = () => {
                     <NavbarGroup alignment='left'>
                         <NavbarElement type='side-menu'>
                             <Button option='light' glyph='menu2'
-navbar />
+                                navbar />
                         </NavbarElement>
                         <NavbarElement type='logo' noMargin='left' />
                         <NavbarElement type='product-name'>Product Name</NavbarElement>
@@ -160,9 +160,9 @@ navbar />
 
                         <NavbarActions>
                             <Button option='light' glyph='search'
-navbar />
+                                navbar />
                             <Button option='light' glyph='action-settings'
-navbar />
+                                navbar />
                             <Button option='light' navbar>
                                 <Identifier size='s' modifier='circle'>
                                     WW

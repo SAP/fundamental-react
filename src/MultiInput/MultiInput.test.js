@@ -25,18 +25,18 @@ describe('MultiInput />', () => {
   ];
   const multiInput = (
     <MultiInput
-      data={data}
-      onTagsUpdate={mockOnTagsUpdate}
-      placeHolder='Select a Fruit'
+        data={data}
+        onTagsUpdate={mockOnTagsUpdate}
+        placeHolder='Select a Fruit'
     />
   );
 
   const compactMultiInput = (
     <MultiInput
-      data={data}
-      onTagsUpdate={mockOnTagsUpdate}
-      placeHolder='Select a Fruit'
-      compact={true}
+        data={data}
+        onTagsUpdate={mockOnTagsUpdate}
+        placeHolder='Select a Fruit'
+        compact={true}
     />
   );
 

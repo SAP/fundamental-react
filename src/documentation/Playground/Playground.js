@@ -163,7 +163,7 @@ export class Playground extends Component {
                             <label>{item.attribute === 'children' ? 'content' : item.attribute}</label>
                             {item.enum ? (
                                 <select className='form-control' onChange={this.updateComponent}
-name={item.attribute}>
+                                    name={item.attribute}>
                                     {item.enum.map(enumItem => (
                                         <option key={enumItem} value={enumItem}>
                                             {enumItem}
@@ -188,14 +188,14 @@ name={item.attribute}>
                             <label>{item.attribute}</label>
                             {item.enum ? (
                                 <select className='form-control' onChange={this.updateComponent}
-name={item.attribute}>
+                                    name={item.attribute}>
                                     {item.enum.map(enumItem => (
                                         <option key={enumItem}>{enumItem}</option>
                                     ))}
                                 </select>
                             ) : (
                                 <input type='text' className='form-control'
-value={item.initialValue} />
+                                    value={item.initialValue} />
                             )}
                         </div>
                     );
@@ -205,7 +205,7 @@ value={item.initialValue} />
                         <div className='form-group-sublevel' key={item.attribute}>
                             <div>Properties</div>
                             <input type='checkbox' onChange={this.updateComponent}
-name={item.attribute} />
+                                name={item.attribute} />
                             <label className='tn-form__label'>{item.attribute}</label>
                         </div>
                     );

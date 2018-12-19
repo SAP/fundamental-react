@@ -9,7 +9,7 @@ Enzyme.configure({ adapter: new Adapter() });
 describe('<SideNavigation />', () => {
   const subSideNavList = (
     <SideNavList
-      items={[
+        items={[
         { id: 'item-1', url: '#', name: 'Link Item 1' },
         {
           id: 'item-2',
@@ -45,7 +45,7 @@ describe('<SideNavigation />', () => {
   const oneLevelSideNav = (
     <SideNav>
       <SideNavList
-        items={[
+          items={[
           { id: 'item-1', url: '#', name: 'Link Item' },
           { id: 'item-2', url: '#', name: 'Link Item' },
           { id: 'item-3', url: '#', name: 'Link Item' },
@@ -60,7 +60,7 @@ describe('<SideNavigation />', () => {
     <SideNav>
       <SideNavGroup title='Group Title'>
         <SideNavList
-          items={[
+            items={[
             { id: 'item_1', link: '/', name: 'Link Item' },
             { id: 'item_2', link: '/', name: 'Link Item' },
             { id: 'item_3', link: '/', name: 'Link Item' },
@@ -71,7 +71,7 @@ describe('<SideNavigation />', () => {
       </SideNavGroup>
       <SideNavGroup title='Group Title'>
         <SideNavList
-          items={[
+            items={[
             { id: 'item_6', link: '/', name: 'Link Item' },
             { id: 'item_7', link: '/', name: 'Link Item' },
             { id: 'item_8', link: '/', name: 'Link Item' },
@@ -88,7 +88,7 @@ describe('<SideNavigation />', () => {
   const sideNavWithIcons = (
     <SideNav>
       <SideNavList
-        items={[
+          items={[
           { id: 'item_1', link: '/', name: 'Link Item', glyph: 'home' },
           { id: 'item_2', link: '/', name: 'Link Item', glyph: 'home' },
           { id: 'item_3', link: '/', name: 'Link Item', glyph: 'home' },
@@ -102,7 +102,7 @@ describe('<SideNavigation />', () => {
   const sideNavCollapsed = (
     <SideNav icons={true}>
       <SideNavList
-        items={[
+          items={[
           { id: 'item-1', url: '#', glyph: 'home' },
           { id: 'item-2', url: '#', glyph: 'home' },
           { id: 'item-3', url: '#', glyph: 'home' },
@@ -115,7 +115,7 @@ describe('<SideNavigation />', () => {
 
   const sideNavList = (
     <SideNavList
-      items={[
+        items={[
         { id: 'item-1', url: '#', glyph: 'home' },
         { id: 'item-2', url: '#', glyph: 'home' },
         { id: 'item-3', url: '#', glyph: 'home' },

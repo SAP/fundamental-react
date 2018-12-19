@@ -51,11 +51,11 @@ export const ImageComponent = () => {
             <DocsTile centered>
                 <div className='fd-doc__margin'>
                     <Image size='s' type='circle'
-photo='https://placeimg.com/400/400/nature' />
+                        photo='https://placeimg.com/400/400/nature' />
                     <Image size='m' type='circle'
-photo='https://placeimg.com/400/400/nature' />
+                        photo='https://placeimg.com/400/400/nature' />
                     <Image size='l' type='circle'
-photo='https://placeimg.com/400/400/nature' />
+                        photo='https://placeimg.com/400/400/nature' />
                 </div>
             </DocsTile>
             <DocsText>{shapesImageCode}</DocsText>
@@ -82,7 +82,7 @@ photo='https://placeimg.com/400/400/nature' />
                 ]}
             >
                 <Image size='s' type=''
-photo='https://placeimg.com/400/400/nature' />
+                    photo='https://placeimg.com/400/400/nature' />
             </Playground>
         </div>
     );

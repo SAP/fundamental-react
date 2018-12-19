@@ -102,7 +102,7 @@ export const FormSelect = props => {
     const { id, name, disabled, children } = props;
     return (
         <select className='fd-form__control' id={id}
-name={name} disabled={disabled ? true : ''}>
+            name={name} disabled={disabled ? true : ''}>
             {children}
         </select>
     );

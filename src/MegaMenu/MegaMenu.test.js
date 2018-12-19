@@ -9,7 +9,7 @@ Enzyme.configure({ adapter: new Adapter() });
 describe('<MegaMenu />', () => {
   const menuListURL = (
     <MegaMenuList
-      items={[
+        items={[
         { id: 'item_1', url: '#', name: 'Link Item' },
         {
           id: 'item_2',
@@ -36,7 +36,7 @@ describe('<MegaMenu />', () => {
 
   const menuListLink = (
     <MegaMenuList
-      items={[
+        items={[
         { id: 'item_6', link: '#', name: 'Link Item' },
         { id: 'item_7', link: '#', name: 'Link Item' },
         {

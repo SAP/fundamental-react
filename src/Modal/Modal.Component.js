@@ -179,7 +179,7 @@ export class ModalComponent extends Component {
                         Show Information Modal
                     </button>
                     <Modal show={this.state.bShowInfoModal} title='Product Added'
-onClose={this.showHideModal}>
+                        onClose={this.showHideModal}>
                         <div>
                             <b>The new product have been added to your catalog.</b>
                             <br />

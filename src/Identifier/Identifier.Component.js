@@ -96,19 +96,19 @@ export const IdentifierComponent = () => {
             <h2>Circle</h2>
             <DocsTile centered>
                 <Identifier size='xxs' glyph='washing-machine'
-modifier='circle' />
+                    modifier='circle' />
                 <Identifier size='xs' glyph='washing-machine'
-modifier='circle' />
+                    modifier='circle' />
                 <Identifier size='s' glyph='washing-machine'
-modifier='circle' />
+                    modifier='circle' />
                 <Identifier size='m' glyph='washing-machine'
-modifier='circle' />
+                    modifier='circle' />
                 <Identifier size='l' glyph='washing-machine'
-modifier='circle' />
+                    modifier='circle' />
                 <Identifier size='xl' glyph='washing-machine'
-modifier='circle' />
+                    modifier='circle' />
                 <Identifier size='xxl' glyph='washing-machine'
-modifier='circle' />
+                    modifier='circle' />
             </DocsTile>
             <DocsText>{circleCode}</DocsText>
 
@@ -117,19 +117,19 @@ modifier='circle' />
             <h2>Background image</h2>
             <DocsTile centered>
                 <Identifier size='xxs' backgroundImageUrl='https://placeimg.com/400/400/nature'
-modifier='circle' />
+                    modifier='circle' />
                 <Identifier size='xs' backgroundImageUrl='https://placeimg.com/400/400/nature'
-modifier='circle' />
+                    modifier='circle' />
                 <Identifier size='s' backgroundImageUrl='https://placeimg.com/400/400/nature'
-modifier='circle' />
+                    modifier='circle' />
                 <Identifier size='m' backgroundImageUrl='https://placeimg.com/400/400/nature'
-modifier='circle' />
+                    modifier='circle' />
                 <Identifier size='l' backgroundImageUrl='https://placeimg.com/400/400/nature'
-modifier='circle' />
+                    modifier='circle' />
                 <Identifier size='xl' backgroundImageUrl='https://placeimg.com/400/400/nature'
-modifier='circle' />
+                    modifier='circle' />
                 <Identifier size='xxl' backgroundImageUrl='https://placeimg.com/400/400/nature'
-modifier='circle' />
+                    modifier='circle' />
             </DocsTile>
             <DocsText>{backgroundImageCode}</DocsText>
 
@@ -138,9 +138,9 @@ modifier='circle' />
             <h2>Transparent</h2>
             <DocsTile centered>
                 <Identifier size='m' label='Wendy Wallace'
-modifier='transparent'>WW</Identifier>
+                    modifier='transparent'>WW</Identifier>
                 <Identifier size='l' glyph='washing-machine'
-modifier='transparent' />
+                    modifier='transparent' />
             </DocsTile>
             <DocsText>{transparentCode}</DocsText>
 
@@ -149,23 +149,23 @@ modifier='transparent' />
             <h2>Accent Colors</h2>
             <DocsTile centered>
                 <Identifier size='m' glyph='money-bills'
-color={1} />
+                    color={1} />
                 <Identifier size='m' glyph='money-bills'
-color={2} />
+                    color={2} />
                 <Identifier size='m' glyph='money-bills'
-color={3} />
+                    color={3} />
                 <Identifier size='m' glyph='money-bills'
-color={4} />
+                    color={4} />
                 <Identifier size='m' glyph='money-bills'
-color={5} />
+                    color={5} />
                 <Identifier size='m' glyph='money-bills'
-color={6} />
+                    color={6} />
                 <Identifier size='m' glyph='money-bills'
-color={7} />
+                    color={7} />
                 <Identifier size='m' glyph='money-bills'
-color={8} />
+                    color={8} />
                 <Identifier size='m' glyph='money-bills'
-color={9} />
+                    color={9} />
             </DocsTile>
             <DocsText>{accentColorsCode}</DocsText>
 
@@ -819,8 +819,8 @@ color={9} />
                         "enum": ['circle', 'transparent']
                     }]}>
                     <Identifier size='s' label='Wendy Wallace'
-glyph='money-bills' color={1}
-modifier='circle' />
+                        glyph='money-bills' color={1}
+                        modifier='circle' />
             </Playground>
         </div>
     );

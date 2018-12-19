@@ -5,8 +5,8 @@ export const Icon = props => {
   const { glyph, size, clickHandler } = props;
   return (
     <span
-      className={`${'sap-icon--' + glyph}${size ? ' sap-icon--' + size : ''}`}
-      onClick={clickHandler}
+        className={`${'sap-icon--' + glyph}${size ? ' sap-icon--' + size : ''}`}
+        onClick={clickHandler}
     />
   );
 };
