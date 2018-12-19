@@ -65,7 +65,7 @@ class TimeItem extends Component {
       aux = CLOCK.indexOf(value) ? 0 : 1;
     }
     if (format12Hours && name === 'hour' && aux === 12) {
-      let newMeridiem = time['meridiem'] ? 0 : 1;
+      let newMeridiem = time.meridiem ? 0 : 1;
       this.props.updateTime(newMeridiem, 'meridiem');
     }
     this.props.updateTime(aux, name);
@@ -79,18 +79,18 @@ class TimeItem extends Component {
    *@param {bool} format12Hours - 12 hours time format
    */
   increaseTimeObj = (name, time, format12Hours) => {
-    if (name === 'second' && parseInt(time['minute']) < 60) {
-      let newMinute = parseInt(time['minute']) + 1;
+    if (name === 'second' && parseInt(time.minute) < 60) {
+      let newMinute = parseInt(time.minute) + 1;
       let newHour;
       if (newMinute === 60) {
         newMinute = 0;
-        newHour = parseInt(time['hour']) + 1;
+        newHour = parseInt(time.hour) + 1;
         this.increaseHour(format12Hours, newHour, time);
       }
       this.props.updateTime(newMinute, 'minute');
     }
     if (name === 'minute') {
-      let newHour = parseInt(time['hour']) + 1;
+      let newHour = parseInt(time.hour) + 1;
       this.increaseHour(format12Hours, newHour, time);
     }
     if (name === 'hour' && !format12Hours) {
@@ -110,7 +110,7 @@ class TimeItem extends Component {
       this.props.updateTime(newHour, 'hour');
     } else if (format12Hours && newHour === 12) {
       this.props.updateTime(newHour, 'hour');
-      let newMeridiem = time['meridiem'] ? 0 : 1;
+      let newMeridiem = time.meridiem ? 0 : 1;
       this.props.updateTime(newMeridiem, 'meridiem');
     } else if (
       (format12Hours && newHour <= 12) ||
@@ -132,31 +132,31 @@ class TimeItem extends Component {
    */
   decreaseTimeObj = (name, time) => {
     if (name === 'second') {
-      let newMinute = parseInt(time['minute']) - 1;
-      if (parseInt(time['minute']) === 0) {
+      let newMinute = parseInt(time.minute) - 1;
+      if (parseInt(time.minute) === 0) {
         newMinute = 59;
       }
       this.props.updateTime(newMinute, 'minute');
       if (newMinute === 59) {
-        let newHour = parseInt(time['hour']) - 1;
+        let newHour = parseInt(time.hour) - 1;
         if (newHour === 0 && this.props.format12Hours) {
           newHour = 12;
         } else if (newHour < 0 && !this.props.format12Hours) {
           newHour = 23;
         } else if (newHour === 11 && this.props.format12Hours) {
-          let newMeridiem = time['meridiem'] ? 0 : 1;
+          let newMeridiem = time.meridiem ? 0 : 1;
           this.props.updateTime(newMeridiem, 'meridiem');
         }
         this.props.updateTime(newHour, 'hour');
       }
     }
-    if (name === 'minute' && parseInt(time['hour']) > 0) {
-      let newHour = parseInt(time['hour']) - 1;
+    if (name === 'minute' && parseInt(time.hour) > 0) {
+      let newHour = parseInt(time.hour) - 1;
       if (newHour === 0 && this.props.format12Hours) {
         newHour = 12;
         //change meridiem
       } else if (newHour === 11 && this.props.format12Hours) {
-        let newMeridiem = time['meridiem'] ? 0 : 1;
+        let newMeridiem = time.meridiem ? 0 : 1;
         this.props.updateTime(newMeridiem, 'meridiem');
       }
       this.props.updateTime(newHour, 'hour');
@@ -186,7 +186,7 @@ class TimeItem extends Component {
       this.decreaseTimeObj(name, time);
     }
     if (name === 'hour' && aux === 11 && format12Hours) {
-      let newMeridiem = time['meridiem'] ? 0 : 1;
+      let newMeridiem = time.meridiem ? 0 : 1;
       this.props.updateTime(newMeridiem, 'meridiem');
     }
     this.props.updateTime(aux, name);
