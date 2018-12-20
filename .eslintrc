@@ -9,6 +9,8 @@ globals:
 
 parser: 'babel-eslint'
 
+#extends: 'react-app'
+
 plugins:
     - jsx-a11y
     - loosely-restrict-imports

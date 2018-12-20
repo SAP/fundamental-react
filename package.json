@@ -23,6 +23,8 @@
     "start-js": "node scripts/start.js",
     "start": "node scripts/start.js",
     "test": "node scripts/test.js",
+    "test:dev": "jest",
+    "test:coverage": "node scripts/test.js --coverage",
     "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive"
   },
   "dependencies": {
@@ -146,8 +148,5 @@
       "jsx",
       "node"
     ]
-  },
-  "eslintConfig": {
-    "extends": "react-app"
   }
 }
