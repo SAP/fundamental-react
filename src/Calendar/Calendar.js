@@ -360,7 +360,7 @@ export class Calendar extends Component {
             return false;
         }
 
-        if (weekDays.includes(daysName[date.getDay()])) {
+        if (weekDays.indexOf(daysName[date.getDay()] > 0)) {
             return true;
         }
         return false;
