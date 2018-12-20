@@ -8,8 +8,8 @@ Enzyme.configure({ adapter: new Adapter() });
 
 describe('<MegaMenu />', () => {
   const menuListURL = (
-    <MegaMenuList
-      items={[
+      <MegaMenuList
+          items={[
         { id: 'item_1', url: '#', name: 'Link Item' },
         {
           id: 'item_2',
@@ -25,18 +25,17 @@ describe('<MegaMenu />', () => {
         },
         { id: 'item_3', url: '#', name: 'Link Item' },
         { id: 'item_4', url: '#', name: 'Link Item' }
-      ]}
-    />
+      ]} />
   );
   const megaMenu = (
-    <MegaMenu>
-      <MegaMenuGroup title="Group Title">{menuListURL}</MegaMenuGroup>
-    </MegaMenu>
+      <MegaMenu>
+          <MegaMenuGroup title='Group Title'>{menuListURL}</MegaMenuGroup>
+      </MegaMenu>
   );
 
   const menuListLink = (
-    <MegaMenuList
-      items={[
+      <MegaMenuList
+          items={[
         { id: 'item_6', link: '#', name: 'Link Item' },
         { id: 'item_7', link: '#', name: 'Link Item' },
         {
@@ -52,14 +51,13 @@ describe('<MegaMenu />', () => {
           ]
         },
         { id: 'item_9', link: '#', name: 'Link Item' }
-      ]}
-    />
+      ]} />
   );
 
   const megaMenuLink = (
-    <MegaMenu>
-      <MegaMenuGroup title="Group Title">{menuListLink}</MegaMenuGroup>
-    </MegaMenu>
+      <MegaMenu>
+          <MegaMenuGroup title='Group Title'>{menuListLink}</MegaMenuGroup>
+      </MegaMenu>
   );
 
   test('create mega menu', () => {

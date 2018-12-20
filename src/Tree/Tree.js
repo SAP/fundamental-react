@@ -75,57 +75,55 @@ export class Tree extends Component {
           //Checks if the element is an object
           if (typeof element === 'object') {
             return (
-              <div key={index} className="fd-tree__col fd-tree__col--control">
-                <button
-                  className="fd-tree__control"
-                  aria-label="expand"
-                  aria-controls="inYUX852"
-                  onClick={this.updateVisibility(row.id)}
-                  aria-pressed={this.state.iStates[row.id]}
-                />
-                <a href={element.linkUrl} className="fd-has-font-weight-semi">
-                  {element.displayText ? element.displayText : element.linkUrl}
-                </a>
-              </div>
+                <div key={index} className='fd-tree__col fd-tree__col--control'>
+                    <button
+                        className='fd-tree__control'
+                        aria-label='expand'
+                        aria-controls='inYUX852'
+                        onClick={this.updateVisibility(row.id)}
+                        aria-pressed={this.state.iStates[row.id]} />
+                    <a href={element.linkUrl} className='fd-has-font-weight-semi'>
+                        {element.displayText ? element.displayText : element.linkUrl}
+                    </a>
+                </div>
             );
           }
           return (
-            <div key={index} className="fd-tree__col fd-tree__col--control">
-              <button
-                className="fd-tree__control"
-                aria-label="expand"
-                aria-controls="inYUX852"
-                onClick={this.updateVisibility(row.id)}
-                aria-pressed={this.state.iStates[row.id]}
-              />
-              {element}
-            </div>
+              <div key={index} className='fd-tree__col fd-tree__col--control'>
+                  <button
+                      className='fd-tree__control'
+                      aria-label='expand'
+                      aria-controls='inYUX852'
+                      onClick={this.updateVisibility(row.id)}
+                      aria-pressed={this.state.iStates[row.id]} />
+                  {element}
+              </div>
           );
         }
 
         if (row.values.indexOf(element) === 0) {
           return (
-            <div key={index} className="fd-tree__col fd-tree__col--control">
-              {typeof element === 'object' ? (
-                <a href={element.linkUrl} className="fd-has-font-weight-semi">
-                  {element.displayText ? element.displayText : element.linkUrl}
-                </a>
+              <div key={index} className='fd-tree__col fd-tree__col--control'>
+                  {typeof element === 'object' ? (
+                      <a href={element.linkUrl} className='fd-has-font-weight-semi'>
+                          {element.displayText ? element.displayText : element.linkUrl}
+                      </a>
               ) : (
                 element
               )}
-            </div>
+              </div>
           );
         }
         return (
-          <div key={index} className="fd-tree__col">
-            {typeof element === 'object' ? (
-              <a href={element.linkUrl} className="fd-has-font-weight-semi">
-                {element.displayText ? element.displayText : element.linkUrl}
-              </a>
+            <div key={index} className='fd-tree__col'>
+                {typeof element === 'object' ? (
+                    <a href={element.linkUrl} className='fd-has-font-weight-semi'>
+                        {element.displayText ? element.displayText : element.linkUrl}
+                    </a>
             ) : (
               element
             )}
-          </div>
+            </div>
         );
       });
 
@@ -139,38 +137,37 @@ export class Tree extends Component {
       }
       if (isChild) {
         return (
-          <ul key={row.id} className={displayLevel} role="group">
-            <ul className="fd-tree-child">
-              <li
-                className="fd-tree__item"
-                role="treeitem"
-                aria-expanded="true"
-                key={row.id}
-              >
-                <div className="fd-tree__row">
-                  {parent}
-                  {<Dropdown isContextual={true} />}
-                </div>
-                {tree}
-              </li>
+            <ul key={row.id} className={displayLevel}
+                role='group'>
+                <ul className='fd-tree-child'>
+                    <li
+                        className='fd-tree__item'
+                        role='treeitem'
+                        aria-expanded='true'
+                        key={row.id}>
+                        <div className='fd-tree__row'>
+                            {parent}
+                            {<Dropdown isContextual />}
+                        </div>
+                        {tree}
+                    </li>
+                </ul>
             </ul>
-          </ul>
         );
       }
       depthLevel = 0;
       return (
-        <li
-          className="fd-tree__item"
-          role="treeitem"
-          aria-expanded="true"
-          key={row.id}
-        >
-          <div className="fd-tree__row">
-            {parent}
-            {<Dropdown isContextual={true} />}
-          </div>
-          {tree}
-        </li>
+          <li
+              className='fd-tree__item'
+              role='treeitem'
+              aria-expanded='true'
+              key={row.id}>
+              <div className='fd-tree__row'>
+                  {parent}
+                  {<Dropdown isContextual />}
+              </div>
+              {tree}
+          </li>
       );
     });
 
@@ -180,44 +177,42 @@ export class Tree extends Component {
   render() {
     const { headers, treeData } = this.props;
     return (
-      <div>
-        <div className="fd-tree fd-tree--header">
-          <div className="fd-tree__row fd-tree__row--header">
-            {headers.map((header, index) => {
+        <div>
+            <div className='fd-tree fd-tree--header'>
+                <div className='fd-tree__row fd-tree__row--header'>
+                    {headers.map((header, index) => {
               if (headers.indexOf(header) === 0) {
                 return (
-                  <div
-                    key={index}
-                    className="fd-tree__col fd-tree__col--control"
-                  >
-                    <button
-                      className="fd-tree__control "
-                      aria-label="expand"
-                      aria-pressed={this.state.expandAllClicked}
-                      onClick={e => this.openAllList(treeData, e)}
-                    />
-                    {header}
-                  </div>
+                    <div
+                        key={index}
+                        className='fd-tree__col fd-tree__col--control'>
+                        <button
+                            className='fd-tree__control '
+                            aria-label='expand'
+                            aria-pressed={this.state.expandAllClicked}
+                            onClick={e => this.openAllList(treeData, e)} />
+                        {header}
+                    </div>
                 );
               }
               return (
-                <div key={index} className="fd-tree__col">
-                  {header}
-                </div>
+                  <div key={index} className='fd-tree__col'>
+                      {header}
+                  </div>
               );
             })}
-          </div>
-        </div>
+                </div>
+            </div>
 
-        <ul className="fd-tree" id="" role="tree">
-          {this.createTreeList(treeData)}
-        </ul>
-      </div>
+            <ul className='fd-tree' id=''
+                role='tree'>
+                {this.createTreeList(treeData)}
+            </ul>
+        </div>
     );
   }
 }
 Tree.propTypes = {
-  headers: PropTypes.arrayOf(PropTypes.string),
   treeData: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
@@ -226,5 +221,6 @@ Tree.propTypes = {
       children: PropTypes.array
     }).isRequired
   ).isRequired,
+  headers: PropTypes.arrayOf(PropTypes.string),
   id: PropTypes.string
 };

@@ -10,70 +10,66 @@ Enzyme.configure({ adapter: new Adapter() });
 
 describe('<Popover />', () => {
   const popOver = (
-    <Popover
-      control={<Icon glyph="cart" size="xl" />}
-      body={
-        <Menu>
-          <MenuList>
-            <MenuItem url="/">Option 1</MenuItem>
-            <MenuItem url="/">Option 2</MenuItem>
-            <MenuItem url="/">Option 3</MenuItem>
-            <MenuItem url="/">Option 4</MenuItem>
-          </MenuList>
-        </Menu>
-      }
-    />
+      <Popover
+          control={<Icon glyph='cart' size='xl' />}
+          body={
+              <Menu>
+                  <MenuList>
+                      <MenuItem url='/'>Option 1</MenuItem>
+                      <MenuItem url='/'>Option 2</MenuItem>
+                      <MenuItem url='/'>Option 3</MenuItem>
+                      <MenuItem url='/'>Option 4</MenuItem>
+                  </MenuList>
+              </Menu>
+      } />
   );
 
   const popOverDisabled = (
-    <Popover
-      control={<Icon glyph="cart" size="xl" />}
-      disabled={true}
-      body={
-        <Menu>
-          <MenuList>
-            <MenuItem url="/">Option 1</MenuItem>
-            <MenuItem url="/">Option 2</MenuItem>
-            <MenuItem url="/">Option 3</MenuItem>
-            <MenuItem url="/">Option 4</MenuItem>
-          </MenuList>
-        </Menu>
-      }
-    />
+      <Popover
+          control={<Icon glyph='cart' size='xl' />}
+          disabled
+          body={
+              <Menu>
+                  <MenuList>
+                      <MenuItem url='/'>Option 1</MenuItem>
+                      <MenuItem url='/'>Option 2</MenuItem>
+                      <MenuItem url='/'>Option 3</MenuItem>
+                      <MenuItem url='/'>Option 4</MenuItem>
+                  </MenuList>
+              </Menu>
+      } />
   );
 
   const popOverWithAlignment = (
-    <Popover
-      alignment="right"
-      control={<Icon glyph="cart" size="xl" />}
-      body={
-        <Menu>
-          <MenuList>
-            <MenuItem url="/">Option 1</MenuItem>
-            <MenuItem url="/">Option 2</MenuItem>
-            <MenuItem url="/">Option 3</MenuItem>
-            <MenuItem url="/">Option 4</MenuItem>
-          </MenuList>
-        </Menu>
-      }
-    />
+      <Popover
+          alignment='right'
+          control={<Icon glyph='cart' size='xl' />}
+          body={
+              <Menu>
+                  <MenuList>
+                      <MenuItem url='/'>Option 1</MenuItem>
+                      <MenuItem url='/'>Option 2</MenuItem>
+                      <MenuItem url='/'>Option 3</MenuItem>
+                      <MenuItem url='/'>Option 4</MenuItem>
+                  </MenuList>
+              </Menu>
+      } />
   );
 
   const popOverNoArrow = (
-    <Popover
-      control={<Icon glyph="cart" size="xl" />}
-      noArrow
-      body={
-        <Menu>
-          <MenuList>
-            <MenuItem url="/">Option 1</MenuItem>
-            <MenuItem url="/">Option 2</MenuItem>
-            <MenuItem url="/">Option 3</MenuItem>
-            <MenuItem url="/">Option 4</MenuItem>
-          </MenuList>
-        </Menu>
-      }
-    />
+      <Popover
+          control={<Icon glyph='cart' size='xl' />}
+          noArrow
+          body={
+              <Menu>
+                  <MenuList>
+                      <MenuItem url='/'>Option 1</MenuItem>
+                      <MenuItem url='/'>Option 2</MenuItem>
+                      <MenuItem url='/'>Option 3</MenuItem>
+                      <MenuItem url='/'>Option 4</MenuItem>
+                  </MenuList>
+              </Menu>
+      } />
   );
 
   test('create Popover', () => {

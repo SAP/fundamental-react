@@ -8,14 +8,14 @@ Enzyme.configure({ adapter: new Adapter() });
 
 describe('<Tree />', () => {
   const multiLevelTree = (
-    <Tree
-      headers={[
+      <Tree
+          headers={[
         'Column Header',
         'Column Header 1 ',
         'Column Header 2',
         'Status'
       ]}
-      treeData={[
+          treeData={[
         {
           id: '1',
           hasChildren: true,
@@ -89,8 +89,7 @@ describe('<Tree />', () => {
             {
               displayText: '',
               linkUrl: 'http://me.com'
-            },
-            ,
+            },,
             'Data Col 2',
             'Data Col 3',
             'INACTIVE'
@@ -103,19 +102,18 @@ describe('<Tree />', () => {
             }
           ]
         }
-      ]}
-    />
+      ]} />
   );
 
   const richTree = (
-    <Tree
-      headers={[
+      <Tree
+          headers={[
         'Column Header',
         'Column Header 1 ',
         'Column Header 2',
         'Status'
       ]}
-      treeData={[
+          treeData={[
         {
           id: '1',
           hasChildren: true,
@@ -171,8 +169,7 @@ describe('<Tree />', () => {
             }
           ]
         }
-      ]}
-    />
+      ]} />
   );
 
   test('create tree component', () => {

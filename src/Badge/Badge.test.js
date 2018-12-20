@@ -4,28 +4,28 @@ import { Badge, Label, Status } from './Badge';
 
 describe('<Badge />', () => {
   const defaultBadge = <Badge>Default</Badge>;
-  const typeBadge = <Badge type="success">Default</Badge>;
+  const typeBadge = <Badge type='success'>Default</Badge>;
 
-  const defaultPill = <Badge modifier="pill">Default</Badge>;
+  const defaultPill = <Badge modifier='pill'>Default</Badge>;
   const typePill = (
-    <Badge modifier="pill" type="success">
+      <Badge modifier='pill' type='success'>
       Default
-    </Badge>
+      </Badge>
   );
 
-  const defaultFilledBadge = <Badge modifier="filled">Default</Badge>;
+  const defaultFilledBadge = <Badge modifier='filled'>Default</Badge>;
   const typeFillBadge = (
-    <Badge modifier="filled" type="success">
+      <Badge modifier='filled' type='success'>
       Default
-    </Badge>
+      </Badge>
   );
 
   const defaultLabel = <Label>Default</Label>;
-  const typeLabel = <Label type="success">Default</Label>;
+  const typeLabel = <Label type='success'>Default</Label>;
 
   const defaultStatus = <Status>Default</Status>;
-  const typeStatus = <Status type="success">Default</Status>;
-  const iconStatus = <Status glyph="history">Default</Status>;
+  const typeStatus = <Status type='success'>Default</Status>;
+  const iconStatus = <Status glyph='history'>Default</Status>;
 
   test('create badges, pills and filled badges', () => {
     // create default badge

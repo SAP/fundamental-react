@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 export const Navbar = props => {
     const { children } = props;
     return (
-        <nav className="fd-global-nav">
+        <nav className='fd-global-nav'>
             {children}
         </nav>
     );
@@ -23,7 +23,7 @@ export const NavbarGroup = props => {
 };
 
 NavbarGroup.propTypes = {
-    alignment: PropTypes.oneOf(['','left', 'right']),
+    alignment: PropTypes.oneOf(['', 'left', 'right']),
     launchpad: PropTypes.bool
 };
 
@@ -54,5 +54,5 @@ export const NavbarElement = props => {
 };
 NavbarElement.propTypes = {
     type: PropTypes.oneOf(['search', 'context-menu', 'product-name', 'logo', 'side-menu']).isRequired,
-    noMargin: PropTypes.oneOf(['','left', 'right'])
+    noMargin: PropTypes.oneOf(['', 'left', 'right'])
 };

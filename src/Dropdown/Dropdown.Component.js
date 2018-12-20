@@ -161,16 +161,15 @@ export const DropdownComponent = () => {
                 The dropdown component let the user select one of different options. It is more flexible than the normal
                 Select.
             </Description>
-            <Import module="Dropdown" path="/fundamental-react/src/" />
+            <Import module='Dropdown' path='/fundamental-react/src/' />
 
             <Separator />
 
             <Properties
-                type="Inputs"
+                type='Inputs'
                 properties={[
-                    { name: 'standard', description: "bool - set to 'true' to enable a dropdown for toolbar." }
-                ]}
-            />
+                    { name: 'standard', description: 'bool - set to \'true\' to enable a dropdown for toolbar.' }
+                ]} />
 
             <Separator />
 
@@ -178,25 +177,24 @@ export const DropdownComponent = () => {
             <DocsTile centered>
                 <Dropdown>
                     <Popover
-                        id="jhqD0555"
+                        id='jhqD0555'
                         control={<Button dropdown>Select</Button>}
                         noArrow
                         body={
                             <Menu>
                                 <MenuList>
-                                    <MenuItem url="/">Option 1</MenuItem>
-                                    <MenuItem url="/">Option 2</MenuItem>
-                                    <MenuItem url="/">Option 3</MenuItem>
-                                    <MenuItem url="/">Option 4</MenuItem>
+                                    <MenuItem url='/'>Option 1</MenuItem>
+                                    <MenuItem url='/'>Option 2</MenuItem>
+                                    <MenuItem url='/'>Option 3</MenuItem>
+                                    <MenuItem url='/'>Option 4</MenuItem>
                                 </MenuList>
                             </Menu>
-                        }
-                    />
+                        } />
                 </Dropdown>
 
                 <Dropdown>
                     <Popover
-                        id="jhqD0556"
+                        id='jhqD0556'
                         control={
                             <Button dropdown compact>
                                 Select
@@ -206,14 +204,13 @@ export const DropdownComponent = () => {
                         body={
                             <Menu>
                                 <MenuList>
-                                    <MenuItem url="/">Option 1</MenuItem>
-                                    <MenuItem url="/">Option 2</MenuItem>
-                                    <MenuItem url="/">Option 3</MenuItem>
-                                    <MenuItem url="/">Option 4</MenuItem>
+                                    <MenuItem url='/'>Option 1</MenuItem>
+                                    <MenuItem url='/'>Option 2</MenuItem>
+                                    <MenuItem url='/'>Option 3</MenuItem>
+                                    <MenuItem url='/'>Option 4</MenuItem>
                                 </MenuList>
                             </Menu>
-                        }
-                    />
+                        } />
                 </Dropdown>
             </DocsTile>
             <DocsText>{defaultDropdownCode}</DocsText>
@@ -225,9 +222,9 @@ export const DropdownComponent = () => {
             <DocsTile centered>
                 <Dropdown>
                     <Popover
-                        id="jhqD0557"
+                        id='jhqD0557'
                         control={
-                            <Button dropdown glyph="filter">
+                            <Button dropdown glyph='filter'>
                                 Select
                             </Button>
                         }
@@ -235,21 +232,21 @@ export const DropdownComponent = () => {
                         body={
                             <Menu>
                                 <MenuList>
-                                    <MenuItem url="/">Option 1</MenuItem>
-                                    <MenuItem url="/">Option 2</MenuItem>
-                                    <MenuItem url="/">Option 3</MenuItem>
-                                    <MenuItem url="/">Option 4</MenuItem>
+                                    <MenuItem url='/'>Option 1</MenuItem>
+                                    <MenuItem url='/'>Option 2</MenuItem>
+                                    <MenuItem url='/'>Option 3</MenuItem>
+                                    <MenuItem url='/'>Option 4</MenuItem>
                                 </MenuList>
                             </Menu>
-                        }
-                    />
+                        } />
                 </Dropdown>
 
                 <Dropdown>
                     <Popover
-                        id="jhqD0558"
+                        id='jhqD0558'
                         control={
-                            <Button dropdown compact glyph="filter">
+                            <Button dropdown compact
+                                glyph='filter'>
                                 Select
                             </Button>
                         }
@@ -257,14 +254,13 @@ export const DropdownComponent = () => {
                         body={
                             <Menu>
                                 <MenuList>
-                                    <MenuItem url="/">Option 1</MenuItem>
-                                    <MenuItem url="/">Option 2</MenuItem>
-                                    <MenuItem url="/">Option 3</MenuItem>
-                                    <MenuItem url="/">Option 4</MenuItem>
+                                    <MenuItem url='/'>Option 1</MenuItem>
+                                    <MenuItem url='/'>Option 2</MenuItem>
+                                    <MenuItem url='/'>Option 3</MenuItem>
+                                    <MenuItem url='/'>Option 4</MenuItem>
                                 </MenuList>
                             </Menu>
-                        }
-                    />
+                        } />
                 </Dropdown>
             </DocsTile>
             <DocsText>{iconDropdownCode}</DocsText>
@@ -275,9 +271,9 @@ export const DropdownComponent = () => {
             <DocsTile centered>
                 <Dropdown standard>
                     <Popover
-                        id="jhqD0559"
+                        id='jhqD0559'
                         control={
-                            <Button dropdown type="standard">
+                            <Button dropdown type='standard'>
                                 Select
                             </Button>
                         }
@@ -285,21 +281,21 @@ export const DropdownComponent = () => {
                         body={
                             <Menu>
                                 <MenuList>
-                                    <MenuItem url="/">Option 1</MenuItem>
-                                    <MenuItem url="/">Option 2</MenuItem>
-                                    <MenuItem url="/">Option 3</MenuItem>
-                                    <MenuItem url="/">Option 4</MenuItem>
+                                    <MenuItem url='/'>Option 1</MenuItem>
+                                    <MenuItem url='/'>Option 2</MenuItem>
+                                    <MenuItem url='/'>Option 3</MenuItem>
+                                    <MenuItem url='/'>Option 4</MenuItem>
                                 </MenuList>
                             </Menu>
-                        }
-                    />
+                        } />
                 </Dropdown>
 
                 <Dropdown standard>
                     <Popover
-                        id="jhqD0560"
+                        id='jhqD0560'
                         control={
-                            <Button dropdown compact type="standard">
+                            <Button dropdown compact
+                                type='standard'>
                                 Select
                             </Button>
                         }
@@ -307,14 +303,13 @@ export const DropdownComponent = () => {
                         body={
                             <Menu>
                                 <MenuList>
-                                    <MenuItem url="/">Option 1</MenuItem>
-                                    <MenuItem url="/">Option 2</MenuItem>
-                                    <MenuItem url="/">Option 3</MenuItem>
-                                    <MenuItem url="/">Option 4</MenuItem>
+                                    <MenuItem url='/'>Option 1</MenuItem>
+                                    <MenuItem url='/'>Option 2</MenuItem>
+                                    <MenuItem url='/'>Option 3</MenuItem>
+                                    <MenuItem url='/'>Option 4</MenuItem>
                                 </MenuList>
                             </Menu>
-                        }
-                    />
+                        } />
                 </Dropdown>
             </DocsTile>
             <DocsText>{toolbarDropdownCode}</DocsText>
@@ -325,10 +320,11 @@ export const DropdownComponent = () => {
             <DocsTile centered>
                 <Dropdown>
                     <Popover
-                        id="jhqD0561"
+                        id='jhqD0561'
                         disabled
                         control={
-                            <Button dropdown glyph="filter" disabled>
+                            <Button dropdown glyph='filter'
+                                disabled>
                                 Select
                             </Button>
                         }
@@ -336,14 +332,13 @@ export const DropdownComponent = () => {
                         body={
                             <Menu>
                                 <MenuList>
-                                    <MenuItem url="/">Option 1</MenuItem>
-                                    <MenuItem url="/">Option 2</MenuItem>
-                                    <MenuItem url="/">Option 3</MenuItem>
-                                    <MenuItem url="/">Option 4</MenuItem>
+                                    <MenuItem url='/'>Option 1</MenuItem>
+                                    <MenuItem url='/'>Option 2</MenuItem>
+                                    <MenuItem url='/'>Option 3</MenuItem>
+                                    <MenuItem url='/'>Option 4</MenuItem>
                                 </MenuList>
                             </Menu>
-                        }
-                    />
+                        } />
                 </Dropdown>
             </DocsTile>
             <DocsText>{disabledDropdownCode}</DocsText>

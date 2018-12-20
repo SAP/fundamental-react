@@ -11,21 +11,21 @@ import {
 } from '../';
 
 export const TimePickerComponent = () => {
-  const defaultTimeCode = `<TimePicker />`;
-  const format12hoursTimeCode = `<TimePicker format12Hours={true} />`;
-  const noSecondsTimeCode = `<TimePicker showSecond={false} />`;
-  const disabledStateTimeCode = `<TimePicker disabled={true} />`;
+  const defaultTimeCode = '<TimePicker />';
+  const format12hoursTimeCode = '<TimePicker format12Hours={true} />';
+  const noSecondsTimeCode = '<TimePicker showSecond={false} />';
+  const disabledStateTimeCode = '<TimePicker disabled={true} />';
   return (
-    <div>
-      <Header>Time Picker</Header>
-      <Description>
+      <div>
+          <Header>Time Picker</Header>
+          <Description>
         The Time Picker component allows the user to easily set a time using the
         Fundamental React Time component
-      </Description>
-      <Separator/>{' '}
-      <Properties
-        type='Inputs'
-        properties={[
+          </Description>
+          <Separator />{' '}
+          <Properties
+              type='Inputs'
+              properties={[
         {
           name: 'id',
           description: 'string - Id for time picker component'
@@ -48,41 +48,41 @@ export const TimePickerComponent = () => {
           name: 'time',
           description: 'object - The time component values , contains four properties: hour with values from 01 to 12 when format12Hours is true or 00 to 23 when format12Hours is false, minute with values from 00 to 59, second with values from 00 to 59, meridiem with values 0(am), 1(pm)'
         }
-      ]}/>
-      <Separator/> {/* Default Clock */}
-      <h2>Default</h2>
-      <DocsTile>
-        <TimePicker/>
-      </DocsTile>
-      <DocsText>{defaultTimeCode}</DocsText>
-      <Separator/> {/* 12 hours Clock */}
-      <h2>12-Hour Clock</h2>
-      <Description>
+      ]} />
+          <Separator /> {/* Default Clock */}
+          <h2>Default</h2>
+          <DocsTile>
+              <TimePicker />
+          </DocsTile>
+          <DocsText>{defaultTimeCode}</DocsText>
+          <Separator /> {/* 12 hours Clock */}
+          <h2>12-Hour Clock</h2>
+          <Description>
         You can use a Meridian 12-hour clock by setting format12Hours to true{' '}
-      </Description>
-      <DocsTile>
-        <TimePicker format12Hours={true}/>
-      </DocsTile>
-      <DocsText>{format12hoursTimeCode}</DocsText>
-      <Separator/> {/* Hide Seconds */}
-      <h2>Time Picker With No Seconds</h2>
-      <Description>
+          </Description>
+          <DocsTile>
+              <TimePicker format12Hours />
+          </DocsTile>
+          <DocsText>{format12hoursTimeCode}</DocsText>
+          <Separator /> {/* Hide Seconds */}
+          <h2>Time Picker With No Seconds</h2>
+          <Description>
         To hide the seconds input set showSecond to false
-      </Description>
-      <DocsTile>
-        <TimePicker showSecond={false}/>
-      </DocsTile>
-      <DocsText>{noSecondsTimeCode}</DocsText>
-      <Separator/> {/* Disabled State */}
-      <h2>Disabled State</h2>
-      <Description>
+          </Description>
+          <DocsTile>
+              <TimePicker showSecond={false} />
+          </DocsTile>
+          <DocsText>{noSecondsTimeCode}</DocsText>
+          <Separator /> {/* Disabled State */}
+          <h2>Disabled State</h2>
+          <Description>
         The Time Picker component can be set to disabled state by setting disabled to
         true
-      </Description>
-      <DocsTile>
-        <TimePicker disabled={true}/>
-      </DocsTile>
-      <DocsText>{disabledStateTimeCode}</DocsText>
-    </div>
+          </Description>
+          <DocsTile>
+              <TimePicker disabled />
+          </DocsTile>
+          <DocsText>{disabledStateTimeCode}</DocsText>
+      </div>
   );
 };

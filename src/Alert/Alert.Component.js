@@ -3,7 +3,7 @@ import { Alert, Icon } from '../';
 import { DocsTile, DocsText, Separator, Header, Description, Import, Properties, Playground } from '../';
 
 export const AlertComponent = () => {
-    const defaultAlertCode = `<Alert dismissable link="#" linkText="link">Default alert with a </Alert>`;
+    const defaultAlertCode = '<Alert dismissable link="#" linkText="link">Default alert with a </Alert>';
 
     const warningAlertCode = `<Alert type="warning" dismissable>
     <h3>A dismissible error type alert with template.</h3>
@@ -37,28 +37,26 @@ export const AlertComponent = () => {
             <Description>
                 Alerts provide messages within the application that are color-coded to emphasize the level of urgency.
             </Description>
-            <Import module="Alert" path="/fundamental-react/src/" />
+            <Import module='Alert' path='/fundamental-react/src/' />
 
             <Separator />
 
             <Properties
-                type="Inputs"
+                type='Inputs'
                 properties={[
                     {
                         name: 'type',
                         description:
-                            "string - Determines the type of alert - 'error' (red) or 'warning' (orange). Defaults to white if no type is provided."
+                            'string - Determines the type of alert - \'error\' (red) or \'warning\' (orange). Defaults to white if no type is provided.'
                     },
                     {
                         name: 'dismissible',
                         description: 'bool - Shows a dismissible button if set to true. Default is false.'
                     }
-                ]}
-            />
+                ]} />
             <Properties
-                type="Outputs"
-                properties={[{ name: 'close', description: 'Emitted when the close button is clicked.' }]}
-            />
+                type='Outputs'
+                properties={[{ name: 'close', description: 'Emitted when the close button is clicked.' }]} />
 
             <Separator />
 
@@ -68,7 +66,8 @@ export const AlertComponent = () => {
                 feedback that an action has been executed. The user will need to dismiss the message.
             </Description>
             <DocsTile>
-                <Alert dismissable link="#" linkText=" link">
+                <Alert dismissable link='#'
+                    linkText=' link'>
                     Default alert with a{' '}
                 </Alert>
             </DocsTile>
@@ -82,7 +81,7 @@ export const AlertComponent = () => {
                 message. Apply type="warning".
             </Description>
             <DocsTile>
-                <Alert type="warning" dismissable>
+                <Alert type='warning' dismissable>
                     <h3>A dismissible error type alert with template.</h3>
                     <p>More information...</p>
                 </Alert>
@@ -98,9 +97,9 @@ export const AlertComponent = () => {
                 rectified the error. The user will need to dismiss the message. Apply type="error".
             </Description>
             <DocsTile>
-                <Alert type="error" dismissable>
-                    <Icon glyph="message-error" /> Error Message.{' '}
-                    <a href="#" class="fd-link">
+                <Alert type='error' dismissable>
+                    <Icon glyph='message-error' /> Error Message.{' '}
+                    <a href='#' className='fd-link'>
                         Learn More
                     </a>
                 </Alert>
@@ -111,9 +110,9 @@ export const AlertComponent = () => {
 
             <h2>Success Alert</h2>
             <DocsTile>
-                <Alert type="success" dismissable>
-                    <Icon glyph="message-success" /> Message Success.{' '}
-                    <a href="#" class="fd-link">
+                <Alert type='success' dismissable>
+                    <Icon glyph='message-success' /> Message Success.{' '}
+                    <a href='#' className='fd-link'>
                         Learn More
                     </a>
                 </Alert>
@@ -124,9 +123,9 @@ export const AlertComponent = () => {
 
             <h2>Information Alert</h2>
             <DocsTile>
-                <Alert type="information" dismissable>
-                    <Icon glyph="message-information" /> Information Message.{' '}
-                    <a href="#" class="fd-link">
+                <Alert type='information' dismissable>
+                    <Icon glyph='message-information' /> Information Message.{' '}
+                    <a href='#' className='fd-link'>
                         Learn More
                     </a>
                 </Alert>
@@ -137,20 +136,20 @@ export const AlertComponent = () => {
 
             <h2>Playground</h2>
             <Playground
-                component="alert"
+                component='alert'
                 schema={[
                     {
                         attribute: 'type',
                         typeOfAttribute: 'string',
-                        enum: ['', 'warning', 'error', 'information', 'success']
+                        'enum': ['', 'warning', 'error', 'information', 'success']
                     },
                     {
                         attribute: 'dismissable',
                         typeOfAttribute: 'boolean'
                     }
-                ]}
-            >
-                <Alert type="" dismissable={false} link="#" linkText="link">
+                ]}>
+                <Alert type='' dismissable={false}
+                    link='#' linkText='link'>
                     Default alert with a{' '}
                 </Alert>
             </Playground>
