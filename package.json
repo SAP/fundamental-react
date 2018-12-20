@@ -22,6 +22,8 @@
     "predeploy": "npm run build",
     "start-js": "node scripts/start.js",
     "start": "node scripts/start.js",
+    "test:coverage": "jest --coverage",
+    "test:dev": "jest",
     "test": "node scripts/test.js",
     "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive"
   },
