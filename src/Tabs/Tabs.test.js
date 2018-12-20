@@ -8,8 +8,8 @@ Enzyme.configure({ adapter: new Adapter() });
 
 describe('<Tabs />', () => {
   const tabComponent = (
-    <TabComponent
-      ids={[
+      <TabComponent
+          ids={[
         {
           id: '1',
           url: '#',
@@ -31,8 +31,7 @@ describe('<Tabs />', () => {
           content: 'Hello world 3',
           disabled: true
         }
-      ]}
-    />
+      ]} />
   );
 
   const defaultTabs = <Tabs>{tabComponent}</Tabs>;

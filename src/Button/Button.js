@@ -16,42 +16,42 @@ export const Button = props => {
     children
   } = props;
   return (
-    <button
-      className={`${option ? 'fd-button--' + option : ' fd-button'}${
+      <button
+          className={`${option ? 'fd-button--' + option : ' fd-button'}${
         type ? ' fd-button--' + type : ''
       }${dropdown ? ' fd-dropdown__control' : ''}${
         compact ? ' fd-button--compact' : ''
       }${glyph ? ' sap-icon--' + glyph : ''}${
         navbar ? ' fd-global-nav__btn' : ''
       }${selected ? ' is-selected' : ''}${disabled ? ' is-disabled' : ''}`}
-      selected={selected ? selected : false}
-      disabled={disabled ? disabled : false}
-      type={typeAttr}
-      onClick={onclick}
-    >
-      {children}
-    </button>
+          selected={selected ? selected : false}
+          disabled={disabled ? disabled : false}
+          type={typeAttr}
+          onClick={onclick}>
+          {children}
+      </button>
   );
 };
 
 Button.propTypes = {
-  option: PropTypes.oneOf(['', 'emphasized' , 'light', 'shell']),
-  type: PropTypes.oneOf(['', 'standard' , 'positive', 'negative', 'medium']),
   compact: PropTypes.bool,
+  disabled: PropTypes.bool,
+  dropdown: PropTypes.bool,
   glyph: PropTypes.string,
   navbar: PropTypes.bool,
-  dropdown: PropTypes.bool,
+  onclick: PropTypes.func,
+  option: PropTypes.oneOf(['', 'emphasized', 'light', 'shell']),
   selected: PropTypes.bool,
-  disabled: PropTypes.bool,
-  typeAttr: PropTypes.string,
-  onclick: PropTypes.func
+  type: PropTypes.oneOf(['', 'standard', 'positive', 'negative', 'medium']),
+  typeAttr: PropTypes.string
 };
 
 export const ButtonGroup = props => {
   const { children } = props;
   return (
-    <div className="fd-button-group" role="group" aria-label="Group label">
-      {children}
-    </div>
+      <div className='fd-button-group' role='group'
+          aria-label='Group label'>
+          {children}
+      </div>
   );
 };

@@ -12,8 +12,8 @@ export const Tile = props => {
     children
   } = props;
   return (
-    <div
-      className={`fd-tile${disabled ? ' is-disabled' : ''}${
+      <div
+          className={`fd-tile${disabled ? ' is-disabled' : ''}${
         rowSpan ? ' fd-has-grid-row-span-' + rowSpan : ''
       }${columnSpan ? ' fd-has-grid-column-span-' + columnSpan : ''}${
         colorAccent ? ' fd-has-background-color-accent-' + colorAccent : ''
@@ -22,29 +22,28 @@ export const Tile = props => {
           ? '  fd-has-background-color-background-' + backgroundColor
           : ''
       }`}
-      role={`${isButton ? 'button' : ''}`}
-    >
-      {children}
-    </div>
+          role={`${isButton ? 'button' : ''}`}>
+          {children}
+      </div>
   );
 };
 
 Tile.propTypes = {
-  isButton: PropTypes.bool,
-  disabled: PropTypes.bool,
-  rowSpan: PropTypes.number,
-  columnSpan: PropTypes.number,
+  backgroundColor: PropTypes.number,
   colorAccent: PropTypes.number,
-  backgroundColor: PropTypes.number
+  columnSpan: PropTypes.number,
+  disabled: PropTypes.bool,
+  isButton: PropTypes.bool,
+  rowSpan: PropTypes.number
 };
 
 export const TileContent = props => {
   const { title, children } = props;
   return (
-    <div className="fd-tile__content">
-      <h2 className="fd-tile__title">{title}</h2>
-      {children}
-    </div>
+      <div className='fd-tile__content'>
+          <h2 className='fd-tile__title'>{title}</h2>
+          {children}
+      </div>
   );
 };
 
@@ -54,38 +53,37 @@ TileContent.propTypes = {
 
 export const TileMedia = props => {
   const { children } = props;
-  return <div className="fd-tile__media">{children}</div>;
+  return <div className='fd-tile__media'>{children}</div>;
 };
 
 export const TileActions = props => {
   const { children } = props;
-  return <div className="fd-tile__actions">{children}</div>;
+  return <div className='fd-tile__actions'>{children}</div>;
 };
 
 export const ProductTile = props => {
   const { isButton, disabled, children } = props;
   return (
-    <div
-      className={`fd-product-tile${disabled ? ' is-disabled' : ''}`}
-      role={`${isButton ? 'button' : ''}`}
-    >
-      {children}
-    </div>
+      <div
+          className={`fd-product-tile${disabled ? ' is-disabled' : ''}`}
+          role={`${isButton ? 'button' : ''}`}>
+          {children}
+      </div>
   );
 };
 
 ProductTile.propTypes = {
-  isButton: PropTypes.bool,
-  disabled: PropTypes.bool
+  disabled: PropTypes.bool,
+  isButton: PropTypes.bool
 };
 
 export const ProductTileContent = props => {
   const { title, children } = props;
   return (
-    <div className="fd-product-tile__content">
-      <h2 className="fd-product-tile__title">{title}</h2>
-      {children}
-    </div>
+      <div className='fd-product-tile__content'>
+          <h2 className='fd-product-tile__title'>{title}</h2>
+          {children}
+      </div>
   );
 };
 
@@ -96,10 +94,9 @@ ProductTileContent.propTypes = {
 export const ProductTileMedia = props => {
   const { image } = props;
   return (
-    <div
-      className="fd-product-tile__media"
-      style={{ backgroundImage: 'url(' + image + ')' }}
-    />
+      <div
+          className='fd-product-tile__media'
+          style={{ backgroundImage: 'url(' + image + ')' }} />
   );
 };
 
@@ -110,13 +107,12 @@ ProductTileMedia.propTypes = {
 export const TileGrid = props => {
   const { col, children } = props;
   return (
-    <div
-      className={`fd-tile-grid${
+      <div
+          className={`fd-tile-grid${
         col ? ' fd-tile-grid--' + col + 'col' : 'fd-tile-grid--3col"'
-      }`}
-    >
-      {children}
-    </div>
+      }`}>
+          {children}
+      </div>
   );
 };
 

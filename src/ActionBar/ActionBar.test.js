@@ -9,42 +9,39 @@ import {
 
 describe('<ActionBar />', () => {
   const basicActionBar = (
-    <ActionBar>
-      <ActionBarBack />
-      <ActionBarHeader
-        title={'Page Title'}
-        description={'Action Bar Description'}
-      />
-      <ActionBarActions>
-        <button>Button</button>
-      </ActionBarActions>
-    </ActionBar>
+      <ActionBar>
+          <ActionBarBack />
+          <ActionBarHeader
+              title={'Page Title'}
+              description={'Action Bar Description'} />
+          <ActionBarActions>
+              <button>Button</button>
+          </ActionBarActions>
+      </ActionBar>
   );
 
   const mobileActionBar = (
-    <ActionBar mobile={true}>
-      <ActionBarBack />
-      <ActionBarHeader
-        title={'Page Title'}
-        description={'Action Bar Description'}
-      />
-      <ActionBarActions>
-        <button>Button</button>
-      </ActionBarActions>
-    </ActionBar>
+      <ActionBar mobile>
+          <ActionBarBack />
+          <ActionBarHeader
+              title={'Page Title'}
+              description={'Action Bar Description'} />
+          <ActionBarActions>
+              <button>Button</button>
+          </ActionBarActions>
+      </ActionBar>
   );
 
   const mobileActionBarWidthSet = (
-    <ActionBar mobile={true} width="500px">
-      <ActionBarBack />
-      <ActionBarHeader
-        title={'Page Title'}
-        description={'Action Bar Description'}
-      />
-      <ActionBarActions>
-        <button>Button</button>
-      </ActionBarActions>
-    </ActionBar>
+      <ActionBar mobile width='500px'>
+          <ActionBarBack />
+          <ActionBarHeader
+              title={'Page Title'}
+              description={'Action Bar Description'} />
+          <ActionBarActions>
+              <button>Button</button>
+          </ActionBarActions>
+      </ActionBar>
   );
 
   test('create basic Action Bar', () => {

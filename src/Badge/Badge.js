@@ -11,8 +11,8 @@ export const Badge = props => {
 };
 
 Badge.propTypes = {
-    type: PropTypes.oneOf(['', 'success', 'warning', 'error']),
-    modifier: PropTypes.oneOf(['', 'pill', 'filled'])
+    modifier: PropTypes.oneOf(['', 'pill', 'filled']),
+    type: PropTypes.oneOf(['', 'success', 'warning', 'error'])
 };
 
 export const Label = props => {
@@ -28,21 +28,20 @@ export const Status = props => {
     const { type, glyph, children } = props;
     return (
         <span
-            className={`fd-status-label${type ? ' fd-status-label--' + type : ''}${glyph ? ' sap-icon--' + glyph : ''}`}
-        >
+            className={`fd-status-label${type ? ' fd-status-label--' + type : ''}${glyph ? ' sap-icon--' + glyph : ''}`}>
             {children}
         </span>
     );
 };
 Status.propTypes = {
-    type: PropTypes.oneOf(['', 'success', 'warning', 'error', 'available', 'away', 'busy', 'offline']),
-    glyph: PropTypes.string
+    glyph: PropTypes.string,
+    type: PropTypes.oneOf(['', 'success', 'warning', 'error', 'available', 'away', 'busy', 'offline'])
 };
 
 export const Counter = props => {
     const { notification, children } = props;
     return (
-        <span className={`fd-counter${notification ? ' fd-counter--notification' : ''}`} aria-label="Unread count">
+        <span className={`fd-counter${notification ? ' fd-counter--notification' : ''}`} aria-label='Unread count'>
             {children}
         </span>
     );

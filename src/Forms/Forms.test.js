@@ -19,51 +19,49 @@ Enzyme.configure({ adapter: new Adapter() });
 
 describe('<Forms />', () => {
   const formInput = (
-    <FormSet>
-      <FormItem isInline={true} isCheck={true}>
-        <FormLabel forAttr="input-1">Default Input</FormLabel>
-        <FormInput
-          type="text"
-          id="input-1"
-          placeholder="Field placeholder text"
-        />
-      </FormItem>
-      <FormItem>
-        <FormLabel forAttr="input-1" required={true}>
+      <FormSet>
+          <FormItem isInline isCheck>
+              <FormLabel forAttr='input-1'>Default Input</FormLabel>
+              <FormInput
+                  type='text'
+                  id='input-1'
+                  placeholder='Field placeholder text' />
+          </FormItem>
+          <FormItem>
+              <FormLabel forAttr='input-1' required>
           Default Input
-        </FormLabel>
-        <FormInput
-          type="text"
-          id="input-1"
-          state="help"
-          placeholder="Field placeholder text"
-        />
-        <FormTextarea id="textarea-1">
+              </FormLabel>
+              <FormInput
+                  type='text'
+                  id='input-1'
+                  state='help'
+                  placeholder='Field placeholder text' />
+              <FormTextarea id='textarea-1'>
           Pellentesque metus lacus commodo eget justo ut rutrum varius nunc.
-        </FormTextarea>
-        <FormMessage type="help">
+              </FormTextarea>
+              <FormMessage type='help'>
           Pellentesque metus lacus commodo eget justo ut rutrum varius nunc
-        </FormMessage>
-        <FormMessage>
+              </FormMessage>
+              <FormMessage>
           Pellentesque metus lacus commodo eget justo ut rutrum varius nunc
-        </FormMessage>
-        <FormSelect id="select-1">
-          <option value="1">Duis malesuada odio volutpat elementum</option>
-          <option value="2">Suspendisse ante ligula</option>
-          <option value="3">Sed bibendum sapien at posuere interdum</option>
-        </FormSelect>
-        <FormSelect id="select-1" disabled={true}>
-          <option value="1">Duis malesuada odio volutpat elementum</option>
-        </FormSelect>
-      </FormItem>
-    </FormSet>
+              </FormMessage>
+              <FormSelect id='select-1'>
+                  <option value='1'>Duis malesuada odio volutpat elementum</option>
+                  <option value='2'>Suspendisse ante ligula</option>
+                  <option value='3'>Sed bibendum sapien at posuere interdum</option>
+              </FormSelect>
+              <FormSelect id='select-1' disabled>
+                  <option value='1'>Duis malesuada odio volutpat elementum</option>
+              </FormSelect>
+          </FormItem>
+      </FormSet>
   );
 
   const formFieldSet = (
-    <FormFieldset>
-      <FormLegend>Radio buttons</FormLegend>
-      <FormRadio
-        inputs={[
+      <FormFieldset>
+          <FormLegend>Radio buttons</FormLegend>
+          <FormRadio
+              inputs={[
           {
             id: 'radio-1',
             name: 'radio-1',
@@ -83,13 +81,12 @@ describe('<Forms />', () => {
             label: 'Option 3'
           }
         ]}
-        defaultChecked="radio-2"
-      />
-      <FormLegend legendText="Radio buttons disabled" />
-      <FormRadio
-        isInline={true}
-        disabled={true}
-        inputs={[
+              defaultChecked='radio-2' />
+          <FormLegend legendText='Radio buttons disabled' />
+          <FormRadio
+              isInline
+              disabled
+              inputs={[
           {
             id: 'radio-4',
             name: 'radio-4',
@@ -109,12 +106,11 @@ describe('<Forms />', () => {
             label: 'Option 3'
           }
         ]}
-        defaultChecked="radio-4"
-      />
-      <FormLegend legendText="Inline Radio buttons" />
-      <FormRadio
-        isInline={true}
-        inputs={[
+              defaultChecked='radio-4' />
+          <FormLegend legendText='Inline Radio buttons' />
+          <FormRadio
+              isInline
+              inputs={[
           {
             id: 'radio-7',
             name: 'radio-7',
@@ -134,11 +130,10 @@ describe('<Forms />', () => {
             label: 'Option 3'
           }
         ]}
-        defaultChecked="radio-9"
-      />
-      <FormRadio
-        disabled={true}
-        inputs={[
+              defaultChecked='radio-9' />
+          <FormRadio
+              disabled
+              inputs={[
           {
             id: 'radio-7',
             name: 'radio-7',
@@ -158,24 +153,22 @@ describe('<Forms />', () => {
             label: 'Option 3'
           }
         ]}
-        defaultChecked="radio-9"
-      />
-      <FormLegend legendText="Checkboxes" />
-      <FormItem isCheck={true}>
-        <FormInput
-          type="checkbox"
-          id="checkbox-1"
-          name="checkbox-name-1"
-          value=""
-        />
-        <FormLabel forAttr="checkbox-1">Option One</FormLabel>
-      </FormItem>
-    </FormFieldset>
+              defaultChecked='radio-9' />
+          <FormLegend legendText='Checkboxes' />
+          <FormItem isCheck>
+              <FormInput
+                  type='checkbox'
+                  id='checkbox-1'
+                  name='checkbox-name-1'
+                  value='' />
+              <FormLabel forAttr='checkbox-1'>Option One</FormLabel>
+          </FormItem>
+      </FormFieldset>
   );
 
   const formRadio = (
-    <FormRadio
-      inputs={[
+      <FormRadio
+          inputs={[
         {
           id: 'radio-1',
           name: 'radio-1',
@@ -195,8 +188,7 @@ describe('<Forms />', () => {
           label: 'Option 3'
         }
       ]}
-      defaultChecked="radio-2"
-    />
+          defaultChecked='radio-2' />
   );
 
   test('create form item', () => {
