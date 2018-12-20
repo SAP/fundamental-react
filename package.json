@@ -80,18 +80,18 @@
   "devDependencies": {
     "@babel/cli": "^7.1.5",
     "@babel/polyfill": "^7.1.5",
-    "enzyme": "^3.7.0",
     "enzyme-adapter-react-16": "^1.7.0",
+    "enzyme": "^3.7.0",
     "eslint-plugin-ie11": "^1.0.0",
     "fiori-fundamentals": "^1.4.0",
     "gh-pages": "^2.0.1",
-    "jest": "23.6.0",
     "jest-pnp-resolver": "1.0.1",
     "jest-resolve": "23.6.0",
+    "jest": "23.6.0",
     "pre-commit": "^1.2.2",
-    "react": "^16.6.3",
     "react-dom": "^16.6.3",
-    "react-test-renderer": "^16.6.3"
+    "react-test-renderer": "^16.6.3",
+    "react": "^16.6.3"
   },
   "pre-commit": {
     "colors": true,
