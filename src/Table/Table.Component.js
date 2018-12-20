@@ -125,12 +125,12 @@ export const TableComponent = () => {
         <div>
             <Header>Table</Header>
             <Description>A table is a set tabular data. Line items can support data, images and actions.</Description>
-            <Import module="Table" path="/fundamental-react/src/" />
+            <Import module='Table' path='/fundamental-react/src/' />
 
             <Separator />
 
             <Properties
-                type="Inputs"
+                type='Inputs'
                 properties={[
                     { name: 'headers', description: 'array of strings for the column headers of the table' },
                     {
@@ -138,8 +138,7 @@ export const TableComponent = () => {
                         description:
                             'array of objects that contain two properties, rowData (an array of strings containing data for each column in the row), and children (an array of objects containing additional rows).'
                     }
-                ]}
-            />
+                ]} />
 
             <Separator />
 
@@ -159,8 +158,7 @@ export const TableComponent = () => {
                         {
                             rowData: ['Data 5', 'Data 6', 'Data 7', 'Data 8']
                         }
-                    ]}
-                />
+                    ]} />
             </DocsTile>
             <DocsText>{simpleTableCode}</DocsText>
 
@@ -174,110 +172,105 @@ export const TableComponent = () => {
             </Description>
             <DocsTile>
                 <Table
-                    headers={[<input type="checkbox" />, 'Avatar', 'email', 'First Name', 'Last Name', 'Date', ' ']}
+                    headers={[<input type='checkbox' />, 'Avatar', 'email', 'First Name', 'Last Name', 'Date', ' ']}
                     tableData={[
                         {
                             rowData: [
-                                <input type="checkbox" />,
-                                <Image size="m" photo="https://robohash.org/green?size=50x50" />,
-                                <a href="#" className="fd-has-font-weight-semi">
+                                <input type='checkbox' />,
+                                <Image size='m' photo='https://robohash.org/green?size=50x50' />,
+                                <a href='#' className='fd-has-font-weight-semi'>
                                     user.name@email.com
                                 </a>,
                                 'First Name',
                                 'Last Name',
                                 '01/26/17',
                                 <Popover
-                                    control={<Button option="light" glyph="vertical-grip" />}
+                                    control={<Button option='light' glyph='vertical-grip' />}
                                     body={
                                         <Menu>
                                             <MenuList>
-                                                <MenuItem url="/">Option 1</MenuItem>
-                                                <MenuItem url="/">Option 2</MenuItem>
-                                                <MenuItem url="/">Option 3</MenuItem>
-                                                <MenuItem url="/">Option 4</MenuItem>
+                                                <MenuItem url='/'>Option 1</MenuItem>
+                                                <MenuItem url='/'>Option 2</MenuItem>
+                                                <MenuItem url='/'>Option 3</MenuItem>
+                                                <MenuItem url='/'>Option 4</MenuItem>
                                             </MenuList>
                                         </Menu>
-                                    }
-                                />
+                                    } />
                             ]
                         },
                         {
                             rowData: [
-                                <input type="checkbox" />,
-                                <Image size="m" photo="https://robohash.org/brown?size=50x50" />,
-                                <a href="#" className="fd-has-font-weight-semi">
+                                <input type='checkbox' />,
+                                <Image size='m' photo='https://robohash.org/brown?size=50x50' />,
+                                <a href='#' className='fd-has-font-weight-semi'>
                                     florence.garcia@qwerty.io
                                 </a>,
                                 'First Name',
                                 'Last Name',
                                 '07/29/18',
                                 <Popover
-                                    control={<Button option="light" glyph="vertical-grip" />}
+                                    control={<Button option='light' glyph='vertical-grip' />}
                                     body={
                                         <Menu>
                                             <MenuList>
-                                                <MenuItem url="/">Option 1</MenuItem>
-                                                <MenuItem url="/">Option 2</MenuItem>
-                                                <MenuItem url="/">Option 3</MenuItem>
-                                                <MenuItem url="/">Option 4</MenuItem>
+                                                <MenuItem url='/'>Option 1</MenuItem>
+                                                <MenuItem url='/'>Option 2</MenuItem>
+                                                <MenuItem url='/'>Option 3</MenuItem>
+                                                <MenuItem url='/'>Option 4</MenuItem>
                                             </MenuList>
                                         </Menu>
-                                    }
-                                />
+                                    } />
                             ]
                         },
                         {
                             rowData: [
-                                <input type="checkbox" />,
-                                <Image size="m" photo="https://robohash.org/Q27.png?set=set1&size=50x50" />,
-                                <a href="#" className="fd-has-font-weight-semi">
+                                <input type='checkbox' />,
+                                <Image size='m' photo='https://robohash.org/Q27.png?set=set1&size=50x50' />,
+                                <a href='#' className='fd-has-font-weight-semi'>
                                     mark.helper@qwerty.io
                                 </a>,
                                 'First Name',
                                 'Last Name',
                                 '05/26/18',
                                 <Popover
-                                    control={<Button option="light" glyph="vertical-grip" />}
+                                    control={<Button option='light' glyph='vertical-grip' />}
                                     body={
                                         <Menu>
                                             <MenuList>
-                                                <MenuItem url="/">Option 1</MenuItem>
-                                                <MenuItem url="/">Option 2</MenuItem>
-                                                <MenuItem url="/">Option 3</MenuItem>
-                                                <MenuItem url="/">Option 4</MenuItem>
+                                                <MenuItem url='/'>Option 1</MenuItem>
+                                                <MenuItem url='/'>Option 2</MenuItem>
+                                                <MenuItem url='/'>Option 3</MenuItem>
+                                                <MenuItem url='/'>Option 4</MenuItem>
                                             </MenuList>
                                         </Menu>
-                                    }
-                                />
+                                    } />
                             ]
                         },
                         {
                             rowData: [
-                                <input type="checkbox" />,
-                                <Image size="m" photo="https://robohash.org/water?&size=50x50" />,
-                                <a href="#" className="fd-has-font-weight-semi">
+                                <input type='checkbox' />,
+                                <Image size='m' photo='https://robohash.org/water?&size=50x50' />,
+                                <a href='#' className='fd-has-font-weight-semi'>
                                     user.name@email.com
                                 </a>,
                                 'First Name',
                                 'Last Name',
                                 '01/26/14',
                                 <Popover
-                                    control={<Button option="light" glyph="vertical-grip" />}
+                                    control={<Button option='light' glyph='vertical-grip' />}
                                     body={
                                         <Menu>
                                             <MenuList>
-                                                <MenuItem url="/">Option 1</MenuItem>
-                                                <MenuItem url="/">Option 2</MenuItem>
-                                                <MenuItem url="/">Option 3</MenuItem>
-                                                <MenuItem url="/">Option 4</MenuItem>
+                                                <MenuItem url='/'>Option 1</MenuItem>
+                                                <MenuItem url='/'>Option 2</MenuItem>
+                                                <MenuItem url='/'>Option 3</MenuItem>
+                                                <MenuItem url='/'>Option 4</MenuItem>
                                             </MenuList>
                                         </Menu>
-                                    }
-                                />
+                                    } />
                             ]
                         }
-                    ]}
-                />
+                    ]} />
             </DocsTile>
             <DocsText>{richTableCode}</DocsText>
         </div>

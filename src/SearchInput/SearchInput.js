@@ -56,30 +56,28 @@ export class SearchInput extends Component {
   // create search box
   createSearchInput = onAutoComplete => {
     let searchInput = (
-      <input
-        type="text"
-        className="fd-input"
-        onChange={this.handleSearch}
-        placeholder={this.props.placeHolder}
-        onKeyPress={this.checkKey}
-      />
+        <input
+            type='text'
+            className='fd-input'
+            onChange={this.handleSearch}
+            placeholder={this.props.placeHolder}
+            onKeyPress={this.checkKey} />
     );
 
     // include auto complete functionality if onAutoComplete method is passed to component
     if (onAutoComplete) {
       searchInput = (
-        <input
-          type="text"
-          className="fd-input"
-          value={this.state.searchTerm}
-          placeholder={this.props.placeHolder}
-          onChange={this.handleSearch}
-          onFocus={this.handleSearch}
-          onKeyPress={this.checkKey}
-          onBlur={() => {
+          <input
+              type='text'
+              className='fd-input'
+              value={this.state.searchTerm}
+              placeholder={this.props.placeHolder}
+              onChange={this.handleSearch}
+              onFocus={this.handleSearch}
+              onKeyPress={this.checkKey}
+              onBlur={() => {
             this.setState({ bShowList: false });
-          }}
-        />
+          }} />
       );
     }
 
@@ -95,19 +93,20 @@ export class SearchInput extends Component {
           classNames += ' is-selected';
         }
         return (
-          <li key={index}>
-            <a href="#" className={classNames} onClick={this.selectTerm}>
-              {item}
-            </a>
-          </li>
+            <li key={index}>
+                <a href='#' className={classNames}
+                    onClick={this.selectTerm}>
+                    {item}
+                </a>
+            </li>
         );
       })
     ) : (
-      <li>
-        <a href="#" className="fd-menu__item">
+        <li>
+            <a href='#' className='fd-menu__item'>
           No results found
-        </a>
-      </li>
+            </a>
+        </li>
     );
   };
 
@@ -115,49 +114,46 @@ export class SearchInput extends Component {
     const { data, onSearch, onAutoComplete } = this.props;
 
     return (
-      <div className="fd-search-input">
-        <div className="fd-popover">
-          <div className="fd-popover__control">
-            <div
-              className="fd-combobox-control"
-              aria-label="Image label"
-              aria-expanded={this.state.bShowList}
-              aria-haspopup="true"
-            >
-              <div className="fd-input-group fd-input-group--after">
-                {this.createSearchInput(onAutoComplete)}
-                <span className="fd-input-group__addon fd-input-group__addon--after fd-input-group__addon--button">
-                  <button
-                    className="fd-button--light sap-icon--search"
-                    onClick={() => onSearch(this.state.searchTerm)}
-                  />
-                </span>
-              </div>
-            </div>
-          </div>
-          {data && onAutoComplete ? (
-            <div
-              className="fd-popover__body fd-popover__body--no-arrow"
-              aria-hidden={!this.state.bShowList}
-            >
-              <nav className="fd-menu">
-                <ul className="fd-menu__list">
-                  {this.createAutoCompleteItems(data)}
-                </ul>
-              </nav>
-            </div>
+        <div className='fd-search-input'>
+            <div className='fd-popover'>
+                <div className='fd-popover__control'>
+                    <div
+                        className='fd-combobox-control'
+                        aria-label='Image label'
+                        aria-expanded={this.state.bShowList}
+                        aria-haspopup='true'>
+                        <div className='fd-input-group fd-input-group--after'>
+                            {this.createSearchInput(onAutoComplete)}
+                            <span className='fd-input-group__addon fd-input-group__addon--after fd-input-group__addon--button'>
+                                <button
+                                    className='fd-button--light sap-icon--search'
+                                    onClick={() => onSearch(this.state.searchTerm)} />
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                {data && onAutoComplete ? (
+                    <div
+                        className='fd-popover__body fd-popover__body--no-arrow'
+                        aria-hidden={!this.state.bShowList}>
+                        <nav className='fd-menu'>
+                            <ul className='fd-menu__list'>
+                                {this.createAutoCompleteItems(data)}
+                            </ul>
+                        </nav>
+                    </div>
           ) : (
             ''
           )}
+            </div>
         </div>
-      </div>
     );
   }
 }
 
 SearchInput.propTypes = {
-  placeHolder: PropTypes.string,
-  data: PropTypes.array,
   onSearch: PropTypes.func.isRequired,
+  data: PropTypes.array,
+  placeHolder: PropTypes.string,
   onAutoComplete: PropTypes.func
 };

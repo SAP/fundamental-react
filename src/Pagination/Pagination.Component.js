@@ -15,12 +15,12 @@ export const PaginationComponent = () => {
                 how to navigate through a collection. The handling of which items to display needs to be handled in the
                 function that is passed in the onClick method of the Pagination control.
             </Description>
-            <Import module="Pagination" path="/fundamental-react/src/" />
+            <Import module='Pagination' path='/fundamental-react/src/' />
 
             <Separator />
 
             <Properties
-                type="Inputs"
+                type='Inputs'
                 properties={[
                     {
                         name: 'itemsTotal',
@@ -49,8 +49,7 @@ export const PaginationComponent = () => {
                         name: 'totalText',
                         description: 'string (default: "items") - String to display next to the total number of items.'
                     }
-                ]}
-            />
+                ]} />
 
             <Separator />
 
@@ -59,50 +58,55 @@ export const PaginationComponent = () => {
             <DocsTile centered>
                 <Pagination itemsTotal={101} onClick={handleClick} />
             </DocsTile>
-            <DocsText>{`<Pagination itemsTotal={101} onClick={handleClick}/>`}</DocsText>
+            <DocsText>{'<Pagination itemsTotal={101} onClick={handleClick}/>'}</DocsText>
             <Separator />
 
             <h2>Last Page</h2>
             <Description>When the last page is active, the Next arrow should be disabled.</Description>
             <DocsTile centered>
-                <Pagination itemsTotal={101} initialPage={11} onClick={handleClick} />
+                <Pagination itemsTotal={101} initialPage={11}
+                    onClick={handleClick} />
             </DocsTile>
-            <DocsText>{`<Pagination itemsTotal={101} initalPage={11} onClick={handleClick}/>`}</DocsText>
+            <DocsText>{'<Pagination itemsTotal={101} initalPage={11} onClick={handleClick}/>'}</DocsText>
             <Separator />
 
             <h2>Items per Page</h2>
             <Description>Set how many items per page.</Description>
             <DocsTile centered>
-                <Pagination itemsTotal={101} itemsPerPage={25} onClick={handleClick} />
+                <Pagination itemsTotal={101} itemsPerPage={25}
+                    onClick={handleClick} />
             </DocsTile>
-            <DocsText>{`<Pagination itemsTotal={101} itemsPerPage={25} onClick={handleClick}/>`}</DocsText>
+            <DocsText>{'<Pagination itemsTotal={101} itemsPerPage={25} onClick={handleClick}/>'}</DocsText>
 
             <Separator />
 
             <h2>Set Initial Page</h2>
             <Description>Set initial page to be selected</Description>
             <DocsTile centered>
-                <Pagination itemsTotal={101} initialPage={6} onClick={handleClick} />
+                <Pagination itemsTotal={101} initialPage={6}
+                    onClick={handleClick} />
             </DocsTile>
-            <DocsText>{`<Pagination itemsTotal={101} initalPage={6} onClick={handleClick}/>`}</DocsText>
+            <DocsText>{'<Pagination itemsTotal={101} initalPage={6} onClick={handleClick}/>'}</DocsText>
             <Separator />
 
             <h2>Hide Total</h2>
             <Description>Only show page numbers, Previous and Next controls</Description>
             <DocsTile centered>
-                <Pagination itemsTotal={101} displayTotal={false} onClick={handleClick} />
+                <Pagination itemsTotal={101} displayTotal={false}
+                    onClick={handleClick} />
             </DocsTile>
-            <DocsText>{`<Pagination itemsTotal={101} displayTotal={false} onClick={handleClick}/>`}</DocsText>
+            <DocsText>{'<Pagination itemsTotal={101} displayTotal={false} onClick={handleClick}/>'}</DocsText>
             <Separator />
 
             <h2>Total Text</h2>
             <Description>Customize text to show next to item total</Description>
             <DocsTile centered>
-                <Pagination itemsTotal={101} onClick={handleClick} totalText="Dalmations" />
+                <Pagination itemsTotal={101} onClick={handleClick}
+                    totalText='Dalmations' />
             </DocsTile>
             <DocsText centered>
                 {' '}
-                {`<Pagination itemsTotal={101} totalText="Dalmations" onClick={handleClick}/>`}
+                {'<Pagination itemsTotal={101} totalText="Dalmations" onClick={handleClick}/>'}
             </DocsText>
             <Separator />
         </div>

@@ -145,12 +145,12 @@ export class ModalComponent extends Component {
                     To display the Modal control, pass a boolean value to the "show" property of the component. It is
                     recommended to store this value as a state property in the Parent control.
                 </Description>
-                <Import module="Modal" path="/fundamental-react/src/" />
+                <Import module='Modal' path='/fundamental-react/src/' />
 
                 <Separator />
 
                 <Properties
-                    type="Inputs"
+                    type='Inputs'
                     properties={[
                         {
                             name: 'show',
@@ -164,8 +164,7 @@ export class ModalComponent extends Component {
                             name: 'actions',
                             description: 'React.Fragment which contains <Button /> controls to render in the footer'
                         }
-                    ]}
-                />
+                    ]} />
 
                 <Separator />
 
@@ -175,10 +174,11 @@ export class ModalComponent extends Component {
                     information.
                 </Description>
                 <DocsTile centered>
-                    <button className="fd-button" onClick={this.showHideModal}>
+                    <button className='fd-button' onClick={this.showHideModal}>
                         Show Information Modal
                     </button>
-                    <Modal show={this.state.bShowInfoModal} title="Product Added" onClose={this.showHideModal}>
+                    <Modal show={this.state.bShowInfoModal} title='Product Added'
+                        onClose={this.showHideModal}>
                         <div>
                             <b>The new product have been added to your catalog.</b>
                             <br />
@@ -201,22 +201,21 @@ export class ModalComponent extends Component {
                     this case, the modal has action buttons at the bottom.
                 </Description>
                 <DocsTile centered>
-                    <button className="fd-button" onClick={this.showHideConfirmModal}>
+                    <button className='fd-button' onClick={this.showHideConfirmModal}>
                         Show Confirmation Modal
                     </button>
                     <Modal
                         show={this.state.bShowComfirmModal}
-                        title="Delete"
+                        title='Delete'
                         onClose={this.showHideConfirmModal}
                         actions={
                             <React.Fragment>
-                                <Button type="standard" onclick={() => this.showHideConfirmModal('No Way')}>
+                                <Button type='standard' onclick={() => this.showHideConfirmModal('No Way')}>
                                     No Way
                                 </Button>
                                 <Button onclick={() => this.showHideConfirmModal('Sure')}>Sure</Button>
                             </React.Fragment>
-                        }
-                    >
+                        }>
                         <div>
                             Do you want to delete item <b>X</b>?
                         </div>
@@ -228,32 +227,30 @@ export class ModalComponent extends Component {
                 <h2>Form Modal</h2>
                 <Description>This is used for short forms in order to collect information from the user.</Description>
                 <DocsTile centered>
-                    <button className="fd-button" onClick={this.showHideFormModal}>
+                    <button className='fd-button' onClick={this.showHideFormModal}>
                         Show Form Modal
                     </button>
                     <Modal
                         show={this.state.bShowFormModal}
-                        title="Invite user"
+                        title='Invite user'
                         onClose={this.showHideFormModal}
                         actions={
                             <React.Fragment>
-                                <Button type="standard" onclick={() => this.showHideFormModal('Cancel')}>
+                                <Button type='standard' onclick={() => this.showHideFormModal('Cancel')}>
                                     Cancel
                                 </Button>
                                 <Button onclick={() => this.showHideFormModal('Invite')}>Invite</Button>
                             </React.Fragment>
-                        }
-                    >
-                        <div className="fd-form__group">
-                            <div className="fd-form__item">
-                                <label className="fd-form__label is-required">Email</label>
+                        }>
+                        <div className='fd-form__group'>
+                            <div className='fd-form__item'>
+                                <label className='fd-form__label is-required'>Email</label>
                                 <input
-                                    className="fd-form__control"
-                                    type="text"
+                                    className='fd-form__control'
+                                    type='text'
                                     value={this.state.emailAddress}
                                     onChange={this.updateEmailAddress}
-                                    ref={this.txtEmailRef}
-                                />
+                                    ref={this.txtEmailRef} />
                             </div>
                         </div>
                     </Modal>

@@ -159,10 +159,11 @@ export class Playground extends Component {
             switch (item.typeOfAttribute) {
                 case 'string':
                     return (
-                        <div className="form-group-sublevel" key={item.attribute}>
+                        <div className='form-group-sublevel' key={item.attribute}>
                             <label>{item.attribute === 'children' ? 'content' : item.attribute}</label>
                             {item.enum ? (
-                                <select className="form-control" onChange={this.updateComponent} name={item.attribute}>
+                                <select className='form-control' onChange={this.updateComponent}
+                                    name={item.attribute}>
                                     {item.enum.map(enumItem => (
                                         <option key={enumItem} value={enumItem}>
                                             {enumItem}
@@ -171,43 +172,45 @@ export class Playground extends Component {
                                 </select>
                             ) : (
                                 <input
-                                    type="text"
-                                    className="form-control"
+                                    type='text'
+                                    className='form-control'
                                     value={item.initialValue}
                                     onChange={this.updateComponent}
-                                    name={item.attribute}
-                                />
+                                    name={item.attribute} />
                             )}
                         </div>
                     );
 
                 case 'number':
                     return (
-                        <div className="form-group-sublevel" key={item.attribute}>
+                        <div className='form-group-sublevel' key={item.attribute}>
                             <label>{item.attribute}</label>
                             {item.enum ? (
-                                <select className="form-control" onChange={this.updateComponent} name={item.attribute}>
+                                <select className='form-control' onChange={this.updateComponent}
+                                    name={item.attribute}>
                                     {item.enum.map(enumItem => (
                                         <option key={enumItem}>{enumItem}</option>
                                     ))}
                                 </select>
                             ) : (
-                                <input type="text" className="form-control" value={item.initialValue} />
+                                <input type='text' className='form-control'
+                                    value={item.initialValue} />
                             )}
                         </div>
                     );
 
                 case 'boolean':
                     return (
-                        <div className="form-group-sublevel" key={item.attribute}>
+                        <div className='form-group-sublevel' key={item.attribute}>
                             <div>Properties</div>
-                            <input type="checkbox" onChange={this.updateComponent} name={item.attribute} />
-                            <label className="tn-form__label">{item.attribute}</label>
+                            <input type='checkbox' onChange={this.updateComponent}
+                                name={item.attribute} />
+                            <label className='tn-form__label'>{item.attribute}</label>
                         </div>
                     );
                 case 'lists':
                     return (
-                        <div className="form-group-sublevel" key={item.attribute}>
+                        <div className='form-group-sublevel' key={item.attribute}>
                             <p>Names</p>
                             {item.enum ? (
                                 <div>
@@ -215,11 +218,10 @@ export class Playground extends Component {
                                         <div>
                                             <label>{enumItem}</label>
                                             <input
-                                                type="text"
-                                                className="form-control"
+                                                type='text'
+                                                className='form-control'
                                                 onChange={this.updateListsName}
-                                                name={enumItem}
-                                            />
+                                                name={enumItem} />
                                         </div>
                                     ))}
                                 </div>
@@ -228,7 +230,7 @@ export class Playground extends Component {
                     );
                 case 'listsContent':
                     return (
-                        <div className="form-group-sublevel" key={item.attribute}>
+                        <div className='form-group-sublevel' key={item.attribute}>
                             <p>Content</p>
                             {item.enum ? (
                                 <div>
@@ -236,11 +238,10 @@ export class Playground extends Component {
                                         <div>
                                             <label>{enumItem}</label>
                                             <input
-                                                type="text"
-                                                className="form-control"
+                                                type='text'
+                                                className='form-control'
                                                 onChange={this.updateListsContent}
-                                                name={enumItem}
-                                            />
+                                                name={enumItem} />
                                         </div>
                                     ))}
                                 </div>
@@ -250,14 +251,13 @@ export class Playground extends Component {
                 //This is used to display different type of components that belong to the same component.
                 case 'component':
                     return (
-                        <div className="form-group-sublevel" key={item.attribute}>
+                        <div className='form-group-sublevel' key={item.attribute}>
                             <label>{item.attribute}</label>
                             {item.enum ? (
                                 <select
-                                    className="form-control"
+                                    className='form-control'
                                     onChange={this.updateComponentType}
-                                    name={item.attribute}
-                                >
+                                    name={item.attribute}>
                                     {item.enum.map(enumItem => (
                                         <option key={enumItem} value={enumItem}>
                                             {enumItem}
@@ -266,12 +266,11 @@ export class Playground extends Component {
                                 </select>
                             ) : (
                                 <input
-                                    type="text"
-                                    className="form-control"
+                                    type='text'
+                                    className='form-control'
                                     value={item.initialValue}
                                     onChange={this.updateComponent}
-                                    name={item.attribute}
-                                />
+                                    name={item.attribute} />
                             )}
                         </div>
                     );
@@ -289,8 +288,7 @@ export class Playground extends Component {
                         type={this.state.childs.type}
                         dismissable={this.state.childs.dismissable}
                         link={this.state.childs.link}
-                        linkText={this.state.childs.linkText}
-                    >
+                        linkText={this.state.childs.linkText}>
                         Default alert with a{' '}
                     </Alert>
                 );
@@ -332,8 +330,7 @@ export class Playground extends Component {
                         option={this.state.childs.option}
                         compact={this.state.childs.compact}
                         disabled={this.state.childs.disabled}
-                        selected={this.state.childs.selected}
-                    >
+                        selected={this.state.childs.selected}>
                         {this.state.childs.children}
                     </Button>
                 );
@@ -357,8 +354,7 @@ export class Playground extends Component {
                             'isContextual',
                             this.state.childs.isContextual,
                             this.state.currentValues
-                        )}
-                    />
+                        )} />
                 );
                 break;
             case 'icon':
@@ -375,8 +371,7 @@ export class Playground extends Component {
                             this.retrieveValue('children', '', this.state.currentValues) === ''
                                 ? this.state.childs.glyph
                                 : null
-                        }
-                    >
+                        }>
                         {this.retrieveValue('children', this.state.childs.children, this.state.currentValues)}
                     </Identifier>
                 );
@@ -386,8 +381,7 @@ export class Playground extends Component {
                     <Image
                         size={this.state.childs.size}
                         type={this.state.childs.type}
-                        photo={this.state.childs.photo}
-                    />
+                        photo={this.state.childs.photo} />
                 );
                 break;
             case 'tabs':
@@ -400,7 +394,7 @@ export class Playground extends Component {
             case 'inputgroup':
                 componentToGenerate = (
                     <FormGroup>
-                        <FormLabel labelText="Input with text action" />
+                        <FormLabel labelText='Input with text action' />
                         <FormItem>
                             <InputGroup
                                 inputType={this.state.childs.children[1].props.children.props.inputType}
@@ -414,16 +408,14 @@ export class Playground extends Component {
                                     this.state.childs.children[1].props.children.props.inputValue,
                                     this.state.currentValues
                                 )}
-                                actions={true}
-                            >
+                                actions>
                                 <Button
-                                    option="light"
+                                    option='light'
                                     glyph={this.retrieveValue(
                                         'glyph',
                                         this.state.childs.children[1].props.children.props.children.props.glyph,
                                         this.state.currentValues
-                                    )}
-                                >
+                                    )}>
                                     {this.retrieveValue(
                                         'children',
                                         this.state.childs.children[1].props.children.props.children.props.children,
@@ -446,13 +438,12 @@ export class Playground extends Component {
                             )}
                             <ListGroupItemActions>
                                 <Button
-                                    option="light"
+                                    option='light'
                                     glyph={this.retrieveValue(
                                         'glyph',
                                         this.state.childs.children.props.children[1].props.children.props.glyph,
                                         this.state.currentValues
-                                    )}
-                                />
+                                    )} />
                             </ListGroupItemActions>
                         </ListGroupItem>
                     </ListGroup>
@@ -467,8 +458,7 @@ export class Playground extends Component {
                                     'title',
                                     this.state.childs.children.props.title,
                                     this.state.currentValues
-                                )}
-                            >
+                                )}>
                                 <p>
                                     {this.retrieveValue(
                                         'children',
@@ -478,7 +468,7 @@ export class Playground extends Component {
                                 </p>
                             </TileContent>
                             <TileActions>
-                                <Dropdown size="m" isContextual={true} />
+                                <Dropdown size='m' isContextual />
                             </TileActions>
                         </Tile>
                     );
@@ -486,32 +476,30 @@ export class Playground extends Component {
                     componentToGenerate = (
                         <Tile>
                             <TileMedia>
-                                <Image size="m" photo="https://placeimg.com/400/400/nature" />
+                                <Image size='m' photo='https://placeimg.com/400/400/nature' />
                             </TileMedia>
                             <TileContent
                                 title={this.retrieveValue(
                                     'title',
                                     this.state.childs.children.props.title,
                                     this.state.currentValues
-                                )}
-                            />
+                                )} />
                             <TileActions>
-                                <Dropdown size="m" isContextual={true} />
+                                <Dropdown size='m' isContextual />
                             </TileActions>
                         </Tile>
                     );
                 } else if (this.state.component === 'product') {
                     componentToGenerate = (
                         <Tile>
-                            <ProductTile isButton="true">
-                                <ProductTileMedia image="https://techne.yaas.io/images/product-thumbnail-wide.png" />
+                            <ProductTile isButton='true'>
+                                <ProductTileMedia image='https://techne.yaas.io/images/product-thumbnail-wide.png' />
                                 <ProductTileContent
                                     title={this.retrieveValue(
                                         'title',
                                         this.state.childs.children.props.title,
                                         this.state.currentValues
-                                    )}
-                                >
+                                    )}>
                                     <p>
                                         {this.retrieveValue(
                                             'children',
@@ -531,10 +519,10 @@ export class Playground extends Component {
         }
 
         return (
-            <div className="row general">
-                <div className="col">{componentToGenerate}</div>
-                <div className="col">
-                    <div className="schema">{data}</div>
+            <div className='row general'>
+                <div className='col'>{componentToGenerate}</div>
+                <div className='col'>
+                    <div className='schema'>{data}</div>
                 </div>
             </div>
         );

@@ -1,6 +1,6 @@
-import React from 'react'
-import { Button, ListGroup, ListGroupItem, ListGroupItemActions, ListGroupItemCheckbox } from '../'
-import { DocsTile, DocsText, Separator, Header, Description, Import, Playground } from '../'
+import React from 'react';
+import { Button, ListGroup, ListGroupItem, ListGroupItemActions, ListGroupItemCheckbox } from '../';
+import { DocsTile, DocsText, Separator, Header, Description, Import, Playground } from '../';
 
 export const ListGroupComponent = () => {
     const simpleListCode = `<ListGroup>
@@ -8,7 +8,7 @@ export const ListGroupComponent = () => {
     <ListGroupItem>List item 2</ListGroupItem>
     <ListGroupItem><a style={{cursor: 'pointer'}}>List item3</a></ListGroupItem>
     <ListGroupItem>List item 4</ListGroupItem>
-</ListGroup>`
+</ListGroup>`;
 
     const actionsListCode = `<ListGroup>
     <ListGroupItem>List item 1
@@ -31,14 +31,14 @@ export const ListGroupComponent = () => {
             <Button type="light" glyph="edit" />
         </ListGroupItemActions>
     </ListGroupItem>
-</ListGroup>`
+</ListGroup>`;
 
     const checkboxListCode = `<ListGroup>
     <ListGroupItem><ListGroupItemCheckbox>List item 1</ListGroupItemCheckbox></ListGroupItem>
     <ListGroupItem><ListGroupItemCheckbox>List item 2</ListGroupItemCheckbox></ListGroupItem>
     <ListGroupItem><ListGroupItemCheckbox>List item 3</ListGroupItemCheckbox></ListGroupItem>
     <ListGroupItem><ListGroupItemCheckbox>List item 4</ListGroupItemCheckbox></ListGroupItem>
-</ListGroup>`
+</ListGroup>`;
 
 
     return (
@@ -47,7 +47,7 @@ export const ListGroupComponent = () => {
             <Header>List Group</Header>
             <Description>Lists and tables are similar as both usually contain a vertical list of data, but lists generally contain basic data and tables tend to hold more complex data. If the list is a complex hierarchy, it is best to use a tree.
             </Description>
-            <Import module="ListGroup, ListGroupItem, ListGroupItemActions, ListGroupItemCheckbox" path="/fundamental-react/src/" />
+            <Import module='ListGroup, ListGroupItem, ListGroupItemActions, ListGroupItemCheckbox' path='/fundamental-react/src/' />
 
             <Separator />
 
@@ -71,22 +71,22 @@ export const ListGroupComponent = () => {
                 <ListGroup>
                     <ListGroupItem>List item 1
                         <ListGroupItemActions>
-                            <Button type="light" glyph="edit" />
+                            <Button type='light' glyph='edit' />
                         </ListGroupItemActions>
                     </ListGroupItem>
                     <ListGroupItem>List item 2
                         <ListGroupItemActions>
-                            <Button type="light" glyph="edit" />
+                            <Button type='light' glyph='edit' />
                         </ListGroupItemActions>
                     </ListGroupItem>
                     <ListGroupItem>List item 3
                         <ListGroupItemActions>
-                            <Button type="light" glyph="edit" />
+                            <Button type='light' glyph='edit' />
                         </ListGroupItemActions>
                     </ListGroupItem>
                     <ListGroupItem>List item 4
                         <ListGroupItemActions>
-                            <Button type="light" glyph="edit" />
+                            <Button type='light' glyph='edit' />
                         </ListGroupItemActions>
                     </ListGroupItem>
                 </ListGroup>
@@ -98,7 +98,7 @@ export const ListGroupComponent = () => {
             <h2>List with Checkboxes</h2>
             <Description>Checkboxes can be include on the left of each line for such purposes as bulk actions.</Description>
             <DocsTile>
-                 <ListGroup>
+                <ListGroup>
                     <ListGroupItem><ListGroupItemCheckbox>List item 1</ListGroupItemCheckbox></ListGroupItem>
                     <ListGroupItem><ListGroupItemCheckbox>List item 2</ListGroupItemCheckbox></ListGroupItem>
                     <ListGroupItem><ListGroupItemCheckbox>List item 3</ListGroupItemCheckbox></ListGroupItem>
@@ -110,15 +110,15 @@ export const ListGroupComponent = () => {
             <Separator />
 
             <h2>Playground</h2>
-            <Playground component="listgroup" schema= {[
+            <Playground component='listgroup' schema={[
                     {
                         attribute: 'children',
-                        typeOfAttribute: 'string',
+                        typeOfAttribute: 'string'
                     },
                     {
                         attribute: 'glyph',
                         typeOfAttribute: 'string',
-                        enum: ['',
+                        'enum': ['',
                         'accelerated',
                         'accept',
                         'accidental-leave',
@@ -745,13 +745,13 @@ export const ListGroupComponent = () => {
 
                 <ListGroup>
                     <ListGroupItem>List item 1
-                    <ListGroupItemActions>
-                            <Button type="secondary" glyph="edit" />
+                        <ListGroupItemActions>
+                            <Button type='secondary' glyph='edit' />
                         </ListGroupItemActions>
                     </ListGroupItem>
                 </ListGroup>
-                
+
             </Playground>
         </div>
     );
-}
+};

@@ -4,7 +4,7 @@ import { BrowserRouter, Link } from 'react-router-dom';
 
 export const Breadcrumb = props => {
     const { children } = props;
-    return <ul className="fd-breadcrumb">{children}</ul>;
+    return <ul className='fd-breadcrumb'>{children}</ul>;
 };
 
 export const BreadcrumbItem = props => {
@@ -13,8 +13,8 @@ export const BreadcrumbItem = props => {
         <React.Fragment>
             {link ? (
                 <BrowserRouter>
-                    <li className="fd-breadcrumb__item">
-                        <Link className="fd-breadcrumb__link" to={{ pathname: link }}>
+                    <li className='fd-breadcrumb__item'>
+                        <Link className='fd-breadcrumb__link' to={{ pathname: link }}>
                             {name}
                         </Link>
                     </li>
@@ -23,8 +23,8 @@ export const BreadcrumbItem = props => {
 
             {url ? (
                 <BrowserRouter>
-                    <li className="fd-breadcrumb__item">
-                        <a className="fd-breadcrumb__link" href={url}>
+                    <li className='fd-breadcrumb__item'>
+                        <a className='fd-breadcrumb__link' href={url}>
                             {name}
                         </a>
                     </li>
@@ -35,7 +35,7 @@ export const BreadcrumbItem = props => {
 };
 
 BreadcrumbItem.propTypes = {
-    url: PropTypes.string,
+    name: PropTypes.string.isRequired,
     link: PropTypes.string,
-    name: PropTypes.string.isRequired
+    url: PropTypes.string
 };

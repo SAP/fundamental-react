@@ -5,12 +5,12 @@ export const Description = (props) => {
         marginBottom: '1.5rem',
         fontSize: '1rem',
         fontWeight: '300'
-    }
+    };
     const { children } = props;
-    
+
     return (
-        <p className="description" style={descriptionStyle}>
+        <p className='description' style={descriptionStyle}>
             {children}
         </p>
     );
-}
+};

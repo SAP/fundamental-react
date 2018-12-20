@@ -76,7 +76,7 @@ exports[`<ListGroup /> create list group 3`] = `
     >
       <label
         className="fd-form__label"
-        for="CndSd399"
+        htmlFor="CndSd399"
       >
         <input
           className="fd-form__control"

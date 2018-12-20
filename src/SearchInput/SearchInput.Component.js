@@ -147,12 +147,12 @@ export class SearchInputComponent extends Component {
             <div>
                 <Header>Search Input</Header>
                 <Description />
-                <Import module="SearchInput" path="/fundamental-react/src/" />
+                <Import module='SearchInput' path='/fundamental-react/src/' />
 
                 <Separator />
 
                 <Properties
-                    type="Inputs"
+                    type='Inputs'
                     properties={[
                         {
                             name: 'onSearch',
@@ -172,8 +172,7 @@ export class SearchInputComponent extends Component {
                             description:
                                 'func - Method that receives search input box text, to perform auto complete query.'
                         }
-                    ]}
-                />
+                    ]} />
 
                 <Separator />
 
@@ -184,7 +183,7 @@ export class SearchInputComponent extends Component {
                 </Description>
                 <DocsTile>
                     <div>
-                        <SearchInput placeHolder="Enter a fruit" onSearch={this.performSearch} />
+                        <SearchInput placeHolder='Enter a fruit' onSearch={this.performSearch} />
                     </div>
                 </DocsTile>
                 <DocsText>{this.searchInputCode}</DocsText>
@@ -205,11 +204,10 @@ export class SearchInputComponent extends Component {
                 <DocsTile>
                     <div>
                         <SearchInput
-                            placeHolder="Enter a fruit"
+                            placeHolder='Enter a fruit'
                             data={this.state.data}
                             onAutoComplete={this.performAutoComplete}
-                            onSearch={this.performSearch}
-                        />
+                            onSearch={this.performSearch} />
                     </div>
                 </DocsTile>
                 <DocsText>{this.autoCompleteSearchInputCode}</DocsText>

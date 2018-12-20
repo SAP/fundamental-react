@@ -95,37 +95,36 @@ export const SideNavigationComponent = () => {
                 The left navigation can always display or expand/collapse using the menu icon within the global
                 navigation.
             </Description>
-            <Import module="SideNav, SideNavList, SideNavGroup" path="/fundamental-react/src/" />
+            <Import module='SideNav, SideNavList, SideNavGroup' path='/fundamental-react/src/' />
 
             <Separator />
 
             <Properties
-                type="Inputs"
+                type='Inputs'
                 properties={[
                     {
                         name: 'icons',
-                        description: "bool - when set to 'true' enables side navigation collapsed with icons."
+                        description: 'bool - when set to \'true\' enables side navigation collapsed with icons.'
                     },
                     {
                         name: 'items',
                         description:
-                            "array - an array of objects with keys 'id', 'url', 'name', 'hasChild', 'child', and 'glyph' setting the attributes of the items."
+                            'array - an array of objects with keys \'id\', \'url\', \'name\', \'hasChild\', \'child\', and \'glyph\' setting the attributes of the items.'
                     },
-                    { name: 'id', description: "string - the 'id' of the link." },
-                    { name: 'url', description: "string - the 'url' of the link." },
-                    { name: 'name', description: "string - the 'name' of the link." },
+                    { name: 'id', description: 'string - the \'id\' of the link.' },
+                    { name: 'url', description: 'string - the \'url\' of the link.' },
+                    { name: 'name', description: 'string - the \'name\' of the link.' },
                     {
                         name: 'hasChild',
-                        description: "bool - when set to 'true' enables a second level of navigation."
+                        description: 'bool - when set to \'true\' enables a second level of navigation.'
                     },
                     {
                         name: 'child',
                         description:
-                            "array - an array of objects with keys 'id', 'url', and 'name' setting the attributes of the subitems"
+                            'array - an array of objects with keys \'id\', \'url\', and \'name\' setting the attributes of the subitems'
                     },
                     { name: 'glyph', description: 'string - the name of the icon for navigation list with icons.' }
-                ]}
-            />
+                ]} />
 
             <Separator />
 
@@ -139,8 +138,7 @@ export const SideNavigationComponent = () => {
                             { id: 'item_3', url: '#', name: 'Link Item' },
                             { id: 'item_4', url: '#', name: 'Link Item' },
                             { id: 'item_5', url: '#', name: 'Link Item' }
-                        ]}
-                    />
+                        ]} />
                 </SideNav>
             </DocsTile>
             <DocsText>{sideNavOneLevelCode}</DocsText>
@@ -151,7 +149,7 @@ export const SideNavigationComponent = () => {
             <Description>Use this to group navigation. Titles are not clickable.</Description>
             <DocsTile>
                 <SideNav>
-                    <SideNavGroup title="Group Title">
+                    <SideNavGroup title='Group Title'>
                         <SideNavList
                             items={[
                                 { id: 'item_1', link: '/', name: 'Link Item' },
@@ -159,10 +157,9 @@ export const SideNavigationComponent = () => {
                                 { id: 'item_3', link: '/', name: 'Link Item' },
                                 { id: 'item_4', link: '/', name: 'Link Item' },
                                 { id: 'item_5', link: '/', name: 'Link Item' }
-                            ]}
-                        />
+                            ]} />
                     </SideNavGroup>
-                    <SideNavGroup title="Group Title">
+                    <SideNavGroup title='Group Title'>
                         <SideNavList
                             items={[
                                 { id: 'item_6', link: '/', name: 'Link Item' },
@@ -170,8 +167,7 @@ export const SideNavigationComponent = () => {
                                 { id: 'item_8', link: '/', name: 'Link Item' },
                                 { id: 'item_9', link: '/', name: 'Link Item' },
                                 { id: 'item_10', link: '/', name: 'Link Item' }
-                            ]}
-                        />
+                            ]} />
                     </SideNavGroup>
                 </SideNav>
             </DocsTile>
@@ -215,8 +211,7 @@ export const SideNavigationComponent = () => {
                                 ]
                             },
                             { id: 'item_5', url: '#', name: 'Link Item' }
-                        ]}
-                    />
+                        ]} />
                 </SideNav>
             </DocsTile>
             <DocsText>{sideNavMultiLevelCode}</DocsText>
@@ -233,8 +228,7 @@ export const SideNavigationComponent = () => {
                             { id: 'item_3', link: '/', name: 'Link Item', glyph: 'home' },
                             { id: 'item_4', link: '/', name: 'Link Item', glyph: 'home' },
                             { id: 'item_5', link: '/', name: 'Link Item', glyph: 'home' }
-                        ]}
-                    />
+                        ]} />
                 </SideNav>
             </DocsTile>
             <DocsText>{sideNavWithIconsCode}</DocsText>
@@ -248,7 +242,7 @@ export const SideNavigationComponent = () => {
                 the user can only see one level of navigation when collapsed.
             </Description>
             <DocsTile>
-                <SideNav icons={true}>
+                <SideNav icons>
                     <SideNavList
                         items={[
                             { id: 'item_1', url: '#', glyph: 'home' },
@@ -256,8 +250,7 @@ export const SideNavigationComponent = () => {
                             { id: 'item_3', url: '#', glyph: 'home' },
                             { id: 'item_4', url: '#', glyph: 'home' },
                             { id: 'item_5', url: '#', glyph: 'home' }
-                        ]}
-                    />
+                        ]} />
                 </SideNav>
             </DocsTile>
             <DocsText>{sideNavCollapsedCode}</DocsText>
