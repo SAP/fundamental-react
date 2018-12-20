@@ -73,6 +73,7 @@
   },
   "devDependencies": {
     "@babel/cli": "^7.1.5",
+    "@babel/polyfill": "^7.1.5",
     "enzyme": "^3.7.0",
     "enzyme-adapter-react-16": "^1.7.0",
     "fiori-fundamentals": "^1.4.0",
