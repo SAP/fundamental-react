@@ -150,8 +150,5 @@
       "jsx",
       "node"
     ]
-  },
-  "eslintConfig": {
-    "extends": "react-app"
   }
 }

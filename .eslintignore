@@ -3,4 +3,5 @@
 *.opts
 *.scss
 *.snap
+*.svg
 node_modules/**
