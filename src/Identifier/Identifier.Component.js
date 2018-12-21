@@ -66,13 +66,15 @@ export const IdentifierComponent = () => {
 
             <h2>Icon</h2>
             <DocsTile centered>
-                <Identifier size='xxs' glyph='washing-machine' />
-                <Identifier size='xs' glyph='washing-machine' />
-                <Identifier size='s' glyph='washing-machine' />
-                <Identifier size='m' glyph='washing-machine' />
-                <Identifier size='l' glyph='washing-machine' />
-                <Identifier size='xl' glyph='washing-machine' />
-                <Identifier size='xxl' glyph='washing-machine' />
+                <div className='fd-doc__margin--identifier'>
+                    <Identifier size='xxs' glyph='washing-machine' />
+                    <Identifier size='xs' glyph='washing-machine' />
+                    <Identifier size='s' glyph='washing-machine' />
+                    <Identifier size='m' glyph='washing-machine' />
+                    <Identifier size='l' glyph='washing-machine' />
+                    <Identifier size='xl' glyph='washing-machine' />
+                    <Identifier size='xxl' glyph='washing-machine' />
+                </div>
             </DocsTile>
             <DocsText>{iconsCode}</DocsText>
 
@@ -80,13 +82,15 @@ export const IdentifierComponent = () => {
 
             <h2>Initials</h2>
             <DocsTile centered>
-                <Identifier size='xxs' label='Wendy Wallace'>WW</Identifier>
-                <Identifier size='xs' label='Wendy Wallace'>WW</Identifier>
-                <Identifier size='s' label='Wendy Wallace'>WW</Identifier>
-                <Identifier size='m' label='Wendy Wallace'>WW</Identifier>
-                <Identifier size='l' label='Wendy Wallace'>WW</Identifier>
-                <Identifier size='xl' label='Wendy Wallace'>WW</Identifier>
-                <Identifier size='xxl' label='Wendy Wallace'>WW</Identifier>
+                <div className='fd-doc__margin--identifier'>
+                    <Identifier size='xxs' label='Wendy Wallace'>WW</Identifier>
+                    <Identifier size='xs' label='Wendy Wallace'>WW</Identifier>
+                    <Identifier size='s' label='Wendy Wallace'>WW</Identifier>
+                    <Identifier size='m' label='Wendy Wallace'>WW</Identifier>
+                    <Identifier size='l' label='Wendy Wallace'>WW</Identifier>
+                    <Identifier size='xl' label='Wendy Wallace'>WW</Identifier>
+                    <Identifier size='xxl' label='Wendy Wallace'>WW</Identifier>
+                </div>
             </DocsTile>
             <DocsText>{initialsCode}</DocsText>
 
@@ -94,20 +98,22 @@ export const IdentifierComponent = () => {
 
             <h2>Circle</h2>
             <DocsTile centered>
-                <Identifier size='xxs' glyph='washing-machine'
-                    modifier='circle' />
-                <Identifier size='xs' glyph='washing-machine'
-                    modifier='circle' />
-                <Identifier size='s' glyph='washing-machine'
-                    modifier='circle' />
-                <Identifier size='m' glyph='washing-machine'
-                    modifier='circle' />
-                <Identifier size='l' glyph='washing-machine'
-                    modifier='circle' />
-                <Identifier size='xl' glyph='washing-machine'
-                    modifier='circle' />
-                <Identifier size='xxl' glyph='washing-machine'
-                    modifier='circle' />
+                <div className='fd-doc__margin--identifier'>
+                    <Identifier size='xxs' glyph='washing-machine'
+                        modifier='circle' />
+                    <Identifier size='xs' glyph='washing-machine'
+                        modifier='circle' />
+                    <Identifier size='s' glyph='washing-machine'
+                        modifier='circle' />
+                    <Identifier size='m' glyph='washing-machine'
+                        modifier='circle' />
+                    <Identifier size='l' glyph='washing-machine'
+                        modifier='circle' />
+                    <Identifier size='xl' glyph='washing-machine'
+                        modifier='circle' />
+                    <Identifier size='xxl' glyph='washing-machine'
+                        modifier='circle' />
+                </div>
             </DocsTile>
             <DocsText>{circleCode}</DocsText>
 
@@ -115,20 +121,22 @@ export const IdentifierComponent = () => {
 
             <h2>Background image</h2>
             <DocsTile centered>
-                <Identifier size='xxs' backgroundImageUrl='https://placeimg.com/400/400/nature'
-                    modifier='circle' />
-                <Identifier size='xs' backgroundImageUrl='https://placeimg.com/400/400/nature'
-                    modifier='circle' />
-                <Identifier size='s' backgroundImageUrl='https://placeimg.com/400/400/nature'
-                    modifier='circle' />
-                <Identifier size='m' backgroundImageUrl='https://placeimg.com/400/400/nature'
-                    modifier='circle' />
-                <Identifier size='l' backgroundImageUrl='https://placeimg.com/400/400/nature'
-                    modifier='circle' />
-                <Identifier size='xl' backgroundImageUrl='https://placeimg.com/400/400/nature'
-                    modifier='circle' />
-                <Identifier size='xxl' backgroundImageUrl='https://placeimg.com/400/400/nature'
-                    modifier='circle' />
+                <div className='fd-doc__margin--identifier'>
+                    <Identifier size='xxs' backgroundImageUrl='https://placeimg.com/400/400/nature'
+                        modifier='circle' />
+                    <Identifier size='xs' backgroundImageUrl='https://placeimg.com/400/400/nature'
+                        modifier='circle' />
+                    <Identifier size='s' backgroundImageUrl='https://placeimg.com/400/400/nature'
+                        modifier='circle' />
+                    <Identifier size='m' backgroundImageUrl='https://placeimg.com/400/400/nature'
+                        modifier='circle' />
+                    <Identifier size='l' backgroundImageUrl='https://placeimg.com/400/400/nature'
+                        modifier='circle' />
+                    <Identifier size='xl' backgroundImageUrl='https://placeimg.com/400/400/nature'
+                        modifier='circle' />
+                    <Identifier size='xxl' backgroundImageUrl='https://placeimg.com/400/400/nature'
+                        modifier='circle' />
+                </div>
             </DocsTile>
             <DocsText>{backgroundImageCode}</DocsText>
 
@@ -136,10 +144,12 @@ export const IdentifierComponent = () => {
 
             <h2>Transparent</h2>
             <DocsTile centered>
-                <Identifier size='m' label='Wendy Wallace'
-                    modifier='transparent'>WW</Identifier>
-                <Identifier size='l' glyph='washing-machine'
-                    modifier='transparent' />
+                <div className='fd-doc__margin--identifier'>
+                    <Identifier size='m' label='Wendy Wallace'
+                        modifier='transparent'>WW</Identifier>
+                    <Identifier size='l' glyph='washing-machine'
+                        modifier='transparent' />
+                </div>
             </DocsTile>
             <DocsText>{transparentCode}</DocsText>
 
@@ -147,24 +157,26 @@ export const IdentifierComponent = () => {
 
             <h2>Accent Colors</h2>
             <DocsTile centered>
-                <Identifier size='m' glyph='money-bills'
-                    color={1} />
-                <Identifier size='m' glyph='money-bills'
-                    color={2} />
-                <Identifier size='m' glyph='money-bills'
-                    color={3} />
-                <Identifier size='m' glyph='money-bills'
-                    color={4} />
-                <Identifier size='m' glyph='money-bills'
-                    color={5} />
-                <Identifier size='m' glyph='money-bills'
-                    color={6} />
-                <Identifier size='m' glyph='money-bills'
-                    color={7} />
-                <Identifier size='m' glyph='money-bills'
-                    color={8} />
-                <Identifier size='m' glyph='money-bills'
-                    color={9} />
+                <div className='fd-doc__margin--identifier'>
+                    <Identifier size='m' glyph='money-bills'
+                        color={1} />
+                    <Identifier size='m' glyph='money-bills'
+                        color={2} />
+                    <Identifier size='m' glyph='money-bills'
+                        color={3} />
+                    <Identifier size='m' glyph='money-bills'
+                        color={4} />
+                    <Identifier size='m' glyph='money-bills'
+                        color={5} />
+                    <Identifier size='m' glyph='money-bills'
+                        color={6} />
+                    <Identifier size='m' glyph='money-bills'
+                        color={7} />
+                    <Identifier size='m' glyph='money-bills'
+                        color={8} />
+                    <Identifier size='m' glyph='money-bills'
+                        color={9} />
+                </div>
             </DocsTile>
             <DocsText>{accentColorsCode}</DocsText>
 

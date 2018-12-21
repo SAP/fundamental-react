@@ -29,7 +29,6 @@ import { MegaMenuComponent } from './MegaMenu/MegaMenu.Component';
 import { MenuComponent } from './Menu/Menu.Component';
 import { ModalComponent } from './Modal/Modal.Component';
 import { MultiInputComponent } from './MultiInput/MultiInput.Component';
-import { NavbarComponent } from './Navbar/Navbar.Component';
 import { PaginationComponent } from './Pagination/Pagination.Component';
 import { PanelComponent } from './Panel/Panel.Component';
 import { PopoverComponent } from './Popover/Popover.Component';
@@ -114,11 +113,6 @@ export default class Routes extends Component {
           url: '/multiInput',
           name: 'Multi Input',
           component: MultiInputComponent
-        },
-        {
-          url: '/navbar',
-          name: 'Navigation Bar',
-          component: NavbarComponent
         },
         {
           url: '/pagination',

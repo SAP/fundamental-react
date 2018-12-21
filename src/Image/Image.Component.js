@@ -36,7 +36,7 @@ export const ImageComponent = () => {
 
             <h2>Sizes</h2>
             <DocsTile centered>
-                <div className='fd-doc__margin'>
+                <div className='fd-doc__margin--image'>
                     <Image size='s' photo='https://placeimg.com/400/400/nature' />
                     <Image size='m' photo='https://placeimg.com/400/400/nature' />
                     <Image size='l' photo='https://placeimg.com/400/400/nature' />
@@ -48,7 +48,7 @@ export const ImageComponent = () => {
 
             <h2>Shapes</h2>
             <DocsTile centered>
-                <div className='fd-doc__margin'>
+                <div className='fd-doc__margin--image'>
                     <Image size='s' type='circle'
                         photo='https://placeimg.com/400/400/nature' />
                     <Image size='m' type='circle'

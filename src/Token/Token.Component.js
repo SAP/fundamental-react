@@ -22,11 +22,13 @@ export const TokenComponent = () => {
             <Separator />
 
             <DocsTile centered>
-                {
-                    tagsNames.map((name) => {
-                        return <Token clickHandler={(e) => closeAction(name, e)}>{name}</Token>;
-                    })
-                }
+                <div className='fd-doc__margin--token'>
+                    {
+                        tagsNames.map((name) => {
+                            return <Token clickHandler={(e) => closeAction(name, e)}>{name}</Token>;
+                        })
+                    }
+                </div>
             </DocsTile>
             <DocsText>{tokenCode}</DocsText>
         </div>

@@ -678,11 +678,13 @@ export const IconComponent = () => {
           <Separator />
 
           <DocsTile centered>
-              <Icon glyph='cart' size='s' />
-              <Icon glyph='cart' />
-              <Icon glyph='cart' size='m' />
-              <Icon glyph='cart' size='l' />
-              <Icon glyph='cart' size='xl' />
+              <div className='fd-doc__margin--icon'>
+                  <Icon glyph='cart' size='s' />
+                  <Icon glyph='cart' />
+                  <Icon glyph='cart' size='m' />
+                  <Icon glyph='cart' size='l' />
+                  <Icon glyph='cart' size='xl' />
+              </div>
           </DocsTile>
           <DocsText>{iconsCode}</DocsText>
 
