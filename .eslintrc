@@ -9,6 +9,8 @@ globals:
 
 parser: 'babel-eslint'
 
+#extends: 'react-app'
+
 plugins:
     - ie11
     - jsx-a11y
