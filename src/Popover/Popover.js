@@ -17,9 +17,9 @@ export class Popover extends Component {
   triggerBody() {
     if (!this.state.isDisabled) {
       if (!this.state.isExpanded) {
-        document.addEventListener('click', this.handleOutsideClick, false);
+        document.addEventListener('mousedown', this.handleOutsideClick, false);
       } else {
-        document.removeEventListener('click', this.handleOutsideClick, false);
+        document.removeEventListener('mousedown', this.handleOutsideClick, false);
       }
 
       this.setState(prevState => ({
@@ -50,11 +50,11 @@ export class Popover extends Component {
 
   componentDidMount() {
     document.addEventListener('keydown', this.pressEsc, false);
-    document.addEventListener('click', this.handleOutsideClick, false);
+    document.addEventListener('mousedown', this.handleOutsideClick, false);
   }
   componentWillUnmount() {
     document.removeEventListener('keydown', this.pressEsc, false);
-    document.removeEventListener('click', this.handleOutsideClick, false);
+    document.removeEventListener('mousedown', this.handleOutsideClick, false);
   }
 
   render() {
