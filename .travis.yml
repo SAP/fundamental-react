@@ -8,6 +8,7 @@ branches:
   only:
   - develop
   - "/^feature\\/.*$/"
+  - "/^fix\\/.*$/"
 jobs:
   include:
     - stage: "Fundamental-react: Lint"
