@@ -170,7 +170,7 @@ const clickBtnHandler = btn => {
                 content like appearing in a table or list. There may be more than one on the page.
             </Description>
             <DocsTile centered>
-                <div className='fd-doc__margin'>
+                <div className='fd-doc__margin--button'>
                     <Button option='emphasized' onclick={() => clickBtnHandler('Emphasized')}>
                         Emphasized Button
                     </Button>
@@ -193,7 +193,7 @@ const clickBtnHandler = btn => {
                 <br />
             </Description>
             <DocsTile centered>
-                <div className='fd-doc__margin'>
+                <div className='fd-doc__margin--button'>
                     <Button>Action Button</Button>
                     <Button type='standard'>Standard Button</Button>
                     <Button type='positive'>Positive Button</Button>
@@ -211,7 +211,7 @@ const clickBtnHandler = btn => {
                 attach an icon to the button.
             </Description>
             <DocsTile centered>
-                <div className='fd-doc__margin'>
+                <div className='fd-doc__margin--button'>
                     <Button option='emphasized' glyph='cart'>
                         Add to Cart
                     </Button>
@@ -259,7 +259,7 @@ const clickBtnHandler = btn => {
                 on a touch device.
             </Description>
             <DocsTile centered>
-                <div className='fd-doc__margin'>
+                <div className='fd-doc__margin--button'>
                     <Button>Default</Button>
                     <Button compact>Compact</Button>
                 </div>
@@ -273,7 +273,7 @@ const clickBtnHandler = btn => {
                 There are three states: <code>normal</code> (default), <code>selected</code>, and <code>disabled</code>.
             </Description>
             <DocsTile centered>
-                <div className='fd-doc__margin'>
+                <div className='fd-doc__margin--button'>
                     <Button option='emphasized'>Normal State</Button>
                     <Button option='emphasized' selected>
                         Selected State
@@ -331,19 +331,21 @@ const clickBtnHandler = btn => {
             <h2>Button Group</h2>
 
             <DocsTile centered>
-                <ButtonGroup>
-                    <Button glyph='survey' />
-                    <Button glyph='pie-chart' selected />
-                    <Button glyph='pool' />
-                </ButtonGroup>
+                <div className='fd-doc__margin--buttonGroup'>
+                    <ButtonGroup>
+                        <Button glyph='survey' />
+                        <Button glyph='pie-chart' selected />
+                        <Button glyph='pool' />
+                    </ButtonGroup>
 
-                <ButtonGroup>
-                    <Button compact>Left</Button>
-                    <Button compact selected>
-                        Middle
-                    </Button>
-                    <Button compact>Right</Button>
-                </ButtonGroup>
+                    <ButtonGroup>
+                        <Button compact>Left</Button>
+                        <Button compact selected>
+                            Middle
+                        </Button>
+                        <Button compact>Right</Button>
+                    </ButtonGroup>
+                </div>
             </DocsTile>
             <DocsText>{buttonGroupCode}</DocsText>
 
