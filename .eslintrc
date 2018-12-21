@@ -10,6 +10,7 @@ globals:
 parser: 'babel-eslint'
 
 plugins:
+    - ie11
     - jsx-a11y
     - loosely-restrict-imports
     - react
@@ -27,6 +28,9 @@ rules:
     #eqeqeq: 2
     guard-for-in: 2
     handle-callback-err: 2
+    ie11/no-collection-args: 2
+    ie11/no-for-in-const: 2
+    ie11/no-weak-collections: 2
     #indent: [2, 4, {"SwitchCase": 1}]
     jsx-a11y/accessible-emoji: 2
     jsx-a11y/alt-text: 2
