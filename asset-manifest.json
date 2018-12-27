@@ -1,14 +1,15 @@
 {
-  "main.css": "/fundamental-react/static/css/main.5b26ca8f.chunk.css",
-  "main.js": "/fundamental-react/static/js/main.3f20ea29.chunk.js",
-  "main.js.map": "/fundamental-react/static/js/main.3f20ea29.chunk.js.map",
-  "static/js/1.2b316baf.chunk.js": "/fundamental-react/static/js/1.2b316baf.chunk.js",
-  "static/js/1.2b316baf.chunk.js.map": "/fundamental-react/static/js/1.2b316baf.chunk.js.map",
+  "main.css": "/fundamental-react/static/css/main.151e9258.chunk.css",
+  "main.js": "/fundamental-react/static/js/main.efa23b79.chunk.js",
+  "main.js.map": "/fundamental-react/static/js/main.efa23b79.chunk.js.map",
+  "static/js/1.8543b13e.chunk.js": "/fundamental-react/static/js/1.8543b13e.chunk.js",
+  "static/js/1.8543b13e.chunk.js.map": "/fundamental-react/static/js/1.8543b13e.chunk.js.map",
   "runtime~main.js": "/fundamental-react/static/js/runtime~main.11730625.js",
   "runtime~main.js.map": "/fundamental-react/static/js/runtime~main.11730625.js.map",
-  "static/media/App.scss": "/fundamental-react/static/media/72-BoldItalic.3ab665b6.ttf",
-  "static/css/main.5b26ca8f.chunk.css.map": "/fundamental-react/static/css/main.5b26ca8f.chunk.css.map",
+  "static/media/App.scss": "/fundamental-react/static/media/72-CondensedBold.2bf8d215.ttf",
+  "static/media/headshot-male.jpg": "/fundamental-react/static/media/headshot-male.10d4e22e.jpg",
+  "static/css/main.151e9258.chunk.css.map": "/fundamental-react/static/css/main.151e9258.chunk.css.map",
   "index.html": "/fundamental-react/index.html",
-  "precache-manifest.ab530befe4df9d16f6860a631fbf0fde.js": "/fundamental-react/precache-manifest.ab530befe4df9d16f6860a631fbf0fde.js",
+  "precache-manifest.c9126805416abc4c942d6b51c740c9c1.js": "/fundamental-react/precache-manifest.c9126805416abc4c942d6b51c740c9c1.js",
   "service-worker.js": "/fundamental-react/service-worker.js"
 }
