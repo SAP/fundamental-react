@@ -510,8 +510,9 @@ export class Calendar extends Component {
 
 
       render() {
+        const { className, ...props } = this.props;
         return (
-            <div className='fd-calendar'>
+            <div className={`fd-calendar ${className ? className : ''}`} {...props}>
                 {this.generateNavigation()}
                 <div className='fd-calendar__content'>
                     {
