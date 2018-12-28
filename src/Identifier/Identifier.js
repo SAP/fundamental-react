@@ -1,8 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export const Identifier = props => {
-  const { glyph, size, modifier, color, label, backgroundImageUrl, children } = props;
+export const Identifier = ({ glyph, size, modifier, color, label, backgroundImageUrl, children, className, ...props }) => {
   const styles = {
     backgroundImage: `url(${backgroundImageUrl})`
   };
@@ -12,10 +11,10 @@ export const Identifier = props => {
         glyph ? ' sap-icon--' + glyph : ''
       }${modifier ? ' fd-identifier--' + modifier : ''}${
         color ? ' fd-has-background-color-accent-' + color : ''
-      }${backgroundImageUrl ? ' fd-identifier--thumbnail' : ''}`}
+      }${backgroundImageUrl ? ' fd-identifier--thumbnail' : ''}${className ? ' ' + className : ''}`}
           style={backgroundImageUrl && styles}
           role={`${!children ? 'presentation' : ''}`}
-          aria-label={label}>
+          aria-label={label} {...props}>
           {children}
       </span>
   );
@@ -23,6 +22,7 @@ export const Identifier = props => {
 
 Identifier.propTypes = {
   backgroundImageUrl: PropTypes.string,
+  className: PropTypes.string,
   color: PropTypes.oneOf([1, 2, 3, 4, 5, 6, 7, 8, 9]),
   glyph: PropTypes.string,
   label: PropTypes.string,
