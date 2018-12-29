@@ -3,11 +3,10 @@ import PropTypes from 'prop-types';
 import { Popover } from '../Popover/Popover';
 
 // ------------------------------------------- Menu ------------------------------------------
-export const LocalizationEditor = props => {
-  const { control, menu, id, compact, textarea } = props;
+export const LocalizationEditor = ({ control, menu, id, compact, textarea, className, ...props }) => {
 
   return (
-      <div className='fd-localization-editor'>
+      <div className={`fd-localization-editor${className ? ' ' + className : ''}`} {...props}>
           <Popover
               id={id}
               control={
@@ -88,6 +87,7 @@ LocalizationEditor.propTypes = {
       language: PropTypes.string
     }).isRequired
   ).isRequired,
+  className: PropTypes.string,
   compact: PropTypes.bool,
   id: PropTypes.string,
   textarea: PropTypes.bool

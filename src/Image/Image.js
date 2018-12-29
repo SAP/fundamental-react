@@ -12,5 +12,6 @@ export const Image = ({ size, type, photo, className, ...props }) => {
 Image.propTypes = {
   photo: PropTypes.string.isRequired,
   size: PropTypes.oneOf(['s', 'm', 'l']).isRequired,
+  className: PropTypes.string,
   type: PropTypes.oneOf(['', 'circle'])
 };
