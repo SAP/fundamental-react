@@ -34,10 +34,10 @@ export class TabComponent extends Component {
   }
 
   render() {
-    const { ids, className } = this.props;
+    const { ids, className, ...rest } = this.props;
     return (
         <BrowserRouter>
-            <ul className={`fd-tabs${className ? ' ' + className : ''}`}>
+            <ul className={`fd-tabs${className ? ' ' + className : ''}`} {...rest}>
                 {ids.map(id => {
             return (
                 <li className='fd-tabs__item' key={id.id}>

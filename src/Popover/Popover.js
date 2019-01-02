@@ -58,13 +58,13 @@ export class Popover extends Component {
   }
 
   render() {
-    const { id, alignment, noArrow, control, body, className } = this.props;
+    const { id, alignment, noArrow, control, body, className, ...rest } = this.props;
     return (
         <div
             className={`fd-popover${alignment ? ' fd-popover--' + alignment : ''}${className ? ' ' + className : ''}`}
             ref={node => {
           this.node = node;
-        }}>
+        }} {...rest}>
             <div
                 className='fd-popover__control'
                 aria-expanded={this.state.isExpanded}
