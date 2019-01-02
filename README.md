@@ -11,7 +11,7 @@ Fundamental-react is a set of [React.JS](https://reactjs.org/) components implem
 
 ## Description
 
-Fundamental-react is a set of [React.JS](https://reactjs.org/) components implementation of [SAP Fiori Fundamentals library](https://sap.github.io/fundamental/). SAP Fiori Fundamentals library is a Design System and HTML/CSS Component Library used to build modern Product User Experiences with the SAP look and feel. This will allow you to stay/use React for your application and get SAP look and feel.
+Fundamental-react is a set of [React.JS](https://reactjs.org/) components implementation of [SAP Fiori Fundamentals] library (https://sap.github.io/fundamental/). SAP Fiori Fundamentals library is a Design System and HTML/CSS Component Library used to build modern Product User Experiences with the SAP look and feel. This will allow you to stay/use React for your application and get SAP look and feel.
 
 
 ## Requirements
