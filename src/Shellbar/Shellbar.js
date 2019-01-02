@@ -100,10 +100,11 @@ export class Shellbar extends Component {
             productSwitcher,
             productSwitcherList,
             profile,
-            profileMenu
+            profileMenu,
+            className
         } = this.props;
         return (
-            <div className='fd-shellbar'>
+            <div className={`fd-shellbar${className ? ' ' + className : ''}`}>
                 <div className='fd-shellbar__group fd-shellbar__group--start'>
                     {logo && <a className='fd-shellbar__logo'>{logo}</a>}
                     {logoSAP && (

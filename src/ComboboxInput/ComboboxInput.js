@@ -3,12 +3,10 @@ import PropTypes from 'prop-types';
 import { Popover } from '../Popover/Popover';
 
 // ------------------------------------------- Combobox Input ------------------------------------------
-export const ComboboxInput = props => {
-  const { id, placeholder, menu, compact } = props;
+export const ComboboxInput = ({ placeholder, menu, compact, className, ...props }) => {
   return (
-      <div className='fd-combobox-input'>
+      <div className={`fd-combobox-input${className ? ' ' + className : ''}`} {...props}>
           <Popover
-              id={id}
               noArrow
               control={
                   <div className='fd-combobox-control'>
@@ -34,13 +32,12 @@ export const ComboboxInput = props => {
 
 ComboboxInput.propTypes = {
   menu: PropTypes.object.isRequired,
+  className: PropTypes.string,
   compact: PropTypes.bool,
-  id: PropTypes.string,
   placeholder: PropTypes.string
 };
 
 ComboboxInput.defaultTypes = {
   compact: false,
-  id: '',
   placeholder: ''
 };

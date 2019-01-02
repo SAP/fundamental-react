@@ -371,9 +371,10 @@ export class DatePicker extends Component {
   }
 
   render() {
+    const { enableRangeSelection, disableWeekends, disableBeforeDate, disableAfterDate, disableWeekday, disablePastDates, disableFutureDates, blockedDates, disabledDates, className, ...props } = this.props;
     return (
         <div
-            className='fd-date-picker'
+            className={`fd-date-picker${className ? ' ' + className : ''}`} {...props}
             ref={component => (this.component = component)}>
             <div className='fd-popover'>
                 <div className='fd-popover__control'>
@@ -403,17 +404,17 @@ export class DatePicker extends Component {
                     aria-hidden={this.state.hidden}>
                     <Calendar
                         onChange={this.updateDate}
-                        enableRangeSelection={this.props.enableRangeSelection}
-                        disableWeekends={this.props.disableWeekends}
-                        disableBeforeDate={this.props.disableBeforeDate}
-                        disableAfterDate={this.props.disableAfterDate}
-                        disableWeekday={this.props.disableWeekday}
-                        disablePastDates={this.props.disablePastDates}
-                        disableFutureDates={this.props.disableFutureDates}
-                        blockedDates={this.props.blockedDates}
-                        disabledDates={this.props.disabledDates}
+                        enableRangeSelection={enableRangeSelection}
+                        disableWeekends={disableWeekends}
+                        disableBeforeDate={disableBeforeDate}
+                        disableAfterDate={disableAfterDate}
+                        disableWeekday={disableWeekday}
+                        disablePastDates={disablePastDates}
+                        disableFutureDates={disableFutureDates}
+                        blockedDates={blockedDates}
+                        disabledDates={disabledDates}
                         customDate={
-                this.props.enableRangeSelection
+                enableRangeSelection
                   ? this.state.arrSelectedDates
                   : this.state.selectedDate
               } />
@@ -425,5 +426,6 @@ export class DatePicker extends Component {
 }
 
 DatePicker.propTypes = {
+  compact: PropTypes.bool,
   enableRangeSelection: PropTypes.bool
 };

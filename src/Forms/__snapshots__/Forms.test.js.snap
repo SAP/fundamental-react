@@ -9,7 +9,7 @@ exports[`<Forms /> create form item 1`] = `
   >
     <label
       className="fd-form__label"
-      htmlFor="input-1"
+      forAttr="input-1"
     >
       Default Input
     </label>
@@ -25,7 +25,7 @@ exports[`<Forms /> create form item 1`] = `
   >
     <label
       className="fd-form__label is-required"
-      htmlFor="input-1"
+      forAttr="input-1"
     >
       Default Input
     </label>
@@ -160,6 +160,7 @@ exports[`<Forms /> create form item 2`] = `
   </div>
   <legend
     className="fd-form__legend"
+    legendText="Radio buttons disabled"
   />
   <div>
     <div
@@ -225,6 +226,7 @@ exports[`<Forms /> create form item 2`] = `
   </div>
   <legend
     className="fd-form__legend"
+    legendText="Inline Radio buttons"
   />
   <div>
     <div
@@ -352,6 +354,7 @@ exports[`<Forms /> create form item 2`] = `
   </div>
   <legend
     className="fd-form__legend"
+    legendText="Checkboxes"
   />
   <div
     className="fd-form__item fd-form__item--check"
@@ -359,11 +362,13 @@ exports[`<Forms /> create form item 2`] = `
     <input
       className="fd-form__control"
       id="checkbox-1"
+      name="checkbox-name-1"
       type="checkbox"
+      value=""
     />
     <label
       className="fd-form__label"
-      htmlFor="checkbox-1"
+      forAttr="checkbox-1"
     >
       Option One
     </label>

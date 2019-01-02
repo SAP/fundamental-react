@@ -3,11 +3,11 @@ import { Button, ButtonGroup } from '../';
 import { DocsTile, DocsText, Separator, Header, Description, Import, Properties, Playground } from '../';
 
 export const ButtonComponent = () => {
-    const buttonOptionsCode = `<Button option="emphasized" onclick={() => clickBtnHandler('Emphasized')}>
+    const buttonOptionsCode = `<Button option="emphasized" onClick={() => clickBtnHandler('Emphasized')}>
     Emphasized Button
 </Button>
-<Button onclick={() => clickBtnHandler('Regular')}>Regular Button</Button>
-<Button option="light" onclick={() => clickBtnHandler('Light')}>Light Button</Button>
+<Button onClick={() => clickBtnHandler('Regular')}>Regular Button</Button>
+<Button option="light" onClick={() => clickBtnHandler('Light')}>Light Button</Button>
 
 const clickBtnHandler = btn => {
     alert(\`You clicked the \${btn} Button\`);
@@ -155,7 +155,7 @@ const clickBtnHandler = btn => {
                         description:
                             'bool - selected state of the button. Enabled by setting selected property to true.'
                     },
-                    { name: 'onclick', description: 'func - The function that is executed when the button is clicked.' }
+                    { name: 'onClick', description: 'func - The function that is executed when the button is clicked.' }
                 ]} />
             <Separator />
 
@@ -171,11 +171,11 @@ const clickBtnHandler = btn => {
             </Description>
             <DocsTile centered>
                 <div className='fd-doc__margin--button'>
-                    <Button option='emphasized' onclick={() => clickBtnHandler('Emphasized')}>
+                    <Button option='emphasized' onClick={() => clickBtnHandler('Emphasized')}>
                         Emphasized Button
                     </Button>
-                    <Button onclick={() => clickBtnHandler('Regular')}>Regular Button</Button>
-                    <Button option='light' onclick={() => clickBtnHandler('Light')}>Light Button</Button>
+                    <Button onClick={() => clickBtnHandler('Regular')}>Regular Button</Button>
+                    <Button option='light' onClick={() => clickBtnHandler('Light')}>Light Button</Button>
                 </div>
             </DocsTile>
             <DocsText>{buttonOptionsCode}</DocsText>
