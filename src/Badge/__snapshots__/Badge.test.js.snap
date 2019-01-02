@@ -48,6 +48,24 @@ exports[`<Badge /> create badges, pills and filled badges 6`] = `
 </span>
 `;
 
+exports[`<Badge /> create badges, pills and filled badges 7`] = `
+<span
+  aria-label="Unread count"
+  className="fd-counter"
+>
+  5
+</span>
+`;
+
+exports[`<Badge /> create badges, pills and filled badges 8`] = `
+<span
+  aria-label="Unread count"
+  className="fd-counter fd-counter--notification"
+>
+  5
+</span>
+`;
+
 exports[`<Badge /> create label 1`] = `
 <span
   className="fd-label"

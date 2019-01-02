@@ -19,21 +19,19 @@ describe('<Calendar />', () => {
   const blockedDays = (
       <Calendar
           blockedDates={[
-        new Date(2018, 1, 1, 0, 0, 0, 0),
-        new Date(2018, 3, 3, 0, 0, 0, 0)
-      ]} />
+            new Date(2018, 1, 1, 0, 0, 0, 0),
+            new Date(2018, 3, 3, 0, 0, 0, 0)
+          ]} />
   );
   const disabledDates = (
       <Calendar
           disabledDates={[
-        new Date(2018, 1, 1, 0, 0, 0, 0),
-        new Date(2018, 3, 3, 0, 0, 0, 0)
-      ]} />
+            new Date(2018, 1, 1, 0, 0, 0, 0),
+            new Date(2018, 3, 3, 0, 0, 0, 0)
+          ]} />
   );
   const disabledWeekDay = <Calendar disableWeekday={['Monday', 'Tuesday']} />;
-  const rangeSelect = (
-      <Calendar enableRangeSelection onChange={mockOnChange} />
-  );
+  const rangeSelect = <Calendar enableRangeSelection onChange={mockOnChange} />;
   const disablePast = <Calendar disablePastDates />;
   const disableFuture = <Calendar disableFutureDates />;
 
@@ -135,7 +133,10 @@ describe('<Calendar />', () => {
 
     // check that April was selected
     const currentDateDisplayed = wrapper.state('currentDateDisplayed');
-    expect(currentDateDisplayed.getFullYear()).toEqual(2021);
+    let currentYearDisplayed = new Date(wrapper.state('currentYear'));
+    expect(currentDateDisplayed.getFullYear()).toEqual(
+      currentYearDisplayed.getFullYear() + 3
+    );
   });
 
   test('click previous button', () => {

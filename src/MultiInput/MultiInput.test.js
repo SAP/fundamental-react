@@ -6,7 +6,7 @@ import { MultiInput } from './MultiInput';
 
 Enzyme.configure({ adapter: new Adapter() });
 
-describe('MultiInput />', () => {
+describe('<MultiInput />', () => {
   const mockOnTagsUpdate = jest.fn();
   const data = [
     'Apple',
