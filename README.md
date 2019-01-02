@@ -45,9 +45,7 @@ $fd-fonts-path: "~fiori-fundamentals/scss/fonts/";
 @import '../node_modules/fiori-fundamentals/scss/all.scss';
 ```
  
-You can now use the [Component Documentation](https://sap.github.io/fundamental-react/) to browse the components currently available with Fundamental Vue.
-
-    To use a Fundamental-react component, paste the desired code snippet from the Component Documentation and configure it as necessarry:
+You can now use the [Component Documentation](https://sap.github.io/fundamental-react/) to browse the components currently available with Fundamental Vue.  To use a Fundamental-react component, paste the desired code snippet from the Component Documentation and configure it as necessarry:
 
     ```
     ...
