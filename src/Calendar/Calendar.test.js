@@ -135,7 +135,7 @@ describe('<Calendar />', () => {
 
     // check that April was selected
     const currentDateDisplayed = wrapper.state('currentDateDisplayed');
-    expect(currentDateDisplayed.getFullYear()).toEqual(2021);
+    expect(currentDateDisplayed.getFullYear()).toEqual(2022);
   });
 
   test('click previous button', () => {
