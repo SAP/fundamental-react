@@ -284,6 +284,7 @@ exports[`<Dropdown /> create dropdown component 5`] = `
 >
   <div
     className="fd-popover"
+    disabled={true}
   >
     <div
       aria-controls="jhqD0561"

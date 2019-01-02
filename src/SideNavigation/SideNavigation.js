@@ -52,10 +52,10 @@ export class SideNavList extends Component {
   }
 
   render() {
-    const { items } = this.props;
+    const { items, className, ...rest } = this.props;
     return (
         <BrowserRouter>
-            <ul className='fd-side-nav__list'>
+            <ul className={`fd-side-nav__list${className ? ' ' + className : ''}`} {...rest}>
                 {items.map(item => {
             return (
                 <li className='fd-side-nav__item' key={item.id}>
@@ -153,13 +153,14 @@ export class SideNavList extends Component {
   }
 }
 SideNavList.propTypes = {
-  items: PropTypes.array.isRequired
+  items: PropTypes.array.isRequired,
+  className: PropTypes.string
 };
 
 export const SideNavGroup = props => {
-  const { title, children } = props;
+  const { title, children, className, ...rest } = props;
   return (
-      <div className='fd-side-nav__group'>
+      <div className={`fd-side-nav__group${className ? ' ' + className : ''}`} {...rest}>
           <h1 className='fd-side-nav__title'>{title}</h1>
           {children}
       </div>
@@ -167,5 +168,6 @@ export const SideNavGroup = props => {
 };
 
 SideNavGroup.propTypes = {
-  title: PropTypes.string
+    className: PropTypes.string,
+    title: PropTypes.string
 };

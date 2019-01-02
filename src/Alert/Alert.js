@@ -16,16 +16,16 @@ export class Alert extends Component {
     }
 
     render() {
-        const { type, link, linkText, dismissable, children } = this.props;
+        const { type, link, linkText, dismissable, children, className, ...props } = this.props;
         return (
             <div>
                 {this.state.isActive && (
                     <div
                         className={`fd-alert${dismissable ? ' fd-alert--dismissible' : ''}${
                             type ? ' fd-alert--' + type : ''
-                        }`}
+                        }${className ? ' ' + className : ''}`}
                         role='alert'
-                        id='j2ALl423'>
+                        {...props}>
                         {dismissable ? (
                             <button
                                 className='fd-alert__close'
@@ -49,6 +49,7 @@ export class Alert extends Component {
 }
 
 Alert.propTypes = {
+    className: PropTypes.string,
     dismissable: PropTypes.bool,
     link: PropTypes.string,
     linkText: PropTypes.string,

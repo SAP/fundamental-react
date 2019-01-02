@@ -118,10 +118,10 @@ export class SearchInput extends Component {
     }
 
     render() {
-        const { placeholder, inShellbar, onSearch } = this.props;
+        const { placeholder, inShellbar, onSearch, onEnter, searchList, className, ...rest } = this.props;
 
         return (
-            <div className={`fd-search-input${inShellbar ? ' fd-search-input--closed' : ''}`}>
+            <div className={`fd-search-input${inShellbar ? ' fd-search-input--closed' : ''}${className ? ' ' + className : ''}`} {...rest}>
                 <div className='fd-popover'>
                     {inShellbar ? (
                         <div className='fd-popover__control fd-search-input__control'>

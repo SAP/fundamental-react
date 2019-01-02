@@ -7,30 +7,14 @@ export const Breadcrumb = props => {
     return <ul className='fd-breadcrumb'>{children}</ul>;
 };
 
-export const BreadcrumbItem = props => {
-    const { url, link, name } = props;
+export const BreadcrumbItem = ({ url, link, name, className, ...props }) => {
     return (
-        <React.Fragment>
-            {link ? (
-                <BrowserRouter>
-                    <li className='fd-breadcrumb__item'>
-                        <Link className='fd-breadcrumb__link' to={{ pathname: link }}>
-                            {name}
-                        </Link>
-                    </li>
-                </BrowserRouter>
-            ) : null}
-
-            {url ? (
-                <BrowserRouter>
-                    <li className='fd-breadcrumb__item'>
-                        <a className='fd-breadcrumb__link' href={url}>
-                            {name}
-                        </a>
-                    </li>
-                </BrowserRouter>
-            ) : null}
-        </React.Fragment>
+        <BrowserRouter>
+            <li className={`fd-breadcrumb__item${className ? ' ' + className : ''}`} {...props}>
+                {link && <Link className='fd-breadcrumb__link' to={{ pathname: link }}>{name}</Link>}
+                {url && <a className='fd-breadcrumb__link' href={url}>{name}</a>}
+            </li>
+        </BrowserRouter>
     );
 };
 
