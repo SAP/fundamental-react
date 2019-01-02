@@ -29,13 +29,13 @@ export const MenuComponent = () => {
 
     const menuSeparatorCode = `<Menu>
     <MenuList>
-        <MenuItem link="/" separator={true}>
+        <MenuItem link="/" separator>
             Option 1
         </MenuItem>
-        <MenuItem link="/" separator={true}>
+        <MenuItem link="/" separator>
             Option 2
         </MenuItem>
-        <MenuItem link="/" separator={true}>
+        <MenuItem link="/" separator>
             Option 3
         </MenuItem>
         <MenuItem link="/">Option 4</MenuItem>

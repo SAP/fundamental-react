@@ -16,84 +16,90 @@ import { DocsTile, DocsText, Separator, Header, Description, Import, Properties 
 export const FormsComponent = () => {
     const inputsCode = `<FormSet>
     <FormItem>
-        <FormLabel forAttr="input-1">Default Input</FormLabel>
-        <FormInput type="text" id="input-1" placeholder="Field placeholder text" />
+        <FormLabel htmlFor='input-1'>Default Input</FormLabel>
+        <FormInput type='text' id='input-1'
+            placeholder='Field placeholder text' />
     </FormItem>
 </FormSet>
 
 <FormSet>
     <FormItem>
-        <FormLabel forAttr="input-2" required={true}>
+        <FormLabel htmlFor='input-2' required>
             Required Input
         </FormLabel>
-        <FormInput type="text" id="input-2" placeholder="Field placeholder text" />
+        <FormInput type='text' id='input-2'
+            placeholder='Field placeholder text' />
     </FormItem>
 </FormSet>
 
 <FormSet>
     <FormItem>
-        <FormLabel forAttr="input-3" required={true}>
+        <FormLabel htmlFor='input-3' required>
             Password
         </FormLabel>
-        <FormInput type="password" id="input-3" placeholder="Field placeholder text" />
+        <FormInput type='password' id='input-3'
+            placeholder='Field placeholder text' />
     </FormItem>
 </FormSet>
 
 <FormSet>
     <FormItem>
-        <FormLabel forAttr="textarea-1" required={true}>
+        <FormLabel htmlFor='textarea-1' required>
             Text area
         </FormLabel>
-        <FormTextarea id="textarea-1">
-            Pellentesque metus lacus commodo eget justo ut rutrum varius nunc.
-        </FormTextarea>
+        <FormTextarea id='textarea-1' defaultValue=' Pellentesque metus lacus commodo eget justo ut rutrum varius nunc.' />
     </FormItem>
-</FormSet>`;
+</FormSet>
+`;
 
     const inputsHelpCode = `<FormSet>
     <FormItem>
-        <FormLabel forAttr="input-4">
+        <FormLabel htmlFor='input-4'>
             Input with inline help
-            <span className="fd-inline-help fd-has-float-right">
-                <span className="fd-inline-help__content fd-inline-help__content--bottom-right">
+            <span className='fd-inline-help fd-has-float-right'>
+                <span className='fd-inline-help__content fd-inline-help__content--bottom-right'>
                     Lorem ipsum dolor sit amet, consectetur adipiscing.
                 </span>
             </span>
         </FormLabel>
-        <FormInput type="text" id="input-4" />
+        <FormInput type='text' id='input-4' />
     </FormItem>
 </FormSet>
 
 <FormSet>
     <FormItem>
-        <FormLabel forAttr="input-5">Input with Help Message</FormLabel>
-        <FormInput type="text" id="input-5" />
-        <FormMessage type="help">
+        <FormLabel htmlFor='input-5'>Input with Help Message</FormLabel>
+        <FormInput type='text' id='input-5' />
+        <FormMessage type='help'>
             Pellentesque metus lacus commodo eget justo ut rutrum varius nunc
         </FormMessage>
     </FormItem>
-</FormSet>`;
+</FormSet>
+    `;
 
     const inputsStateCode = `<FormSet>
     <FormItem>
-        <FormLabel forAttr="OatmD552">Normal Input</FormLabel>
-        <FormInput type="text" id="OatmD552" placeholder="Field placeholder text" />
+        <FormLabel htmlFor='OatmD552'>Normal Input</FormLabel>
+        <FormInput type='text' id='OatmD552'
+            placeholder='Field placeholder text' />
         <FormMessage>Pellentesque metus lacus commodo eget justo ut rutrum varius nunc</FormMessage>
     </FormItem>
 </FormSet>
 
 <FormSet>
     <FormItem>
-        <FormLabel forAttr="OatmD553">Valid Input</FormLabel>
-        <FormInput type="text" state="valid" id="OatmD553" placeholder="Field placeholder text" />
+        <FormLabel htmlFor='OatmD553'>Valid Input</FormLabel>
+        <FormInput type='text' state='valid'
+            id='OatmD553' placeholder='Field placeholder text' />
     </FormItem>
 </FormSet>
 
 <FormSet>
     <FormItem>
-        <FormLabel forAttr="OatmD554">Invalid Input</FormLabel>
-        <FormInput type="text" state="invalid" id="OatmD554" placeholder="Field placeholder text" />
-        <FormMessage type="error">
+        <FormLabel htmlFor='OatmD554'>Invalid Input</FormLabel>
+        <FormInput type='text' state='invalid'
+            id='OatmD554' placeholder='Field placeholder text' />
+        <FormMessage type='error'>
             Pellentesque metus lacus commodo eget justo ut rutrum varius nunc
         </FormMessage>
     </FormItem>
@@ -101,9 +107,10 @@ export const FormsComponent = () => {
 
 <FormSet>
     <FormItem>
-        <FormLabel forAttr="OatmD555">Warning Input</FormLabel>
-        <FormInput type="text" state="warning" id="OatmD555" placeholder="Field placeholder text" />
-        <FormMessage type="warning">
+        <FormLabel htmlFor='OatmD555'>Warning Input</FormLabel>
+        <FormInput type='text' state='warning'
+            id='OatmD555' placeholder='Field placeholder text' />
+        <FormMessage type='warning'>
             Pellentesque metus lacus commodo eget justo ut rutrum varius nunc
         </FormMessage>
     </FormItem>
@@ -111,9 +118,10 @@ export const FormsComponent = () => {
 
 <FormSet>
     <FormItem>
-        <FormLabel forAttr="OatmD556">Field Label</FormLabel>
-        <FormInput type="text" state="help" id="OatmD556" placeholder="Field placeholder text" />
-        <FormMessage type="help">
+        <FormLabel htmlFor='OatmD556'>Field Label</FormLabel>
+        <FormInput type='text' state='help'
+            id='OatmD556' placeholder='Field placeholder text' />
+        <FormMessage type='help'>
             Pellentesque metus lacus commodo eget justo ut rutrum varius nunc
         </FormMessage>
     </FormItem>
@@ -121,51 +129,52 @@ export const FormsComponent = () => {
 
 <FormSet>
     <FormItem>
-        <FormLabel forAttr="OatmD557">Disabled Input</FormLabel>
+        <FormLabel htmlFor='OatmD557'>Disabled Input</FormLabel>
         <FormInput
-            type="text"
-            state="help"
-            id="OatmD557"
-            placeholder="Field placeholder text"
-            disabled
-        />
+            type='text'
+            state='help'
+            id='OatmD557'
+            placeholder='Field placeholder text'
+            disabled />
     </FormItem>
 </FormSet>
 
 <FormSet>
     <FormItem>
-        <FormLabel forAttr="OatmD558" labelText="Readonly Input" />
+        <FormLabel htmlFor='OatmD558'>Readonly Input</FormLabel>
         <FormInput
-            type="text"
-            state="help"
-            id="OatmD558"
-            placeholder="Field placeholder text"
-            readonly
-        />
+            type='text'
+            state='help'
+            id='OatmD558'
+            placeholder='Field placeholder text'
+            readOnly />
     </FormItem>
-</FormSet>`;
+</FormSet>
+</DocsTile>
+`;
 
     const inputsSelectCode = `<FormSet>
     <FormItem>
-        <FormLabel forAttr="select-1" labelText="Default Select" />
-        <FormSelect id="select-1">
-            <option value="1">Duis malesuada odio volutpat elementum</option>
-            <option value="2">Suspendisse ante ligula</option>
-            <option value="3">Sed bibendum sapien at posuere interdum</option>
+        <FormLabel htmlFor='select-1'>Default Select</FormLabel>
+        <FormSelect id='select-1'>
+            <option value='1'>Duis malesuada odio volutpat elementum</option>
+            <option value='2'>Suspendisse ante ligula</option>
+            <option value='3'>Sed bibendum sapien at posuere interdum</option>
         </FormSelect>
     </FormItem>
 </FormSet>
 
 <FormSet>
     <FormItem>
-        <FormLabel forAttr="select-1" labelText="Default Select" />
-        <FormSelect id="select-1" disabled>
-            <option value="1">Duis malesuada odio volutpat elementum</option>
-            <option value="2">Suspendisse ante ligula</option>
-            <option value="3">Sed bibendum sapien at posuere interdum</option>
+        <FormLabel htmlFor='select-1'>Default Select</FormLabel>
+        <FormSelect id='select-1' disabled>
+            <option value='1'>Duis malesuada odio volutpat elementum</option>
+            <option value='2'>Suspendisse ante ligula</option>
+            <option value='3'>Sed bibendum sapien at posuere interdum</option>
         </FormSelect>
     </FormItem>
-</FormSet>`;
+</FormSet>
+`;
 
     const inputsRadioCode = `<FormFieldset>
     <FormLegend>Radio buttons</FormLegend>
@@ -175,12 +184,11 @@ export const FormsComponent = () => {
             { id: 'radio-2', name: 'radio-2', value: 'radio-2', label: 'Option 2' },
             { id: 'radio-3', name: 'radio-3', value: 'radio-3', label: 'Option 3' }
         ]}
-        defaultChecked="radio-2"
-    />
+        defaultChecked='radio-2' />
 </FormFieldset>
 
 <FormFieldset>
-    <FormLegend legendText="Radio buttons disabled" />
+    <FormLegend>Radio buttons disabled</FormLegend>
     <FormRadio
         disabled
         inputs={[
@@ -188,60 +196,65 @@ export const FormsComponent = () => {
             { id: 'radio-5', name: 'radio-5', value: 'radio-5', label: 'Option 2' },
             { id: 'radio-6', name: 'radio-6', value: 'radio-6', label: 'Option 3' }
         ]}
-        defaultChecked="radio-4"
-    />
+        defaultChecked='radio-4' />
 </FormFieldset>
 
 <FormFieldset>
-    <FormLegend legendText="Inline Radio buttons" />
+    <FormLegend>Inline Radio buttons</FormLegend>
     <FormRadio
-        isInline={true}
+        isInline
         inputs={[
             { id: 'radio-7', name: 'radio-7', value: 'radio-7', label: 'Option 1' },
             { id: 'radio-8', name: 'radio-8', value: 'radio-8', label: 'Option 2' },
             { id: 'radio-9', name: 'radio-9', value: 'radio-9', label: 'Option 3' }
         ]}
-        defaultChecked="radio-9"
-    />
+        defaultChecked='radio-9' />
 </FormFieldset>`;
 
     const inputsCheckboxCode = `<FormFieldset>
-    <FormLegend legendText="Checkboxes" />
-    <FormItem isCheck={true}>
-        <FormInput type="checkbox" id="checkbox-1" name="checkbox-name-1" value="" />
-        <FormLabel forAttr="checkbox-1">Option One</FormLabel>
+    <FormLegend>Checkboxes</FormLegend>
+    <FormItem isCheck>
+        <FormInput type='checkbox' id='checkbox-1'
+            name='checkbox-name-1' value='' />
+        <FormLabel htmlFor='checkbox-1'>Option One</FormLabel>
     </FormItem>
-    <FormItem isCheck={true}>
-        <FormInput type="checkbox" id="checkbox-2" name="checkbox-name-2" value="" />
-        <FormLabel forAttr="checkbox-2">Option Two</FormLabel>
+    <FormItem isCheck>
+        <FormInput type='checkbox' id='checkbox-2'
+            name='checkbox-name-2' value='' />
+        <FormLabel htmlFor='checkbox-2'>Option Two</FormLabel>
     </FormItem>
-    <FormItem isCheck={true}>
-        <FormInput type="checkbox" id="checkbox-3" name="checkbox-name-3" value="" />
-        <FormLabel forAttr="checkbox-3">Option Three</FormLabel>
+    <FormItem isCheck>
+        <FormInput type='checkbox' id='checkbox-3'
+            name='checkbox-name-3' value='' />
+        <FormLabel htmlFor='checkbox-3'>Option Three</FormLabel>
     </FormItem>
 </FormFieldset>
 
 <FormFieldset>
-    <FormLegend legendText="Inline Checkbox buttons" />
-    <FormItem isCheck={true} isInline={true}>
-        <FormLabel forAttr="checkbox-4">
-            <FormInput type="checkbox" id="checkbox-4" name="checkbox-name-4" value="" />
+    <FormLegend>Inline Checkbox buttons</FormLegend>
+    <FormItem isCheck isInline>
+        <FormLabel htmlFor='checkbox-4'>
+            <FormInput type='checkbox' id='checkbox-4'
+                name='checkbox-name-4' value='' />
             Option One
         </FormLabel>
     </FormItem>
-    <FormItem isCheck={true} isInline={true}>
-        <FormLabel forAttr="checkbox-5">
-            <FormInput type="checkbox" id="checkbox-5" name="checkbox-name-5" value="" />
+    <FormItem isCheck isInline>
+        <FormLabel htmlFor='checkbox-5'>
+            <FormInput type='checkbox' id='checkbox-5'
+                name='checkbox-name-5' value='' />
             Option Two
         </FormLabel>
     </FormItem>
-    <FormItem isCheck={true} isInline={true}>
-        <FormLabel forAttr="checkbox-6">
-            <FormInput type="checkbox" id="checkbox-6" name="checkbox-name-6" value="" />
+    <FormItem isCheck isInline>
+        <FormLabel htmlFor='checkbox-6'>
+            <FormInput type='checkbox' id='checkbox-6'
+                name='checkbox-name-6' value='' />
             Option Three
         </FormLabel>
     </FormItem>
-</FormFieldset>`;
+</FormFieldset>
+`;
 
     return (
         <div>
@@ -283,7 +296,6 @@ export const FormsComponent = () => {
                         description:
                             'bool - used in FormItem. Set to \'true\' to display radio buttons and checkboxes in a row.'
                     },
-                    { name: 'forAttr', description: 'string - input \'for\' attribute. Used in FormLabel.' },
                     {
                         name: 'required',
                         description: 'bool - set to \'true\' for required input fields. Used in FormLabel.'
@@ -294,19 +306,11 @@ export const FormsComponent = () => {
                             'string - when used in FormMessage this property sets the type of the message. The options include \'error\', \'warning\', and \'help\'.'
                     },
                     {
-                        name: 'type',
-                        description:
-                            'string - when used in FormInput this property sets the type of the input. Options include \'text\', \'password\', \'radio\', \'checkbox\', \'button\'.'
-                    },
-                    {
                         name: 'state',
                         description:
                             'string - the state of the input. Options include \'normal\', \'valid\', \'invalid\', \'warning\', \'help\', \'disabled\', and \'readonly\'. Leave empty for normal. Used in FormInput.'
                     },
-                    { name: 'id', description: 'string - \'id\' attribute.' },
-                    { name: 'placeholder', description: 'string - input \'placeholder\' attribute.' },
                     { name: 'disabled', description: 'bool - set to \'true\' to disable the element.' },
-                    { name: 'name', description: 'string - the name property of select. Used in FormSelect.' },
                     { name: 'defaultChecked', description: 'string - the id of the element selected by default.' }
                 ]} />
 
@@ -320,7 +324,7 @@ export const FormsComponent = () => {
             <DocsTile>
                 <FormSet>
                     <FormItem>
-                        <FormLabel forAttr='input-1'>Default Input</FormLabel>
+                        <FormLabel htmlFor='input-1'>Default Input</FormLabel>
                         <FormInput type='text' id='input-1'
                             placeholder='Field placeholder text' />
                     </FormItem>
@@ -328,7 +332,7 @@ export const FormsComponent = () => {
 
                 <FormSet>
                     <FormItem>
-                        <FormLabel forAttr='input-2' required>
+                        <FormLabel htmlFor='input-2' required>
                             Required Input
                         </FormLabel>
                         <FormInput type='text' id='input-2'
@@ -338,7 +342,7 @@ export const FormsComponent = () => {
 
                 <FormSet>
                     <FormItem>
-                        <FormLabel forAttr='input-3' required>
+                        <FormLabel htmlFor='input-3' required>
                             Password
                         </FormLabel>
                         <FormInput type='password' id='input-3'
@@ -348,12 +352,10 @@ export const FormsComponent = () => {
 
                 <FormSet>
                     <FormItem>
-                        <FormLabel forAttr='textarea-1' required>
+                        <FormLabel htmlFor='textarea-1' required>
                             Text area
                         </FormLabel>
-                        <FormTextarea id='textarea-1'>
-                            Pellentesque metus lacus commodo eget justo ut rutrum varius nunc.
-                        </FormTextarea>
+                        <FormTextarea id='textarea-1' defaultValue=' Pellentesque metus lacus commodo eget justo ut rutrum varius nunc.' />
                     </FormItem>
                 </FormSet>
             </DocsTile>
@@ -372,7 +374,7 @@ export const FormsComponent = () => {
             <DocsTile>
                 <FormSet>
                     <FormItem>
-                        <FormLabel forAttr='input-4'>
+                        <FormLabel htmlFor='input-4'>
                             Input with inline help
                             <span className='fd-inline-help fd-has-float-right'>
                                 <span className='fd-inline-help__content fd-inline-help__content--bottom-right'>
@@ -386,7 +388,7 @@ export const FormsComponent = () => {
 
                 <FormSet>
                     <FormItem>
-                        <FormLabel forAttr='input-5'>Input with Help Message</FormLabel>
+                        <FormLabel htmlFor='input-5'>Input with Help Message</FormLabel>
                         <FormInput type='text' id='input-5' />
                         <FormMessage type='help'>
                             Pellentesque metus lacus commodo eget justo ut rutrum varius nunc
@@ -417,7 +419,7 @@ export const FormsComponent = () => {
             <DocsTile>
                 <FormSet>
                     <FormItem>
-                        <FormLabel forAttr='OatmD552'>Normal Input</FormLabel>
+                        <FormLabel htmlFor='OatmD552'>Normal Input</FormLabel>
                         <FormInput type='text' id='OatmD552'
                             placeholder='Field placeholder text' />
                         <FormMessage>Pellentesque metus lacus commodo eget justo ut rutrum varius nunc</FormMessage>
@@ -426,7 +428,7 @@ export const FormsComponent = () => {
 
                 <FormSet>
                     <FormItem>
-                        <FormLabel forAttr='OatmD553'>Valid Input</FormLabel>
+                        <FormLabel htmlFor='OatmD553'>Valid Input</FormLabel>
                         <FormInput type='text' state='valid'
                             id='OatmD553' placeholder='Field placeholder text' />
                     </FormItem>
@@ -434,7 +436,7 @@ export const FormsComponent = () => {
 
                 <FormSet>
                     <FormItem>
-                        <FormLabel forAttr='OatmD554'>Invalid Input</FormLabel>
+                        <FormLabel htmlFor='OatmD554'>Invalid Input</FormLabel>
                         <FormInput type='text' state='invalid'
                             id='OatmD554' placeholder='Field placeholder text' />
                         <FormMessage type='error'>
@@ -445,7 +447,7 @@ export const FormsComponent = () => {
 
                 <FormSet>
                     <FormItem>
-                        <FormLabel forAttr='OatmD555'>Warning Input</FormLabel>
+                        <FormLabel htmlFor='OatmD555'>Warning Input</FormLabel>
                         <FormInput type='text' state='warning'
                             id='OatmD555' placeholder='Field placeholder text' />
                         <FormMessage type='warning'>
@@ -456,7 +458,7 @@ export const FormsComponent = () => {
 
                 <FormSet>
                     <FormItem>
-                        <FormLabel forAttr='OatmD556'>Field Label</FormLabel>
+                        <FormLabel htmlFor='OatmD556'>Field Label</FormLabel>
                         <FormInput type='text' state='help'
                             id='OatmD556' placeholder='Field placeholder text' />
                         <FormMessage type='help'>
@@ -467,7 +469,7 @@ export const FormsComponent = () => {
 
                 <FormSet>
                     <FormItem>
-                        <FormLabel forAttr='OatmD557'>Disabled Input</FormLabel>
+                        <FormLabel htmlFor='OatmD557'>Disabled Input</FormLabel>
                         <FormInput
                             type='text'
                             state='help'
@@ -479,13 +481,13 @@ export const FormsComponent = () => {
 
                 <FormSet>
                     <FormItem>
-                        <FormLabel forAttr='OatmD558' labelText='Readonly Input' />
+                        <FormLabel htmlFor='OatmD558'>Readonly Input</FormLabel>
                         <FormInput
                             type='text'
                             state='help'
                             id='OatmD558'
                             placeholder='Field placeholder text'
-                            readonly />
+                            readOnly />
                     </FormItem>
                 </FormSet>
             </DocsTile>
@@ -501,7 +503,7 @@ export const FormsComponent = () => {
             <DocsTile>
                 <FormSet>
                     <FormItem>
-                        <FormLabel forAttr='select-1' labelText='Default Select' />
+                        <FormLabel htmlFor='select-1'>Default Select</FormLabel>
                         <FormSelect id='select-1'>
                             <option value='1'>Duis malesuada odio volutpat elementum</option>
                             <option value='2'>Suspendisse ante ligula</option>
@@ -512,7 +514,7 @@ export const FormsComponent = () => {
 
                 <FormSet>
                     <FormItem>
-                        <FormLabel forAttr='select-1' labelText='Default Select' />
+                        <FormLabel htmlFor='select-1'>Default Select</FormLabel>
                         <FormSelect id='select-1' disabled>
                             <option value='1'>Duis malesuada odio volutpat elementum</option>
                             <option value='2'>Suspendisse ante ligula</option>
@@ -544,7 +546,7 @@ export const FormsComponent = () => {
                 </FormFieldset>
 
                 <FormFieldset>
-                    <FormLegend legendText='Radio buttons disabled' />
+                    <FormLegend>Radio buttons disabled</FormLegend>
                     <FormRadio
                         disabled
                         inputs={[
@@ -556,7 +558,7 @@ export const FormsComponent = () => {
                 </FormFieldset>
 
                 <FormFieldset>
-                    <FormLegend legendText='Inline Radio buttons' />
+                    <FormLegend>Inline Radio buttons</FormLegend>
                     <FormRadio
                         isInline
                         inputs={[
@@ -579,42 +581,42 @@ export const FormsComponent = () => {
 
             <DocsTile>
                 <FormFieldset>
-                    <FormLegend legendText='Checkboxes' />
+                    <FormLegend>Checkboxes</FormLegend>
                     <FormItem isCheck>
                         <FormInput type='checkbox' id='checkbox-1'
                             name='checkbox-name-1' value='' />
-                        <FormLabel forAttr='checkbox-1'>Option One</FormLabel>
+                        <FormLabel htmlFor='checkbox-1'>Option One</FormLabel>
                     </FormItem>
                     <FormItem isCheck>
                         <FormInput type='checkbox' id='checkbox-2'
                             name='checkbox-name-2' value='' />
-                        <FormLabel forAttr='checkbox-2'>Option Two</FormLabel>
+                        <FormLabel htmlFor='checkbox-2'>Option Two</FormLabel>
                     </FormItem>
                     <FormItem isCheck>
                         <FormInput type='checkbox' id='checkbox-3'
                             name='checkbox-name-3' value='' />
-                        <FormLabel forAttr='checkbox-3'>Option Three</FormLabel>
+                        <FormLabel htmlFor='checkbox-3'>Option Three</FormLabel>
                     </FormItem>
                 </FormFieldset>
 
                 <FormFieldset>
-                    <FormLegend legendText='Inline Checkbox buttons' />
+                    <FormLegend>Inline Checkbox buttons</FormLegend>
                     <FormItem isCheck isInline>
-                        <FormLabel forAttr='checkbox-4'>
+                        <FormLabel htmlFor='checkbox-4'>
                             <FormInput type='checkbox' id='checkbox-4'
                                 name='checkbox-name-4' value='' />
                             Option One
                         </FormLabel>
                     </FormItem>
                     <FormItem isCheck isInline>
-                        <FormLabel forAttr='checkbox-5'>
+                        <FormLabel htmlFor='checkbox-5'>
                             <FormInput type='checkbox' id='checkbox-5'
                                 name='checkbox-name-5' value='' />
                             Option Two
                         </FormLabel>
                     </FormItem>
                     <FormItem isCheck isInline>
-                        <FormLabel forAttr='checkbox-6'>
+                        <FormLabel htmlFor='checkbox-6'>
                             <FormInput type='checkbox' id='checkbox-6'
                                 name='checkbox-name-6' value='' />
                             Option Three

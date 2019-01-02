@@ -1,12 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export const Icon = props => {
-  const { glyph, size, clickHandler, children } = props;
+export const Icon = ({ glyph, size, clickHandler, className, ...props }) => {
   return (
       <span
-          className={`${'sap-icon--' + glyph}${size ? ' sap-icon--' + size : ''}`}
-          onClick={clickHandler}>{children}</span>
+          className={`${'sap-icon--' + glyph}${size ? ' sap-icon--' + size : ''}${className ? ' ' + className : ''}`}
+          onClick={clickHandler} {...props} />
   );
 };
 
@@ -16,6 +15,7 @@ Icon.defaultProps = {
 
 Icon.propTypes = {
   glyph: PropTypes.string.isRequired,
+  className: PropTypes.string,
   clickHandler: PropTypes.func,
   size: PropTypes.string
 };

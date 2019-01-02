@@ -1,20 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export const Button = props => {
-  const {
-    option,
-    type,
-    compact,
-    glyph,
-    dropdown,
-    navbar,
-    selected,
-    disabled,
-    typeAttr,
-    onclick,
-    children
-  } = props;
+export const Button = ({
+  option,
+  type,
+  compact,
+  glyph,
+  dropdown,
+  navbar,
+  selected,
+  disabled,
+  typeAttr,
+  onClick,
+  children,
+  className,
+  ...props
+}) => {
   return (
       <button
           className={`${option ? 'fd-button--' + option : ' fd-button'}${
@@ -23,11 +24,11 @@ export const Button = props => {
         compact ? ' fd-button--compact' : ''
       }${glyph ? ' sap-icon--' + glyph : ''}${
         navbar ? ' fd-global-nav__btn' : ''
-      }${selected ? ' is-selected' : ''}${disabled ? ' is-disabled' : ''}`}
+      }${selected ? ' is-selected' : ''}${disabled ? ' is-disabled' : ''}${className ? ' ' + className : ''}`} {...props}
           selected={selected ? selected : false}
           disabled={disabled ? disabled : false}
           type={typeAttr}
-          onClick={onclick}>
+          onClick={onClick}>
           {children}
       </button>
   );
@@ -39,11 +40,11 @@ Button.propTypes = {
   dropdown: PropTypes.bool,
   glyph: PropTypes.string,
   navbar: PropTypes.bool,
-  onclick: PropTypes.func,
   option: PropTypes.oneOf(['', 'emphasized', 'light', 'shell']),
   selected: PropTypes.bool,
   type: PropTypes.oneOf(['', 'standard', 'positive', 'negative', 'medium']),
-  typeAttr: PropTypes.string
+  typeAttr: PropTypes.string,
+  onClick: PropTypes.func
 };
 
 export const ButtonGroup = props => {
