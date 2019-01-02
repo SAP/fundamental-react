@@ -3,7 +3,6 @@
 exports[`<Tile /> create tile component 1`] = `
 <div
   className="fd-tile"
-  role=""
 >
   <div
     className="fd-tile__content"
@@ -23,7 +22,6 @@ exports[`<Tile /> create tile component 1`] = `
 exports[`<Tile /> create tile component 2`] = `
 <div
   className="fd-tile is-disabled fd-has-grid-column-span-3  fd-has-background-color-background-8"
-  role=""
 >
   <div
     className="fd-tile__content"
@@ -43,7 +41,7 @@ exports[`<Tile /> create tile component 2`] = `
 exports[`<Tile /> create tile component 3`] = `
 <div
   className="fd-tile"
-  role="button"
+  isButton={true}
 >
   <div
     className="fd-tile__media"
@@ -71,7 +69,6 @@ exports[`<Tile /> create tile component 3`] = `
 exports[`<Tile /> create tile component 4`] = `
 <div
   className="fd-tile"
-  role=""
 >
   <div
     className="fd-tile__content"
@@ -152,7 +149,7 @@ exports[`<Tile /> create tile component 4`] = `
 exports[`<Tile /> create tile component 5`] = `
 <div
   className="fd-product-tile"
-  role="button"
+  isButton={true}
 >
   <div
     className="fd-product-tile__media"
@@ -180,7 +177,6 @@ exports[`<Tile /> create tile component 5`] = `
 exports[`<Tile /> create tile component 6`] = `
 <div
   className="fd-product-tile is-disabled"
-  role=""
 >
   <div
     className="fd-product-tile__media"
@@ -211,7 +207,6 @@ exports[`<Tile /> create tile component 7`] = `
 >
   <div
     className="fd-tile fd-has-grid-row-span-2 fd-has-background-color-accent-7"
-    role=""
   >
     <div
       className="fd-tile__content"
@@ -235,7 +230,6 @@ exports[`<Tile /> create tile component 8`] = `
 >
   <div
     className="fd-tile fd-has-grid-row-span-2 fd-has-background-color-accent-7"
-    role=""
   >
     <div
       className="fd-tile__content"

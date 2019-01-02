@@ -1,28 +1,25 @@
 import React from 'react';
 
-export const ListGroup = (props) => {
-    const { children } = props;
+export const ListGroup = ({ children, className, ...props }) => {
     return (
-        <ul className='fd-list-group'>
+        <ul className={`fd-list-group${className ? ' ' + className : ''}`} {...props}>
             {children}
         </ul>
     );
 };
 
-export const ListGroupItem = (props) => {
-    const { children } = props;
+export const ListGroupItem = ({ children, className, ...props }) => {
     return (
-        <li className='fd-list-group__item'>
+        <li className={`fd-list-group__item${className ? ' ' + className : ''}`} {...props}>
             {children}
         </li>
 
     );
 };
 
-export const ListGroupItemActions = (props) => {
-    const { children } = props;
+export const ListGroupItemActions = ({ children, className, ...props }) => {
     return (
-        <span className='fd-list-group__action'>
+        <span className={`fd-list-group__action${className ? ' ' + className : ''}`} {...props}>
             {children}
         </span>
     );

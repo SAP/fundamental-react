@@ -19,16 +19,16 @@ describe('<Calendar />', () => {
   const blockedDays = (
       <Calendar
           blockedDates={[
-            new Date(2018, 1, 1, 0, 0, 0, 0),
-            new Date(2018, 3, 3, 0, 0, 0, 0)
-          ]} />
+        new Date(2018, 1, 1, 0, 0, 0, 0),
+        new Date(2018, 3, 3, 0, 0, 0, 0)
+      ]} />
   );
   const disabledDates = (
       <Calendar
           disabledDates={[
-            new Date(2018, 1, 1, 0, 0, 0, 0),
-            new Date(2018, 3, 3, 0, 0, 0, 0)
-          ]} />
+        new Date(2018, 1, 1, 0, 0, 0, 0),
+        new Date(2018, 3, 3, 0, 0, 0, 0)
+      ]} />
   );
   const disabledWeekDay = <Calendar disableWeekday={['Monday', 'Tuesday']} />;
   const rangeSelect = <Calendar enableRangeSelection onChange={mockOnChange} />;
