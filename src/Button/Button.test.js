@@ -28,7 +28,7 @@ describe('<Button />', () => {
 
   const buttonGroup = (
       <ButtonGroup>
-          <Button glyph='survey' />
+          <Button className='blue' glyph='survey' />
           <Button glyph='pie-chart' selected />
           <Button glyph='pool' />
       </ButtonGroup>

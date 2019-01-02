@@ -26,7 +26,7 @@ exports[`<Identifier /> Create identifier 3`] = `
 
 exports[`<Identifier /> Create identifier 4`] = `
 <span
-  className="fd-identifier--m sap-icon--washing-machine fd-identifier--transparent"
+  className="fd-identifier--m sap-icon--washing-machine fd-identifier--transparent blue"
   role="presentation"
 />
 `;

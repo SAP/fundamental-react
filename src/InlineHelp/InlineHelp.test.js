@@ -10,6 +10,7 @@ describe('<InlineHelp />', () => {
   const handleClick = jest.fn();
   const defaultInlineHelp = (
       <InlineHelp
+          className='blue'
           text='Lorem ipsum dolor sit amet, consectetur adipiscing.'
           placement='bottom-right' />
   );

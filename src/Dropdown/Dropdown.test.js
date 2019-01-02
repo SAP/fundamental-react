@@ -25,7 +25,7 @@ describe('<Dropdown />', () => {
   );
 
   const compactDropdown = (
-      <Dropdown>
+      <Dropdown className='blue'>
           <Popover
               control={
                   <Button dropdown compact>

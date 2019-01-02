@@ -27,7 +27,7 @@ exports[`<Toggle /> create toggle component 1`] = `
 exports[`<Toggle /> create toggle component 2`] = `
 <div
   checked={true}
-  className="fd-form__item fd-form__item--check"
+  className="fd-form__item fd-form__item--check blue"
 >
   <label
     className="fd-form__label"
