@@ -40,8 +40,35 @@ describe('<Panel />', () => {
       </Panel>
   );
 
+  const panelWithClass = (
+      <Panel className='blue'>
+          <PanelHeader className='blue'>
+              <PanelHead
+                  className='blue'
+                  title={'Panel Header with Actions'}
+                  description='Panel Description' />
+              <PanelActions className='blue'>
+                  <Button compact glyph='add'>
+            Add New Button
+                  </Button>
+              </PanelActions>
+          </PanelHeader>
+          <PanelFilters className='blue'>
+              <div>Panel Filters</div>
+              <br />
+          </PanelFilters>
+          <PanelBody className='blue'>
+              <div>Panel Body</div>
+          </PanelBody>
+          <PanelContent className='blue'>
+              <div>Panel Content</div>
+          </PanelContent>
+          <PanelFooter className='blue'>Panel Footer</PanelFooter>
+      </Panel>
+  );
+
   const panelGrid = (
-      <PanelGrid>
+      <PanelGrid className='blue'>
           <Panel colSpan={2}>
               <PanelHead title={'Panel Header with Actions'} />
               <PanelBody>Panel</PanelBody>
@@ -108,6 +135,11 @@ describe('<Panel />', () => {
 
     // panel grid
     component = renderer.create(panelGrid);
+    tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+
+    // panel with class
+    component = renderer.create(panelWithClass);
     tree = component.toJSON();
     expect(tree).toMatchSnapshot();
 

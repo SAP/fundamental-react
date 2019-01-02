@@ -2,17 +2,17 @@
 
 exports[`<ActionBar /> create basic Action Bar 1`] = `
 <div
-  className="fd-action-bar"
+  className="fd-action-bar blue"
 >
   <div
-    className="fd-action-bar__back"
+    className="fd-action-bar__back blue"
   >
     <button
       className="fd-button--light fd-button--compact sap-icon--nav-back"
     />
   </div>
   <div
-    className="fd-action-bar__header"
+    className="fd-action-bar__header blue"
   >
     <h1
       className="fd-action-bar__title"
@@ -27,7 +27,43 @@ exports[`<ActionBar /> create basic Action Bar 1`] = `
     </p>
   </div>
   <div
-    className="fd-action-bar__actions"
+    className="fd-action-bar__actions blue"
+  >
+    <button>
+      Button
+    </button>
+  </div>
+</div>
+`;
+
+exports[`<ActionBar /> create basic Action Bar 2`] = `
+<div
+  className="fd-action-bar"
+>
+  <div
+    className="fd-action-bar__back blue"
+  >
+    <button
+      className="fd-button--light fd-button--compact sap-icon--nav-back"
+    />
+  </div>
+  <div
+    className="fd-action-bar__header blue"
+  >
+    <h1
+      className="fd-action-bar__title"
+    >
+      Page Title
+    </h1>
+    <p
+      className="fd-action-bar__description"
+    >
+      Action Bar Description
+       
+    </p>
+  </div>
+  <div
+    className="fd-action-bar__actions blue"
   >
     <button>
       Button
@@ -45,7 +81,7 @@ exports[`<ActionBar /> create basic mobile Action Bar 1`] = `
   }
 >
   <div
-    className="fd-action-bar"
+    className="fd-action-bar blue"
   >
     <div
       className="fd-action-bar__back"

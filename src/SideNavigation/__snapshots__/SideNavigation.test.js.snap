@@ -71,7 +71,7 @@ exports[`<SideNavigation /> create side navigation 2`] = `
   className="fd-side-nav"
 >
   <div
-    className="fd-side-nav__group"
+    className="fd-side-nav__group blue"
   >
     <h1
       className="fd-side-nav__title"
@@ -79,7 +79,7 @@ exports[`<SideNavigation /> create side navigation 2`] = `
       Group Title
     </h1>
     <ul
-      className="fd-side-nav__list"
+      className="fd-side-nav__list blue"
     >
       <li
         className="fd-side-nav__item"

@@ -12,7 +12,10 @@ describe('<Pagination />', () => {
       <Pagination itemsTotal={101} onClick={handleClick} />
   );
   const initialSetPagination = (
-      <Pagination itemsTotal={101} initalPage={5}
+      <Pagination
+          className='blue'
+          itemsTotal={101}
+          initalPage={5}
           onClick={handleClick} />
   );
 

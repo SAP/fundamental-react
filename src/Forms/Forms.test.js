@@ -36,13 +36,16 @@ describe('<Forms />', () => {
                   id='input-1'
                   state='help'
                   placeholder='Field placeholder text' />
-              <FormTextarea id='textarea-1'>
+              <FormTextarea className='blue' id='textarea-1'>
+          Pellentesque metus lacus commodo eget justo ut rutrum varius nunc.
+              </FormTextarea>
+              <FormTextarea id='textarea-2'>
           Pellentesque metus lacus commodo eget justo ut rutrum varius nunc.
               </FormTextarea>
               <FormMessage type='help'>
           Pellentesque metus lacus commodo eget justo ut rutrum varius nunc
               </FormMessage>
-              <FormMessage>
+              <FormMessage className='blue'>
           Pellentesque metus lacus commodo eget justo ut rutrum varius nunc
               </FormMessage>
               <FormSelect id='select-1'>
@@ -50,7 +53,8 @@ describe('<Forms />', () => {
                   <option value='2'>Suspendisse ante ligula</option>
                   <option value='3'>Sed bibendum sapien at posuere interdum</option>
               </FormSelect>
-              <FormSelect id='select-1' disabled>
+              <FormSelect className='blue' id='select-1'
+                  disabled>
                   <option value='1'>Duis malesuada odio volutpat elementum</option>
               </FormSelect>
           </FormItem>
@@ -59,8 +63,9 @@ describe('<Forms />', () => {
 
   const formFieldSet = (
       <FormFieldset>
-          <FormLegend>Radio buttons</FormLegend>
+          <FormLegend className='blue'>Radio buttons</FormLegend>
           <FormRadio
+              className='blue'
               inputs={[
           {
             id: 'radio-1',
@@ -155,14 +160,58 @@ describe('<Forms />', () => {
         ]}
               defaultChecked='radio-9' />
           <FormLegend legendText='Checkboxes' />
-          <FormItem isCheck>
+          <FormItem className='blue' isCheck>
               <FormInput
+                  className='blue'
                   type='checkbox'
                   id='checkbox-1'
                   name='checkbox-name-1'
                   value='' />
-              <FormLabel forAttr='checkbox-1'>Option One</FormLabel>
+              <FormLabel className='blue' forAttr='checkbox-1'>
+          Option One
+              </FormLabel>
           </FormItem>
+      </FormFieldset>
+  );
+
+  const formSetWithClass = (
+      <FormSet className='blue'>
+          <FormItem isInline isCheck>
+              <FormLabel forAttr='input-1'>Default Input</FormLabel>
+              <FormInput
+                  type='text'
+                  id='input-1'
+                  placeholder='Field placeholder text' />
+          </FormItem>
+      </FormSet>
+  );
+
+  const formFieldSetWithClass = (
+      <FormFieldset className='blue'>
+          <FormLegend className='blue'>Radio buttons</FormLegend>
+          <FormRadio
+              className='blue'
+              inputs={[
+          {
+            id: 'radio-1',
+            name: 'radio-1',
+            value: 'radio-1',
+            label: 'Option 1'
+          },
+          {
+            id: 'radio-2',
+            name: 'radio-2',
+            value: 'radio-2',
+            label: 'Option 2'
+          },
+          {
+            id: 'radio-3',
+            name: 'radio-3',
+            value: 'radio-3',
+            label: 'Option 3'
+          }
+        ]}
+              defaultChecked='radio-2' />
       </FormFieldset>
   );
 
@@ -195,6 +244,16 @@ describe('<Forms />', () => {
     // create form set with form inputs
     let component = renderer.create(formInput);
     let tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+
+    // create form ield set with form inputs
+    component = renderer.create(formSetWithClass);
+    tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+
+    // create form ield set with form inputs
+    component = renderer.create(formFieldSetWithClass);
+    tree = component.toJSON();
     expect(tree).toMatchSnapshot();
 
     // create form ield set with form inputs

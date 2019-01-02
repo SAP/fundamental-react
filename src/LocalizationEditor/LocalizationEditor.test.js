@@ -23,6 +23,7 @@ describe('<LocalizationEditor />', () => {
 
   const localEditorCompact = (
       <LocalizationEditor
+          className='blue'
           compact
           control={{
         label: 'Localization Editor Compact Mode',

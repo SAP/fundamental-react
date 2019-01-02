@@ -8,7 +8,10 @@ Enzyme.configure({ adapter: new Adapter() });
 
 describe('<Icon />', () => {
   const mockOnClick = jest.fn();
-  const defaultIcon = <Icon glyph='cart' clickHandler={mockOnClick} />;
+  const defaultIcon = (
+      <Icon glyph='cart' className='blue'
+          clickHandler={mockOnClick} />
+  );
   const iconWithSize = <Icon glyph='cart' size='s' />;
 
   test('create icon', () => {

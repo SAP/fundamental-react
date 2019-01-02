@@ -8,3 +8,12 @@ exports[`<Token /> create token component 1`] = `
   Bibendum
 </span>
 `;
+
+exports[`<Token /> create token component 2`] = `
+<span
+  className="fd-token blue"
+  role="button"
+>
+  Bibendum
+</span>
+`;

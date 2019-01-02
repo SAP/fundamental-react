@@ -1,0 +1,213 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Shellbar /> create shellbar 1`] = `
+<div
+  className="fd-shellbar"
+>
+  <div
+    className="fd-shellbar__group fd-shellbar__group--start"
+  >
+    <a
+      className="fd-shellbar__logo"
+    >
+      <img
+        alt="SAP"
+        src="//unpkg.com/fiori-fundamentals/dist/images/sap-logo.png"
+      />
+    </a>
+    <div
+      className="fd-shellbar__product"
+    >
+      <span
+        className="fd-shellbar__title"
+      >
+        Corporate Portal
+      </span>
+    </div>
+  </div>
+  <div
+    className="fd-shellbar__group fd-shellbar__group--end"
+  >
+    <div
+      className="fd-shellbar__actions"
+    >
+      <div
+        className="fd-shellbar__action fd-shellbar__action--show-always"
+      >
+        <div
+          className="fd-user-menu"
+        >
+          <div
+            className="fd-popover fd-popover--right"
+          >
+            <div
+              aria-expanded={false}
+              className="fd-popover__control"
+              onClick={[Function]}
+            >
+              <span
+                className="fd-identifier--xs fd-identifier--circle fd-has-background-color-accent-8"
+                role=""
+              >
+                JS
+              </span>
+            </div>
+            <div
+              aria-hidden={true}
+              className="fd-popover__body fd-popover__body--right"
+            >
+              <nav
+                className="fd-menu"
+              >
+                <ul
+                  className="fd-menu__list"
+                >
+                  <li>
+                    <a
+                      className="fd-menu__item"
+                    >
+                      John Snow
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      className="fd-menu__item"
+                      onClick={[Function]}
+                    >
+                      <span
+                        className="sap-icon--action-settings sap-icon--s"
+                        onClick={[Function]}
+                      />
+                         
+                      Settings
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      className="fd-menu__item"
+                      onClick={[Function]}
+                    >
+                      <span
+                        className="sap-icon--log sap-icon--s"
+                        onClick={[Function]}
+                      />
+                         
+                      Sign Out
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Shellbar /> create shellbar 2`] = `
+<div
+  className="fd-shellbar blue"
+>
+  <div
+    className="fd-shellbar__group fd-shellbar__group--start"
+  >
+    <a
+      className="fd-shellbar__logo"
+    >
+      <img
+        alt="SAP"
+        src="//unpkg.com/fiori-fundamentals/dist/images/sap-logo.png"
+      />
+    </a>
+    <div
+      className="fd-shellbar__product"
+    >
+      <span
+        className="fd-shellbar__title"
+      >
+        Corporate Portal
+      </span>
+    </div>
+  </div>
+  <div
+    className="fd-shellbar__group fd-shellbar__group--end"
+  >
+    <div
+      className="fd-shellbar__actions"
+    >
+      <div
+        className="fd-shellbar__action fd-shellbar__action--show-always"
+      >
+        <div
+          className="fd-user-menu"
+        >
+          <div
+            className="fd-popover fd-popover--right"
+          >
+            <div
+              aria-expanded={false}
+              className="fd-popover__control"
+              onClick={[Function]}
+            >
+              <span
+                className="fd-identifier--xs fd-identifier--circle fd-has-background-color-accent-8"
+                role=""
+              >
+                JS
+              </span>
+            </div>
+            <div
+              aria-hidden={true}
+              className="fd-popover__body fd-popover__body--right"
+            >
+              <nav
+                className="fd-menu"
+              >
+                <ul
+                  className="fd-menu__list"
+                >
+                  <li>
+                    <a
+                      className="fd-menu__item"
+                    >
+                      John Snow
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      className="fd-menu__item"
+                      onClick={[Function]}
+                    >
+                      <span
+                        className="sap-icon--action-settings sap-icon--s"
+                        onClick={[Function]}
+                      />
+                         
+                      Settings
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      className="fd-menu__item"
+                      onClick={[Function]}
+                    >
+                      <span
+                        className="sap-icon--log sap-icon--s"
+                        onClick={[Function]}
+                      />
+                         
+                      Sign Out
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

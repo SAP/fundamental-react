@@ -13,7 +13,10 @@ describe('<Modal />', () => {
   const modalConfirmTitle = 'Delete';
   const modalFormTitle = 'Invite User';
   const infoModal = (
-      <Modal show={bShow} title={modalInfoTitle}
+      <Modal
+          show={bShow}
+          className='blue'
+          title={modalInfoTitle}
           onClose={mockOnClose}>
           <div>
               <b>The new product have been added to your catalog.</b>
@@ -30,7 +33,7 @@ describe('<Modal />', () => {
   );
 
   const infoNoShowModal = (
-      <Modal show={false} title={modalInfoTitle}
+      <Modal show={!bShow} title={modalInfoTitle}
           onClose={mockOnClose}>
           <div>
               <b>The new product have been added to your catalog.</b>

@@ -56,8 +56,9 @@ describe('<SideNavigation />', () => {
 
   const sideNavWithTitle = (
       <SideNav>
-          <SideNavGroup title='Group Title'>
+          <SideNavGroup className='blue' title='Group Title'>
               <SideNavList
+                  className='blue'
                   items={[
             { id: 'item_1', link: '/', name: 'Link Item' },
             { id: 'item_2', link: '/', name: 'Link Item' },

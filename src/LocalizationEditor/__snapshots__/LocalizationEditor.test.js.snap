@@ -105,7 +105,7 @@ exports[`<LocalizationEditor /> create localization editor 1`] = `
 
 exports[`<LocalizationEditor /> create localization editor 2`] = `
 <div
-  className="fd-localization-editor"
+  className="fd-localization-editor blue"
 >
   <div
     className="fd-popover"
