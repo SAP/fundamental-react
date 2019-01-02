@@ -27,6 +27,7 @@ describe('<SearchInput />', () => {
 
   const defaultSearchInput = (
       <SearchInput
+          className='blue'
           placeholder='Enter a fruit'
           searchList={searchData}
           onEnter={term => getInputValue(term)} />

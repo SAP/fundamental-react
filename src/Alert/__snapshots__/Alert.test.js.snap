@@ -47,7 +47,7 @@ exports[`<Alert /> create basic alert 2`] = `
 exports[`<Alert /> create non-dismissable alert 1`] = `
 <div>
   <div
-    className="fd-alert"
+    className="fd-alert blue"
     role="alert"
   >
     Default alert that cannot be dismissed

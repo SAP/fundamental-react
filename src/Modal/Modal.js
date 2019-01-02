@@ -28,13 +28,18 @@ export class Modal extends Component {
   }
 
   render() {
-    if (!this.props.show) {
+    const { children, title, actions, className, show, ...rest } = this.props;
+
+    if (!show) {
       return null;
     }
-    const { children, title, actions, className, ...rest } = this.props;
 
     return ReactDOM.createPortal(
-        <div className={`fd-ui__overlay fd-overlay fd-overlay--modal${className ? ' ' + className : ''}`} {...rest}>
+        <div
+            className={`fd-ui__overlay fd-overlay fd-overlay--modal${
+          className ? ' ' + className : ''
+        }`}
+            {...rest}>
             <div className='modal-demo-bg'>
                 <div className='fd-modal'>
                     <div className='fd-modal__content' role='document'>

@@ -14,8 +14,8 @@ Enzyme.configure({ adapter: new Adapter() });
 
 describe('<ListGroup />', () => {
   const defaultListGroup = (
-      <ListGroup>
-          <ListGroupItem>
+      <ListGroup className='blue'>
+          <ListGroupItem className='blue'>
               <a style={{ cursor: 'pointer' }}>List item 1</a>
           </ListGroupItem>
           <ListGroupItem>List item 2</ListGroupItem>
@@ -23,6 +23,12 @@ describe('<ListGroup />', () => {
               <a style={{ cursor: 'pointer' }}>List item3</a>
           </ListGroupItem>
           <ListGroupItem>List item 4</ListGroupItem>
+          <ListGroupItem>
+        List item 1
+              <ListGroupItemActions className='blue'>
+                  <Button type='standard' glyph='edit' />
+              </ListGroupItemActions>
+          </ListGroupItem>
       </ListGroup>
   );
   const listGroupAction = (

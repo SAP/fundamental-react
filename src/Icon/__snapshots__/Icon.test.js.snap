@@ -2,7 +2,7 @@
 
 exports[`<Icon /> create icon 1`] = `
 <span
-  className="sap-icon--cart"
+  className="sap-icon--cart blue"
   onClick={[MockFunction]}
 />
 `;

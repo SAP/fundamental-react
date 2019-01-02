@@ -8,7 +8,7 @@ Enzyme.configure({ adapter: new Adapter() });
 
 describe('<DatePicker />', () => {
   const defaultDatePicker = <DatePicker />;
-  const compactDatePicker = <DatePicker compact />;
+  const compactDatePicker = <DatePicker compact className='blue' />;
   const rangeDatePicker = <DatePicker enableRangeSelection />;
   const compactRangeDatepicker = <DatePicker enableRangeSelection compact />;
   let wrapper;

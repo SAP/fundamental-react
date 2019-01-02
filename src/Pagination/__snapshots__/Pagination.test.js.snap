@@ -2,7 +2,7 @@
 
 exports[`<Pagination /> create Pagination component with initial page set 1`] = `
 <div
-  className="fd-pagination"
+  className="fd-pagination blue"
 >
   <span
     className="fd-pagination__total"

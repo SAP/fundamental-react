@@ -85,7 +85,7 @@ exports[`<ComboboxInput /> create combobox input 1`] = `
 
 exports[`<ComboboxInput /> create combobox input 2`] = `
 <div
-  className="fd-combobox-input"
+  className="fd-combobox-input blue"
 >
   <div
     className="fd-popover"

@@ -9,26 +9,42 @@ describe('<Badge />', () => {
   const defaultPill = <Badge modifier='pill'>Default</Badge>;
   const typePill = (
       <Badge modifier='pill' type='success'>
-        Default
+      Default
       </Badge>
   );
 
-  const defaultFilledBadge = <Badge modifier='filled'>Default</Badge>;
+  const defaultFilledBadge = (
+      <Badge className='blue' modifier='filled'>
+      Default
+      </Badge>
+  );
   const typeFillBadge = (
       <Badge modifier='filled' type='success'>
-        Default
+      Default
       </Badge>
   );
 
   const defaultLabel = <Label>Default</Label>;
-  const typeLabel = <Label type='success'>Default</Label>;
+  const typeLabel = (
+      <Label className='blue' type='success'>
+      Default
+      </Label>
+  );
 
   const defaultStatus = <Status>Default</Status>;
-  const typeStatus = <Status type='success'>Default</Status>;
+  const typeStatus = (
+      <Status className='blue' type='success'>
+      Default
+      </Status>
+  );
   const iconStatus = <Status glyph='history'>Default</Status>;
 
   const defaultCounter = <Counter>5</Counter>;
-  const notificationCounter = <Counter notification>5</Counter>;
+  const notificationCounter = (
+      <Counter className='blue' notification>
+      5
+      </Counter>
+  );
 
   test('create badges, pills and filled badges', () => {
     // create default badge

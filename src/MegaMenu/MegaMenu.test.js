@@ -35,6 +35,7 @@ describe('<MegaMenu />', () => {
 
   const menuListLink = (
       <MegaMenuList
+          className='blue'
           items={[
         { id: 'item_6', link: '#', name: 'Link Item' },
         { id: 'item_7', link: '#', name: 'Link Item' },
@@ -55,8 +56,10 @@ describe('<MegaMenu />', () => {
   );
 
   const megaMenuLink = (
-      <MegaMenu>
-          <MegaMenuGroup title='Group Title'>{menuListLink}</MegaMenuGroup>
+      <MegaMenu className='blue'>
+          <MegaMenuGroup className='red' title='Group Title'>
+              {menuListLink}
+          </MegaMenuGroup>
       </MegaMenu>
   );
 

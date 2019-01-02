@@ -2,7 +2,7 @@
 
 exports[`<SearchInput /> create SearchInput 1`] = `
 <div
-  className="fd-search-input"
+  className="fd-search-input blue"
 >
   <div
     className="fd-popover"
