@@ -31,9 +31,7 @@ describe('<Calendar />', () => {
       ]} />
   );
   const disabledWeekDay = <Calendar disableWeekday={['Monday', 'Tuesday']} />;
-  const rangeSelect = (
-      <Calendar enableRangeSelection onChange={mockOnChange} />
-  );
+  const rangeSelect = <Calendar enableRangeSelection onChange={mockOnChange} />;
   const disablePast = <Calendar disablePastDates />;
   const disableFuture = <Calendar disableFutureDates />;
 
@@ -135,7 +133,7 @@ describe('<Calendar />', () => {
 
     // check that April was selected
     const currentDateDisplayed = wrapper.state('currentDateDisplayed');
-    expect(currentDateDisplayed.getFullYear()).toEqual(2021);
+    expect(currentDateDisplayed.getFullYear()).toEqual(2022);
   });
 
   test('click previous button', () => {
