@@ -14,8 +14,8 @@ describe('<Breadcrumb />', () => {
 
   const breadCrumbRouterLink = (
       <MemoryRouter>
-          <Breadcrumb>
-              <BreadcrumbItem name='Link Text' />
+          <Breadcrumb className='blue'>
+              <BreadcrumbItem className='blue' name='Link Text' />
               <BreadcrumbItem link='/' name='Link Text' />
               <BreadcrumbItem link='/' name='Link Text' />
           </Breadcrumb>

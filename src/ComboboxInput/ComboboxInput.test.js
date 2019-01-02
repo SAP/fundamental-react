@@ -23,6 +23,7 @@ describe('<ComboboxInput />', () => {
 
   const compactComboBoxInput = (
       <ComboboxInput
+          className='blue'
           placeholder='Select Fruit'
           compact
           menu={

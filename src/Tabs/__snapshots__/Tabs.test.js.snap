@@ -54,7 +54,107 @@ exports[`<Tabs /> create tabs component 1`] = `
 
 exports[`<Tabs /> create tabs component 2`] = `
 <ul
+  className="fd-tabs-container blue"
+>
+  <ul
+    className="fd-tabs"
+  >
+    <li
+      className="fd-tabs__item"
+    >
+      <a
+        aria-disabled={false}
+        className="fd-tabs__link is-selected"
+        href="#"
+        onClick={[Function]}
+      >
+        Tab 1
+      </a>
+      <p
+        className="fd-tabs__content"
+      >
+        Hello world
+      </p>
+    </li>
+    <li
+      className="fd-tabs__item"
+    >
+      <a
+        aria-disabled={false}
+        className="fd-tabs__link"
+        href="#"
+        onClick={[Function]}
+      >
+        Tab 2
+      </a>
+    </li>
+    <li
+      className="fd-tabs__item"
+    >
+      <a
+        aria-disabled={true}
+        className="fd-tabs__link"
+        href="#"
+        onClick={[Function]}
+      >
+        Tab 3
+      </a>
+    </li>
+  </ul>
+</ul>
+`;
+
+exports[`<Tabs /> create tabs component 3`] = `
+<ul
   className="fd-tabs"
+>
+  <li
+    className="fd-tabs__item"
+  >
+    <a
+      aria-disabled={false}
+      className="fd-tabs__link is-selected"
+      href="#"
+      onClick={[Function]}
+    >
+      Tab 1
+    </a>
+    <p
+      className="fd-tabs__content"
+    >
+      Hello world
+    </p>
+  </li>
+  <li
+    className="fd-tabs__item"
+  >
+    <a
+      aria-disabled={false}
+      className="fd-tabs__link"
+      href="#"
+      onClick={[Function]}
+    >
+      Tab 2
+    </a>
+  </li>
+  <li
+    className="fd-tabs__item"
+  >
+    <a
+      aria-disabled={true}
+      className="fd-tabs__link"
+      href="#"
+      onClick={[Function]}
+    >
+      Tab 3
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`<Tabs /> create tabs component 4`] = `
+<ul
+  className="fd-tabs blue"
 >
   <li
     className="fd-tabs__item"

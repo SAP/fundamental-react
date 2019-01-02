@@ -2,7 +2,7 @@
 
 exports[`<Image /> create image 1`] = `
 <span
-  className="fd-image--s"
+  className="fd-image--s blue"
   style={
     Object {
       "backgroundImage": "url(https://placeimg.com/400/400/nature)",

@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Popover, Menu, MenuList, MenuItem, Identifier, Icon, SearchInput, Counter } from '../';
+
+import { Popover } from '../Popover/Popover';
+import { Menu, MenuList, MenuItem } from '../Menu/Menu';
+import { Identifier } from '../Identifier/Identifier';
+import { Icon } from '../Icon/Icon';
+import { SearchInput } from '../SearchInput/SearchInput';
 
 export class Shellbar extends Component {
     static propTypes = {

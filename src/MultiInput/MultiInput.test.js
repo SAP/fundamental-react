@@ -6,7 +6,7 @@ import { MultiInput } from './MultiInput';
 
 Enzyme.configure({ adapter: new Adapter() });
 
-describe('MultiInput />', () => {
+describe('<MultiInput />', () => {
   const mockOnTagsUpdate = jest.fn();
   const data = [
     'Apple',
@@ -32,6 +32,7 @@ describe('MultiInput />', () => {
 
   const compactMultiInput = (
       <MultiInput
+          className='blue'
           data={data}
           onTagsUpdate={mockOnTagsUpdate}
           placeHolder='Select a Fruit'

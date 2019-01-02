@@ -3,8 +3,14 @@ import PropTypes from 'prop-types';
 import { BrowserRouter, Link } from 'react-router-dom';
 
 export const Tabs = props => {
-  const { children } = props;
-  return <ul className='fd-tabs-container'>{children}</ul>;
+  const { children, className, ...rest } = props;
+  return (
+      <ul
+          className={`fd-tabs-container${className ? ' ' + className : ''}`}
+          {...rest}>
+          {children}
+      </ul>
+  );
 };
 
 export class TabComponent extends Component {

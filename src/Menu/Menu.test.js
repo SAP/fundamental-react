@@ -13,25 +13,34 @@ describe('<Menu />', () => {
               </MenuItem>
               <MenuItem url='/'>Option 3</MenuItem>
               <MenuItem url='/'>Option 4</MenuItem>
+              <MenuItem>Option 5</MenuItem>
           </MenuList>
       </Menu>
   );
 
   const menuGroupCode = (
       <MemoryRouter>
-          <Menu>
-              <MenuList>
+          <Menu className='blue'>
+              <MenuList className='blue'>
                   <MenuItem link='/'>Option 1</MenuItem>
-                  <MenuItem link='/' isLink>
+                  <MenuItem className='blue' link='/'
+                      isLink>
             Option 2
                   </MenuItem>
                   <MenuItem link='/'>Option 3</MenuItem>
               </MenuList>
-              <MenuGroup title='Group Header'>
+              <MenuGroup className='blue' title='Group Header'>
                   <MenuList>
                       <MenuItem link='/'>Option 4</MenuItem>
                       <MenuItem link='/'>Option 5</MenuItem>
                       <MenuItem link='/'>Option 6</MenuItem>
+                  </MenuList>
+              </MenuGroup>
+              <MenuGroup title='Group Header 2'>
+                  <MenuList>
+                      <MenuItem link='/'>Option 7</MenuItem>
+                      <MenuItem link='/'>Option 8</MenuItem>
+                      <MenuItem link='/'>Option 9</MenuItem>
                   </MenuList>
               </MenuGroup>
           </Menu>

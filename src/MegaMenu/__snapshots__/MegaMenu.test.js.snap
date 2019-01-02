@@ -117,10 +117,10 @@ exports[`<MegaMenu /> create mega menu 1`] = `
 
 exports[`<MegaMenu /> create mega menu 2`] = `
 <nav
-  className="fd-mega-menu"
+  className="fd-mega-menu blue"
 >
   <div
-    className="fd-mega-menu__group"
+    className="fd-mega-menu__group red"
   >
     <h1
       className="fd-mega-menu__title"
@@ -128,7 +128,7 @@ exports[`<MegaMenu /> create mega menu 2`] = `
       Group Title
     </h1>
     <ul
-      className="fd-mega-menu__list"
+      className="fd-mega-menu__list blue"
     >
       <li
         className="fd-mega-menu__item"

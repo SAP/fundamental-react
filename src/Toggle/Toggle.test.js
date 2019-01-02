@@ -9,7 +9,8 @@ Enzyme.configure({ adapter: new Adapter() });
 describe('<Toggle />', () => {
   const defaultToggle = <Toggle>Normal toggle</Toggle>;
   const checkedToggle = (
-      <Toggle size='s' checked>
+      <Toggle className='blue' size='s'
+          checked>
       Small toggle
       </Toggle>
   );
