@@ -2,162 +2,206 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 export class SearchInput extends Component {
-  constructor(props) {
-    super(props);
+    constructor(props) {
+        super(props);
+        this.state = {
+            isExpanded: false,
+            searchExpanded: false,
+            value: '',
+            searchList: this.props.searchList,
+            filteredResult: this.props.searchList
+        };
 
-    this.state = {
-      searchTerm: '',
-      bShowList: false
-    };
-  }
-
-  // fired on change of text input
-  handleSearch = event => {
-    const searchTerm = event.target.value;
-
-    // check if control auto complete
-    if (this.props.onAutoComplete) {
-      if (searchTerm) {
-        this.setState({ searchTerm: searchTerm, bShowList: true });
-      } else {
-        // no search term, remove text from search box and hide list
-        this.setState({ searchTerm: searchTerm, bShowList: false });
-      }
-      this.props.onAutoComplete(searchTerm);
-    } else {
-      this.setState({ searchTerm: searchTerm });
-    }
-  };
-
-  // fired on list item selection
-  selectTerm = event => {
-    const searchTerm = event.target.innerText;
-    this.setState({ searchTerm: searchTerm, bShowList: false });
-
-    this.props.onSearch(searchTerm);
-  };
-
-  // check for enter key
-  checkKey = event => {
-    const key = event.key;
-
-    if (key === 'Enter') {
-      if (this.props.data && this.props.data.length > 0) {
-        this.setState(
-          { searchTerm: this.props.data[0], bShowList: false },
-          () => this.props.onSearch(this.state.searchTerm)
-        );
-      } else {
-        this.props.onSearch(this.state.searchTerm);
-      }
-    }
-  };
-
-  // create search box
-  createSearchInput = onAutoComplete => {
-    let searchInput = (
-      <input
-        type="text"
-        className="fd-input"
-        onChange={this.handleSearch}
-        placeholder={this.props.placeHolder}
-        onKeyPress={this.checkKey}
-      />
-    );
-
-    // include auto complete functionality if onAutoComplete method is passed to component
-    if (onAutoComplete) {
-      searchInput = (
-        <input
-          type="text"
-          className="fd-input"
-          value={this.state.searchTerm}
-          placeholder={this.props.placeHolder}
-          onChange={this.handleSearch}
-          onFocus={this.handleSearch}
-          onKeyPress={this.checkKey}
-          onBlur={() => {
-            this.setState({ bShowList: false });
-          }}
-        />
-      );
+        this.onChangeHandler = this.onChangeHandler.bind(this);
+        this.onClickHandler = this.onClickHandler.bind(this);
+        this.onEscHandler = this.onEscHandler.bind(this);
+        this.onOutsideClickHandler = this.onOutsideClickHandler.bind(this);
+        this.onKeyPressHandler = this.onKeyPressHandler.bind(this);
+        this.listItemClickHandler = this.listItemClickHandler.bind(this);
+        this.onSearchBtnHandler = this.onSearchBtnHandler.bind(this);
     }
 
-    return searchInput;
-  };
-
-  // create auto complete search items
-  createAutoCompleteItems = data => {
-    return data && data.length > 0 ? (
-      data.map((item, index) => {
-        let classNames = 'fd-menu__item';
-        if (index === 0) {
-          classNames += ' is-selected';
+    onKeyPressHandler(event) {
+        if (event.key === 'Enter') {
+            this.props.onEnter(this.state.value);
         }
+    }
+
+    listItemClickHandler(item) {
+        item.callback();
+    }
+
+    onChangeHandler(event) {
+        if (this.state.searchList) {
+            let filteredResult = this.state.searchList.filter(item =>
+                item.text.toLowerCase().startsWith(event.target.value.toLowerCase())
+            );
+
+            this.setState({
+                filteredResult: filteredResult
+            });
+        }
+
+        if (!this.state.isExpanded) {
+            this.setState({
+                isExpanded: true
+            });
+        }
+
+        this.setState({
+            value: event.target.value
+        });
+    }
+
+    onClickHandler() {
+        if (!this.state.isExpanded) {
+            document.addEventListener('click', this.onOutsideClickHandler, false);
+        } else {
+            document.removeEventListener('click', this.onOutsideClickHandler, false);
+        }
+
+        this.setState(prevState => ({
+            isExpanded: !prevState.isExpanded
+        }));
+    }
+
+    onSearchBtnHandler() {
+        this.setState(prevState => ({
+            searchExpanded: !prevState.searchExpanded
+        }));
+
+        if (this.state.searchExpanded && this.state.isExpanded) {
+            this.setState({
+                isExpanded: false
+            });
+        }
+    }
+
+    onEscHandler(event) {
+        if ((event.keyCode === 27 && this.state.isExpanded === true) || (event.keyCode === 27 && this.state.searchExpanded === true)) {
+            this.setState({
+                isExpanded: false,
+                searchExpanded: false,
+                value: '',
+                searchList: this.props.searchList,
+                filteredResult: this.props.searchList
+            });
+        }
+    }
+
+    onOutsideClickHandler(e) {
+        e.stopPropagation();
+        if (this.node && !this.node.contains(e.target)) {
+            if (this.state.isExpanded) {
+                this.setState({
+                    isExpanded: false
+                });
+
+                if (this.props.inShellbar && this.state.searchExpanded && !this.state.value) {
+                    this.setState({
+                        searchExpanded: false
+                    });
+                }
+            } else {
+                return;
+            }
+        }
+    }
+
+    componentDidMount() {
+        document.addEventListener('keydown', this.onEscHandler, false);
+        document.addEventListener('click', this.onOutsideClickHandler, false);
+    }
+    componentWillUnmount() {
+        document.removeEventListener('keydown', this.onEscHandler, false);
+        document.removeEventListener('click', this.onOutsideClickHandler, false);
+    }
+
+    render() {
+        const { placeholder, inShellbar, onSearch, onEnter, searchList, className, ...rest } = this.props;
+
         return (
-          <li key={index}>
-            <a href="#" className={classNames} onClick={this.selectTerm}>
-              {item}
-            </a>
-          </li>
+            <div className={`fd-search-input${inShellbar ? ' fd-search-input--closed' : ''}${className ? ' ' + className : ''}`} {...rest}>
+                <div className='fd-popover'>
+                    {inShellbar ? (
+                        <div className='fd-popover__control fd-search-input__control'>
+                            <button
+                                className='sap-icon--search fd-button--shell'
+                                onClick={this.onSearchBtnHandler}
+                                aria-expanded={this.state.searchExpanded}
+                                aria-haspopup='true' />
+                            <div className='fd-search-input__closedcontrol' aria-hidden={!this.state.searchExpanded}>
+                                <div
+                                    className='fd-search-input__controlinput'
+                                    aria-expanded={this.state.searchExpanded}
+                                    aria-haspopup='true' >
+                                    <input
+                                        type='text'
+                                        className='fd-input'
+                                        value={this.state.value}
+                                        onChange={this.onChangeHandler}
+                                        placeholder={placeholder}
+                                        onKeyPress={this.onKeyPressHandler}
+                                        onClick={() => this.onClickHandler()}
+                                        ref={node => (this.node = node)} />
+                                </div>
+                            </div>
+                        </div>
+                    ) : (
+                        <div className={'fd-popover__control'}>
+                            <div
+                                className='fd-combobox-control'
+                                aria-expanded={this.state.isExpanded}
+                                aria-haspopup='true' >
+                                <div className='fd-input-group fd-input-group--after'>
+                                    <input
+                                        type='text'
+                                        className='fd-input'
+                                        value={this.state.value}
+                                        onChange={this.onChangeHandler}
+                                        placeholder={placeholder}
+                                        onKeyPress={this.onKeyPressHandler}
+                                        onClick={() => this.onClickHandler()}
+                                        ref={node => (this.node = node)} />
+
+                                    <span className='fd-input-group__addon fd-input-group__addon--after fd-input-group__addon--button'>
+                                        <button className=' fd-button--light sap-icon--search' onClick={onSearch} />
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    )}
+                    {this.state.filteredResult && (
+                        <div
+                            className='fd-popover__body fd-popover__body--no-arrow'
+                            aria-hidden={!this.state.isExpanded} >
+                            <div className={inShellbar ? 'fd-search-input__body' : ''}>
+                                <nav className='fd-menu'>
+                                    <ul className='fd-menu__list'>
+                                        {this.state.filteredResult.length > 0 ? (
+                                            this.state.filteredResult.map((item, index) => {
+                                                return (
+                                                    <li
+                                                        key={index}
+                                                        className='fd-menu__item'
+                                                        onClick={() => this.listItemClickHandler(item)} >
+                                                        <strong>{this.state.value}</strong>
+                                                        {this.state.value && this.state.value.length
+                                                            ? item.text.substring(this.state.value.length)
+                                                            : item.text}
+                                                    </li>
+                                                );
+                                            })
+                                        ) : (
+                                            <li className='fd-menu__item'>No result</li>
+                                        )}
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    )}
+                </div>
+            </div>
         );
-      })
-    ) : (
-      <li>
-        <a href="#" className="fd-menu__item">
-          No results found
-        </a>
-      </li>
-    );
-  };
-
-  render() {
-    const { data, onSearch, onAutoComplete } = this.props;
-
-    return (
-      <div className="fd-search-input">
-        <div className="fd-popover">
-          <div className="fd-popover__control">
-            <div
-              className="fd-combobox-control"
-              aria-label="Image label"
-              aria-expanded={this.state.bShowList}
-              aria-haspopup="true"
-            >
-              <div className="fd-input-group fd-input-group--after">
-                {this.createSearchInput(onAutoComplete)}
-                <span className="fd-input-group__addon fd-input-group__addon--after fd-input-group__addon--button">
-                  <button
-                    className="fd-button--light sap-icon--search"
-                    onClick={() => onSearch(this.state.searchTerm)}
-                  />
-                </span>
-              </div>
-            </div>
-          </div>
-          {data && onAutoComplete ? (
-            <div
-              className="fd-popover__body fd-popover__body--no-arrow"
-              aria-hidden={!this.state.bShowList}
-            >
-              <nav className="fd-menu">
-                <ul className="fd-menu__list">
-                  {this.createAutoCompleteItems(data)}
-                </ul>
-              </nav>
-            </div>
-          ) : (
-            ''
-          )}
-        </div>
-      </div>
-    );
-  }
+    }
 }
-
-SearchInput.propTypes = {
-  placeHolder: PropTypes.string,
-  data: PropTypes.array,
-  onSearch: PropTypes.func.isRequired,
-  onAutoComplete: PropTypes.func
-};

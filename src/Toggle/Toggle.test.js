@@ -9,15 +9,16 @@ Enzyme.configure({ adapter: new Adapter() });
 describe('<Toggle />', () => {
   const defaultToggle = <Toggle>Normal toggle</Toggle>;
   const checkedToggle = (
-    <Toggle size="s" checked>
+      <Toggle className='blue' size='s'
+          checked>
       Small toggle
-    </Toggle>
+      </Toggle>
   );
   const disabledToggle = <Toggle disabled>Normal toggle</Toggle>;
   const disabledCheckedToggle = (
-    <Toggle checked disabled>
+      <Toggle checked disabled>
       Normal toggle
-    </Toggle>
+      </Toggle>
   );
 
   test('create toggle component', () => {

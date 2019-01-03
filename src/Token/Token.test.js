@@ -4,8 +4,12 @@ import { Token } from './Token';
 
 describe('<Token />', () => {
   test('create token component', () => {
-    const component = renderer.create(<Token>Bibendum</Token>);
-    const tree = component.toJSON();
+    let component = renderer.create(<Token>Bibendum</Token>);
+    let tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+
+    component = renderer.create(<Token className='blue'>Bibendum</Token>);
+    tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
 });

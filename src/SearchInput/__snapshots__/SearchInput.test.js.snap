@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<SearchInput /> create auto-complete Search input 1`] = `
+exports[`<SearchInput /> create SearchInput 1`] = `
 <div
-  className="fd-search-input"
+  className="fd-search-input blue"
 >
   <div
     className="fd-popover"
@@ -13,7 +13,6 @@ exports[`<SearchInput /> create auto-complete Search input 1`] = `
       <div
         aria-expanded={false}
         aria-haspopup="true"
-        aria-label="Image label"
         className="fd-combobox-control"
       >
         <div
@@ -21,11 +20,10 @@ exports[`<SearchInput /> create auto-complete Search input 1`] = `
         >
           <input
             className="fd-input"
-            onBlur={[Function]}
             onChange={[Function]}
-            onFocus={[Function]}
+            onClick={[Function]}
             onKeyPress={[Function]}
-            placeholder="Hello there"
+            placeholder="Enter a fruit"
             type="text"
             value=""
           />
@@ -33,8 +31,7 @@ exports[`<SearchInput /> create auto-complete Search input 1`] = `
             className="fd-input-group__addon fd-input-group__addon--after fd-input-group__addon--button"
           >
             <button
-              className="fd-button--light sap-icon--search"
-              onClick={[Function]}
+              className=" fd-button--light sap-icon--search"
             />
           </span>
         </div>
@@ -44,83 +41,138 @@ exports[`<SearchInput /> create auto-complete Search input 1`] = `
       aria-hidden={true}
       className="fd-popover__body fd-popover__body--no-arrow"
     >
-      <nav
-        className="fd-menu"
+      <div
+        className=""
       >
-        <ul
-          className="fd-menu__list"
+        <nav
+          className="fd-menu"
         >
-          <li>
-            <a
-              className="fd-menu__item is-selected"
-              href="#"
+          <ul
+            className="fd-menu__list"
+          >
+            <li
+              className="fd-menu__item"
               onClick={[Function]}
             >
+              <strong>
+                
+              </strong>
               apple
-            </a>
-          </li>
-          <li>
-            <a
+            </li>
+            <li
               className="fd-menu__item"
-              href="#"
               onClick={[Function]}
             >
+              <strong>
+                
+              </strong>
+              apricot
+            </li>
+            <li
+              className="fd-menu__item"
+              onClick={[Function]}
+            >
+              <strong>
+                
+              </strong>
               banana
-            </a>
-          </li>
-          <li>
-            <a
+            </li>
+            <li
               className="fd-menu__item"
-              href="#"
               onClick={[Function]}
             >
+              <strong>
+                
+              </strong>
+              blueberry
+            </li>
+            <li
+              className="fd-menu__item"
+              onClick={[Function]}
+            >
+              <strong>
+                
+              </strong>
+              blackberry
+            </li>
+            <li
+              className="fd-menu__item"
+              onClick={[Function]}
+            >
+              <strong>
+                
+              </strong>
+              calabash
+            </li>
+            <li
+              className="fd-menu__item"
+              onClick={[Function]}
+            >
+              <strong>
+                
+              </strong>
+              clementines
+            </li>
+            <li
+              className="fd-menu__item"
+              onClick={[Function]}
+            >
+              <strong>
+                
+              </strong>
+              kiwi
+            </li>
+            <li
+              className="fd-menu__item"
+              onClick={[Function]}
+            >
+              <strong>
+                
+              </strong>
               orange
-            </a>
-          </li>
-        </ul>
-      </nav>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </div>
   </div>
 </div>
 `;
 
-exports[`<SearchInput /> create autocomplete Search input with no data 1`] = `
+exports[`<SearchInput /> create SearchInput 2`] = `
 <div
-  className="fd-search-input"
+  className="fd-search-input fd-search-input--closed"
 >
   <div
     className="fd-popover"
   >
     <div
-      className="fd-popover__control"
+      className="fd-popover__control fd-search-input__control"
     >
-      <div
+      <button
         aria-expanded={false}
         aria-haspopup="true"
-        aria-label="Image label"
-        className="fd-combobox-control"
+        className="sap-icon--search fd-button--shell"
+        onClick={[Function]}
+      />
+      <div
+        aria-hidden={true}
+        className="fd-search-input__closedcontrol"
       >
         <div
-          className="fd-input-group fd-input-group--after"
+          aria-expanded={false}
+          aria-haspopup="true"
+          className="fd-search-input__controlinput"
         >
           <input
             className="fd-input"
-            onBlur={[Function]}
             onChange={[Function]}
-            onFocus={[Function]}
+            onClick={[Function]}
             onKeyPress={[Function]}
-            placeholder="Hello there"
+            placeholder="Enter a fruit"
             type="text"
             value=""
           />
-          <span
-            className="fd-input-group__addon fd-input-group__addon--after fd-input-group__addon--button"
-          >
-            <button
-              className="fd-button--light sap-icon--search"
-              onClick={[Function]}
-            />
-          </span>
         </div>
       </div>
     </div>
@@ -128,28 +180,105 @@ exports[`<SearchInput /> create autocomplete Search input with no data 1`] = `
       aria-hidden={true}
       className="fd-popover__body fd-popover__body--no-arrow"
     >
-      <nav
-        className="fd-menu"
+      <div
+        className="fd-search-input__body"
       >
-        <ul
-          className="fd-menu__list"
+        <nav
+          className="fd-menu"
         >
-          <li>
-            <a
+          <ul
+            className="fd-menu__list"
+          >
+            <li
               className="fd-menu__item"
-              href="#"
+              onClick={[Function]}
             >
-              No results found
-            </a>
-          </li>
-        </ul>
-      </nav>
+              <strong>
+                
+              </strong>
+              apple
+            </li>
+            <li
+              className="fd-menu__item"
+              onClick={[Function]}
+            >
+              <strong>
+                
+              </strong>
+              apricot
+            </li>
+            <li
+              className="fd-menu__item"
+              onClick={[Function]}
+            >
+              <strong>
+                
+              </strong>
+              banana
+            </li>
+            <li
+              className="fd-menu__item"
+              onClick={[Function]}
+            >
+              <strong>
+                
+              </strong>
+              blueberry
+            </li>
+            <li
+              className="fd-menu__item"
+              onClick={[Function]}
+            >
+              <strong>
+                
+              </strong>
+              blackberry
+            </li>
+            <li
+              className="fd-menu__item"
+              onClick={[Function]}
+            >
+              <strong>
+                
+              </strong>
+              calabash
+            </li>
+            <li
+              className="fd-menu__item"
+              onClick={[Function]}
+            >
+              <strong>
+                
+              </strong>
+              clementines
+            </li>
+            <li
+              className="fd-menu__item"
+              onClick={[Function]}
+            >
+              <strong>
+                
+              </strong>
+              kiwi
+            </li>
+            <li
+              className="fd-menu__item"
+              onClick={[Function]}
+            >
+              <strong>
+                
+              </strong>
+              orange
+            </li>
+          </ul>
+        </nav>
+      </div>
     </div>
   </div>
 </div>
 `;
 
-exports[`<SearchInput /> create basic Search input 1`] = `
+exports[`<SearchInput /> create SearchInput 3`] = `
 <div
   className="fd-search-input"
 >
@@ -162,7 +291,6 @@ exports[`<SearchInput /> create basic Search input 1`] = `
       <div
         aria-expanded={false}
         aria-haspopup="true"
-        aria-label="Image label"
         className="fd-combobox-control"
       >
         <div
@@ -171,22 +299,22 @@ exports[`<SearchInput /> create basic Search input 1`] = `
           <input
             className="fd-input"
             onChange={[Function]}
+            onClick={[Function]}
             onKeyPress={[Function]}
-            placeholder="Hello there"
+            placeholder="Enter a fruit"
             type="text"
+            value=""
           />
           <span
             className="fd-input-group__addon fd-input-group__addon--after fd-input-group__addon--button"
           >
             <button
-              className="fd-button--light sap-icon--search"
-              onClick={[Function]}
+              className=" fd-button--light sap-icon--search"
             />
           </span>
         </div>
       </div>
     </div>
-    
   </div>
 </div>
 `;

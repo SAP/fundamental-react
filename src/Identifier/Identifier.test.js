@@ -7,25 +7,30 @@ import { Identifier } from './Identifier';
 Enzyme.configure({ adapter: new Adapter() });
 
 describe('<Identifier />', () => {
-  const defaultIcon = <Identifier size="s" glyph="washing-machine" />;
+  const defaultIcon = <Identifier size='s' glyph='washing-machine' />;
   const initials = (
-    <Identifier size="m" label="Wendy Wallace">
+      <Identifier size='m' label='Wendy Wallace'>
       WW
-    </Identifier>
+      </Identifier>
   );
   const circle = (
-    <Identifier size="m" glyph="washing-machine" modifier="circle" />
+      <Identifier size='m' glyph='washing-machine'
+          modifier='circle' />
   );
   const transparent = (
-    <Identifier glyph="washing-machine" modifier="transparent" size="m" />
+      <Identifier
+          glyph='washing-machine'
+          className='blue'
+          modifier='transparent'
+          size='m' />
   );
-  const accentColor = <Identifier size="m" glyph="money-bills" color={9} />;
+  const accentColor = (<Identifier size='m' glyph='money-bills'
+      color={9} />);
 
   const bgImage = (
-    <Identifier
-      backgroundImageUrl="https://placeimg.com/400/400/nature"
-      modifier="circle"
-    />
+      <Identifier
+          backgroundImageUrl='https://placeimg.com/400/400/nature'
+          modifier='circle' />
   );
 
   test('Create identifier', () => {

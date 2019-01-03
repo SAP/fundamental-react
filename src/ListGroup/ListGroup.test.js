@@ -14,34 +14,40 @@ Enzyme.configure({ adapter: new Adapter() });
 
 describe('<ListGroup />', () => {
   const defaultListGroup = (
-    <ListGroup>
-      <ListGroupItem>
-        <a style={{ cursor: 'pointer' }}>List item 1</a>
-      </ListGroupItem>
-      <ListGroupItem>List item 2</ListGroupItem>
-      <ListGroupItem>
-        <a style={{ cursor: 'pointer' }}>List item3</a>
-      </ListGroupItem>
-      <ListGroupItem>List item 4</ListGroupItem>
-    </ListGroup>
+      <ListGroup className='blue'>
+          <ListGroupItem className='blue'>
+              <a style={{ cursor: 'pointer' }}>List item 1</a>
+          </ListGroupItem>
+          <ListGroupItem>List item 2</ListGroupItem>
+          <ListGroupItem>
+              <a style={{ cursor: 'pointer' }}>List item3</a>
+          </ListGroupItem>
+          <ListGroupItem>List item 4</ListGroupItem>
+          <ListGroupItem>
+        List item 1
+              <ListGroupItemActions className='blue'>
+                  <Button type='standard' glyph='edit' />
+              </ListGroupItemActions>
+          </ListGroupItem>
+      </ListGroup>
   );
   const listGroupAction = (
-    <ListGroup>
-      <ListGroupItem>
+      <ListGroup>
+          <ListGroupItem>
         List item 1
-        <ListGroupItemActions>
-          <Button type="standard" glyph="edit" />
-        </ListGroupItemActions>
-      </ListGroupItem>
-    </ListGroup>
+              <ListGroupItemActions>
+                  <Button type='standard' glyph='edit' />
+              </ListGroupItemActions>
+          </ListGroupItem>
+      </ListGroup>
   );
 
   const listGroupCheckbox = (
-    <ListGroup>
-      <ListGroupItem>
-        <ListGroupItemCheckbox>List item 1</ListGroupItemCheckbox>
-      </ListGroupItem>
-    </ListGroup>
+      <ListGroup>
+          <ListGroupItem>
+              <ListGroupItemCheckbox>List item 1</ListGroupItemCheckbox>
+          </ListGroupItem>
+      </ListGroup>
   );
 
   test('create list group', () => {

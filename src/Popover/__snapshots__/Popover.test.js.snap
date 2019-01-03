@@ -64,7 +64,8 @@ exports[`<Popover /> create Popover 1`] = `
 
 exports[`<Popover /> create Popover 2`] = `
 <div
-  className="fd-popover"
+  className="fd-popover blue"
+  disabled={true}
 >
   <div
     aria-expanded={false}

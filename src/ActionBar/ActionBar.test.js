@@ -9,47 +9,62 @@ import {
 
 describe('<ActionBar />', () => {
   const basicActionBar = (
-    <ActionBar>
-      <ActionBarBack />
-      <ActionBarHeader
-        title={'Page Title'}
-        description={'Action Bar Description'}
-      />
-      <ActionBarActions>
-        <button>Button</button>
-      </ActionBarActions>
-    </ActionBar>
+      <ActionBar className='blue'>
+          <ActionBarBack className='blue' />
+          <ActionBarHeader
+              className='blue'
+              title={'Page Title'}
+              description={'Action Bar Description'} />
+          <ActionBarActions className='blue'>
+              <button>Button</button>
+          </ActionBarActions>
+      </ActionBar>
+  );
+
+  const basicActionBarNoClass = (
+      <ActionBar>
+          <ActionBarBack className='blue' />
+          <ActionBarHeader
+              className='blue'
+              title={'Page Title'}
+              description={'Action Bar Description'} />
+          <ActionBarActions className='blue'>
+              <button>Button</button>
+          </ActionBarActions>
+      </ActionBar>
   );
 
   const mobileActionBar = (
-    <ActionBar mobile={true}>
-      <ActionBarBack />
-      <ActionBarHeader
-        title={'Page Title'}
-        description={'Action Bar Description'}
-      />
-      <ActionBarActions>
-        <button>Button</button>
-      </ActionBarActions>
-    </ActionBar>
+      <ActionBar className='blue' mobile>
+          <ActionBarBack />
+          <ActionBarHeader
+              title={'Page Title'}
+              description={'Action Bar Description'} />
+          <ActionBarActions>
+              <button>Button</button>
+          </ActionBarActions>
+      </ActionBar>
   );
 
   const mobileActionBarWidthSet = (
-    <ActionBar mobile={true} width="500px">
-      <ActionBarBack />
-      <ActionBarHeader
-        title={'Page Title'}
-        description={'Action Bar Description'}
-      />
-      <ActionBarActions>
-        <button>Button</button>
-      </ActionBarActions>
-    </ActionBar>
+      <ActionBar mobile width='500px'>
+          <ActionBarBack />
+          <ActionBarHeader
+              title={'Page Title'}
+              description={'Action Bar Description'} />
+          <ActionBarActions>
+              <button>Button</button>
+          </ActionBarActions>
+      </ActionBar>
   );
 
   test('create basic Action Bar', () => {
-    const component = renderer.create(basicActionBar);
-    const tree = component.toJSON();
+    let component = renderer.create(basicActionBar);
+    let tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+
+    component = renderer.create(basicActionBarNoClass);
+    tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
 

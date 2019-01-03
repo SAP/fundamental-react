@@ -9,35 +9,31 @@ Enzyme.configure({ adapter: new Adapter() });
 describe('<Calendar />', () => {
   const mockOnChange = jest.fn();
   const defaultCalendar = <Calendar onChange={mockOnChange} />;
-  const disabledWeekEnds = <Calendar disableWeekends={true} />;
+  const disabledWeekEnds = <Calendar disableWeekends />;
   const disabledBeforeDay = (
-    <Calendar disableBeforeDate={new Date(2018, 7, 3, 0, 0, 0, 0)} />
+      <Calendar disableBeforeDate={new Date(2018, 7, 3, 0, 0, 0, 0)} />
   );
   const disabledAfterDay = (
-    <Calendar disableAfterDate={new Date(2018, 7, 3, 0, 0, 0, 0)} />
+      <Calendar disableAfterDate={new Date(2018, 7, 3, 0, 0, 0, 0)} />
   );
   const blockedDays = (
-    <Calendar
-      blockedDates={[
+      <Calendar
+          blockedDates={[
         new Date(2018, 1, 1, 0, 0, 0, 0),
         new Date(2018, 3, 3, 0, 0, 0, 0)
-      ]}
-    />
+      ]} />
   );
   const disabledDates = (
-    <Calendar
-      disabledDates={[
+      <Calendar
+          disabledDates={[
         new Date(2018, 1, 1, 0, 0, 0, 0),
         new Date(2018, 3, 3, 0, 0, 0, 0)
-      ]}
-    />
+      ]} />
   );
   const disabledWeekDay = <Calendar disableWeekday={['Monday', 'Tuesday']} />;
-  const rangeSelect = (
-    <Calendar enableRangeSelection={true} onChange={mockOnChange} />
-  );
-  const disablePast = <Calendar disablePastDates={true} />;
-  const disableFuture = <Calendar disableFutureDates={true} />;
+  const rangeSelect = <Calendar enableRangeSelection onChange={mockOnChange} />;
+  const disablePast = <Calendar disablePastDates />;
+  const disableFuture = <Calendar disableFutureDates />;
 
   test('create calendar components', () => {
     mount(defaultCalendar);
@@ -137,7 +133,10 @@ describe('<Calendar />', () => {
 
     // check that April was selected
     const currentDateDisplayed = wrapper.state('currentDateDisplayed');
-    expect(currentDateDisplayed.getFullYear()).toEqual(2021);
+    let currentYearDisplayed = new Date(wrapper.state('currentYear'));
+    expect(currentDateDisplayed.getFullYear()).toEqual(
+      currentYearDisplayed.getFullYear() + 3
+    );
   });
 
   test('click previous button', () => {

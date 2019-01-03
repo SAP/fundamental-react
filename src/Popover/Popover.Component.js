@@ -79,12 +79,12 @@ export const PopoverComponent = () => {
                 Opening one popover should close all others to prevent multiple layers and collisions of several
                 popovers.
             </Description>
-            <Import module="Popover" path="/fundamental-react/src/" />
+            <Import module='Popover' path='/fundamental-react/src/' />
 
             <Separator />
 
             <Properties
-                type="Inputs"
+                type='Inputs'
                 properties={[
                     {
                         name: 'control',
@@ -106,76 +106,75 @@ export const PopoverComponent = () => {
                         name: 'id',
                         description: 'string - optional. Element id.'
                     }
-                ]}
-            />
+                ]} />
 
             <Separator />
 
             <h2>Popover Example</h2>
             <DocsTile centered>
-                <Popover
-                    id="jhqD0555"
-                    control={<Icon glyph="cart" size="xl" />}
-                    body={
-                        <Menu>
-                            <MenuList>
-                                <MenuItem url="/">Option 1</MenuItem>
-                                <MenuItem url="/">Option 2</MenuItem>
-                                <MenuItem url="/">Option 3</MenuItem>
-                                <MenuItem url="/">Option 4</MenuItem>
-                            </MenuList>
-                        </Menu>
-                    }
-                />
+                <div className='fd-doc__margin--popover'>
+                    <Popover
+                        id='jhqD0555'
+                        control={<Icon glyph='cart' size='xl' />}
+                        body={
+                            <Menu>
+                                <MenuList>
+                                    <MenuItem url='/'>Option 1</MenuItem>
+                                    <MenuItem url='/'>Option 2</MenuItem>
+                                    <MenuItem url='/'>Option 3</MenuItem>
+                                    <MenuItem url='/'>Option 4</MenuItem>
+                                </MenuList>
+                            </Menu>
+                        } />
 
-                <Popover
-                    id="jhqD0556"
-                    alignment="right"
-                    control={<Image size="m" type="circle" photo="https://placeimg.com/400/400/nature" />}
-                    body={
-                        <Menu>
-                            <MenuList>
-                                <MenuItem url="/">Option 1</MenuItem>
-                                <MenuItem url="/">Option 2</MenuItem>
-                                <MenuItem url="/">Option 3</MenuItem>
-                                <MenuItem url="/">Option 4</MenuItem>
-                            </MenuList>
-                        </Menu>
-                    }
-                />
+                    <Popover
+                        id='jhqD0556'
+                        alignment='right'
+                        control={<Image size='m' type='circle'
+                            photo='https://placeimg.com/400/400/nature' />}
+                        body={
+                            <Menu>
+                                <MenuList>
+                                    <MenuItem url='/'>Option 1</MenuItem>
+                                    <MenuItem url='/'>Option 2</MenuItem>
+                                    <MenuItem url='/'>Option 3</MenuItem>
+                                    <MenuItem url='/'>Option 4</MenuItem>
+                                </MenuList>
+                            </Menu>
+                        } />
 
-                <Popover
-                    id="jhqD0557"
-                    control={<Identifier size="m" glyph="money-bills" color={6} />}
-                    noArrow
-                    body={
-                        <Menu>
-                            <MenuList>
-                                <MenuItem url="/">Option 1</MenuItem>
-                                <MenuItem url="/">Option 2</MenuItem>
-                                <MenuItem url="/">Option 3</MenuItem>
-                                <MenuItem url="/">Option 4</MenuItem>
-                            </MenuList>
-                        </Menu>
-                    }
-                />
+                    <Popover
+                        id='jhqD0557'
+                        control={<Identifier size='m' glyph='money-bills'
+                            color={6} />}
+                        noArrow
+                        body={
+                            <Menu>
+                                <MenuList>
+                                    <MenuItem url='/'>Option 1</MenuItem>
+                                    <MenuItem url='/'>Option 2</MenuItem>
+                                    <MenuItem url='/'>Option 3</MenuItem>
+                                    <MenuItem url='/'>Option 4</MenuItem>
+                                </MenuList>
+                            </Menu>
+                        } />
 
-                <Popover
-                    id="jhqD0558"
-                    control={<Icon glyph="menu2" size="xl" />}
-                    alignment="right"
-                    noArrow
-                    body={
-                        <Menu>
-                            <MenuList>
-                                <MenuItem url="/">Option 1</MenuItem>
-                                <MenuItem url="/">Option 2</MenuItem>
-                                <MenuItem url="/">Option 3</MenuItem>
-                                <MenuItem url="/">Option 4</MenuItem>
-                            </MenuList>
-                        </Menu>
-                    }
-                />
+                    <Popover
+                        id='jhqD0558'
+                        control={<Icon glyph='menu2' size='xl' />}
+                        alignment='right'
+                        noArrow
+                        body={
+                            <Menu>
+                                <MenuList>
+                                    <MenuItem url='/'>Option 1</MenuItem>
+                                    <MenuItem url='/'>Option 2</MenuItem>
+                                    <MenuItem url='/'>Option 3</MenuItem>
+                                    <MenuItem url='/'>Option 4</MenuItem>
+                                </MenuList>
+                            </Menu>
+                        } />
+                </div>
             </DocsTile>
             <DocsText>{popoverCode}</DocsText>
             <Separator />

@@ -17,9 +17,9 @@ export class Popover extends Component {
   triggerBody() {
     if (!this.state.isDisabled) {
       if (!this.state.isExpanded) {
-        document.addEventListener('click', this.handleOutsideClick, false);
+        document.addEventListener('mousedown', this.handleOutsideClick, false);
       } else {
-        document.removeEventListener('click', this.handleOutsideClick, false);
+        document.removeEventListener('mousedown', this.handleOutsideClick, false);
       }
 
       this.setState(prevState => ({
@@ -50,47 +50,45 @@ export class Popover extends Component {
 
   componentDidMount() {
     document.addEventListener('keydown', this.pressEsc, false);
-    document.addEventListener('click', this.handleOutsideClick, false);
+    document.addEventListener('mousedown', this.handleOutsideClick, false);
   }
   componentWillUnmount() {
     document.removeEventListener('keydown', this.pressEsc, false);
-    document.removeEventListener('click', this.handleOutsideClick, false);
+    document.removeEventListener('mousedown', this.handleOutsideClick, false);
   }
 
   render() {
-    const { id, alignment, noArrow, control, body } = this.props;
+    const { id, alignment, noArrow, control, body, className, ...rest } = this.props;
     return (
-      <div
-        className={`fd-popover${alignment ? ' fd-popover--' + alignment : ''}`}
-        ref={node => {
+        <div
+            className={`fd-popover${alignment ? ' fd-popover--' + alignment : ''}${className ? ' ' + className : ''}`}
+            ref={node => {
           this.node = node;
-        }}
-      >
-        <div
-          className="fd-popover__control"
-          aria-expanded={this.state.isExpanded}
-          onClick={this.triggerBody}
-          aria-controls={id}
-        >
-          {control}
-        </div>
-        <div
-          className={`fd-popover__body${
+        }} {...rest}>
+            <div
+                className='fd-popover__control'
+                aria-expanded={this.state.isExpanded}
+                onClick={this.triggerBody}
+                aria-controls={id}>
+                {control}
+            </div>
+            <div
+                className={`fd-popover__body${
             alignment ? ' fd-popover__body--' + alignment : ''
           }${noArrow ? ' fd-popover__body--no-arrow' : ''}`}
-          aria-hidden={!this.state.isExpanded}
-          id={id}
-        >
-          {body}
+                aria-hidden={!this.state.isExpanded}
+                id={id}>
+                {body}
+            </div>
         </div>
-      </div>
     );
   }
 }
 
 Popover.propTypes = {
-  id: PropTypes.string,
   alignment: PropTypes.oneOf(['', 'right']),
-  noArrow: PropTypes.bool,
-  disabled: PropTypes.bool
+  className: PropTypes.string,
+  disabled: PropTypes.bool,
+  id: PropTypes.string,
+  noArrow: PropTypes.bool
 };

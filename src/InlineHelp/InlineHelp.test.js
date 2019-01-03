@@ -9,38 +9,34 @@ Enzyme.configure({ adapter: new Adapter() });
 describe('<InlineHelp />', () => {
   const handleClick = jest.fn();
   const defaultInlineHelp = (
-    <InlineHelp
-      text="Lorem ipsum dolor sit amet, consectetur adipiscing."
-      placement="bottom-right"
-    />
+      <InlineHelp
+          className='blue'
+          text='Lorem ipsum dolor sit amet, consectetur adipiscing.'
+          placement='bottom-right' />
   );
 
   const inlineHelpBottomLeft = (
-    <InlineHelp
-      text="Lorem ipsum dolor sit amet, consectetur adipiscing."
-      placement="bottom-left"
-    />
+      <InlineHelp
+          text='Lorem ipsum dolor sit amet, consectetur adipiscing.'
+          placement='bottom-left' />
   );
 
   const inlineHelpBottomCenter = (
-    <InlineHelp
-      text="Lorem ipsum dolor sit amet, consectetur adipiscing."
-      placement="bottom-center"
-    />
+      <InlineHelp
+          text='Lorem ipsum dolor sit amet, consectetur adipiscing.'
+          placement='bottom-center' />
   );
 
   const inlineHelpLeft = (
-    <InlineHelp
-      text="Lorem ipsum dolor sit amet, consectetur adipiscing."
-      placement="left"
-    />
+      <InlineHelp
+          text='Lorem ipsum dolor sit amet, consectetur adipiscing.'
+          placement='left' />
   );
 
   const inlineHelpRight = (
-    <InlineHelp
-      text="Lorem ipsum dolor sit amet, consectetur adipiscing."
-      placement="right"
-    />
+      <InlineHelp
+          text='Lorem ipsum dolor sit amet, consectetur adipiscing.'
+          placement='right' />
   );
 
   test('create default InlineHelp component', () => {
@@ -63,7 +59,7 @@ describe('<InlineHelp />', () => {
 
     expect(tree).toMatchSnapshot();
   });
-  
+
   test('create Left InlineHelp component', () => {
     const component = renderer.create(inlineHelpLeft);
     const tree = component.toJSON();

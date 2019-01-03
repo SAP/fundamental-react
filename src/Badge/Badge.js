@@ -1,53 +1,53 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export const Badge = props => {
-    const { type, modifier, children } = props;
+export const Badge = ({ type, modifier, children, className, ...props }) => {
     return (
-        <span className={`fd-badge${type ? ' fd-badge--' + type : ''}${modifier ? ' fd-badge--' + modifier : ''}`}>
+        <span className={`fd-badge${type ? ' fd-badge--' + type : ''}${modifier ? ' fd-badge--' + modifier : ''}${className ? ' ' + className : ''}`} {...props}>
             {children}
         </span>
     );
 };
 
 Badge.propTypes = {
-    type: PropTypes.oneOf(['', 'success', 'warning', 'error']),
-    modifier: PropTypes.oneOf(['', 'pill', 'filled'])
-};
-
-export const Label = props => {
-    const { type, children } = props;
-    return <span className={`fd-label${type ? ' fd-label--' + type : ''}`}>{children}</span>;
-};
-
-Label.propTypes = {
+    className: PropTypes.string,
+    modifier: PropTypes.oneOf(['', 'pill', 'filled']),
     type: PropTypes.oneOf(['', 'success', 'warning', 'error'])
 };
 
-export const Status = props => {
-    const { type, glyph, children } = props;
+export const Label = ({ type, children, className, ...props }) => {
+    return <span className={`fd-label${type ? ' fd-label--' + type : ''}${className ? ' ' + className : ''}`} {...props}>{children}</span>;
+};
+
+Label.propTypes = {
+    className: PropTypes.string,
+    type: PropTypes.oneOf(['', 'success', 'warning', 'error'])
+};
+
+export const Status = ({ type, glyph, children, className, ...props } ) => {
     return (
         <span
-            className={`fd-status-label${type ? ' fd-status-label--' + type : ''}${glyph ? ' sap-icon--' + glyph : ''}`}
-        >
+            className={`fd-status-label${type ? ' fd-status-label--' + type : ''}${glyph ? ' sap-icon--' + glyph : ''}${className ? ' ' + className : ''}`} {...props}>
             {children}
         </span>
     );
 };
 Status.propTypes = {
-    type: PropTypes.oneOf(['', 'success', 'warning', 'error', 'available', 'away', 'busy', 'offline']),
-    glyph: PropTypes.string
+    className: PropTypes.string,
+    glyph: PropTypes.string,
+    type: PropTypes.oneOf(['', 'success', 'warning', 'error', 'available', 'away', 'busy', 'offline'])
 };
 
-export const Counter = props => {
-    const { notification, children } = props;
+export const Counter = ({ notification, children, className, ...props }) => {
     return (
-        <span className={`fd-counter${notification ? ' fd-counter--notification' : ''}`} aria-label="Unread count">
+        <span className={`fd-counter${notification ? ' fd-counter--notification' : ''}${className ? ' ' + className : ''}`} aria-label='Unread count'
+            {...props}>
             {children}
         </span>
     );
 };
 
 Counter.propTypes = {
+    className: PropTypes.string,
     notification: PropTypes.bool
 };

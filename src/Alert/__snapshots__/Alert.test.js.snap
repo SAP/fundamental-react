@@ -4,7 +4,6 @@ exports[`<Alert /> create basic alert 1`] = `
 <div>
   <div
     className="fd-alert fd-alert--dismissible"
-    id="j2ALl423"
     role="alert"
   >
     <button
@@ -32,7 +31,6 @@ exports[`<Alert /> create basic alert 2`] = `
 <div>
   <div
     className="fd-alert fd-alert--dismissible fd-alert--error"
-    id="j2ALl423"
     role="alert"
   >
     <button
@@ -49,8 +47,7 @@ exports[`<Alert /> create basic alert 2`] = `
 exports[`<Alert /> create non-dismissable alert 1`] = `
 <div>
   <div
-    className="fd-alert"
-    id="j2ALl423"
+    className="fd-alert blue"
     role="alert"
   >
     Default alert that cannot be dismissed

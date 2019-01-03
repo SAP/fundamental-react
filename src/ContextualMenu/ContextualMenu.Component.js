@@ -64,19 +64,18 @@ export const ContextualMenuComponent = () => {
             <h2>With Icon</h2>
             <DocsTile centered>
                 <Popover
-                    control={<Button option="light" glyph="vertical-grip" />}
+                    control={<Button option='light' glyph='vertical-grip' />}
                     noArrow
                     body={
                         <Menu>
                             <MenuList>
-                                <MenuItem url="/">Option 1</MenuItem>
-                                <MenuItem url="/">Option 2</MenuItem>
-                                <MenuItem url="/">Option 3</MenuItem>
-                                <MenuItem url="/">Option 4</MenuItem>
+                                <MenuItem url='/'>Option 1</MenuItem>
+                                <MenuItem url='/'>Option 2</MenuItem>
+                                <MenuItem url='/'>Option 3</MenuItem>
+                                <MenuItem url='/'>Option 4</MenuItem>
                             </MenuList>
                         </Menu>
-                    }
-                />
+                    } />
             </DocsTile>
             <DocsText>{contextualMenuIconCode}</DocsText>
             <Separator />
@@ -89,29 +88,27 @@ export const ContextualMenuComponent = () => {
                     body={
                         <Menu>
                             <MenuList>
-                                <MenuItem url="/">Option 1</MenuItem>
-                                <MenuItem url="/">Option 2</MenuItem>
-                                <MenuItem url="/">Option 3</MenuItem>
-                                <MenuItem url="/">Option 4</MenuItem>
+                                <MenuItem url='/'>Option 1</MenuItem>
+                                <MenuItem url='/'>Option 2</MenuItem>
+                                <MenuItem url='/'>Option 3</MenuItem>
+                                <MenuItem url='/'>Option 4</MenuItem>
                             </MenuList>
                         </Menu>
-                    }
-                />
+                    } />
 
                 <Popover
-                    control={<Button option="light">More</Button>}
+                    control={<Button option='light'>More</Button>}
                     noArrow
                     body={
                         <Menu>
                             <MenuList>
-                                <MenuItem url="/">Option 1</MenuItem>
-                                <MenuItem url="/">Option 2</MenuItem>
-                                <MenuItem url="/">Option 3</MenuItem>
-                                <MenuItem url="/">Option 4</MenuItem>
+                                <MenuItem url='/'>Option 1</MenuItem>
+                                <MenuItem url='/'>Option 2</MenuItem>
+                                <MenuItem url='/'>Option 3</MenuItem>
+                                <MenuItem url='/'>Option 4</MenuItem>
                             </MenuList>
                         </Menu>
-                    }
-                />
+                    } />
             </DocsTile>
             <DocsText>{contextualMenuMoreTextCode}</DocsText>
             <Separator />

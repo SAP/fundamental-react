@@ -218,14 +218,13 @@ export const PanelComponent = () => {
             <Header>Panel</Header>
             <Description />
             <Import
-                module="Panel, PanelGrid, PanelBody, PanelHeader, PanelHead, PanelActions, PanelFilters, PanelContent, PanelFooter"
-                path="/fundamental-react/src/"
-            />
+                module='Panel, PanelGrid, PanelBody, PanelHeader, PanelHead, PanelActions, PanelFilters, PanelContent, PanelFooter'
+                path='/fundamental-react/src/' />
 
             <Separator />
 
             <Properties
-                type="Inputs"
+                type='Inputs'
                 properties={[
                     {
                         name: 'nogap',
@@ -249,11 +248,10 @@ export const PanelComponent = () => {
                         name: 'description',
                         description: 'any - Part of PanelHead component. Specifies the description of the panel.'
                     }
-                ]}
-            />
+                ]} />
 
             <Properties
-                type="Child Components"
+                type='Child Components'
                 properties={[
                     { name: 'PanelBody', description: 'The panel body.' },
                     { name: 'PanelHeader', description: 'The panel header. Contains a panel head and panel actions.' },
@@ -280,72 +278,72 @@ export const PanelComponent = () => {
                         description:
                             'Panel footer can be utilized for pagination, secondary actions, add more data, etc.'
                     }
-                ]}
-            />
+                ]} />
 
             <Separator />
 
             <DocsTile>
-                <Panel>
-                    <PanelHeader>
-                        <PanelHead title={'Panel Header with Actions'} description="Panel Description" />
-                        <PanelActions>
-                            <Button compact glyph="add">
-                                Add New Button
-                            </Button>
-                        </PanelActions>
-                    </PanelHeader>
-                    <PanelFilters>
-                        <div>Panel Filters</div>
-                        <br />
-                        <Popover
-                            control={<Button>Color</Button>}
-                            body={
-                                <Menu>
-                                    <MenuList>
-                                        <MenuItem url="/">Option 1</MenuItem>
-                                        <MenuItem url="/">Option 2</MenuItem>
-                                        <MenuItem url="/">Option 3</MenuItem>
-                                        <MenuItem url="/">Option 4</MenuItem>
-                                    </MenuList>
-                                </Menu>
-                            }
-                            noArrow
-                        />
-                        <Popover
-                            control={<Button>Size</Button>}
-                            body={
-                                <Menu>
-                                    <MenuList>
-                                        <MenuItem url="/">Option 1</MenuItem>
-                                        <MenuItem url="/">Option 2</MenuItem>
-                                        <MenuItem url="/">Option 3</MenuItem>
-                                        <MenuItem url="/">Option 4</MenuItem>
-                                    </MenuList>
-                                </Menu>
-                            }
-                            noArrow
-                        />
-                    </PanelFilters>
-                    <PanelBody>
-                        <div>Panel Body</div>
-                        <br />
-                        <Tile>
-                            <TileMedia>
-                                <Image size="l" type="circle" photo="https://placeimg.com/400/400/nature" />
-                            </TileMedia>
-                            <TileContent title="Tile Title">
-                                <p>Tile Description</p>
-                            </TileContent>
-                        </Tile>
-                        <br />
-                        <Token>Bibendum</Token>
-                        <Token>Lorem</Token>
-                        <Token>Dolor</Token>
-                        <Token>Filter</Token>
-                    </PanelBody>
-                    <PanelFooter>Panel Footer</PanelFooter>
-                </Panel>
+                <div className='fd-doc__margin--panel'>
+                    <Panel>
+                        <PanelHeader>
+                            <PanelHead title={'Panel Header with Actions'} description='Panel Description' />
+                            <PanelActions>
+                                <Button compact glyph='add'>
+                                    Add New Button
+                                </Button>
+                            </PanelActions>
+                        </PanelHeader>
+                        <PanelFilters>
+                            <div>Panel Filters</div>
+                            <br />
+                            <Popover
+                                control={<Button>Color</Button>}
+                                body={
+                                    <Menu>
+                                        <MenuList>
+                                            <MenuItem url='/'>Option 1</MenuItem>
+                                            <MenuItem url='/'>Option 2</MenuItem>
+                                            <MenuItem url='/'>Option 3</MenuItem>
+                                            <MenuItem url='/'>Option 4</MenuItem>
+                                        </MenuList>
+                                    </Menu>
+                                }
+                                noArrow />
+                            <Popover
+                                control={<Button>Size</Button>}
+                                body={
+                                    <Menu>
+                                        <MenuList>
+                                            <MenuItem url='/'>Option 1</MenuItem>
+                                            <MenuItem url='/'>Option 2</MenuItem>
+                                            <MenuItem url='/'>Option 3</MenuItem>
+                                            <MenuItem url='/'>Option 4</MenuItem>
+                                        </MenuList>
+                                    </Menu>
+                                }
+                                noArrow />
+                        </PanelFilters>
+                        <PanelBody>
+                            <div>Panel Body</div>
+                            <br />
+                            <Tile>
+                                <TileMedia>
+                                    <Image size='l' type='circle'
+                                        photo='https://placeimg.com/400/400/nature' />
+                                </TileMedia>
+                                <TileContent title='Tile Title'>
+                                    <p>Tile Description</p>
+                                </TileContent>
+                            </Tile>
+                            <br />
+                            <Token>Bibendum</Token>
+                            <Token>Lorem</Token>
+                            <Token>Dolor</Token>
+                            <Token>Filter</Token>
+                        </PanelBody>
+                        <PanelFooter>Panel Footer</PanelFooter>
+                    </Panel>
+                </div>
             </DocsTile>
             <DocsText>{panelExampleCode}</DocsText>
 
@@ -377,7 +375,7 @@ export const PanelComponent = () => {
 
             <h2>Panel Grid with no margins between the panels</h2>
             <DocsTile>
-                <PanelGrid nogap={true}>
+                <PanelGrid nogap>
                     <Panel>
                         <PanelBody>Panel</PanelBody>
                     </Panel>

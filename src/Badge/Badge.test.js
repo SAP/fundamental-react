@@ -1,31 +1,50 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { Badge, Label, Status } from './Badge';
+import { Badge, Label, Status, Counter } from './Badge';
 
 describe('<Badge />', () => {
   const defaultBadge = <Badge>Default</Badge>;
-  const typeBadge = <Badge type="success">Default</Badge>;
+  const typeBadge = <Badge type='success'>Default</Badge>;
 
-  const defaultPill = <Badge modifier="pill">Default</Badge>;
+  const defaultPill = <Badge modifier='pill'>Default</Badge>;
   const typePill = (
-    <Badge modifier="pill" type="success">
+      <Badge modifier='pill' type='success'>
       Default
-    </Badge>
+      </Badge>
   );
 
-  const defaultFilledBadge = <Badge modifier="filled">Default</Badge>;
-  const typeFillBadge = (
-    <Badge modifier="filled" type="success">
+  const defaultFilledBadge = (
+      <Badge className='blue' modifier='filled'>
       Default
-    </Badge>
+      </Badge>
+  );
+  const typeFillBadge = (
+      <Badge modifier='filled' type='success'>
+      Default
+      </Badge>
   );
 
   const defaultLabel = <Label>Default</Label>;
-  const typeLabel = <Label type="success">Default</Label>;
+  const typeLabel = (
+      <Label className='blue' type='success'>
+      Default
+      </Label>
+  );
 
   const defaultStatus = <Status>Default</Status>;
-  const typeStatus = <Status type="success">Default</Status>;
-  const iconStatus = <Status glyph="history">Default</Status>;
+  const typeStatus = (
+      <Status className='blue' type='success'>
+      Default
+      </Status>
+  );
+  const iconStatus = <Status glyph='history'>Default</Status>;
+
+  const defaultCounter = <Counter>5</Counter>;
+  const notificationCounter = (
+      <Counter className='blue' notification>
+      5
+      </Counter>
+  );
 
   test('create badges, pills and filled badges', () => {
     // create default badge
@@ -55,6 +74,16 @@ describe('<Badge />', () => {
 
     // create filled success type badge
     component = renderer.create(typeFillBadge);
+    tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+
+    // create default counter
+    component = renderer.create(defaultCounter);
+    tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+
+    // create counter with notification
+    component = renderer.create(notificationCounter);
     tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });

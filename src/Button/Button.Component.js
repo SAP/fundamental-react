@@ -3,11 +3,11 @@ import { Button, ButtonGroup } from '../';
 import { DocsTile, DocsText, Separator, Header, Description, Import, Properties, Playground } from '../';
 
 export const ButtonComponent = () => {
-    const buttonOptionsCode = `<Button option="emphasized" onclick={() => clickBtnHandler('Emphasized')}>
+    const buttonOptionsCode = `<Button option="emphasized" onClick={() => clickBtnHandler('Emphasized')}>
     Emphasized Button
 </Button>
-<Button onclick={() => clickBtnHandler('Regular')}>Regular Button</Button>
-<Button option="light" onclick={() => clickBtnHandler('Light')}>Light Button</Button>
+<Button onClick={() => clickBtnHandler('Regular')}>Regular Button</Button>
+<Button option="light" onClick={() => clickBtnHandler('Light')}>Light Button</Button>
 
 const clickBtnHandler = btn => {
     alert(\`You clicked the \${btn} Button\`);
@@ -119,22 +119,22 @@ const clickBtnHandler = btn => {
                 instance, the most important button has a blue background where as a red button should only be used if
                 the action it performs is potentially destructive.
             </Description>
-            <Import module="Button, ButtonGroup" path="/fundamental-react/src/" />
+            <Import module='Button, ButtonGroup' path='/fundamental-react/src/' />
 
             <Separator />
 
             <Properties
-                type="Inputs"
+                type='Inputs'
                 properties={[
                     {
                         name: 'option',
                         description:
-                            "string - indicates the importance of the button. Options include 'emphasized' and 'light'. Leave empty for default."
+                            'string - indicates the importance of the button. Options include \'emphasized\' and \'light\'. Leave empty for default.'
                     },
                     {
                         name: 'type',
                         description:
-                            "string - the type of the button. Options include 'standard', 'positive', 'medium', and 'negative'. Leave empty for default/action button."
+                            'string - the type of the button. Options include \'standard\', \'positive\', \'medium\', and \'negative\'. Leave empty for default/action button.'
                     },
                     {
                         name: 'compact',
@@ -155,9 +155,8 @@ const clickBtnHandler = btn => {
                         description:
                             'bool - selected state of the button. Enabled by setting selected property to true.'
                     },
-                    { name: 'onclick', description: 'func - The function that is executed when the button is clicked.' }
-                ]}
-            />
+                    { name: 'onClick', description: 'func - The function that is executed when the button is clicked.' }
+                ]} />
             <Separator />
 
             <h2>Button Options</h2>
@@ -171,12 +170,12 @@ const clickBtnHandler = btn => {
                 content like appearing in a table or list. There may be more than one on the page.
             </Description>
             <DocsTile centered>
-                <div className="fd-doc__margin">
-                    <Button option="emphasized" onclick={() => clickBtnHandler('Emphasized')}>
+                <div className='fd-doc__margin--button'>
+                    <Button option='emphasized' onClick={() => clickBtnHandler('Emphasized')}>
                         Emphasized Button
                     </Button>
-                    <Button onclick={() => clickBtnHandler('Regular')}>Regular Button</Button>
-                    <Button option="light" onclick={() => clickBtnHandler('Light')}>Light Button</Button>
+                    <Button onClick={() => clickBtnHandler('Regular')}>Regular Button</Button>
+                    <Button option='light' onClick={() => clickBtnHandler('Light')}>Light Button</Button>
                 </div>
             </DocsTile>
             <DocsText>{buttonOptionsCode}</DocsText>
@@ -194,12 +193,12 @@ const clickBtnHandler = btn => {
                 <br />
             </Description>
             <DocsTile centered>
-                <div className="fd-doc__margin">
+                <div className='fd-doc__margin--button'>
                     <Button>Action Button</Button>
-                    <Button type="standard">Standard Button</Button>
-                    <Button type="positive">Positive Button</Button>
-                    <Button type="medium">Medium Button</Button>
-                    <Button type="negative">Negative Button</Button>
+                    <Button type='standard'>Standard Button</Button>
+                    <Button type='positive'>Positive Button</Button>
+                    <Button type='medium'>Medium Button</Button>
+                    <Button type='negative'>Negative Button</Button>
                 </div>
             </DocsTile>
             <DocsText>{buttonTypesCode}</DocsText>
@@ -212,22 +211,24 @@ const clickBtnHandler = btn => {
                 attach an icon to the button.
             </Description>
             <DocsTile centered>
-                <div className="fd-doc__margin">
-                    <Button option="emphasized" glyph="cart">
+                <div className='fd-doc__margin--button'>
+                    <Button option='emphasized' glyph='cart'>
                         Add to Cart
                     </Button>
 
-                    <Button glyph="cart">Add to Cart</Button>
+                    <Button glyph='cart'>Add to Cart</Button>
 
-                    <Button option="light" glyph="filter">
+                    <Button option='light' glyph='filter'>
                         Add to Cart
                     </Button>
 
-                    <Button option="emphasized" type="positive" glyph="accept">
+                    <Button option='emphasized' type='positive'
+                        glyph='accept'>
                         Approve
                     </Button>
 
-                    <Button option="emphasized" type="negative" glyph="decline">
+                    <Button option='emphasized' type='negative'
+                        glyph='decline'>
                         Reject
                     </Button>
 
@@ -235,15 +236,17 @@ const clickBtnHandler = btn => {
                     <br />
                     <br />
 
-                    <Button option="emphasized" glyph="cart" />
+                    <Button option='emphasized' glyph='cart' />
 
-                    <Button glyph="cart" />
+                    <Button glyph='cart' />
 
-                    <Button option="light" glyph="filter" />
+                    <Button option='light' glyph='filter' />
 
-                    <Button option="emphasized" type="positive" glyph="accept" />
+                    <Button option='emphasized' type='positive'
+                        glyph='accept' />
 
-                    <Button option="emphasized" type="negative" glyph="decline" />
+                    <Button option='emphasized' type='negative'
+                        glyph='decline' />
                 </div>
             </DocsTile>
             <DocsText>{buttonIconCode}</DocsText>
@@ -256,7 +259,7 @@ const clickBtnHandler = btn => {
                 on a touch device.
             </Description>
             <DocsTile centered>
-                <div className="fd-doc__margin">
+                <div className='fd-doc__margin--button'>
                     <Button>Default</Button>
                     <Button compact>Compact</Button>
                 </div>
@@ -270,12 +273,12 @@ const clickBtnHandler = btn => {
                 There are three states: <code>normal</code> (default), <code>selected</code>, and <code>disabled</code>.
             </Description>
             <DocsTile centered>
-                <div className="fd-doc__margin">
-                    <Button option="emphasized">Normal State</Button>
-                    <Button option="emphasized" selected>
+                <div className='fd-doc__margin--button'>
+                    <Button option='emphasized'>Normal State</Button>
+                    <Button option='emphasized' selected>
                         Selected State
                     </Button>
-                    <Button option="emphasized" disabled>
+                    <Button option='emphasized' disabled>
                         Disabled State
                     </Button>
                     <br />
@@ -285,38 +288,38 @@ const clickBtnHandler = btn => {
                     <Button disabled>Disabled State</Button>
                     <br />
                     <br />
-                    <Button option="light">Normal State</Button>
-                    <Button option="light" selected>
+                    <Button option='light'>Normal State</Button>
+                    <Button option='light' selected>
                         Selected State
                     </Button>
-                    <Button option="light" disabled>
+                    <Button option='light' disabled>
                         Disabled State
                     </Button>
                     <br />
                     <br />
-                    <Button type="standard">Normal State</Button>
-                    <Button type="standard" selected>
+                    <Button type='standard'>Normal State</Button>
+                    <Button type='standard' selected>
                         Selected State
                     </Button>
-                    <Button type="standard" disabled>
+                    <Button type='standard' disabled>
                         Disabled State
                     </Button>
                     <br />
                     <br />
-                    <Button type="positive">Normal State</Button>
-                    <Button type="positive" selected>
+                    <Button type='positive'>Normal State</Button>
+                    <Button type='positive' selected>
                         Selected State
                     </Button>
-                    <Button type="positive" disabled>
+                    <Button type='positive' disabled>
                         Disabled State
                     </Button>
                     <br />
                     <br />
-                    <Button type="negative">Normal State</Button>
-                    <Button type="negative" selected>
+                    <Button type='negative'>Normal State</Button>
+                    <Button type='negative' selected>
                         Selected State
                     </Button>
-                    <Button type="negative" disabled>
+                    <Button type='negative' disabled>
                         Disabled State
                     </Button>
                 </div>
@@ -328,26 +331,28 @@ const clickBtnHandler = btn => {
             <h2>Button Group</h2>
 
             <DocsTile centered>
-                <ButtonGroup>
-                    <Button glyph="survey" />
-                    <Button glyph="pie-chart" selected />
-                    <Button glyph="pool" />
-                </ButtonGroup>
+                <div className='fd-doc__margin--buttonGroup'>
+                    <ButtonGroup>
+                        <Button glyph='survey' />
+                        <Button glyph='pie-chart' selected />
+                        <Button glyph='pool' />
+                    </ButtonGroup>
 
-                <ButtonGroup>
-                    <Button compact>Left</Button>
-                    <Button compact selected>
-                        Middle
-                    </Button>
-                    <Button compact>Right</Button>
-                </ButtonGroup>
+                    <ButtonGroup>
+                        <Button compact>Left</Button>
+                        <Button compact selected>
+                            Middle
+                        </Button>
+                        <Button compact>Right</Button>
+                    </ButtonGroup>
+                </div>
             </DocsTile>
             <DocsText>{buttonGroupCode}</DocsText>
 
             <Separator />
             <h2>Playground Button</h2>
             <Playground
-                component="button"
+                component='button'
                 schema={[
                     {
                         attribute: 'children',
@@ -356,12 +361,12 @@ const clickBtnHandler = btn => {
                     {
                         attribute: 'option',
                         typeOfAttribute: 'string',
-                        enum: ['', 'emphasized', 'light']
+                        'enum': ['', 'emphasized', 'light']
                     },
                     {
                         attribute: 'type',
                         typeOfAttribute: 'string',
-                        enum: ['', 'standard', 'positive', 'medium', 'negative']
+                        'enum': ['', 'standard', 'positive', 'medium', 'negative']
                     },
                     {
                         attribute: 'compact',
@@ -370,7 +375,7 @@ const clickBtnHandler = btn => {
                     {
                         attribute: 'glyph',
                         typeOfAttribute: 'string',
-                        enum: [
+                        'enum': [
                             '',
                             'accelerated',
                             'accept',
@@ -1003,9 +1008,10 @@ const clickBtnHandler = btn => {
                         attribute: 'disabled',
                         typeOfAttribute: 'boolean'
                     }
-                ]}
-            >
-                <Button type="standard" glyph="" option="light" compact={false} selected={false} disabled={false}>
+                ]}>
+                <Button type='standard' glyph=''
+                    option='light' compact={false}
+                    selected={false} disabled={false}>
                     BUTTON
                 </Button>
             </Playground>

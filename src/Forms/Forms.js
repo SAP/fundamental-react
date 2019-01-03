@@ -2,113 +2,104 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 // ------------------------------------------------- Form Set -----------------------------------------------
-export const FormSet = props => {
-    const { children } = props;
-    return <div className="fd-form__set">{children}</div>;
+export const FormSet = ({ children, className }) => {
+    return <div className={`fd-form__set${className ? ' ' + className : ''}`}>{children}</div>;
+};
+FormSet.propTypes = {
+    className: PropTypes.string
 };
 
 // ------------------------------------------------- Form Item -----------------------------------------------
-export const FormItem = props => {
-    const { isCheck, isInline, children } = props;
+export const FormItem = ({ isCheck, isInline, children, className }) => {
     return (
         <div
             className={`fd-form__item${isInline ? ' fd-form__item--inline' : ''}${
                 isCheck ? ' fd-form__item--check' : ''
-            }`}
-        >
+            }${className ? ' ' + className : ''}`}>
             {children}
         </div>
     );
 };
-
 FormItem.propTypes = {
+    className: PropTypes.string,
     isCheck: PropTypes.bool,
     isInline: PropTypes.bool
 };
 
 // ------------------------------------------------- Form Label ----------------------------------------------
-export const FormLabel = props => {
-    const { required, forAttr, children } = props;
+export const FormLabel = ({ required, children, className, ...props }) => {
     return (
-        <label className={`fd-form__label${required ? ' is-required' : ''}`} htmlFor={forAttr}>
+        <label className={`fd-form__label${required ? ' is-required' : ''}${className ? ' ' + className : ''}`} {...props}>
             {children}
         </label>
     );
 };
-
 FormLabel.propTypes = {
-    required: PropTypes.bool,
-    forAttr: PropTypes.string
+    className: PropTypes.string,
+    required: PropTypes.bool
 };
 
 // ------------------------------------------------- Form Message ----------------------------------------------
-export const FormMessage = props => {
-    const { type, children } = props;
-    return <span className={`fd-form__message${type ? '  fd-form__message--' + type : ''}`}>{children}</span>;
+export const FormMessage = ({ type, children, className, ...props }) => {
+    return <span className={`fd-form__message${type ? '  fd-form__message--' + type : ''}${className ? ' ' + className : ''}`} {...props}>{children}</span>;
 };
-
 FormMessage.propTypes = {
+    className: PropTypes.string,
     type: PropTypes.oneOf(['', 'error', 'warning', 'help'])
 };
 
 // ------------------------------------------------- Form Input ----------------------------------------------
-export const FormInput = props => {
-    const { type, state, id, placeholder } = props;
+export const FormInput = ({ state, className, ...props }) => {
     return (
         <input
-            className={`fd-form__control${state ? ' is-' + state : ''}`}
-            type={type}
-            id={id}
-            placeholder={placeholder}
-        />
+            className={`fd-form__control${state ? ' is-' + state : ''}${className ? ' ' + className : ''}`}
+            {...props} />
     );
 };
-
 FormInput.propTypes = {
-    type: PropTypes.string,
-    state: PropTypes.string,
-    id: PropTypes.string,
-    placeholder: PropTypes.string
+    className: PropTypes.string,
+    state: PropTypes.string
 };
 
 // ------------------------------------------------- Form Textarea ----------------------------------------------
-export const FormTextarea = props => {
-    const { id, children } = props;
+export const FormTextarea = ({ children, className, ...props }) => {
     return (
-        <textarea className="fd-form__control" id={id}>
+        <textarea className={`fd-form__control${className ? ' ' + className : ''}`} {...props}>
             {children}
         </textarea>
     );
 };
-
 FormTextarea.propTypes = {
-    id: PropTypes.string
+    className: PropTypes.string
 };
 
 // ------------------------------------------------- Form Fieldset ----------------------------------------------
-export const FormFieldset = props => {
-    const { children } = props;
-    return <fieldset className="fd-form__set">{children}</fieldset>;
+export const FormFieldset = ({ children, className, ...props }) => {
+    return <fieldset className={`fd-form__set${className ? ' ' + className : ''}`} {...props}>{children}</fieldset>;
+};
+FormFieldset.propTypes = {
+    className: PropTypes.string
 };
 
 // ------------------------------------------------- Form Legend ----------------------------------------------
-export const FormLegend = props => {
-    const { children } = props;
-    return <legend className="fd-form__legend">{children}</legend>;
+export const FormLegend = ({ children, className, ...props }) => {
+    return <legend className={`fd-form__legend${className ? ' ' + className : ''}`} {...props}>{children}</legend>;
+};
+FormLegend.propTypes = {
+    className: PropTypes.string
 };
 
 // ------------------------------------------------- Form Select ----------------------------------------------
-export const FormSelect = props => {
-    const { id, name, disabled, children } = props;
+export const FormSelect = ({ disabled, children, className, ...props }) => {
     return (
-        <select className="fd-form__control" id={id} name={name} disabled={disabled ? true : ''}>
+        <select className={`fd-form__control${className ? ' ' + className : ''}`} {...props}
+            disabled={disabled ? true : ''}>
             {children}
         </select>
     );
 };
 FormSelect.propTypes = {
-    id: PropTypes.string,
-    name: PropTypes.string,
+    className: PropTypes.string,
     disabled: PropTypes.bool
 };
 
@@ -134,36 +125,34 @@ export class FormRadio extends Component {
 
         if (isInline) {
             result = inputs.map(inputItem => (
-                <div className="fd-form__item fd-form__item--inline fd-form__item--check" key={inputItem.id}>
-                    <label className="fd-form__label" htmlFor={inputItem.id}>
+                <div className='fd-form__item fd-form__item--inline fd-form__item--check' key={inputItem.id}>
+                    <label className='fd-form__label' htmlFor={inputItem.id}>
                         <input
-                            className="fd-form__control"
-                            type="radio"
+                            className='fd-form__control'
+                            type='radio'
                             id={inputItem.id}
                             name={inputItem.name}
                             value={inputItem.value}
                             disabled={disabled ? true : ''}
                             onChange={this.handleChange}
-                            checked={this.state.selectedItem === inputItem.id}
-                        />
+                            checked={this.state.selectedItem === inputItem.id} />
                         {inputItem.label}
                     </label>
                 </div>
             ));
         } else {
             result = inputs.map(inputItem => (
-                <div className="fd-form__item fd-form__item--check" key={inputItem.id}>
+                <div className='fd-form__item fd-form__item--check' key={inputItem.id}>
                     <input
-                        className="fd-form__control"
-                        type="radio"
+                        className='fd-form__control'
+                        type='radio'
                         id={inputItem.id}
                         name={inputItem.name}
                         value={inputItem.value}
                         disabled={disabled ? true : ''}
                         onChange={this.handleChange}
-                        checked={this.state.selectedItem === inputItem.id}
-                    />
-                    <label className="fd-form__label" htmlFor={inputItem.id}>
+                        checked={this.state.selectedItem === inputItem.id} />
+                    <label className='fd-form__label' htmlFor={inputItem.id}>
                         {inputItem.label}
                     </label>
                 </div>
@@ -174,6 +163,6 @@ export class FormRadio extends Component {
 }
 FormRadio.propTypes = {
     defaultChecked: PropTypes.string,
-    isInline: PropTypes.bool,
-    disabled: PropTypes.bool
+    disabled: PropTypes.bool,
+    isInline: PropTypes.bool
 };

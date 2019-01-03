@@ -140,22 +140,21 @@ Compact mode:
 </FormGroup>`;
 
   return (
-    <div>
-      <Header>InputGroup</Header>
-      <Description>
+      <div>
+          <Header>InputGroup</Header>
+          <Description>
         The input group includes form inputs with add-ons that allow the user to
         better understand the information being entered.
-      </Description>
-      <Import
-        module="FormItem, FormLabel, FormGroup, InputGroup"
-        path="/fundamental-react/src/"
-      />
+          </Description>
+          <Import
+              module='FormItem, FormLabel, FormGroup, InputGroup'
+              path='/fundamental-react/src/' />
 
-      <Separator />
+          <Separator />
 
-      <Properties
-        type="Inputs"
-        properties={[
+          <Properties
+              type='Inputs'
+              properties={[
           {
             name: 'inputType',
             description:
@@ -197,249 +196,240 @@ Compact mode:
             name: 'compact',
             description: 'bool  - set to true to enable compact mode'
           }
-        ]}
-      />
+        ]} />
 
-      <Separator />
+          <Separator />
 
-      <h2>Text add-on</h2>
-      <Description>
+          <h2>Text add-on</h2>
+          <Description>
         The Input with text add-on component is typically used to specify the
         type of the data being entered, such as currency or unit of measure.
         This add-on can be placed at the left or right of the input element.
-      </Description>
-      <DocsTile>
-        <FormGroup>
-          <FormLabel labelText="Left Aligned Text Addon" />
-          <FormItem>
-            <InputGroup
-              inputType="text"
-              addonPos="before"
-              inputValue="1234567890"
-              addon="$"
-            />
-          </FormItem>
-        </FormGroup>
-        <br />
-        <FormGroup>
-          <FormLabel labelText="Right Aligned Text Addon" />
-          <FormItem>
-            <InputGroup
-              inputType="text"
-              addonPos="after"
-              inputValue="1234567890"
-              addon="€"
-            />
-          </FormItem>
-        </FormGroup>
+          </Description>
+          <DocsTile>
+              <FormGroup>
+                  <FormLabel labelText='Left Aligned Text Addon' />
+                  <FormItem>
+                      <InputGroup
+                          inputType='text'
+                          addonPos='before'
+                          inputValue='1234567890'
+                          addon='$' />
+                  </FormItem>
+              </FormGroup>
+              <br />
+              <FormGroup>
+                  <FormLabel labelText='Right Aligned Text Addon' />
+                  <FormItem>
+                      <InputGroup
+                          inputType='text'
+                          addonPos='after'
+                          inputValue='1234567890'
+                          addon='€' />
+                  </FormItem>
+              </FormGroup>
 
-        <br />
-        <p>Compact mode</p>
+              <br />
+              <p>Compact mode</p>
 
-        <FormGroup>
-          <FormLabel labelText="Left Aligned Text Addon" />
-          <FormItem>
-            <InputGroup
-              inputType="text"
-              addonPos="before"
-              inputValue="1234567890"
-              addon="$"
-              compact
-            />
-          </FormItem>
-        </FormGroup>
-        <br />
-        <FormGroup>
-          <FormLabel labelText="Right Aligned Text Addon" />
-          <FormItem>
-            <InputGroup
-              inputType="text"
-              addonPos="after"
-              inputValue="1234567890"
-              addon="€"
-              compact
-            />
-          </FormItem>
-        </FormGroup>
-      </DocsTile>
-      <DocsText>{textAddonCode}</DocsText>
+              <FormGroup>
+                  <FormLabel labelText='Left Aligned Text Addon' />
+                  <FormItem>
+                      <InputGroup
+                          inputType='text'
+                          addonPos='before'
+                          inputValue='1234567890'
+                          addon='$'
+                          compact />
+                  </FormItem>
+              </FormGroup>
+              <br />
+              <FormGroup>
+                  <FormLabel labelText='Right Aligned Text Addon' />
+                  <FormItem>
+                      <InputGroup
+                          inputType='text'
+                          addonPos='after'
+                          inputValue='1234567890'
+                          addon='€'
+                          compact />
+                  </FormItem>
+              </FormGroup>
+          </DocsTile>
+          <DocsText>{textAddonCode}</DocsText>
 
-      <Separator />
+          <Separator />
 
-      <h2>Number input</h2>
-      <Description>
+          <h2>Number input</h2>
+          <Description>
         For an integer value input, a spinner can be added allowing the user to
         increase or decrease the value.
-      </Description>
-      <DocsTile>
-        <FormGroup>
-          <FormLabel labelText="Right Aligned Text Addon" />
-          <FormItem>
-            <InputGroup inputType="number" inputValue={100} />
-          </FormItem>
-        </FormGroup>
+          </Description>
+          <DocsTile>
+              <FormGroup>
+                  <FormLabel labelText='Right Aligned Text Addon' />
+                  <FormItem>
+                      <InputGroup inputType='number' inputValue={100} />
+                  </FormItem>
+              </FormGroup>
 
-        <br />
-        <p>Compact mode</p>
+              <br />
+              <p>Compact mode</p>
 
-        <FormGroup>
-          <FormLabel labelText="Right Aligned Text Addon" />
-          <FormItem>
-            <InputGroup inputType="number" inputValue={100} compact />
-          </FormItem>
-        </FormGroup>
-      </DocsTile>
-      <DocsText>{numberInputCode}</DocsText>
+              <FormGroup>
+                  <FormLabel labelText='Right Aligned Text Addon' />
+                  <FormItem>
+                      <InputGroup inputType='number' inputValue={100}
+                          compact />
+                  </FormItem>
+              </FormGroup>
+          </DocsTile>
+          <DocsText>{numberInputCode}</DocsText>
 
-      <Separator />
+          <Separator />
 
-      <h2>Input with icons</h2>
-      <Description>The Input with add-on supports icons.</Description>
-      <DocsTile>
-        <FormGroup>
-          <FormLabel labelText="Search Input" />
-          <FormItem>
-            <InputGroup inputType="search" inputPlaceholder="Search Term" />
-          </FormItem>
-        </FormGroup>
-        <br />
-        <p>Compact mode</p>
-        <FormGroup>
-          <FormLabel labelText="Search Input" />
-          <FormItem>
-            <InputGroup
-              inputType="search"
-              inputPlaceholder="Search Term"
-              compact
-            />
-          </FormItem>
-        </FormGroup>
-        <br />
-        <br />
-        <FormGroup>
-          <FormLabel labelText="Input with icon on the left" />
-          <FormItem>
-            <InputGroup
-              inputType="text"
-              addonPos="before"
-              inputValue="1234567890"
-              glyph="globe"
-            />
-          </FormItem>
-        </FormGroup>
-        <br />
-        <p>Compact mode</p>
-        <FormGroup>
-          <FormLabel labelText="Input with icon on the left" />
-          <FormItem>
-            <InputGroup
-              inputType="text"
-              addonPos="before"
-              inputValue="1234567890"
-              glyph="globe"
-              compact
-            />
-          </FormItem>
-        </FormGroup>
-        <br />
-        <br />
-        <FormGroup>
-          <FormLabel labelText="Input with icon on the right" />
-          <FormItem>
-            <InputGroup
-              inputType="text"
-              addonPos="after"
-              inputValue="1234567890"
-              glyph="hide"
-            />
-          </FormItem>
-        </FormGroup>
-        <br />
-        <p>Compact mode</p>
-        <FormGroup>
-          <FormLabel labelText="Input with icon on the right" />
-          <FormItem>
-            <InputGroup
-              inputType="text"
-              addonPos="after"
-              inputValue="1234567890"
-              glyph="hide"
-              compact
-            />
-          </FormItem>
-        </FormGroup>
-      </DocsTile>
-      <DocsText>{inputWithIconsCode}</DocsText>
+          <h2>Input with icons</h2>
+          <Description>The Input with add-on supports icons.</Description>
+          <DocsTile>
+              <FormGroup>
+                  <FormLabel labelText='Search Input' />
+                  <FormItem>
+                      <InputGroup inputType='search' inputPlaceholder='Search Term' />
+                  </FormItem>
+              </FormGroup>
+              <br />
+              <p>Compact mode</p>
+              <FormGroup>
+                  <FormLabel labelText='Search Input' />
+                  <FormItem>
+                      <InputGroup
+                          inputType='search'
+                          inputPlaceholder='Search Term'
+                          compact />
+                  </FormItem>
+              </FormGroup>
+              <br />
+              <br />
+              <FormGroup>
+                  <FormLabel labelText='Input with icon on the left' />
+                  <FormItem>
+                      <InputGroup
+                          inputType='text'
+                          addonPos='before'
+                          inputValue='1234567890'
+                          glyph='globe' />
+                  </FormItem>
+              </FormGroup>
+              <br />
+              <p>Compact mode</p>
+              <FormGroup>
+                  <FormLabel labelText='Input with icon on the left' />
+                  <FormItem>
+                      <InputGroup
+                          inputType='text'
+                          addonPos='before'
+                          inputValue='1234567890'
+                          glyph='globe'
+                          compact />
+                  </FormItem>
+              </FormGroup>
+              <br />
+              <br />
+              <FormGroup>
+                  <FormLabel labelText='Input with icon on the right' />
+                  <FormItem>
+                      <InputGroup
+                          inputType='text'
+                          addonPos='after'
+                          inputValue='1234567890'
+                          glyph='hide' />
+                  </FormItem>
+              </FormGroup>
+              <br />
+              <p>Compact mode</p>
+              <FormGroup>
+                  <FormLabel labelText='Input with icon on the right' />
+                  <FormItem>
+                      <InputGroup
+                          inputType='text'
+                          addonPos='after'
+                          inputValue='1234567890'
+                          glyph='hide'
+                          compact />
+                  </FormItem>
+              </FormGroup>
+          </DocsTile>
+          <DocsText>{inputWithIconsCode}</DocsText>
 
-      <Separator />
+          <Separator />
 
-      <h2>Input with actions</h2>
-      <Description>
+          <h2>Input with actions</h2>
+          <Description>
         The Input with add-on supports actions. Actions can be shown with a text
         label or icon.
-      </Description>
-      <DocsTile>
-        <FormGroup>
-          <FormLabel labelText="Input with text action" />
-          <FormItem>
-            <InputGroup
-              inputType="text"
-              addonPos="after"
-              inputValue="1234567890"
-              actions
-            >
-              <Button option="light">Button</Button>
-            </InputGroup>
-          </FormItem>
-        </FormGroup>
-        <br />
-        <p>Compact mode</p>
-        <FormGroup>
-          <FormLabel labelText="Input with text action" />
-          <FormItem>
-            <InputGroup
-              inputType="text"
-              addonPos="after"
-              inputValue="1234567890"
-              actions
-              compact
-            >
-              <Button option="light">Button</Button>
-            </InputGroup>
-          </FormItem>
-        </FormGroup>
-        <br />
-        <br />
-        <FormGroup>
-          <FormLabel labelText="Input with icon text action" />
-          <FormItem>
-            <InputGroup inputType="text" addonPos="after" actions>
-              <Button option="light" glyph="navigation-down-arrow" />
-            </InputGroup>
-          </FormItem>
-        </FormGroup>
-        <br />
-        <p>Compact mode</p>
-        <FormGroup>
-          <FormLabel labelText="Input with icon text action" />
-          <FormItem>
-            <InputGroup inputType="text" addonPos="after" actions compact>
-              <Button option="light" glyph="navigation-down-arrow" />
-            </InputGroup>
-          </FormItem>
-        </FormGroup>
-      </DocsTile>
-      <DocsText>{inputWithActionsCode}</DocsText>
+          </Description>
+          <DocsTile>
+              <FormGroup>
+                  <FormLabel labelText='Input with text action' />
+                  <FormItem>
+                      <InputGroup
+                          inputType='text'
+                          addonPos='after'
+                          inputValue='1234567890'
+                          actions>
+                          <Button option='light'>Button</Button>
+                      </InputGroup>
+                  </FormItem>
+              </FormGroup>
+              <br />
+              <p>Compact mode</p>
+              <FormGroup>
+                  <FormLabel labelText='Input with text action' />
+                  <FormItem>
+                      <InputGroup
+                          inputType='text'
+                          addonPos='after'
+                          inputValue='1234567890'
+                          actions
+                          compact>
+                          <Button option='light'>Button</Button>
+                      </InputGroup>
+                  </FormItem>
+              </FormGroup>
+              <br />
+              <br />
+              <FormGroup>
+                  <FormLabel labelText='Input with icon text action' />
+                  <FormItem>
+                      <InputGroup inputType='text' addonPos='after'
+                          actions>
+                          <Button option='light' glyph='navigation-down-arrow' />
+                      </InputGroup>
+                  </FormItem>
+              </FormGroup>
+              <br />
+              <p>Compact mode</p>
+              <FormGroup>
+                  <FormLabel labelText='Input with icon text action' />
+                  <FormItem>
+                      <InputGroup inputType='text' addonPos='after'
+                          actions compact>
+                          <Button option='light' glyph='navigation-down-arrow' />
+                      </InputGroup>
+                  </FormItem>
+              </FormGroup>
+          </DocsTile>
+          <DocsText>{inputWithActionsCode}</DocsText>
 
-      <Separator />
-      <h2>Playground</h2>
-      <Playground
-        component="inputgroup"
-        schema={[
+          <Separator />
+          <h2>Playground</h2>
+          <Playground
+              component='inputgroup'
+              schema={[
           {
             attribute: 'addonPos',
             typeOfAttribute: 'string',
-            enum: ['after', 'before']
+            'enum': ['after', 'before']
           },
           {
             attribute: 'inputValue',
@@ -448,7 +438,7 @@ Compact mode:
           {
             attribute: 'glyph',
             typeOfAttribute: 'string',
-            enum: [
+            'enum': [
               '',
               'accelerated',
               'accept',
@@ -1077,25 +1067,23 @@ Compact mode:
             attribute: 'children',
             typeOfAttribute: 'string'
           }
-        ]}
-      >
-        <FormGroup>
-          <FormLabel labelText="Input with text action" />
-          <FormItem>
-            <InputGroup
-              inputType="text"
-              addonPos="after"
-              inputValue="1234567890"
-              addon="$"
-              actions
-            >
-              <Button option="light" glyph="navigation-down-arrow">
+        ]}>
+              <FormGroup>
+                  <FormLabel labelText='Input with text action' />
+                  <FormItem>
+                      <InputGroup
+                          inputType='text'
+                          addonPos='after'
+                          inputValue='1234567890'
+                          addon='$'
+                          actions>
+                          <Button option='light' glyph='navigation-down-arrow'>
                 Button
-              </Button>
-            </InputGroup>
-          </FormItem>
-        </FormGroup>
-      </Playground>
-    </div>
+                          </Button>
+                      </InputGroup>
+                  </FormItem>
+              </FormGroup>
+          </Playground>
+      </div>
   );
 };

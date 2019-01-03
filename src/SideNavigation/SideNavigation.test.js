@@ -8,8 +8,8 @@ Enzyme.configure({ adapter: new Adapter() });
 
 describe('<SideNavigation />', () => {
   const subSideNavList = (
-    <SideNavList
-      items={[
+      <SideNavList
+          items={[
         { id: 'item-1', url: '#', name: 'Link Item 1' },
         {
           id: 'item-2',
@@ -38,92 +38,86 @@ describe('<SideNavigation />', () => {
           ]
         },
         { id: 'item-5', link: '/', name: 'Link Item' }
-      ]}
-    />
+      ]} />
   );
 
   const oneLevelSideNav = (
-    <SideNav>
-      <SideNavList
-        items={[
+      <SideNav>
+          <SideNavList
+              items={[
           { id: 'item-1', url: '#', name: 'Link Item' },
           { id: 'item-2', url: '#', name: 'Link Item' },
           { id: 'item-3', url: '#', name: 'Link Item' },
           { id: 'item-4', url: '#', name: 'Link Item' },
           { id: 'item-5', url: '#', name: 'Link Item' }
-        ]}
-      />
-    </SideNav>
+        ]} />
+      </SideNav>
   );
 
   const sideNavWithTitle = (
-    <SideNav>
-      <SideNavGroup title="Group Title">
-        <SideNavList
-          items={[
+      <SideNav>
+          <SideNavGroup className='blue' title='Group Title'>
+              <SideNavList
+                  className='blue'
+                  items={[
             { id: 'item_1', link: '/', name: 'Link Item' },
             { id: 'item_2', link: '/', name: 'Link Item' },
             { id: 'item_3', link: '/', name: 'Link Item' },
             { id: 'item_4', link: '/', name: 'Link Item' },
             { id: 'item_5', link: '/', name: 'Link Item' }
-          ]}
-        />
-      </SideNavGroup>
-      <SideNavGroup title="Group Title">
-        <SideNavList
-          items={[
+          ]} />
+          </SideNavGroup>
+          <SideNavGroup title='Group Title'>
+              <SideNavList
+                  items={[
             { id: 'item_6', link: '/', name: 'Link Item' },
             { id: 'item_7', link: '/', name: 'Link Item' },
             { id: 'item_8', link: '/', name: 'Link Item' },
             { id: 'item_9', link: '/', name: 'Link Item' },
             { id: 'item_10', link: '/', name: 'Link Item' }
-          ]}
-        />
-      </SideNavGroup>
-    </SideNav>
+          ]} />
+          </SideNavGroup>
+      </SideNav>
   );
 
   const sideNavMultiLevel = <SideNav>{subSideNavList}</SideNav>;
 
   const sideNavWithIcons = (
-    <SideNav>
-      <SideNavList
-        items={[
+      <SideNav>
+          <SideNavList
+              items={[
           { id: 'item_1', link: '/', name: 'Link Item', glyph: 'home' },
           { id: 'item_2', link: '/', name: 'Link Item', glyph: 'home' },
           { id: 'item_3', link: '/', name: 'Link Item', glyph: 'home' },
           { id: 'item_4', link: '/', name: 'Link Item', glyph: 'home' },
           { id: 'item_5', link: '/', name: 'Link Item', glyph: 'home' }
-        ]}
-      />
-    </SideNav>
+        ]} />
+      </SideNav>
   );
 
   const sideNavCollapsed = (
-    <SideNav icons={true}>
-      <SideNavList
-        items={[
+      <SideNav icons>
+          <SideNavList
+              items={[
           { id: 'item-1', url: '#', glyph: 'home' },
           { id: 'item-2', url: '#', glyph: 'home' },
           { id: 'item-3', url: '#', glyph: 'home' },
           { id: 'item-4', url: '#', glyph: 'home' },
           { id: 'item-5', url: '#', glyph: 'home' }
-        ]}
-      />
-    </SideNav>
+        ]} />
+      </SideNav>
   );
 
   const sideNavList = (
-    <SideNavList
-      items={[
+      <SideNavList
+          items={[
         { id: 'item-1', url: '#', glyph: 'home' },
         { id: 'item-2', url: '#', glyph: 'home' },
         { id: 'item-3', url: '#', glyph: 'home' },
         { id: 'item-4', url: '#', glyph: 'home' },
         { id: 'item-5', url: '#', glyph: 'home' },
         { id: 'item-6', link: '/', glyph: 'home' }
-      ]}
-    />
+      ]} />
   );
 
   test('create side navigation', () => {
