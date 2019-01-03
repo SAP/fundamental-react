@@ -371,7 +371,7 @@ export class DatePicker extends Component {
   }
 
   render() {
-    const { enableRangeSelection, disableWeekends, disableBeforeDate, disableAfterDate, disableWeekday, disablePastDates, disableFutureDates, blockedDates, disabledDates, className, ...props } = this.props;
+    const { enableRangeSelection, disableWeekends, disableBeforeDate, disableAfterDate, disableWeekday, disablePastDates, disableFutureDates, blockedDates, disabledDates, compact, className, ...props } = this.props;
     return (
         <div
             className={`fd-date-picker${className ? ' ' + className : ''}`} {...props}

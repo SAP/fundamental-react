@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+
 import { Popover } from '../Popover/Popover';
 import { Menu, MenuList, MenuItem } from '../Menu/Menu';
 import { Identifier } from '../Identifier/Identifier';
 import { Icon } from '../Icon/Icon';
 import { SearchInput } from '../SearchInput/SearchInput';
+import { Counter } from '../Badge/Badge';
 
 export class Shellbar extends Component {
     static propTypes = {
@@ -219,24 +221,32 @@ export class Shellbar extends Component {
                                 );
                             })}
                         {notifications && (
-                            <Popover
-                                alignment='right'
-                                control={
-                                    <div className='fd-shellbar__action fd-shellbar__action--collapsible'>
-                                        <button className=' fd-button--shell sap-icon--bell' aria-label='Notifications'>
-                                            <span className='fd-counter fd-counter--notification' aria-label='Unread count'>
-                                                {notifications.notificationCount}
-                                            </span>
-                                        </button>
-                                    </div>
-                                }
-                                body={
-                                    notifications.notificationsBody ? (
-                                        notifications.notificationsBody
-                                    ) : (
-                                        <div>No notifications</div>
-                                    )
-                                } />
+                               (notifications.notificationsBody || notifications.noNotificationsBody) ? (
+                                   <Popover
+                                       alignment='right'
+                                       control={
+                                           <div className='fd-shellbar__action fd-shellbar__action--collapsible'>
+                                               <button className=' fd-button--shell sap-icon--bell' aria-label='Notifications'>
+                                                   {(notifications.notificationCount > 0) && <span className='fd-counter fd-counter--notification' aria-label='Unread count'>
+                                                       {notifications.notificationCount}
+                                                   </span>}
+                                               </button>
+                                           </div>
+                                        }
+                                       body={
+                                            ((notifications.notificationCount > 0) && notifications.notificationsBody) ||
+                                            ((notifications.notificationCount <= 0) && notifications.noNotificationsBody)
+                                    } />
+                               ) : (
+                                   <div className='fd-shellbar__action fd-shellbar__action--collapsible'>
+                                       <button className=' fd-button--shell sap-icon--bell' aria-label='Notifications'
+                                           onClick={notifications.callback}>
+                                           {(notifications.notificationCount > 0) && <span className='fd-counter fd-counter--notification' aria-label='Unread count'>
+                                               {notifications.notificationCount}
+                                           </span>}
+                                       </button>
+                                   </div>
+                               )
                         )}
                         {
                             (actions || searchInput || notifications) && <div className='fd-shellbar__action fd-shellbar__action--collapse'>
@@ -263,7 +273,9 @@ export class Shellbar extends Component {
                                                                     url={item.url}
                                                                     link={item.link}
                                                                     key={index} >
-                                                                    {item.label}
+                                                                    <Icon glyph={item.glyph}>
+                                                                        {item.notificationCount > 0 && <Counter notification>{item.notificationCount}</Counter>}
+                                                                    </Icon> {item.label}
                                                                 </MenuItem>
                                                             );
                                                         })}

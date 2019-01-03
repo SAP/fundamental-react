@@ -49,24 +49,8 @@ productMenu = [
 ];
 
 notifications = {
-    notificationCount: 21,
+    notificationCount: 2,
     label: 'Notifications',
-    notificationsBody: (
-        <Menu>
-            <MenuList>
-                <MenuItem url='/'>Notification 1</MenuItem>
-                <MenuItem url='/'>Notification 2</MenuItem>
-                <MenuItem url='/'>Notification 3</MenuItem>
-            </MenuList>
-        </Menu>
-    ),
-    noNotificationsBody: (
-        <Menu>
-            <MenuList>
-                <MenuItem>There are no notifications</MenuItem>
-            </MenuList>
-        </Menu>
-    ),
     callback: () => alert('Notification selected!')
 };
 
@@ -115,28 +99,6 @@ productMenu = [
     { name: 'Application D', callback: () => alert('Application D selected!') }
 ];
 
-notifications = {
-    notificationCount: 2,
-    label: 'Notifications',
-    notificationsBody: (
-        <Menu>
-            <MenuList>
-                <MenuItem url='/'>Notification 1</MenuItem>
-                <MenuItem url='/'>Notification 2</MenuItem>
-                <MenuItem url='/'>Notification 3</MenuItem>
-            </MenuList>
-        </Menu>
-    ),
-    noNotificationsBody: (
-        <Menu>
-            <MenuList>
-                <MenuItem>There are no notifications</MenuItem>
-            </MenuList>
-        </Menu>
-    ),
-    callback: () => alert('Notification selected!')
-};
-
 searchInput2 = {
     label: 'Search',
     glyph: 'search',
@@ -160,6 +122,46 @@ searchInput2 = {
         alert(\`Search fired for \${searchTerm}\`);
     },
     callback: () => alert('Search selected!')
+};
+
+actions = [
+    {
+        glyph: 'settings',
+        label: 'Settings',
+        notificationCount: 5,
+        callback: () => alert('Settings selected!'),
+        menu: (
+            <Menu>
+                <MenuList>
+                    <MenuItem url='/'>Option 1</MenuItem>
+                    <MenuItem url='/'>Option 2</MenuItem>
+                    <MenuItem url='/'>Option 3</MenuItem>
+                </MenuList>
+            </Menu>
+        )
+    }
+];
+
+notifications2 = {
+    notificationCount: 2,
+    label: 'Notifications',
+    notificationsBody: (
+        <Menu>
+            <MenuList>
+                <MenuItem url='/'>Notification 1</MenuItem>
+                <MenuItem url='/'>Notification 2</MenuItem>
+                <MenuItem url='/'>Notification 3</MenuItem>
+            </MenuList>
+        </Menu>
+    ),
+    noNotificationsBody: (
+        <Menu>
+            <MenuList>
+                <MenuItem>There are no notifications</MenuItem>
+            </MenuList>
+        </Menu>
+    ),
+    callback: () => alert('Notification selected!')
 };
 
 profile = {
@@ -255,7 +257,7 @@ productSwitcher = {
         }
     ];
 
-    notifications = {
+    notifications2 = {
         notificationCount: 2,
         label: 'Notifications',
         notificationsBody: (
@@ -274,6 +276,12 @@ productSwitcher = {
                 </MenuList>
             </Menu>
         ),
+        callback: () => alert('Notification selected!')
+    };
+
+    notifications = {
+        notificationCount: 2,
+        label: 'Notifications',
         callback: () => alert('Notification selected!')
     };
 
@@ -375,7 +383,6 @@ productSwitcher = {
 
     searchInput2 = {
         label: 'Search',
-        glyph: 'search',
         placeholder: 'Enter a fruit',
         searchList: [
             { text: 'apple', callback: () => alert('apple') },
@@ -498,7 +505,7 @@ productSwitcher = {
                         copilot
                         searchInput={this.searchInput2}
                         actions={this.actions}
-                        notifications={this.notifications}
+                        notifications={this.notifications2}
                         profile={this.profile}
                         profileMenu={this.profileMenu}
                         productSwitcher={this.productSwitcher}
