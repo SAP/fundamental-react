@@ -9,7 +9,7 @@ exports[`<Forms /> create form item 1`] = `
   >
     <label
       className="fd-form__label"
-      htmlFor="input-1"
+      forAttr="input-1"
     >
       Default Input
     </label>
@@ -25,7 +25,7 @@ exports[`<Forms /> create form item 1`] = `
   >
     <label
       className="fd-form__label is-required"
-      htmlFor="input-1"
+      forAttr="input-1"
     >
       Default Input
     </label>
@@ -36,8 +36,14 @@ exports[`<Forms /> create form item 1`] = `
       type="text"
     />
     <textarea
-      className="fd-form__control"
+      className="fd-form__control blue"
       id="textarea-1"
+    >
+      Pellentesque metus lacus commodo eget justo ut rutrum varius nunc.
+    </textarea>
+    <textarea
+      className="fd-form__control"
+      id="textarea-2"
     >
       Pellentesque metus lacus commodo eget justo ut rutrum varius nunc.
     </textarea>
@@ -47,7 +53,7 @@ exports[`<Forms /> create form item 1`] = `
       Pellentesque metus lacus commodo eget justo ut rutrum varius nunc
     </span>
     <span
-      className="fd-form__message"
+      className="fd-form__message blue"
     >
       Pellentesque metus lacus commodo eget justo ut rutrum varius nunc
     </span>
@@ -73,7 +79,7 @@ exports[`<Forms /> create form item 1`] = `
       </option>
     </select>
     <select
-      className="fd-form__control"
+      className="fd-form__control blue"
       disabled={true}
       id="select-1"
     >
@@ -88,11 +94,108 @@ exports[`<Forms /> create form item 1`] = `
 `;
 
 exports[`<Forms /> create form item 2`] = `
+<div
+  className="fd-form__set blue"
+>
+  <div
+    className="fd-form__item fd-form__item--inline fd-form__item--check"
+  >
+    <label
+      className="fd-form__label"
+      forAttr="input-1"
+    >
+      Default Input
+    </label>
+    <input
+      className="fd-form__control"
+      id="input-1"
+      placeholder="Field placeholder text"
+      type="text"
+    />
+  </div>
+</div>
+`;
+
+exports[`<Forms /> create form item 3`] = `
+<fieldset
+  className="fd-form__set blue"
+>
+  <legend
+    className="fd-form__legend blue"
+  >
+    Radio buttons
+  </legend>
+  <div>
+    <div
+      className="fd-form__item fd-form__item--check"
+    >
+      <input
+        checked={false}
+        className="fd-form__control"
+        disabled=""
+        id="radio-1"
+        name="radio-1"
+        onChange={[Function]}
+        type="radio"
+        value="radio-1"
+      />
+      <label
+        className="fd-form__label"
+        htmlFor="radio-1"
+      >
+        Option 1
+      </label>
+    </div>
+    <div
+      className="fd-form__item fd-form__item--check"
+    >
+      <input
+        checked={true}
+        className="fd-form__control"
+        disabled=""
+        id="radio-2"
+        name="radio-2"
+        onChange={[Function]}
+        type="radio"
+        value="radio-2"
+      />
+      <label
+        className="fd-form__label"
+        htmlFor="radio-2"
+      >
+        Option 2
+      </label>
+    </div>
+    <div
+      className="fd-form__item fd-form__item--check"
+    >
+      <input
+        checked={false}
+        className="fd-form__control"
+        disabled=""
+        id="radio-3"
+        name="radio-3"
+        onChange={[Function]}
+        type="radio"
+        value="radio-3"
+      />
+      <label
+        className="fd-form__label"
+        htmlFor="radio-3"
+      >
+        Option 3
+      </label>
+    </div>
+  </div>
+</fieldset>
+`;
+
+exports[`<Forms /> create form item 4`] = `
 <fieldset
   className="fd-form__set"
 >
   <legend
-    className="fd-form__legend"
+    className="fd-form__legend blue"
   >
     Radio buttons
   </legend>
@@ -160,6 +263,7 @@ exports[`<Forms /> create form item 2`] = `
   </div>
   <legend
     className="fd-form__legend"
+    legendText="Radio buttons disabled"
   />
   <div>
     <div
@@ -225,6 +329,7 @@ exports[`<Forms /> create form item 2`] = `
   </div>
   <legend
     className="fd-form__legend"
+    legendText="Inline Radio buttons"
   />
   <div>
     <div
@@ -352,18 +457,21 @@ exports[`<Forms /> create form item 2`] = `
   </div>
   <legend
     className="fd-form__legend"
+    legendText="Checkboxes"
   />
   <div
-    className="fd-form__item fd-form__item--check"
+    className="fd-form__item fd-form__item--check blue"
   >
     <input
-      className="fd-form__control"
+      className="fd-form__control blue"
       id="checkbox-1"
+      name="checkbox-name-1"
       type="checkbox"
+      value=""
     />
     <label
-      className="fd-form__label"
-      htmlFor="checkbox-1"
+      className="fd-form__label blue"
+      forAttr="checkbox-1"
     >
       Option One
     </label>

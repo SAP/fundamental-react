@@ -7,7 +7,7 @@ exports[`<Button /> create button group 1`] = `
   role="group"
 >
   <button
-    className=" fd-button sap-icon--survey"
+    className=" fd-button sap-icon--survey blue"
     disabled={false}
     selected={false}
   />

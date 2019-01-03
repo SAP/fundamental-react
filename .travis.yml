@@ -8,11 +8,14 @@ branches:
   only:
   - develop
   - "/^feature\\/.*$/"
+  - "/^fix\\/.*$/"
 jobs:
   include:
-    - stage: "Fundamental-react build"
+    - stage: "Fundamental-react: Lint"
+      script: npm run lint
+    - stage: "Fundamental-react: Test"
       name: "Unit tests"
-      script: "./ci-scripts/unit-tests.sh"
+      script: npm run test:coverage
 notifications:
   email:
     on_failure: always

@@ -1,0 +1,146 @@
+env:
+    browser: true
+    node: true
+    es6: true
+    jest: true
+
+globals:
+    $: true
+
+parser: 'babel-eslint'
+
+#extends: 'react-app'
+
+plugins:
+    - ie11
+    - jsx-a11y
+    - loosely-restrict-imports
+    - react
+
+rules:
+    #brace-style: 2
+    camelcase: 2
+    comma-dangle: [2, 'never']
+    comma-spacing: 2
+    comma-style: [2, 'last']
+    #compat/compat: 2
+    default-case: 2
+    dot-notation: 2
+    eol-last: 2
+    #eqeqeq: 2
+    guard-for-in: 2
+    handle-callback-err: 2
+    ie11/no-collection-args: 2
+    ie11/no-for-in-const: 2
+    ie11/no-weak-collections: 2
+    #indent: [2, 4, {"SwitchCase": 1}]
+    jsx-a11y/accessible-emoji: 2
+    jsx-a11y/alt-text: 2
+    #jsx-a11y/anchor-has-content: 2
+    #jsx-a11y/anchor-is-valid: 2
+    jsx-a11y/aria-activedescendant-has-tabindex: 2
+    jsx-a11y/aria-props: 2
+    jsx-a11y/aria-proptypes: 2
+    #jsx-a11y/aria-role: 2
+    jsx-a11y/aria-unsupported-elements: 2
+    #jsx-a11y/click-events-have-key-events: 2
+    jsx-a11y/heading-has-content: 2
+    jsx-a11y/html-has-lang: 2
+    jsx-a11y/iframe-has-title: 2
+    jsx-a11y/img-redundant-alt: 2
+    #jsx-a11y/interactive-supports-focus: 2
+    jsx-a11y/label-has-for: [2, {'allowChildren': true, 'required': {'every': [ 'id' ]}}]
+    jsx-a11y/media-has-caption: 2
+    jsx-a11y/mouse-events-have-key-events: 2
+    jsx-a11y/no-access-key: 2
+    jsx-a11y/no-autofocus: 2
+    jsx-a11y/no-distracting-elements: 2
+    jsx-a11y/no-interactive-element-to-noninteractive-role: 2
+    #jsx-a11y/no-noninteractive-element-interactions: 2
+    #jsx-a11y/no-noninteractive-element-to-interactive-role: [2, { ul: ['tablist', 'menu']}]
+    jsx-a11y/no-noninteractive-tabindex: 2
+    #jsx-a11y/no-onchange: 2
+    jsx-a11y/no-redundant-roles: 2
+    #jsx-a11y/no-static-element-interactions: 2
+    jsx-a11y/role-has-required-aria-props: 2
+    #jsx-a11y/role-supports-aria-props: 2
+    jsx-a11y/scope: 2
+    jsx-a11y/tabindex-no-positive: 2
+    jsx-quotes: [ 2, prefer-single ]
+    key-spacing: 2
+    keyword-spacing: [2, { 'before': true }]
+    loosely-restrict-imports/loosely-restrict-imports: [2, '.jsx']
+    new-cap: 2
+    no-cond-assign: 2
+    #no-console: 2
+    no-constant-condition: 2
+    no-control-regex: 2
+    no-debugger: 2
+    no-dupe-args: 2
+    no-dupe-keys: 2
+    no-duplicate-case: 2
+    no-empty-character-class: 2
+    #no-empty: 2
+    no-ex-assign: 2
+    no-extra-bind: 2
+    no-extra-boolean-cast: 0
+    no-extra-parens: 0
+    no-extra-semi: 2
+    no-fallthrough: 2
+    no-floating-decimal: 2
+    no-func-assign: 2
+    no-inner-declarations: 2
+    no-invalid-regexp: 2
+    no-irregular-whitespace: 2
+    no-loop-func: 2
+    no-mixed-spaces-and-tabs: 2
+    no-multi-spaces: 2
+    no-negated-in-lhs: 2
+    #no-nested-ternary: 2
+    no-obj-calls: 2
+    no-regex-spaces: 2
+    #no-shadow: 2
+    no-spaced-func: 2
+    #no-sparse-arrays: 2
+    no-trailing-spaces: 2
+    no-undef: 2
+    #no-undefined: 2
+    no-underscore-dangle: 0
+    no-unreachable: 2
+    #no-unused-vars: [2, { ignoreRestSiblings: true }]
+    quote-props: [2, 'as-needed', { 'keywords': true, 'unnecessary': false }]
+    quotes: [2, 'single']
+    #radix: 2
+    react/display-name: 2
+    react/jsx-boolean-value: 2
+    react/jsx-closing-bracket-location: [2, 'after-props']
+    react/jsx-equals-spacing: [2, 'never']
+    react/jsx-indent: 2
+    react/jsx-indent-props: 2
+    react/jsx-max-props-per-line:  [2, { "maximum": 2 }]
+    react/jsx-no-undef: 2
+    react/jsx-tag-spacing: [2, { "beforeSelfClosing": "always" }]
+    #react/jsx-sort-props: 2
+    react/jsx-uses-react: 2
+    react/jsx-uses-vars: 2
+    react/jsx-wrap-multilines: 2
+    react/no-did-mount-set-state: 2
+    react/no-did-update-set-state: 2
+    #react/no-multi-comp: 2
+    react/no-unknown-property: 2
+    #react/prop-types: 2
+    #react/react-in-jsx-scope: 2
+    react/self-closing-comp: 2
+    react/sort-prop-types: [2, { 'callbacksLast' : true, 'ignoreCase' : true, 'requiredFirst' : true, } ]
+    semi-spacing: 2
+    semi: 2
+    #sort-imports: [2, { 'ignoreCase': true, 'ignoreMemberSort': false, 'memberSyntaxSortOrder': ['none', 'single', 'multiple', 'all'] }]
+    space-before-blocks: 2
+    space-before-function-paren: [2, 'never']
+    space-infix-ops: 2
+    spaced-comment: [0, 'always', { exceptions: ['-']}]
+    strict: [2, 'global']
+    #use-isnan: 2
+    #valid-jsdoc: [2, { prefer: { 'return': 'returns'}}]
+    #valid-typeof: 2
+    wrap-iife: [2, 'any']

@@ -23,16 +23,16 @@ export const BreadcrumbComponent = () => {
                 to previous levels in the path. When clicking on the current page, a dropdown allows users to access
                 other pages at that same level.
             </Description>
-            <Import module="Breadcrumb, BreadcrumbItem" path="/fundamental-react/src/" />
+            <Import module='Breadcrumb, BreadcrumbItem' path='/fundamental-react/src/' />
 
             <Separator />
 
             <Description>An example using url (href attribute)</Description>
             <DocsTile>
                 <Breadcrumb>
-                    <BreadcrumbItem url="#" name="Link Text" />
-                    <BreadcrumbItem url="#" name="Link Text" />
-                    <BreadcrumbItem url="#" name="Link Text" />
+                    <BreadcrumbItem url='#' name='Link Text' />
+                    <BreadcrumbItem url='#' name='Link Text' />
+                    <BreadcrumbItem url='#' name='Link Text' />
                 </Breadcrumb>
             </DocsTile>
             <DocsText>{breadcrumbHrefCode}</DocsText>
@@ -42,9 +42,9 @@ export const BreadcrumbComponent = () => {
             <Description>An example using link (routerLink)</Description>
             <DocsTile>
                 <Breadcrumb>
-                    <BreadcrumbItem link="/" name="Link Text" />
-                    <BreadcrumbItem link="/" name="Link Text" />
-                    <BreadcrumbItem link="/" name="Link Text" />
+                    <BreadcrumbItem link='/' name='Link Text' />
+                    <BreadcrumbItem link='/' name='Link Text' />
+                    <BreadcrumbItem link='/' name='Link Text' />
                 </Breadcrumb>
             </DocsTile>
             <DocsText>{breadcrumbLinkCode}</DocsText>

@@ -8,30 +8,30 @@ Enzyme.configure({ adapter: new Adapter() });
 
 describe('<Button />', () => {
   const defaultButton = <Button>Regular Button</Button>;
-  const optionButton = <Button option="emphasized">Emphasized Button</Button>;
-  const typeButton = <Button type="positive">Positive Button</Button>;
-  const iconButton = <Button glyph="cart">Icon Button</Button>;
+  const optionButton = <Button option='emphasized'>Emphasized Button</Button>;
+  const typeButton = <Button type='positive'>Positive Button</Button>;
+  const iconButton = <Button glyph='cart'>Icon Button</Button>;
   const compactButton = <Button compact>Compact</Button>;
   const dropdownButton = <Button dropdown>Dropdown Button</Button>;
   const navBarButton = <Button navbar>Navbar button</Button>;
 
   const selectedButton = (
-    <Button option="emphasized" selected>
+      <Button option='emphasized' selected>
       Selected State
-    </Button>
+      </Button>
   );
   const disabledButton = (
-    <Button option="emphasized" disabled>
+      <Button option='emphasized' disabled>
       Disabled State
-    </Button>
+      </Button>
   );
 
   const buttonGroup = (
-    <ButtonGroup>
-      <Button glyph="survey" />
-      <Button glyph="pie-chart" selected />
-      <Button glyph="pool" />
-    </ButtonGroup>
+      <ButtonGroup>
+          <Button className='blue' glyph='survey' />
+          <Button glyph='pie-chart' selected />
+          <Button glyph='pool' />
+      </ButtonGroup>
   );
 
   test('create buttons', () => {

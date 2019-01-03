@@ -315,8 +315,8 @@ export class DatePicker extends Component {
   };
 
   updateDate(date) {
-    console.log("Inside updateDate function. The event is: ", date)
-    
+    console.log('Inside updateDate function. The event is: ', date);
+
     if (this.props.enableRangeSelection) {
       if (date.length == 2) {
         let firstDateMonth = date[0].getMonth() + 1;
@@ -371,65 +371,61 @@ export class DatePicker extends Component {
   }
 
   render() {
+    const { enableRangeSelection, disableWeekends, disableBeforeDate, disableAfterDate, disableWeekday, disablePastDates, disableFutureDates, blockedDates, disabledDates, compact, className, ...props } = this.props;
     return (
-      <div
-        className="fd-date-picker"
-        ref={component => (this.component = component)}
-      >
-        <div className="fd-popover">
-          <div className="fd-popover__control">
-            <div
-              className={`fd-input-group fd-input-group--after${
+        <div
+            className={`fd-date-picker${className ? ' ' + className : ''}`} {...props}
+            ref={component => (this.component = component)}>
+            <div className='fd-popover'>
+                <div className='fd-popover__control'>
+                    <div
+                        className={`fd-input-group fd-input-group--after${
                 this.props.compact ? ' fd-input-group--compact' : ''
-              }`}
-            >
-              <input
-                className={`fd-input${
+              }`}>
+                        <input
+                            className={`fd-input${
                   this.props.compact ? ' fd-input--compact' : ''
                 }`}
-                type="text"
-                placeholder="mm/dd/yyyy"
-                onClick={() => this.openCalendar('input')}
-                value={this.state.formattedDate}
-                onChange={this.modifyDate}
-                onKeyPress={this.sendUpdate}
-              />
-              <span className="fd-input-group__addon fd-input-group__addon--after fd-input-group__addon--button">
-                <button
-                  className="fd-popover__control fd-button--light sap-icon--calendar"
-                  onClick={() => this.openCalendar()}
-                />
-              </span>
-            </div>
-          </div>
-          <div
-            className="fd-popover__body fd-popover__body--right fd-popover__body--no-arrow"
-            aria-hidden={this.state.hidden}
-          >
-            <Calendar
-              onChange={this.updateDate}
-              enableRangeSelection={this.props.enableRangeSelection}
-              disableWeekends={this.props.disableWeekends}
-              disableBeforeDate={this.props.disableBeforeDate}
-              disableAfterDate={this.props.disableAfterDate}
-              disableWeekday={this.props.disableWeekday}
-              disablePastDates={this.props.disablePastDates}
-              disableFutureDates={this.props.disableFutureDates}
-              blockedDates={this.props.blockedDates}
-              disabledDates={this.props.disabledDates}
-              customDate={
-                this.props.enableRangeSelection
+                            type='text'
+                            placeholder='mm/dd/yyyy'
+                            onClick={() => this.openCalendar('input')}
+                            value={this.state.formattedDate}
+                            onChange={this.modifyDate}
+                            onKeyPress={this.sendUpdate} />
+                        <span className='fd-input-group__addon fd-input-group__addon--after fd-input-group__addon--button'>
+                            <button
+                                className='fd-popover__control fd-button--light sap-icon--calendar'
+                                onClick={() => this.openCalendar()} />
+                        </span>
+                    </div>
+                </div>
+                <div
+                    className='fd-popover__body fd-popover__body--right fd-popover__body--no-arrow'
+                    aria-hidden={this.state.hidden}>
+                    <Calendar
+                        onChange={this.updateDate}
+                        enableRangeSelection={enableRangeSelection}
+                        disableWeekends={disableWeekends}
+                        disableBeforeDate={disableBeforeDate}
+                        disableAfterDate={disableAfterDate}
+                        disableWeekday={disableWeekday}
+                        disablePastDates={disablePastDates}
+                        disableFutureDates={disableFutureDates}
+                        blockedDates={blockedDates}
+                        disabledDates={disabledDates}
+                        customDate={
+                enableRangeSelection
                   ? this.state.arrSelectedDates
                   : this.state.selectedDate
-              }
-            />
-          </div>
+              } />
+                </div>
+            </div>
         </div>
-      </div>
     );
   }
 }
 
 DatePicker.propTypes = {
+  compact: PropTypes.bool,
   enableRangeSelection: PropTypes.bool
 };

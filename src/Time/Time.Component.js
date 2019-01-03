@@ -3,11 +3,11 @@ import { Time } from '../';
 import { DocsTile, DocsText, Separator, Header, Description, Import, Properties } from '../';
 
 export const TimeComponent = () => {
-    const defaultTimeCode = `<Time />`;
-    const format12hoursTimeCode = `<Time format12Hours={true} />`;
-    const noSpinnersTimeCode = `<Time spinners={false} />`;
-    const noSecondsTimeCode = `<Time showSecond={false} />`;
-    const disabledStateTimeCode = `<Time disabled={true} />`;
+    const defaultTimeCode = '<Time />';
+    const format12hoursTimeCode = '<Time format12Hours={true} />';
+    const noSpinnersTimeCode = '<Time spinners={false} />';
+    const noSecondsTimeCode = '<Time showSecond={false} />';
+    const disabledStateTimeCode = '<Time disabled={true} />';
     return (
         <div>
             <Header>Time</Header>
@@ -16,10 +16,10 @@ export const TimeComponent = () => {
                 to assemble a clock time. A max of four will account for hours, minutes, seconds and period of the day.
                 It will be rare to see this component used outside of it being composed in the time-picker component.
             </Description>
-            <Import module="Time" path="/fundamental-react/src/" />
+            <Import module='Time' path='/fundamental-react/src/' />
             <Separator />{' '}
             <Properties
-                type="Inputs"
+                type='Inputs'
                 properties={[
                     {
                         name: 'id',
@@ -51,8 +51,7 @@ export const TimeComponent = () => {
                         description:
                             'object - The time component values , contains four properties: hour with values from 01 to 12 when format12Hours is true or 00 to 23 when format12Hours is false, minute with values from 00 to 59, second with values from 00 to 59, meridiem with values 0(am), 1(pm)'
                     }
-                ]}
-            />
+                ]} />
             <Separator />
             {/* Default Clock */}
             <h2>Default</h2>
@@ -65,7 +64,7 @@ export const TimeComponent = () => {
             <h2>12-Hour Clock</h2>
             <Description>You can use a Meridian 12-hour clock by setting format12Hours to true </Description>
             <DocsTile>
-                <Time format12Hours={true} />
+                <Time format12Hours />
             </DocsTile>
             <DocsText>{format12hoursTimeCode}</DocsText>
             <Separator />
@@ -89,7 +88,7 @@ export const TimeComponent = () => {
             <h2>Disabled State</h2>
             <Description>The Time component can be set to disabled state by setting disabled to true</Description>
             <DocsTile>
-                <Time disabled={true} />
+                <Time disabled />
             </DocsTile>
             <DocsText>{disabledStateTimeCode}</DocsText>
         </div>

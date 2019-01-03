@@ -2,10 +2,10 @@
 
 exports[`<ListGroup /> create list group 1`] = `
 <ul
-  className="fd-list-group"
+  className="fd-list-group blue"
 >
   <li
-    className="fd-list-group__item"
+    className="fd-list-group__item blue"
   >
     <a
       style={
@@ -39,6 +39,20 @@ exports[`<ListGroup /> create list group 1`] = `
     className="fd-list-group__item"
   >
     List item 4
+  </li>
+  <li
+    className="fd-list-group__item"
+  >
+    List item 1
+    <span
+      className="fd-list-group__action blue"
+    >
+      <button
+        className=" fd-button fd-button--standard sap-icon--edit"
+        disabled={false}
+        selected={false}
+      />
+    </span>
   </li>
 </ul>
 `;
@@ -76,7 +90,7 @@ exports[`<ListGroup /> create list group 3`] = `
     >
       <label
         className="fd-form__label"
-        for="CndSd399"
+        htmlFor="CndSd399"
       >
         <input
           className="fd-form__control"

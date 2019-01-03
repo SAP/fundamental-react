@@ -29,13 +29,13 @@ export const MenuComponent = () => {
 
     const menuSeparatorCode = `<Menu>
     <MenuList>
-        <MenuItem link="/" separator={true}>
+        <MenuItem link="/" separator>
             Option 1
         </MenuItem>
-        <MenuItem link="/" separator={true}>
+        <MenuItem link="/" separator>
             Option 2
         </MenuItem>
-        <MenuItem link="/" separator={true}>
+        <MenuItem link="/" separator>
             Option 3
         </MenuItem>
         <MenuItem link="/">Option 4</MenuItem>
@@ -59,15 +59,15 @@ export const MenuComponent = () => {
                 contents when composing “dropdowns”, “contextual menus”, “mega menu”, etc, when paired with the popover
                 component.
             </Description>
-            <Import module="Menu, MenuList, MenuItem, MenuGroup" path="/fundamental-react/src/" />
+            <Import module='Menu, MenuList, MenuItem, MenuGroup' path='/fundamental-react/src/' />
 
             <Separator />
 
             <Properties
-                type="Inputs"
+                type='Inputs'
                 properties={[
-                    { name: 'url', description: "string - href attribute of <a> tag. Use either 'url' or 'link'" },
-                    { name: 'link', description: "string - a router link. Use either 'url' or 'link'" },
+                    { name: 'url', description: 'string - href attribute of <a> tag. Use either \'url\' or \'link\'' },
+                    { name: 'link', description: 'string - a router link. Use either \'url\' or \'link\'' },
                     { name: 'separator', description: 'bool - when set to true, adds a horizontal line (separator).' },
                     {
                         name: 'title',
@@ -81,8 +81,7 @@ export const MenuComponent = () => {
                         name: 'addon',
                         description: 'string - the name of the SAP icon to be applied as an addon before.'
                     }
-                ]}
-            />
+                ]} />
 
             <Separator />
 
@@ -91,10 +90,10 @@ export const MenuComponent = () => {
             <DocsTile>
                 <Menu>
                     <MenuList>
-                        <MenuItem url="/">Option 1</MenuItem>
-                        <MenuItem url="/">Option 2</MenuItem>
-                        <MenuItem url="/">Option 3</MenuItem>
-                        <MenuItem url="/">Option 4</MenuItem>
+                        <MenuItem url='/'>Option 1</MenuItem>
+                        <MenuItem url='/'>Option 2</MenuItem>
+                        <MenuItem url='/'>Option 3</MenuItem>
+                        <MenuItem url='/'>Option 4</MenuItem>
                     </MenuList>
                 </Menu>
             </DocsTile>
@@ -106,15 +105,15 @@ export const MenuComponent = () => {
             <DocsTile>
                 <Menu>
                     <MenuList>
-                        <MenuItem link="/">Option 1</MenuItem>
-                        <MenuItem link="/">Option 2</MenuItem>
-                        <MenuItem link="/">Option 3</MenuItem>
+                        <MenuItem link='/'>Option 1</MenuItem>
+                        <MenuItem link='/'>Option 2</MenuItem>
+                        <MenuItem link='/'>Option 3</MenuItem>
                     </MenuList>
-                    <MenuGroup title="Group Header">
+                    <MenuGroup title='Group Header'>
                         <MenuList>
-                            <MenuItem link="/">Option 4</MenuItem>
-                            <MenuItem link="/">Option 5</MenuItem>
-                            <MenuItem link="/">Option 6</MenuItem>
+                            <MenuItem link='/'>Option 4</MenuItem>
+                            <MenuItem link='/'>Option 5</MenuItem>
+                            <MenuItem link='/'>Option 6</MenuItem>
                         </MenuList>
                     </MenuGroup>
                 </Menu>
@@ -127,16 +126,16 @@ export const MenuComponent = () => {
             <DocsTile>
                 <Menu>
                     <MenuList>
-                        <MenuItem link="/" separator={true}>
+                        <MenuItem link='/' separator>
                             Option 1
                         </MenuItem>
-                        <MenuItem link="/" separator={true}>
+                        <MenuItem link='/' separator>
                             Option 2
                         </MenuItem>
-                        <MenuItem link="/" separator={true}>
+                        <MenuItem link='/' separator>
                             Option 3
                         </MenuItem>
-                        <MenuItem link="/">Option 4</MenuItem>
+                        <MenuItem link='/'>Option 4</MenuItem>
                     </MenuList>
                 </Menu>
             </DocsTile>
@@ -146,14 +145,14 @@ export const MenuComponent = () => {
             <h2>Menu w/ Addon Before</h2>
             <p>Menu items with an addon before.</p>
             <DocsTile>
-                <Menu addonBefore={true}>
+                <Menu addonBefore>
                     <MenuList>
-                        <MenuItem link="/">Option 1</MenuItem>
-                        <MenuItem link="/" addon="accept">
+                        <MenuItem link='/'>Option 1</MenuItem>
+                        <MenuItem link='/' addon='accept'>
                             Option 2
                         </MenuItem>
-                        <MenuItem link="/">Option 3</MenuItem>
-                        <MenuItem link="/">Option 4</MenuItem>
+                        <MenuItem link='/'>Option 3</MenuItem>
+                        <MenuItem link='/'>Option 4</MenuItem>
                     </MenuList>
                 </Menu>
             </DocsTile>

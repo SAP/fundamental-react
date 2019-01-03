@@ -5,40 +5,39 @@ import { Menu, MenuItem, MenuList } from '../Menu/Menu';
 
 describe('<ComboboxInput />', () => {
   const defaultComboBoxInput = (
-    <ComboboxInput
-      placeholder="Select Fruit"
-      menu={
-        <Menu>
-          <MenuList>
-            <MenuItem url="/">Pear</MenuItem>
-            <MenuItem url="/">Strawberry</MenuItem>
-            <MenuItem url="/">Raspberry</MenuItem>
-            <MenuItem url="/" isLink>
+      <ComboboxInput
+          placeholder='Select Fruit'
+          menu={
+              <Menu>
+                  <MenuList>
+                      <MenuItem url='/'>Pear</MenuItem>
+                      <MenuItem url='/'>Strawberry</MenuItem>
+                      <MenuItem url='/'>Raspberry</MenuItem>
+                      <MenuItem url='/' isLink>
               + New Item
-            </MenuItem>
-          </MenuList>
-        </Menu>
-      }
-    />
+                      </MenuItem>
+                  </MenuList>
+              </Menu>
+      } />
   );
 
   const compactComboBoxInput = (
-    <ComboboxInput
-      placeholder="Select Fruit"
-      compact
-      menu={
-        <Menu>
-          <MenuList>
-            <MenuItem url="/">Pear</MenuItem>
-            <MenuItem url="/">Strawberry</MenuItem>
-            <MenuItem url="/">Raspberry</MenuItem>
-            <MenuItem url="/" isLink>
+      <ComboboxInput
+          className='blue'
+          placeholder='Select Fruit'
+          compact
+          menu={
+              <Menu>
+                  <MenuList>
+                      <MenuItem url='/'>Pear</MenuItem>
+                      <MenuItem url='/'>Strawberry</MenuItem>
+                      <MenuItem url='/'>Raspberry</MenuItem>
+                      <MenuItem url='/' isLink>
               + New Item
-            </MenuItem>
-          </MenuList>
-        </Menu>
-      }
-    />
+                      </MenuItem>
+                  </MenuList>
+              </Menu>
+      } />
   );
   test('create combobox input', () => {
     // default combobox

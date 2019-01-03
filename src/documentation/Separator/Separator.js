@@ -5,8 +5,8 @@ export const Separator = (props) => {
         display: 'block',
         margin: '2rem 0',
         borderBottom: '1px solid #E3E3E3'
-    }
+    };
     return (
-        <div style={separatorStyle}></div>
+        <div style={separatorStyle} />
     );
-}
+};

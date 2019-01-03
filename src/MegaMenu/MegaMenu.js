@@ -2,16 +2,15 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { BrowserRouter, Link } from 'react-router-dom';
 
-export const MegaMenu = props => {
-    const { id, children } = props;
+export const MegaMenu = ({ children, className, ...props }) => {
     return (
-        <nav className="fd-mega-menu" id={id}>
+        <nav className={`fd-mega-menu${className ? ' ' + className : ''}`} {...props}>
             {children}
         </nav>
     );
 };
 MegaMenu.propTypes = {
-    id: PropTypes.string
+    className: PropTypes.string
 };
 
 export class MegaMenuList extends Component {
@@ -60,13 +59,13 @@ export class MegaMenuList extends Component {
     }
 
     render() {
-        const { items } = this.props;
+        const { items, className } = this.props;
         return (
             <BrowserRouter>
-                <ul className="fd-mega-menu__list">
+                <ul className={`fd-mega-menu__list${className ? ' ' + className : ''}`}>
                     {items.map(item => {
                         return (
-                            <li className="fd-mega-menu__item" key={item.id}>
+                            <li className='fd-mega-menu__item' key={item.id}>
                                 {item.link ? (
                                     <Link
                                         className={`fd-mega-menu__link${
@@ -76,8 +75,7 @@ export class MegaMenuList extends Component {
                                         }`}
                                         to={{ pathname: item.link }}
                                         key={item.id}
-                                        onClick={e => this.handleSelect(e, item.id)}
-                                    >
+                                        onClick={e => this.handleSelect(e, item.id)}>
                                         {item.name}
                                     </Link>
                                 ) : null}
@@ -91,30 +89,27 @@ export class MegaMenuList extends Component {
                                         }`}
                                         href={item.url}
                                         key={item.id}
-                                        onClick={e => this.handleSelect(e, item.id)}
-                                    >
+                                        onClick={e => this.handleSelect(e, item.id)}>
                                         {item.name}
                                     </a>
                                 ) : null}
 
                                 {item.hasChild ? (
                                     <ul
-                                        className="fd-mega-menu__sublist"
+                                        className='fd-mega-menu__sublist'
                                         id={item.id}
                                         aria-hidden={!this.state.itemStates[item.id]}
-                                        aria-expanded={this.state.itemStates[item.id]}
-                                    >
+                                        aria-expanded={this.state.itemStates[item.id]}>
                                         {item.child.map(ch => {
                                             return (
-                                                <li className="fd-mega-menu__subitem" key={ch.id}>
-                                                   {ch.link ? ( <Link
+                                                <li className='fd-mega-menu__subitem' key={ch.id}>
+                                                    {ch.link ? ( <Link
                                                         className={`fd-mega-menu__sublink${
                                                             this.state.selectedItem === ch.id ? ' is-selected' : ''
                                                         }`}
                                                         to={{ pathname: ch.link }}
                                                         key={ch.id}
-                                                        onClick={e => this.handleSelectChild(e, ch.id)}
-                                                    >
+                                                        onClick={e => this.handleSelectChild(e, ch.id)}>
                                                         {ch.name}
                                                     </Link>) : null}
                                                     {ch.url ? ( <a
@@ -123,8 +118,7 @@ export class MegaMenuList extends Component {
                                                         }`}
                                                         href={ch.url}
                                                         key={ch.id}
-                                                        onClick={e => this.handleSelectChild(e, ch.id)}
-                                                    >
+                                                        onClick={e => this.handleSelectChild(e, ch.id)}>
                                                         {ch.name}
                                                     </a>) : null}
                                                 </li>
@@ -141,19 +135,20 @@ export class MegaMenuList extends Component {
     }
 }
 MegaMenuList.propTypes = {
-    items: PropTypes.array.isRequired
+    items: PropTypes.array.isRequired,
+    className: PropTypes.string
 };
 
-export const MegaMenuGroup = props => {
-    const { title, children } = props;
+export const MegaMenuGroup = ({ title, children, className }) => {
     return (
-        <div className="fd-mega-menu__group">
-            <h1 className="fd-mega-menu__title">{title}</h1>
+        <div className={`fd-mega-menu__group${className ? ' ' + className : ''}`}>
+            <h1 className='fd-mega-menu__title'>{title}</h1>
             {children}
         </div>
     );
 };
 
 MegaMenuGroup.propTypes = {
+    className: PropTypes.string,
     title: PropTypes.string
 };

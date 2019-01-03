@@ -35,7 +35,6 @@ exports[`<Panel /> create panels 1`] = `
   </div>
   <div
     className="fd-panel__filters"
-    id=""
   >
     <div>
       Panel Filters
@@ -66,7 +65,7 @@ exports[`<Panel /> create panels 1`] = `
 
 exports[`<Panel /> create panels 2`] = `
 <div
-  className="fd-panel-grid"
+  className="fd-panel-grid blue"
 >
   <div
     className="fd-panel fd-has-grid-column-span-2"
@@ -139,6 +138,69 @@ exports[`<Panel /> create panels 2`] = `
 
 exports[`<Panel /> create panels 3`] = `
 <div
+  className="fd-panel blue"
+>
+  <div
+    className="fd-panel__header blue"
+  >
+    <div
+      className="fd-panel__head blue"
+    >
+      <h1
+        className="fd-panel__title"
+      >
+        Panel Header with Actions
+      </h1>
+      <p
+        className="fd-panel__description"
+      >
+        Panel Description
+      </p>
+    </div>
+    <div
+      className="fd-panel__actions blue"
+    >
+      <button
+        className=" fd-button fd-button--compact sap-icon--add"
+        disabled={false}
+        selected={false}
+      >
+        Add New Button
+      </button>
+    </div>
+  </div>
+  <div
+    className="fd-panel__filters blue"
+  >
+    <div>
+      Panel Filters
+    </div>
+    <br />
+  </div>
+  <div
+    className="fd-panel__body blue"
+  >
+    <div>
+      Panel Body
+    </div>
+  </div>
+  <div
+    className="fd-panel__content blue"
+  >
+    <div>
+      Panel Content
+    </div>
+  </div>
+  <div
+    className="fd-panel__footer blue"
+  >
+    Panel Footer
+  </div>
+</div>
+`;
+
+exports[`<Panel /> create panels 4`] = `
+<div
   className="fd-panel-grid fd-panel-grid--2col"
 >
   <div
@@ -180,7 +242,7 @@ exports[`<Panel /> create panels 3`] = `
 </div>
 `;
 
-exports[`<Panel /> create panels 4`] = `
+exports[`<Panel /> create panels 5`] = `
 <div
   className="fd-panel-grid fd-panel-grid--nogap"
 >

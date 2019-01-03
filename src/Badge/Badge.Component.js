@@ -57,27 +57,27 @@ export const BadgeComponent = () => {
   <Counter notification>999+</Counter>
 </Button>`;
 
-    const inlineCounterCode = `<p>Lorem ipsum <Counter>5</Counter></p>`;
+    const inlineCounterCode = '<p>Lorem ipsum <Counter>5</Counter></p>';
 
     return (
         <div>
             <Header>Status Indicators</Header>
             <Description>Status Indicators are used to easily highlight the state of an object.</Description>
-            <Import module="Badge, Label, Status, Counter" path="/fundamental-react/src/" />
+            <Import module='Badge, Label, Status, Counter' path='/fundamental-react/src/' />
 
             <Separator />
 
             <Properties
-                type="Inputs"
+                type='Inputs'
                 properties={[
                     {
                         name: 'type',
                         description:
-                            "string - The type indicates the status of the badge/label. Options include 'default', 'success', 'warning', and 'error'. Leave empty for default. For status label with build in status icons use the 'available', 'away', 'busy' and 'offline'."
+                            'string - The type indicates the status of the badge/label. Options include \'default\', \'success\', \'warning\', and \'error\'. Leave empty for default. For status label with build in status icons use the \'available\', \'away\', \'busy\' and \'offline\'.'
                     },
                     {
                         name: 'modifier',
-                        description: "string - Modifiers can be 'pill' and 'filled'. Leave empty for normal."
+                        description: 'string - Modifiers can be \'pill\' and \'filled\'. Leave empty for normal.'
                     },
                     {
                         name: 'glyph',
@@ -86,19 +86,20 @@ export const BadgeComponent = () => {
                     },
                     {
                         name: 'notification',
-                        description: "bool - Set to 'true' to enable counter with notification. "
+                        description: 'bool - Set to \'true\' to enable counter with notification. '
                     }
-                ]}
-            />
+                ]} />
 
             <Separator />
 
             <h2>Default Badge</h2>
             <DocsTile centered>
-                <Badge>Default</Badge>
-                <Badge type="success">Default</Badge>
-                <Badge type="warning">Default</Badge>
-                <Badge type="error">Default</Badge>
+                <div className='fd-doc__margin--statusIndicator'>
+                    <Badge>Default</Badge>
+                    <Badge type='success'>Default</Badge>
+                    <Badge type='warning'>Default</Badge>
+                    <Badge type='error'>Default</Badge>
+                </div>
             </DocsTile>
             <DocsText>{defaultBadgeCode}</DocsText>
 
@@ -109,16 +110,18 @@ export const BadgeComponent = () => {
                 Apply <code>modifier="pill"</code> to render a pill version of the badge.
             </Description>
             <DocsTile centered>
-                <Badge modifier="pill">Default</Badge>
-                <Badge type="success" modifier="pill">
-                    Default
-                </Badge>
-                <Badge type="warning" modifier="pill">
-                    Default
-                </Badge>
-                <Badge type="error" modifier="pill">
-                    Default
-                </Badge>
+                <div className='fd-doc__margin--statusIndicator'>
+                    <Badge modifier='pill'>Default</Badge>
+                    <Badge type='success' modifier='pill'>
+                        Default
+                    </Badge>
+                    <Badge type='warning' modifier='pill'>
+                        Default
+                    </Badge>
+                    <Badge type='error' modifier='pill'>
+                        Default
+                    </Badge>
+                </div>
             </DocsTile>
             <DocsText>{pillBadgeCode}</DocsText>
 
@@ -129,16 +132,18 @@ export const BadgeComponent = () => {
                 Apply <code>modifier="filled"</code> to render a filled version of the badge.
             </Description>
             <DocsTile centered>
-                <Badge modifier="filled">Default</Badge>
-                <Badge type="success" modifier="filled">
-                    Default
-                </Badge>
-                <Badge type="warning" modifier="filled">
-                    Default
-                </Badge>
-                <Badge type="error" modifier="filled">
-                    Default
-                </Badge>
+                <div className='fd-doc__margin--statusIndicator'>
+                    <Badge modifier='filled'>Default</Badge>
+                    <Badge type='success' modifier='filled'>
+                        Default
+                    </Badge>
+                    <Badge type='warning' modifier='filled'>
+                        Default
+                    </Badge>
+                    <Badge type='error' modifier='filled'>
+                        Default
+                    </Badge>
+                </div>
             </DocsTile>
             <DocsText>{filledBadgeCode}</DocsText>
 
@@ -146,10 +151,12 @@ export const BadgeComponent = () => {
 
             <h2>Label</h2>
             <DocsTile centered>
-                <Label>Default</Label>
-                <Label type="success">Default</Label>
-                <Label type="warning">Default</Label>
-                <Label type="error">Default</Label>
+                <div className='fd-doc__margin--statusIndicator'>
+                    <Label>Default</Label>
+                    <Label type='success'>Default</Label>
+                    <Label type='warning'>Default</Label>
+                    <Label type='error'>Default</Label>
+                </div>
             </DocsTile>
             <DocsText>{labelCode}</DocsText>
 
@@ -157,25 +164,29 @@ export const BadgeComponent = () => {
 
             <h2>Status Indicator Label with build in status icons</h2>
             <DocsTile centered>
-                <Status>Default</Status>
-                <Status type="success">Default</Status>
-                <Status type="warning">Default</Status>
-                <Status type="error">Default</Status>
-                <br />
-                <br />
-                <Status type="available">Available</Status>
-                <Status type="away">Away</Status>
-                <Status type="busy">Busy</Status>
-                <Status type="offline">Appear Offline</Status>
+                <div className='fd-doc__margin--statusIndicator'>
+                    <Status>Default</Status>
+                    <Status type='success'>Default</Status>
+                    <Status type='warning'>Default</Status>
+                    <Status type='error'>Default</Status>
+                    <br />
+                    <br />
+                    <Status type='available'>Available</Status>
+                    <Status type='away'>Away</Status>
+                    <Status type='busy'>Busy</Status>
+                    <Status type='offline'>Appear Offline</Status>
+                </div>
             </DocsTile>
             <DocsText>{statusCode}</DocsText>
             <Separator />
             <h2>Status Indicator Label with any icons</h2>
             <DocsTile centered>
-                <Status glyph="history">Custom Icon</Status>
-                <Status glyph="message-success">Success</Status>
-                <Status glyph="message-warning">Warning</Status>
-                <Status glyph="message-error">Error</Status>
+                <div className='fd-doc__margin--statusIndicator'>
+                    <Status glyph='history'>Custom Icon</Status>
+                    <Status glyph='message-success'>Success</Status>
+                    <Status glyph='message-warning'>Warning</Status>
+                    <Status glyph='message-error'>Error</Status>
+                </div>
             </DocsTile>
             <DocsText>{statusIconCode}</DocsText>
 
@@ -184,10 +195,12 @@ export const BadgeComponent = () => {
             <h2>Default Counter</h2>
             <Description>Counter has a minimum value 1. Maximum display is 999+</Description>
             <DocsTile centered>
-                <Counter>5</Counter>
-                <Counter>25</Counter>
-                <Counter>101</Counter>
-                <Counter>999+</Counter>
+                <div className='fd-doc__margin--statusIndicator'>
+                    <Counter>5</Counter>
+                    <Counter>25</Counter>
+                    <Counter>101</Counter>
+                    <Counter>999+</Counter>
+                </div>
             </DocsTile>
             <DocsText>{defaultCounterCode}</DocsText>
 
@@ -195,9 +208,11 @@ export const BadgeComponent = () => {
 
             <h2>Counter inline with a paragraph</h2>
             <DocsTile centered>
-                <p>
-                    Lorem ipsum <Counter>5</Counter>
-                </p>
+                <div className='fd-doc__margin--statusIndicator'>
+                    <p>
+                        Lorem ipsum <Counter>5</Counter>
+                    </p>
+                </div>
             </DocsTile>
             <DocsText>{inlineCounterCode}</DocsText>
 
@@ -206,18 +221,20 @@ export const BadgeComponent = () => {
             <h2>Notification counter</h2>
             <Description>Use the property 'notification' to enable notification counter.</Description>
             <DocsTile centered>
-                <Button option="light" glyph="bell">
-                    <Counter notification>5</Counter>
-                </Button>
-                <Button option="light" glyph="bell">
-                    <Counter notification>25</Counter>
-                </Button>
-                <Button option="light" glyph="bell">
-                    <Counter notification>101</Counter>
-                </Button>
-                <Button option="light" glyph="bell">
-                    <Counter notification>999+</Counter>
-                </Button>
+                <div className='fd-doc__margin--statusIndicator'>
+                    <Button option='light' glyph='bell'>
+                        <Counter notification>5</Counter>
+                    </Button>
+                    <Button option='light' glyph='bell'>
+                        <Counter notification>25</Counter>
+                    </Button>
+                    <Button option='light' glyph='bell'>
+                        <Counter notification>101</Counter>
+                    </Button>
+                    <Button option='light' glyph='bell'>
+                        <Counter notification>999+</Counter>
+                    </Button>
+                </div>
             </DocsTile>
             <DocsText>{notificationCounterCode}</DocsText>
 
@@ -225,7 +242,7 @@ export const BadgeComponent = () => {
 
             <h2>Playground</h2>
             <Playground
-                component="badge"
+                component='badge'
                 schema={[
                     {
                         attribute: 'children',
@@ -234,22 +251,22 @@ export const BadgeComponent = () => {
                     {
                         attribute: 'component',
                         typeOfAttribute: 'string',
-                        enum: ['badge', 'label', 'status']
+                        'enum': ['badge', 'label', 'status']
                     },
                     {
                         attribute: 'type',
                         typeOfAttribute: 'string',
-                        enum: ['default', 'success', 'warning', 'error', 'available', 'away', 'busy', 'offline']
+                        'enum': ['default', 'success', 'warning', 'error', 'available', 'away', 'busy', 'offline']
                     },
                     {
                         attribute: 'modifier',
                         typeOfAttribute: 'string',
-                        enum: ['', 'pill', 'filled']
+                        'enum': ['', 'pill', 'filled']
                     },
                     {
                         attribute: 'glyph',
                         typeOfAttribute: 'string',
-                        enum: [
+                        'enum': [
                             '',
                             'accelerated',
                             'accept',
@@ -874,9 +891,9 @@ export const BadgeComponent = () => {
                             'zoom-out'
                         ]
                     }
-                ]}
-            >
-                <Badge type="success" modifier="filled" glyph="message-error">
+                ]}>
+                <Badge type='success' modifier='filled'
+                    glyph='message-error'>
                     Default
                 </Badge>
             </Playground>

@@ -8,50 +8,48 @@ Enzyme.configure({ adapter: new Adapter() });
 
 describe('<LocalizationEditor />', () => {
   const localEditor = (
-    <LocalizationEditor
-      control={{
+      <LocalizationEditor
+          control={{
         label: 'Localization Editor Label',
         placeholder: 'Enter Label',
         language: 'EN*'
       }}
-      menu={[
+          menu={[
         { placeholder: 'Enter Label', language: 'ES' },
         { placeholder: 'Enter Label', language: 'CH' },
         { placeholder: 'Enter Label', language: 'PL' }
-      ]}
-    />
+      ]} />
   );
 
   const localEditorCompact = (
-    <LocalizationEditor
-      compact
-      control={{
+      <LocalizationEditor
+          className='blue'
+          compact
+          control={{
         label: 'Localization Editor Compact Mode',
         placeholder: 'Enter Label',
         language: 'EN*'
       }}
-      menu={[
+          menu={[
         { placeholder: 'Enter Label', language: 'ES' },
         { placeholder: 'Enter Label', language: 'CH' },
         { placeholder: 'Enter Label', language: 'PL' }
-      ]}
-    />
+      ]} />
   );
 
   const localEditorTextArea = (
-    <LocalizationEditor
-      textarea
-      control={{
+      <LocalizationEditor
+          textarea
+          control={{
         label: 'Localization Editor Label',
         placeholder: 'Enter Label',
         language: 'EN*'
       }}
-      menu={[
+          menu={[
         { placeholder: 'Enter Label', language: 'ES' },
         { placeholder: 'Enter Label', language: 'CH' },
         { placeholder: 'Enter Label', language: 'PL' }
-      ]}
-    />
+      ]} />
   );
   test('create localization editor', () => {
     // localization editor

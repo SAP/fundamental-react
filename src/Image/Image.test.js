@@ -7,9 +7,15 @@ import { Image } from './Image';
 Enzyme.configure({ adapter: new Adapter() });
 
 describe('<Image />', () => {
-  const image = <Image size="s" photo="https://placeimg.com/400/400/nature" />;
+  const image = (
+      <Image
+          size='s'
+          className='blue'
+          photo='https://placeimg.com/400/400/nature' />
+  );
   const circleImage = (
-    <Image type="circle" size="m" photo="https://placeimg.com/400/400/nature" />
+      <Image type='circle' size='m'
+          photo='https://placeimg.com/400/400/nature' />
   );
   test('create image', () => {
     let component = renderer.create(image);

@@ -1,210 +1,207 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { SearchInput } from './SearchInput';
-import Enzyme, { shallow } from 'enzyme';
+import Enzyme, { shallow, mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
+import { SearchInput } from './SearchInput';
 
 Enzyme.configure({ adapter: new Adapter() });
 
 describe('<SearchInput />', () => {
-  const mockOnSearch = jest.fn();
-  const mockOnAutoComplete = jest.fn();
-  const data = ['apple', 'banana', 'orange'];
-  const defaultSearchInput = (
-    <SearchInput placeHolder="Hello there" onSearch={mockOnSearch} />
-  );
-  const autoCompleteSearchInput = (
-    <SearchInput
-      placeHolder="Hello there"
-      onAutoComplete={mockOnAutoComplete}
-      data={data}
-      onSearch={mockOnSearch}
-    />
-  );
-  const autoCompleteNoDataSearchInput = (
-    <SearchInput
-      placeHolder="Hello there"
-      data={[]}
-      onAutoComplete={mockOnAutoComplete}
-      onSearch={mockOnSearch}
-    />
-  );
   const searchInput = 'input[type="text"].fd-input';
 
-  const getListStatus = (wrapper, bIsShown) => {
-    const combobox = wrapper.find(
-      `div.fd-combobox-control[aria-expanded=${bIsShown}]`
-    );
-
-    const popover = wrapper.find(
-      `div.fd-popover__body.fd-popover__body--no-arrow[aria-hidden=${!bIsShown}]`
-    );
-
-    return { combobox: combobox, popover: popover };
+  const getInputValue = value => {
+    return value;
   };
 
-  // create default search input component
-  test('create basic Search input', () => {
-    const component = renderer.create(defaultSearchInput);
+  const searchData = [
+    { text: 'apple', callback: jest.fn() },
+    { text: 'apricot', callback: jest.fn() },
+    { text: 'banana', callback: jest.fn() },
+    { text: 'blueberry', callback: jest.fn() },
+    { text: 'blackberry', callback: jest.fn() },
+    { text: 'calabash', callback: jest.fn() },
+    { text: 'clementines', callback: jest.fn() },
+    { text: 'kiwi', callback: jest.fn() },
+    { text: 'orange', callback: jest.fn() }
+  ];
+
+  const defaultSearchInput = (
+      <SearchInput
+          className='blue'
+          placeholder='Enter a fruit'
+          searchList={searchData}
+          onEnter={term => getInputValue(term)} />
+  );
+
+  const shellBarSearchInput = (
+      <SearchInput
+          placeholder='Enter a fruit'
+          inShellbar
+          searchList={searchData}
+          onEnter={term => getInputValue(term)} />
+  );
+
+  const noListSearchInput = (
+      <SearchInput
+          placeholder='Enter a fruit'
+          onEnter={term => getInputValue(term)} />
+  );
+
+  let component;
+
+  afterEach(() => {
+    component.unmount();
+  });
+
+  test('create SearchInput', () => {
+    component = renderer.create(defaultSearchInput);
     let tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+
+    component = renderer.create(shellBarSearchInput);
+    tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+
+    component = renderer.create(noListSearchInput);
+    tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
 
-  test('check for enter key press on basic search input', () => {
+  test('check for enter key press on search input', () => {
     const wrapper = shallow(defaultSearchInput);
 
     // enter text into search input
     wrapper
       .find(searchInput)
-      .simulate('change', { target: { value: data[0] } });
+      .simulate('change', { target: { value: searchData[0].text } });
 
-    wrapper
-      .find('input[type="text"].fd-input')
-      .simulate('keypress', { key: 'Enter' });
-
-    expect(wrapper.state(['searchTerm'])).toBe(data[0]);
-  });
-
-  test('create autocomplete Search input with no data', () => {
-    const component = renderer.create(autoCompleteNoDataSearchInput);
-    let tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
-  });
-
-  // create auto complete search input component
-  test('create auto-complete Search input', () => {
-    const component = renderer.create(autoCompleteSearchInput);
-    let tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
-
-    const wrapper = shallow(autoCompleteSearchInput);
-
-    // check to see if 3 list items are created for auto complete list
-    expect(wrapper.find('li')).toHaveLength(3);
-
-    // check to see if first item is selected in auto complete list
-    expect(wrapper.find('li:first-child a').hasClass('is-selected')).toEqual(
-      true
-    );
-  });
-
-  test('check that auto complete list is hidden', () => {
-    const wrapper = shallow(autoCompleteSearchInput);
-
-    // check if bShowList state is changed
-    expect(wrapper.state(['bShowList'])).toBe(false);
-
-    // check to see if list is not shown
-    let results = getListStatus(wrapper, false);
-    expect(results.combobox).toHaveLength(1);
-    expect(results.popover).toHaveLength(1);
-  });
-
-  test('check that auto complete list is hidden on blur', () => {
-    const wrapper = shallow(autoCompleteSearchInput);
-
-    wrapper
-      .find(searchInput)
-      .simulate('change', { target: { value: data[0] } });
-
-    // check if bShowList state is changed
-    expect(wrapper.state(['bShowList'])).toBe(true);
-
-    // check to see if list is shown
-    let results = getListStatus(wrapper, true);
-    expect(results.combobox).toHaveLength(1);
-    expect(results.popover).toHaveLength(1);
-
-    wrapper.find(searchInput).simulate('blur');
-
-    // check to see if list is not shown
-    results = getListStatus(wrapper, false);
-    expect(results.combobox).toHaveLength(1);
-    expect(results.popover).toHaveLength(1);
-  });
-
-  test('check that auto complete list is shown when text entered', () => {
-    const wrapper = shallow(autoCompleteSearchInput);
-    wrapper
-      .find(searchInput)
-      .simulate('change', { target: { value: data[0] } });
-
-    // check if searchTerm state is updated
-    expect(wrapper.state(['searchTerm'])).toBe(data[0]);
-
-    // check if bShowList state is changed
-    expect(wrapper.state(['bShowList'])).toBe(true);
-
-    // check to see if list is shown
-    let results = getListStatus(wrapper, true);
-    expect(results.combobox).toHaveLength(1);
-    expect(results.popover).toHaveLength(1);
-  });
-
-  test('check that auto complete list is not shown when text removed', () => {
-    const wrapper = shallow(autoCompleteSearchInput);
-    wrapper
-      .find(searchInput)
-      .simulate('change', { target: { value: data[0] } });
-
-    // check if searchTerm state is updated
-    expect(wrapper.state(['searchTerm'])).toBe(data[0]);
-
-    // check if bShowList state is changed
-    expect(wrapper.state(['bShowList'])).toBe(true);
-
-    // check to see if list is shown
-    let results = getListStatus(wrapper, true);
-    expect(results.combobox).toHaveLength(1);
-    expect(results.popover).toHaveLength(1);
-
-    wrapper.find(searchInput).simulate('change', { target: { value: '' } });
-
-    // check if searchTerm state is updated
-    expect(wrapper.state(['searchTerm'])).toBe('');
-
-    // check if bShowList state is changed
-    expect(wrapper.state(['bShowList'])).toBe(false);
-
-    // check to see if list is shown
-    results = getListStatus(wrapper, false);
-    expect(results.combobox).toHaveLength(1);
-    expect(results.popover).toHaveLength(1);
-  });
-
-  test('check for enter key press on auto complete search input', () => {
-    const wrapper = shallow(autoCompleteSearchInput);
+    // press Esc
     wrapper.find(searchInput).simulate('keypress', { key: 'Esc' });
+
+    // press enter key
     wrapper.find(searchInput).simulate('keypress', { key: 'Enter' });
 
-    expect(wrapper.state(['searchTerm'])).toBe(data[0]);
+    expect(wrapper.state(['value'])).toBe(searchData[0].text);
   });
 
-  test('check search executed on search button click', () => {
-    const wrapper = shallow(autoCompleteSearchInput);
+  test('show/hide auto complete list', () => {
+    const wrapper = shallow(defaultSearchInput);
+
+    // click in search box to show
+    wrapper.find(searchInput).simulate('click');
+
+    expect(wrapper.state('isExpanded')).toBeTruthy();
+
+    // click in search box to hide
+    wrapper.find(searchInput).simulate('click');
+
+    expect(wrapper.state('isExpanded')).toBeFalsy();
+  });
+
+  test('show/hide auto complete list for inShellBar', () => {
+    const wrapper = shallow(shellBarSearchInput);
+
+    // click in search box to show
+    wrapper.find(searchInput).simulate('click');
+
+    expect(wrapper.state('isExpanded')).toBeTruthy();
+
+    // click in search box to hide
+    wrapper.find(searchInput).simulate('click');
+
+    expect(wrapper.state('isExpanded')).toBeFalsy();
+  });
+
+  test('check for enter key press on search input without autocomplete', () => {
+    const wrapper = shallow(noListSearchInput);
+
+    // click in search box
+    wrapper.find(searchInput).simulate('click');
+
+    // enter text into search input
     wrapper
       .find(searchInput)
-      .simulate('change', { target: { value: data[0] } });
+      .simulate('change', { target: { value: searchData[2].text } });
 
-    // check if searchTerm state is updated
-    expect(wrapper.state(['searchTerm'])).toBe(data[0]);
+    // press enter key
+    wrapper.find(searchInput).simulate('keypress', { key: 'Enter' });
 
-    wrapper.find('.fd-button--light.sap-icon--search').simulate('click');
-
-    expect(wrapper.state(['searchTerm'])).toBe(data[0]);
+    expect(wrapper.state(['value'])).toBe(searchData[2].text);
   });
 
-  test('set search term on list item selection', () => {
-    const wrapper = shallow(autoCompleteSearchInput);
+  test('click on result in autocomplete', () => {
+    const wrapper = shallow(defaultSearchInput);
+
+    // click in search box to show
+    wrapper.find(searchInput).simulate('click');
+
+    expect(wrapper.state('isExpanded')).toBeTruthy();
+
+    // enter text into search input
+    const itemClicked = wrapper
+      .find('.fd-menu__item')
+      .at(0)
+      .simulate('click', searchData[0]);
+
+    // click in search box to hide
+    wrapper.find(searchInput).simulate('click');
+
+    expect(wrapper.state('isExpanded')).toBeFalsy();
+  });
+
+  test('check search results in shellbar with NO results', () => {
+    const wrapper = shallow(shellBarSearchInput);
+
     wrapper
-      .find('li a')
-      .at(2)
-      .simulate('click', { target: { innerText: data[2] } });
+      .find(searchInput)
+      .simulate('change', { target: { value: 'HELLO WORLD' } });
 
     // check if searchTerm state is updated
-    expect(wrapper.state(['searchTerm'])).toBe(data[2]);
-
-    // check if bShowList state is changed
-    expect(wrapper.state(['bShowList'])).toBe(false);
+    expect(wrapper.state(['value'])).toBe('HELLO WORLD');
   });
+
+  test('check search executed on search button click in shellbar', () => {
+    const wrapper = shallow(shellBarSearchInput);
+
+    wrapper
+      .find(searchInput)
+      .simulate('change', { target: { value: searchData[0].text } });
+
+    // check if searchTerm state is updated
+    expect(wrapper.state(['value'])).toBe(searchData[0].text);
+
+    wrapper.find('.sap-icon--search.fd-button--shell').simulate('click');
+
+    expect(wrapper.state(['value'])).toBe(searchData[0].text);
+  });
+
+  test('pressing Esc key to close search list', () => {
+    const wrapper = shallow(shellBarSearchInput);
+
+    // click in search box to show
+    wrapper.find(searchInput).simulate('click');
+
+    expect(wrapper.state('isExpanded')).toBeTruthy();
+
+    // handle esc key
+    let event = new KeyboardEvent('keydown', { keyCode: 27 });
+    document.dispatchEvent(event);
+
+    expect(wrapper.state('isExpanded')).toBeFalsy();
+  });
+
+  //   test('click on document to close autocomplete list', () => {
+  //     const wrapper = mount(defaultSearchInput);
+
+  //     // click in search box to show
+  //     wrapper.find(searchInput).simulate('click');
+
+  //     expect(wrapper.state('isExpanded')).toBeTruthy();
+
+  //     // handle click outside search box
+  //     wrapper
+  //       .instance()
+  //       .onOutsideClickHandler({ target: wrapper, stopPropagation: jest.fn() });
+
+  //   });
 });

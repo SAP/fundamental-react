@@ -7,117 +7,113 @@ import { Button } from '../Button/Button';
 
 describe('<Dropdown />', () => {
   const defaultDropdown = (
-    <Dropdown>
-      <Popover
-        control={<Button dropdown>Select</Button>}
-        noArrow
-        body={
-          <Menu>
-            <MenuList>
-              <MenuItem url="/">Option 1</MenuItem>
-              <MenuItem url="/">Option 2</MenuItem>
-              <MenuItem url="/">Option 3</MenuItem>
-              <MenuItem url="/">Option 4</MenuItem>
-            </MenuList>
-          </Menu>
-        }
-      />
-    </Dropdown>
+      <Dropdown>
+          <Popover
+              control={<Button dropdown>Select</Button>}
+              noArrow
+              body={
+                  <Menu>
+                      <MenuList>
+                          <MenuItem url='/'>Option 1</MenuItem>
+                          <MenuItem url='/'>Option 2</MenuItem>
+                          <MenuItem url='/'>Option 3</MenuItem>
+                          <MenuItem url='/'>Option 4</MenuItem>
+                      </MenuList>
+                  </Menu>
+        } />
+      </Dropdown>
   );
 
   const compactDropdown = (
-    <Dropdown>
-      <Popover
-        control={
-          <Button dropdown compact>
+      <Dropdown className='blue'>
+          <Popover
+              control={
+                  <Button dropdown compact>
             Select
-          </Button>
+                  </Button>
         }
-        noArrow
-        body={
-          <Menu>
-            <MenuList>
-              <MenuItem url="/">Option 1</MenuItem>
-              <MenuItem url="/">Option 2</MenuItem>
-              <MenuItem url="/">Option 3</MenuItem>
-              <MenuItem url="/">Option 4</MenuItem>
-            </MenuList>
-          </Menu>
-        }
-      />
-    </Dropdown>
+              noArrow
+              body={
+                  <Menu>
+                      <MenuList>
+                          <MenuItem url='/'>Option 1</MenuItem>
+                          <MenuItem url='/'>Option 2</MenuItem>
+                          <MenuItem url='/'>Option 3</MenuItem>
+                          <MenuItem url='/'>Option 4</MenuItem>
+                      </MenuList>
+                  </Menu>
+        } />
+      </Dropdown>
   );
 
   const toolbarDropdown = (
-    <Dropdown standard>
-      <Popover
-        control={
-          <Button dropdown type="standard">
+      <Dropdown standard>
+          <Popover
+              control={
+                  <Button dropdown type='standard'>
             Select
-          </Button>
+                  </Button>
         }
-        noArrow
-        body={
-          <Menu>
-            <MenuList>
-              <MenuItem url="/">Option 1</MenuItem>
-              <MenuItem url="/">Option 2</MenuItem>
-              <MenuItem url="/">Option 3</MenuItem>
-              <MenuItem url="/">Option 4</MenuItem>
-            </MenuList>
-          </Menu>
-        }
-      />
-    </Dropdown>
+              noArrow
+              body={
+                  <Menu>
+                      <MenuList>
+                          <MenuItem url='/'>Option 1</MenuItem>
+                          <MenuItem url='/'>Option 2</MenuItem>
+                          <MenuItem url='/'>Option 3</MenuItem>
+                          <MenuItem url='/'>Option 4</MenuItem>
+                      </MenuList>
+                  </Menu>
+        } />
+      </Dropdown>
   );
 
   const iconDropdown = (
-    <Dropdown>
-      <Popover
-        id="jhqD0557"
-        control={
-          <Button dropdown glyph="filter">
+      <Dropdown>
+          <Popover
+              id='jhqD0557'
+              control={
+                  <Button dropdown glyph='filter'>
             Select
-          </Button>
+                  </Button>
         }
-        noArrow
-        body={
-          <Menu>
-            <MenuList>
-              <MenuItem url="/">Option 1</MenuItem>
-              <MenuItem url="/">Option 2</MenuItem>
-              <MenuItem url="/">Option 3</MenuItem>
-              <MenuItem url="/">Option 4</MenuItem>
-            </MenuList>
-          </Menu>
-        }
-      />
-    </Dropdown>
+              noArrow
+              body={
+                  <Menu>
+                      <MenuList>
+                          <MenuItem url='/'>Option 1</MenuItem>
+                          <MenuItem url='/'>Option 2</MenuItem>
+                          <MenuItem url='/'>Option 3</MenuItem>
+                          <MenuItem url='/'>Option 4</MenuItem>
+                      </MenuList>
+                  </Menu>
+        } />
+      </Dropdown>
   );
 
   const disabledDropdown = (
-    <Dropdown>
-      <Popover
-        id="jhqD0561"
-        disabled
-        control={
-          <Button dropdown glyph="filter" disabled>
+      <Dropdown>
+          <Popover
+              id='jhqD0561'
+              disabled
+              control={
+                  <Button dropdown glyph='filter'
+                      disabled>
             Select
-          </Button>
+                  </Button>
         }
-        noArrow
-        body={
-          <Menu>
-            <MenuList>
-              <MenuItem url="/">Option 1</MenuItem>
-              <MenuItem url="/">Option 2</MenuItem>
-              <MenuItem url="/">Option 3</MenuItem>
-              <MenuItem url="/">Option 4</MenuItem>
-            </MenuList>
-          </Menu>
-        }
-      />
-    </Dropdown>
+              noArrow
+              body={
+                  <Menu>
+                      <MenuList>
+                          <MenuItem url='/'>Option 1</MenuItem>
+                          <MenuItem url='/'>Option 2</MenuItem>
+                          <MenuItem url='/'>Option 3</MenuItem>
+                          <MenuItem url='/'>Option 4</MenuItem>
+                      </MenuList>
+                  </Menu>
+        } />
+      </Dropdown>
   );
 
   test('create dropdown component', () => {

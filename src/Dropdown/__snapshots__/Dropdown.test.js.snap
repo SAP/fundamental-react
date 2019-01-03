@@ -71,7 +71,7 @@ exports[`<Dropdown /> create dropdown component 1`] = `
 
 exports[`<Dropdown /> create dropdown component 2`] = `
 <div
-  className="fd-dropdown"
+  className="fd-dropdown blue"
 >
   <div
     className="fd-popover"
@@ -284,6 +284,7 @@ exports[`<Dropdown /> create dropdown component 5`] = `
 >
   <div
     className="fd-popover"
+    disabled={true}
   >
     <div
       aria-controls="jhqD0561"

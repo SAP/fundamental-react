@@ -5,6 +5,9 @@ exports[`<Breadcrumb /> create breadcrumbs using router links 1`] = `
   className="fd-breadcrumb"
 >
   <li
+    className="fd-breadcrumb__item blue"
+  />
+  <li
     className="fd-breadcrumb__item"
   >
     <a
@@ -53,5 +56,8 @@ exports[`<Breadcrumb /> create default breadcrumbs 1`] = `
       Link Text
     </a>
   </li>
+  <li
+    className="fd-breadcrumb__item"
+  />
 </ul>
 `;

@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 export const Table = props => {
-    const { headers, tableData } = props;
+    const { headers, tableData, className, ...rest } = props;
     return (
-        <table className="fd-table">
+        <table className={`fd-table${className ? ' ' + className : ''}`} {...rest}>
             <thead>
                 <tr>
                     {headers.map((header, index) => {
@@ -27,10 +27,11 @@ export const Table = props => {
     );
 };
 Table.propTypes = {
-    headers: PropTypes.array,
     tableData: PropTypes.arrayOf(
         PropTypes.shape({
             rowData: PropTypes.array
         }).isRequired
-    ).isRequired
+    ).isRequired,
+    className: PropTypes.string,
+    headers: PropTypes.array
 };

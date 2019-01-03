@@ -1,6 +1,6 @@
-import React from 'react'
-import { Token } from './Token'
-import { DocsTile, DocsText, Separator, Header, Description, Import } from '..'
+import React from 'react';
+import { Token } from './Token';
+import { DocsTile, DocsText, Separator, Header, Description, Import } from '..';
 
 export const TokenComponent = () => {
     const tokenCode = `<Token>Bibendum</Token>
@@ -17,18 +17,20 @@ export const TokenComponent = () => {
             <Header>Token</Header>
             <Description>Tokens are used to represent contextualizing information. They can be useful to show applied filters, selected values for form field or object metadata.
             </Description>
-            <Import module="Token" path="/fundamental-react/src/" />
+            <Import module='Token' path='/fundamental-react/src/' />
 
             <Separator />
 
             <DocsTile centered>
-                {
-                    tagsNames.map((name) => {
-                        return <Token clickHandler={(e) => closeAction(name, e)}>{name}</Token>
-                    })
-                }
+                <div className='fd-doc__margin--token'>
+                    {
+                        tagsNames.map((name) => {
+                            return <Token clickHandler={(e) => closeAction(name, e)}>{name}</Token>;
+                        })
+                    }
+                </div>
             </DocsTile>
             <DocsText>{tokenCode}</DocsText>
         </div>
     );
-}
+};

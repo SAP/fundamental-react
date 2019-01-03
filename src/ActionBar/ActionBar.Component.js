@@ -1,10 +1,10 @@
 import React from 'react';
-import { ActionBar, ActionBarBack, ActionBarHeader, ActionBarActions, Button, Popover, Menu, MenuList, MenuItem  } from '../';
+import { ActionBar, ActionBarBack, ActionBarHeader, ActionBarActions, Button, Popover, Menu, MenuList, MenuItem } from '../';
 import { DocsTile, DocsText, Separator, Header, Description, Import, Properties } from '../';
 
 export const ActionBarComponent = () => {
     const actionBarBackBtnCode = `<ActionBar>
-    <ActionBarBack onclick={clickBackBtn}/>
+    <ActionBarBack onClick={clickBackBtn}/>
     <ActionBarHeader title={'Page Title'} description={'Action Bar Description'} />
     <ActionBarActions>
         <Button>Button</Button>
@@ -84,8 +84,8 @@ const clickBackBtn = () => {
 </ActionBar>`;
 
 const clickBackBtn = () => {
-    alert("You clicked me!");
-}
+    alert('You clicked me!');
+};
 
     return (
         <div>
@@ -94,12 +94,12 @@ const clickBackBtn = () => {
                 The Action Bar is located at the top of the page and is used for Page title and Main Actions for the
                 page.
             </Description>
-            <Import module="ActionBar" path="/fundamental-react/src/" />
+            <Import module='ActionBar' path='/fundamental-react/src/' />
 
             <Separator />
 
             <Properties
-                type="Inputs"
+                type='Inputs'
                 properties={[
                     { name: 'mobile', description: 'bool - set to "true" for mobile view of the Action Bar.' },
                     {
@@ -115,22 +115,21 @@ const clickBackBtn = () => {
                         description: 'string - Action bar description. Specified in ActionBarHeader.'
                     },
                     {
-                        name: 'onclick',
+                        name: 'onClick',
                         description: 'func - The function that is executed when the back button is clicked.'
                     }
-                ]}
-            />
+                ]} />
 
             <Separator />
 
             <h2>Action bar with back button, description and action buttons.</h2>
             <DocsTile>
                 <ActionBar>
-                    <ActionBarBack onclick={clickBackBtn}/>
+                    <ActionBarBack onClick={clickBackBtn} />
                     <ActionBarHeader title={'Page Title'} description={'Action Bar Description'} />
                     <ActionBarActions>
                         <Button>Button</Button>
-                        <Button option="emphasized">Button</Button>
+                        <Button option='emphasized'>Button</Button>
                     </ActionBarActions>
                 </ActionBar>
             </DocsTile>
@@ -144,7 +143,7 @@ const clickBackBtn = () => {
                     <ActionBarHeader title={'Page Title'} description={'Action Bar Description'} />
                     <ActionBarActions>
                         <Button>Button</Button>
-                        <Button option="emphasized">Button</Button>
+                        <Button option='emphasized'>Button</Button>
                     </ActionBarActions>
                 </ActionBar>
             </DocsTile>
@@ -163,18 +162,17 @@ const clickBackBtn = () => {
                     <ActionBarHeader title={'Page Title'} description={'Action Bar Description'} />
                     <ActionBarActions>
                         <Popover
-                            control={<Button option="light" glyph="vertical-grip" />}
+                            control={<Button option='light' glyph='vertical-grip' />}
                             body={
                                 <Menu>
                                     <MenuList>
-                                        <MenuItem url="/">Option 1</MenuItem>
-                                        <MenuItem url="/">Option 2</MenuItem>
-                                        <MenuItem url="/">Option 3</MenuItem>
-                                        <MenuItem url="/">Option 4</MenuItem>
+                                        <MenuItem url='/'>Option 1</MenuItem>
+                                        <MenuItem url='/'>Option 2</MenuItem>
+                                        <MenuItem url='/'>Option 3</MenuItem>
+                                        <MenuItem url='/'>Option 4</MenuItem>
                                     </MenuList>
                                 </Menu>
-                            }
-                        />
+                            } />
                     </ActionBarActions>
                 </ActionBar>
             </DocsTile>
@@ -184,26 +182,24 @@ const clickBackBtn = () => {
 
             <h2>Action bar mobile view</h2>
             <DocsTile>
-                <ActionBar mobile={true}>
+                <ActionBar mobile>
                     <ActionBarBack />
                     <ActionBarHeader
                         title={'Action Bar with description and back button'}
-                        description={'Action Bar Description'}
-                    />
+                        description={'Action Bar Description'} />
                     <ActionBarActions>
                         <Popover
-                            control={<Button option="light" glyph="vertical-grip" />}
+                            control={<Button option='light' glyph='vertical-grip' />}
                             body={
                                 <Menu>
                                     <MenuList>
-                                        <MenuItem url="/">Option 1</MenuItem>
-                                        <MenuItem url="/">Option 2</MenuItem>
-                                        <MenuItem url="/">Option 3</MenuItem>
-                                        <MenuItem url="/">Option 4</MenuItem>
+                                        <MenuItem url='/'>Option 1</MenuItem>
+                                        <MenuItem url='/'>Option 2</MenuItem>
+                                        <MenuItem url='/'>Option 3</MenuItem>
+                                        <MenuItem url='/'>Option 4</MenuItem>
                                     </MenuList>
                                 </Menu>
-                            }
-                        />
+                            } />
                     </ActionBarActions>
                 </ActionBar>
             </DocsTile>
@@ -213,26 +209,24 @@ const clickBackBtn = () => {
 
             <h2>Action bar mobile view with custom width</h2>
             <DocsTile>
-                <ActionBar mobile={true} width="768px">
+                <ActionBar mobile width='768px'>
                     <ActionBarBack />
                     <ActionBarHeader
                         title={'Action Bar with description and back button'}
-                        description={'Action Bar Description'}
-                    />
+                        description={'Action Bar Description'} />
                     <ActionBarActions>
                         <Popover
-                            control={<Button option="light" glyph="vertical-grip" />}
+                            control={<Button option='light' glyph='vertical-grip' />}
                             body={
                                 <Menu>
                                     <MenuList>
-                                        <MenuItem url="/">Option 1</MenuItem>
-                                        <MenuItem url="/">Option 2</MenuItem>
-                                        <MenuItem url="/">Option 3</MenuItem>
-                                        <MenuItem url="/">Option 4</MenuItem>
+                                        <MenuItem url='/'>Option 1</MenuItem>
+                                        <MenuItem url='/'>Option 2</MenuItem>
+                                        <MenuItem url='/'>Option 3</MenuItem>
+                                        <MenuItem url='/'>Option 4</MenuItem>
                                     </MenuList>
                                 </Menu>
-                            }
-                        />
+                            } />
                     </ActionBarActions>
                 </ActionBar>
             </DocsTile>

@@ -3,17 +3,18 @@ import PropTypes from 'prop-types';
 
 export const Tile = props => {
   const {
-    isButton,
     disabled,
     rowSpan,
     columnSpan,
     colorAccent,
     backgroundColor,
-    children
+    children,
+    className,
+    ...rest
   } = props;
   return (
-    <div
-      className={`fd-tile${disabled ? ' is-disabled' : ''}${
+      <div
+          className={`fd-tile${disabled ? ' is-disabled' : ''}${
         rowSpan ? ' fd-has-grid-row-span-' + rowSpan : ''
       }${columnSpan ? ' fd-has-grid-column-span-' + columnSpan : ''}${
         colorAccent ? ' fd-has-background-color-accent-' + colorAccent : ''
@@ -21,105 +22,105 @@ export const Tile = props => {
         backgroundColor
           ? '  fd-has-background-color-background-' + backgroundColor
           : ''
-      }`}
-      role={`${isButton ? 'button' : ''}`}
-    >
-      {children}
-    </div>
+      }${className ? ' ' + className : ''}`}
+          {...rest}>
+          {children}
+      </div>
   );
 };
 
 Tile.propTypes = {
-  isButton: PropTypes.bool,
-  disabled: PropTypes.bool,
-  rowSpan: PropTypes.number,
-  columnSpan: PropTypes.number,
+  backgroundColor: PropTypes.number,
+  className: PropTypes.string,
   colorAccent: PropTypes.number,
-  backgroundColor: PropTypes.number
+  columnSpan: PropTypes.number,
+  disabled: PropTypes.bool,
+  rowSpan: PropTypes.number
 };
 
 export const TileContent = props => {
-  const { title, children } = props;
+  const { title, children, className, ...rest } = props;
   return (
-    <div className="fd-tile__content">
-      <h2 className="fd-tile__title">{title}</h2>
-      {children}
-    </div>
+      <div className={`fd-tile__content${className ? ' ' + className : ''}`} {...rest}>
+          <h2 className='fd-tile__title'>{title}</h2>
+          {children}
+      </div>
   );
 };
 
 TileContent.propTypes = {
+  className: PropTypes.string,
   title: PropTypes.string
 };
 
 export const TileMedia = props => {
-  const { children } = props;
-  return <div className="fd-tile__media">{children}</div>;
+  const { children, className, ...rest } = props;
+  return <div className={`fd-tile__media${className ? ' ' + className : ''}`} {...rest}>{children}</div>;
 };
 
 export const TileActions = props => {
-  const { children } = props;
-  return <div className="fd-tile__actions">{children}</div>;
+  const { children, className, ...rest } = props;
+  return <div className={`fd-tile__actions${className ? ' ' + className : ''}`} {...rest}>{children}</div>;
 };
 
 export const ProductTile = props => {
-  const { isButton, disabled, children } = props;
+  const { disabled, children, className, ...rest } = props;
   return (
-    <div
-      className={`fd-product-tile${disabled ? ' is-disabled' : ''}`}
-      role={`${isButton ? 'button' : ''}`}
-    >
-      {children}
-    </div>
+      <div
+          className={`fd-product-tile${disabled ? ' is-disabled' : ''}${className ? ' ' + className : ''}`}
+          {...rest}>
+          {children}
+      </div>
   );
 };
 
 ProductTile.propTypes = {
-  isButton: PropTypes.bool,
+  className: PropTypes.string,
   disabled: PropTypes.bool
 };
 
 export const ProductTileContent = props => {
-  const { title, children } = props;
+  const { title, children, className, ...rest } = props;
   return (
-    <div className="fd-product-tile__content">
-      <h2 className="fd-product-tile__title">{title}</h2>
-      {children}
-    </div>
+      <div className={`fd-product-tile__content${className ? ' ' + className : ''}`} {...rest}>
+          <h2 className='fd-product-tile__title'>{title}</h2>
+          {children}
+      </div>
   );
 };
 
 ProductTileContent.propTypes = {
+  className: PropTypes.string,
   title: PropTypes.string
 };
 
 export const ProductTileMedia = props => {
-  const { image } = props;
+  const { image, className, ...rest } = props;
   return (
-    <div
-      className="fd-product-tile__media"
-      style={{ backgroundImage: 'url(' + image + ')' }}
-    />
+      <div
+          className={`fd-product-tile__media${className ? ' ' + className : ''}`} {...rest}
+          style={{ backgroundImage: 'url(' + image + ')' }} />
   );
 };
 
 ProductTileMedia.propTypes = {
-  image: PropTypes.string.isRequired
+  image: PropTypes.string.isRequired,
+  className: PropTypes.string
 };
 
 export const TileGrid = props => {
-  const { col, children } = props;
+  const { col, children, className, ...rest } = props;
   return (
-    <div
-      className={`fd-tile-grid${
+      <div
+          className={`fd-tile-grid${
         col ? ' fd-tile-grid--' + col + 'col' : 'fd-tile-grid--3col"'
-      }`}
-    >
-      {children}
-    </div>
+      }${className ? ' ' + className : ''}`} {...rest}>
+          {children}
+      </div>
   );
 };
 
 TileGrid.propTypes = {
+  className: PropTypes.string,
   col: PropTypes.number
 };
