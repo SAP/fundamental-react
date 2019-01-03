@@ -35,12 +35,30 @@ export class SearchInputComponent extends Component {
         );
     }
 
+    onChangeCallback() {
+        alert('Your custom onChange function is fired!');
+    }
+
     searchInputCode = `<SearchInput
     placeholder='Enter a fruit'
     searchList={this.searchData}
-    onEnter={term => this.getInputValue(term)}
-/>
+    onEnter={term => this.getInputValue(term)} />
 
+    
+<SearchInput
+    noSearchBtn
+    placeholder='Enter a fruit'
+    searchList={this.searchData}
+    onEnter={term => this.getInputValue(term)} />
+
+    
+<SearchInput
+    compact
+    placeholder='Enter a fruit'
+    searchList={this.searchData}
+    onEnter={term => this.getInputValue(term)} />
+
+    
 ************************************ Data ************************************
 
 getInputValue(value) {
@@ -91,6 +109,19 @@ searchData = [
                         {
                             name: 'onEnter',
                             description: 'func - Method to execute by pressing the Enter key.'
+                        },
+                        {
+                            name: 'noSearhBtn',
+                            description: 'bool - set to true to hide the Search button.'
+                        },
+                        {
+                            name: 'onChange',
+                            description:
+                                'func - a custom implementation of onChange. If not specified, the default behavior will be applied.'
+                        },
+                        {
+                            name: 'compact',
+                            description: 'bool - Set to true to enable compact mode.'
                         }
                     ]} />
 
@@ -101,6 +132,18 @@ searchData = [
                         <SearchInput
                             placeholder='Enter a fruit'
                             searchList={this.searchData}
+                            onEnter={term => this.getInputValue(term)} />
+                        <br />
+                        <SearchInput
+                            placeholder='Enter a fruit'
+                            searchList={this.searchData}
+                            noSearchBtn
+                            onEnter={term => this.getInputValue(term)} />
+                        <br />
+                        <SearchInput
+                            placeholder='Enter a fruit'
+                            searchList={this.searchData}
+                            compact
                             onEnter={term => this.getInputValue(term)} />
                     </div>
                 </DocsTile>

@@ -41,7 +41,6 @@ export class DocsText extends Component {
         this.setState(prevState => ({
             showCode: !prevState.showCode
         }));
-        console.log(this.state.showCode);
     }
     docsTextStyle = {
         padding: '15px',
