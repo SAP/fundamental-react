@@ -510,7 +510,7 @@ export class Calendar extends Component {
 
 
       render() {
-        const { className, ...props } = this.props;
+        const { enableRangeSelection, disableWeekends, disableBeforeDate, disableAfterDate, disableWeekday, disablePastDates, disableFutureDates, blockedDates, disabledDates, customDate, className, ...props } = this.props;
         return (
             <div className={`fd-calendar${className ? ' ' + className : ''}`} {...props}>
                 {this.generateNavigation()}
