@@ -6,6 +6,7 @@ import { Menu, MenuList, MenuItem } from '../Menu/Menu';
 import { Identifier } from '../Identifier/Identifier';
 import { Icon } from '../Icon/Icon';
 import { SearchInput } from '../SearchInput/SearchInput';
+import { Counter } from '../Badge/Badge';
 
 export class Shellbar extends Component {
     static propTypes = {
