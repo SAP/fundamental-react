@@ -92,7 +92,7 @@ export class DocsText extends Component {
         textAlign: 'center'
     };
     docCopyBtn = {
-        'float': 'right'
+        'margin-left': '5px'
     };
     render() {
         const {children} = this.props;
