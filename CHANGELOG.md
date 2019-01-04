@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.0.14"></a>
+## [0.0.14](http://sap.github.io/fundamental-react/compare/v0.0.13...v0.0.14) (2019-01-04)
+
+
+### Bug Fixes
+
+* merge develop into master ([#158](http://sap.github.io/fundamental-react/issues/158)) ([bde4634](http://sap.github.io/fundamental-react/commit/bde4634)), closes [#107](http://sap.github.io/fundamental-react/issues/107) [#116](http://sap.github.io/fundamental-react/issues/116) [#106](http://sap.github.io/fundamental-react/issues/106) [#117](http://sap.github.io/fundamental-react/issues/117) [#119](http://sap.github.io/fundamental-react/issues/119) [#118](http://sap.github.io/fundamental-react/issues/118) [#120](http://sap.github.io/fundamental-react/issues/120) [Issue#121](http://sap.github.io/fundamental-react/issues/121) [#122](http://sap.github.io/fundamental-react/issues/122) [Issue#90](http://sap.github.io/fundamental-react/issues/90) [#123](http://sap.github.io/fundamental-react/issues/123) [Issue#90](http://sap.github.io/fundamental-react/issues/90) [Issue#90](http://sap.github.io/fundamental-react/issues/90) [#127](http://sap.github.io/fundamental-react/issues/127) [#131](http://sap.github.io/fundamental-react/issues/131) [Feature/issue#93](http://sap.github.io/fundamental-react/issues/93) [#129](http://sap.github.io/fundamental-react/issues/129) [Issue#93](http://sap.github.io/fundamental-react/issues/93) [Issue#93](http://sap.github.io/fundamental-react/issues/93) [Issue#93](http://sap.github.io/fundamental-react/issues/93) [Issue#93](http://sap.github.io/fundamental-react/issues/93) [Issue#93](http://sap.github.io/fundamental-react/issues/93) [Issue#93](http://sap.github.io/fundamental-react/issues/93) [Issue#93](http://sap.github.io/fundamental-react/issues/93) [Issue#93](http://sap.github.io/fundamental-react/issues/93) [Issue#93](http://sap.github.io/fundamental-react/issues/93) [#132](http://sap.github.io/fundamental-react/issues/132) [#128](http://sap.github.io/fundamental-react/issues/128) [#133](http://sap.github.io/fundamental-react/issues/133) [#135](http://sap.github.io/fundamental-react/issues/135) [#124](http://sap.github.io/fundamental-react/issues/124) [#124](http://sap.github.io/fundamental-react/issues/124) [#137](http://sap.github.io/fundamental-react/issues/137) [#138](http://sap.github.io/fundamental-react/issues/138) [#136](http://sap.github.io/fundamental-react/issues/136) [#140](http://sap.github.io/fundamental-react/issues/140) [#144](http://sap.github.io/fundamental-react/issues/144) [#146](http://sap.github.io/fundamental-react/issues/146) [#148](http://sap.github.io/fundamental-react/issues/148) [#149](http://sap.github.io/fundamental-react/issues/149) [#153](http://sap.github.io/fundamental-react/issues/153) [#155](http://sap.github.io/fundamental-react/issues/155) [#157](http://sap.github.io/fundamental-react/issues/157)
+
+
+
 <a name="0.0.13"></a>
 ## [0.0.13](http://sap.github.io/fundamental-react/compare/v0.0.7...v0.0.13) (2019-01-04)
 
