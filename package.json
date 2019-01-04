@@ -22,6 +22,7 @@
         "predeploy": "npm run build",
         "start-js": "node scripts/start.js",
         "start": "node scripts/start.js",
+        "std-version": "standard-version -m \"chore(release): version %s build ${TRAVIS_BUILD_NUMBER} [ci skip]\"",
         "test:coverage": "jest --coverage",
         "test:dev": "jest",
         "test": "node scripts/test.js",
