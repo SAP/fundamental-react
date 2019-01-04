@@ -14,8 +14,8 @@ git push --quiet --follow-tags "https://$GH_TOKEN@github.com/$TRAVIS_REPO_SLUG" 
 
 # commit changes made by standard-version to develop branch
 git checkout develop
-git merge master
-git commit -a -m "chore: merge master into develop [ci skip]"
+# git merge master
+# git commit -a -m "chore: merge master into develop [ci skip]"
 git push --quiet --follow-tags "https://$GH_TOKEN@github.com/$TRAVIS_REPO_SLUG" develop > /dev/null 2>&1;
 # publish master to npm
 git checkout master
