@@ -1,4 +1,3 @@
-
 Fundamental-react is a set of [React.JS](https://reactjs.org/) components implementation of [SAP Fiori Fundamentals library](https://sap.github.io/fundamental/).
 
 **[Component Documentation](https://sap.github.io/fundamental-react/)**
@@ -6,16 +5,16 @@ Fundamental-react is a set of [React.JS](https://reactjs.org/) components implem
 ## Current Version
 
 ```
-0.0.8-beta
+0.0.12-beta
 ```
 
 ## Build Status
+
 [![Build Status](https://travis-ci.org/SAP/fundamental-react.svg?branch=develop)](https://travis-ci.org/SAP/fundamental-react)
 
 ## Description
 
 Fundamental-react is a set of [React.JS](https://reactjs.org/) components implementation of [SAP Fiori Fundamentals library](https://sap.github.io/fundamental/). SAP Fiori Fundamentals library is a Design System and HTML/CSS Component Library used to build modern Product User Experiences with the SAP look and feel. This will allow you to stay/use React for your application and get SAP look and feel.
-
 
 ## Requirements
 
@@ -47,18 +46,16 @@ $fd-icons-path: "~fiori-fundamentals/scss/icons/";
 $fd-fonts-path: "~fiori-fundamentals/scss/fonts/";
 @import '../node_modules/fiori-fundamentals/scss/all.scss';
 ```
- 
-You can now use the [Component Documentation](https://sap.github.io/fundamental-react/) to browse the components currently available with Fundamental Vue.  To use a Fundamental-react component, paste the desired code snippet from the Component Documentation and configure it as necessarry:
 
-    
+You can now use the [Component Documentation](https://sap.github.io/fundamental-react/) to browse the components currently available with Fundamental Vue. To use a Fundamental-react component, paste the desired code snippet from the Component Documentation and configure it as necessarry:
+
     ...
     <Button compact>Compact</Button>
-    
+
     <Icon glyph="cart" size="l" />
     ...
-    
-    
-## Available Scripts 
+
+## Available Scripts
 
 `npm start`
 
@@ -102,6 +99,6 @@ Copyright (c) 2018 SAP SE or an SAP affiliate company. All rights reserved.
 This file is licensed under the Apache Software License, v. 2 except as noted otherwise in the [LICENSE file](https://github.com/SAP/fundamental-react/blob/master/LICENSE.txt)
 
 ## Similar Projects
-- [GitHub repo of Angular implementation of SAP Fiori Fundamentals](https://github.com/SAP/fundamental-ngx)
-- [GitHub repo of Vue implementation of SAP Fiori Fundamentals](https://github.com/SAP/fundamental-vue)
 
+-   [GitHub repo of Angular implementation of SAP Fiori Fundamentals](https://github.com/SAP/fundamental-ngx)
+-   [GitHub repo of Vue implementation of SAP Fiori Fundamentals](https://github.com/SAP/fundamental-vue)
