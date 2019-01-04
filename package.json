@@ -1,6 +1,6 @@
 {
     "name": "fundamental-react",
-    "version": "0.0.11-beta",
+    "version": "0.0.12-beta",
     "private": false,
     "license": "Apache-2.0",
     "homepage": "http://sap.github.io/fundamental-react",
@@ -75,7 +75,7 @@
         "terser-webpack-plugin": "1.1.0",
         "url-loader": "1.1.1",
         "webpack": "4.19.1",
-        "webpack-dev-server": "3.1.14",
+        "webpack-dev-server": "3.1.9",
         "webpack-manifest-plugin": "2.0.4",
         "workbox-webpack-plugin": "3.6.3"
     },
