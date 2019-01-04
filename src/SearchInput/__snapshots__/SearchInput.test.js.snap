@@ -24,6 +24,7 @@ exports[`<SearchInput /> create SearchInput 1`] = `
             onClick={[Function]}
             onKeyPress={[Function]}
             placeholder="Enter a fruit"
+            style={Object {}}
             type="text"
             value=""
           />
@@ -32,6 +33,7 @@ exports[`<SearchInput /> create SearchInput 1`] = `
           >
             <button
               className=" fd-button--light sap-icon--search"
+              onClick={[Function]}
             />
           </span>
         </div>
@@ -302,6 +304,7 @@ exports[`<SearchInput /> create SearchInput 3`] = `
             onClick={[Function]}
             onKeyPress={[Function]}
             placeholder="Enter a fruit"
+            style={Object {}}
             type="text"
             value=""
           />
@@ -310,6 +313,7 @@ exports[`<SearchInput /> create SearchInput 3`] = `
           >
             <button
               className=" fd-button--light sap-icon--search"
+              onClick={[Function]}
             />
           </span>
         </div>
