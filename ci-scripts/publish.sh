@@ -1,6 +1,6 @@
 #! /bin/bash
-git config --global user.email "travis@travisci.org"
-git config --global user.name "travis"
+git config --global user.email "fundamental@sap.com"
+git config --global user.name "fundamental-bot"
 
 git checkout master
 npm install
