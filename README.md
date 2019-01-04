@@ -34,6 +34,7 @@ Some prior knowledge of React is required for using this library.
 ## Install
 
 To download and use this library, you first need to install the node package manager - [npm](https://www.npmjs.com/get-npm).
+Fundamental-react does not include the [SAP Fiori Fundamentals library](https://sap.github.io/fundamental/) which is required for styling.
 
 1. Install Fiori Fundamentals:
 
