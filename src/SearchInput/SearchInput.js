@@ -115,7 +115,6 @@ export class SearchInput extends Component {
             }
         }
     }
-
     componentDidMount() {
         document.addEventListener('keydown', this.onEscHandler, false);
         document.addEventListener('click', this.onOutsideClickHandler, false);
