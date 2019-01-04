@@ -21,6 +21,11 @@ export class SearchInput extends Component {
         this.onSearchBtnHandler = this.onSearchBtnHandler.bind(this);
     }
 
+    style = {
+        borderTopRightRadius: '4px',
+        borderBottomRightRadius: '4px'
+    };
+
     onKeyPressHandler(event) {
         if (event.key === 'Enter') {
             this.props.onEnter(this.state.value);
@@ -32,25 +37,26 @@ export class SearchInput extends Component {
     }
 
     onChangeHandler(event) {
-        if (this.state.searchList) {
-            let filteredResult = this.state.searchList.filter(item =>
-                item.text.toLowerCase().startsWith(event.target.value.toLowerCase())
-            );
-
-            this.setState({
-                filteredResult: filteredResult
-            });
-        }
-
-        if (!this.state.isExpanded) {
-            this.setState({
-                isExpanded: true
-            });
-        }
-
         this.setState({
             value: event.target.value
         });
+        if (this.props.onChange) {
+            this.props.onChange();
+        } else {
+            if (this.state.searchList) {
+                let filteredResult = this.state.searchList.filter(item =>
+                    item.text.toLowerCase().startsWith(event.target.value.toLowerCase())
+                );
+                this.setState({
+                    filteredResult: filteredResult
+                });
+            }
+            if (!this.state.isExpanded) {
+                this.setState({
+                    isExpanded: true
+                });
+            }
+        }
     }
 
     onClickHandler() {
@@ -59,7 +65,6 @@ export class SearchInput extends Component {
         } else {
             document.removeEventListener('click', this.onOutsideClickHandler, false);
         }
-
         this.setState(prevState => ({
             isExpanded: !prevState.isExpanded
         }));
@@ -78,7 +83,10 @@ export class SearchInput extends Component {
     }
 
     onEscHandler(event) {
-        if ((event.keyCode === 27 && this.state.isExpanded === true) || (event.keyCode === 27 && this.state.searchExpanded === true)) {
+        if (
+            (event.keyCode === 27 && this.state.isExpanded === true) ||
+            (event.keyCode === 27 && this.state.searchExpanded === true)
+        ) {
             this.setState({
                 isExpanded: false,
                 searchExpanded: false,
@@ -107,7 +115,6 @@ export class SearchInput extends Component {
             }
         }
     }
-
     componentDidMount() {
         document.addEventListener('keydown', this.onEscHandler, false);
         document.addEventListener('click', this.onOutsideClickHandler, false);
@@ -118,10 +125,25 @@ export class SearchInput extends Component {
     }
 
     render() {
-        const { placeholder, inShellbar, onSearch, onEnter, searchList, className, ...rest } = this.props;
+        const {
+            placeholder,
+            inShellbar,
+            onSearch,
+            onEnter,
+            searchList,
+            onChange,
+            noSearchBtn,
+            compact,
+            className,
+            ...rest
+        } = this.props;
 
         return (
-            <div className={`fd-search-input${inShellbar ? ' fd-search-input--closed' : ''}${className ? ' ' + className : ''}`} {...rest}>
+            <div
+                className={`fd-search-input${inShellbar ? ' fd-search-input--closed' : ''}${
+                    className ? ' ' + className : ''
+                }`}
+                {...rest}>
                 <div className='fd-popover'>
                     {inShellbar ? (
                         <div className='fd-popover__control fd-search-input__control'>
@@ -134,7 +156,7 @@ export class SearchInput extends Component {
                                 <div
                                     className='fd-search-input__controlinput'
                                     aria-expanded={this.state.searchExpanded}
-                                    aria-haspopup='true' >
+                                    aria-haspopup='true'>
                                     <input
                                         type='text'
                                         className='fd-input'
@@ -152,21 +174,29 @@ export class SearchInput extends Component {
                             <div
                                 className='fd-combobox-control'
                                 aria-expanded={this.state.isExpanded}
-                                aria-haspopup='true' >
-                                <div className='fd-input-group fd-input-group--after'>
+                                aria-haspopup='true'>
+                                <div
+                                    className={`fd-input-group fd-input-group--after${
+                                        compact ? ' fd-input-group--compact' : ''
+                                    }`}
+                                    ref={node => (this.node = node)}>
                                     <input
                                         type='text'
-                                        className='fd-input'
+                                        className={`fd-input${compact ? ' fd-input--compact' : ''}`}
                                         value={this.state.value}
                                         onChange={this.onChangeHandler}
                                         placeholder={placeholder}
                                         onKeyPress={this.onKeyPressHandler}
                                         onClick={() => this.onClickHandler()}
-                                        ref={node => (this.node = node)} />
+                                        style={noSearchBtn ? this.style : {}} />
 
-                                    <span className='fd-input-group__addon fd-input-group__addon--after fd-input-group__addon--button'>
-                                        <button className=' fd-button--light sap-icon--search' onClick={onSearch} />
-                                    </span>
+                                    {!noSearchBtn && (
+                                        <span className='fd-input-group__addon fd-input-group__addon--after fd-input-group__addon--button'>
+                                            <button
+                                                className=' fd-button--light sap-icon--search'
+                                                onClick={() => this.onClickHandler()} />
+                                        </span>
+                                    )}
                                 </div>
                             </div>
                         </div>
@@ -174,7 +204,7 @@ export class SearchInput extends Component {
                     {this.state.filteredResult && (
                         <div
                             className='fd-popover__body fd-popover__body--no-arrow'
-                            aria-hidden={!this.state.isExpanded} >
+                            aria-hidden={!this.state.isExpanded}>
                             <div className={inShellbar ? 'fd-search-input__body' : ''}>
                                 <nav className='fd-menu'>
                                     <ul className='fd-menu__list'>
@@ -184,7 +214,7 @@ export class SearchInput extends Component {
                                                     <li
                                                         key={index}
                                                         className='fd-menu__item'
-                                                        onClick={() => this.listItemClickHandler(item)} >
+                                                        onClick={() => this.listItemClickHandler(item)}>
                                                         <strong>{this.state.value}</strong>
                                                         {this.state.value && this.state.value.length
                                                             ? item.text.substring(this.state.value.length)

@@ -7,8 +7,10 @@ git:
 branches:
   only:
   - develop
-  - "/^feature\\/.*$/"
-  - "/^fix\\/.*$/"
+  - master
+  - "/^feature\/.*$/"
+  - "/^feat\/.*$/"
+  - "/^fix\/.*$/"
 jobs:
   include:
     - stage: "Fundamental-react: Lint"
@@ -20,3 +22,11 @@ notifications:
   email:
     on_failure: always
     on_success: change
+before_deploy:
+- bash ./ci-scripts/setup_npm.sh
+deploy:
+  - provider: script
+    script: bash ./ci-scripts/publish.sh $TRAVIS_BRANCH $TRAVIS_BUILD_NUMBER
+    on:
+      branch: master
+    skip_cleanup: true
