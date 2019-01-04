@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import SyntaxHighlighter from 'react-syntax-highlighter';
-import { googlecode } from 'react-syntax-highlighter/styles/hljs';
-import { Button } from '../../Button/Button';
+import {googlecode} from 'react-syntax-highlighter/styles/hljs';
+import {Button} from '../../Button/Button';
 
 export const DocsTile = props => {
     const docsTileStyle = {
@@ -15,32 +15,55 @@ export const DocsTile = props => {
         textAlign: 'center'
     };
 
-    const { centered, children } = props;
+    const {centered, children} = props;
 
     return (
         <div className='fd-tile' style={docsTileStyle}>
-            {centered ? (
-                <div className='fd-tile__content'>
-                    <div style={centerStyle}>{children}</div>
-                </div>
-            ) : (
-                <div className='fd-tile__content'>{children}</div>
-            )}
+            {centered
+                ? (
+                    <div className='fd-tile__content'>
+                        <div style={centerStyle}>{children}</div>
+                    </div>
+                )
+                : (
+                    <div className='fd-tile__content'>{children}</div>
+                )}
         </div>
     );
 };
 
 export class DocsText extends Component {
     constructor(props) {
-      super(props);
-      this.state = {
-          showCode: false
-      };
+        super(props);
+        this.state = {
+            showCode: false
+        };
     }
     handleBtnClick = () => {
         this.setState(prevState => ({
             showCode: !prevState.showCode
         }));
+    }
+    copyToClipboard = (e) => {
+        //Create input DOM  element that holds the value that is sent to clipboard
+        var text = document.createElement('textarea');
+        document
+            .body
+            .appendChild(text);
+        //sends value to the input element
+        text.value = e; //Chrome uses value
+        text.textContent = e; //Firefox uses textContent
+        text.style.height = '0px';
+        text.style.width = '0px';
+        text.style.opacity = '0';
+
+        text.select();
+        //set the copy command
+        document.execCommand('copy');
+        //remove the input element from DOM
+        document
+            .body
+            .removeChild(text);
     }
     docsTextStyle = {
         padding: '15px',
@@ -68,16 +91,30 @@ export class DocsText extends Component {
         margin: '0',
         textAlign: 'center'
     };
+    docCopyBtn = {
+        'marginLeft': '5px'
+    };
     render() {
-        const { children } = this.props;
+        const {children} = this.props;
+
         return (
             <React.Fragment>
-                <div style={this.state.showCode ? (this.docsBtnStyle) : (this.docsBtnStyleHiddenCode)}>
+                <div
+                    style={this.state.showCode
+                    ? (this.docsBtnStyle)
+                    : (this.docsBtnStyleHiddenCode)}>
                     <Button option='light' onClick={() => this.handleBtnClick()}>
-                        {
-                            this.state.showCode ? ('Hide Code') : ('Show Code')
-                        }
+                        {this.state.showCode
+                            ? ('Hide Code')
+                            : ('Show Code')}
                     </Button>
+                    {this.state.showCode
+                        ? <Button
+                            style={this.docCopyBtn}
+                            option='light'
+                            glyph='copy'
+                            onClick={() => this.copyToClipboard(children)}>Copy</Button>
+                        : ''}
                 </div>
                 {this.state.showCode && <pre style={this.docsTextStyle}>
                     <SyntaxHighlighter language='html' style={googlecode}>
@@ -88,4 +125,3 @@ export class DocsText extends Component {
         );
     }
 }
-
