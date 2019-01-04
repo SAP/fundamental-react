@@ -4,13 +4,6 @@ node_js:
 dist: trusty
 git:
   depth: false
-branches:
-  only:
-  - develop
-  - master
-  - "/^feature\/.*$/"
-  - "/^feat\/.*$/"
-  - "/^fix\/.*$/"
 jobs:
   include:
     - stage: "Fundamental-react: Lint"
