@@ -12,7 +12,7 @@ jobs:
       name: "Unit tests"
       script: npm run test:coverage
     - stage: deploy
-      if: branch = master
+      if: branch = master AND type != pull_request
       before_deploy:
       - bash ./ci-scripts/setup_npm.sh
       deploy:
