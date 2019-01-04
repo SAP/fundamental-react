@@ -1,11 +1,15 @@
 Fundamental-react is a set of [React.js](https://reactjs.org/) components implementation of [SAP Fiori Fundamentals library](https://sap.github.io/fundamental/).
 
 <p align="center">
-[![Build Status](https://travis-ci.org/SAP/fundamental-react.svg?branch=develop)](https://travis-ci.org/SAP/fundamental-react)
+     <a href="https://travis-ci.org/SAP/fundamental-react">
+            <img src="https://travis-ci.org/SAP/fundamental-react.svg?branch=develop" alt="Build Status">
+      </a>
 </p>
 
 <p align="center">
-:open_book: **[Component Documentation](https://sap.github.io/fundamental-react/)** :open_book:
+:open_book: 
+    <strong><a href="https://sap.github.io/fundamental-react/">Component Documentation</a></strong>
+:open_book:
 </p>
 
 ## Current Version
