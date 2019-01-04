@@ -37,6 +37,9 @@ export class SearchInput extends Component {
     }
 
     onChangeHandler(event) {
+        this.setState({
+            value: event.target.value
+        });
         if (this.props.onChange) {
             this.props.onChange();
         } else {
@@ -53,9 +56,6 @@ export class SearchInput extends Component {
                     isExpanded: true
                 });
             }
-            this.setState({
-                value: event.target.value
-            });
         }
     }
 

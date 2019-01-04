@@ -46,10 +46,9 @@ export class SearchInputComponent extends Component {
 
     
 <SearchInput
-    noSearchBtn
     placeholder='Enter a fruit'
-    searchList={this.searchData}
-    onEnter={term => this.getInputValue(term)} />
+    noSearchBtn
+    onChange={this.onChangeCallback} />
 
     
 <SearchInput
@@ -58,7 +57,7 @@ export class SearchInputComponent extends Component {
     searchList={this.searchData}
     onEnter={term => this.getInputValue(term)} />
 
-    
+
 ************************************ Data ************************************
 
 getInputValue(value) {
@@ -136,9 +135,8 @@ searchData = [
                         <br />
                         <SearchInput
                             placeholder='Enter a fruit'
-                            searchList={this.searchData}
                             noSearchBtn
-                            onEnter={term => this.getInputValue(term)} />
+                            onChange={this.onChangeCallback} />
                         <br />
                         <SearchInput
                             placeholder='Enter a fruit'
