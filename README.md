@@ -1,6 +1,16 @@
-Fundamental-react is a set of [React.JS](https://reactjs.org/) components implementation of [SAP Fiori Fundamentals library](https://sap.github.io/fundamental/).
+Fundamental-react is a set of [React.js](https://reactjs.org/) components implementation of [SAP Fiori Fundamentals library](https://sap.github.io/fundamental/).
 
-**[Component Documentation](https://sap.github.io/fundamental-react/)**
+<p align="center">
+     <a href="https://travis-ci.org/SAP/fundamental-react">
+            <img src="https://travis-ci.org/SAP/fundamental-react.svg?branch=develop" alt="Build Status">
+      </a>
+</p>
+
+<p align="center">
+:open_book: 
+    <strong><a href="https://sap.github.io/fundamental-react/">Component Documentation</a></strong>
+:open_book:
+</p>
 
 ## Current Version
 
@@ -8,13 +18,9 @@ Fundamental-react is a set of [React.JS](https://reactjs.org/) components implem
 0.0.12-beta
 ```
 
-## Build Status
-
-[![Build Status](https://travis-ci.org/SAP/fundamental-react.svg?branch=develop)](https://travis-ci.org/SAP/fundamental-react)
-
 ## Description
 
-Fundamental-react is a set of [React.JS](https://reactjs.org/) components implementation of [SAP Fiori Fundamentals library](https://sap.github.io/fundamental/). SAP Fiori Fundamentals library is a Design System and HTML/CSS Component Library used to build modern Product User Experiences with the SAP look and feel. This will allow you to stay/use React for your application and get SAP look and feel.
+Fundamental-react is a set of [React.js](https://reactjs.org/) components implementation of [SAP Fiori Fundamentals library](https://sap.github.io/fundamental/). SAP Fiori Fundamentals library is a Design System and HTML/CSS Component Library used to build modern Product User Experiences with the SAP look and feel. This will allow you to stay/use React for your application and get SAP look and feel.
 
 ## Requirements
 
@@ -28,6 +34,7 @@ Some prior knowledge of React is required for using this library.
 ## Install
 
 To download and use this library, you first need to install the node package manager - [npm](https://www.npmjs.com/get-npm).
+Fundamental-react does not include the [SAP Fiori Fundamentals library](https://sap.github.io/fundamental/) which is required for styling.
 
 1. Install Fiori Fundamentals:
 
