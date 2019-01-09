@@ -2,6 +2,34 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.0.14"></a>
+## [0.0.14](http://sap.github.io/fundamental-react/compare/v0.0.13...v0.0.14) (2019-01-09)
+
+
+### Bug Fixes
+
+* add pack PR limiter ([#155](http://sap.github.io/fundamental-react/issues/155)) ([269a646](http://sap.github.io/fundamental-react/commit/269a646))
+* add standard-version to package.json ([#153](http://sap.github.io/fundamental-react/issues/153)) ([c70509b](http://sap.github.io/fundamental-react/commit/c70509b))
+* merge conflicts ([#157](http://sap.github.io/fundamental-react/issues/157)) ([59c0864](http://sap.github.io/fundamental-react/commit/59c0864))
+* move deploy to jobs ([#149](http://sap.github.io/fundamental-react/issues/149)) ([ac956d6](http://sap.github.io/fundamental-react/commit/ac956d6))
+
+
+
+<a name="0.0.8"></a>
+## [0.0.8](http://sap.github.io/fundamental-react/compare/v0.0.7...v0.0.8) (2018-12-21)
+
+
+### Bug Fixes
+
+* Add Polyfill for IE11 support ([#117](http://sap.github.io/fundamental-react/issues/117)) ([3181e54](http://sap.github.io/fundamental-react/commit/3181e54))
+* cleanup package ([#116](http://sap.github.io/fundamental-react/issues/116)) ([6b35aaf](http://sap.github.io/fundamental-react/commit/6b35aaf))
+* eject from create react app; prep for linting ([#107](http://sap.github.io/fundamental-react/issues/107)) ([86329df](http://sap.github.io/fundamental-react/commit/86329df))
+* init coverage ([#119](http://sap.github.io/fundamental-react/issues/119)) ([fbb4b08](http://sap.github.io/fundamental-react/commit/fbb4b08))
+* init linting ([#106](http://sap.github.io/fundamental-react/issues/106)) ([e31570f](http://sap.github.io/fundamental-react/commit/e31570f))
+* move lint extend react-app to eslintrc. comment out due to failing rules ([#118](http://sap.github.io/fundamental-react/issues/118)) ([b2a4ac7](http://sap.github.io/fundamental-react/commit/b2a4ac7))
+
+
+
 <a name="0.0.13"></a>
 ## [0.0.13](http://sap.github.io/fundamental-react/compare/v0.0.7...v0.0.13) (2019-01-04)
 
