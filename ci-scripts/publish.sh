@@ -1,14 +1,19 @@
 #! /bin/bash
-git config --global user.email "fundamental@sap.com"
-git config --global user.name "fundamental-bot"
 
-git checkout master
+# publish releases (already tagged by publish_release.sh)
+if [[ "$TRAVIS_COMMIT_MESSAGE" =~ chore\(release\):\sversion\s[0-9]+\.[0-9]+\.[0-9]+$.* ]]; then
+    npm publish
+# bump and publish rc
+else
+    git config --global user.email "fundamental@sap.com"
+    git config --global user.name "fundamental-bot"
 
-# update the package verion and commit to the git repository
-# npm run std-version
+    git checkout master
+    # update the package verion and commit to the git repository
+    npm run std-version -- --prerelease rc --no-verify
 
-# pushes changes to master
-# git push --quiet --follow-tags "https://$GH_TOKEN@github.com/$TRAVIS_REPO_SLUG" "$TRAVIS_BRANCH" > /dev/null 2>&1;
+    # pushes changes to master
+    git push --quiet --follow-tags "https://$GH_TOKEN@github.com/$TRAVIS_REPO_SLUG" "$TRAVIS_BRANCH" > /dev/null 2>&1;
 
-# commit changes made by standard-version to develop branch
-# npm publish
+    npm publish --tag prerelease
+fi
