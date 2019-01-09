@@ -11,14 +11,6 @@ jobs:
     - stage: "Fundamental-react: Test"
       name: "Unit tests"
       script: npm run test:coverage
-    - stage: deploy
-      if: branch = master AND type != pull_request
-      before_deploy:
-      - bash ./ci-scripts/setup_npm.sh
-      deploy:
-        - provider: script
-          script: bash ./ci-scripts/publish.sh $TRAVIS_BRANCH $TRAVIS_BUILD_NUMBER
-          skip_cleanup: true
 notifications:
   email:
     on_failure: always
