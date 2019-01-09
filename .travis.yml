@@ -9,7 +9,7 @@ script:
 jobs:
   include:
   - stage: "Fundamental-react: Test & Lint"
-      script: npm run lint && npm run test:coverage
+    script: npm run lint && npm run test:coverage
   - stage: Deploy
     if: branch = master AND type != pull_request
     before_deploy:
