@@ -1,22 +1,13 @@
-Fundamental-react is a set of [React.js](https://reactjs.org/) components implementation of [SAP Fiori Fundamentals library](https://sap.github.io/fundamental/).
+[![npm version](https://badge.fury.io/js/fundamental-react.svg)](//www.npmjs.com/package/fundamental-react)
+[![Build Status](https://travis-ci.org/SAP/fundamental-react.svg?branch=master)](https://travis-ci.org/SAP/fundamental-react)
 
-<p align="center">
-     <a href="https://travis-ci.org/SAP/fundamental-react">
-            <img src="https://travis-ci.org/SAP/fundamental-react.svg?branch=develop" alt="Build Status">
-      </a>
-</p>
+Fundamental-react is a set of [React.js](https://reactjs.org/) components implementation of [SAP Fiori Fundamentals library](https://sap.github.io/fundamental/).
 
 <p align="center">
 :open_book: 
     <strong><a href="https://sap.github.io/fundamental-react/">Component Documentation</a></strong>
 :open_book:
 </p>
-
-## Current Version
-
-```
-0.0.12-beta
-```
 
 ## Description
 
@@ -87,6 +78,10 @@ Launches the test runner and display code coverage report and interactive watch 
 `npm run build`
 
 Builds the app for production to the `build` folder.
+
+## Versioning
+
+Fundamentals-react follows [Semantic Versioning](https://semver.org/). These components strictly adhere to the [MAJOR].[MINOR].[PATCH], numbering system, also known as [BREAKING].[FEATURE].[FIX].
 
 ## Known Issues
 
