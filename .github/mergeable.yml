@@ -6,4 +6,4 @@ mergeable:
         regex: "^feat:|^chore:|^fix:"
       must_exclude:
         message: "Title cannot include 'BREAKING CHANGE' as this will automatically trigger a major version release via the standard-version package."
-        regex: BREAKING CHANGE|chore\(release\):\sversion\s[0-9]+\.[0-9]+\.[0-9]+$.*
+        regex: BREAKING CHANGE
