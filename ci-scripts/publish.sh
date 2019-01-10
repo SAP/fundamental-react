@@ -11,9 +11,11 @@ else
     git checkout master
     # update the package verion and commit to the git repository
     npm run std-version -- --prerelease rc --no-verify
-
+    
+    echo "$TRAVIS_BRANCH"
+    git status
     # pushes changes to master
-    git push --quiet --follow-tags "https://$GH_TOKEN@github.com/$TRAVIS_REPO_SLUG" "$TRAVIS_BRANCH" > /dev/null 2>&1;
+    git push --follow-tags "https://$GH_TOKEN@github.com/$TRAVIS_REPO_SLUG" "$TRAVIS_BRANCH" > /dev/null 2>&1;
 
     npm publish --tag prerelease
 fi
