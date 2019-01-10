@@ -4,13 +4,20 @@ node_js:
 dist: trusty
 git:
   depth: false
+script:
+  - npm run build
 jobs:
   include:
-    - stage: "Fundamental-react: Lint"
-      script: npm run lint
-    - stage: "Fundamental-react: Test"
-      name: "Unit tests"
-      script: npm run test:coverage
+  - stage: "Fundamental-react: Test & Lint"
+    script: npm run lint && npm run test:coverage
+  - stage: Deploy
+    if: branch = master AND type != pull_request
+    before_deploy:
+    - bash ./ci-scripts/setup_npm.sh
+    deploy:
+      - provider: script
+        script: bash ./ci-scripts/publish.sh $TRAVIS_BRANCH $TRAVIS_BUILD_NUMBER
+        skip_cleanup: true
 notifications:
   email:
     on_failure: always
