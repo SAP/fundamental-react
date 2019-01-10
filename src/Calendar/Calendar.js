@@ -16,39 +16,6 @@ export class Calendar extends Component {
             currentYear: new Date(),
             dateClick: false
         };
-
-        this.generateNavigation = this.generateNavigation.bind(this);
-        this.generateWeekdays = this.generateWeekdays.bind(this);
-        this.generateDays = this.generateDays.bind(this);
-        this.retrieveStartOfWeek = this.retrieveStartOfWeek.bind(this);
-        this.addDays = this.addDays.bind(this);
-        this.returnFirstDayMonth = this.returnFirstDayMonth.bind(this);
-        this.returnLastDayMonth = this.returnLastDayMonth.bind(this);
-        this.retrieveEndOfWeek = this.retrieveEndOfWeek.bind(this);
-        this.next = this.next.bind(this);
-        this.previous = this.previous.bind(this);
-        this.isDateBetween = this.isDateBetween.bind(this);
-        this.isSelected = this.isSelected.bind(this);
-        this.disableWeekday = this.disableWeekday.bind(this);
-        this.disableBeforeDate = this.disableBeforeDate.bind(this);
-        this.disableAfterDate = this.disableAfterDate.bind(this);
-        this.disableBeforeTodayDate = this.disableBeforeTodayDate.bind(this);
-        this.disableAfterTodayDate = this.disableAfterTodayDate.bind(this);
-        this.selectRangeSelection = this.selectRangeSelection.bind(this);
-        this.showMonths = this.showMonths.bind(this);
-        this.generateMonths = this.generateMonths.bind(this);
-        this.generateYears = this.generateYears.bind(this);
-        this.showYears = this.showYears.bind(this);
-        this.changeMonth = this.changeMonth.bind(this);
-        this.changeYear = this.changeYear.bind(this);
-        this.displayIsDayOtherMonth = this.displayIsDayOtherMonth.bind(this);
-        this.displayIsSelected = this.displayIsSelected.bind(this);
-        this.displaySelectedRangeFirst = this.displaySelectedRangeFirst.bind(this);
-        this.displaySelectedRangeLast = this.displaySelectedRangeLast.bind(this);
-        this.displayBetweenRange = this.displayBetweenRange.bind(this);
-        this.displayDisabled = this.displayDisabled.bind(this);
-        this.returnDateSelected = this.returnDateSelected.bind(this);
-
     }
 
     //Updates the states when the props of the parent component are changed.
@@ -94,7 +61,7 @@ export class Calendar extends Component {
         return ({dateClick: false});
     }
 
-    showMonths() {
+    showMonths = () => {
         this.setState({
             showMonths: !this.state.showMonths,
             showYears: false,
@@ -102,19 +69,19 @@ export class Calendar extends Component {
         });
     }
 
-    displayBetweenRange(day) {
+    displayBetweenRange = (day) => {
         return this.props.enableRangeSelection && this.isDateBetween(day, this.state.arrSelectedDates, this.props.enableRangeSelection) ? 'is-selected-range' : '';
     }
 
-    displaySelectedRangeLast(day) {
+    displaySelectedRangeLast = (day) => {
         return this.props.enableRangeSelection && (this.state.arrSelectedDates[1] !== undefined && this.state.arrSelectedDates[1].getTime() === day.getTime()) ? ' is-selected-range-last' : '';
     }
 
-    displayIsDayOtherMonth(day) {
+    displayIsDayOtherMonth = (day) => {
         return day.getMonth() === this.state.currentDateDisplayed.getMonth() ? '' : '--other-month';
     }
 
-    displayIsSelected(day) {
+    displayIsSelected = (day) => {
         return (this.isSelected(day)
                     || (this.props.enableRangeSelection && ((this.state.arrSelectedDates[0] !== undefined ? this.state.arrSelectedDates[0].getTime() === day.getTime() : false)
                     || (this.state.arrSelectedDates[1] !== undefined ? this.state.arrSelectedDates[1].getTime() === day.getTime() : false))))
@@ -127,16 +94,16 @@ export class Calendar extends Component {
                     && !(this.isDateBetween(day, this.props.disabledDates)) ? 'is-selected' : '';
     }
 
-    displaySelectedRangeFirst(day) {
+    displaySelectedRangeFirst = (day) => {
         return this.props.enableRangeSelection && (this.state.arrSelectedDates[0] !== undefined) && this.state.arrSelectedDates[0].getTime() === day.getTime() ? ' is-selected-range-first ' : '';
     }
 
-    displayDisabled(day) {
+    displayDisabled = (day) => {
         return (this.props.disableWeekends && (day.getDay() === 0 || day.getDay() === 6)) || (this.props.disablePastDates && (this.disableBeforeTodayDate(day))) || (this.props.disableFutureDates && this.disableAfterTodayDate(day)) || (this.disableWeekday(day, this.props.disableWeekday)) || this.disableBeforeDate(day, this.props.disableBeforeDate) || this.disableAfterDate(day, this.props.disableAfterDate) || this.isDateBetween(day, this.props.disabledDates) ? ' is-disabled' : '';
     }
 
 
-    showYears() {
+    showYears = () => {
         this.setState({
             showMonths: false,
             showYears: !this.state.showYears,
@@ -144,13 +111,13 @@ export class Calendar extends Component {
         });
     }
 
-    showNextYears() {
+    showNextYears = () => {
         let copyDate = this.state.currentYear;
         copyDate.setFullYear(copyDate.getFullYear() + 12);
         this.setState({currentYear: copyDate});
     }
 
-    changeMonth(month) {
+    changeMonth = (month) => {
         let date = this.state.currentDateDisplayed;
         let months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
         date.setMonth(months.indexOf(month));
@@ -173,7 +140,7 @@ export class Calendar extends Component {
         }
     }
 
-    changeYear(year) {
+    changeYear = (year) => {
         let date = this.state.currentDateDisplayed;
         date.setFullYear(year);
         if (!this.props.enableRangeSelection) {
@@ -193,7 +160,7 @@ export class Calendar extends Component {
         }
     }
 
-    generateMonths() {
+    generateMonths = () => {
         let months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
         let listOfMonths = months.map(element=>{
             let shortenedNameMonth = '';
@@ -217,7 +184,7 @@ export class Calendar extends Component {
                );
     }
 
-    generateYears() {
+    generateYears = () => {
 
         let year = this.state.currentYear.getFullYear();
         let years = [year];
@@ -238,7 +205,7 @@ export class Calendar extends Component {
         );
     }
 
-    next() {
+    next = () => {
 
         if (this.state.showYears) {
             let copyDate = this.state.currentYear;
@@ -255,7 +222,7 @@ export class Calendar extends Component {
         }
     }
 
-    previous() {
+    previous = () => {
 
         if (this.state.showYears) {
             let copyDate = this.state.currentYear;
@@ -307,35 +274,35 @@ export class Calendar extends Component {
         });
       };
 
-    retrieveStartOfWeek(date) {
+    retrieveStartOfWeek = (date) => {
         let day = date.getDay();
         let difference = date.getDate() - day + (day === 0 ? -6 : 0);
         return new Date(date.setDate(difference));
     }
 
-    returnFirstDayMonth(date) {
+    returnFirstDayMonth = (date) => {
         let firstDay = new Date(date.getFullYear(), date.getMonth(), 1);
         return firstDay;
     }
 
-    returnLastDayMonth(date) {
+    returnLastDayMonth = (date) => {
         let lastDay = new Date(date.getFullYear(), date.getMonth() + 1, 0);
         return lastDay;
     }
 
-    addDays(date, days) {
+    addDays = (date, days) => {
         let result = new Date(date);
         result.setDate(result.getDate() + days);
         return result;
     }
 
-    retrieveEndOfWeek(date) {
+    retrieveEndOfWeek = (date) => {
         let difference = date.getDate() + 6 - date.getDay();
         let newDate = new Date(date.getFullYear(), date.getMonth(), difference);
         return newDate;
     }
 
-    isDateBetween(date, blockedDates, isRangeEnabled) {
+    isDateBetween = (date, blockedDates, isRangeEnabled) => {
 
         if (blockedDates === undefined || blockedDates[0] === undefined || blockedDates[1] === undefined) {
             return false;
@@ -349,13 +316,13 @@ export class Calendar extends Component {
         return blockedDates[0].getTime() < date.getTime() && blockedDates[1].getTime() > date.getTime();
     }
 
-    isSelected(date) {
+    isSelected = (date) => {
         return (this.state.selectedDate.getDate() === date.getDate() &&
         this.state.selectedDate.getMonth() === date.getMonth() &&
         this.state.selectedDate.getFullYear() === date.getFullYear());
     }
 
-    disableWeekday(date, weekDays) {
+    disableWeekday = (date, weekDays) => {
         let daysName = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
         if (weekDays === undefined) {
@@ -368,14 +335,14 @@ export class Calendar extends Component {
         return false;
     }
 
-    disableBeforeDate(date, beforeDate) {
+    disableBeforeDate = (date, beforeDate) => {
         if (beforeDate === undefined) {
             return false;
         }
         return (date.getTime() < beforeDate.getTime());
     }
 
-    disableAfterDate(date, afterDate) {
+    disableAfterDate = (date, afterDate) => {
 
         if (afterDate === undefined) {
             return false;
@@ -383,21 +350,21 @@ export class Calendar extends Component {
         return (date.getTime() > afterDate.getTime());
     }
 
-    disableBeforeTodayDate(date) {
+    disableBeforeTodayDate = (date) => {
         let todayDate = new Date();
         todayDate.setHours(0, 0, 0, 0);
 
         return date.getTime() < todayDate.getTime();
     }
 
-    disableAfterTodayDate(date) {
+    disableAfterTodayDate = (date) => {
         let todayDate = new Date();
         todayDate.setHours(0, 0, 0, 0);
 
         return date.getTime() > todayDate.getTime();
     }
 
-    selectRangeSelection(date) {
+    selectRangeSelection = (date) => {
         let selectedDates = this.state.arrSelectedDates;
         if (selectedDates.length === 2) {
             selectedDates = [];
@@ -411,7 +378,7 @@ export class Calendar extends Component {
         return this.state.arrSelectedDates;
     }
 
-    returnDateSelected(dates) {
+    returnDateSelected = (dates) => {
         if (this.props.onChange !== undefined) {
             if (this.props.enableRangeSelection === true) {
                 this.props.onChange(dates);
@@ -422,7 +389,7 @@ export class Calendar extends Component {
         }
     }
 
-    generateNavigation() {
+    generateNavigation = () => {
         let months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
         return (
@@ -454,7 +421,7 @@ export class Calendar extends Component {
         );
       }
 
-      generateWeekdays() {
+      generateWeekdays = () => {
           let weekDays = [];
           let daysName = ['S', 'M', 'T', 'W', 'T', 'F', 'S'];
 
@@ -470,7 +437,7 @@ export class Calendar extends Component {
 
       }
 
-      generateDays() {
+      generateDays = () => {
         //props that allows the developer to pass their preferences
         let blockedDates = this.props.blockedDates;
         let enableRangeSelection = this.props.enableRangeSelection;
