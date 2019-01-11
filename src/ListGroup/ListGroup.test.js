@@ -90,6 +90,7 @@ describe('<ListGroup />', () => {
         });
 
         xtest('should allow props to be spread to the ListGroupItemCheckbox component', () => {
+            // TODO: placeholder for this test description once that functionality is built
             const element = mount(<ListGroupItemCheckbox data-sample='Sample' />);
 
             expect(
