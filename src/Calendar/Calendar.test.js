@@ -285,23 +285,23 @@ describe('<Calendar />', () => {
         });
 
         xtest('should allow props to be spread to the Calendar component\'s month list ul element', () => {
-            // placeholder for this test description once that functionality is built
+            // TODO: placeholder for this test description once that functionality is built
         });
 
         xtest('should allow props to be spread to the Calendar component\'s year list ul element', () => {
-            // placeholder for this test description once that functionality is built
+            // TODO: placeholder for this test description once that functionality is built
         });
 
         xtest('should allow props to be spread to the Calendar component\'s table element', () => {
-            // placeholder for this test description once that functionality is built
+            // TODO: placeholder for this test description once that functionality is built
         });
 
         xtest('should allow props to be spread to the Calendar component\'s thead element', () => {
-            // placeholder for this test description once that functionality is built
+            // TODO: placeholder for this test description once that functionality is built
         });
 
         xtest('should allow props to be spread to the Calendar component\'s tbody element', () => {
-            // placeholder for this test description once that functionality is built
+            // TODO: placeholder for this test description once that functionality is built
         });
     });
 });

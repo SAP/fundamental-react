@@ -54,15 +54,15 @@ describe('<ComboboxInput />', () => {
         });
 
         xtest('should allow props to be spread to the ComboboxInput component\'s Popover component', () => {
-            // placeholder for this test description once that functionality is built
+            // TODO: placeholder for this test description once that functionality is built
         });
 
         xtest('should allow props to be spread to the ComboboxInput component\'s input element', () => {
-            // placeholder for this test description once that functionality is built
+            // TODO: placeholder for this test description once that functionality is built
         });
 
         xtest('should allow props to be spread to the ComboboxInput component\'s button element', () => {
-            // placeholder for this test description once that functionality is built
+            // TODO: placeholder for this test description once that functionality is built
         });
     });
 });

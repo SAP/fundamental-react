@@ -63,11 +63,11 @@ describe('<Alert />', () => {
         });
 
         xtest('should allow props to be spread to the Alert component\'s button element when dismissable', () => {
-            // placeholder for this test description once that functionality is built
+            // TODO: placeholder for this test description once that functionality is built
         });
 
         xtest('should allow props to be spread to the Alert component\'s a element when link provided', () => {
-            // placeholder for this test description once that functionality is built
+            // TODO: placeholder for this test description once that functionality is built
         });
     });
 });

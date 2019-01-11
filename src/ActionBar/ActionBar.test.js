@@ -105,7 +105,7 @@ describe('<ActionBar />', () => {
         });
 
         xtest('should allow props to be spread to the ActionBarBack component\'s button element', () => {
-            // placeholder for this test description once that functionality is built
+            // TODO: placeholder for this test description once that functionality is built
         });
 
         test('should allow props to be spread to the ActionBarHeader component', () => {
@@ -117,11 +117,11 @@ describe('<ActionBar />', () => {
         });
 
         xtest('should allow props to be spread to the ActionBarHeader component\'s h1 element', () => {
-            // placeholder for this test description once that functionality is built
+            // TODO: placeholder for this test description once that functionality is built
         });
 
         xtest('should allow props to be spread to the ActionBarHeader component\'s p element', () => {
-            // placeholder for this test description once that functionality is built
+            // TODO: placeholder for this test description once that functionality is built
         });
 
         test('should allow props to be spread to the ActionBarActions component', () => {

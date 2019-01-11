@@ -94,7 +94,7 @@ describe('<Button />', () => {
         });
 
         xtest('should allow props to be spread to the ButtonGroup component', () => {
-            // placeholder for this test description once that functionality is built
+            // TODO: placeholder for this test description once that functionality is built
         });
     });
 });
