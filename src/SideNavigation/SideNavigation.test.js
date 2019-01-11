@@ -238,7 +238,7 @@ describe('<SideNavigation />', () => {
             ).toBe('Sample');
         });
 
-        xtest('should allow props to be spread to the SearchInput component\'s h1 element', () => {
+        xtest('should allow props to be spread to the SideNavGroup component\'s h1 element', () => {
             // TODO: placeholder for this test description once that functionality is built
         });
     });
