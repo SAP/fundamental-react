@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { DocsTile, DocsText, Separator, Header, Description, Import, Properties, Menu, MenuList, MenuItem } from '..';
+import { DocsTile, DocsText, Separator, Header, Description, Import, Properties } from '../_playground';
+import { Menu, MenuList, MenuItem } from '../';
 import { Shellbar } from '..';
 var images = require.context('../../assets', true);
 

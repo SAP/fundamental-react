@@ -92,23 +92,8 @@ import { Tree } from '../src/Tree/Tree';
 import { Time } from '../src/Time/Time';
 import { TimePicker } from '../src/TimePicker/TimePicker';
 import { Shellbar } from '../src/Shellbar/Shellbar';
-import { DocsTile, DocsText } from '../src/documentation/DocsTile/DocsTile';
-import { Separator } from '../src/documentation/Separator/Separator';
-import { Header } from '../src/documentation/Header/Header';
-import { Description } from '../src/documentation/Description/Description';
-import { Import } from '../src/documentation/Import/Import';
-import { Properties } from '../src/documentation/Properties/Properties';
-import { Playground } from '../src/documentation/Playground/Playground';
 
 export {
-    DocsTile,
-    DocsText,
-    Separator,
-    Header,
-    Description,
-    Import,
-    Properties,
-    Playground,
     ActionBar,
     ActionBarBack,
     ActionBarHeader,

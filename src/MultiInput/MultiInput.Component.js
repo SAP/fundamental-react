@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { DocsTile, DocsText, Separator, Header, Description, Import, Properties } from '../';
+import { DocsTile, DocsText, Separator, Header, Description, Import, Properties } from '../_playground';
 import { MultiInput } from '../';
 
 export class MultiInputComponent extends Component {

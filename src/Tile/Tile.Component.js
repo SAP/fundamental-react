@@ -16,7 +16,7 @@ import {
     MenuList,
     MenuItem
 } from '../';
-import { DocsTile, DocsText, Separator, Header, Description, Import, Properties, Playground } from '../';
+import { DocsTile, DocsText, Separator, Header, Description, Import, Properties, Playground } from '../_playground';
 
 export const TileComponent = () => {
     const simpleTileCode = `<Tile>

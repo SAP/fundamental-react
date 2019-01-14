@@ -9,7 +9,7 @@ import {
   Import,
   Properties,
   Playground
-} from '../';
+} from '../_playground';
 
 export const IconComponent = () => {
   const iconsCode = `<Icon glyph="cart" size="s" />
