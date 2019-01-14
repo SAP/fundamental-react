@@ -129,7 +129,7 @@ rules:
     #react/no-multi-comp: 2
     react/no-unknown-property: 2
     #react/prop-types: 2
-    #react/react-in-jsx-scope: 2
+    react/react-in-jsx-scope: 2
     react/self-closing-comp: 2
     react/sort-prop-types: [2, { 'callbacksLast' : true, 'ignoreCase' : true, 'requiredFirst' : true, } ]
     semi-spacing: 2
