@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.0.15-rc.11"></a>
+## [0.0.15-rc.11](http://sap.github.io/fundamental-react/compare/v0.0.15-rc.10...v0.0.15-rc.11) (2019-01-14)
+
+
+### Bug Fixes
+
+* testing travis with branch protection - Restrict who can push to matching branches ([789b0d8](http://sap.github.io/fundamental-react/commit/789b0d8))
+
+
+
 <a name="0.0.15-rc.10"></a>
 ## [0.0.15-rc.10](http://sap.github.io/fundamental-react/compare/v0.0.15-rc.9...v0.0.15-rc.10) (2019-01-14)
 
@@ -97,4 +107,3 @@ All notable changes to this project will be documented in this file. See [standa
 * init coverage ([#119](http://sap.github.io/fundamental-react/issues/119)) ([fbb4b08](http://sap.github.io/fundamental-react/commit/fbb4b08))
 * init linting ([#106](http://sap.github.io/fundamental-react/issues/106)) ([e31570f](http://sap.github.io/fundamental-react/commit/e31570f))
 * move lint extend react-app to eslintrc. comment out due to failing rules ([#118](http://sap.github.io/fundamental-react/issues/118)) ([b2a4ac7](http://sap.github.io/fundamental-react/commit/b2a4ac7))
-
