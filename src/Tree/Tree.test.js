@@ -89,7 +89,7 @@ describe('<Tree />', () => {
             {
               displayText: '',
               linkUrl: 'http://me.com'
-            },,
+            },
             'Data Col 2',
             'Data Col 3',
             'INACTIVE'
