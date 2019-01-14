@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.0.15-rc.10"></a>
+## [0.0.15-rc.10](http://sap.github.io/fundamental-react/compare/v0.0.15-rc.9...v0.0.15-rc.10) (2019-01-14)
+
+
+### Bug Fixes
+
+* testing with travis branch protections required ([a1f68e7](http://sap.github.io/fundamental-react/commit/a1f68e7))
+
+
+
 <a name="0.0.15-rc.9"></a>
 ## [0.0.15-rc.9](http://sap.github.io/fundamental-react/compare/v0.0.15-rc.8...v0.0.15-rc.9) (2019-01-14)
 
