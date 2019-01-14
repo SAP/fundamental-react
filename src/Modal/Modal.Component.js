@@ -150,7 +150,6 @@ export class ModalComponent extends Component {
                 <Separator />
 
                 <Properties
-                    type='Inputs'
                     properties={[
                         {
                             name: 'show',
@@ -164,7 +163,8 @@ export class ModalComponent extends Component {
                             name: 'actions',
                             description: 'React.Fragment which contains <Button /> controls to render in the footer'
                         }
-                    ]} />
+                    ]}
+                    type='Inputs' />
 
                 <Separator />
 
@@ -177,8 +177,8 @@ export class ModalComponent extends Component {
                     <button className='fd-button' onClick={this.showHideModal}>
                         Show Information Modal
                     </button>
-                    <Modal show={this.state.bShowInfoModal} title='Product Added'
-                        onClose={this.showHideModal}>
+                    <Modal onClose={this.showHideModal} show={this.state.bShowInfoModal}
+                        title='Product Added'>
                         <div>
                             <b>The new product have been added to your catalog.</b>
                             <br />
@@ -205,17 +205,17 @@ export class ModalComponent extends Component {
                         Show Confirmation Modal
                     </button>
                     <Modal
-                        show={this.state.bShowComfirmModal}
-                        title='Delete'
-                        onClose={this.showHideConfirmModal}
                         actions={
                             <React.Fragment>
-                                <Button type='standard' onclick={() => this.showHideConfirmModal('No Way')}>
+                                <Button onclick={() => this.showHideConfirmModal('No Way')} type='standard'>
                                     No Way
                                 </Button>
                                 <Button onclick={() => this.showHideConfirmModal('Sure')}>Sure</Button>
                             </React.Fragment>
-                        }>
+                        }
+                        onClose={this.showHideConfirmModal}
+                        show={this.state.bShowComfirmModal}
+                        title='Delete'>
                         <div>
                             Do you want to delete item <b>X</b>?
                         </div>
@@ -231,26 +231,26 @@ export class ModalComponent extends Component {
                         Show Form Modal
                     </button>
                     <Modal
-                        show={this.state.bShowFormModal}
-                        title='Invite user'
-                        onClose={this.showHideFormModal}
                         actions={
                             <React.Fragment>
-                                <Button type='standard' onclick={() => this.showHideFormModal('Cancel')}>
+                                <Button onclick={() => this.showHideFormModal('Cancel')} type='standard'>
                                     Cancel
                                 </Button>
                                 <Button onclick={() => this.showHideFormModal('Invite')}>Invite</Button>
                             </React.Fragment>
-                        }>
+                        }
+                        onClose={this.showHideFormModal}
+                        show={this.state.bShowFormModal}
+                        title='Invite user'>
                         <div className='fd-form__group'>
                             <div className='fd-form__item'>
                                 <label className='fd-form__label is-required'>Email</label>
                                 <input
                                     className='fd-form__control'
-                                    type='text'
-                                    value={this.state.emailAddress}
                                     onChange={this.updateEmailAddress}
-                                    ref={this.txtEmailRef} />
+                                    ref={this.txtEmailRef}
+                                    type='text'
+                                    value={this.state.emailAddress} />
                             </div>
                         </div>
                     </Modal>

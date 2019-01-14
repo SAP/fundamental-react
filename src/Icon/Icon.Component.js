@@ -644,7 +644,7 @@ export const IconComponent = () => {
 
   let icons = listOfIcons.map((icon, index) => {
     return (
-        <div key={index} className='demo-icon-wrapper'>
+        <div className='demo-icon-wrapper' key={index}>
             <Icon glyph={icon} size='xl' />
             <h5>sap-icon--{icon}</h5>
         </div>
@@ -665,7 +665,6 @@ export const IconComponent = () => {
           <Separator />
 
           <Properties
-              type='Inputs'
               properties={[
           { name: 'glyph', description: 'string (required) - Icon name.' },
           {
@@ -673,7 +672,8 @@ export const IconComponent = () => {
             description:
               'string - Size of the icon. Options include \'xs\', \'s\', \'compact\', and \'l\'. If no size is provided, default (normal) will be used.'
           }
-        ]} />
+        ]}
+              type='Inputs' />
 
           <Separator />
 

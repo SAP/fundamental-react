@@ -253,23 +253,23 @@ class TimePickerItem extends Component {
         <div className='fd-popover__control'>
             <div className='fd-input-group fd-input-group--after'>
                 <input
-                    type='text'
                     className={this.state.style}
                     id={this.state.inputId}
-                    placeholder={this.props.placeholder}
-                    value={this.props.value}
+                    onBlur={this.onBlur}
                     onChange={this.onChange}
                     onFocus={this.onFocus}
-                    onBlur={this.onBlur}
-                    readOnly={disabled} />
+                    placeholder={this.props.placeholder}
+                    readOnly={disabled}
+                    type='text'
+                    value={this.props.value} />
                 <span className='fd-input-group__addon fd-input-group__addon--after fd-input-group__addon--button '>
                     <button
-                        id={this.state.buttonID}
-                        className='fd-button--light fd-button--compact sap-icon--fob-watch fd-popover__control'
                         aria-controls='rthHR811'
                         aria-expanded='false'
                         aria-haspopup='true'
-                        disabled={disabled} />
+                        className='fd-button--light fd-button--compact sap-icon--fob-watch fd-popover__control'
+                        disabled={disabled}
+                        id={this.state.buttonID} />
                 </span>
             </div>
         </div>
@@ -398,35 +398,35 @@ export class TimePicker extends React.Component {
     const { id, ...props } = this.props;
     const { popoverId, timeId } = this.state;
     return (
-        <div id={id} className='fd-time-picker'>
+        <div className='fd-time-picker' id={id}>
             <div className='fd-popover fd-popover--no-arrow'>
                 <Popover
-                    id={popoverId}
-                    noArrow
+                    body={
+                        <Time
+                            disabled={this.state.disabled}
+                            format12Hours={this.state.format12Hours}
+                            id={timeId}
+                            onChange={this.onChange}
+                            onUpdateTime={this.updateTime}
+                            showHour={this.state.showHour}
+                            showMinute={this.state.showMinute}
+                            showSecond={this.state.showSecond}
+                            time={this.state.time} />
+            }
                     control={
                         <TimePickerItem
                             id={id}
                             {...props}
-                            updateValue={this.updateValue}
-                            time={this.state.time}
-                            value={this.state.value}
+                            disabled={this.state.disabled}
                             onChange={this.onChange}
                             placeholder={this.state.placeholder}
-                            disabled={this.state.disabled}
-                            updateTime={this.updateTime} />
-            }
-                    body={
-                        <Time
-                            id={timeId}
                             time={this.state.time}
-                            showHour={this.state.showHour}
-                            showMinute={this.state.showMinute}
-                            showSecond={this.state.showSecond}
-                            format12Hours={this.state.format12Hours}
-                            disabled={this.state.disabled}
-                            onChange={this.onChange}
-                            onUpdateTime={this.updateTime} />
-            } />
+                            updateTime={this.updateTime}
+                            updateValue={this.updateValue}
+                            value={this.state.value} />
+            }
+                    id={popoverId}
+                    noArrow />
             </div>
         </div>
     );

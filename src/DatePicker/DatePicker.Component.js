@@ -24,7 +24,6 @@ export const DatePickerComponent = () => {
             <Separator />
 
             <Properties
-                type='Inputs'
                 properties={[
                 { name: 'enableRangeSelection', description: 'bool - Enable to select two dates' },
                 {name: 'disableWeekends', description: 'bool - Disable weekends'},
@@ -36,7 +35,8 @@ export const DatePickerComponent = () => {
                 {name: 'blockedDates', description: 'array of dates - Blocks dates that are between in the blocked dates'},
                 {name: 'disabledDates', description: 'array of dates - Disables dates that are between in the disabled dates'},
                 {name: 'enableRangeSelection', description: 'bool - Enable to select two dates'}
-            ]} />
+            ]}
+                type='Inputs' />
 
             <Separator />
 
@@ -45,9 +45,9 @@ export const DatePickerComponent = () => {
                 <div className='fd-doc__margin--datePicker'>
                     <DatePicker disableBeforeDate={new Date(2018, 11, 24, 0, 0, 0, 0)} disableWeekends />
                     <DatePicker
+                        blockedDates={[new Date(2018, 11, 1, 0, 0, 0, 0), new Date(2018, 11, 23, 0, 0, 0, 0)]}
                         compact
-                        disableWeekday={['Monday', 'Tuesday']}
-                        blockedDates={[new Date(2018, 11, 1, 0, 0, 0, 0), new Date(2018, 11, 23, 0, 0, 0, 0)]} />
+                        disableWeekday={['Monday', 'Tuesday']} />
                 </div>
             </DocsTile>
             <DocsText>{defaultDatePickerCode}</DocsText>
@@ -56,9 +56,9 @@ export const DatePickerComponent = () => {
             <h2>Range Date Picker</h2>
             <DocsTile centered>
                 <div className='fd-doc__margin--datePicker'>
-                    <DatePicker enableRangeSelection disableFutureDates />
-                    <DatePicker enableRangeSelection disablePastDates
-                        compact />
+                    <DatePicker disableFutureDates enableRangeSelection />
+                    <DatePicker compact disablePastDates
+                        enableRangeSelection />
                 </div>
             </DocsTile>
             <DocsText>{enableRangeSelectionDatePickerCode}</DocsText>

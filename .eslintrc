@@ -120,7 +120,7 @@ rules:
     react/jsx-max-props-per-line:  [2, { "maximum": 2 }]
     react/jsx-no-undef: 2
     react/jsx-tag-spacing: [2, { "beforeSelfClosing": "always" }]
-    #react/jsx-sort-props: 2
+    react/jsx-sort-props: 2
     react/jsx-uses-react: 2
     react/jsx-uses-vars: 2
     react/jsx-wrap-multilines: 2

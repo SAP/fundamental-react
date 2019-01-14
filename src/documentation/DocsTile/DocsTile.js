@@ -103,17 +103,17 @@ export class DocsText extends Component {
                     style={this.state.showCode
                     ? (this.docsBtnStyle)
                     : (this.docsBtnStyleHiddenCode)}>
-                    <Button option='light' onClick={() => this.handleBtnClick()}>
+                    <Button onClick={() => this.handleBtnClick()} option='light'>
                         {this.state.showCode
                             ? ('Hide Code')
                             : ('Show Code')}
                     </Button>
                     {this.state.showCode
                         ? <Button
-                            style={this.docCopyBtn}
-                            option='light'
                             glyph='copy'
-                            onClick={() => this.copyToClipboard(children)}>Copy</Button>
+                            onClick={() => this.copyToClipboard(children)}
+                            option='light'
+                            style={this.docCopyBtn}>Copy</Button>
                         : ''}
                 </div>
                 {this.state.showCode && <pre style={this.docsTextStyle}>

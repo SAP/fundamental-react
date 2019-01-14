@@ -75,9 +75,9 @@ export class MegaMenuList extends Component {
                         ? ' is-expanded'
                         : ''
                     }`}
-                            to={{ pathname: item.link }}
                             key={item.id}
-                            onClick={e => this.handleSelect(e, item.id)}>
+                            onClick={e => this.handleSelect(e, item.id)}
+                            to={{ pathname: item.link }}>
                             {item.name}
                         </Link>
                 ) : null}
@@ -100,10 +100,10 @@ export class MegaMenuList extends Component {
 
                     {item.hasChild ? (
                         <ul
-                            className='fd-mega-menu__sublist'
-                            id={item.id}
+                            aria-expanded={this.state.itemStates[item.id]}
                             aria-hidden={!this.state.itemStates[item.id]}
-                            aria-expanded={this.state.itemStates[item.id]}>
+                            className='fd-mega-menu__sublist'
+                            id={item.id}>
                             {item.child.map(ch => {
                       return (
                           <li className='fd-mega-menu__subitem' key={ch.id}>
@@ -114,9 +114,9 @@ export class MegaMenuList extends Component {
                                   ? ' is-selected'
                                   : ''
                               }`}
-                                      to={{ pathname: ch.link }}
                                       key={ch.id}
-                                      onClick={e => this.handleSelectChild(e, ch.id)}>
+                                      onClick={e => this.handleSelectChild(e, ch.id)}
+                                      to={{ pathname: ch.link }}>
                                       {ch.name}
                                   </Link>
                           ) : null}

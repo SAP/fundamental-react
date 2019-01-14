@@ -31,7 +31,6 @@ export const PaginationComponent = () => {
           <Separator />
 
           <Properties
-              type='Inputs'
               properties={[
           {
             name: 'itemsTotal',
@@ -63,7 +62,8 @@ export const PaginationComponent = () => {
             description:
               'string (default: "items") - String to display next to the total number of items.'
           }
-        ]} />
+        ]}
+              type='Inputs' />
 
           <Separator />
 
@@ -84,7 +84,7 @@ export const PaginationComponent = () => {
         When the last page is active, the Next arrow should be disabled.
           </Description>
           <DocsTile centered>
-              <Pagination itemsTotal={101} initialPage={11}
+              <Pagination initialPage={11} itemsTotal={101}
                   onClick={handleClick} />
           </DocsTile>
           <DocsText>
@@ -95,7 +95,7 @@ export const PaginationComponent = () => {
           <h2>Items per Page</h2>
           <Description>Set how many items per page.</Description>
           <DocsTile centered>
-              <Pagination itemsTotal={101} itemsPerPage={25}
+              <Pagination itemsPerPage={25} itemsTotal={101}
                   onClick={handleClick} />
           </DocsTile>
           <DocsText>
@@ -109,7 +109,7 @@ export const PaginationComponent = () => {
           <h2>Set Initial Page</h2>
           <Description>Set initial page to be selected</Description>
           <DocsTile centered>
-              <Pagination itemsTotal={101} initialPage={6}
+              <Pagination initialPage={6} itemsTotal={101}
                   onClick={handleClick} />
           </DocsTile>
           <DocsText>
@@ -123,8 +123,8 @@ export const PaginationComponent = () => {
           </Description>
           <DocsTile centered>
               <Pagination
-                  itemsTotal={101}
                   displayTotal={false}
+                  itemsTotal={101}
                   onClick={handleClick} />
           </DocsTile>
           <DocsText>

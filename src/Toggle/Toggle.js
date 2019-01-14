@@ -26,11 +26,11 @@ export class Toggle extends React.Component {
               size ? ' fd-toggle--' + size : ''
             } fd-form__control`}>
                     <input
-                        type='checkbox'
-                        id={id}
                         checked={this.state.checked}
+                        disabled={disabled}
+                        id={id}
                         onChange={this.handleChange}
-                        disabled={disabled} />
+                        type='checkbox' />
                     <span className='fd-toggle__switch' role='presentation' />
                 </span>
                 {children}

@@ -381,12 +381,12 @@ export class DatePicker extends Component {
                             className={`fd-input${
                   this.props.compact ? ' fd-input--compact' : ''
                 }`}
-                            type='text'
-                            placeholder='mm/dd/yyyy'
-                            onClick={() => this.openCalendar('input')}
-                            value={this.state.formattedDate}
                             onChange={this.modifyDate}
-                            onKeyPress={this.sendUpdate} />
+                            onClick={() => this.openCalendar('input')}
+                            onKeyPress={this.sendUpdate}
+                            placeholder='mm/dd/yyyy'
+                            type='text'
+                            value={this.state.formattedDate} />
                         <span className='fd-input-group__addon fd-input-group__addon--after fd-input-group__addon--button'>
                             <button
                                 className='fd-popover__control fd-button--light sap-icon--calendar'
@@ -395,24 +395,24 @@ export class DatePicker extends Component {
                     </div>
                 </div>
                 <div
-                    className='fd-popover__body fd-popover__body--right fd-popover__body--no-arrow'
-                    aria-hidden={this.state.hidden}>
+                    aria-hidden={this.state.hidden}
+                    className='fd-popover__body fd-popover__body--right fd-popover__body--no-arrow'>
                     <Calendar
-                        onChange={this.updateDate}
-                        enableRangeSelection={enableRangeSelection}
-                        disableWeekends={disableWeekends}
-                        disableBeforeDate={disableBeforeDate}
-                        disableAfterDate={disableAfterDate}
-                        disableWeekday={disableWeekday}
-                        disablePastDates={disablePastDates}
-                        disableFutureDates={disableFutureDates}
                         blockedDates={blockedDates}
-                        disabledDates={disabledDates}
                         customDate={
-                enableRangeSelection
-                  ? this.state.arrSelectedDates
-                  : this.state.selectedDate
-              } />
+                              enableRangeSelection
+                                ? this.state.arrSelectedDates
+                                : this.state.selectedDate
+                            }
+                        disableAfterDate={disableAfterDate}
+                        disableBeforeDate={disableBeforeDate}
+                        disableFutureDates={disableFutureDates}
+                        disablePastDates={disablePastDates}
+                        disableWeekday={disableWeekday}
+                        disableWeekends={disableWeekends}
+                        disabledDates={disabledDates}
+                        enableRangeSelection={enableRangeSelection}
+                        onChange={this.updateDate} />
                 </div>
             </div>
         </div>

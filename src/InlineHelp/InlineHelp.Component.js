@@ -22,7 +22,6 @@ export const InlineHelpComponent = () => {
             <Separator />
 
             <Properties
-                type='Inputs'
                 properties={[
                     {
                         name: 'text',
@@ -32,7 +31,8 @@ export const InlineHelpComponent = () => {
                         name: 'placement',
                         description: 'string (required) - Location for where to display the inline help pop-up. Options include:  \'bottom-right\', \'bottom-left\', \'bottom-center\', \'right\', and \'left\' '
                     }
-                ]} />
+                ]}
+                type='Inputs' />
 
             <Separator />
 
@@ -40,7 +40,7 @@ export const InlineHelpComponent = () => {
             <Description>The default positioning of inline help component is bottom right.</Description>
             <DocsTile centered>
                 Bottom Right (Default) &nbsp;
-                <InlineHelp text='Lorem ipsum dolor sit amet, consectetur adipiscing.' placement='bottom-right' />
+                <InlineHelp placement='bottom-right' text='Lorem ipsum dolor sit amet, consectetur adipiscing.' />
             </DocsTile>
             <DocsText>{defaultHelpPlacement}</DocsText>
 
@@ -49,7 +49,7 @@ export const InlineHelpComponent = () => {
             <h2>Bottom Left Position</h2>
             <DocsTile centered>
                 Bottom Left &nbsp;
-                <InlineHelp text='Lorem ipsum dolor sit amet, consectetur adipiscing.' placement='bottom-left' />
+                <InlineHelp placement='bottom-left' text='Lorem ipsum dolor sit amet, consectetur adipiscing.' />
             </DocsTile>
             <DocsText>{bottomLeftHelpPlacement}</DocsText>
 
@@ -58,7 +58,7 @@ export const InlineHelpComponent = () => {
             <h2>Bottom Center Position</h2>
             <DocsTile centered>
                 Bottom Center &nbsp;
-                <InlineHelp text='Lorem ipsum dolor sit amet, consectetur adipiscing.' placement='bottom-center' />
+                <InlineHelp placement='bottom-center' text='Lorem ipsum dolor sit amet, consectetur adipiscing.' />
             </DocsTile>
             <DocsText>{centerHelpPlacement}</DocsText>
 
@@ -67,7 +67,7 @@ export const InlineHelpComponent = () => {
             <h2>Right Position</h2>
             <DocsTile centered>
                 Right &nbsp;
-                <InlineHelp text='Lorem ipsum dolor sit amet, consectetur adipiscing.' placement='right' />
+                <InlineHelp placement='right' text='Lorem ipsum dolor sit amet, consectetur adipiscing.' />
             </DocsTile>
             <DocsText>{rightHelpPlacement}</DocsText>
 
@@ -76,7 +76,7 @@ export const InlineHelpComponent = () => {
             <h2>Left Position</h2>
             <DocsTile centered>
                 Left &nbsp;
-                <InlineHelp text='Lorem ipsum dolor sit amet, consectetur adipiscing.' placement='left' />
+                <InlineHelp placement='left' text='Lorem ipsum dolor sit amet, consectetur adipiscing.' />
             </DocsTile>
             <DocsText>{leftHelpPlacement}</DocsText>
 

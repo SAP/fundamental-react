@@ -11,18 +11,18 @@ describe('<Pagination />', () => {
     const initialSetPagination = (
         <Pagination
             className='blue'
-            itemsTotal={101}
             initalPage={5}
+            itemsTotal={101}
             onClick={handleClick} />
     );
 
     const itemsPerPagePagination = (
-        <Pagination itemsTotal={101} itemsPerPage={25}
+        <Pagination itemsPerPage={25} itemsTotal={101}
             onClick={handleClick} />
     );
 
     const hideTotalItemsPagination = (
-        <Pagination itemsTotal={101} displayTotal={false}
+        <Pagination displayTotal={false} itemsTotal={101}
             onClick={handleClick} />
     );
 
@@ -32,7 +32,7 @@ describe('<Pagination />', () => {
     );
 
     const itemsPerPageZeroPagination = (
-        <Pagination itemsTotal={101} itemsPerPage={0}
+        <Pagination itemsPerPage={0} itemsTotal={101}
             onClick={handleClick} />
     );
 

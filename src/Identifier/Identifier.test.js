@@ -4,25 +4,25 @@ import renderer from 'react-test-renderer';
 import { Identifier } from './Identifier';
 
 describe('<Identifier />', () => {
-    const defaultIcon = <Identifier size='s' glyph='washing-machine' />;
+    const defaultIcon = <Identifier glyph='washing-machine' size='s' />;
     const initials = (
-        <Identifier size='m' label='Wendy Wallace'>
+        <Identifier label='Wendy Wallace' size='m'>
             WW
         </Identifier>
     );
     const circle = (
-        <Identifier size='m' glyph='washing-machine'
-            modifier='circle' />
+        <Identifier glyph='washing-machine' modifier='circle'
+            size='m' />
     );
     const transparent = (
         <Identifier
-            glyph='washing-machine'
             className='blue'
+            glyph='washing-machine'
             modifier='transparent'
             size='m' />
     );
-    const accentColor = (<Identifier size='m' glyph='money-bills'
-        color={9} />);
+    const accentColor = (<Identifier color={9} glyph='money-bills'
+        size='m' />);
 
     const bgImage = (
         <Identifier

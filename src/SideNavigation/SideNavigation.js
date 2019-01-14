@@ -68,9 +68,9 @@ export class SideNavList extends Component {
                         ? ' is-expanded'
                         : ''
                     }`}
-                            to={{ pathname: item.link }}
                             key={item.id}
-                            onClick={e => this.handleSelect(e, item.id)}>
+                            onClick={e => this.handleSelect(e, item.id)}
+                            to={{ pathname: item.link }}>
                             {item.glyph ? (
                                 <span
                                     className={`fd-side-nav__icon${' sap-icon--' +
@@ -105,10 +105,10 @@ export class SideNavList extends Component {
 
                     {item.hasChild ? (
                         <ul
-                            className='fd-side-nav__sublist'
-                            id={item.id}
+                            aria-expanded={this.state.itemStates[item.id]}
                             aria-hidden={!this.state.itemStates[item.id]}
-                            aria-expanded={this.state.itemStates[item.id]}>
+                            className='fd-side-nav__sublist'
+                            id={item.id}>
                             {item.child.map(ch => {
                       return (
                           <React.Fragment key={ch.id}>
@@ -119,9 +119,9 @@ export class SideNavList extends Component {
                                   ? ' is-selected'
                                   : ''
                               }`}
-                                      to={{ pathname: ch.link }}
                                       key={ch.id}
-                                      onClick={e => this.handleSelectChild(e, ch.id)}>
+                                      onClick={e => this.handleSelectChild(e, ch.id)}
+                                      to={{ pathname: ch.link }}>
                                       {ch.name}
                                   </Link>
                           ) : null}

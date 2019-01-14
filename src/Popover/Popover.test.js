@@ -8,7 +8,6 @@ import { Popover } from './Popover';
 describe('<Popover />', () => {
     const popOver = (
         <Popover
-            control={<Icon glyph='cart' size='xl' />}
             body={
                 <Menu>
                     <MenuList>
@@ -18,14 +17,12 @@ describe('<Popover />', () => {
                         <MenuItem url='/'>Option 4</MenuItem>
                     </MenuList>
                 </Menu>
-            } />
+            }
+            control={<Icon glyph='cart' size='xl' />} />
     );
 
     const popOverDisabled = (
         <Popover
-            className='blue'
-            control={<Icon glyph='cart' size='xl' />}
-            disabled
             body={
                 <Menu>
                     <MenuList>
@@ -35,13 +32,15 @@ describe('<Popover />', () => {
                         <MenuItem url='/'>Option 4</MenuItem>
                     </MenuList>
                 </Menu>
-            } />
+            }
+            className='blue'
+            control={<Icon glyph='cart' size='xl' />}
+            disabled />
     );
 
     const popOverWithAlignment = (
         <Popover
             alignment='right'
-            control={<Icon glyph='cart' size='xl' />}
             body={
                 <Menu>
                     <MenuList>
@@ -51,13 +50,12 @@ describe('<Popover />', () => {
                         <MenuItem url='/'>Option 4</MenuItem>
                     </MenuList>
                 </Menu>
-            } />
+            }
+            control={<Icon glyph='cart' size='xl' />} />
     );
 
     const popOverNoArrow = (
         <Popover
-            control={<Icon glyph='cart' size='xl' />}
-            noArrow
             body={
                 <Menu>
                     <MenuList>
@@ -67,7 +65,9 @@ describe('<Popover />', () => {
                         <MenuItem url='/'>Option 4</MenuItem>
                     </MenuList>
                 </Menu>
-            } />
+            }
+            control={<Icon glyph='cart' size='xl' />}
+            noArrow />
     );
 
     test('create Popover', () => {

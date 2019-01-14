@@ -7,105 +7,105 @@ import { Button } from '../Button/Button';
 describe('<InputGroup />', () => {
     const inputTextPosBefore = (
         <InputGroup
-            inputType='text'
+            addon='$'
             addonPos='before'
-            inputValue='1234567890'
-            addon='$' />
+            inputType='text'
+            inputValue='1234567890' />
     );
     const inputTextPosAfter = (
         <InputGroup
-            inputType='text'
+            addon='€'
             addonPos='after'
-            inputValue='1234567890'
-            addon='€' />
+            inputType='text'
+            inputValue='1234567890' />
     );
     const inputTextPosBeforeCompact = (
         <InputGroup
-            inputType='text'
-            addonPos='before'
-            inputValue='1234567890'
             addon='$'
-            compact />
+            addonPos='before'
+            compact
+            inputType='text'
+            inputValue='1234567890' />
     );
     const inputTextPosAfterCompact = (
         <InputGroup
-            inputType='text'
-            addonPos='after'
-            inputValue='1234567890'
             addon='€'
-            compact />
+            addonPos='after'
+            compact
+            inputType='text'
+            inputValue='1234567890' />
     );
     const numberInput = <InputGroup inputType='number' inputValue={100} />;
     const numberInputCompact = (
-        <InputGroup inputType='number' inputValue={100}
-            compact />
+        <InputGroup compact inputType='number'
+            inputValue={100} />
     );
     const searchText = (
-        <InputGroup inputType='search' inputPlaceholder='Search Term' />
+        <InputGroup inputPlaceholder='Search Term' inputType='search' />
     );
     const searchTextCompact = (
         <InputGroup
-            inputType='search'
-            inputValue='search me'
+            compact
             inputPlaceholder='Search Term'
-            compact />
+            inputType='search'
+            inputValue='search me' />
     );
     const inputWithIcon = (
         <InputGroup
-            inputType='text'
             addonPos='before'
-            inputValue='1234567890'
-            glyph='globe' />
+            glyph='globe'
+            inputType='text'
+            inputValue='1234567890' />
     );
     const inputWithIconCompact = (
         <InputGroup
-            inputType='text'
             addonPos='before'
-            inputValue='1234567890'
+            compact
             glyph='globe'
-            compact />
+            inputType='text'
+            inputValue='1234567890' />
     );
     const inputWithIconAfter = (
         <InputGroup
-            inputType='text'
             addonPos='after'
-            inputValue='1234567890'
-            glyph='hide' />
+            glyph='hide'
+            inputType='text'
+            inputValue='1234567890' />
     );
     const inputWithIconAfterCompact = (
         <InputGroup
-            inputType='text'
             addonPos='after'
-            inputValue='1234567890'
+            compact
             glyph='hide'
-            compact />
+            inputType='text'
+            inputValue='1234567890' />
     );
     const inputWithActions = (
         <InputGroup
-            inputType='text'
+            actions
             addonPos='after'
-            inputValue='1234567890'
-            actions>
+            inputType='text'
+            inputValue='1234567890'>
             <Button option='light'>Button</Button>
         </InputGroup>
     );
     const inputWithActionsCompact = (
         <InputGroup
-            inputType='text'
-            addonPos='after'
-            inputValue='1234567890'
             actions
-            compact>
+            addonPos='after'
+            compact
+            inputType='text'
+            inputValue='1234567890'>
             <Button option='light'>Button</Button>
         </InputGroup>
     );
 
     const inputWithActionsNoButtons = (
         <InputGroup
-            inputType='text'
+            actions
             addonPos='before'
-            inputValue='1234567890'
-            actions />
+            inputType='text'
+            inputValue='1234567890' />
     );
     const formGroup = <FormGroup>{inputTextPosAfter}</FormGroup>;
 

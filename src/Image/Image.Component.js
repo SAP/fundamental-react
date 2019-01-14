@@ -21,7 +21,6 @@ export const ImageComponent = () => {
             <Separator />
 
             <Properties
-                type='Inputs'
                 properties={[
                     {
                         name: 'size',
@@ -30,16 +29,17 @@ export const ImageComponent = () => {
                     },
                     { name: 'photo', description: 'string (required) - picture url.' },
                     { name: 'type', description: 'string - When set to \'circle\' renders a round image.' }
-                ]} />
+                ]}
+                type='Inputs' />
 
             <Separator />
 
             <h2>Sizes</h2>
             <DocsTile centered>
                 <div className='fd-doc__margin--image'>
-                    <Image size='s' photo='https://placeimg.com/400/400/nature' />
-                    <Image size='m' photo='https://placeimg.com/400/400/nature' />
-                    <Image size='l' photo='https://placeimg.com/400/400/nature' />
+                    <Image photo='https://placeimg.com/400/400/nature' size='s' />
+                    <Image photo='https://placeimg.com/400/400/nature' size='m' />
+                    <Image photo='https://placeimg.com/400/400/nature' size='l' />
                 </div>
             </DocsTile>
             <DocsText>{sizesImageCode}</DocsText>
@@ -49,12 +49,12 @@ export const ImageComponent = () => {
             <h2>Shapes</h2>
             <DocsTile centered>
                 <div className='fd-doc__margin--image'>
-                    <Image size='s' type='circle'
-                        photo='https://placeimg.com/400/400/nature' />
-                    <Image size='m' type='circle'
-                        photo='https://placeimg.com/400/400/nature' />
-                    <Image size='l' type='circle'
-                        photo='https://placeimg.com/400/400/nature' />
+                    <Image photo='https://placeimg.com/400/400/nature' size='s'
+                        type='circle' />
+                    <Image photo='https://placeimg.com/400/400/nature' size='m'
+                        type='circle' />
+                    <Image photo='https://placeimg.com/400/400/nature' size='l'
+                        type='circle' />
                 </div>
             </DocsTile>
             <DocsText>{shapesImageCode}</DocsText>
@@ -79,8 +79,8 @@ export const ImageComponent = () => {
                         'enum': ['', 'circle']
                     }
                 ]}>
-                <Image size='s' type=''
-                    photo='https://placeimg.com/400/400/nature' />
+                <Image photo='https://placeimg.com/400/400/nature' size='s'
+                    type='' />
             </Playground>
         </div>
     );

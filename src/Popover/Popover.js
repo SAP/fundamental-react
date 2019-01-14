@@ -79,17 +79,17 @@ export class Popover extends Component {
         }}
             {...rest}>
             <div
-                className='fd-popover__control'
+                aria-controls={id}
                 aria-expanded={this.state.isExpanded}
-                onClick={this.triggerBody}
-                aria-controls={id}>
+                className='fd-popover__control'
+                onClick={this.triggerBody}>
                 {control}
             </div>
             <div
+                aria-hidden={!this.state.isExpanded}
                 className={`fd-popover__body${
             alignment ? ' fd-popover__body--' + alignment : ''
           }${noArrow ? ' fd-popover__body--no-arrow' : ''}`}
-                aria-hidden={!this.state.isExpanded}
                 id={id}>
                 {body}
             </div>

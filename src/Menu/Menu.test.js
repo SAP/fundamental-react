@@ -9,7 +9,7 @@ describe('<Menu />', () => {
         <Menu>
             <MenuList>
                 <MenuItem url='/'>Option 1</MenuItem>
-                <MenuItem url='/' isLink>
+                <MenuItem isLink url='/'>
                     Option 2
                 </MenuItem>
                 <MenuItem url='/'>Option 3</MenuItem>
@@ -24,8 +24,8 @@ describe('<Menu />', () => {
             <Menu className='blue'>
                 <MenuList className='blue'>
                     <MenuItem link='/'>Option 1</MenuItem>
-                    <MenuItem className='blue' link='/'
-                        isLink>
+                    <MenuItem className='blue' isLink
+                        link='/'>
                         Option 2
                     </MenuItem>
                     <MenuItem link='/'>Option 3</MenuItem>
@@ -72,7 +72,7 @@ describe('<Menu />', () => {
             <Menu addonBefore>
                 <MenuList>
                     <MenuItem link='/'>Option 1</MenuItem>
-                    <MenuItem link='/' addon='accept'>
+                    <MenuItem addon='accept' link='/'>
                         Option 2
                     </MenuItem>
                     <MenuItem link='/'>Option 3</MenuItem>

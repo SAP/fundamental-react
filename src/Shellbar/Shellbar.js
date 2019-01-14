@@ -115,7 +115,7 @@ export class Shellbar extends Component {
                     {logo && <a className='fd-shellbar__logo'>{logo}</a>}
                     {logoSAP && (
                         <a className='fd-shellbar__logo'>
-                            <img src='//unpkg.com/fiori-fundamentals/dist/images/sap-logo.png' alt='SAP' />
+                            <img alt='SAP' src='//unpkg.com/fiori-fundamentals/dist/images/sap-logo.png' />
                         </a>
                     )}
                     <div className='fd-shellbar__product'>
@@ -124,13 +124,6 @@ export class Shellbar extends Component {
                             <div className='fd-product-menu'>
                                 <Popover
                                     alignment='right'
-                                    control={
-                                        <button className='fd-product-menu__control'>
-                                            <span className='fd-shellbar__title fd-product-menu__title'>
-                                                {productTitle}
-                                            </span>
-                                        </button>
-                                    }
                                     body={
                                         productMenu && (
                                             <Menu>
@@ -138,10 +131,10 @@ export class Shellbar extends Component {
                                                     {productMenu.map((item, index) => {
                                                         return (
                                                             <MenuItem
-                                                                onclick={item.callback}
-                                                                url={item.url}
+                                                                key={index}
                                                                 link={item.link}
-                                                                key={index} >
+                                                                onclick={item.callback}
+                                                                url={item.url} >
                                                                 {item.glyph && (
                                                                     <React.Fragment>
                                                                         <Icon glyph={item.glyph} size={item.size} />
@@ -155,6 +148,13 @@ export class Shellbar extends Component {
                                                 </MenuList>
                                             </Menu>
                                         )
+                                    }
+                                    control={
+                                        <button className='fd-product-menu__control'>
+                                            <span className='fd-shellbar__title fd-product-menu__title'>
+                                                {productTitle}
+                                            </span>
+                                        </button>
                                     } />
                             </div>
                         )}
@@ -164,9 +164,9 @@ export class Shellbar extends Component {
                 {copilot ? (
                     <div className='fd-shellbar__group fd-shellbar__group--middle'>
                         <img
-                            src='//unpkg.com/fiori-fundamentals/dist/images/copilot.png'
                             alt='CoPilot'
                             height='30'
+                            src='//unpkg.com/fiori-fundamentals/dist/images/copilot.png'
                             width='30' />
                     </div>
                 ) : null}
@@ -176,9 +176,9 @@ export class Shellbar extends Component {
                             <div className='fd-shellbar__action fd-shellbar__action--collapsible'>
                                 <SearchInput
                                     inShellbar
+                                    onEnter={searchInput.onSearch}
                                     placeholder={searchInput.placeholder}
-                                    searchList={searchInput.searchList}
-                                    onEnter={searchInput.onSearch} />
+                                    searchList={searchInput.searchList} />
                             </div>
                         )}
                         {actions &&
@@ -188,30 +188,30 @@ export class Shellbar extends Component {
                                         {action.menu ? (
                                             <Popover
                                                 alignment='right'
+                                                body={action.menu}
                                                 control={
                                                     <button
-                                                        className={` fd-button--shell sap-icon--${action.glyph}`}
-                                                        aria-label={action.label} >
+                                                        aria-label={action.label}
+                                                        className={` fd-button--shell sap-icon--${action.glyph}`} >
                                                         {action.notificationCount > 0 && (
                                                             <span
-                                                                className='fd-counter fd-counter--notification'
-                                                                aria-label='Unread count' >
+                                                                aria-label='Unread count'
+                                                                className='fd-counter fd-counter--notification' >
                                                                 {action.notificationCount}
                                                             </span>
                                                         )}
                                                     </button>
-                                                }
-                                                body={action.menu} />
+                                                } />
                                         ) : (
                                             <button
+                                                aria-label={action.label}
                                                 className={` fd-button--shell sap-icon--${action.glyph}`}
                                                 key={index}
-                                                aria-label={action.label}
                                                 onClick={action.callback} >
                                                 {action.notificationCount > 0 && (
                                                     <span
-                                                        className='fd-counter fd-counter--notification'
-                                                        aria-label='Unread count' >
+                                                        aria-label='Unread count'
+                                                        className='fd-counter fd-counter--notification' >
                                                         {action.notificationCount}
                                                     </span>
                                                 )}
@@ -224,24 +224,24 @@ export class Shellbar extends Component {
                                (notifications.notificationsBody || notifications.noNotificationsBody) ? (
                                    <Popover
                                        alignment='right'
+                                       body={
+                                            ((notifications.notificationCount > 0) && notifications.notificationsBody) ||
+                                            ((notifications.notificationCount <= 0) && notifications.noNotificationsBody)
+                                    }
                                        control={
                                            <div className='fd-shellbar__action fd-shellbar__action--collapsible'>
-                                               <button className=' fd-button--shell sap-icon--bell' aria-label='Notifications'>
-                                                   {(notifications.notificationCount > 0) && <span className='fd-counter fd-counter--notification' aria-label='Unread count'>
+                                               <button aria-label='Notifications' className=' fd-button--shell sap-icon--bell'>
+                                                   {(notifications.notificationCount > 0) && <span aria-label='Unread count' className='fd-counter fd-counter--notification'>
                                                        {notifications.notificationCount}
                                                    </span>}
                                                </button>
                                            </div>
-                                        }
-                                       body={
-                                            ((notifications.notificationCount > 0) && notifications.notificationsBody) ||
-                                            ((notifications.notificationCount <= 0) && notifications.noNotificationsBody)
-                                    } />
+                                        } />
                                ) : (
                                    <div className='fd-shellbar__action fd-shellbar__action--collapsible'>
-                                       <button className=' fd-button--shell sap-icon--bell' aria-label='Notifications'
+                                       <button aria-label='Notifications' className=' fd-button--shell sap-icon--bell'
                                            onClick={notifications.callback}>
-                                           {(notifications.notificationCount > 0) && <span className='fd-counter fd-counter--notification' aria-label='Unread count'>
+                                           {(notifications.notificationCount > 0) && <span aria-label='Unread count' className='fd-counter fd-counter--notification'>
                                                {notifications.notificationCount}
                                            </span>}
                                        </button>
@@ -253,15 +253,6 @@ export class Shellbar extends Component {
                                 <div className='fd-shellbar-collapse'>
                                     <Popover
                                         alignment='right'
-                                        control={
-                                            <div className='fd-shellbar-collapse--control' role='button'>
-                                                <button className=' fd-button--shell sap-icon--overflow'>
-                                                    <span
-                                                        className='fd-counter fd-counter--notification'
-                                                        aria-label='Unread count'> {this.state.totalNotifications > 0 && this.state.totalNotifications} </span>
-                                                </button>
-                                            </div>
-                                        }
                                         body={
                                             <Menu>
                                                 {!this.state.showCollapsedProductSwitcherMenu ? (
@@ -269,10 +260,10 @@ export class Shellbar extends Component {
                                                         {this.state.collapsedActions.map((item, index) => {
                                                             return (
                                                                 <MenuItem
-                                                                    onclick={item.callback}
-                                                                    url={item.url}
+                                                                    key={index}
                                                                     link={item.link}
-                                                                    key={index} >
+                                                                    onclick={item.callback}
+                                                                    url={item.url} >
                                                                     <Icon glyph={item.glyph}>
                                                                         {item.notificationCount > 0 && <Counter notification>{item.notificationCount}</Counter>}
                                                                     </Icon> {item.label}
@@ -290,10 +281,10 @@ export class Shellbar extends Component {
                                                         {productSwitcherList.map((item, index) => {
                                                             return (
                                                                 <MenuItem
-                                                                    onclick={item.callback}
-                                                                    url={item.url}
+                                                                    key={index}
                                                                     link={item.link}
-                                                                    key={index} >
+                                                                    onclick={item.callback}
+                                                                    url={item.url} >
                                                                     <Icon glyph={item.glyph} /> {item.title}
                                                                 </MenuItem>
                                                             );
@@ -301,6 +292,15 @@ export class Shellbar extends Component {
                                                     </MenuList>
                                                 )}
                                             </Menu>
+                                        }
+                                        control={
+                                            <div className='fd-shellbar-collapse--control' role='button'>
+                                                <button className=' fd-button--shell sap-icon--overflow'>
+                                                    <span
+                                                        aria-label='Unread count'
+                                                        className='fd-counter fd-counter--notification'> {this.state.totalNotifications > 0 && this.state.totalNotifications} </span>
+                                                </button>
+                                            </div>
                                         } />
                                 </div>
                             </div>
@@ -310,20 +310,6 @@ export class Shellbar extends Component {
                                 <div className='fd-user-menu'>
                                     <Popover
                                         alignment='right'
-                                        control={
-                                            profile.image ? (
-                                                <Identifier
-                                                    size='xs'
-                                                    modifier='circle'
-                                                    backgroundImageUrl={profile.image} />
-                                            ) : (
-                                                <Identifier size='xs'
-                                                    modifier='circle'
-                                                    color={profile.colorAccent}>
-                                                    {profile.initials}
-                                                </Identifier>
-                                            )
-                                        }
                                         body={
                                             profileMenu && (
                                                 <Menu>
@@ -332,10 +318,10 @@ export class Shellbar extends Component {
                                                         {profileMenu.map((item, index) => {
                                                             return (
                                                                 <MenuItem
-                                                                    onclick={item.callback}
-                                                                    url={item.url}
+                                                                    key={index}
                                                                     link={item.link}
-                                                                    key={index} >
+                                                                    onclick={item.callback}
+                                                                    url={item.url} >
                                                                     {item.glyph && (
                                                                         <React.Fragment>
                                                                             <Icon glyph={item.glyph} size={item.size} />
@@ -349,6 +335,20 @@ export class Shellbar extends Component {
                                                     </MenuList>
                                                 </Menu>
                                             )
+                                        }
+                                        control={
+                                            profile.image ? (
+                                                <Identifier
+                                                    backgroundImageUrl={profile.image}
+                                                    modifier='circle'
+                                                    size='xs' />
+                                            ) : (
+                                                <Identifier color={profile.colorAccent}
+                                                    modifier='circle'
+                                                    size='xs'>
+                                                    {profile.initials}
+                                                </Identifier>
+                                            )
                                         } />
                                 </div>
                             </div>
@@ -358,16 +358,15 @@ export class Shellbar extends Component {
                                 <div className='fd-product-switcher'>
                                     <Popover
                                         alignment='right'
-                                        control={<button className=' fd-button--shell sap-icon--grid' />}
                                         body={
                                             <div className='fd-product-switcher__body'>
                                                 <nav>
                                                     <ul>
                                                         {productSwitcherList.map((item, index) => {
                                                             return (
-                                                                <li onClick={item.callback} key={index}>
+                                                                <li key={index} onClick={item.callback}>
                                                                     <span className='fd-product-switcher__product-icon'>
-                                                                        <img src={item.image} alt={item.title} />
+                                                                        <img alt={item.title} src={item.image} />
                                                                     </span>
                                                                     <span className='fd-product-switcher__product-title'>
                                                                         {item.title}
@@ -378,7 +377,8 @@ export class Shellbar extends Component {
                                                     </ul>
                                                 </nav>
                                             </div>
-                                        } />
+                                        }
+                                        control={<button className=' fd-button--shell sap-icon--grid' />} />
                                 </div>
                             </div>
                         )}
