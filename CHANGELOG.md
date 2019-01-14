@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.0.15-rc.13"></a>
+## [0.0.15-rc.13](http://sap.github.io/fundamental-react/compare/v0.0.15-rc.12...v0.0.15-rc.13) (2019-01-14)
+
+
+### Bug Fixes
+
+* enable eslint strict equality (eqeqeq) ([01cc3a4](http://sap.github.io/fundamental-react/commit/01cc3a4))
+
+
+
 <a name="0.0.15-rc.12"></a>
 ## [0.0.15-rc.12](http://sap.github.io/fundamental-react/compare/v0.0.15-rc.11...v0.0.15-rc.12) (2019-01-14)
 
