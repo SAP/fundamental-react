@@ -25,5 +25,8 @@ hash_upstream=$(git rev-parse $git_branch@{upstream})
 
 set -o errexit
 
+git config --global user.email "fundamental@sap.com"
+git config --global user.name "fundamental-bot"
+
 npm run std-version:release
 git push --follow-tags origin
