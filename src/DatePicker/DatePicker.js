@@ -315,8 +315,6 @@ export class DatePicker extends Component {
   };
 
   updateDate(date) {
-    console.log('Inside updateDate function. The event is: ', date);
-
     if (this.props.enableRangeSelection) {
       if (date.length == 2) {
         let firstDateMonth = date[0].getMonth() + 1;
