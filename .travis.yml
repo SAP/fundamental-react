@@ -22,3 +22,6 @@ notifications:
   email:
     on_failure: always
     on_success: change
+  slack: 
+    rooms:
+      - sap-cx:7BuyQb8wfQuvZrBOpaBYgX6z#fui-react-automated
