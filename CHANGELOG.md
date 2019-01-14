@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.0.15-rc.14"></a>
+## [0.0.15-rc.14](http://sap.github.io/fundamental-react/compare/v0.0.15-rc.13...v0.0.15-rc.14) (2019-01-14)
+
+
+### Bug Fixes
+
+* enable eslint rule brace style ([#180](http://sap.github.io/fundamental-react/issues/180)) ([7ca2a47](http://sap.github.io/fundamental-react/commit/7ca2a47))
+
+
+
 <a name="0.0.15-rc.13"></a>
 ## [0.0.15-rc.13](http://sap.github.io/fundamental-react/compare/v0.0.15-rc.12...v0.0.15-rc.13) (2019-01-14)
 
