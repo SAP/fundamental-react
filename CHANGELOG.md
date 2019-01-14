@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.0.15-rc.8"></a>
+## [0.0.15-rc.8](http://sap.github.io/fundamental-react/compare/v0.0.15-rc.7...v0.0.15-rc.8) (2019-01-14)
+
+
+### Bug Fixes
+
+* remove newline on readme ([c30c59b](http://sap.github.io/fundamental-react/commit/c30c59b))
+
+
+
 <a name="0.0.15-rc.7"></a>
 ## [0.0.15-rc.7](http://sap.github.io/fundamental-react/compare/v0.0.15-rc.6...v0.0.15-rc.7) (2019-01-14)
 
