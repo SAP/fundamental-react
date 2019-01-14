@@ -508,26 +508,35 @@ export class Calendar extends Component {
 
       }
 
+      _renderContent = () => {
+          if (this.state.showMonths) {
+              return this.generateMonths();
+          }
+
+          if (this.state.showYears) {
+              return this.generateYears();
+          }
+
+          return (
+              <div className='fd-calendar__dates'>
+                  <table className='fd-calendar__table'>
+                      <thead className='fd-calendar__group'>
+                          {this.generateWeekdays()}
+                      </thead>
+                      {this.generateDays()}
+                  </table>
+              </div>
+          );
+      }
 
       render() {
         const { enableRangeSelection, disableWeekends, disableBeforeDate, disableAfterDate, disableWeekday, disablePastDates, disableFutureDates, blockedDates, disabledDates, customDate, className, ...props } = this.props;
+
         return (
             <div className={`fd-calendar${className ? ' ' + className : ''}`} {...props}>
                 {this.generateNavigation()}
                 <div className='fd-calendar__content'>
-                    {
-                this.state.showMonths ? this.generateMonths() :
-                this.state.showYears ? this.generateYears() :
-                <div className='fd-calendar__dates'>
-                    <table className='fd-calendar__table'>
-                        <thead className='fd-calendar__group'>
-                            {this.generateWeekdays()}
-                        </thead>
-                        {this.generateDays()}
-                    </table>
-                </div>
-            }
-
+                    {this._renderContent()}
                 </div>
             </div>
         );

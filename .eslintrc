@@ -96,7 +96,7 @@ rules:
     no-mixed-spaces-and-tabs: 2
     no-multi-spaces: 2
     no-negated-in-lhs: 2
-    #no-nested-ternary: 2
+    no-nested-ternary: 2
     no-obj-calls: 2
     no-regex-spaces: 2
     #no-shadow: 2
