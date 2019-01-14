@@ -18,7 +18,7 @@ plugins:
     - react
 
 rules:
-    #brace-style: 2
+    brace-style: 2
     camelcase: 2
     comma-dangle: [2, 'never']
     comma-spacing: 2
@@ -27,7 +27,7 @@ rules:
     default-case: 2
     dot-notation: 2
     eol-last: 2
-    #eqeqeq: 2
+    eqeqeq: 2
     guard-for-in: 2
     handle-callback-err: 2
     ie11/no-collection-args: 2
