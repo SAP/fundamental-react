@@ -18,7 +18,7 @@ plugins:
     - react
 
 rules:
-    #brace-style: 2
+    brace-style: 2
     camelcase: 2
     comma-dangle: [2, 'never']
     comma-spacing: 2
