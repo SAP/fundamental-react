@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.0.15-rc.12"></a>
+## [0.0.15-rc.12](http://sap.github.io/fundamental-react/compare/v0.0.15-rc.11...v0.0.15-rc.12) (2019-01-14)
+
+
+### Bug Fixes
+
+* add code coverage tracking with coveralls ([#176](http://sap.github.io/fundamental-react/issues/176)) ([7d596ef](http://sap.github.io/fundamental-react/commit/7d596ef))
+
+
+
 <a name="0.0.15-rc.11"></a>
 ## [0.0.15-rc.11](http://sap.github.io/fundamental-react/compare/v0.0.15-rc.10...v0.0.15-rc.11) (2019-01-14)
 
