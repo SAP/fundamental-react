@@ -10,10 +10,9 @@ export class Tree extends Component {
       expandAllClicked: false,
       numberOfElements: 0
     };
-    this.openAllList = this.openAllList.bind(this);
   }
 
-  updateVisibility(selected) {
+  updateVisibility = selected => {
     return () => {
       let modifiedStates = this.state.iStates;
       if (modifiedStates[selected]) {
@@ -26,9 +25,9 @@ export class Tree extends Component {
         iStates: modifiedStates
       });
     };
-  }
+  };
 
-  openAllList(treeData, e, numberOfElements = 0) {
+  openAllList = (treeData, e, numberOfElements = 0) => {
     let modifiedStates = this.state.iStates;
 
     if (this.state.numberOfElements === 0) {
@@ -64,10 +63,10 @@ export class Tree extends Component {
       expandAllClicked: !this.state.expandAllClicked,
       numberOfElements: numberOfElements
     });
-  }
+  };
 
   //Going to loop recursively through each key, until it hits the bottom(when there's no more children)
-  createTreeList(treeData, isChild, depthLevel = 0) {
+  createTreeList = (treeData, isChild, depthLevel = 0) => {
     const trees = treeData.map(row => {
       const parent = row.values.map((element, index) => {
         //Checks if it has children and is first element
@@ -172,7 +171,7 @@ export class Tree extends Component {
     });
 
     return trees;
-  }
+  };
 
   render() {
     const { headers, treeData } = this.props;

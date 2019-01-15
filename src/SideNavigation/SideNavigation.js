@@ -17,8 +17,6 @@ SideNav.propTypes = {
 export class SideNavList extends Component {
   constructor(props) {
     super(props);
-    this.handleSelect = this.handleSelect.bind(this);
-    this.handleSelectChild = this.handleSelectChild.bind(this);
 
     let initialState = [];
 
@@ -38,24 +36,26 @@ export class SideNavList extends Component {
     };
   }
 
-  handleSelectChild(e, id) {
+  handleSelectChild = (e, id) => {
     this.setState({
       selectedItem: id
     });
-  }
+  };
 
-  handleSelect(e, id) {
+  handleSelect = (e, id) => {
     let iStates = Object.assign({}, this.state.itemStates);
     iStates[id] = !iStates[id];
     this.setState({ itemStates: iStates });
     this.setState({ selectedItem: id });
-  }
+  };
 
   render() {
     const { items, className, ...rest } = this.props;
     return (
         <BrowserRouter>
-            <ul className={`fd-side-nav__list${className ? ' ' + className : ''}`} {...rest}>
+            <ul
+                className={`fd-side-nav__list${className ? ' ' + className : ''}`}
+                {...rest}>
                 {items.map(item => {
             return (
                 <li className='fd-side-nav__item' key={item.id}>
@@ -160,7 +160,9 @@ SideNavList.propTypes = {
 export const SideNavGroup = props => {
   const { title, children, className, ...rest } = props;
   return (
-      <div className={`fd-side-nav__group${className ? ' ' + className : ''}`} {...rest}>
+      <div
+          className={`fd-side-nav__group${className ? ' ' + className : ''}`}
+          {...rest}>
           <h1 className='fd-side-nav__title'>{title}</h1>
           {children}
       </div>
@@ -168,6 +170,6 @@ export const SideNavGroup = props => {
 };
 
 SideNavGroup.propTypes = {
-    className: PropTypes.string,
-    title: PropTypes.string
+  className: PropTypes.string,
+  title: PropTypes.string
 };

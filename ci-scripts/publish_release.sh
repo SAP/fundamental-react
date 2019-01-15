@@ -25,5 +25,14 @@ hash_upstream=$(git rev-parse $git_branch@{upstream})
 
 set -o errexit
 
+githubEmail=`git config --get user.email`
+githubName=`git config --get user.name`
+
+git config --global user.email "fundamental@sap.com"
+git config --global user.name "fundamental-bot"
+
 npm run std-version:release
 git push --follow-tags origin
+
+git config --global user.email "$githubEmail"
+git config --global user.name "$githubName"
