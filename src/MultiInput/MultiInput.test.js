@@ -38,7 +38,7 @@ describe('<MultiInput />', () => {
 
     let wrapper;
 
-    const getListStatus = (wrapper, bIsShown) => {
+    const getListStatus = (bIsShown) => {
         const combobox = wrapper.find(
             `div.fd-combobox-control[aria-expanded=${bIsShown}]`
         );
@@ -55,23 +55,23 @@ describe('<MultiInput />', () => {
     });
 
     // create a default multi-input control
-    test('create multi-input', () => {
+    xtest('create multi-input', () => {
         const component = renderer.create(multiInput);
         const tree = component.toJSON();
 
         // todo: multi-input uses randon number for some elements which cause snapshot to fail
         // todo: work on testing solution
-        // expect(tree).toMatchSnapshot();
+        expect(tree).toMatchSnapshot();
     });
 
     // create a compact multi-input control
-    test('create compact multi-input', () => {
+    xtest('create compact multi-input', () => {
         const component = renderer.create(compactMultiInput);
         const tree = component.toJSON();
 
         // todo: multi-input uses randon number for some elements which cause snapshot to fail
         // todo: work on testing solution
-        // expect(tree).toMatchSnapshot();
+        expect(tree).toMatchSnapshot();
     });
 
     // check that the tag list is hidden
@@ -80,7 +80,7 @@ describe('<MultiInput />', () => {
         expect(wrapper.state(['bShowList'])).toBe(false);
 
         // check to see if list is not shown
-        let results = getListStatus(wrapper, false);
+        let results = getListStatus(false);
         expect(results.combobox).toHaveLength(1);
         expect(results.popover).toHaveLength(1);
     });
@@ -91,7 +91,7 @@ describe('<MultiInput />', () => {
         expect(wrapper.state(['bShowList'])).toBe(false);
 
         // check to see if list is not shown
-        let results = getListStatus(wrapper, false);
+        let results = getListStatus(false);
         expect(results.combobox).toHaveLength(1);
         expect(results.popover).toHaveLength(1);
 
@@ -102,7 +102,7 @@ describe('<MultiInput />', () => {
         expect(wrapper.state(['bShowList'])).toBe(true);
 
         // check to see if list is shown
-        results = getListStatus(wrapper, true);
+        results = getListStatus(true);
         expect(results.combobox).toHaveLength(1);
         expect(results.popover).toHaveLength(1);
     });
@@ -113,7 +113,7 @@ describe('<MultiInput />', () => {
         expect(wrapper.state(['bShowList'])).toBe(false);
 
         // check to see if list is not shown
-        let results = getListStatus(wrapper, false);
+        let results = getListStatus(false);
         expect(results.combobox).toHaveLength(1);
         expect(results.popover).toHaveLength(1);
 
@@ -126,7 +126,7 @@ describe('<MultiInput />', () => {
         expect(wrapper.state(['bShowList'])).toBe(true);
 
         // check to see if list is shown
-        results = getListStatus(wrapper, true);
+        results = getListStatus(true);
         expect(results.combobox).toHaveLength(1);
         expect(results.popover).toHaveLength(1);
     });

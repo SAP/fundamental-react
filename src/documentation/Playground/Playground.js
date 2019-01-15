@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Alert } from '../../';
 import { Badge, Label, Status } from '../../';
-import { Button, ButtonGroup } from '../../';
+import { Button } from '../../';
 import { Dropdown } from '../../';
 import { Icon } from '../../';
 import { Identifier } from '../../';
