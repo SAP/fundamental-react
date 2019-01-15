@@ -16,8 +16,8 @@ export const Table = props => {
                 {tableData.map((row, index) => {
                     return (
                         <tr key={index}>
-                            {row.rowData.map((rowData, index) => {
-                                return <td key={index}>{rowData}</td>;
+                            {row.rowData.map((rowData, cellIndex) => {
+                                return <td key={cellIndex}>{rowData}</td>;
                             })}
                         </tr>
                     );

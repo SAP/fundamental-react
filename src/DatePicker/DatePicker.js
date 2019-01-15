@@ -114,12 +114,12 @@ export class DatePicker extends Component {
 
           //Checks if the input is actually numbers and follows the required form
           if (
-            (firstYearRange !== NaN ||
-              firstDateRange !== NaN ||
-              firstMonthRange !== NaN) &&
-            (secondYearRange !== NaN ||
-              secondDateRange !== NaN ||
-              secondMonthRange !== NaN) &&
+              (!isNaN(firstYearRange) ||
+              !isNaN(firstDateRange) ||
+              !isNaN(firstMonthRange)) &&
+              (!isNaN(secondYearRange) ||
+              !isNaN(secondDateRange) ||
+              !isNaN(secondMonthRange)) &&
             (1 <= firstDateRange && firstDateRange <= 31) &&
             (1 < firstMonthRange && firstMonthRange <= 12) &&
             firstYearRange <= 3000 &&
@@ -168,7 +168,7 @@ export class DatePicker extends Component {
           let month = parseInt(dateSeparated[0], 10);
 
           if (
-            (year !== NaN || date !== NaN || month !== NaN) &&
+              (!isNaN(year) || !isNaN(date) || !isNaN(month)) &&
             (1 <= date && date <= 31) &&
             (1 < month && month <= 12) &&
             year <= 3000
@@ -231,12 +231,12 @@ export class DatePicker extends Component {
         let secondMonthRange = parseInt(dateSeparatedSecondRange[0], 10);
 
         if (
-          (firstYearRange !== NaN ||
-            firstDateRange !== NaN ||
-            firstMonthRange !== NaN) &&
-          (secondYearRange !== NaN ||
-            secondDateRange !== NaN ||
-            secondMonthRange !== NaN) &&
+            (!isNaN(firstYearRange) ||
+            !isNaN(firstDateRange) ||
+            !isNaN(firstMonthRange)) &&
+            (!isNaN(secondYearRange) ||
+            !isNaN(secondDateRange) ||
+            !isNaN(secondMonthRange)) &&
           (1 <= firstDateRange && firstDateRange <= 31) &&
           (1 < firstMonthRange && firstMonthRange <= 12) &&
           firstYearRange <= 3000 &&
@@ -290,7 +290,7 @@ export class DatePicker extends Component {
         let month = parseInt(dateSeparated[0], 10);
 
         if (
-          (year !== NaN || date !== NaN || month !== NaN) &&
+            (!isNaN(year) || !isNaN(date) || !isNaN(month)) &&
           (1 <= date && date <= 31) &&
           (1 < month && month <= 12) &&
           year <= 3000
