@@ -72,7 +72,7 @@ rules:
     loosely-restrict-imports/loosely-restrict-imports: [2, '.jsx']
     new-cap: 2
     no-cond-assign: 2
-    #no-console: 2
+    no-console: 2
     no-constant-condition: 2
     no-control-regex: 2
     no-debugger: 2
@@ -101,7 +101,7 @@ rules:
     no-regex-spaces: 2
     #no-shadow: 2
     no-spaced-func: 2
-    #no-sparse-arrays: 2
+    no-sparse-arrays: 2
     no-trailing-spaces: 2
     no-undef: 2
     #no-undefined: 2
@@ -110,7 +110,7 @@ rules:
     #no-unused-vars: [2, { ignoreRestSiblings: true }]
     quote-props: [2, 'as-needed', { 'keywords': true, 'unnecessary': false }]
     quotes: [2, 'single']
-    #radix: 2
+    radix: 2
     react/display-name: 2
     react/jsx-boolean-value: 2
     react/jsx-closing-bracket-location: [2, 'after-props']
@@ -129,7 +129,7 @@ rules:
     #react/no-multi-comp: 2
     react/no-unknown-property: 2
     #react/prop-types: 2
-    #react/react-in-jsx-scope: 2
+    react/react-in-jsx-scope: 2
     react/self-closing-comp: 2
     react/sort-prop-types: [2, { 'callbacksLast' : true, 'ignoreCase' : true, 'requiredFirst' : true, } ]
     semi-spacing: 2
