@@ -28,16 +28,14 @@ export class TabComponent extends Component {
       selectedTab: '1',
       tabStates: initialStates
     };
-
-    this.handleTabSelection = this.handleTabSelection.bind(this);
   }
 
-  handleTabSelection(e, id) {
+  handleTabSelection = (e, id) => {
     let iStates = Object.assign({}, this.state.tabStates);
     iStates[id.id] = !iStates[id.id];
     this.setState({ tabStates: iStates });
     this.setState({ selectedTab: id.id });
-  }
+  };
 
   render() {
     const { ids, className, ...rest } = this.props;
