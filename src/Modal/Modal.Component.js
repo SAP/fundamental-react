@@ -94,7 +94,7 @@ export class ModalComponent extends Component {
                 bShowComfirmModal: !prevState.bShowComfirmModal
             }),
             () => {
-                if (typeof response !== 'object' && response !== undefined) {
+                if (typeof response !== 'object' && typeof response !== 'undefined') {
                     alert(`You selected - ${response}`);
                 }
             }
@@ -108,7 +108,7 @@ export class ModalComponent extends Component {
                 bShowFormModal: !prevState.bShowFormModal
             }),
             () => {
-                if (typeof response !== 'object' && response !== undefined) {
+                if (typeof response !== 'object' && typeof response !== 'undefined') {
                     if (response.toLowerCase() === 'invite' && this.state.emailAddress !== '') {
                         alert(`Invite sent to ${this.state.emailAddress}`);
                     }
