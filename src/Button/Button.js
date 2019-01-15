@@ -19,7 +19,7 @@ export const Button = ({
 }) => {
     const buttonClasses = classnames(
         {
-            'fd-button': !!option,
+            'fd-button': !!option === false,
             'fd-button--emphasized': option === 'emphasized',
             'fd-button--light': option === 'light',
             'fd-button--shell': option === 'shell',
@@ -36,6 +36,7 @@ export const Button = ({
         },
         className
     );
+
     return (<button className={buttonClasses} {...props}
         disabled={disabled ? disabled : false} onClick={onClick}
         selected={selected ? selected : false} type={typeAttr}>

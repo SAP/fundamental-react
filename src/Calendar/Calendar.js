@@ -68,7 +68,7 @@ export class Calendar extends Component {
     }
 
     displayBetweenRange = (day) => {
-        return this.props.enableRangeSelection && this.isDateBetween(day, this.state.arrSelectedDates, this.props.enableRangeSelection);
+        return this.props.enableRangeSelection && this.isDateBetween(day, this.state.arrSelectedDates, this.props.enableRangeSelection) ? 'is-selected-range' : '';
     }
 
     displaySelectedRangeLast = (day) => {
@@ -76,7 +76,7 @@ export class Calendar extends Component {
     }
 
     displayIsDayOtherMonth = (day) => {
-        return day.getMonth() === this.state.currentDateDisplayed.getMonth();
+        return day.getMonth() === this.state.currentDateDisplayed.getMonth() ? '' : '--other-month';
     }
 
     displayIsSelected = (day) => {
@@ -89,7 +89,7 @@ export class Calendar extends Component {
                     && !(this.disableWeekday(day, this.props.disableWeekday))
                     && !(this.props.disablePastDates && (this.disableBeforeTodayDate(day)))
                     && !(this.props.disableFutureDates && this.disableAfterTodayDate(day))
-                    && !(this.isDateBetween(day, this.props.disabledDates));
+                    && !(this.isDateBetween(day, this.props.disabledDates)) ? 'is-selected' : '';
     }
 
     displaySelectedRangeFirst = (day) => {
@@ -97,7 +97,7 @@ export class Calendar extends Component {
     }
 
     displayDisabled = (day) => {
-        return (this.props.disableWeekends && (day.getDay() === 0 || day.getDay() === 6)) || (this.props.disablePastDates && (this.disableBeforeTodayDate(day))) || (this.props.disableFutureDates && this.disableAfterTodayDate(day)) || (this.disableWeekday(day, this.props.disableWeekday)) || this.disableBeforeDate(day, this.props.disableBeforeDate) || this.disableAfterDate(day, this.props.disableAfterDate) || this.isDateBetween(day, this.props.disabledDates);
+        return (this.props.disableWeekends && (day.getDay() === 0 || day.getDay() === 6)) || (this.props.disablePastDates && (this.disableBeforeTodayDate(day))) || (this.props.disableFutureDates && this.disableAfterTodayDate(day)) || (this.disableWeekday(day, this.props.disableWeekday)) || this.disableBeforeDate(day, this.props.disableBeforeDate) || this.disableAfterDate(day, this.props.disableAfterDate) || this.isDateBetween(day, this.props.disabledDates) ? ' is-disabled' : '';
     }
 
 
@@ -549,7 +549,6 @@ export class Calendar extends Component {
             'fd-calendar',
             className
         );
-
         return (
             <div className={calendarClasses} {...props}>
                 {this.generateNavigation()}
