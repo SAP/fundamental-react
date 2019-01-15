@@ -28,7 +28,7 @@ export class MultiInputComponent extends Component {
     }
 
     performTagsUpdate = aTags => {
-        console.log(aTags);
+        // console.log(aTags);
     };
 
     multiInputCode = `<MultiInput
