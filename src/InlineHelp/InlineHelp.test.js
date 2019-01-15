@@ -4,7 +4,6 @@ import renderer from 'react-test-renderer';
 import { InlineHelp } from './InlineHelp';
 
 describe('<InlineHelp />', () => {
-    const handleClick = jest.fn();
     const defaultInlineHelp = (
         <InlineHelp
             className='blue'

@@ -105,18 +105,6 @@ describe('<SideNavigation />', () => {
         </SideNav>
     );
 
-    const sideNavList = (
-        <SideNavList
-            items={[
-                { id: 'item-1', url: '#', glyph: 'home' },
-                { id: 'item-2', url: '#', glyph: 'home' },
-                { id: 'item-3', url: '#', glyph: 'home' },
-                { id: 'item-4', url: '#', glyph: 'home' },
-                { id: 'item-5', url: '#', glyph: 'home' },
-                { id: 'item-6', link: '/', glyph: 'home' }
-            ]} />
-    );
-
     test('create side navigation', () => {
         // create one level side nav
         let component = renderer.create(oneLevelSideNav);
