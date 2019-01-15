@@ -118,9 +118,9 @@ export class ModalComponent extends Component {
                 if (this.state.bShowFormModal) {
                     this.txtEmailRef.current.focus();
                 } else {
-                    this.setState(prevState => ({
+                    this.setState({
                         emailAddress: ''
-                    }));
+                    });
                 }
             }
         );
@@ -129,9 +129,9 @@ export class ModalComponent extends Component {
     updateEmailAddress = event => {
         const newEmail = event.target.value;
 
-        this.setState(prevState => ({
+        this.setState({
             emailAddress: newEmail
-        }));
+        });
     };
 
     render() {

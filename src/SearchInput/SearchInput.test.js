@@ -135,7 +135,7 @@ describe('<SearchInput />', () => {
         expect(wrapper.state('isExpanded')).toBeTruthy();
 
         // enter text into search input
-        const itemClicked = wrapper
+        wrapper
             .find('.fd-menu__item')
             .at(0)
             .simulate('click', searchData[0]);

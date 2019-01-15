@@ -32,7 +32,7 @@ export class Tree extends Component {
 
     if (this.state.numberOfElements === 0) {
       treeData.map(row => {
-        row.values.forEach(element => {
+        row.values.forEach(() => {
           ++numberOfElements;
         });
         if (row.hasChildren) {

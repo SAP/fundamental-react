@@ -31,7 +31,7 @@ export class MultiInput extends Component {
   };
 
   // create tag elements to display below input box
-  createTags = tags => {
+  createTags = () => {
     return this.state.tags.map((tag, index) => (
         <span
             key={index}
@@ -104,7 +104,14 @@ export class MultiInput extends Component {
   };
 
   render() {
-    const { placeHolder, data, compact, className, ...rest} = this.props;
+    const {
+      placeHolder,
+      data,
+      compact,
+      className,
+      onTagsUpdate,
+      ...rest
+    } = this.props;
 
     const inputGroupClassNames = `fd-input-group fd-input-group--after${
       compact ? ' fd-input-group--compact' : ''
@@ -113,7 +120,9 @@ export class MultiInput extends Component {
     const inputClassNames = `fd-input${compact ? ' fd-input--compact' : ''}`;
 
     return (
-        <div className={`fd-multi-input${className ? ' ' + className : ''}`} {...rest}>
+        <div
+            className={`fd-multi-input${className ? ' ' + className : ''}`}
+            {...rest}>
             <div className='fd-multi-input-field'>
                 <div className='fd-popover'>
                     <div className='fd-popover__control'>
