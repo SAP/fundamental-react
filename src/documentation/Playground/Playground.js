@@ -54,9 +54,8 @@ export class Playground extends Component {
       this.setState({
         childs: childsProperties
       });
-    }
     //Used for badge and label.
-    else if (event.target.name === 'component') {
+    } else if (event.target.name === 'component') {
       let childsProperties = Object.assign({}, this.state.childs);
       childsProperties[event.target.name] = event.target.value;
       this.setState({
