@@ -12,6 +12,7 @@ parser: 'babel-eslint'
 #extends: 'react-app'
 
 plugins:
+    - compat
     - ie11
     - jsx-a11y
     - loosely-restrict-imports
@@ -23,7 +24,7 @@ rules:
     comma-dangle: [2, 'never']
     comma-spacing: 2
     comma-style: [2, 'last']
-    #compat/compat: 2
+    compat/compat: 2
     default-case: 2
     dot-notation: 2
     eol-last: 2

@@ -9,6 +9,7 @@
 // This link also includes instructions on opting out of this behavior.
 
 /* eslint-disable no-console */
+/* eslint-disable compat/compat */
 
 const isLocalhost = Boolean(
   window.location.hostname === 'localhost' ||
