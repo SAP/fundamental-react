@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.0.15-rc.32"></a>
+## [0.0.15-rc.32](https://github.com/SAP/fundamental-react/compare/v0.0.15-rc.31...v0.0.15-rc.32) (2019-01-15)
+
+
+### Bug Fixes
+
+* enable compat/compat eslint rule ([#212](https://github.com/SAP/fundamental-react/issues/212)) ([c0bdb61](https://github.com/SAP/fundamental-react/commit/c0bdb61))
+
+
+
 <a name="0.0.15-rc.31"></a>
 ## [0.0.15-rc.31](https://github.com/SAP/fundamental-react/compare/v0.0.15-rc.30...v0.0.15-rc.31) (2019-01-15)
 
