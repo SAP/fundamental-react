@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.0.15-rc.15"></a>
+## [0.0.15-rc.15](http://sap.github.io/fundamental-react/compare/v0.0.15-rc.14...v0.0.15-rc.15) (2019-01-15)
+
+
+### Bug Fixes
+
+* update components to use arrow function syntax ([#172](http://sap.github.io/fundamental-react/issues/172)) ([f7aa1aa](http://sap.github.io/fundamental-react/commit/f7aa1aa))
+
+
+
 <a name="0.0.15-rc.14"></a>
 ## [0.0.15-rc.14](http://sap.github.io/fundamental-react/compare/v0.0.15-rc.13...v0.0.15-rc.14) (2019-01-14)
 
