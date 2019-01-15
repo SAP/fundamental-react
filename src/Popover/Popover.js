@@ -5,38 +5,40 @@ import PropTypes from 'prop-types';
 export class Popover extends Component {
   constructor(props) {
     super(props);
-    this.triggerBody = this.triggerBody.bind(this);
-    this.pressEsc = this.pressEsc.bind(this);
-    this.handleOutsideClick = this.handleOutsideClick.bind(this);
+
     this.state = {
       isExpanded: false,
       isDisabled: this.props.disabled
     };
   }
 
-  triggerBody() {
+  triggerBody = () => {
     if (!this.state.isDisabled) {
       if (!this.state.isExpanded) {
         document.addEventListener('mousedown', this.handleOutsideClick, false);
       } else {
-        document.removeEventListener('mousedown', this.handleOutsideClick, false);
+        document.removeEventListener(
+          'mousedown',
+          this.handleOutsideClick,
+          false
+        );
       }
 
       this.setState(prevState => ({
         isExpanded: !prevState.isExpanded
       }));
     }
-  }
+  };
 
-  pressEsc(event) {
+  pressEsc = event => {
     if (event.keyCode === 27 && this.state.isExpanded === true) {
       this.setState({
         isExpanded: false
       });
     }
-  }
+  };
 
-  handleOutsideClick(e) {
+  handleOutsideClick = e => {
     if (this.node && !this.node.contains(e.target)) {
       if (this.state.isExpanded) {
         this.setState({
@@ -46,7 +48,7 @@ export class Popover extends Component {
         return;
       }
     }
-  }
+  };
 
   componentDidMount() {
     document.addEventListener('keydown', this.pressEsc, false);
@@ -58,13 +60,24 @@ export class Popover extends Component {
   }
 
   render() {
-    const { id, alignment, noArrow, control, body, className, ...rest } = this.props;
+    const {
+      id,
+      alignment,
+      noArrow,
+      control,
+      body,
+      className,
+      ...rest
+    } = this.props;
     return (
         <div
-            className={`fd-popover${alignment ? ' fd-popover--' + alignment : ''}${className ? ' ' + className : ''}`}
+            className={`fd-popover${alignment ? ' fd-popover--' + alignment : ''}${
+          className ? ' ' + className : ''
+        }`}
             ref={node => {
           this.node = node;
-        }} {...rest}>
+        }}
+            {...rest}>
             <div
                 className='fd-popover__control'
                 aria-expanded={this.state.isExpanded}
