@@ -24,4 +24,4 @@ notifications:
     on_success: change
   slack: 
     rooms:
-      - sap-cx:7BuyQb8wfQuvZrBOpaBYgX6z#fui-react-automated
+      - ui-fundamentals:fFy5cWVWsUZoJ9gyxSGRJXC3#react-automated
