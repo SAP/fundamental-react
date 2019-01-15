@@ -78,3 +78,4 @@ This library is licensed under the Apache Software License, v. 2 except as noted
 
 -   [Angular implementation of SAP Fiori Fundamentals](https://github.com/SAP/fundamental-ngx)
 -   [Vue implementation of SAP Fiori Fundamentals](https://github.com/SAP/fundamental-vue)
+ 
