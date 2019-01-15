@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.0.15-rc.23"></a>
+## [0.0.15-rc.23](https://github.com/SAP/fundamental-react/compare/v0.0.15-rc.22...v0.0.15-rc.23) (2019-01-15)
+
+
+### Bug Fixes
+
+* eslint react in jsx scope ([#202](https://github.com/SAP/fundamental-react/issues/202)) ([2dbbe57](https://github.com/SAP/fundamental-react/commit/2dbbe57))
+
+
+
 <a name="0.0.15-rc.22"></a>
 ## [0.0.15-rc.22](https://github.com/SAP/fundamental-react/compare/v0.0.15-rc.21...v0.0.15-rc.22) (2019-01-15)
 
