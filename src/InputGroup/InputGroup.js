@@ -9,11 +9,6 @@ export const FormGroup = props => {
 export class InputGroup extends Component {
   constructor(props) {
     super(props);
-    this.handleUp = this.handleUp.bind(this);
-    this.handleDown = this.handleDown.bind(this);
-    this.handleClear = this.handleClear.bind(this);
-    this.handleChange = this.handleChange.bind(this);
-    this.handleTextChange = this.handleTextChange.bind(this);
 
     this.state = {
       value: this.props.inputValue || '',
@@ -21,40 +16,40 @@ export class InputGroup extends Component {
     };
   }
 
-  handleUp(e) {
+  handleUp = e => {
     e.preventDefault();
     this.setState({
       value: this.state.value + 1
     });
-  }
+  };
 
-  handleDown(e) {
+  handleDown = e => {
     e.preventDefault();
     this.setState({
       value: this.state.value - 1
     });
-  }
+  };
 
-  handleClear(e) {
+  handleClear = e => {
     e.preventDefault();
     this.setState({
       searchValue: ''
     });
-  }
+  };
 
-  handleChange(e) {
+  handleChange = e => {
     e.preventDefault();
     this.setState({
       searchValue: e.target.value
     });
-  }
+  };
 
-  handleTextChange(e) {
+  handleTextChange = e => {
     e.preventDefault();
     this.setState({
       value: e.target.value
     });
-  }
+  };
 
   render() {
     const {

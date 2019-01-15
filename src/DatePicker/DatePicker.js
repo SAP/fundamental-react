@@ -12,11 +12,6 @@ export class DatePicker extends Component {
       arrSelectedDates: [],
       formattedDate: ''
     };
-
-    this.updateDate = this.updateDate.bind(this);
-    this.modifyDate = this.modifyDate.bind(this);
-    this.sendUpdate = this.sendUpdate.bind(this);
-    this.formatDate = this.formatDate.bind(this);
   }
 
   openCalendar = type => {
@@ -29,12 +24,12 @@ export class DatePicker extends Component {
     }
   };
 
-  modifyDate(e) {
+  modifyDate = (e) => {
     this.setState({ formattedDate: e.target.value });
   }
 
   //This is being used only when the user presses enter or clicks outside of the component
-  formatDate(date) {
+  formatDate = (date) => {
     let regex = /[!$%^&*()_+|~=`{}\[\]:'<>?,.\a-zA-Z]/;
     let formatDate = '';
     if (this.props.enableRangeSelection) {
@@ -85,7 +80,7 @@ export class DatePicker extends Component {
     return formatDate;
   }
 
-  sendUpdate(e) {
+  sendUpdate = (e) => {
     let regex = /[!$%^&*()_+|~=`{}\[\]:'<>?,.\a-zA-Z]/;
     if (e.key === 'Enter') {
       //Checks first if range is enabled
@@ -314,8 +309,8 @@ export class DatePicker extends Component {
     }
   };
 
-  updateDate(date) {
-    console.log('Inside updateDate function. The event is: ', date);
+  updateDate = (date) => {
+    // console.log('Inside updateDate function. The event is: ', date);
 
     if (this.props.enableRangeSelection) {
       if (date.length === 2) {
