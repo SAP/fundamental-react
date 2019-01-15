@@ -39,12 +39,10 @@ export class Calendar extends Component {
                 //updates the calendar if the date from date picker is correct
                 return ({arrSelectedDates: updatedPropsParent.customDate, selectedDate: new Date(0, 0, 0)});
             }
-        }
-        else if (updatedPropsParent.customDate !== previousStates.currentDateDisplayed) {
+        } else if (updatedPropsParent.customDate !== previousStates.currentDateDisplayed) {
             if (updatedPropsParent.customDate === undefined || updatedPropsParent.customDate === '') {
                 return null;
-            }
-            else if (updatedPropsParent.customDate === 'undefined') {
+            } else if (updatedPropsParent.customDate === 'undefined') {
                 if (previousStates.selectedDate.getFullYear() !== 1899 && previousStates.dateClick) {
                     return ({dateClick: false});
                 }
@@ -52,8 +50,7 @@ export class Calendar extends Component {
                 if (!previousStates.dateClick) {
                     return ({currentDateDisplayed: new Date(), selectedDate: new Date(0, 0, 0)});
                 }
-            }
-            else {
+            } else {
                 //Updates the calendar if the date from date picker is correct
                 return ({currentDateDisplayed: updatedPropsParent.customDate, selectedDate: updatedPropsParent.customDate, dateClick: false});
             }
@@ -131,8 +128,7 @@ export class Calendar extends Component {
             }, function() {
                     this.returnDateSelected(date);
             });
-        }
-        else {
+        } else {
             this.setState({
                 currentDateDisplayed: date,
                 dateClick: true
@@ -151,8 +147,7 @@ export class Calendar extends Component {
             }, function() {
                     this.returnDateSelected(date);
             });
-        }
-        else {
+        } else {
             this.setState({
                 currentDateDisplayed: date,
                 dateClick: true
@@ -166,8 +161,7 @@ export class Calendar extends Component {
             let shortenedNameMonth = '';
             if (element.length > 3) {
                 shortenedNameMonth = element.substring(0, 3) + '.';
-            }
-            else {
+            } else {
                 shortenedNameMonth = element.substring(0, 3);
             }
 
@@ -211,8 +205,7 @@ export class Calendar extends Component {
             let copyDate = this.state.currentYear;
             copyDate.setFullYear(copyDate.getFullYear() + 12);
             this.setState({currentYear: copyDate, dateClick: true});
-        }
-        else {
+        } else {
             let copyDate = this.state.currentDateDisplayed;
             let selectedDate = new Date(this.state.selectedDate.getFullYear(), this.state.selectedDate.getMonth(), this.state.selectedDate.getDate(), 0, 0, 0, 0);
             copyDate.setMonth(copyDate.getMonth() + 1);
@@ -228,8 +221,7 @@ export class Calendar extends Component {
             let copyDate = this.state.currentYear;
             copyDate.setFullYear(copyDate.getFullYear() - 12);
             this.setState({currentYear: copyDate, dateClick: true});
-        }
-        else {
+        } else {
             let copyDate = this.state.currentDateDisplayed;
             let selectedDate = new Date(this.state.selectedDate.getFullYear(), this.state.selectedDate.getMonth(), this.state.selectedDate.getDate(), 0, 0, 0, 0);
             copyDate.setMonth(copyDate.getMonth() - 1);
@@ -248,14 +240,12 @@ export class Calendar extends Component {
             if (selectedDates.length === 2) {
                 selectedDates = [];
                 selectedDates.push(day);
-            }
-            else if (selectedDates[0] !== undefined && day.getTime() <= selectedDates[0].getTime()) {
+            } else if (selectedDates[0] !== undefined && day.getTime() <= selectedDates[0].getTime()) {
                 let newArr = [];
                 newArr.push(day);
                 newArr.push(selectedDates[0]);
                 selectedDates = newArr;
-            }
-            else {
+            } else {
                 selectedDates.push(day);
             }
         }
@@ -267,8 +257,7 @@ export class Calendar extends Component {
         }, function() {
             if (isRangeEnabled) {
                 this.returnDateSelected(selectedDates);
-            }
-            else {
+            } else {
                 this.returnDateSelected(day);
             }
         });
@@ -382,8 +371,7 @@ export class Calendar extends Component {
         if (this.props.onChange !== undefined) {
             if (this.props.enableRangeSelection === true) {
                 this.props.onChange(dates);
-            }
-            else {
+            } else {
                 this.props.onChange(dates);
             }
         }

@@ -15,7 +15,7 @@ export class DatePicker extends Component {
   }
 
   openCalendar = type => {
-    if (type == 'input') {
+    if (type === 'input') {
       if (this.state.hidden) {
         this.setState({ hidden: !this.state.hidden });
       }
@@ -33,7 +33,7 @@ export class DatePicker extends Component {
     let regex = /[!$%^&*()_+|~=`{}\[\]:'<>?,.\a-zA-Z]/;
     let formatDate = '';
     if (this.props.enableRangeSelection) {
-      if (date.length == 0) {
+      if (date.length === 0) {
         return '';
       }
 
@@ -63,10 +63,10 @@ export class DatePicker extends Component {
     } else {
       //Checks if the type of date doesn't match those types and that it doesn't contain any special character symbols
       if (
-        (typeof date != 'array' ||
-          typeof date != 'date' ||
-          typeof date != 'object') &&
-        date.toString().search(regex) != 1
+        (typeof date !== 'array' ||
+          typeof date !== 'date' ||
+          typeof date !== 'object') &&
+        date.toString().search(regex) !== 1
       ) {
         return '';
       } else {
@@ -87,8 +87,8 @@ export class DatePicker extends Component {
       if (this.props.enableRangeSelection) {
         //If the formattedDate contains a list of special characters symbols then it will be reset
         if (
-          this.state.formattedDate.search(regex) != -1 ||
-          this.state.formattedDate == '' ||
+          this.state.formattedDate.search(regex) !== -1 ||
+          this.state.formattedDate === '' ||
           this.state.formattedDate.split('-').length < 2
         ) {
           this.setState({
@@ -114,12 +114,12 @@ export class DatePicker extends Component {
 
           //Checks if the input is actually numbers and follows the required form
           if (
-            (firstYearRange != NaN ||
-              firstDateRange != NaN ||
-              firstMonthRange != NaN) &&
-            (secondYearRange != NaN ||
-              secondDateRange != NaN ||
-              secondMonthRange != NaN) &&
+            (firstYearRange !== NaN ||
+              firstDateRange !== NaN ||
+              firstMonthRange !== NaN) &&
+            (secondYearRange !== NaN ||
+              secondDateRange !== NaN ||
+              secondMonthRange !== NaN) &&
             (1 <= firstDateRange && firstDateRange <= 31) &&
             (1 < firstMonthRange && firstMonthRange <= 12) &&
             firstYearRange <= 3000 &&
@@ -156,7 +156,7 @@ export class DatePicker extends Component {
           }
         }
       } else {
-        if (this.state.formattedDate.search(regex) != -1) {
+        if (this.state.formattedDate.search(regex) !== -1) {
           this.setState({
             formattedDate: this.formatDate(this.state.selectedDate),
             selectedDate: 'undefined'
@@ -168,7 +168,7 @@ export class DatePicker extends Component {
           let month = parseInt(dateSeparated[0], 10);
 
           if (
-            (year != NaN || date != NaN || month != NaN) &&
+            (year !== NaN || date !== NaN || month !== NaN) &&
             (1 <= date && date <= 31) &&
             (1 < month && month <= 12) &&
             year <= 3000
@@ -207,8 +207,8 @@ export class DatePicker extends Component {
     if (this.props.enableRangeSelection) {
       //If the formattedDate contains a list of special characters symbols then it will be reset
       if (
-        this.state.formattedDate.search(regex) != -1 ||
-        this.state.formattedDate == '' ||
+        this.state.formattedDate.search(regex) !== -1 ||
+        this.state.formattedDate === '' ||
         this.state.formattedDate.split('-').length < 2
       ) {
         this.setState({
@@ -231,12 +231,12 @@ export class DatePicker extends Component {
         let secondMonthRange = parseInt(dateSeparatedSecondRange[0], 10);
 
         if (
-          (firstYearRange != NaN ||
-            firstDateRange != NaN ||
-            firstMonthRange != NaN) &&
-          (secondYearRange != NaN ||
-            secondDateRange != NaN ||
-            secondMonthRange != NaN) &&
+          (firstYearRange !== NaN ||
+            firstDateRange !== NaN ||
+            firstMonthRange !== NaN) &&
+          (secondYearRange !== NaN ||
+            secondDateRange !== NaN ||
+            secondMonthRange !== NaN) &&
           (1 <= firstDateRange && firstDateRange <= 31) &&
           (1 < firstMonthRange && firstMonthRange <= 12) &&
           firstYearRange <= 3000 &&
@@ -278,7 +278,7 @@ export class DatePicker extends Component {
         this.setState({ hidden: true });
       }
     } else {
-      if (this.state.formattedDate.search(regex) != -1) {
+      if (this.state.formattedDate.search(regex) !== -1) {
         this.setState({
           formattedDate: this.formatDate(this.state.selectedDate),
           selectedDate: 'undefined'
@@ -290,7 +290,7 @@ export class DatePicker extends Component {
         let month = parseInt(dateSeparated[0], 10);
 
         if (
-          (year != NaN || date != NaN || month != NaN) &&
+          (year !== NaN || date !== NaN || month !== NaN) &&
           (1 <= date && date <= 31) &&
           (1 < month && month <= 12) &&
           year <= 3000
@@ -313,7 +313,7 @@ export class DatePicker extends Component {
     // console.log('Inside updateDate function. The event is: ', date);
 
     if (this.props.enableRangeSelection) {
-      if (date.length == 2) {
+      if (date.length === 2) {
         let firstDateMonth = date[0].getMonth() + 1;
         let firstDateDay = date[0].getDate();
         let firstDateYear = date[0].getFullYear();
