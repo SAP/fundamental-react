@@ -3,7 +3,7 @@ import { DocsTile, DocsText, Separator, Header, Description, Import, Properties,
 
 export const PaginationComponent = () => {
     const handleClick = event => {
-        console.log(`Page clicked - ${event}`);
+        // console.log(`Page clicked - ${event}`);
     };
     return (
         <div>
