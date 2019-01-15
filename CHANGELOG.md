@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.0.15-rc.16"></a>
+## [0.0.15-rc.16](http://sap.github.io/fundamental-react/compare/v0.0.15-rc.15...v0.0.15-rc.16) (2019-01-15)
+
+
+### Bug Fixes
+
+* add fundamental bot to release script ([#194](http://sap.github.io/fundamental-react/issues/194)) ([96e3080](http://sap.github.io/fundamental-react/commit/96e3080))
+
+
+
 <a name="0.0.15-rc.15"></a>
 ## [0.0.15-rc.15](http://sap.github.io/fundamental-react/compare/v0.0.15-rc.14...v0.0.15-rc.15) (2019-01-15)
 
