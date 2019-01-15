@@ -217,7 +217,6 @@ class TimeItem extends Component {
       aux = event.target.value.replace(/\D/, '');
       this.updateStyle(style, aux, max);
       this.setState({ value: aux });
-    } else {
     }
 
     this.props.updateTime(aux, this.props.name, event);
@@ -315,8 +314,7 @@ export class Time extends Component {
   constructor(props) {
     super(props);
     const { time } = this.props;
-    if (time.hour !== '00') {
-    } else {
+    if (time.hour === '00') {
       time.hour = this.props.format12Hours ? '12' : '00';
     }
     this.state = {
