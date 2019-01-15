@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.0.15-rc.18"></a>
+## [0.0.15-rc.18](http://sap.github.io/fundamental-react/compare/v0.0.15-rc.17...v0.0.15-rc.18) (2019-01-15)
+
+
+### Bug Fixes
+
+* travis slack integration ([#193](http://sap.github.io/fundamental-react/issues/193)) ([162e019](http://sap.github.io/fundamental-react/commit/162e019))
+
+
+
 <a name="0.0.15-rc.17"></a>
 ## [0.0.15-rc.17](http://sap.github.io/fundamental-react/compare/v0.0.15-rc.16...v0.0.15-rc.17) (2019-01-15)
 
