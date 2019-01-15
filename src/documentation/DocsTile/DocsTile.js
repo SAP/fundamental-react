@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import {googlecode} from 'react-syntax-highlighter/styles/hljs';
 import {Button} from '../../Button/Button';
@@ -30,6 +31,11 @@ export const DocsTile = props => {
                 )}
         </div>
     );
+};
+
+DocsTile.propTypes = {
+    centered: PropTypes.bool,
+    children: PropTypes.node
 };
 
 export class DocsText extends Component {
@@ -125,3 +131,7 @@ export class DocsText extends Component {
         );
     }
 }
+
+DocsText.propTypes = {
+    children: PropTypes.node
+};

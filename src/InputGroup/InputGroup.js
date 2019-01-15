@@ -6,6 +6,10 @@ export const FormGroup = props => {
   return <div className='fd-form__group'>{children}</div>;
 };
 
+FormGroup.propTypes = {
+  children: PropTypes.node
+};
+
 export class InputGroup extends Component {
   constructor(props) {
     super(props);
@@ -186,6 +190,7 @@ InputGroup.propTypes = {
   actions: PropTypes.bool,
   addon: PropTypes.string,
   addonPos: PropTypes.oneOf(['before', 'after']),
+  children: PropTypes.node,
   compact: PropTypes.bool,
   glyph: PropTypes.string,
   inputId: PropTypes.string,

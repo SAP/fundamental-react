@@ -8,11 +8,20 @@ const VALID = 'fd-input';
 class TimePickerItem extends Component {
   static propTypes = {
     buttonID: PropTypes.string,
+    disabled: PropTypes.bool,
+    format12Hours: PropTypes.bool,
+    id: PropTypes.string,
     inputId: PropTypes.string,
     isValid: PropTypes.bool,
     length: PropTypes.number,
+    placeholder: PropTypes.string,
+    showHour: PropTypes.bool,
+    showMinute: PropTypes.bool,
+    showSecond: PropTypes.bool,
     style: PropTypes.string,
-    value: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
+    updateValue: PropTypes.func,
+    value: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+    onChange: PropTypes.func
   };
   static defaultProps = {
     value: null,

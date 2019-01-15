@@ -9,14 +9,6 @@ import { SearchInput } from '../SearchInput/SearchInput';
 import { Counter } from '../Badge/Badge';
 
 export class Shellbar extends Component {
-    static propTypes = {
-        copilot: PropTypes.bool
-    };
-
-    static defaultProps = {
-        actions: null
-    };
-
     constructor(props) {
         super(props);
         this.state = {
@@ -388,3 +380,24 @@ export class Shellbar extends Component {
         );
     }
 }
+
+Shellbar.propTypes = {
+    actions: PropTypes.array,
+    className: PropTypes.string,
+    copilot: PropTypes.bool,
+    logo: PropTypes.object,
+    logoSAP: PropTypes.bool,
+    notifications: PropTypes.object,
+    productMenu: PropTypes.array,
+    productSwitcher: PropTypes.object,
+    productSwitcherList: PropTypes.array,
+    productTitle: PropTypes.string,
+    profile: PropTypes.object,
+    profileMenu: PropTypes.array,
+    searchInput: PropTypes.object,
+    subtitle: PropTypes.string
+};
+
+Shellbar.defaultProps = {
+    actions: null
+};

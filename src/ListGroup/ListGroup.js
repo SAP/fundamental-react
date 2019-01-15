@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 export const ListGroup = ({ children, className, ...props }) => {
     return (
@@ -7,6 +8,11 @@ export const ListGroup = ({ children, className, ...props }) => {
         </ul>
     );
 };
+
+ListGroup.propTypes = {
+    children: PropTypes.node,
+    className: PropTypes.string
+  };
 
 export const ListGroupItem = ({ children, className, ...props }) => {
     return (
@@ -17,6 +23,11 @@ export const ListGroupItem = ({ children, className, ...props }) => {
     );
 };
 
+ListGroupItem.propTypes = {
+    children: PropTypes.node,
+    className: PropTypes.string
+  };
+
 export const ListGroupItemActions = ({ children, className, ...props }) => {
     return (
         <span className={`fd-list-group__action${className ? ' ' + className : ''}`} {...props}>
@@ -24,6 +35,11 @@ export const ListGroupItemActions = ({ children, className, ...props }) => {
         </span>
     );
 };
+
+ListGroupItemActions.propTypes = {
+    children: PropTypes.node,
+    className: PropTypes.string
+  };
 
 export const ListGroupItemCheckbox = (props) => {
     const { children } = props;
@@ -37,3 +53,8 @@ export const ListGroupItemCheckbox = (props) => {
         </div>
     );
 };
+
+ListGroupItemCheckbox.propTypes = {
+    children: PropTypes.node,
+    className: PropTypes.string
+  };

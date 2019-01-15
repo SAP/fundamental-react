@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { Alert } from '../../';
 import { Badge, Label, Status } from '../../';
 import { Button } from '../../';
@@ -585,3 +586,9 @@ export class Playground extends Component {
     );
   }
 }
+
+Playground.propTypes = {
+    children: PropTypes.node,
+    component: PropTypes.string,
+    schema: PropTypes.array
+};

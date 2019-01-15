@@ -7,6 +7,10 @@ export const Breadcrumb = props => {
     return <ul className='fd-breadcrumb'>{children}</ul>;
 };
 
+Breadcrumb.propTypes = {
+    children: PropTypes.node
+};
+
 export const BreadcrumbItem = ({ url, link, name, className, ...props }) => {
     return (
         <BrowserRouter>

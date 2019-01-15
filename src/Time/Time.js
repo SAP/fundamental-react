@@ -1,11 +1,22 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+
 const INVALID = 'is-invalid';
 const CLOCK = ['am', 'pm'];
+
 class TimeItem extends Component {
   static propTypes = {
     arialabel: PropTypes.string,
+    disabled: PropTypes.bool,
+    format12Hours: PropTypes.bool,
+    max: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+    name: PropTypes.string,
+    placeholder: PropTypes.string,
+    spinners: PropTypes.bool,
     style: PropTypes.string,
+    time: PropTypes.object,
+    type: PropTypes.string,
+    updateTime: PropTypes.func,
     value: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
   };
   static defaultProps = {
@@ -294,7 +305,8 @@ export class Time extends Component {
     showMinute: PropTypes.bool,
     showSecond: PropTypes.bool,
     spinners: PropTypes.bool,
-    time: PropTypes.object
+    time: PropTypes.object,
+    onChange: PropTypes.func
   };
   static defaultProps = {
     id: '',

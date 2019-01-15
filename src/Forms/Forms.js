@@ -10,6 +10,7 @@ export const FormSet = ({ children, className }) => {
   );
 };
 FormSet.propTypes = {
+  children: PropTypes.node,
   className: PropTypes.string
 };
 
@@ -25,6 +26,7 @@ export const FormItem = ({ isCheck, isInline, children, className }) => {
   );
 };
 FormItem.propTypes = {
+  children: PropTypes.node,
   className: PropTypes.string,
   isCheck: PropTypes.bool,
   isInline: PropTypes.bool
@@ -43,6 +45,7 @@ export const FormLabel = ({ required, children, className, ...props }) => {
   );
 };
 FormLabel.propTypes = {
+  children: PropTypes.node,
   className: PropTypes.string,
   required: PropTypes.bool
 };
@@ -60,6 +63,7 @@ export const FormMessage = ({ type, children, className, ...props }) => {
   );
 };
 FormMessage.propTypes = {
+  children: PropTypes.node,
   className: PropTypes.string,
   type: PropTypes.oneOf(['', 'error', 'warning', 'help'])
 };
@@ -90,6 +94,7 @@ export const FormTextarea = ({ children, className, ...props }) => {
   );
 };
 FormTextarea.propTypes = {
+  children: PropTypes.node,
   className: PropTypes.string
 };
 
@@ -104,6 +109,7 @@ export const FormFieldset = ({ children, className, ...props }) => {
   );
 };
 FormFieldset.propTypes = {
+  children: PropTypes.node,
   className: PropTypes.string
 };
 
@@ -118,6 +124,7 @@ export const FormLegend = ({ children, className, ...props }) => {
   );
 };
 FormLegend.propTypes = {
+  children: PropTypes.node,
   className: PropTypes.string
 };
 
@@ -133,6 +140,7 @@ export const FormSelect = ({ disabled, children, className, ...props }) => {
   );
 };
 FormSelect.propTypes = {
+  children: PropTypes.node,
   className: PropTypes.string,
   disabled: PropTypes.bool
 };
@@ -200,5 +208,6 @@ export class FormRadio extends Component {
 FormRadio.propTypes = {
   defaultChecked: PropTypes.string,
   disabled: PropTypes.bool,
+  inputs: PropTypes.array,
   isInline: PropTypes.bool
 };

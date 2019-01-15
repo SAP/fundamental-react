@@ -11,6 +11,7 @@ export const SideNav = props => {
   );
 };
 SideNav.propTypes = {
+  children: PropTypes.node,
   icons: PropTypes.bool
 };
 

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 export class Properties extends Component {
     constructor(props) {
@@ -25,3 +26,7 @@ export class Properties extends Component {
     }
 }
 
+Properties.propTypes = {
+    properties: PropTypes.array,
+    type: PropTypes.string
+};

@@ -12,7 +12,8 @@ export const MegaMenu = ({ children, className, ...props }) => {
   );
 };
 MegaMenu.propTypes = {
-  className: PropTypes.string
+    children: PropTypes.node,
+    className: PropTypes.string
 };
 
 export class MegaMenuList extends Component {
@@ -161,6 +162,7 @@ export const MegaMenuGroup = ({ title, children, className }) => {
 };
 
 MegaMenuGroup.propTypes = {
-  className: PropTypes.string,
-  title: PropTypes.string
+    children: PropTypes.node,
+    className: PropTypes.string,
+    title: PropTypes.string
 };

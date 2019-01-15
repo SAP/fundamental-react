@@ -56,3 +56,7 @@ export const ButtonGroup = props => {
       </div>
   );
 };
+
+ButtonGroup.propTypes = {
+  children: PropTypes.node
+};
