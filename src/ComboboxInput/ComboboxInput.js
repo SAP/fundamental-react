@@ -7,7 +7,7 @@ export const ComboboxInput = ({ placeholder, menu, compact, className, ...props 
   return (
       <div className={`fd-combobox-input${className ? ' ' + className : ''}`} {...props}>
           <Popover
-              noArrow
+              body={menu}
               control={
                   <div className='fd-combobox-control'>
                       <div
@@ -15,17 +15,17 @@ export const ComboboxInput = ({ placeholder, menu, compact, className, ...props 
                 compact ? ' fd-input-group--compact' : ''
               }`}>
                           <input
-                              type='text'
                               className={`fd-input${compact ? ' fd-input--compact' : ''}`}
                               id=''
-                              placeholder={placeholder} />
+                              placeholder={placeholder}
+                              type='text' />
                           <span className='fd-input-group__addon fd-input-group__addon--after fd-input-group__addon--button'>
                               <button className=' fd-button--light sap-icon--navigation-down-arrow' />
                           </span>
                       </div>
                   </div>
         }
-              body={menu} />
+              noArrow />
       </div>
   );
 };

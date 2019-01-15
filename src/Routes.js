@@ -168,10 +168,10 @@ export default class Routes extends Component {
                         {this.state.routes.map(route => {
                 return (
                     <NavLink
+                        activeClassName='nav-item--active'
                         className='nav-item'
-                        to={{ pathname: route.url }}
                         key={route.url}
-                        activeClassName='nav-item--active'>
+                        to={{ pathname: route.url }}>
                         {route.name}
                     </NavLink>
                 );
@@ -184,13 +184,13 @@ export default class Routes extends Component {
                             {this.state.routes.map(route => {
                   return (
                       <Route
-                          key={route.url}
+                          component={route.component}
                           exact
-                          path={route.url}
-                          component={route.component} />
+                          key={route.url}
+                          path={route.url} />
                   );
                 })}
-                            <Redirect from='' exact
+                            <Redirect exact from=''
                                 to='/actionBar' />
                         </Switch>
                     </div>

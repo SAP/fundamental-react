@@ -104,10 +104,10 @@ export const TreeComponent = () => {
 
             <Separator />
 
-            <Properties type='Inputs' properties={[
+            <Properties properties={[
                     { name: 'headers', description: 'array of strings for the column headers of the tree' },
                     { name: 'treeData', description: 'array of objects that contain several properties, id (the id of the row), values (an array of strings containing data for each column in the row), hasChildren(a boolean value whether the row contains children or not) and children (an array of objects containing additional rows).' }
-                ]} />
+                ]} type='Inputs' />
 
             <Separator />
 
@@ -185,16 +185,16 @@ export const TreeComponent = () => {
 
             <h2>Rich Tree</h2>
             <Description>This is an example of a tree with rich cells, where the rowData is an array of objects, where each object can have one or both of the following properties:</Description>
-            <Properties type='Properties' properties={[
+            <Properties properties={[
                     { name: 'displayText', description: 'The text to display in the cell. If omitted, the link url will be displayed.' },
                     { name: 'linkUrl', description: 'If provided, this is the URL the link will navigate to.' }
 
-                ]} />
-            <Properties type='Inputs' properties={[
+                ]} type='Properties' />
+            <Properties properties={[
                     { name: 'headers', description: 'Array of strings for the column headers of the tree' },
                     { name: 'treeData', description: '	Array of objects that contain several properties, id(the id of the row), hasChildren(a boolean value whether the row contains children or not), values (an array of objects containing data for each column in the row), and children (an array of objects containing additional rows).' }
 
-                ]} />
+                ]} type='Inputs' />
             <Separator />
             <DocsTile>
                 <Tree

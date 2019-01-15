@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 export const ListGroup = ({ children, className, ...props }) => {
     return (
@@ -7,6 +8,11 @@ export const ListGroup = ({ children, className, ...props }) => {
         </ul>
     );
 };
+
+ListGroup.propTypes = {
+    children: PropTypes.node,
+    className: PropTypes.string
+  };
 
 export const ListGroupItem = ({ children, className, ...props }) => {
     return (
@@ -17,6 +23,11 @@ export const ListGroupItem = ({ children, className, ...props }) => {
     );
 };
 
+ListGroupItem.propTypes = {
+    children: PropTypes.node,
+    className: PropTypes.string
+  };
+
 export const ListGroupItemActions = ({ children, className, ...props }) => {
     return (
         <span className={`fd-list-group__action${className ? ' ' + className : ''}`} {...props}>
@@ -25,15 +36,25 @@ export const ListGroupItemActions = ({ children, className, ...props }) => {
     );
 };
 
+ListGroupItemActions.propTypes = {
+    children: PropTypes.node,
+    className: PropTypes.string
+  };
+
 export const ListGroupItemCheckbox = (props) => {
     const { children } = props;
     return (
         <div className='fd-form__item fd-form__item--check'>
             <label className='fd-form__label' htmlFor='CndSd399'>
-                <input type='checkbox' className='fd-form__control'
-                    id='CndSd399' />
+                <input className='fd-form__control' id='CndSd399'
+                    type='checkbox' />
                 {children}
             </label>
         </div>
     );
 };
+
+ListGroupItemCheckbox.propTypes = {
+    children: PropTypes.node,
+    className: PropTypes.string
+  };

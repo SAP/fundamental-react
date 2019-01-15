@@ -62,7 +62,6 @@ export class MultiInputComponent extends Component {
             <Separator />
 
             <Properties
-                type='Inputs'
                 properties={[
             {
               name: 'data',
@@ -84,7 +83,8 @@ export class MultiInputComponent extends Component {
               description:
                 'bool - true: display compact style, false: default style'
             }
-          ]} />
+          ]}
+                type='Inputs' />
 
             <Separator />
 
@@ -112,10 +112,10 @@ export class MultiInputComponent extends Component {
             <DocsTile>
                 <div>
                     <MultiInput
+                        compact
                         data={this.data}
                         onTagsUpdate={this.performTagsUpdate}
-                        placeHolder='Select a Fruit'
-                        compact />
+                        placeHolder='Select a Fruit' />
                 </div>
             </DocsTile>
             <DocsText>{this.multiInputCompactCode}</DocsText>

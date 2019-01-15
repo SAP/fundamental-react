@@ -7,8 +7,8 @@ import { Breadcrumb, BreadcrumbItem } from './Breadcrumb';
 describe('<Breadcrumb />', () => {
     const defaultBreadCrumb = (
         <Breadcrumb>
-            <BreadcrumbItem url='#' name='Link Text' />
-            <BreadcrumbItem url='#' name='Link Text' />
+            <BreadcrumbItem name='Link Text' url='#' />
+            <BreadcrumbItem name='Link Text' url='#' />
             <BreadcrumbItem name='Link Text' />
         </Breadcrumb>
     );

@@ -6,6 +6,10 @@ export const FormGroup = props => {
   return <div className='fd-form__group'>{children}</div>;
 };
 
+FormGroup.propTypes = {
+  children: PropTypes.node
+};
+
 export class InputGroup extends Component {
   constructor(props) {
     super(props);
@@ -74,19 +78,19 @@ export class InputGroup extends Component {
             }`}>
                 <input
                     className={`${compact ? 'fd-input fd-input--compact' : ''}`}
-                    type='number'
                     id={inputId}
                     name={inputName}
-                    value={this.state.value}
-                    onChange={this.handleTextChange} />
+                    onChange={this.handleTextChange}
+                    type='number'
+                    value={this.state.value} />
                 <span className='fd-input-group__addon fd-input-group__addon--button fd-input-group__addon--after'>
                     <button
-                        className='fd-input-group__button fd-input-group__button--step-up sap-icon--slim-arrow-up'
                         aria-label='Step up'
+                        className='fd-input-group__button fd-input-group__button--step-up sap-icon--slim-arrow-up'
                         onClick={this.handleUp} />
                     <button
-                        className='fd-input-group__button fd-input-group__button--step-down sap-icon--slim-arrow-down'
                         aria-label='Step down'
+                        className='fd-input-group__button fd-input-group__button--step-down sap-icon--slim-arrow-down'
                         onClick={this.handleDown} />
                 </span>
             </div>
@@ -100,16 +104,16 @@ export class InputGroup extends Component {
             }`}>
                 <input
                     className={`${compact ? 'fd-input fd-input--compact' : ''}`}
-                    type='search'
                     id={inputId}
                     name={inputName}
-                    value={this.state.searchValue}
+                    onChange={this.handleChange}
                     placeholder={inputPlaceholder}
-                    onChange={this.handleChange} />
+                    type='search'
+                    value={this.state.searchValue} />
                 <span className='fd-input-group__addon fd-input-group__addon--button'>
                     <button
-                        className='fd-input-group__button fd-input-group__button--clear'
                         aria-label='Clear'
+                        className='fd-input-group__button fd-input-group__button--clear'
                         onClick={this.handleClear} />
                 </span>
             </div>
@@ -139,11 +143,11 @@ export class InputGroup extends Component {
               )}
                   <input
                       className={`${compact ? 'fd-input fd-input--compact' : ''}`}
-                      type='text'
                       id={inputId}
                       name={inputName}
-                      value={this.state.value}
-                      onChange={this.handleTextChange} />
+                      onChange={this.handleTextChange}
+                      type='text'
+                      value={this.state.value} />
               </div>
           );
         } else {
@@ -154,11 +158,11 @@ export class InputGroup extends Component {
               }`}>
                   <input
                       className={`${compact ? 'fd-input fd-input--compact' : ''}`}
-                      type='text'
                       id={inputId}
                       name={inputName}
-                      value={this.state.value}
-                      onChange={this.handleTextChange} />
+                      onChange={this.handleTextChange}
+                      type='text'
+                      value={this.state.value} />
                   {actions ? (
                       <span className='fd-input-group__addon fd-input-group__addon--button fd-input-group__addon--after'>
                           {children}
@@ -186,6 +190,7 @@ InputGroup.propTypes = {
   actions: PropTypes.bool,
   addon: PropTypes.string,
   addonPos: PropTypes.oneOf(['before', 'after']),
+  children: PropTypes.node,
   compact: PropTypes.bool,
   glyph: PropTypes.string,
   inputId: PropTypes.string,

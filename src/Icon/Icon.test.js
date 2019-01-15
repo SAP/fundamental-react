@@ -6,8 +6,8 @@ import { Icon } from './Icon';
 describe('<Icon />', () => {
     const mockOnClick = jest.fn();
     const defaultIcon = (
-        <Icon glyph='cart' className='blue'
-            clickHandler={mockOnClick} />
+        <Icon className='blue' clickHandler={mockOnClick}
+            glyph='cart' />
     );
     const iconWithSize = <Icon glyph='cart' size='s' />;
 

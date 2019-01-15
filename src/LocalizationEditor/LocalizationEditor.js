@@ -8,35 +8,6 @@ export const LocalizationEditor = ({ control, menu, id, compact, textarea, class
   return (
       <div className={`fd-localization-editor${className ? ' ' + className : ''}`} {...props}>
           <Popover
-              id={id}
-              control={
-                  <div>
-                      <label className='fd-form__label' htmlFor={id}>
-                          {control.label}
-                      </label>
-                      <div
-                          className={`fd-input-group${
-                compact && !textarea ? ' fd-input-group--compact' : ''
-              } fd-input-group--after`}>
-                          {textarea ? (
-                              <textarea />
-              ) : (
-                  <input
-                      type='text'
-                      className={compact ? 'fd-input fd-input--compact' : ''}
-                      placeholder={control.placeholder} />
-              )}
-                          <span
-                              className={`fd-input-group__addon fd-input-group__addon--after fd-input-group__addon--button${
-                  textarea ? ' fd-input-group__addon--textarea' : ''
-                }`}>
-                              <button className='fd-button--light fd-localization-editor__button'>
-                                  {control.language}
-                              </button>
-                          </span>
-                      </div>
-                  </div>
-        }
               body={
                   <nav className='fd-menu'>
                       <ul className='fd-menu__list fd-localization-editor__list'>
@@ -51,11 +22,11 @@ export const LocalizationEditor = ({ control, menu, id, compact, textarea, class
                                 <textarea />
                       ) : (
                           <input
-                              type='text'
                               className={
                             compact ? 'fd-input fd-input--compact' : ''
                           }
-                              placeholder={item.placeholder} />
+                              placeholder={item.placeholder}
+                              type='text' />
                       )}
                             <span
                                 className={`fd-input-group__addon fd-input-group__addon--after${
@@ -70,6 +41,35 @@ export const LocalizationEditor = ({ control, menu, id, compact, textarea, class
                       </ul>
                   </nav>
         }
+              control={
+                  <div>
+                      <label className='fd-form__label' htmlFor={id}>
+                          {control.label}
+                      </label>
+                      <div
+                          className={`fd-input-group${
+                compact && !textarea ? ' fd-input-group--compact' : ''
+              } fd-input-group--after`}>
+                          {textarea ? (
+                              <textarea />
+              ) : (
+                  <input
+                      className={compact ? 'fd-input fd-input--compact' : ''}
+                      placeholder={control.placeholder}
+                      type='text' />
+              )}
+                          <span
+                              className={`fd-input-group__addon fd-input-group__addon--after fd-input-group__addon--button${
+                  textarea ? ' fd-input-group__addon--textarea' : ''
+                }`}>
+                              <button className='fd-button--light fd-localization-editor__button'>
+                                  {control.language}
+                              </button>
+                          </span>
+                      </div>
+                  </div>
+        }
+              id={id}
               noArrow />
       </div>
   );

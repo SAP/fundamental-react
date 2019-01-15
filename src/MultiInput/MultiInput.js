@@ -16,14 +16,14 @@ export class MultiInput extends Component {
     const randNum = Math.floor(Math.random() * 1000000 + 1);
     return data.map((item, index) => (
         <li key={index}>
-            <label htmlFor={index + `_${randNum}`} className='fd-menu__item'>
+            <label className='fd-menu__item' htmlFor={index + `_${randNum}`}>
                 <input
-                    type='checkbox'
+                    checked={this.isChecked(item)}
                     className='fd-checkbox'
                     id={index + `_${randNum}`}
-                    value={item}
                     onChange={this.updateSelectedTags}
-                    checked={this.isChecked(item)} />
+                    type='checkbox'
+                    value={item} />
                 {item}
             </label>
         </li>
@@ -34,10 +34,10 @@ export class MultiInput extends Component {
   createTags = () => {
     return this.state.tags.map((tag, index) => (
         <span
-            key={index}
             className='fd-token'
-            role='button'
-            onClick={this.removeTag}>
+            key={index}
+            onClick={this.removeTag}
+            role='button'>
             {tag}
         </span>
     ));
@@ -127,16 +127,16 @@ export class MultiInput extends Component {
                 <div className='fd-popover'>
                     <div className='fd-popover__control'>
                         <div
-                            className='fd-combobox-control'
-                            aria-label='Image label'
                             aria-expanded={this.state.bShowList}
-                            aria-haspopup='true'>
+                            aria-haspopup='true'
+                            aria-label='Image label'
+                            className='fd-combobox-control'>
                             <div className={inputGroupClassNames}>
                                 <input
-                                    type='text'
                                     className={inputClassNames}
+                                    onClick={this.showHideTagList}
                                     placeholder={placeHolder}
-                                    onClick={this.showHideTagList} />
+                                    type='text' />
                                 <span
                                     className='fd-input-group__addon fd-input-group__addon--after
                             fd-input-group__addon--button'>
@@ -148,8 +148,8 @@ export class MultiInput extends Component {
                         </div>
                     </div>
                     <div
-                        className='fd-popover__body fd-popover__body--no-arrow'
-                        aria-hidden={!this.state.bShowList}>
+                        aria-hidden={!this.state.bShowList}
+                        className='fd-popover__body fd-popover__body--no-arrow'>
                         <nav className='fd-menu'>
                             <ul className='fd-menu__list'>{this.createTagList(data)}</ul>
                         </nav>

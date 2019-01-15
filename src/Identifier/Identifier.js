@@ -7,14 +7,14 @@ export const Identifier = ({ glyph, size, modifier, color, label, backgroundImag
   };
   return (
       <span
+          aria-label={label}
           className={`${size ? 'fd-identifier--' + size : 'fd-identifier'}${
         glyph ? ' sap-icon--' + glyph : ''
       }${modifier ? ' fd-identifier--' + modifier : ''}${
         color ? ' fd-has-background-color-accent-' + color : ''
       }${backgroundImageUrl ? ' fd-identifier--thumbnail' : ''}${className ? ' ' + className : ''}`}
-          style={backgroundImageUrl && styles}
           role={`${!children ? 'presentation' : ''}`}
-          aria-label={label} {...props}>
+          style={backgroundImageUrl && styles} {...props}>
           {children}
       </span>
   );

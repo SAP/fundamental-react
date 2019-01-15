@@ -143,49 +143,49 @@ export class SearchInput extends Component {
                 {inShellbar ? (
                     <div className='fd-popover__control fd-search-input__control'>
                         <button
-                            className='sap-icon--search fd-button--shell'
-                            onClick={this.onSearchBtnHandler}
                             aria-expanded={this.state.searchExpanded}
-                            aria-haspopup='true' />
+                            aria-haspopup='true'
+                            className='sap-icon--search fd-button--shell'
+                            onClick={this.onSearchBtnHandler} />
                         <div
-                            className='fd-search-input__closedcontrol'
-                            aria-hidden={!this.state.searchExpanded}>
+                            aria-hidden={!this.state.searchExpanded}
+                            className='fd-search-input__closedcontrol'>
                             <div
-                                className='fd-search-input__controlinput'
                                 aria-expanded={this.state.searchExpanded}
-                                aria-haspopup='true'>
+                                aria-haspopup='true'
+                                className='fd-search-input__controlinput'>
                                 <input
-                                    type='text'
                                     className='fd-input'
-                                    value={this.state.value}
                                     onChange={this.onChangeHandler}
-                                    placeholder={placeholder}
-                                    onKeyPress={this.onKeyPressHandler}
                                     onClick={() => this.onClickHandler()}
-                                    ref={node => (this.node = node)} />
+                                    onKeyPress={this.onKeyPressHandler}
+                                    placeholder={placeholder}
+                                    ref={node => (this.node = node)}
+                                    type='text'
+                                    value={this.state.value} />
                             </div>
                         </div>
                     </div>
           ) : (
               <div className={'fd-popover__control'}>
                   <div
-                      className='fd-combobox-control'
                       aria-expanded={this.state.isExpanded}
-                      aria-haspopup='true'>
+                      aria-haspopup='true'
+                      className='fd-combobox-control'>
                       <div
                           className={`fd-input-group fd-input-group--after${
                     compact ? ' fd-input-group--compact' : ''
                   }`}
                           ref={node => (this.node = node)}>
                           <input
-                              type='text'
                               className={`fd-input${compact ? ' fd-input--compact' : ''}`}
-                              value={this.state.value}
                               onChange={this.onChangeHandler}
-                              placeholder={placeholder}
-                              onKeyPress={this.onKeyPressHandler}
                               onClick={() => this.onClickHandler()}
-                              style={noSearchBtn ? this.style : {}} />
+                              onKeyPress={this.onKeyPressHandler}
+                              placeholder={placeholder}
+                              style={noSearchBtn ? this.style : {}}
+                              type='text'
+                              value={this.state.value} />
 
                           {!noSearchBtn && (
                           <span className='fd-input-group__addon fd-input-group__addon--after fd-input-group__addon--button'>
@@ -200,8 +200,8 @@ export class SearchInput extends Component {
           )}
                 {this.state.filteredResult && (
                 <div
-                    className='fd-popover__body fd-popover__body--no-arrow'
-                    aria-hidden={!this.state.isExpanded}>
+                    aria-hidden={!this.state.isExpanded}
+                    className='fd-popover__body fd-popover__body--no-arrow'>
                     <div className={inShellbar ? 'fd-search-input__body' : ''}>
                         <nav className='fd-menu'>
                             <ul className='fd-menu__list'>
@@ -209,8 +209,8 @@ export class SearchInput extends Component {
                       this.state.filteredResult.map((item, index) => {
                         return (
                             <li
-                                key={index}
                                 className='fd-menu__item'
+                                key={index}
                                 onClick={() => this.listItemClickHandler(item)}>
                                 <strong>{this.state.value}</strong>
                                 {this.state.value && this.state.value.length

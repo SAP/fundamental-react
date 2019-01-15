@@ -17,22 +17,22 @@ import {
 describe('<Forms />', () => {
     const formInput = (
         <FormSet>
-            <FormItem isInline isCheck>
+            <FormItem isCheck isInline>
                 <FormLabel forAttr='input-1'>Default Input</FormLabel>
                 <FormInput
-                    type='text'
                     id='input-1'
-                    placeholder='Field placeholder text' />
+                    placeholder='Field placeholder text'
+                    type='text' />
             </FormItem>
             <FormItem>
                 <FormLabel forAttr='input-1' required>
                     Default Input
                 </FormLabel>
                 <FormInput
-                    type='text'
                     id='input-1'
+                    placeholder='Field placeholder text'
                     state='help'
-                    placeholder='Field placeholder text' />
+                    type='text' />
                 <FormTextarea className='blue' id='textarea-1'>
                     Pellentesque metus lacus commodo eget justo ut rutrum varius nunc.
                 </FormTextarea>
@@ -50,8 +50,8 @@ describe('<Forms />', () => {
                     <option value='2'>Suspendisse ante ligula</option>
                     <option value='3'>Sed bibendum sapien at posuere interdum</option>
                 </FormSelect>
-                <FormSelect className='blue' id='select-1'
-                    disabled>
+                <FormSelect className='blue' disabled
+                    id='select-1'>
                     <option value='1'>Duis malesuada odio volutpat elementum</option>
                 </FormSelect>
             </FormItem>
@@ -63,6 +63,7 @@ describe('<Forms />', () => {
             <FormLegend className='blue'>Radio buttons</FormLegend>
             <FormRadio
                 className='blue'
+                defaultChecked='radio-2'
                 inputs={[
                     {
                         id: 'radio-1',
@@ -82,11 +83,10 @@ describe('<Forms />', () => {
                         value: 'radio-3',
                         label: 'Option 3'
                     }
-                ]}
-                defaultChecked='radio-2' />
+                ]} />
             <FormLegend legendText='Radio buttons disabled' />
             <FormRadio
-                isInline
+                defaultChecked='radio-4'
                 disabled
                 inputs={[
                     {
@@ -108,10 +108,10 @@ describe('<Forms />', () => {
                         label: 'Option 3'
                     }
                 ]}
-                defaultChecked='radio-4' />
+                isInline />
             <FormLegend legendText='Inline Radio buttons' />
             <FormRadio
-                isInline
+                defaultChecked='radio-9'
                 inputs={[
                     {
                         id: 'radio-7',
@@ -132,8 +132,9 @@ describe('<Forms />', () => {
                         label: 'Option 3'
                     }
                 ]}
-                defaultChecked='radio-9' />
+                isInline />
             <FormRadio
+                defaultChecked='radio-9'
                 disabled
                 inputs={[
                     {
@@ -154,15 +155,14 @@ describe('<Forms />', () => {
                         value: 'radio-9',
                         label: 'Option 3'
                     }
-                ]}
-                defaultChecked='radio-9' />
+                ]} />
             <FormLegend legendText='Checkboxes' />
             <FormItem className='blue' isCheck>
                 <FormInput
                     className='blue'
-                    type='checkbox'
                     id='checkbox-1'
                     name='checkbox-name-1'
+                    type='checkbox'
                     value='' />
                 <FormLabel className='blue' forAttr='checkbox-1'>
                     Option One
@@ -173,12 +173,12 @@ describe('<Forms />', () => {
 
     const formSetWithClass = (
         <FormSet className='blue'>
-            <FormItem isInline isCheck>
+            <FormItem isCheck isInline>
                 <FormLabel forAttr='input-1'>Default Input</FormLabel>
                 <FormInput
-                    type='text'
                     id='input-1'
-                    placeholder='Field placeholder text' />
+                    placeholder='Field placeholder text'
+                    type='text' />
             </FormItem>
         </FormSet>
     );
@@ -188,6 +188,7 @@ describe('<Forms />', () => {
             <FormLegend className='blue'>Radio buttons</FormLegend>
             <FormRadio
                 className='blue'
+                defaultChecked='radio-2'
                 inputs={[
                     {
                         id: 'radio-1',
@@ -207,13 +208,13 @@ describe('<Forms />', () => {
                         value: 'radio-3',
                         label: 'Option 3'
                     }
-                ]}
-                defaultChecked='radio-2' />
+                ]} />
         </FormFieldset>
     );
 
     const formRadio = (
         <FormRadio
+            defaultChecked='radio-2'
             inputs={[
                 {
                     id: 'radio-1',
@@ -233,8 +234,7 @@ describe('<Forms />', () => {
                     value: 'radio-3',
                     label: 'Option 3'
                 }
-            ]}
-            defaultChecked='radio-2' />
+            ]} />
     );
 
     test('create form item', () => {
