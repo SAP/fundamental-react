@@ -6,13 +6,13 @@ import { Image } from './Image';
 describe('<Image />', () => {
     const image = (
         <Image
-            size='s'
             className='blue'
-            photo='https://placeimg.com/400/400/nature' />
+            photo='https://placeimg.com/400/400/nature'
+            size='s' />
     );
     const circleImage = (
-        <Image type='circle' size='m'
-            photo='https://placeimg.com/400/400/nature' />
+        <Image photo='https://placeimg.com/400/400/nature' size='m'
+            type='circle' />
     );
     test('create image', () => {
         let component = renderer.create(image);

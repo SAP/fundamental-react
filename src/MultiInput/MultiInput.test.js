@@ -30,10 +30,10 @@ describe('<MultiInput />', () => {
     const compactMultiInput = (
         <MultiInput
             className='blue'
+            compact
             data={data}
             onTagsUpdate={mockOnTagsUpdate}
-            placeHolder='Select a Fruit'
-            compact />
+            placeHolder='Select a Fruit' />
     );
 
     let wrapper;

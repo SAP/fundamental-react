@@ -16,7 +16,7 @@ export const CalendarComponent = () => {
 
         <Separator />
 
-        <Properties type='Inputs' properties={[
+        <Properties properties={[
                 {name: 'disableWeekends', description: 'bool - Disable weekends'},
                 {name: 'disableBeforeDate', description: 'date - Disables dates of a calendar that comes before a specific date'},
                 {name: 'disableAfterDate', description: 'date - Disables dates of a calendar that comes after a specific date'},
@@ -26,7 +26,7 @@ export const CalendarComponent = () => {
                 {name: 'blockedDates', description: 'array of dates - Blocks dates that are between in the blocked dates'},
                 {name: 'disabledDates', description: 'array of dates - Disables dates that are between in the disabled dates'},
                 {name: 'enableRangeSelection', description: 'bool - Enable to select two dates'}
-            ]} />
+            ]} type='Inputs' />
 
         <Separator />
 
@@ -48,7 +48,7 @@ export const CalendarComponent = () => {
 
         <h2>Calendar with disabled weekdays and blocked dates</h2>
         <DocsTile centered>
-            {<Calendar disableWeekday={['Monday', 'Tuesday']} blockedDates={[new Date(2018, 1, 1, 0, 0, 0, 0), new Date(2018, 3, 3, 0, 0, 0, 0)]} />}
+            {<Calendar blockedDates={[new Date(2018, 1, 1, 0, 0, 0, 0), new Date(2018, 3, 3, 0, 0, 0, 0)]} disableWeekday={['Monday', 'Tuesday']} />}
         </DocsTile>
         <DocsText>{calendarDisabledWeekdaysBlockedDates}</DocsText>
 

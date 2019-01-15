@@ -34,13 +34,13 @@ describe('<LocalizationEditor />', () => {
 
     const localEditorTextArea = (
         <LocalizationEditor
-            textarea
             control={{
                 label: 'Localization Editor Label',
                 placeholder: 'Enter Label',
                 language: 'EN*'
             }}
-            menu={defaultMenuArray} />
+            menu={defaultMenuArray}
+            textarea />
     );
 
     test('create localization editor', () => {

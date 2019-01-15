@@ -153,7 +153,6 @@ Compact mode:
           <Separator />
 
           <Properties
-              type='Inputs'
               properties={[
           {
             name: 'inputType',
@@ -196,7 +195,8 @@ Compact mode:
             name: 'compact',
             description: 'bool  - set to true to enable compact mode'
           }
-        ]} />
+        ]}
+              type='Inputs' />
 
           <Separator />
 
@@ -211,10 +211,10 @@ Compact mode:
                   <FormLabel labelText='Left Aligned Text Addon' />
                   <FormItem>
                       <InputGroup
-                          inputType='text'
+                          addon='$'
                           addonPos='before'
-                          inputValue='1234567890'
-                          addon='$' />
+                          inputType='text'
+                          inputValue='1234567890' />
                   </FormItem>
               </FormGroup>
               <br />
@@ -222,10 +222,10 @@ Compact mode:
                   <FormLabel labelText='Right Aligned Text Addon' />
                   <FormItem>
                       <InputGroup
-                          inputType='text'
+                          addon='€'
                           addonPos='after'
-                          inputValue='1234567890'
-                          addon='€' />
+                          inputType='text'
+                          inputValue='1234567890' />
                   </FormItem>
               </FormGroup>
 
@@ -236,11 +236,11 @@ Compact mode:
                   <FormLabel labelText='Left Aligned Text Addon' />
                   <FormItem>
                       <InputGroup
-                          inputType='text'
-                          addonPos='before'
-                          inputValue='1234567890'
                           addon='$'
-                          compact />
+                          addonPos='before'
+                          compact
+                          inputType='text'
+                          inputValue='1234567890' />
                   </FormItem>
               </FormGroup>
               <br />
@@ -248,11 +248,11 @@ Compact mode:
                   <FormLabel labelText='Right Aligned Text Addon' />
                   <FormItem>
                       <InputGroup
-                          inputType='text'
-                          addonPos='after'
-                          inputValue='1234567890'
                           addon='€'
-                          compact />
+                          addonPos='after'
+                          compact
+                          inputType='text'
+                          inputValue='1234567890' />
                   </FormItem>
               </FormGroup>
           </DocsTile>
@@ -279,8 +279,8 @@ Compact mode:
               <FormGroup>
                   <FormLabel labelText='Right Aligned Text Addon' />
                   <FormItem>
-                      <InputGroup inputType='number' inputValue={100}
-                          compact />
+                      <InputGroup compact inputType='number'
+                          inputValue={100} />
                   </FormItem>
               </FormGroup>
           </DocsTile>
@@ -294,7 +294,7 @@ Compact mode:
               <FormGroup>
                   <FormLabel labelText='Search Input' />
                   <FormItem>
-                      <InputGroup inputType='search' inputPlaceholder='Search Term' />
+                      <InputGroup inputPlaceholder='Search Term' inputType='search' />
                   </FormItem>
               </FormGroup>
               <br />
@@ -303,9 +303,9 @@ Compact mode:
                   <FormLabel labelText='Search Input' />
                   <FormItem>
                       <InputGroup
-                          inputType='search'
+                          compact
                           inputPlaceholder='Search Term'
-                          compact />
+                          inputType='search' />
                   </FormItem>
               </FormGroup>
               <br />
@@ -314,23 +314,23 @@ Compact mode:
                   <FormLabel labelText='Input with icon on the left' />
                   <FormItem>
                       <InputGroup
-                          inputType='text'
                           addonPos='before'
-                          inputValue='1234567890'
-                          glyph='globe' />
-                  </FormItem>
-              </FormGroup>
-              <br />
-              <p>Compact mode</p>
-              <FormGroup>
-                  <FormLabel labelText='Input with icon on the left' />
-                  <FormItem>
-                      <InputGroup
-                          inputType='text'
-                          addonPos='before'
-                          inputValue='1234567890'
                           glyph='globe'
-                          compact />
+                          inputType='text'
+                          inputValue='1234567890' />
+                  </FormItem>
+              </FormGroup>
+              <br />
+              <p>Compact mode</p>
+              <FormGroup>
+                  <FormLabel labelText='Input with icon on the left' />
+                  <FormItem>
+                      <InputGroup
+                          addonPos='before'
+                          compact
+                          glyph='globe'
+                          inputType='text'
+                          inputValue='1234567890' />
                   </FormItem>
               </FormGroup>
               <br />
@@ -339,10 +339,10 @@ Compact mode:
                   <FormLabel labelText='Input with icon on the right' />
                   <FormItem>
                       <InputGroup
-                          inputType='text'
                           addonPos='after'
-                          inputValue='1234567890'
-                          glyph='hide' />
+                          glyph='hide'
+                          inputType='text'
+                          inputValue='1234567890' />
                   </FormItem>
               </FormGroup>
               <br />
@@ -351,11 +351,11 @@ Compact mode:
                   <FormLabel labelText='Input with icon on the right' />
                   <FormItem>
                       <InputGroup
-                          inputType='text'
                           addonPos='after'
-                          inputValue='1234567890'
+                          compact
                           glyph='hide'
-                          compact />
+                          inputType='text'
+                          inputValue='1234567890' />
                   </FormItem>
               </FormGroup>
           </DocsTile>
@@ -373,10 +373,10 @@ Compact mode:
                   <FormLabel labelText='Input with text action' />
                   <FormItem>
                       <InputGroup
-                          inputType='text'
+                          actions
                           addonPos='after'
-                          inputValue='1234567890'
-                          actions>
+                          inputType='text'
+                          inputValue='1234567890'>
                           <Button option='light'>Button</Button>
                       </InputGroup>
                   </FormItem>
@@ -387,11 +387,11 @@ Compact mode:
                   <FormLabel labelText='Input with text action' />
                   <FormItem>
                       <InputGroup
-                          inputType='text'
-                          addonPos='after'
-                          inputValue='1234567890'
                           actions
-                          compact>
+                          addonPos='after'
+                          compact
+                          inputType='text'
+                          inputValue='1234567890'>
                           <Button option='light'>Button</Button>
                       </InputGroup>
                   </FormItem>
@@ -401,9 +401,9 @@ Compact mode:
               <FormGroup>
                   <FormLabel labelText='Input with icon text action' />
                   <FormItem>
-                      <InputGroup inputType='text' addonPos='after'
-                          actions>
-                          <Button option='light' glyph='navigation-down-arrow' />
+                      <InputGroup actions addonPos='after'
+                          inputType='text'>
+                          <Button glyph='navigation-down-arrow' option='light' />
                       </InputGroup>
                   </FormItem>
               </FormGroup>
@@ -412,9 +412,9 @@ Compact mode:
               <FormGroup>
                   <FormLabel labelText='Input with icon text action' />
                   <FormItem>
-                      <InputGroup inputType='text' addonPos='after'
-                          actions compact>
-                          <Button option='light' glyph='navigation-down-arrow' />
+                      <InputGroup actions addonPos='after'
+                          compact inputType='text'>
+                          <Button glyph='navigation-down-arrow' option='light' />
                       </InputGroup>
                   </FormItem>
               </FormGroup>
@@ -1072,12 +1072,12 @@ Compact mode:
                   <FormLabel labelText='Input with text action' />
                   <FormItem>
                       <InputGroup
-                          inputType='text'
-                          addonPos='after'
-                          inputValue='1234567890'
+                          actions
                           addon='$'
-                          actions>
-                          <Button option='light' glyph='navigation-down-arrow'>
+                          addonPos='after'
+                          inputType='text'
+                          inputValue='1234567890'>
+                          <Button glyph='navigation-down-arrow' option='light'>
                 Button
                           </Button>
                       </InputGroup>

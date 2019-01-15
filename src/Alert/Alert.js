@@ -36,14 +36,14 @@ export class Alert extends Component {
                 {...props}>
                 {dismissable && (
                     <button
-                        className='fd-alert__close'
                         aria-controls='j2ALl423'
                         aria-label='Close'
+                        className='fd-alert__close'
                         onClick={() => this.closeAlertHandler()} />
                 )}
                 {children}
                 {link && (
-                    <a href={link} className='fd-link'>
+                    <a className='fd-link' href={link}>
                         {linkText}{' '}
                         <span className='sap-icon--arrow-right sap-icon--s' />
                     </a>

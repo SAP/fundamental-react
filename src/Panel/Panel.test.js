@@ -19,8 +19,8 @@ describe('<Panel />', () => {
         <Panel>
             <PanelHeader>
                 <PanelHead
-                    title={'Panel Header with Actions'}
-                    description='Panel Description' />
+                    description='Panel Description'
+                    title={'Panel Header with Actions'} />
                 <PanelActions>
                     <Button compact glyph='add'>
                         Add New Button
@@ -46,8 +46,8 @@ describe('<Panel />', () => {
             <PanelHeader className='blue'>
                 <PanelHead
                     className='blue'
-                    title={'Panel Header with Actions'}
-                    description='Panel Description' />
+                    description='Panel Description'
+                    title={'Panel Header with Actions'} />
                 <PanelActions className='blue'>
                     <Button compact glyph='add'>
                         Add New Button

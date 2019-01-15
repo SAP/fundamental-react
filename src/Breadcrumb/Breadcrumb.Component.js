@@ -30,9 +30,9 @@ export const BreadcrumbComponent = () => {
             <Description>An example using url (href attribute)</Description>
             <DocsTile>
                 <Breadcrumb>
-                    <BreadcrumbItem url='#' name='Link Text' />
-                    <BreadcrumbItem url='#' name='Link Text' />
-                    <BreadcrumbItem url='#' name='Link Text' />
+                    <BreadcrumbItem name='Link Text' url='#' />
+                    <BreadcrumbItem name='Link Text' url='#' />
+                    <BreadcrumbItem name='Link Text' url='#' />
                 </Breadcrumb>
             </DocsTile>
             <DocsText>{breadcrumbHrefCode}</DocsText>

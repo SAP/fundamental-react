@@ -18,7 +18,7 @@ describe('<Button />', () => {
         </Button>
     );
     const disabledButton = (
-        <Button option='emphasized' disabled>
+        <Button disabled option='emphasized'>
             Disabled State
         </Button>
     );

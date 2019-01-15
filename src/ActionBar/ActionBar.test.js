@@ -14,8 +14,8 @@ describe('<ActionBar />', () => {
             <ActionBarBack className='blue' />
             <ActionBarHeader
                 className='blue'
-                title={'Page Title'}
-                description={'Action Bar Description'} />
+                description={'Action Bar Description'}
+                title={'Page Title'} />
             <ActionBarActions className='blue'>
                 <button>Button</button>
             </ActionBarActions>
@@ -27,8 +27,8 @@ describe('<ActionBar />', () => {
             <ActionBarBack className='blue' />
             <ActionBarHeader
                 className='blue'
-                title={'Page Title'}
-                description={'Action Bar Description'} />
+                description={'Action Bar Description'}
+                title={'Page Title'} />
             <ActionBarActions className='blue'>
                 <button>Button</button>
             </ActionBarActions>
@@ -39,8 +39,8 @@ describe('<ActionBar />', () => {
         <ActionBar className='blue' mobile>
             <ActionBarBack />
             <ActionBarHeader
-                title={'Page Title'}
-                description={'Action Bar Description'} />
+                description={'Action Bar Description'}
+                title={'Page Title'} />
             <ActionBarActions>
                 <button>Button</button>
             </ActionBarActions>
@@ -51,8 +51,8 @@ describe('<ActionBar />', () => {
         <ActionBar mobile width='500px'>
             <ActionBarBack />
             <ActionBarHeader
-                title={'Page Title'}
-                description={'Action Bar Description'} />
+                description={'Action Bar Description'}
+                title={'Page Title'} />
             <ActionBarActions>
                 <button>Button</button>
             </ActionBarActions>

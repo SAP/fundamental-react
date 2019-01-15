@@ -11,7 +11,7 @@ describe('<ComboboxInput />', () => {
                 <MenuItem url='/'>Pear</MenuItem>
                 <MenuItem url='/'>Strawberry</MenuItem>
                 <MenuItem url='/'>Raspberry</MenuItem>
-                <MenuItem url='/' isLink>
+                <MenuItem isLink url='/'>
                     + New Item
                 </MenuItem>
             </MenuList>
@@ -20,16 +20,16 @@ describe('<ComboboxInput />', () => {
 
     const defaultComboBoxInput = (
         <ComboboxInput
-            placeholder='Select Fruit'
-            menu={defaultMenu} />
+            menu={defaultMenu}
+            placeholder='Select Fruit' />
     );
 
     const compactComboBoxInput = (
         <ComboboxInput
             className='blue'
-            placeholder='Select Fruit'
             compact
-            menu={defaultMenu} />
+            menu={defaultMenu}
+            placeholder='Select Fruit' />
     );
 
     test('create combobox input', () => {

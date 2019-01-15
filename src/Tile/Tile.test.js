@@ -19,15 +19,15 @@ import { Menu, MenuList, MenuItem } from '../Menu/Menu';
 describe('<Tile />', () => {
     const simpleTile = (
         <Tile className='blue'>
-            <TileContent title='Tile Title' className='red'>
+            <TileContent className='red' title='Tile Title'>
                 <p>Tile Description</p>
             </TileContent>
         </Tile>
     );
 
     const disabledSimpleTile = (
-        <Tile disabled columnSpan={3}
-            backgroundColor={8}>
+        <Tile backgroundColor={8} columnSpan={3}
+            disabled>
             <TileContent title='Tile Title'>
                 <p>Tile Description</p>
             </TileContent>
@@ -37,8 +37,8 @@ describe('<Tile />', () => {
     const mediaTile = (
         <Tile isButton>
             <TileMedia className='green'>
-                <Identifier size='m' glyph='home'
-                    color={3} />
+                <Identifier color={3} glyph='home'
+                    size='m' />
             </TileMedia>
             <TileContent title='Tile Title'>
                 <p>Tile Description</p>
@@ -51,7 +51,6 @@ describe('<Tile />', () => {
             <TileContent title='Tile Title' />
             <TileActions className='yellow'>
                 <Popover
-                    control={<Button type='standard' glyph='vertical-grip' />}
                     body={
                         <Menu>
                             <MenuList>
@@ -61,7 +60,8 @@ describe('<Tile />', () => {
                                 <MenuItem url='/'>Option 4</MenuItem>
                             </MenuList>
                         </Menu>
-                    } />
+                    }
+                    control={<Button glyph='vertical-grip' type='standard' />} />
             </TileActions>
         </Tile>
     );
@@ -69,8 +69,8 @@ describe('<Tile />', () => {
     const mediaTileNoClass = (
         <Tile isButton>
             <TileMedia>
-                <Identifier size='m' glyph='home'
-                    color={3} />
+                <Identifier color={3} glyph='home'
+                    size='m' />
             </TileMedia>
             <TileContent title='Tile Title'>
                 <p>Tile Description</p>
@@ -83,7 +83,6 @@ describe('<Tile />', () => {
             <TileContent title='Tile Title' />
             <TileActions>
                 <Popover
-                    control={<Button type='standard' glyph='vertical-grip' />}
                     body={
                         <Menu>
                             <MenuList>
@@ -93,7 +92,8 @@ describe('<Tile />', () => {
                                 <MenuItem url='/'>Option 4</MenuItem>
                             </MenuList>
                         </Menu>
-                    } />
+                    }
+                    control={<Button glyph='vertical-grip' type='standard' />} />
             </TileActions>
         </Tile>
     );
@@ -120,7 +120,7 @@ describe('<Tile />', () => {
 
     const defaultTileGrid = (
         <TileGrid className='blue'>
-            <Tile rowSpan={2} colorAccent={7}>
+            <Tile colorAccent={7} rowSpan={2}>
                 <TileContent title='Tile Title'>
                     <p>Tile Description</p>
                 </TileContent>
@@ -130,7 +130,7 @@ describe('<Tile />', () => {
 
     const tileGrid = (
         <TileGrid col={4}>
-            <Tile rowSpan={2} colorAccent={7}>
+            <Tile colorAccent={7} rowSpan={2}>
                 <TileContent title='Tile Title'>
                     <p>Tile Description</p>
                 </TileContent>

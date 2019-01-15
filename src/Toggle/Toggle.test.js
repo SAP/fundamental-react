@@ -6,8 +6,8 @@ import { Toggle } from './Toggle';
 describe('<Toggle />', () => {
     const defaultToggle = <Toggle>Normal toggle</Toggle>;
     const checkedToggle = (
-        <Toggle className='blue' size='s'
-            checked>
+        <Toggle checked className='blue'
+            size='s'>
             Small toggle
         </Toggle>
     );

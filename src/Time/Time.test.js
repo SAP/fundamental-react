@@ -14,8 +14,8 @@ describe('<Time />', () => {
     const timeMeridiemSet = (
         <Time
             format12Hours={false}
-            time={{ hour: 22, minute: 34, second: 12, meridiem: 0 }}
-            name='meridiem' />
+            name='meridiem'
+            time={{ hour: 22, minute: 34, second: 12, meridiem: 0 }} />
     );
 
     test('create time component', () => {
@@ -164,8 +164,8 @@ describe('<Time />', () => {
         let wrapper = mount(
             <Time
                 format12Hours
-                time={{ hour: 0, minute: 0, second: 0, meridiem: 0 }}
-                name='meridiem' />
+                name='meridiem'
+                time={{ hour: 0, minute: 0, second: 0, meridiem: 0 }} />
         );
         expect(wrapper.state('time').hour).toEqual(0);
         wrapper
@@ -183,8 +183,8 @@ describe('<Time />', () => {
         let wrapper = mount(
             <Time
                 format12Hours={false}
-                time={{ hour: 0, minute: 0, second: 0, meridiem: 0 }}
-                name='meridiem' />
+                name='meridiem'
+                time={{ hour: 0, minute: 0, second: 0, meridiem: 0 }} />
         );
         expect(wrapper.state('time').hour).toEqual(0);
         wrapper
@@ -200,8 +200,8 @@ describe('<Time />', () => {
         wrapper = mount(
             <Time
                 format12Hours
-                time={{ hour: 1, minute: 0, second: 0, meridiem: 0 }}
-                name='meridiem' />
+                name='meridiem'
+                time={{ hour: 1, minute: 0, second: 0, meridiem: 0 }} />
         );
         expect(wrapper.state('time').hour).toEqual(1);
         wrapper
@@ -218,8 +218,8 @@ describe('<Time />', () => {
         wrapper = mount(
             <Time
                 format12Hours
-                time={{ hour: 12, minute: 0, second: 0, meridiem: 0 }}
-                name='meridiem' />
+                name='meridiem'
+                time={{ hour: 12, minute: 0, second: 0, meridiem: 0 }} />
         );
         expect(wrapper.state('time').hour).toEqual(12);
         wrapper
@@ -238,8 +238,8 @@ describe('<Time />', () => {
         let wrapper = mount(
             <Time
                 format12Hours={false}
-                time={{ hour: 1, minute: 0, second: 0, meridiem: 0 }}
-                name='meridiem' />
+                name='meridiem'
+                time={{ hour: 1, minute: 0, second: 0, meridiem: 0 }} />
         );
         expect(wrapper.state('time').minute).toEqual(0);
         wrapper
@@ -255,8 +255,8 @@ describe('<Time />', () => {
         wrapper = mount(
             <Time
                 format12Hours
-                time={{ hour: 1, minute: 0, second: 0, meridiem: 0 }}
-                name='meridiem' />
+                name='meridiem'
+                time={{ hour: 1, minute: 0, second: 0, meridiem: 0 }} />
         );
         expect(wrapper.state('time').minute).toEqual(0);
         wrapper
@@ -273,8 +273,8 @@ describe('<Time />', () => {
         wrapper = mount(
             <Time
                 format12Hours
-                time={{ hour: 12, minute: 0, second: 0, meridiem: 0 }}
-                name='meridiem' />
+                name='meridiem'
+                time={{ hour: 12, minute: 0, second: 0, meridiem: 0 }} />
         );
         expect(wrapper.state('time').minute).toEqual(0);
         wrapper
@@ -293,8 +293,8 @@ describe('<Time />', () => {
         let wrapper = mount(
             <Time
                 format12Hours={false}
-                time={{ hour: 0, minute: 0, second: 0, meridiem: 0 }}
-                name='meridiem' />
+                name='meridiem'
+                time={{ hour: 0, minute: 0, second: 0, meridiem: 0 }} />
         );
         expect(wrapper.state('time').second).toEqual(0);
         wrapper
@@ -310,8 +310,8 @@ describe('<Time />', () => {
         wrapper = mount(
             <Time
                 format12Hours
-                time={{ hour: 1, minute: 0, second: 0, meridiem: 0 }}
-                name='meridiem' />
+                name='meridiem'
+                time={{ hour: 1, minute: 0, second: 0, meridiem: 0 }} />
         );
         expect(wrapper.state('time').second).toEqual(0);
         wrapper
@@ -328,8 +328,8 @@ describe('<Time />', () => {
         wrapper = mount(
             <Time
                 format12Hours
-                time={{ hour: 12, minute: 0, second: 0, meridiem: 0 }}
-                name='meridiem' />
+                name='meridiem'
+                time={{ hour: 12, minute: 0, second: 0, meridiem: 0 }} />
         );
         expect(wrapper.state('time').second).toEqual(0);
         wrapper
@@ -349,8 +349,8 @@ describe('<Time />', () => {
         let wrapper = mount(
             <Time
                 format12Hours
-                time={{ hour: 0, minute: 0, second: 0, meridiem: 0 }}
-                name='meridiem' />
+                name='meridiem'
+                time={{ hour: 0, minute: 0, second: 0, meridiem: 0 }} />
         );
         expect(wrapper.state('time').hour).toEqual(0);
         wrapper
@@ -368,8 +368,8 @@ describe('<Time />', () => {
         let wrapper = mount(
             <Time
                 format12Hours={false}
-                time={{ hour: 0, minute: 0, second: 0, meridiem: 0 }}
-                name='meridiem' />
+                name='meridiem'
+                time={{ hour: 0, minute: 0, second: 0, meridiem: 0 }} />
         );
         expect(wrapper.state('time').hour).toEqual(0);
         wrapper
@@ -385,8 +385,8 @@ describe('<Time />', () => {
         wrapper = mount(
             <Time
                 format12Hours={false}
-                time={{ hour: 23, minute: 0, second: 0, meridiem: 0 }}
-                name='meridiem' />
+                name='meridiem'
+                time={{ hour: 23, minute: 0, second: 0, meridiem: 0 }} />
         );
         expect(wrapper.state('time').hour).toEqual(23);
         wrapper
@@ -400,8 +400,8 @@ describe('<Time />', () => {
         wrapper = mount(
             <Time
                 format12Hours
-                time={{ hour: 1, minute: 0, second: 0, meridiem: 0 }}
-                name='meridiem' />
+                name='meridiem'
+                time={{ hour: 1, minute: 0, second: 0, meridiem: 0 }} />
         );
         expect(wrapper.state('time').hour).toEqual(1);
         wrapper
@@ -418,8 +418,8 @@ describe('<Time />', () => {
         wrapper = mount(
             <Time
                 format12Hours
-                time={{ hour: 12, minute: 0, second: 0, meridiem: 0 }}
-                name='meridiem' />
+                name='meridiem'
+                time={{ hour: 12, minute: 0, second: 0, meridiem: 0 }} />
         );
         expect(wrapper.state('time').hour).toEqual(12);
         wrapper
@@ -436,8 +436,8 @@ describe('<Time />', () => {
         wrapper = mount(
             <Time
                 format12Hours
-                time={{ hour: 11, minute: 0, second: 0, meridiem: 0 }}
-                name='meridiem' />
+                name='meridiem'
+                time={{ hour: 11, minute: 0, second: 0, meridiem: 0 }} />
         );
         expect(wrapper.state('time').hour).toEqual(11);
         wrapper
@@ -454,8 +454,8 @@ describe('<Time />', () => {
         let wrapper = mount(
             <Time
                 format12Hours={false}
-                time={{ hour: 1, minute: 0, second: 0, meridiem: 0 }}
-                name='meridiem' />
+                name='meridiem'
+                time={{ hour: 1, minute: 0, second: 0, meridiem: 0 }} />
         );
         expect(wrapper.state('time').minute).toEqual(0);
         wrapper
@@ -471,8 +471,8 @@ describe('<Time />', () => {
         wrapper = mount(
             <Time
                 format12Hours={false}
-                time={{ hour: 24, minute: 59, second: 0, meridiem: 0 }}
-                name='meridiem' />
+                name='meridiem'
+                time={{ hour: 24, minute: 59, second: 0, meridiem: 0 }} />
         );
         expect(wrapper.state('time').minute).toEqual(59);
         wrapper
@@ -487,8 +487,8 @@ describe('<Time />', () => {
         wrapper = mount(
             <Time
                 format12Hours
-                time={{ hour: 1, minute: 0, second: 0, meridiem: 0 }}
-                name='meridiem' />
+                name='meridiem'
+                time={{ hour: 1, minute: 0, second: 0, meridiem: 0 }} />
         );
         expect(wrapper.state('time').minute).toEqual(0);
         wrapper
@@ -505,8 +505,8 @@ describe('<Time />', () => {
         wrapper = mount(
             <Time
                 format12Hours
-                time={{ hour: 1, minute: 59, second: 0, meridiem: 0 }}
-                name='meridiem' />
+                name='meridiem'
+                time={{ hour: 1, minute: 59, second: 0, meridiem: 0 }} />
         );
         expect(wrapper.state('time').hour).toEqual(1);
         expect(wrapper.state('time').minute).toEqual(59);
@@ -523,8 +523,8 @@ describe('<Time />', () => {
         wrapper = mount(
             <Time
                 format12Hours
-                time={{ hour: 11, minute: 59, second: 0, meridiem: 0 }}
-                name='meridiem' />
+                name='meridiem'
+                time={{ hour: 11, minute: 59, second: 0, meridiem: 0 }} />
         );
         expect(wrapper.state('time').hour).toEqual(11);
         expect(wrapper.state('time').minute).toEqual(59);
@@ -542,8 +542,8 @@ describe('<Time />', () => {
         wrapper = mount(
             <Time
                 format12Hours
-                time={{ hour: 12, minute: 0, second: 0, meridiem: 0 }}
-                name='meridiem' />
+                name='meridiem'
+                time={{ hour: 12, minute: 0, second: 0, meridiem: 0 }} />
         );
         expect(wrapper.state('time').minute).toEqual(0);
         wrapper
@@ -560,8 +560,8 @@ describe('<Time />', () => {
         wrapper = mount(
             <Time
                 format12Hours
-                time={{ hour: 12, minute: 59, second: 0, meridiem: 0 }}
-                name='meridiem' />
+                name='meridiem'
+                time={{ hour: 12, minute: 59, second: 0, meridiem: 0 }} />
         );
         expect(wrapper.state('time').minute).toEqual(59);
         wrapper
@@ -580,8 +580,8 @@ describe('<Time />', () => {
         let wrapper = mount(
             <Time
                 format12Hours={false}
-                time={{ hour: 0, minute: 58, second: 59, meridiem: 0 }}
-                name='meridiem' />
+                name='meridiem'
+                time={{ hour: 0, minute: 58, second: 59, meridiem: 0 }} />
         );
         expect(wrapper.state('time').second).toEqual(59);
         wrapper
@@ -597,8 +597,8 @@ describe('<Time />', () => {
         wrapper = mount(
             <Time
                 format12Hours={false}
-                time={{ hour: 0, minute: 59, second: 59, meridiem: 0 }}
-                name='meridiem' />
+                name='meridiem'
+                time={{ hour: 0, minute: 59, second: 59, meridiem: 0 }} />
         );
         expect(wrapper.state('time').second).toEqual(59);
         wrapper
@@ -614,8 +614,8 @@ describe('<Time />', () => {
         wrapper = mount(
             <Time
                 format12Hours
-                time={{ hour: 1, minute: 0, second: 0, meridiem: 0 }}
-                name='meridiem' />
+                name='meridiem'
+                time={{ hour: 1, minute: 0, second: 0, meridiem: 0 }} />
         );
         expect(wrapper.state('time').second).toEqual(0);
         wrapper
@@ -632,8 +632,8 @@ describe('<Time />', () => {
         wrapper = mount(
             <Time
                 format12Hours
-                time={{ hour: 12, minute: 0, second: 0, meridiem: 0 }}
-                name='meridiem' />
+                name='meridiem'
+                time={{ hour: 12, minute: 0, second: 0, meridiem: 0 }} />
         );
         expect(wrapper.state('time').second).toEqual(0);
         wrapper
