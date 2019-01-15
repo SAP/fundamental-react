@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.0.15-rc.21"></a>
+## [0.0.15-rc.21](https://github.com/SAP/fundamental-react/compare/v0.0.15-rc.20...v0.0.15-rc.21) (2019-01-15)
+
+
+### Bug Fixes
+
+* eslint no sparse arrays ([#200](https://github.com/SAP/fundamental-react/issues/200)) ([f15a6b7](https://github.com/SAP/fundamental-react/commit/f15a6b7))
+
+
+
 <a name="0.0.15-rc.20"></a>
 ## [0.0.15-rc.20](https://github.com/SAP/fundamental-react/compare/v0.0.15-rc.19...v0.0.15-rc.20) (2019-01-15)
 
