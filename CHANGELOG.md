@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.0.15-rc.17"></a>
+## [0.0.15-rc.17](http://sap.github.io/fundamental-react/compare/v0.0.15-rc.16...v0.0.15-rc.17) (2019-01-15)
+
+
+
 <a name="0.0.15-rc.16"></a>
 ## [0.0.15-rc.16](http://sap.github.io/fundamental-react/compare/v0.0.15-rc.15...v0.0.15-rc.16) (2019-01-15)
 
