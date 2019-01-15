@@ -91,7 +91,7 @@ exports[`<Tile /> create tile component 4`] = `
         onClick={[Function]}
       >
         <button
-          className=" fd-button fd-button--standard sap-icon--vertical-grip"
+          className="fd-button fd-button--standard sap-icon--vertical-grip"
           disabled={false}
           selected={false}
         />
@@ -199,7 +199,7 @@ exports[`<Tile /> create tile component 6`] = `
         onClick={[Function]}
       >
         <button
-          className=" fd-button fd-button--standard sap-icon--vertical-grip"
+          className="fd-button fd-button--standard sap-icon--vertical-grip"
           disabled={false}
           selected={false}
         />

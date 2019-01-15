@@ -25,7 +25,7 @@ exports[`<Panel /> create panels 1`] = `
       className="fd-panel__actions"
     >
       <button
-        className=" fd-button fd-button--compact sap-icon--add"
+        className="fd-button fd-button--compact sap-icon--add"
         disabled={false}
         selected={false}
       >
@@ -161,7 +161,7 @@ exports[`<Panel /> create panels 3`] = `
       className="fd-panel__actions blue"
     >
       <button
-        className=" fd-button fd-button--compact sap-icon--add"
+        className="fd-button fd-button--compact sap-icon--add"
         disabled={false}
         selected={false}
       >
