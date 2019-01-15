@@ -11,6 +11,7 @@ import {
 } from '../';
 
 export const PaginationComponent = () => {
+
   const handleClick = event => {
     alert(`Page clicked - ${event}`);
   };

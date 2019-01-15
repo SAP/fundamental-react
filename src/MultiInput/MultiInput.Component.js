@@ -32,7 +32,7 @@ export class MultiInputComponent extends Component {
 
     this.state = {
       data: []
-    };
+    }
   }
 
   performTagsUpdate = aTags => {
