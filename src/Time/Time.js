@@ -314,9 +314,7 @@ export class Time extends Component {
   constructor(props) {
     super(props);
     const { time } = this.props;
-    if (time.hour !== '00') {
-        // do nothing
-    } else {
+    if (time.hour === '00') {
       time.hour = this.props.format12Hours ? '12' : '00';
     }
     this.state = {
