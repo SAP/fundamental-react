@@ -31,7 +31,7 @@ export class MultiInput extends Component {
   };
 
   // create tag elements to display below input box
-  createTags = tags => {
+  createTags = () => {
     return this.state.tags.map((tag, index) => (
         <span
             key={index}
