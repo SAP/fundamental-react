@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.0.15-rc.28"></a>
+## [0.0.15-rc.28](https://github.com/SAP/fundamental-react/compare/v0.0.15-rc.27...v0.0.15-rc.28) (2019-01-15)
+
+
+### Bug Fixes
+
+* update slack location for travis notifications ([#210](https://github.com/SAP/fundamental-react/issues/210)) ([28e80fc](https://github.com/SAP/fundamental-react/commit/28e80fc))
+
+
+
 <a name="0.0.15-rc.27"></a>
 ## [0.0.15-rc.27](https://github.com/SAP/fundamental-react/compare/v0.0.15-rc.26...v0.0.15-rc.27) (2019-01-15)
 
