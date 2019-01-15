@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.0.15-rc.25"></a>
+## [0.0.15-rc.25](https://github.com/SAP/fundamental-react/compare/v0.0.15-rc.24...v0.0.15-rc.25) (2019-01-15)
+
+
+### Bug Fixes
+
+* eslint no nested ternary ([#198](https://github.com/SAP/fundamental-react/issues/198)) ([a5ce942](https://github.com/SAP/fundamental-react/commit/a5ce942))
+
+
+
 <a name="0.0.15-rc.24"></a>
 ## [0.0.15-rc.24](https://github.com/SAP/fundamental-react/compare/v0.0.15-rc.23...v0.0.15-rc.24) (2019-01-15)
 
