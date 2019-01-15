@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.0.15-rc.19"></a>
+## [0.0.15-rc.19](https://github.com/SAP/fundamental-react/compare/v0.0.15-rc.18...v0.0.15-rc.19) (2019-01-15)
+
+
+### Bug Fixes
+
+* repo path in package.json. fix path in changelog ([a1da1c2](https://github.com/SAP/fundamental-react/commit/a1da1c2))
+
+
+
 <a name="0.0.15-rc.18"></a>
 ## [0.0.15-rc.18](http://sap.github.io/fundamental-react/compare/v0.0.15-rc.17...v0.0.15-rc.18) (2019-01-15)
 
