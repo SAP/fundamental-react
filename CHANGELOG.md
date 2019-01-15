@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.0.15-rc.24"></a>
+## [0.0.15-rc.24](https://github.com/SAP/fundamental-react/compare/v0.0.15-rc.23...v0.0.15-rc.24) (2019-01-15)
+
+
+### Bug Fixes
+
+* eslint use isnan ([#204](https://github.com/SAP/fundamental-react/issues/204)) ([5878b5b](https://github.com/SAP/fundamental-react/commit/5878b5b))
+
+
+
 <a name="0.0.15-rc.23"></a>
 ## [0.0.15-rc.23](https://github.com/SAP/fundamental-react/compare/v0.0.15-rc.22...v0.0.15-rc.23) (2019-01-15)
 
