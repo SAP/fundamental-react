@@ -1,7 +1,7 @@
 #! /bin/bash
 
 # publish releases (already tagged by publish_release.sh)
-if [[ "$TRAVIS_COMMIT_MESSAGE" =~ chore\(release\):\sversion\s[0-9]+\.[0-9]+\.[0-9]+$.* ]]; then
+if [[ "$TRAVIS_COMMIT_MESSAGE" =~ chore\(release\):[[:space:]]version[[:space:]][0-9]+\.[0-9]+\.[0-9]+$.* ]]; then
     npm publish
 # bump and publish rc
 else
