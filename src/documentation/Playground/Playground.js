@@ -305,7 +305,7 @@ export class Playground extends Component {
           );
 
         default:
-          return undefined;
+            // do nothing
       }
     });
 

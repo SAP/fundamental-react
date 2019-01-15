@@ -104,7 +104,7 @@ rules:
     #no-sparse-arrays: 2
     no-trailing-spaces: 2
     no-undef: 2
-    #no-undefined: 2
+    no-undefined: 2
     no-underscore-dangle: 0
     no-unreachable: 2
     #no-unused-vars: [2, { ignoreRestSiblings: true }]
