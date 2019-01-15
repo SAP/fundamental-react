@@ -1,3 +1,4 @@
+import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -15,11 +16,32 @@ export const Button = ({
     children,
     className,
     ...props
-}) => (<button className={`${option ? 'fd-button--' + option : ' fd-button'}${type ? ' fd-button--' + type : ''}${dropdown ? ' fd-dropdown__control' : ''}${compact ? ' fd-button--compact' : ''}${glyph ? ' sap-icon--' + glyph : ''}${navbar ? ' fd-global-nav__btn' : ''}${selected ? ' is-selected' : ''}${disabled ? ' is-disabled' : ''}${className ? ' ' + className : ''}`} {...props}
-    disabled={disabled ? disabled : false} onClick={onClick}
-    selected={selected ? selected : false} type={typeAttr}>
-    {children}
-</button>);
+}) => {
+    const buttonClasses = classnames(
+        {
+            'fd-button': !!option,
+            'fd-button--emphasized': option === 'emphasized',
+            'fd-button--light': option === 'light',
+            'fd-button--shell': option === 'shell',
+            'fd-button--standard': type === 'standard',
+            'fd-button--positive': type === 'positive',
+            'fd-button--negative': type === 'negative',
+            'fd-button--medium': type === 'medium',
+            'fd-dropdown__control': dropdown,
+            'fd-button--compact': compact,
+            [`sap-icon--${glyph}`]: glyph,
+            'fd-global-nav__btn': navbar,
+            'is-selected': selected,
+            'is-disabled': disabled
+        },
+        className
+    );
+    return (<button className={buttonClasses} {...props}
+        disabled={disabled ? disabled : false} onClick={onClick}
+        selected={selected ? selected : false} type={typeAttr}>
+        {children}
+    </button>);
+};
 
 Button.propTypes = {
     compact: PropTypes.bool,

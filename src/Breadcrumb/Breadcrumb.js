@@ -1,3 +1,4 @@
+import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { BrowserRouter, Link } from 'react-router-dom';
@@ -11,9 +12,14 @@ Breadcrumb.propTypes = {
 };
 
 export const BreadcrumbItem = ({ url, link, name, className, ...props }) => {
+    const breadcrumbItemClasses = classnames(
+        'fd-breadcrumb__item',
+        className
+    );
+
     return (
         <BrowserRouter>
-            <li className={`fd-breadcrumb__item${className ? ' ' + className : ''}`} {...props}>
+            <li className={breadcrumbItemClasses} {...props}>
                 {link && <Link className='fd-breadcrumb__link' to={{ pathname: link }}>{name}</Link>}
                 {url && <a className='fd-breadcrumb__link' href={url}>{name}</a>}
             </li>

@@ -1,9 +1,23 @@
+import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 
+
 export const Badge = ({ type, modifier, children, className, ...props }) => {
+    const badgeClasses = classnames(
+        'fd-badge',
+        {
+            'fd-badge--success': type === 'success',
+            'fd-badge--warning': type === 'warning',
+            'fd-badge--error': type === 'error',
+            'fd-badge--pill': modifier === 'pill',
+            'fd-badge--filled': modifier === 'filled'
+        },
+        className
+    );
+
     return (
-        <span className={`fd-badge${type ? ' fd-badge--' + type : ''}${modifier ? ' fd-badge--' + modifier : ''}${className ? ' ' + className : ''}`} {...props}>
+        <span className={badgeClasses} {...props}>
             {children}
         </span>
     );
@@ -16,7 +30,17 @@ Badge.propTypes = {
 };
 
 export const Label = ({ type, children, className, ...props }) => {
-    return <span className={`fd-label${type ? ' fd-label--' + type : ''}${className ? ' ' + className : ''}`} {...props}>{children}</span>;
+    const labelClasses = classnames(
+        'fd-label',
+        {
+            'fd-label--success': type === 'success',
+            'fd-label--warning': type === 'warning',
+            'fd-label--error': type === 'error'
+        },
+        className
+    );
+
+    return <span className={labelClasses} {...props}>{children}</span>;
 };
 
 Label.propTypes = {
@@ -25,9 +49,24 @@ Label.propTypes = {
 };
 
 export const Status = ({ type, glyph, children, className, ...props } ) => {
+    const statusClasses = classnames(
+        'fd-status-label',
+        {
+            'fd-status-label--success': type === 'success',
+            'fd-status-label--warning': type === 'warning',
+            'fd-status-label--error': type === 'error',
+            'fd-status-label--available': type === 'available',
+            'fd-status-label--away': type === 'away',
+            'fd-status-label--busy': type === 'busy',
+            'fd-status-label--offline': type === 'offline',
+            [`sap-icon--${glyph}`]: glyph
+        },
+        className
+    );
+
     return (
         <span
-            className={`fd-status-label${type ? ' fd-status-label--' + type : ''}${glyph ? ' sap-icon--' + glyph : ''}${className ? ' ' + className : ''}`} {...props}>
+            className={statusClasses} {...props}>
             {children}
         </span>
     );
@@ -39,8 +78,16 @@ Status.propTypes = {
 };
 
 export const Counter = ({ notification, children, className, ...props }) => {
+    const counterClasses = classnames(
+        'fd-counter',
+        {
+            'fd-counter--notification': notification
+        },
+        className
+    );
+
     return (
-        <span aria-label='Unread count' className={`fd-counter${notification ? ' fd-counter--notification' : ''}${className ? ' ' + className : ''}`}
+        <span aria-label='Unread count' className={counterClasses}
             {...props}>
             {children}
         </span>
