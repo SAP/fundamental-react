@@ -1,12 +1,12 @@
 {
   "name": "fundamental-react",
-  "version": "0.0.15-rc.17",
+  "version": "0.0.15-rc.20",
   "private": false,
   "license": "Apache-2.0",
-  "homepage": "http://sap.github.io/fundamental-react",
+  "homepage": "https://sap.github.io/fundamental-react",
   "repository": {
     "type": "git",
-    "url": "http://sap.github.io/fundamental-react"
+    "url": "https://github.com/SAP/fundamental-react"
   },
   "scripts": {
     "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
