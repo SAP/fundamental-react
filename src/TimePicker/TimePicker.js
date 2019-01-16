@@ -32,10 +32,7 @@ class TimePickerItem extends Component {
       isValid: false,
       length: 0
   };
-  /**
-   *
-   * @param {object} props
-   */
+
   constructor(props) {
       super(props);
       var length = this.setLength(props);
@@ -48,10 +45,7 @@ class TimePickerItem extends Component {
           length: length
       };
   }
-  /**
-   *@param {object} props
-   *Calculates the length of the input value depending on the props value
-   */
+
   setLength = props => {
       var length = 0;
       if (
@@ -85,21 +79,14 @@ class TimePickerItem extends Component {
       }
       return length;
   };
-  /**
-   *@param {object} event
-   updates value back to Parent Component(TimePicker)
-   validates input value
-   */
+
   onChange = event => {
       this.setState({ value: event.target.value });
       var aux = event.target.value;
       this.onInputValidation(aux);
       this.props.updateValue(aux);
   };
-  /**
-   *  *@param {string} value
-   * validates the input based on type format and length
-   */
+
   onInputValidation = value => {
       const { showHour, showMinute, showSecond, format12Hours } = this.props;
 
@@ -131,11 +118,7 @@ class TimePickerItem extends Component {
       //   this.inputCheck(regex, value);
       // }
   };
-  /**
-   *  @param {string} regex
-   *  @param {string} value
-   * updates isValid and style properties
-   */
+
   inputCheck = (regex, value) => {
       if (regex.test(value) && value.length === this.state.length) {
           this.setState({ isValid: true, style: VALID });
@@ -146,11 +129,6 @@ class TimePickerItem extends Component {
       }
   };
 
-  /**
-   *  @param {string} value
-   * formats the input value into a time object{time,minute, second,meridiem}
-   * and sends it to the Parent Component (TimePicker)
-   */
   updateTime = value => {
       const { length } = this.state;
       const { showHour, showMinute, showSecond, format12Hours } = this.props;
@@ -245,9 +223,7 @@ class TimePickerItem extends Component {
           this.props.onChange(time);
       }
   };
-  /**
-   * Handles focus out on input field and resets the value if the input value is for a valid string
-   */
+
   onBlur = () => {
       const { isValid } = this.state;
       //if the input is not the correct format then  it will be cleared
@@ -351,11 +327,7 @@ export class TimePicker extends React.Component {
       }
       this.state.placeholder = value;
   }
-  /**
-   *
-   * @param {object} time
-   * updater for time and value
-   */
+
   onChange = time => {
       this.setState(() => {
           let value = time ? this.formatValue(time) : '';
@@ -368,9 +340,7 @@ export class TimePicker extends React.Component {
   updateValue = value => {
       this.setState({ value: value });
   };
-  /**
-   * format output value when using the time component
-   */
+
   formatValue = time => {
       let value = '';
 
