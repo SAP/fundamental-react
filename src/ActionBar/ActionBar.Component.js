@@ -116,6 +116,18 @@ const clickBackBtn = () => {
                     {
                         name: 'onClick',
                         description: 'func - The function that is executed when the back button is clicked.'
+                    },
+                    {
+                        name: 'buttonProps',
+                        description: 'object - additional props to be spread to the ActionBarBack\'s button.'
+                    },
+                    {
+                        name: 'descriptionProps',
+                        description: 'object - additional props to be spread to the ActionBarHeader\'s description.'
+                    },
+                    {
+                        name: 'titleProps',
+                        description: 'object - additional props to be spread to the ActionBarHeader\'s title.'
                     }
                 ]}
                 type='Inputs' />
