@@ -19,7 +19,7 @@ export const Button = ({
 }) => {
     const buttonClasses = classnames(
         {
-            'fd-button': !!option === false,
+            'fd-button': !option,
             'fd-button--emphasized': option === 'emphasized',
             'fd-button--light': option === 'light',
             'fd-button--shell': option === 'shell',

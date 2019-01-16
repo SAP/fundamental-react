@@ -3,7 +3,10 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 export const ActionBar = ({ mobile, width, children, className, ...props }) => {
-    const actionBarClasses = classnames('fd-action-bar', className);
+    const actionBarClasses = classnames(
+        'fd-action-bar',
+        className
+    );
 
     return (
         <React.Fragment>
@@ -25,7 +28,10 @@ ActionBar.propTypes = {
 };
 
 export const ActionBarBack = ({ onClick, className, buttonProps, ...props }) => {
-    const actionBarBackClasses = classnames('fd-action-bar__back', className);
+    const actionBarBackClasses = classnames(
+        'fd-action-bar__back',
+        className
+    );
 
     return (
         <div className={actionBarBackClasses} {...props}>
@@ -44,7 +50,10 @@ ActionBarBack.propTypes = {
 };
 
 export const ActionBarHeader = ({ className, description, descriptionProps, title, titleProps, ...props }) => {
-    const actionBarHeaderClasses = classnames('fd-action-bar__header', className);
+    const actionBarHeaderClasses = classnames(
+        'fd-action-bar__header',
+        className
+    );
 
     return (
         <div className={actionBarHeaderClasses} {...props}>
@@ -67,7 +76,10 @@ ActionBarHeader.propTypes = {
 };
 
 export const ActionBarActions = ({ children, className, ...props }) => {
-    const actionBarActionsClasses = classnames('fd-action-bar__actions', className);
+    const actionBarActionsClasses = classnames(
+        'fd-action-bar__actions',
+        className
+    );
 
     return <div className={actionBarActionsClasses} {...props}>{children}</div>;
 };

@@ -8,7 +8,7 @@ export const Identifier = ({ glyph, size, modifier, color, label, backgroundImag
     };
     const identifierClasses = classnames(
         {
-            'fd-identifier': !!size === false,
+            'fd-identifier': !size,
             'fd-identifier--xxs': size === 'xxs',
             'fd-identifier--xs': size === 'xs',
             'fd-identifier--s': size === 's',
