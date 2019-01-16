@@ -24,10 +24,7 @@ class TimeItem extends Component {
       value: null,
       arialabel: ''
   };
-  /**
-   * Constructor.
-   * @param {object} props
-   */
+
   constructor(props) {
       super(props);
       var aria = {};
@@ -53,9 +50,6 @@ class TimeItem extends Component {
       }
   }
 
-  /****
-   * Increase time item(hour,minute,second,meridiem) value
-   */
   _onUp = () => {
       const { value, max, name, time, format12Hours } = this.props;
       var aux;
@@ -82,13 +76,6 @@ class TimeItem extends Component {
       this.props.updateTime(aux, name);
   };
 
-  /**
-   * Function to increase  time item when the current item from where the
-   * increase is happening is reaching maximum value
-   *@param {string} name - time item name(hour,minute,second,meridiem)
-   *@param {object} time - time object from the Time component
-   *@param {bool} format12Hours - 12 hours time format
-   */
   increaseTimeObj = (name, time, format12Hours) => {
       if (name === 'second' && parseInt(time.minute, 10) < 60) {
           let newMinute = parseInt(time.minute, 10) + 1;
@@ -109,12 +96,7 @@ class TimeItem extends Component {
           this.props.updateTime(newHour, 'hour');
       }
   };
-  /**
-   * Function to increase/reset  hour item depending on multiple scenarios
-   *@param {string} newHour - the  current hour value + 1
-   *@param {object} time - time object from the Time component
-   *@param {bool} format12Hours - 12 hours time format
-   */
+
   increaseHour = (format12Hours, newHour, time) => {
       if (format12Hours && newHour < 12) {
           newHour = 1;
@@ -135,12 +117,7 @@ class TimeItem extends Component {
           this.props.updateTime(newHour, 'hour');
       }
   };
-  /**
-   * Function to decrease/reset time item
-   *@param {string} name - time item name(hour,minute,second,meridiem)
-   *@param {object} time - time object from the Time component
-   *@param {bool} format12Hours - 12 hours time format
-   */
+
   decreaseTimeObj = (name, time) => {
       if (name === 'second') {
           let newMinute = parseInt(time.minute, 10) - 1;
@@ -173,10 +150,7 @@ class TimeItem extends Component {
           this.props.updateTime(newHour, 'hour');
       }
   };
-  /****
-   * Function to handle press even on decrease button
-   * Decrease time item(hour,minute,second,meridiem) value
-   */
+
   _onDown = () => {
       const { value, max, name, time, format12Hours } = this.props;
 
@@ -202,11 +176,7 @@ class TimeItem extends Component {
       }
       this.props.updateTime(aux, name);
   };
-  /**
-   * Get the maximum value for a time item
-   * @param {string} name - time item name (hour, second, minute, meridiem)
-   * @param {sting} max - maximum value sent from Time component
-   */
+
   setMax = (name, max) => {
       var maxAux;
       if (name === 'hour' && this.props.format12Hours) {
@@ -216,10 +186,7 @@ class TimeItem extends Component {
       }
       return maxAux;
   };
-  /**
-   * Handle change event on input field, update the style when needed
-   * @param {object} event
-   */
+
   onChange = event => {
       const { style } = this.state;
       const { name, max } = this.props;
@@ -232,11 +199,7 @@ class TimeItem extends Component {
 
       this.props.updateTime(aux, this.props.name, event);
   };
-  /**
-   * @param {string} style - the style class names for the input/time item field
-   * @param {string} aux - the current value from input field/time item
-   * @param {integer} max - maximum value for the the time input
-   */
+
   updateStyle = (style, aux, max) => {
       if (parseInt(aux, 10) > max) {
           if (style.indexOf(INVALID) === -1) {
@@ -339,21 +302,14 @@ export class Time extends Component {
           format12Hours: props.format12Hours
       };
   }
-  /**
-   *
-   * @param {object} nextProps
-   * Change the time state values from parent component with the new values from props
-   */
+
   componentWillReceiveProps(nextProps) {
       // check if props are different than the current state to prevent an unneeded render
       if (nextProps.time !== this.state.time) {
           this.setState({ time: nextProps.time });
       }
   }
-  /** Add 0 to values < 10
-   * @param {string} value
-   * @param {string} name
-   */
+
   formatValue = (value, name) => {
       if (name !== 'meridiem' && parseInt(value, 10) < 10) {
       //using parseInt here to remove the zeroes before concatenating one
