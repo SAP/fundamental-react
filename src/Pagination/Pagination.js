@@ -78,7 +78,8 @@ export class Pagination extends Component {
             totalText,
             className,
             linkProps,
-            displayTotalProps
+            displayTotalProps,
+            ...props
         } = this.props;
 
         // calculate number of pages based on item total and items per page
@@ -88,7 +89,9 @@ export class Pagination extends Component {
         );
 
         return (
-            <div className={`fd-pagination${className ? ' ' + className : ''}`}>
+            <div
+                {...props}
+                className={`fd-pagination${className ? ' ' + className : ''}`}>
                 {displayTotal ? (
                     <span
                         {...displayTotalProps}

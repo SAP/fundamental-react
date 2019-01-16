@@ -153,7 +153,18 @@ describe('<Pagination />', () => {
 
     describe('Prop spreading', () => {
         test('should allow props to be spread to the Pagination component', () => {
-            let element = mount(defaultPaginationLinkProps);
+            let element = mount(
+                <Pagination
+                    data-sample='Sample1'
+                    itemsTotal={101}
+                    onClick={handleClick} />
+            );
+
+            expect(element.getDOMNode().attributes['data-sample'].value).toBe(
+                'Sample1'
+            );
+
+            element = mount(defaultPaginationLinkProps);
 
             expect(
                 element
