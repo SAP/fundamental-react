@@ -1,16 +1,16 @@
-import { Alert } from '../../';
-import { Button } from '../../';
-import { Dropdown } from '../../';
-import { Icon } from '../../';
-import { Identifier } from '../../';
-import { Image } from '../../';
+import { Alert } from '../../../';
+import { Button } from '../../../';
+import { Dropdown } from '../../../';
+import { Icon } from '../../../';
+import { Identifier } from '../../../';
+import { Image } from '../../../';
 import PropTypes from 'prop-types';
-import { Badge, Label, Status } from '../../';
-import { FormGroup, FormItem, FormLabel, InputGroup } from '../../';
-import { ListGroup, ListGroupItem, ListGroupItemActions } from '../../';
-import { ProductTile, ProductTileContent, ProductTileMedia, Tile, TileActions, TileContent, TileMedia } from '../../';
+import { Badge, Label, Status } from '../../../';
+import { FormGroup, FormItem, FormLabel, InputGroup } from '../../../';
+import { ListGroup, ListGroupItem, ListGroupItemActions } from '../../../';
+import { ProductTile, ProductTileContent, ProductTileMedia, Tile, TileActions, TileContent, TileMedia } from '../../../';
 import React, { Component } from 'react';
-import { TabComponent, Tabs } from '../../';
+import { TabComponent, Tabs } from '../../../';
 
 export class Playground extends Component {
     constructor(props) {
