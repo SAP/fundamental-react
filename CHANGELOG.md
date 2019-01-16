@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.0.15-rc.38"></a>
+## [0.0.15-rc.38](https://github.com/SAP/fundamental-react/compare/v0.0.15-rc.37...v0.0.15-rc.38) (2019-01-16)
+
+
+### Bug Fixes
+
+* Only export components when publishing ([#177](https://github.com/SAP/fundamental-react/issues/177)) ([87df4c8](https://github.com/SAP/fundamental-react/commit/87df4c8))
+
+
+
 <a name="0.0.15-rc.37"></a>
 ## [0.0.15-rc.37](https://github.com/SAP/fundamental-react/compare/v0.0.15-rc.36...v0.0.15-rc.37) (2019-01-16)
 
