@@ -68,7 +68,7 @@ If you encounter an issue or want to request a feature, you can [create an issue
 
 ## Contributing
 
-If you want to contribute, please check the [Contribution Guidelines](./CONTRIBUTING.md).
+If you want to contribute, please check the [Contribution Guidelines](./.github/CONTRIBUTING.md).
 
 ## License
 
