@@ -10,108 +10,117 @@ export class Pagination extends Component {
         };
     }
 
-  // number of pages to show
-  numberOfPages = 0;
+    // number of pages to show
+    numberOfPages = 0;
 
-  // page directly clicked
-  pageClicked = event => {
-      this.setState(
-          {
-              selectedPage: +event.target.text
-          },
-          () => this.props.onClick(this.state.selectedPage)
-      );
-  };
+    // page directly clicked
+    pageClicked = event => {
+        this.setState(
+            {
+                selectedPage: +event.target.text
+            },
+            () => this.props.onClick(this.state.selectedPage)
+        );
+    };
 
-  // advance to previous page
-  navigateBack = () => {
-      if (this.state.selectedPage === 1) {
-          return;
-      }
+    // advance to previous page
+    navigateBack = () => {
+        if (this.state.selectedPage === 1) {
+            return;
+        }
 
-      this.setState(
-          prevState => {
-              return { selectedPage: --prevState.selectedPage };
-          },
-          () => this.props.onClick(this.state.selectedPage)
-      );
-  };
+        this.setState(
+            prevState => {
+                return { selectedPage: --prevState.selectedPage };
+            },
+            () => this.props.onClick(this.state.selectedPage)
+        );
+    };
 
-  // advance to next page
-  navigateForward = () => {
-      if (this.state.selectedPage === this.numberOfPages) {
-          return;
-      }
+    // advance to next page
+    navigateForward = () => {
+        if (this.state.selectedPage === this.numberOfPages) {
+            return;
+        }
 
-      this.setState(
-          prevState => {
-              return { selectedPage: ++prevState.selectedPage };
-          },
-          () => this.props.onClick(this.state.selectedPage)
-      );
-  };
+        this.setState(
+            prevState => {
+                return { selectedPage: ++prevState.selectedPage };
+            },
+            () => this.props.onClick(this.state.selectedPage)
+        );
+    };
 
-  // create pagination links
-  createPaginationLinks = numberOfPages => {
-      // create an array with number of pages and fill it with links
-      const aPages = Array(numberOfPages)
-          .fill()
-          .map((link, index) => (
-              <a
-                  aria-selected={this.state.selectedPage === index + 1}
-                  className='fd-pagination__link'
-                  href='#'
-                  key={index}
-                  onClick={this.pageClicked}>
-                  {index + 1}
-              </a>
-          ));
-      return aPages;
-  };
+    // create pagination links
+    createPaginationLinks = numberOfPages => {
+        // create an array with number of pages and fill it with links
+        const aPages = Array(numberOfPages)
+            .fill()
+            .map((link, index) => (
+                <a
+                    {...this.props.linkProps}
+                    aria-selected={this.state.selectedPage === index + 1}
+                    className='fd-pagination__link'
+                    href='#'
+                    key={index}
+                    onClick={this.pageClicked}>
+                    {index + 1}
+                </a>
+            ));
+        return aPages;
+    };
 
-  render() {
-      const {
-          itemsTotal,
-          itemsPerPage = 10,
-          displayTotal = true,
-          totalText,
-          className
-      } = this.props;
+    render() {
+        const {
+            itemsTotal,
+            itemsPerPage = 10,
+            displayTotal = true,
+            totalText,
+            className,
+            linkProps,
+            displayTotalProps
+        } = this.props;
 
-      // calculate number of pages based on item total and items per page
-      // check to make sure itemsPerPage != 0
-      this.numberOfPages = Math.ceil(
-          itemsTotal / (itemsPerPage ? itemsPerPage : 10)
-      );
+        // calculate number of pages based on item total and items per page
+        // check to make sure itemsPerPage != 0
+        this.numberOfPages = Math.ceil(
+            itemsTotal / (itemsPerPage ? itemsPerPage : 10)
+        );
 
-      return (
-          <div className={`fd-pagination${className ? ' ' + className : ''}`}>
-              {displayTotal ? (
-                  <span className='fd-pagination__total'>
-                      {itemsTotal} {totalText || 'items'}
-                  </span>
-              ) : (
-                  ''
-              )}
+        return (
+            <div className={`fd-pagination${className ? ' ' + className : ''}`}>
+                {displayTotal ? (
+                    <span
+                        {...displayTotalProps}
+                        className='fd-pagination__total'>
+                        {itemsTotal} {totalText || 'items'}
+                    </span>
+                ) : (
+                    ''
+                )}
 
-              <nav className='fd-pagination__nav'>
-                  <a
-                      aria-disabled={this.state.selectedPage === 1}
-                      aria-label='Previous'
-                      className='fd-pagination__link fd-pagination__link--previous'
-                      href='#'
-                      onClick={this.navigateBack} />
-                  {this.createPaginationLinks(this.numberOfPages)}
-                  <a
-                      aria-disabled={this.state.selectedPage === this.numberOfPages}
-                      aria-label='Next'
-                      className='fd-pagination__link fd-pagination__link--next'
-                      href='#'
-                      onClick={this.navigateForward} />
-              </nav>
-          </div>
-      );
-  }
+                <nav className='fd-pagination__nav'>
+                    <a
+                        {...linkProps}
+                        aria-disabled={this.state.selectedPage === 1}
+                        aria-label='Previous'
+                        className='fd-pagination__link fd-pagination__link--previous'
+                        href='#'
+                        onClick={this.navigateBack} />
+                    {this.createPaginationLinks(this.numberOfPages)}
+                    <a
+                        {...linkProps}
+                        aria-disabled={
+                            this.state.selectedPage === this.numberOfPages
+                        }
+                        aria-label='Next'
+                        className='fd-pagination__link fd-pagination__link--next'
+                        href='#'
+                        onClick={this.navigateForward} />
+                </nav>
+            </div>
+        );
+    }
 }
 
 Pagination.propTypes = {
@@ -121,5 +130,6 @@ Pagination.propTypes = {
     displayTotal: PropTypes.bool,
     initialPage: PropTypes.number,
     itemsPerPage: PropTypes.number,
+    linkProps: PropTypes.object,
     totalText: PropTypes.string
 };
