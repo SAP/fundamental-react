@@ -3,9 +3,9 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import {
     ActionBar,
+    ActionBarActions,
     ActionBarBack,
-    ActionBarHeader,
-    ActionBarActions
+    ActionBarHeader
 } from './ActionBar';
 
 describe('<ActionBar />', () => {

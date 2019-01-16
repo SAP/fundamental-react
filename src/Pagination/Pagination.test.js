@@ -1,7 +1,7 @@
+import { Pagination } from './Pagination';
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { mount, shallow } from 'enzyme';
-import { Pagination } from './Pagination';
 
 describe('<Pagination />', () => {
     const handleClick = jest.fn();

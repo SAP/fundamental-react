@@ -1,25 +1,6 @@
 import React from 'react';
-import { DocsTile, DocsText, Separator, Header, Description, Import, Properties } from '../_playground';
-import {
-    Panel,
-    PanelGrid,
-    PanelBody,
-    PanelHeader,
-    PanelHead,
-    PanelActions,
-    PanelFilters,
-    PanelFooter,
-    Tile,
-    TileMedia,
-    TileContent,
-    Image,
-    Token,
-    Button,
-    Popover,
-    Menu,
-    MenuItem,
-    MenuList
-} from '../';
+import { Button, Image, Menu, MenuItem, MenuList, Panel, PanelActions, PanelBody, PanelFilters, PanelFooter, PanelGrid, PanelHead, PanelHeader, Popover, Tile, TileContent, TileMedia, Token} from '../';
+import { Description, DocsText, DocsTile, Header, Import, Properties, Separator } from '../_playground';
 
 export const PanelComponent = () => {
     const panelExampleCode = `<Panel>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Alert, Icon } from '../';
-import { DocsTile, DocsText, Separator, Header, Description, Import, Properties, Playground } from '../_playground';
+import { Description, DocsText, DocsTile, Header, Import, Playground, Properties, Separator } from '../_playground';
 
 export const AlertComponent = () => {
     const defaultAlertCode = '<Alert dismissable link="#" linkText="link">Default alert with a </Alert>';

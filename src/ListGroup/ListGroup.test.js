@@ -1,13 +1,8 @@
+import { Button } from '../Button/Button';
 import { mount } from 'enzyme';
 import React from 'react';
 import renderer from 'react-test-renderer';
-import {
-    ListGroup,
-    ListGroupItem,
-    ListGroupItemActions,
-    ListGroupItemCheckbox
-} from './ListGroup';
-import { Button } from '../Button/Button';
+import { ListGroup, ListGroupItem, ListGroupItemActions, ListGroupItemCheckbox} from './ListGroup';
 
 describe('<ListGroup />', () => {
     const defaultListGroup = (

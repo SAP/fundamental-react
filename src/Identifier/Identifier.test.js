@@ -1,7 +1,7 @@
+import { Identifier } from './Identifier';
 import { mount } from 'enzyme';
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { Identifier } from './Identifier';
 
 describe('<Identifier />', () => {
     const defaultIcon = <Identifier glyph='washing-machine' size='s' />;

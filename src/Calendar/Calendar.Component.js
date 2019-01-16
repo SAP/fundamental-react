@@ -1,6 +1,6 @@
+import { Calendar } from '../';
 import React from 'react';
-import { DocsTile, DocsText, Separator, Header, Description, Import, Properties } from '../_playground';
-import {Calendar} from '../';
+import { Description, DocsText, DocsTile, Header, Import, Properties, Separator } from '../_playground';
 
 export const CalendarComponent = () => {
 

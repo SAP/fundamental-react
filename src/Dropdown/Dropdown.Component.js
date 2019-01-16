@@ -1,6 +1,6 @@
 import React from 'react';
-import { DocsTile, DocsText, Separator, Header, Description, Import, Properties } from '../_playground';
-import { Dropdown, Popover, Button, Menu, MenuList, MenuItem } from '../';
+import { Button, Dropdown, Menu, MenuItem, MenuList, Popover } from '../';
+import { Description, DocsText, DocsTile, Header, Import, Properties, Separator } from '../_playground';
 
 export const DropdownComponent = () => {
     const defaultDropdownCode = `<Dropdown>

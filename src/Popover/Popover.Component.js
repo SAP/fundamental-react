@@ -1,6 +1,6 @@
 import React from 'react';
-import { Popover, Image, Identifier, Icon, Menu, MenuList, MenuItem } from '../';
-import { DocsTile, DocsText, Separator, Header, Description, Import, Properties } from '../_playground';
+import { Description, DocsText, DocsTile, Header, Import, Properties, Separator } from '../_playground';
+import { Icon, Identifier, Image, Menu, MenuItem, MenuList, Popover} from '../';
 
 export const PopoverComponent = () => {
     const popoverCode = `<Popover

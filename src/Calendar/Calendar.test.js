@@ -1,6 +1,6 @@
+import { Calendar } from '../Calendar/Calendar';
 import { mount } from 'enzyme';
 import React from 'react';
-import { Calendar } from '../Calendar/Calendar';
 
 describe('<Calendar />', () => {
     const mockOnChange = jest.fn();

@@ -1,16 +1,16 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
 import { Alert } from '../../../';
-import { Badge, Label, Status } from '../../../';
 import { Button } from '../../../';
 import { Dropdown } from '../../../';
 import { Icon } from '../../../';
 import { Identifier } from '../../../';
 import { Image } from '../../../';
-import { Tabs, TabComponent } from '../../../';
-import { FormGroup, FormLabel, FormItem, InputGroup } from '../../../';
+import PropTypes from 'prop-types';
+import { Badge, Label, Status } from '../../../';
+import { FormGroup, FormItem, FormLabel, InputGroup } from '../../../';
 import { ListGroup, ListGroupItem, ListGroupItemActions } from '../../../';
-import { Tile, TileContent, TileMedia, TileActions, ProductTile, ProductTileContent, ProductTileMedia } from '../../../';
+import { ProductTile, ProductTileContent, ProductTileMedia, Tile, TileActions, TileContent, TileMedia } from '../../../';
+import React, { Component } from 'react';
+import { TabComponent, Tabs } from '../../../';
 
 export class Playground extends Component {
     constructor(props) {
