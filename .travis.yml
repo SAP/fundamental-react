@@ -1,6 +1,5 @@
 language: node_js
-node_js:
-- 8.9.0
+node_js: "lts"
 dist: trusty
 git:
   depth: false
