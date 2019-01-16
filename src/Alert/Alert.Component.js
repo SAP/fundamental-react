@@ -51,6 +51,14 @@ export const AlertComponent = () => {
                     {
                         name: 'dismissible',
                         description: 'bool - Shows a dismissible button if set to true. Default is false.'
+                    },
+                    {
+                        name: 'buttonProps',
+                        description: 'object - additional props to be spread to the Alert component\'s button element.'
+                    },
+                    {
+                        name: 'linkProps',
+                        description: 'object - additional props to be spread to the Alert component\'s anchor element.'
                     }
                 ]}
                 type='Inputs' />
