@@ -1,4 +1,3 @@
-import classnames from 'classnames';
 import { Dropdown } from '../Dropdown/Dropdown';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
