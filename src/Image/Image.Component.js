@@ -1,6 +1,6 @@
 import React from 'react';
 import { Image } from '../';
-import { DocsTile, DocsText, Separator, Header, Description, Import, Properties, Playground } from '../';
+import { DocsTile, DocsText, Separator, Header, Description, Import, Properties, Playground } from '../_playground';
 
 export const ImageComponent = () => {
     const sizesImageCode = `<Image size="s" photo="https://placeimg.com/400/400/nature"></Image>

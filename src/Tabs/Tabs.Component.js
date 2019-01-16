@@ -1,6 +1,6 @@
 import React from 'react';
 import { Tabs, TabComponent } from '../';
-import { DocsTile, DocsText, Separator, Header, Description, Import, Properties, Playground } from '../';
+import { DocsTile, DocsText, Separator, Header, Description, Import, Properties, Playground } from '../_playground';
 
 export const TabsComponent = () => {
     const tabscomponentCode = `
