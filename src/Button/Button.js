@@ -36,9 +36,11 @@ Button.propTypes = {
 
 export const ButtonGroup = ({children, ...props}) => {
     return (
-        <div aria-label='Group label' className='fd-button-group'
-            role='group'
-            {...props}>
+        <div
+            {...props}
+            aria-label='Group label'
+            className='fd-button-group'
+            role='group'>
             {children}
         </div>
     );
