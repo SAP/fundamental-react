@@ -1,12 +1,11 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-
-import { Popover } from '../Popover/Popover';
-import { Menu, MenuList, MenuItem } from '../Menu/Menu';
-import { Identifier } from '../Identifier/Identifier';
-import { Icon } from '../Icon/Icon';
-import { SearchInput } from '../SearchInput/SearchInput';
 import { Counter } from '../Badge/Badge';
+import { Icon } from '../Icon/Icon';
+import { Identifier } from '../Identifier/Identifier';
+import { Popover } from '../Popover/Popover';
+import PropTypes from 'prop-types';
+import { SearchInput } from '../SearchInput/SearchInput';
+import { Menu, MenuItem, MenuList } from '../Menu/Menu';
+import React, { Component } from 'react';
 
 export class Shellbar extends Component {
     constructor(props) {

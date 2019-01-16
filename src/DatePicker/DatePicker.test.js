@@ -1,6 +1,6 @@
+import { DatePicker } from '../DatePicker/DatePicker';
 import { mount } from 'enzyme';
 import React from 'react';
-import { DatePicker } from '../DatePicker/DatePicker';
 
 describe('<DatePicker />', () => {
     const defaultDatePicker = <DatePicker />;

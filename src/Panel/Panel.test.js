@@ -1,18 +1,8 @@
+import { Button } from '../Button/Button';
 import { mount } from 'enzyme';
 import React from 'react';
 import renderer from 'react-test-renderer';
-import {
-    Panel,
-    PanelGrid,
-    PanelBody,
-    PanelHeader,
-    PanelHead,
-    PanelActions,
-    PanelFilters,
-    PanelFooter,
-    PanelContent
-} from './Panel';
-import { Button } from '../Button/Button';
+import { Panel, PanelActions, PanelBody, PanelContent, PanelFilters, PanelFooter, PanelGrid, PanelHead, PanelHeader} from './Panel';
 
 describe('<Panel />', () => {
     const panel = (

@@ -1,17 +1,6 @@
 import React from 'react';
-import {
-    FormSet,
-    FormItem,
-    FormLabel,
-    FormInput,
-    FormRadio,
-    FormTextarea,
-    FormMessage,
-    FormSelect,
-    FormFieldset,
-    FormLegend
-} from '../';
-import { DocsTile, DocsText, Separator, Header, Description, Import, Properties } from '../';
+import { Description, DocsText, DocsTile, Header, Import, Properties, Separator } from '../';
+import { FormFieldset, FormInput, FormItem, FormLabel, FormLegend, FormMessage, FormRadio, FormSelect, FormSet, FormTextarea} from '../';
 
 export const FormsComponent = () => {
     const inputsCode = `<FormSet>

@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
+import ReactDOM from 'react-dom';
+import React, { Component } from 'react';
 
 export class Modal extends Component {
   // select body element to add Modal component too

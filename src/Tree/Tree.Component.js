@@ -1,6 +1,6 @@
 import React from 'react';
-import { DocsTile, DocsText, Separator, Header, Description, Import, Properties } from '../';
-import { Tree} from '../';
+import { Tree } from '../';
+import { Description, DocsText, DocsTile, Header, Import, Properties, Separator } from '../';
 
 export const TreeComponent = () => {
     const treeCode = `headers={['Column Header', 'Column Header 1 ', 'Column Header 2', 'Status']}

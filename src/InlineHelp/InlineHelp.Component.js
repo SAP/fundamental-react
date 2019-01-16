@@ -1,6 +1,6 @@
-import React from 'react';
 import { InlineHelp } from '../';
-import { DocsTile, DocsText, Separator, Header, Description, Import, Properties } from '../';
+import React from 'react';
+import { Description, DocsText, DocsTile, Header, Import, Properties, Separator } from '../';
 
 
 export const InlineHelpComponent = () => {

@@ -1,6 +1,8 @@
-import React, { Component } from 'react';
-import { DocsTile, DocsText, Separator, Header, Description, Import, Properties, Menu, MenuList, MenuItem } from '..';
 import { Shellbar } from '..';
+import { Description, DocsText, DocsTile, Header, Import, Properties, Separator } from '../';
+import { Menu, MenuItem, MenuList } from '../';
+import React, { Component } from 'react';
+
 var images = require.context('../../assets', true);
 
 export class ShellbarComponent extends Component {

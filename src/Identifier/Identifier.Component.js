@@ -1,6 +1,6 @@
-import React from 'react';
 import { Identifier } from '../';
-import { DocsTile, DocsText, Separator, Header, Description, Import, Properties, Playground } from '../';
+import React from 'react';
+import { Description, DocsText, DocsTile, Header, Import, Playground, Properties, Separator } from '../';
 
 
 export const IdentifierComponent = () => {

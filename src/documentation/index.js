@@ -1,9 +1,7 @@
-import { DocsTile, DocsText } from '../documentation/DocsTile/DocsTile';
-import { Separator } from '../documentation/Separator/Separator';
-import { Header } from '../documentation/Header/Header';
-import { Description } from '../documentation/Description/Description';
-import { Import } from '../documentation/Import/Import';
-import { Playground } from '../documentation/Playground/Playground';
-import { Properties } from '../documentation/Properties/Properties';
-
-export {DocsTile, DocsText, Separator, Header, Description, Import, Playground, Properties };
+export { Description } from './Description/Description';
+export { Header } from './Header/Header';
+export { Import } from './Import/Import';
+export { Playground } from './Playground/Playground';
+export { Properties } from './Properties/Properties';
+export { Separator } from './Separator/Separator';
+export { DocsText, DocsTile } from './DocsTile/DocsTile';

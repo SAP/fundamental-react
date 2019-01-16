@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 export const Token = (props) => {
     const { children, clickHandler, className, ...rest } = props;
     return (

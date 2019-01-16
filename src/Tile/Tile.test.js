@@ -1,20 +1,11 @@
-import { mount } from 'enzyme';
-import React from 'react';
-import renderer from 'react-test-renderer';
-import {
-    Tile,
-    TileContent,
-    TileMedia,
-    TileActions,
-    ProductTile,
-    ProductTileContent,
-    ProductTileMedia,
-    TileGrid
-} from './Tile';
-import { Popover } from '../Popover/Popover';
 import { Button } from '../Button/Button';
 import { Identifier } from '../Identifier/Identifier';
-import { Menu, MenuList, MenuItem } from '../Menu/Menu';
+import { mount } from 'enzyme';
+import { Popover } from '../Popover/Popover';
+import React from 'react';
+import renderer from 'react-test-renderer';
+import { Menu, MenuItem, MenuList } from '../Menu/Menu';
+import { ProductTile, ProductTileContent, ProductTileMedia, Tile, TileActions, TileContent, TileGrid, TileMedia } from './Tile';
 
 describe('<Tile />', () => {
     const simpleTile = (

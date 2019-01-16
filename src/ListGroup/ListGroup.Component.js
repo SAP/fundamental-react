@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button, ListGroup, ListGroupItem, ListGroupItemActions, ListGroupItemCheckbox } from '../';
-import { DocsTile, DocsText, Separator, Header, Description, Import, Playground } from '../';
+import { Description, DocsText, DocsTile, Header, Import, Playground, Separator } from '../';
 
 export const ListGroupComponent = () => {
     const simpleListCode = `<ListGroup>

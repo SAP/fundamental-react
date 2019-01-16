@@ -1,6 +1,6 @@
 import React from 'react';
-import { DocsTile, DocsText, Separator, Header, Description, Import, Properties } from '../';
-import { SideNav, SideNavList, SideNavGroup } from '../';
+import { Description, DocsText, DocsTile, Header, Import, Properties, Separator } from '../';
+import { SideNav, SideNavGroup, SideNavList } from '../';
 
 export const SideNavigationComponent = () => {
     const sideNavOneLevelCode = `<SideNav>

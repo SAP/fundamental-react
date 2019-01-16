@@ -2,7 +2,7 @@ import { mount } from 'enzyme';
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { Shellbar } from './Shellbar';
-import { Menu, MenuList, MenuItem } from '../Menu/Menu';
+import { Menu, MenuItem, MenuList } from '../Menu/Menu';
 
 describe('<Shellbar />', () => {
     const profile1 = {

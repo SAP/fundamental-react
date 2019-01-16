@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import { DocsTile, DocsText, Separator, Header, Description, Import, Properties } from '../';
 import { SearchInput } from './SearchInput';
+import { Description, DocsText, DocsTile, Header, Import, Properties, Separator } from '../';
+import React, { Component } from 'react';
 
 export class SearchInputComponent extends Component {
     searchData = [
