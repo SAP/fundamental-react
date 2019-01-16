@@ -1,3 +1,4 @@
+import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -5,15 +6,37 @@ export const Identifier = ({ glyph, size, modifier, color, label, backgroundImag
     const styles = {
         backgroundImage: `url(${backgroundImageUrl})`
     };
+    const identifierClasses = classnames(
+        {
+            'fd-identifier': !!size === false,
+            'fd-identifier--xxs': size === 'xxs',
+            'fd-identifier--xs': size === 'xs',
+            'fd-identifier--s': size === 's',
+            'fd-identifier--m': size === 'm',
+            'fd-identifier--l': size === 'l',
+            'fd-identifier--xl': size === 'xl',
+            'fd-identifier--xxl': size === 'xxl',
+            [`sap-icon--${glyph}`]: glyph,
+            'fd-identifier--circle': modifier === 'circle',
+            'fd-identifier--transparent': modifier === 'transparent',
+            'fd-has-background-color-accent-1': color === 1,
+            'fd-has-background-color-accent-2': color === 2,
+            'fd-has-background-color-accent-3': color === 3,
+            'fd-has-background-color-accent-4': color === 4,
+            'fd-has-background-color-accent-5': color === 5,
+            'fd-has-background-color-accent-6': color === 6,
+            'fd-has-background-color-accent-7': color === 7,
+            'fd-has-background-color-accent-8': color === 8,
+            'fd-has-background-color-accent-9': color === 9,
+            'fd-identifier--thumbnail': backgroundImageUrl
+        },
+        className
+    );
+
     return (
         <span
             aria-label={label}
-            className={`${size ? 'fd-identifier--' + size : 'fd-identifier'}${
-                glyph ? ' sap-icon--' + glyph : ''
-            }${modifier ? ' fd-identifier--' + modifier : ''}${
-                color ? ' fd-has-background-color-accent-' + color : ''
-            }${backgroundImageUrl ? ' fd-identifier--thumbnail' : ''}${className ? ' ' + className : ''}`}
-            role={`${!children ? 'presentation' : ''}`}
+            className={identifierClasses}
             style={backgroundImageUrl && styles} {...props}>
             {children}
         </span>
@@ -27,5 +50,5 @@ Identifier.propTypes = {
     glyph: PropTypes.string,
     label: PropTypes.string,
     modifier: PropTypes.oneOf(['', 'circle', 'transparent']),
-    size: PropTypes.string
+    size: PropTypes.oneOf(['', 'xxs', 'xs', 's', 'm', 'l', 'xl', 'xxl' ])
 };

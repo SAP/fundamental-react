@@ -1,10 +1,20 @@
+import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 
 export const Image = ({ size, type, photo, className, ...props }) => {
+    const imageClasses = classnames(
+        {
+            'fd-image--s': size === 's',
+            'fd-image--m': size === 'm',
+            'fd-image--l': size === 'l',
+            'fd-image--circle': type === 'circle'
+        },
+        className
+    );
     return (
         <span
-            className={`${'fd-image--' + size}${type ? ' fd-image--' + type : ''}${className ? ' ' + className : ''}`}
+            className={imageClasses}
             style={{ backgroundImage: 'url(' + photo + ')' }} {...props} />
     );
 };

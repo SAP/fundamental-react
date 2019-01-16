@@ -1,3 +1,4 @@
+import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 
@@ -19,40 +20,40 @@ export class InputGroup extends Component {
         };
     }
 
-  handleUp = e => {
-      e.preventDefault();
-      this.setState({
-          value: this.state.value + 1
-      });
-  };
+    handleUp = e => {
+        e.preventDefault();
+        this.setState({
+            value: this.state.value + 1
+        });
+    };
 
-  handleDown = e => {
-      e.preventDefault();
-      this.setState({
-          value: this.state.value - 1
-      });
-  };
+    handleDown = e => {
+        e.preventDefault();
+        this.setState({
+            value: this.state.value - 1
+        });
+    };
 
-  handleClear = e => {
-      e.preventDefault();
-      this.setState({
-          searchValue: ''
-      });
-  };
+    handleClear = e => {
+        e.preventDefault();
+        this.setState({
+            searchValue: ''
+        });
+    };
 
-  handleChange = e => {
-      e.preventDefault();
-      this.setState({
-          searchValue: e.target.value
-      });
-  };
+    handleChange = e => {
+        e.preventDefault();
+        this.setState({
+            searchValue: e.target.value
+        });
+    };
 
-  handleTextChange = e => {
-      e.preventDefault();
-      this.setState({
-          value: e.target.value
-      });
-  };
+    handleTextChange = e => {
+        e.preventDefault();
+        this.setState({
+            value: e.target.value
+        });
+    };
 
   render() {
       const {

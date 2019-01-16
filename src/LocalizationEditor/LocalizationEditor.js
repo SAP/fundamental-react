@@ -1,3 +1,4 @@
+import classnames from 'classnames';
 import { Popover } from '../Popover/Popover';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -5,8 +6,13 @@ import React from 'react';
 // ------------------------------------------- Menu ------------------------------------------
 export const LocalizationEditor = ({ control, menu, id, compact, textarea, className, listProps, popoverProps, ...props }) => {
 
+    const localizationEditorClasses = classnames(
+        'fd-localization-editor',
+        className
+    );
+
     return (
-        <div className={`fd-localization-editor${className ? ' ' + className : ''}`} {...props}>
+        <div className={localizationEditorClasses} {...props}>
             <Popover
                 {...popoverProps}
                 body={

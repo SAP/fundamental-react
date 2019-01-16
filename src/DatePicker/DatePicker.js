@@ -1,4 +1,5 @@
 import { Calendar } from '../Calendar/Calendar';
+import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 
@@ -364,21 +365,38 @@ export class DatePicker extends Component {
         const { enableRangeSelection, disableWeekends, disableBeforeDate, disableAfterDate,
             disableWeekday, disablePastDates, disableFutureDates, blockedDates, disabledDates,
             compact, className, inputProps, buttonProps, ...props } = this.props;
+
+        const datePickerClasses = classnames(
+            'fd-date-picker',
+            className
+        );
+
+        const datePickerInputGroupClasses = classnames(
+            'fd-input-group',
+            'fd-input-group--after',
+            {
+                'fd-input-group--compact': compact
+            }
+        );
+
+        const datePickerInputClasses = classnames(
+            'fd-input',
+            {
+                'fd-input--compact': compact
+            }
+        );
+
         return (
             <div
-                className={`fd-date-picker${className ? ' ' + className : ''}`} {...props}
+                className={datePickerClasses} {...props}
                 ref={component => (this.component = component)}>
                 <div className='fd-popover'>
                     <div className='fd-popover__control'>
                         <div
-                            className={`fd-input-group fd-input-group--after${
-                                this.props.compact ? ' fd-input-group--compact' : ''
-                            }`}>
+                            className={datePickerInputGroupClasses}>
                             <input
                                 {...inputProps}
-                                className={`fd-input${
-                                    this.props.compact ? ' fd-input--compact' : ''
-                                }`}
+                                className={datePickerInputClasses}
                                 onChange={this.modifyDate}
                                 onClick={() => this.openCalendar('input')}
                                 onKeyPress={this.sendUpdate}

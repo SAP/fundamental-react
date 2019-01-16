@@ -1,9 +1,15 @@
+import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 
 export const ListGroup = ({ children, className, ...props }) => {
+    const listGroupClasses = classnames(
+        'fd-list-group',
+        className
+    );
+
     return (
-        <ul className={`fd-list-group${className ? ' ' + className : ''}`} {...props}>
+        <ul className={listGroupClasses} {...props}>
             {children}
         </ul>
     );
@@ -15,8 +21,13 @@ ListGroup.propTypes = {
 };
 
 export const ListGroupItem = ({ children, className, ...props }) => {
+    const listGroupItemClasses = classnames(
+        'fd-list-group__item',
+        className
+    );
+
     return (
-        <li className={`fd-list-group__item${className ? ' ' + className : ''}`} {...props}>
+        <li className={listGroupItemClasses} {...props}>
             {children}
         </li>
 
@@ -29,8 +40,13 @@ ListGroupItem.propTypes = {
 };
 
 export const ListGroupItemActions = ({ children, className, ...props }) => {
+    const listGroupItemActionsClasses = classnames(
+        'fd-list-group__action',
+        className
+    );
+
     return (
-        <span className={`fd-list-group__action${className ? ' ' + className : ''}`} {...props}>
+        <span className={listGroupItemActionsClasses} {...props}>
             {children}
         </span>
     );
