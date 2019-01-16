@@ -1,5 +1,13 @@
 import React, { Component } from 'react';
-import { DocsTile, DocsText, Separator, Header, Description, Import, Properties } from '../_playground';
+import {
+    DocsTile,
+    DocsText,
+    Separator,
+    Header,
+    Description,
+    Import,
+    Properties
+} from '../_playground';
 import { Modal, Button } from '../';
 
 export class ModalComponent extends Component {
@@ -94,7 +102,10 @@ export class ModalComponent extends Component {
                 bShowComfirmModal: !prevState.bShowComfirmModal
             }),
             () => {
-                if (typeof response !== 'object' && typeof response !== 'undefined') {
+                if (
+                    typeof response !== 'object' &&
+                    typeof response !== 'undefined'
+                ) {
                     alert(`You selected - ${response}`);
                 }
             }
@@ -108,8 +119,14 @@ export class ModalComponent extends Component {
                 bShowFormModal: !prevState.bShowFormModal
             }),
             () => {
-                if (typeof response !== 'object' && typeof response !== 'undefined') {
-                    if (response.toLowerCase() === 'invite' && this.state.emailAddress !== '') {
+                if (
+                    typeof response !== 'object' &&
+                    typeof response !== 'undefined'
+                ) {
+                    if (
+                        response.toLowerCase() === 'invite' &&
+                        this.state.emailAddress !== ''
+                    ) {
                         alert(`Invite sent to ${this.state.emailAddress}`);
                     }
                 }
@@ -139,11 +156,14 @@ export class ModalComponent extends Component {
             <div>
                 <Header>Modal</Header>
                 <Description>
-                    The modal is a container generally displayed in response to an action. It is used for short forms,
-                    confirmation messages or to display contextual information that does not require a page.
+                    The modal is a container generally displayed in response to
+                    an action. It is used for short forms, confirmation messages
+                    or to display contextual information that does not require a
+                    page.
                     <br />
-                    To display the Modal control, pass a boolean value to the "show" property of the component. It is
-                    recommended to store this value as a state property in the Parent control.
+                    To display the Modal control, pass a boolean value to the
+                    "show" property of the component. It is recommended to store
+                    this value as a state property in the Parent control.
                 </Description>
                 <Import module='Modal' path='/fundamental-react/src/' />
 
@@ -153,15 +173,43 @@ export class ModalComponent extends Component {
                     properties={[
                         {
                             name: 'show',
-                            description: 'bool - true: show modal, false: hide modal.'
+                            description:
+                                'bool - true: show modal, false: hide modal.'
                         },
                         {
                             name: 'title',
-                            description: 'string (required) - Title for modal dialog box'
+                            description:
+                                'string (required) - Title for modal dialog box'
                         },
                         {
-                            name: 'actions',
-                            description: 'React.Fragment which contains <Button /> controls to render in the footer'
+                            name: 'contentProps',
+                            description:
+                                'object - properties to add to content section of Modal dialog'
+                        },
+                        {
+                            name: 'headerProps',
+                            description:
+                                'object - properties to add to header section of Modal dialog'
+                        },
+                        {
+                            name: 'titleProps',
+                            description:
+                                'object - properties to add to title section of Modal dialog'
+                        },
+                        {
+                            name: 'closeProps',
+                            description:
+                                'object - properties to add to the close button of Modal dialog'
+                        },
+                        {
+                            name: 'bodyProps',
+                            description:
+                                'object - properties to add to body section of Modal dialog'
+                        },
+                        {
+                            name: 'footerProps',
+                            description:
+                                'object - properties to add to footer section of Modal dialog'
                         }
                     ]}
                     type='Inputs' />
@@ -170,17 +218,21 @@ export class ModalComponent extends Component {
 
                 <h2>Informational Modal</h2>
                 <Description>
-                    This is used to present information to the user but the Alert Component doesn’t fit all the
-                    information.
+                    This is used to present information to the user but the
+                    Alert Component doesn’t fit all the information.
                 </Description>
                 <DocsTile centered>
                     <button className='fd-button' onClick={this.showHideModal}>
                         Show Information Modal
                     </button>
-                    <Modal onClose={this.showHideModal} show={this.state.bShowInfoModal}
+                    <Modal
+                        onClose={this.showHideModal}
+                        show={this.state.bShowInfoModal}
                         title='Product Added'>
                         <div>
-                            <b>The new product have been added to your catalog.</b>
+                            <b>
+                                The new product have been added to your catalog.
+                            </b>
                             <br />
                             <br />
                             Automatic Product ID: <b>PD-3465334</b>
@@ -197,20 +249,32 @@ export class ModalComponent extends Component {
 
                 <h2>Confirmation Modal</h2>
                 <Description>
-                    This is used to confirm with the user before continuing with a destructive or complex action. In
-                    this case, the modal has action buttons at the bottom.
+                    This is used to confirm with the user before continuing with
+                    a destructive or complex action. In this case, the modal has
+                    action buttons at the bottom.
                 </Description>
                 <DocsTile centered>
-                    <button className='fd-button' onClick={this.showHideConfirmModal}>
+                    <button
+                        className='fd-button'
+                        onClick={this.showHideConfirmModal}>
                         Show Confirmation Modal
                     </button>
                     <Modal
                         actions={
                             <React.Fragment>
-                                <Button onclick={() => this.showHideConfirmModal('No Way')} type='standard'>
+                                <Button
+                                    onclick={() =>
+                                        this.showHideConfirmModal('No Way')
+                                    }
+                                    type='standard'>
                                     No Way
                                 </Button>
-                                <Button onclick={() => this.showHideConfirmModal('Sure')}>Sure</Button>
+                                <Button
+                                    onclick={() =>
+                                        this.showHideConfirmModal('Sure')
+                                    }>
+                                    Sure
+                                </Button>
                             </React.Fragment>
                         }
                         onClose={this.showHideConfirmModal}
@@ -225,18 +289,32 @@ export class ModalComponent extends Component {
                 <Separator />
 
                 <h2>Form Modal</h2>
-                <Description>This is used for short forms in order to collect information from the user.</Description>
+                <Description>
+                    This is used for short forms in order to collect information
+                    from the user.
+                </Description>
                 <DocsTile centered>
-                    <button className='fd-button' onClick={this.showHideFormModal}>
+                    <button
+                        className='fd-button'
+                        onClick={this.showHideFormModal}>
                         Show Form Modal
                     </button>
                     <Modal
                         actions={
                             <React.Fragment>
-                                <Button onclick={() => this.showHideFormModal('Cancel')} type='standard'>
+                                <Button
+                                    onclick={() =>
+                                        this.showHideFormModal('Cancel')
+                                    }
+                                    type='standard'>
                                     Cancel
                                 </Button>
-                                <Button onclick={() => this.showHideFormModal('Invite')}>Invite</Button>
+                                <Button
+                                    onclick={() =>
+                                        this.showHideFormModal('Invite')
+                                    }>
+                                    Invite
+                                </Button>
                             </React.Fragment>
                         }
                         onClose={this.showHideFormModal}
@@ -244,7 +322,9 @@ export class ModalComponent extends Component {
                         title='Invite user'>
                         <div className='fd-form__group'>
                             <div className='fd-form__item'>
-                                <label className='fd-form__label is-required'>Email</label>
+                                <label className='fd-form__label is-required'>
+                                    Email
+                                </label>
                                 <input
                                     className='fd-form__control'
                                     onChange={this.updateEmailAddress}
