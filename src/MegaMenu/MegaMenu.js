@@ -65,7 +65,7 @@ export class MegaMenuList extends Component {
         this.setState({ selectedItem: id });
     };
 
-    getListItemLinkClasses = ({id, hasChild}) => {
+    getLinkClasses = ({id, hasChild}) => {
         return classnames(
             'fd-mega-menu__link',
             {
@@ -76,7 +76,7 @@ export class MegaMenuList extends Component {
         );
     }
 
-    getSelectedSublinkClasses = ({id}) => {
+    getSubLinkClasses = ({id}) => {
         return classnames(
             'fd-mega-menu__sublink',
             {
@@ -101,7 +101,7 @@ export class MegaMenuList extends Component {
                             <li className='fd-mega-menu__item' key={item.id}>
                                 {item.link ? (
                                     <Link
-                                        className={this.getListItemLinkClasses(item)}
+                                        className={this.getLinkClasses(item)}
                                         key={item.id}
                                         onClick={e => this.handleSelect(e, item.id)}
                                         to={{ pathname: item.link }}>
@@ -111,7 +111,7 @@ export class MegaMenuList extends Component {
 
                                 {item.url ? (
                                     <a
-                                        className={this.getListItemLinkClasses(item)}
+                                        className={this.getLinkClasses(item)}
                                         href={item.url}
                                         key={item.id}
                                         onClick={e => this.handleSelect(e, item.id)}>
@@ -130,7 +130,7 @@ export class MegaMenuList extends Component {
                                                 <li className='fd-mega-menu__subitem' key={ch.id}>
                                                     {ch.link ? (
                                                         <Link
-                                                            className={this.getSelectedSublinkClasses(ch.id)}
+                                                            className={this.getSubLinkClasses(ch.id)}
                                                             key={ch.id}
                                                             onClick={e => this.handleSelectChild(e, ch.id)}
                                                             to={{ pathname: ch.link }}>
@@ -139,7 +139,7 @@ export class MegaMenuList extends Component {
                                                     ) : null}
                                                     {ch.url ? (
                                                         <a
-                                                            className={this.getSelectedSublinkClasses(ch.id)}
+                                                            className={this.getSubLinkClasses(ch.id)}
                                                             href={ch.url}
                                                             key={ch.id}
                                                             onClick={e => this.handleSelectChild(e, ch.id)}>

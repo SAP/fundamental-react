@@ -1,12 +1,19 @@
 import PropTypes from 'prop-types';
+import classnames from 'classnames';
 import { BrowserRouter, Link } from 'react-router-dom';
 import React, { Component } from 'react';
 
 export const Tabs = props => {
     const { children, className, ...rest } = props;
+
+    const tabClasses = classnames(
+        'fd-tabs-container',
+        className
+    );
+
     return (
         <ul {...rest}
-            className={`fd-tabs-container${className ? ' ' + className : ''}`}>
+            className={tabClasses}>
             {children}
         </ul>
     );
@@ -36,11 +43,26 @@ export class TabComponent extends Component {
         this.setState({ selectedTab: id.id });
     };
 
+    getLinkClasses = (id) => {
+        return classnames(
+            'fd-tabs__link',
+            {
+                'is-selected': this.state.selectedTab === id
+            }
+        );
+    }
+
     render() {
         const { ids, className, tabProps, tabLinkProps, tabContentProps, ...rest } = this.props;
+
+        const tabClasses = classnames(
+            'fd-tabs',
+            className
+        );
+
         return (
             <BrowserRouter>
-                <ul {...rest} className={`fd-tabs${className ? ' ' + className : ''}`}>
+                <ul {...rest} className={tabClasses}>
                     {ids.map(id => {
                         return (
                             <li {...tabProps} className='fd-tabs__item'
@@ -48,9 +70,7 @@ export class TabComponent extends Component {
                                 <Link
                                     {...tabLinkProps}
                                     aria-disabled={id.disabled}
-                                    className={`fd-tabs__link${
-                                        this.state.selectedTab === id.id ? ' is-selected' : ''
-                                    }`}
+                                    className={this.getLinkClasses(id.id)}
                                     onClick={e => {
                                         !id.disabled && this.handleTabSelection(e, id, id.disabled);
                                     }}

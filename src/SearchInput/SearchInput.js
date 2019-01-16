@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
+import classnames from 'classnames';
 
 export class SearchInput extends Component {
     constructor(props) {
@@ -137,12 +138,39 @@ export class SearchInput extends Component {
             ...rest
         } = this.props;
 
+        const searchInputClasses = classnames(
+            'fd-search-input',
+            {
+                'fd-search-input--closed': inShellbar
+            },
+            className
+        );
+
+        const inputGroupClasses = classnames(
+            'fd-input-group',
+            'fd-input-group--after',
+            {
+                'fd-input-group--compact': compact
+            }
+        );
+
+        const inputClasses = classnames(
+            'fd-input',
+            {
+                'fd-input--compact': compact
+            }
+        );
+
+        const bodyClasses = classnames(
+            {
+                'fd-search-input__body': inShellbar
+            }
+        );
+
         return (
             <div
                 {...rest}
-                className={`fd-search-input${
-                    inShellbar ? ' fd-search-input--closed' : ''
-                }${className ? ' ' + className : ''}`}>
+                className={searchInputClasses}>
                 <div className='fd-popover'>
                     {inShellbar ? (
                         <div className='fd-popover__control fd-search-input__control'>
@@ -179,13 +207,11 @@ export class SearchInput extends Component {
                                 aria-haspopup='true'
                                 className='fd-combobox-control'>
                                 <div
-                                    className={`fd-input-group fd-input-group--after${
-                                        compact ? ' fd-input-group--compact' : ''
-                                    }`}
+                                    className={inputGroupClasses}
                                     ref={node => (this.node = node)}>
                                     <input
                                         {...inputProps}
-                                        className={`fd-input${compact ? ' fd-input--compact' : ''}`}
+                                        className={inputClasses}
                                         onChange={this.onChangeHandler}
                                         onClick={() => this.onClickHandler()}
                                         onKeyPress={this.onKeyPressHandler}
@@ -209,7 +235,7 @@ export class SearchInput extends Component {
                         <div
                             aria-hidden={!this.state.isExpanded}
                             className='fd-popover__body fd-popover__body--no-arrow'>
-                            <div className={inShellbar ? 'fd-search-input__body' : ''}>
+                            <div className={bodyClasses}>
                                 <nav className='fd-menu'>
                                     <ul {...listProps} className='fd-menu__list'>
                                         {this.state.filteredResult.length > 0 ? (

@@ -1,11 +1,20 @@
+import classnames from 'classnames';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import React from 'react';
 
 // ------------------------------------------- Menu ------------------------------------------
 export const Menu = ({ addonBefore, children, className, ...props }) => {
+    const menuClasses = classnames(
+        'fd-menu',
+        {
+            'fd-menu--addon-before': addonBefore
+        },
+        className
+    );
+
     return (
-        <nav className={`fd-menu${addonBefore ? ' fd-menu--addon-before' : ''}${className ? ' ' + className : ''}`} {...props}>
+        <nav className={menuClasses} {...props}>
             {children}
         </nav>
     );
@@ -18,11 +27,22 @@ Menu.propTypes = {
 
 // ---------------------------------------- Menu List ----------------------------------------
 export const MenuList = ({ children, className, ...props }) => {
-    return <ul className={`fd-menu__list${className ? ' ' + className : ''}`} {...props}>{children}</ul>;
+    const menuListClasses = classnames(
+        'fd-menu__list',
+        className
+    );
+
+    return <ul className={menuListClasses} {...props}>{children}</ul>;
 };
 
 // ---------------------------------------- Menu Item ----------------------------------------
 export const MenuItem = ({ url, link, isLink, separator, addon, children, onclick, className, addonProps, linkProps, urlProps, ...props }) => {
+    const menuItemLinkClasses = classnames(
+        'fd-menu__item',
+        {
+            'fd-menu__link': isLink
+        }
+    );
     return (
         <React.Fragment>
             <li {...props} className={className}>
@@ -30,13 +50,13 @@ export const MenuItem = ({ url, link, isLink, separator, addon, children, onclic
                     <div {...addonProps} className='fd-menu__addon-before'>{<span className={'sap-icon--' + addon} />}</div>
                 }
                 {link &&
-                    <Link {...linkProps} className={`fd-menu__item${isLink ? ' fd-menu__link' : ''}`}
+                    <Link {...linkProps} className={menuItemLinkClasses}
                         to={link}>
                         {children}
                     </Link>
                 }
                 {url &&
-                    <a {...urlProps} className={`fd-menu__item${isLink ? ' fd-menu__link' : ''}`}
+                    <a {...urlProps} className={menuItemLinkClasses}
                         href={url}>
                         {children}
                     </a>
@@ -62,8 +82,13 @@ MenuItem.propTypes = {
 
 // ---------------------------------------- Menu Group ----------------------------------------
 export const MenuGroup = ({ title, children, className, titleProps, ...props }) => {
+    const menuGroupClasses = classnames(
+        'fd-menu__group',
+        className
+    );
+
     return (
-        <div {...props} className={`fd-menu__group${className ? ' ' + className : ''}`}>
+        <div {...props} className={menuGroupClasses}>
             <h1 {...titleProps} className='fd-menu__title'>{title}</h1>
             {children}
         </div>

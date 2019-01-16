@@ -1,10 +1,20 @@
+import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 
 // ------------------------------------------- Panel ------------------------------------------
 export const Panel = props => {
     const { colSpan, children, className, ...rest } = props;
-    return <div className={`fd-panel${colSpan ? ' fd-has-grid-column-span-' + colSpan : ''}${className ? ' ' + className : ''}`} {...rest}>{children}</div>;
+
+    const panelClasses = classnames(
+        'fd-panel',
+        {
+            [`fd-has-grid-column-span-${colSpan}`]: colSpan
+        },
+        className
+    );
+
+    return <div className={panelClasses} {...rest}>{children}</div>;
 };
 
 Panel.propTypes = {
@@ -19,11 +29,19 @@ Panel.defaultProps = {
 // ------------------------------------------- Panel Grid ------------------------------------------
 export const PanelGrid = props => {
     const { nogap, cols, children, className, ...rest } = props;
+
+    const panelGridClasses = classnames(
+        'fd-panel-grid',
+        {
+            'fd-panel-grid--nogap': nogap,
+            [`fd-panel-grid--${cols}col`]: cols
+        },
+        className
+    );
+
     return (
         <div
-            className={`fd-panel-grid${nogap ? ' fd-panel-grid--nogap' : ''}${
-                cols ? ' fd-panel-grid--' + cols + 'col' : ''
-            }${className ? ' ' + className : ''}`} {...rest}>
+            className={panelGridClasses} {...rest}>
             {children}
         </div>
     );
@@ -43,7 +61,13 @@ PanelGrid.defaultProps = {
 // ------------------------------------------- Panel Body ------------------------------------------
 export const PanelBody = props => {
     const { children, className, ...rest } = props;
-    return <div className={`fd-panel__body${className ? ' ' + className : ''}`} {...rest}>{children}</div>;
+
+    const panelBodyClasses = classnames(
+        'fd-panel__body',
+        className
+    );
+
+    return <div className={panelBodyClasses} {...rest}>{children}</div>;
 };
 
 PanelBody.propTypes = {
@@ -53,7 +77,13 @@ PanelBody.propTypes = {
 // ------------------------------------------- Panel Header ------------------------------------------
 export const PanelHeader = props => {
     const { children, className, ...rest } = props;
-    return <div className={`fd-panel__header${className ? ' ' + className : ''}`} {...rest}>{children}</div>;
+
+    const panelHeaderClasses = classnames(
+        'fd-panel__header',
+        className
+    );
+
+    return <div className={panelHeaderClasses} {...rest}>{children}</div>;
 };
 
 PanelHeader.propTypes = {
@@ -63,8 +93,14 @@ PanelHeader.propTypes = {
 // ------------------------------------------- Panel Head ------------------------------------------
 export const PanelHead = props => {
     const { title, description, className, ...rest } = props;
+
+    const panelHeadClasses = classnames(
+        'fd-panel__head',
+        className
+    );
+
     return (
-        <div className={`fd-panel__head${className ? ' ' + className : ''}`} {...rest}>
+        <div className={panelHeadClasses} {...rest}>
             {title ? <h1 className='fd-panel__title'>{title}</h1> : null}
             {description ? <p className='fd-panel__description'>{description}</p> : null}
         </div>
@@ -78,7 +114,13 @@ PanelHead.propTypes = {
 // ------------------------------------------- Panel Actions ------------------------------------------
 export const PanelActions = props => {
     const { children, className, ...rest } = props;
-    return <div className={`fd-panel__actions${className ? ' ' + className : ''}`} {...rest}>{children}</div>;
+
+    const panelActionsClasses = classnames(
+        'fd-panel__actions',
+        className
+    );
+
+    return <div className={panelActionsClasses} {...rest}>{children}</div>;
 };
 
 PanelActions.propTypes = {
@@ -88,8 +130,14 @@ PanelActions.propTypes = {
 // ------------------------------------------- Panel Filters ------------------------------------------
 export const PanelFilters = props => {
     const { children, className, ...rest } = props;
+
+    const panelFiltersClasses = classnames(
+        'fd-panel__filters',
+        className
+    );
+
     return (
-        <div className={`fd-panel__filters${className ? ' ' + className : ''}`} {...rest}>
+        <div className={panelFiltersClasses} {...rest}>
             {children}
         </div>
     );
@@ -103,7 +151,13 @@ PanelFilters.propTypes = {
 // ------------------------------------------- Panel Content ------------------------------------------
 export const PanelContent = props => {
     const { children, className, ...rest } = props;
-    return <div className={`fd-panel__content${className ? ' ' + className : ''}`} {...rest}>{children}</div>;
+
+    const panelContentClasses = classnames(
+        'fd-panel__content',
+        className
+    );
+
+    return <div className={panelContentClasses} {...rest}>{children}</div>;
 };
 
 PanelContent.propTypes = {
@@ -113,7 +167,13 @@ PanelContent.propTypes = {
 // ------------------------------------------- Panel Footer ------------------------------------------
 export const PanelFooter = props => {
     const { children, className, ...rest } = props;
-    return <div className={`fd-panel__footer${className ? ' ' + className : ''}`} {...rest}>{children}</div>;
+
+    const panelFooterClasses = classnames(
+        'fd-panel__footer',
+        className
+    );
+
+    return <div className={panelFooterClasses} {...rest}>{children}</div>;
 };
 
 PanelFooter.propTypes = {

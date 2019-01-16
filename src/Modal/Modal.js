@@ -1,3 +1,4 @@
+import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
 import React, { Component } from 'react';
@@ -30,15 +31,20 @@ export class Modal extends Component {
     render() {
         const { children, title, actions, className, show, titleProps, closeProps, contentProps, headerProps, footerProps, bodyProps, ...rest } = this.props;
 
+        const modalClasses = classnames(
+            'fd-ui__overlay',
+            'fd-overlay',
+            'fd-overlay--modal',
+            className
+        );
+
         if (!show) {
             return null;
         }
 
         return ReactDOM.createPortal(
             <div
-                className={`fd-ui__overlay fd-overlay fd-overlay--modal${
-                    className ? ' ' + className : ''
-                }`}
+                className={modalClasses}
                 {...rest}>
                 <div className='modal-demo-bg'>
                     <div className='fd-modal'>

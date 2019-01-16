@@ -1,3 +1,4 @@
+import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -7,41 +8,51 @@ export class Toggle extends React.Component {
         this.state = { checked: props.checked };
     }
 
-  handleChange = () => {
-      this.setState({ checked: !this.state.checked });
-  };
+    handleChange = () => {
+        this.setState({ checked: !this.state.checked });
+    };
 
-  render() {
-      const { size, id, disabled, children, className, labelProps, inputProps, ...rest } = this.props;
+    render() {
+        const { size, id, disabled, children, className, labelProps, inputProps, ...rest } = this.props;
 
-      return (
-          <div
-              className={`fd-form__item fd-form__item--check${
-                  className ? ' ' + className : ''
-              }`}
-              {...rest}>
-              <label
-                  {...labelProps}
-                  className='fd-form__label'
-                  htmlFor={id}>
-                  <span
-                      className={`fd-toggle${
-                          size ? ' fd-toggle--' + size : ''
-                      } fd-form__control`}>
-                      <input
-                          {...inputProps}
-                          checked={this.state.checked}
-                          disabled={disabled}
-                          id={id}
-                          onChange={this.handleChange}
-                          type='checkbox' />
-                      <span className='fd-toggle__switch' role='presentation' />
-                  </span>
-                  {children}
-              </label>
-          </div>
-      );
-  }
+        const toggleClasses = classnames(
+            'fd-form__item',
+            'fd-form__item--check',
+            className
+        );
+
+        const spanClasses = classnames(
+            'fd-toggle',
+            {
+                [`fd-toggle--${size}`]: size
+            },
+            'fd-form__control'
+        );
+
+        return (
+            <div
+                className={toggleClasses}
+                {...rest}>
+                <label
+                    {...labelProps}
+                    className='fd-form__label'
+                    htmlFor={id}>
+                    <span
+                        className={spanClasses}>
+                        <input
+                            {...inputProps}
+                            checked={this.state.checked}
+                            disabled={disabled}
+                            id={id}
+                            onChange={this.handleChange}
+                            type='checkbox' />
+                        <span className='fd-toggle__switch' role='presentation' />
+                    </span>
+                    {children}
+                </label>
+            </div>
+        );
+    }
 }
 
 Toggle.propTypes = {
