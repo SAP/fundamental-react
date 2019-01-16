@@ -213,32 +213,32 @@ export class Shellbar extends Component {
                                 );
                             })}
                         {notifications && (
-                               (notifications.notificationsBody || notifications.noNotificationsBody) ? (
-                                   <Popover
-                                       alignment='right'
-                                       body={
-                                            ((notifications.notificationCount > 0) && notifications.notificationsBody) ||
+                            (notifications.notificationsBody || notifications.noNotificationsBody) ? (
+                                <Popover
+                                    alignment='right'
+                                    body={
+                                        ((notifications.notificationCount > 0) && notifications.notificationsBody) ||
                                             ((notifications.notificationCount <= 0) && notifications.noNotificationsBody)
                                     }
-                                       control={
-                                           <div className='fd-shellbar__action fd-shellbar__action--collapsible'>
-                                               <button aria-label='Notifications' className=' fd-button--shell sap-icon--bell'>
-                                                   {(notifications.notificationCount > 0) && <span aria-label='Unread count' className='fd-counter fd-counter--notification'>
-                                                       {notifications.notificationCount}
-                                                   </span>}
-                                               </button>
-                                           </div>
-                                        } />
-                               ) : (
-                                   <div className='fd-shellbar__action fd-shellbar__action--collapsible'>
-                                       <button aria-label='Notifications' className=' fd-button--shell sap-icon--bell'
-                                           onClick={notifications.callback}>
-                                           {(notifications.notificationCount > 0) && <span aria-label='Unread count' className='fd-counter fd-counter--notification'>
-                                               {notifications.notificationCount}
-                                           </span>}
-                                       </button>
-                                   </div>
-                               )
+                                    control={
+                                        <div className='fd-shellbar__action fd-shellbar__action--collapsible'>
+                                            <button aria-label='Notifications' className=' fd-button--shell sap-icon--bell'>
+                                                {(notifications.notificationCount > 0) && <span aria-label='Unread count' className='fd-counter fd-counter--notification'>
+                                                    {notifications.notificationCount}
+                                                </span>}
+                                            </button>
+                                        </div>
+                                    } />
+                            ) : (
+                                <div className='fd-shellbar__action fd-shellbar__action--collapsible'>
+                                    <button aria-label='Notifications' className=' fd-button--shell sap-icon--bell'
+                                        onClick={notifications.callback}>
+                                        {(notifications.notificationCount > 0) && <span aria-label='Unread count' className='fd-counter fd-counter--notification'>
+                                            {notifications.notificationCount}
+                                        </span>}
+                                    </button>
+                                </div>
+                            )
                         )}
                         {
                             (actions || searchInput || notifications) && <div className='fd-shellbar__action fd-shellbar__action--collapse'>

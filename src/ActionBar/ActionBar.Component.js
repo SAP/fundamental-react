@@ -83,9 +83,9 @@ const clickBackBtn = () => {
     </ActionBarActions>
 </ActionBar>`;
 
-const clickBackBtn = () => {
-    alert('You clicked me!');
-};
+    const clickBackBtn = () => {
+        alert('You clicked me!');
+    };
 
     return (
         <div>

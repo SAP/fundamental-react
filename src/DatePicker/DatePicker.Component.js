@@ -25,17 +25,17 @@ export const DatePickerComponent = () => {
 
             <Properties
                 properties={[
-                { name: 'enableRangeSelection', description: 'bool - Enable to select two dates' },
-                {name: 'disableWeekends', description: 'bool - Disable weekends'},
-                {name: 'disableBeforeDate', description: 'date - Disables dates of a calendar that comes before a specific date'},
-                {name: 'disableAfterDate', description: 'date - Disables dates of a calendar that comes after a specific date'},
-                {name: 'disableWeekday', description: 'array of strings - Disables dates of a calendar that match a weekday'},
-                {name: 'disablePastDates', description: 'bool - Disables dates that comes before today date'},
-                {name: 'disableFutureDates', description: 'bool - Disables dates that comes after the today date'},
-                {name: 'blockedDates', description: 'array of dates - Blocks dates that are between in the blocked dates'},
-                {name: 'disabledDates', description: 'array of dates - Disables dates that are between in the disabled dates'},
-                {name: 'enableRangeSelection', description: 'bool - Enable to select two dates'}
-            ]}
+                    { name: 'enableRangeSelection', description: 'bool - Enable to select two dates' },
+                    {name: 'disableWeekends', description: 'bool - Disable weekends'},
+                    {name: 'disableBeforeDate', description: 'date - Disables dates of a calendar that comes before a specific date'},
+                    {name: 'disableAfterDate', description: 'date - Disables dates of a calendar that comes after a specific date'},
+                    {name: 'disableWeekday', description: 'array of strings - Disables dates of a calendar that match a weekday'},
+                    {name: 'disablePastDates', description: 'bool - Disables dates that comes before today date'},
+                    {name: 'disableFutureDates', description: 'bool - Disables dates that comes after the today date'},
+                    {name: 'blockedDates', description: 'array of dates - Blocks dates that are between in the blocked dates'},
+                    {name: 'disabledDates', description: 'array of dates - Disables dates that are between in the disabled dates'},
+                    {name: 'enableRangeSelection', description: 'bool - Enable to select two dates'}
+                ]}
                 type='Inputs' />
 
             <Separator />
