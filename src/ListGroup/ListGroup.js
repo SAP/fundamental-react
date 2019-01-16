@@ -12,7 +12,7 @@ export const ListGroup = ({ children, className, ...props }) => {
 ListGroup.propTypes = {
     children: PropTypes.node,
     className: PropTypes.string
-  };
+};
 
 export const ListGroupItem = ({ children, className, ...props }) => {
     return (
@@ -26,7 +26,7 @@ export const ListGroupItem = ({ children, className, ...props }) => {
 ListGroupItem.propTypes = {
     children: PropTypes.node,
     className: PropTypes.string
-  };
+};
 
 export const ListGroupItemActions = ({ children, className, ...props }) => {
     return (
@@ -39,7 +39,7 @@ export const ListGroupItemActions = ({ children, className, ...props }) => {
 ListGroupItemActions.propTypes = {
     children: PropTypes.node,
     className: PropTypes.string
-  };
+};
 
 export const ListGroupItemCheckbox = (props) => {
     const { children } = props;
@@ -57,4 +57,4 @@ export const ListGroupItemCheckbox = (props) => {
 ListGroupItemCheckbox.propTypes = {
     children: PropTypes.node,
     className: PropTypes.string
-  };
+};

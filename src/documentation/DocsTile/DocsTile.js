@@ -107,8 +107,8 @@ export class DocsText extends Component {
             <React.Fragment>
                 <div
                     style={this.state.showCode
-                    ? (this.docsBtnStyle)
-                    : (this.docsBtnStyleHiddenCode)}>
+                        ? (this.docsBtnStyle)
+                        : (this.docsBtnStyleHiddenCode)}>
                     <Button onClick={() => this.handleBtnClick()} option='light'>
                         {this.state.showCode
                             ? ('Hide Code')

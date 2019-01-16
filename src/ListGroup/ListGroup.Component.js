@@ -111,14 +111,14 @@ export const ListGroupComponent = () => {
 
             <h2>Playground</h2>
             <Playground component='listgroup' schema={[
-                    {
-                        attribute: 'children',
-                        typeOfAttribute: 'string'
-                    },
-                    {
-                        attribute: 'glyph',
-                        typeOfAttribute: 'string',
-                        'enum': ['',
+                {
+                    attribute: 'children',
+                    typeOfAttribute: 'string'
+                },
+                {
+                    attribute: 'glyph',
+                    typeOfAttribute: 'string',
+                    'enum': ['',
                         'accelerated',
                         'accept',
                         'accidental-leave',
@@ -740,8 +740,8 @@ export const ListGroupComponent = () => {
                         'x-ray',
                         'zoom-in',
                         'zoom-out']
-                    }
-                ]}>
+                }
+            ]}>
 
                 <ListGroup>
                     <ListGroupItem>List item 1
