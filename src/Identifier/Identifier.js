@@ -37,6 +37,7 @@ export const Identifier = ({ glyph, size, modifier, color, label, backgroundImag
         <span
             aria-label={label}
             className={identifierClasses}
+            role={`${!children ? 'presentation' : ''}`}
             style={backgroundImageUrl && styles} {...props}>
             {children}
         </span>

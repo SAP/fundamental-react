@@ -62,21 +62,21 @@ export class MegaMenuList extends Component {
 
     getListItemLinkClasses = ({id, hasChild}) => {
         return classnames(
-        'fd-mega-menu__link',
-        {
-            'is-selected': this.state.selectedItem === id,
-            'has-child': hasChild,
-            'is-expanded': this.state.itemStates[id] && hasChild
-        }
+            'fd-mega-menu__link',
+            {
+                'is-selected': this.state.selectedItem === id,
+                'has-child': hasChild,
+                'is-expanded': this.state.itemStates[id] && hasChild
+            }
         );
     }
 
     getSelectedSublinkClasses = ({id}) => {
         return classnames(
-        'fd-mega-menu__sublink',
-        {
-            'is-selected': this.state.selectedItem === id
-        }
+            'fd-mega-menu__sublink',
+            {
+                'is-selected': this.state.selectedItem === id
+            }
         );
     }
 
