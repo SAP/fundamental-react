@@ -124,7 +124,7 @@
       "src/**/*.{js,jsx,ts,tsx}",
       "!src/{App,Routes,index,registerServiceWorker}.js",
       "!src/**/*.Component.js",
-      "!src/documentation/**"
+      "!src/_playground/**"
     ],
     "resolver": "jest-pnp-resolver",
     "setupFiles": [
