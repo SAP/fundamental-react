@@ -1,7 +1,7 @@
 import { mount } from 'enzyme';
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { SideNav, SideNavList, SideNavGroup } from './SideNavigation';
+import { SideNav, SideNavGroup, SideNavList } from './SideNavigation';
 
 describe('<SideNavigation />', () => {
     const subSideNavList = (

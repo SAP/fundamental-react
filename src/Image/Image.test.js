@@ -1,7 +1,7 @@
+import { Image } from './Image';
 import { mount } from 'enzyme';
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { Image } from './Image';
 
 describe('<Image />', () => {
     const image = (

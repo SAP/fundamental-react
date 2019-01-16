@@ -1,14 +1,6 @@
-import React from 'react';
-import {
-    DocsTile,
-    DocsText,
-    Separator,
-    Header,
-    Description,
-    Import,
-    Properties
-} from '../_playground';
 import { Pagination } from '../';
+import React from 'react';
+import { Description, DocsText, DocsTile, Header, Import, Properties, Separator } from '../_playground';
 
 export const PaginationComponent = () => {
     const handleClick = event => {

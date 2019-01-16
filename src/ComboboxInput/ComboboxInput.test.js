@@ -1,7 +1,7 @@
+import { ComboboxInput } from './ComboboxInput';
 import { mount } from 'enzyme';
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { ComboboxInput } from './ComboboxInput';
 import { Menu, MenuItem, MenuList } from '../Menu/Menu';
 
 describe('<ComboboxInput />', () => {

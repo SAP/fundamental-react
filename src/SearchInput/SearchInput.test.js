@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { mount, shallow } from 'enzyme';
 import { SearchInput } from './SearchInput';
+import { mount, shallow } from 'enzyme';
 
 describe('<SearchInput />', () => {
     const searchInput = 'input[type="text"].fd-input';

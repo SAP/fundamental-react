@@ -1,8 +1,8 @@
+import { Button } from '../Button/Button';
 import { mount } from 'enzyme';
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { InputGroup, FormGroup } from './InputGroup';
-import { Button } from '../Button/Button';
+import { FormGroup, InputGroup } from './InputGroup';
 
 describe('<InputGroup />', () => {
     const inputTextPosBefore = (

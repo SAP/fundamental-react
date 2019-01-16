@@ -1,7 +1,7 @@
 import { mount } from 'enzyme';
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { MegaMenu, MegaMenuList, MegaMenuGroup } from './MegaMenu';
+import { MegaMenu, MegaMenuGroup, MegaMenuList } from './MegaMenu';
 
 describe('<MegaMenu />', () => {
     const menuListURL = (

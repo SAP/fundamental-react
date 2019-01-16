@@ -1,7 +1,7 @@
+import { MultiInput } from './MultiInput';
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { mount, shallow } from 'enzyme';
-import { MultiInput } from './MultiInput';
 
 describe('<MultiInput />', () => {
     const mockOnTagsUpdate = jest.fn();

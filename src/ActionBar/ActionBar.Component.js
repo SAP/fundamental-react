@@ -1,6 +1,6 @@
 import React from 'react';
-import { ActionBar, ActionBarBack, ActionBarHeader, ActionBarActions, Button, Popover, Menu, MenuList, MenuItem } from '../';
-import { DocsTile, DocsText, Separator, Header, Description, Import, Properties } from '../_playground';
+import { ActionBar, ActionBarActions, ActionBarBack, ActionBarHeader, Button, Menu, MenuItem, MenuList, Popover } from '../';
+import { Description, DocsText, DocsTile, Header, Import, Properties, Separator } from '../_playground';
 
 export const ActionBarComponent = () => {
     const actionBarBackBtnCode = `<ActionBar>
