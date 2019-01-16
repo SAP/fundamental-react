@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button, FormGroup, FormItem, FormLabel, InputGroup } from '../';
-import { Description, DocsText, DocsTile, Header, Import, Playground, Properties, Separator } from '../';
+import { Description, DocsText, DocsTile, Header, Import, Playground, Properties, Separator } from '../_playground';
 
 export const InputGroupComponent = () => {
     const textAddonCode = `<FormGroup>

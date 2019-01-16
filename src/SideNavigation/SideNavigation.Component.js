@@ -1,5 +1,5 @@
 import React from 'react';
-import { Description, DocsText, DocsTile, Header, Import, Properties, Separator } from '../';
+import { Description, DocsText, DocsTile, Header, Import, Properties, Separator } from '../_playground';
 import { SideNav, SideNavGroup, SideNavList } from '../';
 
 export const SideNavigationComponent = () => {

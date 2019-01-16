@@ -1,6 +1,6 @@
 import { DatePicker } from '../';
 import React from 'react';
-import { Description, DocsText, DocsTile, Header, Import, Properties, Separator } from '../';
+import { Description, DocsText, DocsTile, Header, Import, Properties, Separator } from '../_playground';
 
 export const DatePickerComponent = () => {
     const defaultDatePickerCode = `<DatePicker disableBeforeDate={new Date(2018, 11, 24, 0, 0, 0, 0)} disableWeekends={true} />

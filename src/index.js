@@ -1,141 +1,67 @@
-import './index.css';
-import { Alert } from '../src/Alert/Alert';
-import App from './App';
-import { Calendar } from '../src/Calendar/Calendar';
-import { ComboboxInput } from '../src/ComboboxInput/ComboboxInput';
-import { DatePicker } from '../src/DatePicker/DatePicker';
-import { Description } from '../src/documentation/Description/Description';
-import { Dropdown } from '../src/Dropdown/Dropdown';
-import { Header } from '../src/documentation/Header/Header';
-import { Icon } from '../src/Icon/Icon';
-import { Identifier } from '../src/Identifier/Identifier';
-import { Image } from '../src/Image/Image';
-import { Import } from '../src/documentation/Import/Import';
-import { InlineHelp } from '../src/InlineHelp/InlineHelp';
-import { LocalizationEditor } from '../src/LocalizationEditor/LocalizationEditor';
-import { Modal } from '../src/Modal/Modal';
-import { MultiInput } from '../src/MultiInput/MultiInput';
-import { Pagination } from '../src/Pagination/Pagination';
-import { Playground } from '../src/documentation/Playground/Playground';
-import { Popover } from '../src/Popover/Popover';
-import { Properties } from '../src/documentation/Properties/Properties';
-import React from 'react';
-import ReactDOM from 'react-dom';
-import registerServiceWorker from './registerServiceWorker';
-import { SearchInput } from '../src/SearchInput/SearchInput';
-import { Separator } from '../src/documentation/Separator/Separator';
-import { Shellbar } from '../src/Shellbar/Shellbar';
-import { Table } from '../src/Table/Table';
-import { Time } from '../src/Time/Time';
-import { TimePicker } from '../src/TimePicker/TimePicker';
-import { Toggle } from '../src/Toggle/Toggle';
-import { Token } from './Token/Token';
-import { Tree } from '../src/Tree/Tree';
-
-import { ActionBar, ActionBarActions, ActionBarBack, ActionBarHeader } from '../src/ActionBar/ActionBar';
-import { Badge, Counter, Label, Status } from '../src/Badge/Badge';
-import { Breadcrumb, BreadcrumbItem } from '../src/Breadcrumb/Breadcrumb';
-import { Button, ButtonGroup } from '../src/Button/Button';
-import { DocsText, DocsTile } from '../src/documentation/DocsTile/DocsTile';
-import { FormFieldset, FormInput, FormItem, FormLabel, FormLegend, FormMessage, FormRadio, FormSelect, FormSet, FormTextarea } from '../src/Forms/Forms';
-import { FormGroup, InputGroup } from '../src/InputGroup/InputGroup';
-import { ListGroup, ListGroupItem, ListGroupItemActions, ListGroupItemCheckbox } from '../src/ListGroup/ListGroup';
-import { MegaMenu, MegaMenuGroup, MegaMenuList } from '../src/MegaMenu/MegaMenu';
-import { Menu, MenuGroup, MenuItem, MenuList } from '../src/Menu/Menu';
-import { Panel, PanelActions, PanelBody, PanelContent, PanelFilters, PanelFooter, PanelGrid, PanelHead, PanelHeader } from '../src/Panel/Panel';
-import { ProductTile, ProductTileContent, ProductTileMedia, Tile, TileActions, TileContent, TileGrid, TileMedia } from '../src/Tile/Tile';
-import { SideNav, SideNavGroup, SideNavList } from '../src/SideNavigation/SideNavigation';
-import { TabComponent, Tabs } from '../src/Tabs/Tabs';
-
-export {
-    DocsTile,
-    DocsText,
-    Separator,
-    Header,
-    Description,
-    Import,
-    Properties,
-    Playground,
-    ActionBar,
-    ActionBarBack,
-    ActionBarHeader,
-    ActionBarActions,
-    Alert,
-    Badge,
-    ComboboxInput,
-    Label,
-    Status,
-    Counter,
-    Breadcrumb,
-    BreadcrumbItem,
-    Button,
-    ButtonGroup,
-    Calendar,
-    DatePicker,
-    Dropdown,
-    FormSet,
-    FormItem,
-    FormLabel,
-    FormInput,
-    FormRadio,
-    FormTextarea,
-    FormMessage,
-    FormSelect,
-    FormFieldset,
-    FormLegend,
-    Icon,
-    Identifier,
-    Image,
-    InlineHelp,
-    InputGroup,
-    FormGroup,
-    ListGroup,
-    ListGroupItem,
-    ListGroupItemActions,
-    ListGroupItemCheckbox,
-    LocalizationEditor,
-    MegaMenu,
-    MegaMenuList,
-    MegaMenuGroup,
-    Menu,
-    MenuList,
-    MenuItem,
-    MenuGroup,
-    Modal,
-    MultiInput,
-    Popover,
-    Pagination,
-    Panel,
-    PanelGrid,
-    PanelBody,
-    PanelHeader,
-    PanelHead,
-    PanelActions,
-    PanelFilters,
-    PanelContent,
-    PanelFooter,
-    SearchInput,
-    SideNav,
-    SideNavList,
-    SideNavGroup,
-    Table,
-    Tabs,
-    TabComponent,
-    Token,
-    Tile,
-    TileContent,
-    TileMedia,
-    TileActions,
-    Time,
-    TimePicker,
-    ProductTile,
-    ProductTileMedia,
-    TileGrid,
-    ProductTileContent,
-    Toggle,
-    Tree,
-    Shellbar
-};
-
-ReactDOM.render(<App />, document.getElementById('root'));
-registerServiceWorker();
+export { ActionBar } from './ActionBar/ActionBar';
+export { ActionBarBack } from './ActionBar/ActionBar';
+export { ActionBarHeader } from './ActionBar/ActionBar';
+export { ActionBarActions } from './ActionBar/ActionBar';
+export { Alert } from './Alert/Alert';
+export { Badge } from './Badge/Badge';
+export { Label } from './Badge/Badge';
+export { Status } from './Badge/Badge';
+export { Counter } from './Badge/Badge';
+export { Breadcrumb } from './Breadcrumb/Breadcrumb';
+export { BreadcrumbItem } from './Breadcrumb/Breadcrumb';
+export { Button } from './Button/Button';
+export { ButtonGroup } from './Button/Button';
+export { Calendar } from './Calendar/Calendar';
+export { ComboboxInput } from './ComboboxInput/ComboboxInput';
+export { DatePicker } from './DatePicker/DatePicker';
+export { Dropdown } from './Dropdown/Dropdown';
+export { FormSet } from './Forms/Forms';
+export { FormItem } from './Forms/Forms';
+export { FormLabel } from './Forms/Forms';
+export { FormInput } from './Forms/Forms';
+export { FormRadio } from './Forms/Forms';
+export { FormTextarea } from './Forms/Forms';
+export { FormMessage } from './Forms/Forms';
+export { FormSelect } from './Forms/Forms';
+export { FormFieldset } from './Forms/Forms';
+export { FormLegend } from './Forms/Forms';
+export { Icon } from './Icon/Icon';
+export { Identifier } from './Identifier/Identifier';
+export { Image } from './Image/Image';
+export { InlineHelp } from './InlineHelp/InlineHelp';
+export { InputGroup, FormGroup } from './InputGroup/InputGroup';
+export { ListGroup, ListGroupItem, ListGroupItemActions, ListGroupItemCheckbox } from './ListGroup/ListGroup';
+export { LocalizationEditor } from './LocalizationEditor/LocalizationEditor';
+export { MegaMenu, MegaMenuList, MegaMenuGroup } from './MegaMenu/MegaMenu';
+export { Menu, MenuList, MenuItem, MenuGroup } from './Menu/Menu';
+export { Modal } from './Modal/Modal';
+export { MultiInput } from './MultiInput/MultiInput';
+export { Pagination } from './Pagination/Pagination';
+export { Panel } from './Panel/Panel';
+export { PanelGrid } from './Panel/Panel';
+export { PanelBody } from './Panel/Panel';
+export { PanelHeader } from './Panel/Panel';
+export { PanelHead } from './Panel/Panel';
+export { PanelActions } from './Panel/Panel';
+export { PanelFilters } from './Panel/Panel';
+export { PanelContent } from './Panel/Panel';
+export { PanelFooter } from './Panel/Panel';
+export { Popover } from './Popover/Popover';
+export { ProductTile } from './Tile/Tile';
+export { ProductTileContent } from './Tile/Tile';
+export { ProductTileMedia } from './Tile/Tile';
+export { SearchInput } from './SearchInput/SearchInput';
+export { SideNav, SideNavList, SideNavGroup } from './SideNavigation/SideNavigation';
+export { Table } from './Table/Table';
+export { Tabs, TabComponent } from './Tabs/Tabs';
+export { Token } from './Token/Token';
+export { Tile } from './Tile/Tile';
+export { TileContent } from './Tile/Tile';
+export { TileMedia } from './Tile/Tile';
+export { TileActions } from './Tile/Tile';
+export { TileGrid } from './Tile/Tile';
+export { Toggle } from './Toggle/Toggle';
+export { Tree } from './Tree/Tree';
+export { Time } from './Time/Time';
+export { TimePicker } from './TimePicker/TimePicker';
+export { Shellbar } from './Shellbar/Shellbar';

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Breadcrumb, BreadcrumbItem } from '../';
-import { Description, DocsText, DocsTile, Header, Import, Separator } from '../';
+import { Description, DocsText, DocsTile, Header, Import, Separator } from '../_playground';
 
 export const BreadcrumbComponent = () => {
     const breadcrumbHrefCode = `<Breadcrumb>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Description, DocsText, DocsTile, Header, Import, Properties, Separator } from '../';
+import { Description, DocsText, DocsTile, Header, Import, Properties, Separator } from '../_playground';
 import { MegaMenu, MegaMenuGroup, MegaMenuList } from '../';
 
 export const MegaMenuComponent = () => {

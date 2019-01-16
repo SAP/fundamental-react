@@ -1,6 +1,6 @@
 import { Icon } from '../';
 import React from 'react';
-import { Description, DocsText, DocsTile, Header, Import, Playground, Properties, Separator } from '../';
+import { Description, DocsText, DocsTile, Header, Import, Playground, Properties, Separator } from '../_playground';
 
 export const IconComponent = () => {
     const iconsCode = `<Icon glyph="cart" size="s" />

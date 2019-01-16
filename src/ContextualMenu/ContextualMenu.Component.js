@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button, Menu, MenuItem, MenuList, Popover } from '../';
-import { Description, DocsText, DocsTile, Header, Separator } from '../';
+import { Description, DocsText, DocsTile, Header, Separator } from '../_playground';
 
 export const ContextualMenuComponent = () => {
     const contextualMenuIconCode = `<Popover

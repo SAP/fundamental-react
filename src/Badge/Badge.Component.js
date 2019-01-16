@@ -1,6 +1,6 @@
 import React from 'react';
 import { Badge, Button, Counter, Label, Status } from '../';
-import { Description, DocsText, DocsTile, Header, Import, Playground, Properties, Separator } from '../';
+import { Description, DocsText, DocsTile, Header, Import, Playground, Properties, Separator } from '../_playground';
 
 export const BadgeComponent = () => {
     const defaultBadgeCode = `<Badge>Default</Badge>

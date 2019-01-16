@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button, Image, Menu, MenuItem, MenuList, Popover, Table } from '../';
-import { Description, DocsText, DocsTile, Header, Import, Properties, Separator } from '../';
+import { Description, DocsText, DocsTile, Header, Import, Properties, Separator } from '../_playground';
 
 export const TableComponent = () => {
     const simpleTableCode = `<Table

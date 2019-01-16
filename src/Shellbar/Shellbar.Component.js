@@ -1,5 +1,5 @@
 import { Shellbar } from '..';
-import { Description, DocsText, DocsTile, Header, Import, Properties, Separator } from '../';
+import { Description, DocsText, DocsTile, Header, Import, Properties, Separator } from '../_playground';
 import { Menu, MenuItem, MenuList } from '../';
 import React, { Component } from 'react';
 

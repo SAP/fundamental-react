@@ -1,6 +1,6 @@
 import React from 'react';
 import { ComboboxInput, Menu, MenuItem, MenuList } from '../';
-import { DocsText, DocsTile, Header, Import, Properties, Separator } from '../';
+import { DocsText, DocsTile, Header, Import, Properties, Separator } from '../_playground';
 
 export const ComboboxInputComponent = () => {
     const comboboxInputCode = `<ComboboxInput

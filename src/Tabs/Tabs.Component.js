@@ -1,5 +1,5 @@
 import React from 'react';
-import { Description, DocsText, DocsTile, Header, Import, Playground, Properties, Separator } from '../';
+import { Description, DocsText, DocsTile, Header, Import, Playground, Properties, Separator } from '../_playground';
 import { TabComponent, Tabs } from '../';
 
 export const TabsComponent = () => {

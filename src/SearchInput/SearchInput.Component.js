@@ -1,5 +1,5 @@
 import { SearchInput } from './SearchInput';
-import { Description, DocsText, DocsTile, Header, Import, Properties, Separator } from '../';
+import { Description, DocsText, DocsTile, Header, Import, Properties, Separator } from '../_playground';
 import React, { Component } from 'react';
 
 export class SearchInputComponent extends Component {
