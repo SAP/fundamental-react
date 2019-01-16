@@ -34,11 +34,11 @@ Button.propTypes = {
     onClick: PropTypes.func
 };
 
-export const ButtonGroup = props => {
-    const { children } = props;
+export const ButtonGroup = ({children, ...props}) => {
     return (
         <div aria-label='Group label' className='fd-button-group'
-            role='group'>
+            role='group'
+            {...props}>
             {children}
         </div>
     );
