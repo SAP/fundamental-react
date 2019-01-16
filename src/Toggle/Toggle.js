@@ -12,7 +12,7 @@ export class Toggle extends React.Component {
   };
 
   render() {
-      const { size, id, disabled, children, className, ...rest } = this.props;
+      const { size, id, disabled, children, className, labelProps, inputProps, ...rest } = this.props;
 
       return (
           <div
@@ -20,12 +20,16 @@ export class Toggle extends React.Component {
                   className ? ' ' + className : ''
               }`}
               {...rest}>
-              <label className='fd-form__label' htmlFor={id}>
+              <label
+                  {...labelProps}
+                  className='fd-form__label'
+                  htmlFor={id}>
                   <span
                       className={`fd-toggle${
                           size ? ' fd-toggle--' + size : ''
                       } fd-form__control`}>
                       <input
+                          {...inputProps}
                           checked={this.state.checked}
                           disabled={disabled}
                           id={id}
@@ -44,5 +48,7 @@ Toggle.propTypes = {
     className: PropTypes.string,
     disabled: PropTypes.bool,
     id: PropTypes.string,
+    inputProps: PropTypes.object,
+    labelProps: PropTypes.object,
     size: PropTypes.oneOf(['', 'xs', 's', 'l'])
 };
