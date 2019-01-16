@@ -1,6 +1,6 @@
 import React from 'react';
 import { Time } from '../';
-import { DocsTile, DocsText, Separator, Header, Description, Import, Properties } from '../';
+import { DocsTile, DocsText, Separator, Header, Description, Import, Properties } from '../_playground';
 
 export const TimeComponent = () => {
     const defaultTimeCode = '<Time />';
@@ -19,7 +19,6 @@ export const TimeComponent = () => {
             <Import module='Time' path='/fundamental-react/src/' />
             <Separator />{' '}
             <Properties
-                type='Inputs'
                 properties={[
                     {
                         name: 'id',
@@ -51,7 +50,8 @@ export const TimeComponent = () => {
                         description:
                             'object - The time component values , contains four properties: hour with values from 01 to 12 when format12Hours is true or 00 to 23 when format12Hours is false, minute with values from 00 to 59, second with values from 00 to 59, meridiem with values 0(am), 1(pm)'
                     }
-                ]} />
+                ]}
+                type='Inputs' />
             <Separator />
             {/* Default Clock */}
             <h2>Default</h2>

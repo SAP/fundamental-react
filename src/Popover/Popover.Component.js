@@ -1,6 +1,6 @@
 import React from 'react';
 import { Popover, Image, Identifier, Icon, Menu, MenuList, MenuItem } from '../';
-import { DocsTile, DocsText, Separator, Header, Description, Import, Properties } from '../';
+import { DocsTile, DocsText, Separator, Header, Description, Import, Properties } from '../_playground';
 
 export const PopoverComponent = () => {
     const popoverCode = `<Popover
@@ -84,7 +84,6 @@ export const PopoverComponent = () => {
             <Separator />
 
             <Properties
-                type='Inputs'
                 properties={[
                     {
                         name: 'control',
@@ -106,7 +105,8 @@ export const PopoverComponent = () => {
                         name: 'id',
                         description: 'string - optional. Element id.'
                     }
-                ]} />
+                ]}
+                type='Inputs' />
 
             <Separator />
 
@@ -114,24 +114,21 @@ export const PopoverComponent = () => {
             <DocsTile centered>
                 <div className='fd-doc__margin--popover'>
                     <Popover
-                        id='jhqD0555'
+                        body={
+                            <Menu>
+                                <MenuList>
+                                    <MenuItem url='/'>Option 1</MenuItem>
+                                    <MenuItem url='/'>Option 2</MenuItem>
+                                    <MenuItem url='/'>Option 3</MenuItem>
+                                    <MenuItem url='/'>Option 4</MenuItem>
+                                </MenuList>
+                            </Menu>
+                        }
                         control={<Icon glyph='cart' size='xl' />}
-                        body={
-                            <Menu>
-                                <MenuList>
-                                    <MenuItem url='/'>Option 1</MenuItem>
-                                    <MenuItem url='/'>Option 2</MenuItem>
-                                    <MenuItem url='/'>Option 3</MenuItem>
-                                    <MenuItem url='/'>Option 4</MenuItem>
-                                </MenuList>
-                            </Menu>
-                        } />
+                        id='jhqD0555' />
 
                     <Popover
-                        id='jhqD0556'
                         alignment='right'
-                        control={<Image size='m' type='circle'
-                            photo='https://placeimg.com/400/400/nature' />}
                         body={
                             <Menu>
                                 <MenuList>
@@ -141,29 +138,29 @@ export const PopoverComponent = () => {
                                     <MenuItem url='/'>Option 4</MenuItem>
                                 </MenuList>
                             </Menu>
-                        } />
+                        }
+                        control={<Image photo='https://placeimg.com/400/400/nature' size='m'
+                            type='circle' />}
+                        id='jhqD0556' />
 
                     <Popover
+                        body={
+                            <Menu>
+                                <MenuList>
+                                    <MenuItem url='/'>Option 1</MenuItem>
+                                    <MenuItem url='/'>Option 2</MenuItem>
+                                    <MenuItem url='/'>Option 3</MenuItem>
+                                    <MenuItem url='/'>Option 4</MenuItem>
+                                </MenuList>
+                            </Menu>
+                        }
+                        control={<Identifier color={6} glyph='money-bills'
+                            size='m' />}
                         id='jhqD0557'
-                        control={<Identifier size='m' glyph='money-bills'
-                            color={6} />}
-                        noArrow
-                        body={
-                            <Menu>
-                                <MenuList>
-                                    <MenuItem url='/'>Option 1</MenuItem>
-                                    <MenuItem url='/'>Option 2</MenuItem>
-                                    <MenuItem url='/'>Option 3</MenuItem>
-                                    <MenuItem url='/'>Option 4</MenuItem>
-                                </MenuList>
-                            </Menu>
-                        } />
+                        noArrow />
 
                     <Popover
-                        id='jhqD0558'
-                        control={<Icon glyph='menu2' size='xl' />}
                         alignment='right'
-                        noArrow
                         body={
                             <Menu>
                                 <MenuList>
@@ -173,7 +170,10 @@ export const PopoverComponent = () => {
                                     <MenuItem url='/'>Option 4</MenuItem>
                                 </MenuList>
                             </Menu>
-                        } />
+                        }
+                        control={<Icon glyph='menu2' size='xl' />}
+                        id='jhqD0558'
+                        noArrow />
                 </div>
             </DocsTile>
             <DocsText>{popoverCode}</DocsText>

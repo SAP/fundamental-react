@@ -1,6 +1,7 @@
 [![npm version](https://badge.fury.io/js/fundamental-react.svg)](//www.npmjs.com/package/fundamental-react)
 [![Build Status](https://travis-ci.org/SAP/fundamental-react.svg?branch=master)](https://travis-ci.org/SAP/fundamental-react)
 [![Coverage Status](https://coveralls.io/repos/github/SAP/fundamental-react/badge.svg?branch=master)](https://coveralls.io/github/SAP/fundamental-react?branch=master)
+[![Slack](https://img.shields.io/badge/slack-ui--fundamentals-blue.svg?logo=slack)](https://ui-fundamentals.slack.com)
 
 ## Description
 
@@ -67,11 +68,11 @@ If you encounter an issue or want to request a feature, you can [create an issue
 
 ## Contributing
 
-If you want to contribute, please check the [Contribution Guidelines](./CONTRIBUTING.md).
+If you want to contribute, please check the [Contribution Guidelines](./.github/CONTRIBUTING.md).
 
 ## License
 
-Copyright (c) 2018 SAP SE or an SAP affiliate company. All rights reserved.
+Copyright (c) 2019 SAP SE or an SAP affiliate company. All rights reserved.
 This library is licensed under the Apache Software License, v. 2 except as noted otherwise in the [License File](https://github.com/SAP/fundamental-react/blob/master/LICENSE.txt).
 
 ## Similar Projects

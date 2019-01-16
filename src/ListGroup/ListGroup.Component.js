@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button, ListGroup, ListGroupItem, ListGroupItemActions, ListGroupItemCheckbox } from '../';
-import { DocsTile, DocsText, Separator, Header, Description, Import, Playground } from '../';
+import { DocsTile, DocsText, Separator, Header, Description, Import, Playground } from '../_playground';
 
 export const ListGroupComponent = () => {
     const simpleListCode = `<ListGroup>
@@ -71,22 +71,22 @@ export const ListGroupComponent = () => {
                 <ListGroup>
                     <ListGroupItem>List item 1
                         <ListGroupItemActions>
-                            <Button type='light' glyph='edit' />
+                            <Button glyph='edit' type='light' />
                         </ListGroupItemActions>
                     </ListGroupItem>
                     <ListGroupItem>List item 2
                         <ListGroupItemActions>
-                            <Button type='light' glyph='edit' />
+                            <Button glyph='edit' type='light' />
                         </ListGroupItemActions>
                     </ListGroupItem>
                     <ListGroupItem>List item 3
                         <ListGroupItemActions>
-                            <Button type='light' glyph='edit' />
+                            <Button glyph='edit' type='light' />
                         </ListGroupItemActions>
                     </ListGroupItem>
                     <ListGroupItem>List item 4
                         <ListGroupItemActions>
-                            <Button type='light' glyph='edit' />
+                            <Button glyph='edit' type='light' />
                         </ListGroupItemActions>
                     </ListGroupItem>
                 </ListGroup>
@@ -111,14 +111,14 @@ export const ListGroupComponent = () => {
 
             <h2>Playground</h2>
             <Playground component='listgroup' schema={[
-                    {
-                        attribute: 'children',
-                        typeOfAttribute: 'string'
-                    },
-                    {
-                        attribute: 'glyph',
-                        typeOfAttribute: 'string',
-                        'enum': ['',
+                {
+                    attribute: 'children',
+                    typeOfAttribute: 'string'
+                },
+                {
+                    attribute: 'glyph',
+                    typeOfAttribute: 'string',
+                    'enum': ['',
                         'accelerated',
                         'accept',
                         'accidental-leave',
@@ -740,13 +740,13 @@ export const ListGroupComponent = () => {
                         'x-ray',
                         'zoom-in',
                         'zoom-out']
-                    }
-                ]}>
+                }
+            ]}>
 
                 <ListGroup>
                     <ListGroupItem>List item 1
                         <ListGroupItemActions>
-                            <Button type='secondary' glyph='edit' />
+                            <Button glyph='edit' type='secondary' />
                         </ListGroupItemActions>
                     </ListGroupItem>
                 </ListGroup>

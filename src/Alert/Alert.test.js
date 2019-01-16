@@ -12,8 +12,8 @@ describe('<Alert />', () => {
     );
 
     const basicErrorAlert = (
-        <Alert dismissable type='error'
-            linkText='link'>
+        <Alert dismissable linkText='link'
+            type='error'>
             Error message with a
         </Alert>
     );

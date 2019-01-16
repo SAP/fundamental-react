@@ -1,5 +1,5 @@
 import React from 'react';
-import { DocsTile, DocsText, Separator, Header, Description, Import, Properties } from '../';
+import { DocsTile, DocsText, Separator, Header, Description, Import, Properties } from '../_playground';
 import { SideNav, SideNavList, SideNavGroup } from '../';
 
 export const SideNavigationComponent = () => {
@@ -100,7 +100,6 @@ export const SideNavigationComponent = () => {
             <Separator />
 
             <Properties
-                type='Inputs'
                 properties={[
                     {
                         name: 'icons',
@@ -124,7 +123,8 @@ export const SideNavigationComponent = () => {
                             'array - an array of objects with keys \'id\', \'url\', and \'name\' setting the attributes of the subitems'
                     },
                     { name: 'glyph', description: 'string - the name of the icon for navigation list with icons.' }
-                ]} />
+                ]}
+                type='Inputs' />
 
             <Separator />
 

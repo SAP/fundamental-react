@@ -10,10 +10,10 @@ describe('<Modal />', () => {
     const modalFormTitle = 'Invite User';
     const infoModal = (
         <Modal
-            show={bShow}
             className='blue'
-            title={modalInfoTitle}
-            onClose={mockOnClose}>
+            onClose={mockOnClose}
+            show={bShow}
+            title={modalInfoTitle}>
             <div>
                 <b>The new product have been added to your catalog.</b>
                 <br />
@@ -29,8 +29,8 @@ describe('<Modal />', () => {
     );
 
     const infoNoShowModal = (
-        <Modal show={!bShow} title={modalInfoTitle}
-            onClose={mockOnClose}>
+        <Modal onClose={mockOnClose} show={!bShow}
+            title={modalInfoTitle}>
             <div>
                 <b>The new product have been added to your catalog.</b>
                 <br />
@@ -47,15 +47,15 @@ describe('<Modal />', () => {
 
     const confirmModal = (
         <Modal
-            show={bShow}
-            title={modalConfirmTitle}
-            onClose={mockOnClose}
             actions={
                 <React.Fragment>
                     <button>No Way</button>
                     <button>Sure</button>
                 </React.Fragment>
-            }>
+            }
+            onClose={mockOnClose}
+            show={bShow}
+            title={modalConfirmTitle}>
             <div>
                 Do you want to delete item <b>X</b>?
             </div>
@@ -64,15 +64,15 @@ describe('<Modal />', () => {
 
     const formModal = (
         <Modal
-            show={bShow}
-            title={modalFormTitle}
-            onClose={mockOnClose}
             actions={
                 <React.Fragment>
                     <button>Cancel</button>
                     <button>Invite</button>
                 </React.Fragment>
-            }>
+            }
+            onClose={mockOnClose}
+            show={bShow}
+            title={modalFormTitle}>
             <div className='fd-form__group'>
                 <div className='fd-form__item'>
                     <label className='fd-form__label is-required'>Email</label>

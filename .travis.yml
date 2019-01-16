@@ -1,6 +1,5 @@
 language: node_js
-node_js:
-- 8.9.0
+node_js: 10.15.0
 dist: trusty
 git:
   depth: false
@@ -22,3 +21,6 @@ notifications:
   email:
     on_failure: always
     on_success: change
+  slack: 
+    rooms:
+      - ui-fundamentals:zVRyxlqkYnQFD7p8QHkWM8Fd#react-automated

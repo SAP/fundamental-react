@@ -30,12 +30,12 @@ export const MenuItem = ({ url, link, isLink, separator, addon, children, onclic
                     <div className='fd-menu__addon-before'>{<span className={'sap-icon--' + addon} />}</div>
                 }
                 {link &&
-                    <Link to={link} className={`fd-menu__item${isLink ? ' fd-menu__link' : ''}`}>
+                    <Link className={`fd-menu__item${isLink ? ' fd-menu__link' : ''}`} to={link}>
                         {children}
                     </Link>
                 }
                 {url &&
-                    <a href={url} className={`fd-menu__item${isLink ? ' fd-menu__link' : ''}`}>
+                    <a className={`fd-menu__item${isLink ? ' fd-menu__link' : ''}`} href={url}>
                         {children}
                     </a>
                 }

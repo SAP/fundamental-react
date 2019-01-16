@@ -1,5 +1,5 @@
 import React from 'react';
-import { DocsTile, DocsText, Separator, Header, Import, Properties } from '../';
+import { DocsTile, DocsText, Separator, Header, Import, Properties } from '../_playground';
 import { Menu, MenuItem, MenuList, ComboboxInput } from '../';
 
 export const ComboboxInputComponent = () => {
@@ -45,37 +45,36 @@ export const ComboboxInputComponent = () => {
             <Separator />
 
             <Properties
-                type='Inputs'
                 properties={[
                     { name: 'menu', description: 'object (required) - An object containing a Menu component. ' },
                     { name: 'id', description: 'string (optional) - The id of the component.' },
                     { name: 'placeholder', description: 'string (optional) - Input \'placeholder\' attribute. ' },
                     { name: 'compact', description: 'bool (optional) - Set to true to enable compact mode.' }
-                ]} />
+                ]}
+                type='Inputs' />
 
             <Separator />
 
             <h2>Combobox Input</h2>
             <DocsTile>
                 <ComboboxInput
-                    placeholder='Select Fruit'
                     menu={
                         <Menu>
                             <MenuList>
                                 <MenuItem url='/'>Pear</MenuItem>
                                 <MenuItem url='/'>Strawberry</MenuItem>
                                 <MenuItem url='/'>Raspberry</MenuItem>
-                                <MenuItem url='/' isLink>
+                                <MenuItem isLink url='/'>
                                     + New Item
                                 </MenuItem>
                             </MenuList>
                         </Menu>
-                    } />
+                    }
+                    placeholder='Select Fruit' />
 
                 <br />
 
                 <ComboboxInput
-                    placeholder='Select Fruit'
                     compact
                     menu={
                         <Menu>
@@ -83,12 +82,13 @@ export const ComboboxInputComponent = () => {
                                 <MenuItem url='/'>Pear</MenuItem>
                                 <MenuItem url='/'>Strawberry</MenuItem>
                                 <MenuItem url='/'>Raspberry</MenuItem>
-                                <MenuItem url='/' isLink>
+                                <MenuItem isLink url='/'>
                                     + New Item
                                 </MenuItem>
                             </MenuList>
                         </Menu>
-                    } />
+                    }
+                    placeholder='Select Fruit' />
             </DocsTile>
             <DocsText>{comboboxInputCode}</DocsText>
             <Separator />

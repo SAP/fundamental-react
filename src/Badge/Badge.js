@@ -40,7 +40,7 @@ Status.propTypes = {
 
 export const Counter = ({ notification, children, className, ...props }) => {
     return (
-        <span className={`fd-counter${notification ? ' fd-counter--notification' : ''}${className ? ' ' + className : ''}`} aria-label='Unread count'
+        <span aria-label='Unread count' className={`fd-counter${notification ? ' fd-counter--notification' : ''}${className ? ' ' + className : ''}`}
             {...props}>
             {children}
         </span>

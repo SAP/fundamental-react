@@ -30,8 +30,8 @@ describe('<Shellbar />', () => {
         <Shellbar
             logo={
                 <img
-                    src='//unpkg.com/fiori-fundamentals/dist/images/sap-logo.png'
-                    alt='SAP' />
+                    alt='SAP'
+                    src='//unpkg.com/fiori-fundamentals/dist/images/sap-logo.png' />
             }
             productTitle='Corporate Portal'
             profile={profile1}
@@ -43,8 +43,8 @@ describe('<Shellbar />', () => {
             className='blue'
             logo={
                 <img
-                    src='//unpkg.com/fiori-fundamentals/dist/images/sap-logo.png'
-                    alt='SAP' />
+                    alt='SAP'
+                    src='//unpkg.com/fiori-fundamentals/dist/images/sap-logo.png' />
             }
             productTitle='Corporate Portal'
             profile={profile1}
@@ -132,18 +132,18 @@ describe('<Shellbar />', () => {
 
     const coPilotShell = (
         <Shellbar
-            logoSAP
-            productTitle='Corporate Portal'
-            productMenu={productMenu}
-            subtitle='Subtitle'
-            copilot
-            searchInput={searchInput}
             actions={actions}
+            copilot
+            logoSAP
             notifications={notifications}
+            productMenu={productMenu}
+            productSwitcher={productSwitcher}
+            productSwitcherList={productSwitcherList}
+            productTitle='Corporate Portal'
             profile={profile}
             profileMenu={profileMenu}
-            productSwitcher={productSwitcher}
-            productSwitcherList={productSwitcherList} />
+            searchInput={searchInput}
+            subtitle='Subtitle' />
     );
 
     test('create shellbar', () => {
@@ -152,6 +152,10 @@ describe('<Shellbar />', () => {
         expect(tree).toMatchSnapshot();
 
         component = renderer.create(simpleShellBarWithClass);
+        tree = component.toJSON();
+        expect(tree).toMatchSnapshot();
+
+        component = renderer.create(coPilotShell);
         tree = component.toJSON();
         expect(tree).toMatchSnapshot();
     });
@@ -165,9 +169,9 @@ describe('<Shellbar />', () => {
 
             const element = mount(<Shellbar data-sample='Sample' />);
 
-            expect(
-                element.getDOMNode().attributes['data-sample'].value
-            ).toBe('Sample');
+            expect(element.getDOMNode().attributes['data-sample'].value).toBe(
+                'Sample'
+            );
         });
     });
 });

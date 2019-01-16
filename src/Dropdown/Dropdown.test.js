@@ -1,4 +1,3 @@
-import { mount } from 'enzyme';
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { Dropdown } from './Dropdown';
@@ -21,65 +20,65 @@ describe('<Dropdown />', () => {
     const defaultDropdown = (
         <Dropdown>
             <Popover
+                body={defaultMenu}
                 control={<Button dropdown>Select</Button>}
-                noArrow
-                body={defaultMenu} />
+                noArrow />
         </Dropdown>
     );
 
     const compactDropdown = (
         <Dropdown className='blue'>
             <Popover
+                body={defaultMenu}
                 control={
-                    <Button dropdown compact>
+                    <Button compact dropdown>
                         Select
                     </Button>
                 }
-                noArrow
-                body={defaultMenu} />
+                noArrow />
         </Dropdown>
     );
 
     const toolbarDropdown = (
         <Dropdown standard>
             <Popover
+                body={defaultMenu}
                 control={
                     <Button dropdown type='standard'>
                         Select
                     </Button>
                 }
-                noArrow
-                body={defaultMenu} />
+                noArrow />
         </Dropdown>
     );
 
     const iconDropdown = (
         <Dropdown>
             <Popover
-                id='jhqD0557'
+                body={defaultMenu}
                 control={
                     <Button dropdown glyph='filter'>
                         Select
                     </Button>
                 }
-                noArrow
-                body={defaultMenu} />
+                id='jhqD0557'
+                noArrow />
         </Dropdown>
     );
 
     const disabledDropdown = (
         <Dropdown>
             <Popover
-                id='jhqD0561'
-                disabled
+                body={defaultMenu}
                 control={
-                    <Button dropdown glyph='filter'
-                        disabled>
+                    <Button disabled dropdown
+                        glyph='filter'>
                         Select
                     </Button>
                 }
-                noArrow
-                body={defaultMenu} />
+                disabled
+                id='jhqD0561'
+                noArrow />
         </Dropdown>
     );
 

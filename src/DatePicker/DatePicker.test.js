@@ -4,9 +4,9 @@ import { DatePicker } from '../DatePicker/DatePicker';
 
 describe('<DatePicker />', () => {
     const defaultDatePicker = <DatePicker />;
-    const compactDatePicker = <DatePicker compact className='blue' />;
+    const compactDatePicker = <DatePicker className='blue' compact />;
     const rangeDatePicker = <DatePicker enableRangeSelection />;
-    const compactRangeDatepicker = <DatePicker enableRangeSelection compact />;
+    const compactRangeDatepicker = <DatePicker compact enableRangeSelection />;
     let wrapper;
 
     afterAll(() => {

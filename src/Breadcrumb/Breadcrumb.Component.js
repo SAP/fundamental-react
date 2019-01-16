@@ -1,6 +1,6 @@
 import React from 'react';
 import { Breadcrumb, BreadcrumbItem } from '../';
-import { DocsTile, DocsText, Separator, Header, Description, Import } from '../';
+import { DocsTile, DocsText, Separator, Header, Description, Import } from '../_playground';
 
 export const BreadcrumbComponent = () => {
     const breadcrumbHrefCode = `<Breadcrumb>
@@ -30,9 +30,9 @@ export const BreadcrumbComponent = () => {
             <Description>An example using url (href attribute)</Description>
             <DocsTile>
                 <Breadcrumb>
-                    <BreadcrumbItem url='#' name='Link Text' />
-                    <BreadcrumbItem url='#' name='Link Text' />
-                    <BreadcrumbItem url='#' name='Link Text' />
+                    <BreadcrumbItem name='Link Text' url='#' />
+                    <BreadcrumbItem name='Link Text' url='#' />
+                    <BreadcrumbItem name='Link Text' url='#' />
                 </Breadcrumb>
             </DocsTile>
             <DocsText>{breadcrumbHrefCode}</DocsText>

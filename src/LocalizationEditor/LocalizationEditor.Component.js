@@ -1,5 +1,5 @@
 import React from 'react';
-import { DocsTile, DocsText, Separator, Header, Import, Properties } from '../';
+import { DocsTile, DocsText, Separator, Header, Import, Properties } from '../_playground';
 import { LocalizationEditor } from '../';
 
 export const LocalizationEditorComponent = () => {
@@ -40,12 +40,12 @@ export const LocalizationEditorComponent = () => {
 
             <Separator />
 
-            <Properties type='Inputs' properties={[
+            <Properties properties={[
                 { name: 'control', description: 'object (required) - An object of shape "{ label: string, placeholder: string, language: string }" containing the values of the control localization editor.' },
                 { name: 'menu', description: 'array (required) - An array of objects that represent the values of the elements in the dropdown menu. The shape of the objects in the array is "{ placeholder: string, language: string }".' },
                 { name: 'id', description: 'string (optional) - The id of the Localization Editor.' },
                 { name: 'compact', description: 'bool - set to true to enable a compact mode. This property can be applied only to Localization Editor with an input.' },
-                { name: 'textarea', description: 'bool - set to true to enable a Localization Editor with a textarea.' }]} />
+                { name: 'textarea', description: 'bool - set to true to enable a Localization Editor with a textarea.' }]} type='Inputs' />
 
             <Separator />
 
@@ -75,13 +75,13 @@ export const LocalizationEditorComponent = () => {
             <h2>Localization Editor with Textarea</h2>
             <DocsTile>
                 <LocalizationEditor
-                    textarea
                     control={{ label: 'Localization Editor Label', placeholder: 'Enter Label', language: 'EN*' }}
                     menu={[
                         { placeholder: 'Enter Label', language: 'ES' },
                         { placeholder: 'Enter Label', language: 'CH' },
                         { placeholder: 'Enter Label', language: 'PL' }
-                    ]} />
+                    ]}
+                    textarea />
             </DocsTile>
             <DocsText>{localizationEditorTextareaCode}</DocsText>
             <Separator />

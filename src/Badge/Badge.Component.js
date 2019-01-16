@@ -1,6 +1,6 @@
 import React from 'react';
 import { Badge, Label, Status, Counter, Button } from '../';
-import { DocsTile, DocsText, Separator, Header, Description, Import, Properties, Playground } from '../';
+import { DocsTile, DocsText, Separator, Header, Description, Import, Properties, Playground } from '../_playground';
 
 export const BadgeComponent = () => {
     const defaultBadgeCode = `<Badge>Default</Badge>
@@ -68,7 +68,6 @@ export const BadgeComponent = () => {
             <Separator />
 
             <Properties
-                type='Inputs'
                 properties={[
                     {
                         name: 'type',
@@ -88,7 +87,8 @@ export const BadgeComponent = () => {
                         name: 'notification',
                         description: 'bool - Set to \'true\' to enable counter with notification. '
                     }
-                ]} />
+                ]}
+                type='Inputs' />
 
             <Separator />
 
@@ -112,13 +112,13 @@ export const BadgeComponent = () => {
             <DocsTile centered>
                 <div className='fd-doc__margin--statusIndicator'>
                     <Badge modifier='pill'>Default</Badge>
-                    <Badge type='success' modifier='pill'>
+                    <Badge modifier='pill' type='success'>
                         Default
                     </Badge>
-                    <Badge type='warning' modifier='pill'>
+                    <Badge modifier='pill' type='warning'>
                         Default
                     </Badge>
-                    <Badge type='error' modifier='pill'>
+                    <Badge modifier='pill' type='error'>
                         Default
                     </Badge>
                 </div>
@@ -134,13 +134,13 @@ export const BadgeComponent = () => {
             <DocsTile centered>
                 <div className='fd-doc__margin--statusIndicator'>
                     <Badge modifier='filled'>Default</Badge>
-                    <Badge type='success' modifier='filled'>
+                    <Badge modifier='filled' type='success'>
                         Default
                     </Badge>
-                    <Badge type='warning' modifier='filled'>
+                    <Badge modifier='filled' type='warning'>
                         Default
                     </Badge>
-                    <Badge type='error' modifier='filled'>
+                    <Badge modifier='filled' type='error'>
                         Default
                     </Badge>
                 </div>
@@ -222,16 +222,16 @@ export const BadgeComponent = () => {
             <Description>Use the property 'notification' to enable notification counter.</Description>
             <DocsTile centered>
                 <div className='fd-doc__margin--statusIndicator'>
-                    <Button option='light' glyph='bell'>
+                    <Button glyph='bell' option='light'>
                         <Counter notification>5</Counter>
                     </Button>
-                    <Button option='light' glyph='bell'>
+                    <Button glyph='bell' option='light'>
                         <Counter notification>25</Counter>
                     </Button>
-                    <Button option='light' glyph='bell'>
+                    <Button glyph='bell' option='light'>
                         <Counter notification>101</Counter>
                     </Button>
-                    <Button option='light' glyph='bell'>
+                    <Button glyph='bell' option='light'>
                         <Counter notification>999+</Counter>
                     </Button>
                 </div>
@@ -892,8 +892,8 @@ export const BadgeComponent = () => {
                         ]
                     }
                 ]}>
-                <Badge type='success' modifier='filled'
-                    glyph='message-error'>
+                <Badge glyph='message-error' modifier='filled'
+                    type='success'>
                     Default
                 </Badge>
             </Playground>

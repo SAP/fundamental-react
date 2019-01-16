@@ -1,6 +1,6 @@
 import React from 'react';
 import { Image, Popover, Button, Menu, MenuList, MenuItem, Table } from '../';
-import { DocsTile, DocsText, Separator, Header, Description, Import, Properties } from '../';
+import { DocsTile, DocsText, Separator, Header, Description, Import, Properties } from '../_playground';
 
 export const TableComponent = () => {
     const simpleTableCode = `<Table
@@ -130,7 +130,6 @@ export const TableComponent = () => {
             <Separator />
 
             <Properties
-                type='Inputs'
                 properties={[
                     { name: 'headers', description: 'array of strings for the column headers of the table' },
                     {
@@ -138,7 +137,8 @@ export const TableComponent = () => {
                         description:
                             'array of objects that contain two properties, rowData (an array of strings containing data for each column in the row), and children (an array of objects containing additional rows).'
                     }
-                ]} />
+                ]}
+                type='Inputs' />
 
             <Separator />
 
@@ -177,15 +177,14 @@ export const TableComponent = () => {
                         {
                             rowData: [
                                 <input type='checkbox' />,
-                                <Image size='m' photo='https://robohash.org/green?size=50x50' />,
-                                <a href='#' className='fd-has-font-weight-semi'>
+                                <Image photo='https://robohash.org/green?size=50x50' size='m' />,
+                                <a className='fd-has-font-weight-semi' href='#'>
                                     user.name@email.com
                                 </a>,
                                 'First Name',
                                 'Last Name',
                                 '01/26/17',
                                 <Popover
-                                    control={<Button option='light' glyph='vertical-grip' />}
                                     body={
                                         <Menu>
                                             <MenuList>
@@ -195,21 +194,21 @@ export const TableComponent = () => {
                                                 <MenuItem url='/'>Option 4</MenuItem>
                                             </MenuList>
                                         </Menu>
-                                    } />
+                                    }
+                                    control={<Button glyph='vertical-grip' option='light' />} />
                             ]
                         },
                         {
                             rowData: [
                                 <input type='checkbox' />,
-                                <Image size='m' photo='https://robohash.org/brown?size=50x50' />,
-                                <a href='#' className='fd-has-font-weight-semi'>
+                                <Image photo='https://robohash.org/brown?size=50x50' size='m' />,
+                                <a className='fd-has-font-weight-semi' href='#'>
                                     florence.garcia@qwerty.io
                                 </a>,
                                 'First Name',
                                 'Last Name',
                                 '07/29/18',
                                 <Popover
-                                    control={<Button option='light' glyph='vertical-grip' />}
                                     body={
                                         <Menu>
                                             <MenuList>
@@ -219,21 +218,21 @@ export const TableComponent = () => {
                                                 <MenuItem url='/'>Option 4</MenuItem>
                                             </MenuList>
                                         </Menu>
-                                    } />
+                                    }
+                                    control={<Button glyph='vertical-grip' option='light' />} />
                             ]
                         },
                         {
                             rowData: [
                                 <input type='checkbox' />,
-                                <Image size='m' photo='https://robohash.org/Q27.png?set=set1&size=50x50' />,
-                                <a href='#' className='fd-has-font-weight-semi'>
+                                <Image photo='https://robohash.org/Q27.png?set=set1&size=50x50' size='m' />,
+                                <a className='fd-has-font-weight-semi' href='#'>
                                     mark.helper@qwerty.io
                                 </a>,
                                 'First Name',
                                 'Last Name',
                                 '05/26/18',
                                 <Popover
-                                    control={<Button option='light' glyph='vertical-grip' />}
                                     body={
                                         <Menu>
                                             <MenuList>
@@ -243,21 +242,21 @@ export const TableComponent = () => {
                                                 <MenuItem url='/'>Option 4</MenuItem>
                                             </MenuList>
                                         </Menu>
-                                    } />
+                                    }
+                                    control={<Button glyph='vertical-grip' option='light' />} />
                             ]
                         },
                         {
                             rowData: [
                                 <input type='checkbox' />,
-                                <Image size='m' photo='https://robohash.org/water?&size=50x50' />,
-                                <a href='#' className='fd-has-font-weight-semi'>
+                                <Image photo='https://robohash.org/water?&size=50x50' size='m' />,
+                                <a className='fd-has-font-weight-semi' href='#'>
                                     user.name@email.com
                                 </a>,
                                 'First Name',
                                 'Last Name',
                                 '01/26/14',
                                 <Popover
-                                    control={<Button option='light' glyph='vertical-grip' />}
                                     body={
                                         <Menu>
                                             <MenuList>
@@ -267,7 +266,8 @@ export const TableComponent = () => {
                                                 <MenuItem url='/'>Option 4</MenuItem>
                                             </MenuList>
                                         </Menu>
-                                    } />
+                                    }
+                                    control={<Button glyph='vertical-grip' option='light' />} />
                             ]
                         }
                     ]} />

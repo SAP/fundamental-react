@@ -4,36 +4,35 @@ import renderer from 'react-test-renderer';
 import { InlineHelp } from './InlineHelp';
 
 describe('<InlineHelp />', () => {
-    const handleClick = jest.fn();
     const defaultInlineHelp = (
         <InlineHelp
             className='blue'
-            text='Lorem ipsum dolor sit amet, consectetur adipiscing.'
-            placement='bottom-right' />
+            placement='bottom-right'
+            text='Lorem ipsum dolor sit amet, consectetur adipiscing.' />
     );
 
     const inlineHelpBottomLeft = (
         <InlineHelp
-            text='Lorem ipsum dolor sit amet, consectetur adipiscing.'
-            placement='bottom-left' />
+            placement='bottom-left'
+            text='Lorem ipsum dolor sit amet, consectetur adipiscing.' />
     );
 
     const inlineHelpBottomCenter = (
         <InlineHelp
-            text='Lorem ipsum dolor sit amet, consectetur adipiscing.'
-            placement='bottom-center' />
+            placement='bottom-center'
+            text='Lorem ipsum dolor sit amet, consectetur adipiscing.' />
     );
 
     const inlineHelpLeft = (
         <InlineHelp
-            text='Lorem ipsum dolor sit amet, consectetur adipiscing.'
-            placement='left' />
+            placement='left'
+            text='Lorem ipsum dolor sit amet, consectetur adipiscing.' />
     );
 
     const inlineHelpRight = (
         <InlineHelp
-            text='Lorem ipsum dolor sit amet, consectetur adipiscing.'
-            placement='right' />
+            placement='right'
+            text='Lorem ipsum dolor sit amet, consectetur adipiscing.' />
     );
 
     test('create default InlineHelp component', () => {

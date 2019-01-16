@@ -1,6 +1,6 @@
 import React from 'react';
 import { Tabs, TabComponent } from '../';
-import { DocsTile, DocsText, Separator, Header, Description, Import, Properties, Playground } from '../';
+import { DocsTile, DocsText, Separator, Header, Description, Import, Properties, Playground } from '../_playground';
 
 export const TabsComponent = () => {
     const tabscomponentCode = `
@@ -20,13 +20,13 @@ export const TabsComponent = () => {
             </Description>
             <Import module='Tabs, TabsComponent' path='/fundamental-react/src/' /> <Separator />
             <Properties
-                type='Inputs'
                 properties={[
                     { name: 'id', description: 'id of the tab' },
                     { name: 'name', description: 'name of the tab' },
                     { name: 'content', description: 'the content to display when the tab is pressed' },
                     { name: 'disabled', description: 'disable the tab based on true or false' }
-                ]} />
+                ]}
+                type='Inputs' />
             <DocsTile>
                 <Tabs>
                     <TabComponent

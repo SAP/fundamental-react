@@ -25,23 +25,23 @@ describe('<SearchInput />', () => {
     const defaultSearchInput = (
         <SearchInput
             className='blue'
+            onEnter={term => getInputValue(term)}
             placeholder='Enter a fruit'
-            searchList={searchData}
-            onEnter={term => getInputValue(term)} />
+            searchList={searchData} />
     );
 
     const shellBarSearchInput = (
         <SearchInput
-            placeholder='Enter a fruit'
             inShellbar
-            searchList={searchData}
-            onEnter={term => getInputValue(term)} />
+            onEnter={term => getInputValue(term)}
+            placeholder='Enter a fruit'
+            searchList={searchData} />
     );
 
     const noListSearchInput = (
         <SearchInput
-            placeholder='Enter a fruit'
-            onEnter={term => getInputValue(term)} />
+            onEnter={term => getInputValue(term)}
+            placeholder='Enter a fruit' />
     );
 
     let component;
@@ -135,7 +135,7 @@ describe('<SearchInput />', () => {
         expect(wrapper.state('isExpanded')).toBeTruthy();
 
         // enter text into search input
-        const itemClicked = wrapper
+        wrapper
             .find('.fd-menu__item')
             .at(0)
             .simulate('click', searchData[0]);

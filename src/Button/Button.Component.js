@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button, ButtonGroup } from '../';
-import { DocsTile, DocsText, Separator, Header, Description, Import, Properties, Playground } from '../';
+import { DocsTile, DocsText, Separator, Header, Description, Import, Properties, Playground } from '../_playground';
 
 export const ButtonComponent = () => {
     const buttonOptionsCode = `<Button option="emphasized" onClick={() => clickBtnHandler('Emphasized')}>
@@ -124,7 +124,6 @@ const clickBtnHandler = btn => {
             <Separator />
 
             <Properties
-                type='Inputs'
                 properties={[
                     {
                         name: 'option',
@@ -156,7 +155,8 @@ const clickBtnHandler = btn => {
                             'bool - selected state of the button. Enabled by setting selected property to true.'
                     },
                     { name: 'onClick', description: 'func - The function that is executed when the button is clicked.' }
-                ]} />
+                ]}
+                type='Inputs' />
             <Separator />
 
             <h2>Button Options</h2>
@@ -171,11 +171,11 @@ const clickBtnHandler = btn => {
             </Description>
             <DocsTile centered>
                 <div className='fd-doc__margin--button'>
-                    <Button option='emphasized' onClick={() => clickBtnHandler('Emphasized')}>
+                    <Button onClick={() => clickBtnHandler('Emphasized')} option='emphasized'>
                         Emphasized Button
                     </Button>
                     <Button onClick={() => clickBtnHandler('Regular')}>Regular Button</Button>
-                    <Button option='light' onClick={() => clickBtnHandler('Light')}>Light Button</Button>
+                    <Button onClick={() => clickBtnHandler('Light')} option='light'>Light Button</Button>
                 </div>
             </DocsTile>
             <DocsText>{buttonOptionsCode}</DocsText>
@@ -212,23 +212,23 @@ const clickBtnHandler = btn => {
             </Description>
             <DocsTile centered>
                 <div className='fd-doc__margin--button'>
-                    <Button option='emphasized' glyph='cart'>
+                    <Button glyph='cart' option='emphasized'>
                         Add to Cart
                     </Button>
 
                     <Button glyph='cart'>Add to Cart</Button>
 
-                    <Button option='light' glyph='filter'>
+                    <Button glyph='filter' option='light'>
                         Add to Cart
                     </Button>
 
-                    <Button option='emphasized' type='positive'
-                        glyph='accept'>
+                    <Button glyph='accept' option='emphasized'
+                        type='positive'>
                         Approve
                     </Button>
 
-                    <Button option='emphasized' type='negative'
-                        glyph='decline'>
+                    <Button glyph='decline' option='emphasized'
+                        type='negative'>
                         Reject
                     </Button>
 
@@ -236,17 +236,17 @@ const clickBtnHandler = btn => {
                     <br />
                     <br />
 
-                    <Button option='emphasized' glyph='cart' />
+                    <Button glyph='cart' option='emphasized' />
 
                     <Button glyph='cart' />
 
-                    <Button option='light' glyph='filter' />
+                    <Button glyph='filter' option='light' />
 
-                    <Button option='emphasized' type='positive'
-                        glyph='accept' />
+                    <Button glyph='accept' option='emphasized'
+                        type='positive' />
 
-                    <Button option='emphasized' type='negative'
-                        glyph='decline' />
+                    <Button glyph='decline' option='emphasized'
+                        type='negative' />
                 </div>
             </DocsTile>
             <DocsText>{buttonIconCode}</DocsText>
@@ -278,7 +278,7 @@ const clickBtnHandler = btn => {
                     <Button option='emphasized' selected>
                         Selected State
                     </Button>
-                    <Button option='emphasized' disabled>
+                    <Button disabled option='emphasized'>
                         Disabled State
                     </Button>
                     <br />
@@ -292,34 +292,34 @@ const clickBtnHandler = btn => {
                     <Button option='light' selected>
                         Selected State
                     </Button>
-                    <Button option='light' disabled>
+                    <Button disabled option='light'>
                         Disabled State
                     </Button>
                     <br />
                     <br />
                     <Button type='standard'>Normal State</Button>
-                    <Button type='standard' selected>
+                    <Button selected type='standard'>
                         Selected State
                     </Button>
-                    <Button type='standard' disabled>
+                    <Button disabled type='standard'>
                         Disabled State
                     </Button>
                     <br />
                     <br />
                     <Button type='positive'>Normal State</Button>
-                    <Button type='positive' selected>
+                    <Button selected type='positive'>
                         Selected State
                     </Button>
-                    <Button type='positive' disabled>
+                    <Button disabled type='positive'>
                         Disabled State
                     </Button>
                     <br />
                     <br />
                     <Button type='negative'>Normal State</Button>
-                    <Button type='negative' selected>
+                    <Button selected type='negative'>
                         Selected State
                     </Button>
-                    <Button type='negative' disabled>
+                    <Button disabled type='negative'>
                         Disabled State
                     </Button>
                 </div>
@@ -1009,9 +1009,9 @@ const clickBtnHandler = btn => {
                         typeOfAttribute: 'boolean'
                     }
                 ]}>
-                <Button type='standard' glyph=''
-                    option='light' compact={false}
-                    selected={false} disabled={false}>
+                <Button compact={false} disabled={false}
+                    glyph='' option='light'
+                    selected={false} type='standard'>
                     BUTTON
                 </Button>
             </Playground>

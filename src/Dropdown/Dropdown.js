@@ -11,5 +11,7 @@ export const Dropdown = props => {
 };
 
 Dropdown.propTypes = {
+    children: PropTypes.node,
+    className: PropTypes.string,
     standard: PropTypes.bool
 };

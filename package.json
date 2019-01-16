@@ -1,12 +1,12 @@
 {
   "name": "fundamental-react",
-  "version": "0.0.15-rc.17",
+  "version": "0.0.15-rc.37",
   "private": false,
   "license": "Apache-2.0",
-  "homepage": "http://sap.github.io/fundamental-react",
+  "homepage": "https://sap.github.io/fundamental-react",
   "repository": {
     "type": "git",
-    "url": "http://sap.github.io/fundamental-react"
+    "url": "https://github.com/SAP/fundamental-react"
   },
   "scripts": {
     "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
@@ -14,7 +14,7 @@
     "build-js": "node scripts/build.js",
     "build:lint:fix": "eslint --fix 'src/**' --ext .js,.jsx --env browser,node",
     "build:lint": "eslint 'src/**' --ext .js,.jsx --env browser,node",
-    "build": "rm -rf dist && NODE_ENV=production babel src --out-dir dist --copy-files --ignore __tests__,spec.js,test.js,__snapshots__,Component.js",
+    "build": "rm -rf dist && NODE_ENV=production babel src --out-dir dist --ignore \"src/**/*.spec.js\",\"src/**/*.test.js\",\"src/**/*.Component.js\",\"src/_playground/*\"",
     "deploy": "gh-pages -d build",
     "lint:fix": "npm run build:lint:fix",
     "lint:pre-commit": "printf \"running pre-commit lint...\"  && npm run lint && printf \"done!\n\"",
@@ -60,6 +60,7 @@
     "eslint": "5.6.0",
     "eslint-config-react-app": "^3.0.5",
     "eslint-loader": "2.1.1",
+    "eslint-plugin-compat": "^2.6.3",
     "eslint-plugin-flowtype": "2.50.1",
     "eslint-plugin-ie11": "^1.0.0",
     "eslint-plugin-import": "2.14.0",
@@ -123,7 +124,7 @@
       "src/**/*.{js,jsx,ts,tsx}",
       "!src/{App,Routes,index,registerServiceWorker}.js",
       "!src/**/*.Component.js",
-      "!src/documentation/**"
+      "!src/_playground/**"
     ],
     "resolver": "jest-pnp-resolver",
     "setupFiles": [

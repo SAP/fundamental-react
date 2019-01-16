@@ -1,5 +1,5 @@
 import React from 'react';
-import { DocsTile, DocsText, Separator, Header, Description, Import, Properties } from '../';
+import { DocsTile, DocsText, Separator, Header, Description, Import, Properties } from '../_playground';
 import {
     Panel,
     PanelGrid,
@@ -224,7 +224,6 @@ export const PanelComponent = () => {
             <Separator />
 
             <Properties
-                type='Inputs'
                 properties={[
                     {
                         name: 'nogap',
@@ -248,10 +247,10 @@ export const PanelComponent = () => {
                         name: 'description',
                         description: 'any - Part of PanelHead component. Specifies the description of the panel.'
                     }
-                ]} />
+                ]}
+                type='Inputs' />
 
             <Properties
-                type='Child Components'
                 properties={[
                     { name: 'PanelBody', description: 'The panel body.' },
                     { name: 'PanelHeader', description: 'The panel header. Contains a panel head and panel actions.' },
@@ -278,7 +277,8 @@ export const PanelComponent = () => {
                         description:
                             'Panel footer can be utilized for pagination, secondary actions, add more data, etc.'
                     }
-                ]} />
+                ]}
+                type='Child Components' />
 
             <Separator />
 
@@ -286,7 +286,7 @@ export const PanelComponent = () => {
                 <div className='fd-doc__margin--panel'>
                     <Panel>
                         <PanelHeader>
-                            <PanelHead title={'Panel Header with Actions'} description='Panel Description' />
+                            <PanelHead description='Panel Description' title={'Panel Header with Actions'} />
                             <PanelActions>
                                 <Button compact glyph='add'>
                                     Add New Button
@@ -297,7 +297,6 @@ export const PanelComponent = () => {
                             <div>Panel Filters</div>
                             <br />
                             <Popover
-                                control={<Button>Color</Button>}
                                 body={
                                     <Menu>
                                         <MenuList>
@@ -308,9 +307,9 @@ export const PanelComponent = () => {
                                         </MenuList>
                                     </Menu>
                                 }
+                                control={<Button>Color</Button>}
                                 noArrow />
                             <Popover
-                                control={<Button>Size</Button>}
                                 body={
                                     <Menu>
                                         <MenuList>
@@ -321,6 +320,7 @@ export const PanelComponent = () => {
                                         </MenuList>
                                     </Menu>
                                 }
+                                control={<Button>Size</Button>}
                                 noArrow />
                         </PanelFilters>
                         <PanelBody>
@@ -328,8 +328,8 @@ export const PanelComponent = () => {
                             <br />
                             <Tile>
                                 <TileMedia>
-                                    <Image size='l' type='circle'
-                                        photo='https://placeimg.com/400/400/nature' />
+                                    <Image photo='https://placeimg.com/400/400/nature' size='l'
+                                        type='circle' />
                                 </TileMedia>
                                 <TileContent title='Tile Title'>
                                     <p>Tile Description</p>

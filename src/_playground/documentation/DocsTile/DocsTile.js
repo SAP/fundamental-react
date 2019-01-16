@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import {googlecode} from 'react-syntax-highlighter/styles/hljs';
-import {Button} from '../../Button/Button';
+import {Button} from '../../../Button/Button';
 
 export const DocsTile = props => {
     const docsTileStyle = {
@@ -30,6 +31,11 @@ export const DocsTile = props => {
                 )}
         </div>
     );
+};
+
+DocsTile.propTypes = {
+    centered: PropTypes.bool,
+    children: PropTypes.node
 };
 
 export class DocsText extends Component {
@@ -101,19 +107,19 @@ export class DocsText extends Component {
             <React.Fragment>
                 <div
                     style={this.state.showCode
-                    ? (this.docsBtnStyle)
-                    : (this.docsBtnStyleHiddenCode)}>
-                    <Button option='light' onClick={() => this.handleBtnClick()}>
+                        ? (this.docsBtnStyle)
+                        : (this.docsBtnStyleHiddenCode)}>
+                    <Button onClick={() => this.handleBtnClick()} option='light'>
                         {this.state.showCode
                             ? ('Hide Code')
                             : ('Show Code')}
                     </Button>
                     {this.state.showCode
                         ? <Button
-                            style={this.docCopyBtn}
-                            option='light'
                             glyph='copy'
-                            onClick={() => this.copyToClipboard(children)}>Copy</Button>
+                            onClick={() => this.copyToClipboard(children)}
+                            option='light'
+                            style={this.docCopyBtn}>Copy</Button>
                         : ''}
                 </div>
                 {this.state.showCode && <pre style={this.docsTextStyle}>
@@ -125,3 +131,7 @@ export class DocsText extends Component {
         );
     }
 }
+
+DocsText.propTypes = {
+    children: PropTypes.node
+};
