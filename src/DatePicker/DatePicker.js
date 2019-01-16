@@ -62,12 +62,7 @@ export class DatePicker extends Component {
         secondDateYear;
       } else {
       //Checks if the type of date doesn't match those types and that it doesn't contain any special character symbols
-          if (
-              (typeof date !== 'array' ||
-          typeof date !== 'date' ||
-          typeof date !== 'object') &&
-        date.toString().search(regex) !== 1
-          ) {
+          if (date.toString().search(regex) !== 1) {
               return '';
           } else {
               let month = date[0].getMonth();
