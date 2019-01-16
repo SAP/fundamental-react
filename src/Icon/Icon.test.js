@@ -1,7 +1,7 @@
+import { Icon } from './Icon';
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { mount, shallow } from 'enzyme';
-import { Icon } from './Icon';
 
 describe('<Icon />', () => {
     const mockOnClick = jest.fn();

@@ -1,6 +1,6 @@
-import React from 'react';
-import { DocsTile, DocsText, Separator, Header, Import, Properties } from '../_playground';
 import { LocalizationEditor } from '../';
+import React from 'react';
+import { DocsText, DocsTile, Header, Import, Properties, Separator } from '../_playground';
 
 export const LocalizationEditorComponent = () => {
     const localizationEditorCode = `<LocalizationEditor

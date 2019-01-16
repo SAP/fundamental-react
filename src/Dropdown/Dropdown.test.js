@@ -1,9 +1,9 @@
-import React from 'react';
-import renderer from 'react-test-renderer';
+import { Button } from '../Button/Button';
 import { Dropdown } from './Dropdown';
 import { Popover } from '../Popover/Popover';
+import React from 'react';
+import renderer from 'react-test-renderer';
 import { Menu, MenuItem, MenuList } from '../Menu/Menu';
-import { Button } from '../Button/Button';
 
 describe('<Dropdown />', () => {
     const defaultMenu = (

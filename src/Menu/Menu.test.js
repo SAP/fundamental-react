@@ -1,8 +1,8 @@
+import { MemoryRouter } from 'react-router-dom';
 import { mount } from 'enzyme';
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { MemoryRouter } from 'react-router-dom';
-import { Menu, MenuList, MenuItem, MenuGroup } from './Menu';
+import { Menu, MenuGroup, MenuItem, MenuList } from './Menu';
 
 describe('<Menu />', () => {
     const basicMenuCode = (

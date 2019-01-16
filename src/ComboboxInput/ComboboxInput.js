@@ -1,6 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
 import { Popover } from '../Popover/Popover';
+import PropTypes from 'prop-types';
+import React from 'react';
 
 // ------------------------------------------- Combobox Input ------------------------------------------
 export const ComboboxInput = ({ placeholder, menu, compact, className, ...props }) => {

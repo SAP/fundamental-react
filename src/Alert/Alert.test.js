@@ -1,7 +1,7 @@
+import { Alert } from './Alert';
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { mount, shallow } from 'enzyme';
-import { Alert } from './Alert';
 
 describe('<Alert />', () => {
     const basicAlert = (

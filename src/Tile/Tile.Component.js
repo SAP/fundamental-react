@@ -1,22 +1,6 @@
 import React from 'react';
-import {
-    Tile,
-    TileContent,
-    TileMedia,
-    TileActions,
-    ProductTile,
-    ProductTileContent,
-    ProductTileMedia,
-    TileGrid,
-    Image,
-    Identifier,
-    Popover,
-    Button,
-    Menu,
-    MenuList,
-    MenuItem
-} from '../';
-import { DocsTile, DocsText, Separator, Header, Description, Import, Properties, Playground } from '../_playground';
+import { Button, Identifier, Image, Menu, MenuItem, MenuList, Popover, ProductTile, ProductTileContent, ProductTileMedia, Tile, TileActions, TileContent, TileGrid, TileMedia } from '../';
+import { Description, DocsText, DocsTile, Header, Import, Playground, Properties, Separator } from '../_playground';
 
 export const TileComponent = () => {
     const simpleTileCode = `<Tile>

@@ -1,14 +1,6 @@
 import React from 'react';
-import {TimePicker} from '../';
-
-import {
-    DocsTile,
-    DocsText,
-    Separator,
-    Header,
-    Description,
-    Properties
-} from '../_playground';
+import { TimePicker } from '../';
+import { Description, DocsText, DocsTile, Header, Properties, Separator } from '../_playground';
 
 export const TimePickerComponent = () => {
     const defaultTimeCode = '<TimePicker />';

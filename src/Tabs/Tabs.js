@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { BrowserRouter, Link } from 'react-router-dom';
+import React, { Component } from 'react';
 
 export const Tabs = props => {
     const { children, className, ...rest } = props;

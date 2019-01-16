@@ -1,6 +1,6 @@
+import { Modal } from './Modal';
 import { mount } from 'enzyme';
 import React from 'react';
-import { Modal } from './Modal';
 
 describe('<Modal />', () => {
     const mockOnClose = jest.fn();

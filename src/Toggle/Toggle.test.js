@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { mount, shallow } from 'enzyme';
 import { Toggle } from './Toggle';
+import { mount, shallow } from 'enzyme';
 
 describe('<Toggle />', () => {
     const defaultToggle = <Toggle>Normal toggle</Toggle>;
