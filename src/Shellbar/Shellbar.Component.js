@@ -419,7 +419,6 @@ productSwitcher = {
                 <Import module='Shellbar' path='/fundamental-react/src/' />
                 <Separator />
                 <Properties
-                    type='Inputs'
                     properties={[
                         {
                             name: 'logo',
@@ -453,7 +452,8 @@ productSwitcher = {
                         },
                         { name: 'productSwitcher', description: '(optional) for navigating between products.' },
                         { name: 'productSwitcherList', description: '(optional) list of the products.' }
-                    ]} />
+                    ]}
+                    type='Inputs' />
                 <Separator />
 
                 <h2>Basic Shellbar</h2>
@@ -463,7 +463,7 @@ productSwitcher = {
                 </Description>
                 <DocsTile>
                     <Shellbar
-                        logo={<img src='//unpkg.com/fiori-fundamentals/dist/images/sap-logo.png' alt='SAP' />}
+                        logo={<img alt='SAP' src='//unpkg.com/fiori-fundamentals/dist/images/sap-logo.png' />}
                         productTitle='Corporate Portal'
                         profile={this.profile1}
                         profileMenu={this.profileMenu} />
@@ -480,13 +480,13 @@ productSwitcher = {
                 <DocsTile>
                     <Shellbar
                         logoSAP
-                        productTitle='Corporate Portal'
-                        productMenu={this.productMenu}
-                        subtitle='Subtitle'
                         notifications={this.notifications}
-                        searchInput={this.searchInput}
+                        productMenu={this.productMenu}
+                        productTitle='Corporate Portal'
                         profile={this.profile}
-                        profileMenu={this.profileMenu} />
+                        profileMenu={this.profileMenu}
+                        searchInput={this.searchInput}
+                        subtitle='Subtitle' />
                 </DocsTile>
                 <DocsText>{this.menuAndSearchShellbarExampleCode}</DocsText>
 
@@ -499,18 +499,18 @@ productSwitcher = {
                 </Description>
                 <DocsTile>
                     <Shellbar
-                        logoSAP
-                        productTitle='Corporate Portal'
-                        productMenu={this.productMenu}
-                        subtitle='Subtitle'
-                        copilot
-                        searchInput={this.searchInput2}
                         actions={this.actions}
+                        copilot
+                        logoSAP
                         notifications={this.notifications2}
+                        productMenu={this.productMenu}
+                        productSwitcher={this.productSwitcher}
+                        productSwitcherList={this.productSwitcherList}
+                        productTitle='Corporate Portal'
                         profile={this.profile}
                         profileMenu={this.profileMenu}
-                        productSwitcher={this.productSwitcher}
-                        productSwitcherList={this.productSwitcherList} />
+                        searchInput={this.searchInput2}
+                        subtitle='Subtitle' />
                 </DocsTile>
                 <DocsText>{this.shellbarExampleCode}</DocsText>
             </div>

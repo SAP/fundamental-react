@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 export const Description = (props) => {
     const descriptionStyle = {
@@ -13,4 +14,8 @@ export const Description = (props) => {
             {children}
         </p>
     );
+};
+
+Description.propTypes = {
+    children: PropTypes.node
 };

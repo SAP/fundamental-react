@@ -9,43 +9,50 @@ export class Alert extends Component {
         };
     }
 
-    closeAlertHandler() {
-        this.setState({
-            isActive: false
-        });
-    }
+  closeAlertHandler = () => {
+      this.setState({
+          isActive: false
+      });
+  };
 
-    render() {
-        const { type, link, linkText, dismissable, children, className, ...props } = this.props;
-        return (
-            <div>
-                {this.state.isActive && (
-                    <div
-                        className={`fd-alert${dismissable ? ' fd-alert--dismissible' : ''}${
-                            type ? ' fd-alert--' + type : ''
-                        }${className ? ' ' + className : ''}`}
-                        role='alert'
-                        {...props}>
-                        {dismissable ? (
-                            <button
-                                className='fd-alert__close'
-                                aria-controls='j2ALl423'
-                                aria-label='Close'
-                                onClick={() => this.closeAlertHandler()} />
-                        ) : null}
-                        {children}
-                        {link ? (
-                            <a href={link} className='fd-link'>
-                                {linkText} <span className='sap-icon--arrow-right sap-icon--s' />
-                            </a>
-                        ) : (
-                            undefined
-                        )}
-                    </div>
-                )}
-            </div>
-        );
-    }
+  render() {
+      const {
+          type,
+          link,
+          linkText,
+          dismissable,
+          children,
+          className,
+          ...props
+      } = this.props;
+      return (
+          <div>
+              {this.state.isActive && (
+                  <div
+                      className={`fd-alert${dismissable ? ' fd-alert--dismissible' : ''}${
+                          type ? ' fd-alert--' + type : ''
+                      }${className ? ' ' + className : ''}`}
+                      role='alert'
+                      {...props}>
+                      {dismissable && (
+                          <button
+                              aria-controls='j2ALl423'
+                              aria-label='Close'
+                              className='fd-alert__close'
+                              onClick={() => this.closeAlertHandler()} />
+                      )}
+                      {children}
+                      {link && (
+                          <a className='fd-link' href={link}>
+                              {linkText}{' '}
+                              <span className='sap-icon--arrow-right sap-icon--s' />
+                          </a>
+                      )}
+                  </div>
+              )}
+          </div>
+      );
+  }
 }
 
 Alert.propTypes = {

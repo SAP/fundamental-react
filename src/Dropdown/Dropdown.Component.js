@@ -166,10 +166,10 @@ export const DropdownComponent = () => {
             <Separator />
 
             <Properties
-                type='Inputs'
                 properties={[
                     { name: 'standard', description: 'bool - set to \'true\' to enable a dropdown for toolbar.' }
-                ]} />
+                ]}
+                type='Inputs' />
 
             <Separator />
 
@@ -178,9 +178,6 @@ export const DropdownComponent = () => {
                 <div className='fd-doc__margin--dropdown'>
                     <Dropdown>
                         <Popover
-                            id='jhqD0555'
-                            control={<Button dropdown>Select</Button>}
-                            noArrow
                             body={
                                 <Menu>
                                     <MenuList>
@@ -190,18 +187,14 @@ export const DropdownComponent = () => {
                                         <MenuItem url='/'>Option 4</MenuItem>
                                     </MenuList>
                                 </Menu>
-                            } />
+                            }
+                            control={<Button dropdown>Select</Button>}
+                            id='jhqD0555'
+                            noArrow />
                     </Dropdown>
 
                     <Dropdown>
                         <Popover
-                            id='jhqD0556'
-                            control={
-                                <Button dropdown compact>
-                                    Select
-                                </Button>
-                            }
-                            noArrow
                             body={
                                 <Menu>
                                     <MenuList>
@@ -211,7 +204,14 @@ export const DropdownComponent = () => {
                                         <MenuItem url='/'>Option 4</MenuItem>
                                     </MenuList>
                                 </Menu>
-                            } />
+                            }
+                            control={
+                                <Button compact dropdown>
+                                    Select
+                                </Button>
+                            }
+                            id='jhqD0556'
+                            noArrow />
                     </Dropdown>
                 </div>
             </DocsTile>
@@ -225,35 +225,27 @@ export const DropdownComponent = () => {
                 <div className='fd-doc__margin--dropdown'>
                     <Dropdown>
                         <Popover
-                            id='jhqD0557'
+                            body={
+                                <Menu>
+                                    <MenuList>
+                                        <MenuItem url='/'>Option 1</MenuItem>
+                                        <MenuItem url='/'>Option 2</MenuItem>
+                                        <MenuItem url='/'>Option 3</MenuItem>
+                                        <MenuItem url='/'>Option 4</MenuItem>
+                                    </MenuList>
+                                </Menu>
+                            }
                             control={
                                 <Button dropdown glyph='filter'>
                                     Select
                                 </Button>
                             }
-                            noArrow
-                            body={
-                                <Menu>
-                                    <MenuList>
-                                        <MenuItem url='/'>Option 1</MenuItem>
-                                        <MenuItem url='/'>Option 2</MenuItem>
-                                        <MenuItem url='/'>Option 3</MenuItem>
-                                        <MenuItem url='/'>Option 4</MenuItem>
-                                    </MenuList>
-                                </Menu>
-                            } />
+                            id='jhqD0557'
+                            noArrow />
                     </Dropdown>
 
                     <Dropdown>
                         <Popover
-                            id='jhqD0558'
-                            control={
-                                <Button dropdown compact
-                                    glyph='filter'>
-                                    Select
-                                </Button>
-                            }
-                            noArrow
                             body={
                                 <Menu>
                                     <MenuList>
@@ -263,7 +255,15 @@ export const DropdownComponent = () => {
                                         <MenuItem url='/'>Option 4</MenuItem>
                                     </MenuList>
                                 </Menu>
-                            } />
+                            }
+                            control={
+                                <Button compact dropdown
+                                    glyph='filter'>
+                                    Select
+                                </Button>
+                            }
+                            id='jhqD0558'
+                            noArrow />
                     </Dropdown>
                 </div>
             </DocsTile>
@@ -276,35 +276,27 @@ export const DropdownComponent = () => {
                 <div className='fd-doc__margin--dropdown'>
                     <Dropdown standard>
                         <Popover
-                            id='jhqD0559'
+                            body={
+                                <Menu>
+                                    <MenuList>
+                                        <MenuItem url='/'>Option 1</MenuItem>
+                                        <MenuItem url='/'>Option 2</MenuItem>
+                                        <MenuItem url='/'>Option 3</MenuItem>
+                                        <MenuItem url='/'>Option 4</MenuItem>
+                                    </MenuList>
+                                </Menu>
+                            }
                             control={
                                 <Button dropdown type='standard'>
                                     Select
                                 </Button>
                             }
-                            noArrow
-                            body={
-                                <Menu>
-                                    <MenuList>
-                                        <MenuItem url='/'>Option 1</MenuItem>
-                                        <MenuItem url='/'>Option 2</MenuItem>
-                                        <MenuItem url='/'>Option 3</MenuItem>
-                                        <MenuItem url='/'>Option 4</MenuItem>
-                                    </MenuList>
-                                </Menu>
-                            } />
+                            id='jhqD0559'
+                            noArrow />
                     </Dropdown>
 
                     <Dropdown standard>
                         <Popover
-                            id='jhqD0560'
-                            control={
-                                <Button dropdown compact
-                                    type='standard'>
-                                    Select
-                                </Button>
-                            }
-                            noArrow
                             body={
                                 <Menu>
                                     <MenuList>
@@ -314,7 +306,15 @@ export const DropdownComponent = () => {
                                         <MenuItem url='/'>Option 4</MenuItem>
                                     </MenuList>
                                 </Menu>
-                            } />
+                            }
+                            control={
+                                <Button compact dropdown
+                                    type='standard'>
+                                    Select
+                                </Button>
+                            }
+                            id='jhqD0560'
+                            noArrow />
                     </Dropdown>
                 </div>
             </DocsTile>
@@ -327,15 +327,6 @@ export const DropdownComponent = () => {
                 <div className='fd-doc__margin--dropdown'>
                     <Dropdown>
                         <Popover
-                            id='jhqD0561'
-                            disabled
-                            control={
-                                <Button dropdown glyph='filter'
-                                    disabled>
-                                    Select
-                                </Button>
-                            }
-                            noArrow
                             body={
                                 <Menu>
                                     <MenuList>
@@ -345,7 +336,16 @@ export const DropdownComponent = () => {
                                         <MenuItem url='/'>Option 4</MenuItem>
                                     </MenuList>
                                 </Menu>
-                            } />
+                            }
+                            control={
+                                <Button disabled dropdown
+                                    glyph='filter'>
+                                    Select
+                                </Button>
+                            }
+                            disabled
+                            id='jhqD0561'
+                            noArrow />
                     </Dropdown>
                 </div>
             </DocsTile>

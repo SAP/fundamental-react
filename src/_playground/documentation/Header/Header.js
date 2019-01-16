@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 export const Header = (props) => {
     const headerStyle = {
@@ -12,4 +13,8 @@ export const Header = (props) => {
             {children}
         </h1>
     );
+};
+
+Header.propTypes = {
+    children: PropTypes.node
 };

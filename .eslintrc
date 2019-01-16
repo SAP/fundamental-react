@@ -12,28 +12,29 @@ parser: 'babel-eslint'
 #extends: 'react-app'
 
 plugins:
+    - compat
     - ie11
     - jsx-a11y
     - loosely-restrict-imports
     - react
 
 rules:
-    #brace-style: 2
+    brace-style: 2
     camelcase: 2
     comma-dangle: [2, 'never']
     comma-spacing: 2
     comma-style: [2, 'last']
-    #compat/compat: 2
+    compat/compat: 2
     default-case: 2
     dot-notation: 2
     eol-last: 2
-    #eqeqeq: 2
+    eqeqeq: 2
     guard-for-in: 2
     handle-callback-err: 2
     ie11/no-collection-args: 2
     ie11/no-for-in-const: 2
     ie11/no-weak-collections: 2
-    #indent: [2, 4, {"SwitchCase": 1}]
+    indent: [2, 4, {"SwitchCase": 1}]
     jsx-a11y/accessible-emoji: 2
     jsx-a11y/alt-text: 2
     #jsx-a11y/anchor-has-content: 2
@@ -72,7 +73,7 @@ rules:
     loosely-restrict-imports/loosely-restrict-imports: [2, '.jsx']
     new-cap: 2
     no-cond-assign: 2
-    #no-console: 2
+    no-console: 2
     no-constant-condition: 2
     no-control-regex: 2
     no-debugger: 2
@@ -80,7 +81,7 @@ rules:
     no-dupe-keys: 2
     no-duplicate-case: 2
     no-empty-character-class: 2
-    #no-empty: 2
+    no-empty: 2
     no-ex-assign: 2
     no-extra-bind: 2
     no-extra-boolean-cast: 0
@@ -96,21 +97,21 @@ rules:
     no-mixed-spaces-and-tabs: 2
     no-multi-spaces: 2
     no-negated-in-lhs: 2
-    #no-nested-ternary: 2
+    no-nested-ternary: 2
     no-obj-calls: 2
     no-regex-spaces: 2
-    #no-shadow: 2
+    no-shadow: 2
     no-spaced-func: 2
-    #no-sparse-arrays: 2
+    no-sparse-arrays: 2
     no-trailing-spaces: 2
     no-undef: 2
-    #no-undefined: 2
+    no-undefined: 2
     no-underscore-dangle: 0
     no-unreachable: 2
-    #no-unused-vars: [2, { ignoreRestSiblings: true }]
+    no-unused-vars: [2, { ignoreRestSiblings: true }]
     quote-props: [2, 'as-needed', { 'keywords': true, 'unnecessary': false }]
     quotes: [2, 'single']
-    #radix: 2
+    radix: 2
     react/display-name: 2
     react/jsx-boolean-value: 2
     react/jsx-closing-bracket-location: [2, 'after-props']
@@ -120,7 +121,7 @@ rules:
     react/jsx-max-props-per-line:  [2, { "maximum": 2 }]
     react/jsx-no-undef: 2
     react/jsx-tag-spacing: [2, { "beforeSelfClosing": "always" }]
-    #react/jsx-sort-props: 2
+    react/jsx-sort-props: 2
     react/jsx-uses-react: 2
     react/jsx-uses-vars: 2
     react/jsx-wrap-multilines: 2
@@ -128,8 +129,8 @@ rules:
     react/no-did-update-set-state: 2
     #react/no-multi-comp: 2
     react/no-unknown-property: 2
-    #react/prop-types: 2
-    #react/react-in-jsx-scope: 2
+    react/prop-types: 2
+    react/react-in-jsx-scope: 2
     react/self-closing-comp: 2
     react/sort-prop-types: [2, { 'callbacksLast' : true, 'ignoreCase' : true, 'requiredFirst' : true, } ]
     semi-spacing: 2
@@ -140,7 +141,7 @@ rules:
     space-infix-ops: 2
     spaced-comment: [0, 'always', { exceptions: ['-']}]
     strict: [2, 'global']
-    #use-isnan: 2
+    use-isnan: 2
     #valid-jsdoc: [2, { prefer: { 'return': 'returns'}}]
-    #valid-typeof: 2
+    valid-typeof: 2
     wrap-iife: [2, 'any']

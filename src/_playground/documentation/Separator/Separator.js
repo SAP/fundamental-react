@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const Separator = (props) => {
+export const Separator = () => {
     const separatorStyle = {
         display: 'block',
         margin: '2rem 0',

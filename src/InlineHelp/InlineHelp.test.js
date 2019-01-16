@@ -1,76 +1,87 @@
+import { mount } from 'enzyme';
 import React from 'react';
 import renderer from 'react-test-renderer';
-import Enzyme, { shallow } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
 import { InlineHelp } from './InlineHelp';
 
-Enzyme.configure({ adapter: new Adapter() });
-
 describe('<InlineHelp />', () => {
-  const handleClick = jest.fn();
-  const defaultInlineHelp = (
-      <InlineHelp
-          className='blue'
-          text='Lorem ipsum dolor sit amet, consectetur adipiscing.'
-          placement='bottom-right' />
-  );
+    const defaultInlineHelp = (
+        <InlineHelp
+            className='blue'
+            placement='bottom-right'
+            text='Lorem ipsum dolor sit amet, consectetur adipiscing.' />
+    );
 
-  const inlineHelpBottomLeft = (
-      <InlineHelp
-          text='Lorem ipsum dolor sit amet, consectetur adipiscing.'
-          placement='bottom-left' />
-  );
+    const inlineHelpBottomLeft = (
+        <InlineHelp
+            placement='bottom-left'
+            text='Lorem ipsum dolor sit amet, consectetur adipiscing.' />
+    );
 
-  const inlineHelpBottomCenter = (
-      <InlineHelp
-          text='Lorem ipsum dolor sit amet, consectetur adipiscing.'
-          placement='bottom-center' />
-  );
+    const inlineHelpBottomCenter = (
+        <InlineHelp
+            placement='bottom-center'
+            text='Lorem ipsum dolor sit amet, consectetur adipiscing.' />
+    );
 
-  const inlineHelpLeft = (
-      <InlineHelp
-          text='Lorem ipsum dolor sit amet, consectetur adipiscing.'
-          placement='left' />
-  );
+    const inlineHelpLeft = (
+        <InlineHelp
+            placement='left'
+            text='Lorem ipsum dolor sit amet, consectetur adipiscing.' />
+    );
 
-  const inlineHelpRight = (
-      <InlineHelp
-          text='Lorem ipsum dolor sit amet, consectetur adipiscing.'
-          placement='right' />
-  );
+    const inlineHelpRight = (
+        <InlineHelp
+            placement='right'
+            text='Lorem ipsum dolor sit amet, consectetur adipiscing.' />
+    );
 
-  test('create default InlineHelp component', () => {
-    const component = renderer.create(defaultInlineHelp);
-    const tree = component.toJSON();
+    test('create default InlineHelp component', () => {
+        const component = renderer.create(defaultInlineHelp);
+        const tree = component.toJSON();
 
-    expect(tree).toMatchSnapshot();
-  });
+        expect(tree).toMatchSnapshot();
+    });
 
-  test('create Bottom Left InlineHelp component', () => {
-    const component = renderer.create(inlineHelpBottomLeft);
-    const tree = component.toJSON();
+    test('create Bottom Left InlineHelp component', () => {
+        const component = renderer.create(inlineHelpBottomLeft);
+        const tree = component.toJSON();
 
-    expect(tree).toMatchSnapshot();
-  });
+        expect(tree).toMatchSnapshot();
+    });
 
-  test('create Bottom Center InlineHelp component', () => {
-    const component = renderer.create(inlineHelpBottomCenter);
-    const tree = component.toJSON();
+    test('create Bottom Center InlineHelp component', () => {
+        const component = renderer.create(inlineHelpBottomCenter);
+        const tree = component.toJSON();
 
-    expect(tree).toMatchSnapshot();
-  });
+        expect(tree).toMatchSnapshot();
+    });
 
-  test('create Left InlineHelp component', () => {
-    const component = renderer.create(inlineHelpLeft);
-    const tree = component.toJSON();
+    test('create Left InlineHelp component', () => {
+        const component = renderer.create(inlineHelpLeft);
+        const tree = component.toJSON();
 
-    expect(tree).toMatchSnapshot();
-  });
+        expect(tree).toMatchSnapshot();
+    });
 
-  test('create Right InlineHelp component', () => {
-    const component = renderer.create(inlineHelpRight);
-    const tree = component.toJSON();
+    test('create Right InlineHelp component', () => {
+        const component = renderer.create(inlineHelpRight);
+        const tree = component.toJSON();
 
-    expect(tree).toMatchSnapshot();
-  });
+        expect(tree).toMatchSnapshot();
+    });
+
+    describe('Prop spreading', () => {
+        test('should allow props to be spread to the InlineHelp component', () => {
+            const element = mount(
+                <InlineHelp
+                    data-sample='Sample'
+                    placement='bottom-center'
+                    text='Text' />
+            );
+
+            expect(
+                element.getDOMNode().querySelector('span').attributes['data-sample'].value
+            ).toBe('Sample');
+        });
+    });
 });

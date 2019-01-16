@@ -134,7 +134,6 @@ export const TileComponent = () => {
             <Separator />
 
             <Properties
-                type='Inputs'
                 properties={[
                     { name: 'title', description: 'string - the title of the Tile Content' },
                     { name: 'disabled', description: 'bool - when set to true, disables the tile.' },
@@ -145,7 +144,8 @@ export const TileComponent = () => {
                         name: 'colorAccent',
                         description: 'number - applies a background color. Options include numbers from 1 to 9.'
                     }
-                ]} />
+                ]}
+                type='Inputs' />
 
             <Separator />
 
@@ -165,15 +165,15 @@ export const TileComponent = () => {
             <DocsTile>
                 <Tile>
                     <TileMedia>
-                        <Image size='m' photo='https://placeimg.com/400/400/nature' />
+                        <Image photo='https://placeimg.com/400/400/nature' size='m' />
                     </TileMedia>
                     <TileContent title='Tile Title' />
                 </Tile>
                 <br />
                 <Tile role='button'>
                     <TileMedia>
-                        <Image size='l' type='circle'
-                            photo='https://placeimg.com/400/400/nature' />
+                        <Image photo='https://placeimg.com/400/400/nature' size='l'
+                            type='circle' />
                     </TileMedia>
                     <TileContent title='Tile Title'>
                         <p>Tile Description</p>
@@ -182,8 +182,8 @@ export const TileComponent = () => {
                 <br />
                 <Tile role='button'>
                     <TileMedia>
-                        <Identifier size='m' glyph='home'
-                            color={3} />
+                        <Identifier color={3} glyph='home'
+                            size='m' />
                     </TileMedia>
                     <TileContent title='Tile Title'>
                         <p>Tile Description</p>
@@ -200,7 +200,6 @@ export const TileComponent = () => {
                     <TileContent title='Tile Title' />
                     <TileActions>
                         <Popover
-                            control={<Button option='light' glyph='vertical-grip' />}
                             body={
                                 <Menu>
                                     <MenuList>
@@ -210,7 +209,8 @@ export const TileComponent = () => {
                                         <MenuItem url='/'>Option 4</MenuItem>
                                     </MenuList>
                                 </Menu>
-                            } />
+                            }
+                            control={<Button glyph='vertical-grip' option='light' />} />
                     </TileActions>
                 </Tile>
             </DocsTile>
@@ -247,15 +247,15 @@ export const TileComponent = () => {
             <Description>A Tile Gird is a collection of Tiles components in a gird layout.</Description>
             <DocsTile>
                 <TileGrid col={4}>
-                    <Tile rowSpan={2} colorAccent={7}>
+                    <Tile colorAccent={7} rowSpan={2}>
                         <TileContent title='Tile Title'>
                             <p>Tile Description</p>
                         </TileContent>
                     </Tile>
                     <Tile>
                         <TileMedia>
-                            <Image size='l' type='circle'
-                                photo='https://placeimg.com/400/400/nature' />
+                            <Image photo='https://placeimg.com/400/400/nature' size='l'
+                                type='circle' />
                         </TileMedia>
                         <TileContent title='Tile Title'>
                             <p>Tile Description</p>
@@ -268,8 +268,8 @@ export const TileComponent = () => {
                     </Tile>
                     <Tile role='button'>
                         <TileMedia>
-                            <Identifier size='l' glyph='home'
-                                color={3} />
+                            <Identifier color={3} glyph='home'
+                                size='l' />
                         </TileMedia>
                         <TileContent title='Tile Title' />
                     </Tile>
@@ -278,7 +278,7 @@ export const TileComponent = () => {
                             <p>Tile Description</p>
                         </TileContent>
                     </Tile>
-                    <Tile columnSpan={2} colorAccent={4}>
+                    <Tile colorAccent={4} columnSpan={2}>
                         <TileContent title='Tile Title'>
                             <p>Tile Description</p>
                         </TileContent>

@@ -95,7 +95,6 @@ searchData = [
                 <Separator />
 
                 <Properties
-                    type='Inputs'
                     properties={[
                         {
                             name: 'placeholder',
@@ -122,27 +121,28 @@ searchData = [
                             name: 'compact',
                             description: 'bool - Set to true to enable compact mode.'
                         }
-                    ]} />
+                    ]}
+                    type='Inputs' />
 
                 <Separator />
 
                 <DocsTile>
                     <div>
                         <SearchInput
+                            onEnter={term => this.getInputValue(term)}
                             placeholder='Enter a fruit'
-                            searchList={this.searchData}
-                            onEnter={term => this.getInputValue(term)} />
+                            searchList={this.searchData} />
                         <br />
                         <SearchInput
-                            placeholder='Enter a fruit'
                             noSearchBtn
-                            onChange={this.onChangeCallback} />
+                            onChange={this.onChangeCallback}
+                            placeholder='Enter a fruit' />
                         <br />
                         <SearchInput
-                            placeholder='Enter a fruit'
-                            searchList={this.searchData}
                             compact
-                            onEnter={term => this.getInputValue(term)} />
+                            onEnter={term => this.getInputValue(term)}
+                            placeholder='Enter a fruit'
+                            searchList={this.searchData} />
                     </div>
                 </DocsTile>
                 <DocsText>{this.searchInputCode}</DocsText>

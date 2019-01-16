@@ -64,8 +64,6 @@ export const ContextualMenuComponent = () => {
             <h2>With Icon</h2>
             <DocsTile centered>
                 <Popover
-                    control={<Button option='light' glyph='vertical-grip' />}
-                    noArrow
                     body={
                         <Menu>
                             <MenuList>
@@ -75,7 +73,9 @@ export const ContextualMenuComponent = () => {
                                 <MenuItem url='/'>Option 4</MenuItem>
                             </MenuList>
                         </Menu>
-                    } />
+                    }
+                    control={<Button glyph='vertical-grip' option='light' />}
+                    noArrow />
             </DocsTile>
             <DocsText>{contextualMenuIconCode}</DocsText>
             <Separator />
@@ -83,8 +83,6 @@ export const ContextualMenuComponent = () => {
             <h2>With Text Button</h2>
             <DocsTile centered>
                 <Popover
-                    control={<Button>More</Button>}
-                    noArrow
                     body={
                         <Menu>
                             <MenuList>
@@ -94,11 +92,11 @@ export const ContextualMenuComponent = () => {
                                 <MenuItem url='/'>Option 4</MenuItem>
                             </MenuList>
                         </Menu>
-                    } />
+                    }
+                    control={<Button>More</Button>}
+                    noArrow />
 
                 <Popover
-                    control={<Button option='light'>More</Button>}
-                    noArrow
                     body={
                         <Menu>
                             <MenuList>
@@ -108,7 +106,9 @@ export const ContextualMenuComponent = () => {
                                 <MenuItem url='/'>Option 4</MenuItem>
                             </MenuList>
                         </Menu>
-                    } />
+                    }
+                    control={<Button option='light'>More</Button>}
+                    noArrow />
             </DocsTile>
             <DocsText>{contextualMenuMoreTextCode}</DocsText>
             <Separator />

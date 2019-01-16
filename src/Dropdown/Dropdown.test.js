@@ -6,140 +6,112 @@ import { Menu, MenuItem, MenuList } from '../Menu/Menu';
 import { Button } from '../Button/Button';
 
 describe('<Dropdown />', () => {
-  const defaultDropdown = (
-      <Dropdown>
-          <Popover
-              control={<Button dropdown>Select</Button>}
-              noArrow
-              body={
-                  <Menu>
-                      <MenuList>
-                          <MenuItem url='/'>Option 1</MenuItem>
-                          <MenuItem url='/'>Option 2</MenuItem>
-                          <MenuItem url='/'>Option 3</MenuItem>
-                          <MenuItem url='/'>Option 4</MenuItem>
-                      </MenuList>
-                  </Menu>
-        } />
-      </Dropdown>
-  );
+    const defaultMenu = (
+        <Menu>
+            <MenuList>
+                <MenuItem url='/'>Option 1</MenuItem>
+                <MenuItem url='/'>Option 2</MenuItem>
+                <MenuItem url='/'>Option 3</MenuItem>
+                <MenuItem url='/'>Option 4</MenuItem>
+            </MenuList>
+        </Menu>
+    );
 
-  const compactDropdown = (
-      <Dropdown className='blue'>
-          <Popover
-              control={
-                  <Button dropdown compact>
-            Select
-                  </Button>
-        }
-              noArrow
-              body={
-                  <Menu>
-                      <MenuList>
-                          <MenuItem url='/'>Option 1</MenuItem>
-                          <MenuItem url='/'>Option 2</MenuItem>
-                          <MenuItem url='/'>Option 3</MenuItem>
-                          <MenuItem url='/'>Option 4</MenuItem>
-                      </MenuList>
-                  </Menu>
-        } />
-      </Dropdown>
-  );
+    const defaultDropdown = (
+        <Dropdown>
+            <Popover
+                body={defaultMenu}
+                control={<Button dropdown>Select</Button>}
+                noArrow />
+        </Dropdown>
+    );
 
-  const toolbarDropdown = (
-      <Dropdown standard>
-          <Popover
-              control={
-                  <Button dropdown type='standard'>
-            Select
-                  </Button>
-        }
-              noArrow
-              body={
-                  <Menu>
-                      <MenuList>
-                          <MenuItem url='/'>Option 1</MenuItem>
-                          <MenuItem url='/'>Option 2</MenuItem>
-                          <MenuItem url='/'>Option 3</MenuItem>
-                          <MenuItem url='/'>Option 4</MenuItem>
-                      </MenuList>
-                  </Menu>
-        } />
-      </Dropdown>
-  );
+    const compactDropdown = (
+        <Dropdown className='blue'>
+            <Popover
+                body={defaultMenu}
+                control={
+                    <Button compact dropdown>
+                        Select
+                    </Button>
+                }
+                noArrow />
+        </Dropdown>
+    );
 
-  const iconDropdown = (
-      <Dropdown>
-          <Popover
-              id='jhqD0557'
-              control={
-                  <Button dropdown glyph='filter'>
-            Select
-                  </Button>
-        }
-              noArrow
-              body={
-                  <Menu>
-                      <MenuList>
-                          <MenuItem url='/'>Option 1</MenuItem>
-                          <MenuItem url='/'>Option 2</MenuItem>
-                          <MenuItem url='/'>Option 3</MenuItem>
-                          <MenuItem url='/'>Option 4</MenuItem>
-                      </MenuList>
-                  </Menu>
-        } />
-      </Dropdown>
-  );
+    const toolbarDropdown = (
+        <Dropdown standard>
+            <Popover
+                body={defaultMenu}
+                control={
+                    <Button dropdown type='standard'>
+                        Select
+                    </Button>
+                }
+                noArrow />
+        </Dropdown>
+    );
 
-  const disabledDropdown = (
-      <Dropdown>
-          <Popover
-              id='jhqD0561'
-              disabled
-              control={
-                  <Button dropdown glyph='filter'
-                      disabled>
-            Select
-                  </Button>
-        }
-              noArrow
-              body={
-                  <Menu>
-                      <MenuList>
-                          <MenuItem url='/'>Option 1</MenuItem>
-                          <MenuItem url='/'>Option 2</MenuItem>
-                          <MenuItem url='/'>Option 3</MenuItem>
-                          <MenuItem url='/'>Option 4</MenuItem>
-                      </MenuList>
-                  </Menu>
-        } />
-      </Dropdown>
-  );
+    const iconDropdown = (
+        <Dropdown>
+            <Popover
+                body={defaultMenu}
+                control={
+                    <Button dropdown glyph='filter'>
+                        Select
+                    </Button>
+                }
+                id='jhqD0557'
+                noArrow />
+        </Dropdown>
+    );
 
-  test('create dropdown component', () => {
-    // default dropdown
-    let component = renderer.create(defaultDropdown);
-    let tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
+    const disabledDropdown = (
+        <Dropdown>
+            <Popover
+                body={defaultMenu}
+                control={
+                    <Button disabled dropdown
+                        glyph='filter'>
+                        Select
+                    </Button>
+                }
+                disabled
+                id='jhqD0561'
+                noArrow />
+        </Dropdown>
+    );
 
-    // compact dropdown
-    component = renderer.create(compactDropdown);
-    tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
+    test('create dropdown component', () => {
+        // default dropdown
+        let component = renderer.create(defaultDropdown);
+        let tree = component.toJSON();
+        expect(tree).toMatchSnapshot();
 
-    // toolbar dropdown
-    component = renderer.create(toolbarDropdown);
-    tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
+        // compact dropdown
+        component = renderer.create(compactDropdown);
+        tree = component.toJSON();
+        expect(tree).toMatchSnapshot();
 
-    // icon dropdown
-    component = renderer.create(iconDropdown);
-    tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
+        // toolbar dropdown
+        component = renderer.create(toolbarDropdown);
+        tree = component.toJSON();
+        expect(tree).toMatchSnapshot();
 
-    // disabled dropdown
-    component = renderer.create(disabledDropdown);
-    tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
-  });
+        // icon dropdown
+        component = renderer.create(iconDropdown);
+        tree = component.toJSON();
+        expect(tree).toMatchSnapshot();
+
+        // disabled dropdown
+        component = renderer.create(disabledDropdown);
+        tree = component.toJSON();
+        expect(tree).toMatchSnapshot();
+    });
+
+    describe('Prop spreading', () => {
+        xtest('should allow props to be spread to the Dropdown component', () => {
+            // TODO: placeholder for this test description once that functionality is built
+        });
+    });
 });

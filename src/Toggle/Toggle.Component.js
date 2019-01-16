@@ -42,11 +42,11 @@ export const ToggleComponent = () => {
             <Separator />
 
             <Properties
-                type='Inputs'
                 properties={[
                     { name: 'size', description: 'string - The size of the toggle.' },
                     { name: 'id', description: 'string - The id of the toggle.' }
-                ]} />
+                ]}
+                type='Inputs' />
 
             <Separator />
 
@@ -57,16 +57,16 @@ export const ToggleComponent = () => {
                 consistent.
             </Description>
             <DocsTile>
-                <Toggle size='xs' id='Yj07w604'>
+                <Toggle id='Yj07w604' size='xs'>
                     Extra Small toggle
                 </Toggle>
-                <Toggle size='s' id='Yj07w605'
-                    checked>
+                <Toggle checked id='Yj07w605'
+                    size='s'>
                     Small toggle
                 </Toggle>
                 <Toggle id='Yj07w606'>Normal toggle</Toggle>
-                <Toggle size='l' id='Yj07w607'
-                    checked>
+                <Toggle checked id='Yj07w607'
+                    size='l'>
                     Large toggle
                 </Toggle>
             </DocsTile>
@@ -80,19 +80,19 @@ export const ToggleComponent = () => {
                 the 'disabled' parameter to the element.
             </Description>
             <DocsTile>
-                <Toggle size='xs' id='Yj07w608'
-                    disabled>
+                <Toggle disabled id='Yj07w608'
+                    size='xs'>
                     Extra Small toggle
                 </Toggle>
-                <Toggle size='s' id='Yj07w609'
-                    checked disabled>
+                <Toggle checked disabled
+                    id='Yj07w609' size='s'>
                     Small toggle
                 </Toggle>
-                <Toggle id='Yj07w610' disabled>
+                <Toggle disabled id='Yj07w610'>
                     Normal toggle
                 </Toggle>
-                <Toggle size='l' id='Yj07w611'
-                    checked disabled>
+                <Toggle checked disabled
+                    id='Yj07w611' size='l'>
                     Large toggle
                 </Toggle>
             </DocsTile>

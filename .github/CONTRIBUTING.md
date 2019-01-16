@@ -83,7 +83,7 @@ You must follow the coding style as best you can when submitting code. Take note
 
 ### Unit testing
 
-All components should have associated unit tests created with a code coverage score of at least 85%. Be an overachiever and shoot for 100% :) [Learn how to create unit tests](./UNIT-TESTING.md)
+All components should have associated unit tests created with a code coverage score of at least 85%. Be an overachiever and shoot for 100% :) [Learn how to create unit tests](https://github.com/SAP/fundamental-react/wiki/Unit-Testing)
 
 ### How to contribute - the Process
 

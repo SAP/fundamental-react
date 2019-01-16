@@ -64,7 +64,6 @@ export const MenuComponent = () => {
             <Separator />
 
             <Properties
-                type='Inputs'
                 properties={[
                     { name: 'url', description: 'string - href attribute of <a> tag. Use either \'url\' or \'link\'' },
                     { name: 'link', description: 'string - a router link. Use either \'url\' or \'link\'' },
@@ -81,7 +80,8 @@ export const MenuComponent = () => {
                         name: 'addon',
                         description: 'string - the name of the SAP icon to be applied as an addon before.'
                     }
-                ]} />
+                ]}
+                type='Inputs' />
 
             <Separator />
 
@@ -148,7 +148,7 @@ export const MenuComponent = () => {
                 <Menu addonBefore>
                     <MenuList>
                         <MenuItem link='/'>Option 1</MenuItem>
-                        <MenuItem link='/' addon='accept'>
+                        <MenuItem addon='accept' link='/'>
                             Option 2
                         </MenuItem>
                         <MenuItem link='/'>Option 3</MenuItem>

@@ -1,12 +1,12 @@
 {
   "name": "fundamental-react",
-  "version": "0.0.15-rc.0",
+  "version": "0.0.15-rc.37",
   "private": false,
   "license": "Apache-2.0",
-  "homepage": "http://sap.github.io/fundamental-react",
+  "homepage": "https://sap.github.io/fundamental-react",
   "repository": {
     "type": "git",
-    "url": "http://sap.github.io/fundamental-react"
+    "url": "https://github.com/SAP/fundamental-react"
   },
   "scripts": {
     "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
@@ -26,6 +26,7 @@
     "std-version:release": "standard-version -m \"chore(release): version %s\"",
     "std-version": "standard-version -m \"chore(release): version %s build ${TRAVIS_BUILD_NUMBER} [ci skip]\"",
     "test:coverage": "jest --coverage",
+    "test:coveralls": "jest --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
     "test:dev": "jest",
     "test": "node scripts/test.js",
     "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive"
@@ -37,10 +38,10 @@
     "react-syntax-highlighter": "^9.0.1"
   },
   "devDependencies": {
-    "@babel/core": "7.1.0",
-    "@svgr/webpack": "2.4.1",
     "@babel/cli": "^7.1.5",
+    "@babel/core": "7.1.0",
     "@babel/polyfill": "^7.1.5",
+    "@svgr/webpack": "2.4.1",
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "9.0.0",
     "babel-jest": "23.6.0",
@@ -50,6 +51,7 @@
     "bfj": "6.1.1",
     "case-sensitive-paths-webpack-plugin": "2.1.2",
     "chalk": "2.4.1",
+    "coveralls": "^3.0.2",
     "css-loader": "1.0.0",
     "dotenv": "6.0.0",
     "dotenv-expand": "4.2.0",
@@ -58,7 +60,9 @@
     "eslint": "5.6.0",
     "eslint-config-react-app": "^3.0.5",
     "eslint-loader": "2.1.1",
+    "eslint-plugin-compat": "^2.6.3",
     "eslint-plugin-flowtype": "2.50.1",
+    "eslint-plugin-ie11": "^1.0.0",
     "eslint-plugin-import": "2.14.0",
     "eslint-plugin-jsx-a11y": "6.1.2",
     "eslint-plugin-loosely-restrict-imports": "^0.1.15",
@@ -66,7 +70,6 @@
     "file-loader": "2.0.0",
     "fork-ts-checker-webpack-plugin-alt": "0.4.14",
     "fs-extra": "7.0.0",
-    "eslint-plugin-ie11": "^1.0.0",
     "gh-pages": "^2.0.1",
     "html-webpack-plugin": "4.0.0-alpha.2",
     "identity-obj-proxy": "3.0.0",
@@ -90,10 +93,10 @@
     "react-test-renderer": "^16.6.3",
     "resolve": "1.8.1",
     "sass-loader": "7.1.0",
+    "standard-version": "^4.4.0",
     "style-loader": "0.23.0",
     "terser-webpack-plugin": "1.1.0",
     "url-loader": "1.1.1",
-    "standard-version": "^4.4.0",
     "webpack": "4.19.1",
     "webpack-dev-server": "^3.1.11",
     "webpack-manifest-plugin": "2.0.4",
@@ -125,7 +128,8 @@
     ],
     "resolver": "jest-pnp-resolver",
     "setupFiles": [
-      "react-app-polyfill/jsdom"
+      "react-app-polyfill/jsdom",
+      "./config/jest/jest.config.js"
     ],
     "testMatch": [
       "<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}",
