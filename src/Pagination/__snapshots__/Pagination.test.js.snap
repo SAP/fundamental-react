@@ -3,6 +3,8 @@
 exports[`<Pagination /> create Pagination component with initial page set 1`] = `
 <div
   className="fd-pagination blue"
+  initalPage={5}
+  onClick={[MockFunction]}
 >
   <span
     className="fd-pagination__total"
@@ -123,6 +125,7 @@ exports[`<Pagination /> create Pagination component with initial page set 1`] = 
 exports[`<Pagination /> create Pagination component with item per page set 1`] = `
 <div
   className="fd-pagination"
+  onClick={[MockFunction]}
 >
   <span
     className="fd-pagination__total"
@@ -195,6 +198,7 @@ exports[`<Pagination /> create Pagination component with item per page set 1`] =
 exports[`<Pagination /> create Pagination component with item per page set to 0 1`] = `
 <div
   className="fd-pagination"
+  onClick={[MockFunction]}
 >
   <span
     className="fd-pagination__total"
@@ -315,6 +319,7 @@ exports[`<Pagination /> create Pagination component with item per page set to 0 
 exports[`<Pagination /> create Pagination component with total item hidden 1`] = `
 <div
   className="fd-pagination"
+  onClick={[MockFunction]}
 >
   
   <nav
@@ -429,6 +434,7 @@ exports[`<Pagination /> create Pagination component with total item hidden 1`] =
 exports[`<Pagination /> create Pagination component with total text set 1`] = `
 <div
   className="fd-pagination"
+  onClick={[MockFunction]}
 >
   <span
     className="fd-pagination__total"
@@ -549,6 +555,7 @@ exports[`<Pagination /> create Pagination component with total text set 1`] = `
 exports[`<Pagination /> create default Pagination component 1`] = `
 <div
   className="fd-pagination"
+  onClick={[MockFunction]}
 >
   <span
     className="fd-pagination__total"
@@ -659,6 +666,262 @@ exports[`<Pagination /> create default Pagination component 1`] = `
       aria-disabled={false}
       aria-label="Next"
       className="fd-pagination__link fd-pagination__link--next"
+      href="#"
+      onClick={[Function]}
+    />
+  </nav>
+</div>
+`;
+
+exports[`<Pagination /> create default Pagination component with displayTotalProps 1`] = `
+<div
+  className="fd-pagination"
+  onClick={[MockFunction]}
+>
+  <span
+    className="fd-pagination__total"
+    data-sample="Sample2"
+  >
+    101
+     
+    items
+  </span>
+  <nav
+    className="fd-pagination__nav"
+  >
+    <a
+      aria-disabled={true}
+      aria-label="Previous"
+      className="fd-pagination__link fd-pagination__link--previous"
+      href="#"
+      onClick={[Function]}
+    />
+    <a
+      aria-selected={true}
+      className="fd-pagination__link"
+      href="#"
+      onClick={[Function]}
+    >
+      1
+    </a>
+    <a
+      aria-selected={false}
+      className="fd-pagination__link"
+      href="#"
+      onClick={[Function]}
+    >
+      2
+    </a>
+    <a
+      aria-selected={false}
+      className="fd-pagination__link"
+      href="#"
+      onClick={[Function]}
+    >
+      3
+    </a>
+    <a
+      aria-selected={false}
+      className="fd-pagination__link"
+      href="#"
+      onClick={[Function]}
+    >
+      4
+    </a>
+    <a
+      aria-selected={false}
+      className="fd-pagination__link"
+      href="#"
+      onClick={[Function]}
+    >
+      5
+    </a>
+    <a
+      aria-selected={false}
+      className="fd-pagination__link"
+      href="#"
+      onClick={[Function]}
+    >
+      6
+    </a>
+    <a
+      aria-selected={false}
+      className="fd-pagination__link"
+      href="#"
+      onClick={[Function]}
+    >
+      7
+    </a>
+    <a
+      aria-selected={false}
+      className="fd-pagination__link"
+      href="#"
+      onClick={[Function]}
+    >
+      8
+    </a>
+    <a
+      aria-selected={false}
+      className="fd-pagination__link"
+      href="#"
+      onClick={[Function]}
+    >
+      9
+    </a>
+    <a
+      aria-selected={false}
+      className="fd-pagination__link"
+      href="#"
+      onClick={[Function]}
+    >
+      10
+    </a>
+    <a
+      aria-selected={false}
+      className="fd-pagination__link"
+      href="#"
+      onClick={[Function]}
+    >
+      11
+    </a>
+    <a
+      aria-disabled={false}
+      aria-label="Next"
+      className="fd-pagination__link fd-pagination__link--next"
+      href="#"
+      onClick={[Function]}
+    />
+  </nav>
+</div>
+`;
+
+exports[`<Pagination /> create default Pagination component with linkProps 1`] = `
+<div
+  className="fd-pagination"
+  onClick={[MockFunction]}
+>
+  <span
+    className="fd-pagination__total"
+  >
+    101
+     
+    items
+  </span>
+  <nav
+    className="fd-pagination__nav"
+  >
+    <a
+      aria-disabled={true}
+      aria-label="Previous"
+      className="fd-pagination__link fd-pagination__link--previous"
+      data-sample="Sample"
+      href="#"
+      onClick={[Function]}
+    />
+    <a
+      aria-selected={true}
+      className="fd-pagination__link"
+      data-sample="Sample"
+      href="#"
+      onClick={[Function]}
+    >
+      1
+    </a>
+    <a
+      aria-selected={false}
+      className="fd-pagination__link"
+      data-sample="Sample"
+      href="#"
+      onClick={[Function]}
+    >
+      2
+    </a>
+    <a
+      aria-selected={false}
+      className="fd-pagination__link"
+      data-sample="Sample"
+      href="#"
+      onClick={[Function]}
+    >
+      3
+    </a>
+    <a
+      aria-selected={false}
+      className="fd-pagination__link"
+      data-sample="Sample"
+      href="#"
+      onClick={[Function]}
+    >
+      4
+    </a>
+    <a
+      aria-selected={false}
+      className="fd-pagination__link"
+      data-sample="Sample"
+      href="#"
+      onClick={[Function]}
+    >
+      5
+    </a>
+    <a
+      aria-selected={false}
+      className="fd-pagination__link"
+      data-sample="Sample"
+      href="#"
+      onClick={[Function]}
+    >
+      6
+    </a>
+    <a
+      aria-selected={false}
+      className="fd-pagination__link"
+      data-sample="Sample"
+      href="#"
+      onClick={[Function]}
+    >
+      7
+    </a>
+    <a
+      aria-selected={false}
+      className="fd-pagination__link"
+      data-sample="Sample"
+      href="#"
+      onClick={[Function]}
+    >
+      8
+    </a>
+    <a
+      aria-selected={false}
+      className="fd-pagination__link"
+      data-sample="Sample"
+      href="#"
+      onClick={[Function]}
+    >
+      9
+    </a>
+    <a
+      aria-selected={false}
+      className="fd-pagination__link"
+      data-sample="Sample"
+      href="#"
+      onClick={[Function]}
+    >
+      10
+    </a>
+    <a
+      aria-selected={false}
+      className="fd-pagination__link"
+      data-sample="Sample"
+      href="#"
+      onClick={[Function]}
+    >
+      11
+    </a>
+    <a
+      aria-disabled={false}
+      aria-label="Next"
+      className="fd-pagination__link fd-pagination__link--next"
+      data-sample="Sample"
       href="#"
       onClick={[Function]}
     />

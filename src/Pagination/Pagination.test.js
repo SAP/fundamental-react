@@ -8,6 +8,21 @@ describe('<Pagination />', () => {
     const defaultPagination = (
         <Pagination itemsTotal={101} onClick={handleClick} />
     );
+
+    const defaultPaginationDisplayTotalProps = (
+        <Pagination
+            displayTotalProps={{ 'data-sample': 'Sample2' }}
+            itemsTotal={101}
+            onClick={handleClick} />
+    );
+
+    const defaultPaginationLinkProps = (
+        <Pagination
+            itemsTotal={101}
+            linkProps={{ 'data-sample': 'Sample' }}
+            onClick={handleClick} />
+    );
+
     const initialSetPagination = (
         <Pagination
             className='blue'
@@ -22,12 +37,16 @@ describe('<Pagination />', () => {
     );
 
     const hideTotalItemsPagination = (
-        <Pagination displayTotal={false} itemsTotal={101}
+        <Pagination
+            displayTotal={false}
+            itemsTotal={101}
             onClick={handleClick} />
     );
 
     const totalTextPagination = (
-        <Pagination itemsTotal={101} onClick={handleClick}
+        <Pagination
+            itemsTotal={101}
+            onClick={handleClick}
             totalText='Dalmations' />
     );
 
@@ -38,6 +57,20 @@ describe('<Pagination />', () => {
 
     test('create default Pagination component', () => {
         const component = renderer.create(defaultPagination);
+        const tree = component.toJSON();
+
+        expect(tree).toMatchSnapshot();
+    });
+
+    test('create default Pagination component with displayTotalProps', () => {
+        const component = renderer.create(defaultPaginationDisplayTotalProps);
+        const tree = component.toJSON();
+
+        expect(tree).toMatchSnapshot();
+    });
+
+    test('create default Pagination component with linkProps', () => {
+        const component = renderer.create(defaultPaginationLinkProps);
         const tree = component.toJSON();
 
         expect(tree).toMatchSnapshot();
@@ -119,26 +152,52 @@ describe('<Pagination />', () => {
     });
 
     describe('Prop spreading', () => {
-        xtest('should allow props to be spread to the Pagination component', () => {
-            // TODO: placeholder for this test description once that functionality is built
-            const element = mount(
+        test('should allow props to be spread to the Pagination component', () => {
+            let element = mount(
                 <Pagination
-                    data-sample='Sample'
-                    itemsTotal={10}
+                    data-sample='Sample1'
+                    itemsTotal={101}
                     onClick={handleClick} />
             );
 
+            expect(element.getDOMNode().attributes['data-sample'].value).toBe(
+                'Sample1'
+            );
+
+            element = mount(defaultPaginationLinkProps);
+
             expect(
-                element.getDOMNode().attributes['data-sample'].value
+                element
+                    .find('a')
+                    .at(0)
+                    .getDOMNode().attributes['data-sample'].value
+            ).toBe('Sample');
+
+            element = mount(defaultPaginationDisplayTotalProps);
+
+            expect(
+                element.find('span').getDOMNode().attributes['data-sample']
+                    .value
+            ).toBe('Sample2');
+        });
+
+        test('should allow props to be spread to the Pagination component\'s previous a element', () => {
+            const element = mount(defaultPaginationLinkProps);
+
+            expect(
+                element.find('a[aria-label="Previous"]').getDOMNode()
+                    .attributes['data-sample'].value
             ).toBe('Sample');
         });
 
-        xtest('should allow props to be spread to the Pagination component\'s previous a element', () => {
-            // TODO: placeholder for this test description once that functionality is built
-        });
+        test('should allow props to be spread to the Pagination component\'s next a element', () => {
+            const element = mount(defaultPaginationLinkProps);
 
-        xtest('should allow props to be spread to the Pagination component\'s next a element', () => {
-            // TODO: placeholder for this test description once that functionality is built
+            expect(
+                element.find('a[aria-label="Next"]').getDOMNode().attributes[
+                    'data-sample'
+                ].value
+            ).toBe('Sample');
         });
     });
 });
