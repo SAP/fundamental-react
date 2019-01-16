@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.0.15-rc.34"></a>
+## [0.0.15-rc.34](https://github.com/SAP/fundamental-react/compare/v0.0.15-rc.33...v0.0.15-rc.34) (2019-01-16)
+
+
+### Bug Fixes
+
+* enable eslint indent rule ([fb22624](https://github.com/SAP/fundamental-react/commit/fb22624))
+
+
+
 <a name="0.0.15-rc.33"></a>
 ## [0.0.15-rc.33](https://github.com/SAP/fundamental-react/compare/v0.0.15-rc.32...v0.0.15-rc.33) (2019-01-16)
 
