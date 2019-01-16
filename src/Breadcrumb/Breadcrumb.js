@@ -2,9 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { BrowserRouter, Link } from 'react-router-dom';
 
-export const Breadcrumb = props => {
-    const { children } = props;
-    return <ul className='fd-breadcrumb'>{children}</ul>;
+export const Breadcrumb = ({ children, ...props }) => {
+    return <ul className='fd-breadcrumb' {...props}>{children}</ul>;
 };
 
 Breadcrumb.propTypes = {

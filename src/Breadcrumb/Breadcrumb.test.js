@@ -36,8 +36,12 @@ describe('<Breadcrumb />', () => {
     });
 
     describe('Prop spreading', () => {
-        xtest('should allow props to be spread to the Breadcrumb component', () => {
-            // TODO: placeholder for this test description once that functionality is built
+        test('should allow props to be spread to the Breadcrumb component', () => {
+            const element = mount(<Breadcrumb data-sample='Sample' />);
+
+            expect(
+                element.getDOMNode().attributes['data-sample'].value
+            ).toBe('Sample');
         });
 
         test('should allow props to be spread to the BreadcrumbItem component', () => {
