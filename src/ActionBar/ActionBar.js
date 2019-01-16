@@ -26,9 +26,10 @@ export const ActionBarBack = ({ onClick, className, buttonProps, ...props }) => 
 
     return (
         <div className={`fd-action-bar__back${className ? ' ' + className : ''}`} {...props}>
-            <button className='fd-button--light fd-button--compact sap-icon--nav-back'
-                onClick={onClick}
-                {...buttonProps} />
+            <button
+                {...buttonProps}
+                className='fd-button--light fd-button--compact sap-icon--nav-back'
+                onClick={onClick} />
         </div>
     );
 };
@@ -43,11 +44,11 @@ export const ActionBarHeader = ({ className, description, descriptionProps, titl
     return (
         <div className={`fd-action-bar__header${className ? ' ' + className : ''}`} {...props}>
             <h1
-                className='fd-action-bar__title'
-                {...titleProps}>{title}</h1>
+                {...titleProps}
+                className='fd-action-bar__title'>{title}</h1>
             <p
-                className='fd-action-bar__description'
-                {...descriptionProps}>{description} </p>
+                {...descriptionProps}
+                className='fd-action-bar__description'>{description} </p>
         </div>
     );
 };
