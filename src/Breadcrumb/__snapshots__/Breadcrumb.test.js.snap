@@ -2,7 +2,7 @@
 
 exports[`<Breadcrumb /> create breadcrumbs using router links 1`] = `
 <ul
-  className="blue"
+  className="fd-breadcrumb"
 >
   <li
     className="fd-breadcrumb__item blue"
