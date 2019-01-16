@@ -8,7 +8,7 @@ import {
     Header,
     Description,
     Properties
-} from '../';
+} from '../_playground';
 
 export const TimePickerComponent = () => {
     const defaultTimeCode = '<TimePicker />';

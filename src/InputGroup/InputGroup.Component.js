@@ -8,7 +8,7 @@ import {
     Import,
     Properties,
     Playground
-} from '../';
+} from '../_playground';
 import { FormItem, FormLabel, FormGroup, InputGroup, Button } from '../';
 
 export const InputGroupComponent = () => {

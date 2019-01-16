@@ -1,6 +1,6 @@
 import React from 'react';
 import { Token } from './Token';
-import { DocsTile, DocsText, Separator, Header, Description, Import } from '..';
+import { DocsTile, DocsText, Separator, Header, Description, Import } from '../_playground';
 
 export const TokenComponent = () => {
     const tokenCode = `<Token>Bibendum</Token>
