@@ -1,48 +1,41 @@
+import { ActionBarComponent } from '../ActionBar/ActionBar.Component';
+import { AlertComponent } from '../Alert/Alert.Component';
+import { BadgeComponent } from '../Badge/Badge.Component';
+import { BreadcrumbComponent } from '../Breadcrumb/Breadcrumb.Component';
+import { ButtonComponent } from '../Button/Button.Component';
+import { CalendarComponent } from '../Calendar/Calendar.Component';
+import { ComboboxInputComponent } from '../ComboboxInput/ComboboxInput.Component';
+import { ContextualMenuComponent } from '../ContextualMenu/ContextualMenu.Component';
+import { DatePickerComponent } from '../DatePicker/DatePicker.Component';
+import { DropdownComponent } from '../Dropdown/Dropdown.Component';
+import { FormsComponent } from '../Forms/Forms.Component';
+import { IconComponent } from '../Icon/Icon.Component';
+import { IdentifierComponent } from '../Identifier/Identifier.Component';
+import { ImageComponent } from '../Image/Image.Component';
+import { InlineHelpComponent } from '../InlineHelp/InlineHelp.Component';
+import { InputGroupComponent } from '../InputGroup/InputGroup.Component';
+import { ListGroupComponent } from '../ListGroup/ListGroup.Component';
+import { LocalizationEditorComponent } from '../LocalizationEditor/LocalizationEditor.Component';
+import { MegaMenuComponent } from '../MegaMenu/MegaMenu.Component';
+import { MenuComponent } from '../Menu/Menu.Component';
+import { ModalComponent } from '../Modal/Modal.Component';
+import { MultiInputComponent } from '../MultiInput/MultiInput.Component';
+import { PaginationComponent } from '../Pagination/Pagination.Component';
+import { PanelComponent } from '../Panel/Panel.Component';
+import { PopoverComponent } from '../Popover/Popover.Component';
+import { SearchInputComponent } from '../SearchInput/SearchInput.Component';
+import { ShellbarComponent } from '../Shellbar/Shellbar.Component';
+import { SideNavigationComponent } from '../SideNavigation/SideNavigation.Component';
+import { TableComponent } from '../Table/Table.Component';
+import { TabsComponent } from '../Tabs/Tabs.Component';
+import { TileComponent } from '../Tile/Tile.Component';
+import { TimeComponent } from '../Time/Time.Component';
+import { TimePickerComponent } from '../TimePicker/TimePicker.Component';
+import { ToggleComponent } from '../Toggle/Toggle.Component';
+import { TokenComponent } from '../Token/Token.Component';
+import { TreeComponent } from '../Tree/Tree.Component';
+import { BrowserRouter, NavLink, Redirect, Route, Switch } from 'react-router-dom';
 import React, { Component } from 'react';
-import {
-    BrowserRouter,
-    Route,
-    Switch,
-    NavLink,
-    Redirect
-} from 'react-router-dom';
-
-import { ActionBarComponent } from './ActionBar/ActionBar.Component';
-import { AlertComponent } from './Alert/Alert.Component';
-import { BadgeComponent } from './Badge/Badge.Component';
-import { BreadcrumbComponent } from './Breadcrumb/Breadcrumb.Component';
-import { ButtonComponent } from './Button/Button.Component';
-import { CalendarComponent } from './Calendar/Calendar.Component';
-import { ComboboxInputComponent } from './ComboboxInput/ComboboxInput.Component';
-import { ContextualMenuComponent } from './ContextualMenu/ContextualMenu.Component';
-import { DatePickerComponent } from './DatePicker/DatePicker.Component';
-import { DropdownComponent } from './Dropdown/Dropdown.Component';
-import { FormsComponent } from './Forms/Forms.Component';
-import { IconComponent } from './Icon/Icon.Component';
-import { IdentifierComponent } from './Identifier/Identifier.Component';
-import { ImageComponent } from './Image/Image.Component';
-import { InlineHelpComponent } from './InlineHelp/InlineHelp.Component';
-import { InputGroupComponent } from './InputGroup/InputGroup.Component';
-import { ListGroupComponent } from './ListGroup/ListGroup.Component';
-import { LocalizationEditorComponent } from './LocalizationEditor/LocalizationEditor.Component';
-import { MegaMenuComponent } from './MegaMenu/MegaMenu.Component';
-import { MenuComponent } from './Menu/Menu.Component';
-import { ModalComponent } from './Modal/Modal.Component';
-import { MultiInputComponent } from './MultiInput/MultiInput.Component';
-import { PaginationComponent } from './Pagination/Pagination.Component';
-import { PanelComponent } from './Panel/Panel.Component';
-import { PopoverComponent } from './Popover/Popover.Component';
-import { SearchInputComponent } from './SearchInput/SearchInput.Component';
-import { SideNavigationComponent } from './SideNavigation/SideNavigation.Component';
-import { TableComponent } from './Table/Table.Component';
-import { TabsComponent } from './Tabs/Tabs.Component';
-import { TokenComponent } from './Token/Token.Component';
-import { TileComponent } from './Tile/Tile.Component';
-import { ToggleComponent } from './Toggle/Toggle.Component';
-import { TreeComponent } from './Tree/Tree.Component';
-import { TimeComponent } from './Time/Time.Component';
-import { TimePickerComponent } from './TimePicker/TimePicker.Component';
-import { ShellbarComponent } from './Shellbar/Shellbar.Component';
 
 export default class Routes extends Component {
     constructor(props) {

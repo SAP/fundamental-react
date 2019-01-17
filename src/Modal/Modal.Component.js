@@ -1,6 +1,6 @@
+import { Button, Modal } from '../';
+import { Description, DocsText, DocsTile, Header, Import, Properties, Separator } from '../_playground';
 import React, { Component } from 'react';
-import { DocsTile, DocsText, Separator, Header, Description, Import, Properties } from '../';
-import { Modal, Button } from '../';
 
 export class ModalComponent extends Component {
     constructor(props) {
@@ -162,6 +162,36 @@ export class ModalComponent extends Component {
                         {
                             name: 'actions',
                             description: 'React.Fragment which contains <Button /> controls to render in the footer'
+                        },
+                        {
+                            name: 'contentProps',
+                            description:
+                                'object - additional props to be spread to the content section of Modal dialog'
+                        },
+                        {
+                            name: 'headerProps',
+                            description:
+                                'object - additional props to be spread to the header section of Modal dialog'
+                        },
+                        {
+                            name: 'titleProps',
+                            description:
+                                'object - additional props to be spread to the title section of Modal dialog'
+                        },
+                        {
+                            name: 'closeProps',
+                            description:
+                                'object - additional props to be spread to the close button of Modal dialog'
+                        },
+                        {
+                            name: 'bodyProps',
+                            description:
+                                'object - additional props to be spread to the body section of Modal dialog'
+                        },
+                        {
+                            name: 'footerProps',
+                            description:
+                                'object - additional props to be spread to the footer section of Modal dialog'
                         }
                     ]}
                     type='Inputs' />

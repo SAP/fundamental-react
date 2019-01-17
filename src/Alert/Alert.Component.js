@@ -1,30 +1,30 @@
 import React from 'react';
 import { Alert, Icon } from '../';
-import { DocsTile, DocsText, Separator, Header, Description, Import, Properties, Playground } from '../';
+import { Description, DocsText, DocsTile, Header, Import, Playground, Properties, Separator } from '../_playground';
 
 export const AlertComponent = () => {
-    const defaultAlertCode = '<Alert dismissable link="#" linkText="link">Default alert with a </Alert>';
+    const defaultAlertCode = '<Alert dismissible link="#" linkText="link">Default alert with a </Alert>';
 
-    const warningAlertCode = `<Alert type="warning" dismissable>
+    const warningAlertCode = `<Alert type="warning" dismissible>
     <h3>A dismissible error type alert with template.</h3>
     <p>More information...</p>
 </Alert>`;
 
-    const errorAlertCode = `<Alert type="error" dismissable>
+    const errorAlertCode = `<Alert type="error" dismissible>
     <Icon glyph="message-error" /> Error Message.
     <a href="#" class="fd-link">
         Learn More
     </a>
 </Alert>`;
 
-    const sucessAlertCode = `<Alert type="success" dismissable>
+    const sucessAlertCode = `<Alert type="success" dismissible>
     <Icon glyph="message-success" /> Message Success.
     <a href="#" class="fd-link">
         Learn More
     </a>
 </Alert>`;
 
-    const informationAlertCode = `<Alert type="information" dismissable>
+    const informationAlertCode = `<Alert type="information" dismissible>
     <Icon glyph="message-information" /> Information Message.
     <a href="#" class="fd-link">
         Learn More
@@ -74,7 +74,7 @@ export const AlertComponent = () => {
                 feedback that an action has been executed. The user will need to dismiss the message.
             </Description>
             <DocsTile>
-                <Alert dismissable link='#'
+                <Alert dismissible link='#'
                     linkText=' link'>
                     Default alert with a{' '}
                 </Alert>
@@ -89,7 +89,7 @@ export const AlertComponent = () => {
                 message. Apply type="warning".
             </Description>
             <DocsTile>
-                <Alert dismissable type='warning'>
+                <Alert dismissible type='warning'>
                     <h3>A dismissible error type alert with template.</h3>
                     <p>More information...</p>
                 </Alert>
@@ -105,7 +105,7 @@ export const AlertComponent = () => {
                 rectified the error. The user will need to dismiss the message. Apply type="error".
             </Description>
             <DocsTile>
-                <Alert dismissable type='error'>
+                <Alert dismissible type='error'>
                     <Icon glyph='message-error' /> Error Message.{' '}
                     <a className='fd-link' href='#'>
                         Learn More
@@ -118,7 +118,7 @@ export const AlertComponent = () => {
 
             <h2>Success Alert</h2>
             <DocsTile>
-                <Alert dismissable type='success'>
+                <Alert dismissible type='success'>
                     <Icon glyph='message-success' /> Message Success.{' '}
                     <a className='fd-link' href='#'>
                         Learn More
@@ -131,7 +131,7 @@ export const AlertComponent = () => {
 
             <h2>Information Alert</h2>
             <DocsTile>
-                <Alert dismissable type='information'>
+                <Alert dismissible type='information'>
                     <Icon glyph='message-information' /> Information Message.{' '}
                     <a className='fd-link' href='#'>
                         Learn More
@@ -152,11 +152,11 @@ export const AlertComponent = () => {
                         'enum': ['', 'warning', 'error', 'information', 'success']
                     },
                     {
-                        attribute: 'dismissable',
+                        attribute: 'dismissible',
                         typeOfAttribute: 'boolean'
                     }
                 ]}>
-                <Alert dismissable={false} link='#'
+                <Alert dismissible={false} link='#'
                     linkText='link' type=''>
                     Default alert with a{' '}
                 </Alert>

@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import { DocsTile, DocsText, Separator, Header, Description, Import, Properties } from '../';
 import { SearchInput } from './SearchInput';
+import { Description, DocsText, DocsTile, Header, Import, Properties, Separator } from '../_playground';
+import React, { Component } from 'react';
 
 export class SearchInputComponent extends Component {
     searchData = [
@@ -120,6 +120,18 @@ searchData = [
                         {
                             name: 'compact',
                             description: 'bool - Set to true to enable compact mode.'
+                        },
+                        {
+                            name: 'inputProps',
+                            description: 'object - additional props to be spread to the input control (search box)'
+                        },
+                        {
+                            name: 'listProps',
+                            description: 'object - additional props to be spread to the container of list results'
+                        },
+                        {
+                            name: 'searchBtnProps',
+                            description: 'object - additional props to be spread to the search button'
                         }
                     ]}
                     type='Inputs' />

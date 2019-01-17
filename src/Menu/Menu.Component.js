@@ -1,6 +1,6 @@
 import React from 'react';
-import { DocsTile, DocsText, Separator, Header, Description, Import, Properties } from '../';
-import { Menu, MenuList, MenuItem, MenuGroup } from '../';
+import { Description, DocsText, DocsTile, Header, Import, Properties, Separator } from '../_playground';
+import { Menu, MenuGroup, MenuItem, MenuList } from '../';
 
 export const MenuComponent = () => {
     const menuCode = `<Menu>
@@ -65,23 +65,49 @@ export const MenuComponent = () => {
 
             <Properties
                 properties={[
-                    { name: 'url', description: 'string - href attribute of <a> tag. Use either \'url\' or \'link\'' },
+                    {
+                        name: 'addonBefore',
+                        description: 'bool - when set to true, enables menu items with addon before.'
+                    }
+                ]}
+                type='Inputs' />
+
+            <Properties
+                properties={[
+                    {
+                        name: 'addon',
+                        description: 'string - the name of the SAP icon to be applied as an addon before.'
+                    },
+                    {
+                        name: 'addonProps',
+                        description: 'object - additional props to be spread to the addon section'
+                    },
                     { name: 'link', description: 'string - a router link. Use either \'url\' or \'link\'' },
+                    {
+                        name: 'linkProps',
+                        description: 'object - additional props to be spread to the Menu Item links'
+                    },
                     { name: 'separator', description: 'bool - when set to true, adds a horizontal line (separator).' },
+                    { name: 'url', description: 'string - href attribute of <a> tag. Use either \'url\' or \'link\'' },
+                    {
+                        name: 'urlProps',
+                        description: 'object - additional props to be spread to the Menu Item Url links'
+                    }
+                ]}
+                type='MenuItem Inputs' />
+
+            <Properties
+                properties={[
                     {
                         name: 'title',
                         description: 'string - group header title.'
                     },
                     {
-                        name: 'addonBefore',
-                        description: 'bool - when set to true, enables menu items with addon before.'
-                    },
-                    {
-                        name: 'addon',
-                        description: 'string - the name of the SAP icon to be applied as an addon before.'
+                        name: 'titleProps',
+                        description: 'object - additional props to be spread to the Menu Group title'
                     }
                 ]}
-                type='Inputs' />
+                type='MenuGroup Inputs' />
 
             <Separator />
 

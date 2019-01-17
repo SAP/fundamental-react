@@ -1,7 +1,7 @@
 import { mount } from 'enzyme';
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { Tabs, TabComponent } from './Tabs';
+import { TabComponent, Tabs } from './Tabs';
 
 describe('<Tabs />', () => {
     const defaultIds = [

@@ -1,6 +1,6 @@
+import { Modal } from './Modal';
 import { mount } from 'enzyme';
 import React from 'react';
-import { Modal } from './Modal';
 
 describe('<Modal />', () => {
     const mockOnClose = jest.fn();
@@ -132,23 +132,109 @@ describe('<Modal />', () => {
     describe('Prop spreading', () => {
         test('should allow props to be spread to the Modal component', () => {
             component = mount(
+                <Modal data-sample='Sample' show
+                    title='Title' />
+            );
+
+            expect(component.getDOMNode().attributes['data-sample'].value).toBe(
+                'Sample'
+            );
+        });
+
+        test('should allow props to be spread to the Modal component\'s content section', () => {
+            component = mount(
                 <Modal
-                    data-sample='Sample'
+                    contentProps={{ 'data-sample': 'Sample Title' }}
                     show
                     title='Title' />
             );
 
             expect(
-                component.getDOMNode().attributes['data-sample'].value
-            ).toBe('Sample');
+                component.find('div.fd-modal__content').getDOMNode().attributes[
+                    'data-sample'
+                ].value
+            ).toBe('Sample Title');
         });
 
-        xtest('should allow props to be spread to the Modal component\'s h1 element', () => {
-            // TODO: placeholder for this test description once that functionality is built
+        test('should allow props to be spread to the Modal component\'s header section', () => {
+            component = mount(
+                <Modal
+                    headerProps={{ 'data-sample': 'Sample Title' }}
+                    show
+                    title='Title' />
+            );
+
+            expect(
+                component.find('div.fd-modal__header').getDOMNode().attributes[
+                    'data-sample'
+                ].value
+            ).toBe('Sample Title');
         });
 
-        xtest('should allow props to be spread to the Modal component\'s button element', () => {
+        test('should allow props to be spread to the Modal component\'s h1 element', () => {
+            component = mount(
+                <Modal
+                    show
+                    title='Title'
+                    titleProps={{ 'data-sample': 'Sample Title' }} />
+            );
+
+            expect(
+                component.find('h1').getDOMNode().attributes['data-sample']
+                    .value
+            ).toBe('Sample Title');
+        });
+
+        test('should allow props to be spread to the Modal component\'s body section', () => {
             // TODO: placeholder for this test description once that functionality is built
+            component = mount(
+                <Modal
+                    bodyProps={{ 'data-sample': 'Sample Title' }}
+                    show
+                    title='Title' />
+            );
+
+            expect(
+                component.find('div.fd-modal__body').getDOMNode().attributes[
+                    'data-sample'
+                ].value
+            ).toBe('Sample Title');
+        });
+
+        test('should allow props to be spread to the Modal component\'s footer section', () => {
+            // TODO: placeholder for this test description once that functionality is built
+            component = mount(
+                <Modal
+                    actions={
+                        <React.Fragment>
+                            <button>Cancel</button>
+                            <button>Invite</button>
+                        </React.Fragment>
+                    }
+                    footerProps={{ 'data-sample': 'Sample Title' }}
+                    show
+                    title='Title' />
+            );
+
+            expect(
+                component.find('footer').getDOMNode().attributes['data-sample']
+                    .value
+            ).toBe('Sample Title');
+        });
+
+        test('should allow props to be spread to the Modal component\'s button element', () => {
+            // TODO: placeholder for this test description once that functionality is built
+            component = mount(
+                <Modal
+                    closeProps={{ 'data-sample': 'Sample Button' }}
+                    show
+                    title='Title' />
+            );
+
+            expect(
+                component.find('button').getDOMNode().attributes['data-sample']
+                    .value
+            ).toBe('Sample Button');
         });
     });
 });

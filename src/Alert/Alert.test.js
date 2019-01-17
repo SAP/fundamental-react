@@ -1,24 +1,24 @@
+import { Alert } from './Alert';
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { mount, shallow } from 'enzyme';
-import { Alert } from './Alert';
 
 describe('<Alert />', () => {
     const basicAlert = (
-        <Alert dismissable link='#'
+        <Alert dismissible link='#'
             linkText='link'>
             Default alert with a
         </Alert>
     );
 
     const basicErrorAlert = (
-        <Alert dismissable linkText='link'
+        <Alert dismissible linkText='link'
             type='error'>
             Error message with a
         </Alert>
     );
 
-    const nonDismissableAlert = (
+    const nonDismissibleAlert = (
         <Alert className='blue' link='#'
             linkText='link'>
             Default alert that cannot be dismissed
@@ -40,8 +40,8 @@ describe('<Alert />', () => {
         expect(wrapper.state(['isActive'])).toBeFalsy();
     });
 
-    test('create non-dismissable alert', () => {
-        const component = renderer.create(nonDismissableAlert);
+    test('create non-dismissible alert', () => {
+        const component = renderer.create(nonDismissibleAlert);
         const tree = component.toJSON();
 
         expect(tree).toMatchSnapshot();

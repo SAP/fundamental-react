@@ -1,5 +1,5 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 
 export const Tile = props => {
     const {
@@ -39,10 +39,10 @@ Tile.propTypes = {
 };
 
 export const TileContent = props => {
-    const { title, children, className, ...rest } = props;
+    const { title, children, className, titleProps, ...rest } = props;
     return (
         <div className={`fd-tile__content${className ? ' ' + className : ''}`} {...rest}>
-            <h2 className='fd-tile__title'>{title}</h2>
+            <h2 {...titleProps} className='fd-tile__title'>{title}</h2>
             {children}
         </div>
     );
@@ -50,7 +50,8 @@ export const TileContent = props => {
 
 TileContent.propTypes = {
     className: PropTypes.string,
-    title: PropTypes.string
+    title: PropTypes.string,
+    titleProps: PropTypes.object
 };
 
 export const TileMedia = props => {
@@ -80,10 +81,10 @@ ProductTile.propTypes = {
 };
 
 export const ProductTileContent = props => {
-    const { title, children, className, ...rest } = props;
+    const { title, children, className, titleProps, ...rest } = props;
     return (
         <div className={`fd-product-tile__content${className ? ' ' + className : ''}`} {...rest}>
-            <h2 className='fd-product-tile__title'>{title}</h2>
+            <h2 {...titleProps} className='fd-product-tile__title'>{title}</h2>
             {children}
         </div>
     );
@@ -91,7 +92,8 @@ export const ProductTileContent = props => {
 
 ProductTileContent.propTypes = {
     className: PropTypes.string,
-    title: PropTypes.string
+    title: PropTypes.string,
+    titleProps: PropTypes.object
 };
 
 export const ProductTileMedia = props => {

@@ -1,14 +1,6 @@
+import { Pagination } from '../';
 import React from 'react';
-import {
-    DocsTile,
-    DocsText,
-    Separator,
-    Header,
-    Description,
-    Import,
-    Properties,
-    Pagination
-} from '../';
+import { Description, DocsText, DocsTile, Header, Import, Properties, Separator } from '../_playground';
 
 export const PaginationComponent = () => {
     const handleClick = event => {
@@ -18,13 +10,14 @@ export const PaginationComponent = () => {
         <div>
             <Header>Pagination</Header>
             <Description>
-        Pagination is commonly used for tables and tiles. It allows users to see
-        how many pages of content exist, to navigate and highlights which page
-        they are currently viewing. This control does not handle how many tiles
-        or rows to display in a table. This control simply adds a nice user
-        experience to handle how to navigate through a collection. The handling
-        of which items to display needs to be handled in the function that is
-        passed in the onClick method of the Pagination control.
+                Pagination is commonly used for tables and tiles. It allows
+                users to see how many pages of content exist, to navigate and
+                highlights which page they are currently viewing. This control
+                does not handle how many tiles or rows to display in a table.
+                This control simply adds a nice user experience to handle how to
+                navigate through a collection. The handling of which items to
+                display needs to be handled in the function that is passed in
+                the onClick method of the Pagination control.
             </Description>
             <Import module='Pagination' path='/fundamental-react/src/' />
 
@@ -35,32 +28,57 @@ export const PaginationComponent = () => {
                     {
                         name: 'itemsTotal',
                         description:
-              'number (required) - Total number of items. itemsTotal / itemsPerPage calculates how many navigation items should be shown in the control.'
+                            'number (required) - Total number of items. itemsTotal / itemsPerPage calculates how many navigation items should be shown in the control.'
                     },
                     {
                         name: 'onClick',
                         description:
-              'func (required) - Function to execute on click of page number, previous or next indicator. Page number value is sent to function.'
+                            'func (required) - Function to execute on click of page number, previous or next indicator. Page number value is sent to function.'
                     },
                     {
                         name: 'itemsPerPage',
                         description:
-              'number (default: 10) - Number of items to display on page.'
+                            'number (default: 10) - Number of items to display on page.'
                     },
                     {
                         name: 'initialPage',
                         description:
-              'number (default: page 1) - Initial page to be selected.'
+                            'number (default: page 1) - Initial page to be selected.'
+                    },
+                    {
+                        name: 'displayTotalProps',
+                        description:
+                            'object - additional props to be spread to the display total section'
+                    },
+                    {
+                        name: 'linkProps',
+                        description:
+                            'object - additional props to be spread to the page links'
+                    },
+                    {
+                        name: 'prevProps',
+                        description:
+                            'object - additional props to be spread to the previous button'
+                    },
+                    {
+                        name: 'nextProps',
+                        description:
+                            'object - additional props to be spread to the next button'
+                    },
+                    {
+                        name: 'initialPage',
+                        description:
+                            'number (default: page 1) - Initial page to be selected.'
                     },
                     {
                         name: 'displayTotal',
                         description:
-              'bool (default: true) - Boolean value for whether or not to show total number of items. true - show total number and totalText string, false - hide total number and totalText string.'
+                            'bool (default: true) - Boolean value for whether or not to show total number of items. true - show total number and totalText string, false - hide total number and totalText string.'
                     },
                     {
                         name: 'totalText',
                         description:
-              'string (default: "items") - String to display next to the total number of items.'
+                            'string (default: "items") - String to display next to the total number of items.'
                     }
                 ]}
                 type='Inputs' />
@@ -69,7 +87,8 @@ export const PaginationComponent = () => {
 
             <h2>First Page</h2>
             <Description>
-        When the first page is active, the Back arrow should be disabled.
+                When the first page is active, the Back arrow should be
+                disabled.
             </Description>
             <DocsTile centered>
                 <Pagination itemsTotal={101} onClick={handleClick} />
@@ -81,21 +100,27 @@ export const PaginationComponent = () => {
 
             <h2>Last Page</h2>
             <Description>
-        When the last page is active, the Next arrow should be disabled.
+                When the last page is active, the Next arrow should be disabled.
             </Description>
             <DocsTile centered>
-                <Pagination initialPage={11} itemsTotal={101}
+                <Pagination
+                    initialPage={11}
+                    itemsTotal={101}
                     onClick={handleClick} />
             </DocsTile>
             <DocsText>
-                {'<Pagination itemsTotal={101} initalPage={11} onClick={handleClick}/>'}
+                {
+                    '<Pagination itemsTotal={101} initalPage={11} onClick={handleClick}/>'
+                }
             </DocsText>
             <Separator />
 
             <h2>Items per Page</h2>
             <Description>Set how many items per page.</Description>
             <DocsTile centered>
-                <Pagination itemsPerPage={25} itemsTotal={101}
+                <Pagination
+                    itemsPerPage={25}
+                    itemsTotal={101}
                     onClick={handleClick} />
             </DocsTile>
             <DocsText>
@@ -109,17 +134,21 @@ export const PaginationComponent = () => {
             <h2>Set Initial Page</h2>
             <Description>Set initial page to be selected</Description>
             <DocsTile centered>
-                <Pagination initialPage={6} itemsTotal={101}
+                <Pagination
+                    initialPage={6}
+                    itemsTotal={101}
                     onClick={handleClick} />
             </DocsTile>
             <DocsText>
-                {'<Pagination itemsTotal={101} initalPage={6} onClick={handleClick}/>'}
+                {
+                    '<Pagination itemsTotal={101} initalPage={6} onClick={handleClick}/>'
+                }
             </DocsText>
             <Separator />
 
             <h2>Hide Total</h2>
             <Description>
-        Only show page numbers, Previous and Next controls
+                Only show page numbers, Previous and Next controls
             </Description>
             <DocsTile centered>
                 <Pagination

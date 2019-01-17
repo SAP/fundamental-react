@@ -3,9 +3,9 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import {
     ActionBar,
+    ActionBarActions,
     ActionBarBack,
-    ActionBarHeader,
-    ActionBarActions
+    ActionBarHeader
 } from './ActionBar';
 
 describe('<ActionBar />', () => {
@@ -104,8 +104,13 @@ describe('<ActionBar />', () => {
             ).toBe('Sample');
         });
 
-        xtest('should allow props to be spread to the ActionBarBack component\'s button element', () => {
-            // TODO: placeholder for this test description once that functionality is built
+        test('should allow props to be spread to the ActionBarBack component\'s button element', () => {
+
+            const element = mount(<ActionBarBack buttonProps={{'data-sample': 'Sample'}} />);
+
+            expect(
+                element.find('button').getDOMNode().attributes['data-sample'].value
+            ).toBe('Sample');
         });
 
         test('should allow props to be spread to the ActionBarHeader component', () => {
@@ -116,12 +121,20 @@ describe('<ActionBar />', () => {
             ).toBe('Sample');
         });
 
-        xtest('should allow props to be spread to the ActionBarHeader component\'s h1 element', () => {
-            // TODO: placeholder for this test description once that functionality is built
+        test('should allow props to be spread to the ActionBarHeader component\'s h1 element', () => {
+            const element = mount(<ActionBarHeader titleProps={{'data-sample': 'Sample'}} />);
+
+            expect(
+                element.find('h1').getDOMNode().attributes['data-sample'].value
+            ).toBe('Sample');
         });
 
-        xtest('should allow props to be spread to the ActionBarHeader component\'s p element', () => {
-            // TODO: placeholder for this test description once that functionality is built
+        test('should allow props to be spread to the ActionBarHeader component\'s p element', () => {
+            const element = mount(<ActionBarHeader descriptionProps={{'data-sample': 'Sample'}} />);
+
+            expect(
+                element.find('p').getDOMNode().attributes['data-sample'].value
+            ).toBe('Sample');
         });
 
         test('should allow props to be spread to the ActionBarActions component', () => {

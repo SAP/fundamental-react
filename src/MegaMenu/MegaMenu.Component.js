@@ -1,6 +1,6 @@
 import React from 'react';
-import { DocsTile, DocsText, Separator, Header, Description, Import, Properties } from '../';
-import { MegaMenu, MegaMenuList, MegaMenuGroup } from '../';
+import { Description, DocsText, DocsTile, Header, Import, Properties, Separator } from '../_playground';
+import { MegaMenu, MegaMenuGroup, MegaMenuList } from '../';
 
 export const MegaMenuComponent = () => {
     const defaultMegaMenuCode = `<MegaMenu>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Time } from '../';
-import { DocsTile, DocsText, Separator, Header, Description, Import, Properties } from '../';
+import { Description, DocsText, DocsTile, Header, Import, Properties, Separator } from '../_playground';
 
 export const TimeComponent = () => {
     const defaultTimeCode = '<Time />';

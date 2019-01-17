@@ -1,20 +1,11 @@
-import { mount } from 'enzyme';
-import React from 'react';
-import renderer from 'react-test-renderer';
-import {
-    Tile,
-    TileContent,
-    TileMedia,
-    TileActions,
-    ProductTile,
-    ProductTileContent,
-    ProductTileMedia,
-    TileGrid
-} from './Tile';
-import { Popover } from '../Popover/Popover';
 import { Button } from '../Button/Button';
 import { Identifier } from '../Identifier/Identifier';
-import { Menu, MenuList, MenuItem } from '../Menu/Menu';
+import { mount } from 'enzyme';
+import { Popover } from '../Popover/Popover';
+import React from 'react';
+import renderer from 'react-test-renderer';
+import { Menu, MenuItem, MenuList } from '../Menu/Menu';
+import { ProductTile, ProductTileContent, ProductTileMedia, Tile, TileActions, TileContent, TileGrid, TileMedia } from './Tile';
 
 describe('<Tile />', () => {
     const simpleTile = (
@@ -207,8 +198,12 @@ describe('<Tile />', () => {
             ).toBe('Sample');
         });
 
-        xtest('should allow props to be spread to the TileContent component\'s h2 element', () => {
-            // TODO: placeholder for this test description once that functionality is built
+        test('should allow props to be spread to the TileContent component\'s h2 element', () => {
+            const element = mount(<TileContent titleProps={{ 'data-sample': 'Sample' }} />);
+
+            expect(
+                element.find('h2').getDOMNode().attributes['data-sample'].value
+            ).toBe('Sample');
         });
 
         test('should allow props to be spread to the TileMedia component', () => {
@@ -243,8 +238,12 @@ describe('<Tile />', () => {
             ).toBe('Sample');
         });
 
-        xtest('should allow props to be spread to the ProductTileContent component\'s h2 element', () => {
-            // TODO: placeholder for this test description once that functionality is built
+        test('should allow props to be spread to the ProductTileContent component\'s h2 element', () => {
+            const element = mount(<ProductTileContent titleProps={{ 'data-sample': 'Sample' }} />);
+
+            expect(
+                element.find('h2').getDOMNode().attributes['data-sample'].value
+            ).toBe('Sample');
         });
 
         test('should allow props to be spread to the ProductTileMedia component', () => {

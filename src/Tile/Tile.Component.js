@@ -1,22 +1,6 @@
 import React from 'react';
-import {
-    Tile,
-    TileContent,
-    TileMedia,
-    TileActions,
-    ProductTile,
-    ProductTileContent,
-    ProductTileMedia,
-    TileGrid,
-    Image,
-    Identifier,
-    Popover,
-    Button,
-    Menu,
-    MenuList,
-    MenuItem
-} from '../';
-import { DocsTile, DocsText, Separator, Header, Description, Import, Properties, Playground } from '../';
+import { Button, Identifier, Image, Menu, MenuItem, MenuList, Popover, ProductTile, ProductTileContent, ProductTileMedia, Tile, TileActions, TileContent, TileGrid, TileMedia } from '../';
+import { Description, DocsText, DocsTile, Header, Import, Playground, Properties, Separator } from '../_playground';
 
 export const TileComponent = () => {
     const simpleTileCode = `<Tile>
@@ -139,6 +123,7 @@ export const TileComponent = () => {
                     { name: 'disabled', description: 'bool - when set to true, disables the tile.' },
                     { name: 'image', description: 'string (required) - url of the image used in Product Tile.' },
                     { name: 'rowSpan', description: 'number - the number of rows the tile covers.' },
+                    { name: 'titleProps', description: 'object - additional props to be spread to title of ProductTileContent or TileContent component' },
                     { name: 'columnSpan', description: 'number - the number of columns the tile covers.' },
                     {
                         name: 'colorAccent',

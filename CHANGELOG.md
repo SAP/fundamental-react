@@ -2,6 +2,104 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.1.0-rc.6"></a>
+# [0.1.0-rc.6](https://github.com/SAP/fundamental-react/compare/v0.1.0-rc.5...v0.1.0-rc.6) (2019-01-17)
+
+
+### Bug Fixes
+
+* rename dismissable to dismissible in Alert component ([ec2dd6f](https://github.com/SAP/fundamental-react/commit/ec2dd6f))
+
+
+
+<a name="0.1.0-rc.5"></a>
+# [0.1.0-rc.5](https://github.com/SAP/fundamental-react/compare/v0.1.0-rc.4...v0.1.0-rc.5) (2019-01-17)
+
+
+### Bug Fixes
+
+* update prop spreading for ActionBar ([#219](https://github.com/SAP/fundamental-react/issues/219)) ([bd642f3](https://github.com/SAP/fundamental-react/commit/bd642f3))
+
+
+
+<a name="0.1.0-rc.4"></a>
+# [0.1.0-rc.4](https://github.com/SAP/fundamental-react/compare/v0.1.0-rc.3...v0.1.0-rc.4) (2019-01-17)
+
+
+### Bug Fixes
+
+* update doc, add pagination spread props ([#237](https://github.com/SAP/fundamental-react/issues/237)) ([5e3932f](https://github.com/SAP/fundamental-react/commit/5e3932f))
+
+
+
+<a name="0.1.0-rc.3"></a>
+# [0.1.0-rc.3](https://github.com/SAP/fundamental-react/compare/v0.1.0-rc.2...v0.1.0-rc.3) (2019-01-17)
+
+
+### Bug Fixes
+
+* prop spreading to SearchInput ([#243](https://github.com/SAP/fundamental-react/issues/243)) ([719a699](https://github.com/SAP/fundamental-react/commit/719a699))
+
+
+
+<a name="0.1.0-rc.2"></a>
+# [0.1.0-rc.2](https://github.com/SAP/fundamental-react/compare/v0.1.0-rc.1...v0.1.0-rc.2) (2019-01-17)
+
+
+### Bug Fixes
+
+* prop spreading to breadcrumb ([#223](https://github.com/SAP/fundamental-react/issues/223)) ([fb038c9](https://github.com/SAP/fundamental-react/commit/fb038c9))
+
+
+
+<a name="0.1.0-rc.1"></a>
+# [0.1.0-rc.1](https://github.com/SAP/fundamental-react/compare/v0.1.0-rc.0...v0.1.0-rc.1) (2019-01-17)
+
+
+### Bug Fixes
+
+* props spreading to Menu ([#236](https://github.com/SAP/fundamental-react/issues/236)) ([d51988c](https://github.com/SAP/fundamental-react/commit/d51988c))
+
+
+
+<a name="0.1.0-rc.0"></a>
+# [0.1.0-rc.0](https://github.com/SAP/fundamental-react/compare/v0.0.15-rc.41...v0.1.0-rc.0) (2019-01-17)
+
+
+### Features
+
+* add size-limit to package ([#225](https://github.com/SAP/fundamental-react/issues/225)) ([849b3f0](https://github.com/SAP/fundamental-react/commit/849b3f0))
+
+
+
+<a name="0.0.15-rc.41"></a>
+## [0.0.15-rc.41](https://github.com/SAP/fundamental-react/compare/v0.0.15-rc.40...v0.0.15-rc.41) (2019-01-17)
+
+
+### Bug Fixes
+
+* prop spreading for Tile ([#240](https://github.com/SAP/fundamental-react/issues/240)) ([a3d78f3](https://github.com/SAP/fundamental-react/commit/a3d78f3))
+* prop spreading to DatePicker ([#242](https://github.com/SAP/fundamental-react/issues/242)) ([cd482a2](https://github.com/SAP/fundamental-react/commit/cd482a2))
+* prop spreading to Dropdown ([#241](https://github.com/SAP/fundamental-react/issues/241)) ([1861ab0](https://github.com/SAP/fundamental-react/commit/1861ab0))
+* prop spreading to Modal ([#230](https://github.com/SAP/fundamental-react/issues/230)) ([2c552d8](https://github.com/SAP/fundamental-react/commit/2c552d8))
+
+
+
+<a name="0.0.15-rc.40"></a>
+## [0.0.15-rc.40](https://github.com/SAP/fundamental-react/compare/v0.0.15-rc.37...v0.0.15-rc.40) (2019-01-17)
+
+
+### Bug Fixes
+
+* eslint sort imports ([#220](https://github.com/SAP/fundamental-react/issues/220)) ([31b0edd](https://github.com/SAP/fundamental-react/commit/31b0edd))
+* eslint valid jsdoc ([#203](https://github.com/SAP/fundamental-react/issues/203)) ([6268407](https://github.com/SAP/fundamental-react/commit/6268407))
+* Manual version bump (again) ([#231](https://github.com/SAP/fundamental-react/issues/231)) ([8eb5110](https://github.com/SAP/fundamental-react/commit/8eb5110))
+* Manual version bump to get back into sync ([#229](https://github.com/SAP/fundamental-react/issues/229)) ([92f83ad](https://github.com/SAP/fundamental-react/commit/92f83ad))
+* Only export components when publishing ([#177](https://github.com/SAP/fundamental-react/issues/177)) ([87df4c8](https://github.com/SAP/fundamental-react/commit/87df4c8))
+* prop spreading to Pagination ([#224](https://github.com/SAP/fundamental-react/issues/224)) ([30e1fdb](https://github.com/SAP/fundamental-react/commit/30e1fdb))
+
+
+
 <a name="0.0.15-rc.37"></a>
 ## [0.0.15-rc.37](https://github.com/SAP/fundamental-react/compare/v0.0.15-rc.36...v0.0.15-rc.37) (2019-01-16)
 

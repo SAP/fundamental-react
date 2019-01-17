@@ -1,6 +1,6 @@
 import React from 'react';
-import { ActionBar, ActionBarBack, ActionBarHeader, ActionBarActions, Button, Popover, Menu, MenuList, MenuItem } from '../';
-import { DocsTile, DocsText, Separator, Header, Description, Import, Properties } from '../';
+import { ActionBar, ActionBarActions, ActionBarBack, ActionBarHeader, Button, Menu, MenuItem, MenuList, Popover } from '../';
+import { Description, DocsText, DocsTile, Header, Import, Properties, Separator } from '../_playground';
 
 export const ActionBarComponent = () => {
     const actionBarBackBtnCode = `<ActionBar>
@@ -116,6 +116,18 @@ const clickBackBtn = () => {
                     {
                         name: 'onClick',
                         description: 'func - The function that is executed when the back button is clicked.'
+                    },
+                    {
+                        name: 'buttonProps',
+                        description: 'object - additional props to be spread to the ActionBarBack\'s button.'
+                    },
+                    {
+                        name: 'descriptionProps',
+                        description: 'object - additional props to be spread to the ActionBarHeader\'s description.'
+                    },
+                    {
+                        name: 'titleProps',
+                        description: 'object - additional props to be spread to the ActionBarHeader\'s title.'
                     }
                 ]}
                 type='Inputs' />

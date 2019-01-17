@@ -135,13 +135,13 @@ rules:
     react/sort-prop-types: [2, { 'callbacksLast' : true, 'ignoreCase' : true, 'requiredFirst' : true, } ]
     semi-spacing: 2
     semi: 2
-    #sort-imports: [2, { 'ignoreCase': true, 'ignoreMemberSort': false, 'memberSyntaxSortOrder': ['none', 'single', 'multiple', 'all'] }]
+    sort-imports: [2, { 'ignoreCase': true, 'ignoreMemberSort': false, 'memberSyntaxSortOrder': ['none', 'single', 'multiple', 'all'] }]
     space-before-blocks: 2
     space-before-function-paren: [2, 'never']
     space-infix-ops: 2
     spaced-comment: [0, 'always', { exceptions: ['-']}]
     strict: [2, 'global']
     use-isnan: 2
-    #valid-jsdoc: [2, { prefer: { 'return': 'returns'}}]
+    valid-jsdoc: [2, { prefer: { 'return': 'returns'}}]
     valid-typeof: 2
     wrap-iife: [2, 'any']

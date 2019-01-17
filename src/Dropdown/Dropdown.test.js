@@ -1,9 +1,10 @@
+import { Button } from '../Button/Button';
+import { Dropdown } from './Dropdown';
+import { mount } from 'enzyme';
+import { Popover } from '../Popover/Popover';
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { Dropdown } from './Dropdown';
-import { Popover } from '../Popover/Popover';
 import { Menu, MenuItem, MenuList } from '../Menu/Menu';
-import { Button } from '../Button/Button';
 
 describe('<Dropdown />', () => {
     const defaultMenu = (
@@ -110,8 +111,17 @@ describe('<Dropdown />', () => {
     });
 
     describe('Prop spreading', () => {
-        xtest('should allow props to be spread to the Dropdown component', () => {
-            // TODO: placeholder for this test description once that functionality is built
+        test('should allow props to be spread to the Dropdown component', () => {
+            const element = mount(
+                <Dropdown data-sample='Sample'>
+                    <Popover
+                        body={defaultMenu}
+                        control={<Button dropdown>Select</Button>}
+                        noArrow />
+                </Dropdown>
+            );
+
+            expect(element.getDOMNode().attributes['data-sample'].value).toBe('Sample');
         });
     });
 });

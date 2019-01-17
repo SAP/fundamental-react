@@ -1,14 +1,6 @@
-import React, { Component } from 'react';
-import {
-    DocsTile,
-    DocsText,
-    Separator,
-    Header,
-    Description,
-    Import,
-    Properties
-} from '../';
 import { MultiInput } from '../';
+import { Description, DocsText, DocsTile, Header, Import, Properties, Separator } from '../_playground';
+import React, { Component } from 'react';
 
 export class MultiInputComponent extends Component {
   data = [

@@ -1,6 +1,6 @@
 {
   "name": "fundamental-react",
-  "version": "0.0.15-rc.37",
+  "version": "0.1.0-rc.6",
   "private": false,
   "license": "Apache-2.0",
   "homepage": "https://sap.github.io/fundamental-react",
@@ -14,13 +14,15 @@
     "build-js": "node scripts/build.js",
     "build:lint:fix": "eslint --fix 'src/**' --ext .js,.jsx --env browser,node",
     "build:lint": "eslint 'src/**' --ext .js,.jsx --env browser,node",
-    "build": "rm -rf dist && NODE_ENV=production babel src --out-dir dist --copy-files --ignore __tests__,spec.js,test.js,__snapshots__,Component.js",
+    "build": "rm -rf dist && NODE_ENV=production babel src --out-dir dist --ignore \"src/**/*.spec.js\",\"src/**/*.test.js\",\"src/**/*.Component.js\",\"src/_playground/*\"",
     "deploy": "gh-pages -d build",
     "lint:fix": "npm run build:lint:fix",
     "lint:pre-commit": "printf \"running pre-commit lint...\"  && npm run lint && printf \"done!\n\"",
     "lint": "npm run build:lint",
     "predeploy": "npm run build",
     "release": "./ci-scripts/publish_release.sh",
+    "size": "npm run build && size-limit",
+    "size:debug": "npm run build && size-limit --why",
     "start-js": "node scripts/start.js",
     "start": "node scripts/start.js",
     "std-version:release": "standard-version -m \"chore(release): version %s\"",
@@ -93,6 +95,7 @@
     "react-test-renderer": "^16.6.3",
     "resolve": "1.8.1",
     "sass-loader": "7.1.0",
+    "size-limit": "^0.21.1",
     "standard-version": "^4.4.0",
     "style-loader": "0.23.0",
     "terser-webpack-plugin": "1.1.0",
@@ -124,7 +127,7 @@
       "src/**/*.{js,jsx,ts,tsx}",
       "!src/{App,Routes,index,registerServiceWorker}.js",
       "!src/**/*.Component.js",
-      "!src/documentation/**"
+      "!src/_playground/**"
     ],
     "resolver": "jest-pnp-resolver",
     "setupFiles": [

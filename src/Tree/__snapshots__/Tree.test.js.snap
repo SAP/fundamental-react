@@ -77,6 +77,7 @@ exports[`<Tree /> create tree component 1`] = `
         </div>
         <div
           className="fd-dropdown"
+          isContextual={true}
         />
       </div>
     </li>
@@ -116,6 +117,7 @@ exports[`<Tree /> create tree component 1`] = `
         </div>
         <div
           className="fd-dropdown"
+          isContextual={true}
         />
       </div>
     </li>
@@ -149,6 +151,7 @@ exports[`<Tree /> create tree component 1`] = `
         </div>
         <div
           className="fd-dropdown"
+          isContextual={true}
         />
       </div>
     </li>
@@ -193,6 +196,7 @@ exports[`<Tree /> create tree component 1`] = `
         </div>
         <div
           className="fd-dropdown"
+          isContextual={true}
         />
       </div>
     </li>
@@ -282,6 +286,7 @@ exports[`<Tree /> create tree component 2`] = `
         </div>
         <div
           className="fd-dropdown"
+          isContextual={true}
         />
       </div>
     </li>
@@ -321,6 +326,7 @@ exports[`<Tree /> create tree component 2`] = `
         </div>
         <div
           className="fd-dropdown"
+          isContextual={true}
         />
       </div>
     </li>
