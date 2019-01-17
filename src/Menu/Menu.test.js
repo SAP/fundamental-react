@@ -131,16 +131,56 @@ describe('<Menu />', () => {
             ).toBe('Sample');
         });
 
-        xtest('should allow props to be spread to the MenuItem component\'s addon div element', () => {
-            // TODO: placeholder for this test description once that functionality is built
+        test('should allow props to be spread to the MenuItem component\'s addon div element', () => {
+            const element = mount(
+                <MemoryRouter>
+                    <Menu addonBefore>
+                        <MenuList>
+                            <MenuItem link='/'>Option 1</MenuItem>
+                            <MenuItem addon='accept' addonProps={{ 'data-sample': 'Sample' }}
+                                link='/' >
+                                Option 2
+                            </MenuItem>
+                            <MenuItem link='/'>Option 3</MenuItem>
+                            <MenuItem link='/'>Option 4</MenuItem>
+                        </MenuList>
+                    </Menu>
+                </MemoryRouter>);
+
+            expect(
+                element.find('div.fd-menu__addon-before').getDOMNode().attributes['data-sample'].value
+            ).toBe('Sample');
         });
 
-        xtest('should allow props to be spread to the MenuItem component\'s Link component', () => {
-            // TODO: placeholder for this test description once that functionality is built
+        test('should allow props to be spread to the MenuItem component\'s Link component', () => {
+            const element = mount(
+                <MemoryRouter>
+                    <Menu>
+                        <MenuList>
+                            <MenuItem link='/' linkProps={{ 'data-sample': 'Sample' }} />
+                        </MenuList>
+                    </Menu>
+                </MemoryRouter>);
+
+            expect(
+                element.find('a.fd-menu__item').getDOMNode().attributes['data-sample'].value
+            ).toBe('Sample');
         });
 
-        xtest('should allow props to be spread to the MenuItem component\'s a element', () => {
-            // TODO: placeholder for this test description once that functionality is built
+        test('should allow props to be spread to the MenuItem component\'s a element', () => {
+            const element = mount(
+                <MemoryRouter>
+                    <Menu>
+                        <MenuList>
+                            <MenuItem url='/' urlProps={{ 'data-sample': 'Sample' }} />
+                        </MenuList>
+                    </Menu>
+                </MemoryRouter>
+            );
+
+            expect(
+                element.find('a.fd-menu__item').getDOMNode().attributes['data-sample'].value
+            ).toBe('Sample');
         });
 
         test('should allow props to be spread to the MenuGroup component', () => {
@@ -148,6 +188,14 @@ describe('<Menu />', () => {
 
             expect(
                 element.getDOMNode().attributes['data-sample'].value
+            ).toBe('Sample');
+        });
+
+        test('should allow props to be spread to the MenuGroup h1 component', () => {
+            const element = mount(<MenuGroup titleProps={{ 'data-sample': 'Sample' }} />);
+
+            expect(
+                element.find('h1').getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
         });
     });
