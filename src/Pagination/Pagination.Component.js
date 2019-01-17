@@ -46,6 +46,21 @@ export const PaginationComponent = () => {
                             'number (default: page 1) - Initial page to be selected.'
                     },
                     {
+                        name: 'displayTotalProps',
+                        description:
+                            'object - additional props to be spread to the display total section'
+                    },
+                    {
+                        name: 'linkProps',
+                        description:
+                            'object - additional props to be spread to the page links'
+                    },
+                    {
+                        name: 'initialPage',
+                        description:
+                            'number (default: page 1) - Initial page to be selected.'
+                    },
+                    {
                         name: 'displayTotal',
                         description:
                             'bool (default: true) - Boolean value for whether or not to show total number of items. true - show total number and totalText string, false - hide total number and totalText string.'
