@@ -21,7 +21,7 @@
     "lint": "npm run build:lint",
     "predeploy": "npm run build",
     "release": "./ci-scripts/publish_release.sh",
-    "size": "size-limit",
+    "size": "npm run build && size-limit",
     "size:debug": "npm run build && size-limit --why",
     "start-js": "node scripts/start.js",
     "start": "node scripts/start.js",
