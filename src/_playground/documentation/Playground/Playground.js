@@ -307,7 +307,7 @@ export class Playground extends Component {
           case 'alert':
               componentToGenerate = (
                   <Alert
-                      dismissable={this.state.childs.dismissable}
+                      dismissible={this.state.childs.dismissible}
                       link={this.state.childs.link}
                       linkText={this.state.childs.linkText}
                       type={this.state.childs.type}>
