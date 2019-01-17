@@ -62,12 +62,20 @@ describe('<Alert />', () => {
             ).toBe('Sample');
         });
 
-        xtest('should allow props to be spread to the Alert component\'s button element when dismissible', () => {
-            // TODO: placeholder for this test description once that functionality is built
+        test('should allow props to be spread to the Alert component\'s button element when dismissable', () => {
+            const element = mount(<Alert buttonProps={{'data-sample': 'Sample'}} dismissible />);
+
+            expect(
+                element.find('button').getDOMNode().attributes['data-sample'].value
+            ).toBe('Sample');
         });
 
-        xtest('should allow props to be spread to the Alert component\'s a element when link provided', () => {
-            // TODO: placeholder for this test description once that functionality is built
+        test('should allow props to be spread to the Alert component\'s a element when link provided', () => {
+            const element = mount(<Alert link='javascript:void(0)' linkProps={{'data-sample': 'Sample'}} />);
+
+            expect(
+                element.find('a').getDOMNode().attributes['data-sample'].value
+            ).toBe('Sample');
         });
     });
 });

@@ -17,8 +17,10 @@ export class Alert extends Component {
 
   render() {
       const {
+          buttonProps,
           type,
           link,
+          linkProps,
           linkText,
           dismissible,
           children,
@@ -36,6 +38,7 @@ export class Alert extends Component {
                       {...props}>
                       {dismissible && (
                           <button
+                              {...buttonProps}
                               aria-controls='j2ALl423'
                               aria-label='Close'
                               className='fd-alert__close'
@@ -43,7 +46,10 @@ export class Alert extends Component {
                       )}
                       {children}
                       {link && (
-                          <a className='fd-link' href={link}>
+                          <a
+                              {...linkProps}
+                              className='fd-link'
+                              href={link}>
                               {linkText}{' '}
                               <span className='sap-icon--arrow-right sap-icon--s' />
                           </a>
@@ -56,9 +62,11 @@ export class Alert extends Component {
 }
 
 Alert.propTypes = {
+    buttonProps: PropTypes.object,
     className: PropTypes.string,
     dismissible: PropTypes.bool,
     link: PropTypes.string,
+    linkProps: PropTypes.object,
     linkText: PropTypes.string,
     type: PropTypes.oneOf(['', 'warning', 'error', 'success', 'information'])
 };
