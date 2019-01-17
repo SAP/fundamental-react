@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.1.0-rc.4"></a>
+# [0.1.0-rc.4](https://github.com/SAP/fundamental-react/compare/v0.1.0-rc.3...v0.1.0-rc.4) (2019-01-17)
+
+
+### Bug Fixes
+
+* update doc, add pagination spread props ([#237](https://github.com/SAP/fundamental-react/issues/237)) ([5e3932f](https://github.com/SAP/fundamental-react/commit/5e3932f))
+
+
+
 <a name="0.1.0-rc.3"></a>
 # [0.1.0-rc.3](https://github.com/SAP/fundamental-react/compare/v0.1.0-rc.2...v0.1.0-rc.3) (2019-01-17)
 
