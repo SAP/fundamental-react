@@ -123,6 +123,7 @@ export const TileComponent = () => {
                     { name: 'disabled', description: 'bool - when set to true, disables the tile.' },
                     { name: 'image', description: 'string (required) - url of the image used in Product Tile.' },
                     { name: 'rowSpan', description: 'number - the number of rows the tile covers.' },
+                    { name: 'titleProps', description: 'object - additional props to be spread to title of ProductTileContent or TileContent component' },
                     { name: 'columnSpan', description: 'number - the number of columns the tile covers.' },
                     {
                         name: 'colorAccent',
