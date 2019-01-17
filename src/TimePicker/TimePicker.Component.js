@@ -38,6 +38,15 @@ export const TimePickerComponent = () => {
                     }, {
                         name: 'time',
                         description: 'object - The time component values , contains four properties: hour with values from 01 to 12 when format12Hours is true or 00 to 23 when format12Hours is false, minute with values from 00 to 59, second with values from 00 to 59, meridiem with values 0(am), 1(pm)'
+                    }, {
+                        name: 'buttonProps',
+                        description: 'object - Additional props to be spread to the TimePicker component\'s button element.'
+                    }, {
+                        name: 'inputProps',
+                        description: 'object - Additional props to be spread to the TimePicker component\'s input element.'
+                    }, {
+                        name: 'timeProps',
+                        description: 'object - Additional props to be spread to the TimePicker component\'s Time component.'
                     }
                 ]}
                 type='Inputs' />

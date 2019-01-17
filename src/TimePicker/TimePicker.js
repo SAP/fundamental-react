@@ -9,10 +9,12 @@ const VALID = 'fd-input';
 class TimePickerItem extends Component {
     static propTypes = {
         buttonID: PropTypes.string,
+        buttonProps: PropTypes.object,
         disabled: PropTypes.bool,
         format12Hours: PropTypes.bool,
         id: PropTypes.string,
         inputId: PropTypes.string,
+        inputProps: PropTypes.object,
         isValid: PropTypes.bool,
         length: PropTypes.number,
         placeholder: PropTypes.string,
@@ -234,11 +236,12 @@ class TimePickerItem extends Component {
         this.setState({ style: VALID });
     };
     render() {
-        const { disabled } = this.props;
+        const { disabled, inputProps, buttonProps } = this.props;
         return (
             <div className='fd-popover__control'>
                 <div className='fd-input-group fd-input-group--after'>
                     <input
+                        {...inputProps}
                         className={this.state.style}
                         id={this.state.inputId}
                         onBlur={this.onBlur}
@@ -250,6 +253,7 @@ class TimePickerItem extends Component {
                         value={this.props.value} />
                     <span className='fd-input-group__addon fd-input-group__addon--after fd-input-group__addon--button '>
                         <button
+                            {...buttonProps}
                             aria-controls='rthHR811'
                             aria-expanded='false'
                             aria-haspopup='true'
@@ -265,14 +269,17 @@ class TimePickerItem extends Component {
 
 export class TimePicker extends React.Component {
     static propTypes = {
+        buttonProps: PropTypes.object,
         disabled: PropTypes.bool,
         format12Hours: PropTypes.bool,
         id: PropTypes.string,
+        inputProps: PropTypes.object,
         showHour: PropTypes.bool,
         showMinute: PropTypes.bool,
         showSecond: PropTypes.bool,
         spinners: PropTypes.bool,
         time: PropTypes.object,
+        timeProps: PropTypes.object,
         value: PropTypes.string
     };
     static defaultProps = {
@@ -375,14 +382,32 @@ export class TimePicker extends React.Component {
     //   return value;
     // };
     render() {
-        const { id, ...props } = this.props;
+        const {
+            id,
+            inputProps,
+            buttonProps,
+            disabled,
+            format12Hours,
+            showHour,
+            showMinute,
+            showSecond,
+            spinners,
+            time,
+            value,
+            timeProps,
+            ...props
+        } = this.props;
         const { popoverId, timeId } = this.state;
         return (
-            <div className='fd-time-picker' id={id}>
+            <div
+                {...props}
+                className='fd-time-picker'
+                id={id}>
                 <div className='fd-popover fd-popover--no-arrow'>
                     <Popover
                         body={
                             <Time
+                                {...timeProps}
                                 disabled={this.state.disabled}
                                 format12Hours={this.state.format12Hours}
                                 id={timeId}
@@ -396,10 +421,16 @@ export class TimePicker extends React.Component {
                         control={
                             <TimePickerItem
                                 {...props}
+                                buttonProps={buttonProps}
                                 disabled={this.state.disabled}
+                                format12Hours={format12Hours}
                                 id={id}
+                                inputProps={inputProps}
                                 onChange={this.onChange}
                                 placeholder={this.state.placeholder}
+                                showHour={showHour}
+                                showMinute={showMinute}
+                                showSecond={showSecond}
                                 time={this.state.time}
                                 updateTime={this.updateTime}
                                 updateValue={this.updateValue}

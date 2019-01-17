@@ -264,16 +264,35 @@ describe('<TimePicker />', () => {
     });
 
     describe('Prop spreading', () => {
-        xtest('should allow props to be spread to the TimePicker component', () => {
-            // TODO: placeholder for this test description once that functionality is built
-
-            // NOTE: there are numerous other elements and components contained within TimePicker
-            // so there should be tests added for each once the functionality is present.
-
+        test('should allow props to be spread to the TimePicker component', () => {
             const element = mount(<TimePicker data-sample='Sample' />);
 
             expect(
                 element.getDOMNode().attributes['data-sample'].value
+            ).toBe('Sample');
+        });
+
+        test('should allow props to be spread to the TimePicker component\'s TimePickerItem component\'s input element', () => {
+            const element = mount(<TimePicker id='id' inputProps={{'data-sample': 'Sample'}} />);
+
+            expect(
+                element.find('#id-input').getDOMNode().attributes['data-sample'].value
+            ).toBe('Sample');
+        });
+
+        test('should allow props to be spread to the TimePicker component\'s TimePickerItem component\'s button element', () => {
+            const element = mount(<TimePicker buttonProps={{'data-sample': 'Sample'}} id='id' />);
+
+            expect(
+                element.find('#id-button').getDOMNode().attributes['data-sample'].value
+            ).toBe('Sample');
+        });
+
+        test('should allow props to be spread to the TimePicker component\'s Time component', () => {
+            const element = mount(<TimePicker id='id' timeProps={{'data-sample': 'Sample'}} />);
+
+            expect(
+                element.find('#id-time').first().getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
         });
     });
