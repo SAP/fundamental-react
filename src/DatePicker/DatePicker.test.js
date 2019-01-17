@@ -242,12 +242,20 @@ describe('<DatePicker />', () => {
             ).toBe('Sample');
         });
 
-        xtest('should allow props to be spread to the DatePicker component\'s input element', () => {
-            // TODO: placeholder for this test description once that functionality is built
+        test('should allow props to be spread to the DatePicker component\'s input element', () => {
+            const element = mount(<DatePicker inputProps={{ 'data-sample': 'Sample' }} />);
+
+            expect(
+                element.find('input').getDOMNode().attributes['data-sample'].value
+            ).toBe('Sample');
         });
 
-        xtest('should allow props to be spread to the DatePicker component\'s button element', () => {
-            // TODO: placeholder for this test description once that functionality is built
+        test('should allow props to be spread to the DatePicker component\'s button element', () => {
+            const element = mount(<DatePicker buttonProps={{ 'data-sample': 'Sample' }} />);
+
+            expect(
+                element.find('button.fd-popover__control.fd-button--light.sap-icon--calendar').getDOMNode().attributes['data-sample'].value
+            ).toBe('Sample');
         });
 
         xtest('should allow props to be spread to the DatePicker component\'s Calendar component\'s month list ul element', () => {
