@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.1.0-rc.6"></a>
+# [0.1.0-rc.6](https://github.com/SAP/fundamental-react/compare/v0.1.0-rc.5...v0.1.0-rc.6) (2019-01-17)
+
+
+### Bug Fixes
+
+* rename dismissable to dismissible in Alert component ([ec2dd6f](https://github.com/SAP/fundamental-react/commit/ec2dd6f))
+
+
+
 <a name="0.1.0-rc.5"></a>
 # [0.1.0-rc.5](https://github.com/SAP/fundamental-react/compare/v0.1.0-rc.4...v0.1.0-rc.5) (2019-01-17)
 
