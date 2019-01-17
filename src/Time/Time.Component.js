@@ -56,7 +56,7 @@ export const TimeComponent = () => {
                     },
                     {
                         name: 'hoursUpButtonProps',
-                        description: 'object - Additional props to be spread to the Time component\'s hours down button element.'
+                        description: 'object - Additional props to be spread to the Time component\'s hours up button element.'
                     },
                     {
                         name: 'hoursInputProps',
@@ -68,7 +68,7 @@ export const TimeComponent = () => {
                     },
                     {
                         name: 'minutesUpButtonProps',
-                        description: 'object - Additional props to be spread to the Time component\'s minutes down button element.'
+                        description: 'object - Additional props to be spread to the Time component\'s minutes up button element.'
                     },
                     {
                         name: 'minutesInputProps',
@@ -80,7 +80,7 @@ export const TimeComponent = () => {
                     },
                     {
                         name: 'secondsUpButtonProps',
-                        description: 'object - Additional props to be spread to the Time component\'s seconds down button element.'
+                        description: 'object - Additional props to be spread to the Time component\'s seconds up button element.'
                     },
                     {
                         name: 'secondsInputProps',
@@ -92,7 +92,7 @@ export const TimeComponent = () => {
                     },
                     {
                         name: 'meridiemUpButtonProps',
-                        description: 'object - Additional props to be spread to the Time component\'s meridiem down button element.'
+                        description: 'object - Additional props to be spread to the Time component\'s meridiem up button element.'
                     },
                     {
                         name: 'meridiemInputProps',
