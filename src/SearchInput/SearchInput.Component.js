@@ -120,6 +120,18 @@ searchData = [
                         {
                             name: 'compact',
                             description: 'bool - Set to true to enable compact mode.'
+                        },
+                        {
+                            name: 'inputProps',
+                            description: 'object - additional props to be spread to the input control (search box)'
+                        },
+                        {
+                            name: 'listProps',
+                            description: 'object - additional props to be spread to the container of list results'
+                        },
+                        {
+                            name: 'searchBtnProps',
+                            description: 'object - additional props to be spread to the search button'
                         }
                     ]}
                     type='Inputs' />

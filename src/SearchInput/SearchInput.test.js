@@ -211,16 +211,41 @@ describe('<SearchInput />', () => {
             ).toBe('Sample');
         });
 
-        xtest('should allow props to be spread to the SearchInput component\'s input element', () => {
-            // TODO: placeholder for this test description once that functionality is built
+        test('should allow props to be spread to the SearchInput component\'s input element', () => {
+            let element = mount(<SearchInput inputProps={{ 'data-sample': 'Sample' }} />);
+
+            expect(
+                element.find('input').getDOMNode().attributes['data-sample'].value
+            ).toBe('Sample');
+
+            element = mount(<SearchInput inShellbar inputProps={{ 'data-sample': 'Sample1' }} />);
+
+            expect(
+                element.find('input').getDOMNode().attributes['data-sample'].value
+            ).toBe('Sample1');
         });
 
-        xtest('should allow props to be spread to the SearchInput component\'s button element', () => {
-            // TODO: placeholder for this test description once that functionality is built
+        test('should allow props to be spread to the SearchInput component\'s button element', () => {
+            let element = mount(<SearchInput searchBtnProps={{ 'data-sample': 'Sample' }} />);
+
+            expect(
+                element.find('button').getDOMNode().attributes['data-sample'].value
+            ).toBe('Sample');
+
+            element = mount(<SearchInput inShellbar searchBtnProps={{ 'data-sample': 'Sample1' }} />);
+
+            expect(
+                element.find('button').getDOMNode().attributes['data-sample'].value
+            ).toBe('Sample1');
         });
 
-        xtest('should allow props to be spread to the SearchInput component\'s ul element', () => {
-            // TODO: placeholder for this test description once that functionality is built
+        test('should allow props to be spread to the SearchInput component\'s ul element', () => {
+            const element = mount(<SearchInput listProps={{ 'data-sample': 'Sample' }} searchList={searchData} />);
+
+            expect(
+                element.find('ul').getDOMNode().attributes['data-sample'].value
+            ).toBe('Sample');
+
         });
     });
 });
