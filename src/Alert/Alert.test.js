@@ -5,20 +5,20 @@ import { mount, shallow } from 'enzyme';
 
 describe('<Alert />', () => {
     const basicAlert = (
-        <Alert dismissible link='#'
+        <Alert dismissable link='#'
             linkText='link'>
             Default alert with a
         </Alert>
     );
 
     const basicErrorAlert = (
-        <Alert dismissible linkText='link'
+        <Alert dismissable linkText='link'
             type='error'>
             Error message with a
         </Alert>
     );
 
-    const nonDismissibleAlert = (
+    const nonDismissableAlert = (
         <Alert className='blue' link='#'
             linkText='link'>
             Default alert that cannot be dismissed
@@ -40,8 +40,8 @@ describe('<Alert />', () => {
         expect(wrapper.state(['isActive'])).toBeFalsy();
     });
 
-    test('create non-dismissible alert', () => {
-        const component = renderer.create(nonDismissibleAlert);
+    test('create non-dismissable alert', () => {
+        const component = renderer.create(nonDismissableAlert);
         const tree = component.toJSON();
 
         expect(tree).toMatchSnapshot();

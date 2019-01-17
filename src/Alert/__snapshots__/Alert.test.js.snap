@@ -44,6 +44,27 @@ exports[`<Alert /> create basic alert 2`] = `
 </div>
 `;
 
+exports[`<Alert /> create non-dismissable alert 1`] = `
+<div>
+  <div
+    className="fd-alert blue"
+    role="alert"
+  >
+    Default alert that cannot be dismissed
+    <a
+      className="fd-link"
+      href="#"
+    >
+      link
+       
+      <span
+        className="sap-icon--arrow-right sap-icon--s"
+      />
+    </a>
+  </div>
+</div>
+`;
+
 exports[`<Alert /> create non-dismissible alert 1`] = `
 <div>
   <div
