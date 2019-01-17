@@ -5,7 +5,7 @@ import React from 'react';
 // ------------------------------------------- Combobox Input ------------------------------------------
 export const ComboboxInput = ({ placeholder, menu, compact, className, ...props }) => {
     return (
-        <div className={`fd-combobox-input${className ? ' ' + className : ''}`} {...props}>
+        <div {...props} className={`fd-combobox-input${className ? ' ' + className : ''}`}>
             <Popover
                 body={menu}
                 control={
