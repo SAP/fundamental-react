@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.1.0-rc.0"></a>
+# [0.1.0-rc.0](https://github.com/SAP/fundamental-react/compare/v0.0.15-rc.41...v0.1.0-rc.0) (2019-01-17)
+
+
+### Features
+
+* add size-limit to package ([#225](https://github.com/SAP/fundamental-react/issues/225)) ([849b3f0](https://github.com/SAP/fundamental-react/commit/849b3f0))
+
+
+
 <a name="0.0.15-rc.41"></a>
 ## [0.0.15-rc.41](https://github.com/SAP/fundamental-react/compare/v0.0.15-rc.40...v0.0.15-rc.41) (2019-01-17)
 
