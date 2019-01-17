@@ -20,7 +20,9 @@ describe('<Pagination />', () => {
         <Pagination
             itemsTotal={101}
             linkProps={{ 'data-sample': 'Sample' }}
-            onClick={handleClick} />
+            nextProps={{ 'data-sample': 'Next Sample' }}
+            onClick={handleClick}
+            prevProps={{ 'data-sample': 'Prev Sample' }} />
     );
 
     const initialSetPagination = (
@@ -169,7 +171,7 @@ describe('<Pagination />', () => {
             expect(
                 element
                     .find('a')
-                    .at(0)
+                    .at(1)
                     .getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
 
@@ -187,7 +189,7 @@ describe('<Pagination />', () => {
             expect(
                 element.find('a[aria-label="Previous"]').getDOMNode()
                     .attributes['data-sample'].value
-            ).toBe('Sample');
+            ).toBe('Prev Sample');
         });
 
         test('should allow props to be spread to the Pagination component\'s next a element', () => {
@@ -197,7 +199,7 @@ describe('<Pagination />', () => {
                 element.find('a[aria-label="Next"]').getDOMNode().attributes[
                     'data-sample'
                 ].value
-            ).toBe('Sample');
+            ).toBe('Next Sample');
         });
     });
 });

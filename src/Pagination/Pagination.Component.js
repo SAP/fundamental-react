@@ -56,6 +56,16 @@ export const PaginationComponent = () => {
                             'object - additional props to be spread to the page links'
                     },
                     {
+                        name: 'prevProps',
+                        description:
+                            'object - additional props to be spread to the previous button'
+                    },
+                    {
+                        name: 'nextProps',
+                        description:
+                            'object - additional props to be spread to the next button'
+                    },
+                    {
                         name: 'initialPage',
                         description:
                             'number (default: page 1) - Initial page to be selected.'
