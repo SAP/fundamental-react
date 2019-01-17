@@ -79,6 +79,8 @@ export class Pagination extends Component {
             className,
             linkProps,
             displayTotalProps,
+            prevProps,
+            nextProps,
             ...props
         } = this.props;
 
@@ -104,7 +106,7 @@ export class Pagination extends Component {
 
                 <nav className='fd-pagination__nav'>
                     <a
-                        {...linkProps}
+                        {...prevProps}
                         aria-disabled={this.state.selectedPage === 1}
                         aria-label='Previous'
                         className='fd-pagination__link fd-pagination__link--previous'
@@ -112,7 +114,7 @@ export class Pagination extends Component {
                         onClick={this.navigateBack} />
                     {this.createPaginationLinks(this.numberOfPages)}
                     <a
-                        {...linkProps}
+                        {...nextProps}
                         aria-disabled={
                             this.state.selectedPage === this.numberOfPages
                         }
@@ -134,5 +136,7 @@ Pagination.propTypes = {
     initialPage: PropTypes.number,
     itemsPerPage: PropTypes.number,
     linkProps: PropTypes.object,
+    nextProps: PropTypes.object,
+    prevProps: PropTypes.object,
     totalText: PropTypes.string
 };

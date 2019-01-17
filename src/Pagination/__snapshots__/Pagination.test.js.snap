@@ -814,7 +814,7 @@ exports[`<Pagination /> create default Pagination component with linkProps 1`] =
       aria-disabled={true}
       aria-label="Previous"
       className="fd-pagination__link fd-pagination__link--previous"
-      data-sample="Sample"
+      data-sample="Prev Sample"
       href="#"
       onClick={[Function]}
     />
@@ -921,7 +921,7 @@ exports[`<Pagination /> create default Pagination component with linkProps 1`] =
       aria-disabled={false}
       aria-label="Next"
       className="fd-pagination__link fd-pagination__link--next"
-      data-sample="Sample"
+      data-sample="Next Sample"
       href="#"
       onClick={[Function]}
     />
