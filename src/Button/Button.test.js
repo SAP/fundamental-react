@@ -93,8 +93,12 @@ describe('<Button />', () => {
             ).toBe('Sample');
         });
 
-        xtest('should allow props to be spread to the ButtonGroup component', () => {
-            // TODO: placeholder for this test description once that functionality is built
+        test('should allow props to be spread to the ButtonGroup component', () => {
+            const element = mount(<ButtonGroup data-sample='Sample' />);
+
+            expect(
+                element.getDOMNode().attributes['data-sample'].value
+            ).toBe('Sample');
         });
     });
 });
