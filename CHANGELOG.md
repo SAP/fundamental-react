@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.1.0-rc.5"></a>
+# [0.1.0-rc.5](https://github.com/SAP/fundamental-react/compare/v0.1.0-rc.4...v0.1.0-rc.5) (2019-01-17)
+
+
+### Bug Fixes
+
+* update prop spreading for ActionBar ([#219](https://github.com/SAP/fundamental-react/issues/219)) ([bd642f3](https://github.com/SAP/fundamental-react/commit/bd642f3))
+
+
+
 <a name="0.1.0-rc.4"></a>
 # [0.1.0-rc.4](https://github.com/SAP/fundamental-react/compare/v0.1.0-rc.3...v0.1.0-rc.4) (2019-01-17)
 
