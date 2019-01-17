@@ -49,6 +49,54 @@ export const TimeComponent = () => {
                         name: 'time',
                         description:
                             'object - The time component values , contains four properties: hour with values from 01 to 12 when format12Hours is true or 00 to 23 when format12Hours is false, minute with values from 00 to 59, second with values from 00 to 59, meridiem with values 0(am), 1(pm)'
+                    },
+                    {
+                        name: 'hoursDownButtonProps',
+                        description: 'object - Additional props to be spread to the Time component\'s hours down button element.'
+                    },
+                    {
+                        name: 'hoursUpButtonProps',
+                        description: 'object - Additional props to be spread to the Time component\'s hours up button element.'
+                    },
+                    {
+                        name: 'hoursInputProps',
+                        description: 'object - Additional props to be spread to the Time component\'s hours input element.'
+                    },
+                    {
+                        name: 'minutesDownButtonProps',
+                        description: 'object - Additional props to be spread to the Time component\'s minutes down button element.'
+                    },
+                    {
+                        name: 'minutesUpButtonProps',
+                        description: 'object - Additional props to be spread to the Time component\'s minutes up button element.'
+                    },
+                    {
+                        name: 'minutesInputProps',
+                        description: 'object - Additional props to be spread to the Time component\'s minutes input element.'
+                    },
+                    {
+                        name: 'secondsDownButtonProps',
+                        description: 'object - Additional props to be spread to the Time component\'s seconds down button element.'
+                    },
+                    {
+                        name: 'secondsUpButtonProps',
+                        description: 'object - Additional props to be spread to the Time component\'s seconds up button element.'
+                    },
+                    {
+                        name: 'secondsInputProps',
+                        description: 'object - Additional props to be spread to the Time component\'s seconds input element.'
+                    },
+                    {
+                        name: 'meridiemDownButtonProps',
+                        description: 'object - Additional props to be spread to the Time component\'s meridiem down button element.'
+                    },
+                    {
+                        name: 'meridiemUpButtonProps',
+                        description: 'object - Additional props to be spread to the Time component\'s meridiem up button element.'
+                    },
+                    {
+                        name: 'meridiemInputProps',
+                        description: 'object - Additional props to be spread to the Time component\'s meridiem input element.'
                     }
                 ]}
                 type='Inputs' />

@@ -8,7 +8,9 @@ class TimeItem extends Component {
   static propTypes = {
       arialabel: PropTypes.string,
       disabled: PropTypes.bool,
+      downButtonProps: PropTypes.object,
       format12Hours: PropTypes.bool,
+      inputProps: PropTypes.object,
       max: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
       name: PropTypes.string,
       placeholder: PropTypes.string,
@@ -16,6 +18,7 @@ class TimeItem extends Component {
       style: PropTypes.string,
       time: PropTypes.object,
       type: PropTypes.string,
+      upButtonProps: PropTypes.object,
       updateTime: PropTypes.func,
       value: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
   };
@@ -217,12 +220,13 @@ class TimeItem extends Component {
   };
   render() {
       const { style, arialabel } = this.state;
-      const { type, placeholder, disabled, spinners } = this.props;
+      const { type, placeholder, disabled, spinners, upButtonProps, downButtonProps, inputProps } = this.props;
       return (
           <div className='fd-time__item'>
               {spinners ? (
                   <div className='fd-time__control'>
                       <button
+                          {...upButtonProps}
                           aria-label={arialabel.buttonUp}
                           className=' fd-button--light fd-button--xs sap-icon--navigation-up-arrow '
                           disabled={disabled}
@@ -233,6 +237,7 @@ class TimeItem extends Component {
               )}
               <div className='fd-time__input'>
                   <input
+                      {...inputProps}
                       aria-label={type}
                       className={style}
                       maxLength='2'
@@ -246,6 +251,7 @@ class TimeItem extends Component {
               {spinners ? (
                   <div className='fd-time__control'>
                       <button
+                          {...downButtonProps}
                           aria-label={arialabel.buttonDown}
                           className=' fd-button--light fd-button--xs sap-icon--navigation-down-arrow'
                           disabled={disabled}
@@ -263,7 +269,19 @@ export class Time extends Component {
   static propTypes = {
       disabled: PropTypes.bool,
       format12Hours: PropTypes.bool,
+      hoursDownButtonProps: PropTypes.object,
+      hoursInputProps: PropTypes.object,
+      hoursUpButtonProps: PropTypes.object,
       id: PropTypes.string,
+      meridiemDownButtonProps: PropTypes.object,
+      meridiemInputProps: PropTypes.object,
+      meridiemUpButtonProps: PropTypes.object,
+      minutesDownButtonProps: PropTypes.object,
+      minutesInputProps: PropTypes.object,
+      minutesUpButtonProps: PropTypes.object,
+      secondsDownButtonProps: PropTypes.object,
+      secondsInputProps: PropTypes.object,
+      secondsUpButtonProps: PropTypes.object,
       showHour: PropTypes.bool,
       showMinute: PropTypes.bool,
       showSecond: PropTypes.bool,
@@ -344,7 +362,24 @@ export class Time extends Component {
           format12Hours,
           id,
           disabled,
-          spinners
+          spinners,
+          onUpdateTime,
+          onChange,
+          time: timeProp,
+          name,
+          hoursUpButtonProps,
+          hoursDownButtonProps,
+          hoursInputProps,
+          minutesUpButtonProps,
+          minutesDownButtonProps,
+          minutesInputProps,
+          secondsUpButtonProps,
+          secondsDownButtonProps,
+          secondsInputProps,
+          meridiemUpButtonProps,
+          meridiemDownButtonProps,
+          meridiemInputProps,
+          ...props
       } = this.props;
       const { time } = this.state;
       let max;
@@ -354,19 +389,25 @@ export class Time extends Component {
           max = 24;
       }
       return (
-          <div className='fd-time' id={id}>
+          <div
+              {...props}
+              className='fd-time'
+              id={id}>
               {/* Hours */}
               {showHour ? (
                   <TimeItem
                       defaultValue={1}
                       disabled={disabled}
+                      downButtonProps={hoursDownButtonProps}
                       format12Hours={format12Hours}
+                      inputProps={hoursInputProps}
                       max={max}
                       name='hour'
                       placeholder={'hh'}
                       spinners={spinners}
                       time={time}
                       type={'Hours'}
+                      upButtonProps={hoursUpButtonProps}
                       updateTime={this.updateTime}
                       value={time.hour} />
               ) : (
@@ -377,13 +418,16 @@ export class Time extends Component {
                   <TimeItem
                       defaultValue={1}
                       disabled={disabled}
+                      downButtonProps={minutesDownButtonProps}
                       format12Hours={format12Hours}
+                      inputProps={minutesInputProps}
                       max={'60'}
                       name='minute'
                       placeholder={'mm'}
                       spinners={spinners}
                       time={time}
                       type={'Minutes'}
+                      upButtonProps={minutesUpButtonProps}
                       updateTime={this.updateTime}
                       value={this.state.time.minute} />
               ) : (
@@ -394,13 +438,16 @@ export class Time extends Component {
                   <TimeItem
                       defaultValue={1}
                       disabled={disabled}
+                      downButtonProps={secondsDownButtonProps}
                       format12Hours={format12Hours}
+                      inputProps={secondsInputProps}
                       max={'60'}
                       name='second'
                       placeholder={'ss'}
                       spinners={spinners}
                       time={time}
                       type={'Seconds'}
+                      upButtonProps={secondsUpButtonProps}
                       updateTime={this.updateTime}
                       value={this.state.time.second} />
               ) : (
@@ -410,11 +457,14 @@ export class Time extends Component {
               {format12Hours ? (
                   <TimeItem
                       disabled={disabled}
+                      downButtonProps={meridiemDownButtonProps}
+                      inputProps={meridiemInputProps}
                       max={'1'}
                       name='meridiem'
                       spinners={spinners}
                       time={this.state.time}
                       type={'Period'}
+                      upButtonProps={meridiemUpButtonProps}
                       updateTime={this.updateTime}
                       value={CLOCK[this.state.time.meridiem]} />
               ) : (
