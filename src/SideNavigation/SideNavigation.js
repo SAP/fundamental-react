@@ -159,12 +159,12 @@ SideNavList.propTypes = {
 };
 
 export const SideNavGroup = props => {
-    const { title, children, className, headerProps, ...rest } = props;
+    const { title, children, className, titleProps, ...rest } = props;
     return (
         <div
             className={`fd-side-nav__group${className ? ' ' + className : ''}`}
             {...rest}>
-            <h1 {...headerProps} className='fd-side-nav__title'>{title}</h1>
+            <h1 {...titleProps} className='fd-side-nav__title'>{title}</h1>
             {children}
         </div>
     );
@@ -172,5 +172,6 @@ export const SideNavGroup = props => {
 
 SideNavGroup.propTypes = {
     className: PropTypes.string,
-    title: PropTypes.string
+    title: PropTypes.string,
+    titleProps: PropTypes.object
 };

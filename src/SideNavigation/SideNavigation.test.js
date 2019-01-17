@@ -226,7 +226,7 @@ describe('<SideNavigation />', () => {
         });
 
         test('should allow props to be spread to the SideNavGroup component\'s h1 element', () => {
-            const element = mount(<SideNavGroup headerProps={{'data-sample': 'Sample'}} />);
+            const element = mount(<SideNavGroup titleProps={{'data-sample': 'Sample'}} />);
 
             expect(
                 element.find('h1').getDOMNode().attributes['data-sample'].value
