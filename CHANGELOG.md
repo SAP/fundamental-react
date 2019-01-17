@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.0.15-rc.40"></a>
+## [0.0.15-rc.40](https://github.com/SAP/fundamental-react/compare/v0.0.15-rc.37...v0.0.15-rc.40) (2019-01-17)
+
+
+### Bug Fixes
+
+* eslint sort imports ([#220](https://github.com/SAP/fundamental-react/issues/220)) ([31b0edd](https://github.com/SAP/fundamental-react/commit/31b0edd))
+* eslint valid jsdoc ([#203](https://github.com/SAP/fundamental-react/issues/203)) ([6268407](https://github.com/SAP/fundamental-react/commit/6268407))
+* Manual version bump (again) ([#231](https://github.com/SAP/fundamental-react/issues/231)) ([8eb5110](https://github.com/SAP/fundamental-react/commit/8eb5110))
+* Manual version bump to get back into sync ([#229](https://github.com/SAP/fundamental-react/issues/229)) ([92f83ad](https://github.com/SAP/fundamental-react/commit/92f83ad))
+* Only export components when publishing ([#177](https://github.com/SAP/fundamental-react/issues/177)) ([87df4c8](https://github.com/SAP/fundamental-react/commit/87df4c8))
+* prop spreading to Pagination ([#224](https://github.com/SAP/fundamental-react/issues/224)) ([30e1fdb](https://github.com/SAP/fundamental-react/commit/30e1fdb))
+
+
+
 <a name="0.0.15-rc.37"></a>
 ## [0.0.15-rc.37](https://github.com/SAP/fundamental-react/compare/v0.0.15-rc.36...v0.0.15-rc.37) (2019-01-16)
 
