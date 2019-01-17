@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.0.15-rc.41"></a>
+## [0.0.15-rc.41](https://github.com/SAP/fundamental-react/compare/v0.0.15-rc.40...v0.0.15-rc.41) (2019-01-17)
+
+
+### Bug Fixes
+
+* prop spreading for Tile ([#240](https://github.com/SAP/fundamental-react/issues/240)) ([a3d78f3](https://github.com/SAP/fundamental-react/commit/a3d78f3))
+* prop spreading to DatePicker ([#242](https://github.com/SAP/fundamental-react/issues/242)) ([cd482a2](https://github.com/SAP/fundamental-react/commit/cd482a2))
+* prop spreading to Dropdown ([#241](https://github.com/SAP/fundamental-react/issues/241)) ([1861ab0](https://github.com/SAP/fundamental-react/commit/1861ab0))
+* prop spreading to Modal ([#230](https://github.com/SAP/fundamental-react/issues/230)) ([2c552d8](https://github.com/SAP/fundamental-react/commit/2c552d8))
+
+
+
 <a name="0.0.15-rc.40"></a>
 ## [0.0.15-rc.40](https://github.com/SAP/fundamental-react/compare/v0.0.15-rc.37...v0.0.15-rc.40) (2019-01-17)
 
