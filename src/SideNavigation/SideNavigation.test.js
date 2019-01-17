@@ -196,8 +196,7 @@ describe('<SideNavigation />', () => {
     });
 
     describe('Prop spreading', () => {
-        xtest('should allow props to be spread to the SideNav component', () => {
-            // TODO: placeholder for this test description once that functionality is built
+        test('should allow props to be spread to the SideNav component', () => {
             const element = mount(<SideNav data-sample='Sample' />);
 
             expect(
@@ -226,8 +225,12 @@ describe('<SideNavigation />', () => {
             ).toBe('Sample');
         });
 
-        xtest('should allow props to be spread to the SideNavGroup component\'s h1 element', () => {
-            // TODO: placeholder for this test description once that functionality is built
+        test('should allow props to be spread to the SideNavGroup component\'s h1 element', () => {
+            const element = mount(<SideNavGroup titleProps={{'data-sample': 'Sample'}} />);
+
+            expect(
+                element.find('h1').getDOMNode().attributes['data-sample'].value
+            ).toBe('Sample');
         });
     });
 });

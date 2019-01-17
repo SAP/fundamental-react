@@ -3,9 +3,9 @@ import { BrowserRouter, Link } from 'react-router-dom';
 import React, { Component } from 'react';
 
 export const SideNav = props => {
-    const { icons, children } = props;
+    const { icons, children, ...rest } = props;
     return (
-        <nav className={`fd-side-nav${icons ? ' fd-side-nav--icons' : ''}`}>
+        <nav {...rest} className={`fd-side-nav${icons ? ' fd-side-nav--icons' : ''}`}>
             {children}
         </nav>
     );
@@ -159,12 +159,12 @@ SideNavList.propTypes = {
 };
 
 export const SideNavGroup = props => {
-    const { title, children, className, ...rest } = props;
+    const { title, children, className, titleProps, ...rest } = props;
     return (
         <div
             className={`fd-side-nav__group${className ? ' ' + className : ''}`}
             {...rest}>
-            <h1 className='fd-side-nav__title'>{title}</h1>
+            <h1 {...titleProps} className='fd-side-nav__title'>{title}</h1>
             {children}
         </div>
     );
@@ -172,5 +172,6 @@ export const SideNavGroup = props => {
 
 SideNavGroup.propTypes = {
     className: PropTypes.string,
-    title: PropTypes.string
+    title: PropTypes.string,
+    titleProps: PropTypes.object
 };
