@@ -201,29 +201,31 @@ describe('<Forms />', () => {
         </FormFieldset>
     );
 
+    const radioInputs = [
+        {
+            id: 'radio-1',
+            name: 'radio-1',
+            value: 'radio-1',
+            label: 'Option 1'
+        },
+        {
+            id: 'radio-2',
+            name: 'radio-2',
+            value: 'radio-2',
+            label: 'Option 2'
+        },
+        {
+            id: 'radio-3',
+            name: 'radio-3',
+            value: 'radio-3',
+            label: 'Option 3'
+        }
+    ];
+
     const formRadio = (
         <FormRadio
             defaultChecked='radio-2'
-            inputs={[
-                {
-                    id: 'radio-1',
-                    name: 'radio-1',
-                    value: 'radio-1',
-                    label: 'Option 1'
-                },
-                {
-                    id: 'radio-2',
-                    name: 'radio-2',
-                    value: 'radio-2',
-                    label: 'Option 2'
-                },
-                {
-                    id: 'radio-3',
-                    name: 'radio-3',
-                    value: 'radio-3',
-                    label: 'Option 3'
-                }
-            ]} />
+            inputs={radioInputs} />
     );
 
     test('create form item', () => {
@@ -277,8 +279,7 @@ describe('<Forms />', () => {
             ).toBe('Sample');
         });
 
-        xtest('should allow props to be spread to the FormItem component', () => {
-            // TODO: placeholder for this test description once that functionality is built
+        test('should allow props to be spread to the FormItem component', () => {
             const element = mount(<FormItem data-sample='Sample' />);
 
             expect(
@@ -312,7 +313,7 @@ describe('<Forms />', () => {
 
         xtest('should allow props to be spread to the FormRadio component', () => {
             // TODO: placeholder for this test description once that functionality is built
-            const element = mount(<FormRadio data-sample='Sample' />);
+            const element = mount(<FormRadio data-sample='Sample' inputs={radioInputs} />);
 
             expect(
                 element.getDOMNode().attributes['data-sample'].value
@@ -352,8 +353,7 @@ describe('<Forms />', () => {
             ).toBe('Sample');
         });
 
-        xtest('should allow props to be spread to the FormSet component', () => {
-            // TODO: placeholder for this test description once that functionality is built
+        test('should allow props to be spread to the FormSet component', () => {
             const element = mount(<FormSet data-sample='Sample' />);
 
             expect(
