@@ -73,6 +73,18 @@ export const MenuComponent = () => {
                         description: 'string - group header title.'
                     },
                     {
+                        name: 'addonProps',
+                        description: 'object - additional props to be spread to the addon section'
+                    },
+                    {
+                        name: 'linkProps',
+                        description: 'object - additional props to be spread to the Menu links'
+                    },
+                    {
+                        name: 'titleProps',
+                        description: 'object - additional props to be spread to the Menu Group title'
+                    },
+                    {
                         name: 'addonBefore',
                         description: 'bool - when set to true, enables menu items with addon before.'
                     },

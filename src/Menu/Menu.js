@@ -22,24 +22,27 @@ export const MenuList = ({ children, className, ...props }) => {
 };
 
 // ---------------------------------------- Menu Item ----------------------------------------
-export const MenuItem = ({ url, link, isLink, separator, addon, children, onclick, className, ...props }) => {
+export const MenuItem = ({ url, link, isLink, separator, addon, children, onclick, className, addonProps, linkProps, ...props }) => {
     return (
         <React.Fragment>
             <li className={className} {...props}>
                 {addon &&
-                    <div className='fd-menu__addon-before'>{<span className={'sap-icon--' + addon} />}</div>
+                    <div {...addonProps} className='fd-menu__addon-before'>{<span className={'sap-icon--' + addon} />}</div>
                 }
                 {link &&
-                    <Link className={`fd-menu__item${isLink ? ' fd-menu__link' : ''}`} to={link}>
+                    <Link {...linkProps} className={`fd-menu__item${isLink ? ' fd-menu__link' : ''}`}
+                        to={link}>
                         {children}
                     </Link>
                 }
                 {url &&
-                    <a className={`fd-menu__item${isLink ? ' fd-menu__link' : ''}`} href={url}>
+                    <a {...linkProps} className={`fd-menu__item${isLink ? ' fd-menu__link' : ''}`}
+                        href={url}>
                         {children}
                     </a>
                 }
-                {(!url && !link) && <a className='fd-menu__item' onClick={onclick}>{children}</a>}
+                {(!url && !link) && <a className='fd-menu__item' {...linkProps}
+                    onClick={onclick}>{children}</a>}
             </li>
             {separator && <hr />}
         </React.Fragment>
@@ -48,17 +51,19 @@ export const MenuItem = ({ url, link, isLink, separator, addon, children, onclic
 
 MenuItem.propTypes = {
     addon: PropTypes.string,
+    addonProps: PropTypes.object,
     className: PropTypes.string,
     isLink: PropTypes.bool,
+    linkProps: PropTypes.object,
     separator: PropTypes.bool,
     url: PropTypes.string
 };
 
 // ---------------------------------------- Menu Group ----------------------------------------
-export const MenuGroup = ({ title, children, className, ...props }) => {
+export const MenuGroup = ({ title, children, className, titleProps, ...props }) => {
     return (
         <div className={`fd-menu__group${className ? ' ' + className : ''}`} {...props}>
-            <h1 className='fd-menu__title'>{title}</h1>
+            <h1 {...titleProps} className='fd-menu__title'>{title}</h1>
             {children}
         </div>
     );
@@ -66,5 +71,6 @@ export const MenuGroup = ({ title, children, className, ...props }) => {
 
 MenuGroup.propTypes = {
     className: PropTypes.string,
-    title: PropTypes.string
+    title: PropTypes.string,
+    titleProps: PropTypes.object
 };
