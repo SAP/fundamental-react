@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.1.0-rc.7"></a>
+# [0.1.0-rc.7](https://github.com/SAP/fundamental-react/compare/v0.1.0-rc.6...v0.1.0-rc.7) (2019-01-17)
+
+
+### Bug Fixes
+
+* Prop spreading for Forms ([#246](https://github.com/SAP/fundamental-react/issues/246)) ([e4a7a75](https://github.com/SAP/fundamental-react/commit/e4a7a75))
+* Prop spreading for SideNavigation ([#248](https://github.com/SAP/fundamental-react/issues/248)) ([02e1d70](https://github.com/SAP/fundamental-react/commit/02e1d70))
+* Prop spreading for Time ([#233](https://github.com/SAP/fundamental-react/issues/233)) ([27b3398](https://github.com/SAP/fundamental-react/commit/27b3398))
+* prop spreading to ButtonGroup ([#222](https://github.com/SAP/fundamental-react/issues/222)) ([e1f58a4](https://github.com/SAP/fundamental-react/commit/e1f58a4))
+* prop spreading to elements in Alert ([#221](https://github.com/SAP/fundamental-react/issues/221)) ([dca34c0](https://github.com/SAP/fundamental-react/commit/dca34c0))
+
+
+
 <a name="0.1.0-rc.6"></a>
 # [0.1.0-rc.6](https://github.com/SAP/fundamental-react/compare/v0.1.0-rc.5...v0.1.0-rc.6) (2019-01-17)
 
