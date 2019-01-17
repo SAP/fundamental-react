@@ -20,7 +20,7 @@ export class Alert extends Component {
           type,
           link,
           linkText,
-          dismissable,
+          dismissible,
           children,
           className,
           ...props
@@ -29,12 +29,12 @@ export class Alert extends Component {
           <div>
               {this.state.isActive && (
                   <div
-                      className={`fd-alert${dismissable ? ' fd-alert--dismissible' : ''}${
+                      className={`fd-alert${dismissible ? ' fd-alert--dismissible' : ''}${
                           type ? ' fd-alert--' + type : ''
                       }${className ? ' ' + className : ''}`}
                       role='alert'
                       {...props}>
-                      {dismissable && (
+                      {dismissible && (
                           <button
                               aria-controls='j2ALl423'
                               aria-label='Close'
@@ -57,7 +57,7 @@ export class Alert extends Component {
 
 Alert.propTypes = {
     className: PropTypes.string,
-    dismissable: PropTypes.bool,
+    dismissible: PropTypes.bool,
     link: PropTypes.string,
     linkText: PropTypes.string,
     type: PropTypes.oneOf(['', 'warning', 'error', 'success', 'information'])
