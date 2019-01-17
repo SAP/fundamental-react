@@ -77,8 +77,12 @@ export const MenuComponent = () => {
                         description: 'object - additional props to be spread to the addon section'
                     },
                     {
+                        name: 'urlProps',
+                        description: 'object - additional props to be spread to the Menu Item Url links'
+                    },
+                    {
                         name: 'linkProps',
-                        description: 'object - additional props to be spread to the Menu links'
+                        description: 'object - additional props to be spread to the Menu Item links'
                     },
                     {
                         name: 'titleProps',

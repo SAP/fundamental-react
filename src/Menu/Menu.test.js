@@ -172,7 +172,7 @@ describe('<Menu />', () => {
                 <MemoryRouter>
                     <Menu>
                         <MenuList>
-                            <MenuItem linkProps={{ 'data-sample': 'Sample' }} url='/' />
+                            <MenuItem url='/' urlProps={{ 'data-sample': 'Sample' }} />
                         </MenuList>
                     </Menu>
                 </MemoryRouter>
