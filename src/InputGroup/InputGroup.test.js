@@ -247,8 +247,7 @@ describe('<InputGroup />', () => {
     });
 
     describe('Prop spreading', () => {
-        xtest('should allow props to be spread to the InputGroup component (type text, addonPos after)', () => {
-            // TODO: placeholder for this test description once that functionality is built
+        test('should allow props to be spread to the InputGroup component (type text, addonPos after)', () => {
             const element = mount(<InputGroup data-sample='Sample' />);
 
             expect(
@@ -256,48 +255,87 @@ describe('<InputGroup />', () => {
             ).toBe('Sample');
         });
 
-        xtest('should allow props to be spread to the InputGroup component\'s (type text, addonPos after) input element', () => {
-            // TODO: placeholder for this test description once that functionality is built
+        test('should allow props to be spread to the InputGroup component\'s (type text, addonPos after) input element', () => {
+            const element = mount(<InputGroup inputProps={{ 'data-sample': 'Sample' }} />);
+
+            expect(
+                element.find('input').getDOMNode().attributes['data-sample'].value
+            ).toBe('Sample');
         });
 
-        xtest('should allow props to be spread to the InputGroup component for addonPos before (type text)', () => {
-            // TODO: placeholder for this test description once that functionality is built
+        test('should allow props to be spread to the InputGroup component for addonPos before (type text)', () => {
+            const element = mount(<InputGroup addonPos='before' data-sample='Sample' />);
+
+            expect(
+                element.getDOMNode().attributes['data-sample'].value
+            ).toBe('Sample');
         });
 
-        xtest('should allow props to be spread to the InputGroup component for addonPos before\'s (type text) input element', () => {
-            // TODO: placeholder for this test description once that functionality is built
+        test('should allow props to be spread to the InputGroup component for addonPos before\'s (type text) input element', () => {
+            const element = mount(<InputGroup addonPos='before' inputProps={{ 'data-sample': 'Sample' }} />);
+
+            expect(
+                element.find('input').getDOMNode().attributes['data-sample'].value
+            ).toBe('Sample');
         });
 
-        xtest('should allow props to be spread to the InputGroup component for type number', () => {
-            // TODO: placeholder for this test description once that functionality is built
+        test('should allow props to be spread to the InputGroup component for type number', () => {
+            const element = mount(<InputGroup data-sample='Sample' inputType='number' />);
+
+            expect(
+                element.getDOMNode().attributes['data-sample'].value
+            ).toBe('Sample');
         });
 
-        xtest('should allow props to be spread to the InputGroup component for type number\'s input element', () => {
-            // TODO: placeholder for this test description once that functionality is built
+        test('should allow props to be spread to the InputGroup component for type number\'s input element', () => {
+            const element = mount(<InputGroup inputProps={{ 'data-sample': 'Sample' }} inputType='number' />);
+
+            expect(
+                element.find('input').getDOMNode().attributes['data-sample'].value
+            ).toBe('Sample');
         });
 
-        xtest('should allow props to be spread to the InputGroup component for type number\'s up button element', () => {
-            // TODO: placeholder for this test description once that functionality is built
+        test('should allow props to be spread to the InputGroup component for type number\'s up button element', () => {
+            const element = mount(<InputGroup inputType='number' numberUpButtonProps={{ 'data-sample': 'Sample' }} />);
+
+            expect(
+                element.find('button.sap-icon--slim-arrow-up').getDOMNode().attributes['data-sample'].value
+            ).toBe('Sample');
         });
 
-        xtest('should allow props to be spread to the InputGroup component for type number\'s down button element', () => {
-            // TODO: placeholder for this test description once that functionality is built
+        test('should allow props to be spread to the InputGroup component for type number\'s down button element', () => {
+            const element = mount(<InputGroup inputType='number' numberDownButtonProps={{ 'data-sample': 'Sample' }} />);
+
+            expect(
+                element.find('button.sap-icon--slim-arrow-down').getDOMNode().attributes['data-sample'].value
+            ).toBe('Sample');
         });
 
-        xtest('should allow props to be spread to the InputGroup component for type search', () => {
-            // TODO: placeholder for this test description once that functionality is built
+        test('should allow props to be spread to the InputGroup component for type search', () => {
+            const element = mount(<InputGroup data-sample='Sample' inputType='search' />);
+
+            expect(
+                element.getDOMNode().attributes['data-sample'].value
+            ).toBe('Sample');
         });
 
-        xtest('should allow props to be spread to the InputGroup component for type search\'s input element', () => {
-            // TODO: placeholder for this test description once that functionality is built
+        test('should allow props to be spread to the InputGroup component for type search\'s input element', () => {
+            const element = mount(<InputGroup inputProps={{ 'data-sample': 'Sample' }} inputType='search' />);
+
+            expect(
+                element.find('input').getDOMNode().attributes['data-sample'].value
+            ).toBe('Sample');
         });
 
-        xtest('should allow props to be spread to the InputGroup component for type search\'s button element', () => {
-            // TODO: placeholder for this test description once that functionality is built
+        test('should allow props to be spread to the InputGroup component for type search\'s button element', () => {
+            const element = mount(<InputGroup inputType='search' searchButtonProps={{ 'data-sample': 'Sample' }} />);
+
+            expect(
+                element.find('button').getDOMNode().attributes['data-sample'].value
+            ).toBe('Sample');
         });
 
-        xtest('should allow props to be spread to the FormGroup component', () => {
-            // TODO: placeholder for this test description once that functionality is built
+        test('should allow props to be spread to the FormGroup component', () => {
             const element = mount(<FormGroup data-sample='Sample' />);
 
             expect(
