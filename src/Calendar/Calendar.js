@@ -155,7 +155,7 @@ export class Calendar extends Component {
         }
     }
 
-    generateMonths = () => {
+    generateMonths = (monthProps) => {
         let months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
         let listOfMonths = months.map(element=>{
             let shortenedNameMonth = '';
@@ -171,14 +171,14 @@ export class Calendar extends Component {
 
         return (
             <div className='fd-calendar__months'>
-                <ul className='fd-calendar__list'>
+                <ul {...monthProps} className='fd-calendar__list'>
                     {listOfMonths}
                 </ul>
             </div>
         );
     }
 
-    generateYears = () => {
+    generateYears = (yearListProps) => {
 
         let year = this.state.currentYear.getFullYear();
         let years = [year];
@@ -192,7 +192,7 @@ export class Calendar extends Component {
         });
         return (
             <div className='fd-calendar__months'>
-                <ul className='fd-calendar__list'>
+                <ul {...yearListProps} className='fd-calendar__list'>
                     {listOfYears}
                 </ul>
             </div>
@@ -425,7 +425,7 @@ export class Calendar extends Component {
 
       }
 
-      generateDays = () => {
+      generateDays = (tableBodyProps) => {
           //props that allows the developer to pass their preferences
           let blockedDates = this.props.blockedDates;
           let enableRangeSelection = this.props.enableRangeSelection;
@@ -459,39 +459,57 @@ export class Calendar extends Component {
 
               days = [];
           }
-          return <tbody className='fd-calendar__group'>{rows}</tbody>;
+          return <tbody {...tableBodyProps} className='fd-calendar__group'>{rows}</tbody>;
 
       }
 
-      _renderContent = () => {
+      _renderContent = (monthListProps, yearListProps, tableProps, tableHeaderProps, tableBodyProps) => {
           if (this.state.showMonths) {
-              return this.generateMonths();
+              return this.generateMonths(monthListProps);
           }
 
           if (this.state.showYears) {
-              return this.generateYears();
+              return this.generateYears(yearListProps);
           }
 
           return (
               <div className='fd-calendar__dates'>
-                  <table className='fd-calendar__table'>
-                      <thead className='fd-calendar__group'>
+                  <table {...tableProps} className='fd-calendar__table'>
+                      <thead {...tableHeaderProps} className='fd-calendar__group'>
                           {this.generateWeekdays()}
                       </thead>
-                      {this.generateDays()}
+                      {this.generateDays(tableBodyProps)}
                   </table>
               </div>
           );
       }
 
       render() {
-          const { enableRangeSelection, disableWeekends, disableBeforeDate, disableAfterDate, disableWeekday, disablePastDates, disableFutureDates, blockedDates, disabledDates, customDate, className, ...props } = this.props;
+          const {
+              enableRangeSelection,
+              disableWeekends,
+              disableBeforeDate,
+              disableAfterDate,
+              disableWeekday,
+              disablePastDates,
+              disableFutureDates,
+              blockedDates,
+              disabledDates,
+              customDate,
+              className,
+              monthListProps,
+              yearListProps,
+              tableProps,
+              tableHeaderProps,
+              tableBodyProps,
+              ...props
+          } = this.props;
 
           return (
               <div className={`fd-calendar${className ? ' ' + className : ''}`} {...props}>
                   {this.generateNavigation()}
                   <div className='fd-calendar__content'>
-                      {this._renderContent()}
+                      {this._renderContent(monthListProps, yearListProps, tableProps, tableHeaderProps, tableBodyProps)}
                   </div>
               </div>
           );
@@ -507,5 +525,10 @@ Calendar.propTypes = {
     disableFutureDates: PropTypes.bool,
     disablePastDates: PropTypes.bool,
     disableWeekday: PropTypes.arrayOf(PropTypes.string),
-    disableWeekends: PropTypes.bool
+    disableWeekends: PropTypes.bool,
+    monthListProps: PropTypes.object,
+    tableBodyProps: PropTypes.object,
+    tableHeaderProps: PropTypes.object,
+    tableProps: PropTypes.object,
+    yearListProps: PropTypes.object
 };

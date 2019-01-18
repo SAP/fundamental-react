@@ -25,7 +25,12 @@ export const CalendarComponent = () => {
             {name: 'disableFutureDates', description: 'bool - Disables dates that comes after the today date'},
             {name: 'blockedDates', description: 'array of dates - Blocks dates that are between in the blocked dates'},
             {name: 'disabledDates', description: 'array of dates - Disables dates that are between in the disabled dates'},
-            {name: 'enableRangeSelection', description: 'bool - Enable to select two dates'}
+            {name: 'enableRangeSelection', description: 'bool - Enable to select two dates'},
+            {name: 'monthListProps', description: 'object - Props to be spread to month <ul>'},
+            {name: 'tableBodyProps', description: 'object - Props to be spread to <tbody>'},
+            {name: 'tableHeaderProps', description: 'object - Props to be spread to <thead>'},
+            {name: 'tableProps', description: 'object - Props to be spread to month <table>'},
+            {name: 'yearListProps', description: 'object - Props to be spread to year <ul>'}
         ]} type='Inputs' />
 
         <Separator />
