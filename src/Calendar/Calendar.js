@@ -525,5 +525,10 @@ Calendar.propTypes = {
     disableFutureDates: PropTypes.bool,
     disablePastDates: PropTypes.bool,
     disableWeekday: PropTypes.arrayOf(PropTypes.string),
-    disableWeekends: PropTypes.bool
+    disableWeekends: PropTypes.bool,
+    monthListProps: PropTypes.obj,
+    tableBodyProps: PropTypes.obj,
+    tableHeaderProps: PropTypes.obj,
+    tableProps: PropTypes.obj,
+    yearListProps: PropTypes.obj
 };
