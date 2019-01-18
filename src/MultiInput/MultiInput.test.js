@@ -211,20 +211,43 @@ describe('<MultiInput />', () => {
             ).toBe('Sample');
         });
 
-        xtest('should allow props to be spread to the MultiInput component\'s input element', () => {
-            // TODO: placeholder for this test description once that functionality is built
+        test('should allow props to be spread to the MultiInput component\'s input element', () => {
+            const element = mount(<MultiInput data={data} inputProps={{'data-sample': 'Sample'}} />);
+
+            expect(
+                element.find('input').at(0).getDOMNode().attributes['data-sample'].value
+            ).toBe('Sample');
         });
 
-        xtest('should allow props to be spread to the MultiInput component\'s button element', () => {
-            // TODO: placeholder for this test description once that functionality is built
+        test('should allow props to be spread to the MultiInput component\'s button element', () => {
+            const element = mount(<MultiInput buttonProps={{'data-sample': 'Sample'}} data={data} />);
+
+            expect(
+                element.find('button').getDOMNode().attributes['data-sample'].value
+            ).toBe('Sample');
         });
 
-        xtest('should allow props to be spread to the MultiInput component\'s ul element', () => {
-            // TODO: placeholder for this test description once that functionality is built
+        test('should allow props to be spread to the MultiInput component\'s ul element', () => {
+            const element = mount(<MultiInput data={data} listProps={{'data-sample': 'Sample'}} />);
+
+            expect(
+                element.find('ul').getDOMNode().attributes['data-sample'].value
+            ).toBe('Sample');
         });
 
-        xtest('should allow props to be spread to the MultiInput component\'s tags div element', () => {
-            // TODO: placeholder for this test description once that functionality is built
+        test('should allow props to be spread to the MultiInput component\'s tags div element', () => {
+            const element = mount(<MultiInput
+                data={data}
+                onTagsUpdate={mockOnTagsUpdate}
+                tagProps={{'data-sample': 'Sample'}} />);
+
+            element
+                .find('li:first-child>label>input.fd-checkbox[type="checkbox"]')
+                .simulate('change', { target: { value: data[0] } });
+
+            expect(
+                element.find('.fd-multi-input-tags').getDOMNode().attributes['data-sample'].value
+            ).toBe('Sample');
         });
     });
 });
