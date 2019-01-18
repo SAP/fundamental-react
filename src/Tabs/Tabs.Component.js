@@ -26,7 +26,16 @@ export const TabsComponent = () => {
                     { name: 'content', description: 'the content to display when the tab is pressed' },
                     { name: 'disabled', description: 'disable the tab based on true or false' }
                 ]}
-                type='Inputs' />
+                type='Tab Inputs' />
+            <Properties
+                properties={[
+                    { name: 'ids', description: 'array of objects to use for each tab' },
+                    { name: 'className', description: 'string - class to add to tab' },
+                    { name: 'tabLinkProps', description: 'object - additional props to be spread to the tab\s link' },
+                    { name: 'tabProps', description: 'object - additional props to be spread to the tab' }
+                ]}
+                type='TabComponent Inputs' />
+            <Separator />
             <DocsTile>
                 <Tabs>
                     <TabComponent
