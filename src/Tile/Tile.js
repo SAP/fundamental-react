@@ -28,8 +28,8 @@ export const Tile = props => {
 
     return (
         <div
-            className={tileClasses}
-            {...rest}>
+            {...rest}
+            className={tileClasses}>
             {children}
         </div>
     );
@@ -53,7 +53,7 @@ export const TileContent = props => {
     );
 
     return (
-        <div className={tileContentClasses} {...rest}>
+        <div {...rest} className={tileContentClasses}>
             <h2 {...titleProps} className='fd-tile__title'>{title}</h2>
             {children}
         </div>
@@ -74,7 +74,7 @@ export const TileMedia = props => {
         className
     );
 
-    return <div className={tileMediaClasses} {...rest}>{children}</div>;
+    return <div {...rest} className={tileMediaClasses}>{children}</div>;
 };
 
 export const TileActions = props => {
@@ -85,7 +85,7 @@ export const TileActions = props => {
         className
     );
 
-    return <div className={tileActionsClasses} {...rest}>{children}</div>;
+    return <div {...rest} className={tileActionsClasses}>{children}</div>;
 };
 
 export const ProductTile = props => {
@@ -101,8 +101,8 @@ export const ProductTile = props => {
 
     return (
         <div
-            className={tileProductClasses}
-            {...rest}>
+            {...rest}
+            className={tileProductClasses}>
             {children}
         </div>
     );
@@ -122,7 +122,7 @@ export const ProductTileContent = props => {
     );
 
     return (
-        <div className={tileProductContentClasses} {...rest}>
+        <div {...rest} className={tileProductContentClasses}>
             <h2 {...titleProps} className='fd-product-tile__title'>{title}</h2>
             {children}
         </div>
@@ -145,7 +145,8 @@ export const ProductTileMedia = props => {
 
     return (
         <div
-            className={tileProductMediaClasses} {...rest}
+            {...rest}
+            className={tileProductMediaClasses}
             style={{ backgroundImage: 'url(' + image + ')' }} />
     );
 };
@@ -169,7 +170,8 @@ export const TileGrid = props => {
 
     return (
         <div
-            className={tileGridClasses} {...rest}>
+            {...rest}
+            className={tileGridClasses}>
             {children}
         </div>
     );

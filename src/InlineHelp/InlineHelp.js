@@ -18,7 +18,8 @@ export const InlineHelp = ({ text, placement, className, ...props }) => {
     return (
         <span className='fd-inline-help'>
             <span
-                className={inlineHelpClasses} {...props}>
+                {...props}
+                className={inlineHelpClasses}>
                 {text}
             </span>
         </span>

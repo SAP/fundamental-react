@@ -19,8 +19,9 @@ export const Icon = ({ glyph, size, clickHandler, className, ...props }) => {
 
     return (
         <span
+            {...props}
             className={iconClasses}
-            onClick={clickHandler} {...props} />
+            onClick={clickHandler} />
     );
 };
 

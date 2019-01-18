@@ -89,11 +89,11 @@ export class Popover extends Component {
 
         return (
             <div
+                {...rest}
                 className={popoverClasses}
                 ref={node => {
                     this.node = node;
-                }}
-                {...rest}>
+                }}>
                 <div
                     aria-controls={id}
                     aria-expanded={this.state.isExpanded}

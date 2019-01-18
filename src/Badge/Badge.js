@@ -17,7 +17,7 @@ export const Badge = ({ type, modifier, children, className, ...props }) => {
     );
 
     return (
-        <span className={badgeClasses} {...props}>
+        <span {...props} className={badgeClasses}>
             {children}
         </span>
     );
@@ -40,7 +40,7 @@ export const Label = ({ type, children, className, ...props }) => {
         className
     );
 
-    return <span className={labelClasses} {...props}>{children}</span>;
+    return <span {...props} className={labelClasses}>{children}</span>;
 };
 
 Label.propTypes = {
@@ -66,7 +66,8 @@ export const Status = ({ type, glyph, children, className, ...props } ) => {
 
     return (
         <span
-            className={statusClasses} {...props}>
+            {...props}
+            className={statusClasses}>
             {children}
         </span>
     );
@@ -87,8 +88,8 @@ export const Counter = ({ notification, children, className, ...props }) => {
     );
 
     return (
-        <span aria-label='Unread count' className={counterClasses}
-            {...props}>
+        <span {...props} aria-label='Unread count'
+            className={counterClasses}>
             {children}
         </span>
     );

@@ -11,8 +11,8 @@ export const MegaMenu = ({ children, className, ...props }) => {
 
     return (
         <nav
-            className={megaMenuClasses}
-            {...props}>
+            {...props}
+            className={megaMenuClasses}>
             {children}
         </nav>
     );

@@ -31,8 +31,8 @@ export class Toggle extends React.Component {
 
         return (
             <div
-                className={toggleClasses}
-                {...rest}>
+                {...rest}
+                className={toggleClasses}>
                 <label
                     {...labelProps}
                     className='fd-form__label'

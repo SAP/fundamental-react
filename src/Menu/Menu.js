@@ -14,7 +14,7 @@ export const Menu = ({ addonBefore, children, className, ...props }) => {
     );
 
     return (
-        <nav className={menuClasses} {...props}>
+        <nav {...props} className={menuClasses}>
             {children}
         </nav>
     );
@@ -32,7 +32,7 @@ export const MenuList = ({ children, className, ...props }) => {
         className
     );
 
-    return <ul className={menuListClasses} {...props}>{children}</ul>;
+    return <ul {...props} className={menuListClasses}>{children}</ul>;
 };
 
 // ---------------------------------------- Menu Item ----------------------------------------
@@ -61,7 +61,8 @@ export const MenuItem = ({ url, link, isLink, separator, addon, children, onclic
                         {children}
                     </a>
                 }
-                {(!url && !link) && <a className='fd-menu__item' {...linkProps}
+                {(!url && !link) && <a {...linkProps}
+                    className='fd-menu__item'
                     onClick={onclick}>{children}</a>}
             </li>
             {separator && <hr />}

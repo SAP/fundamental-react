@@ -388,7 +388,8 @@ export class DatePicker extends Component {
 
         return (
             <div
-                className={datePickerClasses} {...props}
+                {...props}
+                className={datePickerClasses}
                 ref={component => (this.component = component)}>
                 <div className='fd-popover'>
                     <div className='fd-popover__control'>

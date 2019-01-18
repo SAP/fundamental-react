@@ -10,8 +10,9 @@ export const Token = (props) => {
     );
 
     return (
-        <span className={tokenClasses} onClick={clickHandler}
-            role='button' {...rest}>
+        <span {...rest} className={tokenClasses}
+            onClick={clickHandler}
+            role='button'>
             {children}
         </span>
     );

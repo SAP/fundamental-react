@@ -12,7 +12,8 @@ export const Tabs = props => {
     );
 
     return (
-        <ul {...rest}
+        <ul
+            {...rest}
             className={tabClasses}>
             {children}
         </ul>

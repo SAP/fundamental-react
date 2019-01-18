@@ -19,7 +19,7 @@ export const BreadcrumbItem = ({ url, link, name, className, ...props }) => {
 
     return (
         <BrowserRouter>
-            <li className={breadcrumbItemClasses} {...props}>
+            <li {...props} className={breadcrumbItemClasses}>
                 {link && <Link className='fd-breadcrumb__link' to={{ pathname: link }}>{name}</Link>}
                 {url && <a className='fd-breadcrumb__link' href={url}>{name}</a>}
             </li>

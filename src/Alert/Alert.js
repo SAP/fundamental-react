@@ -23,7 +23,7 @@ export class Alert extends Component {
             link,
             linkProps,
             linkText,
-            dismissable,
+            dismissible,
             children,
             className,
             ...props
@@ -32,7 +32,7 @@ export class Alert extends Component {
         const alertClasses = classnames(
             'fd-alert',
             {
-                'fd-alert--dismissible': dismissable,
+                'fd-alert--dismissible': dismissible,
                 'fd-alert--warning': type === 'warning',
                 'fd-alert--error': type === 'error',
                 'fd-alert--success': type === 'success',
@@ -45,10 +45,10 @@ export class Alert extends Component {
             <div>
                 {this.state.isActive && (
                     <div
+                        {...props}
                         className={alertClasses}
-                        role='alert'
-                        {...props}>
-                        {dismissable && (
+                        role='alert'>
+                        {dismissible && (
                             <button
                                 {...buttonProps}
                                 aria-controls='j2ALl423'
@@ -76,7 +76,7 @@ export class Alert extends Component {
 Alert.propTypes = {
     buttonProps: PropTypes.object,
     className: PropTypes.string,
-    dismissable: PropTypes.bool,
+    dismissible: PropTypes.bool,
     link: PropTypes.string,
     linkProps: PropTypes.object,
     linkText: PropTypes.string,

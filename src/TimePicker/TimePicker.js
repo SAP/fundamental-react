@@ -395,9 +395,9 @@ export class TimePicker extends React.Component {
                         }
                         control={
                             <TimePickerItem
-                                id={id}
                                 {...props}
                                 disabled={this.state.disabled}
+                                id={id}
                                 onChange={this.onChange}
                                 placeholder={this.state.placeholder}
                                 time={this.state.time}

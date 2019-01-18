@@ -9,7 +9,7 @@ export const ListGroup = ({ children, className, ...props }) => {
     );
 
     return (
-        <ul className={listGroupClasses} {...props}>
+        <ul {...props} className={listGroupClasses}>
             {children}
         </ul>
     );
@@ -27,7 +27,7 @@ export const ListGroupItem = ({ children, className, ...props }) => {
     );
 
     return (
-        <li className={listGroupItemClasses} {...props}>
+        <li {...props} className={listGroupItemClasses}>
             {children}
         </li>
 
@@ -46,7 +46,7 @@ export const ListGroupItemActions = ({ children, className, ...props }) => {
     );
 
     return (
-        <span className={listGroupItemActionsClasses} {...props}>
+        <span {...props} className={listGroupItemActionsClasses}>
             {children}
         </span>
     );

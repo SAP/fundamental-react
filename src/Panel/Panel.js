@@ -14,7 +14,7 @@ export const Panel = props => {
         className
     );
 
-    return <div className={panelClasses} {...rest}>{children}</div>;
+    return <div {...rest} className={panelClasses}>{children}</div>;
 };
 
 Panel.propTypes = {
@@ -41,7 +41,8 @@ export const PanelGrid = props => {
 
     return (
         <div
-            className={panelGridClasses} {...rest}>
+            {...rest}
+            className={panelGridClasses}>
             {children}
         </div>
     );
@@ -67,7 +68,7 @@ export const PanelBody = props => {
         className
     );
 
-    return <div className={panelBodyClasses} {...rest}>{children}</div>;
+    return <div {...rest} className={panelBodyClasses}>{children}</div>;
 };
 
 PanelBody.propTypes = {
@@ -83,7 +84,7 @@ export const PanelHeader = props => {
         className
     );
 
-    return <div className={panelHeaderClasses} {...rest}>{children}</div>;
+    return <div {...rest} className={panelHeaderClasses}>{children}</div>;
 };
 
 PanelHeader.propTypes = {
@@ -100,7 +101,7 @@ export const PanelHead = props => {
     );
 
     return (
-        <div className={panelHeadClasses} {...rest}>
+        <div {...rest} className={panelHeadClasses}>
             {title ? <h1 className='fd-panel__title'>{title}</h1> : null}
             {description ? <p className='fd-panel__description'>{description}</p> : null}
         </div>
@@ -120,7 +121,7 @@ export const PanelActions = props => {
         className
     );
 
-    return <div className={panelActionsClasses} {...rest}>{children}</div>;
+    return <div {...rest} className={panelActionsClasses}>{children}</div>;
 };
 
 PanelActions.propTypes = {
@@ -137,7 +138,7 @@ export const PanelFilters = props => {
     );
 
     return (
-        <div className={panelFiltersClasses} {...rest}>
+        <div {...rest} className={panelFiltersClasses}>
             {children}
         </div>
     );
@@ -157,7 +158,7 @@ export const PanelContent = props => {
         className
     );
 
-    return <div className={panelContentClasses} {...rest}>{children}</div>;
+    return <div {...rest} className={panelContentClasses}>{children}</div>;
 };
 
 PanelContent.propTypes = {
@@ -173,7 +174,7 @@ export const PanelFooter = props => {
         className
     );
 
-    return <div className={panelFooterClasses} {...rest}>{children}</div>;
+    return <div {...rest} className={panelFooterClasses}>{children}</div>;
 };
 
 PanelFooter.propTypes = {

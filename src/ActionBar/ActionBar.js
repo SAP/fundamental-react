@@ -12,10 +12,10 @@ export const ActionBar = ({ mobile, width, children, className, ...props }) => {
         <React.Fragment>
             {mobile ? (
                 <div style={{ width: width ? width : '319px' }}>
-                    <div className={actionBarClasses} {...props}>{children}</div>
+                    <div {...props} className={actionBarClasses}>{children}</div>
                 </div>
             ) : (
-                <div className={actionBarClasses} {...props}>{children}</div>
+                <div {...props} className={actionBarClasses}>{children}</div>
             )}
         </React.Fragment>
     );
@@ -34,7 +34,7 @@ export const ActionBarBack = ({ onClick, className, buttonProps, ...props }) => 
     );
 
     return (
-        <div className={actionBarBackClasses} {...props}>
+        <div {...props} className={actionBarBackClasses}>
             <button
                 {...buttonProps}
                 className='fd-button--light fd-button--compact sap-icon--nav-back'
@@ -56,7 +56,7 @@ export const ActionBarHeader = ({ className, description, descriptionProps, titl
     );
 
     return (
-        <div className={actionBarHeaderClasses} {...props}>
+        <div {...props} className={actionBarHeaderClasses}>
             <h1
                 {...titleProps}
                 className='fd-action-bar__title'>{title}</h1>
@@ -81,5 +81,5 @@ export const ActionBarActions = ({ children, className, ...props }) => {
         className
     );
 
-    return <div className={actionBarActionsClasses} {...props}>{children}</div>;
+    return <div {...props} className={actionBarActionsClasses}>{children}</div>;
 };

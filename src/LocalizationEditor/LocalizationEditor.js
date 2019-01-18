@@ -43,7 +43,7 @@ export const LocalizationEditor = ({ control, menu, id, compact, textarea, class
     );
 
     return (
-        <div className={localizationEditorClasses} {...props}>
+        <div {...props} className={localizationEditorClasses}>
             <Popover
                 {...popoverProps}
                 body={

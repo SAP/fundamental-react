@@ -321,12 +321,12 @@ export class Time extends Component {
         };
     }
 
-        componentWillReceiveProps(nextProps) {
-            // check if props are different than the current state to prevent an unneeded render
-            if (nextProps.time !== this.state.time) {
-                this.setState({ time: nextProps.time });
-            }
+    componentWillReceiveProps(nextProps) {
+        // check if props are different than the current state to prevent an unneeded render
+        if (nextProps.time !== this.state.time) {
+            this.setState({ time: nextProps.time });
         }
+    }
 
     formatValue = (value, name) => {
         if (name !== 'meridiem' && parseInt(value, 10) < 10) {

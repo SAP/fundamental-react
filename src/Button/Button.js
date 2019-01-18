@@ -37,7 +37,7 @@ export const Button = ({
         className
     );
 
-    return (<button className={buttonClasses} {...props}
+    return (<button {...props} className={buttonClasses}
         disabled={disabled ? disabled : false} onClick={onClick}
         selected={selected ? selected : false} type={typeAttr}>
         {children}

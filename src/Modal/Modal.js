@@ -44,8 +44,8 @@ export class Modal extends Component {
 
         return ReactDOM.createPortal(
             <div
-                className={modalClasses}
-                {...rest}>
+                {...rest}
+                className={modalClasses}>
                 <div className='modal-demo-bg'>
                     <div className='fd-modal'>
                         <div

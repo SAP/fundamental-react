@@ -90,8 +90,8 @@ export class SideNavList extends Component {
         return (
             <BrowserRouter>
                 <ul
-                    className={sideNavListClasses}
-                    {...rest}>
+                    {...rest}
+                    className={sideNavListClasses}>
                     {items.map(item => {
                         return (
                             <li className='fd-side-nav__item' key={item.id}>
@@ -181,8 +181,8 @@ export const SideNavGroup = props => {
 
     return (
         <div
-            className={sideNavGroupClasses}
-            {...rest}>
+            {...rest}
+            className={sideNavGroupClasses}>
             <h1 {...titleProps} className='fd-side-nav__title'>{title}</h1>
             {children}
         </div>
