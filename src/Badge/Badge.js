@@ -30,9 +30,7 @@ export const Label = ({ type, children, className, ...props }) => {
     const labelClasses = classnames(
         'fd-label',
         {
-            'fd-label--success': type === 'success',
-            'fd-label--warning': type === 'warning',
-            'fd-label--error': type === 'error'
+            [`fd-label--${type}`]: !!type
         },
         className
     );
@@ -49,13 +47,7 @@ export const Status = ({ type, glyph, children, className, ...props } ) => {
     const statusClasses = classnames(
         'fd-status-label',
         {
-            'fd-status-label--success': type === 'success',
-            'fd-status-label--warning': type === 'warning',
-            'fd-status-label--error': type === 'error',
-            'fd-status-label--available': type === 'available',
-            'fd-status-label--away': type === 'away',
-            'fd-status-label--busy': type === 'busy',
-            'fd-status-label--offline': type === 'offline',
+            [`fd-status-label--${type}`]: !!type,
             [`sap-icon--${glyph}`]: glyph
         },
         className
