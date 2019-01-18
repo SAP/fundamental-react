@@ -84,7 +84,7 @@ describe('<ListGroup />', () => {
             ).toBe('Sample');
         });
 
-        xtest('should allow props to be spread to the ListGroupItemCheckbox component', () => {
+        test('should allow props to be spread to the ListGroupItemCheckbox component', () => {
             // TODO: placeholder for this test description once that functionality is built
             const element = mount(<ListGroupItemCheckbox data-sample='Sample' />);
 
@@ -93,7 +93,7 @@ describe('<ListGroup />', () => {
             ).toBe('Sample');
         });
 
-        xtest('should allow props to be spread to the ListGroupItemCheckbox component\'s input element', () => {
+        test('should allow props to be spread to the ListGroupItemCheckbox component\'s input element', () => {
             const element = mount(<ListGroupItemCheckbox inputProps={{'data-sample': 'Sample'}} />);
 
             expect(
@@ -101,7 +101,7 @@ describe('<ListGroup />', () => {
             ).toBe('Sample');
         });
 
-        xtest('should allow props to be spread to the ListGroupItemCheckbox component\'s label element', () => {
+        test('should allow props to be spread to the ListGroupItemCheckbox component\'s label element', () => {
             const element = mount(<ListGroupItemCheckbox labelProps={{'data-sample': 'Sample'}} />);
 
             expect(
