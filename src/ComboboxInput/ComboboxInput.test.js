@@ -53,16 +53,28 @@ describe('<ComboboxInput />', () => {
             ).toBe('Sample');
         });
 
-        xtest('should allow props to be spread to the ComboboxInput component\'s Popover component', () => {
-            // TODO: placeholder for this test description once that functionality is built
+        test('should allow props to be spread to the ComboboxInput component\'s Popover component', () => {
+            const element = mount(<ComboboxInput menu={defaultMenu} popoverProps={{ 'data-sample': 'Sample' }} />);
+
+            expect(
+                element.find('div.fd-popover').getDOMNode().attributes['data-sample'].value
+            ).toBe('Sample');
         });
 
-        xtest('should allow props to be spread to the ComboboxInput component\'s input element', () => {
-            // TODO: placeholder for this test description once that functionality is built
+        test('should allow props to be spread to the ComboboxInput component\'s input element', () => {
+            const element = mount(<ComboboxInput inputProps={{ 'data-sample': 'Sample' }} menu={defaultMenu} />);
+
+            expect(
+                element.find('input').getDOMNode().attributes['data-sample'].value
+            ).toBe('Sample');
         });
 
-        xtest('should allow props to be spread to the ComboboxInput component\'s button element', () => {
-            // TODO: placeholder for this test description once that functionality is built
+        test('should allow props to be spread to the ComboboxInput component\'s button element', () => {
+            const element = mount(<ComboboxInput buttonProps={{ 'data-sample': 'Sample' }} menu={defaultMenu} />);
+
+            expect(
+                element.find('button.sap-icon--navigation-down-arrow').getDOMNode().attributes['data-sample'].value
+            ).toBe('Sample');
         });
     });
 });
