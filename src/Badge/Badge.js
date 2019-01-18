@@ -7,11 +7,8 @@ export const Badge = ({ type, modifier, children, className, ...props }) => {
     const badgeClasses = classnames(
         'fd-badge',
         {
-            'fd-badge--success': type === 'success',
-            'fd-badge--warning': type === 'warning',
-            'fd-badge--error': type === 'error',
-            'fd-badge--pill': modifier === 'pill',
-            'fd-badge--filled': modifier === 'filled'
+            [`fd-badge--${type}`]: !!type,
+            [`fd-badge--${modifier}`]: !!modifier
         },
         className
     );

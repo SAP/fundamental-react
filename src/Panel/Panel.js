@@ -9,7 +9,7 @@ export const Panel = props => {
     const panelClasses = classnames(
         'fd-panel',
         {
-            [`fd-has-grid-column-span-${colSpan}`]: colSpan
+            [`fd-has-grid-column-span-${colSpan}`]: !!colSpan
         },
         className
     );
@@ -34,7 +34,7 @@ export const PanelGrid = props => {
         'fd-panel-grid',
         {
             'fd-panel-grid--nogap': nogap,
-            [`fd-panel-grid--${cols}col`]: cols
+            [`fd-panel-grid--${cols}col`]: !!cols
         },
         className
     );

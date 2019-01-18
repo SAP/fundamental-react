@@ -20,16 +20,11 @@ export const Button = ({
     const buttonClasses = classnames(
         {
             'fd-button': !option,
-            'fd-button--emphasized': option === 'emphasized',
-            'fd-button--light': option === 'light',
-            'fd-button--shell': option === 'shell',
-            'fd-button--standard': type === 'standard',
-            'fd-button--positive': type === 'positive',
-            'fd-button--negative': type === 'negative',
-            'fd-button--medium': type === 'medium',
+            [`fd-button--${option}`]: !!option,
+            [`fd-button--${type}`]: !!type,
             'fd-dropdown__control': dropdown,
             'fd-button--compact': compact,
-            [`sap-icon--${glyph}`]: glyph,
+            [`sap-icon--${glyph}`]: !!glyph,
             'fd-global-nav__btn': navbar,
             'is-selected': selected,
             'is-disabled': disabled

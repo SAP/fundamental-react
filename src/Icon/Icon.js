@@ -6,13 +6,7 @@ export const Icon = ({ glyph, size, clickHandler, className, ...props }) => {
     const iconClasses = classnames(
         {
             [`sap-icon--${glyph}`]: glyph,
-            'sap-icon--xxs': size === 'xxs',
-            'sap-icon--xs': size === 'xs',
-            'sap-icon--s': size === 's',
-            'sap-icon--m': size === 'm',
-            'sap-icon--l': size === 'l',
-            'sap-icon--xl': size === 'xl',
-            'sap-icon--xxl': size === 'xxl'
+            [`sap-icon--${size}`]: !!size
         },
         className
     );

@@ -74,9 +74,7 @@ export const FormMessage = ({ type, children, className, ...props }) => {
     const formMessageClasses = classnames(
         'fd-form__message',
         {
-            'fd-form__message--error': type === 'error',
-            'fd-form__message--warning': type === 'warning',
-            'fd-form__message--help': type === 'help'
+            [`fd-form__message--${type}`]: !!type
         },
         className
     );
@@ -99,13 +97,7 @@ export const FormInput = ({ state, className, ...props }) => {
     const formInputClasses = classnames(
         'fd-form__control',
         {
-            'is-normal': state === 'normal',
-            'is-valid': state === 'valid',
-            'is-invalid': state === 'invalid',
-            'is-warning': state === 'warning',
-            'is-help': state === 'help',
-            'is-disabled': state === 'disabled',
-            'is-readonly': state === 'readonly'
+            [`is-${state}`]: !!state
         },
         className
     );

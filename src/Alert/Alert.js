@@ -33,10 +33,7 @@ export class Alert extends Component {
             'fd-alert',
             {
                 'fd-alert--dismissible': dismissible,
-                'fd-alert--warning': type === 'warning',
-                'fd-alert--error': type === 'error',
-                'fd-alert--success': type === 'success',
-                'fd-alert--information': type === 'information'
+                [`fd-alert--${type}`]: !!type
             },
             className
         );

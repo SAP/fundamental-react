@@ -24,7 +24,7 @@ export class Toggle extends React.Component {
         const spanClasses = classnames(
             'fd-toggle',
             {
-                [`fd-toggle--${size}`]: size
+                [`fd-toggle--${size}`]: !!size
             },
             'fd-form__control'
         );

@@ -74,7 +74,7 @@ export class Popover extends Component {
         const popoverClasses = classnames(
             'fd-popover',
             {
-                'fd-popover--right': alignment === 'right'
+                [`fd-popover--${alignment}`]: !!alignment
             },
             className
         );
@@ -82,7 +82,7 @@ export class Popover extends Component {
         const popoverBodyClasses = classnames(
             'fd-popover__body',
             {
-                'fd-popover__body--right': alignment === 'right',
+                [`fd-popover--${alignment}`]: !!alignment,
                 'fd-popover__body--no-arrow': noArrow
             }
         );

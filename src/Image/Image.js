@@ -5,10 +5,8 @@ import React from 'react';
 export const Image = ({ size, type, photo, className, ...props }) => {
     const imageClasses = classnames(
         {
-            'fd-image--s': size === 's',
-            'fd-image--m': size === 'm',
-            'fd-image--l': size === 'l',
-            'fd-image--circle': type === 'circle'
+            [`fd-image--${size}`]: !!size,
+            [`fd-image--${type}`]: !!type
         },
         className
     );

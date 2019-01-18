@@ -18,10 +18,10 @@ export const Tile = props => {
         'fd-tile',
         {
             'is-disabled': disabled,
-            [`fd-has-grid-row-span-${rowSpan}`]: rowSpan,
-            [`fd-has-grid-column-span-${columnSpan}`]: columnSpan,
-            [`fd-has-background-color-accent-${colorAccent}`]: colorAccent,
-            [`fd-has-background-color-background-${backgroundColor}`]: backgroundColor
+            [`fd-has-grid-row-span-${rowSpan}`]: !!rowSpan,
+            [`fd-has-grid-column-span-${columnSpan}`]: !!columnSpan,
+            [`fd-has-background-color-accent-${colorAccent}`]: !!colorAccent,
+            [`fd-has-background-color-background-${backgroundColor}`]: !!backgroundColor
         },
         className
     );
@@ -162,7 +162,7 @@ export const TileGrid = props => {
     const tileGridClasses = classnames(
         'fd-tile-grid',
         {
-            [`fd-tile-grid--${col}col`]: col,
+            [`fd-tile-grid--${col}col`]: !!col,
             'fd-tile-grid--3col': !col
         },
         className

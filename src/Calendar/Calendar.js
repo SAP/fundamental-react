@@ -68,7 +68,7 @@ export class Calendar extends Component {
     }
 
     displayBetweenRange = (day) => {
-        return this.props.enableRangeSelection && this.isDateBetween(day, this.state.arrSelectedDates, this.props.enableRangeSelection) ? 'is-selected-range' : '';
+        return this.props.enableRangeSelection && this.isDateBetween(day, this.state.arrSelectedDates, this.props.enableRangeSelection);
     }
 
     displaySelectedRangeLast = (day) => {
@@ -76,7 +76,7 @@ export class Calendar extends Component {
     }
 
     displayIsDayOtherMonth = (day) => {
-        return day.getMonth() === this.state.currentDateDisplayed.getMonth() ? '' : '--other-month';
+        return day.getMonth() === this.state.currentDateDisplayed.getMonth() ? false : true;
     }
 
     displayIsSelected = (day) => {
