@@ -5,20 +5,20 @@ import { mount, shallow } from 'enzyme';
 
 describe('<Alert />', () => {
     const basicAlert = (
-        <Alert dismissable link='#'
+        <Alert dismissible link='#'
             linkText='link'>
             Default alert with a
         </Alert>
     );
 
     const basicErrorAlert = (
-        <Alert dismissable linkText='link'
+        <Alert dismissible linkText='link'
             type='error'>
             Error message with a
         </Alert>
     );
 
-    const nonDismissableAlert = (
+    const nonDismissibleAlert = (
         <Alert className='blue' link='#'
             linkText='link'>
             Default alert that cannot be dismissed
@@ -40,8 +40,8 @@ describe('<Alert />', () => {
         expect(wrapper.state(['isActive'])).toBeFalsy();
     });
 
-    test('create non-dismissable alert', () => {
-        const component = renderer.create(nonDismissableAlert);
+    test('create non-dismissible alert', () => {
+        const component = renderer.create(nonDismissibleAlert);
         const tree = component.toJSON();
 
         expect(tree).toMatchSnapshot();
@@ -62,12 +62,20 @@ describe('<Alert />', () => {
             ).toBe('Sample');
         });
 
-        xtest('should allow props to be spread to the Alert component\'s button element when dismissable', () => {
-            // TODO: placeholder for this test description once that functionality is built
+        test('should allow props to be spread to the Alert component\'s button element when dismissable', () => {
+            const element = mount(<Alert buttonProps={{'data-sample': 'Sample'}} dismissible />);
+
+            expect(
+                element.find('button').getDOMNode().attributes['data-sample'].value
+            ).toBe('Sample');
         });
 
-        xtest('should allow props to be spread to the Alert component\'s a element when link provided', () => {
-            // TODO: placeholder for this test description once that functionality is built
+        test('should allow props to be spread to the Alert component\'s a element when link provided', () => {
+            const element = mount(<Alert link='javascript:void(0)' linkProps={{'data-sample': 'Sample'}} />);
+
+            expect(
+                element.find('a').getDOMNode().attributes['data-sample'].value
+            ).toBe('Sample');
         });
     });
 });

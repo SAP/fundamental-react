@@ -147,8 +147,7 @@ Compact mode:
                 properties={[
                     {
                         name: 'inputType',
-                        description:
-              'string - The type of the input. Options include "text", "number", and "search".'
+                        description: 'string - The type of the input. Options include "text", "number", and "search".'
                     },
                     {
                         name: 'inputId',
@@ -168,23 +167,39 @@ Compact mode:
                     },
                     {
                         name: 'addonPos',
-                        description:
-              'string - The add-on can be placed at the left (use addonPos="before") or right (use addonPos="after") of the input element.'
+                        description: 'string - The add-on can be placed at the left (use addonPos="before") or right (use addonPos="after") of the input element.'
                     },
-                    { name: 'addon', description: 'string - The value of the add-on.' },
+                    {
+                        name: 'addon',
+                        description: 'string - The value of the add-on.'
+                    },
                     {
                         name: 'glyph',
-                        description:
-              'string - The name of the icon to include. See the icon page for the list of icons.'
+                        description: 'string - The name of the icon to include. See the icon page for the list of icons.'
                     },
                     {
                         name: 'actions',
-                        description:
-              'bool  -  If set to "true", enables input with actions. Actions can be shown with a text label or icon.'
+                        description: 'bool  -  If set to "true", enables input with actions. Actions can be shown with a text label or icon.'
                     },
                     {
                         name: 'compact',
                         description: 'bool  - set to true to enable compact mode'
+                    },
+                    {
+                        name: 'inputProps',
+                        description: 'object - additional props to be spread to the input element.'
+                    },
+                    {
+                        name: 'numberUpButtonProps',
+                        description: 'object - additional props to be spread to the up button element (for inputType=\'number\').'
+                    },
+                    {
+                        name: 'numberDownButtonProps',
+                        description: 'object - additional props to be spread to the down button element (for inputType=\'number\').'
+                    },
+                    {
+                        name: 'searchButtonProps',
+                        description: 'object - additional props to be spread to the button element (for inputType=\'search\').'
                     }
                 ]}
                 type='Inputs' />

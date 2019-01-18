@@ -2,9 +2,9 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 
 // ------------------------------------------------- Form Set -----------------------------------------------
-export const FormSet = ({ children, className }) => {
+export const FormSet = ({ children, className, ...props }) => {
     return (
-        <div className={`fd-form__set${className ? ' ' + className : ''}`}>
+        <div {...props} className={`fd-form__set${className ? ' ' + className : ''}`}>
             {children}
         </div>
     );
@@ -15,9 +15,10 @@ FormSet.propTypes = {
 };
 
 // ------------------------------------------------- Form Item -----------------------------------------------
-export const FormItem = ({ isCheck, isInline, children, className }) => {
+export const FormItem = ({ isCheck, isInline, children, className, ...props }) => {
     return (
         <div
+            {...props}
             className={`fd-form__item${isInline ? ' fd-form__item--inline' : ''}${
                 isCheck ? ' fd-form__item--check' : ''
             }${className ? ' ' + className : ''}`}>
@@ -36,10 +37,10 @@ FormItem.propTypes = {
 export const FormLabel = ({ required, children, className, ...props }) => {
     return (
         <label
+            {...props}
             className={`fd-form__label${required ? ' is-required' : ''}${
                 className ? ' ' + className : ''
-            }`}
-            {...props}>
+            }`}>
             {children}
         </label>
     );
@@ -54,10 +55,10 @@ FormLabel.propTypes = {
 export const FormMessage = ({ type, children, className, ...props }) => {
     return (
         <span
+            {...props}
             className={`fd-form__message${type ? '  fd-form__message--' + type : ''}${
                 className ? ' ' + className : ''
-            }`}
-            {...props}>
+            }`}>
             {children}
         </span>
     );
@@ -72,10 +73,10 @@ FormMessage.propTypes = {
 export const FormInput = ({ state, className, ...props }) => {
     return (
         <input
+            {...props}
             className={`fd-form__control${state ? ' is-' + state : ''}${
                 className ? ' ' + className : ''
-            }`}
-            {...props} />
+            }`} />
     );
 };
 FormInput.propTypes = {
@@ -87,8 +88,8 @@ FormInput.propTypes = {
 export const FormTextarea = ({ children, className, ...props }) => {
     return (
         <textarea
-            className={`fd-form__control${className ? ' ' + className : ''}`}
-            {...props}>
+            {...props}
+            className={`fd-form__control${className ? ' ' + className : ''}`}>
             {children}
         </textarea>
     );
@@ -102,8 +103,8 @@ FormTextarea.propTypes = {
 export const FormFieldset = ({ children, className, ...props }) => {
     return (
         <fieldset
-            className={`fd-form__set${className ? ' ' + className : ''}`}
-            {...props}>
+            {...props}
+            className={`fd-form__set${className ? ' ' + className : ''}`}>
             {children}
         </fieldset>
     );
@@ -117,8 +118,8 @@ FormFieldset.propTypes = {
 export const FormLegend = ({ children, className, ...props }) => {
     return (
         <legend
-            className={`fd-form__legend${className ? ' ' + className : ''}`}
-            {...props}>
+            {...props}
+            className={`fd-form__legend${className ? ' ' + className : ''}`}>
             {children}
         </legend>
     );
@@ -132,8 +133,8 @@ FormLegend.propTypes = {
 export const FormSelect = ({ disabled, children, className, ...props }) => {
     return (
         <select
-            className={`fd-form__control${className ? ' ' + className : ''}`}
             {...props}
+            className={`fd-form__control${className ? ' ' + className : ''}`}
             disabled={disabled ? true : ''}>
             {children}
         </select>

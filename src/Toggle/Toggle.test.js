@@ -62,12 +62,20 @@ describe('<Toggle />', () => {
             ).toBe('Sample');
         });
 
-        xtest('should allow props to be spread to the Toggle component\'s label element', () => {
-            // TODO: placeholder for this test description once that functionality is built
+        test('should allow props to be spread to the Toggle component\'s label element', () => {
+            const element = mount(<Toggle labelProps={{'data-sample': 'Sample'}} />);
+
+            expect(
+                element.find('label').getDOMNode().attributes['data-sample'].value
+            ).toBe('Sample');
         });
 
-        xtest('should allow props to be spread to the Toggle component\'s input element', () => {
-            // TODO: placeholder for this test description once that functionality is built
+        test('should allow props to be spread to the Toggle component\'s input element', () => {
+            const element = mount(<Toggle inputProps={{'data-sample': 'Sample'}} />);
+
+            expect(
+                element.find('input').getDOMNode().attributes['data-sample'].value
+            ).toBe('Sample');
         });
     });
 });
