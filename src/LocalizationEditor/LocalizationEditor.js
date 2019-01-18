@@ -3,36 +3,45 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 // ------------------------------------------- Menu ------------------------------------------
-export const LocalizationEditor = ({ control, menu, id, compact, textarea, className, ...props }) => {
+export const LocalizationEditor = ({ control, menu, id, compact, textarea, className, listProps, popoverProps, ...props }) => {
 
     return (
         <div className={`fd-localization-editor${className ? ' ' + className : ''}`} {...props}>
             <Popover
+                {...popoverProps}
                 body={
                     <nav className='fd-menu'>
-                        <ul className='fd-menu__list fd-localization-editor__list'>
+                        <ul {...listProps} className='fd-menu__list fd-localization-editor__list'>
                             {menu.map((item, index) => {
+                                let {
+                                    inputProps,
+                                    language,
+                                    placeholder,
+                                    ...itemProps
+                                } = item;
+
                                 return (
-                                    <li key={index}>
+                                    <li {...itemProps} key={index}>
                                         <div
                                             className={`fd-input-group${
                                                 compact && !textarea ? ' fd-input-group--compact' : ''
                                             } fd-input-group--after`}>
                                             {textarea ? (
-                                                <textarea />
+                                                <textarea {...inputProps} />
                                             ) : (
                                                 <input
+                                                    {...inputProps}
                                                     className={
                                                         compact ? 'fd-input fd-input--compact' : ''
                                                     }
-                                                    placeholder={item.placeholder}
+                                                    placeholder={placeholder}
                                                     type='text' />
                                             )}
                                             <span
                                                 className={`fd-input-group__addon fd-input-group__addon--after${
                                                     textarea ? ' fd-input-group__addon--textarea' : ''
                                                 }`}>
-                                                {item.language}
+                                                {language}
                                             </span>
                                         </div>
                                     </li>
@@ -43,7 +52,10 @@ export const LocalizationEditor = ({ control, menu, id, compact, textarea, class
                 }
                 control={
                     <div>
-                        <label className='fd-form__label' htmlFor={id}>
+                        <label
+                            {...control.labelProps}
+                            className='fd-form__label'
+                            htmlFor={id}>
                             {control.label}
                         </label>
                         <div
@@ -51,9 +63,10 @@ export const LocalizationEditor = ({ control, menu, id, compact, textarea, class
                                 compact && !textarea ? ' fd-input-group--compact' : ''
                             } fd-input-group--after`}>
                             {textarea ? (
-                                <textarea />
+                                <textarea {...control.inputProps} />
                             ) : (
                                 <input
+                                    {...control.inputProps}
                                     className={compact ? 'fd-input fd-input--compact' : ''}
                                     placeholder={control.placeholder}
                                     type='text' />
@@ -62,7 +75,7 @@ export const LocalizationEditor = ({ control, menu, id, compact, textarea, class
                                 className={`fd-input-group__addon fd-input-group__addon--after fd-input-group__addon--button${
                                     textarea ? ' fd-input-group__addon--textarea' : ''
                                 }`}>
-                                <button className='fd-button--light fd-localization-editor__button'>
+                                <button {...control.buttonProps} className='fd-button--light fd-localization-editor__button'>
                                     {control.language}
                                 </button>
                             </span>
@@ -77,12 +90,16 @@ export const LocalizationEditor = ({ control, menu, id, compact, textarea, class
 
 LocalizationEditor.propTypes = {
     control: PropTypes.shape({
+        buttonProps: PropTypes.object,
+        inputProps: PropTypes.object,
+        labelProps: PropTypes.object,
         label: PropTypes.string,
         placeholder: PropTypes.string,
         language: PropTypes.string
     }).isRequired,
     menu: PropTypes.arrayOf(
         PropTypes.shape({
+            inputProps: PropTypes.object,
             placeholder: PropTypes.string,
             language: PropTypes.string
         }).isRequired
@@ -90,5 +107,7 @@ LocalizationEditor.propTypes = {
     className: PropTypes.string,
     compact: PropTypes.bool,
     id: PropTypes.string,
+    listProps: PropTypes.object,
+    popoverProps: PropTypes.object,
     textarea: PropTypes.bool
 };
