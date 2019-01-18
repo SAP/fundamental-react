@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.1.0-rc.10"></a>
+# [0.1.0-rc.10](https://github.com/SAP/fundamental-react/compare/v0.1.0-rc.9...v0.1.0-rc.10) (2019-01-18)
+
+
+### Bug Fixes
+
+* prop spreading to Calendar ([#253](https://github.com/SAP/fundamental-react/issues/253)) ([b6d90d0](https://github.com/SAP/fundamental-react/commit/b6d90d0))
+
+
+
 <a name="0.1.0-rc.9"></a>
 # [0.1.0-rc.9](https://github.com/SAP/fundamental-react/compare/v0.1.0-rc.8...v0.1.0-rc.9) (2019-01-18)
 
