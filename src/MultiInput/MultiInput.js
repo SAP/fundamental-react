@@ -105,11 +105,15 @@ export class MultiInput extends Component {
 
   render() {
       const {
-          placeHolder,
-          data,
+          buttonProps,
           compact,
           className,
+          data,
+          listProps,
+          inputProps,
           onTagsUpdate,
+          placeHolder,
+          tagProps,
           ...rest
       } = this.props;
 
@@ -133,6 +137,7 @@ export class MultiInput extends Component {
                               className='fd-combobox-control'>
                               <div className={inputGroupClassNames}>
                                   <input
+                                      {...inputProps}
                                       className={inputClassNames}
                                       onClick={this.showHideTagList}
                                       placeholder={placeHolder}
@@ -141,6 +146,7 @@ export class MultiInput extends Component {
                                       className='fd-input-group__addon fd-input-group__addon--after
                             fd-input-group__addon--button'>
                                       <button
+                                          {...buttonProps}
                                           className='fd-button--light sap-icon--navigation-down-arrow'
                                           onClick={this.showHideTagList} />
                                   </span>
@@ -151,13 +157,13 @@ export class MultiInput extends Component {
                           aria-hidden={!this.state.bShowList}
                           className='fd-popover__body fd-popover__body--no-arrow'>
                           <nav className='fd-menu'>
-                              <ul className='fd-menu__list'>{this.createTagList(data)}</ul>
+                              <ul {...listProps} className='fd-menu__list'>{this.createTagList(data)}</ul>
                           </nav>
                       </div>
                   </div>
               </div>
               {this.state.tags.length > 0 ? (
-                  <div className='fd-multi-input-tags'>{this.createTags()}</div>
+                  <div {...tagProps} className='fd-multi-input-tags'>{this.createTags()}</div>
               ) : (
                   ''
               )}
@@ -168,8 +174,12 @@ export class MultiInput extends Component {
 
 MultiInput.propTypes = {
     data: PropTypes.array.isRequired,
+    buttonProps: PropTypes.object,
     className: PropTypes.string,
     compact: PropTypes.bool,
+    inputProps: PropTypes.object,
+    listProps: PropTypes.object,
     placeHolder: PropTypes.string,
+    tagProps: PropTypes.object,
     onTagsUpdate: PropTypes.func
 };
