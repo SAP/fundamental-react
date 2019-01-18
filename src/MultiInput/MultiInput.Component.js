@@ -73,19 +73,19 @@ export class MultiInputComponent extends Component {
                       },
                       {
                           name: 'inputProps',
-                          description: 'object: additional props to be spread to the MultiInput\'s input element'
+                          description: 'object - additional props to be spread to the MultiInput\'s input element'
                       },
                       {
                           name: 'buttonProps',
-                          description: 'object: additional props to be spread to the MultiInput\'s button element'
+                          description: 'object - additional props to be spread to the MultiInput\'s button element'
                       },
                       {
                           name: 'listProps',
-                          description: 'object: additional props to be spread to the MultiInput\'s <ul> element'
+                          description: 'object - additional props to be spread to the MultiInput\'s <ul> element'
                       },
                       {
                           name: 'tagProps',
-                          description: 'object: additional props to be spread to the MultiInput\'s tags <div> element'
+                          description: 'object - additional props to be spread to the MultiInput\'s tags <div> element'
                       }
                   ]}
                   type='Inputs' />
