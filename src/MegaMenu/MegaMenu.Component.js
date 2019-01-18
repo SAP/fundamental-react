@@ -53,7 +53,8 @@ export const MegaMenuComponent = () => {
                 { name: 'link', description: 'string - a router link. Use either \'url\' or \'link\'.' },
                 { name: 'name', description: 'string - the \'name\' of the link.' },
                 { name: 'hasChild', description: 'bool - when set to \'true\' enables a second level of navigation.' },
-                { name: 'child', description: 'array - an array of objects with keys \'id\', \'url\' or \'link\', and \'name\' setting the attributes of the subitems.' }
+                { name: 'child', description: 'array - an array of objects with keys \'id\', \'url\' or \'link\', and \'name\' setting the attributes of the subitems.' },
+                { name: 'headerProps', description: 'object - additional props to be spread to the MegaMenuGroup\'s <h1> element' }
 
             ]} type='Inputs' />
 
