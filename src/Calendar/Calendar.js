@@ -526,9 +526,9 @@ Calendar.propTypes = {
     disablePastDates: PropTypes.bool,
     disableWeekday: PropTypes.arrayOf(PropTypes.string),
     disableWeekends: PropTypes.bool,
-    monthListProps: PropTypes.obj,
-    tableBodyProps: PropTypes.obj,
-    tableHeaderProps: PropTypes.obj,
-    tableProps: PropTypes.obj,
-    yearListProps: PropTypes.obj
+    monthListProps: PropTypes.object,
+    tableBodyProps: PropTypes.object,
+    tableHeaderProps: PropTypes.object,
+    tableProps: PropTypes.object,
+    yearListProps: PropTypes.object
 };
