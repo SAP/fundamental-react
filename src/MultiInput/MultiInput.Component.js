@@ -57,23 +57,35 @@ export class MultiInputComponent extends Component {
                   properties={[
                       {
                           name: 'data',
-                          description:
-                'array (Required) - Collection of items to display in the list.'
+                          description: 'array (Required) - Collection of items to display in the list.'
                       },
                       {
                           name: 'placeHolder',
-                          description:
-                'string - The text to use as placeholder when no text is entered.'
+                          description: 'string - The text to use as placeholder when no text is entered.'
                       },
                       {
                           name: 'onTagsUpdate',
-                          description:
-                'func - Method to fire on add or remove of tag. Component returns array of tags selected.'
+                          description: 'func - Method to fire on add or remove of tag. Component returns array of tags selected.'
                       },
                       {
                           name: 'compact',
-                          description:
-                'bool - true: display compact style, false: default style'
+                          description: 'bool - true: display compact style, false: default style'
+                      },
+                      {
+                          name: 'inputProps',
+                          description: 'object: additional props to be spread to the MultiInput\'s input element'
+                      },
+                      {
+                          name: 'buttonProps',
+                          description: 'object: additional props to be spread to the MultiInput\'s button element'
+                      },
+                      {
+                          name: 'listProps',
+                          description: 'object: additional props to be spread to the MultiInput\'s <ul> element'
+                      },
+                      {
+                          name: 'tagProps',
+                          description: 'object: additional props to be spread to the MultiInput\'s tags <div> element'
                       }
                   ]}
                   type='Inputs' />
