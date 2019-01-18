@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.1.0-rc.11"></a>
+# [0.1.0-rc.11](https://github.com/SAP/fundamental-react/compare/v0.1.0-rc.10...v0.1.0-rc.11) (2019-01-18)
+
+
+### Bug Fixes
+
+* add editor config file ([b4ec76e](https://github.com/SAP/fundamental-react/commit/b4ec76e))
+* Prop spreading for ComboboxInput ([#254](https://github.com/SAP/fundamental-react/issues/254)) ([7fb85f0](https://github.com/SAP/fundamental-react/commit/7fb85f0))
+* Prop spreading for LocalizationEditor ([#258](https://github.com/SAP/fundamental-react/issues/258)) ([d57c8bc](https://github.com/SAP/fundamental-react/commit/d57c8bc))
+* prop spreading for MultiInput ([#257](https://github.com/SAP/fundamental-react/issues/257)) ([e21f9a8](https://github.com/SAP/fundamental-react/commit/e21f9a8))
+
+
+
 <a name="0.1.0-rc.10"></a>
 # [0.1.0-rc.10](https://github.com/SAP/fundamental-react/compare/v0.1.0-rc.9...v0.1.0-rc.10) (2019-01-18)
 
