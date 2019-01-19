@@ -146,7 +146,7 @@ export class Tree extends Component {
                               role='treeitem'>
                               <div className='fd-tree__row'>
                                   {parent}
-                                  {<Dropdown isContextual />}
+                                  {<Dropdown />}
                               </div>
                               {tree}
                           </li>
@@ -163,7 +163,7 @@ export class Tree extends Component {
                   role='treeitem'>
                   <div className='fd-tree__row'>
                       {parent}
-                      {<Dropdown isContextual />}
+                      {<Dropdown />}
                   </div>
                   {tree}
               </li>
@@ -174,10 +174,10 @@ export class Tree extends Component {
   };
 
   render() {
-      const { headers, treeData } = this.props;
+      const { headers, treeData, headerProps, headerButtonProps, listProps, ...props } = this.props;
       return (
-          <div>
-              <div className='fd-tree fd-tree--header'>
+          <div {...props}>
+              <div {...headerProps} className='fd-tree fd-tree--header'>
                   <div className='fd-tree__row fd-tree__row--header'>
                       {headers.map((header, index) => {
                           if (headers.indexOf(header) === 0) {
@@ -186,6 +186,7 @@ export class Tree extends Component {
                                       className='fd-tree__col fd-tree__col--control'
                                       key={index}>
                                       <button
+                                          {...headerButtonProps}
                                           aria-label='expand'
                                           aria-pressed={this.state.expandAllClicked}
                                           className='fd-tree__control '
@@ -202,8 +203,9 @@ export class Tree extends Component {
                       })}
                   </div>
               </div>
-
-              <ul className='fd-tree' id=''
+              <ul
+                  {...listProps}
+                  className='fd-tree'
                   role='tree'>
                   {this.createTreeList(treeData)}
               </ul>
@@ -211,6 +213,7 @@ export class Tree extends Component {
       );
   }
 }
+
 Tree.propTypes = {
     treeData: PropTypes.arrayOf(
         PropTypes.shape({
@@ -220,6 +223,9 @@ Tree.propTypes = {
             children: PropTypes.array
         }).isRequired
     ).isRequired,
+    headerButtonProps: PropTypes.object,
+    headerProps: PropTypes.object,
     headers: PropTypes.arrayOf(PropTypes.string),
-    id: PropTypes.string
+    id: PropTypes.string,
+    listProps: PropTypes.object
 };

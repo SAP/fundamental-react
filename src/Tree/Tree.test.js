@@ -216,28 +216,66 @@ describe('<Tree />', () => {
     });
 
     describe('Prop spreading', () => {
-        xtest('should allow props to be spread to the Tree component', () => {
-            // TODO: placeholder for this test description once that functionality is built
-            const data = [
-            ];
+        test('should allow props to be spread to the Tree component', () => {
+            const data = [];
             const element = mount(
                 <Tree
                     data-sample='Sample'
                     headers={defaultHeaders}
                     treeData={data} />)
-            ;
+                ;
 
             expect(
                 element.getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
         });
 
-        xtest('should allow props to be spread to the Tree component\'s ul element', () => {
-            // TODO: placeholder for this test description once that functionality is built
+        test('should allow props to be spread to the Tree component\'s header element', () => {
+            const data = [];
+            const element = mount(
+                <Tree
+                    headerProps={{
+                        'data-sample': 'Sample'
+                    }}
+                    headers={defaultHeaders}
+                    treeData={data} />)
+                ;
+
+            expect(
+                element.find('.fd-tree--header').getDOMNode().attributes['data-sample'].value
+            ).toBe('Sample');
         });
 
-        xtest('should allow props to be spread to the Tree component\'s button elements', () => {
-            // TODO: placeholder for this test description once that functionality is built
+        test('should allow props to be spread to the Tree component\'s header button elements', () => {
+            const data = [];
+            const element = mount(
+                <Tree
+                    headerButtonProps={{
+                        'data-sample': 'Sample'
+                    }}
+                    headers={defaultHeaders}
+                    treeData={data} />)
+                ;
+
+            expect(
+                element.find('.fd-tree--header button').getDOMNode().attributes['data-sample'].value
+            ).toBe('Sample');
+        });
+
+        test('should allow props to be spread to the Tree component\'s list element', () => {
+            const data = [];
+            const element = mount(
+                <Tree
+                    headers={defaultHeaders}
+                    listProps={{
+                        'data-sample': 'Sample'
+                    }}
+                    treeData={data} />)
+                ;
+
+            expect(
+                element.find('ul.fd-tree').getDOMNode().attributes['data-sample'].value
+            ).toBe('Sample');
         });
     });
 });
