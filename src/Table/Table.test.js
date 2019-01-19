@@ -56,20 +56,109 @@ describe('<Table />', () => {
             ).toBe('Sample');
         });
 
-        xtest('should allow props to be spread to the Table component\'s thead element', () => {
-            // TODO: placeholder for this test description once that functionality is built
+        test('should allow props to be spread to the Table component\'s thead element', () => {
+            const element = mount(
+                <Table
+                    headers={defaultHeaders}
+                    tableData={defaultData}
+                    tableHeaderProps={{
+                        'data-sample': 'Sample'
+                    }} />
+            );
+
+            expect(
+                element.find('thead').getDOMNode().attributes['data-sample'].value
+            ).toBe('Sample');
         });
 
-        xtest('should allow props to be spread to the Table component\'s thead > tr elements', () => {
-            // TODO: placeholder for this test description once that functionality is built
+        test('should allow props to be spread to the Table component\'s thead > tr element', () => {
+            const element = mount(
+                <Table
+                    headers={defaultHeaders}
+                    tableData={defaultData}
+                    tableHeaderRowProps={{
+                        'data-sample': 'Sample'
+                    }} />
+            );
+
+            expect(
+                element.find('thead > tr').getDOMNode().attributes['data-sample'].value
+            ).toBe('Sample');
         });
 
-        xtest('should allow props to be spread to the Table component\'s tbody element', () => {
-            // TODO: placeholder for this test description once that functionality is built
+        test('should allow props to be spread to the Table component\'s tbody element', () => {
+            const element = mount(
+                <Table
+                    headers={defaultHeaders}
+                    tableBodyProps={{
+                        'data-sample': 'Sample'
+                    }}
+                    tableData={defaultData} />
+            );
+
+            expect(
+                element.find('tbody').getDOMNode().attributes['data-sample'].value
+            ).toBe('Sample');
         });
 
-        xtest('should allow props to be spread to the Table component\'s tbody > tr elements', () => {
-            // TODO: placeholder for this test description once that functionality is built
+        test('should allow props to be spread to the Table component\'s tbody > tr elements via object', () => {
+            const data = [
+                {
+                    rowData: ['Data 1', 'Data 2', 'Data 3', 'Data 4']
+                },
+                {
+                    rowData: ['Data 5', 'Data 6', 'Data 7', 'Data 8']
+                }
+            ];
+            const element = mount(
+                <Table
+                    headers={defaultHeaders}
+                    tableBodyRowProps={{
+                        'data-sample': 'Sample'
+                    }}
+                    tableData={data} />
+            );
+
+            const rows = element.find('tbody > tr');
+
+            expect(rows).toHaveLength(2);
+            expect(
+                rows.at(0).getDOMNode().attributes['data-sample'].value
+            ).toBe('Sample');
+            expect(
+                rows.at(1).getDOMNode().attributes['data-sample'].value
+            ).toBe('Sample');
+        });
+
+        test('should allow props to be spread to the Table component\'s tbody > tr elements via function', () => {
+            const data = [
+                {
+                    rowData: ['Data 1', 'Data 2', 'Data 3', 'Data 4']
+                },
+                {
+                    rowData: ['Data 5', 'Data 6', 'Data 7', 'Data 8']
+                }
+            ];
+            const element = mount(
+                <Table
+                    headers={defaultHeaders}
+                    tableBodyRowProps={(row, index) => {
+                        return {
+                            'data-sample': `Sample ${index}`
+                        };
+                    }}
+                    tableData={data} />
+            );
+
+            const rows = element.find('tbody > tr');
+
+            expect(rows).toHaveLength(2);
+            expect(
+                rows.at(0).getDOMNode().attributes['data-sample'].value
+            ).toBe('Sample 0');
+            expect(
+                rows.at(1).getDOMNode().attributes['data-sample'].value
+            ).toBe('Sample 1');
         });
     });
 });
