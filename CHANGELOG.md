@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.1.0-rc.13"></a>
+# [0.1.0-rc.13](https://github.com/SAP/fundamental-react/compare/v0.1.0-rc.12...v0.1.0-rc.13) (2019-01-19)
+
+
+### Bug Fixes
+
+* Prop spreading for Tree ([#264](https://github.com/SAP/fundamental-react/issues/264)) ([a71665b](https://github.com/SAP/fundamental-react/commit/a71665b))
+
+
+
 <a name="0.1.0-rc.12"></a>
 # [0.1.0-rc.12](https://github.com/SAP/fundamental-react/compare/v0.1.0-rc.11...v0.1.0-rc.12) (2019-01-19)
 
