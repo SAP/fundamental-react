@@ -76,7 +76,7 @@ export class Calendar extends Component {
     }
 
     displayIsDayOtherMonth = (day) => {
-        return day.getMonth() === this.state.currentDateDisplayed.getMonth() ? false : true;
+        return day.getMonth() !== this.state.currentDateDisplayed.getMonth();
     }
 
     displayIsSelected = (day) => {

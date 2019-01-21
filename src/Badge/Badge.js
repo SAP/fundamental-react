@@ -48,7 +48,7 @@ export const Status = ({ type, glyph, children, className, ...props } ) => {
         'fd-status-label',
         {
             [`fd-status-label--${type}`]: !!type,
-            [`sap-icon--${glyph}`]: glyph
+            [`sap-icon--${glyph}`]: !!glyph
         },
         className
     );

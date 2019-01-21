@@ -37,5 +37,5 @@ Identifier.propTypes = {
     glyph: PropTypes.string,
     label: PropTypes.string,
     modifier: PropTypes.oneOf(['', 'circle', 'transparent']),
-    size: PropTypes.oneOf(['', 'xxs', 'xs', 's', 'm', 'l', 'xl', 'xxl' ])
+    size: PropTypes.string
 };
