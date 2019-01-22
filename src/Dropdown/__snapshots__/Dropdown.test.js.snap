@@ -13,7 +13,7 @@ exports[`<Dropdown /> create dropdown component 1`] = `
       onClick={[Function]}
     >
       <button
-        className=" fd-button fd-dropdown__control"
+        className="fd-button fd-dropdown__control"
         disabled={false}
         selected={false}
       >
@@ -82,7 +82,7 @@ exports[`<Dropdown /> create dropdown component 2`] = `
       onClick={[Function]}
     >
       <button
-        className=" fd-button fd-dropdown__control fd-button--compact"
+        className="fd-button fd-dropdown__control fd-button--compact"
         disabled={false}
         selected={false}
       >
@@ -151,7 +151,7 @@ exports[`<Dropdown /> create dropdown component 3`] = `
       onClick={[Function]}
     >
       <button
-        className=" fd-button fd-button--standard fd-dropdown__control"
+        className="fd-button fd-button--standard fd-dropdown__control"
         disabled={false}
         selected={false}
       >
@@ -221,7 +221,7 @@ exports[`<Dropdown /> create dropdown component 4`] = `
       onClick={[Function]}
     >
       <button
-        className=" fd-button fd-dropdown__control sap-icon--filter"
+        className="fd-button fd-dropdown__control sap-icon--filter"
         disabled={false}
         selected={false}
       >
@@ -293,7 +293,7 @@ exports[`<Dropdown /> create dropdown component 5`] = `
       onClick={[Function]}
     >
       <button
-        className=" fd-button fd-dropdown__control sap-icon--filter is-disabled"
+        className="fd-button fd-dropdown__control sap-icon--filter is-disabled"
         disabled={true}
         selected={false}
       >

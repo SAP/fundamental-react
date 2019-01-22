@@ -21,7 +21,7 @@ exports[`<Tile /> create tile component 1`] = `
 
 exports[`<Tile /> create tile component 2`] = `
 <div
-  className="fd-tile is-disabled fd-has-grid-column-span-3  fd-has-background-color-background-8"
+  className="fd-tile is-disabled fd-has-grid-column-span-3 fd-has-background-color-background-8"
 >
   <div
     className="fd-tile__content"
@@ -91,7 +91,7 @@ exports[`<Tile /> create tile component 4`] = `
         onClick={[Function]}
       >
         <button
-          className=" fd-button fd-button--standard sap-icon--vertical-grip"
+          className="fd-button fd-button--standard sap-icon--vertical-grip"
           disabled={false}
           selected={false}
         />
@@ -199,7 +199,7 @@ exports[`<Tile /> create tile component 6`] = `
         onClick={[Function]}
       >
         <button
-          className=" fd-button fd-button--standard sap-icon--vertical-grip"
+          className="fd-button fd-button--standard sap-icon--vertical-grip"
           disabled={false}
           selected={false}
         />
@@ -311,7 +311,7 @@ exports[`<Tile /> create tile component 8`] = `
 
 exports[`<Tile /> create tile component 9`] = `
 <div
-  className="fd-tile-gridfd-tile-grid--3col\\" blue"
+  className="fd-tile-grid fd-tile-grid--3col blue"
 >
   <div
     className="fd-tile fd-has-grid-row-span-2 fd-has-background-color-accent-7"

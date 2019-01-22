@@ -1,11 +1,21 @@
+import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 
 export const Icon = ({ glyph, size, clickHandler, className, ...props }) => {
+    const iconClasses = classnames(
+        {
+            [`sap-icon--${glyph}`]: !!glyph,
+            [`sap-icon--${size}`]: !!size
+        },
+        className
+    );
+
     return (
         <span
-            className={`${'sap-icon--' + glyph}${size ? ' sap-icon--' + size : ''}${className ? ' ' + className : ''}`}
-            onClick={clickHandler} {...props} />
+            {...props}
+            className={iconClasses}
+            onClick={clickHandler} />
     );
 };
 

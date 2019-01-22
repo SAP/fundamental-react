@@ -62,7 +62,7 @@ describe('<Alert />', () => {
             ).toBe('Sample');
         });
 
-        test('should allow props to be spread to the Alert component\'s button element when dismissable', () => {
+        test('should allow props to be spread to the Alert component\'s button element when dismissible', () => {
             const element = mount(<Alert buttonProps={{'data-sample': 'Sample'}} dismissible />);
 
             expect(

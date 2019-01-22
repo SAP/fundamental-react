@@ -1,10 +1,20 @@
+import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 
 export const Dropdown = props => {
     const { standard, children, className, ...rest } = props;
+
+    const dropdownClasses = classnames(
+        'fd-dropdown',
+        {
+            'fd-dropdown--standard': standard
+        },
+        className
+    );
+
     return (
-        <div {...rest} className={`fd-dropdown${standard ? ' fd-dropdown--standard' : ''}${className ? ' ' + className : ''}`}>
+        <div {...rest} className={dropdownClasses}>
             {children}
         </div>
     );

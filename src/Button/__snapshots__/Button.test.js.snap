@@ -7,17 +7,17 @@ exports[`<Button /> create button group 1`] = `
   role="group"
 >
   <button
-    className=" fd-button sap-icon--survey blue"
+    className="fd-button sap-icon--survey blue"
     disabled={false}
     selected={false}
   />
   <button
-    className=" fd-button sap-icon--pie-chart is-selected"
+    className="fd-button sap-icon--pie-chart is-selected"
     disabled={false}
     selected={true}
   />
   <button
-    className=" fd-button sap-icon--pool"
+    className="fd-button sap-icon--pool"
     disabled={false}
     selected={false}
   />
@@ -26,7 +26,7 @@ exports[`<Button /> create button group 1`] = `
 
 exports[`<Button /> create buttons 1`] = `
 <button
-  className=" fd-button"
+  className="fd-button"
   disabled={false}
   selected={false}
 >
@@ -46,7 +46,7 @@ exports[`<Button /> create buttons 2`] = `
 
 exports[`<Button /> create buttons 3`] = `
 <button
-  className=" fd-button fd-button--positive"
+  className="fd-button fd-button--positive"
   disabled={false}
   selected={false}
 >
@@ -56,7 +56,7 @@ exports[`<Button /> create buttons 3`] = `
 
 exports[`<Button /> create buttons 4`] = `
 <button
-  className=" fd-button sap-icon--cart"
+  className="fd-button sap-icon--cart"
   disabled={false}
   selected={false}
 >
@@ -66,7 +66,7 @@ exports[`<Button /> create buttons 4`] = `
 
 exports[`<Button /> create buttons 5`] = `
 <button
-  className=" fd-button fd-button--compact"
+  className="fd-button fd-button--compact"
   disabled={false}
   selected={false}
 >
@@ -96,7 +96,7 @@ exports[`<Button /> create buttons 7`] = `
 
 exports[`<Button /> create buttons 8`] = `
 <button
-  className=" fd-button fd-dropdown__control"
+  className="fd-button fd-dropdown__control"
   disabled={false}
   selected={false}
 >
@@ -106,7 +106,7 @@ exports[`<Button /> create buttons 8`] = `
 
 exports[`<Button /> create buttons 9`] = `
 <button
-  className=" fd-button fd-global-nav__btn"
+  className="fd-button fd-global-nav__btn"
   disabled={false}
   selected={false}
 >
