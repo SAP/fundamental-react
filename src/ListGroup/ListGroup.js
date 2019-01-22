@@ -41,12 +41,17 @@ ListGroupItemActions.propTypes = {
     className: PropTypes.string
 };
 
-export const ListGroupItemCheckbox = (props) => {
-    const { children } = props;
+export const ListGroupItemCheckbox = ({ children, labelProps, inputProps, ...props }) => {
     return (
-        <div className='fd-form__item fd-form__item--check'>
-            <label className='fd-form__label' htmlFor='CndSd399'>
-                <input className='fd-form__control' id='CndSd399'
+        <div {...props} className='fd-form__item fd-form__item--check'>
+            <label
+                {...labelProps}
+                className='fd-form__label'
+                htmlFor='CndSd399'>
+                <input
+                    {...inputProps}
+                    className='fd-form__control'
+                    id='CndSd399'
                     type='checkbox' />
                 {children}
             </label>
@@ -56,5 +61,7 @@ export const ListGroupItemCheckbox = (props) => {
 
 ListGroupItemCheckbox.propTypes = {
     children: PropTypes.node,
-    className: PropTypes.string
+    className: PropTypes.string,
+    inputProps: PropTypes.object,
+    labelProps: PropTypes.object
 };
