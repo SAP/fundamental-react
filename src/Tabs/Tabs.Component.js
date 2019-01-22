@@ -31,7 +31,8 @@ export const TabsComponent = () => {
                 properties={[
                     { name: 'ids', description: 'array of objects to use for each tab' },
                     { name: 'className', description: 'string - class to add to tab' },
-                    { name: 'tabLinkProps', description: 'object - additional props to be spread to the tab\s link' },
+                    { name: 'tabContentProps', description: 'object - additional props to be spread to the tab\'s content' },
+                    { name: 'tabLinkProps', description: 'object - additional props to be spread to the tab\'s link' },
                     { name: 'tabProps', description: 'object - additional props to be spread to the tab' }
                 ]}
                 type='TabComponent Inputs' />

@@ -37,7 +37,7 @@ export class TabComponent extends Component {
     };
 
     render() {
-        const { ids, className, tabProps, tabLinkProps, ...rest } = this.props;
+        const { ids, className, tabProps, tabLinkProps, tabContentProps, ...rest } = this.props;
         return (
             <BrowserRouter>
                 <ul {...rest} className={`fd-tabs${className ? ' ' + className : ''}`}>
@@ -58,7 +58,7 @@ export class TabComponent extends Component {
                                     {id.name}
                                 </Link>
                                 {this.state.selectedTab === id.id ? (
-                                    <p className='fd-tabs__content'>{id.content}</p>
+                                    <p {...tabContentProps} className='fd-tabs__content'>{id.content}</p>
                                 ) : null}
                             </li>
                         );
@@ -72,6 +72,7 @@ export class TabComponent extends Component {
 TabComponent.propTypes = {
     ids: PropTypes.array.isRequired,
     className: PropTypes.string,
+    tabContentProps: PropTypes.object,
     tabLinkProps: PropTypes.object,
     tabProps: PropTypes.object
 };
