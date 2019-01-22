@@ -1,16 +1,21 @@
+import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 
 export const ActionBar = ({ mobile, width, children, className, ...props }) => {
+    const actionBarClasses = classnames(
+        'fd-action-bar',
+        className
+    );
 
     return (
         <React.Fragment>
             {mobile ? (
                 <div style={{ width: width ? width : '319px' }}>
-                    <div className={`fd-action-bar${className ? ' ' + className : ''}`} {...props}>{children}</div>
+                    <div {...props} className={actionBarClasses}>{children}</div>
                 </div>
             ) : (
-                <div className={`fd-action-bar${className ? ' ' + className : ''}`} {...props}>{children}</div>
+                <div {...props} className={actionBarClasses}>{children}</div>
             )}
         </React.Fragment>
     );
@@ -23,9 +28,13 @@ ActionBar.propTypes = {
 };
 
 export const ActionBarBack = ({ onClick, className, buttonProps, ...props }) => {
+    const actionBarBackClasses = classnames(
+        'fd-action-bar__back',
+        className
+    );
 
     return (
-        <div className={`fd-action-bar__back${className ? ' ' + className : ''}`} {...props}>
+        <div {...props} className={actionBarBackClasses}>
             <button
                 {...buttonProps}
                 className='fd-button--light fd-button--compact sap-icon--nav-back'
@@ -41,8 +50,13 @@ ActionBarBack.propTypes = {
 };
 
 export const ActionBarHeader = ({ className, description, descriptionProps, title, titleProps, ...props }) => {
+    const actionBarHeaderClasses = classnames(
+        'fd-action-bar__header',
+        className
+    );
+
     return (
-        <div className={`fd-action-bar__header${className ? ' ' + className : ''}`} {...props}>
+        <div {...props} className={actionBarHeaderClasses}>
             <h1
                 {...titleProps}
                 className='fd-action-bar__title'>{title}</h1>
@@ -62,5 +76,10 @@ ActionBarHeader.propTypes = {
 };
 
 export const ActionBarActions = ({ children, className, ...props }) => {
-    return <div className={`fd-action-bar__actions${className ? ' ' + className : ''}`} {...props}>{children}</div>;
+    const actionBarActionsClasses = classnames(
+        'fd-action-bar__actions',
+        className
+    );
+
+    return <div {...props} className={actionBarActionsClasses}>{children}</div>;
 };

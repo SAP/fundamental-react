@@ -1,3 +1,4 @@
+import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 
@@ -90,10 +91,15 @@ export class Pagination extends Component {
             itemsTotal / (itemsPerPage ? itemsPerPage : 10)
         );
 
+        const paginationClasses = classnames(
+            'fd-pagination',
+            className
+        );
+
         return (
             <div
                 {...props}
-                className={`fd-pagination${className ? ' ' + className : ''}`}>
+                className={paginationClasses}>
                 {displayTotal ? (
                     <span
                         {...displayTotalProps}

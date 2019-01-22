@@ -1,9 +1,20 @@
+import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 
+
 export const Badge = ({ type, modifier, children, className, ...props }) => {
+    const badgeClasses = classnames(
+        'fd-badge',
+        {
+            [`fd-badge--${type}`]: !!type,
+            [`fd-badge--${modifier}`]: !!modifier
+        },
+        className
+    );
+
     return (
-        <span className={`fd-badge${type ? ' fd-badge--' + type : ''}${modifier ? ' fd-badge--' + modifier : ''}${className ? ' ' + className : ''}`} {...props}>
+        <span {...props} className={badgeClasses}>
             {children}
         </span>
     );
@@ -16,7 +27,15 @@ Badge.propTypes = {
 };
 
 export const Label = ({ type, children, className, ...props }) => {
-    return <span className={`fd-label${type ? ' fd-label--' + type : ''}${className ? ' ' + className : ''}`} {...props}>{children}</span>;
+    const labelClasses = classnames(
+        'fd-label',
+        {
+            [`fd-label--${type}`]: !!type
+        },
+        className
+    );
+
+    return <span {...props} className={labelClasses}>{children}</span>;
 };
 
 Label.propTypes = {
@@ -25,9 +44,19 @@ Label.propTypes = {
 };
 
 export const Status = ({ type, glyph, children, className, ...props } ) => {
+    const statusClasses = classnames(
+        'fd-status-label',
+        {
+            [`fd-status-label--${type}`]: !!type,
+            [`sap-icon--${glyph}`]: !!glyph
+        },
+        className
+    );
+
     return (
         <span
-            className={`fd-status-label${type ? ' fd-status-label--' + type : ''}${glyph ? ' sap-icon--' + glyph : ''}${className ? ' ' + className : ''}`} {...props}>
+            {...props}
+            className={statusClasses}>
             {children}
         </span>
     );
@@ -39,9 +68,17 @@ Status.propTypes = {
 };
 
 export const Counter = ({ notification, children, className, ...props }) => {
+    const counterClasses = classnames(
+        'fd-counter',
+        {
+            'fd-counter--notification': notification
+        },
+        className
+    );
+
     return (
-        <span aria-label='Unread count' className={`fd-counter${notification ? ' fd-counter--notification' : ''}${className ? ' ' + className : ''}`}
-            {...props}>
+        <span {...props} aria-label='Unread count'
+            className={counterClasses}>
             {children}
         </span>
     );
