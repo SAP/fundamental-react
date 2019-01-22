@@ -2,6 +2,75 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.1.0-rc.16"></a>
+# [0.1.0-rc.16](https://github.com/SAP/fundamental-react/compare/v0.1.0-rc.15...v0.1.0-rc.16) (2019-01-22)
+
+
+
+<a name="0.1.0-rc.15"></a>
+# [0.1.0-rc.15](https://github.com/SAP/fundamental-react/compare/v0.1.0-rc.14...v0.1.0-rc.15) (2019-01-22)
+
+
+### Bug Fixes
+
+* add spread to ListGroupItemCheckbox ([#255](https://github.com/SAP/fundamental-react/issues/255)) ([89e842f](https://github.com/SAP/fundamental-react/commit/89e842f))
+
+
+
+<a name="0.1.0-rc.14"></a>
+# [0.1.0-rc.14](https://github.com/SAP/fundamental-react/compare/v0.1.0-rc.13...v0.1.0-rc.14) (2019-01-22)
+
+
+### Bug Fixes
+
+* Fix typo in Shellbar code sample ([#268](https://github.com/SAP/fundamental-react/issues/268)) ([66e7b9c](https://github.com/SAP/fundamental-react/commit/66e7b9c))
+* prop spreading to Tabs ([#261](https://github.com/SAP/fundamental-react/issues/261)) ([404ba5a](https://github.com/SAP/fundamental-react/commit/404ba5a))
+
+
+
+<a name="0.1.0-rc.13"></a>
+# [0.1.0-rc.13](https://github.com/SAP/fundamental-react/compare/v0.1.0-rc.12...v0.1.0-rc.13) (2019-01-19)
+
+
+### Bug Fixes
+
+* Prop spreading for Tree ([#264](https://github.com/SAP/fundamental-react/issues/264)) ([a71665b](https://github.com/SAP/fundamental-react/commit/a71665b))
+
+
+
+<a name="0.1.0-rc.12"></a>
+# [0.1.0-rc.12](https://github.com/SAP/fundamental-react/compare/v0.1.0-rc.11...v0.1.0-rc.12) (2019-01-19)
+
+
+### Bug Fixes
+
+* Prop spreading for Table ([#260](https://github.com/SAP/fundamental-react/issues/260)) ([b582c3e](https://github.com/SAP/fundamental-react/commit/b582c3e))
+
+
+
+<a name="0.1.0-rc.11"></a>
+# [0.1.0-rc.11](https://github.com/SAP/fundamental-react/compare/v0.1.0-rc.10...v0.1.0-rc.11) (2019-01-18)
+
+
+### Bug Fixes
+
+* add editor config file ([b4ec76e](https://github.com/SAP/fundamental-react/commit/b4ec76e))
+* Prop spreading for ComboboxInput ([#254](https://github.com/SAP/fundamental-react/issues/254)) ([7fb85f0](https://github.com/SAP/fundamental-react/commit/7fb85f0))
+* Prop spreading for LocalizationEditor ([#258](https://github.com/SAP/fundamental-react/issues/258)) ([d57c8bc](https://github.com/SAP/fundamental-react/commit/d57c8bc))
+* prop spreading for MultiInput ([#257](https://github.com/SAP/fundamental-react/issues/257)) ([e21f9a8](https://github.com/SAP/fundamental-react/commit/e21f9a8))
+
+
+
+<a name="0.1.0-rc.10"></a>
+# [0.1.0-rc.10](https://github.com/SAP/fundamental-react/compare/v0.1.0-rc.9...v0.1.0-rc.10) (2019-01-18)
+
+
+### Bug Fixes
+
+* prop spreading to Calendar ([#253](https://github.com/SAP/fundamental-react/issues/253)) ([b6d90d0](https://github.com/SAP/fundamental-react/commit/b6d90d0))
+
+
+
 <a name="0.1.0-rc.9"></a>
 # [0.1.0-rc.9](https://github.com/SAP/fundamental-react/compare/v0.1.0-rc.8...v0.1.0-rc.9) (2019-01-18)
 

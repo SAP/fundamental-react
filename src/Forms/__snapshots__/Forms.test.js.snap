@@ -48,7 +48,7 @@ exports[`<Forms /> create form item 1`] = `
       Pellentesque metus lacus commodo eget justo ut rutrum varius nunc.
     </textarea>
     <span
-      className="fd-form__message  fd-form__message--help"
+      className="fd-form__message fd-form__message--help"
     >
       Pellentesque metus lacus commodo eget justo ut rutrum varius nunc
     </span>

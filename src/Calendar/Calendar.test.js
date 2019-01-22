@@ -284,24 +284,48 @@ describe('<Calendar />', () => {
             ).toBe('Sample');
         });
 
-        xtest('should allow props to be spread to the Calendar component\'s month list ul element', () => {
-            // TODO: placeholder for this test description once that functionality is built
+        test('should allow props to be spread to the Calendar component\'s month list ul element', () => {
+            const element = mount(<Calendar monthListProps={{'data-sample': 'Sample'}} />);
+
+            element.find('.fd-calendar__action').at(1).childAt(0).simulate('click');
+
+            expect(
+                element.find('ul').getDOMNode().attributes['data-sample'].value
+            ).toBe('Sample');
         });
 
-        xtest('should allow props to be spread to the Calendar component\'s year list ul element', () => {
-            // TODO: placeholder for this test description once that functionality is built
+        test('should allow props to be spread to the Calendar component\'s year list ul element', () => {
+            const element = mount(<Calendar yearListProps={{'data-sample': 'Sample'}} />);
+
+            element.find('.fd-calendar__action').at(2).childAt(0).simulate('click');
+
+            expect(
+                element.find('ul').getDOMNode().attributes['data-sample'].value
+            ).toBe('Sample');
         });
 
-        xtest('should allow props to be spread to the Calendar component\'s table element', () => {
-            // TODO: placeholder for this test description once that functionality is built
+        test('should allow props to be spread to the Calendar component\'s table element', () => {
+            const element = mount(<Calendar tableProps={{'data-sample': 'Sample'}} />);
+
+            expect(
+                element.find('table').getDOMNode().attributes['data-sample'].value
+            ).toBe('Sample');
         });
 
-        xtest('should allow props to be spread to the Calendar component\'s thead element', () => {
-            // TODO: placeholder for this test description once that functionality is built
+        test('should allow props to be spread to the Calendar component\'s thead element', () => {
+            const element = mount(<Calendar tableHeaderProps={{'data-sample': 'Sample'}} />);
+
+            expect(
+                element.find('thead').getDOMNode().attributes['data-sample'].value
+            ).toBe('Sample');
         });
 
-        xtest('should allow props to be spread to the Calendar component\'s tbody element', () => {
-            // TODO: placeholder for this test description once that functionality is built
+        test('should allow props to be spread to the Calendar component\'s tbody element', () => {
+            const element = mount(<Calendar tableBodyProps={{'data-sample': 'Sample'}} />);
+
+            expect(
+                element.find('tbody').getDOMNode().attributes['data-sample'].value
+            ).toBe('Sample');
         });
     });
 });

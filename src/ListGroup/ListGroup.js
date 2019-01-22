@@ -1,9 +1,15 @@
+import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 
 export const ListGroup = ({ children, className, ...props }) => {
+    const listGroupClasses = classnames(
+        'fd-list-group',
+        className
+    );
+
     return (
-        <ul className={`fd-list-group${className ? ' ' + className : ''}`} {...props}>
+        <ul {...props} className={listGroupClasses}>
             {children}
         </ul>
     );
@@ -15,8 +21,13 @@ ListGroup.propTypes = {
 };
 
 export const ListGroupItem = ({ children, className, ...props }) => {
+    const listGroupItemClasses = classnames(
+        'fd-list-group__item',
+        className
+    );
+
     return (
-        <li className={`fd-list-group__item${className ? ' ' + className : ''}`} {...props}>
+        <li {...props} className={listGroupItemClasses}>
             {children}
         </li>
 
@@ -29,8 +40,13 @@ ListGroupItem.propTypes = {
 };
 
 export const ListGroupItemActions = ({ children, className, ...props }) => {
+    const listGroupItemActionsClasses = classnames(
+        'fd-list-group__action',
+        className
+    );
+
     return (
-        <span className={`fd-list-group__action${className ? ' ' + className : ''}`} {...props}>
+        <span {...props} className={listGroupItemActionsClasses}>
             {children}
         </span>
     );
@@ -41,12 +57,17 @@ ListGroupItemActions.propTypes = {
     className: PropTypes.string
 };
 
-export const ListGroupItemCheckbox = (props) => {
-    const { children } = props;
+export const ListGroupItemCheckbox = ({ children, labelProps, inputProps, ...props }) => {
     return (
-        <div className='fd-form__item fd-form__item--check'>
-            <label className='fd-form__label' htmlFor='CndSd399'>
-                <input className='fd-form__control' id='CndSd399'
+        <div {...props} className='fd-form__item fd-form__item--check'>
+            <label
+                {...labelProps}
+                className='fd-form__label'
+                htmlFor='CndSd399'>
+                <input
+                    {...inputProps}
+                    className='fd-form__control'
+                    id='CndSd399'
                     type='checkbox' />
                 {children}
             </label>
@@ -56,5 +77,7 @@ export const ListGroupItemCheckbox = (props) => {
 
 ListGroupItemCheckbox.propTypes = {
     children: PropTypes.node,
-    className: PropTypes.string
+    className: PropTypes.string,
+    inputProps: PropTypes.object,
+    labelProps: PropTypes.object
 };

@@ -1,3 +1,4 @@
+import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -5,16 +6,25 @@ export const Identifier = ({ glyph, size, modifier, color, label, backgroundImag
     const styles = {
         backgroundImage: `url(${backgroundImageUrl})`
     };
+    const identifierClasses = classnames(
+        {
+            'fd-identifier': !size,
+            [`fd-identifier--${size}`]: !!size,
+            [`sap-icon--${glyph}`]: !!glyph,
+            [`fd-identifier--${modifier}`]: !!modifier,
+            [`fd-has-background-color-accent-${color}`]: !!color,
+            'fd-identifier--thumbnail': backgroundImageUrl
+        },
+        className
+    );
+
     return (
         <span
+            {...props}
             aria-label={label}
-            className={`${size ? 'fd-identifier--' + size : 'fd-identifier'}${
-                glyph ? ' sap-icon--' + glyph : ''
-            }${modifier ? ' fd-identifier--' + modifier : ''}${
-                color ? ' fd-has-background-color-accent-' + color : ''
-            }${backgroundImageUrl ? ' fd-identifier--thumbnail' : ''}${className ? ' ' + className : ''}`}
+            className={identifierClasses}
             role={`${!children ? 'presentation' : ''}`}
-            style={backgroundImageUrl && styles} {...props}>
+            style={backgroundImageUrl && styles}>
             {children}
         </span>
     );
