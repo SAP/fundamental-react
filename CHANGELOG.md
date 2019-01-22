@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.1.0-rc.15"></a>
+# [0.1.0-rc.15](https://github.com/SAP/fundamental-react/compare/v0.1.0-rc.14...v0.1.0-rc.15) (2019-01-22)
+
+
+### Bug Fixes
+
+* add spread to ListGroupItemCheckbox ([#255](https://github.com/SAP/fundamental-react/issues/255)) ([89e842f](https://github.com/SAP/fundamental-react/commit/89e842f))
+
+
+
 <a name="0.1.0-rc.14"></a>
 # [0.1.0-rc.14](https://github.com/SAP/fundamental-react/compare/v0.1.0-rc.13...v0.1.0-rc.14) (2019-01-22)
 
