@@ -20,11 +20,6 @@ https://www.npmjs.com/get-npm).
 
 ## Getting Started
 
-1. Install Fiori Fundamentals:
-    ```
-    npm install fiori-fundamentals
-    ```
-
 1. Install fundamental-react
     ```
     npm install fundamental-react
