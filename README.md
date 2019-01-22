@@ -25,7 +25,7 @@ https://www.npmjs.com/get-npm).
     npm install fundamental-react
     ```
 
-1. Load the fiori-fundamentals styles. If using create-react-app, this will be in App.css.
+1. Load the fiori-fundamentals styles. If using create-react-app, this will be in `App.css`.
     ```
     @import '~fiori-fundamentals/dist/fiori-fundamentals.min.css';
     ```
