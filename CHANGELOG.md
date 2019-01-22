@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.1.0-rc.19"></a>
+# [0.1.0-rc.19](https://github.com/SAP/fundamental-react/compare/v0.1.0-rc.18...v0.1.0-rc.19) (2019-01-22)
+
+
+### Bug Fixes
+
+* Spread props for TimePicker ([#251](https://github.com/SAP/fundamental-react/issues/251)) ([33dc960](https://github.com/SAP/fundamental-react/commit/33dc960))
+
+
+
 <a name="0.1.0-rc.18"></a>
 # [0.1.0-rc.18](https://github.com/SAP/fundamental-react/compare/v0.1.0-rc.17...v0.1.0-rc.18) (2019-01-22)
 
