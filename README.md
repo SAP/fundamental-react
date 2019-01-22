@@ -32,7 +32,7 @@ https://www.npmjs.com/get-npm).
 
 1. Import components as needed. See [Component Documentation](https://sap.github.io/fundamental-react/) for examples and API details.
     ```
-    import { Alert } from 'fundamental-react/dist';
+    import { Alert } from 'fundamental-react';
     ```
 
 
