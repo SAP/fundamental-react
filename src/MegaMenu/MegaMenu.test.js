@@ -125,8 +125,7 @@ describe('<MegaMenu />', () => {
             ).toBe('Sample');
         });
 
-        xtest('should allow props to be spread to the MegaMenuList component', () => {
-            // TODO: placeholder for this test description once that functionality is built
+        test('should allow props to be spread to the MegaMenuList component', () => {
             const items = [
                 { id: 'item_1', url: '#', name: 'Link Item' },
                 { id: 'item_2', url: '#', name: 'Link Item' },
@@ -139,8 +138,7 @@ describe('<MegaMenu />', () => {
             ).toBe('Sample');
         });
 
-        xtest('should allow props to be spread to the MegaMenuGroup component', () => {
-            // TODO: placeholder for this test description once that functionality is built
+        test('should allow props to be spread to the MegaMenuGroup component', () => {
             const element = mount(<MegaMenuGroup data-sample='Sample' />);
 
             expect(
@@ -148,8 +146,12 @@ describe('<MegaMenu />', () => {
             ).toBe('Sample');
         });
 
-        xtest('should allow props to be spread to the MegaMenuGroup component\'s h1 element', () => {
-            // TODO: placeholder for this test description once that functionality is built
+        test('should allow props to be spread to the MegaMenuGroup component\'s h1 element', () => {
+            const element = mount(<MegaMenuGroup headerProps={{'data-sample': 'Sample'}} />);
+
+            expect(
+                element.find('h1').getDOMNode().attributes['data-sample'].value
+            ).toBe('Sample');
         });
     });
 });

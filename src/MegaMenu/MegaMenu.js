@@ -86,7 +86,7 @@ export class MegaMenuList extends Component {
     }
 
     render() {
-        const { items, className } = this.props;
+        const { items, className, ...props } = this.props;
 
         const megaMenuListClasses = classnames(
             'fd-mega-menu__list',
@@ -95,7 +95,7 @@ export class MegaMenuList extends Component {
 
         return (
             <BrowserRouter>
-                <ul className={megaMenuListClasses}>
+                <ul {...props} className={megaMenuListClasses}>
                     {items.map(item => {
                         return (
                             <li className='fd-mega-menu__item' key={item.id}>
@@ -164,15 +164,15 @@ MegaMenuList.propTypes = {
     className: PropTypes.string
 };
 
-export const MegaMenuGroup = ({ title, children, className }) => {
+export const MegaMenuGroup = ({ title, children, className, headerProps, ...props }) => {
     const megaMenuGroupClasses = classnames(
         'fd-mega-menu__group',
         className
     );
 
     return (
-        <div className={megaMenuGroupClasses}>
-            <h1 className='fd-mega-menu__title'>{title}</h1>
+        <div {...props} className={megaMenuGroupClasses}>
+            <h1 {...headerProps} className='fd-mega-menu__title'>{title}</h1>
             {children}
         </div>
     );
@@ -181,5 +181,6 @@ export const MegaMenuGroup = ({ title, children, className }) => {
 MegaMenuGroup.propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,
+    headerProps: PropTypes.object,
     title: PropTypes.string
 };
