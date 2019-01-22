@@ -18,6 +18,29 @@ See [Component Documentation](https://sap.github.io/fundamental-react/) for exam
 You will need to install [Node and Node Package Manager](
 https://www.npmjs.com/get-npm).
 
+## Consuming the Library
+
+1. Fundamental-react does not include the SAP Fiori Fundamentals library which is required for styling. Install Fiori Fundamentals:
+    ```
+    npm install fiori-fundamentals
+    ```
+
+1. Install fundamental-react
+    ```
+    npm install fundamental-react
+    ```
+
+1. Load the fiori-fundamentals styles in App.css
+    ```
+    @import '~fiori-fundamentals/dist/fiori-fundamentals.min.css';
+    ```
+
+1. Import components as needed. See [Component Documentation](https://sap.github.io/fundamental-react/) for examples and API details.
+    ```
+    import { Alert } from 'fundamental-react/dist';
+    ```
+
+
 ## Getting Started
 
 1. Clone this repository to your local machine
