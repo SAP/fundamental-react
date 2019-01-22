@@ -30,11 +30,9 @@ https://www.npmjs.com/get-npm).
     npm install fundamental-react
     ```
 
-1. Include the Fiori Fundamentals CSS in your React application. In your App.scss file include the following lines:
+1. Load the fiori-fundamentals styles in App.css
     ```
-    $fd-icons-path: "~fiori-fundamentals/scss/icons/";
-    $fd-fonts-path: "~fiori-fundamentals/scss/fonts/";
-    @import '../node_modules/fiori-fundamentals/scss/all.scss';
+    @import '~fiori-fundamentals/dist/fiori-fundamentals.min.css';
     ```
 
 1. Import components as needed. See [Component Documentation](https://sap.github.io/fundamental-react/) for examples and API details.
