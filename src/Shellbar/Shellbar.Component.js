@@ -86,7 +86,7 @@ profileMenu = [
     copilot
     searchInput={this.searchInput2}
     actions={this.actions}
-    notifications={this.notifications}
+    notifications={this.notifications2}
     profile={this.profile}
     profileMenu={this.profileMenu}
     productSwitcher={this.productSwitcher}
