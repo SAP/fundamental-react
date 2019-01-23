@@ -25,6 +25,7 @@ exports[`<Forms /> create form item 1`] = `
     className="fd-form__item"
   >
     <label
+      aria-required={true}
       className="fd-form__label"
       forAttr="input-1"
     >

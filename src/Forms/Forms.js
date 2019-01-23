@@ -55,6 +55,7 @@ export const FormLabel = ({ required, children, className, ...props }) => {
     return (
         <label
             {...props}
+            aria-required={required}
             className={formLabelClasses}>
             {children}
             {required ? '*' : ''}
