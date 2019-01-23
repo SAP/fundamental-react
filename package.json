@@ -46,6 +46,7 @@
     "@babel/core": "7.1.0",
     "@babel/polyfill": "^7.1.5",
     "@svgr/webpack": "2.4.1",
+    "array-sort": "^1.0.0",
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "9.0.0",
     "babel-jest": "23.6.0",
