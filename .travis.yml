@@ -10,7 +10,7 @@ jobs:
   - stage: "Fundamental-react: Test & Lint"
     script: npm run lint && npm run test:coveralls && npm run size
   - stage: Deploy
-    if: (branch = master OR branch = automated_travis_release_do_not_use) AND type = push
+    if: (branch = master OR branch = tmp_branch_for_automated_release_do_not_use) AND type = push
     before_deploy:
     - bash ./ci-scripts/setup_npm.sh
     deploy:

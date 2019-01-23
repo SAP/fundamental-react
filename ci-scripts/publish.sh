@@ -8,7 +8,7 @@ git checkout master
 npm install
 
 # publish releases
-if [[ "$TRAVIS_BRANCH" = "automated_travis_release_do_not_use" ]]; then
+if [[ "$TRAVIS_BRANCH" = "tmp_branch_for_automated_release_do_not_use" ]]; then
 
    # update the package version and commit to the git repository
     npm run std-version
@@ -18,8 +18,8 @@ if [[ "$TRAVIS_BRANCH" = "automated_travis_release_do_not_use" ]]; then
   
     npm publish
 
-    # delete automated_travis_release_do_not_use branch from remote
-    git push "https://$GH_TOKEN@github.com/$TRAVIS_REPO_SLUG" :automated_travis_release_do_not_use > /dev/null 2>&1;
+    # delete tmp_branch_for_automated_release_do_not_use branch from remote
+    git push "https://$GH_TOKEN@github.com/$TRAVIS_REPO_SLUG" :tmp_branch_for_automated_release_do_not_use > /dev/null 2>&1;
 
 # bump and publish rc
 else
