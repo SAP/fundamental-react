@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.1.1-rc.1"></a>
+## [0.1.1-rc.1](https://github.com/SAP/fundamental-react/compare/v0.1.1-rc.0...v0.1.1-rc.1) (2019-01-23)
+
+
+### Bug Fixes
+
+* import path on docs ([#274](https://github.com/SAP/fundamental-react/issues/274)) ([3d7d900](https://github.com/SAP/fundamental-react/commit/3d7d900))
+
+
+
 <a name="0.1.1-rc.0"></a>
 ## [0.1.1-rc.0](https://github.com/SAP/fundamental-react/compare/v0.1.0...v0.1.1-rc.0) (2019-01-23)
 
