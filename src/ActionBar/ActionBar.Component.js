@@ -98,6 +98,8 @@ const clickBackBtn = () => {
 
             <Separator />
 
+            <Properties sourceModule={require('./ActionBar')} />
+            {/*
             <Properties
                 properties={[
                     { name: 'mobile', description: 'bool - set to "true" for mobile view of the Action Bar.' },
@@ -131,6 +133,7 @@ const clickBackBtn = () => {
                     }
                 ]}
                 type='Inputs' />
+            */}
 
             <Separator />
 
