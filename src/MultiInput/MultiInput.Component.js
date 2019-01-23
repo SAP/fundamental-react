@@ -49,7 +49,7 @@ export class MultiInputComponent extends Component {
           <div>
               <Header>Multi Input</Header>
               <Description />
-              <Import module='MultiInput' path='/fundamental-react/src/' />
+              <Import sourceModule={require('./MultiInput')} />
 
               <Separator />
 

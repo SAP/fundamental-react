@@ -16,7 +16,7 @@ export const ImageComponent = () => {
             <Description>
                 When using images, use the following helpers classes to adjust the size and the shape.
             </Description>
-            <Import module='Image' path='/fundamental-react/src/' />
+            <Import sourceModule={require('./Image')} />
 
             <Separator />
 

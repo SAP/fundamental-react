@@ -90,7 +90,7 @@ searchData = [
             <div>
                 <Header>Search Input</Header>
                 <Description />
-                <Import module='SearchInput' path='/fundamental-react/src/' />
+                <Import sourceModule={require('./SearchInput')} />
 
                 <Separator />
 

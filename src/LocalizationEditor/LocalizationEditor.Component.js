@@ -36,7 +36,7 @@ export const LocalizationEditorComponent = () => {
         <div>
             <Header>Localization Editor</Header>
 
-            <Import module='LocalizationEditor' path='/fundamental-react/src/' />
+            <Import sourceModule={require('./LocalizationEditor')} />
 
             <Separator />
 

@@ -417,7 +417,7 @@ productSwitcher = {
                     a composite component comprised of mandatory and optional elements. Before getting started, here are
                     some things to know.
                 </Description>
-                <Import module='Shellbar' path='/fundamental-react/src/' />
+                <Import sourceModule={require('./Shellbar')} />
                 <Separator />
                 <Properties
                     properties={[

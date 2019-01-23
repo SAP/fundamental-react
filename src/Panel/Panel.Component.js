@@ -198,9 +198,7 @@ export const PanelComponent = () => {
         <div>
             <Header>Panel</Header>
             <Description />
-            <Import
-                module='Panel, PanelGrid, PanelBody, PanelHeader, PanelHead, PanelActions, PanelFilters, PanelContent, PanelFooter'
-                path='/fundamental-react/src/' />
+            <Import sourceModule={require('./Panel')} />
 
             <Separator />
 
