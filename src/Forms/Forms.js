@@ -60,6 +60,7 @@ export const FormLabel = ({ required, children, className, ...props }) => {
             {...props}
             className={formLabelClasses}>
             {children}
+            {required ? '*' : ''}
         </label>
     );
 };
