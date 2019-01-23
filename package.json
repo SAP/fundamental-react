@@ -26,7 +26,6 @@
     "size:debug": "npm run build && size-limit --why",
     "start-js": "node scripts/start.js",
     "start": "node scripts/start.js",
-    "std-version:release": "standard-version -m \"chore(release): version %s\"",
     "std-version": "standard-version -m \"chore(release): version %s build ${TRAVIS_BUILD_NUMBER} [ci skip]\"",
     "test:coverage": "jest --coverage",
     "test:coveralls": "jest --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",

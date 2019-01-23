@@ -25,14 +25,12 @@ hash_upstream=$(git rev-parse $git_branch@{upstream})
 
 set -o errexit
 
-githubEmail=`git config --get user.email`
-githubName=`git config --get user.name`
+git checkout -b tmp_branch_for_automated_release_do_not_use
+git commit --allow-empty -m "chore(release): create new release via script"
 
-git config --global user.email "fundamental@sap.com"
-git config --global user.name "fundamental-bot"
+# push new branch to trigger travis build
+git push --set-upstream origin tmp_branch_for_automated_release_do_not_use
 
-npm run std-version:release
-git push --follow-tags origin
-
-git config --global user.email "$githubEmail"
-git config --global user.name "$githubName"
+# delete branch on local machine
+git checkout master
+git branch -D tmp_branch_for_automated_release_do_not_use
