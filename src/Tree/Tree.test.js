@@ -194,8 +194,29 @@ describe('<Tree />', () => {
             .at(0)
             .simulate('click');
 
-        // check that all open
+        // check that all closed
         expect(wrapper.state('expandAllClicked')).toBeFalsy();
+    });
+
+    test('closed all tree from header when set to open', () => {
+        let wrapper = mount(richTree);
+
+        wrapper.setState({ 'expandAllClicked': true });
+        wrapper
+            .find('button.fd-tree__control')
+            .at(0)
+            .simulate('click');
+
+        // check that all closed
+        expect(wrapper.state('expandAllClicked')).toBeFalsy();
+
+        wrapper
+            .find('button.fd-tree__control')
+            .at(0)
+            .simulate('click');
+
+        // check that all open
+        expect(wrapper.state('expandAllClicked')).toBeTruthy();
     });
 
     test('expand tree from row', () => {
