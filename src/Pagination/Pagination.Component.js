@@ -19,7 +19,7 @@ export const PaginationComponent = () => {
                 display needs to be handled in the function that is passed in
                 the onClick method of the Pagination control.
             </Description>
-            <Import module='Pagination' path='/fundamental-react/src/' />
+            <Import sourceModule={require('./Pagination')} />
 
             <Separator />
 

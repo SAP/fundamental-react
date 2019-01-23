@@ -145,7 +145,7 @@ export class ModalComponent extends Component {
                     To display the Modal control, pass a boolean value to the "show" property of the component. It is
                     recommended to store this value as a state property in the Parent control.
                 </Description>
-                <Import module='Modal' path='/fundamental-react/src/' />
+                <Import sourceModule={require('./Modal')} />
 
                 <Separator />
 

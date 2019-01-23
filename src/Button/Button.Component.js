@@ -119,7 +119,7 @@ const clickBtnHandler = btn => {
                 instance, the most important button has a blue background where as a red button should only be used if
                 the action it performs is potentially destructive.
             </Description>
-            <Import module='Button, ButtonGroup' path='/fundamental-react/src/' />
+            <Import sourceModule={require('./Button')} />
 
             <Separator />
 

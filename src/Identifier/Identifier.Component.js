@@ -48,7 +48,7 @@ export const IdentifierComponent = () => {
         <div>
             <Header>Identifier</Header>
             <Description>A visual presentation option around using an icon or user initials .</Description>
-            <Import module='Identifier' path='/fundamental-react/src/' />
+            <Import sourceModule={require('./Identifier')} />
 
             <Separator />
 

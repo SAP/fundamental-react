@@ -12,7 +12,7 @@ export const CalendarComponent = () => {
     return (<div>
         <Header>Calendar</Header>
         <Description>Commonly used as the contents of a popover when composing “date-picker”, rarely used on its own as a standalone component.</Description>
-        <Import module='Calendar' path='/fundamental-react/src/' />
+        <Import sourceModule={require('./Calendar')} />
 
         <Separator />
 

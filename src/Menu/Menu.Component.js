@@ -59,7 +59,7 @@ export const MenuComponent = () => {
                 contents when composing “dropdowns”, “contextual menus”, “mega menu”, etc, when paired with the popover
                 component.
             </Description>
-            <Import module='Menu, MenuList, MenuItem, MenuGroup' path='/fundamental-react/src/' />
+            <Import sourceModule={require('./Menu')} />
 
             <Separator />
 

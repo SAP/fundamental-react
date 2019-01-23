@@ -40,7 +40,7 @@ export const ComboboxInputComponent = () => {
         <div>
             <Header>Combobox Input</Header>
 
-            <Import module='ComboboxInput, Menu, MenuItem, MenuList' path='/fundamental-react/src/' />
+            <Import sourceModule={require('./ComboboxInput')} />
 
             <Separator />
 
