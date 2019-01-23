@@ -50,16 +50,15 @@ FormItem.propTypes = {
 export const FormLabel = ({ required, children, className, ...props }) => {
     const formLabelClasses = classnames(
         'fd-form__label',
-        {
-            'is-required': required
-        },
         className
     );
     return (
         <label
             {...props}
+            aria-required={required}
             className={formLabelClasses}>
             {children}
+            {required ? '*' : ''}
         </label>
     );
 };
