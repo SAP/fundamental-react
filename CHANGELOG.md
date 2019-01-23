@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.1.0-rc.21"></a>
+# [0.1.0-rc.21](https://github.com/SAP/fundamental-react/compare/v0.1.0-rc.20...v0.1.0-rc.21) (2019-01-23)
+
+
+### Bug Fixes
+
+* add * to required form labels ([#276](https://github.com/SAP/fundamental-react/issues/276)) ([cc32328](https://github.com/SAP/fundamental-react/commit/cc32328))
+
+
+
 <a name="0.1.0-rc.20"></a>
 # [0.1.0-rc.20](https://github.com/SAP/fundamental-react/compare/v0.1.0-rc.19...v0.1.0-rc.20) (2019-01-22)
 
