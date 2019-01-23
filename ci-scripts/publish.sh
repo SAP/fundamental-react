@@ -1,6 +1,5 @@
 #! /bin/bash
 
-
 git config --global user.email "fundamental@sap.com"
 git config --global user.name "fundamental-bot"
 
@@ -9,6 +8,8 @@ npm install
 
 # publish releases
 if [[ "$TRAVIS_BRANCH" = "tmp_branch_for_automated_release_do_not_use" ]]; then
+    # delete tmp_branch_for_automated_release_do_not_use branch from remote
+    git push "https://$GH_TOKEN@github.com/$TRAVIS_REPO_SLUG" :tmp_branch_for_automated_release_do_not_use > /dev/null 2>&1;
 
    # update the package version and commit to the git repository
     npm run std-version
@@ -18,12 +19,8 @@ if [[ "$TRAVIS_BRANCH" = "tmp_branch_for_automated_release_do_not_use" ]]; then
   
     npm publish
 
-    # delete tmp_branch_for_automated_release_do_not_use branch from remote
-    git push "https://$GH_TOKEN@github.com/$TRAVIS_REPO_SLUG" :tmp_branch_for_automated_release_do_not_use > /dev/null 2>&1;
-
 # bump and publish rc
 else
-
     # update the package rc version and commit to the git repository
     npm run std-version -- --prerelease rc --no-verify
 
