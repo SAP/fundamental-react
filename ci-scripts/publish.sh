@@ -19,6 +19,8 @@ if [[ "$TRAVIS_BRANCH" = "tmp_branch_for_automated_release_do_not_use" ]]; then
   
     npm publish
 
+    npm run deploy
+
 # bump and publish rc
 else
     # update the package rc version and commit to the git repository
