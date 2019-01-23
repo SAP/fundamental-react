@@ -37,7 +37,7 @@ export const ToggleComponent = () => {
                 would be Active, the toggle state would be “on” and the selected state label displayed to the right of
                 the toggle would be “Yes”.
             </Description>
-            <Import module='Toggle' path='/fundamental-react/src/' />
+            <Import sourceModule={require('./Toggle')} />
 
             <Separator />
 

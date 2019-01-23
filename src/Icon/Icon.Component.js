@@ -651,7 +651,7 @@ export const IconComponent = () => {
         this point they are used more as visual elements within other
         components.
             </Description>
-            <Import module='Icon' path='/fundamental-react/src/' />
+            <Import sourceModule={require('./Icon')} />
 
             <Separator />
 

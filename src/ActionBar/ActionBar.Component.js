@@ -94,7 +94,7 @@ const clickBackBtn = () => {
                 The Action Bar is located at the top of the page and is used for Page title and Main Actions for the
                 page.
             </Description>
-            <Import module='ActionBar' path='/fundamental-react/src/' />
+            <Import sourceModule={require('./ActionBar')} />
 
             <Separator />
 

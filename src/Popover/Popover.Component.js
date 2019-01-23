@@ -79,7 +79,7 @@ export const PopoverComponent = () => {
                 Opening one popover should close all others to prevent multiple layers and collisions of several
                 popovers.
             </Description>
-            <Import module='Popover' path='/fundamental-react/src/' />
+            <Import sourceModule={require('./Popover')} />
 
             <Separator />
 

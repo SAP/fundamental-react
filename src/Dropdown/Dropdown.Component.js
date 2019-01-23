@@ -161,7 +161,7 @@ export const DropdownComponent = () => {
                 The dropdown component let the user select one of different options. It is more flexible than the normal
                 Select.
             </Description>
-            <Import module='Dropdown' path='/fundamental-react/src/' />
+            <Import sourceModule={require('./Dropdown')} />
 
             <Separator />
 

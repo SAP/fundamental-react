@@ -1,6 +1,6 @@
 import React from 'react';
 import { TimePicker } from '../';
-import { Description, DocsText, DocsTile, Header, Properties, Separator } from '../_playground';
+import { Description, DocsText, DocsTile, Header, Import, Properties, Separator } from '../_playground';
 
 export const TimePickerComponent = () => {
     const defaultTimeCode = '<TimePicker />';
@@ -11,10 +11,11 @@ export const TimePickerComponent = () => {
         <div>
             <Header>Time Picker</Header>
             <Description>
-        The Time Picker component allows the user to easily set a time using the
-        Fundamental React Time component
+                The Time Picker component allows the user to easily set a time using the
+                Fundamental React Time component
             </Description>
-            <Separator />{' '}
+            <Import sourceModule={require('./TimePicker')} />
+            <Separator />
             <Properties
                 properties={[
                     {
