@@ -74,10 +74,9 @@ export const PopoverComponent = () => {
                 The popover is a wrapping component that accepts a "control" as well as a "body". A control can be
                 anything that you want to trigger the interaction from. The body will be the contents of what you reveal
                 on the page after triggering the popover. When paired with the menu component, the popover is commonly
-                used as the interaction/wrapping component for composing "dropdowns", "contextual menus", "mega menus",
-                etc. As a general rule, it is suggested that one popover be revealed on the page at any given time.
-                Opening one popover should close all others to prevent multiple layers and collisions of several
-                popovers.
+                used as the interaction/wrapping component for composing "dropdowns", "contextual menus" etc. As a general rule,
+                it is suggested that one popover be revealed on the page at any given time. Opening one popover should close all
+                others to prevent multiple layers and collisions of several popovers.
             </Description>
             <Import sourceModule={require('./Popover')} />
 
