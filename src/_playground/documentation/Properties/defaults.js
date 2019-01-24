@@ -7,7 +7,11 @@ export const defaultPropDescriptions = {
     glyph: 'The icon to include. See the icon page for the list of icons.',
     id: 'Value for the `id` attribute on the element.',
     inputProps: 'Additional props to be spread to the `<input>` element.',
+    labelProps: 'Additional props to be spread to the `<label>` element.',
     modifier: 'Sets a style variation for a modified appearance.',
     onClick: 'Callback function when user clicks on the component.',
+    popoverProps: 'Additional props to be spread to the `Popover` component.',
+    title: 'Localized text for the heading.',
+    titleProps: 'Additional props to be spread to the title\'s heading element.',
     type: 'Sets the variation of the component. Primarily used for styling.'
 };

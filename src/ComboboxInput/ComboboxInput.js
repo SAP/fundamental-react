@@ -67,6 +67,5 @@ ComboboxInput.defaultTypes = {
 
 ComboboxInput.propDescriptions = {
     menu: 'An object containing a `Menu` component.',
-    placeholder: 'Localized placeholder text of the input.',
-    popoverProps: 'Additional props to be spread to the `Popover` component.'
+    placeholder: 'Localized placeholder text of the input.'
 };

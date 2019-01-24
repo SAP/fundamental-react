@@ -134,81 +134,22 @@ Compact mode:
         <div>
             <Header>InputGroup</Header>
             <Description>
-        The input group includes form inputs with add-ons that allow the user to
-        better understand the information being entered.
+                The input group includes form inputs with add-ons that allow the user to
+                better understand the information being entered.
             </Description>
             <Import sourceModule={require('./InputGroup')} />
 
             <Separator />
 
-            <Properties
-                properties={[
-                    {
-                        name: 'inputType',
-                        description: 'string - The type of the input. Options include "text", "number", and "search".'
-                    },
-                    {
-                        name: 'inputId',
-                        description: 'string - The value of the "id" attribute.'
-                    },
-                    {
-                        name: 'inputName',
-                        description: 'string - The value of the "name" attribute.'
-                    },
-                    {
-                        name: 'inputValue',
-                        description: 'string - The value of the "value" attribute. '
-                    },
-                    {
-                        name: 'inputPlaceholder',
-                        description: 'String - The value of the input placeholder.'
-                    },
-                    {
-                        name: 'addonPos',
-                        description: 'string - The add-on can be placed at the left (use addonPos="before") or right (use addonPos="after") of the input element.'
-                    },
-                    {
-                        name: 'addon',
-                        description: 'string - The value of the add-on.'
-                    },
-                    {
-                        name: 'glyph',
-                        description: 'string - The name of the icon to include. See the icon page for the list of icons.'
-                    },
-                    {
-                        name: 'actions',
-                        description: 'bool  -  If set to "true", enables input with actions. Actions can be shown with a text label or icon.'
-                    },
-                    {
-                        name: 'compact',
-                        description: 'bool  - set to true to enable compact mode'
-                    },
-                    {
-                        name: 'inputProps',
-                        description: 'object - additional props to be spread to the input element.'
-                    },
-                    {
-                        name: 'numberUpButtonProps',
-                        description: 'object - additional props to be spread to the up button element (for inputType=\'number\').'
-                    },
-                    {
-                        name: 'numberDownButtonProps',
-                        description: 'object - additional props to be spread to the down button element (for inputType=\'number\').'
-                    },
-                    {
-                        name: 'searchButtonProps',
-                        description: 'object - additional props to be spread to the button element (for inputType=\'search\').'
-                    }
-                ]}
-                type='Inputs' />
+            <Properties sourceModule={require('./InputGroup')} />
 
             <Separator />
 
             <h2>Text add-on</h2>
             <Description>
-        The Input with text add-on component is typically used to specify the
-        type of the data being entered, such as currency or unit of measure.
-        This add-on can be placed at the left or right of the input element.
+                The Input with text add-on component is typically used to specify the
+                type of the data being entered, such as currency or unit of measure.
+                This add-on can be placed at the left or right of the input element.
             </Description>
             <DocsTile>
                 <FormGroup>
@@ -266,8 +207,8 @@ Compact mode:
 
             <h2>Number input</h2>
             <Description>
-        For an integer value input, a spinner can be added allowing the user to
-        increase or decrease the value.
+                For an integer value input, a spinner can be added allowing the user to
+                increase or decrease the value.
             </Description>
             <DocsTile>
                 <FormGroup>
@@ -369,8 +310,8 @@ Compact mode:
 
             <h2>Input with actions</h2>
             <Description>
-        The Input with add-on supports actions. Actions can be shown with a text
-        label or icon.
+                The Input with add-on supports actions. Actions can be shown with a text
+                label or icon.
             </Description>
             <DocsTile>
                 <FormGroup>
@@ -1082,7 +1023,7 @@ Compact mode:
                             inputType='text'
                             inputValue='1234567890'>
                             <Button glyph='navigation-down-arrow' option='light'>
-                Button
+                                Button
                             </Button>
                         </InputGroup>
                     </FormItem>

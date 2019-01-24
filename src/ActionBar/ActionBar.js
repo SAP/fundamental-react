@@ -81,10 +81,8 @@ ActionBarHeader.propTypes = {
 };
 
 ActionBarHeader.propDescriptions = {
-    description: 'The description text of the component.',
-    descriptionProps: 'Additional props to be spread to the description\'s `<p>` element.',
-    title: 'The title text of the component.',
-    titleProps: 'Additional props to be spread to the title\'s heading element.'
+    description: 'Localized text for the description.',
+    descriptionProps: 'Additional props to be spread to the description\'s `<p>` element.'
 };
 
 export const ActionBarActions = ({ children, className, ...props }) => {

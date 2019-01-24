@@ -63,6 +63,8 @@ export const MenuComponent = () => {
 
             <Separator />
 
+            <Properties sourceModule={require('./Menu')} />
+            {/*
             <Properties
                 properties={[
                     {
@@ -108,6 +110,7 @@ export const MenuComponent = () => {
                     }
                 ]}
                 type='MenuGroup Inputs' />
+            */}
 
             <Separator />
 
@@ -183,7 +186,6 @@ export const MenuComponent = () => {
                 </Menu>
             </DocsTile>
             <DocsText>{menuAddonBeforeCode}</DocsText>
-            <Separator />
         </div>
     );
 };

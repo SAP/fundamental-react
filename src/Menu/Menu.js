@@ -25,6 +25,10 @@ Menu.propTypes = {
     className: PropTypes.string
 };
 
+Menu.propDescriptions = {
+    addonBefore: 'Set to **true** enables menu items with addon before.'
+};
+
 // ---------------------------------------- Menu List ----------------------------------------
 export const MenuList = ({ children, className, ...props }) => {
     const menuListClasses = classnames(
@@ -33,6 +37,11 @@ export const MenuList = ({ children, className, ...props }) => {
     );
 
     return <ul {...props} className={menuListClasses}>{children}</ul>;
+};
+
+MenuList.propTypes = {
+    children: PropTypes.node,
+    className: PropTypes.string
 };
 
 // ---------------------------------------- Menu Item ----------------------------------------
@@ -75,10 +84,22 @@ MenuItem.propTypes = {
     addonProps: PropTypes.object,
     className: PropTypes.string,
     isLink: PropTypes.bool,
+    link: PropTypes.string,
     linkProps: PropTypes.object,
     separator: PropTypes.bool,
     url: PropTypes.string,
     urlProps: PropTypes.object
+};
+
+MenuItem.propDescriptions = {
+    addon: 'Name of the SAP icon to be applied as an addon before.',
+    addonProps: 'Additional props to be spread to the addon section.',
+    isLink: 'Set to **true** to style as a link.',
+    link: 'Enables use of react-router `Link` component. Path name to be applied to Link\'s `to` prop. Should use either `link` or `url`, but not both.',
+    linkProps: 'Additional props to be spread to the Menu Item links (when using `link`).',
+    separator: 'Set to **true** to add a horizontal line (separator).',
+    url: 'Enables use of `<a>` element. Value to be applied to the anchor\'s `href` attribute. Should use either `link` or `url`, but not both.',
+    urlProps: 'Additional props to be spread to the Menu Item links (when using `url`).'
 };
 
 // ---------------------------------------- Menu Group ----------------------------------------
