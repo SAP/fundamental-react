@@ -63,7 +63,8 @@ export const MenuItem = ({ url, link, isLink, separator, addon, children, onclic
                 }
                 {(!url && !link) && <a {...linkProps}
                     className='fd-menu__item'
-                    onClick={onclick}>{children}</a>}
+                    onClick={onclick}
+                    role='button'>{children}</a>}
             </li>
             {separator && <hr />}
         </React.Fragment>

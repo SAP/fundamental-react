@@ -15,7 +15,9 @@ export const Icon = ({ glyph, size, clickHandler, className, ...props }) => {
         <span
             {...props}
             className={iconClasses}
-            onClick={clickHandler} />
+            onClick={clickHandler}
+            role='button'
+            tabIndex='0' />
     );
 };
 

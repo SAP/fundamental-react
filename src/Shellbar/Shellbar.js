@@ -274,7 +274,8 @@ export class Shellbar extends Component {
                                                         <MenuItem>
                                                             <span
                                                                 className='fd-menu sap-icon--nav-back'
-                                                                onClick={this.backBtnHandler} />
+                                                                onClick={this.backBtnHandler}
+                                                                role='button' />
                                                         </MenuItem>
                                                         {productSwitcherList.map((item, index) => {
                                                             return (
