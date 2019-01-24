@@ -24,3 +24,8 @@ Image.propTypes = {
     className: PropTypes.string,
     type: PropTypes.oneOf(['', 'circle'])
 };
+
+Image.propDescriptions = {
+    photo: 'Picture URL.',
+    size: 'Size of the image.'
+};

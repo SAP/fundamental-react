@@ -26,10 +26,6 @@ Badge.propTypes = {
     type: PropTypes.oneOf(['', 'success', 'warning', 'error'])
 };
 
-Badge.propDescriptions = {
-    modifier: 'Sets a style variation for a modified appearance.'
-};
-
 export const Label = ({ type, children, className, ...props }) => {
     const labelClasses = classnames(
         'fd-label',

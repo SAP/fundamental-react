@@ -39,3 +39,10 @@ Identifier.propTypes = {
     modifier: PropTypes.oneOf(['', 'circle', 'transparent']),
     size: PropTypes.string
 };
+
+Identifier.propDescriptions = {
+    backgroundImageUrl: 'Image URL.',
+    color: 'Applies a background color.',
+    label: 'Localized text for label.',
+    size: 'Size of the image. These sizes are available: **xxs** (extra extra small) - 20px, **xs** (extra small) - 28px, **s** (small) - 32px, **m** (medium) - 48px, **l** (large) - 64px, **xl** (extra lagre) - 88px, and **xxl** (extra extra large). Default matches the base font size (14px).'
+};

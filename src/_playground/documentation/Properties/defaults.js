@@ -7,6 +7,7 @@ export const defaultPropDescriptions = {
     glyph: 'The icon to include. See the icon page for the list of icons.',
     id: 'Value for the `id` attribute on the element.',
     inputProps: 'Additional props to be spread to the `<input>` element.',
+    modifier: 'Sets a style variation for a modified appearance.',
     onClick: 'Callback function when user clicks on the component.',
     type: 'Sets the variation of the component. Primarily used for styling.'
 };

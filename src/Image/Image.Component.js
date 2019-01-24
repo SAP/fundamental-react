@@ -20,17 +20,7 @@ export const ImageComponent = () => {
 
             <Separator />
 
-            <Properties
-                properties={[
-                    {
-                        name: 'size',
-                        description:
-                            'string (required)- the size of the image. Size options include \'s\' (24x24), \'m\' (36x36), and \'l\' (48x48).'
-                    },
-                    { name: 'photo', description: 'string (required) - picture url.' },
-                    { name: 'type', description: 'string - When set to \'circle\' renders a round image.' }
-                ]}
-                type='Inputs' />
+            <Properties sourceModule={require('./Image')} />
 
             <Separator />
 
