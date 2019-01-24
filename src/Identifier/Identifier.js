@@ -1,7 +1,7 @@
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
-import {IDENTIFIER_COLORS, IDENTIFIER_MODIFIERS, IDENTIFIER_SIZES} from 'utils/constants';
+import {IDENTIFIER_COLORS, IDENTIFIER_MODIFIERS, IDENTIFIER_SIZES} from '../utils/constants';
 
 export const Identifier = ({ glyph, size, modifier, color, label, backgroundImageUrl, children, className, ...props }) => {
     const styles = {

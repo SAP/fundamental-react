@@ -1,7 +1,7 @@
 import classnames from 'classnames';
+import {GRID_COLUMNS} from '../utils/constants';
 import PropTypes from 'prop-types';
 import React from 'react';
-import {PANEL_COLUMNS, PANEL_GRID_COLUMNS} from '../utils/constants';
 
 // ------------------------------------------- Panel ------------------------------------------
 export const Panel = props => {
@@ -20,7 +20,7 @@ export const Panel = props => {
 
 Panel.propTypes = {
     className: PropTypes.string,
-    colSpan: PropTypes.oneOf(PANEL_COLUMNS)
+    colSpan: PropTypes.oneOf(GRID_COLUMNS)
 };
 
 Panel.defaultProps = {
@@ -55,7 +55,7 @@ export const PanelGrid = props => {
 
 PanelGrid.propTypes = {
     className: PropTypes.string,
-    cols: PropTypes.oneOf(PANEL_GRID_COLUMNS),
+    cols: PropTypes.oneOf(GRID_COLUMNS),
     nogap: PropTypes.bool
 };
 
