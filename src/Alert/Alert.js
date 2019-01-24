@@ -77,5 +77,9 @@ Alert.propTypes = {
     link: PropTypes.string,
     linkProps: PropTypes.object,
     linkText: PropTypes.string,
-    type: PropTypes.oneOf(['', 'warning', 'error', 'success', 'information'])
+    type: PropTypes.oneOf(['warning', 'error', 'success', 'information'])
+};
+
+Alert.defaultProps = {
+    dismissible: false
 };

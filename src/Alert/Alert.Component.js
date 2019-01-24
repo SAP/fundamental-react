@@ -157,7 +157,7 @@ export const AlertComponent = () => {
                     }
                 ]}>
                 <Alert dismissible={false} link='#'
-                    linkText='link' type=''>
+                    linkText='link'>
                     Default alert with a{' '}
                 </Alert>
             </Playground>
