@@ -38,9 +38,7 @@ export class SearchInput extends Component {
         } else {
             if (this.state.searchList) {
                 let filteredResult = this.state.searchList.filter(item =>
-                    item.text
-                        .toLowerCase()
-                        .startsWith(event.target.value.toLowerCase()),
+                    item.text.toLowerCase().startsWith(event.target.value.toLowerCase())
                 );
                 this.setState({
                     filteredResult: filteredResult
@@ -56,17 +54,9 @@ export class SearchInput extends Component {
 
     onClickHandler = () => {
         if (!this.state.isExpanded) {
-            document.addEventListener(
-                'click',
-                this.onOutsideClickHandler,
-                false,
-            );
+            document.addEventListener('click', this.onOutsideClickHandler, false);
         } else {
-            document.removeEventListener(
-                'click',
-                this.onOutsideClickHandler,
-                false,
-            );
+            document.removeEventListener('click', this.onOutsideClickHandler, false);
         }
         this.setState(prevState => ({
             isExpanded: !prevState.isExpanded
@@ -128,11 +118,7 @@ export class SearchInput extends Component {
     }
     componentWillUnmount() {
         document.removeEventListener('keydown', this.onEscHandler, false);
-        document.removeEventListener(
-            'click',
-            this.onOutsideClickHandler,
-            false,
-        );
+        document.removeEventListener('click', this.onOutsideClickHandler, false);
     }
 
     render() {
@@ -157,7 +143,7 @@ export class SearchInput extends Component {
             {
                 'fd-search-input--closed': inShellbar
             },
-            className,
+            className
         );
 
         const inputGroupClasses = classnames(
@@ -165,19 +151,26 @@ export class SearchInput extends Component {
             'fd-input-group--after',
             {
                 'fd-input-group--compact': compact
-            },
+            }
         );
 
-        const inputClasses = classnames('fd-input', {
-            'fd-input--compact': compact
-        });
+        const inputClasses = classnames(
+            'fd-input',
+            {
+                'fd-input--compact': compact
+            }
+        );
 
-        const bodyClasses = classnames({
-            'fd-search-input__body': inShellbar
-        });
+        const bodyClasses = classnames(
+            {
+                'fd-search-input__body': inShellbar
+            }
+        );
 
         return (
-            <div {...rest} className={searchInputClasses}>
+            <div
+                {...rest}
+                className={searchInputClasses}>
                 <div className='fd-popover'>
                     {inShellbar ? (
                         <div className='fd-popover__control fd-search-input__control'>
@@ -229,12 +222,9 @@ export class SearchInput extends Component {
 
                                     {!noSearchBtn && (
                                         <span className='fd-input-group__addon fd-input-group__addon--after fd-input-group__addon--button'>
-                                            <button
-                                                {...searchBtnProps}
+                                            <button {...searchBtnProps}
                                                 className=' fd-button--light sap-icon--search'
-                                                onClick={() =>
-                                                    this.onClickHandler()
-                                                } />
+                                                onClick={() => this.onClickHandler()} />
                                         </span>
                                     )}
                                 </div>
@@ -247,46 +237,24 @@ export class SearchInput extends Component {
                             className='fd-popover__body fd-popover__body--no-arrow'>
                             <div className={bodyClasses}>
                                 <nav className='fd-menu'>
-                                    <ul
-                                        {...listProps}
-                                        className='fd-menu__list'>
-                                        {this.state.filteredResult.length >
-                                        0 ? (
-                                                this.state.filteredResult.map(
-                                                    (item, index) => {
-                                                        return (
-                                                            <li
-                                                                className='fd-menu__item'
-                                                                key={index}
-                                                                onClick={() =>
-                                                                    this.listItemClickHandler(
-                                                                        item,
-                                                                    )
-                                                                }>
-                                                                <strong>
-                                                                    {
-                                                                        this.state
-                                                                            .value
-                                                                    }
-                                                                </strong>
-                                                                {this.state.value &&
-                                                            this.state.value
-                                                                .length
-                                                                    ? item.text.substring(
-                                                                        this.state
-                                                                            .value
-                                                                            .length,
-                                                                    )
-                                                                    : item.text}
-                                                            </li>
-                                                        );
-                                                    },
-                                                )
-                                            ) : (
-                                                <li className='fd-menu__item'>
-                                                No result
-                                                </li>
-                                            )}
+                                    <ul {...listProps} className='fd-menu__list'>
+                                        {this.state.filteredResult.length > 0 ? (
+                                            this.state.filteredResult.map((item, index) => {
+                                                return (
+                                                    <li
+                                                        className='fd-menu__item'
+                                                        key={index}
+                                                        onClick={() => this.listItemClickHandler(item)}>
+                                                        <strong>{this.state.value}</strong>
+                                                        {this.state.value && this.state.value.length
+                                                            ? item.text.substring(this.state.value.length)
+                                                            : item.text}
+                                                    </li>
+                                                );
+                                            })
+                                        ) : (
+                                            <li className='fd-menu__item'>No result</li>
+                                        )}
                                     </ul>
                                 </nav>
                             </div>
