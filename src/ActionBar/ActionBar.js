@@ -29,9 +29,6 @@ ActionBar.propTypes = {
 
 ActionBar.propDescriptions = {
     mobile: 'Set to "true" for mobile view of the Action Bar.',
-    testOneOf: 'This is the testOneOf description.',
-    testOneOfType: 'This is the testOneOfType description.',
-    testShape: 'This is the testShape description.',
     width: 'The width of the Action Bar in mobile view.'
 };
 
@@ -88,9 +85,9 @@ ActionBarHeader.propTypes = {
 };
 
 ActionBarHeader.propDescriptions = {
-    description: 'Action bar description.',
+    description: 'Action Bar description.',
     descriptionProps: 'Additional props to be spread to the description\'s paragraph element.',
-    title: 'The title text of the action bar.',
+    title: 'The title text of the Action Bar.',
     titleProps: 'Additional props to be spread to the title\'s heading element.'
 };
 
