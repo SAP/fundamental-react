@@ -1,6 +1,7 @@
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
+import {IDENTIFIER_COLORS, IDENTIFIER_MODIFIERS, IDENTIFIER_SIZES} from 'utils/constants';
 
 export const Identifier = ({ glyph, size, modifier, color, label, backgroundImageUrl, children, className, ...props }) => {
     const styles = {
@@ -35,11 +36,11 @@ export const Identifier = ({ glyph, size, modifier, color, label, backgroundImag
 Identifier.propTypes = {
     backgroundImageUrl: PropTypes.string,
     className: PropTypes.string,
-    color: PropTypes.oneOf([1, 2, 3, 4, 5, 6, 7, 8, 9]),
+    color: PropTypes.oneOf(IDENTIFIER_COLORS),
     glyph: PropTypes.string,
     label: PropTypes.string,
-    modifier: PropTypes.oneOf(['', 'circle', 'transparent']),
-    size: PropTypes.string
+    modifier: PropTypes.oneOf(IDENTIFIER_MODIFIERS),
+    size: PropTypes.oneOf(IDENTIFIER_SIZES)
 };
 
 Identifier.propDescriptions = {

@@ -1,6 +1,7 @@
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
+import {TILE_COLUMNS, TILE_ROWS} from '../utils/constants';
 
 export const Tile = props => {
     const {
@@ -39,9 +40,9 @@ Tile.propTypes = {
     backgroundColor: PropTypes.number,
     className: PropTypes.string,
     colorAccent: PropTypes.number,
-    columnSpan: PropTypes.number,
+    columnSpan: PropTypes.oneOf(TILE_COLUMNS),
     disabled: PropTypes.bool,
-    rowSpan: PropTypes.number
+    rowSpan: PropTypes.oneOf(TILE_ROWS)
 };
 
 Tile.propDescriptions = {

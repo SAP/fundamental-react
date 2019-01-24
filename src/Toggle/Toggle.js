@@ -1,6 +1,7 @@
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
+import {TOGGLE_SIZES} from '../utils/constants';
 
 export class Toggle extends React.Component {
     constructor(props) {
@@ -61,5 +62,5 @@ Toggle.propTypes = {
     id: PropTypes.string,
     inputProps: PropTypes.object,
     labelProps: PropTypes.object,
-    size: PropTypes.oneOf(['', 'xs', 's', 'l'])
+    size: PropTypes.oneOf(TOGGLE_SIZES)
 };
