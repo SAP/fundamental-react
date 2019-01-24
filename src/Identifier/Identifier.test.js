@@ -71,4 +71,21 @@ describe('<Identifier />', () => {
             ).toBe('Sample');
         });
     });
+    describe('Roles', () => {
+        test('should have role of presentation by default', () => {
+            const element = mount(<Identifier />);
+
+            expect(
+                element.getDOMNode().attributes.role.value
+            ).toBe('presentation');
+        });
+
+        test('should have empty role if children prop is passed', () => {
+            const element = mount(<Identifier children='Test child' />);
+
+            expect(
+                element.getDOMNode().attributes.role.value
+            ).toBe('');
+        });
+    });
 });
