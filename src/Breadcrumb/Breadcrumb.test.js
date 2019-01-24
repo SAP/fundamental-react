@@ -1,4 +1,4 @@
-import { MemoryRouter } from 'react-router-dom';
+import { Link, MemoryRouter } from 'react-router-dom';
 import { mount } from 'enzyme';
 import React from 'react';
 import renderer from 'react-test-renderer';
@@ -16,9 +16,13 @@ describe('<Breadcrumb />', () => {
     const breadCrumbRouterLink = (
         <MemoryRouter>
             <Breadcrumb className='blue'>
-                <BreadcrumbItem className='blue' name='Link Text' />
-                <BreadcrumbItem link='/' name='Link Text' />
-                <BreadcrumbItem link='/' name='Link Text' />
+                <BreadcrumbItem className='blue' />
+                <BreadcrumbItem>
+                    <Link to='/'>Link Text</Link>
+                </BreadcrumbItem>
+                <BreadcrumbItem>
+                    <Link to='/'>Link Text</Link>
+                </BreadcrumbItem>
             </Breadcrumb>
         </MemoryRouter>
     );
