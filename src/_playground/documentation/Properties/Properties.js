@@ -12,7 +12,6 @@ export const Properties = ({ sourceModule }) => {
             <h2>Properties</h2>
             {componentNames.map((name, index) => {
                 const component = sourceModule[name];
-                // console.log('Properties name', name);
                 return (
                     <React.Fragment key={index}>
                         <h3 className='header'>{name}</h3>
@@ -34,9 +33,6 @@ Properties.propTypes = {
 
 
 const PropertyTable = ({ propTypes, defaultProps, propDescriptions }) => {
-    // console.log('PropertyTable propTypes', propTypes);
-    // console.log('PropertyTable defaultProps', defaultProps);
-    // console.log('PropertyTable propDescriptions', propDescriptions);
     if (!propTypes) {
         return (
             <em>This component has no defined properties.</em>
@@ -139,7 +135,6 @@ PropertyType.propTypes = {
 
 const PropertyDescription = ({ defaultValue, description, prop }) => {
     const typeChecker = prop.typeChecker;
-    // console.log('PropertyDescription typeChecker', typeChecker);
 
     return (
         <React.Fragment>
