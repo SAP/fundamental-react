@@ -16,6 +16,9 @@ export const CalendarComponent = () => {
 
         <Separator />
 
+        <Properties sourceModule={require('./Calendar')} />
+
+        {/*
         <Properties properties={[
             {name: 'disableWeekends', description: 'bool - Disable weekends'},
             {name: 'disableBeforeDate', description: 'date - Disables dates of a calendar that comes before a specific date'},
@@ -32,6 +35,7 @@ export const CalendarComponent = () => {
             {name: 'tableProps', description: 'object - Props to be spread to month <table>'},
             {name: 'yearListProps', description: 'object - Props to be spread to year <ul>'}
         ]} type='Inputs' />
+        */}
 
         <Separator />
 
@@ -64,8 +68,6 @@ export const CalendarComponent = () => {
             {<Calendar enableRangeSelection />}
         </DocsTile>
         <DocsText>{calendarAllOptions}</DocsText>
-
-        <Separator />
     </div>);
 
 };

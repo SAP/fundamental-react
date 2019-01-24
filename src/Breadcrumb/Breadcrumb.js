@@ -12,7 +12,7 @@ Breadcrumb.propTypes = {
 };
 
 Breadcrumb.propDescriptions = {
-    children: 'List item (BreadcrumbItem) nodes.'
+    children: 'List item (`BreadcrumbItem`) nodes.'
 };
 
 export const BreadcrumbItem = ({ url, link, name, className, ...props }) => {

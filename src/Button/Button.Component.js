@@ -123,40 +123,8 @@ const clickBtnHandler = btn => {
 
             <Separator />
 
-            <Properties
-                properties={[
-                    {
-                        name: 'option',
-                        description:
-                            'string - indicates the importance of the button. Options include \'emphasized\' and \'light\'. Leave empty for default.'
-                    },
-                    {
-                        name: 'type',
-                        description:
-                            'string - the type of the button. Options include \'standard\', \'positive\', \'medium\', and \'negative\'. Leave empty for default/action button.'
-                    },
-                    {
-                        name: 'compact',
-                        description: 'bool - set to true to enable compact mode for the button.'
-                    },
-                    {
-                        name: 'glyph',
-                        description:
-                            'string - the icon to include in the button. See the icon page for the list of icons.'
-                    },
-                    {
-                        name: 'disabled',
-                        description:
-                            'bool - disabled state of the button. Enabled by setting disabled property to true.'
-                    },
-                    {
-                        name: 'selected',
-                        description:
-                            'bool - selected state of the button. Enabled by setting selected property to true.'
-                    },
-                    { name: 'onClick', description: 'func - The function that is executed when the button is clicked.' }
-                ]}
-                type='Inputs' />
+            <Properties sourceModule={require('./Button')} />
+
             <Separator />
 
             <h2>Button Options</h2>
