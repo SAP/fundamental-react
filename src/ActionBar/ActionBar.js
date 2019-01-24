@@ -22,25 +22,9 @@ export const ActionBar = ({ mobile, width, children, className, ...props }) => {
 };
 
 ActionBar.propTypes = {
-    className: PropTypes.string.isRequired,
+    className: PropTypes.string,
     mobile: PropTypes.bool,
-    testArrayOf: PropTypes.arrayOf(PropTypes.object),
-    testInstanceOf: PropTypes.instanceOf(ActionBar),
-    testObjectOf: PropTypes.objectOf(PropTypes.string),
-    testOneOf: PropTypes.oneOf(['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten']),
-    testOneOfType: PropTypes.oneOfType([
-        PropTypes.string,
-        PropTypes.number
-    ]),
-    testShape: PropTypes.shape({
-        child1: PropTypes.string.isRequired,
-        child2: PropTypes.object
-    }),
     width: PropTypes.string
-};
-
-ActionBar.defaultProps = {
-    width: '400px'
 };
 
 ActionBar.propDescriptions = {
