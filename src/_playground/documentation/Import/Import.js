@@ -1,14 +1,19 @@
 import arraySort from 'array-sort';
+import { googlecode } from 'react-syntax-highlighter/styles/hljs';
 import packageJson from '../../../../package.json';
 import PropTypes from 'prop-types';
 import React from 'react';
+import SyntaxHighlighter from 'react-syntax-highlighter';
 
 export const Import = ({ sourceModule }) => {
 
     return (
-        <code>
-            import &#123; { arraySort(Object.keys(sourceModule)).join(', ') } &#125; from '{packageJson.name}';
-        </code>
+        <SyntaxHighlighter
+            customStyle={{padding: 0}}
+            language='javascript'
+            style={googlecode}>
+            {`import { ${arraySort(Object.keys(sourceModule)).join(', ')} } from '${packageJson.name}';`}
+        </SyntaxHighlighter>
     );
 };
 
