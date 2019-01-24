@@ -18,7 +18,7 @@ export const Identifier = ({ glyph, size, modifier, color, label, backgroundImag
         className
     );
 
-    const ariaRole = `${!children ? 'presentation' : ''}`;
+    const ariaRole = !children ? 'presentation' : '';
 
     return (
         <span
