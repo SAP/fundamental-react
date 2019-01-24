@@ -561,7 +561,7 @@ export class Calendar extends Component {
 
 }
 
-Calendar.propTypes = {
+Calendar.basePropTypes = {
     blockedDates: PropTypes.arrayOf(PropTypes.instanceOf(Date)),
     disableAfterDate: PropTypes.instanceOf(Date),
     disableBeforeDate: PropTypes.instanceOf(Date),
@@ -569,7 +569,12 @@ Calendar.propTypes = {
     disableFutureDates: PropTypes.bool,
     disablePastDates: PropTypes.bool,
     disableWeekday: PropTypes.arrayOf(PropTypes.string),
-    disableWeekends: PropTypes.bool,
+    disableWeekends: PropTypes.bool
+};
+
+Calendar.propTypes = {
+    ...Calendar.basePropTypes,
+
     monthListProps: PropTypes.object,
     tableBodyProps: PropTypes.object,
     tableHeaderProps: PropTypes.object,

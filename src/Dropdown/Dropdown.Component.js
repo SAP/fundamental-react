@@ -165,11 +165,7 @@ export const DropdownComponent = () => {
 
             <Separator />
 
-            <Properties
-                properties={[
-                    { name: 'standard', description: 'bool - set to \'true\' to enable a dropdown for toolbar.' }
-                ]}
-                type='Inputs' />
+            <Properties sourceModule={require('./Dropdown')} />
 
             <Separator />
 
@@ -350,8 +346,6 @@ export const DropdownComponent = () => {
                 </div>
             </DocsTile>
             <DocsText>{disabledDropdownCode}</DocsText>
-
-            <Separator />
         </div>
     );
 };

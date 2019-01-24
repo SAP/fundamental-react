@@ -1,12 +1,12 @@
-import arraySort from 'array-sort';
 import { defaultPropDescriptions } from './defaults';
 import PropTypes from 'prop-types';
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
+import sortBy from 'sort-by';
 import { Table } from '../../../Table/Table';
 
 export const Properties = ({ sourceModule }) => {
-    const componentNames = arraySort(Object.keys(sourceModule));
+    const componentNames = Object.keys(sourceModule).sort();
 
     return (
         <React.Fragment>
@@ -40,13 +40,18 @@ const PropertyTable = ({ propTypes, defaultProps, propDescriptions }) => {
         );
     }
 
+    let propInfo = Object.keys(propTypes).map(propName => {
+        return { propName: propName, required: propTypes[propName].typeRequired };
+    });
+    const sortedProps = propInfo.sort(sortBy('-required', 'propName'));
+
     let data = [];
     const mergedPropDescriptions = {
         ...defaultPropDescriptions,
         ...propDescriptions
     };
 
-    Object.keys(propTypes).forEach(propName => {
+    sortedProps.forEach(({ propName }) => {
         data.push({
             rowData: [
                 propName,
