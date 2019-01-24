@@ -53,7 +53,6 @@ Button.propTypes = {
 };
 
 Button.propDescriptions = {
-    compact: 'Set to **true** to enable compact mode.',
     dropdown: 'Set to **true** if button triggers a dropdown list. ',
     navbar: 'Set to **true** if button is part of global navbar.',
     option: 'Indicates the importance of the button.',

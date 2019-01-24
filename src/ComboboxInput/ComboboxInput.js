@@ -64,3 +64,10 @@ ComboboxInput.defaultTypes = {
     compact: false,
     placeholder: ''
 };
+
+ComboboxInput.propDescriptions = {
+    menu: 'An object containing a `Menu` component.',
+    inputProps: 'Additional props to be spread to the `<input>` element.',
+    placeholder: 'Localized placeholder text of the input.',
+    popoverProps: 'Additional props to be spread to the `Popover` component.'
+};
