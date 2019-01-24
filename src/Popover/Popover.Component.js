@@ -83,30 +83,7 @@ export const PopoverComponent = () => {
 
             <Separator />
 
-            <Properties
-                properties={[
-                    {
-                        name: 'control',
-                        description: 'component - Control element to toggle the display of the popover.'
-                    },
-                    {
-                        name: 'body',
-                        description: 'component - Wrapper that contains the popover content.'
-                    },
-                    {
-                        name: 'noArrow',
-                        description: 'bool - Set to "true" to render a popover body without an arrow. The default option is a popover body with an arrow. Leave empty for default.'
-                    },
-                    {
-                        name: 'alignment',
-                        description: 'string - The placement of the popover body. Options include "right" and "left". Leave empty for default/left placement.'
-                    },
-                    {
-                        name: 'id',
-                        description: 'string - optional. Element id.'
-                    }
-                ]}
-                type='Inputs' />
+            <Properties sourceModule={require('./Popover')} />
 
             <Separator />
 
@@ -177,7 +154,6 @@ export const PopoverComponent = () => {
                 </div>
             </DocsTile>
             <DocsText>{popoverCode}</DocsText>
-            <Separator />
         </div>
     );
 };

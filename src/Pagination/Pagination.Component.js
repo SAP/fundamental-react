@@ -23,65 +23,7 @@ export const PaginationComponent = () => {
 
             <Separator />
 
-            <Properties
-                properties={[
-                    {
-                        name: 'itemsTotal',
-                        description:
-                            'number (required) - Total number of items. itemsTotal / itemsPerPage calculates how many navigation items should be shown in the control.'
-                    },
-                    {
-                        name: 'onClick',
-                        description:
-                            'func (required) - Function to execute on click of page number, previous or next indicator. Page number value is sent to function.'
-                    },
-                    {
-                        name: 'itemsPerPage',
-                        description:
-                            'number (default: 10) - Number of items to display on page.'
-                    },
-                    {
-                        name: 'initialPage',
-                        description:
-                            'number (default: page 1) - Initial page to be selected.'
-                    },
-                    {
-                        name: 'displayTotalProps',
-                        description:
-                            'object - additional props to be spread to the display total section'
-                    },
-                    {
-                        name: 'linkProps',
-                        description:
-                            'object - additional props to be spread to the page links'
-                    },
-                    {
-                        name: 'prevProps',
-                        description:
-                            'object - additional props to be spread to the previous button'
-                    },
-                    {
-                        name: 'nextProps',
-                        description:
-                            'object - additional props to be spread to the next button'
-                    },
-                    {
-                        name: 'initialPage',
-                        description:
-                            'number (default: page 1) - Initial page to be selected.'
-                    },
-                    {
-                        name: 'displayTotal',
-                        description:
-                            'bool (default: true) - Boolean value for whether or not to show total number of items. true - show total number and totalText string, false - hide total number and totalText string.'
-                    },
-                    {
-                        name: 'totalText',
-                        description:
-                            'string (default: "items") - String to display next to the total number of items.'
-                    }
-                ]}
-                type='Inputs' />
+            <Properties sourceModule={require('./Pagination')} />
 
             <Separator />
 
@@ -177,7 +119,6 @@ export const PaginationComponent = () => {
                     '<Pagination itemsTotal={101} totalText="Dalmations" onClick={handleClick}/>'
                 }
             </DocsText>
-            <Separator />
         </div>
     );
 };

@@ -66,6 +66,5 @@ ComboboxInput.defaultTypes = {
 };
 
 ComboboxInput.propDescriptions = {
-    menu: 'An object containing a `Menu` component.',
-    placeholder: 'Localized placeholder text of the input.'
+    menu: 'An object containing a `Menu` component.'
 };

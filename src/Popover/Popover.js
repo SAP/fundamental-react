@@ -119,3 +119,8 @@ Popover.propTypes = {
     id: PropTypes.string,
     noArrow: PropTypes.bool
 };
+
+Popover.propDescriptions = {
+    alignment: 'The placement of the popover body. Options include `right` and `left`. Leave empty for default/left placement.',
+    noArrow: 'Set to **true** to render a popover without an arrow.'
+};

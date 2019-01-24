@@ -7,7 +7,7 @@ export class Pagination extends Component {
         super(props, context);
 
         this.state = {
-            selectedPage: this.props.initialPage || 1
+            selectedPage: this.props.initialPage
         };
     }
 
@@ -74,8 +74,8 @@ export class Pagination extends Component {
     render() {
         const {
             itemsTotal,
-            itemsPerPage = 10,
-            displayTotal = true,
+            itemsPerPage,
+            displayTotal,
             totalText,
             className,
             linkProps,
@@ -145,4 +145,21 @@ Pagination.propTypes = {
     nextProps: PropTypes.object,
     prevProps: PropTypes.object,
     totalText: PropTypes.string
+};
+
+Pagination.defaultProps = {
+    displayTotal: true,
+    initialPage: 1,
+    itemsPerPage: 10
+};
+
+Pagination.propDescriptions = {
+    itemsTotal: 'Total number of items. itemsTotal / itemsPerPage calculates how many navigation items should be shown in the control.',
+    displayTotal: 'Set to **true** to show total number of items along with `totalText` string.',
+    initialPage: 'Initial page to be selected.',
+    itemsPerPage: 'Number of items to display on page.',
+    linkProps: 'Additional props to be spread to the page number `<a>` elements.',
+    nextProps: 'Additional props to be spread to the next arrow `<a>` element.',
+    prevProps: 'Additional props to be spread to the previous arrow `<a>` element.',
+    totalText: 'Localized text to display next to the total number of items.  Used with `displayTotal`.'
 };

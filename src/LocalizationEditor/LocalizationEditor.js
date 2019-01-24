@@ -142,6 +142,5 @@ LocalizationEditor.propTypes = {
 LocalizationEditor.propDescriptions = {
     control: 'An object of shape `{ label: string, placeholder: string, language: string, labelProps: object, inputProps: object, buttonProps: object }` containing the values of the control localization editor.',
     menu: 'An array of objects that represent the values of the elements in the dropdown menu. The shape of the objects in the array is `{ placeholder: string, language: string, inputProps: object }`.',
-    listProps: 'Additional props to be spread to the `<ul>` element.',
     textarea: 'Set to **true** to enable a Localization Editor with a textarea.'
 };

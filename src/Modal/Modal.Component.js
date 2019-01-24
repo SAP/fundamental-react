@@ -149,52 +149,7 @@ export class ModalComponent extends Component {
 
                 <Separator />
 
-                <Properties
-                    properties={[
-                        {
-                            name: 'show',
-                            description: 'bool - true: show modal, false: hide modal.'
-                        },
-                        {
-                            name: 'title',
-                            description: 'string (required) - Title for modal dialog box'
-                        },
-                        {
-                            name: 'actions',
-                            description: 'React.Fragment which contains <Button /> controls to render in the footer'
-                        },
-                        {
-                            name: 'contentProps',
-                            description:
-                                'object - additional props to be spread to the content section of Modal dialog'
-                        },
-                        {
-                            name: 'headerProps',
-                            description:
-                                'object - additional props to be spread to the header section of Modal dialog'
-                        },
-                        {
-                            name: 'titleProps',
-                            description:
-                                'object - additional props to be spread to the title section of Modal dialog'
-                        },
-                        {
-                            name: 'closeProps',
-                            description:
-                                'object - additional props to be spread to the close button of Modal dialog'
-                        },
-                        {
-                            name: 'bodyProps',
-                            description:
-                                'object - additional props to be spread to the body section of Modal dialog'
-                        },
-                        {
-                            name: 'footerProps',
-                            description:
-                                'object - additional props to be spread to the footer section of Modal dialog'
-                        }
-                    ]}
-                    type='Inputs' />
+                <Properties sourceModule={require('./Modal')} />
 
                 <Separator />
 
@@ -286,7 +241,6 @@ export class ModalComponent extends Component {
                     </Modal>
                 </DocsTile>
                 <DocsText>{this.formModalCode}</DocsText>
-                <Separator />
             </div>
         );
     }
