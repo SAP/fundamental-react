@@ -1,5 +1,5 @@
 import React from 'react';
-import { Description, DocsText, DocsTile, Header, Import, Properties, Separator } from '../_playground';
+import { Description, DocsText, DocsTile, Header, Import, Separator } from '../_playground';
 import { MegaMenu, MegaMenuGroup, MegaMenuList } from '../';
 
 export const MegaMenuComponent = () => {
@@ -46,6 +46,7 @@ export const MegaMenuComponent = () => {
 
             <Separator />
 
+            {/*
             <Properties properties={[
                 { name: 'items', description: 'array - an array of objects with keys \'id\', \'url\' or \'link\', \'name\', \'hasChild\', and \'child\' setting the attributes of the items.' },
                 { name: 'id', description: 'string - the \'id\' of the link.' },
@@ -59,6 +60,7 @@ export const MegaMenuComponent = () => {
             ]} type='Inputs' />
 
             <Separator />
+            */}
 
             <h2>Default MegaMenu</h2>
             <DocsTile>
@@ -93,8 +95,6 @@ export const MegaMenuComponent = () => {
                 </MegaMenu>
             </DocsTile>
             <DocsText>{defaultMegaMenuCode}</DocsText>
-
-            <Separator />
         </div>
     );
 };

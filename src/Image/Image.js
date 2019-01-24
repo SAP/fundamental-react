@@ -26,6 +26,5 @@ Image.propTypes = {
 };
 
 Image.propDescriptions = {
-    photo: 'Picture URL.',
-    size: 'Size of the image.'
+    photo: 'Picture URL.'
 };

@@ -41,15 +41,7 @@ export const ToggleComponent = () => {
 
             <Separator />
 
-            <Properties
-                properties={[
-                    { name: 'size', description: 'string - The size of the toggle.' },
-                    { name: 'id', description: 'string - The id of the toggle.' },
-                    { name: 'disabled', description: 'bool - Shows a disabled toggle if set to true. Default is false.'},
-                    { name: 'inputProps', description: 'object - additional props to be spread to the Toggle component\'s input element.'},
-                    { name: 'labelProps', description: 'object - additional props to be spread to the Toggle component\'s label element.'}
-                ]}
-                type='Inputs' />
+            <Properties sourceModule={require('./Toggle')} />
 
             <Separator />
 
@@ -100,8 +92,6 @@ export const ToggleComponent = () => {
                 </Toggle>
             </DocsTile>
             <DocsText>{toggleDisabledCode}</DocsText>
-
-            <Separator />
         </div>
     );
 };

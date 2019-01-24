@@ -104,13 +104,7 @@ export const TreeComponent = () => {
 
             <Separator />
 
-            <Properties properties={[
-                { name: 'headers', description: 'array of strings for the column headers of the tree' },
-                { name: 'treeData', description: 'array of objects that contain several properties, id (the id of the row), values (an array of strings containing data for each column in the row), hasChildren(a boolean value whether the row contains children or not) and children (an array of objects containing additional rows).' },
-                { name: 'headerProps', description: 'object - additional props to be spread to the header element.' },
-                { name: 'headerButtonProps', description: 'object - additional props to be spread to the header expand button element.' },
-                { name: 'listProps', description: 'object - additional props to be spread to the list element.' }
-            ]} type='Inputs' />
+            <Properties sourceModule={require('./Tree')} />
 
             <Separator />
 
@@ -184,26 +178,14 @@ export const TreeComponent = () => {
 
             </DocsTile>
             <DocsText>{treeCode}</DocsText>
+
             <Separator />
 
             <h2>Rich Tree</h2>
             <Description>This is an example of a tree with rich cells, where the rowData is an array of objects, where each object can have one or both of the following properties:</Description>
-            <Properties properties={[
-                { name: 'displayText', description: 'The text to display in the cell. If omitted, the link url will be displayed.' },
-                { name: 'linkUrl', description: 'If provided, this is the URL the link will navigate to.' }
-            ]} type='Properties' />
 
-            <Properties properties={[
-                { name: 'headers', description: 'Array of strings for the column headers of the tree' },
-                { name: 'treeData', description: '	Array of objects that contain several properties, id(the id of the row), hasChildren(a boolean value whether the row contains children or not), values (an array of objects containing data for each column in the row), and children (an array of objects containing additional rows).' },
-                { name: 'headerProps', description: 'object - additional props to be spread to the header element.' },
-                { name: 'headerButtonProps', description: 'object - additional props to be spread to the header expand button element.' },
-                { name: 'listProps', description: 'object - additional props to be spread to the list element.' }
-            ]} type='Inputs' />
-            <Separator />
             <DocsTile>
                 <Tree
-
                     headers={['Column Header', 'Column Header 1 ', 'Column Header 2', 'Status']}
                     treeData={[
                         {
@@ -233,7 +215,6 @@ export const TreeComponent = () => {
 
             </DocsTile>
             <DocsText>{treeCodeUrl}</DocsText>
-
         </div>
     );
 };
