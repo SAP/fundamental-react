@@ -114,7 +114,12 @@ describe('<ActionBar />', () => {
         });
 
         test('should allow props to be spread to the ActionBarHeader component', () => {
-            const element = mount(<ActionBarHeader data-sample='Sample' />);
+            const element = mount(
+                <ActionBarHeader
+                    data-sample='Sample'
+                    description=''
+                    title='' />
+            );
 
             expect(
                 element.getDOMNode().attributes['data-sample'].value
@@ -122,7 +127,12 @@ describe('<ActionBar />', () => {
         });
 
         test('should allow props to be spread to the ActionBarHeader component\'s h1 element', () => {
-            const element = mount(<ActionBarHeader titleProps={{'data-sample': 'Sample'}} />);
+            const element = mount(
+                <ActionBarHeader
+                    description=''
+                    title=''
+                    titleProps={{'data-sample': 'Sample'}} />
+            );
 
             expect(
                 element.find('h1').getDOMNode().attributes['data-sample'].value
@@ -130,7 +140,12 @@ describe('<ActionBar />', () => {
         });
 
         test('should allow props to be spread to the ActionBarHeader component\'s p element', () => {
-            const element = mount(<ActionBarHeader descriptionProps={{'data-sample': 'Sample'}} />);
+            const element = mount(
+                <ActionBarHeader
+                    description=''
+                    descriptionProps={{'data-sample': 'Sample'}}
+                    title='' />
+            );
 
             expect(
                 element.find('p').getDOMNode().attributes['data-sample'].value

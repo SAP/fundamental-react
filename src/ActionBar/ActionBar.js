@@ -11,7 +11,7 @@ export const ActionBar = ({ mobile, width, children, className, ...props }) => {
     return (
         <React.Fragment>
             {mobile ? (
-                <div style={{ width: width ? width : '319px' }}>
+                <div style={{width}}>
                     <div {...props} className={actionBarClasses}>{children}</div>
                 </div>
             ) : (
@@ -25,6 +25,11 @@ ActionBar.propTypes = {
     className: PropTypes.string,
     mobile: PropTypes.bool,
     width: PropTypes.string
+};
+
+ActionBar.defaultProps = {
+    mobile: false,
+    width: '319px'
 };
 
 export const ActionBarBack = ({ onClick, className, buttonProps, ...props }) => {
@@ -68,10 +73,10 @@ export const ActionBarHeader = ({ className, description, descriptionProps, titl
 };
 
 ActionBarHeader.propTypes = {
+    description: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
     className: PropTypes.string,
-    description: PropTypes.string,
     descriptionProps: PropTypes.object,
-    title: PropTypes.string,
     titleProps: PropTypes.object
 };
 
