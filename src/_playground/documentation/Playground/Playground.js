@@ -191,7 +191,7 @@ export class Playground extends Component {
                               <input
                                   className='form-control'
                                   name={item.attribute}
-                                  onBlur={this.updateComponent}
+                                  onChange={this.updateComponent}
                                   type='text'
                                   value={item.initialValue} />
                           )}
