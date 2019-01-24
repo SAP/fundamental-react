@@ -42,7 +42,7 @@ rules:
     jsx-a11y/aria-activedescendant-has-tabindex: 2
     jsx-a11y/aria-props: 2
     jsx-a11y/aria-proptypes: 2
-    #jsx-a11y/aria-role: 2
+    jsx-a11y/aria-role: 2
     jsx-a11y/aria-unsupported-elements: 2
     #jsx-a11y/click-events-have-key-events: 2
     jsx-a11y/heading-has-content: 2
