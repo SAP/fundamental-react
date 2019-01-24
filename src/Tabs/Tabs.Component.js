@@ -19,25 +19,13 @@ export const TabsComponent = () => {
                 ordered to create a visual hierarchy based on priority.
             </Description>
             <Import sourceModule={require('./Tabs')} />
+
             <Separator />
-            <Properties
-                properties={[
-                    { name: 'id', description: 'id of the tab' },
-                    { name: 'name', description: 'name of the tab' },
-                    { name: 'content', description: 'the content to display when the tab is pressed' },
-                    { name: 'disabled', description: 'disable the tab based on true or false' }
-                ]}
-                type='Tab Inputs' />
-            <Properties
-                properties={[
-                    { name: 'ids', description: 'array of objects to use for each tab' },
-                    { name: 'className', description: 'string - class to add to tab' },
-                    { name: 'tabContentProps', description: 'object - additional props to be spread to the tab\'s content' },
-                    { name: 'tabLinkProps', description: 'object - additional props to be spread to the tab\'s link' },
-                    { name: 'tabProps', description: 'object - additional props to be spread to the tab' }
-                ]}
-                type='TabComponent Inputs' />
+
+            <Properties sourceModule={require('./Tabs')} />
+
             <Separator />
+
             <DocsTile>
                 <Tabs>
                     <TabComponent
@@ -49,7 +37,9 @@ export const TabsComponent = () => {
                 </Tabs>
             </DocsTile>
             <DocsText>{tabscomponentCode}</DocsText>
+
             <Separator />
+
             <h2>Playground</h2>
             <Playground
                 component='tabs'

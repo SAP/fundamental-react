@@ -10,6 +10,7 @@ export const defaultPropDescriptions = {
     labelProps: 'Additional props to be spread to the `<label>` element.',
     listProps: 'Additional props to be spread to the `<ul>` element.',
     modifier: 'Sets a style variation for a modified appearance.',
+    onChange: 'Callback function when the change event fires on the component.',
     onClick: 'Callback function when user clicks on the component.',
     placeholder: 'Localized placeholder text of the input.',
     popoverProps: 'Additional props to be spread to the `Popover` component.',

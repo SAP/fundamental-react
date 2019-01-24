@@ -418,43 +418,11 @@ productSwitcher = {
                     some things to know.
                 </Description>
                 <Import sourceModule={require('./Shellbar')} />
+
                 <Separator />
-                <Properties
-                    properties={[
-                        {
-                            name: 'logo',
-                            description:
-                                '(required/optional) provide an img tag for a logo other than the SAP logo. One of the two props (logo or logoSAP) should be set.'
-                        },
-                        {
-                            name: 'logoSAP',
-                            description:
-                                '(required/optional) renders the SAP logo in the shellbar. One of the two props (logo or logoSAP) should be set.'
-                        },
-                        {
-                            name: 'productTitle',
-                            description: '(required) displays the current application when no product menu is used.'
-                        },
-                        { name: 'productMenu', description: '(optional) holds product titles and navigation.' },
-                        {
-                            name: 'subtitle',
-                            description: '(optional) displays an application context. Should be used rarely.'
-                        },
-                        { name: 'copilot', description: '(optional) for use with applications that utilize CoPilot.' },
-                        { name: 'actions', description: '(optional) holds all product actions and links.' },
-                        {
-                            name: 'searchInput',
-                            description: '(optional) holds searchInput properties (placeholder, searchList, onEnter ).'
-                        },
-                        { name: 'profile', description: '(required) user information like name, initials, etc.' },
-                        {
-                            name: 'profileMenu',
-                            description: '(required) for user settings and application meta links such as Sign Out.'
-                        },
-                        { name: 'productSwitcher', description: '(optional) for navigating between products.' },
-                        { name: 'productSwitcherList', description: '(optional) list of the products.' }
-                    ]}
-                    type='Inputs' />
+
+                <Properties sourceModule={require('./Shellbar')} />
+
                 <Separator />
 
                 <h2>Basic Shellbar</h2>

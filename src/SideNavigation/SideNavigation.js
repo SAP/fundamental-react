@@ -24,6 +24,10 @@ SideNav.propTypes = {
     icons: PropTypes.bool
 };
 
+SideNav.propDescriptions = {
+    icons: 'Set to **true** enables side navigation collapsed with icons.'
+};
+
 export class SideNavList extends Component {
     constructor(props) {
         super(props);
@@ -169,6 +173,10 @@ export class SideNavList extends Component {
 SideNavList.propTypes = {
     items: PropTypes.array.isRequired,
     className: PropTypes.string
+};
+
+SideNavList.propDescriptions = {
+    items: 'An array of objects with keys \'id\', \'url\', \'name\', \'hasChild\', \'child\', and \'glyph\' setting the attributes of the items.'
 };
 
 export const SideNavGroup = props => {

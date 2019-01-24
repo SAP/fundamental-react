@@ -115,20 +115,7 @@ export const TileComponent = () => {
 
             <Separator />
 
-            <Properties
-                properties={[
-                    { name: 'title', description: 'string - the title of the Tile Content' },
-                    { name: 'disabled', description: 'bool - when set to true, disables the tile.' },
-                    { name: 'image', description: 'string (required) - url of the image used in Product Tile.' },
-                    { name: 'rowSpan', description: 'number - the number of rows the tile covers.' },
-                    { name: 'titleProps', description: 'object - additional props to be spread to title of ProductTileContent or TileContent component' },
-                    { name: 'columnSpan', description: 'number - the number of columns the tile covers.' },
-                    {
-                        name: 'colorAccent',
-                        description: 'number - applies a background color. Options include numbers from 1 to 9.'
-                    }
-                ]}
-                type='Inputs' />
+            <Properties sourceModule={require('./Tile')} />
 
             <Separator />
 

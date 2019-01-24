@@ -44,6 +44,13 @@ Tile.propTypes = {
     rowSpan: PropTypes.number
 };
 
+Tile.propDescriptions = {
+    backgroundColor: 'Sets a background color class.',
+    colorAccent: 'Sets a background color accent class. Options include numbers from 1 to 9.',
+    columnSpan: 'Number of columns the tile covers.',
+    rowSpan: 'Number of rows the tile covers.'
+};
+
 export const TileContent = props => {
     const { title, children, className, titleProps, ...rest } = props;
 
@@ -154,6 +161,10 @@ export const ProductTileMedia = props => {
 ProductTileMedia.propTypes = {
     image: PropTypes.string.isRequired,
     className: PropTypes.string
+};
+
+ProductTileMedia.propDescriptions = {
+    image: 'URL of the image.'
 };
 
 export const TileGrid = props => {
