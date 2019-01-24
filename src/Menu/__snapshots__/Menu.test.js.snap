@@ -42,6 +42,7 @@ exports[`<Menu /> create basic menu component 1`] = `
     <li>
       <a
         className="fd-menu__item"
+        role="button"
       >
         Option 5
       </a>

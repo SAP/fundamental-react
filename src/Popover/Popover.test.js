@@ -142,6 +142,16 @@ describe('<Popover />', () => {
         expect(wrapper.state('isExpanded')).toBeFalsy();
     });
 
+    describe('rendering', () => {
+        test('trigger should have a role of button', () => {
+            const element = mount(<Popover />);
+
+            expect(
+                element.find('div.fd-popover__control').getDOMNode().attributes.role.value
+            ).toBe('button');
+        });
+    });
+
     describe('Prop spreading', () => {
         test('should allow props to be spread to the Popover component', () => {
             const element = mount(<Popover data-sample='Sample' />);

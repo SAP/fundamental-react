@@ -11,6 +11,7 @@ exports[`<ComboboxInput /> create combobox input 1`] = `
       aria-expanded={false}
       className="fd-popover__control"
       onClick={[Function]}
+      role="button"
     >
       <div
         className="fd-combobox-control"
@@ -93,6 +94,7 @@ exports[`<ComboboxInput /> create combobox input 2`] = `
       aria-expanded={false}
       className="fd-popover__control"
       onClick={[Function]}
+      role="button"
     >
       <div
         className="fd-combobox-control"

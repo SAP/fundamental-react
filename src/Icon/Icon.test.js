@@ -33,6 +33,16 @@ describe('<Icon />', () => {
         expect(wrapper.prop('clickHandler')).toBeUndefined;
     });
 
+    describe('rendering', () => {
+        test('should have role button', () => {
+            const element = mount(<Icon glyph='cart' />);
+
+            expect(
+                element.getDOMNode().attributes.role.value
+            ).toBe('button');
+        });
+    });
+
     describe('Prop spreading', () => {
         test('should allow props to be spread to the Icon component', () => {
             const element = mount(<Icon data-sample='Sample' glyph='cart' />);

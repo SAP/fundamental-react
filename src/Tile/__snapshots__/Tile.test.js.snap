@@ -89,6 +89,7 @@ exports[`<Tile /> create tile component 4`] = `
         aria-expanded={false}
         className="fd-popover__control"
         onClick={[Function]}
+        role="button"
       >
         <button
           className="fd-button fd-button--standard sap-icon--vertical-grip"
@@ -197,6 +198,7 @@ exports[`<Tile /> create tile component 6`] = `
         aria-expanded={false}
         className="fd-popover__control"
         onClick={[Function]}
+        role="button"
       >
         <button
           className="fd-button fd-button--standard sap-icon--vertical-grip"

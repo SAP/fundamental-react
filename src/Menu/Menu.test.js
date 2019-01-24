@@ -106,6 +106,16 @@ describe('<Menu />', () => {
         expect(tree).toMatchSnapshot();
     });
 
+    describe('rendering', () => {
+        test('Menu item anchor tag should have role of button', () => {
+            const element = mount(<MenuItem />);
+
+            expect(
+                element.find('a').getDOMNode().attributes.role.value
+            ).toBe('button');
+        });
+    });
+
     describe('Prop spreading', () => {
         test('should allow props to be spread to the Menu component', () => {
             const element = mount(<Menu data-sample='Sample' />);

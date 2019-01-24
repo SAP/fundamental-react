@@ -4,6 +4,8 @@ exports[`<Icon /> create icon 1`] = `
 <span
   className="sap-icon--cart blue"
   onClick={[MockFunction]}
+  role="button"
+  tabIndex="0"
 />
 `;
 
@@ -11,5 +13,7 @@ exports[`<Icon /> create icon 2`] = `
 <span
   className="sap-icon--cart sap-icon--s"
   onClick={[Function]}
+  role="button"
+  tabIndex="0"
 />
 `;

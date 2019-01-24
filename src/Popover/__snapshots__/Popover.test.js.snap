@@ -8,10 +8,13 @@ exports[`<Popover /> create Popover 1`] = `
     aria-expanded={false}
     className="fd-popover__control"
     onClick={[Function]}
+    role="button"
   >
     <span
       className="sap-icon--cart sap-icon--xl"
       onClick={[Function]}
+      role="button"
+      tabIndex="0"
     />
   </div>
   <div
@@ -71,10 +74,13 @@ exports[`<Popover /> create Popover 2`] = `
     aria-expanded={false}
     className="fd-popover__control"
     onClick={[Function]}
+    role="button"
   >
     <span
       className="sap-icon--cart sap-icon--xl"
       onClick={[Function]}
+      role="button"
+      tabIndex="0"
     />
   </div>
   <div
@@ -133,10 +139,13 @@ exports[`<Popover /> create Popover 3`] = `
     aria-expanded={false}
     className="fd-popover__control"
     onClick={[Function]}
+    role="button"
   >
     <span
       className="sap-icon--cart sap-icon--xl"
       onClick={[Function]}
+      role="button"
+      tabIndex="0"
     />
   </div>
   <div
@@ -195,10 +204,13 @@ exports[`<Popover /> create Popover 4`] = `
     aria-expanded={false}
     className="fd-popover__control"
     onClick={[Function]}
+    role="button"
   >
     <span
       className="sap-icon--cart sap-icon--xl"
       onClick={[Function]}
+      role="button"
+      tabIndex="0"
     />
   </div>
   <div

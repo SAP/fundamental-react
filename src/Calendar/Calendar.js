@@ -426,10 +426,8 @@ export class Calendar extends Component {
                         </button>
                     </div>
 
-                    <div className='fd-calendar__action'
-                        onClick={this.next}
-                        role='presentation'>
-                        <button className='fd-button--standard fd-button--light fd-button--compact sap-icon--slim-arrow-right' />
+                    <div className='fd-calendar__action'>
+                        <button className='fd-button--standard fd-button--light fd-button--compact sap-icon--slim-arrow-right' onClick={this.next} />
                     </div>
                 </div>
             </header>
