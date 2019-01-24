@@ -2,6 +2,7 @@ import arraySort from 'array-sort';
 import { defaultPropDescriptions } from './defaults';
 import PropTypes from 'prop-types';
 import React from 'react';
+import ReactMarkdown from 'react-markdown';
 import { Table } from '../../../Table/Table';
 
 export const Properties = ({ sourceModule }) => {
@@ -50,9 +51,9 @@ const PropertyTable = ({ propTypes, defaultProps, propDescriptions }) => {
             rowData: [
                 propName,
                 <PropertyType prop={propTypes[propName]} />,
-                propTypes[propName].typeRequired
-                    ? (<span className='prop-required'>Required</span>)
-                    : defaultProps && typeof defaultProps[propName] !== 'object' && defaultProps[propName],
+                <PropertyDefault
+                    defaultValue={defaultProps && defaultProps[propName]}
+                    prop={propTypes[propName]} />,
                 <PropertyDescription
                     defaultValue={defaultProps && defaultProps[propName]}
                     description={mergedPropDescriptions[propName]}
@@ -133,19 +134,48 @@ PropertyType.propTypes = {
 
 
 
+const PropertyDefault = ({ defaultValue, prop }) => {
+    if (prop.typeRequired) {
+        return (
+            <span className='prop-required'>Required</span>
+        );
+    }
+
+    if (prop.typeName === 'bool' && !defaultValue) {
+        return (
+            <span>false</span>
+        );
+    }
+
+    if (typeof defaultValue === 'object' || !defaultValue) {
+        return null;
+    }
+
+    return (
+        <span>{defaultValue.toString()}</span>
+    );
+};
+
+PropertyDefault.propTypes = {
+    defaultValue: PropTypes.any,
+    prop: PropTypes.any
+};
+
+
+
 const PropertyDescription = ({ defaultValue, description, prop }) => {
     const typeChecker = prop.typeChecker;
 
     return (
         <React.Fragment>
-            <div>{description}</div>
-            <div style={{color: 'blue'}}>
-                {prop.typeName === 'shape' &&
-                    <PropertyTable
-                        defaultProps={defaultValue}
-                        propTypes={typeChecker} />
-                }
+            <div>
+                <ReactMarkdown source={description} />
             </div>
+            {prop.typeName === 'shape' &&
+                <PropertyTable
+                    defaultProps={defaultValue}
+                    propTypes={typeChecker} />
+            }
         </React.Fragment>
     );
 };

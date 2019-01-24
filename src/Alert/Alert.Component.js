@@ -41,30 +41,7 @@ export const AlertComponent = () => {
 
             <Separator />
 
-            <Properties
-                properties={[
-                    {
-                        name: 'type',
-                        description:
-                            'string - Determines the type of alert - \'error\' (red) or \'warning\' (orange). Defaults to white if no type is provided.'
-                    },
-                    {
-                        name: 'dismissible',
-                        description: 'bool - Shows a dismissible button if set to true. Default is false.'
-                    },
-                    {
-                        name: 'buttonProps',
-                        description: 'object - additional props to be spread to the Alert component\'s button element.'
-                    },
-                    {
-                        name: 'linkProps',
-                        description: 'object - additional props to be spread to the Alert component\'s anchor element.'
-                    }
-                ]}
-                type='Inputs' />
-            <Properties
-                properties={[{ name: 'close', description: 'Emitted when the close button is clicked.' }]}
-                type='Outputs' />
+            <Properties sourceModule={require('./Alert')} />
 
             <Separator />
 

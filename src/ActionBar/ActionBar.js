@@ -28,7 +28,7 @@ ActionBar.propTypes = {
 };
 
 ActionBar.propDescriptions = {
-    mobile: 'Set to "true" for mobile view of the Action Bar.',
+    mobile: 'Set to **true** for mobile view of the Action Bar.',
     width: 'The width of the Action Bar in mobile view.'
 };
 
@@ -52,10 +52,6 @@ ActionBarBack.propTypes = {
     buttonProps: PropTypes.object,
     className: PropTypes.string,
     onClick: PropTypes.func
-};
-
-ActionBarBack.propDescriptions = {
-    buttonProps: 'Additional props to be spread to the button element.'
 };
 
 export const ActionBarHeader = ({ className, description, descriptionProps, title, titleProps, ...props }) => {
@@ -85,9 +81,9 @@ ActionBarHeader.propTypes = {
 };
 
 ActionBarHeader.propDescriptions = {
-    description: 'Action Bar description.',
-    descriptionProps: 'Additional props to be spread to the description\'s paragraph element.',
-    title: 'The title text of the Action Bar.',
+    description: 'The description text of the component.',
+    descriptionProps: 'Additional props to be spread to the description\'s `<p>` element.',
+    title: 'The title text of the component.',
     titleProps: 'Additional props to be spread to the title\'s heading element.'
 };
 

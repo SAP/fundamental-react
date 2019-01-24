@@ -230,17 +230,16 @@ $fd-fonts-path: '../../node_modules/fiori-fundamentals/dist/fonts/';
 
                 > th,
                 > td {
-                    width: 15%;
+                    width: 20%;
                     padding-top: 4px;
                     padding-bottom: 4px;
 
                     &:first-child {
-                        width: 20%;
                         padding-left: 0;
                     }
 
                     &:last-child {
-                        width: 50%;
+                        width: 40%;
                         padding-right: 0;
                     }
                 }

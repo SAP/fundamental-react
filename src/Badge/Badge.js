@@ -26,6 +26,10 @@ Badge.propTypes = {
     type: PropTypes.oneOf(['', 'success', 'warning', 'error'])
 };
 
+Badge.propDescriptions = {
+    modifier: 'Sets a style variation for a modified appearance.'
+};
+
 export const Label = ({ type, children, className, ...props }) => {
     const labelClasses = classnames(
         'fd-label',
@@ -87,4 +91,8 @@ export const Counter = ({ notification, children, className, ...props }) => {
 Counter.propTypes = {
     className: PropTypes.string,
     notification: PropTypes.bool
+};
+
+Counter.propDescriptions = {
+    notification: 'Set to **true** to enable counter with notification.'
 };

@@ -67,28 +67,7 @@ export const BadgeComponent = () => {
 
             <Separator />
 
-            <Properties
-                properties={[
-                    {
-                        name: 'type',
-                        description:
-                            'string - The type indicates the status of the badge/label. Options include \'default\', \'success\', \'warning\', and \'error\'. Leave empty for default. For status label with build in status icons use the \'available\', \'away\', \'busy\' and \'offline\'.'
-                    },
-                    {
-                        name: 'modifier',
-                        description: 'string - Modifiers can be \'pill\' and \'filled\'. Leave empty for normal.'
-                    },
-                    {
-                        name: 'glyph',
-                        description:
-                            'string - The icon to include in the status indicator. See the icon page for the list of icons.'
-                    },
-                    {
-                        name: 'notification',
-                        description: 'bool - Set to \'true\' to enable counter with notification. '
-                    }
-                ]}
-                type='Inputs' />
+            <Properties sourceModule={require('./Badge')} />
 
             <Separator />
 
@@ -897,7 +876,6 @@ export const BadgeComponent = () => {
                     Default
                 </Badge>
             </Playground>
-            <Separator />
         </div>
     );
 };

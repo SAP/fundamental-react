@@ -1,6 +1,6 @@
 import React from 'react';
 import { Breadcrumb, BreadcrumbItem } from '../';
-import { Description, DocsText, DocsTile, Header, Import, Separator } from '../_playground';
+import { Description, DocsText, DocsTile, Header, Import, Properties, Separator } from '../_playground';
 
 export const BreadcrumbComponent = () => {
     const breadcrumbHrefCode = `<Breadcrumb>
@@ -27,7 +27,11 @@ export const BreadcrumbComponent = () => {
 
             <Separator />
 
-            <Description>An example using url (href attribute)</Description>
+            <Properties sourceModule={require('./Breadcrumb')} />
+
+            <Separator />
+
+            <h2>Using url (href attribute)</h2>
             <DocsTile>
                 <Breadcrumb>
                     <BreadcrumbItem name='Link Text' url='#' />
@@ -39,7 +43,7 @@ export const BreadcrumbComponent = () => {
 
             <Separator />
 
-            <Description>An example using link (routerLink)</Description>
+            <h2>Using link (routerLink)</h2>
             <DocsTile>
                 <Breadcrumb>
                     <BreadcrumbItem link='/' name='Link Text' />
