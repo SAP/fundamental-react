@@ -32,7 +32,6 @@ export { InlineHelp } from './InlineHelp/InlineHelp';
 export { InputGroup, FormGroup } from './InputGroup/InputGroup';
 export { ListGroup, ListGroupItem, ListGroupItemActions, ListGroupItemCheckbox } from './ListGroup/ListGroup';
 export { LocalizationEditor } from './LocalizationEditor/LocalizationEditor';
-export { MegaMenu, MegaMenuList, MegaMenuGroup } from './MegaMenu/MegaMenu';
 export { Menu, MenuList, MenuItem, MenuGroup } from './Menu/Menu';
 export { Modal } from './Modal/Modal';
 export { MultiInput } from './MultiInput/MultiInput';
