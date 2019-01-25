@@ -64,3 +64,7 @@ ComboboxInput.defaultTypes = {
     compact: false,
     placeholder: ''
 };
+
+ComboboxInput.propDescriptions = {
+    menu: 'An object containing a `Menu` component.'
+};

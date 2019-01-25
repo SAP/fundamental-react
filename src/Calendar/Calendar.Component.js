@@ -11,27 +11,15 @@ export const CalendarComponent = () => {
 
     return (<div>
         <Header>Calendar</Header>
-        <Description>Commonly used as the contents of a popover when composing “date-picker”, rarely used on its own as a standalone component.</Description>
+        <Description>
+            The **Calendar** is commonly used as the contents of a **Popover** when composing a **Date Picker**.
+            It is rarely used on its own as a standalone component.
+        </Description>
         <Import sourceModule={require('./Calendar')} />
 
         <Separator />
 
-        <Properties properties={[
-            {name: 'disableWeekends', description: 'bool - Disable weekends'},
-            {name: 'disableBeforeDate', description: 'date - Disables dates of a calendar that comes before a specific date'},
-            {name: 'disableAfterDate', description: 'date - Disables dates of a calendar that comes after a specific date'},
-            {name: 'disableWeekday', description: 'array of strings - Disables dates of a calendar that match a weekday'},
-            {name: 'disablePastDates', description: 'bool - Disables dates that comes before today date'},
-            {name: 'disableFutureDates', description: 'bool - Disables dates that comes after the today date'},
-            {name: 'blockedDates', description: 'array of dates - Blocks dates that are between in the blocked dates'},
-            {name: 'disabledDates', description: 'array of dates - Disables dates that are between in the disabled dates'},
-            {name: 'enableRangeSelection', description: 'bool - Enable to select two dates'},
-            {name: 'monthListProps', description: 'object - Props to be spread to month <ul>'},
-            {name: 'tableBodyProps', description: 'object - Props to be spread to <tbody>'},
-            {name: 'tableHeaderProps', description: 'object - Props to be spread to <thead>'},
-            {name: 'tableProps', description: 'object - Props to be spread to month <table>'},
-            {name: 'yearListProps', description: 'object - Props to be spread to year <ul>'}
-        ]} type='Inputs' />
+        <Properties sourceModule={require('./Calendar')} />
 
         <Separator />
 
@@ -64,8 +52,6 @@ export const CalendarComponent = () => {
             {<Calendar enableRangeSelection />}
         </DocsTile>
         <DocsText>{calendarAllOptions}</DocsText>
-
-        <Separator />
     </div>);
 
 };

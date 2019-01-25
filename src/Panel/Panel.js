@@ -26,6 +26,10 @@ Panel.defaultProps = {
     colSpan: null
 };
 
+Panel.propDescriptions = {
+    colSpan: 'The number of columns to span inside a `PanelGrid`.'
+};
+
 // ------------------------------------------- Panel Grid ------------------------------------------
 export const PanelGrid = props => {
     const { nogap, cols, children, className, ...rest } = props;
@@ -57,6 +61,11 @@ PanelGrid.propTypes = {
 PanelGrid.defaultProps = {
     nogap: false,
     cols: null
+};
+
+PanelGrid.propDescriptions = {
+    cols: 'The number of columns in the grid.',
+    nogap: 'Set to **true** to remove the margins between the panels.'
 };
 
 // ------------------------------------------- Panel Body ------------------------------------------
@@ -109,7 +118,14 @@ export const PanelHead = props => {
 };
 
 PanelHead.propTypes = {
-    className: PropTypes.string
+    className: PropTypes.string,
+    description: PropTypes.string,
+    title: PropTypes.string
+};
+
+PanelHead.propDescriptions = {
+    description: 'Localized text for the description of the panel.',
+    title: 'Localized text for the title of the panel.'
 };
 
 // ------------------------------------------- Panel Actions ------------------------------------------
