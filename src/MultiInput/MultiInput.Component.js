@@ -48,53 +48,17 @@ export class MultiInputComponent extends Component {
       return (
           <div>
               <Header>Multi Input</Header>
-              <Description />
               <Import sourceModule={require('./MultiInput')} />
 
               <Separator />
 
-              <Properties
-                  properties={[
-                      {
-                          name: 'data',
-                          description: 'array (Required) - Collection of items to display in the list.'
-                      },
-                      {
-                          name: 'placeHolder',
-                          description: 'string - The text to use as placeholder when no text is entered.'
-                      },
-                      {
-                          name: 'onTagsUpdate',
-                          description: 'func - Method to fire on add or remove of tag. Component returns array of tags selected.'
-                      },
-                      {
-                          name: 'compact',
-                          description: 'bool - true: display compact style, false: default style'
-                      },
-                      {
-                          name: 'inputProps',
-                          description: 'object - additional props to be spread to the MultiInput\'s input element'
-                      },
-                      {
-                          name: 'buttonProps',
-                          description: 'object - additional props to be spread to the MultiInput\'s button element'
-                      },
-                      {
-                          name: 'listProps',
-                          description: 'object - additional props to be spread to the MultiInput\'s <ul> element'
-                      },
-                      {
-                          name: 'tagProps',
-                          description: 'object - additional props to be spread to the MultiInput\'s tags <div> element'
-                      }
-                  ]}
-                  type='Inputs' />
+              <Properties sourceModule={require('./MultiInput')} />
 
               <Separator />
 
               <h2>Default</h2>
               <Description>
-          A text input when on focus will show list of items to select.
+                  When input receives focus, it will show list of items to select.
               </Description>
               <DocsTile>
                   <div>
@@ -109,10 +73,6 @@ export class MultiInputComponent extends Component {
               <Separator />
 
               <h2>Compact Style</h2>
-              <Description>
-          A text input when on focus will show list of items to select, but with
-          a compact input box.
-              </Description>
               <DocsTile>
                   <div>
                       <MultiInput
@@ -123,8 +83,6 @@ export class MultiInputComponent extends Component {
                   </div>
               </DocsTile>
               <DocsText>{this.multiInputCompactCode}</DocsText>
-
-              <Separator />
           </div>
       );
   }

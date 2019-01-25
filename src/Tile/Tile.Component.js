@@ -108,27 +108,14 @@ export const TileComponent = () => {
         <div>
             <Header>Tile and Tile Grid</Header>
             <Description>
-                A Tile component can be used to display information in a simple container format. A collection of tile
-                can be displayed using <code>fd-tile-grid</code>{' '}
+                A **Tile** can be used to display information in a simple container format.
+                A collection of tiles can be displayed using **TileGrid**.
             </Description>
             <Import sourceModule={require('./Tile')} />
 
             <Separator />
 
-            <Properties
-                properties={[
-                    { name: 'title', description: 'string - the title of the Tile Content' },
-                    { name: 'disabled', description: 'bool - when set to true, disables the tile.' },
-                    { name: 'image', description: 'string (required) - url of the image used in Product Tile.' },
-                    { name: 'rowSpan', description: 'number - the number of rows the tile covers.' },
-                    { name: 'titleProps', description: 'object - additional props to be spread to title of ProductTileContent or TileContent component' },
-                    { name: 'columnSpan', description: 'number - the number of columns the tile covers.' },
-                    {
-                        name: 'colorAccent',
-                        description: 'number - applies a background color. Options include numbers from 1 to 9.'
-                    }
-                ]}
-                type='Inputs' />
+            <Properties sourceModule={require('./Tile')} />
 
             <Separator />
 
@@ -227,7 +214,7 @@ export const TileComponent = () => {
             <Separator />
 
             <h2>Tile Grid Component</h2>
-            <Description>A Tile Gird is a collection of Tiles components in a gird layout.</Description>
+            <Description>A **Tile Grid** is a collection of **Tiles** in a grid layout.</Description>
             <DocsTile>
                 <TileGrid col={4}>
                     <Tile colorAccent={7} rowSpan={2}>

@@ -20,6 +20,11 @@ export const Tabs = props => {
     );
 };
 
+Tabs.propTypes = {
+    children: PropTypes.node,
+    className: PropTypes.string
+};
+
 export class TabComponent extends Component {
     constructor(props) {
         super(props);
@@ -96,4 +101,11 @@ TabComponent.propTypes = {
     tabContentProps: PropTypes.object,
     tabLinkProps: PropTypes.object,
     tabProps: PropTypes.object
+};
+
+TabComponent.propDescriptions = {
+    ids: 'An array of objects with keys \'id\', \'url\', \'name\', \'hasChild\', \'child\', and \'glyph\' defining each tab.',
+    tabContentProps: 'Additional props to be spread to the tab\'s content.',
+    tabLinkProps: 'Additional props to be spread to the tab\'s link.',
+    tabProps: 'Additional props to be spread to the tab.'
 };

@@ -15,17 +15,20 @@ See [Component Documentation](https://sap.github.io/fundamental-react/) for exam
 
 ## Requirements
 
-You will need to install [Node and Node Package Manager](
-https://www.npmjs.com/get-npm).
+You will need to install [Node and Node Package Manager](https://www.npmjs.com/get-npm).
 
 ## Getting Started
 
+For an existing react application, follow the steps bellow:
+
 1. Install fundamental-react
+
     ```
     npm install fundamental-react
     ```
 
 1. Load the fiori-fundamentals styles. If using create-react-app, this will be in `App.css`.
+
     ```
     @import '~fiori-fundamentals/dist/fiori-fundamentals.min.css';
     ```
@@ -35,12 +38,15 @@ https://www.npmjs.com/get-npm).
     import { Alert } from 'fundamental-react';
     ```
 
-
 ## Versioning
 
 The `fundamental-react` library follows [Semantic Versioning](https://semver.org/). These components strictly adhere to the [MAJOR].[MINOR].[PATCH] numbering system (also known as [BREAKING].[FEATURE].[FIX]).
 
-Merges to the `master` branch will be published as a prerelease.  Prereleases will include an **rc** version (_e.g._ [MAJOR].[MINOR].[PATCH]-rc.[RC]).
+Merges to the `master` branch will be published as a prerelease. Prereleases will include an **rc** version (_e.g._ [MAJOR].[MINOR].[PATCH]-rc.[RC]).
+
+## Known Issues
+
+Please see [Issues](https://github.com/SAP/fundamental-react/issues).
 
 ## Support
 
@@ -59,4 +65,3 @@ This library is licensed under the Apache Software License, v. 2 except as noted
 
 -   [Angular implementation of SAP Fiori Fundamentals](https://github.com/SAP/fundamental-ngx)
 -   [Vue implementation of SAP Fiori Fundamentals](https://github.com/SAP/fundamental-vue)
- 
