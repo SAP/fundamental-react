@@ -31,10 +31,10 @@ export const ToggleComponent = () => {
         <div>
             <Header>Toggle</Header>
             <Description>
-                The toggle component is used to activate or deactivate an element. Uses a visual metaphor that is know
+                The **Toggle** component is used to activate or deactivate an element. It uses a visual metaphor that is known
                 to the user with visible differences between on and off state. It is recommended to always display the
                 toggle with a label above it as well as the label of the selected state. For example, the label above
-                would be Active, the toggle state would be “on” and the selected state label displayed to the right of
+                would be "Active", the toggle state would be “on” and the selected state label displayed to the right of
                 the toggle would be “Yes”.
             </Description>
             <Import sourceModule={require('./Toggle')} />
@@ -70,10 +70,6 @@ export const ToggleComponent = () => {
             <Separator />
 
             <h2>Disabled state</h2>
-            <Description>
-                The toggle can be set to the disable state and still indicate the state of the toggle. To do this, add
-                the 'disabled' parameter to the element.
-            </Description>
             <DocsTile>
                 <Toggle disabled id='Yj07w608'
                     size='xs'>

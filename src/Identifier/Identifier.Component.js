@@ -47,7 +47,9 @@ export const IdentifierComponent = () => {
     return (
         <div>
             <Header>Identifier</Header>
-            <Description>A visual presentation option around using an icon or user initials .</Description>
+            <Description>
+                An **Identifier** is a visual presentation option around using an icon or user initials.
+            </Description>
             <Import sourceModule={require('./Identifier')} />
 
             <Separator />

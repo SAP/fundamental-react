@@ -14,7 +14,7 @@ export const ImageComponent = () => {
         <div>
             <Header>Image</Header>
             <Description>
-                When using images, use the following helpers classes to adjust the size and the shape.
+                Use an **Image** component to display images.
             </Description>
             <Import sourceModule={require('./Image')} />
 

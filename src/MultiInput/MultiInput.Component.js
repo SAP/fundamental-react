@@ -58,7 +58,7 @@ export class MultiInputComponent extends Component {
 
               <h2>Default</h2>
               <Description>
-                  A text input when on focus will show list of items to select.
+                  When input receives focus, it will show list of items to select.
               </Description>
               <DocsTile>
                   <div>
@@ -73,10 +73,6 @@ export class MultiInputComponent extends Component {
               <Separator />
 
               <h2>Compact Style</h2>
-              <Description>
-                  A text input when on focus will show list of items to select, but with
-                  a compact input box.
-              </Description>
               <DocsTile>
                   <div>
                       <MultiInput

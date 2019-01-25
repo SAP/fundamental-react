@@ -441,7 +441,7 @@ export const FormsComponent = () => {
 
             <h2>Select</h2>
             <Description>
-                The Select component is similar to a dropdown but is more commonly used within a form. It can also be
+                The **FormSelect** component is similar to a **Dropdown** but is more commonly used within a form. It can also be
                 set to a disabled state.
             </Description>
             <DocsTile>
@@ -519,8 +519,8 @@ export const FormsComponent = () => {
 
             <h2>Checkbox</h2>
             <Description>
-                With checkboxes, all options are visible and the user can make one or more selections. This component
-                can be set disabled and also displayed in a row.
+                With checkboxes, all options are visible and the user can make one or more selections.
+                This component can also be disabled and displayed in a row.
             </Description>
 
             <DocsTile>

@@ -14,8 +14,8 @@ export const InlineHelpComponent = () => {
         <div>
             <Header>Inline Help</Header>
             <Description>
-                Inline help is used to display help text in a popover, often inline with headers, body text and form
-                labels.
+                **Inline Help** is used to display help text in a **Popover**, often inline with headers,
+                body text and form labels.
             </Description>
             <Import sourceModule={require('./InlineHelp')} />
 
@@ -26,7 +26,6 @@ export const InlineHelpComponent = () => {
             <Separator />
 
             <h2>Default Position</h2>
-            <Description>The default positioning of inline help component is bottom right.</Description>
             <DocsTile centered>
                 Bottom Right (Default) &nbsp;
                 <InlineHelp placement='bottom-right' text='Lorem ipsum dolor sit amet, consectetur adipiscing.' />

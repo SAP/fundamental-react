@@ -55,8 +55,8 @@ export const MenuComponent = () => {
         <div>
             <Header>Menu</Header>
             <Description>
-                The menu component is the listing structure with optional headers to create menus. Commonly used as the
-                contents when composing “dropdowns”, “contextual menus”,  etc, when paired with the popover
+                The **Menu** is the listing structure with optional headers to create menus. Commonly used as the
+                contents when composing “dropdowns”, “contextual menus”,  etc, when paired with the **Popover**
                 component.
             </Description>
             <Import sourceModule={require('./Menu')} />
@@ -125,7 +125,7 @@ export const MenuComponent = () => {
             <Separator />
 
             <h2>Menu w/ Addon Before</h2>
-            <p>Menu items with an addon before.</p>
+            <p>Menu items with an add-on before.</p>
             <DocsTile>
                 <Menu addonBefore>
                     <MenuList>

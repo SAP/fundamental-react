@@ -12,9 +12,9 @@ export const TimeComponent = () => {
         <div>
             <Header>Time</Header>
             <Description>
-                The time component is used for a single time value. Multiple components can be used in the time-picker
-                to assemble a clock time. A max of four will account for hours, minutes, seconds and period of the day.
-                It will be rare to see this component used outside of it being composed in the time-picker component.
+                The **Time** component is used for a single time value. Multiple components can be used in the **Time Picker**
+                to assemble a clock time. A max of four will account for hours, minutes, seconds and meridiem of the day.
+                It is rarely used on its own as a standalone component.
             </Description>
             <Import sourceModule={require('./Time')} />
 
@@ -35,7 +35,6 @@ export const TimeComponent = () => {
 
             {/* 12 hours Clock */}
             <h2>12-Hour Clock</h2>
-            <Description>You can use a Meridian 12-hour clock by setting format12Hours to true </Description>
             <DocsTile>
                 <Time format12Hours />
             </DocsTile>
@@ -45,7 +44,6 @@ export const TimeComponent = () => {
 
             {/* No Spinners Time */}
             <h2>Clock With No Spinners</h2>
-            <Description>To hide the spinners set spinner to false</Description>
             <DocsTile>
                 <Time spinners={false} />
             </DocsTile>
@@ -55,7 +53,6 @@ export const TimeComponent = () => {
 
             {/* Hide Seconds */}
             <h2>Clock With No Seconds</h2>
-            <Description>To hide the seconds input set showSecond to false</Description>
             <DocsTile>
                 <Time showSecond={false} />
             </DocsTile>
@@ -65,7 +62,6 @@ export const TimeComponent = () => {
 
             {/* Disabled State */}
             <h2>Disabled State</h2>
-            <Description>The Time component can be set to disabled state by setting disabled to true</Description>
             <DocsTile>
                 <Time disabled />
             </DocsTile>

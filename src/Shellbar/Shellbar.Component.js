@@ -412,7 +412,7 @@ productSwitcher = {
             <div>
                 <Header>Shellbar</Header>
                 <Description>
-                    The shellbar offers consistent, responsive navigation across all products and applications. Includes
+                    The **Shellbar** offers consistent, responsive navigation across all products and applications. Includes
                     support for branding, product navigation, search, notifications, user settings, and CoPilot. This is
                     a composite component comprised of mandatory and optional elements. Before getting started, here are
                     some things to know.
@@ -427,7 +427,7 @@ productSwitcher = {
 
                 <h2>Basic Shellbar</h2>
                 <Description>
-                    This example shows the minimum shellbar for a single application product with only user settings. If
+                    This example shows the minimum Shellbar for a single application product with only user settings. If
                     no user thumbnail is available then display initials.
                 </Description>
                 <DocsTile>

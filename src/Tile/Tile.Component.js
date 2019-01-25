@@ -108,8 +108,8 @@ export const TileComponent = () => {
         <div>
             <Header>Tile and Tile Grid</Header>
             <Description>
-                A Tile component can be used to display information in a simple container format. A collection of tile
-                can be displayed using <code>fd-tile-grid</code>{' '}
+                A **Tile** can be used to display information in a simple container format.
+                A collection of tiles can be displayed using **TileGrid**.
             </Description>
             <Import sourceModule={require('./Tile')} />
 
@@ -214,7 +214,7 @@ export const TileComponent = () => {
             <Separator />
 
             <h2>Tile Grid Component</h2>
-            <Description>A Tile Gird is a collection of Tiles components in a gird layout.</Description>
+            <Description>A **Tile Grid** is a collection of **Tiles** in a grid layout.</Description>
             <DocsTile>
                 <TileGrid col={4}>
                     <Tile colorAccent={7} rowSpan={2}>

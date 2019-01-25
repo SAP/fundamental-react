@@ -124,7 +124,9 @@ export const TableComponent = () => {
     return (
         <div>
             <Header>Table</Header>
-            <Description>A table is a set tabular data. Line items can support data, images and actions.</Description>
+            <Description>
+                A **Table** is a set of tabular data. Line items can support `data`, `images` and `actions`.
+            </Description>
             <Import sourceModule={require('./Table')} />
 
             <Separator />
@@ -135,10 +137,8 @@ export const TableComponent = () => {
 
             <h2>Simple Table</h2>
             <Description>
-                This is an example of a table with simple cells, where the rowData is an array of strings.
+                This is an example of a **Table** with simple cells, where the `rowData` is an array of strings.
             </Description>
-            <br />
-            <br />
             <DocsTile>
                 <Table
                     headers={['Column Header 1', 'Column Header 2', 'Column Header 3', 'Column Header 4']}
@@ -157,8 +157,8 @@ export const TableComponent = () => {
 
             <h2>Rich Table</h2>
             <Description>
-                This is an example of a table with rich cells. The checkbox input can be used at the beginning of each
-                row to allow for bulk actions.When more than three actions exist per row and/or space doesn’t allow for
+                This is an example of a **Table** with "rich" cells. The checkbox input can be used at the beginning of each
+                row to allow for bulk actions. When more than three actions exist per row and/or space doesn’t allow for
                 actions, a contextual menu can be substituted in order to display all actions in one menu.
             </Description>
             <DocsTile>

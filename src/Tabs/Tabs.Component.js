@@ -15,8 +15,8 @@ export const TabsComponent = () => {
         <div>
             <Header>Tabs</Header>
             <Description>
-                Tabs are based on a folder metaphor and used to separate content into different sections. Tabs should be
-                ordered to create a visual hierarchy based on priority.
+                **Tabs** are based on a folder metaphor and used to separate content into different sections.
+                They should be ordered to create a visual hierarchy based on priority.
             </Description>
             <Import sourceModule={require('./Tabs')} />
 

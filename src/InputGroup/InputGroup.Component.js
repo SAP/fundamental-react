@@ -134,7 +134,7 @@ Compact mode:
         <div>
             <Header>InputGroup</Header>
             <Description>
-                The input group includes form inputs with add-ons that allow the user to
+                The **Input Group** includes form inputs with add-ons that allow the user to
                 better understand the information being entered.
             </Description>
             <Import sourceModule={require('./InputGroup')} />

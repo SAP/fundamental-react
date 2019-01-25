@@ -99,7 +99,12 @@ export const TreeComponent = () => {
     return (
         <div>
             <Header>Tree</Header>
-            <Description>A tree is used to display data in a visual hierarchy. Items that contain additional items are called nodes, while items that do not contain any other items are called leaves. If available, a single topmost node is called a root node. Apart from the hierarchical structure of its nodes and leaves, a tree is similar to a list.</Description>
+            <Description>
+                A **Tree** is used to display data in a visual hierarchy. Items that contain additional items
+                are called nodes, while items that do not contain any other items are called leaves. If available,
+                a single top-most node is called a "root" node. Apart from the hierarchical structure of its nodes
+                and leaves, a tree is similar to a list.
+            </Description>
             <Import sourceModule={require('./Tree')} />
 
             <Separator />
@@ -182,7 +187,9 @@ export const TreeComponent = () => {
             <Separator />
 
             <h2>Rich Tree</h2>
-            <Description>This is an example of a tree with rich cells, where the rowData is an array of objects, where each object can have one or both of the following properties:</Description>
+            <Description>
+                This is an example of a tree with "rich" cells.
+            </Description>
 
             <DocsTile>
                 <Tree

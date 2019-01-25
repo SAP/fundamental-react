@@ -158,8 +158,8 @@ export const DropdownComponent = () => {
         <div>
             <Header>Dropdown</Header>
             <Description>
-                The dropdown component let the user select one of different options. It is more flexible than the normal
-                Select.
+                The **Dropdown** component lets the user select one of the different options.
+                It is more flexible than the normal Select.
             </Description>
             <Import sourceModule={require('./Dropdown')} />
 

@@ -16,7 +16,8 @@ export const TokenComponent = () => {
 
             <Header>Token</Header>
             <Description>
-                Tokens are used to represent contextualizing information. They can be useful to show applied filters, selected values for form field or object metadata.
+                A **Token** is used to represent contextual information. It can be useful to show
+                applied filters, selected values for a form field or object metadata.
             </Description>
             <Import sourceModule={require('./Token')} />
 

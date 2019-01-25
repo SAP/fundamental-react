@@ -19,7 +19,7 @@ export const BreadcrumbComponent = () => {
         <div>
             <Header>Breadcrumb</Header>
             <Description>
-                The breadcrumb allows users to see the current page and navigation path to that page. Users can navigate
+                The **Breadcrumb** allows users to see the current page and navigation path to that page. Users can navigate
                 to previous levels in the path. When clicking on the current page, a dropdown allows users to access
                 other pages at that same level.
             </Description>

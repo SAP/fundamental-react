@@ -11,8 +11,7 @@ export const TimePickerComponent = () => {
         <div>
             <Header>Time Picker</Header>
             <Description>
-                The Time Picker component allows the user to easily set a time using the
-                Fundamental React Time component
+                The **Time Picker** allows the user to easily set a time using the **Time** component.
             </Description>
             <Import sourceModule={require('./TimePicker')} />
 
@@ -31,9 +30,6 @@ export const TimePickerComponent = () => {
             <Separator />
 
             <h2>12-Hour Clock</h2>
-            <Description>
-                You can use a Meridian 12-hour clock by setting format12Hours to true{' '}
-            </Description>
             <DocsTile>
                 <TimePicker format12Hours />
             </DocsTile>
@@ -42,9 +38,6 @@ export const TimePickerComponent = () => {
             <Separator />
 
             <h2>Time Picker With No Seconds</h2>
-            <Description>
-                To hide the seconds input set showSecond to false
-            </Description>
             <DocsTile>
                 <TimePicker showSecond={false} />
             </DocsTile>
@@ -53,10 +46,6 @@ export const TimePickerComponent = () => {
             <Separator />
 
             <h2>Disabled State</h2>
-            <Description>
-                The Time Picker component can be set to disabled state by setting disabled to
-                true
-            </Description>
             <DocsTile>
                 <TimePicker disabled />
             </DocsTile>

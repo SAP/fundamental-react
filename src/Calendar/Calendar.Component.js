@@ -11,7 +11,10 @@ export const CalendarComponent = () => {
 
     return (<div>
         <Header>Calendar</Header>
-        <Description>Commonly used as the contents of a popover when composing “date-picker”, rarely used on its own as a standalone component.</Description>
+        <Description>
+            The **Calendar** is commonly used as the contents of a **Popover** when composing a **Date Picker**.
+            It is rarely used on its own as a standalone component.
+        </Description>
         <Import sourceModule={require('./Calendar')} />
 
         <Separator />

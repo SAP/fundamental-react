@@ -26,7 +26,7 @@ Menu.propTypes = {
 };
 
 Menu.propDescriptions = {
-    addonBefore: 'Set to **true** enables menu items with addon before.'
+    addonBefore: 'Set to **true** enables menu items with add-on before.'
 };
 
 // ---------------------------------------- Menu List ----------------------------------------
@@ -92,8 +92,8 @@ MenuItem.propTypes = {
 };
 
 MenuItem.propDescriptions = {
-    addon: 'Name of the SAP icon to be applied as an addon before.',
-    addonProps: 'Additional props to be spread to the addon section.',
+    addon: 'Name of the SAP icon to be applied as an add-on before.',
+    addonProps: 'Additional props to be spread to the add-on section.',
     isLink: 'Set to **true** to style as a link.',
     link: 'Enables use of react-router `Link` component. Path name to be applied to Link\'s `to` prop. Should use either `link` or `url`, but not both.',
     linkProps: 'Additional props to be spread to the Menu Item links (when using `link`).',
