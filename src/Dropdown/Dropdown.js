@@ -25,3 +25,7 @@ Dropdown.propTypes = {
     className: PropTypes.string,
     standard: PropTypes.bool
 };
+
+Dropdown.defaultProps = {
+    standard: false
+};
