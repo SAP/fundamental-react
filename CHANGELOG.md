@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.2.1-rc.1"></a>
+## [0.2.1-rc.1](https://github.com/SAP/fundamental-react/compare/v0.2.1-rc.0...v0.2.1-rc.1) (2019-01-25)
+
+
+### Bug Fixes
+
+* add missing command to deploy script ([#305](https://github.com/SAP/fundamental-react/issues/305)) ([98d2f4b](https://github.com/SAP/fundamental-react/commit/98d2f4b))
+* initialPage error on component load ([#304](https://github.com/SAP/fundamental-react/issues/304)) ([90e6ba9](https://github.com/SAP/fundamental-react/commit/90e6ba9))
+
+
+
 <a name="0.2.1-rc.0"></a>
 ## [0.2.1-rc.0](https://github.com/SAP/fundamental-react/compare/v0.2.0...v0.2.1-rc.0) (2019-01-25)
 
