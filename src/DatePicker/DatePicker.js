@@ -443,3 +443,8 @@ DatePicker.propTypes = {
     enableRangeSelection: PropTypes.bool,
     inputProps: PropTypes.object
 };
+
+DatePicker.defaultProps = {
+    compact: false,
+    enableRangeSelection: false
+};
