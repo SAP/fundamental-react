@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import ReactMarkdown from 'react-markdown';
 
 export const Description = (props) => {
     const descriptionStyle = {
@@ -11,7 +12,7 @@ export const Description = (props) => {
 
     return (
         <p className='description' style={descriptionStyle}>
-            {children}
+            <ReactMarkdown source={children} />
         </p>
     );
 };
