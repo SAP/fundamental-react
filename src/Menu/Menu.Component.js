@@ -15,40 +15,62 @@ export const MenuComponent = () => {
 
     const menuGroupCode = `<Menu>
     <MenuList>
-        <MenuItem link="/">Option 1</MenuItem>
-        <MenuItem link="/">Option 2</MenuItem>
-        <MenuItem link="/">Option 3</MenuItem>
+        <MenuItem>
+            <Link to='/'>Option 1</Link>
+        </MenuItem>
+        <MenuItem>
+            <Link to='/'>Option 2</Link>
+        </MenuItem>
+        <MenuItem>
+            <Link to='/'>Option 3</Link>
+        </MenuItem>
     </MenuList>
     <MenuGroup title="Group Header">
         <MenuList>
-            <MenuItem link="/">Option 4</MenuItem>
-            <MenuItem link="/">Option 5</MenuItem>
-            <MenuItem link="/">Option 6</MenuItem>
+            <MenuItem>
+                <Link to='/'>Option 4</Link>
+            </MenuItem>
+            <MenuItem>
+                <Link to='/'>Option 5</Link>
+            </MenuItem>
+            <MenuItem>
+                <Link to='/'>Option 6</Link>
+            </MenuItem>
         </MenuList>
     </MenuGroup>
 </Menu>`;
 
     const menuSeparatorCode = `<Menu>
     <MenuList>
-        <MenuItem link="/" separator>
-            Option 1
+        <MenuItem separator>
+            <Link to='/'>Option 1</Link>
         </MenuItem>
-        <MenuItem link="/" separator>
-            Option 2
+        <MenuItem separator>
+            <Link to='/'>Option 2</Link>
         </MenuItem>
-        <MenuItem link="/" separator>
-            Option 3
+        <MenuItem separator>
+            <Link to='/'>Option 3</Link>
         </MenuItem>
-        <MenuItem link="/">Option 4</MenuItem>
+        <MenuItem>
+            <Link to='/'>Option 4</Link>
+        </MenuItem>
     </MenuList>
 </Menu>`;
 
     const menuAddonBeforeCode = `<Menu addonBefore={true}>
     <MenuList>
-        <MenuItem link="/">Option 1</MenuItem>
-        <MenuItem link="/" addon="accept">Option 2</MenuItem>
-        <MenuItem link="/">Option 3</MenuItem>
-        <MenuItem link="/">Option 4</MenuItem>
+        <MenuItem>
+            <Link to='/'>Option 1</Link>
+        </MenuItem>
+        <MenuItem addon='accept'>
+            <Link to='/'>Option 2</Link>
+        </MenuItem>
+        <MenuItem>
+            <Link to='/'>Option 3</Link>
+        </MenuItem>
+        <MenuItem>
+            <Link to='/'>Option 4</Link>
+        </MenuItem>
     </MenuList>
 </Menu>`;
 
@@ -83,11 +105,7 @@ export const MenuComponent = () => {
                         name: 'addonProps',
                         description: 'object - additional props to be spread to the addon section'
                     },
-                    { name: 'link', description: 'string - a router link. Use either \'url\' or \'link\'' },
-                    {
-                        name: 'linkProps',
-                        description: 'object - additional props to be spread to the Menu Item links'
-                    },
+                    { name: 'children', description: 'component - can be used to pass React Router <Link> or any other component which emits an <a>.' },
                     { name: 'separator', description: 'bool - when set to true, adds a horizontal line (separator).' },
                     { name: 'url', description: 'string - href attribute of <a> tag. Use either \'url\' or \'link\'' },
                     {
@@ -145,13 +163,13 @@ export const MenuComponent = () => {
                     <MenuGroup title='Group Header'>
                         <MenuList>
                             <MenuItem>
-                                <Link to='/'>Option 1</Link>
+                                <Link to='/'>Option 4</Link>
                             </MenuItem>
                             <MenuItem>
-                                <Link to='/'>Option 2</Link>
+                                <Link to='/'>Option 5</Link>
                             </MenuItem>
                             <MenuItem>
-                                <Link to='/'>Option 3</Link>
+                                <Link to='/'>Option 6</Link>
                             </MenuItem>
                         </MenuList>
                     </MenuGroup>
@@ -174,6 +192,9 @@ export const MenuComponent = () => {
                         <MenuItem separator>
                             <Link to='/'>Option 3</Link>
                         </MenuItem>
+                        <MenuItem>
+                            <Link to='/'>Option 4</Link>
+                        </MenuItem>
                     </MenuList>
                 </Menu>
             </DocsTile>
@@ -193,6 +214,9 @@ export const MenuComponent = () => {
                         </MenuItem>
                         <MenuItem>
                             <Link to='/'>Option 3</Link>
+                        </MenuItem>
+                        <MenuItem>
+                            <Link to='/'>Option 4</Link>
                         </MenuItem>
                     </MenuList>
                 </Menu>
