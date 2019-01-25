@@ -265,3 +265,17 @@ InputGroup.propTypes = {
     numberUpButtonProps: PropTypes.object,
     searchButtonProps: PropTypes.object
 };
+
+InputGroup.propDescriptions = {
+    actions: 'Set to **true** to enable an input with actions. Actions can be shown with a text label or icon.',
+    addon: 'The value of the add-on.',
+    addonPos: 'Location of the add-on relative to the input.',
+    inputId: 'Value for the `id` attribute on the `<input>` element.',
+    inputName: 'Value for the `name` attribute on the `<input>` element.',
+    inputPlaceholder: 'Value for the `placeholder` attribute on the `<input>` element.',
+    inputType: 'Value for the `type` attribute on the `<input>` element.',
+    inputValue: 'Value for the `value` attribute on the `<input>` element.',
+    numberDownButtonProps: 'Additional props to be spread to the down `<button>` element (for inputType=\'number\').',
+    numberUpButtonProps: 'Additional props to be spread to the up `<button>` element (for inputType=\'number\').',
+    searchButtonProps: 'Additional props to be spread to the `<button>` element.'
+};

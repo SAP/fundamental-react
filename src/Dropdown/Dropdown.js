@@ -25,3 +25,7 @@ Dropdown.propTypes = {
     className: PropTypes.string,
     standard: PropTypes.bool
 };
+
+Dropdown.propDescriptions = {
+    standard: 'Set to **true** to enable a dropdown for toolbar.'
+};

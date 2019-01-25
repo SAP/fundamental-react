@@ -256,50 +256,7 @@ export const FormsComponent = () => {
 
             <Separator />
 
-            <Properties
-                properties={[
-                    { name: 'FormItem', description: 'An item of the form set.' },
-                    { name: 'FormLabel', description: 'Label for the input field.' },
-                    { name: 'FormMessage', description: 'Message displayed below the input field.' },
-                    { name: 'FormInput', description: 'Input controls for user input data.' },
-                    { name: 'FormTextarea', description: 'Multi-line text input control.' },
-                    { name: 'FormFieldset', description: 'Fieldset - used to group related elements in a form.' },
-                    { name: 'FormLegend', description: 'Defines a caption for the fieldset element.' },
-                    { name: 'FormSelect', description: 'The \'select\' component is similar to a dropdown but is more commonly used within a form. It can also be set to a disabled state.' },
-                    { name: 'FormRadio', description: 'Fieldset with Radio Buttons.' }
-                ]}
-                type='Child Components' />
-
-            <Properties
-                properties={[
-                    {
-                        name: 'isCheck',
-                        description:
-                            'bool - used in FormItem. When set to \'true\', renders an input with type of checkbox.'
-                    },
-                    {
-                        name: 'isInline',
-                        description:
-                            'bool - used in FormItem. Set to \'true\' to display radio buttons and checkboxes in a row.'
-                    },
-                    {
-                        name: 'required',
-                        description: 'bool - set to \'true\' for required input fields. Used in FormLabel.'
-                    },
-                    {
-                        name: 'type',
-                        description:
-                            'string - when used in FormMessage this property sets the type of the message. The options include \'error\', \'warning\', and \'help\'.'
-                    },
-                    {
-                        name: 'state',
-                        description:
-                            'string - the state of the input. Options include \'normal\', \'valid\', \'invalid\', \'warning\', \'help\', \'disabled\', and \'readonly\'. Leave empty for normal. Used in FormInput.'
-                    },
-                    { name: 'disabled', description: 'bool - set to \'true\' to disable the element.' },
-                    { name: 'defaultChecked', description: 'string - the id of the element selected by default.' }
-                ]}
-                type='Inputs' />
+            <Properties sourceModule={require('./Forms')} />
 
             <Separator />
 
@@ -484,7 +441,7 @@ export const FormsComponent = () => {
 
             <h2>Select</h2>
             <Description>
-                The Select component is similar to a dropdown but is more commonly used within a form. It can also be
+                The **FormSelect** component is similar to a **Dropdown** but is more commonly used within a form. It can also be
                 set to a disabled state.
             </Description>
             <DocsTile>
@@ -562,8 +519,8 @@ export const FormsComponent = () => {
 
             <h2>Checkbox</h2>
             <Description>
-                With checkboxes, all options are visible and the user can make one or more selections. This component
-                can be set disabled and also displayed in a row.
+                With checkboxes, all options are visible and the user can make one or more selections.
+                This component can also be disabled and displayed in a row.
             </Description>
 
             <DocsTile>
@@ -612,8 +569,6 @@ export const FormsComponent = () => {
                 </FormFieldset>
             </DocsTile>
             <DocsText>{inputsCheckboxCode}</DocsText>
-
-            <Separator />
         </div>
     );
 };

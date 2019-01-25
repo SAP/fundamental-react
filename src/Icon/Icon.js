@@ -29,3 +29,8 @@ Icon.propTypes = {
     clickHandler: PropTypes.func,
     size: PropTypes.string
 };
+
+Icon.propDescriptions = {
+    clickHandler: 'Callback function when user clicks on the component.',
+    size: 'Size of the icon. Options include **xs**, **s**, **compact**, and **l**. If no size is provided, default (normal) will be used.'
+};

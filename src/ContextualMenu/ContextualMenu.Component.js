@@ -111,7 +111,6 @@ export const ContextualMenuComponent = () => {
                     noArrow />
             </DocsTile>
             <DocsText>{contextualMenuMoreTextCode}</DocsText>
-            <Separator />
         </div>
     );
 };

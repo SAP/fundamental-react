@@ -229,3 +229,10 @@ Tree.propTypes = {
     id: PropTypes.string,
     listProps: PropTypes.object
 };
+
+Tree.propDescriptions = {
+    treeData: 'Array of objects that contain three properties: `id`, `values` (an array of values for each column) and `children` (a repeat of the same structure for the next level).',
+    headerButtonProps: 'Additional props to be spread to the header expand/collapse `<button>` element.',
+    headerProps: 'Additional props to be spread to the header element.',
+    headers: 'Array of localized text strings for the column headers.'
+};

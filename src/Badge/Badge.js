@@ -88,3 +88,7 @@ Counter.propTypes = {
     className: PropTypes.string,
     notification: PropTypes.bool
 };
+
+Counter.propDescriptions = {
+    notification: 'Set to **true** to enable counter with notification.'
+};

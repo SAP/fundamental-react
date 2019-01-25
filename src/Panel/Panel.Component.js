@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button, Image, Menu, MenuItem, MenuList, Panel, PanelActions, PanelBody, PanelFilters, PanelFooter, PanelGrid, PanelHead, PanelHeader, Popover, Tile, TileContent, TileMedia, Token} from '../';
-import { Description, DocsText, DocsTile, Header, Import, Properties, Separator } from '../_playground';
+import { DocsText, DocsTile, Header, Import, Properties, Separator } from '../_playground';
 
 export const PanelComponent = () => {
     const panelExampleCode = `<Panel>
@@ -197,67 +197,11 @@ export const PanelComponent = () => {
     return (
         <div>
             <Header>Panel</Header>
-            <Description />
             <Import sourceModule={require('./Panel')} />
 
             <Separator />
 
-            <Properties
-                properties={[
-                    {
-                        name: 'nogap',
-                        description:
-                            'bool - When set to true removes the margins between the panels. Used with <PanelGrid /> component.'
-                    },
-                    {
-                        name: 'cols',
-                        description: 'number - The number of column grid. Used with <PanelGrid /> component.'
-                    },
-                    {
-                        name: 'colSpan',
-                        description:
-                            'number - The number of column grid. Option ranges from 2 to 6. Used with <Panel /> component.'
-                    },
-                    {
-                        name: 'title',
-                        description: 'any - Part of PanelHead component. Specifies the title of the panel.'
-                    },
-                    {
-                        name: 'description',
-                        description: 'any - Part of PanelHead component. Specifies the description of the panel.'
-                    }
-                ]}
-                type='Inputs' />
-
-            <Properties
-                properties={[
-                    { name: 'PanelBody', description: 'The panel body.' },
-                    { name: 'PanelHeader', description: 'The panel header. Contains a panel head and panel actions.' },
-                    {
-                        name: 'PanelHead',
-                        description: 'Part of the header. Contains the title and description of the panel.'
-                    },
-                    {
-                        name: 'PanelActions',
-                        description: 'Panel level actions such as add, remove, delete, sort, etc.'
-                    },
-                    {
-                        name: 'PanelFilters',
-                        description:
-                            'Panel level filters that is specific to the data being displayed within the panel.'
-                    },
-                    {
-                        name: 'PanelContent',
-                        description:
-                            'Main content of the panel can that hold lists, table, tree, text, form or any other infomation.'
-                    },
-                    {
-                        name: 'PanelFooter',
-                        description:
-                            'Panel footer can be utilized for pagination, secondary actions, add more data, etc.'
-                    }
-                ]}
-                type='Child Components' />
+            <Properties sourceModule={require('./Panel')} />
 
             <Separator />
 

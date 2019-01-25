@@ -79,3 +79,10 @@ Alert.propTypes = {
     linkText: PropTypes.string,
     type: PropTypes.oneOf(['', 'warning', 'error', 'success', 'information'])
 };
+
+Alert.propDescriptions = {
+    dismissible: 'Set to **true** to show a dismiss button.',
+    link: 'Value to be applied to the anchor\'s `href` attribute.',
+    linkProps: 'Additional props to be spread to the link\'s `<a>` element.',
+    linkText: 'Localized display text of the link.'
+};

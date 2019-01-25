@@ -52,6 +52,14 @@ Button.propTypes = {
     onClick: PropTypes.func
 };
 
+Button.propDescriptions = {
+    dropdown: 'Set to **true** if button triggers a dropdown list. ',
+    navbar: 'Set to **true** if button is part of global navbar.',
+    option: 'Indicates the importance of the button.',
+    selected: 'Set to **true** to set state of the button to "selected".',
+    typeAttr: 'Value for the `type` attribute on the `<button>` element.'
+};
+
 export const ButtonGroup = ({children, ...props}) => {
     return (
         <div
@@ -66,4 +74,8 @@ export const ButtonGroup = ({children, ...props}) => {
 
 ButtonGroup.propTypes = {
     children: PropTypes.node
+};
+
+ButtonGroup.propDescriptions = {
+    children: '`Button` nodes to group together.'
 };

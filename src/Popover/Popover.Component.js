@@ -71,41 +71,18 @@ export const PopoverComponent = () => {
         <div>
             <Header>Popover</Header>
             <Description>
-                The popover is a wrapping component that accepts a "control" as well as a "body". A control can be
+                The **Popover** is a wrapping component that accepts a "control" as well as a "body". A control can be
                 anything that you want to trigger the interaction from. The body will be the contents of what you reveal
-                on the page after triggering the popover. When paired with the menu component, the popover is commonly
-                used as the interaction/wrapping component for composing "dropdowns", "contextual menus" etc. As a general rule,
-                it is suggested that one popover be revealed on the page at any given time. Opening one popover should close all
+                on the page after triggering the popover. When paired with the **Menu** component, the Popover is commonly
+                used as the interaction/wrapping component for composing "dropdowns", "contextual menus", etc. As a general rule,
+                it is suggested that one Popover be revealed on the page at any given time. Opening one Popover should close all
                 others to prevent multiple layers and collisions of several popovers.
             </Description>
             <Import sourceModule={require('./Popover')} />
 
             <Separator />
 
-            <Properties
-                properties={[
-                    {
-                        name: 'control',
-                        description: 'component - Control element to toggle the display of the popover.'
-                    },
-                    {
-                        name: 'body',
-                        description: 'component - Wrapper that contains the popover content.'
-                    },
-                    {
-                        name: 'noArrow',
-                        description: 'bool - Set to "true" to render a popover body without an arrow. The default option is a popover body with an arrow. Leave empty for default.'
-                    },
-                    {
-                        name: 'alignment',
-                        description: 'string - The placement of the popover body. Options include "right" and "left". Leave empty for default/left placement.'
-                    },
-                    {
-                        name: 'id',
-                        description: 'string - optional. Element id.'
-                    }
-                ]}
-                type='Inputs' />
+            <Properties sourceModule={require('./Popover')} />
 
             <Separator />
 
@@ -176,7 +153,6 @@ export const PopoverComponent = () => {
                 </div>
             </DocsTile>
             <DocsText>{popoverCode}</DocsText>
-            <Separator />
         </div>
     );
 };

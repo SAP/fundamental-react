@@ -99,32 +99,7 @@ export const SideNavigationComponent = () => {
 
             <Separator />
 
-            <Properties
-                properties={[
-                    {
-                        name: 'icons',
-                        description: 'bool - when set to \'true\' enables side navigation collapsed with icons.'
-                    },
-                    {
-                        name: 'items',
-                        description:
-                            'array - an array of objects with keys \'id\', \'url\', \'name\', \'hasChild\', \'child\', and \'glyph\' setting the attributes of the items.'
-                    },
-                    { name: 'id', description: 'string - the \'id\' of the link.' },
-                    { name: 'url', description: 'string - the \'url\' of the link.' },
-                    { name: 'name', description: 'string - the \'name\' of the link.' },
-                    {
-                        name: 'hasChild',
-                        description: 'bool - when set to \'true\' enables a second level of navigation.'
-                    },
-                    {
-                        name: 'child',
-                        description:
-                            'array - an array of objects with keys \'id\', \'url\', and \'name\' setting the attributes of the subitems'
-                    },
-                    { name: 'glyph', description: 'string - the name of the icon for navigation list with icons.' }
-                ]}
-                type='Inputs' />
+            <Properties sourceModule={require('./SideNavigation')} />
 
             <Separator />
 

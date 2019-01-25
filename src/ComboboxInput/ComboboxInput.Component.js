@@ -44,17 +44,7 @@ export const ComboboxInputComponent = () => {
 
             <Separator />
 
-            <Properties
-                properties={[
-                    { name: 'menu', description: 'object (required) - An object containing a Menu component. ' },
-                    { name: 'id', description: 'string (optional) - The id of the component.' },
-                    { name: 'placeholder', description: 'string (optional) - Input \'placeholder\' attribute. ' },
-                    { name: 'compact', description: 'bool (optional) - Set to true to enable compact mode.' },
-                    { name: 'popoverProps', description: 'object (optional) - additional props to be spread to the Popover component.' },
-                    { name: 'inputProps', description: 'object (optional) - additional props to be spread to the input element.' },
-                    { name: 'buttonProps', description: 'object (optional) - additional props to be spread to the button element.' }
-                ]}
-                type='Inputs' />
+            <Properties sourceModule={require('./ComboboxInput')} />
 
             <Separator />
 
@@ -94,7 +84,6 @@ export const ComboboxInputComponent = () => {
                     placeholder='Select Fruit' />
             </DocsTile>
             <DocsText>{comboboxInputCode}</DocsText>
-            <Separator />
         </div>
     );
 };

@@ -35,36 +35,13 @@ export const AlertComponent = () => {
         <div>
             <Header>Alert</Header>
             <Description>
-                Alerts provide messages within the application that are color-coded to emphasize the level of urgency.
+                An **Alert** provides a message within the application that is color-coded to emphasize the level of urgency.
             </Description>
             <Import sourceModule={require('./Alert')} />
 
             <Separator />
 
-            <Properties
-                properties={[
-                    {
-                        name: 'type',
-                        description:
-                            'string - Determines the type of alert - \'error\' (red) or \'warning\' (orange). Defaults to white if no type is provided.'
-                    },
-                    {
-                        name: 'dismissible',
-                        description: 'bool - Shows a dismissible button if set to true. Default is false.'
-                    },
-                    {
-                        name: 'buttonProps',
-                        description: 'object - additional props to be spread to the Alert component\'s button element.'
-                    },
-                    {
-                        name: 'linkProps',
-                        description: 'object - additional props to be spread to the Alert component\'s anchor element.'
-                    }
-                ]}
-                type='Inputs' />
-            <Properties
-                properties={[{ name: 'close', description: 'Emitted when the close button is clicked.' }]}
-                type='Outputs' />
+            <Properties sourceModule={require('./Alert')} />
 
             <Separator />
 
@@ -86,7 +63,7 @@ export const AlertComponent = () => {
             <h2>Warning Alert</h2>
             <Description>
                 The alert warns of potential issues, but the user can still continue. The user will need to dismiss the
-                message. Apply type="warning".
+                message.
             </Description>
             <DocsTile>
                 <Alert dismissible type='warning'>
@@ -102,7 +79,7 @@ export const AlertComponent = () => {
             <Description>
                 This alert is triggered after the user entered data incorrectly or a system error has occurred. It
                 should interrupt the user. A final action such as Submit cannot be carried out until the user has
-                rectified the error. The user will need to dismiss the message. Apply type="error".
+                rectified the error. The user will need to dismiss the message.
             </Description>
             <DocsTile>
                 <Alert dismissible type='error'>
