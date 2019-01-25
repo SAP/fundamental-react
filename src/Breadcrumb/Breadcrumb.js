@@ -13,7 +13,6 @@ Breadcrumb.propTypes = {
 export const BreadcrumbItem = ({ url, link, name, className, children, ...props }) => {
     const renderLink = () => {
         if (!children && url) {
-            console.warn('It is suggested to use an anchor link or other link to provide a uniform API'); //TODO: We block these via lint and need a warning util
             return (
                 <a className='fd-breadcrumb__link' href={url}>{name}</a>
             );

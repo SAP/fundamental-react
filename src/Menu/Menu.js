@@ -45,7 +45,7 @@ export const MenuItem = ({ url, link, isLink, separator, addon, children, onclic
 
     const renderLink = () => {
         const isString = typeof children === 'string';
-        if(url || onclick || isString) {
+        if (url || onclick || isString) {
             return (
                 <a {...urlProps}
                     className={menuItemLinkClasses}
@@ -59,9 +59,11 @@ export const MenuItem = ({ url, link, isLink, separator, addon, children, onclic
                 'className': menuItemLinkClasses,
                 ...urlProps
             });
+        } else if (children) {
+            return children;
         }
     };
-    
+
     return (
         <React.Fragment>
             <li {...props} className={className}>

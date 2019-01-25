@@ -1,8 +1,8 @@
-import { Link, MemoryRouter } from 'react-router-dom';
 import { mount } from 'enzyme';
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { Breadcrumb, BreadcrumbItem } from './Breadcrumb';
+import { Link, MemoryRouter } from 'react-router-dom';
 
 describe('<Breadcrumb />', () => {
     const defaultBreadCrumb = (
