@@ -223,7 +223,7 @@ export class SearchInput extends Component {
                                     {!noSearchBtn && (
                                         <span className='fd-input-group__addon fd-input-group__addon--after fd-input-group__addon--button'>
                                             <button {...searchBtnProps}
-                                                className=' fd-button--light sap-icon--search'
+                                                className='fd-button--light sap-icon--search'
                                                 onClick={() => this.onClickHandler()} />
                                         </span>
                                     )}
