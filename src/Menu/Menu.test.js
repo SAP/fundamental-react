@@ -201,13 +201,11 @@ describe('<Menu />', () => {
 
         test('should allow props to be spread to the MenuItem component\'s a element', () => {
             const element = mount(
-                <MemoryRouter>
-                    <Menu>
-                        <MenuList>
-                            <MenuItem url='/' urlProps={{ 'data-sample': 'Sample' }} />
-                        </MenuList>
-                    </Menu>
-                </MemoryRouter>
+                <Menu>
+                    <MenuList>
+                        <MenuItem url='/' urlProps={{ 'data-sample': 'Sample' }} />
+                    </MenuList>
+                </Menu>
             );
 
             expect(
