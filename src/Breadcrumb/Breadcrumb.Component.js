@@ -1,25 +1,18 @@
-import { Link } from 'react-router-dom';
 import React from 'react';
 import { Breadcrumb, BreadcrumbItem } from '../';
 import { Description, DocsText, DocsTile, Header, Import, Separator } from '../_playground';
 
 export const BreadcrumbComponent = () => {
     const breadcrumbHrefCode = `<Breadcrumb>
-    <BreadcrumbItem name='Link Text' url='#' />
-    <BreadcrumbItem name='Link Text' url='#' />
-    <BreadcrumbItem name='Link Text' url='#' />
+    <BreadcrumbItem url="#" name="Link Text"/>
+    <BreadcrumbItem url="#" name="Link Text"/>
+    <BreadcrumbItem url="#" name="Link Text"/>
 </Breadcrumb>`;
 
-    const breadcrumbLinkCode = `<Breadcrumb>
-    <BreadcrumbItem name='Link Text' url='#'>
-        <Link to='#'>Link Text</Link>
-    </BreadcrumbItem>
-    <BreadcrumbItem name='Link Text' url='#'>
-        <Link to='#'>Link Text</Link>
-    </BreadcrumbItem>
-    <BreadcrumbItem name='Link Text' url='#'>
-        <Link to='#'>Link Text</Link>
-    </BreadcrumbItem>
+    const breadcrumbLinkCode = ` <Breadcrumb>
+    <BreadcrumbItem link="/" name="Link Text" />
+    <BreadcrumbItem link="/" name="Link Text" />
+    <BreadcrumbItem link="/" name="Link Text" />
 </Breadcrumb>`;
 
     return (
@@ -49,15 +42,9 @@ export const BreadcrumbComponent = () => {
             <Description>An example using link (routerLink)</Description>
             <DocsTile>
                 <Breadcrumb>
-                    <BreadcrumbItem name='Link Text' url='#'>
-                        <Link to='#'>Link Text</Link>
-                    </BreadcrumbItem>
-                    <BreadcrumbItem name='Link Text' url='#'>
-                        <Link to='#'>Link Text</Link>
-                    </BreadcrumbItem>
-                    <BreadcrumbItem name='Link Text' url='#'>
-                        <Link to='#'>Link Text</Link>
-                    </BreadcrumbItem>
+                    <BreadcrumbItem link='/' name='Link Text' />
+                    <BreadcrumbItem link='/' name='Link Text' />
+                    <BreadcrumbItem link='/' name='Link Text' />
                 </Breadcrumb>
             </DocsTile>
             <DocsText>{breadcrumbLinkCode}</DocsText>
