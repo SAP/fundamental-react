@@ -33,7 +33,6 @@
     "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive"
   },
   "dependencies": {
-    "annotated-prop-types": "^0.3.0",
     "classnames": "^2.2.6",
     "fiori-fundamentals": "^1.4.0",
     "react-router": "^4.3.1",
@@ -41,6 +40,7 @@
     "react-syntax-highlighter": "^9.0.1"
   },
   "devDependencies": {
+    "annotated-prop-types": "^0.3.0",
     "@babel/cli": "^7.1.5",
     "@babel/core": "7.1.0",
     "@babel/polyfill": "^7.1.5",
