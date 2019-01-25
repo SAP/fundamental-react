@@ -87,6 +87,7 @@ export class Modal extends Component {
 
 Modal.propTypes = {
     title: PropTypes.string.isRequired,
+    actions: PropTypes.node,
     bodyProps: PropTypes.object,
     closeProps: PropTypes.object,
     contentProps: PropTypes.object,
@@ -94,4 +95,14 @@ Modal.propTypes = {
     headerProps: PropTypes.object,
     show: PropTypes.bool,
     titleProps: PropTypes.object
+};
+
+Modal.propDescriptions = {
+    actions: 'Node(s) to render within the footer of the dialog.',
+    bodyProps: 'Additional props to be spread to the body section of the dialog.',
+    closeProps: 'Additional props to be spread to the close `<button>` element.',
+    contentProps: 'Additional props to be spread to the content section of the dialog.',
+    footerProps: 'Additional props to be spread to the footer of the dialog.',
+    headerProps: 'Additional props to be spread to the header of the dialog.',
+    show: 'Set to **true** to make the dialog visible.'
 };

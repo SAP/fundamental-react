@@ -158,18 +158,14 @@ export const DropdownComponent = () => {
         <div>
             <Header>Dropdown</Header>
             <Description>
-                The dropdown component let the user select one of different options. It is more flexible than the normal
-                Select.
+                The **Dropdown** component lets the user select one of the different options.
+                It is more flexible than the normal Select.
             </Description>
             <Import sourceModule={require('./Dropdown')} />
 
             <Separator />
 
-            <Properties
-                properties={[
-                    { name: 'standard', description: 'bool - set to \'true\' to enable a dropdown for toolbar.' }
-                ]}
-                type='Inputs' />
+            <Properties sourceModule={require('./Dropdown')} />
 
             <Separator />
 
@@ -350,8 +346,6 @@ export const DropdownComponent = () => {
                 </div>
             </DocsTile>
             <DocsText>{disabledDropdownCode}</DocsText>
-
-            <Separator />
         </div>
     );
 };

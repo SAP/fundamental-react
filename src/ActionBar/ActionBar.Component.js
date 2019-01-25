@@ -91,46 +91,14 @@ const clickBackBtn = () => {
         <div>
             <Header>Action Bar</Header>
             <Description>
-                The Action Bar is located at the top of the page and is used for Page title and Main Actions for the
+                The **Action Bar** is located at the top of the page and is used for page title and main actions for the
                 page.
             </Description>
             <Import sourceModule={require('./ActionBar')} />
 
             <Separator />
 
-            <Properties
-                properties={[
-                    { name: 'mobile', description: 'bool - set to "true" for mobile view of the Action Bar.' },
-                    {
-                        name: 'width',
-                        description: 'string - the width of the Action Bar in mobile view. The default is 319px.'
-                    },
-                    {
-                        name: 'title',
-                        description: 'string - the title of the action bar. Specified in ActionBarHeader.'
-                    },
-                    {
-                        name: 'description',
-                        description: 'string - Action bar description. Specified in ActionBarHeader.'
-                    },
-                    {
-                        name: 'onClick',
-                        description: 'func - The function that is executed when the back button is clicked.'
-                    },
-                    {
-                        name: 'buttonProps',
-                        description: 'object - additional props to be spread to the ActionBarBack\'s button.'
-                    },
-                    {
-                        name: 'descriptionProps',
-                        description: 'object - additional props to be spread to the ActionBarHeader\'s description.'
-                    },
-                    {
-                        name: 'titleProps',
-                        description: 'object - additional props to be spread to the ActionBarHeader\'s title.'
-                    }
-                ]}
-                type='Inputs' />
+            <Properties sourceModule={require('./ActionBar')} />
 
             <Separator />
 
@@ -243,8 +211,6 @@ const clickBackBtn = () => {
                 </ActionBar>
             </DocsTile>
             <DocsText>{mobileCustomWidthActionBarCode}</DocsText>
-
-            <Separator />
         </div>
     );
 };

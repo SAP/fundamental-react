@@ -79,14 +79,14 @@ export default class Routes extends Component {
                 },
                 { url: '/image', name: 'Image', component: ImageComponent },
                 {
-                    url: '/inputGroup',
-                    name: 'Input Group',
-                    component: InputGroupComponent
-                },
-                {
                     url: '/inlineHelp',
                     name: 'Inline Help',
                     component: InlineHelpComponent
+                },
+                {
+                    url: '/inputGroup',
+                    name: 'Input Group',
+                    component: InputGroupComponent
                 },
                 {
                     url: '/listGroup',

@@ -14,23 +14,13 @@ export const ImageComponent = () => {
         <div>
             <Header>Image</Header>
             <Description>
-                When using images, use the following helpers classes to adjust the size and the shape.
+                Use an **Image** component to display images.
             </Description>
             <Import sourceModule={require('./Image')} />
 
             <Separator />
 
-            <Properties
-                properties={[
-                    {
-                        name: 'size',
-                        description:
-                            'string (required)- the size of the image. Size options include \'s\' (24x24), \'m\' (36x36), and \'l\' (48x48).'
-                    },
-                    { name: 'photo', description: 'string (required) - picture url.' },
-                    { name: 'type', description: 'string - When set to \'circle\' renders a round image.' }
-                ]}
-                type='Inputs' />
+            <Properties sourceModule={require('./Image')} />
 
             <Separator />
 

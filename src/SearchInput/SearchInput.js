@@ -267,7 +267,20 @@ export class SearchInput extends Component {
 }
 
 SearchInput.propTypes = {
+    compact: PropTypes.bool,
     inputProps: PropTypes.object,
     listProps: PropTypes.object,
-    searchBtnProps: PropTypes.object
+    noSearchBtn: PropTypes.bool,
+    placeholder: PropTypes.string,
+    searchBtnProps: PropTypes.object,
+    searchList: PropTypes.array,
+    onChange: PropTypes.func,
+    onEnter: PropTypes.func
+};
+
+SearchInput.propDescriptions = {
+    noSearchBtn: 'Set to **true** to render without a search button.',
+    onEnter: 'Callback function when the user hits the <Enter> key.',
+    searchBtnProps: 'Additional props to be spread to the search `<button>` element.',
+    searchList: 'Collection of items to display in the dropdown list.'
 };

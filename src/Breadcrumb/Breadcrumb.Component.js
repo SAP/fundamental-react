@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import React from 'react';
 import { Breadcrumb, BreadcrumbItem } from '../';
-import { Description, DocsText, DocsTile, Header, Import, Separator } from '../_playground';
+import { Description, DocsText, DocsTile, Header, Import, Properties, Separator } from '../_playground';
 
 export const BreadcrumbComponent = () => {
     const breadcrumbHrefCode = `<Breadcrumb>
@@ -26,7 +26,7 @@ export const BreadcrumbComponent = () => {
         <div>
             <Header>Breadcrumb</Header>
             <Description>
-                The breadcrumb allows users to see the current page and navigation path to that page. Users can navigate
+                The **Breadcrumb** allows users to see the current page and navigation path to that page. Users can navigate
                 to previous levels in the path. When clicking on the current page, a dropdown allows users to access
                 other pages at that same level.
             </Description>
@@ -34,7 +34,11 @@ export const BreadcrumbComponent = () => {
 
             <Separator />
 
-            <Description>An example using url (href attribute)</Description>
+            <Properties sourceModule={require('./Breadcrumb')} />
+
+            <Separator />
+
+            <h2>Using url (href attribute)</h2>
             <DocsTile>
                 <Breadcrumb>
                     <BreadcrumbItem name='Link Text' url='#' />
@@ -46,7 +50,7 @@ export const BreadcrumbComponent = () => {
 
             <Separator />
 
-            <Description>An example using React Router\'s Link component</Description>
+            <h2>Using Link from React Router</h2>
             <DocsTile>
                 <Breadcrumb>
                     <BreadcrumbItem>

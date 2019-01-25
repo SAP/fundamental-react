@@ -10,6 +10,10 @@ Breadcrumb.propTypes = {
     children: PropTypes.node
 };
 
+Breadcrumb.propDescriptions = {
+    children: 'List item (`BreadcrumbItem`) nodes.'
+};
+
 export const BreadcrumbItem = ({ url, link, name, className, children, ...props }) => {
     const renderLink = () => {
         if (!children && url) {
@@ -39,4 +43,10 @@ BreadcrumbItem.propTypes = {
     link: PropTypes.string,
     name: PropTypes.string,
     url: PropTypes.string
+};
+
+BreadcrumbItem.propDescriptions = {
+    name: 'Localized display text of the link (for either `link` or `url`).',
+    link: 'Enables use of react-router `Link` component. Path name to be applied to Link\'s `to` prop. Should use either `link` or `url`, but not both.',
+    url: 'Enables use of `<a>` element. Value to be applied to the anchor\'s `href` attribute. Should use either `link` or `url`, but not both.'
 };

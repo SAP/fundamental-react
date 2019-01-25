@@ -1,5 +1,5 @@
 import { SearchInput } from './SearchInput';
-import { Description, DocsText, DocsTile, Header, Import, Properties, Separator } from '../_playground';
+import { DocsText, DocsTile, Header, Import, Properties, Separator } from '../_playground';
 import React, { Component } from 'react';
 
 export class SearchInputComponent extends Component {
@@ -89,52 +89,11 @@ searchData = [
         return (
             <div>
                 <Header>Search Input</Header>
-                <Description />
                 <Import sourceModule={require('./SearchInput')} />
 
                 <Separator />
 
-                <Properties
-                    properties={[
-                        {
-                            name: 'placeholder',
-                            description: 'string - The text to use as placeholder when no text is entered.'
-                        },
-                        {
-                            name: 'searchList',
-                            description: 'array - Collection of items to display in auto-complete list.'
-                        },
-                        {
-                            name: 'onEnter',
-                            description: 'func - Method to execute by pressing the Enter key.'
-                        },
-                        {
-                            name: 'noSearhBtn',
-                            description: 'bool - set to true to hide the Search button.'
-                        },
-                        {
-                            name: 'onChange',
-                            description:
-                                'func - a custom implementation of onChange. If not specified, the default behavior will be applied.'
-                        },
-                        {
-                            name: 'compact',
-                            description: 'bool - Set to true to enable compact mode.'
-                        },
-                        {
-                            name: 'inputProps',
-                            description: 'object - additional props to be spread to the input control (search box)'
-                        },
-                        {
-                            name: 'listProps',
-                            description: 'object - additional props to be spread to the container of list results'
-                        },
-                        {
-                            name: 'searchBtnProps',
-                            description: 'object - additional props to be spread to the search button'
-                        }
-                    ]}
-                    type='Inputs' />
+                <Properties sourceModule={require('./SearchInput')} />
 
                 <Separator />
 
@@ -158,8 +117,6 @@ searchData = [
                     </div>
                 </DocsTile>
                 <DocsText>{this.searchInputCode}</DocsText>
-
-                <Separator />
             </div>
         );
     }

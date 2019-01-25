@@ -646,25 +646,16 @@ export const IconComponent = () => {
         <div>
             <Header>Icon</Header>
             <Description>
-        Icons are used throughout the UI to save space, allow for visual clarity
-        and focus, and for fun. Icons can be used adaptively if desired, but at
-        this point they are used more as visual elements within other
-        components.
+                Icons are used throughout the UI to save space, allow for visual clarity
+                and focus, and for fun. Icons can be used adaptively if desired, but at
+                this point they are used more as visual elements within other
+                components.
             </Description>
             <Import sourceModule={require('./Icon')} />
 
             <Separator />
 
-            <Properties
-                properties={[
-                    { name: 'glyph', description: 'string (required) - Icon name.' },
-                    {
-                        name: 'size',
-                        description:
-              'string - Size of the icon. Options include \'xs\', \'s\', \'compact\', and \'l\'. If no size is provided, default (normal) will be used.'
-                    }
-                ]}
-                type='Inputs' />
+            <Properties sourceModule={require('./Icon')} />
 
             <Separator />
 

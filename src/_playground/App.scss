@@ -198,3 +198,62 @@ $fd-fonts-path: '../../node_modules/fiori-fundamentals/dist/fonts/';
     text-align: center;
     height: 120px;
 }
+
+.fd-table {
+    &.property-table {
+        border: 0;
+
+        thead {
+            background: transparent;
+
+            > tr {
+                > th {
+                    padding: inherit 0;
+                }
+            }
+        }
+
+        tbody {
+            > tr {
+                > td {
+                    &:first-child {
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+
+        thead,
+        tbody {
+            > tr {
+                vertical-align: top;
+
+                > th,
+                > td {
+                    width: 20%;
+                    padding-top: 4px;
+                    padding-bottom: 4px;
+
+                    &:first-child {
+                        padding-left: 0;
+                    }
+
+                    &:last-child {
+                        width: 40%;
+                        padding-right: 0;
+                    }
+                }
+            }
+        }
+
+        .prop-required {
+            color: var(--fd-color-status-3);
+        }
+    }
+}
+
+.description {
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    font-weight: 300;
+}

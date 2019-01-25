@@ -5,29 +5,6 @@ const INVALID = 'is-invalid';
 const CLOCK = ['am', 'pm'];
 
 class TimeItem extends Component {
-    static propTypes = {
-        arialabel: PropTypes.string,
-        disabled: PropTypes.bool,
-        downButtonProps: PropTypes.object,
-        format12Hours: PropTypes.bool,
-        inputProps: PropTypes.object,
-        max: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-        name: PropTypes.string,
-        placeholder: PropTypes.string,
-        spinners: PropTypes.bool,
-        style: PropTypes.string,
-        time: PropTypes.object,
-        type: PropTypes.string,
-        upButtonProps: PropTypes.object,
-        updateTime: PropTypes.func,
-        value: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
-    };
-    static defaultProps = {
-        id: '',
-        value: null,
-        arialabel: ''
-    };
-
     constructor(props) {
         super(props);
         var aria = {};
@@ -265,45 +242,31 @@ class TimeItem extends Component {
     }
 }
 
+TimeItem.propTypes = {
+    arialabel: PropTypes.string,
+    disabled: PropTypes.bool,
+    downButtonProps: PropTypes.object,
+    format12Hours: PropTypes.bool,
+    inputProps: PropTypes.object,
+    max: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+    name: PropTypes.string,
+    placeholder: PropTypes.string,
+    spinners: PropTypes.bool,
+    style: PropTypes.string,
+    time: PropTypes.object,
+    type: PropTypes.string,
+    upButtonProps: PropTypes.object,
+    updateTime: PropTypes.func,
+    value: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
+};
+
+TimeItem.defaultProps = {
+    id: '',
+    value: null,
+    arialabel: ''
+};
+
 export class Time extends Component {
-    static propTypes = {
-        disabled: PropTypes.bool,
-        format12Hours: PropTypes.bool,
-        hoursDownButtonProps: PropTypes.object,
-        hoursInputProps: PropTypes.object,
-        hoursUpButtonProps: PropTypes.object,
-        id: PropTypes.string,
-        meridiemDownButtonProps: PropTypes.object,
-        meridiemInputProps: PropTypes.object,
-        meridiemUpButtonProps: PropTypes.object,
-        minutesDownButtonProps: PropTypes.object,
-        minutesInputProps: PropTypes.object,
-        minutesUpButtonProps: PropTypes.object,
-        secondsDownButtonProps: PropTypes.object,
-        secondsInputProps: PropTypes.object,
-        secondsUpButtonProps: PropTypes.object,
-        showHour: PropTypes.bool,
-        showMinute: PropTypes.bool,
-        showSecond: PropTypes.bool,
-        spinners: PropTypes.bool,
-        time: PropTypes.object,
-        onChange: PropTypes.func
-    };
-    static defaultProps = {
-        id: '',
-        showHour: true,
-        showMinute: true,
-        showSecond: true,
-        format12Hours: false,
-        disabled: false,
-        spinners: true,
-        time: {
-            hour: '00',
-            minute: '00',
-            second: '00',
-            meridiem: 0
-        }
-    };
     constructor(props) {
         super(props);
         const { time } = this.props;
@@ -474,3 +437,69 @@ export class Time extends Component {
         );
     }
 }
+
+Time.basePropTypes = {
+    format12Hours: PropTypes.bool,
+    showHour: PropTypes.bool,
+    showMinute: PropTypes.bool,
+    showSecond: PropTypes.bool,
+    spinners: PropTypes.bool,
+    time: PropTypes.object
+};
+
+Time.propTypes = {
+    ...Time.basePropTypes,
+
+    disabled: PropTypes.bool,
+    hoursDownButtonProps: PropTypes.object,
+    hoursInputProps: PropTypes.object,
+    hoursUpButtonProps: PropTypes.object,
+    id: PropTypes.string,
+    meridiemDownButtonProps: PropTypes.object,
+    meridiemInputProps: PropTypes.object,
+    meridiemUpButtonProps: PropTypes.object,
+    minutesDownButtonProps: PropTypes.object,
+    minutesInputProps: PropTypes.object,
+    minutesUpButtonProps: PropTypes.object,
+    secondsDownButtonProps: PropTypes.object,
+    secondsInputProps: PropTypes.object,
+    secondsUpButtonProps: PropTypes.object,
+    onChange: PropTypes.func
+};
+
+Time.defaultProps = {
+    id: '',
+    showHour: true,
+    showMinute: true,
+    showSecond: true,
+    format12Hours: false,
+    disabled: false,
+    spinners: true,
+    time: {
+        hour: '00',
+        minute: '00',
+        second: '00',
+        meridiem: 0
+    }
+};
+
+Time.propDescriptions = {
+    format12Hours: 'Set to **true** to use the 12-hour clock (hours ranging from 01 to 12) and to display a meridiem control.',
+    hoursDownButtonProps: 'Additional props to be spread to the hours down `<button>` element.',
+    hoursInputProps: 'Additional props to be spread to the hours `<input>` element.',
+    hoursUpButtonProps: 'Additional props to be spread to the hours up `<button>` element.',
+    meridiemDownButtonProps: 'Additional props to be spread to the meridiem down `<button>` element.',
+    meridiemInputProps: 'Additional props to be spread to the meridiem `<input>` element.',
+    meridiemUpButtonProps: 'Additional props to be spread to the meridiem up `<button>` element.',
+    minutesDownButtonProps: 'Additional props to be spread to the minutes down `<button>` element.',
+    minutesInputProps: 'Additional props to be spread to the minutes `<input>` element.',
+    minutesUpButtonProps: 'Additional props to be spread to the minutes up `<button>` element.',
+    secondsDownButtonProps: 'Additional props to be spread to the seconds down `<button>` element.',
+    secondsInputProps: 'Additional props to be spread to the seconds `<input>` element.',
+    secondsUpButtonProps: 'Additional props to be spread to the seconds up `<button>` element.',
+    showHour: 'Enables the input for hours.',
+    showMinute: 'Enables the input for minutes.',
+    showSecond: 'Enables the input for seconds.',
+    spinners: 'Set to **true** to show up/down buttons for each input.',
+    time: 'The time component values. Contains four properties: **hour** (with values from 01 to 12 when `format12Hours` is true or 00 to 23 when `format12Hours` is false), **minute** (with values from 00 to 59), **second** (with values from 00 to 59), **meridiem** (with values 0 for AM or 1 for PM).'
+};

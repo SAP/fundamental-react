@@ -22,11 +22,15 @@ export const InlineHelp = ({ text, placement, className, ...props }) => {
     );
 };
 
-
 InlineHelp.propTypes = {
     placement: PropTypes.oneOf([
         'bottom-right', 'bottom-left', 'right', 'left', 'bottom-center'
     ]).isRequired,
     text: PropTypes.string.isRequired,
     className: PropTypes.string
+};
+
+InlineHelp.propDescriptions = {
+    placement: 'Location to display the inline help pop-up relative to the image.',
+    text: 'Localized text to display in the inline help pop-up.'
 };
