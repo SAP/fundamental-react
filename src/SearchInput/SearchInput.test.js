@@ -94,6 +94,8 @@ describe('<SearchInput />', () => {
         wrapper
             .find(searchInput)
             .simulate('change', { target: { value: searchData[0].text } });
+
+        expect(wrapper.state(['value'])).toBe(searchData[0].text);
     });
 
     test('check for enter key press on search input', () => {
@@ -111,6 +113,41 @@ describe('<SearchInput />', () => {
         wrapper.find(searchInput).simulate('keypress', { key: 'Enter' });
 
         expect(wrapper.state(['value'])).toBe(searchData[0].text);
+    });
+
+    test('click outside search input to close list', () => {
+        const wrapper = mount(defaultSearchInput);
+        let event = new MouseEvent('click', {});
+
+        // outside click, search list not shown
+        document.dispatchEvent(event);
+
+        // enter text into search input
+        wrapper
+            .find(searchInput)
+            .simulate('change', { target: { value: searchData[0].text } });
+
+        // click outside to close list
+        document.dispatchEvent(event);
+
+        expect(wrapper.state(['value'])).toBe(searchData[0].text);
+    });
+
+    test('click outside ShellBar search input with NO text to close list', () => {
+        const wrapper = mount(shellBarSearchInput);
+        let event = new MouseEvent('click', {});
+
+        // outside click, search list not shown
+        document.dispatchEvent(event);
+
+        // click in search box to show
+        wrapper.find(searchInput).simulate('click');
+        wrapper.find('button.sap-icon--search.fd-button--shell').simulate('click');
+
+        // click outside to close list
+        document.dispatchEvent(event);
+
+        expect(wrapper.state(['value'])).toBe('');
     });
 
     test('show/hide auto complete list', () => {
