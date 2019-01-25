@@ -35,7 +35,7 @@ export const MenuList = ({ children, className, ...props }) => {
 };
 
 // ---------------------------------------- Menu Item ----------------------------------------
-export const MenuItem = ({ url, link, isLink, separator, addon, children, onclick, className, addonProps, linkProps, urlProps, ...props }) => {
+export const MenuItem = ({ url, link, isLink, separator, addon, children, onclick, className, addonProps, urlProps, ...props }) => {
     const menuItemLinkClasses = classnames(
         'fd-menu__item',
         {
@@ -44,27 +44,21 @@ export const MenuItem = ({ url, link, isLink, separator, addon, children, onclic
     );
 
     const renderLink = () => {
-        const isString = React.Children.map(children, (child) => {
-            if (typeof child === 'string') {
-                return true;
-            }
-        });
-
-        if (url) {
+        const isString = typeof children === 'string';
+        if(url || onclick || isString) {
             return (
                 <a {...urlProps}
-                    className={`fd-menu__item${isLink ? ' fd-menu__link' : ''}`}
-                    href={url}>
+                    className={menuItemLinkClasses}
+                    href={url}
+                    onClick={onclick}>
                     {children}
                 </a>
             );
-        } else if (children && !isString) {
+        } else if (children) {
             return React.cloneElement(children, {
-                'className': `fd-menu__item${isLink ? ' fd-menu__link' : ''}`,
+                'className': menuItemLinkClasses,
                 ...urlProps
             });
-        } else if(children) {
-            return children;
         }
     };
     
