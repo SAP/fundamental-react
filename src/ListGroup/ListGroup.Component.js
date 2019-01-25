@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
 import { Button, ListGroup, ListGroupItem, ListGroupItemActions, ListGroupItemCheckbox } from '../';
 import { Description, DocsText, DocsTile, Header, Import, Playground, Properties, Separator } from '../_playground';
