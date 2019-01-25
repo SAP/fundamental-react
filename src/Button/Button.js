@@ -33,23 +33,33 @@ export const Button = ({
     );
 
     return (<button {...props} className={buttonClasses}
-        disabled={disabled ? disabled : false} onClick={onClick}
-        selected={selected ? selected : false} type={typeAttr}>
+        disabled={disabled} onClick={onClick}
+        selected={selected} type={typeAttr}>
         {children}
     </button>);
 };
 
 Button.propTypes = {
+    children: PropTypes.node,
+    className: PropTypes.string,
     compact: PropTypes.bool,
     disabled: PropTypes.bool,
     dropdown: PropTypes.bool,
     glyph: PropTypes.string,
     navbar: PropTypes.bool,
-    option: PropTypes.oneOf(['', 'emphasized', 'light', 'shell']),
+    option: PropTypes.oneOf(['emphasized', 'light', 'shell']),
     selected: PropTypes.bool,
-    type: PropTypes.oneOf(['', 'standard', 'positive', 'negative', 'medium']),
+    type: PropTypes.oneOf(['standard', 'positive', 'negative', 'medium']),
     typeAttr: PropTypes.string,
     onClick: PropTypes.func
+};
+
+Button.defaultProps = {
+    compact: false,
+    disabled: false,
+    dropdown: false,
+    navbar: false,
+    selected: false
 };
 
 export const ButtonGroup = ({children, ...props}) => {
