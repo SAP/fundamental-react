@@ -2,6 +2,177 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.2.0-rc.3"></a>
+# [0.2.0-rc.3](https://github.com/SAP/fundamental-react/compare/v0.2.0-rc.2...v0.2.0-rc.3) (2019-01-25)
+
+
+### Bug Fixes
+
+* add issue template ([#289](https://github.com/SAP/fundamental-react/issues/289)) ([7aadf72](https://github.com/SAP/fundamental-react/commit/7aadf72))
+
+
+
+<a name="0.2.0-rc.2"></a>
+# [0.2.0-rc.2](https://github.com/SAP/fundamental-react/compare/v0.2.0-rc.1...v0.2.0-rc.2) (2019-01-24)
+
+
+### Bug Fixes
+
+* Add `event` argument to onChange props in SearchInput ([#281](https://github.com/SAP/fundamental-react/issues/281)) ([c26c89a](https://github.com/SAP/fundamental-react/commit/c26c89a))
+
+
+
+<a name="0.2.0-rc.1"></a>
+# [0.2.0-rc.1](https://github.com/SAP/fundamental-react/compare/v0.2.0-rc.0...v0.2.0-rc.1) (2019-01-24)
+
+
+### Bug Fixes
+
+* enable jsx-a11y/aria-role lint rule ([#280](https://github.com/SAP/fundamental-react/issues/280)) ([7f0347c](https://github.com/SAP/fundamental-react/commit/7f0347c))
+
+
+
+<a name="0.2.0-rc.0"></a>
+# [0.2.0-rc.0](https://github.com/SAP/fundamental-react/compare/v0.1.1-rc.3...v0.2.0-rc.0) (2019-01-24)
+
+
+### Features
+
+* Removing deprecated MegaMenu ([#285](https://github.com/SAP/fundamental-react/issues/285)) ([9348d4a](https://github.com/SAP/fundamental-react/commit/9348d4a))
+
+
+
+<a name="0.1.1-rc.3"></a>
+## [0.1.1-rc.3](https://github.com/SAP/fundamental-react/compare/v0.1.1-rc.2...v0.1.1-rc.3) (2019-01-23)
+
+
+### Bug Fixes
+
+* Update Tree component unit test to 100% ([#277](https://github.com/SAP/fundamental-react/issues/277)) ([20f4263](https://github.com/SAP/fundamental-react/commit/20f4263))
+
+
+
+<a name="0.1.1-rc.2"></a>
+## [0.1.1-rc.2](https://github.com/SAP/fundamental-react/compare/v0.1.1-rc.1...v0.1.1-rc.2) (2019-01-23)
+
+
+
+<a name="0.1.1-rc.1"></a>
+## [0.1.1-rc.1](https://github.com/SAP/fundamental-react/compare/v0.1.1-rc.0...v0.1.1-rc.1) (2019-01-23)
+
+
+### Bug Fixes
+
+* import path on docs ([#274](https://github.com/SAP/fundamental-react/issues/274)) ([3d7d900](https://github.com/SAP/fundamental-react/commit/3d7d900))
+
+
+
+<a name="0.1.1-rc.0"></a>
+## [0.1.1-rc.0](https://github.com/SAP/fundamental-react/compare/v0.1.0...v0.1.1-rc.0) (2019-01-23)
+
+
+
+<a name="0.1.0"></a>
+# [0.1.0](https://github.com/SAP/fundamental-react/compare/v0.1.0-rc.22...v0.1.0) (2019-01-23)
+
+
+
+<a name="0.1.0-rc.22"></a>
+# [0.1.0-rc.22](https://github.com/SAP/fundamental-react/compare/v0.1.0-rc.21...v0.1.0-rc.22) (2019-01-23)
+
+
+### Bug Fixes
+
+* update publishing script for releases ([#273](https://github.com/SAP/fundamental-react/issues/273)) ([5c7edc8](https://github.com/SAP/fundamental-react/commit/5c7edc8))
+
+
+
+<a name="0.1.0-rc.21"></a>
+# [0.1.0-rc.21](https://github.com/SAP/fundamental-react/compare/v0.1.0-rc.20...v0.1.0-rc.21) (2019-01-23)
+
+
+### Bug Fixes
+
+* add * to required form labels ([#276](https://github.com/SAP/fundamental-react/issues/276)) ([cc32328](https://github.com/SAP/fundamental-react/commit/cc32328))
+
+
+
+<a name="0.1.0-rc.20"></a>
+# [0.1.0-rc.20](https://github.com/SAP/fundamental-react/compare/v0.1.0-rc.19...v0.1.0-rc.20) (2019-01-22)
+
+
+
+<a name="0.1.0-rc.19"></a>
+# [0.1.0-rc.19](https://github.com/SAP/fundamental-react/compare/v0.1.0-rc.18...v0.1.0-rc.19) (2019-01-22)
+
+
+### Bug Fixes
+
+* Spread props for TimePicker ([#251](https://github.com/SAP/fundamental-react/issues/251)) ([33dc960](https://github.com/SAP/fundamental-react/commit/33dc960))
+
+
+
+<a name="0.1.0-rc.18"></a>
+# [0.1.0-rc.18](https://github.com/SAP/fundamental-react/compare/v0.1.0-rc.17...v0.1.0-rc.18) (2019-01-22)
+
+
+### Bug Fixes
+
+* MegaMenu prop spreading [#256](https://github.com/SAP/fundamental-react/issues/256) ([e57d316](https://github.com/SAP/fundamental-react/commit/e57d316))
+
+
+
+<a name="0.1.0-rc.17"></a>
+# [0.1.0-rc.17](https://github.com/SAP/fundamental-react/compare/v0.1.0-rc.16...v0.1.0-rc.17) (2019-01-22)
+
+
+
+<a name="0.1.0-rc.16"></a>
+# [0.1.0-rc.16](https://github.com/SAP/fundamental-react/compare/v0.1.0-rc.15...v0.1.0-rc.16) (2019-01-22)
+
+
+
+<a name="0.1.0-rc.15"></a>
+# [0.1.0-rc.15](https://github.com/SAP/fundamental-react/compare/v0.1.0-rc.14...v0.1.0-rc.15) (2019-01-22)
+
+
+### Bug Fixes
+
+* add spread to ListGroupItemCheckbox ([#255](https://github.com/SAP/fundamental-react/issues/255)) ([89e842f](https://github.com/SAP/fundamental-react/commit/89e842f))
+
+
+
+<a name="0.1.0-rc.14"></a>
+# [0.1.0-rc.14](https://github.com/SAP/fundamental-react/compare/v0.1.0-rc.13...v0.1.0-rc.14) (2019-01-22)
+
+
+### Bug Fixes
+
+* Fix typo in Shellbar code sample ([#268](https://github.com/SAP/fundamental-react/issues/268)) ([66e7b9c](https://github.com/SAP/fundamental-react/commit/66e7b9c))
+* prop spreading to Tabs ([#261](https://github.com/SAP/fundamental-react/issues/261)) ([404ba5a](https://github.com/SAP/fundamental-react/commit/404ba5a))
+
+
+
+<a name="0.1.0-rc.13"></a>
+# [0.1.0-rc.13](https://github.com/SAP/fundamental-react/compare/v0.1.0-rc.12...v0.1.0-rc.13) (2019-01-19)
+
+
+### Bug Fixes
+
+* Prop spreading for Tree ([#264](https://github.com/SAP/fundamental-react/issues/264)) ([a71665b](https://github.com/SAP/fundamental-react/commit/a71665b))
+
+
+
+<a name="0.1.0-rc.12"></a>
+# [0.1.0-rc.12](https://github.com/SAP/fundamental-react/compare/v0.1.0-rc.11...v0.1.0-rc.12) (2019-01-19)
+
+
+### Bug Fixes
+
+* Prop spreading for Table ([#260](https://github.com/SAP/fundamental-react/issues/260)) ([b582c3e](https://github.com/SAP/fundamental-react/commit/b582c3e))
+
+
+
 <a name="0.1.0-rc.11"></a>
 # [0.1.0-rc.11](https://github.com/SAP/fundamental-react/compare/v0.1.0-rc.10...v0.1.0-rc.11) (2019-01-18)
 

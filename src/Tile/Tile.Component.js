@@ -111,9 +111,7 @@ export const TileComponent = () => {
                 A Tile component can be used to display information in a simple container format. A collection of tile
                 can be displayed using <code>fd-tile-grid</code>{' '}
             </Description>
-            <Import
-                module='Tile, TileContent, TileMedia, TileActions, ProductTile, ProductTileContent, ProductTileMedia, TileGrid'
-                path='/fundamental-react/src/' />
+            <Import sourceModule={require('./Tile')} />
 
             <Separator />
 

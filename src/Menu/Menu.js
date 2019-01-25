@@ -1,10 +1,19 @@
+import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 
 // ------------------------------------------- Menu ------------------------------------------
 export const Menu = ({ addonBefore, children, className, ...props }) => {
+    const menuClasses = classnames(
+        'fd-menu',
+        {
+            'fd-menu--addon-before': addonBefore
+        },
+        className
+    );
+
     return (
-        <nav className={`fd-menu${addonBefore ? ' fd-menu--addon-before' : ''}${className ? ' ' + className : ''}`} {...props}>
+        <nav {...props} className={menuClasses}>
             {children}
         </nav>
     );
@@ -17,11 +26,23 @@ Menu.propTypes = {
 
 // ---------------------------------------- Menu List ----------------------------------------
 export const MenuList = ({ children, className, ...props }) => {
-    return <ul className={`fd-menu__list${className ? ' ' + className : ''}`} {...props}>{children}</ul>;
+    const menuListClasses = classnames(
+        'fd-menu__list',
+        className
+    );
+
+    return <ul {...props} className={menuListClasses}>{children}</ul>;
 };
 
 // ---------------------------------------- Menu Item ----------------------------------------
-export const MenuItem = ({ url, link, isLink, separator, addon, children, onclick, className, addonProps, urlProps, ...props }) => {
+export const MenuItem = ({ url, link, isLink, separator, addon, children, onclick, className, addonProps, linkProps, urlProps, ...props }) => {
+    const menuItemLinkClasses = classnames(
+        'fd-menu__item',
+        {
+            'fd-menu__link': isLink
+        }
+    );
+
     const renderLink = () => {
         const isString = React.Children.map(children, (child) => {
             if (typeof child === 'string') {
@@ -46,7 +67,7 @@ export const MenuItem = ({ url, link, isLink, separator, addon, children, onclic
             return children;
         }
     };
-
+    
     return (
         <React.Fragment>
             <li {...props} className={className}>
@@ -72,8 +93,13 @@ MenuItem.propTypes = {
 
 // ---------------------------------------- Menu Group ----------------------------------------
 export const MenuGroup = ({ title, children, className, titleProps, ...props }) => {
+    const menuGroupClasses = classnames(
+        'fd-menu__group',
+        className
+    );
+
     return (
-        <div {...props} className={`fd-menu__group${className ? ' ' + className : ''}`}>
+        <div {...props} className={menuGroupClasses}>
             <h1 {...titleProps} className='fd-menu__title'>{title}</h1>
             {children}
         </div>

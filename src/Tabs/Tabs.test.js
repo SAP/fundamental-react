@@ -92,12 +92,28 @@ describe('<Tabs />', () => {
             ).toBe('Sample');
         });
 
-        xtest('should allow props to be spread to the TabComponent component\'s li elements', () => {
-            // TODO: placeholder for this test description once that functionality is built
+        test('should allow props to be spread to the TabComponent component\'s li elements', () => {
+            const element = mount(<TabComponent ids={defaultIds} tabProps={{ 'data-sample': 'Sample' }} />);
+
+            expect(
+                element.find('li').at(0).getDOMNode().attributes['data-sample'].value
+            ).toBe('Sample');
         });
 
-        xtest('should allow props to be spread to the TabComponent component\'s Link component', () => {
-            // TODO: placeholder for this test description once that functionality is built
+        test('should allow props to be spread to the TabComponent component\'s content component', () => {
+            const element = mount(<TabComponent ids={defaultIds} tabContentProps={{ 'data-sample': 'Sample' }} />);
+
+            expect(
+                element.find('li p').at(0).getDOMNode().attributes['data-sample'].value
+            ).toBe('Sample');
+        });
+
+        test('should allow props to be spread to the TabComponent component\'s Link component', () => {
+            const element = mount(<TabComponent ids={defaultIds} tabLinkProps={{ 'data-sample': 'Sample' }} />);
+
+            expect(
+                element.find('li a').at(0).getDOMNode().attributes['data-sample'].value
+            ).toBe('Sample');
         });
     });
 });

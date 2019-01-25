@@ -1,3 +1,4 @@
+import classnames from 'classnames';
 import { Counter } from '../Badge/Badge';
 import { Icon } from '../Icon/Icon';
 import { Identifier } from '../Identifier/Identifier';
@@ -100,8 +101,14 @@ export class Shellbar extends Component {
             profileMenu,
             className
         } = this.props;
+
+        const shellbarClasses = classnames(
+            'fd-shellbar',
+            className
+        );
+
         return (
-            <div className={`fd-shellbar${className ? ' ' + className : ''}`}>
+            <div className={shellbarClasses}>
                 <div className='fd-shellbar__group fd-shellbar__group--start'>
                     {logo && <a className='fd-shellbar__logo'>{logo}</a>}
                     {logoSAP && (

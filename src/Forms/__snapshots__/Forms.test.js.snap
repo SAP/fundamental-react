@@ -12,6 +12,7 @@ exports[`<Forms /> create form item 1`] = `
       forAttr="input-1"
     >
       Default Input
+      
     </label>
     <input
       className="fd-form__control"
@@ -24,10 +25,12 @@ exports[`<Forms /> create form item 1`] = `
     className="fd-form__item"
   >
     <label
-      className="fd-form__label is-required"
+      aria-required={true}
+      className="fd-form__label"
       forAttr="input-1"
     >
       Default Input
+      *
     </label>
     <input
       className="fd-form__control is-help"
@@ -48,7 +51,7 @@ exports[`<Forms /> create form item 1`] = `
       Pellentesque metus lacus commodo eget justo ut rutrum varius nunc.
     </textarea>
     <span
-      className="fd-form__message  fd-form__message--help"
+      className="fd-form__message fd-form__message--help"
     >
       Pellentesque metus lacus commodo eget justo ut rutrum varius nunc
     </span>
@@ -105,6 +108,7 @@ exports[`<Forms /> create form item 2`] = `
       forAttr="input-1"
     >
       Default Input
+      
     </label>
     <input
       className="fd-form__control"
@@ -474,6 +478,7 @@ exports[`<Forms /> create form item 4`] = `
       forAttr="checkbox-1"
     >
       Option One
+      
     </label>
   </div>
 </fieldset>

@@ -1,23 +1,42 @@
+import classnames from 'classnames';
 import { Popover } from '../Popover/Popover';
 import PropTypes from 'prop-types';
 import React from 'react';
 
 // ------------------------------------------- Combobox Input ------------------------------------------
 export const ComboboxInput = ({ placeholder, menu, compact, className, popoverProps, inputProps, buttonProps, ...props }) => {
+    const comboboxInputClasses = classnames(
+        'fd-combobox-input',
+        className
+    );
+
+    const comboboxPopoverClasses = classnames(
+        'fd-input-group',
+        'fd-input-group--after',
+        {
+            'fd-input-group--compact': compact
+        }
+    );
+
+    const comboboxPopoverInputClasses = classnames(
+        'fd-input',
+        {
+            'fd-input--compact': compact
+        }
+    );
+
     return (
-        <div {...props} className={`fd-combobox-input${className ? ' ' + className : ''}`}>
+        <div {...props} className={comboboxInputClasses}>
             <Popover
                 {...popoverProps}
                 body={menu}
                 control={
                     <div className='fd-combobox-control'>
                         <div
-                            className={`fd-input-group fd-input-group--after${
-                                compact ? ' fd-input-group--compact' : ''
-                            }`}>
+                            className={comboboxPopoverClasses}>
                             <input
                                 {...inputProps}
-                                className={`fd-input${compact ? ' fd-input--compact' : ''}`}
+                                className={comboboxPopoverInputClasses}
                                 placeholder={placeholder}
                                 type='text' />
                             <span className='fd-input-group__addon fd-input-group__addon--after fd-input-group__addon--button'>

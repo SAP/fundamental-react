@@ -1,8 +1,9 @@
 {
   "name": "fundamental-react",
-  "version": "0.1.0-rc.11",
+  "version": "0.2.0-rc.3",
   "private": false,
   "license": "Apache-2.0",
+  "main": "dist/index.js",
   "homepage": "https://sap.github.io/fundamental-react",
   "repository": {
     "type": "git",
@@ -25,7 +26,6 @@
     "size:debug": "npm run build && size-limit --why",
     "start-js": "node scripts/start.js",
     "start": "node scripts/start.js",
-    "std-version:release": "standard-version -m \"chore(release): version %s\"",
     "std-version": "standard-version -m \"chore(release): version %s build ${TRAVIS_BUILD_NUMBER} [ci skip]\"",
     "test:coverage": "jest --coverage",
     "test:coveralls": "jest --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
@@ -34,6 +34,7 @@
     "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive"
   },
   "dependencies": {
+    "classnames": "^2.2.6",
     "fiori-fundamentals": "^1.4.0",
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
@@ -44,6 +45,7 @@
     "@babel/core": "7.1.0",
     "@babel/polyfill": "^7.1.5",
     "@svgr/webpack": "2.4.1",
+    "array-sort": "^1.0.0",
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "9.0.0",
     "babel-jest": "23.6.0",

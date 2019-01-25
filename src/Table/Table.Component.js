@@ -125,17 +125,35 @@ export const TableComponent = () => {
         <div>
             <Header>Table</Header>
             <Description>A table is a set tabular data. Line items can support data, images and actions.</Description>
-            <Import module='Table' path='/fundamental-react/src/' />
+            <Import sourceModule={require('./Table')} />
 
             <Separator />
 
             <Properties
                 properties={[
-                    { name: 'headers', description: 'array of strings for the column headers of the table' },
+                    {
+                        name: 'headers',
+                        description: 'array of strings for the column headers of the table'
+                    },
                     {
                         name: 'tableData',
-                        description:
-                            'array of objects that contain two properties, rowData (an array of strings containing data for each column in the row), and children (an array of objects containing additional rows).'
+                        description: 'array of objects that contain two properties, rowData (an array of strings containing data for each column in the row), and children (an array of objects containing additional rows).'
+                    },
+                    {
+                        name: 'tableHeaderProps',
+                        description: 'object - additional props to be spread to the thead element.'
+                    },
+                    {
+                        name: 'tableHeaderRowProps',
+                        description: 'object - additional props to be spread to the tr element in the thead.'
+                    },
+                    {
+                        name: 'tableBodyProps',
+                        description: 'object - additional props to be spread to the tbody element.'
+                    },
+                    {
+                        name: 'tableBodyRowProps',
+                        description: 'object or function - additional props to be spread to the tr elements in the tbody. If using a function, the parameters passed will be an object representing the row (from tableData) and the row index.'
                     }
                 ]}
                 type='Inputs' />

@@ -1,3 +1,4 @@
+import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -23,8 +24,13 @@ export const BreadcrumbItem = ({ url, link, name, className, children, ...props 
         }
     };
 
+    const breadcrumbItemClasses = classnames(
+        'fd-breadcrumb__item',
+        className
+    );
+
     return (
-        <li className={`fd-breadcrumb__item${className ? ' ' + className : ''}`} {...props}>
+        <li className={breadcrumbItemClasses} {...props}>
             {renderLink()}
         </li>
     );

@@ -17,7 +17,7 @@ export const InlineHelpComponent = () => {
                 Inline help is used to display help text in a popover, often inline with headers, body text and form
                 labels.
             </Description>
-            <Import module='InlineHelp' path='/fundamental-react/src/' />
+            <Import sourceModule={require('./InlineHelp')} />
 
             <Separator />
 

@@ -95,7 +95,7 @@ export const SideNavigationComponent = () => {
                 The left navigation can always display or expand/collapse using the menu icon within the global
                 navigation.
             </Description>
-            <Import module='SideNav, SideNavList, SideNavGroup' path='/fundamental-react/src/' />
+            <Import sourceModule={require('./SideNavigation')} />
 
             <Separator />
 

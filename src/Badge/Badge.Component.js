@@ -63,7 +63,7 @@ export const BadgeComponent = () => {
         <div>
             <Header>Status Indicators</Header>
             <Description>Status Indicators are used to easily highlight the state of an object.</Description>
-            <Import module='Badge, Label, Status, Counter' path='/fundamental-react/src/' />
+            <Import sourceModule={require('./Badge')} />
 
             <Separator />
 

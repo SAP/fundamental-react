@@ -30,7 +30,7 @@ export const BreadcrumbComponent = () => {
                 to previous levels in the path. When clicking on the current page, a dropdown allows users to access
                 other pages at that same level.
             </Description>
-            <Import module='Breadcrumb, BreadcrumbItem' path='/fundamental-react/src/' />
+            <Import sourceModule={require('./Breadcrumb')} />
 
             <Separator />
 

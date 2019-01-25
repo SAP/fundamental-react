@@ -100,13 +100,16 @@ export const TreeComponent = () => {
         <div>
             <Header>Tree</Header>
             <Description>A tree is used to display data in a visual hierarchy. Items that contain additional items are called nodes, while items that do not contain any other items are called leaves. If available, a single topmost node is called a root node. Apart from the hierarchical structure of its nodes and leaves, a tree is similar to a list.</Description>
-            <Import module='Tree' path='/fundamental-react/src/' />
+            <Import sourceModule={require('./Tree')} />
 
             <Separator />
 
             <Properties properties={[
                 { name: 'headers', description: 'array of strings for the column headers of the tree' },
-                { name: 'treeData', description: 'array of objects that contain several properties, id (the id of the row), values (an array of strings containing data for each column in the row), hasChildren(a boolean value whether the row contains children or not) and children (an array of objects containing additional rows).' }
+                { name: 'treeData', description: 'array of objects that contain several properties, id (the id of the row), values (an array of strings containing data for each column in the row), hasChildren(a boolean value whether the row contains children or not) and children (an array of objects containing additional rows).' },
+                { name: 'headerProps', description: 'object - additional props to be spread to the header element.' },
+                { name: 'headerButtonProps', description: 'object - additional props to be spread to the header expand button element.' },
+                { name: 'listProps', description: 'object - additional props to be spread to the list element.' }
             ]} type='Inputs' />
 
             <Separator />
@@ -188,12 +191,14 @@ export const TreeComponent = () => {
             <Properties properties={[
                 { name: 'displayText', description: 'The text to display in the cell. If omitted, the link url will be displayed.' },
                 { name: 'linkUrl', description: 'If provided, this is the URL the link will navigate to.' }
-
             ]} type='Properties' />
+
             <Properties properties={[
                 { name: 'headers', description: 'Array of strings for the column headers of the tree' },
-                { name: 'treeData', description: '	Array of objects that contain several properties, id(the id of the row), hasChildren(a boolean value whether the row contains children or not), values (an array of objects containing data for each column in the row), and children (an array of objects containing additional rows).' }
-
+                { name: 'treeData', description: '	Array of objects that contain several properties, id(the id of the row), hasChildren(a boolean value whether the row contains children or not), values (an array of objects containing data for each column in the row), and children (an array of objects containing additional rows).' },
+                { name: 'headerProps', description: 'object - additional props to be spread to the header element.' },
+                { name: 'headerButtonProps', description: 'object - additional props to be spread to the header expand button element.' },
+                { name: 'listProps', description: 'object - additional props to be spread to the list element.' }
             ]} type='Inputs' />
             <Separator />
             <DocsTile>

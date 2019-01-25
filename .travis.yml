@@ -1,5 +1,6 @@
 language: node_js
 node_js: 10.15.0
+cache: npm
 dist: trusty
 git:
   depth: false
@@ -10,13 +11,15 @@ jobs:
   - stage: "Fundamental-react: Test & Lint"
     script: npm run lint && npm run test:coveralls && npm run size
   - stage: Deploy
-    if: branch = master AND type != pull_request
+    if: (branch = master OR branch = tmp_branch_for_automated_release_do_not_use) AND type = push
     before_deploy:
     - bash ./ci-scripts/setup_npm.sh
     deploy:
       - provider: script
         script: bash ./ci-scripts/publish.sh $TRAVIS_BRANCH $TRAVIS_BUILD_NUMBER
         skip_cleanup: true
+        on:
+          all_branches: true
 notifications:
   email:
     on_failure: always

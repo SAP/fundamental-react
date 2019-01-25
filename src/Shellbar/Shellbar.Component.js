@@ -86,7 +86,7 @@ profileMenu = [
     copilot
     searchInput={this.searchInput2}
     actions={this.actions}
-    notifications={this.notifications}
+    notifications={this.notifications2}
     profile={this.profile}
     profileMenu={this.profileMenu}
     productSwitcher={this.productSwitcher}
@@ -417,7 +417,7 @@ productSwitcher = {
                     a composite component comprised of mandatory and optional elements. Before getting started, here are
                     some things to know.
                 </Description>
-                <Import module='Shellbar' path='/fundamental-react/src/' />
+                <Import sourceModule={require('./Shellbar')} />
                 <Separator />
                 <Properties
                     properties={[

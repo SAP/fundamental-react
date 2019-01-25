@@ -57,10 +57,10 @@ export const MenuComponent = () => {
             <Header>Menu</Header>
             <Description>
                 The menu component is the listing structure with optional headers to create menus. Commonly used as the
-                contents when composing “dropdowns”, “contextual menus”, “mega menu”, etc, when paired with the popover
+                contents when composing “dropdowns”, “contextual menus”,  etc, when paired with the popover
                 component.
             </Description>
-            <Import module='Menu, MenuList, MenuItem, MenuGroup' path='/fundamental-react/src/' />
+            <Import sourceModule={require('./Menu')} />
 
             <Separator />
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button, ListGroup, ListGroupItem, ListGroupItemActions, ListGroupItemCheckbox } from '../';
-import { Description, DocsText, DocsTile, Header, Import, Playground, Separator } from '../_playground';
+import { Description, DocsText, DocsTile, Header, Import, Playground, Properties, Separator } from '../_playground';
 
 export const ListGroupComponent = () => {
     const simpleListCode = `<ListGroup>
@@ -47,7 +47,17 @@ export const ListGroupComponent = () => {
             <Header>List Group</Header>
             <Description>Lists and tables are similar as both usually contain a vertical list of data, but lists generally contain basic data and tables tend to hold more complex data. If the list is a complex hierarchy, it is best to use a tree.
             </Description>
-            <Import module='ListGroup, ListGroupItem, ListGroupItemActions, ListGroupItemCheckbox' path='/fundamental-react/src/' />
+            <Import sourceModule={require('./ListGroup')} />
+
+            <Separator />
+
+            <h2>ListGroupItemCheckbox</h2>
+            <Properties
+                properties={[
+                    { name: 'labelProps', description: 'object - additional props to be spread to the label' },
+                    { name: 'inputProps', description: 'object - additional props to be spread to text input field' }
+                ]}
+                type='Inputs' />
 
             <Separator />
 
