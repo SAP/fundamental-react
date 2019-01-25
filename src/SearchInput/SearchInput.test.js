@@ -290,21 +290,6 @@ describe('<SearchInput />', () => {
         expect(wrapper.state('isExpanded')).toBeFalsy();
     });
 
-    //   test('click on document to close autocomplete list', () => {
-    //     const wrapper = mount(defaultSearchInput);
-
-    //     // click in search box to show
-    //     wrapper.find(searchInput).simulate('click');
-
-    //     expect(wrapper.state('isExpanded')).toBeTruthy();
-
-    //     // handle click outside search box
-    //     wrapper
-    //       .instance()
-    //       .onOutsideClickHandler({ target: wrapper, stopPropagation: jest.fn() });
-
-    //   });
-
     describe('Prop spreading', () => {
         test('should allow props to be spread to the SearchInput component', () => {
             const element = mount(<SearchInput data-sample='Sample' />);
