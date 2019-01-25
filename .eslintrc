@@ -59,7 +59,7 @@ rules:
     jsx-a11y/no-distracting-elements: 2
     jsx-a11y/no-interactive-element-to-noninteractive-role: 2
     #jsx-a11y/no-noninteractive-element-interactions: 2
-    #jsx-a11y/no-noninteractive-element-to-interactive-role: [2, { ul: ['tablist', 'menu']}]
+    #jsx-a11y/no-noninteractive-element-to-interactive-role: [2, { ul: ['tablist', 'menu', 'tree'], li: ['treeitem']}]
     jsx-a11y/no-noninteractive-tabindex: 2
     jsx-a11y/no-onchange: 2
     jsx-a11y/no-redundant-roles: 2
