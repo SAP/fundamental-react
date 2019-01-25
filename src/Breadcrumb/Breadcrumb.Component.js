@@ -11,13 +11,13 @@ export const BreadcrumbComponent = () => {
 </Breadcrumb>`;
 
     const breadcrumbLinkCode = `<Breadcrumb>
-    <BreadcrumbItem name='Link Text' url='#'>
+    <BreadcrumbItem>
         <Link to='#'>Link Text</Link>
     </BreadcrumbItem>
-    <BreadcrumbItem name='Link Text' url='#'>
+    <BreadcrumbItem>
         <Link to='#'>Link Text</Link>
     </BreadcrumbItem>
-    <BreadcrumbItem name='Link Text' url='#'>
+    <BreadcrumbItem>
         <Link to='#'>Link Text</Link>
     </BreadcrumbItem>
 </Breadcrumb>`;
@@ -46,16 +46,16 @@ export const BreadcrumbComponent = () => {
 
             <Separator />
 
-            <Description>An example using link (routerLink)</Description>
+            <Description>An example using React Router's Link component</Description>
             <DocsTile>
                 <Breadcrumb>
-                    <BreadcrumbItem name='Link Text' url='#'>
+                    <BreadcrumbItem>
                         <Link to='#'>Link Text</Link>
                     </BreadcrumbItem>
-                    <BreadcrumbItem name='Link Text' url='#'>
+                    <BreadcrumbItem>
                         <Link to='#'>Link Text</Link>
                     </BreadcrumbItem>
-                    <BreadcrumbItem name='Link Text' url='#'>
+                    <BreadcrumbItem>
                         <Link to='#'>Link Text</Link>
                     </BreadcrumbItem>
                 </Breadcrumb>
