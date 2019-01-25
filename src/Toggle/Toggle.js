@@ -25,7 +25,8 @@ export class Toggle extends React.Component {
         const spanClasses = classnames(
             'fd-toggle',
             {
-                [`fd-toggle--${size}`]: !!size
+                // There is no `m` technically, but if you provide size m, you get the default size.
+                [`fd-toggle--${size}`]: !!size && size !== 'm'
             },
             'fd-form__control'
         );

@@ -1,7 +1,8 @@
 import classnames from 'classnames';
+import CustomPropTypes from '../utils/CustomPropTypes';
 import PropTypes from 'prop-types';
 import React from 'react';
-import {IDENTIFIER_COLORS, IDENTIFIER_MODIFIERS, IDENTIFIER_SIZES} from '../utils/constants';
+import {IDENTIFIER_MODIFIERS, IDENTIFIER_SIZES} from '../utils/constants';
 
 export const Identifier = ({ glyph, size, modifier, color, label, backgroundImageUrl, children, className, ...props }) => {
     const styles = {
@@ -36,7 +37,7 @@ export const Identifier = ({ glyph, size, modifier, color, label, backgroundImag
 Identifier.propTypes = {
     backgroundImageUrl: PropTypes.string,
     className: PropTypes.string,
-    color: PropTypes.oneOf(IDENTIFIER_COLORS),
+    color: CustomPropTypes.range(1, 9),
     glyph: PropTypes.string,
     label: PropTypes.string,
     modifier: PropTypes.oneOf(IDENTIFIER_MODIFIERS),

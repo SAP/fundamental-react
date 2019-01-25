@@ -1,7 +1,7 @@
 import classnames from 'classnames';
+import CustomPropTypes from '../utils/CustomPropTypes';
 import PropTypes from 'prop-types';
 import React from 'react';
-import {GRID_COLUMNS, GRID_ROWS} from '../utils/constants';
 
 export const Tile = props => {
     const {
@@ -40,9 +40,9 @@ Tile.propTypes = {
     backgroundColor: PropTypes.number,
     className: PropTypes.string,
     colorAccent: PropTypes.number,
-    columnSpan: PropTypes.oneOf(GRID_COLUMNS),
+    columnSpan: CustomPropTypes.range(1, 6),
     disabled: PropTypes.bool,
-    rowSpan: PropTypes.oneOf(GRID_ROWS)
+    rowSpan: PropTypes.number
 };
 
 Tile.propDescriptions = {
@@ -191,5 +191,5 @@ export const TileGrid = props => {
 
 TileGrid.propTypes = {
     className: PropTypes.string,
-    col: PropTypes.number
+    col: CustomPropTypes.range(1, 6)
 };

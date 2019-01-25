@@ -52,20 +52,7 @@ export const ICON_SIZES = [
     'xl'
 ];
 
-export const IDENTIFIER_COLORS = [
-    1,
-    2,
-    3,
-    4,
-    5,
-    6,
-    7,
-    8,
-    9
-];
-
 export const IDENTIFIER_MODIFIERS = [
-    '',
     'circle',
     'transparent'
 ];
@@ -109,24 +96,6 @@ export const INPUT_GROUP_TYPES = [
     'search'
 ];
 
-export const GRID_COLUMNS = [
-    1,
-    2,
-    3,
-    4,
-    5,
-    6
-];
-
-export const GRID_ROWS = [
-    1,
-    2,
-    3,
-    4,
-    5,
-    6
-];
-
 export const POPOVER_ALIGNMENTS = [
     'right'
 ];
@@ -134,5 +103,6 @@ export const POPOVER_ALIGNMENTS = [
 export const TOGGLE_SIZES = [
     'xs',
     's',
+    'm',
     'l'
 ];
