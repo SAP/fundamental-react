@@ -46,6 +46,11 @@ FormItem.propTypes = {
     isInline: PropTypes.bool
 };
 
+FormItem.defaultProps = {
+    isCheck: false,
+    isInline: false
+};
+
 // ------------------------------------------------- Form Label ----------------------------------------------
 export const FormLabel = ({ required, children, className, ...props }) => {
     const formLabelClasses = classnames(
@@ -68,6 +73,10 @@ FormLabel.propTypes = {
     required: PropTypes.bool
 };
 
+FormLabel.defaultProps = {
+    required: false
+};
+
 // ------------------------------------------------- Form Message ----------------------------------------------
 export const FormMessage = ({ type, children, className, ...props }) => {
     const formMessageClasses = classnames(
@@ -88,7 +97,7 @@ export const FormMessage = ({ type, children, className, ...props }) => {
 FormMessage.propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,
-    type: PropTypes.oneOf(['', 'error', 'warning', 'help'])
+    type: PropTypes.oneOf(['error', 'warning', 'help'])
 };
 
 // ------------------------------------------------- Form Input ----------------------------------------------
@@ -183,7 +192,7 @@ export const FormSelect = ({ disabled, children, className, ...props }) => {
         <select
             {...props}
             className={formSelectClasses}
-            disabled={disabled ? true : ''}>
+            disabled={disabled}>
             {children}
         </select>
     );
@@ -192,6 +201,10 @@ FormSelect.propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,
     disabled: PropTypes.bool
+};
+
+FormSelect.defaultProps = {
+    disabled: false
 };
 
 // ------------------------------------------------- Form Radio ----------------------------------------------
@@ -223,7 +236,7 @@ export class FormRadio extends Component {
                         <input
                             checked={this.state.selectedItem === inputItem.id}
                             className='fd-form__control'
-                            disabled={disabled ? true : ''}
+                            disabled={disabled}
                             id={inputItem.id}
                             name={inputItem.name}
                             onChange={this.handleChange}
@@ -239,7 +252,7 @@ export class FormRadio extends Component {
                     <input
                         checked={this.state.selectedItem === inputItem.id}
                         className='fd-form__control'
-                        disabled={disabled ? true : ''}
+                        disabled={disabled}
                         id={inputItem.id}
                         name={inputItem.name}
                         onChange={this.handleChange}
@@ -255,8 +268,13 @@ export class FormRadio extends Component {
     }
 }
 FormRadio.propTypes = {
+    inputs: PropTypes.array.isRequired,
     defaultChecked: PropTypes.string,
     disabled: PropTypes.bool,
-    inputs: PropTypes.array,
     isInline: PropTypes.bool
+};
+
+FormRadio.defaultProps = {
+    disabled: false,
+    isInline: false
 };
