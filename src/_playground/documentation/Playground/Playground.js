@@ -179,6 +179,7 @@ export class Playground extends Component {
                               <select
                                   className='form-control'
                                   name={item.attribute}
+                                  onBlur={this.updateComponent}
                                   onChange={this.updateComponent}>
                                   {item.enum.map(enumItem => (
                                       <option key={enumItem} value={enumItem}>
@@ -205,6 +206,7 @@ export class Playground extends Component {
                               <select
                                   className='form-control'
                                   name={item.attribute}
+                                  onBlur={this.updateComponent}
                                   onChange={this.updateComponent}>
                                   {item.enum.map(enumItem => (
                                       <option key={enumItem}>{enumItem}</option>
@@ -279,6 +281,7 @@ export class Playground extends Component {
                               <select
                                   className='form-control'
                                   name={item.attribute}
+                                  onBlur={this.updateComponentType}
                                   onChange={this.updateComponentType}>
                                   {item.enum.map(enumItem => (
                                       <option key={enumItem} value={enumItem}>
