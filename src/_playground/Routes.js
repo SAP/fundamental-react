@@ -16,7 +16,6 @@ import { InlineHelpComponent } from '../InlineHelp/InlineHelp.Component';
 import { InputGroupComponent } from '../InputGroup/InputGroup.Component';
 import { ListGroupComponent } from '../ListGroup/ListGroup.Component';
 import { LocalizationEditorComponent } from '../LocalizationEditor/LocalizationEditor.Component';
-import { MegaMenuComponent } from '../MegaMenu/MegaMenu.Component';
 import { MenuComponent } from '../Menu/Menu.Component';
 import { ModalComponent } from '../Modal/Modal.Component';
 import { MultiInputComponent } from '../MultiInput/MultiInput.Component';
@@ -99,7 +98,6 @@ export default class Routes extends Component {
                     name: 'Localization Editor',
                     component: LocalizationEditorComponent
                 },
-                { url: '/megaMenu', name: 'Mega Menu', component: MegaMenuComponent },
                 { url: '/menu', name: 'Menu', component: MenuComponent },
                 { url: '/modal', name: 'Modal', component: ModalComponent },
                 {

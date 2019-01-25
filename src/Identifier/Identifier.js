@@ -18,12 +18,14 @@ export const Identifier = ({ glyph, size, modifier, color, label, backgroundImag
         className
     );
 
+    const ariaRole = !children ? 'presentation' : '';
+
     return (
         <span
             {...props}
             aria-label={label}
             className={identifierClasses}
-            role={`${!children ? 'presentation' : ''}`}
+            role={ariaRole}
             style={backgroundImageUrl && styles}>
             {children}
         </span>

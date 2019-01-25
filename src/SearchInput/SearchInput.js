@@ -34,7 +34,7 @@ export class SearchInput extends Component {
             value: event.target.value
         });
         if (this.props.onChange) {
-            this.props.onChange();
+            this.props.onChange(event);
         } else {
             if (this.state.searchList) {
                 let filteredResult = this.state.searchList.filter(item =>
