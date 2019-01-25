@@ -46,7 +46,7 @@ export const BreadcrumbComponent = () => {
 
             <Separator />
 
-            <Description>An example using React Router's Link component</Description>
+            <Description>An example using React Router\'s Link component</Description>
             <DocsTile>
                 <Breadcrumb>
                     <BreadcrumbItem>
