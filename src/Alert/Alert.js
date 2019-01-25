@@ -1,4 +1,4 @@
-import {ALERT_TYPES} from '../utils/constants';
+import {ALERT_TYPES} from '../utils/constants/constants';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';

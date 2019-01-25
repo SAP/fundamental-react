@@ -1,5 +1,5 @@
 import classnames from 'classnames';
-import {ICON_SIZES} from '../utils/constants';
+import {ICON_SIZES} from '../utils/constants/constants';
 import PropTypes from 'prop-types';
 import React from 'react';
 

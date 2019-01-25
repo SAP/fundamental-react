@@ -1,6 +1,6 @@
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import {INPUT_GROUP_ADDON_POSITIONS, INPUT_GROUP_TYPES} from '../utils/constants';
+import {INPUT_GROUP_ADDON_POSITIONS, INPUT_GROUP_TYPES} from '../utils/constants/constants';
 import React, { Component } from 'react';
 
 export const FormGroup = ({ children, ...props}) => {

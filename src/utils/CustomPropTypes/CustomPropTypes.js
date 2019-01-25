@@ -3,7 +3,8 @@ const range = (start, end) => {
     return (props, propName, componentName) => {
         const value = props[propName];
 
-        if (typeof value === 'undefined') {
+        // If no value is provided, don't fail validation.
+        if (typeof value === 'undefined' || value === null) {
             return null;
         }
 
@@ -20,7 +21,7 @@ const range = (start, end) => {
         }
 
         if (start > end) {
-            return new Error(`${componentName}: Range start must be less than range end.`);
+            return new Error(`${componentName}: Range start must be less than or equal to range end.`);
         }
 
         if (value >= start && value <= end) {
