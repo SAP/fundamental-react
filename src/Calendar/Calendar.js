@@ -574,5 +574,12 @@ Calendar.propTypes = {
     tableBodyProps: PropTypes.object,
     tableHeaderProps: PropTypes.object,
     tableProps: PropTypes.object,
-    yearListProps: PropTypes.object
+    yearListProps: PropTypes.object,
+    onChange: PropTypes.func
+};
+
+Calendar.defaultProps = {
+    disableFutureDates: false,
+    disablePastDates: false,
+    disableWeekends: false
 };
