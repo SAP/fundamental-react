@@ -30,6 +30,21 @@ describe('<SearchInput />', () => {
             searchList={searchData} />
     );
 
+    const searchOnChange = (
+        <SearchInput
+            onChange={term => getInputValue(term)}
+            onEnter={term => getInputValue(term)}
+            placeholder='Enter a fruit'
+            searchList={searchData} />
+    );
+
+    const defaultSearchNoButton = (
+        <SearchInput
+            noSearchBtn
+            placeholder='Enter a fruit'
+            searchList={searchData} />
+    );
+
     const shellBarSearchInput = (
         <SearchInput
             inShellbar
@@ -62,6 +77,23 @@ describe('<SearchInput />', () => {
         component = renderer.create(noListSearchInput);
         tree = component.toJSON();
         expect(tree).toMatchSnapshot();
+
+        component = renderer.create(searchOnChange);
+        tree = component.toJSON();
+        expect(tree).toMatchSnapshot();
+
+        component = renderer.create(defaultSearchNoButton);
+        tree = component.toJSON();
+        expect(tree).toMatchSnapshot();
+    });
+
+    test('calling parent onChange event', () => {
+        const wrapper = shallow(searchOnChange);
+
+        // enter text into search input
+        wrapper
+            .find(searchInput)
+            .simulate('change', { target: { value: searchData[0].text } });
     });
 
     test('check for enter key press on search input', () => {
@@ -168,6 +200,40 @@ describe('<SearchInput />', () => {
         expect(wrapper.state(['value'])).toBe(searchData[0].text);
 
         wrapper.find('.sap-icon--search.fd-button--shell').simulate('click');
+
+        expect(wrapper.state(['value'])).toBe(searchData[0].text);
+    });
+
+    test('check search executed on search button click in shellbar with list expanded', () => {
+        const wrapper = shallow(shellBarSearchInput);
+
+        wrapper
+            .find(searchInput)
+            .simulate('change', { target: { value: searchData[0].text } });
+
+
+        // click in search box to show
+        wrapper.find(searchInput).simulate('click');
+
+        // check if searchTerm state is updated
+        expect(wrapper.state(['value'])).toBe(searchData[0].text);
+
+        wrapper.find('.sap-icon--search.fd-button--shell').simulate('click');
+
+        expect(wrapper.state(['value'])).toBe(searchData[0].text);
+    });
+
+    test('check search executed on search button click', () => {
+        const wrapper = shallow(defaultSearchInput);
+
+        wrapper
+            .find(searchInput)
+            .simulate('change', { target: { value: searchData[0].text } });
+
+        // check if searchTerm state is updated
+        expect(wrapper.state(['value'])).toBe(searchData[0].text);
+
+        wrapper.find('.fd-button--light.sap-icon--search').simulate('click');
 
         expect(wrapper.state(['value'])).toBe(searchData[0].text);
     });
