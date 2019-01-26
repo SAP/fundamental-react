@@ -1,7 +1,7 @@
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
-import {BUTTON_OPTIONS, BUTTON_TYPES} from '../utils/constants/constants';
+import {BUTTON_OPTIONS, BUTTON_TYPES} from '../utils/constants';
 
 export const Button = ({
     option,

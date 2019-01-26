@@ -2,7 +2,7 @@ import classnames from 'classnames';
 import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import PropTypes from 'prop-types';
 import React from 'react';
-import {IDENTIFIER_MODIFIERS, IDENTIFIER_SIZES} from '../utils/constants/constants';
+import {IDENTIFIER_MODIFIERS, IDENTIFIER_SIZES} from '../utils/constants';
 
 export const Identifier = ({ glyph, size, modifier, color, label, backgroundImageUrl, children, className, ...props }) => {
     const styles = {
