@@ -1,6 +1,59 @@
+const ANONYMOUS = '<<anonymous>>';
 
-const range = (start, end) => {
-    return (props, propName, componentName) => {
+/* eslint-disable no-console */
+
+const wrapValidator = (validator, typeName, typeChecker = null) => {
+    return Object.assign(validator.bind(), {
+        typeName,
+        typeChecker,
+        isRequired: Object.assign(validator.isRequired.bind(), {
+            typeName,
+            typeChecker,
+            typeRequired: true
+        })
+    });
+};
+
+const createChainableTypeChecker = (validate) => {
+    const checkType = (isRequired, props, propName, componentName, location, propFullName) => {
+        componentName = componentName || ANONYMOUS;
+        propFullName = propFullName || propName;
+
+        const value = props[propName];
+
+        if (typeof value === 'undefined' || value === null) {
+            if (isRequired) {
+                return new TypeError(`The ${location} \`${propFullName}\` is marked as required in \`${componentName}\`, but its value is \`${value === null ? 'null' : typeof value}\`.`);
+            }
+            return null;
+        } else {
+            return validate(props, propName, componentName, location, propFullName);
+        }
+    };
+
+    let chainedCheckType = checkType.bind(null, false);
+    chainedCheckType.isRequired = checkType.bind(null, true);
+
+    return chainedCheckType;
+};
+
+const range = (min, max) => {
+    if (isNaN(min)) {
+        console.error('The \`min\` parameter supplied to the \`range\` propType is required and must be a \`number\`.');
+        return () => null;
+    }
+
+    if (isNaN(max)) {
+        console.error('The \`max\` parameter supplied to the \`range\` propType is required and must be a \`number\`.');
+        return () => null;
+    }
+
+    if (min >= max) {
+        console.error('In the \`range\` propType, the \`min\` value must be less than the \`max\` value.');
+        return () => null;
+    }
+
+    const validate = (props, propName, componentName, location, propFullName) => {
         const value = props[propName];
 
         // If no value is provided, don't fail validation.
@@ -9,27 +62,17 @@ const range = (start, end) => {
         }
 
         if (isNaN(value)) {
-            return new TypeError(`${componentName}: ${propName} must be a non-NaN number.`);
+            return new TypeError(`Invalid ${location} \`${propFullName}\` of type \`${typeof value}\` supplied to \`${componentName}\`, expected \`number\`.`);
         }
 
-        if (isNaN(start)) {
-            return new TypeError(`${componentName}: Range start must be a non-NaN number.`);
+        if (value < min || value > max) {
+            return new Error(`The ${location} \`${propFullName}\` supplied to \`${componentName}\` has a value of \`${value}\`, which is not in the range \`${min}\` to \`${max}\` (inclusive).`);
         }
 
-        if (isNaN(end)) {
-            return new TypeError(`${componentName}: Range end must be a non-NaN number.`);
-        }
-
-        if (start > end) {
-            return new Error(`${componentName}: Range start must be less than or equal to range end.`);
-        }
-
-        if (value >= start && value <= end) {
-            return null;
-        } else {
-            return new Error(`${componentName}: ${propName} must be within the range ${start} to ${end}`);
-        }
+        return null;
     };
+
+    return wrapValidator(createChainableTypeChecker(validate), 'range', { min, max });
 };
 
-export default {range};
+export default { range };
