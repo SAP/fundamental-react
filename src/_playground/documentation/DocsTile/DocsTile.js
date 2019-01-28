@@ -5,13 +5,6 @@ import SyntaxHighlighter from 'react-syntax-highlighter';
 import React, { Component } from 'react';
 
 export const DocsTile = props => {
-    const docsTileStyle = {
-        borderRadius: '4px 4px 0 0',
-        border: '1px solid #ccc',
-        borderBottom: 'none',
-        padding: '10px 0',
-        backgroundColor: '#f3f4f5'
-    };
     const centerStyle = {
         textAlign: 'center'
     };
@@ -19,7 +12,7 @@ export const DocsTile = props => {
     const {centered, children} = props;
 
     return (
-        <div className='fd-tile' style={docsTileStyle}>
+        <div className='frDocs-Content__tile'>
             {centered
                 ? (
                     <div className='fd-tile__content'>
