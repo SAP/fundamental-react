@@ -4,25 +4,57 @@ import { BrowserRouter, Link } from 'react-router-dom';
 import React, { Component } from 'react';
 
 export const Tabs = props => {
-    const { children, className, ...rest } = props;
+    const { children, className, disabled, id, ...rest } = props;
 
-    const tabClasses = classnames(
-        'fd-tabs-container',
-        className
-    );
+    const renderLink = () => {
+        if (url) {
+            return (
+                <a
+                    aria-disabled={disabled}
+                    className={className}> 
+                    {children}
+                </a>
+            );
+        } else if (children) {
+            return children
+        }
+    }
 
     return (
-        <ul
-            {...rest}
-            className={tabClasses}>
-            {children}
-        </ul>
+        <li className='fd-tabs__item' 
+            key={id.id}
+            {...rest}>
+            {renderLink()}
+        </li>
     );
 };
 
+// {ids.map(id => {
+//     return (
+//         <li {...tabProps}
+//             key={id.id}>
+//             <Link
+//                 {...tabLinkProps}
+//                 aria-disabled={id.disabled}
+//                 onClick={e => {
+//                     !id.disabled && this.handleTabSelection(e, id, id.disabled);
+//                 }}
+//                 to={{ pathname: id.url }}>
+//                 {id.name}
+//             </Link>
+//             {this.state.selectedTab === id.id ? (
+//                 <p {...tabContentProps} className='fd-tabs__content'>{id.content}</p>
+//             ) : null}
+//         </li>
+//     );
+// })}
+
 Tabs.propTypes = {
     children: PropTypes.node,
-    className: PropTypes.string
+    className: PropTypes.string,
+    ids: PropTypes.array.isRequired,
+    name: PropTypes.string,
+    url: PropTypes.string
 };
 
 export class TabComponent extends Component {
@@ -58,6 +90,14 @@ export class TabComponent extends Component {
         );
     }
 
+    renderChildren = () => {
+        React.Children.map(children, (child) => {
+            React.cloneElement(children, {
+                className: this.getLinkClasses(id.id)
+            })
+        })
+    }
+
     render() {
         const { ids, className, tabProps, tabLinkProps, tabContentProps, ...rest } = this.props;
 
@@ -67,45 +107,17 @@ export class TabComponent extends Component {
         );
 
         return (
-            <BrowserRouter>
-                <ul {...rest} className={tabClasses}>
-                    {ids.map(id => {
-                        return (
-                            <li {...tabProps} className='fd-tabs__item'
-                                key={id.id}>
-                                <Link
-                                    {...tabLinkProps}
-                                    aria-disabled={id.disabled}
-                                    className={this.getLinkClasses(id.id)}
-                                    onClick={e => {
-                                        !id.disabled && this.handleTabSelection(e, id, id.disabled);
-                                    }}
-                                    to={{ pathname: id.url }}>
-                                    {id.name}
-                                </Link>
-                                {this.state.selectedTab === id.id ? (
-                                    <p {...tabContentProps} className='fd-tabs__content'>{id.content}</p>
-                                ) : null}
-                            </li>
-                        );
-                    })}
-                </ul>
-            </BrowserRouter>
+            <ul {...rest} className={tabClasses}>
+                {renderChildren()}
+            </ul>
         );
     }
 }
 
 TabComponent.propTypes = {
-    ids: PropTypes.array.isRequired,
     className: PropTypes.string,
-    tabContentProps: PropTypes.object,
-    tabLinkProps: PropTypes.object,
-    tabProps: PropTypes.object
 };
 
 TabComponent.propDescriptions = {
     ids: 'An array of objects with keys \'id\', \'url\', \'name\', \'hasChild\', \'child\', and \'glyph\' defining each tab.',
-    tabContentProps: 'Additional props to be spread to the tab\'s content.',
-    tabLinkProps: 'Additional props to be spread to the tab\'s link.',
-    tabProps: 'Additional props to be spread to the tab.'
 };

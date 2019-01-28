@@ -1,43 +1,65 @@
+import { Link } from 'react-router-dom';
 import { mount } from 'enzyme';
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { TabComponent, Tabs } from './Tabs';
+import { Tabs, TabComponent } from './Tabs';
+
+
 
 describe('<Tabs />', () => {
-    const defaultIds = [
-        {
-            id: '1',
-            url: '#',
-            name: 'Tab 1',
-            content: 'Hello world',
-            disabled: false
-        },
-        {
-            id: '2',
-            url: '#',
-            name: 'Tab 2',
-            content: 'Hello world 2',
-            disabled: false
-        },
-        {
-            id: '3',
-            url: '#',
-            name: 'Tab 3',
-            content: 'Hello world 3',
-            disabled: true
-        }
-    ];
-
     const tabComponent = (
         <TabComponent
-            ids={defaultIds} />
-    );
+            className={classNames}>
+            <TabComponent
+                id='1'
+                url='#'
+                name='Tab 1'>
+                Hello World
+            </TabComponent>
+            <TabComponent
+                id='2'
+                url='#'
+                name='Tab 2'>
+                Hello World 2
+            </TabComponent>
+            <TabComponent
+                id='3'
+                name='Tab 3'
+                content='Hello world'
+                disabled>
+                <Link to='#'>
+                    Hello World 3
+                </Link>
+            </TabComponent>
+        </TabComponent>
+    )
 
     const tabComponentWithClass = (
         <TabComponent
-            className='blue'
-            ids={defaultIds} />
-    );
+            className='blue'>
+            <TabComponent
+                id='1'
+                url='#'
+                name='Tab 1'>
+                Hello World
+            </TabComponent>
+            <TabComponent
+                id='2'
+                url='#'
+                name='Tab 2'>
+                Hello World 2
+            </TabComponent>
+            <TabComponent
+                id='3'
+                name='Tab 3'
+                content='Hello world'
+                disabled>
+                <Link to='#'>
+                    Hello World 3
+                </Link>
+            </TabComponent>
+        </TabComponent>
+    )
 
     const defaultTabs = <Tabs>{tabComponent}</Tabs>;
     const defaultTabsWithClass = <Tabs className='blue'>{tabComponent}</Tabs>;
