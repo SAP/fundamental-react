@@ -44,7 +44,7 @@ MenuList.propTypes = {
 };
 
 // ---------------------------------------- Menu Item ----------------------------------------
-export const MenuItem = ({ url, link, isLink, separator, addon, children, onclick, className, addonProps, urlProps, ...props }) => {
+export const MenuItem = ({ url, isLink, separator, addon, children, onclick, className, addonProps, urlProps, ...props }) => {
     const menuItemLinkClasses = classnames(
         'fd-menu__item',
         {
