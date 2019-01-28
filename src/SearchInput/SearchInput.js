@@ -267,7 +267,22 @@ export class SearchInput extends Component {
 }
 
 SearchInput.propTypes = {
+    className: PropTypes.string,
+    compact: PropTypes.bool,
     inputProps: PropTypes.object,
+    inShellbar: PropTypes.bool,
     listProps: PropTypes.object,
-    searchBtnProps: PropTypes.object
+    noSearchBtn: PropTypes.bool,
+    placeholder: PropTypes.string,
+    searchBtnProps: PropTypes.object,
+    searchList: PropTypes.array,
+    onChange: PropTypes.func,
+    onEnter: PropTypes.func,
+    onSearch: PropTypes.func
+};
+
+SearchInput.defaultProps = {
+    compact: false,
+    inShellbar: false,
+    noSearchBtn: false
 };
