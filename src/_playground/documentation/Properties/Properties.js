@@ -122,6 +122,15 @@ const PropertyType = ({ prop }) => {
         case 'shape':
             details = '';
             break;
+        case 'range':
+            let values = [];
+            Object.keys(typeChecker).forEach(key => {
+                values.push(`${key}: ${typeChecker[key]}`);
+            });
+            details = (
+                <div>({values.join('; ')})</div>
+            );
+            break;
         default:
     }
 

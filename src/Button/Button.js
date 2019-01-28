@@ -1,6 +1,7 @@
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
+import {BUTTON_OPTIONS, BUTTON_TYPES} from '../utils/constants';
 
 export const Button = ({
     option,
@@ -45,9 +46,9 @@ Button.propTypes = {
     dropdown: PropTypes.bool,
     glyph: PropTypes.string,
     navbar: PropTypes.bool,
-    option: PropTypes.oneOf(['', 'emphasized', 'light', 'shell']),
+    option: PropTypes.oneOf(BUTTON_OPTIONS),
     selected: PropTypes.bool,
-    type: PropTypes.oneOf(['', 'standard', 'positive', 'negative', 'medium']),
+    type: PropTypes.oneOf(BUTTON_TYPES),
     typeAttr: PropTypes.string,
     onClick: PropTypes.func
 };

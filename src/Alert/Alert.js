@@ -1,3 +1,4 @@
+import {ALERT_TYPES} from '../utils/constants';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
@@ -77,7 +78,7 @@ Alert.propTypes = {
     link: PropTypes.string,
     linkProps: PropTypes.object,
     linkText: PropTypes.string,
-    type: PropTypes.oneOf(['', 'warning', 'error', 'success', 'information'])
+    type: PropTypes.oneOf(ALERT_TYPES)
 };
 
 Alert.propDescriptions = {
