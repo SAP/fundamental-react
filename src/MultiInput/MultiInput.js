@@ -198,3 +198,7 @@ MultiInput.propTypes = {
     tagProps: PropTypes.object,
     onTagsUpdate: PropTypes.func
 };
+
+MultiInput.defaultProps = {
+    compact: false
+};
