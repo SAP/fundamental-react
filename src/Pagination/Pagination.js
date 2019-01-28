@@ -7,7 +7,7 @@ export class Pagination extends Component {
         super(props, context);
 
         this.state = {
-            selectedPage: this.props.initialPage || 1
+            selectedPage: this.props.initialPage
         };
     }
 
@@ -74,21 +74,22 @@ export class Pagination extends Component {
     render() {
         const {
             itemsTotal,
-            itemsPerPage = 10,
-            displayTotal = true,
+            itemsPerPage,
+            displayTotal,
             totalText,
             className,
             linkProps,
             displayTotalProps,
             prevProps,
             nextProps,
+            initialPage,
             ...props
         } = this.props;
 
         // calculate number of pages based on item total and items per page
         // check to make sure itemsPerPage != 0
         this.numberOfPages = Math.ceil(
-            itemsTotal / (itemsPerPage ? itemsPerPage : 10)
+            itemsTotal / (itemsPerPage || 10)
         );
 
         const paginationClasses = classnames(
@@ -104,7 +105,7 @@ export class Pagination extends Component {
                     <span
                         {...displayTotalProps}
                         className='fd-pagination__total'>
-                        {itemsTotal} {totalText || 'items'}
+                        {itemsTotal} {totalText}
                     </span>
                 ) : (
                     ''
@@ -145,4 +146,11 @@ Pagination.propTypes = {
     nextProps: PropTypes.object,
     prevProps: PropTypes.object,
     totalText: PropTypes.string
+};
+
+Pagination.defaultProps = {
+    displayTotal: true,
+    initialPage: 1,
+    itemsPerPage: 10,
+    totalText: 'items'
 };
