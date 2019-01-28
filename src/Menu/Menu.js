@@ -25,6 +25,10 @@ Menu.propTypes = {
     className: PropTypes.string
 };
 
+Menu.defaultProps = {
+    addonBefore: false
+};
+
 // ---------------------------------------- Menu List ----------------------------------------
 export const MenuList = ({ children, className, ...props }) => {
     const menuListClasses = classnames(
@@ -81,6 +85,11 @@ MenuItem.propTypes = {
     urlProps: PropTypes.object
 };
 
+MenuItem.defaultProps = {
+    isLink: false,
+    separator: false
+};
+
 // ---------------------------------------- Menu Group ----------------------------------------
 export const MenuGroup = ({ title, children, className, titleProps, ...props }) => {
     const menuGroupClasses = classnames(
@@ -97,7 +106,7 @@ export const MenuGroup = ({ title, children, className, titleProps, ...props }) 
 };
 
 MenuGroup.propTypes = {
+    title: PropTypes.string.isRequired,
     className: PropTypes.string,
-    title: PropTypes.string,
     titleProps: PropTypes.object
 };
