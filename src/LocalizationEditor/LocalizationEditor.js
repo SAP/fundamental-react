@@ -138,3 +138,8 @@ LocalizationEditor.propTypes = {
     popoverProps: PropTypes.object,
     textarea: PropTypes.bool
 };
+
+LocalizationEditor.defaultProps = {
+    compact: false,
+    textarea: false
+};
