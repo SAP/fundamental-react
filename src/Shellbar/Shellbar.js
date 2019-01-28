@@ -405,5 +405,7 @@ Shellbar.propTypes = {
 };
 
 Shellbar.defaultProps = {
-    actions: null
+    actions: null,
+    copilot: false,
+    logoSAP: false
 };
