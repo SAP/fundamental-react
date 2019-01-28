@@ -4,7 +4,7 @@ import ReactMarkdown from 'react-markdown';
 
 export const Description = ({ children }) => (
     <ReactMarkdown
-        className='description'
+        className='frDocs-Content__description'
         source={children} />
 );
 
