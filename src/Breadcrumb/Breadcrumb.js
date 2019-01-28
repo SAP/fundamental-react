@@ -33,14 +33,13 @@ export const BreadcrumbItem = ({ url, link, name, className, children, ...props 
     );
 
     return (
-        <li className={breadcrumbItemClasses} {...props}>
+        <li {...props} className={breadcrumbItemClasses}>
             {renderLink()}
         </li>
     );
 };
 
 BreadcrumbItem.propTypes = {
-    link: PropTypes.string,
     name: PropTypes.string,
     url: PropTypes.string
 };
