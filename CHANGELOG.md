@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.2.1-rc.8"></a>
+## [0.2.1-rc.8](https://github.com/SAP/fundamental-react/compare/v0.2.1-rc.7...v0.2.1-rc.8) (2019-01-28)
+
+
+### Bug Fixes
+
+* move explicit prop types into constants file, create custom prop type validation for range values ([e02223a](https://github.com/SAP/fundamental-react/commit/e02223a))
+
+
+
 <a name="0.2.1-rc.7"></a>
 ## [0.2.1-rc.7](https://github.com/SAP/fundamental-react/compare/v0.2.1-rc.6...v0.2.1-rc.7) (2019-01-28)
 
