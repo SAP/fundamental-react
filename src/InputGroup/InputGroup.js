@@ -15,8 +15,8 @@ export class InputGroup extends Component {
         super(props);
 
         this.state = {
-            value: this.props.inputValue || '',
-            searchValue: this.props.inputValue || ''
+            value: this.props.inputValue,
+            searchValue: this.props.inputValue
         };
     }
 
@@ -264,4 +264,12 @@ InputGroup.propTypes = {
     numberDownButtonProps: PropTypes.object,
     numberUpButtonProps: PropTypes.object,
     searchButtonProps: PropTypes.object
+};
+
+InputGroup.defaultProps = {
+    actions: false,
+    addonPos: 'after',
+    compact: false,
+    inputType: 'text',
+    inputValue: ''
 };
