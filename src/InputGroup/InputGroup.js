@@ -1,5 +1,6 @@
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
+import {INPUT_GROUP_ADDON_POSITIONS, INPUT_GROUP_TYPES} from '../utils/constants';
 import React, { Component } from 'react';
 
 export const FormGroup = ({ children, ...props}) => {
@@ -251,7 +252,7 @@ export class InputGroup extends Component {
 InputGroup.propTypes = {
     actions: PropTypes.bool,
     addon: PropTypes.string,
-    addonPos: PropTypes.oneOf(['before', 'after']),
+    addonPos: PropTypes.oneOf(INPUT_GROUP_ADDON_POSITIONS),
     children: PropTypes.node,
     compact: PropTypes.bool,
     glyph: PropTypes.string,
@@ -259,7 +260,7 @@ InputGroup.propTypes = {
     inputName: PropTypes.string,
     inputPlaceholder: PropTypes.string,
     inputProps: PropTypes.object,
-    inputType: PropTypes.oneOf(['text', 'number', 'search']),
+    inputType: PropTypes.oneOf(INPUT_GROUP_TYPES),
     inputValue: PropTypes.any,
     numberDownButtonProps: PropTypes.object,
     numberUpButtonProps: PropTypes.object,

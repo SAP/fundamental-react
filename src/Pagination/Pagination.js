@@ -82,6 +82,7 @@ export class Pagination extends Component {
             displayTotalProps,
             prevProps,
             nextProps,
+            initialPage,
             ...props
         } = this.props;
 

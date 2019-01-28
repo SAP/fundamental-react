@@ -1,6 +1,7 @@
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
+import {IMAGE_SIZES, IMAGE_TYPES} from '../utils/constants';
 
 export const Image = ({ size, type, photo, className, ...props }) => {
     const imageClasses = classnames(
@@ -20,9 +21,9 @@ export const Image = ({ size, type, photo, className, ...props }) => {
 
 Image.propTypes = {
     photo: PropTypes.string.isRequired,
-    size: PropTypes.oneOf(['s', 'm', 'l']).isRequired,
+    size: PropTypes.oneOf(IMAGE_SIZES).isRequired,
     className: PropTypes.string,
-    type: PropTypes.oneOf(['', 'circle'])
+    type: PropTypes.oneOf(IMAGE_TYPES)
 };
 
 Image.propDescriptions = {

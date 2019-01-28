@@ -4,7 +4,6 @@ exports[`<Pagination /> create Pagination component with initial page set 1`] = 
 <div
   className="fd-pagination blue"
   initalPage={5}
-  initialPage={1}
   onClick={[MockFunction]}
 >
   <span
@@ -126,7 +125,6 @@ exports[`<Pagination /> create Pagination component with initial page set 1`] = 
 exports[`<Pagination /> create Pagination component with item per page set 1`] = `
 <div
   className="fd-pagination"
-  initialPage={1}
   onClick={[MockFunction]}
 >
   <span
@@ -200,7 +198,6 @@ exports[`<Pagination /> create Pagination component with item per page set 1`] =
 exports[`<Pagination /> create Pagination component with item per page set to 0 1`] = `
 <div
   className="fd-pagination"
-  initialPage={1}
   onClick={[MockFunction]}
 >
   <span
@@ -322,7 +319,6 @@ exports[`<Pagination /> create Pagination component with item per page set to 0 
 exports[`<Pagination /> create Pagination component with total item hidden 1`] = `
 <div
   className="fd-pagination"
-  initialPage={1}
   onClick={[MockFunction]}
 >
   
@@ -438,7 +434,6 @@ exports[`<Pagination /> create Pagination component with total item hidden 1`] =
 exports[`<Pagination /> create Pagination component with total text set 1`] = `
 <div
   className="fd-pagination"
-  initialPage={1}
   onClick={[MockFunction]}
 >
   <span
@@ -560,7 +555,6 @@ exports[`<Pagination /> create Pagination component with total text set 1`] = `
 exports[`<Pagination /> create default Pagination component 1`] = `
 <div
   className="fd-pagination"
-  initialPage={1}
   onClick={[MockFunction]}
 >
   <span
@@ -682,7 +676,6 @@ exports[`<Pagination /> create default Pagination component 1`] = `
 exports[`<Pagination /> create default Pagination component with displayTotalProps 1`] = `
 <div
   className="fd-pagination"
-  initialPage={1}
   onClick={[MockFunction]}
 >
   <span
@@ -805,7 +798,6 @@ exports[`<Pagination /> create default Pagination component with displayTotalPro
 exports[`<Pagination /> create default Pagination component with linkProps 1`] = `
 <div
   className="fd-pagination"
-  initialPage={1}
   onClick={[MockFunction]}
 >
   <span
