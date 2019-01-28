@@ -95,3 +95,7 @@ Modal.propTypes = {
     show: PropTypes.bool,
     titleProps: PropTypes.object
 };
+
+Modal.defaultProps = {
+    show: false
+};
