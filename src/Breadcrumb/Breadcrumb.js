@@ -38,7 +38,6 @@ BreadcrumbItem.propTypes = {
 };
 
 BreadcrumbItem.propDescriptions = {
-    name: 'Localized display text of the link (for either `link` or `url`).',
-    link: 'Enables use of react-router `Link` component. Path name to be applied to Link\'s `to` prop. Should use either `link` or `url`, but not both.',
-    url: 'Enables use of `<a>` element. Value to be applied to the anchor\'s `href` attribute. Should use either `link` or `url`, but not both.'
+    name: 'Text for the internal anchor tag.',
+    url: 'An anchor tag will be generated and set to the url prop. Name or child text must be provided.'
 };
