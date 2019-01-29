@@ -194,6 +194,7 @@ export const TileGrid = props => {
 };
 
 TileGrid.propTypes = {
+    children: PropTypes.node,
     className: PropTypes.string,
     col: PropTypes.number
 };
