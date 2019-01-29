@@ -26,7 +26,14 @@ export class DocsTile extends Component {
         const outerDivClasses = classnames(
             'frDocs-Content__tile',
             {
-                'frDocs-Content__tile-background': this.state.backgroundToggle
+                'frDocs-Content__tile-background': !this.state.backgroundToggle
+            }
+        );
+
+        const innerDivClasses = classnames(
+            'fd-tile__content',
+            {
+                'frDocs-tile__centered': centered
             }
         );
 
@@ -37,8 +44,8 @@ export class DocsTile extends Component {
                     inputProps={{'aria-label': 'Toggle background color'}}
                     onChange={this.handleToggle}
                     size='xs' />
-                <div className='fd-tile__content'>
-                    {centered ? (<div className='centered'>{children}</div>) : children}
+                <div className={innerDivClasses}>
+                    {children}
                 </div>
             </div>
         );

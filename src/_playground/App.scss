@@ -96,6 +96,12 @@ $fd-fonts-path: '../../node_modules/fiori-fundamentals/dist/fonts/';
                     justify-content: flex-end;
                     margin: 15px;
                 }
+
+                .frDocs-tile__centered {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
             }
             .frDocs-Content__tile-background {
                 background: #edeef0;
@@ -110,10 +116,6 @@ $fd-fonts-path: '../../node_modules/fiori-fundamentals/dist/fonts/';
 }
 
 .fd-tile__content {
-
-    .centered {
-        text-align: center;
-    }
 
     .fd-button--grouped {
         margin-right: 0;
