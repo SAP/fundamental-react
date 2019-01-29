@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import { ActionBarComponent } from '../ActionBar/ActionBar.Component';
 import { AlertComponent } from '../Alert/Alert.Component';
 import { BadgeComponent } from '../Badge/Badge.Component';
@@ -27,6 +28,7 @@ import { PopoverComponent } from '../Popover/Popover.Component';
 import { SearchInputComponent } from '../SearchInput/SearchInput.Component';
 import { ShellbarComponent } from '../Shellbar/Shellbar.Component';
 import { SideNavigationComponent } from '../SideNavigation/SideNavigation.Component';
+import sortBy from 'sort-by';
 import { TableComponent } from '../Table/Table.Component';
 import { TabsComponent } from '../Tabs/Tabs.Component';
 import { TileComponent } from '../Tile/Tile.Component';
@@ -40,6 +42,7 @@ import { BrowserRouter, NavLink, Redirect, Route, Switch } from 'react-router-do
 import React, { Component } from 'react';
 
 
+
 export default class Routes extends Component {
     constructor(props) {
         super(props);
@@ -51,7 +54,7 @@ export default class Routes extends Component {
                     render: function() {
                         return <MarkdownImporter source={Home} />;
                     },
-                    section: 'GettingStarted'
+                    section: 'Getting Started'
                 },
                 {
                     url: '/usage',
@@ -59,225 +62,225 @@ export default class Routes extends Component {
                     render: function() {
                         return <MarkdownImporter source={Usage} />;
                     },
-                    section: 'GettingStarted'
+                    section: 'Getting Started'
                 },
                 {
                     url: '/actionBar',
                     name: 'Action Bar',
                     component: ActionBarComponent,
-                    section: 'components'
+                    section: 'Components'
                 },
                 {
                     url: '/alert',
                     name: 'Alert',
                     component: AlertComponent,
-                    section: 'components'
+                    section: 'Components'
                 },
                 {
                     url: '/breadcrumb',
                     name: 'Breadcrumb',
                     component: BreadcrumbComponent,
-                    section: 'components'
+                    section: 'Components'
                 },
                 {
                     url: '/button',
                     name: 'Button',
                     component: ButtonComponent,
-                    section: 'components'
+                    section: 'Components'
                 },
                 {
                     url: '/calendar',
                     name: 'Calendar',
                     component: CalendarComponent,
-                    section: 'components'
+                    section: 'Components'
                 },
                 {
                     url: '/comboboxInput',
                     name: 'Combobox Input',
                     component: ComboboxInputComponent,
-                    section: 'components'
+                    section: 'Components'
                 },
                 {
                     url: '/contextualMenu',
                     name: 'Contextual Menu',
                     component: ContextualMenuComponent,
-                    section: 'components'
+                    section: 'Components'
                 },
                 {
                     url: '/datepicker',
                     name: 'Date Picker',
                     component: DatePickerComponent,
-                    section: 'components'
+                    section: 'Components'
                 },
                 {
                     url: '/dropdown',
                     name: 'Dropdown',
                     component: DropdownComponent,
-                    section: 'components'
+                    section: 'Components'
                 },
                 {
                     url: '/forms',
                     name: 'Forms',
                     component: FormsComponent,
-                    section: 'components'
+                    section: 'Components'
                 },
                 {
                     url: '/icon',
                     name: 'Icon',
                     component: IconComponent,
-                    section: 'components'
+                    section: 'Components'
                 },
                 {
                     url: '/identifier',
                     name: 'Identifier',
                     component: IdentifierComponent,
-                    section: 'components'
+                    section: 'Components'
                 },
                 {
                     url: '/image',
                     name: 'Image',
                     component: ImageComponent,
-                    section: 'components'
+                    section: 'Components'
                 },
                 {
                     url: '/inlineHelp',
                     name: 'Inline Help',
                     component: InlineHelpComponent,
-                    section: 'components'
+                    section: 'Components'
                 },
                 {
                     url: '/inputGroup',
                     name: 'Input Group',
                     component: InputGroupComponent,
-                    section: 'components'
+                    section: 'Components'
                 },
                 {
                     url: '/listGroup',
                     name: 'List Group',
                     component: ListGroupComponent,
-                    section: 'components'
+                    section: 'Components'
                 },
                 {
                     url: '/localizationEditor',
                     name: 'Localization Editor',
                     component: LocalizationEditorComponent,
-                    section: 'components'
+                    section: 'Components'
                 },
                 {
                     url: '/menu',
                     name: 'Menu',
                     component: MenuComponent,
-                    section: 'components'
+                    section: 'Components'
                 },
                 {
                     url: '/modal',
                     name: 'Modal',
                     component: ModalComponent,
-                    section: 'components'
+                    section: 'Components'
                 },
                 {
                     url: '/multiInput',
                     name: 'Multi Input',
                     component: MultiInputComponent,
-                    section: 'components'
+                    section: 'Components'
                 },
                 {
                     url: '/pagination',
                     name: 'Pagination',
                     component: PaginationComponent,
-                    section: 'components'
+                    section: 'Components'
                 },
                 {
                     url: '/panel',
                     name: 'Panel',
                     component: PanelComponent,
-                    section: 'components'
+                    section: 'Components'
                 },
                 {
                     url: '/popover',
                     name: 'Popover',
                     component:
                    PopoverComponent,
-                    section:
-                    'components'
+                    section: 'Components'
                 },
                 {
                     url: '/searchInput',
                     name: 'Search Input',
                     component: SearchInputComponent,
-                    section: 'components'
+                    section: 'Components'
                 },
                 {
                     url: '/shellbar',
                     name: 'Shellbar',
                     component: ShellbarComponent,
-                    section: 'components'
+                    section: 'Components'
                 },
                 {
                     url: '/sideNavigation',
                     name: 'Side Navigation',
                     component: SideNavigationComponent,
-                    section: 'components'
+                    section: 'Components'
                 },
                 {
                     url: '/statusIndicators',
                     name: 'Status Indicators',
                     component: BadgeComponent,
-                    section: 'components'
+                    section: 'Components'
                 },
                 {
                     url: '/table',
                     name: 'Table',
                     component: TableComponent,
-                    section: 'components'
+                    section: 'Components'
                 },
                 {
                     url: '/tabs',
                     name: 'Tabs',
                     component: TabsComponent,
-                    section: 'components'
+                    section: 'Components'
                 },
                 {
                     url: '/tile',
                     name: 'Tile',
                     component: TileComponent,
-                    section: 'components'
+                    section: 'Components'
                 },
                 {
                     url: '/time',
                     name: 'Time',
                     component: TimeComponent,
-                    section: 'components'
+                    section: 'Components'
                 },
                 {
                     url: '/timepicker',
                     name: 'TimePicker',
                     component: TimePickerComponent,
-                    section: 'components'
+                    section: 'Components'
                 },
                 {
                     url: '/toggle',
                     name: 'Toggle',
                     component: ToggleComponent,
-                    section: 'components'
+                    section: 'Components'
                 },
                 {
                     url: '/token',
                     name: 'Token',
                     component: TokenComponent,
-                    section: 'components'
+                    section: 'Components'
                 },
                 {
                     url: '/tree',
                     name: 'Tree',
                     component: TreeComponent,
-                    section: 'components'
+                    section: 'Components'
                 }
             ]
         };
     }
 
     render() {
+
         return (
             <BrowserRouter basename={process.env.PUBLIC_URL}>
                 <div className='frDocs-Container'>
@@ -286,32 +289,40 @@ export default class Routes extends Component {
                         <nav>
                             <ul className='frDocs-Nav'>
                                 <li className='frDocs-Nav__headers'>Getting Started</li>
-                                {this.state.routes.map(route => {
-                                    return route.section === 'GettingStarted' ?
-                                        <li>
-                                            <NavLink
-                                                activeClassName='frDocs-Nav__item--active'
-                                                className='frDocs-Nav__item'
-                                                key={route.url}
-                                                to={{ pathname: route.url }}>
-                                                {route.name}
-                                            </NavLink>
-                                        </li>
-                                        : null;
+                                {this.state.routes.sort(sortBy('-section', 'name')).map(route => {
+                                    if (route.section === 'Getting Started') {
+                                        return (
+                                            <li key={route.url}>
+                                                <NavLink
+                                                    activeClassName='frDocs-Nav__item--active'
+                                                    className='frDocs-Nav__item'
+                                                    key={route.url}
+                                                    to={{ pathname: route.url }}>
+                                                    {route.name}
+                                                </NavLink>
+                                            </li>
+                                        );
+                                    }
                                 })}
+                            </ul>
+                        </nav>
+                        <nav>
+                            <ul className='frDocs-Nav'>
                                 <li className='frDocs-Nav__headers'>Components</li>
-                                {this.state.routes.map(route => {
-                                    return route.section === 'components' ?
-                                        <li>
-                                            <NavLink
-                                                activeClassName='frDocs-Nav__item--active'
-                                                className='frDocs-Nav__item'
-                                                key={route.url}
-                                                to={{ pathname: route.url }}>
-                                                {route.name}
-                                            </NavLink>
-                                        </li>
-                                        : null;
+                                {this.state.routes.sort(sortBy('-section', 'name')).map(route => {
+                                    if (route.section === 'Components') {
+                                        return (
+                                            <li key={route.url}>
+                                                <NavLink
+                                                    activeClassName='frDocs-Nav__item--active'
+                                                    className='frDocs-Nav__item'
+                                                    key={route.url}
+                                                    to={{ pathname: route.url }}>
+                                                    {route.name}
+                                                </NavLink>
+                                            </li>
+                                        );
+                                    }
                                 })}
                             </ul>
                         </nav>
