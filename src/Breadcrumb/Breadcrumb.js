@@ -45,6 +45,6 @@ BreadcrumbItem.propTypes = {
 };
 
 BreadcrumbItem.propDescriptions = {
-    name: 'Localized display text of the link (for either `link` or `url`).',
-    url: 'Enables use of `<a>` element. Value to be applied to the anchor\'s `href` attribute. Should use either `link` or `url`, but not both.'
+    name: 'Ttext of the link (Only for `url` prop.).',
+    url: 'An anchor tag will be generated and set to the url prop. Name or child text must be provided.'
 };
