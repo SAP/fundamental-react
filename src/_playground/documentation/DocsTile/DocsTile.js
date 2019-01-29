@@ -1,30 +1,59 @@
 import { Button } from '../../../Button/Button';
+import classnames from 'classnames';
 import { googlecode } from 'react-syntax-highlighter/styles/hljs';
 import PropTypes from 'prop-types';
 import SyntaxHighlighter from 'react-syntax-highlighter';
+import { Toggle } from '../../../Toggle/Toggle';
 import React, { Component } from 'react';
 
-export const DocsTile = props => {
-    const centerStyle = {
-        textAlign: 'center'
+export class DocsTile extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            backgroundToggle: false
+        };
+    }
+
+    handleToggle = () => {
+        this.setState({
+            backgroundToggle: !this.state.backgroundToggle
+        });
     };
 
-    const {centered, children} = props;
+    render() {
+        const centerStyle = {
+            textAlign: 'center'
+        };
 
-    return (
-        <div className='frDocs-Content__tile'>
-            {centered
-                ? (
-                    <div className='fd-tile__content'>
-                        <div style={centerStyle}>{children}</div>
-                    </div>
-                )
-                : (
-                    <div className='fd-tile__content'>{children}</div>
-                )}
-        </div>
-    );
-};
+        const {centered, children} = this.props;
+
+        const outerDivClasses = classnames(
+            'frDocs-Content__tile',
+            {
+                'frDocs-Content__tile-background': this.state.backgroundToggle
+            }
+        );
+
+        return (
+            <div className={outerDivClasses}>
+                <Toggle
+                    className='frDocs-tile__background-toggle'
+                    inputProps={{'aria-label': 'Toggle background color'}}
+                    onChange={this.handleToggle}
+                    size='xs' />
+                {centered
+                    ? (
+                        <div className='fd-tile__content'>
+                            <div style={centerStyle}>{children}</div>
+                        </div>
+                    )
+                    : (
+                        <div className='fd-tile__content'>{children}</div>
+                    )}
+            </div>
+        );
+    }
+}
 
 DocsTile.propTypes = {
     centered: PropTypes.bool,
