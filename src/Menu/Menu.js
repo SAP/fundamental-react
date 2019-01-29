@@ -1,5 +1,4 @@
 import classnames from 'classnames';
-import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -45,34 +44,48 @@ MenuList.propTypes = {
 };
 
 // ---------------------------------------- Menu Item ----------------------------------------
-export const MenuItem = ({ url, link, isLink, separator, addon, children, onclick, className, addonProps, linkProps, urlProps, ...props }) => {
+export const MenuItem = ({ url, isLink, separator, addon, children, onclick, className, addonProps, urlProps, ...props }) => {
     const menuItemLinkClasses = classnames(
         'fd-menu__item',
         {
             'fd-menu__link': isLink
         }
     );
+
+    const renderLink = () => {
+        if (url) {
+            return (
+                <a {...urlProps}
+                    className={menuItemLinkClasses}
+                    href={url}
+                    onClick={onclick}>
+                    {children}
+                </a>
+            );
+        } else if (children && React.isValidElement(children)) {
+            const childrenClassnames = classnames(
+                menuItemLinkClasses,
+                children.props.className
+            );
+
+            return React.cloneElement(children, {
+                'className': childrenClassnames,
+                ...urlProps
+            });
+        } else if (children) {
+            return (<a {...urlProps}
+                className='fd-menu__item'
+                onClick={onclick}>{children}</a>);
+        }
+    };
+
     return (
         <React.Fragment>
             <li {...props} className={className}>
                 {addon &&
                     <div {...addonProps} className='fd-menu__addon-before'>{<span className={'sap-icon--' + addon} />}</div>
                 }
-                {link &&
-                    <Link {...linkProps} className={menuItemLinkClasses}
-                        to={link}>
-                        {children}
-                    </Link>
-                }
-                {url &&
-                    <a {...urlProps} className={menuItemLinkClasses}
-                        href={url}>
-                        {children}
-                    </a>
-                }
-                {(!url && !link) && <a {...linkProps}
-                    className='fd-menu__item'
-                    onClick={onclick}>{children}</a>}
+                {renderLink()}
             </li>
             {separator && <hr />}
         </React.Fragment>
@@ -84,8 +97,6 @@ MenuItem.propTypes = {
     addonProps: PropTypes.object,
     className: PropTypes.string,
     isLink: PropTypes.bool,
-    link: PropTypes.string,
-    linkProps: PropTypes.object,
     separator: PropTypes.bool,
     url: PropTypes.string,
     urlProps: PropTypes.object
@@ -94,9 +105,8 @@ MenuItem.propTypes = {
 MenuItem.propDescriptions = {
     addon: 'Name of the SAP icon to be applied as an add-on before.',
     addonProps: 'Additional props to be spread to the add-on section.',
+    children: 'component - can be used to pass React Router <Link> or any other component which emits an <a>.',
     isLink: 'Set to **true** to style as a link.',
-    link: 'Enables use of react-router `Link` component. Path name to be applied to Link\'s `to` prop. Should use either `link` or `url`, but not both.',
-    linkProps: 'Additional props to be spread to the Menu Item links (when using `link`).',
     separator: 'Set to **true** to add a horizontal line (separator).',
     url: 'Enables use of `<a>` element. Value to be applied to the anchor\'s `href` attribute. Should use either `link` or `url`, but not both.',
     urlProps: 'Additional props to be spread to the Menu Item links (when using `url`).'
