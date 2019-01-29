@@ -45,6 +45,6 @@ BreadcrumbItem.propTypes = {
 };
 
 BreadcrumbItem.propDescriptions = {
-    name: 'Ttext of the link (Only for `url` prop.).',
+    name: 'Text for the internal anchor tag.',
     url: 'An anchor tag will be generated and set to the url prop. Name or child text must be provided.'
 };
