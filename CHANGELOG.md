@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.3.0-rc.0"></a>
+# [0.3.0-rc.0](https://github.com/SAP/fundamental-react/compare/v0.2.1-rc.9...v0.3.0-rc.0) (2019-01-29)
+
+
+### Features
+
+* Remove React Router from Menu ([#293](https://github.com/SAP/fundamental-react/issues/293)) ([591b489](https://github.com/SAP/fundamental-react/commit/591b489))
+
+
+
 <a name="0.2.1-rc.9"></a>
 ## [0.2.1-rc.9](https://github.com/SAP/fundamental-react/compare/v0.2.1-rc.8...v0.2.1-rc.9) (2019-01-28)
 
