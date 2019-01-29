@@ -63,3 +63,7 @@ Toggle.propTypes = {
     labelProps: PropTypes.object,
     size: PropTypes.oneOf(['', 'xs', 's', 'l'])
 };
+
+Toggle.defaultProps = {
+    disabled: false
+};
