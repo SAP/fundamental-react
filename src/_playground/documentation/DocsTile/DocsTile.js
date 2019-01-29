@@ -64,44 +64,13 @@ export class DocsText extends Component {
             .body
             .removeChild(text);
     }
-    docsTextStyle = {
-        padding: '15px',
-        fontSize: '13px',
-        border: '1px solid #ccc',
-        borderTop: 'none',
-        borderRadius: '0 0 4px 4px',
-        backgroundColor: '#fff !important',
-        margin: '0'
-    };
-    docsBtnStyle = {
-        padding: '5px',
-        fontSize: '13px',
-        border: '1px solid #ccc',
-        backgroundColor: '#fff !important',
-        margin: '0',
-        textAlign: 'center'
-    };
-    docsBtnStyleHiddenCode = {
-        padding: '5px',
-        fontSize: '13px',
-        border: '1px solid #ccc',
-        borderRadius: '0 0 4px 4px',
-        backgroundColor: '#fff !important',
-        margin: '0',
-        textAlign: 'center'
-    };
-    docCopyBtn = {
-        'marginLeft': '5px'
-    };
+
     render() {
         const {children} = this.props;
 
         return (
             <React.Fragment>
-                <div
-                    style={this.state.showCode
-                        ? (this.docsBtnStyle)
-                        : (this.docsBtnStyleHiddenCode)}>
+                <div className='frDocs-docsText__button'>
                     <Button onClick={() => this.handleBtnClick()} option='light'>
                         {this.state.showCode
                             ? ('Hide Code')
@@ -109,13 +78,13 @@ export class DocsText extends Component {
                     </Button>
                     {this.state.showCode
                         ? <Button
+                            className='frDocs-docsText__buttonCopy'
                             glyph='copy'
                             onClick={() => this.copyToClipboard(children)}
-                            option='light'
-                            style={this.docCopyBtn}>Copy</Button>
+                            option='light'>Copy</Button>
                         : ''}
                 </div>
-                {this.state.showCode && <pre style={this.docsTextStyle}>
+                {this.state.showCode && <pre className='frDocs-Content__docsText'>
                     <SyntaxHighlighter language='html' style={googlecode}>
                         {children}
                     </SyntaxHighlighter>
