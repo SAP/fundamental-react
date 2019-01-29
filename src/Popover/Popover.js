@@ -1,4 +1,5 @@
 import classnames from 'classnames';
+import {POPOVER_ALIGNMENTS} from '../utils/constants';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 
@@ -113,9 +114,14 @@ export class Popover extends Component {
 }
 
 Popover.propTypes = {
-    alignment: PropTypes.oneOf(['', 'right']),
+    alignment: PropTypes.oneOf(POPOVER_ALIGNMENTS),
     className: PropTypes.string,
     disabled: PropTypes.bool,
     id: PropTypes.string,
     noArrow: PropTypes.bool
+};
+
+Popover.propDescriptions = {
+    alignment: 'The placement of the popover body. Options include `right` and `left`. Leave empty for default/left placement.',
+    noArrow: 'Set to **true** to render a popover without an arrow.'
 };

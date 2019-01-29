@@ -202,3 +202,10 @@ MultiInput.propTypes = {
 MultiInput.defaultProps = {
     compact: false
 };
+
+MultiInput.propDescriptions = {
+    data: 'Collection of items to display in the list.',
+    onTagsUpdate: 'Callback function when a tag is added or removed. Returns array of tags selected.',
+    placeHolder: 'Localized placeholder text of the input.',
+    tagProps: 'Additional props to be spread to the tags `<div>` element.'
+};

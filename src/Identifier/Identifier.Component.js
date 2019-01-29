@@ -47,20 +47,14 @@ export const IdentifierComponent = () => {
     return (
         <div>
             <Header>Identifier</Header>
-            <Description>A visual presentation option around using an icon or user initials .</Description>
+            <Description>
+                An **Identifier** is a visual presentation option around using an icon or user initials.
+            </Description>
             <Import sourceModule={require('./Identifier')} />
 
             <Separator />
 
-            <Properties properties={[
-                {name: 'size', description: 'string - These sizes are available: xxs (extra extra small) - 20px, xs (extra small) - 28px, s (small) - 32px, m (medium) - 48px, l (large) - 64px, xl (extra lagre) - 88px, and xxl (extra extra large). Default matches the base font size (14px).'},
-                {name: 'glyph', description: 'string - The name of the icon to include. See the icon page for the list of icons.'},
-                {name: 'label', description: 'string - Label text'},
-                {name: 'modifier', description: 'string - Can be \'circle\' or \'transparent\'.'},
-                {name: 'color', description: 'number - Applies a background color. Options include numbers from 1 to 9'},
-                {name: 'backgroundImageUrl', description: 'string - Image url.'}
-
-            ]} type='Inputs' />
+            <Properties sourceModule={require('./Identifier')} />
 
             <Separator />
 

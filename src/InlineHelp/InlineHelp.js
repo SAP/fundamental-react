@@ -1,4 +1,5 @@
 import classnames from 'classnames';
+import {INLINE_HELP_PLACEMENTS} from '../utils/constants';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -22,11 +23,13 @@ export const InlineHelp = ({ text, placement, className, ...props }) => {
     );
 };
 
-
 InlineHelp.propTypes = {
-    placement: PropTypes.oneOf([
-        'bottom-right', 'bottom-left', 'right', 'left', 'bottom-center'
-    ]).isRequired,
+    placement: PropTypes.oneOf(INLINE_HELP_PLACEMENTS).isRequired,
     text: PropTypes.string.isRequired,
     className: PropTypes.string
+};
+
+InlineHelp.propDescriptions = {
+    placement: 'Location to display the inline help pop-up relative to the image.',
+    text: 'Localized text to display in the inline help pop-up.'
 };

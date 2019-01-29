@@ -32,6 +32,11 @@ ActionBar.defaultProps = {
     width: '319px'
 };
 
+ActionBar.propDescriptions = {
+    mobile: 'Set to **true** for mobile view of the Action Bar.',
+    width: 'The width of the Action Bar in mobile view.'
+};
+
 export const ActionBarBack = ({ onClick, className, buttonProps, ...props }) => {
     const actionBarBackClasses = classnames(
         'fd-action-bar__back',
@@ -78,6 +83,11 @@ ActionBarHeader.propTypes = {
     className: PropTypes.string,
     descriptionProps: PropTypes.object,
     titleProps: PropTypes.object
+};
+
+ActionBarHeader.propDescriptions = {
+    description: 'Localized text for the description.',
+    descriptionProps: 'Additional props to be spread to the description\'s `<p>` element.'
 };
 
 export const ActionBarActions = ({ children, className, ...props }) => {

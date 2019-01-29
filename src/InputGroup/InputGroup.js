@@ -1,5 +1,6 @@
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
+import {INPUT_GROUP_ADDON_POSITIONS, INPUT_GROUP_TYPES} from '../utils/constants';
 import React, { Component } from 'react';
 
 export const FormGroup = ({ children, ...props}) => {
@@ -251,7 +252,7 @@ export class InputGroup extends Component {
 InputGroup.propTypes = {
     actions: PropTypes.bool,
     addon: PropTypes.string,
-    addonPos: PropTypes.oneOf(['before', 'after']),
+    addonPos: PropTypes.oneOf(INPUT_GROUP_ADDON_POSITIONS),
     children: PropTypes.node,
     compact: PropTypes.bool,
     glyph: PropTypes.string,
@@ -259,7 +260,7 @@ InputGroup.propTypes = {
     inputName: PropTypes.string,
     inputPlaceholder: PropTypes.string,
     inputProps: PropTypes.object,
-    inputType: PropTypes.oneOf(['text', 'number', 'search']),
+    inputType: PropTypes.oneOf(INPUT_GROUP_TYPES),
     inputValue: PropTypes.any,
     numberDownButtonProps: PropTypes.object,
     numberUpButtonProps: PropTypes.object,
@@ -272,4 +273,18 @@ InputGroup.defaultProps = {
     compact: false,
     inputType: 'text',
     inputValue: ''
+};
+
+InputGroup.propDescriptions = {
+    actions: 'Set to **true** to enable an input with actions. Actions can be shown with a text label or icon.',
+    addon: 'The value of the add-on.',
+    addonPos: 'Location of the add-on relative to the input.',
+    inputId: 'Value for the `id` attribute on the `<input>` element.',
+    inputName: 'Value for the `name` attribute on the `<input>` element.',
+    inputPlaceholder: 'Value for the `placeholder` attribute on the `<input>` element.',
+    inputType: 'Value for the `type` attribute on the `<input>` element.',
+    inputValue: 'Value for the `value` attribute on the `<input>` element.',
+    numberDownButtonProps: 'Additional props to be spread to the down `<button>` element (for inputType=\'number\').',
+    numberUpButtonProps: 'Additional props to be spread to the up `<button>` element (for inputType=\'number\').',
+    searchButtonProps: 'Additional props to be spread to the `<button>` element.'
 };

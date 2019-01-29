@@ -1,4 +1,5 @@
 import classnames from 'classnames';
+import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -39,13 +40,20 @@ Tile.propTypes = {
     backgroundColor: PropTypes.number,
     className: PropTypes.string,
     colorAccent: PropTypes.number,
-    columnSpan: PropTypes.number,
+    columnSpan: CustomPropTypes.range(1, 6),
     disabled: PropTypes.bool,
     rowSpan: PropTypes.number
 };
 
 Tile.defaultProps = {
     disabled: false
+};
+
+Tile.propDescriptions = {
+    backgroundColor: 'Sets a background color class.',
+    colorAccent: 'Sets a background color accent class. Options include numbers from 1 to 9.',
+    columnSpan: 'Number of columns the tile covers.',
+    rowSpan: 'Number of rows the tile covers.'
 };
 
 export const TileContent = props => {
@@ -175,6 +183,10 @@ ProductTileMedia.propTypes = {
     className: PropTypes.string
 };
 
+ProductTileMedia.propDescriptions = {
+    image: 'URL of the image.'
+};
+
 export const TileGrid = props => {
     const { col, children, className, ...rest } = props;
 
@@ -196,7 +208,7 @@ export const TileGrid = props => {
 TileGrid.propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,
-    col: PropTypes.number
+    col: CustomPropTypes.range(1, 6)
 };
 
 TileGrid.defaultProps = {

@@ -34,7 +34,7 @@ export class SearchInput extends Component {
             value: event.target.value
         });
         if (this.props.onChange) {
-            this.props.onChange();
+            this.props.onChange(event);
         } else {
             if (this.state.searchList) {
                 let filteredResult = this.state.searchList.filter(item =>
@@ -223,7 +223,7 @@ export class SearchInput extends Component {
                                     {!noSearchBtn && (
                                         <span className='fd-input-group__addon fd-input-group__addon--after fd-input-group__addon--button'>
                                             <button {...searchBtnProps}
-                                                className=' fd-button--light sap-icon--search'
+                                                className='fd-button--light sap-icon--search'
                                                 onClick={() => this.onClickHandler()} />
                                         </span>
                                     )}
@@ -285,4 +285,11 @@ SearchInput.defaultProps = {
     compact: false,
     inShellbar: false,
     noSearchBtn: false
+};
+
+SearchInput.propDescriptions = {
+    noSearchBtn: 'Set to **true** to render without a search button.',
+    onEnter: 'Callback function when the user hits the <Enter> key.',
+    searchBtnProps: 'Additional props to be spread to the search `<button>` element.',
+    searchList: 'Collection of items to display in the dropdown list.'
 };

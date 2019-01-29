@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
 import { Button, Image, Menu, MenuItem, MenuList, Popover, Table } from '../';
 import { Description, DocsText, DocsTile, Header, Import, Properties, Separator } from '../_playground';
@@ -124,48 +125,21 @@ export const TableComponent = () => {
     return (
         <div>
             <Header>Table</Header>
-            <Description>A table is a set tabular data. Line items can support data, images and actions.</Description>
+            <Description>
+                A **Table** is a set of tabular data. Line items can support `data`, `images` and `actions`.
+            </Description>
             <Import sourceModule={require('./Table')} />
 
             <Separator />
 
-            <Properties
-                properties={[
-                    {
-                        name: 'headers',
-                        description: 'array of strings for the column headers of the table'
-                    },
-                    {
-                        name: 'tableData',
-                        description: 'array of objects that contain two properties, rowData (an array of strings containing data for each column in the row), and children (an array of objects containing additional rows).'
-                    },
-                    {
-                        name: 'tableHeaderProps',
-                        description: 'object - additional props to be spread to the thead element.'
-                    },
-                    {
-                        name: 'tableHeaderRowProps',
-                        description: 'object - additional props to be spread to the tr element in the thead.'
-                    },
-                    {
-                        name: 'tableBodyProps',
-                        description: 'object - additional props to be spread to the tbody element.'
-                    },
-                    {
-                        name: 'tableBodyRowProps',
-                        description: 'object or function - additional props to be spread to the tr elements in the tbody. If using a function, the parameters passed will be an object representing the row (from tableData) and the row index.'
-                    }
-                ]}
-                type='Inputs' />
+            <Properties sourceModule={require('./Table')} />
 
             <Separator />
 
             <h2>Simple Table</h2>
             <Description>
-                This is an example of a table with simple cells, where the rowData is an array of strings.
+                This is an example of a **Table** with simple cells, where the `rowData` is an array of strings.
             </Description>
-            <br />
-            <br />
             <DocsTile>
                 <Table
                     headers={['Column Header 1', 'Column Header 2', 'Column Header 3', 'Column Header 4']}
@@ -184,8 +158,8 @@ export const TableComponent = () => {
 
             <h2>Rich Table</h2>
             <Description>
-                This is an example of a table with rich cells. The checkbox input can be used at the beginning of each
-                row to allow for bulk actions.When more than three actions exist per row and/or space doesn’t allow for
+                This is an example of a **Table** with "rich" cells. The checkbox input can be used at the beginning of each
+                row to allow for bulk actions. When more than three actions exist per row and/or space doesn’t allow for
                 actions, a contextual menu can be substituted in order to display all actions in one menu.
             </Description>
             <DocsTile>

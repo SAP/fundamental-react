@@ -78,6 +78,15 @@ describe('<Shellbar />', () => {
         }
     ];
 
+    const actionsNoMenu = [
+        {
+            glyph: 'settings',
+            label: 'Settings',
+            notificationCount: 5,
+            callback: () => alert('Settings selected!')
+        }
+    ];
+
     const notifications = {
         notificationCount: 2,
         label: 'Notifications',
@@ -100,14 +109,49 @@ describe('<Shellbar />', () => {
         callback: () => alert('Notification selected!')
     };
 
+    const notificationsNoCount = {
+        notificationCount: 0,
+        label: 'Notifications',
+        notificationsBody: (
+            <Menu>
+                <MenuList>
+                    <MenuItem url='/'>Notification 1</MenuItem>
+                    <MenuItem url='/'>Notification 2</MenuItem>
+                    <MenuItem url='/'>Notification 3</MenuItem>
+                </MenuList>
+            </Menu>
+        ),
+        noNotificationsBody: (
+            <Menu>
+                <MenuList>
+                    <MenuItem>There are no notifications</MenuItem>
+                </MenuList>
+            </Menu>
+        ),
+        callback: () => alert('Notification selected!')
+    };
+
+    const notificationsNoBody = {
+        notificationCount: 2,
+        label: 'Notifications',
+        callback: () => alert('Notification selected!')
+    };
+
     const profile = {
         initials: 'JS',
         userName: 'John Snow',
         colorAccent: 8
     };
 
+    const profileWithImage = {
+        initials: 'JS',
+        userName: 'John Snow',
+        colorAccent: 8,
+        image: '//unpkg.com/fiori-fundamentals/dist/images/sap-logo.png'
+    };
+
     const productMenu = [
-        { name: 'Application A', callback: () => alert('Application A selected!') },
+        { name: 'Application A', callback: () => alert('Application A selected!'), glyph: 'log' },
         { name: 'Application B', callback: () => alert('Application B selected!') },
         { name: 'Application C', callback: () => alert('Application C selected!') },
         { name: 'Application D', callback: () => alert('Application D selected!') }
@@ -146,6 +190,54 @@ describe('<Shellbar />', () => {
             subtitle='Subtitle' />
     );
 
+    const coPilotShellNoNotificationCount = (
+        <Shellbar
+            actions={actions}
+            copilot
+            logoSAP
+            notifications={notificationsNoCount}
+            productMenu={productMenu}
+            productSwitcher={productSwitcher}
+            productSwitcherList={productSwitcherList}
+            productTitle='Corporate Portal'
+            profile={profile}
+            profileMenu={profileMenu}
+            searchInput={searchInput}
+            subtitle='Subtitle' />
+    );
+
+    const coPilotShellNoNotificationBody = (
+        <Shellbar
+            actions={actions}
+            copilot
+            logoSAP
+            notifications={notificationsNoBody}
+            productMenu={productMenu}
+            productSwitcher={productSwitcher}
+            productSwitcherList={productSwitcherList}
+            productTitle='Corporate Portal'
+            profile={profileWithImage}
+            profileMenu={profileMenu}
+            searchInput={searchInput}
+            subtitle='Subtitle' />
+    );
+
+    const coPilotShellNoActionMenu = (
+        <Shellbar
+            actions={actionsNoMenu}
+            copilot
+            logoSAP
+            notifications={notificationsNoCount}
+            productMenu={productMenu}
+            productSwitcher={productSwitcher}
+            productSwitcherList={productSwitcherList}
+            productTitle='Corporate Portal'
+            profile={profile}
+            profileMenu={profileMenu}
+            searchInput={searchInput}
+            subtitle='Subtitle' />
+    );
+
     test('create shellbar', () => {
         let component = renderer.create(simpleShellBar);
         let tree = component.toJSON();
@@ -158,6 +250,26 @@ describe('<Shellbar />', () => {
         component = renderer.create(coPilotShell);
         tree = component.toJSON();
         expect(tree).toMatchSnapshot();
+
+        component = renderer.create(coPilotShellNoNotificationCount);
+        tree = component.toJSON();
+        expect(tree).toMatchSnapshot();
+
+        component = renderer.create(coPilotShellNoActionMenu);
+        tree = component.toJSON();
+        expect(tree).toMatchSnapshot();
+
+        component = renderer.create(coPilotShellNoNotificationBody);
+        tree = component.toJSON();
+        expect(tree).toMatchSnapshot();
+    });
+
+    test('click back button from collapsed product switcher', () => {
+        const wrapper = mount(coPilotShell);
+        wrapper.find('a.fd-menu__item span.sap-icon--grid').simulate('click');
+        wrapper.find('span.fd-menu.sap-icon--nav-back').simulate('click');
+
+        expect(wrapper.state(['showCollapsedProductSwitcherMenu'])).toBeFalsy();
     });
 
     describe('Prop spreading', () => {

@@ -438,6 +438,7 @@ export class DatePicker extends Component {
 }
 
 DatePicker.propTypes = {
+    ...Calendar.basePropTypes,
     buttonProps: PropTypes.object,
     compact: PropTypes.bool,
     enableRangeSelection: PropTypes.bool,
@@ -447,4 +448,9 @@ DatePicker.propTypes = {
 DatePicker.defaultProps = {
     compact: false,
     enableRangeSelection: false
+};
+
+DatePicker.propDescriptions = {
+    ...Calendar.propDescriptions,
+    enableRangeSelection: 'Set to **true** to enable the selection of a date range (begin and end).'
 };

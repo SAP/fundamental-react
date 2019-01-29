@@ -1,3 +1,4 @@
+import {ALERT_TYPES} from '../utils/constants';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
@@ -77,9 +78,16 @@ Alert.propTypes = {
     link: PropTypes.string,
     linkProps: PropTypes.object,
     linkText: PropTypes.string,
-    type: PropTypes.oneOf(['warning', 'error', 'success', 'information'])
+    type: PropTypes.oneOf(ALERT_TYPES)
 };
 
 Alert.defaultProps = {
     dismissible: false
+};
+
+Alert.propDescriptions = {
+    dismissible: 'Set to **true** to show a dismiss button.',
+    link: 'Value to be applied to the anchor\'s `href` attribute.',
+    linkProps: 'Additional props to be spread to the link\'s `<a>` element.',
+    linkText: 'Localized display text of the link.'
 };

@@ -409,3 +409,19 @@ Shellbar.defaultProps = {
     copilot: false,
     logoSAP: false
 };
+
+Shellbar.propDescriptions = {
+    actions: 'Holds all product actions and links.',
+    copilot: 'For use with applications that utilize CoPilot.',
+    logo: 'Provide an img tag for a logo other than the SAP logo. One of the two props (`logo` or `logoSAP`) should be set.',
+    logoSAP: 'Renders the SAP logo in the Shellbar. One of the two props (`logo` or `logoSAP`) should be set.',
+    notifications: 'Information about pending notifications.',
+    productMenu: 'Holds product titles and navigation.',
+    productSwitcher: 'For navigating between products.',
+    productSwitcherList: 'List of the products.',
+    productTitle: 'Displays the current application when no product menu is used.',
+    profile: 'User information (_e.g._ name, initials, etc.)',
+    profileMenu: 'List of items for the profile menu.',
+    searchInput: 'Holds `searchInput` properties.',
+    subtitle: 'Displays an application context. Should be used rarely.'
+};

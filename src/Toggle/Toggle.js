@@ -1,6 +1,7 @@
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
+import {TOGGLE_SIZES} from '../utils/constants';
 
 export class Toggle extends React.Component {
     constructor(props) {
@@ -8,12 +9,16 @@ export class Toggle extends React.Component {
         this.state = { checked: props.checked };
     }
 
-    handleChange = () => {
-        this.setState({ checked: !this.state.checked });
-    };
+    handleChange = (e) => {
+        this.setState({
+            checked: !this.state.checked
+        }, () => {
+            this.props.onChange(e);
+        });
+    }
 
     render() {
-        const { size, id, disabled, children, className, labelProps, inputProps, ...rest } = this.props;
+        const { size, id, checked, disabled, children, className, labelProps, inputProps, onChange, ...rest } = this.props;
 
         const toggleClasses = classnames(
             'fd-form__item',
@@ -24,7 +29,8 @@ export class Toggle extends React.Component {
         const spanClasses = classnames(
             'fd-toggle',
             {
-                [`fd-toggle--${size}`]: !!size
+                // There is no `m` technically, but if you provide size m, you get the default size.
+                [`fd-toggle--${size}`]: !!size && size !== 'm'
             },
             'fd-form__control'
         );
@@ -56,14 +62,22 @@ export class Toggle extends React.Component {
 }
 
 Toggle.propTypes = {
+    checked: PropTypes.bool,
     className: PropTypes.string,
     disabled: PropTypes.bool,
     id: PropTypes.string,
     inputProps: PropTypes.object,
     labelProps: PropTypes.object,
-    size: PropTypes.oneOf(['', 'xs', 's', 'l'])
+    size: PropTypes.oneOf(TOGGLE_SIZES),
+    onChange: PropTypes.func
 };
 
 Toggle.defaultProps = {
-    disabled: false
+    checked: false,
+    disabled: false,
+    onChange: () => {}
+};
+
+Toggle.propDescriptions = {
+    checked: 'Set to true for component to be checked on render.'
 };

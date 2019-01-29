@@ -48,6 +48,7 @@ export const Table = props => {
         </table>
     );
 };
+
 Table.propTypes = {
     headers: PropTypes.array.isRequired,
     tableData: PropTypes.arrayOf(
@@ -63,4 +64,13 @@ Table.propTypes = {
     ]),
     tableHeaderProps: PropTypes.object,
     tableHeaderRowProps: PropTypes.object
+};
+
+Table.propDescriptions = {
+    tableData: 'Array of objects that contain two properties: `rowData` (an array of strings containing data for each column in the row), and `children` (an array of objects containing additional rows).',
+    headers: 'Array of localized text strings for the column headers.',
+    tableBodyProps: 'Additional props to be spread to the `<tbody>` element.',
+    tableBodyRowProps: 'Additional props to be spread to the `<tr>` elements within `<tbody>`. If using a function, the parameters passed will be an object representing the row (from `tableData`) and the row index.',
+    tableHeaderProps: 'Additional props to be spread to the `<thead>` element.',
+    tableHeaderRowProps: 'Additional props to be spread to the `<tr>` element within `<thead>`.'
 };

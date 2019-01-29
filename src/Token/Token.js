@@ -1,4 +1,5 @@
 import classnames from 'classnames';
+import PropTypes from 'prop-types';
 import React from 'react';
 
 export const Token = (props) => {
@@ -16,4 +17,14 @@ export const Token = (props) => {
             {children}
         </span>
     );
+};
+
+Token.propTypes = {
+    children: PropTypes.node,
+    className: PropTypes.string,
+    clickHandler: PropTypes.func
+};
+
+Token.propDescriptions = {
+    clickHandler: 'Callback function when user clicks on the component.'
 };

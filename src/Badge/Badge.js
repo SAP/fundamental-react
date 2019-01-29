@@ -1,6 +1,7 @@
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
+import {BADGE_TYPES, LABEL_TYPES, STATUS_TYPES} from '../utils/constants';
 
 
 export const Badge = ({ type, modifier, children, className, ...props }) => {
@@ -23,7 +24,7 @@ export const Badge = ({ type, modifier, children, className, ...props }) => {
 Badge.propTypes = {
     className: PropTypes.string,
     modifier: PropTypes.oneOf(['', 'pill', 'filled']),
-    type: PropTypes.oneOf(['', 'success', 'warning', 'error'])
+    type: PropTypes.oneOf(BADGE_TYPES)
 };
 
 export const Label = ({ type, children, className, ...props }) => {
@@ -40,7 +41,7 @@ export const Label = ({ type, children, className, ...props }) => {
 
 Label.propTypes = {
     className: PropTypes.string,
-    type: PropTypes.oneOf(['', 'success', 'warning', 'error'])
+    type: PropTypes.oneOf(LABEL_TYPES)
 };
 
 export const Status = ({ type, glyph, children, className, ...props } ) => {
@@ -64,7 +65,7 @@ export const Status = ({ type, glyph, children, className, ...props } ) => {
 Status.propTypes = {
     className: PropTypes.string,
     glyph: PropTypes.string,
-    type: PropTypes.oneOf(['', 'success', 'warning', 'error', 'available', 'away', 'busy', 'offline'])
+    type: PropTypes.oneOf(STATUS_TYPES)
 };
 
 export const Counter = ({ notification, children, className, ...props }) => {
@@ -87,4 +88,8 @@ export const Counter = ({ notification, children, className, ...props }) => {
 Counter.propTypes = {
     className: PropTypes.string,
     notification: PropTypes.bool
+};
+
+Counter.propDescriptions = {
+    notification: 'Set to **true** to enable counter with notification.'
 };

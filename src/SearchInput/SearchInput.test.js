@@ -30,6 +30,21 @@ describe('<SearchInput />', () => {
             searchList={searchData} />
     );
 
+    const searchOnChange = (
+        <SearchInput
+            onChange={term => getInputValue(term)}
+            onEnter={term => getInputValue(term)}
+            placeholder='Enter a fruit'
+            searchList={searchData} />
+    );
+
+    const defaultSearchNoButton = (
+        <SearchInput
+            noSearchBtn
+            placeholder='Enter a fruit'
+            searchList={searchData} />
+    );
+
     const shellBarSearchInput = (
         <SearchInput
             inShellbar
@@ -62,6 +77,25 @@ describe('<SearchInput />', () => {
         component = renderer.create(noListSearchInput);
         tree = component.toJSON();
         expect(tree).toMatchSnapshot();
+
+        component = renderer.create(searchOnChange);
+        tree = component.toJSON();
+        expect(tree).toMatchSnapshot();
+
+        component = renderer.create(defaultSearchNoButton);
+        tree = component.toJSON();
+        expect(tree).toMatchSnapshot();
+    });
+
+    test('calling parent onChange event', () => {
+        const wrapper = shallow(searchOnChange);
+
+        // enter text into search input
+        wrapper
+            .find(searchInput)
+            .simulate('change', { target: { value: searchData[0].text } });
+
+        expect(wrapper.state(['value'])).toBe(searchData[0].text);
     });
 
     test('check for enter key press on search input', () => {
@@ -79,6 +113,41 @@ describe('<SearchInput />', () => {
         wrapper.find(searchInput).simulate('keypress', { key: 'Enter' });
 
         expect(wrapper.state(['value'])).toBe(searchData[0].text);
+    });
+
+    test('click outside search input to close list', () => {
+        const wrapper = mount(defaultSearchInput);
+        let event = new MouseEvent('click', {});
+
+        // outside click, search list not shown
+        document.dispatchEvent(event);
+
+        // enter text into search input
+        wrapper
+            .find(searchInput)
+            .simulate('change', { target: { value: searchData[0].text } });
+
+        // click outside to close list
+        document.dispatchEvent(event);
+
+        expect(wrapper.state(['value'])).toBe(searchData[0].text);
+    });
+
+    test('click outside ShellBar search input with NO text to close list', () => {
+        const wrapper = mount(shellBarSearchInput);
+        let event = new MouseEvent('click', {});
+
+        // outside click, search list not shown
+        document.dispatchEvent(event);
+
+        // click in search box to show
+        wrapper.find(searchInput).simulate('click');
+        wrapper.find('button.sap-icon--search.fd-button--shell').simulate('click');
+
+        // click outside to close list
+        document.dispatchEvent(event);
+
+        expect(wrapper.state(['value'])).toBe('');
     });
 
     test('show/hide auto complete list', () => {
@@ -172,6 +241,40 @@ describe('<SearchInput />', () => {
         expect(wrapper.state(['value'])).toBe(searchData[0].text);
     });
 
+    test('check search executed on search button click in shellbar with list expanded', () => {
+        const wrapper = shallow(shellBarSearchInput);
+
+        wrapper
+            .find(searchInput)
+            .simulate('change', { target: { value: searchData[0].text } });
+
+
+        // click in search box to show
+        wrapper.find(searchInput).simulate('click');
+
+        // check if searchTerm state is updated
+        expect(wrapper.state(['value'])).toBe(searchData[0].text);
+
+        wrapper.find('.sap-icon--search.fd-button--shell').simulate('click');
+
+        expect(wrapper.state(['value'])).toBe(searchData[0].text);
+    });
+
+    test('check search executed on search button click', () => {
+        const wrapper = shallow(defaultSearchInput);
+
+        wrapper
+            .find(searchInput)
+            .simulate('change', { target: { value: searchData[0].text } });
+
+        // check if searchTerm state is updated
+        expect(wrapper.state(['value'])).toBe(searchData[0].text);
+
+        wrapper.find('.fd-button--light.sap-icon--search').simulate('click');
+
+        expect(wrapper.state(['value'])).toBe(searchData[0].text);
+    });
+
     test('pressing Esc key to close search list', () => {
         const wrapper = shallow(shellBarSearchInput);
 
@@ -186,21 +289,6 @@ describe('<SearchInput />', () => {
 
         expect(wrapper.state('isExpanded')).toBeFalsy();
     });
-
-    //   test('click on document to close autocomplete list', () => {
-    //     const wrapper = mount(defaultSearchInput);
-
-    //     // click in search box to show
-    //     wrapper.find(searchInput).simulate('click');
-
-    //     expect(wrapper.state('isExpanded')).toBeTruthy();
-
-    //     // handle click outside search box
-    //     wrapper
-    //       .instance()
-    //       .onOutsideClickHandler({ target: wrapper, stopPropagation: jest.fn() });
-
-    //   });
 
     describe('Prop spreading', () => {
         test('should allow props to be spread to the SearchInput component', () => {

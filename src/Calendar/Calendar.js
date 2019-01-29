@@ -561,7 +561,7 @@ export class Calendar extends Component {
 
 }
 
-Calendar.propTypes = {
+Calendar.basePropTypes = {
     blockedDates: PropTypes.arrayOf(PropTypes.instanceOf(Date)),
     disableAfterDate: PropTypes.instanceOf(Date),
     disableBeforeDate: PropTypes.instanceOf(Date),
@@ -569,7 +569,12 @@ Calendar.propTypes = {
     disableFutureDates: PropTypes.bool,
     disablePastDates: PropTypes.bool,
     disableWeekday: PropTypes.arrayOf(PropTypes.string),
-    disableWeekends: PropTypes.bool,
+    disableWeekends: PropTypes.bool
+};
+
+Calendar.propTypes = {
+    ...Calendar.basePropTypes,
+
     monthListProps: PropTypes.object,
     tableBodyProps: PropTypes.object,
     tableHeaderProps: PropTypes.object,
@@ -582,4 +587,20 @@ Calendar.defaultProps = {
     disableFutureDates: false,
     disablePastDates: false,
     disableWeekends: false
+};
+
+Calendar.propDescriptions = {
+    blockedDates: 'Blocks dates that are in between the blocked dates.',
+    disableAfterDate: 'Disables dates of a calendar that come after the specified date.',
+    disableBeforeDate: 'Disables dates of a calendar that come before the specified date.',
+    disabledDates: 'Disables dates that are in between the disabled dates.',
+    disableFutureDates: 'Set to **true** to disable dates after today\'s date.',
+    disablePastDates: 'Set to **true** to disable dates before today\'s date.',
+    disableWeekday: 'Disables dates that match a weekday.',
+    disableWeekends: 'Set to **true** to disables dates that match a weekend.',
+    monthListProps: 'Additional props to be spread to the month\'s `<ul>` element.',
+    tableBodyProps: 'Additional props to be spread to the `<tbody>` element.',
+    tableHeaderProps: 'Additional props to be spread to the `<thead>` element.',
+    tableProps: 'Additional props to be spread to the `<table>` element.',
+    yearListProps: 'Additional props to be spread to the year\'s `<ul>` element.'
 };

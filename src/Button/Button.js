@@ -1,6 +1,7 @@
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
+import {BUTTON_OPTIONS, BUTTON_TYPES} from '../utils/constants';
 
 export const Button = ({
     option,
@@ -47,9 +48,9 @@ Button.propTypes = {
     dropdown: PropTypes.bool,
     glyph: PropTypes.string,
     navbar: PropTypes.bool,
-    option: PropTypes.oneOf(['emphasized', 'light', 'shell']),
+    option: PropTypes.oneOf(BUTTON_OPTIONS),
     selected: PropTypes.bool,
-    type: PropTypes.oneOf(['standard', 'positive', 'negative', 'medium']),
+    type: PropTypes.oneOf(BUTTON_TYPES),
     typeAttr: PropTypes.string,
     onClick: PropTypes.func
 };
@@ -60,6 +61,14 @@ Button.defaultProps = {
     dropdown: false,
     navbar: false,
     selected: false
+};
+
+Button.propDescriptions = {
+    dropdown: 'Set to **true** if button triggers a dropdown list. ',
+    navbar: 'Set to **true** if button is part of global navbar.',
+    option: 'Indicates the importance of the button.',
+    selected: 'Set to **true** to set state of the button to "selected".',
+    typeAttr: 'Value for the `type` attribute on the `<button>` element.'
 };
 
 export const ButtonGroup = ({children, ...props}) => {
@@ -76,4 +85,8 @@ export const ButtonGroup = ({children, ...props}) => {
 
 ButtonGroup.propTypes = {
     children: PropTypes.node
+};
+
+ButtonGroup.propDescriptions = {
+    children: '`Button` nodes to group together.'
 };

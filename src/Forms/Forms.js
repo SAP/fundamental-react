@@ -39,6 +39,7 @@ export const FormItem = ({ isCheck, isInline, children, className, ...props }) =
         </div>
     );
 };
+
 FormItem.propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,
@@ -49,6 +50,11 @@ FormItem.propTypes = {
 FormItem.defaultProps = {
     isCheck: false,
     isInline: false
+};
+
+FormItem.propDescriptions = {
+    isCheck: 'Set to **true** to render an `<input>` with `type` of **checkbox**.',
+    isInline: 'Set to **true** to display radio buttons and checkboxes in a row.'
 };
 
 // ------------------------------------------------- Form Label ----------------------------------------------
@@ -75,6 +81,10 @@ FormLabel.propTypes = {
 
 FormLabel.defaultProps = {
     required: false
+};
+
+FormLabel.propDescriptions = {
+    required: 'Set to **true** for required input fields.'
 };
 
 // ------------------------------------------------- Form Message ----------------------------------------------
@@ -119,6 +129,10 @@ export const FormInput = ({ state, className, ...props }) => {
 FormInput.propTypes = {
     className: PropTypes.string,
     state: PropTypes.string
+};
+
+FormInput.propDescriptions = {
+    state: 'Sets the state of the input. Options include \'normal\', \'valid\', \'invalid\', \'warning\', \'help\', \'disabled\', and \'readonly\'. Leave empty for normal.'
 };
 
 // ------------------------------------------------- Form Textarea ----------------------------------------------
@@ -277,4 +291,10 @@ FormRadio.propTypes = {
 FormRadio.defaultProps = {
     disabled: false,
     isInline: false
+};
+
+FormRadio.propDescriptions = {
+    defaultChecked: 'The `id` of the element selected by default.',
+    inputs: 'Configuration settings for each radio button in the group.',
+    isInline: 'Set to **true** to display radio buttons in a row.'
 };

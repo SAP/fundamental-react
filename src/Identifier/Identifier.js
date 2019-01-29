@@ -1,6 +1,8 @@
 import classnames from 'classnames';
+import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import PropTypes from 'prop-types';
 import React from 'react';
+import {IDENTIFIER_MODIFIERS, IDENTIFIER_SIZES} from '../utils/constants';
 
 export const Identifier = ({ glyph, size, modifier, color, label, backgroundImageUrl, children, className, ...props }) => {
     const styles = {
@@ -18,12 +20,14 @@ export const Identifier = ({ glyph, size, modifier, color, label, backgroundImag
         className
     );
 
+    const ariaRole = !children ? 'presentation' : '';
+
     return (
         <span
             {...props}
             aria-label={label}
             className={identifierClasses}
-            role={`${!children ? 'presentation' : ''}`}
+            role={ariaRole}
             style={backgroundImageUrl && styles}>
             {children}
         </span>
@@ -33,9 +37,16 @@ export const Identifier = ({ glyph, size, modifier, color, label, backgroundImag
 Identifier.propTypes = {
     backgroundImageUrl: PropTypes.string,
     className: PropTypes.string,
-    color: PropTypes.oneOf([1, 2, 3, 4, 5, 6, 7, 8, 9]),
+    color: CustomPropTypes.range(1, 9),
     glyph: PropTypes.string,
     label: PropTypes.string,
-    modifier: PropTypes.oneOf(['', 'circle', 'transparent']),
-    size: PropTypes.string
+    modifier: PropTypes.oneOf(IDENTIFIER_MODIFIERS),
+    size: PropTypes.oneOf(IDENTIFIER_SIZES)
+};
+
+Identifier.propDescriptions = {
+    backgroundImageUrl: 'Image URL.',
+    color: 'Applies a background color.',
+    label: 'Localized text for label.',
+    size: 'Size of the image. These sizes are available: **xxs** (extra extra small) - 20px, **xs** (extra small) - 28px, **s** (small) - 32px, **m** (medium) - 48px, **l** (large) - 64px, **xl** (extra lagre) - 88px, and **xxl** (extra extra large). Default matches the base font size (14px).'
 };
