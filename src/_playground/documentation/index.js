@@ -5,3 +5,4 @@ export { Playground } from './Playground/Playground';
 export { Properties } from './Properties/Properties';
 export { Separator } from './Separator/Separator';
 export { DocsText, DocsTile } from './DocsTile/DocsTile';
+export { MarkdownImporter } from './Markdown/MarkdownImporter';

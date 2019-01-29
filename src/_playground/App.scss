@@ -69,17 +69,17 @@ $fd-fonts-path: '../../node_modules/fiori-fundamentals/dist/fonts/';
             padding-bottom: 2rem;
             background-color: white;
             margin-right: auto;
-            margin-left: auto;
+            margin-left: 12px;
             padding-left: 1rem;
             padding-right: 1rem;
 
-            .frDocs-Content__header {
+            .frDocs-Content__header, h1 {
                 margin: 12px 0;
                 margin-top: 2rem;
                 font-size: 2.2rem;
             }
 
-            .frDocs-Content__description {
+            .frDocs-Content__description, p {
                 margin-bottom: 1.5rem;
                 font-size: 1rem;
                 font-weight: 300;
@@ -91,6 +91,29 @@ $fd-fonts-path: '../../node_modules/fiori-fundamentals/dist/fonts/';
                 border-bottom: none;
                 padding: 10px 0;
                 background-color: '#f3f4f5'
+            }
+            .frDocs-markdown {
+                pre {
+                    margin: 25px 0px;
+                    background-color: #fff !important;
+                    white-space: pre-wrap;
+                    white-space: -moz-pre-wrap;
+                    white-space: -pre-wrap;
+                    white-space: -o-pre-wrap;
+                    word-wrap: break-word;
+                    display: flex;
+                    padding: 1rem;
+                    font-size: 13px;
+                    line-height: 1.42857143;
+                    color: #333;
+                    word-break: break-all;
+                    border: 1px solid #ccc;
+                    border-radius: 4px;
+                
+                    code {
+                        display: block;
+                    }
+                }
             }
         }
     }

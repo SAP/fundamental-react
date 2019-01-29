@@ -19,7 +19,7 @@ You will need to install [Node and Node Package Manager](https://www.npmjs.com/g
 
 ## Getting Started
 
-For an existing react application, follow the steps bellow:
+For an existing react application, follow the steps below:
 
 1. Install fundamental-react
 
