@@ -80,7 +80,6 @@ export class DatePicker extends Component {
     }
 
     click = e => {
-        console.log(JSON.stringify(e));
         if (this.component.contains(e.target)) {
             return;
         }
