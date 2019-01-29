@@ -23,9 +23,12 @@ class TimeItem extends Component {
         value: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
     };
     static defaultProps = {
+        arialabel: '',
+        disabled: false,
+        format12hours: false,
         id: '',
-        value: null,
-        arialabel: ''
+        spinners: false,
+        value: null
     };
 
     constructor(props) {
