@@ -110,6 +110,11 @@ $fd-fonts-path: '../../node_modules/fiori-fundamentals/dist/fonts/';
 }
 
 .fd-tile__content {
+
+    .centered {
+        text-align: center;
+    }
+
     .fd-button--grouped {
         margin-right: 0;
     }

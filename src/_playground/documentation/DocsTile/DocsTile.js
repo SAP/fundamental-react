@@ -21,10 +21,6 @@ export class DocsTile extends Component {
     };
 
     render() {
-        const centerStyle = {
-            textAlign: 'center'
-        };
-
         const {centered, children} = this.props;
 
         const outerDivClasses = classnames(
@@ -41,15 +37,9 @@ export class DocsTile extends Component {
                     inputProps={{'aria-label': 'Toggle background color'}}
                     onChange={this.handleToggle}
                     size='xs' />
-                {centered
-                    ? (
-                        <div className='fd-tile__content'>
-                            <div style={centerStyle}>{children}</div>
-                        </div>
-                    )
-                    : (
-                        <div className='fd-tile__content'>{children}</div>
-                    )}
+                <div className='fd-tile__content'>
+                    {centered ? (<div className='centered'>{children}</div>) : children}
+                </div>
             </div>
         );
     }
