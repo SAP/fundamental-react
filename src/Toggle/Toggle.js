@@ -6,15 +6,19 @@ import {TOGGLE_SIZES} from '../utils/constants';
 export class Toggle extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { checked: props.checked };
+        this.state = { checked: props.checked ? props.checked : false };
     }
 
-    handleChange = () => {
-        this.setState({ checked: !this.state.checked });
-    };
+    handleChange = (e) => {
+        this.setState({
+            checked: !this.state.checked
+        }, () => {
+            this.props.onChange(e);
+        });
+    }
 
     render() {
-        const { size, id, disabled, children, className, labelProps, inputProps, ...rest } = this.props;
+        const { size, id, checked, disabled, children, className, labelProps, inputProps, onChange, ...rest } = this.props;
 
         const toggleClasses = classnames(
             'fd-form__item',
@@ -58,10 +62,20 @@ export class Toggle extends React.Component {
 }
 
 Toggle.propTypes = {
+    checked: PropTypes.bool,
     className: PropTypes.string,
     disabled: PropTypes.bool,
     id: PropTypes.string,
     inputProps: PropTypes.object,
     labelProps: PropTypes.object,
-    size: PropTypes.oneOf(TOGGLE_SIZES)
+    size: PropTypes.oneOf(TOGGLE_SIZES),
+    onChange: PropTypes.func
+};
+
+Toggle.defaultProps = {
+    onChange: () => {}
+};
+
+Toggle.propDescriptions = {
+    checked: 'Set to true for component to be checked on render.'
 };
