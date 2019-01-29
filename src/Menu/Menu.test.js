@@ -1,7 +1,7 @@
-import { MemoryRouter } from 'react-router-dom';
 import { mount } from 'enzyme';
 import React from 'react';
 import renderer from 'react-test-renderer';
+import { Link, MemoryRouter } from 'react-router-dom';
 import { Menu, MenuGroup, MenuItem, MenuList } from './Menu';
 
 describe('<Menu />', () => {
@@ -23,25 +23,42 @@ describe('<Menu />', () => {
         <MemoryRouter>
             <Menu className='blue'>
                 <MenuList className='blue'>
-                    <MenuItem link='/'>Option 1</MenuItem>
-                    <MenuItem className='blue' isLink
-                        link='/'>
-                        Option 2
+                    <MenuItem>
+                        <Link to='/'>Option 1</Link>
                     </MenuItem>
-                    <MenuItem link='/'>Option 3</MenuItem>
+                    <MenuItem className='blue' isLink>
+                        <Link to='/'>
+                            Option 2
+                        </Link>
+                    </MenuItem>
+                    <MenuItem>
+                        <Link to='/'>Option 3</Link>
+                    </MenuItem>
                 </MenuList>
                 <MenuGroup className='blue' title='Group Header'>
                     <MenuList>
-                        <MenuItem link='/'>Option 4</MenuItem>
-                        <MenuItem link='/'>Option 5</MenuItem>
-                        <MenuItem link='/'>Option 6</MenuItem>
+                        <MenuItem>
+                            <Link to='/'>Option 4</Link>
+                        </MenuItem>
+                        <MenuItem>
+                            <Link to='/'>Option 5</Link>
+                        </MenuItem>
+                        <MenuItem>
+                            <Link to='/'>Option 6</Link>
+                        </MenuItem>
                     </MenuList>
                 </MenuGroup>
                 <MenuGroup title='Group Header 2'>
                     <MenuList>
-                        <MenuItem link='/'>Option 7</MenuItem>
-                        <MenuItem link='/'>Option 8</MenuItem>
-                        <MenuItem link='/'>Option 9</MenuItem>
+                        <MenuItem>
+                            <Link to='/'>Option 7</Link>
+                        </MenuItem>
+                        <MenuItem>
+                            <Link to='/'>Option 8</Link>
+                        </MenuItem>
+                        <MenuItem>
+                            <Link to='/'>Option 9</Link>
+                        </MenuItem>
                     </MenuList>
                 </MenuGroup>
             </Menu>
@@ -52,16 +69,18 @@ describe('<Menu />', () => {
         <MemoryRouter>
             <Menu>
                 <MenuList>
-                    <MenuItem link='/' separator>
-                        Option 1
+                    <MenuItem separator>
+                        <Link to='/'>Option 1</Link>
                     </MenuItem>
-                    <MenuItem link='/' separator>
-                        Option 2
+                    <MenuItem separator>
+                        <Link to='/'>Option 2</Link>
                     </MenuItem>
-                    <MenuItem link='/' separator>
-                        Option 3
+                    <MenuItem separator>
+                        <Link to='/'>Option 3</Link>
                     </MenuItem>
-                    <MenuItem link='/'>Option 4</MenuItem>
+                    <MenuItem>
+                        <Link to='/'>Option 4</Link>
+                    </MenuItem>
                 </MenuList>
             </Menu>
         </MemoryRouter>
@@ -71,12 +90,18 @@ describe('<Menu />', () => {
         <MemoryRouter>
             <Menu addonBefore>
                 <MenuList>
-                    <MenuItem link='/'>Option 1</MenuItem>
-                    <MenuItem addon='accept' link='/'>
-                        Option 2
+                    <MenuItem>
+                        <Link to='/'>Option 1</Link>
                     </MenuItem>
-                    <MenuItem link='/'>Option 3</MenuItem>
-                    <MenuItem link='/'>Option 4</MenuItem>
+                    <MenuItem addon='accept'>
+                        <Link to='/'>Option 2</Link>
+                    </MenuItem>
+                    <MenuItem>
+                        <Link to='/'>Option 3</Link>
+                    </MenuItem>
+                    <MenuItem>
+                        <Link to='/'>Option 4</Link>
+                    </MenuItem>
                 </MenuList>
             </Menu>
         </MemoryRouter>
@@ -136,13 +161,18 @@ describe('<Menu />', () => {
                 <MemoryRouter>
                     <Menu addonBefore>
                         <MenuList>
-                            <MenuItem link='/'>Option 1</MenuItem>
-                            <MenuItem addon='accept' addonProps={{ 'data-sample': 'Sample' }}
-                                link='/' >
-                                Option 2
+                            <MenuItem>
+                                <Link to='/'>Option 1</Link>
                             </MenuItem>
-                            <MenuItem link='/'>Option 3</MenuItem>
-                            <MenuItem link='/'>Option 4</MenuItem>
+                            <MenuItem addon='accept' addonProps={{ 'data-sample': 'Sample' }}>
+                                <Link to='/'>Option 2</Link>
+                            </MenuItem>
+                            <MenuItem>
+                                <Link to='/'>Option 3</Link>
+                            </MenuItem>
+                            <MenuItem>
+                                <Link to='/'>Option 4</Link>
+                            </MenuItem>
                         </MenuList>
                     </Menu>
                 </MemoryRouter>);
@@ -157,7 +187,9 @@ describe('<Menu />', () => {
                 <MemoryRouter>
                     <Menu>
                         <MenuList>
-                            <MenuItem link='/' linkProps={{ 'data-sample': 'Sample' }} />
+                            <MenuItem urlProps={{ 'data-sample': 'Sample' }}>
+                                <Link to='/' />
+                            </MenuItem>
                         </MenuList>
                     </Menu>
                 </MemoryRouter>);
@@ -169,13 +201,11 @@ describe('<Menu />', () => {
 
         test('should allow props to be spread to the MenuItem component\'s a element', () => {
             const element = mount(
-                <MemoryRouter>
-                    <Menu>
-                        <MenuList>
-                            <MenuItem url='/' urlProps={{ 'data-sample': 'Sample' }} />
-                        </MenuList>
-                    </Menu>
-                </MemoryRouter>
+                <Menu>
+                    <MenuList>
+                        <MenuItem url='/' urlProps={{ 'data-sample': 'Sample' }} />
+                    </MenuList>
+                </Menu>
             );
 
             expect(
