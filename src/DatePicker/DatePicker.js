@@ -31,7 +31,6 @@ export class DatePicker extends Component {
 
     //This is being used only when the user presses enter or clicks outside of the component
     formatDate = (date) => {
-        // let regex = /[!$%^&*()_+|~=`{}\[\]:'<>?,.\a-zA-Z]/;
         let formatDate = '';
         if (this.props.enableRangeSelection) {
             if (date.length === 0) {
