@@ -1,6 +1,5 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import sinon from 'sinon';
 import { Toggle } from './Toggle';
 import { mount, shallow } from 'enzyme';
 
@@ -69,14 +68,12 @@ describe('<Toggle />', () => {
 
     describe('onChange handler', () => {
         test('should dispatch the onChange callback with the event', () => {
-            let spy = sinon.spy();
-            const element = mount(<Toggle data-sample='Sample' onChange={spy} />);
+            let f = jest.fn();
+            const element = mount(<Toggle data-sample='Sample' onChange={f} />);
 
             element.find('input[type="checkbox"]').simulate('change');
 
-            expect(
-                spy.callCount
-            ).toBe(1);
+            expect(f).toHaveBeenCalledTimes(1);
         });
     });
 
