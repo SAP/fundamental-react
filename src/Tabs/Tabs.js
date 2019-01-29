@@ -20,6 +20,11 @@ export const Tabs = props => {
     );
 };
 
+Tabs.propTypes = {
+    children: PropTypes.node,
+    classnames: PropTypes.string
+};
+
 export class TabComponent extends Component {
     constructor(props) {
         super(props);
