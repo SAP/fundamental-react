@@ -32,7 +32,12 @@ class TimePickerItem extends Component {
         buttonID: '',
         style: '',
         isValid: false,
-        length: 0
+        length: 0,
+        disabled: false,
+        format12Hours: false,
+        showHour: false,
+        showMinute: false,
+        showSecond: false
     };
 
     constructor(props) {
