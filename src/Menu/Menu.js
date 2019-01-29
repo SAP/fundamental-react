@@ -53,8 +53,7 @@ export const MenuItem = ({ url, isLink, separator, addon, children, onclick, cla
     );
 
     const renderLink = () => {
-        const isString = typeof children === 'string';
-        if (url || onclick || isString) {
+        if (url) {
             return (
                 <a {...urlProps}
                     className={menuItemLinkClasses}
@@ -63,13 +62,20 @@ export const MenuItem = ({ url, isLink, separator, addon, children, onclick, cla
                     {children}
                 </a>
             );
-        } else if (children) {
+        } else if (children && React.isValidElement(children)) {
+            const childrenClassnames = classnames(
+                menuItemLinkClasses,
+                children.props.className
+            );
+
             return React.cloneElement(children, {
-                'className': menuItemLinkClasses,
+                'className': childrenClassnames,
                 ...urlProps
             });
         } else if (children) {
-            return children;
+            return (<a {...urlProps}
+                className='fd-menu__item'
+                onClick={onclick}>{children}</a>);
         }
     };
 
