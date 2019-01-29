@@ -40,12 +40,15 @@ $fd-fonts-path: '../../node_modules/fiori-fundamentals/dist/fonts/';
                     color: #424e5a;
                     padding: 15px 20px;
                     display: block;
+                    font-weight: 700;
+                    font-size: 1.25rem;
+
                 }
 
                 .frDocs-Nav__item {
                     display: block;
                     color: #21262c;
-                    font-size: 0.875rem;
+                    font-size: 1rem;
                     position: relative;
                     padding: 13px 40px;
                 }

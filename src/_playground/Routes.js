@@ -283,32 +283,38 @@ export default class Routes extends Component {
                 <div className='frDocs-Container'>
                     <div className='frDocs-Sidebar'>
                         <h1 className='frDocs-Logo'>FUNDAMENTAL REACT</h1>
-                        <ul className='frDocs-Nav'>
-                            <li className='frDocs-Nav__headers'>Getting Started</li>
-                            {this.state.routes.map(route => {
-                                return route.section === 'GettingStarted' ?
-                                    <NavLink
-                                        activeClassName='frDocs-Nav__item--active'
-                                        className='frDocs-Nav__item'
-                                        key={route.url}
-                                        to={{ pathname: route.url }}>
-                                        {route.name}
-                                    </NavLink>
-                                    : null;
-                            })}
-                            <li className='frDocs-Nav__headers'>Components</li>
-                            {this.state.routes.map(route => {
-                                return route.section === 'components' ?
-                                    <NavLink
-                                        activeClassName='frDocs-Nav__item--active'
-                                        className='frDocs-Nav__item'
-                                        key={route.url}
-                                        to={{ pathname: route.url }}>
-                                        {route.name}
-                                    </NavLink>
-                                    : null;
-                            })}
-                        </ul>
+                        <nav>
+                            <ul className='frDocs-Nav'>
+                                <li className='frDocs-Nav__headers'>Getting Started</li>
+                                {this.state.routes.map(route => {
+                                    return route.section === 'GettingStarted' ?
+                                        <li>
+                                            <NavLink
+                                                activeClassName='frDocs-Nav__item--active'
+                                                className='frDocs-Nav__item'
+                                                key={route.url}
+                                                to={{ pathname: route.url }}>
+                                                {route.name}
+                                            </NavLink>
+                                        </li>
+                                        : null;
+                                })}
+                                <li className='frDocs-Nav__headers'>Components</li>
+                                {this.state.routes.map(route => {
+                                    return route.section === 'components' ?
+                                        <li>
+                                            <NavLink
+                                                activeClassName='frDocs-Nav__item--active'
+                                                className='frDocs-Nav__item'
+                                                key={route.url}
+                                                to={{ pathname: route.url }}>
+                                                {route.name}
+                                            </NavLink>
+                                        </li>
+                                        : null;
+                                })}
+                            </ul>
+                        </nav>
                     </div>
                     <div className='frDocs-Content'>
                         <Switch>
