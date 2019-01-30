@@ -97,6 +97,11 @@ $fd-fonts-path: '../../node_modules/fiori-fundamentals/dist/fonts/';
             }
 
             .frDocs-markdown {
+
+                ol, ul {
+                    margin-left: 12px;
+                }
+
                 pre {
                     margin: 25px 0px;
                     background-color: #fff !important;
@@ -118,6 +123,7 @@ $fd-fonts-path: '../../node_modules/fiori-fundamentals/dist/fonts/';
                         display: block;
                     }
                 }
+            }
 
             .frDocs-Content__separator {
                 display: block;
