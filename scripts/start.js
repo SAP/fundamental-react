@@ -1,3 +1,4 @@
+/* eslint-disable indent */
 'use strict';
 
 // Do this as the first thing so that any code reading it knows the right env.
@@ -60,6 +61,10 @@ if (process.env.HOST) {
   );
   console.log();
 }
+
+fs.copyFile('README.md', 'src/_playground/documentation/Home/README.md', (err) => {
+  if (err) throw err;
+});
 
 // We require that you explictly set browsers and do not fall back to
 // browserslist defaults.

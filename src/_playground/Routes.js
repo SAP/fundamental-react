@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 import { ActionBarComponent } from '../ActionBar/ActionBar.Component';
 import { AlertComponent } from '../Alert/Alert.Component';
 import { BadgeComponent } from '../Badge/Badge.Component';
@@ -10,7 +9,7 @@ import { ContextualMenuComponent } from '../ContextualMenu/ContextualMenu.Compon
 import { DatePickerComponent } from '../DatePicker/DatePicker.Component';
 import { DropdownComponent } from '../Dropdown/Dropdown.Component';
 import { FormsComponent } from '../Forms/Forms.Component';
-import Home from './documentation/Markdown/Home.md';
+import { Home } from './documentation/Home/Home';
 import { IconComponent } from '../Icon/Icon.Component';
 import { IdentifierComponent } from '../Identifier/Identifier.Component';
 import { ImageComponent } from '../Image/Image.Component';
@@ -18,7 +17,6 @@ import { InlineHelpComponent } from '../InlineHelp/InlineHelp.Component';
 import { InputGroupComponent } from '../InputGroup/InputGroup.Component';
 import { ListGroupComponent } from '../ListGroup/ListGroup.Component';
 import { LocalizationEditorComponent } from '../LocalizationEditor/LocalizationEditor.Component';
-import { MarkdownImporter } from './documentation/Markdown/MarkdownImporter';
 import { MenuComponent } from '../Menu/Menu.Component';
 import { ModalComponent } from '../Modal/Modal.Component';
 import { MultiInputComponent } from '../MultiInput/MultiInput.Component';
@@ -37,249 +35,234 @@ import { TimePickerComponent } from '../TimePicker/TimePicker.Component';
 import { ToggleComponent } from '../Toggle/Toggle.Component';
 import { TokenComponent } from '../Token/Token.Component';
 import { TreeComponent } from '../Tree/Tree.Component';
-import Usage from './documentation/Markdown/Usage.md';
 import { BrowserRouter, NavLink, Redirect, Route, Switch } from 'react-router-dom';
 import React, { Component } from 'react';
-
-
 
 export default class Routes extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-            routes: [
-                {
-                    url: '/home',
-                    name: 'Home',
-                    render: function() {
-                        return <MarkdownImporter source={Home} />;
-                    },
-                    section: 'Getting Started'
-                },
-                {
-                    url: '/usage',
-                    name: 'Usage',
-                    render: function() {
-                        return <MarkdownImporter source={Usage} />;
-                    },
-                    section: 'Getting Started'
-                },
-                {
-                    url: '/actionBar',
-                    name: 'Action Bar',
-                    component: ActionBarComponent,
-                    section: 'Components'
-                },
-                {
-                    url: '/alert',
-                    name: 'Alert',
-                    component: AlertComponent,
-                    section: 'Components'
-                },
-                {
-                    url: '/breadcrumb',
-                    name: 'Breadcrumb',
-                    component: BreadcrumbComponent,
-                    section: 'Components'
-                },
-                {
-                    url: '/button',
-                    name: 'Button',
-                    component: ButtonComponent,
-                    section: 'Components'
-                },
-                {
-                    url: '/calendar',
-                    name: 'Calendar',
-                    component: CalendarComponent,
-                    section: 'Components'
-                },
-                {
-                    url: '/comboboxInput',
-                    name: 'Combobox Input',
-                    component: ComboboxInputComponent,
-                    section: 'Components'
-                },
-                {
-                    url: '/contextualMenu',
-                    name: 'Contextual Menu',
-                    component: ContextualMenuComponent,
-                    section: 'Components'
-                },
-                {
-                    url: '/datepicker',
-                    name: 'Date Picker',
-                    component: DatePickerComponent,
-                    section: 'Components'
-                },
-                {
-                    url: '/dropdown',
-                    name: 'Dropdown',
-                    component: DropdownComponent,
-                    section: 'Components'
-                },
-                {
-                    url: '/forms',
-                    name: 'Forms',
-                    component: FormsComponent,
-                    section: 'Components'
-                },
-                {
-                    url: '/icon',
-                    name: 'Icon',
-                    component: IconComponent,
-                    section: 'Components'
-                },
-                {
-                    url: '/identifier',
-                    name: 'Identifier',
-                    component: IdentifierComponent,
-                    section: 'Components'
-                },
-                {
-                    url: '/image',
-                    name: 'Image',
-                    component: ImageComponent,
-                    section: 'Components'
-                },
-                {
-                    url: '/inlineHelp',
-                    name: 'Inline Help',
-                    component: InlineHelpComponent,
-                    section: 'Components'
-                },
-                {
-                    url: '/inputGroup',
-                    name: 'Input Group',
-                    component: InputGroupComponent,
-                    section: 'Components'
-                },
-                {
-                    url: '/listGroup',
-                    name: 'List Group',
-                    component: ListGroupComponent,
-                    section: 'Components'
-                },
-                {
-                    url: '/localizationEditor',
-                    name: 'Localization Editor',
-                    component: LocalizationEditorComponent,
-                    section: 'Components'
-                },
-                {
-                    url: '/menu',
-                    name: 'Menu',
-                    component: MenuComponent,
-                    section: 'Components'
-                },
-                {
-                    url: '/modal',
-                    name: 'Modal',
-                    component: ModalComponent,
-                    section: 'Components'
-                },
-                {
-                    url: '/multiInput',
-                    name: 'Multi Input',
-                    component: MultiInputComponent,
-                    section: 'Components'
-                },
-                {
-                    url: '/pagination',
-                    name: 'Pagination',
-                    component: PaginationComponent,
-                    section: 'Components'
-                },
-                {
-                    url: '/panel',
-                    name: 'Panel',
-                    component: PanelComponent,
-                    section: 'Components'
-                },
-                {
-                    url: '/popover',
-                    name: 'Popover',
-                    component:
-                   PopoverComponent,
-                    section: 'Components'
-                },
-                {
-                    url: '/searchInput',
-                    name: 'Search Input',
-                    component: SearchInputComponent,
-                    section: 'Components'
-                },
-                {
-                    url: '/shellbar',
-                    name: 'Shellbar',
-                    component: ShellbarComponent,
-                    section: 'Components'
-                },
-                {
-                    url: '/sideNavigation',
-                    name: 'Side Navigation',
-                    component: SideNavigationComponent,
-                    section: 'Components'
-                },
-                {
-                    url: '/statusIndicators',
-                    name: 'Status Indicators',
-                    component: BadgeComponent,
-                    section: 'Components'
-                },
-                {
-                    url: '/table',
-                    name: 'Table',
-                    component: TableComponent,
-                    section: 'Components'
-                },
-                {
-                    url: '/tabs',
-                    name: 'Tabs',
-                    component: TabsComponent,
-                    section: 'Components'
-                },
-                {
-                    url: '/tile',
-                    name: 'Tile',
-                    component: TileComponent,
-                    section: 'Components'
-                },
-                {
-                    url: '/time',
-                    name: 'Time',
-                    component: TimeComponent,
-                    section: 'Components'
-                },
-                {
-                    url: '/timepicker',
-                    name: 'TimePicker',
-                    component: TimePickerComponent,
-                    section: 'Components'
-                },
-                {
-                    url: '/toggle',
-                    name: 'Toggle',
-                    component: ToggleComponent,
-                    section: 'Components'
-                },
-                {
-                    url: '/token',
-                    name: 'Token',
-                    component: TokenComponent,
-                    section: 'Components'
-                },
-                {
-                    url: '/tree',
-                    name: 'Tree',
-                    component: TreeComponent,
-                    section: 'Components'
-                }
-            ]
-        };
     }
 
     render() {
+        const routes = [
+            {
+                url: '/home',
+                name: 'Home',
+                component: Home,
+                section: 'Getting Started'
+            },
+            {
+                url: '/actionBar',
+                name: 'Action Bar',
+                component: ActionBarComponent,
+                section: 'Components'
+            },
+            {
+                url: '/alert',
+                name: 'Alert',
+                component: AlertComponent,
+                section: 'Components'
+            },
+            {
+                url: '/breadcrumb',
+                name: 'Breadcrumb',
+                component: BreadcrumbComponent,
+                section: 'Components'
+            },
+            {
+                url: '/button',
+                name: 'Button',
+                component: ButtonComponent,
+                section: 'Components'
+            },
+            {
+                url: '/calendar',
+                name: 'Calendar',
+                component: CalendarComponent,
+                section: 'Components'
+            },
+            {
+                url: '/comboboxInput',
+                name: 'Combobox Input',
+                component: ComboboxInputComponent,
+                section: 'Components'
+            },
+            {
+                url: '/contextualMenu',
+                name: 'Contextual Menu',
+                component: ContextualMenuComponent,
+                section: 'Components'
+            },
+            {
+                url: '/datepicker',
+                name: 'Date Picker',
+                component: DatePickerComponent,
+                section: 'Components'
+            },
+            {
+                url: '/dropdown',
+                name: 'Dropdown',
+                component: DropdownComponent,
+                section: 'Components'
+            },
+            {
+                url: '/forms',
+                name: 'Forms',
+                component: FormsComponent,
+                section: 'Components'
+            },
+            {
+                url: '/icon',
+                name: 'Icon',
+                component: IconComponent,
+                section: 'Components'
+            },
+            {
+                url: '/identifier',
+                name: 'Identifier',
+                component: IdentifierComponent,
+                section: 'Components'
+            },
+            {
+                url: '/image',
+                name: 'Image',
+                component: ImageComponent,
+                section: 'Components'
+            },
+            {
+                url: '/inlineHelp',
+                name: 'Inline Help',
+                component: InlineHelpComponent,
+                section: 'Components'
+            },
+            {
+                url: '/inputGroup',
+                name: 'Input Group',
+                component: InputGroupComponent,
+                section: 'Components'
+            },
+            {
+                url: '/listGroup',
+                name: 'List Group',
+                component: ListGroupComponent,
+                section: 'Components'
+            },
+            {
+                url: '/localizationEditor',
+                name: 'Localization Editor',
+                component: LocalizationEditorComponent,
+                section: 'Components'
+            },
+            {
+                url: '/menu',
+                name: 'Menu',
+                component: MenuComponent,
+                section: 'Components'
+            },
+            {
+                url: '/modal',
+                name: 'Modal',
+                component: ModalComponent,
+                section: 'Components'
+            },
+            {
+                url: '/multiInput',
+                name: 'Multi Input',
+                component: MultiInputComponent,
+                section: 'Components'
+            },
+            {
+                url: '/pagination',
+                name: 'Pagination',
+                component: PaginationComponent,
+                section: 'Components'
+            },
+            {
+                url: '/panel',
+                name: 'Panel',
+                component: PanelComponent,
+                section: 'Components'
+            },
+            {
+                url: '/popover',
+                name: 'Popover',
+                component:
+               PopoverComponent,
+                section: 'Components'
+            },
+            {
+                url: '/searchInput',
+                name: 'Search Input',
+                component: SearchInputComponent,
+                section: 'Components'
+            },
+            {
+                url: '/shellbar',
+                name: 'Shellbar',
+                component: ShellbarComponent,
+                section: 'Components'
+            },
+            {
+                url: '/sideNavigation',
+                name: 'Side Navigation',
+                component: SideNavigationComponent,
+                section: 'Components'
+            },
+            {
+                url: '/statusIndicators',
+                name: 'Status Indicators',
+                component: BadgeComponent,
+                section: 'Components'
+            },
+            {
+                url: '/table',
+                name: 'Table',
+                component: TableComponent,
+                section: 'Components'
+            },
+            {
+                url: '/tabs',
+                name: 'Tabs',
+                component: TabsComponent,
+                section: 'Components'
+            },
+            {
+                url: '/tile',
+                name: 'Tile',
+                component: TileComponent,
+                section: 'Components'
+            },
+            {
+                url: '/time',
+                name: 'Time',
+                component: TimeComponent,
+                section: 'Components'
+            },
+            {
+                url: '/timepicker',
+                name: 'TimePicker',
+                component: TimePickerComponent,
+                section: 'Components'
+            },
+            {
+                url: '/toggle',
+                name: 'Toggle',
+                component: ToggleComponent,
+                section: 'Components'
+            },
+            {
+                url: '/token',
+                name: 'Token',
+                component: TokenComponent,
+                section: 'Components'
+            },
+            {
+                url: '/tree',
+                name: 'Tree',
+                component: TreeComponent,
+                section: 'Components'
+            }
+        ];
 
         return (
             <BrowserRouter basename={process.env.PUBLIC_URL}>
@@ -289,7 +272,7 @@ export default class Routes extends Component {
                         <nav>
                             <ul className='frDocs-Nav'>
                                 <li className='frDocs-Nav__headers'>Getting Started</li>
-                                {this.state.routes.sort(sortBy('-section', 'name')).map(route => {
+                                {routes.sort(sortBy('-section', 'name')).map(route => {
                                     if (route.section === 'Getting Started') {
                                         return (
                                             <li key={route.url}>
@@ -309,7 +292,7 @@ export default class Routes extends Component {
                         <nav>
                             <ul className='frDocs-Nav'>
                                 <li className='frDocs-Nav__headers'>Components</li>
-                                {this.state.routes.sort(sortBy('-section', 'name')).map(route => {
+                                {routes.sort(sortBy('-section', 'name')).map(route => {
                                     if (route.section === 'Components') {
                                         return (
                                             <li key={route.url}>
@@ -329,10 +312,10 @@ export default class Routes extends Component {
                     </div>
                     <div className='frDocs-Content'>
                         <Switch>
-                            {this.state.routes.map(route => {
+                            {routes.map(route => {
                                 return (
                                     <Route
-                                        component={route.render ? route.render : route.component}
+                                        component={route.component}
                                         exact
                                         key={route.url}
                                         path={route.url} />
