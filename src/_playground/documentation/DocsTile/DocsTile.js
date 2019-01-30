@@ -43,7 +43,7 @@ export class DocsTile extends Component {
                     className='frDocs-tile__background-toggle'
                     inputProps={{'aria-label': 'Toggle background color'}}
                     onChange={this.handleToggle}
-                    size='xs' />
+                    size='xs'>Toggle background</Toggle>
                 <div className={innerDivClasses}>
                     {children}
                 </div>
