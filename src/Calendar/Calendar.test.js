@@ -27,6 +27,7 @@ describe('<Calendar />', () => {
             ]} />
     );
     const disabledWeekDay = <Calendar disableWeekday={['Monday', 'Tuesday']} />;
+    const disabledWeekDayFakeDays = <Calendar disableWeekday={['Humpday', 'Funday']} />;
     const rangeSelect = <Calendar enableRangeSelection onChange={mockOnChange} />;
     const disablePast = <Calendar disablePastDates />;
     const disableFuture = <Calendar disableFutureDates />;
@@ -41,6 +42,7 @@ describe('<Calendar />', () => {
         mount(disablePast);
         mount(disableFuture);
         mount(disabledWeekDay);
+        mount(disabledWeekDayFakeDays);
         mount(rangeSelect);
     });
 
@@ -88,6 +90,28 @@ describe('<Calendar />', () => {
         expect(currentDateDisplayed.getMonth()).toEqual(3);
     });
 
+    test('click month from list with date range', () => {
+        let wrapper = mount(rangeSelect);
+        expect(wrapper.state('showMonths')).toBeFalsy();
+        wrapper
+            .find(
+                'header.fd-calendar__header button.fd-button--light.fd-button--compact'
+            )
+            .at(1)
+            .simulate('click');
+
+        expect(wrapper.state('showMonths')).toBeTruthy();
+
+        wrapper
+            .find('ul.fd-calendar__list li.fd-calendar__item')
+            .at(3)
+            .simulate('click');
+
+        // check that April was selected
+        const currentDateDisplayed = wrapper.state('currentDateDisplayed');
+        expect(currentDateDisplayed.getMonth()).toEqual(3);
+    });
+
     test('show/hide years', () => {
         let wrapper = mount(defaultCalendar);
         expect(wrapper.state('showYears')).toBeFalsy();
@@ -112,6 +136,31 @@ describe('<Calendar />', () => {
 
     test('click year from list', () => {
         let wrapper = mount(defaultCalendar);
+        expect(wrapper.state('showYears')).toBeFalsy();
+        wrapper
+            .find(
+                'header.fd-calendar__header button.fd-button--light.fd-button--compact'
+            )
+            .at(2)
+            .simulate('click');
+
+        expect(wrapper.state('showYears')).toBeTruthy();
+
+        wrapper
+            .find('ul.fd-calendar__list li.fd-calendar__item')
+            .at(3)
+            .simulate('click');
+
+        // check that April was selected
+        const currentDateDisplayed = wrapper.state('currentDateDisplayed');
+        let currentYearDisplayed = new Date(wrapper.state('currentYear'));
+        expect(currentDateDisplayed.getFullYear()).toEqual(
+            currentYearDisplayed.getFullYear() + 3
+        );
+    });
+
+    test('click year from list from range selector', () => {
+        let wrapper = mount(rangeSelect);
         expect(wrapper.state('showYears')).toBeFalsy();
         wrapper
             .find(
@@ -275,6 +324,60 @@ describe('<Calendar />', () => {
         expect(wrapper.state('arrSelectedDates').length).toEqual(2);
     });
 
+    test('click on multiple days with range enabled', () => {
+        const wrapper = mount(rangeSelect);
+        // select first day of month
+        wrapper
+            .find(
+                'table.fd-calendar__table tbody.fd-calendar__group tr.fd-calendar__row td.fd-calendar__item:not(.fd-calendar__item--other-month)'
+            )
+            .at(0)
+            .simulate('click');
+
+        let currentDateDisplayed = new Date(wrapper.state('selectedDate'));
+
+        // select 5nd day of month
+        wrapper
+            .find(
+                'table.fd-calendar__table tbody.fd-calendar__group tr.fd-calendar__row td.fd-calendar__item:not(.fd-calendar__item--other-month)'
+            )
+            .at(4)
+            .simulate('click');
+
+        let newDateDisplayed = wrapper.state('selectedDate');
+        currentDateDisplayed.setDate(currentDateDisplayed.getDate() + 4);
+        expect(newDateDisplayed.getDate()).toEqual(currentDateDisplayed.getDate());
+
+        // select 15th day of month
+        wrapper
+            .find(
+                'table.fd-calendar__table tbody.fd-calendar__group tr.fd-calendar__row td.fd-calendar__item:not(.fd-calendar__item--other-month)'
+            )
+            .at(14)
+            .simulate('click');
+
+        newDateDisplayed = wrapper.state('selectedDate');
+        currentDateDisplayed.setDate(currentDateDisplayed.getDate() + 10);
+        expect(newDateDisplayed.getDate()).toEqual(currentDateDisplayed.getDate());
+
+        // should clear out previous selections
+        expect(wrapper.state('arrSelectedDates').length).toEqual(1);
+
+        // select day in past
+        wrapper
+            .find(
+                'table.fd-calendar__table tbody.fd-calendar__group tr.fd-calendar__row td.fd-calendar__item:not(.fd-calendar__item--other-month)'
+            )
+            .at(4)
+            .simulate('click');
+
+        newDateDisplayed = wrapper.state('selectedDate');
+        currentDateDisplayed.setDate(currentDateDisplayed.getDate() - 10);
+        expect(newDateDisplayed.getDate()).toEqual(currentDateDisplayed.getDate());
+
+        expect(wrapper.state('arrSelectedDates').length).toEqual(2);
+    });
+
     describe('Prop spreading', () => {
         test('should allow props to be spread to the Calendar component', () => {
             const element = mount(<Calendar data-sample='Sample' />);
@@ -285,7 +388,7 @@ describe('<Calendar />', () => {
         });
 
         test('should allow props to be spread to the Calendar component\'s month list ul element', () => {
-            const element = mount(<Calendar monthListProps={{'data-sample': 'Sample'}} />);
+            const element = mount(<Calendar monthListProps={{ 'data-sample': 'Sample' }} />);
 
             element.find('.fd-calendar__action').at(1).childAt(0).simulate('click');
 
@@ -295,7 +398,7 @@ describe('<Calendar />', () => {
         });
 
         test('should allow props to be spread to the Calendar component\'s year list ul element', () => {
-            const element = mount(<Calendar yearListProps={{'data-sample': 'Sample'}} />);
+            const element = mount(<Calendar yearListProps={{ 'data-sample': 'Sample' }} />);
 
             element.find('.fd-calendar__action').at(2).childAt(0).simulate('click');
 
@@ -305,7 +408,7 @@ describe('<Calendar />', () => {
         });
 
         test('should allow props to be spread to the Calendar component\'s table element', () => {
-            const element = mount(<Calendar tableProps={{'data-sample': 'Sample'}} />);
+            const element = mount(<Calendar tableProps={{ 'data-sample': 'Sample' }} />);
 
             expect(
                 element.find('table').getDOMNode().attributes['data-sample'].value
@@ -313,7 +416,7 @@ describe('<Calendar />', () => {
         });
 
         test('should allow props to be spread to the Calendar component\'s thead element', () => {
-            const element = mount(<Calendar tableHeaderProps={{'data-sample': 'Sample'}} />);
+            const element = mount(<Calendar tableHeaderProps={{ 'data-sample': 'Sample' }} />);
 
             expect(
                 element.find('thead').getDOMNode().attributes['data-sample'].value
@@ -321,7 +424,7 @@ describe('<Calendar />', () => {
         });
 
         test('should allow props to be spread to the Calendar component\'s tbody element', () => {
-            const element = mount(<Calendar tableBodyProps={{'data-sample': 'Sample'}} />);
+            const element = mount(<Calendar tableBodyProps={{ 'data-sample': 'Sample' }} />);
 
             expect(
                 element.find('tbody').getDOMNode().attributes['data-sample'].value
