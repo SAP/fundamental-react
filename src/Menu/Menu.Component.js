@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import React from 'react';
 import { Description, DocsText, DocsTile, Header, Import, Properties, Separator } from '../_playground';
 import { Menu, MenuGroup, MenuItem, MenuList } from '../';
@@ -14,40 +15,62 @@ export const MenuComponent = () => {
 
     const menuGroupCode = `<Menu>
     <MenuList>
-        <MenuItem link="/">Option 1</MenuItem>
-        <MenuItem link="/">Option 2</MenuItem>
-        <MenuItem link="/">Option 3</MenuItem>
+        <MenuItem>
+            <Link to='/'>Option 1</Link>
+        </MenuItem>
+        <MenuItem>
+            <Link to='/'>Option 2</Link>
+        </MenuItem>
+        <MenuItem>
+            <Link to='/'>Option 3</Link>
+        </MenuItem>
     </MenuList>
     <MenuGroup title="Group Header">
         <MenuList>
-            <MenuItem link="/">Option 4</MenuItem>
-            <MenuItem link="/">Option 5</MenuItem>
-            <MenuItem link="/">Option 6</MenuItem>
+            <MenuItem>
+                <Link to='/'>Option 4</Link>
+            </MenuItem>
+            <MenuItem>
+                <Link to='/'>Option 5</Link>
+            </MenuItem>
+            <MenuItem>
+                <Link to='/'>Option 6</Link>
+            </MenuItem>
         </MenuList>
     </MenuGroup>
 </Menu>`;
 
     const menuSeparatorCode = `<Menu>
     <MenuList>
-        <MenuItem link="/" separator>
-            Option 1
+        <MenuItem separator>
+            <Link to='/'>Option 1</Link>
         </MenuItem>
-        <MenuItem link="/" separator>
-            Option 2
+        <MenuItem separator>
+            <Link to='/'>Option 2</Link>
         </MenuItem>
-        <MenuItem link="/" separator>
-            Option 3
+        <MenuItem separator>
+            <Link to='/'>Option 3</Link>
         </MenuItem>
-        <MenuItem link="/">Option 4</MenuItem>
+        <MenuItem>
+            <Link to='/'>Option 4</Link>
+        </MenuItem>
     </MenuList>
 </Menu>`;
 
     const menuAddonBeforeCode = `<Menu addonBefore={true}>
     <MenuList>
-        <MenuItem link="/">Option 1</MenuItem>
-        <MenuItem link="/" addon="accept">Option 2</MenuItem>
-        <MenuItem link="/">Option 3</MenuItem>
-        <MenuItem link="/">Option 4</MenuItem>
+        <MenuItem>
+            <Link to='/'>Option 1</Link>
+        </MenuItem>
+        <MenuItem addon='accept'>
+            <Link to='/'>Option 2</Link>
+        </MenuItem>
+        <MenuItem>
+            <Link to='/'>Option 3</Link>
+        </MenuItem>
+        <MenuItem>
+            <Link to='/'>Option 4</Link>
+        </MenuItem>
     </MenuList>
 </Menu>`;
 
@@ -87,15 +110,27 @@ export const MenuComponent = () => {
             <DocsTile>
                 <Menu>
                     <MenuList>
-                        <MenuItem link='/'>Option 1</MenuItem>
-                        <MenuItem link='/'>Option 2</MenuItem>
-                        <MenuItem link='/'>Option 3</MenuItem>
+                        <MenuItem>
+                            <Link to='/'>Option 1</Link>
+                        </MenuItem>
+                        <MenuItem>
+                            <Link to='/'>Option 2</Link>
+                        </MenuItem>
+                        <MenuItem>
+                            <Link to='/'>Option 3</Link>
+                        </MenuItem>
                     </MenuList>
                     <MenuGroup title='Group Header'>
                         <MenuList>
-                            <MenuItem link='/'>Option 4</MenuItem>
-                            <MenuItem link='/'>Option 5</MenuItem>
-                            <MenuItem link='/'>Option 6</MenuItem>
+                            <MenuItem>
+                                <Link to='/'>Option 4</Link>
+                            </MenuItem>
+                            <MenuItem>
+                                <Link to='/'>Option 5</Link>
+                            </MenuItem>
+                            <MenuItem>
+                                <Link to='/'>Option 6</Link>
+                            </MenuItem>
                         </MenuList>
                     </MenuGroup>
                 </Menu>
@@ -108,16 +143,18 @@ export const MenuComponent = () => {
             <DocsTile>
                 <Menu>
                     <MenuList>
-                        <MenuItem link='/' separator>
-                            Option 1
+                        <MenuItem separator>
+                            <Link to='/'>Option 1</Link>
                         </MenuItem>
-                        <MenuItem link='/' separator>
-                            Option 2
+                        <MenuItem separator>
+                            <Link to='/'>Option 2</Link>
                         </MenuItem>
-                        <MenuItem link='/' separator>
-                            Option 3
+                        <MenuItem separator>
+                            <Link to='/'>Option 3</Link>
                         </MenuItem>
-                        <MenuItem link='/'>Option 4</MenuItem>
+                        <MenuItem>
+                            <Link to='/'>Option 4</Link>
+                        </MenuItem>
                     </MenuList>
                 </Menu>
             </DocsTile>
@@ -129,12 +166,18 @@ export const MenuComponent = () => {
             <DocsTile>
                 <Menu addonBefore>
                     <MenuList>
-                        <MenuItem link='/'>Option 1</MenuItem>
-                        <MenuItem addon='accept' link='/'>
-                            Option 2
+                        <MenuItem>
+                            <Link to='/'>Option 1</Link>
                         </MenuItem>
-                        <MenuItem link='/'>Option 3</MenuItem>
-                        <MenuItem link='/'>Option 4</MenuItem>
+                        <MenuItem addon='accept'>
+                            <Link to='/'>Option 2</Link>
+                        </MenuItem>
+                        <MenuItem>
+                            <Link to='/'>Option 3</Link>
+                        </MenuItem>
+                        <MenuItem>
+                            <Link to='/'>Option 4</Link>
+                        </MenuItem>
                     </MenuList>
                 </Menu>
             </DocsTile>

@@ -53,6 +53,30 @@ describe('<Toggle />', () => {
         expect(wrapper.state(['checked'])).toBeTruthy();
     });
 
+    describe('Toggle default rendering', () => {
+        test('should default to a not checked state', () => {
+            const element = mount(<Toggle />);
+
+            expect(element.state(['checked'])).toBe(false);
+        });
+        test('should have truthy checked state when passed checked prop', () => {
+            const element = mount(<Toggle checked />);
+
+            expect(element.state(['checked'])).toBe(true);
+        });
+    });
+
+    describe('onChange handler', () => {
+        test('should dispatch the onChange callback with the event', () => {
+            let f = jest.fn();
+            const element = mount(<Toggle data-sample='Sample' onChange={f} />);
+
+            element.find('input[type="checkbox"]').simulate('change');
+
+            expect(f).toHaveBeenCalledTimes(1);
+        });
+    });
+
     describe('Prop spreading', () => {
         test('should allow props to be spread to the Toggle component', () => {
             const element = mount(<Toggle data-sample='Sample' />);

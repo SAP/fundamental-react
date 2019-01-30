@@ -95,6 +95,7 @@ $fd-fonts-path: '../../node_modules/fiori-fundamentals/dist/fonts/';
                 padding: 10px 0;
                 background-color: '#f3f4f5'
             }
+
             .frDocs-markdown {
                 pre {
                     margin: 25px 0px;
@@ -117,6 +118,29 @@ $fd-fonts-path: '../../node_modules/fiori-fundamentals/dist/fonts/';
                         display: block;
                     }
                 }
+
+            .frDocs-Content__separator {
+                display: block;
+                margin: 2rem 0;
+                border-bottom: 1px solid #E3E3E3;
+            }
+
+            .frDocs-Content__docsText {
+                padding: 15px;
+                font-size: 13px;
+                border: 1px solid #ccc;
+                border-top: none;
+                border-radius: 0 0 4px 4px;
+                margin: 0;
+            }
+            .frDocs-docsText__button {
+                padding: 5px;
+                border: 1px solid #ccc;
+                text-align: center;
+            }
+
+            .frDocs-docsText__buttonCopy {
+                margin-left: 5px;
             }
         }
     }
