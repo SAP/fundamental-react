@@ -2,7 +2,7 @@
   {
     name: "Fundamental-React Size",
     webpack: true,
-    path: "dist/index.js",
+    path: "lib/index.js",
     limit: "30 KB"
   }
 ]
