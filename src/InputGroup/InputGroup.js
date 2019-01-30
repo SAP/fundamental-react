@@ -268,9 +268,7 @@ InputGroup.propTypes = {
 };
 
 InputGroup.defaultProps = {
-    actions: false,
     addonPos: 'after',
-    compact: false,
     inputType: 'text',
     inputValue: ''
 };

@@ -281,12 +281,6 @@ SearchInput.propTypes = {
     onSearch: PropTypes.func
 };
 
-SearchInput.defaultProps = {
-    compact: false,
-    inShellbar: false,
-    noSearchBtn: false
-};
-
 SearchInput.propDescriptions = {
     noSearchBtn: 'Set to **true** to render without a search button.',
     onEnter: 'Callback function when the user hits the <Enter> key.',

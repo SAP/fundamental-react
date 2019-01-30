@@ -81,10 +81,6 @@ Alert.propTypes = {
     type: PropTypes.oneOf(ALERT_TYPES)
 };
 
-Alert.defaultProps = {
-    dismissible: false
-};
-
 Alert.propDescriptions = {
     dismissible: 'Set to **true** to show a dismiss button.',
     link: 'Value to be applied to the anchor\'s `href` attribute.',

@@ -286,12 +286,6 @@ TimeItem.propTypes = {
     value: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
 };
 
-TimeItem.defaultProps = {
-    id: '',
-    value: null,
-    arialabel: ''
-};
-
 export class Time extends Component {
     constructor(props) {
         super(props);
@@ -494,12 +488,9 @@ Time.propTypes = {
 };
 
 Time.defaultProps = {
-    id: '',
     showHour: true,
     showMinute: true,
     showSecond: true,
-    format12Hours: false,
-    disabled: false,
     spinners: true,
     time: {
         hour: '00',

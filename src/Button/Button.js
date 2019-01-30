@@ -55,14 +55,6 @@ Button.propTypes = {
     onClick: PropTypes.func
 };
 
-Button.defaultProps = {
-    compact: false,
-    disabled: false,
-    dropdown: false,
-    navbar: false,
-    selected: false
-};
-
 Button.propDescriptions = {
     dropdown: 'Set to **true** if button triggers a dropdown list. ',
     navbar: 'Set to **true** if button is part of global navbar.',

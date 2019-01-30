@@ -97,10 +97,6 @@ Modal.propTypes = {
     titleProps: PropTypes.object
 };
 
-Modal.defaultProps = {
-    show: false
-};
-
 Modal.propDescriptions = {
     actions: 'Node(s) to render within the footer of the dialog.',
     bodyProps: 'Additional props to be spread to the body section of the dialog.',

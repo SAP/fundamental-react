@@ -445,11 +445,6 @@ DatePicker.propTypes = {
     inputProps: PropTypes.object
 };
 
-DatePicker.defaultProps = {
-    compact: false,
-    enableRangeSelection: false
-};
-
 DatePicker.propDescriptions = {
     ...Calendar.propDescriptions,
     enableRangeSelection: 'Set to **true** to enable the selection of a date range (begin and end).'

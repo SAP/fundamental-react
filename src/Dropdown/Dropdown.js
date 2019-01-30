@@ -26,10 +26,6 @@ Dropdown.propTypes = {
     standard: PropTypes.bool
 };
 
-Dropdown.defaultProps = {
-    standard: false
-};
-
 Dropdown.propDescriptions = {
     standard: 'Set to **true** to enable a dropdown for toolbar.'
 };

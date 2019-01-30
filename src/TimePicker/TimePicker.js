@@ -26,27 +26,14 @@ class TimePickerItem extends Component {
         value: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
         onChange: PropTypes.func
     };
-    static defaultProps = {
-        value: null,
-        inputId: '',
-        buttonID: '',
-        style: '',
-        isValid: false,
-        length: 0,
-        disabled: false,
-        format12Hours: false,
-        showHour: false,
-        showMinute: false,
-        showSecond: false
-    };
 
     constructor(props) {
         super(props);
         var length = this.setLength(props);
         this.state = {
             value: this.props.value,
-            inputId: this.props.id + '-input',
-            buttonID: this.props.id + '-button',
+            inputId: this.props.id && this.props.id + '-input',
+            buttonID: this.props.id && this.props.id + '-button',
             style: 'fd-input',
             isValid: false,
             length: length
@@ -292,15 +279,6 @@ TimePickerItem.propTypes = {
     onChange: PropTypes.func
 };
 
-TimePickerItem.defaultProps = {
-    value: null,
-    inputId: '',
-    buttonID: '',
-    style: '',
-    isValid: false,
-    length: 0
-};
-
 export class TimePicker extends React.Component {
     constructor(props) {
         super(props);
@@ -459,20 +437,16 @@ TimePicker.propTypes = {
 };
 
 TimePicker.defaultProps = {
-    id: '',
     showHour: true,
     showMinute: true,
     showSecond: true,
-    format12Hours: false,
-    disabled: false,
     spinners: true,
     time: {
         hour: '00',
         minute: '00',
         second: '00',
         meridiem: 0
-    },
-    value: ''
+    }
 };
 
 TimePicker.propDescriptions = {

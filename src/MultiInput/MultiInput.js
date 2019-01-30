@@ -199,10 +199,6 @@ MultiInput.propTypes = {
     onTagsUpdate: PropTypes.func
 };
 
-MultiInput.defaultProps = {
-    compact: false
-};
-
 MultiInput.propDescriptions = {
     data: 'Collection of items to display in the list.',
     onTagsUpdate: 'Callback function when a tag is added or removed. Returns array of tags selected.',

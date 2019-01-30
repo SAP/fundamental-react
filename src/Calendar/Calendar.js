@@ -583,12 +583,6 @@ Calendar.propTypes = {
     onChange: PropTypes.func
 };
 
-Calendar.defaultProps = {
-    disableFutureDates: false,
-    disablePastDates: false,
-    disableWeekends: false
-};
-
 Calendar.propDescriptions = {
     blockedDates: 'Blocks dates that are in between the blocked dates.',
     disableAfterDate: 'Disables dates of a calendar that come after the specified date.',

@@ -49,8 +49,6 @@ exports[`<ListGroup /> create list group 1`] = `
     >
       <button
         className="fd-button fd-button--standard sap-icon--edit"
-        disabled={false}
-        selected={false}
       />
     </span>
   </li>
@@ -70,8 +68,6 @@ exports[`<ListGroup /> create list group 2`] = `
     >
       <button
         className="fd-button fd-button--standard sap-icon--edit"
-        disabled={false}
-        selected={false}
       />
     </span>
   </li>

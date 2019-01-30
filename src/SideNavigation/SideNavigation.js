@@ -24,10 +24,6 @@ SideNav.propTypes = {
     icons: PropTypes.bool
 };
 
-SideNav.defaultProps = {
-    icons: false
-};
-
 SideNav.propDescriptions = {
     icons: 'Set to **true** enables side navigation collapsed with icons.'
 };

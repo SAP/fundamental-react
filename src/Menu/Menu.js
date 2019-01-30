@@ -24,10 +24,6 @@ Menu.propTypes = {
     className: PropTypes.string
 };
 
-Menu.defaultProps = {
-    addonBefore: false
-};
-
 Menu.propDescriptions = {
     addonBefore: 'Set to **true** enables menu items with add-on before.'
 };
@@ -104,11 +100,6 @@ MenuItem.propTypes = {
     separator: PropTypes.bool,
     url: PropTypes.string,
     urlProps: PropTypes.object
-};
-
-MenuItem.defaultProps = {
-    isLink: false,
-    separator: false
 };
 
 MenuItem.propDescriptions = {

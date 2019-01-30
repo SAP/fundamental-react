@@ -3,7 +3,6 @@
 exports[`<Time /> create time component 1`] = `
 <div
   className="fd-time"
-  id=""
 >
   <div
     className="fd-time__item"
@@ -129,7 +128,6 @@ exports[`<Time /> create time component 1`] = `
 exports[`<Time /> create time component 2`] = `
 <div
   className="fd-time"
-  id=""
 >
   <div
     className="fd-time__item"
@@ -255,7 +253,6 @@ exports[`<Time /> create time component 2`] = `
 exports[`<Time /> create time component 3`] = `
 <div
   className="fd-time"
-  id=""
 >
   <div
     className="fd-time__item"
@@ -381,7 +378,6 @@ exports[`<Time /> create time component 3`] = `
 exports[`<Time /> create time component 4`] = `
 <div
   className="fd-time"
-  id=""
 >
   <div
     className="fd-time__item"
@@ -507,7 +503,6 @@ exports[`<Time /> create time component 4`] = `
 exports[`<Time /> create time component 5`] = `
 <div
   className="fd-time"
-  id=""
 >
   <div
     className="fd-time__item"
@@ -670,7 +665,6 @@ exports[`<Time /> create time component 5`] = `
 exports[`<Time /> create time component 6`] = `
 <div
   className="fd-time"
-  id=""
 >
   <div
     className="fd-time__item"
@@ -742,7 +736,6 @@ exports[`<Time /> create time component 6`] = `
 exports[`<Time /> create time component 7`] = `
 <div
   className="fd-time"
-  id=""
 >
   <div
     className="fd-time__item"
@@ -830,7 +823,6 @@ exports[`<Time /> create time component 7`] = `
 exports[`<Time /> create time component 8`] = `
 <div
   className="fd-time"
-  id=""
 >
   <div
     className="fd-time__item"

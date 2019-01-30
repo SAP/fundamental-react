@@ -45,10 +45,6 @@ Tile.propTypes = {
     rowSpan: PropTypes.number
 };
 
-Tile.defaultProps = {
-    disabled: false
-};
-
 Tile.propDescriptions = {
     backgroundColor: 'Sets a background color class.',
     colorAccent: 'Sets a background color accent class. Options include numbers from 1 to 9.',
@@ -134,10 +130,6 @@ ProductTile.propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,
     disabled: PropTypes.bool
-};
-
-ProductTile.defaultProps = {
-    disabled: false
 };
 
 export const ProductTileContent = props => {
