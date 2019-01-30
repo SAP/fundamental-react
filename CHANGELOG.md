@@ -2,6 +2,31 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.3.0-rc.4"></a>
+# [0.3.0-rc.4](https://github.com/SAP/fundamental-react/compare/v0.3.0-rc.3...v0.3.0-rc.4) (2019-01-30)
+
+
+### Bug Fixes
+
+* update unit test, refactor code for Calendar ([#324](https://github.com/SAP/fundamental-react/issues/324)) ([cc3114f](https://github.com/SAP/fundamental-react/commit/cc3114f))
+
+
+
+<a name="0.3.0-rc.3"></a>
+# [0.3.0-rc.3](https://github.com/SAP/fundamental-react/compare/v0.3.0-rc.2...v0.3.0-rc.3) (2019-01-29)
+
+
+
+<a name="0.3.0-rc.2"></a>
+# [0.3.0-rc.2](https://github.com/SAP/fundamental-react/compare/v0.3.0-rc.1...v0.3.0-rc.2) (2019-01-29)
+
+
+### Bug Fixes
+
+* refine toggle component ([#319](https://github.com/SAP/fundamental-react/issues/319)) ([88c0b94](https://github.com/SAP/fundamental-react/commit/88c0b94))
+
+
+
 <a name="0.3.0-rc.1"></a>
 # [0.3.0-rc.1](https://github.com/SAP/fundamental-react/compare/v0.3.0-rc.0...v0.3.0-rc.1) (2019-01-29)
 
