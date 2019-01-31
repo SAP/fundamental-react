@@ -465,21 +465,16 @@ export class Calendar extends Component {
                     }
                 );
 
-                // check if day is disabled
-                if (this.displayDisabled(day)) {
-                    days.push(<td className={dayClasses} key={copyDate}
-                        role='gridcell'><span className='fd-calendar__text'>{dateFormatted}</span>
-                    </td>);
-                } else {
-                    days.push(<td className={dayClasses} key={copyDate}
-                        onClick={() => this.dateClick(copyDate, enableRangeSelection)} role='gridcell'><span className='fd-calendar__text'>{dateFormatted}</span>
-                    </td>);
-                }
+                days.push(<td className={dayClasses} key={copyDate}
+                    onClick={!this.displayDisabled(day) ? () => this.dateClick(copyDate, enableRangeSelection) : null
+                    } role='gridcell' > <span className='fd-calendar__text'>{dateFormatted}</span>
+                </td >);
+
                 day = this.addDays(day, 1);
             }
 
             rows.push(
-                <tr className='fd-calendar__row' key={day}>
+                <tr className='fd-calendar__row' key={day} >
                     {days}
                 </tr>
             );
