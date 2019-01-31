@@ -2,15 +2,146 @@ $fd-icons-path: '../../node_modules/fiori-fundamentals/scss/icons/';
 $fd-fonts-path: '../../node_modules/fiori-fundamentals/dist/fonts/';
 @import '../../node_modules/fiori-fundamentals/scss/all.scss';
 
-.App {
+// Fundamental React Docs Styles
+.frDocs-App {
     background-color: white;
+
+   .frDocs-Container {
+        display: flex;
+        justify-content: space-between;
+        height: 100vh;
+        overflow: hidden;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+
+        .frDocs-Sidebar {
+            color: #21262c;
+            min-width: 16rem;
+            background-color: #f1f3f6;
+
+            .frDocs-Logo {
+                font-size: 1.25rem;
+                margin-bottom: 0;
+                display: flex;
+                justify-content: center;
+                > a {
+                    color: inherit;
+                }
+            }
+
+            .frDocs-Nav {
+                list-style: none;
+                border-top: 2px solid #dbe7f3;
+                height: 90%;
+                overflow: auto;
+
+                .frDocs-Nav__headers {
+                    color: #424e5a;
+                    padding: 15px 20px;
+                    display: block;
+                }
+
+                .frDocs-Nav__item {
+                    display: block;
+                    color: #21262c;
+                    font-size: 0.875rem;
+                    position: relative;
+                    padding: 13px 40px;
+                }
+                
+                .frDocs-Nav__item--selected {
+                    border-left: 6px solid #2fd0c8;
+                }
+                
+                .frDocs-Nav__item:hover,
+                .frDocs-Nav__item--active {
+                    color: #424e5a;
+                    border-left: 6px solid #2fd0c8;
+                    padding-left: 34px;
+                }
+            }
+        }
+
+        .frDocs-Content {
+            flex-grow: 1;
+            overflow-y: scroll;
+            padding-bottom: 2rem;
+            background-color: white;
+            margin-right: auto;
+            margin-left: auto;
+            padding-left: 1rem;
+            padding-right: 1rem;
+
+            .frDocs-Content__header {
+                margin: 12px 0;
+                margin-top: 2rem;
+                font-size: 2.2rem;
+            }
+
+            .frDocs-Content__description {
+                margin-bottom: 1.5rem;
+                font-size: 1rem;
+                font-weight: 300;
+            }
+
+            .frDocs-Content__tile {
+                border-radius: 4px 4px 0 0;
+                border: 1px solid #ccc;
+                border-bottom: none;
+                padding: 10px 0;
+                
+                .frDocs-tile__background-toggle {
+                    display: flex;
+                    justify-content: flex-end;
+                    margin: 15px;
+                }
+
+                .frDocs-tile__centered {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+            .frDocs-Content__tile-background {
+                background: #edeef0;
+                transition: background-color .25s;
+            }
+
+            .frDocs-Content__separator {
+                display: block;
+                margin: 2rem 0;
+                border-bottom: 1px solid #E3E3E3;
+            }
+
+            .frDocs-Content__docsText {
+                padding: 15px;
+                font-size: 13px;
+                border: 1px solid #ccc;
+                border-top: none;
+                border-radius: 0 0 4px 4px;
+                margin: 0;
+            }
+            .frDocs-docsText__button {
+                padding: 5px;
+                border: 1px solid #ccc;
+                text-align: center;
+            }
+
+            .frDocs-docsText__buttonCopy {
+                margin-left: 5px;
+            }
+        }
+    }
 }
 
+// Fundamental React Component Overrides 
 .fd-counter--notification {
     position: relative;
 }
 
 .fd-tile__content {
+
     .fd-button--grouped {
         margin-right: 0;
     }
@@ -42,102 +173,13 @@ $fd-fonts-path: '../../node_modules/fiori-fundamentals/dist/fonts/';
     padding-bottom: 10px;
 }
 
-.docs-component {
-    margin-bottom: -28px;
-    border-radius: 4px;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-    padding-bottom: 8px;
-    border: 1px solid #ccc;
-}
-
 .fd-side-nav.fd-side-nav--icons {
     max-width: 65px;
-}
-
-.container {
-    display: flex;
-    justify-content: space-between;
-    height: 100vh;
-    overflow: hidden;
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.logo {
-    font-size: 1.25rem;
-    margin-bottom: 0;
-    display: flex;
-    justify-content: center;
-    > a {
-        color: inherit;
-    }
-}
-
-.logo-subtitle {
-    font-size: 0.75rem;
-}
-
-.sidebar {
-    color: #21262c;
-    min-width: 16rem;
-    background-color: #f1f3f6;
-}
-
-.nav {
-    list-style: none;
-    border-top: 2px solid #dbe7f3;
-    height: 90%;
-    overflow: auto;
-}
-
-.nav-item {
-    display: block;
-    color: #21262c;
-    font-size: 0.875rem;
-    position: relative;
-    padding: 13px 40px;
-}
-
-.side-nav__headers {
-    color: #424e5a;
-    padding: 15px 20px;
-    display: block;
-}
-
-.nav-item--selected {
-    border-left: 6px solid #2fd0c8;
-}
-
-.nav-item:hover,
-.nav-item--active {
-    color: #424e5a;
-    border-left: 6px solid #2fd0c8;
-    padding-left: 34px;
-}
-
-.content {
-    flex-grow: 1;
-    overflow-y: scroll;
-    padding-bottom: 2rem;
-    background-color: white;
-}
-
-.content-margin {
-    margin-right: auto;
-    margin-left: auto;
-    padding-left: 1rem;
-    padding-right: 1rem;
 }
 
 .property-header {
     text-align: left;
     padding-right: 15px;
-}
-
-.header {
-    margin: 12px 0;
 }
 
 .fd-side-nav {
@@ -250,10 +292,4 @@ $fd-fonts-path: '../../node_modules/fiori-fundamentals/dist/fonts/';
             color: var(--fd-color-status-3);
         }
     }
-}
-
-.description {
-    margin-bottom: 1.5rem;
-    font-size: 1rem;
-    font-weight: 300;
 }

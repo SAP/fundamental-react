@@ -2,6 +2,157 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.3.0-rc.7"></a>
+# [0.3.0-rc.7](https://github.com/SAP/fundamental-react/compare/v0.3.0-rc.6...v0.3.0-rc.7) (2019-01-31)
+
+
+
+<a name="0.3.0-rc.6"></a>
+# [0.3.0-rc.6](https://github.com/SAP/fundamental-react/compare/v0.3.0-rc.5...v0.3.0-rc.6) (2019-01-31)
+
+
+### Bug Fixes
+
+* lint scripts ([#328](https://github.com/SAP/fundamental-react/issues/328)) ([bef19a0](https://github.com/SAP/fundamental-react/commit/bef19a0))
+
+
+
+<a name="0.3.0-rc.5"></a>
+# [0.3.0-rc.5](https://github.com/SAP/fundamental-react/compare/v0.3.0-rc.4...v0.3.0-rc.5) (2019-01-31)
+
+
+### Bug Fixes
+
+* Calendar component tests failing in Travis ([#329](https://github.com/SAP/fundamental-react/issues/329)) ([6817d31](https://github.com/SAP/fundamental-react/commit/6817d31))
+
+
+
+<a name="0.3.0-rc.4"></a>
+# [0.3.0-rc.4](https://github.com/SAP/fundamental-react/compare/v0.3.0-rc.3...v0.3.0-rc.4) (2019-01-30)
+
+
+### Bug Fixes
+
+* update unit test, refactor code for Calendar ([#324](https://github.com/SAP/fundamental-react/issues/324)) ([cc3114f](https://github.com/SAP/fundamental-react/commit/cc3114f))
+
+
+
+<a name="0.3.0-rc.3"></a>
+# [0.3.0-rc.3](https://github.com/SAP/fundamental-react/compare/v0.3.0-rc.2...v0.3.0-rc.3) (2019-01-29)
+
+
+
+<a name="0.3.0-rc.2"></a>
+# [0.3.0-rc.2](https://github.com/SAP/fundamental-react/compare/v0.3.0-rc.1...v0.3.0-rc.2) (2019-01-29)
+
+
+### Bug Fixes
+
+* refine toggle component ([#319](https://github.com/SAP/fundamental-react/issues/319)) ([88c0b94](https://github.com/SAP/fundamental-react/commit/88c0b94))
+
+
+
+<a name="0.3.0-rc.1"></a>
+# [0.3.0-rc.1](https://github.com/SAP/fundamental-react/compare/v0.3.0-rc.0...v0.3.0-rc.1) (2019-01-29)
+
+
+### Features
+
+* Remove React Router from Breadcrumbs ([#294](https://github.com/SAP/fundamental-react/issues/294)) ([29e8df5](https://github.com/SAP/fundamental-react/commit/29e8df5))
+
+
+
+<a name="0.3.0-rc.0"></a>
+# [0.3.0-rc.0](https://github.com/SAP/fundamental-react/compare/v0.2.1-rc.9...v0.3.0-rc.0) (2019-01-29)
+
+
+### Features
+
+* Remove React Router from Menu ([#293](https://github.com/SAP/fundamental-react/issues/293)) ([591b489](https://github.com/SAP/fundamental-react/commit/591b489))
+
+
+
+<a name="0.2.1-rc.9"></a>
+## [0.2.1-rc.9](https://github.com/SAP/fundamental-react/compare/v0.2.1-rc.8...v0.2.1-rc.9) (2019-01-28)
+
+
+### Bug Fixes
+
+* set viewport to 100%; clean up docs styles a bit ([#312](https://github.com/SAP/fundamental-react/issues/312)) ([396de01](https://github.com/SAP/fundamental-react/commit/396de01))
+
+
+
+<a name="0.2.1-rc.8"></a>
+## [0.2.1-rc.8](https://github.com/SAP/fundamental-react/compare/v0.2.1-rc.7...v0.2.1-rc.8) (2019-01-28)
+
+
+### Bug Fixes
+
+* move explicit prop types into constants file, create custom prop type validation for range values ([e02223a](https://github.com/SAP/fundamental-react/commit/e02223a))
+
+
+
+<a name="0.2.1-rc.7"></a>
+## [0.2.1-rc.7](https://github.com/SAP/fundamental-react/compare/v0.2.1-rc.6...v0.2.1-rc.7) (2019-01-28)
+
+
+### Bug Fixes
+
+* gh-pages deployment process ([#307](https://github.com/SAP/fundamental-react/issues/307)) ([6b2c241](https://github.com/SAP/fundamental-react/commit/6b2c241))
+
+
+
+<a name="0.2.1-rc.6"></a>
+## [0.2.1-rc.6](https://github.com/SAP/fundamental-react/compare/v0.2.1-rc.5...v0.2.1-rc.6) (2019-01-28)
+
+
+### Bug Fixes
+
+* update Shellbar to 100% code coverage ([#309](https://github.com/SAP/fundamental-react/issues/309)) ([d53cd6f](https://github.com/SAP/fundamental-react/commit/d53cd6f))
+
+
+
+<a name="0.2.1-rc.5"></a>
+## [0.2.1-rc.5](https://github.com/SAP/fundamental-react/compare/v0.2.1-rc.4...v0.2.1-rc.5) (2019-01-25)
+
+
+
+<a name="0.2.1-rc.4"></a>
+## [0.2.1-rc.4](https://github.com/SAP/fundamental-react/compare/v0.2.1-rc.3...v0.2.1-rc.4) (2019-01-25)
+
+
+### Bug Fixes
+
+* update code coverage to 100% ([#308](https://github.com/SAP/fundamental-react/issues/308)) ([d8d9a1a](https://github.com/SAP/fundamental-react/commit/d8d9a1a))
+
+
+
+<a name="0.2.1-rc.3"></a>
+## [0.2.1-rc.3](https://github.com/SAP/fundamental-react/compare/v0.2.1-rc.2...v0.2.1-rc.3) (2019-01-25)
+
+
+
+<a name="0.2.1-rc.2"></a>
+## [0.2.1-rc.2](https://github.com/SAP/fundamental-react/compare/v0.2.1-rc.1...v0.2.1-rc.2) (2019-01-25)
+
+
+
+<a name="0.2.1-rc.1"></a>
+## [0.2.1-rc.1](https://github.com/SAP/fundamental-react/compare/v0.2.1-rc.0...v0.2.1-rc.1) (2019-01-25)
+
+
+### Bug Fixes
+
+* add missing command to deploy script ([#305](https://github.com/SAP/fundamental-react/issues/305)) ([98d2f4b](https://github.com/SAP/fundamental-react/commit/98d2f4b))
+* initialPage error on component load ([#304](https://github.com/SAP/fundamental-react/issues/304)) ([90e6ba9](https://github.com/SAP/fundamental-react/commit/90e6ba9))
+
+
+
+<a name="0.2.1-rc.0"></a>
+## [0.2.1-rc.0](https://github.com/SAP/fundamental-react/compare/v0.2.0...v0.2.1-rc.0) (2019-01-25)
+
+
+
 <a name="0.2.0"></a>
 # [0.2.0](https://github.com/SAP/fundamental-react/compare/v0.2.0-rc.7...v0.2.0) (2019-01-25)
 
