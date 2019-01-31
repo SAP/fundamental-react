@@ -2,11 +2,11 @@ import { mount } from 'enzyme';
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { Link, MemoryRouter } from 'react-router-dom';
-import { Tab, TabComponent } from './Tabs';
+import { Tab, TabGroup } from './Tabs';
 
 
 describe('<Tabs />', () => {
-    const tabComponent = (
+    const tabsExample = (
         [
             <Tab
                 content='Hello world'
@@ -31,7 +31,7 @@ describe('<Tabs />', () => {
         ]
     );
 
-    const tabComponentWithLink = (
+    const tabsExampleWithLink = (
         [
             <Tab
                 content='Hello world'
@@ -59,30 +59,34 @@ describe('<Tabs />', () => {
     );
 
     const defaultTabs = (
-        <TabComponent>
-            {tabComponent}
-        </TabComponent>
+        <TabGroup
+            selectedId='1'>
+            {tabsExample}
+        </TabGroup>
     );
     const defaultTabsWithClass = (
-        <TabComponent
-            className='blue'>
-            {tabComponent}
-        </TabComponent>
+        <TabGroup
+            className='blue'
+            selectedId='1'>
+            {tabsExample}
+        </TabGroup>
     );
 
     const routerTabs = (
         <MemoryRouter>
-            <TabComponent>
-                {tabComponentWithLink}
-            </TabComponent>
+            <TabGroup
+                selectedId='1'>
+                {tabsExampleWithLink}
+            </TabGroup>
         </MemoryRouter>
     );
     const routerTabsWithClass = (
         <MemoryRouter>
-            <TabComponent
-                className='blue'>
-                {tabComponentWithLink}
-            </TabComponent>
+            <TabGroup
+                className='blue'
+                selectedId='1'>
+                {tabsExampleWithLink}
+            </TabGroup>
         </MemoryRouter>
     );
 
@@ -108,7 +112,7 @@ describe('<Tabs />', () => {
         const wrapper = mount(defaultTabsWithClass);
 
         // check selected tab
-        expect(wrapper.state(['selectedTab'])).toEqual('1');
+        expect(wrapper.state(['selectedId'])).toEqual('1');
 
         wrapper
             .find('ul.fd-tabs li.fd-tabs__item a.fd-tabs__link')
@@ -116,7 +120,7 @@ describe('<Tabs />', () => {
             .simulate('click');
 
         // check selected tab changed
-        expect(wrapper.state(['selectedTab'])).toEqual('2');
+        expect(wrapper.state(['selectedId'])).toEqual('2');
     });
 
     describe('Prop spreading', () => {
@@ -128,8 +132,8 @@ describe('<Tabs />', () => {
             ).toBe('Sample');
         });
 
-        test('should allow props to be spread to the TabComponent component', () => {
-            const element = mount(<TabComponent data-sample='Sample' />);
+        test('should allow props to be spread to the TabGroup component', () => {
+            const element = mount(<TabGroup data-sample='Sample' />);
 
             expect(
                 element.getDOMNode().attributes['data-sample'].value
@@ -145,9 +149,9 @@ describe('<Tabs />', () => {
         });
 
         test('should allow props to be spread to the Tab component\'s content component', () => {
-            const element = mount(<TabComponent>
+            const element = mount(<TabGroup selectedId='1'>
                 <Tab id='1' tabContentProps={{ 'data-sample': 'Sample' }} />
-            </TabComponent>
+            </TabGroup>
             );
 
             expect(
@@ -155,7 +159,7 @@ describe('<Tabs />', () => {
             ).toBe('Sample');
         });
 
-        test('should allow props to be spread to the TabComponent component\'s Link component', () => {
+        test('should allow props to be spread to the TabGroup component\'s Link component', () => {
             const element = mount(<Tab id='testId' tabLinkProps={{ 'data-sample': 'Sample' }}
                 url='#' />);
 

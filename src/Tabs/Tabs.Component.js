@@ -1,11 +1,12 @@
 import React from 'react';
 import { Description, DocsText, DocsTile, Header, Import, Playground, Properties, Separator } from '../_playground';
 import { Link, MemoryRouter } from 'react-router-dom';
-import { Tab, TabComponent } from '../';
+import { Tab, TabGroup } from '../';
 
 export const TabsComponent = () => {
-    const tabscomponentCode = `
-    <TabComponent>
+    const tabGroupCode = `
+    <TabGroup
+        selected='1'>
         <Tab
             content='Hello world'
             id='1'
@@ -25,10 +26,11 @@ export const TabsComponent = () => {
             url='#'>
             Tab 3
         </Tab>
-    </TabComponent>`;
+    </TabGroup>`;
 
-    const tabscomponentWithAnchorCode = `
-    <TabComponent>
+    const tabsGroupWithAnchorCode = `
+    <TabGroup
+        selected='1'>
         <Tab
             content='Hello world'
             id='1'>
@@ -54,11 +56,11 @@ export const TabsComponent = () => {
                 Tab 2
             </a>
         </Tab>
-    </TabComponent>`;
+    </TabGroup>`;
 
-    const tabscomponentWithLinkCode = `
+    const tabsGroupWithLinkCode = `
     <MemoryRouter>
-        <TabComponent>
+        <TabGroup>
             <Tab
                 content='Hello world'
                 id='1'>
@@ -84,7 +86,7 @@ export const TabsComponent = () => {
                     Tab 2
                 </Link>
             </Tab>
-        </TabComponent>
+        </TabGroup>
     </MemoryRouter>`;
 
     return (
@@ -106,7 +108,7 @@ export const TabsComponent = () => {
             <p>Menu Component utilizing URL props.</p>
 
             <DocsTile>
-                <TabComponent>
+                <TabGroup>
                     <Tab
                         content='Hello world'
                         id='1'
@@ -126,9 +128,9 @@ export const TabsComponent = () => {
                         url='#'>
                         Tab 3
                     </Tab>
-                </TabComponent>
+                </TabGroup>
             </DocsTile>
-            <DocsText>{tabscomponentCode}</DocsText>
+            <DocsText>{tabGroupCode}</DocsText>
 
             <Separator />
 
@@ -136,7 +138,7 @@ export const TabsComponent = () => {
             <p>Menu Component utilizing React Router Link components.</p>
 
             <DocsTile>
-                <TabComponent>
+                <TabGroup>
                     <Tab
                         content='Hello world'
                         id='1'>
@@ -162,9 +164,9 @@ export const TabsComponent = () => {
                             Tab 2
                         </a>
                     </Tab>
-                </TabComponent>
+                </TabGroup>
             </DocsTile>
-            <DocsText>{tabscomponentWithAnchorCode}</DocsText>
+            <DocsText>{tabsGroupWithAnchorCode}</DocsText>
 
             <Separator />
 
@@ -173,7 +175,7 @@ export const TabsComponent = () => {
 
             <DocsTile>
                 <MemoryRouter>
-                    <TabComponent>
+                    <TabGroup>
                         <Tab
                             content='Hello world'
                             id='1'>
@@ -199,10 +201,10 @@ export const TabsComponent = () => {
                                 Tab 2
                             </Link>
                         </Tab>
-                    </TabComponent>
+                    </TabGroup>
                 </MemoryRouter>
             </DocsTile>
-            <DocsText>{tabscomponentWithLinkCode}</DocsText>
+            <DocsText>{tabsGroupWithLinkCode}</DocsText>
 
             <Separator />
 
@@ -216,14 +218,14 @@ export const TabsComponent = () => {
                     }
                 ]}>
 
-                <TabComponent>
+                <TabGroup>
                     <Tab
                         content='Hello world'
                         id='Tab 1'
                         url='#'>
                         Tab 1
                     </Tab>
-                </TabComponent>
+                </TabGroup>
             </Playground>
         </div>
     );

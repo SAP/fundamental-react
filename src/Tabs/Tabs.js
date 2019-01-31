@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 
 export const Tab = props => {
-    const { children, className, content, disabled, id, onClick, selectedTab, tabContentProps, tabLinkProps, url, ...rest } = props;
+    const { children, className, content, disabled, id, onClick, selectedId, tabContentProps, tabLinkProps, url, ...rest } = props;
 
     const renderLink = () => {
         if (url) {
@@ -44,7 +44,7 @@ export const Tab = props => {
             className='fd-tabs__item'
             key={id} >
             {renderLink()}
-            {selectedTab === id ? (
+            {selectedId === id ? (
                 <p {...tabContentProps} className='fd-tabs__content'>{content}</p>
             ) : null}
         </li>
@@ -63,7 +63,7 @@ Tab.propDescriptions = {
     url: 'Creates an internal anchor when a child anchor is not provided.'
 };
 
-export class TabComponent extends Component {
+export class TabGroup extends Component {
     constructor(props) {
         super(props);
 
@@ -73,7 +73,7 @@ export class TabComponent extends Component {
     }
 
     handleTabSelection = (e, id) => {
-        this.setState({ selectedTab: id });
+        this.setState({ selectedId: id });
     };
 
     getLinkClasses = (id, className) => {
@@ -81,7 +81,7 @@ export class TabComponent extends Component {
             className,
             'fd-tabs__link',
             {
-                'is-selected': this.state.selectedTab === id
+                'is-selected': this.state.selectedId === id
             }
         );
     }
@@ -91,7 +91,7 @@ export class TabComponent extends Component {
             const classes = this.getLinkClasses(child.props.id, child.props.className);
 
             return React.cloneElement(child, {
-                selectedTab: this.state.selectedTab,
+                selectedId: this.state.selectedId,
                 className: classes,
                 onClick: (e) => {
                     child.props.onClick && child.props.onClick(e);
@@ -102,7 +102,7 @@ export class TabComponent extends Component {
     }
 
     render() {
-        const { ids, children, className, tabProps, tabLinkProps, tabContentProps, ...rest } = this.props;
+        const { ids, children, className, selectedId, tabProps, tabLinkProps, tabContentProps, ...rest } = this.props;
 
         const tabClasses = classnames(
             'fd-tabs',
@@ -117,13 +117,13 @@ export class TabComponent extends Component {
     }
 }
 
-TabComponent.propTypes = {
+TabGroup.propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,
     selectedId: PropTypes.string
 };
 
-TabComponent.propDescriptions = {
+TabGroup.propDescriptions = {
     children: 'One or more Tab components to render within the component.',
     selectedId: 'Initial selected `<Tab>`'
 };
