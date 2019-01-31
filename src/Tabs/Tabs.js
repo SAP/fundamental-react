@@ -22,7 +22,7 @@ export const Tab = props => {
                     {children}
                 </a>
             );
-        } else if (children && React.isValidElement(children)) { //TODO: This is not all the needed props
+        } else if (children && React.isValidElement(children)) {
             return React.cloneElement(children, {
                 ...tabLinkProps,
                 'aria-disabled': disabled,
@@ -59,10 +59,8 @@ Tab.propTypes = {
 };
 
 Tab.propDescriptions = {
-    children: 'Children can be link text, an achor tag, or a react component like React Router`s Link.',
-    className: 'A classname that will spread to the Tab\'s parent <a>.',
-    id: 'Required ID for each tab item used to control tab selection.',
-    url: 'URL prop is used to create an internal anchor when a child anchor is not provided.'
+    children: 'Can be link text, an achor tag, or a react component like React Routers\'s `Link`.',
+    url: 'Creates an internal anchor when a child anchor is not provided.'
 };
 
 export class TabComponent extends Component {
@@ -70,7 +68,7 @@ export class TabComponent extends Component {
         super(props);
 
         this.state = {
-            selectedTab: '1'
+            selectedId: this.props.selectedId
         };
     }
 
@@ -91,6 +89,7 @@ export class TabComponent extends Component {
     renderTabs = (children) => {
         return React.Children.map(children, (child) => {
             const classes = this.getLinkClasses(child.props.id, child.props.className);
+
             return React.cloneElement(child, {
                 selectedTab: this.state.selectedTab,
                 className: classes,
@@ -120,10 +119,11 @@ export class TabComponent extends Component {
 
 TabComponent.propTypes = {
     children: PropTypes.node,
-    className: PropTypes.string
+    className: PropTypes.string,
+    selectedId: PropTypes.string
 };
 
 TabComponent.propDescriptions = {
-    children: 'Children of TabComponent should be Tab components in order to properly display tabs.',
-    className: 'A classname that will spread to the TabComponent\'s parent <UL>.'
+    children: 'One or more Tab components to render within the component.',
+    selectedId: 'Initial selected `<Tab>`'
 };
