@@ -70,17 +70,19 @@ export const ActionBarHeader = ({ className, description, descriptionProps, titl
             <h1
                 {...titleProps}
                 className='fd-action-bar__title'>{title}</h1>
-            <p
-                {...descriptionProps}
-                className='fd-action-bar__description'>{description} </p>
+            {description &&
+                <p
+                    {...descriptionProps}
+                    className='fd-action-bar__description'>{description}</p>
+            }
         </div>
     );
 };
 
 ActionBarHeader.propTypes = {
-    description: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     className: PropTypes.string,
+    description: PropTypes.string,
     descriptionProps: PropTypes.object,
     titleProps: PropTypes.object
 };

@@ -142,7 +142,7 @@ describe('<ActionBar />', () => {
         test('should allow props to be spread to the ActionBarHeader component\'s p element', () => {
             const element = mount(
                 <ActionBarHeader
-                    description=''
+                    description='Sample Description'
                     descriptionProps={{'data-sample': 'Sample'}}
                     title='' />
             );
