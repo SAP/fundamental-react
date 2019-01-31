@@ -101,6 +101,9 @@ describe('<DatePicker />', () => {
             target: document.querySelector('body')
         });
         document.dispatchEvent(event);
+
+        // check to make sure calendar is hidden
+        expect(wrapper.state('hidden')).toBeTruthy();
     });
 
     test('check start date greater than end date for range', () => {
