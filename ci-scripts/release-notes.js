@@ -2,7 +2,7 @@
 
 let isDebug = false;
 
-const debug = (label, ...args) => {
+const logDebug = (label, ...args) => {
     if (isDebug) {
         console.log(`\n${label}:\n`, ...args);
     }
@@ -10,12 +10,12 @@ const debug = (label, ...args) => {
 
 const buildCommitMessage = (commit, pullRequests) => {
     const template = (msg, sha, url, prNumber, prUrl) => {
-        debug('Template', msg, sha, url, prNumber, prUrl);
+        logDebug('Template', msg, sha, url, prNumber, prUrl);
         return `${msg}${prNumber ? ` ([#${prNumber}](${prUrl}))` : ''} ([${sha}](${url}))`;
     };
 
     let message = commit.message;
-    debug('Raw Message', message);
+    logDebug('Raw Message', message);
     let pos = message.indexOf(':');
     if (pos !== -1) {
         message = message.substring(pos + 1).trim();
@@ -55,7 +55,7 @@ const buildMessages = (commits, pullRequests) => {
         }
     });
 
-    debug('Messages', messages);
+    logDebug('Messages', messages);
     return messages;
 };
 
@@ -75,14 +75,22 @@ const buildReleaseNotes = (messages) => {
     return notes.join('\n');
 };
 
+const getVerionCommitRegEx = (prerelease) => {
+    return (
+        prerelease
+            ? /^chore\(release\):\sversion\s\d+\.\d+\.\d+(\s|\-\w+\.\d+)/
+            : /^chore\(release\):\sversion\s\d+\.\d+\.\d+\s/
+    );
+};
+
 const doesVersionMatchTag = (message, tag) => {
-    const regex = /[0-9]+\.[0-9]+\.[0-9]+/;
+    const regex = /(\d+\.\d+\.\d+\-\w+\.\d+|\d+\.\d+\.\d+)/;
     const messageMatch = message.match(regex);
     const tagMatch = tag.match(regex);
     return messageMatch && tagMatch && messageMatch[0] === tagMatch[0];
 };
 
-const getCommits = (ghRepo, tag) =>
+const getCommits = (ghRepo, tag, prerelease) =>
     ghRepo.listCommits()
         .then(resp => {
             const commits = (!Array.isArray(resp.data) ? [resp.data] : resp.data);
@@ -90,11 +98,11 @@ const getCommits = (ghRepo, tag) =>
 
             for (let i = 0; i < commits.length; i++) {
                 const message = commits[i].commit.message;
-                debug('Raw Commit Message', message);
+                logDebug('Raw Commit Message', message);
 
-                // continue until the first non-rc version is found
-                if (message.match(/^chore\(release\):\sversion\s[0-9]+\.[0-9]+\.[0-9]+\s/)) {
-                    // unless that match matches the tag just created
+                // continue gathering commit messages until the previous version commit is found
+                if (message.match(getVerionCommitRegEx(prerelease))) {
+                    // unless that version matches the tag just created
                     if (!doesVersionMatchTag(message, tag)) {
                         break;
                     }
@@ -133,23 +141,24 @@ const getPullRequest = (ghRepo, prNumber) =>
             console.error(e);
         });
 
-module.exports = (ghRepo, argv) => {
-    isDebug = argv.debug;
+module.exports = (ghRepo, { tag, prerelease = false, debug = false }) => {
+    isDebug = debug;
+    logDebug('Arguments', tag, prerelease, debug);
 
-    return getCommits(ghRepo, argv.tag)
+    return getCommits(ghRepo, tag, prerelease)
         .then(commits => {
-            debug('Commits', commits);
+            logDebug('Commits', commits);
             return Promise.all(commits.filter(commit => !!commit.prNumber).map(commit =>  // eslint-disable-line
                 getPullRequest(ghRepo, commit.prNumber)
             ))
                 .then(pullRequests => {
-                    debug('Pull Requests', pullRequests);
+                    logDebug('Pull Requests', pullRequests);
                     let pullRequestLookup = {};
                     pullRequests.forEach(pullRequest => {
                         Object.assign(pullRequestLookup, pullRequest);
                     });
 
-                    debug('Pull Request Object', pullRequestLookup);
+                    logDebug('Pull Request Object', pullRequestLookup);
                     return buildReleaseNotes(buildMessages(commits, pullRequestLookup));
                 });
         })

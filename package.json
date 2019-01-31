@@ -23,7 +23,7 @@
     "lint:fix": "npm run build:lint:fix  && npm run scripts:lint:fix",
     "lint:pre-commit": "printf \"running pre-commit lint...\"  && npm run lint && printf \"done!\n\"",
     "lint": "npm run build:lint && npm run scripts:lint",
-    "release": "./ci-scripts/publish_release.sh",
+    "release": "./scripts/publish_release.sh",
     "scripts:lint": "eslint 'scripts/**' --ext .js,.jsx --env browser,node",
     "scripts:lint:fix": "eslint --fix 'scripts/**' --ext .js,.jsx --env browser,node",
     "release:create": "./ci-scripts/create-release.js",
