@@ -1,4 +1,5 @@
 import classnames from 'classnames';
+import { FORM_MESSAGE_TYPES } from '../utils/constants';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 
@@ -98,7 +99,7 @@ export const FormMessage = ({ type, children, className, ...props }) => {
 FormMessage.propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,
-    type: PropTypes.oneOf(['error', 'warning', 'help'])
+    type: PropTypes.oneOf(FORM_MESSAGE_TYPES)
 };
 
 // ------------------------------------------------- Form Input ----------------------------------------------
