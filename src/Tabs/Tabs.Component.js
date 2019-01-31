@@ -1,15 +1,91 @@
 import React from 'react';
 import { Description, DocsText, DocsTile, Header, Import, Playground, Properties, Separator } from '../_playground';
-import { TabComponent, Tabs } from '../';
+import { Link, MemoryRouter } from 'react-router-dom';
+import { Tab, TabComponent } from '../';
 
 export const TabsComponent = () => {
     const tabscomponentCode = `
-    <Tabs>
-    <TabComponent ids={[{id : '1', url:'#', name: 'Tab 1', content: 'Hello world', disabled: false},
-                             {id : '2', url:'#', name: 'Tab 2', content: 'Hello world 2', disabled: false},
-                             {id : '3', url:'#', name: 'Tab 3', content: 'Hello world 3', disabled: true}]}>
-    </TabComponent>
-    </Tabs>`;
+    <TabComponent>
+        <Tab
+            content='Hello world'
+            id='1'
+            url='#'>
+            Tab 1
+        </Tab>
+        <Tab
+            content='Hello world 2'
+            id='2'
+            url='#'>
+            Tab 2
+        </Tab>
+        <Tab
+            content='Hello world 3'
+            disabled
+            id='3'
+            url='#'>
+            Tab 3
+        </Tab>
+    </TabComponent>`;
+
+    const tabscomponentWithAnchorCode = `
+    <TabComponent>
+        <Tab
+            content='Hello world'
+            id='1'>
+            <a
+                href='#'>
+                Tab 1
+            </a>
+        </Tab>
+        <Tab
+            content='Hello world 2'
+            id='2'>
+            <a
+                href='#'>
+                Tab 2
+            </a>
+        </Tab>
+        <Tab
+            content='Hello world 3'
+            disabled
+            id='3'>
+            <a
+                href='#'>
+                Tab 2
+            </a>
+        </Tab>
+    </TabComponent>`;
+
+    const tabscomponentWithLinkCode = `
+    <MemoryRouter>
+        <TabComponent>
+            <Tab
+                content='Hello world'
+                id='1'>
+                <Link
+                    to='/'>
+                    Tab 1
+                </Link>
+            </Tab>
+            <Tab
+                content='Hello world 2'
+                id='2'>
+                <Link
+                    to='/'>
+                    Tab 2
+                </Link>
+            </Tab>
+            <Tab
+                content='Hello world 3'
+                disabled
+                id='3'>
+                <Link
+                    to='/'>
+                    Tab 2
+                </Link>
+            </Tab>
+        </TabComponent>
+    </MemoryRouter>`;
 
     return (
         <div>
@@ -26,43 +102,128 @@ export const TabsComponent = () => {
 
             <Separator />
 
+            <h2>Tab Component</h2>
+            <p>Menu Component utilizing URL props.</p>
+
             <DocsTile>
-                <Tabs>
-                    <TabComponent
-                        ids={[
-                            { id: '1', url: '#', name: 'Tab 1', content: 'Hello world', disabled: false },
-                            { id: '2', url: '#', name: 'Tab 2', content: 'Hello world 2', disabled: false },
-                            { id: '3', url: '#', name: 'Tab 3', content: 'Hello world 3', disabled: true }
-                        ]} />
-                </Tabs>
+                <TabComponent>
+                    <Tab
+                        content='Hello world'
+                        id='1'
+                        url='#'>
+                        Tab 1
+                    </Tab>
+                    <Tab
+                        content='Hello world 2'
+                        id='2'
+                        url='#'>
+                        Tab 2
+                    </Tab>
+                    <Tab
+                        content='Hello world 3'
+                        disabled
+                        id='3'
+                        url='#'>
+                        Tab 3
+                    </Tab>
+                </TabComponent>
             </DocsTile>
             <DocsText>{tabscomponentCode}</DocsText>
 
             <Separator />
 
+            <h2>Tab Component w/Anchor</h2>
+            <p>Menu Component utilizing React Router Link components.</p>
+
+            <DocsTile>
+                <TabComponent>
+                    <Tab
+                        content='Hello world'
+                        id='1'>
+                        <a
+                            href='#'>
+                            Tab 1
+                        </a>
+                    </Tab>
+                    <Tab
+                        content='Hello world 2'
+                        id='2'>
+                        <a
+                            href='#'>
+                            Tab 2
+                        </a>
+                    </Tab>
+                    <Tab
+                        content='Hello world 3'
+                        disabled
+                        id='3'>
+                        <a
+                            href='#'>
+                            Tab 2
+                        </a>
+                    </Tab>
+                </TabComponent>
+            </DocsTile>
+            <DocsText>{tabscomponentWithAnchorCode}</DocsText>
+
+            <Separator />
+
+            <h2>Tab Component w/Link</h2>
+            <p>Menu Component utilizing React Router Link components.</p>
+
+            <DocsTile>
+                <MemoryRouter>
+                    <TabComponent>
+                        <Tab
+                            content='Hello world'
+                            id='1'>
+                            <Link
+                                to='/'>
+                                Tab 1
+                            </Link>
+                        </Tab>
+                        <Tab
+                            content='Hello world 2'
+                            id='2'>
+                            <Link
+                                to='/'>
+                                Tab 2
+                            </Link>
+                        </Tab>
+                        <Tab
+                            content='Hello world 3'
+                            disabled
+                            id='3'>
+                            <Link
+                                to='/'>
+                                Tab 2
+                            </Link>
+                        </Tab>
+                    </TabComponent>
+                </MemoryRouter>
+            </DocsTile>
+            <DocsText>{tabscomponentWithLinkCode}</DocsText>
+
+            <Separator />
+
             <h2>Playground</h2>
             <Playground
-                component='tabs'
+                component='tab'
                 schema={[
                     {
-                        attribute: 'ids',
-                        typeOfAttribute: 'lists',
-                        'enum': ['Tab 1', 'Tab 2', 'Tab 3']
-                    },
-                    {
-                        attribute: 'content',
-                        typeOfAttribute: 'listsContent',
-                        'enum': ['Tab 1', 'Tab 2', 'Tab 3']
+                        attribute: 'children',
+                        typeOfAttribute: 'content'
                     }
                 ]}>
-                <Tabs>
-                    <TabComponent
-                        ids={[
-                            { id: 'Tab 1', url: '#', name: 'Tab 1', content: 'Hello world', disabled: false },
-                            { id: 'Tab 2', url: '#', name: 'Tab 2', content: 'Hello world 2', disabled: false },
-                            { id: 'Tab 3', url: '#', name: 'Tab 3', content: 'Hello world 3', disabled: true }
-                        ]} />
-                </Tabs>
+
+                <TabComponent>
+                    <Tab
+                        content='Hello world'
+                        id='Tab 1'
+                        url='#'>
+                        Tab 1
+                    </Tab>
+                </TabComponent>
             </Playground>
         </div>
     );
