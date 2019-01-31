@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import { Calendar } from '../Calendar/Calendar';
 import { mount } from 'enzyme';
 import React from 'react';
@@ -87,7 +88,7 @@ describe('<Calendar />', () => {
 
         // check that April was selected
         const currentDateDisplayed = wrapper.state('currentDateDisplayed');
-        console.log(currentDateDisplayed) 
+        console.log(currentDateDisplayed);
         expect(currentDateDisplayed.getMonth()).toEqual(3);
     });
 
@@ -110,7 +111,7 @@ describe('<Calendar />', () => {
 
         // check that April was selected
         const currentDateDisplayed = wrapper.state('currentDateDisplayed');
-        console.log(currentDateDisplayed)
+        console.log(currentDateDisplayed);
         expect(currentDateDisplayed.getMonth()).toEqual(3);
     });
 
