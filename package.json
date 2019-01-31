@@ -1,6 +1,6 @@
 {
   "name": "fundamental-react",
-  "version": "0.3.0-rc.4",
+  "version": "0.3.0-rc.5",
   "private": false,
   "license": "Apache-2.0",
   "main": "dist/index.js",
@@ -8,6 +8,9 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/SAP/fundamental-react"
+  },
+  "bin": {
+    "create-release": "ci-scripts/create-release.js"
   },
   "scripts": {
     "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
@@ -21,8 +24,12 @@
     "lint:pre-commit": "printf \"running pre-commit lint...\"  && npm run lint && printf \"done!\n\"",
     "lint": "npm run build:lint && npm run scripts:lint",
     "release": "./ci-scripts/publish_release.sh",
+<<<<<<< HEAD
     "scripts:lint": "eslint 'scripts/**' --ext .js,.jsx --env browser,node",
     "scripts:lint:fix": "eslint --fix 'scripts/**' --ext .js,.jsx --env browser,node",
+=======
+    "release:create": "./ci-scripts/create-release.js",
+>>>>>>> master
     "size": "npm run build && size-limit",
     "size:debug": "npm run build && size-limit --why",
     "start-js": "node scripts/start.js",
@@ -76,6 +83,7 @@
     "fork-ts-checker-webpack-plugin-alt": "0.4.14",
     "fs-extra": "7.0.0",
     "gh-pages": "^2.0.1",
+    "github-api": "^3.0.0",
     "html-webpack-plugin": "4.0.0-alpha.2",
     "identity-obj-proxy": "3.0.0",
     "jest": "23.6.0",
@@ -108,7 +116,8 @@
     "webpack": "4.19.1",
     "webpack-dev-server": "^3.1.11",
     "webpack-manifest-plugin": "2.0.4",
-    "workbox-webpack-plugin": "3.6.3"
+    "workbox-webpack-plugin": "3.6.3",
+    "yargs": "^12.0.5"
   },
   "peerDependencies": {
     "react": "^16.6.3",
