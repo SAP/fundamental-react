@@ -28,7 +28,6 @@ ActionBar.propTypes = {
 };
 
 ActionBar.defaultProps = {
-    mobile: false,
     width: '319px'
 };
 
