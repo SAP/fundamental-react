@@ -5,33 +5,6 @@ const INVALID = 'is-invalid';
 const CLOCK = ['am', 'pm'];
 
 class TimeItem extends Component {
-    static propTypes = {
-        arialabel: PropTypes.string,
-        disabled: PropTypes.bool,
-        downButtonProps: PropTypes.object,
-        format12Hours: PropTypes.bool,
-        inputProps: PropTypes.object,
-        max: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-        name: PropTypes.string,
-        placeholder: PropTypes.string,
-        spinners: PropTypes.bool,
-        style: PropTypes.string,
-        time: PropTypes.object,
-        type: PropTypes.string,
-        upButtonProps: PropTypes.object,
-        updateTime: PropTypes.func,
-        value: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
-    };
-    static defaultProps = {
-        arialabel: '',
-        disabled: false,
-        format12hours: false,
-        id: '',
-        spinners: false,
-        updateTime: () => {},
-        value: null
-    };
-
     constructor(props) {
         super(props);
         var aria = {};
@@ -285,6 +258,10 @@ TimeItem.propTypes = {
     upButtonProps: PropTypes.object,
     updateTime: PropTypes.func,
     value: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
+};
+
+TimeItem.defaultProps = {
+    updateTime: () => {}
 };
 
 export class Time extends Component {

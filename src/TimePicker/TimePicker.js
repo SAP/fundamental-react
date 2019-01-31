@@ -7,26 +7,6 @@ const CLOCK = ['am', 'pm'];
 const INVALID = 'is-invalid';
 const VALID = 'fd-input';
 class TimePickerItem extends Component {
-    static propTypes = {
-        buttonID: PropTypes.string,
-        buttonProps: PropTypes.object,
-        disabled: PropTypes.bool,
-        format12Hours: PropTypes.bool,
-        id: PropTypes.string,
-        inputId: PropTypes.string,
-        inputProps: PropTypes.object,
-        isValid: PropTypes.bool,
-        length: PropTypes.number,
-        placeholder: PropTypes.string,
-        showHour: PropTypes.bool,
-        showMinute: PropTypes.bool,
-        showSecond: PropTypes.bool,
-        style: PropTypes.string,
-        updateValue: PropTypes.func,
-        value: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-        onChange: PropTypes.func
-    };
-
     constructor(props) {
         super(props);
         var length = this.setLength(props);
