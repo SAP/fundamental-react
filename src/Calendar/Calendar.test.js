@@ -87,6 +87,7 @@ describe('<Calendar />', () => {
 
         // check that April was selected
         const currentDateDisplayed = wrapper.state('currentDateDisplayed');
+        console.log(currentDateDisplayed) 
         expect(currentDateDisplayed.getMonth()).toEqual(3);
     });
 
@@ -109,6 +110,7 @@ describe('<Calendar />', () => {
 
         // check that April was selected
         const currentDateDisplayed = wrapper.state('currentDateDisplayed');
+        console.log(currentDateDisplayed)
         expect(currentDateDisplayed.getMonth()).toEqual(3);
     });
 
