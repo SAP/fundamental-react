@@ -1,178 +1,178 @@
 {
-    "name": "fundamental-react",
-    "version": "0.3.0-rc.4",
-    "private": false,
-    "license": "Apache-2.0",
-    "main": "dist/index.js",
-    "homepage": "https://sap.github.io/fundamental-react",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/SAP/fundamental-react"
-    },
-    "bin": {
-        "create-release": "ci-scripts/create-release.js"
-    },
-    "scripts": {
-        "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
-        "build-doc": "node scripts/build.js",
-        "build-js": "node scripts/build.js",
-        "build:lint:fix": "eslint --fix 'src/**' --ext .js,.jsx --env browser,node",
-        "build:lint": "eslint 'src/**' --ext .js,.jsx --env browser,node",
-        "build": "rm -rf dist && NODE_ENV=production babel src --out-dir dist --ignore \"src/**/*.spec.js\",\"src/**/*.test.js\",\"src/**/*.Component.js\",\"src/_playground/*\"",
-        "deploy": "npm run build-doc && gh-pages -d build",
-        "lint:fix": "npm run build:lint:fix",
-        "lint:pre-commit": "printf \"running pre-commit lint...\"  && npm run lint && printf \"done!\n\"",
-        "lint": "npm run build:lint",
-        "release": "./ci-scripts/publish_release.sh",
-        "release:create": "./ci-scripts/create-release.js",
-        "size": "npm run build && size-limit",
-        "size:debug": "npm run build && size-limit --why",
-        "start-js": "node scripts/start.js",
-        "start": "node scripts/start.js",
-        "std-version": "standard-version -m \"chore(release): version %s build ${TRAVIS_BUILD_NUMBER} [ci skip]\"",
-        "test:coverage": "jest --coverage",
-        "test:coveralls": "jest --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
-        "test:dev": "jest",
-        "test": "node scripts/test.js",
-        "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive"
-    },
-    "dependencies": {
-        "classnames": "^2.2.6",
-        "fiori-fundamentals": "^1.4.0",
-        "react-router": "^4.3.1",
-        "react-router-dom": "^4.3.1",
-        "react-syntax-highlighter": "^9.0.1"
-    },
-    "devDependencies": {
-        "@babel/cli": "^7.1.5",
-        "@babel/core": "7.1.0",
-        "@babel/polyfill": "^7.1.5",
-        "@svgr/webpack": "2.4.1",
-        "annotated-prop-types": "^0.3.0",
-        "babel-core": "7.0.0-bridge.0",
-        "babel-eslint": "9.0.0",
-        "babel-jest": "23.6.0",
-        "babel-loader": "8.0.4",
-        "babel-plugin-named-asset-import": "^0.2.3",
-        "babel-preset-react-app": "^6.1.0",
-        "bfj": "6.1.1",
-        "case-sensitive-paths-webpack-plugin": "2.1.2",
-        "chalk": "2.4.1",
-        "coveralls": "^3.0.2",
-        "css-loader": "1.0.0",
-        "dotenv": "6.0.0",
-        "dotenv-expand": "4.2.0",
-        "enzyme": "^3.7.0",
-        "enzyme-adapter-react-16": "^1.7.0",
-        "eslint": "5.6.0",
-        "eslint-config-react-app": "^3.0.5",
-        "eslint-loader": "2.1.1",
-        "eslint-plugin-compat": "^2.6.3",
-        "eslint-plugin-flowtype": "2.50.1",
-        "eslint-plugin-ie11": "^1.0.0",
-        "eslint-plugin-import": "2.14.0",
-        "eslint-plugin-jsx-a11y": "6.1.2",
-        "eslint-plugin-loosely-restrict-imports": "^0.1.15",
-        "eslint-plugin-react": "7.11.1",
-        "file-loader": "2.0.0",
-        "fork-ts-checker-webpack-plugin-alt": "0.4.14",
-        "fs-extra": "7.0.0",
-        "gh-pages": "^2.0.1",
-        "github-api": "^3.0.0",
-        "html-webpack-plugin": "4.0.0-alpha.2",
-        "identity-obj-proxy": "3.0.0",
-        "jest": "23.6.0",
-        "jest-pnp-resolver": "1.0.1",
-        "jest-resolve": "23.6.0",
-        "mini-css-extract-plugin": "0.4.3",
-        "node-sass-chokidar": "^1.3.4",
-        "npm-run-all": "^4.1.5",
-        "optimize-css-assets-webpack-plugin": "5.0.1",
-        "pnp-webpack-plugin": "1.1.0",
-        "postcss-flexbugs-fixes": "4.1.0",
-        "postcss-loader": "3.0.0",
-        "postcss-preset-env": "6.0.6",
-        "postcss-safe-parser": "4.0.1",
-        "pre-commit": "^1.2.2",
-        "react": "^16.6.3",
-        "react-app-polyfill": "^0.1.3",
-        "react-dev-utils": "^6.1.1",
-        "react-dom": "^16.6.3",
-        "react-markdown": "^4.0.6",
-        "react-test-renderer": "^16.6.3",
-        "resolve": "1.8.1",
-        "sass-loader": "7.1.0",
-        "size-limit": "^0.21.1",
-        "sort-by": "^1.2.0",
-        "standard-version": "^4.4.0",
-        "style-loader": "0.23.0",
-        "terser-webpack-plugin": "1.1.0",
-        "url-loader": "1.1.1",
-        "webpack": "4.19.1",
-        "webpack-dev-server": "^3.1.11",
-        "webpack-manifest-plugin": "2.0.4",
-        "workbox-webpack-plugin": "3.6.3",
-        "yargs": "^12.0.5"
-    },
-    "peerDependencies": {
-        "react": "^16.6.3",
-        "react-dom": "^16.6.3"
-    },
-    "pre-commit": {
-        "colors": true,
-        "run": [
-            "lint:pre-commit"
-        ],
-        "silent": false
-    },
-    "browserslist": [
-        ">0.2%",
-        "not dead",
-        "not ie <= 11",
-        "not op_mini all"
+  "name": "fundamental-react",
+  "version": "0.3.0-rc.5",
+  "private": false,
+  "license": "Apache-2.0",
+  "main": "dist/index.js",
+  "homepage": "https://sap.github.io/fundamental-react",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SAP/fundamental-react"
+  },
+  "bin": {
+    "create-release": "ci-scripts/create-release.js"
+  },
+  "scripts": {
+    "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
+    "build-doc": "node scripts/build.js",
+    "build-js": "node scripts/build.js",
+    "build:lint:fix": "eslint --fix 'src/**' --ext .js,.jsx --env browser,node",
+    "build:lint": "eslint 'src/**' --ext .js,.jsx --env browser,node",
+    "build": "rm -rf dist && NODE_ENV=production babel src --out-dir dist --ignore \"src/**/*.spec.js\",\"src/**/*.test.js\",\"src/**/*.Component.js\",\"src/_playground/*\"",
+    "deploy": "npm run build-doc && gh-pages -d build",
+    "lint:fix": "npm run build:lint:fix",
+    "lint:pre-commit": "printf \"running pre-commit lint...\"  && npm run lint && printf \"done!\n\"",
+    "lint": "npm run build:lint",
+    "release": "./ci-scripts/publish_release.sh",
+    "release:create": "./ci-scripts/create-release.js",
+    "size": "npm run build && size-limit",
+    "size:debug": "npm run build && size-limit --why",
+    "start-js": "node scripts/start.js",
+    "start": "node scripts/start.js",
+    "std-version": "standard-version -m \"chore(release): version %s build ${TRAVIS_BUILD_NUMBER} [ci skip]\"",
+    "test:coverage": "jest --coverage",
+    "test:coveralls": "jest --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
+    "test:dev": "jest",
+    "test": "node scripts/test.js",
+    "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive"
+  },
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "fiori-fundamentals": "^1.4.0",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1",
+    "react-syntax-highlighter": "^9.0.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.1.5",
+    "@babel/core": "7.1.0",
+    "@babel/polyfill": "^7.1.5",
+    "@svgr/webpack": "2.4.1",
+    "annotated-prop-types": "^0.3.0",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-eslint": "9.0.0",
+    "babel-jest": "23.6.0",
+    "babel-loader": "8.0.4",
+    "babel-plugin-named-asset-import": "^0.2.3",
+    "babel-preset-react-app": "^6.1.0",
+    "bfj": "6.1.1",
+    "case-sensitive-paths-webpack-plugin": "2.1.2",
+    "chalk": "2.4.1",
+    "coveralls": "^3.0.2",
+    "css-loader": "1.0.0",
+    "dotenv": "6.0.0",
+    "dotenv-expand": "4.2.0",
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.7.0",
+    "eslint": "5.6.0",
+    "eslint-config-react-app": "^3.0.5",
+    "eslint-loader": "2.1.1",
+    "eslint-plugin-compat": "^2.6.3",
+    "eslint-plugin-flowtype": "2.50.1",
+    "eslint-plugin-ie11": "^1.0.0",
+    "eslint-plugin-import": "2.14.0",
+    "eslint-plugin-jsx-a11y": "6.1.2",
+    "eslint-plugin-loosely-restrict-imports": "^0.1.15",
+    "eslint-plugin-react": "7.11.1",
+    "file-loader": "2.0.0",
+    "fork-ts-checker-webpack-plugin-alt": "0.4.14",
+    "fs-extra": "7.0.0",
+    "gh-pages": "^2.0.1",
+    "github-api": "^3.0.0",
+    "html-webpack-plugin": "4.0.0-alpha.2",
+    "identity-obj-proxy": "3.0.0",
+    "jest": "23.6.0",
+    "jest-pnp-resolver": "1.0.1",
+    "jest-resolve": "23.6.0",
+    "mini-css-extract-plugin": "0.4.3",
+    "node-sass-chokidar": "^1.3.4",
+    "npm-run-all": "^4.1.5",
+    "optimize-css-assets-webpack-plugin": "5.0.1",
+    "pnp-webpack-plugin": "1.1.0",
+    "postcss-flexbugs-fixes": "4.1.0",
+    "postcss-loader": "3.0.0",
+    "postcss-preset-env": "6.0.6",
+    "postcss-safe-parser": "4.0.1",
+    "pre-commit": "^1.2.2",
+    "react": "^16.6.3",
+    "react-app-polyfill": "^0.1.3",
+    "react-dev-utils": "^6.1.1",
+    "react-dom": "^16.6.3",
+    "react-markdown": "^4.0.6",
+    "react-test-renderer": "^16.6.3",
+    "resolve": "1.8.1",
+    "sass-loader": "7.1.0",
+    "size-limit": "^0.21.1",
+    "sort-by": "^1.2.0",
+    "standard-version": "^4.4.0",
+    "style-loader": "0.23.0",
+    "terser-webpack-plugin": "1.1.0",
+    "url-loader": "1.1.1",
+    "webpack": "4.19.1",
+    "webpack-dev-server": "^3.1.11",
+    "webpack-manifest-plugin": "2.0.4",
+    "workbox-webpack-plugin": "3.6.3",
+    "yargs": "^12.0.5"
+  },
+  "peerDependencies": {
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3"
+  },
+  "pre-commit": {
+    "colors": true,
+    "run": [
+      "lint:pre-commit"
     ],
-    "jest": {
-        "collectCoverageFrom": [
-            "src/**/*.{js,jsx,ts,tsx}",
-            "!src/{App,Routes,index,registerServiceWorker}.js",
-            "!src/**/*.Component.js",
-            "!src/_playground/**"
-        ],
-        "resolver": "jest-pnp-resolver",
-        "setupFiles": [
-            "react-app-polyfill/jsdom",
-            "./config/jest/jest.config.js"
-        ],
-        "testMatch": [
-            "<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}",
-            "<rootDir>/src/**/?(*.)(spec|test).{js,jsx,ts,tsx}"
-        ],
-        "testEnvironment": "jsdom",
-        "testURL": "http://localhost",
-        "transform": {
-            "^.+\\.(js|jsx|ts|tsx)$": "<rootDir>/node_modules/babel-jest",
-            "^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
-            "^(?!.*\\.(js|jsx|ts|tsx|css|json)$)": "<rootDir>/config/jest/fileTransform.js"
-        },
-        "transformIgnorePatterns": [
-            "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|ts|tsx)$",
-            "^.+\\.module\\.(css|sass|scss)$"
-        ],
-        "moduleNameMapper": {
-            "^react-native$": "react-native-web",
-            "^.+\\.module\\.(css|sass|scss)$": "identity-obj-proxy"
-        },
-        "moduleFileExtensions": [
-            "web.js",
-            "js",
-            "web.ts",
-            "ts",
-            "web.tsx",
-            "tsx",
-            "json",
-            "web.jsx",
-            "jsx",
-            "node"
-        ]
-    }
+    "silent": false
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,ts,tsx}",
+      "!src/{App,Routes,index,registerServiceWorker}.js",
+      "!src/**/*.Component.js",
+      "!src/_playground/**"
+    ],
+    "resolver": "jest-pnp-resolver",
+    "setupFiles": [
+      "react-app-polyfill/jsdom",
+      "./config/jest/jest.config.js"
+    ],
+    "testMatch": [
+      "<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}",
+      "<rootDir>/src/**/?(*.)(spec|test).{js,jsx,ts,tsx}"
+    ],
+    "testEnvironment": "jsdom",
+    "testURL": "http://localhost",
+    "transform": {
+      "^.+\\.(js|jsx|ts|tsx)$": "<rootDir>/node_modules/babel-jest",
+      "^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
+      "^(?!.*\\.(js|jsx|ts|tsx|css|json)$)": "<rootDir>/config/jest/fileTransform.js"
+    },
+    "transformIgnorePatterns": [
+      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|ts|tsx)$",
+      "^.+\\.module\\.(css|sass|scss)$"
+    ],
+    "moduleNameMapper": {
+      "^react-native$": "react-native-web",
+      "^.+\\.module\\.(css|sass|scss)$": "identity-obj-proxy"
+    },
+    "moduleFileExtensions": [
+      "web.js",
+      "js",
+      "web.ts",
+      "ts",
+      "web.tsx",
+      "tsx",
+      "json",
+      "web.jsx",
+      "jsx",
+      "node"
+    ]
+  }
 }
