@@ -71,7 +71,17 @@ describe('<Calendar />', () => {
 
     test('click month from list', () => {
         let wrapper = mount(defaultCalendar);
+
         expect(wrapper.state('showMonths')).toBeFalsy();
+
+        //click on first day of month to set baseline initial date
+        wrapper
+            .find(
+                'table.fd-calendar__table tbody.fd-calendar__group tr.fd-calendar__row td.fd-calendar__item:not(.fd-calendar__item--other-month)'
+            )
+            .at(1)
+            .simulate('click');
+
         wrapper
             .find(
                 'header.fd-calendar__header button.fd-button--light.fd-button--compact'
@@ -80,9 +90,7 @@ describe('<Calendar />', () => {
             .simulate('click');
 
         expect(wrapper.state('showMonths')).toBeTruthy();
-        console.log(wrapper.state('currentDateDisplayed'));
-        console.log(wrapper.find('ul.fd-calendar__list li.fd-calendar__item').at(3).getDOMNode());
-        console.log(wrapper.find('ul.fd-calendar__list li.fd-calendar__item').at(4).getDOMNode());
+
         wrapper
             .find('ul.fd-calendar__list li.fd-calendar__item')
             .at(3)
@@ -90,14 +98,23 @@ describe('<Calendar />', () => {
 
         // check that April was selected
         const currentDateDisplayed = wrapper.state('currentDateDisplayed');
-        console.log(currentDateDisplayed);
-        console.log(currentDateDisplayed.getMonth());
+
         expect(currentDateDisplayed.getMonth()).toEqual(3);
     });
 
     test('click month from list with date range', () => {
         let wrapper = mount(rangeSelect);
         expect(wrapper.state('showMonths')).toBeFalsy();
+
+        //click on first day of month to set baseline initial date
+        wrapper
+            .find(
+                'table.fd-calendar__table tbody.fd-calendar__group tr.fd-calendar__row td.fd-calendar__item:not(.fd-calendar__item--other-month)'
+            )
+            .at(1)
+            .simulate('click');
+
+        //open months view
         wrapper
             .find(
                 'header.fd-calendar__header button.fd-button--light.fd-button--compact'
