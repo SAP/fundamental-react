@@ -23,10 +23,6 @@ Panel.propTypes = {
     colSpan: CustomPropTypes.range(1, 6)
 };
 
-Panel.defaultProps = {
-    colSpan: null
-};
-
 Panel.propDescriptions = {
     colSpan: 'The number of columns to span inside a `PanelGrid`.'
 };
@@ -57,11 +53,6 @@ PanelGrid.propTypes = {
     className: PropTypes.string,
     cols: CustomPropTypes.range(1, 6),
     nogap: PropTypes.bool
-};
-
-PanelGrid.defaultProps = {
-    nogap: false,
-    cols: null
 };
 
 PanelGrid.propDescriptions = {

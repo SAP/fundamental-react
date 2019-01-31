@@ -214,7 +214,7 @@ describe('<Menu />', () => {
         });
 
         test('should allow props to be spread to the MenuGroup component', () => {
-            const element = mount(<MenuGroup data-sample='Sample' />);
+            const element = mount(<MenuGroup data-sample='Sample' title='Sample' />);
 
             expect(
                 element.getDOMNode().attributes['data-sample'].value
@@ -222,7 +222,7 @@ describe('<Menu />', () => {
         });
 
         test('should allow props to be spread to the MenuGroup h1 component', () => {
-            const element = mount(<MenuGroup titleProps={{ 'data-sample': 'Sample' }} />);
+            const element = mount(<MenuGroup title='Sample' titleProps={{ 'data-sample': 'Sample' }} />);
 
             expect(
                 element.find('h1').getDOMNode().attributes['data-sample'].value

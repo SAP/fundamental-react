@@ -14,8 +14,6 @@ exports[`<Dropdown /> create dropdown component 1`] = `
     >
       <button
         className="fd-button fd-dropdown__control"
-        disabled={false}
-        selected={false}
       >
         Select
       </button>
@@ -83,8 +81,6 @@ exports[`<Dropdown /> create dropdown component 2`] = `
     >
       <button
         className="fd-button fd-dropdown__control fd-button--compact"
-        disabled={false}
-        selected={false}
       >
         Select
       </button>
@@ -152,8 +148,6 @@ exports[`<Dropdown /> create dropdown component 3`] = `
     >
       <button
         className="fd-button fd-button--standard fd-dropdown__control"
-        disabled={false}
-        selected={false}
       >
         Select
       </button>
@@ -222,8 +216,6 @@ exports[`<Dropdown /> create dropdown component 4`] = `
     >
       <button
         className="fd-button fd-dropdown__control sap-icon--filter"
-        disabled={false}
-        selected={false}
       >
         Select
       </button>
@@ -295,7 +287,6 @@ exports[`<Dropdown /> create dropdown component 5`] = `
       <button
         className="fd-button fd-dropdown__control sap-icon--filter is-disabled"
         disabled={true}
-        selected={false}
       >
         Select
       </button>

@@ -29,14 +29,28 @@ For an existing react application, follow the steps below:
 
 1. Load the fiori-fundamentals styles. If using create-react-app, this will be in `App.css`.
 
-    ```
+    ```scss
     @import '~fiori-fundamentals/dist/fiori-fundamentals.min.css';
     ```
 
 1. Import components as needed. See [Component Documentation](https://sap.github.io/fundamental-react/) for examples and API details.
-    ```
-    import { Alert } from 'fundamental-react';
-    ```
+```javascript
+import { Alert } from 'fundamental-react/lib/Alert/Alert';
+```
+
+or
+
+```javascript
+import { Alert } from 'fundamental-react';
+```
+
+
+note: Importing from `lib` 
+```javascript
+import { Alert } from 'fundamental-react/lib/Alert/Alert;'
+``` 
+is recommended. Doing so will bring in only the component you are using instead of the whole library, which will reduce your bundle size significantly.
+
 
 ## Versioning
 

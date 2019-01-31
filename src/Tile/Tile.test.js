@@ -191,7 +191,7 @@ describe('<Tile />', () => {
         });
 
         test('should allow props to be spread to the TileContent component', () => {
-            const element = mount(<TileContent data-sample='Sample' />);
+            const element = mount(<TileContent data-sample='Sample' title='Sample' />);
 
             expect(
                 element.getDOMNode().attributes['data-sample'].value
@@ -199,7 +199,7 @@ describe('<Tile />', () => {
         });
 
         test('should allow props to be spread to the TileContent component\'s h2 element', () => {
-            const element = mount(<TileContent titleProps={{ 'data-sample': 'Sample' }} />);
+            const element = mount(<TileContent title='Sample' titleProps={{ 'data-sample': 'Sample' }} />);
 
             expect(
                 element.find('h2').getDOMNode().attributes['data-sample'].value

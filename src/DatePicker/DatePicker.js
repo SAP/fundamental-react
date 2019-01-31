@@ -439,7 +439,6 @@ export class DatePicker extends Component {
 
 DatePicker.propTypes = {
     ...Calendar.basePropTypes,
-
     buttonProps: PropTypes.object,
     compact: PropTypes.bool,
     enableRangeSelection: PropTypes.bool,

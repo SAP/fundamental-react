@@ -128,7 +128,7 @@ export const MenuGroup = ({ title, children, className, titleProps, ...props }) 
 };
 
 MenuGroup.propTypes = {
+    title: PropTypes.string.isRequired,
     className: PropTypes.string,
-    title: PropTypes.string,
     titleProps: PropTypes.object
 };

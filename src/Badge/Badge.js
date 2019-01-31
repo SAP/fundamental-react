@@ -1,7 +1,7 @@
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
-import {BADGE_TYPES, LABEL_TYPES, STATUS_TYPES} from '../utils/constants';
+import {BADGE_MODIFIERS, BADGE_TYPES, LABEL_TYPES, STATUS_TYPES} from '../utils/constants';
 
 
 export const Badge = ({ type, modifier, children, className, ...props }) => {
@@ -23,7 +23,7 @@ export const Badge = ({ type, modifier, children, className, ...props }) => {
 
 Badge.propTypes = {
     className: PropTypes.string,
-    modifier: PropTypes.oneOf(['', 'pill', 'filled']),
+    modifier: PropTypes.oneOf(BADGE_MODIFIERS),
     type: PropTypes.oneOf(BADGE_TYPES)
 };
 
