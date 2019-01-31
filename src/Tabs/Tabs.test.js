@@ -2,7 +2,7 @@ import { mount } from 'enzyme';
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { Tab, TabComponent } from './Tabs';
-
+import { MemoryRouter, Link } from 'react-router-dom';
 
 
 describe('<Tabs />', () => {
@@ -31,26 +31,29 @@ describe('<Tabs />', () => {
         ]
     );
 
-    const tabComponentWithClass = (
+    const tabComponentWithLink = (
         [
             <Tab
                 content='Hello world'
-                id='1'
-                url='#'>
-                Tab 1
+                id='1'>
+                <Link to='/'>
+                    Tab 1
+                </Link>
             </Tab>,
             <Tab
                 content='Hello world 2'
-                id='2'
-                url='#'>
-                Tab 2
+                id='2'>
+                <Link to='/'>
+                    Tab 2
+                </Link>
             </Tab>,
             <Tab
                 content='Hello world 3'
                 disabled
-                id='3'
-                url='#'>
-                Tab 3
+                id='3'>
+                <Link to='/'>
+                    Tab 3
+                </Link>
             </Tab>
         ]
     );
@@ -63,8 +66,24 @@ describe('<Tabs />', () => {
     const defaultTabsWithClass = (
         <TabComponent
             className='blue'>
-            {tabComponentWithClass}
+            {tabComponent}
         </TabComponent>
+    );
+
+    const routerTabs = (
+        <MemoryRouter>
+            <TabComponent>
+                {tabComponentWithLink}
+            </TabComponent>
+        </MemoryRouter>
+    );
+    const routerTabsWithClass = (
+        <MemoryRouter>
+            <TabComponent
+                className='blue'>
+                {tabComponentWithLink}
+            </TabComponent>
+        </MemoryRouter>
     );
 
     test('create tabs component', () => {
@@ -76,11 +95,11 @@ describe('<Tabs />', () => {
         tree = component.toJSON();
         expect(tree).toMatchSnapshot();
 
-        component = renderer.create(defaultTabs);
+        component = renderer.create(routerTabs);
         tree = component.toJSON();
         expect(tree).toMatchSnapshot();
 
-        component = renderer.create(defaultTabsWithClass);
+        component = renderer.create(routerTabsWithClass);
         tree = component.toJSON();
         expect(tree).toMatchSnapshot();
     });

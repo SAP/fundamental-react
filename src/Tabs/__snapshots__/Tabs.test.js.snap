@@ -103,7 +103,7 @@ exports[`<Tabs /> create tabs component 3`] = `
   >
     <a
       className="fd-tabs__link is-selected"
-      href="#"
+      href="/"
       onClick={[Function]}
     >
       Tab 1
@@ -119,7 +119,7 @@ exports[`<Tabs /> create tabs component 3`] = `
   >
     <a
       className="fd-tabs__link"
-      href="#"
+      href="/"
       onClick={[Function]}
     >
       Tab 2
@@ -132,7 +132,7 @@ exports[`<Tabs /> create tabs component 3`] = `
       aria-disabled={true}
       className="fd-tabs__link"
       disabled={true}
-      href="#"
+      href="/"
       onClick={[Function]}
     >
       Tab 3
@@ -150,7 +150,7 @@ exports[`<Tabs /> create tabs component 4`] = `
   >
     <a
       className="fd-tabs__link is-selected"
-      href="#"
+      href="/"
       onClick={[Function]}
     >
       Tab 1
@@ -166,7 +166,7 @@ exports[`<Tabs /> create tabs component 4`] = `
   >
     <a
       className="fd-tabs__link"
-      href="#"
+      href="/"
       onClick={[Function]}
     >
       Tab 2
@@ -179,7 +179,7 @@ exports[`<Tabs /> create tabs component 4`] = `
       aria-disabled={true}
       className="fd-tabs__link"
       disabled={true}
-      href="#"
+      href="/"
       onClick={[Function]}
     >
       Tab 3
