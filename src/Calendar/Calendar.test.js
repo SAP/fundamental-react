@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 import { Calendar } from '../Calendar/Calendar';
 import { mount } from 'enzyme';
 import React from 'react';
@@ -74,20 +73,18 @@ describe('<Calendar />', () => {
 
         expect(wrapper.state('showMonths')).toBeFalsy();
 
-        //click on first day of month to set baseline initial date
-        wrapper
-            .find(
-                'table.fd-calendar__table tbody.fd-calendar__group tr.fd-calendar__row td.fd-calendar__item:not(.fd-calendar__item--other-month)'
-            )
-            .at(1)
-            .simulate('click');
+        //set baseline initial date
+        let initialDate = new Date('1/15/2019');
+        wrapper.setState({ currentDateDisplayed: initialDate });
 
+        //open month overlay
         wrapper
             .find(
                 'header.fd-calendar__header button.fd-button--light.fd-button--compact'
             )
             .at(1)
             .simulate('click');
+
 
         expect(wrapper.state('showMonths')).toBeTruthy();
 
@@ -106,13 +103,9 @@ describe('<Calendar />', () => {
         let wrapper = mount(rangeSelect);
         expect(wrapper.state('showMonths')).toBeFalsy();
 
-        //click on first day of month to set baseline initial date
-        wrapper
-            .find(
-                'table.fd-calendar__table tbody.fd-calendar__group tr.fd-calendar__row td.fd-calendar__item:not(.fd-calendar__item--other-month)'
-            )
-            .at(1)
-            .simulate('click');
+        //set baseline initial date
+        let initialDate = new Date('1/15/2019');
+        wrapper.setState({ currentDateDisplayed: initialDate });
 
         //open months view
         wrapper
@@ -131,7 +124,7 @@ describe('<Calendar />', () => {
 
         // check that April was selected
         const currentDateDisplayed = wrapper.state('currentDateDisplayed');
-        console.log(currentDateDisplayed);
+
         expect(currentDateDisplayed.getMonth()).toEqual(3);
     });
 
