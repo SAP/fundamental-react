@@ -292,9 +292,7 @@ export const Routes = () => {
             <div className='frDocs-Container'>
                 <div className='frDocs-Sidebar'>
                     <h1 className='frDocs-Logo'>FUNDAMENTAL REACT</h1>
-                    <nav>
-                        {navItems}
-                    </nav>
+                    <nav>{navItems}</nav>
                 </div>
                 <div className='frDocs-Content'>
                     <Switch>
