@@ -2,7 +2,7 @@
 
 let isDebug = false;
 
-const debug = (label, ...args) => {
+const logDebug = (label, ...args) => {
     if (isDebug) {
         console.log(`\n${label}:\n`, ...args);
     }
@@ -10,12 +10,12 @@ const debug = (label, ...args) => {
 
 const buildCommitMessage = (commit, pullRequests) => {
     const template = (msg, sha, url, prNumber, prUrl) => {
-        debug('Template', msg, sha, url, prNumber, prUrl);
+        logDebug('Template', msg, sha, url, prNumber, prUrl);
         return `${msg}${prNumber ? ` ([#${prNumber}](${prUrl}))` : ''} ([${sha}](${url}))`;
     };
 
     let message = commit.message;
-    debug('Raw Message', message);
+    logDebug('Raw Message', message);
     let pos = message.indexOf(':');
     if (pos !== -1) {
         message = message.substring(pos + 1).trim();
@@ -55,7 +55,7 @@ const buildMessages = (commits, pullRequests) => {
         }
     });
 
-    debug('Messages', messages);
+    logDebug('Messages', messages);
     return messages;
 };
 
@@ -90,7 +90,7 @@ const getCommits = (ghRepo, tag) =>
 
             for (let i = 0; i < commits.length; i++) {
                 const message = commits[i].commit.message;
-                debug('Raw Commit Message', message);
+                logDebug('Raw Commit Message', message);
 
                 // continue until the first non-rc version is found
                 if (message.match(/^chore\(release\):\sversion\s[0-9]+\.[0-9]+\.[0-9]+\s/)) {
@@ -138,18 +138,18 @@ module.exports = (ghRepo, argv) => {
 
     return getCommits(ghRepo, argv.tag)
         .then(commits => {
-            debug('Commits', commits);
+            logDebug('Commits', commits);
             return Promise.all(commits.filter(commit => !!commit.prNumber).map(commit =>  // eslint-disable-line
                 getPullRequest(ghRepo, commit.prNumber)
             ))
                 .then(pullRequests => {
-                    debug('Pull Requests', pullRequests);
+                    logDebug('Pull Requests', pullRequests);
                     let pullRequestLookup = {};
                     pullRequests.forEach(pullRequest => {
                         Object.assign(pullRequestLookup, pullRequest);
                     });
 
-                    debug('Pull Request Object', pullRequestLookup);
+                    logDebug('Pull Request Object', pullRequestLookup);
                     return buildReleaseNotes(buildMessages(commits, pullRequestLookup));
                 });
         })
