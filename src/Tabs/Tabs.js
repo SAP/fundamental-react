@@ -55,8 +55,14 @@ Tab.propTypes = {
     id: PropTypes.string.isRequired,
     children: PropTypes.node,
     className: PropTypes.string,
-    name: PropTypes.string,
     url: PropTypes.string
+};
+
+Tab.propDescriptions = {
+    children: 'Children can be link text, an achor tag, or a react component like React Router`s Link.',
+    className: 'A classname that will spread to the Tab\'s parent <a>.',
+    id: 'Required ID for each tab item used to control tab selection.',
+    url: 'URL prop is used to create an internal anchor when a child anchor is not provided.'
 };
 
 export class TabComponent extends Component {
@@ -113,9 +119,11 @@ export class TabComponent extends Component {
 }
 
 TabComponent.propTypes = {
+    children: PropTypes.node,
     className: PropTypes.string
 };
 
 TabComponent.propDescriptions = {
-    ids: 'An array of objects with keys \'id\', \'url\', \'name\', \'hasChild\', \'child\', and \'glyph\' defining each tab.'
+    children: 'Children of TabComponent should be Tab components in order to properly display tabs.',
+    className: 'A classname that will spread to the TabComponent\'s parent <UL>.'
 };
