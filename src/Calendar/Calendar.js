@@ -33,30 +33,30 @@ export class Calendar extends Component {
                 if (updatedPropsParent.customDate === 'undefined') {
                     //DateClick allows to update the date from the date picker if it is undefined
                     if (previousStates.dateClick) {
-                        return ({dateClick: false});
+                        return ({ dateClick: false });
                     }
-                    return ({currentDateDisplayed: new Date(), arrSelectedDates: [], selectedDate: new Date(0, 0, 0)});
+                    return ({ currentDateDisplayed: new Date(), arrSelectedDates: [], selectedDate: new Date(0, 0, 0) });
                 }
                 //updates the calendar if the date from date picker is correct
-                return ({arrSelectedDates: updatedPropsParent.customDate, selectedDate: new Date(0, 0, 0)});
+                return ({ arrSelectedDates: updatedPropsParent.customDate, selectedDate: new Date(0, 0, 0) });
             }
         } else if (updatedPropsParent.customDate !== previousStates.currentDateDisplayed) {
             if (typeof updatedPropsParent.customDate === 'undefined' || updatedPropsParent.customDate === '') {
                 return null;
             } else if (updatedPropsParent.customDate === 'undefined') {
                 if (previousStates.selectedDate.getFullYear() !== 1899 && previousStates.dateClick) {
-                    return ({dateClick: false});
+                    return ({ dateClick: false });
                 }
                 //If date was not clicked then the date is reset
                 if (!previousStates.dateClick) {
-                    return ({currentDateDisplayed: new Date(), selectedDate: new Date(0, 0, 0)});
+                    return ({ currentDateDisplayed: new Date(), selectedDate: new Date(0, 0, 0) });
                 }
             } else {
                 //Updates the calendar if the date from date picker is correct
-                return ({currentDateDisplayed: updatedPropsParent.customDate, selectedDate: updatedPropsParent.customDate, dateClick: false});
+                return ({ currentDateDisplayed: updatedPropsParent.customDate, selectedDate: updatedPropsParent.customDate, dateClick: false });
             }
         }
-        return ({dateClick: false});
+        return ({ dateClick: false });
     }
 
     showMonths = () => {
@@ -81,15 +81,15 @@ export class Calendar extends Component {
 
     displayIsSelected = (day) => {
         return (this.isSelected(day)
-                    || (this.props.enableRangeSelection && ((typeof this.state.arrSelectedDates[0] !== 'undefined' ? this.state.arrSelectedDates[0].getTime() === day.getTime() : false)
-                    || (typeof this.state.arrSelectedDates[1] !== 'undefined' ? this.state.arrSelectedDates[1].getTime() === day.getTime() : false))))
-                    && !(this.props.disableWeekends && (day.getDay() === 0 || day.getDay() === 6))
-                    && !(this.disableBeforeDate(day, this.props.disableBeforeDate))
-                    && !this.isDateBetween(day, this.props.blockedDates)
-                    && !(this.disableWeekday(day, this.props.disableWeekday))
-                    && !(this.props.disablePastDates && (this.disableBeforeTodayDate(day)))
-                    && !(this.props.disableFutureDates && this.disableAfterTodayDate(day))
-                    && !(this.isDateBetween(day, this.props.disabledDates)) ? 'is-selected' : '';
+            || (this.props.enableRangeSelection && ((typeof this.state.arrSelectedDates[0] !== 'undefined' ? this.state.arrSelectedDates[0].getTime() === day.getTime() : false)
+                || (typeof this.state.arrSelectedDates[1] !== 'undefined' ? this.state.arrSelectedDates[1].getTime() === day.getTime() : false))))
+            && !(this.props.disableWeekends && (day.getDay() === 0 || day.getDay() === 6))
+            && !(this.disableBeforeDate(day, this.props.disableBeforeDate))
+            && !this.isDateBetween(day, this.props.blockedDates)
+            && !(this.disableWeekday(day, this.props.disableWeekday))
+            && !(this.props.disablePastDates && (this.disableBeforeTodayDate(day)))
+            && !(this.props.disableFutureDates && this.disableAfterTodayDate(day))
+            && !(this.isDateBetween(day, this.props.disabledDates)) ? 'is-selected' : '';
     }
 
     displaySelectedRangeFirst = (day) => {
@@ -107,12 +107,6 @@ export class Calendar extends Component {
             showYears: !this.state.showYears,
             dateClick: true
         });
-    }
-
-    showNextYears = () => {
-        let copyDate = this.state.currentYear;
-        copyDate.setFullYear(copyDate.getFullYear() + 12);
-        this.setState({currentYear: copyDate});
     }
 
     changeMonth = (month) => {
@@ -229,7 +223,7 @@ export class Calendar extends Component {
         if (this.state.showYears) {
             let copyDate = this.state.currentYear;
             copyDate.setFullYear(copyDate.getFullYear() + 12);
-            this.setState({currentYear: copyDate, dateClick: true});
+            this.setState({ currentYear: copyDate, dateClick: true });
         } else {
             let copyDate = this.state.currentDateDisplayed;
             let selectedDate = new Date(this.state.selectedDate.getFullYear(), this.state.selectedDate.getMonth(), this.state.selectedDate.getDate(), 0, 0, 0, 0);
@@ -245,7 +239,7 @@ export class Calendar extends Component {
         if (this.state.showYears) {
             let copyDate = this.state.currentYear;
             copyDate.setFullYear(copyDate.getFullYear() - 12);
-            this.setState({currentYear: copyDate, dateClick: true});
+            this.setState({ currentYear: copyDate, dateClick: true });
         } else {
             let copyDate = this.state.currentDateDisplayed;
             let selectedDate = new Date(this.state.selectedDate.getFullYear(), this.state.selectedDate.getMonth(), this.state.selectedDate.getDate(), 0, 0, 0, 0);
@@ -332,8 +326,8 @@ export class Calendar extends Component {
 
     isSelected = (date) => {
         return (this.state.selectedDate.getDate() === date.getDate() &&
-        this.state.selectedDate.getMonth() === date.getMonth() &&
-        this.state.selectedDate.getFullYear() === date.getFullYear());
+            this.state.selectedDate.getMonth() === date.getMonth() &&
+            this.state.selectedDate.getFullYear() === date.getFullYear());
     }
 
     disableWeekday = (date, weekDays) => {
@@ -343,7 +337,7 @@ export class Calendar extends Component {
             return false;
         }
 
-        if (weekDays.indexOf(daysName[date.getDay()] > 0)) {
+        if (weekDays.indexOf(daysName[date.getDay()]) > 0) {
             return true;
         }
         return false;
@@ -376,20 +370,6 @@ export class Calendar extends Component {
         todayDate.setHours(0, 0, 0, 0);
 
         return date.getTime() > todayDate.getTime();
-    }
-
-    selectRangeSelection = (date) => {
-        let selectedDates = this.state.arrSelectedDates;
-        if (selectedDates.length === 2) {
-            selectedDates = [];
-        }
-        selectedDates.push(date);
-
-        this.setState({
-            arrSelectedDates: selectedDates
-        });
-
-        return this.state.arrSelectedDates;
     }
 
     returnDateSelected = (dates) => {

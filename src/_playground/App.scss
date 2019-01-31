@@ -90,7 +90,46 @@ $fd-fonts-path: '../../node_modules/fiori-fundamentals/dist/fonts/';
                 border: 1px solid #ccc;
                 border-bottom: none;
                 padding: 10px 0;
-                background-color: '#f3f4f5'
+                
+                .frDocs-tile__background-toggle {
+                    display: flex;
+                    justify-content: flex-end;
+                    margin: 15px;
+                }
+
+                .frDocs-tile__centered {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+            .frDocs-Content__tile-background {
+                background: #edeef0;
+                transition: background-color .25s;
+            }
+
+            .frDocs-Content__separator {
+                display: block;
+                margin: 2rem 0;
+                border-bottom: 1px solid #E3E3E3;
+            }
+
+            .frDocs-Content__docsText {
+                padding: 15px;
+                font-size: 13px;
+                border: 1px solid #ccc;
+                border-top: none;
+                border-radius: 0 0 4px 4px;
+                margin: 0;
+            }
+            .frDocs-docsText__button {
+                padding: 5px;
+                border: 1px solid #ccc;
+                text-align: center;
+            }
+
+            .frDocs-docsText__buttonCopy {
+                margin-left: 5px;
             }
         }
     }
@@ -102,6 +141,7 @@ $fd-fonts-path: '../../node_modules/fiori-fundamentals/dist/fonts/';
 }
 
 .fd-tile__content {
+
     .fd-button--grouped {
         margin-right: 0;
     }
