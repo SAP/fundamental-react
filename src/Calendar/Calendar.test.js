@@ -80,7 +80,7 @@ describe('<Calendar />', () => {
             .simulate('click');
 
         expect(wrapper.state('showMonths')).toBeTruthy();
-
+        console.log(wrapper.state('currentDateDisplayed'));
         wrapper
             .find('ul.fd-calendar__list li.fd-calendar__item')
             .at(3)
@@ -89,6 +89,7 @@ describe('<Calendar />', () => {
         // check that April was selected
         const currentDateDisplayed = wrapper.state('currentDateDisplayed');
         console.log(currentDateDisplayed);
+        console.log(currentDateDisplayed.getMonth());
         expect(currentDateDisplayed.getMonth()).toEqual(3);
     });
 
