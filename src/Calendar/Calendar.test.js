@@ -70,7 +70,14 @@ describe('<Calendar />', () => {
 
     test('click month from list', () => {
         let wrapper = mount(defaultCalendar);
+
         expect(wrapper.state('showMonths')).toBeFalsy();
+
+        //set baseline initial date
+        let initialDate = new Date('1/15/2019');
+        wrapper.setState({ currentDateDisplayed: initialDate });
+
+        //open month overlay
         wrapper
             .find(
                 'header.fd-calendar__header button.fd-button--light.fd-button--compact'
@@ -87,12 +94,19 @@ describe('<Calendar />', () => {
 
         // check that April was selected
         const currentDateDisplayed = wrapper.state('currentDateDisplayed');
+
         expect(currentDateDisplayed.getMonth()).toEqual(3);
     });
 
     test('click month from list with date range', () => {
         let wrapper = mount(rangeSelect);
         expect(wrapper.state('showMonths')).toBeFalsy();
+
+        //set baseline initial date
+        let initialDate = new Date('1/15/2019');
+        wrapper.setState({ currentDateDisplayed: initialDate });
+
+        //open months view
         wrapper
             .find(
                 'header.fd-calendar__header button.fd-button--light.fd-button--compact'
@@ -109,6 +123,7 @@ describe('<Calendar />', () => {
 
         // check that April was selected
         const currentDateDisplayed = wrapper.state('currentDateDisplayed');
+
         expect(currentDateDisplayed.getMonth()).toEqual(3);
     });
 
