@@ -34,17 +34,22 @@ For an existing react application, follow the steps bellow:
     ```
 
 1. Import components as needed. See [Component Documentation](https://sap.github.io/fundamental-react/) for examples and API details.
-    ```javascript
-    import { Alert } from 'fundamental-react/lib/Alert/Alert';
-    ```
+```javascript
+import { Alert } from 'fundamental-react/lib/Alert/Alert';
+```
 
 or
 
-    ```javascript
-    import { Alert } from 'fundamental-react';
-    ```
+```javascript
+import { Alert } from 'fundamental-react';
+```
 
-note: Importing from lib `import { Alert } from 'fundamental-react/lib/Alert/Alert;'` is recommended. Doing so will bring in only the component you are using instead of the whole library, which will reduce your bundle size significantly.
+
+note: Importing from `lib` 
+```javascript
+import { Alert } from 'fundamental-react/lib/Alert/Alert;'
+``` 
+is recommended. Doing so will bring in only the component you are using instead of the whole library, which will reduce your bundle size significantly.
 
 
 ## Versioning
