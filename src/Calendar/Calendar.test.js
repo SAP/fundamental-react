@@ -81,8 +81,8 @@ describe('<Calendar />', () => {
 
         expect(wrapper.state('showMonths')).toBeTruthy();
         console.log(wrapper.state('currentDateDisplayed'));
-        console.log(wrapper.find('ul.fd-calendar__list li.fd-calendar__item').at(3));
-        console.log(wrapper.find('ul.fd-calendar__list li.fd-calendar__item').at(4));
+        console.log(wrapper.find('ul.fd-calendar__list li.fd-calendar__item').at(3).getDOMNode());
+        console.log(wrapper.find('ul.fd-calendar__list li.fd-calendar__item').at(4).getDOMNode());
         wrapper
             .find('ul.fd-calendar__list li.fd-calendar__item')
             .at(3)
