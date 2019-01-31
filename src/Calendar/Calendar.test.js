@@ -70,7 +70,14 @@ describe('<Calendar />', () => {
 
     test('click month from list', () => {
         let wrapper = mount(defaultCalendar);
+
         expect(wrapper.state('showMonths')).toBeFalsy();
+
+        //set baseline initial date
+        let initialDate = new Date('1/15/2019');
+        wrapper.setState({ currentDateDisplayed: initialDate });
+
+        //open month overlay
         wrapper
             .find(
                 'header.fd-calendar__header button.fd-button--light.fd-button--compact'
@@ -87,12 +94,19 @@ describe('<Calendar />', () => {
 
         // check that April was selected
         const currentDateDisplayed = wrapper.state('currentDateDisplayed');
+
         expect(currentDateDisplayed.getMonth()).toEqual(3);
     });
 
     test('click month from list with date range', () => {
         let wrapper = mount(rangeSelect);
         expect(wrapper.state('showMonths')).toBeFalsy();
+
+        //set baseline initial date
+        let initialDate = new Date('1/15/2019');
+        wrapper.setState({ currentDateDisplayed: initialDate });
+
+        //open months view
         wrapper
             .find(
                 'header.fd-calendar__header button.fd-button--light.fd-button--compact'
@@ -109,6 +123,7 @@ describe('<Calendar />', () => {
 
         // check that April was selected
         const currentDateDisplayed = wrapper.state('currentDateDisplayed');
+
         expect(currentDateDisplayed.getMonth()).toEqual(3);
     });
 
@@ -157,6 +172,30 @@ describe('<Calendar />', () => {
         expect(currentDateDisplayed.getFullYear()).toEqual(
             currentYearDisplayed.getFullYear() + 3
         );
+    });
+
+    test('click disabled day', () => {
+        const wrapper = mount(disabledWeekEnds);
+        // select day of month
+        wrapper
+            .find(
+                'table.fd-calendar__table tbody.fd-calendar__group tr.fd-calendar__row td.fd-calendar__item:not(.fd-calendar__item--other-month)'
+            )
+            .at(0)
+            .simulate('click');
+
+        const currentDateDisplayed = new Date(wrapper.state('selectedDate'));
+
+        // select a disabled day of month
+        wrapper
+            .find(
+                'table.fd-calendar__table tbody.fd-calendar__group tr.fd-calendar__row td.fd-calendar__item.is-disabled'
+            )
+            .at(0)
+            .simulate('click');
+
+        // previously selected date should not change
+        expect(wrapper.state('selectedDate').getDate()).toEqual(currentDateDisplayed.getDate());
     });
 
     test('click year from list from range selector', () => {
