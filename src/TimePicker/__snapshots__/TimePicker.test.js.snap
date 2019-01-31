@@ -29,7 +29,6 @@ exports[`<TimePicker /> create time picker 1`] = `
               onBlur={[Function]}
               onChange={[Function]}
               placeholder="hh:mm:ss"
-              readOnly={false}
               type="text"
               value=""
             />
@@ -41,7 +40,6 @@ exports[`<TimePicker /> create time picker 1`] = `
                 aria-expanded="false"
                 aria-haspopup="true"
                 className="fd-button--light fd-button--compact sap-icon--fob-watch fd-popover__control"
-                disabled={false}
                 id="myTime-button"
               />
             </span>
@@ -66,7 +64,6 @@ exports[`<TimePicker /> create time picker 1`] = `
               <button
                 aria-label="Increase hours"
                 className=" fd-button--light fd-button--xs sap-icon--navigation-up-arrow "
-                disabled={false}
                 onClick={[Function]}
               />
             </div>
@@ -80,7 +77,6 @@ exports[`<TimePicker /> create time picker 1`] = `
                 name="hour"
                 onChange={[Function]}
                 placeholder="hh"
-                readOnly={false}
                 type="text"
                 value="00"
               />
@@ -91,7 +87,6 @@ exports[`<TimePicker /> create time picker 1`] = `
               <button
                 aria-label="Decrease hours"
                 className=" fd-button--light fd-button--xs sap-icon--navigation-down-arrow"
-                disabled={false}
                 onClick={[Function]}
               />
             </div>
@@ -105,7 +100,6 @@ exports[`<TimePicker /> create time picker 1`] = `
               <button
                 aria-label="Increase minutes"
                 className=" fd-button--light fd-button--xs sap-icon--navigation-up-arrow "
-                disabled={false}
                 onClick={[Function]}
               />
             </div>
@@ -119,7 +113,6 @@ exports[`<TimePicker /> create time picker 1`] = `
                 name="minute"
                 onChange={[Function]}
                 placeholder="mm"
-                readOnly={false}
                 type="text"
                 value="00"
               />
@@ -130,7 +123,6 @@ exports[`<TimePicker /> create time picker 1`] = `
               <button
                 aria-label="Decrease minutes"
                 className=" fd-button--light fd-button--xs sap-icon--navigation-down-arrow"
-                disabled={false}
                 onClick={[Function]}
               />
             </div>
@@ -144,7 +136,6 @@ exports[`<TimePicker /> create time picker 1`] = `
               <button
                 aria-label="Increase seconds"
                 className=" fd-button--light fd-button--xs sap-icon--navigation-up-arrow "
-                disabled={false}
                 onClick={[Function]}
               />
             </div>
@@ -158,7 +149,6 @@ exports[`<TimePicker /> create time picker 1`] = `
                 name="second"
                 onChange={[Function]}
                 placeholder="ss"
-                readOnly={false}
                 type="text"
                 value="00"
               />
@@ -169,7 +159,6 @@ exports[`<TimePicker /> create time picker 1`] = `
               <button
                 aria-label="Decrease seconds"
                 className=" fd-button--light fd-button--xs sap-icon--navigation-down-arrow"
-                disabled={false}
                 onClick={[Function]}
               />
             </div>
@@ -185,7 +174,6 @@ exports[`<TimePicker /> create time picker 1`] = `
 exports[`<TimePicker /> create time picker 2`] = `
 <div
   className="fd-time-picker"
-  id=""
 >
   <div
     className="fd-popover fd-popover--no-arrow"
@@ -207,11 +195,9 @@ exports[`<TimePicker /> create time picker 2`] = `
           >
             <input
               className="fd-input"
-              id="-input"
               onBlur={[Function]}
               onChange={[Function]}
               placeholder="hh:mm:ss am/pm"
-              readOnly={false}
               type="text"
               value=""
             />
@@ -223,8 +209,6 @@ exports[`<TimePicker /> create time picker 2`] = `
                 aria-expanded="false"
                 aria-haspopup="true"
                 className="fd-button--light fd-button--compact sap-icon--fob-watch fd-popover__control"
-                disabled={false}
-                id="-button"
               />
             </span>
           </div>
@@ -248,7 +232,6 @@ exports[`<TimePicker /> create time picker 2`] = `
               <button
                 aria-label="Increase hours"
                 className=" fd-button--light fd-button--xs sap-icon--navigation-up-arrow "
-                disabled={false}
                 onClick={[Function]}
               />
             </div>
@@ -262,7 +245,6 @@ exports[`<TimePicker /> create time picker 2`] = `
                 name="hour"
                 onChange={[Function]}
                 placeholder="hh"
-                readOnly={false}
                 type="text"
                 value="12"
               />
@@ -273,7 +255,6 @@ exports[`<TimePicker /> create time picker 2`] = `
               <button
                 aria-label="Decrease hours"
                 className=" fd-button--light fd-button--xs sap-icon--navigation-down-arrow"
-                disabled={false}
                 onClick={[Function]}
               />
             </div>
@@ -287,7 +268,6 @@ exports[`<TimePicker /> create time picker 2`] = `
               <button
                 aria-label="Increase minutes"
                 className=" fd-button--light fd-button--xs sap-icon--navigation-up-arrow "
-                disabled={false}
                 onClick={[Function]}
               />
             </div>
@@ -301,7 +281,6 @@ exports[`<TimePicker /> create time picker 2`] = `
                 name="minute"
                 onChange={[Function]}
                 placeholder="mm"
-                readOnly={false}
                 type="text"
                 value="00"
               />
@@ -312,7 +291,6 @@ exports[`<TimePicker /> create time picker 2`] = `
               <button
                 aria-label="Decrease minutes"
                 className=" fd-button--light fd-button--xs sap-icon--navigation-down-arrow"
-                disabled={false}
                 onClick={[Function]}
               />
             </div>
@@ -326,7 +304,6 @@ exports[`<TimePicker /> create time picker 2`] = `
               <button
                 aria-label="Increase seconds"
                 className=" fd-button--light fd-button--xs sap-icon--navigation-up-arrow "
-                disabled={false}
                 onClick={[Function]}
               />
             </div>
@@ -340,7 +317,6 @@ exports[`<TimePicker /> create time picker 2`] = `
                 name="second"
                 onChange={[Function]}
                 placeholder="ss"
-                readOnly={false}
                 type="text"
                 value="00"
               />
@@ -351,7 +327,6 @@ exports[`<TimePicker /> create time picker 2`] = `
               <button
                 aria-label="Decrease seconds"
                 className=" fd-button--light fd-button--xs sap-icon--navigation-down-arrow"
-                disabled={false}
                 onClick={[Function]}
               />
             </div>
@@ -365,7 +340,6 @@ exports[`<TimePicker /> create time picker 2`] = `
               <button
                 aria-label="Increase period"
                 className=" fd-button--light fd-button--xs sap-icon--navigation-up-arrow "
-                disabled={false}
                 onClick={[Function]}
               />
             </div>
@@ -378,7 +352,6 @@ exports[`<TimePicker /> create time picker 2`] = `
                 maxLength="2"
                 name="meridiem"
                 onChange={[Function]}
-                readOnly={false}
                 type="text"
                 value="am"
               />
@@ -389,7 +362,6 @@ exports[`<TimePicker /> create time picker 2`] = `
               <button
                 aria-label="Decrease period"
                 className=" fd-button--light fd-button--xs sap-icon--navigation-down-arrow"
-                disabled={false}
                 onClick={[Function]}
               />
             </div>
@@ -404,7 +376,6 @@ exports[`<TimePicker /> create time picker 2`] = `
 exports[`<TimePicker /> create time picker 3`] = `
 <div
   className="fd-time-picker"
-  id=""
 >
   <div
     className="fd-popover fd-popover--no-arrow"
@@ -426,11 +397,9 @@ exports[`<TimePicker /> create time picker 3`] = `
           >
             <input
               className="fd-input"
-              id="-input"
               onBlur={[Function]}
               onChange={[Function]}
               placeholder="hh:mm"
-              readOnly={false}
               type="text"
               value=""
             />
@@ -442,8 +411,6 @@ exports[`<TimePicker /> create time picker 3`] = `
                 aria-expanded="false"
                 aria-haspopup="true"
                 className="fd-button--light fd-button--compact sap-icon--fob-watch fd-popover__control"
-                disabled={false}
-                id="-button"
               />
             </span>
           </div>
@@ -467,7 +434,6 @@ exports[`<TimePicker /> create time picker 3`] = `
               <button
                 aria-label="Increase hours"
                 className=" fd-button--light fd-button--xs sap-icon--navigation-up-arrow "
-                disabled={false}
                 onClick={[Function]}
               />
             </div>
@@ -481,7 +447,6 @@ exports[`<TimePicker /> create time picker 3`] = `
                 name="hour"
                 onChange={[Function]}
                 placeholder="hh"
-                readOnly={false}
                 type="text"
                 value="00"
               />
@@ -492,7 +457,6 @@ exports[`<TimePicker /> create time picker 3`] = `
               <button
                 aria-label="Decrease hours"
                 className=" fd-button--light fd-button--xs sap-icon--navigation-down-arrow"
-                disabled={false}
                 onClick={[Function]}
               />
             </div>
@@ -506,7 +470,6 @@ exports[`<TimePicker /> create time picker 3`] = `
               <button
                 aria-label="Increase minutes"
                 className=" fd-button--light fd-button--xs sap-icon--navigation-up-arrow "
-                disabled={false}
                 onClick={[Function]}
               />
             </div>
@@ -520,7 +483,6 @@ exports[`<TimePicker /> create time picker 3`] = `
                 name="minute"
                 onChange={[Function]}
                 placeholder="mm"
-                readOnly={false}
                 type="text"
                 value="00"
               />
@@ -531,7 +493,6 @@ exports[`<TimePicker /> create time picker 3`] = `
               <button
                 aria-label="Decrease minutes"
                 className=" fd-button--light fd-button--xs sap-icon--navigation-down-arrow"
-                disabled={false}
                 onClick={[Function]}
               />
             </div>
@@ -548,7 +509,6 @@ exports[`<TimePicker /> create time picker 3`] = `
 exports[`<TimePicker /> create time picker 4`] = `
 <div
   className="fd-time-picker"
-  id=""
 >
   <div
     className="fd-popover fd-popover--no-arrow"
@@ -570,7 +530,6 @@ exports[`<TimePicker /> create time picker 4`] = `
           >
             <input
               className="fd-input"
-              id="-input"
               onBlur={[Function]}
               onChange={[Function]}
               placeholder="hh:mm:ss"
@@ -587,7 +546,6 @@ exports[`<TimePicker /> create time picker 4`] = `
                 aria-haspopup="true"
                 className="fd-button--light fd-button--compact sap-icon--fob-watch fd-popover__control"
                 disabled={true}
-                id="-button"
               />
             </span>
           </div>
@@ -730,7 +688,6 @@ exports[`<TimePicker /> create time picker 4`] = `
 exports[`<TimePicker /> create time picker 5`] = `
 <div
   className="fd-time-picker"
-  id=""
 >
   <div
     className="fd-popover fd-popover--no-arrow"
@@ -752,11 +709,9 @@ exports[`<TimePicker /> create time picker 5`] = `
           >
             <input
               className="fd-input"
-              id="-input"
               onBlur={[Function]}
               onChange={[Function]}
               placeholder="hh:mm:ss am/pm"
-              readOnly={false}
               type="text"
               value=""
             />
@@ -768,8 +723,6 @@ exports[`<TimePicker /> create time picker 5`] = `
                 aria-expanded="false"
                 aria-haspopup="true"
                 className="fd-button--light fd-button--compact sap-icon--fob-watch fd-popover__control"
-                disabled={false}
-                id="-button"
               />
             </span>
           </div>
@@ -793,7 +746,6 @@ exports[`<TimePicker /> create time picker 5`] = `
               <button
                 aria-label="Increase hours"
                 className=" fd-button--light fd-button--xs sap-icon--navigation-up-arrow "
-                disabled={false}
                 onClick={[Function]}
               />
             </div>
@@ -807,7 +759,6 @@ exports[`<TimePicker /> create time picker 5`] = `
                 name="hour"
                 onChange={[Function]}
                 placeholder="hh"
-                readOnly={false}
                 type="text"
                 value="12"
               />
@@ -818,7 +769,6 @@ exports[`<TimePicker /> create time picker 5`] = `
               <button
                 aria-label="Decrease hours"
                 className=" fd-button--light fd-button--xs sap-icon--navigation-down-arrow"
-                disabled={false}
                 onClick={[Function]}
               />
             </div>
@@ -832,7 +782,6 @@ exports[`<TimePicker /> create time picker 5`] = `
               <button
                 aria-label="Increase minutes"
                 className=" fd-button--light fd-button--xs sap-icon--navigation-up-arrow "
-                disabled={false}
                 onClick={[Function]}
               />
             </div>
@@ -846,7 +795,6 @@ exports[`<TimePicker /> create time picker 5`] = `
                 name="minute"
                 onChange={[Function]}
                 placeholder="mm"
-                readOnly={false}
                 type="text"
                 value="00"
               />
@@ -857,7 +805,6 @@ exports[`<TimePicker /> create time picker 5`] = `
               <button
                 aria-label="Decrease minutes"
                 className=" fd-button--light fd-button--xs sap-icon--navigation-down-arrow"
-                disabled={false}
                 onClick={[Function]}
               />
             </div>
@@ -871,7 +818,6 @@ exports[`<TimePicker /> create time picker 5`] = `
               <button
                 aria-label="Increase seconds"
                 className=" fd-button--light fd-button--xs sap-icon--navigation-up-arrow "
-                disabled={false}
                 onClick={[Function]}
               />
             </div>
@@ -885,7 +831,6 @@ exports[`<TimePicker /> create time picker 5`] = `
                 name="second"
                 onChange={[Function]}
                 placeholder="ss"
-                readOnly={false}
                 type="text"
                 value="00"
               />
@@ -896,7 +841,6 @@ exports[`<TimePicker /> create time picker 5`] = `
               <button
                 aria-label="Decrease seconds"
                 className=" fd-button--light fd-button--xs sap-icon--navigation-down-arrow"
-                disabled={false}
                 onClick={[Function]}
               />
             </div>
@@ -910,7 +854,6 @@ exports[`<TimePicker /> create time picker 5`] = `
               <button
                 aria-label="Increase period"
                 className=" fd-button--light fd-button--xs sap-icon--navigation-up-arrow "
-                disabled={false}
                 onClick={[Function]}
               />
             </div>
@@ -923,7 +866,6 @@ exports[`<TimePicker /> create time picker 5`] = `
                 maxLength="2"
                 name="meridiem"
                 onChange={[Function]}
-                readOnly={false}
                 type="text"
                 value="am"
               />
@@ -934,7 +876,6 @@ exports[`<TimePicker /> create time picker 5`] = `
               <button
                 aria-label="Decrease period"
                 className=" fd-button--light fd-button--xs sap-icon--navigation-down-arrow"
-                disabled={false}
                 onClick={[Function]}
               />
             </div>
@@ -949,7 +890,6 @@ exports[`<TimePicker /> create time picker 5`] = `
 exports[`<TimePicker /> create time picker 6`] = `
 <div
   className="fd-time-picker"
-  id=""
 >
   <div
     className="fd-popover fd-popover--no-arrow"
@@ -971,11 +911,9 @@ exports[`<TimePicker /> create time picker 6`] = `
           >
             <input
               className="fd-input"
-              id="-input"
               onBlur={[Function]}
               onChange={[Function]}
               placeholder="hh:mm:ss am/pm"
-              readOnly={false}
               type="text"
               value=""
             />
@@ -987,8 +925,6 @@ exports[`<TimePicker /> create time picker 6`] = `
                 aria-expanded="false"
                 aria-haspopup="true"
                 className="fd-button--light fd-button--compact sap-icon--fob-watch fd-popover__control"
-                disabled={false}
-                id="-button"
               />
             </span>
           </div>
@@ -1012,7 +948,6 @@ exports[`<TimePicker /> create time picker 6`] = `
               <button
                 aria-label="Increase hours"
                 className=" fd-button--light fd-button--xs sap-icon--navigation-up-arrow "
-                disabled={false}
                 onClick={[Function]}
               />
             </div>
@@ -1026,7 +961,6 @@ exports[`<TimePicker /> create time picker 6`] = `
                 name="hour"
                 onChange={[Function]}
                 placeholder="hh"
-                readOnly={false}
                 type="text"
                 value="12"
               />
@@ -1037,7 +971,6 @@ exports[`<TimePicker /> create time picker 6`] = `
               <button
                 aria-label="Decrease hours"
                 className=" fd-button--light fd-button--xs sap-icon--navigation-down-arrow"
-                disabled={false}
                 onClick={[Function]}
               />
             </div>
@@ -1051,7 +984,6 @@ exports[`<TimePicker /> create time picker 6`] = `
               <button
                 aria-label="Increase minutes"
                 className=" fd-button--light fd-button--xs sap-icon--navigation-up-arrow "
-                disabled={false}
                 onClick={[Function]}
               />
             </div>
@@ -1065,7 +997,6 @@ exports[`<TimePicker /> create time picker 6`] = `
                 name="minute"
                 onChange={[Function]}
                 placeholder="mm"
-                readOnly={false}
                 type="text"
                 value="00"
               />
@@ -1076,7 +1007,6 @@ exports[`<TimePicker /> create time picker 6`] = `
               <button
                 aria-label="Decrease minutes"
                 className=" fd-button--light fd-button--xs sap-icon--navigation-down-arrow"
-                disabled={false}
                 onClick={[Function]}
               />
             </div>
@@ -1090,7 +1020,6 @@ exports[`<TimePicker /> create time picker 6`] = `
               <button
                 aria-label="Increase seconds"
                 className=" fd-button--light fd-button--xs sap-icon--navigation-up-arrow "
-                disabled={false}
                 onClick={[Function]}
               />
             </div>
@@ -1104,7 +1033,6 @@ exports[`<TimePicker /> create time picker 6`] = `
                 name="second"
                 onChange={[Function]}
                 placeholder="ss"
-                readOnly={false}
                 type="text"
                 value="00"
               />
@@ -1115,7 +1043,6 @@ exports[`<TimePicker /> create time picker 6`] = `
               <button
                 aria-label="Decrease seconds"
                 className=" fd-button--light fd-button--xs sap-icon--navigation-down-arrow"
-                disabled={false}
                 onClick={[Function]}
               />
             </div>
@@ -1129,7 +1056,6 @@ exports[`<TimePicker /> create time picker 6`] = `
               <button
                 aria-label="Increase period"
                 className=" fd-button--light fd-button--xs sap-icon--navigation-up-arrow "
-                disabled={false}
                 onClick={[Function]}
               />
             </div>
@@ -1142,7 +1068,6 @@ exports[`<TimePicker /> create time picker 6`] = `
                 maxLength="2"
                 name="meridiem"
                 onChange={[Function]}
-                readOnly={false}
                 type="text"
                 value="am"
               />
@@ -1153,7 +1078,6 @@ exports[`<TimePicker /> create time picker 6`] = `
               <button
                 aria-label="Decrease period"
                 className=" fd-button--light fd-button--xs sap-icon--navigation-down-arrow"
-                disabled={false}
                 onClick={[Function]}
               />
             </div>
@@ -1168,7 +1092,6 @@ exports[`<TimePicker /> create time picker 6`] = `
 exports[`<TimePicker /> create time picker 7`] = `
 <div
   className="fd-time-picker"
-  id=""
 >
   <div
     className="fd-popover fd-popover--no-arrow"
@@ -1190,11 +1113,9 @@ exports[`<TimePicker /> create time picker 7`] = `
           >
             <input
               className="fd-input"
-              id="-input"
               onBlur={[Function]}
               onChange={[Function]}
               placeholder="hh:mm:ss am/pm"
-              readOnly={false}
               type="text"
               value=""
             />
@@ -1206,8 +1127,6 @@ exports[`<TimePicker /> create time picker 7`] = `
                 aria-expanded="false"
                 aria-haspopup="true"
                 className="fd-button--light fd-button--compact sap-icon--fob-watch fd-popover__control"
-                disabled={false}
-                id="-button"
               />
             </span>
           </div>
@@ -1231,7 +1150,6 @@ exports[`<TimePicker /> create time picker 7`] = `
               <button
                 aria-label="Increase hours"
                 className=" fd-button--light fd-button--xs sap-icon--navigation-up-arrow "
-                disabled={false}
                 onClick={[Function]}
               />
             </div>
@@ -1245,7 +1163,6 @@ exports[`<TimePicker /> create time picker 7`] = `
                 name="hour"
                 onChange={[Function]}
                 placeholder="hh"
-                readOnly={false}
                 type="text"
                 value="12"
               />
@@ -1256,7 +1173,6 @@ exports[`<TimePicker /> create time picker 7`] = `
               <button
                 aria-label="Decrease hours"
                 className=" fd-button--light fd-button--xs sap-icon--navigation-down-arrow"
-                disabled={false}
                 onClick={[Function]}
               />
             </div>
@@ -1270,7 +1186,6 @@ exports[`<TimePicker /> create time picker 7`] = `
               <button
                 aria-label="Increase minutes"
                 className=" fd-button--light fd-button--xs sap-icon--navigation-up-arrow "
-                disabled={false}
                 onClick={[Function]}
               />
             </div>
@@ -1284,7 +1199,6 @@ exports[`<TimePicker /> create time picker 7`] = `
                 name="minute"
                 onChange={[Function]}
                 placeholder="mm"
-                readOnly={false}
                 type="text"
                 value="00"
               />
@@ -1295,7 +1209,6 @@ exports[`<TimePicker /> create time picker 7`] = `
               <button
                 aria-label="Decrease minutes"
                 className=" fd-button--light fd-button--xs sap-icon--navigation-down-arrow"
-                disabled={false}
                 onClick={[Function]}
               />
             </div>
@@ -1309,7 +1222,6 @@ exports[`<TimePicker /> create time picker 7`] = `
               <button
                 aria-label="Increase seconds"
                 className=" fd-button--light fd-button--xs sap-icon--navigation-up-arrow "
-                disabled={false}
                 onClick={[Function]}
               />
             </div>
@@ -1323,7 +1235,6 @@ exports[`<TimePicker /> create time picker 7`] = `
                 name="second"
                 onChange={[Function]}
                 placeholder="ss"
-                readOnly={false}
                 type="text"
                 value="00"
               />
@@ -1334,7 +1245,6 @@ exports[`<TimePicker /> create time picker 7`] = `
               <button
                 aria-label="Decrease seconds"
                 className=" fd-button--light fd-button--xs sap-icon--navigation-down-arrow"
-                disabled={false}
                 onClick={[Function]}
               />
             </div>
@@ -1348,7 +1258,6 @@ exports[`<TimePicker /> create time picker 7`] = `
               <button
                 aria-label="Increase period"
                 className=" fd-button--light fd-button--xs sap-icon--navigation-up-arrow "
-                disabled={false}
                 onClick={[Function]}
               />
             </div>
@@ -1361,7 +1270,6 @@ exports[`<TimePicker /> create time picker 7`] = `
                 maxLength="2"
                 name="meridiem"
                 onChange={[Function]}
-                readOnly={false}
                 type="text"
                 value="am"
               />
@@ -1372,7 +1280,6 @@ exports[`<TimePicker /> create time picker 7`] = `
               <button
                 aria-label="Decrease period"
                 className=" fd-button--light fd-button--xs sap-icon--navigation-down-arrow"
-                disabled={false}
                 onClick={[Function]}
               />
             </div>
@@ -1387,7 +1294,6 @@ exports[`<TimePicker /> create time picker 7`] = `
 exports[`<TimePicker /> create time picker 8`] = `
 <div
   className="fd-time-picker"
-  id=""
 >
   <div
     className="fd-popover fd-popover--no-arrow"
@@ -1409,11 +1315,9 @@ exports[`<TimePicker /> create time picker 8`] = `
           >
             <input
               className="fd-input"
-              id="-input"
               onBlur={[Function]}
               onChange={[Function]}
               placeholder="mm:ss"
-              readOnly={false}
               type="text"
               value=""
             />
@@ -1425,8 +1329,6 @@ exports[`<TimePicker /> create time picker 8`] = `
                 aria-expanded="false"
                 aria-haspopup="true"
                 className="fd-button--light fd-button--compact sap-icon--fob-watch fd-popover__control"
-                disabled={false}
-                id="-button"
               />
             </span>
           </div>
@@ -1451,7 +1353,6 @@ exports[`<TimePicker /> create time picker 8`] = `
               <button
                 aria-label="Increase minutes"
                 className=" fd-button--light fd-button--xs sap-icon--navigation-up-arrow "
-                disabled={false}
                 onClick={[Function]}
               />
             </div>
@@ -1465,7 +1366,6 @@ exports[`<TimePicker /> create time picker 8`] = `
                 name="minute"
                 onChange={[Function]}
                 placeholder="mm"
-                readOnly={false}
                 type="text"
                 value="00"
               />
@@ -1476,7 +1376,6 @@ exports[`<TimePicker /> create time picker 8`] = `
               <button
                 aria-label="Decrease minutes"
                 className=" fd-button--light fd-button--xs sap-icon--navigation-down-arrow"
-                disabled={false}
                 onClick={[Function]}
               />
             </div>
@@ -1490,7 +1389,6 @@ exports[`<TimePicker /> create time picker 8`] = `
               <button
                 aria-label="Increase seconds"
                 className=" fd-button--light fd-button--xs sap-icon--navigation-up-arrow "
-                disabled={false}
                 onClick={[Function]}
               />
             </div>
@@ -1504,7 +1402,6 @@ exports[`<TimePicker /> create time picker 8`] = `
                 name="second"
                 onChange={[Function]}
                 placeholder="ss"
-                readOnly={false}
                 type="text"
                 value="00"
               />
@@ -1515,7 +1412,6 @@ exports[`<TimePicker /> create time picker 8`] = `
               <button
                 aria-label="Decrease seconds"
                 className=" fd-button--light fd-button--xs sap-icon--navigation-down-arrow"
-                disabled={false}
                 onClick={[Function]}
               />
             </div>
@@ -1531,7 +1427,6 @@ exports[`<TimePicker /> create time picker 8`] = `
 exports[`<TimePicker /> create time picker 9`] = `
 <div
   className="fd-time-picker"
-  id=""
 >
   <div
     className="fd-popover fd-popover--no-arrow"
@@ -1553,11 +1448,9 @@ exports[`<TimePicker /> create time picker 9`] = `
           >
             <input
               className="fd-input"
-              id="-input"
               onBlur={[Function]}
               onChange={[Function]}
               placeholder="mm:ss am/pm"
-              readOnly={false}
               type="text"
               value=""
             />
@@ -1569,8 +1462,6 @@ exports[`<TimePicker /> create time picker 9`] = `
                 aria-expanded="false"
                 aria-haspopup="true"
                 className="fd-button--light fd-button--compact sap-icon--fob-watch fd-popover__control"
-                disabled={false}
-                id="-button"
               />
             </span>
           </div>
@@ -1595,7 +1486,6 @@ exports[`<TimePicker /> create time picker 9`] = `
               <button
                 aria-label="Increase minutes"
                 className=" fd-button--light fd-button--xs sap-icon--navigation-up-arrow "
-                disabled={false}
                 onClick={[Function]}
               />
             </div>
@@ -1609,7 +1499,6 @@ exports[`<TimePicker /> create time picker 9`] = `
                 name="minute"
                 onChange={[Function]}
                 placeholder="mm"
-                readOnly={false}
                 type="text"
                 value="00"
               />
@@ -1620,7 +1509,6 @@ exports[`<TimePicker /> create time picker 9`] = `
               <button
                 aria-label="Decrease minutes"
                 className=" fd-button--light fd-button--xs sap-icon--navigation-down-arrow"
-                disabled={false}
                 onClick={[Function]}
               />
             </div>
@@ -1634,7 +1522,6 @@ exports[`<TimePicker /> create time picker 9`] = `
               <button
                 aria-label="Increase seconds"
                 className=" fd-button--light fd-button--xs sap-icon--navigation-up-arrow "
-                disabled={false}
                 onClick={[Function]}
               />
             </div>
@@ -1648,7 +1535,6 @@ exports[`<TimePicker /> create time picker 9`] = `
                 name="second"
                 onChange={[Function]}
                 placeholder="ss"
-                readOnly={false}
                 type="text"
                 value="00"
               />
@@ -1659,7 +1545,6 @@ exports[`<TimePicker /> create time picker 9`] = `
               <button
                 aria-label="Decrease seconds"
                 className=" fd-button--light fd-button--xs sap-icon--navigation-down-arrow"
-                disabled={false}
                 onClick={[Function]}
               />
             </div>
@@ -1673,7 +1558,6 @@ exports[`<TimePicker /> create time picker 9`] = `
               <button
                 aria-label="Increase period"
                 className=" fd-button--light fd-button--xs sap-icon--navigation-up-arrow "
-                disabled={false}
                 onClick={[Function]}
               />
             </div>
@@ -1686,7 +1570,6 @@ exports[`<TimePicker /> create time picker 9`] = `
                 maxLength="2"
                 name="meridiem"
                 onChange={[Function]}
-                readOnly={false}
                 type="text"
                 value="am"
               />
@@ -1697,7 +1580,6 @@ exports[`<TimePicker /> create time picker 9`] = `
               <button
                 aria-label="Decrease period"
                 className=" fd-button--light fd-button--xs sap-icon--navigation-down-arrow"
-                disabled={false}
                 onClick={[Function]}
               />
             </div>
@@ -1712,7 +1594,6 @@ exports[`<TimePicker /> create time picker 9`] = `
 exports[`<TimePicker /> create time picker 10`] = `
 <div
   className="fd-time-picker"
-  id=""
 >
   <div
     className="fd-popover fd-popover--no-arrow"
@@ -1734,11 +1615,9 @@ exports[`<TimePicker /> create time picker 10`] = `
           >
             <input
               className="fd-input"
-              id="-input"
               onBlur={[Function]}
               onChange={[Function]}
               placeholder="hh:ss am/pm"
-              readOnly={false}
               type="text"
               value=""
             />
@@ -1750,8 +1629,6 @@ exports[`<TimePicker /> create time picker 10`] = `
                 aria-expanded="false"
                 aria-haspopup="true"
                 className="fd-button--light fd-button--compact sap-icon--fob-watch fd-popover__control"
-                disabled={false}
-                id="-button"
               />
             </span>
           </div>
@@ -1775,7 +1652,6 @@ exports[`<TimePicker /> create time picker 10`] = `
               <button
                 aria-label="Increase hours"
                 className=" fd-button--light fd-button--xs sap-icon--navigation-up-arrow "
-                disabled={false}
                 onClick={[Function]}
               />
             </div>
@@ -1789,7 +1665,6 @@ exports[`<TimePicker /> create time picker 10`] = `
                 name="hour"
                 onChange={[Function]}
                 placeholder="hh"
-                readOnly={false}
                 type="text"
                 value="12"
               />
@@ -1800,7 +1675,6 @@ exports[`<TimePicker /> create time picker 10`] = `
               <button
                 aria-label="Decrease hours"
                 className=" fd-button--light fd-button--xs sap-icon--navigation-down-arrow"
-                disabled={false}
                 onClick={[Function]}
               />
             </div>
@@ -1815,7 +1689,6 @@ exports[`<TimePicker /> create time picker 10`] = `
               <button
                 aria-label="Increase seconds"
                 className=" fd-button--light fd-button--xs sap-icon--navigation-up-arrow "
-                disabled={false}
                 onClick={[Function]}
               />
             </div>
@@ -1829,7 +1702,6 @@ exports[`<TimePicker /> create time picker 10`] = `
                 name="second"
                 onChange={[Function]}
                 placeholder="ss"
-                readOnly={false}
                 type="text"
                 value="00"
               />
@@ -1840,7 +1712,6 @@ exports[`<TimePicker /> create time picker 10`] = `
               <button
                 aria-label="Decrease seconds"
                 className=" fd-button--light fd-button--xs sap-icon--navigation-down-arrow"
-                disabled={false}
                 onClick={[Function]}
               />
             </div>
@@ -1854,7 +1725,6 @@ exports[`<TimePicker /> create time picker 10`] = `
               <button
                 aria-label="Increase period"
                 className=" fd-button--light fd-button--xs sap-icon--navigation-up-arrow "
-                disabled={false}
                 onClick={[Function]}
               />
             </div>
@@ -1867,7 +1737,6 @@ exports[`<TimePicker /> create time picker 10`] = `
                 maxLength="2"
                 name="meridiem"
                 onChange={[Function]}
-                readOnly={false}
                 type="text"
                 value="am"
               />
@@ -1878,7 +1747,6 @@ exports[`<TimePicker /> create time picker 10`] = `
               <button
                 aria-label="Decrease period"
                 className=" fd-button--light fd-button--xs sap-icon--navigation-down-arrow"
-                disabled={false}
                 onClick={[Function]}
               />
             </div>

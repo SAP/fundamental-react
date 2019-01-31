@@ -198,7 +198,7 @@ export const SideNavGroup = props => {
 };
 
 SideNavGroup.propTypes = {
+    title: PropTypes.string.isRequired,
     className: PropTypes.string,
-    title: PropTypes.string,
     titleProps: PropTypes.object
 };

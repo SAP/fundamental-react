@@ -34,13 +34,15 @@ export const Button = ({
     );
 
     return (<button {...props} className={buttonClasses}
-        disabled={disabled ? disabled : false} onClick={onClick}
-        selected={selected ? selected : false} type={typeAttr}>
+        disabled={disabled} onClick={onClick}
+        selected={selected} type={typeAttr}>
         {children}
     </button>);
 };
 
 Button.propTypes = {
+    children: PropTypes.node,
+    className: PropTypes.string,
     compact: PropTypes.bool,
     disabled: PropTypes.bool,
     dropdown: PropTypes.bool,

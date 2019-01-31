@@ -92,8 +92,6 @@ exports[`<Tile /> create tile component 4`] = `
       >
         <button
           className="fd-button fd-button--standard sap-icon--vertical-grip"
-          disabled={false}
-          selected={false}
         />
       </div>
       <div
@@ -200,8 +198,6 @@ exports[`<Tile /> create tile component 6`] = `
       >
         <button
           className="fd-button fd-button--standard sap-icon--vertical-grip"
-          disabled={false}
-          selected={false}
         />
       </div>
       <div

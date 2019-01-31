@@ -23,7 +23,6 @@ exports[`<ActionBar /> create basic Action Bar 1`] = `
       className="fd-action-bar__description"
     >
       Action Bar Description
-       
     </p>
   </div>
   <div
@@ -59,7 +58,6 @@ exports[`<ActionBar /> create basic Action Bar 2`] = `
       className="fd-action-bar__description"
     >
       Action Bar Description
-       
     </p>
   </div>
   <div
@@ -102,7 +100,6 @@ exports[`<ActionBar /> create basic mobile Action Bar 1`] = `
         className="fd-action-bar__description"
       >
         Action Bar Description
-         
       </p>
     </div>
     <div
@@ -146,7 +143,6 @@ exports[`<ActionBar /> create basic mobile Action Bar 2`] = `
         className="fd-action-bar__description"
       >
         Action Bar Description
-         
       </p>
     </div>
     <div
