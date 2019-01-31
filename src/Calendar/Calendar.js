@@ -465,10 +465,15 @@ export class Calendar extends Component {
                     }
                 );
 
-                days.push(<td className={dayClasses} key={copyDate}
-                    onClick={!this.displayDisabled(day) ? () => this.dateClick(copyDate, enableRangeSelection) : null
-                    } role='gridcell' > <span className='fd-calendar__text'>{dateFormatted}</span>
-                </td >);
+                days.push(
+                    <td
+                        className={dayClasses}
+                        key={copyDate}
+                        onClick={!this.displayDisabled(day) ? () => this.dateClick(copyDate, enableRangeSelection) : null}
+                        role='gridcell' >
+                        <span className='fd-calendar__text'>{dateFormatted}</span>
+                    </td >
+                );
 
                 day = this.addDays(day, 1);
             }
