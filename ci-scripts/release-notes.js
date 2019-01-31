@@ -75,14 +75,22 @@ const buildReleaseNotes = (messages) => {
     return notes.join('\n');
 };
 
+const getVerionCommitRegEx = (prerelease) => {
+    return (
+        prerelease
+            ? /^chore\(release\):\sversion\s\d+\.\d+\.\d+(\s|\-\w+\.\d+)/
+            : /^chore\(release\):\sversion\s\d+\.\d+\.\d+\s/
+    );
+};
+
 const doesVersionMatchTag = (message, tag) => {
-    const regex = /[0-9]+\.[0-9]+\.[0-9]+/;
+    const regex = /(\d+\.\d+\.\d+\-\w+\.\d+|\d+\.\d+\.\d+)/;
     const messageMatch = message.match(regex);
     const tagMatch = tag.match(regex);
     return messageMatch && tagMatch && messageMatch[0] === tagMatch[0];
 };
 
-const getCommits = (ghRepo, tag) =>
+const getCommits = (ghRepo, tag, prerelease) =>
     ghRepo.listCommits()
         .then(resp => {
             const commits = (!Array.isArray(resp.data) ? [resp.data] : resp.data);
@@ -92,9 +100,9 @@ const getCommits = (ghRepo, tag) =>
                 const message = commits[i].commit.message;
                 logDebug('Raw Commit Message', message);
 
-                // continue until the first non-rc version is found
-                if (message.match(/^chore\(release\):\sversion\s[0-9]+\.[0-9]+\.[0-9]+\s/)) {
-                    // unless that match matches the tag just created
+                // continue gathering commit messages until the previous version commit is found
+                if (message.match(getVerionCommitRegEx(prerelease))) {
+                    // unless that version matches the tag just created
                     if (!doesVersionMatchTag(message, tag)) {
                         break;
                     }
@@ -133,10 +141,11 @@ const getPullRequest = (ghRepo, prNumber) =>
             console.error(e);
         });
 
-module.exports = (ghRepo, argv) => {
-    isDebug = argv.debug;
+module.exports = (ghRepo, { tag, prerelease = false, debug = false }) => {
+    isDebug = debug;
+    logDebug('Arguments', tag, prerelease, debug);
 
-    return getCommits(ghRepo, argv.tag)
+    return getCommits(ghRepo, tag, prerelease)
         .then(commits => {
             logDebug('Commits', commits);
             return Promise.all(commits.filter(commit => !!commit.prNumber).map(commit =>  // eslint-disable-line
