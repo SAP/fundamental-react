@@ -24,12 +24,9 @@
     "lint:pre-commit": "printf \"running pre-commit lint...\"  && npm run lint && printf \"done!\n\"",
     "lint": "npm run build:lint && npm run scripts:lint",
     "release": "./ci-scripts/publish_release.sh",
-<<<<<<< HEAD
     "scripts:lint": "eslint 'scripts/**' --ext .js,.jsx --env browser,node",
     "scripts:lint:fix": "eslint --fix 'scripts/**' --ext .js,.jsx --env browser,node",
-=======
     "release:create": "./ci-scripts/create-release.js",
->>>>>>> master
     "size": "npm run build && size-limit",
     "size:debug": "npm run build && size-limit --why",
     "start-js": "node scripts/start.js",
