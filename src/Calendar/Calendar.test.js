@@ -85,7 +85,6 @@ describe('<Calendar />', () => {
             .at(1)
             .simulate('click');
 
-
         expect(wrapper.state('showMonths')).toBeTruthy();
 
         wrapper
