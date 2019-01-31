@@ -11,7 +11,7 @@ export const ActionBar = ({ mobile, width, children, className, ...props }) => {
     return (
         <React.Fragment>
             {mobile ? (
-                <div style={{ width: width ? width : '319px' }}>
+                <div style={{width}}>
                     <div {...props} className={actionBarClasses}>{children}</div>
                 </div>
             ) : (
@@ -25,6 +25,10 @@ ActionBar.propTypes = {
     className: PropTypes.string,
     mobile: PropTypes.bool,
     width: PropTypes.string
+};
+
+ActionBar.defaultProps = {
+    width: '319px'
 };
 
 ActionBar.propDescriptions = {
@@ -65,18 +69,20 @@ export const ActionBarHeader = ({ className, description, descriptionProps, titl
             <h1
                 {...titleProps}
                 className='fd-action-bar__title'>{title}</h1>
-            <p
-                {...descriptionProps}
-                className='fd-action-bar__description'>{description} </p>
+            {description &&
+                <p
+                    {...descriptionProps}
+                    className='fd-action-bar__description'>{description}</p>
+            }
         </div>
     );
 };
 
 ActionBarHeader.propTypes = {
+    title: PropTypes.string.isRequired,
     className: PropTypes.string,
     description: PropTypes.string,
     descriptionProps: PropTypes.object,
-    title: PropTypes.string,
     titleProps: PropTypes.object
 };
 

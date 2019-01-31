@@ -404,10 +404,6 @@ Shellbar.propTypes = {
     subtitle: PropTypes.string
 };
 
-Shellbar.defaultProps = {
-    actions: null
-};
-
 Shellbar.propDescriptions = {
     actions: 'Holds all product actions and links.',
     copilot: 'For use with applications that utilize CoPilot.',

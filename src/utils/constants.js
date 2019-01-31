@@ -10,6 +10,12 @@ export const BADGE_TYPES = [
     'warning',
     'error'
 ];
+
+export const BADGE_MODIFIERS = [
+    'pill',
+    'filled'
+];
+
 export const LABEL_TYPES = [
     'success',
     'warning',

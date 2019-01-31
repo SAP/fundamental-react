@@ -1,4 +1,5 @@
 import classnames from 'classnames';
+import { FORM_MESSAGE_TYPES } from '../utils/constants';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 
@@ -98,7 +99,7 @@ export const FormMessage = ({ type, children, className, ...props }) => {
 FormMessage.propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,
-    type: PropTypes.oneOf(['', 'error', 'warning', 'help'])
+    type: PropTypes.oneOf(FORM_MESSAGE_TYPES)
 };
 
 // ------------------------------------------------- Form Input ----------------------------------------------
@@ -197,7 +198,7 @@ export const FormSelect = ({ disabled, children, className, ...props }) => {
         <select
             {...props}
             className={formSelectClasses}
-            disabled={disabled ? true : ''}>
+            disabled={disabled}>
             {children}
         </select>
     );
@@ -237,7 +238,7 @@ export class FormRadio extends Component {
                         <input
                             checked={this.state.selectedItem === inputItem.id}
                             className='fd-form__control'
-                            disabled={disabled ? true : ''}
+                            disabled={disabled}
                             id={inputItem.id}
                             name={inputItem.name}
                             onChange={this.handleChange}
@@ -253,7 +254,7 @@ export class FormRadio extends Component {
                     <input
                         checked={this.state.selectedItem === inputItem.id}
                         className='fd-form__control'
-                        disabled={disabled ? true : ''}
+                        disabled={disabled}
                         id={inputItem.id}
                         name={inputItem.name}
                         onChange={this.handleChange}
@@ -269,9 +270,9 @@ export class FormRadio extends Component {
     }
 }
 FormRadio.propTypes = {
+    inputs: PropTypes.array.isRequired,
     defaultChecked: PropTypes.string,
     disabled: PropTypes.bool,
-    inputs: PropTypes.array,
     isInline: PropTypes.bool
 };
 

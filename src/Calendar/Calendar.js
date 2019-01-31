@@ -373,13 +373,7 @@ export class Calendar extends Component {
     }
 
     returnDateSelected = (dates) => {
-        if (typeof this.props.onChange !== 'undefined') {
-            if (this.props.enableRangeSelection === true) {
-                this.props.onChange(dates);
-            } else {
-                this.props.onChange(dates);
-            }
-        }
+        this.props.onChange(dates);
     }
 
     generateNavigation = () => {
@@ -566,7 +560,12 @@ Calendar.propTypes = {
     tableBodyProps: PropTypes.object,
     tableHeaderProps: PropTypes.object,
     tableProps: PropTypes.object,
-    yearListProps: PropTypes.object
+    yearListProps: PropTypes.object,
+    onChange: PropTypes.func
+};
+
+Calendar.defaultProps = {
+    onChange: () => {}
 };
 
 Calendar.propDescriptions = {
