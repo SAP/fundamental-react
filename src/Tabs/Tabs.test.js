@@ -1,8 +1,8 @@
 import { mount } from 'enzyme';
 import React from 'react';
 import renderer from 'react-test-renderer';
+import { Link, MemoryRouter } from 'react-router-dom';
 import { Tab, TabComponent } from './Tabs';
-import { MemoryRouter, Link } from 'react-router-dom';
 
 
 describe('<Tabs />', () => {
