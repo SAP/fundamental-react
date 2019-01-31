@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.3.0-rc.11"></a>
+# [0.3.0-rc.11](https://github.com/SAP/fundamental-react/compare/v0.3.0-rc.10...v0.3.0-rc.11) (2019-01-31)
+
+
+### Bug Fixes
+
+* CORUI-6120: Add required and default props ([#322](https://github.com/SAP/fundamental-react/issues/322)) ([128bffd](https://github.com/SAP/fundamental-react/commit/128bffd))
+
+
+
 <a name="0.3.0-rc.10"></a>
 # [0.3.0-rc.10](https://github.com/SAP/fundamental-react/compare/v0.3.0-rc.9...v0.3.0-rc.10) (2019-01-31)
 
