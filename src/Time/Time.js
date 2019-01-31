@@ -28,6 +28,7 @@ class TimeItem extends Component {
         format12hours: false,
         id: '',
         spinners: false,
+        updateTime: () => {},
         value: null
     };
 
@@ -329,10 +330,8 @@ export class Time extends Component {
         this.setState(prevState => ({
             ...prevState.time
         }));
-        //
-        if (this.props.onChange) {
-            this.props.onChange(this.state.time);
-        }
+
+        this.props.onChange(this.state.time);
     };
     // onUpdateTime = () => {
     //   this.props.onUpdateTime();
@@ -488,6 +487,7 @@ Time.propTypes = {
 };
 
 Time.defaultProps = {
+    onChange: () => {},
     showHour: true,
     showMinute: true,
     showSecond: true,

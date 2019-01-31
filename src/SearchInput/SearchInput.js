@@ -125,7 +125,6 @@ export class SearchInput extends Component {
         const {
             placeholder,
             inShellbar,
-            onSearch,
             onEnter,
             searchList,
             onChange,
@@ -277,8 +276,11 @@ SearchInput.propTypes = {
     searchBtnProps: PropTypes.object,
     searchList: PropTypes.array,
     onChange: PropTypes.func,
-    onEnter: PropTypes.func,
-    onSearch: PropTypes.func
+    onEnter: PropTypes.func
+};
+
+SearchInput.defaultProps = {
+    onEnter: () => {}
 };
 
 SearchInput.propDescriptions = {

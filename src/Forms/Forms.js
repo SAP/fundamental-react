@@ -47,11 +47,6 @@ FormItem.propTypes = {
     isInline: PropTypes.bool
 };
 
-FormItem.defaultProps = {
-    isCheck: false,
-    isInline: false
-};
-
 FormItem.propDescriptions = {
     isCheck: 'Set to **true** to render an `<input>` with `type` of **checkbox**.',
     isInline: 'Set to **true** to display radio buttons and checkboxes in a row.'
@@ -77,10 +72,6 @@ FormLabel.propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,
     required: PropTypes.bool
-};
-
-FormLabel.defaultProps = {
-    required: false
 };
 
 FormLabel.propDescriptions = {
@@ -217,10 +208,6 @@ FormSelect.propTypes = {
     disabled: PropTypes.bool
 };
 
-FormSelect.defaultProps = {
-    disabled: false
-};
-
 // ------------------------------------------------- Form Radio ----------------------------------------------
 export class FormRadio extends Component {
     constructor(props) {
@@ -286,11 +273,6 @@ FormRadio.propTypes = {
     defaultChecked: PropTypes.string,
     disabled: PropTypes.bool,
     isInline: PropTypes.bool
-};
-
-FormRadio.defaultProps = {
-    disabled: false,
-    isInline: false
 };
 
 FormRadio.propDescriptions = {
