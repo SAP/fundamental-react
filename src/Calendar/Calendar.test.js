@@ -174,6 +174,30 @@ describe('<Calendar />', () => {
         );
     });
 
+    test('click disabled day', () => {
+        const wrapper = mount(disabledWeekEnds);
+        // select day of month
+        wrapper
+            .find(
+                'table.fd-calendar__table tbody.fd-calendar__group tr.fd-calendar__row td.fd-calendar__item:not(.fd-calendar__item--other-month)'
+            )
+            .at(0)
+            .simulate('click');
+
+        const currentDateDisplayed = new Date(wrapper.state('selectedDate'));
+
+        // select a disabled day of month
+        wrapper
+            .find(
+                'table.fd-calendar__table tbody.fd-calendar__group tr.fd-calendar__row td.fd-calendar__item.is-disabled'
+            )
+            .at(0)
+            .simulate('click');
+
+        // previously selected date should not change
+        expect(wrapper.state('selectedDate').getDate()).toEqual(currentDateDisplayed.getDate());
+    });
+
     test('click year from list from range selector', () => {
         let wrapper = mount(rangeSelect);
         expect(wrapper.state('showYears')).toBeFalsy();
