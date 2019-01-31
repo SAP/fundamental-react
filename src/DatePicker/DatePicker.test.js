@@ -42,22 +42,11 @@ describe('<DatePicker />', () => {
         // check to make sure calendar is shown
         expect(wrapper.state('hidden')).toBeFalsy();
 
-        // click to hide calendar
+        // clicking on input text should keep calendar displayed
         wrapper.find('input[type="text"]').simulate('click', { type: 'input' });
 
         // check to make sure calendar is shown
         expect(wrapper.state('hidden')).toBeFalsy();
-
-        wrapper.instance().componentWillMount();
-
-        // click on body element
-        let event = new MouseEvent('mousedown', {
-            target: document.querySelector('body')
-        });
-        document.dispatchEvent(event);
-
-        // check to make sure calendar is hidden
-        expect(wrapper.state('hidden')).toBeTruthy();
 
         // click to show calendar
         wrapper.find('input[type="text"]').simulate('click', { type: '' });
@@ -134,11 +123,14 @@ describe('<DatePicker />', () => {
         expect(wrapper.state('formattedDate')).toEqual(switchFormattedDate);
         expect(wrapper.state('arrSelectedDates').length).toEqual(2);
 
-        // click on body element
+        // click on body element to hide calendar
         let event = new MouseEvent('mousedown', {
             target: document.querySelector('body')
         });
         document.dispatchEvent(event);
+
+        // check to make sure calendar is hidden
+        expect(wrapper.state('hidden')).toBeTruthy();
     });
 
     test('entering invalid range dates', () => {
@@ -232,9 +224,8 @@ describe('<DatePicker />', () => {
 
         wrapper.find('input[type="text"]').simulate('keypress', { key: 'Enter' });
 
-
-        // press Esc key
-        wrapper.find('input[type="text"]').simulate('keypress', { key: 'Esc' });
+        expect(wrapper.state('formattedDate')).toBe('');
+        expect(wrapper.state('selectedDate')).toBe('undefined');
     });
 
     test('enter an invalid date string', () => {
