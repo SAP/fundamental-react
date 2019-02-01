@@ -42,6 +42,10 @@ if (!checkRequiredFiles([paths.appHtml, paths.appIndexJs])) {
     process.exit(1);
 }
 
+fs.copyFile('README.md', 'src/_playground/documentation/Home/README.md', (err) => {
+    if (err) throw err;
+});
+
 // Tools like Cloud9 rely on this.
 const DEFAULT_PORT = parseInt(process.env.PORT, 10) || 3000;
 const HOST = process.env.HOST || '0.0.0.0';
