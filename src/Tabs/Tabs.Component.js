@@ -1,21 +1,100 @@
 import React from 'react';
-import { Description, DocsText, DocsTile, Header, Import, Playground, Properties, Separator } from '../_playground';
-import { TabComponent, Tabs } from '../';
+import { Description, DocsText, DocsTile, Header, Import, Properties, Separator } from '../_playground';
+import { Link, MemoryRouter } from 'react-router-dom';
+import { Tab, TabGroup } from '../';
 
 export const TabsComponent = () => {
-    const tabscomponentCode = `
-    <Tabs>
-    <TabComponent ids={[{id : '1', url:'#', name: 'Tab 1', content: 'Hello world', disabled: false},
-                             {id : '2', url:'#', name: 'Tab 2', content: 'Hello world 2', disabled: false},
-                             {id : '3', url:'#', name: 'Tab 3', content: 'Hello world 3', disabled: true}]}>
-    </TabComponent>
-    </Tabs>`;
+    const tabGroupCode = `
+    <TabGroup
+        selected='1'>
+        <Tab
+            content='Hello world'
+            id='1'
+            url='#'>
+            Tab 1
+        </Tab>
+        <Tab
+            content='Hello world 2'
+            id='2'
+            url='#'>
+            Tab 2
+        </Tab>
+        <Tab
+            content='Hello world 3'
+            disabled
+            id='3'
+            url='#'>
+            Tab 3
+        </Tab>
+    </TabGroup>`;
+
+    const tabsGroupWithAnchorCode = `
+    <TabGroup
+        selected='1'>
+        <Tab
+            content='Hello world'
+            id='1'>
+            <a
+                href='#'>
+                Tab 1
+            </a>
+        </Tab>
+        <Tab
+            content='Hello world 2'
+            id='2'>
+            <a
+                href='#'>
+                Tab 2
+            </a>
+        </Tab>
+        <Tab
+            content='Hello world 3'
+            disabled
+            id='3'>
+            <a
+                href='#'>
+                Tab 2
+            </a>
+        </Tab>
+    </TabGroup>`;
+
+    const tabsGroupWithLinkCode = `
+    <MemoryRouter>
+        <TabGroup>
+            <Tab
+                content='Hello world'
+                id='1'>
+                <Link
+                    to='/'>
+                    Tab 1
+                </Link>
+            </Tab>
+            <Tab
+                content='Hello world 2'
+                id='2'>
+                <Link
+                    to='/'>
+                    Tab 2
+                </Link>
+            </Tab>
+            <Tab
+                content='Hello world 3'
+                disabled
+                id='3'>
+                <Link
+                    to='/'>
+                    Tab 2
+                </Link>
+            </Tab>
+        </TabGroup>
+    </MemoryRouter>`;
 
     return (
         <div>
-            <Header>Tabs</Header>
+            <Header>Tab Group</Header>
             <Description>
-                **Tabs** are based on a folder metaphor and used to separate content into different sections.
+                A **Tab Group** is a collection of **Tab** components.  Each **Tab** is based on a folder
+                metaphor and is used to separate content into different sections.
                 They should be ordered to create a visual hierarchy based on priority.
             </Description>
             <Import sourceModule={require('./Tabs')} />
@@ -26,44 +105,107 @@ export const TabsComponent = () => {
 
             <Separator />
 
+            <h2>Tab Group with URL</h2>
+
             <DocsTile>
-                <Tabs>
-                    <TabComponent
-                        ids={[
-                            { id: '1', url: '#', name: 'Tab 1', content: 'Hello world', disabled: false },
-                            { id: '2', url: '#', name: 'Tab 2', content: 'Hello world 2', disabled: false },
-                            { id: '3', url: '#', name: 'Tab 3', content: 'Hello world 3', disabled: true }
-                        ]} />
-                </Tabs>
+                <TabGroup
+                    selectedId='1'>
+                    <Tab
+                        content='Hello world'
+                        id='1'
+                        url='#'>
+                        Tab 1
+                    </Tab>
+                    <Tab
+                        content='Hello world 2'
+                        id='2'
+                        url='#'>
+                        Tab 2
+                    </Tab>
+                    <Tab
+                        content='Hello world 3'
+                        disabled
+                        id='3'
+                        url='#'>
+                        Tab 3
+                    </Tab>
+                </TabGroup>
             </DocsTile>
-            <DocsText>{tabscomponentCode}</DocsText>
+            <DocsText>{tabGroupCode}</DocsText>
 
             <Separator />
 
-            <h2>Playground</h2>
-            <Playground
-                component='tabs'
-                schema={[
-                    {
-                        attribute: 'ids',
-                        typeOfAttribute: 'lists',
-                        'enum': ['Tab 1', 'Tab 2', 'Tab 3']
-                    },
-                    {
-                        attribute: 'content',
-                        typeOfAttribute: 'listsContent',
-                        'enum': ['Tab 1', 'Tab 2', 'Tab 3']
-                    }
-                ]}>
-                <Tabs>
-                    <TabComponent
-                        ids={[
-                            { id: 'Tab 1', url: '#', name: 'Tab 1', content: 'Hello world', disabled: false },
-                            { id: 'Tab 2', url: '#', name: 'Tab 2', content: 'Hello world 2', disabled: false },
-                            { id: 'Tab 3', url: '#', name: 'Tab 3', content: 'Hello world 3', disabled: true }
-                        ]} />
-                </Tabs>
-            </Playground>
+            <h2>Tab Group with Anchor</h2>
+
+            <DocsTile>
+                <TabGroup
+                    selectedId='1'>
+                    <Tab
+                        content='Hello world'
+                        id='1'>
+                        <a
+                            href='#'>
+                            Tab 1
+                        </a>
+                    </Tab>
+                    <Tab
+                        content='Hello world 2'
+                        id='2'>
+                        <a
+                            href='#'>
+                            Tab 2
+                        </a>
+                    </Tab>
+                    <Tab
+                        content='Hello world 3'
+                        disabled
+                        id='3'>
+                        <a
+                            href='#'>
+                            Tab 2
+                        </a>
+                    </Tab>
+                </TabGroup>
+            </DocsTile>
+            <DocsText>{tabsGroupWithAnchorCode}</DocsText>
+
+            <Separator />
+
+            <h2>Tab Group with Link</h2>
+
+            <DocsTile>
+                <MemoryRouter>
+                    <TabGroup
+                        selectedId='1'>
+                        <Tab
+                            content='Hello world'
+                            id='1'>
+                            <Link
+                                to='/'>
+                                Tab 1
+                            </Link>
+                        </Tab>
+                        <Tab
+                            content='Hello world 2'
+                            id='2'>
+                            <Link
+                                to='/'>
+                                Tab 2
+                            </Link>
+                        </Tab>
+                        <Tab
+                            content='Hello world 3'
+                            disabled
+                            id='3'>
+                            <Link
+                                to='/'>
+                                Tab 2
+                            </Link>
+                        </Tab>
+                    </TabGroup>
+                </MemoryRouter>
+            </DocsTile>
+            <DocsText>{tabsGroupWithLinkCode}</DocsText>
         </div>
     );
 };
