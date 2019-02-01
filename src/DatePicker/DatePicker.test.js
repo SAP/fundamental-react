@@ -195,7 +195,7 @@ describe('<DatePicker />', () => {
         expect(wrapper.state('arrSelectedDates').length).toEqual(2);
     });
 
-    xtest('pressing enter key on date input', () => {
+    test('pressing enter key on date input', () => {
         wrapper = mount(rangeDatePicker);
 
         let startRangeDate = new Date();
