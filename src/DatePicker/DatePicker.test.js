@@ -202,33 +202,52 @@ describe('<DatePicker />', () => {
         let endRangeDate = new Date();
         endRangeDate.setDate(endRangeDate.getDate() + 3);
 
-        let arrDates = [startRangeDate, endRangeDate];
-        wrapper.instance().updateDate(arrDates);
-
         let formattedDate = `${startRangeDate.getMonth() +
             1}/${startRangeDate.getDate()}/${startRangeDate.getFullYear()}-${endRangeDate.getMonth() +
             1}/${endRangeDate.getDate()}/${endRangeDate.getFullYear()}`;
 
-        expect(wrapper.state('formattedDate')).toEqual(formattedDate);
-        expect(wrapper.state('arrSelectedDates').length).toEqual(2);
+        wrapper.find('input[type="text"]')
+            .simulate('change', { target: { value: formattedDate } });
 
         wrapper.find('input[type="text"]').simulate('keypress', { key: 'Enter' });
 
-        // make start date bigger than end date
-        arrDates = [endRangeDate, startRangeDate];
-        wrapper.instance().updateDate(arrDates);
+        expect(wrapper.state('formattedDate')).toEqual(formattedDate);
+        expect(wrapper.state('arrSelectedDates').length).toEqual(2);
+    });
+
+    test('pressing enter key on date input where start date > than end date', () => {
+        wrapper = mount(rangeDatePicker);
+
+        let startRangeDate = new Date();
+        let endRangeDate = new Date();
+        endRangeDate.setDate(endRangeDate.getDate() + 3);
 
         let switchFormattedDate = `${endRangeDate.getMonth() +
             1}/${endRangeDate.getDate()}/${endRangeDate.getFullYear()}-${startRangeDate.getMonth() +
             1}/${startRangeDate.getDate()}/${startRangeDate.getFullYear()}`;
 
-        expect(wrapper.state('formattedDate')).toEqual(switchFormattedDate);
-        expect(wrapper.state('arrSelectedDates').length).toEqual(2);
+        wrapper.find('input[type="text"]')
+            .simulate('change', { target: { value: switchFormattedDate } });
 
         wrapper.find('input[type="text"]').simulate('keypress', { key: 'Enter' });
 
-        expect(wrapper.state('formattedDate')).toBe('');
-        expect(wrapper.state('selectedDate')).toBe('undefined');
+        expect(wrapper.state('formattedDate')).toEqual(switchFormattedDate);
+        expect(wrapper.state('arrSelectedDates').length).toEqual(2);
+    });
+
+    test('enter a valid date string', () => {
+        // enter a valid date input
+        wrapper = mount(defaultDatePicker);
+        let date = new Date();
+        let formattedDate = `${date.getMonth() +
+            1}/${date.getDate()}/${date.getFullYear()}`;
+        wrapper.find('input[type="text"]')
+            .simulate('change', { target: { value: formattedDate } });
+
+        expect(wrapper.state('formattedDate')).toEqual(formattedDate);
+        wrapper.find('input[type="text"]').simulate('keypress', { key: 'Enter' });
+
+        expect(wrapper.state('selectedDate')).toEqual(new Date(date.getFullYear(), date.getMonth(), date.getDate()));
     });
 
     test('enter an invalid date string', () => {
