@@ -266,7 +266,7 @@ export const Routes = () => {
         if (route.section !== sectionName) {
             sectionName = route.section;
             navItems.push(
-                <ul className='frDocs-Nav' key={route.section}>
+                <ul className='frDocs-Nav__list' key={route.section}>
                     <li className='frDocs-Nav__headers'>{route.section}</li>
                     {routes.sort(sortBy('-section', 'name')).map(routeItem => {
                         if (routeItem.section === sectionName) {
@@ -292,7 +292,9 @@ export const Routes = () => {
             <div className='frDocs-Container'>
                 <div className='frDocs-Sidebar'>
                     <h1 className='frDocs-Logo'>FUNDAMENTAL REACT</h1>
-                    <nav>{navItems}</nav>
+                    <nav className='frDocs-Nav'>
+                        {navItems}
+                    </nav>
                 </div>
                 <div className='frDocs-Content'>
                     <Switch>

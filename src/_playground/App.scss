@@ -31,10 +31,13 @@ $fd-fonts-path: '../../node_modules/fiori-fundamentals/dist/fonts/';
             }
 
             .frDocs-Nav {
-                list-style: none;
                 border-top: 2px solid #dbe7f3;
                 height: 90%;
                 overflow: auto;
+
+                .frDocs-Nav__list {
+                    list-style: none;
+                }
 
                 .frDocs-Nav__headers {
                     color: #424e5a;
