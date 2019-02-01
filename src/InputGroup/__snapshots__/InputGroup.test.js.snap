@@ -271,8 +271,6 @@ exports[`<InputGroup /> create input group items 13`] = `
   >
     <button
       className="fd-button--light"
-      disabled={false}
-      selected={false}
     >
       Button
     </button>
@@ -295,8 +293,6 @@ exports[`<InputGroup /> create input group items 14`] = `
   >
     <button
       className="fd-button--light"
-      disabled={false}
-      selected={false}
     >
       Button
     </button>

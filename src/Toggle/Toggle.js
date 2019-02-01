@@ -6,7 +6,7 @@ import {TOGGLE_SIZES} from '../utils/constants';
 export class Toggle extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { checked: props.checked ? props.checked : false };
+        this.state = { checked: !!props.checked };
     }
 
     handleChange = (e) => {

@@ -89,7 +89,7 @@ export class Pagination extends Component {
         // calculate number of pages based on item total and items per page
         // check to make sure itemsPerPage != 0
         this.numberOfPages = Math.ceil(
-            itemsTotal / (itemsPerPage ? itemsPerPage : 10)
+            itemsTotal / (itemsPerPage || 10)
         );
 
         const paginationClasses = classnames(
@@ -105,7 +105,7 @@ export class Pagination extends Component {
                     <span
                         {...displayTotalProps}
                         className='fd-pagination__total'>
-                        {itemsTotal} {totalText || 'items'}
+                        {itemsTotal} {totalText}
                     </span>
                 ) : (
                     ''
@@ -151,7 +151,8 @@ Pagination.propTypes = {
 Pagination.defaultProps = {
     displayTotal: true,
     initialPage: 1,
-    itemsPerPage: 10
+    itemsPerPage: 10,
+    totalText: 'items'
 };
 
 Pagination.propDescriptions = {

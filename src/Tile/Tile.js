@@ -69,8 +69,8 @@ export const TileContent = props => {
 };
 
 TileContent.propTypes = {
+    title: PropTypes.string.isRequired,
     className: PropTypes.string,
-    title: PropTypes.string,
     titleProps: PropTypes.object
 };
 
@@ -85,6 +85,11 @@ export const TileMedia = props => {
     return <div {...rest} className={tileMediaClasses}>{children}</div>;
 };
 
+TileMedia.propTypes = {
+    children: PropTypes.node,
+    className: PropTypes.string
+};
+
 export const TileActions = props => {
     const { children, className, ...rest } = props;
 
@@ -94,6 +99,11 @@ export const TileActions = props => {
     );
 
     return <div {...rest} className={tileActionsClasses}>{children}</div>;
+};
+
+TileActions.propTypes = {
+    children: PropTypes.node,
+    className: PropTypes.string
 };
 
 export const ProductTile = props => {
@@ -117,6 +127,7 @@ export const ProductTile = props => {
 };
 
 ProductTile.propTypes = {
+    children: PropTypes.node,
     className: PropTypes.string,
     disabled: PropTypes.bool
 };
@@ -173,10 +184,7 @@ export const TileGrid = props => {
 
     const tileGridClasses = classnames(
         'fd-tile-grid',
-        {
-            [`fd-tile-grid--${col}col`]: !!col,
-            'fd-tile-grid--3col': !col
-        },
+        `fd-tile-grid--${col}col`,
         className
     );
 
@@ -190,6 +198,11 @@ export const TileGrid = props => {
 };
 
 TileGrid.propTypes = {
+    children: PropTypes.node,
     className: PropTypes.string,
     col: CustomPropTypes.range(1, 6)
+};
+
+TileGrid.defaultProps = {
+    col: 3
 };

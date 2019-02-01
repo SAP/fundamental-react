@@ -373,13 +373,7 @@ export class Calendar extends Component {
     }
 
     returnDateSelected = (dates) => {
-        if (typeof this.props.onChange !== 'undefined') {
-            if (this.props.enableRangeSelection === true) {
-                this.props.onChange(dates);
-            } else {
-                this.props.onChange(dates);
-            }
-        }
+        this.props.onChange(dates);
     }
 
     generateNavigation = () => {
@@ -465,14 +459,21 @@ export class Calendar extends Component {
                     }
                 );
 
-                days.push(<td className={dayClasses} key={copyDate}
-                    onClick={() => this.dateClick(copyDate, enableRangeSelection)} role='gridcell'><span className='fd-calendar__text'>{dateFormatted}</span>
-                </td>);
+                days.push(
+                    <td
+                        className={dayClasses}
+                        key={copyDate}
+                        onClick={!this.displayDisabled(day) ? () => this.dateClick(copyDate, enableRangeSelection) : null}
+                        role='gridcell' >
+                        <span className='fd-calendar__text'>{dateFormatted}</span>
+                    </td >
+                );
+
                 day = this.addDays(day, 1);
             }
 
             rows.push(
-                <tr className='fd-calendar__row' key={day}>
+                <tr className='fd-calendar__row' key={day} >
                     {days}
                 </tr>
             );
@@ -559,7 +560,12 @@ Calendar.propTypes = {
     tableBodyProps: PropTypes.object,
     tableHeaderProps: PropTypes.object,
     tableProps: PropTypes.object,
-    yearListProps: PropTypes.object
+    yearListProps: PropTypes.object,
+    onChange: PropTypes.func
+};
+
+Calendar.defaultProps = {
+    onChange: () => {}
 };
 
 Calendar.propDescriptions = {

@@ -2,6 +2,37 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.3.0-rc.11"></a>
+# [0.3.0-rc.11](https://github.com/SAP/fundamental-react/compare/v0.3.0-rc.10...v0.3.0-rc.11) (2019-01-31)
+
+
+### Bug Fixes
+
+* CORUI-6120: Add required and default props ([#322](https://github.com/SAP/fundamental-react/issues/322)) ([128bffd](https://github.com/SAP/fundamental-react/commit/128bffd))
+
+
+
+<a name="0.3.0-rc.10"></a>
+# [0.3.0-rc.10](https://github.com/SAP/fundamental-react/compare/v0.3.0-rc.9...v0.3.0-rc.10) (2019-01-31)
+
+
+
+<a name="0.3.0-rc.9"></a>
+# [0.3.0-rc.9](https://github.com/SAP/fundamental-react/compare/v0.3.0-rc.8...v0.3.0-rc.9) (2019-01-31)
+
+
+### Bug Fixes
+
+* DatePicker update unit tests ([#332](https://github.com/SAP/fundamental-react/issues/332)) ([7fffa2a](https://github.com/SAP/fundamental-react/commit/7fffa2a))
+* issue [#181](https://github.com/SAP/fundamental-react/issues/181) DatePicker disabled date selected ([#327](https://github.com/SAP/fundamental-react/issues/327)) ([68899f0](https://github.com/SAP/fundamental-react/commit/68899f0))
+
+
+
+<a name="0.3.0-rc.8"></a>
+# [0.3.0-rc.8](https://github.com/SAP/fundamental-react/compare/v0.3.0-rc.7...v0.3.0-rc.8) (2019-01-31)
+
+
+
 <a name="0.3.0-rc.7"></a>
 # [0.3.0-rc.7](https://github.com/SAP/fundamental-react/compare/v0.3.0-rc.6...v0.3.0-rc.7) (2019-01-31)
 

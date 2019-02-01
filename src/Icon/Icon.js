@@ -20,10 +20,6 @@ export const Icon = ({ glyph, size, clickHandler, className, ...props }) => {
     );
 };
 
-Icon.defaultProps = {
-    clickHandler: () => {}
-};
-
 Icon.propTypes = {
     glyph: PropTypes.string.isRequired,
     className: PropTypes.string,

@@ -50,13 +50,13 @@ export const Table = props => {
 };
 
 Table.propTypes = {
+    headers: PropTypes.array.isRequired,
     tableData: PropTypes.arrayOf(
         PropTypes.shape({
             rowData: PropTypes.array
         }).isRequired
     ).isRequired,
     className: PropTypes.string,
-    headers: PropTypes.array,
     tableBodyProps: PropTypes.object,
     tableBodyRowProps: PropTypes.oneOfType([
         PropTypes.object,
