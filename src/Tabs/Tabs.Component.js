@@ -91,9 +91,10 @@ export const TabsComponent = () => {
 
     return (
         <div>
-            <Header>Tabs</Header>
+            <Header>Tab Group</Header>
             <Description>
-                **Tabs** are based on a folder metaphor and used to separate content into different sections.
+                A **Tab Group** is a collection of **Tab** components.  Each **Tab** is based on a folder
+                metaphor and is used to separate content into different sections.
                 They should be ordered to create a visual hierarchy based on priority.
             </Description>
             <Import sourceModule={require('./Tabs')} />
@@ -104,7 +105,7 @@ export const TabsComponent = () => {
 
             <Separator />
 
-            <h2>Tab Group</h2>
+            <h2>Tab Group with URL</h2>
 
             <DocsTile>
                 <TabGroup
@@ -134,7 +135,7 @@ export const TabsComponent = () => {
 
             <Separator />
 
-            <h2>Tab Group w/Anchor</h2>
+            <h2>Tab Group with Anchor</h2>
 
             <DocsTile>
                 <TabGroup
@@ -170,7 +171,7 @@ export const TabsComponent = () => {
 
             <Separator />
 
-            <h2>Tab Group w/Link</h2>
+            <h2>Tab Group with Link</h2>
 
             <DocsTile>
                 <MemoryRouter>

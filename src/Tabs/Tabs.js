@@ -80,11 +80,11 @@ Tab.defaultProps = {
 
 Tab.propDescriptions = {
     children: 'Can be link text, an achor tag, or a react component like React Routers\'s `Link`.',
-    content: 'Content to render when tab is selected',
-    selected: 'Set to **true** to mark tab as selected',
+    content: 'Content to render when tab is selected.',
+    selected: 'Set to **true** to mark tab as selected.',
     url: 'Creates an internal anchor when a child anchor is not provided.',
-    tabContentProps: 'Additional props to be spread on content of tab.',
-    tabLinkProps: 'Additional props to be spread on content of tab.'
+    tabContentProps: 'Additional props to be spread to the tab content\'s <p>` element.',
+    tabLinkProps: 'Additional props to be spread to the tab\'s link element.'
 };
 
 export class TabGroup extends Component {
@@ -136,6 +136,6 @@ TabGroup.propTypes = {
 };
 
 TabGroup.propDescriptions = {
-    children: 'One or more Tab components to render within the component.',
-    selectedId: 'The `id` of the selected `Tab`'
+    children: 'One or more `Tab` components to render within the component.',
+    selectedId: 'The `id` of the selected `Tab`.'
 };
