@@ -9,6 +9,7 @@ import { ContextualMenuComponent } from '../ContextualMenu/ContextualMenu.Compon
 import { DatePickerComponent } from '../DatePicker/DatePicker.Component';
 import { DropdownComponent } from '../Dropdown/Dropdown.Component';
 import { FormsComponent } from '../Forms/Forms.Component';
+import groupArray from 'group-array';
 import { Home } from './documentation/Home/Home';
 import { IconComponent } from '../Icon/Icon.Component';
 import { IdentifierComponent } from '../Identifier/Identifier.Component';
@@ -38,12 +39,24 @@ import { TokenComponent } from '../Token/Token.Component';
 import { TreeComponent } from '../Tree/Tree.Component';
 import { BrowserRouter, NavLink, Redirect, Route, Switch } from 'react-router-dom';
 
+const sections = [
+    {
+        name: 'Getting Started',
+        sortOrder: 1
+    },
+    {
+        name: 'Components',
+        sortOrder: 2
+    }
+];
+
 const routes = [
     {
         url: '/home',
         name: 'Home',
         component: Home,
-        section: 'Getting Started'
+        section: 'Getting Started',
+        sortOrder: 1 // this one should always come first
     },
     {
         url: '/actionBar',
@@ -180,8 +193,7 @@ const routes = [
     {
         url: '/popover',
         name: 'Popover',
-        component:
-       PopoverComponent,
+        component: PopoverComponent,
         section: 'Components'
     },
     {
@@ -259,34 +271,33 @@ const routes = [
 ];
 
 export const Routes = () => {
-    let sectionName = '',
-        navItems = [];
+    let sectionRoutes;
+    const groupedRoutes = groupArray(routes, 'section');
 
-    routes.sort(sortBy('-section', 'name')).map(route => {
-        if (route.section !== sectionName) {
-            sectionName = route.section;
-            navItems.push(
-                <ul className='frDocs-Nav__list' key={route.section}>
-                    <li className='frDocs-Nav__headers'>{route.section}</li>
-                    {routes.sort(sortBy('-section', 'name')).map(routeItem => {
-                        if (routeItem.section === sectionName) {
-                            return (
-                                <li key={routeItem.url}>
-                                    <NavLink
-                                        activeClassName='frDocs-Nav__item--active'
-                                        className='frDocs-Nav__item'
-                                        key={routeItem.url}
-                                        to={{ pathname: routeItem.url }}>
-                                        {routeItem.name}
-                                    </NavLink>
-                                </li>
-                            );
-                        }
-                    })}
-                </ul>
-            );
+    const navItems = sections.sort(sortBy('sortOrder', 'name')).map(section => {
+        if (!groupedRoutes[section.name]) {
+            return;
         }
+
+        sectionRoutes = groupedRoutes[section.name].sort(sortBy('sortOrder', 'name'));
+        return (
+            <ul className='frDocs-Nav__list' key={section.name}>
+                <li className='frDocs-Nav__headers'>{section.name}</li>
+                {sectionRoutes.map(route => (
+                    <li key={route.name}>
+                        <NavLink
+                            activeClassName='frDocs-Nav__item--active'
+                            className='frDocs-Nav__item'
+                            key={route.url}
+                            to={{ pathname: route.url }}>
+                            {route.name}
+                        </NavLink>
+                    </li>
+                ))}
+            </ul>
+        );
     });
+
     return (
         <BrowserRouter basename={process.env.PUBLIC_URL}>
             <div className='frDocs-Container'>
