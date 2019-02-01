@@ -113,6 +113,8 @@ export class Calendar extends Component {
         let date = this.state.currentDateDisplayed;
         let months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
         date.setMonth(months.indexOf(month));
+        // reset date to first of month
+        date.setDate(1);
 
         //updates month state
         if (!this.props.enableRangeSelection) {
@@ -270,6 +272,7 @@ export class Calendar extends Component {
         }
 
         this.setState({
+            currentDateDisplayed: day,
             selectedDate: day,
             arrSelectedDates: selectedDates,
             dateClick: true
@@ -565,7 +568,7 @@ Calendar.propTypes = {
 };
 
 Calendar.defaultProps = {
-    onChange: () => {}
+    onChange: () => { }
 };
 
 Calendar.propDescriptions = {
