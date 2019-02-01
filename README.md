@@ -1,3 +1,5 @@
+# Fundamental React
+
 [![npm version](https://badge.fury.io/js/fundamental-react.svg)](//www.npmjs.com/package/fundamental-react)
 [![Build Status](https://travis-ci.org/SAP/fundamental-react.svg?branch=master)](https://travis-ci.org/SAP/fundamental-react)
 [![Coverage Status](https://coveralls.io/repos/github/SAP/fundamental-react/badge.svg?branch=master)](https://coveralls.io/github/SAP/fundamental-react?branch=master)
@@ -19,7 +21,7 @@ You will need to install [Node and Node Package Manager](https://www.npmjs.com/g
 
 ## Getting Started
 
-For an existing react application, follow the steps bellow:
+For an existing react application, follow the steps below:
 
 1. Install fundamental-react
 
@@ -34,29 +36,22 @@ For an existing react application, follow the steps bellow:
     ```
 
 1. Import components as needed. See [Component Documentation](https://sap.github.io/fundamental-react/) for examples and API details.
-```javascript
-import { Alert } from 'fundamental-react/lib/Alert/Alert';
-```
+    ```javascript
+    import { Alert } from 'fundamental-react/lib/Alert/Alert';
+    ```
+    or
+    ```javascript
+    import { Alert } from 'fundamental-react';
+    ```
 
-or
-
-```javascript
-import { Alert } from 'fundamental-react';
-```
-
-
-note: Importing from `lib` 
-```javascript
-import { Alert } from 'fundamental-react/lib/Alert/Alert;'
-``` 
-is recommended. Doing so will bring in only the component you are using instead of the whole library, which will reduce your bundle size significantly.
+    > **NOTE:** Importing from `lib` is recommended. Doing so will bring in only the component you are using instead of the whole library, which will reduce your bundle size significantly.
 
 
 ## Versioning
 
-The `fundamental-react` library follows [Semantic Versioning](https://semver.org/). These components strictly adhere to the [MAJOR].[MINOR].[PATCH] numbering system (also known as [BREAKING].[FEATURE].[FIX]).
+The `fundamental-react` library follows [Semantic Versioning](https://semver.org/). These components strictly adhere to the `[MAJOR].[MINOR].[PATCH]` numbering system (also known as `[BREAKING].[FEATURE].[FIX]`).
 
-Merges to the `master` branch will be published as a prerelease. Prereleases will include an **rc** version (_e.g._ [MAJOR].[MINOR].[PATCH]-rc.[RC]).
+Merges to the `master` branch will be published as a prerelease. Prereleases will include an **rc** version (_e.g._ `[MAJOR].[MINOR].[PATCH]-rc.[RC]`).
 
 ## Known Issues
 
@@ -68,7 +63,7 @@ If you encounter an issue or want to request a feature, you can [create an issue
 
 ## Contributing
 
-If you want to contribute, please check the [Contribution Guidelines](./.github/CONTRIBUTING.md). Also see our [Developer Guide to Getting Started](https://github.com/SAP/fundamental-react/wiki/Developer-Guide).
+If you want to contribute, please check the [Contribution Guidelines](https://github.com/SAP/fundamental-react/blob/master/.github/CONTRIBUTING.md). Also see our [Developer Guide to Getting Started](https://github.com/SAP/fundamental-react/wiki/Developer-Guide).
 
 ## License
 

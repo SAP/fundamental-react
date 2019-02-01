@@ -5,4 +5,5 @@
 *.snap
 *.svg
 *.sh
+*.md
 node_modules/**

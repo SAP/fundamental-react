@@ -1,6 +1,6 @@
 import './App.scss';
 import '@babel/polyfill';
-import Routes from './Routes';
+import { Routes } from './Routes';
 import React, { Component } from 'react';
 
 class App extends Component {
