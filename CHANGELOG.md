@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.3.0-rc.14"></a>
+# [0.3.0-rc.14](https://github.com/SAP/fundamental-react/compare/v0.3.0-rc.13...v0.3.0-rc.14) (2019-02-01)
+
+
+### Bug Fixes
+
+* Refactor tabs to remove React-Router dependency  ([#336](https://github.com/SAP/fundamental-react/issues/336)) ([1a2ed7c](https://github.com/SAP/fundamental-react/commit/1a2ed7c))
+
+
+
 <a name="0.3.0-rc.13"></a>
 # [0.3.0-rc.13](https://github.com/SAP/fundamental-react/compare/v0.3.0-rc.12...v0.3.0-rc.13) (2019-02-01)
 
