@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.3.0-rc.13"></a>
+# [0.3.0-rc.13](https://github.com/SAP/fundamental-react/compare/v0.3.0-rc.12...v0.3.0-rc.13) (2019-02-01)
+
+
+
+<a name="0.3.0-rc.12"></a>
+# [0.3.0-rc.12](https://github.com/SAP/fundamental-react/compare/v0.3.0-rc.11...v0.3.0-rc.12) (2019-02-01)
+
+
+### Bug Fixes
+
+* Refactor DatePicker component ([#337](https://github.com/SAP/fundamental-react/issues/337)) ([c7c9d5e](https://github.com/SAP/fundamental-react/commit/c7c9d5e))
+
+
+
 <a name="0.3.0-rc.11"></a>
 # [0.3.0-rc.11](https://github.com/SAP/fundamental-react/compare/v0.3.0-rc.10...v0.3.0-rc.11) (2019-01-31)
 
