@@ -52,7 +52,7 @@ export { ProductTileMedia } from './Tile/Tile';
 export { SearchInput } from './SearchInput/SearchInput';
 export { SideNav, SideNavList, SideNavGroup } from './SideNavigation/SideNavigation';
 export { Table } from './Table/Table';
-export { Tabs, TabComponent } from './Tabs/Tabs';
+export { Tab, TabGroup } from './Tabs/Tabs';
 export { Token } from './Token/Token';
 export { Tile } from './Tile/Tile';
 export { TileContent } from './Tile/Tile';

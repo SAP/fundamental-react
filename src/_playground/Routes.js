@@ -228,7 +228,7 @@ const routes = [
     },
     {
         url: '/tabs',
-        name: 'Tabs',
+        name: 'Tab Group',
         component: TabsComponent,
         section: 'Components'
     },

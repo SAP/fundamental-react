@@ -10,7 +10,6 @@ import { FormGroup, FormItem, FormLabel, InputGroup } from '../../../';
 import { ListGroup, ListGroupItem, ListGroupItemActions } from '../../../';
 import { ProductTile, ProductTileContent, ProductTileMedia, Tile, TileActions, TileContent, TileMedia } from '../../../';
 import React, { Component } from 'react';
-import { TabComponent, Tabs } from '../../../';
 
 export class Playground extends Component {
     constructor(props) {
@@ -430,13 +429,6 @@ export class Playground extends Component {
                       photo={this.state.childs.photo}
                       size={this.state.childs.size}
                       type={this.state.childs.type} />
-              );
-              break;
-          case 'tabs':
-              componentToGenerate = (
-                  <Tabs>
-                      <TabComponent ids={this.state.childs.children.props.ids} />
-                  </Tabs>
               );
               break;
           case 'inputgroup':
