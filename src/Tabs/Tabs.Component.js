@@ -1,5 +1,5 @@
 import React from 'react';
-import { Description, DocsText, DocsTile, Header, Import, Playground, Properties, Separator } from '../_playground';
+import { Description, DocsText, DocsTile, Header, Import, Properties, Separator } from '../_playground';
 import { Link, MemoryRouter } from 'react-router-dom';
 import { Tab, TabGroup } from '../';
 
@@ -104,11 +104,11 @@ export const TabsComponent = () => {
 
             <Separator />
 
-            <h2>Tab Component</h2>
-            <p>Menu Component utilizing URL props.</p>
+            <h2>Tab Group</h2>
 
             <DocsTile>
-                <TabGroup>
+                <TabGroup
+                    selectedId='1'>
                     <Tab
                         content='Hello world'
                         id='1'
@@ -134,11 +134,11 @@ export const TabsComponent = () => {
 
             <Separator />
 
-            <h2>Tab Component w/Anchor</h2>
-            <p>Menu Component utilizing React Router Link components.</p>
+            <h2>Tab Group w/Anchor</h2>
 
             <DocsTile>
-                <TabGroup>
+                <TabGroup
+                    selectedId='1'>
                     <Tab
                         content='Hello world'
                         id='1'>
@@ -170,12 +170,12 @@ export const TabsComponent = () => {
 
             <Separator />
 
-            <h2>Tab Component w/Link</h2>
-            <p>Menu Component utilizing React Router Link components.</p>
+            <h2>Tab Group w/Link</h2>
 
             <DocsTile>
                 <MemoryRouter>
-                    <TabGroup>
+                    <TabGroup
+                        selectedId='1'>
                         <Tab
                             content='Hello world'
                             id='1'>
@@ -205,28 +205,6 @@ export const TabsComponent = () => {
                 </MemoryRouter>
             </DocsTile>
             <DocsText>{tabsGroupWithLinkCode}</DocsText>
-
-            <Separator />
-
-            <h2>Playground</h2>
-            <Playground
-                component='tab'
-                schema={[
-                    {
-                        attribute: 'children',
-                        typeOfAttribute: 'content'
-                    }
-                ]}>
-
-                <TabGroup>
-                    <Tab
-                        content='Hello world'
-                        id='Tab 1'
-                        url='#'>
-                        Tab 1
-                    </Tab>
-                </TabGroup>
-            </Playground>
         </div>
     );
 };

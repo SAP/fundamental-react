@@ -133,7 +133,7 @@ export default class Routes extends Component {
                     component: BadgeComponent
                 },
                 { url: '/table', name: 'Table', component: TableComponent },
-                { url: '/tabs', name: 'Tabs', component: TabsComponent },
+                { url: '/tabs', name: 'Tab Group', component: TabsComponent },
                 { url: '/tile', name: 'Tile', component: TileComponent },
                 { url: '/time', name: 'Time', component: TimeComponent },
                 {

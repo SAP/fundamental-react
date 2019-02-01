@@ -3,7 +3,15 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 
 export const Tab = props => {
-    const { children, className, content, disabled, id, onClick, selectedId, tabContentProps, tabLinkProps, url, ...rest } = props;
+    const { children, className, content, disabled, id, onClick, selected, tabContentProps, tabLinkProps, url, ...rest } = props;
+
+    const linkClasses = classnames(
+        className,
+        'fd-tabs__link',
+        {
+            'is-selected': selected
+        }
+    );
 
     const renderLink = () => {
         if (url) {
@@ -11,11 +19,11 @@ export const Tab = props => {
                 <a
                     {...tabLinkProps}
                     aria-disabled={disabled}
-                    className={className}
+                    className={linkClasses}
                     disabled={disabled}
                     href={url}
                     onClick={(e) => {
-                        if (!disabled && onClick) {
+                        if (!disabled) {
                             onClick(e);
                         }
                     }}>
@@ -26,10 +34,10 @@ export const Tab = props => {
             return React.cloneElement(children, {
                 ...tabLinkProps,
                 'aria-disabled': disabled,
-                className: className,
+                className: linkClasses,
                 disabled: disabled,
                 onClick: (e) => {
-                    if (!disabled && onClick) {
+                    if (!disabled) {
                         onClick(e);
                     }
                 }
@@ -39,12 +47,14 @@ export const Tab = props => {
         }
     };
 
+    const tabClasses = classnames('fd-tabs__item', className);
+
     return (
         <li {...rest}
-            className='fd-tabs__item'
+            className={tabClasses}
             key={id} >
             {renderLink()}
-            {selectedId === id ? (
+            {selected ? (
                 <p {...tabContentProps} className='fd-tabs__content'>{content}</p>
             ) : null}
         </li>
@@ -52,15 +62,29 @@ export const Tab = props => {
 };
 
 Tab.propTypes = {
-    id: PropTypes.string.isRequired,
     children: PropTypes.node,
     className: PropTypes.string,
-    url: PropTypes.string
+    content: PropTypes.node,
+    disabled: PropTypes.bool,
+    id: PropTypes.string,
+    selected: PropTypes.bool,
+    tabContentProps: PropTypes.object,
+    tabLinkProps: PropTypes.object,
+    url: PropTypes.string,
+    onClick: PropTypes.func
+};
+
+Tab.defaultProps = {
+    onClick: () => {}
 };
 
 Tab.propDescriptions = {
     children: 'Can be link text, an achor tag, or a react component like React Routers\'s `Link`.',
-    url: 'Creates an internal anchor when a child anchor is not provided.'
+    content: 'Content to render when tab is selected',
+    selected: 'Set to **true** to mark tab as selected',
+    url: 'Creates an internal anchor when a child anchor is not provided.',
+    tabContentProps: 'Additional props to be spread on content of tab.',
+    tabLinkProps: 'Additional props to be spread on content of tab.'
 };
 
 export class TabGroup extends Component {
@@ -76,23 +100,11 @@ export class TabGroup extends Component {
         this.setState({ selectedId: id });
     };
 
-    getLinkClasses = (id, className) => {
-        return classnames(
-            className,
-            'fd-tabs__link',
-            {
-                'is-selected': this.state.selectedId === id
-            }
-        );
-    }
-
     renderTabs = (children) => {
         return React.Children.map(children, (child) => {
-            const classes = this.getLinkClasses(child.props.id, child.props.className);
 
             return React.cloneElement(child, {
-                selectedId: this.state.selectedId,
-                className: classes,
+                selected: this.state.selectedId === child.props.id,
                 onClick: (e) => {
                     child.props.onClick && child.props.onClick(e);
                     this.handleTabSelection(e, child.props.id);
@@ -102,7 +114,7 @@ export class TabGroup extends Component {
     }
 
     render() {
-        const { ids, children, className, selectedId, tabProps, tabLinkProps, tabContentProps, ...rest } = this.props;
+        const { children, className, selectedId, ...rest } = this.props;
 
         const tabClasses = classnames(
             'fd-tabs',
@@ -125,5 +137,5 @@ TabGroup.propTypes = {
 
 TabGroup.propDescriptions = {
     children: 'One or more Tab components to render within the component.',
-    selectedId: 'Initial selected `<Tab>`'
+    selectedId: 'The `id` of the selected `Tab`'
 };
