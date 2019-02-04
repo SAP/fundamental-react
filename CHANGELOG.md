@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.3.2-rc.1"></a>
+## [0.3.2-rc.1](https://github.com/SAP/fundamental-react/compare/v0.3.2-rc.0...v0.3.2-rc.1) (2019-02-04)
+
+
+### Bug Fixes
+
+* Updating key missing error in Tab Tests ([#353](https://github.com/SAP/fundamental-react/issues/353)) ([52d4a68](https://github.com/SAP/fundamental-react/commit/52d4a68))
+
+
+
 <a name="0.3.2-rc.0"></a>
 ## [0.3.2-rc.0](https://github.com/SAP/fundamental-react/compare/v0.3.1...v0.3.2-rc.0) (2019-02-04)
 
