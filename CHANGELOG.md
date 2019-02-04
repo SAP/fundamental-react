@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.3.1-rc.0"></a>
+## [0.3.1-rc.0](https://github.com/SAP/fundamental-react/compare/v0.3.0...v0.3.1-rc.0) (2019-02-04)
+
+
+### Bug Fixes
+
+* Removed bin config option ([#348](https://github.com/SAP/fundamental-react/issues/348)) ([52032bf](https://github.com/SAP/fundamental-react/commit/52032bf))
+
+
+
 <a name="0.3.0"></a>
 # [0.3.0](https://github.com/SAP/fundamental-react/compare/v0.3.0-rc.14...v0.3.0) (2019-02-01)
 
