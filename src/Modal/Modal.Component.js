@@ -36,11 +36,11 @@ export class ModalComponent extends Component {
     <React.Fragment>
       <Button
         option="light"
-        onclick={() => this.showHideConfirmModal('No Way')}
+        onClick={() => this.showHideConfirmModal('No Way')}
       >
         No Way
       </Button>
-      <Button onclick={() => this.showHideConfirmModal('Sure')}>
+      <Button onClick={() => this.showHideConfirmModal('Sure')}>
         Sure
       </Button>
     </React.Fragment>
@@ -56,11 +56,11 @@ export class ModalComponent extends Component {
     <React.Fragment>
       <Button
         option="light"
-        onclick={() => this.showHideFormModal('Cancel')}
+        onClick={() => this.showHideFormModal('Cancel')}
       >
         Cancel
       </Button>
-      <Button onclick={() => this.showHideFormModal('Invite')}>
+      <Button onClick={() => this.showHideFormModal('Invite')}>
         Invite
       </Button>
     </React.Fragment>
@@ -193,10 +193,10 @@ export class ModalComponent extends Component {
                     <Modal
                         actions={
                             <React.Fragment>
-                                <Button onclick={() => this.showHideConfirmModal('No Way')} type='standard'>
+                                <Button onClick={() => this.showHideConfirmModal('No Way')} type='standard'>
                                     No Way
                                 </Button>
-                                <Button onclick={() => this.showHideConfirmModal('Sure')}>Sure</Button>
+                                <Button onClick={() => this.showHideConfirmModal('Sure')}>Sure</Button>
                             </React.Fragment>
                         }
                         onClose={this.showHideConfirmModal}
@@ -222,10 +222,10 @@ export class ModalComponent extends Component {
                     <Modal
                         actions={
                             <React.Fragment>
-                                <Button onclick={() => this.showHideFormModal('Cancel')} type='standard'>
+                                <Button onClick={() => this.showHideFormModal('Cancel')} type='standard'>
                                     Cancel
                                 </Button>
-                                <Button onclick={() => this.showHideFormModal('Invite')}>Invite</Button>
+                                <Button onClick={() => this.showHideFormModal('Invite')}>Invite</Button>
                             </React.Fragment>
                         }
                         onClose={this.showHideFormModal}
