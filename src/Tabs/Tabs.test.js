@@ -11,19 +11,22 @@ describe('<Tabs />', () => {
             <Tab
                 content='Hello world'
                 id='1'
+                key='1'
                 url='#'>
                 Tab 1
             </Tab>,
             <Tab
                 content='Hello world 2'
                 id='2'
+                key='2'
                 url='#'>
                 Tab 2
             </Tab>,
             <Tab
                 content='Hello world 3'
                 disabled
-                id='3'>
+                id='3'
+                key='3'>
                 <a href='#'>
                     Tab 3
                 </a>
@@ -35,14 +38,16 @@ describe('<Tabs />', () => {
         [
             <Tab
                 content='Hello world'
-                id='1'>
+                id='4'
+                key='4'>
                 <Link to='/'>
                     Tab 1
                 </Link>
             </Tab>,
             <Tab
                 content='Hello world 2'
-                id='2'>
+                id='5'
+                key='5'>
                 <Link to='/'>
                     Tab 2
                 </Link>
@@ -50,7 +55,8 @@ describe('<Tabs />', () => {
             <Tab
                 content='Hello world 3'
                 disabled
-                id='3'>
+                id='6'
+                key='6'>
                 <Link to='/'>
                     Tab 3
                 </Link>
@@ -75,7 +81,7 @@ describe('<Tabs />', () => {
     const routerTabs = (
         <MemoryRouter>
             <TabGroup
-                selectedId='1'>
+                selectedId='4'>
                 {tabsExampleWithLink}
             </TabGroup>
         </MemoryRouter>
@@ -84,7 +90,7 @@ describe('<Tabs />', () => {
         <MemoryRouter>
             <TabGroup
                 className='blue'
-                selectedId='1'>
+                selectedId='4'>
                 {tabsExampleWithLink}
             </TabGroup>
         </MemoryRouter>
