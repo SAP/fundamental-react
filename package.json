@@ -9,9 +9,6 @@
     "type": "git",
     "url": "https://github.com/SAP/fundamental-react"
   },
-  "bin": {
-    "create-release": "ci-scripts/create-release.js"
-  },
   "scripts": {
     "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
     "build-doc": "node scripts/build.js",
