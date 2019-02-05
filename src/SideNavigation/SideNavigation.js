@@ -5,6 +5,17 @@ import React, { Component } from 'react';
 export class SideNav extends Component {
     constructor(props) {
         super(props);
+
+        this.state = {
+            selectedId: props.selectedItem
+        };
+    }
+
+    handleSelect = (e, id) => {
+        console.log(id);
+        this.setState({
+            selectedId: id
+        });
     }
 
     render() {
@@ -20,7 +31,15 @@ export class SideNav extends Component {
 
         return (
             <nav {...rest} className={sideNavClasses}>
-                {children}
+                {React.Children.map(children, (child) => {
+                    if (React.isValidElement(child)) {
+                        return React.cloneElement(child, {
+                            onItemSelect: this.handleSelect
+                        });
+                    } else {
+                        return child;
+                    }
+                })}
             </nav>
         );
     }
@@ -32,7 +51,7 @@ export class SideNavList extends Component {
     }
 
     render() {
-        const { children, className, icons, ...rest } = this.props;
+        const { children, className, icons, onItemSelect, ...rest } = this.props;
 
         const sideNavListClasses = classnames(
             'fd-side-nav__list',
@@ -43,13 +62,21 @@ export class SideNavList extends Component {
             <ul
                 {...rest}
                 className={sideNavListClasses}>
-                {children}
+                {React.Children.map(children, (child) => {
+                    if (React.isValidElement(child)) {
+                        return React.cloneElement(child, {
+                            onItemSelect: onItemSelect
+                        });
+                    } else {
+                        return child;
+                    }
+                })}
             </ul>
         );
     }
 }
 
-const SideNavGroup = ({title, children, className, titleProps, ...props}) => {
+const SideNavGroup = ({title, children, className, onItemSelect, titleProps, ...props}) => {
     const sideNavGroupClasses = classnames(
         'fd-side-nav__group',
         className
@@ -62,12 +89,20 @@ const SideNavGroup = ({title, children, className, titleProps, ...props}) => {
             <h1 {...titleProps} className='fd-side-nav__title'>
                 {title}
             </h1>
-            {children}
+            {React.Children.map(children, (child) => {
+                if (React.isValidElement(child)) {
+                    return React.cloneElement(child, {
+                        onItemSelect: onItemSelect
+                    });
+                } else {
+                    return child;
+                }
+            })}
         </div>
     );
 };
 
-const SideNavItem = ({children, glyph, hasChild, id, isSubItem, name, url, ...props}) => {
+const SideNavItem = ({children, glyph, hasChild, id, isSubItem, name, onClick, onItemSelect, url, ...props}) => {
     const getClasses = () => {
         return classnames(
             {
@@ -84,7 +119,11 @@ const SideNavItem = ({children, glyph, hasChild, id, isSubItem, name, url, ...pr
         return (
             <a
                 className={getClasses()}
-                href={url}>
+                href={url}
+                onClick={(e) => {
+                    onClick(e);
+                    onItemSelect(e, id);
+                }}>
                 {glyph ? (
                     <span
                         className={`fd-side-nav__icon sap-icon--${glyph} sap-icon--l`}
@@ -101,7 +140,8 @@ const SideNavItem = ({children, glyph, hasChild, id, isSubItem, name, url, ...pr
             key={id}>
             {url && renderLink()}
             {React.Children.map(children, (child) => {
-                if (React.isValidElement(child) && child.type !== 'SubGroup') {
+                console.warn(child.type);
+                if (React.isValidElement(child) && child.type !== SideNav.SubItems) {
                     return React.cloneElement(child, {
                         children: (<React.Fragment>
                             {glyph ? (
