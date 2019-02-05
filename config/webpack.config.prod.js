@@ -1,4 +1,5 @@
 /* eslint-disable camelcase */
+/* eslint-disable no-undefined */
 
 'use strict';
 
