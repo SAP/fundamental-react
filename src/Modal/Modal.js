@@ -44,11 +44,15 @@ export class Modal extends Component {
         }
 
         return ReactDOM.createPortal(
-            <FocusTrap>
+            <FocusTrap
+                focusTrapOptions={{
+                    initialFocus: '.startTabIndex'
+                }}>
                 <div
                     {...rest}
                     className={modalClasses}>
                     <div className='modal-demo-bg'>
+                        <span className='startTabIndex' tabIndex='-1' />
                         <div
                             aria-label={title}
                             aria-modal='true'
@@ -86,7 +90,7 @@ export class Modal extends Component {
                         </div>
                     </div>
                 </div>
-            </FocusTrap>,
+            </FocusTrap >,
             this.bodyElm
         );
     }
