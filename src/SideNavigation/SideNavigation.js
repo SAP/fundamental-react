@@ -1,90 +1,38 @@
 import classnames from 'classnames';
-import PropTypes from 'prop-types';
-import { BrowserRouter, Link } from 'react-router-dom';
+// import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 
-export const SideNav = props => {
-    const { icons, children, ...rest } = props;
+export class SideNav extends Component {
+    constructor(props) {
+        super(props);
+    }
 
-    const sideNavClasses = classnames(
-        'fd-side-nav',
-        {
-            'fd-side-nav--icons': icons
-        }
-    );
+    render() {
+        const { children, className, icons, ...rest } = this.props;
 
-    return (
-        <nav {...rest} className={sideNavClasses}>
-            {children}
-        </nav>
-    );
-};
-SideNav.propTypes = {
-    children: PropTypes.node,
-    icons: PropTypes.bool
-};
+        const sideNavClasses = classnames(
+            className,
+            'fd-side-nav',
+            {
+                'fd-side-nav--icons': icons
+            }
+        );
 
-SideNav.propDescriptions = {
-    icons: 'Set to **true** enables side navigation collapsed with icons.'
-};
+        return (
+            <nav {...rest} className={sideNavClasses}>
+                {children}
+            </nav>
+        );
+    }
+}
 
 export class SideNavList extends Component {
     constructor(props) {
         super(props);
-
-        let initialState = [];
-
-        props.items.forEach(item => {
-            if (item.hasChild) {
-                let id = item.id;
-                let obj = {};
-
-                obj[id] = false;
-                initialState.push(obj);
-            }
-        });
-
-        this.state = {
-            selectedItem: 'item_2',
-            itemStates: initialState
-        };
-    }
-
-    handleSelectChild = (e, id) => {
-        this.setState({
-            selectedItem: id
-        });
-    };
-
-    handleSelect = (e, id) => {
-        let iStates = Object.assign({}, this.state.itemStates);
-        iStates[id] = !iStates[id];
-        this.setState({ itemStates: iStates });
-        this.setState({ selectedItem: id });
-    };
-
-    getLinkClasses = ({id, hasChild}) => {
-        return classnames(
-            'fd-side-nav__link',
-            {
-                'is-selected': this.state.selectedItem === id,
-                'has-child': hasChild,
-                'is-expanded': this.state.itemStates[id] && hasChild
-            }
-        );
-    }
-
-    getSubLinkClasses = (id) => {
-        return classnames(
-            'fd-side-nav__sublink',
-            {
-                'is-selected': this.state.selectedItem === id
-            }
-        );
     }
 
     render() {
-        const { items, className, ...rest } = this.props;
+        const { children, className, icons, ...rest } = this.props;
 
         const sideNavListClasses = classnames(
             'fd-side-nav__list',
@@ -92,96 +40,16 @@ export class SideNavList extends Component {
         );
 
         return (
-            <BrowserRouter>
-                <ul
-                    {...rest}
-                    className={sideNavListClasses}>
-                    {items.map(item => {
-                        return (
-                            <li className='fd-side-nav__item' key={item.id}>
-                                {item.link ? (
-                                    <Link
-                                        className={this.getLinkClasses(item)}
-                                        key={item.id}
-                                        onClick={e => this.handleSelect(e, item.id)}
-                                        to={{ pathname: item.link }}>
-                                        {item.glyph ? (
-                                            <span
-                                                className={`fd-side-nav__icon sap-icon--${item.glyph} sap-icon--l`}
-                                                role='presentation' />
-                                        ) : null}
-                                        {item.name}
-                                    </Link>
-                                ) : null}
-
-                                {item.url ? (
-                                    <a
-                                        className={this.getLinkClasses(item)}
-                                        href={item.url}
-                                        key={item.id}
-                                        onClick={e => this.handleSelect(e, item.id)}>
-                                        {item.glyph ? (
-                                            <span
-                                                className={`fd-side-nav__icon sap-icon--${item.glyph} sap-icon--l`}
-                                                role='presentation' />
-                                        ) : null}
-                                        {item.name}
-                                    </a>
-                                ) : null}
-
-                                {item.hasChild ? (
-                                    <ul
-                                        aria-expanded={this.state.itemStates[item.id]}
-                                        aria-hidden={!this.state.itemStates[item.id]}
-                                        className='fd-side-nav__sublist'
-                                        id={item.id}>
-                                        {item.child.map(ch => {
-                                            return (
-                                                <React.Fragment key={ch.id}>
-                                                    {ch.link ? (
-                                                        <Link
-                                                            className={this.getSubLinkClasses(ch.id)}
-                                                            key={ch.id}
-                                                            onClick={e => this.handleSelectChild(e, ch.id)}
-                                                            to={{ pathname: ch.link }}>
-                                                            {ch.name}
-                                                        </Link>
-                                                    ) : null}
-
-                                                    {ch.url ? (
-                                                        <a
-                                                            className={this.getSubLinkClasses(ch.id)}
-                                                            href={ch.url}
-                                                            key={ch.id}
-                                                            onClick={e => this.handleSelectChild(e, ch.id)}>
-                                                            {ch.name}
-                                                        </a>
-                                                    ) : null}
-                                                </React.Fragment>
-                                            );
-                                        })}
-                                    </ul>
-                                ) : null}
-                            </li>
-                        );
-                    })}
-                </ul>
-            </BrowserRouter>
+            <ul
+                {...rest}
+                className={sideNavListClasses}>
+                {children}
+            </ul>
         );
     }
 }
-SideNavList.propTypes = {
-    items: PropTypes.array.isRequired,
-    className: PropTypes.string
-};
 
-SideNavList.propDescriptions = {
-    items: 'An array of objects with keys \'id\', \'url\', \'name\', \'hasChild\', \'child\', and \'glyph\' setting the attributes of the items.'
-};
-
-export const SideNavGroup = props => {
-    const { title, children, className, titleProps, ...rest } = props;
-
+const SideNavGroup = ({title, children, className, titleProps, ...props}) => {
     const sideNavGroupClasses = classnames(
         'fd-side-nav__group',
         className
@@ -189,16 +57,90 @@ export const SideNavGroup = props => {
 
     return (
         <div
-            {...rest}
+            {...props}
             className={sideNavGroupClasses}>
-            <h1 {...titleProps} className='fd-side-nav__title'>{title}</h1>
+            <h1 {...titleProps} className='fd-side-nav__title'>
+                {title}
+            </h1>
             {children}
         </div>
     );
 };
 
-SideNavGroup.propTypes = {
-    title: PropTypes.string.isRequired,
-    className: PropTypes.string,
-    titleProps: PropTypes.object
+const SideNavItem = ({children, glyph, hasChild, id, isSubItem, name, url, ...props}) => {
+    const getClasses = () => {
+        return classnames(
+            {
+                'fd-side-nav__link': !isSubItem,
+                'fd-side-nav__sublink': isSubItem,
+                'is-selected': 'item_3' === id,
+                'has-child': hasChild,
+                'is-expanded': hasChild
+            }
+        );
+    };
+
+    const renderLink = () => {
+        return (
+            <a
+                className={getClasses()}
+                href={url}>
+                {glyph ? (
+                    <span
+                        className={`fd-side-nav__icon sap-icon--${glyph} sap-icon--l`}
+                        role='presentation' />
+                ) : null}
+                {name}
+            </a>
+        );
+    };
+
+    return (
+        <li {...props}
+            className='fd-side-nav__item'
+            key={id}>
+            {url && renderLink()}
+            {React.Children.map(children, (child) => {
+                if (React.isValidElement(child) && child.type !== 'SubGroup') {
+                    return React.cloneElement(child, {
+                        children: (<React.Fragment>
+                            {glyph ? (
+                                <span
+                                    className={`fd-side-nav__icon sap-icon--${glyph} sap-icon--l`}
+                                    role='presentation' />
+                            ) : null}
+                            {child.props.children}
+                        </React.Fragment>),
+                        className: getClasses()
+                    });
+                } else {
+                    return child;
+                }
+            })}
+        </li>
+    );
 };
+
+const SideNavSubItems = ({children, id, open, ...props}) => {
+    return (
+        <ul
+            {...props}
+            aria-expanded={open}
+            aria-hidden={!open}
+            className='fd-side-nav__sublist'
+            key={id}>
+            {
+                React.Children.map(children, (child) => {
+                    return React.cloneElement(child, {
+                        isSubItem: true
+                    });
+                })
+            }
+        </ul>
+    );
+};
+
+SideNav.Group = SideNavGroup;
+SideNav.List = SideNavList;
+SideNav.Item = SideNavItem;
+SideNav.SubItems = SideNavSubItems;

@@ -1,92 +1,109 @@
 import React from 'react';
+import { SideNav } from '../';
 import { Description, DocsText, DocsTile, Header, Import, Properties, Separator } from '../_playground';
-import { SideNav, SideNavGroup, SideNavList } from '../';
+import { Link, MemoryRouter } from 'react-router-dom';
 
 export const SideNavigationComponent = () => {
     const sideNavOneLevelCode = `<SideNav>
-    <SideNavList items=
-        {[
-            { id: 'item-1', url: '#', name: 'Link Item' },
-            { id: 'item-2', url: '#', name: 'Link Item' },
-            { id: 'item-3', url: '#', name: 'Link Item' },
-            { id: 'item-4', url: '#', name: 'Link Item' },
-            { id: 'item-5', url: '#', name: 'Link Item' }
-        ]}>
-    </SideNavList>
-</SideNav>`;
+        <SideNav.Item
+            id='item-1'
+            url='#'>
+            Link Item
+        </SideNav.Item>
+        <SideNav.Item
+            id='item-2'
+            url='#'>
+            Link Item
+        </SideNav.Item>
+        <SideNav.Item
+            id='item-3'
+            url='#'>
+            Link Item
+        </SideNav.Item>
+        <SideNav.Item
+            id='item-4'
+            url='#'>
+            Link Item
+        </SideNav.Item>
+        <SideNav.Item
+            id='item-5'
+            url='#'>
+            Link Item
+        </SideNav.Item>
+    </SideNav>`;
 
     const sideNavWithTitlesCode = `<SideNav>
-    <SideNavGroup title="Group Title">
-        <SideNavList items=
-            {[
-                { id: 'item_1', link: '/', name: 'Link Item' },
-                { id: 'item_2', link: '/', name: 'Link Item' },
-                { id: 'item_3', link: '/', name: 'Link Item' },
-                { id: 'item_4', link: '/', name: 'Link Item' },
-                { id: 'item_5', link: '/', name: 'Link Item' }
-            ]}>
-        </SideNavList>
-    </SideNavGroup>
-    <SideNavGroup title="Group Title">
-        <SideNavList items=
-            {[
-                { id: 'item_6', link: '/', name: 'Link Item' },
-                { id: 'item_7', link: '/', name: 'Link Item' },
-                { id: 'item_8', link: '/', name: 'Link Item' },
-                { id: 'item_9', link: '/', name: 'Link Item' },
-                { id: 'item_10', link: '/', name: 'Link Item' }
-            ]}>
-        </SideNavList>
-    </SideNavGroup>
-</SideNav>`;
+        <SideNavGroup title="Group Title">
+            <SideNavList items=
+                {[
+                    { id: 'item_1', link: '/', name: 'Link Item' },
+                    { id: 'item_2', link: '/', name: 'Link Item' },
+                    { id: 'item_3', link: '/', name: 'Link Item' },
+                    { id: 'item_4', link: '/', name: 'Link Item' },
+                    { id: 'item_5', link: '/', name: 'Link Item' }
+                ]}>
+            </SideNavList>
+        </SideNavGroup>
+        <SideNavGroup title="Group Title">
+            <SideNavList items=
+                {[
+                    { id: 'item_6', link: '/', name: 'Link Item' },
+                    { id: 'item_7', link: '/', name: 'Link Item' },
+                    { id: 'item_8', link: '/', name: 'Link Item' },
+                    { id: 'item_9', link: '/', name: 'Link Item' },
+                    { id: 'item_10', link: '/', name: 'Link Item' }
+                ]}>
+            </SideNavList>
+        </SideNavGroup>
+    </SideNav>`;
 
     const sideNavMultiLevelCode = `<SideNav>
-    <SideNavList items=
-        {[
-            { id: 'item-1', url: '#', name: 'Link Item 1' },
-            {
-                id: 'item-2', url: '#', name: 'Link Item 2', hasChild: true, child: [
-                    { id: 'subitem-21', url: '#', name: 'Item 1' },
-                    { id: 'subitem-22', url: '#', name: 'Item 2' },
-                    { id: 'subitem-23', url: '#', name: 'Item 3' },
-                    { id: 'subitem-24', url: '#', name: 'Item 4' }]
-            },
-            { id: 'item-3', url: '#', name: 'Link Item 3' },
-            {
-                id: 'item-4', url: '#', name: 'Link Item 4', hasChild: true, child: [
-                    { id: 'subitem-41', url: '#', name: 'Item 1' },
-                    { id: 'subitem-42', url: '#', name: 'Item 2' },
-                    { id: 'subitem-43', url: '#', name: 'Item 3' },
-                    { id: 'subitem-44', url: '#', name: 'Item 4' }]
-            },
-            { id: 'item-5', url: '#', name: 'Link Item' }
-        ]}>
-    </SideNavList>
-</SideNav>`;
+        <SideNavList items=
+            {[
+                { id: 'item-1', url: '#', name: 'Link Item 1' },
+                {
+                    id: 'item-2', url: '#', name: 'Link Item 2', hasChild: true, child: [
+                        { id: 'subitem-21', url: '#', name: 'Item 1' },
+                        { id: 'subitem-22', url: '#', name: 'Item 2' },
+                        { id: 'subitem-23', url: '#', name: 'Item 3' },
+                        { id: 'subitem-24', url: '#', name: 'Item 4' }]
+                },
+                { id: 'item-3', url: '#', name: 'Link Item 3' },
+                {
+                    id: 'item-4', url: '#', name: 'Link Item 4', hasChild: true, child: [
+                        { id: 'subitem-41', url: '#', name: 'Item 1' },
+                        { id: 'subitem-42', url: '#', name: 'Item 2' },
+                        { id: 'subitem-43', url: '#', name: 'Item 3' },
+                        { id: 'subitem-44', url: '#', name: 'Item 4' }]
+                },
+                { id: 'item-5', url: '#', name: 'Link Item' }
+            ]}>
+        </SideNavList>
+    </SideNav>`;
 
     const sideNavWithIconsCode = `<SideNav>
-    <SideNavList
-        items={[
-            { id: 'item_1', link: '/', name: 'Link Item', glyph: 'home' },
-            { id: 'item_2', link: '/', name: 'Link Item', glyph: 'home' },
-            { id: 'item_3', link: '/', name: 'Link Item', glyph: 'home' },
-            { id: 'item_4', link: '/', name: 'Link Item', glyph: 'home' },
-            { id: 'item_5', link: '/', name: 'Link Item', glyph: 'home' }
-        ]}
-    />
-</SideNav>`;
+        <SideNavList
+            items={[
+                { id: 'item_1', link: '/', name: 'Link Item', glyph: 'home' },
+                { id: 'item_2', link: '/', name: 'Link Item', glyph: 'home' },
+                { id: 'item_3', link: '/', name: 'Link Item', glyph: 'home' },
+                { id: 'item_4', link: '/', name: 'Link Item', glyph: 'home' },
+                { id: 'item_5', link: '/', name: 'Link Item', glyph: 'home' }
+            ]}
+        />
+    </SideNav>`;
 
     const sideNavCollapsedCode = `<SideNav icons={true}>
-    <SideNavList items=
-        {[
-            { id: 'item-1', url: '#', glyph: 'home' },
-            { id: 'item-2', url: '#', glyph: 'home' },
-            { id: 'item-3', url: '#', glyph: 'home' },
-            { id: 'item-4', url: '#', glyph: 'home' },
-            { id: 'item-5', url: '#', glyph: 'home' }
-        ]}>
-    </SideNavList>
-</SideNav>`;
+        <SideNavList items=
+            {[
+                { id: 'item-1', url: '#', glyph: 'home' },
+                { id: 'item-2', url: '#', glyph: 'home' },
+                { id: 'item-3', url: '#', glyph: 'home' },
+                { id: 'item-4', url: '#', glyph: 'home' },
+                { id: 'item-5', url: '#', glyph: 'home' }
+            ]}>
+        </SideNavList>
+    </SideNav>`;
 
     return (
         <div>
@@ -106,14 +123,28 @@ export const SideNavigationComponent = () => {
             <h2>Side Navigation with one level</h2>
             <DocsTile>
                 <SideNav>
-                    <SideNavList
-                        items={[
-                            { id: 'item_1', url: '#', name: 'Link Item' },
-                            { id: 'item_2', url: '#', name: 'Link Item' },
-                            { id: 'item_3', url: '#', name: 'Link Item' },
-                            { id: 'item_4', url: '#', name: 'Link Item' },
-                            { id: 'item_5', url: '#', name: 'Link Item' }
-                        ]} />
+                    <SideNav.List>
+                        <SideNav.Item
+                            id='item-1'
+                            name='Link Item'
+                            url='#' />
+                        <SideNav.Item
+                            id='item-2'
+                            name='Link Item'
+                            url='#' />
+                        <SideNav.Item
+                            id='item-3'
+                            name='Link Item'
+                            url='#' />
+                        <SideNav.Item
+                            id='item-4'
+                            name='Link Item'
+                            url='#' />
+                        <SideNav.Item
+                            id='item-5'
+                            name='Link Item'
+                            url='#' />
+                    </SideNav.List>
                 </SideNav>
             </DocsTile>
             <DocsText>{sideNavOneLevelCode}</DocsText>
@@ -123,28 +154,78 @@ export const SideNavigationComponent = () => {
             <h2>Side navigation with titles</h2>
             <Description>Use this to group navigation. Titles are not clickable.</Description>
             <DocsTile>
-                <SideNav>
-                    <SideNavGroup title='Group Title'>
-                        <SideNavList
-                            items={[
-                                { id: 'item_1', link: '/', name: 'Link Item' },
-                                { id: 'item_2', link: '/', name: 'Link Item' },
-                                { id: 'item_3', link: '/', name: 'Link Item' },
-                                { id: 'item_4', link: '/', name: 'Link Item' },
-                                { id: 'item_5', link: '/', name: 'Link Item' }
-                            ]} />
-                    </SideNavGroup>
-                    <SideNavGroup title='Group Title'>
-                        <SideNavList
-                            items={[
-                                { id: 'item_6', link: '/', name: 'Link Item' },
-                                { id: 'item_7', link: '/', name: 'Link Item' },
-                                { id: 'item_8', link: '/', name: 'Link Item' },
-                                { id: 'item_9', link: '/', name: 'Link Item' },
-                                { id: 'item_10', link: '/', name: 'Link Item' }
-                            ]} />
-                    </SideNavGroup>
-                </SideNav>
+                <MemoryRouter>
+                    <SideNav>
+                        <SideNav.Group title='Group Title'>
+                            <SideNav.List>
+                                <SideNav.Item
+                                    id='item_1'>
+                                    <Link to='/'>
+                                        Link Item
+                                    </Link>
+                                </SideNav.Item>
+                                <SideNav.Item
+                                    id='item_2'>
+                                    <Link to='/'>
+                                        Link Item
+                                    </Link>
+                                </SideNav.Item>
+                                <SideNav.Item
+                                    id='item_3'>
+                                    <Link to='/'>
+                                        Link Item
+                                    </Link>
+                                </SideNav.Item>
+                                <SideNav.Item
+                                    id='item_4'>
+                                    <Link to='/'>
+                                        Link Item
+                                    </Link>
+                                </SideNav.Item>
+                                <SideNav.Item
+                                    id='item_5'>
+                                    <Link to='/'>
+                                        Link Item
+                                    </Link>
+                                </SideNav.Item>
+                            </SideNav.List>
+                        </SideNav.Group>
+                        <SideNav.Group title='Group Title'>
+                            <SideNav.List>
+                                <SideNav.Item
+                                    id='item_6'>
+                                    <Link to='/'>
+                                        Link Item
+                                    </Link>
+                                </SideNav.Item>
+                                <SideNav.Item
+                                    id='item_7'>
+                                    <Link to='/'>
+                                        Link Item
+                                    </Link>
+                                </SideNav.Item>
+                                <SideNav.Item
+                                    id='item_8'>
+                                    <Link to='/'>
+                                        Link Item
+                                    </Link>
+                                </SideNav.Item>
+                                <SideNav.Item
+                                    id='item_9'>
+                                    <Link to='/'>
+                                        Link Item
+                                    </Link>
+                                </SideNav.Item>
+                                <SideNav.Item
+                                    id='item_10'>
+                                    <Link to='/'>
+                                        Link Item
+                                    </Link>
+                                </SideNav.Item>
+                            </SideNav.List>
+                        </SideNav.Group>
+                    </SideNav>
+                </MemoryRouter>
             </DocsTile>
             <DocsText>{sideNavWithTitlesCode}</DocsText>
 
@@ -157,36 +238,70 @@ export const SideNavigationComponent = () => {
             </Description>
             <DocsTile>
                 <SideNav>
-                    <SideNavList
-                        items={[
-                            { id: 'item_1', url: '#', name: 'Link Item 1' },
-                            {
-                                id: 'item_2',
-                                url: '#',
-                                name: 'Link Item 2',
-                                hasChild: true,
-                                child: [
-                                    { id: 'subitem_21', url: '#', name: 'Item 1' },
-                                    { id: 'subitem_22', url: '#', name: 'Item 2' },
-                                    { id: 'subitem_23', url: '#', name: 'Item 3' },
-                                    { id: 'subitem_24', url: '#', name: 'Item 4' }
-                                ]
-                            },
-                            { id: 'item_3', url: '#', name: 'Link Item 3' },
-                            {
-                                id: 'item_4',
-                                url: '#',
-                                name: 'Link Item 4',
-                                hasChild: true,
-                                child: [
-                                    { id: 'subitem_41', url: '#', name: 'Item 1' },
-                                    { id: 'subitem_42', url: '#', name: 'Item 2' },
-                                    { id: 'subitem_43', url: '#', name: 'Item 3' },
-                                    { id: 'subitem_44', url: '#', name: 'Item 4' }
-                                ]
-                            },
-                            { id: 'item_5', url: '#', name: 'Link Item' }
-                        ]} />
+                    <SideNav.List>
+                        <SideNav.Item
+                            id='item-1'
+                            name='Link Item 1'
+                            url='#' />
+                        <SideNav.Item
+                            id='item-1'
+                            name='Link Item 2'
+                            url='#'>
+                            <SideNav.SubItems>
+                                <SideNav.Item
+                                    id='subitem_21'
+                                    name='Item 1'
+                                    url='#' />
+                                <SideNav.Item
+                                    id='subitem_22'
+                                    name='Item 2'
+                                    url='#' />
+                                <SideNav.Item
+                                    id='subitem_23'
+                                    name='Item 3'
+                                    url='#' />
+                                <SideNav.Item
+                                    id='subitem_24'
+                                    name='Item 4'
+                                    url='#' />
+                            </SideNav.SubItems>
+                        </SideNav.Item>
+                        <SideNav.Item
+                            id='item_3'
+                            name='Link Item 3'
+                            url='#' />
+                        <SideNav.Item
+                            id='item_4'
+                            name='Link Item 4'
+                            url='#'>
+                            <SideNav.SubItems>
+                                <SideNav.Item
+                                    id='subitem_41'
+                                    url='#'>
+                                    Item 1
+                                </SideNav.Item>
+                                <SideNav.Item
+                                    id='subitem_41'
+                                    url='#'>
+                                    Item 2
+                                </SideNav.Item>
+                                <SideNav.Item
+                                    id='subitem_41'
+                                    url='#'>
+                                    Item 3
+                                </SideNav.Item>
+                                <SideNav.Item
+                                    id='subitem_41'
+                                    url='#'>
+                                    Item 4
+                                </SideNav.Item>
+                            </SideNav.SubItems>
+                        </SideNav.Item>
+                        <SideNav.Item
+                            id='item_5'
+                            name='Link Item 5'
+                            url='#' />
+                    </SideNav.List>
                 </SideNav>
             </DocsTile>
             <DocsText>{sideNavMultiLevelCode}</DocsText>
@@ -196,14 +311,39 @@ export const SideNavigationComponent = () => {
             <h2>Side navigation with icons</h2>
             <DocsTile>
                 <SideNav>
-                    <SideNavList
-                        items={[
-                            { id: 'item_1', link: '/', name: 'Link Item', glyph: 'home' },
-                            { id: 'item_2', link: '/', name: 'Link Item', glyph: 'home' },
-                            { id: 'item_3', link: '/', name: 'Link Item', glyph: 'home' },
-                            { id: 'item_4', link: '/', name: 'Link Item', glyph: 'home' },
-                            { id: 'item_5', link: '/', name: 'Link Item', glyph: 'home' }
-                        ]} />
+                    <SideNav.List>
+                        <SideNav.Item
+                            glyph='home'
+                            id='item-1'>
+                            <Link to='/'>
+                                Link Item
+                            </Link>
+                        </SideNav.Item>
+                        <SideNav.Item
+                            glyph='home'
+                            id='item-2'>
+                            <Link to='/'>
+                                Link Item
+                            </Link>
+                        </SideNav.Item>
+                        <SideNav.Item
+                            glyph='home'
+                            id='item-3'>
+                            <Link to='/'>
+                                Link Item
+                            </Link>
+                        </SideNav.Item>
+                        <SideNav.Item
+                            glyph='home'
+                            id='item-4'
+                            name='Link Item'
+                            url='#' />
+                        <SideNav.Item
+                            glyph='home'
+                            id='item-5'
+                            name='Link Item'
+                            url='#' />
+                    </SideNav.List>
                 </SideNav>
             </DocsTile>
             <DocsText>{sideNavWithIconsCode}</DocsText>
@@ -218,14 +358,28 @@ export const SideNavigationComponent = () => {
             </Description>
             <DocsTile>
                 <SideNav icons>
-                    <SideNavList
-                        items={[
-                            { id: 'item_1', url: '#', glyph: 'home' },
-                            { id: 'item_2', url: '#', glyph: 'home' },
-                            { id: 'item_3', url: '#', glyph: 'home' },
-                            { id: 'item_4', url: '#', glyph: 'home' },
-                            { id: 'item_5', url: '#', glyph: 'home' }
-                        ]} />
+                    <SideNav.List>
+                        <SideNav.Item
+                            glyph='home'
+                            id='item-1'
+                            url='#' />
+                        <SideNav.Item
+                            glyph='home'
+                            id='item-2'
+                            url='#' />
+                        <SideNav.Item
+                            glyph='home'
+                            id='item-3'
+                            url='#' />
+                        <SideNav.Item
+                            glyph='home'
+                            id='item-4'
+                            url='#' />
+                        <SideNav.Item
+                            glyph='home'
+                            id='item-5'
+                            url='#' />
+                    </SideNav.List>
                 </SideNav>
             </DocsTile>
             <DocsText>{sideNavCollapsedCode}</DocsText>
