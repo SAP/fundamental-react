@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.3.2-rc.6"></a>
+## [0.3.2-rc.6](https://github.com/SAP/fundamental-react/compare/v0.3.2-rc.5...v0.3.2-rc.6) (2019-02-05)
+
+
+### Bug Fixes
+
+* adding missing style to other months dates ([#366](https://github.com/SAP/fundamental-react/issues/366)) ([c18cfba](https://github.com/SAP/fundamental-react/commit/c18cfba))
+
+
+
 <a name="0.3.2-rc.5"></a>
 ## [0.3.2-rc.5](https://github.com/SAP/fundamental-react/compare/v0.3.2-rc.4...v0.3.2-rc.5) (2019-02-05)
 
