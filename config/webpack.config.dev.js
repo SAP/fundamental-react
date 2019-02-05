@@ -1,3 +1,5 @@
+/* eslint-disable camelcase */
+
 'use strict';
 
 const fs = require('fs');
