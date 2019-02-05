@@ -34,7 +34,7 @@ rules:
     ie11/no-collection-args: 2
     ie11/no-for-in-const: 2
     ie11/no-weak-collections: 2
-    #indent: [2, 4, {"SwitchCase": 1}]
+    indent: [2, 4, {"SwitchCase": 1}]
     jsx-a11y/accessible-emoji: 2
     jsx-a11y/alt-text: 2
     #jsx-a11y/anchor-has-content: 2
