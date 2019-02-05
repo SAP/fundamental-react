@@ -46,13 +46,13 @@ export class Modal extends Component {
         return ReactDOM.createPortal(
             <FocusTrap
                 focusTrapOptions={{
-                    initialFocus: '.startTabIndex'
+                    initialFocus: 'div.modal-demo-bg > span'
                 }}>
                 <div
                     {...rest}
                     className={modalClasses}>
                     <div className='modal-demo-bg'>
-                        <span className='startTabIndex' tabIndex='-1' />
+                        <span tabIndex='-1' />
                         <div
                             aria-label={title}
                             aria-modal='true'
