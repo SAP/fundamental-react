@@ -78,6 +78,13 @@ $fd-fonts-path: '../../node_modules/fiori-fundamentals/dist/fonts/';
             padding-left: 1rem;
             padding-right: 1rem;
 
+            .frDocs-Content__githubLogo {
+                float: right;
+                width: 2rem;
+                height: 2rem;
+                z-index: 100;
+            }
+
             .frDocs-Content__header, h1 {
                 margin: 12px 0;
                 margin-top: 2rem;
