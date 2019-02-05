@@ -328,7 +328,7 @@ Along with Invalid and Warning, error messages should be displayed below the fie
             <Separator />
 
             <h2>Input Help Elements</h2>
-            <Description children={inputHelpElementsDescription} />
+            <Description>{inputHelpElementsDescription}</Description>
             <DocsTile>
                 <FormSet>
                     <FormItem>
@@ -359,7 +359,7 @@ Along with Invalid and Warning, error messages should be displayed below the fie
             <Separator />
 
             <h2>Input States</h2>
-            <Description children={inputStateDescription} />
+            <Description>{inputStateDescription}</Description>
 
             <DocsTile>
                 <FormSet>

@@ -59,7 +59,7 @@ This component is completely composed from other components CSS and doesn’t ha
     return (
         <div>
             <Header>Contextual Menu</Header>
-            <Description children={contextualMenuDescription} />
+            <Description>{contextualMenuDescription}</Description>
             <Separator />
 
             <h2>With Icon</h2>

@@ -144,7 +144,7 @@ content like appearing in a table or list. There may be more than one on the pag
             <Separator />
 
             <h2>Button Options</h2>
-            <Description children={buttonOptionsDescription} />
+            <Description>{buttonOptionsDescription}</Description>
             <DocsTile centered>
                 <div className='fd-doc__margin--button'>
                     <Button onClick={() => clickBtnHandler('Emphasized')} option='emphasized'>
@@ -159,7 +159,7 @@ content like appearing in a table or list. There may be more than one on the pag
             <Separator />
 
             <h2>Button Types</h2>
-            <Description children={buttonTypesDescription} />
+            <Description>{buttonTypesDescription}</Description>
             <DocsTile centered>
                 <div className='fd-doc__margin--button'>
                     <Button>Action Button</Button>

@@ -52,7 +52,7 @@ consistent.
             <Separator />
 
             <h2>Toggle Sizes</h2>
-            <Description children={toggleSizeDescription} />
+            <Description>{toggleSizeDescription}</Description>
             <DocsTile>
                 <Toggle id='Yj07w604' size='xs'>
                     Extra Small toggle
