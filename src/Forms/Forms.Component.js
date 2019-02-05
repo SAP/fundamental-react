@@ -255,7 +255,7 @@ is displayed below the input field.
     const inputStateDescription = `
 The state of the input field can reflect validity of the data entered, whether the input data is
 editable or disabled.\n\n
-* **Normal**: The field is editable but no validation has occurred. \n\n
+* **Default**: The field is editable but no validation has occurred. \n\n
 * **Valid**: The data format entered has been validated and it’s correct, such as an email address.\n\n
 * **Invalid**: The data entered is not valid and must be corrected.\n\n
 * **Warning**: The data entered is formatted correctly but there are other issues are problematic but will not stop the user from moving forward.\n\n
@@ -364,7 +364,7 @@ Along with Invalid and Warning, error messages should be displayed below the fie
             <DocsTile>
                 <FormSet>
                     <FormItem>
-                        <FormLabel htmlFor='OatmD552'>Normal Input</FormLabel>
+                        <FormLabel htmlFor='OatmD552'>Default Input</FormLabel>
                         <FormInput id='OatmD552' placeholder='Field placeholder text'
                             type='text' />
                         <FormMessage>Pellentesque metus lacus commodo eget justo ut rutrum varius nunc</FormMessage>
