@@ -1,5 +1,4 @@
-
-require('../config/env');
+'use strict';
 
 const fs = require('fs');
 const path = require('path');
