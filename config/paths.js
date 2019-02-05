@@ -1,3 +1,4 @@
+/* eslint-disable strict */
 /* eslint-disable no-shadow */
 
 'use strict';

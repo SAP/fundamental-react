@@ -141,7 +141,7 @@ rules:
     space-before-function-paren: [2, 'never']
     space-infix-ops: 2
     spaced-comment: [0, 'always', { exceptions: ['-']}]
-    #strict: [2, 'global']
+    strict: [2, 'global']
     use-isnan: 2
     valid-jsdoc: [2, { prefer: { 'return': 'returns'}}]
     valid-typeof: 2

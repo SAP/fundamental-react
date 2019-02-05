@@ -1,3 +1,4 @@
+/* eslint-disable strict */
 /* eslint-disable camelcase */
 /* eslint-disable no-undefined */
 
