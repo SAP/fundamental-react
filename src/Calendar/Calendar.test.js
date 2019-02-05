@@ -173,7 +173,7 @@ describe('<Calendar />', () => {
         const currentDateDisplayed = wrapper.state('currentDateDisplayed');
         let currentYearDisplayed = new Date(wrapper.state('currentYear'));
         expect(currentDateDisplayed.getFullYear()).toEqual(
-            currentYearDisplayed.getFullYear() + 3
+            currentYearDisplayed.getFullYear()
         );
     });
 
@@ -222,7 +222,7 @@ describe('<Calendar />', () => {
         const currentDateDisplayed = wrapper.state('currentDateDisplayed');
         let currentYearDisplayed = new Date(wrapper.state('currentYear'));
         expect(currentDateDisplayed.getFullYear()).toEqual(
-            currentYearDisplayed.getFullYear() + 3
+            currentYearDisplayed.getFullYear()
         );
     });
 
