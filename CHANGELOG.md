@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.3.2-rc.3"></a>
+## [0.3.2-rc.3](https://github.com/SAP/fundamental-react/compare/v0.3.2-rc.2...v0.3.2-rc.3) (2019-02-05)
+
+
+### Bug Fixes
+
+* update css specificity for markdown ([#356](https://github.com/SAP/fundamental-react/issues/356)) ([707af3c](https://github.com/SAP/fundamental-react/commit/707af3c))
+
+
+
 <a name="0.3.2-rc.2"></a>
 ## [0.3.2-rc.2](https://github.com/SAP/fundamental-react/compare/v0.3.2-rc.1...v0.3.2-rc.2) (2019-02-05)
 
