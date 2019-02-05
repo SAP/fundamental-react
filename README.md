@@ -1,11 +1,11 @@
 # Fundamental React
 
 [![npm version](https://badge.fury.io/js/fundamental-react.svg)](//www.npmjs.com/package/fundamental-react)
+[![Minified Size](https://badgen.net/bundlephobia/min/fundamental-react)](https://bundlephobia.com/result?p=fundamental-react)
+[![Minzipped Size](https://badgen.net/bundlephobia/minzip/fundamental-react)](https://bundlephobia.com/result?p=fundamental-react)
 [![Build Status](https://travis-ci.org/SAP/fundamental-react.svg?branch=master)](https://travis-ci.org/SAP/fundamental-react)
 [![Coverage Status](https://coveralls.io/repos/github/SAP/fundamental-react/badge.svg?branch=master)](https://coveralls.io/github/SAP/fundamental-react?branch=master)
 [![Slack](https://img.shields.io/badge/slack-ui--fundamentals-blue.svg?logo=slack)](https://ui-fundamentals.slack.com)
-[![Minified Size](https://badgen.net/bundlephobia/min/fundamental-react)](https://bundlephobia.com/result?p=fundamental-react)
-[![Minzipped Size](https://badgen.net/bundlephobia/minzip/fundamental-react)](https://bundlephobia.com/result?p=fundamental-react)
 
 ## Description
 
