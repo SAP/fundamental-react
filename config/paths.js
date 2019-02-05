@@ -1,3 +1,5 @@
+/* eslint-disable no-shadow */
+
 'use strict';
 
 const path = require('path');
