@@ -4,6 +4,8 @@ import React from 'react';
 
 describe('<DatePicker />', () => {
     const defaultDatePicker = <DatePicker />;
+    const disabledFuturePicker = <DatePicker disableFutureDates />;
+    const disabledFutureRangePicker = <DatePicker disableFutureDates enableRangeSelection />;
     const compactDatePicker = <DatePicker className='blue' compact />;
     const rangeDatePicker = <DatePicker enableRangeSelection />;
     const compactRangeDatepicker = <DatePicker compact enableRangeSelection />;
@@ -136,6 +138,26 @@ describe('<DatePicker />', () => {
         expect(wrapper.state('hidden')).toBeTruthy();
     });
 
+    test('entering start date and disabled end range dates', () => {
+        wrapper = mount(disabledFutureRangePicker);
+        // set dates
+        let startRangeDate = new Date();
+        let endRangeDate = new Date();
+        endRangeDate.setDate(endRangeDate.getDate() + 3);
+
+        let startDate = `${startRangeDate.getMonth() +
+            1}/${startRangeDate.getDate()}/${startRangeDate.getFullYear()}`;
+        let endDate = `${endRangeDate.getMonth() +
+            1}/${endRangeDate.getDate()}/${endRangeDate.getFullYear()}`;
+
+        wrapper.find('input[type="text"]')
+            .simulate('change', { target: { value: `${startDate}-${endDate}` } });
+
+        wrapper.find('input[type="text"]').simulate('keypress', { key: 'Enter' });
+
+        expect(wrapper.state('arrSelectedDates')).toEqual('undefined');
+    });
+
     test('entering invalid range dates', () => {
         wrapper = mount(rangeDatePicker);
         // set dates
@@ -248,6 +270,21 @@ describe('<DatePicker />', () => {
         wrapper.find('input[type="text"]').simulate('keypress', { key: 'Enter' });
 
         expect(wrapper.state('selectedDate')).toEqual(new Date(date.getFullYear(), date.getMonth(), date.getDate()));
+    });
+
+    test('enter a disabled date string', () => {
+        // enter a valid date input
+        wrapper = mount(disabledFuturePicker);
+        let date = new Date();
+        let formattedDate = `${date.getMonth() +
+            1}/${date.getDate() + 1}/${date.getFullYear()}`;
+        wrapper.find('input[type="text"]')
+            .simulate('change', { target: { value: formattedDate } });
+
+        expect(wrapper.state('formattedDate')).toEqual(formattedDate);
+        wrapper.find('input[type="text"]').simulate('keypress', { key: 'Enter' });
+
+        expect(wrapper.state('selectedDate')).toEqual('undefined');
     });
 
     test('enter an invalid date string', () => {
