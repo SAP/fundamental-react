@@ -28,7 +28,7 @@ export const ToggleComponent = () => {
 </Toggle>`;
 
     const toggleSizeDescription = `
-The toggle can be set to 4 sizes: 'xs', 's', 'normal' and 'l'. For 'normal' size leave empty. \n\n
+The toggle can be set to 4 sizes: 'xs', 's', 'm' and 'l'. \n\n
 When used with forms, it is recommended to use the small size so that form components will be
 consistent.
 `;
