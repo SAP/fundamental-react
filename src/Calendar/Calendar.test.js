@@ -96,6 +96,9 @@ describe('<Calendar />', () => {
         const currentDateDisplayed = wrapper.state('currentDateDisplayed');
 
         expect(currentDateDisplayed.getMonth()).toEqual(3);
+
+        // check that first of month is selected
+        expect(currentDateDisplayed.getDate()).toEqual(1);
     });
 
     test('click month from list with date range', () => {
@@ -320,20 +323,10 @@ describe('<Calendar />', () => {
             .at(0)
             .simulate('click');
 
-        const currentDateDisplayed = new Date(wrapper.state('selectedDate'));
+        let selectedDate = new Date(wrapper.state('selectedDate'));
+        let currentDateDisplayed = new Date(wrapper.state('currentDateDisplayed'));
 
-        // select 2nd day of month
-        wrapper
-            .find(
-                'table.fd-calendar__table tbody.fd-calendar__group tr.fd-calendar__row td.fd-calendar__item:not(.fd-calendar__item--other-month)'
-            )
-            .at(1)
-            .simulate('click');
-
-        const newDateDisplayed = wrapper.state('selectedDate');
-        currentDateDisplayed.setDate(currentDateDisplayed.getDate() + 1);
-
-        expect(newDateDisplayed.getDate()).toEqual(currentDateDisplayed.getDate());
+        expect(selectedDate.getDate()).toEqual(currentDateDisplayed.getDate());
     });
 
     test('click on day with range enabled', () => {
