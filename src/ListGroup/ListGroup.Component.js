@@ -14,22 +14,22 @@ export const ListGroupComponent = () => {
     const actionsListCode = `<ListGroup>
     <ListGroupItem>List item 1
         <ListGroupItemActions>
-            <Button type="light" glyph="edit" />
+            <Button option="light" glyph="edit" />
         </ListGroupItemActions>
     </ListGroupItem>
     <ListGroupItem>List item 2
         <ListGroupItemActions>
-            <Button type="light" glyph="edit" />
+            <Button option="light" glyph="edit" />
         </ListGroupItemActions>
     </ListGroupItem>
     <ListGroupItem>List item 3
         <ListGroupItemActions>
-            <Button type="light" glyph="edit" />
+            <Button option="light" glyph="edit" />
         </ListGroupItemActions>
     </ListGroupItem>
     <ListGroupItem>List item 4
         <ListGroupItemActions>
-            <Button type="light" glyph="edit" />
+            <Button option="light" glyph="edit" />
         </ListGroupItemActions>
     </ListGroupItem>
 </ListGroup>`;
@@ -79,22 +79,22 @@ export const ListGroupComponent = () => {
                 <ListGroup>
                     <ListGroupItem>List item 1
                         <ListGroupItemActions>
-                            <Button glyph='edit' type='light' />
+                            <Button glyph='edit' option='light' />
                         </ListGroupItemActions>
                     </ListGroupItem>
                     <ListGroupItem>List item 2
                         <ListGroupItemActions>
-                            <Button glyph='edit' type='light' />
+                            <Button glyph='edit' option='light' />
                         </ListGroupItemActions>
                     </ListGroupItem>
                     <ListGroupItem>List item 3
                         <ListGroupItemActions>
-                            <Button glyph='edit' type='light' />
+                            <Button glyph='edit' option='light' />
                         </ListGroupItemActions>
                     </ListGroupItem>
                     <ListGroupItem>List item 4
                         <ListGroupItemActions>
-                            <Button glyph='edit' type='light' />
+                            <Button glyph='edit' option='light' />
                         </ListGroupItemActions>
                     </ListGroupItem>
                 </ListGroup>
@@ -754,7 +754,7 @@ export const ListGroupComponent = () => {
                 <ListGroup>
                     <ListGroupItem>List item 1
                         <ListGroupItemActions>
-                            <Button glyph='edit' type='secondary' />
+                            <Button glyph='edit' />
                         </ListGroupItemActions>
                     </ListGroupItem>
                 </ListGroup>

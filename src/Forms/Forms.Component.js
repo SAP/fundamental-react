@@ -244,6 +244,26 @@ export const FormsComponent = () => {
     </FormItem>
 </FormFieldset>
 `;
+    const inputHelpElementsDescription = `
+Help elements give the user information about the input. Two types of help elements can be used. \n\n
+* The inline help element is displayed as a ? Icon. On hover or click, help content is displayed. \n\n
+* Help content can also be visible at all times to avoid mistakes. This type of help generally contains
+validation rules about the data allowed in the input field. An example is “Maximum 20 characters”. This
+is displayed below the input field.
+`;
+
+    const inputStateDescription = `
+The state of the input field can reflect validity of the data entered, whether the input data is
+editable or disabled.\n\n
+* **Normal**: The field is editable but no validation has occurred. \n\n
+* **Valid**: The data format entered has been validated and it’s correct, such as an email address.\n\n
+* **Invalid**: The data entered is not valid and must be corrected.\n\n
+* **Warning**: The data entered is formatted correctly but there are other issues are problematic but will not stop the user from moving forward.\n\n
+* **Disabled**: This indicates the field is not editable. A common use case is that this field is dependent on a previous entry or selection within the form.\n\n
+* **Read Only**: Used to display static information in the context of a form.\n\n
+
+Along with Invalid and Warning, error messages should be displayed below the field so the user can correct the error and move forward.
+`;
 
     return (
         <div>
@@ -307,14 +327,8 @@ export const FormsComponent = () => {
 
             <Separator />
 
-            <h2>Inputs help elements</h2>
-            <Description>
-                Help elements give the user information about the input. Two types of help elements can be used. <br />-
-                The inline help element is displayed as a ? Icon. On hover or click, help content is displayed. <br />-
-                Help content can also be visible at all times to avoid mistakes. This type of help generally contains
-                validation rules about the data allowed in the input field. An example is “Maximum 20 characters”. This
-                is displayed below the input field.
-            </Description>
+            <h2>Input Help Elements</h2>
+            <Description children={inputHelpElementsDescription} />
             <DocsTile>
                 <FormSet>
                     <FormItem>
@@ -345,20 +359,7 @@ export const FormsComponent = () => {
             <Separator />
 
             <h2>Input States</h2>
-            <Description>
-                The state of the input field can reflect validity of the data entered, whether the input data is
-                editable or disabled.
-                <br />- <strong>Normal</strong>: The field is editable but no validation has occurred. <br />-{' '}
-                <strong>Valid</strong>: The data format entered has been validated and it’s correct, such as an email
-                address. <br />- <strong>Invalid</strong>: The data entered is not valid and must be corrected. <br />-{' '}
-                <strong>Warning</strong>: The data entered is formatted correctly but there are other issues are
-                problematic but will not stop the user from moving forward. <br />- <strong>Disabled</strong>: This
-                indicates the field is not editable. A common use case is that this field is dependent on a previous
-                entry or selection within the form. <br />- <strong>Read Only</strong>: Used to display static
-                information in the context of a form. <br />
-                Along with Invalid and Warning, error messages should be displayed below the field so the user can
-                correct the error and move forward.
-            </Description>
+            <Description children={inputStateDescription} />
 
             <DocsTile>
                 <FormSet>

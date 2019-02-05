@@ -48,17 +48,18 @@ export const ContextualMenuComponent = () => {
     }
 />`;
 
+    const contextualMenuDescription = `
+The contextual menu component is an opinionated composition of the **Popover** and **Menu** components with
+the use of a styled button (**Button** component). A More icon (glyph="vertical-grip") or the word, "More",
+is used to indicate there are more options than room to display them. On click or tap, a contextual menu
+opens.\n\n
+This component is completely composed from other components CSS and doesn’t have any of its own.
+`;
+
     return (
         <div>
             <Header>Contextual Menu</Header>
-            <Description>
-                The contextual menu component is an opinionated composition of the “Popover” and “Menu” components with
-                the use of a styled button (Button component). A More icon (glyph="vertical-grip") or the word, “More”,
-                is used to indicate there are more options than room to display them. On click or tap, a contextual menu
-                opens. <br />
-                This component is completely composed from other components CSS and doesn’t have any of its own.
-            </Description>
-
+            <Description children={contextualMenuDescription} />
             <Separator />
 
             <h2>With Icon</h2>
