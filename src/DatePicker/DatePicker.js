@@ -13,6 +13,8 @@ export class DatePicker extends Component {
             arrSelectedDates: [],
             formattedDate: ''
         };
+
+        this.calendarRef = React.createRef();
     }
 
     openCalendar = type => {
@@ -85,6 +87,10 @@ export class DatePicker extends Component {
         this.clickOutside();
     };
 
+    isDateEnabled = (dateToCheck) => {
+        return this.calendarRef.current.displayDisabled(new Date(dateToCheck)) === '' ? true : false;
+    }
+
     validateDates = () => {
         let regex = /[!$%^&*()_+|~=`{}\[\]:'<>?,.\a-zA-Z]/;
         //Checks first if range is enabled
@@ -103,47 +109,57 @@ export class DatePicker extends Component {
             } else {
                 //Breaks the input into an array
                 let dateRange = this.state.formattedDate.split('-');
-                let dateSeparatedFirstRange = dateRange[0].split('/');
-                let dateSeparatedSecondRange = dateRange[1].split('/');
 
-                //First date
-                let firstYearRange = parseInt(dateSeparatedFirstRange[2], 10);
-                let firstDateRange = parseInt(dateSeparatedFirstRange[1], 10);
-                let firstMonthRange = parseInt(dateSeparatedFirstRange[0], 10);
+                // check if start and end dates are enabled
+                if (this.isDateEnabled(dateRange[0]) && this.isDateEnabled(dateRange[1])) {
+                    let dateSeparatedFirstRange = dateRange[0].split('/');
+                    let dateSeparatedSecondRange = dateRange[1].split('/');
 
-                //Second date
-                let secondYearRange = parseInt(dateSeparatedSecondRange[2], 10);
-                let secondDateRange = parseInt(dateSeparatedSecondRange[1], 10);
-                let secondMonthRange = parseInt(dateSeparatedSecondRange[0], 10);
+                    //First date
+                    let firstYearRange = parseInt(dateSeparatedFirstRange[2], 10);
+                    let firstDateRange = parseInt(dateSeparatedFirstRange[1], 10);
+                    let firstMonthRange = parseInt(dateSeparatedFirstRange[0], 10);
 
-                //Checks if the input is actually numbers and follows the required form
-                if ((1 <= firstDateRange && firstDateRange <= 31) &&
-                    (1 <= firstMonthRange && firstMonthRange <= 12) &&
-                    firstYearRange <= 3000 &&
-                    (1 <= secondDateRange && secondDateRange <= 31) &&
-                    (1 <= secondMonthRange && secondMonthRange <= 12) &&
-                    secondYearRange <= 3000
-                ) {
-                    let firstDate = new Date(
-                        firstYearRange,
-                        firstMonthRange - 1,
-                        firstDateRange
-                    );
-                    let secondDate = new Date(
-                        secondYearRange,
-                        secondMonthRange - 1,
-                        secondDateRange
-                    );
-                    let arrSelected = [];
-                    //Swaps the order in case one date is bigger than the other
-                    firstDate.getTime() > secondDate.getTime()
-                        ? (arrSelected = [secondDate, firstDate])
-                        : (arrSelected = [firstDate, secondDate]);
+                    //Second date
+                    let secondYearRange = parseInt(dateSeparatedSecondRange[2], 10);
+                    let secondDateRange = parseInt(dateSeparatedSecondRange[1], 10);
+                    let secondMonthRange = parseInt(dateSeparatedSecondRange[0], 10);
 
-                    this.setState({
-                        selectedDate: '',
-                        arrSelectedDates: arrSelected
-                    });
+                    //Checks if the input is actually numbers and follows the required form
+                    if ((1 <= firstDateRange && firstDateRange <= 31) &&
+                        (1 <= firstMonthRange && firstMonthRange <= 12) &&
+                        firstYearRange <= 3000 &&
+                        (1 <= secondDateRange && secondDateRange <= 31) &&
+                        (1 <= secondMonthRange && secondMonthRange <= 12) &&
+                        secondYearRange <= 3000
+                    ) {
+                        let firstDate = new Date(
+                            firstYearRange,
+                            firstMonthRange - 1,
+                            firstDateRange
+                        );
+                        let secondDate = new Date(
+                            secondYearRange,
+                            secondMonthRange - 1,
+                            secondDateRange
+                        );
+                        let arrSelected = [];
+                        //Swaps the order in case one date is bigger than the other
+                        firstDate.getTime() > secondDate.getTime()
+                            ? (arrSelected = [secondDate, firstDate])
+                            : (arrSelected = [firstDate, secondDate]);
+
+                        this.setState({
+                            selectedDate: '',
+                            arrSelectedDates: arrSelected
+                        });
+                    } else {
+                        this.setState({
+                            formattedDate: '',
+                            selectedDate: 'undefined',
+                            arrSelectedDates: 'undefined'
+                        });
+                    }
                 } else {
                     this.setState({
                         formattedDate: '',
@@ -153,30 +169,38 @@ export class DatePicker extends Component {
                 }
             }
         } else {
-            if (this.state.formattedDate.search(regex) !== -1) {
-                this.setState({
-                    formattedDate: this.formatDate(this.state.selectedDate),
-                    selectedDate: 'undefined'
-                });
-            } else {
-                let dateSeparated = this.state.formattedDate.split('/');
-                let year = parseInt(dateSeparated[2], 10);
-                let date = parseInt(dateSeparated[1], 10);
-                let month = parseInt(dateSeparated[0], 10);
-
-                if ((1 <= date && date <= 31) &&
-                    (1 <= month && month <= 12) &&
-                    year <= 3000
-                ) {
+            // check if entered date is enabled
+            if (this.isDateEnabled(this.state.formattedDate)) {
+                if (this.state.formattedDate.search(regex) !== -1) {
                     this.setState({
-                        selectedDate: new Date(year, month - 1, date)
+                        formattedDate: this.formatDate(this.state.selectedDate),
+                        selectedDate: 'undefined'
                     });
                 } else {
-                    this.setState({
-                        selectedDate: 'undefined',
-                        formattedDate: ''
-                    });
+                    let dateSeparated = this.state.formattedDate.split('/');
+                    let year = parseInt(dateSeparated[2], 10);
+                    let date = parseInt(dateSeparated[1], 10);
+                    let month = parseInt(dateSeparated[0], 10);
+
+                    if ((1 <= date && date <= 31) &&
+                        (1 <= month && month <= 12) &&
+                        year <= 3000
+                    ) {
+                        this.setState({
+                            selectedDate: new Date(year, month - 1, date)
+                        });
+                    } else {
+                        this.setState({
+                            selectedDate: 'undefined',
+                            formattedDate: ''
+                        });
+                    }
                 }
+            } else {
+                this.setState({
+                    selectedDate: 'undefined',
+                    formattedDate: ''
+                });
             }
         }
     }
@@ -310,7 +334,8 @@ export class DatePicker extends Component {
                             disableWeekends={disableWeekends}
                             disabledDates={disabledDates}
                             enableRangeSelection={enableRangeSelection}
-                            onChange={this.updateDate} />
+                            onChange={this.updateDate}
+                            ref={this.calendarRef} />
                     </div>
                 </div>
             </div>

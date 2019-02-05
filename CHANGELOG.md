@@ -2,6 +2,71 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.3.2-rc.4"></a>
+## [0.3.2-rc.4](https://github.com/SAP/fundamental-react/compare/v0.3.2-rc.3...v0.3.2-rc.4) (2019-02-05)
+
+
+### Bug Fixes
+
+* DatePicker prevent ability to enter in disabled date string ([#346](https://github.com/SAP/fundamental-react/issues/346)) ([ed61a5f](https://github.com/SAP/fundamental-react/commit/ed61a5f))
+
+
+
+<a name="0.3.2-rc.3"></a>
+## [0.3.2-rc.3](https://github.com/SAP/fundamental-react/compare/v0.3.2-rc.2...v0.3.2-rc.3) (2019-02-05)
+
+
+### Bug Fixes
+
+* update css specificity for markdown ([#356](https://github.com/SAP/fundamental-react/issues/356)) ([707af3c](https://github.com/SAP/fundamental-react/commit/707af3c))
+
+
+
+<a name="0.3.2-rc.2"></a>
+## [0.3.2-rc.2](https://github.com/SAP/fundamental-react/compare/v0.3.2-rc.1...v0.3.2-rc.2) (2019-02-05)
+
+
+### Bug Fixes
+
+* set currentDateDisplayed on date click ([#343](https://github.com/SAP/fundamental-react/issues/343)) ([07c2931](https://github.com/SAP/fundamental-react/commit/07c2931))
+
+
+
+<a name="0.3.2-rc.1"></a>
+## [0.3.2-rc.1](https://github.com/SAP/fundamental-react/compare/v0.3.2-rc.0...v0.3.2-rc.1) (2019-02-04)
+
+
+### Bug Fixes
+
+* Updating key missing error in Tab Tests ([#353](https://github.com/SAP/fundamental-react/issues/353)) ([52d4a68](https://github.com/SAP/fundamental-react/commit/52d4a68))
+
+
+
+<a name="0.3.2-rc.0"></a>
+## [0.3.2-rc.0](https://github.com/SAP/fundamental-react/compare/v0.3.1...v0.3.2-rc.0) (2019-02-04)
+
+
+### Bug Fixes
+
+* Modal documentation console error ([#351](https://github.com/SAP/fundamental-react/issues/351)) ([1f6fbf8](https://github.com/SAP/fundamental-react/commit/1f6fbf8))
+
+
+
+<a name="0.3.1"></a>
+## [0.3.1](https://github.com/SAP/fundamental-react/compare/v0.3.1-rc.0...v0.3.1) (2019-02-04)
+
+
+
+<a name="0.3.1-rc.0"></a>
+## [0.3.1-rc.0](https://github.com/SAP/fundamental-react/compare/v0.3.0...v0.3.1-rc.0) (2019-02-04)
+
+
+### Bug Fixes
+
+* Removed bin config option ([#348](https://github.com/SAP/fundamental-react/issues/348)) ([52032bf](https://github.com/SAP/fundamental-react/commit/52032bf))
+
+
+
 <a name="0.3.0"></a>
 # [0.3.0](https://github.com/SAP/fundamental-react/compare/v0.3.0-rc.14...v0.3.0) (2019-02-01)
 

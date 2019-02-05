@@ -78,13 +78,13 @@ $fd-fonts-path: '../../node_modules/fiori-fundamentals/dist/fonts/';
             padding-left: 1rem;
             padding-right: 1rem;
 
-            .frDocs-Content__header, h1 {
+            .frDocs-Content__header, .frDocs-markdown > h1 {
                 margin: 12px 0;
                 margin-top: 2rem;
                 font-size: 2.2rem;
             }
 
-            .frDocs-Content__description, p {
+            .frDocs-Content__description, .frDocs-markdown > p {
                 margin-bottom: 1.5rem;
                 font-size: 1rem;
                 font-weight: 300;
