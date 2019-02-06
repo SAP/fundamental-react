@@ -159,11 +159,9 @@ export const SideNavigationComponent = () => {
                         <SideNav.Group title='Group Title'>
                             <SideNav.List>
                                 <SideNav.Item
-                                    id='item_1'>
-                                    <Link to='/'>
-                                        Link Item
-                                    </Link>
-                                </SideNav.Item>
+                                    id='item_1'
+                                    name='Link Item'
+                                    url='#' />
                                 <SideNav.Item
                                     id='item_2'>
                                     <Link to='/'>
@@ -244,7 +242,7 @@ export const SideNavigationComponent = () => {
                             name='Link Item 1'
                             url='#' />
                         <SideNav.Item
-                            id='item-1'
+                            id='item-2'
                             name='Link Item 2'
                             url='#'>
                             <SideNav.SubItems>
@@ -277,24 +275,20 @@ export const SideNavigationComponent = () => {
                             <SideNav.SubItems>
                                 <SideNav.Item
                                     id='subitem_41'
-                                    url='#'>
-                                    Item 1
-                                </SideNav.Item>
+                                    name='Item 1'
+                                    url='#' />
                                 <SideNav.Item
-                                    id='subitem_41'
-                                    url='#'>
-                                    Item 2
-                                </SideNav.Item>
+                                    id='subitem_42'
+                                    name='Item 2'
+                                    url='#' />
                                 <SideNav.Item
-                                    id='subitem_41'
-                                    url='#'>
-                                    Item 3
-                                </SideNav.Item>
+                                    id='subitem_43'
+                                    name='Item 3'
+                                    url='#' />
                                 <SideNav.Item
-                                    id='subitem_41'
-                                    url='#'>
-                                    Item 4
-                                </SideNav.Item>
+                                    id='subitem_44'
+                                    name='Item 4'
+                                    url='#' />
                             </SideNav.SubItems>
                         </SideNav.Item>
                         <SideNav.Item
