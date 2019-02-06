@@ -64,60 +64,21 @@ SideNav.propTypes = {
 
 SideNav.propDescriptions = {
     icons: 'Set to **true** enables side navigation collapsed with icons.',
-    selectedId: 'The id of the selected `SideNavItem`.'
+    selectedId: 'The id of the selected `SideNavListItem`.'
 };
 
-export const SideNavGroup = ({children, className, expandedIds, onItemSelect, selectedId, title, titleProps, ...props}) => {
-    const sideNavGroupClasses = classnames(
-        'fd-side-nav__group',
-        className
-    );
-
-    return (
-        <div
-            {...props}
-            className={sideNavGroupClasses}>
-            <h1 {...titleProps} className='fd-side-nav__title'>
-                {title}
-            </h1>
-            {React.Children.map(children, (child) => {
-                if (React.isValidElement(child)) {
-                    return React.cloneElement(child, {
-                        expandedIds: expandedIds,
-                        onItemSelect: onItemSelect,
-                        selectedId: selectedId
-                    });
-                } else {
-                    return child;
-                }
-            })}
-        </div>
-    );
-};
-
-SideNavGroup.propTypes = {
-    children: PropTypes.node,
-    className: PropTypes.string,
-    expandedIds: PropTypes.array,
-    selectedId: PropTypes.string,
-    title: PropTypes.string,
-    titleProps: PropTypes.object,
-    onItemSelect: PropTypes.func
-};
-
-SideNavGroup.propDescriptions = {
-    expandedIds: 'An array of strings for expanded `SideNavItems`\'s.',
-    onItemSelect: 'Callback function when user selects an item .',
-    selectedId: 'The id of the selected `SideNavItem`.'
-};
-
-export const SideNavList = ({children, className, expandedIds, onItemSelect, selectedId, ...rest}) => {
+export const SideNavList = ({children, className, expandedIds, onItemSelect, selectedId, title, titleProps, ...rest}) => {
     const sideNavListClasses = classnames(
         'fd-side-nav__list',
         className
     );
 
-    return (
+    const sideNavHeaderlasses = classnames(
+        'fd-side-nav__group',
+        className
+    );
+
+    const sideNavList = (
         <ul
             {...rest}
             className={sideNavListClasses}>
@@ -135,6 +96,20 @@ export const SideNavList = ({children, className, expandedIds, onItemSelect, sel
             })}
         </ul>
     );
+
+    if (title) {
+        return (
+            <div
+                className={sideNavHeaderlasses}>
+                <h1 {...titleProps} className='fd-side-nav__title'>
+                    {title}
+                </h1>
+                {sideNavList}
+            </div>
+        );
+    }
+
+    return sideNavList;
 };
 
 SideNavList.propTypes = {
@@ -142,16 +117,18 @@ SideNavList.propTypes = {
     className: PropTypes.string,
     expandedIds: PropTypes.array,
     selectedId: PropTypes.string,
+    title: PropTypes.string,
+    titleProps: PropTypes.object,
     onItemSelect: PropTypes.func
 };
 
 SideNavList.propDescriptions = {
-    expandedIds: 'An array of strings for expanded `SideNavItems`\'s.',
-    selectedId: 'The id of the selected `SideNavItem`.',
+    expandedIds: 'An array of strings for expanded `SideNavListItems`\'s.',
+    selectedId: 'The id of the selected `SideNavListItem`.',
     onItemSelect: 'Callback function when user selects an item .'
 };
 
-export const SideNavItem = ({children, expandedIds = [], glyph, id, isSubItem, name, onClick, onItemSelect, selected, selectedId, url, ...props}) => {
+export const SideNavListItem = ({children, expandedIds = [], glyph, id, isSubItem, name, onClick, onItemSelect, selected, selectedId, url, ...props}) => {
     const getClasses = () => {
         return classnames(
             {
@@ -185,7 +162,7 @@ export const SideNavItem = ({children, expandedIds = [], glyph, id, isSubItem, n
 
     let hasChild = false;
     React.Children.forEach(children, (child) => {
-        if (React.isValidElement(child) && child.type === SideNavSubItems) {
+        if (React.isValidElement(child) && child.type === SideNavSubList) {
             hasChild = true;
         }
     });
@@ -196,7 +173,7 @@ export const SideNavItem = ({children, expandedIds = [], glyph, id, isSubItem, n
             key={id}>
             {url && renderLink()}
             {React.Children.map(children, (child) => {
-                if (React.isValidElement(child) && child.type !== SideNavSubItems) {
+                if (React.isValidElement(child) && child.type !== SideNavSubList) {
                     return React.cloneElement(child, {
                         children: (<React.Fragment>
                             {glyph ? (
@@ -208,7 +185,7 @@ export const SideNavItem = ({children, expandedIds = [], glyph, id, isSubItem, n
                         </React.Fragment>),
                         className: getClasses()
                     });
-                } else if (React.isValidElement(child) && child.type === SideNavSubItems) {
+                } else if (React.isValidElement(child) && child.type === SideNavSubList) {
                     return React.cloneElement(child, {
                         onItemSelect: onItemSelect,
                         open: expandedIds.includes(id),
@@ -222,7 +199,7 @@ export const SideNavItem = ({children, expandedIds = [], glyph, id, isSubItem, n
     );
 };
 
-SideNavItem.propTypes = {
+SideNavListItem.propTypes = {
     children: PropTypes.node,
     expandedIds: PropTypes.array,
     glyph: PropTypes.string,
@@ -236,21 +213,21 @@ SideNavItem.propTypes = {
     onItemSelect: PropTypes.func
 };
 
-SideNavItem.propDescriptions = {
-    expandedIds: 'An array of strings for expanded `SideNavItems`\'s.',
+SideNavListItem.propDescriptions = {
+    expandedIds: 'An array of strings for expanded `SideNavListItems`\'s.',
     isSubItem: 'Set to **true** to display as a subitem.',
     name: 'Link text to be set in conjunction with the `url` prop.',
     onItemSelect: 'Callback function when user selects an item .',
     selected: 'Set to **true** to display as selected.',
-    selectedId: 'The id of the selected `SideNavItem`.',
+    selectedId: 'The id of the selected `SideNavListItem`.',
     url: 'Creates an internal anchor when a child anchor is not provided.'
 };
 
-SideNavItem.defaultProps = {
+SideNavListItem.defaultProps = {
     onClick: () => {}
 };
 
-export const SideNavSubItems = ({children, id, onItemSelect, open, selectedId, ...props}) => {
+export const SideNavSubList = ({children, id, onItemSelect, open, selectedId, ...props}) => {
     return (
         <ul
             {...props}
@@ -271,7 +248,7 @@ export const SideNavSubItems = ({children, id, onItemSelect, open, selectedId, .
     );
 };
 
-SideNavSubItems.propTypes = {
+SideNavSubList.propTypes = {
     children: PropTypes.node,
     id: PropTypes.string,
     open: PropTypes.bool,
@@ -279,8 +256,8 @@ SideNavSubItems.propTypes = {
     onItemSelect: PropTypes.func
 };
 
-SideNavSubItems.propDescriptions = {
+SideNavSubList.propDescriptions = {
     onItemSelect: 'Callback function when user selects an item .',
-    open: 'Set to **true** to mark `SideNavSubItems` as open.',
-    selectedId: 'The id of the selected `SideNavItem`.'
+    open: 'Set to **true** to mark `SideNavSubList` as open.',
+    selectedId: 'The id of the selected `SideNavListItem`.'
 };
