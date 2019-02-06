@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.3.2-rc.15"></a>
+## [0.3.2-rc.15](https://github.com/SAP/fundamental-react/compare/v0.3.2-rc.14...v0.3.2-rc.15) (2019-02-06)
+
+
+### Bug Fixes
+
+* hide Month/Year selector after selection ([#373](https://github.com/SAP/fundamental-react/issues/373)) ([0fdf371](https://github.com/SAP/fundamental-react/commit/0fdf371))
+
+
+
 <a name="0.3.2-rc.14"></a>
 ## [0.3.2-rc.14](https://github.com/SAP/fundamental-react/compare/v0.3.2-rc.13...v0.3.2-rc.14) (2019-02-06)
 
