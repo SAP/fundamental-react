@@ -14,6 +14,7 @@ jobs:
     if: branch = master
     before_deploy:
     - git checkout master
+    - bash ./ci-scripts/setup-npm.sh
     deploy:
     - provider: script
       script: bash ./ci-scripts/publish-rc.sh
@@ -24,6 +25,7 @@ jobs:
     - git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/*
     - git fetch
     - git checkout master
+    - bash ./ci-scripts/setup-npm.sh
     deploy:
     - provider: script
       script: bash ./ci-scripts/publish.sh
