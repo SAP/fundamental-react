@@ -121,6 +121,7 @@ export class Calendar extends Component {
             this.setState({
                 currentDateDisplayed: date,
                 selectedDate: date,
+                showMonths: false,
                 dateClick: true
             }, function() {
                 this.returnDateSelected(date);
@@ -128,6 +129,7 @@ export class Calendar extends Component {
         } else {
             this.setState({
                 currentDateDisplayed: date,
+                showMonths: false,
                 dateClick: true
             });
         }
@@ -139,6 +141,7 @@ export class Calendar extends Component {
         if (!this.props.enableRangeSelection) {
             this.setState({
                 currentDateDisplayed: date,
+                showYears: false,
                 selectedDate: date,
                 dateClick: true
             }, function() {
@@ -147,6 +150,7 @@ export class Calendar extends Component {
         } else {
             this.setState({
                 currentDateDisplayed: date,
+                showYears: false,
                 dateClick: true
             });
         }
