@@ -80,10 +80,13 @@ $fd-fonts-path: '../../node_modules/fiori-fundamentals/dist/fonts/';
 
             .frDocs-Content__githubLogo {
                 float: right;
-                width: 2rem;
-                height: 2rem;
                 z-index: 100;
                 cursor: pointer;
+            }
+
+            .frDocs-Content__githubLogo svg {
+                width: 2rem;
+                height: 2rem;
             }
 
             .frDocs-Content__header, h1 {
