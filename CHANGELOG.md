@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.3.2-rc.10"></a>
+## [0.3.2-rc.10](https://github.com/SAP/fundamental-react/compare/v0.3.2-rc.9...v0.3.2-rc.10) (2019-02-06)
+
+
+### Bug Fixes
+
+* Added FocusTrap to Modal component ([#349](https://github.com/SAP/fundamental-react/issues/349)) ([076c3e0](https://github.com/SAP/fundamental-react/commit/076c3e0))
+
+
+
 <a name="0.3.2-rc.9"></a>
 ## [0.3.2-rc.9](https://github.com/SAP/fundamental-react/compare/v0.3.2-rc.8...v0.3.2-rc.9) (2019-02-06)
 
