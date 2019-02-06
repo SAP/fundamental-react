@@ -1,112 +1,112 @@
 import { mount } from 'enzyme';
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { SideNav } from './SideNavigation';
 import { BrowserRouter, Link } from 'react-router-dom';
+import { SideNav, SideNavGroup, SideNavItem, SideNavList, SideNavSubItems } from '../';
 
 describe('<SideNavigation />', () => {
     const subSideNavList = (
-        <SideNav.List>
-            <SideNav.Item
+        <SideNavList>
+            <SideNavItem
                 id='item_1'
                 name='Link Item 1'
                 url='#' />
-            <SideNav.Item
+            <SideNavItem
                 id='item_2'
                 name='Link Item 2'
                 url='#'>
-                <SideNav.SubItems>
-                    <SideNav.Item
+                <SideNavSubItems>
+                    <SideNavItem
                         id='subitem_21'
                         name='Item 1'
                         url='#' />
-                    <SideNav.Item
+                    <SideNavItem
                         id='subitem_22'
                         name='Item 2'
                         url='#' />
-                    <SideNav.Item
+                    <SideNavItem
                         id='subitem_23'
                         name='Item 3'
                         url='#' />
-                    <SideNav.Item
+                    <SideNavItem
                         id='subitem_24'
                         name='Item 4'
                         url='#' />
-                    <SideNav.Item
+                    <SideNavItem
                         id='subitem_25'
                         name='Item 5'
                         url='#' />
-                </SideNav.SubItems>
-            </SideNav.Item>
-            <SideNav.Item
+                </SideNavSubItems>
+            </SideNavItem>
+            <SideNavItem
                 id='item_3'
                 name='Link Item 3'
                 url='#' />
-            <SideNav.Item
+            <SideNavItem
                 id='item_4'
                 name='Link Item 4'
                 url='#'>
-                <SideNav.SubItems>
-                    <SideNav.Item
+                <SideNavSubItems>
+                    <SideNavItem
                         id='subitem_41'
                         name='Item 1'
                         url='#' />
-                    <SideNav.Item
+                    <SideNavItem
                         id='subitem_41'
                         name='Item 2'
                         url='#' />
-                    <SideNav.Item
+                    <SideNavItem
                         id='subitem_41'
                         name='Item 3'
                         url='#' />
-                    <SideNav.Item
+                    <SideNavItem
                         id='subitem_41'
                         name='Item 4'
                         url='#' />
-                </SideNav.SubItems>
-            </SideNav.Item>
-            <SideNav.Item
+                </SideNavSubItems>
+            </SideNavItem>
+            <SideNavItem
                 id='item_5'
                 name='Link Item'
                 url='#' />
-        </SideNav.List>
+        </SideNavList>
     );
 
     const oneLevelSideNav = (
         <BrowserRouter>
             <SideNav>
-                <SideNav.List>
-                    <SideNav.Item
+                <SideNavList>
+                    <SideNavItem
                         id='item_1'>
                         <Link to='/'>
                             Link Item
                         </Link>
-                    </SideNav.Item>
-                    <SideNav.Item
+                    </SideNavItem>
+                    <SideNavItem
                         id='item_2'>
                         <Link to='/'>
                             Link Item
                         </Link>
-                    </SideNav.Item>
-                    <SideNav.Item
+                    </SideNavItem>
+                    <SideNavItem
                         id='item_3'>
                         <Link to='/'>
                             Link Item
                         </Link>
-                    </SideNav.Item>
-                    <SideNav.Item
+                    </SideNavItem>
+                    <SideNavItem
                         id='item_4'>
                         <Link to='/'>
                             Link Item
                         </Link>
-                    </SideNav.Item>
-                    <SideNav.Item
+                    </SideNavItem>
+                    <SideNavItem
                         id='item_5'>
                         <Link to='/'>
                             Link Item
                         </Link>
-                    </SideNav.Item>
-                </SideNav.List>
+                    </SideNavItem>
+                </SideNavList>
             </SideNav>
         </BrowserRouter>
     );
@@ -114,74 +114,74 @@ describe('<SideNavigation />', () => {
     const sideNavWithTitle = (
         <BrowserRouter>
             <SideNav selectedId='item_2'>
-                <SideNav.Group className='blue' title='Group Title'>
-                    <SideNav.List className='blue'>
-                        <SideNav.Item
+                <SideNavGroup className='blue' title='Group Title'>
+                    <SideNavList className='blue'>
+                        <SideNavItem
                             id='item_1'>
                             <Link to='/'>
                                 Link Item
                             </Link>
-                        </SideNav.Item>
-                        <SideNav.Item
+                        </SideNavItem>
+                        <SideNavItem
                             id='item_2'>
                             <Link to='/'>
                                 Link Item
                             </Link>
-                        </SideNav.Item>
-                        <SideNav.Item
+                        </SideNavItem>
+                        <SideNavItem
                             id='item_3'>
                             <Link to='/'>
                                 Link Item
                             </Link>
-                        </SideNav.Item>
-                        <SideNav.Item
+                        </SideNavItem>
+                        <SideNavItem
                             id='item_4'>
                             <Link to='/'>
                                 Link Item
                             </Link>
-                        </SideNav.Item>
-                        <SideNav.Item
+                        </SideNavItem>
+                        <SideNavItem
                             id='item_5'>
                             <Link to='/'>
                                 Link Item
                             </Link>
-                        </SideNav.Item>
-                    </SideNav.List>
-                </SideNav.Group>
-                <SideNav.Group title='Group Title'>
-                    <SideNav.List>
-                        <SideNav.Item
+                        </SideNavItem>
+                    </SideNavList>
+                </SideNavGroup>
+                <SideNavGroup title='Group Title'>
+                    <SideNavList>
+                        <SideNavItem
                             id='item_6'>
                             <Link to='/'>
                                 Link Item
                             </Link>
-                        </SideNav.Item>
-                        <SideNav.Item
+                        </SideNavItem>
+                        <SideNavItem
                             id='item_7'>
                             <Link to='/'>
                                 Link Item
                             </Link>
-                        </SideNav.Item>
-                        <SideNav.Item
+                        </SideNavItem>
+                        <SideNavItem
                             id='item_8'>
                             <Link to='/'>
                                 Link Item
                             </Link>
-                        </SideNav.Item>
-                        <SideNav.Item
+                        </SideNavItem>
+                        <SideNavItem
                             id='item_9'>
                             <Link to='/'>
                                 Link Item
                             </Link>
-                        </SideNav.Item>
-                        <SideNav.Item
+                        </SideNavItem>
+                        <SideNavItem
                             id='item_10'>
                             <Link to='/'>
                                 Link Item
                             </Link>
-                        </SideNav.Item>
-                    </SideNav.List>
-                </SideNav.Group>
+                        </SideNavItem>
+                    </SideNavList>
+                </SideNavGroup>
             </SideNav>
         </BrowserRouter>
     );
@@ -191,67 +191,67 @@ describe('<SideNavigation />', () => {
     const sideNavWithIcons = (
         <BrowserRouter>
             <SideNav selectedId='item-2'>
-                <SideNav.List>
-                    <SideNav.Item
+                <SideNavList>
+                    <SideNavItem
                         glyph='home'
                         id='item-1'>
                         <Link to='/'>
                             Link Item
                         </Link>
-                    </SideNav.Item>
-                    <SideNav.Item
+                    </SideNavItem>
+                    <SideNavItem
                         glyph='home'
                         id='item-2'>
                         <Link to='/'>
                             Link Item
                         </Link>
-                    </SideNav.Item>
-                    <SideNav.Item
+                    </SideNavItem>
+                    <SideNavItem
                         glyph='home'
                         id='item-3'>
                         <Link to='/'>
                             Link Item
                         </Link>
-                    </SideNav.Item>
-                    <SideNav.Item
+                    </SideNavItem>
+                    <SideNavItem
                         glyph='home'
                         id='item-4'
                         name='Link Item'
                         url='#' />
-                    <SideNav.Item
+                    <SideNavItem
                         glyph='home'
                         id='item-5'
                         name='Link Item'
                         url='#' />
-                </SideNav.List>
+                </SideNavList>
             </SideNav>
         </BrowserRouter>
     );
 
     const sideNavCollapsed = (
         <SideNav icons>
-            <SideNav.List>
-                <SideNav.Item
+            <SideNavList>
+                <SideNavItem
                     glyph='home'
                     id='item-1'
                     url='#' />
-                <SideNav.Item
+                <SideNavItem
                     glyph='home'
                     id='item-2'
                     url='#' />
-                <SideNav.Item
+                <SideNavItem
                     glyph='home'
                     id='item-3'
                     url='#' />
-                <SideNav.Item
+                <SideNavItem
                     glyph='home'
                     id='item-4'
                     url='#' />
-                <SideNav.Item
+                <SideNavItem
                     glyph='home'
                     id='item-5'
                     url='#' />
-            </SideNav.List>
+            </SideNavList>
         </SideNav>
     );
 
@@ -337,20 +337,20 @@ describe('<SideNavigation />', () => {
         });
 
         test('should allow props to be spread to the SideNavList component', () => {
-            const element = mount(<SideNav.List data-sample='Sample'>
-                <SideNav.Item
+            const element = mount(<SideNavList data-sample='Sample'>
+                <SideNavItem
                     id='item-1'
                     name='Link Item 1'
                     url='#' />
-                <SideNav.Item
+                <SideNavItem
                     id='item-2'
                     name='Link Item 2'
                     url='#' />
-                <SideNav.Item
+                <SideNavItem
                     id='item-3'
                     name='Link Item 3'
                     url='#' />
-            </SideNav.List>);
+            </SideNavList>);
 
             expect(
                 element.getDOMNode().attributes['data-sample'].value
@@ -358,7 +358,7 @@ describe('<SideNavigation />', () => {
         });
 
         test('should allow props to be spread to the SideNavGroup component', () => {
-            const element = mount(<SideNav.Group data-sample='Sample' title='test' />);
+            const element = mount(<SideNavGroup data-sample='Sample' title='test' />);
 
             expect(
                 element.getDOMNode().attributes['data-sample'].value
@@ -366,7 +366,7 @@ describe('<SideNavigation />', () => {
         });
 
         test('should allow props to be spread to the SideNavGroup component\'s h1 element', () => {
-            const element = mount(<SideNav.Group title='test' titleProps={{'data-sample': 'Sample'}} />);
+            const element = mount(<SideNavGroup title='test' titleProps={{'data-sample': 'Sample'}} />);
 
             expect(
                 element.find('h1').getDOMNode().attributes['data-sample'].value
