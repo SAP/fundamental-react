@@ -21,7 +21,6 @@ const ModuleNotFoundPlugin = require('react-dev-utils/ModuleNotFoundPlugin');
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin-alt');
 const typescriptFormatter = require('react-dev-utils/typescriptFormatter');
 
-
 // Webpack uses `publicPath` to determine where the app is being served from.
 // In development, we always serve from the root. This makes config easier.
 const publicPath = '/';
@@ -74,6 +73,25 @@ const getStyleLoaders = (cssOptions, preProcessor) => {
         loaders.push(require.resolve(preProcessor));
     }
     return loaders;
+};
+
+const getLintingRule = () => {
+    return process.env.FUNDAMENTAL_REACT_PLAYGROUND ?
+        {} : {
+            test: /\.(js|mjs|jsx)$/,
+            enforce: 'pre',
+            use: [
+                {
+                    options: {
+                        formatter: require.resolve('react-dev-utils/eslintFormatter'),
+                        eslintPath: require.resolve('eslint')
+
+                    },
+                    loader: require.resolve('eslint-loader')
+                }
+            ],
+            include: paths.appSrc
+        };
 };
 
 // This is the development configuration.
@@ -181,20 +199,7 @@ module.exports = {
 
             // First, run the linter.
             // It's important to do this before Babel processes the JS.
-            {
-                test: /\.(js|mjs|jsx)$/,
-                enforce: 'pre',
-                use: [
-                    {
-                        options: {
-                            formatter: require.resolve('react-dev-utils/eslintFormatter'),
-                            eslintPath: require.resolve('eslint')
-                        },
-                        loader: require.resolve('eslint-loader')
-                    }
-                ],
-                include: paths.appSrc
-            },
+            getLintingRule(),
             {
                 // "oneOf" will traverse all following loaders until one will
                 // match the requirements. When no loader matches it will fall
