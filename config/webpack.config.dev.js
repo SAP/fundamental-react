@@ -1,3 +1,6 @@
+/* eslint-disable strict */
+/* eslint-disable camelcase */
+
 'use strict';
 
 const fs = require('fs');
@@ -223,7 +226,6 @@ module.exports = {
                             customize: require.resolve(
                                 'babel-preset-react-app/webpack-overrides'
                             ),
-
                             plugins: [
                                 [
                                     require.resolve('babel-plugin-named-asset-import'),

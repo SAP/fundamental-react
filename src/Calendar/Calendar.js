@@ -449,8 +449,8 @@ export class Calendar extends Component {
                 let copyDate = day;
 
                 let dayClasses = classnames(
+                    'fd-calendar__item',
                     {
-                        'fd-calendar__item': !this.displayIsDayOtherMonth(day),
                         'fd-calendar__item--other-month': this.displayIsDayOtherMonth(day),
                         'fd-calendar__item--current': this.state.todayDate.getTime() === copyDate.getTime(),
                         'is-selected': this.displayIsSelected(day),
