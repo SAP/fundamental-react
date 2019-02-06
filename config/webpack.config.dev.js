@@ -76,8 +76,8 @@ const getStyleLoaders = (cssOptions, preProcessor) => {
 };
 
 const getLintingRule = () => {
-    return process.env.LINT_ENV !== 'false' ?
-        {
+    return process.env.FUNDAMENTAL_REACT_PLAYGROUND ?
+        {} : {
             test: /\.(js|mjs|jsx)$/,
             enforce: 'pre',
             use: [
@@ -91,7 +91,7 @@ const getLintingRule = () => {
                 }
             ],
             include: paths.appSrc
-        } : {};
+        };
 };
 
 // This is the development configuration.
