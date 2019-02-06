@@ -2,6 +2,66 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.3.2-rc.9"></a>
+## [0.3.2-rc.9](https://github.com/SAP/fundamental-react/compare/v0.3.2-rc.8...v0.3.2-rc.9) (2019-02-06)
+
+
+
+<a name="0.3.2-rc.8"></a>
+## [0.3.2-rc.8](https://github.com/SAP/fundamental-react/compare/v0.3.2-rc.7...v0.3.2-rc.8) (2019-02-06)
+
+
+
+<a name="0.3.2-rc.7"></a>
+## [0.3.2-rc.7](https://github.com/SAP/fundamental-react/compare/v0.3.2-rc.6...v0.3.2-rc.7) (2019-02-05)
+
+
+
+<a name="0.3.2-rc.6"></a>
+## [0.3.2-rc.6](https://github.com/SAP/fundamental-react/compare/v0.3.2-rc.5...v0.3.2-rc.6) (2019-02-05)
+
+
+### Bug Fixes
+
+* adding missing style to other months dates ([#366](https://github.com/SAP/fundamental-react/issues/366)) ([c18cfba](https://github.com/SAP/fundamental-react/commit/c18cfba))
+
+
+
+<a name="0.3.2-rc.5"></a>
+## [0.3.2-rc.5](https://github.com/SAP/fundamental-react/compare/v0.3.2-rc.4...v0.3.2-rc.5) (2019-02-05)
+
+
+
+<a name="0.3.2-rc.4"></a>
+## [0.3.2-rc.4](https://github.com/SAP/fundamental-react/compare/v0.3.2-rc.3...v0.3.2-rc.4) (2019-02-05)
+
+
+### Bug Fixes
+
+* DatePicker prevent ability to enter in disabled date string ([#346](https://github.com/SAP/fundamental-react/issues/346)) ([ed61a5f](https://github.com/SAP/fundamental-react/commit/ed61a5f))
+
+
+
+<a name="0.3.2-rc.3"></a>
+## [0.3.2-rc.3](https://github.com/SAP/fundamental-react/compare/v0.3.2-rc.2...v0.3.2-rc.3) (2019-02-05)
+
+
+### Bug Fixes
+
+* update css specificity for markdown ([#356](https://github.com/SAP/fundamental-react/issues/356)) ([707af3c](https://github.com/SAP/fundamental-react/commit/707af3c))
+
+
+
+<a name="0.3.2-rc.2"></a>
+## [0.3.2-rc.2](https://github.com/SAP/fundamental-react/compare/v0.3.2-rc.1...v0.3.2-rc.2) (2019-02-05)
+
+
+### Bug Fixes
+
+* set currentDateDisplayed on date click ([#343](https://github.com/SAP/fundamental-react/issues/343)) ([07c2931](https://github.com/SAP/fundamental-react/commit/07c2931))
+
+
+
 <a name="0.3.2-rc.1"></a>
 ## [0.3.2-rc.1](https://github.com/SAP/fundamental-react/compare/v0.3.2-rc.0...v0.3.2-rc.1) (2019-02-04)
 

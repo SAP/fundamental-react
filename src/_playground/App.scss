@@ -71,13 +71,9 @@ $fd-fonts-path: '../../node_modules/fiori-fundamentals/dist/fonts/';
         .frDocs-Content {
             flex-grow: 1;
             overflow-y: scroll;
-            padding-bottom: 2rem;
             background-color: white;
-            margin-right: auto;
-            margin-left: 12px;
-            padding-left: 1rem;
-            padding-right: 1rem;
-
+            padding: 2rem;
+          
             .frDocs-Content__githubLogo {
                 float: right;
                 z-index: 100;
@@ -89,13 +85,12 @@ $fd-fonts-path: '../../node_modules/fiori-fundamentals/dist/fonts/';
                 height: 2rem;
             }
 
-            .frDocs-Content__header, h1 {
-                margin: 12px 0;
-                margin-top: 2rem;
+            .frDocs-Content__header, .frDocs-markdown > h1 {
+                margin: 0 0 12px;
                 font-size: 2.2rem;
             }
 
-            .frDocs-Content__description, p {
+            .frDocs-Content__description, .frDocs-markdown > p {
                 margin-bottom: 1.5rem;
                 font-size: 1rem;
                 font-weight: 300;
