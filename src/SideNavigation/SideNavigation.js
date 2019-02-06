@@ -7,7 +7,7 @@ export class SideNav extends Component {
         super(props);
 
         this.state = {
-            selectedId: props.selectedItem,
+            selectedId: props.selectedId,
             expandedIds: []
         };
     }
@@ -15,7 +15,7 @@ export class SideNav extends Component {
     handleSelect = (e, id, hasChild) => {
         let expandedIds = this.state.expandedIds;
         if (hasChild && expandedIds.includes(id)) {
-            expandedIds = expandedIds.filter(eId => eId !== id)
+            expandedIds = expandedIds.filter(eId => eId !== id);
         } else if (hasChild) {
             expandedIds.push(id);
         }
@@ -27,7 +27,7 @@ export class SideNav extends Component {
     }
 
     render() {
-        const { children, className, icons, ...rest } = this.props;
+        const { children, className, icons, selectedId, ...rest } = this.props;
 
         const sideNavClasses = classnames(
             className,
@@ -61,10 +61,10 @@ const SideNavGroup = ({title, children, className, expandedIds, onItemSelect, se
     const sideNavGroupClasses = classnames(
         'fd-side-nav__group',
         className
-        );
-        
-        return (
-            <div
+    );
+
+    return (
+        <div
             {...props}
             className={sideNavGroupClasses}>
             <h1 {...titleProps} className='fd-side-nav__title'>
@@ -148,7 +148,7 @@ const SideNavItem = ({children, expandedIds = [], glyph, id, isSubItem, name, on
         if (React.isValidElement(child) && child.type === SideNav.SubItems) {
             hasChild = true;
         }
-    })
+    });
 
     return (
         <li {...props}
