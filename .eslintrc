@@ -17,6 +17,7 @@ plugins:
     - jsx-a11y
     - loosely-restrict-imports
     - react
+    - react-hooks
 
 rules:
     brace-style: 2
@@ -134,6 +135,7 @@ rules:
     react/react-in-jsx-scope: 2
     react/self-closing-comp: 2
     react/sort-prop-types: [2, { 'callbacksLast' : true, 'ignoreCase' : true, 'requiredFirst' : true, } ]
+    react-hooks/rules-of-hooks: 2
     semi-spacing: 2
     semi: 2
     sort-imports: [2, { 'ignoreCase': true, 'ignoreMemberSort': false, 'memberSyntaxSortOrder': ['none', 'single', 'multiple', 'all'] }]
