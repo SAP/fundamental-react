@@ -78,16 +78,24 @@ $fd-fonts-path: '../../node_modules/fiori-fundamentals/dist/fonts/';
                 float: right;
                 z-index: 100;
                 cursor: pointer;
-            }
-
-            .frDocs-Content__githubLogo svg {
                 width: 2rem;
                 height: 2rem;
+                font-size: 1rem;
+
+                svg {
+                    width: 2rem;
+                    height: 2rem;
+                }
             }
 
             .frDocs-Content__header, .frDocs-markdown > h1 {
                 margin: 0 0 12px;
                 font-size: 2.2rem;
+                line-height: 2.2rem;
+            }
+
+            .frDocs-Content__header:empty {
+                display: none;
             }
 
             .frDocs-Content__description, .frDocs-markdown > p {
