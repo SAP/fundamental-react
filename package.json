@@ -4,6 +4,7 @@
   "private": false,
   "license": "Apache-2.0",
   "main": "lib/index.js",
+  "module": "lib/es/index.js",
   "homepage": "https://sap.github.io/fundamental-react",
   "repository": {
     "type": "git",
@@ -15,7 +16,9 @@
     "build-js": "node scripts/build.js",
     "build:lint:fix": "eslint --fix 'src/**' --ext .js,.jsx --env browser,node",
     "build:lint": "eslint 'src/**' --ext .js,.jsx --env browser,node",
-    "build": "rm -rf lib && NODE_ENV=production babel src --out-dir lib --ignore \"src/**/*.spec.js\",\"src/**/*.test.js\",\"src/**/*.Component.js\",\"src/_playground/*\"",
+    "build": "npm run build:lib && npm run build:es",
+    "build:lib": "rm -rf lib && NODE_ENV=production babel src --out-dir lib --ignore \"src/**/*.spec.js\",\"src/**/*.test.js\",\"src/**/*.Component.js\",\"src/_playground/*\"",
+    "build:es": "BABEL_ENV=es babel src --out-dir lib/es --ignore \"src/**/*.spec.js\",\"src/**/*.test.js\",\"src/**/*.Component.js\",\"src/_playground/*\"",
     "config:lint": "eslint 'config/**' --ext .js,.jsx --env browser,node",
     "config:lint:fix": "eslint --fix 'config/**' --ext .js,.jsx --env browser,node",
     "deploy": "npm run build-doc && gh-pages -d build",

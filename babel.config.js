@@ -1,5 +1,5 @@
 
-const defaultPresets = [
+const cjsPresets = [
     '@babel/preset-react',
     [
         '@babel/preset-env',
@@ -9,10 +9,20 @@ const defaultPresets = [
     ]
 ];
 
+const esPresets = [
+    '@babel/preset-react',
+    [
+        '@babel/preset-env',
+        {
+            modules: false
+        }
+    ]
+];
+
 const defaultPlugins = [
     ['@babel/plugin-proposal-class-properties', { loose: true }],
-    ['@babel/plugin-proposal-object-rest-spread', { loose: true }],
-    '@babel/plugin-transform-object-assign'
+    ['@babel/plugin-proposal-object-rest-spread', { loose: true }]
+    // '@babel/plugin-transform-object-assign'
 ];
 
 const productionPlugins = [
@@ -28,7 +38,7 @@ const productionPlugins = [
 ];
 
 module.exports = {
-    presets: defaultPresets,
+    presets: process.env.BABEL_ENV === 'es' ? esPresets : cjsPresets,
     plugins: defaultPlugins,
     env: {
         production: {
