@@ -87,7 +87,7 @@ describe('<Toggle />', () => {
         });
 
         test('should allow props to be spread to the Toggle component\'s label element', () => {
-            const element = mount(<Toggle labelProps={{'data-sample': 'Sample'}} />);
+            const element = mount(<Toggle labelProps={{ 'data-sample': 'Sample' }} />);
 
             expect(
                 element.find('label').getDOMNode().attributes['data-sample'].value
@@ -95,7 +95,7 @@ describe('<Toggle />', () => {
         });
 
         test('should allow props to be spread to the Toggle component\'s input element', () => {
-            const element = mount(<Toggle inputProps={{'data-sample': 'Sample'}} />);
+            const element = mount(<Toggle inputProps={{ 'data-sample': 'Sample' }} />);
 
             expect(
                 element.find('input').getDOMNode().attributes['data-sample'].value

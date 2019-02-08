@@ -110,6 +110,7 @@ rules:
     no-underscore-dangle: 0
     no-unreachable: 2
     no-unused-vars: [2, { ignoreRestSiblings: true }]
+    object-curly-spacing: [2, always]
     quote-props: [2, 'as-needed', { 'keywords': true, 'unnecessary': false }]
     quotes: [2, 'single']
     radix: 2
