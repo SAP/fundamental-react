@@ -63,7 +63,7 @@ describe('<Alert />', () => {
         });
 
         test('should allow props to be spread to the Alert component\'s button element when dismissible', () => {
-            const element = mount(<Alert buttonProps={{'data-sample': 'Sample'}} dismissible />);
+            const element = mount(<Alert buttonProps={{ 'data-sample': 'Sample' }} dismissible />);
 
             expect(
                 element.find('button').getDOMNode().attributes['data-sample'].value
@@ -71,7 +71,7 @@ describe('<Alert />', () => {
         });
 
         test('should allow props to be spread to the Alert component\'s a element when link provided', () => {
-            const element = mount(<Alert link='javascript:void(0)' linkProps={{'data-sample': 'Sample'}} />);
+            const element = mount(<Alert link='javascript:void(0)' linkProps={{ 'data-sample': 'Sample' }} />);
 
             expect(
                 element.find('a').getDOMNode().attributes['data-sample'].value

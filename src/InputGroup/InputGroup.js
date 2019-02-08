@@ -1,9 +1,9 @@
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import {INPUT_GROUP_ADDON_POSITIONS, INPUT_GROUP_TYPES} from '../utils/constants';
+import { INPUT_GROUP_ADDON_POSITIONS, INPUT_GROUP_TYPES } from '../utils/constants';
 import React, { Component } from 'react';
 
-export const FormGroup = ({ children, ...props}) => {
+export const FormGroup = ({ children, ...props }) => {
     return <div {...props} className='fd-form__group'>{children}</div>;
 };
 
