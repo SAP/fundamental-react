@@ -547,6 +547,7 @@ export class Calendar extends Component {
     }
 
 }
+Calendar.displayName = 'Calendar';
 
 Calendar.basePropTypes = {
     blockedDates: PropTypes.arrayOf(PropTypes.instanceOf(Date)),

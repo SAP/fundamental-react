@@ -48,6 +48,7 @@ export const Table = props => {
         </table>
     );
 };
+Table.displayName = 'Table';
 
 Table.propTypes = {
     headers: PropTypes.array.isRequired,

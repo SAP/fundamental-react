@@ -16,6 +16,8 @@ export const FormSet = ({ children, className, ...props }) => {
         </div>
     );
 };
+FormSet.displayName = 'FormSet';
+
 FormSet.propTypes = {
     children: PropTypes.node,
     className: PropTypes.string
@@ -40,6 +42,7 @@ export const FormItem = ({ isCheck, isInline, children, className, ...props }) =
         </div>
     );
 };
+FormItem.displayName = 'FormItem';
 
 FormItem.propTypes = {
     children: PropTypes.node,
@@ -69,6 +72,8 @@ export const FormLabel = ({ required, children, className, ...props }) => {
         </label>
     );
 };
+FormLabel.displayName = 'FormLabel';
+
 FormLabel.propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,
@@ -96,6 +101,8 @@ export const FormMessage = ({ type, children, className, ...props }) => {
         </span>
     );
 };
+FormMessage.displayName = 'FormMessage';
+
 FormMessage.propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,
@@ -118,6 +125,8 @@ export const FormInput = ({ state, className, ...props }) => {
             className={formInputClasses} />
     );
 };
+FormInput.displayName = 'FormInput';
+
 FormInput.propTypes = {
     className: PropTypes.string,
     state: PropTypes.string
@@ -142,6 +151,8 @@ export const FormTextarea = ({ children, className, ...props }) => {
         </textarea>
     );
 };
+FormTextarea.displayName = 'FormTextarea';
+
 FormTextarea.propTypes = {
     children: PropTypes.node,
     className: PropTypes.string
@@ -162,6 +173,8 @@ export const FormFieldset = ({ children, className, ...props }) => {
         </fieldset>
     );
 };
+FormFieldset.displayName = 'FormFieldset';
+
 FormFieldset.propTypes = {
     children: PropTypes.node,
     className: PropTypes.string
@@ -182,6 +195,8 @@ export const FormLegend = ({ children, className, ...props }) => {
         </legend>
     );
 };
+FormLegend.displayName = 'FormLegend';
+
 FormLegend.propTypes = {
     children: PropTypes.node,
     className: PropTypes.string
@@ -203,6 +218,8 @@ export const FormSelect = ({ disabled, children, className, ...props }) => {
         </select>
     );
 };
+FormSelect.displayName = 'FormSelect';
+
 FormSelect.propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,
@@ -269,6 +286,8 @@ export class FormRadio extends Component {
         return <div>{result}</div>;
     }
 }
+FormRadio.displayName = 'FormRadio';
+
 FormRadio.propTypes = {
     inputs: PropTypes.array.isRequired,
     defaultChecked: PropTypes.string,
