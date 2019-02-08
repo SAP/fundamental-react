@@ -2,7 +2,7 @@ exports.default = function(babel) {
     const { types: t } = babel;
 
     return {
-        name: 'babel-transform-remove-prop-descriptions', // not required
+        name: 'babel-transform-remove-prop-descriptions',
         visitor: {
             AssignmentExpression(path) {
                 const { node } = path;
