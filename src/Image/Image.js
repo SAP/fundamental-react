@@ -1,7 +1,7 @@
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
-import {IMAGE_SIZES, IMAGE_TYPES} from '../utils/constants';
+import { IMAGE_SIZES, IMAGE_TYPES } from '../utils/constants';
 
 export const Image = ({ size, type, photo, className, ...props }) => {
     const imageClasses = classnames(

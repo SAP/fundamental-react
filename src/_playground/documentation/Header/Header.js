@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import {repository} from '../../../../package.json';
+import { repository } from '../../../../package.json';
 
 export const Header = (props) => {
     const { children } = props;

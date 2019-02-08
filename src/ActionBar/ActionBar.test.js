@@ -106,7 +106,7 @@ describe('<ActionBar />', () => {
 
         test('should allow props to be spread to the ActionBarBack component\'s button element', () => {
 
-            const element = mount(<ActionBarBack buttonProps={{'data-sample': 'Sample'}} />);
+            const element = mount(<ActionBarBack buttonProps={{ 'data-sample': 'Sample' }} />);
 
             expect(
                 element.find('button').getDOMNode().attributes['data-sample'].value
@@ -131,7 +131,7 @@ describe('<ActionBar />', () => {
                 <ActionBarHeader
                     description=''
                     title=''
-                    titleProps={{'data-sample': 'Sample'}} />
+                    titleProps={{ 'data-sample': 'Sample' }} />
             );
 
             expect(
@@ -143,7 +143,7 @@ describe('<ActionBar />', () => {
             const element = mount(
                 <ActionBarHeader
                     description='Sample Description'
-                    descriptionProps={{'data-sample': 'Sample'}}
+                    descriptionProps={{ 'data-sample': 'Sample' }}
                     title='' />
             );
 

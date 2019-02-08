@@ -63,9 +63,9 @@ export const ListGroupComponent = () => {
             <Description>A link can be used to allow the user to access more details about the item.</Description>
             <DocsTile>
                 <ListGroup>
-                    <ListGroupItem><a style={{cursor: 'pointer'}}>List item 1</a></ListGroupItem>
+                    <ListGroupItem><a style={{ cursor: 'pointer' }}>List item 1</a></ListGroupItem>
                     <ListGroupItem>List item 2</ListGroupItem>
-                    <ListGroupItem><a style={{cursor: 'pointer'}}>List item3</a></ListGroupItem>
+                    <ListGroupItem><a style={{ cursor: 'pointer' }}>List item3</a></ListGroupItem>
                     <ListGroupItem>List item 4</ListGroupItem>
                 </ListGroup>
             </DocsTile>

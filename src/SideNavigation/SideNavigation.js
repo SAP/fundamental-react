@@ -63,7 +63,7 @@ export class SideNavList extends Component {
         this.setState({ selectedItem: id });
     };
 
-    getLinkClasses = ({id, hasChild}) => {
+    getLinkClasses = ({ id, hasChild }) => {
         return classnames(
             'fd-side-nav__link',
             {
