@@ -675,7 +675,7 @@ describe('<Time />', () => {
         test('should allow props to be spread to the Time component\'s hours TimeItem component\'s up button element', () => {
             const element = mount(
                 <Time
-                    hoursUpButtonProps={{'data-sample': 'Sample'}}
+                    hoursUpButtonProps={{ 'data-sample': 'Sample' }}
                     showHour
                     showMinute={false}
                     showSecond={false} />
@@ -689,7 +689,7 @@ describe('<Time />', () => {
         test('should allow props to be spread to the Time component\'s hours TimeItem component\'s down button element', () => {
             const element = mount(
                 <Time
-                    hoursDownButtonProps={{'data-sample': 'Sample'}}
+                    hoursDownButtonProps={{ 'data-sample': 'Sample' }}
                     showHour
                     showMinute={false}
                     showSecond={false} />
@@ -703,7 +703,7 @@ describe('<Time />', () => {
         test('should allow props to be spread to the Time component\'s hours TimeItem component\'s input element', () => {
             const element = mount(
                 <Time
-                    hoursInputProps={{'data-sample': 'Sample'}}
+                    hoursInputProps={{ 'data-sample': 'Sample' }}
                     showHour
                     showMinute={false}
                     showSecond={false} />
@@ -717,7 +717,7 @@ describe('<Time />', () => {
         test('should allow props to be spread to the Time component\'s minutes TimeItem component\'s up button element', () => {
             const element = mount(
                 <Time
-                    minutesUpButtonProps={{'data-sample': 'Sample'}}
+                    minutesUpButtonProps={{ 'data-sample': 'Sample' }}
                     showHour={false}
                     showMinute
                     showSecond={false} />
@@ -731,7 +731,7 @@ describe('<Time />', () => {
         test('should allow props to be spread to the Time component\'s minutes TimeItem component\'s down button element', () => {
             const element = mount(
                 <Time
-                    minutesDownButtonProps={{'data-sample': 'Sample'}}
+                    minutesDownButtonProps={{ 'data-sample': 'Sample' }}
                     showHour={false}
                     showMinute
                     showSecond={false} />
@@ -745,7 +745,7 @@ describe('<Time />', () => {
         test('should allow props to be spread to the Time component\'s minutes TimeItem component\'s input element', () => {
             const element = mount(
                 <Time
-                    minutesInputProps={{'data-sample': 'Sample'}}
+                    minutesInputProps={{ 'data-sample': 'Sample' }}
                     showHour={false}
                     showMinute
                     showSecond={false} />
@@ -759,7 +759,7 @@ describe('<Time />', () => {
         test('should allow props to be spread to the Time component\'s seconds TimeItem component\'s up button element', () => {
             const element = mount(
                 <Time
-                    secondsUpButtonProps={{'data-sample': 'Sample'}}
+                    secondsUpButtonProps={{ 'data-sample': 'Sample' }}
                     showHour={false}
                     showMinute={false}
                     showSecond />
@@ -773,7 +773,7 @@ describe('<Time />', () => {
         test('should allow props to be spread to the Time component\'s seconds TimeItem component\'s down button element', () => {
             const element = mount(
                 <Time
-                    secondsDownButtonProps={{'data-sample': 'Sample'}}
+                    secondsDownButtonProps={{ 'data-sample': 'Sample' }}
                     showHour={false}
                     showMinute={false}
                     showSecond />
@@ -787,7 +787,7 @@ describe('<Time />', () => {
         test('should allow props to be spread to the Time component\'s seconds TimeItem component\'s input element', () => {
             const element = mount(
                 <Time
-                    secondsInputProps={{'data-sample': 'Sample'}}
+                    secondsInputProps={{ 'data-sample': 'Sample' }}
                     showHour={false}
                     showMinute={false}
                     showSecond />
@@ -802,7 +802,7 @@ describe('<Time />', () => {
             const element = mount(
                 <Time
                     format12Hours
-                    meridiemUpButtonProps={{'data-sample': 'Sample'}}
+                    meridiemUpButtonProps={{ 'data-sample': 'Sample' }}
                     showHour={false}
                     showMinute={false}
                     showSecond={false} />
@@ -817,7 +817,7 @@ describe('<Time />', () => {
             const element = mount(
                 <Time
                     format12Hours
-                    meridiemDownButtonProps={{'data-sample': 'Sample'}}
+                    meridiemDownButtonProps={{ 'data-sample': 'Sample' }}
                     showHour={false}
                     showMinute={false}
                     showSecond={false} />
@@ -832,7 +832,7 @@ describe('<Time />', () => {
             const element = mount(
                 <Time
                     format12Hours
-                    meridiemInputProps={{'data-sample': 'Sample'}}
+                    meridiemInputProps={{ 'data-sample': 'Sample' }}
                     showHour={false}
                     showMinute={false}
                     showSecond={false} />

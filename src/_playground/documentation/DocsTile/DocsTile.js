@@ -21,7 +21,7 @@ export class DocsTile extends Component {
     };
 
     render() {
-        const {centered, children} = this.props;
+        const { centered, children } = this.props;
 
         const outerDivClasses = classnames(
             'frDocs-Content__tile',
@@ -41,7 +41,7 @@ export class DocsTile extends Component {
             <div className={outerDivClasses}>
                 <Toggle
                     className='frDocs-tile__background-toggle'
-                    inputProps={{'aria-label': 'Toggle background color'}}
+                    inputProps={{ 'aria-label': 'Toggle background color' }}
                     onChange={this.handleToggle}
                     size='xs'>Toggle background</Toggle>
                 <div className={innerDivClasses}>
@@ -92,7 +92,7 @@ export class DocsText extends Component {
     }
 
     render() {
-        const {children} = this.props;
+        const { children } = this.props;
 
         return (
             <React.Fragment>

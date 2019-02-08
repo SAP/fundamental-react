@@ -2,6 +2,86 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.3.2"></a>
+## [0.3.2](https://github.com/SAP/fundamental-react/compare/v0.3.2-rc.21...v0.3.2) (2019-02-08)
+
+
+
+<a name="0.3.2-rc.21"></a>
+## [0.3.2-rc.21](https://github.com/SAP/fundamental-react/compare/v0.3.2-rc.20...v0.3.2-rc.21) (2019-02-08)
+
+
+
+<a name="0.3.2-rc.20"></a>
+## [0.3.2-rc.20](https://github.com/SAP/fundamental-react/compare/v0.3.2-rc.19...v0.3.2-rc.20) (2019-02-08)
+
+
+
+<a name="0.3.2-rc.19"></a>
+## [0.3.2-rc.19](https://github.com/SAP/fundamental-react/compare/v0.3.2-rc.18...v0.3.2-rc.19) (2019-02-08)
+
+
+
+<a name="0.3.2-rc.18"></a>
+## [0.3.2-rc.18](https://github.com/SAP/fundamental-react/compare/v0.3.2-rc.17...v0.3.2-rc.18) (2019-02-08)
+
+
+
+<a name="0.3.2-rc.17"></a>
+## [0.3.2-rc.17](https://github.com/SAP/fundamental-react/compare/v0.3.2-rc.16...v0.3.2-rc.17) (2019-02-08)
+
+
+
+<a name="0.3.2-rc.16"></a>
+## [0.3.2-rc.16](https://github.com/SAP/fundamental-react/compare/v0.3.2-rc.15...v0.3.2-rc.16) (2019-02-07)
+
+
+### Bug Fixes
+
+* update currentYear on date selection ([#363](https://github.com/SAP/fundamental-react/issues/363)) ([4bb7ca9](https://github.com/SAP/fundamental-react/commit/4bb7ca9))
+
+
+
+<a name="0.3.2-rc.15"></a>
+## [0.3.2-rc.15](https://github.com/SAP/fundamental-react/compare/v0.3.2-rc.14...v0.3.2-rc.15) (2019-02-06)
+
+
+### Bug Fixes
+
+* hide Month/Year selector after selection ([#373](https://github.com/SAP/fundamental-react/issues/373)) ([0fdf371](https://github.com/SAP/fundamental-react/commit/0fdf371))
+
+
+
+<a name="0.3.2-rc.14"></a>
+## [0.3.2-rc.14](https://github.com/SAP/fundamental-react/compare/v0.3.2-rc.13...v0.3.2-rc.14) (2019-02-06)
+
+
+
+<a name="0.3.2-rc.13"></a>
+## [0.3.2-rc.13](https://github.com/SAP/fundamental-react/compare/v0.3.2-rc.12...v0.3.2-rc.13) (2019-02-06)
+
+
+
+<a name="0.3.2-rc.12"></a>
+## [0.3.2-rc.12](https://github.com/SAP/fundamental-react/compare/v0.3.2-rc.11...v0.3.2-rc.12) (2019-02-06)
+
+
+
+<a name="0.3.2-rc.11"></a>
+## [0.3.2-rc.11](https://github.com/SAP/fundamental-react/compare/v0.3.2-rc.10...v0.3.2-rc.11) (2019-02-06)
+
+
+
+<a name="0.3.2-rc.10"></a>
+## [0.3.2-rc.10](https://github.com/SAP/fundamental-react/compare/v0.3.2-rc.9...v0.3.2-rc.10) (2019-02-06)
+
+
+### Bug Fixes
+
+* Added FocusTrap to Modal component ([#349](https://github.com/SAP/fundamental-react/issues/349)) ([076c3e0](https://github.com/SAP/fundamental-react/commit/076c3e0))
+
+
+
 <a name="0.3.2-rc.9"></a>
 ## [0.3.2-rc.9](https://github.com/SAP/fundamental-react/compare/v0.3.2-rc.8...v0.3.2-rc.9) (2019-02-06)
 

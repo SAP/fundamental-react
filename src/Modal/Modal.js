@@ -1,4 +1,5 @@
 import classnames from 'classnames';
+import FocusTrap from 'focus-trap-react';
 import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
 import React, { Component } from 'react';
@@ -43,43 +44,53 @@ export class Modal extends Component {
         }
 
         return ReactDOM.createPortal(
-            <div
-                {...rest}
-                className={modalClasses}>
-                <div className='modal-demo-bg'>
-                    <div className='fd-modal'>
+            <FocusTrap
+                focusTrapOptions={{
+                    initialFocus: 'div.modal-demo-bg > span'
+                }}>
+                <div
+                    {...rest}
+                    className={modalClasses}>
+                    <div className='modal-demo-bg'>
+                        <span tabIndex='-1' />
                         <div
-                            {...contentProps}
-                            className='fd-modal__content'
-                            role='document'>
-                            <div {...headerProps} className='fd-modal__header'>
-                                <h1 {...titleProps} className='fd-modal__title'>
-                                    {title}
-                                </h1>
-                                <button
-                                    {...closeProps}
-                                    aria-label='close'
-                                    className='fd-button--light fd-modal__close'
-                                    onClick={this.handleCloseClick} />
+                            aria-label={title}
+                            aria-modal='true'
+                            className='fd-modal'
+                            role='dialog'>
+                            <div
+                                {...contentProps}
+                                className='fd-modal__content'
+                                role='document'>
+                                <div {...headerProps} className='fd-modal__header'>
+                                    <h1 {...titleProps} className='fd-modal__title'>
+                                        {title}
+                                    </h1>
+                                    <button
+                                        {...closeProps}
+                                        aria-label='close'
+                                        className='fd-button--light fd-modal__close'
+                                        onClick={this.handleCloseClick} />
+                                </div>
+                                <div {...bodyProps} className='fd-modal__body'>
+                                    {children}
+                                </div>
+                                {actions ? (
+                                    <footer
+                                        {...footerProps}
+                                        className='fd-modal__footer'>
+                                        <div className='fd-modal__actions'>
+                                            {actions}
+                                        </div>
+                                    </footer>
+                                ) : (
+                                    ''
+                                )}
                             </div>
-                            <div {...bodyProps} className='fd-modal__body'>
-                                {children}
-                            </div>
-                            {actions ? (
-                                <footer
-                                    {...footerProps}
-                                    className='fd-modal__footer'>
-                                    <div className='fd-modal__actions'>
-                                        {actions}
-                                    </div>
-                                </footer>
-                            ) : (
-                                ''
-                            )}
                         </div>
                     </div>
                 </div>
-            </div>,
+            </FocusTrap >,
             this.bodyElm
         );
     }

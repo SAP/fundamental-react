@@ -69,8 +69,7 @@ export const ImageComponent = () => {
                         'enum': ['', 'circle']
                     }
                 ]}>
-                <Image photo='https://placeimg.com/400/400/nature' size='s'
-                    type='' />
+                <Image photo='https://placeimg.com/400/400/nature' size='s' />
             </Playground>
         </div>
     );

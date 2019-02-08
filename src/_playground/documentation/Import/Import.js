@@ -8,7 +8,7 @@ export const Import = ({ sourceModule }) => {
 
     return (
         <SyntaxHighlighter
-            customStyle={{padding: 0}}
+            customStyle={{ padding: 0 }}
             language='javascript'
             style={googlecode}>
             {`import { ${Object.keys(sourceModule).sort().join(', ')} } from '${packageJson.name}';`}

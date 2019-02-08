@@ -1,7 +1,7 @@
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
-import {TOGGLE_SIZES} from '../utils/constants';
+import { TOGGLE_SIZES } from '../utils/constants';
 
 export class Toggle extends React.Component {
     constructor(props) {

@@ -1,5 +1,5 @@
 import classnames from 'classnames';
-import {POPOVER_ALIGNMENTS} from '../utils/constants';
+import { POPOVER_ALIGNMENTS } from '../utils/constants';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 
@@ -74,9 +74,6 @@ export class Popover extends Component {
 
         const popoverClasses = classnames(
             'fd-popover',
-            {
-                [`fd-popover--${alignment}`]: !!alignment
-            },
             className
         );
 

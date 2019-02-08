@@ -212,7 +212,7 @@ describe('<MultiInput />', () => {
         });
 
         test('should allow props to be spread to the MultiInput component\'s input element', () => {
-            const element = mount(<MultiInput data={data} inputProps={{'data-sample': 'Sample'}} />);
+            const element = mount(<MultiInput data={data} inputProps={{ 'data-sample': 'Sample' }} />);
 
             expect(
                 element.find('input').at(0).getDOMNode().attributes['data-sample'].value
@@ -220,7 +220,7 @@ describe('<MultiInput />', () => {
         });
 
         test('should allow props to be spread to the MultiInput component\'s button element', () => {
-            const element = mount(<MultiInput buttonProps={{'data-sample': 'Sample'}} data={data} />);
+            const element = mount(<MultiInput buttonProps={{ 'data-sample': 'Sample' }} data={data} />);
 
             expect(
                 element.find('button').getDOMNode().attributes['data-sample'].value
@@ -228,7 +228,7 @@ describe('<MultiInput />', () => {
         });
 
         test('should allow props to be spread to the MultiInput component\'s ul element', () => {
-            const element = mount(<MultiInput data={data} listProps={{'data-sample': 'Sample'}} />);
+            const element = mount(<MultiInput data={data} listProps={{ 'data-sample': 'Sample' }} />);
 
             expect(
                 element.find('ul').getDOMNode().attributes['data-sample'].value
@@ -239,7 +239,7 @@ describe('<MultiInput />', () => {
             const element = mount(<MultiInput
                 data={data}
                 onTagsUpdate={mockOnTagsUpdate}
-                tagProps={{'data-sample': 'Sample'}} />);
+                tagProps={{ 'data-sample': 'Sample' }} />);
 
             element
                 .find('li:first-child>label>input.fd-checkbox[type="checkbox"]')

@@ -359,7 +359,7 @@ describe('<SideNavigation />', () => {
         });
 
         test('should allow props to be spread to the SideNavList\'s h1 element', () => {
-            const element = mount(<SideNavList title='test' titleProps={{'data-sample': 'Sample'}} />);
+            const element = mount(<SideNavList title='test' titleProps={{ 'data-sample': 'Sample' }} />);
 
             expect(
                 element.find('h1').getDOMNode().attributes['data-sample'].value

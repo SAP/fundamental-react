@@ -34,8 +34,7 @@ export const STATUS_TYPES = [
 
 export const BUTTON_OPTIONS = [
     'emphasized',
-    'light',
-    'shell'
+    'light'
 ];
 export const BUTTON_TYPES = [
     'standard',
