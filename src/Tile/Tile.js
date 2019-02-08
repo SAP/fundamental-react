@@ -35,6 +35,7 @@ export const Tile = props => {
         </div>
     );
 };
+Tile.displayName = 'Tile';
 
 Tile.propTypes = {
     backgroundColor: PropTypes.number,
@@ -67,6 +68,7 @@ export const TileContent = props => {
         </div>
     );
 };
+TileContent.displayName = 'TileContent';
 
 TileContent.propTypes = {
     title: PropTypes.string.isRequired,
@@ -84,6 +86,7 @@ export const TileMedia = props => {
 
     return <div {...rest} className={tileMediaClasses}>{children}</div>;
 };
+TileMedia.displayName = 'TileMedia';
 
 TileMedia.propTypes = {
     children: PropTypes.node,
@@ -100,6 +103,7 @@ export const TileActions = props => {
 
     return <div {...rest} className={tileActionsClasses}>{children}</div>;
 };
+TileActions.displayName = 'TileActions';
 
 TileActions.propTypes = {
     children: PropTypes.node,
@@ -125,6 +129,7 @@ export const ProductTile = props => {
         </div>
     );
 };
+ProductTile.displayName = 'ProductTile';
 
 ProductTile.propTypes = {
     children: PropTypes.node,
@@ -147,6 +152,7 @@ export const ProductTileContent = props => {
         </div>
     );
 };
+ProductTileContent.displayName = 'ProductTileContent';
 
 ProductTileContent.propTypes = {
     className: PropTypes.string,
@@ -169,6 +175,7 @@ export const ProductTileMedia = props => {
             style={{ backgroundImage: 'url(' + image + ')' }} />
     );
 };
+ProductTileMedia.displayName = 'ProductTileMedia';
 
 ProductTileMedia.propTypes = {
     image: PropTypes.string.isRequired,
@@ -196,6 +203,7 @@ export const TileGrid = props => {
         </div>
     );
 };
+TileGrid.displayName = 'TileGrid';
 
 TileGrid.propTypes = {
     children: PropTypes.node,

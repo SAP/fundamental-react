@@ -33,6 +33,7 @@ export const Identifier = ({ glyph, size, modifier, color, label, backgroundImag
         </span>
     );
 };
+Identifier.displayName = 'Identifier';
 
 Identifier.propTypes = {
     backgroundImageUrl: PropTypes.string,

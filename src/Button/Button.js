@@ -39,6 +39,7 @@ export const Button = ({
         {children}
     </button>);
 };
+Button.displayName = 'Button';
 
 Button.propTypes = {
     children: PropTypes.node,
@@ -74,6 +75,7 @@ export const ButtonGroup = ({ children, ...props }) => {
         </div>
     );
 };
+ButtonGroup.displayName = 'ButtonGroup';
 
 ButtonGroup.propTypes = {
     children: PropTypes.node

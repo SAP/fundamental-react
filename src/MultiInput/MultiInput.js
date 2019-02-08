@@ -186,6 +186,7 @@ export class MultiInput extends Component {
         );
     }
 }
+MultiInput.displayName = 'MultiInput';
 
 MultiInput.propTypes = {
     data: PropTypes.array.isRequired,
