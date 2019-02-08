@@ -125,7 +125,7 @@ exports[`<Popover /> create Popover 2`] = `
 
 exports[`<Popover /> create Popover 3`] = `
 <div
-  className="fd-popover fd-popover--right"
+  className="fd-popover"
 >
   <div
     aria-expanded={false}
