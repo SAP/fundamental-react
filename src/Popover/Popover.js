@@ -74,9 +74,6 @@ export class Popover extends Component {
 
         const popoverClasses = classnames(
             'fd-popover',
-            {
-                [`fd-popover--${alignment}`]: !!alignment
-            },
             className
         );
 
