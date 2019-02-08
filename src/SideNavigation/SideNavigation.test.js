@@ -285,8 +285,8 @@ describe('<SideNavigation />', () => {
 
     test('handle side nav list link click', () => {
         const wrapper = mount(sideNavMultiLevel);
-        const Item2 = wrapper.find({'id': 'item_2'});
-        const Item4 = wrapper.find({'id': 'item_4'});
+        const Item2 = wrapper.find({ 'id': 'item_2' });
+        const Item4 = wrapper.find({ 'id': 'item_4' });
 
         expect(Item2.state('expanded')).toBeFalsy();
         expect(Item4.state('expanded')).toBeFalsy();

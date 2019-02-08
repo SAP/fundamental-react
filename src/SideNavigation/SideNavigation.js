@@ -57,7 +57,7 @@ SideNav.propDescriptions = {
     selectedId: 'The id of the selected `SideNavListItem`.'
 };
 
-export const SideNavList = ({children, className, hasParent, onItemSelect, open, selectedId, title, titleProps, ...rest}) => {
+export const SideNavList = ({ children, className, hasParent, onItemSelect, open, selectedId, title, titleProps, ...rest }) => {
     const sideNavListClasses = classnames({
         'fd-side-nav__list': !hasParent,
         'fd-side-nav__sublist': hasParent
@@ -140,7 +140,7 @@ export class SideNavListItem extends React.Component {
     };
 
     render() {
-        const {children, glyph, id, isSubItem, name, onClick, onItemSelect, selected, selectedId, url, ...props} = this.props;
+        const { children, glyph, id, isSubItem, name, onClick, onItemSelect, selected, selectedId, url, ...props } = this.props;
         const getClasses = () => {
             return classnames(
                 {
