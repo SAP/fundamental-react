@@ -49,6 +49,7 @@ export const ComboboxInput = ({ placeholder, menu, compact, className, popoverPr
         </div>
     );
 };
+ComboboxInput.displayName = 'ComboboxInput';
 
 ComboboxInput.propTypes = {
     menu: PropTypes.object.isRequired,

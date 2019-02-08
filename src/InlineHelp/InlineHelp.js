@@ -22,6 +22,7 @@ export const InlineHelp = ({ text, placement, className, ...props }) => {
         </span>
     );
 };
+InlineHelp.displayName = 'InlineHelp';
 
 InlineHelp.propTypes = {
     placement: PropTypes.oneOf(INLINE_HELP_PLACEMENTS).isRequired,

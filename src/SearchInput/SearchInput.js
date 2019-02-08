@@ -264,6 +264,7 @@ export class SearchInput extends Component {
         );
     }
 }
+SearchInput.displayName = 'SearchInput';
 
 SearchInput.propTypes = {
     className: PropTypes.string,
@@ -280,7 +281,7 @@ SearchInput.propTypes = {
 };
 
 SearchInput.defaultProps = {
-    onEnter: () => {}
+    onEnter: () => { }
 };
 
 SearchInput.propDescriptions = {

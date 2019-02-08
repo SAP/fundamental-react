@@ -18,6 +18,7 @@ export const Token = (props) => {
         </span>
     );
 };
+Token.displayName = 'Token';
 
 Token.propTypes = {
     children: PropTypes.node,

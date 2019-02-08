@@ -19,6 +19,8 @@ export const SideNav = props => {
         </nav>
     );
 };
+SideNav.displayName = 'SideNav';
+
 SideNav.propTypes = {
     children: PropTypes.node,
     icons: PropTypes.bool
@@ -170,6 +172,8 @@ export class SideNavList extends Component {
         );
     }
 }
+SideNavList.displayName = 'SideNavList';
+
 SideNavList.propTypes = {
     items: PropTypes.array.isRequired,
     className: PropTypes.string
@@ -196,6 +200,7 @@ export const SideNavGroup = props => {
         </div>
     );
 };
+SideNavGroup.displayName = 'SideNavGroup';
 
 SideNavGroup.propTypes = {
     title: PropTypes.string.isRequired,

@@ -19,6 +19,7 @@ export const Icon = ({ glyph, size, clickHandler, className, ...props }) => {
             onClick={clickHandler} />
     );
 };
+Icon.displayName = 'Icon';
 
 Icon.propTypes = {
     glyph: PropTypes.string.isRequired,

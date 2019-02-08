@@ -60,6 +60,7 @@ export class Toggle extends React.Component {
         );
     }
 }
+Toggle.displayName = 'Toggle';
 
 Toggle.propTypes = {
     checked: PropTypes.bool,
@@ -73,7 +74,7 @@ Toggle.propTypes = {
 };
 
 Toggle.defaultProps = {
-    onChange: () => {}
+    onChange: () => { }
 };
 
 Toggle.propDescriptions = {
