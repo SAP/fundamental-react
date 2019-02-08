@@ -285,8 +285,11 @@ describe('<SideNavigation />', () => {
 
     test('handle side nav list link click', () => {
         const wrapper = mount(sideNavMultiLevel);
+        const Item2 = wrapper.find({'id': 'item_2'});
+        const Item4 = wrapper.find({'id': 'item_4'});
 
-        expect(wrapper.state('expandedIds')).toEqual([]);
+        expect(Item2.state('expanded')).toBeFalsy();
+        expect(Item4.state('expanded')).toBeFalsy();
         expect(wrapper.state('selectedId')).toBeFalsy();
 
         wrapper
@@ -294,7 +297,8 @@ describe('<SideNavigation />', () => {
             .at(1)
             .simulate('click');
 
-        expect(wrapper.state('expandedIds')).toEqual(['item_2']);
+        expect(Item2.state('expanded')).toBeTruthy();
+        expect(Item4.state('expanded')).toBeFalsy();
         expect(wrapper.state('selectedId')).toEqual('item_2');
 
         wrapper
@@ -302,7 +306,8 @@ describe('<SideNavigation />', () => {
             .at(3)
             .simulate('click');
 
-        expect(wrapper.state('expandedIds')).toEqual(['item_2', 'item_4']);
+        expect(Item2.state('expanded')).toBeTruthy();
+        expect(Item4.state('expanded')).toBeTruthy();
         expect(wrapper.state('selectedId')).toEqual('item_4');
     });
 

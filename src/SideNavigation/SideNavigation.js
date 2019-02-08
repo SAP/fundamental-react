@@ -7,21 +7,12 @@ export class SideNav extends Component {
         super(props);
 
         this.state = {
-            selectedId: props.selectedId,
-            expandedIds: []
+            selectedId: props.selectedId
         };
     }
 
-    handleSelect = (e, id, hasChild) => {
-        let expandedIds = this.state.expandedIds;
-        if (hasChild && expandedIds.includes(id)) {
-            expandedIds = expandedIds.filter(eId => eId !== id);
-        } else if (hasChild) {
-            expandedIds.push(id);
-        }
-
+    handleSelect = (e, id) => {
         this.setState({
-            expandedIds: expandedIds,
             selectedId: id
         });
     }
@@ -42,7 +33,6 @@ export class SideNav extends Component {
                 {React.Children.map(children, (child) => {
                     if (React.isValidElement(child)) {
                         return React.cloneElement(child, {
-                            expandedIds: this.state.expandedIds,
                             onItemSelect: this.handleSelect,
                             selectedId: this.state.selectedId
                         });
@@ -67,7 +57,7 @@ SideNav.propDescriptions = {
     selectedId: 'The id of the selected `SideNavListItem`.'
 };
 
-export const SideNavList = ({children, className, expandedIds, hasParent, onItemSelect, open, selectedId, title, titleProps, ...rest}) => {
+export const SideNavList = ({children, className, hasParent, onItemSelect, open, selectedId, title, titleProps, ...rest}) => {
     const sideNavListClasses = classnames({
         'fd-side-nav__list': !hasParent,
         'fd-side-nav__sublist': hasParent
@@ -89,7 +79,6 @@ export const SideNavList = ({children, className, expandedIds, hasParent, onItem
             {React.Children.map(children, (child) => {
                 if (React.isValidElement(child)) {
                     return React.cloneElement(child, {
-                        expandedIds: expandedIds,
                         isSubItem: hasParent,
                         onItemSelect: onItemSelect,
                         selected: selectedId === child.props.id,
@@ -120,7 +109,6 @@ export const SideNavList = ({children, className, expandedIds, hasParent, onItem
 SideNavList.propTypes = {
     children: PropTypes.element,
     className: PropTypes.string,
-    expandedIds: PropTypes.array,
     hasParent: PropTypes.bool,
     open: PropTypes.bool,
     selectedId: PropTypes.string,
@@ -130,88 +118,114 @@ SideNavList.propTypes = {
 };
 
 SideNavList.propDescriptions = {
-    expandedIds: 'An array of strings for expanded `SideNavListItems`\'s.',
     hasParent: 'Automatically set to **true** when item has a parent `SideNavListItem`',
     open: 'Set to **true** to mark `SideNavSubList` as open.',
     selectedId: 'The id of the selected `SideNavListItem`.',
     onItemSelect: 'Callback function when user selects an item .'
 };
 
-export const SideNavListItem = ({children, expandedIds = [], glyph, id, isSubItem, name, onClick, onItemSelect, selected, selectedId, url, ...props}) => {
-    const getClasses = () => {
-        return classnames(
-            {
-                'fd-side-nav__link': !isSubItem,
-                'fd-side-nav__sublink': isSubItem,
-                'is-selected': selected,
-                'has-child': hasChild,
-                'is-expanded': expandedIds.includes(id)
-            }
-        );
+export class SideNavListItem extends React.Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            expanded: this.props.expanded ? this.props.expanded : false
+        };
+    }
+
+    handleExpand = () => {
+        this.setState({
+            expanded: !this.state.expanded
+        });
     };
 
-    const renderLink = () => {
-        return (
-            <a
-                className={getClasses()}
-                href={url}
-                onClick={(e) => {
-                    onClick(e);
-                    onItemSelect(e, id, hasChild);
-                }}>
-                {glyph ? (
-                    <span
-                        className={`fd-side-nav__icon sap-icon--${glyph} sap-icon--l`}
-                        role='presentation' />
-                ) : null}
-                {name}
-            </a>
-        );
-    };
-
-    let hasChild = false;
-    React.Children.forEach(children, (child) => {
-        if (React.isValidElement(child) && child.type === SideNavList) {
-            hasChild = true;
-        }
-    });
-
-    return (
-        <li {...props}
-            className='fd-side-nav__item'
-            key={id}>
-            {url && renderLink()}
-            {React.Children.map(children, (child) => {
-                if (React.isValidElement(child) && child.type !== SideNavList) {
-                    return React.cloneElement(child, {
-                        children: (<React.Fragment>
-                            {glyph ? (
-                                <span
-                                    className={`fd-side-nav__icon sap-icon--${glyph} sap-icon--l`}
-                                    role='presentation' />
-                            ) : null}
-                            {child.props.children}
-                        </React.Fragment>),
-                        className: getClasses()
-                    });
-                } else if (React.isValidElement(child) && child.type === SideNavList) {
-                    return React.cloneElement(child, {
-                        hasParent: true,
-                        onItemSelect: onItemSelect,
-                        open: expandedIds.includes(id),
-                        selectedId: selectedId
-                    });
-                } else {
-                    return child;
+    render() {
+        const {children, glyph, id, isSubItem, name, onClick, onItemSelect, selected, selectedId, url, ...props} = this.props;
+        const getClasses = () => {
+            return classnames(
+                {
+                    'fd-side-nav__link': !isSubItem,
+                    'fd-side-nav__sublink': isSubItem,
+                    'is-selected': selected,
+                    'has-child': hasChild,
+                    'is-expanded': this.state.expanded
                 }
-            })}
-        </li>
-    );
-};
+            );
+        };
+
+        const renderLink = () => {
+            return (
+                <a
+                    className={getClasses()}
+                    href={url}
+                    onClick={(e) => {
+                        onClick(e);
+                        onItemSelect(e, id, hasChild);
+                        if (hasChild) {
+                            this.handleExpand();
+                        }
+                    }}>
+                    {glyph ? (
+                        <span
+                            className={`fd-side-nav__icon sap-icon--${glyph} sap-icon--l`}
+                            role='presentation' />
+                    ) : null}
+                    {name}
+                </a>
+            );
+        };
+
+        let hasChild = false;
+        React.Children.forEach(children, (child) => {
+            if (React.isValidElement(child) && child.type === SideNavList) {
+                hasChild = true;
+            }
+        });
+
+        return (
+            <li {...props}
+                className='fd-side-nav__item'
+                key={id}>
+                {url && renderLink()}
+                {React.Children.map(children, (child) => {
+                    if (React.isValidElement(child) && child.type !== SideNavList) {
+                        return React.cloneElement(child, {
+                            children: (<React.Fragment>
+                                {glyph ? (
+                                    <span
+                                        className={`fd-side-nav__icon sap-icon--${glyph} sap-icon--l`}
+                                        role='presentation' />
+                                ) : null}
+                                {child.props.children}
+                            </React.Fragment>),
+                            className: getClasses(),
+                            onClick: (e) => {
+                                onClick(e);
+                                onItemSelect(e, id, hasChild);
+                                if (hasChild) {
+                                    this.handleExpand();
+                                }
+                            }
+                        });
+                    } else if (React.isValidElement(child) && child.type === SideNavList) {
+                        return React.cloneElement(child, {
+                            hasParent: true,
+                            onItemSelect: onItemSelect,
+                            open: this.state.expanded,
+                            selectedId: selectedId
+                        });
+                    } else {
+                        return child;
+                    }
+                })}
+            </li>
+        );
+    }
+}
 
 SideNavListItem.propTypes = {
     children: PropTypes.node,
-    expandedIds: PropTypes.array,
+    expanded: PropTypes.bool,
     glyph: PropTypes.string,
     id: PropTypes.string,
     isSubItem: PropTypes.bool,
@@ -224,7 +238,6 @@ SideNavListItem.propTypes = {
 };
 
 SideNavListItem.propDescriptions = {
-    expandedIds: 'An array of strings for expanded `SideNavListItems`\'s.',
     isSubItem: 'Set to **true** to display as a subitem.',
     name: 'Link text to be set in conjunction with the `url` prop.',
     onItemSelect: 'Callback function when user selects an item .',
