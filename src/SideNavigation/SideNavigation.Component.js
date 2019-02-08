@@ -1,7 +1,7 @@
 import React from 'react';
 import { Description, DocsText, DocsTile, Header, Import, Properties, Separator } from '../_playground';
 import { Link, MemoryRouter } from 'react-router-dom';
-import { SideNav, SideNavList, SideNavListItem, SideNavSubList } from '../';
+import { SideNav, SideNavList, SideNavListItem } from '../';
 
 export const SideNavigationComponent = () => {
     const sideNavOneLevelCode = `<SideNav
@@ -107,7 +107,7 @@ export const SideNavigationComponent = () => {
             id='item-2'
             name='Link Item 2'
             url='#'>
-            <SideNavSubList>
+            <SideNavList>
                 <SideNavListItem
                     id='subitem_21'
                     name='Item 1'
@@ -124,7 +124,7 @@ export const SideNavigationComponent = () => {
                     id='subitem_24'
                     name='Item 4'
                     url='#' />
-            </SideNavSubList>
+            </SideNavList>
         </SideNavListItem>
         <SideNavListItem
             id='item_3'
@@ -134,7 +134,7 @@ export const SideNavigationComponent = () => {
             id='item_4'
             name='Link Item 4'
             url='#'>
-            <SideNavSubList>
+            <SideNavList>
                 <SideNavListItem
                     id='subitem_41'
                     name='Item 1'
@@ -151,7 +151,7 @@ export const SideNavigationComponent = () => {
                     id='subitem_44'
                     name='Item 4'
                     url='#' />
-            </SideNavSubList>
+            </SideNavList>
         </SideNavListItem>
         <SideNavListItem
             id='item_5'
@@ -363,7 +363,7 @@ export const SideNavigationComponent = () => {
                             id='item-2'
                             name='Link Item 2'
                             url='#'>
-                            <SideNavSubList>
+                            <SideNavList>
                                 <SideNavListItem
                                     id='subitem_21'
                                     name='Item 1'
@@ -380,7 +380,7 @@ export const SideNavigationComponent = () => {
                                     id='subitem_24'
                                     name='Item 4'
                                     url='#' />
-                            </SideNavSubList>
+                            </SideNavList>
                         </SideNavListItem>
                         <SideNavListItem
                             id='item_3'
@@ -390,7 +390,7 @@ export const SideNavigationComponent = () => {
                             id='item_4'
                             name='Link Item 4'
                             url='#'>
-                            <SideNavSubList>
+                            <SideNavList>
                                 <SideNavListItem
                                     id='subitem_41'
                                     name='Item 1'
@@ -407,7 +407,7 @@ export const SideNavigationComponent = () => {
                                     id='subitem_44'
                                     name='Item 4'
                                     url='#' />
-                            </SideNavSubList>
+                            </SideNavList>
                         </SideNavListItem>
                         <SideNavListItem
                             id='item_5'

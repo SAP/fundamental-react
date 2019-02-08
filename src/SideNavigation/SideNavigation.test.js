@@ -2,7 +2,7 @@ import { mount } from 'enzyme';
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { BrowserRouter, Link } from 'react-router-dom';
-import { SideNav, SideNavList, SideNavListItem, SideNavSubList } from '../';
+import { SideNav, SideNavList, SideNavListItem } from '../';
 
 describe('<SideNavigation />', () => {
     const subSideNavList = (
@@ -15,7 +15,7 @@ describe('<SideNavigation />', () => {
                 id='item_2'
                 name='Link Item 2'
                 url='#'>
-                <SideNavSubList>
+                <SideNavList>
                     <SideNavListItem
                         id='subitem_21'
                         name='Item 1'
@@ -36,7 +36,7 @@ describe('<SideNavigation />', () => {
                         id='subitem_25'
                         name='Item 5'
                         url='#' />
-                </SideNavSubList>
+                </SideNavList>
             </SideNavListItem>
             <SideNavListItem
                 id='item_3'
@@ -46,7 +46,7 @@ describe('<SideNavigation />', () => {
                 id='item_4'
                 name='Link Item 4'
                 url='#'>
-                <SideNavSubList>
+                <SideNavList>
                     <SideNavListItem
                         id='subitem_41'
                         name='Item 1'
@@ -63,7 +63,7 @@ describe('<SideNavigation />', () => {
                         id='subitem_41'
                         name='Item 4'
                         url='#' />
-                </SideNavSubList>
+                </SideNavList>
             </SideNavListItem>
             <SideNavListItem
                 id='item_5'

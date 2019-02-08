@@ -56,7 +56,7 @@ export class SideNav extends Component {
 }
 
 SideNav.propTypes = {
-    children: PropTypes.node,
+    children: PropTypes.element,
     className: PropTypes.string,
     icons: PropTypes.bool,
     selectedId: PropTypes.string
@@ -67,10 +67,12 @@ SideNav.propDescriptions = {
     selectedId: 'The id of the selected `SideNavListItem`.'
 };
 
-export const SideNavList = ({children, className, expandedIds, onItemSelect, selectedId, title, titleProps, ...rest}) => {
-    const sideNavListClasses = classnames(
-        'fd-side-nav__list',
-        className
+export const SideNavList = ({children, className, expandedIds, hasParent, onItemSelect, open, selectedId, title, titleProps, ...rest}) => {
+    const sideNavListClasses = classnames({
+        'fd-side-nav__list': !hasParent,
+        'fd-side-nav__sublist': hasParent
+    },
+    className
     );
 
     const sideNavHeaderlasses = classnames(
@@ -81,11 +83,14 @@ export const SideNavList = ({children, className, expandedIds, onItemSelect, sel
     const sideNavList = (
         <ul
             {...rest}
+            aria-expanded={hasParent && open}
+            aria-hidden={hasParent && !open}
             className={sideNavListClasses}>
             {React.Children.map(children, (child) => {
                 if (React.isValidElement(child)) {
                     return React.cloneElement(child, {
                         expandedIds: expandedIds,
+                        isSubItem: hasParent,
                         onItemSelect: onItemSelect,
                         selected: selectedId === child.props.id,
                         selectedId: selectedId
@@ -97,7 +102,7 @@ export const SideNavList = ({children, className, expandedIds, onItemSelect, sel
         </ul>
     );
 
-    if (title) {
+    if (title && !hasParent) {
         return (
             <div
                 className={sideNavHeaderlasses}>
@@ -113,9 +118,11 @@ export const SideNavList = ({children, className, expandedIds, onItemSelect, sel
 };
 
 SideNavList.propTypes = {
-    children: PropTypes.node,
+    children: PropTypes.element,
     className: PropTypes.string,
     expandedIds: PropTypes.array,
+    hasParent: PropTypes.bool,
+    open: PropTypes.bool,
     selectedId: PropTypes.string,
     title: PropTypes.string,
     titleProps: PropTypes.object,
@@ -124,6 +131,8 @@ SideNavList.propTypes = {
 
 SideNavList.propDescriptions = {
     expandedIds: 'An array of strings for expanded `SideNavListItems`\'s.',
+    hasParent: 'Automatically set to **true** when item has a parent `SideNavListItem`',
+    open: 'Set to **true** to mark `SideNavSubList` as open.',
     selectedId: 'The id of the selected `SideNavListItem`.',
     onItemSelect: 'Callback function when user selects an item .'
 };
@@ -162,7 +171,7 @@ export const SideNavListItem = ({children, expandedIds = [], glyph, id, isSubIte
 
     let hasChild = false;
     React.Children.forEach(children, (child) => {
-        if (React.isValidElement(child) && child.type === SideNavSubList) {
+        if (React.isValidElement(child) && child.type === SideNavList) {
             hasChild = true;
         }
     });
@@ -173,7 +182,7 @@ export const SideNavListItem = ({children, expandedIds = [], glyph, id, isSubIte
             key={id}>
             {url && renderLink()}
             {React.Children.map(children, (child) => {
-                if (React.isValidElement(child) && child.type !== SideNavSubList) {
+                if (React.isValidElement(child) && child.type !== SideNavList) {
                     return React.cloneElement(child, {
                         children: (<React.Fragment>
                             {glyph ? (
@@ -185,8 +194,9 @@ export const SideNavListItem = ({children, expandedIds = [], glyph, id, isSubIte
                         </React.Fragment>),
                         className: getClasses()
                     });
-                } else if (React.isValidElement(child) && child.type === SideNavSubList) {
+                } else if (React.isValidElement(child) && child.type === SideNavList) {
                     return React.cloneElement(child, {
+                        hasParent: true,
                         onItemSelect: onItemSelect,
                         open: expandedIds.includes(id),
                         selectedId: selectedId
@@ -225,39 +235,4 @@ SideNavListItem.propDescriptions = {
 
 SideNavListItem.defaultProps = {
     onClick: () => {}
-};
-
-export const SideNavSubList = ({children, id, onItemSelect, open, selectedId, ...props}) => {
-    return (
-        <ul
-            {...props}
-            aria-expanded={open}
-            aria-hidden={!open}
-            className='fd-side-nav__sublist'
-            key={id}>
-            {
-                React.Children.map(children, (child) => {
-                    return React.cloneElement(child, {
-                        isSubItem: true,
-                        onItemSelect: onItemSelect,
-                        selected: selectedId === child.props.id
-                    });
-                })
-            }
-        </ul>
-    );
-};
-
-SideNavSubList.propTypes = {
-    children: PropTypes.node,
-    id: PropTypes.string,
-    open: PropTypes.bool,
-    selectedId: PropTypes.string,
-    onItemSelect: PropTypes.func
-};
-
-SideNavSubList.propDescriptions = {
-    onItemSelect: 'Callback function when user selects an item .',
-    open: 'Set to **true** to mark `SideNavSubList` as open.',
-    selectedId: 'The id of the selected `SideNavListItem`.'
 };
