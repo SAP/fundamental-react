@@ -1,12 +1,13 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import {repository} from '../../../../package.json';
 
 export const Header = (props) => {
     const { children } = props;
 
     return (
         <React.Fragment>
-            <a className='frDocs-Content__githubLogo' href='https://github.com/SAP/fundamental-react'
+            <a className='frDocs-Content__githubLogo' href={repository.url}
                 target='_blank'>
                 <svg role='img' viewBox='0 0 24 24'
                     xmlns='http://www.w3.org/2000/svg'>
