@@ -1,7 +1,7 @@
 const { lstatSync, readdirSync, writeFileSync } = require('fs');
 const path = require('path');
 
-const libPath = path.join(__dirname, '../src');
+const srcPath = path.join(__dirname, '../src');
 
 const isComponentDirectory = (source) => {
     const ignoredDirectories = ['utils', 'playground', 'ContextualMenu'];
@@ -14,7 +14,7 @@ const isComponentFile = (source) => {
 };
 
 
-const componentDirs = readdirSync(libPath).map(name => path.join(libPath, name)).filter(isComponentDirectory).map(directory => {
+const componentDirs = readdirSync(srcPath).map(name => path.join(srcPath, name)).filter(isComponentDirectory).map(directory => {
     return {
         path: directory,
         fileName: readdirSync(directory).filter(isComponentFile)
