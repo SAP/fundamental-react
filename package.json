@@ -35,9 +35,11 @@
     "start:playground": "FUNDAMENTAL_REACT_PLAYGROUND=true npm start",
     "std-version": "standard-version -m \"chore(release): version %s build ${TRAVIS_BUILD_NUMBER} [ci skip]\"",
     "test:coverage": "jest --coverage",
+    "test:coverage:watch": "jest --coverage --watch",
     "test:coveralls": "jest --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
     "test:dev": "jest",
-    "test": "node scripts/test.js",
+    "test:watch": "jest --watch",
+    "test": "npm run test:watch",
     "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive"
   },
   "dependencies": {
