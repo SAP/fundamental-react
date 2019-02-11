@@ -1,238 +1,330 @@
-import { Dropdown } from '../Dropdown/Dropdown';
+import classnames from 'classnames';
 import PropTypes from 'prop-types';
+import shortid from 'shortid';
 import React, { Component } from 'react';
+
+export class TreeCell extends Component {
+    render() {
+        const {
+            children,
+            className,
+            ...rest
+        } = this.props;
+
+        const cellClassName = classnames(
+            'fd-tree__col',
+            className
+        );
+
+        return (
+            <div
+                {...rest}
+                className={cellClassName}>
+                {children}
+            </div>
+        );
+    }
+}
+
+TreeCell.propTypes = {
+    children: PropTypes.node,
+    className: PropTypes.string
+};
+
+export class TreeHeader extends Component {
+    render() {
+        const {
+            buttonProps,
+            children,
+            isExpanded,
+            onExpandAll,
+            ...rest
+        } = this.props;
+
+        return (
+            <div {...rest} className='fd-tree fd-tree--header'>
+                <div className='fd-tree__row fd-tree__row--header'>
+                    {
+                        React.Children.map(children, (child, index) => {
+                            const isFirstTreeCell = index === 0 && child.type && child.type.name === 'TreeCell';
+
+                            // Add control class to first TreeCell element
+                            const className = classnames({
+                                'fd-tree__col--control': isFirstTreeCell
+                            });
+
+                            // Add expand button to first TreeCell element
+                            const newChildren = isFirstTreeCell ? (
+                                <div>
+                                    <button
+                                        {...buttonProps}
+                                        aria-label='expand'
+                                        aria-pressed={isExpanded}
+                                        className='fd-tree__control'
+                                        onClick={onExpandAll} />
+                                    {child.props && child.props.children}
+                                </div>
+                            ) : child.props && child.props.children;
+
+                            return React.cloneElement(child, {
+                                children: newChildren,
+                                className
+                            });
+                        })
+                    }
+                </div>
+            </div>
+        );
+    }
+}
+
+TreeHeader.propTypes = {
+    buttonProps: PropTypes.object,
+    children: PropTypes.node,
+    isExpanded: PropTypes.bool,
+    onExpandAll: PropTypes.func
+};
+
+TreeHeader.propDescriptions = {
+    buttonProps: 'Additional props to be spread to the header expand/collapse `<button>` element.'
+};
+
+export class TreeRow extends Component {
+    constructor(props) {
+        super(props);
+
+        const {onExpandClick} = this.props;
+
+        // Generate unique id for row to manage expand/collapse state in parent
+        const id = shortid.generate();
+
+        this.state = {id};
+
+        // Initialize row in parent state
+        onExpandClick(id);
+    }
+
+    render() {
+        const {
+            children,
+            expandData,
+            level,
+            onExpandClick,
+            ...rest
+        } = this.props;
+        const {
+            id
+        } = this.state;
+
+        // Render child TreeLists with correct props
+        const childList = React.Children.map(children, (child) => {
+            const isTreeList = child.type && child.type.name === 'TreeList';
+
+            return isTreeList ?
+                React.cloneElement(child, {
+                    expandData,
+                    onExpandClick,
+                    isExpanded: !!expandData[id],
+                    // Increment child list level
+                    level: level + 1
+                }) :
+                null;
+        });
+
+        // Render child TreeCells
+        const cells = React.Children.map(children, (child, index) => {
+            const isTreeCell = child.type && child.type.name === 'TreeCell';
+            const isFirstTreeCell = index === 0 && isTreeCell;
+
+            // Add control class to first TreeCell element
+            const className = classnames({
+                'fd-tree__col--control': isFirstTreeCell
+            });
+
+            // Add expand button to first TableCell if parent list
+            const newChildren = isFirstTreeCell && childList[0] ? (
+                <div>
+                    <button
+                        aria-controls={id}
+                        aria-label='expand'
+                        aria-pressed={!!expandData[id]}
+                        className='fd-tree__control'
+                        onClick={() => onExpandClick(id)} />
+                    {child.props && child.props.children}
+                </div>
+            ) : child.props && child.props.children;
+
+            return isTreeCell ?
+                React.cloneElement(child, {className, children: newChildren}) :
+                null;
+        });
+
+        return (
+            <li
+                {...rest}
+                aria-expanded='true'
+                className='fd-tree__item'
+                id={id}
+                role='treeitem'>
+                <div className='fd-tree__row'>
+                    {cells}
+                </div>
+                {childList}
+            </li>
+        );
+    }
+}
+
+TreeRow.propTypes = {
+    children: PropTypes.node,
+    expandData: PropTypes.object,
+    level: PropTypes.number,
+    onExpandClick: PropTypes.func
+};
+
+TreeRow.defaultProps = {
+    level: 0,
+    onExpandClick: () => {}
+};
+
+export class TreeList extends Component {
+    render() {
+        const {
+            children,
+            expandData,
+            level,
+            isExpanded,
+            onExpandClick,
+            ...rest
+        } = this.props;
+
+        const className = classnames({
+            'fd-tree': level === 0,
+            'fd-tree__group': level > 0,
+            [`fd-tree__group--sublevel-${level}`]: level > 0,
+            'is-hidden': !isExpanded
+        });
+
+        return (
+            <ul
+                {...rest}
+                aria-hidden={!isExpanded}
+                className={className}
+                role={level === 0 ? 'tree' : 'group'}>
+                {
+                    React.Children.map(children, (child) => {
+                        return React.cloneElement(child, {
+                            expandData,
+                            level,
+                            onExpandClick
+                        });
+                    })
+                }
+            </ul>
+        );
+    }
+}
+
+TreeList.propTypes = {
+    children: PropTypes.node,
+    expandData: PropTypes.object,
+    isExpanded: PropTypes.bool,
+    level: PropTypes.number,
+    onExpandClick: PropTypes.func
+};
+
+TreeList.defaultProps = {
+    level: 0
+};
 
 export class Tree extends Component {
     constructor(props) {
         super(props);
+
         this.state = {
-            iStates: [],
-            expandAllClicked: false,
-            numberOfElements: 0
+            expandData: {},
+            isExpandAll: false
         };
     }
 
-    updateVisibility = selected => {
-        return () => {
-            let modifiedStates = this.state.iStates;
-            if (modifiedStates[selected]) {
-                modifiedStates[selected] = false;
-            } else {
-                modifiedStates[selected] = true;
-            }
+    // Callback for each TreeRow to toggle expand/collapse state
+    toggleExpand = (id) => {
+        this.setState((prevState) => {
+            const {
+                expandData
+            } = prevState;
 
-            this.setState({
-                iStates: modifiedStates
-            });
-        };
-    };
+            // If value doesn't exist, initialize it to false
+            const newValue = (id in expandData) ? !expandData[id] : false;
 
-    openAllList = (treeData, e, numberOfElements = 0) => {
-        let modifiedStates = this.state.iStates;
-
-        if (this.state.numberOfElements === 0) {
-            treeData.map(row => {
-                row.values.forEach(() => {
-                    ++numberOfElements;
-                });
-                if (row.hasChildren) {
-                    this.openAllList(row.children, numberOfElements);
+            return {
+                expandData: {
+                    ...expandData,
+                    [id]: newValue
                 }
-                return;
-            });
+            };
+        });
+    }
 
-            for (let i = 0; i <= numberOfElements; i++) {
-                if (!this.state.expandAllClicked) {
-                    modifiedStates[i] = true;
-                } else {
-                    modifiedStates[i] = false;
-                }
-            }
-        } else {
-            for (let i = 0; i <= this.state.numberOfElements; i++) {
-                if (!this.state.expandAllClicked) {
-                    modifiedStates[i] = true;
-                } else {
-                    modifiedStates[i] = false;
-                }
-            }
-        }
+    // Callback for TreeHeader to toggle expand/collapse all state
+    toggleExpandAll = () => {
+        const {
+            expandData,
+            isExpandAll
+        } = this.state;
+
+        const newExpandData = {};
+
+        // Expand/Collapse all rows
+        Object.keys(expandData).forEach((id) => newExpandData[id] = !isExpandAll);
 
         this.setState({
-            iStates: modifiedStates,
-            expandAllClicked: !this.state.expandAllClicked,
-            numberOfElements: numberOfElements
+            expandData: newExpandData,
+            isExpandAll: !isExpandAll
         });
-    };
-
-    //Going to loop recursively through each key, until it hits the bottom(when there's no more children)
-    createTreeList = (treeData, isChild, depthLevel = 0) => {
-        const trees = treeData.map(row => {
-            const parent = row.values.map((element, index) => {
-                //Checks if it has children and is first element
-                if (row.hasChildren & (row.values.indexOf(element) === 0)) {
-                    //Checks if the element is an object
-                    if (typeof element === 'object') {
-                        return (
-                            <div className='fd-tree__col fd-tree__col--control' key={index}>
-                                <button
-                                    aria-controls='inYUX852'
-                                    aria-label='expand'
-                                    aria-pressed={this.state.iStates[row.id]}
-                                    className='fd-tree__control'
-                                    onClick={this.updateVisibility(row.id)} />
-                                <a className='fd-has-font-weight-semi' href={element.linkUrl}>
-                                    {element.displayText ? element.displayText : element.linkUrl}
-                                </a>
-                            </div>
-                        );
-                    }
-                    return (
-                        <div className='fd-tree__col fd-tree__col--control' key={index}>
-                            <button
-                                aria-controls='inYUX852'
-                                aria-label='expand'
-                                aria-pressed={this.state.iStates[row.id]}
-                                className='fd-tree__control'
-                                onClick={this.updateVisibility(row.id)} />
-                            {element}
-                        </div>
-                    );
-                }
-
-                if (row.values.indexOf(element) === 0) {
-                    return (
-                        <div className='fd-tree__col fd-tree__col--control' key={index}>
-                            {typeof element === 'object' ? (
-                                <a className='fd-has-font-weight-semi' href={element.linkUrl}>
-                                    {element.displayText ? element.displayText : element.linkUrl}
-                                </a>
-                            ) : (
-                                element
-                            )}
-                        </div>
-                    );
-                }
-                return (
-                    <div className='fd-tree__col' key={index}>
-                        {typeof element === 'object' ? (
-                            <a className='fd-has-font-weight-semi' href={element.linkUrl}>
-                                {element.displayText ? element.displayText : element.linkUrl}
-                            </a>
-                        ) : (
-                            element
-                        )}
-                    </div>
-                );
-            });
-
-            let tree;
-
-            let displayLevel =
-            'fd-tree__group fd-tree__group--sublevel-' + depthLevel;
-
-            if (row.hasChildren && this.state.iStates[row.id]) {
-                tree = this.createTreeList(row.children, true, depthLevel + 1);
-            }
-            if (isChild) {
-                return (
-                    <ul className={displayLevel} key={row.id}
-                        role='group'>
-                        <ul className='fd-tree-child'>
-                            <li
-                                aria-expanded='true'
-                                className='fd-tree__item'
-                                key={row.id}
-                                role='treeitem'>
-                                <div className='fd-tree__row'>
-                                    {parent}
-                                    {<Dropdown />}
-                                </div>
-                                {tree}
-                            </li>
-                        </ul>
-                    </ul>
-                );
-            }
-            depthLevel = 0;
-            return (
-                <li
-                    aria-expanded='true'
-                    className='fd-tree__item'
-                    key={row.id}
-                    role='treeitem'>
-                    <div className='fd-tree__row'>
-                        {parent}
-                        {<Dropdown />}
-                    </div>
-                    {tree}
-                </li>
-            );
-        });
-
-        return trees;
-    };
+    }
 
     render() {
-        const { headers, treeData, headerProps, headerButtonProps, listProps, ...props } = this.props;
+        const {
+            children,
+            ...rest
+        } = this.props;
+        const {
+            expandData,
+            isExpandAll
+        } = this.state;
+
         return (
-            <div {...props}>
-                <div {...headerProps} className='fd-tree fd-tree--header'>
-                    <div className='fd-tree__row fd-tree__row--header'>
-                        {headers.map((header, index) => {
-                            if (headers.indexOf(header) === 0) {
-                                return (
-                                    <div
-                                        className='fd-tree__col fd-tree__col--control'
-                                        key={index}>
-                                        <button
-                                            {...headerButtonProps}
-                                            aria-label='expand'
-                                            aria-pressed={this.state.expandAllClicked}
-                                            className='fd-tree__control '
-                                            onClick={e => this.openAllList(treeData, e)} />
-                                        {header}
-                                    </div>
-                                );
-                            }
-                            return (
-                                <div className='fd-tree__col' key={index}>
-                                    {header}
-                                </div>
-                            );
-                        })}
-                    </div>
-                </div>
-                <ul
-                    {...listProps}
-                    className='fd-tree'
-                    role='tree'>
-                    {this.createTreeList(treeData)}
-                </ul>
+            <div {...rest}>
+                {
+                    React.Children.map(children, (child) => {
+                        const isTreeHeader = child.type && child.type.name === 'TreeHeader';
+                        const isTreeList = child.type && child.type.name === 'TreeList';
+
+                        if (isTreeHeader) {
+                            // Pass expand all callbacks to TreeHeader
+                            return React.cloneElement(child, {
+                                onExpandAll: this.toggleExpandAll,
+                                isExpanded: isExpandAll
+                            });
+                        }
+
+                        if (isTreeList) {
+                            // Pass expand callbacks to TreeList's
+                            return React.cloneElement(child, {
+                                expandData,
+                                onExpandClick: this.toggleExpand
+                            });
+                        }
+
+                        return child;
+                    })
+                }
             </div>
         );
     }
 }
 
 Tree.propTypes = {
-    treeData: PropTypes.arrayOf(
-        PropTypes.shape({
-            id: PropTypes.string.isRequired,
-            hasChildren: PropTypes.bool,
-            values: PropTypes.array.isRequired,
-            children: PropTypes.array
-        }).isRequired
-    ).isRequired,
-    headerButtonProps: PropTypes.object,
-    headerProps: PropTypes.object,
-    headers: PropTypes.arrayOf(PropTypes.string),
-    id: PropTypes.string,
-    listProps: PropTypes.object
-};
-
-Tree.propDescriptions = {
-    treeData: 'Array of objects that contain three properties: `id`, `values` (an array of values for each column) and `children` (a repeat of the same structure for the next level).',
-    headerButtonProps: 'Additional props to be spread to the header expand/collapse `<button>` element.',
-    headerProps: 'Additional props to be spread to the header element.',
-    headers: 'Array of localized text strings for the column headers.'
+    children: PropTypes.node
 };

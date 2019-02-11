@@ -1,169 +1,152 @@
 import { mount } from 'enzyme';
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { Tree } from './Tree';
+import { Tree, TreeCell, TreeHeader, TreeList, TreeRow } from './Tree';
+
+// mock shortid for snapshot testing
+jest.mock('shortid', () => {
+    let id = 1;
+
+    return {
+        generate: () => id++
+    };
+});
 
 describe('<Tree />', () => {
-    const defaultHeaders = [
-        'Column Header',
-        'Column Header 1 ',
-        'Column Header 2',
-        'Status'
-    ];
-
     const multiLevelTree = (
-        <Tree
-            headers={defaultHeaders}
-            treeData={[
-                {
-                    id: '1',
-                    hasChildren: true,
-                    values: ['First Level', 'Data Col 2', 'Data Col 3', 'INACTIVE'],
-                    children: [
-                        {
-                            id: '2',
-                            hasChildren: true,
-                            values: ['Child 1', 'Data Col 2', 'Data Col 3', 'INACTIVE'],
-                            children: [
-                                {
-                                    id: '3',
-                                    hasChildren: true,
-                                    values: [
-                                        'Grandchild 1',
-                                        'Data Col 2',
-                                        'Data Col 3',
-                                        'INACTIVE'
-                                    ],
-                                    children: [
-                                        {
-                                            id: '4',
-                                            hasChildren: false,
-                                            values: [
-                                                'GreatGrandchild 1',
-                                                'Data Col 2',
-                                                'Data Col 3',
-                                                'INACTIVE'
-                                            ]
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            id: '5',
-                            hasChildren: false,
-                            values: ['Child 2', 'Data Col 2', 'Data Col 3', 'INACTIVE']
-                        }
-                    ]
-                },
-
-                {
-                    id: '6',
-                    hasChildren: true,
-                    values: ['Row 2', 'Data Col 2', 'Data Col 3', 'DEFAULT'],
-                    children: [
-                        {
-                            id: '7',
-                            hasChildren: false,
-                            values: ['Child 1', 'Data Col 2', 'Data Col 3', 'INACTIVE']
-                        },
-                        {
-                            id: '8',
-                            hasChildren: false,
-                            values: ['Child 2', 'Data Col 2', 'Data Col 3', 'INACTIVE']
-                        }
-                    ]
-                },
-
-                {
-                    id: '9',
-                    hasChild: true,
-                    values: ['Row 3', 'Data Col 2', 'Data Col 3', 'INACTIVE']
-                },
-
-                {
-                    id: '10',
-                    hasChildren: true,
-                    values: [
-                        {
-                            displayText: '',
-                            linkUrl: 'http://me.com'
-                        },
-                        'Data Col 2',
-                        'Data Col 3',
-                        'INACTIVE'
-                    ],
-                    children: [
-                        {
-                            id: '11',
-                            hasChildren: false,
-                            values: ['Child 1', 'Data Col 2', 'Data Col 3', 'INACTIVE']
-                        }
-                    ]
-                }
-            ]} />
+        <Tree>
+            <TreeHeader>
+                <TreeCell>Column Header 1</TreeCell>
+                <TreeCell>Column Header 2</TreeCell>
+                <TreeCell>Column Header 3</TreeCell>
+                <TreeCell>Column Header 4</TreeCell>
+            </TreeHeader>
+            <TreeList>
+                <TreeRow>
+                    <TreeCell>First Level</TreeCell>
+                    <TreeCell>Data Col 2</TreeCell>
+                    <TreeCell>Data Col 3</TreeCell>
+                    <TreeCell>Data Col 4</TreeCell>
+                    <TreeList>
+                        <TreeRow>
+                            <TreeCell>Child 1</TreeCell>
+                            <TreeCell>Data Col 2</TreeCell>
+                            <TreeCell>Data Col 3</TreeCell>
+                            <TreeCell>Data Col 4</TreeCell>
+                            <TreeList>
+                                <TreeRow>
+                                    <TreeCell>Grandchild 1</TreeCell>
+                                    <TreeCell>Data Col 2</TreeCell>
+                                    <TreeCell>Data Col 3</TreeCell>
+                                    <TreeCell>Data Col 4</TreeCell>
+                                    <TreeList>
+                                        <TreeRow>
+                                            <TreeCell>GreatGrandchild 1</TreeCell>
+                                            <TreeCell>Data Col 2</TreeCell>
+                                            <TreeCell>Data Col 3</TreeCell>
+                                            <TreeCell>Data Col 4</TreeCell>
+                                        </TreeRow>
+                                    </TreeList>
+                                </TreeRow>
+                            </TreeList>
+                        </TreeRow>
+                        <TreeRow>
+                            <TreeCell>Child 2</TreeCell>
+                            <TreeCell>Data Col 2</TreeCell>
+                            <TreeCell>Data Col 3</TreeCell>
+                            <TreeCell>Data Col 4</TreeCell>
+                        </TreeRow>
+                    </TreeList>
+                </TreeRow>
+                <TreeRow>
+                    <TreeCell>Row 2</TreeCell>
+                    <TreeCell>Data Col 2</TreeCell>
+                    <TreeCell>Data Col 3</TreeCell>
+                    <TreeCell>Data Col 4</TreeCell>
+                    <TreeList>
+                        <TreeRow>
+                            <TreeCell>Child 1</TreeCell>
+                            <TreeCell>Data Col 2</TreeCell>
+                            <TreeCell>Data Col 3</TreeCell>
+                            <TreeCell>Data Col 4</TreeCell>
+                        </TreeRow>
+                        <TreeRow>
+                            <TreeCell>Child 2</TreeCell>
+                            <TreeCell>Data Col 2</TreeCell>
+                            <TreeCell>Data Col 3</TreeCell>
+                            <TreeCell>Data Col 4</TreeCell>
+                        </TreeRow>
+                    </TreeList>
+                </TreeRow>
+                <TreeRow>
+                    <TreeCell>Row 3</TreeCell>
+                    <TreeCell>Data Col 2</TreeCell>
+                    <TreeCell>Data Col 3</TreeCell>
+                    <TreeCell>Data Col 4</TreeCell>
+                </TreeRow>
+                <TreeRow>
+                    <TreeCell><a href='http://me.com' /></TreeCell>
+                    <TreeCell>Data Col 2</TreeCell>
+                    <TreeCell>Data Col 3</TreeCell>
+                    <TreeCell>Data Col 4</TreeCell>
+                    <TreeList>
+                        <TreeRow>
+                            <TreeCell>Child 1</TreeCell>
+                            <TreeCell>Data Col 2</TreeCell>
+                            <TreeCell>Data Col 3</TreeCell>
+                            <TreeCell>Data Col 4</TreeCell>
+                        </TreeRow>
+                    </TreeList>
+                </TreeRow>
+            </TreeList>
+        </Tree>
     );
 
     const richTree = (
-        <Tree
-            headers={defaultHeaders}
-            treeData={[
-                {
-                    id: '1',
-                    hasChildren: true,
-                    values: [
-                        {
-                            displayText: 'First Level',
-                            linkUrl: 'http://me.com'
-                        },
-                        ' ',
-                        ' ',
-                        ' '
-                    ],
-                    children: [
-                        {
-                            id: '2',
-                            hasChildren: false,
-                            values: [
-                                {
-                                    displayText: 'Amazon',
-                                    linkUrl: 'http://amazon.com'
-                                },
-                                {
-                                    displayText: 'Google',
-                                    linkUrl: 'http://google.com'
-                                },
-                                {
-                                    displayText: 'Bing',
-                                    linkUrl: 'http://bing.com'
-                                },
-                                {
-                                    displayText: 'Yahoo',
-                                    linkUrl: 'http://yahoo.com'
-                                },
-                                { displayText: '', linkUrl: 'http://sap.com' }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    id: '2',
-                    hasChildren: true,
-                    values: ['Second Level', ' ', ' ', ' '],
-                    children: [
-                        {
-                            id: '2',
-                            hasChildren: false,
-                            values: [
-                                {
-                                    displayText: '',
-                                    linkUrl: 'http://amazon.com'
-                                }
-                            ]
-                        }
-                    ]
-                }
-            ]} />
+        <Tree>
+            <TreeHeader>
+                <TreeCell>Column Header 1</TreeCell>
+                <TreeCell>Column Header 2</TreeCell>
+                <TreeCell>Column Header 3</TreeCell>
+                <TreeCell>Column Header 4</TreeCell>
+            </TreeHeader>
+            <TreeList>
+                <TreeRow>
+                    <TreeCell>First Level</TreeCell>
+                    <TreeList>
+                        <TreeRow>
+                            <TreeCell><a href='http://me.com'>First Level</a></TreeCell>
+                            <TreeCell />
+                            <TreeCell />
+                            <TreeCell />
+                            <TreeList>
+                                <TreeRow>
+                                    <TreeCell><a href='http://amazon.com'>Amazon</a></TreeCell>
+                                    <TreeCell><a href='http://google.com'>Google</a></TreeCell>
+                                    <TreeCell><a href='http://bing.com'>Bing</a></TreeCell>
+                                    <TreeCell><a href='http://yahoo.com'>Yahoo</a></TreeCell>
+                                    <TreeCell><a href='http://sap.com'>SAP</a></TreeCell>
+                                </TreeRow>
+                                <TreeRow>
+                                    <TreeCell><a href='http://amazon.com'>Amazon</a></TreeCell>
+                                </TreeRow>
+                            </TreeList>
+                        </TreeRow>
+                        <TreeRow>
+                            <TreeCell>Second Level</TreeCell>
+                            <TreeCell />
+                            <TreeCell />
+                            <TreeCell />
+                            <TreeList>
+                                <TreeRow>
+                                    <TreeCell><a href='http://amazon.com'>Amazon</a></TreeCell>
+                                </TreeRow>
+                            </TreeList>
+                        </TreeRow>
+                    </TreeList>
+                </TreeRow>
+            </TreeList>
+        </Tree>
     );
 
     test('create tree component', () => {
@@ -179,123 +162,149 @@ describe('<Tree />', () => {
     });
 
     test('open all tree from header', () => {
-        let wrapper = mount(richTree);
+        const wrapper = mount(richTree);
 
         wrapper
             .find('button.fd-tree__control')
             .at(0)
             .simulate('click');
 
-        // check that all open
-        expect(wrapper.state('expandAllClicked')).toBeTruthy();
-
-        wrapper
-            .find('button.fd-tree__control')
-            .at(0)
-            .simulate('click');
-
-        // check that all closed
-        expect(wrapper.state('expandAllClicked')).toBeFalsy();
+        // Check that all opened
+        wrapper.find('ul.fd-tree__group').forEach((node) => {
+            expect(node.hasClass('is-hidden')).toBeFalsy();
+            expect(node.prop('aria-hidden')).toBeFalsy();
+        });
     });
 
     test('closed all tree from header when set to open', () => {
-        let wrapper = mount(richTree);
-
-        wrapper.setState({ 'expandAllClicked': true });
-        wrapper
-            .find('button.fd-tree__control')
-            .at(0)
-            .simulate('click');
-
-        // check that all closed
-        expect(wrapper.state('expandAllClicked')).toBeFalsy();
+        const wrapper = mount(richTree);
 
         wrapper
             .find('button.fd-tree__control')
             .at(0)
             .simulate('click');
 
-        // check that all open
-        expect(wrapper.state('expandAllClicked')).toBeTruthy();
+        // Check that all opened
+        wrapper.find('ul.fd-tree__group').forEach((node) => {
+            expect(node.hasClass('is-hidden')).toBeFalsy();
+            expect(node.prop('aria-hidden')).toBeFalsy();
+        });
+
+        wrapper
+            .find('button.fd-tree__control')
+            .at(0)
+            .simulate('click');
+
+        // Check that all closed
+        wrapper.find('ul.fd-tree__group').forEach((node) => {
+            expect(node.hasClass('is-hidden')).toBeTruthy();
+            expect(node.prop('aria-hidden')).toBeTruthy();
+        });
     });
 
     test('expand tree from row', () => {
-        let wrapper = mount(multiLevelTree);
+        const wrapper = mount(multiLevelTree);
+        const parent = wrapper.find('li.fd-tree__item').at(0);
+        const button = parent.find('button.fd-tree__control').at(0);
 
-        wrapper
-            .find('button.fd-tree__control')
-            .at(1)
-            .simulate('click');
+        button.simulate('click');
 
-        expect(wrapper.state('iStates')[1]).toBeTruthy();
+        // Check that child list expanded
+        expect(wrapper.find('ul.fd-tree__group--sublevel-1').at(0).hasClass('is-hidden')).toBeFalsy();
+        expect(wrapper.find('ul.fd-tree__group--sublevel-1').at(0).prop('aria-hidden')).toBeFalsy();
+    });
 
-        wrapper
-            .find('button.fd-tree__control')
-            .at(1)
-            .simulate('click');
-        expect(wrapper.state('iStates')[1]).toBeFalsy();
+    test('collapse tree from row', () => {
+        const wrapper = mount(multiLevelTree);
+        const parent = wrapper.find('li.fd-tree__item').at(0);
+        const button = parent.find('button.fd-tree__control').at(0);
+
+        button.simulate('click');
+
+        // Check that child list expanded
+        expect(wrapper.find('ul.fd-tree__group--sublevel-1').at(0).hasClass('is-hidden')).toBeFalsy();
+        expect(wrapper.find('ul.fd-tree__group--sublevel-1').at(0).prop('aria-hidden')).toBeFalsy();
+
+        button.simulate('click');
+
+        // Check that child list collapsed
+        expect(wrapper.find('ul.fd-tree__group--sublevel-1').at(0).hasClass('is-hidden')).toBeTruthy();
+        expect(wrapper.find('ul.fd-tree__group--sublevel-1').at(0).prop('aria-hidden')).toBeTruthy();
     });
 
     describe('Prop spreading', () => {
         test('should allow props to be spread to the Tree component', () => {
-            const data = [];
             const element = mount(
                 <Tree
-                    data-sample='Sample'
-                    headers={defaultHeaders}
-                    treeData={data} />)
-                ;
+                    data-sample='Sample' />);
 
             expect(
                 element.getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
         });
 
-        test('should allow props to be spread to the Tree component\'s header element', () => {
-            const data = [];
+        test('should allow props to be spread to the TreeHeader component', () => {
             const element = mount(
-                <Tree
-                    headerProps={{
-                        'data-sample': 'Sample'
-                    }}
-                    headers={defaultHeaders}
-                    treeData={data} />)
-                ;
+                <TreeHeader
+                    data-sample='Sample' />);
 
             expect(
                 element.find('.fd-tree--header').getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
         });
 
-        test('should allow props to be spread to the Tree component\'s header button elements', () => {
-            const data = [];
+        test('should allow props to be spread to the TreeList component', () => {
             const element = mount(
-                <Tree
-                    headerButtonProps={{
-                        'data-sample': 'Sample'
-                    }}
-                    headers={defaultHeaders}
-                    treeData={data} />)
-                ;
+                <TreeList
+                    data-sample='Sample' />);
 
             expect(
-                element.find('.fd-tree--header button').getDOMNode().attributes['data-sample'].value
+                element.find('.fd-tree').getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
         });
 
-        test('should allow props to be spread to the Tree component\'s list element', () => {
-            const data = [];
+        test('should allow props to be spread to the TreeRow component', () => {
             const element = mount(
-                <Tree
-                    headers={defaultHeaders}
-                    listProps={{
-                        'data-sample': 'Sample'
-                    }}
-                    treeData={data} />)
-                ;
+                <TreeRow
+                    data-sample='Sample' />);
 
             expect(
-                element.find('ul.fd-tree').getDOMNode().attributes['data-sample'].value
+                element.find('.fd-tree__item').getDOMNode().attributes['data-sample'].value
+            ).toBe('Sample');
+        });
+
+        test('should allow props to be spread to the TreeHeader component', () => {
+            const element = mount(
+                <TreeHeader
+                    data-sample='Sample' />);
+
+            expect(
+                element.find('.fd-tree--header').getDOMNode().attributes['data-sample'].value
+            ).toBe('Sample');
+        });
+
+        test('should allow props to be spread to the TreeHeader component\'s button element', () => {
+            const element = mount(
+                <TreeHeader
+                    buttonProps={{
+                        'data-sample': 'Sample'
+                    }}>
+                    <TreeCell />
+                </TreeHeader>
+            );
+
+            expect(
+                element.find('.fd-tree__control').getDOMNode().attributes['data-sample'].value
+            ).toBe('Sample');
+        });
+
+        test('should allow props to be spread to the TreeCell component', () => {
+            const element = mount(
+                <TreeCell
+                    data-sample='Sample' />);
+
+            expect(
+                element.find('.fd-tree__col').getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
         });
     });

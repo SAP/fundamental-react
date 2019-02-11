@@ -1,99 +1,118 @@
 import React from 'react';
-import { Tree } from '../';
 import { Description, DocsText, DocsTile, Header, Import, Properties, Separator } from '../_playground';
+import { Tree, TreeCell, TreeHeader, TreeList, TreeRow } from '../';
 
 export const TreeComponent = () => {
-    const treeCode = `headers={['Column Header', 'Column Header 1 ', 'Column Header 2', 'Status']}
-    treeData={[
-        {
-            id: '1', hasChildren: true,
-            values: ['First Level', 'Data Col 2', 'Data Col 3', 'INACTIVE'],
-            children: [
-                {
-                    id: '2', hasChildren: true,
-                    values: ['Child 1', 'Data Col 2', 'Data Col 3', 'INACTIVE'],
-                    children: [
-                        {
-                            id: '3', hasChildren: true,
-                            values: ['Grandchild 1', 'Data Col 2', 'Data Col 3', 'INACTIVE'],
-                            children: [
-                                {
-                                    id: '4', hasChildren: false,
-                                    values: ['GreatGrandchild 1', 'Data Col 2', 'Data Col 3', 'INACTIVE']
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    id: '5', hasChildren: false,
-                    values: ['Child 2', 'Data Col 2', 'Data Col 3', 'INACTIVE']
-                }
-            ]
-        },
+    const treeCode = `
+<Tree>
+    <TreeHeader>
+        <TreeCell>Column Header 1</TreeCell>
+        <TreeCell>Column Header 2</TreeCell>
+        <TreeCell>Column Header 3</TreeCell>
+        <TreeCell>Column Header 4</TreeCell>
+    </TreeHeader>
+    <TreeList>
+        <TreeRow>
+            <TreeCell>Row 1</TreeCell>
+            <TreeCell>Data Col 2</TreeCell>
+            <TreeCell>Data Col 3</TreeCell>
+            <TreeCell>Data Col 4</TreeCell>
+            <TreeList>
+                <TreeRow>
+                    <TreeCell>Child 1</TreeCell>
+                    <TreeCell>Data Col 2</TreeCell>
+                    <TreeCell>Data Col 3</TreeCell>
+                    <TreeCell>Data Col 4</TreeCell>
+                    <TreeList>
+                        <TreeRow>
+                            <TreeCell>Grandchild 1</TreeCell>
+                            <TreeCell>Data Col 2</TreeCell>
+                            <TreeCell>Data Col 3</TreeCell>
+                            <TreeCell>Data Col 4</TreeCell>
+                            <TreeList>
+                                <TreeRow>
+                                    <TreeCell>Great Grandchild 1</TreeCell>
+                                    <TreeCell>Data Col 2</TreeCell>
+                                    <TreeCell>Data Col 3</TreeCell>
+                                    <TreeCell>Data Col 4</TreeCell>
+                                </TreeRow>
+                            </TreeList>
+                        </TreeRow>
+                    </TreeList>
+                </TreeRow>
+                <TreeRow>
+                    <TreeCell>Child 2</TreeCell>
+                    <TreeCell>Data Col 2</TreeCell>
+                    <TreeCell>Data Col 3</TreeCell>
+                    <TreeCell>Data Col 4</TreeCell>
+                </TreeRow>
+            </TreeList>
+        </TreeRow>
+        <TreeRow>
+            <TreeCell>Row 2</TreeCell>
+            <TreeCell>Data Col 2</TreeCell>
+            <TreeCell>Data Col 3</TreeCell>
+            <TreeCell>Data Col 4</TreeCell>
+            <TreeList>
+                <TreeRow>
+                    <TreeCell>Child 1</TreeCell>
+                    <TreeCell>Data Col 2</TreeCell>
+                    <TreeCell>Data Col 3</TreeCell>
+                    <TreeCell>Data Col 4</TreeCell>
+                </TreeRow>
+                <TreeRow>
+                    <TreeCell>Child 2</TreeCell>
+                    <TreeCell>Data Col 2</TreeCell>
+                    <TreeCell>Data Col 3</TreeCell>
+                    <TreeCell>Data Col 4</TreeCell>
+                </TreeRow>
+            </TreeList>
+        </TreeRow>
+        <TreeRow>
+            <TreeCell>Row 3</TreeCell>
+            <TreeCell>Data Col 2</TreeCell>
+            <TreeCell>Data Col 3</TreeCell>
+            <TreeCell>Data Col 4</TreeCell>
+        </TreeRow>
+        <TreeRow>
+            <TreeCell>Row 4</TreeCell>
+            <TreeCell>Data Col 2</TreeCell>
+            <TreeCell>Data Col 3</TreeCell>
+            <TreeCell>Data Col 4</TreeCell>
+            <TreeList>
+                <TreeRow>
+                    <TreeCell>Child 1</TreeCell>
+                    <TreeCell>Data Col 2</TreeCell>
+                    <TreeCell>Data Col 3</TreeCell>
+                    <TreeCell>Data Col 4</TreeCell>
+                </TreeRow>
+            </TreeList>
+        </TreeRow>
+    </TreeList>
+</Tree>`;
 
-
-
-        {
-            id: '6', hasChildren: true,
-            values: ['Row 2', 'Data Col 2', 'Data Col 3', 'DEFAULT'],
-            children: [
-                {
-                    id: '7', hasChildren: false,
-                    values: ['Child 1', 'Data Col 2', 'Data Col 3', 'INACTIVE'],
-                },
-                {
-                    id: '8', hasChildren: false,
-                    values: ['Child 2', 'Data Col 2', 'Data Col 3', 'INACTIVE']
-                }
-            ]
-        },
-
-
-
-        {
-            id: '9', hasChild: true,
-            values: ['Row 3', 'Data Col 2', 'Data Col 3', 'INACTIVE']
-        },
-
-        {
-            id: '10', hasChildren: true,
-            values: ['Row 4', 'Data Col 2', 'Data Col 3', 'INACTIVE'],
-            children: [
-                {
-                    id: '11', hasChildren: false,
-                    values: ['Child 1', 'Data Col 2', 'Data Col 3', 'INACTIVE'],
-                }
-            ]
-        }
-    ]}`;
-
-    const treeCodeUrl = `headers={['Column Header', 'Column Header 1 ', 'Column Header 2', 'Status']}
-    treeData={[
-        {
-            id: '1', hasChildren: true,
-            values: ['First Level', ' ', ' ', ' '],
-            children: [
-                {
-                    id: '2', hasChildren: false,
-                    values: [{
-                        display: ''
-                    },{
-                        displayText: 'Google',
-                        linkUrl: 'http://google.com',
-                    },
-                    {
-                        displayText: 'Bing',
-                        linkUrl: 'http://bing.com'
-                    },
-                    {
-                        displayText: 'Yahoo',
-                        linkUrl: 'http://yahoo.com'
-                    }]
-                }
-            ]
-        }
-    ]}`;
+    const treeCodeRich = `
+<Tree>
+    <TreeHeader>
+        <TreeCell>Column Header 1</TreeCell>
+        <TreeCell>Column Header 2</TreeCell>
+        <TreeCell>Column Header 3</TreeCell>
+        <TreeCell>Column Header 4</TreeCell>
+    </TreeHeader>
+    <TreeList>
+        <TreeRow>
+            <TreeCell>Row 1</TreeCell>
+            <TreeList>
+                <TreeRow>
+                    <TreeCell />
+                    <TreeCell><a href='http://www.google.com'>Google</a></TreeCell>
+                    <TreeCell><a href='http://www.bing.com'>Bing</a></TreeCell>
+                    <TreeCell><a href='http://www.yahoo.com'>Yahoo</a></TreeCell>
+                </TreeRow>
+            </TreeList>
+        </TreeRow>
+    </TreeList>
+</Tree>`;
 
 
     return (
@@ -115,72 +134,92 @@ export const TreeComponent = () => {
 
             <h2>Tree with multiple levels and actions</h2>
             <DocsTile>
-                <Tree
-                    headers={['Column Header', 'Column Header 1 ', 'Column Header 2', 'Status']}
-                    treeData={[
-                        {
-                            id: '1', hasChildren: true,
-                            values: ['First Level', 'Data Col 2', 'Data Col 3', 'INACTIVE'],
-                            children: [
-                                {
-                                    id: '2', hasChildren: true,
-                                    values: ['Child 1', 'Data Col 2', 'Data Col 3', 'INACTIVE'],
-                                    children: [
-                                        {
-                                            id: '3', hasChildren: true,
-                                            values: ['Grandchild 1', 'Data Col 2', 'Data Col 3', 'INACTIVE'],
-                                            children: [
-                                                {
-                                                    id: '4', hasChildren: false,
-                                                    values: ['GreatGrandchild 1', 'Data Col 2', 'Data Col 3', 'INACTIVE']
-                                                }
-                                            ]
-                                        }
-                                    ]
-                                },
-                                {
-                                    id: '5', hasChildren: false,
-                                    values: ['Child 2', 'Data Col 2', 'Data Col 3', 'INACTIVE']
-                                }
-                            ]
-                        },
-
-
-
-                        {
-                            id: '6', hasChildren: true,
-                            values: ['Row 2', 'Data Col 2', 'Data Col 3', 'DEFAULT'],
-                            children: [
-                                {
-                                    id: '7', hasChildren: false,
-                                    values: ['Child 1', 'Data Col 2', 'Data Col 3', 'INACTIVE']
-                                },
-                                {
-                                    id: '8', hasChildren: false,
-                                    values: ['Child 2', 'Data Col 2', 'Data Col 3', 'INACTIVE']
-                                }
-                            ]
-                        },
-
-
-
-                        {
-                            id: '9', hasChild: true,
-                            values: ['Row 3', 'Data Col 2', 'Data Col 3', 'INACTIVE']
-                        },
-
-                        {
-                            id: '10', hasChildren: true,
-                            values: ['Row 4', 'Data Col 2', 'Data Col 3', 'INACTIVE'],
-                            children: [
-                                {
-                                    id: '11', hasChildren: false,
-                                    values: ['Child 1', 'Data Col 2', 'Data Col 3', 'INACTIVE']
-                                }
-                            ]
-                        }
-                    ]} />
-
+                <Tree>
+                    <TreeHeader>
+                        <TreeCell>Column Header 1</TreeCell>
+                        <TreeCell>Column Header 2</TreeCell>
+                        <TreeCell>Column Header 3</TreeCell>
+                        <TreeCell>Column Header 4</TreeCell>
+                    </TreeHeader>
+                    <TreeList>
+                        <TreeRow>
+                            <TreeCell>Row 1</TreeCell>
+                            <TreeCell>Data Col 2</TreeCell>
+                            <TreeCell>Data Col 3</TreeCell>
+                            <TreeCell>Data Col 4</TreeCell>
+                            <TreeList>
+                                <TreeRow>
+                                    <TreeCell>Child 1</TreeCell>
+                                    <TreeCell>Data Col 2</TreeCell>
+                                    <TreeCell>Data Col 3</TreeCell>
+                                    <TreeCell>Data Col 4</TreeCell>
+                                    <TreeList>
+                                        <TreeRow>
+                                            <TreeCell>Grandchild 1</TreeCell>
+                                            <TreeCell>Data Col 2</TreeCell>
+                                            <TreeCell>Data Col 3</TreeCell>
+                                            <TreeCell>Data Col 4</TreeCell>
+                                            <TreeList>
+                                                <TreeRow>
+                                                    <TreeCell>Great Grandchild 1</TreeCell>
+                                                    <TreeCell>Data Col 2</TreeCell>
+                                                    <TreeCell>Data Col 3</TreeCell>
+                                                    <TreeCell>Data Col 4</TreeCell>
+                                                </TreeRow>
+                                            </TreeList>
+                                        </TreeRow>
+                                    </TreeList>
+                                </TreeRow>
+                                <TreeRow>
+                                    <TreeCell>Child 2</TreeCell>
+                                    <TreeCell>Data Col 2</TreeCell>
+                                    <TreeCell>Data Col 3</TreeCell>
+                                    <TreeCell>Data Col 4</TreeCell>
+                                </TreeRow>
+                            </TreeList>
+                        </TreeRow>
+                        <TreeRow>
+                            <TreeCell>Row 2</TreeCell>
+                            <TreeCell>Data Col 2</TreeCell>
+                            <TreeCell>Data Col 3</TreeCell>
+                            <TreeCell>Data Col 4</TreeCell>
+                            <TreeList>
+                                <TreeRow>
+                                    <TreeCell>Child 1</TreeCell>
+                                    <TreeCell>Data Col 2</TreeCell>
+                                    <TreeCell>Data Col 3</TreeCell>
+                                    <TreeCell>Data Col 4</TreeCell>
+                                </TreeRow>
+                                <TreeRow>
+                                    <TreeCell>Child 2</TreeCell>
+                                    <TreeCell>Data Col 2</TreeCell>
+                                    <TreeCell>Data Col 3</TreeCell>
+                                    <TreeCell>Data Col 4</TreeCell>
+                                </TreeRow>
+                            </TreeList>
+                        </TreeRow>
+                        <TreeRow>
+                            <TreeCell>Row 3</TreeCell>
+                            <TreeCell>Data Col 2</TreeCell>
+                            <TreeCell>Data Col 3</TreeCell>
+                            <TreeCell>Data Col 4</TreeCell>
+                        </TreeRow>
+                        <TreeRow>
+                            <TreeCell>Row 4</TreeCell>
+                            <TreeCell>Data Col 2</TreeCell>
+                            <TreeCell>Data Col 3</TreeCell>
+                            <TreeCell>Data Col 4</TreeCell>
+                            <TreeList>
+                                <TreeRow>
+                                    <TreeCell>Child 1</TreeCell>
+                                    <TreeCell>Data Col 2</TreeCell>
+                                    <TreeCell>Data Col 3</TreeCell>
+                                    <TreeCell>Data Col 4</TreeCell>
+                                </TreeRow>
+                            </TreeList>
+                        </TreeRow>
+                    </TreeList>
+                </Tree>
             </DocsTile>
             <DocsText>{treeCode}</DocsText>
 
@@ -190,38 +229,30 @@ export const TreeComponent = () => {
             <Description>
                 This is an example of a tree with "rich" cells.
             </Description>
-
             <DocsTile>
-                <Tree
-                    headers={['Column Header', 'Column Header 1 ', 'Column Header 2', 'Status']}
-                    treeData={[
-                        {
-                            id: '1', hasChildren: true,
-                            values: ['First Level', ' ', ' ', ' '],
-                            children: [
-                                {
-                                    id: '2', hasChildren: false,
-                                    values: [{
-                                        display: ''
-                                    }, {
-                                        displayText: 'Google',
-                                        linkUrl: 'http://google.com'
-                                    },
-                                    {
-                                        displayText: 'Bing',
-                                        linkUrl: 'http://bing.com'
-                                    },
-                                    {
-                                        displayText: 'Yahoo',
-                                        linkUrl: 'http://yahoo.com'
-                                    }]
-                                }
-                            ]
-                        }
-                    ]} />
-
+                <Tree>
+                    <TreeHeader>
+                        <TreeCell>Column Header 1</TreeCell>
+                        <TreeCell>Column Header 2</TreeCell>
+                        <TreeCell>Column Header 3</TreeCell>
+                        <TreeCell>Column Header 4</TreeCell>
+                    </TreeHeader>
+                    <TreeList>
+                        <TreeRow>
+                            <TreeCell>Row 1</TreeCell>
+                            <TreeList>
+                                <TreeRow>
+                                    <TreeCell />
+                                    <TreeCell><a href='http://www.google.com'>Google</a></TreeCell>
+                                    <TreeCell><a href='http://www.bing.com'>Bing</a></TreeCell>
+                                    <TreeCell><a href='http://www.yahoo.com'>Yahoo</a></TreeCell>
+                                </TreeRow>
+                            </TreeList>
+                        </TreeRow>
+                    </TreeList>
+                </Tree>
             </DocsTile>
-            <DocsText>{treeCodeUrl}</DocsText>
+            <DocsText>{treeCodeRich}</DocsText>
         </div>
     );
 };
