@@ -1,18 +1,18 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-export const NavSearch = () => {
+export const NavSearch = (props) => {
 
-        return (
-            <input
-                className='nav-search'
-                name='search'
-                onChange={this.props.onChange}
-                placeholder='Search'
-                value={this.props.query} />
-        );
-    }
-}
+    return (
+        <input
+            className='nav-search'
+            name='search'
+            onChange={props.onChange}
+            placeholder='Search'
+            value={props.query} />
+    );
+};
+
 
 NavSearch.propTypes = {
     query: PropTypes.string,
