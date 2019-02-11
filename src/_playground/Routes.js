@@ -293,9 +293,9 @@ export class Routes extends Component {
     onSearchChange = (value) => {
         // eslint-disable-next-line no-console
         console.log(value);
-        const searchValue = new RegExp(`${value}`);
+        const searchValue = new RegExp(`${value}`.toLowerCase());
         const searchResults = this.state.searchItems.filter((navItem) => {
-            return searchValue.test(`${navItem.name}`);
+            return searchValue.test(`${navItem.name}`.toLowerCase());
         });
         this.setState({
             searchItems: searchResults
