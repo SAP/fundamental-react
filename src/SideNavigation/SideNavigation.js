@@ -60,8 +60,8 @@ SideNav.propTypes = {
 };
 
 SideNav.propDescriptions = {
-    icons: 'Set to **true** enables side navigation collapsed with icons.',
-    selectedId: 'The id of the selected `SideNavListItem`.'
+    icons: 'Set to **true** to only render icons for each `SideNavListItem`.',
+    selectedId: 'The `id` of the selected `SideNavListItem`.'
 };
 
 SideNav.displayName = 'SideNav';
@@ -134,10 +134,10 @@ SideNavList.propTypes = {
 };
 
 SideNavList.propDescriptions = {
-    hasParent: 'Internal use only',
-    open: 'Internal use only',
-    selectedId: 'Internal use only',
-    onItemSelect: 'Internal use only'
+    hasParent: '_INTERNAL USE ONLY._',
+    open: '_INTERNAL USE ONLY._',
+    selectedId: '_INTERNAL USE ONLY._',
+    onItemSelect: '_INTERNAL USE ONLY._'
 };
 
 SideNavList.displayName = 'SideNavList';
@@ -262,12 +262,13 @@ SideNavListItem.propTypes = {
 };
 
 SideNavListItem.propDescriptions = {
-    isSubItem: 'Internal use only',
-    name: 'Link text to be set in conjunction with the `url` prop.',
-    onItemSelect: 'Internal use only',
-    selected: 'Set to **true** to display as selected.',
-    selectedId: 'Internal use only',
-    url: 'Creates an internal anchor when a child anchor is not provided.'
+    expanded: 'Set to **true** to have this item initially render as expanded and its children items shown.',
+    isSubItem: '_INTERNAL USE ONLY._',
+    name: 'Localized text for the item (when `url` is provided).',
+    onItemSelect: '_INTERNAL USE ONLY._',
+    selected: '_INTERNAL USE ONLY._',
+    selectedId: '_INTERNAL USE ONLY._',
+    url: 'Enables use of `<a>` element. Value to be applied to the anchor\'s `href` attribute.'
 };
 SideNavListItem.displayName = 'SideNavListItem';
 
