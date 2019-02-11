@@ -137,11 +137,11 @@ Compact mode:
                 The **Input Group** includes form inputs with add-ons that allow the user to
                 better understand the information being entered.
             </Description>
-            <Import sourceModule={require('./InputGroup')} />
+            <Import sourceModule={require.resolve('./InputGroup')} />
 
             <Separator />
 
-            <Properties sourceModule={require('./InputGroup')} />
+            <Properties sourceModule={require.resolve('./InputGroup')} />
 
             <Separator />
 

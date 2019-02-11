@@ -111,11 +111,11 @@ export const TileComponent = () => {
                 A **Tile** can be used to display information in a simple container format.
                 A collection of tiles can be displayed using **TileGrid**.
             </Description>
-            <Import sourceModule={require('./Tile')} />
+            <Import sourceModule={require.resolve('./Tile')} />
 
             <Separator />
 
-            <Properties sourceModule={require('./Tile')} />
+            <Properties sourceModule={require.resolve('./Tile')} />
 
             <Separator />
 

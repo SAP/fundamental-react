@@ -50,11 +50,11 @@ export const IdentifierComponent = () => {
             <Description>
                 An **Identifier** is a visual presentation option around using an icon or user initials.
             </Description>
-            <Import sourceModule={require('./Identifier')} />
+            <Import sourceModule={require.resolve('./Identifier')} />
 
             <Separator />
 
-            <Properties sourceModule={require('./Identifier')} />
+            <Properties sourceModule={require.resolve('./Identifier')} />
 
             <Separator />
 

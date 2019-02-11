@@ -105,11 +105,11 @@ export const TreeComponent = () => {
                 a single top-most node is called a "root" node. Apart from the hierarchical structure of its nodes
                 and leaves, a tree is similar to a list.
             </Description>
-            <Import sourceModule={require('./Tree')} />
+            <Import sourceModule={require.resolve('./Tree')} />
 
             <Separator />
 
-            <Properties sourceModule={require('./Tree')} />
+            <Properties sourceModule={require.resolve('./Tree')} />
 
             <Separator />
 

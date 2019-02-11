@@ -78,11 +78,11 @@ export const PopoverComponent = () => {
                 it is suggested that one Popover be revealed on the page at any given time. Opening one Popover should close all
                 others to prevent multiple layers and collisions of several popovers.
             </Description>
-            <Import sourceModule={require('./Popover')} />
+            <Import sourceModule={require.resolve('./Popover')} />
 
             <Separator />
 
-            <Properties sourceModule={require('./Popover')} />
+            <Properties sourceModule={require.resolve('./Popover')} />
 
             <Separator />
 

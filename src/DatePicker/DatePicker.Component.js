@@ -19,11 +19,11 @@ export const DatePickerComponent = () => {
                 The **Date Picker** is an opinionated composition of the **Input Group**, **Popover**
                 and **Calendar** components to accomplish the UI pattern for picking a date.
             </Description>
-            <Import sourceModule={require('./DatePicker')} />
+            <Import sourceModule={require.resolve('./DatePicker')} />
 
             <Separator />
 
-            <Properties sourceModule={require('./DatePicker')} />
+            <Properties sourceModule={require.resolve('./DatePicker')} />
 
             <Separator />
 
