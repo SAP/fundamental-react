@@ -299,7 +299,6 @@ describe('<SideNavigation />', () => {
 
         expect(Item2.state('expanded')).toBeTruthy();
         expect(Item4.state('expanded')).toBeFalsy();
-        expect(wrapper.state('selectedId')).toEqual('item_2');
 
         wrapper
             .find('.fd-side-nav__link')
@@ -308,7 +307,6 @@ describe('<SideNavigation />', () => {
 
         expect(Item2.state('expanded')).toBeTruthy();
         expect(Item4.state('expanded')).toBeTruthy();
-        expect(wrapper.state('selectedId')).toEqual('item_4');
     });
 
     test('handle side nav sub link click', () => {
