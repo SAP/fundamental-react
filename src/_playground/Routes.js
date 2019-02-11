@@ -21,6 +21,7 @@ import { LocalizationEditorComponent } from '../LocalizationEditor/LocalizationE
 import { MenuComponent } from '../Menu/Menu.Component';
 import { ModalComponent } from '../Modal/Modal.Component';
 import { MultiInputComponent } from '../MultiInput/MultiInput.Component';
+import { NavSearch } from './documentation/NavSearch/NavSearch';
 import { PaginationComponent } from '../Pagination/Pagination.Component';
 import { PanelComponent } from '../Panel/Panel.Component';
 import { PopoverComponent } from '../Popover/Popover.Component';
@@ -298,12 +299,27 @@ export const Routes = () => {
         );
     });
 
+    const onSearchChange = (value) => {
+        // eslint-disable-next-line no-console
+        console.log(value);
+        const searchValue = new RegExp(`${value}`);
+        navItems.filter((navItem) => {
+            return searchValue.test(`${navItem.name}`);
+        });
+        // eslint-disable-next-line no-console
+        console.log('this is routes file');
+    };
+
     return (
         <BrowserRouter basename={process.env.PUBLIC_URL}>
             <div className='frDocs-Container'>
                 <div className='frDocs-Sidebar'>
                     <h1 className='frDocs-Logo'>FUNDAMENTAL REACT</h1>
+                    <div className='nav-search'>
+                        <NavSearch onChangeHandler={onSearchChange} searchItems={routes} />
+                    </div>
                     <nav className='frDocs-Nav'>
+                        {/* if search enacted, filter, else */}
                         {navItems}
                     </nav>
                 </div>
