@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.3.3-rc.2"></a>
+## [0.3.3-rc.2](https://github.com/SAP/fundamental-react/compare/v0.3.3-rc.1...v0.3.3-rc.2) (2019-02-11)
+
+
+### Bug Fixes
+
+* icon-example-rendering ([#391](https://github.com/SAP/fundamental-react/issues/391)) ([01af06d](https://github.com/SAP/fundamental-react/commit/01af06d))
+
+
+
 <a name="0.3.3-rc.1"></a>
 ## [0.3.3-rc.1](https://github.com/SAP/fundamental-react/compare/v0.3.3-rc.0...v0.3.3-rc.1) (2019-02-11)
 
