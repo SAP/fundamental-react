@@ -50,7 +50,7 @@ export { ProductTile } from './Tile/Tile';
 export { ProductTileContent } from './Tile/Tile';
 export { ProductTileMedia } from './Tile/Tile';
 export { SearchInput } from './SearchInput/SearchInput';
-export { SideNav, SideNavList, SideNavGroup } from './SideNavigation/SideNavigation';
+export { SideNav, SideNavList, SideNavListItem } from './SideNavigation/SideNavigation';
 export { Table } from './Table/Table';
 export { Tab, TabGroup } from './Tabs/Tabs';
 export { Token } from './Token/Token';

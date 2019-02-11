@@ -1,107 +1,253 @@
 import { mount } from 'enzyme';
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { SideNav, SideNavGroup, SideNavList } from './SideNavigation';
+import { BrowserRouter, Link } from 'react-router-dom';
+import { SideNav, SideNavList, SideNavListItem } from '../';
 
 describe('<SideNavigation />', () => {
     const subSideNavList = (
-        <SideNavList
-            items={[
-                { id: 'item-1', url: '#', name: 'Link Item 1' },
-                {
-                    id: 'item-2',
-                    url: '#',
-                    name: 'Link Item 2',
-                    hasChild: true,
-                    child: [
-                        { id: 'subitem-21', url: '#', name: 'Item 1' },
-                        { id: 'subitem-22', url: '#', name: 'Item 2' },
-                        { id: 'subitem-23', url: '#', name: 'Item 3' },
-                        { id: 'subitem-24', url: '#', name: 'Item 4' },
-                        { id: 'subitem-25', link: '/', name: 'Item 5' }
-                    ]
-                },
-                { id: 'item-3', url: '#', name: 'Link Item 3' },
-                {
-                    id: 'item-4',
-                    link: '/',
-                    name: 'Link Item 4',
-                    hasChild: true,
-                    child: [
-                        { id: 'subitem-41', url: '#', name: 'Item 1' },
-                        { id: 'subitem-42', url: '#', name: 'Item 2' },
-                        { id: 'subitem-43', url: '#', name: 'Item 3' },
-                        { id: 'subitem-44', url: '#', name: 'Item 4' }
-                    ]
-                },
-                { id: 'item-5', link: '/', name: 'Link Item' }
-            ]} />
+        <SideNavList>
+            <SideNavListItem
+                id='item_1'
+                name='Link Item 1'
+                url='#' />
+            <SideNavListItem
+                id='item_2'
+                name='Link Item 2'
+                url='#'>
+                <SideNavList>
+                    <SideNavListItem
+                        id='subitem_21'
+                        name='Item 1'
+                        url='#' />
+                    <SideNavListItem
+                        id='subitem_22'
+                        name='Item 2'
+                        url='#' />
+                    <SideNavListItem
+                        id='subitem_23'
+                        name='Item 3'
+                        url='#' />
+                    <SideNavListItem
+                        id='subitem_24'
+                        name='Item 4'
+                        url='#' />
+                    <SideNavListItem
+                        id='subitem_25'
+                        name='Item 5'
+                        url='#' />
+                </SideNavList>
+            </SideNavListItem>
+            <SideNavListItem
+                id='item_3'
+                name='Link Item 3'
+                url='#' />
+            <SideNavListItem
+                id='item_4'
+                name='Link Item 4'
+                url='#'>
+                <SideNavList>
+                    <SideNavListItem
+                        id='subitem_41'
+                        name='Item 1'
+                        url='#' />
+                    <SideNavListItem
+                        id='subitem_41'
+                        name='Item 2'
+                        url='#' />
+                    <SideNavListItem
+                        id='subitem_41'
+                        name='Item 3'
+                        url='#' />
+                    <SideNavListItem
+                        id='subitem_41'
+                        name='Item 4'
+                        url='#' />
+                </SideNavList>
+            </SideNavListItem>
+            <SideNavListItem
+                id='item_5'
+                name='Link Item'
+                url='#' />
+        </SideNavList>
     );
 
     const oneLevelSideNav = (
-        <SideNav>
-            <SideNavList
-                items={[
-                    { id: 'item-1', url: '#', name: 'Link Item' },
-                    { id: 'item-2', url: '#', name: 'Link Item' },
-                    { id: 'item-3', url: '#', name: 'Link Item' },
-                    { id: 'item-4', url: '#', name: 'Link Item' },
-                    { id: 'item-5', url: '#', name: 'Link Item' }
-                ]} />
-        </SideNav>
+        <BrowserRouter>
+            <SideNav>
+                <SideNavList>
+                    <SideNavListItem
+                        id='item_1'>
+                        <Link to='/'>
+                            Link Item
+                        </Link>
+                    </SideNavListItem>
+                    <SideNavListItem
+                        id='item_2'>
+                        <Link to='/'>
+                            Link Item
+                        </Link>
+                    </SideNavListItem>
+                    <SideNavListItem
+                        id='item_3'>
+                        <Link to='/'>
+                            Link Item
+                        </Link>
+                    </SideNavListItem>
+                    <SideNavListItem
+                        id='item_4'>
+                        <Link to='/'>
+                            Link Item
+                        </Link>
+                    </SideNavListItem>
+                    <SideNavListItem
+                        id='item_5'>
+                        <Link to='/'>
+                            Link Item
+                        </Link>
+                    </SideNavListItem>
+                </SideNavList>
+            </SideNav>
+        </BrowserRouter>
     );
 
     const sideNavWithTitle = (
-        <SideNav>
-            <SideNavGroup className='blue' title='Group Title'>
-                <SideNavList
-                    className='blue'
-                    items={[
-                        { id: 'item_1', link: '/', name: 'Link Item' },
-                        { id: 'item_2', link: '/', name: 'Link Item' },
-                        { id: 'item_3', link: '/', name: 'Link Item' },
-                        { id: 'item_4', link: '/', name: 'Link Item' },
-                        { id: 'item_5', link: '/', name: 'Link Item' }
-                    ]} />
-            </SideNavGroup>
-            <SideNavGroup title='Group Title'>
-                <SideNavList
-                    items={[
-                        { id: 'item_6', link: '/', name: 'Link Item' },
-                        { id: 'item_7', link: '/', name: 'Link Item' },
-                        { id: 'item_8', link: '/', name: 'Link Item' },
-                        { id: 'item_9', link: '/', name: 'Link Item' },
-                        { id: 'item_10', link: '/', name: 'Link Item' }
-                    ]} />
-            </SideNavGroup>
-        </SideNav>
+        <BrowserRouter>
+            <SideNav selectedId='item_2'>
+                <SideNavList className='blue' title='Group Title'>
+                    <SideNavListItem
+                        id='item_1'>
+                        <Link to='/'>
+                            Link Item
+                        </Link>
+                    </SideNavListItem>
+                    <SideNavListItem
+                        id='item_2'>
+                        <Link to='/'>
+                            Link Item
+                        </Link>
+                    </SideNavListItem>
+                    <SideNavListItem
+                        id='item_3'>
+                        <Link to='/'>
+                            Link Item
+                        </Link>
+                    </SideNavListItem>
+                    <SideNavListItem
+                        id='item_4'>
+                        <Link to='/'>
+                            Link Item
+                        </Link>
+                    </SideNavListItem>
+                    <SideNavListItem
+                        id='item_5'>
+                        <Link to='/'>
+                            Link Item
+                        </Link>
+                    </SideNavListItem>
+                </SideNavList>
+                <SideNavList title='Group Title'>
+                    <SideNavListItem
+                        id='item_6'>
+                        <Link to='/'>
+                            Link Item
+                        </Link>
+                    </SideNavListItem>
+                    <SideNavListItem
+                        id='item_7'>
+                        <Link to='/'>
+                            Link Item
+                        </Link>
+                    </SideNavListItem>
+                    <SideNavListItem
+                        id='item_8'>
+                        <Link to='/'>
+                            Link Item
+                        </Link>
+                    </SideNavListItem>
+                    <SideNavListItem
+                        id='item_9'>
+                        <Link to='/'>
+                            Link Item
+                        </Link>
+                    </SideNavListItem>
+                    <SideNavListItem
+                        id='item_10'>
+                        <Link to='/'>
+                            Link Item
+                        </Link>
+                    </SideNavListItem>
+                </SideNavList>
+            </SideNav>
+        </BrowserRouter>
     );
 
     const sideNavMultiLevel = <SideNav>{subSideNavList}</SideNav>;
 
     const sideNavWithIcons = (
-        <SideNav>
-            <SideNavList
-                items={[
-                    { id: 'item_1', link: '/', name: 'Link Item', glyph: 'home' },
-                    { id: 'item_2', link: '/', name: 'Link Item', glyph: 'home' },
-                    { id: 'item_3', link: '/', name: 'Link Item', glyph: 'home' },
-                    { id: 'item_4', link: '/', name: 'Link Item', glyph: 'home' },
-                    { id: 'item_5', link: '/', name: 'Link Item', glyph: 'home' }
-                ]} />
-        </SideNav>
+        <BrowserRouter>
+            <SideNav selectedId='item-2'>
+                <SideNavList>
+                    <SideNavListItem
+                        glyph='home'
+                        id='item-1'>
+                        <Link to='/'>
+                            Link Item
+                        </Link>
+                    </SideNavListItem>
+                    <SideNavListItem
+                        glyph='home'
+                        id='item-2'>
+                        <Link to='/'>
+                            Link Item
+                        </Link>
+                    </SideNavListItem>
+                    <SideNavListItem
+                        glyph='home'
+                        id='item-3'>
+                        <Link to='/'>
+                            Link Item
+                        </Link>
+                    </SideNavListItem>
+                    <SideNavListItem
+                        glyph='home'
+                        id='item-4'
+                        name='Link Item'
+                        url='#' />
+                    <SideNavListItem
+                        glyph='home'
+                        id='item-5'
+                        name='Link Item'
+                        url='#' />
+                </SideNavList>
+            </SideNav>
+        </BrowserRouter>
     );
 
     const sideNavCollapsed = (
         <SideNav icons>
-            <SideNavList
-                items={[
-                    { id: 'item-1', url: '#', glyph: 'home' },
-                    { id: 'item-2', url: '#', glyph: 'home' },
-                    { id: 'item-3', url: '#', glyph: 'home' },
-                    { id: 'item-4', url: '#', glyph: 'home' },
-                    { id: 'item-5', url: '#', glyph: 'home' }
-                ]} />
+            <SideNavList>
+                <SideNavListItem
+                    glyph='home'
+                    id='item-1'
+                    url='#' />
+                <SideNavListItem
+                    glyph='home'
+                    id='item-2'
+                    url='#' />
+                <SideNavListItem
+                    glyph='home'
+                    id='item-3'
+                    url='#' />
+                <SideNavListItem
+                    glyph='home'
+                    id='item-4'
+                    url='#' />
+                <SideNavListItem
+                    glyph='home'
+                    id='item-5'
+                    url='#' />
+            </SideNavList>
         </SideNav>
     );
 
@@ -138,61 +284,46 @@ describe('<SideNavigation />', () => {
     });
 
     test('handle side nav list link click', () => {
-        const wrapper = mount(subSideNavList);
+        const wrapper = mount(sideNavMultiLevel);
+        const Item2 = wrapper.find({ 'id': 'item_2' });
+        const Item4 = wrapper.find({ 'id': 'item_4' });
 
-        expect(wrapper.state('itemStates')).toEqual([
-            { 'item-2': false },
-            { 'item-4': false }
-        ]);
-        expect(wrapper.state('selectedItem')).toEqual('item_2');
+        expect(Item2.state('expanded')).toBeFalsy();
+        expect(Item4.state('expanded')).toBeFalsy();
+        expect(wrapper.state('selectedId')).toBeFalsy();
 
         wrapper
             .find('.fd-side-nav__link')
             .at(1)
             .simulate('click');
 
-        expect(wrapper.state('itemStates')).toEqual({
-            '0': { 'item-2': false },
-            '1': { 'item-4': false },
-            'item-2': true
-        });
-        expect(wrapper.state('selectedItem')).toEqual('item-2');
+        expect(Item2.state('expanded')).toBeTruthy();
+        expect(Item4.state('expanded')).toBeFalsy();
 
         wrapper
             .find('.fd-side-nav__link')
-            .at(4)
+            .at(3)
             .simulate('click');
 
-        expect(wrapper.state('itemStates')).toEqual({
-            '0': { 'item-2': false },
-            '1': { 'item-4': false },
-            'item-2': true,
-            'item-4': true
-        });
-        expect(wrapper.state('selectedItem')).toEqual('item-4');
+        expect(Item2.state('expanded')).toBeTruthy();
+        expect(Item4.state('expanded')).toBeTruthy();
     });
 
     test('handle side nav sub link click', () => {
-        const wrapper = mount(subSideNavList);
+        const wrapper = mount(sideNavMultiLevel);
         wrapper
             .find('.fd-side-nav__sublink')
             .at(0)
             .simulate('click');
 
-        expect(wrapper.state('itemStates')).toEqual([
-            { 'item-2': false },
-            { 'item-4': false }
-        ]);
+        expect(wrapper.state('selectedId')).toEqual('subitem_21');
 
         wrapper
             .find('.fd-side-nav__sublink')
             .at(4)
             .simulate('click');
 
-        expect(wrapper.state('itemStates')).toEqual([
-            { 'item-2': false },
-            { 'item-4': false }
-        ]);
+        expect(wrapper.state('selectedId')).toEqual('subitem_25');
     });
 
     describe('Prop spreading', () => {
@@ -205,28 +336,28 @@ describe('<SideNavigation />', () => {
         });
 
         test('should allow props to be spread to the SideNavList component', () => {
-            const items = [
-                { id: 'item-1', url: '#', name: 'Link Item 1' },
-                { id: 'item-2', url: '#', name: 'Link Item 2' },
-                { id: 'item-3', url: '#', name: 'Link Item 3' }
-            ];
-            const element = mount(<SideNavList data-sample='Sample' items={items} />);
+            const element = mount(<SideNavList data-sample='Sample'>
+                <SideNavListItem
+                    id='item-1'
+                    name='Link Item 1'
+                    url='#' />
+                <SideNavListItem
+                    id='item-2'
+                    name='Link Item 2'
+                    url='#' />
+                <SideNavListItem
+                    id='item-3'
+                    name='Link Item 3'
+                    url='#' />
+            </SideNavList>);
 
             expect(
                 element.getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
         });
 
-        test('should allow props to be spread to the SideNavGroup component', () => {
-            const element = mount(<SideNavGroup data-sample='Sample' title='test' />);
-
-            expect(
-                element.getDOMNode().attributes['data-sample'].value
-            ).toBe('Sample');
-        });
-
-        test('should allow props to be spread to the SideNavGroup component\'s h1 element', () => {
-            const element = mount(<SideNavGroup title='test' titleProps={{ 'data-sample': 'Sample' }} />);
+        test('should allow props to be spread to the SideNavList\'s h1 element', () => {
+            const element = mount(<SideNavList title='test' titleProps={{ 'data-sample': 'Sample' }} />);
 
             expect(
                 element.find('h1').getDOMNode().attributes['data-sample'].value
