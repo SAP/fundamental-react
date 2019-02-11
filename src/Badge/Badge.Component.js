@@ -9,6 +9,8 @@ export const BadgeComponent = () => {
 <Badge type="warning">Default</Badge>
 <Badge type="error">Default</Badge>`;
 
+
+
     const pillBadgeCode = `<Badge modifier="pill">Default</Badge>
 <Badge type="success" modifier="pill">Default</Badge>
 <Badge type="warning" modifier="pill">Default</Badge>
