@@ -429,7 +429,7 @@ export class Playground extends Component {
           case 'inputgroup':
               componentToGenerate = (
                   <FormGroup>
-                      <FormLabel labelText='Input with text action' />
+                      <FormLabel>Input with text action</FormLabel>
                       <FormItem>
                           <InputGroup
                               actions
