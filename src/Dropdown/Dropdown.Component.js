@@ -161,11 +161,11 @@ export const DropdownComponent = () => {
                 The **Dropdown** component lets the user select one of the different options.
                 It is more flexible than the normal Select.
             </Description>
-            <Import sourceModule={require('./Dropdown')} />
+            <Import sourceModule={require.resolve('./Dropdown')} />
 
             <Separator />
 
-            <Properties sourceModule={require('./Dropdown')} />
+            <Properties sourceModule={require.resolve('./Dropdown')} />
 
             <Separator />
 

@@ -15,11 +15,11 @@ export const CalendarComponent = () => {
             The **Calendar** is commonly used as the contents of a **Popover** when composing a **Date Picker**.
             It is rarely used on its own as a standalone component.
         </Description>
-        <Import sourceModule={require('./Calendar')} />
+        <Import sourceModule={require.resolve('./Calendar')} />
 
         <Separator />
 
-        <Properties sourceModule={require('./Calendar')} />
+        <Properties sourceModule={require.resolve('./Calendar')} />
 
         <Separator />
 

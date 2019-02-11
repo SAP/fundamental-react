@@ -51,11 +51,11 @@ export const ListGroupComponent = () => {
                 but lists generally contain basic data and tables tend to hold more complex data.
                 If the list is a complex hierarchy, it is best to use a **Tree**.
             </Description>
-            <Import sourceModule={require('./ListGroup')} />
+            <Import sourceModule={require.resolve('./ListGroup')} />
 
             <Separator />
 
-            <Properties sourceModule={require('./ListGroup')} />
+            <Properties sourceModule={require.resolve('./ListGroup')} />
 
             <Separator />
 

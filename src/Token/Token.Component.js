@@ -19,11 +19,11 @@ export const TokenComponent = () => {
                 A **Token** is used to represent contextual information. It can be useful to show
                 applied filters, selected values for a form field or object metadata.
             </Description>
-            <Import sourceModule={require('./Token')} />
+            <Import sourceModule={require.resolve('./Token')} />
 
             <Separator />
 
-            <Properties sourceModule={require('./Token')} />
+            <Properties sourceModule={require.resolve('./Token')} />
 
             <Separator />
 

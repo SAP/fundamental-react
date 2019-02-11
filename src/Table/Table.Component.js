@@ -128,11 +128,11 @@ export const TableComponent = () => {
             <Description>
                 A **Table** is a set of tabular data. Line items can support `data`, `images` and `actions`.
             </Description>
-            <Import sourceModule={require('./Table')} />
+            <Import sourceModule={require.resolve('./Table')} />
 
             <Separator />
 
-            <Properties sourceModule={require('./Table')} />
+            <Properties sourceModule={require.resolve('./Table')} />
 
             <Separator />
 
