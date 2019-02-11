@@ -52,10 +52,7 @@ export class SideNav extends Component {
 }
 
 SideNav.propTypes = {
-    children: PropTypes.oneOfType(
-        PropTypes.element,
-        PropTypes.arrayOf(PropTypes.element)
-    ),
+    children: PropTypes.node,
     className: PropTypes.string,
     icons: PropTypes.bool,
     selectedId: PropTypes.string
@@ -123,10 +120,7 @@ export class SideNavList extends React.Component {
 }
 
 SideNavList.propTypes = {
-    children: PropTypes.oneOfType(
-        PropTypes.element,
-        PropTypes.arrayOf(PropTypes.element)
-    ),
+    children: PropTypes.node,
     className: PropTypes.string,
     hasParent: PropTypes.bool,
     open: PropTypes.bool,
