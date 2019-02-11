@@ -25,7 +25,6 @@ import { NavSearch } from './documentation/NavSearch/NavSearch';
 import { PaginationComponent } from '../Pagination/Pagination.Component';
 import { PanelComponent } from '../Panel/Panel.Component';
 import { PopoverComponent } from '../Popover/Popover.Component';
-import React from 'react';
 import { SearchInputComponent } from '../SearchInput/SearchInput.Component';
 import { ShellbarComponent } from '../Shellbar/Shellbar.Component';
 import { SideNavigationComponent } from '../SideNavigation/SideNavigation.Component';
@@ -39,6 +38,7 @@ import { ToggleComponent } from '../Toggle/Toggle.Component';
 import { TokenComponent } from '../Token/Token.Component';
 import { TreeComponent } from '../Tree/Tree.Component';
 import { BrowserRouter, NavLink, Redirect, Route, Switch } from 'react-router-dom';
+import React, { Component } from 'react';
 
 const sections = [
     {
@@ -271,74 +271,94 @@ const routes = [
     }
 ];
 
-export const Routes = () => {
-    let sectionRoutes;
-    const groupedRoutes = groupArray(routes, 'section');
+export class Routes extends Component {
+    constructor(props) {
+        super(props);
 
-    const navItems = sections.sort(sortBy('sortOrder', 'name')).map(section => {
-        if (!groupedRoutes[section.name]) {
-            return;
-        }
+        this.state = {
+            query: '',
+            searchItems: routes
+        };
+    }
 
-        sectionRoutes = groupedRoutes[section.name].sort(sortBy('sortOrder', 'name'));
-        return (
-            <ul className='frDocs-Nav__list' key={section.name}>
-                <li className='frDocs-Nav__headers'>{section.name}</li>
-                {sectionRoutes.map(route => (
-                    <li key={route.name}>
-                        <NavLink
-                            activeClassName='frDocs-Nav__item--active'
-                            className='frDocs-Nav__item'
-                            key={route.url}
-                            to={{ pathname: route.url }}>
-                            {route.name}
-                        </NavLink>
-                    </li>
-                ))}
-            </ul>
-        );
-    });
+    onChangeHandler = (event) => {
+        this.setState({
+            query: event.target.value
+        });
+        // eslint-disable-next-line no-console
+        console.log(this.state.searchItems);
+        this.onSearchChange(event.target.value);
+    }
 
-    const onSearchChange = (value) => {
+    onSearchChange = (value) => {
         // eslint-disable-next-line no-console
         console.log(value);
         const searchValue = new RegExp(`${value}`);
-        navItems.filter((navItem) => {
+        const searchResults = this.state.searchItems.filter((navItem) => {
             return searchValue.test(`${navItem.name}`);
         });
-        // eslint-disable-next-line no-console
-        console.log('this is routes file');
+        this.setState({
+            searchItems: searchResults
+        });
     };
 
-    return (
-        <BrowserRouter basename={process.env.PUBLIC_URL}>
-            <div className='frDocs-Container'>
-                <div className='frDocs-Sidebar'>
-                    <h1 className='frDocs-Logo'>FUNDAMENTAL REACT</h1>
-                    <div className='nav-search'>
-                        <NavSearch onChangeHandler={onSearchChange} searchItems={routes} />
+    render() {
+        let sectionRoutes;
+        const groupedRoutes = groupArray(this.state.searchItems, 'section');
+
+        let navItems = sections.sort(sortBy('sortOrder', 'name')).map(section => {
+            if (!groupedRoutes[section.name]) {
+                return;
+            }
+
+            sectionRoutes = groupedRoutes[section.name].sort(sortBy('sortOrder', 'name'));
+            return (
+                <ul className='frDocs-Nav__list' key={section.name}>
+                    <li className='frDocs-Nav__headers'>{section.name}</li>
+                    {sectionRoutes.map(route => (
+                        <li key={route.name}>
+                            <NavLink
+                                activeClassName='frDocs-Nav__item--active'
+                                className='frDocs-Nav__item'
+                                key={route.url}
+                                to={{ pathname: route.url }}>
+                                {route.name}
+                            </NavLink>
+                        </li>
+                    ))}
+                </ul>
+            );
+        });
+        return (
+            <BrowserRouter basename={process.env.PUBLIC_URL}>
+                <div className='frDocs-Container'>
+                    <div className='frDocs-Sidebar'>
+                        <h1 className='frDocs-Logo'>FUNDAMENTAL REACT</h1>
+                        <div className='nav-search'>
+                            <NavSearch onChange={this.onChangeHandler} query={this.state.query} />
+                        </div>
+                        <nav className='frDocs-Nav'>
+                            {navItems}
+                        </nav>
                     </div>
-                    <nav className='frDocs-Nav'>
-                        {/* if search enacted, filter, else */}
-                        {navItems}
-                    </nav>
+                    <div className='frDocs-Content'>
+                        <Switch>
+                            {routes.map(route => {
+                                return (
+                                    <Route
+                                        component={route.component}
+                                        exact
+                                        key={route.url}
+                                        path={route.url} />
+                                );
+                            })}
+                            <Redirect exact from=''
+                                to='/home' />
+                        </Switch>
+                    </div>
                 </div>
-                <div className='frDocs-Content'>
-                    <Switch>
-                        {routes.map(route => {
-                            return (
-                                <Route
-                                    component={route.component}
-                                    exact
-                                    key={route.url}
-                                    path={route.url} />
-                            );
-                        })}
-                        <Redirect exact from=''
-                            to='/home' />
-                    </Switch>
-                </div>
-            </div>
-        </BrowserRouter>
-    );
-};
+            </BrowserRouter>
+        );
+    }
+}
+
