@@ -51,6 +51,7 @@ export class SideNav extends Component {
     }
 }
 
+
 SideNav.propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,
@@ -62,6 +63,8 @@ SideNav.propDescriptions = {
     icons: 'Set to **true** enables side navigation collapsed with icons.',
     selectedId: 'The id of the selected `SideNavListItem`.'
 };
+
+SideNav.displayName = 'SideNav';
 
 export class SideNavList extends React.Component {
     constructor(props) {
@@ -136,6 +139,8 @@ SideNavList.propDescriptions = {
     selectedId: 'Internal use only',
     onItemSelect: 'Internal use only'
 };
+
+SideNavList.displayName = 'SideNavList';
 
 export class SideNavListItem extends React.Component {
     constructor(props) {
@@ -264,6 +269,7 @@ SideNavListItem.propDescriptions = {
     selectedId: 'Internal use only',
     url: 'Creates an internal anchor when a child anchor is not provided.'
 };
+SideNavListItem.displayName = 'SideNavListItem';
 
 SideNavListItem.defaultProps = {
     onClick: () => {}

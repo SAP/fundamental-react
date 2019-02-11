@@ -224,7 +224,7 @@ export class Shellbar extends Component {
                                     alignment='right'
                                     body={
                                         ((notifications.notificationCount > 0) && notifications.notificationsBody) ||
-                                            ((notifications.notificationCount <= 0) && notifications.noNotificationsBody)
+                                        ((notifications.notificationCount <= 0) && notifications.noNotificationsBody)
                                     }
                                     control={
                                         <div className='fd-shellbar__action fd-shellbar__action--collapsible'>
@@ -386,6 +386,7 @@ export class Shellbar extends Component {
         );
     }
 }
+Shellbar.displayName = 'Shellbar';
 
 Shellbar.propTypes = {
     actions: PropTypes.array,

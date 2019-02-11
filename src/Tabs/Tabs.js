@@ -60,6 +60,7 @@ export const Tab = props => {
         </li>
     );
 };
+Tab.displayName = 'Tab';
 
 Tab.propTypes = {
     children: PropTypes.node,
@@ -75,7 +76,7 @@ Tab.propTypes = {
 };
 
 Tab.defaultProps = {
-    onClick: () => {}
+    onClick: () => { }
 };
 
 Tab.propDescriptions = {
@@ -128,6 +129,7 @@ export class TabGroup extends Component {
         );
     }
 }
+TabGroup.displayName = 'TabGroup';
 
 TabGroup.propTypes = {
     children: PropTypes.node,

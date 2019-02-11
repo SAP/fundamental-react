@@ -18,6 +18,7 @@ export const Image = ({ size, type, photo, className, ...props }) => {
             style={{ backgroundImage: 'url(' + photo + ')' }} />
     );
 };
+Image.displayName = 'Image';
 
 Image.propTypes = {
     photo: PropTypes.string.isRequired,
