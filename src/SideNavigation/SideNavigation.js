@@ -135,7 +135,7 @@ SideNavList.propTypes = {
 
 SideNavList.propDescriptions = {
     hasParent: 'Internal use only',
-    open: 'Set to **true** to mark `SideNavSubList` as open.',
+    open: 'Internal use only',
     selectedId: 'Internal use only',
     onItemSelect: 'Internal use only'
 };
@@ -177,6 +177,13 @@ export class SideNavListItem extends React.Component {
             );
         };
 
+        let hasChild = false;
+        React.Children.forEach(children, (child) => {
+            if (React.isValidElement(child) && child.type === SideNavList) {
+                hasChild = true;
+            }
+        });
+
         const renderLink = () => {
             return (
                 <a
@@ -184,7 +191,7 @@ export class SideNavListItem extends React.Component {
                     href={url}
                     onClick={(e) => {
                         onClick(e);
-                        onItemSelect(e, id, hasChild);
+                        !hasChild && onItemSelect(e, id, hasChild);
                         if (hasChild) {
                             this.handleExpand();
                         }
@@ -198,13 +205,6 @@ export class SideNavListItem extends React.Component {
                 </a>
             );
         };
-
-        let hasChild = false;
-        React.Children.forEach(children, (child) => {
-            if (React.isValidElement(child) && child.type === SideNavList) {
-                hasChild = true;
-            }
-        });
 
         return (
             <li {...props}
