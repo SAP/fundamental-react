@@ -37,7 +37,7 @@
     "test:coveralls": "jest --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
     "test:dev": "jest",
     "test:watch": "jest --watch",
-    "test": "node scripts/test.js",
+    "test": "npm run test:watch",
     "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive"
   },
   "dependencies": {
