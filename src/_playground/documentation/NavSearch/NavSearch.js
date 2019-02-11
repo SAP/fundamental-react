@@ -1,12 +1,8 @@
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
+import React from 'react';
 
-export class NavSearch extends Component {
-    constructor(props) {
-        super(props);
-    }
+export const NavSearch = () => {
 
-    render() {
         return (
             <input
                 className='nav-search'

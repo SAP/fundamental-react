@@ -277,27 +277,20 @@ export class Routes extends Component {
 
         this.state = {
             query: '',
-            searchItems: routes
+            searchItems: routes,
+            filteredItems: []
         };
     }
 
     onChangeHandler = (event) => {
+        let searchResults = routes;
+        if (event.target.value !== '') {
+            searchResults = this.state.searchItems.filter((navItem) => {
+                return navItem.name.toLowerCase().includes(event.target.value.toLowerCase());
+            });
+        }
         this.setState({
-            query: event.target.value
-        });
-        // eslint-disable-next-line no-console
-        console.log(this.state.searchItems);
-        this.onSearchChange(event.target.value);
-    }
-
-    onSearchChange = (value) => {
-        // eslint-disable-next-line no-console
-        console.log(value);
-        const searchValue = new RegExp(`${value}`.toLowerCase());
-        const searchResults = this.state.searchItems.filter((navItem) => {
-            return searchValue.test(`${navItem.name}`.toLowerCase());
-        });
-        this.setState({
+            query: event.target.value,
             searchItems: searchResults
         });
     };
