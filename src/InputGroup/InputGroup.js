@@ -59,21 +59,21 @@ export class InputGroup extends Component {
 
     render() {
         const {
-            inputType,
+            actions,
+            addon,
+            addonPos,
+            children,
+            compact,
+            glyph,
             inputId,
             inputName,
             inputPlaceholder,
             inputProps,
+            inputType,
             inputValue,
-            numberUpButtonProps,
             numberDownButtonProps,
+            numberUpButtonProps,
             searchButtonProps,
-            addonPos,
-            addon,
-            glyph,
-            actions,
-            compact,
-            children,
             ...props
         } = this.props;
 
