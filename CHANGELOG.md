@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.3.3-rc.4"></a>
+## [0.3.3-rc.4](https://github.com/SAP/fundamental-react/compare/v0.3.3-rc.3...v0.3.3-rc.4) (2019-02-11)
+
+
+### Bug Fixes
+
+* Refactor SideNavigation to remove React-Router dependency ([#372](https://github.com/SAP/fundamental-react/issues/372)) ([e6d3287](https://github.com/SAP/fundamental-react/commit/e6d3287))
+
+
+
 <a name="0.3.3-rc.3"></a>
 ## [0.3.3-rc.3](https://github.com/SAP/fundamental-react/compare/v0.3.3-rc.2...v0.3.3-rc.3) (2019-02-11)
 
