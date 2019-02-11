@@ -290,7 +290,7 @@ export class Calendar extends Component {
 
     retrieveStartOfWeek = (date) => {
         let day = date.getDay();
-        let difference = date.getDate() - day + (day === 0 ? -6 : 0);
+        let difference = date.getDate() - day;
         return new Date(date.setDate(difference));
     }
 
