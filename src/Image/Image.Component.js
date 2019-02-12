@@ -16,11 +16,11 @@ export const ImageComponent = () => {
             <Description>
                 Use an **Image** component to display images.
             </Description>
-            <Import sourceModule={require('./Image')} />
+            <Import sourceModulePath={require.resolve('./Image')} />
 
             <Separator />
 
-            <Properties sourceModule={require('./Image')} />
+            <Properties sourceModulePath={require.resolve('./Image')} />
 
             <Separator />
 

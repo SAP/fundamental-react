@@ -19,11 +19,11 @@ export const PaginationComponent = () => {
                 display needs to be handled in the function that is passed in
                 the `onClick` method.
             </Description>
-            <Import sourceModule={require('./Pagination')} />
+            <Import sourceModulePath={require.resolve('./Pagination')} />
 
             <Separator />
 
-            <Properties sourceModule={require('./Pagination')} />
+            <Properties sourceModulePath={require.resolve('./Pagination')} />
 
             <Separator />
 

@@ -94,11 +94,11 @@ const clickBackBtn = () => {
                 The **Action Bar** is located at the top of the page and is used for page title and main actions for the
                 page.
             </Description>
-            <Import sourceModule={require('./ActionBar')} />
+            <Import sourceModulePath={require.resolve('./ActionBar')} />
 
             <Separator />
 
-            <Properties sourceModule={require('./ActionBar')} />
+            <Properties sourceModulePath={require.resolve('./ActionBar')} />
 
             <Separator />
 
