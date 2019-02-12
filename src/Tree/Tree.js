@@ -1,6 +1,6 @@
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import shortid from 'shortid';
+import shortid from '../utils/shortId';
 import React, { Component } from 'react';
 
 export class TreeCell extends Component {
