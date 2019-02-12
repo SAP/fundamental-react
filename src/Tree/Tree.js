@@ -86,7 +86,9 @@ TreeHeader.propTypes = {
 };
 
 TreeHeader.propDescriptions = {
-    buttonProps: 'Additional props to be spread to the header expand/collapse `<button>` element.'
+    buttonProps: 'Additional props to be spread to the header expand/collapse `<button>` element.',
+    isExpanded: '_INTERNAL USE ONLY._',
+    onExpandAll: '_INTERNAL USE ONLY._'
 };
 
 export class TreeRow extends Component {
@@ -187,6 +189,12 @@ TreeRow.defaultProps = {
     onExpandClick: () => {}
 };
 
+TreeRow.propDescriptions = {
+    expandData: '_INTERNAL USE ONLY._',
+    level: '_INTERNAL USE ONLY._',
+    onExpandClick: '_INTERNAL USE ONLY._'
+};
+
 export class TreeList extends Component {
     render() {
         const {
@@ -235,6 +243,13 @@ TreeList.propTypes = {
 
 TreeList.defaultProps = {
     level: 0
+};
+
+TreeList.propDescriptions = {
+    expandData: '_INTERNAL USE ONLY._',
+    isExpanded: '_INTERNAL USE ONLY._',
+    level: '_INTERNAL USE ONLY._',
+    onExpandClick: '_INTERNAL USE ONLY._'
 };
 
 export class Tree extends Component {
