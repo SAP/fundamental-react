@@ -1,8 +1,8 @@
 import shortId from 'shortid';
 
-// A passthrough method to prepend cnqr- to every automatically generated ID.
+// A passthrough method to prepend fd- to every automatically generated ID.
 function generate() {
-    return 'cnqr-' + shortId.generate();
+    return 'fd-' + shortId.generate();
 }
 
 export default { generate };
