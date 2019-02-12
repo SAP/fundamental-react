@@ -106,12 +106,10 @@ export class TreeRow extends Component {
         const { onExpandClick } = this.props;
 
         // Generate unique id for row to manage expand/collapse state in parent
-        const id = shortid.generate();
-
-        this.state = { id };
+        this.rowId = shortid.generate();
 
         // Initialize row in parent state
-        onExpandClick(id);
+        onExpandClick(this.rowId);
     }
 
     render() {
@@ -122,10 +120,7 @@ export class TreeRow extends Component {
             onExpandClick,
             ...rest
         } = this.props;
-        const {
-            id
-        } = this.state;
-        const isExpanded = !!expandData[id];
+        const isExpanded = !!expandData[this.rowId];
 
         // Render child TreeLists with correct props
         const childList = React.Children.map(children, (child) => {
@@ -156,11 +151,11 @@ export class TreeRow extends Component {
             const newChildren = isFirstTreeCell && childList[0] ? (
                 <div>
                     <button
-                        aria-controls={id}
+                        aria-controls={this.rowId}
                         aria-label={isExpanded ? 'collapse' : 'expand'}
                         aria-pressed={isExpanded}
                         className='fd-tree__control'
-                        onClick={() => onExpandClick(id)} />
+                        onClick={() => onExpandClick(this.rowId)} />
                     {child.props && child.props.children}
                 </div>
             ) : child.props && child.props.children;
@@ -175,7 +170,7 @@ export class TreeRow extends Component {
                 {...rest}
                 aria-expanded={isExpanded}
                 className='fd-tree__item'
-                id={id}
+                id={this.rowId}
                 role='treeitem'>
                 <div className='fd-tree__row'>
                     {cells}
@@ -274,19 +269,19 @@ export class Tree extends Component {
     }
 
     // Callback for each TreeRow to toggle expand/collapse state
-    toggleExpand = (id) => {
+    toggleExpand = (rowId) => {
         this.setState((prevState) => {
             const {
                 expandData
             } = prevState;
 
             // If value doesn't exist, initialize it to false
-            const newValue = (id in expandData) ? !expandData[id] : false;
+            const newValue = (rowId in expandData) ? !expandData[rowId] : false;
 
             return {
                 expandData: {
                     ...expandData,
-                    [id]: newValue
+                    [rowId]: newValue
                 }
             };
         });
@@ -302,7 +297,7 @@ export class Tree extends Component {
         const newExpandData = {};
 
         // Expand/Collapse all rows
-        Object.keys(expandData).forEach((id) => newExpandData[id] = !isExpandAll);
+        Object.keys(expandData).forEach((rowId) => newExpandData[rowId] = !isExpandAll);
 
         this.setState({
             expandData: newExpandData,
