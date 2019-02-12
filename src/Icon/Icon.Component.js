@@ -655,11 +655,11 @@ export const IconComponent = () => {
                 this point they are used more as visual elements within other
                 components.
             </Description>
-            <Import sourceModule={require('./Icon')} />
+            <Import sourceModulePath={require.resolve('./Icon')} />
 
             <Separator />
 
-            <Properties sourceModule={require('./Icon')} />
+            <Properties sourceModulePath={require.resolve('./Icon')} />
 
             <Separator />
 

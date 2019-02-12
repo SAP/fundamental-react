@@ -48,11 +48,11 @@ export class MultiInputComponent extends Component {
       return (
           <div>
               <Header>Multi Input</Header>
-              <Import sourceModule={require('./MultiInput')} />
+              <Import sourceModulePath={require.resolve('./MultiInput')} />
 
               <Separator />
 
-              <Properties sourceModule={require('./MultiInput')} />
+              <Properties sourceModulePath={require.resolve('./MultiInput')} />
 
               <Separator />
 

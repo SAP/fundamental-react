@@ -135,11 +135,11 @@ content like appearing in a table or list. There may be more than one on the pag
                 instance, the most important button has a blue background where as a red button should only be used if
                 the action it performs is potentially destructive.
             </Description>
-            <Import sourceModule={require('./Button')} />
+            <Import sourceModulePath={require.resolve('./Button')} />
 
             <Separator />
 
-            <Properties sourceModule={require('./Button')} />
+            <Properties sourceModulePath={require.resolve('./Button')} />
 
             <Separator />
 

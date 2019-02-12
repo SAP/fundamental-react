@@ -38,11 +38,11 @@ export const AlertComponent = () => {
             <Description>
                 An **Alert** provides a message within the application that is color-coded to emphasize the level of urgency.
             </Description>
-            <Import sourceModule={require('./Alert')} />
+            <Import sourceModulePath={require.resolve('./Alert')} />
 
             <Separator />
 
-            <Properties sourceModule={require('./Alert')} />
+            <Properties sourceModulePath={require.resolve('./Alert')} />
 
             <Separator />
 

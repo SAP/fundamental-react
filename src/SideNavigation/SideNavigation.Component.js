@@ -231,11 +231,11 @@ export const SideNavigationComponent = () => {
                 The left navigation can always display or expand/collapse using the menu icon within the global
                 navigation.
             </Description>
-            <Import sourceModule={require('./SideNavigation')} />
+            <Import sourceModulePath={require.resolve('./SideNavigation')} />
 
             <Separator />
 
-            <Properties sourceModule={require('./SideNavigation')} />
+            <Properties sourceModulePath={require.resolve('./SideNavigation')} />
 
             <Separator />
 

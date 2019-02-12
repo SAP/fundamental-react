@@ -1,11 +1,14 @@
 import { defaultPropDescriptions } from './defaults';
+import getSourceModule from '../utils/getSourceModule';
 import PropTypes from 'prop-types';
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import sortBy from 'sort-by';
 import { Table } from '../../../Table/Table';
 
-export const Properties = ({ sourceModule }) => {
+export const Properties = ({ sourceModulePath }) => {
+    const sourceModule = getSourceModule(sourceModulePath);
+
     const componentNames = Object.keys(sourceModule).sort();
 
     return (
@@ -28,7 +31,7 @@ export const Properties = ({ sourceModule }) => {
 };
 
 Properties.propTypes = {
-    sourceModule: PropTypes.object.isRequired
+    sourceModulePath: PropTypes.string.isRequired
 };
 
 

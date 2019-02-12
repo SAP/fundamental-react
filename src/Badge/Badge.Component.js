@@ -63,11 +63,11 @@ export const BadgeComponent = () => {
         <div>
             <Header>Status Indicators</Header>
             <Description>Status Indicators are used to easily highlight the state of an object.</Description>
-            <Import sourceModule={require('./Badge')} />
+            <Import sourceModulePath={require.resolve('./Badge')} />
 
             <Separator />
 
-            <Properties sourceModule={require('./Badge')} />
+            <Properties sourceModulePath={require.resolve('./Badge')} />
 
             <Separator />
 

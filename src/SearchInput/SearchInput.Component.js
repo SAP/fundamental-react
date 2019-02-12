@@ -89,11 +89,11 @@ searchData = [
         return (
             <div>
                 <Header>Search Input</Header>
-                <Import sourceModule={require('./SearchInput')} />
+                <Import sourceModulePath={require.resolve('./SearchInput')} />
 
                 <Separator />
 
-                <Properties sourceModule={require('./SearchInput')} />
+                <Properties sourceModulePath={require.resolve('./SearchInput')} />
 
                 <Separator />
 
