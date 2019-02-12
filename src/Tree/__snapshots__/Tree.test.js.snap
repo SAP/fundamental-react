@@ -44,7 +44,7 @@ exports[`<Tree /> create tree component 1`] = `
     role="tree"
   >
     <li
-      aria-expanded="true"
+      aria-expanded={false}
       className="fd-tree__item"
       id="fd-1"
       role="treeitem"
@@ -88,7 +88,7 @@ exports[`<Tree /> create tree component 1`] = `
         role="group"
       >
         <li
-          aria-expanded="true"
+          aria-expanded={false}
           className="fd-tree__item"
           id="fd-2"
           role="treeitem"
@@ -132,7 +132,7 @@ exports[`<Tree /> create tree component 1`] = `
             role="group"
           >
             <li
-              aria-expanded="true"
+              aria-expanded={false}
               className="fd-tree__item"
               id="fd-3"
               role="treeitem"
@@ -176,7 +176,7 @@ exports[`<Tree /> create tree component 1`] = `
                 role="group"
               >
                 <li
-                  aria-expanded="true"
+                  aria-expanded={false}
                   className="fd-tree__item"
                   id="fd-4"
                   role="treeitem"
@@ -211,7 +211,7 @@ exports[`<Tree /> create tree component 1`] = `
           </ul>
         </li>
         <li
-          aria-expanded="true"
+          aria-expanded={false}
           className="fd-tree__item"
           id="fd-5"
           role="treeitem"
@@ -244,7 +244,7 @@ exports[`<Tree /> create tree component 1`] = `
       </ul>
     </li>
     <li
-      aria-expanded="true"
+      aria-expanded={false}
       className="fd-tree__item"
       id="fd-6"
       role="treeitem"
@@ -288,7 +288,7 @@ exports[`<Tree /> create tree component 1`] = `
         role="group"
       >
         <li
-          aria-expanded="true"
+          aria-expanded={false}
           className="fd-tree__item"
           id="fd-7"
           role="treeitem"
@@ -319,7 +319,7 @@ exports[`<Tree /> create tree component 1`] = `
           </div>
         </li>
         <li
-          aria-expanded="true"
+          aria-expanded={false}
           className="fd-tree__item"
           id="fd-8"
           role="treeitem"
@@ -352,7 +352,7 @@ exports[`<Tree /> create tree component 1`] = `
       </ul>
     </li>
     <li
-      aria-expanded="true"
+      aria-expanded={false}
       className="fd-tree__item"
       id="fd-9"
       role="treeitem"
@@ -383,7 +383,7 @@ exports[`<Tree /> create tree component 1`] = `
       </div>
     </li>
     <li
-      aria-expanded="true"
+      aria-expanded={false}
       className="fd-tree__item"
       id="fd-10"
       role="treeitem"
@@ -429,7 +429,7 @@ exports[`<Tree /> create tree component 1`] = `
         role="group"
       >
         <li
-          aria-expanded="true"
+          aria-expanded={false}
           className="fd-tree__item"
           id="fd-11"
           role="treeitem"
@@ -509,7 +509,7 @@ exports[`<Tree /> create tree component 2`] = `
     role="tree"
   >
     <li
-      aria-expanded="true"
+      aria-expanded={false}
       className="fd-tree__item"
       id="fd-12"
       role="treeitem"
@@ -538,7 +538,7 @@ exports[`<Tree /> create tree component 2`] = `
         role="group"
       >
         <li
-          aria-expanded="true"
+          aria-expanded={false}
           className="fd-tree__item"
           id="fd-13"
           role="treeitem"
@@ -580,7 +580,7 @@ exports[`<Tree /> create tree component 2`] = `
             role="group"
           >
             <li
-              aria-expanded="true"
+              aria-expanded={false}
               className="fd-tree__item"
               id="fd-14"
               role="treeitem"
@@ -636,7 +636,7 @@ exports[`<Tree /> create tree component 2`] = `
               </div>
             </li>
             <li
-              aria-expanded="true"
+              aria-expanded={false}
               className="fd-tree__item"
               id="fd-15"
               role="treeitem"
@@ -658,7 +658,7 @@ exports[`<Tree /> create tree component 2`] = `
           </ul>
         </li>
         <li
-          aria-expanded="true"
+          aria-expanded={false}
           className="fd-tree__item"
           id="fd-16"
           role="treeitem"
@@ -696,7 +696,7 @@ exports[`<Tree /> create tree component 2`] = `
             role="group"
           >
             <li
-              aria-expanded="true"
+              aria-expanded={false}
               className="fd-tree__item"
               id="fd-17"
               role="treeitem"

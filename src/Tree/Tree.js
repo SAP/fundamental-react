@@ -65,7 +65,7 @@ export class TreeHeader extends Component {
                                 <div>
                                     <button
                                         {...buttonProps}
-                                        aria-label='expand'
+                                        aria-label={isExpanded ? 'collapse' : 'expand'}
                                         aria-pressed={isExpanded}
                                         className='fd-tree__control'
                                         onClick={onExpandAll} />
@@ -125,6 +125,7 @@ export class TreeRow extends Component {
         const {
             id
         } = this.state;
+        const isExpanded = !!expandData[id];
 
         // Render child TreeLists with correct props
         const childList = React.Children.map(children, (child) => {
@@ -134,7 +135,7 @@ export class TreeRow extends Component {
                 React.cloneElement(child, {
                     expandData,
                     onExpandClick,
-                    isExpanded: !!expandData[id],
+                    isExpanded,
                     // Increment child list level
                     level: level + 1
                 }) :
@@ -156,8 +157,8 @@ export class TreeRow extends Component {
                 <div>
                     <button
                         aria-controls={id}
-                        aria-label='expand'
-                        aria-pressed={!!expandData[id]}
+                        aria-label={isExpanded ? 'collapse' : 'expand'}
+                        aria-pressed={isExpanded}
                         className='fd-tree__control'
                         onClick={() => onExpandClick(id)} />
                     {child.props && child.props.children}
@@ -172,7 +173,7 @@ export class TreeRow extends Component {
         return (
             <li
                 {...rest}
-                aria-expanded='true'
+                aria-expanded={isExpanded}
                 className='fd-tree__item'
                 id={id}
                 role='treeitem'>
@@ -193,6 +194,7 @@ TreeRow.propTypes = {
 };
 
 TreeRow.defaultProps = {
+    expandData: {},
     level: 0,
     onExpandClick: () => {}
 };
@@ -250,6 +252,7 @@ TreeList.propTypes = {
 };
 
 TreeList.defaultProps = {
+    expandData: {},
     level: 0
 };
 
