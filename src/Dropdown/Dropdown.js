@@ -19,6 +19,7 @@ export const Dropdown = props => {
         </div>
     );
 };
+Dropdown.displayName = 'Dropdown';
 
 Dropdown.propTypes = {
     children: PropTypes.node,

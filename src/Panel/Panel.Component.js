@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Image, Menu, MenuItem, MenuList, Panel, PanelActions, PanelBody, PanelFilters, PanelFooter, PanelGrid, PanelHead, PanelHeader, Popover, Tile, TileContent, TileMedia, Token} from '../';
+import { Button, Image, Menu, MenuItem, MenuList, Panel, PanelActions, PanelBody, PanelFilters, PanelFooter, PanelGrid, PanelHead, PanelHeader, Popover, Tile, TileContent, TileMedia, Token } from '../';
 import { DocsText, DocsTile, Header, Import, Properties, Separator } from '../_playground';
 
 export const PanelComponent = () => {

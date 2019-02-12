@@ -1,7 +1,7 @@
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
-import {BADGE_MODIFIERS, BADGE_TYPES, LABEL_TYPES, STATUS_TYPES} from '../utils/constants';
+import { BADGE_MODIFIERS, BADGE_TYPES, LABEL_TYPES, STATUS_TYPES } from '../utils/constants';
 
 
 export const Badge = ({ type, modifier, children, className, ...props }) => {
@@ -20,6 +20,7 @@ export const Badge = ({ type, modifier, children, className, ...props }) => {
         </span>
     );
 };
+Badge.displayName = 'Badge';
 
 Badge.propTypes = {
     className: PropTypes.string,
@@ -38,13 +39,14 @@ export const Label = ({ type, children, className, ...props }) => {
 
     return <span {...props} className={labelClasses}>{children}</span>;
 };
+Label.displayName = 'Label';
 
 Label.propTypes = {
     className: PropTypes.string,
     type: PropTypes.oneOf(LABEL_TYPES)
 };
 
-export const Status = ({ type, glyph, children, className, ...props } ) => {
+export const Status = ({ type, glyph, children, className, ...props }) => {
     const statusClasses = classnames(
         'fd-status-label',
         {
@@ -62,6 +64,8 @@ export const Status = ({ type, glyph, children, className, ...props } ) => {
         </span>
     );
 };
+Status.displayName = 'Status';
+
 Status.propTypes = {
     className: PropTypes.string,
     glyph: PropTypes.string,
@@ -84,6 +88,7 @@ export const Counter = ({ notification, children, className, ...props }) => {
         </span>
     );
 };
+Counter.displayName = 'Counter';
 
 Counter.propTypes = {
     className: PropTypes.string,

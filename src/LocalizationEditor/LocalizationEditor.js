@@ -114,6 +114,7 @@ export const LocalizationEditor = ({ control, menu, id, compact, textarea, class
         </div>
     );
 };
+LocalizationEditor.displayName = 'LocalizationEditor';
 
 LocalizationEditor.propTypes = {
     control: PropTypes.shape({

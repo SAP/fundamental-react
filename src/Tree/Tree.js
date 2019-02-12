@@ -93,12 +93,12 @@ export class TreeRow extends Component {
     constructor(props) {
         super(props);
 
-        const {onExpandClick} = this.props;
+        const { onExpandClick } = this.props;
 
         // Generate unique id for row to manage expand/collapse state in parent
         const id = shortid.generate();
 
-        this.state = {id};
+        this.state = { id };
 
         // Initialize row in parent state
         onExpandClick(id);
@@ -155,7 +155,7 @@ export class TreeRow extends Component {
             ) : child.props && child.props.children;
 
             return isTreeCell ?
-                React.cloneElement(child, {className, children: newChildren}) :
+                React.cloneElement(child, { className, children: newChildren }) :
                 null;
         });
 
@@ -324,6 +324,8 @@ export class Tree extends Component {
         );
     }
 }
+
+Tree.displayName = 'Tree';
 
 Tree.propTypes = {
     children: PropTypes.node

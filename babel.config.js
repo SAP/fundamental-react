@@ -1,3 +1,4 @@
+const path = require('path');
 
 const defaultPresets = [
     '@babel/preset-react',
@@ -24,7 +25,8 @@ const productionPlugins = [
     ],
     [
         '@babel/plugin-transform-react-inline-elements'
-    ]
+    ],
+    path.resolve(__dirname, './devtools/removePropDescriptions.js')
 ];
 
 module.exports = {

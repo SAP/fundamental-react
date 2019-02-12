@@ -31,7 +31,7 @@ export const TokenComponent = () => {
                 <div className='fd-doc__margin--token'>
                     {
                         tagsNames.map((name) => {
-                            return <Token clickHandler={(e) => closeAction(name, e)}>{name}</Token>;
+                            return <Token clickHandler={(e) => closeAction(name, e)} key={name}>{name}</Token>;
                         })
                     }
                 </div>

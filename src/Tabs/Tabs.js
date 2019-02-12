@@ -1,65 +1,121 @@
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import { BrowserRouter, Link } from 'react-router-dom';
 import React, { Component } from 'react';
 
-export const Tabs = props => {
-    const { children, className, ...rest } = props;
+export const Tab = props => {
+    const { children, className, content, disabled, id, onClick, selected, tabContentProps, tabLinkProps, url, ...rest } = props;
 
-    const tabClasses = classnames(
-        'fd-tabs-container',
-        className
+    const linkClasses = classnames(
+        className,
+        'fd-tabs__link',
+        {
+            'is-selected': selected
+        }
     );
+
+    const renderLink = () => {
+        if (url) {
+            return (
+                <a
+                    {...tabLinkProps}
+                    aria-disabled={disabled}
+                    className={linkClasses}
+                    disabled={disabled}
+                    href={url}
+                    onClick={(e) => {
+                        if (!disabled) {
+                            onClick(e);
+                        }
+                    }}>
+                    {children}
+                </a>
+            );
+        } else if (children && React.isValidElement(children)) {
+            return React.cloneElement(children, {
+                ...tabLinkProps,
+                'aria-disabled': disabled,
+                className: linkClasses,
+                disabled: disabled,
+                onClick: (e) => {
+                    if (!disabled) {
+                        onClick(e);
+                    }
+                }
+            });
+        } else if (children) {
+            return children;
+        }
+    };
+
+    const tabClasses = classnames('fd-tabs__item', className);
 
     return (
-        <ul
-            {...rest}
-            className={tabClasses}>
-            {children}
-        </ul>
+        <li {...rest}
+            className={tabClasses}
+            key={id} >
+            {renderLink()}
+            {selected ? (
+                <p {...tabContentProps} className='fd-tabs__content'>{content}</p>
+            ) : null}
+        </li>
     );
 };
+Tab.displayName = 'Tab';
 
-Tabs.propTypes = {
+Tab.propTypes = {
     children: PropTypes.node,
-    className: PropTypes.string
+    className: PropTypes.string,
+    content: PropTypes.node,
+    disabled: PropTypes.bool,
+    id: PropTypes.string,
+    selected: PropTypes.bool,
+    tabContentProps: PropTypes.object,
+    tabLinkProps: PropTypes.object,
+    url: PropTypes.string,
+    onClick: PropTypes.func
 };
 
-export class TabComponent extends Component {
+Tab.defaultProps = {
+    onClick: () => { }
+};
+
+Tab.propDescriptions = {
+    children: 'Can be link text, an achor tag, or a react component like React Routers\'s `Link`.',
+    content: 'Content to render when tab is selected.',
+    selected: 'Set to **true** to mark tab as selected.',
+    url: 'Creates an internal anchor when a child anchor is not provided.',
+    tabContentProps: 'Additional props to be spread to the tab content\'s <p>` element.',
+    tabLinkProps: 'Additional props to be spread to the tab\'s link element.'
+};
+
+export class TabGroup extends Component {
     constructor(props) {
         super(props);
-        let initialStates = [];
 
-        initialStates = props.ids.forEach(ids => {
-            let obj = {};
-            let id = ids.id;
-            obj[id] = false;
-            return obj;
-        });
         this.state = {
-            selectedTab: '1',
-            tabStates: initialStates
+            selectedId: this.props.selectedId
         };
     }
 
     handleTabSelection = (e, id) => {
-        let iStates = Object.assign({}, this.state.tabStates);
-        iStates[id.id] = !iStates[id.id];
-        this.setState({ tabStates: iStates });
-        this.setState({ selectedTab: id.id });
+        this.setState({ selectedId: id });
     };
 
-    getLinkClasses = (id) => {
-        return classnames(
-            'fd-tabs__link',
-            {
-                'is-selected': this.state.selectedTab === id
-            }
-        );
+    renderTabs = (children) => {
+        return React.Children.map(children, (child) => {
+
+            return React.cloneElement(child, {
+                selected: this.state.selectedId === child.props.id,
+                onClick: (e) => {
+                    child.props.onClick && child.props.onClick(e);
+                    this.handleTabSelection(e, child.props.id);
+                }
+            });
+        });
     }
 
     render() {
-        const { ids, className, tabProps, tabLinkProps, tabContentProps, ...rest } = this.props;
+        const { children, className, selectedId, ...rest } = this.props;
 
         const tabClasses = classnames(
             'fd-tabs',
@@ -67,45 +123,21 @@ export class TabComponent extends Component {
         );
 
         return (
-            <BrowserRouter>
-                <ul {...rest} className={tabClasses}>
-                    {ids.map(id => {
-                        return (
-                            <li {...tabProps} className='fd-tabs__item'
-                                key={id.id}>
-                                <Link
-                                    {...tabLinkProps}
-                                    aria-disabled={id.disabled}
-                                    className={this.getLinkClasses(id.id)}
-                                    onClick={e => {
-                                        !id.disabled && this.handleTabSelection(e, id, id.disabled);
-                                    }}
-                                    to={{ pathname: id.url }}>
-                                    {id.name}
-                                </Link>
-                                {this.state.selectedTab === id.id ? (
-                                    <p {...tabContentProps} className='fd-tabs__content'>{id.content}</p>
-                                ) : null}
-                            </li>
-                        );
-                    })}
-                </ul>
-            </BrowserRouter>
+            <ul {...rest} className={tabClasses}>
+                {this.renderTabs(children)}
+            </ul>
         );
     }
 }
+TabGroup.displayName = 'TabGroup';
 
-TabComponent.propTypes = {
-    ids: PropTypes.array.isRequired,
+TabGroup.propTypes = {
+    children: PropTypes.node,
     className: PropTypes.string,
-    tabContentProps: PropTypes.object,
-    tabLinkProps: PropTypes.object,
-    tabProps: PropTypes.object
+    selectedId: PropTypes.string
 };
 
-TabComponent.propDescriptions = {
-    ids: 'An array of objects with keys \'id\', \'url\', \'name\', \'hasChild\', \'child\', and \'glyph\' defining each tab.',
-    tabContentProps: 'Additional props to be spread to the tab\'s content.',
-    tabLinkProps: 'Additional props to be spread to the tab\'s link.',
-    tabProps: 'Additional props to be spread to the tab.'
+TabGroup.propDescriptions = {
+    children: 'One or more `Tab` components to render within the component.',
+    selectedId: 'The `id` of the selected `Tab`.'
 };

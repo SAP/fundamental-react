@@ -10,7 +10,6 @@ import { FormGroup, FormItem, FormLabel, InputGroup } from '../../../';
 import { ListGroup, ListGroupItem, ListGroupItemActions } from '../../../';
 import { ProductTile, ProductTileContent, ProductTileMedia, Tile, TileActions, TileContent, TileMedia } from '../../../';
 import React, { Component } from 'react';
-import { TabComponent, Tabs } from '../../../';
 
 export class Playground extends Component {
     constructor(props) {
@@ -381,11 +380,6 @@ export class Playground extends Component {
                           this.state.childs.buttonText,
                           this.state.currentValues
                       )}
-                      isContextual={this.retrieveValue(
-                          'isContextual',
-                          this.state.childs.isContextual,
-                          this.state.currentValues
-                      )}
                       size={this.retrieveValue(
                           'size',
                           this.state.childs.size,
@@ -432,17 +426,10 @@ export class Playground extends Component {
                       type={this.state.childs.type} />
               );
               break;
-          case 'tabs':
-              componentToGenerate = (
-                  <Tabs>
-                      <TabComponent ids={this.state.childs.children.props.ids} />
-                  </Tabs>
-              );
-              break;
           case 'inputgroup':
               componentToGenerate = (
                   <FormGroup>
-                      <FormLabel labelText='Input with text action' />
+                      <FormLabel>Input with text action</FormLabel>
                       <FormItem>
                           <InputGroup
                               actions
@@ -521,7 +508,7 @@ export class Playground extends Component {
                               </p>
                           </TileContent>
                           <TileActions>
-                              <Dropdown isContextual size='m' />
+                              <Dropdown size='m' />
                           </TileActions>
                       </Tile>
                   );
@@ -538,7 +525,7 @@ export class Playground extends Component {
                                   this.state.currentValues
                               )} />
                           <TileActions>
-                              <Dropdown isContextual size='m' />
+                              <Dropdown size='m' />
                           </TileActions>
                       </Tile>
                   );

@@ -1,46 +1,100 @@
 import { mount } from 'enzyme';
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { TabComponent, Tabs } from './Tabs';
+import { Link, MemoryRouter } from 'react-router-dom';
+import { Tab, TabGroup } from './Tabs';
+
 
 describe('<Tabs />', () => {
-    const defaultIds = [
-        {
-            id: '1',
-            url: '#',
-            name: 'Tab 1',
-            content: 'Hello world',
-            disabled: false
-        },
-        {
-            id: '2',
-            url: '#',
-            name: 'Tab 2',
-            content: 'Hello world 2',
-            disabled: false
-        },
-        {
-            id: '3',
-            url: '#',
-            name: 'Tab 3',
-            content: 'Hello world 3',
-            disabled: true
-        }
-    ];
-
-    const tabComponent = (
-        <TabComponent
-            ids={defaultIds} />
+    const tabsExample = (
+        [
+            <Tab
+                content='Hello world'
+                id='1'
+                key='1'
+                url='#'>
+                Tab 1
+            </Tab>,
+            <Tab
+                content='Hello world 2'
+                id='2'
+                key='2'
+                url='#'>
+                Tab 2
+            </Tab>,
+            <Tab
+                content='Hello world 3'
+                disabled
+                id='3'
+                key='3'>
+                <a href='#'>
+                    Tab 3
+                </a>
+            </Tab>
+        ]
     );
 
-    const tabComponentWithClass = (
-        <TabComponent
+    const tabsExampleWithLink = (
+        [
+            <Tab
+                content='Hello world'
+                id='4'
+                key='4'>
+                <Link to='/'>
+                    Tab 1
+                </Link>
+            </Tab>,
+            <Tab
+                content='Hello world 2'
+                id='5'
+                key='5'>
+                <Link to='/'>
+                    Tab 2
+                </Link>
+            </Tab>,
+            <Tab
+                content='Hello world 3'
+                disabled
+                id='6'
+                key='6'>
+                <Link to='/'>
+                    Tab 3
+                </Link>
+            </Tab>
+        ]
+    );
+
+    const defaultTabs = (
+        <TabGroup
+            selectedId='1'>
+            {tabsExample}
+        </TabGroup>
+    );
+    const defaultTabsWithClass = (
+        <TabGroup
             className='blue'
-            ids={defaultIds} />
+            selectedId='1'>
+            {tabsExample}
+        </TabGroup>
     );
 
-    const defaultTabs = <Tabs>{tabComponent}</Tabs>;
-    const defaultTabsWithClass = <Tabs className='blue'>{tabComponent}</Tabs>;
+    const routerTabs = (
+        <MemoryRouter>
+            <TabGroup
+                selectedId='4'>
+                {tabsExampleWithLink}
+            </TabGroup>
+        </MemoryRouter>
+    );
+    const routerTabsWithClass = (
+        <MemoryRouter>
+            <TabGroup
+                className='blue'
+                selectedId='4'>
+                {tabsExampleWithLink}
+            </TabGroup>
+        </MemoryRouter>
+    );
 
     test('create tabs component', () => {
         let component = renderer.create(defaultTabs);
@@ -51,20 +105,20 @@ describe('<Tabs />', () => {
         tree = component.toJSON();
         expect(tree).toMatchSnapshot();
 
-        component = renderer.create(tabComponent);
+        component = renderer.create(routerTabs);
         tree = component.toJSON();
         expect(tree).toMatchSnapshot();
 
-        component = renderer.create(tabComponentWithClass);
+        component = renderer.create(routerTabsWithClass);
         tree = component.toJSON();
         expect(tree).toMatchSnapshot();
     });
 
     test('tab selection', () => {
-        const wrapper = mount(tabComponent);
+        const wrapper = mount(defaultTabsWithClass);
 
         // check selected tab
-        expect(wrapper.state(['selectedTab'])).toEqual('1');
+        expect(wrapper.state(['selectedId'])).toEqual('1');
 
         wrapper
             .find('ul.fd-tabs li.fd-tabs__item a.fd-tabs__link')
@@ -72,44 +126,48 @@ describe('<Tabs />', () => {
             .simulate('click');
 
         // check selected tab changed
-        expect(wrapper.state(['selectedTab'])).toEqual('2');
+        expect(wrapper.state(['selectedId'])).toEqual('2');
     });
 
     describe('Prop spreading', () => {
         test('should allow props to be spread to the Tabs component', () => {
-            const element = mount(<Tabs data-sample='Sample' />);
+            const element = mount(<Tab data-sample='Sample' id='testId' />);
 
             expect(
                 element.getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
         });
 
-        test('should allow props to be spread to the TabComponent component', () => {
-            const element = mount(<TabComponent data-sample='Sample' ids={defaultIds} />);
+        test('should allow props to be spread to the TabGroup component', () => {
+            const element = mount(<TabGroup data-sample='Sample' />);
 
             expect(
                 element.getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
         });
 
-        test('should allow props to be spread to the TabComponent component\'s li elements', () => {
-            const element = mount(<TabComponent ids={defaultIds} tabProps={{ 'data-sample': 'Sample' }} />);
+        test('should allow props to be spread to the Tab component\'s li elements', () => {
+            const element = mount(<Tab id='testId' {...{ 'data-sample': 'Sample' }} />);
 
             expect(
                 element.find('li').at(0).getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
         });
 
-        test('should allow props to be spread to the TabComponent component\'s content component', () => {
-            const element = mount(<TabComponent ids={defaultIds} tabContentProps={{ 'data-sample': 'Sample' }} />);
+        test('should allow props to be spread to the Tab component\'s content component', () => {
+            const element = mount(<TabGroup selectedId='1'>
+                <Tab id='1' tabContentProps={{ 'data-sample': 'Sample' }} />
+            </TabGroup>
+            );
 
             expect(
                 element.find('li p').at(0).getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
         });
 
-        test('should allow props to be spread to the TabComponent component\'s Link component', () => {
-            const element = mount(<TabComponent ids={defaultIds} tabLinkProps={{ 'data-sample': 'Sample' }} />);
+        test('should allow props to be spread to the TabGroup component\'s Link component', () => {
+            const element = mount(<Tab id='testId' tabLinkProps={{ 'data-sample': 'Sample' }}
+                url='#' />);
 
             expect(
                 element.find('li a').at(0).getDOMNode().attributes['data-sample'].value
