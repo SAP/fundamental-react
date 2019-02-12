@@ -5,4 +5,4 @@ function generate() {
     return 'cnqr-' + shortId.generate();
 }
 
-export default {generate};
+export default { generate };
