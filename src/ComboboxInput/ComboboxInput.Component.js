@@ -40,11 +40,11 @@ export const ComboboxInputComponent = () => {
         <div>
             <Header>Combobox Input</Header>
 
-            <Import sourceModule={require.resolve('./ComboboxInput')} />
+            <Import sourceModulePath={require.resolve('./ComboboxInput')} />
 
             <Separator />
 
-            <Properties sourceModule={require.resolve('./ComboboxInput')} />
+            <Properties sourceModulePath={require.resolve('./ComboboxInput')} />
 
             <Separator />
 

@@ -82,11 +82,11 @@ export const MenuComponent = () => {
                 contents when composing “dropdowns”, “contextual menus”,  etc, when paired with the **Popover**
                 component.
             </Description>
-            <Import sourceModule={require.resolve('./Menu')} />
+            <Import sourceModulePath={require.resolve('./Menu')} />
 
             <Separator />
 
-            <Properties sourceModule={require.resolve('./Menu')} />
+            <Properties sourceModulePath={require.resolve('./Menu')} />
 
             <Separator />
 

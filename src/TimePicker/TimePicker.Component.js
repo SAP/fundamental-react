@@ -13,11 +13,11 @@ export const TimePickerComponent = () => {
             <Description>
                 The **Time Picker** allows the user to easily set a time using the **Time** component.
             </Description>
-            <Import sourceModule={require.resolve('./TimePicker')} />
+            <Import sourceModulePath={require.resolve('./TimePicker')} />
 
             <Separator />
 
-            <Properties sourceModule={require.resolve('./TimePicker')} />
+            <Properties sourceModulePath={require.resolve('./TimePicker')} />
 
             <Separator />
 

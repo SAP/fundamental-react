@@ -97,11 +97,11 @@ export const TabsComponent = () => {
                 metaphor and is used to separate content into different sections.
                 They should be ordered to create a visual hierarchy based on priority.
             </Description>
-            <Import sourceModule={require.resolve('./Tabs')} />
+            <Import sourceModulePath={require.resolve('./Tabs')} />
 
             <Separator />
 
-            <Properties sourceModule={require.resolve('./Tabs')} />
+            <Properties sourceModulePath={require.resolve('./Tabs')} />
 
             <Separator />
 

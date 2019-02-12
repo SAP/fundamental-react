@@ -197,11 +197,11 @@ export const PanelComponent = () => {
     return (
         <div>
             <Header>Panel</Header>
-            <Import sourceModule={require.resolve('./Panel')} />
+            <Import sourceModulePath={require.resolve('./Panel')} />
 
             <Separator />
 
-            <Properties sourceModule={require.resolve('./Panel')} />
+            <Properties sourceModulePath={require.resolve('./Panel')} />
 
             <Separator />
 

@@ -43,11 +43,11 @@ consistent.
                 would be "Active", the toggle state would be “on” and the selected state label displayed to the right of
                 the toggle would be “Yes”.
             </Description>
-            <Import sourceModule={require.resolve('./Toggle')} />
+            <Import sourceModulePath={require.resolve('./Toggle')} />
 
             <Separator />
 
-            <Properties sourceModule={require.resolve('./Toggle')} />
+            <Properties sourceModulePath={require.resolve('./Toggle')} />
 
             <Separator />
 

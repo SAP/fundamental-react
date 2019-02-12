@@ -35,11 +35,11 @@ export const LocalizationEditorComponent = () => {
     return (
         <div>
             <Header>Localization Editor</Header>
-            <Import sourceModule={require.resolve('./LocalizationEditor')} />
+            <Import sourceModulePath={require.resolve('./LocalizationEditor')} />
 
             <Separator />
 
-            <Properties sourceModule={require.resolve('./LocalizationEditor')} />
+            <Properties sourceModulePath={require.resolve('./LocalizationEditor')} />
 
             <Separator />
 

@@ -1,21 +1,21 @@
 import { defaultPropDescriptions } from './defaults';
-import getSourceModules from '../utils/getSourceModules';
+import getSourceModule from '../utils/getSourceModule';
 import PropTypes from 'prop-types';
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import sortBy from 'sort-by';
 import { Table } from '../../../Table/Table';
 
-export const Properties = ({ sourceModule }) => {
-    const sourceModules = getSourceModules(sourceModule);
+export const Properties = ({ sourceModulePath }) => {
+    const sourceModule = getSourceModule(sourceModulePath);
 
-    const componentNames = Object.keys(sourceModules).sort();
+    const componentNames = Object.keys(sourceModule).sort();
 
     return (
         <React.Fragment>
             <h2>Properties</h2>
             {componentNames.map((name, index) => {
-                const component = sourceModules[name];
+                const component = sourceModule[name];
                 return (
                     <React.Fragment key={index}>
                         <h3 className='header'>{name}</h3>
@@ -31,7 +31,7 @@ export const Properties = ({ sourceModule }) => {
 };
 
 Properties.propTypes = {
-    sourceModule: PropTypes.string.isRequired
+    sourceModulePath: PropTypes.string.isRequired
 };
 
 

@@ -16,11 +16,11 @@ export const TimeComponent = () => {
                 to assemble a clock time. A max of four will account for hours, minutes, seconds and meridiem of the day.
                 It is rarely used on its own as a standalone component.
             </Description>
-            <Import sourceModule={require.resolve('./Time')} />
+            <Import sourceModulePath={require.resolve('./Time')} />
 
             <Separator />
 
-            <Properties sourceModule={require.resolve('./Time')} />
+            <Properties sourceModulePath={require.resolve('./Time')} />
 
             <Separator />
 
