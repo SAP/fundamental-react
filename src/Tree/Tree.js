@@ -36,20 +36,27 @@ export class TreeHeader extends Component {
         const {
             buttonProps,
             children,
+            className,
             isExpanded,
             onExpandAll,
             ...rest
         } = this.props;
 
+        const headerClassName = classnames(
+            'fd-tree',
+            'fd-tree--header',
+            className
+        );
+
         return (
-            <div {...rest} className='fd-tree fd-tree--header'>
+            <div {...rest} className={headerClassName}>
                 <div className='fd-tree__row fd-tree__row--header'>
                     {
                         React.Children.map(children, (child, index) => {
                             const isFirstTreeCell = index === 0 && child.type && child.type.name === 'TreeCell';
 
                             // Add control class to first TreeCell element
-                            const className = classnames({
+                            const childClassName = classnames({
                                 'fd-tree__col--control': isFirstTreeCell
                             });
 
@@ -68,7 +75,7 @@ export class TreeHeader extends Component {
 
                             return React.cloneElement(child, {
                                 children: newChildren,
-                                className
+                                className: childClassName
                             });
                         })
                     }
@@ -81,6 +88,7 @@ export class TreeHeader extends Component {
 TreeHeader.propTypes = {
     buttonProps: PropTypes.object,
     children: PropTypes.node,
+    className: PropTypes.string,
     isExpanded: PropTypes.bool,
     onExpandAll: PropTypes.func
 };
