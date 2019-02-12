@@ -322,15 +322,21 @@ export class Routes extends Component {
                 </ul>
             );
         });
+
+        let navHomeSegment = navItems[0];
+        navItems = navItems.splice(1);
+        // eslint-disable-next-line no-console
+        console.log('NAV', navHomeSegment, '2', navItems);
         return (
             <BrowserRouter basename={process.env.PUBLIC_URL}>
                 <div className='frDocs-Container'>
                     <div className='frDocs-Sidebar'>
                         <h1 className='frDocs-Logo'>FUNDAMENTAL REACT</h1>
-                        <div className='nav-search'>
-                            <NavSearch onChange={this.onChangeHandler} query={this.state.query} />
-                        </div>
                         <nav className='frDocs-Nav'>
+                            {navHomeSegment}
+                            <div className='nav-search'>
+                                <NavSearch onChange={this.onChangeHandler} query={this.state.query} />
+                            </div>
                             {navItems}
                         </nav>
                     </div>
