@@ -15,13 +15,13 @@ import { IconComponent } from '../Icon/Icon.Component';
 import { IdentifierComponent } from '../Identifier/Identifier.Component';
 import { ImageComponent } from '../Image/Image.Component';
 import { InlineHelpComponent } from '../InlineHelp/InlineHelp.Component';
+import { InputGroup } from '../InputGroup/InputGroup';
 import { InputGroupComponent } from '../InputGroup/InputGroup.Component';
 import { ListGroupComponent } from '../ListGroup/ListGroup.Component';
 import { LocalizationEditorComponent } from '../LocalizationEditor/LocalizationEditor.Component';
 import { MenuComponent } from '../Menu/Menu.Component';
 import { ModalComponent } from '../Modal/Modal.Component';
 import { MultiInputComponent } from '../MultiInput/MultiInput.Component';
-import { NavSearch } from './documentation/NavSearch/NavSearch';
 import { PaginationComponent } from '../Pagination/Pagination.Component';
 import { PanelComponent } from '../Panel/Panel.Component';
 import { PopoverComponent } from '../Popover/Popover.Component';
@@ -332,7 +332,9 @@ export class Routes extends Component {
                         <h1 className='frDocs-Logo'>FUNDAMENTAL REACT</h1>
                         <nav className='frDocs-Nav'>
                             {navHomeSegment}
-                            <NavSearch onChange={this.onChangeHandler} query={this.state.query} />
+                            {/* <NavSearch onChange={this.onChangeHandler} query={this.state.query} /> */}
+                            <InputGroup inputType='search' onChange={this.onChangeHandler}
+                                searchValue={this.state.query} />
                             {navItems}
                         </nav>
                     </div>
