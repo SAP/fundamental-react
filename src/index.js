@@ -60,7 +60,7 @@ export { TileMedia } from './Tile/Tile';
 export { TileActions } from './Tile/Tile';
 export { TileGrid } from './Tile/Tile';
 export { Toggle } from './Toggle/Toggle';
-export { TreeView, TreeCell, TreeHeader, TreeList, TreeRow } from './Tree/Tree';
+export { TreeView, TreeCell, TreeHeader, TreeList, TreeRow } from './TreeView/TreeView';
 export { Time } from './Time/Time';
 export { TimePicker } from './TimePicker/TimePicker';
 export { Shellbar } from './Shellbar/Shellbar';

@@ -124,11 +124,11 @@ export const TreeViewComponent = () => {
                 a single top-most node is called a "root" node. Apart from the hierarchical structure of its nodes
                 and leaves, a tree is similar to a list.
             </Description>
-            <Import sourceModule={require('./Tree')} />
+            <Import sourceModule={require('./TreeView')} />
 
             <Separator />
 
-            <Properties sourceModule={require('./Tree')} />
+            <Properties sourceModule={require('./TreeView')} />
 
             <Separator />
 

@@ -1,7 +1,7 @@
 import { mount } from 'enzyme';
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { TreeCell, TreeHeader, TreeList, TreeRow, TreeView } from './Tree';
+import { TreeCell, TreeHeader, TreeList, TreeRow, TreeView } from './TreeView';
 
 // mock shortid for snapshot testing
 jest.mock('shortid', () => {
