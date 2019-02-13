@@ -274,16 +274,22 @@ const routes = [
 export class Routes extends Component {
     constructor(props) {
         super(props);
-
+        //TODO: state should HOLD sortOrder 1 items for filter exclusions...
         this.state = {
             query: '',
             searchItems: routes,
             filteredItems: []
         };
     }
+
     // FIXME: search is wonky, GS links/nav head disappear
     onChangeHandler = (event) => {
         let searchResults = routes;
+        let freezeItem = this.state.searchItems.filter((navItem) => {
+            if (navItem.sortOrder === 1) {
+                return navItem;
+            }
+        });
         if (event.target.value !== '') {
             searchResults = this.state.searchItems.filter((navItem) => {
                 return navItem.name.toLowerCase().includes(event.target.value.toLowerCase());
@@ -291,17 +297,17 @@ export class Routes extends Component {
         }
         this.setState({
             query: event.target.value,
-            filteredItems: searchResults
+            filteredItems: [...freezeItem, ...searchResults]
         });
         // eslint-disable-next-line no-console
-        console.log(this.state.filteredItems);
+        console.log(freezeItem);
     };
 
     render() {
         let sectionRoutes;
         let routedItems;
         this.state.query === '' ? routedItems = routes : routedItems = this.state.filteredItems;
-        const groupedRoutes = groupArray(routedItems, 'section'); //searchItems state, needs filtered? could be reason not working w bs
+        const groupedRoutes = groupArray(routedItems, 'section');
 
         let navItems = sections.sort(sortBy('sortOrder', 'name')).map(section => {
             if (!groupedRoutes[section.name]) {

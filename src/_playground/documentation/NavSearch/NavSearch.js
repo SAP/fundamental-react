@@ -14,9 +14,7 @@ export const NavSearch = (props) => {
     );
 };
 
-
 NavSearch.propTypes = {
     query: PropTypes.string,
     onChange: PropTypes.func
 };
-
