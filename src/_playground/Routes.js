@@ -276,20 +276,18 @@ export class Routes extends Component {
         super(props);
         this.state = {
             query: '',
-            searchItems: routes,
-            filteredItems: []
+            filteredItems: routes
         };
     }
 
     onChangeHandler = (event) => {
-        let searchResults = this.state.searchItems.filter((navItem) => {
+        let searchResults = routes.filter((navItem) => {
             return navItem.sortOrder === 1 ? navItem : navItem.name.toLowerCase().includes(event.target.value.toLowerCase());
         });
         this.setState({
             query: event.target.value,
             filteredItems: [...searchResults]
         });
-
     };
 
     render() {
@@ -324,6 +322,13 @@ export class Routes extends Component {
 
         let navHomeSegment = navItems[0];
         navItems = navItems.splice(1);
+        const noItemsFound = (
+            <ul className='frDocs-Nav__list'>
+                <li className='frDocs-Nav__headers'>
+                    No results found.
+                </li>
+            </ul>
+        );
 
         return (
             <BrowserRouter basename={process.env.PUBLIC_URL}>
@@ -332,10 +337,13 @@ export class Routes extends Component {
                         <h1 className='frDocs-Logo'>FUNDAMENTAL REACT</h1>
                         <nav className='frDocs-Nav'>
                             {navHomeSegment}
-                            {/* <NavSearch onChange={this.onChangeHandler} query={this.state.query} /> */}
-                            <InputGroup inputType='search' onChange={this.onChangeHandler}
-                                searchValue={this.state.query} />
-                            {navItems}
+                            <InputGroup
+                                inputId='frDocs-Nav__search'
+                                inputPlaceholder='Search'
+                                inputType='search'
+                                inputValue={this.state.query}
+                                onChange={this.onChangeHandler} />
+                            {this.state.filteredItems.length === 1 ? noItemsFound : navItems}
                         </nav>
                     </div>
                     <div className='frDocs-Content'>

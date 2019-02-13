@@ -3,6 +3,7 @@ $fd-fonts-path: '../../node_modules/fiori-fundamentals/dist/fonts/';
 @import '../../node_modules/fiori-fundamentals/scss/all.scss';
 
 // Fundamental React Docs Styles
+
 .frDocs-App {
     background-color: white;
 
@@ -34,12 +35,6 @@ $fd-fonts-path: '../../node_modules/fiori-fundamentals/dist/fonts/';
                 border-top: 2px solid #dbe7f3;
                 height: 90%;
                 overflow: auto;
-
-                .frDocs-nav__search {
-                //     background: hotpink;
-                    padding: 10px;
-                    margin: 5px;
-                }
 
                 .frDocs-Nav__list {
                     list-style: none;
@@ -73,6 +68,7 @@ $fd-fonts-path: '../../node_modules/fiori-fundamentals/dist/fonts/';
                 }
             }
         }
+
 
         .frDocs-Content {
             flex-grow: 1;
