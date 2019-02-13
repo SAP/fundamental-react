@@ -35,6 +35,10 @@ $fd-fonts-path: '../../node_modules/fiori-fundamentals/dist/fonts/';
                 height: 90%;
                 overflow: auto;
 
+                .frDocs-nav__search {
+                    background: hotpink;
+                }
+
                 .frDocs-Nav__list {
                     list-style: none;
                 }

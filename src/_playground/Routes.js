@@ -274,7 +274,6 @@ const routes = [
 export class Routes extends Component {
     constructor(props) {
         super(props);
-        //TODO: state should HOLD sortOrder 1 items for filter exclusions...
         this.state = {
             query: '',
             searchItems: routes,
@@ -282,25 +281,15 @@ export class Routes extends Component {
         };
     }
 
-    // FIXME: search is wonky, GS links/nav head disappear
     onChangeHandler = (event) => {
-        let searchResults = routes;
-        let freezeItem = this.state.searchItems.filter((navItem) => {
-            if (navItem.sortOrder === 1) {
-                return navItem;
-            }
+        let searchResults = this.state.searchItems.filter((navItem) => {
+            return navItem.sortOrder === 1 ? navItem : navItem.name.toLowerCase().includes(event.target.value.toLowerCase());
         });
-        if (event.target.value !== '') {
-            searchResults = this.state.searchItems.filter((navItem) => {
-                return navItem.name.toLowerCase().includes(event.target.value.toLowerCase());
-            });
-        }
         this.setState({
             query: event.target.value,
-            filteredItems: [...freezeItem, ...searchResults]
+            filteredItems: [...searchResults]
         });
-        // eslint-disable-next-line no-console
-        console.log(freezeItem);
+
     };
 
     render() {
@@ -343,9 +332,7 @@ export class Routes extends Component {
                         <h1 className='frDocs-Logo'>FUNDAMENTAL REACT</h1>
                         <nav className='frDocs-Nav'>
                             {navHomeSegment}
-                            <div className='nav-search'>
-                                <NavSearch onChange={this.onChangeHandler} query={this.state.query} />
-                            </div>
+                            <NavSearch onChange={this.onChangeHandler} query={this.state.query} />
                             {navItems}
                         </nav>
                     </div>

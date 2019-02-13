@@ -5,7 +5,8 @@ export const NavSearch = (props) => {
 
     return (
         <input
-            className='nav-search'
+            autoComplete='off'
+            className='frDocs-nav__search'
             name='search'
             onChange={props.onChange}
             placeholder='Search'
