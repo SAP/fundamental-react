@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import shortid from '../utils/shortId';
 import React, { Component } from 'react';
 
-export class TreeCell extends Component {
+export class TreeCol extends Component {
     render() {
         const {
             children,
@@ -26,7 +26,7 @@ export class TreeCell extends Component {
     }
 }
 
-TreeCell.propTypes = {
+TreeCol.propTypes = {
     children: PropTypes.node,
     className: PropTypes.string
 };
@@ -53,15 +53,15 @@ export class TreeHead extends Component {
                 <div className='fd-tree__row fd-tree__row--header'>
                     {
                         React.Children.map(children, (child, index) => {
-                            const isFirstTreeCell = index === 0 && child.type && child.type.name === 'TreeCell';
+                            const isFirstTreeCol = index === 0 && child.type && child.type.name === 'TreeCol';
 
-                            // Add control class to first TreeCell element
+                            // Add control class to first TreeCol element
                             const childClassName = classnames({
-                                'fd-tree__col--control': isFirstTreeCell
+                                'fd-tree__col--control': isFirstTreeCol
                             });
 
-                            // Add expand button to first TreeCell element
-                            const newChildren = isFirstTreeCell ? (
+                            // Add expand button to first TreeCol element
+                            const newChildren = isFirstTreeCol ? (
                                 <div>
                                     <button
                                         {...buttonProps}
@@ -137,18 +137,18 @@ export class TreeRow extends Component {
                 null;
         });
 
-        // Render child TreeCells
+        // Render child TreeCols
         const cells = React.Children.map(children, (child, index) => {
-            const isTreeCell = child.type && child.type.name === 'TreeCell';
-            const isFirstTreeCell = index === 0 && isTreeCell;
+            const isTreeCol = child.type && child.type.name === 'TreeCol';
+            const isFirstTreeCol = index === 0 && isTreeCol;
 
-            // Add control class to first TreeCell element
+            // Add control class to first TreeCol element
             const className = classnames({
-                'fd-tree__col--control': isFirstTreeCell
+                'fd-tree__col--control': isFirstTreeCol
             });
 
             // Add expand button to first TableCell if parent list
-            const newChildren = isFirstTreeCell && childList[0] ? (
+            const newChildren = isFirstTreeCol && childList[0] ? (
                 <div>
                     <button
                         aria-controls={this.rowId}
@@ -160,7 +160,7 @@ export class TreeRow extends Component {
                 </div>
             ) : child.props && child.props.children;
 
-            return isTreeCell ?
+            return isTreeCol ?
                 React.cloneElement(child, { className, children: newChildren }) :
                 null;
         });
