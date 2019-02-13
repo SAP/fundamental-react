@@ -45,7 +45,8 @@
   "dependencies": {
     "classnames": "^2.2.6",
     "fiori-fundamentals": "^1.4.0",
-    "focus-trap-react": "^6.0.0"
+    "focus-trap-react": "^6.0.0",
+    "prop-types": "^15.7.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.1.5",
