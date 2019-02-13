@@ -258,7 +258,7 @@ TreeList.propDescriptions = {
     onExpandClick: '_INTERNAL USE ONLY._'
 };
 
-export class Tree extends Component {
+export class TreeView extends Component {
     constructor(props) {
         super(props);
 
@@ -346,8 +346,8 @@ export class Tree extends Component {
     }
 }
 
-Tree.displayName = 'Tree';
+TreeView.displayName = 'TreeView';
 
-Tree.propTypes = {
+TreeView.propTypes = {
     children: PropTypes.node
 };

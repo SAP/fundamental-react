@@ -1,10 +1,10 @@
 import React from 'react';
 import { Description, DocsText, DocsTile, Header, Import, Properties, Separator } from '../_playground';
-import { Tree, TreeCell, TreeHeader, TreeList, TreeRow } from '../';
+import { TreeCell, TreeHeader, TreeList, TreeRow, TreeView } from '../';
 
-export const TreeComponent = () => {
-    const treeCode = `
-<Tree>
+export const TreeViewComponent = () => {
+    const treeViewCode = `
+<TreeView>
     <TreeHeader>
         <TreeCell>Column Header 1</TreeCell>
         <TreeCell>Column Header 2</TreeCell>
@@ -89,10 +89,10 @@ export const TreeComponent = () => {
             </TreeList>
         </TreeRow>
     </TreeList>
-</Tree>`;
+</TreeView>`;
 
-    const treeCodeRich = `
-<Tree>
+    const treeViewCodeRich = `
+<TreeView>
     <TreeHeader>
         <TreeCell>Column Header 1</TreeCell>
         <TreeCell>Column Header 2</TreeCell>
@@ -112,14 +112,14 @@ export const TreeComponent = () => {
             </TreeList>
         </TreeRow>
     </TreeList>
-</Tree>`;
+</TreeView>`;
 
 
     return (
         <div>
-            <Header>Tree</Header>
+            <Header>TreeView</Header>
             <Description>
-                A **Tree** is used to display data in a visual hierarchy. Items that contain additional items
+                A **TreeView** is used to display data in a visual hierarchy. Items that contain additional items
                 are called nodes, while items that do not contain any other items are called leaves. If available,
                 a single top-most node is called a "root" node. Apart from the hierarchical structure of its nodes
                 and leaves, a tree is similar to a list.
@@ -132,9 +132,9 @@ export const TreeComponent = () => {
 
             <Separator />
 
-            <h2>Tree with multiple levels and actions</h2>
+            <h2>TreeView with multiple levels and actions</h2>
             <DocsTile>
-                <Tree>
+                <TreeView>
                     <TreeHeader>
                         <TreeCell>Column Header 1</TreeCell>
                         <TreeCell>Column Header 2</TreeCell>
@@ -219,18 +219,18 @@ export const TreeComponent = () => {
                             </TreeList>
                         </TreeRow>
                     </TreeList>
-                </Tree>
+                </TreeView>
             </DocsTile>
-            <DocsText>{treeCode}</DocsText>
+            <DocsText>{treeViewCode}</DocsText>
 
             <Separator />
 
-            <h2>Rich Tree</h2>
+            <h2>Rich TreeView</h2>
             <Description>
-                This is an example of a tree with "rich" cells.
+                This is an example of a tree view with "rich" cells.
             </Description>
             <DocsTile>
-                <Tree>
+                <TreeView>
                     <TreeHeader>
                         <TreeCell>Column Header 1</TreeCell>
                         <TreeCell>Column Header 2</TreeCell>
@@ -250,9 +250,9 @@ export const TreeComponent = () => {
                             </TreeList>
                         </TreeRow>
                     </TreeList>
-                </Tree>
+                </TreeView>
             </DocsTile>
-            <DocsText>{treeCodeRich}</DocsText>
+            <DocsText>{treeViewCodeRich}</DocsText>
         </div>
     );
 };

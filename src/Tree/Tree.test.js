@@ -1,7 +1,7 @@
 import { mount } from 'enzyme';
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { Tree, TreeCell, TreeHeader, TreeList, TreeRow } from './Tree';
+import { TreeCell, TreeHeader, TreeList, TreeRow, TreeView } from './Tree';
 
 // mock shortid for snapshot testing
 jest.mock('shortid', () => {
@@ -12,9 +12,9 @@ jest.mock('shortid', () => {
     };
 });
 
-describe('<Tree />', () => {
-    const multiLevelTree = (
-        <Tree>
+describe('<TreeView />', () => {
+    const multiLevelTreeView = (
+        <TreeView>
             <TreeHeader>
                 <TreeCell>Column Header 1</TreeCell>
                 <TreeCell>Column Header 2</TreeCell>
@@ -99,11 +99,11 @@ describe('<Tree />', () => {
                     </TreeList>
                 </TreeRow>
             </TreeList>
-        </Tree>
+        </TreeView>
     );
 
-    const richTree = (
-        <Tree>
+    const richTreeView = (
+        <TreeView>
             <TreeHeader>
                 <TreeCell>Column Header 1</TreeCell>
                 <TreeCell>Column Header 2</TreeCell>
@@ -146,23 +146,23 @@ describe('<Tree />', () => {
                     </TreeList>
                 </TreeRow>
             </TreeList>
-        </Tree>
+        </TreeView>
     );
 
     test('create tree component', () => {
         // multi-level tree
-        let component = renderer.create(multiLevelTree);
+        let component = renderer.create(multiLevelTreeView);
         let tree = component.toJSON();
         expect(tree).toMatchSnapshot();
 
         // rich tree
-        component = renderer.create(richTree);
+        component = renderer.create(richTreeView);
         tree = component.toJSON();
         expect(tree).toMatchSnapshot();
     });
 
     test('open all tree from header', () => {
-        const wrapper = mount(richTree);
+        const wrapper = mount(richTreeView);
 
         wrapper
             .find('button.fd-tree__control')
@@ -177,7 +177,7 @@ describe('<Tree />', () => {
     });
 
     test('closed all tree from header when set to open', () => {
-        const wrapper = mount(richTree);
+        const wrapper = mount(richTreeView);
 
         wrapper
             .find('button.fd-tree__control')
@@ -203,7 +203,7 @@ describe('<Tree />', () => {
     });
 
     test('expand tree from row', () => {
-        const wrapper = mount(multiLevelTree);
+        const wrapper = mount(multiLevelTreeView);
         const parent = wrapper.find('li.fd-tree__item').at(0);
         const button = parent.find('button.fd-tree__control').at(0);
 
@@ -215,7 +215,7 @@ describe('<Tree />', () => {
     });
 
     test('collapse tree from row', () => {
-        const wrapper = mount(multiLevelTree);
+        const wrapper = mount(multiLevelTreeView);
         const parent = wrapper.find('li.fd-tree__item').at(0);
         const button = parent.find('button.fd-tree__control').at(0);
 
@@ -233,9 +233,9 @@ describe('<Tree />', () => {
     });
 
     describe('Prop spreading', () => {
-        test('should allow props to be spread to the Tree component', () => {
+        test('should allow props to be spread to the TreeView component', () => {
             const element = mount(
-                <Tree
+                <TreeView
                     data-sample='Sample' />);
 
             expect(
