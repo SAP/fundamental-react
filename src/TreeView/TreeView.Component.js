@@ -1,16 +1,16 @@
 import React from 'react';
 import { Description, DocsText, DocsTile, Header, Import, Properties, Separator } from '../_playground';
-import { TreeCell, TreeHeader, TreeList, TreeRow, TreeView } from '../';
+import { TreeCell, TreeHead, TreeList, TreeRow, TreeView } from '../';
 
 export const TreeViewComponent = () => {
     const treeViewCode = `
 <TreeView>
-    <TreeHeader>
+    <TreeHead>
         <TreeCell>Column Header 1</TreeCell>
         <TreeCell>Column Header 2</TreeCell>
         <TreeCell>Column Header 3</TreeCell>
         <TreeCell>Column Header 4</TreeCell>
-    </TreeHeader>
+    </TreeHead>
     <TreeList>
         <TreeRow>
             <TreeCell>Row 1</TreeCell>
@@ -93,12 +93,12 @@ export const TreeViewComponent = () => {
 
     const treeViewCodeRich = `
 <TreeView>
-    <TreeHeader>
+    <TreeHead>
         <TreeCell>Column Header 1</TreeCell>
         <TreeCell>Column Header 2</TreeCell>
         <TreeCell>Column Header 3</TreeCell>
         <TreeCell>Column Header 4</TreeCell>
-    </TreeHeader>
+    </TreeHead>
     <TreeList>
         <TreeRow>
             <TreeCell>Row 1</TreeCell>
@@ -135,12 +135,12 @@ export const TreeViewComponent = () => {
             <h2>TreeView with multiple levels and actions</h2>
             <DocsTile>
                 <TreeView>
-                    <TreeHeader>
+                    <TreeHead>
                         <TreeCell>Column Header 1</TreeCell>
                         <TreeCell>Column Header 2</TreeCell>
                         <TreeCell>Column Header 3</TreeCell>
                         <TreeCell>Column Header 4</TreeCell>
-                    </TreeHeader>
+                    </TreeHead>
                     <TreeList>
                         <TreeRow>
                             <TreeCell>Row 1</TreeCell>
@@ -231,12 +231,12 @@ export const TreeViewComponent = () => {
             </Description>
             <DocsTile>
                 <TreeView>
-                    <TreeHeader>
+                    <TreeHead>
                         <TreeCell>Column Header 1</TreeCell>
                         <TreeCell>Column Header 2</TreeCell>
                         <TreeCell>Column Header 3</TreeCell>
                         <TreeCell>Column Header 4</TreeCell>
-                    </TreeHeader>
+                    </TreeHead>
                     <TreeList>
                         <TreeRow>
                             <TreeCell>Row 1</TreeCell>

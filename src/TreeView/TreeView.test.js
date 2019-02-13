@@ -1,7 +1,7 @@
 import { mount } from 'enzyme';
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { TreeCell, TreeHeader, TreeList, TreeRow, TreeView } from './TreeView';
+import { TreeCell, TreeHead, TreeList, TreeRow, TreeView } from './TreeView';
 
 // mock shortid for snapshot testing
 jest.mock('shortid', () => {
@@ -15,12 +15,12 @@ jest.mock('shortid', () => {
 describe('<TreeView />', () => {
     const multiLevelTreeView = (
         <TreeView>
-            <TreeHeader>
+            <TreeHead>
                 <TreeCell>Column Header 1</TreeCell>
                 <TreeCell>Column Header 2</TreeCell>
                 <TreeCell>Column Header 3</TreeCell>
                 <TreeCell>Column Header 4</TreeCell>
-            </TreeHeader>
+            </TreeHead>
             <TreeList>
                 <TreeRow>
                     <TreeCell>First Level</TreeCell>
@@ -104,12 +104,12 @@ describe('<TreeView />', () => {
 
     const richTreeView = (
         <TreeView>
-            <TreeHeader>
+            <TreeHead>
                 <TreeCell>Column Header 1</TreeCell>
                 <TreeCell>Column Header 2</TreeCell>
                 <TreeCell>Column Header 3</TreeCell>
                 <TreeCell>Column Header 4</TreeCell>
-            </TreeHeader>
+            </TreeHead>
             <TreeList>
                 <TreeRow>
                     <TreeCell>First Level</TreeCell>
@@ -243,9 +243,9 @@ describe('<TreeView />', () => {
             ).toBe('Sample');
         });
 
-        test('should allow props to be spread to the TreeHeader component', () => {
+        test('should allow props to be spread to the TreeHead component', () => {
             const element = mount(
-                <TreeHeader
+                <TreeHead
                     data-sample='Sample' />);
 
             expect(
@@ -273,9 +273,9 @@ describe('<TreeView />', () => {
             ).toBe('Sample');
         });
 
-        test('should allow props to be spread to the TreeHeader component', () => {
+        test('should allow props to be spread to the TreeHead component', () => {
             const element = mount(
-                <TreeHeader
+                <TreeHead
                     data-sample='Sample' />);
 
             expect(
@@ -283,14 +283,14 @@ describe('<TreeView />', () => {
             ).toBe('Sample');
         });
 
-        test('should allow props to be spread to the TreeHeader component\'s button element', () => {
+        test('should allow props to be spread to the TreeHead component\'s button element', () => {
             const element = mount(
-                <TreeHeader
+                <TreeHead
                     buttonProps={{
                         'data-sample': 'Sample'
                     }}>
                     <TreeCell />
-                </TreeHeader>
+                </TreeHead>
             );
 
             expect(

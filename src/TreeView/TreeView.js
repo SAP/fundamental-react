@@ -31,7 +31,7 @@ TreeCell.propTypes = {
     className: PropTypes.string
 };
 
-export class TreeHeader extends Component {
+export class TreeHead extends Component {
     render() {
         const {
             buttonProps,
@@ -85,7 +85,7 @@ export class TreeHeader extends Component {
     }
 }
 
-TreeHeader.propTypes = {
+TreeHead.propTypes = {
     buttonProps: PropTypes.object,
     children: PropTypes.node,
     className: PropTypes.string,
@@ -93,7 +93,7 @@ TreeHeader.propTypes = {
     onExpandAll: PropTypes.func
 };
 
-TreeHeader.propDescriptions = {
+TreeHead.propDescriptions = {
     buttonProps: 'Additional props to be spread to the header expand/collapse `<button>` element.',
     isExpanded: '_INTERNAL USE ONLY._',
     onExpandAll: '_INTERNAL USE ONLY._'
@@ -287,7 +287,7 @@ export class TreeView extends Component {
         });
     }
 
-    // Callback for TreeHeader to toggle expand/collapse all state
+    // Callback for TreeHead to toggle expand/collapse all state
     toggleExpandAll = () => {
         const {
             expandData,
@@ -319,11 +319,11 @@ export class TreeView extends Component {
             <div {...rest}>
                 {
                     React.Children.map(children, (child) => {
-                        const isTreeHeader = child.type && child.type.name === 'TreeHeader';
+                        const isTreeHead = child.type && child.type.name === 'TreeHead';
                         const isTreeList = child.type && child.type.name === 'TreeList';
 
-                        if (isTreeHeader) {
-                            // Pass expand all callbacks to TreeHeader
+                        if (isTreeHead) {
+                            // Pass expand all callbacks to TreeHead
                             return React.cloneElement(child, {
                                 onExpandAll: this.toggleExpandAll,
                                 isExpanded: isExpandAll
