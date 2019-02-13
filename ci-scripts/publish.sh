@@ -19,4 +19,5 @@ npm run release:create -- --repo $TRAVIS_REPO_SLUG --tag $release_tag --branch m
 
 npm publish
 
-npm run deploy
+npm run build-doc
+npm run deploy -- --repo "https://$GH_TOKEN@github.com/$TRAVIS_REPO_SLUG"
