@@ -9,6 +9,7 @@ export const NavSearch = (props) => {
             name='search'
             onChange={props.onChange}
             placeholder='Search'
+            type='text'
             value={props.query} />
     );
 };

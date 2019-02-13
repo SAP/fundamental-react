@@ -281,7 +281,7 @@ export class Routes extends Component {
             filteredItems: []
         };
     }
-
+    // FIXME: search is wonky, GS links/nav head disappear
     onChangeHandler = (event) => {
         let searchResults = routes;
         if (event.target.value !== '') {
@@ -291,13 +291,17 @@ export class Routes extends Component {
         }
         this.setState({
             query: event.target.value,
-            searchItems: searchResults
+            filteredItems: searchResults
         });
+        // eslint-disable-next-line no-console
+        console.log(this.state.filteredItems);
     };
 
     render() {
         let sectionRoutes;
-        const groupedRoutes = groupArray(this.state.searchItems, 'section');
+        let routedItems;
+        this.state.query === '' ? routedItems = routes : routedItems = this.state.filteredItems;
+        const groupedRoutes = groupArray(routedItems, 'section'); //searchItems state, needs filtered? could be reason not working w bs
 
         let navItems = sections.sort(sortBy('sortOrder', 'name')).map(section => {
             if (!groupedRoutes[section.name]) {
@@ -325,8 +329,7 @@ export class Routes extends Component {
 
         let navHomeSegment = navItems[0];
         navItems = navItems.splice(1);
-        // eslint-disable-next-line no-console
-        console.log('NAV', navHomeSegment, '2', navItems);
+
         return (
             <BrowserRouter basename={process.env.PUBLIC_URL}>
                 <div className='frDocs-Container'>
