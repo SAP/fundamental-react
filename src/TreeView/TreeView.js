@@ -122,11 +122,11 @@ export class TreeRow extends Component {
         } = this.props;
         const isExpanded = !!expandData[this.rowId];
 
-        // Render child TreeLists with correct props
+        // Render child TreeBranches with correct props
         const childList = React.Children.map(children, (child) => {
-            const isTreeList = child.type && child.type.name === 'TreeList';
+            const isTree = child.type && child.type.name === 'Tree';
 
-            return isTreeList ?
+            return isTree ?
                 React.cloneElement(child, {
                     expandData,
                     onExpandClick,
@@ -200,7 +200,7 @@ TreeRow.propDescriptions = {
     onExpandClick: '_INTERNAL USE ONLY._'
 };
 
-export class TreeList extends Component {
+export class Tree extends Component {
     render() {
         const {
             children,
@@ -238,7 +238,7 @@ export class TreeList extends Component {
     }
 }
 
-TreeList.propTypes = {
+Tree.propTypes = {
     children: PropTypes.node,
     expandData: PropTypes.object,
     isExpanded: PropTypes.bool,
@@ -246,12 +246,12 @@ TreeList.propTypes = {
     onExpandClick: PropTypes.func
 };
 
-TreeList.defaultProps = {
+Tree.defaultProps = {
     expandData: {},
     level: 0
 };
 
-TreeList.propDescriptions = {
+Tree.propDescriptions = {
     expandData: '_INTERNAL USE ONLY._',
     isExpanded: '_INTERNAL USE ONLY._',
     level: '_INTERNAL USE ONLY._',
@@ -320,7 +320,7 @@ export class TreeView extends Component {
                 {
                     React.Children.map(children, (child) => {
                         const isTreeHead = child.type && child.type.name === 'TreeHead';
-                        const isTreeList = child.type && child.type.name === 'TreeList';
+                        const isTree = child.type && child.type.name === 'Tree';
 
                         if (isTreeHead) {
                             // Pass expand all callbacks to TreeHead
@@ -330,8 +330,8 @@ export class TreeView extends Component {
                             });
                         }
 
-                        if (isTreeList) {
-                            // Pass expand callbacks to TreeList's
+                        if (isTree) {
+                            // Pass expand callbacks to TreeBranches
                             return React.cloneElement(child, {
                                 expandData,
                                 onExpandClick: this.toggleExpand

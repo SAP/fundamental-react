@@ -1,7 +1,7 @@
 import { mount } from 'enzyme';
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { TreeCell, TreeHead, TreeList, TreeRow, TreeView } from './TreeView';
+import { Tree, TreeCell, TreeHead, TreeRow, TreeView } from './TreeView';
 
 // mock shortid for snapshot testing
 jest.mock('shortid', () => {
@@ -21,34 +21,34 @@ describe('<TreeView />', () => {
                 <TreeCell>Column Header 3</TreeCell>
                 <TreeCell>Column Header 4</TreeCell>
             </TreeHead>
-            <TreeList>
+            <Tree>
                 <TreeRow>
                     <TreeCell>First Level</TreeCell>
                     <TreeCell>Data Col 2</TreeCell>
                     <TreeCell>Data Col 3</TreeCell>
                     <TreeCell>Data Col 4</TreeCell>
-                    <TreeList>
+                    <Tree>
                         <TreeRow>
                             <TreeCell>Child 1</TreeCell>
                             <TreeCell>Data Col 2</TreeCell>
                             <TreeCell>Data Col 3</TreeCell>
                             <TreeCell>Data Col 4</TreeCell>
-                            <TreeList>
+                            <Tree>
                                 <TreeRow>
                                     <TreeCell>Grandchild 1</TreeCell>
                                     <TreeCell>Data Col 2</TreeCell>
                                     <TreeCell>Data Col 3</TreeCell>
                                     <TreeCell>Data Col 4</TreeCell>
-                                    <TreeList>
+                                    <Tree>
                                         <TreeRow>
                                             <TreeCell>GreatGrandchild 1</TreeCell>
                                             <TreeCell>Data Col 2</TreeCell>
                                             <TreeCell>Data Col 3</TreeCell>
                                             <TreeCell>Data Col 4</TreeCell>
                                         </TreeRow>
-                                    </TreeList>
+                                    </Tree>
                                 </TreeRow>
-                            </TreeList>
+                            </Tree>
                         </TreeRow>
                         <TreeRow>
                             <TreeCell>Child 2</TreeCell>
@@ -56,14 +56,14 @@ describe('<TreeView />', () => {
                             <TreeCell>Data Col 3</TreeCell>
                             <TreeCell>Data Col 4</TreeCell>
                         </TreeRow>
-                    </TreeList>
+                    </Tree>
                 </TreeRow>
                 <TreeRow>
                     <TreeCell>Row 2</TreeCell>
                     <TreeCell>Data Col 2</TreeCell>
                     <TreeCell>Data Col 3</TreeCell>
                     <TreeCell>Data Col 4</TreeCell>
-                    <TreeList>
+                    <Tree>
                         <TreeRow>
                             <TreeCell>Child 1</TreeCell>
                             <TreeCell>Data Col 2</TreeCell>
@@ -76,7 +76,7 @@ describe('<TreeView />', () => {
                             <TreeCell>Data Col 3</TreeCell>
                             <TreeCell>Data Col 4</TreeCell>
                         </TreeRow>
-                    </TreeList>
+                    </Tree>
                 </TreeRow>
                 <TreeRow>
                     <TreeCell>Row 3</TreeCell>
@@ -89,16 +89,16 @@ describe('<TreeView />', () => {
                     <TreeCell>Data Col 2</TreeCell>
                     <TreeCell>Data Col 3</TreeCell>
                     <TreeCell>Data Col 4</TreeCell>
-                    <TreeList>
+                    <Tree>
                         <TreeRow>
                             <TreeCell>Child 1</TreeCell>
                             <TreeCell>Data Col 2</TreeCell>
                             <TreeCell>Data Col 3</TreeCell>
                             <TreeCell>Data Col 4</TreeCell>
                         </TreeRow>
-                    </TreeList>
+                    </Tree>
                 </TreeRow>
-            </TreeList>
+            </Tree>
         </TreeView>
     );
 
@@ -110,16 +110,16 @@ describe('<TreeView />', () => {
                 <TreeCell>Column Header 3</TreeCell>
                 <TreeCell>Column Header 4</TreeCell>
             </TreeHead>
-            <TreeList>
+            <Tree>
                 <TreeRow>
                     <TreeCell>First Level</TreeCell>
-                    <TreeList>
+                    <Tree>
                         <TreeRow>
                             <TreeCell><a href='http://me.com'>First Level</a></TreeCell>
                             <TreeCell />
                             <TreeCell />
                             <TreeCell />
-                            <TreeList>
+                            <Tree>
                                 <TreeRow>
                                     <TreeCell><a href='http://amazon.com'>Amazon</a></TreeCell>
                                     <TreeCell><a href='http://google.com'>Google</a></TreeCell>
@@ -130,22 +130,22 @@ describe('<TreeView />', () => {
                                 <TreeRow>
                                     <TreeCell><a href='http://amazon.com'>Amazon</a></TreeCell>
                                 </TreeRow>
-                            </TreeList>
+                            </Tree>
                         </TreeRow>
                         <TreeRow>
                             <TreeCell>Second Level</TreeCell>
                             <TreeCell />
                             <TreeCell />
                             <TreeCell />
-                            <TreeList>
+                            <Tree>
                                 <TreeRow>
                                     <TreeCell><a href='http://amazon.com'>Amazon</a></TreeCell>
                                 </TreeRow>
-                            </TreeList>
+                            </Tree>
                         </TreeRow>
-                    </TreeList>
+                    </Tree>
                 </TreeRow>
-            </TreeList>
+            </Tree>
         </TreeView>
     );
 
@@ -253,9 +253,9 @@ describe('<TreeView />', () => {
             ).toBe('Sample');
         });
 
-        test('should allow props to be spread to the TreeList component', () => {
+        test('should allow props to be spread to the Tree component', () => {
             const element = mount(
-                <TreeList
+                <Tree
                     data-sample='Sample' />);
 
             expect(

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Description, DocsText, DocsTile, Header, Import, Properties, Separator } from '../_playground';
-import { TreeCell, TreeHead, TreeList, TreeRow, TreeView } from '../';
+import { Tree, TreeCell, TreeHead, TreeRow, TreeView } from '../';
 
 export const TreeViewComponent = () => {
     const treeViewCode = `
@@ -11,34 +11,34 @@ export const TreeViewComponent = () => {
         <TreeCell>Column Header 3</TreeCell>
         <TreeCell>Column Header 4</TreeCell>
     </TreeHead>
-    <TreeList>
+    <Tree>
         <TreeRow>
             <TreeCell>Row 1</TreeCell>
             <TreeCell>Data Col 2</TreeCell>
             <TreeCell>Data Col 3</TreeCell>
             <TreeCell>Data Col 4</TreeCell>
-            <TreeList>
+            <Tree>
                 <TreeRow>
                     <TreeCell>Child 1</TreeCell>
                     <TreeCell>Data Col 2</TreeCell>
                     <TreeCell>Data Col 3</TreeCell>
                     <TreeCell>Data Col 4</TreeCell>
-                    <TreeList>
+                    <Tree>
                         <TreeRow>
                             <TreeCell>Grandchild 1</TreeCell>
                             <TreeCell>Data Col 2</TreeCell>
                             <TreeCell>Data Col 3</TreeCell>
                             <TreeCell>Data Col 4</TreeCell>
-                            <TreeList>
+                            <Tree>
                                 <TreeRow>
                                     <TreeCell>Great Grandchild 1</TreeCell>
                                     <TreeCell>Data Col 2</TreeCell>
                                     <TreeCell>Data Col 3</TreeCell>
                                     <TreeCell>Data Col 4</TreeCell>
                                 </TreeRow>
-                            </TreeList>
+                            </Tree>
                         </TreeRow>
-                    </TreeList>
+                    </Tree>
                 </TreeRow>
                 <TreeRow>
                     <TreeCell>Child 2</TreeCell>
@@ -46,14 +46,14 @@ export const TreeViewComponent = () => {
                     <TreeCell>Data Col 3</TreeCell>
                     <TreeCell>Data Col 4</TreeCell>
                 </TreeRow>
-            </TreeList>
+            </Tree>
         </TreeRow>
         <TreeRow>
             <TreeCell>Row 2</TreeCell>
             <TreeCell>Data Col 2</TreeCell>
             <TreeCell>Data Col 3</TreeCell>
             <TreeCell>Data Col 4</TreeCell>
-            <TreeList>
+            <Tree>
                 <TreeRow>
                     <TreeCell>Child 1</TreeCell>
                     <TreeCell>Data Col 2</TreeCell>
@@ -66,7 +66,7 @@ export const TreeViewComponent = () => {
                     <TreeCell>Data Col 3</TreeCell>
                     <TreeCell>Data Col 4</TreeCell>
                 </TreeRow>
-            </TreeList>
+            </Tree>
         </TreeRow>
         <TreeRow>
             <TreeCell>Row 3</TreeCell>
@@ -79,16 +79,16 @@ export const TreeViewComponent = () => {
             <TreeCell>Data Col 2</TreeCell>
             <TreeCell>Data Col 3</TreeCell>
             <TreeCell>Data Col 4</TreeCell>
-            <TreeList>
+            <Tree>
                 <TreeRow>
                     <TreeCell>Child 1</TreeCell>
                     <TreeCell>Data Col 2</TreeCell>
                     <TreeCell>Data Col 3</TreeCell>
                     <TreeCell>Data Col 4</TreeCell>
                 </TreeRow>
-            </TreeList>
+            </Tree>
         </TreeRow>
-    </TreeList>
+    </Tree>
 </TreeView>`;
 
     const treeViewCodeRich = `
@@ -99,19 +99,19 @@ export const TreeViewComponent = () => {
         <TreeCell>Column Header 3</TreeCell>
         <TreeCell>Column Header 4</TreeCell>
     </TreeHead>
-    <TreeList>
+    <Tree>
         <TreeRow>
             <TreeCell>Row 1</TreeCell>
-            <TreeList>
+            <Tree>
                 <TreeRow>
                     <TreeCell />
                     <TreeCell><a href='http://www.google.com'>Google</a></TreeCell>
                     <TreeCell><a href='http://www.bing.com'>Bing</a></TreeCell>
                     <TreeCell><a href='http://www.yahoo.com'>Yahoo</a></TreeCell>
                 </TreeRow>
-            </TreeList>
+            </Tree>
         </TreeRow>
-    </TreeList>
+    </Tree>
 </TreeView>`;
 
 
@@ -141,34 +141,34 @@ export const TreeViewComponent = () => {
                         <TreeCell>Column Header 3</TreeCell>
                         <TreeCell>Column Header 4</TreeCell>
                     </TreeHead>
-                    <TreeList>
+                    <Tree>
                         <TreeRow>
                             <TreeCell>Row 1</TreeCell>
                             <TreeCell>Data Col 2</TreeCell>
                             <TreeCell>Data Col 3</TreeCell>
                             <TreeCell>Data Col 4</TreeCell>
-                            <TreeList>
+                            <Tree>
                                 <TreeRow>
                                     <TreeCell>Child 1</TreeCell>
                                     <TreeCell>Data Col 2</TreeCell>
                                     <TreeCell>Data Col 3</TreeCell>
                                     <TreeCell>Data Col 4</TreeCell>
-                                    <TreeList>
+                                    <Tree>
                                         <TreeRow>
                                             <TreeCell>Grandchild 1</TreeCell>
                                             <TreeCell>Data Col 2</TreeCell>
                                             <TreeCell>Data Col 3</TreeCell>
                                             <TreeCell>Data Col 4</TreeCell>
-                                            <TreeList>
+                                            <Tree>
                                                 <TreeRow>
                                                     <TreeCell>Great Grandchild 1</TreeCell>
                                                     <TreeCell>Data Col 2</TreeCell>
                                                     <TreeCell>Data Col 3</TreeCell>
                                                     <TreeCell>Data Col 4</TreeCell>
                                                 </TreeRow>
-                                            </TreeList>
+                                            </Tree>
                                         </TreeRow>
-                                    </TreeList>
+                                    </Tree>
                                 </TreeRow>
                                 <TreeRow>
                                     <TreeCell>Child 2</TreeCell>
@@ -176,14 +176,14 @@ export const TreeViewComponent = () => {
                                     <TreeCell>Data Col 3</TreeCell>
                                     <TreeCell>Data Col 4</TreeCell>
                                 </TreeRow>
-                            </TreeList>
+                            </Tree>
                         </TreeRow>
                         <TreeRow>
                             <TreeCell>Row 2</TreeCell>
                             <TreeCell>Data Col 2</TreeCell>
                             <TreeCell>Data Col 3</TreeCell>
                             <TreeCell>Data Col 4</TreeCell>
-                            <TreeList>
+                            <Tree>
                                 <TreeRow>
                                     <TreeCell>Child 1</TreeCell>
                                     <TreeCell>Data Col 2</TreeCell>
@@ -196,7 +196,7 @@ export const TreeViewComponent = () => {
                                     <TreeCell>Data Col 3</TreeCell>
                                     <TreeCell>Data Col 4</TreeCell>
                                 </TreeRow>
-                            </TreeList>
+                            </Tree>
                         </TreeRow>
                         <TreeRow>
                             <TreeCell>Row 3</TreeCell>
@@ -209,16 +209,16 @@ export const TreeViewComponent = () => {
                             <TreeCell>Data Col 2</TreeCell>
                             <TreeCell>Data Col 3</TreeCell>
                             <TreeCell>Data Col 4</TreeCell>
-                            <TreeList>
+                            <Tree>
                                 <TreeRow>
                                     <TreeCell>Child 1</TreeCell>
                                     <TreeCell>Data Col 2</TreeCell>
                                     <TreeCell>Data Col 3</TreeCell>
                                     <TreeCell>Data Col 4</TreeCell>
                                 </TreeRow>
-                            </TreeList>
+                            </Tree>
                         </TreeRow>
-                    </TreeList>
+                    </Tree>
                 </TreeView>
             </DocsTile>
             <DocsText>{treeViewCode}</DocsText>
@@ -237,19 +237,19 @@ export const TreeViewComponent = () => {
                         <TreeCell>Column Header 3</TreeCell>
                         <TreeCell>Column Header 4</TreeCell>
                     </TreeHead>
-                    <TreeList>
+                    <Tree>
                         <TreeRow>
                             <TreeCell>Row 1</TreeCell>
-                            <TreeList>
+                            <Tree>
                                 <TreeRow>
                                     <TreeCell />
                                     <TreeCell><a href='http://www.google.com'>Google</a></TreeCell>
                                     <TreeCell><a href='http://www.bing.com'>Bing</a></TreeCell>
                                     <TreeCell><a href='http://www.yahoo.com'>Yahoo</a></TreeCell>
                                 </TreeRow>
-                            </TreeList>
+                            </Tree>
                         </TreeRow>
-                    </TreeList>
+                    </Tree>
                 </TreeView>
             </DocsTile>
             <DocsText>{treeViewCodeRich}</DocsText>
