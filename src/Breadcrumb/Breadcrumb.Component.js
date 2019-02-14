@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import path from 'path';
 import React from 'react';
 import { Breadcrumb, BreadcrumbItem } from '../';
 import { Description, DocsText, DocsTile, Header, Import, Properties, Separator } from '../_playground';
@@ -30,11 +31,11 @@ export const BreadcrumbComponent = () => {
                 to previous levels in the path. When clicking on the current page, a dropdown allows users to access
                 other pages at that same level.
             </Description>
-            <Import sourceModulePath={require.resolve('./Breadcrumb')} />
+            <Import sourceModulePath={path.join(__dirname, './Breadcrumb')} />
 
             <Separator />
 
-            <Properties sourceModulePath={require.resolve('./Breadcrumb')} />
+            <Properties sourceModulePath={path.join(__dirname, './Breadcrumb')} />
 
             <Separator />
 

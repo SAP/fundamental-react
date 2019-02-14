@@ -1,3 +1,4 @@
+import path from 'path';
 import React from 'react';
 import { Description, DocsText, DocsTile, Header, Import, Properties, Separator } from '../_playground';
 import { FormFieldset, FormInput, FormItem, FormLabel, FormLegend, FormMessage, FormRadio, FormSelect, FormSet, FormTextarea } from '../';
@@ -272,11 +273,11 @@ Along with Invalid and Warning, error messages should be displayed below the fie
                 Form elements include field layout, checkboxes, radio buttons and states of a field. Use these
                 components along with inline help and error state.
             </Description>
-            <Import sourceModulePath={require.resolve('./Forms')} />
+            <Import sourceModulePath={path.join(__dirname, './Forms')} />
 
             <Separator />
 
-            <Properties sourceModulePath={require.resolve('./Forms')} />
+            <Properties sourceModulePath={path.join(__dirname, './Forms')} />
 
             <Separator />
 

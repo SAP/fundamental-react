@@ -1,4 +1,5 @@
 import { Calendar } from '../';
+import path from 'path';
 import React from 'react';
 import { Description, DocsText, DocsTile, Header, Import, Properties, Separator } from '../_playground';
 
@@ -15,11 +16,11 @@ export const CalendarComponent = () => {
             The **Calendar** is commonly used as the contents of a **Popover** when composing a **Date Picker**.
             It is rarely used on its own as a standalone component.
         </Description>
-        <Import sourceModulePath={require.resolve('./Calendar')} />
+        <Import sourceModulePath={path.join(__dirname, './Calendar')} />
 
         <Separator />
 
-        <Properties sourceModulePath={require.resolve('./Calendar')} />
+        <Properties sourceModulePath={path.join(__dirname, './Calendar')} />
 
         <Separator />
 

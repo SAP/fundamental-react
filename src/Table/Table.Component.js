@@ -1,4 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
+import path from 'path';
 import React from 'react';
 import { Button, Image, Menu, MenuItem, MenuList, Popover, Table } from '../';
 import { Description, DocsText, DocsTile, Header, Import, Properties, Separator } from '../_playground';
@@ -128,11 +129,11 @@ export const TableComponent = () => {
             <Description>
                 A **Table** is a set of tabular data. Line items can support `data`, `images` and `actions`.
             </Description>
-            <Import sourceModulePath={require.resolve('./Table')} />
+            <Import sourceModulePath={path.join(__dirname, './Table')} />
 
             <Separator />
 
-            <Properties sourceModulePath={require.resolve('./Table')} />
+            <Properties sourceModulePath={path.join(__dirname, './Table')} />
 
             <Separator />
 

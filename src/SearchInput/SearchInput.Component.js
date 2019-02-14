@@ -1,3 +1,4 @@
+import path from 'path';
 import { SearchInput } from './SearchInput';
 import { DocsText, DocsTile, Header, Import, Properties, Separator } from '../_playground';
 import React, { Component } from 'react';
@@ -89,11 +90,11 @@ searchData = [
         return (
             <div>
                 <Header>Search Input</Header>
-                <Import sourceModulePath={require.resolve('./SearchInput')} />
+                <Import sourceModulePath={path.join(__dirname, './SearchInput')} />
 
                 <Separator />
 
-                <Properties sourceModulePath={require.resolve('./SearchInput')} />
+                <Properties sourceModulePath={path.join(__dirname, './SearchInput')} />
 
                 <Separator />
 
