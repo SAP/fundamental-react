@@ -15,7 +15,6 @@ import { IconComponent } from '../Icon/Icon.Component';
 import { IdentifierComponent } from '../Identifier/Identifier.Component';
 import { ImageComponent } from '../Image/Image.Component';
 import { InlineHelpComponent } from '../InlineHelp/InlineHelp.Component';
-import { InputGroup } from '../InputGroup/InputGroup';
 import { InputGroupComponent } from '../InputGroup/InputGroup.Component';
 import { ListGroupComponent } from '../ListGroup/ListGroup.Component';
 import { LocalizationEditorComponent } from '../LocalizationEditor/LocalizationEditor.Component';
@@ -25,6 +24,7 @@ import { MultiInputComponent } from '../MultiInput/MultiInput.Component';
 import { PaginationComponent } from '../Pagination/Pagination.Component';
 import { PanelComponent } from '../Panel/Panel.Component';
 import { PopoverComponent } from '../Popover/Popover.Component';
+import React from 'react';
 import { SearchInputComponent } from '../SearchInput/SearchInput.Component';
 import { ShellbarComponent } from '../Shellbar/Shellbar.Component';
 import { SideNavigationComponent } from '../SideNavigation/SideNavigation.Component';
@@ -38,7 +38,6 @@ import { ToggleComponent } from '../Toggle/Toggle.Component';
 import { TokenComponent } from '../Token/Token.Component';
 import { TreeComponent } from '../Tree/Tree.Component';
 import { BrowserRouter, NavLink, Redirect, Route, Switch } from 'react-router-dom';
-import React, { Component } from 'react';
 
 const sections = [
     {
@@ -271,99 +270,59 @@ const routes = [
     }
 ];
 
-export class Routes extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            query: '',
-            filteredItems: routes
-        };
-    }
+export const Routes = () => {
+    let sectionRoutes;
+    const groupedRoutes = groupArray(routes, 'section');
 
-    onChangeHandler = (event) => {
-        let searchResults = routes.filter((navItem) => {
-            return navItem.sortOrder === 1 ? navItem : navItem.name.toLowerCase().includes(event.target.value.toLowerCase());
-        });
-        this.setState({
-            query: event.target.value,
-            filteredItems: [...searchResults]
-        });
-    };
+    const navItems = sections.sort(sortBy('sortOrder', 'name')).map(section => {
+        if (!groupedRoutes[section.name]) {
+            return;
+        }
 
-    render() {
-        let sectionRoutes;
-        let routedItems;
-        this.state.query === '' ? routedItems = routes : routedItems = this.state.filteredItems;
-        const groupedRoutes = groupArray(routedItems, 'section');
-
-        let navItems = sections.sort(sortBy('sortOrder', 'name')).map(section => {
-            if (!groupedRoutes[section.name]) {
-                return;
-            }
-
-            sectionRoutes = groupedRoutes[section.name].sort(sortBy('sortOrder', 'name'));
-            return (
-                <ul className='frDocs-Nav__list' key={section.name}>
-                    <li className='frDocs-Nav__headers'>{section.name}</li>
-                    {sectionRoutes.map(route => (
-                        <li key={route.name}>
-                            <NavLink
-                                activeClassName='frDocs-Nav__item--active'
-                                className='frDocs-Nav__item'
-                                key={route.url}
-                                to={{ pathname: route.url }}>
-                                {route.name}
-                            </NavLink>
-                        </li>
-                    ))}
-                </ul>
-            );
-        });
-
-        let navHomeSegment = navItems[0];
-        navItems = navItems.splice(1);
-        const noItemsFound = (
-            <ul className='frDocs-Nav__list'>
-                <li className='frDocs-Nav__headers'>
-                    No results found.
-                </li>
+        sectionRoutes = groupedRoutes[section.name].sort(sortBy('sortOrder', 'name'));
+        return (
+            <ul className='frDocs-Nav__list' key={section.name}>
+                <li className='frDocs-Nav__headers'>{section.name}</li>
+                {sectionRoutes.map(route => (
+                    <li key={route.name}>
+                        <NavLink
+                            activeClassName='frDocs-Nav__item--active'
+                            className='frDocs-Nav__item'
+                            key={route.url}
+                            to={{ pathname: route.url }}>
+                            {route.name}
+                        </NavLink>
+                    </li>
+                ))}
             </ul>
         );
+    });
 
-        return (
-            <BrowserRouter basename={process.env.PUBLIC_URL}>
-                <div className='frDocs-Container'>
-                    <div className='frDocs-Sidebar'>
-                        <h1 className='frDocs-Logo'>FUNDAMENTAL REACT</h1>
-                        <nav className='frDocs-Nav'>
-                            {navHomeSegment}
-                            <InputGroup
-                                inputId='frDocs-Nav__search'
-                                inputPlaceholder='Search'
-                                inputType='search'
-                                inputValue={this.state.query}
-                                onChange={this.onChangeHandler} />
-                            {this.state.filteredItems.length === 1 ? noItemsFound : navItems}
-                        </nav>
-                    </div>
-                    <div className='frDocs-Content'>
-                        <Switch>
-                            {routes.map(route => {
-                                return (
-                                    <Route
-                                        component={route.component}
-                                        exact
-                                        key={route.url}
-                                        path={route.url} />
-                                );
-                            })}
-                            <Redirect exact from=''
-                                to='/home' />
-                        </Switch>
-                    </div>
+    return (
+        <BrowserRouter basename={process.env.PUBLIC_URL}>
+            <div className='frDocs-Container'>
+                <div className='frDocs-Sidebar'>
+                    <h1 className='frDocs-Logo'>FUNDAMENTAL REACT</h1>
+                    <nav className='frDocs-Nav'>
+                        {navItems}
+                    </nav>
                 </div>
-            </BrowserRouter>
-        );
-    }
-}
-
+                <div className='frDocs-Content'>
+                    <Switch>
+                        {routes.map(route => {
+                            return (
+                                <Route
+                                    component={route.component}
+                                    exact
+                                    key={route.url}
+                                    path={route.url} />
+                            );
+                        })}
+                        <Redirect exact from=''
+                            to='/home' />
+                    </Switch>
+                </div>
+            </div>
+        </BrowserRouter>
+    );
+};
