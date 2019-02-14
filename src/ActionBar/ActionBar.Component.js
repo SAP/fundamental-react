@@ -1,3 +1,4 @@
+import path from 'path';
 import React from 'react';
 import { ActionBar, ActionBarActions, ActionBarBack, ActionBarHeader, Button, Menu, MenuItem, MenuList, Popover } from '../';
 import { Description, DocsText, DocsTile, Header, Import, Properties, Separator } from '../_playground';
@@ -94,11 +95,11 @@ const clickBackBtn = () => {
                 The **Action Bar** is located at the top of the page and is used for page title and main actions for the
                 page.
             </Description>
-            <Import sourceModulePath={require.resolve('./ActionBar')} />
+            <Import sourceModulePath={path.join(__dirname, './ActionBar')} />
 
             <Separator />
 
-            <Properties sourceModulePath={require.resolve('./ActionBar')} />
+            <Properties sourceModulePath={path.join(__dirname, './ActionBar')} />
 
             <Separator />
 

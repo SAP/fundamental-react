@@ -1,3 +1,4 @@
+import path from 'path';
 import React from 'react';
 import { Description, DocsText, DocsTile, Header, Import, Properties, Separator } from '../_playground';
 import { Link, MemoryRouter } from 'react-router-dom';
@@ -97,11 +98,11 @@ export const TabsComponent = () => {
                 metaphor and is used to separate content into different sections.
                 They should be ordered to create a visual hierarchy based on priority.
             </Description>
-            <Import sourceModulePath={require.resolve('./Tabs')} />
+            <Import sourceModulePath={path.join(__dirname, './Tabs')} />
 
             <Separator />
 
-            <Properties sourceModulePath={require.resolve('./Tabs')} />
+            <Properties sourceModulePath={path.join(__dirname, './Tabs')} />
 
             <Separator />
 

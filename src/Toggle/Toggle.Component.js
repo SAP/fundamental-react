@@ -1,3 +1,4 @@
+import path from 'path';
 import React from 'react';
 import { Toggle } from '../';
 import { Description, DocsText, DocsTile, Header, Import, Properties, Separator } from '../_playground';
@@ -43,11 +44,11 @@ consistent.
                 would be "Active", the toggle state would be “on” and the selected state label displayed to the right of
                 the toggle would be “Yes”.
             </Description>
-            <Import sourceModulePath={require.resolve('./Toggle')} />
+            <Import sourceModulePath={path.join(__dirname, './Toggle')} />
 
             <Separator />
 
-            <Properties sourceModulePath={require.resolve('./Toggle')} />
+            <Properties sourceModulePath={path.join(__dirname, './Toggle')} />
 
             <Separator />
 
