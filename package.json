@@ -20,7 +20,7 @@
     "build:index": "babel-node devtools/buildIndexFiles.js",
     "config:lint": "eslint 'config/**' --ext .js,.jsx --env browser,node",
     "config:lint:fix": "eslint --fix 'config/**' --ext .js,.jsx --env browser,node",
-    "deploy": "npm run build-doc && gh-pages -d build",
+    "deploy": "gh-pages -d build",
     "devtools:lint": "eslint 'devtools/**' --ext .js,.jsx --env browser,node",
     "lint:fix": "npm run build:lint:fix  && npm run scripts:lint:fix",
     "lint:pre-commit": "printf \"running pre-commit lint...\"  && npm run lint && printf \"done!\n\"",
