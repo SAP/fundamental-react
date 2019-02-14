@@ -33,10 +33,6 @@ const clickBtnHandler = btn => {
     Approve
 </Button>
 
-<Button  option="emphasized"  type="medium" glyph="alert">
-    Review
- </Button>
-
 <Button option="emphasized" type="negative" glyph="decline">
     Reject
 </Button>
@@ -49,9 +45,7 @@ const clickBtnHandler = btn => {
 
 <Button option="emphasized" type="positive" glyph="accept" />
 
-<Button option="emphasized" type="negative" glyph="decline" />
-
-<Button  option="emphasized" type="medium" glyph="alert" />`;
+<Button option="emphasized" type="negative" glyph="decline" />`;
 
     const buttonSizesCode = `<Button>Default</Button>
 <Button compact>Compact</Button>`;
@@ -89,14 +83,6 @@ const clickBtnHandler = btn => {
     Selected State
 </Button>
 <Button type="positive" disabled>
-    Disabled State
-</Button>
-
-<Button type="medium">Normal State</Button>
-<Button type="medium" selected>
-    Selected State
-</Button>
-<Button type="medium" disabled >
     Disabled State
 </Button>
 
@@ -214,11 +200,6 @@ content like appearing in a table or list. There may be more than one on the pag
                         Reject
                     </Button>
 
-                    <Button glyph='alert' option='emphasized'
-                        type='medium'>
-                        Review
-                    </Button>
-
                     <br />
                     <br />
                     <br />
@@ -234,9 +215,6 @@ content like appearing in a table or list. There may be more than one on the pag
 
                     <Button glyph='decline' option='emphasized'
                         type='negative' />
-
-                    <Button glyph='alert' option='emphasized'
-                        type='medium' />
                 </div>
             </DocsTile>
             <DocsText>{buttonIconCode}</DocsText>
@@ -301,15 +279,6 @@ content like appearing in a table or list. There may be more than one on the pag
                         Selected State
                     </Button>
                     <Button disabled type='positive'>
-                        Disabled State
-                    </Button>
-                    <br />
-                    <br />
-                    <Button type='medium'>Normal State</Button>
-                    <Button selected type='medium'>
-                        Selected State
-                    </Button>
-                    <Button disabled type='medium'>
                         Disabled State
                     </Button>
                     <br />
