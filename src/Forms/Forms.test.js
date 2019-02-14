@@ -1,7 +1,6 @@
 import { mount } from 'enzyme';
 import React from 'react';
 import renderer from 'react-test-renderer';
-import sinon from 'sinon';
 import { FormFieldset, FormInput, FormItem, FormLabel, FormLegend, FormMessage, FormRadioGroup, FormRadioItem, FormSelect, FormSet, FormTextarea } from './Forms';
 
 describe('<Forms />', () => {
@@ -76,7 +75,7 @@ describe('<Forms />', () => {
             <FormLegend legendText='Radio buttons disabled' />
             <FormRadioGroup
                 className='blue'
-                isInline>
+                inline>
                 <FormRadioItem
                     checked
                     disabled
@@ -103,7 +102,7 @@ describe('<Forms />', () => {
             <FormLegend legendText='Inline Radio buttons' />
             <FormRadioGroup
                 className='blue'
-                isInline>
+                inline>
                 <FormRadioItem
                     id='radio-7'
                     name='radio-group-3'
@@ -126,7 +125,7 @@ describe('<Forms />', () => {
             </FormRadioGroup>
             <FormRadioGroup
                 className='blue'
-                isInline>
+                inline>
                 <FormRadioItem
                     disabled
                     id='radio-7'
@@ -358,9 +357,9 @@ describe('<Forms />', () => {
         });
 
         test('should trigger onChange FormRadioItem is clicked', () => {
-            let spy = sinon.spy();
+            let mockCallback = jest.fn();
             let element = setup({
-                onChange: spy
+                onChange: mockCallback
             });
 
             element
@@ -368,7 +367,7 @@ describe('<Forms />', () => {
                 .at(0)
                 .simulate('change', { currentTarget: { value: 'radio-1' } });
 
-            expect(spy.calledOnce).toBe(true);
+            expect(mockCallback.mock.calls.length).toBe(1);
         });
 
         test('should allow props to be spread to the FormRadioItem component', () => {
@@ -401,7 +400,7 @@ describe('<Forms />', () => {
 
         test('should add inline class to all children when inline is passed', () => {
             let element = setup({
-                isInline: true
+                inline: true
             });
 
             let attributes = element.find('FormRadioItem').map(item => item.props().inline);
@@ -410,9 +409,9 @@ describe('<Forms />', () => {
         });
 
         test('should trigger onChange from FormRadioGroup when FormRadioItem is clicked', () => {
-            let spy = sinon.spy();
+            let mockCallback = jest.fn();
             let element = setup({
-                onChange: spy
+                onChange: mockCallback
             });
 
             element
@@ -420,7 +419,7 @@ describe('<Forms />', () => {
                 .at(0)
                 .simulate('change', { currentTarget: { value: 'radio-1' } });
 
-            expect(spy.calledOnce).toBe(true);
+            expect(mockCallback.mock.calls.length).toBe(1);
         });
 
         test('should allow props to be spread to the FormRadioGroup component', () => {

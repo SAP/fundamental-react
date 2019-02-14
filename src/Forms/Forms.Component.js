@@ -209,7 +209,7 @@ export const FormsComponent = () => {
 <FormFieldset>
     <FormLegend>Inline Radio buttons</FormLegend>
     <FormRadioGroup
-        isInline>
+        inline>
         <FormRadioItem
             id='radio-7'>
             Option 1
@@ -549,7 +549,7 @@ Along with Invalid and Warning, error messages should be displayed below the fie
                 <FormFieldset>
                     <FormLegend>Inline Radio buttons</FormLegend>
                     <FormRadioGroup
-                        isInline>
+                        inline>
                         <FormRadioItem
                             id='radio-7'>
                             Option 1

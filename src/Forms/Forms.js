@@ -236,7 +236,7 @@ export class FormRadioGroup extends Component {
     }
 
     render() {
-        const { children, disabled, isInline, onChange, ...props } = this.props;
+        const { children, disabled, inline, onChange, ...props } = this.props;
 
         return (
             <div
@@ -244,10 +244,10 @@ export class FormRadioGroup extends Component {
                 {React.Children.map(children, child => {
                     if (React.isValidElement(child)) {
                         return React.cloneElement(child, {
-                            disabled: child.props.disabled ? child.props.disabled : disabled,
-                            inline: child.props.inline ? child.props.inline : isInline,
-                            name: child.props.name ? child.props.name : this.groupId,
-                            onChange: child.props.onChange ? child.props.onChange : onChange
+                            disabled: child.props.disabled || disabled,
+                            inline: child.props.inline || inline,
+                            name: child.props.name || this.groupId,
+                            onChange: child.props.onChange || onChange
                         });
                     } else {
                         return child;
@@ -261,7 +261,7 @@ export class FormRadioGroup extends Component {
 FormRadioGroup.propTypes = {
     children: PropTypes.node,
     disabled: PropTypes.bool,
-    isInline: PropTypes.bool,
+    inline: PropTypes.bool,
     onChange: PropTypes.func
 };
 
@@ -270,7 +270,7 @@ FormRadioGroup.defaultProps = {
 };
 
 FormRadioGroup.propDescriptions = {
-    isInline: 'Set to **true** to display radio buttons in a row.'
+    inline: 'Set to **true** to display radio buttons in a row.'
 };
 
 export const FormRadioItem = ({ checked, children, className, disabled, id, inline, name, value, ...props }) => {
@@ -316,7 +316,7 @@ FormRadioItem.propTypes = {
 FormRadioItem.propDescriptions = {
     checked: 'Set to **true** when radio input is checked and a controlled component.',
     defaultChecked: 'Set to **true** when the radio input is checked and an uncontrolled component.',
-    inline: 'Set to **true** when radio input is inline.',
+    inline: '_INTERNAL USE ONLY._',
     name: 'Sets the `name` for the radio input.',
     value: 'Sets the `value` for the radio input.'
 };
