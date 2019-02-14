@@ -227,6 +227,96 @@ describe('<Forms />', () => {
         expect(tree).toMatchSnapshot();
     });
 
+    describe('Prop spreading', () => {
+        test('should allow props to be spread to the FormFieldset component', () => {
+            const element = mount(<FormFieldset data-sample='Sample' />);
+
+            expect(
+                element.getDOMNode().attributes['data-sample'].value
+            ).toBe('Sample');
+        });
+
+        test('should allow props to be spread to the FormInput component', () => {
+            const element = mount(<FormInput data-sample='Sample' />);
+
+            expect(
+                element.getDOMNode().attributes['data-sample'].value
+            ).toBe('Sample');
+        });
+
+        test('should allow props to be spread to the FormItem component', () => {
+            const element = mount(<FormItem data-sample='Sample' />);
+
+            expect(
+                element.getDOMNode().attributes['data-sample'].value
+            ).toBe('Sample');
+        });
+
+        test('should allow props to be spread to the FormLabel component', () => {
+            const element = mount(<FormLabel data-sample='Sample' />);
+
+            expect(
+                element.getDOMNode().attributes['data-sample'].value
+            ).toBe('Sample');
+        });
+
+        test('should allow props to be spread to the FormLegend component', () => {
+            const element = mount(<FormLegend data-sample='Sample' />);
+
+            expect(
+                element.getDOMNode().attributes['data-sample'].value
+            ).toBe('Sample');
+        });
+
+        test('should allow props to be spread to the FormMessage component', () => {
+            const element = mount(<FormMessage data-sample='Sample' />);
+
+            expect(
+                element.getDOMNode().attributes['data-sample'].value
+            ).toBe('Sample');
+        });
+
+        xtest('should allow props to be spread to the FormRadio component\'s input element', () => {
+            // TODO: placeholder for this test description once that functionality is built
+        });
+
+        xtest('should allow props to be spread to the FormRadio component\'s label element', () => {
+            // TODO: placeholder for this test description once that functionality is built
+        });
+
+        xtest('should allow props to be spread to the FormRadio component\'s input element for IsInline', () => {
+            // TODO: placeholder for this test description once that functionality is built
+        });
+
+        xtest('should allow props to be spread to the FormRadio component\'s label element for IsInline', () => {
+            // TODO: placeholder for this test description once that functionality is built
+        });
+
+        test('should allow props to be spread to the FormSelect component', () => {
+            const element = mount(<FormSelect data-sample='Sample' />);
+
+            expect(
+                element.getDOMNode().attributes['data-sample'].value
+            ).toBe('Sample');
+        });
+
+        test('should allow props to be spread to the FormSet component', () => {
+            const element = mount(<FormSet data-sample='Sample' />);
+
+            expect(
+                element.getDOMNode().attributes['data-sample'].value
+            ).toBe('Sample');
+        });
+
+        test('should allow props to be spread to the FormTextarea component', () => {
+            const element = mount(<FormTextarea data-sample='Sample' />);
+
+            expect(
+                element.getDOMNode().attributes['data-sample'].value
+            ).toBe('Sample');
+        });
+    });
+
     describe('Radio Item Tests', () => {
         let setup = (props) => {
             return mount(<FormRadioItem {...props}>
@@ -336,96 +426,6 @@ describe('<Forms />', () => {
         test('should allow props to be spread to the FormRadioGroup component', () => {
             // TODO: placeholder for this test description once that functionality is built
             const element = mount(<FormRadioGroup data-sample='Sample' />);
-
-            expect(
-                element.getDOMNode().attributes['data-sample'].value
-            ).toBe('Sample');
-        });
-    });
-
-    describe('Prop spreading', () => {
-        test('should allow props to be spread to the FormFieldset component', () => {
-            const element = mount(<FormFieldset data-sample='Sample' />);
-
-            expect(
-                element.getDOMNode().attributes['data-sample'].value
-            ).toBe('Sample');
-        });
-
-        test('should allow props to be spread to the FormInput component', () => {
-            const element = mount(<FormInput data-sample='Sample' />);
-
-            expect(
-                element.getDOMNode().attributes['data-sample'].value
-            ).toBe('Sample');
-        });
-
-        test('should allow props to be spread to the FormItem component', () => {
-            const element = mount(<FormItem data-sample='Sample' />);
-
-            expect(
-                element.getDOMNode().attributes['data-sample'].value
-            ).toBe('Sample');
-        });
-
-        test('should allow props to be spread to the FormLabel component', () => {
-            const element = mount(<FormLabel data-sample='Sample' />);
-
-            expect(
-                element.getDOMNode().attributes['data-sample'].value
-            ).toBe('Sample');
-        });
-
-        test('should allow props to be spread to the FormLegend component', () => {
-            const element = mount(<FormLegend data-sample='Sample' />);
-
-            expect(
-                element.getDOMNode().attributes['data-sample'].value
-            ).toBe('Sample');
-        });
-
-        test('should allow props to be spread to the FormMessage component', () => {
-            const element = mount(<FormMessage data-sample='Sample' />);
-
-            expect(
-                element.getDOMNode().attributes['data-sample'].value
-            ).toBe('Sample');
-        });
-
-        xtest('should allow props to be spread to the FormRadio component\'s input element', () => {
-            // TODO: placeholder for this test description once that functionality is built
-        });
-
-        xtest('should allow props to be spread to the FormRadio component\'s label element', () => {
-            // TODO: placeholder for this test description once that functionality is built
-        });
-
-        xtest('should allow props to be spread to the FormRadio component\'s input element for IsInline', () => {
-            // TODO: placeholder for this test description once that functionality is built
-        });
-
-        xtest('should allow props to be spread to the FormRadio component\'s label element for IsInline', () => {
-            // TODO: placeholder for this test description once that functionality is built
-        });
-
-        test('should allow props to be spread to the FormSelect component', () => {
-            const element = mount(<FormSelect data-sample='Sample' />);
-
-            expect(
-                element.getDOMNode().attributes['data-sample'].value
-            ).toBe('Sample');
-        });
-
-        test('should allow props to be spread to the FormSet component', () => {
-            const element = mount(<FormSet data-sample='Sample' />);
-
-            expect(
-                element.getDOMNode().attributes['data-sample'].value
-            ).toBe('Sample');
-        });
-
-        test('should allow props to be spread to the FormTextarea component', () => {
-            const element = mount(<FormTextarea data-sample='Sample' />);
 
             expect(
                 element.getDOMNode().attributes['data-sample'].value
