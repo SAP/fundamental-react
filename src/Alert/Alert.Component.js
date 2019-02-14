@@ -1,4 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
+import path from 'path';
 import React from 'react';
 import { Alert, Icon } from '../';
 import { Description, DocsText, DocsTile, Header, Import, Playground, Properties, Separator } from '../_playground';
@@ -38,11 +39,11 @@ export const AlertComponent = () => {
             <Description>
                 An **Alert** provides a message within the application that is color-coded to emphasize the level of urgency.
             </Description>
-            <Import sourceModulePath={require.resolve('./Alert')} />
+            <Import sourceModulePath={path.join(__dirname, './Alert')} />
 
             <Separator />
 
-            <Properties sourceModulePath={require.resolve('./Alert')} />
+            <Properties sourceModulePath={path.join(__dirname, './Alert')} />
 
             <Separator />
 

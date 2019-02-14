@@ -1,4 +1,5 @@
 import { Icon } from '../';
+import path from 'path';
 import React from 'react';
 import { Description, DocsText, DocsTile, Header, Import, Playground, Properties, Separator } from '../_playground';
 
@@ -655,11 +656,11 @@ export const IconComponent = () => {
                 this point they are used more as visual elements within other
                 components.
             </Description>
-            <Import sourceModulePath={require.resolve('./Icon')} />
+            <Import sourceModulePath={path.join(__dirname, './Icon')} />
 
             <Separator />
 
-            <Properties sourceModulePath={require.resolve('./Icon')} />
+            <Properties sourceModulePath={path.join(__dirname, './Icon')} />
 
             <Separator />
 

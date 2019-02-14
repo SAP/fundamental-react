@@ -1,3 +1,4 @@
+import path from 'path';
 import React from 'react';
 import { Button, Image, Menu, MenuItem, MenuList, Panel, PanelActions, PanelBody, PanelFilters, PanelFooter, PanelGrid, PanelHead, PanelHeader, Popover, Tile, TileContent, TileMedia, Token } from '../';
 import { DocsText, DocsTile, Header, Import, Properties, Separator } from '../_playground';
@@ -197,11 +198,11 @@ export const PanelComponent = () => {
     return (
         <div>
             <Header>Panel</Header>
-            <Import sourceModulePath={require.resolve('./Panel')} />
+            <Import sourceModulePath={path.join(__dirname, './Panel')} />
 
             <Separator />
 
-            <Properties sourceModulePath={require.resolve('./Panel')} />
+            <Properties sourceModulePath={path.join(__dirname, './Panel')} />
 
             <Separator />
 

@@ -1,4 +1,5 @@
 import { Pagination } from '../';
+import path from 'path';
 import React from 'react';
 import { Description, DocsText, DocsTile, Header, Import, Properties, Separator } from '../_playground';
 
@@ -19,11 +20,11 @@ export const PaginationComponent = () => {
                 display needs to be handled in the function that is passed in
                 the `onClick` method.
             </Description>
-            <Import sourceModulePath={require.resolve('./Pagination')} />
+            <Import sourceModulePath={path.join(__dirname, './Pagination')} />
 
             <Separator />
 
-            <Properties sourceModulePath={require.resolve('./Pagination')} />
+            <Properties sourceModulePath={path.join(__dirname, './Pagination')} />
 
             <Separator />
 
