@@ -3,6 +3,58 @@ import { Description, DocsText, DocsTile, Header, Import, Properties, Separator 
 import { Tree, TreeCol, TreeHead, TreeItem, TreeRow, TreeView } from '../';
 
 export const TreeViewComponent = () => {
+    const simpleTreeViewCode = `
+<TreeView>
+    <Tree>
+        <TreeItem>
+            <TreeRow>
+                <TreeCol>Row 1</TreeCol>
+            </TreeRow>
+        </TreeItem>
+        <TreeItem>
+            <TreeRow>
+                <TreeCol>Row 2</TreeCol>
+            </TreeRow>
+            <Tree>
+                <TreeItem>
+                    <TreeRow>
+                        <TreeCol>Child 1</TreeCol>
+                    </TreeRow>
+                </TreeItem>
+                <TreeItem>
+                    <TreeRow>
+                        <TreeCol>Child 2</TreeCol>
+                    </TreeRow>
+                </TreeItem>
+            </Tree>
+        </TreeItem>
+        <TreeItem>
+            <TreeRow>
+                <TreeCol>Row 3</TreeCol>
+            </TreeRow>
+            <Tree>
+                <TreeItem>
+                    <TreeRow>
+                        <TreeCol>Child 1</TreeCol>
+                    </TreeRow>
+                    <Tree>
+                        <TreeItem>
+                            <TreeRow>
+                                <TreeCol>Grandchild 1</TreeCol>
+                            </TreeRow>
+                        </TreeItem>
+                        <TreeItem>
+                            <TreeRow>
+                                <TreeCol>Grandchild 2</TreeCol>
+                            </TreeRow>
+                        </TreeItem>
+                    </Tree>
+                </TreeItem>
+            </Tree>
+        </TreeItem>
+    </Tree>
+</TreeView>`;
+
     const treeViewCode = `
 <TreeView>
     <TreeHead>
@@ -155,6 +207,66 @@ export const TreeViewComponent = () => {
             <Separator />
 
             <Properties sourceModule={require('./TreeView')} />
+
+            <Separator />
+
+            <h2>Simple TreeView</h2>
+            <Description>
+                This is an example of a simple tree view.
+            </Description>
+            <DocsTile>
+                <TreeView>
+                    <Tree>
+                        <TreeItem>
+                            <TreeRow>
+                                <TreeCol>Row 1</TreeCol>
+                            </TreeRow>
+                        </TreeItem>
+                        <TreeItem>
+                            <TreeRow>
+                                <TreeCol>Row 2</TreeCol>
+                            </TreeRow>
+                            <Tree>
+                                <TreeItem>
+                                    <TreeRow>
+                                        <TreeCol>Child 1</TreeCol>
+                                    </TreeRow>
+                                </TreeItem>
+                                <TreeItem>
+                                    <TreeRow>
+                                        <TreeCol>Child 2</TreeCol>
+                                    </TreeRow>
+                                </TreeItem>
+                            </Tree>
+                        </TreeItem>
+                        <TreeItem>
+                            <TreeRow>
+                                <TreeCol>Row 3</TreeCol>
+                            </TreeRow>
+                            <Tree>
+                                <TreeItem>
+                                    <TreeRow>
+                                        <TreeCol>Child 1</TreeCol>
+                                    </TreeRow>
+                                    <Tree>
+                                        <TreeItem>
+                                            <TreeRow>
+                                                <TreeCol>Grandchild 1</TreeCol>
+                                            </TreeRow>
+                                        </TreeItem>
+                                        <TreeItem>
+                                            <TreeRow>
+                                                <TreeCol>Grandchild 2</TreeCol>
+                                            </TreeRow>
+                                        </TreeItem>
+                                    </Tree>
+                                </TreeItem>
+                            </Tree>
+                        </TreeItem>
+                    </Tree>
+                </TreeView>
+            </DocsTile>
+            <DocsText>{simpleTreeViewCode}</DocsText>
 
             <Separator />
 
