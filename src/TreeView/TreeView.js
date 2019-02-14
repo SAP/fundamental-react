@@ -26,6 +26,8 @@ export class TreeCol extends Component {
     }
 }
 
+TreeCol.displayName = 'TreeCol';
+
 TreeCol.propTypes = {
     children: PropTypes.node,
     className: PropTypes.string
@@ -84,6 +86,8 @@ export class TreeHead extends Component {
         );
     }
 }
+
+TreeHead.displayName = 'TreeHead';
 
 TreeHead.propTypes = {
     buttonProps: PropTypes.object,
@@ -146,6 +150,8 @@ export class TreeRow extends Component {
     }
 }
 
+TreeRow.displayName = 'TreeRow';
+
 TreeRow.propTypes = {
     children: PropTypes.node,
     isExpanded: PropTypes.bool,
@@ -186,9 +192,9 @@ export class TreeItem extends Component {
 
         // Render child TreeBranch with correct props
         const childBranch = React.Children.map(children, (child) => {
-            const isTree = child.type && child.type.name === 'Tree';
+            const isTreeBranch = child.type && child.type.name === 'TreeBranch';
 
-            return isTree ?
+            return isTreeBranch ?
                 React.cloneElement(child, {
                     expandData,
                     onExpandClick,
@@ -227,6 +233,8 @@ export class TreeItem extends Component {
     }
 }
 
+TreeItem.displayName = 'TreeItem';
+
 TreeItem.propTypes = {
     children: PropTypes.node,
     expandData: PropTypes.object,
@@ -242,6 +250,34 @@ TreeItem.defaultProps = {
 
 TreeItem.propDescriptions = {
     expandData: '_INTERNAL USE ONLY._',
+    level: '_INTERNAL USE ONLY._',
+    onExpandClick: '_INTERNAL USE ONLY._'
+};
+
+export class TreeBranch extends Component {
+    render() {
+        return <Tree {...this.props} />;
+    }
+}
+
+TreeBranch.displayName = 'TreeBranch';
+
+TreeBranch.propTypes = {
+    children: PropTypes.node,
+    expandData: PropTypes.object,
+    isExpanded: PropTypes.bool,
+    level: PropTypes.number,
+    onExpandClick: PropTypes.func
+};
+
+TreeBranch.defaultProps = {
+    expandData: {},
+    level: 0
+};
+
+TreeBranch.propDescriptions = {
+    expandData: '_INTERNAL USE ONLY._',
+    isExpanded: '_INTERNAL USE ONLY._',
     level: '_INTERNAL USE ONLY._',
     onExpandClick: '_INTERNAL USE ONLY._'
 };
@@ -283,6 +319,8 @@ export class Tree extends Component {
         );
     }
 }
+
+Tree.displayName = 'Tree';
 
 Tree.propTypes = {
     children: PropTypes.node,
@@ -377,7 +415,7 @@ export class TreeView extends Component {
                         }
 
                         if (isTree) {
-                            // Pass expand callbacks to TreeBranches
+                            // Pass expand callbacks to Tree
                             return React.cloneElement(child, {
                                 expandData,
                                 onExpandClick: this.toggleExpand

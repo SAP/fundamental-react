@@ -1,6 +1,6 @@
 import React from 'react';
 import { Description, DocsText, DocsTile, Header, Import, Properties, Separator } from '../_playground';
-import { Tree, TreeCol, TreeHead, TreeItem, TreeRow, TreeView } from '../';
+import { Tree, TreeBranch, TreeCol, TreeHead, TreeItem, TreeRow, TreeView } from '../';
 
 export const TreeViewComponent = () => {
     const simpleTreeViewCode = `
@@ -15,7 +15,7 @@ export const TreeViewComponent = () => {
             <TreeRow>
                 <TreeCol>Row 2</TreeCol>
             </TreeRow>
-            <Tree>
+            <TreeBranch>
                 <TreeItem>
                     <TreeRow>
                         <TreeCol>Child 1</TreeCol>
@@ -26,18 +26,18 @@ export const TreeViewComponent = () => {
                         <TreeCol>Child 2</TreeCol>
                     </TreeRow>
                 </TreeItem>
-            </Tree>
+            </TreeBranch>
         </TreeItem>
         <TreeItem>
             <TreeRow>
                 <TreeCol>Row 3</TreeCol>
             </TreeRow>
-            <Tree>
+            <TreeBranch>
                 <TreeItem>
                     <TreeRow>
                         <TreeCol>Child 1</TreeCol>
                     </TreeRow>
-                    <Tree>
+                    <TreeBranch>
                         <TreeItem>
                             <TreeRow>
                                 <TreeCol>Grandchild 1</TreeCol>
@@ -48,9 +48,9 @@ export const TreeViewComponent = () => {
                                 <TreeCol>Grandchild 2</TreeCol>
                             </TreeRow>
                         </TreeItem>
-                    </Tree>
+                    </TreeBranch>
                 </TreeItem>
-            </Tree>
+            </TreeBranch>
         </TreeItem>
     </Tree>
 </TreeView>`;
@@ -71,7 +71,7 @@ export const TreeViewComponent = () => {
                 <TreeCol>Data Col 3</TreeCol>
                 <TreeCol>Data Col 4</TreeCol>
             </TreeRow>
-            <Tree>
+            <TreeBranch>
                 <TreeItem>
                     <TreeRow>
                         <TreeCol>Child 1</TreeCol>
@@ -79,7 +79,7 @@ export const TreeViewComponent = () => {
                         <TreeCol>Data Col 3</TreeCol>
                         <TreeCol>Data Col 4</TreeCol>
                     </TreeRow>
-                    <Tree>
+                    <TreeBranch>
                         <TreeItem>
                             <TreeRow>
                                 <TreeCol>Grandchild 1</TreeCol>
@@ -87,7 +87,7 @@ export const TreeViewComponent = () => {
                                 <TreeCol>Data Col 3</TreeCol>
                                 <TreeCol>Data Col 4</TreeCol>
                             </TreeRow>
-                            <Tree>
+                            <TreeBranch>
                                 <TreeItem>
                                     <TreeRow>
                                         <TreeCol>Great Grandchild 1</TreeCol>
@@ -96,9 +96,9 @@ export const TreeViewComponent = () => {
                                         <TreeCol>Data Col 4</TreeCol>
                                     </TreeRow>
                                 </TreeItem>
-                            </Tree>
+                            </TreeBranch>
                         </TreeItem>
-                    </Tree>
+                    </TreeBranch>
                 </TreeItem>
                 <TreeItem>
                     <TreeRow>
@@ -108,7 +108,7 @@ export const TreeViewComponent = () => {
                         <TreeCol>Data Col 4</TreeCol>
                     </TreeRow>
                 </TreeItem>
-            </Tree>
+            </TreeBranch>
         </TreeItem>
         <TreeItem>
             <TreeRow>
@@ -117,7 +117,7 @@ export const TreeViewComponent = () => {
                 <TreeCol>Data Col 3</TreeCol>
                 <TreeCol>Data Col 4</TreeCol>
             </TreeRow>
-            <Tree>
+            <TreeBranch>
                 <TreeItem>
                     <TreeRow>
                         <TreeCol>Child 1</TreeCol>
@@ -134,7 +134,7 @@ export const TreeViewComponent = () => {
                         <TreeCol>Data Col 4</TreeCol>
                     </TreeRow>
                 </TreeItem>
-            </Tree>
+            </TreeBranch>
         </TreeItem>
         <TreeItem>
             <TreeRow>
@@ -151,7 +151,7 @@ export const TreeViewComponent = () => {
                 <TreeCol>Data Col 3</TreeCol>
                 <TreeCol>Data Col 4</TreeCol>
             </TreeRow>
-            <Tree>
+            <TreeBranch>
                 <TreeItem>
                     <TreeRow>
                         <TreeCol>Child 1</TreeCol>
@@ -160,7 +160,7 @@ export const TreeViewComponent = () => {
                         <TreeCol>Data Col 4</TreeCol>
                     </TreeRow>
                 </TreeItem>
-            </Tree>
+            </TreeBranch>
         </TreeItem>
     </Tree>
 </TreeView>`;
@@ -178,7 +178,7 @@ export const TreeViewComponent = () => {
             <TreeRow>
                 <TreeCol>Row 1</TreeCol>
             </TreeRow>
-            <Tree>
+            <TreeBranch>
                 <TreeItem>
                     <TreeRow>
                         <TreeCol />
@@ -187,7 +187,7 @@ export const TreeViewComponent = () => {
                         <TreeCol><a href='http://www.yahoo.com'>Yahoo</a></TreeCol>
                     </TreeRow>
                 </TreeItem>
-            </Tree>
+            </TreeBranch>
         </TreeItem>
     </Tree>
 </TreeView>`;
@@ -226,7 +226,7 @@ export const TreeViewComponent = () => {
                             <TreeRow>
                                 <TreeCol>Row 2</TreeCol>
                             </TreeRow>
-                            <Tree>
+                            <TreeBranch>
                                 <TreeItem>
                                     <TreeRow>
                                         <TreeCol>Child 1</TreeCol>
@@ -237,18 +237,18 @@ export const TreeViewComponent = () => {
                                         <TreeCol>Child 2</TreeCol>
                                     </TreeRow>
                                 </TreeItem>
-                            </Tree>
+                            </TreeBranch>
                         </TreeItem>
                         <TreeItem>
                             <TreeRow>
                                 <TreeCol>Row 3</TreeCol>
                             </TreeRow>
-                            <Tree>
+                            <TreeBranch>
                                 <TreeItem>
                                     <TreeRow>
                                         <TreeCol>Child 1</TreeCol>
                                     </TreeRow>
-                                    <Tree>
+                                    <TreeBranch>
                                         <TreeItem>
                                             <TreeRow>
                                                 <TreeCol>Grandchild 1</TreeCol>
@@ -259,9 +259,9 @@ export const TreeViewComponent = () => {
                                                 <TreeCol>Grandchild 2</TreeCol>
                                             </TreeRow>
                                         </TreeItem>
-                                    </Tree>
+                                    </TreeBranch>
                                 </TreeItem>
-                            </Tree>
+                            </TreeBranch>
                         </TreeItem>
                     </Tree>
                 </TreeView>
@@ -290,7 +290,7 @@ export const TreeViewComponent = () => {
                                 <TreeCol>Data Col 3</TreeCol>
                                 <TreeCol>Data Col 4</TreeCol>
                             </TreeRow>
-                            <Tree>
+                            <TreeBranch>
                                 <TreeItem>
                                     <TreeRow>
                                         <TreeCol>Child 1</TreeCol>
@@ -298,7 +298,7 @@ export const TreeViewComponent = () => {
                                         <TreeCol>Data Col 3</TreeCol>
                                         <TreeCol>Data Col 4</TreeCol>
                                     </TreeRow>
-                                    <Tree>
+                                    <TreeBranch>
                                         <TreeItem>
                                             <TreeRow>
                                                 <TreeCol>Grandchild 1</TreeCol>
@@ -306,7 +306,7 @@ export const TreeViewComponent = () => {
                                                 <TreeCol>Data Col 3</TreeCol>
                                                 <TreeCol>Data Col 4</TreeCol>
                                             </TreeRow>
-                                            <Tree>
+                                            <TreeBranch>
                                                 <TreeItem>
                                                     <TreeRow>
                                                         <TreeCol>Great Grandchild 1</TreeCol>
@@ -315,9 +315,9 @@ export const TreeViewComponent = () => {
                                                         <TreeCol>Data Col 4</TreeCol>
                                                     </TreeRow>
                                                 </TreeItem>
-                                            </Tree>
+                                            </TreeBranch>
                                         </TreeItem>
-                                    </Tree>
+                                    </TreeBranch>
                                 </TreeItem>
                                 <TreeItem>
                                     <TreeRow>
@@ -327,7 +327,7 @@ export const TreeViewComponent = () => {
                                         <TreeCol>Data Col 4</TreeCol>
                                     </TreeRow>
                                 </TreeItem>
-                            </Tree>
+                            </TreeBranch>
                         </TreeItem>
                         <TreeItem>
                             <TreeRow>
@@ -336,7 +336,7 @@ export const TreeViewComponent = () => {
                                 <TreeCol>Data Col 3</TreeCol>
                                 <TreeCol>Data Col 4</TreeCol>
                             </TreeRow>
-                            <Tree>
+                            <TreeBranch>
                                 <TreeItem>
                                     <TreeRow>
                                         <TreeCol>Child 1</TreeCol>
@@ -353,7 +353,7 @@ export const TreeViewComponent = () => {
                                         <TreeCol>Data Col 4</TreeCol>
                                     </TreeRow>
                                 </TreeItem>
-                            </Tree>
+                            </TreeBranch>
                         </TreeItem>
                         <TreeItem>
                             <TreeRow>
@@ -370,7 +370,7 @@ export const TreeViewComponent = () => {
                                 <TreeCol>Data Col 3</TreeCol>
                                 <TreeCol>Data Col 4</TreeCol>
                             </TreeRow>
-                            <Tree>
+                            <TreeBranch>
                                 <TreeItem>
                                     <TreeRow>
                                         <TreeCol>Child 1</TreeCol>
@@ -379,7 +379,7 @@ export const TreeViewComponent = () => {
                                         <TreeCol>Data Col 4</TreeCol>
                                     </TreeRow>
                                 </TreeItem>
-                            </Tree>
+                            </TreeBranch>
                         </TreeItem>
                     </Tree>
                 </TreeView>
@@ -405,7 +405,7 @@ export const TreeViewComponent = () => {
                             <TreeRow>
                                 <TreeCol>Row 1</TreeCol>
                             </TreeRow>
-                            <Tree>
+                            <TreeBranch>
                                 <TreeItem>
                                     <TreeRow>
                                         <TreeCol />
@@ -414,7 +414,7 @@ export const TreeViewComponent = () => {
                                         <TreeCol><a href='http://www.yahoo.com'>Yahoo</a></TreeCol>
                                     </TreeRow>
                                 </TreeItem>
-                            </Tree>
+                            </TreeBranch>
                         </TreeItem>
                     </Tree>
                 </TreeView>

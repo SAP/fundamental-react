@@ -1,7 +1,7 @@
 import { mount } from 'enzyme';
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { Tree, TreeCol, TreeHead, TreeItem, TreeRow, TreeView } from './TreeView';
+import { Tree, TreeBranch, TreeCol, TreeHead, TreeItem, TreeRow, TreeView } from './TreeView';
 
 // mock shortid for snapshot testing
 jest.mock('shortid', () => {
@@ -29,7 +29,7 @@ describe('<TreeView />', () => {
                         <TreeCol>Data Col 3</TreeCol>
                         <TreeCol>Data Col 4</TreeCol>
                     </TreeRow>
-                    <Tree>
+                    <TreeBranch>
                         <TreeItem>
                             <TreeRow>
                                 <TreeCol>Child 1</TreeCol>
@@ -37,7 +37,7 @@ describe('<TreeView />', () => {
                                 <TreeCol>Data Col 3</TreeCol>
                                 <TreeCol>Data Col 4</TreeCol>
                             </TreeRow>
-                            <Tree>
+                            <TreeBranch>
                                 <TreeItem>
                                     <TreeRow>
                                         <TreeCol>Grandchild 1</TreeCol>
@@ -45,7 +45,7 @@ describe('<TreeView />', () => {
                                         <TreeCol>Data Col 3</TreeCol>
                                         <TreeCol>Data Col 4</TreeCol>
                                     </TreeRow>
-                                    <Tree>
+                                    <TreeBranch>
                                         <TreeItem>
                                             <TreeRow>
                                                 <TreeCol>GreatGrandchild 1</TreeCol>
@@ -54,9 +54,9 @@ describe('<TreeView />', () => {
                                                 <TreeCol>Data Col 4</TreeCol>
                                             </TreeRow>
                                         </TreeItem>
-                                    </Tree>
+                                    </TreeBranch>
                                 </TreeItem>
-                            </Tree>
+                            </TreeBranch>
                         </TreeItem>
                         <TreeItem>
                             <TreeRow>
@@ -66,7 +66,7 @@ describe('<TreeView />', () => {
                                 <TreeCol>Data Col 4</TreeCol>
                             </TreeRow>
                         </TreeItem>
-                    </Tree>
+                    </TreeBranch>
                 </TreeItem>
                 <TreeItem>
                     <TreeRow>
@@ -75,7 +75,7 @@ describe('<TreeView />', () => {
                         <TreeCol>Data Col 3</TreeCol>
                         <TreeCol>Data Col 4</TreeCol>
                     </TreeRow>
-                    <Tree>
+                    <TreeBranch>
                         <TreeItem>
                             <TreeRow>
                                 <TreeCol>Child 1</TreeCol>
@@ -92,7 +92,7 @@ describe('<TreeView />', () => {
                                 <TreeCol>Data Col 4</TreeCol>
                             </TreeRow>
                         </TreeItem>
-                    </Tree>
+                    </TreeBranch>
                 </TreeItem>
                 <TreeItem>
                     <TreeRow>
@@ -109,7 +109,7 @@ describe('<TreeView />', () => {
                         <TreeCol>Data Col 3</TreeCol>
                         <TreeCol>Data Col 4</TreeCol>
                     </TreeRow>
-                    <Tree>
+                    <TreeBranch>
                         <TreeItem>
                             <TreeRow>
                                 <TreeCol>Child 1</TreeCol>
@@ -118,7 +118,7 @@ describe('<TreeView />', () => {
                                 <TreeCol>Data Col 4</TreeCol>
                             </TreeRow>
                         </TreeItem>
-                    </Tree>
+                    </TreeBranch>
                 </TreeItem>
             </Tree>
         </TreeView>
@@ -137,7 +137,7 @@ describe('<TreeView />', () => {
                     <TreeRow>
                         <TreeCol>First Level</TreeCol>
                     </TreeRow>
-                    <Tree>
+                    <TreeBranch>
                         <TreeItem>
                             <TreeRow>
                                 <TreeCol><a href='http://me.com'>First Level</a></TreeCol>
@@ -145,7 +145,7 @@ describe('<TreeView />', () => {
                                 <TreeCol />
                                 <TreeCol />
                             </TreeRow>
-                            <Tree>
+                            <TreeBranch>
                                 <TreeItem>
                                     <TreeRow>
                                         <TreeCol><a href='http://amazon.com'>Amazon</a></TreeCol>
@@ -160,7 +160,7 @@ describe('<TreeView />', () => {
                                         <TreeCol><a href='http://amazon.com'>Amazon</a></TreeCol>
                                     </TreeRow>
                                 </TreeItem>
-                            </Tree>
+                            </TreeBranch>
                         </TreeItem>
                         <TreeItem>
                             <TreeRow>
@@ -169,15 +169,15 @@ describe('<TreeView />', () => {
                                 <TreeCol />
                                 <TreeCol />
                             </TreeRow>
-                            <Tree>
+                            <TreeBranch>
                                 <TreeItem>
                                     <TreeRow>
                                         <TreeCol><a href='http://amazon.com'>Amazon</a></TreeCol>
                                     </TreeRow>
                                 </TreeItem>
-                            </Tree>
+                            </TreeBranch>
                         </TreeItem>
-                    </Tree>
+                    </TreeBranch>
                 </TreeItem>
             </Tree>
         </TreeView>
