@@ -1,6 +1,6 @@
 import React from 'react';
 import { Description, DocsText, DocsTile, Header, Import, Properties, Separator } from '../_playground';
-import { FormFieldset, FormInput, FormItem, FormLabel, FormLegend, FormMessage, FormRadio, FormSelect, FormSet, FormTextarea} from '../';
+import { FormFieldset, FormInput, FormItem, FormLabel, FormLegend, FormMessage, FormRadioGroup, FormRadioItem, FormSelect, FormSet, FormTextarea} from '../';
 
 export const FormsComponent = () => {
     const inputsCode = `<FormSet>
@@ -167,37 +167,63 @@ export const FormsComponent = () => {
 
     const inputsRadioCode = `<FormFieldset>
     <FormLegend>Radio buttons</FormLegend>
-    <FormRadio
-        inputs={[
-            { id: 'radio-1', name: 'radio-1', value: 'radio-1', label: 'Option 1' },
-            { id: 'radio-2', name: 'radio-2', value: 'radio-2', label: 'Option 2' },
-            { id: 'radio-3', name: 'radio-3', value: 'radio-3', label: 'Option 3' }
-        ]}
-        defaultChecked='radio-2' />
+    <FormRadioGroup>
+        <FormRadioItem
+            id='radio-1'>
+            Option 1
+        </FormRadioItem>
+        <FormRadioItem
+            id='radio-2'>
+            Option 2
+        </FormRadioItem>
+        <FormRadioItem
+            checked
+            id='radio-3'>
+            Option 3
+        </FormRadioItem>
+    </FormRadioGroup>
 </FormFieldset>
 
 <FormFieldset>
     <FormLegend>Radio buttons disabled</FormLegend>
-    <FormRadio
-        disabled
-        inputs={[
-            { id: 'radio-4', name: 'radio-4', value: 'radio-4', label: 'Option 1' },
-            { id: 'radio-5', name: 'radio-5', value: 'radio-5', label: 'Option 2' },
-            { id: 'radio-6', name: 'radio-6', value: 'radio-6', label: 'Option 3' }
-        ]}
-        defaultChecked='radio-4' />
+    <FormRadioGroup>
+        <FormRadioItem
+            checked
+            disabled
+            id='radio-4'>
+            Option 1
+        </FormRadioItem>
+        <FormRadioItem
+            disabled
+            id='radio-5'>
+            Option 2
+        </FormRadioItem>
+        <FormRadioItem
+            disabled
+            id='radio-6'>
+            Option 3
+        </FormRadioItem>
+    </FormRadioGroup>
 </FormFieldset>
 
 <FormFieldset>
     <FormLegend>Inline Radio buttons</FormLegend>
-    <FormRadio
-        isInline
-        inputs={[
-            { id: 'radio-7', name: 'radio-7', value: 'radio-7', label: 'Option 1' },
-            { id: 'radio-8', name: 'radio-8', value: 'radio-8', label: 'Option 2' },
-            { id: 'radio-9', name: 'radio-9', value: 'radio-9', label: 'Option 3' }
-        ]}
-        defaultChecked='radio-9' />
+    <FormRadioGroup
+        isInline>
+        <FormRadioItem
+            id='radio-7'>
+            Option 1
+        </FormRadioItem>
+        <FormRadioItem
+            checked
+            id='radio-8'>
+            Option 2
+        </FormRadioItem>
+        <FormRadioItem
+            id='radio-9'>
+            Option 3
+        </FormRadioItem>
+    </FormRadioGroup>
 </FormFieldset>`;
 
     const inputsCheckboxCode = `<FormFieldset>
@@ -480,37 +506,63 @@ export const FormsComponent = () => {
             <DocsTile>
                 <FormFieldset>
                     <FormLegend>Radio buttons</FormLegend>
-                    <FormRadio
-                        defaultChecked='radio-2'
-                        inputs={[
-                            { id: 'radio-1', name: 'radio-1', value: 'radio-1', label: 'Option 1' },
-                            { id: 'radio-2', name: 'radio-2', value: 'radio-2', label: 'Option 2' },
-                            { id: 'radio-3', name: 'radio-3', value: 'radio-3', label: 'Option 3' }
-                        ]} />
+                    <FormRadioGroup>
+                        <FormRadioItem
+                            id='radio-1'>
+                            Option 1
+                        </FormRadioItem>
+                        <FormRadioItem
+                            id='radio-2'>
+                            Option 2
+                        </FormRadioItem>
+                        <FormRadioItem
+                            defaultChecked
+                            id='radio-3'>
+                            Option 3
+                        </FormRadioItem>
+                    </FormRadioGroup>
                 </FormFieldset>
 
                 <FormFieldset>
                     <FormLegend>Radio buttons disabled</FormLegend>
-                    <FormRadio
-                        defaultChecked='radio-4'
-                        disabled
-                        inputs={[
-                            { id: 'radio-4', name: 'radio-4', value: 'radio-4', label: 'Option 1' },
-                            { id: 'radio-5', name: 'radio-5', value: 'radio-5', label: 'Option 2' },
-                            { id: 'radio-6', name: 'radio-6', value: 'radio-6', label: 'Option 3' }
-                        ]} />
+                    <FormRadioGroup>
+                        <FormRadioItem
+                            defaultChecked
+                            disabled
+                            id='radio-4'>
+                            Option 1
+                        </FormRadioItem>
+                        <FormRadioItem
+                            disabled
+                            id='radio-5'>
+                            Option 2
+                        </FormRadioItem>
+                        <FormRadioItem
+                            disabled
+                            id='radio-6'>
+                            Option 3
+                        </FormRadioItem>
+                    </FormRadioGroup>
                 </FormFieldset>
 
                 <FormFieldset>
                     <FormLegend>Inline Radio buttons</FormLegend>
-                    <FormRadio
-                        defaultChecked='radio-9'
-                        inputs={[
-                            { id: 'radio-7', name: 'radio-7', value: 'radio-7', label: 'Option 1' },
-                            { id: 'radio-8', name: 'radio-8', value: 'radio-8', label: 'Option 2' },
-                            { id: 'radio-9', name: 'radio-9', value: 'radio-9', label: 'Option 3' }
-                        ]}
-                        isInline />
+                    <FormRadioGroup
+                        isInline>
+                        <FormRadioItem
+                            id='radio-7'>
+                            Option 1
+                        </FormRadioItem>
+                        <FormRadioItem
+                            defaultChecked
+                            id='radio-8'>
+                            Option 2
+                        </FormRadioItem>
+                        <FormRadioItem
+                            id='radio-9'>
+                            Option 3
+                        </FormRadioItem>
+                    </FormRadioGroup>
                 </FormFieldset>
             </DocsTile>
             <DocsText>{inputsRadioCode}</DocsText>

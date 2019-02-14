@@ -41,7 +41,8 @@
     "classnames": "^2.2.6",
     "fiori-fundamentals": "^1.4.0",
     "react-router": "^4.3.1",
-    "react-router-dom": "^4.3.1"
+    "react-router-dom": "^4.3.1",
+    "shortid": "^2.2.14"
   },
   "devDependencies": {
     "@babel/cli": "^7.1.5",
@@ -111,6 +112,7 @@
     "react-test-renderer": "^16.6.3",
     "resolve": "1.8.1",
     "sass-loader": "7.1.0",
+    "sinon": "^7.2.3",
     "size-limit": "^0.21.1",
     "sort-by": "^1.2.0",
     "standard-version": "^4.4.0",
