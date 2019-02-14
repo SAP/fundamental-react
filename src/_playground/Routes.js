@@ -292,9 +292,7 @@ export class Routes extends Component {
 
     render() {
         let sectionRoutes;
-        let routedItems;
-        this.state.query === '' ? routedItems = routes : routedItems = this.state.filteredItems;
-        const groupedRoutes = groupArray(routedItems, 'section');
+        const groupedRoutes = groupArray(this.state.filteredItems, 'section');
 
         let navItems = sections.sort(sortBy('sortOrder', 'name')).map(section => {
             if (!groupedRoutes[section.name]) {
