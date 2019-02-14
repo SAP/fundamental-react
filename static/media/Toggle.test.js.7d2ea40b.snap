@@ -1,0 +1,103 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Toggle /> create toggle component 1`] = `
+<div
+  className="fd-form__item fd-form__item--check"
+>
+  <label
+    className="fd-form__label"
+  >
+    <span
+      className="fd-toggle fd-form__control"
+    >
+      <input
+        checked={false}
+        onChange={[Function]}
+        type="checkbox"
+      />
+      <span
+        className="fd-toggle__switch"
+        role="presentation"
+      />
+    </span>
+    Normal toggle
+  </label>
+</div>
+`;
+
+exports[`<Toggle /> create toggle component 2`] = `
+<div
+  className="fd-form__item fd-form__item--check blue"
+>
+  <label
+    className="fd-form__label"
+  >
+    <span
+      className="fd-toggle fd-toggle--s fd-form__control"
+    >
+      <input
+        checked={true}
+        onChange={[Function]}
+        type="checkbox"
+      />
+      <span
+        className="fd-toggle__switch"
+        role="presentation"
+      />
+    </span>
+    Small toggle
+  </label>
+</div>
+`;
+
+exports[`<Toggle /> create toggle component 3`] = `
+<div
+  className="fd-form__item fd-form__item--check"
+>
+  <label
+    className="fd-form__label"
+  >
+    <span
+      className="fd-toggle fd-form__control"
+    >
+      <input
+        checked={false}
+        disabled={true}
+        onChange={[Function]}
+        type="checkbox"
+      />
+      <span
+        className="fd-toggle__switch"
+        role="presentation"
+      />
+    </span>
+    Normal toggle
+  </label>
+</div>
+`;
+
+exports[`<Toggle /> create toggle component 4`] = `
+<div
+  className="fd-form__item fd-form__item--check"
+>
+  <label
+    className="fd-form__label"
+  >
+    <span
+      className="fd-toggle fd-form__control"
+    >
+      <input
+        checked={true}
+        disabled={true}
+        onChange={[Function]}
+        type="checkbox"
+      />
+      <span
+        className="fd-toggle__switch"
+        role="presentation"
+      />
+    </span>
+    Normal toggle
+  </label>
+</div>
+`;

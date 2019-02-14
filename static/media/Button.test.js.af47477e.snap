@@ -1,0 +1,94 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Button /> create button group 1`] = `
+<div
+  aria-label="Group label"
+  className="fd-button-group"
+  role="group"
+>
+  <button
+    className="fd-button sap-icon--survey blue"
+  />
+  <button
+    className="fd-button sap-icon--pie-chart is-selected"
+    selected={true}
+  />
+  <button
+    className="fd-button sap-icon--pool"
+  />
+</div>
+`;
+
+exports[`<Button /> create buttons 1`] = `
+<button
+  className="fd-button"
+>
+  Regular Button
+</button>
+`;
+
+exports[`<Button /> create buttons 2`] = `
+<button
+  className="fd-button--emphasized"
+>
+  Emphasized Button
+</button>
+`;
+
+exports[`<Button /> create buttons 3`] = `
+<button
+  className="fd-button fd-button--positive"
+>
+  Positive Button
+</button>
+`;
+
+exports[`<Button /> create buttons 4`] = `
+<button
+  className="fd-button sap-icon--cart"
+>
+  Icon Button
+</button>
+`;
+
+exports[`<Button /> create buttons 5`] = `
+<button
+  className="fd-button fd-button--compact"
+>
+  Compact
+</button>
+`;
+
+exports[`<Button /> create buttons 6`] = `
+<button
+  className="fd-button--emphasized is-selected"
+  selected={true}
+>
+  Selected State
+</button>
+`;
+
+exports[`<Button /> create buttons 7`] = `
+<button
+  className="fd-button--emphasized is-disabled"
+  disabled={true}
+>
+  Disabled State
+</button>
+`;
+
+exports[`<Button /> create buttons 8`] = `
+<button
+  className="fd-button fd-dropdown__control"
+>
+  Dropdown Button
+</button>
+`;
+
+exports[`<Button /> create buttons 9`] = `
+<button
+  className="fd-button fd-global-nav__btn"
+>
+  Navbar button
+</button>
+`;

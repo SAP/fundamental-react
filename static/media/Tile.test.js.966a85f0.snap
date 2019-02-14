@@ -1,0 +1,352 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Tile /> create tile component 1`] = `
+<div
+  className="fd-tile blue"
+>
+  <div
+    className="fd-tile__content red"
+  >
+    <h2
+      className="fd-tile__title"
+    >
+      Tile Title
+    </h2>
+    <p>
+      Tile Description
+    </p>
+  </div>
+</div>
+`;
+
+exports[`<Tile /> create tile component 2`] = `
+<div
+  className="fd-tile is-disabled fd-has-grid-column-span-3 fd-has-background-color-background-8"
+>
+  <div
+    className="fd-tile__content"
+  >
+    <h2
+      className="fd-tile__title"
+    >
+      Tile Title
+    </h2>
+    <p>
+      Tile Description
+    </p>
+  </div>
+</div>
+`;
+
+exports[`<Tile /> create tile component 3`] = `
+<div
+  className="fd-tile"
+  isButton={true}
+>
+  <div
+    className="fd-tile__media green"
+  >
+    <span
+      className="fd-identifier--m sap-icon--home fd-has-background-color-accent-3"
+      role="presentation"
+    />
+  </div>
+  <div
+    className="fd-tile__content"
+  >
+    <h2
+      className="fd-tile__title"
+    >
+      Tile Title
+    </h2>
+    <p>
+      Tile Description
+    </p>
+  </div>
+</div>
+`;
+
+exports[`<Tile /> create tile component 4`] = `
+<div
+  className="fd-tile"
+>
+  <div
+    className="fd-tile__content"
+  >
+    <h2
+      className="fd-tile__title"
+    >
+      Tile Title
+    </h2>
+  </div>
+  <div
+    className="fd-tile__actions yellow"
+  >
+    <div
+      className="fd-popover"
+    >
+      <div
+        aria-expanded={false}
+        className="fd-popover__control"
+        onClick={[Function]}
+      >
+        <button
+          className="fd-button fd-button--standard sap-icon--vertical-grip"
+        />
+      </div>
+      <div
+        aria-hidden={true}
+        className="fd-popover__body"
+      >
+        <nav
+          className="fd-menu"
+        >
+          <ul
+            className="fd-menu__list"
+          >
+            <li>
+              <a
+                className="fd-menu__item"
+                href="/"
+              >
+                Option 1
+              </a>
+            </li>
+            <li>
+              <a
+                className="fd-menu__item"
+                href="/"
+              >
+                Option 2
+              </a>
+            </li>
+            <li>
+              <a
+                className="fd-menu__item"
+                href="/"
+              >
+                Option 3
+              </a>
+            </li>
+            <li>
+              <a
+                className="fd-menu__item"
+                href="/"
+              >
+                Option 4
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Tile /> create tile component 5`] = `
+<div
+  className="fd-tile"
+  isButton={true}
+>
+  <div
+    className="fd-tile__media"
+  >
+    <span
+      className="fd-identifier--m sap-icon--home fd-has-background-color-accent-3"
+      role="presentation"
+    />
+  </div>
+  <div
+    className="fd-tile__content"
+  >
+    <h2
+      className="fd-tile__title"
+    >
+      Tile Title
+    </h2>
+    <p>
+      Tile Description
+    </p>
+  </div>
+</div>
+`;
+
+exports[`<Tile /> create tile component 6`] = `
+<div
+  className="fd-tile"
+>
+  <div
+    className="fd-tile__content"
+  >
+    <h2
+      className="fd-tile__title"
+    >
+      Tile Title
+    </h2>
+  </div>
+  <div
+    className="fd-tile__actions"
+  >
+    <div
+      className="fd-popover"
+    >
+      <div
+        aria-expanded={false}
+        className="fd-popover__control"
+        onClick={[Function]}
+      >
+        <button
+          className="fd-button fd-button--standard sap-icon--vertical-grip"
+        />
+      </div>
+      <div
+        aria-hidden={true}
+        className="fd-popover__body"
+      >
+        <nav
+          className="fd-menu"
+        >
+          <ul
+            className="fd-menu__list"
+          >
+            <li>
+              <a
+                className="fd-menu__item"
+                href="/"
+              >
+                Option 1
+              </a>
+            </li>
+            <li>
+              <a
+                className="fd-menu__item"
+                href="/"
+              >
+                Option 2
+              </a>
+            </li>
+            <li>
+              <a
+                className="fd-menu__item"
+                href="/"
+              >
+                Option 3
+              </a>
+            </li>
+            <li>
+              <a
+                className="fd-menu__item"
+                href="/"
+              >
+                Option 4
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Tile /> create tile component 7`] = `
+<div
+  className="fd-product-tile pink"
+  isButton={true}
+>
+  <div
+    className="fd-product-tile__media"
+    style={
+      Object {
+        "backgroundImage": "url(https://techne.yaas.io/images/product-thumbnail-wide.png)",
+      }
+    }
+  />
+  <div
+    className="fd-product-tile__content"
+  >
+    <h2
+      className="fd-product-tile__title"
+    >
+      Tile Title
+    </h2>
+    <p>
+      Tile Description
+    </p>
+  </div>
+</div>
+`;
+
+exports[`<Tile /> create tile component 8`] = `
+<div
+  className="fd-product-tile is-disabled"
+>
+  <div
+    className="fd-product-tile__media blue"
+    style={
+      Object {
+        "backgroundImage": "url(https://techne.yaas.io/images/product-thumbnail-wide.png)",
+      }
+    }
+  />
+  <div
+    className="fd-product-tile__content blue"
+  >
+    <h2
+      className="fd-product-tile__title"
+    >
+      Tile Title
+    </h2>
+    <p>
+      Tile Description
+    </p>
+  </div>
+</div>
+`;
+
+exports[`<Tile /> create tile component 9`] = `
+<div
+  className="fd-tile-grid fd-tile-grid--3col blue"
+>
+  <div
+    className="fd-tile fd-has-grid-row-span-2 fd-has-background-color-accent-7"
+  >
+    <div
+      className="fd-tile__content"
+    >
+      <h2
+        className="fd-tile__title"
+      >
+        Tile Title
+      </h2>
+      <p>
+        Tile Description
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Tile /> create tile component 10`] = `
+<div
+  className="fd-tile-grid fd-tile-grid--4col"
+>
+  <div
+    className="fd-tile fd-has-grid-row-span-2 fd-has-background-color-accent-7"
+  >
+    <div
+      className="fd-tile__content"
+    >
+      <h2
+        className="fd-tile__title"
+      >
+        Tile Title
+      </h2>
+      <p>
+        Tile Description
+      </p>
+    </div>
+  </div>
+</div>
+`;

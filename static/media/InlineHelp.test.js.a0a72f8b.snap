@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<InlineHelp /> create Bottom Center InlineHelp component 1`] = `
+<span
+  className="fd-inline-help"
+>
+  <span
+    className="fd-inline-help__content fd-inline-help__content--bottom-center"
+  >
+    Lorem ipsum dolor sit amet, consectetur adipiscing.
+  </span>
+</span>
+`;
+
+exports[`<InlineHelp /> create Bottom Left InlineHelp component 1`] = `
+<span
+  className="fd-inline-help"
+>
+  <span
+    className="fd-inline-help__content fd-inline-help__content--bottom-left"
+  >
+    Lorem ipsum dolor sit amet, consectetur adipiscing.
+  </span>
+</span>
+`;
+
+exports[`<InlineHelp /> create Left InlineHelp component 1`] = `
+<span
+  className="fd-inline-help"
+>
+  <span
+    className="fd-inline-help__content fd-inline-help__content--left"
+  >
+    Lorem ipsum dolor sit amet, consectetur adipiscing.
+  </span>
+</span>
+`;
+
+exports[`<InlineHelp /> create Right InlineHelp component 1`] = `
+<span
+  className="fd-inline-help"
+>
+  <span
+    className="fd-inline-help__content fd-inline-help__content--right"
+  >
+    Lorem ipsum dolor sit amet, consectetur adipiscing.
+  </span>
+</span>
+`;
+
+exports[`<InlineHelp /> create default InlineHelp component 1`] = `
+<span
+  className="fd-inline-help"
+>
+  <span
+    className="fd-inline-help__content fd-inline-help__content--bottom-right blue"
+  >
+    Lorem ipsum dolor sit amet, consectetur adipiscing.
+  </span>
+</span>
+`;

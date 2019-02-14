@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Identifier /> Create identifier 1`] = `
+<span
+  className="fd-identifier--s sap-icon--washing-machine"
+  role="presentation"
+/>
+`;
+
+exports[`<Identifier /> Create identifier 2`] = `
+<span
+  aria-label="Wendy Wallace"
+  className="fd-identifier--m"
+  role=""
+>
+  WW
+</span>
+`;
+
+exports[`<Identifier /> Create identifier 3`] = `
+<span
+  className="fd-identifier--m sap-icon--washing-machine fd-identifier--circle"
+  role="presentation"
+/>
+`;
+
+exports[`<Identifier /> Create identifier 4`] = `
+<span
+  className="fd-identifier--m sap-icon--washing-machine fd-identifier--transparent blue"
+  role="presentation"
+/>
+`;
+
+exports[`<Identifier /> Create identifier 5`] = `
+<span
+  className="fd-identifier--m sap-icon--money-bills fd-has-background-color-accent-9"
+  role="presentation"
+/>
+`;
+
+exports[`<Identifier /> Create identifier 6`] = `
+<span
+  className="fd-identifier fd-identifier--circle fd-identifier--thumbnail"
+  role="presentation"
+  style={
+    Object {
+      "backgroundImage": "url(https://placeimg.com/400/400/nature)",
+    }
+  }
+/>
+`;

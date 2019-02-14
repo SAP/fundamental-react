@@ -1,0 +1,294 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<LocalizationEditor /> create localization editor 1`] = `
+<div
+  className="fd-localization-editor"
+>
+  <div
+    className="fd-popover"
+  >
+    <div
+      aria-expanded={false}
+      className="fd-popover__control"
+      onClick={[Function]}
+    >
+      <div>
+        <label
+          className="fd-form__label"
+        >
+          Localization Editor Label
+        </label>
+        <div
+          className="fd-input-group fd-input-group--after"
+        >
+          <input
+            className=""
+            placeholder="Enter Label"
+            type="text"
+          />
+          <span
+            className="fd-input-group__addon fd-input-group__addon--after fd-input-group__addon--button"
+          >
+            <button
+              className="fd-button--light fd-localization-editor__button"
+            >
+              EN*
+            </button>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      aria-hidden={true}
+      className="fd-popover__body fd-popover__body--no-arrow"
+    >
+      <nav
+        className="fd-menu"
+      >
+        <ul
+          className="fd-menu__list fd-localization-editor__list"
+        >
+          <li>
+            <div
+              className="fd-input-group fd-input-group--after"
+            >
+              <input
+                className=""
+                placeholder="Enter Label"
+                type="text"
+              />
+              <span
+                className="fd-input-group__addon fd-input-group__addon--after"
+              >
+                ES
+              </span>
+            </div>
+          </li>
+          <li>
+            <div
+              className="fd-input-group fd-input-group--after"
+            >
+              <input
+                className=""
+                placeholder="Enter Label"
+                type="text"
+              />
+              <span
+                className="fd-input-group__addon fd-input-group__addon--after"
+              >
+                CH
+              </span>
+            </div>
+          </li>
+          <li>
+            <div
+              className="fd-input-group fd-input-group--after"
+            >
+              <input
+                className=""
+                placeholder="Enter Label"
+                type="text"
+              />
+              <span
+                className="fd-input-group__addon fd-input-group__addon--after"
+              >
+                PL
+              </span>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<LocalizationEditor /> create localization editor 2`] = `
+<div
+  className="fd-localization-editor blue"
+>
+  <div
+    className="fd-popover"
+  >
+    <div
+      aria-expanded={false}
+      className="fd-popover__control"
+      onClick={[Function]}
+    >
+      <div>
+        <label
+          className="fd-form__label"
+        >
+          Localization Editor Compact Mode
+        </label>
+        <div
+          className="fd-input-group fd-input-group--compact fd-input-group--after"
+        >
+          <input
+            className="fd-input fd-input--compact"
+            placeholder="Enter Label"
+            type="text"
+          />
+          <span
+            className="fd-input-group__addon fd-input-group__addon--after fd-input-group__addon--button"
+          >
+            <button
+              className="fd-button--light fd-localization-editor__button"
+            >
+              EN*
+            </button>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      aria-hidden={true}
+      className="fd-popover__body fd-popover__body--no-arrow"
+    >
+      <nav
+        className="fd-menu"
+      >
+        <ul
+          className="fd-menu__list fd-localization-editor__list"
+        >
+          <li>
+            <div
+              className="fd-input-group fd-input-group--compact fd-input-group--after"
+            >
+              <input
+                className="fd-input fd-input--compact"
+                placeholder="Enter Label"
+                type="text"
+              />
+              <span
+                className="fd-input-group__addon fd-input-group__addon--after"
+              >
+                ES
+              </span>
+            </div>
+          </li>
+          <li>
+            <div
+              className="fd-input-group fd-input-group--compact fd-input-group--after"
+            >
+              <input
+                className="fd-input fd-input--compact"
+                placeholder="Enter Label"
+                type="text"
+              />
+              <span
+                className="fd-input-group__addon fd-input-group__addon--after"
+              >
+                CH
+              </span>
+            </div>
+          </li>
+          <li>
+            <div
+              className="fd-input-group fd-input-group--compact fd-input-group--after"
+            >
+              <input
+                className="fd-input fd-input--compact"
+                placeholder="Enter Label"
+                type="text"
+              />
+              <span
+                className="fd-input-group__addon fd-input-group__addon--after"
+              >
+                PL
+              </span>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<LocalizationEditor /> create localization editor 3`] = `
+<div
+  className="fd-localization-editor"
+>
+  <div
+    className="fd-popover"
+  >
+    <div
+      aria-expanded={false}
+      className="fd-popover__control"
+      onClick={[Function]}
+    >
+      <div>
+        <label
+          className="fd-form__label"
+        >
+          Localization Editor Label
+        </label>
+        <div
+          className="fd-input-group fd-input-group--after"
+        >
+          <textarea />
+          <span
+            className="fd-input-group__addon fd-input-group__addon--after fd-input-group__addon--button fd-input-group__addon--textarea"
+          >
+            <button
+              className="fd-button--light fd-localization-editor__button"
+            >
+              EN*
+            </button>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      aria-hidden={true}
+      className="fd-popover__body fd-popover__body--no-arrow"
+    >
+      <nav
+        className="fd-menu"
+      >
+        <ul
+          className="fd-menu__list fd-localization-editor__list"
+        >
+          <li>
+            <div
+              className="fd-input-group fd-input-group--after"
+            >
+              <textarea />
+              <span
+                className="fd-input-group__addon fd-input-group__addon--after fd-input-group__addon--textarea"
+              >
+                ES
+              </span>
+            </div>
+          </li>
+          <li>
+            <div
+              className="fd-input-group fd-input-group--after"
+            >
+              <textarea />
+              <span
+                className="fd-input-group__addon fd-input-group__addon--after fd-input-group__addon--textarea"
+              >
+                CH
+              </span>
+            </div>
+          </li>
+          <li>
+            <div
+              className="fd-input-group fd-input-group--after"
+            >
+              <textarea />
+              <span
+                className="fd-input-group__addon fd-input-group__addon--after fd-input-group__addon--textarea"
+              >
+                PL
+              </span>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Breadcrumb /> create breadcrumbs using router links 1`] = `
+<ul
+  className="fd-breadcrumb"
+>
+  <li
+    className="fd-breadcrumb__item blue"
+  />
+  <li
+    className="fd-breadcrumb__item"
+  >
+    <a
+      className="fd-breadcrumb__link"
+      href="/"
+      onClick={[Function]}
+    >
+      Link Text
+    </a>
+  </li>
+  <li
+    className="fd-breadcrumb__item"
+  >
+    <a
+      className="fd-breadcrumb__link"
+      href="/"
+      onClick={[Function]}
+    >
+      Link Text
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`<Breadcrumb /> create default breadcrumbs 1`] = `
+<ul
+  className="fd-breadcrumb"
+>
+  <li
+    className="fd-breadcrumb__item"
+  >
+    <a
+      className="fd-breadcrumb__link"
+      href="#"
+    >
+      Link Text
+    </a>
+  </li>
+  <li
+    className="fd-breadcrumb__item"
+  >
+    <a
+      className="fd-breadcrumb__link"
+      href="#"
+    >
+      Link Text
+    </a>
+  </li>
+  <li
+    className="fd-breadcrumb__item"
+  />
+</ul>
+`;

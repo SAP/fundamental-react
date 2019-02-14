@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Image /> create image 1`] = `
+<span
+  className="fd-image--s blue"
+  style={
+    Object {
+      "backgroundImage": "url(https://placeimg.com/400/400/nature)",
+    }
+  }
+/>
+`;
+
+exports[`<Image /> create image 2`] = `
+<span
+  className="fd-image--m fd-image--circle"
+  style={
+    Object {
+      "backgroundImage": "url(https://placeimg.com/400/400/nature)",
+    }
+  }
+/>
+`;

@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Token /> create token component 1`] = `
+<span
+  className="fd-token"
+  role="button"
+>
+  Bibendum
+</span>
+`;
+
+exports[`<Token /> create token component 2`] = `
+<span
+  className="fd-token blue"
+  role="button"
+>
+  Bibendum
+</span>
+`;

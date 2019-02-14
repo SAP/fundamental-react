@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Icon /> create icon 1`] = `
+<span
+  className="sap-icon--cart blue"
+  onClick={[MockFunction]}
+/>
+`;
+
+exports[`<Icon /> create icon 2`] = `
+<span
+  className="sap-icon--cart sap-icon--s"
+/>
+`;

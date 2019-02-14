@@ -1,0 +1,107 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Badge /> create badges, pills and filled badges 1`] = `
+<span
+  className="fd-badge"
+>
+  Default
+</span>
+`;
+
+exports[`<Badge /> create badges, pills and filled badges 2`] = `
+<span
+  className="fd-badge fd-badge--success"
+>
+  Default
+</span>
+`;
+
+exports[`<Badge /> create badges, pills and filled badges 3`] = `
+<span
+  className="fd-badge fd-badge--pill"
+>
+  Default
+</span>
+`;
+
+exports[`<Badge /> create badges, pills and filled badges 4`] = `
+<span
+  className="fd-badge fd-badge--success fd-badge--pill"
+>
+  Default
+</span>
+`;
+
+exports[`<Badge /> create badges, pills and filled badges 5`] = `
+<span
+  className="fd-badge fd-badge--filled blue"
+>
+  Default
+</span>
+`;
+
+exports[`<Badge /> create badges, pills and filled badges 6`] = `
+<span
+  className="fd-badge fd-badge--success fd-badge--filled"
+>
+  Default
+</span>
+`;
+
+exports[`<Badge /> create badges, pills and filled badges 7`] = `
+<span
+  aria-label="Unread count"
+  className="fd-counter"
+>
+  5
+</span>
+`;
+
+exports[`<Badge /> create badges, pills and filled badges 8`] = `
+<span
+  aria-label="Unread count"
+  className="fd-counter fd-counter--notification blue"
+>
+  5
+</span>
+`;
+
+exports[`<Badge /> create label 1`] = `
+<span
+  className="fd-label"
+>
+  Default
+</span>
+`;
+
+exports[`<Badge /> create label 2`] = `
+<span
+  className="fd-label fd-label--success blue"
+>
+  Default
+</span>
+`;
+
+exports[`<Badge /> create status 1`] = `
+<span
+  className="fd-status-label"
+>
+  Default
+</span>
+`;
+
+exports[`<Badge /> create status 2`] = `
+<span
+  className="fd-status-label fd-status-label--success blue"
+>
+  Default
+</span>
+`;
+
+exports[`<Badge /> create status 3`] = `
+<span
+  className="fd-status-label sap-icon--history"
+>
+  Default
+</span>
+`;
