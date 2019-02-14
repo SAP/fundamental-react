@@ -205,13 +205,10 @@ export class TreeItem extends Component {
 
             return isTreeRow ?
                 React.cloneElement(child, {
-                    expandData,
                     isExpanded,
                     onExpandClick: () => onExpandClick(this.rowId),
                     isParent: !!childBranch[0],
-                    rowId: this.rowId,
-                    // Increment child list level
-                    level: level + 1
+                    rowId: this.rowId
                 }) :
                 null;
         });
