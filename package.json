@@ -13,7 +13,7 @@
   "scripts": {
     "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
     "build-doc": "node scripts/build.js",
-    "build-doc:local": "BUILD_ENV=development node scripts/build.js && serve -s build",
+    "build-doc:local": "BUILD_ENV=development npm run build-doc && serve -s build",
     "build-js": "node scripts/build.js",
     "build:lint:fix": "eslint --fix 'src/**' --ext .js,.jsx --env browser,node",
     "build:lint": "eslint 'src/**' --ext .js,.jsx --env browser,node",
