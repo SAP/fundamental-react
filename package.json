@@ -13,6 +13,7 @@
   "scripts": {
     "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
     "build-doc": "node scripts/build.js",
+    "build-doc:local": "BUILD_ENV=development node scripts/build.js && serve -s build",
     "build-js": "node scripts/build.js",
     "build:lint:fix": "eslint --fix 'src/**' --ext .js,.jsx --env browser,node",
     "build:lint": "eslint 'src/**' --ext .js,.jsx --env browser,node",
@@ -119,6 +120,7 @@
     "react-test-renderer": "^16.6.3",
     "resolve": "1.8.1",
     "sass-loader": "7.1.0",
+    "serve": "^10.1.2",
     "size-limit": "^0.21.1",
     "sort-by": "^1.2.0",
     "standard-version": "^4.4.0",
