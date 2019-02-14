@@ -1,4 +1,4 @@
-import {ALERT_TYPES} from '../utils/constants';
+import { ALERT_TYPES } from '../utils/constants';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
@@ -70,6 +70,7 @@ export class Alert extends Component {
         );
     }
 }
+Alert.displayName = 'Alert';
 
 Alert.propTypes = {
     buttonProps: PropTypes.object,

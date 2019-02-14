@@ -38,7 +38,7 @@ exports[`<Shellbar /> create shellbar 1`] = `
           className="fd-user-menu"
         >
           <div
-            className="fd-popover fd-popover--right"
+            className="fd-popover"
           >
             <div
               aria-expanded={false}
@@ -142,7 +142,7 @@ exports[`<Shellbar /> create shellbar 2`] = `
           className="fd-user-menu"
         >
           <div
-            className="fd-popover fd-popover--right"
+            className="fd-popover"
           >
             <div
               aria-expanded={false}
@@ -230,7 +230,7 @@ exports[`<Shellbar /> create shellbar 3`] = `
         className="fd-product-menu"
       >
         <div
-          className="fd-popover fd-popover--right"
+          className="fd-popover"
         >
           <div
             aria-expanded={false}
@@ -367,7 +367,7 @@ exports[`<Shellbar /> create shellbar 3`] = `
         className="fd-shellbar__action fd-shellbar__action--collapsible"
       >
         <div
-          className="fd-popover fd-popover--right"
+          className="fd-popover"
         >
           <div
             aria-expanded={false}
@@ -426,7 +426,7 @@ exports[`<Shellbar /> create shellbar 3`] = `
         </div>
       </div>
       <div
-        className="fd-popover fd-popover--right"
+        className="fd-popover"
       >
         <div
           aria-expanded={false}
@@ -494,7 +494,7 @@ exports[`<Shellbar /> create shellbar 3`] = `
           className="fd-shellbar-collapse"
         >
           <div
-            className="fd-popover fd-popover--right"
+            className="fd-popover"
           >
             <div
               aria-expanded={false}
@@ -604,7 +604,7 @@ exports[`<Shellbar /> create shellbar 3`] = `
           className="fd-user-menu"
         >
           <div
-            className="fd-popover fd-popover--right"
+            className="fd-popover"
           >
             <div
               aria-expanded={false}
@@ -672,7 +672,7 @@ exports[`<Shellbar /> create shellbar 3`] = `
           className="fd-product-switcher"
         >
           <div
-            className="fd-popover fd-popover--right"
+            className="fd-popover"
           >
             <div
               aria-expanded={false}
@@ -758,7 +758,7 @@ exports[`<Shellbar /> create shellbar 4`] = `
         className="fd-product-menu"
       >
         <div
-          className="fd-popover fd-popover--right"
+          className="fd-popover"
         >
           <div
             aria-expanded={false}
@@ -895,7 +895,7 @@ exports[`<Shellbar /> create shellbar 4`] = `
         className="fd-shellbar__action fd-shellbar__action--collapsible"
       >
         <div
-          className="fd-popover fd-popover--right"
+          className="fd-popover"
         >
           <div
             aria-expanded={false}
@@ -954,7 +954,7 @@ exports[`<Shellbar /> create shellbar 4`] = `
         </div>
       </div>
       <div
-        className="fd-popover fd-popover--right"
+        className="fd-popover"
       >
         <div
           aria-expanded={false}
@@ -998,7 +998,7 @@ exports[`<Shellbar /> create shellbar 4`] = `
           className="fd-shellbar-collapse"
         >
           <div
-            className="fd-popover fd-popover--right"
+            className="fd-popover"
           >
             <div
               aria-expanded={false}
@@ -1101,7 +1101,7 @@ exports[`<Shellbar /> create shellbar 4`] = `
           className="fd-user-menu"
         >
           <div
-            className="fd-popover fd-popover--right"
+            className="fd-popover"
           >
             <div
               aria-expanded={false}
@@ -1169,7 +1169,7 @@ exports[`<Shellbar /> create shellbar 4`] = `
           className="fd-product-switcher"
         >
           <div
-            className="fd-popover fd-popover--right"
+            className="fd-popover"
           >
             <div
               aria-expanded={false}
@@ -1255,7 +1255,7 @@ exports[`<Shellbar /> create shellbar 5`] = `
         className="fd-product-menu"
       >
         <div
-          className="fd-popover fd-popover--right"
+          className="fd-popover"
         >
           <div
             aria-expanded={false}
@@ -1405,7 +1405,7 @@ exports[`<Shellbar /> create shellbar 5`] = `
         </button>
       </div>
       <div
-        className="fd-popover fd-popover--right"
+        className="fd-popover"
       >
         <div
           aria-expanded={false}
@@ -1449,7 +1449,7 @@ exports[`<Shellbar /> create shellbar 5`] = `
           className="fd-shellbar-collapse"
         >
           <div
-            className="fd-popover fd-popover--right"
+            className="fd-popover"
           >
             <div
               aria-expanded={false}
@@ -1552,7 +1552,7 @@ exports[`<Shellbar /> create shellbar 5`] = `
           className="fd-user-menu"
         >
           <div
-            className="fd-popover fd-popover--right"
+            className="fd-popover"
           >
             <div
               aria-expanded={false}
@@ -1620,7 +1620,7 @@ exports[`<Shellbar /> create shellbar 5`] = `
           className="fd-product-switcher"
         >
           <div
-            className="fd-popover fd-popover--right"
+            className="fd-popover"
           >
             <div
               aria-expanded={false}
@@ -1706,7 +1706,7 @@ exports[`<Shellbar /> create shellbar 6`] = `
         className="fd-product-menu"
       >
         <div
-          className="fd-popover fd-popover--right"
+          className="fd-popover"
         >
           <div
             aria-expanded={false}
@@ -1843,7 +1843,7 @@ exports[`<Shellbar /> create shellbar 6`] = `
         className="fd-shellbar__action fd-shellbar__action--collapsible"
       >
         <div
-          className="fd-popover fd-popover--right"
+          className="fd-popover"
         >
           <div
             aria-expanded={false}
@@ -1924,7 +1924,7 @@ exports[`<Shellbar /> create shellbar 6`] = `
           className="fd-shellbar-collapse"
         >
           <div
-            className="fd-popover fd-popover--right"
+            className="fd-popover"
           >
             <div
               aria-expanded={false}
@@ -2034,7 +2034,7 @@ exports[`<Shellbar /> create shellbar 6`] = `
           className="fd-user-menu"
         >
           <div
-            className="fd-popover fd-popover--right"
+            className="fd-popover"
           >
             <div
               aria-expanded={false}
@@ -2105,7 +2105,7 @@ exports[`<Shellbar /> create shellbar 6`] = `
           className="fd-product-switcher"
         >
           <div
-            className="fd-popover fd-popover--right"
+            className="fd-popover"
           >
             <div
               aria-expanded={false}

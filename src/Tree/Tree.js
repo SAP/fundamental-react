@@ -129,7 +129,7 @@ export class Tree extends Component {
             let tree;
 
             let displayLevel =
-            'fd-tree__group fd-tree__group--sublevel-' + depthLevel;
+                'fd-tree__group fd-tree__group--sublevel-' + depthLevel;
 
             if (row.hasChildren && this.state.iStates[row.id]) {
                 tree = this.createTreeList(row.children, true, depthLevel + 1);
@@ -213,6 +213,7 @@ export class Tree extends Component {
         );
     }
 }
+Tree.displayName = 'Tree';
 
 Tree.propTypes = {
     treeData: PropTypes.arrayOf(

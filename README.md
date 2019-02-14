@@ -39,7 +39,7 @@ For an existing react application, follow the steps below:
 
 1. Import components as needed. See [Component Documentation](https://sap.github.io/fundamental-react/) for examples and API details.
     ```javascript
-    import { Alert } from 'fundamental-react/lib/Alert/Alert';
+    import { Alert } from 'fundamental-react/lib/Alert';
     ```
     or
     ```javascript

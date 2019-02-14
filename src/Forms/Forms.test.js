@@ -2,7 +2,7 @@ import { mount } from 'enzyme';
 import React from 'react';
 import renderer from 'react-test-renderer';
 import sinon from 'sinon';
-import { FormFieldset, FormInput, FormItem, FormLabel, FormLegend, FormMessage, FormRadioGroup, FormRadioItem, FormSelect, FormSet, FormTextarea} from './Forms';
+import { FormFieldset, FormInput, FormItem, FormLabel, FormLegend, FormMessage, FormRadioGroup, FormRadioItem, FormSelect, FormSet, FormTextarea } from './Forms';
 
 describe('<Forms />', () => {
     const formInput = (
@@ -366,7 +366,7 @@ describe('<Forms />', () => {
             element
                 .find('input.fd-form__control[type="radio"]')
                 .at(0)
-                .simulate('change', { currentTarget: { value: 'radio-1' }});
+                .simulate('change', { currentTarget: { value: 'radio-1' } });
 
             expect(spy.calledOnce).toBe(true);
         });
@@ -418,7 +418,7 @@ describe('<Forms />', () => {
             element
                 .find('input.fd-form__control[type="radio"]')
                 .at(0)
-                .simulate('change', { currentTarget: { value: 'radio-1' }});
+                .simulate('change', { currentTarget: { value: 'radio-1' } });
 
             expect(spy.calledOnce).toBe(true);
         });

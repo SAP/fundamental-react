@@ -19,11 +19,11 @@ export const TokenComponent = () => {
                 A **Token** is used to represent contextual information. It can be useful to show
                 applied filters, selected values for a form field or object metadata.
             </Description>
-            <Import sourceModule={require('./Token')} />
+            <Import sourceModulePath={require.resolve('./Token')} />
 
             <Separator />
 
-            <Properties sourceModule={require('./Token')} />
+            <Properties sourceModulePath={require.resolve('./Token')} />
 
             <Separator />
 
@@ -31,7 +31,7 @@ export const TokenComponent = () => {
                 <div className='fd-doc__margin--token'>
                     {
                         tagsNames.map((name) => {
-                            return <Token clickHandler={(e) => closeAction(name, e)}>{name}</Token>;
+                            return <Token clickHandler={(e) => closeAction(name, e)} key={name}>{name}</Token>;
                         })
                     }
                 </div>

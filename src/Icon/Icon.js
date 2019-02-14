@@ -1,5 +1,5 @@
 import classnames from 'classnames';
-import {ICON_SIZES} from '../utils/constants';
+import { ICON_SIZES } from '../utils/constants';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -19,6 +19,7 @@ export const Icon = ({ glyph, size, clickHandler, className, ...props }) => {
             onClick={clickHandler} />
     );
 };
+Icon.displayName = 'Icon';
 
 Icon.propTypes = {
     glyph: PropTypes.string.isRequired,

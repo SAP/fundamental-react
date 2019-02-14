@@ -134,6 +134,7 @@ export class Pagination extends Component {
         );
     }
 }
+Pagination.displayName = 'Pagination';
 
 Pagination.propTypes = {
     itemsTotal: PropTypes.number.isRequired,

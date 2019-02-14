@@ -1,5 +1,5 @@
 import classnames from 'classnames';
-import {INLINE_HELP_PLACEMENTS} from '../utils/constants';
+import { INLINE_HELP_PLACEMENTS } from '../utils/constants';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -22,6 +22,7 @@ export const InlineHelp = ({ text, placement, className, ...props }) => {
         </span>
     );
 };
+InlineHelp.displayName = 'InlineHelp';
 
 InlineHelp.propTypes = {
     placement: PropTypes.oneOf(INLINE_HELP_PLACEMENTS).isRequired,

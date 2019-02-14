@@ -1,7 +1,7 @@
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
-import {BUTTON_OPTIONS, BUTTON_TYPES} from '../utils/constants';
+import { BUTTON_OPTIONS, BUTTON_TYPES } from '../utils/constants';
 
 export const Button = ({
     option,
@@ -39,6 +39,7 @@ export const Button = ({
         {children}
     </button>);
 };
+Button.displayName = 'Button';
 
 Button.propTypes = {
     children: PropTypes.node,
@@ -63,7 +64,7 @@ Button.propDescriptions = {
     typeAttr: 'Value for the `type` attribute on the `<button>` element.'
 };
 
-export const ButtonGroup = ({children, ...props}) => {
+export const ButtonGroup = ({ children, ...props }) => {
     return (
         <div
             {...props}
@@ -74,6 +75,7 @@ export const ButtonGroup = ({children, ...props}) => {
         </div>
     );
 };
+ButtonGroup.displayName = 'ButtonGroup';
 
 ButtonGroup.propTypes = {
     children: PropTypes.node

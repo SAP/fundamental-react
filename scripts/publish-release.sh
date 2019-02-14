@@ -1,6 +1,7 @@
 #! /bin/bash
 NOCOLOR='\033[0m'
 ERROR='\033[31m'
+TMP_BRANCH='tmp_branch_for_automated_release_do_not_use'
 
 git fetch
 
@@ -25,12 +26,12 @@ hash_upstream=$(git rev-parse $git_branch@{upstream})
 
 set -o errexit
 
-git checkout -b tmp_branch_for_automated_release_do_not_use
+git checkout -b $TMP_BRANCH
 git commit --allow-empty -m "chore(release): create new release via script"
 
 # push new branch to trigger travis build
-git push --set-upstream origin tmp_branch_for_automated_release_do_not_use
+git push --set-upstream origin $TMP_BRANCH
 
 # delete branch on local machine
 git checkout master
-git branch -D tmp_branch_for_automated_release_do_not_use
+git branch -D $TMP_BRANCH

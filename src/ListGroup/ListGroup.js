@@ -14,6 +14,7 @@ export const ListGroup = ({ children, className, ...props }) => {
         </ul>
     );
 };
+ListGroup.displayName = 'ListGroup';
 
 ListGroup.propTypes = {
     children: PropTypes.node,
@@ -33,6 +34,7 @@ export const ListGroupItem = ({ children, className, ...props }) => {
 
     );
 };
+ListGroupItem.displayName = 'ListGroupItem';
 
 ListGroupItem.propTypes = {
     children: PropTypes.node,
@@ -51,6 +53,7 @@ export const ListGroupItemActions = ({ children, className, ...props }) => {
         </span>
     );
 };
+ListGroupItemActions.displayName = 'ListGroupItemActions';
 
 ListGroupItemActions.propTypes = {
     children: PropTypes.node,
@@ -74,6 +77,7 @@ export const ListGroupItemCheckbox = ({ children, labelProps, inputProps, ...pro
         </div>
     );
 };
+ListGroupItemCheckbox.displayName = 'ListGroupItemCheckbox';
 
 ListGroupItemCheckbox.propTypes = {
     children: PropTypes.node,

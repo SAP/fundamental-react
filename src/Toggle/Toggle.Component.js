@@ -27,6 +27,12 @@ export const ToggleComponent = () => {
     Large toggle
 </Toggle>`;
 
+    const toggleSizeDescription = `
+The toggle can be set to 4 sizes: 'xs', 's', 'm' and 'l'. \n\n
+When used with forms, it is recommended to use the small size so that form components will be
+consistent.
+`;
+
     return (
         <div>
             <Header>Toggle</Header>
@@ -37,20 +43,16 @@ export const ToggleComponent = () => {
                 would be "Active", the toggle state would be “on” and the selected state label displayed to the right of
                 the toggle would be “Yes”.
             </Description>
-            <Import sourceModule={require('./Toggle')} />
+            <Import sourceModulePath={require.resolve('./Toggle')} />
 
             <Separator />
 
-            <Properties sourceModule={require('./Toggle')} />
+            <Properties sourceModulePath={require.resolve('./Toggle')} />
 
             <Separator />
 
             <h2>Toggle Sizes</h2>
-            <Description>
-                The toggle can be set to 4 sizes: 'xs', 's', 'normal' and 'l'. For 'normal' size leave empty. <br />
-                When used with forms, it is recommended to use the small size so that form components will be
-                consistent.
-            </Description>
+            <Description>{toggleSizeDescription}</Description>
             <DocsTile>
                 <Toggle id='Yj07w604' size='xs'>
                     Extra Small toggle

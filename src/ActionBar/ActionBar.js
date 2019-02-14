@@ -11,7 +11,7 @@ export const ActionBar = ({ mobile, width, children, className, ...props }) => {
     return (
         <React.Fragment>
             {mobile ? (
-                <div style={{width}}>
+                <div style={{ width }}>
                     <div {...props} className={actionBarClasses}>{children}</div>
                 </div>
             ) : (
@@ -20,6 +20,7 @@ export const ActionBar = ({ mobile, width, children, className, ...props }) => {
         </React.Fragment>
     );
 };
+ActionBar.displayName = 'ActionBar';
 
 ActionBar.propTypes = {
     className: PropTypes.string,

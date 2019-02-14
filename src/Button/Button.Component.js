@@ -110,6 +110,22 @@ const clickBtnHandler = btn => {
         alert(`You clicked the ${btn} Button`);
     };
 
+    const buttonOptionsDescription = `
+There are three emphasis styles used to indicate the importance of the button on the page. \n\n
+* **Emphasized Button**: There should only be one highlighted button on the page. This is
+the primary call to action.\n\n
+* **Regular Button**: The default button style and the most common button. There may be
+more than one on a page.\n\n
+* **Light Button**: This is the lowest priority button and most often used with page
+content like appearing in a table or list. There may be more than one on the page.
+`;
+    const buttonTypesDescription = `
+* **Action Button**: The default button \n\n
+* **Standard Button**: Neutral or informative color \n\n
+* **Positive Button**: Used for positive actions such as approved, ok, yes. \n\n
+* **Medium Button**: Used for warnings or alert \n\n
+* **Negative Button**: Used for negative actions such as decline, cancel, no.
+`;
     return (
         <div>
             <Header>Button</Header>
@@ -119,24 +135,16 @@ const clickBtnHandler = btn => {
                 instance, the most important button has a blue background where as a red button should only be used if
                 the action it performs is potentially destructive.
             </Description>
-            <Import sourceModule={require('./Button')} />
+            <Import sourceModulePath={require.resolve('./Button')} />
 
             <Separator />
 
-            <Properties sourceModule={require('./Button')} />
+            <Properties sourceModulePath={require.resolve('./Button')} />
 
             <Separator />
 
             <h2>Button Options</h2>
-            <Description>
-                There are three emphasis styles used to indicate the importance of the button on the page. <br />
-                <strong>- Emphasized Button</strong>: There should only be one highlighted button on the page. This is
-                the primary call to action. <br />
-                <strong>- Regular Button</strong>: The default button style and the most common button. There may be
-                more than one on a page. <br />
-                <strong>- Light Button</strong>: This is the lowest priority button and most often used with page
-                content like appearing in a table or list. There may be more than one on the page.
-            </Description>
+            <Description>{buttonOptionsDescription}</Description>
             <DocsTile centered>
                 <div className='fd-doc__margin--button'>
                     <Button onClick={() => clickBtnHandler('Emphasized')} option='emphasized'>
@@ -151,15 +159,7 @@ const clickBtnHandler = btn => {
             <Separator />
 
             <h2>Button Types</h2>
-            <Description>
-                <strong> - Action Button</strong>: The default button <br />
-                <strong> - Standard Button</strong>: Neutral or informative color <br />
-                <strong> - Positive Button</strong>: Used for positive actions such as approved, ok, yes. <br />
-                <strong> - Medium Button</strong>: Used for warnings or alert <br />
-                <strong> - Negative Button</strong>
-                :Used for negative actions such as decline, cancel, no.
-                <br />
-            </Description>
+            <Description>{buttonTypesDescription}</Description>
             <DocsTile centered>
                 <div className='fd-doc__margin--button'>
                     <Button>Action Button</Button>
@@ -175,7 +175,7 @@ const clickBtnHandler = btn => {
 
             <h2>Buttons with Icon</h2>
             <Description>
-                Button can have an icon with text or just and icon. You can use <code> glyph="icon-name"</code> to
+                Button can have an icon with text or just and icon. You can use `glyph="icon-name"` to
                 attach an icon to the button.
             </Description>
             <DocsTile centered>
@@ -223,7 +223,7 @@ const clickBtnHandler = btn => {
 
             <h2>Button Sizes</h2>
             <Description>
-                There are two sizes. The <code>compact</code> size is only used on desktop and it is full size when used
+                There are two sizes. The `compact` size is only used on desktop and it is full size when used
                 on a touch device.
             </Description>
             <DocsTile centered>
@@ -238,7 +238,7 @@ const clickBtnHandler = btn => {
 
             <h2>Button States</h2>
             <Description>
-                There are three states: <code>normal</code> (default), <code>selected</code>, and <code>disabled</code>.
+                There are three states: `normal` (default), `selected`, and `disabled`.
             </Description>
             <DocsTile centered>
                 <div className='fd-doc__margin--button'>

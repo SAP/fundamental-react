@@ -30,11 +30,11 @@ export const BreadcrumbComponent = () => {
                 to previous levels in the path. When clicking on the current page, a dropdown allows users to access
                 other pages at that same level.
             </Description>
-            <Import sourceModule={require('./Breadcrumb')} />
+            <Import sourceModulePath={require.resolve('./Breadcrumb')} />
 
             <Separator />
 
-            <Properties sourceModule={require('./Breadcrumb')} />
+            <Properties sourceModulePath={require.resolve('./Breadcrumb')} />
 
             <Separator />
 

@@ -1,7 +1,7 @@
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
-import {TOGGLE_SIZES} from '../utils/constants';
+import { TOGGLE_SIZES } from '../utils/constants';
 
 export class Toggle extends React.Component {
     constructor(props) {
@@ -60,6 +60,7 @@ export class Toggle extends React.Component {
         );
     }
 }
+Toggle.displayName = 'Toggle';
 
 Toggle.propTypes = {
     checked: PropTypes.bool,
@@ -73,7 +74,7 @@ Toggle.propTypes = {
 };
 
 Toggle.defaultProps = {
-    onChange: () => {}
+    onChange: () => { }
 };
 
 Toggle.propDescriptions = {

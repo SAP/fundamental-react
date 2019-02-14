@@ -633,14 +633,18 @@ export const IconComponent = () => {
         'zoom-out'
     ];
 
-    let icons = listOfIcons.map((icon, index) => {
-        return (
-            <div className='demo-icon-wrapper' key={index}>
-                <Icon glyph={icon} size='xl' />
-                <h5>sap-icon--{icon}</h5>
-            </div>
-        );
-    });
+    let icons = (
+        <div className='fd-doc__margin--icon'>
+            {listOfIcons.map((icon, index) => {
+                return (
+                    <div className='demo-icon-wrapper' key={index}>
+                        <Icon glyph={icon} size='xl' />
+                        <h5>sap-icon--{icon}</h5>
+                    </div>
+                );
+            })}
+        </div>
+    );
 
     return (
         <div>
@@ -651,11 +655,11 @@ export const IconComponent = () => {
                 this point they are used more as visual elements within other
                 components.
             </Description>
-            <Import sourceModule={require('./Icon')} />
+            <Import sourceModulePath={require.resolve('./Icon')} />
 
             <Separator />
 
-            <Properties sourceModule={require('./Icon')} />
+            <Properties sourceModulePath={require.resolve('./Icon')} />
 
             <Separator />
 
@@ -674,7 +678,7 @@ export const IconComponent = () => {
 
             <h2>Available Icons</h2>
 
-            <DocsTile>{icons}</DocsTile>
+            <DocsTile centered>{icons}</DocsTile>
 
             <Separator />
 

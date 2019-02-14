@@ -342,6 +342,7 @@ export class DatePicker extends Component {
         );
     }
 }
+DatePicker.displayName = 'DatePicker';
 
 DatePicker.propTypes = {
     ...Calendar.basePropTypes,

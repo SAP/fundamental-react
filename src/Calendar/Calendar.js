@@ -14,7 +14,6 @@ export class Calendar extends Component {
             selectedDate: new Date(0, 0, 0),
             showMonths: false,
             showYears: false,
-            currentYear: new Date(),
             dateClick: false
         };
     }
@@ -121,6 +120,7 @@ export class Calendar extends Component {
             this.setState({
                 currentDateDisplayed: date,
                 selectedDate: date,
+                showMonths: false,
                 dateClick: true
             }, function() {
                 this.returnDateSelected(date);
@@ -128,6 +128,7 @@ export class Calendar extends Component {
         } else {
             this.setState({
                 currentDateDisplayed: date,
+                showMonths: false,
                 dateClick: true
             });
         }
@@ -139,6 +140,7 @@ export class Calendar extends Component {
         if (!this.props.enableRangeSelection) {
             this.setState({
                 currentDateDisplayed: date,
+                showYears: false,
                 selectedDate: date,
                 dateClick: true
             }, function() {
@@ -147,6 +149,7 @@ export class Calendar extends Component {
         } else {
             this.setState({
                 currentDateDisplayed: date,
+                showYears: false,
                 dateClick: true
             });
         }
@@ -189,7 +192,7 @@ export class Calendar extends Component {
 
     generateYears = (yearListProps) => {
 
-        let year = this.state.currentYear.getFullYear();
+        let year = this.state.currentDateDisplayed.getFullYear();
         let years = [year];
         for (let iterations = 1; iterations < 12; iterations++) {
             year = year + 1;
@@ -223,9 +226,9 @@ export class Calendar extends Component {
     next = () => {
 
         if (this.state.showYears) {
-            let copyDate = this.state.currentYear;
+            let copyDate = this.state.currentDateDisplayed;
             copyDate.setFullYear(copyDate.getFullYear() + 12);
-            this.setState({ currentYear: copyDate, dateClick: true });
+            this.setState({ currentDateDisplayed: copyDate, dateClick: true });
         } else {
             let copyDate = this.state.currentDateDisplayed;
             let selectedDate = new Date(this.state.selectedDate.getFullYear(), this.state.selectedDate.getMonth(), this.state.selectedDate.getDate(), 0, 0, 0, 0);
@@ -239,9 +242,9 @@ export class Calendar extends Component {
     previous = () => {
 
         if (this.state.showYears) {
-            let copyDate = this.state.currentYear;
+            let copyDate = this.state.currentDateDisplayed;
             copyDate.setFullYear(copyDate.getFullYear() - 12);
-            this.setState({ currentYear: copyDate, dateClick: true });
+            this.setState({ currentDateDisplayed: copyDate, dateClick: true });
         } else {
             let copyDate = this.state.currentDateDisplayed;
             let selectedDate = new Date(this.state.selectedDate.getFullYear(), this.state.selectedDate.getMonth(), this.state.selectedDate.getDate(), 0, 0, 0, 0);
@@ -544,6 +547,7 @@ export class Calendar extends Component {
     }
 
 }
+Calendar.displayName = 'Calendar';
 
 Calendar.basePropTypes = {
     blockedDates: PropTypes.arrayOf(PropTypes.instanceOf(Date)),

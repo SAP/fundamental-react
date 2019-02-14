@@ -16,11 +16,11 @@ export const ImageComponent = () => {
             <Description>
                 Use an **Image** component to display images.
             </Description>
-            <Import sourceModule={require('./Image')} />
+            <Import sourceModulePath={require.resolve('./Image')} />
 
             <Separator />
 
-            <Properties sourceModule={require('./Image')} />
+            <Properties sourceModulePath={require.resolve('./Image')} />
 
             <Separator />
 
@@ -69,8 +69,7 @@ export const ImageComponent = () => {
                         'enum': ['', 'circle']
                     }
                 ]}>
-                <Image photo='https://placeimg.com/400/400/nature' size='s'
-                    type='' />
+                <Image photo='https://placeimg.com/400/400/nature' size='s' />
             </Playground>
         </div>
     );

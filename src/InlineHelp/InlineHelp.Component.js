@@ -17,11 +17,11 @@ export const InlineHelpComponent = () => {
                 **Inline Help** is used to display help text in a **Popover**, often inline with headers,
                 body text and form labels.
             </Description>
-            <Import sourceModule={require('./InlineHelp')} />
+            <Import sourceModulePath={require.resolve('./InlineHelp')} />
 
             <Separator />
 
-            <Properties sourceModule={require('./InlineHelp')} />
+            <Properties sourceModulePath={require.resolve('./InlineHelp')} />
 
             <Separator />
 

@@ -63,11 +63,11 @@ export const BadgeComponent = () => {
         <div>
             <Header>Status Indicators</Header>
             <Description>Status Indicators are used to easily highlight the state of an object.</Description>
-            <Import sourceModule={require('./Badge')} />
+            <Import sourceModulePath={require.resolve('./Badge')} />
 
             <Separator />
 
-            <Properties sourceModule={require('./Badge')} />
+            <Properties sourceModulePath={require.resolve('./Badge')} />
 
             <Separator />
 
@@ -86,7 +86,7 @@ export const BadgeComponent = () => {
 
             <h2>Pill Badge</h2>
             <Description>
-                Apply <code>modifier="pill"</code> to render a pill version of the badge.
+                Apply `modifier="pill"` to render a pill version of the badge.
             </Description>
             <DocsTile centered>
                 <div className='fd-doc__margin--statusIndicator'>
@@ -108,7 +108,7 @@ export const BadgeComponent = () => {
 
             <h2>Filled Badge</h2>
             <Description>
-                Apply <code>modifier="filled"</code> to render a filled version of the badge.
+                Apply `modifier="filled"` to render a filled version of the badge.
             </Description>
             <DocsTile centered>
                 <div className='fd-doc__margin--statusIndicator'>

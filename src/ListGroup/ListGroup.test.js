@@ -3,7 +3,7 @@ import { Button } from '../Button/Button';
 import { mount } from 'enzyme';
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { ListGroup, ListGroupItem, ListGroupItemActions, ListGroupItemCheckbox} from './ListGroup';
+import { ListGroup, ListGroupItem, ListGroupItemActions, ListGroupItemCheckbox } from './ListGroup';
 
 describe('<ListGroup />', () => {
     const defaultListGroup = (
@@ -95,7 +95,7 @@ describe('<ListGroup />', () => {
         });
 
         test('should allow props to be spread to the ListGroupItemCheckbox component\'s input element', () => {
-            const element = mount(<ListGroupItemCheckbox inputProps={{'data-sample': 'Sample'}} />);
+            const element = mount(<ListGroupItemCheckbox inputProps={{ 'data-sample': 'Sample' }} />);
 
             expect(
                 element.find('input').getDOMNode().attributes['data-sample'].value
@@ -103,7 +103,7 @@ describe('<ListGroup />', () => {
         });
 
         test('should allow props to be spread to the ListGroupItemCheckbox component\'s label element', () => {
-            const element = mount(<ListGroupItemCheckbox labelProps={{'data-sample': 'Sample'}} />);
+            const element = mount(<ListGroupItemCheckbox labelProps={{ 'data-sample': 'Sample' }} />);
 
             expect(
                 element.find('label').getDOMNode().attributes['data-sample'].value

@@ -5,6 +5,7 @@ import React from 'react';
 export const Breadcrumb = ({ children, ...props }) => {
     return <ul {...props} className='fd-breadcrumb'>{children}</ul>;
 };
+Breadcrumb.displayName = 'Breadcrumb';
 
 Breadcrumb.propTypes = {
     children: PropTypes.node
@@ -38,6 +39,7 @@ export const BreadcrumbItem = ({ url, name, className, children, ...props }) => 
         </li>
     );
 };
+BreadcrumbItem.displayName = 'BreadcrumbItem';
 
 BreadcrumbItem.propTypes = {
     name: PropTypes.string,

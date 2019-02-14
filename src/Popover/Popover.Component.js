@@ -1,6 +1,6 @@
 import React from 'react';
 import { Description, DocsText, DocsTile, Header, Import, Properties, Separator } from '../_playground';
-import { Icon, Identifier, Image, Menu, MenuItem, MenuList, Popover} from '../';
+import { Icon, Identifier, Image, Menu, MenuItem, MenuList, Popover } from '../';
 
 export const PopoverComponent = () => {
     const popoverCode = `<Popover
@@ -78,11 +78,11 @@ export const PopoverComponent = () => {
                 it is suggested that one Popover be revealed on the page at any given time. Opening one Popover should close all
                 others to prevent multiple layers and collisions of several popovers.
             </Description>
-            <Import sourceModule={require('./Popover')} />
+            <Import sourceModulePath={require.resolve('./Popover')} />
 
             <Separator />
 
-            <Properties sourceModule={require('./Popover')} />
+            <Properties sourceModulePath={require.resolve('./Popover')} />
 
             <Separator />
 

@@ -8,18 +8,30 @@ script:
   - npm run build
 jobs:
   include:
-  - stage: "Fundamental-react: Test & Lint"
+  - stage: Lint and Test
     script: npm run lint && npm run test:coveralls && npm run size
-  - stage: Deploy
-    if: (branch = master OR branch = tmp_branch_for_automated_release_do_not_use) AND type = push
+  - stage: Pre-release
+    if: branch = master
     before_deploy:
-    - bash ./ci-scripts/setup_npm.sh
+    - git checkout master
+    - bash ./ci-scripts/setup-npm.sh
     deploy:
-      - provider: script
-        script: bash ./ci-scripts/publish.sh $TRAVIS_BRANCH $TRAVIS_BUILD_NUMBER
-        skip_cleanup: true
-        on:
-          all_branches: true
+    - provider: script
+      script: bash ./ci-scripts/publish-rc.sh
+      skip_cleanup: true
+  - stage: Release
+    if: branch = tmp_branch_for_automated_release_do_not_use
+    before_deploy:
+    - git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/*
+    - git fetch
+    - git checkout master
+    - bash ./ci-scripts/setup-npm.sh
+    deploy:
+    - provider: script
+      script: bash ./ci-scripts/publish.sh
+      skip_cleanup: true
+      on:
+        all_branches: true
 notifications:
   email:
     on_failure: always

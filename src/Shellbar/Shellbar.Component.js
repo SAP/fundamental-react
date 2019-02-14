@@ -417,11 +417,11 @@ productSwitcher = {
                     a composite component comprised of mandatory and optional elements. Before getting started, here are
                     some things to know.
                 </Description>
-                <Import sourceModule={require('./Shellbar')} />
+                <Import sourceModulePath={require.resolve('./Shellbar')} />
 
                 <Separator />
 
-                <Properties sourceModule={require('./Shellbar')} />
+                <Properties sourceModulePath={require.resolve('./Shellbar')} />
 
                 <Separator />
 
