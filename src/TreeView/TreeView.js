@@ -65,7 +65,7 @@ export class TreeHead extends Component {
                                 <div>
                                     <button
                                         {...buttonProps}
-                                        aria-label={isExpanded ? 'collapse' : 'expand'}
+                                        aria-label={isExpanded ? 'collapse all' : 'expand all'}
                                         aria-pressed={isExpanded}
                                         className='fd-tree__control'
                                         onClick={onExpandAll} />
@@ -100,6 +100,68 @@ TreeHead.propDescriptions = {
 };
 
 export class TreeRow extends Component {
+    render() {
+        const {
+            children,
+            isExpanded,
+            isParent,
+            onExpandClick,
+            rowId,
+            ...rest
+        } = this.props;
+
+        // Render child TreeCols
+        const cells = React.Children.map(children, (child, index) => {
+            const isTreeCol = child.type && child.type.name === 'TreeCol';
+            const isFirstTreeCol = index === 0 && isTreeCol;
+
+            // Add control class to first TreeCol element
+            const className = classnames({
+                'fd-tree__col--control': isFirstTreeCol
+            });
+
+            // Add expand button to first TableCell if parent list
+            const newChildren = isFirstTreeCol && isParent ? (
+                <div>
+                    <button
+                        aria-controls={rowId}
+                        aria-label={isExpanded ? 'collapse' : 'expand'}
+                        aria-pressed={isExpanded}
+                        className='fd-tree__control'
+                        onClick={onExpandClick} />
+                    {child.props && child.props.children}
+                </div>
+            ) : child.props && child.props.children;
+
+            return isTreeCol ?
+                React.cloneElement(child, { className, children: newChildren }) :
+                null;
+        });
+
+        return (
+            <div {...rest} className='fd-tree__row'>
+                {cells}
+            </div>
+        );
+    }
+}
+
+TreeRow.propTypes = {
+    children: PropTypes.node,
+    isExpanded: PropTypes.bool,
+    isParent: PropTypes.bool,
+    rowId: PropTypes.string,
+    onExpandClick: PropTypes.func
+};
+
+TreeRow.propDescriptions = {
+    isExpanded: '_INTERNAL USE ONLY._',
+    isParent: '_INTERNAL USE ONLY._',
+    rowId: '_INTERNAL USE ONLY._',
+    onExpandClick: '_INTERNAL USE ONLY._'
+};
+
+export class TreeItem extends Component {
     constructor(props) {
         super(props);
 
@@ -108,7 +170,7 @@ export class TreeRow extends Component {
         // Generate unique id for row to manage expand/collapse state in parent
         this.rowId = shortid.generate();
 
-        // Initialize row in parent state
+        // Initialize row in parent TreeView state
         onExpandClick(this.rowId);
     }
 
@@ -122,8 +184,8 @@ export class TreeRow extends Component {
         } = this.props;
         const isExpanded = !!expandData[this.rowId];
 
-        // Render child TreeBranches with correct props
-        const childList = React.Children.map(children, (child) => {
+        // Render child TreeBranch with correct props
+        const childBranch = React.Children.map(children, (child) => {
             const isTree = child.type && child.type.name === 'Tree';
 
             return isTree ?
@@ -131,37 +193,26 @@ export class TreeRow extends Component {
                     expandData,
                     onExpandClick,
                     isExpanded,
-                    // Increment child list level
+                    // Increment child branch level
                     level: level + 1
                 }) :
                 null;
         });
 
-        // Render child TreeCols
-        const cells = React.Children.map(children, (child, index) => {
-            const isTreeCol = child.type && child.type.name === 'TreeCol';
-            const isFirstTreeCol = index === 0 && isTreeCol;
+        // Render child TreeRow with correct props
+        const childRow = React.Children.map(children, (child) => {
+            const isTreeRow = child.type && child.type.name === 'TreeRow';
 
-            // Add control class to first TreeCol element
-            const className = classnames({
-                'fd-tree__col--control': isFirstTreeCol
-            });
-
-            // Add expand button to first TableCell if parent list
-            const newChildren = isFirstTreeCol && childList[0] ? (
-                <div>
-                    <button
-                        aria-controls={this.rowId}
-                        aria-label={isExpanded ? 'collapse' : 'expand'}
-                        aria-pressed={isExpanded}
-                        className='fd-tree__control'
-                        onClick={() => onExpandClick(this.rowId)} />
-                    {child.props && child.props.children}
-                </div>
-            ) : child.props && child.props.children;
-
-            return isTreeCol ?
-                React.cloneElement(child, { className, children: newChildren }) :
+            return isTreeRow ?
+                React.cloneElement(child, {
+                    expandData,
+                    isExpanded,
+                    onExpandClick: () => onExpandClick(this.rowId),
+                    isParent: !!childBranch[0],
+                    rowId: this.rowId,
+                    // Increment child list level
+                    level: level + 1
+                }) :
                 null;
         });
 
@@ -172,29 +223,27 @@ export class TreeRow extends Component {
                 className='fd-tree__item'
                 id={this.rowId}
                 role='treeitem'>
-                <div className='fd-tree__row'>
-                    {cells}
-                </div>
-                {childList}
+                {childRow}
+                {childBranch}
             </li>
         );
     }
 }
 
-TreeRow.propTypes = {
+TreeItem.propTypes = {
     children: PropTypes.node,
     expandData: PropTypes.object,
     level: PropTypes.number,
     onExpandClick: PropTypes.func
 };
 
-TreeRow.defaultProps = {
+TreeItem.defaultProps = {
     expandData: {},
     level: 0,
     onExpandClick: () => {}
 };
 
-TreeRow.propDescriptions = {
+TreeItem.propDescriptions = {
     expandData: '_INTERNAL USE ONLY._',
     level: '_INTERNAL USE ONLY._',
     onExpandClick: '_INTERNAL USE ONLY._'
@@ -215,13 +264,13 @@ export class Tree extends Component {
             'fd-tree': level === 0,
             'fd-tree__group': level > 0,
             [`fd-tree__group--sublevel-${level}`]: level > 0,
-            'is-hidden': !isExpanded
+            'is-hidden': level > 0 && !isExpanded
         });
 
         return (
             <ul
                 {...rest}
-                aria-hidden={!isExpanded}
+                aria-hidden={level > 0 && !isExpanded}
                 className={className}
                 role={level === 0 ? 'tree' : 'group'}>
                 {
