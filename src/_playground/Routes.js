@@ -324,7 +324,7 @@ export class Routes extends Component {
         navItems = navItems.splice(1);
         const noItemsFound = (
             <ul className='frDocs-Nav__list'>
-                <li className='frDocs-Nav__headers'>
+                <li className='frDocs-Nav__item'>
                     No results found.
                 </li>
             </ul>
