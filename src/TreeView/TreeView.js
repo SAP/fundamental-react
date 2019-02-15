@@ -186,9 +186,10 @@ export class TreeItem extends Component {
             expandData,
             level,
             onExpandClick,
+            isExpanded: isExpandedProp,
             ...rest
         } = this.props;
-        const isExpanded = !!expandData[this.rowId];
+        const isExpanded = isExpandedProp || !!expandData[this.rowId];
 
         // Render child TreeBranch with correct props
         const childBranch = React.Children.map(children, (child) => {
@@ -238,6 +239,7 @@ TreeItem.displayName = 'TreeItem';
 TreeItem.propTypes = {
     children: PropTypes.node,
     expandData: PropTypes.object,
+    isExpanded: PropTypes.bool,
     level: PropTypes.number,
     onExpandClick: PropTypes.func
 };
@@ -250,6 +252,7 @@ TreeItem.defaultProps = {
 
 TreeItem.propDescriptions = {
     expandData: '_INTERNAL USE ONLY._',
+    isExpanded: 'Set to *true* for expanded tree item. This variable is handled internally, but can be overridden by the consumer through this prop',
     level: '_INTERNAL USE ONLY._',
     onExpandClick: '_INTERNAL USE ONLY._'
 };
@@ -352,6 +355,31 @@ export class TreeView extends Component {
         };
     }
 
+    static getDerivedStateFromProps(props, state) {
+        const {
+            isExpandAll
+        } = props;
+
+        if (typeof isExpandAll !== 'undefined') {
+            // If user provides a prop value for isExpandAll then update state accordingly
+            const {
+                expandData
+            } = state;
+            const newExpandData = {};
+
+            // Expand/Collapse all rows
+            Object.keys(expandData).forEach((rowId) => newExpandData[rowId] = isExpandAll);
+
+            return {
+                ...state,
+                expandData: newExpandData,
+                isExpandAll
+            };
+        }
+
+        return state;
+    }
+
     // Callback for each TreeRow to toggle expand/collapse state
     toggleExpand = (rowId) => {
         this.setState((prevState) => {
@@ -392,6 +420,7 @@ export class TreeView extends Component {
     render() {
         const {
             children,
+            isExpandAll: isExpandAllProp,
             ...rest
         } = this.props;
         const {
@@ -433,5 +462,10 @@ export class TreeView extends Component {
 TreeView.displayName = 'TreeView';
 
 TreeView.propTypes = {
-    children: PropTypes.node
+    children: PropTypes.node,
+    isExpandAll: PropTypes.bool
+};
+
+TreeView.propDescriptions = {
+    isExpandAll: 'Set to *true* for an expanded tree. This variable is handled internally, but can be overridden by the consumer through this prop'
 };
