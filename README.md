@@ -25,10 +25,10 @@ You will need to install [Node and Node Package Manager](https://www.npmjs.com/g
 
 For an existing react application, follow the steps below:
 
-1. Install fundamental-react
+1. Install Fundamental-react and Fiori Fundamentals.
 
     ```
-    npm install fundamental-react
+    npm install fiori-fundamentals fundamental-react
     ```
 
 1. Load the fiori-fundamentals styles. If using create-react-app, this will be in `App.css`.
