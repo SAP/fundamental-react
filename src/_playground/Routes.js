@@ -43,7 +43,8 @@ import React, { Component } from 'react';
 const sections = [
     {
         name: 'Getting Started',
-        sortOrder: 1
+        sortOrder: 1,
+        omitSearch: true //omit this category from search filter
     },
     {
         name: 'Components',
@@ -57,7 +58,8 @@ const routes = [
         name: 'Home',
         component: Home,
         section: 'Getting Started',
-        sortOrder: 1 // this one should always come first
+        sortOrder: 1, // this one should always come first
+        omitSearch: true //should not be filtered for search
     },
     {
         url: '/actionBar',
@@ -282,7 +284,7 @@ export class Routes extends Component {
 
     onChangeHandler = (event) => {
         let searchResults = routes.filter((navItem) => {
-            return navItem.sortOrder === 1 ? navItem : navItem.name.toLowerCase().includes(event.target.value.toLowerCase());
+            return navItem.omitSearch ? navItem : navItem.name.toLowerCase().includes(event.target.value.toLowerCase());
         });
         this.setState({
             query: event.target.value,
@@ -293,13 +295,16 @@ export class Routes extends Component {
     render() {
         let sectionRoutes;
         const groupedRoutes = groupArray(this.state.filteredItems, 'section');
-
+        //TODO: remove navItems declaration here
         let navItems = sections.sort(sortBy('sortOrder', 'name')).map(section => {
             if (!groupedRoutes[section.name]) {
                 return;
             }
 
             sectionRoutes = groupedRoutes[section.name].sort(sortBy('sortOrder', 'name'));
+            // eslint-disable-next-line no-console
+            console.log('line 306', sectionRoutes[0].omitSearch);
+            // TODO: conditional return here, navItems and freezeItems for omitSearch:true items
             return (
                 <ul className='frDocs-Nav__list' key={section.name}>
                     <li className='frDocs-Nav__headers'>{section.name}</li>
@@ -333,14 +338,17 @@ export class Routes extends Component {
                 <div className='frDocs-Container'>
                     <div className='frDocs-Sidebar'>
                         <h1 className='frDocs-Logo'>FUNDAMENTAL REACT</h1>
+                        {/* TODO: change var for navHome and navItems */}
                         <nav className='frDocs-Nav'>
                             {navHomeSegment}
-                            <InputGroup
-                                inputId='frDocs-Nav__search'
-                                inputPlaceholder='Search'
-                                inputType='search'
-                                inputValue={this.state.query}
-                                onChange={this.onChangeHandler} />
+                            <div className='frDocs-Nav__inputGroup'>
+                                <InputGroup
+                                    inputId='frDocs-Nav__search'
+                                    inputPlaceholder='Search'
+                                    inputType='search'
+                                    inputValue={this.state.query}
+                                    onChange={this.onChangeHandler} />
+                            </div>
                             {this.state.filteredItems.length === 1 ? noItemsFound : navItems}
                         </nav>
                     </div>
