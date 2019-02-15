@@ -33,7 +33,7 @@ const clickBtnHandler = btn => {
     Approve
 </Button>
 
-<Button  option="emphasized"  type="medium" glyph="alert">
+<Button option="emphasized" type="medium" glyph="alert">
     Review
  </Button>
 
@@ -51,7 +51,7 @@ const clickBtnHandler = btn => {
 
 <Button option="emphasized" type="negative" glyph="decline" />
 
-<Button  option="emphasized" type="medium" glyph="alert" />`;
+<Button option="emphasized" type="medium" glyph="alert" />`;
 
     const buttonSizesCode = `<Button>Default</Button>
 <Button compact>Compact</Button>`;
@@ -214,7 +214,9 @@ content like appearing in a table or list. There may be more than one on the pag
                         Reject
                     </Button>
 
-                    <Button glyph='alert' option='emphasized'
+                    <Button
+                        glyph='alert'
+                        option='emphasized'
                         type='medium'>
                         Review
                     </Button>
@@ -232,7 +234,9 @@ content like appearing in a table or list. There may be more than one on the pag
                     <Button glyph='accept' option='emphasized'
                         type='positive' />
 
-                    <Button glyph='decline' option='emphasized'
+                    <Button
+                        glyph='decline'
+                        option='emphasized'
                         type='negative' />
 
                     <Button glyph='alert' option='emphasized'
