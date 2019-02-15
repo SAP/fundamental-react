@@ -59,7 +59,6 @@ export const TabsComponent = () => {
                 </TabGroup>
             </DocsTile>
             <DocsText>{tabGroupCode}</DocsText>
-
         </div>
     );
 };

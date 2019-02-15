@@ -5,7 +5,7 @@ import { TabContent } from './TabContent';
 import React, { useState } from 'react';
 
 export const TabGroup = (props) => {
-    const { children, className, selectedId, tabLinkProps, tabContentProps, ...tabGroupProps } = props;
+    const { children, className, selectedId, tabLinkProps, tabContentProps, tabGroupProps, ...rest } = props;
     const [selectedTab, setSelectedTab] = useState(selectedId);
 
     // css classes to use for tab group
@@ -47,7 +47,9 @@ export const TabGroup = (props) => {
 
     return (
         <React.Fragment>
-            <ul {...tabGroupProps} className={tabGroupClasses}
+            <ul {...rest}
+                {...tabGroupProps}
+                className={tabGroupClasses}
                 role='tablist'>
                 {renderTabs()}
             </ul>
