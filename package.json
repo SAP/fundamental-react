@@ -13,7 +13,6 @@
   "scripts": {
     "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
     "build-doc": "node scripts/build.js",
-    "build-doc:local": "BUILD_ENV=development npm run build-doc && serve -s build",
     "build-js": "node scripts/build.js",
     "build:lint:fix": "eslint --fix 'src/**' --ext .js,.jsx --env browser,node",
     "build:lint": "eslint 'src/**' --ext .js,.jsx --env browser,node",
@@ -28,6 +27,7 @@
     "lint": "npm run build:lint && npm run scripts:lint && npm run config:lint && npm run devtools:lint",
     "release": "./scripts/publish-release.sh",
     "release:create": "create-release",
+    "serve": "BUILD_ENV=development npm run build-doc && serve -s build",
     "scripts:lint": "eslint 'scripts/**' --ext .js,.jsx --env browser,node",
     "scripts:lint:fix": "eslint --fix 'scripts/**' --ext .js,.jsx --env browser,node",
     "size": "npm run build && size-limit",
