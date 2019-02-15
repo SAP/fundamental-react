@@ -2,61 +2,77 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import { Tab } from './Tab';
 import { TabContent } from './TabContent';
-import React, { useState } from 'react';
+import React, { Component } from 'react';
 
-export const TabGroup = (props) => {
-    const { children, className, selectedId, tabLinkProps, tabContentProps, tabGroupProps, ...rest } = props;
-    const [selectedTab, setSelectedTab] = useState(selectedId);
-
-    // css classes to use for tab group
-    const tabGroupClasses = classnames(
-        'fd-tabs',
-        className
-    );
+export class TabGroup extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            selectedId: props.selectedId
+        };
+    }
 
     // set selected tab
-    const handleTabSelection = (event, id) => {
+    handleTabSelection = (event, id) => {
         event.preventDefault();
-        setSelectedTab(id);
+        this.setState({
+            selectedId: id
+        });
     };
 
     // create tab list
-    const renderTabs = () => {
-        return React.Children.map(children, (child) => {
+    renderTabs = () => {
+        return React.Children.map(this.props.children, (child) => {
             return (
-                <li {...tabLinkProps}
+                <li {...this.props.tabLinkProps}
                     className='fd-tabs__item'
                     key={child.props.id}>
-                    <Tab {...child.props} onClick={handleTabSelection}
-                        selected={selectedTab === child.props.id} />
+                    <Tab {...child.props} onClick={this.handleTabSelection}
+                        selected={this.state.selectedId === child.props.id} />
                 </li >);
         });
     };
 
     // create content to show below tab list
-    const renderContent = () => {
-        return React.Children.map(children, (child) => {
+    renderContent = () => {
+        return React.Children.map(this.props.children, (child) => {
             return (
                 <TabContent
-                    {...tabContentProps}
-                    selected={selectedTab === child.props.id}>
+                    {...this.props.tabContentProps}
+                    selected={this.state.selectedId === child.props.id}>
                     {child.props.children}
                 </TabContent>);
         });
     };
 
-    return (
-        <React.Fragment>
-            <ul {...rest}
-                {...tabGroupProps}
-                className={tabGroupClasses}
-                role='tablist'>
-                {renderTabs()}
-            </ul>
-            {renderContent()}
-        </React.Fragment>
-    );
-};
+    render() {
+        const {
+            children,
+            className,
+            selectedId,
+            tabLinkProps,
+            tabContentProps,
+            tabGroupProps,
+            ...rest } = this.props;
+
+        // css classes to use for tab group
+        const tabGroupClasses = classnames(
+            'fd-tabs',
+            className
+        );
+        return (
+            <React.Fragment>
+                <ul {...rest}
+                    {...tabGroupProps}
+                    className={tabGroupClasses}
+                    role='tablist'>
+                    {this.renderTabs(children)}
+                </ul>
+                {this.renderContent(children)}
+            </React.Fragment>
+        );
+    }
+}
 TabGroup.displayName = 'TabGroup';
 
 TabGroup.defaultProps = {

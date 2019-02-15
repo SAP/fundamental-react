@@ -42,11 +42,12 @@ export const TabsComponent = () => {
             <h2>Tab Group</h2>
 
             <DocsTile>
-                <TabGroup>
+                <TabGroup tabLinkProps={{ 'data-sample': 'Sample' }}>
                     <Tab id='1' title='Tab 1'>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     </Tab>
-                    <Tab id='2' title='Tab 2'>
+                    <Tab id='2' title='Tab 2'
+                        {...{ 'data-sample': 'Sample' }}>
                         Numquam libero id corporis odit animi voluptat, Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus quia tempore eligendi tempora repellat officia rerum laudantium, veritatis officiis asperiores ipsum nam, distinctio, dolor provident culpa voluptatibus esse deserunt animi?
                     </Tab>
                     <Tab disabled id='3'

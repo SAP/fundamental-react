@@ -59,15 +59,13 @@ describe('<Tabs />', () => {
         component = renderer.create(defaultTabsWithClass);
         tree = component.toJSON();
         expect(tree).toMatchSnapshot();
-
     });
 
     test('tab selection', () => {
         const wrapper = mount(defaultTabsWithClass);
 
         // check selected tab
-        // expect(wrapper.state(['selectedId'])).toEqual('1');
-        // expect(wrapper.selectedTab).toEqual('1');
+        expect(wrapper.state(['selectedId'])).toEqual('1');
 
         wrapper
             .find('ul.fd-tabs li.fd-tabs__item a.fd-tabs__link')
@@ -80,7 +78,7 @@ describe('<Tabs />', () => {
             .simulate('click');
 
         // check selected tab changed
-        // expect(wrapper.state(['selectedId'])).toEqual('2');
+        expect(wrapper.state(['selectedId'])).toEqual('4');
     });
 
     describe('Prop spreading', () => {
@@ -100,31 +98,32 @@ describe('<Tabs />', () => {
             ).toBe('Sample');
         });
 
-        xtest('should allow props to be spread to the Tab component\'s li elements', () => {
-            const element = mount(<Tab id='testId' {...{ 'data-sample': 'Sample' }} />);
+        test('should allow props to be spread to the TabGroup component\'s li elements', () => {
+            const element = mount(<TabGroup tabLinkProps={{ 'data-sample': 'Sample' }}>
+                <Tab id='1' />
+            </TabGroup>);
 
             expect(
-                element.find('li').at(0).getDOMNode().attributes['data-sample'].value
+                element.find('ul li').at(0).getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
         });
 
-        xtest('should allow props to be spread to the Tab component\'s content component', () => {
-            const element = mount(<TabGroup selectedId='1'>
-                <Tab id='1' tabContentProps={{ 'data-sample': 'Sample' }} />
+        test('should allow props to be spread to the Tab component\'s a elements', () => {
+            const element = mount(<Tab id='testId' {...{ 'data-sample': 'Sample' }} />);
+
+            expect(
+                element.find('a').at(0).getDOMNode().attributes['data-sample'].value
+            ).toBe('Sample');
+        });
+
+        test('should allow props to be spread to the Tab component\'s content component', () => {
+            const element = mount(<TabGroup selectedId='1' tabContentProps={{ 'data-sample': 'Sample' }}>
+                <Tab id='1' />
             </TabGroup>
             );
 
             expect(
-                element.find('li p').at(0).getDOMNode().attributes['data-sample'].value
-            ).toBe('Sample');
-        });
-
-        xtest('should allow props to be spread to the TabGroup component\'s Link component', () => {
-            const element = mount(<Tab id='testId' tabLinkProps={{ 'data-sample': 'Sample' }}
-                url='#' />);
-
-            expect(
-                element.find('li a').at(0).getDOMNode().attributes['data-sample'].value
+                element.find('div.fd-tabs__panel').at(0).getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
         });
     });
