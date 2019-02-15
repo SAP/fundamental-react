@@ -149,12 +149,6 @@
     "not op_mini all"
   ],
   "jest": {
-    "collectCoverageFrom": [
-      "src/**/*.{js,jsx,ts,tsx}",
-      "!src/{App,Routes,index,registerServiceWorker}.js",
-      "!src/**/*.Component.js",
-      "!src/_playground/**"
-    ],
     "setupFiles": [
       "react-app-polyfill/jsdom",
       "./config/jest/jest.config.js"
