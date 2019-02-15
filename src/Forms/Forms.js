@@ -1,6 +1,7 @@
 import classnames from 'classnames';
 import { FORM_MESSAGE_TYPES } from '../utils/constants';
 import PropTypes from 'prop-types';
+import shortId from '../utils/shortId';
 import React, { Component } from 'react';
 
 // ------------------------------------------------- Form Set -----------------------------------------------
@@ -227,76 +228,99 @@ FormSelect.propTypes = {
 };
 
 // ------------------------------------------------- Form Radio ----------------------------------------------
-export class FormRadio extends Component {
+export class FormRadioGroup extends Component {
     constructor(props) {
         super(props);
 
-        this.state = {
-            selectedItem: this.props.defaultChecked
-        };
+        this.groupId = shortId.generate();
     }
-
-    handleChange = e => {
-        this.setState({
-            selectedItem: e.currentTarget.value
-        });
-    };
 
     render() {
-        const { inputs, disabled, isInline } = this.props;
-        let result;
+        const { children, disabled, inline, onChange, ...props } = this.props;
 
-        if (isInline) {
-            result = inputs.map(inputItem => (
-                <div
-                    className='fd-form__item fd-form__item--inline fd-form__item--check'
-                    key={inputItem.id}>
-                    <label className='fd-form__label' htmlFor={inputItem.id}>
-                        <input
-                            checked={this.state.selectedItem === inputItem.id}
-                            className='fd-form__control'
-                            disabled={disabled}
-                            id={inputItem.id}
-                            name={inputItem.name}
-                            onChange={this.handleChange}
-                            type='radio'
-                            value={inputItem.value} />
-                        {inputItem.label}
-                    </label>
-                </div>
-            ));
-        } else {
-            result = inputs.map(inputItem => (
-                <div className='fd-form__item fd-form__item--check' key={inputItem.id}>
-                    <input
-                        checked={this.state.selectedItem === inputItem.id}
-                        className='fd-form__control'
-                        disabled={disabled}
-                        id={inputItem.id}
-                        name={inputItem.name}
-                        onChange={this.handleChange}
-                        type='radio'
-                        value={inputItem.value} />
-                    <label className='fd-form__label' htmlFor={inputItem.id}>
-                        {inputItem.label}
-                    </label>
-                </div>
-            ));
-        }
-        return <div>{result}</div>;
+        return (
+            <div
+                {...props}>
+                {React.Children.map(children, child => {
+                    if (React.isValidElement(child)) {
+                        return React.cloneElement(child, {
+                            disabled: child.props.disabled || disabled,
+                            inline: child.props.inline || inline,
+                            name: child.props.name || this.groupId,
+                            onChange: child.props.onChange || onChange
+                        });
+                    } else {
+                        return child;
+                    }
+                })}
+            </div>
+        );
     }
 }
-FormRadio.displayName = 'FormRadio';
 
-FormRadio.propTypes = {
-    inputs: PropTypes.array.isRequired,
-    defaultChecked: PropTypes.string,
+FormRadioGroup.displayName = 'FormRadioGroup';
+
+FormRadioGroup.propTypes = {
+    children: PropTypes.node,
     disabled: PropTypes.bool,
-    isInline: PropTypes.bool
+    inline: PropTypes.bool,
+    onChange: PropTypes.func
 };
 
-FormRadio.propDescriptions = {
-    defaultChecked: 'The `id` of the element selected by default.',
-    inputs: 'Configuration settings for each radio button in the group.',
-    isInline: 'Set to **true** to display radio buttons in a row.'
+FormRadioGroup.defaultProps = {
+    onChange: () => {}
+};
+
+FormRadioGroup.propDescriptions = {
+    inline: 'Set to **true** to display radio buttons in a row.'
+};
+
+export const FormRadioItem = ({ checked, children, className, disabled, id, inline, name, value, ...props }) => {
+    const classes = classnames(
+        className,
+        'fd-form__item',
+        'fd-form__item--check',
+        {
+            'fd-form__item--inline': inline
+        }
+    );
+
+    return (
+        <div className={classes} key={id}>
+            <label className='fd-form__label'>
+                <input
+                    {...props}
+                    checked={checked}
+                    className='fd-form__control'
+                    disabled={disabled}
+                    id={id}
+                    name={name}
+                    type='radio'
+                    value={value} />
+                {children}
+            </label>
+        </div>
+    );
+};
+
+FormRadioItem.displayName = 'FormRadioItem';
+
+FormRadioItem.propTypes = {
+    children: PropTypes.node.isRequired,
+    checked: PropTypes.bool,
+    className: PropTypes.string,
+    defaultChecked: PropTypes.bool,
+    disabled: PropTypes.bool,
+    id: PropTypes.string,
+    inline: PropTypes.bool,
+    name: PropTypes.string,
+    value: PropTypes.string
+};
+
+FormRadioItem.propDescriptions = {
+    checked: 'Set to **true** when radio input is checked and a controlled component.',
+    defaultChecked: 'Set to **true** when the radio input is checked and an uncontrolled component.',
+    inline: '_INTERNAL USE ONLY._',
+    name: 'Sets the `name` for the radio input.',
+    value: 'Sets the `value` for the radio input.'
 };

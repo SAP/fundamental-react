@@ -45,7 +45,8 @@
   "dependencies": {
     "classnames": "^2.2.6",
     "focus-trap-react": "^6.0.0",
-    "prop-types": "^15.7.1"
+    "prop-types": "^15.7.1",
+    "shortid": "^2.2.14"
   },
   "devDependencies": {
     "@babel/cli": "^7.1.5",
