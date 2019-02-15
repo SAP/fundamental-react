@@ -150,7 +150,6 @@
   ],
   "jest": {
     "setupFiles": [
-      "react-app-polyfill/jsdom",
       "./config/jest/jest.config.js"
     ]
   }
