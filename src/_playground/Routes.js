@@ -294,37 +294,58 @@ export class Routes extends Component {
 
     render() {
         let sectionRoutes;
+        let freezeItems;
+        let navItems;
         const groupedRoutes = groupArray(this.state.filteredItems, 'section');
         //TODO: remove navItems declaration here
-        let navItems = sections.sort(sortBy('sortOrder', 'name')).map(section => {
+        sections.sort(sortBy('sortOrder', 'name')).map(section => {
             if (!groupedRoutes[section.name]) {
                 return;
             }
+            // eslint-disable-next-line no-console
+            console.log('line 304', groupedRoutes[section.omitSearch]);
 
             sectionRoutes = groupedRoutes[section.name].sort(sortBy('sortOrder', 'name'));
-            // eslint-disable-next-line no-console
-            console.log('line 306', sectionRoutes[0].omitSearch);
             // TODO: conditional return here, navItems and freezeItems for omitSearch:true items
-            return (
-                <ul className='frDocs-Nav__list' key={section.name}>
-                    <li className='frDocs-Nav__headers'>{section.name}</li>
-                    {sectionRoutes.map(route => (
-                        <li key={route.name}>
-                            <NavLink
-                                activeClassName='frDocs-Nav__item--active'
-                                className='frDocs-Nav__item'
-                                key={route.url}
-                                to={{ pathname: route.url }}>
-                                {route.name}
-                            </NavLink>
-                        </li>
-                    ))}
-                </ul>
-            );
+            if ( sectionRoutes[0].omitSearch ) {
+                freezeItems = (
+                    <ul className='frDocs-Nav__list' key={section.name}>
+                        <li className='frDocs-Nav__headers'>{section.name}</li>
+                        {sectionRoutes.map(route => (
+                            <li key={route.name}>
+                                <NavLink
+                                    activeClassName='frDocs-Nav__item--active'
+                                    className='frDocs-Nav__item'
+                                    key={route.url}
+                                    to={{ pathname: route.url }}>
+                                    {route.name}
+                                </NavLink>
+                            </li>
+                        ))}
+                    </ul>
+                );
+            } else {
+                navItems = (
+                    <ul className='frDocs-Nav__list' key={section.name}>
+                        <li className='frDocs-Nav__headers'>{section.name}</li>
+                        {sectionRoutes.map(route => (
+                            <li key={route.name}>
+                                <NavLink
+                                    activeClassName='frDocs-Nav__item--active'
+                                    className='frDocs-Nav__item'
+                                    key={route.url}
+                                    to={{ pathname: route.url }}>
+                                    {route.name}
+                                </NavLink>
+                            </li>
+                        ))}
+                    </ul>
+                );
+            }
         });
-
-        let navHomeSegment = navItems[0];
-        navItems = navItems.splice(1);
+        // eslint-disable-next-line no-console
+        console.log('line 326', navItems);
+        // TODO: remove hard-coding here
         const noItemsFound = (
             <ul className='frDocs-Nav__list'>
                 <li className='frDocs-Nav__item'>
@@ -340,7 +361,7 @@ export class Routes extends Component {
                         <h1 className='frDocs-Logo'>FUNDAMENTAL REACT</h1>
                         {/* TODO: change var for navHome and navItems */}
                         <nav className='frDocs-Nav'>
-                            {navHomeSegment}
+                            {freezeItems}
                             <div className='frDocs-Nav__inputGroup'>
                                 <InputGroup
                                     inputId='frDocs-Nav__search'
