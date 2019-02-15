@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.4.0-rc.0"></a>
+# [0.4.0-rc.0](https://github.com/SAP/fundamental-react/compare/v0.3.5-rc.0...v0.4.0-rc.0) (2019-02-15)
+
+
+### Features
+
+* Refactor FormRadio Component ([#405](https://github.com/SAP/fundamental-react/issues/405)) ([4b88649](https://github.com/SAP/fundamental-react/commit/4b88649))
+
+
+
 <a name="0.3.5-rc.0"></a>
 ## [0.3.5-rc.0](https://github.com/SAP/fundamental-react/compare/v0.3.4...v0.3.5-rc.0) (2019-02-15)
 
