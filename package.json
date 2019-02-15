@@ -120,7 +120,6 @@
     "react-test-renderer": "^16.6.3",
     "resolve": "1.8.1",
     "sass-loader": "7.1.0",
-    "sinon": "^7.2.3",
     "size-limit": "^0.21.1",
     "sort-by": "^1.2.0",
     "standard-version": "^4.4.0",

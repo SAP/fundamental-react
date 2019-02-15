@@ -258,6 +258,8 @@ export class FormRadioGroup extends Component {
     }
 }
 
+FormRadioGroup.displayName = 'FormRadioGroup';
+
 FormRadioGroup.propTypes = {
     children: PropTypes.node,
     disabled: PropTypes.bool,
@@ -300,6 +302,8 @@ export const FormRadioItem = ({ checked, children, className, disabled, id, inli
         </div>
     );
 };
+
+FormRadioItem.displayName = 'FormRadioItem';
 
 FormRadioItem.propTypes = {
     children: PropTypes.node.isRequired,
