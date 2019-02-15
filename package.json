@@ -155,12 +155,9 @@
       "!src/**/*.Component.js",
       "!src/_playground/**"
     ],
-    "resolver": "jest-pnp-resolver",
     "setupFiles": [
       "react-app-polyfill/jsdom",
       "./config/jest/jest.config.js"
-    ],
-    "testEnvironment": "jsdom",
-    "testURL": "http://localhost"
+    ]
   }
 }
