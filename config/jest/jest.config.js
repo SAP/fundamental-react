@@ -6,7 +6,8 @@ configure({ adapter: new Adapter() });
 module.exports = {
     'testURL': 'http://localhost/',
     'collectCoverageFrom': [
-        'src/**/*.{js,jsx,ts,tsx}',
+        '!config/**/*.{js,jsx}',
+        'src/**/*.{js,jsx}',
         '!src/**/*.Component.js',
         '!src/_playground/**'
     ]
