@@ -348,6 +348,8 @@ export class Routes extends Component {
             </ul>
         );
 
+        const omitSearchItems = this.state.filteredItems.filter((filteredItem) => filteredItem.omitSearch);
+
         return (
             <BrowserRouter basename={process.env.PUBLIC_URL}>
                 <div className='frDocs-Container'>
@@ -363,7 +365,7 @@ export class Routes extends Component {
                                     inputValue={this.state.query}
                                     onChange={this.onChangeHandler} />
                             </div>
-                            {this.state.filteredItems.length === 1 ? noItemsFound : navItems}
+                            {this.state.filteredItems.length === omitSearchItems.length ? noItemsFound : navItems}
                         </nav>
                     </div>
                     <div className='frDocs-Content'>
