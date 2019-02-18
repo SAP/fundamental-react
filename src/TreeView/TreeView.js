@@ -99,7 +99,7 @@ TreeHead.propTypes = {
 
 TreeHead.propDescriptions = {
     buttonProps: 'Additional props to be spread to the header expand/collapse `<button>` element.',
-    children: 'Node(s) to render within the component. Expecting TreeCol components as children.',
+    children: 'Node(s) to render within the component. Expecting `TreeCol` components as children.',
     isExpanded: '_INTERNAL USE ONLY._',
     onExpandAll: '_INTERNAL USE ONLY._'
 };
@@ -162,7 +162,7 @@ TreeRow.propTypes = {
 };
 
 TreeRow.propDescriptions = {
-    children: 'Node(s) to render within the component. Expecting TreeCol components as children.',
+    children: 'Node(s) to render within the component. Expecting `TreeCol` components as children.',
     isExpanded: '_INTERNAL USE ONLY._',
     isParent: '_INTERNAL USE ONLY._',
     rowId: '_INTERNAL USE ONLY._',
@@ -253,7 +253,7 @@ TreeItem.defaultProps = {
 };
 
 TreeItem.propDescriptions = {
-    children: 'Node(s) to render within the component. Expecting TreeRow and TreeItem components as children.',
+    children: 'Node(s) to render within the component. Expecting `TreeRow` and `TreeItem` components as children.',
     expandData: '_INTERNAL USE ONLY._',
     isExpanded: 'Set to *true* for expanded tree item. This variable is handled internally, but can be overridden by the consumer through this prop',
     level: '_INTERNAL USE ONLY._',
@@ -282,7 +282,7 @@ TreeBranch.defaultProps = {
 };
 
 TreeBranch.propDescriptions = {
-    children: 'Node(s) to render within the component. Expecting a TreeItem component as a child.',
+    children: 'Node(s) to render within the component. Expecting a `TreeItem` component as a child.',
     expandData: '_INTERNAL USE ONLY._',
     isExpanded: '_INTERNAL USE ONLY._',
     level: '_INTERNAL USE ONLY._',
@@ -343,7 +343,7 @@ Tree.defaultProps = {
 };
 
 Tree.propDescriptions = {
-    children: 'Node(s) to render within the component. Expecting TreeItem components as children.',
+    children: 'Node(s) to render within the component. Expecting `TreeItem` components as children.',
     expandData: '_INTERNAL USE ONLY._',
     isExpanded: '_INTERNAL USE ONLY._',
     level: '_INTERNAL USE ONLY._',
@@ -472,6 +472,6 @@ TreeView.propTypes = {
 };
 
 TreeView.propDescriptions = {
-    children: 'Node(s) to render within the component. Expecting a TreeHead and a Tree component as children.',
+    children: 'Node(s) to render within the component. Expecting a `TreeHead` and a `Tree` component as children.',
     isExpandAll: 'Set to *true* for an expanded tree. This variable is handled internally, but can be overridden by the consumer through this prop'
 };
