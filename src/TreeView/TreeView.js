@@ -55,7 +55,7 @@ export class TreeHead extends Component {
                 <div className='fd-tree__row fd-tree__row--header'>
                     {
                         React.Children.map(children, (child, index) => {
-                            const isFirstTreeCol = index === 0 && child.type && child.type.name === 'TreeCol';
+                            const isFirstTreeCol = index === 0 && child.type && child.type.displayName === 'TreeCol';
 
                             // Add control class to first TreeCol element
                             const childClassName = classnames({
@@ -117,7 +117,7 @@ export class TreeRow extends Component {
 
         // Render child TreeCols
         const cells = React.Children.map(children, (child, index) => {
-            const isTreeCol = child.type && child.type.name === 'TreeCol';
+            const isTreeCol = child.type && child.type.displayName === 'TreeCol';
             const isFirstTreeCol = index === 0 && isTreeCol;
 
             // Add control class to first TreeCol element
@@ -195,7 +195,7 @@ export class TreeItem extends Component {
 
         // Render child TreeBranch with correct props
         const childBranch = React.Children.map(children, (child) => {
-            const isTreeBranch = child.type && child.type.name === 'TreeBranch';
+            const isTreeBranch = child.type && child.type.displayName === 'TreeBranch';
 
             return isTreeBranch ?
                 React.cloneElement(child, {
@@ -210,7 +210,7 @@ export class TreeItem extends Component {
 
         // Render child TreeRow with correct props
         const childRow = React.Children.map(children, (child) => {
-            const isTreeRow = child.type && child.type.name === 'TreeRow';
+            const isTreeRow = child.type && child.type.displayName === 'TreeRow';
 
             return isTreeRow ?
                 React.cloneElement(child, {
@@ -448,8 +448,8 @@ export class TreeView extends Component {
             <div {...rest}>
                 {
                     React.Children.map(children, (child) => {
-                        const isTreeHead = child.type && child.type.name === 'TreeHead';
-                        const isTree = child.type && child.type.name === 'Tree';
+                        const isTreeHead = child.type && child.type.displayName === 'TreeHead';
+                        const isTree = child.type && child.type.displayName === 'Tree';
 
                         if (isTreeHead) {
                             // Pass expand all callbacks to TreeHead
