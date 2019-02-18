@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.4.0-rc.5"></a>
+# [0.4.0-rc.5](https://github.com/SAP/fundamental-react/compare/v0.4.0-rc.4...v0.4.0-rc.5) (2019-02-18)
+
+
+### Bug Fixes
+
+* Remove offset for start of week date in Calendar ([#396](https://github.com/SAP/fundamental-react/issues/396)) ([04c94e9](https://github.com/SAP/fundamental-react/commit/04c94e9))
+
+
+
 <a name="0.4.0-rc.4"></a>
 # [0.4.0-rc.4](https://github.com/SAP/fundamental-react/compare/v0.4.0-rc.3...v0.4.0-rc.4) (2019-02-18)
 
