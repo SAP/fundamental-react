@@ -262,7 +262,7 @@ TreeItem.propDescriptions = {
 
 export class TreeBranch extends Component {
     render() {
-        return <Tree {...this.props} />;
+        return <_Tree {...this.props} />;
     }
 }
 
@@ -277,8 +277,7 @@ TreeBranch.propTypes = {
 };
 
 TreeBranch.defaultProps = {
-    expandData: {},
-    level: 0
+    expandData: {}
 };
 
 TreeBranch.propDescriptions = {
@@ -290,6 +289,33 @@ TreeBranch.propDescriptions = {
 };
 
 export class Tree extends Component {
+    render() {
+        return <_Tree {...this.props} level={0} />;
+    }
+}
+
+Tree.displayName = 'Tree';
+
+Tree.propTypes = {
+    children: PropTypes.node,
+    expandData: PropTypes.object,
+    isExpanded: PropTypes.bool,
+    onExpandClick: PropTypes.func
+};
+
+Tree.defaultProps = {
+    expandData: {}
+};
+
+Tree.propDescriptions = {
+    children: 'Node(s) to render within the component. Expecting `TreeItem` components as children.',
+    expandData: '_INTERNAL USE ONLY._',
+    isExpanded: '_INTERNAL USE ONLY._',
+    level: '_INTERNAL USE ONLY._',
+    onExpandClick: '_INTERNAL USE ONLY._'
+};
+
+class _Tree extends Component {
     render() {
         const {
             children,
@@ -327,27 +353,12 @@ export class Tree extends Component {
     }
 }
 
-Tree.displayName = 'Tree';
-
-Tree.propTypes = {
+_Tree.propTypes = {
+    expandData: PropTypes.object.isRequired,
+    level: PropTypes.number.isRequired,
+    onExpandClick: PropTypes.func.isRequired,
     children: PropTypes.node,
-    expandData: PropTypes.object,
-    isExpanded: PropTypes.bool,
-    level: PropTypes.number,
-    onExpandClick: PropTypes.func
-};
-
-Tree.defaultProps = {
-    expandData: {},
-    level: 0
-};
-
-Tree.propDescriptions = {
-    children: 'Node(s) to render within the component. Expecting `TreeItem` components as children.',
-    expandData: '_INTERNAL USE ONLY._',
-    isExpanded: '_INTERNAL USE ONLY._',
-    level: '_INTERNAL USE ONLY._',
-    onExpandClick: '_INTERNAL USE ONLY._'
+    isExpanded: PropTypes.bool
 };
 
 export class TreeView extends Component {

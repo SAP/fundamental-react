@@ -290,7 +290,8 @@ describe('<TreeView />', () => {
         test('should allow props to be spread to the Tree component', () => {
             const element = mount(
                 <Tree
-                    data-sample='Sample' />);
+                    data-sample='Sample'
+                    onExpandClick={() => {}} />);
 
             expect(
                 element.find('.fd-tree').getDOMNode().attributes['data-sample'].value
