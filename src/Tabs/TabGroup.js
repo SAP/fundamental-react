@@ -22,8 +22,8 @@ export class TabGroup extends Component {
             selectedId: id
         });
 
-        if (this.props.onTabChange) {
-            this.props.onTabChange(event, id);
+        if (this.props.onTabClick) {
+            this.props.onTabClick(event, id);
         }
     };
 
@@ -99,12 +99,13 @@ TabGroup.propTypes = {
     selectedId: PropTypes.string,
     tabContentProps: PropTypes.object,
     tabLinkProps: PropTypes.object,
-    onTabChange: PropTypes.func
+    onTabClick: PropTypes.func
 };
 
 TabGroup.propDescriptions = {
     children: 'One or more `Tab` components to render within the component.',
     selectedId: 'The `id` of the selected `Tab`.',
     tabContentProps: 'Additional props to be spread to the tab content\'s <div> element.',
-    tabLinkProps: 'Additional props to be spread to the tab\'s <li> element.'
+    tabLinkProps: 'Additional props to be spread to the tab\'s <li> element.',
+    onTabClick: 'Callback function when the user clicks on a tab'
 };
