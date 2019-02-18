@@ -273,7 +273,7 @@ const routes = [
 
 const RouteNotFound = () => (
     <div>
-        <Header>404: Not found</Header>
+        <Header>Sorry, page not found.</Header>
         <Link to=''>Home</Link>
     </div>
 );
