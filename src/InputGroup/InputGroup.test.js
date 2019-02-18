@@ -110,14 +110,14 @@ describe('<InputGroup />', () => {
 
     const numberInputWithCustomClassName = (
         <InputGroup
-            className='custom-class-search'
+            inputClassName='custom-class-search'
             inputType='number'
             inputValue={100} />
     );
 
     const searchInputWithCustomClassName = (
         <InputGroup
-            className='custom-class-number'
+            inputClassName='custom-class-number'
             inputPlaceholder='Search'
             inputType='search' />
     );
@@ -126,7 +126,7 @@ describe('<InputGroup />', () => {
         <InputGroup
             addon='$'
             addonPos='before'
-            className='custom-class-before'
+            inputClassName='custom-class-before'
             inputType='text'
             inputValue='1234567890' />
     );
@@ -135,7 +135,7 @@ describe('<InputGroup />', () => {
         <InputGroup
             addon='€'
             addonPos='after'
-            className='custom-class-after'
+            inputClassName='custom-class-after'
             inputType='text'
             inputValue='1234567890' />
     );

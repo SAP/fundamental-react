@@ -81,7 +81,7 @@ export class InputGroup extends Component {
         switch (inputType) {
             case 'number':
                 const inputGroupNumberClasses = classnames(
-                    inputClassName,
+                    className,
                     'fd-input-group',
                     'fd-input-group--after',
                     {
@@ -90,7 +90,7 @@ export class InputGroup extends Component {
                 );
 
                 const inputNumberClasses = classnames(
-                    className,
+                    inputClassName,
                     {
                         'fd-input fd-input--compact': compact
                     }
@@ -124,7 +124,7 @@ export class InputGroup extends Component {
 
             case 'search':
                 const inputGroupSearchClasses = classnames(
-                    inputClassName,
+                    className,
                     'fd-input-group',
                     {
                         'fd-input-group--compact': compact
@@ -132,6 +132,7 @@ export class InputGroup extends Component {
                 );
 
                 const inputSearchClasses = classnames(
+                    inputClassName,
                     {
                         'fd-input fd-input--compact': compact
                     }
@@ -171,6 +172,7 @@ export class InputGroup extends Component {
                     );
 
                     const inputBeforeClasses = classnames(
+                        inputClassName,
                         {
                             'fd-input fd-input--compact': compact
                         }
@@ -207,7 +209,7 @@ export class InputGroup extends Component {
                     );
                 } else {
                     const inputGroupAfterClasses = classnames(
-                        inputClassName,
+                        className,
                         'fd-input-group',
                         'fd-input-group--after',
                         {
@@ -216,6 +218,7 @@ export class InputGroup extends Component {
                     );
 
                     const inputAfterClasses = classnames(
+                        inputClassName,
                         {
                             'fd-input fd-input--compact': compact
                         }
@@ -261,8 +264,10 @@ InputGroup.propTypes = {
     addon: PropTypes.string,
     addonPos: PropTypes.oneOf(INPUT_GROUP_ADDON_POSITIONS),
     children: PropTypes.node,
+    className: PropTypes.string,
     compact: PropTypes.bool,
     glyph: PropTypes.string,
+    inputClassName: PropTypes.string,
     inputId: PropTypes.string,
     inputName: PropTypes.string,
     inputPlaceholder: PropTypes.string,
@@ -285,6 +290,7 @@ InputGroup.propDescriptions = {
     addon: 'The value of the add-on.',
     addonPos: 'Location of the add-on relative to the input.',
     inputId: 'Value for the `id` attribute on the `<input>` element.',
+    inputClassName: 'Value for the `classname` attribute on the `<input>` element.',
     inputName: 'Value for the `name` attribute on the `<input>` element.',
     inputPlaceholder: 'Value for the `placeholder` attribute on the `<input>` element.',
     inputType: 'Value for the `type` attribute on the `<input>` element.',

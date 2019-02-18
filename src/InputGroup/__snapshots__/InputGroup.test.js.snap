@@ -318,7 +318,7 @@ exports[`<InputGroup /> create input group items 15`] = `
 
 exports[`<InputGroup /> create input group items 16`] = `
 <div
-  className="custom-class-search fd-input-group fd-input-group--after"
+  className="fd-input-group fd-input-group--after"
 >
   <input
     className="custom-class-search"
@@ -345,10 +345,10 @@ exports[`<InputGroup /> create input group items 16`] = `
 
 exports[`<InputGroup /> create input group items 17`] = `
 <div
-  className="custom-class-number fd-input-group"
+  className="fd-input-group"
 >
   <input
-    className=""
+    className="custom-class-number"
     onChange={[Function]}
     placeholder="Search"
     type="search"
@@ -368,7 +368,7 @@ exports[`<InputGroup /> create input group items 17`] = `
 
 exports[`<InputGroup /> create input group items 18`] = `
 <div
-  className="custom-class-before fd-input-group fd-input-group--before"
+  className="fd-input-group fd-input-group--before"
 >
   <span
     className="fd-input-group__addon fd-input-group__addon--before"
@@ -376,7 +376,7 @@ exports[`<InputGroup /> create input group items 18`] = `
     $
   </span>
   <input
-    className=""
+    className="custom-class-before"
     onChange={[Function]}
     type="text"
     value="1234567890"
@@ -386,10 +386,10 @@ exports[`<InputGroup /> create input group items 18`] = `
 
 exports[`<InputGroup /> create input group items 19`] = `
 <div
-  className="custom-class-after fd-input-group fd-input-group--after"
+  className="fd-input-group fd-input-group--after"
 >
   <input
-    className=""
+    className="custom-class-after"
     onChange={[Function]}
     type="text"
     value="1234567890"
