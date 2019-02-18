@@ -58,6 +58,7 @@ export class InputGroup extends Component {
 
     render() {
         const {
+            inputClassName,
             inputType,
             inputId,
             inputName,
@@ -80,7 +81,7 @@ export class InputGroup extends Component {
         switch (inputType) {
             case 'number':
                 const inputGroupNumberClasses = classnames(
-                    className,
+                    inputClassName,
                     'fd-input-group',
                     'fd-input-group--after',
                     {
@@ -123,7 +124,7 @@ export class InputGroup extends Component {
 
             case 'search':
                 const inputGroupSearchClasses = classnames(
-                    className,
+                    inputClassName,
                     'fd-input-group',
                     {
                         'fd-input-group--compact': compact
@@ -206,7 +207,7 @@ export class InputGroup extends Component {
                     );
                 } else {
                     const inputGroupAfterClasses = classnames(
-                        className,
+                        inputClassName,
                         'fd-input-group',
                         'fd-input-group--after',
                         {
