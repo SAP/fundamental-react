@@ -89,6 +89,7 @@ export class InputGroup extends Component {
                 );
 
                 const inputNumberClasses = classnames(
+                    className,
                     {
                         'fd-input fd-input--compact': compact
                     }

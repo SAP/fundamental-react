@@ -318,10 +318,10 @@ exports[`<InputGroup /> create input group items 15`] = `
 
 exports[`<InputGroup /> create input group items 16`] = `
 <div
-  className="custom-class-number fd-input-group fd-input-group--after"
+  className="custom-class-search fd-input-group fd-input-group--after"
 >
   <input
-    className=""
+    className="custom-class-search"
     onChange={[Function]}
     type="number"
     value={100}
@@ -345,6 +345,65 @@ exports[`<InputGroup /> create input group items 16`] = `
 
 exports[`<InputGroup /> create input group items 17`] = `
 <div
+  className="custom-class-number fd-input-group"
+>
+  <input
+    className=""
+    onChange={[Function]}
+    placeholder="Search"
+    type="search"
+    value=""
+  />
+  <span
+    className="fd-input-group__addon fd-input-group__addon--button"
+  >
+    <button
+      aria-label="Clear"
+      className="fd-input-group__button fd-input-group__button--clear"
+      onClick={[Function]}
+    />
+  </span>
+</div>
+`;
+
+exports[`<InputGroup /> create input group items 18`] = `
+<div
+  className="custom-class-before fd-input-group fd-input-group--before"
+>
+  <span
+    className="fd-input-group__addon fd-input-group__addon--before"
+  >
+    $
+  </span>
+  <input
+    className=""
+    onChange={[Function]}
+    type="text"
+    value="1234567890"
+  />
+</div>
+`;
+
+exports[`<InputGroup /> create input group items 19`] = `
+<div
+  className="custom-class-after fd-input-group fd-input-group--after"
+>
+  <input
+    className=""
+    onChange={[Function]}
+    type="text"
+    value="1234567890"
+  />
+  <span
+    className="fd-input-group__addon fd-input-group__addon--after"
+  >
+    €
+  </span>
+</div>
+`;
+
+exports[`<InputGroup /> create input group items 20`] = `
+<div
   className="fd-form__group"
 >
   <div
@@ -365,4 +424,4 @@ exports[`<InputGroup /> create input group items 17`] = `
 </div>
 `;
 
-exports[`<InputGroup /> create input group items 18`] = `"<InputGroup />"`;
+exports[`<InputGroup /> create input group items 21`] = `"<InputGroup />"`;
