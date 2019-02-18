@@ -294,7 +294,6 @@ export class Routes extends Component {
 
     render() {
         let sectionRoutes;
-        let freezeItems;
         const groupedRoutes = groupArray(this.state.filteredItems, 'section');
 
         let navItems = sections.sort(sortBy('sortOrder', 'name', 'omitSearch')).map(section => {
@@ -303,42 +302,25 @@ export class Routes extends Component {
             }
 
             sectionRoutes = groupedRoutes[section.name].sort(sortBy('sortOrder', 'name'));
-            if ( section.omitSearch ) {
-                freezeItems = (
-                    <ul className='frDocs-Nav__list' key={section.name}>
-                        <li className='frDocs-Nav__headers'>{section.name}</li>
-                        {sectionRoutes.map(route => (
-                            <li key={route.name}>
-                                <NavLink
-                                    activeClassName='frDocs-Nav__item--active'
-                                    className='frDocs-Nav__item'
-                                    key={route.url}
-                                    to={{ pathname: route.url }}>
-                                    {route.name}
-                                </NavLink>
-                            </li>
-                        ))}
-                    </ul>
-                );
-            } else {
-                return (
-                    <ul className='frDocs-Nav__list' key={section.name}>
-                        <li className='frDocs-Nav__headers'>{section.name}</li>
-                        {sectionRoutes.map(route => (
-                            <li key={route.name}>
-                                <NavLink
-                                    activeClassName='frDocs-Nav__item--active'
-                                    className='frDocs-Nav__item'
-                                    key={route.url}
-                                    to={{ pathname: route.url }}>
-                                    {route.name}
-                                </NavLink>
-                            </li>
-                        ))}
-                    </ul>
-                );
-            }
+            return (
+                <ul className='frDocs-Nav__list' key={section.name}>
+                    <li className='frDocs-Nav__headers'>{section.name}</li>
+                    {sectionRoutes.map(route => (
+                        <li key={route.name}>
+                            <NavLink
+                                activeClassName='frDocs-Nav__item--active'
+                                className='frDocs-Nav__item'
+                                key={route.url}
+                                to={{ pathname: route.url }}>
+                                {route.name}
+                            </NavLink>
+                        </li>
+                    ))}
+                </ul>
+            );
         });
+
+        const omitSearchItems = this.state.filteredItems.filter((filteredItem) => filteredItem.omitSearch);
 
         const noItemsFound = (
             <ul className='frDocs-Nav__list'>
@@ -348,7 +330,8 @@ export class Routes extends Component {
             </ul>
         );
 
-        const omitSearchItems = this.state.filteredItems.filter((filteredItem) => filteredItem.omitSearch);
+        // eslint-disable-next-line no-console
+        console.log('line 335', omitSearchItems);
 
         return (
             <BrowserRouter basename={process.env.PUBLIC_URL}>
@@ -356,7 +339,6 @@ export class Routes extends Component {
                     <div className='frDocs-Sidebar'>
                         <h1 className='frDocs-Logo'>FUNDAMENTAL REACT</h1>
                         <nav className='frDocs-Nav'>
-                            {freezeItems}
                             <div className='frDocs-Nav__inputGroup'>
                                 <InputGroup
                                     inputId='frDocs-Nav__search'
@@ -365,7 +347,7 @@ export class Routes extends Component {
                                     inputValue={this.state.query}
                                     onChange={this.onChangeHandler} />
                             </div>
-                            {this.state.filteredItems.length === omitSearchItems.length ? noItemsFound : navItems}
+                            {this.state.filteredItems.length < omitSearchItems.length ? noItemsFound : navItems}
                         </nav>
                     </div>
                     <div className='frDocs-Content'>
