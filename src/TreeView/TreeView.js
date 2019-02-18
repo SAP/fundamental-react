@@ -173,10 +173,13 @@ export class TreeItem extends Component {
     constructor(props) {
         super(props);
 
-        const { onExpandClick } = this.props;
+        const {
+            rowId,
+            onExpandClick
+        } = this.props;
 
-        // Generate unique id for row to manage expand/collapse state in parent
-        this.rowId = shortid.generate();
+        // Generate unique id for row to manage expand/collapse state in parent if prop isn't given
+        this.rowId = rowId || shortid.generate();
 
         // Initialize row in parent TreeView state
         onExpandClick(this.rowId);
@@ -189,6 +192,7 @@ export class TreeItem extends Component {
             level,
             onExpandClick,
             isExpanded: isExpandedProp,
+            rowId,
             ...rest
         } = this.props;
         const isExpanded = isExpandedProp || !!expandData[this.rowId];
@@ -243,6 +247,7 @@ TreeItem.propTypes = {
     expandData: PropTypes.object,
     isExpanded: PropTypes.bool,
     level: PropTypes.number,
+    rowId: PropTypes.string,
     onExpandClick: PropTypes.func
 };
 
@@ -257,6 +262,7 @@ TreeItem.propDescriptions = {
     expandData: '_INTERNAL USE ONLY._',
     isExpanded: 'Set to *true* for expanded tree item. This variable is handled internally, but can be overridden by the consumer through this prop',
     level: '_INTERNAL USE ONLY._',
+    rowId: 'ID used to track the expanded/collapsed state of the row. This variable is handled internally, but can be overridden by the consumer through this prop',
     onExpandClick: '_INTERNAL USE ONLY._'
 };
 
@@ -373,8 +379,17 @@ export class TreeView extends Component {
 
     static getDerivedStateFromProps(props, state) {
         const {
-            isExpandAll
+            isExpandAll,
+            expandData: expandDataProp
         } = props;
+
+        if (typeof expandDataProp !== 'undefined') {
+            // If user provides a prop value for expandData then set that in state
+            return {
+                ...state,
+                expandData: expandDataProp
+            };
+        }
 
         if (typeof isExpandAll !== 'undefined') {
             // If user provides a prop value for isExpandAll then update state accordingly
@@ -402,15 +417,23 @@ export class TreeView extends Component {
             const {
                 expandData
             } = prevState;
+            const {
+                onExpandChange
+            } = this.props;
 
             // If value doesn't exist, initialize it to false
             const newValue = (rowId in expandData) ? !expandData[rowId] : false;
 
+            const newExpandData = {
+                ...expandData,
+                [rowId]: newValue
+            };
+
+            // Callback function
+            onExpandChange(newExpandData);
+
             return {
-                expandData: {
-                    ...expandData,
-                    [rowId]: newValue
-                }
+                expandData: newExpandData
             };
         });
     }
@@ -421,11 +444,17 @@ export class TreeView extends Component {
             expandData,
             isExpandAll
         } = this.state;
+        const {
+            onExpandChange
+        } = this.props;
 
         const newExpandData = {};
 
         // Expand/Collapse all rows
         Object.keys(expandData).forEach((rowId) => newExpandData[rowId] = !isExpandAll);
+
+        // Callback function
+        onExpandChange(newExpandData);
 
         this.setState({
             expandData: newExpandData,
@@ -437,6 +466,8 @@ export class TreeView extends Component {
         const {
             children,
             isExpandAll: isExpandAllProp,
+            onExpandChange,
+            expandData: expandDataProp,
             ...rest
         } = this.props;
         const {
@@ -479,10 +510,16 @@ TreeView.displayName = 'TreeView';
 
 TreeView.propTypes = {
     children: PropTypes.node,
-    isExpandAll: PropTypes.bool
+    isExpandAll: PropTypes.bool,
+    onExpandChange: PropTypes.func
+};
+
+TreeView.defaultProps = {
+    onExpandChange: () => {}
 };
 
 TreeView.propDescriptions = {
     children: 'Node(s) to render within the component. Expecting a `TreeHead` and a `Tree` component as children.',
-    isExpandAll: 'Set to *true* for an expanded tree. This variable is handled internally, but can be overridden by the consumer through this prop'
+    isExpandAll: 'Set to *true* for an expanded tree. This variable is handled internally, but can be overridden by the consumer through this prop',
+    onExpandChange: 'Callback that is called whenever the internal expand/collapse state changes. The argument is an an object with rowId keys and boolean values representing whether that row is expanded.'
 };

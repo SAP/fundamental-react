@@ -266,6 +266,72 @@ describe('<TreeView />', () => {
         expect(wrapper.find('ul.fd-tree__group--sublevel-1').at(0).prop('aria-hidden')).toBeTruthy();
     });
 
+    test('expand change callback is called with correct arguments on row expand', () => {
+        const onExpandChange = jest.fn();
+        const callbackTree = (
+            <TreeView onExpandChange={onExpandChange}>
+                <Tree>
+                    <TreeItem rowId={'testRowId'}>
+                        <TreeRow>
+                            <TreeCol>Row 1</TreeCol>
+                        </TreeRow>
+                        <TreeBranch>
+                            <TreeItem>
+                                <TreeRow>
+                                    <TreeCol>Row 2</TreeCol>
+                                </TreeRow>
+                            </TreeItem>
+                        </TreeBranch>
+                    </TreeItem>
+                </Tree>
+            </TreeView>
+        );
+        const element = mount(callbackTree);
+        const button = element.find('button').at(0);
+
+        // Simulate clicking the expand row button
+        button.simulate('click');
+
+        expect(onExpandChange).toHaveBeenLastCalledWith(expect.objectContaining({ testRowId: true }));
+    });
+
+    test('expand change callback is called with correct arguments on header expand', () => {
+        const onExpandChange = jest.fn();
+        const callbackTree = (
+            <TreeView onExpandChange={onExpandChange}>
+                <TreeHead>
+                    <TreeCol>Header 1</TreeCol>
+                </TreeHead>
+                <Tree>
+                    <TreeItem>
+                        <TreeRow>
+                            <TreeCol>Row 1</TreeCol>
+                        </TreeRow>
+                        <TreeBranch>
+                            <TreeItem>
+                                <TreeRow>
+                                    <TreeCol>Row 2</TreeCol>
+                                </TreeRow>
+                            </TreeItem>
+                        </TreeBranch>
+                    </TreeItem>
+                </Tree>
+            </TreeView>
+        );
+        const element = mount(callbackTree);
+        const button = element.find('button').at(0);
+
+        // Simulate clicking the expand all button
+        button.simulate('click');
+
+        const lastCallArg = onExpandChange.mock.calls[onExpandChange.mock.calls.length - 1][0];
+
+        // Expect all expand values to be true
+        Object.keys(lastCallArg).forEach((id) => {
+            expect(lastCallArg[id]).toBeTruthy();
+        });
+    });
+
     describe('Prop spreading', () => {
         test('should allow props to be spread to the TreeView component', () => {
             const element = mount(
