@@ -318,6 +318,33 @@ exports[`<InputGroup /> create input group items 15`] = `
 
 exports[`<InputGroup /> create input group items 16`] = `
 <div
+  className="custom-class-number fd-input-group fd-input-group--after"
+>
+  <input
+    className=""
+    onChange={[Function]}
+    type="number"
+    value={100}
+  />
+  <span
+    className="fd-input-group__addon fd-input-group__addon--button fd-input-group__addon--after"
+  >
+    <button
+      aria-label="Step up"
+      className="fd-input-group__button fd-input-group__button--step-up sap-icon--slim-arrow-up"
+      onClick={[Function]}
+    />
+    <button
+      aria-label="Step down"
+      className="fd-input-group__button fd-input-group__button--step-down sap-icon--slim-arrow-down"
+      onClick={[Function]}
+    />
+  </span>
+</div>
+`;
+
+exports[`<InputGroup /> create input group items 17`] = `
+<div
   className="fd-form__group"
 >
   <div
@@ -338,4 +365,4 @@ exports[`<InputGroup /> create input group items 16`] = `
 </div>
 `;
 
-exports[`<InputGroup /> create input group items 17`] = `"<InputGroup />"`;
+exports[`<InputGroup /> create input group items 18`] = `"<InputGroup />"`;

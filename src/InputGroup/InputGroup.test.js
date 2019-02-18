@@ -107,6 +107,14 @@ describe('<InputGroup />', () => {
             inputType='text'
             inputValue='1234567890' />
     );
+
+    const numberInputWithCustomClassName = (
+        <InputGroup
+            className='custom-class-number'
+            inputType='number'
+            inputValue={100} />
+    );
+
     const formGroup = <FormGroup>{inputTextPosAfter}</FormGroup>;
 
     test('create input group items', () => {
@@ -185,6 +193,11 @@ describe('<InputGroup />', () => {
         tree = component.toJSON();
         expect(tree).toMatchSnapshot();
 
+        // number input with group custom class name
+        component = renderer.create(numberInputWithCustomClassName);
+        tree = component.toJSON();
+        expect(tree).toMatchSnapshot();
+
         // create form group
         component = renderer.create(formGroup);
         tree = component.toJSON();
@@ -194,6 +207,7 @@ describe('<InputGroup />', () => {
         component = renderer.create('<InputGroup />');
         tree = component.toJSON();
         expect(tree).toMatchSnapshot();
+
     });
 
     test('input text entered', () => {
