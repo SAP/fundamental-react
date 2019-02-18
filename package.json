@@ -37,7 +37,7 @@
     "std-version": "standard-version -m \"chore(release): version %s build ${TRAVIS_BUILD_NUMBER} [ci skip]\"",
     "test:coverage": "jest --coverage",
     "test:coverage:watch": "jest --coverage --watch",
-    "test:coveralls": "jest --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
+    "test:coveralls": "jest --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js || echo -e \"Coveralls failed.\n\" )",
     "test:dev": "jest",
     "test:watch": "jest --watch",
     "test": "npm run test:watch",
