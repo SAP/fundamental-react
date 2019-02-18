@@ -330,9 +330,6 @@ export class Routes extends Component {
             </ul>
         );
 
-        // eslint-disable-next-line no-console
-        console.log('line 335', omitSearchItems);
-
         return (
             <BrowserRouter basename={process.env.PUBLIC_URL}>
                 <div className='frDocs-Container'>
