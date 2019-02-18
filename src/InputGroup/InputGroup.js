@@ -69,6 +69,7 @@ export class InputGroup extends Component {
             searchButtonProps,
             addonPos,
             addon,
+            className,
             glyph,
             actions,
             compact,
@@ -79,6 +80,7 @@ export class InputGroup extends Component {
         switch (inputType) {
             case 'number':
                 const inputGroupNumberClasses = classnames(
+                    className,
                     'fd-input-group',
                     'fd-input-group--after',
                     {
@@ -120,6 +122,7 @@ export class InputGroup extends Component {
 
             case 'search':
                 const inputGroupSearchClasses = classnames(
+                    className,
                     'fd-input-group',
                     {
                         'fd-input-group--compact': compact
@@ -157,6 +160,7 @@ export class InputGroup extends Component {
             default: {
                 if (addonPos === 'before') {
                     const inputGroupBeforeClasses = classnames(
+                        className,
                         'fd-input-group',
                         'fd-input-group--before',
                         {
@@ -201,6 +205,7 @@ export class InputGroup extends Component {
                     );
                 } else {
                     const inputGroupAfterClasses = classnames(
+                        className,
                         'fd-input-group',
                         'fd-input-group--after',
                         {
