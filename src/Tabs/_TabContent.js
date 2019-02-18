@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 export const TabContent = (props) => {
-    const { children, id, selected, className, ...tabContentProps } = props;
+    const { children, id, selected, className, ...rest } = props;
 
     // css classes for tab panels
     const tabPanelClasses = classnames(
@@ -13,7 +13,7 @@ export const TabContent = (props) => {
 
     return (
         <div
-            {...tabContentProps}
+            {...rest}
             aria-expanded={selected}
             className={tabPanelClasses}
             id={id}

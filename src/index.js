@@ -53,7 +53,6 @@ export { ProductTileMedia } from './Tile/Tile';
 export { SearchInput } from './SearchInput/SearchInput';
 export { SideNav, SideNavList, SideNavListItem } from './SideNavigation/SideNavigation';
 export { Tab } from './Tabs/Tab';
-export { TabContent } from './Tabs/TabContent';
 export { TabGroup } from './Tabs/TabGroup';
 export { Table } from './Table/Table';
 export { Token } from './Token/Token';

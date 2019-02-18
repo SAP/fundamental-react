@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Tabs /> create TabContent component 1`] = `
+<div
+  className="fd-tabs__panel"
+  id="4"
+  role="tabpanel"
+>
+  Lorem ipsum dolor sit amet consectetur adipisicing elit.Dolore et ducimus veritatis officiis amet ? Vitae officia optio dolor exercitationem incidunt magnam non, suscipit, illo quisquam numquam fugiat ? Debitis, delectus sequi ?
+</div>
+`;
+
+exports[`<Tabs /> create TabContent component 2`] = `
+<div
+  className="fd-tabs__panel"
+  id="5"
+  role="tabpanel"
+>
+  Lorem ipsum dolor sit amet consectetur adipisicing elit.Dolore et ducimus veritatis officiis amet ? Vitae officia optio dolor exercitationem incidunt magnam non, suscipit, illo quisquam numquam fugiat ? Debitis, delectus sequi ?
+</div>
+`;

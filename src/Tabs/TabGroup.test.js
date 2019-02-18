@@ -78,18 +78,10 @@ describe('<Tabs />', () => {
             .simulate('click');
 
         // check selected tab changed
-        expect(wrapper.state(['selectedId'])).toEqual('4');
+        expect(wrapper.state(['selectedId'])).toEqual('1');
     });
 
     describe('Prop spreading', () => {
-        test('should allow props to be spread to the Tabs component', () => {
-            const element = mount(<Tab data-sample='Sample' id='testId' />);
-
-            expect(
-                element.getDOMNode().attributes['data-sample'].value
-            ).toBe('Sample');
-        });
-
         test('should allow props to be spread to the TabGroup component', () => {
             const element = mount(<TabGroup data-sample='Sample' />);
 
@@ -105,14 +97,6 @@ describe('<Tabs />', () => {
 
             expect(
                 element.find('ul li').at(0).getDOMNode().attributes['data-sample'].value
-            ).toBe('Sample');
-        });
-
-        test('should allow props to be spread to the Tab component\'s a elements', () => {
-            const element = mount(<Tab id='testId' {...{ 'data-sample': 'Sample' }} />);
-
-            expect(
-                element.find('a').at(0).getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
         });
 

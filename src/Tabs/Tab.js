@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 export const Tab = (props) => {
-    const { title, className, disabled, glyph, id, selected, tabLinkProps, ...rest } = props;
+    const { title, className, disabled, glyph, id, selected, ...rest } = props;
 
     // css classes used for tabs
     const linkClasses = classnames(
@@ -17,7 +17,6 @@ export const Tab = (props) => {
     return (
         <a
             {...rest}
-            {...tabLinkProps}
             aria-controls={id}
             aria-disabled={disabled}
             aria-selected={selected}
@@ -33,18 +32,22 @@ export const Tab = (props) => {
 };
 Tab.displayName = 'Tab';
 
+Tab.defaultProps = {
+    onClick: () => { }
+};
+
 Tab.propTypes = {
     className: PropTypes.string,
     disabled: PropTypes.bool,
     glyph: PropTypes.string,
     id: PropTypes.string,
     selected: PropTypes.bool,
-    title: PropTypes.string
+    title: PropTypes.string,
+    onClick: PropTypes.func
 };
 
 Tab.propDescriptions = {
     glyph: 'Icon to display on tab',
     selected: 'Set to **true** to mark tab as selected.',
-    tabLinkProps: 'Additional props to be spread to the tab\'s link element.',
     title: 'String to display on tab'
 };

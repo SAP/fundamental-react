@@ -42,8 +42,10 @@ export const TabsComponent = () => {
             <h2>Tab Group</h2>
 
             <DocsTile>
-                <TabGroup tabLinkProps={{ 'data-sample': 'Sample' }}>
-                    <Tab id='1' title='Tab 1'>
+                <TabGroup data-tg='tab group props' tabContentProps={{ data: 'tab content props' }}
+                    tabLinkProps={{ data: 'tab link props' }}>
+                    <Tab data-tab='tab props' id='1'
+                        title='Tab 1'>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     </Tab>
                     <Tab id='2' title='Tab 2'
