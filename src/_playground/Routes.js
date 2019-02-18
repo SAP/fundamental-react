@@ -44,7 +44,7 @@ const sections = [
     {
         name: 'Getting Started',
         sortOrder: 1,
-        omitSearch: true //omit this category from search filter
+        omitSearch: true
     },
     {
         name: 'Components',
@@ -295,19 +295,15 @@ export class Routes extends Component {
     render() {
         let sectionRoutes;
         let freezeItems;
-        let navItems;
         const groupedRoutes = groupArray(this.state.filteredItems, 'section');
-        //TODO: remove navItems declaration here
-        sections.sort(sortBy('sortOrder', 'name')).map(section => {
+
+        let navItems = sections.sort(sortBy('sortOrder', 'name', 'omitSearch')).map(section => {
             if (!groupedRoutes[section.name]) {
                 return;
             }
-            // eslint-disable-next-line no-console
-            console.log('line 304', groupedRoutes[section.omitSearch]);
 
             sectionRoutes = groupedRoutes[section.name].sort(sortBy('sortOrder', 'name'));
-            // TODO: conditional return here, navItems and freezeItems for omitSearch:true items
-            if ( sectionRoutes[0].omitSearch ) {
+            if ( section.omitSearch ) {
                 freezeItems = (
                     <ul className='frDocs-Nav__list' key={section.name}>
                         <li className='frDocs-Nav__headers'>{section.name}</li>
@@ -325,7 +321,7 @@ export class Routes extends Component {
                     </ul>
                 );
             } else {
-                navItems = (
+                return (
                     <ul className='frDocs-Nav__list' key={section.name}>
                         <li className='frDocs-Nav__headers'>{section.name}</li>
                         {sectionRoutes.map(route => (
@@ -343,9 +339,7 @@ export class Routes extends Component {
                 );
             }
         });
-        // eslint-disable-next-line no-console
-        console.log('line 326', navItems);
-        // TODO: remove hard-coding here
+
         const noItemsFound = (
             <ul className='frDocs-Nav__list'>
                 <li className='frDocs-Nav__item'>
@@ -359,7 +353,6 @@ export class Routes extends Component {
                 <div className='frDocs-Container'>
                     <div className='frDocs-Sidebar'>
                         <h1 className='frDocs-Logo'>FUNDAMENTAL REACT</h1>
-                        {/* TODO: change var for navHome and navItems */}
                         <nav className='frDocs-Nav'>
                             {freezeItems}
                             <div className='frDocs-Nav__inputGroup'>
