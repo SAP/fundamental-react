@@ -2,7 +2,7 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-export const ActionBar = ({ mobile, width, children, className, ...props }) => {
+const ActionBar = ({ mobile, width, children, className, ...props }) => {
     const actionBarClasses = classnames(
         'fd-action-bar',
         className
@@ -20,6 +20,7 @@ export const ActionBar = ({ mobile, width, children, className, ...props }) => {
         </React.Fragment>
     );
 };
+
 ActionBar.displayName = 'ActionBar';
 
 ActionBar.propTypes = {
@@ -36,3 +37,5 @@ ActionBar.propDescriptions = {
     mobile: 'Set to **true** for mobile view of the Action Bar.',
     width: 'The width of the Action Bar in mobile view.'
 };
+
+export default ActionBar;
