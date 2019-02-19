@@ -10,7 +10,6 @@ import { DatePickerComponent } from '../DatePicker/DatePicker.Component';
 import { DropdownComponent } from '../Dropdown/Dropdown.Component';
 import { FormsComponent } from '../Forms/Forms.Component';
 import groupArray from 'group-array';
-import { Header } from './documentation/Header/Header';
 import { Home } from './documentation/Home/Home';
 import { IconComponent } from '../Icon/Icon.Component';
 import { IdentifierComponent } from '../Identifier/Identifier.Component';
