@@ -36,12 +36,3 @@ ActionBar.propDescriptions = {
     mobile: 'Set to **true** for mobile view of the Action Bar.',
     width: 'The width of the Action Bar in mobile view.'
 };
-
-export const ActionBarActions = ({ children, className, ...props }) => {
-    const actionBarActionsClasses = classnames(
-        'fd-action-bar__actions',
-        className
-    );
-
-    return <div {...props} className={actionBarActionsClasses}>{children}</div>;
-};
