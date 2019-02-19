@@ -70,6 +70,7 @@ export class Alert extends Component {
         );
     }
 }
+Alert.displayName = 'Alert';
 
 Alert.propTypes = {
     buttonProps: PropTypes.object,

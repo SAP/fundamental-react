@@ -35,10 +35,10 @@ class TimeItem extends Component {
         var aux;
         //find the min value
         if (format12Hours && name === 'hour') {
-        //for 12h clock we are skipping to display 00 value
+            //for 12h clock we are skipping to display 00 value
             aux = 1;
         } else {
-        //for 24h clock we are displaying 00 value
+            //for 24h clock we are displaying 00 value
             aux = 0;
         }
         var maxAux = this.setMax(name, max);
@@ -87,7 +87,7 @@ class TimeItem extends Component {
             this.props.updateTime(newMeridiem, 'meridiem');
         } else if (
             (format12Hours && newHour <= 12) ||
-        (!format12Hours && newHour < 24)
+            (!format12Hours && newHour < 24)
         ) {
             this.props.updateTime(newHour, 'hour');
         }
@@ -137,9 +137,9 @@ class TimeItem extends Component {
         var aux = this.setMax(name, max);
         if (
             name !== 'meridiem' &&
-        !isNaN(value) &&
-        parseInt(value, 10) > 0 &&
-        value <= parseInt(max, 10)
+            !isNaN(value) &&
+            parseInt(value, 10) > 0 &&
+            value <= parseInt(max, 10)
         ) {
             aux = parseInt(value, 10) - 1;
             if (aux === 0 && name === 'hour' && format12Hours) {
@@ -241,6 +241,7 @@ class TimeItem extends Component {
         );
     }
 }
+TimeItem.displayName = 'TimeItem';
 
 TimeItem.propTypes = {
     arialabel: PropTypes.string,
@@ -261,7 +262,7 @@ TimeItem.propTypes = {
 };
 
 TimeItem.defaultProps = {
-    updateTime: () => {}
+    updateTime: () => { }
 };
 
 export class Time extends Component {
@@ -291,7 +292,7 @@ export class Time extends Component {
 
     formatValue = (value, name) => {
         if (name !== 'meridiem' && parseInt(value, 10) < 10) {
-        //using parseInt here to remove the zeroes before concatenating one
+            //using parseInt here to remove the zeroes before concatenating one
             value = '0'.concat(parseInt(value, 10));
         }
         return value;
@@ -433,6 +434,7 @@ export class Time extends Component {
         );
     }
 }
+Time.displayName = 'Time';
 
 Time.basePropTypes = {
     format12Hours: PropTypes.bool,
@@ -464,7 +466,7 @@ Time.propTypes = {
 };
 
 Time.defaultProps = {
-    onChange: () => {},
+    onChange: () => { },
     showHour: true,
     showMinute: true,
     showSecond: true,

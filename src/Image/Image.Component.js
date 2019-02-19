@@ -1,4 +1,5 @@
 import { Image } from '../';
+import path from 'path';
 import React from 'react';
 import { Description, DocsText, DocsTile, Header, Import, Playground, Properties, Separator } from '../_playground';
 
@@ -16,11 +17,11 @@ export const ImageComponent = () => {
             <Description>
                 Use an **Image** component to display images.
             </Description>
-            <Import sourceModule={require('./Image')} />
+            <Import sourceModulePath={path.join(__dirname, './Image')} />
 
             <Separator />
 
-            <Properties sourceModule={require('./Image')} />
+            <Properties sourceModulePath={path.join(__dirname, './Image')} />
 
             <Separator />
 

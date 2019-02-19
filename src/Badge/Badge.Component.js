@@ -1,3 +1,4 @@
+import path from 'path';
 import React from 'react';
 import { Badge, Button, Counter, Label, Status } from '../';
 import { Description, DocsText, DocsTile, Header, Import, Playground, Properties, Separator } from '../_playground';
@@ -63,11 +64,11 @@ export const BadgeComponent = () => {
         <div>
             <Header>Status Indicators</Header>
             <Description>Status Indicators are used to easily highlight the state of an object.</Description>
-            <Import sourceModule={require('./Badge')} />
+            <Import sourceModulePath={path.join(__dirname, './Badge')} />
 
             <Separator />
 
-            <Properties sourceModule={require('./Badge')} />
+            <Properties sourceModulePath={path.join(__dirname, './Badge')} />
 
             <Separator />
 

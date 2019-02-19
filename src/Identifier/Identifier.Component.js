@@ -1,4 +1,5 @@
 import { Identifier } from '../';
+import path from 'path';
 import React from 'react';
 import { Description, DocsText, DocsTile, Header, Import, Playground, Properties, Separator } from '../_playground';
 
@@ -50,11 +51,11 @@ export const IdentifierComponent = () => {
             <Description>
                 An **Identifier** is a visual presentation option around using an icon or user initials.
             </Description>
-            <Import sourceModule={require('./Identifier')} />
+            <Import sourceModulePath={path.join(__dirname, './Identifier')} />
 
             <Separator />
 
-            <Properties sourceModule={require('./Identifier')} />
+            <Properties sourceModulePath={path.join(__dirname, './Identifier')} />
 
             <Separator />
 

@@ -1,3 +1,4 @@
+import path from 'path';
 import React from 'react';
 import { Time } from '../';
 import { Description, DocsText, DocsTile, Header, Import, Properties, Separator } from '../_playground';
@@ -16,11 +17,11 @@ export const TimeComponent = () => {
                 to assemble a clock time. A max of four will account for hours, minutes, seconds and meridiem of the day.
                 It is rarely used on its own as a standalone component.
             </Description>
-            <Import sourceModule={require('./Time')} />
+            <Import sourceModulePath={path.join(__dirname, './Time')} />
 
             <Separator />
 
-            <Properties sourceModule={require('./Time')} />
+            <Properties sourceModulePath={path.join(__dirname, './Time')} />
 
             <Separator />
 

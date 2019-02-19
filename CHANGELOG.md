@@ -2,6 +2,166 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.4.0-rc.6"></a>
+# [0.4.0-rc.6](https://github.com/SAP/fundamental-react/compare/v0.4.0-rc.5...v0.4.0-rc.6) (2019-02-19)
+
+
+### Bug Fixes
+
+* temporarily disable coveralls ([#417](https://github.com/SAP/fundamental-react/issues/417)) ([2c9da2c](https://github.com/SAP/fundamental-react/commit/2c9da2c))
+
+
+
+<a name="0.4.0-rc.5"></a>
+# [0.4.0-rc.5](https://github.com/SAP/fundamental-react/compare/v0.4.0-rc.4...v0.4.0-rc.5) (2019-02-18)
+
+
+### Bug Fixes
+
+* Remove offset for start of week date in Calendar ([#396](https://github.com/SAP/fundamental-react/issues/396)) ([04c94e9](https://github.com/SAP/fundamental-react/commit/04c94e9))
+
+
+
+<a name="0.4.0-rc.4"></a>
+# [0.4.0-rc.4](https://github.com/SAP/fundamental-react/compare/v0.4.0-rc.3...v0.4.0-rc.4) (2019-02-18)
+
+
+### Bug Fixes
+
+* Playground: Add a 404.html identical to index.html ([#398](https://github.com/SAP/fundamental-react/issues/398)) ([15da349](https://github.com/SAP/fundamental-react/commit/15da349))
+
+
+
+<a name="0.4.0-rc.3"></a>
+# [0.4.0-rc.3](https://github.com/SAP/fundamental-react/compare/v0.4.0-rc.2...v0.4.0-rc.3) (2019-02-15)
+
+
+### Bug Fixes
+
+* missing button examples added ([#403](https://github.com/SAP/fundamental-react/issues/403)) ([0f67461](https://github.com/SAP/fundamental-react/commit/0f67461))
+
+
+
+<a name="0.4.0-rc.2"></a>
+# [0.4.0-rc.2](https://github.com/SAP/fundamental-react/compare/v0.4.0-rc.1...v0.4.0-rc.2) (2019-02-15)
+
+
+### Bug Fixes
+
+* update index files generation to handle multiple component files in single directory ([30791c3](https://github.com/SAP/fundamental-react/commit/30791c3))
+
+
+
+<a name="0.4.0-rc.1"></a>
+# [0.4.0-rc.1](https://github.com/SAP/fundamental-react/compare/v0.4.0-rc.0...v0.4.0-rc.1) (2019-02-15)
+
+
+
+<a name="0.4.0-rc.0"></a>
+# [0.4.0-rc.0](https://github.com/SAP/fundamental-react/compare/v0.3.5-rc.0...v0.4.0-rc.0) (2019-02-15)
+
+
+### Features
+
+* Refactor FormRadio Component ([#405](https://github.com/SAP/fundamental-react/issues/405)) ([4b88649](https://github.com/SAP/fundamental-react/commit/4b88649))
+
+
+
+<a name="0.3.5-rc.0"></a>
+## [0.3.5-rc.0](https://github.com/SAP/fundamental-react/compare/v0.3.4...v0.3.5-rc.0) (2019-02-15)
+
+
+
+<a name="0.3.4"></a>
+## [0.3.4](https://github.com/SAP/fundamental-react/compare/v0.3.4-rc.0...v0.3.4) (2019-02-14)
+
+
+
+<a name="0.3.4-rc.0"></a>
+## [0.3.4-rc.0](https://github.com/SAP/fundamental-react/compare/v0.3.3...v0.3.4-rc.0) (2019-02-14)
+
+
+### Bug Fixes
+
+* change require.resolve to path.join to fix webpack prod issues ([1ee0ae1](https://github.com/SAP/fundamental-react/commit/1ee0ae1))
+
+
+
+<a name="0.3.3"></a>
+## [0.3.3](https://github.com/SAP/fundamental-react/compare/v0.3.3-rc.8...v0.3.3) (2019-02-14)
+
+
+
+<a name="0.3.3-rc.8"></a>
+## [0.3.3-rc.8](https://github.com/SAP/fundamental-react/compare/v0.3.3-rc.7...v0.3.3-rc.8) (2019-02-14)
+
+
+
+<a name="0.3.3-rc.7"></a>
+## [0.3.3-rc.7](https://github.com/SAP/fundamental-react/compare/v0.3.3-rc.6...v0.3.3-rc.7) (2019-02-13)
+
+
+
+<a name="0.3.3-rc.6"></a>
+## [0.3.3-rc.6](https://github.com/SAP/fundamental-react/compare/v0.3.3-rc.5...v0.3.3-rc.6) (2019-02-12)
+
+
+
+<a name="0.3.3-rc.5"></a>
+## [0.3.3-rc.5](https://github.com/SAP/fundamental-react/compare/v0.3.3-rc.4...v0.3.3-rc.5) (2019-02-11)
+
+
+### Bug Fixes
+
+* labelText-prop-mix-up ([#397](https://github.com/SAP/fundamental-react/issues/397)) ([802a1c1](https://github.com/SAP/fundamental-react/commit/802a1c1))
+
+
+
+<a name="0.3.3-rc.4"></a>
+## [0.3.3-rc.4](https://github.com/SAP/fundamental-react/compare/v0.3.3-rc.3...v0.3.3-rc.4) (2019-02-11)
+
+
+### Bug Fixes
+
+* Refactor SideNavigation to remove React-Router dependency ([#372](https://github.com/SAP/fundamental-react/issues/372)) ([e6d3287](https://github.com/SAP/fundamental-react/commit/e6d3287))
+
+
+
+<a name="0.3.3-rc.3"></a>
+## [0.3.3-rc.3](https://github.com/SAP/fundamental-react/compare/v0.3.3-rc.2...v0.3.3-rc.3) (2019-02-11)
+
+
+
+<a name="0.3.3-rc.2"></a>
+## [0.3.3-rc.2](https://github.com/SAP/fundamental-react/compare/v0.3.3-rc.1...v0.3.3-rc.2) (2019-02-11)
+
+
+### Bug Fixes
+
+* icon-example-rendering ([#391](https://github.com/SAP/fundamental-react/issues/391)) ([01af06d](https://github.com/SAP/fundamental-react/commit/01af06d))
+
+
+
+<a name="0.3.3-rc.1"></a>
+## [0.3.3-rc.1](https://github.com/SAP/fundamental-react/compare/v0.3.3-rc.0...v0.3.3-rc.1) (2019-02-11)
+
+
+
+<a name="0.3.3-rc.0"></a>
+## [0.3.3-rc.0](https://github.com/SAP/fundamental-react/compare/v0.3.2...v0.3.3-rc.0) (2019-02-08)
+
+
+### Bug Fixes
+
+* add displayName for each component ([#388](https://github.com/SAP/fundamental-react/issues/388)) ([6d24bef](https://github.com/SAP/fundamental-react/commit/6d24bef))
+
+
+
+<a name="0.3.2"></a>
+## [0.3.2](https://github.com/SAP/fundamental-react/compare/v0.3.2-rc.21...v0.3.2) (2019-02-08)
+
+
+
 <a name="0.3.2-rc.21"></a>
 ## [0.3.2-rc.21](https://github.com/SAP/fundamental-react/compare/v0.3.2-rc.20...v0.3.2-rc.21) (2019-02-08)
 

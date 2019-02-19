@@ -1,3 +1,4 @@
+import path from 'path';
 import React from 'react';
 import { Button, Identifier, Image, Menu, MenuItem, MenuList, Popover, ProductTile, ProductTileContent, ProductTileMedia, Tile, TileActions, TileContent, TileGrid, TileMedia } from '../';
 import { Description, DocsText, DocsTile, Header, Import, Playground, Properties, Separator } from '../_playground';
@@ -111,11 +112,11 @@ export const TileComponent = () => {
                 A **Tile** can be used to display information in a simple container format.
                 A collection of tiles can be displayed using **TileGrid**.
             </Description>
-            <Import sourceModule={require('./Tile')} />
+            <Import sourceModulePath={path.join(__dirname, './Tile')} />
 
             <Separator />
 
-            <Properties sourceModule={require('./Tile')} />
+            <Properties sourceModulePath={path.join(__dirname, './Tile')} />
 
             <Separator />
 

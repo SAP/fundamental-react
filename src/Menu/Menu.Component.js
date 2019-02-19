@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import path from 'path';
 import React from 'react';
 import { Description, DocsText, DocsTile, Header, Import, Properties, Separator } from '../_playground';
 import { Menu, MenuGroup, MenuItem, MenuList } from '../';
@@ -82,11 +83,11 @@ export const MenuComponent = () => {
                 contents when composing “dropdowns”, “contextual menus”,  etc, when paired with the **Popover**
                 component.
             </Description>
-            <Import sourceModule={require('./Menu')} />
+            <Import sourceModulePath={path.join(__dirname, './Menu')} />
 
             <Separator />
 
-            <Properties sourceModule={require('./Menu')} />
+            <Properties sourceModulePath={path.join(__dirname, './Menu')} />
 
             <Separator />
 

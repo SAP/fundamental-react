@@ -6,6 +6,7 @@ import React, { Component } from 'react';
 export const FormGroup = ({ children, ...props }) => {
     return <div {...props} className='fd-form__group'>{children}</div>;
 };
+FormGroup.displayName = 'FormGroup';
 
 FormGroup.propTypes = {
     children: PropTypes.node
@@ -60,13 +61,20 @@ export class InputGroup extends Component {
         const {
             inputClassName,
             inputType,
+            actions,
+            addon,
+            addonPos,
+            children,
+            compact,
+            glyph,
             inputId,
             inputName,
             inputPlaceholder,
             inputProps,
+            inputType,
             inputValue,
-            numberUpButtonProps,
             numberDownButtonProps,
+            numberUpButtonProps,
             searchButtonProps,
             addonPos,
             addon,
@@ -258,6 +266,7 @@ export class InputGroup extends Component {
         }
     }
 }
+InputGroup.displayName = 'InputGroup';
 
 InputGroup.propTypes = {
     actions: PropTypes.bool,

@@ -1,3 +1,4 @@
+import path from 'path';
 import React from 'react';
 import { TimePicker } from '../';
 import { Description, DocsText, DocsTile, Header, Import, Properties, Separator } from '../_playground';
@@ -13,11 +14,11 @@ export const TimePickerComponent = () => {
             <Description>
                 The **Time Picker** allows the user to easily set a time using the **Time** component.
             </Description>
-            <Import sourceModule={require('./TimePicker')} />
+            <Import sourceModulePath={path.join(__dirname, './TimePicker')} />
 
             <Separator />
 
-            <Properties sourceModule={require('./TimePicker')} />
+            <Properties sourceModulePath={path.join(__dirname, './TimePicker')} />
 
             <Separator />
 

@@ -18,6 +18,7 @@ export const Menu = ({ addonBefore, children, className, ...props }) => {
         </nav>
     );
 };
+Menu.displayName = 'Menu';
 
 Menu.propTypes = {
     addonBefore: PropTypes.bool,
@@ -37,6 +38,7 @@ export const MenuList = ({ children, className, ...props }) => {
 
     return <ul {...props} className={menuListClasses}>{children}</ul>;
 };
+MenuList.displayName = 'MenuList';
 
 MenuList.propTypes = {
     children: PropTypes.node,
@@ -91,6 +93,7 @@ export const MenuItem = ({ url, isLink, separator, addon, children, onclick, cla
         </React.Fragment>
     );
 };
+MenuItem.displayName = 'MenuItem';
 
 MenuItem.propTypes = {
     addon: PropTypes.string,
@@ -126,6 +129,7 @@ export const MenuGroup = ({ title, children, className, titleProps, ...props }) 
         </div>
     );
 };
+MenuGroup.displayName = 'MenuGroup';
 
 MenuGroup.propTypes = {
     title: PropTypes.string.isRequired,

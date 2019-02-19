@@ -1,3 +1,4 @@
+import path from 'path';
 import React from 'react';
 import { Button, Dropdown, Menu, MenuItem, MenuList, Popover } from '../';
 import { Description, DocsText, DocsTile, Header, Import, Properties, Separator } from '../_playground';
@@ -161,11 +162,11 @@ export const DropdownComponent = () => {
                 The **Dropdown** component lets the user select one of the different options.
                 It is more flexible than the normal Select.
             </Description>
-            <Import sourceModule={require('./Dropdown')} />
+            <Import sourceModulePath={path.join(__dirname, './Dropdown')} />
 
             <Separator />
 
-            <Properties sourceModule={require('./Dropdown')} />
+            <Properties sourceModulePath={path.join(__dirname, './Dropdown')} />
 
             <Separator />
 

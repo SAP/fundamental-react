@@ -24,31 +24,31 @@ class TimePickerItem extends Component {
         var length = 0;
         if (
             props.format12Hours &&
-        props.showHour &&
-        props.showMinute &&
-        props.showSecond
+            props.showHour &&
+            props.showMinute &&
+            props.showSecond
         ) {
-        //format hh:mm:ss am
+            //format hh:mm:ss am
             length = 11;
         } else if (
             !props.format12Hours &&
-        props.showHour &&
-        props.showMinute &&
-        props.showSecond
+            props.showHour &&
+            props.showMinute &&
+            props.showSecond
         ) {
-        //format hh:mm:ss
+            //format hh:mm:ss
             length = 8;
         } else if (
             (!props.format12Hours && props.showHour && props.showMinute) ||
-        (!props.format12Hours && props.showMinute && props.showSecond)
+            (!props.format12Hours && props.showMinute && props.showSecond)
         ) {
-        //format hh:mm
+            //format hh:mm
             length = 5;
         } else if (
             (props.format12Hours && props.showHour && props.showMinute) ||
-        (props.format12Hours && props.showMinute && props.showSecond)
+            (props.format12Hours && props.showMinute && props.showSecond)
         ) {
-        //format hh:mm am
+            //format hh:mm am
             length = 8;
         }
         return length;
@@ -65,24 +65,24 @@ class TimePickerItem extends Component {
         const { showHour, showMinute, showSecond, format12Hours } = this.props;
 
         if (showHour && showMinute && showSecond && format12Hours) {
-        //validate hh:mm:ss am/pm format
+            //validate hh:mm:ss am/pm format
             let regex = new RegExp(
                 '((1[0-2]|0?[0-9]):([0-5][0-9]):([0-5][0-9]) ([AaPp][Mm]))'
             );
             this.inputCheck(regex, value);
         } else if (
             (format12Hours && showHour && showMinute) ||
-        (format12Hours && showMinute & showSecond)
+            (format12Hours && showMinute & showSecond)
         ) {
-        //validate hh:mm and mm:ss am
+            //validate hh:mm and mm:ss am
             let regex = new RegExp('((1[0-2]|0?[0-9]):([0-5][0-9]) ([AaPp][Mm]))');
             this.inputCheck(regex, value);
         } else if (
             (!format12Hours && showHour && showMinute && showSecond) ||
-        (!format12Hours && showHour && showMinute) ||
-        (!format12Hours && showMinute & showSecond)
+            (!format12Hours && showHour && showMinute) ||
+            (!format12Hours && showMinute & showSecond)
         ) {
-        //validate hh:mm and mm:ss
+            //validate hh:mm and mm:ss
             let regex = new RegExp('(1[0-2]|0?[0-9]):([0-5][0-9])');
             this.inputCheck(regex, value);
         }
@@ -107,8 +107,8 @@ class TimePickerItem extends Component {
         const { length } = this.state;
         const { showHour, showMinute, showSecond, format12Hours } = this.props;
         if (length === 11) {
-        // this means the time forma is hh:mm:ss am convert string into corresponding
-        // time format
+            // this means the time forma is hh:mm:ss am convert string into corresponding
+            // time format
             let timeValues = value.split(' ');
             if (timeValues.length === 2) {
                 let timeValue = timeValues[0].split(':');
@@ -121,7 +121,7 @@ class TimePickerItem extends Component {
                 this.props.onChange(time);
             }
         } else if (length === 5) {
-        //format hh:mm or mm:ss
+            //format hh:mm or mm:ss
             if (showHour && showMinute && !showSecond) {
                 this.updateTimeHHMM(value);
             } else if (!showHour && showMinute && showSecond) {
@@ -238,6 +238,7 @@ class TimePickerItem extends Component {
         );
     }
 }
+TimePickerItem.displayName = 'TimePickerItem';
 
 TimePickerItem.propTypes = {
     buttonID: PropTypes.string,
@@ -404,6 +405,7 @@ export class TimePicker extends React.Component {
         );
     }
 }
+TimePicker.displayName = 'TimePicker';
 
 TimePicker.propTypes = {
     ...Time.basePropTypes,
