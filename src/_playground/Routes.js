@@ -10,6 +10,7 @@ import { DatePickerComponent } from '../DatePicker/DatePicker.Component';
 import { DropdownComponent } from '../Dropdown/Dropdown.Component';
 import { FormsComponent } from '../Forms/Forms.Component';
 import groupArray from 'group-array';
+import { Header } from './documentation/Header/Header';
 import { Home } from './documentation/Home/Home';
 import { IconComponent } from '../Icon/Icon.Component';
 import { IdentifierComponent } from '../Identifier/Identifier.Component';
@@ -37,7 +38,7 @@ import { TimePickerComponent } from '../TimePicker/TimePicker.Component';
 import { ToggleComponent } from '../Toggle/Toggle.Component';
 import { TokenComponent } from '../Token/Token.Component';
 import { TreeViewComponent } from '../TreeView/TreeView.Component';
-import { BrowserRouter, NavLink, Redirect, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Link, NavLink, Redirect, Route, Switch } from 'react-router-dom';
 
 const sections = [
     {
@@ -246,7 +247,7 @@ const routes = [
     },
     {
         url: '/timepicker',
-        name: 'TimePicker',
+        name: 'Time Picker',
         component: TimePickerComponent,
         section: 'Components'
     },
@@ -264,11 +265,18 @@ const routes = [
     },
     {
         url: '/treeview',
-        name: 'TreeView',
+        name: 'Tree View',
         component: TreeViewComponent,
         section: 'Components'
     }
 ];
+
+const RouteNotFound = () => (
+    <div>
+        <Header>Sorry, page not found.</Header>
+        <Link to=''>Home</Link>
+    </div>
+);
 
 export const Routes = () => {
     let sectionRoutes;
@@ -320,6 +328,7 @@ export const Routes = () => {
                         })}
                         <Redirect exact from=''
                             to='/home' />
+                        <Route component={RouteNotFound} />
                     </Switch>
                 </div>
             </div>

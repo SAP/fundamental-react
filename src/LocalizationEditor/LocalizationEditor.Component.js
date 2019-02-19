@@ -1,4 +1,5 @@
 import { LocalizationEditor } from '../';
+import path from 'path';
 import React from 'react';
 import { DocsText, DocsTile, Header, Import, Properties, Separator } from '../_playground';
 
@@ -35,11 +36,11 @@ export const LocalizationEditorComponent = () => {
     return (
         <div>
             <Header>Localization Editor</Header>
-            <Import sourceModule={require('./LocalizationEditor')} />
+            <Import sourceModulePath={path.join(__dirname, './LocalizationEditor')} />
 
             <Separator />
 
-            <Properties sourceModule={require('./LocalizationEditor')} />
+            <Properties sourceModulePath={path.join(__dirname, './LocalizationEditor')} />
 
             <Separator />
 

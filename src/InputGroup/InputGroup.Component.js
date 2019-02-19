@@ -1,3 +1,4 @@
+import path from 'path';
 import React from 'react';
 import { Button, FormGroup, FormItem, FormLabel, InputGroup } from '../';
 import { Description, DocsText, DocsTile, Header, Import, Playground, Properties, Separator } from '../_playground';
@@ -137,11 +138,11 @@ Compact mode:
                 The **Input Group** includes form inputs with add-ons that allow the user to
                 better understand the information being entered.
             </Description>
-            <Import sourceModule={require('./InputGroup')} />
+            <Import sourceModulePath={path.join(__dirname, './InputGroup')} />
 
             <Separator />
 
-            <Properties sourceModule={require('./InputGroup')} />
+            <Properties sourceModulePath={path.join(__dirname, './InputGroup')} />
 
             <Separator />
 

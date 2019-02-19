@@ -1,4 +1,5 @@
 import { InlineHelp } from '../';
+import path from 'path';
 import React from 'react';
 import { Description, DocsText, DocsTile, Header, Import, Properties, Separator } from '../_playground';
 
@@ -17,11 +18,11 @@ export const InlineHelpComponent = () => {
                 **Inline Help** is used to display help text in a **Popover**, often inline with headers,
                 body text and form labels.
             </Description>
-            <Import sourceModule={require('./InlineHelp')} />
+            <Import sourceModulePath={path.join(__dirname, './InlineHelp')} />
 
             <Separator />
 
-            <Properties sourceModule={require('./InlineHelp')} />
+            <Properties sourceModulePath={path.join(__dirname, './InlineHelp')} />
 
             <Separator />
 

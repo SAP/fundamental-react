@@ -1,3 +1,4 @@
+import path from 'path';
 import React from 'react';
 import { Description, DocsText, DocsTile, Header, Import, Properties, Separator } from '../_playground';
 import { Link, MemoryRouter } from 'react-router-dom';
@@ -231,11 +232,11 @@ export const SideNavigationComponent = () => {
                 The left navigation can always display or expand/collapse using the menu icon within the global
                 navigation.
             </Description>
-            <Import sourceModule={require('./SideNavigation')} />
+            <Import sourceModulePath={path.join(__dirname, './SideNavigation')} />
 
             <Separator />
 
-            <Properties sourceModule={require('./SideNavigation')} />
+            <Properties sourceModulePath={path.join(__dirname, './SideNavigation')} />
 
             <Separator />
 

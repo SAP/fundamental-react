@@ -1,3 +1,4 @@
+import path from 'path';
 import React from 'react';
 import { ComboboxInput, Menu, MenuItem, MenuList } from '../';
 import { DocsText, DocsTile, Header, Import, Properties, Separator } from '../_playground';
@@ -40,11 +41,11 @@ export const ComboboxInputComponent = () => {
         <div>
             <Header>Combobox Input</Header>
 
-            <Import sourceModule={require('./ComboboxInput')} />
+            <Import sourceModulePath={path.join(__dirname, './ComboboxInput')} />
 
             <Separator />
 
-            <Properties sourceModule={require('./ComboboxInput')} />
+            <Properties sourceModulePath={path.join(__dirname, './ComboboxInput')} />
 
             <Separator />
 

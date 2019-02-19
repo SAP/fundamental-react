@@ -1,3 +1,4 @@
+import path from 'path';
 import { Button, Modal } from '../';
 import { Description, DocsText, DocsTile, Header, Import, Properties, Separator } from '../_playground';
 import React, { Component } from 'react';
@@ -145,11 +146,11 @@ export class ModalComponent extends Component {
                     To display the **Modal** dialog, pass a boolean value to the `show` property of the component. It is
                     recommended to store this value as a state property in the parent control or application.
                 </Description>
-                <Import sourceModule={require('./Modal')} />
+                <Import sourceModulePath={path.join(__dirname, './Modal')} />
 
                 <Separator />
 
-                <Properties sourceModule={require('./Modal')} />
+                <Properties sourceModulePath={path.join(__dirname, './Modal')} />
 
                 <Separator />
 

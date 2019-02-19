@@ -17,16 +17,22 @@ const isComponentFile = (source) => {
 const componentDirs = readdirSync(srcPath).map(name => path.join(srcPath, name)).filter(isComponentDirectory).map(directory => {
     return {
         path: directory,
-        fileName: readdirSync(directory).filter(isComponentFile)
+        fileNames: readdirSync(directory).filter(isComponentFile)
     };
 });
 
+// For every component directory.
 componentDirs.map((directory) => {
-    let component = require(`${directory.path}/${directory.fileName}`);
     let fileContents = '';
-    Object.keys(component).map((single) => {
-        fileContents += `export { ${single} } from './${directory.fileName}';\n`;
-        let indexPath = `${directory.path}/index.js`;
-        writeFileSync(indexPath, fileContents);
+    // Loop through its files.
+    directory.fileNames.map((fileName) => {
+        // Grab the file's exports.
+        let components = require(path.join(directory.path, fileName));
+        Object.keys(components).map((component) => {
+            fileContents += `export { ${component} } from './${fileName}';\n`;
+        });
     });
+    // write the index file into the directory.
+    let indexPath = path.join(directory.path, 'index.js');
+    writeFileSync(indexPath, fileContents);
 });

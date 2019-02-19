@@ -128,61 +128,58 @@ exports[`<Forms /> create form item 3`] = `
   >
     Radio buttons
   </legend>
-  <div>
+  <div
+    className="blue"
+  >
     <div
       className="fd-form__item fd-form__item--check"
     >
-      <input
-        checked={false}
-        className="fd-form__control"
-        id="radio-1"
-        name="radio-1"
-        onChange={[Function]}
-        type="radio"
-        value="radio-1"
-      />
       <label
         className="fd-form__label"
-        htmlFor="radio-1"
       >
+        <input
+          className="fd-form__control"
+          id="radio-1"
+          name="radio-group-5"
+          onChange={[Function]}
+          type="radio"
+          value="radio-1"
+        />
         Option 1
       </label>
     </div>
     <div
       className="fd-form__item fd-form__item--check"
     >
-      <input
-        checked={true}
-        className="fd-form__control"
-        id="radio-2"
-        name="radio-2"
-        onChange={[Function]}
-        type="radio"
-        value="radio-2"
-      />
       <label
         className="fd-form__label"
-        htmlFor="radio-2"
       >
+        <input
+          checked={true}
+          className="fd-form__control"
+          id="radio-2"
+          name="radio-group-5"
+          onChange={[Function]}
+          type="radio"
+          value="radio-2"
+        />
         Option 2
       </label>
     </div>
     <div
       className="fd-form__item fd-form__item--check"
     >
-      <input
-        checked={false}
-        className="fd-form__control"
-        id="radio-3"
-        name="radio-3"
-        onChange={[Function]}
-        type="radio"
-        value="radio-3"
-      />
       <label
         className="fd-form__label"
-        htmlFor="radio-3"
       >
+        <input
+          className="fd-form__control"
+          id="radio-3"
+          name="radio-group-5"
+          onChange={[Function]}
+          type="radio"
+          value="radio-3"
+        />
         Option 3
       </label>
     </div>
@@ -199,61 +196,58 @@ exports[`<Forms /> create form item 4`] = `
   >
     Radio buttons
   </legend>
-  <div>
+  <div
+    className="blue"
+  >
     <div
       className="fd-form__item fd-form__item--check"
     >
-      <input
-        checked={false}
-        className="fd-form__control"
-        id="radio-1"
-        name="radio-1"
-        onChange={[Function]}
-        type="radio"
-        value="radio-1"
-      />
       <label
         className="fd-form__label"
-        htmlFor="radio-1"
       >
+        <input
+          className="fd-form__control"
+          id="radio-1"
+          name="radio-group-1"
+          onChange={[Function]}
+          type="radio"
+          value="radio-1"
+        />
         Option 1
       </label>
     </div>
     <div
       className="fd-form__item fd-form__item--check"
     >
-      <input
-        checked={true}
-        className="fd-form__control"
-        id="radio-2"
-        name="radio-2"
-        onChange={[Function]}
-        type="radio"
-        value="radio-2"
-      />
       <label
         className="fd-form__label"
-        htmlFor="radio-2"
       >
+        <input
+          checked={true}
+          className="fd-form__control"
+          id="radio-2"
+          name="radio-group-1"
+          onChange={[Function]}
+          type="radio"
+          value="radio-2"
+        />
         Option 2
       </label>
     </div>
     <div
       className="fd-form__item fd-form__item--check"
     >
-      <input
-        checked={false}
-        className="fd-form__control"
-        id="radio-3"
-        name="radio-3"
-        onChange={[Function]}
-        type="radio"
-        value="radio-3"
-      />
       <label
         className="fd-form__label"
-        htmlFor="radio-3"
       >
+        <input
+          className="fd-form__control"
+          id="radio-3"
+          name="radio-group-1"
+          onChange={[Function]}
+          type="radio"
+          value="radio-3"
+        />
         Option 3
       </label>
     </div>
@@ -262,20 +256,21 @@ exports[`<Forms /> create form item 4`] = `
     className="fd-form__legend"
     legendText="Radio buttons disabled"
   />
-  <div>
+  <div
+    className="blue"
+  >
     <div
-      className="fd-form__item fd-form__item--inline fd-form__item--check"
+      className="fd-form__item fd-form__item--check fd-form__item--inline"
     >
       <label
         className="fd-form__label"
-        htmlFor="radio-4"
       >
         <input
           checked={true}
           className="fd-form__control"
           disabled={true}
           id="radio-4"
-          name="radio-4"
+          name="radio-group-2"
           onChange={[Function]}
           type="radio"
           value="radio-4"
@@ -284,18 +279,16 @@ exports[`<Forms /> create form item 4`] = `
       </label>
     </div>
     <div
-      className="fd-form__item fd-form__item--inline fd-form__item--check"
+      className="fd-form__item fd-form__item--check fd-form__item--inline"
     >
       <label
         className="fd-form__label"
-        htmlFor="radio-5"
       >
         <input
-          checked={false}
           className="fd-form__control"
           disabled={true}
           id="radio-5"
-          name="radio-5"
+          name="radio-group-2"
           onChange={[Function]}
           type="radio"
           value="radio-5"
@@ -304,18 +297,16 @@ exports[`<Forms /> create form item 4`] = `
       </label>
     </div>
     <div
-      className="fd-form__item fd-form__item--inline fd-form__item--check"
+      className="fd-form__item fd-form__item--check fd-form__item--inline"
     >
       <label
         className="fd-form__label"
-        htmlFor="radio-6"
       >
         <input
-          checked={false}
           className="fd-form__control"
           disabled={true}
           id="radio-6"
-          name="radio-6"
+          name="radio-group-2"
           onChange={[Function]}
           type="radio"
           value="radio-6"
@@ -328,19 +319,19 @@ exports[`<Forms /> create form item 4`] = `
     className="fd-form__legend"
     legendText="Inline Radio buttons"
   />
-  <div>
+  <div
+    className="blue"
+  >
     <div
-      className="fd-form__item fd-form__item--inline fd-form__item--check"
+      className="fd-form__item fd-form__item--check fd-form__item--inline"
     >
       <label
         className="fd-form__label"
-        htmlFor="radio-7"
       >
         <input
-          checked={false}
           className="fd-form__control"
           id="radio-7"
-          name="radio-7"
+          name="radio-group-3"
           onChange={[Function]}
           type="radio"
           value="radio-7"
@@ -349,17 +340,15 @@ exports[`<Forms /> create form item 4`] = `
       </label>
     </div>
     <div
-      className="fd-form__item fd-form__item--inline fd-form__item--check"
+      className="fd-form__item fd-form__item--check fd-form__item--inline"
     >
       <label
         className="fd-form__label"
-        htmlFor="radio-8"
       >
         <input
-          checked={false}
           className="fd-form__control"
           id="radio-8"
-          name="radio-8"
+          name="radio-group-3"
           onChange={[Function]}
           type="radio"
           value="radio-8"
@@ -368,17 +357,16 @@ exports[`<Forms /> create form item 4`] = `
       </label>
     </div>
     <div
-      className="fd-form__item fd-form__item--inline fd-form__item--check"
+      className="fd-form__item fd-form__item--check fd-form__item--inline"
     >
       <label
         className="fd-form__label"
-        htmlFor="radio-9"
       >
         <input
           checked={true}
           className="fd-form__control"
           id="radio-9"
-          name="radio-9"
+          name="radio-group-3"
           onChange={[Function]}
           type="radio"
           value="radio-9"
@@ -387,64 +375,61 @@ exports[`<Forms /> create form item 4`] = `
       </label>
     </div>
   </div>
-  <div>
+  <div
+    className="blue"
+  >
     <div
-      className="fd-form__item fd-form__item--check"
+      className="fd-form__item fd-form__item--check fd-form__item--inline"
     >
-      <input
-        checked={false}
-        className="fd-form__control"
-        disabled={true}
-        id="radio-7"
-        name="radio-7"
-        onChange={[Function]}
-        type="radio"
-        value="radio-7"
-      />
       <label
         className="fd-form__label"
-        htmlFor="radio-7"
       >
+        <input
+          className="fd-form__control"
+          disabled={true}
+          id="radio-7"
+          name="radio-group-4"
+          onChange={[Function]}
+          type="radio"
+          value="radio-7"
+        />
         Option 1
       </label>
     </div>
     <div
-      className="fd-form__item fd-form__item--check"
+      className="fd-form__item fd-form__item--check fd-form__item--inline"
     >
-      <input
-        checked={false}
-        className="fd-form__control"
-        disabled={true}
-        id="radio-8"
-        name="radio-8"
-        onChange={[Function]}
-        type="radio"
-        value="radio-8"
-      />
       <label
         className="fd-form__label"
-        htmlFor="radio-8"
       >
+        <input
+          className="fd-form__control"
+          disabled={true}
+          id="radio-8"
+          name="radio-group-4"
+          onChange={[Function]}
+          type="radio"
+          value="radio-8"
+        />
         Option 2
       </label>
     </div>
     <div
-      className="fd-form__item fd-form__item--check"
+      className="fd-form__item fd-form__item--check fd-form__item--inline"
     >
-      <input
-        checked={true}
-        className="fd-form__control"
-        disabled={true}
-        id="radio-9"
-        name="radio-9"
-        onChange={[Function]}
-        type="radio"
-        value="radio-9"
-      />
       <label
         className="fd-form__label"
-        htmlFor="radio-9"
       >
+        <input
+          checked={true}
+          className="fd-form__control"
+          disabled={true}
+          id="radio-9"
+          name="radio-group-4"
+          onChange={[Function]}
+          type="radio"
+          value="radio-9"
+        />
         Option 3
       </label>
     </div>

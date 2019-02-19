@@ -1,3 +1,4 @@
+import path from 'path';
 import { Shellbar } from '..';
 import { Description, DocsText, DocsTile, Header, Import, Properties, Separator } from '../_playground';
 import { Menu, MenuItem, MenuList } from '../';
@@ -417,11 +418,11 @@ productSwitcher = {
                     a composite component comprised of mandatory and optional elements. Before getting started, here are
                     some things to know.
                 </Description>
-                <Import sourceModule={require('./Shellbar')} />
+                <Import sourceModulePath={path.join(__dirname, './Shellbar')} />
 
                 <Separator />
 
-                <Properties sourceModule={require('./Shellbar')} />
+                <Properties sourceModulePath={path.join(__dirname, './Shellbar')} />
 
                 <Separator />
 
