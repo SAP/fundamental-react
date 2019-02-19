@@ -6,7 +6,7 @@ import {
     ActionBarActions,
     ActionBarBack,
     ActionBarHeader
-} from './ActionBar';
+} from './';
 
 describe('<ActionBar />', () => {
     const basicActionBar = (

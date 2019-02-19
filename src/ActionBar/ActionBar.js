@@ -37,28 +37,6 @@ ActionBar.propDescriptions = {
     width: 'The width of the Action Bar in mobile view.'
 };
 
-export const ActionBarBack = ({ onClick, className, buttonProps, ...props }) => {
-    const actionBarBackClasses = classnames(
-        'fd-action-bar__back',
-        className
-    );
-
-    return (
-        <div {...props} className={actionBarBackClasses}>
-            <button
-                {...buttonProps}
-                className='fd-button--light fd-button--compact sap-icon--nav-back'
-                onClick={onClick} />
-        </div>
-    );
-};
-
-ActionBarBack.propTypes = {
-    buttonProps: PropTypes.object,
-    className: PropTypes.string,
-    onClick: PropTypes.func
-};
-
 export const ActionBarHeader = ({ className, description, descriptionProps, title, titleProps, ...props }) => {
     const actionBarHeaderClasses = classnames(
         'fd-action-bar__header',

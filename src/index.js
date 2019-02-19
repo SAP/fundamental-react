@@ -1,5 +1,5 @@
 export { ActionBar } from './ActionBar/ActionBar';
-export { ActionBarBack } from './ActionBar/ActionBar';
+export { ActionBarBack } from './ActionBar';
 export { ActionBarHeader } from './ActionBar/ActionBar';
 export { ActionBarActions } from './ActionBar/ActionBar';
 export { Alert } from './Alert/Alert';
