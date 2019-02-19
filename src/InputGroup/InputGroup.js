@@ -59,30 +59,23 @@ export class InputGroup extends Component {
 
     render() {
         const {
-            inputClassName,
-            inputType,
             actions,
-            addon,
             addonPos,
+            addon,
             children,
+            className,
             compact,
             glyph,
+            inputClassName,
+            inputType,
             inputId,
             inputName,
             inputPlaceholder,
             inputProps,
-            inputType,
             inputValue,
             numberDownButtonProps,
             numberUpButtonProps,
             searchButtonProps,
-            addonPos,
-            addon,
-            className,
-            glyph,
-            actions,
-            compact,
-            children,
             ...props
         } = this.props;
 
@@ -299,7 +292,7 @@ InputGroup.propDescriptions = {
     addon: 'The value of the add-on.',
     addonPos: 'Location of the add-on relative to the input.',
     inputId: 'Value for the `id` attribute on the `<input>` element.',
-    inputClassName: 'Value for the `classname` attribute on the `<input>` element.',
+    inputClassName: 'CSS class(es) to add to the `<input>` element.',
     inputName: 'Value for the `name` attribute on the `<input>` element.',
     inputPlaceholder: 'Value for the `placeholder` attribute on the `<input>` element.',
     inputType: 'Value for the `type` attribute on the `<input>` element.',
