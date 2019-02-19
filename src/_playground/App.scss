@@ -29,7 +29,6 @@ $fd-fonts-path: '../../node_modules/fiori-fundamentals/dist/fonts/';
                     color: inherit;
                 }
             }
-
             .frDocs-Nav {
                 border-top: 2px solid #dbe7f3;
                 height: 90%;
@@ -65,6 +64,9 @@ $fd-fonts-path: '../../node_modules/fiori-fundamentals/dist/fonts/';
                     border-left: 6px solid #2fd0c8;
                     padding-left: 34px;
                 }
+            }
+            .frDocs-Nav__inputGroup {
+                padding: 5px 20px;
             }
         }
 
