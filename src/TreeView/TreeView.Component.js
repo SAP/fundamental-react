@@ -1,3 +1,4 @@
+import path from 'path';
 import React from 'react';
 import { Description, DocsText, DocsTile, Header, Import, Properties, Separator } from '../_playground';
 import { Tree, TreeBranch, TreeCol, TreeHead, TreeItem, TreeRow, TreeView } from '../';
@@ -202,11 +203,11 @@ export const TreeViewComponent = () => {
                 a single top-most node is called a "root" node. Apart from the hierarchical structure of its nodes
                 and leaves, a tree is similar to a list.
             </Description>
-            <Import sourceModule={require('./TreeView')} />
+            <Import sourceModulePath={path.join(__dirname, './TreeView')} />
 
             <Separator />
 
-            <Properties sourceModule={require('./TreeView')} />
+            <Properties sourceModulePath={path.join(__dirname, './TreeView')} />
 
             <Separator />
 

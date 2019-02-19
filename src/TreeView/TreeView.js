@@ -258,7 +258,7 @@ TreeItem.defaultProps = {
 };
 
 TreeItem.propDescriptions = {
-    children: 'Node(s) to render within the component. Expecting `TreeRow` and `TreeItem` components as children.',
+    children: 'Node(s) to render within the component. Expecting `TreeRow` and `TreeBranch` components as children.',
     expandData: '_INTERNAL USE ONLY._',
     isExpanded: 'Set to *true* for expanded tree item. This variable is handled internally, but can be overridden by the consumer through this prop.',
     level: '_INTERNAL USE ONLY._',
@@ -287,7 +287,7 @@ TreeBranch.defaultProps = {
 };
 
 TreeBranch.propDescriptions = {
-    children: 'Node(s) to render within the component. Expecting a `TreeItem` component as a child.',
+    children: 'Node(s) to render within the component. Expecting `TreeItem` components as children.',
     expandData: '_INTERNAL USE ONLY._',
     isExpanded: '_INTERNAL USE ONLY._',
     level: '_INTERNAL USE ONLY._',
@@ -521,7 +521,7 @@ TreeView.defaultProps = {
 
 TreeView.propDescriptions = {
     children: 'Node(s) to render within the component. Expecting a `TreeHead` and a `Tree` component as children.',
-    expandData: 'object with rowId keys and boolean values representing whether that row is expanded. This variable is handled internally, but can be overridden by the consumer through this prop.',
+    expandData: 'Object with rowId keys and boolean values representing whether that row is expanded. This variable is handled internally, but can be overridden by the consumer through this prop.',
     isExpandAll: 'Set to *true* for an expanded tree. This variable is handled internally, but can be overridden by the consumer through this prop',
     onExpandChange: 'Callback that is called whenever the internal expand/collapse state changes. The argument is an an object with rowId keys and boolean values representing whether that row is expanded.'
 };
