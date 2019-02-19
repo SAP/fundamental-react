@@ -94,55 +94,62 @@ PropertyTable.propTypes = {
 
 const PropertyType = ({ prop }) => {
     const typeChecker = prop.typeChecker;
-    let details;
 
     switch (prop.typeName) {
         case 'arrayOf':
         case 'objectOf':
-            details = (
-                <div>({typeChecker.typeName})</div>
+            return (
+                <React.Fragment>
+                    <div>{prop.typeName}</div>
+                    {typeChecker.typeChecker ? (
+                        <PropertyType prop={typeChecker} />
+                    ) : (
+                        <div>{`(${typeChecker.typeName})`}</div>
+                    )}
+                </React.Fragment>
             );
-            break;
         case 'instanceOf':
-            details = (
-                <div>({typeChecker.name || typeChecker.displayName})</div>
+            return (
+                <React.Fragment>
+                    <div>{prop.typeName}</div>
+                    {typeChecker.typeChecker ? (
+                        <PropertyType prop={typeChecker} />
+                    ) : (
+                        <div>{`(${typeChecker.name || typeChecker.displayName})`}</div>
+                    )}
+                </React.Fragment>
             );
-            break;
         case 'oneOf':
-            details = (
-                <div>({typeChecker.join(', ')})</div>
+            return (
+                <React.Fragment>
+                    <div>{prop.typeName}</div>
+                    <div>{`(${typeChecker.join(', ')})`}</div>
+                </React.Fragment>
             );
-            break;
         case 'oneOfType':
-            let types = [];
-            typeChecker.forEach(t => {
-                types.push(t.typeName);
-            });
-            details = (
-                <div>({types.join(', ')})</div>
+            const types = typeChecker
+                .map((t, i) =>
+                    t.typeChecker ? <PropertyType key={i} prop={t} /> : <span key={i}>{`(${t.typeName})`}</span>
+                ).reduce((prev, curr) => [prev, ', ', curr]);
+            return (
+                <React.Fragment>
+                    <div>{prop.typeName}</div>
+                    [{types}]
+                </React.Fragment>
             );
-            break;
         case 'shape':
-            details = '';
-            break;
+            return <div>{prop.typeName} ({`\{${Object.keys(prop.typeChecker).sort().join(', ')}\}`})</div>;
         case 'range':
-            let values = [];
-            Object.keys(typeChecker).forEach(key => {
-                values.push(`${key}: ${typeChecker[key]}`);
-            });
-            details = (
-                <div>({values.join('; ')})</div>
+            const values = Object.keys(typeChecker).map(key => `${key}: ${typeChecker[key]}`);
+            return (
+                <React.Fragment>
+                    <div>{prop.typeName}</div>
+                    <div>{`(${values.join('; ')})`}</div>
+                </React.Fragment>
             );
-            break;
         default:
+            return <div>{prop.typeName}</div>;
     }
-
-    return (
-        <React.Fragment>
-            <div>{prop.typeName}</div>
-            <div>{details}</div>
-        </React.Fragment>
-    );
 };
 
 PropertyType.propTypes = {
