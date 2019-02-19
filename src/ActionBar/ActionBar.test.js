@@ -1,12 +1,10 @@
+import ActionBar from './ActionBar';
+import ActionBarActions from './ActionBarActions';
+import ActionBarBack from './ActionBarBack';
+import ActionBarHeader from './ActionBarHeader';
 import { mount } from 'enzyme';
 import React from 'react';
 import renderer from 'react-test-renderer';
-import {
-    ActionBar,
-    ActionBarActions,
-    ActionBarBack,
-    ActionBarHeader
-} from './';
 
 describe('<ActionBar />', () => {
     const basicActionBar = (
