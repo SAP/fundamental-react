@@ -78,7 +78,7 @@ describe('<Tabs />', () => {
             .simulate('click');
 
         // check selected tab changed
-        expect(wrapper.state(['selectedId'])).toEqual('1');
+        expect(wrapper.state(['selectedId'])).toEqual('4');
     });
 
     describe('Prop spreading', () => {
@@ -87,27 +87,6 @@ describe('<Tabs />', () => {
 
             expect(
                 element.getDOMNode().attributes['data-sample'].value
-            ).toBe('Sample');
-        });
-
-        test('should allow props to be spread to the TabGroup component\'s li elements', () => {
-            const element = mount(<TabGroup tabLinkProps={{ 'data-sample': 'Sample' }}>
-                <Tab id='1' />
-            </TabGroup>);
-
-            expect(
-                element.find('ul li').at(0).getDOMNode().attributes['data-sample'].value
-            ).toBe('Sample');
-        });
-
-        test('should allow props to be spread to the Tab component\'s content component', () => {
-            const element = mount(<TabGroup selectedId='1' tabContentProps={{ 'data-sample': 'Sample' }}>
-                <Tab id='1' />
-            </TabGroup>
-            );
-
-            expect(
-                element.find('div.fd-tabs__panel').at(0).getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
         });
     });

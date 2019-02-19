@@ -57,11 +57,19 @@ describe('<Tabs />', () => {
             ).toBe('Sample');
         });
 
-        test('should allow props to be spread to the Tab component\'s a elements', () => {
+        test('should allow props to be spread to the Tab component\'s li elements', () => {
             const element = mount(<Tab id='testId' {...{ 'data-sample': 'Sample' }} />);
 
             expect(
-                element.find('a').at(0).getDOMNode().attributes['data-sample'].value
+                element.find('li').at(0).getDOMNode().attributes['data-sample'].value
+            ).toBe('Sample');
+        });
+
+        test('should allow props to be spread to the Tab component\'s a elements', () => {
+            const element = mount(<Tab id='1' linkProps={{ 'data-sample': 'Sample' }} />);
+
+            expect(
+                element.find('li a').at(0).getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
         });
     });
