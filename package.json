@@ -1,6 +1,6 @@
 {
   "name": "fundamental-react",
-  "version": "0.4.0-rc.1",
+  "version": "0.4.0-rc.6",
   "private": false,
   "description": "SAP Fiori Fundamentals, implemented in React",
   "license": "Apache-2.0",
@@ -12,7 +12,7 @@
   },
   "scripts": {
     "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
-    "build-doc": "node scripts/build.js",
+    "build-doc": "node scripts/build.js && cp build/index.html build/404.html",
     "build-js": "node scripts/build.js",
     "build:lint:fix": "eslint --fix 'src/**' --ext .js,.jsx --env browser,node",
     "build:lint": "eslint 'src/**' --ext .js,.jsx --env browser,node",
@@ -37,7 +37,7 @@
     "std-version": "standard-version -m \"chore(release): version %s build ${TRAVIS_BUILD_NUMBER} [ci skip]\"",
     "test:coverage": "jest --coverage",
     "test:coverage:watch": "jest --coverage --watch",
-    "test:coveralls": "jest --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
+    "test:coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js || echo -e \"Coveralls failed.\"",
     "test:dev": "jest",
     "test:watch": "jest --watch",
     "test": "npm run test:watch",
