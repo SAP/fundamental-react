@@ -44,8 +44,7 @@ import React, { Component } from 'react';
 const sections = [
     {
         name: 'Getting Started',
-        sortOrder: 1,
-        omitSearch: true
+        sortOrder: 1
     },
     {
         name: 'Components',
@@ -304,7 +303,7 @@ export class Routes extends Component {
         let sectionRoutes;
         const groupedRoutes = groupArray(this.state.filteredItems, 'section');
 
-        let navItems = sections.sort(sortBy('sortOrder', 'name', 'omitSearch')).map(section => {
+        let navItems = sections.sort(sortBy('sortOrder', 'name')).map(section => {
             if (!groupedRoutes[section.name]) {
                 return;
             }
