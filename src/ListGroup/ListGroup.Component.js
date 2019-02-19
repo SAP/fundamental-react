@@ -1,4 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
+import path from 'path';
 import React from 'react';
 import { Button, ListGroup, ListGroupItem, ListGroupItemActions, ListGroupItemCheckbox } from '../';
 import { Description, DocsText, DocsTile, Header, Import, Playground, Properties, Separator } from '../_playground';
@@ -51,11 +52,11 @@ export const ListGroupComponent = () => {
                 but lists generally contain basic data and tables tend to hold more complex data.
                 If the list is a complex hierarchy, it is best to use a **Tree**.
             </Description>
-            <Import sourceModule={require('./ListGroup')} />
+            <Import sourceModulePath={path.join(__dirname, './ListGroup')} />
 
             <Separator />
 
-            <Properties sourceModule={require('./ListGroup')} />
+            <Properties sourceModulePath={path.join(__dirname, './ListGroup')} />
 
             <Separator />
 

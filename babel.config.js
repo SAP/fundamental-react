@@ -26,7 +26,7 @@ const productionPlugins = [
     [
         '@babel/plugin-transform-react-inline-elements'
     ],
-    path.resolve(__dirname, './devtools/remove-prop-descriptions/index.js')
+    path.resolve(__dirname, './devtools/removePropDescriptions.js')
 ];
 
 module.exports = {

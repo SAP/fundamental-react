@@ -1,3 +1,4 @@
+import path from 'path';
 import React from 'react';
 import { Token } from './Token';
 import { Description, DocsText, DocsTile, Header, Import, Properties, Separator } from '../_playground';
@@ -19,11 +20,11 @@ export const TokenComponent = () => {
                 A **Token** is used to represent contextual information. It can be useful to show
                 applied filters, selected values for a form field or object metadata.
             </Description>
-            <Import sourceModule={require('./Token')} />
+            <Import sourceModulePath={path.join(__dirname, './Token')} />
 
             <Separator />
 
-            <Properties sourceModule={require('./Token')} />
+            <Properties sourceModulePath={path.join(__dirname, './Token')} />
 
             <Separator />
 

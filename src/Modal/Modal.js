@@ -95,6 +95,7 @@ export class Modal extends Component {
         );
     }
 }
+Modal.displayName = 'Modal';
 
 Modal.propTypes = {
     title: PropTypes.string.isRequired,

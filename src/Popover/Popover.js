@@ -109,6 +109,7 @@ export class Popover extends Component {
         );
     }
 }
+Popover.displayName = 'Popover';
 
 Popover.propTypes = {
     alignment: PropTypes.oneOf(POPOVER_ALIGNMENTS),

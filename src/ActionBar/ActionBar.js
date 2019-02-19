@@ -20,6 +20,7 @@ export const ActionBar = ({ mobile, width, children, className, ...props }) => {
         </React.Fragment>
     );
 };
+ActionBar.displayName = 'ActionBar';
 
 ActionBar.propTypes = {
     className: PropTypes.string,

@@ -1,4 +1,5 @@
 import { MultiInput } from '../';
+import path from 'path';
 import { Description, DocsText, DocsTile, Header, Import, Properties, Separator } from '../_playground';
 import React, { Component } from 'react';
 
@@ -48,11 +49,11 @@ export class MultiInputComponent extends Component {
       return (
           <div>
               <Header>Multi Input</Header>
-              <Import sourceModule={require('./MultiInput')} />
+              <Import sourceModulePath={path.join(__dirname, './MultiInput')} />
 
               <Separator />
 
-              <Properties sourceModule={require('./MultiInput')} />
+              <Properties sourceModulePath={path.join(__dirname, './MultiInput')} />
 
               <Separator />
 

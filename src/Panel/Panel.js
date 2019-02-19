@@ -17,6 +17,7 @@ export const Panel = props => {
 
     return <div {...rest} className={panelClasses}>{children}</div>;
 };
+Panel.displayName = 'Panel';
 
 Panel.propTypes = {
     className: PropTypes.string,
@@ -48,6 +49,7 @@ export const PanelGrid = props => {
         </div>
     );
 };
+PanelGrid.displayName = 'PanelGrid';
 
 PanelGrid.propTypes = {
     className: PropTypes.string,
@@ -71,6 +73,7 @@ export const PanelBody = props => {
 
     return <div {...rest} className={panelBodyClasses}>{children}</div>;
 };
+PanelBody.displayName = 'PanelBody';
 
 PanelBody.propTypes = {
     className: PropTypes.string
@@ -87,6 +90,7 @@ export const PanelHeader = props => {
 
     return <div {...rest} className={panelHeaderClasses}>{children}</div>;
 };
+PanelHeader.displayName = 'PanelHeader';
 
 PanelHeader.propTypes = {
     className: PropTypes.string
@@ -108,6 +112,7 @@ export const PanelHead = props => {
         </div>
     );
 };
+PanelHead.displayName = 'PanelHead';
 
 PanelHead.propTypes = {
     className: PropTypes.string,
@@ -131,6 +136,7 @@ export const PanelActions = props => {
 
     return <div {...rest} className={panelActionsClasses}>{children}</div>;
 };
+PanelActions.displayName = 'PanelActions';
 
 PanelActions.propTypes = {
     className: PropTypes.string
@@ -151,6 +157,7 @@ export const PanelFilters = props => {
         </div>
     );
 };
+PanelFilters.displayName = 'PanelFilters';
 
 PanelFilters.propTypes = {
     className: PropTypes.string
@@ -168,6 +175,7 @@ export const PanelContent = props => {
 
     return <div {...rest} className={panelContentClasses}>{children}</div>;
 };
+PanelContent.displayName = 'PanelContent';
 
 PanelContent.propTypes = {
     className: PropTypes.string
@@ -184,6 +192,7 @@ export const PanelFooter = props => {
 
     return <div {...rest} className={panelFooterClasses}>{children}</div>;
 };
+PanelFooter.displayName = 'PanelFooter';
 
 PanelFooter.propTypes = {
     className: PropTypes.string

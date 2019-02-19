@@ -1,4 +1,5 @@
 import { DatePicker } from '../';
+import path from 'path';
 import React from 'react';
 import { Description, DocsText, DocsTile, Header, Import, Properties, Separator } from '../_playground';
 
@@ -19,11 +20,11 @@ export const DatePickerComponent = () => {
                 The **Date Picker** is an opinionated composition of the **Input Group**, **Popover**
                 and **Calendar** components to accomplish the UI pattern for picking a date.
             </Description>
-            <Import sourceModule={require('./DatePicker')} />
+            <Import sourceModulePath={path.join(__dirname, './DatePicker')} />
 
             <Separator />
 
-            <Properties sourceModule={require('./DatePicker')} />
+            <Properties sourceModulePath={path.join(__dirname, './DatePicker')} />
 
             <Separator />
 
