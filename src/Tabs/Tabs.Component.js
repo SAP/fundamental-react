@@ -1,10 +1,15 @@
+import { Button } from '../Button/Button';
 import path from 'path';
-import React from 'react';
+
 import { Tab } from './Tab';
 import { TabGroup } from './TabGroup';
 import { Description, DocsText, DocsTile, Header, Import, Properties, Separator } from '../_playground';
+import React, { useState } from 'react';
+
+
 
 export const TabsComponent = () => {
+    const [selectedId, setSelected] = useState('3');
     const tabGroupCode = `
     <TabGroup>
         <Tab id='1' title='Tab 1'>
@@ -20,6 +25,10 @@ export const TabsComponent = () => {
             Please review your shopping chart.
         </Tab>
     </TabGroup>`;
+
+    const getNumber = () => {
+        setSelected(String(Math.floor(Math.random() * 3) + 1));
+    };
 
     return (
         <div>
@@ -42,14 +51,12 @@ export const TabsComponent = () => {
             <h2>Tab Group</h2>
 
             <DocsTile>
-                <TabGroup data-tg='tab group props' tabContentProps={{ data: 'tab content props' }}
-                    tabLinkProps={{ data: 'tab link props' }}>
-                    <Tab data-tab='tab props' id='1'
-                        title='Tab 1'>
+                <Button onClick={getNumber}>Click me</Button>
+                <TabGroup selectedId={selectedId}>
+                    <Tab id='1' title='Tab 1'>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     </Tab>
-                    <Tab id='2' title='Tab 2'
-                        {...{ 'data-sample': 'Sample' }}>
+                    <Tab id='2' title='Tab 2'>
                         Numquam libero id corporis odit animi voluptat, Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus quia tempore eligendi tempora repellat officia rerum laudantium, veritatis officiis asperiores ipsum nam, distinctio, dolor provident culpa voluptatibus esse deserunt animi?
                     </Tab>
                     <Tab disabled id='3'

@@ -11,8 +11,18 @@ export class TabGroup extends Component {
         };
     }
 
-    static getDerivedStateFromProps(nextProps, prevState) {
-        return nextProps.selectedId !== prevState.selectedId ? { selectedId: nextProps.selectedId } : null;
+    static getDerivedStateFromProps(props, state) {
+        const prevProps = state.prevProps || {};
+        // Compare the incoming prop to previous prop
+        const selectedId =
+            prevProps.selectedId !== props.selectedId
+                ? props.selectedId
+                : state.selectedId;
+        return {
+            // Store the previous props in state
+            prevProps: props,
+            selectedId
+        };
     }
 
     // set selected tab
@@ -22,9 +32,7 @@ export class TabGroup extends Component {
             selectedId: id
         });
 
-        if (this.props.onTabClick) {
-            this.props.onTabClick(event, id);
-        }
+        this.props.onTabClick(event, id);
     };
 
     // clone Tab element
@@ -38,13 +46,7 @@ export class TabGroup extends Component {
     // create tab list
     renderTabs = () => {
         return React.Children.map(this.props.children, (child) => {
-            return (
-                <li
-                    {...this.props.tabLinkProps}
-                    className='fd-tabs__item'
-                    key={child.props.id}>
-                    {this.cloneElement(child)}
-                </li>);
+            return this.cloneElement(child);
         });
     };
 
@@ -53,7 +55,7 @@ export class TabGroup extends Component {
         return React.Children.map(this.props.children, (child) => {
             return (
                 <TabContent
-                    {...this.props.tabContentProps}
+                    {...child.props.tabContentProps}
                     selected={this.state.selectedId === child.props.id}>
                     {child.props.children}
                 </TabContent>);
@@ -65,9 +67,8 @@ export class TabGroup extends Component {
             children,
             className,
             selectedId,
-            tabContentProps,
-            tabLinkProps,
             tabGroupProps,
+            onTabClick,
             ...rest } = this.props;
 
         // css classes to use for tab group
@@ -77,8 +78,7 @@ export class TabGroup extends Component {
         );
         return (
             <React.Fragment>
-                <ul {...rest}
-                    className={tabGroupClasses}
+                <ul {...rest} className={tabGroupClasses}
                     role='tablist'>
                     {this.renderTabs(children)}
                 </ul>
@@ -90,22 +90,19 @@ export class TabGroup extends Component {
 TabGroup.displayName = 'TabGroup';
 
 TabGroup.defaultProps = {
-    selectedId: '1'
+    selectedId: '1',
+    onTabClick: () => { }
 };
 
 TabGroup.propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,
     selectedId: PropTypes.string,
-    tabContentProps: PropTypes.object,
-    tabLinkProps: PropTypes.object,
     onTabClick: PropTypes.func
 };
 
 TabGroup.propDescriptions = {
     children: 'One or more `Tab` components to render within the component.',
     selectedId: 'The `id` of the selected `Tab`.',
-    tabContentProps: 'Additional props to be spread to the tab content\'s <div> element.',
-    tabLinkProps: 'Additional props to be spread to the tab\'s <li> element.',
     onTabClick: 'Callback function when the user clicks on a tab'
 };

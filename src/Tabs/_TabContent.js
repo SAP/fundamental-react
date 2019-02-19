@@ -16,7 +16,6 @@ export const TabContent = (props) => {
             {...rest}
             aria-expanded={selected}
             className={tabPanelClasses}
-            id={id}
             role='tabpanel' >
             {children}
         </div >
@@ -27,7 +26,6 @@ TabContent.displayName = 'TabContent';
 TabContent.propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,
-    id: PropTypes.string,
     selected: PropTypes.bool
 };
 
