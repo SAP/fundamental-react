@@ -37,7 +37,7 @@ import { TimeComponent } from '../Time/Time.Component';
 import { TimePickerComponent } from '../TimePicker/TimePicker.Component';
 import { ToggleComponent } from '../Toggle/Toggle.Component';
 import { TokenComponent } from '../Token/Token.Component';
-import { TreeComponent } from '../Tree/Tree.Component';
+import { TreeViewComponent } from '../TreeView/TreeView.Component';
 import { BrowserRouter, Link, NavLink, Redirect, Route, Switch } from 'react-router-dom';
 
 const sections = [
@@ -247,7 +247,7 @@ const routes = [
     },
     {
         url: '/timepicker',
-        name: 'TimePicker',
+        name: 'Time Picker',
         component: TimePickerComponent,
         section: 'Components'
     },
@@ -264,9 +264,9 @@ const routes = [
         section: 'Components'
     },
     {
-        url: '/tree',
-        name: 'Tree',
-        component: TreeComponent,
+        url: '/treeview',
+        name: 'Tree View',
+        component: TreeViewComponent,
         section: 'Components'
     }
 ];
