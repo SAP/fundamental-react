@@ -6,8 +6,7 @@ import { TabGroup } from './TabGroup';
 
 describe('<Tabs />', () => {
     const defaultTabs = (
-        <TabGroup
-            selectedId='1'>
+        <TabGroup>
             <Tab
                 id='1'
                 title='Tab 1'>
@@ -30,7 +29,7 @@ describe('<Tabs />', () => {
     const defaultTabsWithClass = (
         <TabGroup
             className='blue'
-            selectedId='1'>
+            selectedIndex={1}>
             <Tab
                 id='1'
                 title='Tab 1'>
@@ -65,7 +64,7 @@ describe('<Tabs />', () => {
         const wrapper = mount(defaultTabsWithClass);
 
         // check selected tab
-        expect(wrapper.state(['selectedId'])).toEqual('1');
+        expect(wrapper.state(['selectedIndex'])).toEqual(1);
 
         wrapper
             .find('ul.fd-tabs li.fd-tabs__item a.fd-tabs__link')
@@ -78,7 +77,7 @@ describe('<Tabs />', () => {
             .simulate('click');
 
         // check selected tab changed
-        expect(wrapper.state(['selectedId'])).toEqual('4');
+        expect(wrapper.state(['selectedIndex'])).toEqual(3);
     });
 
     describe('Prop spreading', () => {

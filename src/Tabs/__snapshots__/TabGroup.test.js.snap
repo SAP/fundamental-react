@@ -104,7 +104,7 @@ Array [
     >
       <a
         aria-controls="1"
-        aria-selected={true}
+        aria-selected={false}
         className="fd-tabs__link"
         href="#1"
         onClick={[Function]}
@@ -118,7 +118,7 @@ Array [
     >
       <a
         aria-controls="2"
-        aria-selected={false}
+        aria-selected={true}
         className="fd-tabs__link"
         href="#2"
         onClick={[Function]}
@@ -156,14 +156,14 @@ Array [
     </li>
   </ul>,
   <div
-    aria-expanded={true}
+    aria-expanded={false}
     className="fd-tabs__panel"
     role="tabpanel"
   >
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore et ducimus veritatis officiis amet? Vitae officia optio dolor exercitationem incidunt magnam non, suscipit, illo quisquam numquam fugiat? Debitis, delectus sequi?
   </div>,
   <div
-    aria-expanded={false}
+    aria-expanded={true}
     className="fd-tabs__panel"
     role="tabpanel"
   >

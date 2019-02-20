@@ -44,7 +44,7 @@ describe('<Tabs />', () => {
 
     describe('Prop spreading', () => {
         test('should allow props to be spread to the Tab component\'s content component', () => {
-            const element = mount(<TabGroup selectedId='1'>
+            const element = mount(<TabGroup selectedIndex={1}>
                 <Tab id='1' tabContentProps={{ 'data-sample': 'Sample' }} />
             </TabGroup>
             );

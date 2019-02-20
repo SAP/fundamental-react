@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 export const TabContent = (props) => {
-    const { children, id, selected, className, ...rest } = props;
+    const { children, selected, className, ...rest } = props;
 
     // css classes for tab panels
     const tabPanelClasses = classnames(

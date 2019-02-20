@@ -12,11 +12,16 @@ export const Tab = (props) => {
         onClick,
         tabContentProps,
         linkProps,
+        index,
         ...rest } = props;
+
+    const tabClasses = classnames(
+        className,
+        'fd-tabs__item'
+    );
 
     // css classes used for tabs
     const linkClasses = classnames(
-        className,
         'fd-tabs__link',
         {
             [`sap-icon--${glyph}`]: !!glyph
@@ -26,7 +31,7 @@ export const Tab = (props) => {
     return (
         <li
             {...rest}
-            className='fd-tabs__item'
+            className={tabClasses}
             key={id}>
             <a
                 {...linkProps}
@@ -36,7 +41,7 @@ export const Tab = (props) => {
                 className={linkClasses}
                 href={!disabled ? `#${id}` : null}
                 onClick={!disabled ? (event) => {
-                    props.onClick(event, id);
+                    props.onClick(event, index);
                 } : null}
                 role='tab'>
                 {title}
@@ -55,7 +60,7 @@ Tab.propTypes = {
     disabled: PropTypes.bool,
     glyph: PropTypes.string,
     id: PropTypes.string,
-    linkProps: PropTypes.object,
+    index: PropTypes.number,
     selected: PropTypes.bool,
     tabContentProps: PropTypes.object,
     title: PropTypes.string,

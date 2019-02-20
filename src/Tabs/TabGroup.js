@@ -7,56 +7,57 @@ export class TabGroup extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            selectedId: props.selectedId
+            selectedIndex: props.selectedIndex
         };
     }
 
     static getDerivedStateFromProps(props, state) {
         const prevProps = state.prevProps || {};
         // Compare the incoming prop to previous prop
-        const selectedId =
-            prevProps.selectedId !== props.selectedId
-                ? props.selectedId
-                : state.selectedId;
+        const selectedIndex =
+            prevProps.selectedIndex !== props.selectedIndex
+                ? props.selectedIndex
+                : state.selectedIndex;
         return {
             // Store the previous props in state
             prevProps: props,
-            selectedId
+            selectedIndex
         };
     }
 
     // set selected tab
-    handleTabSelection = (event, id) => {
+    handleTabSelection = (event, index) => {
         event.preventDefault();
         this.setState({
-            selectedId: id
+            selectedIndex: index
         });
 
-        this.props.onTabClick(event, id);
+        this.props.onTabClick(event, index);
     };
 
     // clone Tab element
-    cloneElement = (child) => {
+    cloneElement = (child, index) => {
         return (React.cloneElement(child, {
             onClick: this.handleTabSelection,
-            selected: this.state.selectedId === child.props.id
+            selected: this.state.selectedIndex === index,
+            index: index
         }));
     }
 
     // create tab list
     renderTabs = () => {
-        return React.Children.map(this.props.children, (child) => {
-            return this.cloneElement(child);
+        return React.Children.map(this.props.children, (child, index) => {
+            return this.cloneElement(child, index);
         });
     };
 
     // create content to show below tab list
     renderContent = () => {
-        return React.Children.map(this.props.children, (child) => {
+        return React.Children.map(this.props.children, (child, index) => {
             return (
                 <TabContent
                     {...child.props.tabContentProps}
-                    selected={this.state.selectedId === child.props.id}>
+                    selected={this.state.selectedIndex === index}>
                     {child.props.children}
                 </TabContent>);
         });
@@ -66,7 +67,7 @@ export class TabGroup extends Component {
         const {
             children,
             className,
-            selectedId,
+            selectedIndex,
             tabGroupProps,
             onTabClick,
             ...rest } = this.props;
@@ -90,19 +91,19 @@ export class TabGroup extends Component {
 TabGroup.displayName = 'TabGroup';
 
 TabGroup.defaultProps = {
-    selectedId: '1',
+    selectedIndex: 0,
     onTabClick: () => { }
 };
 
 TabGroup.propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,
-    selectedId: PropTypes.string,
+    selectedIndex: PropTypes.number,
     onTabClick: PropTypes.func
 };
 
 TabGroup.propDescriptions = {
     children: 'One or more `Tab` components to render within the component.',
-    selectedId: 'The `id` of the selected `Tab`.',
+    selectedIndex: 'The index of the selected `Tab`.',
     onTabClick: 'Callback function when the user clicks on a tab'
 };
