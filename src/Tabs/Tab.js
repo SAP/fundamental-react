@@ -61,6 +61,7 @@ Tab.propTypes = {
     glyph: PropTypes.string,
     id: PropTypes.string,
     index: PropTypes.number,
+    linkProps: PropTypes.object,
     selected: PropTypes.bool,
     tabContentProps: PropTypes.object,
     title: PropTypes.string,
@@ -68,9 +69,11 @@ Tab.propTypes = {
 };
 
 Tab.propDescriptions = {
-    glyph: 'Icon to display on tab',
-    selected: 'Set to **true** to mark tab as selected.',
-    title: 'String to display on tab',
+    glyph: 'Icon to display on the tab.',
+    index: '_INTERNAL USE ONLY._',
+    selected: '_INTERNAL USE ONLY._',
+    title: 'Localized text to display on the tab.',
     tabContentProps: 'Additional props to be spread to the tab content\'s <div> element.',
-    linkProps: 'Additional props to be spread to the tab\'s <li> element.'
+    linkProps: 'Additional props to be spread to the tab\'s <a> element.',
+    onClick: '_INTERNAL USE ONLY._'
 };

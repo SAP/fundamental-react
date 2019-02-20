@@ -104,6 +104,6 @@ TabGroup.propTypes = {
 
 TabGroup.propDescriptions = {
     children: 'One or more `Tab` components to render within the component.',
-    selectedIndex: 'The index of the selected `Tab`.',
-    onTabClick: 'Callback function when the user clicks on a tab'
+    selectedIndex: 'The index of the selected tab.',
+    onTabClick: 'Callback function when the user clicks on a tab. Parameters passed to the function are `event` and `index`.'
 };
