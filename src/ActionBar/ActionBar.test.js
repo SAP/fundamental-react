@@ -1,7 +1,4 @@
 import ActionBar from './ActionBar';
-import ActionBarActions from './ActionBarActions';
-import ActionBarBack from './ActionBarBack';
-import ActionBarHeader from './ActionBarHeader';
 import { mount } from 'enzyme';
 import React from 'react';
 import renderer from 'react-test-renderer';
@@ -9,51 +6,51 @@ import renderer from 'react-test-renderer';
 describe('<ActionBar />', () => {
     const basicActionBar = (
         <ActionBar className='blue'>
-            <ActionBarBack className='blue' />
-            <ActionBarHeader
+            <ActionBar.Back className='blue' />
+            <ActionBar.Header
                 className='blue'
                 description={'Action Bar Description'}
                 title={'Page Title'} />
-            <ActionBarActions className='blue'>
+            <ActionBar.Actions className='blue'>
                 <button>Button</button>
-            </ActionBarActions>
+            </ActionBar.Actions>
         </ActionBar>
     );
 
     const basicActionBarNoClass = (
         <ActionBar>
-            <ActionBarBack className='blue' />
-            <ActionBarHeader
+            <ActionBar.Back className='blue' />
+            <ActionBar.Header
                 className='blue'
                 description={'Action Bar Description'}
                 title={'Page Title'} />
-            <ActionBarActions className='blue'>
+            <ActionBar.Actions className='blue'>
                 <button>Button</button>
-            </ActionBarActions>
+            </ActionBar.Actions>
         </ActionBar>
     );
 
     const mobileActionBar = (
         <ActionBar className='blue' mobile>
-            <ActionBarBack />
-            <ActionBarHeader
+            <ActionBar.Back />
+            <ActionBar.Header
                 description={'Action Bar Description'}
                 title={'Page Title'} />
-            <ActionBarActions>
+            <ActionBar.Actions>
                 <button>Button</button>
-            </ActionBarActions>
+            </ActionBar.Actions>
         </ActionBar>
     );
 
     const mobileActionBarWidthSet = (
         <ActionBar mobile width='500px'>
-            <ActionBarBack />
-            <ActionBarHeader
+            <ActionBar.Back />
+            <ActionBar.Header
                 description={'Action Bar Description'}
                 title={'Page Title'} />
-            <ActionBarActions>
+            <ActionBar.Actions>
                 <button>Button</button>
-            </ActionBarActions>
+            </ActionBar.Actions>
         </ActionBar>
     );
 
@@ -95,7 +92,7 @@ describe('<ActionBar />', () => {
         });
 
         test('should allow props to be spread to the ActionBarBack component', () => {
-            const element = mount(<ActionBarBack data-sample='Sample' />);
+            const element = mount(<ActionBar.Back data-sample='Sample' />);
 
             expect(
                 element.getDOMNode().attributes['data-sample'].value
@@ -104,7 +101,7 @@ describe('<ActionBar />', () => {
 
         test('should allow props to be spread to the ActionBarBack component\'s button element', () => {
 
-            const element = mount(<ActionBarBack buttonProps={{ 'data-sample': 'Sample' }} />);
+            const element = mount(<ActionBar.Back buttonProps={{ 'data-sample': 'Sample' }} />);
 
             expect(
                 element.find('button').getDOMNode().attributes['data-sample'].value
@@ -113,7 +110,7 @@ describe('<ActionBar />', () => {
 
         test('should allow props to be spread to the ActionBarHeader component', () => {
             const element = mount(
-                <ActionBarHeader
+                <ActionBar.Header
                     data-sample='Sample'
                     description=''
                     title='' />
@@ -126,7 +123,7 @@ describe('<ActionBar />', () => {
 
         test('should allow props to be spread to the ActionBarHeader component\'s h1 element', () => {
             const element = mount(
-                <ActionBarHeader
+                <ActionBar.Header
                     description=''
                     title=''
                     titleProps={{ 'data-sample': 'Sample' }} />
@@ -139,7 +136,7 @@ describe('<ActionBar />', () => {
 
         test('should allow props to be spread to the ActionBarHeader component\'s p element', () => {
             const element = mount(
-                <ActionBarHeader
+                <ActionBar.Header
                     description='Sample Description'
                     descriptionProps={{ 'data-sample': 'Sample' }}
                     title='' />
@@ -151,7 +148,7 @@ describe('<ActionBar />', () => {
         });
 
         test('should allow props to be spread to the ActionBarActions component', () => {
-            const element = mount(<ActionBarActions data-sample='Sample' />);
+            const element = mount(<ActionBar.Actions data-sample='Sample' />);
 
             expect(
                 element.getDOMNode().attributes['data-sample'].value

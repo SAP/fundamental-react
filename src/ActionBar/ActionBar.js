@@ -1,3 +1,6 @@
+import ActionBarActions from './_ActionBarActions';
+import ActionBarBack from './_ActionBarBack';
+import ActionBarHeader from './_ActionBarHeader';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -37,5 +40,9 @@ ActionBar.propDescriptions = {
     mobile: 'Set to **true** for mobile view of the Action Bar.',
     width: 'The width of the Action Bar in mobile view.'
 };
+
+ActionBar.Actions = ActionBarActions;
+ActionBar.Back = ActionBarBack;
+ActionBar.Header = ActionBarHeader;
 
 export default ActionBar;

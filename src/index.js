@@ -1,7 +1,4 @@
 export { default as ActionBar } from './ActionBar/ActionBar';
-export { default as ActionBarBack } from './ActionBar/ActionBarBack';
-export { default as ActionBarHeader } from './ActionBar/ActionBarHeader';
-export { default as ActionBarActions } from './ActionBar/ActionBarActions';
 export { Alert } from './Alert/Alert';
 export { Badge } from './Badge/Badge';
 export { Label } from './Badge/Badge';
