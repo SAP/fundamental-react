@@ -1,6 +1,6 @@
 {
   "name": "fundamental-react",
-  "version": "0.4.0-rc.10",
+  "version": "0.4.0",
   "private": false,
   "description": "SAP Fiori Fundamentals, implemented in React",
   "license": "Apache-2.0",
