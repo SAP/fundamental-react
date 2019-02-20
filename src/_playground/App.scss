@@ -1,3 +1,4 @@
+$mediaMaxWidth: 599px;
 $fd-icons-path: '../../node_modules/fiori-fundamentals/scss/icons/';
 $fd-fonts-path: '../../node_modules/fiori-fundamentals/dist/fonts/';
 @import '../../node_modules/fiori-fundamentals/scss/all.scss';
@@ -11,14 +12,16 @@ $fd-fonts-path: '../../node_modules/fiori-fundamentals/dist/fonts/';
         justify-content: space-between;
         height: 100vh;
         overflow: hidden;
-        margin-left: auto;
-        margin-right: auto;
+        // margin-left: auto;
+        // margin-right: auto;
         width: 100%;
 
         .frDocs-Sidebar {
             color: #21262c;
             min-width: 16rem;
             background-color: #f1f3f6;
+            //visibility transition 'ease in'
+            transition: 0.3s margin ease-in-out, 0.3s box-shadow ease-in-out;
 
             .frDocs-Logo {
                 font-size: 1.25rem;
@@ -69,12 +72,32 @@ $fd-fonts-path: '../../node_modules/fiori-fundamentals/dist/fonts/';
                 padding: 5px 20px;
             }
         }
+        // TODO: as width decreases, hamburger (sap-icon--menu 2)
+        @media (max-width: $mediaMaxWidth) {
+            .frDocs-Sidebar {
+                    background: hotpink;
+                    margin-left: -17rem;
+                    overflow-x: hidden;
+            }
+
+            code {
+                display: flex;
+                flex-wrap: wrap; //remove x-axis scrolling
+            }
+        }
 
         .frDocs-Content {
             flex-grow: 1;
             overflow-y: scroll;
             background-color: white;
             padding: 2rem;
+            // max 576px
+            // @media ($mediaMaxWidth) {
+            //     .playground-wrap {
+            //         flex-wrap: wrap;
+            //         flex-direction: column;
+            //     }
+            // }
           
             .frDocs-Content__githubLogo {
                 float: right;
@@ -184,6 +207,12 @@ $fd-fonts-path: '../../node_modules/fiori-fundamentals/dist/fonts/';
         }
     }
 }
+//  @media (max-width: $mediaMaxWidth) {
+//     .frDocs-App {
+//         padding-bottom: 15px; //no container crashes to bottom
+//     }
+//  }
+
 
 // Fundamental React Component Overrides 
 .fd-counter--notification {
@@ -290,8 +319,9 @@ $fd-fonts-path: '../../node_modules/fiori-fundamentals/dist/fonts/';
     text-align: center;
     height: 120px;
 }
-
+//TODO: NOTE: minimum width for table is 450px
 .fd-table {
+
     &.property-table {
         border: 0;
 

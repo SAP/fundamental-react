@@ -330,6 +330,7 @@ export class Routes extends Component {
         return (
             <BrowserRouter basename={process.env.PUBLIC_URL}>
                 <div className='frDocs-Container'>
+                    {/* TODO: add ternary for full-screen vs collapsed sidebar */}
                     <div className='frDocs-Sidebar'>
                         <h1 className='frDocs-Logo'>FUNDAMENTAL REACT</h1>
                         <nav className='frDocs-Nav'>

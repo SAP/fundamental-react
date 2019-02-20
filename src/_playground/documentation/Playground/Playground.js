@@ -223,7 +223,7 @@ export class Playground extends Component {
               case 'boolean':
                   return (
                       <div className='form-group-sublevel' key={item.attribute}>
-                          <div>Properties</div>
+                          <div className='test'>Properties</div>
                           <input
                               name={item.attribute}
                               onChange={this.updateComponent}
