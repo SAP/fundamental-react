@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import { Button } from '../Button/Button';
+import { Button } from '../';
 import { mount } from 'enzyme';
 import React from 'react';
 import renderer from 'react-test-renderer';
