@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Tabs /> create tabs component 1`] = `
+<li
+  className="fd-tabs__item"
+>
+  <a
+    aria-controls="1"
+    className="fd-tabs__link"
+    href="#1"
+    onClick={[Function]}
+    role="tab"
+  >
+    Tab 1
+  </a>
+</li>
+`;
+
+exports[`<Tabs /> create tabs component 2`] = `
+<li
+  className="fd-tabs__item"
+>
+  <a
+    aria-controls="3"
+    aria-disabled={true}
+    className="fd-tabs__link"
+    href={null}
+    onClick={null}
+    role="tab"
+  >
+    Tab 3
+  </a>
+</li>
+`;
+
+exports[`<Tabs /> create tabs component 3`] = `
+<li
+  className="fd-tabs__item"
+>
+  <a
+    aria-controls="4"
+    className="fd-tabs__link sap-icon--cart"
+    href="#4"
+    onClick={[Function]}
+    role="tab"
+  />
+</li>
+`;
