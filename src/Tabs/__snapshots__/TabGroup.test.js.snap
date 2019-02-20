@@ -1,0 +1,187 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Tabs /> create tabs component 1`] = `
+Array [
+  <ul
+    className="fd-tabs"
+    role="tablist"
+  >
+    <li
+      className="fd-tabs__item"
+    >
+      <a
+        aria-controls="1"
+        aria-selected={true}
+        className="fd-tabs__link"
+        href="#1"
+        onClick={[Function]}
+        role="tab"
+      >
+        Tab 1
+      </a>
+    </li>
+    <li
+      className="fd-tabs__item"
+    >
+      <a
+        aria-controls="2"
+        aria-selected={false}
+        className="fd-tabs__link"
+        href="#2"
+        onClick={[Function]}
+        role="tab"
+      >
+        Tab 2
+      </a>
+    </li>
+    <li
+      className="fd-tabs__item"
+    >
+      <a
+        aria-controls="3"
+        aria-disabled={true}
+        aria-selected={false}
+        className="fd-tabs__link"
+        href={null}
+        onClick={null}
+        role="tab"
+      >
+        Tab 3
+      </a>
+    </li>
+    <li
+      className="fd-tabs__item"
+    >
+      <a
+        aria-controls="4"
+        aria-selected={false}
+        className="fd-tabs__link sap-icon--cart"
+        href="#4"
+        onClick={[Function]}
+        role="tab"
+      />
+    </li>
+  </ul>,
+  <div
+    aria-expanded={true}
+    className="fd-tabs__panel"
+    role="tabpanel"
+  >
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore et ducimus veritatis officiis amet? Vitae officia optio dolor exercitationem incidunt magnam non, suscipit, illo quisquam numquam fugiat? Debitis, delectus sequi?
+  </div>,
+  <div
+    aria-expanded={false}
+    className="fd-tabs__panel"
+    role="tabpanel"
+  >
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam libero id corporis odit animi voluptat, Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus quia tempore eligendi tempora repellat officia rerum laudantium, veritatis officiis asperiores ipsum nam, distinctio, dolor provident culpa voluptatibus esse deserunt animi?
+  </div>,
+  <div
+    aria-expanded={false}
+    className="fd-tabs__panel"
+    role="tabpanel"
+  >
+    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+  </div>,
+  <div
+    aria-expanded={false}
+    className="fd-tabs__panel"
+    role="tabpanel"
+  >
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. A quibusdam ipsa cumque soluta debitis accusantium iste alias quas vel perferendis voluptatibus quod asperiores praesentium quaerat, iusto repellendus nulla, maiores eius.
+  </div>,
+]
+`;
+
+exports[`<Tabs /> create tabs component 2`] = `
+Array [
+  <ul
+    className="fd-tabs blue"
+    role="tablist"
+  >
+    <li
+      className="fd-tabs__item"
+    >
+      <a
+        aria-controls="1"
+        aria-selected={false}
+        className="fd-tabs__link"
+        href="#1"
+        onClick={[Function]}
+        role="tab"
+      >
+        Tab 1
+      </a>
+    </li>
+    <li
+      className="fd-tabs__item"
+    >
+      <a
+        aria-controls="2"
+        aria-selected={true}
+        className="fd-tabs__link"
+        href="#2"
+        onClick={[Function]}
+        role="tab"
+      >
+        Tab 2
+      </a>
+    </li>
+    <li
+      className="fd-tabs__item"
+    >
+      <a
+        aria-controls="3"
+        aria-disabled={true}
+        aria-selected={false}
+        className="fd-tabs__link"
+        href={null}
+        onClick={null}
+        role="tab"
+      >
+        Tab 3
+      </a>
+    </li>
+    <li
+      className="fd-tabs__item"
+    >
+      <a
+        aria-controls="4"
+        aria-selected={false}
+        className="fd-tabs__link sap-icon--cart"
+        href="#4"
+        onClick={[Function]}
+        role="tab"
+      />
+    </li>
+  </ul>,
+  <div
+    aria-expanded={false}
+    className="fd-tabs__panel"
+    role="tabpanel"
+  >
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore et ducimus veritatis officiis amet? Vitae officia optio dolor exercitationem incidunt magnam non, suscipit, illo quisquam numquam fugiat? Debitis, delectus sequi?
+  </div>,
+  <div
+    aria-expanded={true}
+    className="fd-tabs__panel"
+    role="tabpanel"
+  >
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam libero id corporis odit animi voluptat, Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus quia tempore eligendi tempora repellat officia rerum laudantium, veritatis officiis asperiores ipsum nam, distinctio, dolor provident culpa voluptatibus esse deserunt animi?
+  </div>,
+  <div
+    aria-expanded={false}
+    className="fd-tabs__panel"
+    role="tabpanel"
+  >
+    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+  </div>,
+  <div
+    aria-expanded={false}
+    className="fd-tabs__panel"
+    role="tabpanel"
+  >
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. A quibusdam ipsa cumque soluta debitis accusantium iste alias quas vel perferendis voluptatibus quod asperiores praesentium quaerat, iusto repellendus nulla, maiores eius.
+  </div>,
+]
+`;
