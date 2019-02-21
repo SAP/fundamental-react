@@ -2,6 +2,8 @@ $fd-icons-path: '../../node_modules/fiori-fundamentals/scss/icons/';
 $fd-fonts-path: '../../node_modules/fiori-fundamentals/dist/fonts/';
 @import '../../node_modules/fiori-fundamentals/scss/all.scss';
 
+$library-color: #61dafb;
+
 // Fundamental React Docs Styles
 .frDocs-App {
     background-color: white;
@@ -17,22 +19,44 @@ $fd-fonts-path: '../../node_modules/fiori-fundamentals/dist/fonts/';
 
         .frDocs-Sidebar {
             color: #21262c;
-            min-width: 16rem;
+            min-width: 265px;
+            width: 265px;
             background-color: #f1f3f6;
+            display: flex;
+            flex-direction: column;
+            transition: 0.3s margin ease-in-out, 0.3s box-shadow ease-in-out;
 
             .frDocs-Logo {
-                font-size: 1.25rem;
-                margin-bottom: 0;
-                display: flex;
-                justify-content: center;
+                flex: 0 0 auto;
+                font-size: 24px;
+                padding: 0.5rem 10px;
+                margin: 0;
+                text-align: center;
+                background-color: #424e5a;
+                color: #fff;
+
                 > a {
                     color: inherit;
+
+                    .frDocs-Logo--library {
+                        color: $library-color;
+                    }
                 }
             }
+
+            .frDocs-Search {
+                flex: 0 0 auto;
+                background-color: #424e5a;
+                padding: 0 20px 1.25rem;
+                -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+            }
+
             .frDocs-Nav {
-                border-top: 2px solid #dbe7f3;
-                height: 90%;
+                flex: 1 1 auto;
+                min-height: 0;
                 overflow: auto;
+                padding: 0.5rem 0 1rem;
 
                 .frDocs-Nav__list {
                     list-style: none;
@@ -54,19 +78,14 @@ $fd-fonts-path: '../../node_modules/fiori-fundamentals/dist/fonts/';
                     padding: 13px 40px;
                 }
                 
-                .frDocs-Nav__item--selected {
-                    border-left: 6px solid #2fd0c8;
-                }
-                
                 .frDocs-Nav__item:hover,
+                .frDocs-Nav__item:focus,
                 .frDocs-Nav__item--active {
                     color: #424e5a;
-                    border-left: 6px solid #2fd0c8;
+                    box-shadow: inset 6px 0 0 0 $library-color;
                     padding-left: 34px;
+                    cursor: pointer;
                 }
-            }
-            .frDocs-Nav__inputGroup {
-                padding: 5px 20px;
             }
         }
 
