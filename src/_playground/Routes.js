@@ -331,16 +331,17 @@ export class Routes extends Component {
             <BrowserRouter basename={process.env.PUBLIC_URL}>
                 <div className='frDocs-Container'>
                     <div className='frDocs-Sidebar'>
-                        <h1 className='frDocs-Logo'>FUNDAMENTAL REACT</h1>
+                        <h1 className='frDocs-Logo'>
+                            <a href='/'>Fundamental <span className='frDocs-Logo--library'>React</span></a>
+                        </h1>
+                        <div className='frDocs-Search'>
+                            <InputGroup
+                                inputPlaceholder='Search'
+                                inputType='search'
+                                inputValue={this.state.query}
+                                onChange={this.onChangeHandler} />
+                        </div>
                         <nav className='frDocs-Nav'>
-                            <div className='frDocs-Nav__inputGroup'>
-                                <InputGroup
-                                    inputId='frDocs-Nav__search'
-                                    inputPlaceholder='Search'
-                                    inputType='search'
-                                    inputValue={this.state.query}
-                                    onChange={this.onChangeHandler} />
-                            </div>
                             {navItems}
                         </nav>
                     </div>

@@ -2,11 +2,13 @@ $fd-icons-path: '../../node_modules/fiori-fundamentals/scss/icons/';
 $fd-fonts-path: '../../node_modules/fiori-fundamentals/dist/fonts/';
 @import '../../node_modules/fiori-fundamentals/scss/all.scss';
 
+$library-color: #61dafb;
+
 // Fundamental React Docs Styles
 .frDocs-App {
     background-color: white;
 
-   .frDocs-Container {
+    .frDocs-Container {
         display: flex;
         justify-content: space-between;
         height: 100vh;
@@ -17,22 +19,44 @@ $fd-fonts-path: '../../node_modules/fiori-fundamentals/dist/fonts/';
 
         .frDocs-Sidebar {
             color: #21262c;
-            min-width: 16rem;
+            min-width: 265px;
+            width: 265px;
             background-color: #f1f3f6;
+            display: flex;
+            flex-direction: column;
+            transition: 0.3s margin ease-in-out, 0.3s box-shadow ease-in-out;
 
             .frDocs-Logo {
-                font-size: 1.25rem;
-                margin-bottom: 0;
-                display: flex;
-                justify-content: center;
-                > a {
+                flex: 0 0 auto;
+                font-size: 24px;
+                padding: 0.5rem 10px;
+                margin: 0;
+                text-align: center;
+                background-color: #424e5a;
+                color: #fff;
+
+                >a {
                     color: inherit;
+
+                    .frDocs-Logo--library {
+                        color: $library-color;
+                    }
                 }
             }
+
+            .frDocs-Search {
+                flex: 0 0 auto;
+                background-color: #424e5a;
+                padding: 0 20px 1.25rem;
+                -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+            }
+
             .frDocs-Nav {
-                border-top: 2px solid #dbe7f3;
-                height: 90%;
+                flex: 1 1 auto;
+                min-height: 0;
                 overflow: auto;
+                padding: 0.5rem 0 1rem;
 
                 .frDocs-Nav__list {
                     list-style: none;
@@ -48,25 +72,27 @@ $fd-fonts-path: '../../node_modules/fiori-fundamentals/dist/fonts/';
 
                 .frDocs-Nav__item {
                     display: block;
+                    margin-left: 1px;
                     color: #21262c;
                     font-size: 1rem;
                     position: relative;
                     padding: 13px 40px;
+                    transition: background .15hs ease-in;
+
+                    &:hover,
+                    &:focus {
+                        background-color: #fafafa;
+                        color: #085caf;
+                    }
                 }
-                
-                .frDocs-Nav__item--selected {
-                    border-left: 6px solid #2fd0c8;
-                }
-                
-                .frDocs-Nav__item:hover,
+
                 .frDocs-Nav__item--active {
                     color: #424e5a;
-                    border-left: 6px solid #2fd0c8;
-                    padding-left: 34px;
+                    box-shadow: inset 6px 0 0 0 $library-color;
+                    cursor: pointer;
+                    background-color: #fff;
+                    font-weight: 700;
                 }
-            }
-            .frDocs-Nav__inputGroup {
-                padding: 5px 20px;
             }
         }
 
@@ -75,7 +101,7 @@ $fd-fonts-path: '../../node_modules/fiori-fundamentals/dist/fonts/';
             overflow-y: scroll;
             background-color: white;
             padding: 2rem;
-          
+
             .frDocs-Content__githubLogo {
                 float: right;
                 z-index: 100;
@@ -90,7 +116,8 @@ $fd-fonts-path: '../../node_modules/fiori-fundamentals/dist/fonts/';
                 }
             }
 
-            .frDocs-Content__header, .frDocs-markdown > h1 {
+            .frDocs-Content__header,
+            .frDocs-markdown>h1 {
                 margin: 0 0 12px;
                 font-size: 2.2rem;
                 line-height: 1;
@@ -100,7 +127,8 @@ $fd-fonts-path: '../../node_modules/fiori-fundamentals/dist/fonts/';
                 display: none;
             }
 
-            .frDocs-Content__description, .frDocs-markdown > p {
+            .frDocs-Content__description,
+            .frDocs-markdown>p {
                 margin-bottom: 1.5rem;
                 font-size: 1rem;
                 font-weight: 300;
@@ -111,7 +139,7 @@ $fd-fonts-path: '../../node_modules/fiori-fundamentals/dist/fonts/';
                 border: 1px solid #ccc;
                 border-bottom: none;
                 padding: 10px 0;
-                
+
                 .frDocs-tile__background-toggle {
                     display: flex;
                     justify-content: flex-end;
@@ -124,6 +152,7 @@ $fd-fonts-path: '../../node_modules/fiori-fundamentals/dist/fonts/';
                     align-items: center;
                 }
             }
+
             .frDocs-Content__tile-background {
                 background: #edeef0;
                 transition: background-color .25s;
@@ -131,7 +160,8 @@ $fd-fonts-path: '../../node_modules/fiori-fundamentals/dist/fonts/';
 
             .frDocs-markdown {
 
-                ol, ul {
+                ol,
+                ul {
                     padding-left: 2rem;
                 }
 
@@ -172,6 +202,7 @@ $fd-fonts-path: '../../node_modules/fiori-fundamentals/dist/fonts/';
                 border-radius: 0 0 4px 4px;
                 margin: 0;
             }
+
             .frDocs-docsText__button {
                 padding: 5px;
                 border: 1px solid #ccc;
@@ -298,16 +329,16 @@ $fd-fonts-path: '../../node_modules/fiori-fundamentals/dist/fonts/';
         thead {
             background: transparent;
 
-            > tr {
-                > th {
+            >tr {
+                >th {
                     padding: inherit 0;
                 }
             }
         }
 
         tbody {
-            > tr {
-                > td {
+            >tr {
+                >td {
                     &:first-child {
                         font-weight: bold;
                     }
@@ -317,11 +348,11 @@ $fd-fonts-path: '../../node_modules/fiori-fundamentals/dist/fonts/';
 
         thead,
         tbody {
-            > tr {
+            >tr {
                 vertical-align: top;
 
-                > th,
-                > td {
+                >th,
+                >td {
                     width: 20%;
                     padding-top: 4px;
                     padding-bottom: 4px;
