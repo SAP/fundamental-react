@@ -1,4 +1,4 @@
-import { Button } from '../../../Button/Button';
+import { Button } from '../../../';
 import classnames from 'classnames';
 import { googlecode } from 'react-syntax-highlighter/styles/hljs';
 import PropTypes from 'prop-types';

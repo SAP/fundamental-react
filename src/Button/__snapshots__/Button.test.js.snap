@@ -1,24 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Button /> create button group 1`] = `
-<div
-  aria-label="Group label"
-  className="fd-button-group"
-  role="group"
->
-  <button
-    className="fd-button sap-icon--survey blue"
-  />
-  <button
-    className="fd-button sap-icon--pie-chart is-selected"
-    selected={true}
-  />
-  <button
-    className="fd-button sap-icon--pool"
-  />
-</div>
-`;
-
 exports[`<Button /> create buttons 1`] = `
 <button
   className="fd-button"

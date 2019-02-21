@@ -1,4 +1,4 @@
-import { Button } from '../Button/Button';
+import { Button } from '../';
 import { Dropdown } from './Dropdown';
 import { mount } from 'enzyme';
 import { Popover } from '../Popover/Popover';
