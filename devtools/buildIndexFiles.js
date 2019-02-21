@@ -13,11 +13,15 @@ const isComponentFile = (source) => {
     return !ignoredFiles.some(ignored => source.includes(ignored));
 };
 
+const isComponentExported = (source) => {
+    return !source.match(/^\_/);
+};
+
 
 const componentDirs = readdirSync(srcPath).map(name => path.join(srcPath, name)).filter(isComponentDirectory).map(directory => {
     return {
         path: directory,
-        fileNames: readdirSync(directory).filter(isComponentFile)
+        fileNames: readdirSync(directory).filter(isComponentFile).filter(isComponentExported)
     };
 });
 
