@@ -107,6 +107,43 @@ describe('<InputGroup />', () => {
             inputType='text'
             inputValue='1234567890' />
     );
+
+    const numberInputWithCustomClassName = (
+        <InputGroup
+            className='custom-div-class-search'
+            inputClassName='custom-input-class-search'
+            inputType='number'
+            inputValue={100} />
+    );
+
+    const searchInputWithCustomClassName = (
+        <InputGroup
+            className='custom-div-class-number'
+            inputClassName='custom-input-class-number'
+            inputPlaceholder='Search'
+            inputType='search' />
+    );
+
+    const beforeInputWithCustomClassName = (
+        <InputGroup
+            addon='$'
+            addonPos='before'
+            className='custom-div-class-before'
+            inputClassName='custom-input-class-before'
+            inputType='text'
+            inputValue='1234567890' />
+    );
+
+    const afterInputWithCustomClassName = (
+        <InputGroup
+            addon='€'
+            addonPos='after'
+            className='custom-div-class-after'
+            inputClassName='custom-input-class-after'
+            inputType='text'
+            inputValue='1234567890' />
+    );
+
     const formGroup = <FormGroup>{inputTextPosAfter}</FormGroup>;
 
     test('create input group items', () => {
@@ -185,6 +222,26 @@ describe('<InputGroup />', () => {
         tree = component.toJSON();
         expect(tree).toMatchSnapshot();
 
+        // number input with group custom class name
+        component = renderer.create(numberInputWithCustomClassName);
+        tree = component.toJSON();
+        expect(tree).toMatchSnapshot();
+
+        // search input with group custom class name
+        component = renderer.create(searchInputWithCustomClassName);
+        tree = component.toJSON();
+        expect(tree).toMatchSnapshot();
+
+        // before-class input with group custom class name
+        component = renderer.create(beforeInputWithCustomClassName);
+        tree = component.toJSON();
+        expect(tree).toMatchSnapshot();
+
+        // after-class input with group custom class name
+        component = renderer.create(afterInputWithCustomClassName);
+        tree = component.toJSON();
+        expect(tree).toMatchSnapshot();
+
         // create form group
         component = renderer.create(formGroup);
         tree = component.toJSON();
@@ -194,6 +251,7 @@ describe('<InputGroup />', () => {
         component = renderer.create('<InputGroup />');
         tree = component.toJSON();
         expect(tree).toMatchSnapshot();
+
     });
 
     test('input text entered', () => {
