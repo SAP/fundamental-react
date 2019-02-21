@@ -72,24 +72,25 @@ $library-color: #61dafb;
 
                 .frDocs-Nav__item {
                     display: block;
+                    margin-left: 1px;
                     color: #21262c;
                     font-size: 1rem;
                     position: relative;
                     padding: 13px 40px;
-                    transition: background .25s ease-in;
+                    transition: background .15hs ease-in;
+
+                    &:hover,
+                    &:focus {
+                        background-color: #fafafa;
+                        color: #085caf;
+                    }
                 }
 
-                .frDocs-Nav__item:hover {
-                    background: #fafafa;
-                    color: #085caf;
-                }
-
-                .frDocs-Nav__item:focus,
                 .frDocs-Nav__item--active {
                     color: #424e5a;
                     box-shadow: inset 6px 0 0 0 $library-color;
                     cursor: pointer;
-                    background-color: rgba(10, 110, 209, 0.07);
+                    background-color: #fff;
                     font-weight: 700;
                 }
             }
