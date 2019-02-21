@@ -19,7 +19,8 @@ $library-color: #61dafb;
 
         .frDocs-Sidebar {
             color: #21262c;
-            min-width: 16rem;
+            min-width: 265px;
+            width: 265px;
             background-color: #f1f3f6;
             display: flex;
             flex-direction: column;
@@ -28,7 +29,7 @@ $library-color: #61dafb;
             .frDocs-Logo {
                 flex: 0 0 auto;
                 font-size: 24px;
-                padding: 0.5rem 0;
+                padding: 0.5rem 10px;
                 margin: 0;
                 text-align: center;
                 background-color: #424e5a;
@@ -36,10 +37,10 @@ $library-color: #61dafb;
 
                 > a {
                     color: inherit;
-                }
 
-                .frDocs-Logo--library {
-                    color: $library-color;
+                    .frDocs-Logo--library {
+                        color: $library-color;
+                    }
                 }
             }
 
