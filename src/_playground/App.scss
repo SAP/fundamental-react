@@ -8,7 +8,7 @@ $library-color: #61dafb;
 .frDocs-App {
     background-color: white;
 
-   .frDocs-Container {
+    .frDocs-Container {
         display: flex;
         justify-content: space-between;
         height: 100vh;
@@ -35,7 +35,7 @@ $library-color: #61dafb;
                 background-color: #424e5a;
                 color: #fff;
 
-                > a {
+                >a {
                     color: inherit;
 
                     .frDocs-Logo--library {
@@ -76,15 +76,21 @@ $library-color: #61dafb;
                     font-size: 1rem;
                     position: relative;
                     padding: 13px 40px;
+                    transition: background .25s ease-in;
                 }
-                
-                .frDocs-Nav__item:hover,
+
+                .frDocs-Nav__item:hover {
+                    background: #fafafa;
+                    color: #085caf;
+                }
+
                 .frDocs-Nav__item:focus,
                 .frDocs-Nav__item--active {
                     color: #424e5a;
                     box-shadow: inset 6px 0 0 0 $library-color;
-                    padding-left: 34px;
                     cursor: pointer;
+                    background-color: rgba(10, 110, 209, 0.07);
+                    font-weight: 700;
                 }
             }
         }
@@ -94,7 +100,7 @@ $library-color: #61dafb;
             overflow-y: scroll;
             background-color: white;
             padding: 2rem;
-          
+
             .frDocs-Content__githubLogo {
                 float: right;
                 z-index: 100;
@@ -109,7 +115,8 @@ $library-color: #61dafb;
                 }
             }
 
-            .frDocs-Content__header, .frDocs-markdown > h1 {
+            .frDocs-Content__header,
+            .frDocs-markdown>h1 {
                 margin: 0 0 12px;
                 font-size: 2.2rem;
                 line-height: 1;
@@ -119,7 +126,8 @@ $library-color: #61dafb;
                 display: none;
             }
 
-            .frDocs-Content__description, .frDocs-markdown > p {
+            .frDocs-Content__description,
+            .frDocs-markdown>p {
                 margin-bottom: 1.5rem;
                 font-size: 1rem;
                 font-weight: 300;
@@ -130,7 +138,7 @@ $library-color: #61dafb;
                 border: 1px solid #ccc;
                 border-bottom: none;
                 padding: 10px 0;
-                
+
                 .frDocs-tile__background-toggle {
                     display: flex;
                     justify-content: flex-end;
@@ -143,6 +151,7 @@ $library-color: #61dafb;
                     align-items: center;
                 }
             }
+
             .frDocs-Content__tile-background {
                 background: #edeef0;
                 transition: background-color .25s;
@@ -150,7 +159,8 @@ $library-color: #61dafb;
 
             .frDocs-markdown {
 
-                ol, ul {
+                ol,
+                ul {
                     padding-left: 2rem;
                 }
 
@@ -191,6 +201,7 @@ $library-color: #61dafb;
                 border-radius: 0 0 4px 4px;
                 margin: 0;
             }
+
             .frDocs-docsText__button {
                 padding: 5px;
                 border: 1px solid #ccc;
@@ -317,16 +328,16 @@ $library-color: #61dafb;
         thead {
             background: transparent;
 
-            > tr {
-                > th {
+            >tr {
+                >th {
                     padding: inherit 0;
                 }
             }
         }
 
         tbody {
-            > tr {
-                > td {
+            >tr {
+                >td {
                     &:first-child {
                         font-weight: bold;
                     }
@@ -336,11 +347,11 @@ $library-color: #61dafb;
 
         thead,
         tbody {
-            > tr {
+            >tr {
                 vertical-align: top;
 
-                > th,
-                > td {
+                >th,
+                >td {
                     width: 20%;
                     padding-top: 4px;
                     padding-bottom: 4px;
