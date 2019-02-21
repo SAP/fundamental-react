@@ -1,16 +1,16 @@
 import path from 'path';
 import React from 'react';
-import { ActionBar, ActionBarActions, ActionBarBack, ActionBarHeader, Button, Menu, MenuItem, MenuList, Popover } from '../';
+import { ActionBar, Button, Menu, MenuItem, MenuList, Popover } from '../';
 import { Description, DocsText, DocsTile, Header, Import, Properties, Separator } from '../_playground';
 
 export const ActionBarComponent = () => {
     const actionBarBackBtnCode = `<ActionBar>
-    <ActionBarBack onClick={clickBackBtn}/>
-    <ActionBarHeader title={'Page Title'} description={'Action Bar Description'} />
-    <ActionBarActions>
+    <ActionBar.Back onClick={clickBackBtn}/>
+    <ActionBar.Header title={'Page Title'} description={'Action Bar Description'} />
+    <ActionBar.Actions>
         <Button>Button</Button>
         <Button option="emphasized">Button</Button>
-    </ActionBarActions>
+    </ActionBar.Actions>
 </ActionBar>
 
 const clickBackBtn = () => {
@@ -18,16 +18,16 @@ const clickBackBtn = () => {
 }`;
 
     const actionBarNoBackBtnCode = `<ActionBar>
-    <ActionBarHeader title={'Page Title'} description={'Action Bar Description'} />
-    <ActionBarActions>
+    <ActionBar.Header title={'Page Title'} description={'Action Bar Description'} />
+    <ActionBar.Actions>
         <Button>Button</Button>
         <Button option="emphasized">Button</Button>
-    </ActionBarActions>
+    </ActionBar.Actions>
 </ActionBar>`;
 
     const actionBarContextualCode = `<ActionBar>
-    <ActionBarHeader title={'Page Title'} description={'Action Bar Description'} />
-    <ActionBarActions>
+    <ActionBar.Header title={'Page Title'} description={'Action Bar Description'} />
+    <ActionBar.Actions>
         <Popover
             control={<Button option="light" glyph="vertical-grip" />}
             body={
@@ -41,13 +41,13 @@ const clickBackBtn = () => {
                 </Menu>
             }
         />
-    </ActionBarActions>
+    </ActionBar.Actions>
 </ActionBar>`;
 
     const mobileActionBarCode = `<ActionBar mobile={true}>
-    <ActionBarBack />
-    <ActionBarHeader title={'Action Bar with description and back button'} />
-    <ActionBarActions>
+    <ActionBar.Back />
+    <ActionBar.Header title={'Action Bar with description and back button'} />
+    <ActionBar.Actions>
         <Popover
             control={<Button option="light" glyph="vertical-grip" />}
             body={
@@ -61,13 +61,13 @@ const clickBackBtn = () => {
                 </Menu>
             }
         />
-    </ActionBarActions>
+    </ActionBar.Actions>
 </ActionBar>`;
 
     const mobileCustomWidthActionBarCode = `<ActionBar mobile={true} width="768px">
-    <ActionBarBack />
-    <ActionBarHeader title={'Action Bar with description and back button'} />
-    <ActionBarActions>
+    <ActionBar.Back />
+    <ActionBar.Header title={'Action Bar with description and back button'} />
+    <ActionBar.Actions>
         <Popover
             control={<Button type="secondary" glyph="vertical-grip" />}
             body={
@@ -81,7 +81,7 @@ const clickBackBtn = () => {
                 </Menu>
             }
         />
-    </ActionBarActions>
+    </ActionBar.Actions>
 </ActionBar>`;
 
     const clickBackBtn = () => {
@@ -106,12 +106,12 @@ const clickBackBtn = () => {
             <h2>Action bar with back button, description and action buttons.</h2>
             <DocsTile>
                 <ActionBar>
-                    <ActionBarBack onClick={clickBackBtn} />
-                    <ActionBarHeader description={'Action Bar Description'} title={'Page Title'} />
-                    <ActionBarActions>
+                    <ActionBar.Back onClick={clickBackBtn} />
+                    <ActionBar.Header description={'Action Bar Description'} title={'Page Title'} />
+                    <ActionBar.Actions>
                         <Button>Button</Button>
                         <Button option='emphasized'>Button</Button>
-                    </ActionBarActions>
+                    </ActionBar.Actions>
                 </ActionBar>
             </DocsTile>
             <DocsText>{actionBarBackBtnCode}</DocsText>
@@ -121,11 +121,11 @@ const clickBackBtn = () => {
             <h2>Action bar with no Back button</h2>
             <DocsTile>
                 <ActionBar>
-                    <ActionBarHeader description={'Action Bar Description'} title={'Page Title'} />
-                    <ActionBarActions>
+                    <ActionBar.Header description={'Action Bar Description'} title={'Page Title'} />
+                    <ActionBar.Actions>
                         <Button>Button</Button>
                         <Button option='emphasized'>Button</Button>
-                    </ActionBarActions>
+                    </ActionBar.Actions>
                 </ActionBar>
             </DocsTile>
             <DocsText>{actionBarNoBackBtnCode}</DocsText>
@@ -140,8 +140,8 @@ const clickBackBtn = () => {
             </Description>
             <DocsTile>
                 <ActionBar>
-                    <ActionBarHeader description={'Action Bar Description'} title={'Page Title'} />
-                    <ActionBarActions>
+                    <ActionBar.Header description={'Action Bar Description'} title={'Page Title'} />
+                    <ActionBar.Actions>
                         <Popover
                             body={
                                 <Menu>
@@ -154,7 +154,7 @@ const clickBackBtn = () => {
                                 </Menu>
                             }
                             control={<Button glyph='vertical-grip' option='light' />} />
-                    </ActionBarActions>
+                    </ActionBar.Actions>
                 </ActionBar>
             </DocsTile>
             <DocsText>{actionBarContextualCode}</DocsText>
@@ -164,11 +164,11 @@ const clickBackBtn = () => {
             <h2>Action bar mobile view</h2>
             <DocsTile>
                 <ActionBar mobile>
-                    <ActionBarBack />
-                    <ActionBarHeader
+                    <ActionBar.Back />
+                    <ActionBar.Header
                         description={'Action Bar Description'}
                         title={'Action Bar with description and back button'} />
-                    <ActionBarActions>
+                    <ActionBar.Actions>
                         <Popover
                             body={
                                 <Menu>
@@ -181,7 +181,7 @@ const clickBackBtn = () => {
                                 </Menu>
                             }
                             control={<Button glyph='vertical-grip' option='light' />} />
-                    </ActionBarActions>
+                    </ActionBar.Actions>
                 </ActionBar>
             </DocsTile>
             <DocsText>{mobileActionBarCode}</DocsText>
@@ -191,11 +191,11 @@ const clickBackBtn = () => {
             <h2>Action bar mobile view with custom width</h2>
             <DocsTile>
                 <ActionBar mobile width='768px'>
-                    <ActionBarBack />
-                    <ActionBarHeader
+                    <ActionBar.Back />
+                    <ActionBar.Header
                         description={'Action Bar Description'}
                         title={'Action Bar with description and back button'} />
-                    <ActionBarActions>
+                    <ActionBar.Actions>
                         <Popover
                             body={
                                 <Menu>
@@ -208,7 +208,7 @@ const clickBackBtn = () => {
                                 </Menu>
                             }
                             control={<Button glyph='vertical-grip' option='light' />} />
-                    </ActionBarActions>
+                    </ActionBar.Actions>
                 </ActionBar>
             </DocsTile>
             <DocsText>{mobileCustomWidthActionBarCode}</DocsText>
