@@ -1,7 +1,17 @@
+import FormFieldset from './FormFieldset';
+import FormInput from './FormInput';
+import FormItem from './FormItem';
+import FormLabel from './FormLabel';
+import FormLegend from './FormLegend';
+import FormMessage from './FormMessage';
+import FormRadioGroup from './FormRadioGroup';
+import FormRadioItem from './FormRadioItem';
+import FormSelect from './FormSelect';
+import FormSet from './FormSet';
+import FormTextarea from './FormTextarea';
 import { mount } from 'enzyme';
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { FormFieldset, FormInput, FormItem, FormLabel, FormLegend, FormMessage, FormRadioGroup, FormRadioItem, FormSelect, FormSet, FormTextarea } from './Forms';
 
 describe('<Forms />', () => {
     const formInput = (
