@@ -402,26 +402,4 @@ exports[`<InputGroup /> create input group items 19`] = `
 </div>
 `;
 
-exports[`<InputGroup /> create input group items 20`] = `
-<div
-  className="fd-form__group"
->
-  <div
-    className="fd-input-group fd-input-group--after"
-  >
-    <input
-      className=""
-      onChange={[Function]}
-      type="text"
-      value="1234567890"
-    />
-    <span
-      className="fd-input-group__addon fd-input-group__addon--after"
-    >
-      €
-    </span>
-  </div>
-</div>
-`;
-
-exports[`<InputGroup /> create input group items 21`] = `"<InputGroup />"`;
+exports[`<InputGroup /> create input group items 20`] = `"<InputGroup />"`;

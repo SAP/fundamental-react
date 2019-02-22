@@ -1,8 +1,8 @@
 import { Button } from '../';
+import InputGroup from './InputGroup';
 import { mount } from 'enzyme';
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { FormGroup, InputGroup } from './InputGroup';
 
 describe('<InputGroup />', () => {
     const inputTextPosBefore = (
@@ -144,8 +144,6 @@ describe('<InputGroup />', () => {
             inputValue='1234567890' />
     );
 
-    const formGroup = <FormGroup>{inputTextPosAfter}</FormGroup>;
-
     test('create input group items', () => {
         // create input text before
         let component = renderer.create(inputTextPosBefore);
@@ -239,11 +237,6 @@ describe('<InputGroup />', () => {
 
         // after-class input with group custom class name
         component = renderer.create(afterInputWithCustomClassName);
-        tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-
-        // create form group
-        component = renderer.create(formGroup);
         tree = component.toJSON();
         expect(tree).toMatchSnapshot();
 
@@ -390,14 +383,6 @@ describe('<InputGroup />', () => {
 
             expect(
                 element.find('button').getDOMNode().attributes['data-sample'].value
-            ).toBe('Sample');
-        });
-
-        test('should allow props to be spread to the FormGroup component', () => {
-            const element = mount(<FormGroup data-sample='Sample' />);
-
-            expect(
-                element.getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
         });
     });
