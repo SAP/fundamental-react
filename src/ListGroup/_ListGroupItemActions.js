@@ -14,6 +14,7 @@ const ListGroupItemActions = ({ children, className, ...props }) => {
         </span>
     );
 };
+
 ListGroupItemActions.displayName = 'ListGroupItemActions';
 
 ListGroupItemActions.propTypes = {
