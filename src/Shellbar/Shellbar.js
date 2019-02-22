@@ -2,10 +2,12 @@ import classnames from 'classnames';
 import { Counter } from '../Badge/Badge';
 import { Icon } from '../Icon/Icon';
 import { Identifier } from '../Identifier/Identifier';
+import Menu from '../Menu/Menu';
+import MenuItem from '../Menu/MenuItem';
+import MenuList from '../Menu/MenuList';
 import { Popover } from '../Popover/Popover';
 import PropTypes from 'prop-types';
 import { SearchInput } from '../SearchInput/SearchInput';
-import { Menu, MenuItem, MenuList } from '../Menu/Menu';
 import React, { Component } from 'react';
 
 export class Shellbar extends Component {

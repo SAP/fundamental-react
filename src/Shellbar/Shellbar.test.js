@@ -1,8 +1,10 @@
+import Menu from '../Menu/Menu';
+import MenuItem from '../Menu/MenuItem';
+import MenuList from '../Menu/MenuList';
 import { mount } from 'enzyme';
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { Shellbar } from './Shellbar';
-import { Menu, MenuItem, MenuList } from '../Menu/Menu';
 
 describe('<Shellbar />', () => {
     const profile1 = {

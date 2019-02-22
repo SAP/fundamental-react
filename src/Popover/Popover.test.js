@@ -1,9 +1,11 @@
 import { Icon } from '../Icon/Icon';
+import Menu from '../Menu/Menu';
+import MenuItem from '../Menu/MenuItem';
+import MenuList from '../Menu/MenuList';
 import { mount } from 'enzyme';
 import { Popover } from './Popover';
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { Menu, MenuItem, MenuList } from '../Menu/Menu';
 
 describe('<Popover />', () => {
     const popOver = (

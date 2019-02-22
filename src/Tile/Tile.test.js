@@ -1,10 +1,12 @@
 import { Button } from '../';
 import { Identifier } from '../Identifier/Identifier';
+import Menu from '../Menu/Menu';
+import MenuItem from '../Menu/MenuItem';
+import MenuList from '../Menu/MenuList';
 import { mount } from 'enzyme';
 import { Popover } from '../Popover/Popover';
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { Menu, MenuItem, MenuList } from '../Menu/Menu';
 import { ProductTile, ProductTileContent, ProductTileMedia, Tile, TileActions, TileContent, TileGrid, TileMedia } from './Tile';
 
 describe('<Tile />', () => {

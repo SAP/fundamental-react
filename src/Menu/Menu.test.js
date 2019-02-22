@@ -1,8 +1,11 @@
+import Menu from './Menu';
+import MenuGroup from './MenuGroup';
+import MenuItem from './MenuItem';
+import MenuList from './MenuList';
 import { mount } from 'enzyme';
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { Link, MemoryRouter } from 'react-router-dom';
-import { Menu, MenuGroup, MenuItem, MenuList } from './Menu';
 
 describe('<Menu />', () => {
     const basicMenuCode = (

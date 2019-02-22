@@ -1,8 +1,10 @@
 import { ComboboxInput } from './ComboboxInput';
+import Menu from '../Menu/Menu';
+import MenuItem from '../Menu/MenuItem';
+import MenuList from '../Menu/MenuList';
 import { mount } from 'enzyme';
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { Menu, MenuItem, MenuList } from '../Menu/Menu';
 
 describe('<ComboboxInput />', () => {
     const defaultMenu = (
