@@ -78,9 +78,11 @@ export class ListGroup extends Component {
 
         switch (pressedKey) {
             case 'ArrowDown':
+            case 'ArrowRight':
                 this.onArrowDownPressed();
                 return;
             case 'ArrowUp':
+            case 'ArrowLeft':
                 this.onArrowUpPressed();
                 return;
             default:
