@@ -1,5 +1,5 @@
 $mediaMaxWidth: 600px;
-$tableMaxWidth: 400px;
+$tableMaxWidth: 500px;
 $fd-icons-path: '../../node_modules/fiori-fundamentals/scss/icons/';
 $fd-fonts-path: '../../node_modules/fiori-fundamentals/dist/fonts/';
 @import '../../node_modules/fiori-fundamentals/scss/all.scss';
@@ -373,44 +373,45 @@ $fd-fonts-path: '../../node_modules/fiori-fundamentals/dist/fonts/';
             color: var(--fd-color-status-3);
         }
     }
+}
 
-    @media (max-width: $tableMaxWidth) {
-        .fd-table{
-            
-            &.property-table {
-     
-                thead, tbody, th, td, tr {
-                    display:block;
-                    color: hotpink;
+@media (max-width: $tableMaxWidth) {
+    .fd-table{
+
+        &.property-table {
+            display: block;
+
+            thead, tbody, th, td, tr {
+                display:block;
+                color: hotpink;
+            }
+
+            thead tr {
+                    position: absolute;
+                    top: -9999px;
+                    bottom: 9999px;
                 }
 
-                thead tr {
-                        position: absolute;
-                        top: -9999px;
-                        bottom: -99999px;
-                    }
+            tr {
+                border: 1px solid #ccc;
+            }
 
-                tr {
-                    border: 1px solid #ccc;
+            td {
+                border: none;
+                border-bottom: 1px solid #eee;
+                position: relative;
+                padding-left: 50%;
+
+                &:before {
+                    position: absolute;
+                    top: 6px;
+                    left: 6px;
+                    width: 45%;
+                    padding-right: 10px;
+                    // white-space: nowrap;
                 }
+            }
 
-                td {
-                    border: none;
-                    border-bottom: 1px solid #eee;
-                    position: relative;
-                    padding-left: 50%;
-
-                    &:before {
-                        position: absolute;
-                        top: 6px;
-                        left: 6px;
-                        width: 45%;
-                        padding-right: 10px;
-                        white-space: nowrap;
-                    }
-                }
-
-        }   }
-
+        }   
     }
 }
