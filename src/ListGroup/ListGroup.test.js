@@ -1,9 +1,10 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import { Button } from '../';
+import ListGroup from './ListGroup';
+import ListGroupItem from './ListGroupItem';
 import { mount } from 'enzyme';
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { ListGroup, ListGroupItem, ListGroupItemActions, ListGroupItemCheckbox } from './ListGroup';
 
 describe('<ListGroup />', () => {
     const defaultListGroup = (
@@ -18,9 +19,9 @@ describe('<ListGroup />', () => {
             <ListGroupItem>List item 4</ListGroupItem>
             <ListGroupItem>
                 List item 1
-                <ListGroupItemActions className='blue'>
+                <ListGroupItem.Actions className='blue'>
                     <Button glyph='edit' type='standard' />
-                </ListGroupItemActions>
+                </ListGroupItem.Actions>
             </ListGroupItem>
         </ListGroup>
     );
@@ -28,9 +29,9 @@ describe('<ListGroup />', () => {
         <ListGroup>
             <ListGroupItem>
                 List item 1
-                <ListGroupItemActions>
+                <ListGroupItem.Actions>
                     <Button glyph='edit' type='standard' />
-                </ListGroupItemActions>
+                </ListGroupItem.Actions>
             </ListGroupItem>
         </ListGroup>
     );
@@ -38,7 +39,7 @@ describe('<ListGroup />', () => {
     const listGroupCheckbox = (
         <ListGroup>
             <ListGroupItem>
-                <ListGroupItemCheckbox>List item 1</ListGroupItemCheckbox>
+                <ListGroupItem.Checkbox>List item 1</ListGroupItem.Checkbox>
             </ListGroupItem>
         </ListGroup>
     );
@@ -78,7 +79,7 @@ describe('<ListGroup />', () => {
         });
 
         test('should allow props to be spread to the ListGroupItemActions component', () => {
-            const element = mount(<ListGroupItemActions data-sample='Sample' />);
+            const element = mount(<ListGroupItem.Actions data-sample='Sample' />);
 
             expect(
                 element.getDOMNode().attributes['data-sample'].value
@@ -87,7 +88,7 @@ describe('<ListGroup />', () => {
 
         test('should allow props to be spread to the ListGroupItemCheckbox component', () => {
             // TODO: placeholder for this test description once that functionality is built
-            const element = mount(<ListGroupItemCheckbox data-sample='Sample' />);
+            const element = mount(<ListGroupItem.Checkbox data-sample='Sample' />);
 
             expect(
                 element.getDOMNode().attributes['data-sample'].value
@@ -95,7 +96,7 @@ describe('<ListGroup />', () => {
         });
 
         test('should allow props to be spread to the ListGroupItemCheckbox component\'s input element', () => {
-            const element = mount(<ListGroupItemCheckbox inputProps={{ 'data-sample': 'Sample' }} />);
+            const element = mount(<ListGroupItem.Checkbox inputProps={{ 'data-sample': 'Sample' }} />);
 
             expect(
                 element.find('input').getDOMNode().attributes['data-sample'].value
@@ -103,7 +104,7 @@ describe('<ListGroup />', () => {
         });
 
         test('should allow props to be spread to the ListGroupItemCheckbox component\'s label element', () => {
-            const element = mount(<ListGroupItemCheckbox labelProps={{ 'data-sample': 'Sample' }} />);
+            const element = mount(<ListGroupItem.Checkbox labelProps={{ 'data-sample': 'Sample' }} />);
 
             expect(
                 element.find('label').getDOMNode().attributes['data-sample'].value

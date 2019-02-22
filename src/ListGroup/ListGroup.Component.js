@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import path from 'path';
 import React from 'react';
-import { Button, ListGroup, ListGroupItem, ListGroupItemActions, ListGroupItemCheckbox } from '../';
+import { Button, ListGroup, ListGroupItem } from '../';
 import { Description, DocsText, DocsTile, Header, Import, Playground, Properties, Separator } from '../_playground';
 
 export const ListGroupComponent = () => {
@@ -14,32 +14,32 @@ export const ListGroupComponent = () => {
 
     const actionsListCode = `<ListGroup>
     <ListGroupItem>List item 1
-        <ListGroupItemActions>
+        <ListGroupItem.Actions>
             <Button option="light" glyph="edit" />
-        </ListGroupItemActions>
+        </ListGroupItem.Actions>
     </ListGroupItem>
     <ListGroupItem>List item 2
-        <ListGroupItemActions>
+        <ListGroupItem.Actions>
             <Button option="light" glyph="edit" />
-        </ListGroupItemActions>
+        </ListGroupItem.Actions>
     </ListGroupItem>
     <ListGroupItem>List item 3
-        <ListGroupItemActions>
+        <ListGroupItem.Actions>
             <Button option="light" glyph="edit" />
-        </ListGroupItemActions>
+        </ListGroupItem.Actions>
     </ListGroupItem>
     <ListGroupItem>List item 4
-        <ListGroupItemActions>
+        <ListGroupItem.Actions>
             <Button option="light" glyph="edit" />
-        </ListGroupItemActions>
+        </ListGroupItem.Actions>
     </ListGroupItem>
 </ListGroup>`;
 
     const checkboxListCode = `<ListGroup>
-    <ListGroupItem><ListGroupItemCheckbox>List item 1</ListGroupItemCheckbox></ListGroupItem>
-    <ListGroupItem><ListGroupItemCheckbox>List item 2</ListGroupItemCheckbox></ListGroupItem>
-    <ListGroupItem><ListGroupItemCheckbox>List item 3</ListGroupItemCheckbox></ListGroupItem>
-    <ListGroupItem><ListGroupItemCheckbox>List item 4</ListGroupItemCheckbox></ListGroupItem>
+    <ListGroupItem><ListGroupItem.Checkbox>List item 1</ListGroupItem.Checkbox></ListGroupItem>
+    <ListGroupItem><ListGroupItem.Checkbox>List item 2</ListGroupItem.Checkbox></ListGroupItem>
+    <ListGroupItem><ListGroupItem.Checkbox>List item 3</ListGroupItem.Checkbox></ListGroupItem>
+    <ListGroupItem><ListGroupItem.Checkbox>List item 4</ListGroupItem.Checkbox></ListGroupItem>
 </ListGroup>`;
 
 
@@ -79,24 +79,24 @@ export const ListGroupComponent = () => {
             <DocsTile>
                 <ListGroup>
                     <ListGroupItem>List item 1
-                        <ListGroupItemActions>
+                        <ListGroupItem.Actions>
                             <Button glyph='edit' option='light' />
-                        </ListGroupItemActions>
+                        </ListGroupItem.Actions>
                     </ListGroupItem>
                     <ListGroupItem>List item 2
-                        <ListGroupItemActions>
+                        <ListGroupItem.Actions>
                             <Button glyph='edit' option='light' />
-                        </ListGroupItemActions>
+                        </ListGroupItem.Actions>
                     </ListGroupItem>
                     <ListGroupItem>List item 3
-                        <ListGroupItemActions>
+                        <ListGroupItem.Actions>
                             <Button glyph='edit' option='light' />
-                        </ListGroupItemActions>
+                        </ListGroupItem.Actions>
                     </ListGroupItem>
                     <ListGroupItem>List item 4
-                        <ListGroupItemActions>
+                        <ListGroupItem.Actions>
                             <Button glyph='edit' option='light' />
-                        </ListGroupItemActions>
+                        </ListGroupItem.Actions>
                     </ListGroupItem>
                 </ListGroup>
             </DocsTile>
@@ -108,10 +108,10 @@ export const ListGroupComponent = () => {
             <Description>Checkboxes can be include on the left of each line for such purposes as bulk actions.</Description>
             <DocsTile>
                 <ListGroup>
-                    <ListGroupItem><ListGroupItemCheckbox>List item 1</ListGroupItemCheckbox></ListGroupItem>
-                    <ListGroupItem><ListGroupItemCheckbox>List item 2</ListGroupItemCheckbox></ListGroupItem>
-                    <ListGroupItem><ListGroupItemCheckbox>List item 3</ListGroupItemCheckbox></ListGroupItem>
-                    <ListGroupItem><ListGroupItemCheckbox>List item 4</ListGroupItemCheckbox></ListGroupItem>
+                    <ListGroupItem><ListGroupItem.Checkbox>List item 1</ListGroupItem.Checkbox></ListGroupItem>
+                    <ListGroupItem><ListGroupItem.Checkbox>List item 2</ListGroupItem.Checkbox></ListGroupItem>
+                    <ListGroupItem><ListGroupItem.Checkbox>List item 3</ListGroupItem.Checkbox></ListGroupItem>
+                    <ListGroupItem><ListGroupItem.Checkbox>List item 4</ListGroupItem.Checkbox></ListGroupItem>
                 </ListGroup>
             </DocsTile>
             <DocsText>{checkboxListCode}</DocsText>
@@ -754,9 +754,9 @@ export const ListGroupComponent = () => {
 
                 <ListGroup>
                     <ListGroupItem>List item 1
-                        <ListGroupItemActions>
+                        <ListGroupItem.Actions>
                             <Button glyph='edit' />
-                        </ListGroupItemActions>
+                        </ListGroupItem.Actions>
                     </ListGroupItem>
                 </ListGroup>
 
