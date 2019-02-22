@@ -7,7 +7,7 @@ import { Image } from '../../../';
 import PropTypes from 'prop-types';
 import { Badge, Label, Status } from '../../../';
 import { FormGroup, FormItem, FormLabel, InputGroup } from '../../../';
-import { ListGroup, ListGroupItem, ListGroupItemActions } from '../../../';
+import { ListGroup, ListGroupItem } from '../../../';
 import { ProductTile, ProductTileContent, ProductTileMedia, Tile, TileActions, TileContent, TileMedia } from '../../../';
 import React, { Component } from 'react';
 
@@ -475,7 +475,7 @@ export class Playground extends Component {
                               this.state.childs.children.props.children[0],
                               this.state.currentValues
                           )}
-                          <ListGroupItemActions>
+                          <ListGroupItem.Actions>
                               <Button
                                   glyph={this.retrieveValue(
                                       'glyph',
@@ -484,7 +484,7 @@ export class Playground extends Component {
                                       this.state.currentValues
                                   )}
                                   option='light' />
-                          </ListGroupItemActions>
+                          </ListGroupItem.Actions>
                       </ListGroupItem>
                   </ListGroup>
               );
