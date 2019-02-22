@@ -1,4 +1,5 @@
-$mediaMaxWidth: 599px;
+$mediaMaxWidth: 600px;
+$tableMaxWidth: 400px;
 $fd-icons-path: '../../node_modules/fiori-fundamentals/scss/icons/';
 $fd-fonts-path: '../../node_modules/fiori-fundamentals/dist/fonts/';
 @import '../../node_modules/fiori-fundamentals/scss/all.scss';
@@ -82,7 +83,7 @@ $fd-fonts-path: '../../node_modules/fiori-fundamentals/dist/fonts/';
 
             code {
                 display: flex;
-                flex-wrap: wrap; //remove x-axis scrolling
+                flex-wrap: wrap; //remove x-axis scrolling 
             }
         }
 
@@ -371,5 +372,45 @@ $fd-fonts-path: '../../node_modules/fiori-fundamentals/dist/fonts/';
         .prop-required {
             color: var(--fd-color-status-3);
         }
+    }
+
+    @media (max-width: $tableMaxWidth) {
+        .fd-table{
+            
+            &.property-table {
+     
+                thead, tbody, th, td, tr {
+                    display:block;
+                    color: hotpink;
+                }
+
+                thead tr {
+                        position: absolute;
+                        top: -9999px;
+                        bottom: -99999px;
+                    }
+
+                tr {
+                    border: 1px solid #ccc;
+                }
+
+                td {
+                    border: none;
+                    border-bottom: 1px solid #eee;
+                    position: relative;
+                    padding-left: 50%;
+
+                    &:before {
+                        position: absolute;
+                        top: 6px;
+                        left: 6px;
+                        width: 45%;
+                        padding-right: 10px;
+                        white-space: nowrap;
+                    }
+                }
+
+        }   }
+
     }
 }
