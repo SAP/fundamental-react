@@ -318,24 +318,88 @@ exports[`<InputGroup /> create input group items 15`] = `
 
 exports[`<InputGroup /> create input group items 16`] = `
 <div
-  className="fd-form__group"
+  className="custom-div-class-search fd-input-group fd-input-group--after"
 >
-  <div
-    className="fd-input-group fd-input-group--after"
+  <input
+    className="custom-input-class-search"
+    onChange={[Function]}
+    type="number"
+    value={100}
+  />
+  <span
+    className="fd-input-group__addon fd-input-group__addon--button fd-input-group__addon--after"
   >
-    <input
-      className=""
-      onChange={[Function]}
-      type="text"
-      value="1234567890"
+    <button
+      aria-label="Step up"
+      className="fd-input-group__button fd-input-group__button--step-up sap-icon--slim-arrow-up"
+      onClick={[Function]}
     />
-    <span
-      className="fd-input-group__addon fd-input-group__addon--after"
-    >
-      €
-    </span>
-  </div>
+    <button
+      aria-label="Step down"
+      className="fd-input-group__button fd-input-group__button--step-down sap-icon--slim-arrow-down"
+      onClick={[Function]}
+    />
+  </span>
 </div>
 `;
 
-exports[`<InputGroup /> create input group items 17`] = `"<InputGroup />"`;
+exports[`<InputGroup /> create input group items 17`] = `
+<div
+  className="custom-div-class-number fd-input-group"
+>
+  <input
+    className="custom-input-class-number"
+    onChange={[Function]}
+    placeholder="Search"
+    type="search"
+    value=""
+  />
+  <span
+    className="fd-input-group__addon fd-input-group__addon--button"
+  >
+    <button
+      aria-label="Clear"
+      className="fd-input-group__button fd-input-group__button--clear"
+      onClick={[Function]}
+    />
+  </span>
+</div>
+`;
+
+exports[`<InputGroup /> create input group items 18`] = `
+<div
+  className="custom-div-class-before fd-input-group fd-input-group--before"
+>
+  <span
+    className="fd-input-group__addon fd-input-group__addon--before"
+  >
+    $
+  </span>
+  <input
+    className="custom-input-class-before"
+    onChange={[Function]}
+    type="text"
+    value="1234567890"
+  />
+</div>
+`;
+
+exports[`<InputGroup /> create input group items 19`] = `
+<div
+  className="custom-div-class-after fd-input-group fd-input-group--after"
+>
+  <input
+    className="custom-input-class-after"
+    onChange={[Function]}
+    type="text"
+    value="1234567890"
+  />
+  <span
+    className="fd-input-group__addon fd-input-group__addon--after"
+  >
+    €
+  </span>
+</div>
+`;
+
+exports[`<InputGroup /> create input group items 20`] = `"<InputGroup />"`;

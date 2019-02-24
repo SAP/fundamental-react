@@ -3,16 +3,7 @@ import PropTypes from 'prop-types';
 import { INPUT_GROUP_ADDON_POSITIONS, INPUT_GROUP_TYPES } from '../utils/constants';
 import React, { Component } from 'react';
 
-export const FormGroup = ({ children, ...props }) => {
-    return <div {...props} className='fd-form__group'>{children}</div>;
-};
-FormGroup.displayName = 'FormGroup';
-
-FormGroup.propTypes = {
-    children: PropTypes.node
-};
-
-export class InputGroup extends Component {
+class InputGroup extends Component {
     constructor(props) {
         super(props);
 
@@ -60,16 +51,18 @@ export class InputGroup extends Component {
     render() {
         const {
             actions,
-            addon,
             addonPos,
+            addon,
             children,
+            className,
             compact,
             glyph,
+            inputClassName,
+            inputType,
             inputId,
             inputName,
             inputPlaceholder,
             inputProps,
-            inputType,
             inputValue,
             numberDownButtonProps,
             numberUpButtonProps,
@@ -80,6 +73,7 @@ export class InputGroup extends Component {
         switch (inputType) {
             case 'number':
                 const inputGroupNumberClasses = classnames(
+                    className,
                     'fd-input-group',
                     'fd-input-group--after',
                     {
@@ -88,6 +82,7 @@ export class InputGroup extends Component {
                 );
 
                 const inputNumberClasses = classnames(
+                    inputClassName,
                     {
                         'fd-input fd-input--compact': compact
                     }
@@ -121,6 +116,7 @@ export class InputGroup extends Component {
 
             case 'search':
                 const inputGroupSearchClasses = classnames(
+                    className,
                     'fd-input-group',
                     {
                         'fd-input-group--compact': compact
@@ -128,6 +124,7 @@ export class InputGroup extends Component {
                 );
 
                 const inputSearchClasses = classnames(
+                    inputClassName,
                     {
                         'fd-input fd-input--compact': compact
                     }
@@ -158,6 +155,7 @@ export class InputGroup extends Component {
             default: {
                 if (addonPos === 'before') {
                     const inputGroupBeforeClasses = classnames(
+                        className,
                         'fd-input-group',
                         'fd-input-group--before',
                         {
@@ -166,6 +164,7 @@ export class InputGroup extends Component {
                     );
 
                     const inputBeforeClasses = classnames(
+                        inputClassName,
                         {
                             'fd-input fd-input--compact': compact
                         }
@@ -202,6 +201,7 @@ export class InputGroup extends Component {
                     );
                 } else {
                     const inputGroupAfterClasses = classnames(
+                        className,
                         'fd-input-group',
                         'fd-input-group--after',
                         {
@@ -210,6 +210,7 @@ export class InputGroup extends Component {
                     );
 
                     const inputAfterClasses = classnames(
+                        inputClassName,
                         {
                             'fd-input fd-input--compact': compact
                         }
@@ -249,6 +250,7 @@ export class InputGroup extends Component {
         }
     }
 }
+
 InputGroup.displayName = 'InputGroup';
 
 InputGroup.propTypes = {
@@ -256,8 +258,10 @@ InputGroup.propTypes = {
     addon: PropTypes.string,
     addonPos: PropTypes.oneOf(INPUT_GROUP_ADDON_POSITIONS),
     children: PropTypes.node,
+    className: PropTypes.string,
     compact: PropTypes.bool,
     glyph: PropTypes.string,
+    inputClassName: PropTypes.string,
     inputId: PropTypes.string,
     inputName: PropTypes.string,
     inputPlaceholder: PropTypes.string,
@@ -280,6 +284,7 @@ InputGroup.propDescriptions = {
     addon: 'The value of the add-on.',
     addonPos: 'Location of the add-on relative to the input.',
     inputId: 'Value for the `id` attribute on the `<input>` element.',
+    inputClassName: 'CSS class(es) to add to the `<input>` element.',
     inputName: 'Value for the `name` attribute on the `<input>` element.',
     inputPlaceholder: 'Value for the `placeholder` attribute on the `<input>` element.',
     inputType: 'Value for the `type` attribute on the `<input>` element.',
@@ -288,3 +293,5 @@ InputGroup.propDescriptions = {
     numberUpButtonProps: 'Additional props to be spread to the up `<button>` element (for inputType=\'number\').',
     searchButtonProps: 'Additional props to be spread to the `<button>` element.'
 };
+
+export default InputGroup;

@@ -10,11 +10,13 @@ import { DatePickerComponent } from '../DatePicker/DatePicker.Component';
 import { DropdownComponent } from '../Dropdown/Dropdown.Component';
 import { FormsComponent } from '../Forms/Forms.Component';
 import groupArray from 'group-array';
+import { Header } from './documentation/Header/Header';
 import { Home } from './documentation/Home/Home';
 import { IconComponent } from '../Icon/Icon.Component';
 import { IdentifierComponent } from '../Identifier/Identifier.Component';
 import { ImageComponent } from '../Image/Image.Component';
 import { InlineHelpComponent } from '../InlineHelp/InlineHelp.Component';
+import InputGroup from '../InputGroup/InputGroup';
 import { InputGroupComponent } from '../InputGroup/InputGroup.Component';
 import { ListGroupComponent } from '../ListGroup/ListGroup.Component';
 import { LocalizationEditorComponent } from '../LocalizationEditor/LocalizationEditor.Component';
@@ -24,7 +26,6 @@ import { MultiInputComponent } from '../MultiInput/MultiInput.Component';
 import { PaginationComponent } from '../Pagination/Pagination.Component';
 import { PanelComponent } from '../Panel/Panel.Component';
 import { PopoverComponent } from '../Popover/Popover.Component';
-import React from 'react';
 import { SearchInputComponent } from '../SearchInput/SearchInput.Component';
 import { ShellbarComponent } from '../Shellbar/Shellbar.Component';
 import { SideNavigationComponent } from '../SideNavigation/SideNavigation.Component';
@@ -36,8 +37,9 @@ import { TimeComponent } from '../Time/Time.Component';
 import { TimePickerComponent } from '../TimePicker/TimePicker.Component';
 import { ToggleComponent } from '../Toggle/Toggle.Component';
 import { TokenComponent } from '../Token/Token.Component';
-import { TreeComponent } from '../Tree/Tree.Component';
-import { BrowserRouter, NavLink, Redirect, Route, Switch } from 'react-router-dom';
+import { TreeViewComponent } from '../TreeView/TreeView.Component';
+import { BrowserRouter, Link, NavLink, Redirect, Route, Switch } from 'react-router-dom';
+import React, { Component } from 'react';
 
 const sections = [
     {
@@ -56,7 +58,8 @@ const routes = [
         name: 'Home',
         component: Home,
         section: 'Getting Started',
-        sortOrder: 1 // this one should always come first
+        sortOrder: 1, // this one should always come first
+        omitSearch: true //should not be filtered for search
     },
     {
         url: '/actionBar',
@@ -246,7 +249,7 @@ const routes = [
     },
     {
         url: '/timepicker',
-        name: 'TimePicker',
+        name: 'Time Picker',
         component: TimePickerComponent,
         section: 'Components'
     },
@@ -263,66 +266,103 @@ const routes = [
         section: 'Components'
     },
     {
-        url: '/tree',
-        name: 'Tree',
-        component: TreeComponent,
+        url: '/treeview',
+        name: 'Tree View',
+        component: TreeViewComponent,
         section: 'Components'
     }
 ];
 
-export const Routes = () => {
-    let sectionRoutes;
-    const groupedRoutes = groupArray(routes, 'section');
+const RouteNotFound = () => (
+    <div>
+        <Header>Sorry, page not found.</Header>
+        <Link to=''>Home</Link>
+    </div>
+);
 
-    const navItems = sections.sort(sortBy('sortOrder', 'name')).map(section => {
-        if (!groupedRoutes[section.name]) {
-            return;
-        }
+export class Routes extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            query: '',
+            filteredItems: routes
+        };
+    }
 
-        sectionRoutes = groupedRoutes[section.name].sort(sortBy('sortOrder', 'name'));
+    onChangeHandler = (event) => {
+        let searchResults = routes.filter((navItem) => {
+            return navItem.omitSearch ? navItem : navItem.name.toLowerCase().includes(event.target.value.toLowerCase());
+        });
+        this.setState({
+            query: event.target.value,
+            filteredItems: [...searchResults]
+        });
+    };
+
+    render() {
+        let sectionRoutes;
+        const groupedRoutes = groupArray(this.state.filteredItems, 'section');
+
+        let navItems = sections.sort(sortBy('sortOrder', 'name')).map(section => {
+            if (!groupedRoutes[section.name]) {
+                return;
+            }
+
+            sectionRoutes = groupedRoutes[section.name].sort(sortBy('sortOrder', 'name'));
+            return (
+                <ul className='frDocs-Nav__list' key={section.name}>
+                    <li className='frDocs-Nav__headers'>{section.name}</li>
+                    {sectionRoutes.map(route => (
+                        <li key={route.name}>
+                            <NavLink
+                                activeClassName='frDocs-Nav__item--active'
+                                className='frDocs-Nav__item'
+                                key={route.url}
+                                to={{ pathname: route.url }}>
+                                {route.name}
+                            </NavLink>
+                        </li>
+                    ))}
+                </ul>
+            );
+        });
+
         return (
-            <ul className='frDocs-Nav__list' key={section.name}>
-                <li className='frDocs-Nav__headers'>{section.name}</li>
-                {sectionRoutes.map(route => (
-                    <li key={route.name}>
-                        <NavLink
-                            activeClassName='frDocs-Nav__item--active'
-                            className='frDocs-Nav__item'
-                            key={route.url}
-                            to={{ pathname: route.url }}>
-                            {route.name}
-                        </NavLink>
-                    </li>
-                ))}
-            </ul>
+            <BrowserRouter basename={process.env.PUBLIC_URL}>
+                <div className='frDocs-Container'>
+                    <div className='frDocs-Sidebar'>
+                        <h1 className='frDocs-Logo'>
+                            <a href='/'>Fundamental <span className='frDocs-Logo--library'>React</span></a>
+                        </h1>
+                        <div className='frDocs-Search'>
+                            <InputGroup
+                                inputPlaceholder='Search'
+                                inputType='search'
+                                inputValue={this.state.query}
+                                onChange={this.onChangeHandler} />
+                        </div>
+                        <nav className='frDocs-Nav'>
+                            {navItems}
+                        </nav>
+                    </div>
+                    <div className='frDocs-Content'>
+                        <Switch>
+                            {routes.map(route => {
+                                return (
+                                    <Route
+                                        component={route.component}
+                                        exact
+                                        key={route.url}
+                                        path={route.url} />
+                                );
+                            })}
+                            <Redirect exact from=''
+                                to='/home' />
+                            <Route component={RouteNotFound} />
+                        </Switch>
+                    </div>
+                </div>
+            </BrowserRouter>
         );
-    });
-
-    return (
-        <BrowserRouter basename={process.env.PUBLIC_URL}>
-            <div className='frDocs-Container'>
-                <div className='frDocs-Sidebar'>
-                    <h1 className='frDocs-Logo'>FUNDAMENTAL REACT</h1>
-                    <nav className='frDocs-Nav'>
-                        {navItems}
-                    </nav>
-                </div>
-                <div className='frDocs-Content'>
-                    <Switch>
-                        {routes.map(route => {
-                            return (
-                                <Route
-                                    component={route.component}
-                                    exact
-                                    key={route.url}
-                                    path={route.url} />
-                            );
-                        })}
-                        <Redirect exact from=''
-                            to='/home' />
-                    </Switch>
-                </div>
-            </div>
-        </BrowserRouter>
-    );
-};
+    }
+}

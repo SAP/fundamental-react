@@ -1,7 +1,17 @@
+import FormFieldset from './FormFieldset';
+import FormInput from './FormInput';
+import FormItem from './FormItem';
+import FormLabel from './FormLabel';
+import FormLegend from './FormLegend';
+import FormMessage from './FormMessage';
+import FormRadioGroup from './FormRadioGroup';
+import FormRadioItem from './FormRadioItem';
+import FormSelect from './FormSelect';
+import FormSet from './FormSet';
+import FormTextarea from './FormTextarea';
 import { mount } from 'enzyme';
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { FormFieldset, FormInput, FormItem, FormLabel, FormLegend, FormMessage, FormRadio, FormSelect, FormSet, FormTextarea } from './Forms';
 
 describe('<Forms />', () => {
     const formInput = (
@@ -50,101 +60,105 @@ describe('<Forms />', () => {
     const formFieldSet = (
         <FormFieldset>
             <FormLegend className='blue'>Radio buttons</FormLegend>
-            <FormRadio
-                className='blue'
-                defaultChecked='radio-2'
-                inputs={[
-                    {
-                        id: 'radio-1',
-                        name: 'radio-1',
-                        value: 'radio-1',
-                        label: 'Option 1'
-                    },
-                    {
-                        id: 'radio-2',
-                        name: 'radio-2',
-                        value: 'radio-2',
-                        label: 'Option 2'
-                    },
-                    {
-                        id: 'radio-3',
-                        name: 'radio-3',
-                        value: 'radio-3',
-                        label: 'Option 3'
-                    }
-                ]} />
+            <FormRadioGroup
+                className='blue'>
+                <FormRadioItem
+                    id='radio-1'
+                    name='radio-group-1'
+                    value='radio-1'>
+                    Option 1
+                </FormRadioItem>
+                <FormRadioItem
+                    checked
+                    id='radio-2'
+                    name='radio-group-1'
+                    value='radio-2'>
+                    Option 2
+                </FormRadioItem>
+                <FormRadioItem
+                    id='radio-3'
+                    name='radio-group-1'
+                    value='radio-3'>
+                    Option 3
+                </FormRadioItem>
+            </FormRadioGroup>
             <FormLegend legendText='Radio buttons disabled' />
-            <FormRadio
-                defaultChecked='radio-4'
-                disabled
-                inputs={[
-                    {
-                        id: 'radio-4',
-                        name: 'radio-4',
-                        value: 'radio-4',
-                        label: 'Option 1'
-                    },
-                    {
-                        id: 'radio-5',
-                        name: 'radio-5',
-                        value: 'radio-5',
-                        label: 'Option 2'
-                    },
-                    {
-                        id: 'radio-6',
-                        name: 'radio-6',
-                        value: 'radio-6',
-                        label: 'Option 3'
-                    }
-                ]}
-                isInline />
+            <FormRadioGroup
+                className='blue'
+                inline>
+                <FormRadioItem
+                    checked
+                    disabled
+                    id='radio-4'
+                    name='radio-group-2'
+                    value='radio-4'>
+                    Option 1
+                </FormRadioItem>
+                <FormRadioItem
+                    disabled
+                    id='radio-5'
+                    name='radio-group-2'
+                    value='radio-5'>
+                    Option 2
+                </FormRadioItem>
+                <FormRadioItem
+                    disabled
+                    id='radio-6'
+                    name='radio-group-2'
+                    value='radio-6'>
+                    Option 3
+                </FormRadioItem>
+            </FormRadioGroup>
             <FormLegend legendText='Inline Radio buttons' />
-            <FormRadio
-                defaultChecked='radio-9'
-                inputs={[
-                    {
-                        id: 'radio-7',
-                        name: 'radio-7',
-                        value: 'radio-7',
-                        label: 'Option 1'
-                    },
-                    {
-                        id: 'radio-8',
-                        name: 'radio-8',
-                        value: 'radio-8',
-                        label: 'Option 2'
-                    },
-                    {
-                        id: 'radio-9',
-                        name: 'radio-9',
-                        value: 'radio-9',
-                        label: 'Option 3'
-                    }
-                ]}
-                isInline />
-            <FormRadio
-                defaultChecked='radio-9'
-                disabled
-                inputs={[
-                    {
-                        id: 'radio-7',
-                        name: 'radio-7',
-                        value: 'radio-7',
-                        label: 'Option 1'
-                    },
-                    {
-                        id: 'radio-8',
-                        name: 'radio-8',
-                        value: 'radio-8',
-                        label: 'Option 2'
-                    },
-                    {
-                        id: 'radio-9',
-                        name: 'radio-9',
-                        value: 'radio-9',
-                        label: 'Option 3'
-                    }
-                ]} />
+            <FormRadioGroup
+                className='blue'
+                inline>
+                <FormRadioItem
+                    id='radio-7'
+                    name='radio-group-3'
+                    value='radio-7'>
+                    Option 1
+                </FormRadioItem>
+                <FormRadioItem
+                    id='radio-8'
+                    name='radio-group-3'
+                    value='radio-8'>
+                    Option 2
+                </FormRadioItem>
+                <FormRadioItem
+                    checked
+                    id='radio-9'
+                    name='radio-group-3'
+                    value='radio-9'>
+                    Option 3
+                </FormRadioItem>
+            </FormRadioGroup>
+            <FormRadioGroup
+                className='blue'
+                inline>
+                <FormRadioItem
+                    disabled
+                    id='radio-7'
+                    name='radio-group-4'
+                    value='radio-7'>
+                    Option 1
+                </FormRadioItem>
+                <FormRadioItem
+                    disabled
+                    id='radio-8'
+                    name='radio-group-4'
+                    value='radio-8'>
+                    Option 2
+                </FormRadioItem>
+                <FormRadioItem
+                    checked
+                    disabled
+                    id='radio-9'
+                    name='radio-group-4'
+                    value='radio-9'>
+                    Option 3
+                </FormRadioItem>
+            </FormRadioGroup>
             <FormLegend legendText='Checkboxes' />
             <FormItem className='blue' isCheck>
                 <FormInput
@@ -175,57 +189,29 @@ describe('<Forms />', () => {
     const formFieldSetWithClass = (
         <FormFieldset className='blue'>
             <FormLegend className='blue'>Radio buttons</FormLegend>
-            <FormRadio
-                className='blue'
-                defaultChecked='radio-2'
-                inputs={[
-                    {
-                        id: 'radio-1',
-                        name: 'radio-1',
-                        value: 'radio-1',
-                        label: 'Option 1'
-                    },
-                    {
-                        id: 'radio-2',
-                        name: 'radio-2',
-                        value: 'radio-2',
-                        label: 'Option 2'
-                    },
-                    {
-                        id: 'radio-3',
-                        name: 'radio-3',
-                        value: 'radio-3',
-                        label: 'Option 3'
-                    }
-                ]} />
+            <FormRadioGroup
+                className='blue'>
+                <FormRadioItem
+                    id='radio-1'
+                    name='radio-group-5'
+                    value='radio-1'>
+                    Option 1
+                </FormRadioItem>
+                <FormRadioItem
+                    checked
+                    id='radio-2'
+                    name='radio-group-5'
+                    value='radio-2'>
+                    Option 2
+                </FormRadioItem>
+                <FormRadioItem
+                    id='radio-3'
+                    name='radio-group-5'
+                    value='radio-3'>
+                    Option 3
+                </FormRadioItem>
+            </FormRadioGroup>
         </FormFieldset>
-    );
-
-    const radioInputs = [
-        {
-            id: 'radio-1',
-            name: 'radio-1',
-            value: 'radio-1',
-            label: 'Option 1'
-        },
-        {
-            id: 'radio-2',
-            name: 'radio-2',
-            value: 'radio-2',
-            label: 'Option 2'
-        },
-        {
-            id: 'radio-3',
-            name: 'radio-3',
-            value: 'radio-3',
-            label: 'Option 3'
-        }
-    ];
-
-    const formRadio = (
-        <FormRadio
-            defaultChecked='radio-2'
-            inputs={radioInputs} />
     );
 
     test('create form item', () => {
@@ -234,7 +220,7 @@ describe('<Forms />', () => {
         let tree = component.toJSON();
         expect(tree).toMatchSnapshot();
 
-        // create form ield set with form inputs
+        //create form ield set with form inputs
         component = renderer.create(formSetWithClass);
         tree = component.toJSON();
         expect(tree).toMatchSnapshot();
@@ -248,18 +234,6 @@ describe('<Forms />', () => {
         component = renderer.create(formFieldSet);
         tree = component.toJSON();
         expect(tree).toMatchSnapshot();
-    });
-
-    test('change selected radio', () => {
-        const wrapper = mount(formRadio);
-        expect(wrapper.state('selectedItem')).toBe('radio-2');
-
-        wrapper
-            .find('input.fd-form__control[type="radio"]')
-            .at(0)
-            .simulate('change', { currentTarget: { value: 'radio-1' } });
-
-        expect(wrapper.state('selectedItem')).toBe('radio-1');
     });
 
     describe('Prop spreading', () => {
@@ -311,30 +285,12 @@ describe('<Forms />', () => {
             ).toBe('Sample');
         });
 
-        xtest('should allow props to be spread to the FormRadio component', () => {
-            // TODO: placeholder for this test description once that functionality is built
-            const element = mount(<FormRadio data-sample='Sample' inputs={radioInputs} />);
-
-            expect(
-                element.getDOMNode().attributes['data-sample'].value
-            ).toBe('Sample');
-        });
-
         xtest('should allow props to be spread to the FormRadio component\'s input element', () => {
             // TODO: placeholder for this test description once that functionality is built
         });
 
         xtest('should allow props to be spread to the FormRadio component\'s label element', () => {
             // TODO: placeholder for this test description once that functionality is built
-        });
-
-        xtest('should allow props to be spread to the FormRadio component for isInline', () => {
-            // TODO: placeholder for this test description once that functionality is built
-            const element = mount(<FormRadio data-sample='Sample' isInline />);
-
-            expect(
-                element.getDOMNode().attributes['data-sample'].value
-            ).toBe('Sample');
         });
 
         xtest('should allow props to be spread to the FormRadio component\'s input element for IsInline', () => {
@@ -363,6 +319,122 @@ describe('<Forms />', () => {
 
         test('should allow props to be spread to the FormTextarea component', () => {
             const element = mount(<FormTextarea data-sample='Sample' />);
+
+            expect(
+                element.getDOMNode().attributes['data-sample'].value
+            ).toBe('Sample');
+        });
+    });
+
+    describe('Radio Item Tests', () => {
+        let setup = (props) => {
+            return mount(<FormRadioItem {...props}>
+                Label 1
+            </FormRadioItem>);
+        };
+        test('should add checked attribute when checked is passed to FormRadioItem', () => {
+            let element = setup({
+                checked: true,
+                onChange: () => {}
+            });
+
+            expect(element.props().checked).toBe(true);
+        });
+
+        test('should add checked attribute when defaultChecked is passed to FormRadioItem', () => {
+            let element = setup({
+                defaultChecked: true,
+                onChange: () => {}
+            });
+
+            expect(element.props().defaultChecked).toBe(true);
+        });
+
+        test('should set disabled to true when passed', () => {
+            let element = setup({
+                disabled: true
+            });
+
+            expect(element.props().disabled).toBe(true);
+        });
+
+        test('should add inline class when inline is passed', () => {
+            let element = setup({
+                inline: true
+            });
+
+            expect(element.find('div').hasClass('fd-form__item--inline')).toBe(true);
+        });
+
+        test('should trigger onChange FormRadioItem is clicked', () => {
+            let mockCallback = jest.fn();
+            let element = setup({
+                onChange: mockCallback
+            });
+
+            element
+                .find('input.fd-form__control[type="radio"]')
+                .at(0)
+                .simulate('change', { currentTarget: { value: 'radio-1' } });
+
+            expect(mockCallback.mock.calls.length).toBe(1);
+        });
+
+        test('should allow props to be spread to the FormRadioItem component', () => {
+            // TODO: placeholder for this test description once that functionality is built
+            const element = mount(<FormRadioItem data-sample='Sample'>Label</FormRadioItem>);
+
+            expect(
+                element.find('input').getDOMNode().attributes['data-sample'].value
+            ).toBe('Sample');
+        });
+    });
+
+    describe('Radio Group Tests', () => {
+        let setup = (props) => {
+            return mount(<FormRadioGroup {...props}>
+                <FormRadioItem>Option 1</FormRadioItem>
+                <FormRadioItem>Option 2</FormRadioItem>
+            </FormRadioGroup>);
+        };
+
+        test('should add disabled attribute to all children when disabled is passed', () => {
+            let element = setup({
+                disabled: true
+            });
+
+            let attributes = element.find('FormRadioItem').map(item => item.props().disabled);
+
+            expect(attributes).toEqual([true, true]);
+        });
+
+        test('should add inline class to all children when inline is passed', () => {
+            let element = setup({
+                inline: true
+            });
+
+            let attributes = element.find('FormRadioItem').map(item => item.props().inline);
+
+            expect(attributes).toEqual([true, true]);
+        });
+
+        test('should trigger onChange from FormRadioGroup when FormRadioItem is clicked', () => {
+            let mockCallback = jest.fn();
+            let element = setup({
+                onChange: mockCallback
+            });
+
+            element
+                .find('input.fd-form__control[type="radio"]')
+                .at(0)
+                .simulate('change', { currentTarget: { value: 'radio-1' } });
+
+            expect(mockCallback.mock.calls.length).toBe(1);
+        });
+
+        test('should allow props to be spread to the FormRadioGroup component', () => {
+            // TODO: placeholder for this test description once that functionality is built
+            const element = mount(<FormRadioGroup data-sample='Sample' />);
 
             expect(
                 element.getDOMNode().attributes['data-sample'].value

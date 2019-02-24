@@ -1,8 +1,8 @@
-import { Button } from '../Button/Button';
+import { Button } from '../';
+import InputGroup from './InputGroup';
 import { mount } from 'enzyme';
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { FormGroup, InputGroup } from './InputGroup';
 
 describe('<InputGroup />', () => {
     const inputTextPosBefore = (
@@ -107,7 +107,42 @@ describe('<InputGroup />', () => {
             inputType='text'
             inputValue='1234567890' />
     );
-    const formGroup = <FormGroup>{inputTextPosAfter}</FormGroup>;
+
+    const numberInputWithCustomClassName = (
+        <InputGroup
+            className='custom-div-class-search'
+            inputClassName='custom-input-class-search'
+            inputType='number'
+            inputValue={100} />
+    );
+
+    const searchInputWithCustomClassName = (
+        <InputGroup
+            className='custom-div-class-number'
+            inputClassName='custom-input-class-number'
+            inputPlaceholder='Search'
+            inputType='search' />
+    );
+
+    const beforeInputWithCustomClassName = (
+        <InputGroup
+            addon='$'
+            addonPos='before'
+            className='custom-div-class-before'
+            inputClassName='custom-input-class-before'
+            inputType='text'
+            inputValue='1234567890' />
+    );
+
+    const afterInputWithCustomClassName = (
+        <InputGroup
+            addon='€'
+            addonPos='after'
+            className='custom-div-class-after'
+            inputClassName='custom-input-class-after'
+            inputType='text'
+            inputValue='1234567890' />
+    );
 
     test('create input group items', () => {
         // create input text before
@@ -185,8 +220,23 @@ describe('<InputGroup />', () => {
         tree = component.toJSON();
         expect(tree).toMatchSnapshot();
 
-        // create form group
-        component = renderer.create(formGroup);
+        // number input with group custom class name
+        component = renderer.create(numberInputWithCustomClassName);
+        tree = component.toJSON();
+        expect(tree).toMatchSnapshot();
+
+        // search input with group custom class name
+        component = renderer.create(searchInputWithCustomClassName);
+        tree = component.toJSON();
+        expect(tree).toMatchSnapshot();
+
+        // before-class input with group custom class name
+        component = renderer.create(beforeInputWithCustomClassName);
+        tree = component.toJSON();
+        expect(tree).toMatchSnapshot();
+
+        // after-class input with group custom class name
+        component = renderer.create(afterInputWithCustomClassName);
         tree = component.toJSON();
         expect(tree).toMatchSnapshot();
 
@@ -194,6 +244,7 @@ describe('<InputGroup />', () => {
         component = renderer.create('<InputGroup />');
         tree = component.toJSON();
         expect(tree).toMatchSnapshot();
+
     });
 
     test('input text entered', () => {
@@ -332,14 +383,6 @@ describe('<InputGroup />', () => {
 
             expect(
                 element.find('button').getDOMNode().attributes['data-sample'].value
-            ).toBe('Sample');
-        });
-
-        test('should allow props to be spread to the FormGroup component', () => {
-            const element = mount(<FormGroup data-sample='Sample' />);
-
-            expect(
-                element.getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
         });
     });
