@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 
-const CLOCK = ['am', 'pm'];
+export const CLOCK = ['am', 'pm'];
 const INVALID = 'is-invalid';
 const VALID = 'fd-input';
 

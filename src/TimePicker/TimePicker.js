@@ -1,10 +1,8 @@
 import { Popover } from '../Popover/Popover';
 import PropTypes from 'prop-types';
 import { Time } from '../Time/Time';
-import TimePickerItem from './_TimePickerItem';
 import React, { Component } from 'react';
-
-const CLOCK = ['am', 'pm'];
+import TimePickerItem, { CLOCK } from './_TimePickerItem';
 
 class TimePicker extends Component {
     constructor(props) {
