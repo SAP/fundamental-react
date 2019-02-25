@@ -49,7 +49,7 @@ export { ProductTile } from './Tile/Tile';
 export { ProductTileContent } from './Tile/Tile';
 export { ProductTileMedia } from './Tile/Tile';
 export { SearchInput } from './SearchInput/SearchInput';
-export { SideNav, SideNavList, SideNavListItem } from './SideNavigation/SideNavigation';
+export { default as SideNav } from './SideNavigation/SideNavigation';
 export { Tab } from './Tabs/Tab';
 export { TabGroup } from './Tabs/TabGroup';
 export { Table } from './Table/Table';
