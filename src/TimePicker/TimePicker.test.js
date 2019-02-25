@@ -1,7 +1,7 @@
 import { mount } from 'enzyme';
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { TimePicker } from './TimePicker';
+import TimePicker from './TimePicker';
 
 describe('<TimePicker />', () => {
     const defaultTimePicker = <TimePicker id='myTime' />;
