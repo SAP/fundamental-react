@@ -2,8 +2,11 @@ import classnames from 'classnames';
 import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import PropTypes from 'prop-types';
 import React from 'react';
+import TileActions from './_TileActions';
+import TileContent from './_TileContent';
+import TileMedia from './_TileMedia';
 
-export const Tile = props => {
+const Tile = props => {
     const {
         disabled,
         rowSpan,
@@ -35,6 +38,7 @@ export const Tile = props => {
         </div>
     );
 };
+
 Tile.displayName = 'Tile';
 
 Tile.propTypes = {
@@ -53,164 +57,8 @@ Tile.propDescriptions = {
     rowSpan: 'Number of rows the tile covers.'
 };
 
-export const TileContent = props => {
-    const { title, children, className, titleProps, ...rest } = props;
+Tile.Actions = TileActions;
+Tile.Content = TileContent;
+Tile.Media = TileMedia;
 
-    const tileContentClasses = classnames(
-        'fd-tile__content',
-        className
-    );
-
-    return (
-        <div {...rest} className={tileContentClasses}>
-            <h2 {...titleProps} className='fd-tile__title'>{title}</h2>
-            {children}
-        </div>
-    );
-};
-TileContent.displayName = 'TileContent';
-
-TileContent.propTypes = {
-    title: PropTypes.string.isRequired,
-    className: PropTypes.string,
-    titleProps: PropTypes.object
-};
-
-export const TileMedia = props => {
-    const { children, className, ...rest } = props;
-
-    const tileMediaClasses = classnames(
-        'fd-tile__media',
-        className
-    );
-
-    return <div {...rest} className={tileMediaClasses}>{children}</div>;
-};
-TileMedia.displayName = 'TileMedia';
-
-TileMedia.propTypes = {
-    children: PropTypes.node,
-    className: PropTypes.string
-};
-
-export const TileActions = props => {
-    const { children, className, ...rest } = props;
-
-    const tileActionsClasses = classnames(
-        'fd-tile__actions',
-        className
-    );
-
-    return <div {...rest} className={tileActionsClasses}>{children}</div>;
-};
-TileActions.displayName = 'TileActions';
-
-TileActions.propTypes = {
-    children: PropTypes.node,
-    className: PropTypes.string
-};
-
-export const ProductTile = props => {
-    const { disabled, children, className, ...rest } = props;
-
-    const tileProductClasses = classnames(
-        'fd-product-tile',
-        {
-            'is-disabled': disabled
-        },
-        className
-    );
-
-    return (
-        <div
-            {...rest}
-            className={tileProductClasses}>
-            {children}
-        </div>
-    );
-};
-ProductTile.displayName = 'ProductTile';
-
-ProductTile.propTypes = {
-    children: PropTypes.node,
-    className: PropTypes.string,
-    disabled: PropTypes.bool
-};
-
-export const ProductTileContent = props => {
-    const { title, children, className, titleProps, ...rest } = props;
-
-    const tileProductContentClasses = classnames(
-        'fd-product-tile__content',
-        className
-    );
-
-    return (
-        <div {...rest} className={tileProductContentClasses}>
-            <h2 {...titleProps} className='fd-product-tile__title'>{title}</h2>
-            {children}
-        </div>
-    );
-};
-ProductTileContent.displayName = 'ProductTileContent';
-
-ProductTileContent.propTypes = {
-    className: PropTypes.string,
-    title: PropTypes.string,
-    titleProps: PropTypes.object
-};
-
-export const ProductTileMedia = props => {
-    const { image, className, ...rest } = props;
-
-    const tileProductMediaClasses = classnames(
-        'fd-product-tile__media',
-        className
-    );
-
-    return (
-        <div
-            {...rest}
-            className={tileProductMediaClasses}
-            style={{ backgroundImage: 'url(' + image + ')' }} />
-    );
-};
-ProductTileMedia.displayName = 'ProductTileMedia';
-
-ProductTileMedia.propTypes = {
-    image: PropTypes.string.isRequired,
-    className: PropTypes.string
-};
-
-ProductTileMedia.propDescriptions = {
-    image: 'URL of the image.'
-};
-
-export const TileGrid = props => {
-    const { col, children, className, ...rest } = props;
-
-    const tileGridClasses = classnames(
-        'fd-tile-grid',
-        `fd-tile-grid--${col}col`,
-        className
-    );
-
-    return (
-        <div
-            {...rest}
-            className={tileGridClasses}>
-            {children}
-        </div>
-    );
-};
-TileGrid.displayName = 'TileGrid';
-
-TileGrid.propTypes = {
-    children: PropTypes.node,
-    className: PropTypes.string,
-    col: CustomPropTypes.range(1, 6)
-};
-
-TileGrid.defaultProps = {
-    col: 3
-};
+export default Tile;

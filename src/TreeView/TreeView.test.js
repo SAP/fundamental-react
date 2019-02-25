@@ -1,7 +1,7 @@
 import { mount } from 'enzyme';
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { Tree, TreeBranch, TreeCol, TreeHead, TreeItem, TreeRow, TreeView } from './TreeView';
+import TreeView from './TreeView';
 
 // mock shortid for snapshot testing
 jest.mock('shortid', () => {
@@ -15,171 +15,171 @@ jest.mock('shortid', () => {
 describe('<TreeView />', () => {
     const multiLevelTreeView = (
         <TreeView>
-            <TreeHead>
-                <TreeCol>Column Header 1</TreeCol>
-                <TreeCol>Column Header 2</TreeCol>
-                <TreeCol>Column Header 3</TreeCol>
-                <TreeCol>Column Header 4</TreeCol>
-            </TreeHead>
-            <Tree>
-                <TreeItem>
-                    <TreeRow>
-                        <TreeCol>First Level</TreeCol>
-                        <TreeCol>Data Col 2</TreeCol>
-                        <TreeCol>Data Col 3</TreeCol>
-                        <TreeCol>Data Col 4</TreeCol>
-                    </TreeRow>
-                    <TreeBranch>
-                        <TreeItem>
-                            <TreeRow>
-                                <TreeCol>Child 1</TreeCol>
-                                <TreeCol>Data Col 2</TreeCol>
-                                <TreeCol>Data Col 3</TreeCol>
-                                <TreeCol>Data Col 4</TreeCol>
-                            </TreeRow>
-                            <TreeBranch>
-                                <TreeItem>
-                                    <TreeRow>
-                                        <TreeCol>Grandchild 1</TreeCol>
-                                        <TreeCol>Data Col 2</TreeCol>
-                                        <TreeCol>Data Col 3</TreeCol>
-                                        <TreeCol>Data Col 4</TreeCol>
-                                    </TreeRow>
-                                    <TreeBranch>
-                                        <TreeItem>
-                                            <TreeRow>
-                                                <TreeCol>GreatGrandchild 1</TreeCol>
-                                                <TreeCol>Data Col 2</TreeCol>
-                                                <TreeCol>Data Col 3</TreeCol>
-                                                <TreeCol>Data Col 4</TreeCol>
-                                            </TreeRow>
-                                        </TreeItem>
-                                    </TreeBranch>
-                                </TreeItem>
-                            </TreeBranch>
-                        </TreeItem>
-                        <TreeItem>
-                            <TreeRow>
-                                <TreeCol>Child 2</TreeCol>
-                                <TreeCol>Data Col 2</TreeCol>
-                                <TreeCol>Data Col 3</TreeCol>
-                                <TreeCol>Data Col 4</TreeCol>
-                            </TreeRow>
-                        </TreeItem>
-                    </TreeBranch>
-                </TreeItem>
-                <TreeItem>
-                    <TreeRow>
-                        <TreeCol>Row 2</TreeCol>
-                        <TreeCol>Data Col 2</TreeCol>
-                        <TreeCol>Data Col 3</TreeCol>
-                        <TreeCol>Data Col 4</TreeCol>
-                    </TreeRow>
-                    <TreeBranch>
-                        <TreeItem>
-                            <TreeRow>
-                                <TreeCol>Child 1</TreeCol>
-                                <TreeCol>Data Col 2</TreeCol>
-                                <TreeCol>Data Col 3</TreeCol>
-                                <TreeCol>Data Col 4</TreeCol>
-                            </TreeRow>
-                        </TreeItem>
-                        <TreeItem>
-                            <TreeRow>
-                                <TreeCol>Child 2</TreeCol>
-                                <TreeCol>Data Col 2</TreeCol>
-                                <TreeCol>Data Col 3</TreeCol>
-                                <TreeCol>Data Col 4</TreeCol>
-                            </TreeRow>
-                        </TreeItem>
-                    </TreeBranch>
-                </TreeItem>
-                <TreeItem>
-                    <TreeRow>
-                        <TreeCol>Row 3</TreeCol>
-                        <TreeCol>Data Col 2</TreeCol>
-                        <TreeCol>Data Col 3</TreeCol>
-                        <TreeCol>Data Col 4</TreeCol>
-                    </TreeRow>
-                </TreeItem>
-                <TreeItem>
-                    <TreeRow>
-                        <TreeCol><a href='http://me.com' /></TreeCol>
-                        <TreeCol>Data Col 2</TreeCol>
-                        <TreeCol>Data Col 3</TreeCol>
-                        <TreeCol>Data Col 4</TreeCol>
-                    </TreeRow>
-                    <TreeBranch>
-                        <TreeItem>
-                            <TreeRow>
-                                <TreeCol>Child 1</TreeCol>
-                                <TreeCol>Data Col 2</TreeCol>
-                                <TreeCol>Data Col 3</TreeCol>
-                                <TreeCol>Data Col 4</TreeCol>
-                            </TreeRow>
-                        </TreeItem>
-                    </TreeBranch>
-                </TreeItem>
-            </Tree>
+            <TreeView.Head>
+                <TreeView.Col>Column Header 1</TreeView.Col>
+                <TreeView.Col>Column Header 2</TreeView.Col>
+                <TreeView.Col>Column Header 3</TreeView.Col>
+                <TreeView.Col>Column Header 4</TreeView.Col>
+            </TreeView.Head>
+            <TreeView.Tree>
+                <TreeView.Item>
+                    <TreeView.Row>
+                        <TreeView.Col>First Level</TreeView.Col>
+                        <TreeView.Col>Data Col 2</TreeView.Col>
+                        <TreeView.Col>Data Col 3</TreeView.Col>
+                        <TreeView.Col>Data Col 4</TreeView.Col>
+                    </TreeView.Row>
+                    <TreeView.Branch>
+                        <TreeView.Item>
+                            <TreeView.Row>
+                                <TreeView.Col>Child 1</TreeView.Col>
+                                <TreeView.Col>Data Col 2</TreeView.Col>
+                                <TreeView.Col>Data Col 3</TreeView.Col>
+                                <TreeView.Col>Data Col 4</TreeView.Col>
+                            </TreeView.Row>
+                            <TreeView.Branch>
+                                <TreeView.Item>
+                                    <TreeView.Row>
+                                        <TreeView.Col>Grandchild 1</TreeView.Col>
+                                        <TreeView.Col>Data Col 2</TreeView.Col>
+                                        <TreeView.Col>Data Col 3</TreeView.Col>
+                                        <TreeView.Col>Data Col 4</TreeView.Col>
+                                    </TreeView.Row>
+                                    <TreeView.Branch>
+                                        <TreeView.Item>
+                                            <TreeView.Row>
+                                                <TreeView.Col>GreatGrandchild 1</TreeView.Col>
+                                                <TreeView.Col>Data Col 2</TreeView.Col>
+                                                <TreeView.Col>Data Col 3</TreeView.Col>
+                                                <TreeView.Col>Data Col 4</TreeView.Col>
+                                            </TreeView.Row>
+                                        </TreeView.Item>
+                                    </TreeView.Branch>
+                                </TreeView.Item>
+                            </TreeView.Branch>
+                        </TreeView.Item>
+                        <TreeView.Item>
+                            <TreeView.Row>
+                                <TreeView.Col>Child 2</TreeView.Col>
+                                <TreeView.Col>Data Col 2</TreeView.Col>
+                                <TreeView.Col>Data Col 3</TreeView.Col>
+                                <TreeView.Col>Data Col 4</TreeView.Col>
+                            </TreeView.Row>
+                        </TreeView.Item>
+                    </TreeView.Branch>
+                </TreeView.Item>
+                <TreeView.Item>
+                    <TreeView.Row>
+                        <TreeView.Col>Row 2</TreeView.Col>
+                        <TreeView.Col>Data Col 2</TreeView.Col>
+                        <TreeView.Col>Data Col 3</TreeView.Col>
+                        <TreeView.Col>Data Col 4</TreeView.Col>
+                    </TreeView.Row>
+                    <TreeView.Branch>
+                        <TreeView.Item>
+                            <TreeView.Row>
+                                <TreeView.Col>Child 1</TreeView.Col>
+                                <TreeView.Col>Data Col 2</TreeView.Col>
+                                <TreeView.Col>Data Col 3</TreeView.Col>
+                                <TreeView.Col>Data Col 4</TreeView.Col>
+                            </TreeView.Row>
+                        </TreeView.Item>
+                        <TreeView.Item>
+                            <TreeView.Row>
+                                <TreeView.Col>Child 2</TreeView.Col>
+                                <TreeView.Col>Data Col 2</TreeView.Col>
+                                <TreeView.Col>Data Col 3</TreeView.Col>
+                                <TreeView.Col>Data Col 4</TreeView.Col>
+                            </TreeView.Row>
+                        </TreeView.Item>
+                    </TreeView.Branch>
+                </TreeView.Item>
+                <TreeView.Item>
+                    <TreeView.Row>
+                        <TreeView.Col>Row 3</TreeView.Col>
+                        <TreeView.Col>Data Col 2</TreeView.Col>
+                        <TreeView.Col>Data Col 3</TreeView.Col>
+                        <TreeView.Col>Data Col 4</TreeView.Col>
+                    </TreeView.Row>
+                </TreeView.Item>
+                <TreeView.Item>
+                    <TreeView.Row>
+                        <TreeView.Col><a href='http://me.com' /></TreeView.Col>
+                        <TreeView.Col>Data Col 2</TreeView.Col>
+                        <TreeView.Col>Data Col 3</TreeView.Col>
+                        <TreeView.Col>Data Col 4</TreeView.Col>
+                    </TreeView.Row>
+                    <TreeView.Branch>
+                        <TreeView.Item>
+                            <TreeView.Row>
+                                <TreeView.Col>Child 1</TreeView.Col>
+                                <TreeView.Col>Data Col 2</TreeView.Col>
+                                <TreeView.Col>Data Col 3</TreeView.Col>
+                                <TreeView.Col>Data Col 4</TreeView.Col>
+                            </TreeView.Row>
+                        </TreeView.Item>
+                    </TreeView.Branch>
+                </TreeView.Item>
+            </TreeView.Tree>
         </TreeView>
     );
 
     const richTreeView = (
         <TreeView>
-            <TreeHead>
-                <TreeCol>Column Header 1</TreeCol>
-                <TreeCol>Column Header 2</TreeCol>
-                <TreeCol>Column Header 3</TreeCol>
-                <TreeCol>Column Header 4</TreeCol>
-            </TreeHead>
-            <Tree>
-                <TreeItem>
-                    <TreeRow>
-                        <TreeCol>First Level</TreeCol>
-                    </TreeRow>
-                    <TreeBranch>
-                        <TreeItem>
-                            <TreeRow>
-                                <TreeCol><a href='http://me.com'>First Level</a></TreeCol>
-                                <TreeCol />
-                                <TreeCol />
-                                <TreeCol />
-                            </TreeRow>
-                            <TreeBranch>
-                                <TreeItem>
-                                    <TreeRow>
-                                        <TreeCol><a href='http://amazon.com'>Amazon</a></TreeCol>
-                                        <TreeCol><a href='http://google.com'>Google</a></TreeCol>
-                                        <TreeCol><a href='http://bing.com'>Bing</a></TreeCol>
-                                        <TreeCol><a href='http://yahoo.com'>Yahoo</a></TreeCol>
-                                        <TreeCol><a href='http://sap.com'>SAP</a></TreeCol>
-                                    </TreeRow>
-                                </TreeItem>
-                                <TreeItem>
-                                    <TreeRow>
-                                        <TreeCol><a href='http://amazon.com'>Amazon</a></TreeCol>
-                                    </TreeRow>
-                                </TreeItem>
-                            </TreeBranch>
-                        </TreeItem>
-                        <TreeItem>
-                            <TreeRow>
-                                <TreeCol>Second Level</TreeCol>
-                                <TreeCol />
-                                <TreeCol />
-                                <TreeCol />
-                            </TreeRow>
-                            <TreeBranch>
-                                <TreeItem>
-                                    <TreeRow>
-                                        <TreeCol><a href='http://amazon.com'>Amazon</a></TreeCol>
-                                    </TreeRow>
-                                </TreeItem>
-                            </TreeBranch>
-                        </TreeItem>
-                    </TreeBranch>
-                </TreeItem>
-            </Tree>
+            <TreeView.Head>
+                <TreeView.Col>Column Header 1</TreeView.Col>
+                <TreeView.Col>Column Header 2</TreeView.Col>
+                <TreeView.Col>Column Header 3</TreeView.Col>
+                <TreeView.Col>Column Header 4</TreeView.Col>
+            </TreeView.Head>
+            <TreeView.Tree>
+                <TreeView.Item>
+                    <TreeView.Row>
+                        <TreeView.Col>First Level</TreeView.Col>
+                    </TreeView.Row>
+                    <TreeView.Branch>
+                        <TreeView.Item>
+                            <TreeView.Row>
+                                <TreeView.Col><a href='http://me.com'>First Level</a></TreeView.Col>
+                                <TreeView.Col />
+                                <TreeView.Col />
+                                <TreeView.Col />
+                            </TreeView.Row>
+                            <TreeView.Branch>
+                                <TreeView.Item>
+                                    <TreeView.Row>
+                                        <TreeView.Col><a href='http://amazon.com'>Amazon</a></TreeView.Col>
+                                        <TreeView.Col><a href='http://google.com'>Google</a></TreeView.Col>
+                                        <TreeView.Col><a href='http://bing.com'>Bing</a></TreeView.Col>
+                                        <TreeView.Col><a href='http://yahoo.com'>Yahoo</a></TreeView.Col>
+                                        <TreeView.Col><a href='http://sap.com'>SAP</a></TreeView.Col>
+                                    </TreeView.Row>
+                                </TreeView.Item>
+                                <TreeView.Item>
+                                    <TreeView.Row>
+                                        <TreeView.Col><a href='http://amazon.com'>Amazon</a></TreeView.Col>
+                                    </TreeView.Row>
+                                </TreeView.Item>
+                            </TreeView.Branch>
+                        </TreeView.Item>
+                        <TreeView.Item>
+                            <TreeView.Row>
+                                <TreeView.Col>Second Level</TreeView.Col>
+                                <TreeView.Col />
+                                <TreeView.Col />
+                                <TreeView.Col />
+                            </TreeView.Row>
+                            <TreeView.Branch>
+                                <TreeView.Item>
+                                    <TreeView.Row>
+                                        <TreeView.Col><a href='http://amazon.com'>Amazon</a></TreeView.Col>
+                                    </TreeView.Row>
+                                </TreeView.Item>
+                            </TreeView.Branch>
+                        </TreeView.Item>
+                    </TreeView.Branch>
+                </TreeView.Item>
+            </TreeView.Tree>
         </TreeView>
     );
 
@@ -270,20 +270,20 @@ describe('<TreeView />', () => {
         const onExpandChange = jest.fn();
         const callbackTree = (
             <TreeView onExpandChange={onExpandChange}>
-                <Tree>
-                    <TreeItem rowId={'testRowId'}>
-                        <TreeRow>
-                            <TreeCol>Row 1</TreeCol>
-                        </TreeRow>
-                        <TreeBranch>
-                            <TreeItem>
-                                <TreeRow>
-                                    <TreeCol>Row 2</TreeCol>
-                                </TreeRow>
-                            </TreeItem>
-                        </TreeBranch>
-                    </TreeItem>
-                </Tree>
+                <TreeView.Tree>
+                    <TreeView.Item rowId={'testRowId'}>
+                        <TreeView.Row>
+                            <TreeView.Col>Row 1</TreeView.Col>
+                        </TreeView.Row>
+                        <TreeView.Branch>
+                            <TreeView.Item>
+                                <TreeView.Row>
+                                    <TreeView.Col>Row 2</TreeView.Col>
+                                </TreeView.Row>
+                            </TreeView.Item>
+                        </TreeView.Branch>
+                    </TreeView.Item>
+                </TreeView.Tree>
             </TreeView>
         );
         const element = mount(callbackTree);
@@ -299,23 +299,23 @@ describe('<TreeView />', () => {
         const onExpandChange = jest.fn();
         const callbackTree = (
             <TreeView onExpandChange={onExpandChange}>
-                <TreeHead>
-                    <TreeCol>Header 1</TreeCol>
-                </TreeHead>
-                <Tree>
-                    <TreeItem>
-                        <TreeRow>
-                            <TreeCol>Row 1</TreeCol>
-                        </TreeRow>
-                        <TreeBranch>
-                            <TreeItem>
-                                <TreeRow>
-                                    <TreeCol>Row 2</TreeCol>
-                                </TreeRow>
-                            </TreeItem>
-                        </TreeBranch>
-                    </TreeItem>
-                </Tree>
+                <TreeView.Head>
+                    <TreeView.Col>Header 1</TreeView.Col>
+                </TreeView.Head>
+                <TreeView.Tree>
+                    <TreeView.Item>
+                        <TreeView.Row>
+                            <TreeView.Col>Row 1</TreeView.Col>
+                        </TreeView.Row>
+                        <TreeView.Branch>
+                            <TreeView.Item>
+                                <TreeView.Row>
+                                    <TreeView.Col>Row 2</TreeView.Col>
+                                </TreeView.Row>
+                            </TreeView.Item>
+                        </TreeView.Branch>
+                    </TreeView.Item>
+                </TreeView.Tree>
             </TreeView>
         );
         const element = mount(callbackTree);
@@ -345,7 +345,7 @@ describe('<TreeView />', () => {
 
         test('should allow props to be spread to the TreeHead component', () => {
             const element = mount(
-                <TreeHead
+                <TreeView.Head
                     data-sample='Sample' />);
 
             expect(
@@ -355,7 +355,7 @@ describe('<TreeView />', () => {
 
         test('should allow props to be spread to the Tree component', () => {
             const element = mount(
-                <Tree
+                <TreeView.Tree
                     data-sample='Sample'
                     onExpandClick={() => {}} />);
 
@@ -366,7 +366,7 @@ describe('<TreeView />', () => {
 
         test('should allow props to be spread to the TreeItem component', () => {
             const element = mount(
-                <TreeItem
+                <TreeView.Item
                     data-sample='Sample' />);
 
             expect(
@@ -376,7 +376,7 @@ describe('<TreeView />', () => {
 
         test('should allow props to be spread to the TreeRow component', () => {
             const element = mount(
-                <TreeRow
+                <TreeView.Row
                     data-sample='Sample' />);
 
             expect(
@@ -386,7 +386,7 @@ describe('<TreeView />', () => {
 
         test('should allow props to be spread to the TreeHead component', () => {
             const element = mount(
-                <TreeHead
+                <TreeView.Head
                     data-sample='Sample' />);
 
             expect(
@@ -396,12 +396,12 @@ describe('<TreeView />', () => {
 
         test('should allow props to be spread to the TreeHead component\'s button element', () => {
             const element = mount(
-                <TreeHead
+                <TreeView.Head
                     buttonProps={{
                         'data-sample': 'Sample'
                     }}>
-                    <TreeCol />
-                </TreeHead>
+                    <TreeView.Col />
+                </TreeView.Head>
             );
 
             expect(
@@ -411,7 +411,7 @@ describe('<TreeView />', () => {
 
         test('should allow props to be spread to the TreeCol component', () => {
             const element = mount(
-                <TreeCol
+                <TreeView.Col
                     data-sample='Sample' />);
 
             expect(
