@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { STATUS_TYPES } from '../utils/constants';
 
-export const Status = ({ type, glyph, children, className, ...props }) => {
+const Status = ({ type, glyph, children, className, ...props }) => {
     const statusClasses = classnames(
         'fd-status-label',
         {
@@ -28,3 +28,5 @@ Status.propTypes = {
     glyph: PropTypes.string,
     type: PropTypes.oneOf(STATUS_TYPES)
 };
+
+export default Status;

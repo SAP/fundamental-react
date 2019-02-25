@@ -3,7 +3,7 @@ import { LABEL_TYPES } from '../utils/constants';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-export const Label = ({ type, children, className, ...props }) => {
+const Label = ({ type, children, className, ...props }) => {
     const labelClasses = classnames(
         'fd-label',
         {
@@ -20,3 +20,5 @@ Label.propTypes = {
     className: PropTypes.string,
     type: PropTypes.oneOf(LABEL_TYPES)
 };
+
+export default Label;
