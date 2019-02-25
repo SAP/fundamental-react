@@ -34,7 +34,7 @@ For an existing react application, follow the steps below:
 1. Load the fiori-fundamentals styles. If using create-react-app, this will be in `App.css`.
 
     ```scss
-    @import '~fiori-fundamentals/dist/fiori-fundamentals-ie11.min.css';
+    @import '~node_modules/fiori-fundamentals/dist/fiori-fundamentals-ie11.min.css';
     ```
 
 1. Import components as needed. See [Component Documentation](https://sap.github.io/fundamental-react/) for examples and API details.
