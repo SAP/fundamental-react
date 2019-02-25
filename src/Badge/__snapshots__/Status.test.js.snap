@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Status /> create status 1`] = `
+<span
+  className="fd-status-label"
+>
+  Default
+</span>
+`;
+
+exports[`<Status /> create status 2`] = `
+<span
+  className="fd-status-label fd-status-label--success blue"
+>
+  Default
+</span>
+`;
+
+exports[`<Status /> create status 3`] = `
+<span
+  className="fd-status-label sap-icon--history"
+>
+  Default
+</span>
+`;

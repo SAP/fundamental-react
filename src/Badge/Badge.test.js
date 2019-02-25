@@ -1,7 +1,7 @@
+import Badge from './Badge';
 import { mount } from 'enzyme';
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { Badge, Status } from './Badge';
 
 describe('<Badge />', () => {
     const defaultBadge = <Badge>Default</Badge>;
@@ -24,14 +24,6 @@ describe('<Badge />', () => {
             Default
         </Badge>
     );
-
-    const defaultStatus = <Status>Default</Status>;
-    const typeStatus = (
-        <Status className='blue' type='success'>
-            Default
-        </Status>
-    );
-    const iconStatus = <Status glyph='history'>Default</Status>;
 
     test('create badges, pills and filled badges', () => {
         // create default badge
@@ -65,34 +57,9 @@ describe('<Badge />', () => {
         expect(tree).toMatchSnapshot();
     });
 
-    test('create status', () => {
-        // create default status
-        let component = renderer.create(defaultStatus);
-        let tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-
-        // create success type status
-        component = renderer.create(typeStatus);
-        tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-
-        // create icon status
-        component = renderer.create(iconStatus);
-        tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-    });
-
     describe('Prop spreading', () => {
         test('should allow props to be spread to the Badge component', () => {
             const element = mount(<Badge data-sample='Sample' />);
-
-            expect(
-                element.getDOMNode().attributes['data-sample'].value
-            ).toBe('Sample');
-        });
-
-        test('should allow props to be spread to the Status component', () => {
-            const element = mount(<Status data-sample='Sample' />);
 
             expect(
                 element.getDOMNode().attributes['data-sample'].value
