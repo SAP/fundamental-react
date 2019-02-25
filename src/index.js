@@ -29,7 +29,6 @@ export { Image } from './Image/Image';
 export { InlineHelp } from './InlineHelp/InlineHelp';
 export { InputGroup, FormGroup } from './InputGroup/InputGroup';
 export { default as ListGroup } from './ListGroup/ListGroup';
-export { default as ListGroupItem } from './ListGroup/ListGroupItem';
 export { LocalizationEditor } from './LocalizationEditor/LocalizationEditor';
 export { Menu, MenuList, MenuItem, MenuGroup } from './Menu/Menu';
 export { Modal } from './Modal/Modal';

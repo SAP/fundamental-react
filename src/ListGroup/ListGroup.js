@@ -1,4 +1,7 @@
 import classnames from 'classnames';
+import ListGroupItem from './_ListGroupItem';
+import ListGroupItemActions from './_ListGroupItemActions';
+import ListGroupItemCheckbox from './_ListGroupItemCheckbox';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -21,5 +24,9 @@ ListGroup.propTypes = {
     children: PropTypes.node,
     className: PropTypes.string
 };
+
+ListGroup.Item = ListGroupItem;
+ListGroup.ItemActions = ListGroupItemActions;
+ListGroup.ItemCheckbox = ListGroupItemCheckbox;
 
 export default ListGroup;
