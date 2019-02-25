@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Counter /> create badges, pills and filled badges 1`] = `
+<span
+  aria-label="Unread count"
+  className="fd-counter"
+>
+  5
+</span>
+`;
+
+exports[`<Counter /> create badges, pills and filled badges 2`] = `
+<span
+  aria-label="Unread count"
+  className="fd-counter fd-counter--notification blue"
+>
+  5
+</span>
+`;
