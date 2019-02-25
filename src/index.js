@@ -56,6 +56,6 @@ export { default as Tile } from './Tile/Tile';
 export { default as TileGrid } from './Tile/TileGrid';
 export { Toggle } from './Toggle/Toggle';
 export { default as TreeView } from './TreeView/TreeView';
-export { Time } from './Time/Time';
+export { default as Time } from './Time/Time';
 export { default as TimePicker } from './TimePicker/TimePicker';
 export { Shellbar } from './Shellbar/Shellbar';
