@@ -13,11 +13,15 @@ const isComponentFile = (source) => {
     return !ignoredFiles.some(ignored => source.includes(ignored));
 };
 
+const isComponentExported = (source) => {
+    return !source.match(/^\_/);
+};
+
 
 const componentDirs = readdirSync(srcPath).map(name => path.join(srcPath, name)).filter(isComponentDirectory).map(directory => {
     return {
         path: directory,
-        fileNames: readdirSync(directory).filter(isComponentFile)
+        fileNames: readdirSync(directory).filter(isComponentFile).filter(isComponentExported)
     };
 });
 
@@ -28,8 +32,13 @@ componentDirs.map((directory) => {
     directory.fileNames.map((fileName) => {
         // Grab the file's exports.
         let components = require(path.join(directory.path, fileName));
+
         Object.keys(components).map((component) => {
-            fileContents += `export { ${component} } from './${fileName}';\n`;
+            if (component === 'default') {
+                fileContents += `export { default as ${components.default.name} } from './${fileName}';\n`;
+            } else {
+                fileContents += `export { ${component} } from './${fileName}';\n`;
+            }
         });
     });
     // write the index file into the directory.

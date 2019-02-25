@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { BUTTON_OPTIONS, BUTTON_TYPES } from '../utils/constants';
 
-export const Button = ({
+const Button = ({
     option,
     type,
     compact,
@@ -39,6 +39,7 @@ export const Button = ({
         {children}
     </button>);
 };
+
 Button.displayName = 'Button';
 
 Button.propTypes = {
@@ -64,23 +65,4 @@ Button.propDescriptions = {
     typeAttr: 'Value for the `type` attribute on the `<button>` element.'
 };
 
-export const ButtonGroup = ({ children, ...props }) => {
-    return (
-        <div
-            {...props}
-            aria-label='Group label'
-            className='fd-button-group'
-            role='group'>
-            {children}
-        </div>
-    );
-};
-ButtonGroup.displayName = 'ButtonGroup';
-
-ButtonGroup.propTypes = {
-    children: PropTypes.node
-};
-
-ButtonGroup.propDescriptions = {
-    children: '`Button` nodes to group together.'
-};
+export default Button;

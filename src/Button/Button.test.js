@@ -1,7 +1,7 @@
+import Button from './Button';
 import { mount } from 'enzyme';
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { Button, ButtonGroup } from './Button';
 
 describe('<Button />', () => {
     const defaultButton = <Button>Regular Button</Button>;
@@ -21,14 +21,6 @@ describe('<Button />', () => {
         <Button disabled option='emphasized'>
             Disabled State
         </Button>
-    );
-
-    const buttonGroup = (
-        <ButtonGroup>
-            <Button className='blue' glyph='survey' />
-            <Button glyph='pie-chart' selected />
-            <Button glyph='pool' />
-        </ButtonGroup>
     );
 
     test('create buttons', () => {
@@ -78,23 +70,9 @@ describe('<Button />', () => {
         expect(tree).toMatchSnapshot();
     });
 
-    test('create button group', () => {
-        const component = renderer.create(buttonGroup);
-        const tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-    });
-
     describe('Prop spreading', () => {
         test('should allow props to be spread to the Button component', () => {
             const element = mount(<Button data-sample='Sample' />);
-
-            expect(
-                element.getDOMNode().attributes['data-sample'].value
-            ).toBe('Sample');
-        });
-
-        test('should allow props to be spread to the ButtonGroup component', () => {
-            const element = mount(<ButtonGroup data-sample='Sample' />);
 
             expect(
                 element.getDOMNode().attributes['data-sample'].value

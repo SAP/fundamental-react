@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ButtonGroup /> create button group 1`] = `
+<div
+  aria-label="Group label"
+  className="fd-button-group"
+  role="group"
+>
+  <button
+    className="fd-button sap-icon--survey blue"
+  />
+  <button
+    className="fd-button sap-icon--pie-chart is-selected"
+    selected={true}
+  />
+  <button
+    className="fd-button sap-icon--pool"
+  />
+</div>
+`;

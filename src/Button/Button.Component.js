@@ -152,8 +152,6 @@ content like appearing in a table or list. There may be more than one on the pag
             </Description>
             <Import sourceModulePath={path.join(__dirname, './Button')} />
 
-            {/* <span className='sap-icon--cart' /> */}
-
             <Separator />
 
             <Properties sourceModulePath={path.join(__dirname, './Button')} />

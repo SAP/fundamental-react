@@ -7,6 +7,7 @@ export const Header = (props) => {
 
     return (
         <React.Fragment>
+            {/* <span className='sap-icon--menu2' /> */}
             <a className='frDocs-Content__githubLogo' href={repository.url}
                 target='_blank'>
                 <svg role='img' viewBox='0 0 24 24'

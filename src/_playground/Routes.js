@@ -16,7 +16,7 @@ import { IconComponent } from '../Icon/Icon.Component';
 import { IdentifierComponent } from '../Identifier/Identifier.Component';
 import { ImageComponent } from '../Image/Image.Component';
 import { InlineHelpComponent } from '../InlineHelp/InlineHelp.Component';
-import { InputGroup } from '../InputGroup/InputGroup';
+import InputGroup from '../InputGroup/InputGroup';
 import { InputGroupComponent } from '../InputGroup/InputGroup.Component';
 import { ListGroupComponent } from '../ListGroup/ListGroup.Component';
 import { LocalizationEditorComponent } from '../LocalizationEditor/LocalizationEditor.Component';
@@ -332,16 +332,17 @@ export class Routes extends Component {
                 <div className='frDocs-Container'>
                     {/* TODO: add ternary for full-screen vs collapsed sidebar */}
                     <div className='frDocs-Sidebar'>
-                        <h1 className='frDocs-Logo'>FUNDAMENTAL REACT</h1>
+                        <h1 className='frDocs-Logo'>
+                            <a href='/'>Fundamental <span className='frDocs-Logo--library'>React</span></a>
+                        </h1>
+                        <div className='frDocs-Search'>
+                            <InputGroup
+                                inputPlaceholder='Search'
+                                inputType='search'
+                                inputValue={this.state.query}
+                                onChange={this.onChangeHandler} />
+                        </div>
                         <nav className='frDocs-Nav'>
-                            <div className='frDocs-Nav__inputGroup'>
-                                <InputGroup
-                                    inputId='frDocs-Nav__search'
-                                    inputPlaceholder='Search'
-                                    inputType='search'
-                                    inputValue={this.state.query}
-                                    onChange={this.onChangeHandler} />
-                            </div>
                             {navItems}
                         </nav>
                     </div>

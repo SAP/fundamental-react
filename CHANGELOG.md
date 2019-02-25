@@ -2,6 +2,107 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.4.1-rc.5"></a>
+## [0.4.1-rc.5](https://github.com/SAP/fundamental-react/compare/v0.4.1-rc.4...v0.4.1-rc.5) (2019-02-22)
+
+
+### Bug Fixes
+
+* CORUI-6264: One component per file Forms ([#425](https://github.com/SAP/fundamental-react/issues/425)) ([92b851d](https://github.com/SAP/fundamental-react/commit/92b851d))
+
+
+
+<a name="0.4.1-rc.4"></a>
+## [0.4.1-rc.4](https://github.com/SAP/fundamental-react/compare/v0.4.1-rc.3...v0.4.1-rc.4) (2019-02-22)
+
+
+### Bug Fixes
+
+* CORUI-6264: One component per file InputGroup ([#426](https://github.com/SAP/fundamental-react/issues/426)) ([bf76004](https://github.com/SAP/fundamental-react/commit/bf76004))
+
+
+
+<a name="0.4.1-rc.3"></a>
+## [0.4.1-rc.3](https://github.com/SAP/fundamental-react/compare/v0.4.1-rc.2...v0.4.1-rc.3) (2019-02-21)
+
+
+### Bug Fixes
+
+* CORUI-6264: One component per file Button ([#421](https://github.com/SAP/fundamental-react/issues/421)) ([2adff00](https://github.com/SAP/fundamental-react/commit/2adff00))
+
+
+
+<a name="0.4.1-rc.2"></a>
+## [0.4.1-rc.2](https://github.com/SAP/fundamental-react/compare/v0.4.1-rc.1...v0.4.1-rc.2) (2019-02-21)
+
+
+### Bug Fixes
+
+* Reworked side navigation ([#424](https://github.com/SAP/fundamental-react/issues/424)) ([b9d0f74](https://github.com/SAP/fundamental-react/commit/b9d0f74))
+
+
+
+<a name="0.4.1-rc.1"></a>
+## [0.4.1-rc.1](https://github.com/SAP/fundamental-react/compare/v0.4.1-rc.0...v0.4.1-rc.1) (2019-02-21)
+
+
+### Bug Fixes
+
+* InputGroup now can accept custom classNames ([#415](https://github.com/SAP/fundamental-react/issues/415)) ([c0ea149](https://github.com/SAP/fundamental-react/commit/c0ea149))
+
+
+
+<a name="0.4.1-rc.0"></a>
+## [0.4.1-rc.0](https://github.com/SAP/fundamental-react/compare/v0.4.0...v0.4.1-rc.0) (2019-02-21)
+
+
+### Bug Fixes
+
+* CORUI-6264: One component per file ActionBar ([#420](https://github.com/SAP/fundamental-react/issues/420)) ([f75eac4](https://github.com/SAP/fundamental-react/commit/f75eac4))
+
+
+
+<a name="0.4.0"></a>
+# [0.4.0](https://github.com/SAP/fundamental-react/compare/v0.4.0-rc.10...v0.4.0) (2019-02-20)
+
+
+
+<a name="0.4.0-rc.10"></a>
+# [0.4.0-rc.10](https://github.com/SAP/fundamental-react/compare/v0.4.0-rc.9...v0.4.0-rc.10) (2019-02-20)
+
+
+### Bug Fixes
+
+* tabs component refactor ([#414](https://github.com/SAP/fundamental-react/issues/414)) ([938268a](https://github.com/SAP/fundamental-react/commit/938268a))
+
+
+
+<a name="0.4.0-rc.9"></a>
+# [0.4.0-rc.9](https://github.com/SAP/fundamental-react/compare/v0.4.0-rc.8...v0.4.0-rc.9) (2019-02-19)
+
+
+### Bug Fixes
+
+* CORUI-6264: Support default exports for components ([#419](https://github.com/SAP/fundamental-react/issues/419)) ([865547e](https://github.com/SAP/fundamental-react/commit/865547e))
+
+
+
+<a name="0.4.0-rc.8"></a>
+# [0.4.0-rc.8](https://github.com/SAP/fundamental-react/compare/v0.4.0-rc.7...v0.4.0-rc.8) (2019-02-19)
+
+
+
+<a name="0.4.0-rc.7"></a>
+# [0.4.0-rc.7](https://github.com/SAP/fundamental-react/compare/v0.4.0-rc.6...v0.4.0-rc.7) (2019-02-19)
+
+
+### Bug Fixes
+
+* add search to documentation website ([#404](https://github.com/SAP/fundamental-react/issues/404)) ([f8011d2](https://github.com/SAP/fundamental-react/commit/f8011d2))
+* CORUI-6127: Refactor Tree component ([#394](https://github.com/SAP/fundamental-react/issues/394)) ([9f2e6da](https://github.com/SAP/fundamental-react/commit/9f2e6da))
+
+
+
 <a name="0.4.0-rc.6"></a>
 # [0.4.0-rc.6](https://github.com/SAP/fundamental-react/compare/v0.4.0-rc.5...v0.4.0-rc.6) (2019-02-19)
 
