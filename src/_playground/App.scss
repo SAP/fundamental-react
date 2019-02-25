@@ -1,4 +1,4 @@
-$mediaMaxWidth: 600px;
+$mediaMaxWidth: 700px;
 $tableMaxWidth: 500px;
 $fd-icons-path: '../../node_modules/fiori-fundamentals/scss/icons/';
 $fd-fonts-path: '../../node_modules/fiori-fundamentals/dist/fonts/';
@@ -100,9 +100,8 @@ $library-color: #61dafb;
         }
         // TODO: as width decreases, hamburger (sap-icon--menu 2)
         @media (max-width: $mediaMaxWidth) {
-            .frDocs-Sidebar {
-                    background: hotpink;
-                    margin-left: -17rem;
+            .sidebar-hidden{
+                    margin-left: -20rem;
                     overflow-x: hidden;
             }
 
@@ -117,6 +116,11 @@ $library-color: #61dafb;
             overflow-y: scroll;
             background-color: white;
             padding: 2rem;
+
+            .sidebar-view{
+                visibility: hidden;
+            }
+
             .frDocs-Content__githubLogo {
                 float: right;
                 z-index: 100;
@@ -227,14 +231,17 @@ $library-color: #61dafb;
             .frDocs-docsText__buttonCopy {
                 margin-left: 5px;
             }
+
+            @media (max-width: $mediaMaxWidth) {
+                .sidebar-view {
+                    visibility: visible;             
+                }
+            }
         }
     }
+      
 }
-//  @media (max-width: $mediaMaxWidth) {
-//     .frDocs-App {
-//         padding-bottom: 15px; //no container crashes to bottom
-//     }
-//  }
+
 
 
 // Fundamental React Component Overrides 

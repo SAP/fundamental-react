@@ -285,7 +285,8 @@ export class Routes extends Component {
         super(props);
         this.state = {
             query: '',
-            filteredItems: routes
+            filteredItems: routes,
+            showSideNav: false //for css media queries
         };
     }
 
@@ -298,6 +299,12 @@ export class Routes extends Component {
             filteredItems: [...searchResults]
         });
     };
+
+    toggleNavVis() {
+        this.setState({
+            showSideNav: !this.state.showSideNav
+        });
+    }
 
     render() {
         let sectionRoutes;
@@ -327,11 +334,12 @@ export class Routes extends Component {
             );
         });
 
+        const showNav = this.state.showSideNav ? 'frDocs-Sidebar' : 'frDocs-Sidebar sidebar-hidden';
+
         return (
             <BrowserRouter basename={process.env.PUBLIC_URL}>
                 <div className='frDocs-Container'>
-                    {/* TODO: add ternary for full-screen vs collapsed sidebar */}
-                    <div className='frDocs-Sidebar'>
+                    <div className={showNav}>
                         <h1 className='frDocs-Logo'>
                             <a href='/'>Fundamental <span className='frDocs-Logo--library'>React</span></a>
                         </h1>
@@ -347,6 +355,7 @@ export class Routes extends Component {
                         </nav>
                     </div>
                     <div className='frDocs-Content'>
+                        <button className='fd-button sap-icon--menu2 fd-button--standard fd-button--light sidebar-view' onClick={this.toggleNavVis.bind(this)} />
                         <Switch>
                             {routes.map(route => {
                                 return (
