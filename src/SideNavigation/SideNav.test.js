@@ -4,7 +4,7 @@ import renderer from 'react-test-renderer';
 import { SideNav } from '../';
 import { BrowserRouter, Link } from 'react-router-dom';
 
-describe('<SideNavigation />', () => {
+describe('<SideNav />', () => {
     const subSideNavList = (
         <SideNav.List>
             <SideNav.ListItem

@@ -47,7 +47,7 @@ export { PanelFooter } from './Panel/Panel';
 export { Popover } from './Popover/Popover';
 export { default as ProductTile } from './Tile/ProductTile';
 export { SearchInput } from './SearchInput/SearchInput';
-export { default as SideNav } from './SideNavigation/SideNavigation';
+export { default as SideNav } from './SideNavigation/SideNav';
 export { Tab } from './Tabs/Tab';
 export { TabGroup } from './Tabs/TabGroup';
 export { Table } from './Table/Table';
