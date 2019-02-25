@@ -383,20 +383,22 @@ $fd-fonts-path: '../../node_modules/fiori-fundamentals/dist/fonts/';
 
             thead, tbody, th, td, tr {
                 display:block;
-                color: hotpink;
             }
 
             thead tr {
                     position: absolute;
-                    top: -9999px;
-                    bottom: 9999px;
-                }
+                    color: hotpink;
+                    // top: -9999px;
+                    // right: -9999px;
+                    // bottom: -9999px;
+                    // left: -9999px;
+            }
 
             tr {
                 border: 1px solid #ccc;
             }
 
-            td {
+            td, td > div {
                 border: none;
                 border-bottom: 1px solid #eee;
                 position: relative;
@@ -408,8 +410,16 @@ $fd-fonts-path: '../../node_modules/fiori-fundamentals/dist/fonts/';
                     left: 6px;
                     width: 45%;
                     padding-right: 10px;
-                    // white-space: nowrap;
+                    white-space: nowrap;
                 }
+
+                // &:nth-of-type(1):before {
+                //     content: "First Name";
+                // }
+
+                // &:nth-of-type(2):before {
+                //     content: "Last Name";
+                // }
             }
 
         }   
