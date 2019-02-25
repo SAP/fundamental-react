@@ -1,7 +1,7 @@
 import { mount } from 'enzyme';
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { Time } from './Time';
+import Time from './Time';
 
 describe('<Time />', () => {
     const defaultTime = <Time />;
