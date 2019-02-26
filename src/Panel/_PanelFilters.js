@@ -1,0 +1,26 @@
+import classnames from 'classnames';
+import PropTypes from 'prop-types';
+import React from 'react';
+
+const PanelFilters = props => {
+    const { children, className, ...rest } = props;
+
+    const panelFiltersClasses = classnames(
+        'fd-panel__filters',
+        className
+    );
+
+    return (
+        <div {...rest} className={panelFiltersClasses}>
+            {children}
+        </div>
+    );
+};
+
+PanelFilters.displayName = 'PanelFilters';
+
+PanelFilters.propTypes = {
+    className: PropTypes.string
+};
+
+export default PanelFilters;
