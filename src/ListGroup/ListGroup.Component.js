@@ -1,45 +1,45 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import path from 'path';
 import React from 'react';
-import { Button, ListGroup, ListGroupItem, ListGroupItemActions, ListGroupItemCheckbox } from '../';
+import { Button, ListGroup } from '../';
 import { Description, DocsText, DocsTile, Header, Import, Playground, Properties, Separator } from '../_playground';
 
 export const ListGroupComponent = () => {
     const simpleListCode = `<ListGroup>
-    <ListGroupItem><a style={{cursor: 'pointer'}}>List item 1</a></ListGroupItem>
-    <ListGroupItem>List item 2</ListGroupItem>
-    <ListGroupItem><a style={{cursor: 'pointer'}}>List item3</a></ListGroupItem>
-    <ListGroupItem>List item 4</ListGroupItem>
+    <ListGroup.Item><a style={{cursor: 'pointer'}}>List item 1</a></ListGroup.Item>
+    <ListGroup.Item>List item 2</ListGroup.Item>
+    <ListGroup.Item><a style={{cursor: 'pointer'}}>List item3</a></ListGroup.Item>
+    <ListGroup.Item>List item 4</ListGroup.Item>
 </ListGroup>`;
 
     const actionsListCode = `<ListGroup>
-    <ListGroupItem>List item 1
-        <ListGroupItemActions>
+    <ListGroup.Item>List item 1
+        <ListGroup.ItemActions>
             <Button option="light" glyph="edit" />
-        </ListGroupItemActions>
-    </ListGroupItem>
-    <ListGroupItem>List item 2
-        <ListGroupItemActions>
+        </ListGroup.ItemActions>
+    </ListGroup.Item>
+    <ListGroup.Item>List item 2
+        <ListGroup.ItemActions>
             <Button option="light" glyph="edit" />
-        </ListGroupItemActions>
-    </ListGroupItem>
-    <ListGroupItem>List item 3
-        <ListGroupItemActions>
+        </ListGroup.ItemActions>
+    </ListGroup.Item>
+    <ListGroup.Item>List item 3
+        <ListGroup.ItemActions>
             <Button option="light" glyph="edit" />
-        </ListGroupItemActions>
-    </ListGroupItem>
-    <ListGroupItem>List item 4
-        <ListGroupItemActions>
+        </ListGroup.ItemActions>
+    </ListGroup.Item>
+    <ListGroup.Item>List item 4
+        <ListGroup.ItemActions>
             <Button option="light" glyph="edit" />
-        </ListGroupItemActions>
-    </ListGroupItem>
+        </ListGroup.ItemActions>
+    </ListGroup.Item>
 </ListGroup>`;
 
     const checkboxListCode = `<ListGroup>
-    <ListGroupItem><ListGroupItemCheckbox>List item 1</ListGroupItemCheckbox></ListGroupItem>
-    <ListGroupItem><ListGroupItemCheckbox>List item 2</ListGroupItemCheckbox></ListGroupItem>
-    <ListGroupItem><ListGroupItemCheckbox>List item 3</ListGroupItemCheckbox></ListGroupItem>
-    <ListGroupItem><ListGroupItemCheckbox>List item 4</ListGroupItemCheckbox></ListGroupItem>
+    <ListGroup.Item><ListGroup.ItemCheckbox>List item 1</ListGroup.ItemCheckbox></ListGroup.Item>
+    <ListGroup.Item><ListGroup.ItemCheckbox>List item 2</ListGroup.ItemCheckbox></ListGroup.Item>
+    <ListGroup.Item><ListGroup.ItemCheckbox>List item 3</ListGroup.ItemCheckbox></ListGroup.Item>
+    <ListGroup.Item><ListGroup.ItemCheckbox>List item 4</ListGroup.ItemCheckbox></ListGroup.Item>
 </ListGroup>`;
 
 
@@ -64,10 +64,10 @@ export const ListGroupComponent = () => {
             <Description>A link can be used to allow the user to access more details about the item.</Description>
             <DocsTile>
                 <ListGroup>
-                    <ListGroupItem><a style={{ cursor: 'pointer' }}>List item 1</a></ListGroupItem>
-                    <ListGroupItem>List item 2</ListGroupItem>
-                    <ListGroupItem><a style={{ cursor: 'pointer' }}>List item3</a></ListGroupItem>
-                    <ListGroupItem>List item 4</ListGroupItem>
+                    <ListGroup.Item><a style={{ cursor: 'pointer' }}>List item 1</a></ListGroup.Item>
+                    <ListGroup.Item>List item 2</ListGroup.Item>
+                    <ListGroup.Item><a style={{ cursor: 'pointer' }}>List item3</a></ListGroup.Item>
+                    <ListGroup.Item>List item 4</ListGroup.Item>
                 </ListGroup>
             </DocsTile>
             <DocsText>{simpleListCode}</DocsText>
@@ -78,26 +78,26 @@ export const ListGroupComponent = () => {
             <Description>The List item can contain quick actions.</Description>
             <DocsTile>
                 <ListGroup>
-                    <ListGroupItem>List item 1
-                        <ListGroupItemActions>
+                    <ListGroup.Item>List item 1
+                        <ListGroup.ItemActions>
                             <Button glyph='edit' option='light' />
-                        </ListGroupItemActions>
-                    </ListGroupItem>
-                    <ListGroupItem>List item 2
-                        <ListGroupItemActions>
+                        </ListGroup.ItemActions>
+                    </ListGroup.Item>
+                    <ListGroup.Item>List item 2
+                        <ListGroup.ItemActions>
                             <Button glyph='edit' option='light' />
-                        </ListGroupItemActions>
-                    </ListGroupItem>
-                    <ListGroupItem>List item 3
-                        <ListGroupItemActions>
+                        </ListGroup.ItemActions>
+                    </ListGroup.Item>
+                    <ListGroup.Item>List item 3
+                        <ListGroup.ItemActions>
                             <Button glyph='edit' option='light' />
-                        </ListGroupItemActions>
-                    </ListGroupItem>
-                    <ListGroupItem>List item 4
-                        <ListGroupItemActions>
+                        </ListGroup.ItemActions>
+                    </ListGroup.Item>
+                    <ListGroup.Item>List item 4
+                        <ListGroup.ItemActions>
                             <Button glyph='edit' option='light' />
-                        </ListGroupItemActions>
-                    </ListGroupItem>
+                        </ListGroup.ItemActions>
+                    </ListGroup.Item>
                 </ListGroup>
             </DocsTile>
             <DocsText>{actionsListCode}</DocsText>
@@ -108,10 +108,10 @@ export const ListGroupComponent = () => {
             <Description>Checkboxes can be include on the left of each line for such purposes as bulk actions.</Description>
             <DocsTile>
                 <ListGroup>
-                    <ListGroupItem><ListGroupItemCheckbox>List item 1</ListGroupItemCheckbox></ListGroupItem>
-                    <ListGroupItem><ListGroupItemCheckbox>List item 2</ListGroupItemCheckbox></ListGroupItem>
-                    <ListGroupItem><ListGroupItemCheckbox>List item 3</ListGroupItemCheckbox></ListGroupItem>
-                    <ListGroupItem><ListGroupItemCheckbox>List item 4</ListGroupItemCheckbox></ListGroupItem>
+                    <ListGroup.Item><ListGroup.ItemCheckbox>List item 1</ListGroup.ItemCheckbox></ListGroup.Item>
+                    <ListGroup.Item><ListGroup.ItemCheckbox>List item 2</ListGroup.ItemCheckbox></ListGroup.Item>
+                    <ListGroup.Item><ListGroup.ItemCheckbox>List item 3</ListGroup.ItemCheckbox></ListGroup.Item>
+                    <ListGroup.Item><ListGroup.ItemCheckbox>List item 4</ListGroup.ItemCheckbox></ListGroup.Item>
                 </ListGroup>
             </DocsTile>
             <DocsText>{checkboxListCode}</DocsText>
@@ -753,11 +753,11 @@ export const ListGroupComponent = () => {
             ]}>
 
                 <ListGroup>
-                    <ListGroupItem>List item 1
-                        <ListGroupItemActions>
+                    <ListGroup.Item>List item 1
+                        <ListGroup.ItemActions>
                             <Button glyph='edit' />
-                        </ListGroupItemActions>
-                    </ListGroupItem>
+                        </ListGroup.ItemActions>
+                    </ListGroup.Item>
                 </ListGroup>
 
             </Playground>
