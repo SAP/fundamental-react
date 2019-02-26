@@ -1,6 +1,6 @@
 import path from 'path';
 import React from 'react';
-import { Button, Identifier, Image, Menu, MenuItem, MenuList, Popover, ProductTile, ProductTileContent, ProductTileMedia, Tile, TileActions, TileContent, TileGrid, TileMedia } from '../';
+import { Button, Identifier, Image, Menu, Popover, ProductTile, ProductTileContent, ProductTileMedia, Tile, TileActions, TileContent, TileGrid, TileMedia } from '../';
 import { Description, DocsText, DocsTile, Header, Import, Playground, Properties, Separator } from '../_playground';
 
 export const TileComponent = () => {
@@ -42,12 +42,12 @@ export const TileComponent = () => {
             control={<Button option="light" glyph="vertical-grip" />}
             body={
                 <Menu>
-                    <MenuList>
-                        <MenuItem url="/">Option 1</MenuItem>
-                        <MenuItem url="/">Option 2</MenuItem>
-                        <MenuItem url="/">Option 3</MenuItem>
-                        <MenuItem url="/">Option 4</MenuItem>
-                    </MenuList>
+                    <Menu.List>
+                        <Menu.Item url="/">Option 1</Menu.Item>
+                        <Menu.Item url="/">Option 2</Menu.Item>
+                        <Menu.Item url="/">Option 3</Menu.Item>
+                        <Menu.Item url="/">Option 4</Menu.Item>
+                    </Menu.List>
                 </Menu>
             }
         />
@@ -173,12 +173,12 @@ export const TileComponent = () => {
                         <Popover
                             body={
                                 <Menu>
-                                    <MenuList>
-                                        <MenuItem url='/'>Option 1</MenuItem>
-                                        <MenuItem url='/'>Option 2</MenuItem>
-                                        <MenuItem url='/'>Option 3</MenuItem>
-                                        <MenuItem url='/'>Option 4</MenuItem>
-                                    </MenuList>
+                                    <Menu.List>
+                                        <Menu.Item url='/'>Option 1</Menu.Item>
+                                        <Menu.Item url='/'>Option 2</Menu.Item>
+                                        <Menu.Item url='/'>Option 3</Menu.Item>
+                                        <Menu.Item url='/'>Option 4</Menu.Item>
+                                    </Menu.List>
                                 </Menu>
                             }
                             control={<Button glyph='vertical-grip' option='light' />} />

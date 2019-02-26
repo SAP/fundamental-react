@@ -1,8 +1,6 @@
 import { Button } from '../';
 import { Dropdown } from './Dropdown';
 import Menu from '../Menu/Menu';
-import MenuItem from '../Menu/MenuItem';
-import MenuList from '../Menu/MenuList';
 import { mount } from 'enzyme';
 import { Popover } from '../Popover/Popover';
 import React from 'react';
@@ -11,12 +9,12 @@ import renderer from 'react-test-renderer';
 describe('<Dropdown />', () => {
     const defaultMenu = (
         <Menu>
-            <MenuList>
-                <MenuItem url='/'>Option 1</MenuItem>
-                <MenuItem url='/'>Option 2</MenuItem>
-                <MenuItem url='/'>Option 3</MenuItem>
-                <MenuItem url='/'>Option 4</MenuItem>
-            </MenuList>
+            <Menu.List>
+                <Menu.Item url='/'>Option 1</Menu.Item>
+                <Menu.Item url='/'>Option 2</Menu.Item>
+                <Menu.Item url='/'>Option 3</Menu.Item>
+                <Menu.Item url='/'>Option 4</Menu.Item>
+            </Menu.List>
         </Menu>
     );
 

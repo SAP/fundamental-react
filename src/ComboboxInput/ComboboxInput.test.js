@@ -1,7 +1,5 @@
 import { ComboboxInput } from './ComboboxInput';
 import Menu from '../Menu/Menu';
-import MenuItem from '../Menu/MenuItem';
-import MenuList from '../Menu/MenuList';
 import { mount } from 'enzyme';
 import React from 'react';
 import renderer from 'react-test-renderer';
@@ -9,14 +7,14 @@ import renderer from 'react-test-renderer';
 describe('<ComboboxInput />', () => {
     const defaultMenu = (
         <Menu>
-            <MenuList>
-                <MenuItem url='/'>Pear</MenuItem>
-                <MenuItem url='/'>Strawberry</MenuItem>
-                <MenuItem url='/'>Raspberry</MenuItem>
-                <MenuItem isLink url='/'>
+            <Menu.List>
+                <Menu.Item url='/'>Pear</Menu.Item>
+                <Menu.Item url='/'>Strawberry</Menu.Item>
+                <Menu.Item url='/'>Raspberry</Menu.Item>
+                <Menu.Item isLink url='/'>
                     + New Item
-                </MenuItem>
-            </MenuList>
+                </Menu.Item>
+            </Menu.List>
         </Menu>
     );
 

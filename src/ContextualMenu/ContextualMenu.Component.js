@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Menu, MenuItem, MenuList, Popover } from '../';
+import { Button, Menu, Popover } from '../';
 import { Description, DocsText, DocsTile, Header, Separator } from '../_playground';
 
 export const ContextualMenuComponent = () => {
@@ -8,12 +8,12 @@ export const ContextualMenuComponent = () => {
     noArrow
     body={
         <Menu>
-            <MenuList>
-                <MenuItem url="/">Option 1</MenuItem>
-                <MenuItem url="/">Option 2</MenuItem>
-                <MenuItem url="/">Option 3</MenuItem>
-                <MenuItem url="/">Option 4</MenuItem>
-            </MenuList>
+            <Menu.List>
+                <Menu.Item url="/">Option 1</Menu.Item>
+                <Menu.Item url="/">Option 2</Menu.Item>
+                <Menu.Item url="/">Option 3</Menu.Item>
+                <Menu.Item url="/">Option 4</Menu.Item>
+            </Menu.List>
         </Menu>
     }
 />`;
@@ -23,12 +23,12 @@ export const ContextualMenuComponent = () => {
     noArrow
     body={
         <Menu>
-            <MenuList>
-                <MenuItem url="/">Option 1</MenuItem>
-                <MenuItem url="/">Option 2</MenuItem>
-                <MenuItem url="/">Option 3</MenuItem>
-                <MenuItem url="/">Option 4</MenuItem>
-            </MenuList>
+            <Menu.List>
+                <Menu.Item url="/">Option 1</Menu.Item>
+                <Menu.Item url="/">Option 2</Menu.Item>
+                <Menu.Item url="/">Option 3</Menu.Item>
+                <Menu.Item url="/">Option 4</Menu.Item>
+            </Menu.List>
         </Menu>
     }
 />
@@ -38,12 +38,12 @@ export const ContextualMenuComponent = () => {
     noArrow
     body={
         <Menu>
-            <MenuList>
-                <MenuItem url="/">Option 1</MenuItem>
-                <MenuItem url="/">Option 2</MenuItem>
-                <MenuItem url="/">Option 3</MenuItem>
-                <MenuItem url="/">Option 4</MenuItem>
-            </MenuList>
+            <Menu.List>
+                <Menu.Item url="/">Option 1</Menu.Item>
+                <Menu.Item url="/">Option 2</Menu.Item>
+                <Menu.Item url="/">Option 3</Menu.Item>
+                <Menu.Item url="/">Option 4</Menu.Item>
+            </Menu.List>
         </Menu>
     }
 />`;
@@ -67,12 +67,12 @@ This component is completely composed from other components CSS and doesn’t ha
                 <Popover
                     body={
                         <Menu>
-                            <MenuList>
-                                <MenuItem url='/'>Option 1</MenuItem>
-                                <MenuItem url='/'>Option 2</MenuItem>
-                                <MenuItem url='/'>Option 3</MenuItem>
-                                <MenuItem url='/'>Option 4</MenuItem>
-                            </MenuList>
+                            <Menu.List>
+                                <Menu.Item url='/'>Option 1</Menu.Item>
+                                <Menu.Item url='/'>Option 2</Menu.Item>
+                                <Menu.Item url='/'>Option 3</Menu.Item>
+                                <Menu.Item url='/'>Option 4</Menu.Item>
+                            </Menu.List>
                         </Menu>
                     }
                     control={<Button glyph='vertical-grip' option='light' />}
@@ -86,12 +86,12 @@ This component is completely composed from other components CSS and doesn’t ha
                 <Popover
                     body={
                         <Menu>
-                            <MenuList>
-                                <MenuItem url='/'>Option 1</MenuItem>
-                                <MenuItem url='/'>Option 2</MenuItem>
-                                <MenuItem url='/'>Option 3</MenuItem>
-                                <MenuItem url='/'>Option 4</MenuItem>
-                            </MenuList>
+                            <Menu.List>
+                                <Menu.Item url='/'>Option 1</Menu.Item>
+                                <Menu.Item url='/'>Option 2</Menu.Item>
+                                <Menu.Item url='/'>Option 3</Menu.Item>
+                                <Menu.Item url='/'>Option 4</Menu.Item>
+                            </Menu.List>
                         </Menu>
                     }
                     control={<Button>More</Button>}
@@ -100,12 +100,12 @@ This component is completely composed from other components CSS and doesn’t ha
                 <Popover
                     body={
                         <Menu>
-                            <MenuList>
-                                <MenuItem url='/'>Option 1</MenuItem>
-                                <MenuItem url='/'>Option 2</MenuItem>
-                                <MenuItem url='/'>Option 3</MenuItem>
-                                <MenuItem url='/'>Option 4</MenuItem>
-                            </MenuList>
+                            <Menu.List>
+                                <Menu.Item url='/'>Option 1</Menu.Item>
+                                <Menu.Item url='/'>Option 2</Menu.Item>
+                                <Menu.Item url='/'>Option 3</Menu.Item>
+                                <Menu.Item url='/'>Option 4</Menu.Item>
+                            </Menu.List>
                         </Menu>
                     }
                     control={<Button option='light'>More</Button>}

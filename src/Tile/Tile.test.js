@@ -1,8 +1,6 @@
 import { Button } from '../';
 import { Identifier } from '../Identifier/Identifier';
 import Menu from '../Menu/Menu';
-import MenuItem from '../Menu/MenuItem';
-import MenuList from '../Menu/MenuList';
 import { mount } from 'enzyme';
 import { Popover } from '../Popover/Popover';
 import React from 'react';
@@ -46,12 +44,12 @@ describe('<Tile />', () => {
                 <Popover
                     body={
                         <Menu>
-                            <MenuList>
-                                <MenuItem url='/'>Option 1</MenuItem>
-                                <MenuItem url='/'>Option 2</MenuItem>
-                                <MenuItem url='/'>Option 3</MenuItem>
-                                <MenuItem url='/'>Option 4</MenuItem>
-                            </MenuList>
+                            <Menu.List>
+                                <Menu.Item url='/'>Option 1</Menu.Item>
+                                <Menu.Item url='/'>Option 2</Menu.Item>
+                                <Menu.Item url='/'>Option 3</Menu.Item>
+                                <Menu.Item url='/'>Option 4</Menu.Item>
+                            </Menu.List>
                         </Menu>
                     }
                     control={<Button glyph='vertical-grip' type='standard' />} />
@@ -78,12 +76,12 @@ describe('<Tile />', () => {
                 <Popover
                     body={
                         <Menu>
-                            <MenuList>
-                                <MenuItem url='/'>Option 1</MenuItem>
-                                <MenuItem url='/'>Option 2</MenuItem>
-                                <MenuItem url='/'>Option 3</MenuItem>
-                                <MenuItem url='/'>Option 4</MenuItem>
-                            </MenuList>
+                            <Menu.List>
+                                <Menu.Item url='/'>Option 1</Menu.Item>
+                                <Menu.Item url='/'>Option 2</Menu.Item>
+                                <Menu.Item url='/'>Option 3</Menu.Item>
+                                <Menu.Item url='/'>Option 4</Menu.Item>
+                            </Menu.List>
                         </Menu>
                     }
                     control={<Button glyph='vertical-grip' type='standard' />} />
