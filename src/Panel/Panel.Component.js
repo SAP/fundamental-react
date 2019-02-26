@@ -1,6 +1,6 @@
 import path from 'path';
 import React from 'react';
-import { Button, Image, Menu, MenuItem, MenuList, Panel, PanelGrid, Popover, Tile, TileContent, TileMedia, Token } from '../';
+import { Button, Image, Menu, MenuItem, MenuList, Panel, PanelGrid, Popover, Tile, Token } from '../';
 import { DocsText, DocsTile, Header, Import, Properties, Separator } from '../_playground';
 
 export const PanelComponent = () => {
@@ -49,12 +49,12 @@ export const PanelComponent = () => {
     <div>Panel Body</div>     
     <br />               
         <Tile>
-            <TileMedia>
+            <Tile.Media>
                 <Image size="l" type="circle" photo="https://placeimg.com/400/400/nature" />
-            </TileMedia>
-            <TileContent title="Tile Title">
+            </Tile.Media>
+            <Tile.Content title="Tile Title">
                 <p>Tile Description</p>
-            </TileContent>
+            </Tile.Content>
         </Tile>
         <br />
         <Token>Bibendum</Token>
@@ -251,13 +251,13 @@ export const PanelComponent = () => {
                             <div>Panel Body</div>
                             <br />
                             <Tile>
-                                <TileMedia>
+                                <Tile.Media>
                                     <Image photo='https://placeimg.com/400/400/nature' size='l'
                                         type='circle' />
-                                </TileMedia>
-                                <TileContent title='Tile Title'>
+                                </Tile.Media>
+                                <Tile.Content title='Tile Title'>
                                     <p>Tile Description</p>
-                                </TileContent>
+                                </Tile.Content>
                             </Tile>
                             <br />
                             <Token>Bibendum</Token>
