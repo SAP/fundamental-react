@@ -1,19 +1,19 @@
 import path from 'path';
 import React from 'react';
-import { Button, Image, Menu, MenuItem, MenuList, Panel, PanelActions, PanelBody, PanelFilters, PanelFooter, PanelGrid, PanelHead, PanelHeader, Popover, Tile, Token } from '../';
+import { Button, Image, Menu, MenuItem, MenuList, Panel, PanelGrid, Popover, Tile, Token } from '../';
 import { DocsText, DocsTile, Header, Import, Properties, Separator } from '../_playground';
 
 export const PanelComponent = () => {
     const panelExampleCode = `<Panel>
-    <PanelHeader>
-        <PanelHead title={'Panel Header with Actions'} description="Panel Description" />
-        <PanelActions>
+    <Panel.Header>
+        <Panel.Head title={'Panel Header with Actions'} description="Panel Description" />
+        <Panel.Actions>
             <Button compact glyph="add">
                 Add New Button
             </Button>
-        </PanelActions>
-    </PanelHeader>
-    <PanelFilters>
+        </Panel.Actions>
+    </Panel.Header>
+    <Panel.Filters>
         <div>Panel Filters</div>
         <br /> 
         <Popover
@@ -44,8 +44,8 @@ export const PanelComponent = () => {
             }
             noArrow
         />
-    </PanelFilters>
-    <PanelBody>
+    </Panel.Filters>
+    <Panel.Body>
     <div>Panel Body</div>     
     <br />               
         <Tile>
@@ -61,137 +61,137 @@ export const PanelComponent = () => {
         <Token>Lorem</Token>
         <Token>Dolor</Token>
         <Token>Filter</Token>
-    </PanelBody>
-    <PanelFooter>Panel Footer</PanelFooter>
+    </Panel.Body>
+    <Panel.Footer>Panel Footer</Panel.Footer>
 </Panel>`;
 
     const panelGrid3Code = `<PanelGrid>
     <Panel>
-        <PanelBody>Panel</PanelBody>
+        <Panel.Body>Panel</Panel.Body>
     </Panel>
     <Panel>
-        <PanelBody>Panel</PanelBody>
+        <Panel.Body>Panel</Panel.Body>
     </Panel>
     <Panel>
-        <PanelBody>Panel</PanelBody>
+        <Panel.Body>Panel</Panel.Body>
     </Panel>
     <Panel>
-        <PanelBody>Panel</PanelBody>
+        <Panel.Body>Panel</Panel.Body>
     </Panel>
     <Panel>
-        <PanelBody>Panel</PanelBody>
+        <Panel.Body>Panel</Panel.Body>
     </Panel>
 </PanelGrid>`;
 
     const panelNogapCode = `<PanelGrid nogap={true}>
     <Panel>
-        <PanelBody>Panel</PanelBody>
+        <Panel.Body>Panel</Panel.Body>
     </Panel>
     <Panel>
-        <PanelBody>Panel</PanelBody>
+        <Panel.Body>Panel</Panel.Body>
     </Panel>
     <Panel>
-        <PanelBody>Panel</PanelBody>
+        <Panel.Body>Panel</Panel.Body>
     </Panel>
     <Panel>
-        <PanelBody>Panel</PanelBody>
+        <Panel.Body>Panel</Panel.Body>
     </Panel>
     <Panel>
-        <PanelBody>Panel</PanelBody>
+        <Panel.Body>Panel</Panel.Body>
     </Panel>
 </PanelGrid>`;
 
     const panelGrid2ColsCode = `<PanelGrid cols={2}>
     <Panel>
-        <PanelBody>Panel</PanelBody>
+        <Panel.Body>Panel</Panel.Body>
     </Panel>
     <Panel>
-        <PanelBody>Panel</PanelBody>
+        <Panel.Body>Panel</Panel.Body>
     </Panel>
     <Panel>
-        <PanelBody>Panel</PanelBody>
+        <Panel.Body>Panel</Panel.Body>
     </Panel>
     <Panel>
-        <PanelBody>Panel</PanelBody>
+        <Panel.Body>Panel</Panel.Body>
     </Panel>
 </PanelGrid>`;
 
     const panelGrid4ColsCode = `<PanelGrid cols={4}>
     <Panel>
-        <PanelBody>Panel</PanelBody>
+        <Panel.Body>Panel</Panel.Body>
     </Panel>
     <Panel>
-        <PanelBody>Panel</PanelBody>
+        <Panel.Body>Panel</Panel.Body>
     </Panel>
     <Panel>
-        <PanelBody>Panel</PanelBody>
+        <Panel.Body>Panel</Panel.Body>
     </Panel>
     <Panel>
-        <PanelBody>Panel</PanelBody>
+        <Panel.Body>Panel</Panel.Body>
     </Panel>
     <Panel>
-        <PanelBody>Panel</PanelBody>
+        <Panel.Body>Panel</Panel.Body>
     </Panel>
     <Panel>
-        <PanelBody>Panel</PanelBody>
+        <Panel.Body>Panel</Panel.Body>
     </Panel>
     <Panel>
-        <PanelBody>Panel</PanelBody>
+        <Panel.Body>Panel</Panel.Body>
     </Panel>
     <Panel>
-        <PanelBody>Panel</PanelBody>
+        <Panel.Body>Panel</Panel.Body>
     </Panel>
 </PanelGrid>`;
 
     const panelGridColSpanCode = `<PanelGrid cols={6}>
     <Panel colSpan={2}>
-        <PanelBody>Panel with colSpan=2</PanelBody>
+        <Panel.Body>Panel with colSpan=2</Panel.Body>
     </Panel>
     <Panel>
-        <PanelBody>Panel</PanelBody>
+        <Panel.Body>Panel</Panel.Body>
     </Panel>
     <Panel>
-        <PanelBody>Panel</PanelBody>
+        <Panel.Body>Panel</Panel.Body>
     </Panel>
     <Panel>
-        <PanelBody>Panel</PanelBody>
+        <Panel.Body>Panel</Panel.Body>
     </Panel>
     <Panel>
-        <PanelBody>Panel</PanelBody>
+        <Panel.Body>Panel</Panel.Body>
     </Panel>
 
     <Panel colSpan={3}>
-        <PanelBody>Panel with colSpan=3</PanelBody>
+        <Panel.Body>Panel with colSpan=3</Panel.Body>
     </Panel>
     <Panel>
-        <PanelBody>Panel</PanelBody>
+        <Panel.Body>Panel</Panel.Body>
     </Panel>
     <Panel>
-        <PanelBody>Panel</PanelBody>
+        <Panel.Body>Panel</Panel.Body>
     </Panel>
     <Panel>
-        <PanelBody>Panel</PanelBody>
+        <Panel.Body>Panel</Panel.Body>
     </Panel>
 
     <Panel colSpan={4}>
-        <PanelBody>Panel with colSpan=4</PanelBody>
+        <Panel.Body>Panel with colSpan=4</Panel.Body>
     </Panel>
     <Panel>
-        <PanelBody>Panel</PanelBody>
+        <Panel.Body>Panel</Panel.Body>
     </Panel>
     <Panel>
-        <PanelBody>Panel</PanelBody>
+        <Panel.Body>Panel</Panel.Body>
     </Panel>
 
     <Panel colSpan={5}>
-        <PanelBody>Panel with colSpan=5</PanelBody>
+        <Panel.Body>Panel with colSpan=5</Panel.Body>
     </Panel>
     <Panel>
-        <PanelBody>Panel</PanelBody>
+        <Panel.Body>Panel</Panel.Body>
     </Panel>
     
     <Panel colSpan={6}>
-        <PanelBody>Panel with colSpan=6</PanelBody>
+        <Panel.Body>Panel with colSpan=6</Panel.Body>
     </Panel>
 </PanelGrid>`;
 
@@ -209,15 +209,15 @@ export const PanelComponent = () => {
             <DocsTile>
                 <div className='fd-doc__margin--panel'>
                     <Panel>
-                        <PanelHeader>
-                            <PanelHead description='Panel Description' title={'Panel Header with Actions'} />
-                            <PanelActions>
+                        <Panel.Header>
+                            <Panel.Head description='Panel Description' title={'Panel Header with Actions'} />
+                            <Panel.Actions>
                                 <Button compact glyph='add'>
                                     Add New Button
                                 </Button>
-                            </PanelActions>
-                        </PanelHeader>
-                        <PanelFilters>
+                            </Panel.Actions>
+                        </Panel.Header>
+                        <Panel.Filters>
                             <div>Panel Filters</div>
                             <br />
                             <Popover
@@ -246,8 +246,8 @@ export const PanelComponent = () => {
                                 }
                                 control={<Button>Size</Button>}
                                 noArrow />
-                        </PanelFilters>
-                        <PanelBody>
+                        </Panel.Filters>
+                        <Panel.Body>
                             <div>Panel Body</div>
                             <br />
                             <Tile>
@@ -264,8 +264,8 @@ export const PanelComponent = () => {
                             <Token>Lorem</Token>
                             <Token>Dolor</Token>
                             <Token>Filter</Token>
-                        </PanelBody>
-                        <PanelFooter>Panel Footer</PanelFooter>
+                        </Panel.Body>
+                        <Panel.Footer>Panel Footer</Panel.Footer>
                     </Panel>
                 </div>
             </DocsTile>
@@ -277,19 +277,19 @@ export const PanelComponent = () => {
             <DocsTile>
                 <PanelGrid>
                     <Panel>
-                        <PanelBody>Panel</PanelBody>
+                        <Panel.Body>Panel</Panel.Body>
                     </Panel>
                     <Panel>
-                        <PanelBody>Panel</PanelBody>
+                        <Panel.Body>Panel</Panel.Body>
                     </Panel>
                     <Panel>
-                        <PanelBody>Panel</PanelBody>
+                        <Panel.Body>Panel</Panel.Body>
                     </Panel>
                     <Panel>
-                        <PanelBody>Panel</PanelBody>
+                        <Panel.Body>Panel</Panel.Body>
                     </Panel>
                     <Panel>
-                        <PanelBody>Panel</PanelBody>
+                        <Panel.Body>Panel</Panel.Body>
                     </Panel>
                 </PanelGrid>
             </DocsTile>
@@ -301,19 +301,19 @@ export const PanelComponent = () => {
             <DocsTile>
                 <PanelGrid nogap>
                     <Panel>
-                        <PanelBody>Panel</PanelBody>
+                        <Panel.Body>Panel</Panel.Body>
                     </Panel>
                     <Panel>
-                        <PanelBody>Panel</PanelBody>
+                        <Panel.Body>Panel</Panel.Body>
                     </Panel>
                     <Panel>
-                        <PanelBody>Panel</PanelBody>
+                        <Panel.Body>Panel</Panel.Body>
                     </Panel>
                     <Panel>
-                        <PanelBody>Panel</PanelBody>
+                        <Panel.Body>Panel</Panel.Body>
                     </Panel>
                     <Panel>
-                        <PanelBody>Panel</PanelBody>
+                        <Panel.Body>Panel</Panel.Body>
                     </Panel>
                 </PanelGrid>
             </DocsTile>
@@ -325,16 +325,16 @@ export const PanelComponent = () => {
             <DocsTile>
                 <PanelGrid cols={2}>
                     <Panel>
-                        <PanelBody>Panel</PanelBody>
+                        <Panel.Body>Panel</Panel.Body>
                     </Panel>
                     <Panel>
-                        <PanelBody>Panel</PanelBody>
+                        <Panel.Body>Panel</Panel.Body>
                     </Panel>
                     <Panel>
-                        <PanelBody>Panel</PanelBody>
+                        <Panel.Body>Panel</Panel.Body>
                     </Panel>
                     <Panel>
-                        <PanelBody>Panel</PanelBody>
+                        <Panel.Body>Panel</Panel.Body>
                     </Panel>
                 </PanelGrid>
             </DocsTile>
@@ -346,28 +346,28 @@ export const PanelComponent = () => {
             <DocsTile>
                 <PanelGrid cols={4}>
                     <Panel>
-                        <PanelBody>Panel</PanelBody>
+                        <Panel.Body>Panel</Panel.Body>
                     </Panel>
                     <Panel>
-                        <PanelBody>Panel</PanelBody>
+                        <Panel.Body>Panel</Panel.Body>
                     </Panel>
                     <Panel>
-                        <PanelBody>Panel</PanelBody>
+                        <Panel.Body>Panel</Panel.Body>
                     </Panel>
                     <Panel>
-                        <PanelBody>Panel</PanelBody>
+                        <Panel.Body>Panel</Panel.Body>
                     </Panel>
                     <Panel>
-                        <PanelBody>Panel</PanelBody>
+                        <Panel.Body>Panel</Panel.Body>
                     </Panel>
                     <Panel>
-                        <PanelBody>Panel</PanelBody>
+                        <Panel.Body>Panel</Panel.Body>
                     </Panel>
                     <Panel>
-                        <PanelBody>Panel</PanelBody>
+                        <Panel.Body>Panel</Panel.Body>
                     </Panel>
                     <Panel>
-                        <PanelBody>Panel</PanelBody>
+                        <Panel.Body>Panel</Panel.Body>
                     </Panel>
                 </PanelGrid>
             </DocsTile>
@@ -379,53 +379,53 @@ export const PanelComponent = () => {
             <DocsTile>
                 <PanelGrid cols={6}>
                     <Panel colSpan={2}>
-                        <PanelBody>Panel with colSpan=2</PanelBody>
+                        <Panel.Body>Panel with colSpan=2</Panel.Body>
                     </Panel>
                     <Panel>
-                        <PanelBody>Panel</PanelBody>
+                        <Panel.Body>Panel</Panel.Body>
                     </Panel>
                     <Panel>
-                        <PanelBody>Panel</PanelBody>
+                        <Panel.Body>Panel</Panel.Body>
                     </Panel>
                     <Panel>
-                        <PanelBody>Panel</PanelBody>
+                        <Panel.Body>Panel</Panel.Body>
                     </Panel>
                     <Panel>
-                        <PanelBody>Panel</PanelBody>
+                        <Panel.Body>Panel</Panel.Body>
                     </Panel>
 
                     <Panel colSpan={3}>
-                        <PanelBody>Panel with colSpan=3</PanelBody>
+                        <Panel.Body>Panel with colSpan=3</Panel.Body>
                     </Panel>
                     <Panel>
-                        <PanelBody>Panel</PanelBody>
+                        <Panel.Body>Panel</Panel.Body>
                     </Panel>
                     <Panel>
-                        <PanelBody>Panel</PanelBody>
+                        <Panel.Body>Panel</Panel.Body>
                     </Panel>
                     <Panel>
-                        <PanelBody>Panel</PanelBody>
+                        <Panel.Body>Panel</Panel.Body>
                     </Panel>
 
                     <Panel colSpan={4}>
-                        <PanelBody>Panel with colSpan=4</PanelBody>
+                        <Panel.Body>Panel with colSpan=4</Panel.Body>
                     </Panel>
                     <Panel>
-                        <PanelBody>Panel</PanelBody>
+                        <Panel.Body>Panel</Panel.Body>
                     </Panel>
                     <Panel>
-                        <PanelBody>Panel</PanelBody>
+                        <Panel.Body>Panel</Panel.Body>
                     </Panel>
 
                     <Panel colSpan={5}>
-                        <PanelBody>Panel with colSpan=5</PanelBody>
+                        <Panel.Body>Panel with colSpan=5</Panel.Body>
                     </Panel>
                     <Panel>
-                        <PanelBody>Panel</PanelBody>
+                        <Panel.Body>Panel</Panel.Body>
                     </Panel>
 
                     <Panel colSpan={6}>
-                        <PanelBody>Panel with colSpan=6</PanelBody>
+                        <Panel.Body>Panel with colSpan=6</Panel.Body>
                     </Panel>
                 </PanelGrid>
             </DocsTile>
