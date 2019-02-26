@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.4.1-rc.11"></a>
+## [0.4.1-rc.11](https://github.com/SAP/fundamental-react/compare/v0.4.1-rc.10...v0.4.1-rc.11) (2019-02-26)
+
+
+### Bug Fixes
+
+* CORUI-6264: One component per file ListGroup ([#432](https://github.com/SAP/fundamental-react/issues/432)) ([2f79195](https://github.com/SAP/fundamental-react/commit/2f79195))
+
+
+
+<a name="0.4.1-rc.10"></a>
+## [0.4.1-rc.10](https://github.com/SAP/fundamental-react/compare/v0.4.1-rc.9...v0.4.1-rc.10) (2019-02-25)
+
+
+### Bug Fixes
+
+* one component per file - Badge edition ([#443](https://github.com/SAP/fundamental-react/issues/443)) ([7312077](https://github.com/SAP/fundamental-react/commit/7312077))
+
+
+
 <a name="0.4.1-rc.9"></a>
 ## [0.4.1-rc.9](https://github.com/SAP/fundamental-react/compare/v0.4.1-rc.8...v0.4.1-rc.9) (2019-02-25)
 
