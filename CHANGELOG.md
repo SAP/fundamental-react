@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.4.1-rc.14"></a>
+## [0.4.1-rc.14](https://github.com/SAP/fundamental-react/compare/v0.4.1-rc.13...v0.4.1-rc.14) (2019-02-26)
+
+
+### Bug Fixes
+
+* clean jest config ([#412](https://github.com/SAP/fundamental-react/issues/412)) ([d22d1eb](https://github.com/SAP/fundamental-react/commit/d22d1eb))
+
+
+
 <a name="0.4.1-rc.13"></a>
 ## [0.4.1-rc.13](https://github.com/SAP/fundamental-react/compare/v0.4.1-rc.12...v0.4.1-rc.13) (2019-02-26)
 
