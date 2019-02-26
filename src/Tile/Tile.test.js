@@ -3,44 +3,46 @@ import { Identifier } from '../Identifier/Identifier';
 import Menu from '../Menu/Menu';
 import { mount } from 'enzyme';
 import { Popover } from '../Popover/Popover';
+import ProductTile from './ProductTile';
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { ProductTile, ProductTileContent, ProductTileMedia, Tile, TileActions, TileContent, TileGrid, TileMedia } from './Tile';
+import Tile from './Tile';
+import TileGrid from './TileGrid';
 
 describe('<Tile />', () => {
     const simpleTile = (
         <Tile className='blue'>
-            <TileContent className='red' title='Tile Title'>
+            <Tile.Content className='red' title='Tile Title'>
                 <p>Tile Description</p>
-            </TileContent>
+            </Tile.Content>
         </Tile>
     );
 
     const disabledSimpleTile = (
         <Tile backgroundColor={8} columnSpan={3}
             disabled>
-            <TileContent title='Tile Title'>
+            <Tile.Content title='Tile Title'>
                 <p>Tile Description</p>
-            </TileContent>
+            </Tile.Content>
         </Tile>
     );
 
     const mediaTile = (
         <Tile isButton>
-            <TileMedia className='green'>
+            <Tile.Media className='green'>
                 <Identifier color={3} glyph='home'
                     size='m' />
-            </TileMedia>
-            <TileContent title='Tile Title'>
+            </Tile.Media>
+            <Tile.Content title='Tile Title'>
                 <p>Tile Description</p>
-            </TileContent>
+            </Tile.Content>
         </Tile>
     );
 
     const actionTile = (
         <Tile>
-            <TileContent title='Tile Title' />
-            <TileActions className='yellow'>
+            <Tile.Content title='Tile Title' />
+            <Tile.Actions className='yellow'>
                 <Popover
                     body={
                         <Menu>
@@ -53,26 +55,26 @@ describe('<Tile />', () => {
                         </Menu>
                     }
                     control={<Button glyph='vertical-grip' type='standard' />} />
-            </TileActions>
+            </Tile.Actions>
         </Tile>
     );
 
     const mediaTileNoClass = (
         <Tile isButton>
-            <TileMedia>
+            <Tile.Media>
                 <Identifier color={3} glyph='home'
                     size='m' />
-            </TileMedia>
-            <TileContent title='Tile Title'>
+            </Tile.Media>
+            <Tile.Content title='Tile Title'>
                 <p>Tile Description</p>
-            </TileContent>
+            </Tile.Content>
         </Tile>
     );
 
     const actionTileNoClass = (
         <Tile>
-            <TileContent title='Tile Title' />
-            <TileActions>
+            <Tile.Content title='Tile Title' />
+            <Tile.Actions>
                 <Popover
                     body={
                         <Menu>
@@ -85,36 +87,36 @@ describe('<Tile />', () => {
                         </Menu>
                     }
                     control={<Button glyph='vertical-grip' type='standard' />} />
-            </TileActions>
+            </Tile.Actions>
         </Tile>
     );
 
     const productMediaTile = (
         <ProductTile className='pink' isButton>
-            <ProductTileMedia image='https://techne.yaas.io/images/product-thumbnail-wide.png' />
-            <ProductTileContent title='Tile Title'>
+            <ProductTile.Media image='https://techne.yaas.io/images/product-thumbnail-wide.png' />
+            <ProductTile.Content title='Tile Title'>
                 <p>Tile Description</p>
-            </ProductTileContent>
+            </ProductTile.Content>
         </ProductTile>
     );
 
     const disabledProductMediaTile = (
         <ProductTile disabled>
-            <ProductTileMedia
+            <ProductTile.Media
                 className='blue'
                 image='https://techne.yaas.io/images/product-thumbnail-wide.png' />
-            <ProductTileContent className='blue' title='Tile Title'>
+            <ProductTile.Content className='blue' title='Tile Title'>
                 <p>Tile Description</p>
-            </ProductTileContent>
+            </ProductTile.Content>
         </ProductTile>
     );
 
     const defaultTileGrid = (
         <TileGrid className='blue'>
             <Tile colorAccent={7} rowSpan={2}>
-                <TileContent title='Tile Title'>
+                <Tile.Content title='Tile Title'>
                     <p>Tile Description</p>
-                </TileContent>
+                </Tile.Content>
             </Tile>
         </TileGrid>
     );
@@ -122,9 +124,9 @@ describe('<Tile />', () => {
     const tileGrid = (
         <TileGrid col={4}>
             <Tile colorAccent={7} rowSpan={2}>
-                <TileContent title='Tile Title'>
+                <Tile.Content title='Tile Title'>
                     <p>Tile Description</p>
-                </TileContent>
+                </Tile.Content>
             </Tile>
         </TileGrid>
     );
@@ -191,7 +193,7 @@ describe('<Tile />', () => {
         });
 
         test('should allow props to be spread to the TileContent component', () => {
-            const element = mount(<TileContent data-sample='Sample' title='Sample' />);
+            const element = mount(<Tile.Content data-sample='Sample' title='Sample' />);
 
             expect(
                 element.getDOMNode().attributes['data-sample'].value
@@ -199,7 +201,7 @@ describe('<Tile />', () => {
         });
 
         test('should allow props to be spread to the TileContent component\'s h2 element', () => {
-            const element = mount(<TileContent title='Sample' titleProps={{ 'data-sample': 'Sample' }} />);
+            const element = mount(<Tile.Content title='Sample' titleProps={{ 'data-sample': 'Sample' }} />);
 
             expect(
                 element.find('h2').getDOMNode().attributes['data-sample'].value
@@ -207,7 +209,7 @@ describe('<Tile />', () => {
         });
 
         test('should allow props to be spread to the TileMedia component', () => {
-            const element = mount(<TileMedia data-sample='Sample' />);
+            const element = mount(<Tile.Media data-sample='Sample' />);
 
             expect(
                 element.getDOMNode().attributes['data-sample'].value
@@ -215,7 +217,7 @@ describe('<Tile />', () => {
         });
 
         test('should allow props to be spread to the TileActions component', () => {
-            const element = mount(<TileActions data-sample='Sample' />);
+            const element = mount(<Tile.Actions data-sample='Sample' />);
 
             expect(
                 element.getDOMNode().attributes['data-sample'].value
@@ -231,7 +233,7 @@ describe('<Tile />', () => {
         });
 
         test('should allow props to be spread to the ProductTileContent component', () => {
-            const element = mount(<ProductTileContent data-sample='Sample' />);
+            const element = mount(<ProductTile.Content data-sample='Sample' />);
 
             expect(
                 element.getDOMNode().attributes['data-sample'].value
@@ -239,7 +241,7 @@ describe('<Tile />', () => {
         });
 
         test('should allow props to be spread to the ProductTileContent component\'s h2 element', () => {
-            const element = mount(<ProductTileContent titleProps={{ 'data-sample': 'Sample' }} />);
+            const element = mount(<ProductTile.Content titleProps={{ 'data-sample': 'Sample' }} />);
 
             expect(
                 element.find('h2').getDOMNode().attributes['data-sample'].value
@@ -247,7 +249,7 @@ describe('<Tile />', () => {
         });
 
         test('should allow props to be spread to the ProductTileMedia component', () => {
-            const element = mount(<ProductTileMedia data-sample='Sample' image='https://techne.yaas.io/images/product-thumbnail-wide.png' />);
+            const element = mount(<ProductTile.Media data-sample='Sample' image='https://techne.yaas.io/images/product-thumbnail-wide.png' />);
 
             expect(
                 element.getDOMNode().attributes['data-sample'].value

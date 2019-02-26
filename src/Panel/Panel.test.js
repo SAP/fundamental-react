@@ -1,82 +1,77 @@
 import { Button } from '../';
 import { mount } from 'enzyme';
+import Panel from './Panel';
+import PanelGrid from './PanelGrid';
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { Panel, PanelActions, PanelBody, PanelContent, PanelFilters, PanelFooter, PanelGrid, PanelHead, PanelHeader } from './Panel';
 
 describe('<Panel />', () => {
     const panel = (
         <Panel>
-            <PanelHeader>
-                <PanelHead
+            <Panel.Header>
+                <Panel.Head
                     description='Panel Description'
                     title={'Panel Header with Actions'} />
-                <PanelActions>
+                <Panel.Actions>
                     <Button compact glyph='add'>
                         Add New Button
                     </Button>
-                </PanelActions>
-            </PanelHeader>
-            <PanelFilters>
+                </Panel.Actions>
+            </Panel.Header>
+            <Panel.Filters>
                 <div>Panel Filters</div>
                 <br />
-            </PanelFilters>
-            <PanelBody>
+            </Panel.Filters>
+            <Panel.Body>
                 <div>Panel Body</div>
-            </PanelBody>
-            <PanelContent>
-                <div>Panel Content</div>
-            </PanelContent>
-            <PanelFooter>Panel Footer</PanelFooter>
+            </Panel.Body>
+            <Panel.Footer>Panel Footer</Panel.Footer>
         </Panel>
     );
 
     const panelWithClass = (
         <Panel className='blue'>
-            <PanelHeader className='blue'>
-                <PanelHead
+            <Panel.Header className='blue'>
+                <Panel.Head
                     className='blue'
                     description='Panel Description'
                     title={'Panel Header with Actions'} />
-                <PanelActions className='blue'>
+                <Panel.Actions className='blue'>
                     <Button compact glyph='add'>
                         Add New Button
                     </Button>
-                </PanelActions>
-            </PanelHeader>
-            <PanelFilters className='blue'>
+                </Panel.Actions>
+            </Panel.Header>
+            <Panel.Filters className='blue'>
                 <div>Panel Filters</div>
                 <br />
-            </PanelFilters>
-            <PanelBody className='blue'>
+            </Panel.Filters>
+            <Panel.Body className='blue'>
                 <div>Panel Body</div>
-            </PanelBody>
-            <PanelContent className='blue'>
-                <div>Panel Content</div>
-            </PanelContent>
-            <PanelFooter className='blue'>Panel Footer</PanelFooter>
+            </Panel.Body>
+            <Panel.Footer className='blue'>Panel Footer</Panel.Footer>
         </Panel>
     );
 
     const panelGrid = (
         <PanelGrid className='blue'>
             <Panel colSpan={2}>
-                <PanelHead title={'Panel Header with Actions'} />
-                <PanelBody>Panel</PanelBody>
+                <Panel.Head title={'Panel Header with Actions'} />
+                <Panel.Body>Panel</Panel.Body>
             </Panel>
             <Panel>
-                <PanelHead description='Panel Description' />
-                <PanelBody>Panel</PanelBody>
+                <Panel.Head description='Panel Description' />
+                <Panel.Body>Panel</Panel.Body>
             </Panel>
             <Panel>
-                <PanelHead />
-                <PanelBody>Panel</PanelBody>
+                <Panel.Head />
+                <Panel.Body>Panel</Panel.Body>
             </Panel>
             <Panel>
-                <PanelBody>Panel</PanelBody>
+                <Panel.Body>Panel</Panel.Body>
             </Panel>
             <Panel>
-                <PanelBody>Panel</PanelBody>
+                <Panel.Body>Panel</Panel.Body>
             </Panel>
         </PanelGrid>
     );
@@ -84,19 +79,19 @@ describe('<Panel />', () => {
     const panelGridNoGap = (
         <PanelGrid nogap>
             <Panel>
-                <PanelBody>Panel</PanelBody>
+                <Panel.Body>Panel</Panel.Body>
             </Panel>
             <Panel>
-                <PanelBody>Panel</PanelBody>
+                <Panel.Body>Panel</Panel.Body>
             </Panel>
             <Panel>
-                <PanelBody>Panel</PanelBody>
+                <Panel.Body>Panel</Panel.Body>
             </Panel>
             <Panel>
-                <PanelBody>Panel</PanelBody>
+                <Panel.Body>Panel</Panel.Body>
             </Panel>
             <Panel>
-                <PanelBody>Panel</PanelBody>
+                <Panel.Body>Panel</Panel.Body>
             </Panel>
         </PanelGrid>
     );
@@ -104,16 +99,16 @@ describe('<Panel />', () => {
     const panelGridSpan = (
         <PanelGrid cols={2}>
             <Panel>
-                <PanelBody>Panel</PanelBody>
+                <Panel.Body>Panel</Panel.Body>
             </Panel>
             <Panel>
-                <PanelBody>Panel</PanelBody>
+                <Panel.Body>Panel</Panel.Body>
             </Panel>
             <Panel>
-                <PanelBody>Panel</PanelBody>
+                <Panel.Body>Panel</Panel.Body>
             </Panel>
             <Panel>
-                <PanelBody>Panel</PanelBody>
+                <Panel.Body>Panel</Panel.Body>
             </Panel>
         </PanelGrid>
     );
@@ -163,7 +158,7 @@ describe('<Panel />', () => {
         });
 
         test('should allow props to be spread to the PanelBody component', () => {
-            const element = mount(<PanelBody data-sample='Sample' />);
+            const element = mount(<Panel.Body data-sample='Sample' />);
 
             expect(
                 element.getDOMNode().attributes['data-sample'].value
@@ -171,7 +166,7 @@ describe('<Panel />', () => {
         });
 
         test('should allow props to be spread to the PanelHeader component', () => {
-            const element = mount(<PanelHeader data-sample='Sample' />);
+            const element = mount(<Panel.Header data-sample='Sample' />);
 
             expect(
                 element.getDOMNode().attributes['data-sample'].value
@@ -179,7 +174,7 @@ describe('<Panel />', () => {
         });
 
         test('should allow props to be spread to the PanelHead component', () => {
-            const element = mount(<PanelHead data-sample='Sample' />);
+            const element = mount(<Panel.Head data-sample='Sample' />);
 
             expect(
                 element.getDOMNode().attributes['data-sample'].value
@@ -195,7 +190,7 @@ describe('<Panel />', () => {
         });
 
         test('should allow props to be spread to the PanelActions component', () => {
-            const element = mount(<PanelActions data-sample='Sample' />);
+            const element = mount(<Panel.Actions data-sample='Sample' />);
 
             expect(
                 element.getDOMNode().attributes['data-sample'].value
@@ -203,7 +198,7 @@ describe('<Panel />', () => {
         });
 
         test('should allow props to be spread to the PanelFilters component', () => {
-            const element = mount(<PanelFilters data-sample='Sample' />);
+            const element = mount(<Panel.Filters data-sample='Sample' />);
 
             expect(
                 element.getDOMNode().attributes['data-sample'].value
@@ -211,15 +206,7 @@ describe('<Panel />', () => {
         });
 
         test('should allow props to be spread to the PanelFooter component', () => {
-            const element = mount(<PanelFooter data-sample='Sample' />);
-
-            expect(
-                element.getDOMNode().attributes['data-sample'].value
-            ).toBe('Sample');
-        });
-
-        test('should allow props to be spread to the PanelContent component', () => {
-            const element = mount(<PanelContent data-sample='Sample' />);
+            const element = mount(<Panel.Footer data-sample='Sample' />);
 
             expect(
                 element.getDOMNode().attributes['data-sample'].value

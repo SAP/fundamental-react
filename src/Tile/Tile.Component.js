@@ -1,43 +1,43 @@
 import path from 'path';
 import React from 'react';
-import { Button, Identifier, Image, Menu, Popover, ProductTile, ProductTileContent, ProductTileMedia, Tile, TileActions, TileContent, TileGrid, TileMedia } from '../';
+import { Button, Identifier, Image, Menu, Popover, ProductTile, Tile, TileGrid } from '../';
 import { Description, DocsText, DocsTile, Header, Import, Playground, Properties, Separator } from '../_playground';
 
 export const TileComponent = () => {
     const simpleTileCode = `<Tile>
-    <TileContent title="Tile Title">
+    <Tile.Content title="Tile Title">
         <p>Tile Description</p>
-    </TileContent>
+    </Tile.Content>
 </Tile>`;
     const mediaTileCode = `<Tile>
-    <TileMedia>
+    <Tile.Media>
         <Image size="m" photo="https://placeimg.com/400/400/nature"></Image>
-    </TileMedia>
-    <TileContent title="Tile Title">
-    </TileContent>
+    </Tile.Media>
+    <Tile.Content title="Tile Title">
+    </Tile.Content>
 </Tile>
 
 <Tile role='button'>
-    <TileMedia>
+    <Tile.Media>
         <Image size="l" type="circle" photo="https://placeimg.com/400/400/nature"></Image>
-    </TileMedia>
-    <TileContent title="Tile Title">
+    </Tile.Media>
+    <Tile.Content title="Tile Title">
         <p>Tile Description</p>
-    </TileContent>
+    </Tile.Content>
 </Tile>
 
 <Tile role='button'>
-    <TileMedia>
+    <Tile.Media>
         <Identifier size="m" glyph="home" color={3}></Identifier>
-    </TileMedia>
-    <TileContent title="Tile Title">
+    </Tile.Media>
+    <Tile.Content title="Tile Title">
         <p>Tile Description</p>
-    </TileContent>
+    </Tile.Content>
 </Tile>`;
 
     const actionsTileCode = `<Tile>
-    <TileContent title="Tile Title" />
-    <TileActions>
+    <Tile.Content title="Tile Title" />
+    <Tile.Actions>
         <Popover
             control={<Button option="light" glyph="vertical-grip" />}
             body={
@@ -51,57 +51,57 @@ export const TileComponent = () => {
                 </Menu>
             }
         />
-    </TileActions>
+    </Tile.Actions>
 </Tile>`;
 
     const productTileCode = `<ProductTile role='button'>
-    <ProductTileMedia image="https://techne.yaas.io/images/product-thumbnail-wide.png"></ProductTileMedia>
-    <ProductTileContent title="Tile Title">
+    <ProductTile.Media image="https://techne.yaas.io/images/product-thumbnail-wide.png" />
+    <ProductTile.Content title="Tile Title">
         <p>Tile Description</p>
-    </ProductTileContent>
+    </ProductTile.Content>
 </ProductTile>
 
 <ProductTile disabled>
-    <ProductTileMedia image="https://techne.yaas.io/images/product-thumbnail-wide.png"></ProductTileMedia>
-    <ProductTileContent title="Tile Title">
+    <ProductTile.Media image="https://techne.yaas.io/images/product-thumbnail-wide.png" />
+    <ProductTile.Content title="Tile Title">
         <p>Tile Description</p>
-    </ProductTileContent>
+    </ProductTile.Content>
 </ProductTile>`;
     const tileGridCode = `<TileGrid col={4}>
     <Tile rowSpan={2} colorAccent={7}>
-        <TileContent title="Tile Title">
+        <Tile.Content title="Tile Title">
             <p>Tile Description</p>
-        </TileContent>
+        </Tile.Content>
     </Tile>
     <Tile>
-        <TileMedia>
+        <Tile.Media>
             <Image size="l" type="circle" photo="https://placeimg.com/400/400/nature"></Image>
-        </TileMedia>
-        <TileContent title="Tile Title">
+        </Tile.Media>
+        <Tile.Content title="Tile Title">
             <p>Tile Description</p>
-        </TileContent>
+        </Tile.Content>
     </Tile>
     <Tile>
-        <TileContent title="Tile Title">
+        <Tile.Content title="Tile Title">
             <p>Tile Description</p>
-        </TileContent>
+        </Tile.Content>
     </Tile>
     <Tile role='button'>
-        <TileMedia>
+        <Tile.Media>
             <Identifier size="l" glyph="home" color={3}></Identifier>
-        </TileMedia>
-        <TileContent title="Tile Title">
-        </TileContent>
+        </Tile.Media>
+        <Tile.Content title="Tile Title">
+        </Tile.Content>
     </Tile>
     <Tile >
-        <TileContent title="Tile Title">
+        <Tile.Content title="Tile Title">
             <p>Tile Description</p>
-        </TileContent>
+        </Tile.Content>
     </Tile>
     <Tile columnSpan={2} colorAccent={4}>
-        <TileContent title="Tile Title">
+        <Tile.Content title="Tile Title">
             <p>Tile Description</p>
-        </TileContent>
+        </Tile.Content>
     </Tile>
 </TileGrid>`;
 
@@ -123,9 +123,9 @@ export const TileComponent = () => {
             <h2>Simple Tile</h2>
             <DocsTile>
                 <Tile>
-                    <TileContent title='Tile Title'>
+                    <Tile.Content title='Tile Title'>
                         <p>Tile Description</p>
-                    </TileContent>
+                    </Tile.Content>
                 </Tile>
             </DocsTile>
             <DocsText>{simpleTileCode}</DocsText>
@@ -135,30 +135,30 @@ export const TileComponent = () => {
             <h2>Media Tile</h2>
             <DocsTile>
                 <Tile>
-                    <TileMedia>
+                    <Tile.Media>
                         <Image photo='https://placeimg.com/400/400/nature' size='m' />
-                    </TileMedia>
-                    <TileContent title='Tile Title' />
+                    </Tile.Media>
+                    <Tile.Content title='Tile Title' />
                 </Tile>
                 <br />
                 <Tile role='button'>
-                    <TileMedia>
+                    <Tile.Media>
                         <Image photo='https://placeimg.com/400/400/nature' size='l'
                             type='circle' />
-                    </TileMedia>
-                    <TileContent title='Tile Title'>
+                    </Tile.Media>
+                    <Tile.Content title='Tile Title'>
                         <p>Tile Description</p>
-                    </TileContent>
+                    </Tile.Content>
                 </Tile>
                 <br />
                 <Tile role='button'>
-                    <TileMedia>
+                    <Tile.Media>
                         <Identifier color={3} glyph='home'
                             size='m' />
-                    </TileMedia>
-                    <TileContent title='Tile Title'>
+                    </Tile.Media>
+                    <Tile.Content title='Tile Title'>
                         <p>Tile Description</p>
-                    </TileContent>
+                    </Tile.Content>
                 </Tile>
             </DocsTile>
             <DocsText>{mediaTileCode}</DocsText>
@@ -168,8 +168,8 @@ export const TileComponent = () => {
             <h2>Actions Tile</h2>
             <DocsTile>
                 <Tile>
-                    <TileContent title='Tile Title' />
-                    <TileActions>
+                    <Tile.Content title='Tile Title' />
+                    <Tile.Actions>
                         <Popover
                             body={
                                 <Menu>
@@ -182,7 +182,7 @@ export const TileComponent = () => {
                                 </Menu>
                             }
                             control={<Button glyph='vertical-grip' option='light' />} />
-                    </TileActions>
+                    </Tile.Actions>
                 </Tile>
             </DocsTile>
             <DocsText>{actionsTileCode}</DocsText>
@@ -193,19 +193,19 @@ export const TileComponent = () => {
             <DocsTile>
                 <div>
                     <ProductTile role='button'>
-                        <ProductTileMedia image='https://techne.yaas.io/images/product-thumbnail-wide.png' />
-                        <ProductTileContent title='Tile Title'>
+                        <ProductTile.Media image='https://techne.yaas.io/images/product-thumbnail-wide.png' />
+                        <ProductTile.Content title='Tile Title'>
                             <p>Tile Description</p>
-                        </ProductTileContent>
+                        </ProductTile.Content>
                     </ProductTile>
 
                     <br />
 
                     <ProductTile disabled>
-                        <ProductTileMedia image='https://techne.yaas.io/images/product-thumbnail-wide.png' />
-                        <ProductTileContent title='Tile Title'>
+                        <ProductTile.Media image='https://techne.yaas.io/images/product-thumbnail-wide.png' />
+                        <ProductTile.Content title='Tile Title'>
                             <p>Tile Description</p>
-                        </ProductTileContent>
+                        </ProductTile.Content>
                     </ProductTile>
                 </div>
             </DocsTile>
@@ -219,40 +219,40 @@ export const TileComponent = () => {
             <DocsTile>
                 <TileGrid col={4}>
                     <Tile colorAccent={7} rowSpan={2}>
-                        <TileContent title='Tile Title'>
+                        <Tile.Content title='Tile Title'>
                             <p>Tile Description</p>
-                        </TileContent>
+                        </Tile.Content>
                     </Tile>
                     <Tile>
-                        <TileMedia>
+                        <Tile.Media>
                             <Image photo='https://placeimg.com/400/400/nature' size='l'
                                 type='circle' />
-                        </TileMedia>
-                        <TileContent title='Tile Title'>
+                        </Tile.Media>
+                        <Tile.Content title='Tile Title'>
                             <p>Tile Description</p>
-                        </TileContent>
+                        </Tile.Content>
                     </Tile>
                     <Tile>
-                        <TileContent title='Tile Title'>
+                        <Tile.Content title='Tile Title'>
                             <p>Tile Description</p>
-                        </TileContent>
+                        </Tile.Content>
                     </Tile>
                     <Tile role='button'>
-                        <TileMedia>
+                        <Tile.Media>
                             <Identifier color={3} glyph='home'
                                 size='l' />
-                        </TileMedia>
-                        <TileContent title='Tile Title' />
+                        </Tile.Media>
+                        <Tile.Content title='Tile Title' />
                     </Tile>
                     <Tile>
-                        <TileContent title='Tile Title'>
+                        <Tile.Content title='Tile Title'>
                             <p>Tile Description</p>
-                        </TileContent>
+                        </Tile.Content>
                     </Tile>
                     <Tile colorAccent={4} columnSpan={2}>
-                        <TileContent title='Tile Title'>
+                        <Tile.Content title='Tile Title'>
                             <p>Tile Description</p>
-                        </TileContent>
+                        </Tile.Content>
                     </Tile>
                 </TileGrid>
             </DocsTile>
@@ -278,9 +278,9 @@ export const TileComponent = () => {
                     }
                 ]}>
                 <Tile>
-                    <TileContent title='Tile Title'>
+                    <Tile.Content title='Tile Title'>
                         <p>Tile Description</p>
-                    </TileContent>
+                    </Tile.Content>
                 </Tile>
             </Playground>
         </div>

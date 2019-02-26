@@ -47,13 +47,6 @@ exports[`<Panel /> create panels 1`] = `
     </div>
   </div>
   <div
-    className="fd-panel__content"
-  >
-    <div>
-      Panel Content
-    </div>
-  </div>
-  <div
     className="fd-panel__footer"
   >
     Panel Footer
@@ -178,13 +171,6 @@ exports[`<Panel /> create panels 3`] = `
   >
     <div>
       Panel Body
-    </div>
-  </div>
-  <div
-    className="fd-panel__content blue"
-  >
-    <div>
-      Panel Content
     </div>
   </div>
   <div

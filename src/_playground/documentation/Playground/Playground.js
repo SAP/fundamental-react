@@ -4,11 +4,11 @@ import { Dropdown } from '../../../';
 import { Icon } from '../../../';
 import { Identifier } from '../../../';
 import { Image } from '../../../';
+import { ListGroup } from '../../../';
 import PropTypes from 'prop-types';
 import { Badge, Label, Status } from '../../../';
 import { FormGroup, FormItem, FormLabel, InputGroup } from '../../../';
-import { ListGroup, ListGroupItem, ListGroupItemActions } from '../../../';
-import { ProductTile, ProductTileContent, ProductTileMedia, Tile, TileActions, TileContent, TileMedia } from '../../../';
+import { ProductTile, Tile } from '../../../';
 import React, { Component } from 'react';
 
 export class Playground extends Component {
@@ -469,13 +469,13 @@ export class Playground extends Component {
           case 'listgroup':
               componentToGenerate = (
                   <ListGroup>
-                      <ListGroupItem>
+                      <ListGroup.Item>
                           {this.retrieveValue(
                               'children',
                               this.state.childs.children.props.children[0],
                               this.state.currentValues
                           )}
-                          <ListGroupItemActions>
+                          <ListGroup.ItemActions>
                               <Button
                                   glyph={this.retrieveValue(
                                       'glyph',
@@ -484,8 +484,8 @@ export class Playground extends Component {
                                       this.state.currentValues
                                   )}
                                   option='light' />
-                          </ListGroupItemActions>
-                      </ListGroupItem>
+                          </ListGroup.ItemActions>
+                      </ListGroup.Item>
                   </ListGroup>
               );
               break;
@@ -493,7 +493,7 @@ export class Playground extends Component {
               if (this.state.component === '' || this.state.component === 'simple') {
                   componentToGenerate = (
                       <Tile>
-                          <TileContent
+                          <Tile.Content
                               title={this.retrieveValue(
                                   'title',
                                   this.state.childs.children.props.title,
@@ -506,35 +506,35 @@ export class Playground extends Component {
                                       this.state.currentValues
                                   )}
                               </p>
-                          </TileContent>
-                          <TileActions>
+                          </Tile.Content>
+                          <Tile.Actions>
                               <Dropdown size='m' />
-                          </TileActions>
+                          </Tile.Actions>
                       </Tile>
                   );
               } else if (this.state.component === 'media') {
                   componentToGenerate = (
                       <Tile>
-                          <TileMedia>
+                          <Tile.Media>
                               <Image photo='https://placeimg.com/400/400/nature' size='m' />
-                          </TileMedia>
-                          <TileContent
+                          </Tile.Media>
+                          <Tile.Content
                               title={this.retrieveValue(
                                   'title',
                                   this.state.childs.children.props.title,
                                   this.state.currentValues
                               )} />
-                          <TileActions>
+                          <Tile.Actions>
                               <Dropdown size='m' />
-                          </TileActions>
+                          </Tile.Actions>
                       </Tile>
                   );
               } else if (this.state.component === 'product') {
                   componentToGenerate = (
                       <Tile>
-                          <ProductTile isButton='true'>
-                              <ProductTileMedia image='https://techne.yaas.io/images/product-thumbnail-wide.png' />
-                              <ProductTileContent
+                          <ProductTile>
+                              <ProductTile.Media image='https://techne.yaas.io/images/product-thumbnail-wide.png' />
+                              <ProductTile.Content
                                   title={this.retrieveValue(
                                       'title',
                                       this.state.childs.children.props.title,
@@ -547,7 +547,7 @@ export class Playground extends Component {
                                           this.state.currentValues
                                       )}
                                   </p>
-                              </ProductTileContent>
+                              </ProductTile.Content>
                           </ProductTile>
                       </Tile>
                   );

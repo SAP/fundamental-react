@@ -1,5 +1,5 @@
 import classnames from 'classnames';
-import { Counter } from '../Badge/Badge';
+import Counter from '../Badge/Counter';
 import { Icon } from '../Icon/Icon';
 import { Identifier } from '../Identifier/Identifier';
 import Menu from '../Menu/Menu';

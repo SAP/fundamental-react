@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<SideNavigation /> create side navigation 1`] = `
+exports[`<SideNav /> create side navigation 1`] = `
 <nav
   className="fd-side-nav"
 >
@@ -66,7 +66,7 @@ exports[`<SideNavigation /> create side navigation 1`] = `
 </nav>
 `;
 
-exports[`<SideNavigation /> create side navigation 2`] = `
+exports[`<SideNav /> create side navigation 2`] = `
 <nav
   className="fd-side-nav"
 >
@@ -209,7 +209,7 @@ exports[`<SideNavigation /> create side navigation 2`] = `
 </nav>
 `;
 
-exports[`<SideNavigation /> create side navigation 3`] = `
+exports[`<SideNav /> create side navigation 3`] = `
 <nav
   className="fd-side-nav"
 >
@@ -386,7 +386,7 @@ exports[`<SideNavigation /> create side navigation 3`] = `
 </nav>
 `;
 
-exports[`<SideNavigation /> create side navigation 4`] = `
+exports[`<SideNav /> create side navigation 4`] = `
 <nav
   className="fd-side-nav"
 >
@@ -472,7 +472,7 @@ exports[`<SideNavigation /> create side navigation 4`] = `
 </nav>
 `;
 
-exports[`<SideNavigation /> create side navigation 5`] = `
+exports[`<SideNav /> create side navigation 5`] = `
 <nav
   className="fd-side-nav fd-side-nav--icons"
 >
@@ -553,7 +553,7 @@ exports[`<SideNavigation /> create side navigation 5`] = `
 </nav>
 `;
 
-exports[`<SideNavigation /> create side navigation 6`] = `
+exports[`<SideNav /> create side navigation 6`] = `
 <ul
   className="fd-side-nav__list"
 >

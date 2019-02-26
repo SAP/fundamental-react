@@ -2,6 +2,97 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.4.1-rc.15"></a>
+## [0.4.1-rc.15](https://github.com/SAP/fundamental-react/compare/v0.4.1-rc.14...v0.4.1-rc.15) (2019-02-26)
+
+
+### Bug Fixes
+
+* One component per file for SideNav ([#442](https://github.com/SAP/fundamental-react/issues/442)) ([1119c81](https://github.com/SAP/fundamental-react/commit/1119c81))
+
+
+
+<a name="0.4.1-rc.14"></a>
+## [0.4.1-rc.14](https://github.com/SAP/fundamental-react/compare/v0.4.1-rc.13...v0.4.1-rc.14) (2019-02-26)
+
+
+### Bug Fixes
+
+* clean jest config ([#412](https://github.com/SAP/fundamental-react/issues/412)) ([d22d1eb](https://github.com/SAP/fundamental-react/commit/d22d1eb))
+
+
+
+<a name="0.4.1-rc.13"></a>
+## [0.4.1-rc.13](https://github.com/SAP/fundamental-react/compare/v0.4.1-rc.12...v0.4.1-rc.13) (2019-02-26)
+
+
+
+<a name="0.4.1-rc.12"></a>
+## [0.4.1-rc.12](https://github.com/SAP/fundamental-react/compare/v0.4.1-rc.11...v0.4.1-rc.12) (2019-02-26)
+
+
+### Bug Fixes
+
+* One component per file for Panel ([#445](https://github.com/SAP/fundamental-react/issues/445)) ([3920860](https://github.com/SAP/fundamental-react/commit/3920860))
+
+
+
+<a name="0.4.1-rc.11"></a>
+## [0.4.1-rc.11](https://github.com/SAP/fundamental-react/compare/v0.4.1-rc.10...v0.4.1-rc.11) (2019-02-26)
+
+
+### Bug Fixes
+
+* CORUI-6264: One component per file ListGroup ([#432](https://github.com/SAP/fundamental-react/issues/432)) ([2f79195](https://github.com/SAP/fundamental-react/commit/2f79195))
+
+
+
+<a name="0.4.1-rc.10"></a>
+## [0.4.1-rc.10](https://github.com/SAP/fundamental-react/compare/v0.4.1-rc.9...v0.4.1-rc.10) (2019-02-25)
+
+
+### Bug Fixes
+
+* one component per file - Badge edition ([#443](https://github.com/SAP/fundamental-react/issues/443)) ([7312077](https://github.com/SAP/fundamental-react/commit/7312077))
+
+
+
+<a name="0.4.1-rc.9"></a>
+## [0.4.1-rc.9](https://github.com/SAP/fundamental-react/compare/v0.4.1-rc.8...v0.4.1-rc.9) (2019-02-25)
+
+
+### Bug Fixes
+
+* One component per file for Time ([#438](https://github.com/SAP/fundamental-react/issues/438)) ([e711cc9](https://github.com/SAP/fundamental-react/commit/e711cc9))
+
+
+
+<a name="0.4.1-rc.8"></a>
+## [0.4.1-rc.8](https://github.com/SAP/fundamental-react/compare/v0.4.1-rc.7...v0.4.1-rc.8) (2019-02-25)
+
+
+
+<a name="0.4.1-rc.7"></a>
+## [0.4.1-rc.7](https://github.com/SAP/fundamental-react/compare/v0.4.1-rc.6...v0.4.1-rc.7) (2019-02-25)
+
+
+### Bug Fixes
+
+* One component per file for Tile ([#441](https://github.com/SAP/fundamental-react/issues/441)) ([e26f32f](https://github.com/SAP/fundamental-react/commit/e26f32f))
+* One component per file for TimePicker ([#437](https://github.com/SAP/fundamental-react/issues/437)) ([9cf01d2](https://github.com/SAP/fundamental-react/commit/9cf01d2))
+
+
+
+<a name="0.4.1-rc.6"></a>
+## [0.4.1-rc.6](https://github.com/SAP/fundamental-react/compare/v0.4.1-rc.5...v0.4.1-rc.6) (2019-02-25)
+
+
+### Bug Fixes
+
+* One component per file for TreeView ([#433](https://github.com/SAP/fundamental-react/issues/433)) ([ebfcbd6](https://github.com/SAP/fundamental-react/commit/ebfcbd6))
+
+
+
 <a name="0.4.1-rc.5"></a>
 ## [0.4.1-rc.5](https://github.com/SAP/fundamental-react/compare/v0.4.1-rc.4...v0.4.1-rc.5) (2019-02-22)
 

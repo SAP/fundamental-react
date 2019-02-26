@@ -28,7 +28,7 @@ import { PanelComponent } from '../Panel/Panel.Component';
 import { PopoverComponent } from '../Popover/Popover.Component';
 import { SearchInputComponent } from '../SearchInput/SearchInput.Component';
 import { ShellbarComponent } from '../Shellbar/Shellbar.Component';
-import { SideNavigationComponent } from '../SideNavigation/SideNavigation.Component';
+import { SideNavigationComponent } from '../SideNavigation/SideNav.Component';
 import sortBy from 'sort-by';
 import { TableComponent } from '../Table/Table.Component';
 import { TabsComponent } from '../Tabs/Tabs.Component';
