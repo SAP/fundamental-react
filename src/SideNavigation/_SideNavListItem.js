@@ -1,148 +1,9 @@
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
+import React from 'react';
+import SideNavList from './_SideNavList';
 
-export class SideNav extends Component {
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            selectedId: props.selectedId
-        };
-    }
-
-    getDerrivedStateFromProps(updatedProps, previousState) {
-        if (updatedProps.selectedId !== previousState.selectedId) {
-            return { selectedId: updatedProps.selectedId };
-        }
-    }
-
-    handleSelect = (e, id) => {
-        this.setState({
-            selectedId: id
-        });
-    }
-
-    render() {
-        const { children, className, icons, selectedId, ...rest } = this.props;
-
-        const sideNavClasses = classnames(
-            className,
-            'fd-side-nav',
-            {
-                'fd-side-nav--icons': icons
-            }
-        );
-
-        return (
-            <nav {...rest} className={sideNavClasses}>
-                {React.Children.map(children, (child) => {
-                    if (React.isValidElement(child)) {
-                        return React.cloneElement(child, {
-                            onItemSelect: this.handleSelect,
-                            selectedId: this.state.selectedId
-                        });
-                    } else {
-                        return child;
-                    }
-                })}
-            </nav>
-        );
-    }
-}
-
-
-SideNav.propTypes = {
-    children: PropTypes.node,
-    className: PropTypes.string,
-    icons: PropTypes.bool,
-    selectedId: PropTypes.string
-};
-
-SideNav.propDescriptions = {
-    icons: 'Set to **true** to only render icons for each `SideNavListItem`.',
-    selectedId: 'The `id` of the selected `SideNavListItem`.'
-};
-
-SideNav.displayName = 'SideNav';
-
-export class SideNavList extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-
-    render() {
-        const { children, className, hasParent, onItemSelect, open, selectedId, title, titleProps, ...rest } = this.props;
-        const sideNavListClasses = classnames({
-            'fd-side-nav__list': !hasParent,
-            'fd-side-nav__sublist': hasParent
-        },
-        className
-        );
-
-        const sideNavHeaderlasses = classnames(
-            'fd-side-nav__group',
-            className
-        );
-
-        const sideNavList = (
-            <ul
-                {...rest}
-                aria-expanded={hasParent && open}
-                aria-hidden={hasParent && !open}
-                className={sideNavListClasses}>
-                {React.Children.map(children, (child) => {
-                    if (React.isValidElement(child)) {
-                        return React.cloneElement(child, {
-                            isSubItem: hasParent,
-                            onItemSelect: onItemSelect,
-                            selected: selectedId === child.props.id,
-                            selectedId: selectedId
-                        });
-                    } else {
-                        return child;
-                    }
-                })}
-            </ul>
-        );
-
-        if (title && !hasParent) {
-            return (
-                <div
-                    className={sideNavHeaderlasses}>
-                    <h1 {...titleProps} className='fd-side-nav__title'>
-                        {title}
-                    </h1>
-                    {sideNavList}
-                </div>
-            );
-        }
-
-        return sideNavList;
-    }
-}
-
-SideNavList.propTypes = {
-    children: PropTypes.node,
-    className: PropTypes.string,
-    hasParent: PropTypes.bool,
-    open: PropTypes.bool,
-    selectedId: PropTypes.string,
-    title: PropTypes.string,
-    titleProps: PropTypes.object,
-    onItemSelect: PropTypes.func
-};
-
-SideNavList.propDescriptions = {
-    hasParent: '_INTERNAL USE ONLY._',
-    open: '_INTERNAL USE ONLY._',
-    selectedId: '_INTERNAL USE ONLY._',
-    onItemSelect: '_INTERNAL USE ONLY._'
-};
-
-SideNavList.displayName = 'SideNavList';
-
-export class SideNavListItem extends React.Component {
+class SideNavListItem extends React.Component {
     constructor(props) {
         super(props);
 
@@ -270,8 +131,11 @@ SideNavListItem.propDescriptions = {
     selectedId: '_INTERNAL USE ONLY._',
     url: 'Enables use of `<a>` element. Value to be applied to the anchor\'s `href` attribute.'
 };
-SideNavListItem.displayName = 'SideNavListItem';
 
 SideNavListItem.defaultProps = {
     onClick: () => {}
 };
+
+SideNavListItem.displayName = 'SideNavListItem';
+
+export default SideNavListItem;
