@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.4.1-rc.16"></a>
+## [0.4.1-rc.16](https://github.com/SAP/fundamental-react/compare/v0.4.1-rc.15...v0.4.1-rc.16) (2019-02-27)
+
+
+### Bug Fixes
+
+* CORUI-6264: One component per file Menu ([#434](https://github.com/SAP/fundamental-react/issues/434)) ([3aecc51](https://github.com/SAP/fundamental-react/commit/3aecc51))
+
+
+
 <a name="0.4.1-rc.15"></a>
 ## [0.4.1-rc.15](https://github.com/SAP/fundamental-react/compare/v0.4.1-rc.14...v0.4.1-rc.15) (2019-02-26)
 
