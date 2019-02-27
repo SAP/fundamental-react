@@ -1,4 +1,4 @@
-$mediaMaxWidth: 700px;
+$mediaMaxWidth: 1280px;
 $fd-icons-path: '../../node_modules/fiori-fundamentals/scss/icons/';
 $fd-fonts-path: '../../node_modules/fiori-fundamentals/dist/fonts/';
 @import '../../node_modules/fiori-fundamentals/scss/all.scss';
@@ -96,7 +96,7 @@ $library-color: #61dafb;
         }
 
         @media (max-width: $mediaMaxWidth) {
-            .frDocs-Sidebar.sidebar-hidden{
+            .frDocs-Sidebar.sidebar-hidden {
                         margin-left: -280px;
                         overflow-x: hidden;
             }
@@ -113,7 +113,7 @@ $library-color: #61dafb;
             background-color: white;
             padding: 2rem;
 
-            .sidebar-toggle{
+            .sidebar-toggle {
                 visibility: hidden;
             }
 
