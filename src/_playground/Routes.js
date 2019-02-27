@@ -4,6 +4,7 @@ import { BadgeComponent } from '../Badge/Badge.Component';
 import { BreadcrumbComponent } from '../Breadcrumb/Breadcrumb.Component';
 import { ButtonComponent } from '../Button/Button.Component';
 import { CalendarComponent } from '../Calendar/Calendar.Component';
+import classnames from 'classnames';
 import { ComboboxInputComponent } from '../ComboboxInput/ComboboxInput.Component';
 import { ContextualMenuComponent } from '../ContextualMenu/ContextualMenu.Component';
 import { DatePickerComponent } from '../DatePicker/DatePicker.Component';
@@ -341,12 +342,24 @@ export class Routes extends Component {
             );
         });
 
-        const showNav = this.state.showSideNav ? '' : 'sidebar-visibility';
+        const sideBarClasses = classnames(
+            'frDocs-Sidebar',
+            {
+                'sidebar-visibility': !this.state.showSideNav
+            }
+        );
+
+        const docsContentClasses = classnames(
+            'frDocs-Content',
+            {
+                'sidebar-visibility': !this.state.showSideNav
+            }
+        );
 
         return (
             <BrowserRouter basename={process.env.PUBLIC_URL}>
                 <div className='frDocs-Container'>
-                    <div className={`frDocs-Sidebar ${showNav}`}>
+                    <div className={sideBarClasses}>
                         <h1 className='frDocs-Logo'>
                             <a href='/'>Fundamental <span className='frDocs-Logo--library'>React</span></a>
                         </h1>
@@ -361,7 +374,7 @@ export class Routes extends Component {
                             {navItems}
                         </nav>
                     </div>
-                    <div className={`frDocs-Content ${showNav}`}>
+                    <div className={docsContentClasses}>
                         <button
                             aria-expanded={this.state.showSideNav}
                             aria-label='Toggle Navigation'
