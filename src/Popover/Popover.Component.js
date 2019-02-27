@@ -1,7 +1,7 @@
 import path from 'path';
 import React from 'react';
 import { Description, DocsText, DocsTile, Header, Import, Properties, Separator } from '../_playground';
-import { Icon, Identifier, Image, Menu, MenuItem, MenuList, Popover } from '../';
+import { Icon, Identifier, Image, Menu, Popover } from '../';
 
 export const PopoverComponent = () => {
     const popoverCode = `<Popover
@@ -9,12 +9,12 @@ export const PopoverComponent = () => {
     control={<Icon glyph="cart" size="xl" />}
     body={
         <Menu>
-            <MenuList>
-                <MenuItem url="/">Option 1</MenuItem>
-                <MenuItem url="/">Option 2</MenuItem>
-                <MenuItem url="/">Option 3</MenuItem>
-                <MenuItem url="/">Option 4</MenuItem>
-            </MenuList>
+            <Menu.List>
+                <Menu.Item url="/">Option 1</Menu.Item>
+                <Menu.Item url="/">Option 2</Menu.Item>
+                <Menu.Item url="/">Option 3</Menu.Item>
+                <Menu.Item url="/">Option 4</Menu.Item>
+            </Menu.List>
         </Menu>
     }
 />
@@ -25,12 +25,12 @@ export const PopoverComponent = () => {
     control={<Image size="m" type="circle" photo="https://placeimg.com/400/400/nature" />}
     body={
         <Menu>
-            <MenuList>
-                <MenuItem url="/">Option 1</MenuItem>
-                <MenuItem url="/">Option 2</MenuItem>
-                <MenuItem url="/">Option 3</MenuItem>
-                <MenuItem url="/">Option 4</MenuItem>
-            </MenuList>
+            <Menu.List>
+                <Menu.Item url="/">Option 1</Menu.Item>
+                <Menu.Item url="/">Option 2</Menu.Item>
+                <Menu.Item url="/">Option 3</Menu.Item>
+                <Menu.Item url="/">Option 4</Menu.Item>
+            </Menu.List>
         </Menu>
     }
 />
@@ -41,12 +41,12 @@ export const PopoverComponent = () => {
     noArrow
     body={
         <Menu>
-            <MenuList>
-                <MenuItem url="/">Option 1</MenuItem>
-                <MenuItem url="/">Option 2</MenuItem>
-                <MenuItem url="/">Option 3</MenuItem>
-                <MenuItem url="/">Option 4</MenuItem>
-            </MenuList>
+            <Menu.List>
+                <Menu.Item url="/">Option 1</Menu.Item>
+                <Menu.Item url="/">Option 2</Menu.Item>
+                <Menu.Item url="/">Option 3</Menu.Item>
+                <Menu.Item url="/">Option 4</Menu.Item>
+            </Menu.List>
         </Menu>
     }
 />
@@ -58,12 +58,12 @@ export const PopoverComponent = () => {
     noArrow
     body={
         <Menu>
-            <MenuList>
-                <MenuItem url="/">Option 1</MenuItem>
-                <MenuItem url="/">Option 2</MenuItem>
-                <MenuItem url="/">Option 3</MenuItem>
-                <MenuItem url="/">Option 4</MenuItem>
-            </MenuList>
+            <Menu.List>
+                <Menu.Item url="/">Option 1</Menu.Item>
+                <Menu.Item url="/">Option 2</Menu.Item>
+                <Menu.Item url="/">Option 3</Menu.Item>
+                <Menu.Item url="/">Option 4</Menu.Item>
+            </Menu.List>
         </Menu>
     }
 />`;
@@ -93,12 +93,12 @@ export const PopoverComponent = () => {
                     <Popover
                         body={
                             <Menu>
-                                <MenuList>
-                                    <MenuItem url='/'>Option 1</MenuItem>
-                                    <MenuItem url='/'>Option 2</MenuItem>
-                                    <MenuItem url='/'>Option 3</MenuItem>
-                                    <MenuItem url='/'>Option 4</MenuItem>
-                                </MenuList>
+                                <Menu.List>
+                                    <Menu.Item url='/'>Option 1</Menu.Item>
+                                    <Menu.Item url='/'>Option 2</Menu.Item>
+                                    <Menu.Item url='/'>Option 3</Menu.Item>
+                                    <Menu.Item url='/'>Option 4</Menu.Item>
+                                </Menu.List>
                             </Menu>
                         }
                         control={<Icon glyph='cart' size='xl' />}
@@ -108,12 +108,12 @@ export const PopoverComponent = () => {
                         alignment='right'
                         body={
                             <Menu>
-                                <MenuList>
-                                    <MenuItem url='/'>Option 1</MenuItem>
-                                    <MenuItem url='/'>Option 2</MenuItem>
-                                    <MenuItem url='/'>Option 3</MenuItem>
-                                    <MenuItem url='/'>Option 4</MenuItem>
-                                </MenuList>
+                                <Menu.List>
+                                    <Menu.Item url='/'>Option 1</Menu.Item>
+                                    <Menu.Item url='/'>Option 2</Menu.Item>
+                                    <Menu.Item url='/'>Option 3</Menu.Item>
+                                    <Menu.Item url='/'>Option 4</Menu.Item>
+                                </Menu.List>
                             </Menu>
                         }
                         control={<Image photo='https://placeimg.com/400/400/nature' size='m'
@@ -123,12 +123,12 @@ export const PopoverComponent = () => {
                     <Popover
                         body={
                             <Menu>
-                                <MenuList>
-                                    <MenuItem url='/'>Option 1</MenuItem>
-                                    <MenuItem url='/'>Option 2</MenuItem>
-                                    <MenuItem url='/'>Option 3</MenuItem>
-                                    <MenuItem url='/'>Option 4</MenuItem>
-                                </MenuList>
+                                <Menu.List>
+                                    <Menu.Item url='/'>Option 1</Menu.Item>
+                                    <Menu.Item url='/'>Option 2</Menu.Item>
+                                    <Menu.Item url='/'>Option 3</Menu.Item>
+                                    <Menu.Item url='/'>Option 4</Menu.Item>
+                                </Menu.List>
                             </Menu>
                         }
                         control={<Identifier color={6} glyph='money-bills'
@@ -140,12 +140,12 @@ export const PopoverComponent = () => {
                         alignment='right'
                         body={
                             <Menu>
-                                <MenuList>
-                                    <MenuItem url='/'>Option 1</MenuItem>
-                                    <MenuItem url='/'>Option 2</MenuItem>
-                                    <MenuItem url='/'>Option 3</MenuItem>
-                                    <MenuItem url='/'>Option 4</MenuItem>
-                                </MenuList>
+                                <Menu.List>
+                                    <Menu.Item url='/'>Option 1</Menu.Item>
+                                    <Menu.Item url='/'>Option 2</Menu.Item>
+                                    <Menu.Item url='/'>Option 3</Menu.Item>
+                                    <Menu.Item url='/'>Option 4</Menu.Item>
+                                </Menu.List>
                             </Menu>
                         }
                         control={<Icon glyph='menu2' size='xl' />}

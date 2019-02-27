@@ -1,6 +1,6 @@
 import path from 'path';
 import React from 'react';
-import { ActionBar, Button, Menu, MenuItem, MenuList, Popover } from '../';
+import { ActionBar, Button, Menu, Popover } from '../';
 import { Description, DocsText, DocsTile, Header, Import, Properties, Separator } from '../_playground';
 
 export const ActionBarComponent = () => {
@@ -32,12 +32,12 @@ const clickBackBtn = () => {
             control={<Button option="light" glyph="vertical-grip" />}
             body={
                 <Menu>
-                    <MenuList>
-                        <MenuItem url="/">Option 1</MenuItem>
-                        <MenuItem url="/">Option 2</MenuItem>
-                        <MenuItem url="/">Option 3</MenuItem>
-                        <MenuItem url="/">Option 4</MenuItem>
-                    </MenuList>
+                    <Menu.List>
+                        <Menu.Item url="/">Option 1</Menu.Item>
+                        <Menu.Item url="/">Option 2</Menu.Item>
+                        <Menu.Item url="/">Option 3</Menu.Item>
+                        <Menu.Item url="/">Option 4</Menu.Item>
+                    </Menu.List>
                 </Menu>
             }
         />
@@ -52,12 +52,12 @@ const clickBackBtn = () => {
             control={<Button option="light" glyph="vertical-grip" />}
             body={
                 <Menu>
-                    <MenuList>
-                        <MenuItem url="/">Option 1</MenuItem>
-                        <MenuItem url="/">Option 2</MenuItem>
-                        <MenuItem url="/">Option 3</MenuItem>
-                        <MenuItem url="/">Option 4</MenuItem>
-                    </MenuList>
+                    <Menu.List>
+                        <Menu.Item url="/">Option 1</Menu.Item>
+                        <Menu.Item url="/">Option 2</Menu.Item>
+                        <Menu.Item url="/">Option 3</Menu.Item>
+                        <Menu.Item url="/">Option 4</Menu.Item>
+                    </Menu.List>
                 </Menu>
             }
         />
@@ -72,12 +72,12 @@ const clickBackBtn = () => {
             control={<Button type="secondary" glyph="vertical-grip" />}
             body={
                 <Menu>
-                    <MenuList>
-                        <MenuItem url="/">Option 1</MenuItem>
-                        <MenuItem url="/">Option 2</MenuItem>
-                        <MenuItem url="/">Option 3</MenuItem>
-                        <MenuItem url="/">Option 4</MenuItem>
-                    </MenuList>
+                    <Menu.List>
+                        <Menu.Item url="/">Option 1</Menu.Item>
+                        <Menu.Item url="/">Option 2</Menu.Item>
+                        <Menu.Item url="/">Option 3</Menu.Item>
+                        <Menu.Item url="/">Option 4</Menu.Item>
+                    </Menu.List>
                 </Menu>
             }
         />
@@ -145,12 +145,12 @@ const clickBackBtn = () => {
                         <Popover
                             body={
                                 <Menu>
-                                    <MenuList>
-                                        <MenuItem url='/'>Option 1</MenuItem>
-                                        <MenuItem url='/'>Option 2</MenuItem>
-                                        <MenuItem url='/'>Option 3</MenuItem>
-                                        <MenuItem url='/'>Option 4</MenuItem>
-                                    </MenuList>
+                                    <Menu.List>
+                                        <Menu.Item url='/'>Option 1</Menu.Item>
+                                        <Menu.Item url='/'>Option 2</Menu.Item>
+                                        <Menu.Item url='/'>Option 3</Menu.Item>
+                                        <Menu.Item url='/'>Option 4</Menu.Item>
+                                    </Menu.List>
                                 </Menu>
                             }
                             control={<Button glyph='vertical-grip' option='light' />} />
@@ -172,12 +172,12 @@ const clickBackBtn = () => {
                         <Popover
                             body={
                                 <Menu>
-                                    <MenuList>
-                                        <MenuItem url='/'>Option 1</MenuItem>
-                                        <MenuItem url='/'>Option 2</MenuItem>
-                                        <MenuItem url='/'>Option 3</MenuItem>
-                                        <MenuItem url='/'>Option 4</MenuItem>
-                                    </MenuList>
+                                    <Menu.List>
+                                        <Menu.Item url='/'>Option 1</Menu.Item>
+                                        <Menu.Item url='/'>Option 2</Menu.Item>
+                                        <Menu.Item url='/'>Option 3</Menu.Item>
+                                        <Menu.Item url='/'>Option 4</Menu.Item>
+                                    </Menu.List>
                                 </Menu>
                             }
                             control={<Button glyph='vertical-grip' option='light' />} />
@@ -199,12 +199,12 @@ const clickBackBtn = () => {
                         <Popover
                             body={
                                 <Menu>
-                                    <MenuList>
-                                        <MenuItem url='/'>Option 1</MenuItem>
-                                        <MenuItem url='/'>Option 2</MenuItem>
-                                        <MenuItem url='/'>Option 3</MenuItem>
-                                        <MenuItem url='/'>Option 4</MenuItem>
-                                    </MenuList>
+                                    <Menu.List>
+                                        <Menu.Item url='/'>Option 1</Menu.Item>
+                                        <Menu.Item url='/'>Option 2</Menu.Item>
+                                        <Menu.Item url='/'>Option 3</Menu.Item>
+                                        <Menu.Item url='/'>Option 4</Menu.Item>
+                                    </Menu.List>
                                 </Menu>
                             }
                             control={<Button glyph='vertical-grip' option='light' />} />
