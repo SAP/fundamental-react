@@ -96,7 +96,7 @@ $library-color: #61dafb;
         }
 
         @media (max-width: $mediaMaxWidth) {
-            .frDocs-Sidebar.sidebar-hidden {
+            .frDocs-Sidebar.sidebar-visibility {
                         margin-left: -280px;
                         overflow-x: hidden;
             }

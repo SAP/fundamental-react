@@ -341,7 +341,7 @@ export class Routes extends Component {
             );
         });
 
-        const showNav = this.state.showSideNav ? '' : 'sidebar-hidden';
+        const showNav = this.state.showSideNav ? '' : 'sidebar-visibility';
 
         return (
             <BrowserRouter basename={process.env.PUBLIC_URL}>
@@ -365,7 +365,7 @@ export class Routes extends Component {
                         <button
                             aria-expanded={this.state.showSideNav}
                             aria-label='Toggle Navigation'
-                            className='fd-button sap-icon--menu2 fd-button--standard fd-button--light sidebar-toggle' 
+                            className='fd-button sap-icon--menu2 fd-button--standard fd-button--light sidebar-toggle'
                             onClick={this.toggleNavVis} />
                         <Switch>
                             {routes.map(route => {
