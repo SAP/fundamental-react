@@ -2,20 +2,7 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-export const Breadcrumb = ({ children, ...props }) => {
-    return <ul {...props} className='fd-breadcrumb'>{children}</ul>;
-};
-Breadcrumb.displayName = 'Breadcrumb';
-
-Breadcrumb.propTypes = {
-    children: PropTypes.node
-};
-
-Breadcrumb.propDescriptions = {
-    children: 'List item (`BreadcrumbItem`) nodes.'
-};
-
-export const BreadcrumbItem = ({ url, name, className, children, ...props }) => {
+const BreadcrumbItem = ({ url, name, className, children, ...props }) => {
     const renderLink = () => {
         if (!children && url) {
             return (
@@ -39,6 +26,7 @@ export const BreadcrumbItem = ({ url, name, className, children, ...props }) => 
         </li>
     );
 };
+
 BreadcrumbItem.displayName = 'BreadcrumbItem';
 
 BreadcrumbItem.propTypes = {
@@ -50,3 +38,5 @@ BreadcrumbItem.propDescriptions = {
     name: 'Text for the internal anchor tag.',
     url: 'An anchor tag will be generated and set to the url prop. Name or child text must be provided.'
 };
+
+export default BreadcrumbItem;

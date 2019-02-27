@@ -1,28 +1,28 @@
+import Breadcrumb from './Breadcrumb';
 import { mount } from 'enzyme';
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { Breadcrumb, BreadcrumbItem } from './Breadcrumb';
 import { Link, MemoryRouter } from 'react-router-dom';
 
 describe('<Breadcrumb />', () => {
     const defaultBreadCrumb = (
         <Breadcrumb>
-            <BreadcrumbItem name='Link Text' url='#' />
-            <BreadcrumbItem name='Link Text' url='#' />
-            <BreadcrumbItem name='Link Text' />
+            <Breadcrumb.Item name='Link Text' url='#' />
+            <Breadcrumb.Item name='Link Text' url='#' />
+            <Breadcrumb.Item name='Link Text' />
         </Breadcrumb>
     );
 
     const breadCrumbRouterLink = (
         <MemoryRouter>
             <Breadcrumb className='blue'>
-                <BreadcrumbItem className='blue' />
-                <BreadcrumbItem>
+                <Breadcrumb.Item className='blue' />
+                <Breadcrumb.Item>
                     <Link to='/'>Link Text</Link>
-                </BreadcrumbItem>
-                <BreadcrumbItem>
+                </Breadcrumb.Item>
+                <Breadcrumb.Item>
                     <Link to='/'>Link Text</Link>
-                </BreadcrumbItem>
+                </Breadcrumb.Item>
             </Breadcrumb>
         </MemoryRouter>
     );
@@ -49,7 +49,7 @@ describe('<Breadcrumb />', () => {
         });
 
         test('should allow props to be spread to the BreadcrumbItem component', () => {
-            const element = mount(<BreadcrumbItem data-sample='Sample' name='Name' />);
+            const element = mount(<Breadcrumb.Item data-sample='Sample' name='Name' />);
 
             expect(
                 element.getDOMNode().attributes['data-sample'].value
