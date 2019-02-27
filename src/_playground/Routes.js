@@ -325,6 +325,7 @@ export class Routes extends Component {
                                 activeClassName='frDocs-Nav__item--active'
                                 className='frDocs-Nav__item'
                                 key={route.url}
+                                onClick={this.toggleNavVis}
                                 to={{ pathname: route.url }}>
                                 {route.name}
                             </NavLink>
