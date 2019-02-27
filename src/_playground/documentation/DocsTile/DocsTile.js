@@ -10,14 +10,14 @@ export class DocsTile extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            backgroundToggle: false,
+            backgroundOn: true,
             rightToLeft: false
         };
     }
 
     handleBackgroundToggle = () => {
         this.setState(prevState => ({
-            backgroundToggle: !prevState.backgroundToggle
+            backgroundOn: !prevState.backgroundOn
         }));
     };
 
@@ -29,10 +29,10 @@ export class DocsTile extends React.Component {
 
     render() {
         const { centered, children } = this.props;
-        const { backgroundToggle, rightToLeft } = this.state;
+        const { backgroundOn, rightToLeft } = this.state;
 
         const outerDivClasses = classnames('frDocs-Content__tile', {
-            'frDocs-Content__tile-background': !backgroundToggle
+            'frDocs-Content__tile-background': backgroundOn
         });
 
         const innerDivClasses = classnames('fd-tile__content', {
