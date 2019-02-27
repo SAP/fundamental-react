@@ -114,7 +114,7 @@ $library-color: #61dafb;
             padding: 2rem;
 
             .sidebar-toggle {
-                visibility: hidden;
+                display: none;
             }
 
             .frDocs-Content__githubLogo {
@@ -230,8 +230,8 @@ $library-color: #61dafb;
 
             @media (max-width: $mediaMaxWidth) {
                 .sidebar-toggle {
-                    visibility: visible;   
-                    margin-bottom: 3rem;        
+                    display: block;   
+                    margin-bottom: 2rem;        
                 }
             }
         }
