@@ -1,26 +1,26 @@
+import { Breadcrumb } from '../';
 import { Link } from 'react-router-dom';
 import path from 'path';
 import React from 'react';
-import { Breadcrumb, BreadcrumbItem } from '../';
 import { Description, DocsText, DocsTile, Header, Import, Properties, Separator } from '../_playground';
 
 export const BreadcrumbComponent = () => {
     const breadcrumbHrefCode = `<Breadcrumb>
-    <BreadcrumbItem name='Link Text' url='#' />
-    <BreadcrumbItem name='Link Text' url='#' />
-    <BreadcrumbItem name='Link Text' url='#' />
+    <Breadcrumb.Item name='Link Text' url='#' />
+    <Breadcrumb.Item name='Link Text' url='#' />
+    <Breadcrumb.Item name='Link Text' url='#' />
 </Breadcrumb>`;
 
     const breadcrumbLinkCode = `<Breadcrumb>
-    <BreadcrumbItem>
+    <Breadcrumb.Item>
         <Link to='#'>Link Text</Link>
-    </BreadcrumbItem>
-    <BreadcrumbItem>
+    </Breadcrumb.Item>
+    <Breadcrumb.Item>
         <Link to='#'>Link Text</Link>
-    </BreadcrumbItem>
-    <BreadcrumbItem>
+    </Breadcrumb.Item>
+    <Breadcrumb.Item>
         <Link to='#'>Link Text</Link>
-    </BreadcrumbItem>
+    </Breadcrumb.Item>
 </Breadcrumb>`;
 
     return (
@@ -42,9 +42,9 @@ export const BreadcrumbComponent = () => {
             <h2>Using url (href attribute)</h2>
             <DocsTile>
                 <Breadcrumb>
-                    <BreadcrumbItem name='Link Text' url='#' />
-                    <BreadcrumbItem name='Link Text' url='#' />
-                    <BreadcrumbItem name='Link Text' url='#' />
+                    <Breadcrumb.Item name='Link Text' url='#' />
+                    <Breadcrumb.Item name='Link Text' url='#' />
+                    <Breadcrumb.Item name='Link Text' url='#' />
                 </Breadcrumb>
             </DocsTile>
             <DocsText>{breadcrumbHrefCode}</DocsText>
@@ -54,15 +54,15 @@ export const BreadcrumbComponent = () => {
             <h2>Using Link from React Router</h2>
             <DocsTile>
                 <Breadcrumb>
-                    <BreadcrumbItem>
+                    <Breadcrumb.Item>
                         <Link to='#'>Link Text</Link>
-                    </BreadcrumbItem>
-                    <BreadcrumbItem>
+                    </Breadcrumb.Item>
+                    <Breadcrumb.Item>
                         <Link to='#'>Link Text</Link>
-                    </BreadcrumbItem>
-                    <BreadcrumbItem>
+                    </Breadcrumb.Item>
+                    <Breadcrumb.Item>
                         <Link to='#'>Link Text</Link>
-                    </BreadcrumbItem>
+                    </Breadcrumb.Item>
                 </Breadcrumb>
             </DocsTile>
             <DocsText>{breadcrumbLinkCode}</DocsText>
