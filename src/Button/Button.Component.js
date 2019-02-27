@@ -142,7 +142,7 @@ content like appearing in a table or list. There may be more than one on the pag
 * **Negative Button**: Used for negative actions such as decline, cancel, no.
 `;
     return (
-        <div className='playground-wrap'>
+        <div>
             <Header>Button</Header>
             <Description>
                 A **Button** allows users to perform an action. The priority of buttons within a page should be considered.
