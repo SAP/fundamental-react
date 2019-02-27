@@ -306,6 +306,12 @@ export class Routes extends Component {
         });
     }
 
+    resetNavState = () => {
+        this.setState({
+            showSideNav: false
+        });
+    }
+
     render() {
         let sectionRoutes;
         const groupedRoutes = groupArray(this.state.filteredItems, 'section');
@@ -325,7 +331,7 @@ export class Routes extends Component {
                                 activeClassName='frDocs-Nav__item--active'
                                 className='frDocs-Nav__item'
                                 key={route.url}
-                                onClick={this.toggleNavVis}
+                                onClick={this.resetNavState}
                                 to={{ pathname: route.url }}>
                                 {route.name}
                             </NavLink>
