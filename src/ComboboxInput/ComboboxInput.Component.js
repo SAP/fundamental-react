@@ -1,6 +1,6 @@
 import path from 'path';
 import React from 'react';
-import { ComboboxInput, Menu, MenuItem, MenuList } from '../';
+import { ComboboxInput, Menu } from '../';
 import { DocsText, DocsTile, Header, Import, Properties, Separator } from '../_playground';
 
 export const ComboboxInputComponent = () => {
@@ -8,14 +8,14 @@ export const ComboboxInputComponent = () => {
     placeholder="Select Fruit"
     menu={
         <Menu>
-            <MenuList>
-                <MenuItem url="/">Pear</MenuItem>
-                <MenuItem url="/">Strawberry</MenuItem>
-                <MenuItem url="/">Raspberry</MenuItem>
-                <MenuItem url="/" isLink>
+            <Menu.List>
+                <Menu.Item url="/">Pear</Menu.Item>
+                <Menu.Item url="/">Strawberry</Menu.Item>
+                <Menu.Item url="/">Raspberry</Menu.Item>
+                <Menu.Item url="/" isLink>
                     + New Item
-                </MenuItem>
-            </MenuList>
+                </Menu.Item>
+            </Menu.List>
         </Menu>
     }
 />
@@ -25,14 +25,14 @@ export const ComboboxInputComponent = () => {
     compact
     menu={
         <Menu>
-            <MenuList>
-                <MenuItem url="/">Pear</MenuItem>
-                <MenuItem url="/">Strawberry</MenuItem>
-                <MenuItem url="/">Raspberry</MenuItem>
-                <MenuItem url="/" isLink>
+            <Menu.List>
+                <Menu.Item url="/">Pear</Menu.Item>
+                <Menu.Item url="/">Strawberry</Menu.Item>
+                <Menu.Item url="/">Raspberry</Menu.Item>
+                <Menu.Item url="/" isLink>
                     + New Item
-                </MenuItem>
-            </MenuList>
+                </Menu.Item>
+            </Menu.List>
         </Menu>
     }
 />`;
@@ -54,14 +54,14 @@ export const ComboboxInputComponent = () => {
                 <ComboboxInput
                     menu={
                         <Menu>
-                            <MenuList>
-                                <MenuItem url='/'>Pear</MenuItem>
-                                <MenuItem url='/'>Strawberry</MenuItem>
-                                <MenuItem url='/'>Raspberry</MenuItem>
-                                <MenuItem isLink url='/'>
+                            <Menu.List>
+                                <Menu.Item url='/'>Pear</Menu.Item>
+                                <Menu.Item url='/'>Strawberry</Menu.Item>
+                                <Menu.Item url='/'>Raspberry</Menu.Item>
+                                <Menu.Item isLink url='/'>
                                     + New Item
-                                </MenuItem>
-                            </MenuList>
+                                </Menu.Item>
+                            </Menu.List>
                         </Menu>
                     }
                     placeholder='Select Fruit' />
@@ -72,14 +72,14 @@ export const ComboboxInputComponent = () => {
                     compact
                     menu={
                         <Menu>
-                            <MenuList>
-                                <MenuItem url='/'>Pear</MenuItem>
-                                <MenuItem url='/'>Strawberry</MenuItem>
-                                <MenuItem url='/'>Raspberry</MenuItem>
-                                <MenuItem isLink url='/'>
+                            <Menu.List>
+                                <Menu.Item url='/'>Pear</Menu.Item>
+                                <Menu.Item url='/'>Strawberry</Menu.Item>
+                                <Menu.Item url='/'>Raspberry</Menu.Item>
+                                <Menu.Item isLink url='/'>
                                     + New Item
-                                </MenuItem>
-                            </MenuList>
+                                </Menu.Item>
+                            </Menu.List>
                         </Menu>
                     }
                     placeholder='Select Fruit' />

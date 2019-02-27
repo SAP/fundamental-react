@@ -1,66 +1,66 @@
+import Menu from './Menu';
 import { mount } from 'enzyme';
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { Link, MemoryRouter } from 'react-router-dom';
-import { Menu, MenuGroup, MenuItem, MenuList } from './Menu';
 
 describe('<Menu />', () => {
     const basicMenuCode = (
         <Menu>
-            <MenuList>
-                <MenuItem url='/'>Option 1</MenuItem>
-                <MenuItem isLink url='/'>
+            <Menu.List>
+                <Menu.Item url='/'>Option 1</Menu.Item>
+                <Menu.Item isLink url='/'>
                     Option 2
-                </MenuItem>
-                <MenuItem url='/'>Option 3</MenuItem>
-                <MenuItem url='/'>Option 4</MenuItem>
-                <MenuItem>Option 5</MenuItem>
-            </MenuList>
+                </Menu.Item>
+                <Menu.Item url='/'>Option 3</Menu.Item>
+                <Menu.Item url='/'>Option 4</Menu.Item>
+                <Menu.Item>Option 5</Menu.Item>
+            </Menu.List>
         </Menu>
     );
 
     const menuGroupCode = (
         <MemoryRouter>
             <Menu className='blue'>
-                <MenuList className='blue'>
-                    <MenuItem>
+                <Menu.List className='blue'>
+                    <Menu.Item>
                         <Link to='/'>Option 1</Link>
-                    </MenuItem>
-                    <MenuItem className='blue' isLink>
+                    </Menu.Item>
+                    <Menu.Item className='blue' isLink>
                         <Link to='/'>
                             Option 2
                         </Link>
-                    </MenuItem>
-                    <MenuItem>
+                    </Menu.Item>
+                    <Menu.Item>
                         <Link to='/'>Option 3</Link>
-                    </MenuItem>
-                </MenuList>
-                <MenuGroup className='blue' title='Group Header'>
-                    <MenuList>
-                        <MenuItem>
+                    </Menu.Item>
+                </Menu.List>
+                <Menu.Group className='blue' title='Group Header'>
+                    <Menu.List>
+                        <Menu.Item>
                             <Link to='/'>Option 4</Link>
-                        </MenuItem>
-                        <MenuItem>
+                        </Menu.Item>
+                        <Menu.Item>
                             <Link to='/'>Option 5</Link>
-                        </MenuItem>
-                        <MenuItem>
+                        </Menu.Item>
+                        <Menu.Item>
                             <Link to='/'>Option 6</Link>
-                        </MenuItem>
-                    </MenuList>
-                </MenuGroup>
-                <MenuGroup title='Group Header 2'>
-                    <MenuList>
-                        <MenuItem>
+                        </Menu.Item>
+                    </Menu.List>
+                </Menu.Group>
+                <Menu.Group title='Group Header 2'>
+                    <Menu.List>
+                        <Menu.Item>
                             <Link to='/'>Option 7</Link>
-                        </MenuItem>
-                        <MenuItem>
+                        </Menu.Item>
+                        <Menu.Item>
                             <Link to='/'>Option 8</Link>
-                        </MenuItem>
-                        <MenuItem>
+                        </Menu.Item>
+                        <Menu.Item>
                             <Link to='/'>Option 9</Link>
-                        </MenuItem>
-                    </MenuList>
-                </MenuGroup>
+                        </Menu.Item>
+                    </Menu.List>
+                </Menu.Group>
             </Menu>
         </MemoryRouter>
     );
@@ -68,20 +68,20 @@ describe('<Menu />', () => {
     const menuSeparatorCode = (
         <MemoryRouter>
             <Menu>
-                <MenuList>
-                    <MenuItem separator>
+                <Menu.List>
+                    <Menu.Item separator>
                         <Link to='/'>Option 1</Link>
-                    </MenuItem>
-                    <MenuItem separator>
+                    </Menu.Item>
+                    <Menu.Item separator>
                         <Link to='/'>Option 2</Link>
-                    </MenuItem>
-                    <MenuItem separator>
+                    </Menu.Item>
+                    <Menu.Item separator>
                         <Link to='/'>Option 3</Link>
-                    </MenuItem>
-                    <MenuItem>
+                    </Menu.Item>
+                    <Menu.Item>
                         <Link to='/'>Option 4</Link>
-                    </MenuItem>
-                </MenuList>
+                    </Menu.Item>
+                </Menu.List>
             </Menu>
         </MemoryRouter>
     );
@@ -89,20 +89,20 @@ describe('<Menu />', () => {
     const menuAddonBeforeCode = (
         <MemoryRouter>
             <Menu addonBefore>
-                <MenuList>
-                    <MenuItem>
+                <Menu.List>
+                    <Menu.Item>
                         <Link to='/'>Option 1</Link>
-                    </MenuItem>
-                    <MenuItem addon='accept'>
+                    </Menu.Item>
+                    <Menu.Item addon='accept'>
                         <Link to='/'>Option 2</Link>
-                    </MenuItem>
-                    <MenuItem>
+                    </Menu.Item>
+                    <Menu.Item>
                         <Link to='/'>Option 3</Link>
-                    </MenuItem>
-                    <MenuItem>
+                    </Menu.Item>
+                    <Menu.Item>
                         <Link to='/'>Option 4</Link>
-                    </MenuItem>
-                </MenuList>
+                    </Menu.Item>
+                </Menu.List>
             </Menu>
         </MemoryRouter>
     );
@@ -141,7 +141,7 @@ describe('<Menu />', () => {
         });
 
         test('should allow props to be spread to the MenuList component', () => {
-            const element = mount(<MenuList data-sample='Sample' />);
+            const element = mount(<Menu.List data-sample='Sample' />);
 
             expect(
                 element.getDOMNode().attributes['data-sample'].value
@@ -149,7 +149,7 @@ describe('<Menu />', () => {
         });
 
         test('should allow props to be spread to the MenuItem component', () => {
-            const element = mount(<MenuItem data-sample='Sample' />);
+            const element = mount(<Menu.Item data-sample='Sample' />);
 
             expect(
                 element.getDOMNode().attributes['data-sample'].value
@@ -160,20 +160,20 @@ describe('<Menu />', () => {
             const element = mount(
                 <MemoryRouter>
                     <Menu addonBefore>
-                        <MenuList>
-                            <MenuItem>
+                        <Menu.List>
+                            <Menu.Item>
                                 <Link to='/'>Option 1</Link>
-                            </MenuItem>
-                            <MenuItem addon='accept' addonProps={{ 'data-sample': 'Sample' }}>
+                            </Menu.Item>
+                            <Menu.Item addon='accept' addonProps={{ 'data-sample': 'Sample' }}>
                                 <Link to='/'>Option 2</Link>
-                            </MenuItem>
-                            <MenuItem>
+                            </Menu.Item>
+                            <Menu.Item>
                                 <Link to='/'>Option 3</Link>
-                            </MenuItem>
-                            <MenuItem>
+                            </Menu.Item>
+                            <Menu.Item>
                                 <Link to='/'>Option 4</Link>
-                            </MenuItem>
-                        </MenuList>
+                            </Menu.Item>
+                        </Menu.List>
                     </Menu>
                 </MemoryRouter>);
 
@@ -186,11 +186,11 @@ describe('<Menu />', () => {
             const element = mount(
                 <MemoryRouter>
                     <Menu>
-                        <MenuList>
-                            <MenuItem urlProps={{ 'data-sample': 'Sample' }}>
+                        <Menu.List>
+                            <Menu.Item urlProps={{ 'data-sample': 'Sample' }}>
                                 <Link to='/' />
-                            </MenuItem>
-                        </MenuList>
+                            </Menu.Item>
+                        </Menu.List>
                     </Menu>
                 </MemoryRouter>);
 
@@ -202,9 +202,9 @@ describe('<Menu />', () => {
         test('should allow props to be spread to the MenuItem component\'s a element', () => {
             const element = mount(
                 <Menu>
-                    <MenuList>
-                        <MenuItem url='/' urlProps={{ 'data-sample': 'Sample' }} />
-                    </MenuList>
+                    <Menu.List>
+                        <Menu.Item url='/' urlProps={{ 'data-sample': 'Sample' }} />
+                    </Menu.List>
                 </Menu>
             );
 
@@ -214,7 +214,7 @@ describe('<Menu />', () => {
         });
 
         test('should allow props to be spread to the MenuGroup component', () => {
-            const element = mount(<MenuGroup data-sample='Sample' title='Sample' />);
+            const element = mount(<Menu.Group data-sample='Sample' title='Sample' />);
 
             expect(
                 element.getDOMNode().attributes['data-sample'].value
@@ -222,7 +222,7 @@ describe('<Menu />', () => {
         });
 
         test('should allow props to be spread to the MenuGroup h1 component', () => {
-            const element = mount(<MenuGroup title='Sample' titleProps={{ 'data-sample': 'Sample' }} />);
+            const element = mount(<Menu.Group title='Sample' titleProps={{ 'data-sample': 'Sample' }} />);
 
             expect(
                 element.find('h1').getDOMNode().attributes['data-sample'].value

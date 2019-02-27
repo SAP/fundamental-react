@@ -2,10 +2,10 @@ import classnames from 'classnames';
 import Counter from '../Badge/Counter';
 import { Icon } from '../Icon/Icon';
 import { Identifier } from '../Identifier/Identifier';
+import Menu from '../Menu/Menu';
 import { Popover } from '../Popover/Popover';
 import PropTypes from 'prop-types';
 import { SearchInput } from '../SearchInput/SearchInput';
-import { Menu, MenuItem, MenuList } from '../Menu/Menu';
 import React, { Component } from 'react';
 
 export class Shellbar extends Component {
@@ -125,13 +125,13 @@ export class Shellbar extends Component {
                                     body={
                                         productMenu && (
                                             <Menu>
-                                                <MenuList>
+                                                <Menu.List>
                                                     {productMenu.map((item, index) => {
                                                         return (
-                                                            <MenuItem
+                                                            <Menu.Item
                                                                 key={index}
                                                                 link={item.link}
-                                                                onclick={item.callback}
+                                                                onClick={item.callback}
                                                                 url={item.url} >
                                                                 {item.glyph && (
                                                                     <React.Fragment>
@@ -140,10 +140,10 @@ export class Shellbar extends Component {
                                                                     </React.Fragment>
                                                                 )}
                                                                 {item.name}
-                                                            </MenuItem>
+                                                            </Menu.Item>
                                                         );
                                                     })}
-                                                </MenuList>
+                                                </Menu.List>
                                             </Menu>
                                         )
                                     }
@@ -254,40 +254,40 @@ export class Shellbar extends Component {
                                         body={
                                             <Menu>
                                                 {!this.state.showCollapsedProductSwitcherMenu ? (
-                                                    <MenuList>
+                                                    <Menu.List>
                                                         {this.state.collapsedActions.map((item, index) => {
                                                             return (
-                                                                <MenuItem
+                                                                <Menu.Item
                                                                     key={index}
                                                                     link={item.link}
-                                                                    onclick={item.callback}
+                                                                    onClick={item.callback}
                                                                     url={item.url} >
                                                                     <Icon glyph={item.glyph}>
                                                                         {item.notificationCount > 0 && <Counter notification>{item.notificationCount}</Counter>}
                                                                     </Icon> {item.label}
-                                                                </MenuItem>
+                                                                </Menu.Item>
                                                             );
                                                         })}
-                                                    </MenuList>
+                                                    </Menu.List>
                                                 ) : (
-                                                    <MenuList>
-                                                        <MenuItem>
+                                                    <Menu.List>
+                                                        <Menu.Item>
                                                             <span
                                                                 className='fd-menu sap-icon--nav-back'
                                                                 onClick={this.backBtnHandler} />
-                                                        </MenuItem>
+                                                        </Menu.Item>
                                                         {productSwitcherList.map((item, index) => {
                                                             return (
-                                                                <MenuItem
+                                                                <Menu.Item
                                                                     key={index}
                                                                     link={item.link}
-                                                                    onclick={item.callback}
+                                                                    onClick={item.callback}
                                                                     url={item.url} >
                                                                     <Icon glyph={item.glyph} /> {item.title}
-                                                                </MenuItem>
+                                                                </Menu.Item>
                                                             );
                                                         })}
-                                                    </MenuList>
+                                                    </Menu.List>
                                                 )}
                                             </Menu>
                                         }
@@ -311,14 +311,14 @@ export class Shellbar extends Component {
                                         body={
                                             profileMenu && (
                                                 <Menu>
-                                                    <MenuList>
-                                                        <MenuItem>{profile.userName}</MenuItem>
+                                                    <Menu.List>
+                                                        <Menu.Item>{profile.userName}</Menu.Item>
                                                         {profileMenu.map((item, index) => {
                                                             return (
-                                                                <MenuItem
+                                                                <Menu.Item
                                                                     key={index}
                                                                     link={item.link}
-                                                                    onclick={item.callback}
+                                                                    onClick={item.callback}
                                                                     url={item.url} >
                                                                     {item.glyph && (
                                                                         <React.Fragment>
@@ -327,10 +327,10 @@ export class Shellbar extends Component {
                                                                         </React.Fragment>
                                                                     )}
                                                                     {item.name}
-                                                                </MenuItem>
+                                                                </Menu.Item>
                                                             );
                                                         })}
-                                                    </MenuList>
+                                                    </Menu.List>
                                                 </Menu>
                                             )
                                         }

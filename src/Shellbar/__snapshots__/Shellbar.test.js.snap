@@ -69,10 +69,11 @@ exports[`<Shellbar /> create shellbar 1`] = `
                       John Snow
                     </a>
                   </li>
-                  <li>
+                  <li
+                    onClick={[Function]}
+                  >
                     <a
                       className="fd-menu__item"
-                      onClick={[Function]}
                     >
                       <span
                         className="sap-icon--action-settings sap-icon--s"
@@ -81,10 +82,11 @@ exports[`<Shellbar /> create shellbar 1`] = `
                       Settings
                     </a>
                   </li>
-                  <li>
+                  <li
+                    onClick={[Function]}
+                  >
                     <a
                       className="fd-menu__item"
-                      onClick={[Function]}
                     >
                       <span
                         className="sap-icon--log sap-icon--s"
@@ -173,10 +175,11 @@ exports[`<Shellbar /> create shellbar 2`] = `
                       John Snow
                     </a>
                   </li>
-                  <li>
+                  <li
+                    onClick={[Function]}
+                  >
                     <a
                       className="fd-menu__item"
-                      onClick={[Function]}
                     >
                       <span
                         className="sap-icon--action-settings sap-icon--s"
@@ -185,10 +188,11 @@ exports[`<Shellbar /> create shellbar 2`] = `
                       Settings
                     </a>
                   </li>
-                  <li>
+                  <li
+                    onClick={[Function]}
+                  >
                     <a
                       className="fd-menu__item"
-                      onClick={[Function]}
                     >
                       <span
                         className="sap-icon--log sap-icon--s"
@@ -257,10 +261,11 @@ exports[`<Shellbar /> create shellbar 3`] = `
               <ul
                 className="fd-menu__list"
               >
-                <li>
+                <li
+                  onClick={[Function]}
+                >
                   <a
                     className="fd-menu__item"
-                    onClick={[Function]}
                   >
                     <span
                       className="sap-icon--log"
@@ -269,26 +274,29 @@ exports[`<Shellbar /> create shellbar 3`] = `
                     Application A
                   </a>
                 </li>
-                <li>
+                <li
+                  onClick={[Function]}
+                >
                   <a
                     className="fd-menu__item"
-                    onClick={[Function]}
                   >
                     Application B
                   </a>
                 </li>
-                <li>
+                <li
+                  onClick={[Function]}
+                >
                   <a
                     className="fd-menu__item"
-                    onClick={[Function]}
                   >
                     Application C
                   </a>
                 </li>
-                <li>
+                <li
+                  onClick={[Function]}
+                >
                   <a
                     className="fd-menu__item"
-                    onClick={[Function]}
                   >
                     Application D
                   </a>
@@ -529,10 +537,11 @@ exports[`<Shellbar /> create shellbar 3`] = `
                 <ul
                   className="fd-menu__list"
                 >
-                  <li>
+                  <li
+                    onClick={[Function]}
+                  >
                     <a
                       className="fd-menu__item"
-                      onClick={[Function]}
                     >
                       <span
                         className="sap-icon--search"
@@ -541,10 +550,11 @@ exports[`<Shellbar /> create shellbar 3`] = `
                       Search
                     </a>
                   </li>
-                  <li>
+                  <li
+                    onClick={[Function]}
+                  >
                     <a
                       className="fd-menu__item"
-                      onClick={[Function]}
                     >
                       <span
                         className="sap-icon--settings"
@@ -560,10 +570,11 @@ exports[`<Shellbar /> create shellbar 3`] = `
                       Settings
                     </a>
                   </li>
-                  <li>
+                  <li
+                    onClick={[Function]}
+                  >
                     <a
                       className="fd-menu__item"
-                      onClick={[Function]}
                     >
                       <span
                         className="sap-icon--bell"
@@ -579,10 +590,11 @@ exports[`<Shellbar /> create shellbar 3`] = `
                       Notifications
                     </a>
                   </li>
-                  <li>
+                  <li
+                    onClick={[Function]}
+                  >
                     <a
                       className="fd-menu__item"
-                      onClick={[Function]}
                     >
                       <span
                         className="sap-icon--grid"
@@ -635,10 +647,11 @@ exports[`<Shellbar /> create shellbar 3`] = `
                       John Snow
                     </a>
                   </li>
-                  <li>
+                  <li
+                    onClick={[Function]}
+                  >
                     <a
                       className="fd-menu__item"
-                      onClick={[Function]}
                     >
                       <span
                         className="sap-icon--action-settings sap-icon--s"
@@ -647,10 +660,11 @@ exports[`<Shellbar /> create shellbar 3`] = `
                       Settings
                     </a>
                   </li>
-                  <li>
+                  <li
+                    onClick={[Function]}
+                  >
                     <a
                       className="fd-menu__item"
-                      onClick={[Function]}
                     >
                       <span
                         className="sap-icon--log sap-icon--s"
@@ -785,10 +799,11 @@ exports[`<Shellbar /> create shellbar 4`] = `
               <ul
                 className="fd-menu__list"
               >
-                <li>
+                <li
+                  onClick={[Function]}
+                >
                   <a
                     className="fd-menu__item"
-                    onClick={[Function]}
                   >
                     <span
                       className="sap-icon--log"
@@ -797,26 +812,29 @@ exports[`<Shellbar /> create shellbar 4`] = `
                     Application A
                   </a>
                 </li>
-                <li>
+                <li
+                  onClick={[Function]}
+                >
                   <a
                     className="fd-menu__item"
-                    onClick={[Function]}
                   >
                     Application B
                   </a>
                 </li>
-                <li>
+                <li
+                  onClick={[Function]}
+                >
                   <a
                     className="fd-menu__item"
-                    onClick={[Function]}
                   >
                     Application C
                   </a>
                 </li>
-                <li>
+                <li
+                  onClick={[Function]}
+                >
                   <a
                     className="fd-menu__item"
-                    onClick={[Function]}
                   >
                     Application D
                   </a>
@@ -1033,10 +1051,11 @@ exports[`<Shellbar /> create shellbar 4`] = `
                 <ul
                   className="fd-menu__list"
                 >
-                  <li>
+                  <li
+                    onClick={[Function]}
+                  >
                     <a
                       className="fd-menu__item"
-                      onClick={[Function]}
                     >
                       <span
                         className="sap-icon--search"
@@ -1045,10 +1064,11 @@ exports[`<Shellbar /> create shellbar 4`] = `
                       Search
                     </a>
                   </li>
-                  <li>
+                  <li
+                    onClick={[Function]}
+                  >
                     <a
                       className="fd-menu__item"
-                      onClick={[Function]}
                     >
                       <span
                         className="sap-icon--settings"
@@ -1064,10 +1084,11 @@ exports[`<Shellbar /> create shellbar 4`] = `
                       Settings
                     </a>
                   </li>
-                  <li>
+                  <li
+                    onClick={[Function]}
+                  >
                     <a
                       className="fd-menu__item"
-                      onClick={[Function]}
                     >
                       <span
                         className="sap-icon--bell"
@@ -1076,10 +1097,11 @@ exports[`<Shellbar /> create shellbar 4`] = `
                       Notifications
                     </a>
                   </li>
-                  <li>
+                  <li
+                    onClick={[Function]}
+                  >
                     <a
                       className="fd-menu__item"
-                      onClick={[Function]}
                     >
                       <span
                         className="sap-icon--grid"
@@ -1132,10 +1154,11 @@ exports[`<Shellbar /> create shellbar 4`] = `
                       John Snow
                     </a>
                   </li>
-                  <li>
+                  <li
+                    onClick={[Function]}
+                  >
                     <a
                       className="fd-menu__item"
-                      onClick={[Function]}
                     >
                       <span
                         className="sap-icon--action-settings sap-icon--s"
@@ -1144,10 +1167,11 @@ exports[`<Shellbar /> create shellbar 4`] = `
                       Settings
                     </a>
                   </li>
-                  <li>
+                  <li
+                    onClick={[Function]}
+                  >
                     <a
                       className="fd-menu__item"
-                      onClick={[Function]}
                     >
                       <span
                         className="sap-icon--log sap-icon--s"
@@ -1282,10 +1306,11 @@ exports[`<Shellbar /> create shellbar 5`] = `
               <ul
                 className="fd-menu__list"
               >
-                <li>
+                <li
+                  onClick={[Function]}
+                >
                   <a
                     className="fd-menu__item"
-                    onClick={[Function]}
                   >
                     <span
                       className="sap-icon--log"
@@ -1294,26 +1319,29 @@ exports[`<Shellbar /> create shellbar 5`] = `
                     Application A
                   </a>
                 </li>
-                <li>
+                <li
+                  onClick={[Function]}
+                >
                   <a
                     className="fd-menu__item"
-                    onClick={[Function]}
                   >
                     Application B
                   </a>
                 </li>
-                <li>
+                <li
+                  onClick={[Function]}
+                >
                   <a
                     className="fd-menu__item"
-                    onClick={[Function]}
                   >
                     Application C
                   </a>
                 </li>
-                <li>
+                <li
+                  onClick={[Function]}
+                >
                   <a
                     className="fd-menu__item"
-                    onClick={[Function]}
                   >
                     Application D
                   </a>
@@ -1484,10 +1512,11 @@ exports[`<Shellbar /> create shellbar 5`] = `
                 <ul
                   className="fd-menu__list"
                 >
-                  <li>
+                  <li
+                    onClick={[Function]}
+                  >
                     <a
                       className="fd-menu__item"
-                      onClick={[Function]}
                     >
                       <span
                         className="sap-icon--search"
@@ -1496,10 +1525,11 @@ exports[`<Shellbar /> create shellbar 5`] = `
                       Search
                     </a>
                   </li>
-                  <li>
+                  <li
+                    onClick={[Function]}
+                  >
                     <a
                       className="fd-menu__item"
-                      onClick={[Function]}
                     >
                       <span
                         className="sap-icon--settings"
@@ -1515,10 +1545,11 @@ exports[`<Shellbar /> create shellbar 5`] = `
                       Settings
                     </a>
                   </li>
-                  <li>
+                  <li
+                    onClick={[Function]}
+                  >
                     <a
                       className="fd-menu__item"
-                      onClick={[Function]}
                     >
                       <span
                         className="sap-icon--bell"
@@ -1527,10 +1558,11 @@ exports[`<Shellbar /> create shellbar 5`] = `
                       Notifications
                     </a>
                   </li>
-                  <li>
+                  <li
+                    onClick={[Function]}
+                  >
                     <a
                       className="fd-menu__item"
-                      onClick={[Function]}
                     >
                       <span
                         className="sap-icon--grid"
@@ -1583,10 +1615,11 @@ exports[`<Shellbar /> create shellbar 5`] = `
                       John Snow
                     </a>
                   </li>
-                  <li>
+                  <li
+                    onClick={[Function]}
+                  >
                     <a
                       className="fd-menu__item"
-                      onClick={[Function]}
                     >
                       <span
                         className="sap-icon--action-settings sap-icon--s"
@@ -1595,10 +1628,11 @@ exports[`<Shellbar /> create shellbar 5`] = `
                       Settings
                     </a>
                   </li>
-                  <li>
+                  <li
+                    onClick={[Function]}
+                  >
                     <a
                       className="fd-menu__item"
-                      onClick={[Function]}
                     >
                       <span
                         className="sap-icon--log sap-icon--s"
@@ -1733,10 +1767,11 @@ exports[`<Shellbar /> create shellbar 6`] = `
               <ul
                 className="fd-menu__list"
               >
-                <li>
+                <li
+                  onClick={[Function]}
+                >
                   <a
                     className="fd-menu__item"
-                    onClick={[Function]}
                   >
                     <span
                       className="sap-icon--log"
@@ -1745,26 +1780,29 @@ exports[`<Shellbar /> create shellbar 6`] = `
                     Application A
                   </a>
                 </li>
-                <li>
+                <li
+                  onClick={[Function]}
+                >
                   <a
                     className="fd-menu__item"
-                    onClick={[Function]}
                   >
                     Application B
                   </a>
                 </li>
-                <li>
+                <li
+                  onClick={[Function]}
+                >
                   <a
                     className="fd-menu__item"
-                    onClick={[Function]}
                   >
                     Application C
                   </a>
                 </li>
-                <li>
+                <li
+                  onClick={[Function]}
+                >
                   <a
                     className="fd-menu__item"
-                    onClick={[Function]}
                   >
                     Application D
                   </a>
@@ -1959,10 +1997,11 @@ exports[`<Shellbar /> create shellbar 6`] = `
                 <ul
                   className="fd-menu__list"
                 >
-                  <li>
+                  <li
+                    onClick={[Function]}
+                  >
                     <a
                       className="fd-menu__item"
-                      onClick={[Function]}
                     >
                       <span
                         className="sap-icon--search"
@@ -1971,10 +2010,11 @@ exports[`<Shellbar /> create shellbar 6`] = `
                       Search
                     </a>
                   </li>
-                  <li>
+                  <li
+                    onClick={[Function]}
+                  >
                     <a
                       className="fd-menu__item"
-                      onClick={[Function]}
                     >
                       <span
                         className="sap-icon--settings"
@@ -1990,10 +2030,11 @@ exports[`<Shellbar /> create shellbar 6`] = `
                       Settings
                     </a>
                   </li>
-                  <li>
+                  <li
+                    onClick={[Function]}
+                  >
                     <a
                       className="fd-menu__item"
-                      onClick={[Function]}
                     >
                       <span
                         className="sap-icon--bell"
@@ -2009,10 +2050,11 @@ exports[`<Shellbar /> create shellbar 6`] = `
                       Notifications
                     </a>
                   </li>
-                  <li>
+                  <li
+                    onClick={[Function]}
+                  >
                     <a
                       className="fd-menu__item"
-                      onClick={[Function]}
                     >
                       <span
                         className="sap-icon--grid"
@@ -2068,10 +2110,11 @@ exports[`<Shellbar /> create shellbar 6`] = `
                       John Snow
                     </a>
                   </li>
-                  <li>
+                  <li
+                    onClick={[Function]}
+                  >
                     <a
                       className="fd-menu__item"
-                      onClick={[Function]}
                     >
                       <span
                         className="sap-icon--action-settings sap-icon--s"
@@ -2080,10 +2123,11 @@ exports[`<Shellbar /> create shellbar 6`] = `
                       Settings
                     </a>
                   </li>
-                  <li>
+                  <li
+                    onClick={[Function]}
+                  >
                     <a
                       className="fd-menu__item"
-                      onClick={[Function]}
                     >
                       <span
                         className="sap-icon--log sap-icon--s"

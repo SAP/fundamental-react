@@ -1,8 +1,8 @@
+import Menu from '../Menu/Menu';
 import { mount } from 'enzyme';
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { Shellbar } from './Shellbar';
-import { Menu, MenuItem, MenuList } from '../Menu/Menu';
 
 describe('<Shellbar />', () => {
     const profile1 = {
@@ -68,11 +68,11 @@ describe('<Shellbar />', () => {
             callback: () => alert('Settings selected!'),
             menu: (
                 <Menu>
-                    <MenuList>
-                        <MenuItem url='/'>Option 1</MenuItem>
-                        <MenuItem url='/'>Option 2</MenuItem>
-                        <MenuItem url='/'>Option 3</MenuItem>
-                    </MenuList>
+                    <Menu.List>
+                        <Menu.Item url='/'>Option 1</Menu.Item>
+                        <Menu.Item url='/'>Option 2</Menu.Item>
+                        <Menu.Item url='/'>Option 3</Menu.Item>
+                    </Menu.List>
                 </Menu>
             )
         }
@@ -92,18 +92,18 @@ describe('<Shellbar />', () => {
         label: 'Notifications',
         notificationsBody: (
             <Menu>
-                <MenuList>
-                    <MenuItem url='/'>Notification 1</MenuItem>
-                    <MenuItem url='/'>Notification 2</MenuItem>
-                    <MenuItem url='/'>Notification 3</MenuItem>
-                </MenuList>
+                <Menu.List>
+                    <Menu.Item url='/'>Notification 1</Menu.Item>
+                    <Menu.Item url='/'>Notification 2</Menu.Item>
+                    <Menu.Item url='/'>Notification 3</Menu.Item>
+                </Menu.List>
             </Menu>
         ),
         noNotificationsBody: (
             <Menu>
-                <MenuList>
-                    <MenuItem>There are no notifications</MenuItem>
-                </MenuList>
+                <Menu.List>
+                    <Menu.Item>There are no notifications</Menu.Item>
+                </Menu.List>
             </Menu>
         ),
         callback: () => alert('Notification selected!')
@@ -114,18 +114,18 @@ describe('<Shellbar />', () => {
         label: 'Notifications',
         notificationsBody: (
             <Menu>
-                <MenuList>
-                    <MenuItem url='/'>Notification 1</MenuItem>
-                    <MenuItem url='/'>Notification 2</MenuItem>
-                    <MenuItem url='/'>Notification 3</MenuItem>
-                </MenuList>
+                <Menu.List>
+                    <Menu.Item url='/'>Notification 1</Menu.Item>
+                    <Menu.Item url='/'>Notification 2</Menu.Item>
+                    <Menu.Item url='/'>Notification 3</Menu.Item>
+                </Menu.List>
             </Menu>
         ),
         noNotificationsBody: (
             <Menu>
-                <MenuList>
-                    <MenuItem>There are no notifications</MenuItem>
-                </MenuList>
+                <Menu.List>
+                    <Menu.Item>There are no notifications</Menu.Item>
+                </Menu.List>
             </Menu>
         ),
         callback: () => alert('Notification selected!')

@@ -1,6 +1,6 @@
 import path from 'path';
 import React from 'react';
-import { Button, Dropdown, Menu, MenuItem, MenuList, Popover } from '../';
+import { Button, Dropdown, Menu, Popover } from '../';
 import { Description, DocsText, DocsTile, Header, Import, Properties, Separator } from '../_playground';
 
 export const DropdownComponent = () => {
@@ -11,12 +11,12 @@ export const DropdownComponent = () => {
         noArrow
         body={
             <Menu>
-                <MenuList>
-                    <MenuItem url="/">Option 1</MenuItem>
-                    <MenuItem url="/">Option 2</MenuItem>
-                    <MenuItem url="/">Option 3</MenuItem>
-                    <MenuItem url="/">Option 4</MenuItem>
-                </MenuList>
+                <Menu.List>
+                    <Menu.Item url="/">Option 1</Menu.Item>
+                    <Menu.Item url="/">Option 2</Menu.Item>
+                    <Menu.Item url="/">Option 3</Menu.Item>
+                    <Menu.Item url="/">Option 4</Menu.Item>
+                </Menu.List>
             </Menu>
         }
     />
@@ -33,12 +33,12 @@ export const DropdownComponent = () => {
         noArrow
         body={
             <Menu>
-                <MenuList>
-                    <MenuItem url="/">Option 1</MenuItem>
-                    <MenuItem url="/">Option 2</MenuItem>
-                    <MenuItem url="/">Option 3</MenuItem>
-                    <MenuItem url="/">Option 4</MenuItem>
-                </MenuList>
+                <Menu.List>
+                    <Menu.Item url="/">Option 1</Menu.Item>
+                    <Menu.Item url="/">Option 2</Menu.Item>
+                    <Menu.Item url="/">Option 3</Menu.Item>
+                    <Menu.Item url="/">Option 4</Menu.Item>
+                </Menu.List>
             </Menu>
         }
     />
@@ -55,12 +55,12 @@ export const DropdownComponent = () => {
         noArrow
         body={
             <Menu>
-                <MenuList>
-                    <MenuItem url="/">Option 1</MenuItem>
-                    <MenuItem url="/">Option 2</MenuItem>
-                    <MenuItem url="/">Option 3</MenuItem>
-                    <MenuItem url="/">Option 4</MenuItem>
-                </MenuList>
+                <Menu.List>
+                    <Menu.Item url="/">Option 1</Menu.Item>
+                    <Menu.Item url="/">Option 2</Menu.Item>
+                    <Menu.Item url="/">Option 3</Menu.Item>
+                    <Menu.Item url="/">Option 4</Menu.Item>
+                </Menu.List>
             </Menu>
         }
     />
@@ -77,12 +77,12 @@ export const DropdownComponent = () => {
         noArrow
         body={
             <Menu>
-                <MenuList>
-                    <MenuItem url="/">Option 1</MenuItem>
-                    <MenuItem url="/">Option 2</MenuItem>
-                    <MenuItem url="/">Option 3</MenuItem>
-                    <MenuItem url="/">Option 4</MenuItem>
-                </MenuList>
+                <Menu.List>
+                    <Menu.Item url="/">Option 1</Menu.Item>
+                    <Menu.Item url="/">Option 2</Menu.Item>
+                    <Menu.Item url="/">Option 3</Menu.Item>
+                    <Menu.Item url="/">Option 4</Menu.Item>
+                </Menu.List>
             </Menu>
         }
     />
@@ -99,12 +99,12 @@ export const DropdownComponent = () => {
         noArrow
         body={
             <Menu>
-                <MenuList>
-                    <MenuItem url="/">Option 1</MenuItem>
-                    <MenuItem url="/">Option 2</MenuItem>
-                    <MenuItem url="/">Option 3</MenuItem>
-                    <MenuItem url="/">Option 4</MenuItem>
-                </MenuList>
+                <Menu.List>
+                    <Menu.Item url="/">Option 1</Menu.Item>
+                    <Menu.Item url="/">Option 2</Menu.Item>
+                    <Menu.Item url="/">Option 3</Menu.Item>
+                    <Menu.Item url="/">Option 4</Menu.Item>
+                </Menu.List>
             </Menu>
         }
     />
@@ -121,12 +121,12 @@ export const DropdownComponent = () => {
         noArrow
         body={
             <Menu>
-                <MenuList>
-                    <MenuItem url="/">Option 1</MenuItem>
-                    <MenuItem url="/">Option 2</MenuItem>
-                    <MenuItem url="/">Option 3</MenuItem>
-                    <MenuItem url="/">Option 4</MenuItem>
-                </MenuList>
+                <Menu.List>
+                    <Menu.Item url="/">Option 1</Menu.Item>
+                    <Menu.Item url="/">Option 2</Menu.Item>
+                    <Menu.Item url="/">Option 3</Menu.Item>
+                    <Menu.Item url="/">Option 4</Menu.Item>
+                </Menu.List>
             </Menu>
         }
     />
@@ -144,12 +144,12 @@ export const DropdownComponent = () => {
         noArrow
         body={
             <Menu>
-                <MenuList>
-                    <MenuItem url="/">Option 1</MenuItem>
-                    <MenuItem url="/">Option 2</MenuItem>
-                    <MenuItem url="/">Option 3</MenuItem>
-                    <MenuItem url="/">Option 4</MenuItem>
-                </MenuList>
+                <Menu.List>
+                    <Menu.Item url="/">Option 1</Menu.Item>
+                    <Menu.Item url="/">Option 2</Menu.Item>
+                    <Menu.Item url="/">Option 3</Menu.Item>
+                    <Menu.Item url="/">Option 4</Menu.Item>
+                </Menu.List>
             </Menu>
         } 
     />
@@ -177,12 +177,12 @@ export const DropdownComponent = () => {
                         <Popover
                             body={
                                 <Menu>
-                                    <MenuList>
-                                        <MenuItem url='/'>Option 1</MenuItem>
-                                        <MenuItem url='/'>Option 2</MenuItem>
-                                        <MenuItem url='/'>Option 3</MenuItem>
-                                        <MenuItem url='/'>Option 4</MenuItem>
-                                    </MenuList>
+                                    <Menu.List>
+                                        <Menu.Item url='/'>Option 1</Menu.Item>
+                                        <Menu.Item url='/'>Option 2</Menu.Item>
+                                        <Menu.Item url='/'>Option 3</Menu.Item>
+                                        <Menu.Item url='/'>Option 4</Menu.Item>
+                                    </Menu.List>
                                 </Menu>
                             }
                             control={<Button dropdown>Select</Button>}
@@ -194,12 +194,12 @@ export const DropdownComponent = () => {
                         <Popover
                             body={
                                 <Menu>
-                                    <MenuList>
-                                        <MenuItem url='/'>Option 1</MenuItem>
-                                        <MenuItem url='/'>Option 2</MenuItem>
-                                        <MenuItem url='/'>Option 3</MenuItem>
-                                        <MenuItem url='/'>Option 4</MenuItem>
-                                    </MenuList>
+                                    <Menu.List>
+                                        <Menu.Item url='/'>Option 1</Menu.Item>
+                                        <Menu.Item url='/'>Option 2</Menu.Item>
+                                        <Menu.Item url='/'>Option 3</Menu.Item>
+                                        <Menu.Item url='/'>Option 4</Menu.Item>
+                                    </Menu.List>
                                 </Menu>
                             }
                             control={
@@ -224,12 +224,12 @@ export const DropdownComponent = () => {
                         <Popover
                             body={
                                 <Menu>
-                                    <MenuList>
-                                        <MenuItem url='/'>Option 1</MenuItem>
-                                        <MenuItem url='/'>Option 2</MenuItem>
-                                        <MenuItem url='/'>Option 3</MenuItem>
-                                        <MenuItem url='/'>Option 4</MenuItem>
-                                    </MenuList>
+                                    <Menu.List>
+                                        <Menu.Item url='/'>Option 1</Menu.Item>
+                                        <Menu.Item url='/'>Option 2</Menu.Item>
+                                        <Menu.Item url='/'>Option 3</Menu.Item>
+                                        <Menu.Item url='/'>Option 4</Menu.Item>
+                                    </Menu.List>
                                 </Menu>
                             }
                             control={
@@ -245,12 +245,12 @@ export const DropdownComponent = () => {
                         <Popover
                             body={
                                 <Menu>
-                                    <MenuList>
-                                        <MenuItem url='/'>Option 1</MenuItem>
-                                        <MenuItem url='/'>Option 2</MenuItem>
-                                        <MenuItem url='/'>Option 3</MenuItem>
-                                        <MenuItem url='/'>Option 4</MenuItem>
-                                    </MenuList>
+                                    <Menu.List>
+                                        <Menu.Item url='/'>Option 1</Menu.Item>
+                                        <Menu.Item url='/'>Option 2</Menu.Item>
+                                        <Menu.Item url='/'>Option 3</Menu.Item>
+                                        <Menu.Item url='/'>Option 4</Menu.Item>
+                                    </Menu.List>
                                 </Menu>
                             }
                             control={
@@ -275,12 +275,12 @@ export const DropdownComponent = () => {
                         <Popover
                             body={
                                 <Menu>
-                                    <MenuList>
-                                        <MenuItem url='/'>Option 1</MenuItem>
-                                        <MenuItem url='/'>Option 2</MenuItem>
-                                        <MenuItem url='/'>Option 3</MenuItem>
-                                        <MenuItem url='/'>Option 4</MenuItem>
-                                    </MenuList>
+                                    <Menu.List>
+                                        <Menu.Item url='/'>Option 1</Menu.Item>
+                                        <Menu.Item url='/'>Option 2</Menu.Item>
+                                        <Menu.Item url='/'>Option 3</Menu.Item>
+                                        <Menu.Item url='/'>Option 4</Menu.Item>
+                                    </Menu.List>
                                 </Menu>
                             }
                             control={
@@ -296,12 +296,12 @@ export const DropdownComponent = () => {
                         <Popover
                             body={
                                 <Menu>
-                                    <MenuList>
-                                        <MenuItem url='/'>Option 1</MenuItem>
-                                        <MenuItem url='/'>Option 2</MenuItem>
-                                        <MenuItem url='/'>Option 3</MenuItem>
-                                        <MenuItem url='/'>Option 4</MenuItem>
-                                    </MenuList>
+                                    <Menu.List>
+                                        <Menu.Item url='/'>Option 1</Menu.Item>
+                                        <Menu.Item url='/'>Option 2</Menu.Item>
+                                        <Menu.Item url='/'>Option 3</Menu.Item>
+                                        <Menu.Item url='/'>Option 4</Menu.Item>
+                                    </Menu.List>
                                 </Menu>
                             }
                             control={
@@ -326,12 +326,12 @@ export const DropdownComponent = () => {
                         <Popover
                             body={
                                 <Menu>
-                                    <MenuList>
-                                        <MenuItem url='/'>Option 1</MenuItem>
-                                        <MenuItem url='/'>Option 2</MenuItem>
-                                        <MenuItem url='/'>Option 3</MenuItem>
-                                        <MenuItem url='/'>Option 4</MenuItem>
-                                    </MenuList>
+                                    <Menu.List>
+                                        <Menu.Item url='/'>Option 1</Menu.Item>
+                                        <Menu.Item url='/'>Option 2</Menu.Item>
+                                        <Menu.Item url='/'>Option 3</Menu.Item>
+                                        <Menu.Item url='/'>Option 4</Menu.Item>
+                                    </Menu.List>
                                 </Menu>
                             }
                             control={

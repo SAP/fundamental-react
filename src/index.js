@@ -31,7 +31,7 @@ export { default as InputGroup } from './InputGroup/InputGroup';
 export { default as FormGroup } from './InputGroup/FormGroup';
 export { default as ListGroup } from './ListGroup/ListGroup';
 export { LocalizationEditor } from './LocalizationEditor/LocalizationEditor';
-export { Menu, MenuList, MenuItem, MenuGroup } from './Menu/Menu';
+export { default as Menu } from './Menu/Menu';
 export { Modal } from './Modal/Modal';
 export { MultiInput } from './MultiInput/MultiInput';
 export { Pagination } from './Pagination/Pagination';

@@ -1,6 +1,6 @@
 import path from 'path';
 import React from 'react';
-import { Button, Image, Menu, MenuItem, MenuList, Panel, PanelGrid, Popover, Tile, Token } from '../';
+import { Button, Image, Menu, Panel, PanelGrid, Popover, Tile, Token } from '../';
 import { DocsText, DocsTile, Header, Import, Properties, Separator } from '../_playground';
 
 export const PanelComponent = () => {
@@ -20,12 +20,12 @@ export const PanelComponent = () => {
             control={<Button>Color</Button>}
             body={
                 <Menu>
-                    <MenuList>
-                        <MenuItem url="/">Option 1</MenuItem>
-                        <MenuItem url="/">Option 2</MenuItem>
-                        <MenuItem url="/">Option 3</MenuItem>
-                        <MenuItem url="/">Option 4</MenuItem>
-                    </MenuList>
+                    <Menu.List>
+                        <Menu.Item url="/">Option 1</Menu.Item>
+                        <Menu.Item url="/">Option 2</Menu.Item>
+                        <Menu.Item url="/">Option 3</Menu.Item>
+                        <Menu.Item url="/">Option 4</Menu.Item>
+                    </Menu.List>
                 </Menu>
             }
             noArrow
@@ -34,12 +34,12 @@ export const PanelComponent = () => {
             control={<Button>Size</Button>}
             body={
                 <Menu>
-                    <MenuList>
-                        <MenuItem url="/">Option 1</MenuItem>
-                        <MenuItem url="/">Option 2</MenuItem>
-                        <MenuItem url="/">Option 3</MenuItem>
-                        <MenuItem url="/">Option 4</MenuItem>
-                    </MenuList>
+                    <Menu.List>
+                        <Menu.Item url="/">Option 1</Menu.Item>
+                        <Menu.Item url="/">Option 2</Menu.Item>
+                        <Menu.Item url="/">Option 3</Menu.Item>
+                        <Menu.Item url="/">Option 4</Menu.Item>
+                    </Menu.List>
                 </Menu>
             }
             noArrow
@@ -223,12 +223,12 @@ export const PanelComponent = () => {
                             <Popover
                                 body={
                                     <Menu>
-                                        <MenuList>
-                                            <MenuItem url='/'>Option 1</MenuItem>
-                                            <MenuItem url='/'>Option 2</MenuItem>
-                                            <MenuItem url='/'>Option 3</MenuItem>
-                                            <MenuItem url='/'>Option 4</MenuItem>
-                                        </MenuList>
+                                        <Menu.List>
+                                            <Menu.Item url='/'>Option 1</Menu.Item>
+                                            <Menu.Item url='/'>Option 2</Menu.Item>
+                                            <Menu.Item url='/'>Option 3</Menu.Item>
+                                            <Menu.Item url='/'>Option 4</Menu.Item>
+                                        </Menu.List>
                                     </Menu>
                                 }
                                 control={<Button>Color</Button>}
@@ -236,12 +236,12 @@ export const PanelComponent = () => {
                             <Popover
                                 body={
                                     <Menu>
-                                        <MenuList>
-                                            <MenuItem url='/'>Option 1</MenuItem>
-                                            <MenuItem url='/'>Option 2</MenuItem>
-                                            <MenuItem url='/'>Option 3</MenuItem>
-                                            <MenuItem url='/'>Option 4</MenuItem>
-                                        </MenuList>
+                                        <Menu.List>
+                                            <Menu.Item url='/'>Option 1</Menu.Item>
+                                            <Menu.Item url='/'>Option 2</Menu.Item>
+                                            <Menu.Item url='/'>Option 3</Menu.Item>
+                                            <Menu.Item url='/'>Option 4</Menu.Item>
+                                        </Menu.List>
                                     </Menu>
                                 }
                                 control={<Button>Size</Button>}

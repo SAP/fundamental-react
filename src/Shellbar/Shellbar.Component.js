@@ -1,7 +1,7 @@
+import { Menu } from '../';
 import path from 'path';
 import { Shellbar } from '..';
 import { Description, DocsText, DocsTile, Header, Import, Properties, Separator } from '../_playground';
-import { Menu, MenuItem, MenuList } from '../';
 import React, { Component } from 'react';
 
 var images = require.context('../../assets', true);
@@ -135,11 +135,11 @@ actions = [
         callback: () => alert('Settings selected!'),
         menu: (
             <Menu>
-                <MenuList>
-                    <MenuItem url='/'>Option 1</MenuItem>
-                    <MenuItem url='/'>Option 2</MenuItem>
-                    <MenuItem url='/'>Option 3</MenuItem>
-                </MenuList>
+                <Menu.List>
+                    <Menu.Item url='/'>Option 1</Menu.Item>
+                    <Menu.Item url='/'>Option 2</Menu.Item>
+                    <Menu.Item url='/'>Option 3</Menu.Item>
+                </Menu.List>
             </Menu>
         )
     }
@@ -150,18 +150,18 @@ notifications2 = {
     label: 'Notifications',
     notificationsBody: (
         <Menu>
-            <MenuList>
-                <MenuItem url='/'>Notification 1</MenuItem>
-                <MenuItem url='/'>Notification 2</MenuItem>
-                <MenuItem url='/'>Notification 3</MenuItem>
-            </MenuList>
+            <Menu.List>
+                <Menu.Item url='/'>Notification 1</Menu.Item>
+                <Menu.Item url='/'>Notification 2</Menu.Item>
+                <Menu.Item url='/'>Notification 3</Menu.Item>
+            </Menu.List>
         </Menu>
     ),
     noNotificationsBody: (
         <Menu>
-            <MenuList>
-                <MenuItem>There are no notifications</MenuItem>
-            </MenuList>
+            <Menu.List>
+                <Menu.Item>There are no notifications</Menu.Item>
+            </Menu.List>
         </Menu>
     ),
     callback: () => alert('Notification selected!')
@@ -250,11 +250,11 @@ productSwitcher = {
             callback: () => alert('Settings selected!'),
             menu: (
                 <Menu>
-                    <MenuList>
-                        <MenuItem url='/'>Option 1</MenuItem>
-                        <MenuItem url='/'>Option 2</MenuItem>
-                        <MenuItem url='/'>Option 3</MenuItem>
-                    </MenuList>
+                    <Menu.List>
+                        <Menu.Item url='/'>Option 1</Menu.Item>
+                        <Menu.Item url='/'>Option 2</Menu.Item>
+                        <Menu.Item url='/'>Option 3</Menu.Item>
+                    </Menu.List>
                 </Menu>
             )
         }
@@ -265,18 +265,18 @@ productSwitcher = {
         label: 'Notifications',
         notificationsBody: (
             <Menu>
-                <MenuList>
-                    <MenuItem url='/'>Notification 1</MenuItem>
-                    <MenuItem url='/'>Notification 2</MenuItem>
-                    <MenuItem url='/'>Notification 3</MenuItem>
-                </MenuList>
+                <Menu.List>
+                    <Menu.Item url='/'>Notification 1</Menu.Item>
+                    <Menu.Item url='/'>Notification 2</Menu.Item>
+                    <Menu.Item url='/'>Notification 3</Menu.Item>
+                </Menu.List>
             </Menu>
         ),
         noNotificationsBody: (
             <Menu>
-                <MenuList>
-                    <MenuItem>There are no notifications</MenuItem>
-                </MenuList>
+                <Menu.List>
+                    <Menu.Item>There are no notifications</Menu.Item>
+                </Menu.List>
             </Menu>
         ),
         callback: () => alert('Notification selected!')

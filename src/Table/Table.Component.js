@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import path from 'path';
 import React from 'react';
-import { Button, Image, Menu, MenuItem, MenuList, Popover, Table } from '../';
+import { Button, Image, Menu, Popover, Table } from '../';
 import { Description, DocsText, DocsTile, Header, Import, Properties, Separator } from '../_playground';
 
 export const TableComponent = () => {
@@ -34,12 +34,12 @@ export const TableComponent = () => {
                     control={<Button option="light" glyph="vertical-grip" />}
                     body={
                         <Menu>
-                            <MenuList>
-                                <MenuItem url="/">Option 1</MenuItem>
-                                <MenuItem url="/">Option 2</MenuItem>
-                                <MenuItem url="/">Option 3</MenuItem>
-                                <MenuItem url="/">Option 4</MenuItem>
-                            </MenuList>
+                            <Menu.List>
+                                <Menu.Item url="/">Option 1</Menu.Item>
+                                <Menu.Item url="/">Option 2</Menu.Item>
+                                <Menu.Item url="/">Option 3</Menu.Item>
+                                <Menu.Item url="/">Option 4</Menu.Item>
+                            </Menu.List>
                         </Menu>
                     }
                 />
@@ -59,12 +59,12 @@ export const TableComponent = () => {
                     control={<Button option="light" glyph="vertical-grip" />}
                     body={
                         <Menu>
-                            <MenuList>
-                                <MenuItem url="/">Option 1</MenuItem>
-                                <MenuItem url="/">Option 2</MenuItem>
-                                <MenuItem url="/">Option 3</MenuItem>
-                                <MenuItem url="/">Option 4</MenuItem>
-                            </MenuList>
+                            <Menu.List>
+                                <Menu.Item url="/">Option 1</Menu.Item>
+                                <Menu.Item url="/">Option 2</Menu.Item>
+                                <Menu.Item url="/">Option 3</Menu.Item>
+                                <Menu.Item url="/">Option 4</Menu.Item>
+                            </Menu.List>
                         </Menu>
                     }
                 />
@@ -84,12 +84,12 @@ export const TableComponent = () => {
                     control={<Button option="light" glyph="vertical-grip" />}
                     body={
                         <Menu>
-                            <MenuList>
-                                <MenuItem url="/">Option 1</MenuItem>
-                                <MenuItem url="/">Option 2</MenuItem>
-                                <MenuItem url="/">Option 3</MenuItem>
-                                <MenuItem url="/">Option 4</MenuItem>
-                            </MenuList>
+                            <Menu.List>
+                                <Menu.Item url="/">Option 1</Menu.Item>
+                                <Menu.Item url="/">Option 2</Menu.Item>
+                                <Menu.Item url="/">Option 3</Menu.Item>
+                                <Menu.Item url="/">Option 4</Menu.Item>
+                            </Menu.List>
                         </Menu>
                     }
                 />
@@ -109,12 +109,12 @@ export const TableComponent = () => {
                     control={<Button option="light" glyph="vertical-grip" />}
                     body={
                         <Menu>
-                            <MenuList>
-                                <MenuItem url="/">Option 1</MenuItem>
-                                <MenuItem url="/">Option 2</MenuItem>
-                                <MenuItem url="/">Option 3</MenuItem>
-                                <MenuItem url="/">Option 4</MenuItem>
-                            </MenuList>
+                            <Menu.List>
+                                <Menu.Item url="/">Option 1</Menu.Item>
+                                <Menu.Item url="/">Option 2</Menu.Item>
+                                <Menu.Item url="/">Option 3</Menu.Item>
+                                <Menu.Item url="/">Option 4</Menu.Item>
+                            </Menu.List>
                         </Menu>
                     }
                 />
@@ -180,12 +180,12 @@ export const TableComponent = () => {
                                 <Popover
                                     body={
                                         <Menu>
-                                            <MenuList>
-                                                <MenuItem url='/'>Option 1</MenuItem>
-                                                <MenuItem url='/'>Option 2</MenuItem>
-                                                <MenuItem url='/'>Option 3</MenuItem>
-                                                <MenuItem url='/'>Option 4</MenuItem>
-                                            </MenuList>
+                                            <Menu.List>
+                                                <Menu.Item url='/'>Option 1</Menu.Item>
+                                                <Menu.Item url='/'>Option 2</Menu.Item>
+                                                <Menu.Item url='/'>Option 3</Menu.Item>
+                                                <Menu.Item url='/'>Option 4</Menu.Item>
+                                            </Menu.List>
                                         </Menu>
                                     }
                                     control={<Button glyph='vertical-grip' option='light' />} />
@@ -204,12 +204,12 @@ export const TableComponent = () => {
                                 <Popover
                                     body={
                                         <Menu>
-                                            <MenuList>
-                                                <MenuItem url='/'>Option 1</MenuItem>
-                                                <MenuItem url='/'>Option 2</MenuItem>
-                                                <MenuItem url='/'>Option 3</MenuItem>
-                                                <MenuItem url='/'>Option 4</MenuItem>
-                                            </MenuList>
+                                            <Menu.List>
+                                                <Menu.Item url='/'>Option 1</Menu.Item>
+                                                <Menu.Item url='/'>Option 2</Menu.Item>
+                                                <Menu.Item url='/'>Option 3</Menu.Item>
+                                                <Menu.Item url='/'>Option 4</Menu.Item>
+                                            </Menu.List>
                                         </Menu>
                                     }
                                     control={<Button glyph='vertical-grip' option='light' />} />
@@ -228,12 +228,12 @@ export const TableComponent = () => {
                                 <Popover
                                     body={
                                         <Menu>
-                                            <MenuList>
-                                                <MenuItem url='/'>Option 1</MenuItem>
-                                                <MenuItem url='/'>Option 2</MenuItem>
-                                                <MenuItem url='/'>Option 3</MenuItem>
-                                                <MenuItem url='/'>Option 4</MenuItem>
-                                            </MenuList>
+                                            <Menu.List>
+                                                <Menu.Item url='/'>Option 1</Menu.Item>
+                                                <Menu.Item url='/'>Option 2</Menu.Item>
+                                                <Menu.Item url='/'>Option 3</Menu.Item>
+                                                <Menu.Item url='/'>Option 4</Menu.Item>
+                                            </Menu.List>
                                         </Menu>
                                     }
                                     control={<Button glyph='vertical-grip' option='light' />} />
@@ -252,12 +252,12 @@ export const TableComponent = () => {
                                 <Popover
                                     body={
                                         <Menu>
-                                            <MenuList>
-                                                <MenuItem url='/'>Option 1</MenuItem>
-                                                <MenuItem url='/'>Option 2</MenuItem>
-                                                <MenuItem url='/'>Option 3</MenuItem>
-                                                <MenuItem url='/'>Option 4</MenuItem>
-                                            </MenuList>
+                                            <Menu.List>
+                                                <Menu.Item url='/'>Option 1</Menu.Item>
+                                                <Menu.Item url='/'>Option 2</Menu.Item>
+                                                <Menu.Item url='/'>Option 3</Menu.Item>
+                                                <Menu.Item url='/'>Option 4</Menu.Item>
+                                            </Menu.List>
                                         </Menu>
                                     }
                                     control={<Button glyph='vertical-grip' option='light' />} />
