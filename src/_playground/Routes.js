@@ -362,7 +362,11 @@ export class Routes extends Component {
                         </nav>
                     </div>
                     <div className={`frDocs-Content ${showNav}`}>
-                        <button className='fd-button sap-icon--menu2 fd-button--standard fd-button--light sidebar-toggle' onClick={this.toggleNavVis} />
+                        <button
+                            aria-expanded={this.state.showSideNav}
+                            aria-label='Toggle Navigation'
+                            className='fd-button sap-icon--menu2 fd-button--standard fd-button--light sidebar-toggle' 
+                            onClick={this.toggleNavVis} />
                         <Switch>
                             {routes.map(route => {
                                 return (
