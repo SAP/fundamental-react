@@ -15,13 +15,13 @@ export class DocsTile extends React.Component {
         };
     }
 
-    handleToggle = () => {
+    handleBackgroundToggle = () => {
         this.setState(prevState => ({
             backgroundToggle: !prevState.backgroundToggle
         }));
     };
 
-    handleToggleRightToLeft = () => {
+    handleRightToLeftToggle = () => {
         this.setState(prevState => ({
             rightToLeft: !prevState.rightToLeft
         }));
@@ -45,14 +45,14 @@ export class DocsTile extends React.Component {
                     <Toggle
                         className='frDocs-tile__feature'
                         inputProps={{ 'aria-label': 'Toggle right to left' }}
-                        onChange={this.handleToggleRightToLeft}
+                        onChange={this.handleRightToLeftToggle}
                         size='xs'>
                         Toggle right to left
                     </Toggle>
                     <Toggle
                         className='frDocs-tile__feature'
                         inputProps={{ 'aria-label': 'Toggle background color' }}
-                        onChange={this.handleToggle}
+                        onChange={this.handleBackgroundToggle}
                         size='xs'>
                         Toggle background
                     </Toggle>
