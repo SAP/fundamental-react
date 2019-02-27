@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import sortBy from 'sort-by';
-import { Table } from '../../../Table/Table';
+import Table from '../../../Table/Table';
 
 export const Properties = ({ sourceModulePath }) => {
     const sourceModule = getSourceModule(sourceModulePath);

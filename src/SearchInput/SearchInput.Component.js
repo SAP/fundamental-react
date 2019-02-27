@@ -1,5 +1,5 @@
 import path from 'path';
-import { SearchInput } from './SearchInput';
+import { SearchInput } from '../';
 import { DocsText, DocsTile, Header, Import, Properties, Separator } from '../_playground';
 import React, { Component } from 'react';
 

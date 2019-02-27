@@ -2,7 +2,7 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-export const Tab = (props) => {
+const Tab = (props) => {
     const { title,
         className,
         disabled,
@@ -49,6 +49,7 @@ export const Tab = (props) => {
         </li>
     );
 };
+
 Tab.displayName = 'Tab';
 
 Tab.defaultProps = {
@@ -77,3 +78,5 @@ Tab.propDescriptions = {
     linkProps: 'Additional props to be spread to the tab\'s <a> element.',
     onClick: '_INTERNAL USE ONLY._'
 };
+
+export default Tab;

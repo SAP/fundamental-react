@@ -1,9 +1,9 @@
-import { Calendar } from '../Calendar/Calendar';
+import Calendar from '../Calendar/Calendar';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 
-export class DatePicker extends Component {
+class DatePicker extends Component {
     constructor(props) {
         super(props);
 
@@ -342,6 +342,7 @@ export class DatePicker extends Component {
         );
     }
 }
+
 DatePicker.displayName = 'DatePicker';
 
 DatePicker.propTypes = {
@@ -356,3 +357,5 @@ DatePicker.propDescriptions = {
     ...Calendar.propDescriptions,
     enableRangeSelection: 'Set to **true** to enable the selection of a date range (begin and end).'
 };
+
+export default DatePicker;

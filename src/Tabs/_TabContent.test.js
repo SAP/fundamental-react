@@ -1,9 +1,9 @@
 import { mount } from 'enzyme';
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { Tab } from './Tab';
+import Tab from './Tab';
 import { TabContent } from './_TabContent';
-import { TabGroup } from './TabGroup';
+import TabGroup from './TabGroup';
 
 describe('<Tabs />', () => {
     const shownTabContent = (

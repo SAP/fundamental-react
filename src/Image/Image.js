@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { IMAGE_SIZES, IMAGE_TYPES } from '../utils/constants';
 
-export const Image = ({ size, type, photo, className, ...props }) => {
+const Image = ({ size, type, photo, className, ...props }) => {
     const imageClasses = classnames(
         {
             [`fd-image--${size}`]: !!size,
@@ -18,6 +18,7 @@ export const Image = ({ size, type, photo, className, ...props }) => {
             style={{ backgroundImage: 'url(' + photo + ')' }} />
     );
 };
+
 Image.displayName = 'Image';
 
 Image.propTypes = {
@@ -30,3 +31,5 @@ Image.propTypes = {
 Image.propDescriptions = {
     photo: 'Picture URL.'
 };
+
+export default Image;

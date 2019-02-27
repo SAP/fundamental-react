@@ -1,7 +1,7 @@
 import { mount } from 'enzyme';
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { Token } from './Token';
+import Token from './Token';
 
 describe('<Token />', () => {
     test('create token component', () => {

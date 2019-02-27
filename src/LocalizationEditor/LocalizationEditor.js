@@ -1,10 +1,9 @@
 import classnames from 'classnames';
-import { Popover } from '../Popover/Popover';
+import Popover from '../Popover/Popover';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-// ------------------------------------------- Menu ------------------------------------------
-export const LocalizationEditor = ({ control, menu, id, compact, textarea, className, listProps, popoverProps, ...props }) => {
+const LocalizationEditor = ({ control, menu, id, compact, textarea, className, listProps, popoverProps, ...props }) => {
 
     const localizationEditorClasses = classnames(
         'fd-localization-editor',
@@ -114,6 +113,7 @@ export const LocalizationEditor = ({ control, menu, id, compact, textarea, class
         </div>
     );
 };
+
 LocalizationEditor.displayName = 'LocalizationEditor';
 
 LocalizationEditor.propTypes = {
@@ -145,3 +145,5 @@ LocalizationEditor.propDescriptions = {
     menu: 'An array of objects that represent the values of the elements in the dropdown menu. The shape of the objects in the array is `{ placeholder: string, language: string, inputProps: object }`.',
     textarea: 'Set to **true** to enable a Localization Editor with a textarea.'
 };
+
+export default LocalizationEditor;

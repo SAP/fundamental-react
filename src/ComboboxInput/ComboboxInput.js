@@ -1,10 +1,9 @@
 import classnames from 'classnames';
-import { Popover } from '../Popover/Popover';
+import Popover from '../Popover/Popover';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-// ------------------------------------------- Combobox Input ------------------------------------------
-export const ComboboxInput = ({ placeholder, menu, compact, className, popoverProps, inputProps, buttonProps, ...props }) => {
+const ComboboxInput = ({ placeholder, menu, compact, className, popoverProps, inputProps, buttonProps, ...props }) => {
     const comboboxInputClasses = classnames(
         'fd-combobox-input',
         className
@@ -49,6 +48,7 @@ export const ComboboxInput = ({ placeholder, menu, compact, className, popoverPr
         </div>
     );
 };
+
 ComboboxInput.displayName = 'ComboboxInput';
 
 ComboboxInput.propTypes = {
@@ -64,3 +64,5 @@ ComboboxInput.propTypes = {
 ComboboxInput.propDescriptions = {
     menu: 'An object containing a `Menu` component.'
 };
+
+export default ComboboxInput;

@@ -3,7 +3,7 @@ import classnames from 'classnames';
 import { googlecode } from 'react-syntax-highlighter/styles/hljs';
 import PropTypes from 'prop-types';
 import SyntaxHighlighter from 'react-syntax-highlighter';
-import { Toggle } from '../../../Toggle/Toggle';
+import Toggle from '../../../Toggle/Toggle';
 import React, { Component } from 'react';
 
 export class DocsTile extends Component {

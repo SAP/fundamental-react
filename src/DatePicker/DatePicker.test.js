@@ -1,4 +1,4 @@
-import { DatePicker } from '../DatePicker/DatePicker';
+import DatePicker from '../DatePicker/DatePicker';
 import { mount } from 'enzyme';
 import React from 'react';
 

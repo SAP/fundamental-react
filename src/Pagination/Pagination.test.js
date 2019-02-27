@@ -1,4 +1,4 @@
-import { Pagination } from './Pagination';
+import Pagination from './Pagination';
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { mount, shallow } from 'enzyme';
