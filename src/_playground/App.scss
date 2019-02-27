@@ -1,5 +1,4 @@
 $mediaMaxWidth: 700px;
-$tableMaxWidth: 500px;
 $fd-icons-path: '../../node_modules/fiori-fundamentals/scss/icons/';
 $fd-fonts-path: '../../node_modules/fiori-fundamentals/dist/fonts/';
 @import '../../node_modules/fiori-fundamentals/scss/all.scss';
@@ -24,7 +23,6 @@ $library-color: #61dafb;
             min-width: 265px;
             width: 265px;
             background-color: #f1f3f6;
-            //visibility transition 'ease in'
             display: flex;
             flex-direction: column;
             transition: 0.3s margin ease-in-out, 0.3s box-shadow ease-in-out;
@@ -98,11 +96,11 @@ $library-color: #61dafb;
                 }
             }
         }
-        // TODO: as width decreases, hamburger (sap-icon--menu 2)
+
         @media (max-width: $mediaMaxWidth) {
-            .sidebar-hidden{
-                    margin-left: -20rem;
-                    overflow-x: hidden;
+            .frDocs-Sidebar.sidebar-hidden{
+                        margin-left: -20rem;
+                        overflow-x: hidden;
             }
 
             code {
@@ -117,7 +115,7 @@ $library-color: #61dafb;
             background-color: white;
             padding: 2rem;
 
-            .sidebar-view{
+            .sidebar-toggle{
                 visibility: hidden;
             }
 
@@ -233,16 +231,15 @@ $library-color: #61dafb;
             }
 
             @media (max-width: $mediaMaxWidth) {
-                .sidebar-view {
-                    visibility: visible;             
+                .sidebar-toggle {
+                    visibility: visible;   
+                    margin-bottom: 3rem;        
                 }
             }
         }
     }
       
 }
-
-
 
 // Fundamental React Component Overrides 
 .fd-counter--notification {
@@ -349,7 +346,7 @@ $library-color: #61dafb;
     text-align: center;
     height: 120px;
 }
-//TODO: NOTE: minimum width for table is 450px
+
 .fd-table {
 
     &.property-table {
@@ -401,56 +398,5 @@ $library-color: #61dafb;
         .prop-required {
             color: var(--fd-color-status-3);
         }
-    }
-}
-
-@media (max-width: $tableMaxWidth) {
-    .fd-table{
-
-        &.property-table {
-            display: block;
-
-            thead, tbody, th, td, tr {
-                display:block;
-            }
-
-            thead tr {
-                    position: absolute;
-                    color: hotpink;
-                    // top: -9999px;
-                    // right: -9999px;
-                    // bottom: -9999px;
-                    // left: -9999px;
-            }
-
-            tr {
-                border: 1px solid #ccc;
-            }
-
-            td, td > div {
-                border: none;
-                border-bottom: 1px solid #eee;
-                position: relative;
-                padding-left: 50%;
-
-                &:before {
-                    position: absolute;
-                    top: 6px;
-                    left: 6px;
-                    width: 45%;
-                    padding-right: 10px;
-                    white-space: nowrap;
-                }
-
-                // &:nth-of-type(1):before {
-                //     content: "First Name";
-                // }
-
-                // &:nth-of-type(2):before {
-                //     content: "Last Name";
-                // }
-            }
-
-        }   
     }
 }
