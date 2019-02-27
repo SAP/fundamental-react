@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.4.1-rc.17"></a>
+## [0.4.1-rc.17](https://github.com/SAP/fundamental-react/compare/v0.4.1-rc.16...v0.4.1-rc.17) (2019-02-27)
+
+
+### Bug Fixes
+
+* One component per file Breadcrumb ([#449](https://github.com/SAP/fundamental-react/issues/449)) ([60a66bd](https://github.com/SAP/fundamental-react/commit/60a66bd))
+
+
+
 <a name="0.4.1-rc.16"></a>
 ## [0.4.1-rc.16](https://github.com/SAP/fundamental-react/compare/v0.4.1-rc.15...v0.4.1-rc.16) (2019-02-27)
 
