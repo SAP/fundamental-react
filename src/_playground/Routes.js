@@ -343,13 +343,13 @@ export class Routes extends Component {
         });
 
         const sideBarClasses = classnames({
-            'frDocs-Sidebar': this.state.showNav,
-            'frDocs-Sidebar__visibility': !this.state.showSideNav
+            'frDocs-Sidebar': true,
+            'frDocs-Sidebar--isHidable': !this.state.showSideNav
         });
 
         const docsContentClasses = classnames({
-            'frDocs-Content': this.state.showNav,
-            'frDocs-Content__visibility': !this.state.showSideNav
+            'frDocs-Content': true,
+            'frDocs-Content--isHidable': !this.state.showSideNav
         });
 
         return (
