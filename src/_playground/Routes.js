@@ -342,19 +342,15 @@ export class Routes extends Component {
             );
         });
 
-        const sideBarClasses = classnames(
-            'frDocs-Sidebar',
-            {
-                'sidebar-visibility': !this.state.showSideNav
-            }
-        );
+        const sideBarClasses = classnames({
+            'frDocs-Sidebar': this.state.showNav,
+            'frDocs-Sidebar__visibility': !this.state.showSideNav
+        });
 
-        const docsContentClasses = classnames(
-            'frDocs-Content',
-            {
-                'sidebar-visibility': !this.state.showSideNav
-            }
-        );
+        const docsContentClasses = classnames({
+            'frDocs-Content': this.state.showNav,
+            'frDocs-Content__visibility': !this.state.showSideNav
+        });
 
         return (
             <BrowserRouter basename={process.env.PUBLIC_URL}>
