@@ -6,7 +6,7 @@ import ReactMarkdown from 'react-markdown';
 import sortBy from 'sort-by';
 import Table from '../../../Table/Table';
 
-export const Properties = ({ sourceModulePath }) => {
+const Properties = ({ sourceModulePath }) => {
     const sourceModule = getSourceModule(sourceModulePath);
 
     const componentNames = Object.keys(sourceModule).sort();
@@ -48,7 +48,7 @@ Properties.propTypes = {
     sourceModulePath: PropTypes.string.isRequired
 };
 
-
+export default Properties;
 
 const PropertyTable = ({ title, propTypes, defaultProps, propDescriptions }) => {
     if (!propTypes) {
