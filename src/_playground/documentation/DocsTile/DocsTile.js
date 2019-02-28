@@ -44,10 +44,10 @@ export class DocsTile extends React.Component {
                 <div className='frDocs-tile__features'>
                     <Toggle
                         className='frDocs-tile__feature'
-                        inputProps={{ 'aria-label': 'Show right to Left' }}
+                        inputProps={{ 'aria-label': 'Show right to left' }}
                         onChange={this.toggleRTL}
                         size='xs'>
-                        Show right to Left
+                        Show right to left
                     </Toggle>
                     <Toggle
                         className='frDocs-tile__feature'
