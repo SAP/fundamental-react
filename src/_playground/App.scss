@@ -4,7 +4,9 @@ $fd-fonts-path: '../../node_modules/fiori-fundamentals/dist/fonts/';
 @import '~tocbot/src/scss/tocbot-core';
 @import '~tocbot/src/scss/tocbot-default-theme';
 
+$shell-color: #354A5F;
 $library-color: #61dafb;
+$menu-height: 50px;
 
 // Fundamental React Docs Styles
 .frDocs-App {
@@ -19,39 +21,75 @@ $library-color: #61dafb;
         margin-right: auto;
         width: 100%;
 
+        .frDocs-Menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: $shell-color;
+            color: #fff;
+            padding: 8px 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+            z-index: 10;
+
+            &__logo {
+                flex: 0 0 auto;
+                font-size: 24px;
+                font-weight: 700;
+                margin: 0;
+                text-align: center;
+                color: #fff;
+
+                &--library {
+                    color: $library-color;
+                }
+            }
+
+            &__spacer {
+                flex: 1 1 auto;
+            }
+
+            &__version {
+                flex: 0 0 auto;
+                padding: 0 25px;
+                font-size: 1.2rem;
+            }
+
+            &__githubLogo {
+                flex: 0 0 auto;
+                width: 2rem;
+                height: 2rem;
+                font-size: 1rem;
+                display: block;
+
+                svg {
+                    width: 2rem;
+                    height: 2rem;
+                }
+            }
+        }
+
         .frDocs-Sidebar {
+            margin-top: $menu-height;
             color: #21262c;
             min-width: 265px;
             width: 265px;
-            background-color: #f1f3f6;
+            background-color: #EDEFF0;
             display: flex;
             flex-direction: column;
             transition: 0.3s margin ease-in-out, 0.3s box-shadow ease-in-out;
 
-            .frDocs-Logo {
-                flex: 0 0 auto;
-                font-size: 24px;
-                padding: 0.5rem 10px;
-                margin: 0;
-                text-align: center;
-                background-color: #424e5a;
-                color: #fff;
-
-                >a {
-                    color: inherit;
-
-                    .frDocs-Logo--library {
-                        color: $library-color;
-                    }
-                }
-            }
-
             .frDocs-Search {
                 flex: 0 0 auto;
-                background-color: #424e5a;
-                padding: 0 20px 1.25rem;
-                -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+                background-color: #D1E8FF;
+                padding: 15px 20px;
+                -webkit-box-shadow: -2px 2px 4px rgba(0, 0, 0, 0.25);
+                box-shadow: -2px 2px 4px rgba(0, 0, 0, 0.25);
+                z-index: 1;
             }
 
             .frDocs-Nav {
@@ -65,7 +103,7 @@ $library-color: #61dafb;
                 }
 
                 .frDocs-Nav__headers {
-                    color: #424e5a;
+                    color: #515559;
                     padding: 15px 20px;
                     display: block;
                     font-weight: 700;
@@ -89,7 +127,7 @@ $library-color: #61dafb;
                 }
 
                 .frDocs-Nav__item--active {
-                    color: #424e5a;
+                    color: #32363A;
                     box-shadow: inset 6px 0 0 0 $library-color;
                     cursor: pointer;
                     background-color: #fff;
@@ -99,26 +137,13 @@ $library-color: #61dafb;
         }
 
         .frDocs-Content {
+            margin-top: $menu-height;
             flex-grow: 1;
             overflow-y: scroll;
             background-color: white;
             padding: 2rem;
             padding-right: 250px;
             padding-bottom: 1000px;
-
-            .frDocs-Content__githubLogo {
-                float: right;
-                z-index: 100;
-                cursor: pointer;
-                width: 2rem;
-                height: 2rem;
-                font-size: 1rem;
-
-                svg {
-                    width: 2rem;
-                    height: 2rem;
-                }
-            }
 
             .frDocs-Content__header,
             .frDocs-markdown>h1 {
@@ -384,7 +409,7 @@ $library-color: #61dafb;
     position: fixed;
     top: 0;
     right: 0;
-    padding: 25px;
+    padding: 25px + $menu-height 25px 25px;
     height: 100%;
 
     > .toc-list {
