@@ -343,15 +343,15 @@ export class Routes extends Component {
             );
         });
 
-        const sideBarClasses = classnames({
-            'frDocs-Sidebar': true,
-            'frDocs-Sidebar--isHidable': !this.state.showSideNav
-        });
+        const sideBarClasses = classnames(
+            'frDocs-Sidebar', {
+                'frDocs-Sidebar--isHidable': !this.state.showSideNav
+            });
 
-        const docsContentClasses = classnames({
-            'frDocs-Content': true,
-            'frDocs-Content--isHidable': !this.state.showSideNav
-        });
+        const docsContentClasses = classnames(
+            'frDocs-Content', {
+                'frDocs-Content--isHidable': !this.state.showSideNav
+            });
 
         return (
             <BrowserRouter basename={process.env.PUBLIC_URL}>
@@ -375,7 +375,7 @@ export class Routes extends Component {
                         <Button
                             aria-expanded={this.state.showSideNav}
                             aria-label='Toggle Navigation'
-                            className='fd-button sap-icon--menu2 fd-button--standard fd-button--light sidebar-toggle'
+                            className='sidebar-toggle'
                             glyph='menu2'
                             onClick={this.toggleNavVis}
                             option='light' />
