@@ -11,232 +11,232 @@ $menu-height: 50px;
 // Fundamental React Docs Styles
 .frDocs-App {
     background-color: white;
+}
 
-    .frDocs-Container {
-        display: flex;
-        justify-content: space-between;
-        height: 100vh;
-        overflow: hidden;
-        margin-left: auto;
-        margin-right: auto;
-        width: 100%;
+.frDocs-Container {
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
 
-        .frDocs-Menu {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background-color: $shell-color;
-            color: #fff;
-            padding: 8px 25px;
+.frDocs-Menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: $shell-color;
+    color: #fff;
+    padding: 8px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+
+    &__logo {
+        flex: 0 0 auto;
+        font-size: 24px;
+        font-weight: 700;
+        margin: 0;
+        text-align: center;
+        color: #fff;
+
+        &--library {
+            color: $library-color;
+        }
+    }
+
+    &__spacer {
+        flex: 1 1 auto;
+    }
+
+    &__version {
+        flex: 0 0 auto;
+        padding: 0 25px;
+        font-size: 1.2rem;
+    }
+
+    &__githubLogo {
+        flex: 0 0 auto;
+        width: 2rem;
+        height: 2rem;
+        font-size: 1rem;
+        display: block;
+
+        svg {
+            width: 2rem;
+            height: 2rem;
+        }
+    }
+}
+
+.frDocs-Sidebar {
+    padding-top: $menu-height;
+    color: #21262c;
+    min-width: 265px;
+    width: 265px;
+    background-color: #EDEFF0;
+    display: flex;
+    flex-direction: column;
+    transition: 0.3s margin ease-in-out, 0.3s box-shadow ease-in-out;
+}
+
+.frDocs-Nav {
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow: auto;
+    padding: 0.5rem 0 1rem;
+
+    &__list {
+        list-style: none;
+    }
+
+    &__headers {
+        color: #515559;
+        padding: 15px 20px;
+        display: block;
+        font-weight: 700;
+        font-size: 1.25rem;
+    }
+
+    &__item {
+        display: block;
+        margin-left: 1px;
+        color: #21262c;
+        font-size: 1rem;
+        position: relative;
+        padding: 13px 40px;
+        transition: background .15hs ease-in;
+
+        &:hover,
+        &:focus {
+            background-color: #fafafa;
+            color: #085caf;
+        }
+
+        &--active {
+            color: #32363A;
+            box-shadow: inset 6px 0 0 0 $library-color;
+            cursor: pointer;
+            background-color: #fff;
+            font-weight: 700;
+        }
+    }
+}
+
+.frDocs-Search {
+    flex: 0 0 auto;
+    padding: 15px 20px;
+    -webkit-box-shadow: -2px 2px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: -2px 2px 4px rgba(0, 0, 0, 0.25);
+    z-index: 1;
+}
+
+.frDocs-Content {
+    flex-grow: 1;
+    overflow-y: scroll;
+    background-color: white;
+    padding: 2rem;
+    padding-top: $menu-height + 25px;
+
+    &__header,
+    .frDocs-markdown>h1 {
+        margin: 0 0 12px;
+        font-size: 2.2rem;
+        line-height: 1;
+    }
+
+    &__header:empty {
+        display: none;
+    }
+
+    &__description,
+    .frDocs-markdown>p {
+        margin-bottom: 1.5rem;
+        font-size: 1rem;
+        font-weight: 300;
+    }
+
+    &__tile {
+        border-radius: 4px 4px 0 0;
+        border: 1px solid #ccc;
+        border-bottom: none;
+        padding: 10px 0;
+
+        .frDocs-tile__background-toggle {
             display: flex;
-            justify-content: space-between;
+            justify-content: flex-end;
+            margin: 15px;
+        }
+
+        .frDocs-tile__centered {
+            display: flex;
+            justify-content: center;
             align-items: center;
-            -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-            z-index: 10;
-
-            &__logo {
-                flex: 0 0 auto;
-                font-size: 24px;
-                font-weight: 700;
-                margin: 0;
-                text-align: center;
-                color: #fff;
-
-                &--library {
-                    color: $library-color;
-                }
-            }
-
-            &__spacer {
-                flex: 1 1 auto;
-            }
-
-            &__version {
-                flex: 0 0 auto;
-                padding: 0 25px;
-                font-size: 1.2rem;
-            }
-
-            &__githubLogo {
-                flex: 0 0 auto;
-                width: 2rem;
-                height: 2rem;
-                font-size: 1rem;
-                display: block;
-
-                svg {
-                    width: 2rem;
-                    height: 2rem;
-                }
-            }
         }
+    }
 
-        .frDocs-Sidebar {
-            padding-top: $menu-height;
-            color: #21262c;
-            min-width: 265px;
-            width: 265px;
-            background-color: #EDEFF0;
-            display: flex;
-            flex-direction: column;
-            transition: 0.3s margin ease-in-out, 0.3s box-shadow ease-in-out;
+    &__tile-background {
+        background: #edeef0;
+        transition: background-color .25s;
+    }
 
-            .frDocs-Search {
-                flex: 0 0 auto;
-                padding: 15px 20px;
-                -webkit-box-shadow: -2px 2px 4px rgba(0, 0, 0, 0.25);
-                box-shadow: -2px 2px 4px rgba(0, 0, 0, 0.25);
-                z-index: 1;
-            }
+    &__separator {
+        display: block;
+        margin: 2rem 0;
+        border-bottom: 1px solid #E3E3E3;
+    }
 
-            .frDocs-Nav {
-                flex: 1 1 auto;
-                min-height: 0;
-                overflow: auto;
-                padding: 0.5rem 0 1rem;
+    &__docsText {
+        padding: 15px;
+        font-size: 13px;
+        border: 1px solid #ccc;
+        border-top: none;
+        border-radius: 0 0 4px 4px;
+        margin: 0;
+    }
 
-                .frDocs-Nav__list {
-                    list-style: none;
-                }
+    .frDocs-docsText__button {
+        padding: 5px;
+        border: 1px solid #ccc;
+        text-align: center;
+    }
 
-                .frDocs-Nav__headers {
-                    color: #515559;
-                    padding: 15px 20px;
-                    display: block;
-                    font-weight: 700;
-                    font-size: 1.25rem;
-                }
+    .frDocs-docsText__buttonCopy {
+        margin-left: 5px;
+    }
+}
 
-                .frDocs-Nav__item {
-                    display: block;
-                    margin-left: 1px;
-                    color: #21262c;
-                    font-size: 1rem;
-                    position: relative;
-                    padding: 13px 40px;
-                    transition: background .15hs ease-in;
+.frDocs-markdown {
+    ol,
+    ul {
+        padding-left: 2rem;
+    }
 
-                    &:hover,
-                    &:focus {
-                        background-color: #fafafa;
-                        color: #085caf;
-                    }
-                }
+    pre {
+        margin: 25px 0px;
+        background-color: #fff !important;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -pre-wrap;
+        white-space: -o-pre-wrap;
+        word-wrap: break-word;
+        display: flex;
+        padding: 1rem;
+        font-size: 13px;
+        line-height: 1.42857143;
+        color: #333;
+        word-break: break-all;
+        border: 1px solid #ccc;
+        border-radius: 4px;
 
-                .frDocs-Nav__item--active {
-                    color: #32363A;
-                    box-shadow: inset 6px 0 0 0 $library-color;
-                    cursor: pointer;
-                    background-color: #fff;
-                    font-weight: 700;
-                }
-            }
-        }
-
-        .frDocs-Content {
-            flex-grow: 1;
-            overflow-y: scroll;
-            background-color: white;
-            padding: 2rem;
-            padding-top: $menu-height + 25px;
-
-            .frDocs-Content__header,
-            .frDocs-markdown>h1 {
-                margin: 0 0 12px;
-                font-size: 2.2rem;
-                line-height: 1;
-            }
-
-            .frDocs-Content__header:empty {
-                display: none;
-            }
-
-            .frDocs-Content__description,
-            .frDocs-markdown>p {
-                margin-bottom: 1.5rem;
-                font-size: 1rem;
-                font-weight: 300;
-            }
-
-            .frDocs-Content__tile {
-                border-radius: 4px 4px 0 0;
-                border: 1px solid #ccc;
-                border-bottom: none;
-                padding: 10px 0;
-
-                .frDocs-tile__background-toggle {
-                    display: flex;
-                    justify-content: flex-end;
-                    margin: 15px;
-                }
-
-                .frDocs-tile__centered {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                }
-            }
-
-            .frDocs-Content__tile-background {
-                background: #edeef0;
-                transition: background-color .25s;
-            }
-
-            .frDocs-markdown {
-                ol,
-                ul {
-                    padding-left: 2rem;
-                }
-
-                pre {
-                    margin: 25px 0px;
-                    background-color: #fff !important;
-                    white-space: pre-wrap;
-                    white-space: -moz-pre-wrap;
-                    white-space: -pre-wrap;
-                    white-space: -o-pre-wrap;
-                    word-wrap: break-word;
-                    display: flex;
-                    padding: 1rem;
-                    font-size: 13px;
-                    line-height: 1.42857143;
-                    color: #333;
-                    word-break: break-all;
-                    border: 1px solid #ccc;
-                    border-radius: 4px;
-
-                    code {
-                        display: block;
-                    }
-                }
-            }
-
-            .frDocs-Content__separator {
-                display: block;
-                margin: 2rem 0;
-                border-bottom: 1px solid #E3E3E3;
-            }
-
-            .frDocs-Content__docsText {
-                padding: 15px;
-                font-size: 13px;
-                border: 1px solid #ccc;
-                border-top: none;
-                border-radius: 0 0 4px 4px;
-                margin: 0;
-            }
-
-            .frDocs-docsText__button {
-                padding: 5px;
-                border: 1px solid #ccc;
-                text-align: center;
-            }
-
-            .frDocs-docsText__buttonCopy {
-                margin-left: 5px;
-            }
+        code {
+            display: block;
         }
     }
 }
