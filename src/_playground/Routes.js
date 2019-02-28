@@ -10,7 +10,6 @@ import { DatePickerComponent } from '../DatePicker/DatePicker.Component';
 import { DropdownComponent } from '../Dropdown/Dropdown.Component';
 import { FormsComponent } from '../Forms/Forms.Component';
 import groupArray from 'group-array';
-import Header from './documentation/Header/Header';
 import Home from './documentation/Home/Home';
 import { IconComponent } from '../Icon/Icon.Component';
 import { IdentifierComponent } from '../Identifier/Identifier.Component';
@@ -26,6 +25,7 @@ import { MultiInputComponent } from '../MultiInput/MultiInput.Component';
 import { PaginationComponent } from '../Pagination/Pagination.Component';
 import { PanelComponent } from '../Panel/Panel.Component';
 import { PopoverComponent } from '../Popover/Popover.Component';
+import RouteNotFound from './_RouteNotFound';
 import { SearchInputComponent } from '../SearchInput/SearchInput.Component';
 import { ShellbarComponent } from '../Shellbar/Shellbar.Component';
 import { SideNavigationComponent } from '../SideNavigation/SideNav.Component';
@@ -38,7 +38,7 @@ import { TimePickerComponent } from '../TimePicker/TimePicker.Component';
 import { ToggleComponent } from '../Toggle/Toggle.Component';
 import { TokenComponent } from '../Token/Token.Component';
 import { TreeViewComponent } from '../TreeView/TreeView.Component';
-import { BrowserRouter, Link, NavLink, Redirect, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, NavLink, Redirect, Route, Switch } from 'react-router-dom';
 import React, { Component } from 'react';
 
 const sections = [
@@ -272,13 +272,6 @@ const routes = [
         section: 'Components'
     }
 ];
-
-const RouteNotFound = () => (
-    <div>
-        <Header>Sorry, page not found.</Header>
-        <Link to=''>Home</Link>
-    </div>
-);
 
 export class Routes extends Component {
     constructor(props) {
