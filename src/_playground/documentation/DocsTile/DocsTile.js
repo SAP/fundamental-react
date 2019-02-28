@@ -10,29 +10,29 @@ export class DocsTile extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            backgroundOn: true,
-            rightToLeft: false
+            hideBackground: false,
+            showRTL: false
         };
     }
 
-    handleBackgroundToggle = () => {
+    toggleBackground = () => {
         this.setState(prevState => ({
-            backgroundOn: !prevState.backgroundOn
+            hideBackground: !prevState.hideBackground
         }));
     };
 
-    handleRightToLeftToggle = () => {
+    toggleRTL = () => {
         this.setState(prevState => ({
-            rightToLeft: !prevState.rightToLeft
+            showRTL: !prevState.showRTL
         }));
     };
 
     render() {
         const { centered, children } = this.props;
-        const { backgroundOn, rightToLeft } = this.state;
+        const { hideBackground, showRTL } = this.state;
 
         const outerDivClasses = classnames('frDocs-Content__tile', {
-            'frDocs-Content__tile-background': backgroundOn
+            'frDocs-Content__tile-background': !hideBackground
         });
 
         const innerDivClasses = classnames('fd-tile__content', {
@@ -44,20 +44,20 @@ export class DocsTile extends React.Component {
                 <div className='frDocs-tile__features'>
                     <Toggle
                         className='frDocs-tile__feature'
-                        inputProps={{ 'aria-label': 'Toggle right to left' }}
-                        onChange={this.handleRightToLeftToggle}
+                        inputProps={{ 'aria-label': 'Show right to Left' }}
+                        onChange={this.toggleRTL}
                         size='xs'>
-                        Toggle right to left
+                        Show right to Left
                     </Toggle>
                     <Toggle
                         className='frDocs-tile__feature'
-                        inputProps={{ 'aria-label': 'Toggle background color' }}
-                        onChange={this.handleBackgroundToggle}
+                        inputProps={{ 'aria-label': 'Hide background' }}
+                        onChange={this.toggleBackground}
                         size='xs'>
-                        Toggle background
+                        Hide background
                     </Toggle>
                 </div>
-                <div className={innerDivClasses} dir={rightToLeft ? 'rtl' : ''}>{children}</div>
+                <div className={innerDivClasses} dir={showRTL ? 'rtl' : ''}>{children}</div>
             </div>
         );
     }
