@@ -74,7 +74,7 @@ $menu-height: 50px;
         }
 
         .frDocs-Sidebar {
-            margin-top: $menu-height;
+            padding-top: $menu-height;
             color: #21262c;
             min-width: 265px;
             width: 265px;
@@ -136,13 +136,11 @@ $menu-height: 50px;
         }
 
         .frDocs-Content {
-            margin-top: $menu-height;
             flex-grow: 1;
             overflow-y: scroll;
             background-color: white;
             padding: 2rem;
-            padding-right: 250px;
-            padding-bottom: 1000px;
+            padding-top: $menu-height + 25px;
 
             .frDocs-Content__header,
             .frDocs-markdown>h1 {
@@ -187,7 +185,6 @@ $menu-height: 50px;
             }
 
             .frDocs-markdown {
-
                 ol,
                 ul {
                     padding-left: 2rem;
@@ -404,15 +401,8 @@ $menu-height: 50px;
 }
 
 .toc {
-    width: 250px;
-    position: fixed;
-    top: 0;
-    right: 0;
-    padding: 25px + $menu-height 25px 25px;
-    height: 100%;
-
     > .toc-list {
-        padding-left: 14px;
+        padding-left: 0;
     }
 }
 
@@ -422,7 +412,7 @@ $menu-height: 50px;
     text-indent: -15px;
 
     &:before {
-        width: 4px;
+        width: 0;
     }
 }
 
@@ -434,4 +424,34 @@ $menu-height: 50px;
 
 .node-name--H2 {
     font-size: 1.2rem;
+}
+
+@media (min-width: 1200px) {
+    .toc {
+        width: 250px;
+        position: fixed;
+        top: 0;
+        right: 0;
+        padding: 25px + $menu-height 25px 25px;
+        height: 100%;
+
+        > .toc-list {
+            padding-left: 14px;
+        }
+    }
+
+    .toc-link {
+        &:before {
+            width: 4px;
+        }
+    }
+
+    .frDocs-App {
+        .frDocs-Container {
+            .frDocs-Content {
+                padding-right: 250px;
+                padding-bottom: 1000px;
+            }
+        }
+    }
 }
