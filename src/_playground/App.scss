@@ -1,3 +1,4 @@
+$mediaMaxWidth: 1280px;
 $fd-icons-path: '../../node_modules/fiori-fundamentals/scss/icons/';
 $fd-fonts-path: '../../node_modules/fiori-fundamentals/dist/fonts/';
 @import '../../node_modules/fiori-fundamentals/scss/all.scss';
@@ -13,8 +14,6 @@ $library-color: #61dafb;
         justify-content: space-between;
         height: 100vh;
         overflow: hidden;
-        margin-left: auto;
-        margin-right: auto;
         width: 100%;
 
         .frDocs-Sidebar {
@@ -96,11 +95,27 @@ $library-color: #61dafb;
             }
         }
 
+        @media (max-width: $mediaMaxWidth) {
+            .frDocs-Sidebar--isHidable {
+                        margin-left: -280px;
+                        overflow-x: hidden;
+            }
+
+            code {
+                display: flex;
+                flex-wrap: wrap; //remove x-axis scrolling 
+            }
+        }
+
         .frDocs-Content {
             flex-grow: 1;
             overflow-y: scroll;
             background-color: white;
             padding: 2rem;
+
+            .sidebar-toggle {
+                display: none;
+            }
 
             .frDocs-Content__githubLogo {
                 float: right;
@@ -216,8 +231,16 @@ $library-color: #61dafb;
             .frDocs-docsText__buttonCopy {
                 margin-left: 5px;
             }
+
+            @media (max-width: $mediaMaxWidth) {
+                .sidebar-toggle {
+                    display: block;   
+                    margin-bottom: 2rem;        
+                }
+            }
         }
     }
+      
 }
 
 // Fundamental React Component Overrides 
@@ -327,6 +350,7 @@ $library-color: #61dafb;
 }
 
 .fd-table {
+
     &.property-table {
         border: 0;
 
