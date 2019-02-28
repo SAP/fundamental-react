@@ -1,72 +1,42 @@
 import path from 'path';
 import React from 'react';
 import { Time } from '../';
-import { Description, DocsText, DocsTile, Header, Import, Properties, Separator } from '../_playground';
+import { ComponentPage, Example } from '../_playground';
 
 export const TimeComponent = () => {
-    const defaultTimeCode = '<Time />';
-    const format12hoursTimeCode = '<Time format12Hours={true} />';
-    const noSpinnersTimeCode = '<Time spinners={false} />';
-    const noSecondsTimeCode = '<Time showSecond={false} />';
-    const disabledStateTimeCode = '<Time disabled={true} />';
     return (
-        <div>
-            <Header>Time</Header>
-            <Description>
-                The **Time** component is used for a single time value. Multiple components can be used in the **Time Picker**
+        <ComponentPage
+            description={`The **Time** component is used for a single time value. Multiple components can be used in the **Time Picker**
                 to assemble a clock time. A max of four will account for hours, minutes, seconds and meridiem of the day.
-                It is rarely used on its own as a standalone component.
-            </Description>
-            <Import sourceModulePath={path.join(__dirname, './Time')} />
+                It is rarely used on its own as a standalone component.`}
+            sourceModulePath={path.join(__dirname, './Time')}
+            title='Time'>
 
-            <Separator />
-
-            <Properties sourceModulePath={path.join(__dirname, './Time')} />
-
-            <Separator />
-
-            {/* Default Clock */}
-            <h2>Default</h2>
-            <DocsTile>
+            <Example
+                title='Default'>
                 <Time />
-            </DocsTile>
-            <DocsText>{defaultTimeCode}</DocsText>
+            </Example>
 
-            <Separator />
-
-            {/* 12 hours Clock */}
-            <h2>12-Hour Clock</h2>
-            <DocsTile>
+            <Example
+                title='12-Hour Clock'>
                 <Time format12Hours />
-            </DocsTile>
-            <DocsText>{format12hoursTimeCode}</DocsText>
+            </Example>
 
-            <Separator />
-
-            {/* No Spinners Time */}
-            <h2>Clock With No Spinners</h2>
-            <DocsTile>
+            <Example
+                title='Clock With No Spinners'>
                 <Time spinners={false} />
-            </DocsTile>
-            <DocsText>{noSpinnersTimeCode}</DocsText>
+            </Example>
 
-            <Separator />
-
-            {/* Hide Seconds */}
-            <h2>Clock With No Seconds</h2>
-            <DocsTile>
+            <Example
+                title='Clock With No Seconds'>
                 <Time showSecond={false} />
-            </DocsTile>
-            <DocsText>{noSecondsTimeCode}</DocsText>
+            </Example>
 
-            <Separator />
-
-            {/* Disabled State */}
-            <h2>Disabled State</h2>
-            <DocsTile>
+            <Example
+                title='Disabled State'>
                 <Time disabled />
-            </DocsTile>
-            <DocsText>{disabledStateTimeCode}</DocsText>
-        </div>
+            </Example>
+
+        </ComponentPage>
     );
 };
