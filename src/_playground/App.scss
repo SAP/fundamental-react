@@ -241,6 +241,23 @@ $menu-height: 50px;
     }
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    &:target {
+        &:before {
+            display: block;
+            content: ' ';
+            height: $menu-height + 25px;
+            margin-top: -$menu-height + 25px;
+            visibility: hidden;
+        }
+    }
+}
+
 // Fundamental React Component Overrides 
 .fd-counter--notification {
     position: relative;
