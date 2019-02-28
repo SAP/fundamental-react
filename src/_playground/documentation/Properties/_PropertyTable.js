@@ -1,54 +1,11 @@
 import { defaultPropDescriptions } from './defaults';
-import getSourceModule from '../utils/getSourceModule';
+import PropertyDefault from './_PropertyDefault';
+import PropertyDescription from './_PropertyDescription';
+import PropertyType from './_PropertyType';
 import PropTypes from 'prop-types';
 import React from 'react';
-import ReactMarkdown from 'react-markdown';
 import sortBy from 'sort-by';
 import Table from '../../../Table/Table';
-
-const Properties = ({ sourceModulePath }) => {
-    const sourceModule = getSourceModule(sourceModulePath);
-
-    const componentNames = Object.keys(sourceModule).sort();
-
-    return (
-        <React.Fragment>
-            <h2>Properties</h2>
-            {componentNames.map((name, index) => {
-                const component = sourceModule[name];
-                const subcomponentNames = Object.keys(component)
-                    .sort()
-                    .filter(subName => component[subName] && component[subName].displayName);
-                return (
-                    <React.Fragment key={index}>
-                        <PropertyTable
-                            defaultProps={component.defaultProps}
-                            propDescriptions={component.propDescriptions}
-                            propTypes={component.propTypes}
-                            title={name} />
-                        {subcomponentNames.map((subName, subIndex) => {
-                            const subcomponent = component[subName];
-                            return (
-                                <PropertyTable
-                                    defaultProps={subcomponent.defaultProps}
-                                    key={subIndex}
-                                    propDescriptions={subcomponent.propDescriptions}
-                                    propTypes={subcomponent.propTypes}
-                                    title={`${name}.${subName}`} />
-                            );
-                        })}
-                    </React.Fragment>
-                );
-            })}
-        </React.Fragment>
-    );
-};
-
-Properties.propTypes = {
-    sourceModulePath: PropTypes.string.isRequired
-};
-
-export default Properties;
 
 const PropertyTable = ({ title, propTypes, defaultProps, propDescriptions }) => {
     if (!propTypes) {
@@ -101,6 +58,8 @@ const PropertyTable = ({ title, propTypes, defaultProps, propDescriptions }) => 
     );
 };
 
+PropertyTable.displayName = 'PropertyTable';
+
 PropertyTable.propTypes = {
     title: PropTypes.string.isRequired,
     defaultProps: PropTypes.object,
@@ -108,122 +67,4 @@ PropertyTable.propTypes = {
     propTypes: PropTypes.object
 };
 
-
-
-const PropertyType = ({ prop }) => {
-    const typeChecker = prop.typeChecker;
-
-    switch (prop.typeName) {
-        case 'arrayOf':
-        case 'objectOf':
-            return (
-                <React.Fragment>
-                    <div>{prop.typeName}</div>
-                    {typeChecker.typeChecker ? (
-                        <PropertyType prop={typeChecker} />
-                    ) : (
-                        <div>{`(${typeChecker.typeName})`}</div>
-                    )}
-                </React.Fragment>
-            );
-        case 'instanceOf':
-            return (
-                <React.Fragment>
-                    <div>{prop.typeName}</div>
-                    {typeChecker.typeChecker ? (
-                        <PropertyType prop={typeChecker} />
-                    ) : (
-                        <div>{`(${typeChecker.name || typeChecker.displayName})`}</div>
-                    )}
-                </React.Fragment>
-            );
-        case 'oneOf':
-            return (
-                <React.Fragment>
-                    <div>{prop.typeName}</div>
-                    <div>{`(${typeChecker.join(', ')})`}</div>
-                </React.Fragment>
-            );
-        case 'oneOfType':
-            const types = typeChecker
-                .map((t, i) =>
-                    t.typeChecker ? <PropertyType key={i} prop={t} /> : <span key={i}>{`(${t.typeName})`}</span>
-                ).reduce((prev, curr) => [prev, ', ', curr]);
-            return (
-                <React.Fragment>
-                    <div>{prop.typeName}</div>
-                    [{types}]
-                </React.Fragment>
-            );
-        case 'shape':
-            return <div>{prop.typeName} ({`\{${Object.keys(prop.typeChecker).sort().join(', ')}\}`})</div>;
-        case 'range':
-            const values = Object.keys(typeChecker).map(key => `${key}: ${typeChecker[key]}`);
-            return (
-                <React.Fragment>
-                    <div>{prop.typeName}</div>
-                    <div>{`(${values.join('; ')})`}</div>
-                </React.Fragment>
-            );
-        default:
-            return <div>{prop.typeName}</div>;
-    }
-};
-
-PropertyType.propTypes = {
-    prop: PropTypes.any
-};
-
-
-
-const PropertyDefault = ({ defaultValue, prop }) => {
-    if (prop.typeRequired) {
-        return (
-            <span className='prop-required'>Required</span>
-        );
-    }
-
-    if (prop.typeName === 'bool' && !defaultValue) {
-        return (
-            <span>false</span>
-        );
-    }
-
-    if (typeof defaultValue === 'object' || !defaultValue) {
-        return null;
-    }
-
-    return (
-        <span>{defaultValue.toString()}</span>
-    );
-};
-
-PropertyDefault.propTypes = {
-    defaultValue: PropTypes.any,
-    prop: PropTypes.any
-};
-
-
-
-const PropertyDescription = ({ defaultValue, description, prop }) => {
-    const typeChecker = prop.typeChecker;
-
-    return (
-        <React.Fragment>
-            <div>
-                <ReactMarkdown source={description} />
-            </div>
-            {prop.typeName === 'shape' &&
-                <PropertyTable
-                    defaultProps={defaultValue}
-                    propTypes={typeChecker} />
-            }
-        </React.Fragment>
-    );
-};
-
-PropertyDescription.propTypes = {
-    defaultValue: PropTypes.any,
-    description: PropTypes.string,
-    prop: PropTypes.any
-};
+export default PropertyTable;
