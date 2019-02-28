@@ -2,6 +2,7 @@ import { ActionBarComponent } from '../ActionBar/ActionBar.Component';
 import { AlertComponent } from '../Alert/Alert.Component';
 import { BadgeComponent } from '../Badge/Badge.Component';
 import { BreadcrumbComponent } from '../Breadcrumb/Breadcrumb.Component';
+import Button from '../Button/Button';
 import { ButtonComponent } from '../Button/Button.Component';
 import { CalendarComponent } from '../Calendar/Calendar.Component';
 import classnames from 'classnames';
@@ -371,11 +372,13 @@ export class Routes extends Component {
                         </nav>
                     </div>
                     <div className={docsContentClasses}>
-                        <button
+                        <Button
                             aria-expanded={this.state.showSideNav}
                             aria-label='Toggle Navigation'
                             className='fd-button sap-icon--menu2 fd-button--standard fd-button--light sidebar-toggle'
-                            onClick={this.toggleNavVis} />
+                            glyph='menu2'
+                            onClick={this.toggleNavVis}
+                            option='light' />
                         <Switch>
                             {routes.map(route => {
                                 return (
