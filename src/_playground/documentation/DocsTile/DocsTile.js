@@ -2,51 +2,62 @@ import { Button } from '../../../';
 import classnames from 'classnames';
 import { googlecode } from 'react-syntax-highlighter/styles/hljs';
 import PropTypes from 'prop-types';
+import React from 'react';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { Toggle } from '../../../Toggle/Toggle';
-import React, { Component } from 'react';
 
-export class DocsTile extends Component {
+export class DocsTile extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            backgroundToggle: false
+            hideBackground: false,
+            showRTL: false
         };
     }
 
-    handleToggle = () => {
-        this.setState({
-            backgroundToggle: !this.state.backgroundToggle
-        });
+    toggleBackground = () => {
+        this.setState(prevState => ({
+            hideBackground: !prevState.hideBackground
+        }));
+    };
+
+    toggleRTL = () => {
+        this.setState(prevState => ({
+            showRTL: !prevState.showRTL
+        }));
     };
 
     render() {
         const { centered, children } = this.props;
+        const { hideBackground, showRTL } = this.state;
 
-        const outerDivClasses = classnames(
-            'frDocs-Content__tile',
-            {
-                'frDocs-Content__tile-background': !this.state.backgroundToggle
-            }
-        );
+        const outerDivClasses = classnames('frDocs-Content__tile', {
+            'frDocs-Content__tile-background': !hideBackground
+        });
 
-        const innerDivClasses = classnames(
-            'fd-tile__content',
-            {
-                'frDocs-tile__centered': centered
-            }
-        );
+        const innerDivClasses = classnames('fd-tile__content', {
+            'frDocs-tile__centered': centered
+        });
 
         return (
             <div className={outerDivClasses}>
-                <Toggle
-                    className='frDocs-tile__background-toggle'
-                    inputProps={{ 'aria-label': 'Toggle background color' }}
-                    onChange={this.handleToggle}
-                    size='xs'>Toggle background</Toggle>
-                <div className={innerDivClasses}>
-                    {children}
+                <div className='frDocs-tile__features'>
+                    <Toggle
+                        className='frDocs-tile__feature'
+                        inputProps={{ 'aria-label': 'Show right to left' }}
+                        onChange={this.toggleRTL}
+                        size='xs'>
+                        Show right to left
+                    </Toggle>
+                    <Toggle
+                        className='frDocs-tile__feature'
+                        inputProps={{ 'aria-label': 'Hide background' }}
+                        onChange={this.toggleBackground}
+                        size='xs'>
+                        Hide background
+                    </Toggle>
                 </div>
+                <div className={innerDivClasses} dir={showRTL ? 'rtl' : ''}>{children}</div>
             </div>
         );
     }
@@ -57,7 +68,7 @@ DocsTile.propTypes = {
     children: PropTypes.node
 };
 
-export class DocsText extends Component {
+export class DocsText extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
