@@ -140,9 +140,13 @@ $library-color: #61dafb;
                 border-bottom: none;
                 padding: 10px 0;
 
-                .frDocs-tile__background-toggle {
+                .frDocs-tile__features {
                     display: flex;
                     justify-content: flex-end;
+                }
+
+                .frDocs-tile__feature {
+                    display: flex;
                     margin: 15px;
                 }
 
