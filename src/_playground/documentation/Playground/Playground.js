@@ -1,6 +1,7 @@
 import { Alert } from '../../../';
 import { Button } from '../../../';
 import { Dropdown } from '../../../';
+import Heading from '../Heading/Heading';
 import { Icon } from '../../../';
 import { Identifier } from '../../../';
 import { Image } from '../../../';
@@ -559,12 +560,15 @@ export class Playground extends Component {
       }
 
       return (
-          <div className='row general'>
-              <div className='col'>{componentToGenerate}</div>
-              <div className='col'>
-                  <div className='schema'>{data}</div>
+          <React.Fragment>
+              <Heading level={2}>Playground</Heading>
+              <div className='row general'>
+                  <div className='col'>{componentToGenerate}</div>
+                  <div className='col'>
+                      <div className='schema'>{data}</div>
+                  </div>
               </div>
-          </div>
+          </React.Fragment>
       );
   }
 }

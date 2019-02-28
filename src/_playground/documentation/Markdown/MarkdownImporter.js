@@ -9,17 +9,34 @@ export class MarkdownImporter extends React.Component {
         this.state = { markdown: '' };
     }
 
+    componentDidUpdate() {
+        // since this fetches the file contents asynchronously, we need to notify the caller of an update
+        this.props.onUpdate();
+    }
+
     componentWillMount() {
         // Get the contents from the Markdown file and put them in the React state, so we can reference it in render() below.
-        fetch(this.props.source).then(res => res.text()).then(text => this.setState({ markdown: text }));
+        fetch(this.props.sourceFile).then(res => res.text()).then(text => this.setState({ markdown: text }));
     }
 
     render() {
+        const { sourceFile, ...otherProps } = this.props;
         const { markdown } = this.state;
-        return (<ReactMarkdown className='frDocs-markdown' source={markdown} />);
+
+        return (
+            <ReactMarkdown
+                {...otherProps}
+                className='frDocs-markdown'
+                source={markdown} />
+        );
     }
 }
 
 MarkdownImporter.propTypes = {
-    source: PropTypes.string
+    sourceFile: PropTypes.string,
+    onUpdate: PropTypes.func
+};
+
+MarkdownImporter.defaultProps = {
+    onUpdate: () => {}
 };

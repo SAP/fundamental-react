@@ -1,5 +1,6 @@
 import { defaultPropDescriptions } from './defaults';
 import getSourceModule from '../utils/getSourceModule';
+import Heading from '../Heading/Heading';
 import PropTypes from 'prop-types';
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
@@ -7,13 +8,17 @@ import sortBy from 'sort-by';
 import { Table } from '../../../Table/Table';
 
 export const Properties = ({ sourceModulePath }) => {
+    if (!sourceModulePath) {
+        return null;
+    }
+
     const sourceModule = getSourceModule(sourceModulePath);
 
     const componentNames = Object.keys(sourceModule).sort();
 
     return (
         <React.Fragment>
-            <h2>Properties</h2>
+            <Heading level={2}>Properties</Heading>
             {componentNames.map((name, index) => {
                 const component = sourceModule[name];
                 const subcomponentNames = Object.keys(component)
@@ -86,7 +91,7 @@ const PropertyTable = ({ title, propTypes, defaultProps, propDescriptions }) => 
 
     return (
         <React.Fragment>
-            <h3 className='header'>{title}</h3>
+            {title && <Heading level={3}>{title}</Heading>}
             <Table
                 className='property-table'
                 headers={
@@ -102,10 +107,10 @@ const PropertyTable = ({ title, propTypes, defaultProps, propDescriptions }) => 
 };
 
 PropertyTable.propTypes = {
-    title: PropTypes.string.isRequired,
     defaultProps: PropTypes.object,
     propDescriptions: PropTypes.object,
-    propTypes: PropTypes.object
+    propTypes: PropTypes.object,
+    title: PropTypes.string
 };
 
 

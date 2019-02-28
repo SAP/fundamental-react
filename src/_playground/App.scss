@@ -1,6 +1,8 @@
 $fd-icons-path: '../../node_modules/fiori-fundamentals/scss/icons/';
 $fd-fonts-path: '../../node_modules/fiori-fundamentals/dist/fonts/';
-@import '../../node_modules/fiori-fundamentals/scss/all.scss';
+@import '~fiori-fundamentals/scss/all.scss';
+@import '~tocbot/src/scss/tocbot-core';
+@import '~tocbot/src/scss/tocbot-default-theme';
 
 $library-color: #61dafb;
 
@@ -101,6 +103,8 @@ $library-color: #61dafb;
             overflow-y: scroll;
             background-color: white;
             padding: 2rem;
+            padding-right: 250px;
+            padding-bottom: 1000px;
 
             .frDocs-Content__githubLogo {
                 float: right;
@@ -373,4 +377,37 @@ $library-color: #61dafb;
             color: var(--fd-color-status-3);
         }
     }
+}
+
+.toc {
+    width: 250px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 25px;
+    height: 100%;
+
+    > .toc-list {
+        padding-left: 14px;
+    }
+}
+
+.toc-link {
+    margin: 5px 0;
+    padding-left: 15px;
+    text-indent: -15px;
+
+    &:before {
+        width: 4px;
+    }
+}
+
+.is-active-link {
+    &:before {
+        background-color: $library-color;
+    }
+}
+
+.node-name--H2 {
+    font-size: 1.2rem;
 }
