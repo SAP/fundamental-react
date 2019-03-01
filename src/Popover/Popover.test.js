@@ -1,7 +1,7 @@
-import { Icon } from '../Icon/Icon';
+import Icon from '../Icon/Icon';
 import Menu from '../Menu/Menu';
 import { mount } from 'enzyme';
-import { Popover } from './Popover';
+import Popover from './Popover';
 import React from 'react';
 import renderer from 'react-test-renderer';
 

@@ -2,7 +2,7 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 
-export class MultiInput extends Component {
+class MultiInput extends Component {
     constructor(props) {
         super(props);
 
@@ -186,6 +186,7 @@ export class MultiInput extends Component {
         );
     }
 }
+
 MultiInput.displayName = 'MultiInput';
 
 MultiInput.propTypes = {
@@ -210,3 +211,5 @@ MultiInput.propDescriptions = {
     placeHolder: 'Localized placeholder text of the input.',
     tagProps: 'Additional props to be spread to the tags `<div>` element.'
 };
+
+export default MultiInput;

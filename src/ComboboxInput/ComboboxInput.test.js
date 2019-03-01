@@ -1,4 +1,4 @@
-import { ComboboxInput } from './ComboboxInput';
+import ComboboxInput from './ComboboxInput';
 import Menu from '../Menu/Menu';
 import { mount } from 'enzyme';
 import React from 'react';

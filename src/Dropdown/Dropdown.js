@@ -2,7 +2,7 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-export const Dropdown = props => {
+const Dropdown = props => {
     const { standard, children, className, ...rest } = props;
 
     const dropdownClasses = classnames(
@@ -19,6 +19,7 @@ export const Dropdown = props => {
         </div>
     );
 };
+
 Dropdown.displayName = 'Dropdown';
 
 Dropdown.propTypes = {
@@ -30,3 +31,5 @@ Dropdown.propTypes = {
 Dropdown.propDescriptions = {
     standard: 'Set to **true** to enable a dropdown for toolbar.'
 };
+
+export default Dropdown;

@@ -1,14 +1,14 @@
 import classnames from 'classnames';
 import Counter from '../Badge/Counter';
-import { Icon } from '../Icon/Icon';
-import { Identifier } from '../Identifier/Identifier';
+import Icon from '../Icon/Icon';
+import Identifier from '../Identifier/Identifier';
 import Menu from '../Menu/Menu';
-import { Popover } from '../Popover/Popover';
+import Popover from '../Popover/Popover';
 import PropTypes from 'prop-types';
-import { SearchInput } from '../SearchInput/SearchInput';
+import SearchInput from '../SearchInput/SearchInput';
 import React, { Component } from 'react';
 
-export class Shellbar extends Component {
+class Shellbar extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -386,6 +386,7 @@ export class Shellbar extends Component {
         );
     }
 }
+
 Shellbar.displayName = 'Shellbar';
 
 Shellbar.propTypes = {
@@ -420,3 +421,5 @@ Shellbar.propDescriptions = {
     searchInput: 'Holds `searchInput` properties.',
     subtitle: 'Displays an application context. Should be used rarely.'
 };
+
+export default Shellbar;

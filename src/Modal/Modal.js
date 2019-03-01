@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
 import React, { Component } from 'react';
 
-export class Modal extends Component {
+class Modal extends Component {
     // select body element to add Modal component too
     bodyElm = document.querySelector('body');
 
@@ -95,6 +95,7 @@ export class Modal extends Component {
         );
     }
 }
+
 Modal.displayName = 'Modal';
 
 Modal.propTypes = {
@@ -118,3 +119,5 @@ Modal.propDescriptions = {
     headerProps: 'Additional props to be spread to the header of the dialog.',
     show: 'Set to **true** to make the dialog visible.'
 };
+
+export default Modal;

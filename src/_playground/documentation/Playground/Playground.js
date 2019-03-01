@@ -12,7 +12,7 @@ import { FormGroup, FormItem, FormLabel, InputGroup } from '../../../';
 import { ProductTile, Tile } from '../../../';
 import React, { Component } from 'react';
 
-export class Playground extends Component {
+class Playground extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -578,3 +578,5 @@ Playground.propTypes = {
     component: PropTypes.string,
     schema: PropTypes.array
 };
+
+export default Playground;

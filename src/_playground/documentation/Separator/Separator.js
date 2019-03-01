@@ -1,7 +1,9 @@
 import React from 'react';
 
-export const Separator = (props) => {
+const Separator = (props) => {
     return (
         <div {...props} className='frDocs-Content__separator' />
     );
 };
+
+export default Separator;

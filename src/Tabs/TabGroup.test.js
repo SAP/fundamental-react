@@ -1,8 +1,8 @@
 import { mount } from 'enzyme';
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { Tab } from './Tab';
-import { TabGroup } from './TabGroup';
+import Tab from './Tab';
+import TabGroup from './TabGroup';
 
 describe('<Tabs />', () => {
     const defaultTabs = (

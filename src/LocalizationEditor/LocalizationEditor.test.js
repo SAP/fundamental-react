@@ -1,4 +1,4 @@
-import { LocalizationEditor } from './LocalizationEditor';
+import LocalizationEditor from './LocalizationEditor';
 import { mount } from 'enzyme';
 import React from 'react';
 import renderer from 'react-test-renderer';

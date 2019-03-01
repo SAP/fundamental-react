@@ -1,7 +1,7 @@
 import { mount } from 'enzyme';
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { Tab } from './Tab';
+import Tab from './Tab';
 
 describe('<Tabs />', () => {
     const mockOnClick = jest.fn();

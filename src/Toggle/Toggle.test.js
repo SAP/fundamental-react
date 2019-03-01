@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { Toggle } from './Toggle';
+import Toggle from './Toggle';
 import { mount, shallow } from 'enzyme';
 
 describe('<Toggle />', () => {

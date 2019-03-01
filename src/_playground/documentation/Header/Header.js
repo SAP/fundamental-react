@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-export const Header = (props) => {
+const Header = (props) => {
     const { children } = props;
 
     return (
@@ -16,3 +16,5 @@ export const Header = (props) => {
 Header.propTypes = {
     children: PropTypes.node
 };
+
+export default Header;

@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { IDENTIFIER_MODIFIERS, IDENTIFIER_SIZES } from '../utils/constants';
 
-export const Identifier = ({ glyph, size, modifier, color, label, backgroundImageUrl, children, className, ...props }) => {
+const Identifier = ({ glyph, size, modifier, color, label, backgroundImageUrl, children, className, ...props }) => {
     const styles = {
         backgroundImage: `url(${backgroundImageUrl})`
     };
@@ -33,6 +33,7 @@ export const Identifier = ({ glyph, size, modifier, color, label, backgroundImag
         </span>
     );
 };
+
 Identifier.displayName = 'Identifier';
 
 Identifier.propTypes = {
@@ -51,3 +52,5 @@ Identifier.propDescriptions = {
     label: 'Localized text for label.',
     size: 'Size of the image. These sizes are available: **xxs** (extra extra small) - 20px, **xs** (extra small) - 28px, **s** (small) - 32px, **m** (medium) - 48px, **l** (large) - 64px, **xl** (extra lagre) - 88px, and **xxl** (extra extra large). Default matches the base font size (14px).'
 };
+
+export default Identifier;

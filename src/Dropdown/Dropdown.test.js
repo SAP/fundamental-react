@@ -1,8 +1,8 @@
 import { Button } from '../';
-import { Dropdown } from './Dropdown';
+import Dropdown from './Dropdown';
 import Menu from '../Menu/Menu';
 import { mount } from 'enzyme';
-import { Popover } from '../Popover/Popover';
+import Popover from '../Popover/Popover';
 import React from 'react';
 import renderer from 'react-test-renderer';
 

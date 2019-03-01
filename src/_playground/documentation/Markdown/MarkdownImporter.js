@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
 
-export class MarkdownImporter extends React.Component {
+class MarkdownImporter extends React.Component {
     constructor(props) {
         super(props);
         this.state = { markdown: '' };
@@ -40,3 +40,5 @@ MarkdownImporter.propTypes = {
 MarkdownImporter.defaultProps = {
     onUpdate: () => {}
 };
+
+export default MarkdownImporter;

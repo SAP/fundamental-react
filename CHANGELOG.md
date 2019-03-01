@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.4.1-rc.20"></a>
+## [0.4.1-rc.20](https://github.com/SAP/fundamental-react/compare/v0.4.1-rc.19...v0.4.1-rc.20) (2019-03-01)
+
+
+### Bug Fixes
+
+* Add react/no-multi-comp lint rule ([#451](https://github.com/SAP/fundamental-react/issues/451)) ([3314e16](https://github.com/SAP/fundamental-react/commit/3314e16))
+
+
+
 <a name="0.4.1-rc.19"></a>
 ## [0.4.1-rc.19](https://github.com/SAP/fundamental-react/compare/v0.4.1-rc.18...v0.4.1-rc.19) (2019-02-28)
 

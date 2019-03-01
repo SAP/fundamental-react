@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 
-export const Import = ({ sourceModulePath }) => {
+const Import = ({ sourceModulePath }) => {
     if (!sourceModulePath) {
         return null;
     }
@@ -26,3 +26,5 @@ export const Import = ({ sourceModulePath }) => {
 Import.propTypes = {
     sourceModulePath: PropTypes.string.isRequired
 };
+
+export default Import;

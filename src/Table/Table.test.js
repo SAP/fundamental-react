@@ -1,7 +1,7 @@
 import { mount } from 'enzyme';
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { Table } from './Table';
+import Table from './Table';
 
 describe('<Table />', () => {
     const defaultHeaders = [

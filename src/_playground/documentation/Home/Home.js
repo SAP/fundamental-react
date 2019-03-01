@@ -7,3 +7,5 @@ export const Home = () => {
         <MarkdownPage sourceFile={Readme} />
     );
 };
+
+export default Home;
