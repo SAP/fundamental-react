@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { TabContent } from './_TabContent';
 import React, { Component } from 'react';
 
-export class TabGroup extends Component {
+class TabGroup extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -88,6 +88,7 @@ export class TabGroup extends Component {
         );
     }
 }
+
 TabGroup.displayName = 'TabGroup';
 
 TabGroup.defaultProps = {
@@ -107,3 +108,5 @@ TabGroup.propDescriptions = {
     selectedIndex: 'The index of the selected tab.',
     onTabClick: 'Callback function when the user clicks on a tab. Parameters passed to the function are `event` and `index`.'
 };
+
+export default TabGroup;

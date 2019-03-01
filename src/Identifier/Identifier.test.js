@@ -1,4 +1,4 @@
-import { Identifier } from './Identifier';
+import Identifier from './Identifier';
 import { mount } from 'enzyme';
 import React from 'react';
 import renderer from 'react-test-renderer';

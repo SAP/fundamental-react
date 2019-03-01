@@ -1,4 +1,4 @@
-import { Calendar } from '../Calendar/Calendar';
+import Calendar from '../Calendar/Calendar';
 import { mount } from 'enzyme';
 import React from 'react';
 

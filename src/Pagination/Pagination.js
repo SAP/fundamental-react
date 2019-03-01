@@ -2,7 +2,7 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 
-export class Pagination extends Component {
+class Pagination extends Component {
     constructor(props, context) {
         super(props, context);
 
@@ -134,6 +134,7 @@ export class Pagination extends Component {
         );
     }
 }
+
 Pagination.displayName = 'Pagination';
 
 Pagination.propTypes = {
@@ -166,3 +167,5 @@ Pagination.propDescriptions = {
     prevProps: 'Additional props to be spread to the previous arrow `<a>` element.',
     totalText: 'Localized text to display next to the total number of items.  Used with `displayTotal`.'
 };
+
+export default Pagination;

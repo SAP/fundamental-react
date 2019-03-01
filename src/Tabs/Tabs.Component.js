@@ -1,8 +1,7 @@
 import path from 'path';
 import React from 'react';
-import { Tab } from './Tab';
-import { TabGroup } from './TabGroup';
 import { Description, DocsText, DocsTile, Header, Import, Properties, Separator } from '../_playground';
+import { Tab, TabGroup } from '../';
 
 export const TabsComponent = () => {
     const tabGroupCode = `

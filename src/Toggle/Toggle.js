@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { TOGGLE_SIZES } from '../utils/constants';
 
-export class Toggle extends React.Component {
+class Toggle extends React.Component {
     constructor(props) {
         super(props);
         this.state = { checked: !!props.checked };
@@ -60,6 +60,7 @@ export class Toggle extends React.Component {
         );
     }
 }
+
 Toggle.displayName = 'Toggle';
 
 Toggle.propTypes = {
@@ -80,3 +81,5 @@ Toggle.defaultProps = {
 Toggle.propDescriptions = {
     checked: 'Set to true for component to be checked on render.'
 };
+
+export default Toggle;

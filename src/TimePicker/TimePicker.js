@@ -1,4 +1,4 @@
-import { Popover } from '../Popover/Popover';
+import Popover from '../Popover/Popover';
 import PropTypes from 'prop-types';
 import Time from '../Time/Time';
 import React, { Component } from 'react';

@@ -1,4 +1,4 @@
-import { MultiInput } from './MultiInput';
+import MultiInput from './MultiInput';
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { mount, shallow } from 'enzyme';

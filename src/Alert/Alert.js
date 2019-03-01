@@ -3,7 +3,7 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 
-export class Alert extends Component {
+class Alert extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -70,6 +70,7 @@ export class Alert extends Component {
         );
     }
 }
+
 Alert.displayName = 'Alert';
 
 Alert.propTypes = {
@@ -88,3 +89,5 @@ Alert.propDescriptions = {
     linkProps: 'Additional props to be spread to the link\'s `<a>` element.',
     linkText: 'Localized display text of the link.'
 };
+
+export default Alert;

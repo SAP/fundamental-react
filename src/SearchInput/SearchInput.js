@@ -2,7 +2,7 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 
-export class SearchInput extends Component {
+class SearchInput extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -264,6 +264,7 @@ export class SearchInput extends Component {
         );
     }
 }
+
 SearchInput.displayName = 'SearchInput';
 
 SearchInput.propTypes = {
@@ -290,3 +291,5 @@ SearchInput.propDescriptions = {
     searchBtnProps: 'Additional props to be spread to the search `<button>` element.',
     searchList: 'Collection of items to display in the dropdown list.'
 };
+
+export default SearchInput;

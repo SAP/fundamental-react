@@ -2,7 +2,7 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-export const Table = props => {
+const Table = props => {
     const {
         headers,
         tableData,
@@ -48,6 +48,7 @@ export const Table = props => {
         </table>
     );
 };
+
 Table.displayName = 'Table';
 
 Table.propTypes = {
@@ -75,3 +76,5 @@ Table.propDescriptions = {
     tableHeaderProps: 'Additional props to be spread to the `<thead>` element.',
     tableHeaderRowProps: 'Additional props to be spread to the `<tr>` element within `<thead>`.'
 };
+
+export default Table;

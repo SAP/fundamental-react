@@ -1,9 +1,9 @@
-import { Header } from '../Header/Header';
-import { MarkdownImporter } from '../Markdown/MarkdownImporter';
+import Header from '../Header/Header';
+import MarkdownImporter from '../Markdown/MarkdownImporter';
 import React from 'react';
 import Readme from './README.md';
 
-export const Home = () => {
+const Home = () => {
 
     return (
         <React.Fragment>
@@ -12,3 +12,5 @@ export const Home = () => {
         </React.Fragment>
     );
 };
+
+export default Home;

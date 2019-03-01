@@ -2,7 +2,7 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 
-export class Calendar extends Component {
+class Calendar extends Component {
 
     constructor(props) {
         super(props);
@@ -547,6 +547,7 @@ export class Calendar extends Component {
     }
 
 }
+
 Calendar.displayName = 'Calendar';
 
 Calendar.basePropTypes = {
@@ -590,3 +591,5 @@ Calendar.propDescriptions = {
     tableProps: 'Additional props to be spread to the `<table>` element.',
     yearListProps: 'Additional props to be spread to the year\'s `<ul>` element.'
 };
+
+export default Calendar;
