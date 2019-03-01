@@ -1,8 +1,8 @@
-import { MarkdownImporter } from '../Markdown/MarkdownImporter';
+import MarkdownImporter from '../Markdown/MarkdownImporter';
 import PropTypes from 'prop-types';
 import React from 'react';
 import tocbot from 'tocbot';
-import { Contents, Description, Header, Heading } from '..';
+import { Contents, Description, Header, Heading } from '../';
 
 class MarkdownPage extends React.Component {
     componentDidMount() {

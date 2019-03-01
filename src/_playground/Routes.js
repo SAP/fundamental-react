@@ -341,10 +341,6 @@ export class Routes extends Component {
             'frDocs-Sidebar--isHidable': !this.state.showSideNav
         });
 
-        // const docsContentClasses = classnames('frDocs-Content', {
-        //     'frDocs-Content--isHidable': !this.state.showSideNav
-        // });
-
         return (
             <BrowserRouter basename={process.env.PUBLIC_URL}>
                 <div className='frDocs-Container'>

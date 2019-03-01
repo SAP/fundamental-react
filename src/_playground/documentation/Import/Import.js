@@ -24,7 +24,7 @@ const Import = ({ sourceModulePath }) => {
 };
 
 Import.propTypes = {
-    sourceModulePath: PropTypes.string.isRequired
+    sourceModulePath: PropTypes.string
 };
 
 export default Import;

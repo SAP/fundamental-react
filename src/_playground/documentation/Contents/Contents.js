@@ -1,7 +1,7 @@
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
-import { Separator } from '../Separator/Separator';
+import Separator from '../Separator/Separator';
 
 const Contents = ({ className }) => {
     const classes = classnames('js-toc', 'toc', className);

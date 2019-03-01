@@ -47,7 +47,7 @@ const Properties = ({ sourceModulePath }) => {
 };
 
 Properties.propTypes = {
-    sourceModulePath: PropTypes.string.isRequired
+    sourceModulePath: PropTypes.string
 };
 
 export default Properties;

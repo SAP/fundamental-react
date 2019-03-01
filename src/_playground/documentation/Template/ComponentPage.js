@@ -41,10 +41,10 @@ class ComponentPage extends React.Component {
 }
 
 ComponentPage.propTypes = {
-    sourceModulePath: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     children: PropTypes.node,
-    description: PropTypes.string
+    description: PropTypes.string,
+    sourceModulePath: PropTypes.string
 };
 
 export default ComponentPage;
