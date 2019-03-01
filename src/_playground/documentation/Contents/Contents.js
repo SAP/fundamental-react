@@ -1,12 +1,17 @@
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
+import { Separator } from '../Separator/Separator';
 
 const Contents = ({ className }) => {
     const classes = classnames('js-toc', 'toc', className);
 
     return (
-        <nav className={classes} />
+        <React.Fragment>
+            <Separator id='contents-separator' />
+            <h2 className='heading__contents'>Contents</h2>
+            <nav className={classes} />
+        </React.Fragment>
     );
 };
 

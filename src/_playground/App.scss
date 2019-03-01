@@ -1,4 +1,6 @@
-$mediaMaxWidth: 1280px;
+$breakpoint-lg: 1280px;
+$breakpoint-md: 1024px;
+$breakpoint-sm: 600px;
 $fd-icons-path: '../../node_modules/fiori-fundamentals/scss/icons/';
 $fd-fonts-path: '../../node_modules/fiori-fundamentals/dist/fonts/';
 @import '~fiori-fundamentals/scss/all.scss';
@@ -8,6 +10,8 @@ $fd-fonts-path: '../../node_modules/fiori-fundamentals/dist/fonts/';
 $shell-color: #354A5F;
 $library-color: #61dafb;
 $menu-height: 50px;
+$nav-width: 265px;
+$menu-spacing: 20px;
 
 // Fundamental React Docs Styles
 .frDocs-App {
@@ -19,21 +23,7 @@ $menu-height: 50px;
     justify-content: space-between;
     height: 100vh;
     overflow: hidden;
-    // margin-left: auto;
-    // margin-right: auto;
     width: 100%;
-
-    @media (max-width: $mediaMaxWidth) {
-        .frDocs-Sidebar--isHidable {
-            margin-left: -280px;
-            overflow-x: hidden;
-        }
-
-        // code {
-        //     display: flex;
-        //     flex-wrap: wrap; //remove x-axis scrolling 
-        // }
-    }
 }
 
 .frDocs-Menu {
@@ -43,7 +33,7 @@ $menu-height: 50px;
     width: 100%;
     background-color: $shell-color;
     color: #fff;
-    padding: 8px 25px;
+    padding: 8px $menu-spacing;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -53,11 +43,17 @@ $menu-height: 50px;
 
     &__logo {
         flex: 0 0 auto;
-        font-size: 24px;
+        font-size: 20px;
+        line-height: 1.5;
         font-weight: 700;
         margin: 0;
         text-align: center;
         color: #fff;
+
+        &:hover,
+        &:focus {
+            color: #fff;
+        }
 
         &--library {
             color: $library-color;
@@ -70,8 +66,9 @@ $menu-height: 50px;
 
     &__version {
         flex: 0 0 auto;
-        padding: 0 25px;
+        margin-left: $menu-spacing;
         font-size: 1.2rem;
+        display: none;
     }
 
     &__githubLogo {
@@ -80,6 +77,7 @@ $menu-height: 50px;
         height: 2rem;
         font-size: 1rem;
         display: block;
+        margin-left: $menu-spacing;
 
         svg {
             width: 2rem;
@@ -91,12 +89,24 @@ $menu-height: 50px;
 .frDocs-Sidebar {
     padding-top: $menu-height;
     color: #21262c;
-    min-width: 265px;
-    width: 265px;
+    min-width: $nav-width;
+    width: $nav-width;
     background-color: #EDEFF0;
     display: flex;
     flex-direction: column;
     transition: 0.3s margin ease-in-out, 0.3s box-shadow ease-in-out;
+}
+
+.frDocs-Sidebar--isHidable {
+    margin-left: -$nav-width;
+    overflow-x: hidden;
+}
+
+@media (min-width: $breakpoint-lg) {
+    .frDocs-Sidebar--isHidable {
+        margin-left: 0;
+        overflow-x: auto;
+    }
 }
 
 .frDocs-Nav {
@@ -218,10 +228,6 @@ $menu-height: 50px;
         margin: 0;
     }
 
-    .sidebar-toggle {
-        display: none;
-    }
-
     .frDocs-docsText__button {
         padding: 5px;
         border: 1px solid #ccc;
@@ -231,12 +237,21 @@ $menu-height: 50px;
     .frDocs-docsText__buttonCopy {
         margin-left: 5px;
     }
+}
 
-    @media (max-width: $mediaMaxWidth) {
-        .sidebar-toggle {
-            display: block;   
-            margin-bottom: 2rem;        
-        }
+.fd-button__navToggle {
+    margin-left: -($menu-spacing/2);
+    margin-right: $menu-spacing/2;
+    color: #fff;
+
+    &:hover {
+        color: #32363A;
+    }
+}
+
+@media (min-width: $breakpoint-lg) {
+    .fd-button__navToggle {
+        display: none;
     }
 }
 
@@ -269,6 +284,7 @@ $menu-height: 50px;
     }
 }
 
+// used to keep headings in view with the fixed header
 h1,
 h2,
 h3,
@@ -447,6 +463,7 @@ h6 {
     }
 }
 
+// table of contents (tocbot) overrides
 .toc {
     > .toc-list {
         padding-left: 0;
@@ -454,7 +471,7 @@ h6 {
 }
 
 .toc-link {
-    margin: 5px 0;
+    margin: 2px 0;
     padding-left: 15px;
     text-indent: -15px;
 
@@ -463,17 +480,39 @@ h6 {
     }
 }
 
-.is-active-link {
-    &:before {
-        background-color: $library-color;
+a.toc-link {
+    color: #0A6ED1;
+
+    &:hover,
+    &:focus {
+        color: #085CAF;
     }
+}
+
+.is-active-link {
+    font-weight: 400;
 }
 
 .node-name--H2 {
     font-size: 1.2rem;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: $breakpoint-md) {
+    #contents-separator {
+        display: none;
+    }
+
+    .heading__contents {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0,0,0,0);
+        border: 0;
+    }
+
     .toc {
         width: 250px;
         position: fixed;
@@ -488,17 +527,44 @@ h6 {
     }
 
     .toc-link {
+        margin: 4px 0;
+
         &:before {
             width: 4px;
         }
     }
 
-    .frDocs-App {
-        .frDocs-Container {
-            .frDocs-Content {
-                padding-right: 250px;
-                padding-bottom: 1000px;
-            }
+    a.toc-link {
+        color: #32363A;
+
+        &:hover,
+        &:focus {
+            color: #32363A;
+        }
+    }
+
+    .is-active-link {
+        font-weight: 700;
+
+        &:before {
+            background-color: $library-color;
+        }
+    }
+
+    .frDocs-Content {
+        padding-right: 250px;
+        padding-bottom: 1000px;
+    }
+}
+
+@media (min-width: $breakpoint-sm) {
+    .frDocs-Menu {
+        &__logo {
+            font-size: 24px;
+        }
+
+        &__version {
+            display: block;
         }
     }
 }

@@ -344,20 +344,27 @@ export class Routes extends Component {
             );
         });
 
-        const sideBarClasses = classnames(
-            'frDocs-Sidebar', {
-                'frDocs-Sidebar--isHidable': !this.state.showSideNav
-            });
+        const sideBarClasses = classnames('frDocs-Sidebar', {
+            'frDocs-Sidebar--isHidable': !this.state.showSideNav
+        });
 
-        const docsContentClasses = classnames(
-            'frDocs-Content', {
-                'frDocs-Content--isHidable': !this.state.showSideNav
-            });
+        // const docsContentClasses = classnames('frDocs-Content', {
+        //     'frDocs-Content--isHidable': !this.state.showSideNav
+        // });
 
         return (
             <BrowserRouter basename={process.env.PUBLIC_URL}>
                 <div className='frDocs-Container'>
-                    <div className='frDocs-Menu'>
+                    <header className='frDocs-Menu'>
+                        <Button
+                            aria-expanded={this.state.showSideNav}
+                            aria-label='Toggle Navigation'
+                            className='fd-button__navToggle'
+                            glyph='menu2'
+                            navbar
+                            onClick={this.toggleNavVis}
+                            option='light'
+                            type='standard' />
                         <a
                             aria-label='Home'
                             className='frDocs-Menu__logo'
@@ -374,7 +381,7 @@ export class Routes extends Component {
                                     fillRule='evenodd' />
                             </svg>
                         </a>
-                    </div>
+                    </header>
                     <div className={sideBarClasses}>
                         <div className='frDocs-Search'>
                             <InputGroup
@@ -387,14 +394,7 @@ export class Routes extends Component {
                             {navItems}
                         </nav>
                     </div>
-                    <div className={docsContentClasses}>
-                        <Button
-                            aria-expanded={this.state.showSideNav}
-                            aria-label='Toggle Navigation'
-                            className='sidebar-toggle'
-                            glyph='menu2'
-                            onClick={this.toggleNavVis}
-                            option='light' />
+                    <div className='frDocs-Content'>
                         <Switch>
                             {routes.map(route => {
                                 return (
