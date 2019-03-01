@@ -23,8 +23,7 @@ export const INPUT_TYPES = [
     'warning',
     'help',
     'disabled',
-    'readonly',
-    '' //empty for 'normal'
+    'readonly'
 ];
 
 export const LABEL_TYPES = [
