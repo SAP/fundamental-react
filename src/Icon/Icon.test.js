@@ -1,4 +1,4 @@
-import { Icon } from './Icon';
+import Icon from './Icon';
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { mount, shallow } from 'enzyme';

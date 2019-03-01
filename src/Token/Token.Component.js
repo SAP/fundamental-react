@@ -1,6 +1,6 @@
 import path from 'path';
 import React from 'react';
-import { Token } from './Token';
+import { Token } from '../';
 import { Description, DocsText, DocsTile, Header, Import, Properties, Separator } from '../_playground';
 
 export const TokenComponent = () => {

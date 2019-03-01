@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 
-export const Import = ({ sourceModulePath }) => {
+const Import = ({ sourceModulePath }) => {
     // remove everything up until the last forward slash and the file extension.
     const importPath = sourceModulePath.replace(/^(.*[\\\/])/, '').replace('.js', '');
 
@@ -22,3 +22,5 @@ export const Import = ({ sourceModulePath }) => {
 Import.propTypes = {
     sourceModulePath: PropTypes.string.isRequired
 };
+
+export default Import;

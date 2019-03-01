@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { SearchInput } from './SearchInput';
+import SearchInput from './SearchInput';
 import { mount, shallow } from 'enzyme';
 
 describe('<SearchInput />', () => {

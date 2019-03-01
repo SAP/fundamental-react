@@ -2,7 +2,7 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-export const Token = (props) => {
+const Token = (props) => {
     const { children, clickHandler, className, ...rest } = props;
 
     const tokenClasses = classnames(
@@ -18,6 +18,7 @@ export const Token = (props) => {
         </span>
     );
 };
+
 Token.displayName = 'Token';
 
 Token.propTypes = {
@@ -29,3 +30,5 @@ Token.propTypes = {
 Token.propDescriptions = {
     clickHandler: 'Callback function when user clicks on the component.'
 };
+
+export default Token;

@@ -1,8 +1,8 @@
 import { Button } from '../';
-import { Identifier } from '../Identifier/Identifier';
+import Identifier from '../Identifier/Identifier';
 import Menu from '../Menu/Menu';
 import { mount } from 'enzyme';
-import { Popover } from '../Popover/Popover';
+import Popover from '../Popover/Popover';
 import ProductTile from './ProductTile';
 import React from 'react';
 import renderer from 'react-test-renderer';

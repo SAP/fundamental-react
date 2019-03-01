@@ -1,4 +1,4 @@
-import { InlineHelp } from './InlineHelp';
+import InlineHelp from './InlineHelp';
 import { mount } from 'enzyme';
 import React from 'react';
 import renderer from 'react-test-renderer';

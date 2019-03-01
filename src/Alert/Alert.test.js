@@ -1,4 +1,4 @@
-import { Alert } from './Alert';
+import Alert from './Alert';
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { mount, shallow } from 'enzyme';
