@@ -1,3 +1,4 @@
+$mediaMaxWidth: 1280px;
 $fd-icons-path: '../../node_modules/fiori-fundamentals/scss/icons/';
 $fd-fonts-path: '../../node_modules/fiori-fundamentals/dist/fonts/';
 @import '~fiori-fundamentals/scss/all.scss';
@@ -18,9 +19,21 @@ $menu-height: 50px;
     justify-content: space-between;
     height: 100vh;
     overflow: hidden;
-    margin-left: auto;
-    margin-right: auto;
+    // margin-left: auto;
+    // margin-right: auto;
     width: 100%;
+
+    @media (max-width: $mediaMaxWidth) {
+        .frDocs-Sidebar--isHidable {
+            margin-left: -280px;
+            overflow-x: hidden;
+        }
+
+        // code {
+        //     display: flex;
+        //     flex-wrap: wrap; //remove x-axis scrolling 
+        // }
+    }
 }
 
 .frDocs-Menu {
@@ -205,6 +218,10 @@ $menu-height: 50px;
         margin: 0;
     }
 
+    .sidebar-toggle {
+        display: none;
+    }
+
     .frDocs-docsText__button {
         padding: 5px;
         border: 1px solid #ccc;
@@ -213,6 +230,13 @@ $menu-height: 50px;
 
     .frDocs-docsText__buttonCopy {
         margin-left: 5px;
+    }
+
+    @media (max-width: $mediaMaxWidth) {
+        .sidebar-toggle {
+            display: block;   
+            margin-bottom: 2rem;        
+        }
     }
 }
 
@@ -260,6 +284,7 @@ h6 {
             visibility: hidden;
         }
     }
+      
 }
 
 // Fundamental React Component Overrides 
@@ -369,6 +394,7 @@ h6 {
 }
 
 .fd-table {
+
     &.property-table {
         border: 0;
 

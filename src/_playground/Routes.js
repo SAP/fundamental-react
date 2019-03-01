@@ -2,8 +2,10 @@ import { ActionBarComponent } from '../ActionBar/ActionBar.Component';
 import { AlertComponent } from '../Alert/Alert.Component';
 import { BadgeComponent } from '../Badge/Badge.Component';
 import { BreadcrumbComponent } from '../Breadcrumb/Breadcrumb.Component';
+import Button from '../Button/Button';
 import { ButtonComponent } from '../Button/Button.Component';
 import { CalendarComponent } from '../Calendar/Calendar.Component';
+import classnames from 'classnames';
 import { ComboboxInputComponent } from '../ComboboxInput/ComboboxInput.Component';
 import { ContextualMenuComponent } from '../ContextualMenu/ContextualMenu.Component';
 import { DatePickerComponent } from '../DatePicker/DatePicker.Component';
@@ -286,7 +288,8 @@ export class Routes extends Component {
         super(props);
         this.state = {
             query: '',
-            filteredItems: routes
+            filteredItems: routes,
+            showSideNav: false //for css media queries, default is invisible-'false'
         };
     }
 
@@ -299,6 +302,18 @@ export class Routes extends Component {
             filteredItems: [...searchResults]
         });
     };
+
+    toggleNavVis = () => {
+        this.setState({
+            showSideNav: !this.state.showSideNav
+        });
+    }
+
+    resetNavState = () => {
+        this.setState({
+            showSideNav: false
+        });
+    }
 
     render() {
         let sectionRoutes;
@@ -319,6 +334,7 @@ export class Routes extends Component {
                                 activeClassName='frDocs-Nav__item--active'
                                 className='frDocs-Nav__item'
                                 key={route.url}
+                                onClick={this.resetNavState}
                                 to={{ pathname: route.url }}>
                                 {route.name}
                             </NavLink>
@@ -327,6 +343,16 @@ export class Routes extends Component {
                 </ul>
             );
         });
+
+        const sideBarClasses = classnames(
+            'frDocs-Sidebar', {
+                'frDocs-Sidebar--isHidable': !this.state.showSideNav
+            });
+
+        const docsContentClasses = classnames(
+            'frDocs-Content', {
+                'frDocs-Content--isHidable': !this.state.showSideNav
+            });
 
         return (
             <BrowserRouter basename={process.env.PUBLIC_URL}>
@@ -349,7 +375,7 @@ export class Routes extends Component {
                             </svg>
                         </a>
                     </div>
-                    <div className='frDocs-Sidebar'>
+                    <div className={sideBarClasses}>
                         <div className='frDocs-Search'>
                             <InputGroup
                                 inputPlaceholder='Search'
@@ -361,7 +387,14 @@ export class Routes extends Component {
                             {navItems}
                         </nav>
                     </div>
-                    <div className='frDocs-Content'>
+                    <div className={docsContentClasses}>
+                        <Button
+                            aria-expanded={this.state.showSideNav}
+                            aria-label='Toggle Navigation'
+                            className='sidebar-toggle'
+                            glyph='menu2'
+                            onClick={this.toggleNavVis}
+                            option='light' />
                         <Switch>
                             {routes.map(route => {
                                 return (
