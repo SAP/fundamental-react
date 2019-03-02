@@ -300,7 +300,10 @@ h6 {
             visibility: hidden;
         }
     }
-      
+
+    &:focus {
+        outline: 0;
+    }
 }
 
 // Fundamental React Component Overrides 
