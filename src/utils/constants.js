@@ -16,6 +16,16 @@ export const BADGE_MODIFIERS = [
     'filled'
 ];
 
+export const INPUT_TYPES = [
+    'normal',
+    'valid',
+    'invalid',
+    'warning',
+    'help',
+    'disabled',
+    'readonly'
+];
+
 export const LABEL_TYPES = [
     'success',
     'warning',
