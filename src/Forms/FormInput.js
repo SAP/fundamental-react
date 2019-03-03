@@ -1,4 +1,5 @@
 import classnames from 'classnames';
+import { INPUT_TYPES } from '../utils/constants';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -22,7 +23,7 @@ FormInput.displayName = 'FormInput';
 
 FormInput.propTypes = {
     className: PropTypes.string,
-    state: PropTypes.string
+    state: PropTypes.oneOf(INPUT_TYPES)
 };
 
 FormInput.propDescriptions = {
