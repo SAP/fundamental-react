@@ -1,16 +1,21 @@
 import getSourceModule from '../utils/getSourceModule';
+import Heading from '../Heading/Heading';
 import PropertyTable from './_PropertyTable';
 import PropTypes from 'prop-types';
 import React from 'react';
 
 const Properties = ({ sourceModulePath }) => {
+    if (!sourceModulePath) {
+        return null;
+    }
+
     const sourceModule = getSourceModule(sourceModulePath);
 
     const componentNames = Object.keys(sourceModule).sort();
 
     return (
         <React.Fragment>
-            <h2>Properties</h2>
+            <Heading level={2}>Properties</Heading>
             {componentNames.map((name, index) => {
                 const component = sourceModule[name];
                 const subcomponentNames = Object.keys(component)
@@ -42,7 +47,7 @@ const Properties = ({ sourceModulePath }) => {
 };
 
 Properties.propTypes = {
-    sourceModulePath: PropTypes.string.isRequired
+    sourceModulePath: PropTypes.string
 };
 
 export default Properties;

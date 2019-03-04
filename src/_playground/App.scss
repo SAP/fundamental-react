@@ -1,246 +1,309 @@
-$mediaMaxWidth: 1280px;
+$breakpoint-lg: 1280px;
+$breakpoint-md: 1024px;
+$breakpoint-sm: 600px;
 $fd-icons-path: '../../node_modules/fiori-fundamentals/scss/icons/';
 $fd-fonts-path: '../../node_modules/fiori-fundamentals/dist/fonts/';
-@import '../../node_modules/fiori-fundamentals/scss/all.scss';
+@import '~fiori-fundamentals/scss/all.scss';
+@import '~tocbot/src/scss/tocbot-core';
+@import '~tocbot/src/scss/tocbot-default-theme';
 
+$shell-color: #354A5F;
 $library-color: #61dafb;
+$menu-height: 50px;
+$nav-width: 265px;
+$menu-spacing: 20px;
 
 // Fundamental React Docs Styles
 .frDocs-App {
     background-color: white;
+}
 
-    .frDocs-Container {
-        display: flex;
-        justify-content: space-between;
-        height: 100vh;
-        overflow: hidden;
-        width: 100%;
+.frDocs-Container {
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;
+    overflow: hidden;
+    width: 100%;
+}
 
-        .frDocs-Sidebar {
-            color: #21262c;
-            min-width: 265px;
-            width: 265px;
-            background-color: #f1f3f6;
-            display: flex;
-            flex-direction: column;
-            transition: 0.3s margin ease-in-out, 0.3s box-shadow ease-in-out;
+.frDocs-Menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: $shell-color;
+    color: #fff;
+    padding: 8px $menu-spacing;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    z-index: 10;
 
-            .frDocs-Logo {
-                flex: 0 0 auto;
-                font-size: 24px;
-                padding: 0.5rem 10px;
-                margin: 0;
-                text-align: center;
-                background-color: #424e5a;
-                color: #fff;
+    &__logo {
+        flex: 0 0 auto;
+        font-size: 20px;
+        line-height: 1.5;
+        font-weight: 700;
+        margin: 0;
+        text-align: center;
+        color: #fff;
 
-                >a {
-                    color: inherit;
-
-                    .frDocs-Logo--library {
-                        color: $library-color;
-                    }
-                }
-            }
-
-            .frDocs-Search {
-                flex: 0 0 auto;
-                background-color: #424e5a;
-                padding: 0 20px 1.25rem;
-                -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-            }
-
-            .frDocs-Nav {
-                flex: 1 1 auto;
-                min-height: 0;
-                overflow: auto;
-                padding: 0.5rem 0 1rem;
-
-                .frDocs-Nav__list {
-                    list-style: none;
-                }
-
-                .frDocs-Nav__headers {
-                    color: #424e5a;
-                    padding: 15px 20px;
-                    display: block;
-                    font-weight: 700;
-                    font-size: 1.25rem;
-                }
-
-                .frDocs-Nav__item {
-                    display: block;
-                    margin-left: 1px;
-                    color: #21262c;
-                    font-size: 1rem;
-                    position: relative;
-                    padding: 13px 40px;
-                    transition: background .15hs ease-in;
-
-                    &:hover,
-                    &:focus {
-                        background-color: #fafafa;
-                        color: #085caf;
-                    }
-                }
-
-                .frDocs-Nav__item--active {
-                    color: #424e5a;
-                    box-shadow: inset 6px 0 0 0 $library-color;
-                    cursor: pointer;
-                    background-color: #fff;
-                    font-weight: 700;
-                }
-            }
+        &:hover,
+        &:focus {
+            color: #fff;
         }
 
-        @media (max-width: $mediaMaxWidth) {
-            .frDocs-Sidebar--isHidable {
-                        margin-left: -280px;
-                        overflow-x: hidden;
-            }
-
-            code {
-                display: flex;
-                flex-wrap: wrap; //remove x-axis scrolling 
-            }
-        }
-
-        .frDocs-Content {
-            flex-grow: 1;
-            overflow-y: scroll;
-            background-color: white;
-            padding: 2rem;
-
-            .sidebar-toggle {
-                display: none;
-            }
-
-            .frDocs-Content__githubLogo {
-                float: right;
-                z-index: 100;
-                cursor: pointer;
-                width: 2rem;
-                height: 2rem;
-                font-size: 1rem;
-
-                svg {
-                    width: 2rem;
-                    height: 2rem;
-                }
-            }
-
-            .frDocs-Content__header,
-            .frDocs-markdown>h1 {
-                margin: 0 0 12px;
-                font-size: 2.2rem;
-                line-height: 1;
-            }
-
-            .frDocs-Content__header:empty {
-                display: none;
-            }
-
-            .frDocs-Content__description,
-            .frDocs-markdown>p {
-                margin-bottom: 1.5rem;
-                font-size: 1rem;
-                font-weight: 300;
-            }
-
-            .frDocs-Content__tile {
-                border-radius: 4px 4px 0 0;
-                border: 1px solid #ccc;
-                border-bottom: none;
-                padding: 10px 0;
-
-                .frDocs-tile__features {
-                    display: flex;
-                    justify-content: flex-end;
-                }
-
-                .frDocs-tile__feature {
-                    display: flex;
-                    margin: 15px;
-                }
-
-                .frDocs-tile__centered {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                }
-            }
-
-            .frDocs-Content__tile-background {
-                background: #edeef0;
-                transition: background-color .25s;
-            }
-
-            .frDocs-markdown {
-
-                ol,
-                ul {
-                    padding-left: 2rem;
-                }
-
-                pre {
-                    margin: 25px 0px;
-                    background-color: #fff !important;
-                    white-space: pre-wrap;
-                    white-space: -moz-pre-wrap;
-                    white-space: -pre-wrap;
-                    white-space: -o-pre-wrap;
-                    word-wrap: break-word;
-                    display: flex;
-                    padding: 1rem;
-                    font-size: 13px;
-                    line-height: 1.42857143;
-                    color: #333;
-                    word-break: break-all;
-                    border: 1px solid #ccc;
-                    border-radius: 4px;
-
-                    code {
-                        display: block;
-                    }
-                }
-            }
-
-            .frDocs-Content__separator {
-                display: block;
-                margin: 2rem 0;
-                border-bottom: 1px solid #E3E3E3;
-            }
-
-            .frDocs-Content__docsText {
-                padding: 15px;
-                font-size: 13px;
-                border: 1px solid #ccc;
-                border-top: none;
-                border-radius: 0 0 4px 4px;
-                margin: 0;
-            }
-
-            .frDocs-docsText__button {
-                padding: 5px;
-                border: 1px solid #ccc;
-                text-align: center;
-            }
-
-            .frDocs-docsText__buttonCopy {
-                margin-left: 5px;
-            }
-
-            @media (max-width: $mediaMaxWidth) {
-                .sidebar-toggle {
-                    display: block;   
-                    margin-bottom: 2rem;        
-                }
-            }
+        &--library {
+            color: $library-color;
         }
     }
-      
+
+    &__spacer {
+        flex: 1 1 auto;
+    }
+
+    &__version {
+        flex: 0 0 auto;
+        margin-left: $menu-spacing;
+        font-size: 1.2rem;
+        display: none;
+    }
+
+    &__githubLogo {
+        flex: 0 0 auto;
+        width: 2rem;
+        height: 2rem;
+        font-size: 1rem;
+        display: block;
+        margin-left: $menu-spacing;
+
+        svg {
+            width: 2rem;
+            height: 2rem;
+        }
+    }
+}
+
+.frDocs-Sidebar {
+    padding-top: $menu-height;
+    color: #21262c;
+    min-width: $nav-width;
+    width: $nav-width;
+    background-color: #EDEFF0;
+    display: flex;
+    flex-direction: column;
+    transition: 0.3s margin ease-in-out, 0.3s box-shadow ease-in-out;
+}
+
+.frDocs-Sidebar--isHidable {
+    margin-left: -$nav-width;
+    overflow-x: hidden;
+}
+
+@media (min-width: $breakpoint-lg) {
+    .frDocs-Sidebar--isHidable {
+        margin-left: 0;
+        overflow-x: auto;
+    }
+}
+
+.frDocs-Nav {
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow: auto;
+    padding: 0.5rem 0 1rem;
+
+    &__list {
+        list-style: none;
+    }
+
+    &__headers {
+        color: #515559;
+        padding: 15px 20px;
+        display: block;
+        font-weight: 700;
+        font-size: 1.25rem;
+    }
+
+    &__item {
+        display: block;
+        margin-left: 1px;
+        color: #21262c;
+        font-size: 1rem;
+        position: relative;
+        padding: 13px 40px;
+        transition: background .15hs ease-in;
+
+        &:hover,
+        &:focus {
+            background-color: #fafafa;
+            color: #085caf;
+        }
+
+        &--active {
+            color: #32363A;
+            box-shadow: inset 6px 0 0 0 $library-color;
+            cursor: pointer;
+            background-color: #fff;
+            font-weight: 700;
+        }
+    }
+}
+
+.frDocs-Search {
+    flex: 0 0 auto;
+    padding: 15px 20px;
+    -webkit-box-shadow: -2px 2px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: -2px 2px 4px rgba(0, 0, 0, 0.25);
+    z-index: 1;
+}
+
+.frDocs-Content {
+    flex-grow: 1;
+    overflow-y: scroll;
+    background-color: white;
+    padding: 2rem;
+    padding-top: $menu-height + 25px;
+
+    &__header,
+    .frDocs-markdown>h1 {
+        margin: 0 0 12px;
+        font-size: 2.2rem;
+        line-height: 1;
+    }
+
+    &__header:empty {
+        display: none;
+    }
+
+    &__description,
+    .frDocs-markdown>p {
+        margin-bottom: 1.5rem;
+        font-size: 1rem;
+        font-weight: 300;
+    }
+
+    &__tile {
+        border-radius: 4px 4px 0 0;
+        border: 1px solid #ccc;
+        border-bottom: none;
+        padding: 10px 0;
+
+        .frDocs-tile__features {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .frDocs-tile__feature {
+            display: flex;
+            margin: 15px;
+        }
+
+        .frDocs-tile__centered {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    &__tile-background {
+        background: #edeef0;
+        transition: background-color .25s;
+    }
+
+    &__separator {
+        display: block;
+        margin: 2rem 0;
+        border-bottom: 1px solid #E3E3E3;
+    }
+
+    &__docsText {
+        padding: 15px;
+        font-size: 13px;
+        border: 1px solid #ccc;
+        border-top: none;
+        border-radius: 0 0 4px 4px;
+        margin: 0;
+    }
+
+    .frDocs-docsText__button {
+        padding: 5px;
+        border: 1px solid #ccc;
+        text-align: center;
+    }
+
+    .frDocs-docsText__buttonCopy {
+        margin-left: 5px;
+    }
+}
+
+.fd-button__navToggle {
+    margin-left: -($menu-spacing/2);
+    margin-right: $menu-spacing/2;
+    color: #fff;
+
+    &:hover {
+        color: #32363A;
+    }
+}
+
+@media (min-width: $breakpoint-lg) {
+    .fd-button__navToggle {
+        display: none;
+    }
+}
+
+.frDocs-markdown {
+    ol,
+    ul {
+        padding-left: 2rem;
+    }
+
+    pre {
+        margin: 25px 0px;
+        background-color: #fff !important;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -pre-wrap;
+        white-space: -o-pre-wrap;
+        word-wrap: break-word;
+        display: flex;
+        padding: 1rem;
+        font-size: 13px;
+        line-height: 1.42857143;
+        color: #333;
+        word-break: break-all;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+
+        code {
+            display: block;
+        }
+    }
+}
+
+// used to keep headings in view with the fixed header
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    &:target {
+        &:before {
+            display: block;
+            content: ' ';
+            height: $menu-height + 25px;
+            margin-top: -$menu-height + 25px;
+            visibility: hidden;
+        }
+    }
+
+    &:focus {
+        outline: 0;
+    }
 }
 
 // Fundamental React Component Overrides 
@@ -399,6 +462,112 @@ $library-color: #61dafb;
 
         .prop-required {
             color: var(--fd-color-status-3);
+        }
+    }
+}
+
+// table of contents (tocbot) overrides
+.toc {
+    > .toc-list {
+        padding-left: 0;
+    }
+}
+
+.toc-link {
+    margin: 2px 0;
+    padding-left: 15px;
+    text-indent: -15px;
+
+    &:before {
+        width: 0;
+    }
+}
+
+a.toc-link {
+    color: #0A6ED1;
+
+    &:hover,
+    &:focus {
+        color: #085CAF;
+    }
+}
+
+.is-active-link {
+    font-weight: 400;
+}
+
+.node-name--H2 {
+    font-size: 1.2rem;
+}
+
+@media (min-width: $breakpoint-md) {
+    #contents-separator {
+        display: none;
+    }
+
+    .heading__contents {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0,0,0,0);
+        border: 0;
+    }
+
+    .toc {
+        width: 250px;
+        position: fixed;
+        top: 0;
+        right: 0;
+        padding: 25px + $menu-height 25px 25px;
+        height: 100%;
+
+        > .toc-list {
+            padding-left: 14px;
+        }
+    }
+
+    .toc-link {
+        margin: 4px 0;
+
+        &:before {
+            width: 4px;
+        }
+    }
+
+    a.toc-link {
+        color: #32363A;
+
+        &:hover,
+        &:focus {
+            color: #32363A;
+        }
+    }
+
+    .is-active-link {
+        font-weight: 700;
+
+        &:before {
+            background-color: $library-color;
+        }
+    }
+
+    .frDocs-Content {
+        padding-right: 250px;
+        padding-bottom: 1000px;
+    }
+}
+
+@media (min-width: $breakpoint-sm) {
+    .frDocs-Menu {
+        &__logo {
+            font-size: 24px;
+        }
+
+        &__version {
+            display: block;
         }
     }
 }

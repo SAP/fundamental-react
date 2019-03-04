@@ -1,177 +1,19 @@
 import path from 'path';
 import React from 'react';
 import { Button, Dropdown, Menu, Popover } from '../';
-import { Description, DocsText, DocsTile, Header, Import, Properties, Separator } from '../_playground';
+import { ComponentPage, Example } from '../_playground';
 
 export const DropdownComponent = () => {
-    const defaultDropdownCode = `<Dropdown>
-    <Popover
-        id="jhqD0555"
-        control={<Button dropdown>Select</Button>}
-        noArrow
-        body={
-            <Menu>
-                <Menu.List>
-                    <Menu.Item url="/">Option 1</Menu.Item>
-                    <Menu.Item url="/">Option 2</Menu.Item>
-                    <Menu.Item url="/">Option 3</Menu.Item>
-                    <Menu.Item url="/">Option 4</Menu.Item>
-                </Menu.List>
-            </Menu>
-        }
-    />
-</Dropdown>
-
-<Dropdown>
-    <Popover
-        id="jhqD0556"
-        control={
-            <Button dropdown compact>
-                Select
-            </Button>
-        }
-        noArrow
-        body={
-            <Menu>
-                <Menu.List>
-                    <Menu.Item url="/">Option 1</Menu.Item>
-                    <Menu.Item url="/">Option 2</Menu.Item>
-                    <Menu.Item url="/">Option 3</Menu.Item>
-                    <Menu.Item url="/">Option 4</Menu.Item>
-                </Menu.List>
-            </Menu>
-        }
-    />
-</Dropdown>`;
-
-    const iconDropdownCode = `<Dropdown>
-    <Popover
-        id="jhqD0557"
-        control={
-            <Button dropdown glyph="filter">
-                Select
-            </Button>
-        }
-        noArrow
-        body={
-            <Menu>
-                <Menu.List>
-                    <Menu.Item url="/">Option 1</Menu.Item>
-                    <Menu.Item url="/">Option 2</Menu.Item>
-                    <Menu.Item url="/">Option 3</Menu.Item>
-                    <Menu.Item url="/">Option 4</Menu.Item>
-                </Menu.List>
-            </Menu>
-        }
-    />
-</Dropdown>
-
-<Dropdown>
-    <Popover
-        id="jhqD0558"
-        control={
-            <Button dropdown compact glyph="filter">
-                Select
-            </Button>
-        }
-        noArrow
-        body={
-            <Menu>
-                <Menu.List>
-                    <Menu.Item url="/">Option 1</Menu.Item>
-                    <Menu.Item url="/">Option 2</Menu.Item>
-                    <Menu.Item url="/">Option 3</Menu.Item>
-                    <Menu.Item url="/">Option 4</Menu.Item>
-                </Menu.List>
-            </Menu>
-        }
-    />
-</Dropdown>`;
-
-    const toolbarDropdownCode = `<Dropdown standard>
-    <Popover
-        id="jhqD0559"
-        control={
-            <Button dropdown type="standard">
-                Select
-            </Button>
-        }
-        noArrow
-        body={
-            <Menu>
-                <Menu.List>
-                    <Menu.Item url="/">Option 1</Menu.Item>
-                    <Menu.Item url="/">Option 2</Menu.Item>
-                    <Menu.Item url="/">Option 3</Menu.Item>
-                    <Menu.Item url="/">Option 4</Menu.Item>
-                </Menu.List>
-            </Menu>
-        }
-    />
-</Dropdown>
-
-<Dropdown standard>
-    <Popover
-        id="jhqD0560"
-        control={
-            <Button dropdown compact type="standard">
-                Select
-            </Button>
-        }
-        noArrow
-        body={
-            <Menu>
-                <Menu.List>
-                    <Menu.Item url="/">Option 1</Menu.Item>
-                    <Menu.Item url="/">Option 2</Menu.Item>
-                    <Menu.Item url="/">Option 3</Menu.Item>
-                    <Menu.Item url="/">Option 4</Menu.Item>
-                </Menu.List>
-            </Menu>
-        }
-    />
-</Dropdown>`;
-
-    const disabledDropdownCode = `<Dropdown>
-    <Popover
-        id="jhqD0561"
-        disabled
-        control={
-            <Button dropdown glyph="filter" disabled>
-                Select
-            </Button>
-        }
-        noArrow
-        body={
-            <Menu>
-                <Menu.List>
-                    <Menu.Item url="/">Option 1</Menu.Item>
-                    <Menu.Item url="/">Option 2</Menu.Item>
-                    <Menu.Item url="/">Option 3</Menu.Item>
-                    <Menu.Item url="/">Option 4</Menu.Item>
-                </Menu.List>
-            </Menu>
-        } 
-    />
-</Dropdown>`;
-
     return (
-        <div>
-            <Header>Dropdown</Header>
-            <Description>
-                The **Dropdown** component lets the user select one of the different options.
-                It is more flexible than the normal Select.
-            </Description>
-            <Import sourceModulePath={path.join(__dirname, './Dropdown')} />
+        <ComponentPage
+            description={`The **Dropdown** component lets the user select one of the different options.
+                It is more flexible than the normal Select.`}
+            sourceModulePath={path.join(__dirname, './Dropdown')}
+            title='Dropdown'>
 
-            <Separator />
-
-            <Properties sourceModulePath={path.join(__dirname, './Dropdown')} />
-
-            <Separator />
-
-            <h2>Default Dropdown</h2>
-            <DocsTile centered>
+            <Example
+                centered
+                title='Default Dropdown'>
                 <div className='fd-doc__margin--dropdown'>
                     <Dropdown>
                         <Popover
@@ -211,14 +53,12 @@ export const DropdownComponent = () => {
                             noArrow />
                     </Dropdown>
                 </div>
-            </DocsTile>
-            <DocsText>{defaultDropdownCode}</DocsText>
+            </Example>
 
-            <Separator />
-
-            <h2>Dropdown with Icon</h2>
-            <Description>It can also include complementary information like an icon.</Description>
-            <DocsTile centered>
+            <Example
+                centered
+                description='It can also include complementary information like an icon.'
+                title='Dropdown with Icon'>
                 <div className='fd-doc__margin--dropdown'>
                     <Dropdown>
                         <Popover
@@ -263,13 +103,11 @@ export const DropdownComponent = () => {
                             noArrow />
                     </Dropdown>
                 </div>
-            </DocsTile>
-            <DocsText>{iconDropdownCode}</DocsText>
+            </Example>
 
-            <Separator />
-
-            <h2>Toolbar Dropdown</h2>
-            <DocsTile centered>
+            <Example
+                centered
+                title='Toolbar Dropdown'>
                 <div className='fd-doc__margin--dropdown'>
                     <Dropdown standard>
                         <Popover
@@ -314,13 +152,11 @@ export const DropdownComponent = () => {
                             noArrow />
                     </Dropdown>
                 </div>
-            </DocsTile>
-            <DocsText>{toolbarDropdownCode}</DocsText>
+            </Example>
 
-            <Separator />
-
-            <h2>Disabled State</h2>
-            <DocsTile centered>
+            <Example
+                centered
+                title='Disabled State'>
                 <div className='fd-doc__margin--dropdown'>
                     <Dropdown>
                         <Popover
@@ -345,8 +181,8 @@ export const DropdownComponent = () => {
                             noArrow />
                     </Dropdown>
                 </div>
-            </DocsTile>
-            <DocsText>{disabledDropdownCode}</DocsText>
-        </div>
+            </Example>
+
+        </ComponentPage>
     );
 };
