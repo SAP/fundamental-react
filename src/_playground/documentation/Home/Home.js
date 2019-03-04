@@ -4,7 +4,9 @@ import Readme from './README.md';
 
 export const Home = () => {
     return (
-        <MarkdownPage sourceFile={Readme} />
+        <MarkdownPage
+            sourceFile={Readme}
+            title='Home' />
     );
 };
 

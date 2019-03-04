@@ -2,7 +2,7 @@ import MarkdownImporter from '../Markdown/MarkdownImporter';
 import PropTypes from 'prop-types';
 import React from 'react';
 import tocbot from 'tocbot';
-import { Contents, Description, Header, Heading } from '../';
+import { Contents, Description, Header, Heading, Separator } from '../';
 
 class MarkdownPage extends React.Component {
     componentDidMount() {
@@ -34,10 +34,15 @@ class MarkdownPage extends React.Component {
                 {title && <Header>{title}</Header>}
                 {description && <Description>{description}</Description>}
                 <Contents />
+                <Separator />
                 <MarkdownImporter
                     onUpdate={this.refreshTOC}
                     renderers={{
                         heading: (({ children, ...props }) => {
+                            // H1 elements should be skipped if `title` is passed
+                            if (title && props.level === 1) {
+                                return null;
+                            }
                             return <Heading {...props}>{children[0].props.value}</Heading>;
                         })
                     }}
