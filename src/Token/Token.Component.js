@@ -1,43 +1,29 @@
 import path from 'path';
 import React from 'react';
 import { Token } from '../';
-import { Description, DocsText, DocsTile, Header, Import, Properties, Separator } from '../_playground';
+import { ComponentPage, Example } from '../_playground';
 
 export const TokenComponent = () => {
-    const tokenCode = `<Token>Bibendum</Token>
-<Token>Lorem</Token>
-<Token>Dolor</Token>
-<Token>Filter</Token>`;
-
     const closeAction = (name) => alert(`close ${name}! You can work with the event itself using the callback.`);
-    const tagsNames = ['Bibendum', 'Lorem', 'Dolor', 'Filter'];
 
     return (
-        <div>
+        <ComponentPage
+            descirption={`A **Token** is used to represent contextual information. It can be useful to show
+                applied filters, selected values for a form field or object metadata.`}
+            sourceModulePath={path.join(__dirname, './Token')}
+            title='Token'>
 
-            <Header>Token</Header>
-            <Description>
-                A **Token** is used to represent contextual information. It can be useful to show
-                applied filters, selected values for a form field or object metadata.
-            </Description>
-            <Import sourceModulePath={path.join(__dirname, './Token')} />
-
-            <Separator />
-
-            <Properties sourceModulePath={path.join(__dirname, './Token')} />
-
-            <Separator />
-
-            <DocsTile centered>
+            <Example
+                centered
+                title='Token'>
                 <div className='fd-doc__margin--token'>
-                    {
-                        tagsNames.map((name) => {
-                            return <Token clickHandler={(e) => closeAction(name, e)} key={name}>{name}</Token>;
-                        })
-                    }
+                    <Token clickHandler={(e) => closeAction('Bibendum', e)}>Bibendum</Token>
+                    <Token clickHandler={(e) => closeAction('Lorem', e)}>Lorem</Token>
+                    <Token clickHandler={(e) => closeAction('Dolor', e)}>Dolor</Token>
+                    <Token clickHandler={(e) => closeAction('Filter', e)}>Filter</Token>
                 </div>
-            </DocsTile>
-            <DocsText>{tokenCode}</DocsText>
-        </div>
+            </Example>
+
+        </ComponentPage>
     );
 };

@@ -1,73 +1,61 @@
 import { InlineHelp } from '../';
 import path from 'path';
 import React from 'react';
-import { Description, DocsText, DocsTile, Header, Import, Properties, Separator } from '../_playground';
-
+import { ComponentPage, Example } from '../_playground';
 
 export const InlineHelpComponent = () => {
-    const defaultHelpPlacement = '<InlineHelp text="Lorem ipsum dolor sit amet, consectetur adipiscing." placement="bottom-right"/>';
-    const bottomLeftHelpPlacement = '<InlineHelp text="Lorem ipsum dolor sit amet, consectetur adipiscing." placement="bottom-left"/>';
-    const rightHelpPlacement = '<InlineHelp text="Lorem ipsum dolor sit amet, consectetur adipiscing." placement="right"/>';
-    const leftHelpPlacement = '<InlineHelp text="Lorem ipsum dolor sit amet, consectetur adipiscing." placement="left"/>';
-    const centerHelpPlacement = '<InlineHelp text="Lorem ipsum dolor sit amet, consectetur adipiscing." placement="bottom-center" />';
-
     return (
-        <div>
-            <Header>Inline Help</Header>
-            <Description>
-                **Inline Help** is used to display help text in a **Popover**, often inline with headers,
-                body text and form labels.
-            </Description>
-            <Import sourceModulePath={path.join(__dirname, './InlineHelp')} />
+        <ComponentPage
+            description={`**Inline Help** is used to display help text in a **Popover**, often inline with headers,
+                body text and form labels.`}
+            sourceModulePath={path.join(__dirname, './InlineHelp')}
+            title='Inline Help'>
 
-            <Separator />
+            <Example
+                centered
+                title='Default Position'>
+                <div>
+                    Bottom Right (Default) &nbsp;
+                    <InlineHelp placement='bottom-right' text='Lorem ipsum dolor sit amet, consectetur adipiscing.' />
+                </div>
+            </Example>
 
-            <Properties sourceModulePath={path.join(__dirname, './InlineHelp')} />
+            <Example
+                centered
+                title='Bottom Left Position'>
+                <div>
+                    Bottom Left &nbsp;
+                    <InlineHelp placement='bottom-left' text='Lorem ipsum dolor sit amet, consectetur adipiscing.' />
+                </div>
+            </Example>
 
-            <Separator />
+            <Example
+                centered
+                title='Bottom Center Position'>
+                <div>
+                    Bottom Center &nbsp;
+                    <InlineHelp placement='bottom-center' text='Lorem ipsum dolor sit amet, consectetur adipiscing.' />
+                </div>
+            </Example>
 
-            <h2>Default Position</h2>
-            <DocsTile centered>
-                Bottom Right (Default) &nbsp;
-                <InlineHelp placement='bottom-right' text='Lorem ipsum dolor sit amet, consectetur adipiscing.' />
-            </DocsTile>
-            <DocsText>{defaultHelpPlacement}</DocsText>
+            <Example
+                centered
+                title='Right Position'>
+                <div>
+                    Right &nbsp;
+                    <InlineHelp placement='right' text='Lorem ipsum dolor sit amet, consectetur adipiscing.' />
+                </div>
+            </Example>
 
-            <Separator />
+            <Example
+                centered
+                title='Left Position'>
+                <div>
+                    Left &nbsp;
+                    <InlineHelp placement='left' text='Lorem ipsum dolor sit amet, consectetur adipiscing.' />
+                </div>
+            </Example>
 
-            <h2>Bottom Left Position</h2>
-            <DocsTile centered>
-                Bottom Left &nbsp;
-                <InlineHelp placement='bottom-left' text='Lorem ipsum dolor sit amet, consectetur adipiscing.' />
-            </DocsTile>
-            <DocsText>{bottomLeftHelpPlacement}</DocsText>
-
-            <Separator />
-
-            <h2>Bottom Center Position</h2>
-            <DocsTile centered>
-                Bottom Center &nbsp;
-                <InlineHelp placement='bottom-center' text='Lorem ipsum dolor sit amet, consectetur adipiscing.' />
-            </DocsTile>
-            <DocsText>{centerHelpPlacement}</DocsText>
-
-            <Separator />
-
-            <h2>Right Position</h2>
-            <DocsTile centered>
-                Right &nbsp;
-                <InlineHelp placement='right' text='Lorem ipsum dolor sit amet, consectetur adipiscing.' />
-            </DocsTile>
-            <DocsText>{rightHelpPlacement}</DocsText>
-
-            <Separator />
-
-            <h2>Left Position</h2>
-            <DocsTile centered>
-                Left &nbsp;
-                <InlineHelp placement='left' text='Lorem ipsum dolor sit amet, consectetur adipiscing.' />
-            </DocsTile>
-            <DocsText>{leftHelpPlacement}</DocsText>
-        </div>
+        </ComponentPage>
     );
 };

@@ -1,4 +1,5 @@
 import { defaultPropDescriptions } from './defaults';
+import Heading from '../Heading/Heading';
 import PropertyDefault from './_PropertyDefault';
 import PropertyDescription from './_PropertyDescription';
 import PropertyType from './_PropertyType';
@@ -43,7 +44,7 @@ const PropertyTable = ({ title, propTypes, defaultProps, propDescriptions }) => 
 
     return (
         <React.Fragment>
-            <h3 className='header'>{title}</h3>
+            {title && <Heading level={3}>{title}</Heading>}
             <Table
                 className='property-table'
                 headers={
@@ -61,10 +62,10 @@ const PropertyTable = ({ title, propTypes, defaultProps, propDescriptions }) => 
 PropertyTable.displayName = 'PropertyTable';
 
 PropertyTable.propTypes = {
-    title: PropTypes.string.isRequired,
     defaultProps: PropTypes.object,
     propDescriptions: PropTypes.object,
-    propTypes: PropTypes.object
+    propTypes: PropTypes.object,
+    title: PropTypes.string
 };
 
 export default PropertyTable;

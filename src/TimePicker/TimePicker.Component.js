@@ -1,56 +1,35 @@
 import path from 'path';
 import React from 'react';
 import { TimePicker } from '../';
-import { Description, DocsText, DocsTile, Header, Import, Properties, Separator } from '../_playground';
+import { ComponentPage, Example } from '../_playground';
 
 export const TimePickerComponent = () => {
-    const defaultTimeCode = '<TimePicker />';
-    const format12hoursTimeCode = '<TimePicker format12Hours={true} />';
-    const noSecondsTimeCode = '<TimePicker showSecond={false} />';
-    const disabledStateTimeCode = '<TimePicker disabled={true} />';
     return (
-        <div>
-            <Header>Time Picker</Header>
-            <Description>
-                The **Time Picker** allows the user to easily set a time using the **Time** component.
-            </Description>
-            <Import sourceModulePath={path.join(__dirname, './TimePicker')} />
+        <ComponentPage
+            description='The **Time Picker** allows the user to easily set a time using the **Time** component.'
+            sourceModulePath={path.join(__dirname, './TimePicker')}
+            title='Time Picker'>
 
-            <Separator />
-
-            <Properties sourceModulePath={path.join(__dirname, './TimePicker')} />
-
-            <Separator />
-
-            <h2>Default</h2>
-            <DocsTile>
+            <Example
+                title='Default'>
                 <TimePicker />
-            </DocsTile>
-            <DocsText>{defaultTimeCode}</DocsText>
+            </Example>
 
-            <Separator />
-
-            <h2>12-Hour Clock</h2>
-            <DocsTile>
+            <Example
+                title='12-Hour Clock'>
                 <TimePicker format12Hours />
-            </DocsTile>
-            <DocsText>{format12hoursTimeCode}</DocsText>
+            </Example>
 
-            <Separator />
-
-            <h2>Time Picker With No Seconds</h2>
-            <DocsTile>
+            <Example
+                title='Time Picker With No Seconds'>
                 <TimePicker showSecond={false} />
-            </DocsTile>
-            <DocsText>{noSecondsTimeCode}</DocsText>
+            </Example>
 
-            <Separator />
-
-            <h2>Disabled State</h2>
-            <DocsTile>
+            <Example
+                title='Disabled State'>
                 <TimePicker disabled />
-            </DocsTile>
-            <DocsText>{disabledStateTimeCode}</DocsText>
-        </div>
+            </Example>
+
+        </ComponentPage>
     );
 };

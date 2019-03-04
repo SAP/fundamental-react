@@ -1,35 +1,19 @@
 import { DatePicker } from '../';
 import path from 'path';
 import React from 'react';
-import { Description, DocsText, DocsTile, Header, Import, Properties, Separator } from '../_playground';
+import { ComponentPage, Example } from '../_playground';
 
 export const DatePickerComponent = () => {
-    const defaultDatePickerCode = `<DatePicker disableBeforeDate={new Date(2018, 11, 24, 0, 0, 0, 0)} disableWeekends={true} />
-<DatePicker
-    compact
-    disableWeekday={['Monday', 'Tuesday']}
-    blockedDates={[new Date(2018, 11, 1, 0, 0, 0, 0), new Date(2018, 11, 23, 0, 0, 0, 0)]}
-/>`;
-    const enableRangeSelectionDatePickerCode = `<DatePicker enableRangeSelection disableFutureDates />
-<DatePicker enableRangeSelection disablePastDates compact />`;
-
     return (
-        <div>
-            <Header>DatePicker</Header>
-            <Description>
-                The **Date Picker** is an opinionated composition of the **Input Group**, **Popover**
-                and **Calendar** components to accomplish the UI pattern for picking a date.
-            </Description>
-            <Import sourceModulePath={path.join(__dirname, './DatePicker')} />
+        <ComponentPage
+            description={`The **Date Picker** is an opinionated composition of the **Input Group**, **Popover**
+                and **Calendar** components to accomplish the UI pattern for picking a date.`}
+            sourceModulePath={path.join(__dirname, './DatePicker')}
+            title='Date Picker'>
 
-            <Separator />
-
-            <Properties sourceModulePath={path.join(__dirname, './DatePicker')} />
-
-            <Separator />
-
-            <h2>Simple Date Picker</h2>
-            <DocsTile centered>
+            <Example
+                centered
+                title='Simple Date Picker'>
                 <div className='fd-doc__margin--datePicker'>
                     <DatePicker disableBeforeDate={new Date(2018, 11, 24, 0, 0, 0, 0)} disableWeekends />
                     <DatePicker
@@ -37,19 +21,18 @@ export const DatePickerComponent = () => {
                         compact
                         disableWeekday={['Monday', 'Tuesday']} />
                 </div>
-            </DocsTile>
-            <DocsText>{defaultDatePickerCode}</DocsText>
-            <Separator />
+            </Example>
 
-            <h2>Range Date Picker</h2>
-            <DocsTile centered>
+            <Example
+                centered
+                title='Range Date Picker'>
                 <div className='fd-doc__margin--datePicker'>
                     <DatePicker disableFutureDates enableRangeSelection />
                     <DatePicker compact disablePastDates
                         enableRangeSelection />
                 </div>
-            </DocsTile>
-            <DocsText>{enableRangeSelectionDatePickerCode}</DocsText>
-        </div>
+            </Example>
+
+        </ComponentPage>
     );
 };

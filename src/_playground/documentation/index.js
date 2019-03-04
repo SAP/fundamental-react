@@ -1,6 +1,11 @@
+export { default as ComponentPage } from './Template/ComponentPage';
+export { default as Contents } from './Contents/Contents';
 export { default as Description } from './Description/Description';
+export { default as Example } from './Example/Example';
 export { default as Header } from './Header/Header';
+export { default as Heading } from './Heading/Heading';
 export { default as Import } from './Import/Import';
+export { default as MarkdownPage } from './Template/MarkdownPage';
 export { default as Playground } from './Playground/Playground';
 export { default as Properties } from './Properties/Properties';
 export { default as Separator } from './Separator/Separator';
