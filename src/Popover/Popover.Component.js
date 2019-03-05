@@ -31,7 +31,8 @@ export const PopoverComponent = () => {
                             </Menu>
                         }
                         control={<Icon glyph='cart' size='xl' />}
-                        id='jhqD0555' />
+                        id='jhqD0555'
+                        placement='left-start' />
 
                     <Popover
                         alignment='right'
@@ -47,7 +48,8 @@ export const PopoverComponent = () => {
                         }
                         control={<Image photo='https://placeimg.com/400/400/nature' size='m'
                             type='circle' />}
-                        id='jhqD0556' />
+                        id='jhqD0556'
+                        placement='top-start' />
 
                     <Popover
                         body={
@@ -63,7 +65,8 @@ export const PopoverComponent = () => {
                         control={<Identifier color={6} glyph='money-bills'
                             size='m' />}
                         id='jhqD0557'
-                        noArrow />
+                        noArrow
+                        placement='bottom-end' />
 
                     <Popover
                         alignment='right'
@@ -79,7 +82,8 @@ export const PopoverComponent = () => {
                         }
                         control={<Icon glyph='menu2' size='xl' />}
                         id='jhqD0558'
-                        noArrow />
+                        noArrow
+                        placement='right-end' />
                 </div>
             </Example>
 

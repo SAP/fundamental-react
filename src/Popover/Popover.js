@@ -1,6 +1,9 @@
+/* eslint-disable */
 import classnames from 'classnames';
-import { POPOVER_ALIGNMENTS } from '../utils/constants';
+// import { POPOVER_ALIGNMENTS } from '../utils/constants';
+import { POPPER_PLACEMENTS } from '../utils/constants';
 import PropTypes from 'prop-types';
+import { Manager, Reference, Popper } from 'react-popper';
 import React, { Component } from 'react';
 
 class Popover extends Component {
@@ -14,6 +17,7 @@ class Popover extends Component {
     }
 
     triggerBody = () => {
+        console.log('triggerBody');
         if (!this.state.isDisabled) {
             if (!this.state.isExpanded) {
                 document.addEventListener('mousedown', this.handleOutsideClick, false);
@@ -63,13 +67,18 @@ class Popover extends Component {
     render() {
         const {
             id,
-            alignment,
+            // alignment,
             noArrow,
             control,
             body,
             className,
+            placement,
             ...rest
         } = this.props;
+
+        const {
+            isExpanded
+        } = this.state;
 
         const popoverClasses = classnames(
             'fd-popover',
@@ -77,11 +86,11 @@ class Popover extends Component {
         );
 
         const popoverBodyClasses = classnames(
-            'fd-popover__body',
-            {
-                [`fd-popover__body--${alignment}`]: !!alignment,
-                'fd-popover__body--no-arrow': noArrow
-            }
+            'fd-popper__body'
+            // {
+            //     // [`fd-popover__body--${alignment}`]: !!alignment,
+            //     'fd-popover__body--no-arrow': noArrow
+            // }
         );
 
         return (
@@ -89,34 +98,84 @@ class Popover extends Component {
                 {...rest}
                 className={popoverClasses}
                 ref={node => {
-                    this.node = node;
+                    this.node = node
                 }}>
-                <div
-                    aria-controls={id}
-                    aria-expanded={this.state.isExpanded}
-                    className='fd-popover__control'
-                    onClick={this.triggerBody}>
-                    {control}
-                </div>
-                <div
-                    aria-hidden={!this.state.isExpanded}
-                    className={popoverBodyClasses}
-                    id={id}>
-                    {body}
-                </div>
+                <Manager>
+                    <Reference>
+                        {({ ref }) => (
+                            <div className='fd-popover__control' onClick={this.triggerBody} ref={ref}>
+                                {control}
+                            </div>
+                        )}
+                    </Reference>
+                    <Popper
+                        modifiers={{
+                            preventOverflow: {
+                                enabled: true,
+                                escapeWithReference: true,
+                                boundariesElement: 'scrollParent'
+                            },
+                            computeStyle: {
+                                enabled: true,
+                                gpuAcceleration: false
+                            }
+                        }}
+                        placement={placement}>
+                        {({ ref, style, placement, arrowProps }) => {
+                            if (!isExpanded) {
+                                return null;
+                            }
+
+                            return (
+                                <div className={popoverBodyClasses} id={id} ref={ref} style={style} data-placement={placement}>
+                                    {body}
+                                    <span className='fd-popper__arrow' ref={arrowProps.ref} style={arrowProps.style} />
+                                </div>
+                            );
+                        }}
+                    </Popper>
+                </Manager>
             </div>
         );
+
+        // return (
+        //     <div
+        //         {...rest}
+        //         className={popoverClasses}
+        //         ref={node => {
+        //             this.node = node;
+        //         }}>
+        //         <div
+        //             aria-controls={id}
+        //             aria-expanded={this.state.isExpanded}
+        //             className='fd-popover__control'
+        //             onClick={this.triggerBody}>
+        //             {control}
+        //         </div>
+        //         <div
+        //             aria-hidden={!this.state.isExpanded}
+        //             className={popoverBodyClasses}
+        //             id={id}>
+        //             {body}
+        //         </div>
+        //     </div>
+        // );
     }
 }
 
 Popover.displayName = 'Popover';
 
 Popover.propTypes = {
-    alignment: PropTypes.oneOf(POPOVER_ALIGNMENTS),
+    // alignment: PropTypes.oneOf(POPOVER_ALIGNMENTS),
     className: PropTypes.string,
     disabled: PropTypes.bool,
     id: PropTypes.string,
-    noArrow: PropTypes.bool
+    noArrow: PropTypes.bool,
+    placement: PropTypes.oneOf(POPPER_PLACEMENTS)
+};
+
+Popover.defaultProps = {
+    placement: 'left'
 };
 
 Popover.propDescriptions = {
