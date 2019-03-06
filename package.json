@@ -44,9 +44,13 @@
     "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive"
   },
   "dependencies": {
+    "chain-function": "^1.0.1",
     "classnames": "^2.2.6",
     "focus-trap-react": "^6.0.0",
+    "keycode": "^2.2.0",
     "prop-types": "^15.7.1",
+    "react-foco": "^1.2.0",
+    "react-overlays": "^1.1.2",
     "react-popper": "^1.3.3",
     "shortid": "^2.2.14"
   },

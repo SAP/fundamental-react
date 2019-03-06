@@ -3,6 +3,17 @@ import React from 'react';
 import { ComponentPage, Example } from '../_playground';
 import { Icon, Identifier, Image, Menu, Popover } from '../';
 
+const bodyContent = (
+    <Menu>
+        <Menu.List>
+            <Menu.Item url='/'>Option 1</Menu.Item>
+            <Menu.Item url='/'>Option 2</Menu.Item>
+            <Menu.Item url='/'>Option 3</Menu.Item>
+            <Menu.Item url='/'>Option 4</Menu.Item>
+        </Menu.List>
+    </Menu>
+);
+
 export const PopoverComponent = () => {
     return (
         <ComponentPage
@@ -17,73 +28,117 @@ export const PopoverComponent = () => {
 
             <Example
                 centered
-                title='Popover Example'>
+                title='Placements - Defaults'>
                 <div className='fd-doc__margin--popover'>
                     <Popover
-                        body={
-                            <Menu>
-                                <Menu.List>
-                                    <Menu.Item url='/'>Option 1</Menu.Item>
-                                    <Menu.Item url='/'>Option 2</Menu.Item>
-                                    <Menu.Item url='/'>Option 3</Menu.Item>
-                                    <Menu.Item url='/'>Option 4</Menu.Item>
-                                </Menu.List>
-                            </Menu>
-                        }
+                        body={bodyContent}
                         control={<Icon glyph='cart' size='xl' />}
-                        id='jhqD0555'
+                        placement='left' />
+
+                    <Popover
+                        body={bodyContent}
+                        control={<Image photo='https://placeimg.com/400/400/nature' size='m'
+                            type='circle' />}
+                        placement='top' />
+
+                    <Popover
+                        body={bodyContent}
+                        control={<Identifier color={6} glyph='money-bills'
+                            size='m' />}
+                        placement='bottom' />
+
+                    <Popover
+                        body={bodyContent}
+                        control={<Icon glyph='menu2' size='xl' />}
+                        placement='right' />
+                </div>
+            </Example>
+
+            <Example
+                centered
+                title='Placements - Start Variation'>
+                <div className='fd-doc__margin--popover'>
+                    <Popover
+                        body={bodyContent}
+                        control={<Icon glyph='cart' size='xl' />}
                         placement='left-start' />
 
                     <Popover
-                        alignment='right'
-                        body={
-                            <Menu>
-                                <Menu.List>
-                                    <Menu.Item url='/'>Option 1</Menu.Item>
-                                    <Menu.Item url='/'>Option 2</Menu.Item>
-                                    <Menu.Item url='/'>Option 3</Menu.Item>
-                                    <Menu.Item url='/'>Option 4</Menu.Item>
-                                </Menu.List>
-                            </Menu>
-                        }
+                        body={bodyContent}
                         control={<Image photo='https://placeimg.com/400/400/nature' size='m'
                             type='circle' />}
-                        id='jhqD0556'
                         placement='top-start' />
 
                     <Popover
-                        body={
-                            <Menu>
-                                <Menu.List>
-                                    <Menu.Item url='/'>Option 1</Menu.Item>
-                                    <Menu.Item url='/'>Option 2</Menu.Item>
-                                    <Menu.Item url='/'>Option 3</Menu.Item>
-                                    <Menu.Item url='/'>Option 4</Menu.Item>
-                                </Menu.List>
-                            </Menu>
-                        }
+                        body={bodyContent}
                         control={<Identifier color={6} glyph='money-bills'
                             size='m' />}
-                        id='jhqD0557'
-                        noArrow
+                        placement='bottom-start' />
+
+                    <Popover
+                        body={bodyContent}
+                        control={<Icon glyph='menu2' size='xl' />}
+                        placement='right-start' />
+                </div>
+            </Example>
+
+            <Example
+                centered
+                title='Placements - End Variation'>
+                <div className='fd-doc__margin--popover'>
+                    <Popover
+                        body={bodyContent}
+                        control={<Icon glyph='cart' size='xl' />}
+                        placement='left-end' />
+
+                    <Popover
+                        body={bodyContent}
+                        control={<Image photo='https://placeimg.com/400/400/nature' size='m'
+                            type='circle' />}
+                        placement='top-end' />
+
+                    <Popover
+                        body={bodyContent}
+                        control={<Identifier color={6} glyph='money-bills'
+                            size='m' />}
                         placement='bottom-end' />
 
                     <Popover
-                        alignment='right'
-                        body={
-                            <Menu>
-                                <Menu.List>
-                                    <Menu.Item url='/'>Option 1</Menu.Item>
-                                    <Menu.Item url='/'>Option 2</Menu.Item>
-                                    <Menu.Item url='/'>Option 3</Menu.Item>
-                                    <Menu.Item url='/'>Option 4</Menu.Item>
-                                </Menu.List>
-                            </Menu>
-                        }
+                        body={bodyContent}
                         control={<Icon glyph='menu2' size='xl' />}
-                        id='jhqD0558'
-                        noArrow
                         placement='right-end' />
+                </div>
+            </Example>
+
+            <Example
+                centered
+                title='Placements - No Arrows'>
+                <div className='fd-doc__margin--popover'>
+                    <Popover
+                        body={bodyContent}
+                        control={<Icon glyph='cart' size='xl' />}
+                        noArrow
+                        placement='left' />
+
+                    <Popover
+                        body={bodyContent}
+                        control={<Image photo='https://placeimg.com/400/400/nature' size='m'
+                            type='circle' />}
+                        noArrow
+                        placement='top' />
+
+                    <Popover
+                        body={bodyContent}
+                        control={<Identifier color={6} glyph='money-bills'
+                            size='m' />}
+                        noArrow
+                        placement='bottom' />
+
+                    <Popover
+                        body={bodyContent}
+                        control={<Icon glyph='menu2' size='xl' />}
+                        noArrow
+                        placement='right' />
                 </div>
             </Example>
 
