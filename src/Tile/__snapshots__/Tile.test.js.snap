@@ -83,62 +83,12 @@ exports[`<Tile /> create tile component 4`] = `
     className="fd-tile__actions yellow"
   >
     <div
-      className="fd-popover"
+      className="fd-popper__control fd-popover"
     >
-      <div
-        aria-expanded={false}
-        className="fd-popover__control"
+      <button
+        className="fd-button fd-button--standard sap-icon--vertical-grip"
         onClick={[Function]}
-      >
-        <button
-          className="fd-button fd-button--standard sap-icon--vertical-grip"
-        />
-      </div>
-      <div
-        aria-hidden={true}
-        className="fd-popover__body"
-      >
-        <nav
-          className="fd-menu"
-        >
-          <ul
-            className="fd-menu__list"
-          >
-            <li>
-              <a
-                className="fd-menu__item"
-                href="/"
-              >
-                Option 1
-              </a>
-            </li>
-            <li>
-              <a
-                className="fd-menu__item"
-                href="/"
-              >
-                Option 2
-              </a>
-            </li>
-            <li>
-              <a
-                className="fd-menu__item"
-                href="/"
-              >
-                Option 3
-              </a>
-            </li>
-            <li>
-              <a
-                className="fd-menu__item"
-                href="/"
-              >
-                Option 4
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </div>
+      />
     </div>
   </div>
 </div>
@@ -189,62 +139,12 @@ exports[`<Tile /> create tile component 6`] = `
     className="fd-tile__actions"
   >
     <div
-      className="fd-popover"
+      className="fd-popper__control fd-popover"
     >
-      <div
-        aria-expanded={false}
-        className="fd-popover__control"
+      <button
+        className="fd-button fd-button--standard sap-icon--vertical-grip"
         onClick={[Function]}
-      >
-        <button
-          className="fd-button fd-button--standard sap-icon--vertical-grip"
-        />
-      </div>
-      <div
-        aria-hidden={true}
-        className="fd-popover__body"
-      >
-        <nav
-          className="fd-menu"
-        >
-          <ul
-            className="fd-menu__list"
-          >
-            <li>
-              <a
-                className="fd-menu__item"
-                href="/"
-              >
-                Option 1
-              </a>
-            </li>
-            <li>
-              <a
-                className="fd-menu__item"
-                href="/"
-              >
-                Option 2
-              </a>
-            </li>
-            <li>
-              <a
-                className="fd-menu__item"
-                href="/"
-              >
-                Option 3
-              </a>
-            </li>
-            <li>
-              <a
-                className="fd-menu__item"
-                href="/"
-              >
-                Option 4
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </div>
+      />
     </div>
   </div>
 </div>

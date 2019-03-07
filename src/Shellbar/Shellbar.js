@@ -121,7 +121,6 @@ class Shellbar extends Component {
                         {productMenu && (
                             <div className='fd-product-menu'>
                                 <Popover
-                                    alignment='right'
                                     body={
                                         productMenu && (
                                             <Menu>
@@ -153,7 +152,8 @@ class Shellbar extends Component {
                                                 {productTitle}
                                             </span>
                                         </button>
-                                    } />
+                                    }
+                                    placement='right' />
                             </div>
                         )}
                     </div>
@@ -185,7 +185,6 @@ class Shellbar extends Component {
                                     <div className='fd-shellbar__action fd-shellbar__action--collapsible' key={index}>
                                         {action.menu ? (
                                             <Popover
-                                                alignment='right'
                                                 body={action.menu}
                                                 control={
                                                     <button
@@ -199,7 +198,8 @@ class Shellbar extends Component {
                                                             </span>
                                                         )}
                                                     </button>
-                                                } />
+                                                }
+                                                placement='right' />
                                         ) : (
                                             <button
                                                 aria-label={action.label}
@@ -221,7 +221,6 @@ class Shellbar extends Component {
                         {notifications && (
                             (notifications.notificationsBody || notifications.noNotificationsBody) ? (
                                 <Popover
-                                    alignment='right'
                                     body={
                                         ((notifications.notificationCount > 0) && notifications.notificationsBody) ||
                                         ((notifications.notificationCount <= 0) && notifications.noNotificationsBody)
@@ -234,7 +233,8 @@ class Shellbar extends Component {
                                                 </span>}
                                             </button>
                                         </div>
-                                    } />
+                                    }
+                                    placement='right' />
                             ) : (
                                 <div className='fd-shellbar__action fd-shellbar__action--collapsible'>
                                     <button aria-label='Notifications' className=' fd-button--shell sap-icon--bell'
@@ -250,7 +250,6 @@ class Shellbar extends Component {
                             (actions || searchInput || notifications) && <div className='fd-shellbar__action fd-shellbar__action--collapse'>
                                 <div className='fd-shellbar-collapse'>
                                     <Popover
-                                        alignment='right'
                                         body={
                                             <Menu>
                                                 {!this.state.showCollapsedProductSwitcherMenu ? (
@@ -299,7 +298,8 @@ class Shellbar extends Component {
                                                         className='fd-counter fd-counter--notification'> {this.state.totalNotifications > 0 && this.state.totalNotifications} </span>
                                                 </button>
                                             </div>
-                                        } />
+                                        }
+                                        placement='right' />
                                 </div>
                             </div>
                         }
@@ -307,7 +307,6 @@ class Shellbar extends Component {
                             <div className='fd-shellbar__action fd-shellbar__action--show-always'>
                                 <div className='fd-user-menu'>
                                     <Popover
-                                        alignment='right'
                                         body={
                                             profileMenu && (
                                                 <Menu>
@@ -347,7 +346,8 @@ class Shellbar extends Component {
                                                     {profile.initials}
                                                 </Identifier>
                                             )
-                                        } />
+                                        }
+                                        placement='right' />
                                 </div>
                             </div>
                         )}
@@ -355,7 +355,6 @@ class Shellbar extends Component {
                             <div className='fd-shellbar__action fd-shellbar__action--collapsible'>
                                 <div className='fd-product-switcher'>
                                     <Popover
-                                        alignment='right'
                                         body={
                                             <div className='fd-product-switcher__body'>
                                                 <nav>
@@ -376,7 +375,8 @@ class Shellbar extends Component {
                                                 </nav>
                                             </div>
                                         }
-                                        control={<button className=' fd-button--shell sap-icon--grid' />} />
+                                        control={<button className=' fd-button--shell sap-icon--grid' />}
+                                        placement='right' />
                                 </div>
                             </div>
                         )}

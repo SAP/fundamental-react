@@ -38,66 +38,15 @@ exports[`<Shellbar /> create shellbar 1`] = `
           className="fd-user-menu"
         >
           <div
-            className="fd-popover"
+            className="fd-popper__control fd-popover"
           >
-            <div
-              aria-expanded={false}
-              className="fd-popover__control"
+            <span
+              className="fd-identifier--xs fd-identifier--circle fd-has-background-color-accent-8"
               onClick={[Function]}
+              role=""
             >
-              <span
-                className="fd-identifier--xs fd-identifier--circle fd-has-background-color-accent-8"
-                role=""
-              >
-                JS
-              </span>
-            </div>
-            <div
-              aria-hidden={true}
-              className="fd-popover__body fd-popover__body--right"
-            >
-              <nav
-                className="fd-menu"
-              >
-                <ul
-                  className="fd-menu__list"
-                >
-                  <li>
-                    <a
-                      className="fd-menu__item"
-                    >
-                      John Snow
-                    </a>
-                  </li>
-                  <li
-                    onClick={[Function]}
-                  >
-                    <a
-                      className="fd-menu__item"
-                    >
-                      <span
-                        className="sap-icon--action-settings sap-icon--s"
-                      />
-                         
-                      Settings
-                    </a>
-                  </li>
-                  <li
-                    onClick={[Function]}
-                  >
-                    <a
-                      className="fd-menu__item"
-                    >
-                      <span
-                        className="sap-icon--log sap-icon--s"
-                      />
-                         
-                      Sign Out
-                    </a>
-                  </li>
-                </ul>
-              </nav>
-            </div>
+              JS
+            </span>
           </div>
         </div>
       </div>
@@ -144,66 +93,15 @@ exports[`<Shellbar /> create shellbar 2`] = `
           className="fd-user-menu"
         >
           <div
-            className="fd-popover"
+            className="fd-popper__control fd-popover"
           >
-            <div
-              aria-expanded={false}
-              className="fd-popover__control"
+            <span
+              className="fd-identifier--xs fd-identifier--circle fd-has-background-color-accent-8"
               onClick={[Function]}
+              role=""
             >
-              <span
-                className="fd-identifier--xs fd-identifier--circle fd-has-background-color-accent-8"
-                role=""
-              >
-                JS
-              </span>
-            </div>
-            <div
-              aria-hidden={true}
-              className="fd-popover__body fd-popover__body--right"
-            >
-              <nav
-                className="fd-menu"
-              >
-                <ul
-                  className="fd-menu__list"
-                >
-                  <li>
-                    <a
-                      className="fd-menu__item"
-                    >
-                      John Snow
-                    </a>
-                  </li>
-                  <li
-                    onClick={[Function]}
-                  >
-                    <a
-                      className="fd-menu__item"
-                    >
-                      <span
-                        className="sap-icon--action-settings sap-icon--s"
-                      />
-                         
-                      Settings
-                    </a>
-                  </li>
-                  <li
-                    onClick={[Function]}
-                  >
-                    <a
-                      className="fd-menu__item"
-                    >
-                      <span
-                        className="sap-icon--log sap-icon--s"
-                      />
-                         
-                      Sign Out
-                    </a>
-                  </li>
-                </ul>
-              </nav>
-            </div>
+              JS
+            </span>
           </div>
         </div>
       </div>
@@ -234,76 +132,18 @@ exports[`<Shellbar /> create shellbar 3`] = `
         className="fd-product-menu"
       >
         <div
-          className="fd-popover"
+          className="fd-popper__control fd-popover"
         >
-          <div
-            aria-expanded={false}
-            className="fd-popover__control"
+          <button
+            className="fd-product-menu__control"
             onClick={[Function]}
           >
-            <button
-              className="fd-product-menu__control"
+            <span
+              className="fd-shellbar__title fd-product-menu__title"
             >
-              <span
-                className="fd-shellbar__title fd-product-menu__title"
-              >
-                Corporate Portal
-              </span>
-            </button>
-          </div>
-          <div
-            aria-hidden={true}
-            className="fd-popover__body fd-popover__body--right"
-          >
-            <nav
-              className="fd-menu"
-            >
-              <ul
-                className="fd-menu__list"
-              >
-                <li
-                  onClick={[Function]}
-                >
-                  <a
-                    className="fd-menu__item"
-                  >
-                    <span
-                      className="sap-icon--log"
-                    />
-                       
-                    Application A
-                  </a>
-                </li>
-                <li
-                  onClick={[Function]}
-                >
-                  <a
-                    className="fd-menu__item"
-                  >
-                    Application B
-                  </a>
-                </li>
-                <li
-                  onClick={[Function]}
-                >
-                  <a
-                    className="fd-menu__item"
-                  >
-                    Application C
-                  </a>
-                </li>
-                <li
-                  onClick={[Function]}
-                >
-                  <a
-                    className="fd-menu__item"
-                  >
-                    Application D
-                  </a>
-                </li>
-              </ul>
-            </nav>
-          </div>
+              Corporate Portal
+            </span>
+          </button>
         </div>
       </div>
     </div>
@@ -375,124 +215,40 @@ exports[`<Shellbar /> create shellbar 3`] = `
         className="fd-shellbar__action fd-shellbar__action--collapsible"
       >
         <div
-          className="fd-popover"
+          className="fd-popper__control fd-popover"
         >
-          <div
-            aria-expanded={false}
-            className="fd-popover__control"
+          <button
+            aria-label="Settings"
+            className=" fd-button--shell sap-icon--settings"
             onClick={[Function]}
           >
-            <button
-              aria-label="Settings"
-              className=" fd-button--shell sap-icon--settings"
+            <span
+              aria-label="Unread count"
+              className="fd-counter fd-counter--notification"
             >
-              <span
-                aria-label="Unread count"
-                className="fd-counter fd-counter--notification"
-              >
-                5
-              </span>
-            </button>
-          </div>
-          <div
-            aria-hidden={true}
-            className="fd-popover__body fd-popover__body--right"
-          >
-            <nav
-              className="fd-menu"
-            >
-              <ul
-                className="fd-menu__list"
-              >
-                <li>
-                  <a
-                    className="fd-menu__item"
-                    href="/"
-                  >
-                    Option 1
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="fd-menu__item"
-                    href="/"
-                  >
-                    Option 2
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="fd-menu__item"
-                    href="/"
-                  >
-                    Option 3
-                  </a>
-                </li>
-              </ul>
-            </nav>
-          </div>
+              5
+            </span>
+          </button>
         </div>
       </div>
       <div
-        className="fd-popover"
+        className="fd-popper__control fd-popover"
       >
         <div
-          aria-expanded={false}
-          className="fd-popover__control"
+          className="fd-shellbar__action fd-shellbar__action--collapsible"
           onClick={[Function]}
         >
-          <div
-            className="fd-shellbar__action fd-shellbar__action--collapsible"
+          <button
+            aria-label="Notifications"
+            className=" fd-button--shell sap-icon--bell"
           >
-            <button
-              aria-label="Notifications"
-              className=" fd-button--shell sap-icon--bell"
+            <span
+              aria-label="Unread count"
+              className="fd-counter fd-counter--notification"
             >
-              <span
-                aria-label="Unread count"
-                className="fd-counter fd-counter--notification"
-              >
-                2
-              </span>
-            </button>
-          </div>
-        </div>
-        <div
-          aria-hidden={true}
-          className="fd-popover__body fd-popover__body--right"
-        >
-          <nav
-            className="fd-menu"
-          >
-            <ul
-              className="fd-menu__list"
-            >
-              <li>
-                <a
-                  className="fd-menu__item"
-                  href="/"
-                >
-                  Notification 1
-                </a>
-              </li>
-              <li>
-                <a
-                  className="fd-menu__item"
-                  href="/"
-                >
-                  Notification 2
-                </a>
-              </li>
-              <li>
-                <a
-                  className="fd-menu__item"
-                  href="/"
-                >
-                  Notification 3
-                </a>
-              </li>
-            </ul>
-          </nav>
+              2
+            </span>
+          </button>
         </div>
       </div>
       <div
@@ -502,109 +258,25 @@ exports[`<Shellbar /> create shellbar 3`] = `
           className="fd-shellbar-collapse"
         >
           <div
-            className="fd-popover"
+            className="fd-popper__control fd-popover"
           >
             <div
-              aria-expanded={false}
-              className="fd-popover__control"
+              className="fd-shellbar-collapse--control"
               onClick={[Function]}
+              role="button"
             >
-              <div
-                className="fd-shellbar-collapse--control"
-                role="button"
+              <button
+                className=" fd-button--shell sap-icon--overflow"
               >
-                <button
-                  className=" fd-button--shell sap-icon--overflow"
+                <span
+                  aria-label="Unread count"
+                  className="fd-counter fd-counter--notification"
                 >
-                  <span
-                    aria-label="Unread count"
-                    className="fd-counter fd-counter--notification"
-                  >
-                     
-                    7
-                     
-                  </span>
-                </button>
-              </div>
-            </div>
-            <div
-              aria-hidden={true}
-              className="fd-popover__body fd-popover__body--right"
-            >
-              <nav
-                className="fd-menu"
-              >
-                <ul
-                  className="fd-menu__list"
-                >
-                  <li
-                    onClick={[Function]}
-                  >
-                    <a
-                      className="fd-menu__item"
-                    >
-                      <span
-                        className="sap-icon--search"
-                      />
-                       
-                      Search
-                    </a>
-                  </li>
-                  <li
-                    onClick={[Function]}
-                  >
-                    <a
-                      className="fd-menu__item"
-                    >
-                      <span
-                        className="sap-icon--settings"
-                      >
-                        <span
-                          aria-label="Unread count"
-                          className="fd-counter fd-counter--notification"
-                        >
-                          5
-                        </span>
-                      </span>
-                       
-                      Settings
-                    </a>
-                  </li>
-                  <li
-                    onClick={[Function]}
-                  >
-                    <a
-                      className="fd-menu__item"
-                    >
-                      <span
-                        className="sap-icon--bell"
-                      >
-                        <span
-                          aria-label="Unread count"
-                          className="fd-counter fd-counter--notification"
-                        >
-                          2
-                        </span>
-                      </span>
-                       
-                      Notifications
-                    </a>
-                  </li>
-                  <li
-                    onClick={[Function]}
-                  >
-                    <a
-                      className="fd-menu__item"
-                    >
-                      <span
-                        className="sap-icon--grid"
-                      />
-                       
-                      Product Switcher
-                    </a>
-                  </li>
-                </ul>
-              </nav>
+                   
+                  7
+                   
+                </span>
+              </button>
             </div>
           </div>
         </div>
@@ -616,66 +288,15 @@ exports[`<Shellbar /> create shellbar 3`] = `
           className="fd-user-menu"
         >
           <div
-            className="fd-popover"
+            className="fd-popper__control fd-popover"
           >
-            <div
-              aria-expanded={false}
-              className="fd-popover__control"
+            <span
+              className="fd-identifier--xs fd-identifier--circle fd-has-background-color-accent-8"
               onClick={[Function]}
+              role=""
             >
-              <span
-                className="fd-identifier--xs fd-identifier--circle fd-has-background-color-accent-8"
-                role=""
-              >
-                JS
-              </span>
-            </div>
-            <div
-              aria-hidden={true}
-              className="fd-popover__body fd-popover__body--right"
-            >
-              <nav
-                className="fd-menu"
-              >
-                <ul
-                  className="fd-menu__list"
-                >
-                  <li>
-                    <a
-                      className="fd-menu__item"
-                    >
-                      John Snow
-                    </a>
-                  </li>
-                  <li
-                    onClick={[Function]}
-                  >
-                    <a
-                      className="fd-menu__item"
-                    >
-                      <span
-                        className="sap-icon--action-settings sap-icon--s"
-                      />
-                         
-                      Settings
-                    </a>
-                  </li>
-                  <li
-                    onClick={[Function]}
-                  >
-                    <a
-                      className="fd-menu__item"
-                    >
-                      <span
-                        className="sap-icon--log sap-icon--s"
-                      />
-                         
-                      Sign Out
-                    </a>
-                  </li>
-                </ul>
-              </nav>
-            </div>
+              JS
+            </span>
           </div>
         </div>
       </div>
@@ -686,62 +307,12 @@ exports[`<Shellbar /> create shellbar 3`] = `
           className="fd-product-switcher"
         >
           <div
-            className="fd-popover"
+            className="fd-popper__control fd-popover"
           >
-            <div
-              aria-expanded={false}
-              className="fd-popover__control"
+            <button
+              className=" fd-button--shell sap-icon--grid"
               onClick={[Function]}
-            >
-              <button
-                className=" fd-button--shell sap-icon--grid"
-              />
-            </div>
-            <div
-              aria-hidden={true}
-              className="fd-popover__body fd-popover__body--right"
-            >
-              <div
-                className="fd-product-switcher__body"
-              >
-                <nav>
-                  <ul>
-                    <li
-                      onClick={[Function]}
-                    >
-                      <span
-                        className="fd-product-switcher__product-icon"
-                      >
-                        <img
-                          alt="Fiori Home"
-                        />
-                      </span>
-                      <span
-                        className="fd-product-switcher__product-title"
-                      >
-                        Fiori Home
-                      </span>
-                    </li>
-                    <li
-                      onClick={[Function]}
-                    >
-                      <span
-                        className="fd-product-switcher__product-icon"
-                      >
-                        <img
-                          alt="S/4 HANA Cloud"
-                        />
-                      </span>
-                      <span
-                        className="fd-product-switcher__product-title"
-                      >
-                        S/4 HANA Cloud
-                      </span>
-                    </li>
-                  </ul>
-                </nav>
-              </div>
-            </div>
+            />
           </div>
         </div>
       </div>
@@ -772,76 +343,18 @@ exports[`<Shellbar /> create shellbar 4`] = `
         className="fd-product-menu"
       >
         <div
-          className="fd-popover"
+          className="fd-popper__control fd-popover"
         >
-          <div
-            aria-expanded={false}
-            className="fd-popover__control"
+          <button
+            className="fd-product-menu__control"
             onClick={[Function]}
           >
-            <button
-              className="fd-product-menu__control"
+            <span
+              className="fd-shellbar__title fd-product-menu__title"
             >
-              <span
-                className="fd-shellbar__title fd-product-menu__title"
-              >
-                Corporate Portal
-              </span>
-            </button>
-          </div>
-          <div
-            aria-hidden={true}
-            className="fd-popover__body fd-popover__body--right"
-          >
-            <nav
-              className="fd-menu"
-            >
-              <ul
-                className="fd-menu__list"
-              >
-                <li
-                  onClick={[Function]}
-                >
-                  <a
-                    className="fd-menu__item"
-                  >
-                    <span
-                      className="sap-icon--log"
-                    />
-                       
-                    Application A
-                  </a>
-                </li>
-                <li
-                  onClick={[Function]}
-                >
-                  <a
-                    className="fd-menu__item"
-                  >
-                    Application B
-                  </a>
-                </li>
-                <li
-                  onClick={[Function]}
-                >
-                  <a
-                    className="fd-menu__item"
-                  >
-                    Application C
-                  </a>
-                </li>
-                <li
-                  onClick={[Function]}
-                >
-                  <a
-                    className="fd-menu__item"
-                  >
-                    Application D
-                  </a>
-                </li>
-              </ul>
-            </nav>
-          </div>
+              Corporate Portal
+            </span>
+          </button>
         </div>
       </div>
     </div>
@@ -913,100 +426,33 @@ exports[`<Shellbar /> create shellbar 4`] = `
         className="fd-shellbar__action fd-shellbar__action--collapsible"
       >
         <div
-          className="fd-popover"
+          className="fd-popper__control fd-popover"
         >
-          <div
-            aria-expanded={false}
-            className="fd-popover__control"
+          <button
+            aria-label="Settings"
+            className=" fd-button--shell sap-icon--settings"
             onClick={[Function]}
           >
-            <button
-              aria-label="Settings"
-              className=" fd-button--shell sap-icon--settings"
+            <span
+              aria-label="Unread count"
+              className="fd-counter fd-counter--notification"
             >
-              <span
-                aria-label="Unread count"
-                className="fd-counter fd-counter--notification"
-              >
-                5
-              </span>
-            </button>
-          </div>
-          <div
-            aria-hidden={true}
-            className="fd-popover__body fd-popover__body--right"
-          >
-            <nav
-              className="fd-menu"
-            >
-              <ul
-                className="fd-menu__list"
-              >
-                <li>
-                  <a
-                    className="fd-menu__item"
-                    href="/"
-                  >
-                    Option 1
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="fd-menu__item"
-                    href="/"
-                  >
-                    Option 2
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="fd-menu__item"
-                    href="/"
-                  >
-                    Option 3
-                  </a>
-                </li>
-              </ul>
-            </nav>
-          </div>
+              5
+            </span>
+          </button>
         </div>
       </div>
       <div
-        className="fd-popover"
+        className="fd-popper__control fd-popover"
       >
         <div
-          aria-expanded={false}
-          className="fd-popover__control"
+          className="fd-shellbar__action fd-shellbar__action--collapsible"
           onClick={[Function]}
         >
-          <div
-            className="fd-shellbar__action fd-shellbar__action--collapsible"
-          >
-            <button
-              aria-label="Notifications"
-              className=" fd-button--shell sap-icon--bell"
-            />
-          </div>
-        </div>
-        <div
-          aria-hidden={true}
-          className="fd-popover__body fd-popover__body--right"
-        >
-          <nav
-            className="fd-menu"
-          >
-            <ul
-              className="fd-menu__list"
-            >
-              <li>
-                <a
-                  className="fd-menu__item"
-                >
-                  There are no notifications
-                </a>
-              </li>
-            </ul>
-          </nav>
+          <button
+            aria-label="Notifications"
+            className=" fd-button--shell sap-icon--bell"
+          />
         </div>
       </div>
       <div
@@ -1016,102 +462,25 @@ exports[`<Shellbar /> create shellbar 4`] = `
           className="fd-shellbar-collapse"
         >
           <div
-            className="fd-popover"
+            className="fd-popper__control fd-popover"
           >
             <div
-              aria-expanded={false}
-              className="fd-popover__control"
+              className="fd-shellbar-collapse--control"
               onClick={[Function]}
+              role="button"
             >
-              <div
-                className="fd-shellbar-collapse--control"
-                role="button"
+              <button
+                className=" fd-button--shell sap-icon--overflow"
               >
-                <button
-                  className=" fd-button--shell sap-icon--overflow"
+                <span
+                  aria-label="Unread count"
+                  className="fd-counter fd-counter--notification"
                 >
-                  <span
-                    aria-label="Unread count"
-                    className="fd-counter fd-counter--notification"
-                  >
-                     
-                    5
-                     
-                  </span>
-                </button>
-              </div>
-            </div>
-            <div
-              aria-hidden={true}
-              className="fd-popover__body fd-popover__body--right"
-            >
-              <nav
-                className="fd-menu"
-              >
-                <ul
-                  className="fd-menu__list"
-                >
-                  <li
-                    onClick={[Function]}
-                  >
-                    <a
-                      className="fd-menu__item"
-                    >
-                      <span
-                        className="sap-icon--search"
-                      />
-                       
-                      Search
-                    </a>
-                  </li>
-                  <li
-                    onClick={[Function]}
-                  >
-                    <a
-                      className="fd-menu__item"
-                    >
-                      <span
-                        className="sap-icon--settings"
-                      >
-                        <span
-                          aria-label="Unread count"
-                          className="fd-counter fd-counter--notification"
-                        >
-                          5
-                        </span>
-                      </span>
-                       
-                      Settings
-                    </a>
-                  </li>
-                  <li
-                    onClick={[Function]}
-                  >
-                    <a
-                      className="fd-menu__item"
-                    >
-                      <span
-                        className="sap-icon--bell"
-                      />
-                       
-                      Notifications
-                    </a>
-                  </li>
-                  <li
-                    onClick={[Function]}
-                  >
-                    <a
-                      className="fd-menu__item"
-                    >
-                      <span
-                        className="sap-icon--grid"
-                      />
-                       
-                      Product Switcher
-                    </a>
-                  </li>
-                </ul>
-              </nav>
+                   
+                  5
+                   
+                </span>
+              </button>
             </div>
           </div>
         </div>
@@ -1123,66 +492,15 @@ exports[`<Shellbar /> create shellbar 4`] = `
           className="fd-user-menu"
         >
           <div
-            className="fd-popover"
+            className="fd-popper__control fd-popover"
           >
-            <div
-              aria-expanded={false}
-              className="fd-popover__control"
+            <span
+              className="fd-identifier--xs fd-identifier--circle fd-has-background-color-accent-8"
               onClick={[Function]}
+              role=""
             >
-              <span
-                className="fd-identifier--xs fd-identifier--circle fd-has-background-color-accent-8"
-                role=""
-              >
-                JS
-              </span>
-            </div>
-            <div
-              aria-hidden={true}
-              className="fd-popover__body fd-popover__body--right"
-            >
-              <nav
-                className="fd-menu"
-              >
-                <ul
-                  className="fd-menu__list"
-                >
-                  <li>
-                    <a
-                      className="fd-menu__item"
-                    >
-                      John Snow
-                    </a>
-                  </li>
-                  <li
-                    onClick={[Function]}
-                  >
-                    <a
-                      className="fd-menu__item"
-                    >
-                      <span
-                        className="sap-icon--action-settings sap-icon--s"
-                      />
-                         
-                      Settings
-                    </a>
-                  </li>
-                  <li
-                    onClick={[Function]}
-                  >
-                    <a
-                      className="fd-menu__item"
-                    >
-                      <span
-                        className="sap-icon--log sap-icon--s"
-                      />
-                         
-                      Sign Out
-                    </a>
-                  </li>
-                </ul>
-              </nav>
-            </div>
+              JS
+            </span>
           </div>
         </div>
       </div>
@@ -1193,62 +511,12 @@ exports[`<Shellbar /> create shellbar 4`] = `
           className="fd-product-switcher"
         >
           <div
-            className="fd-popover"
+            className="fd-popper__control fd-popover"
           >
-            <div
-              aria-expanded={false}
-              className="fd-popover__control"
+            <button
+              className=" fd-button--shell sap-icon--grid"
               onClick={[Function]}
-            >
-              <button
-                className=" fd-button--shell sap-icon--grid"
-              />
-            </div>
-            <div
-              aria-hidden={true}
-              className="fd-popover__body fd-popover__body--right"
-            >
-              <div
-                className="fd-product-switcher__body"
-              >
-                <nav>
-                  <ul>
-                    <li
-                      onClick={[Function]}
-                    >
-                      <span
-                        className="fd-product-switcher__product-icon"
-                      >
-                        <img
-                          alt="Fiori Home"
-                        />
-                      </span>
-                      <span
-                        className="fd-product-switcher__product-title"
-                      >
-                        Fiori Home
-                      </span>
-                    </li>
-                    <li
-                      onClick={[Function]}
-                    >
-                      <span
-                        className="fd-product-switcher__product-icon"
-                      >
-                        <img
-                          alt="S/4 HANA Cloud"
-                        />
-                      </span>
-                      <span
-                        className="fd-product-switcher__product-title"
-                      >
-                        S/4 HANA Cloud
-                      </span>
-                    </li>
-                  </ul>
-                </nav>
-              </div>
-            </div>
+            />
           </div>
         </div>
       </div>
@@ -1279,76 +547,18 @@ exports[`<Shellbar /> create shellbar 5`] = `
         className="fd-product-menu"
       >
         <div
-          className="fd-popover"
+          className="fd-popper__control fd-popover"
         >
-          <div
-            aria-expanded={false}
-            className="fd-popover__control"
+          <button
+            className="fd-product-menu__control"
             onClick={[Function]}
           >
-            <button
-              className="fd-product-menu__control"
+            <span
+              className="fd-shellbar__title fd-product-menu__title"
             >
-              <span
-                className="fd-shellbar__title fd-product-menu__title"
-              >
-                Corporate Portal
-              </span>
-            </button>
-          </div>
-          <div
-            aria-hidden={true}
-            className="fd-popover__body fd-popover__body--right"
-          >
-            <nav
-              className="fd-menu"
-            >
-              <ul
-                className="fd-menu__list"
-              >
-                <li
-                  onClick={[Function]}
-                >
-                  <a
-                    className="fd-menu__item"
-                  >
-                    <span
-                      className="sap-icon--log"
-                    />
-                       
-                    Application A
-                  </a>
-                </li>
-                <li
-                  onClick={[Function]}
-                >
-                  <a
-                    className="fd-menu__item"
-                  >
-                    Application B
-                  </a>
-                </li>
-                <li
-                  onClick={[Function]}
-                >
-                  <a
-                    className="fd-menu__item"
-                  >
-                    Application C
-                  </a>
-                </li>
-                <li
-                  onClick={[Function]}
-                >
-                  <a
-                    className="fd-menu__item"
-                  >
-                    Application D
-                  </a>
-                </li>
-              </ul>
-            </nav>
-          </div>
+              Corporate Portal
+            </span>
+          </button>
         </div>
       </div>
     </div>
@@ -1433,41 +643,16 @@ exports[`<Shellbar /> create shellbar 5`] = `
         </button>
       </div>
       <div
-        className="fd-popover"
+        className="fd-popper__control fd-popover"
       >
         <div
-          aria-expanded={false}
-          className="fd-popover__control"
+          className="fd-shellbar__action fd-shellbar__action--collapsible"
           onClick={[Function]}
         >
-          <div
-            className="fd-shellbar__action fd-shellbar__action--collapsible"
-          >
-            <button
-              aria-label="Notifications"
-              className=" fd-button--shell sap-icon--bell"
-            />
-          </div>
-        </div>
-        <div
-          aria-hidden={true}
-          className="fd-popover__body fd-popover__body--right"
-        >
-          <nav
-            className="fd-menu"
-          >
-            <ul
-              className="fd-menu__list"
-            >
-              <li>
-                <a
-                  className="fd-menu__item"
-                >
-                  There are no notifications
-                </a>
-              </li>
-            </ul>
-          </nav>
+          <button
+            aria-label="Notifications"
+            className=" fd-button--shell sap-icon--bell"
+          />
         </div>
       </div>
       <div
@@ -1477,102 +662,25 @@ exports[`<Shellbar /> create shellbar 5`] = `
           className="fd-shellbar-collapse"
         >
           <div
-            className="fd-popover"
+            className="fd-popper__control fd-popover"
           >
             <div
-              aria-expanded={false}
-              className="fd-popover__control"
+              className="fd-shellbar-collapse--control"
               onClick={[Function]}
+              role="button"
             >
-              <div
-                className="fd-shellbar-collapse--control"
-                role="button"
+              <button
+                className=" fd-button--shell sap-icon--overflow"
               >
-                <button
-                  className=" fd-button--shell sap-icon--overflow"
+                <span
+                  aria-label="Unread count"
+                  className="fd-counter fd-counter--notification"
                 >
-                  <span
-                    aria-label="Unread count"
-                    className="fd-counter fd-counter--notification"
-                  >
-                     
-                    5
-                     
-                  </span>
-                </button>
-              </div>
-            </div>
-            <div
-              aria-hidden={true}
-              className="fd-popover__body fd-popover__body--right"
-            >
-              <nav
-                className="fd-menu"
-              >
-                <ul
-                  className="fd-menu__list"
-                >
-                  <li
-                    onClick={[Function]}
-                  >
-                    <a
-                      className="fd-menu__item"
-                    >
-                      <span
-                        className="sap-icon--search"
-                      />
-                       
-                      Search
-                    </a>
-                  </li>
-                  <li
-                    onClick={[Function]}
-                  >
-                    <a
-                      className="fd-menu__item"
-                    >
-                      <span
-                        className="sap-icon--settings"
-                      >
-                        <span
-                          aria-label="Unread count"
-                          className="fd-counter fd-counter--notification"
-                        >
-                          5
-                        </span>
-                      </span>
-                       
-                      Settings
-                    </a>
-                  </li>
-                  <li
-                    onClick={[Function]}
-                  >
-                    <a
-                      className="fd-menu__item"
-                    >
-                      <span
-                        className="sap-icon--bell"
-                      />
-                       
-                      Notifications
-                    </a>
-                  </li>
-                  <li
-                    onClick={[Function]}
-                  >
-                    <a
-                      className="fd-menu__item"
-                    >
-                      <span
-                        className="sap-icon--grid"
-                      />
-                       
-                      Product Switcher
-                    </a>
-                  </li>
-                </ul>
-              </nav>
+                   
+                  5
+                   
+                </span>
+              </button>
             </div>
           </div>
         </div>
@@ -1584,66 +692,15 @@ exports[`<Shellbar /> create shellbar 5`] = `
           className="fd-user-menu"
         >
           <div
-            className="fd-popover"
+            className="fd-popper__control fd-popover"
           >
-            <div
-              aria-expanded={false}
-              className="fd-popover__control"
+            <span
+              className="fd-identifier--xs fd-identifier--circle fd-has-background-color-accent-8"
               onClick={[Function]}
+              role=""
             >
-              <span
-                className="fd-identifier--xs fd-identifier--circle fd-has-background-color-accent-8"
-                role=""
-              >
-                JS
-              </span>
-            </div>
-            <div
-              aria-hidden={true}
-              className="fd-popover__body fd-popover__body--right"
-            >
-              <nav
-                className="fd-menu"
-              >
-                <ul
-                  className="fd-menu__list"
-                >
-                  <li>
-                    <a
-                      className="fd-menu__item"
-                    >
-                      John Snow
-                    </a>
-                  </li>
-                  <li
-                    onClick={[Function]}
-                  >
-                    <a
-                      className="fd-menu__item"
-                    >
-                      <span
-                        className="sap-icon--action-settings sap-icon--s"
-                      />
-                         
-                      Settings
-                    </a>
-                  </li>
-                  <li
-                    onClick={[Function]}
-                  >
-                    <a
-                      className="fd-menu__item"
-                    >
-                      <span
-                        className="sap-icon--log sap-icon--s"
-                      />
-                         
-                      Sign Out
-                    </a>
-                  </li>
-                </ul>
-              </nav>
-            </div>
+              JS
+            </span>
           </div>
         </div>
       </div>
@@ -1654,62 +711,12 @@ exports[`<Shellbar /> create shellbar 5`] = `
           className="fd-product-switcher"
         >
           <div
-            className="fd-popover"
+            className="fd-popper__control fd-popover"
           >
-            <div
-              aria-expanded={false}
-              className="fd-popover__control"
+            <button
+              className=" fd-button--shell sap-icon--grid"
               onClick={[Function]}
-            >
-              <button
-                className=" fd-button--shell sap-icon--grid"
-              />
-            </div>
-            <div
-              aria-hidden={true}
-              className="fd-popover__body fd-popover__body--right"
-            >
-              <div
-                className="fd-product-switcher__body"
-              >
-                <nav>
-                  <ul>
-                    <li
-                      onClick={[Function]}
-                    >
-                      <span
-                        className="fd-product-switcher__product-icon"
-                      >
-                        <img
-                          alt="Fiori Home"
-                        />
-                      </span>
-                      <span
-                        className="fd-product-switcher__product-title"
-                      >
-                        Fiori Home
-                      </span>
-                    </li>
-                    <li
-                      onClick={[Function]}
-                    >
-                      <span
-                        className="fd-product-switcher__product-icon"
-                      >
-                        <img
-                          alt="S/4 HANA Cloud"
-                        />
-                      </span>
-                      <span
-                        className="fd-product-switcher__product-title"
-                      >
-                        S/4 HANA Cloud
-                      </span>
-                    </li>
-                  </ul>
-                </nav>
-              </div>
-            </div>
+            />
           </div>
         </div>
       </div>
@@ -1740,76 +747,18 @@ exports[`<Shellbar /> create shellbar 6`] = `
         className="fd-product-menu"
       >
         <div
-          className="fd-popover"
+          className="fd-popper__control fd-popover"
         >
-          <div
-            aria-expanded={false}
-            className="fd-popover__control"
+          <button
+            className="fd-product-menu__control"
             onClick={[Function]}
           >
-            <button
-              className="fd-product-menu__control"
+            <span
+              className="fd-shellbar__title fd-product-menu__title"
             >
-              <span
-                className="fd-shellbar__title fd-product-menu__title"
-              >
-                Corporate Portal
-              </span>
-            </button>
-          </div>
-          <div
-            aria-hidden={true}
-            className="fd-popover__body fd-popover__body--right"
-          >
-            <nav
-              className="fd-menu"
-            >
-              <ul
-                className="fd-menu__list"
-              >
-                <li
-                  onClick={[Function]}
-                >
-                  <a
-                    className="fd-menu__item"
-                  >
-                    <span
-                      className="sap-icon--log"
-                    />
-                       
-                    Application A
-                  </a>
-                </li>
-                <li
-                  onClick={[Function]}
-                >
-                  <a
-                    className="fd-menu__item"
-                  >
-                    Application B
-                  </a>
-                </li>
-                <li
-                  onClick={[Function]}
-                >
-                  <a
-                    className="fd-menu__item"
-                  >
-                    Application C
-                  </a>
-                </li>
-                <li
-                  onClick={[Function]}
-                >
-                  <a
-                    className="fd-menu__item"
-                  >
-                    Application D
-                  </a>
-                </li>
-              </ul>
-            </nav>
-          </div>
+              Corporate Portal
+            </span>
+          </button>
         </div>
       </div>
     </div>
@@ -1881,62 +830,20 @@ exports[`<Shellbar /> create shellbar 6`] = `
         className="fd-shellbar__action fd-shellbar__action--collapsible"
       >
         <div
-          className="fd-popover"
+          className="fd-popper__control fd-popover"
         >
-          <div
-            aria-expanded={false}
-            className="fd-popover__control"
+          <button
+            aria-label="Settings"
+            className=" fd-button--shell sap-icon--settings"
             onClick={[Function]}
           >
-            <button
-              aria-label="Settings"
-              className=" fd-button--shell sap-icon--settings"
+            <span
+              aria-label="Unread count"
+              className="fd-counter fd-counter--notification"
             >
-              <span
-                aria-label="Unread count"
-                className="fd-counter fd-counter--notification"
-              >
-                5
-              </span>
-            </button>
-          </div>
-          <div
-            aria-hidden={true}
-            className="fd-popover__body fd-popover__body--right"
-          >
-            <nav
-              className="fd-menu"
-            >
-              <ul
-                className="fd-menu__list"
-              >
-                <li>
-                  <a
-                    className="fd-menu__item"
-                    href="/"
-                  >
-                    Option 1
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="fd-menu__item"
-                    href="/"
-                  >
-                    Option 2
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="fd-menu__item"
-                    href="/"
-                  >
-                    Option 3
-                  </a>
-                </li>
-              </ul>
-            </nav>
-          </div>
+              5
+            </span>
+          </button>
         </div>
       </div>
       <div
@@ -1962,109 +869,25 @@ exports[`<Shellbar /> create shellbar 6`] = `
           className="fd-shellbar-collapse"
         >
           <div
-            className="fd-popover"
+            className="fd-popper__control fd-popover"
           >
             <div
-              aria-expanded={false}
-              className="fd-popover__control"
+              className="fd-shellbar-collapse--control"
               onClick={[Function]}
+              role="button"
             >
-              <div
-                className="fd-shellbar-collapse--control"
-                role="button"
+              <button
+                className=" fd-button--shell sap-icon--overflow"
               >
-                <button
-                  className=" fd-button--shell sap-icon--overflow"
+                <span
+                  aria-label="Unread count"
+                  className="fd-counter fd-counter--notification"
                 >
-                  <span
-                    aria-label="Unread count"
-                    className="fd-counter fd-counter--notification"
-                  >
-                     
-                    7
-                     
-                  </span>
-                </button>
-              </div>
-            </div>
-            <div
-              aria-hidden={true}
-              className="fd-popover__body fd-popover__body--right"
-            >
-              <nav
-                className="fd-menu"
-              >
-                <ul
-                  className="fd-menu__list"
-                >
-                  <li
-                    onClick={[Function]}
-                  >
-                    <a
-                      className="fd-menu__item"
-                    >
-                      <span
-                        className="sap-icon--search"
-                      />
-                       
-                      Search
-                    </a>
-                  </li>
-                  <li
-                    onClick={[Function]}
-                  >
-                    <a
-                      className="fd-menu__item"
-                    >
-                      <span
-                        className="sap-icon--settings"
-                      >
-                        <span
-                          aria-label="Unread count"
-                          className="fd-counter fd-counter--notification"
-                        >
-                          5
-                        </span>
-                      </span>
-                       
-                      Settings
-                    </a>
-                  </li>
-                  <li
-                    onClick={[Function]}
-                  >
-                    <a
-                      className="fd-menu__item"
-                    >
-                      <span
-                        className="sap-icon--bell"
-                      >
-                        <span
-                          aria-label="Unread count"
-                          className="fd-counter fd-counter--notification"
-                        >
-                          2
-                        </span>
-                      </span>
-                       
-                      Notifications
-                    </a>
-                  </li>
-                  <li
-                    onClick={[Function]}
-                  >
-                    <a
-                      className="fd-menu__item"
-                    >
-                      <span
-                        className="sap-icon--grid"
-                      />
-                       
-                      Product Switcher
-                    </a>
-                  </li>
-                </ul>
-              </nav>
+                   
+                  7
+                   
+                </span>
+              </button>
             </div>
           </div>
         </div>
@@ -2076,69 +899,18 @@ exports[`<Shellbar /> create shellbar 6`] = `
           className="fd-user-menu"
         >
           <div
-            className="fd-popover"
+            className="fd-popper__control fd-popover"
           >
-            <div
-              aria-expanded={false}
-              className="fd-popover__control"
+            <span
+              className="fd-identifier--xs fd-identifier--circle fd-identifier--thumbnail"
               onClick={[Function]}
-            >
-              <span
-                className="fd-identifier--xs fd-identifier--circle fd-identifier--thumbnail"
-                role="presentation"
-                style={
-                  Object {
-                    "backgroundImage": "url(//unpkg.com/fiori-fundamentals/dist/images/sap-logo.png)",
-                  }
+              role="presentation"
+              style={
+                Object {
+                  "backgroundImage": "url(//unpkg.com/fiori-fundamentals/dist/images/sap-logo.png)",
                 }
-              />
-            </div>
-            <div
-              aria-hidden={true}
-              className="fd-popover__body fd-popover__body--right"
-            >
-              <nav
-                className="fd-menu"
-              >
-                <ul
-                  className="fd-menu__list"
-                >
-                  <li>
-                    <a
-                      className="fd-menu__item"
-                    >
-                      John Snow
-                    </a>
-                  </li>
-                  <li
-                    onClick={[Function]}
-                  >
-                    <a
-                      className="fd-menu__item"
-                    >
-                      <span
-                        className="sap-icon--action-settings sap-icon--s"
-                      />
-                         
-                      Settings
-                    </a>
-                  </li>
-                  <li
-                    onClick={[Function]}
-                  >
-                    <a
-                      className="fd-menu__item"
-                    >
-                      <span
-                        className="sap-icon--log sap-icon--s"
-                      />
-                         
-                      Sign Out
-                    </a>
-                  </li>
-                </ul>
-              </nav>
-            </div>
+              }
+            />
           </div>
         </div>
       </div>
@@ -2149,62 +921,12 @@ exports[`<Shellbar /> create shellbar 6`] = `
           className="fd-product-switcher"
         >
           <div
-            className="fd-popover"
+            className="fd-popper__control fd-popover"
           >
-            <div
-              aria-expanded={false}
-              className="fd-popover__control"
+            <button
+              className=" fd-button--shell sap-icon--grid"
               onClick={[Function]}
-            >
-              <button
-                className=" fd-button--shell sap-icon--grid"
-              />
-            </div>
-            <div
-              aria-hidden={true}
-              className="fd-popover__body fd-popover__body--right"
-            >
-              <div
-                className="fd-product-switcher__body"
-              >
-                <nav>
-                  <ul>
-                    <li
-                      onClick={[Function]}
-                    >
-                      <span
-                        className="fd-product-switcher__product-icon"
-                      >
-                        <img
-                          alt="Fiori Home"
-                        />
-                      </span>
-                      <span
-                        className="fd-product-switcher__product-title"
-                      >
-                        Fiori Home
-                      </span>
-                    </li>
-                    <li
-                      onClick={[Function]}
-                    >
-                      <span
-                        className="fd-product-switcher__product-icon"
-                      >
-                        <img
-                          alt="S/4 HANA Cloud"
-                        />
-                      </span>
-                      <span
-                        className="fd-product-switcher__product-title"
-                      >
-                        S/4 HANA Cloud
-                      </span>
-                    </li>
-                  </ul>
-                </nav>
-              </div>
-            </div>
+            />
           </div>
         </div>
       </div>

@@ -291,8 +291,10 @@ describe('<TimePicker />', () => {
         test('should allow props to be spread to the TimePicker component\'s Time component', () => {
             const element = mount(<TimePicker id='id' timeProps={{ 'data-sample': 'Sample' }} />);
 
+            element.find('.greg123').simulate('click');
+
             expect(
-                element.find('#id-time').first().getDOMNode().attributes['data-sample'].value
+                element.find('div.fd-popper__body').getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
         });
     });

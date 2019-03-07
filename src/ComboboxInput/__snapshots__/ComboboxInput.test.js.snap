@@ -5,78 +5,28 @@ exports[`<ComboboxInput /> create combobox input 1`] = `
   className="fd-combobox-input"
 >
   <div
-    className="fd-popover"
+    className="fd-popper__control fd-popover"
   >
     <div
-      aria-expanded={false}
-      className="fd-popover__control"
+      className="fd-combobox-control"
       onClick={[Function]}
     >
       <div
-        className="fd-combobox-control"
+        className="fd-input-group fd-input-group--after"
       >
-        <div
-          className="fd-input-group fd-input-group--after"
+        <input
+          className="fd-input"
+          placeholder="Select Fruit"
+          type="text"
+        />
+        <span
+          className="fd-input-group__addon fd-input-group__addon--after fd-input-group__addon--button"
         >
-          <input
-            className="fd-input"
-            placeholder="Select Fruit"
-            type="text"
+          <button
+            className=" fd-button--light sap-icon--navigation-down-arrow"
           />
-          <span
-            className="fd-input-group__addon fd-input-group__addon--after fd-input-group__addon--button"
-          >
-            <button
-              className=" fd-button--light sap-icon--navigation-down-arrow"
-            />
-          </span>
-        </div>
+        </span>
       </div>
-    </div>
-    <div
-      aria-hidden={true}
-      className="fd-popover__body fd-popover__body--no-arrow"
-    >
-      <nav
-        className="fd-menu"
-      >
-        <ul
-          className="fd-menu__list"
-        >
-          <li>
-            <a
-              className="fd-menu__item"
-              href="/"
-            >
-              Pear
-            </a>
-          </li>
-          <li>
-            <a
-              className="fd-menu__item"
-              href="/"
-            >
-              Strawberry
-            </a>
-          </li>
-          <li>
-            <a
-              className="fd-menu__item"
-              href="/"
-            >
-              Raspberry
-            </a>
-          </li>
-          <li>
-            <a
-              className="fd-menu__item fd-menu__link"
-              href="/"
-            >
-              + New Item
-            </a>
-          </li>
-        </ul>
-      </nav>
     </div>
   </div>
 </div>
@@ -87,78 +37,28 @@ exports[`<ComboboxInput /> create combobox input 2`] = `
   className="fd-combobox-input blue"
 >
   <div
-    className="fd-popover"
+    className="fd-popper__control fd-popover"
   >
     <div
-      aria-expanded={false}
-      className="fd-popover__control"
+      className="fd-combobox-control"
       onClick={[Function]}
     >
       <div
-        className="fd-combobox-control"
+        className="fd-input-group fd-input-group--after fd-input-group--compact"
       >
-        <div
-          className="fd-input-group fd-input-group--after fd-input-group--compact"
+        <input
+          className="fd-input fd-input--compact"
+          placeholder="Select Fruit"
+          type="text"
+        />
+        <span
+          className="fd-input-group__addon fd-input-group__addon--after fd-input-group__addon--button"
         >
-          <input
-            className="fd-input fd-input--compact"
-            placeholder="Select Fruit"
-            type="text"
+          <button
+            className=" fd-button--light sap-icon--navigation-down-arrow"
           />
-          <span
-            className="fd-input-group__addon fd-input-group__addon--after fd-input-group__addon--button"
-          >
-            <button
-              className=" fd-button--light sap-icon--navigation-down-arrow"
-            />
-          </span>
-        </div>
+        </span>
       </div>
-    </div>
-    <div
-      aria-hidden={true}
-      className="fd-popover__body fd-popover__body--no-arrow"
-    >
-      <nav
-        className="fd-menu"
-      >
-        <ul
-          className="fd-menu__list"
-        >
-          <li>
-            <a
-              className="fd-menu__item"
-              href="/"
-            >
-              Pear
-            </a>
-          </li>
-          <li>
-            <a
-              className="fd-menu__item"
-              href="/"
-            >
-              Strawberry
-            </a>
-          </li>
-          <li>
-            <a
-              className="fd-menu__item"
-              href="/"
-            >
-              Raspberry
-            </a>
-          </li>
-          <li>
-            <a
-              className="fd-menu__item fd-menu__link"
-              href="/"
-            >
-              + New Item
-            </a>
-          </li>
-        </ul>
-      </nav>
     </div>
   </div>
 </div>

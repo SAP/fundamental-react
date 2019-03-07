@@ -9,161 +9,34 @@ exports[`<TimePicker /> create time picker 1`] = `
     className="fd-popover fd-popover--no-arrow"
   >
     <div
-      className="fd-popover"
+      className="fd-popper__control fd-popover"
     >
       <div
-        aria-controls="myTime-popover"
-        aria-expanded={false}
         className="fd-popover__control"
-        onClick={[Function]}
       >
         <div
-          className="fd-popover__control"
+          className="fd-input-group fd-input-group--after"
         >
-          <div
-            className="fd-input-group fd-input-group--after"
+          <input
+            className="fd-input"
+            id="myTime-input"
+            onBlur={[Function]}
+            onChange={[Function]}
+            placeholder="hh:mm:ss"
+            type="text"
+            value=""
+          />
+          <span
+            className="fd-input-group__addon fd-input-group__addon--after fd-input-group__addon--button "
           >
-            <input
-              className="fd-input"
-              id="myTime-input"
-              onBlur={[Function]}
-              onChange={[Function]}
-              placeholder="hh:mm:ss"
-              type="text"
-              value=""
+            <button
+              aria-controls="rthHR811"
+              aria-expanded="false"
+              aria-haspopup="true"
+              className="fd-button--light fd-button--compact sap-icon--fob-watch fd-popover__control"
+              id="myTime-button"
             />
-            <span
-              className="fd-input-group__addon fd-input-group__addon--after fd-input-group__addon--button "
-            >
-              <button
-                aria-controls="rthHR811"
-                aria-expanded="false"
-                aria-haspopup="true"
-                className="fd-button--light fd-button--compact sap-icon--fob-watch fd-popover__control"
-                id="myTime-button"
-              />
-            </span>
-          </div>
-        </div>
-      </div>
-      <div
-        aria-hidden={true}
-        className="fd-popover__body fd-popover__body--no-arrow"
-        id="myTime-popover"
-      >
-        <div
-          className="fd-time"
-          id="myTime-time"
-        >
-          <div
-            className="fd-time__item"
-          >
-            <div
-              className="fd-time__control"
-            >
-              <button
-                aria-label="Increase hours"
-                className=" fd-button--light fd-button--xs sap-icon--navigation-up-arrow "
-                onClick={[Function]}
-              />
-            </div>
-            <div
-              className="fd-time__input"
-            >
-              <input
-                aria-label="Hours"
-                className="fd-form__control "
-                maxLength="2"
-                name="hour"
-                onChange={[Function]}
-                placeholder="hh"
-                type="text"
-                value="00"
-              />
-            </div>
-            <div
-              className="fd-time__control"
-            >
-              <button
-                aria-label="Decrease hours"
-                className=" fd-button--light fd-button--xs sap-icon--navigation-down-arrow"
-                onClick={[Function]}
-              />
-            </div>
-          </div>
-          <div
-            className="fd-time__item"
-          >
-            <div
-              className="fd-time__control"
-            >
-              <button
-                aria-label="Increase minutes"
-                className=" fd-button--light fd-button--xs sap-icon--navigation-up-arrow "
-                onClick={[Function]}
-              />
-            </div>
-            <div
-              className="fd-time__input"
-            >
-              <input
-                aria-label="Minutes"
-                className="fd-form__control "
-                maxLength="2"
-                name="minute"
-                onChange={[Function]}
-                placeholder="mm"
-                type="text"
-                value="00"
-              />
-            </div>
-            <div
-              className="fd-time__control"
-            >
-              <button
-                aria-label="Decrease minutes"
-                className=" fd-button--light fd-button--xs sap-icon--navigation-down-arrow"
-                onClick={[Function]}
-              />
-            </div>
-          </div>
-          <div
-            className="fd-time__item"
-          >
-            <div
-              className="fd-time__control"
-            >
-              <button
-                aria-label="Increase seconds"
-                className=" fd-button--light fd-button--xs sap-icon--navigation-up-arrow "
-                onClick={[Function]}
-              />
-            </div>
-            <div
-              className="fd-time__input"
-            >
-              <input
-                aria-label="Seconds"
-                className="fd-form__control "
-                maxLength="2"
-                name="second"
-                onChange={[Function]}
-                placeholder="ss"
-                type="text"
-                value="00"
-              />
-            </div>
-            <div
-              className="fd-time__control"
-            >
-              <button
-                aria-label="Decrease seconds"
-                className=" fd-button--light fd-button--xs sap-icon--navigation-down-arrow"
-                onClick={[Function]}
-              />
-            </div>
-          </div>
-          
+          </span>
         </div>
       </div>
     </div>
@@ -179,193 +52,32 @@ exports[`<TimePicker /> create time picker 2`] = `
     className="fd-popover fd-popover--no-arrow"
   >
     <div
-      className="fd-popover"
+      className="fd-popper__control fd-popover"
     >
       <div
-        aria-controls=""
-        aria-expanded={false}
         className="fd-popover__control"
-        onClick={[Function]}
       >
         <div
-          className="fd-popover__control"
+          className="fd-input-group fd-input-group--after"
         >
-          <div
-            className="fd-input-group fd-input-group--after"
+          <input
+            className="fd-input"
+            onBlur={[Function]}
+            onChange={[Function]}
+            placeholder="hh:mm:ss am/pm"
+            type="text"
+            value=""
+          />
+          <span
+            className="fd-input-group__addon fd-input-group__addon--after fd-input-group__addon--button "
           >
-            <input
-              className="fd-input"
-              onBlur={[Function]}
-              onChange={[Function]}
-              placeholder="hh:mm:ss am/pm"
-              type="text"
-              value=""
+            <button
+              aria-controls="rthHR811"
+              aria-expanded="false"
+              aria-haspopup="true"
+              className="fd-button--light fd-button--compact sap-icon--fob-watch fd-popover__control"
             />
-            <span
-              className="fd-input-group__addon fd-input-group__addon--after fd-input-group__addon--button "
-            >
-              <button
-                aria-controls="rthHR811"
-                aria-expanded="false"
-                aria-haspopup="true"
-                className="fd-button--light fd-button--compact sap-icon--fob-watch fd-popover__control"
-              />
-            </span>
-          </div>
-        </div>
-      </div>
-      <div
-        aria-hidden={true}
-        className="fd-popover__body fd-popover__body--no-arrow"
-        id=""
-      >
-        <div
-          className="fd-time"
-          id=""
-        >
-          <div
-            className="fd-time__item"
-          >
-            <div
-              className="fd-time__control"
-            >
-              <button
-                aria-label="Increase hours"
-                className=" fd-button--light fd-button--xs sap-icon--navigation-up-arrow "
-                onClick={[Function]}
-              />
-            </div>
-            <div
-              className="fd-time__input"
-            >
-              <input
-                aria-label="Hours"
-                className="fd-form__control "
-                maxLength="2"
-                name="hour"
-                onChange={[Function]}
-                placeholder="hh"
-                type="text"
-                value="12"
-              />
-            </div>
-            <div
-              className="fd-time__control"
-            >
-              <button
-                aria-label="Decrease hours"
-                className=" fd-button--light fd-button--xs sap-icon--navigation-down-arrow"
-                onClick={[Function]}
-              />
-            </div>
-          </div>
-          <div
-            className="fd-time__item"
-          >
-            <div
-              className="fd-time__control"
-            >
-              <button
-                aria-label="Increase minutes"
-                className=" fd-button--light fd-button--xs sap-icon--navigation-up-arrow "
-                onClick={[Function]}
-              />
-            </div>
-            <div
-              className="fd-time__input"
-            >
-              <input
-                aria-label="Minutes"
-                className="fd-form__control "
-                maxLength="2"
-                name="minute"
-                onChange={[Function]}
-                placeholder="mm"
-                type="text"
-                value="00"
-              />
-            </div>
-            <div
-              className="fd-time__control"
-            >
-              <button
-                aria-label="Decrease minutes"
-                className=" fd-button--light fd-button--xs sap-icon--navigation-down-arrow"
-                onClick={[Function]}
-              />
-            </div>
-          </div>
-          <div
-            className="fd-time__item"
-          >
-            <div
-              className="fd-time__control"
-            >
-              <button
-                aria-label="Increase seconds"
-                className=" fd-button--light fd-button--xs sap-icon--navigation-up-arrow "
-                onClick={[Function]}
-              />
-            </div>
-            <div
-              className="fd-time__input"
-            >
-              <input
-                aria-label="Seconds"
-                className="fd-form__control "
-                maxLength="2"
-                name="second"
-                onChange={[Function]}
-                placeholder="ss"
-                type="text"
-                value="00"
-              />
-            </div>
-            <div
-              className="fd-time__control"
-            >
-              <button
-                aria-label="Decrease seconds"
-                className=" fd-button--light fd-button--xs sap-icon--navigation-down-arrow"
-                onClick={[Function]}
-              />
-            </div>
-          </div>
-          <div
-            className="fd-time__item"
-          >
-            <div
-              className="fd-time__control"
-            >
-              <button
-                aria-label="Increase period"
-                className=" fd-button--light fd-button--xs sap-icon--navigation-up-arrow "
-                onClick={[Function]}
-              />
-            </div>
-            <div
-              className="fd-time__input"
-            >
-              <input
-                aria-label="Period"
-                className="fd-form__control "
-                maxLength="2"
-                name="meridiem"
-                onChange={[Function]}
-                type="text"
-                value="am"
-              />
-            </div>
-            <div
-              className="fd-time__control"
-            >
-              <button
-                aria-label="Decrease period"
-                className=" fd-button--light fd-button--xs sap-icon--navigation-down-arrow"
-                onClick={[Function]}
-              />
-            </div>
-          </div>
+          </span>
         </div>
       </div>
     </div>
@@ -381,124 +93,32 @@ exports[`<TimePicker /> create time picker 3`] = `
     className="fd-popover fd-popover--no-arrow"
   >
     <div
-      className="fd-popover"
+      className="fd-popper__control fd-popover"
     >
       <div
-        aria-controls=""
-        aria-expanded={false}
         className="fd-popover__control"
-        onClick={[Function]}
       >
         <div
-          className="fd-popover__control"
+          className="fd-input-group fd-input-group--after"
         >
-          <div
-            className="fd-input-group fd-input-group--after"
+          <input
+            className="fd-input"
+            onBlur={[Function]}
+            onChange={[Function]}
+            placeholder="hh:mm"
+            type="text"
+            value=""
+          />
+          <span
+            className="fd-input-group__addon fd-input-group__addon--after fd-input-group__addon--button "
           >
-            <input
-              className="fd-input"
-              onBlur={[Function]}
-              onChange={[Function]}
-              placeholder="hh:mm"
-              type="text"
-              value=""
+            <button
+              aria-controls="rthHR811"
+              aria-expanded="false"
+              aria-haspopup="true"
+              className="fd-button--light fd-button--compact sap-icon--fob-watch fd-popover__control"
             />
-            <span
-              className="fd-input-group__addon fd-input-group__addon--after fd-input-group__addon--button "
-            >
-              <button
-                aria-controls="rthHR811"
-                aria-expanded="false"
-                aria-haspopup="true"
-                className="fd-button--light fd-button--compact sap-icon--fob-watch fd-popover__control"
-              />
-            </span>
-          </div>
-        </div>
-      </div>
-      <div
-        aria-hidden={true}
-        className="fd-popover__body fd-popover__body--no-arrow"
-        id=""
-      >
-        <div
-          className="fd-time"
-          id=""
-        >
-          <div
-            className="fd-time__item"
-          >
-            <div
-              className="fd-time__control"
-            >
-              <button
-                aria-label="Increase hours"
-                className=" fd-button--light fd-button--xs sap-icon--navigation-up-arrow "
-                onClick={[Function]}
-              />
-            </div>
-            <div
-              className="fd-time__input"
-            >
-              <input
-                aria-label="Hours"
-                className="fd-form__control "
-                maxLength="2"
-                name="hour"
-                onChange={[Function]}
-                placeholder="hh"
-                type="text"
-                value="00"
-              />
-            </div>
-            <div
-              className="fd-time__control"
-            >
-              <button
-                aria-label="Decrease hours"
-                className=" fd-button--light fd-button--xs sap-icon--navigation-down-arrow"
-                onClick={[Function]}
-              />
-            </div>
-          </div>
-          <div
-            className="fd-time__item"
-          >
-            <div
-              className="fd-time__control"
-            >
-              <button
-                aria-label="Increase minutes"
-                className=" fd-button--light fd-button--xs sap-icon--navigation-up-arrow "
-                onClick={[Function]}
-              />
-            </div>
-            <div
-              className="fd-time__input"
-            >
-              <input
-                aria-label="Minutes"
-                className="fd-form__control "
-                maxLength="2"
-                name="minute"
-                onChange={[Function]}
-                placeholder="mm"
-                type="text"
-                value="00"
-              />
-            </div>
-            <div
-              className="fd-time__control"
-            >
-              <button
-                aria-label="Decrease minutes"
-                className=" fd-button--light fd-button--xs sap-icon--navigation-down-arrow"
-                onClick={[Function]}
-              />
-            </div>
-          </div>
-          
-          
+          </span>
         </div>
       </div>
     </div>
@@ -514,170 +134,34 @@ exports[`<TimePicker /> create time picker 4`] = `
     className="fd-popover fd-popover--no-arrow"
   >
     <div
-      className="fd-popover"
+      className="fd-popper__control fd-popover"
     >
       <div
-        aria-controls=""
-        aria-expanded={false}
         className="fd-popover__control"
-        onClick={[Function]}
       >
         <div
-          className="fd-popover__control"
+          className="fd-input-group fd-input-group--after"
         >
-          <div
-            className="fd-input-group fd-input-group--after"
+          <input
+            className="fd-input"
+            onBlur={[Function]}
+            onChange={[Function]}
+            placeholder="hh:mm:ss"
+            readOnly={true}
+            type="text"
+            value=""
+          />
+          <span
+            className="fd-input-group__addon fd-input-group__addon--after fd-input-group__addon--button "
           >
-            <input
-              className="fd-input"
-              onBlur={[Function]}
-              onChange={[Function]}
-              placeholder="hh:mm:ss"
-              readOnly={true}
-              type="text"
-              value=""
+            <button
+              aria-controls="rthHR811"
+              aria-expanded="false"
+              aria-haspopup="true"
+              className="fd-button--light fd-button--compact sap-icon--fob-watch fd-popover__control"
+              disabled={true}
             />
-            <span
-              className="fd-input-group__addon fd-input-group__addon--after fd-input-group__addon--button "
-            >
-              <button
-                aria-controls="rthHR811"
-                aria-expanded="false"
-                aria-haspopup="true"
-                className="fd-button--light fd-button--compact sap-icon--fob-watch fd-popover__control"
-                disabled={true}
-              />
-            </span>
-          </div>
-        </div>
-      </div>
-      <div
-        aria-hidden={true}
-        className="fd-popover__body fd-popover__body--no-arrow"
-        id=""
-      >
-        <div
-          className="fd-time"
-          id=""
-        >
-          <div
-            className="fd-time__item"
-          >
-            <div
-              className="fd-time__control"
-            >
-              <button
-                aria-label="Increase hours"
-                className=" fd-button--light fd-button--xs sap-icon--navigation-up-arrow "
-                disabled={true}
-                onClick={[Function]}
-              />
-            </div>
-            <div
-              className="fd-time__input"
-            >
-              <input
-                aria-label="Hours"
-                className="fd-form__control is-disabled"
-                maxLength="2"
-                name="hour"
-                onChange={[Function]}
-                placeholder="hh"
-                readOnly={true}
-                type="text"
-                value="00"
-              />
-            </div>
-            <div
-              className="fd-time__control"
-            >
-              <button
-                aria-label="Decrease hours"
-                className=" fd-button--light fd-button--xs sap-icon--navigation-down-arrow"
-                disabled={true}
-                onClick={[Function]}
-              />
-            </div>
-          </div>
-          <div
-            className="fd-time__item"
-          >
-            <div
-              className="fd-time__control"
-            >
-              <button
-                aria-label="Increase minutes"
-                className=" fd-button--light fd-button--xs sap-icon--navigation-up-arrow "
-                disabled={true}
-                onClick={[Function]}
-              />
-            </div>
-            <div
-              className="fd-time__input"
-            >
-              <input
-                aria-label="Minutes"
-                className="fd-form__control is-disabled"
-                maxLength="2"
-                name="minute"
-                onChange={[Function]}
-                placeholder="mm"
-                readOnly={true}
-                type="text"
-                value="00"
-              />
-            </div>
-            <div
-              className="fd-time__control"
-            >
-              <button
-                aria-label="Decrease minutes"
-                className=" fd-button--light fd-button--xs sap-icon--navigation-down-arrow"
-                disabled={true}
-                onClick={[Function]}
-              />
-            </div>
-          </div>
-          <div
-            className="fd-time__item"
-          >
-            <div
-              className="fd-time__control"
-            >
-              <button
-                aria-label="Increase seconds"
-                className=" fd-button--light fd-button--xs sap-icon--navigation-up-arrow "
-                disabled={true}
-                onClick={[Function]}
-              />
-            </div>
-            <div
-              className="fd-time__input"
-            >
-              <input
-                aria-label="Seconds"
-                className="fd-form__control is-disabled"
-                maxLength="2"
-                name="second"
-                onChange={[Function]}
-                placeholder="ss"
-                readOnly={true}
-                type="text"
-                value="00"
-              />
-            </div>
-            <div
-              className="fd-time__control"
-            >
-              <button
-                aria-label="Decrease seconds"
-                className=" fd-button--light fd-button--xs sap-icon--navigation-down-arrow"
-                disabled={true}
-                onClick={[Function]}
-              />
-            </div>
-          </div>
-          
+          </span>
         </div>
       </div>
     </div>
@@ -693,193 +177,32 @@ exports[`<TimePicker /> create time picker 5`] = `
     className="fd-popover fd-popover--no-arrow"
   >
     <div
-      className="fd-popover"
+      className="fd-popper__control fd-popover"
     >
       <div
-        aria-controls=""
-        aria-expanded={false}
         className="fd-popover__control"
-        onClick={[Function]}
       >
         <div
-          className="fd-popover__control"
+          className="fd-input-group fd-input-group--after"
         >
-          <div
-            className="fd-input-group fd-input-group--after"
+          <input
+            className="fd-input"
+            onBlur={[Function]}
+            onChange={[Function]}
+            placeholder="hh:mm:ss am/pm"
+            type="text"
+            value=""
+          />
+          <span
+            className="fd-input-group__addon fd-input-group__addon--after fd-input-group__addon--button "
           >
-            <input
-              className="fd-input"
-              onBlur={[Function]}
-              onChange={[Function]}
-              placeholder="hh:mm:ss am/pm"
-              type="text"
-              value=""
+            <button
+              aria-controls="rthHR811"
+              aria-expanded="false"
+              aria-haspopup="true"
+              className="fd-button--light fd-button--compact sap-icon--fob-watch fd-popover__control"
             />
-            <span
-              className="fd-input-group__addon fd-input-group__addon--after fd-input-group__addon--button "
-            >
-              <button
-                aria-controls="rthHR811"
-                aria-expanded="false"
-                aria-haspopup="true"
-                className="fd-button--light fd-button--compact sap-icon--fob-watch fd-popover__control"
-              />
-            </span>
-          </div>
-        </div>
-      </div>
-      <div
-        aria-hidden={true}
-        className="fd-popover__body fd-popover__body--no-arrow"
-        id=""
-      >
-        <div
-          className="fd-time"
-          id=""
-        >
-          <div
-            className="fd-time__item"
-          >
-            <div
-              className="fd-time__control"
-            >
-              <button
-                aria-label="Increase hours"
-                className=" fd-button--light fd-button--xs sap-icon--navigation-up-arrow "
-                onClick={[Function]}
-              />
-            </div>
-            <div
-              className="fd-time__input"
-            >
-              <input
-                aria-label="Hours"
-                className="fd-form__control "
-                maxLength="2"
-                name="hour"
-                onChange={[Function]}
-                placeholder="hh"
-                type="text"
-                value="12"
-              />
-            </div>
-            <div
-              className="fd-time__control"
-            >
-              <button
-                aria-label="Decrease hours"
-                className=" fd-button--light fd-button--xs sap-icon--navigation-down-arrow"
-                onClick={[Function]}
-              />
-            </div>
-          </div>
-          <div
-            className="fd-time__item"
-          >
-            <div
-              className="fd-time__control"
-            >
-              <button
-                aria-label="Increase minutes"
-                className=" fd-button--light fd-button--xs sap-icon--navigation-up-arrow "
-                onClick={[Function]}
-              />
-            </div>
-            <div
-              className="fd-time__input"
-            >
-              <input
-                aria-label="Minutes"
-                className="fd-form__control "
-                maxLength="2"
-                name="minute"
-                onChange={[Function]}
-                placeholder="mm"
-                type="text"
-                value="00"
-              />
-            </div>
-            <div
-              className="fd-time__control"
-            >
-              <button
-                aria-label="Decrease minutes"
-                className=" fd-button--light fd-button--xs sap-icon--navigation-down-arrow"
-                onClick={[Function]}
-              />
-            </div>
-          </div>
-          <div
-            className="fd-time__item"
-          >
-            <div
-              className="fd-time__control"
-            >
-              <button
-                aria-label="Increase seconds"
-                className=" fd-button--light fd-button--xs sap-icon--navigation-up-arrow "
-                onClick={[Function]}
-              />
-            </div>
-            <div
-              className="fd-time__input"
-            >
-              <input
-                aria-label="Seconds"
-                className="fd-form__control "
-                maxLength="2"
-                name="second"
-                onChange={[Function]}
-                placeholder="ss"
-                type="text"
-                value="00"
-              />
-            </div>
-            <div
-              className="fd-time__control"
-            >
-              <button
-                aria-label="Decrease seconds"
-                className=" fd-button--light fd-button--xs sap-icon--navigation-down-arrow"
-                onClick={[Function]}
-              />
-            </div>
-          </div>
-          <div
-            className="fd-time__item"
-          >
-            <div
-              className="fd-time__control"
-            >
-              <button
-                aria-label="Increase period"
-                className=" fd-button--light fd-button--xs sap-icon--navigation-up-arrow "
-                onClick={[Function]}
-              />
-            </div>
-            <div
-              className="fd-time__input"
-            >
-              <input
-                aria-label="Period"
-                className="fd-form__control "
-                maxLength="2"
-                name="meridiem"
-                onChange={[Function]}
-                type="text"
-                value="am"
-              />
-            </div>
-            <div
-              className="fd-time__control"
-            >
-              <button
-                aria-label="Decrease period"
-                className=" fd-button--light fd-button--xs sap-icon--navigation-down-arrow"
-                onClick={[Function]}
-              />
-            </div>
-          </div>
+          </span>
         </div>
       </div>
     </div>
@@ -895,193 +218,32 @@ exports[`<TimePicker /> create time picker 6`] = `
     className="fd-popover fd-popover--no-arrow"
   >
     <div
-      className="fd-popover"
+      className="fd-popper__control fd-popover"
     >
       <div
-        aria-controls=""
-        aria-expanded={false}
         className="fd-popover__control"
-        onClick={[Function]}
       >
         <div
-          className="fd-popover__control"
+          className="fd-input-group fd-input-group--after"
         >
-          <div
-            className="fd-input-group fd-input-group--after"
+          <input
+            className="fd-input"
+            onBlur={[Function]}
+            onChange={[Function]}
+            placeholder="hh:mm:ss am/pm"
+            type="text"
+            value=""
+          />
+          <span
+            className="fd-input-group__addon fd-input-group__addon--after fd-input-group__addon--button "
           >
-            <input
-              className="fd-input"
-              onBlur={[Function]}
-              onChange={[Function]}
-              placeholder="hh:mm:ss am/pm"
-              type="text"
-              value=""
+            <button
+              aria-controls="rthHR811"
+              aria-expanded="false"
+              aria-haspopup="true"
+              className="fd-button--light fd-button--compact sap-icon--fob-watch fd-popover__control"
             />
-            <span
-              className="fd-input-group__addon fd-input-group__addon--after fd-input-group__addon--button "
-            >
-              <button
-                aria-controls="rthHR811"
-                aria-expanded="false"
-                aria-haspopup="true"
-                className="fd-button--light fd-button--compact sap-icon--fob-watch fd-popover__control"
-              />
-            </span>
-          </div>
-        </div>
-      </div>
-      <div
-        aria-hidden={true}
-        className="fd-popover__body fd-popover__body--no-arrow"
-        id=""
-      >
-        <div
-          className="fd-time"
-          id=""
-        >
-          <div
-            className="fd-time__item"
-          >
-            <div
-              className="fd-time__control"
-            >
-              <button
-                aria-label="Increase hours"
-                className=" fd-button--light fd-button--xs sap-icon--navigation-up-arrow "
-                onClick={[Function]}
-              />
-            </div>
-            <div
-              className="fd-time__input"
-            >
-              <input
-                aria-label="Hours"
-                className="fd-form__control "
-                maxLength="2"
-                name="hour"
-                onChange={[Function]}
-                placeholder="hh"
-                type="text"
-                value="12"
-              />
-            </div>
-            <div
-              className="fd-time__control"
-            >
-              <button
-                aria-label="Decrease hours"
-                className=" fd-button--light fd-button--xs sap-icon--navigation-down-arrow"
-                onClick={[Function]}
-              />
-            </div>
-          </div>
-          <div
-            className="fd-time__item"
-          >
-            <div
-              className="fd-time__control"
-            >
-              <button
-                aria-label="Increase minutes"
-                className=" fd-button--light fd-button--xs sap-icon--navigation-up-arrow "
-                onClick={[Function]}
-              />
-            </div>
-            <div
-              className="fd-time__input"
-            >
-              <input
-                aria-label="Minutes"
-                className="fd-form__control "
-                maxLength="2"
-                name="minute"
-                onChange={[Function]}
-                placeholder="mm"
-                type="text"
-                value="00"
-              />
-            </div>
-            <div
-              className="fd-time__control"
-            >
-              <button
-                aria-label="Decrease minutes"
-                className=" fd-button--light fd-button--xs sap-icon--navigation-down-arrow"
-                onClick={[Function]}
-              />
-            </div>
-          </div>
-          <div
-            className="fd-time__item"
-          >
-            <div
-              className="fd-time__control"
-            >
-              <button
-                aria-label="Increase seconds"
-                className=" fd-button--light fd-button--xs sap-icon--navigation-up-arrow "
-                onClick={[Function]}
-              />
-            </div>
-            <div
-              className="fd-time__input"
-            >
-              <input
-                aria-label="Seconds"
-                className="fd-form__control "
-                maxLength="2"
-                name="second"
-                onChange={[Function]}
-                placeholder="ss"
-                type="text"
-                value="00"
-              />
-            </div>
-            <div
-              className="fd-time__control"
-            >
-              <button
-                aria-label="Decrease seconds"
-                className=" fd-button--light fd-button--xs sap-icon--navigation-down-arrow"
-                onClick={[Function]}
-              />
-            </div>
-          </div>
-          <div
-            className="fd-time__item"
-          >
-            <div
-              className="fd-time__control"
-            >
-              <button
-                aria-label="Increase period"
-                className=" fd-button--light fd-button--xs sap-icon--navigation-up-arrow "
-                onClick={[Function]}
-              />
-            </div>
-            <div
-              className="fd-time__input"
-            >
-              <input
-                aria-label="Period"
-                className="fd-form__control "
-                maxLength="2"
-                name="meridiem"
-                onChange={[Function]}
-                type="text"
-                value="am"
-              />
-            </div>
-            <div
-              className="fd-time__control"
-            >
-              <button
-                aria-label="Decrease period"
-                className=" fd-button--light fd-button--xs sap-icon--navigation-down-arrow"
-                onClick={[Function]}
-              />
-            </div>
-          </div>
+          </span>
         </div>
       </div>
     </div>
@@ -1097,193 +259,32 @@ exports[`<TimePicker /> create time picker 7`] = `
     className="fd-popover fd-popover--no-arrow"
   >
     <div
-      className="fd-popover"
+      className="fd-popper__control fd-popover"
     >
       <div
-        aria-controls=""
-        aria-expanded={false}
         className="fd-popover__control"
-        onClick={[Function]}
       >
         <div
-          className="fd-popover__control"
+          className="fd-input-group fd-input-group--after"
         >
-          <div
-            className="fd-input-group fd-input-group--after"
+          <input
+            className="fd-input"
+            onBlur={[Function]}
+            onChange={[Function]}
+            placeholder="hh:mm:ss am/pm"
+            type="text"
+            value=""
+          />
+          <span
+            className="fd-input-group__addon fd-input-group__addon--after fd-input-group__addon--button "
           >
-            <input
-              className="fd-input"
-              onBlur={[Function]}
-              onChange={[Function]}
-              placeholder="hh:mm:ss am/pm"
-              type="text"
-              value=""
+            <button
+              aria-controls="rthHR811"
+              aria-expanded="false"
+              aria-haspopup="true"
+              className="fd-button--light fd-button--compact sap-icon--fob-watch fd-popover__control"
             />
-            <span
-              className="fd-input-group__addon fd-input-group__addon--after fd-input-group__addon--button "
-            >
-              <button
-                aria-controls="rthHR811"
-                aria-expanded="false"
-                aria-haspopup="true"
-                className="fd-button--light fd-button--compact sap-icon--fob-watch fd-popover__control"
-              />
-            </span>
-          </div>
-        </div>
-      </div>
-      <div
-        aria-hidden={true}
-        className="fd-popover__body fd-popover__body--no-arrow"
-        id=""
-      >
-        <div
-          className="fd-time"
-          id=""
-        >
-          <div
-            className="fd-time__item"
-          >
-            <div
-              className="fd-time__control"
-            >
-              <button
-                aria-label="Increase hours"
-                className=" fd-button--light fd-button--xs sap-icon--navigation-up-arrow "
-                onClick={[Function]}
-              />
-            </div>
-            <div
-              className="fd-time__input"
-            >
-              <input
-                aria-label="Hours"
-                className="fd-form__control "
-                maxLength="2"
-                name="hour"
-                onChange={[Function]}
-                placeholder="hh"
-                type="text"
-                value="12"
-              />
-            </div>
-            <div
-              className="fd-time__control"
-            >
-              <button
-                aria-label="Decrease hours"
-                className=" fd-button--light fd-button--xs sap-icon--navigation-down-arrow"
-                onClick={[Function]}
-              />
-            </div>
-          </div>
-          <div
-            className="fd-time__item"
-          >
-            <div
-              className="fd-time__control"
-            >
-              <button
-                aria-label="Increase minutes"
-                className=" fd-button--light fd-button--xs sap-icon--navigation-up-arrow "
-                onClick={[Function]}
-              />
-            </div>
-            <div
-              className="fd-time__input"
-            >
-              <input
-                aria-label="Minutes"
-                className="fd-form__control "
-                maxLength="2"
-                name="minute"
-                onChange={[Function]}
-                placeholder="mm"
-                type="text"
-                value="00"
-              />
-            </div>
-            <div
-              className="fd-time__control"
-            >
-              <button
-                aria-label="Decrease minutes"
-                className=" fd-button--light fd-button--xs sap-icon--navigation-down-arrow"
-                onClick={[Function]}
-              />
-            </div>
-          </div>
-          <div
-            className="fd-time__item"
-          >
-            <div
-              className="fd-time__control"
-            >
-              <button
-                aria-label="Increase seconds"
-                className=" fd-button--light fd-button--xs sap-icon--navigation-up-arrow "
-                onClick={[Function]}
-              />
-            </div>
-            <div
-              className="fd-time__input"
-            >
-              <input
-                aria-label="Seconds"
-                className="fd-form__control "
-                maxLength="2"
-                name="second"
-                onChange={[Function]}
-                placeholder="ss"
-                type="text"
-                value="00"
-              />
-            </div>
-            <div
-              className="fd-time__control"
-            >
-              <button
-                aria-label="Decrease seconds"
-                className=" fd-button--light fd-button--xs sap-icon--navigation-down-arrow"
-                onClick={[Function]}
-              />
-            </div>
-          </div>
-          <div
-            className="fd-time__item"
-          >
-            <div
-              className="fd-time__control"
-            >
-              <button
-                aria-label="Increase period"
-                className=" fd-button--light fd-button--xs sap-icon--navigation-up-arrow "
-                onClick={[Function]}
-              />
-            </div>
-            <div
-              className="fd-time__input"
-            >
-              <input
-                aria-label="Period"
-                className="fd-form__control "
-                maxLength="2"
-                name="meridiem"
-                onChange={[Function]}
-                type="text"
-                value="am"
-              />
-            </div>
-            <div
-              className="fd-time__control"
-            >
-              <button
-                aria-label="Decrease period"
-                className=" fd-button--light fd-button--xs sap-icon--navigation-down-arrow"
-                onClick={[Function]}
-              />
-            </div>
-          </div>
+          </span>
         </div>
       </div>
     </div>
@@ -1299,124 +300,32 @@ exports[`<TimePicker /> create time picker 8`] = `
     className="fd-popover fd-popover--no-arrow"
   >
     <div
-      className="fd-popover"
+      className="fd-popper__control fd-popover"
     >
       <div
-        aria-controls=""
-        aria-expanded={false}
         className="fd-popover__control"
-        onClick={[Function]}
       >
         <div
-          className="fd-popover__control"
+          className="fd-input-group fd-input-group--after"
         >
-          <div
-            className="fd-input-group fd-input-group--after"
+          <input
+            className="fd-input"
+            onBlur={[Function]}
+            onChange={[Function]}
+            placeholder="mm:ss"
+            type="text"
+            value=""
+          />
+          <span
+            className="fd-input-group__addon fd-input-group__addon--after fd-input-group__addon--button "
           >
-            <input
-              className="fd-input"
-              onBlur={[Function]}
-              onChange={[Function]}
-              placeholder="mm:ss"
-              type="text"
-              value=""
+            <button
+              aria-controls="rthHR811"
+              aria-expanded="false"
+              aria-haspopup="true"
+              className="fd-button--light fd-button--compact sap-icon--fob-watch fd-popover__control"
             />
-            <span
-              className="fd-input-group__addon fd-input-group__addon--after fd-input-group__addon--button "
-            >
-              <button
-                aria-controls="rthHR811"
-                aria-expanded="false"
-                aria-haspopup="true"
-                className="fd-button--light fd-button--compact sap-icon--fob-watch fd-popover__control"
-              />
-            </span>
-          </div>
-        </div>
-      </div>
-      <div
-        aria-hidden={true}
-        className="fd-popover__body fd-popover__body--no-arrow"
-        id=""
-      >
-        <div
-          className="fd-time"
-          id=""
-        >
-          
-          <div
-            className="fd-time__item"
-          >
-            <div
-              className="fd-time__control"
-            >
-              <button
-                aria-label="Increase minutes"
-                className=" fd-button--light fd-button--xs sap-icon--navigation-up-arrow "
-                onClick={[Function]}
-              />
-            </div>
-            <div
-              className="fd-time__input"
-            >
-              <input
-                aria-label="Minutes"
-                className="fd-form__control "
-                maxLength="2"
-                name="minute"
-                onChange={[Function]}
-                placeholder="mm"
-                type="text"
-                value="00"
-              />
-            </div>
-            <div
-              className="fd-time__control"
-            >
-              <button
-                aria-label="Decrease minutes"
-                className=" fd-button--light fd-button--xs sap-icon--navigation-down-arrow"
-                onClick={[Function]}
-              />
-            </div>
-          </div>
-          <div
-            className="fd-time__item"
-          >
-            <div
-              className="fd-time__control"
-            >
-              <button
-                aria-label="Increase seconds"
-                className=" fd-button--light fd-button--xs sap-icon--navigation-up-arrow "
-                onClick={[Function]}
-              />
-            </div>
-            <div
-              className="fd-time__input"
-            >
-              <input
-                aria-label="Seconds"
-                className="fd-form__control "
-                maxLength="2"
-                name="second"
-                onChange={[Function]}
-                placeholder="ss"
-                type="text"
-                value="00"
-              />
-            </div>
-            <div
-              className="fd-time__control"
-            >
-              <button
-                aria-label="Decrease seconds"
-                className=" fd-button--light fd-button--xs sap-icon--navigation-down-arrow"
-                onClick={[Function]}
-              />
-            </div>
-          </div>
-          
+          </span>
         </div>
       </div>
     </div>
@@ -1432,158 +341,32 @@ exports[`<TimePicker /> create time picker 9`] = `
     className="fd-popover fd-popover--no-arrow"
   >
     <div
-      className="fd-popover"
+      className="fd-popper__control fd-popover"
     >
       <div
-        aria-controls=""
-        aria-expanded={false}
         className="fd-popover__control"
-        onClick={[Function]}
       >
         <div
-          className="fd-popover__control"
+          className="fd-input-group fd-input-group--after"
         >
-          <div
-            className="fd-input-group fd-input-group--after"
+          <input
+            className="fd-input"
+            onBlur={[Function]}
+            onChange={[Function]}
+            placeholder="mm:ss am/pm"
+            type="text"
+            value=""
+          />
+          <span
+            className="fd-input-group__addon fd-input-group__addon--after fd-input-group__addon--button "
           >
-            <input
-              className="fd-input"
-              onBlur={[Function]}
-              onChange={[Function]}
-              placeholder="mm:ss am/pm"
-              type="text"
-              value=""
+            <button
+              aria-controls="rthHR811"
+              aria-expanded="false"
+              aria-haspopup="true"
+              className="fd-button--light fd-button--compact sap-icon--fob-watch fd-popover__control"
             />
-            <span
-              className="fd-input-group__addon fd-input-group__addon--after fd-input-group__addon--button "
-            >
-              <button
-                aria-controls="rthHR811"
-                aria-expanded="false"
-                aria-haspopup="true"
-                className="fd-button--light fd-button--compact sap-icon--fob-watch fd-popover__control"
-              />
-            </span>
-          </div>
-        </div>
-      </div>
-      <div
-        aria-hidden={true}
-        className="fd-popover__body fd-popover__body--no-arrow"
-        id=""
-      >
-        <div
-          className="fd-time"
-          id=""
-        >
-          
-          <div
-            className="fd-time__item"
-          >
-            <div
-              className="fd-time__control"
-            >
-              <button
-                aria-label="Increase minutes"
-                className=" fd-button--light fd-button--xs sap-icon--navigation-up-arrow "
-                onClick={[Function]}
-              />
-            </div>
-            <div
-              className="fd-time__input"
-            >
-              <input
-                aria-label="Minutes"
-                className="fd-form__control "
-                maxLength="2"
-                name="minute"
-                onChange={[Function]}
-                placeholder="mm"
-                type="text"
-                value="00"
-              />
-            </div>
-            <div
-              className="fd-time__control"
-            >
-              <button
-                aria-label="Decrease minutes"
-                className=" fd-button--light fd-button--xs sap-icon--navigation-down-arrow"
-                onClick={[Function]}
-              />
-            </div>
-          </div>
-          <div
-            className="fd-time__item"
-          >
-            <div
-              className="fd-time__control"
-            >
-              <button
-                aria-label="Increase seconds"
-                className=" fd-button--light fd-button--xs sap-icon--navigation-up-arrow "
-                onClick={[Function]}
-              />
-            </div>
-            <div
-              className="fd-time__input"
-            >
-              <input
-                aria-label="Seconds"
-                className="fd-form__control "
-                maxLength="2"
-                name="second"
-                onChange={[Function]}
-                placeholder="ss"
-                type="text"
-                value="00"
-              />
-            </div>
-            <div
-              className="fd-time__control"
-            >
-              <button
-                aria-label="Decrease seconds"
-                className=" fd-button--light fd-button--xs sap-icon--navigation-down-arrow"
-                onClick={[Function]}
-              />
-            </div>
-          </div>
-          <div
-            className="fd-time__item"
-          >
-            <div
-              className="fd-time__control"
-            >
-              <button
-                aria-label="Increase period"
-                className=" fd-button--light fd-button--xs sap-icon--navigation-up-arrow "
-                onClick={[Function]}
-              />
-            </div>
-            <div
-              className="fd-time__input"
-            >
-              <input
-                aria-label="Period"
-                className="fd-form__control "
-                maxLength="2"
-                name="meridiem"
-                onChange={[Function]}
-                type="text"
-                value="am"
-              />
-            </div>
-            <div
-              className="fd-time__control"
-            >
-              <button
-                aria-label="Decrease period"
-                className=" fd-button--light fd-button--xs sap-icon--navigation-down-arrow"
-                onClick={[Function]}
-              />
-            </div>
-          </div>
+          </span>
         </div>
       </div>
     </div>
@@ -1599,158 +382,32 @@ exports[`<TimePicker /> create time picker 10`] = `
     className="fd-popover fd-popover--no-arrow"
   >
     <div
-      className="fd-popover"
+      className="fd-popper__control fd-popover"
     >
       <div
-        aria-controls=""
-        aria-expanded={false}
         className="fd-popover__control"
-        onClick={[Function]}
       >
         <div
-          className="fd-popover__control"
+          className="fd-input-group fd-input-group--after"
         >
-          <div
-            className="fd-input-group fd-input-group--after"
+          <input
+            className="fd-input"
+            onBlur={[Function]}
+            onChange={[Function]}
+            placeholder="hh:ss am/pm"
+            type="text"
+            value=""
+          />
+          <span
+            className="fd-input-group__addon fd-input-group__addon--after fd-input-group__addon--button "
           >
-            <input
-              className="fd-input"
-              onBlur={[Function]}
-              onChange={[Function]}
-              placeholder="hh:ss am/pm"
-              type="text"
-              value=""
+            <button
+              aria-controls="rthHR811"
+              aria-expanded="false"
+              aria-haspopup="true"
+              className="fd-button--light fd-button--compact sap-icon--fob-watch fd-popover__control"
             />
-            <span
-              className="fd-input-group__addon fd-input-group__addon--after fd-input-group__addon--button "
-            >
-              <button
-                aria-controls="rthHR811"
-                aria-expanded="false"
-                aria-haspopup="true"
-                className="fd-button--light fd-button--compact sap-icon--fob-watch fd-popover__control"
-              />
-            </span>
-          </div>
-        </div>
-      </div>
-      <div
-        aria-hidden={true}
-        className="fd-popover__body fd-popover__body--no-arrow"
-        id=""
-      >
-        <div
-          className="fd-time"
-          id=""
-        >
-          <div
-            className="fd-time__item"
-          >
-            <div
-              className="fd-time__control"
-            >
-              <button
-                aria-label="Increase hours"
-                className=" fd-button--light fd-button--xs sap-icon--navigation-up-arrow "
-                onClick={[Function]}
-              />
-            </div>
-            <div
-              className="fd-time__input"
-            >
-              <input
-                aria-label="Hours"
-                className="fd-form__control "
-                maxLength="2"
-                name="hour"
-                onChange={[Function]}
-                placeholder="hh"
-                type="text"
-                value="12"
-              />
-            </div>
-            <div
-              className="fd-time__control"
-            >
-              <button
-                aria-label="Decrease hours"
-                className=" fd-button--light fd-button--xs sap-icon--navigation-down-arrow"
-                onClick={[Function]}
-              />
-            </div>
-          </div>
-          
-          <div
-            className="fd-time__item"
-          >
-            <div
-              className="fd-time__control"
-            >
-              <button
-                aria-label="Increase seconds"
-                className=" fd-button--light fd-button--xs sap-icon--navigation-up-arrow "
-                onClick={[Function]}
-              />
-            </div>
-            <div
-              className="fd-time__input"
-            >
-              <input
-                aria-label="Seconds"
-                className="fd-form__control "
-                maxLength="2"
-                name="second"
-                onChange={[Function]}
-                placeholder="ss"
-                type="text"
-                value="00"
-              />
-            </div>
-            <div
-              className="fd-time__control"
-            >
-              <button
-                aria-label="Decrease seconds"
-                className=" fd-button--light fd-button--xs sap-icon--navigation-down-arrow"
-                onClick={[Function]}
-              />
-            </div>
-          </div>
-          <div
-            className="fd-time__item"
-          >
-            <div
-              className="fd-time__control"
-            >
-              <button
-                aria-label="Increase period"
-                className=" fd-button--light fd-button--xs sap-icon--navigation-up-arrow "
-                onClick={[Function]}
-              />
-            </div>
-            <div
-              className="fd-time__input"
-            >
-              <input
-                aria-label="Period"
-                className="fd-form__control "
-                maxLength="2"
-                name="meridiem"
-                onChange={[Function]}
-                type="text"
-                value="am"
-              />
-            </div>
-            <div
-              className="fd-time__control"
-            >
-              <button
-                aria-label="Decrease period"
-                className=" fd-button--light fd-button--xs sap-icon--navigation-down-arrow"
-                onClick={[Function]}
-              />
-            </div>
-          </div>
+          </span>
         </div>
       </div>
     </div>

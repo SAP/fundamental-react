@@ -70,18 +70,6 @@ describe('<Popover />', () => {
             noArrow />
     );
 
-    const getPopover = () => {
-        return document.body.querySelector('body > span > div.fd-popper__body');
-    };
-
-    afterEach(() => {
-        document.body.innerHTML = '';
-    });
-
-    afterAll(() => {
-        document.body.innerHTML = '';
-    });
-
     test('create Popover', () => {
         // popover
         let component = renderer.create(popOver);
@@ -154,19 +142,17 @@ describe('<Popover />', () => {
 
     describe('Prop spreading', () => {
         test('should allow props to be spread to the Popover component', () => {
-            const wrapper = mount(
+            const element = mount(
                 <Popover
                     body={<div />}
                     control={<Icon glyph='cart' size='xl' />}
                     data-sample='Sample' />
             );
 
-            wrapper.find('div.fd-popper__control .sap-icon--cart').simulate('click');
-
-            const popper = getPopover();
+            element.find('div.fd-popper__control .sap-icon--cart').simulate('click');
 
             expect(
-                popper.attributes['data-sample'].value
+                element.find('.fd-popper__body').getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
         });
     });

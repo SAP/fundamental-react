@@ -238,6 +238,14 @@ describe('<Shellbar />', () => {
             subtitle='Subtitle' />
     );
 
+    afterEach(() => {
+        document.body.innerHTML = '';
+    });
+
+    afterAll(() => {
+        document.body.innerHTML = '';
+    });
+
     test('create shellbar', () => {
         let component = renderer.create(simpleShellBar);
         let tree = component.toJSON();
@@ -266,6 +274,9 @@ describe('<Shellbar />', () => {
 
     test('click back button from collapsed product switcher', () => {
         const wrapper = mount(coPilotShell);
+
+        wrapper.find('.fd-popper__control .fd-shellbar-collapse--control').simulate('click');
+
         wrapper.find('a.fd-menu__item span.sap-icon--grid').simulate('click');
         wrapper.find('span.fd-menu.sap-icon--nav-back').simulate('click');
 
