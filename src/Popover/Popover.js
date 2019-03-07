@@ -100,10 +100,6 @@ Popover.propTypes = {
     placement: PropTypes.oneOf(POPPER_PLACEMENTS)
 };
 
-Popover.defaultProps = {
-    placement: 'left'
-};
-
 Popover.propDescriptions = {
     body: 'Node(s) to render in the overlay.',
     control: 'Node to render as the reference element (that the `body` will be placed in relation to).',
