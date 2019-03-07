@@ -33,15 +33,17 @@ export class PopoverComponent extends React.Component {
         return (
             <ComponentPage
                 description={`The **Popover** is a wrapping component that accepts a "control" as well as a "body". A control can be
-                anything that you want to trigger the interaction from. The body will be the contents of what you reveal
-                on the page after triggering the popover. When paired with the **Menu** component, the Popover is commonly
-                used as the interaction/wrapping component for composing "dropdowns", "contextual menus", etc. As a general rule,
-                it is suggested that one Popover be revealed on the page at any given time. Opening one Popover should close all
-                others to prevent multiple layers and collisions of several popovers.`}
+                    anything that you want to trigger the interaction from. The body will be the contents of what you reveal
+                    on the page after triggering the popover. When paired with the **Menu** component, the Popover is commonly
+                    used as the interaction/wrapping component for composing "dropdowns", "contextual menus", etc. As a general rule,
+                    it is suggested that one Popover be revealed on the page at any given time. Opening one Popover should close all
+                    others to prevent multiple layers and collisions of several popovers.`}
                 sourceModulePath={path.join(__dirname, './Popover')}
                 title='Popover'>
 
                 <Example
+                    description={`There are four base placements: \`top\`, \`bottom\`, \`left\` and \`right\`.
+                        Those can be used alone or with \`-start\` or \`-end\` modifiers.`}
                     title='Placement'>
                     <div>
                         <div className='fd-container'>
@@ -163,7 +165,10 @@ export class PopoverComponent extends React.Component {
 
                 <Example
                     centered
-                    title='In Modal'>
+                    description={`When an overlay (\`body\`) is visible, the reference (\`control\`)
+                        element must be tracked because if it overflows from its boundaries, the overlay
+                        will be hidden as well.`}
+                    title='Out Of Boundaries'>
                     <div>
                         <Button onClick={this.toggleModal}>Show Modal</Button>
                         <Modal
@@ -184,7 +189,6 @@ export class PopoverComponent extends React.Component {
                             <Popover
                                 body={bodyContent}
                                 control={<Icon glyph='menu2' size='xl' />}
-                                noArrow
                                 placement='bottom' />
                             <br />
                             <br />
