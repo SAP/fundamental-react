@@ -618,6 +618,10 @@ $arrow-width-half: $arrow-width/2;
         }
     }
 
+    &[data-x-out-of-boundaries] {
+        display: none;
+    }
+
     &[data-placement^="top"] {
         margin-bottom: $arrow-height;
 

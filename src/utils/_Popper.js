@@ -62,7 +62,6 @@ class Popper extends React.Component {
         const {
             children,
             disableEdgeDetection,
-            disablePortal,
             noArrow,
             onClickOutside,
             popperClassName,
@@ -72,7 +71,8 @@ class Popper extends React.Component {
             referenceClassName,
             referenceComponent,
             referenceProps,
-            show
+            show,
+            usePortal
         } = this.props;
 
         const flipModifier = disableEdgeDetection ? { flip: { enabled: false } } : {};
@@ -89,7 +89,7 @@ class Popper extends React.Component {
             <ReactPopper
                 modifiers={modifiers}
                 placement={popperPlacement}>
-                {({ ref, style, placement, arrowProps }) => {
+                {({ ref, style, placement, outOfBoundaries, arrowProps }) => {
                     if (!show) {
                         return null;
                     }
@@ -100,6 +100,7 @@ class Popper extends React.Component {
                                 {...popperProps}
                                 className={popperClasses}
                                 data-placement={placement}
+                                data-x-out-of-boundaries={!!outOfBoundaries || undefined} // eslint-disable-line
                                 ref={ref}
                                 style={style}>
                                 {children}
@@ -114,7 +115,7 @@ class Popper extends React.Component {
             </ReactPopper>
         );
 
-        if (!disablePortal) {
+        if (usePortal) {
             popper = ReactDOM.createPortal(popper, document.querySelector('body'));
         }
 
@@ -144,7 +145,6 @@ Popper.propTypes = {
     children: PropTypes.node.isRequired,
     referenceComponent: PropTypes.element.isRequired,
     disableEdgeDetection: PropTypes.bool,
-    disablePortal: PropTypes.bool,
     noArrow: PropTypes.bool,
     popperClassName: PropTypes.string,
     popperModifiers: PropTypes.object,
@@ -153,6 +153,7 @@ Popper.propTypes = {
     referenceClassName: PropTypes.string,
     referenceProps: PropTypes.object,
     show: PropTypes.bool,
+    usePortal: PropTypes.bool,
     onClickOutside: PropTypes.func,
     onEscapeKey: PropTypes.func,
     onKeyDown: PropTypes.func
