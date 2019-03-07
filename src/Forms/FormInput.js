@@ -29,7 +29,7 @@ FormInput.propTypes = {
 };
 
 FormInput.propDescriptions = {
-    state: 'Sets the state of the input.'
+    state: 'Sets the state of the input. Can be left empty for default styles.'
 };
 
 export default FormInput;
