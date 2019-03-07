@@ -27,7 +27,7 @@ FormInput.propTypes = {
 };
 
 FormInput.propDescriptions = {
-    state: 'Sets the state of the input. Options include \'normal\', \'valid\', \'invalid\', \'warning\', \'help\', \'disabled\', and \'readonly\'. Leave empty for normal.'
+    state: 'Sets the state of the input.'
 };
 
 export default FormInput;
