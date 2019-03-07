@@ -63,29 +63,6 @@ class Popover extends Component {
                 {body}
             </Popper>
         );
-
-        // return (
-        //     <div
-        //         {...rest}
-        //         className={popoverClasses}
-        //         ref={node => {
-        //             this.node = node;
-        //         }}>
-        //         <div
-        //             aria-controls={id}
-        //             aria-expanded={this.state.isExpanded}
-        //             className='fd-popover__control'
-        //             onClick={this.triggerBody}>
-        //             {control}
-        //         </div>
-        //         <div
-        //             aria-hidden={!this.state.isExpanded}
-        //             className={popoverBodyClasses}
-        //             id={id}>
-        //             {body}
-        //         </div>
-        //     </div>
-        // );
     }
 }
 
