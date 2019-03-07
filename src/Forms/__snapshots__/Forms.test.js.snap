@@ -33,7 +33,7 @@ exports[`<Forms /> create form item 1`] = `
       *
     </label>
     <input
-      className="fd-form__control is-help"
+      className="fd-form__control is-warning"
       id="input-1"
       placeholder="Field placeholder text"
       type="text"

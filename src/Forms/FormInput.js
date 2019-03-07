@@ -23,6 +23,8 @@ FormInput.displayName = 'FormInput';
 
 FormInput.propTypes = {
     className: PropTypes.string,
+    disabled: PropTypes.bool,
+    readOnly: PropTypes.bool,
     state: PropTypes.oneOf(INPUT_TYPES)
 };
 
