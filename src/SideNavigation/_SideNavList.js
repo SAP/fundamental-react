@@ -76,6 +76,6 @@ SideNavList.propDescriptions = {
     onItemSelect: '_INTERNAL USE ONLY._'
 };
 
-SideNavList.displayName = 'SideNavList';
+SideNavList.displayName = 'SideNav.List';
 
 export default SideNavList;

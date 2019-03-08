@@ -11,7 +11,7 @@ const MenuList = ({ children, className, ...props }) => {
     return <ul {...props} className={menuListClasses}>{children}</ul>;
 };
 
-MenuList.displayName = 'MenuList';
+MenuList.displayName = 'Menu.List';
 
 MenuList.propTypes = {
     children: PropTypes.node,

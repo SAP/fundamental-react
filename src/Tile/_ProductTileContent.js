@@ -18,7 +18,7 @@ const ProductTileContent = props => {
     );
 };
 
-ProductTileContent.displayName = 'ProductTileContent';
+ProductTileContent.displayName = 'ProductTile.Content';
 
 ProductTileContent.propTypes = {
     className: PropTypes.string,

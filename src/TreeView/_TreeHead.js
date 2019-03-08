@@ -24,7 +24,7 @@ class TreeHead extends Component {
                 <div className='fd-tree__row fd-tree__row--header'>
                     {
                         React.Children.map(children, (child, index) => {
-                            const isFirstTreeCol = index === 0 && child.type && child.type.displayName === 'TreeCol';
+                            const isFirstTreeCol = index === 0 && child.type && child.type.displayName === 'TreeView.Col';
 
                             // Add control class to first TreeCol element
                             const childClassName = classnames({
@@ -56,7 +56,7 @@ class TreeHead extends Component {
     }
 }
 
-TreeHead.displayName = 'TreeHead';
+TreeHead.displayName = 'TreeView.Head';
 
 TreeHead.propTypes = {
     buttonProps: PropTypes.object,

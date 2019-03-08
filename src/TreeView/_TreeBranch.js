@@ -8,7 +8,7 @@ class TreeBranch extends Component {
     }
 }
 
-TreeBranch.displayName = 'TreeBranch';
+TreeBranch.displayName = 'TreeView.Branch';
 
 TreeBranch.propTypes = {
     children: PropTypes.node,

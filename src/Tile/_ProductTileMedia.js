@@ -18,7 +18,7 @@ const ProductTileMedia = props => {
     );
 };
 
-ProductTileMedia.displayName = 'ProductTileMedia';
+ProductTileMedia.displayName = 'ProductTile.Media';
 
 ProductTileMedia.propTypes = {
     image: PropTypes.string.isRequired,

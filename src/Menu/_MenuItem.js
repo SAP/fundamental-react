@@ -50,7 +50,7 @@ const MenuItem = ({ url, isLink, separator, addon, children, onclick, className,
     );
 };
 
-MenuItem.displayName = 'MenuItem';
+MenuItem.displayName = 'Menu.Item';
 
 MenuItem.propTypes = {
     addon: PropTypes.string,

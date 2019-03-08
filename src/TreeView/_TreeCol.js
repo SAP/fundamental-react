@@ -25,7 +25,7 @@ class TreeCol extends Component {
     }
 }
 
-TreeCol.displayName = 'TreeCol';
+TreeCol.displayName = 'TreeView.Col';
 
 TreeCol.propTypes = {
     children: PropTypes.node,

@@ -13,7 +13,7 @@ const TileMedia = props => {
     return <div {...rest} className={tileMediaClasses}>{children}</div>;
 };
 
-TileMedia.displayName = 'TileMedia';
+TileMedia.displayName = 'Tile.Media';
 
 TileMedia.propTypes = {
     children: PropTypes.node,

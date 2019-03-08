@@ -15,7 +15,7 @@ class TreeRow extends Component {
 
         // Render child TreeCols
         const cells = React.Children.map(children, (child, index) => {
-            const isTreeCol = child.type && child.type.displayName === 'TreeCol';
+            const isTreeCol = child.type && child.type.displayName === 'TreeView.Col';
             const isFirstTreeCol = index === 0 && isTreeCol;
 
             // Add control class to first TreeCol element
@@ -49,7 +49,7 @@ class TreeRow extends Component {
     }
 }
 
-TreeRow.displayName = 'TreeRow';
+TreeRow.displayName = 'TreeView.Row';
 
 TreeRow.propTypes = {
     children: PropTypes.node,
