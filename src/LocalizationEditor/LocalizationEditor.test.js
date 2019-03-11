@@ -90,8 +90,10 @@ describe('<LocalizationEditor />', () => {
                     }} />
             );
 
+            element.find('.fd-popper__control > div').simulate('click');
+
             expect(
-                element.find('.fd-popover').getDOMNode().attributes['data-sample'].value
+                element.find('.fd-popper__body').getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
         });
 
@@ -181,6 +183,8 @@ describe('<LocalizationEditor />', () => {
                     menu={defaultMenuArray} />
             );
 
+            element.find('.fd-popper__control > div').simulate('click');
+
             expect(
                 element.find('nav > ul').getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
@@ -197,6 +201,8 @@ describe('<LocalizationEditor />', () => {
                     control={defaultControl}
                     menu={menu} />
             );
+
+            element.find('.fd-popper__control > div').simulate('click');
 
             const listItems = element.find('nav > ul > li');
 
@@ -225,6 +231,8 @@ describe('<LocalizationEditor />', () => {
                     textarea />
             );
 
+            element.find('.fd-popper__control > div').simulate('click');
+
             const listItems = element.find('nav ul li textarea');
 
             expect(listItems).toHaveLength(3);
@@ -250,6 +258,8 @@ describe('<LocalizationEditor />', () => {
                     control={defaultControl}
                     menu={menu} />
             );
+
+            element.find('.fd-popper__control > div').simulate('click');
 
             const listItems = element.find('nav ul li input');
 

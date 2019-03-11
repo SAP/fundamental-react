@@ -13,6 +13,7 @@ exports[`<TimePicker /> create time picker 1`] = `
     >
       <div
         className="fd-popover__control"
+        onClick={[Function]}
       >
         <div
           className="fd-input-group fd-input-group--after"
@@ -56,6 +57,7 @@ exports[`<TimePicker /> create time picker 2`] = `
     >
       <div
         className="fd-popover__control"
+        onClick={[Function]}
       >
         <div
           className="fd-input-group fd-input-group--after"
@@ -97,6 +99,7 @@ exports[`<TimePicker /> create time picker 3`] = `
     >
       <div
         className="fd-popover__control"
+        onClick={[Function]}
       >
         <div
           className="fd-input-group fd-input-group--after"
@@ -138,6 +141,7 @@ exports[`<TimePicker /> create time picker 4`] = `
     >
       <div
         className="fd-popover__control"
+        onClick={[Function]}
       >
         <div
           className="fd-input-group fd-input-group--after"
@@ -181,6 +185,7 @@ exports[`<TimePicker /> create time picker 5`] = `
     >
       <div
         className="fd-popover__control"
+        onClick={[Function]}
       >
         <div
           className="fd-input-group fd-input-group--after"
@@ -222,6 +227,7 @@ exports[`<TimePicker /> create time picker 6`] = `
     >
       <div
         className="fd-popover__control"
+        onClick={[Function]}
       >
         <div
           className="fd-input-group fd-input-group--after"
@@ -263,6 +269,7 @@ exports[`<TimePicker /> create time picker 7`] = `
     >
       <div
         className="fd-popover__control"
+        onClick={[Function]}
       >
         <div
           className="fd-input-group fd-input-group--after"
@@ -304,6 +311,7 @@ exports[`<TimePicker /> create time picker 8`] = `
     >
       <div
         className="fd-popover__control"
+        onClick={[Function]}
       >
         <div
           className="fd-input-group fd-input-group--after"
@@ -345,6 +353,7 @@ exports[`<TimePicker /> create time picker 9`] = `
     >
       <div
         className="fd-popover__control"
+        onClick={[Function]}
       >
         <div
           className="fd-input-group fd-input-group--after"
@@ -386,6 +395,7 @@ exports[`<TimePicker /> create time picker 10`] = `
     >
       <div
         className="fd-popover__control"
+        onClick={[Function]}
       >
         <div
           className="fd-input-group fd-input-group--after"

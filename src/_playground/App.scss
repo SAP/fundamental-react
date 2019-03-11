@@ -696,3 +696,9 @@ $arrow-width-half: $arrow-width/2;
         }
     }
 }
+
+.fd-time-picker {
+    .fd-popper__body {
+        padding: 16px;
+    }
+}

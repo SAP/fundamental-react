@@ -208,9 +208,11 @@ class TimePickerItem extends Component {
         this.setState({ style: VALID });
     };
     render() {
-        const { disabled, inputProps, buttonProps } = this.props;
+        // the 'onClick' prop is coming from Popover's modification of the control prop
+        // it needs to be added the outer div so React processes it
+        const { disabled, inputProps, buttonProps, onClick } = this.props;
         return (
-            <div className='fd-popover__control'>
+            <div className='fd-popover__control' onClick={onClick}>
                 <div className='fd-input-group fd-input-group--after'>
                     <input
                         {...inputProps}
