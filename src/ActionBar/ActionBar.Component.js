@@ -56,7 +56,8 @@ export const ActionBarComponent = () => {
                                     </Menu.List>
                                 </Menu>
                             }
-                            control={<Button glyph='vertical-grip' option='light' />} />
+                            control={<Button glyph='vertical-grip' option='light' />}
+                            placement='bottom-end' />
                     </ActionBar.Actions>
                 </ActionBar>
             </Example>
@@ -80,7 +81,8 @@ export const ActionBarComponent = () => {
                                     </Menu.List>
                                 </Menu>
                             }
-                            control={<Button glyph='vertical-grip' option='light' />} />
+                            control={<Button glyph='vertical-grip' option='light' />}
+                            placement='bottom-end' />
                     </ActionBar.Actions>
                 </ActionBar>
             </Example>
@@ -104,7 +106,8 @@ export const ActionBarComponent = () => {
                                     </Menu.List>
                                 </Menu>
                             }
-                            control={<Button glyph='vertical-grip' option='light' />} />
+                            control={<Button glyph='vertical-grip' option='light' />}
+                            placement='bottom-end' />
                     </ActionBar.Actions>
                 </ActionBar>
             </Example>

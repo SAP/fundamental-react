@@ -54,7 +54,8 @@ export const TableComponent = () => {
                                             </Menu.List>
                                         </Menu>
                                     }
-                                    control={<Button glyph='vertical-grip' option='light' />} />
+                                    control={<Button glyph='vertical-grip' option='light' />}
+                                    placement='bottom-end' />
                             ]
                         },
                         {
@@ -78,7 +79,8 @@ export const TableComponent = () => {
                                             </Menu.List>
                                         </Menu>
                                     }
-                                    control={<Button glyph='vertical-grip' option='light' />} />
+                                    control={<Button glyph='vertical-grip' option='light' />}
+                                    placement='bottom-end' />
                             ]
                         },
                         {
@@ -102,7 +104,8 @@ export const TableComponent = () => {
                                             </Menu.List>
                                         </Menu>
                                     }
-                                    control={<Button glyph='vertical-grip' option='light' />} />
+                                    control={<Button glyph='vertical-grip' option='light' />}
+                                    placement='bottom-end' />
                             ]
                         },
                         {
@@ -126,7 +129,8 @@ export const TableComponent = () => {
                                             </Menu.List>
                                         </Menu>
                                     }
-                                    control={<Button glyph='vertical-grip' option='light' />} />
+                                    control={<Button glyph='vertical-grip' option='light' />}
+                                    placement='bottom-end' />
                             ]
                         }
                     ]} />

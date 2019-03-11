@@ -95,21 +95,19 @@ class Popper extends React.Component {
                     }
 
                     return (
-                        <Foco onClickOutside={onClickOutside}>
-                            <div
-                                {...popperProps}
-                                className={popperClasses}
-                                data-placement={placement}
-                                data-x-out-of-boundaries={!!outOfBoundaries || undefined} // eslint-disable-line
-                                ref={ref}
-                                style={style}>
-                                {children}
-                                <span
-                                    className='fd-popper__arrow'
-                                    ref={arrowProps.ref}
-                                    style={arrowProps.style} />
-                            </div>
-                        </Foco>
+                        <div
+                            {...popperProps}
+                            className={popperClasses}
+                            data-placement={placement}
+                            data-x-out-of-boundaries={!!outOfBoundaries || undefined} // eslint-disable-line
+                            ref={ref}
+                            style={style}>
+                            {children}
+                            <span
+                                className='fd-popper__arrow'
+                                ref={arrowProps.ref}
+                                style={arrowProps.style} />
+                        </div>
                     );
                 }}
             </ReactPopper>
@@ -123,17 +121,19 @@ class Popper extends React.Component {
 
         return (
             <Manager>
-                <Reference>
-                    {({ ref }) => (
-                        <div
-                            {...referenceProps}
-                            className={referenceClasses}
-                            ref={ref}>
-                            {referenceComponent}
-                        </div>
-                    )}
-                </Reference>
-                {popper}
+                <Foco onClickOutside={onClickOutside}>
+                    <Reference>
+                        {({ ref }) => (
+                            <div
+                                {...referenceProps}
+                                className={referenceClasses}
+                                ref={ref}>
+                                {referenceComponent}
+                            </div>
+                        )}
+                    </Reference>
+                    {popper}
+                </Foco>
             </Manager>
         );
     }

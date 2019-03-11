@@ -1,45 +1,69 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Popover /> create Popover 1`] = `
-<div
-  className="fd-popper__control fd-popover"
+<span
+  onFocus={[Function]}
+  onMouseDown={[Function]}
+  onTouchStart={[Function]}
 >
-  <span
-    className="sap-icon--cart sap-icon--xl"
-    onClick={[Function]}
-  />
-</div>
+  <div
+    className="fd-popper__control fd-popover"
+  >
+    <span
+      className="sap-icon--cart sap-icon--xl"
+      onClick={[Function]}
+    />
+  </div>
+</span>
 `;
 
 exports[`<Popover /> create Popover 2`] = `
-<div
-  className="fd-popper__control fd-popover"
+<span
+  onFocus={[Function]}
+  onMouseDown={[Function]}
+  onTouchStart={[Function]}
 >
-  <span
-    className="sap-icon--cart sap-icon--xl"
-    onClick={[Function]}
-  />
-</div>
+  <div
+    className="fd-popper__control fd-popover"
+  >
+    <span
+      className="sap-icon--cart sap-icon--xl"
+      onClick={[Function]}
+    />
+  </div>
+</span>
 `;
 
 exports[`<Popover /> create Popover 3`] = `
-<div
-  className="fd-popper__control fd-popover"
+<span
+  onFocus={[Function]}
+  onMouseDown={[Function]}
+  onTouchStart={[Function]}
 >
-  <span
-    className="sap-icon--cart sap-icon--xl"
-    onClick={[Function]}
-  />
-</div>
+  <div
+    className="fd-popper__control fd-popover"
+  >
+    <span
+      className="sap-icon--cart sap-icon--xl"
+      onClick={[Function]}
+    />
+  </div>
+</span>
 `;
 
 exports[`<Popover /> create Popover 4`] = `
-<div
-  className="fd-popper__control fd-popover"
+<span
+  onFocus={[Function]}
+  onMouseDown={[Function]}
+  onTouchStart={[Function]}
 >
-  <span
-    className="sap-icon--cart sap-icon--xl"
-    onClick={[Function]}
-  />
-</div>
+  <div
+    className="fd-popper__control fd-popover"
+  >
+    <span
+      className="sap-icon--cart sap-icon--xl"
+      onClick={[Function]}
+    />
+  </div>
+</span>
 `;

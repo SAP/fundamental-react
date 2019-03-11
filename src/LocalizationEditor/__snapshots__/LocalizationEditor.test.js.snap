@@ -4,19 +4,22 @@ exports[`<LocalizationEditor /> create localization editor 1`] = `
 <div
   className="fd-localization-editor"
 >
-  <div
-    className="fd-popper__control fd-popover"
+  <label
+    className="fd-form__label"
+  >
+    Localization Editor Label
+  </label>
+  <span
+    onFocus={[Function]}
+    onMouseDown={[Function]}
+    onTouchStart={[Function]}
   >
     <div
-      onClick={[Function]}
+      className="fd-popper__control fd-popover"
     >
-      <label
-        className="fd-form__label"
-      >
-        Localization Editor Label
-      </label>
       <div
         className="fd-input-group fd-input-group--after"
+        onClick={[Function]}
       >
         <input
           className=""
@@ -34,7 +37,7 @@ exports[`<LocalizationEditor /> create localization editor 1`] = `
         </span>
       </div>
     </div>
-  </div>
+  </span>
 </div>
 `;
 
@@ -42,19 +45,22 @@ exports[`<LocalizationEditor /> create localization editor 2`] = `
 <div
   className="fd-localization-editor blue"
 >
-  <div
-    className="fd-popper__control fd-popover"
+  <label
+    className="fd-form__label"
+  >
+    Localization Editor Compact Mode
+  </label>
+  <span
+    onFocus={[Function]}
+    onMouseDown={[Function]}
+    onTouchStart={[Function]}
   >
     <div
-      onClick={[Function]}
+      className="fd-popper__control fd-popover"
     >
-      <label
-        className="fd-form__label"
-      >
-        Localization Editor Compact Mode
-      </label>
       <div
         className="fd-input-group fd-input-group--compact fd-input-group--after"
+        onClick={[Function]}
       >
         <input
           className="fd-input fd-input--compact"
@@ -72,7 +78,7 @@ exports[`<LocalizationEditor /> create localization editor 2`] = `
         </span>
       </div>
     </div>
-  </div>
+  </span>
 </div>
 `;
 
@@ -80,19 +86,22 @@ exports[`<LocalizationEditor /> create localization editor 3`] = `
 <div
   className="fd-localization-editor"
 >
-  <div
-    className="fd-popper__control fd-popover"
+  <label
+    className="fd-form__label"
+  >
+    Localization Editor Label
+  </label>
+  <span
+    onFocus={[Function]}
+    onMouseDown={[Function]}
+    onTouchStart={[Function]}
   >
     <div
-      onClick={[Function]}
+      className="fd-popper__control fd-popover"
     >
-      <label
-        className="fd-form__label"
-      >
-        Localization Editor Label
-      </label>
       <div
         className="fd-input-group fd-input-group--after"
+        onClick={[Function]}
       >
         <textarea />
         <span
@@ -106,6 +115,6 @@ exports[`<LocalizationEditor /> create localization editor 3`] = `
         </span>
       </div>
     </div>
-  </div>
+  </span>
 </div>
 `;

@@ -153,7 +153,7 @@ class Shellbar extends Component {
                                             </span>
                                         </button>
                                     }
-                                    placement='right' />
+                                    noArrow />
                             </div>
                         )}
                     </div>
@@ -199,7 +199,7 @@ class Shellbar extends Component {
                                                         )}
                                                     </button>
                                                 }
-                                                placement='right' />
+                                                placement='bottom-end' />
                                         ) : (
                                             <button
                                                 aria-label={action.label}
@@ -234,7 +234,7 @@ class Shellbar extends Component {
                                             </button>
                                         </div>
                                     }
-                                    placement='right' />
+                                    placement='bottom-end' />
                             ) : (
                                 <div className='fd-shellbar__action fd-shellbar__action--collapsible'>
                                     <button aria-label='Notifications' className=' fd-button--shell sap-icon--bell'
@@ -299,7 +299,7 @@ class Shellbar extends Component {
                                                 </button>
                                             </div>
                                         }
-                                        placement='right' />
+                                        placement='bottom-end' />
                                 </div>
                             </div>
                         }
@@ -347,7 +347,7 @@ class Shellbar extends Component {
                                                 </Identifier>
                                             )
                                         }
-                                        placement='right' />
+                                        placement='bottom-end' />
                                 </div>
                             </div>
                         )}
@@ -376,7 +376,7 @@ class Shellbar extends Component {
                                             </div>
                                         }
                                         control={<button className=' fd-button--shell sap-icon--grid' />}
-                                        placement='right' />
+                                        placement='bottom-end' />
                                 </div>
                             </div>
                         )}

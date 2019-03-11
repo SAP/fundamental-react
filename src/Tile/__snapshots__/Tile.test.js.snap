@@ -82,14 +82,20 @@ exports[`<Tile /> create tile component 4`] = `
   <div
     className="fd-tile__actions yellow"
   >
-    <div
-      className="fd-popper__control fd-popover"
+    <span
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      onTouchStart={[Function]}
     >
-      <button
-        className="fd-button fd-button--standard sap-icon--vertical-grip"
-        onClick={[Function]}
-      />
-    </div>
+      <div
+        className="fd-popper__control fd-popover"
+      >
+        <button
+          className="fd-button fd-button--standard sap-icon--vertical-grip"
+          onClick={[Function]}
+        />
+      </div>
+    </span>
   </div>
 </div>
 `;
@@ -138,14 +144,20 @@ exports[`<Tile /> create tile component 6`] = `
   <div
     className="fd-tile__actions"
   >
-    <div
-      className="fd-popper__control fd-popover"
+    <span
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      onTouchStart={[Function]}
     >
-      <button
-        className="fd-button fd-button--standard sap-icon--vertical-grip"
-        onClick={[Function]}
-      />
-    </div>
+      <div
+        className="fd-popper__control fd-popover"
+      >
+        <button
+          className="fd-button fd-button--standard sap-icon--vertical-grip"
+          onClick={[Function]}
+        />
+      </div>
+    </span>
   </div>
 </div>
 `;
