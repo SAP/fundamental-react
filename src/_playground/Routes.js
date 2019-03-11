@@ -377,6 +377,7 @@ export class Routes extends Component {
                             <div className='frDocs-Search'>
                                 <InputGroup
                                     inputPlaceholder='Search'
+                                    inputProps={{ 'aria-label': 'Search' }}
                                     inputType='search'
                                     inputValue={this.state.query}
                                     onChange={this.onChangeHandler} />
