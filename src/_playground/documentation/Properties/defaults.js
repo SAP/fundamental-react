@@ -14,6 +14,7 @@ export const defaultPropDescriptions = {
     onClick: 'Callback function when user clicks on the component.',
     placeholder: 'Localized placeholder text of the input.',
     popoverProps: 'Additional props to be spread to the `Popover` component.',
+    readOnly: 'Adds the readonly attribute to the element.',
     size: 'Size of the component.',
     title: 'Localized text for the heading.',
     titleProps: 'Additional props to be spread to the title\'s heading element.',
