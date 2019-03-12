@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.4.2-rc.2"></a>
+## [0.4.2-rc.2](https://github.com/SAP/fundamental-react/compare/v0.4.2-rc.1...v0.4.2-rc.2) (2019-03-12)
+
+
+### Bug Fixes
+
+* update FormInput state prop description ([#463](https://github.com/SAP/fundamental-react/issues/463)) ([5df9c64](https://github.com/SAP/fundamental-react/commit/5df9c64))
+
+
+
 <a name="0.4.2-rc.1"></a>
 ## [0.4.2-rc.1](https://github.com/SAP/fundamental-react/compare/v0.4.2-rc.0...v0.4.2-rc.1) (2019-03-12)
 
