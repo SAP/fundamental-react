@@ -23,11 +23,13 @@ FormInput.displayName = 'FormInput';
 
 FormInput.propTypes = {
     className: PropTypes.string,
+    disabled: PropTypes.bool,
+    readOnly: PropTypes.bool,
     state: PropTypes.oneOf(INPUT_TYPES)
 };
 
 FormInput.propDescriptions = {
-    state: 'Sets the state of the input. Options include \'normal\', \'valid\', \'invalid\', \'warning\', \'help\', \'disabled\', and \'readonly\'. Leave empty for normal.'
+    state: 'Sets the state of the input. Can be left empty for default styles.'
 };
 
 export default FormInput;

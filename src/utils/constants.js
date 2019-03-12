@@ -20,10 +20,7 @@ export const INPUT_TYPES = [
     'normal',
     'valid',
     'invalid',
-    'warning',
-    'help',
-    'disabled',
-    'readonly'
+    'warning'
 ];
 
 export const LABEL_TYPES = [
