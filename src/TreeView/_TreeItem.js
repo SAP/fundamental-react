@@ -32,7 +32,7 @@ class TreeItem extends Component {
 
         // Render child TreeBranch with correct props
         const childBranch = React.Children.map(children, (child) => {
-            const isTreeBranch = child.type && child.type.displayName === 'TreeBranch';
+            const isTreeBranch = child.type && child.type.displayName === 'TreeView.Branch';
 
             return isTreeBranch ?
                 React.cloneElement(child, {
@@ -47,7 +47,7 @@ class TreeItem extends Component {
 
         // Render child TreeRow with correct props
         const childRow = React.Children.map(children, (child) => {
-            const isTreeRow = child.type && child.type.displayName === 'TreeRow';
+            const isTreeRow = child.type && child.type.displayName === 'TreeView.Row';
 
             return isTreeRow ?
                 React.cloneElement(child, {
@@ -73,7 +73,7 @@ class TreeItem extends Component {
     }
 }
 
-TreeItem.displayName = 'TreeItem';
+TreeItem.displayName = 'TreeView.Item';
 
 TreeItem.propTypes = {
     children: PropTypes.node,

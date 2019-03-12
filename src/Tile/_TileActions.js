@@ -13,7 +13,7 @@ const TileActions = props => {
     return <div {...rest} className={tileActionsClasses}>{children}</div>;
 };
 
-TileActions.displayName = 'TileActions';
+TileActions.displayName = 'Tile.Actions';
 
 TileActions.propTypes = {
     children: PropTypes.node,

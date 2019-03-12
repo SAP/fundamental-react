@@ -13,7 +13,7 @@ const PanelActions = props => {
     return <div {...rest} className={panelActionsClasses}>{children}</div>;
 };
 
-PanelActions.displayName = 'PanelActions';
+PanelActions.displayName = 'Panel.Actions';
 
 PanelActions.propTypes = {
     className: PropTypes.string

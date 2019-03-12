@@ -16,7 +16,7 @@ const MenuGroup = ({ title, children, className, titleProps, ...props }) => {
     );
 };
 
-MenuGroup.displayName = 'MenuGroup';
+MenuGroup.displayName = 'Menu.Group';
 
 MenuGroup.propTypes = {
     title: PropTypes.string.isRequired,

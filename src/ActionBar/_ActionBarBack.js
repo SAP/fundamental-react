@@ -18,7 +18,7 @@ const ActionBarBack = ({ onClick, className, buttonProps, ...props }) => {
     );
 };
 
-ActionBarBack.displayName = 'ActionBarBack';
+ActionBarBack.displayName = 'ActionBar.Back';
 
 ActionBarBack.propTypes = {
     buttonProps: PropTypes.object,

@@ -18,7 +18,7 @@ const TileContent = props => {
     );
 };
 
-TileContent.displayName = 'TileContent';
+TileContent.displayName = 'Tile.Content';
 
 TileContent.propTypes = {
     title: PropTypes.string.isRequired,

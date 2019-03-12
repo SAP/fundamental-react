@@ -13,7 +13,7 @@ const PanelBody = props => {
     return <div {...rest} className={panelBodyClasses}>{children}</div>;
 };
 
-PanelBody.displayName = 'PanelBody';
+PanelBody.displayName = 'Panel.Body';
 
 PanelBody.propTypes = {
     className: PropTypes.string

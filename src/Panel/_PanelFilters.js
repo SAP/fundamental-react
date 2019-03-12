@@ -17,7 +17,7 @@ const PanelFilters = props => {
     );
 };
 
-PanelFilters.displayName = 'PanelFilters';
+PanelFilters.displayName = 'Panel.Filters';
 
 PanelFilters.propTypes = {
     className: PropTypes.string

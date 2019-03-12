@@ -11,7 +11,7 @@ const ActionBarActions = ({ children, className, ...props }) => {
     return <div {...props} className={actionBarActionsClasses}>{children}</div>;
 };
 
-ActionBarActions.displayName = 'ActionBarActions';
+ActionBarActions.displayName = 'ActionBar.Actions';
 
 ActionBarActions.propTypes = {
     children: PropTypes.node,

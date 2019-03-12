@@ -15,7 +15,7 @@ const ListGroupItemActions = ({ children, className, ...props }) => {
     );
 };
 
-ListGroupItemActions.displayName = 'ListGroupItemActions';
+ListGroupItemActions.displayName = 'ListGroup.ItemActions';
 
 ListGroupItemActions.propTypes = {
     children: PropTypes.node,

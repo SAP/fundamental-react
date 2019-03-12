@@ -22,7 +22,7 @@ const ActionBarHeader = ({ className, description, descriptionProps, title, titl
     );
 };
 
-ActionBarHeader.displayName = 'ActionBarHeader';
+ActionBarHeader.displayName = 'ActionBar.Header';
 
 ActionBarHeader.propTypes = {
     title: PropTypes.string.isRequired,

@@ -136,6 +136,6 @@ SideNavListItem.defaultProps = {
     onClick: () => {}
 };
 
-SideNavListItem.displayName = 'SideNavListItem';
+SideNavListItem.displayName = 'SideNav.ListItem';
 
 export default SideNavListItem;
