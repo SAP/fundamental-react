@@ -119,8 +119,8 @@ class TreeView extends Component {
             <div {...rest}>
                 {
                     React.Children.map(children, (child) => {
-                        const isTreeHead = child.type && child.type.displayName === 'TreeHead';
-                        const isTree = child.type && child.type.displayName === 'Tree';
+                        const isTreeHead = child.type && child.type.displayName === 'TreeView.Head';
+                        const isTree = child.type && child.type.displayName === 'TreeView.Tree';
 
                         if (isTreeHead) {
                             // Pass expand all callbacks to TreeHead

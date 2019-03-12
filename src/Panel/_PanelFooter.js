@@ -13,7 +13,7 @@ const PanelFooter = props => {
     return <div {...rest} className={panelFooterClasses}>{children}</div>;
 };
 
-PanelFooter.displayName = 'PanelFooter';
+PanelFooter.displayName = 'Panel.Footer';
 
 PanelFooter.propTypes = {
     className: PropTypes.string

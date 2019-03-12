@@ -16,7 +16,7 @@ const ListGroupItem = ({ children, className, ...props }) => {
     );
 };
 
-ListGroupItem.displayName = 'ListGroupItem';
+ListGroupItem.displayName = 'ListGroup.Item';
 
 ListGroupItem.propTypes = {
     children: PropTypes.node,

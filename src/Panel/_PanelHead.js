@@ -18,7 +18,7 @@ const PanelHead = props => {
     );
 };
 
-PanelHead.displayName = 'PanelHead';
+PanelHead.displayName = 'Panel.Head';
 
 PanelHead.propTypes = {
     className: PropTypes.string,

@@ -27,7 +27,7 @@ const BreadcrumbItem = ({ url, name, className, children, ...props }) => {
     );
 };
 
-BreadcrumbItem.displayName = 'BreadcrumbItem';
+BreadcrumbItem.displayName = 'Breadcrumb.Item';
 
 BreadcrumbItem.propTypes = {
     name: PropTypes.string,

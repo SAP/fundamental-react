@@ -19,7 +19,7 @@ const ListGroupItemCheckbox = ({ children, labelProps, inputProps, ...props }) =
     );
 };
 
-ListGroupItemCheckbox.displayName = 'ListGroupItemCheckbox';
+ListGroupItemCheckbox.displayName = 'ListGroup.ItemCheckbox';
 
 ListGroupItemCheckbox.propTypes = {
     children: PropTypes.node,
