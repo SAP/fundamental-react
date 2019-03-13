@@ -357,6 +357,11 @@ export class Routes extends Component {
                                 option='light'
                                 type='standard' />
                             <a
+                                className='frDocs-Menu__screen-reader-only-focusable'
+                                href='#frDocs-Content'>
+                                Skip Navigation Links
+                            </a>
+                            <a
                                 aria-label='Home'
                                 className='frDocs-Menu__logo'
                                 href='/'>
