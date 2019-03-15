@@ -347,6 +347,11 @@ export class Routes extends Component {
                 <ScrollToTop>
                     <div className='frDocs-Container'>
                         <header className='frDocs-Menu'>
+                            <a
+                                className='screen-reader-only--focusable'
+                                href='#frDocs-Content'>
+                                Skip Navigation Links
+                            </a>
                             <Button
                                 aria-expanded={this.state.showSideNav}
                                 aria-label='Toggle Navigation'
@@ -356,11 +361,6 @@ export class Routes extends Component {
                                 onClick={this.toggleNavVis}
                                 option='light'
                                 type='standard' />
-                            <a
-                                className='frDocs-Menu__screen-reader-only-focusable'
-                                href='#frDocs-Content'>
-                                Skip Navigation Links
-                            </a>
                             <a
                                 aria-label='Home'
                                 className='frDocs-Menu__logo'
