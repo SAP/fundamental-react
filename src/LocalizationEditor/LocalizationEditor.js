@@ -43,6 +43,12 @@ const LocalizationEditor = ({ control, menu, id, compact, textarea, className, l
 
     return (
         <div {...props} className={localizationEditorClasses}>
+            <label
+                {...control.labelProps}
+                className='fd-form__label'
+                htmlFor={id}>
+                {control.label}
+            </label>
             <Popover
                 {...popoverProps}
                 body={
@@ -81,31 +87,23 @@ const LocalizationEditor = ({ control, menu, id, compact, textarea, className, l
                     </nav>
                 }
                 control={
-                    <div>
-                        <label
-                            {...control.labelProps}
-                            className='fd-form__label'
-                            htmlFor={id}>
-                            {control.label}
-                        </label>
-                        <div
-                            className={localizationEditorCompactClasses}>
-                            {textarea ? (
-                                <textarea {...control.inputProps} />
-                            ) : (
-                                <input
-                                    {...control.inputProps}
-                                    className={localizationEditorInputClasses}
-                                    placeholder={control.placeholder}
-                                    type='text' />
-                            )}
-                            <span
-                                className={localizationEditorTextareaClasses}>
-                                <button {...control.buttonProps} className='fd-button--light fd-localization-editor__button'>
-                                    {control.language}
-                                </button>
-                            </span>
-                        </div>
+                    <div
+                        className={localizationEditorCompactClasses}>
+                        {textarea ? (
+                            <textarea {...control.inputProps} />
+                        ) : (
+                            <input
+                                {...control.inputProps}
+                                className={localizationEditorInputClasses}
+                                placeholder={control.placeholder}
+                                type='text' />
+                        )}
+                        <span
+                            className={localizationEditorTextareaClasses}>
+                            <button {...control.buttonProps} className='fd-button--light fd-localization-editor__button'>
+                                {control.language}
+                            </button>
+                        </span>
                     </div>
                 }
                 id={id}

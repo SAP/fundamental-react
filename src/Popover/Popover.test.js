@@ -40,7 +40,6 @@ describe('<Popover />', () => {
 
     const popOverWithAlignment = (
         <Popover
-            alignment='right'
             body={
                 <Menu>
                     <Menu.List>
@@ -51,7 +50,8 @@ describe('<Popover />', () => {
                     </Menu.List>
                 </Menu>
             }
-            control={<Icon glyph='cart' size='xl' />} />
+            control={<Icon glyph='cart' size='xl' />}
+            placement='right' />
     );
 
     const popOverNoArrow = (
@@ -96,21 +96,21 @@ describe('<Popover />', () => {
         const wrapper = mount(popOver);
 
         // click on popover to show
-        wrapper.find('div.fd-popover__control').simulate('click');
+        wrapper.find('div.fd-popper__control .sap-icon--cart').simulate('click');
         expect(wrapper.state('isExpanded')).toBeTruthy();
 
         // click on popover to hide
-        wrapper.find('div.fd-popover__control').simulate('click');
+        wrapper.find('div.fd-popper__control .sap-icon--cart').simulate('click');
         expect(wrapper.state('isExpanded')).toBeFalsy();
 
-        wrapper.instance().componentWillUnmount();
+        // wrapper.instance().componentWillUnmount();
     });
 
     test('handle esc key to close popover', () => {
         const wrapper = mount(popOver);
 
         // click on popover to show
-        wrapper.find('div.fd-popover__control').simulate('click');
+        wrapper.find('div.fd-popper__control .sap-icon--cart').simulate('click');
         expect(wrapper.state('isExpanded')).toBeTruthy();
 
         // handle esc key
@@ -123,7 +123,7 @@ describe('<Popover />', () => {
         const wrapper = mount(popOver);
 
         // click on popover to show
-        wrapper.find('div.fd-popover__control').simulate('click');
+        wrapper.find('div.fd-popper__control .sap-icon--cart').simulate('click');
         expect(wrapper.state('isExpanded')).toBeTruthy();
 
         // handle click on document
@@ -136,16 +136,23 @@ describe('<Popover />', () => {
         const wrapper = mount(popOverDisabled);
 
         // click on popover to show
-        wrapper.find('div.fd-popover__control').simulate('click');
+        wrapper.find('div.fd-popper__control .sap-icon--cart').simulate('click');
         expect(wrapper.state('isExpanded')).toBeFalsy();
     });
 
     describe('Prop spreading', () => {
         test('should allow props to be spread to the Popover component', () => {
-            const element = mount(<Popover data-sample='Sample' />);
+            const element = mount(
+                <Popover
+                    body={<div />}
+                    control={<Icon glyph='cart' size='xl' />}
+                    data-sample='Sample' />
+            );
+
+            element.find('div.fd-popper__control .sap-icon--cart').simulate('click');
 
             expect(
-                element.getDOMNode().attributes['data-sample'].value
+                element.find('.fd-popper__body').getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
         });
     });

@@ -118,3 +118,18 @@ export const TOGGLE_SIZES = [
     'm',
     'l'
 ];
+
+export const POPPER_PLACEMENTS = [
+    'bottom-start',
+    'bottom',
+    'bottom-end',
+    'left-start',
+    'left',
+    'left-end',
+    'right-start',
+    'right',
+    'right-end',
+    'top-start',
+    'top',
+    'top-end'
+];

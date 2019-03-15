@@ -4,66 +4,22 @@ exports[`<Dropdown /> create dropdown component 1`] = `
 <div
   className="fd-dropdown"
 >
-  <div
-    className="fd-popover"
+  <span
+    onFocus={[Function]}
+    onMouseDown={[Function]}
+    onTouchStart={[Function]}
   >
     <div
-      aria-expanded={false}
-      className="fd-popover__control"
-      onClick={[Function]}
+      className="fd-popper__control fd-popover"
     >
       <button
         className="fd-button fd-dropdown__control"
+        onClick={[Function]}
       >
         Select
       </button>
     </div>
-    <div
-      aria-hidden={true}
-      className="fd-popover__body fd-popover__body--no-arrow"
-    >
-      <nav
-        className="fd-menu"
-      >
-        <ul
-          className="fd-menu__list"
-        >
-          <li>
-            <a
-              className="fd-menu__item"
-              href="/"
-            >
-              Option 1
-            </a>
-          </li>
-          <li>
-            <a
-              className="fd-menu__item"
-              href="/"
-            >
-              Option 2
-            </a>
-          </li>
-          <li>
-            <a
-              className="fd-menu__item"
-              href="/"
-            >
-              Option 3
-            </a>
-          </li>
-          <li>
-            <a
-              className="fd-menu__item"
-              href="/"
-            >
-              Option 4
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </div>
+  </span>
 </div>
 `;
 
@@ -71,66 +27,22 @@ exports[`<Dropdown /> create dropdown component 2`] = `
 <div
   className="fd-dropdown blue"
 >
-  <div
-    className="fd-popover"
+  <span
+    onFocus={[Function]}
+    onMouseDown={[Function]}
+    onTouchStart={[Function]}
   >
     <div
-      aria-expanded={false}
-      className="fd-popover__control"
-      onClick={[Function]}
+      className="fd-popper__control fd-popover"
     >
       <button
         className="fd-button fd-dropdown__control fd-button--compact"
+        onClick={[Function]}
       >
         Select
       </button>
     </div>
-    <div
-      aria-hidden={true}
-      className="fd-popover__body fd-popover__body--no-arrow"
-    >
-      <nav
-        className="fd-menu"
-      >
-        <ul
-          className="fd-menu__list"
-        >
-          <li>
-            <a
-              className="fd-menu__item"
-              href="/"
-            >
-              Option 1
-            </a>
-          </li>
-          <li>
-            <a
-              className="fd-menu__item"
-              href="/"
-            >
-              Option 2
-            </a>
-          </li>
-          <li>
-            <a
-              className="fd-menu__item"
-              href="/"
-            >
-              Option 3
-            </a>
-          </li>
-          <li>
-            <a
-              className="fd-menu__item"
-              href="/"
-            >
-              Option 4
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </div>
+  </span>
 </div>
 `;
 
@@ -138,66 +50,22 @@ exports[`<Dropdown /> create dropdown component 3`] = `
 <div
   className="fd-dropdown fd-dropdown--standard"
 >
-  <div
-    className="fd-popover"
+  <span
+    onFocus={[Function]}
+    onMouseDown={[Function]}
+    onTouchStart={[Function]}
   >
     <div
-      aria-expanded={false}
-      className="fd-popover__control"
-      onClick={[Function]}
+      className="fd-popper__control fd-popover"
     >
       <button
         className="fd-button fd-button--standard fd-dropdown__control"
+        onClick={[Function]}
       >
         Select
       </button>
     </div>
-    <div
-      aria-hidden={true}
-      className="fd-popover__body fd-popover__body--no-arrow"
-    >
-      <nav
-        className="fd-menu"
-      >
-        <ul
-          className="fd-menu__list"
-        >
-          <li>
-            <a
-              className="fd-menu__item"
-              href="/"
-            >
-              Option 1
-            </a>
-          </li>
-          <li>
-            <a
-              className="fd-menu__item"
-              href="/"
-            >
-              Option 2
-            </a>
-          </li>
-          <li>
-            <a
-              className="fd-menu__item"
-              href="/"
-            >
-              Option 3
-            </a>
-          </li>
-          <li>
-            <a
-              className="fd-menu__item"
-              href="/"
-            >
-              Option 4
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </div>
+  </span>
 </div>
 `;
 
@@ -205,68 +73,22 @@ exports[`<Dropdown /> create dropdown component 4`] = `
 <div
   className="fd-dropdown"
 >
-  <div
-    className="fd-popover"
+  <span
+    onFocus={[Function]}
+    onMouseDown={[Function]}
+    onTouchStart={[Function]}
   >
     <div
-      aria-controls="jhqD0557"
-      aria-expanded={false}
-      className="fd-popover__control"
-      onClick={[Function]}
+      className="fd-popper__control fd-popover"
     >
       <button
         className="fd-button fd-dropdown__control sap-icon--filter"
+        onClick={[Function]}
       >
         Select
       </button>
     </div>
-    <div
-      aria-hidden={true}
-      className="fd-popover__body fd-popover__body--no-arrow"
-      id="jhqD0557"
-    >
-      <nav
-        className="fd-menu"
-      >
-        <ul
-          className="fd-menu__list"
-        >
-          <li>
-            <a
-              className="fd-menu__item"
-              href="/"
-            >
-              Option 1
-            </a>
-          </li>
-          <li>
-            <a
-              className="fd-menu__item"
-              href="/"
-            >
-              Option 2
-            </a>
-          </li>
-          <li>
-            <a
-              className="fd-menu__item"
-              href="/"
-            >
-              Option 3
-            </a>
-          </li>
-          <li>
-            <a
-              className="fd-menu__item"
-              href="/"
-            >
-              Option 4
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </div>
+  </span>
 </div>
 `;
 
@@ -274,69 +96,22 @@ exports[`<Dropdown /> create dropdown component 5`] = `
 <div
   className="fd-dropdown"
 >
-  <div
-    className="fd-popover"
-    disabled={true}
+  <span
+    onFocus={[Function]}
+    onMouseDown={[Function]}
+    onTouchStart={[Function]}
   >
     <div
-      aria-controls="jhqD0561"
-      aria-expanded={false}
-      className="fd-popover__control"
-      onClick={[Function]}
+      className="fd-popper__control fd-popover"
     >
       <button
         className="fd-button fd-dropdown__control sap-icon--filter is-disabled"
         disabled={true}
+        onClick={[Function]}
       >
         Select
       </button>
     </div>
-    <div
-      aria-hidden={true}
-      className="fd-popover__body fd-popover__body--no-arrow"
-      id="jhqD0561"
-    >
-      <nav
-        className="fd-menu"
-      >
-        <ul
-          className="fd-menu__list"
-        >
-          <li>
-            <a
-              className="fd-menu__item"
-              href="/"
-            >
-              Option 1
-            </a>
-          </li>
-          <li>
-            <a
-              className="fd-menu__item"
-              href="/"
-            >
-              Option 2
-            </a>
-          </li>
-          <li>
-            <a
-              className="fd-menu__item"
-              href="/"
-            >
-              Option 3
-            </a>
-          </li>
-          <li>
-            <a
-              className="fd-menu__item"
-              href="/"
-            >
-              Option 4
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </div>
+  </span>
 </div>
 `;

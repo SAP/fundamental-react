@@ -3,7 +3,7 @@ import { ICON_SIZES } from '../utils/constants';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-const Icon = ({ glyph, size, clickHandler, className, ...props }) => {
+const Icon = ({ glyph, size, className, ...props }) => {
     const iconClasses = classnames(
         {
             [`sap-icon--${glyph}`]: !!glyph,
@@ -15,8 +15,7 @@ const Icon = ({ glyph, size, clickHandler, className, ...props }) => {
     return (
         <span
             {...props}
-            className={iconClasses}
-            onClick={clickHandler} />
+            className={iconClasses} />
     );
 };
 
@@ -25,12 +24,10 @@ Icon.displayName = 'Icon';
 Icon.propTypes = {
     glyph: PropTypes.string.isRequired,
     className: PropTypes.string,
-    clickHandler: PropTypes.func,
     size: PropTypes.oneOf(ICON_SIZES)
 };
 
 Icon.propDescriptions = {
-    clickHandler: 'Callback function when user clicks on the component.',
     size: 'Size of the icon. Options include **xs**, **s**, **compact**, and **l**. If no size is provided, default (normal) will be used.'
 };
 

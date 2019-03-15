@@ -1,246 +1,69 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Popover /> create Popover 1`] = `
-<div
-  className="fd-popover"
+<span
+  onFocus={[Function]}
+  onMouseDown={[Function]}
+  onTouchStart={[Function]}
 >
   <div
-    aria-expanded={false}
-    className="fd-popover__control"
-    onClick={[Function]}
+    className="fd-popper__control fd-popover"
   >
     <span
       className="sap-icon--cart sap-icon--xl"
+      onClick={[Function]}
     />
   </div>
-  <div
-    aria-hidden={true}
-    className="fd-popover__body"
-  >
-    <nav
-      className="fd-menu"
-    >
-      <ul
-        className="fd-menu__list"
-      >
-        <li>
-          <a
-            className="fd-menu__item"
-            href="/"
-          >
-            Option 1
-          </a>
-        </li>
-        <li>
-          <a
-            className="fd-menu__item"
-            href="/"
-          >
-            Option 2
-          </a>
-        </li>
-        <li>
-          <a
-            className="fd-menu__item"
-            href="/"
-          >
-            Option 3
-          </a>
-        </li>
-        <li>
-          <a
-            className="fd-menu__item"
-            href="/"
-          >
-            Option 4
-          </a>
-        </li>
-      </ul>
-    </nav>
-  </div>
-</div>
+</span>
 `;
 
 exports[`<Popover /> create Popover 2`] = `
-<div
-  className="fd-popover blue"
-  disabled={true}
+<span
+  onFocus={[Function]}
+  onMouseDown={[Function]}
+  onTouchStart={[Function]}
 >
   <div
-    aria-expanded={false}
-    className="fd-popover__control"
-    onClick={[Function]}
+    className="fd-popper__control fd-popover"
   >
     <span
       className="sap-icon--cart sap-icon--xl"
+      onClick={[Function]}
     />
   </div>
-  <div
-    aria-hidden={true}
-    className="fd-popover__body"
-  >
-    <nav
-      className="fd-menu"
-    >
-      <ul
-        className="fd-menu__list"
-      >
-        <li>
-          <a
-            className="fd-menu__item"
-            href="/"
-          >
-            Option 1
-          </a>
-        </li>
-        <li>
-          <a
-            className="fd-menu__item"
-            href="/"
-          >
-            Option 2
-          </a>
-        </li>
-        <li>
-          <a
-            className="fd-menu__item"
-            href="/"
-          >
-            Option 3
-          </a>
-        </li>
-        <li>
-          <a
-            className="fd-menu__item"
-            href="/"
-          >
-            Option 4
-          </a>
-        </li>
-      </ul>
-    </nav>
-  </div>
-</div>
+</span>
 `;
 
 exports[`<Popover /> create Popover 3`] = `
-<div
-  className="fd-popover"
+<span
+  onFocus={[Function]}
+  onMouseDown={[Function]}
+  onTouchStart={[Function]}
 >
   <div
-    aria-expanded={false}
-    className="fd-popover__control"
-    onClick={[Function]}
+    className="fd-popper__control fd-popover"
   >
     <span
       className="sap-icon--cart sap-icon--xl"
+      onClick={[Function]}
     />
   </div>
-  <div
-    aria-hidden={true}
-    className="fd-popover__body fd-popover__body--right"
-  >
-    <nav
-      className="fd-menu"
-    >
-      <ul
-        className="fd-menu__list"
-      >
-        <li>
-          <a
-            className="fd-menu__item"
-            href="/"
-          >
-            Option 1
-          </a>
-        </li>
-        <li>
-          <a
-            className="fd-menu__item"
-            href="/"
-          >
-            Option 2
-          </a>
-        </li>
-        <li>
-          <a
-            className="fd-menu__item"
-            href="/"
-          >
-            Option 3
-          </a>
-        </li>
-        <li>
-          <a
-            className="fd-menu__item"
-            href="/"
-          >
-            Option 4
-          </a>
-        </li>
-      </ul>
-    </nav>
-  </div>
-</div>
+</span>
 `;
 
 exports[`<Popover /> create Popover 4`] = `
-<div
-  className="fd-popover"
+<span
+  onFocus={[Function]}
+  onMouseDown={[Function]}
+  onTouchStart={[Function]}
 >
   <div
-    aria-expanded={false}
-    className="fd-popover__control"
-    onClick={[Function]}
+    className="fd-popper__control fd-popover"
   >
     <span
       className="sap-icon--cart sap-icon--xl"
+      onClick={[Function]}
     />
   </div>
-  <div
-    aria-hidden={true}
-    className="fd-popover__body fd-popover__body--no-arrow"
-  >
-    <nav
-      className="fd-menu"
-    >
-      <ul
-        className="fd-menu__list"
-      >
-        <li>
-          <a
-            className="fd-menu__item"
-            href="/"
-          >
-            Option 1
-          </a>
-        </li>
-        <li>
-          <a
-            className="fd-menu__item"
-            href="/"
-          >
-            Option 2
-          </a>
-        </li>
-        <li>
-          <a
-            className="fd-menu__item"
-            href="/"
-          >
-            Option 3
-          </a>
-        </li>
-        <li>
-          <a
-            className="fd-menu__item"
-            href="/"
-          >
-            Option 4
-          </a>
-        </li>
-      </ul>
-    </nav>
-  </div>
-</div>
+</span>
 `;

@@ -6,8 +6,10 @@ import { mount, shallow } from 'enzyme';
 describe('<Icon />', () => {
     const mockOnClick = jest.fn();
     const defaultIcon = (
-        <Icon className='blue' clickHandler={mockOnClick}
-            glyph='cart' />
+        <Icon
+            className='blue'
+            glyph='cart'
+            onClick={mockOnClick} />
     );
     const iconWithSize = <Icon glyph='cart' size='s' />;
 
@@ -26,11 +28,11 @@ describe('<Icon />', () => {
     test('click on icon', () => {
         let wrapper = mount(defaultIcon);
         wrapper.find('.sap-icon--cart').simulate('click');
-        expect(wrapper.prop('clickHandler')).toBeCalledTimes(1);
+        expect(wrapper.prop('onClick')).toBeCalledTimes(1);
 
         wrapper = shallow(iconWithSize);
         wrapper.find('span.sap-icon--cart').simulate('click');
-        expect(wrapper.prop('clickHandler')).toBeUndefined;
+        expect(wrapper.prop('onClick')).toBeUndefined;
     });
 
     describe('Prop spreading', () => {

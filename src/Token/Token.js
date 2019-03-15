@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 const Token = (props) => {
-    const { children, clickHandler, className, ...rest } = props;
+    const { children, className, ...rest } = props;
 
     const tokenClasses = classnames(
         'fd-token',
@@ -11,8 +11,9 @@ const Token = (props) => {
     );
 
     return (
-        <span {...rest} className={tokenClasses}
-            onClick={clickHandler}
+        <span
+            {...rest}
+            className={tokenClasses}
             role='button'>
             {children}
         </span>
@@ -23,12 +24,7 @@ Token.displayName = 'Token';
 
 Token.propTypes = {
     children: PropTypes.node,
-    className: PropTypes.string,
-    clickHandler: PropTypes.func
-};
-
-Token.propDescriptions = {
-    clickHandler: 'Callback function when user clicks on the component.'
+    className: PropTypes.string
 };
 
 export default Token;

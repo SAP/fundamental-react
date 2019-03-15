@@ -212,6 +212,8 @@ describe('<TimePicker />', () => {
                 showSecond />
         );
 
+        wrapper.find('.fd-popover__control').at(1).simulate('click');
+
         wrapper
             .find('input[type="text"]')
             .at(1)
@@ -291,8 +293,10 @@ describe('<TimePicker />', () => {
         test('should allow props to be spread to the TimePicker component\'s Time component', () => {
             const element = mount(<TimePicker id='id' timeProps={{ 'data-sample': 'Sample' }} />);
 
+            element.find('.fd-popover__control').at(1).simulate('click');
+
             expect(
-                element.find('#id-time').first().getDOMNode().attributes['data-sample'].value
+                element.find('div.fd-popper__body div.fd-time').getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
         });
     });

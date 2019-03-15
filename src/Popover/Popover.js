@@ -1,5 +1,6 @@
-import classnames from 'classnames';
-import { POPOVER_ALIGNMENTS } from '../utils/constants';
+import { chain } from 'chain-function';
+import Popper from '../utils/_Popper';
+import { POPPER_PLACEMENTS } from '../utils/constants';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 
@@ -8,103 +9,59 @@ class Popover extends Component {
         super(props);
 
         this.state = {
-            isExpanded: false,
-            isDisabled: this.props.disabled
+            isExpanded: false
         };
     }
 
     triggerBody = () => {
-        if (!this.state.isDisabled) {
-            if (!this.state.isExpanded) {
-                document.addEventListener('mousedown', this.handleOutsideClick, false);
-            } else {
-                document.removeEventListener(
-                    'mousedown',
-                    this.handleOutsideClick,
-                    false
-                );
-            }
-
+        if (!this.props.disabled) {
             this.setState(prevState => ({
                 isExpanded: !prevState.isExpanded
             }));
         }
     };
 
-    pressEsc = event => {
-        if (event.keyCode === 27 && this.state.isExpanded === true) {
+    handleOutsideClick = () => {
+        if (this.state.isExpanded) {
             this.setState({
                 isExpanded: false
             });
         }
     };
 
-    handleOutsideClick = e => {
-        if (this.node && !this.node.contains(e.target)) {
-            if (this.state.isExpanded) {
-                this.setState({
-                    isExpanded: false
-                });
-            } else {
-                return;
-            }
-        }
-    };
-
-    componentDidMount() {
-        document.addEventListener('keydown', this.pressEsc, false);
-        document.addEventListener('mousedown', this.handleOutsideClick, false);
-    }
-    componentWillUnmount() {
-        document.removeEventListener('keydown', this.pressEsc, false);
-        document.removeEventListener('mousedown', this.handleOutsideClick, false);
-    }
-
     render() {
         const {
-            id,
-            alignment,
+            disabled,
             noArrow,
             control,
             body,
             className,
+            placement,
             ...rest
         } = this.props;
 
-        const popoverClasses = classnames(
-            'fd-popover',
-            className
-        );
+        let onClickFunctions = this.triggerBody;
+        if (control.props.onClick) {
+            onClickFunctions = chain(this.triggerBody, control.props.onClick);
+        }
 
-        const popoverBodyClasses = classnames(
-            'fd-popover__body',
-            {
-                [`fd-popover__body--${alignment}`]: !!alignment,
-                'fd-popover__body--no-arrow': noArrow
-            }
-        );
+        const referenceComponent = React.cloneElement(control, {
+            onClick: onClickFunctions
+        });
 
         return (
-            <div
-                {...rest}
-                className={popoverClasses}
-                ref={node => {
-                    this.node = node;
-                }}>
-                <div
-                    aria-controls={id}
-                    aria-expanded={this.state.isExpanded}
-                    className='fd-popover__control'
-                    onClick={this.triggerBody}>
-                    {control}
-                </div>
-                <div
-                    aria-hidden={!this.state.isExpanded}
-                    className={popoverBodyClasses}
-                    id={id}>
-                    {body}
-                </div>
-            </div>
+            <Popper
+                noArrow={noArrow}
+                onClickOutside={this.handleOutsideClick}
+                onEscapeKey={this.handleOutsideClick}
+                popperClassName={className}
+                popperPlacement={placement}
+                popperProps={rest}
+                referenceClassName='fd-popover'
+                referenceComponent={referenceComponent}
+                show={this.state.isExpanded && !disabled}>
+                {body}
+            </Popper>
         );
     }
 }
@@ -112,16 +69,19 @@ class Popover extends Component {
 Popover.displayName = 'Popover';
 
 Popover.propTypes = {
-    alignment: PropTypes.oneOf(POPOVER_ALIGNMENTS),
+    body: PropTypes.node.isRequired,
+    control: PropTypes.node.isRequired,
     className: PropTypes.string,
     disabled: PropTypes.bool,
-    id: PropTypes.string,
-    noArrow: PropTypes.bool
+    noArrow: PropTypes.bool,
+    placement: PropTypes.oneOf(POPPER_PLACEMENTS)
 };
 
 Popover.propDescriptions = {
-    alignment: 'The placement of the popover body. Options include `right` and `left`. Leave empty for default/left placement.',
-    noArrow: 'Set to **true** to render a popover without an arrow.'
+    body: 'Node(s) to render in the overlay.',
+    control: 'Node to render as the reference element (that the `body` will be placed in relation to).',
+    noArrow: 'Set to **true** to render a popover without an arrow.',
+    placement: 'Initial position of the `body` (overlay) related to the `control`.'
 };
 
 export default Popover;
