@@ -500,6 +500,28 @@ a.toc-link {
     font-size: 1.2rem;
 }
 
+.screen-reader-only--focusable {
+    background-color: transparent;
+    color: #fff;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+
+    &:focus {
+        top: 0;
+        left: 0;
+        width: auto;
+        height: auto;
+        margin: 0;
+        overflow: visible;
+        clip: auto;
+    }
+}
+
 @media (min-width: $breakpoint-md) {
     #contents-separator {
         display: none;

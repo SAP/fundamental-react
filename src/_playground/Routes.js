@@ -347,6 +347,11 @@ export class Routes extends Component {
                 <ScrollToTop>
                     <div className='frDocs-Container'>
                         <header className='frDocs-Menu'>
+                            <a
+                                className='screen-reader-only--focusable'
+                                href='#frDocs-Content'>
+                                Skip Navigation Links
+                            </a>
                             <Button
                                 aria-expanded={this.state.showSideNav}
                                 aria-label='Toggle Navigation'
