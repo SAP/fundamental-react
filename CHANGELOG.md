@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.5.0-rc.0"></a>
+# [0.5.0-rc.0](https://github.com/SAP/fundamental-react/compare/v0.4.2-rc.3...v0.5.0-rc.0) (2019-03-15)
+
+
+### Features
+
+* Use popper for popovers ([#467](https://github.com/SAP/fundamental-react/issues/467)) ([a46c9c4](https://github.com/SAP/fundamental-react/commit/a46c9c4))
+
+
+
 <a name="0.4.2-rc.3"></a>
 ## [0.4.2-rc.3](https://github.com/SAP/fundamental-react/compare/v0.4.2-rc.2...v0.4.2-rc.3) (2019-03-15)
 
