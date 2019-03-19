@@ -135,7 +135,7 @@ $menu-spacing: 20px;
         font-size: 1rem;
         position: relative;
         padding: 13px 40px;
-        transition: background .15hs ease-in;
+        transition: background 0.15hs ease-in;
 
         &:hover,
         &:focus {
@@ -211,7 +211,7 @@ $menu-spacing: 20px;
 
     &__tile-background {
         background: #edeef0;
-        transition: background-color .25s;
+        transition: background-color 0.25s;
     }
 
     &__separator {
@@ -263,7 +263,7 @@ $menu-spacing: 20px;
     }
 
     pre {
-        margin: 25px 0px;
+        margin: 25px 0;
         background-color: #fff !important;
         white-space: pre-wrap;
         white-space: -moz-pre-wrap;
@@ -307,7 +307,7 @@ h6 {
     }
 }
 
-// Fundamental React Component Overrides 
+// Fundamental React Component Overrides
 .fd-counter--notification {
     position: relative;
 }

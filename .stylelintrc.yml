@@ -27,4 +27,4 @@
     selector-pseudo-element-colon-notation: single
     string-no-newline: true
     unit-case: lower
-    unit-no-unknown: true
+    # unit-no-unknown: true

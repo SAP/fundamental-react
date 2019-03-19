@@ -14,7 +14,7 @@ $arrow-width-half: $arrow-width/2;
     opacity: 1;
 
     &--no-arrow {
-        margin: 0!important;
+        margin: 0 !important;
 
         .fd-popper__arrow {
             display: none;
