@@ -364,7 +364,7 @@ export class Routes extends Component {
                             <a
                                 aria-label='Home'
                                 className='frDocs-Menu__logo'
-                                href='/'>
+                                href='/home'>
                                 Fundamental <span className='frDocs-Menu__logo--library'>React</span>
                             </a>
                             <span className='frDocs-Menu__spacer' />

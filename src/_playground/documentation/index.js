@@ -11,3 +11,4 @@ export { default as Properties } from './Properties/Properties';
 export { default as Separator } from './Separator/Separator';
 export { default as DocsText } from './DocsText/DocsText';
 export { default as DocsTile } from './DocsTile/DocsTile';
+export { default as SetMeta } from './utils/SetMeta';
