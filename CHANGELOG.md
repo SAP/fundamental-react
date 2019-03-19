@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.5.1-rc.0"></a>
+## [0.5.1-rc.0](https://github.com/SAP/fundamental-react/compare/v0.5.0...v0.5.1-rc.0) (2019-03-19)
+
+
+### Bug Fixes
+
+* init Stylelint for CSS ([#472](https://github.com/SAP/fundamental-react/issues/472)) ([ac7a53c](https://github.com/SAP/fundamental-react/commit/ac7a53c))
+
+
+
 <a name="0.5.0"></a>
 # [0.5.0](https://github.com/SAP/fundamental-react/compare/v0.5.0-rc.0...v0.5.0) (2019-03-17)
 
