@@ -26,7 +26,7 @@ class ComponentPage extends React.Component {
 
         return (
             <React.Fragment>
-                <SetMeta description={description} title={title} />
+                <SetMeta title={title} />
                 <Header>{title}</Header>
                 <Description>{description}</Description>
                 <Import sourceModulePath={sourceModulePath} />

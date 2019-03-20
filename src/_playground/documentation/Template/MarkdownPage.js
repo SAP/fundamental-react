@@ -31,7 +31,7 @@ class MarkdownPage extends React.Component {
         // we will pass our own heading renderer so we can inject id values for the TOC
         return (
             <React.Fragment>
-                <SetMeta description={description} title={title} />
+                <SetMeta title={title} />
                 {title && <Header>{title}</Header>}
                 {description && <Description>{description}</Description>}
                 <Contents />

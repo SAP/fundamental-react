@@ -2,13 +2,12 @@ import Helmet from 'react-helmet-async';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-const SetMeta = ({ title, description }) => {
+const SetMeta = ({ title }) => {
     return (
         <Helmet
             defaultTitle='Fundamental React'
             titleTemplate='Fundamental React - %s'>
-            <title>{title}</title>
-            <meta content={description} name='description' />
+            <title>{title}</title> />
         </Helmet>
     );
 };
