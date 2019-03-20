@@ -13,8 +13,7 @@ const SetMeta = ({ title }) => {
 };
 
 SetMeta.propTypes = {
-    title: PropTypes.string.isRequired,
-    description: PropTypes.string
+    title: PropTypes.string.isRequired
 };
 
 export default SetMeta;
