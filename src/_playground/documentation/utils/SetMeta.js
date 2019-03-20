@@ -4,7 +4,9 @@ import React from 'react';
 
 const SetMeta = ({ title, description }) => {
     return (
-        <Helmet>
+        <Helmet
+            defaultTitle='Fundamental React'
+            titleTemplate='Fundamental React - %s'>
             <title>{title}</title>
             <meta content={description} name='description' />
         </Helmet>
@@ -12,8 +14,8 @@ const SetMeta = ({ title, description }) => {
 };
 
 SetMeta.propTypes = {
-    description: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired
+    title: PropTypes.string.isRequired,
+    description: PropTypes.string
 };
 
 export default SetMeta;
