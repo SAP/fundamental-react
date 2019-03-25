@@ -56,6 +56,14 @@ const PropertyType = ({ prop }) => {
                     <div>{`(${values.join('; ')})`}</div>
                 </React.Fragment>
             );
+        case 'i18n':
+            const list = Object.keys(typeChecker).map(key => `${key}`);
+            return (
+                <React.Fragment>
+                    <div>{prop.typeName}</div>
+                    <div>{`(${list.join(', ')})`}</div>
+                </React.Fragment>
+            );
         default:
             return <div>{prop.typeName}</div>;
     }
