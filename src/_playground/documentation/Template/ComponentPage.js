@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import tocbot from 'tocbot';
-import { Contents, Description, Header, Heading, Import, Properties, Separator } from '..';
+import { Contents, Description, Header, Heading, Import, Properties, Separator, SetMeta } from '..';
 
 class ComponentPage extends React.Component {
     componentDidMount() {
@@ -26,6 +26,7 @@ class ComponentPage extends React.Component {
 
         return (
             <React.Fragment>
+                <SetMeta title={title} />
                 <Header>{title}</Header>
                 <Description>{description}</Description>
                 <Import sourceModulePath={sourceModulePath} />
