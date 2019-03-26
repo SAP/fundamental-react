@@ -1,5 +1,5 @@
 import classnames from 'classnames';
-import CustomPropTypes from '../_playground/documentation/utils/CustomPropTypes';
+import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import PropTypes from 'prop-types';
 import React from 'react';
 
