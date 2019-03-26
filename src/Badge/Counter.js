@@ -13,7 +13,7 @@ const Counter = ({ localizedText, notification, children, className, ...props })
     );
 
     return (
-        <span {...props} aria-label={localizedText.ariaLabel}
+        <span {...props} aria-label={localizedText.counterLabel}
             className={counterClasses}>
             {children}
         </span>
@@ -24,14 +24,14 @@ Counter.displayName = 'Counter';
 Counter.propTypes = {
     className: PropTypes.string,
     localizedText: CustomPropTypes.i18n({
-        ariaLabel: PropTypes.string
+        counterLabel: PropTypes.string
     }),
     notification: PropTypes.bool
 };
 
 Counter.defaultProps = {
     localizedText: {
-        ariaLabel: 'Unread count'
+        counterLabel: 'Unread count'
     }
 };
 
