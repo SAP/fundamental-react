@@ -3,7 +3,7 @@ import CustomPropTypes from '../_playground/documentation/utils/CustomPropTypes'
 import PropTypes from 'prop-types';
 import React from 'react';
 
-const Counter = ({ ariaLabel, notification, children, className, ...props }) => {
+const Counter = ({ localizedText, notification, children, className, ...props }) => {
     const counterClasses = classnames(
         'fd-counter',
         {
@@ -13,7 +13,7 @@ const Counter = ({ ariaLabel, notification, children, className, ...props }) => 
     );
 
     return (
-        <span {...props} aria-label={ariaLabel}
+        <span {...props} aria-label={localizedText.ariaLabel}
             className={counterClasses}>
             {children}
         </span>

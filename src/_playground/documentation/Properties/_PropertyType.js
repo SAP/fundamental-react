@@ -57,11 +57,10 @@ const PropertyType = ({ prop }) => {
                 </React.Fragment>
             );
         case 'i18n':
-            const list = Object.keys(typeChecker).map(key => `${key}`);
+            const list = Object.keys(typeChecker).map(key => `${key}: ${typeChecker[key].typeName}`);
             return (
                 <React.Fragment>
-                    <div>{prop.typeName}</div>
-                    <div>{`(${list.join(', ')})`}</div>
+                    <div>{list.join('\n')}</div>
                 </React.Fragment>
             );
         default:
