@@ -14,18 +14,6 @@ const PropertyDefault = ({ defaultValue, prop }) => {
         );
     }
 
-    if (prop.typeName === 'i18n') {
-        const list = Object.keys(defaultValue).map((t, i) => {
-            return (
-                <div key={i}>{`${t}: '${defaultValue[t]}'`}</div>);
-        });
-        return (
-            <React.Fragment>
-                {list}
-            </React.Fragment>
-        );
-    }
-
     if (typeof defaultValue === 'object' || !defaultValue) {
         return null;
     }

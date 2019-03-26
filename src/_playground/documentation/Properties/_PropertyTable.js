@@ -2,11 +2,14 @@ import { defaultPropDescriptions } from './defaults';
 import Heading from '../Heading/Heading';
 import PropertyDefault from './_PropertyDefault';
 import PropertyDescription from './_PropertyDescription';
+import PropertyShape from './_PropertyShape';
 import PropertyType from './_PropertyType';
 import PropTypes from 'prop-types';
 import React from 'react';
 import sortBy from 'sort-by';
 import Table from '../../../Table/Table';
+
+/*eslint-disable no-console*/
 
 const PropertyTable = ({ title, propTypes, defaultProps, propDescriptions }) => {
     if (!propTypes) {
@@ -21,6 +24,7 @@ const PropertyTable = ({ title, propTypes, defaultProps, propDescriptions }) => 
     const sortedProps = propInfo.sort(sortBy('-required', 'propName'));
 
     let data = [];
+    let shapes = [];
     const mergedPropDescriptions = {
         ...defaultPropDescriptions,
         ...propDescriptions
@@ -30,7 +34,7 @@ const PropertyTable = ({ title, propTypes, defaultProps, propDescriptions }) => 
         data.push({
             rowData: [
                 propName,
-                <PropertyType prop={propTypes[propName]} />,
+                <PropertyType componentName={title} prop={propTypes[propName]} />,
                 <PropertyDefault
                     defaultValue={defaultProps && defaultProps[propName]}
                     prop={propTypes[propName]} />,
@@ -40,6 +44,9 @@ const PropertyTable = ({ title, propTypes, defaultProps, propDescriptions }) => 
                     prop={propTypes[propName]} />
             ]
         });
+        if (propTypes[propName].typeName === 'i18n') {
+            shapes.push(propName);
+        }
     });
 
     return (
@@ -55,6 +62,14 @@ const PropertyTable = ({ title, propTypes, defaultProps, propDescriptions }) => 
                         'Description'
                     ]}
                 tableData={data} />
+            {shapes.map((shape, i) => {
+                const shapeName = `Localized Text - ${title}`;
+                return (<PropertyShape
+                    defaultProps={defaultProps[shape]}
+                    key={i}
+                    propTypes={propTypes[shape].typeChecker}
+                    title={shapeName} />);
+            })}
         </React.Fragment>
     );
 };
