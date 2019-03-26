@@ -31,7 +31,7 @@ Counter.propTypes = {
 
 Counter.defaultProps = {
     localizedText: {
-        ariaLabel: 'Unread Count'
+        ariaLabel: 'Unread count'
     }
 };
 
