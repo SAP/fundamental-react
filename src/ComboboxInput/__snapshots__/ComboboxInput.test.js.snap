@@ -7,7 +7,7 @@ exports[`<ComboboxInput /> create combobox input 1`] = `
   <div
     className="fd-popover"
   >
-    <span
+    <div
       onFocus={[Function]}
       onMouseDown={[Function]}
       onTouchStart={[Function]}
@@ -37,7 +37,7 @@ exports[`<ComboboxInput /> create combobox input 1`] = `
           </div>
         </div>
       </div>
-    </span>
+    </div>
   </div>
 </div>
 `;
@@ -49,7 +49,7 @@ exports[`<ComboboxInput /> create combobox input 2`] = `
   <div
     className="fd-popover"
   >
-    <span
+    <div
       onFocus={[Function]}
       onMouseDown={[Function]}
       onTouchStart={[Function]}
@@ -79,7 +79,7 @@ exports[`<ComboboxInput /> create combobox input 2`] = `
           </div>
         </div>
       </div>
-    </span>
+    </div>
   </div>
 </div>
 `;

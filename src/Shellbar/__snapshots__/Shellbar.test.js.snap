@@ -40,7 +40,7 @@ exports[`<Shellbar /> create shellbar 1`] = `
           <div
             className="fd-popover"
           >
-            <span
+            <div
               onFocus={[Function]}
               onMouseDown={[Function]}
               onTouchStart={[Function]}
@@ -56,7 +56,7 @@ exports[`<Shellbar /> create shellbar 1`] = `
                   JS
                 </span>
               </div>
-            </span>
+            </div>
           </div>
         </div>
       </div>
@@ -105,7 +105,7 @@ exports[`<Shellbar /> create shellbar 2`] = `
           <div
             className="fd-popover"
           >
-            <span
+            <div
               onFocus={[Function]}
               onMouseDown={[Function]}
               onTouchStart={[Function]}
@@ -121,7 +121,7 @@ exports[`<Shellbar /> create shellbar 2`] = `
                   JS
                 </span>
               </div>
-            </span>
+            </div>
           </div>
         </div>
       </div>
@@ -154,7 +154,7 @@ exports[`<Shellbar /> create shellbar 3`] = `
         <div
           className="fd-popover"
         >
-          <span
+          <div
             onFocus={[Function]}
             onMouseDown={[Function]}
             onTouchStart={[Function]}
@@ -173,7 +173,7 @@ exports[`<Shellbar /> create shellbar 3`] = `
                 </span>
               </button>
             </div>
-          </span>
+          </div>
         </div>
       </div>
     </div>
@@ -247,7 +247,7 @@ exports[`<Shellbar /> create shellbar 3`] = `
         <div
           className="fd-popover"
         >
-          <span
+          <div
             onFocus={[Function]}
             onMouseDown={[Function]}
             onTouchStart={[Function]}
@@ -268,13 +268,13 @@ exports[`<Shellbar /> create shellbar 3`] = `
                 </span>
               </button>
             </div>
-          </span>
+          </div>
         </div>
       </div>
       <div
         className="fd-popover"
       >
-        <span
+        <div
           onFocus={[Function]}
           onMouseDown={[Function]}
           onTouchStart={[Function]}
@@ -299,7 +299,7 @@ exports[`<Shellbar /> create shellbar 3`] = `
               </button>
             </div>
           </div>
-        </span>
+        </div>
       </div>
       <div
         className="fd-shellbar__action fd-shellbar__action--collapse"
@@ -310,7 +310,7 @@ exports[`<Shellbar /> create shellbar 3`] = `
           <div
             className="fd-popover"
           >
-            <span
+            <div
               onFocus={[Function]}
               onMouseDown={[Function]}
               onTouchStart={[Function]}
@@ -337,7 +337,7 @@ exports[`<Shellbar /> create shellbar 3`] = `
                   </button>
                 </div>
               </div>
-            </span>
+            </div>
           </div>
         </div>
       </div>
@@ -350,7 +350,7 @@ exports[`<Shellbar /> create shellbar 3`] = `
           <div
             className="fd-popover"
           >
-            <span
+            <div
               onFocus={[Function]}
               onMouseDown={[Function]}
               onTouchStart={[Function]}
@@ -366,7 +366,7 @@ exports[`<Shellbar /> create shellbar 3`] = `
                   JS
                 </span>
               </div>
-            </span>
+            </div>
           </div>
         </div>
       </div>
@@ -379,7 +379,7 @@ exports[`<Shellbar /> create shellbar 3`] = `
           <div
             className="fd-popover"
           >
-            <span
+            <div
               onFocus={[Function]}
               onMouseDown={[Function]}
               onTouchStart={[Function]}
@@ -392,7 +392,7 @@ exports[`<Shellbar /> create shellbar 3`] = `
                   onClick={[Function]}
                 />
               </div>
-            </span>
+            </div>
           </div>
         </div>
       </div>
@@ -425,7 +425,7 @@ exports[`<Shellbar /> create shellbar 4`] = `
         <div
           className="fd-popover"
         >
-          <span
+          <div
             onFocus={[Function]}
             onMouseDown={[Function]}
             onTouchStart={[Function]}
@@ -444,7 +444,7 @@ exports[`<Shellbar /> create shellbar 4`] = `
                 </span>
               </button>
             </div>
-          </span>
+          </div>
         </div>
       </div>
     </div>
@@ -518,7 +518,7 @@ exports[`<Shellbar /> create shellbar 4`] = `
         <div
           className="fd-popover"
         >
-          <span
+          <div
             onFocus={[Function]}
             onMouseDown={[Function]}
             onTouchStart={[Function]}
@@ -539,13 +539,13 @@ exports[`<Shellbar /> create shellbar 4`] = `
                 </span>
               </button>
             </div>
-          </span>
+          </div>
         </div>
       </div>
       <div
         className="fd-popover"
       >
-        <span
+        <div
           onFocus={[Function]}
           onMouseDown={[Function]}
           onTouchStart={[Function]}
@@ -563,7 +563,7 @@ exports[`<Shellbar /> create shellbar 4`] = `
               />
             </div>
           </div>
-        </span>
+        </div>
       </div>
       <div
         className="fd-shellbar__action fd-shellbar__action--collapse"
@@ -574,7 +574,7 @@ exports[`<Shellbar /> create shellbar 4`] = `
           <div
             className="fd-popover"
           >
-            <span
+            <div
               onFocus={[Function]}
               onMouseDown={[Function]}
               onTouchStart={[Function]}
@@ -601,7 +601,7 @@ exports[`<Shellbar /> create shellbar 4`] = `
                   </button>
                 </div>
               </div>
-            </span>
+            </div>
           </div>
         </div>
       </div>
@@ -614,7 +614,7 @@ exports[`<Shellbar /> create shellbar 4`] = `
           <div
             className="fd-popover"
           >
-            <span
+            <div
               onFocus={[Function]}
               onMouseDown={[Function]}
               onTouchStart={[Function]}
@@ -630,7 +630,7 @@ exports[`<Shellbar /> create shellbar 4`] = `
                   JS
                 </span>
               </div>
-            </span>
+            </div>
           </div>
         </div>
       </div>
@@ -643,7 +643,7 @@ exports[`<Shellbar /> create shellbar 4`] = `
           <div
             className="fd-popover"
           >
-            <span
+            <div
               onFocus={[Function]}
               onMouseDown={[Function]}
               onTouchStart={[Function]}
@@ -656,7 +656,7 @@ exports[`<Shellbar /> create shellbar 4`] = `
                   onClick={[Function]}
                 />
               </div>
-            </span>
+            </div>
           </div>
         </div>
       </div>
@@ -689,7 +689,7 @@ exports[`<Shellbar /> create shellbar 5`] = `
         <div
           className="fd-popover"
         >
-          <span
+          <div
             onFocus={[Function]}
             onMouseDown={[Function]}
             onTouchStart={[Function]}
@@ -708,7 +708,7 @@ exports[`<Shellbar /> create shellbar 5`] = `
                 </span>
               </button>
             </div>
-          </span>
+          </div>
         </div>
       </div>
     </div>
@@ -795,7 +795,7 @@ exports[`<Shellbar /> create shellbar 5`] = `
       <div
         className="fd-popover"
       >
-        <span
+        <div
           onFocus={[Function]}
           onMouseDown={[Function]}
           onTouchStart={[Function]}
@@ -813,7 +813,7 @@ exports[`<Shellbar /> create shellbar 5`] = `
               />
             </div>
           </div>
-        </span>
+        </div>
       </div>
       <div
         className="fd-shellbar__action fd-shellbar__action--collapse"
@@ -824,7 +824,7 @@ exports[`<Shellbar /> create shellbar 5`] = `
           <div
             className="fd-popover"
           >
-            <span
+            <div
               onFocus={[Function]}
               onMouseDown={[Function]}
               onTouchStart={[Function]}
@@ -851,7 +851,7 @@ exports[`<Shellbar /> create shellbar 5`] = `
                   </button>
                 </div>
               </div>
-            </span>
+            </div>
           </div>
         </div>
       </div>
@@ -864,7 +864,7 @@ exports[`<Shellbar /> create shellbar 5`] = `
           <div
             className="fd-popover"
           >
-            <span
+            <div
               onFocus={[Function]}
               onMouseDown={[Function]}
               onTouchStart={[Function]}
@@ -880,7 +880,7 @@ exports[`<Shellbar /> create shellbar 5`] = `
                   JS
                 </span>
               </div>
-            </span>
+            </div>
           </div>
         </div>
       </div>
@@ -893,7 +893,7 @@ exports[`<Shellbar /> create shellbar 5`] = `
           <div
             className="fd-popover"
           >
-            <span
+            <div
               onFocus={[Function]}
               onMouseDown={[Function]}
               onTouchStart={[Function]}
@@ -906,7 +906,7 @@ exports[`<Shellbar /> create shellbar 5`] = `
                   onClick={[Function]}
                 />
               </div>
-            </span>
+            </div>
           </div>
         </div>
       </div>
@@ -939,7 +939,7 @@ exports[`<Shellbar /> create shellbar 6`] = `
         <div
           className="fd-popover"
         >
-          <span
+          <div
             onFocus={[Function]}
             onMouseDown={[Function]}
             onTouchStart={[Function]}
@@ -958,7 +958,7 @@ exports[`<Shellbar /> create shellbar 6`] = `
                 </span>
               </button>
             </div>
-          </span>
+          </div>
         </div>
       </div>
     </div>
@@ -1032,7 +1032,7 @@ exports[`<Shellbar /> create shellbar 6`] = `
         <div
           className="fd-popover"
         >
-          <span
+          <div
             onFocus={[Function]}
             onMouseDown={[Function]}
             onTouchStart={[Function]}
@@ -1053,7 +1053,7 @@ exports[`<Shellbar /> create shellbar 6`] = `
                 </span>
               </button>
             </div>
-          </span>
+          </div>
         </div>
       </div>
       <div
@@ -1081,7 +1081,7 @@ exports[`<Shellbar /> create shellbar 6`] = `
           <div
             className="fd-popover"
           >
-            <span
+            <div
               onFocus={[Function]}
               onMouseDown={[Function]}
               onTouchStart={[Function]}
@@ -1108,7 +1108,7 @@ exports[`<Shellbar /> create shellbar 6`] = `
                   </button>
                 </div>
               </div>
-            </span>
+            </div>
           </div>
         </div>
       </div>
@@ -1121,7 +1121,7 @@ exports[`<Shellbar /> create shellbar 6`] = `
           <div
             className="fd-popover"
           >
-            <span
+            <div
               onFocus={[Function]}
               onMouseDown={[Function]}
               onTouchStart={[Function]}
@@ -1140,7 +1140,7 @@ exports[`<Shellbar /> create shellbar 6`] = `
                   }
                 />
               </div>
-            </span>
+            </div>
           </div>
         </div>
       </div>
@@ -1153,7 +1153,7 @@ exports[`<Shellbar /> create shellbar 6`] = `
           <div
             className="fd-popover"
           >
-            <span
+            <div
               onFocus={[Function]}
               onMouseDown={[Function]}
               onTouchStart={[Function]}
@@ -1166,7 +1166,7 @@ exports[`<Shellbar /> create shellbar 6`] = `
                   onClick={[Function]}
                 />
               </div>
-            </span>
+            </div>
           </div>
         </div>
       </div>

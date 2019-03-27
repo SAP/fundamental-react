@@ -4,7 +4,7 @@ exports[`<Popover /> create Popover 1`] = `
 <div
   className="fd-popover"
 >
-  <span
+  <div
     onFocus={[Function]}
     onMouseDown={[Function]}
     onTouchStart={[Function]}
@@ -17,7 +17,7 @@ exports[`<Popover /> create Popover 1`] = `
         onClick={[Function]}
       />
     </div>
-  </span>
+  </div>
 </div>
 `;
 
@@ -25,7 +25,7 @@ exports[`<Popover /> create Popover 2`] = `
 <div
   className="fd-popover blue"
 >
-  <span
+  <div
     onFocus={[Function]}
     onMouseDown={[Function]}
     onTouchStart={[Function]}
@@ -38,7 +38,7 @@ exports[`<Popover /> create Popover 2`] = `
         onClick={[Function]}
       />
     </div>
-  </span>
+  </div>
 </div>
 `;
 
@@ -46,7 +46,7 @@ exports[`<Popover /> create Popover 3`] = `
 <div
   className="fd-popover"
 >
-  <span
+  <div
     onFocus={[Function]}
     onMouseDown={[Function]}
     onTouchStart={[Function]}
@@ -59,7 +59,7 @@ exports[`<Popover /> create Popover 3`] = `
         onClick={[Function]}
       />
     </div>
-  </span>
+  </div>
 </div>
 `;
 
@@ -67,7 +67,7 @@ exports[`<Popover /> create Popover 4`] = `
 <div
   className="fd-popover"
 >
-  <span
+  <div
     onFocus={[Function]}
     onMouseDown={[Function]}
     onTouchStart={[Function]}
@@ -80,6 +80,6 @@ exports[`<Popover /> create Popover 4`] = `
         onClick={[Function]}
       />
     </div>
-  </span>
+  </div>
 </div>
 `;

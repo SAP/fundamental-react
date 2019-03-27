@@ -12,7 +12,7 @@ exports[`<LocalizationEditor /> create localization editor 1`] = `
   <div
     className="fd-popover"
   >
-    <span
+    <div
       onFocus={[Function]}
       onMouseDown={[Function]}
       onTouchStart={[Function]}
@@ -40,7 +40,7 @@ exports[`<LocalizationEditor /> create localization editor 1`] = `
           </span>
         </div>
       </div>
-    </span>
+    </div>
   </div>
 </div>
 `;
@@ -57,7 +57,7 @@ exports[`<LocalizationEditor /> create localization editor 2`] = `
   <div
     className="fd-popover"
   >
-    <span
+    <div
       onFocus={[Function]}
       onMouseDown={[Function]}
       onTouchStart={[Function]}
@@ -85,7 +85,7 @@ exports[`<LocalizationEditor /> create localization editor 2`] = `
           </span>
         </div>
       </div>
-    </span>
+    </div>
   </div>
 </div>
 `;
@@ -102,7 +102,7 @@ exports[`<LocalizationEditor /> create localization editor 3`] = `
   <div
     className="fd-popover"
   >
-    <span
+    <div
       onFocus={[Function]}
       onMouseDown={[Function]}
       onTouchStart={[Function]}
@@ -126,7 +126,7 @@ exports[`<LocalizationEditor /> create localization editor 3`] = `
           </span>
         </div>
       </div>
-    </span>
+    </div>
   </div>
 </div>
 `;

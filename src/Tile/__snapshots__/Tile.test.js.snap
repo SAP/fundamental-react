@@ -85,7 +85,7 @@ exports[`<Tile /> create tile component 4`] = `
     <div
       className="fd-popover"
     >
-      <span
+      <div
         onFocus={[Function]}
         onMouseDown={[Function]}
         onTouchStart={[Function]}
@@ -98,7 +98,7 @@ exports[`<Tile /> create tile component 4`] = `
             onClick={[Function]}
           />
         </div>
-      </span>
+      </div>
     </div>
   </div>
 </div>
@@ -151,7 +151,7 @@ exports[`<Tile /> create tile component 6`] = `
     <div
       className="fd-popover"
     >
-      <span
+      <div
         onFocus={[Function]}
         onMouseDown={[Function]}
         onTouchStart={[Function]}
@@ -164,7 +164,7 @@ exports[`<Tile /> create tile component 6`] = `
             onClick={[Function]}
           />
         </div>
-      </span>
+      </div>
     </div>
   </div>
 </div>

@@ -120,7 +120,10 @@ class Popper extends React.Component {
 
         return (
             <Manager>
-                <Foco onClickOutside={onClickOutside}>
+                <Foco
+                    component='div'
+                    onClickOutside={onClickOutside}
+                    onFocusOutside={onClickOutside}>
                     <Reference>
                         {({ ref }) => (
                             <div

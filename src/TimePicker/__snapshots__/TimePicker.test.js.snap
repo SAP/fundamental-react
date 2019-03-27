@@ -12,7 +12,7 @@ exports[`<TimePicker /> create time picker 1`] = `
       className="fd-popover"
       id="myTime-popover"
     >
-      <span
+      <div
         onFocus={[Function]}
         onMouseDown={[Function]}
         onTouchStart={[Function]}
@@ -50,7 +50,7 @@ exports[`<TimePicker /> create time picker 1`] = `
             </div>
           </div>
         </div>
-      </span>
+      </div>
     </div>
   </div>
 </div>
@@ -67,7 +67,7 @@ exports[`<TimePicker /> create time picker 2`] = `
       className="fd-popover"
       id=""
     >
-      <span
+      <div
         onFocus={[Function]}
         onMouseDown={[Function]}
         onTouchStart={[Function]}
@@ -103,7 +103,7 @@ exports[`<TimePicker /> create time picker 2`] = `
             </div>
           </div>
         </div>
-      </span>
+      </div>
     </div>
   </div>
 </div>
@@ -120,7 +120,7 @@ exports[`<TimePicker /> create time picker 3`] = `
       className="fd-popover"
       id=""
     >
-      <span
+      <div
         onFocus={[Function]}
         onMouseDown={[Function]}
         onTouchStart={[Function]}
@@ -156,7 +156,7 @@ exports[`<TimePicker /> create time picker 3`] = `
             </div>
           </div>
         </div>
-      </span>
+      </div>
     </div>
   </div>
 </div>
@@ -173,7 +173,7 @@ exports[`<TimePicker /> create time picker 4`] = `
       className="fd-popover"
       id=""
     >
-      <span
+      <div
         onFocus={[Function]}
         onMouseDown={[Function]}
         onTouchStart={[Function]}
@@ -211,7 +211,7 @@ exports[`<TimePicker /> create time picker 4`] = `
             </div>
           </div>
         </div>
-      </span>
+      </div>
     </div>
   </div>
 </div>
@@ -228,7 +228,7 @@ exports[`<TimePicker /> create time picker 5`] = `
       className="fd-popover"
       id=""
     >
-      <span
+      <div
         onFocus={[Function]}
         onMouseDown={[Function]}
         onTouchStart={[Function]}
@@ -264,7 +264,7 @@ exports[`<TimePicker /> create time picker 5`] = `
             </div>
           </div>
         </div>
-      </span>
+      </div>
     </div>
   </div>
 </div>
@@ -281,7 +281,7 @@ exports[`<TimePicker /> create time picker 6`] = `
       className="fd-popover"
       id=""
     >
-      <span
+      <div
         onFocus={[Function]}
         onMouseDown={[Function]}
         onTouchStart={[Function]}
@@ -317,7 +317,7 @@ exports[`<TimePicker /> create time picker 6`] = `
             </div>
           </div>
         </div>
-      </span>
+      </div>
     </div>
   </div>
 </div>
@@ -334,7 +334,7 @@ exports[`<TimePicker /> create time picker 7`] = `
       className="fd-popover"
       id=""
     >
-      <span
+      <div
         onFocus={[Function]}
         onMouseDown={[Function]}
         onTouchStart={[Function]}
@@ -370,7 +370,7 @@ exports[`<TimePicker /> create time picker 7`] = `
             </div>
           </div>
         </div>
-      </span>
+      </div>
     </div>
   </div>
 </div>
@@ -387,7 +387,7 @@ exports[`<TimePicker /> create time picker 8`] = `
       className="fd-popover"
       id=""
     >
-      <span
+      <div
         onFocus={[Function]}
         onMouseDown={[Function]}
         onTouchStart={[Function]}
@@ -423,7 +423,7 @@ exports[`<TimePicker /> create time picker 8`] = `
             </div>
           </div>
         </div>
-      </span>
+      </div>
     </div>
   </div>
 </div>
@@ -440,7 +440,7 @@ exports[`<TimePicker /> create time picker 9`] = `
       className="fd-popover"
       id=""
     >
-      <span
+      <div
         onFocus={[Function]}
         onMouseDown={[Function]}
         onTouchStart={[Function]}
@@ -476,7 +476,7 @@ exports[`<TimePicker /> create time picker 9`] = `
             </div>
           </div>
         </div>
-      </span>
+      </div>
     </div>
   </div>
 </div>
@@ -493,7 +493,7 @@ exports[`<TimePicker /> create time picker 10`] = `
       className="fd-popover"
       id=""
     >
-      <span
+      <div
         onFocus={[Function]}
         onMouseDown={[Function]}
         onTouchStart={[Function]}
@@ -529,7 +529,7 @@ exports[`<TimePicker /> create time picker 10`] = `
             </div>
           </div>
         </div>
-      </span>
+      </div>
     </div>
   </div>
 </div>
