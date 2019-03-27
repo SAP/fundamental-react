@@ -63,7 +63,7 @@ const PropertyTable = ({ title, propTypes, defaultProps, propDescriptions }) => 
                     ]}
                 tableData={data} />
             {shapes.map((shape, i) => {
-                const shapeName = `Localized Text - ${title}`;
+                const shapeName = `${title} - Localized Text`;
                 return (<PropertyShape
                     defaultProps={defaultProps[shape]}
                     key={i}
