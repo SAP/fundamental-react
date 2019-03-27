@@ -33,7 +33,7 @@ const PropertyShape = ({ title, propTypes, defaultProps }) => {
     });
 
     return (
-        <div className='fd-localizedText'>
+        <div className='frDocs-Properties__shape'>
             {title && <Heading level={4}>{title}</Heading>}
             <Table
                 className='property-table'

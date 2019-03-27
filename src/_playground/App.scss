@@ -285,6 +285,10 @@ $menu-spacing: 20px;
     }
 }
 
+.frDocs-Properties__shape {
+    margin: 0 100px 50px 100px;
+}
+
 // used to keep headings in view with the fixed header
 h1,
 h2,
@@ -310,10 +314,6 @@ h6 {
 // Fundamental React Component Overrides
 .fd-counter--notification {
     position: relative;
-}
-
-.fd-localizedText {
-    margin: 0 100px 50px 100px;
 }
 
 .fd-tile__content {
