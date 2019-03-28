@@ -58,7 +58,7 @@ const PropertyType = ({ prop, componentName }) => {
                 </React.Fragment>
             );
         case 'i18n':
-            const shapeName = `Localized Text - ${componentName}`;
+            const shapeName = `${componentName} - Localized Text`;
             return (<a href={`#${makeSafeId(shapeName)}`}>Localized Text</a>);
         default:
             return <div>{prop.typeName}</div>;

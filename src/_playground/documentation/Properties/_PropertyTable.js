@@ -9,8 +9,6 @@ import React from 'react';
 import sortBy from 'sort-by';
 import Table from '../../../Table/Table';
 
-/*eslint-disable no-console*/
-
 const PropertyTable = ({ title, propTypes, defaultProps, propDescriptions }) => {
     if (!propTypes) {
         return (
