@@ -64,6 +64,7 @@ const PropertyTable = ({ title, propTypes, defaultProps, propDescriptions }) => 
                 const shapeName = `${title} - Localized Text`;
                 return (<PropertyShape
                     defaultProps={defaultProps[shape]}
+                    description={mergedPropDescriptions[shape]}
                     key={i}
                     propTypes={propTypes[shape].typeChecker}
                     title={shapeName} />);
