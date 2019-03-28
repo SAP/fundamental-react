@@ -4,22 +4,26 @@ exports[`<Dropdown /> create dropdown component 1`] = `
 <div
   className="fd-dropdown"
 >
-  <span
-    onFocus={[Function]}
-    onMouseDown={[Function]}
-    onTouchStart={[Function]}
+  <div
+    className="fd-popover"
   >
     <div
-      className="fd-popper__control fd-popover"
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      onTouchStart={[Function]}
     >
-      <button
-        className="fd-button fd-dropdown__control"
-        onClick={[Function]}
+      <div
+        className="fd-popover__control"
       >
-        Select
-      </button>
+        <button
+          className="fd-button fd-dropdown__control"
+          onClick={[Function]}
+        >
+          Select
+        </button>
+      </div>
     </div>
-  </span>
+  </div>
 </div>
 `;
 
@@ -27,22 +31,26 @@ exports[`<Dropdown /> create dropdown component 2`] = `
 <div
   className="fd-dropdown blue"
 >
-  <span
-    onFocus={[Function]}
-    onMouseDown={[Function]}
-    onTouchStart={[Function]}
+  <div
+    className="fd-popover"
   >
     <div
-      className="fd-popper__control fd-popover"
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      onTouchStart={[Function]}
     >
-      <button
-        className="fd-button fd-dropdown__control fd-button--compact"
-        onClick={[Function]}
+      <div
+        className="fd-popover__control"
       >
-        Select
-      </button>
+        <button
+          className="fd-button fd-dropdown__control fd-button--compact"
+          onClick={[Function]}
+        >
+          Select
+        </button>
+      </div>
     </div>
-  </span>
+  </div>
 </div>
 `;
 
@@ -50,22 +58,26 @@ exports[`<Dropdown /> create dropdown component 3`] = `
 <div
   className="fd-dropdown fd-dropdown--standard"
 >
-  <span
-    onFocus={[Function]}
-    onMouseDown={[Function]}
-    onTouchStart={[Function]}
+  <div
+    className="fd-popover"
   >
     <div
-      className="fd-popper__control fd-popover"
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      onTouchStart={[Function]}
     >
-      <button
-        className="fd-button fd-button--standard fd-dropdown__control"
-        onClick={[Function]}
+      <div
+        className="fd-popover__control"
       >
-        Select
-      </button>
+        <button
+          className="fd-button fd-button--standard fd-dropdown__control"
+          onClick={[Function]}
+        >
+          Select
+        </button>
+      </div>
     </div>
-  </span>
+  </div>
 </div>
 `;
 
@@ -73,22 +85,27 @@ exports[`<Dropdown /> create dropdown component 4`] = `
 <div
   className="fd-dropdown"
 >
-  <span
-    onFocus={[Function]}
-    onMouseDown={[Function]}
-    onTouchStart={[Function]}
+  <div
+    className="fd-popover"
+    id="jhqD0557"
   >
     <div
-      className="fd-popper__control fd-popover"
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      onTouchStart={[Function]}
     >
-      <button
-        className="fd-button fd-dropdown__control sap-icon--filter"
-        onClick={[Function]}
+      <div
+        className="fd-popover__control"
       >
-        Select
-      </button>
+        <button
+          className="fd-button fd-dropdown__control sap-icon--filter"
+          onClick={[Function]}
+        >
+          Select
+        </button>
+      </div>
     </div>
-  </span>
+  </div>
 </div>
 `;
 
@@ -96,22 +113,27 @@ exports[`<Dropdown /> create dropdown component 5`] = `
 <div
   className="fd-dropdown"
 >
-  <span
-    onFocus={[Function]}
-    onMouseDown={[Function]}
-    onTouchStart={[Function]}
+  <div
+    className="fd-popover"
+    id="jhqD0561"
   >
     <div
-      className="fd-popper__control fd-popover"
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      onTouchStart={[Function]}
     >
-      <button
-        className="fd-button fd-dropdown__control sap-icon--filter is-disabled"
-        disabled={true}
-        onClick={[Function]}
+      <div
+        className="fd-popover__control"
       >
-        Select
-      </button>
+        <button
+          className="fd-button fd-dropdown__control sap-icon--filter is-disabled"
+          disabled={true}
+          onClick={[Function]}
+        >
+          Select
+        </button>
+      </div>
     </div>
-  </span>
+  </div>
 </div>
 `;

@@ -56,10 +56,8 @@ describe('<ComboboxInput />', () => {
         test('should allow props to be spread to the ComboboxInput component\'s Popover component', () => {
             const element = mount(<ComboboxInput menu={defaultMenu} popoverProps={{ 'data-sample': 'Sample' }} />);
 
-            element.find('.fd-combobox-control').simulate('click');
-
             expect(
-                element.find('div.fd-popper__body').getDOMNode().attributes['data-sample'].value
+                element.find('div.fd-popover').getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
         });
 
