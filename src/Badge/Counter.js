@@ -36,6 +36,9 @@ Counter.defaultProps = {
 };
 
 Counter.propDescriptions = {
+    localizedText: {
+        counterLabel: 'Localized text for the unread count inside Counter.'
+    },
     notification: 'Set to **true** to enable counter with notification.'
 };
 
