@@ -1,5 +1,6 @@
 import { ALERT_TYPES } from '../utils/constants';
 import classnames from 'classnames';
+import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 
@@ -24,6 +25,7 @@ class Alert extends Component {
             link,
             linkProps,
             linkText,
+            localizedText,
             dismissible,
             children,
             className,
@@ -50,7 +52,7 @@ class Alert extends Component {
                             <button
                                 {...buttonProps}
                                 aria-controls='j2ALl423'
-                                aria-label='Close'
+                                aria-label={localizedText.closeButton}
                                 className='fd-alert__close'
                                 onClick={() => this.closeAlertHandler()} />
                         )}
@@ -80,7 +82,16 @@ Alert.propTypes = {
     link: PropTypes.string,
     linkProps: PropTypes.object,
     linkText: PropTypes.string,
+    localizedText: CustomPropTypes.i18n({
+        closeButton: PropTypes.string
+    }),
     type: PropTypes.oneOf(ALERT_TYPES)
+};
+
+Alert.defaultProps = {
+    localizedText: {
+        closeButton: 'Close'
+    }
 };
 
 Alert.propDescriptions = {
