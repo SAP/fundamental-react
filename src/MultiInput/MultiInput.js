@@ -1,4 +1,5 @@
 import classnames from 'classnames';
+import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 
@@ -112,6 +113,7 @@ class MultiInput extends Component {
             data,
             listProps,
             inputProps,
+            localizedText,
             onTagsUpdate,
             placeHolder,
             tagProps,
@@ -148,7 +150,7 @@ class MultiInput extends Component {
                             <div
                                 aria-expanded={this.state.bShowList}
                                 aria-haspopup='true'
-                                aria-label='Image label'
+                                aria-label={localizedText.imageLabel}
                                 className='fd-combobox-control'>
                                 <div className={inputGroupClassNames}>
                                     <input
@@ -196,12 +198,18 @@ MultiInput.propTypes = {
     compact: PropTypes.bool,
     inputProps: PropTypes.object,
     listProps: PropTypes.object,
+    localizedText: CustomPropTypes.i18n({
+        imageLabel: PropTypes.string
+    }),
     placeHolder: PropTypes.string,
     tagProps: PropTypes.object,
     onTagsUpdate: PropTypes.func
 };
 
 MultiInput.defaultProps = {
+    localizedText: {
+        imageLabel: 'Image label'
+    },
     onTagsUpdate: () => {}
 };
 
