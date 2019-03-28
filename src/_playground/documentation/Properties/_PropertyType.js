@@ -1,7 +1,8 @@
+import { makeSafeId } from '../utils/makeSafeId';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-const PropertyType = ({ prop }) => {
+const PropertyType = ({ prop, componentName }) => {
     const typeChecker = prop.typeChecker;
 
     switch (prop.typeName) {
@@ -56,6 +57,9 @@ const PropertyType = ({ prop }) => {
                     <div>{`(${values.join('; ')})`}</div>
                 </React.Fragment>
             );
+        case 'i18n':
+            const shapeName = `Localized Text - ${componentName}`;
+            return (<a href={`#${makeSafeId(shapeName)}`}>Localized Text</a>);
         default:
             return <div>{prop.typeName}</div>;
     }
@@ -64,6 +68,7 @@ const PropertyType = ({ prop }) => {
 PropertyType.displayName = 'PropertyType';
 
 PropertyType.propTypes = {
+    componentName: PropTypes.string,
     prop: PropTypes.any
 };
 

@@ -9,6 +9,7 @@ export const defaultPropDescriptions = {
     inputProps: 'Additional props to be spread to the `<input>` element.',
     labelProps: 'Additional props to be spread to the `<label>` element.',
     listProps: 'Additional props to be spread to the `<ul>` element.',
+    localizedText: 'Localized text to be updated based on location/language.',
     modifier: 'Sets a style variation for a modified appearance.',
     onChange: 'Callback function when the change event fires on the component.',
     onClick: 'Callback function when user clicks on the component.',

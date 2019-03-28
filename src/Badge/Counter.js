@@ -1,8 +1,9 @@
 import classnames from 'classnames';
+import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-const Counter = ({ notification, children, className, ...props }) => {
+const Counter = ({ localizedText, notification, children, className, ...props }) => {
     const counterClasses = classnames(
         'fd-counter',
         {
@@ -12,7 +13,7 @@ const Counter = ({ notification, children, className, ...props }) => {
     );
 
     return (
-        <span {...props} aria-label='Unread count'
+        <span {...props} aria-label={localizedText.counterLabel}
             className={counterClasses}>
             {children}
         </span>
@@ -22,7 +23,16 @@ Counter.displayName = 'Counter';
 
 Counter.propTypes = {
     className: PropTypes.string,
+    localizedText: CustomPropTypes.i18n({
+        counterLabel: PropTypes.string
+    }),
     notification: PropTypes.bool
+};
+
+Counter.defaultProps = {
+    localizedText: {
+        counterLabel: 'Unread count'
+    }
 };
 
 Counter.propDescriptions = {

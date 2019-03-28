@@ -75,4 +75,32 @@ const range = (min, max) => {
     return wrapValidator(createChainableTypeChecker(validate), 'range', { min, max });
 };
 
-export default { range };
+const i18n = (obj) => {
+    if (!obj) {
+        console.error('The shape parameter supplied to the \`i18n\` propType is required.');
+        return () => null;
+    }
+
+    const shapeKeys = Object.keys(obj);
+
+    const validate = (props, propName, componentName, location, propFullName) => {
+        const value = props[propName];
+
+        if (!value) {
+            return new Error(`The ${location} \`${propFullName}\` was not supplied to \`${componentName}\`.`);
+        }
+
+        const valueKeys = Object.keys(value);
+
+        if (valueKeys.length !== shapeKeys.length) {
+            let missingKeys = shapeKeys.filter(key => !valueKeys.some(k => key === k));
+            return new Error(`The ${location} \`${propFullName}\` supplied to \`${componentName}\` only has ${valueKeys.length} strings when ${shapeKeys.length} were expected. Missing ${missingKeys.map(key => `\`${key}\``).join(', ')}.`);
+        }
+
+        return null;
+    };
+
+    return wrapValidator(createChainableTypeChecker(validate), 'i18n', obj);
+};
+
+export default { range, i18n };
