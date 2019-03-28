@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.5.1-rc.6"></a>
+## [0.5.1-rc.6](https://github.com/SAP/fundamental-react/compare/v0.5.1-rc.5...v0.5.1-rc.6) (2019-03-28)
+
+
+### Bug Fixes
+
+* Renamed popper CSS classes ([#478](https://github.com/SAP/fundamental-react/issues/478)) ([ca8df7d](https://github.com/SAP/fundamental-react/commit/ca8df7d))
+
+
+
 <a name="0.5.1-rc.5"></a>
 ## [0.5.1-rc.5](https://github.com/SAP/fundamental-react/compare/v0.5.1-rc.4...v0.5.1-rc.5) (2019-03-28)
 
