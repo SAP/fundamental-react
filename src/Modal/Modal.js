@@ -1,9 +1,9 @@
 import classnames from 'classnames';
+import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import FocusTrap from 'focus-trap-react';
 import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
 import React, { Component } from 'react';
-
 class Modal extends Component {
     // select body element to add Modal component too
     bodyElm = document.querySelector('body');
@@ -30,7 +30,7 @@ class Modal extends Component {
     }
 
     render() {
-        const { children, title, actions, className, show, titleProps, closeProps, contentProps, headerProps, footerProps, bodyProps, ...rest } = this.props;
+        const { localizedText, children, title, actions, className, show, titleProps, closeProps, contentProps, headerProps, footerProps, bodyProps, ...rest } = this.props;
 
         const modalClasses = classnames(
             'fd-ui__overlay',
@@ -68,7 +68,7 @@ class Modal extends Component {
                                     </h1>
                                     <button
                                         {...closeProps}
-                                        aria-label='close'
+                                        aria-label={localizedText.closeButton}
                                         className='fd-button--light fd-modal__close'
                                         onClick={this.handleCloseClick} />
                                 </div>
@@ -106,8 +106,17 @@ Modal.propTypes = {
     contentProps: PropTypes.object,
     footerProps: PropTypes.object,
     headerProps: PropTypes.object,
+    localizedText: CustomPropTypes.i18n({
+        closeButton: PropTypes.string
+    }),
     show: PropTypes.bool,
     titleProps: PropTypes.object
+};
+
+Modal.defaultProps = {
+    localizedText: {
+        closeButton: 'Close'
+    }
 };
 
 Modal.propDescriptions = {
