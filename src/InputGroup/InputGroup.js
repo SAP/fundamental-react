@@ -1,4 +1,5 @@
 import classnames from 'classnames';
+import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import PropTypes from 'prop-types';
 import { INPUT_GROUP_ADDON_POSITIONS, INPUT_GROUP_TYPES } from '../utils/constants';
 import React, { Component } from 'react';
@@ -64,6 +65,7 @@ class InputGroup extends Component {
             inputPlaceholder,
             inputProps,
             inputValue,
+            localizedText,
             numberDownButtonProps,
             numberUpButtonProps,
             searchButtonProps,
@@ -102,12 +104,12 @@ class InputGroup extends Component {
                         <span className='fd-input-group__addon fd-input-group__addon--button fd-input-group__addon--after'>
                             <button
                                 {...numberUpButtonProps}
-                                aria-label='Step up'
+                                aria-label={localizedText.stepUpButton}
                                 className='fd-input-group__button fd-input-group__button--step-up sap-icon--slim-arrow-up'
                                 onClick={this.handleUp} />
                             <button
                                 {...numberDownButtonProps}
-                                aria-label='Step down'
+                                aria-label={localizedText.stepDownButton}
                                 className='fd-input-group__button fd-input-group__button--step-down sap-icon--slim-arrow-down'
                                 onClick={this.handleDown} />
                         </span>
@@ -145,7 +147,7 @@ class InputGroup extends Component {
                         <span className='fd-input-group__addon fd-input-group__addon--button'>
                             <button
                                 {...searchButtonProps}
-                                aria-label='Clear'
+                                aria-label={localizedText.clearButton}
                                 className='fd-input-group__button fd-input-group__button--clear'
                                 onClick={this.handleClear} />
                         </span>
@@ -268,6 +270,11 @@ InputGroup.propTypes = {
     inputProps: PropTypes.object,
     inputType: PropTypes.oneOf(INPUT_GROUP_TYPES),
     inputValue: PropTypes.any,
+    localizedText: CustomPropTypes.i18n({
+        stepUpButton: PropTypes.string,
+        stepDownButton: PropTypes.string,
+        clearButton: PropTypes.string
+    }),
     numberDownButtonProps: PropTypes.object,
     numberUpButtonProps: PropTypes.object,
     searchButtonProps: PropTypes.object
@@ -276,7 +283,12 @@ InputGroup.propTypes = {
 InputGroup.defaultProps = {
     addonPos: 'after',
     inputType: 'text',
-    inputValue: ''
+    inputValue: '',
+    localizedText: {
+        stepUpButton: 'Step up',
+        stepDownButton: 'Step down',
+        ClearButton: 'Clear'
+    }
 };
 
 InputGroup.propDescriptions = {
