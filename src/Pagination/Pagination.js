@@ -1,4 +1,5 @@
 import classnames from 'classnames';
+import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 
@@ -79,6 +80,7 @@ class Pagination extends Component {
             totalText,
             className,
             linkProps,
+            localizedText,
             displayTotalProps,
             prevProps,
             nextProps,
@@ -115,7 +117,7 @@ class Pagination extends Component {
                     <a
                         {...prevProps}
                         aria-disabled={this.state.selectedPage === 1}
-                        aria-label='Previous'
+                        aria-label={localizedText.previousLink}
                         className='fd-pagination__link fd-pagination__link--previous'
                         href='#'
                         onClick={this.navigateBack} />
@@ -125,7 +127,7 @@ class Pagination extends Component {
                         aria-disabled={
                             this.state.selectedPage === this.numberOfPages
                         }
-                        aria-label='Next'
+                        aria-label='{localizedText.nextLink}'
                         className='fd-pagination__link fd-pagination__link--next'
                         href='#'
                         onClick={this.navigateForward} />
@@ -145,6 +147,10 @@ Pagination.propTypes = {
     initialPage: PropTypes.number,
     itemsPerPage: PropTypes.number,
     linkProps: PropTypes.object,
+    localizedText: CustomPropTypes.i18n({
+        nextLink: PropTypes.String,
+        previousLink: PropTypes.String
+    }),
     nextProps: PropTypes.object,
     prevProps: PropTypes.object,
     totalText: PropTypes.string
@@ -154,6 +160,10 @@ Pagination.defaultProps = {
     displayTotal: true,
     initialPage: 1,
     itemsPerPage: 10,
+    localizedText: {
+        nextLink: 'Next',
+        previousLink: 'Previous'
+    },
     totalText: 'items'
 };
 
