@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.5.1-rc.8"></a>
+## [0.5.1-rc.8](https://github.com/SAP/fundamental-react/compare/v0.5.1-rc.7...v0.5.1-rc.8) (2019-03-29)
+
+
+### Bug Fixes
+
+* Added description to localized text property table ([#490](https://github.com/SAP/fundamental-react/issues/490)) ([4f1cb22](https://github.com/SAP/fundamental-react/commit/4f1cb22))
+
+
+
 <a name="0.5.1-rc.7"></a>
 ## [0.5.1-rc.7](https://github.com/SAP/fundamental-react/compare/v0.5.1-rc.6...v0.5.1-rc.7) (2019-03-29)
 
