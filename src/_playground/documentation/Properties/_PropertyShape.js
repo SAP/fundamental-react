@@ -7,7 +7,7 @@ import React from 'react';
 import sortBy from 'sort-by';
 import Table from '../../../Table/Table';
 
-const PropertyShape = ({ title, propTypes, defaultProps, description }) => {
+const PropertyShape = ({ title, propTypes, defaultProps, propDescriptions }) => {
     if (!propTypes) {
         return (
             <em>This shape has no defined properties.</em>
@@ -30,8 +30,7 @@ const PropertyShape = ({ title, propTypes, defaultProps, description }) => {
                     defaultValue={defaultProps && defaultProps[propName]}
                     prop={propTypes[propName]} />,
                 <PropertyDescription
-                    defaultValue={defaultProps && defaultProps[propName]}
-                    description={description[propName]}
+                    description={propDescriptions[propName]}
                     prop={propTypes[propName]} />
             ]
         });
@@ -58,7 +57,7 @@ PropertyShape.displayName = 'PropertyShape';
 
 PropertyShape.propTypes = {
     defaultProps: PropTypes.object,
-    description: PropTypes.object,
+    propDescriptions: PropTypes.object,
     propTypes: PropTypes.object,
     title: PropTypes.string
 };
