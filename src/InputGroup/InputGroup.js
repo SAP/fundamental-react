@@ -104,12 +104,12 @@ class InputGroup extends Component {
                         <span className='fd-input-group__addon fd-input-group__addon--button fd-input-group__addon--after'>
                             <button
                                 {...numberUpButtonProps}
-                                aria-label={localizedText.stepUpButton}
+                                aria-label={localizedText.up}
                                 className='fd-input-group__button fd-input-group__button--step-up sap-icon--slim-arrow-up'
                                 onClick={this.handleUp} />
                             <button
                                 {...numberDownButtonProps}
-                                aria-label={localizedText.stepDownButton}
+                                aria-label={localizedText.down}
                                 className='fd-input-group__button fd-input-group__button--step-down sap-icon--slim-arrow-down'
                                 onClick={this.handleDown} />
                         </span>
@@ -147,7 +147,7 @@ class InputGroup extends Component {
                         <span className='fd-input-group__addon fd-input-group__addon--button'>
                             <button
                                 {...searchButtonProps}
-                                aria-label={localizedText.clearButton}
+                                aria-label={localizedText.clear}
                                 className='fd-input-group__button fd-input-group__button--clear'
                                 onClick={this.handleClear} />
                         </span>
@@ -271,9 +271,9 @@ InputGroup.propTypes = {
     inputType: PropTypes.oneOf(INPUT_GROUP_TYPES),
     inputValue: PropTypes.any,
     localizedText: CustomPropTypes.i18n({
-        clearButton: PropTypes.string,
-        stepDownButton: PropTypes.string,
-        stepUpButton: PropTypes.string
+        clear: PropTypes.string,
+        down: PropTypes.string,
+        up: PropTypes.string
     }),
     numberDownButtonProps: PropTypes.object,
     numberUpButtonProps: PropTypes.object,
@@ -285,9 +285,9 @@ InputGroup.defaultProps = {
     inputType: 'text',
     inputValue: '',
     localizedText: {
-        clearButton: 'Clear',
-        stepDownButton: 'Step down',
-        stepUpButton: 'Step up'
+        clear: 'Clear',
+        down: 'Step down',
+        up: 'Step up'
     }
 };
 
@@ -301,6 +301,11 @@ InputGroup.propDescriptions = {
     inputPlaceholder: 'Value for the `placeholder` attribute on the `<input>` element.',
     inputType: 'Value for the `type` attribute on the `<input>` element.',
     inputValue: 'Value for the `value` attribute on the `<input>` element.',
+    localizedText: {
+        clear: 'Value for aria-label on the clear <button> element.',
+        down: 'Value for aria-label on the down <button> element.',
+        up: 'Value for aria-label on the up <button> element.'
+    },
     numberDownButtonProps: 'Additional props to be spread to the down `<button>` element (for inputType=\'number\').',
     numberUpButtonProps: 'Additional props to be spread to the up `<button>` element (for inputType=\'number\').',
     searchButtonProps: 'Additional props to be spread to the `<button>` element.'
