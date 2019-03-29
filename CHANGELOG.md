@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.5.1-rc.9"></a>
+## [0.5.1-rc.9](https://github.com/SAP/fundamental-react/compare/v0.5.1-rc.8...v0.5.1-rc.9) (2019-03-29)
+
+
+### Bug Fixes
+
+* added localized text shape for multi input component ([#488](https://github.com/SAP/fundamental-react/issues/488)) ([bbed4d5](https://github.com/SAP/fundamental-react/commit/bbed4d5))
+* added localized text shape for shellbar ([#489](https://github.com/SAP/fundamental-react/issues/489)) ([c6fd7a5](https://github.com/SAP/fundamental-react/commit/c6fd7a5))
+* Added localized text shape to alert ([#484](https://github.com/SAP/fundamental-react/issues/484)) ([2f192b7](https://github.com/SAP/fundamental-react/commit/2f192b7))
+* added localized text shape to input group ([#486](https://github.com/SAP/fundamental-react/issues/486)) ([b28712e](https://github.com/SAP/fundamental-react/commit/b28712e))
+* added localized text shape to Modal ([#487](https://github.com/SAP/fundamental-react/issues/487)) ([e671f78](https://github.com/SAP/fundamental-react/commit/e671f78))
+* localizedText shape for pagination ([#485](https://github.com/SAP/fundamental-react/issues/485)) ([c107a11](https://github.com/SAP/fundamental-react/commit/c107a11))
+
+
+
 <a name="0.5.1-rc.8"></a>
 ## [0.5.1-rc.8](https://github.com/SAP/fundamental-react/compare/v0.5.1-rc.7...v0.5.1-rc.8) (2019-03-29)
 
