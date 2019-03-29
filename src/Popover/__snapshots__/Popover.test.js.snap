@@ -1,69 +1,85 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Popover /> create Popover 1`] = `
-<span
-  onFocus={[Function]}
-  onMouseDown={[Function]}
-  onTouchStart={[Function]}
+<div
+  className="fd-popover"
 >
   <div
-    className="fd-popper__control fd-popover"
+    onFocus={[Function]}
+    onMouseDown={[Function]}
+    onTouchStart={[Function]}
   >
-    <span
-      className="sap-icon--cart sap-icon--xl"
-      onClick={[Function]}
-    />
+    <div
+      className="fd-popover__control"
+    >
+      <span
+        className="sap-icon--cart sap-icon--xl"
+        onClick={[Function]}
+      />
+    </div>
   </div>
-</span>
+</div>
 `;
 
 exports[`<Popover /> create Popover 2`] = `
-<span
-  onFocus={[Function]}
-  onMouseDown={[Function]}
-  onTouchStart={[Function]}
+<div
+  className="fd-popover blue"
 >
   <div
-    className="fd-popper__control fd-popover"
+    onFocus={[Function]}
+    onMouseDown={[Function]}
+    onTouchStart={[Function]}
   >
-    <span
-      className="sap-icon--cart sap-icon--xl"
-      onClick={[Function]}
-    />
+    <div
+      className="fd-popover__control"
+    >
+      <span
+        className="sap-icon--cart sap-icon--xl"
+        onClick={[Function]}
+      />
+    </div>
   </div>
-</span>
+</div>
 `;
 
 exports[`<Popover /> create Popover 3`] = `
-<span
-  onFocus={[Function]}
-  onMouseDown={[Function]}
-  onTouchStart={[Function]}
+<div
+  className="fd-popover"
 >
   <div
-    className="fd-popper__control fd-popover"
+    onFocus={[Function]}
+    onMouseDown={[Function]}
+    onTouchStart={[Function]}
   >
-    <span
-      className="sap-icon--cart sap-icon--xl"
-      onClick={[Function]}
-    />
+    <div
+      className="fd-popover__control"
+    >
+      <span
+        className="sap-icon--cart sap-icon--xl"
+        onClick={[Function]}
+      />
+    </div>
   </div>
-</span>
+</div>
 `;
 
 exports[`<Popover /> create Popover 4`] = `
-<span
-  onFocus={[Function]}
-  onMouseDown={[Function]}
-  onTouchStart={[Function]}
+<div
+  className="fd-popover"
 >
   <div
-    className="fd-popper__control fd-popover"
+    onFocus={[Function]}
+    onMouseDown={[Function]}
+    onTouchStart={[Function]}
   >
-    <span
-      className="sap-icon--cart sap-icon--xl"
-      onClick={[Function]}
-    />
+    <div
+      className="fd-popover__control"
+    >
+      <span
+        className="sap-icon--cart sap-icon--xl"
+        onClick={[Function]}
+      />
+    </div>
   </div>
-</span>
+</div>
 `;
