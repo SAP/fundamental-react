@@ -117,7 +117,7 @@ class Pagination extends Component {
                     <a
                         {...prevProps}
                         aria-disabled={this.state.selectedPage === 1}
-                        aria-label={localizedText.previousLink}
+                        aria-label={localizedText.previous}
                         className='fd-pagination__link fd-pagination__link--previous'
                         href='#'
                         onClick={this.navigateBack} />
@@ -127,7 +127,7 @@ class Pagination extends Component {
                         aria-disabled={
                             this.state.selectedPage === this.numberOfPages
                         }
-                        aria-label={localizedText.nextLink}
+                        aria-label={localizedText.next}
                         className='fd-pagination__link fd-pagination__link--next'
                         href='#'
                         onClick={this.navigateForward} />
@@ -148,8 +148,8 @@ Pagination.propTypes = {
     itemsPerPage: PropTypes.number,
     linkProps: PropTypes.object,
     localizedText: CustomPropTypes.i18n({
-        nextLink: PropTypes.string,
-        previousLink: PropTypes.string
+        next: PropTypes.string,
+        previous: PropTypes.string
     }),
     nextProps: PropTypes.object,
     prevProps: PropTypes.object,
@@ -161,8 +161,8 @@ Pagination.defaultProps = {
     initialPage: 1,
     itemsPerPage: 10,
     localizedText: {
-        nextLink: 'Next',
-        previousLink: 'Previous'
+        next: 'Next',
+        previous: 'Previous'
     },
     totalText: 'items'
 };
@@ -173,6 +173,10 @@ Pagination.propDescriptions = {
     initialPage: 'Initial page to be selected.',
     itemsPerPage: 'Number of items to display on page.',
     linkProps: 'Additional props to be spread to the page number `<a>` elements.',
+    localizedText: {
+        next: 'Value for aria-label on the next <a> element.',
+        previous: 'Value for aria-label on the previous <a> element.'
+    },
     nextProps: 'Additional props to be spread to the next arrow `<a>` element.',
     prevProps: 'Additional props to be spread to the previous arrow `<a>` element.',
     totalText: 'Localized text to display next to the total number of items.  Used with `displayTotal`.'
