@@ -2,7 +2,7 @@ $arrow-height: 8px;
 $arrow-width: 13px;
 $arrow-width-half: $arrow-width/2;
 
-.fd-popper__body {
+.fd-popover__popper {
     border: solid 1px #89919a;
     position: absolute;
     white-space: nowrap;
@@ -16,12 +16,12 @@ $arrow-width-half: $arrow-width/2;
     &--no-arrow {
         margin: 0 !important;
 
-        .fd-popper__arrow {
+        .fd-popover__arrow {
             display: none;
         }
     }
 
-    .fd-popper__arrow {
+    .fd-popover__arrow {
         position: absolute;
         width: 0;
         height: 0;
@@ -43,7 +43,7 @@ $arrow-width-half: $arrow-width/2;
     &[data-placement^="top"] {
         margin-bottom: $arrow-height;
 
-        .fd-popper__arrow {
+        .fd-popover__arrow {
             bottom: -$arrow-height;
             margin: 0 $arrow-width-half;
             border-width: $arrow-height $arrow-width-half 0 $arrow-width-half;
@@ -63,7 +63,7 @@ $arrow-width-half: $arrow-width/2;
     &[data-placement^="bottom"] {
         margin-top: $arrow-height;
 
-        .fd-popper__arrow {
+        .fd-popover__arrow {
             top: -$arrow-height;
             margin: 0 $arrow-width-half;
             border-width: 0 $arrow-width-half $arrow-height $arrow-width-half;
@@ -83,7 +83,7 @@ $arrow-width-half: $arrow-width/2;
     &[data-placement^="left"] {
         margin-right: $arrow-height;
 
-        .fd-popper__arrow {
+        .fd-popover__arrow {
             right: -$arrow-height;
             margin: $arrow-width-half 0;
             border-width: $arrow-width-half 0 $arrow-width-half $arrow-height;
@@ -103,7 +103,7 @@ $arrow-width-half: $arrow-width/2;
     &[data-placement^="right"] {
         margin-left: $arrow-height;
 
-        .fd-popper__arrow {
+        .fd-popover__arrow {
             left: -$arrow-height;
             margin: $arrow-width-half 0;
             border-width: $arrow-width-half $arrow-height $arrow-width-half 0;
@@ -122,7 +122,7 @@ $arrow-width-half: $arrow-width/2;
 }
 
 .fd-time-picker {
-    .fd-popper__body {
+    .fd-popover__popper {
         padding: 16px;
     }
 }

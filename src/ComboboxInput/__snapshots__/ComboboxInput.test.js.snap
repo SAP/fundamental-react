@@ -4,37 +4,41 @@ exports[`<ComboboxInput /> create combobox input 1`] = `
 <div
   className="fd-combobox-input"
 >
-  <span
-    onFocus={[Function]}
-    onMouseDown={[Function]}
-    onTouchStart={[Function]}
+  <div
+    className="fd-popover"
   >
     <div
-      className="fd-popper__control fd-popover"
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      onTouchStart={[Function]}
     >
       <div
-        className="fd-combobox-control"
-        onClick={[Function]}
+        className="fd-popover__control"
       >
         <div
-          className="fd-input-group fd-input-group--after"
+          className="fd-combobox-control"
+          onClick={[Function]}
         >
-          <input
-            className="fd-input"
-            placeholder="Select Fruit"
-            type="text"
-          />
-          <span
-            className="fd-input-group__addon fd-input-group__addon--after fd-input-group__addon--button"
+          <div
+            className="fd-input-group fd-input-group--after"
           >
-            <button
-              className=" fd-button--light sap-icon--navigation-down-arrow"
+            <input
+              className="fd-input"
+              placeholder="Select Fruit"
+              type="text"
             />
-          </span>
+            <span
+              className="fd-input-group__addon fd-input-group__addon--after fd-input-group__addon--button"
+            >
+              <button
+                className=" fd-button--light sap-icon--navigation-down-arrow"
+              />
+            </span>
+          </div>
         </div>
       </div>
     </div>
-  </span>
+  </div>
 </div>
 `;
 
@@ -42,36 +46,40 @@ exports[`<ComboboxInput /> create combobox input 2`] = `
 <div
   className="fd-combobox-input blue"
 >
-  <span
-    onFocus={[Function]}
-    onMouseDown={[Function]}
-    onTouchStart={[Function]}
+  <div
+    className="fd-popover"
   >
     <div
-      className="fd-popper__control fd-popover"
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      onTouchStart={[Function]}
     >
       <div
-        className="fd-combobox-control"
-        onClick={[Function]}
+        className="fd-popover__control"
       >
         <div
-          className="fd-input-group fd-input-group--after fd-input-group--compact"
+          className="fd-combobox-control"
+          onClick={[Function]}
         >
-          <input
-            className="fd-input fd-input--compact"
-            placeholder="Select Fruit"
-            type="text"
-          />
-          <span
-            className="fd-input-group__addon fd-input-group__addon--after fd-input-group__addon--button"
+          <div
+            className="fd-input-group fd-input-group--after fd-input-group--compact"
           >
-            <button
-              className=" fd-button--light sap-icon--navigation-down-arrow"
+            <input
+              className="fd-input fd-input--compact"
+              placeholder="Select Fruit"
+              type="text"
             />
-          </span>
+            <span
+              className="fd-input-group__addon fd-input-group__addon--after fd-input-group__addon--button"
+            >
+              <button
+                className=" fd-button--light sap-icon--navigation-down-arrow"
+              />
+            </span>
+          </div>
         </div>
       </div>
     </div>
-  </span>
+  </div>
 </div>
 `;

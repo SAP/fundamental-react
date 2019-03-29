@@ -96,11 +96,11 @@ describe('<Popover />', () => {
         const wrapper = mount(popOver);
 
         // click on popover to show
-        wrapper.find('div.fd-popper__control .sap-icon--cart').simulate('click');
+        wrapper.find('div.fd-popover__control .sap-icon--cart').simulate('click');
         expect(wrapper.state('isExpanded')).toBeTruthy();
 
         // click on popover to hide
-        wrapper.find('div.fd-popper__control .sap-icon--cart').simulate('click');
+        wrapper.find('div.fd-popover__control .sap-icon--cart').simulate('click');
         expect(wrapper.state('isExpanded')).toBeFalsy();
 
         // wrapper.instance().componentWillUnmount();
@@ -110,7 +110,7 @@ describe('<Popover />', () => {
         const wrapper = mount(popOver);
 
         // click on popover to show
-        wrapper.find('div.fd-popper__control .sap-icon--cart').simulate('click');
+        wrapper.find('div.fd-popover__control .sap-icon--cart').simulate('click');
         expect(wrapper.state('isExpanded')).toBeTruthy();
 
         // handle esc key
@@ -123,7 +123,7 @@ describe('<Popover />', () => {
         const wrapper = mount(popOver);
 
         // click on popover to show
-        wrapper.find('div.fd-popper__control .sap-icon--cart').simulate('click');
+        wrapper.find('div.fd-popover__control .sap-icon--cart').simulate('click');
         expect(wrapper.state('isExpanded')).toBeTruthy();
 
         // handle click on document
@@ -136,7 +136,7 @@ describe('<Popover />', () => {
         const wrapper = mount(popOverDisabled);
 
         // click on popover to show
-        wrapper.find('div.fd-popper__control .sap-icon--cart').simulate('click');
+        wrapper.find('div.fd-popover__control .sap-icon--cart').simulate('click');
         expect(wrapper.state('isExpanded')).toBeFalsy();
     });
 
@@ -149,10 +149,8 @@ describe('<Popover />', () => {
                     data-sample='Sample' />
             );
 
-            element.find('div.fd-popper__control .sap-icon--cart').simulate('click');
-
             expect(
-                element.find('.fd-popper__body').getDOMNode().attributes['data-sample'].value
+                element.find('.fd-popover').getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
         });
     });

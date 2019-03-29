@@ -9,8 +9,6 @@ import React from 'react';
 import sortBy from 'sort-by';
 import Table from '../../../Table/Table';
 
-/*eslint-disable no-console*/
-
 const PropertyTable = ({ title, propTypes, defaultProps, propDescriptions }) => {
     if (!propTypes) {
         return (
@@ -67,6 +65,7 @@ const PropertyTable = ({ title, propTypes, defaultProps, propDescriptions }) => 
                 return (<PropertyShape
                     defaultProps={defaultProps[shape]}
                     key={i}
+                    propDescriptions={mergedPropDescriptions[shape]}
                     propTypes={propTypes[shape].typeChecker}
                     title={shapeName} />);
             })}

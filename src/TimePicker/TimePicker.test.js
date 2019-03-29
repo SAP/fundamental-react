@@ -296,7 +296,7 @@ describe('<TimePicker />', () => {
             element.find('.fd-popover__control').at(1).simulate('click');
 
             expect(
-                element.find('div.fd-popper__body div.fd-time').getDOMNode().attributes['data-sample'].value
+                element.find('div.fd-popover__popper div.fd-time').getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
         });
     });

@@ -9,35 +9,39 @@ exports[`<LocalizationEditor /> create localization editor 1`] = `
   >
     Localization Editor Label
   </label>
-  <span
-    onFocus={[Function]}
-    onMouseDown={[Function]}
-    onTouchStart={[Function]}
+  <div
+    className="fd-popover"
   >
     <div
-      className="fd-popper__control fd-popover"
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      onTouchStart={[Function]}
     >
       <div
-        className="fd-input-group fd-input-group--after"
-        onClick={[Function]}
+        className="fd-popover__control"
       >
-        <input
-          className=""
-          placeholder="Enter Label"
-          type="text"
-        />
-        <span
-          className="fd-input-group__addon fd-input-group__addon--after fd-input-group__addon--button"
+        <div
+          className="fd-input-group fd-input-group--after"
+          onClick={[Function]}
         >
-          <button
-            className="fd-button--light fd-localization-editor__button"
+          <input
+            className=""
+            placeholder="Enter Label"
+            type="text"
+          />
+          <span
+            className="fd-input-group__addon fd-input-group__addon--after fd-input-group__addon--button"
           >
-            EN*
-          </button>
-        </span>
+            <button
+              className="fd-button--light fd-localization-editor__button"
+            >
+              EN*
+            </button>
+          </span>
+        </div>
       </div>
     </div>
-  </span>
+  </div>
 </div>
 `;
 
@@ -50,35 +54,39 @@ exports[`<LocalizationEditor /> create localization editor 2`] = `
   >
     Localization Editor Compact Mode
   </label>
-  <span
-    onFocus={[Function]}
-    onMouseDown={[Function]}
-    onTouchStart={[Function]}
+  <div
+    className="fd-popover"
   >
     <div
-      className="fd-popper__control fd-popover"
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      onTouchStart={[Function]}
     >
       <div
-        className="fd-input-group fd-input-group--compact fd-input-group--after"
-        onClick={[Function]}
+        className="fd-popover__control"
       >
-        <input
-          className="fd-input fd-input--compact"
-          placeholder="Enter Label"
-          type="text"
-        />
-        <span
-          className="fd-input-group__addon fd-input-group__addon--after fd-input-group__addon--button"
+        <div
+          className="fd-input-group fd-input-group--compact fd-input-group--after"
+          onClick={[Function]}
         >
-          <button
-            className="fd-button--light fd-localization-editor__button"
+          <input
+            className="fd-input fd-input--compact"
+            placeholder="Enter Label"
+            type="text"
+          />
+          <span
+            className="fd-input-group__addon fd-input-group__addon--after fd-input-group__addon--button"
           >
-            EN*
-          </button>
-        </span>
+            <button
+              className="fd-button--light fd-localization-editor__button"
+            >
+              EN*
+            </button>
+          </span>
+        </div>
       </div>
     </div>
-  </span>
+  </div>
 </div>
 `;
 
@@ -91,30 +99,34 @@ exports[`<LocalizationEditor /> create localization editor 3`] = `
   >
     Localization Editor Label
   </label>
-  <span
-    onFocus={[Function]}
-    onMouseDown={[Function]}
-    onTouchStart={[Function]}
+  <div
+    className="fd-popover"
   >
     <div
-      className="fd-popper__control fd-popover"
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      onTouchStart={[Function]}
     >
       <div
-        className="fd-input-group fd-input-group--after"
-        onClick={[Function]}
+        className="fd-popover__control"
       >
-        <textarea />
-        <span
-          className="fd-input-group__addon fd-input-group__addon--after fd-input-group__addon--button fd-input-group__addon--textarea"
+        <div
+          className="fd-input-group fd-input-group--after"
+          onClick={[Function]}
         >
-          <button
-            className="fd-button--light fd-localization-editor__button"
+          <textarea />
+          <span
+            className="fd-input-group__addon fd-input-group__addon--after fd-input-group__addon--button fd-input-group__addon--textarea"
           >
-            EN*
-          </button>
-        </span>
+            <button
+              className="fd-button--light fd-localization-editor__button"
+            >
+              EN*
+            </button>
+          </span>
+        </div>
       </div>
     </div>
-  </span>
+  </div>
 </div>
 `;
