@@ -1,4 +1,5 @@
 import { chain } from 'chain-function';
+import classnames from 'classnames';
 import Popper from '../utils/_Popper';
 import { POPPER_PLACEMENTS } from '../utils/constants';
 import PropTypes from 'prop-types';
@@ -37,6 +38,7 @@ class Popover extends Component {
             body,
             className,
             placement,
+            popperProps,
             ...rest
         } = this.props;
 
@@ -49,19 +51,24 @@ class Popover extends Component {
             onClick: onClickFunctions
         });
 
+        const popoverClasses = classnames('fd-popover', className);
+
         return (
-            <Popper
-                noArrow={noArrow}
-                onClickOutside={this.handleOutsideClick}
-                onEscapeKey={this.handleOutsideClick}
-                popperClassName={className}
-                popperPlacement={placement}
-                popperProps={rest}
-                referenceClassName='fd-popover'
-                referenceComponent={referenceComponent}
-                show={this.state.isExpanded && !disabled}>
-                {body}
-            </Popper>
+            <div {...rest} className={popoverClasses}>
+                <Popper
+                    cssBlock='fd-popover'
+                    noArrow={noArrow}
+                    onClickOutside={this.handleOutsideClick}
+                    onEscapeKey={this.handleOutsideClick}
+                    popperPlacement={placement}
+                    popperProps={popperProps}
+                    referenceClassName='fd-popover__control'
+                    referenceComponent={referenceComponent}
+                    show={this.state.isExpanded && !disabled}
+                    usePortal>
+                    {body}
+                </Popper>
+            </div>
         );
     }
 }
@@ -74,14 +81,16 @@ Popover.propTypes = {
     className: PropTypes.string,
     disabled: PropTypes.bool,
     noArrow: PropTypes.bool,
-    placement: PropTypes.oneOf(POPPER_PLACEMENTS)
+    placement: PropTypes.oneOf(POPPER_PLACEMENTS),
+    popperProps: PropTypes.object
 };
 
 Popover.propDescriptions = {
     body: 'Node(s) to render in the overlay.',
     control: 'Node to render as the reference element (that the `body` will be placed in relation to).',
     noArrow: 'Set to **true** to render a popover without an arrow.',
-    placement: 'Initial position of the `body` (overlay) related to the `control`.'
+    placement: 'Initial position of the `body` (overlay) related to the `control`.',
+    popperProps: 'Additional props to be spread to the overlay element.'
 };
 
 export default Popover;

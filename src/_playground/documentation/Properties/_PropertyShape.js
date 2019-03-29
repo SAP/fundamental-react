@@ -1,12 +1,13 @@
 import Heading from '../Heading/Heading';
 import PropertyDefault from './_PropertyDefault';
+import PropertyDescription from './_PropertyDescription';
 import PropertyType from './_PropertyType';
 import PropTypes from 'prop-types';
 import React from 'react';
 import sortBy from 'sort-by';
 import Table from '../../../Table/Table';
 
-const PropertyShape = ({ title, propTypes, defaultProps }) => {
+const PropertyShape = ({ title, propTypes, defaultProps, propDescriptions }) => {
     if (!propTypes) {
         return (
             <em>This shape has no defined properties.</em>
@@ -27,6 +28,9 @@ const PropertyShape = ({ title, propTypes, defaultProps }) => {
                 <PropertyType prop={propTypes[propName]} />,
                 <PropertyDefault
                     defaultValue={defaultProps && defaultProps[propName]}
+                    prop={propTypes[propName]} />,
+                <PropertyDescription
+                    description={propDescriptions[propName]}
                     prop={propTypes[propName]} />
             ]
         });
@@ -41,7 +45,8 @@ const PropertyShape = ({ title, propTypes, defaultProps }) => {
                     [
                         'Name',
                         'Type',
-                        'Default'
+                        'Default',
+                        'Description'
                     ]}
                 tableData={data} />
         </div>
@@ -52,6 +57,7 @@ PropertyShape.displayName = 'PropertyShape';
 
 PropertyShape.propTypes = {
     defaultProps: PropTypes.object,
+    propDescriptions: PropTypes.object,
     propTypes: PropTypes.object,
     title: PropTypes.string
 };

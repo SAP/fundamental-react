@@ -61,6 +61,7 @@ class Popper extends React.Component {
     render() {
         const {
             children,
+            cssBlock,
             disableEdgeDetection,
             noArrow,
             onClickOutside,
@@ -81,8 +82,8 @@ class Popper extends React.Component {
             ...flipModifier
         };
 
-        const popperClasses = classnames('fd-popper__body', popperClassName, {
-            'fd-popper__body--no-arrow': !!noArrow
+        const popperClasses = classnames(`${cssBlock}__popper`, popperClassName, {
+            [`${cssBlock}__popper--no-arrow`]: !!noArrow
         });
 
         let popper = (
@@ -104,7 +105,7 @@ class Popper extends React.Component {
                             style={style}>
                             {children}
                             <span
-                                className='fd-popper__arrow'
+                                className={`${cssBlock}__arrow`}
                                 ref={arrowProps.ref}
                                 style={arrowProps.style} />
                         </div>
@@ -117,16 +118,17 @@ class Popper extends React.Component {
             popper = ReactDOM.createPortal(popper, document.querySelector('body'));
         }
 
-        const referenceClasses = classnames('fd-popper__control', referenceClassName);
-
         return (
             <Manager>
-                <Foco onClickOutside={onClickOutside}>
+                <Foco
+                    component='div'
+                    onClickOutside={onClickOutside}
+                    onFocusOutside={onClickOutside}>
                     <Reference>
                         {({ ref }) => (
                             <div
                                 {...referenceProps}
-                                className={referenceClasses}
+                                className={referenceClassName}
                                 ref={ref}>
                                 {referenceComponent}
                             </div>
@@ -143,6 +145,7 @@ Popper.displayName = 'Popper';
 
 Popper.propTypes = {
     children: PropTypes.node.isRequired,
+    cssBlock: PropTypes.string.isRequired,
     referenceComponent: PropTypes.element.isRequired,
     disableEdgeDetection: PropTypes.bool,
     noArrow: PropTypes.bool,
