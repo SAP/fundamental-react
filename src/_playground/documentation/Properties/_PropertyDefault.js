@@ -13,6 +13,9 @@ const PropertyDefault = ({ defaultValue, prop }) => {
             <span>false</span>
         );
     }
+    if (Array.isArray(defaultValue)) {
+        return defaultValue.join(', ');
+    }
 
     if (typeof defaultValue === 'object' || !defaultValue) {
         return null;

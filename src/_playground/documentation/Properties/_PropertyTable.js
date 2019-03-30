@@ -29,21 +29,22 @@ const PropertyTable = ({ title, propTypes, defaultProps, propDescriptions }) => 
     };
 
     sortedProps.forEach(({ propName }) => {
-        data.push({
-            rowData: [
-                propName,
-                <PropertyType componentName={title} prop={propTypes[propName]} />,
-                <PropertyDefault
-                    defaultValue={defaultProps && defaultProps[propName]}
-                    prop={propTypes[propName]} />,
-                <PropertyDescription
-                    defaultValue={defaultProps && defaultProps[propName]}
-                    description={mergedPropDescriptions[propName]}
-                    prop={propTypes[propName]} />
-            ]
-        });
         if (propTypes[propName].typeName === 'i18n') {
             shapes.push(propName);
+        } else {
+            data.push({
+                rowData: [
+                    propName,
+                    <PropertyType componentName={title} prop={propTypes[propName]} />,
+                    <PropertyDefault
+                        defaultValue={defaultProps && defaultProps[propName]}
+                        prop={propTypes[propName]} />,
+                    <PropertyDescription
+                        defaultValue={defaultProps && defaultProps[propName]}
+                        description={mergedPropDescriptions[propName]}
+                        prop={propTypes[propName]} />
+                ]
+            });
         }
     });
 

@@ -1,4 +1,5 @@
 import classnames from 'classnames';
+import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 
@@ -110,7 +111,7 @@ class Calendar extends Component {
 
     changeMonth = (month) => {
         let date = this.state.currentDateDisplayed;
-        let months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+        let months = this.props.localizedText.monthsOfYear;
         date.setMonth(months.indexOf(month));
         // reset date to first of month
         date.setDate(1);
@@ -156,7 +157,7 @@ class Calendar extends Component {
     }
 
     generateMonths = (monthProps) => {
-        let months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+        let months = this.props.localizedText.monthsOfYear;
         let listOfMonths = months.map(element => {
             let shortenedNameMonth = '';
             if (element.length > 3) {
@@ -337,7 +338,7 @@ class Calendar extends Component {
     }
 
     disableWeekday = (date, weekDays) => {
-        let daysName = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+        let daysName = this.props.localizedText.daysOfWeek;
 
         if (typeof weekDays === 'undefined') {
             return false;
@@ -383,7 +384,7 @@ class Calendar extends Component {
     }
 
     generateNavigation = () => {
-        let months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+        let months = this.props.localizedText.monthsOfYear;
 
         return (
             <header className='fd-calendar__header'>
@@ -416,7 +417,7 @@ class Calendar extends Component {
 
     generateWeekdays = () => {
         let weekDays = [];
-        let daysName = ['S', 'M', 'T', 'W', 'T', 'F', 'S'];
+        let daysName = this.props.localizedText.singleCharDaysOfWeek;
 
         for (let index = 0; index < 7; index++) {
             weekDays.push(
@@ -524,6 +525,7 @@ class Calendar extends Component {
             disabledDates,
             customDate,
             className,
+            localizedText,
             monthListProps,
             yearListProps,
             tableProps,
@@ -548,6 +550,10 @@ class Calendar extends Component {
 
 }
 
+const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+const monthsOfYear = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+const singleCharDaysOfWeek = ['S', 'M', 'T', 'W', 'T', 'F', 'S'];
+
 Calendar.displayName = 'Calendar';
 
 Calendar.basePropTypes = {
@@ -564,6 +570,11 @@ Calendar.basePropTypes = {
 Calendar.propTypes = {
     ...Calendar.basePropTypes,
 
+    localizedText: CustomPropTypes.i18n({
+        daysOfWeek: PropTypes.arrayOf(PropTypes.string),
+        monthsOfYear: PropTypes.arrayOf(PropTypes.string),
+        singleCharDaysOfWeek: PropTypes.arrayOf(PropTypes.string)
+    }),
     monthListProps: PropTypes.object,
     tableBodyProps: PropTypes.object,
     tableHeaderProps: PropTypes.object,
@@ -573,6 +584,11 @@ Calendar.propTypes = {
 };
 
 Calendar.defaultProps = {
+    localizedText: {
+        daysOfWeek,
+        monthsOfYear,
+        singleCharDaysOfWeek
+    },
     onChange: () => { }
 };
 
@@ -585,6 +601,11 @@ Calendar.propDescriptions = {
     disablePastDates: 'Set to **true** to disable dates before today\'s date.',
     disableWeekday: 'Disables dates that match a weekday.',
     disableWeekends: 'Set to **true** to disables dates that match a weekend.',
+    localizedText: {
+        daysOfWeek: 'Full names for days of the week.',
+        monthsOfYear: 'Full names for months of the year.',
+        singleCharDaysOfWeek: 'Single character days of the week.'
+    },
     monthListProps: 'Additional props to be spread to the month\'s `<ul>` element.',
     tableBodyProps: 'Additional props to be spread to the `<tbody>` element.',
     tableHeaderProps: 'Additional props to be spread to the `<thead>` element.',
