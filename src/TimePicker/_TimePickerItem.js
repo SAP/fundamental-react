@@ -1,7 +1,7 @@
+import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 
-export const CLOCK = ['am', 'pm'];
 const INVALID = 'is-invalid';
 const VALID = 'fd-input';
 
@@ -9,7 +9,7 @@ class TimePickerItem extends Component {
     constructor(props) {
         super(props);
         var length = this.setLength(props);
-
+        this.ClOCK = [this.props.localizedText.meridiemAM, this.this.props.localizedText.meridiemPM];
         this.state = {
             value: this.props.value,
             inputId: this.props.id && this.props.id + '-input',
@@ -116,7 +116,7 @@ class TimePickerItem extends Component {
                     hour: timeValue[0],
                     minute: timeValue[1],
                     second: timeValue[2],
-                    meridiem: CLOCK.indexOf(timeValues[1])
+                    meridiem: this.CLOCK.indexOf(timeValues[1])
                 };
                 this.props.onChange(time);
             }
@@ -180,7 +180,7 @@ class TimePickerItem extends Component {
             let time = {
                 hour: timeValue[0],
                 minute: timeValue[1],
-                meridiem: CLOCK.indexOf(timeValues[1])
+                meridiem: this.CLOCK.indexOf(timeValues[1])
             };
             this.props.onChange(time);
         }
@@ -192,7 +192,7 @@ class TimePickerItem extends Component {
             let time = {
                 minute: timeValue[0],
                 second: timeValue[1],
-                meridiem: CLOCK.indexOf(timeValues[1])
+                meridiem: this.CLOCK.indexOf(timeValues[1])
             };
             this.props.onChange(time);
         }
@@ -253,6 +253,10 @@ TimePickerItem.propTypes = {
     inputProps: PropTypes.object,
     isValid: PropTypes.bool,
     length: PropTypes.number,
+    localizedText: CustomPropTypes.i18n({
+        meridiemAM: PropTypes.string,
+        meridiemPM: PropTypes.string
+    }),
     placeholder: PropTypes.string,
     showHour: PropTypes.bool,
     showMinute: PropTypes.bool,
@@ -261,6 +265,13 @@ TimePickerItem.propTypes = {
     updateValue: PropTypes.func,
     value: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
     onChange: PropTypes.func
+};
+
+TimePickerItem.defaultProps = {
+    localizedText: {
+        meridiemAM: 'am',
+        meridiemPM: 'pm'
+    }
 };
 
 export default TimePickerItem;

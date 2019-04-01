@@ -1,12 +1,14 @@
+import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import Popover from '../Popover/Popover';
 import PropTypes from 'prop-types';
 import Time from '../Time/Time';
+import TimePickerItem from './_TimePickerItem';
 import React, { Component } from 'react';
-import TimePickerItem, { CLOCK } from './_TimePickerItem';
 
 class TimePicker extends Component {
     constructor(props) {
         super(props);
+        this.CLOCK = [this.props.localizedText.meridiemAM, this.this.props.localizedText.meridiemPM];
         const { time } = this.props;
         let value = '';
         this.state = {
@@ -67,7 +69,7 @@ class TimePicker extends Component {
             value = value ? value + ':' + time.second : time.second;
         }
         if (this.state.format12Hours) {
-            value = value + ' ' + CLOCK[time.meridiem];
+            value = value + ' ' + this.CLOCK[time.meridiem];
         }
         return value;
     };
@@ -91,6 +93,7 @@ class TimePicker extends Component {
         const {
             id,
             inputProps,
+            localizedText,
             buttonProps,
             disabled,
             format12Hours,
@@ -159,11 +162,19 @@ TimePicker.propTypes = {
     disabled: PropTypes.bool,
     id: PropTypes.string,
     inputProps: PropTypes.object,
+    localizedText: CustomPropTypes.i18n({
+        meridiemAM: PropTypes.string,
+        meridiemPM: PropTypes.string
+    }),
     timeProps: PropTypes.object,
     value: PropTypes.string
 };
 
 TimePicker.defaultProps = {
+    localizedText: {
+        meridiemAM: 'am',
+        meridiemPM: 'pm'
+    },
     showHour: true,
     showMinute: true,
     showSecond: true,
@@ -178,6 +189,10 @@ TimePicker.defaultProps = {
 
 TimePicker.propDescriptions = {
     ...Time.propDescriptions,
+    localizedText: {
+        meridiemAM: 'Ante meridiem for 12 hour clock.',
+        meridiemPM: 'Post meridiem for 12 hour clock.'
+    },
     timeProps: 'Additional props to be spread to the `Time` component.',
     value: 'Initial time value for the input.'
 };
