@@ -1,7 +1,7 @@
 import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-/*eslint-disable*/
+
 const INVALID = 'is-invalid';
 const VALID = 'fd-input';
 
@@ -175,7 +175,6 @@ class TimePickerItem extends Component {
     };
     updateTimeHHMMAM = value => {
         let timeValues = value.split(' ');
-        
         if (timeValues.length === 2) {
             let timeValue = timeValues[0].split(':');
             let time = {
