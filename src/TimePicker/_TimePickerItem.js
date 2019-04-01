@@ -1,7 +1,7 @@
 import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-
+/*eslint-disable*/
 const INVALID = 'is-invalid';
 const VALID = 'fd-input';
 
@@ -9,7 +9,7 @@ class TimePickerItem extends Component {
     constructor(props) {
         super(props);
         var length = this.setLength(props);
-        this.ClOCK = [this.props.localizedText.meridiemAM, this.this.props.localizedText.meridiemPM];
+        this.CLOCK = [this.props.localizedText.meridiemAM, this.props.localizedText.meridiemPM];
         this.state = {
             value: this.props.value,
             inputId: this.props.id && this.props.id + '-input',
@@ -175,6 +175,7 @@ class TimePickerItem extends Component {
     };
     updateTimeHHMMAM = value => {
         let timeValues = value.split(' ');
+        
         if (timeValues.length === 2) {
             let timeValue = timeValues[0].split(':');
             let time = {

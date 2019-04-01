@@ -4,11 +4,11 @@ import PropTypes from 'prop-types';
 import Time from '../Time/Time';
 import TimePickerItem from './_TimePickerItem';
 import React, { Component } from 'react';
-
+/*eslint-disable*/
 class TimePicker extends Component {
     constructor(props) {
         super(props);
-        this.CLOCK = [this.props.localizedText.meridiemAM, this.this.props.localizedText.meridiemPM];
+        this.CLOCK = [this.props.localizedText.meridiemAM, this.props.localizedText.meridiemPM];
         const { time } = this.props;
         let value = '';
         this.state = {
