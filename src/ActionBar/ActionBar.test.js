@@ -74,6 +74,20 @@ describe('<ActionBar />', () => {
         expect(tree).toMatchSnapshot();
     });
 
+    describe('ActionBar Header', () => {
+        test('should allow customization of header level', () => {
+            const element = mount(
+                <ActionBar.Header
+                    description=''
+                    level={2}
+                    title='' />
+            );
+            expect(
+                element.find('.fd-action-bar__title').type()
+            ).toBe('h2');
+        });
+    });
+
     describe('Prop spreading', () => {
         test('should allow props to be spread to the ActionBar component', () => {
             const element = mount(<ActionBar data-sample='Sample' />);
@@ -121,7 +135,7 @@ describe('<ActionBar />', () => {
             ).toBe('Sample');
         });
 
-        test('should allow props to be spread to the ActionBarHeader component\'s h1 element', () => {
+        test('should allow props to be spread to the ActionBarHeader component\'s heading element', () => {
             const element = mount(
                 <ActionBar.Header
                     description=''
@@ -130,7 +144,7 @@ describe('<ActionBar />', () => {
             );
 
             expect(
-                element.find('h1').getDOMNode().attributes['data-sample'].value
+                element.find('h3').getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
         });
 
