@@ -1,10 +1,13 @@
+import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import PropTypes from 'prop-types';
+import TimeItem from './_TimeItem';
 import React, { Component } from 'react';
-import TimeItem, { CLOCK } from './_TimeItem';
+
 
 class Time extends Component {
     constructor(props) {
         super(props);
+        this.CLOCK = [this.props.localizedText.meridiemAM, this.props.localizedText.meridiemPM];
         const { time } = this.props;
         if (time.hour === '00') {
             time.hour = this.props.format12Hours ? '12' : '00';
@@ -163,7 +166,7 @@ class Time extends Component {
                         type={'Period'}
                         upButtonProps={meridiemUpButtonProps}
                         updateTime={this.updateTime}
-                        value={CLOCK[this.state.time.meridiem]} />
+                        value={this.CLOCK[this.state.time.meridiem]} />
                 ) : (
                     ''
                 )}
@@ -191,6 +194,10 @@ Time.propTypes = {
     hoursInputProps: PropTypes.object,
     hoursUpButtonProps: PropTypes.object,
     id: PropTypes.string,
+    localizedText: CustomPropTypes.i18n({
+        meridiemAM: PropTypes.string,
+        meridiemPM: PropTypes.string
+    }),
     meridiemDownButtonProps: PropTypes.object,
     meridiemInputProps: PropTypes.object,
     meridiemUpButtonProps: PropTypes.object,
@@ -204,6 +211,10 @@ Time.propTypes = {
 };
 
 Time.defaultProps = {
+    localizedText: {
+        meridiemAM: 'am',
+        meridiemPM: 'pm'
+    },
     onChange: () => { },
     showHour: true,
     showMinute: true,
