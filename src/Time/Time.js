@@ -56,6 +56,7 @@ class Time extends Component {
     // };
     render() {
         const {
+            localizedText,
             showHour,
             showMinute,
             showSecond,
@@ -233,6 +234,10 @@ Time.propDescriptions = {
     hoursDownButtonProps: 'Additional props to be spread to the hours down `<button>` element.',
     hoursInputProps: 'Additional props to be spread to the hours `<input>` element.',
     hoursUpButtonProps: 'Additional props to be spread to the hours up `<button>` element.',
+    localizedText: {
+        meridiemAM: 'Ante meridiem for 12 hour clock. ',
+        meridiemPM: 'Post meridiem for 12 hour clock.'
+    },
     meridiemDownButtonProps: 'Additional props to be spread to the meridiem down `<button>` element.',
     meridiemInputProps: 'Additional props to be spread to the meridiem `<input>` element.',
     meridiemUpButtonProps: 'Additional props to be spread to the meridiem up `<button>` element.',
