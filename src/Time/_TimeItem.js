@@ -2,7 +2,6 @@ import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 
-/*eslint-disable*/
 const INVALID = 'is-invalid';
 
 class TimeItem extends Component {
