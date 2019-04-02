@@ -135,6 +135,7 @@ class TimePicker extends Component {
                                 format12Hours={format12Hours}
                                 id={id}
                                 inputProps={inputProps}
+                                localizedText={this.props.localizedText}
                                 onChange={this.onChange}
                                 placeholder={this.state.placeholder}
                                 showHour={showHour}

@@ -1,4 +1,3 @@
-import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 
@@ -244,6 +243,7 @@ class TimePickerItem extends Component {
 TimePickerItem.displayName = 'TimePickerItem';
 
 TimePickerItem.propTypes = {
+    localizedText: PropTypes.object.isRequired,
     buttonID: PropTypes.string,
     buttonProps: PropTypes.object,
     disabled: PropTypes.bool,
@@ -253,10 +253,6 @@ TimePickerItem.propTypes = {
     inputProps: PropTypes.object,
     isValid: PropTypes.bool,
     length: PropTypes.number,
-    localizedText: CustomPropTypes.i18n({
-        meridiemAM: PropTypes.string,
-        meridiemPM: PropTypes.string
-    }),
     placeholder: PropTypes.string,
     showHour: PropTypes.bool,
     showMinute: PropTypes.bool,
@@ -265,13 +261,6 @@ TimePickerItem.propTypes = {
     updateValue: PropTypes.func,
     value: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
     onChange: PropTypes.func
-};
-
-TimePickerItem.defaultProps = {
-    localizedText: {
-        meridiemAM: 'am',
-        meridiemPM: 'pm'
-    }
 };
 
 export default TimePickerItem;
