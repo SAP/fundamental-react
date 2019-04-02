@@ -653,6 +653,7 @@ Calendar.propDescriptions = {
     disablePastDates: 'Set to **true** to disable dates before today\'s date.',
     disableWeekday: 'Disables dates that match a weekday.',
     disableWeekends: 'Set to **true** to disables dates that match a weekend.',
+    localizedTextShape: 'Localized text for various controls.',
     localizedText: {
         day1Sun: 'Full name for Sunday.',
         day2Mon: 'Full name for Monday.',
