@@ -9,7 +9,7 @@ class SideNavList extends React.Component {
     }
 
     render() {
-        const { children, className, hasParent, level, onItemSelect, open, selectedId, title, titleProps, ...rest } = this.props;
+        const { children, className, hasParent, headingLevel, onItemSelect, open, selectedId, title, titleProps, ...rest } = this.props;
         const sideNavListClasses = classnames({
             'fd-side-nav__list': !hasParent,
             'fd-side-nav__sublist': hasParent
@@ -22,7 +22,7 @@ class SideNavList extends React.Component {
             className
         );
 
-        const HeadingTag = `h${level}`;
+        const HeadingTag = `h${headingLevel}`;
 
         const sideNavList = (
             <ul
@@ -65,7 +65,7 @@ SideNavList.propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,
     hasParent: PropTypes.bool,
-    level: CustomPropTypes.range(2, 6),
+    headingLevel: CustomPropTypes.range(2, 6),
     open: PropTypes.bool,
     selectedId: PropTypes.string,
     title: PropTypes.string,
@@ -74,7 +74,7 @@ SideNavList.propTypes = {
 };
 
 SideNavList.defaultProps = {
-    level: 3
+    headingLevel: 3
 };
 
 SideNavList.propDescriptions = {

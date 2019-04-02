@@ -328,7 +328,7 @@ describe('<SideNav />', () => {
 
     describe('SideNavList', () => {
         test('should allow customization of header level', () => {
-            const element = mount(<SideNav.List level={2} title='test' />);
+            const element = mount(<SideNav.List headingLevel={2} title='test' />);
 
             expect(
                 element.find('.fd-side-nav__title').type()

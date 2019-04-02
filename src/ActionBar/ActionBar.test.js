@@ -79,7 +79,7 @@ describe('<ActionBar />', () => {
             const element = mount(
                 <ActionBar.Header
                     description=''
-                    level={2}
+                    headingLevel={2}
                     title='' />
             );
             expect(

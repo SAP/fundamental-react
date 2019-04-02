@@ -132,7 +132,7 @@ describe('<Modal />', () => {
     describe('Modal Headings', () => {
         test('should allow customization of header level', () => {
             component = mount(
-                <Modal level={2}
+                <Modal headingLevel={2}
                     show
                     title='Sample' />);
 

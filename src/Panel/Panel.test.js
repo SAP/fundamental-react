@@ -142,7 +142,7 @@ describe('<Panel />', () => {
 
     describe('PanelHead', () => {
         test('should allow customization of header level', () => {
-            const element = mount(<Panel.Head level={2} title='Sample' />);
+            const element = mount(<Panel.Head headingLevel={2} title='Sample' />);
 
             expect(
                 element.find('.fd-panel__title').type()

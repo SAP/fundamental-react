@@ -3,13 +3,13 @@ import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-const MenuGroup = ({ title, children, className, level, titleProps, ...props }) => {
+const MenuGroup = ({ title, children, className, headingLevel, titleProps, ...props }) => {
     const menuGroupClasses = classnames(
         'fd-menu__group',
         className
     );
 
-    const HeadingTag = `h${level}`;
+    const HeadingTag = `h${headingLevel}`;
 
     return (
         <div {...props} className={menuGroupClasses}>
@@ -24,12 +24,12 @@ MenuGroup.displayName = 'Menu.Group';
 MenuGroup.propTypes = {
     title: PropTypes.string.isRequired,
     className: PropTypes.string,
-    level: CustomPropTypes.range(2, 6),
+    headingLevel: CustomPropTypes.range(2, 6),
     titleProps: PropTypes.object
 };
 
 MenuGroup.defaultProps = {
-    level: 3
+    headingLevel: 3
 };
 
 export default MenuGroup;

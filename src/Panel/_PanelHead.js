@@ -4,14 +4,14 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 const PanelHead = props => {
-    const { title, description, className, level, ...rest } = props;
+    const { title, description, className, headingLevel, ...rest } = props;
 
     const panelHeadClasses = classnames(
         'fd-panel__head',
         className
     );
 
-    const HeadingTag = `h${level}`;
+    const HeadingTag = `h${headingLevel}`;
 
     return (
         <div {...rest} className={panelHeadClasses}>
@@ -26,12 +26,12 @@ PanelHead.displayName = 'Panel.Head';
 PanelHead.propTypes = {
     className: PropTypes.string,
     description: PropTypes.string,
-    level: CustomPropTypes.range(2, 6),
+    headingLevel: CustomPropTypes.range(2, 6),
     title: PropTypes.string
 };
 
 PanelHead.defaultProps = {
-    level: 3
+    headingLevel: 3
 };
 
 PanelHead.propDescriptions = {

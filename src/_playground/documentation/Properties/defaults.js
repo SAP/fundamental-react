@@ -8,7 +8,7 @@ export const defaultPropDescriptions = {
     id: 'Value for the `id` attribute on the element.',
     inputProps: 'Additional props to be spread to the `<input>` element.',
     labelProps: 'Additional props to be spread to the `<label>` element.',
-    level: 'Heading level. `<h1>` is not allowed for accessibility reasons.',
+    headingLevel: 'Heading level. `<h1>` is reserved for the page title. It should not appear in components.',
     listProps: 'Additional props to be spread to the `<ul>` element.',
     localizedText: 'Localized text to be updated based on location/language.',
     modifier: 'Sets a style variation for a modified appearance.',

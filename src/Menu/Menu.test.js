@@ -133,7 +133,7 @@ describe('<Menu />', () => {
 
     describe('MenuGroup', () => {
         test('should allow customization of header level', () => {
-            const element = mount(<Menu.Group level={2} title='Sample' />);
+            const element = mount(<Menu.Group headingLevel={2} title='Sample' />);
 
             expect(
                 element.find('.fd-menu__title').type()
