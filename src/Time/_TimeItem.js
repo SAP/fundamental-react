@@ -1,4 +1,3 @@
-import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 
@@ -246,15 +245,12 @@ class TimeItem extends Component {
 TimeItem.displayName = 'TimeItem';
 
 TimeItem.propTypes = {
+    localizedText: PropTypes.object.isRequired,
     arialabel: PropTypes.string,
     disabled: PropTypes.bool,
     downButtonProps: PropTypes.object,
     format12Hours: PropTypes.bool,
     inputProps: PropTypes.object,
-    localizedText: CustomPropTypes.i18n({
-        meridiemAM: PropTypes.string,
-        meridiemPM: PropTypes.string
-    }),
     max: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
     name: PropTypes.string,
     placeholder: PropTypes.string,
@@ -268,10 +264,6 @@ TimeItem.propTypes = {
 };
 
 TimeItem.defaultProps = {
-    localizedText: {
-        meridiemAM: 'am',
-        meridiemPM: 'pm'
-    },
     updateTime: () => { }
 };
 

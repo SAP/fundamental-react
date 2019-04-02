@@ -102,6 +102,7 @@ class Time extends Component {
                         downButtonProps={hoursDownButtonProps}
                         format12Hours={format12Hours}
                         inputProps={hoursInputProps}
+                        localizedText={this.props.localizedText}
                         max={max}
                         name='hour'
                         placeholder={'hh'}
@@ -122,6 +123,7 @@ class Time extends Component {
                         downButtonProps={minutesDownButtonProps}
                         format12Hours={format12Hours}
                         inputProps={minutesInputProps}
+                        localizedText={this.props.localizedText}
                         max={'60'}
                         name='minute'
                         placeholder={'mm'}
@@ -142,6 +144,7 @@ class Time extends Component {
                         downButtonProps={secondsDownButtonProps}
                         format12Hours={format12Hours}
                         inputProps={secondsInputProps}
+                        localizedText={this.props.localizedText}
                         max={'60'}
                         name='second'
                         placeholder={'ss'}
@@ -160,6 +163,7 @@ class Time extends Component {
                         disabled={disabled}
                         downButtonProps={meridiemDownButtonProps}
                         inputProps={meridiemInputProps}
+                        localizedText={this.props.localizedText}
                         max={'1'}
                         name='meridiem'
                         spinners={spinners}
