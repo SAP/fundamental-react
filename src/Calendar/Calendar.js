@@ -111,10 +111,7 @@ class Calendar extends Component {
 
     changeMonth = (month) => {
         let date = this.state.currentDateDisplayed;
-        const { monthJan, monthFeb, monthMar, monthApr, monthMay, monthJun, monthJul,
-            monthAug, monthSep, monthOct, monthNov, monthDec } = this.props.localizedText;
-        let months = [monthJan, monthFeb, monthMar, monthApr, monthMay, monthJun, monthJul,
-            monthAug, monthSep, monthOct, monthNov, monthDec];
+        let months = this.getMonths();
         date.setMonth(months.indexOf(month));
         // reset date to first of month
         date.setDate(1);
@@ -160,10 +157,7 @@ class Calendar extends Component {
     }
 
     generateMonths = (monthProps) => {
-        const { monthJan, monthFeb, monthMar, monthApr, monthMay, monthJun, monthJul,
-            monthAug, monthSep, monthOct, monthNov, monthDec } = this.props.localizedText;
-        let months = [monthJan, monthFeb, monthMar, monthApr, monthMay, monthJun, monthJul,
-            monthAug, monthSep, monthOct, monthNov, monthDec];
+        let months = this.getMonths();
         let listOfMonths = months.map(element => {
             let shortenedNameMonth = '';
             if (element.length > 3) {
@@ -344,8 +338,8 @@ class Calendar extends Component {
     }
 
     disableWeekday = (date, weekDays) => {
-        const { daySun, dayMon, dayTues, dayWed, dayThurs, dayFri, daySat } = this.props.localizedText;
-        let daysName = [daySun, dayMon, dayTues, dayWed, dayThurs, dayFri, daySat];
+        const { day1Sun, day2Mon, day3Tues, day4Wed, day5Thurs, day6Fri, day7Sat } = this.props.localizedText;
+        let daysName = [day1Sun, day2Mon, day3Tues, day4Wed, day5Thurs, day6Fri, day7Sat];
 
         if (typeof weekDays === 'undefined') {
             return false;
@@ -390,11 +384,17 @@ class Calendar extends Component {
         this.props.onChange(dates);
     }
 
+    getMonths = () => {
+        const { month01Jan, month02Feb, month03Mar, month04Apr, month05May, month06Jun, month07Jul,
+            month08Aug, month09Sep, month10Oct, month11Nov, month12Dec } = this.props.localizedText;
+        let months = [month01Jan, month02Feb, month03Mar, month04Apr, month05May, month06Jun, month07Jul,
+            month08Aug, month09Sep, month10Oct, month11Nov, month12Dec];
+
+        return months;
+    }
+
     generateNavigation = () => {
-        const { monthJan, monthFeb, monthMar, monthApr, monthMay, monthJun, monthJul,
-            monthAug, monthSep, monthOct, monthNov, monthDec } = this.props.localizedText;
-        let months = [monthJan, monthFeb, monthMar, monthApr, monthMay, monthJun, monthJul,
-            monthAug, monthSep, monthOct, monthNov, monthDec];
+        let months = this.getMonths();
 
         return (
             <header className='fd-calendar__header'>
@@ -427,8 +427,8 @@ class Calendar extends Component {
 
     generateWeekdays = () => {
         let weekDays = [];
-        const { dayCharSun, dayCharMon, dayCharTues, dayCharWed, dayCharThurs, dayCharFri, dayCharSat } = this.props.localizedText;
-        let daysName = [dayCharSun, dayCharMon, dayCharTues, dayCharWed, dayCharThurs, dayCharFri, dayCharSat];
+        const { dayChar1Sun, dayChar2Mon, dayChar3Tues, dayChar4Wed, dayChar5Thurs, dayChar6Fri, dayChar7Sat } = this.props.localizedText;
+        let daysName = [dayChar1Sun, dayChar2Mon, dayChar3Tues, dayChar4Wed, dayChar5Thurs, dayChar6Fri, dayChar7Sat];
 
         for (let index = 0; index < 7; index++) {
             weekDays.push(
@@ -577,32 +577,32 @@ Calendar.basePropTypes = {
 Calendar.propTypes = {
     ...Calendar.basePropTypes,
     localizedText: CustomPropTypes.i18n({
-        daySun: PropTypes.string,
-        dayMon: PropTypes.string,
-        dayTues: PropTypes.string,
-        dayWed: PropTypes.string,
-        dayThurs: PropTypes.string,
-        dayFri: PropTypes.string,
-        daySat: PropTypes.string,
-        dayCharSun: PropTypes.string,
-        dayCharMon: PropTypes.string,
-        dayCharTues: PropTypes.string,
-        dayCharWed: PropTypes.string,
-        dayCharThurs: PropTypes.string,
-        dayCharFri: PropTypes.string,
-        dayCharSat: PropTypes.string,
-        monthJan: PropTypes.string,
-        monthFeb: PropTypes.string,
-        monthMar: PropTypes.string,
-        monthApr: PropTypes.string,
-        monthMay: PropTypes.string,
-        monthJun: PropTypes.string,
-        monthJul: PropTypes.string,
-        monthAug: PropTypes.string,
-        monthSep: PropTypes.string,
-        monthOct: PropTypes.string,
-        monthNov: PropTypes.string,
-        monthDec: PropTypes.string
+        day1Sun: PropTypes.string,
+        day2Mon: PropTypes.string,
+        day3Tues: PropTypes.string,
+        day4Wed: PropTypes.string,
+        day5Thurs: PropTypes.string,
+        day6Fri: PropTypes.string,
+        day7Sat: PropTypes.string,
+        dayChar1Sun: PropTypes.string,
+        dayChar2Mon: PropTypes.string,
+        dayChar3Tues: PropTypes.string,
+        dayChar4Wed: PropTypes.string,
+        dayChar5Thurs: PropTypes.string,
+        dayChar6Fri: PropTypes.string,
+        dayChar7Sat: PropTypes.string,
+        month01Jan: PropTypes.string,
+        month02Feb: PropTypes.string,
+        month03Mar: PropTypes.string,
+        month04Apr: PropTypes.string,
+        month05May: PropTypes.string,
+        month06Jun: PropTypes.string,
+        month07Jul: PropTypes.string,
+        month08Aug: PropTypes.string,
+        month09Sep: PropTypes.string,
+        month10Oct: PropTypes.string,
+        month11Nov: PropTypes.string,
+        month12Dec: PropTypes.string
     }),
     monthListProps: PropTypes.object,
     tableBodyProps: PropTypes.object,
@@ -614,32 +614,32 @@ Calendar.propTypes = {
 
 Calendar.defaultProps = {
     localizedText: {
-        daySun: 'Sunday',
-        dayMon: 'Monday',
-        dayTues: 'Tuesday',
-        dayWed: 'Wednesday',
-        dayThurs: 'Thursday',
-        dayFri: 'Friday',
-        daySat: 'Saturday',
-        dayCharSun: 'S',
-        dayCharMon: 'M',
-        dayCharTues: 'T',
-        dayCharWed: 'W',
-        dayCharThurs: 'T',
-        dayCharFri: 'F',
-        dayCharSat: 'S',
-        monthJan: 'January',
-        monthFeb: 'February',
-        monthMar: 'March',
-        monthApr: 'April',
-        monthMay: 'May',
-        monthJun: 'June',
-        monthJul: 'July',
-        monthAug: 'August',
-        monthSep: 'September',
-        monthOct: 'October',
-        monthNov: 'November',
-        monthDec: 'December'
+        day1Sun: 'Sunday',
+        day2Mon: 'Monday',
+        day3Tues: 'Tuesday',
+        day4Wed: 'Wednesday',
+        day5Thurs: 'Thursday',
+        day6Fri: 'Friday',
+        day7Sat: 'Saturday',
+        dayChar1Sun: 'S',
+        dayChar2Mon: 'M',
+        dayChar3Tues: 'T',
+        dayChar4Wed: 'W',
+        dayChar5Thurs: 'T',
+        dayChar6Fri: 'F',
+        dayChar7Sat: 'S',
+        month01Jan: 'January',
+        month02Feb: 'February',
+        month03Mar: 'March',
+        month04Apr: 'April',
+        month05May: 'May',
+        month06Jun: 'June',
+        month07Jul: 'July',
+        month08Aug: 'August',
+        month09Sep: 'September',
+        month10Oct: 'October',
+        month11Nov: 'November',
+        month12Dec: 'December'
     },
     onChange: () => { }
 };
@@ -654,32 +654,32 @@ Calendar.propDescriptions = {
     disableWeekday: 'Disables dates that match a weekday.',
     disableWeekends: 'Set to **true** to disables dates that match a weekend.',
     localizedText: {
-        daySun: 'Full name for Sunday.',
-        dayMon: 'Full name for Monday.',
-        dayTues: 'Full name for Tuesday.',
-        dayWed: 'Full name for Wednesday.',
-        dayThurs: 'Full name for Thursday.',
-        dayFri: 'Full name for Friday.',
-        daySat: 'Full name for Saturday.',
-        dayCharSun: 'Single character for Sunday.',
-        dayCharMon: 'Single character for Monday.',
-        dayCharTues: 'Single character for Tuesday.',
-        dayCharWed: 'Single character for Wednesday.',
-        dayCharThurs: 'Single character for Thursday.',
-        dayCharFri: 'Single character for Friday.',
-        dayCharSat: 'Single character for Saturday.',
-        monthJan: 'Full name for January.',
-        monthFeb: 'Full name for February.',
-        monthMar: 'Full name for March.',
-        monthApr: 'Full name for April.',
-        monthMay: 'Full name for May.',
-        monthJun: 'Full name for June.',
-        monthJul: 'Full name for July.',
-        monthAug: 'Full name for August.',
-        monthSep: 'Full name for September.',
-        monthOct: 'Full name for Octobor.',
-        monthNov: 'Full name for November.',
-        monthDec: 'Full name for December'
+        day1Sun: 'Full name for Sunday.',
+        day2Mon: 'Full name for Monday.',
+        day3Tues: 'Full name for Tuesday.',
+        day4Wed: 'Full name for Wednesday.',
+        day5Thurs: 'Full name for Thursday.',
+        day6Fri: 'Full name for Friday.',
+        day7Sat: 'Full name for Saturday.',
+        dayChar1Sun: 'Single character for Sunday.',
+        dayChar2Mon: 'Single character for Monday.',
+        dayChar3Tues: 'Single character for Tuesday.',
+        dayChar4Wed: 'Single character for Wednesday.',
+        dayChar5Thurs: 'Single character for Thursday.',
+        dayChar6Fri: 'Single character for Friday.',
+        dayChar7Sat: 'Single character for Saturday.',
+        month01Jan: 'Full name for January.',
+        month02Feb: 'Full name for February.',
+        month03Mar: 'Full name for March.',
+        month04Apr: 'Full name for April.',
+        month05May: 'Full name for May.',
+        month06Jun: 'Full name for June.',
+        month07Jul: 'Full name for July.',
+        month08Aug: 'Full name for August.',
+        month09Sep: 'Full name for September.',
+        month10Oct: 'Full name for Octobor.',
+        month11Nov: 'Full name for November.',
+        month12Dec: 'Full name for December'
     },
     monthListProps: 'Additional props to be spread to the month\'s `<ul>` element.',
     tableBodyProps: 'Additional props to be spread to the `<tbody>` element.',
