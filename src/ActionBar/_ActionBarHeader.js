@@ -32,7 +32,7 @@ ActionBarHeader.propTypes = {
     className: PropTypes.string,
     description: PropTypes.string,
     descriptionProps: PropTypes.object,
-    headingLevel: CustomPropTypes.range(2, 6),
+    headingLevel: CustomPropTypes.range(1, 6),
     titleProps: PropTypes.object
 };
 
@@ -42,7 +42,8 @@ ActionBarHeader.defaultProps = {
 
 ActionBarHeader.propDescriptions = {
     description: 'Localized text for the description.',
-    descriptionProps: 'Additional props to be spread to the description\'s `<p>` element.'
+    descriptionProps: 'Additional props to be spread to the description\'s `<p>` element.',
+    headingLevel: 'Heading level. `<h1>` is reserved for the page title.'
 };
 
 export default ActionBarHeader;
