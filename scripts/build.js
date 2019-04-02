@@ -104,7 +104,7 @@ checkBrowsers(paths.appPath, isInteractive)
 
             const appPackage = require(paths.appPackageJson);
             const publicUrl = paths.publicUrl;
-            const publicPath = config.output.publicPath;
+            const publicPath = process.env.NETLITFY ? '' : config.output.publicPath;
             const buildFolder = path.relative(process.cwd(), paths.appBuild);
             printHostingInstructions(
                 appPackage,
