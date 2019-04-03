@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.5.1-rc.11"></a>
+## [0.5.1-rc.11](https://github.com/SAP/fundamental-react/compare/v0.5.1-rc.10...v0.5.1-rc.11) (2019-04-03)
+
+
+### Bug Fixes
+
+* make all heading elements customizable ([#497](https://github.com/SAP/fundamental-react/issues/497)) ([deaa643](https://github.com/SAP/fundamental-react/commit/deaa643))
+
+
+
 <a name="0.5.1-rc.10"></a>
 ## [0.5.1-rc.10](https://github.com/SAP/fundamental-react/compare/v0.5.1-rc.9...v0.5.1-rc.10) (2019-04-03)
 
