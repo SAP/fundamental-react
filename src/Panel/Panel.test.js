@@ -140,6 +140,16 @@ describe('<Panel />', () => {
         expect(tree).toMatchSnapshot();
     });
 
+    describe('PanelHead', () => {
+        test('should allow customization of header level', () => {
+            const element = mount(<Panel.Head headingLevel={2} title='Sample' />);
+
+            expect(
+                element.find('.fd-panel__title').type()
+            ).toBe('h2');
+        });
+    });
+
     describe('Prop spreading', () => {
         test('should allow props to be spread to the Panel component', () => {
             const element = mount(<Panel data-sample='Sample' />);
@@ -181,7 +191,7 @@ describe('<Panel />', () => {
             ).toBe('Sample');
         });
 
-        xtest('should allow props to be spread to the PanelHead component\'s h1 element', () => {
+        xtest('should allow props to be spread to the PanelHead component\'s heading element', () => {
             // TODO: placeholder for this test description once that functionality is built
         });
 

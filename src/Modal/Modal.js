@@ -30,7 +30,7 @@ class Modal extends Component {
     }
 
     render() {
-        const { localizedText, children, title, actions, className, show, titleProps, closeProps, contentProps, headerProps, footerProps, bodyProps, ...rest } = this.props;
+        const { localizedText, children, title, actions, className, headingLevel, show, titleProps, closeProps, contentProps, headerProps, footerProps, bodyProps, ...rest } = this.props;
 
         const modalClasses = classnames(
             'fd-ui__overlay',
@@ -38,6 +38,8 @@ class Modal extends Component {
             'fd-overlay--modal',
             className
         );
+
+        const HeadingTag = `h${headingLevel}`;
 
         if (!show) {
             return null;
@@ -63,9 +65,9 @@ class Modal extends Component {
                                 className='fd-modal__content'
                                 role='document'>
                                 <div {...headerProps} className='fd-modal__header'>
-                                    <h1 {...titleProps} className='fd-modal__title'>
+                                    <HeadingTag {...titleProps} className='fd-modal__title'>
                                         {title}
-                                    </h1>
+                                    </HeadingTag>
                                     <button
                                         {...closeProps}
                                         aria-label={localizedText.closeButton}
@@ -106,6 +108,7 @@ Modal.propTypes = {
     contentProps: PropTypes.object,
     footerProps: PropTypes.object,
     headerProps: PropTypes.object,
+    headingLevel: CustomPropTypes.range(2, 6),
     localizedText: CustomPropTypes.i18n({
         closeButton: PropTypes.string
     }),
@@ -114,6 +117,7 @@ Modal.propTypes = {
 };
 
 Modal.defaultProps = {
+    headingLevel: 3,
     localizedText: {
         closeButton: 'Close'
     }

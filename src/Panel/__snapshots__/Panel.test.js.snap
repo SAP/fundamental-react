@@ -10,11 +10,11 @@ exports[`<Panel /> create panels 1`] = `
     <div
       className="fd-panel__head"
     >
-      <h1
+      <h3
         className="fd-panel__title"
       >
         Panel Header with Actions
-      </h1>
+      </h3>
       <p
         className="fd-panel__description"
       >
@@ -64,11 +64,11 @@ exports[`<Panel /> create panels 2`] = `
     <div
       className="fd-panel__head"
     >
-      <h1
+      <h3
         className="fd-panel__title"
       >
         Panel Header with Actions
-      </h1>
+      </h3>
     </div>
     <div
       className="fd-panel__body"
@@ -137,11 +137,11 @@ exports[`<Panel /> create panels 3`] = `
     <div
       className="fd-panel__head blue"
     >
-      <h1
+      <h3
         className="fd-panel__title"
       >
         Panel Header with Actions
-      </h1>
+      </h3>
       <p
         className="fd-panel__description"
       >

@@ -90,7 +90,7 @@ describe('<Modal />', () => {
 
     test('create information modal', () => {
         component = mount(infoModal);
-        expect(component.find('h1.fd-modal__title').text()).toEqual(modalInfoTitle);
+        expect(component.find('.fd-modal__title').text()).toEqual(modalInfoTitle);
 
         // close modal
         component.find('button.fd-button--light.fd-modal__close').simulate('click');
@@ -114,19 +114,32 @@ describe('<Modal />', () => {
 
     test('create confirm modal', () => {
         component = mount(confirmModal);
-        expect(component.find('h1.fd-modal__title').text()).toEqual(
+        expect(component.find('.fd-modal__title').text()).toEqual(
             modalConfirmTitle
         );
     });
 
     test('create form modal', () => {
         component = mount(formModal);
-        expect(component.find('h1.fd-modal__title').text()).toEqual(modalFormTitle);
+        expect(component.find('.fd-modal__title').text()).toEqual(modalFormTitle);
     });
 
     test('do not show info modal', () => {
         component = mount(infoNoShowModal);
-        expect(component.find('h1.fd-modal__title').exists()).toBeFalsy();
+        expect(component.find('.fd-modal__title').exists()).toBeFalsy();
+    });
+
+    describe('Modal Headings', () => {
+        test('should allow customization of header level', () => {
+            component = mount(
+                <Modal headingLevel={2}
+                    show
+                    title='Sample' />);
+
+            expect(
+                component.find('.fd-modal__title').type()
+            ).toBe('h2');
+        });
     });
 
     describe('Prop spreading', () => {
@@ -171,7 +184,7 @@ describe('<Modal />', () => {
             ).toBe('Sample Title');
         });
 
-        test('should allow props to be spread to the Modal component\'s h1 element', () => {
+        test('should allow props to be spread to the Modal component\'s header element', () => {
             component = mount(
                 <Modal
                     show
@@ -180,7 +193,7 @@ describe('<Modal />', () => {
             );
 
             expect(
-                component.find('h1').getDOMNode().attributes['data-sample']
+                component.find('.fd-modal__title').getDOMNode().attributes['data-sample']
                     .value
             ).toBe('Sample Title');
         });

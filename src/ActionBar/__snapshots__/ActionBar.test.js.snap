@@ -14,11 +14,11 @@ exports[`<ActionBar /> create basic Action Bar 1`] = `
   <div
     className="fd-action-bar__header blue"
   >
-    <h1
+    <h3
       className="fd-action-bar__title"
     >
       Page Title
-    </h1>
+    </h3>
     <p
       className="fd-action-bar__description"
     >
@@ -49,11 +49,11 @@ exports[`<ActionBar /> create basic Action Bar 2`] = `
   <div
     className="fd-action-bar__header blue"
   >
-    <h1
+    <h3
       className="fd-action-bar__title"
     >
       Page Title
-    </h1>
+    </h3>
     <p
       className="fd-action-bar__description"
     >
@@ -91,11 +91,11 @@ exports[`<ActionBar /> create basic mobile Action Bar 1`] = `
     <div
       className="fd-action-bar__header"
     >
-      <h1
+      <h3
         className="fd-action-bar__title"
       >
         Page Title
-      </h1>
+      </h3>
       <p
         className="fd-action-bar__description"
       >
@@ -134,11 +134,11 @@ exports[`<ActionBar /> create basic mobile Action Bar 2`] = `
     <div
       className="fd-action-bar__header"
     >
-      <h1
+      <h3
         className="fd-action-bar__title"
       >
         Page Title
-      </h1>
+      </h3>
       <p
         className="fd-action-bar__description"
       >
