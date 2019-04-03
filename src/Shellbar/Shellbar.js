@@ -1,5 +1,6 @@
 import classnames from 'classnames';
 import Counter from '../Badge/Counter';
+import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import Icon from '../Icon/Icon';
 import Identifier from '../Identifier/Identifier';
 import Menu from '../Menu/Menu';
@@ -86,6 +87,7 @@ class Shellbar extends Component {
 
     render() {
         const {
+            localizedText,
             logo,
             logoSAP,
             productTitle,
@@ -192,7 +194,7 @@ class Shellbar extends Component {
                                                         className={` fd-button--shell sap-icon--${action.glyph}`} >
                                                         {action.notificationCount > 0 && (
                                                             <span
-                                                                aria-label='Unread count'
+                                                                aria-label={localizedText.counterLabel}
                                                                 className='fd-counter fd-counter--notification' >
                                                                 {action.notificationCount}
                                                             </span>
@@ -208,7 +210,7 @@ class Shellbar extends Component {
                                                 onClick={action.callback} >
                                                 {action.notificationCount > 0 && (
                                                     <span
-                                                        aria-label='Unread count'
+                                                        aria-label={localizedText.counterLabel}
                                                         className='fd-counter fd-counter--notification' >
                                                         {action.notificationCount}
                                                     </span>
@@ -227,8 +229,8 @@ class Shellbar extends Component {
                                     }
                                     control={
                                         <div className='fd-shellbar__action fd-shellbar__action--collapsible'>
-                                            <button aria-label='Notifications' className=' fd-button--shell sap-icon--bell'>
-                                                {(notifications.notificationCount > 0) && <span aria-label='Unread count' className='fd-counter fd-counter--notification'>
+                                            <button aria-label={localizedText.notificationsButton} className=' fd-button--shell sap-icon--bell'>
+                                                {(notifications.notificationCount > 0) && <span aria-label={localizedText.counterLabel} className='fd-counter fd-counter--notification'>
                                                     {notifications.notificationCount}
                                                 </span>}
                                             </button>
@@ -237,9 +239,9 @@ class Shellbar extends Component {
                                     placement='bottom-end' />
                             ) : (
                                 <div className='fd-shellbar__action fd-shellbar__action--collapsible'>
-                                    <button aria-label='Notifications' className=' fd-button--shell sap-icon--bell'
+                                    <button aria-label={localizedText.notificationsButton} className=' fd-button--shell sap-icon--bell'
                                         onClick={notifications.callback}>
-                                        {(notifications.notificationCount > 0) && <span aria-label='Unread count' className='fd-counter fd-counter--notification'>
+                                        {(notifications.notificationCount > 0) && <span aria-label={localizedText.counterLabel} className='fd-counter fd-counter--notification'>
                                             {notifications.notificationCount}
                                         </span>}
                                     </button>
@@ -294,7 +296,7 @@ class Shellbar extends Component {
                                             <div className='fd-shellbar-collapse--control' role='button'>
                                                 <button className=' fd-button--shell sap-icon--overflow'>
                                                     <span
-                                                        aria-label='Unread count'
+                                                        aria-label={localizedText.counterLabel}
                                                         className='fd-counter fd-counter--notification'> {this.state.totalNotifications > 0 && this.state.totalNotifications} </span>
                                                 </button>
                                             </div>
@@ -393,6 +395,10 @@ Shellbar.propTypes = {
     actions: PropTypes.array,
     className: PropTypes.string,
     copilot: PropTypes.bool,
+    localizedText: CustomPropTypes.i18n({
+        counterLabel: PropTypes.string,
+        notificationsButton: PropTypes.string
+    }),
     logo: PropTypes.object,
     logoSAP: PropTypes.bool,
     notifications: PropTypes.object,
@@ -406,11 +412,22 @@ Shellbar.propTypes = {
     subtitle: PropTypes.string
 };
 
+Shellbar.defaultProps = {
+    localizedText: {
+        counterLabel: 'Unread count',
+        notificationsButton: 'Notifications'
+    }
+};
+
 Shellbar.propDescriptions = {
     actions: 'Holds all product actions and links.',
     copilot: 'For use with applications that utilize CoPilot.',
     logo: 'Provide an img tag for a logo other than the SAP logo. One of the two props (`logo` or `logoSAP`) should be set.',
     logoSAP: 'Renders the SAP logo in the Shellbar. One of the two props (`logo` or `logoSAP`) should be set.',
+    localizedText: {
+        counterLabel: 'Aria-label for <span> element within the <button> element.',
+        notificationsButton: 'Aria-label for <button> element.'
+    },
     notifications: 'Information about pending notifications.',
     productMenu: 'Holds product titles and navigation.',
     productSwitcher: 'For navigating between products.',

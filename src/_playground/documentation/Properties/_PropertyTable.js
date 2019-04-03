@@ -65,7 +65,7 @@ const PropertyTable = ({ title, propTypes, defaultProps, propDescriptions }) => 
                 return (<PropertyShape
                     defaultProps={defaultProps[shape]}
                     key={i}
-                    propDescriptions={mergedPropDescriptions[shape]}
+                    propDescriptions={mergedPropDescriptions[`${shape}Shape`]}
                     propTypes={propTypes[shape].typeChecker}
                     title={shapeName} />);
             })}

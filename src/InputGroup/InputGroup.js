@@ -1,4 +1,5 @@
 import classnames from 'classnames';
+import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import PropTypes from 'prop-types';
 import { INPUT_GROUP_ADDON_POSITIONS, INPUT_GROUP_TYPES } from '../utils/constants';
 import React, { Component } from 'react';
@@ -64,6 +65,7 @@ class InputGroup extends Component {
             inputPlaceholder,
             inputProps,
             inputValue,
+            localizedText,
             numberDownButtonProps,
             numberUpButtonProps,
             searchButtonProps,
@@ -102,12 +104,12 @@ class InputGroup extends Component {
                         <span className='fd-input-group__addon fd-input-group__addon--button fd-input-group__addon--after'>
                             <button
                                 {...numberUpButtonProps}
-                                aria-label='Step up'
+                                aria-label={localizedText.up}
                                 className='fd-input-group__button fd-input-group__button--step-up sap-icon--slim-arrow-up'
                                 onClick={this.handleUp} />
                             <button
                                 {...numberDownButtonProps}
-                                aria-label='Step down'
+                                aria-label={localizedText.down}
                                 className='fd-input-group__button fd-input-group__button--step-down sap-icon--slim-arrow-down'
                                 onClick={this.handleDown} />
                         </span>
@@ -145,7 +147,7 @@ class InputGroup extends Component {
                         <span className='fd-input-group__addon fd-input-group__addon--button'>
                             <button
                                 {...searchButtonProps}
-                                aria-label='Clear'
+                                aria-label={localizedText.clear}
                                 className='fd-input-group__button fd-input-group__button--clear'
                                 onClick={this.handleClear} />
                         </span>
@@ -268,6 +270,11 @@ InputGroup.propTypes = {
     inputProps: PropTypes.object,
     inputType: PropTypes.oneOf(INPUT_GROUP_TYPES),
     inputValue: PropTypes.any,
+    localizedText: CustomPropTypes.i18n({
+        clear: PropTypes.string,
+        down: PropTypes.string,
+        up: PropTypes.string
+    }),
     numberDownButtonProps: PropTypes.object,
     numberUpButtonProps: PropTypes.object,
     searchButtonProps: PropTypes.object
@@ -276,7 +283,12 @@ InputGroup.propTypes = {
 InputGroup.defaultProps = {
     addonPos: 'after',
     inputType: 'text',
-    inputValue: ''
+    inputValue: '',
+    localizedText: {
+        clear: 'Clear',
+        down: 'Step down',
+        up: 'Step up'
+    }
 };
 
 InputGroup.propDescriptions = {
@@ -289,6 +301,11 @@ InputGroup.propDescriptions = {
     inputPlaceholder: 'Value for the `placeholder` attribute on the `<input>` element.',
     inputType: 'Value for the `type` attribute on the `<input>` element.',
     inputValue: 'Value for the `value` attribute on the `<input>` element.',
+    localizedText: {
+        clear: 'Value for aria-label on the clear <button> element.',
+        down: 'Value for aria-label on the down <button> element.',
+        up: 'Value for aria-label on the up <button> element.'
+    },
     numberDownButtonProps: 'Additional props to be spread to the down `<button>` element (for inputType=\'number\').',
     numberUpButtonProps: 'Additional props to be spread to the up `<button>` element (for inputType=\'number\').',
     searchButtonProps: 'Additional props to be spread to the `<button>` element.'
