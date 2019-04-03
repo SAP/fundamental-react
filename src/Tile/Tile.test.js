@@ -183,6 +183,26 @@ describe('<Tile />', () => {
         expect(tree).toMatchSnapshot();
     });
 
+    describe('ProductTileContent', () => {
+        test('should allow customization of header level', () => {
+            const element = mount(
+                <ProductTile.Content headingLevel={2} title='Tile Title' /> );
+            expect(
+                element.find('.fd-product-tile__title').type()
+            ).toBe('h2');
+        });
+    });
+
+    describe('TileContent', () => {
+        test('should allow customization of header level', () => {
+            const element = mount(
+                <Tile.Content headingLevel={2} title='Tile Title' /> );
+            expect(
+                element.find('.fd-tile__title').type()
+            ).toBe('h2');
+        });
+    });
+
     describe('Prop spreading', () => {
         test('should allow props to be spread to the Tile component', () => {
             const element = mount(<Tile data-sample='Sample' />);
@@ -200,11 +220,11 @@ describe('<Tile />', () => {
             ).toBe('Sample');
         });
 
-        test('should allow props to be spread to the TileContent component\'s h2 element', () => {
+        test('should allow props to be spread to the TileContent component\'s header element', () => {
             const element = mount(<Tile.Content title='Sample' titleProps={{ 'data-sample': 'Sample' }} />);
 
             expect(
-                element.find('h2').getDOMNode().attributes['data-sample'].value
+                element.find('.fd-tile__title').getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
         });
 
@@ -240,11 +260,11 @@ describe('<Tile />', () => {
             ).toBe('Sample');
         });
 
-        test('should allow props to be spread to the ProductTileContent component\'s h2 element', () => {
+        test('should allow props to be spread to the ProductTileContent component\'s heading element', () => {
             const element = mount(<ProductTile.Content titleProps={{ 'data-sample': 'Sample' }} />);
 
             expect(
-                element.find('h2').getDOMNode().attributes['data-sample'].value
+                element.find('.fd-product-tile__title').getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
         });
 

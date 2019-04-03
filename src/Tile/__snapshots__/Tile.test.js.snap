@@ -7,11 +7,11 @@ exports[`<Tile /> create tile component 1`] = `
   <div
     className="fd-tile__content red"
   >
-    <h2
+    <h3
       className="fd-tile__title"
     >
       Tile Title
-    </h2>
+    </h3>
     <p>
       Tile Description
     </p>
@@ -26,11 +26,11 @@ exports[`<Tile /> create tile component 2`] = `
   <div
     className="fd-tile__content"
   >
-    <h2
+    <h3
       className="fd-tile__title"
     >
       Tile Title
-    </h2>
+    </h3>
     <p>
       Tile Description
     </p>
@@ -54,11 +54,11 @@ exports[`<Tile /> create tile component 3`] = `
   <div
     className="fd-tile__content"
   >
-    <h2
+    <h3
       className="fd-tile__title"
     >
       Tile Title
-    </h2>
+    </h3>
     <p>
       Tile Description
     </p>
@@ -73,11 +73,11 @@ exports[`<Tile /> create tile component 4`] = `
   <div
     className="fd-tile__content"
   >
-    <h2
+    <h3
       className="fd-tile__title"
     >
       Tile Title
-    </h2>
+    </h3>
   </div>
   <div
     className="fd-tile__actions yellow"
@@ -120,11 +120,11 @@ exports[`<Tile /> create tile component 5`] = `
   <div
     className="fd-tile__content"
   >
-    <h2
+    <h3
       className="fd-tile__title"
     >
       Tile Title
-    </h2>
+    </h3>
     <p>
       Tile Description
     </p>
@@ -139,11 +139,11 @@ exports[`<Tile /> create tile component 6`] = `
   <div
     className="fd-tile__content"
   >
-    <h2
+    <h3
       className="fd-tile__title"
     >
       Tile Title
-    </h2>
+    </h3>
   </div>
   <div
     className="fd-tile__actions"
@@ -186,11 +186,11 @@ exports[`<Tile /> create tile component 7`] = `
   <div
     className="fd-product-tile__content"
   >
-    <h2
+    <h3
       className="fd-product-tile__title"
     >
       Tile Title
-    </h2>
+    </h3>
     <p>
       Tile Description
     </p>
@@ -213,11 +213,11 @@ exports[`<Tile /> create tile component 8`] = `
   <div
     className="fd-product-tile__content blue"
   >
-    <h2
+    <h3
       className="fd-product-tile__title"
     >
       Tile Title
-    </h2>
+    </h3>
     <p>
       Tile Description
     </p>
@@ -235,11 +235,11 @@ exports[`<Tile /> create tile component 9`] = `
     <div
       className="fd-tile__content"
     >
-      <h2
+      <h3
         className="fd-tile__title"
       >
         Tile Title
-      </h2>
+      </h3>
       <p>
         Tile Description
       </p>
@@ -258,11 +258,11 @@ exports[`<Tile /> create tile component 10`] = `
     <div
       className="fd-tile__content"
     >
-      <h2
+      <h3
         className="fd-tile__title"
       >
         Tile Title
-      </h2>
+      </h3>
       <p>
         Tile Description
       </p>
