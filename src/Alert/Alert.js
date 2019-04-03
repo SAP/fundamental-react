@@ -99,7 +99,7 @@ Alert.propDescriptions = {
     link: 'Value to be applied to the anchor\'s `href` attribute.',
     linkProps: 'Additional props to be spread to the link\'s `<a>` element.',
     linkText: 'Localized display text of the link.',
-    localizedText: {
+    localizedTextShape: {
         close: 'Value for aria-label on the close <button> element.'
     }
 };

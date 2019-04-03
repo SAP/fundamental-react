@@ -130,7 +130,7 @@ Modal.propDescriptions = {
     contentProps: 'Additional props to be spread to the content section of the dialog.',
     footerProps: 'Additional props to be spread to the footer of the dialog.',
     headerProps: 'Additional props to be spread to the header of the dialog.',
-    localizedText: {
+    localizedTextShape: {
         closeButton: 'Aria-label for <button> element.'
     },
     show: 'Set to **true** to make the dialog visible.'
