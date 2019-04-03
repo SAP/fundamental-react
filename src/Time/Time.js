@@ -238,7 +238,7 @@ Time.propDescriptions = {
     hoursDownButtonProps: 'Additional props to be spread to the hours down `<button>` element.',
     hoursInputProps: 'Additional props to be spread to the hours `<input>` element.',
     hoursUpButtonProps: 'Additional props to be spread to the hours up `<button>` element.',
-    localizedText: {
+    localizedTextShape: {
         meridiemAM: 'Ante meridiem for 12 hour clock. ',
         meridiemPM: 'Post meridiem for 12 hour clock.'
     },
