@@ -190,7 +190,7 @@ TimePicker.defaultProps = {
 
 TimePicker.propDescriptions = {
     ...Time.propDescriptions,
-    localizedText: {
+    localizedTextShape: {
         meridiemAM: 'Ante meridiem for 12 hour clock.',
         meridiemPM: 'Post meridiem for 12 hour clock.'
     },
