@@ -1,5 +1,6 @@
 import { ALERT_TYPES } from '../utils/constants';
 import classnames from 'classnames';
+import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 
@@ -24,6 +25,7 @@ class Alert extends Component {
             link,
             linkProps,
             linkText,
+            localizedText,
             dismissible,
             children,
             className,
@@ -50,7 +52,7 @@ class Alert extends Component {
                             <button
                                 {...buttonProps}
                                 aria-controls='j2ALl423'
-                                aria-label='Close'
+                                aria-label={localizedText.close}
                                 className='fd-alert__close'
                                 onClick={() => this.closeAlertHandler()} />
                         )}
@@ -80,14 +82,26 @@ Alert.propTypes = {
     link: PropTypes.string,
     linkProps: PropTypes.object,
     linkText: PropTypes.string,
+    localizedText: CustomPropTypes.i18n({
+        close: PropTypes.string
+    }),
     type: PropTypes.oneOf(ALERT_TYPES)
+};
+
+Alert.defaultProps = {
+    localizedText: {
+        close: 'Close'
+    }
 };
 
 Alert.propDescriptions = {
     dismissible: 'Set to **true** to show a dismiss button.',
     link: 'Value to be applied to the anchor\'s `href` attribute.',
     linkProps: 'Additional props to be spread to the link\'s `<a>` element.',
-    linkText: 'Localized display text of the link.'
+    linkText: 'Localized display text of the link.',
+    localizedText: {
+        close: 'Value for aria-label on the close <button> element.'
+    }
 };
 
 export default Alert;
