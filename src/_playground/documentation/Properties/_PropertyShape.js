@@ -15,7 +15,7 @@ const PropertyShape = ({ title, propTypes, defaultProps, propDescriptions }) => 
     }
 
     let propInfo = Object.keys(propTypes).map((propName) => {
-        return { propName: propName, required: propTypes[propName].typeRequired };
+        return { propName: propName, required: !!propTypes[propName].typeRequired };
     });
     const sortedProps = propInfo.sort(sortBy('-required', 'propName'));
 
