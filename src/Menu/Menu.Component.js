@@ -15,7 +15,7 @@ export const MenuComponent = () => {
 
             <Example
                 description='The basic stucture of a menu.'
-                title='Menu'>
+                title='Basic Menu'>
                 <Menu>
                     <Menu.List>
                         <Menu.Item url='/'>Option 1</Menu.Item>
