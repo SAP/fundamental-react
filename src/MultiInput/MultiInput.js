@@ -215,7 +215,7 @@ MultiInput.defaultProps = {
 
 MultiInput.propDescriptions = {
     data: 'Collection of items to display in the list.',
-    localizedText: {
+    localizedTextShape: {
         imageLabel: 'Aria-label in <div> element for image.'
     },
     onTagsUpdate: 'Callback function when a tag is added or removed. Returns array of tags selected.',

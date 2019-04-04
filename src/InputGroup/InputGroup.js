@@ -301,7 +301,7 @@ InputGroup.propDescriptions = {
     inputPlaceholder: 'Value for the `placeholder` attribute on the `<input>` element.',
     inputType: 'Value for the `type` attribute on the `<input>` element.',
     inputValue: 'Value for the `value` attribute on the `<input>` element.',
-    localizedText: {
+    localizedTextShape: {
         clear: 'Value for aria-label on the clear <button> element.',
         down: 'Value for aria-label on the down <button> element.',
         up: 'Value for aria-label on the up <button> element.'

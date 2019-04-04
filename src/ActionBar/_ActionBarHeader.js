@@ -1,18 +1,21 @@
 import classnames from 'classnames';
+import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-const ActionBarHeader = ({ className, description, descriptionProps, title, titleProps, ...props }) => {
+const ActionBarHeader = ({ className, description, descriptionProps, headingLevel, title, titleProps, ...props }) => {
     const actionBarHeaderClasses = classnames(
         'fd-action-bar__header',
         className
     );
 
+    const HeadingTag = `h${headingLevel}`;
+
     return (
         <div {...props} className={actionBarHeaderClasses}>
-            <h1
+            <HeadingTag
                 {...titleProps}
-                className='fd-action-bar__title'>{title}</h1>
+                className='fd-action-bar__title'>{title}</HeadingTag>
             {description &&
                 <p
                     {...descriptionProps}
@@ -29,12 +32,18 @@ ActionBarHeader.propTypes = {
     className: PropTypes.string,
     description: PropTypes.string,
     descriptionProps: PropTypes.object,
+    headingLevel: CustomPropTypes.range(1, 6),
     titleProps: PropTypes.object
+};
+
+ActionBarHeader.defaultProps = {
+    headingLevel: 3
 };
 
 ActionBarHeader.propDescriptions = {
     description: 'Localized text for the description.',
-    descriptionProps: 'Additional props to be spread to the description\'s `<p>` element.'
+    descriptionProps: 'Additional props to be spread to the description\'s `<p>` element.',
+    headingLevel: 'Heading level. `<h1>` is reserved for the page title.'
 };
 
 export default ActionBarHeader;

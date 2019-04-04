@@ -1,10 +1,13 @@
+import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import PropTypes from 'prop-types';
+import TimeItem from './_TimeItem';
 import React, { Component } from 'react';
-import TimeItem, { CLOCK } from './_TimeItem';
+
 
 class Time extends Component {
     constructor(props) {
         super(props);
+        this.CLOCK = [this.props.localizedText.meridiemAM, this.props.localizedText.meridiemPM];
         const { time } = this.props;
         if (time.hour === '00') {
             time.hour = this.props.format12Hours ? '12' : '00';
@@ -53,6 +56,7 @@ class Time extends Component {
     // };
     render() {
         const {
+            localizedText,
             showHour,
             showMinute,
             showSecond,
@@ -98,6 +102,7 @@ class Time extends Component {
                         downButtonProps={hoursDownButtonProps}
                         format12Hours={format12Hours}
                         inputProps={hoursInputProps}
+                        localizedText={localizedText}
                         max={max}
                         name='hour'
                         placeholder={'hh'}
@@ -118,6 +123,7 @@ class Time extends Component {
                         downButtonProps={minutesDownButtonProps}
                         format12Hours={format12Hours}
                         inputProps={minutesInputProps}
+                        localizedText={localizedText}
                         max={'60'}
                         name='minute'
                         placeholder={'mm'}
@@ -138,6 +144,7 @@ class Time extends Component {
                         downButtonProps={secondsDownButtonProps}
                         format12Hours={format12Hours}
                         inputProps={secondsInputProps}
+                        localizedText={localizedText}
                         max={'60'}
                         name='second'
                         placeholder={'ss'}
@@ -156,6 +163,7 @@ class Time extends Component {
                         disabled={disabled}
                         downButtonProps={meridiemDownButtonProps}
                         inputProps={meridiemInputProps}
+                        localizedText={localizedText}
                         max={'1'}
                         name='meridiem'
                         spinners={spinners}
@@ -163,7 +171,7 @@ class Time extends Component {
                         type={'Period'}
                         upButtonProps={meridiemUpButtonProps}
                         updateTime={this.updateTime}
-                        value={CLOCK[this.state.time.meridiem]} />
+                        value={this.CLOCK[this.state.time.meridiem]} />
                 ) : (
                     ''
                 )}
@@ -191,6 +199,10 @@ Time.propTypes = {
     hoursInputProps: PropTypes.object,
     hoursUpButtonProps: PropTypes.object,
     id: PropTypes.string,
+    localizedText: CustomPropTypes.i18n({
+        meridiemAM: PropTypes.string,
+        meridiemPM: PropTypes.string
+    }),
     meridiemDownButtonProps: PropTypes.object,
     meridiemInputProps: PropTypes.object,
     meridiemUpButtonProps: PropTypes.object,
@@ -204,6 +216,10 @@ Time.propTypes = {
 };
 
 Time.defaultProps = {
+    localizedText: {
+        meridiemAM: 'am',
+        meridiemPM: 'pm'
+    },
     onChange: () => { },
     showHour: true,
     showMinute: true,
@@ -222,6 +238,10 @@ Time.propDescriptions = {
     hoursDownButtonProps: 'Additional props to be spread to the hours down `<button>` element.',
     hoursInputProps: 'Additional props to be spread to the hours `<input>` element.',
     hoursUpButtonProps: 'Additional props to be spread to the hours up `<button>` element.',
+    localizedTextShape: {
+        meridiemAM: 'Ante meridiem for 12 hour clock. ',
+        meridiemPM: 'Post meridiem for 12 hour clock.'
+    },
     meridiemDownButtonProps: 'Additional props to be spread to the meridiem down `<button>` element.',
     meridiemInputProps: 'Additional props to be spread to the meridiem `<input>` element.',
     meridiemUpButtonProps: 'Additional props to be spread to the meridiem up `<button>` element.',

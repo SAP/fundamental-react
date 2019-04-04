@@ -173,7 +173,7 @@ Pagination.propDescriptions = {
     initialPage: 'Initial page to be selected.',
     itemsPerPage: 'Number of items to display on page.',
     linkProps: 'Additional props to be spread to the page number `<a>` elements.',
-    localizedText: {
+    localizedTextShape: {
         next: 'Value for aria-label on the next <a> element.',
         previous: 'Value for aria-label on the previous <a> element.'
     },

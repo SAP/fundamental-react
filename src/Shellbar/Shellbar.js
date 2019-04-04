@@ -424,7 +424,7 @@ Shellbar.propDescriptions = {
     copilot: 'For use with applications that utilize CoPilot.',
     logo: 'Provide an img tag for a logo other than the SAP logo. One of the two props (`logo` or `logoSAP`) should be set.',
     logoSAP: 'Renders the SAP logo in the Shellbar. One of the two props (`logo` or `logoSAP`) should be set.',
-    localizedText: {
+    localizedTextShape: {
         counterLabel: 'Aria-label for <span> element within the <button> element.',
         notificationsButton: 'Aria-label for <button> element.'
     },

@@ -144,11 +144,11 @@ exports[`<Menu /> create menu group component 1`] = `
   <div
     className="fd-menu__group blue"
   >
-    <h1
+    <h3
       className="fd-menu__title"
     >
       Group Header
-    </h1>
+    </h3>
     <ul
       className="fd-menu__list"
     >
@@ -184,11 +184,11 @@ exports[`<Menu /> create menu group component 1`] = `
   <div
     className="fd-menu__group"
   >
-    <h1
+    <h3
       className="fd-menu__title"
     >
       Group Header 2
-    </h1>
+    </h3>
     <ul
       className="fd-menu__list"
     >

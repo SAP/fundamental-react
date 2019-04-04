@@ -131,6 +131,16 @@ describe('<Menu />', () => {
         expect(tree).toMatchSnapshot();
     });
 
+    describe('MenuGroup', () => {
+        test('should allow customization of header level', () => {
+            const element = mount(<Menu.Group headingLevel={2} title='Sample' />);
+
+            expect(
+                element.find('.fd-menu__title').type()
+            ).toBe('h2');
+        });
+    });
+
     describe('Prop spreading', () => {
         test('should allow props to be spread to the Menu component', () => {
             const element = mount(<Menu data-sample='Sample' />);
@@ -221,11 +231,11 @@ describe('<Menu />', () => {
             ).toBe('Sample');
         });
 
-        test('should allow props to be spread to the MenuGroup h1 component', () => {
+        test('should allow props to be spread to the MenuGroup heading component', () => {
             const element = mount(<Menu.Group title='Sample' titleProps={{ 'data-sample': 'Sample' }} />);
 
             expect(
-                element.find('h1').getDOMNode().attributes['data-sample'].value
+                element.find('h3').getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
         });
     });
