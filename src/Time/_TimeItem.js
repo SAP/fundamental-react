@@ -2,11 +2,11 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 
 const INVALID = 'is-invalid';
-export const CLOCK = ['am', 'pm'];
 
 class TimeItem extends Component {
     constructor(props) {
         super(props);
+        this.CLOCK = [this.props.localizedText.meridiemAM, this.props.localizedText.meridiemPM];
         var aria = {};
         if (this.props.name === 'meridiem') {
             aria = {
@@ -47,7 +47,7 @@ class TimeItem extends Component {
         } else if (value === maxAux) {
             this.increaseTimeObj(name, time, format12Hours);
         } else if (name === 'meridiem') {
-            aux = CLOCK.indexOf(value) ? 0 : 1;
+            aux = this.CLOCK.indexOf(value) ? 0 : 1;
         }
         if (format12Hours && name === 'hour' && aux === 12) {
             let newMeridiem = time.meridiem ? 0 : 1;
@@ -146,7 +146,7 @@ class TimeItem extends Component {
                 aux = max;
             }
         } else if (name === 'meridiem') {
-            aux = CLOCK.indexOf(value) ? 0 : 1;
+            aux = this.CLOCK.indexOf(value) ? 0 : 1;
         } else if (value === 0) {
             this.decreaseTimeObj(name, time);
         }
@@ -245,6 +245,7 @@ class TimeItem extends Component {
 TimeItem.displayName = 'TimeItem';
 
 TimeItem.propTypes = {
+    localizedText: PropTypes.object.isRequired,
     arialabel: PropTypes.string,
     disabled: PropTypes.bool,
     downButtonProps: PropTypes.object,
