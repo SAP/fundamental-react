@@ -1,3 +1,4 @@
+import { defaultPropDescriptions } from './defaults';
 import Heading from '../Heading/Heading';
 import PropertyDefault from './_PropertyDefault';
 import PropertyDescription from './_PropertyDescription';
@@ -7,7 +8,7 @@ import React from 'react';
 import sortBy from 'sort-by';
 import Table from '../../../Table/Table';
 
-const PropertyShape = ({ title, propTypes, defaultProps, propDescriptions }) => {
+const PropertyShape = ({ title, propTypes = {}, defaultProps = {}, propDescriptions = {} }) => {
     if (!propTypes) {
         return (
             <em>This shape has no defined properties.</em>
@@ -20,18 +21,23 @@ const PropertyShape = ({ title, propTypes, defaultProps, propDescriptions }) => 
     const sortedProps = propInfo.sort(sortBy('-required', 'propName'));
 
     let data = [];
+    const mergedPropDescriptions = {
+        ...defaultPropDescriptions,
+        ...propDescriptions
+    };
 
     sortedProps.forEach(({ propName }) => {
         data.push({
             rowData: [
                 propName,
-                <PropertyType prop={propTypes[propName]} />,
+                <PropertyType
+                    prop={propTypes[propName]}
+                    propName={propName} />,
                 <PropertyDefault
-                    defaultValue={defaultProps && defaultProps[propName]}
+                    defaultValue={defaultProps[propName]}
                     prop={propTypes[propName]} />,
                 <PropertyDescription
-                    description={propDescriptions[propName]}
-                    prop={propTypes[propName]} />
+                    description={mergedPropDescriptions[propName]} />
             ]
         });
     });
