@@ -102,7 +102,7 @@ class Time extends Component {
                         downButtonProps={hoursDownButtonProps}
                         format12Hours={format12Hours}
                         inputProps={hoursInputProps}
-                        localizedText={this.props.localizedText}
+                        localizedText={localizedText}
                         max={max}
                         name='hour'
                         placeholder={'hh'}
