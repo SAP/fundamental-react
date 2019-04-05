@@ -45,7 +45,7 @@ import { TreeViewComponent } from '../TreeView/TreeView.Component';
 import { BrowserRouter, NavLink, Redirect, Route, Switch } from 'react-router-dom';
 import { version as packageVersion, repository } from '../../package.json';
 import React, { Component } from 'react';
-/*eslint-disable*/
+
 const sections = [
     {
         name: 'Getting Started',
@@ -321,19 +321,18 @@ export class Routes extends Component {
 
             sectionRoutes = groupedRoutes[section.name].sort(sortBy('sortOrder', 'name'));
             return (
-                <SideNav.List title={section.name} key={section.name}>     
+                <SideNav.List key={section.name} title={section.name}>
                     {sectionRoutes.map(route => (
-                    <SideNav.ListItem 
-                        key={route.name} 
-                        id={route.name} 
-                        onClick={this.resetNavState}>
-                        <NavLink
-                            // activeClassName='frDocs-Nav__item--active'
+                        <SideNav.ListItem
+                            id={route.name}
                             key={route.name}
-                            to={{ pathname: route.url }}>
-                            {route.name}
-                        </NavLink>
-                    </SideNav.ListItem>
+                            onClick={this.resetNavState}>
+                            <NavLink
+                                key={route.name}
+                                to={{ pathname: route.url }}>
+                                {route.name}
+                            </NavLink>
+                        </SideNav.ListItem>
                     ))}
                 </SideNav.List>
             );
@@ -388,7 +387,7 @@ export class Routes extends Component {
                                     inputValue={this.state.query}
                                     onChange={this.onChangeHandler} />
                             </div>
-                            <SideNav className='frDocs-Nav fd-side-nav'selectedId=''>
+                            <SideNav className='frDocs-Nav'selectedId=''>
                                 {navItems}
                             </SideNav>
                         </div>

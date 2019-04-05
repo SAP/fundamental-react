@@ -116,18 +116,6 @@ $menu-spacing: 20px;
     overflow: auto;
     padding: 0.5rem 0 1rem;
 
-    &__list {
-        list-style: none;
-    }
-
-    &__headers {
-        color: #515559;
-        padding: 15px 20px;
-        display: block;
-        font-weight: 700;
-        font-size: 1.25rem;
-    }
-
     &__item {
         display: block;
         margin-left: 1px;
