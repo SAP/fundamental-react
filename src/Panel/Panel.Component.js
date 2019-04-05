@@ -10,7 +10,7 @@ export const PanelComponent = () => {
             title='Panel'>
 
             <Example
-                title='Panel'>
+                title='Single Panel'>
                 <div className='fd-doc__margin--panel'>
                     <Panel>
                         <Panel.Header>

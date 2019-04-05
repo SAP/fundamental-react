@@ -36,7 +36,7 @@ Counter.defaultProps = {
 };
 
 Counter.propDescriptions = {
-    localizedText: {
+    localizedTextShape: {
         counterLabel: 'The aria-label for the <span> element.'
     },
     notification: 'Set to **true** to enable counter with notification.'
