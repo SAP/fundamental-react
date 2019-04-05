@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.5.1-rc.16"></a>
+## [0.5.1-rc.16](https://github.com/SAP/fundamental-react/compare/v0.5.1-rc.15...v0.5.1-rc.16) (2019-04-05)
+
+
+
+<a name="0.5.1-rc.15"></a>
+## [0.5.1-rc.15](https://github.com/SAP/fundamental-react/compare/v0.5.1-rc.14...v0.5.1-rc.15) (2019-04-05)
+
+
+
+<a name="0.5.1-rc.14"></a>
+## [0.5.1-rc.14](https://github.com/SAP/fundamental-react/compare/v0.5.1-rc.13...v0.5.1-rc.14) (2019-04-04)
+
+
+### Bug Fixes
+
+* add time picker localized text shape ([#496](https://github.com/SAP/fundamental-react/issues/496)) ([16c3c64](https://github.com/SAP/fundamental-react/commit/16c3c64))
+
+
+
 <a name="0.5.1-rc.13"></a>
 ## [0.5.1-rc.13](https://github.com/SAP/fundamental-react/compare/v0.5.1-rc.12...v0.5.1-rc.13) (2019-04-04)
 

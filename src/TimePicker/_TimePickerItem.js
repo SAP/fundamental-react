@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 
-export const CLOCK = ['am', 'pm'];
 const INVALID = 'is-invalid';
 const VALID = 'fd-input';
 
@@ -9,7 +8,7 @@ class TimePickerItem extends Component {
     constructor(props) {
         super(props);
         var length = this.setLength(props);
-
+        this.CLOCK = [this.props.localizedText.meridiemAM, this.props.localizedText.meridiemPM];
         this.state = {
             value: this.props.value,
             inputId: this.props.id && this.props.id + '-input',
@@ -116,7 +115,7 @@ class TimePickerItem extends Component {
                     hour: timeValue[0],
                     minute: timeValue[1],
                     second: timeValue[2],
-                    meridiem: CLOCK.indexOf(timeValues[1])
+                    meridiem: this.CLOCK.indexOf(timeValues[1])
                 };
                 this.props.onChange(time);
             }
@@ -180,7 +179,7 @@ class TimePickerItem extends Component {
             let time = {
                 hour: timeValue[0],
                 minute: timeValue[1],
-                meridiem: CLOCK.indexOf(timeValues[1])
+                meridiem: this.CLOCK.indexOf(timeValues[1])
             };
             this.props.onChange(time);
         }
@@ -192,7 +191,7 @@ class TimePickerItem extends Component {
             let time = {
                 minute: timeValue[0],
                 second: timeValue[1],
-                meridiem: CLOCK.indexOf(timeValues[1])
+                meridiem: this.CLOCK.indexOf(timeValues[1])
             };
             this.props.onChange(time);
         }
@@ -244,6 +243,7 @@ class TimePickerItem extends Component {
 TimePickerItem.displayName = 'TimePickerItem';
 
 TimePickerItem.propTypes = {
+    localizedText: PropTypes.object.isRequired,
     buttonID: PropTypes.string,
     buttonProps: PropTypes.object,
     disabled: PropTypes.bool,
