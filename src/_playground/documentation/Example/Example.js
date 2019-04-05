@@ -27,6 +27,7 @@ class Example extends React.Component {
                     <React.Fragment>
                         <DocsText>
                             {reactElementToJSXString(element, {
+                                filterProps: ['ref'],
                                 showDefaultProps: false
                             })}
                         </DocsText>
