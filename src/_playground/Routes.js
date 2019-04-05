@@ -31,6 +31,7 @@ import RouteNotFound from './_RouteNotFound';
 import ScrollToTop from './_ScrollToTop';
 import { SearchInputComponent } from '../SearchInput/SearchInput.Component';
 import { ShellbarComponent } from '../Shellbar/Shellbar.Component';
+import { SideNav } from '../SideNavigation/';
 import { SideNavigationComponent } from '../SideNavigation/SideNav.Component';
 import sortBy from 'sort-by';
 import { TableComponent } from '../Table/Table.Component';
@@ -44,7 +45,7 @@ import { TreeViewComponent } from '../TreeView/TreeView.Component';
 import { BrowserRouter, NavLink, Redirect, Route, Switch } from 'react-router-dom';
 import { version as packageVersion, repository } from '../../package.json';
 import React, { Component } from 'react';
-
+/*eslint-disable*/
 const sections = [
     {
         name: 'Getting Started',
@@ -318,23 +319,39 @@ export class Routes extends Component {
                 return;
             }
 
+            // sectionRoutes = groupedRoutes[section.name].sort(sortBy('sortOrder', 'name'));
+            // return (
+            //     <ul className='frDocs-Nav__list' key={section.name}>
+            //         <li className='frDocs-Nav__headers'>{section.name}</li>
+            //         {sectionRoutes.map(route => (
+            //             <li key={route.name}>
+            //                 <NavLink
+            //                     activeClassName='frDocs-Nav__item--active'
+            //                     className='frDocs-Nav__item'
+            //                     key={route.url}
+            //                     onClick={this.resetNavState}
+            //                     to={{ pathname: route.url }}>
+            //                     {route.name}
+            //                 </NavLink>
+            //             </li>
+            //         ))}
+            //     </ul>
+            // );
+
             sectionRoutes = groupedRoutes[section.name].sort(sortBy('sortOrder', 'name'));
             return (
-                <ul className='frDocs-Nav__list' key={section.name}>
-                    <li className='frDocs-Nav__headers'>{section.name}</li>
+                <SideNav.List title={section.name} key={section.name}>     
                     {sectionRoutes.map(route => (
-                        <li key={route.name}>
-                            <NavLink
-                                activeClassName='frDocs-Nav__item--active'
-                                className='frDocs-Nav__item'
-                                key={route.url}
-                                onClick={this.resetNavState}
-                                to={{ pathname: route.url }}>
-                                {route.name}
-                            </NavLink>
-                        </li>
+                    <SideNav.ListItem key={route.url} id={route.name} >
+                        <NavLink
+                            key={route.url}
+                            onClick={this.resetNavState}
+                            to={{ pathname: route.url }}>
+                            {route.name}
+                        </NavLink>
+                    </SideNav.ListItem>
                     ))}
-                </ul>
+                </SideNav.List>
             );
         });
 
@@ -387,9 +404,9 @@ export class Routes extends Component {
                                     inputValue={this.state.query}
                                     onChange={this.onChangeHandler} />
                             </div>
-                            <nav className='frDocs-Nav'>
+                            <SideNav className='frDocs-Nav'selectedId='Home'>
                                 {navItems}
-                            </nav>
+                            </SideNav>
                         </div>
                         <div className='frDocs-Content' id='frDocs-Content'>
                             <Switch>
