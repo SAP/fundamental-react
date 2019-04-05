@@ -319,33 +319,17 @@ export class Routes extends Component {
                 return;
             }
 
-            // sectionRoutes = groupedRoutes[section.name].sort(sortBy('sortOrder', 'name'));
-            // return (
-            //     <ul className='frDocs-Nav__list' key={section.name}>
-            //         <li className='frDocs-Nav__headers'>{section.name}</li>
-            //         {sectionRoutes.map(route => (
-            //             <li key={route.name}>
-            //                 <NavLink
-            //                     activeClassName='frDocs-Nav__item--active'
-            //                     className='frDocs-Nav__item'
-            //                     key={route.url}
-            //                     onClick={this.resetNavState}
-            //                     to={{ pathname: route.url }}>
-            //                     {route.name}
-            //                 </NavLink>
-            //             </li>
-            //         ))}
-            //     </ul>
-            // );
-
             sectionRoutes = groupedRoutes[section.name].sort(sortBy('sortOrder', 'name'));
             return (
                 <SideNav.List title={section.name} key={section.name}>     
                     {sectionRoutes.map(route => (
-                    <SideNav.ListItem key={route.url} id={route.name} >
+                    <SideNav.ListItem 
+                        key={route.name} 
+                        id={route.name} 
+                        onClick={this.resetNavState}>
                         <NavLink
-                            key={route.url}
-                            onClick={this.resetNavState}
+                            // activeClassName='frDocs-Nav__item--active'
+                            key={route.name}
                             to={{ pathname: route.url }}>
                             {route.name}
                         </NavLink>
@@ -404,7 +388,7 @@ export class Routes extends Component {
                                     inputValue={this.state.query}
                                     onChange={this.onChangeHandler} />
                             </div>
-                            <SideNav className='frDocs-Nav'selectedId='Home'>
+                            <SideNav className='frDocs-Nav fd-side-nav'selectedId=''>
                                 {navItems}
                             </SideNav>
                         </div>
