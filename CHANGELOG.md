@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.5.1-rc.17"></a>
+## [0.5.1-rc.17](https://github.com/SAP/fundamental-react/compare/v0.5.1-rc.16...v0.5.1-rc.17) (2019-04-05)
+
+
+### Bug Fixes
+
+* Popover popper styles consumed from fiori-fundamentals ([#504](https://github.com/SAP/fundamental-react/issues/504)) ([4fbf063](https://github.com/SAP/fundamental-react/commit/4fbf063))
+
+
+
 <a name="0.5.1-rc.16"></a>
 ## [0.5.1-rc.16](https://github.com/SAP/fundamental-react/compare/v0.5.1-rc.15...v0.5.1-rc.16) (2019-04-05)
 
