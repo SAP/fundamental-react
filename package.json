@@ -99,7 +99,7 @@
     "fork-ts-checker-webpack-plugin-alt": "0.4.14",
     "fs-extra": "7.0.0",
     "gh-pages": "^2.0.1",
-    "github-assistant": "^0.2.0",
+    "github-assistant": "^0.3.0",
     "group-array": "^0.3.3",
     "html-webpack-plugin": "4.0.0-alpha.2",
     "identity-obj-proxy": "3.0.0",
