@@ -387,7 +387,7 @@ export class Routes extends Component {
                                     inputValue={this.state.query}
                                     onChange={this.onChangeHandler} />
                             </div>
-                            <SideNav selectedId=''>
+                            <SideNav selectedId='Home'>
                                 {navItems}
                             </SideNav>
                         </div>
