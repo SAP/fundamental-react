@@ -95,6 +95,7 @@ $menu-spacing: 20px;
     background-color: #EDEFF0;
     display: flex;
     flex-direction: column;
+    overflow-y: auto;
     transition: 0.3s margin ease-in-out, 0.3s box-shadow ease-in-out;
 }
 
@@ -304,10 +305,6 @@ h6 {
 .fd-tabs__content {
     padding-top: 10px;
     padding-bottom: 10px;
-}
-
-.fd-side-nav {
-    overflow: auto;
 }
 
 .property-header {
