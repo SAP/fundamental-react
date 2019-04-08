@@ -110,37 +110,6 @@ $menu-spacing: 20px;
     }
 }
 
-.frDocs-Nav {
-    flex: 1 1 auto;
-    min-height: 0;
-    overflow: auto;
-    padding: 0.5rem 0 1rem;
-
-    &__item {
-        display: block;
-        margin-left: 1px;
-        color: #21262c;
-        font-size: 1rem;
-        position: relative;
-        padding: 13px 40px;
-        transition: background 0.15s ease-in;
-
-        &:hover,
-        &:focus {
-            background-color: #fafafa;
-            color: #085caf;
-        }
-
-        &--active {
-            color: #32363A;
-            box-shadow: inset 6px 0 0 0 $library-color;
-            cursor: pointer;
-            background-color: #fff;
-            font-weight: 700;
-        }
-    }
-}
-
 .frDocs-Search {
     flex: 0 0 auto;
     padding: 15px 20px;
@@ -337,17 +306,13 @@ h6 {
     padding-bottom: 10px;
 }
 
-.fd-side-nav.fd-side-nav--icons {
-    max-width: 65px;
+.fd-side-nav {
+    overflow: auto;
 }
 
 .property-header {
     text-align: left;
     padding-right: 15px;
-}
-
-.fd-side-nav {
-    max-width: 300px;
 }
 
 .row {
