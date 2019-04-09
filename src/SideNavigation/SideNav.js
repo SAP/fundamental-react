@@ -22,11 +22,13 @@ class SideNav extends Component {
     handleSelect = (e, id) => {
         this.setState({
             selectedId: id
+        }, () => {
+            this.props.onItemSelect(e, id);
         });
     }
 
     render() {
-        const { children, className, icons, selectedId, ...rest } = this.props;
+        const { onItemSelect, children, className, icons, selectedId, ...rest } = this.props;
 
         const sideNavClasses = classnames(
             className,
@@ -57,7 +59,12 @@ SideNav.propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,
     icons: PropTypes.bool,
-    selectedId: PropTypes.string
+    selectedId: PropTypes.string,
+    onItemSelect: PropTypes.func
+};
+
+SideNav.defaultProps = {
+    onItemSelect: () => { }
 };
 
 SideNav.propDescriptions = {
