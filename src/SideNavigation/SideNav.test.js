@@ -378,6 +378,7 @@ describe('<SideNav />', () => {
     describe('onItemSelect handler', () => {
         test('should dispatch the onItemSelect callback with the event', () => {
             let f = jest.fn();
+            const mockedEvent = { target: {} };
 
             const element = mount(<SideNav data-sample='Sample' onItemSelect={f}>
                 <SideNav.List>
@@ -388,9 +389,10 @@ describe('<SideNav />', () => {
                 </SideNav.List>
             </SideNav>);
 
-            element.find('#item-1 a').simulate('click');
+            element.find('#item-1 a').simulate('click', mockedEvent);
 
             expect(f).toHaveBeenCalledTimes(1);
+            expect(f).toHaveBeenCalledWith(expect.objectContaining({ 'target': {} }), 'item-1');
         });
     });
 });
