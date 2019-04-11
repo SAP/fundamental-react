@@ -26,7 +26,7 @@ function ensureSlash(inputPath, needsSlash) {
 }
 
 const getPublicUrl = appPackageJson =>
-    envPublicUrl || process.env.BUILD_ENV !== 'development' && !process.env.NETLIFY ? require(appPackageJson).homepage : '';
+    envPublicUrl || process.env.BUILD_ENV !== 'development' && !process.env.NETLIFY ? require(appPackageJson).homepage : '/';
 
 // We use `PUBLIC_URL` environment variable or "homepage" field to infer
 // "public path" at which the app is served.
@@ -36,7 +36,6 @@ const getPublicUrl = appPackageJson =>
 // like /todos/42/static/js/bundle.7289d.js. We have to know the root.
 function getServedPath(appPackageJson) {
     const publicUrl = getPublicUrl(appPackageJson);
-    console.log(publicUrl);
     const servedUrl =
     envPublicUrl || (publicUrl ? url.parse(publicUrl).pathname : '/');
     return ensureSlash(servedUrl, true);
