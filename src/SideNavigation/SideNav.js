@@ -69,7 +69,7 @@ SideNav.defaultProps = {
 
 SideNav.propDescriptions = {
     icons: 'Set to **true** to only render icons for each `SideNavListItem`.',
-    onItemSelect: 'Prop callback to notify of internal state changes',
+    onItemSelect: 'Callback function when a navigation item is selected. Arguments passed are the event and the id of the selected item.',
     selectedId: 'The `id` of the selected `SideNavListItem`.'
 };
 
