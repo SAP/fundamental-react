@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.5.2-rc.0"></a>
+## [0.5.2-rc.0](https://github.com/SAP/fundamental-react/compare/v0.5.1...v0.5.2-rc.0) (2019-04-11)
+
+
+### Bug Fixes
+
+* added onSelectItem callback to SideNav Component ([#511](https://github.com/SAP/fundamental-react/issues/511)) ([79e9d74](https://github.com/SAP/fundamental-react/commit/79e9d74))
+
+
+
 <a name="0.5.1"></a>
 ## [0.5.1](https://github.com/SAP/fundamental-react/compare/v0.5.1-rc.18...v0.5.1) (2019-04-11)
 
