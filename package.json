@@ -13,7 +13,7 @@
   "scripts": {
     "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
     "build-doc": "node scripts/build.js && cp build/index.html build/404.html",
-    "build-doc:netlify": "NETLIFY=true npm run build-doc",
+    "build-doc:netlify": "npm run build && NETLIFY=true npm run build-doc",
     "build-js": "node scripts/build.js",
     "build:lint:fix": "npm run build:lint -- --fix",
     "build:lint": "eslint 'src/**' --ext .js,.jsx --env browser,node",
