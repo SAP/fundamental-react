@@ -31,6 +31,7 @@ import RouteNotFound from './_RouteNotFound';
 import ScrollToTop from './_ScrollToTop';
 import { SearchInputComponent } from '../SearchInput/SearchInput.Component';
 import { ShellbarComponent } from '../Shellbar/Shellbar.Component';
+import { SideNav } from '../SideNavigation/';
 import { SideNavigationComponent } from '../SideNavigation/SideNav.Component';
 import sortBy from 'sort-by';
 import { TableComponent } from '../Table/Table.Component';
@@ -283,7 +284,8 @@ export class Routes extends Component {
         this.state = {
             query: '',
             filteredItems: routes,
-            showSideNav: false //for css media queries, default is invisible-'false'
+            showSideNav: false, //for css media queries, default is invisible-'false'
+            currentPage: 'Home'
         };
     }
 
@@ -309,6 +311,12 @@ export class Routes extends Component {
         });
     }
 
+    updateCurrentPage = (e, id) => {
+        this.setState({
+            currentPage: id
+        });
+    }
+
     render() {
         let sectionRoutes;
         const groupedRoutes = groupArray(this.state.filteredItems, 'section');
@@ -320,21 +328,20 @@ export class Routes extends Component {
 
             sectionRoutes = groupedRoutes[section.name].sort(sortBy('sortOrder', 'name'));
             return (
-                <ul className='frDocs-Nav__list' key={section.name}>
-                    <li className='frDocs-Nav__headers'>{section.name}</li>
+                <SideNav.List key={section.name} title={section.name}>
                     {sectionRoutes.map(route => (
-                        <li key={route.name}>
+                        <SideNav.ListItem
+                            id={route.name}
+                            key={route.name}
+                            onClick={this.resetNavState}>
                             <NavLink
-                                activeClassName='frDocs-Nav__item--active'
-                                className='frDocs-Nav__item'
-                                key={route.url}
-                                onClick={this.resetNavState}
+                                key={route.name}
                                 to={{ pathname: route.url }}>
                                 {route.name}
                             </NavLink>
-                        </li>
+                        </SideNav.ListItem>
                     ))}
-                </ul>
+                </SideNav.List>
             );
         });
 
@@ -387,9 +394,9 @@ export class Routes extends Component {
                                     inputValue={this.state.query}
                                     onChange={this.onChangeHandler} />
                             </div>
-                            <nav className='frDocs-Nav'>
+                            <SideNav onItemSelect={this.updateCurrentPage} selectedId={this.state.currentPage}>
                                 {navItems}
-                            </nav>
+                            </SideNav>
                         </div>
                         <div className='frDocs-Content' id='frDocs-Content'>
                             <Switch>
