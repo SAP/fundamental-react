@@ -60,7 +60,7 @@ export const BadgeComponent = () => {
 
             <Example
                 centered
-                title='Label'>
+                title='Default Label'>
                 <div className='fd-doc__margin--statusIndicator'>
                     <Label>Default</Label>
                     <Label type='success'>Default</Label>
