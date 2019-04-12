@@ -26,7 +26,7 @@ function ensureSlash(inputPath, needsSlash) {
 }
 
 const getPublicUrl = appPackageJson =>
-    envPublicUrl || process.env.BUILD_ENV !== 'development' ? require(appPackageJson).homepage : '';
+    envPublicUrl || process.env.BUILD_ENV !== 'development' && process.env.NETLIFY !== 'true' ? require(appPackageJson).homepage : '';
 
 // We use `PUBLIC_URL` environment variable or "homepage" field to infer
 // "public path" at which the app is served.
