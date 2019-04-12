@@ -284,7 +284,8 @@ export class Routes extends Component {
         this.state = {
             query: '',
             filteredItems: routes,
-            showSideNav: false //for css media queries, default is invisible-'false'
+            showSideNav: false, //for css media queries, default is invisible-'false'
+            currentPage: 'Home'
         };
     }
 
@@ -307,6 +308,12 @@ export class Routes extends Component {
     resetNavState = () => {
         this.setState({
             showSideNav: false
+        });
+    }
+
+    updateCurrentPage = (e, id) => {
+        this.setState({
+            currentPage: id
         });
     }
 
@@ -387,7 +394,7 @@ export class Routes extends Component {
                                     inputValue={this.state.query}
                                     onChange={this.onChangeHandler} />
                             </div>
-                            <SideNav selectedId='Home'>
+                            <SideNav onItemSelect={this.updateCurrentPage} selectedId={this.state.currentPage}>
                                 {navItems}
                             </SideNav>
                         </div>
