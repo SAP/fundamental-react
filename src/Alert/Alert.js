@@ -15,7 +15,7 @@ class Alert extends Component {
     closeAlertHandler = () => {
         this.setState({
             isActive: false
-        })
+        });
     };
 
     render() {
