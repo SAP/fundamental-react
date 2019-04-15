@@ -8,8 +8,8 @@ class Modal extends Component {
     // select body element to add Modal component too
     bodyElm = document.querySelector('body');
 
-    handleCloseClick = () => {
-        this.props.onClose();
+    handleCloseClick = (e) => {
+        this.props.onClose(e);
     };
 
     // check for Escape key press
@@ -113,14 +113,16 @@ Modal.propTypes = {
         closeButton: PropTypes.string
     }),
     show: PropTypes.bool,
-    titleProps: PropTypes.object
+    titleProps: PropTypes.object,
+    onClose: PropTypes.func
 };
 
 Modal.defaultProps = {
     headingLevel: 3,
     localizedText: {
         closeButton: 'Close'
-    }
+    },
+    onClose: () => { }
 };
 
 Modal.propDescriptions = {
@@ -133,6 +135,7 @@ Modal.propDescriptions = {
     localizedTextShape: {
         closeButton: 'Aria-label for <button> element.'
     },
+    onClose: 'Callback function passing event when close button is clicked.',
     show: 'Set to **true** to make the dialog visible.'
 };
 
