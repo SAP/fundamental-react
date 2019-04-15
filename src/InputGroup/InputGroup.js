@@ -18,8 +18,6 @@ class InputGroup extends Component {
         e.preventDefault();
         this.setState({
             value: this.state.value + 1
-        }, () => {
-            this.props.onUpClicked(e);
         });
     };
 
@@ -27,8 +25,6 @@ class InputGroup extends Component {
         e.preventDefault();
         this.setState({
             value: this.state.value - 1
-        }, () => {
-            this.props.onDownClicked(e);
         });
     };
 
@@ -36,8 +32,6 @@ class InputGroup extends Component {
         e.preventDefault();
         this.setState({
             searchValue: ''
-        }, () => {
-            this.props.onClearClicked(e);
         });
     };
 
@@ -45,8 +39,6 @@ class InputGroup extends Component {
         e.preventDefault();
         this.setState({
             searchValue: e.target.value
-        }, () => {
-            this.props.onSearchInputChange(e);
         });
     };
 
@@ -54,18 +46,11 @@ class InputGroup extends Component {
         e.preventDefault();
         this.setState({
             value: e.target.value
-        }, () => {
-            this.props.onTextChange(e);
         });
     };
 
     render() {
         const {
-            onClearClicked,
-            onUpClicked,
-            onDownClicked,
-            onSearchInputChange,
-            onTextChange,
             actions,
             addonPos,
             addon,
@@ -292,12 +277,7 @@ InputGroup.propTypes = {
     }),
     numberDownButtonProps: PropTypes.object,
     numberUpButtonProps: PropTypes.object,
-    searchButtonProps: PropTypes.object,
-    onClearClicked: PropTypes.func,
-    onDownClicked: PropTypes.func,
-    onSearchInputChange: PropTypes.func,
-    onTextChange: PropTypes.func,
-    onUpClicked: PropTypes.func
+    searchButtonProps: PropTypes.object
 };
 
 InputGroup.defaultProps = {
@@ -308,12 +288,7 @@ InputGroup.defaultProps = {
         clear: 'Clear',
         down: 'Step down',
         up: 'Step up'
-    },
-    onClearClicked: () => { },
-    onDownClicked: () => { },
-    onSearchInputChange: () => { },
-    onTextChange: () => { },
-    onUpClicked: () => { }
+    }
 };
 
 InputGroup.propDescriptions = {
@@ -333,11 +308,6 @@ InputGroup.propDescriptions = {
     },
     numberDownButtonProps: 'Additional props to be spread to the down `<button>` element (for inputType=\'number\').',
     numberUpButtonProps: 'Additional props to be spread to the up `<button>` element (for inputType=\'number\').',
-    onClearClicked: 'Callback function passing event when clear button is clicked.',
-    onDownClicked: 'Callback function passing event when down button is clicked.',
-    onSearchInputChange: 'Callback function passing event when search input is changed.',
-    onTextChange: 'Callback function passing event when text for value is changed.',
-    onUpClicked: 'Callback function passing event when clear button is clicked.',
     searchButtonProps: 'Additional props to be spread to the `<button>` element.'
 };
 
