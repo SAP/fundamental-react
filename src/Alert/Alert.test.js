@@ -83,7 +83,7 @@ describe('<Alert />', () => {
         test('should dispatch the onClick callback with the event', () => {
             let f = jest.fn();
             const element = mount(<Alert data-sample='Sample' dismissible
-                onClick={f} />);
+                onCloseClicked={f} />);
 
             element.find('button').simulate('click');
 

@@ -16,12 +16,13 @@ class Alert extends Component {
         this.setState({
             isActive: false
         }, () => {
-            this.props.onClick(e);
+            this.props.onCloseClicked(e);
         });
     };
 
     render() {
         const {
+            onCloseClicked,
             onClick,
             buttonProps,
             type,
@@ -89,14 +90,14 @@ Alert.propTypes = {
         close: PropTypes.string
     }),
     type: PropTypes.oneOf(ALERT_TYPES),
-    onClick: PropTypes.func
+    onCloseClicked: PropTypes.func
 };
 
 Alert.defaultProps = {
     localizedText: {
         close: 'Close'
     },
-    onClick: () => { }
+    onCloseClicked: () => { }
 };
 
 Alert.propDescriptions = {
@@ -107,7 +108,7 @@ Alert.propDescriptions = {
     localizedTextShape: {
         close: 'Value for aria-label on the close <button> element.'
     },
-    onClick: 'Callback function passing event when close button is clicked.'
+    onCloseClicked: 'Callback function passing event when close button is clicked.'
 };
 
 export default Alert;
