@@ -8,3 +8,5 @@
 [build]
   publish = "build"
   command = "npm run build-doc:netlify"
+
+
