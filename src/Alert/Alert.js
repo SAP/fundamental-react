@@ -23,7 +23,6 @@ class Alert extends Component {
     render() {
         const {
             onCloseClicked,
-            onClick,
             buttonProps,
             type,
             link,
