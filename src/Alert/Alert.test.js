@@ -78,4 +78,16 @@ describe('<Alert />', () => {
             ).toBe('Sample');
         });
     });
+
+    describe('onClick handler', () => {
+        test('should dispatch the onClick callback with the event', () => {
+            let f = jest.fn();
+            const element = mount(<Alert data-sample='Sample' dismissible
+                onCloseClicked={f} />);
+
+            element.find('button').simulate('click');
+
+            expect(f).toHaveBeenCalledTimes(1);
+        });
+    });
 });

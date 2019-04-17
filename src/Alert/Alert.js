@@ -12,14 +12,17 @@ class Alert extends Component {
         };
     }
 
-    closeAlertHandler = () => {
+    closeAlertHandler = (e) => {
         this.setState({
             isActive: false
+        }, () => {
+            this.props.onCloseClicked(e);
         });
     };
 
     render() {
         const {
+            onCloseClicked,
             buttonProps,
             type,
             link,
@@ -54,7 +57,7 @@ class Alert extends Component {
                                 aria-controls='j2ALl423'
                                 aria-label={localizedText.close}
                                 className='fd-alert__close'
-                                onClick={() => this.closeAlertHandler()} />
+                                onClick={this.closeAlertHandler} />
                         )}
                         {children}
                         {link && (
@@ -85,13 +88,15 @@ Alert.propTypes = {
     localizedText: CustomPropTypes.i18n({
         close: PropTypes.string
     }),
-    type: PropTypes.oneOf(ALERT_TYPES)
+    type: PropTypes.oneOf(ALERT_TYPES),
+    onCloseClicked: PropTypes.func
 };
 
 Alert.defaultProps = {
     localizedText: {
         close: 'Close'
-    }
+    },
+    onCloseClicked: () => { }
 };
 
 Alert.propDescriptions = {
@@ -101,7 +106,8 @@ Alert.propDescriptions = {
     linkText: 'Localized display text of the link.',
     localizedTextShape: {
         close: 'Value for aria-label on the close <button> element.'
-    }
+    },
+    onCloseClicked: 'Callback function passing event when close button is clicked.'
 };
 
 export default Alert;

@@ -8,8 +8,8 @@ class Modal extends Component {
     // select body element to add Modal component too
     bodyElm = document.querySelector('body');
 
-    handleCloseClick = () => {
-        this.props.onClose();
+    handleCloseClick = (e) => {
+        this.props.onCloseClicked(e);
     };
 
     // check for Escape key press
@@ -30,7 +30,7 @@ class Modal extends Component {
     }
 
     render() {
-        const { localizedText, children, title, actions, className, headingLevel, show, titleProps, closeProps, contentProps, headerProps, footerProps, bodyProps, ...rest } = this.props;
+        const { onCloseClicked, localizedText, children, title, actions, className, headingLevel, show, titleProps, closeProps, contentProps, headerProps, footerProps, bodyProps, ...rest } = this.props;
 
         const modalClasses = classnames(
             'fd-ui__overlay',
@@ -113,14 +113,16 @@ Modal.propTypes = {
         closeButton: PropTypes.string
     }),
     show: PropTypes.bool,
-    titleProps: PropTypes.object
+    titleProps: PropTypes.object,
+    onCloseClicked: PropTypes.func
 };
 
 Modal.defaultProps = {
     headingLevel: 3,
     localizedText: {
         closeButton: 'Close'
-    }
+    },
+    onCloseClicked: () => { }
 };
 
 Modal.propDescriptions = {
@@ -133,6 +135,7 @@ Modal.propDescriptions = {
     localizedTextShape: {
         closeButton: 'Aria-label for <button> element.'
     },
+    onCloseClicked: 'Callback function passing event when close button is clicked.',
     show: 'Set to **true** to make the dialog visible.'
 };
 
