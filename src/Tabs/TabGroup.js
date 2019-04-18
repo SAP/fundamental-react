@@ -57,7 +57,7 @@ class TabGroup extends Component {
             return (
                 <TabContent
                     {...child.props.tabContentProps}
-                    key={child.props.id || index}
+                    key={index}
                     selected={this.state.selectedIndex === index}>
                     {child.props.children}
                 </TabContent>);
