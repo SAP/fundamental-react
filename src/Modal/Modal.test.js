@@ -3,7 +3,7 @@ import { mount } from 'enzyme';
 import React from 'react';
 
 describe('<Modal />', () => {
-    const mockOnCloseClicked = jest.fn();
+    const mockOnClose = jest.fn();
     const bShow = true;
     const modalInfoTitle = 'Product Added';
     const modalConfirmTitle = 'Delete';
@@ -11,7 +11,7 @@ describe('<Modal />', () => {
     const infoModal = (
         <Modal
             className='blue'
-            onCloseClicked={mockOnCloseClicked}
+            onClose={mockOnClose}
             show={bShow}
             title={modalInfoTitle}>
             <div>
@@ -29,7 +29,7 @@ describe('<Modal />', () => {
     );
 
     const infoNoShowModal = (
-        <Modal onCloseClicked={mockOnCloseClicked} show={!bShow}
+        <Modal onClose={mockOnClose} show={!bShow}
             title={modalInfoTitle}>
             <div>
                 <b>The new product have been added to your catalog.</b>
@@ -53,7 +53,7 @@ describe('<Modal />', () => {
                     <button>Sure</button>
                 </React.Fragment>
             }
-            onCloseClicked={mockOnCloseClicked}
+            onClose={mockOnClose}
             show={bShow}
             title={modalConfirmTitle}>
             <div>
@@ -70,7 +70,7 @@ describe('<Modal />', () => {
                     <button>Invite</button>
                 </React.Fragment>
             }
-            onCloseClicked={mockOnCloseClicked}
+            onClose={mockOnClose}
             show={bShow}
             title={modalFormTitle}>
             <div className='fd-form__group'>
@@ -94,22 +94,22 @@ describe('<Modal />', () => {
 
         // close modal
         component.find('button.fd-button--light.fd-modal__close').simulate('click');
-        expect(component.prop('onCloseClicked')).toBeCalledTimes(1);
+        expect(component.prop('onClose')).toBeCalledTimes(1);
 
         // handle esc key
         let event = new KeyboardEvent('keydown', { key: 'Escape' });
         document.dispatchEvent(event);
-        expect(component.prop('onCloseClicked')).toBeCalledTimes(2);
+        expect(component.prop('onClose')).toBeCalledTimes(2);
 
         // handle esc key
         event = new KeyboardEvent('keydown', { key: 'Esc' });
         document.dispatchEvent(event);
-        expect(component.prop('onCloseClicked')).toBeCalledTimes(3);
+        expect(component.prop('onClose')).toBeCalledTimes(3);
 
         // testing when a key besides Escape/Esc is pressed
         event = new KeyboardEvent('keydown', { key: 'Enter' });
         document.dispatchEvent(event);
-        expect(component.prop('onCloseClicked')).toBeCalledTimes(3);
+        expect(component.prop('onClose')).toBeCalledTimes(3);
     });
 
     test('create confirm modal', () => {
