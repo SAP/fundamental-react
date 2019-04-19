@@ -1,4 +1,4 @@
-import { chain } from 'chain-function';
+import chain from 'chain-function';
 import classnames from 'classnames';
 import Popper from '../utils/_Popper';
 import { POPPER_PLACEMENTS } from '../utils/constants';
@@ -32,6 +32,8 @@ class Popover extends Component {
 
     render() {
         const {
+            onClickOutside,
+            onEscapeKey,
             disabled,
             noArrow,
             control,
@@ -58,8 +60,8 @@ class Popover extends Component {
                 <Popper
                     cssBlock='fd-popover'
                     noArrow={noArrow}
-                    onClickOutside={this.handleOutsideClick}
-                    onEscapeKey={this.handleOutsideClick}
+                    onClickOutside={chain(this.handleOutsideClick, onClickOutside)}
+                    onEscapeKey={chain(this.handleOutsideClick, onEscapeKey)}
                     popperPlacement={placement}
                     popperProps={popperProps}
                     referenceClassName='fd-popover__control'
@@ -82,7 +84,14 @@ Popover.propTypes = {
     disabled: PropTypes.bool,
     noArrow: PropTypes.bool,
     placement: PropTypes.oneOf(POPPER_PLACEMENTS),
-    popperProps: PropTypes.object
+    popperProps: PropTypes.object,
+    onClickOutside: PropTypes.func,
+    onEscapeKey: PropTypes.func
+};
+
+Popover.defaultProps = {
+    onClickOutside: () => {},
+    onEscapeKey: () => {}
 };
 
 Popover.propDescriptions = {
@@ -90,7 +99,9 @@ Popover.propDescriptions = {
     control: 'Node to render as the reference element (that the `body` will be placed in relation to).',
     noArrow: 'Set to **true** to render a popover without an arrow.',
     placement: 'Initial position of the `body` (overlay) related to the `control`.',
-    popperProps: 'Additional props to be spread to the overlay element.'
+    popperProps: 'Additional props to be spread to the overlay element.',
+    onClickOutside: 'Callback for consumer clicking outside of popover body.',
+    onEscapeKey: 'Callback when escape key is pressed when popover body is visible.'
 };
 
 export default Popover;
