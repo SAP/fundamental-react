@@ -266,6 +266,7 @@ class DatePicker extends Component {
         }
     }
 
+
     render() {
         const { enableRangeSelection, disableWeekends, disableBeforeDate, disableAfterDate,
             disableWeekday, disablePastDates, disableFutureDates, blockedDates, disabledDates,
