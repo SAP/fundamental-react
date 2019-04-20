@@ -154,4 +154,41 @@ describe('<Popover />', () => {
             ).toBe('Sample');
         });
     });
+
+    describe('Callback handler', () => {
+        test('should dispatch the onClickOutside callback with the event', () => {
+            let f = jest.fn();
+            const element = mount(
+                <Popover
+                    body={<div />}
+                    control={<button id='test' />}
+                    onClickOutside={f} />
+
+            );
+
+            element.find('#test').simulate('click');
+
+            let event = new MouseEvent('mousedown', {});
+            document.dispatchEvent(event);
+
+            expect(f).toHaveBeenCalledTimes(1);
+        });
+        test('should dispatch the onEscapeKey callback with the event', () => {
+            let f = jest.fn();
+            const element = mount(
+                <Popover
+                    body={<div />}
+                    control={<button id='test' />}
+                    onEscapeKey={f} />
+
+            );
+
+            element.find('#test').simulate('click');
+
+            let event = new KeyboardEvent('keydown', { keyCode: 27 });
+            document.dispatchEvent(event);
+
+            expect(f).toHaveBeenCalledTimes(1);
+        });
+    });
 });
