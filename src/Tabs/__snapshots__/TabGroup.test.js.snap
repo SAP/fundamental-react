@@ -185,3 +185,55 @@ Array [
   </div>,
 ]
 `;
+
+exports[`<Tabs /> null tab children should render all tabs that are not null 1`] = `
+Array [
+  <ul
+    className="fd-tabs"
+    role="tablist"
+  >
+    <li
+      className="fd-tabs__item"
+    >
+      <a
+        aria-controls="1"
+        aria-selected={true}
+        className="fd-tabs__link"
+        href="#1"
+        onClick={[Function]}
+        role="tab"
+      >
+        Tab 1
+      </a>
+    </li>
+    <li
+      className="fd-tabs__item"
+    >
+      <a
+        aria-controls="3"
+        aria-selected={false}
+        className="fd-tabs__link"
+        href="#3"
+        onClick={[Function]}
+        role="tab"
+      >
+        Tab 3
+      </a>
+    </li>
+  </ul>,
+  <div
+    aria-expanded={true}
+    className="fd-tabs__panel"
+    role="tabpanel"
+  >
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore et ducimus veritatis officiis amet? Vitae officia optio dolor exercitationem incidunt magnam non, suscipit, illo quisquam numquam fugiat? Debitis, delectus sequi?
+  </div>,
+  <div
+    aria-expanded={false}
+    className="fd-tabs__panel"
+    role="tabpanel"
+  >
+    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+  </div>,
+]
+`;
