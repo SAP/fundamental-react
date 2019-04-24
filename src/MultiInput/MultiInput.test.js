@@ -49,10 +49,6 @@ describe('<MultiInput />', () => {
         return { combobox: combobox, popover: popover };
     };
 
-    // beforeEach(() => {
-    //     wrapper = shallow(multiInput);
-    // });
-
     // create a default multi-input control
     test('create multi-input', () => {
         wrapper = mount(multiInput);
@@ -70,9 +66,11 @@ describe('<MultiInput />', () => {
 
     // check that the tag list is hidden
     test('check that tag list is hidden', () => {
-        // check if bShowList state is changed
         wrapper = mount(multiInput);
+
+        // check if bShowList state is changed
         expect(wrapper.state(['bShowList'])).toBe(false);
+
         // check to see if list is not shown
         let results = getListStatus(false);
         expect(results.combobox).toHaveLength(1);
@@ -97,14 +95,8 @@ describe('<MultiInput />', () => {
     });
 
     // check that tag list is shown on drop down click
-    xtest('check that tag list is shown when dropdown button is clicked', () => {
-        // check if bShowList state is changed
-        expect(wrapper.state(['bShowList'])).toBe(false);
-
-        // check to see if list is not shown
-        let results = getListStatus(false);
-        expect(results.combobox).toHaveLength(1);
-        expect(results.popover).toHaveLength(1);
+    test('check that tag list is shown when dropdown button is clicked', () => {
+        wrapper = mount(multiInput);
 
         // simulate click on dropdown button
         wrapper
@@ -115,12 +107,15 @@ describe('<MultiInput />', () => {
         expect(wrapper.state(['bShowList'])).toBe(true);
 
         // check to see if list is shown
-        results = getListStatus(true);
+        let results = getListStatus(true);
         expect(results.combobox).toHaveLength(1);
         expect(results.popover).toHaveLength(1);
     });
 
-    xtest('add tag to tagList', () => {
+    test('add tag to tagList', () => {
+        wrapper = mount(multiInput);
+        wrapper.find('input[type="text"].fd-input').simulate('click');
+
         // check that no tags exist
         expect(wrapper.state(['tags'])).toHaveLength(0);
 
@@ -142,6 +137,9 @@ describe('<MultiInput />', () => {
     });
 
     test('remove tag from taglist by unchecking', () => {
+        wrapper = mount(multiInput);
+        wrapper.find('input[type="text"].fd-input').simulate('click');
+
         // check that no tags exist
         expect(wrapper.state(['tags'])).toHaveLength(0);
 
@@ -163,11 +161,10 @@ describe('<MultiInput />', () => {
     });
 
     test('remove tag from taglist by clicking on tag', () => {
-        // check that no tags exist
         wrapper = mount(multiInput);
-        //need to simulate click into field
         wrapper.find('input[type="text"].fd-input').simulate('click');
 
+        // check that no tags exist
         expect(wrapper.state(['tags'])).toHaveLength(0);
 
         // add tag to list
@@ -195,7 +192,7 @@ describe('<MultiInput />', () => {
         expect(wrapper.state(['tags'])).toHaveLength(1);
     });
 
-    xdescribe('Prop spreading', () => {
+    describe('Prop spreading', () => {
         test('should allow props to be spread to the MultiInput component', () => {
             const element = mount(<MultiInput data={data} data-sample='Sample' />);
 
@@ -223,6 +220,7 @@ describe('<MultiInput />', () => {
         test('should allow props to be spread to the MultiInput component\'s ul element', () => {
             const element = mount(<MultiInput data={data} listProps={{ 'data-sample': 'Sample' }} />);
 
+            element.find('input[type="text"].fd-input').simulate('click');
             expect(
                 element.find('ul').getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
@@ -234,6 +232,7 @@ describe('<MultiInput />', () => {
                 onTagsUpdate={mockOnTagsUpdate}
                 tagProps={{ 'data-sample': 'Sample' }} />);
 
+            element.find('input[type="text"].fd-input').simulate('click');
             element
                 .find('li:first-child>label>input.fd-checkbox[type="checkbox"]')
                 .simulate('change', { target: { value: data[0] } });
