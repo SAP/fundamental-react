@@ -1,7 +1,6 @@
+import { mount } from 'enzyme';
 import MultiInput from './MultiInput';
 import React from 'react';
-import renderer from 'react-test-renderer';
-import { mount, shallow } from 'enzyme';
 
 describe('<MultiInput />', () => {
     const mockOnTagsUpdate = jest.fn();
@@ -38,7 +37,7 @@ describe('<MultiInput />', () => {
 
     let wrapper;
 
-    const getListStatus = (bIsShown) => {
+    const getListStatus = () => {
         const combobox = wrapper.find(
             'div.fd-popover__control'
         );
@@ -46,7 +45,6 @@ describe('<MultiInput />', () => {
         const popover = wrapper.find(
             'div.fd-popover__popper'
         );
-        console.log('>>>>>>', popover);
 
         return { combobox: combobox, popover: popover };
     };
