@@ -37,9 +37,9 @@ describe('<MultiInput />', () => {
 
     let wrapper;
 
-    const getListStatus = () => {
+    const getListStatus = (bIsShown) => {
         const combobox = wrapper.find(
-            'div.fd-popover__control'
+            `div.fd-popover__control [aria-expanded=${bIsShown}]`
         );
 
         const popover = wrapper.find(

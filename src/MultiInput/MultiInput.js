@@ -148,11 +148,9 @@ class MultiInput extends Component {
                 <div className='fd-multi-input-field'>
                     <Popover
                         body={
-                            <div aria-hidden={!this.state.bShowList} >
-                                <nav className='fd-menu'>
-                                    <ul {...listProps} className='fd-menu__list'>{this.createTagList(data)}</ul>
-                                </nav>
-                            </div>
+                            <nav className='fd-menu'>
+                                <ul {...listProps} className='fd-menu__list'>{this.createTagList(data)}</ul>
+                            </nav>
                         }
                         control={
                             <div
