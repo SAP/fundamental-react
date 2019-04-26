@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.5.2-rc.7"></a>
+## [0.5.2-rc.7](https://github.com/SAP/fundamental-react/compare/v0.5.2-rc.6...v0.5.2-rc.7) (2019-04-26)
+
+
+### Bug Fixes
+
+* Implemented popover for multiInput ([#527](https://github.com/SAP/fundamental-react/issues/527)) ([3dfa24f](https://github.com/SAP/fundamental-react/commit/3dfa24f)), closes [fixes#1286](https://github.com/fixes/issues/1286)
+
+
+
 <a name="0.5.2-rc.6"></a>
 ## [0.5.2-rc.6](https://github.com/SAP/fundamental-react/compare/v0.5.2-rc.5...v0.5.2-rc.6) (2019-04-22)
 
