@@ -38,11 +38,8 @@ class SideNavListItem extends React.Component {
             );
         };
 
-        let hasChild = false;
-        React.Children.forEach(children, (child) => {
-            if (React.isValidElement(child) && child.type === SideNavList) {
-                hasChild = true;
-            }
+        const hasChild = React.Children.toArray(children).some(child => {
+            return child.type === SideNavList;
         });
 
         const renderLink = () => {
@@ -72,8 +69,8 @@ class SideNavListItem extends React.Component {
                 className='fd-side-nav__item'
                 key={id}>
                 {url && renderLink()}
-                {React.Children.map(children, (child) => {
-                    if (React.isValidElement(child) && child.type !== SideNavList) {
+                {React.Children.toArray(children).map(child => {
+                    if (child.type !== SideNavList) {
                         return React.cloneElement(child, {
                             children: (<React.Fragment>
                                 {glyph ? (
@@ -92,7 +89,7 @@ class SideNavListItem extends React.Component {
                                 }
                             }
                         });
-                    } else if (React.isValidElement(child) && child.type === SideNavList) {
+                    } else if (child.type === SideNavList) {
                         return React.cloneElement(child, {
                             hasParent: true,
                             onItemSelect: onItemSelect,

@@ -117,30 +117,28 @@ class TreeView extends Component {
 
         return (
             <div {...rest}>
-                {
-                    React.Children.map(children, (child) => {
-                        const isTreeHead = child.type && child.type.displayName === 'TreeView.Head';
-                        const isTree = child.type && child.type.displayName === 'TreeView.Tree';
+                {React.Children.toArray(children).map(child => {
+                    const isTreeHead = child.type && child.type.displayName === 'TreeView.Head';
+                    const isTree = child.type && child.type.displayName === 'TreeView.Tree';
 
-                        if (isTreeHead) {
-                            // Pass expand all callbacks to TreeHead
-                            return React.cloneElement(child, {
-                                onExpandAll: this.toggleExpandAll,
-                                isExpanded: isExpandAll
-                            });
-                        }
+                    if (isTreeHead) {
+                        // Pass expand all callbacks to TreeHead
+                        return React.cloneElement(child, {
+                            onExpandAll: this.toggleExpandAll,
+                            isExpanded: isExpandAll
+                        });
+                    }
 
-                        if (isTree) {
-                            // Pass expand callbacks to Tree
-                            return React.cloneElement(child, {
-                                expandData,
-                                onExpandClick: this.toggleExpand
-                            });
-                        }
+                    if (isTree) {
+                        // Pass expand callbacks to Tree
+                        return React.cloneElement(child, {
+                            expandData,
+                            onExpandClick: this.toggleExpand
+                        });
+                    }
 
-                        return child;
-                    })
-                }
+                    return child;
+                })}
             </div>
         );
     }

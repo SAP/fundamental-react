@@ -26,15 +26,13 @@ class BaseTree extends Component {
                 aria-hidden={level > 0 && !isExpanded}
                 className={className}
                 role={level === 0 ? 'tree' : 'group'}>
-                {
-                    React.Children.map(children, (child) => {
-                        return React.cloneElement(child, {
-                            expandData,
-                            level,
-                            onExpandClick
-                        });
-                    })
-                }
+                {React.Children.toArray(children).map(child => {
+                    return React.cloneElement(child, {
+                        expandData,
+                        level,
+                        onExpandClick
+                    });
+                })}
             </ul>
         );
     }
