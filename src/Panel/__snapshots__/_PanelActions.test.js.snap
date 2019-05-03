@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Panel /> create panelActions 1`] = `
+exports[`<Panel /> create panel actions 1`] = `
 <div
   className="fd-panel__actions"
 >
