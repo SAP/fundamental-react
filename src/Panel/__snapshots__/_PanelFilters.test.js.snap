@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Panel /> create panel filters 1`] = `
+exports[`<PanelFilters /> create panel filters 1`] = `
 <div
   className="fd-panel__filters"
 >
