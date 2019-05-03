@@ -3,7 +3,7 @@ import Panel from './Panel';
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-describe('<Panel />', () => {
+describe('<PanelFilters />', () => {
     const panelFilters = (
         <Panel.Filters>
             <div>Panel Filters</div>
@@ -12,7 +12,6 @@ describe('<Panel />', () => {
     );
 
     test('create panel filters', () => {
-        // Create panel
         let component = renderer.create(panelFilters);
         let tree = component.toJSON();
         expect(tree).toMatchSnapshot();

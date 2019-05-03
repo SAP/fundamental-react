@@ -4,7 +4,7 @@ import Panel from './Panel';
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-describe('<Panel />', () => {
+describe('<PanelActions />', () => {
     const panelActions = (
         <Panel.Actions>
             <Button compact glyph='add'>
@@ -14,7 +14,6 @@ describe('<Panel />', () => {
     );
 
     test('create panel actions', () => {
-        // Create panel
         let component = renderer.create(panelActions);
         let tree = component.toJSON();
         expect(tree).toMatchSnapshot();

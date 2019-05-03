@@ -14,16 +14,6 @@ describe('<PanelFooter />', () => {
         expect(tree).toMatchSnapshot();
     });
 
-    describe('PanelHead', () => {
-        test('should allow customization of header level', () => {
-            const element = mount(<Panel.Head headingLevel={2} title='Sample' />);
-
-            expect(
-                element.find('.fd-panel__title').type()
-            ).toBe('h2');
-        });
-    });
-
     describe('Prop spreading', () => {
         test('should allow props to be spread to the PanelFooter component', () => {
             const element = mount(<Panel.Footer data-sample='Sample' />);
