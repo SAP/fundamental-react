@@ -31,7 +31,6 @@ describe('<Forms />', () => {
     );
 
     test('create form radio group', () => {
-        // create form set with form inputs
         let component = renderer.create(formRadioGroup);
         let tree = component.toJSON();
         expect(tree).toMatchSnapshot();
