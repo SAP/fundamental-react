@@ -237,14 +237,6 @@ describe('<Forms />', () => {
     });
 
     describe('Prop spreading', () => {
-        test('should allow props to be spread to the FormMessage component', () => {
-            const element = mount(<FormMessage data-sample='Sample' />);
-
-            expect(
-                element.getDOMNode().attributes['data-sample'].value
-            ).toBe('Sample');
-        });
-
         xtest('should allow props to be spread to the FormRadio component\'s input element', () => {
             // TODO: placeholder for this test description once that functionality is built
         });
