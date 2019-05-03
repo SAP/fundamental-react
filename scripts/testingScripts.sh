@@ -21,7 +21,7 @@ fi
 original_path=$1
 new_path=$2
 branch=$(git symbolic-ref --short HEAD)
-temp_branch=gitcp_temp_branch
+temp_branch=gitcp_temp1_branch
 temp_ext=.temp
 
 # Create temp branch
