@@ -14,8 +14,7 @@ describe('<ListGroup />', () => {
         </ListGroup.Item>
     );
 
-    test('create list group', () => {
-        // create default list group
+    test('create list group item', () => {
         let component = renderer.create(listGroupItem);
         let tree = component.toJSON();
         expect(tree).toMatchSnapshot();
