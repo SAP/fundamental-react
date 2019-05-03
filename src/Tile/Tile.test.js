@@ -183,27 +183,10 @@ describe('<Tile />', () => {
         expect(tree).toMatchSnapshot();
     });
 
-    describe('ProductTileContent', () => {
-        test('should allow customization of header level', () => {
-            const element = mount(
-                <ProductTile.Content headingLevel={2} title='Tile Title' /> );
-            expect(
-                element.find('.fd-product-tile__title').type()
-            ).toBe('h2');
-        });
-    });
 
     describe('Prop spreading', () => {
         test('should allow props to be spread to the Tile component', () => {
             const element = mount(<Tile data-sample='Sample' />);
-
-            expect(
-                element.getDOMNode().attributes['data-sample'].value
-            ).toBe('Sample');
-        });
-
-        test('should allow props to be spread to the ProductTile component', () => {
-            const element = mount(<ProductTile data-sample='Sample' />);
 
             expect(
                 element.getDOMNode().attributes['data-sample'].value
