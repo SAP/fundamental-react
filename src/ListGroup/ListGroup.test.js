@@ -69,14 +69,6 @@ describe('<ListGroup />', () => {
             ).toBe('Sample');
         });
 
-        test('should allow props to be spread to the ListGroupItem component', () => {
-            const element = mount(<ListGroup.Item data-sample='Sample' />);
-
-            expect(
-                element.getDOMNode().attributes['data-sample'].value
-            ).toBe('Sample');
-        });
-
         test('should allow props to be spread to the ListGroupItemActions component', () => {
             const element = mount(<ListGroup.ItemActions data-sample='Sample' />);
 
