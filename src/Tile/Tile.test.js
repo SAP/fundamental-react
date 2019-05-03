@@ -202,14 +202,6 @@ describe('<Tile />', () => {
             ).toBe('Sample');
         });
 
-        test('should allow props to be spread to the TileMedia component', () => {
-            const element = mount(<Tile.Media data-sample='Sample' />);
-
-            expect(
-                element.getDOMNode().attributes['data-sample'].value
-            ).toBe('Sample');
-        });
-
         test('should allow props to be spread to the ProductTile component', () => {
             const element = mount(<ProductTile data-sample='Sample' />);
 
