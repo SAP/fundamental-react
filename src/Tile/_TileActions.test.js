@@ -6,7 +6,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import Tile from './Tile';
 
-describe('<Tile />', () => {
+describe('<TileAction />', () => {
     const tileActions = (
         <Tile.Actions className='yellow'>
             <Popover
