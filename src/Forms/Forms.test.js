@@ -237,14 +237,6 @@ describe('<Forms />', () => {
     });
 
     describe('Prop spreading', () => {
-        test('should allow props to be spread to the FormFieldset component', () => {
-            const element = mount(<FormFieldset data-sample='Sample' />);
-
-            expect(
-                element.getDOMNode().attributes['data-sample'].value
-            ).toBe('Sample');
-        });
-
         test('should allow props to be spread to the FormInput component', () => {
             const element = mount(<FormInput data-sample='Sample' />);
 
