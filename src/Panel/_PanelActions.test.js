@@ -114,7 +114,7 @@ describe('<Panel />', () => {
     );
 
     test('create panels', () => {
-        // create panel
+        // Create panel
         let component = renderer.create(panel);
         let tree = component.toJSON();
         expect(tree).toMatchSnapshot();
@@ -167,14 +167,6 @@ describe('<Panel />', () => {
             ).toBe('Sample');
         });
 
-        test('should allow props to be spread to the PanelBody component', () => {
-            const element = mount(<Panel.Body data-sample='Sample' />);
-
-            expect(
-                element.getDOMNode().attributes['data-sample'].value
-            ).toBe('Sample');
-        });
-
         test('should allow props to be spread to the PanelHeader component', () => {
             const element = mount(<Panel.Header data-sample='Sample' />);
 
@@ -197,14 +189,6 @@ describe('<Panel />', () => {
 
         xtest('should allow props to be spread to the PanelHead component\'s p element', () => {
             // TODO: placeholder for this test description once that functionality is built
-        });
-
-        test('should allow props to be spread to the PanelActions component', () => {
-            const element = mount(<Panel.Actions data-sample='Sample' />);
-
-            expect(
-                element.getDOMNode().attributes['data-sample'].value
-            ).toBe('Sample');
         });
 
         test('should allow props to be spread to the PanelFilters component', () => {
