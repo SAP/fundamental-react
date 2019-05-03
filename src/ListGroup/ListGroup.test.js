@@ -68,30 +68,5 @@ describe('<ListGroup />', () => {
                 element.getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
         });
-
-        test('should allow props to be spread to the ListGroupItemCheckbox component', () => {
-            // TODO: placeholder for this test description once that functionality is built
-            const element = mount(<ListGroup.ItemCheckbox data-sample='Sample' />);
-
-            expect(
-                element.getDOMNode().attributes['data-sample'].value
-            ).toBe('Sample');
-        });
-
-        test('should allow props to be spread to the ListGroupItemCheckbox component\'s input element', () => {
-            const element = mount(<ListGroup.ItemCheckbox inputProps={{ 'data-sample': 'Sample' }} />);
-
-            expect(
-                element.find('input').getDOMNode().attributes['data-sample'].value
-            ).toBe('Sample');
-        });
-
-        test('should allow props to be spread to the ListGroupItemCheckbox component\'s label element', () => {
-            const element = mount(<ListGroup.ItemCheckbox labelProps={{ 'data-sample': 'Sample' }} />);
-
-            expect(
-                element.find('label').getDOMNode().attributes['data-sample'].value
-            ).toBe('Sample');
-        });
     });
 });
