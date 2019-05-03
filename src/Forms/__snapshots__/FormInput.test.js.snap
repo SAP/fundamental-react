@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FormInput /> create form input item 1`] = `
+<input
+  className="fd-form__control is-warning"
+  id="input-1"
+  placeholder="Field placeholder text"
+  type="text"
+/>
+`;
