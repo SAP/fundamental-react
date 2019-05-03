@@ -7,7 +7,6 @@ import ProductTile from './ProductTile';
 import React from 'react';
 import renderer from 'react-test-renderer';
 import Tile from './Tile';
-import TileGrid from './TileGrid';
 
 describe('<Tile />', () => {
     const simpleTile = (
@@ -111,26 +110,6 @@ describe('<Tile />', () => {
         </ProductTile>
     );
 
-    const defaultTileGrid = (
-        <TileGrid className='blue'>
-            <Tile colorAccent={7} rowSpan={2}>
-                <Tile.Content title='Tile Title'>
-                    <p>Tile Description</p>
-                </Tile.Content>
-            </Tile>
-        </TileGrid>
-    );
-
-    const tileGrid = (
-        <TileGrid col={4}>
-            <Tile colorAccent={7} rowSpan={2}>
-                <Tile.Content title='Tile Title'>
-                    <p>Tile Description</p>
-                </Tile.Content>
-            </Tile>
-        </TileGrid>
-    );
-
     test('create tile component', () => {
         // simple tile
         let component = renderer.create(simpleTile);
@@ -171,16 +150,6 @@ describe('<Tile />', () => {
         component = renderer.create(disabledProductMediaTile);
         tree = component.toJSON();
         expect(tree).toMatchSnapshot();
-
-        // default tile grid
-        component = renderer.create(defaultTileGrid);
-        tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-
-        // tile grid
-        component = renderer.create(tileGrid);
-        tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
     });
 
 
@@ -211,14 +180,6 @@ describe('<Tile />', () => {
 
         test('should allow props to be spread to the ProductTileMedia component', () => {
             const element = mount(<ProductTile.Media data-sample='Sample' image='https://techne.yaas.io/images/product-thumbnail-wide.png' />);
-
-            expect(
-                element.getDOMNode().attributes['data-sample'].value
-            ).toBe('Sample');
-        });
-
-        test('should allow props to be spread to the TileGrid component', () => {
-            const element = mount(<TileGrid data-sample='Sample' />);
 
             expect(
                 element.getDOMNode().attributes['data-sample'].value
