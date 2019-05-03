@@ -114,7 +114,7 @@ describe('<Panel />', () => {
     );
 
     test('create panels', () => {
-        // create panel
+        // Create panel
         let component = renderer.create(panel);
         let tree = component.toJSON();
         expect(tree).toMatchSnapshot();
