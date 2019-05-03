@@ -167,14 +167,6 @@ describe('<Panel />', () => {
             ).toBe('Sample');
         });
 
-        test('should allow props to be spread to the PanelBody component', () => {
-            const element = mount(<Panel.Body data-sample='Sample' />);
-
-            expect(
-                element.getDOMNode().attributes['data-sample'].value
-            ).toBe('Sample');
-        });
-
         test('should allow props to be spread to the PanelHeader component', () => {
             const element = mount(<Panel.Header data-sample='Sample' />);
 
