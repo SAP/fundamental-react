@@ -31,7 +31,6 @@ class TreeItem extends Component {
         const isExpanded = isExpandedProp || !!expandData[this.rowId];
 
         // Render child TreeBranch with correct props
-        // const childBranch = React.Children.map(children, (child) => {
         const childBranch = React.Children.toArray(children)
             .filter(child => child.type && child.type.displayName === 'TreeView.Branch')
             .map(child => {
