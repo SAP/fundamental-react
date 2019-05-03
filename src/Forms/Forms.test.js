@@ -237,14 +237,6 @@ describe('<Forms />', () => {
     });
 
     describe('Prop spreading', () => {
-        test('should allow props to be spread to the FormLegend component', () => {
-            const element = mount(<FormLegend data-sample='Sample' />);
-
-            expect(
-                element.getDOMNode().attributes['data-sample'].value
-            ).toBe('Sample');
-        });
-
         test('should allow props to be spread to the FormMessage component', () => {
             const element = mount(<FormMessage data-sample='Sample' />);
 
