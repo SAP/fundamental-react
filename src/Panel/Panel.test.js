@@ -191,14 +191,6 @@ describe('<Panel />', () => {
             // TODO: placeholder for this test description once that functionality is built
         });
 
-        test('should allow props to be spread to the PanelFilters component', () => {
-            const element = mount(<Panel.Filters data-sample='Sample' />);
-
-            expect(
-                element.getDOMNode().attributes['data-sample'].value
-            ).toBe('Sample');
-        });
-
         test('should allow props to be spread to the PanelFooter component', () => {
             const element = mount(<Panel.Footer data-sample='Sample' />);
 
