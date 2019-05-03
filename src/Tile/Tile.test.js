@@ -90,26 +90,6 @@ describe('<Tile />', () => {
         </Tile>
     );
 
-    const productMediaTile = (
-        <ProductTile className='pink' isButton>
-            <ProductTile.Media image='https://techne.yaas.io/images/product-thumbnail-wide.png' />
-            <ProductTile.Content title='Tile Title'>
-                <p>Tile Description</p>
-            </ProductTile.Content>
-        </ProductTile>
-    );
-
-    const disabledProductMediaTile = (
-        <ProductTile disabled>
-            <ProductTile.Media
-                className='blue'
-                image='https://techne.yaas.io/images/product-thumbnail-wide.png' />
-            <ProductTile.Content className='blue' title='Tile Title'>
-                <p>Tile Description</p>
-            </ProductTile.Content>
-        </ProductTile>
-    );
-
     test('create tile component', () => {
         // simple tile
         let component = renderer.create(simpleTile);
@@ -140,18 +120,7 @@ describe('<Tile />', () => {
         component = renderer.create(actionTileNoClass);
         tree = component.toJSON();
         expect(tree).toMatchSnapshot();
-
-        // product media tile
-        component = renderer.create(productMediaTile);
-        tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-
-        // disabled product media tile
-        component = renderer.create(disabledProductMediaTile);
-        tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
     });
-
 
     describe('Prop spreading', () => {
         test('should allow props to be spread to the Tile component', () => {
@@ -159,22 +128,6 @@ describe('<Tile />', () => {
 
             expect(
                 element.getDOMNode().attributes['data-sample'].value
-            ).toBe('Sample');
-        });
-
-        test('should allow props to be spread to the ProductTileContent component', () => {
-            const element = mount(<ProductTile.Content data-sample='Sample' />);
-
-            expect(
-                element.getDOMNode().attributes['data-sample'].value
-            ).toBe('Sample');
-        });
-
-        test('should allow props to be spread to the ProductTileContent component\'s heading element', () => {
-            const element = mount(<ProductTile.Content titleProps={{ 'data-sample': 'Sample' }} />);
-
-            expect(
-                element.find('.fd-product-tile__title').getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
         });
 
