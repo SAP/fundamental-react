@@ -326,51 +326,12 @@ describe('<SideNav />', () => {
         expect(wrapper.state('selectedId')).toEqual('subitem_25');
     });
 
-    describe('SideNavList', () => {
-        test('should allow customization of header level', () => {
-            const element = mount(<SideNav.List headingLevel={2} title='test' />);
-
-            expect(
-                element.find('.fd-side-nav__title').type()
-            ).toBe('h2');
-        });
-    });
-
     describe('Prop spreading', () => {
         test('should allow props to be spread to the SideNav component', () => {
             const element = mount(<SideNav data-sample='Sample' />);
 
             expect(
                 element.getDOMNode().attributes['data-sample'].value
-            ).toBe('Sample');
-        });
-
-        test('should allow props to be spread to the SideNavList component', () => {
-            const element = mount(<SideNav.List data-sample='Sample'>
-                <SideNav.ListItem
-                    id='item-1'
-                    name='Link Item 1'
-                    url='#' />
-                <SideNav.ListItem
-                    id='item-2'
-                    name='Link Item 2'
-                    url='#' />
-                <SideNav.ListItem
-                    id='item-3'
-                    name='Link Item 3'
-                    url='#' />
-            </SideNav.List>);
-
-            expect(
-                element.getDOMNode().attributes['data-sample'].value
-            ).toBe('Sample');
-        });
-
-        test('should allow props to be spread to the SideNavList\'s heading element', () => {
-            const element = mount(<SideNav.List title='test' titleProps={{ 'data-sample': 'Sample' }} />);
-
-            expect(
-                element.find('.fd-side-nav__title').getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
         });
     });
