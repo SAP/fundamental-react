@@ -10,8 +10,7 @@ describe('<Forms />', () => {
         </FormLabel>
     );
 
-    test('create form item', () => {
-        // create form label
+    test('create form label', () => {
         let component = renderer.create(formLabel);
         let tree = component.toJSON();
         expect(tree).toMatchSnapshot();

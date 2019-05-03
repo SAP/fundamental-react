@@ -44,7 +44,6 @@ describe('<FormItem />', () => {
     );
 
     test('create form item', () => {
-        // create form set with form inputs
         let component = renderer.create(formItem);
         let tree = component.toJSON();
         expect(tree).toMatchSnapshot();
