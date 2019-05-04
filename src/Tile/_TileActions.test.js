@@ -6,7 +6,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import Tile from './Tile';
 
-describe('<TileAction />', () => {
+describe('<Tile.Actions />', () => {
     const tileActions = (
         <Tile.Actions className='yellow'>
             <Popover
@@ -24,8 +24,7 @@ describe('<TileAction />', () => {
         </Tile.Actions>
     );
 
-    test('create tile component', () => {
-        // simple tile
+    test('create Tile.Actions component', () => {
         let component = renderer.create(tileActions);
         let tree = component.toJSON();
         expect(tree).toMatchSnapshot();

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<TileMedia /> create tile media component 1`] = `
+exports[`<Tile.Media /> create tile media component 1`] = `
 <div
   className="fd-tile__media green"
 >

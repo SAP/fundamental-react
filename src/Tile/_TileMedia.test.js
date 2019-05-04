@@ -4,7 +4,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import Tile from './Tile';
 
-describe('<TileMedia />', () => {
+describe('<Tile.Media />', () => {
     const tileMedia = (
         <Tile.Media className='green'>
             <Identifier color={3} glyph='home'

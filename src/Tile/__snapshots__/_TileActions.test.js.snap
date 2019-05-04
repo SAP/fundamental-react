@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<TileAction /> create tile component 1`] = `
+exports[`<Tile.Actions /> create Tile.Actions component 1`] = `
 <div
   className="fd-tile__actions yellow"
 >

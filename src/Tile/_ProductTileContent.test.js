@@ -10,8 +10,7 @@ describe('<ProductTileContent />', () => {
         </ProductTile.Content>
     );
 
-    test('create tile component', () => {
-        // simple tile
+    test('create ProductTile.Content component', () => {
         let component = renderer.create(productTileContent);
         let tree = component.toJSON();
         expect(tree).toMatchSnapshot();

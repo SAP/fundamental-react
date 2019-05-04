@@ -3,7 +3,6 @@ import Identifier from '../Identifier/Identifier';
 import Menu from '../Menu/Menu';
 import { mount } from 'enzyme';
 import Popover from '../Popover/Popover';
-import ProductTile from './ProductTile';
 import React from 'react';
 import renderer from 'react-test-renderer';
 import Tile from './Tile';
@@ -125,14 +124,6 @@ describe('<Tile />', () => {
     describe('Prop spreading', () => {
         test('should allow props to be spread to the Tile component', () => {
             const element = mount(<Tile data-sample='Sample' />);
-
-            expect(
-                element.getDOMNode().attributes['data-sample'].value
-            ).toBe('Sample');
-        });
-
-        test('should allow props to be spread to the ProductTileMedia component', () => {
-            const element = mount(<ProductTile.Media data-sample='Sample' image='https://techne.yaas.io/images/product-thumbnail-wide.png' />);
 
             expect(
                 element.getDOMNode().attributes['data-sample'].value

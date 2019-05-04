@@ -25,7 +25,6 @@ describe('<ProductTile />', () => {
     );
 
     test('create ProductTile component', () => {
-        // simple tile
         let component = renderer.create(productMediaTile);
         let tree = component.toJSON();
         expect(tree).toMatchSnapshot();
