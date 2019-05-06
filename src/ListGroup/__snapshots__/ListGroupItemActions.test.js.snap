@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<ListGroup /> create list group item actions 1`] = `
+exports[`<ListGroupItemActions /> create list group item actions 1`] = `
 <span
   className="fd-list-group__action"
 >
