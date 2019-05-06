@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SideNavListItem /> create side navigation 1`] = `
+<li
+  className="fd-side-nav__item"
+>
+  <a
+    className="fd-side-nav__link"
+    href="#"
+    onClick={[Function]}
+  >
+    Item 1
+  </a>
+</li>
+`;
