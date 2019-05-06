@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TreeView.Col /> create tree component 1`] = `
+<div
+  className="fd-tree__col"
+>
+  Column Header 1
+</div>
+`;

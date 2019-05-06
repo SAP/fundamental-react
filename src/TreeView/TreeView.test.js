@@ -408,15 +408,5 @@ describe('<TreeView />', () => {
                 element.find('.fd-tree__control').getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
         });
-
-        test('should allow props to be spread to the TreeCol component', () => {
-            const element = mount(
-                <TreeView.Col
-                    data-sample='Sample' />);
-
-            expect(
-                element.find('.fd-tree__col').getDOMNode().attributes['data-sample'].value
-            ).toBe('Sample');
-        });
     });
 });
