@@ -3,7 +3,7 @@ import Panel from './Panel';
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-describe('<Panel />', () => {
+describe('<PanelHead />', () => {
     const panelHead = (
         <Panel.Head
             description='Panel Description'

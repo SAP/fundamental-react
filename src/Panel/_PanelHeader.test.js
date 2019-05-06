@@ -4,7 +4,7 @@ import Panel from './Panel';
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-describe('<Panel />', () => {
+describe('<PanelHeader />', () => {
     const panelHeader = (
         <Panel.Header>
             <Panel.Head
