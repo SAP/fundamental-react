@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Panel /> create panel body 1`] = `
+exports[`<PanelBody /> create panel body 1`] = `
 <div
   className="fd-panel__body"
 >
