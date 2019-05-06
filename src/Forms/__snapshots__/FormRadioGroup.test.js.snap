@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Forms /> create form radio group 1`] = `
+exports[`<FormRadioGroup /> create form radio group 1`] = `
 <div
   className="blue"
 >

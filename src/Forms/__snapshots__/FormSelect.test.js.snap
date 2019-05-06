@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Forms /> create form item 1`] = `
+exports[`<FormSelect /> create form item 1`] = `
 <select
   className="fd-form__control blue"
   disabled={true}

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Forms /> create form textarea 1`] = `
+exports[`<FormTextArea /> create form textarea 1`] = `
 <textarea
   className="fd-form__control"
   id="textarea-2"

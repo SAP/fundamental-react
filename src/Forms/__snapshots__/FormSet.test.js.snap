@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Forms /> create form item 1`] = `
+exports[`<FormSet /> create form item 1`] = `
 <div
   className="fd-form__set"
 >
@@ -95,7 +95,7 @@ exports[`<Forms /> create form item 1`] = `
 </div>
 `;
 
-exports[`<Forms /> create form item 2`] = `
+exports[`<FormSet /> create form item 2`] = `
 <div
   className="fd-form__set blue"
 >
