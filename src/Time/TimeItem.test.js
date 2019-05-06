@@ -2,7 +2,7 @@ import { mount } from 'enzyme';
 import React from 'react';
 import Time from './Time';
 
-describe('Time Item Prop spreading', () => {
+describe('Time Item', () => {
     test('should allow props to be spread to the Time component\'s hours TimeItem component\'s up button element', () => {
         const element = mount(
             <Time
