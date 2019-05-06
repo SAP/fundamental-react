@@ -343,27 +343,6 @@ describe('<TreeView />', () => {
             ).toBe('Sample');
         });
 
-        test('should allow props to be spread to the TreeHead component', () => {
-            const element = mount(
-                <TreeView.Head
-                    data-sample='Sample' />);
-
-            expect(
-                element.find('.fd-tree--header').getDOMNode().attributes['data-sample'].value
-            ).toBe('Sample');
-        });
-
-        test('should allow props to be spread to the Tree component', () => {
-            const element = mount(
-                <TreeView.Tree
-                    data-sample='Sample'
-                    onExpandClick={() => {}} />);
-
-            expect(
-                element.find('.fd-tree').getDOMNode().attributes['data-sample'].value
-            ).toBe('Sample');
-        });
-
         test('should allow props to be spread to the TreeItem component', () => {
             const element = mount(
                 <TreeView.Item
@@ -381,31 +360,6 @@ describe('<TreeView />', () => {
 
             expect(
                 element.find('.fd-tree__row').getDOMNode().attributes['data-sample'].value
-            ).toBe('Sample');
-        });
-
-        test('should allow props to be spread to the TreeHead component', () => {
-            const element = mount(
-                <TreeView.Head
-                    data-sample='Sample' />);
-
-            expect(
-                element.find('.fd-tree--header').getDOMNode().attributes['data-sample'].value
-            ).toBe('Sample');
-        });
-
-        test('should allow props to be spread to the TreeHead component\'s button element', () => {
-            const element = mount(
-                <TreeView.Head
-                    buttonProps={{
-                        'data-sample': 'Sample'
-                    }}>
-                    <TreeView.Col />
-                </TreeView.Head>
-            );
-
-            expect(
-                element.find('.fd-tree__control').getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
         });
     });

@@ -12,118 +12,7 @@ jest.mock('shortid', () => {
     };
 });
 
-describe('<TreeView />', () => {
-    const multiLevelTreeView = (
-        <TreeView>
-            <TreeView.Head>
-                <TreeView.Col>Column Header 1</TreeView.Col>
-                <TreeView.Col>Column Header 2</TreeView.Col>
-                <TreeView.Col>Column Header 3</TreeView.Col>
-                <TreeView.Col>Column Header 4</TreeView.Col>
-            </TreeView.Head>
-            <TreeView.Tree>
-                <TreeView.Item>
-                    <TreeView.Row>
-                        <TreeView.Col>First Level</TreeView.Col>
-                        <TreeView.Col>Data Col 2</TreeView.Col>
-                        <TreeView.Col>Data Col 3</TreeView.Col>
-                        <TreeView.Col>Data Col 4</TreeView.Col>
-                    </TreeView.Row>
-                    <TreeView.Branch>
-                        <TreeView.Item>
-                            <TreeView.Row>
-                                <TreeView.Col>Child 1</TreeView.Col>
-                                <TreeView.Col>Data Col 2</TreeView.Col>
-                                <TreeView.Col>Data Col 3</TreeView.Col>
-                                <TreeView.Col>Data Col 4</TreeView.Col>
-                            </TreeView.Row>
-                            <TreeView.Branch>
-                                <TreeView.Item>
-                                    <TreeView.Row>
-                                        <TreeView.Col>Grandchild 1</TreeView.Col>
-                                        <TreeView.Col>Data Col 2</TreeView.Col>
-                                        <TreeView.Col>Data Col 3</TreeView.Col>
-                                        <TreeView.Col>Data Col 4</TreeView.Col>
-                                    </TreeView.Row>
-                                    <TreeView.Branch>
-                                        <TreeView.Item>
-                                            <TreeView.Row>
-                                                <TreeView.Col>GreatGrandchild 1</TreeView.Col>
-                                                <TreeView.Col>Data Col 2</TreeView.Col>
-                                                <TreeView.Col>Data Col 3</TreeView.Col>
-                                                <TreeView.Col>Data Col 4</TreeView.Col>
-                                            </TreeView.Row>
-                                        </TreeView.Item>
-                                    </TreeView.Branch>
-                                </TreeView.Item>
-                            </TreeView.Branch>
-                        </TreeView.Item>
-                        <TreeView.Item>
-                            <TreeView.Row>
-                                <TreeView.Col>Child 2</TreeView.Col>
-                                <TreeView.Col>Data Col 2</TreeView.Col>
-                                <TreeView.Col>Data Col 3</TreeView.Col>
-                                <TreeView.Col>Data Col 4</TreeView.Col>
-                            </TreeView.Row>
-                        </TreeView.Item>
-                    </TreeView.Branch>
-                </TreeView.Item>
-                <TreeView.Item>
-                    <TreeView.Row>
-                        <TreeView.Col>Row 2</TreeView.Col>
-                        <TreeView.Col>Data Col 2</TreeView.Col>
-                        <TreeView.Col>Data Col 3</TreeView.Col>
-                        <TreeView.Col>Data Col 4</TreeView.Col>
-                    </TreeView.Row>
-                    <TreeView.Branch>
-                        <TreeView.Item>
-                            <TreeView.Row>
-                                <TreeView.Col>Child 1</TreeView.Col>
-                                <TreeView.Col>Data Col 2</TreeView.Col>
-                                <TreeView.Col>Data Col 3</TreeView.Col>
-                                <TreeView.Col>Data Col 4</TreeView.Col>
-                            </TreeView.Row>
-                        </TreeView.Item>
-                        <TreeView.Item>
-                            <TreeView.Row>
-                                <TreeView.Col>Child 2</TreeView.Col>
-                                <TreeView.Col>Data Col 2</TreeView.Col>
-                                <TreeView.Col>Data Col 3</TreeView.Col>
-                                <TreeView.Col>Data Col 4</TreeView.Col>
-                            </TreeView.Row>
-                        </TreeView.Item>
-                    </TreeView.Branch>
-                </TreeView.Item>
-                <TreeView.Item>
-                    <TreeView.Row>
-                        <TreeView.Col>Row 3</TreeView.Col>
-                        <TreeView.Col>Data Col 2</TreeView.Col>
-                        <TreeView.Col>Data Col 3</TreeView.Col>
-                        <TreeView.Col>Data Col 4</TreeView.Col>
-                    </TreeView.Row>
-                </TreeView.Item>
-                <TreeView.Item>
-                    <TreeView.Row>
-                        <TreeView.Col><a href='http://me.com' /></TreeView.Col>
-                        <TreeView.Col>Data Col 2</TreeView.Col>
-                        <TreeView.Col>Data Col 3</TreeView.Col>
-                        <TreeView.Col>Data Col 4</TreeView.Col>
-                    </TreeView.Row>
-                    <TreeView.Branch>
-                        <TreeView.Item>
-                            <TreeView.Row>
-                                <TreeView.Col>Child 1</TreeView.Col>
-                                <TreeView.Col>Data Col 2</TreeView.Col>
-                                <TreeView.Col>Data Col 3</TreeView.Col>
-                                <TreeView.Col>Data Col 4</TreeView.Col>
-                            </TreeView.Row>
-                        </TreeView.Item>
-                    </TreeView.Branch>
-                </TreeView.Item>
-            </TreeView.Tree>
-        </TreeView>
-    );
-
+describe('<TreeView.Head />', () => {
     const richTreeView = (
         <TreeView>
             <TreeView.Head>
@@ -183,15 +72,10 @@ describe('<TreeView />', () => {
         </TreeView>
     );
 
-    test('create tree component', () => {
-        // multi-level tree
-        let component = renderer.create(multiLevelTreeView);
-        let tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-
+    test('create tree head component', () => {
         // rich tree
-        component = renderer.create(richTreeView);
-        tree = component.toJSON();
+        let component = renderer.create(richTreeView);
+        let tree = component.toJSON();
         expect(tree).toMatchSnapshot();
     });
 
@@ -236,65 +120,6 @@ describe('<TreeView />', () => {
         });
     });
 
-    test('expand tree from row', () => {
-        const wrapper = mount(multiLevelTreeView);
-        const parent = wrapper.find('li.fd-tree__item').at(0);
-        const button = parent.find('button.fd-tree__control').at(0);
-
-        button.simulate('click');
-
-        // Check that child list expanded
-        expect(wrapper.find('ul.fd-tree__group--sublevel-1').at(0).hasClass('is-hidden')).toBeFalsy();
-        expect(wrapper.find('ul.fd-tree__group--sublevel-1').at(0).prop('aria-hidden')).toBeFalsy();
-    });
-
-    test('collapse tree from row', () => {
-        const wrapper = mount(multiLevelTreeView);
-        const parent = wrapper.find('li.fd-tree__item').at(0);
-        const button = parent.find('button.fd-tree__control').at(0);
-
-        button.simulate('click');
-
-        // Check that child list expanded
-        expect(wrapper.find('ul.fd-tree__group--sublevel-1').at(0).hasClass('is-hidden')).toBeFalsy();
-        expect(wrapper.find('ul.fd-tree__group--sublevel-1').at(0).prop('aria-hidden')).toBeFalsy();
-
-        button.simulate('click');
-
-        // Check that child list collapsed
-        expect(wrapper.find('ul.fd-tree__group--sublevel-1').at(0).hasClass('is-hidden')).toBeTruthy();
-        expect(wrapper.find('ul.fd-tree__group--sublevel-1').at(0).prop('aria-hidden')).toBeTruthy();
-    });
-
-    test('expand change callback is called with correct arguments on row expand', () => {
-        const onExpandChange = jest.fn();
-        const callbackTree = (
-            <TreeView onExpandChange={onExpandChange}>
-                <TreeView.Tree>
-                    <TreeView.Item rowId={'testRowId'}>
-                        <TreeView.Row>
-                            <TreeView.Col>Row 1</TreeView.Col>
-                        </TreeView.Row>
-                        <TreeView.Branch>
-                            <TreeView.Item>
-                                <TreeView.Row>
-                                    <TreeView.Col>Row 2</TreeView.Col>
-                                </TreeView.Row>
-                            </TreeView.Item>
-                        </TreeView.Branch>
-                    </TreeView.Item>
-                </TreeView.Tree>
-            </TreeView>
-        );
-        const element = mount(callbackTree);
-        const button = element.find('button').at(0);
-
-        // Simulate clicking the expand row button
-        button.simulate('click');
-
-        expect(onExpandChange).toHaveBeenLastCalledWith(expect.objectContaining({ testRowId: true }));
-    });
-
     test('expand change callback is called with correct arguments on header expand', () => {
         const onExpandChange = jest.fn();
         const callbackTree = (
@@ -333,16 +158,6 @@ describe('<TreeView />', () => {
     });
 
     describe('Prop spreading', () => {
-        test('should allow props to be spread to the TreeView component', () => {
-            const element = mount(
-                <TreeView
-                    data-sample='Sample' />);
-
-            expect(
-                element.getDOMNode().attributes['data-sample'].value
-            ).toBe('Sample');
-        });
-
         test('should allow props to be spread to the TreeHead component', () => {
             const element = mount(
                 <TreeView.Head
@@ -350,37 +165,6 @@ describe('<TreeView />', () => {
 
             expect(
                 element.find('.fd-tree--header').getDOMNode().attributes['data-sample'].value
-            ).toBe('Sample');
-        });
-
-        test('should allow props to be spread to the Tree component', () => {
-            const element = mount(
-                <TreeView.Tree
-                    data-sample='Sample'
-                    onExpandClick={() => {}} />);
-
-            expect(
-                element.find('.fd-tree').getDOMNode().attributes['data-sample'].value
-            ).toBe('Sample');
-        });
-
-        test('should allow props to be spread to the TreeItem component', () => {
-            const element = mount(
-                <TreeView.Item
-                    data-sample='Sample' />);
-
-            expect(
-                element.find('.fd-tree__item').getDOMNode().attributes['data-sample'].value
-            ).toBe('Sample');
-        });
-
-        test('should allow props to be spread to the TreeRow component', () => {
-            const element = mount(
-                <TreeView.Row
-                    data-sample='Sample' />);
-
-            expect(
-                element.find('.fd-tree__row').getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
         });
 

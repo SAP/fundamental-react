@@ -333,26 +333,6 @@ describe('<TreeView />', () => {
     });
 
     describe('Prop spreading', () => {
-        test('should allow props to be spread to the TreeView component', () => {
-            const element = mount(
-                <TreeView
-                    data-sample='Sample' />);
-
-            expect(
-                element.getDOMNode().attributes['data-sample'].value
-            ).toBe('Sample');
-        });
-
-        test('should allow props to be spread to the TreeHead component', () => {
-            const element = mount(
-                <TreeView.Head
-                    data-sample='Sample' />);
-
-            expect(
-                element.find('.fd-tree--header').getDOMNode().attributes['data-sample'].value
-            ).toBe('Sample');
-        });
-
         test('should allow props to be spread to the Tree component', () => {
             const element = mount(
                 <TreeView.Tree
@@ -361,61 +341,6 @@ describe('<TreeView />', () => {
 
             expect(
                 element.find('.fd-tree').getDOMNode().attributes['data-sample'].value
-            ).toBe('Sample');
-        });
-
-        test('should allow props to be spread to the TreeItem component', () => {
-            const element = mount(
-                <TreeView.Item
-                    data-sample='Sample' />);
-
-            expect(
-                element.find('.fd-tree__item').getDOMNode().attributes['data-sample'].value
-            ).toBe('Sample');
-        });
-
-        test('should allow props to be spread to the TreeRow component', () => {
-            const element = mount(
-                <TreeView.Row
-                    data-sample='Sample' />);
-
-            expect(
-                element.find('.fd-tree__row').getDOMNode().attributes['data-sample'].value
-            ).toBe('Sample');
-        });
-
-        test('should allow props to be spread to the TreeHead component', () => {
-            const element = mount(
-                <TreeView.Head
-                    data-sample='Sample' />);
-
-            expect(
-                element.find('.fd-tree--header').getDOMNode().attributes['data-sample'].value
-            ).toBe('Sample');
-        });
-
-        test('should allow props to be spread to the TreeHead component\'s button element', () => {
-            const element = mount(
-                <TreeView.Head
-                    buttonProps={{
-                        'data-sample': 'Sample'
-                    }}>
-                    <TreeView.Col />
-                </TreeView.Head>
-            );
-
-            expect(
-                element.find('.fd-tree__control').getDOMNode().attributes['data-sample'].value
-            ).toBe('Sample');
-        });
-
-        test('should allow props to be spread to the TreeCol component', () => {
-            const element = mount(
-                <TreeView.Col
-                    data-sample='Sample' />);
-
-            expect(
-                element.find('.fd-tree__col').getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
         });
     });
