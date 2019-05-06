@@ -2,7 +2,7 @@ import ActionBar from './ActionBar';
 import { mount } from 'enzyme';
 import React from 'react';
 
-describe('ActionBarActions Prop spreading', () => {
+describe('ActionBarActions', () => {
     test('should allow props to be spread to the ActionBarActions component', () => {
         const element = mount(<ActionBar.Actions data-sample='Sample' />);
 

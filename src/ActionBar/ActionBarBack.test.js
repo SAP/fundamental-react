@@ -2,7 +2,7 @@ import ActionBar from './ActionBar';
 import { mount } from 'enzyme';
 import React from 'react';
 
-describe('ActionBarBack Prop spreading', () => {
+describe('ActionBarBack', () => {
     test('should allow props to be spread to the ActionBarBack component', () => {
         const element = mount(<ActionBar.Back data-sample='Sample' />);
 
