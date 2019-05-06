@@ -3,7 +3,7 @@ import { mount } from 'enzyme';
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-describe('<Forms />', () => {
+describe('<FormRadioItem />', () => {
     const formRadioItem = (
         <FormRadioItem
             id='radio-1'

@@ -9,7 +9,7 @@ import { mount } from 'enzyme';
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-describe('<Forms />', () => {
+describe('<FormSet />', () => {
     const formSet = (
         <FormSet>
             <FormItem isCheck isInline>

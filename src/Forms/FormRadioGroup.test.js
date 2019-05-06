@@ -4,7 +4,7 @@ import { mount } from 'enzyme';
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-describe('<Forms />', () => {
+describe('<FormRadioGroup />', () => {
     const formRadioGroup = (
         <FormRadioGroup
             className='blue'>

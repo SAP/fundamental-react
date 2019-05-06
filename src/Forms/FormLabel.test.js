@@ -3,7 +3,7 @@ import { mount } from 'enzyme';
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-describe('<Forms />', () => {
+describe('<FormLabel />', () => {
     const formLabel = (
         <FormLabel forAttr='input-1' required>
             Default Input

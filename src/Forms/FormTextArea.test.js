@@ -3,7 +3,7 @@ import { mount } from 'enzyme';
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-describe('<Forms />', () => {
+describe('<FormTextArea />', () => {
     const formTextArea = (
         <FormTextarea id='textarea-2'>
             Pellentesque metus lacus commodo eget justo ut rutrum varius nunc.
