@@ -3,7 +3,7 @@ import { mount } from 'enzyme';
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-describe('<ListGroup />', () => {
+describe('<ListGroupItemCheckbox />', () => {
     const listGroupItemCheckbox = (
         <ListGroup.ItemCheckbox>List item 1</ListGroup.ItemCheckbox>
     );

@@ -4,7 +4,7 @@ import { mount } from 'enzyme';
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-describe('<ListGroup />', () => {
+describe('<ListGroupItem />', () => {
     const listGroupItem = (
         <ListGroup.Item>
             List item 1
