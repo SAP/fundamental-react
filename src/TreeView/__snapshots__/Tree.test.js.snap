@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<TreeView /> create tree component 1`] = `
+exports[`<TreeView.Tree /> create tree component 1`] = `
 <div>
   <div
     className="fd-tree fd-tree--header"
@@ -465,7 +465,7 @@ exports[`<TreeView /> create tree component 1`] = `
 </div>
 `;
 
-exports[`<TreeView /> create tree component 2`] = `
+exports[`<TreeView.Tree /> create tree component 2`] = `
 <div>
   <div
     className="fd-tree fd-tree--header"
