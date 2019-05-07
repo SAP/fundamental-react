@@ -12,7 +12,7 @@ jest.mock('shortid', () => {
     };
 });
 
-describe('<TreeView />', () => {
+describe('<TreeView.Tree />', () => {
     const multiLevelTreeView = (
         <TreeView>
             <TreeView.Head>
