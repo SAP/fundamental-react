@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PanelHead /> create panel head 1`] = `
+<div
+  className="fd-panel__head"
+>
+  <h3
+    className="fd-panel__title"
+  >
+    Panel Header with Actions
+  </h3>
+  <p
+    className="fd-panel__description"
+  >
+    Panel Description
+  </p>
+</div>
+`;

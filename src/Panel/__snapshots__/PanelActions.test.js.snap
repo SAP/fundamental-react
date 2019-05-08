@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PanelActions /> create panel actions 1`] = `
+<div
+  className="fd-panel__actions"
+>
+  <button
+    className="fd-button fd-button--compact sap-icon--add"
+  >
+    Add New Button
+  </button>
+</div>
+`;

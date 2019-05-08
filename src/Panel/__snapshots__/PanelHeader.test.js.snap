@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PanelHeader /> create panels 1`] = `
+<div
+  className="fd-panel__header"
+>
+  <div
+    className="fd-panel__head"
+  >
+    <h3
+      className="fd-panel__title"
+    >
+      Panel Header with Actions
+    </h3>
+    <p
+      className="fd-panel__description"
+    >
+      Panel Description
+    </p>
+  </div>
+  <div
+    className="fd-panel__actions"
+  >
+    <button
+      className="fd-button fd-button--compact sap-icon--add"
+    >
+      Add New Button
+    </button>
+  </div>
+</div>
+`;
