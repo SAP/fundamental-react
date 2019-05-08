@@ -1,0 +1,259 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TreeView.Head /> create tree head component 1`] = `
+<div>
+  <div
+    className="fd-tree fd-tree--header"
+  >
+    <div
+      className="fd-tree__row fd-tree__row--header"
+    >
+      <div
+        className="fd-tree__col fd-tree__col--control"
+      >
+        <div>
+          <button
+            aria-label="expand all"
+            aria-pressed={false}
+            className="fd-tree__control"
+            onClick={[Function]}
+          />
+          Column Header 1
+        </div>
+      </div>
+      <div
+        className="fd-tree__col"
+      >
+        Column Header 2
+      </div>
+      <div
+        className="fd-tree__col"
+      >
+        Column Header 3
+      </div>
+      <div
+        className="fd-tree__col"
+      >
+        Column Header 4
+      </div>
+    </div>
+  </div>
+  <ul
+    aria-hidden={false}
+    className="fd-tree"
+    role="tree"
+  >
+    <li
+      aria-expanded={false}
+      className="fd-tree__item"
+      id="fd-1"
+      role="treeitem"
+    >
+      <div
+        className="fd-tree__row"
+      >
+        <div
+          className="fd-tree__col fd-tree__col--control"
+        >
+          <div>
+            <button
+              aria-controls="fd-1"
+              aria-label="expand"
+              aria-pressed={false}
+              className="fd-tree__control"
+              onClick={[Function]}
+            />
+            First Level
+          </div>
+        </div>
+      </div>
+      <ul
+        aria-hidden={true}
+        className="fd-tree__group fd-tree__group--sublevel-1 is-hidden"
+        role="group"
+      >
+        <li
+          aria-expanded={false}
+          className="fd-tree__item"
+          id="fd-2"
+          role="treeitem"
+        >
+          <div
+            className="fd-tree__row"
+          >
+            <div
+              className="fd-tree__col fd-tree__col--control"
+            >
+              <div>
+                <button
+                  aria-controls="fd-2"
+                  aria-label="expand"
+                  aria-pressed={false}
+                  className="fd-tree__control"
+                  onClick={[Function]}
+                />
+                <a
+                  href="http://me.com"
+                >
+                  First Level
+                </a>
+              </div>
+            </div>
+            <div
+              className="fd-tree__col"
+            />
+            <div
+              className="fd-tree__col"
+            />
+            <div
+              className="fd-tree__col"
+            />
+          </div>
+          <ul
+            aria-hidden={true}
+            className="fd-tree__group fd-tree__group--sublevel-2 is-hidden"
+            role="group"
+          >
+            <li
+              aria-expanded={false}
+              className="fd-tree__item"
+              id="fd-3"
+              role="treeitem"
+            >
+              <div
+                className="fd-tree__row"
+              >
+                <div
+                  className="fd-tree__col fd-tree__col--control"
+                >
+                  <a
+                    href="http://amazon.com"
+                  >
+                    Amazon
+                  </a>
+                </div>
+                <div
+                  className="fd-tree__col"
+                >
+                  <a
+                    href="http://google.com"
+                  >
+                    Google
+                  </a>
+                </div>
+                <div
+                  className="fd-tree__col"
+                >
+                  <a
+                    href="http://bing.com"
+                  >
+                    Bing
+                  </a>
+                </div>
+                <div
+                  className="fd-tree__col"
+                >
+                  <a
+                    href="http://yahoo.com"
+                  >
+                    Yahoo
+                  </a>
+                </div>
+                <div
+                  className="fd-tree__col"
+                >
+                  <a
+                    href="http://sap.com"
+                  >
+                    SAP
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li
+              aria-expanded={false}
+              className="fd-tree__item"
+              id="fd-4"
+              role="treeitem"
+            >
+              <div
+                className="fd-tree__row"
+              >
+                <div
+                  className="fd-tree__col fd-tree__col--control"
+                >
+                  <a
+                    href="http://amazon.com"
+                  >
+                    Amazon
+                  </a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </li>
+        <li
+          aria-expanded={false}
+          className="fd-tree__item"
+          id="fd-5"
+          role="treeitem"
+        >
+          <div
+            className="fd-tree__row"
+          >
+            <div
+              className="fd-tree__col fd-tree__col--control"
+            >
+              <div>
+                <button
+                  aria-controls="fd-5"
+                  aria-label="expand"
+                  aria-pressed={false}
+                  className="fd-tree__control"
+                  onClick={[Function]}
+                />
+                Second Level
+              </div>
+            </div>
+            <div
+              className="fd-tree__col"
+            />
+            <div
+              className="fd-tree__col"
+            />
+            <div
+              className="fd-tree__col"
+            />
+          </div>
+          <ul
+            aria-hidden={true}
+            className="fd-tree__group fd-tree__group--sublevel-2 is-hidden"
+            role="group"
+          >
+            <li
+              aria-expanded={false}
+              className="fd-tree__item"
+              id="fd-6"
+              role="treeitem"
+            >
+              <div
+                className="fd-tree__row"
+              >
+                <div
+                  className="fd-tree__col fd-tree__col--control"
+                >
+                  <a
+                    href="http://amazon.com"
+                  >
+                    Amazon
+                  </a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+`;
