@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ListGroupItemCheckbox /> create list group 1`] = `
+<div
+  className="fd-form__item fd-form__item--check"
+>
+  <label
+    className="fd-form__label"
+    htmlFor="CndSd399"
+  >
+    <input
+      className="fd-form__control"
+      id="CndSd399"
+      type="checkbox"
+    />
+    List item 1
+  </label>
+</div>
+`;

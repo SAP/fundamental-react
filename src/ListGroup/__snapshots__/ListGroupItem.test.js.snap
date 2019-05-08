@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ListGroupItem /> create list group item 1`] = `
+<li
+  className="fd-list-group__item"
+>
+  List item 1
+  <span
+    className="fd-list-group__action blue"
+  >
+    <button
+      className="fd-button fd-button--standard sap-icon--edit"
+    />
+  </span>
+</li>
+`;
