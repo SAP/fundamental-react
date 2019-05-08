@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FormRadioGroup /> create form radio group 1`] = `
+<div
+  className="blue"
+>
+  <div
+    className="fd-form__item fd-form__item--check"
+  >
+    <label
+      className="fd-form__label"
+    >
+      <input
+        className="fd-form__control"
+        id="radio-1"
+        name="radio-group-5"
+        onChange={[Function]}
+        type="radio"
+        value="radio-1"
+      />
+      Option 1
+    </label>
+  </div>
+  <div
+    className="fd-form__item fd-form__item--check"
+  >
+    <label
+      className="fd-form__label"
+    >
+      <input
+        checked={true}
+        className="fd-form__control"
+        id="radio-2"
+        name="radio-group-5"
+        onChange={[Function]}
+        type="radio"
+        value="radio-2"
+      />
+      Option 2
+    </label>
+  </div>
+  <div
+    className="fd-form__item fd-form__item--check"
+  >
+    <label
+      className="fd-form__label"
+    >
+      <input
+        className="fd-form__control"
+        id="radio-3"
+        name="radio-group-5"
+        onChange={[Function]}
+        type="radio"
+        value="radio-3"
+      />
+      Option 3
+    </label>
+  </div>
+</div>
+`;

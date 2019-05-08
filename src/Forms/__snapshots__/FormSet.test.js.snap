@@ -1,0 +1,120 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FormSet /> create form item 1`] = `
+<div
+  className="fd-form__set"
+>
+  <div
+    className="fd-form__item fd-form__item--inline fd-form__item--check"
+  >
+    <label
+      className="fd-form__label"
+      forAttr="input-1"
+    >
+      Default Input
+      
+    </label>
+    <input
+      className="fd-form__control"
+      id="input-1"
+      placeholder="Field placeholder text"
+      type="text"
+    />
+  </div>
+  <div
+    className="fd-form__item"
+  >
+    <label
+      aria-required={true}
+      className="fd-form__label"
+      forAttr="input-1"
+    >
+      Default Input
+      *
+    </label>
+    <input
+      className="fd-form__control is-warning"
+      id="input-1"
+      placeholder="Field placeholder text"
+      type="text"
+    />
+    <textarea
+      className="fd-form__control blue"
+      id="textarea-1"
+    >
+      Pellentesque metus lacus commodo eget justo ut rutrum varius nunc.
+    </textarea>
+    <textarea
+      className="fd-form__control"
+      id="textarea-2"
+    >
+      Pellentesque metus lacus commodo eget justo ut rutrum varius nunc.
+    </textarea>
+    <span
+      className="fd-form__message fd-form__message--help"
+    >
+      Pellentesque metus lacus commodo eget justo ut rutrum varius nunc
+    </span>
+    <span
+      className="fd-form__message blue"
+    >
+      Pellentesque metus lacus commodo eget justo ut rutrum varius nunc
+    </span>
+    <select
+      className="fd-form__control"
+      id="select-1"
+    >
+      <option
+        value="1"
+      >
+        Duis malesuada odio volutpat elementum
+      </option>
+      <option
+        value="2"
+      >
+        Suspendisse ante ligula
+      </option>
+      <option
+        value="3"
+      >
+        Sed bibendum sapien at posuere interdum
+      </option>
+    </select>
+    <select
+      className="fd-form__control blue"
+      disabled={true}
+      id="select-1"
+    >
+      <option
+        value="1"
+      >
+        Duis malesuada odio volutpat elementum
+      </option>
+    </select>
+  </div>
+</div>
+`;
+
+exports[`<FormSet /> create form item 2`] = `
+<div
+  className="fd-form__set blue"
+>
+  <div
+    className="fd-form__item fd-form__item--inline fd-form__item--check"
+  >
+    <label
+      className="fd-form__label"
+      forAttr="input-1"
+    >
+      Default Input
+      
+    </label>
+    <input
+      className="fd-form__control"
+      id="input-1"
+      placeholder="Field placeholder text"
+      type="text"
+    />
+  </div>
+</div>
+`;

@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FormLabel /> create form label 1`] = `
+<label
+  aria-required={true}
+  className="fd-form__label"
+  forAttr="input-1"
+>
+  Default Input
+  *
+</label>
+`;
