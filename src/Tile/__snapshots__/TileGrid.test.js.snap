@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TileGrid /> create tileGrid component 1`] = `
+<div
+  className="fd-tile-grid fd-tile-grid--3col blue"
+>
+  <div
+    className="fd-tile fd-has-grid-row-span-2 fd-has-background-color-accent-7"
+  >
+    <div
+      className="fd-tile__content"
+    >
+      <h3
+        className="fd-tile__title"
+      >
+        Tile Title
+      </h3>
+      <p>
+        Tile Description
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<TileGrid /> create tileGrid component 2`] = `
+<div
+  className="fd-tile-grid fd-tile-grid--4col"
+>
+  <div
+    className="fd-tile fd-has-grid-row-span-2 fd-has-background-color-accent-7"
+  >
+    <div
+      className="fd-tile__content"
+    >
+      <h3
+        className="fd-tile__title"
+      >
+        Tile Title
+      </h3>
+      <p>
+        Tile Description
+      </p>
+    </div>
+  </div>
+</div>
+`;
