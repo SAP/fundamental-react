@@ -195,6 +195,7 @@ class TimeItem extends Component {
             }
         }
     };
+
     render() {
         const { style, arialabel } = this.state;
         const { type, placeholder, disabled, spinners, upButtonProps, downButtonProps, inputProps } = this.props;
