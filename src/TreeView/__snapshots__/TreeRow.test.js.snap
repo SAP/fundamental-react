@@ -723,7 +723,7 @@ exports[`<TreeView.Row /> create tree component 2`] = `
 </div>
 `;
 
-exports[`<TreeView /> create tree component 3`] = `
+exports[`<TreeView.Row /> create tree component 3`] = `
 <div>
   <div
     className="fd-tree fd-tree--header"
