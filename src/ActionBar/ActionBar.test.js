@@ -74,20 +74,6 @@ describe('<ActionBar />', () => {
         expect(tree).toMatchSnapshot();
     });
 
-    describe('ActionBar Header', () => {
-        test('should allow customization of header level', () => {
-            const element = mount(
-                <ActionBar.Header
-                    description=''
-                    headingLevel={2}
-                    title='' />
-            );
-            expect(
-                element.find('.fd-action-bar__title').type()
-            ).toBe('h2');
-        });
-    });
-
     describe('Prop spreading', () => {
         test('should allow props to be spread to the ActionBar component', () => {
             const element = mount(<ActionBar data-sample='Sample' />);
@@ -102,70 +88,6 @@ describe('<ActionBar />', () => {
 
             expect(
                 element.getDOMNode().querySelector('div').attributes['data-sample'].value
-            ).toBe('Sample');
-        });
-
-        test('should allow props to be spread to the ActionBarBack component', () => {
-            const element = mount(<ActionBar.Back data-sample='Sample' />);
-
-            expect(
-                element.getDOMNode().attributes['data-sample'].value
-            ).toBe('Sample');
-        });
-
-        test('should allow props to be spread to the ActionBarBack component\'s button element', () => {
-
-            const element = mount(<ActionBar.Back buttonProps={{ 'data-sample': 'Sample' }} />);
-
-            expect(
-                element.find('button').getDOMNode().attributes['data-sample'].value
-            ).toBe('Sample');
-        });
-
-        test('should allow props to be spread to the ActionBarHeader component', () => {
-            const element = mount(
-                <ActionBar.Header
-                    data-sample='Sample'
-                    description=''
-                    title='' />
-            );
-
-            expect(
-                element.getDOMNode().attributes['data-sample'].value
-            ).toBe('Sample');
-        });
-
-        test('should allow props to be spread to the ActionBarHeader component\'s heading element', () => {
-            const element = mount(
-                <ActionBar.Header
-                    description=''
-                    title=''
-                    titleProps={{ 'data-sample': 'Sample' }} />
-            );
-
-            expect(
-                element.find('h3').getDOMNode().attributes['data-sample'].value
-            ).toBe('Sample');
-        });
-
-        test('should allow props to be spread to the ActionBarHeader component\'s p element', () => {
-            const element = mount(
-                <ActionBar.Header
-                    description='Sample Description'
-                    descriptionProps={{ 'data-sample': 'Sample' }}
-                    title='' />
-            );
-
-            expect(
-                element.find('p').getDOMNode().attributes['data-sample'].value
-            ).toBe('Sample');
-        });
-
-        test('should allow props to be spread to the ActionBarActions component', () => {
-            const element = mount(<ActionBar.Actions data-sample='Sample' />);
-
-            expect(
-                element.getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
         });
     });
