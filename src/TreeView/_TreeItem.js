@@ -31,33 +31,29 @@ class TreeItem extends Component {
         const isExpanded = isExpandedProp || !!expandData[this.rowId];
 
         // Render child TreeBranch with correct props
-        const childBranch = React.Children.map(children, (child) => {
-            const isTreeBranch = child.type && child.type.displayName === 'TreeView.Branch';
-
-            return isTreeBranch ?
-                React.cloneElement(child, {
+        const childBranch = React.Children.toArray(children)
+            .filter(child => child.type && child.type.displayName === 'TreeView.Branch')
+            .map(child => {
+                return React.cloneElement(child, {
                     expandData,
                     onExpandClick,
                     isExpanded,
                     // Increment child branch level
                     level: level + 1
-                }) :
-                null;
-        });
+                });
+            });
 
         // Render child TreeRow with correct props
-        const childRow = React.Children.map(children, (child) => {
-            const isTreeRow = child.type && child.type.displayName === 'TreeView.Row';
-
-            return isTreeRow ?
-                React.cloneElement(child, {
+        const childRow = React.Children.toArray(children)
+            .filter(child => child.type && child.type.displayName === 'TreeView.Row')
+            .map(child => {
+                return React.cloneElement(child, {
                     isExpanded,
                     onExpandClick: () => onExpandClick(this.rowId),
                     isParent: !!childBranch[0],
                     rowId: this.rowId
-                }) :
-                null;
-        });
+                });
+            });
 
         return (
             <li

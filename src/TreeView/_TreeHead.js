@@ -23,7 +23,7 @@ class TreeHead extends Component {
             <div {...rest} className={headerClassName}>
                 <div className='fd-tree__row fd-tree__row--header'>
                     {
-                        React.Children.map(children, (child, index) => {
+                        React.Children.toArray(children).map((child, index) => {
                             const isFirstTreeCol = index === 0 && child.type && child.type.displayName === 'TreeView.Col';
 
                             // Add control class to first TreeCol element

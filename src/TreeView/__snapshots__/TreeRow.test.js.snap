@@ -722,3 +722,98 @@ exports[`<TreeView.Row /> create tree component 2`] = `
   </ul>
 </div>
 `;
+
+exports[`<TreeView.Row /> create tree component 3`] = `
+<div>
+  <div
+    className="fd-tree fd-tree--header"
+  >
+    <div
+      className="fd-tree__row fd-tree__row--header"
+    >
+      <div
+        className="fd-tree__col fd-tree__col--control"
+      >
+        <div>
+          <button
+            aria-label="expand all"
+            aria-pressed={false}
+            className="fd-tree__control"
+            onClick={[Function]}
+          />
+          Column Header 1
+        </div>
+      </div>
+      <div
+        className="fd-tree__col"
+      >
+        Column Header 3
+      </div>
+      <div
+        className="fd-tree__col"
+      >
+        Column Header 4
+      </div>
+    </div>
+  </div>
+  <ul
+    aria-hidden={false}
+    className="fd-tree"
+    role="tree"
+  >
+    <li
+      aria-expanded={false}
+      className="fd-tree__item"
+      id="fd-18"
+      role="treeitem"
+    >
+      <div
+        className="fd-tree__row"
+      >
+        <div
+          className="fd-tree__col fd-tree__col--control"
+        >
+          <div>
+            <button
+              aria-controls="fd-18"
+              aria-label="expand"
+              aria-pressed={false}
+              className="fd-tree__control"
+              onClick={[Function]}
+            />
+            First Level
+          </div>
+        </div>
+      </div>
+      <ul
+        aria-hidden={true}
+        className="fd-tree__group fd-tree__group--sublevel-1 is-hidden"
+        role="group"
+      >
+        <li
+          aria-expanded={false}
+          className="fd-tree__item"
+          id="fd-19"
+          role="treeitem"
+        >
+          <div
+            className="fd-tree__row"
+          >
+            <div
+              className="fd-tree__col fd-tree__col--control"
+            >
+              Second level
+            </div>
+            <div
+              className="fd-tree__col"
+            />
+            <div
+              className="fd-tree__col"
+            />
+          </div>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+`;

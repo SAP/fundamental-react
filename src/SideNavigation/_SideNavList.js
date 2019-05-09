@@ -30,17 +30,13 @@ class SideNavList extends React.Component {
                 aria-expanded={hasParent && open}
                 aria-hidden={hasParent && !open}
                 className={sideNavListClasses}>
-                {React.Children.map(children, (child) => {
-                    if (React.isValidElement(child)) {
-                        return React.cloneElement(child, {
-                            isSubItem: hasParent,
-                            onItemSelect: onItemSelect,
-                            selected: selectedId === child.props.id,
-                            selectedId: selectedId
-                        });
-                    } else {
-                        return child;
-                    }
+                {React.Children.toArray(children).map(child => {
+                    return React.cloneElement(child, {
+                        isSubItem: hasParent,
+                        onItemSelect: onItemSelect,
+                        selected: selectedId === child.props.id,
+                        selectedId: selectedId
+                    });
                 })}
             </ul>
         );
