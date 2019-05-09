@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.5.2-rc.9"></a>
+## [0.5.2-rc.9](https://github.com/SAP/fundamental-react/compare/v0.5.2-rc.8...v0.5.2-rc.9) (2019-05-09)
+
+
+### Bug Fixes
+
+* Forms;SideNav;TreeView: Make React.Children null safe ([#535](https://github.com/SAP/fundamental-react/issues/535)) ([76c13e1](https://github.com/SAP/fundamental-react/commit/76c13e1))
+
+
+
 <a name="0.5.2-rc.8"></a>
 ## [0.5.2-rc.8](https://github.com/SAP/fundamental-react/compare/v0.5.2-rc.7...v0.5.2-rc.8) (2019-05-07)
 
