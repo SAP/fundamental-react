@@ -70,6 +70,22 @@ describe('<Popover />', () => {
             noArrow />
     );
 
+    const popOverDisableEdgeDetection = (
+        <Popover
+            body={
+                <Menu>
+                    <Menu.List>
+                        <Menu.Item url='/'>Option 1</Menu.Item>
+                        <Menu.Item url='/'>Option 2</Menu.Item>
+                        <Menu.Item url='/'>Option 3</Menu.Item>
+                        <Menu.Item url='/'>Option 4</Menu.Item>
+                    </Menu.List>
+                </Menu>
+            }
+            control={<Icon glyph='cart' size='xl' />}
+            disableEdgeDetection />
+    );
+
     test('create Popover', () => {
         // popover
         let component = renderer.create(popOver);
@@ -88,6 +104,11 @@ describe('<Popover />', () => {
 
         // popover with no arrow
         component = renderer.create(popOverNoArrow);
+        tree = component.toJSON();
+        expect(tree).toMatchSnapshot();
+
+        // popover with no disable edge detection
+        component = renderer.create(popOverDisableEdgeDetection);
         tree = component.toJSON();
         expect(tree).toMatchSnapshot();
     });
