@@ -32,6 +32,7 @@ class Popover extends Component {
 
     render() {
         const {
+            disableEdgeDetection,
             onClickOutside,
             onEscapeKey,
             disabled,
@@ -59,6 +60,7 @@ class Popover extends Component {
             <div {...rest} className={popoverClasses}>
                 <Popper
                     cssBlock='fd-popover'
+                    disableEdgeDetection={disableEdgeDetection}
                     noArrow={noArrow}
                     onClickOutside={chain(this.handleOutsideClick, onClickOutside)}
                     onEscapeKey={chain(this.handleOutsideClick, onEscapeKey)}
@@ -82,6 +84,7 @@ Popover.propTypes = {
     control: PropTypes.node.isRequired,
     className: PropTypes.string,
     disabled: PropTypes.bool,
+    disableEdgeDetection: PropTypes.bool,
     noArrow: PropTypes.bool,
     placement: PropTypes.oneOf(POPPER_PLACEMENTS),
     popperProps: PropTypes.object,
@@ -97,6 +100,7 @@ Popover.defaultProps = {
 Popover.propDescriptions = {
     body: 'Node(s) to render in the overlay.',
     control: 'Node to render as the reference element (that the `body` will be placed in relation to).',
+    disableEdgeDetection: 'Set to **true** to render popover without edge detection so popover will not flip from top to bottom with scroll.',
     noArrow: 'Set to **true** to render a popover without an arrow.',
     placement: 'Initial position of the `body` (overlay) related to the `control`.',
     popperProps: 'Additional props to be spread to the overlay element.',
