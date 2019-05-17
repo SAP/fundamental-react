@@ -103,7 +103,7 @@ Popover.propDescriptions = {
     disableEdgeDetection: 'Set to **true** to render popover without edge detection so popover will not flip from top to bottom with scroll.',
     noArrow: 'Set to **true** to render a popover without an arrow.',
     placement: 'Initial position of the `body` (overlay) related to the `control`.',
-    popperProps: 'Additional props to be spread to the overlay element.',
+    popperProps: 'Additional props to be spread to the overlay element, supported by [popper.js](https://popper.js.org/).',
     onClickOutside: 'Callback for consumer clicking outside of popover body.',
     onEscapeKey: 'Callback when escape key is pressed when popover body is visible.'
 };
