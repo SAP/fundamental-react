@@ -91,6 +91,7 @@ class TimePicker extends Component {
     // };
     render() {
         const {
+            popoverProps,
             id,
             inputProps,
             localizedText,
@@ -114,6 +115,7 @@ class TimePicker extends Component {
                 id={id}>
                 <div className='fd-popover fd-popover--no-arrow'>
                     <Popover
+                        {...popoverProps}
                         body={
                             <Time
                                 {...timeProps}
@@ -167,6 +169,7 @@ TimePicker.propTypes = {
         meridiemAM: PropTypes.string,
         meridiemPM: PropTypes.string
     }),
+    popoverProps: PropTypes.object,
     timeProps: PropTypes.object,
     value: PropTypes.string
 };

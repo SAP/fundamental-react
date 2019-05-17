@@ -283,5 +283,13 @@ describe('<TimePicker />', () => {
                 element.find('div.fd-popover__popper div.fd-time').getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
         });
+
+        test('should allow props to be spread to the TimePicker component\'s Popover component', () => {
+            const element = mount(<TimePicker id='testId' popoverProps={{ 'data-sample': 'Sample' }} />);
+
+            expect(
+                element.find('div.fd-popover').at(1).getDOMNode().attributes['data-sample'].value
+            ).toBe('Sample');
+        });
     });
 });
