@@ -62,7 +62,8 @@ ComboboxInput.propTypes = {
 };
 
 ComboboxInput.propDescriptions = {
-    menu: 'An object containing a `Menu` component.'
+    menu: 'An object containing a `Menu` component.',
+    popoverProps: 'Additional props to be spread to the [Popover](/popover) component.'
 };
 
 export default ComboboxInput;
