@@ -40,15 +40,11 @@ class SideNav extends Component {
 
         return (
             <nav {...rest} className={sideNavClasses}>
-                {React.Children.map(children, (child) => {
-                    if (React.isValidElement(child)) {
-                        return React.cloneElement(child, {
-                            onItemSelect: this.handleSelect,
-                            selectedId: this.state.selectedId
-                        });
-                    } else {
-                        return child;
-                    }
+                {React.Children.toArray(children).map(child => {
+                    return React.cloneElement(child, {
+                        onItemSelect: this.handleSelect,
+                        selectedId: this.state.selectedId
+                    });
                 })}
             </nav>
         );

@@ -14,7 +14,7 @@ class TreeRow extends Component {
         } = this.props;
 
         // Render child TreeCols
-        const cells = React.Children.map(children, (child, index) => {
+        const cells = React.Children.toArray(children).map((child, index) => {
             const isTreeCol = child.type && child.type.displayName === 'TreeView.Col';
             const isFirstTreeCol = index === 0 && isTreeCol;
 

@@ -183,6 +183,42 @@ describe('<TreeView.Row />', () => {
         </TreeView>
     );
 
+    const falseyCondition = false;
+    const conditionalTreeView = (
+        <TreeView>
+            <TreeView.Head>
+                <TreeView.Col>Column Header 1</TreeView.Col>
+                {falseyCondition && <TreeView.Col>Column Header 2</TreeView.Col>}
+                <TreeView.Col>Column Header 3</TreeView.Col>
+                <TreeView.Col>Column Header 4</TreeView.Col>
+            </TreeView.Head>
+            <TreeView.Tree>
+                <TreeView.Item>
+                    <TreeView.Row>
+                        <TreeView.Col>First Level</TreeView.Col>
+                    </TreeView.Row>
+                    <TreeView.Branch>
+                        <TreeView.Item>
+                            <TreeView.Row>
+                                {falseyCondition && (
+                                    <TreeView.Col>
+                                        <a href='http://me.com'>First Level</a>
+                                    </TreeView.Col>
+                                )}
+                                <TreeView.Col>Second level</TreeView.Col>
+                                <TreeView.Col />
+                                <TreeView.Col />
+                            </TreeView.Row>
+                            {falseyCondition && <TreeView.Branch />}
+                        </TreeView.Item>
+                        {falseyCondition && <TreeView.Item />}
+                    </TreeView.Branch>
+                </TreeView.Item>
+                {falseyCondition && <TreeView.Item />}
+            </TreeView.Tree>
+        </TreeView>
+    );
+
     test('create tree component', () => {
         // multi-level tree
         let component = renderer.create(multiLevelTreeView);
@@ -191,6 +227,11 @@ describe('<TreeView.Row />', () => {
 
         // rich tree
         component = renderer.create(richTreeView);
+        tree = component.toJSON();
+        expect(tree).toMatchSnapshot();
+
+        // conditional tree
+        component = renderer.create(conditionalTreeView);
         tree = component.toJSON();
         expect(tree).toMatchSnapshot();
     });

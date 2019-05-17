@@ -15,17 +15,13 @@ class FormRadioGroup extends Component {
         return (
             <div
                 {...props}>
-                {React.Children.map(children, child => {
-                    if (React.isValidElement(child)) {
-                        return React.cloneElement(child, {
-                            disabled: child.props.disabled || disabled,
-                            inline: child.props.inline || inline,
-                            name: child.props.name || this.groupId,
-                            onChange: child.props.onChange || onChange
-                        });
-                    } else {
-                        return child;
-                    }
+                {React.Children.toArray(children).map(child => {
+                    return React.cloneElement(child, {
+                        disabled: child.props.disabled || disabled,
+                        inline: child.props.inline || inline,
+                        name: child.props.name || this.groupId,
+                        onChange: child.props.onChange || onChange
+                    });
                 })}
             </div>
         );
