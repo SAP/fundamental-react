@@ -193,7 +193,6 @@ TimePicker.defaultProps = {
 
 TimePicker.propDescriptions = {
     ...Time.propDescriptions,
-    popoverProps: 'Additional props to be spread to the [Popover](/popover) component.',
     timeProps: 'Additional props to be spread to the `Time` component.',
     value: 'Initial time value for the input.'
 };

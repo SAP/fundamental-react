@@ -145,7 +145,6 @@ LocalizationEditor.propDescriptions = {
         language: 'Text to display on the `<button>` element. Meant to be the language of the text in the `<input>`/`<textarea>` element.'
     },
     menu: 'An array of objects that represent the values of the elements in the dropdown menu. The shape of the objects in the array is `{ placeholder: string, language: string, inputProps: object }`.',
-    popoverProps: 'Additional props to be spread to the [Popover](/popover) component.',
     textarea: 'Set to **true** to enable a Localization Editor with a textarea.'
 };
 

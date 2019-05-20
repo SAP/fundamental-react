@@ -106,11 +106,16 @@ describe('<Popover />', () => {
         component = renderer.create(popOverNoArrow);
         tree = component.toJSON();
         expect(tree).toMatchSnapshot();
+    });
 
-        // popover with no disable edge detection
-        component = renderer.create(popOverDisableEdgeDetection);
-        tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
+    test('popper is receiving disableEdgeDetection from popover', () => {
+        // disableEdgeDetection is defaulted to false
+        const popoverWithDetection = mount(popOver);
+        expect(popoverWithDetection.props().disableEdgeDetection).toBeFalsy();
+
+        // prop is correctly changed when set to true
+        const popoverWithoutDetection = mount(popOverDisableEdgeDetection);
+        expect(popoverWithoutDetection.props().disableEdgeDetection).toBeTruthy();
     });
 
     test('handle document click to close popover', () => {

@@ -220,7 +220,6 @@ MultiInput.propDescriptions = {
     localizedTextShape: {
         imageLabel: 'Aria-label in <div> element for image.'
     },
-    popoverProps: 'Additional props to be spread to the [Popover](/popover) component.',
     onTagsUpdate: 'Callback function when a tag is added or removed. Returns array of tags selected.',
     placeHolder: 'Localized placeholder text of the input.',
     tagProps: 'Additional props to be spread to the tags `<div>` element.'

@@ -83,24 +83,3 @@ exports[`<Popover /> create Popover 4`] = `
   </div>
 </div>
 `;
-
-exports[`<Popover /> create Popover 5`] = `
-<div
-  className="fd-popover"
->
-  <div
-    onFocus={[Function]}
-    onMouseDown={[Function]}
-    onTouchStart={[Function]}
-  >
-    <div
-      className="fd-popover__control"
-    >
-      <span
-        className="sap-icon--cart sap-icon--xl"
-        onClick={[Function]}
-      />
-    </div>
-  </div>
-</div>
-`;

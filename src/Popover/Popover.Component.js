@@ -170,7 +170,7 @@ export class PopoverComponent extends React.Component {
                         <Popover
                             body={bodyContent}
                             control={<Button glyph='navigation-up-arrow' option='light' />}
-                            disableEdgeDetection='true'
+                            disableEdgeDetection
                             placement='top' />
 
                         <Popover
