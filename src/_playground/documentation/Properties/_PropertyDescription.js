@@ -1,11 +1,11 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import ReactMarkdown from 'react-markdown';
+import ReactMarkdown from 'react-markdown/with-html';
 
 const PropertyDescription = ({ description }) => (
     <React.Fragment>
         <div>
-            <ReactMarkdown source={description} />
+            <ReactMarkdown escapeHtml={false} source={description} />
         </div>
     </React.Fragment>
 );
