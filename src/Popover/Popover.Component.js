@@ -165,6 +165,24 @@ export class PopoverComponent extends React.Component {
 
                 <Example
                     centered
+                    title='Disable Edge Detection'>
+                    <div className='fd-doc__margin--popover'>
+                        <Popover
+                            body={bodyContent}
+                            control={<Button glyph='navigation-up-arrow' option='light' />}
+                            disableEdgeDetection
+                            placement='top' />
+
+                        <Popover
+                            body={bodyContent}
+                            control={<Button glyph='navigation-down-arrow' option='light' />}
+                            disableEdgeDetection
+                            placement='bottom' />
+                    </div>
+                </Example>
+
+                <Example
+                    centered
                     description={`When an overlay (\`body\`) is visible, the reference (\`control\`)
                         element must be tracked because if it overflows from its boundaries, the overlay
                         will be hidden as well.`}

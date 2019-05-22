@@ -70,6 +70,22 @@ describe('<Popover />', () => {
             noArrow />
     );
 
+    const popOverDisableEdgeDetection = (
+        <Popover
+            body={
+                <Menu>
+                    <Menu.List>
+                        <Menu.Item url='/'>Option 1</Menu.Item>
+                        <Menu.Item url='/'>Option 2</Menu.Item>
+                        <Menu.Item url='/'>Option 3</Menu.Item>
+                        <Menu.Item url='/'>Option 4</Menu.Item>
+                    </Menu.List>
+                </Menu>
+            }
+            control={<Icon glyph='cart' size='xl' />}
+            disableEdgeDetection />
+    );
+
     test('create Popover', () => {
         // popover
         let component = renderer.create(popOver);
@@ -90,6 +106,16 @@ describe('<Popover />', () => {
         component = renderer.create(popOverNoArrow);
         tree = component.toJSON();
         expect(tree).toMatchSnapshot();
+    });
+
+    test('popper is receiving disableEdgeDetection from popover', () => {
+        // disableEdgeDetection is defaulted to false
+        const popoverWithDetection = mount(popOver);
+        expect(popoverWithDetection.props().disableEdgeDetection).toBeFalsy();
+
+        // prop is correctly changed when set to true
+        const popoverWithoutDetection = mount(popOverDisableEdgeDetection);
+        expect(popoverWithoutDetection.props().disableEdgeDetection).toBeTruthy();
     });
 
     test('handle document click to close popover', () => {

@@ -241,5 +241,13 @@ describe('<MultiInput />', () => {
                 element.find('.fd-multi-input-tags').getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
         });
+
+        test('should allow props to be spread to the MultiInput component\'s Popover component', () => {
+            const element = mount(<MultiInput data={data} popoverProps={{ 'data-sample': 'Sample' }} />);
+
+            expect(
+                element.find('div.fd-popover').getDOMNode().attributes['data-sample'].value
+            ).toBe('Sample');
+        });
     });
 });

@@ -108,6 +108,7 @@ class MultiInput extends Component {
 
     render() {
         const {
+            popoverProps,
             buttonProps,
             compact,
             className,
@@ -147,6 +148,7 @@ class MultiInput extends Component {
                 className={multiInputClasses}>
                 <div className='fd-multi-input-field'>
                     <Popover
+                        {...popoverProps}
                         body={
                             <nav className='fd-menu'>
                                 <ul {...listProps} className='fd-menu__list'>{this.createTagList(data)}</ul>
@@ -201,6 +203,7 @@ MultiInput.propTypes = {
         imageLabel: PropTypes.string
     }),
     placeHolder: PropTypes.string,
+    popoverProps: PropTypes.object,
     tagProps: PropTypes.object,
     onTagsUpdate: PropTypes.func
 };
