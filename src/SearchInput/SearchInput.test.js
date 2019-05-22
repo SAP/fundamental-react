@@ -87,15 +87,32 @@ describe('<SearchInput />', () => {
         expect(tree).toMatchSnapshot();
     });
 
-    test('calling parent onChange event', () => {
-        const wrapper = shallow(searchOnChange);
+    describe('onChange handler', () => {
+        test('calling parent onChange event', () => {
+            const wrapper = shallow(searchOnChange);
 
-        // enter text into search input
-        wrapper
-            .find(searchInput)
-            .simulate('change', { target: { value: searchData[0].text } });
+            // enter text into search input
+            wrapper
+                .find(searchInput)
+                .simulate('change', { target: { value: searchData[0].text } });
 
-        expect(wrapper.state(['value'])).toBe(searchData[0].text);
+            expect(wrapper.state(['value'])).toBe(searchData[0].text);
+            expect(wrapper.state(['isExpanded'])).toBe(true);
+            expect(wrapper.state(['filteredResult'])).toEqual(
+                expect.arrayContaining([
+                    expect.objectContaining({ text: searchData[0].text })
+                ])
+            );
+        });
+
+        test('should dispatch the onChange callback with the event', () => {
+            let f = jest.fn();
+            const element = mount(<SearchInput onChange={f} />);
+
+            element.find('input').simulate('change');
+
+            expect(f).toHaveBeenCalledTimes(1);
+        });
     });
 
     test('check for enter key press on search input', () => {
