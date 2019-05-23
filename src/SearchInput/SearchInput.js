@@ -30,26 +30,19 @@ class SearchInput extends Component {
     };
 
     onChangeHandler = event => {
-        this.setState({
-            value: event.target.value
-        });
-        if (this.props.onChange) {
-            this.props.onChange(event);
-        } else {
-            if (this.state.searchList) {
-                let filteredResult = this.state.searchList.filter(item =>
-                    item.text.toLowerCase().startsWith(event.target.value.toLowerCase())
-                );
-                this.setState({
-                    filteredResult: filteredResult
-                });
-            }
-            if (!this.state.isExpanded) {
-                this.setState({
-                    isExpanded: true
-                });
-            }
+        let filteredResult;
+        if (this.state.searchList) {
+            filteredResult = this.state.searchList.filter(item =>
+                item.text.toLowerCase().startsWith(event.target.value.toLowerCase())
+            );
         }
+        this.setState({
+            value: event.target.value,
+            isExpanded: true,
+            filteredResult: filteredResult
+        }, () => {
+            this.props.onChange(event);
+        });
     };
 
     onClickHandler = () => {
@@ -282,6 +275,7 @@ SearchInput.propTypes = {
 };
 
 SearchInput.defaultProps = {
+    onChange: () => { },
     onEnter: () => { }
 };
 
