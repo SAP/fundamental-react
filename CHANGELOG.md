@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.5.3-rc.1"></a>
+## [0.5.3-rc.1](https://github.com/SAP/fundamental-react/compare/v0.5.3-rc.0...v0.5.3-rc.1) (2019-05-23)
+
+
+### Bug Fixes
+
+* update onchange callback for searchinput ([#547](https://github.com/SAP/fundamental-react/issues/547)) ([7751b63](https://github.com/SAP/fundamental-react/commit/7751b63))
+
+
+
 <a name="0.5.3-rc.0"></a>
 ## [0.5.3-rc.0](https://github.com/SAP/fundamental-react/compare/v0.5.2...v0.5.3-rc.0) (2019-05-22)
 
