@@ -4,10 +4,13 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 const TileContent = props => {
-    const { title, children, className, headingLevel, titleProps, ...rest } = props;
+    const { title, children, className, headingLevel, titleProps, productTile, ...rest } = props;
 
     const tileContentClasses = classnames(
-        'fd-tile__content',
+        {
+            'fd-tile__content': !productTile,
+            'fd-product-tile__content': productTile
+        },
         className
     );
 
@@ -15,7 +18,7 @@ const TileContent = props => {
 
     return (
         <div {...rest} className={tileContentClasses}>
-            <HeadingTag {...titleProps} className='fd-tile__title'>{title}</HeadingTag>
+            <HeadingTag {...titleProps} className={productTile ? 'fd-product-tile__title' : 'fd-tile__title'}>{title}</HeadingTag>
             {children}
         </div>
     );

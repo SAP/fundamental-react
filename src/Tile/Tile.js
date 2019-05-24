@@ -15,12 +15,14 @@ const Tile = props => {
         backgroundColor,
         children,
         className,
+        productTile,
         ...rest
     } = props;
 
     const tileClasses = classnames(
-        'fd-tile',
         {
+            'fd-tile': !productTile,
+            'fd-product-tile': productTile,
             'is-disabled': disabled,
             [`fd-has-grid-row-span-${rowSpan}`]: !!rowSpan,
             [`fd-has-grid-column-span-${columnSpan}`]: !!columnSpan,
@@ -47,13 +49,19 @@ Tile.propTypes = {
     colorAccent: PropTypes.number,
     columnSpan: CustomPropTypes.range(1, 6),
     disabled: PropTypes.bool,
+    productTile: PropTypes.bool,
     rowSpan: PropTypes.number
+};
+
+Tile.defaultProps = {
+    productTile: false
 };
 
 Tile.propDescriptions = {
     backgroundColor: 'Sets a background color class.',
     colorAccent: 'Sets a background color accent class. Options include numbers from 1 to 9.',
     columnSpan: 'Number of columns the tile covers.',
+    productTile: '_INTERNAL USE ONLY._',
     rowSpan: 'Number of rows the tile covers.'
 };
 
