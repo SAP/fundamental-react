@@ -3,14 +3,17 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 const TileMedia = props => {
-    const { children, className, ...rest } = props;
+    const { children, className, productTile, ...rest } = props;
 
     const tileMediaClasses = classnames(
-        'fd-tile__media',
+        {
+            'fd-tile__media': !productTile,
+            'fd-product-tile__media': productTile
+        },
         className
     );
 
-    return <div {...rest} className={tileMediaClasses}>{children}</div>;
+    return (<div {...rest} className={tileMediaClasses}>{children}</div>);
 };
 
 TileMedia.displayName = 'Tile.Media';

@@ -1,19 +1,11 @@
-import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
+import TileMedia from './_TileMedia';
 
 const ProductTileMedia = props => {
-    const { image, className, ...rest } = props;
-
-    const tileProductMediaClasses = classnames(
-        'fd-product-tile__media',
-        className
-    );
-
+    const { image } = props;
     return (
-        <div
-            {...rest}
-            className={tileProductMediaClasses}
+        <TileMedia productTile {...props}
             style={{ backgroundImage: 'url(' + image + ')' }} />
     );
 };
@@ -21,8 +13,7 @@ const ProductTileMedia = props => {
 ProductTileMedia.displayName = 'ProductTile.Media';
 
 ProductTileMedia.propTypes = {
-    image: PropTypes.string.isRequired,
-    className: PropTypes.string
+    image: PropTypes.string.isRequired
 };
 
 ProductTileMedia.propDescriptions = {
