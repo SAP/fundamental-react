@@ -4,6 +4,7 @@ import TileMedia from './_TileMedia';
 
 const ProductTileMedia = props => {
     const { image } = props;
+
     return (
         <TileMedia productTile {...props}
             style={{ backgroundImage: 'url(' + image + ')' }} />

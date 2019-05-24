@@ -3,6 +3,7 @@
 exports[`<ProductTile.Media /> create ProductTile.Media component 1`] = `
 <div
   className="fd-product-tile__media"
+  image="https://techne.yaas.io/images/product-thumbnail-wide.png"
   style={
     Object {
       "backgroundImage": "url(https://techne.yaas.io/images/product-thumbnail-wide.png)",

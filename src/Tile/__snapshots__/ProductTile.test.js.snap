@@ -7,6 +7,7 @@ exports[`<ProductTile /> create ProductTile component 1`] = `
 >
   <div
     className="fd-product-tile__media"
+    image="https://techne.yaas.io/images/product-thumbnail-wide.png"
     style={
       Object {
         "backgroundImage": "url(https://techne.yaas.io/images/product-thumbnail-wide.png)",
@@ -34,6 +35,7 @@ exports[`<ProductTile /> create ProductTile component 2`] = `
 >
   <div
     className="fd-product-tile__media blue"
+    image="https://techne.yaas.io/images/product-thumbnail-wide.png"
     style={
       Object {
         "backgroundImage": "url(https://techne.yaas.io/images/product-thumbnail-wide.png)",
