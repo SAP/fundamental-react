@@ -17,6 +17,13 @@ describe('<ProductTileContent />', () => {
 
     });
 
+    test('className is correct', () => {
+        const wrapper = mount(<ProductTile.Content />);
+
+        expect(wrapper.find('.fd-product-tile__content').length).toEqual(1);
+        expect(wrapper.find('.fd-tile__content').length).toEqual(0);
+    });
+
     describe('Prop spreading', () => {
 
         test('should allow props to be spread to the ProductTileContent component', () => {

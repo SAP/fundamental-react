@@ -35,6 +35,13 @@ describe('<ProductTile />', () => {
         expect(tree).toMatchSnapshot();
     });
 
+    test('className is correct', () => {
+        const wrapper = mount(<ProductTile />);
+
+        expect(wrapper.find('.fd-product-tile').length).toEqual(1);
+        expect(wrapper.find('.fd-tile').length).toEqual(0);
+    });
+
     describe('Prop spreading', () => {
         test('should allow props to be spread to the ProductTile component', () => {
             const element = mount(<ProductTile data-sample='Sample' />);
