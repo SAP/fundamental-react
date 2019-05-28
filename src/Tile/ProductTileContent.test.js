@@ -18,7 +18,7 @@ describe('<ProductTileContent />', () => {
     });
 
     test('className is correct', () => {
-        const wrapper = mount(<ProductTile.Content />);
+        const wrapper = mount(<ProductTile.Content title='Tile Title' />);
 
         expect(wrapper.find('.fd-product-tile__content').length).toEqual(1);
         expect(wrapper.find('.fd-tile__content').length).toEqual(0);
@@ -27,7 +27,7 @@ describe('<ProductTileContent />', () => {
     describe('Prop spreading', () => {
 
         test('should allow props to be spread to the ProductTileContent component', () => {
-            const element = mount(<ProductTile.Content data-sample='Sample' />);
+            const element = mount(<ProductTile.Content data-sample='Sample' title='Tile Title' />);
 
             expect(
                 element.getDOMNode().attributes['data-sample'].value
@@ -35,7 +35,7 @@ describe('<ProductTileContent />', () => {
         });
 
         test('should allow props to be spread to the ProductTileContent component\'s heading element', () => {
-            const element = mount(<ProductTile.Content titleProps={{ 'data-sample': 'Sample' }} />);
+            const element = mount(<ProductTile.Content title='Tile Title' titleProps={{ 'data-sample': 'Sample' }} />);
 
             expect(
                 element.find('.fd-product-tile__title').getDOMNode().attributes['data-sample'].value
