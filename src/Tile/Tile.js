@@ -53,10 +53,6 @@ Tile.propTypes = {
     rowSpan: PropTypes.number
 };
 
-Tile.defaultProps = {
-    productTile: false
-};
-
 Tile.propDescriptions = {
     backgroundColor: 'Sets a background color class.',
     colorAccent: 'Sets a background color accent class. Options include numbers from 1 to 9.',
