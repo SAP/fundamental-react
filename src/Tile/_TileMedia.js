@@ -1,7 +1,7 @@
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
-/*eslint-disable*/
+
 const TileMedia = props => {
     const { children, className, productTile, backgroundImage, ...rest } = props;
 
@@ -12,7 +12,6 @@ const TileMedia = props => {
         },
         className
     );
-    console.log(productTile);
 
     return (
         <div {...rest} className={tileMediaClasses}
