@@ -65,7 +65,7 @@ Tile.propDescriptions = {
     backgroundColor: 'Sets a background color class.',
     colorAccent: 'Sets a background color accent class. Options include numbers from 1 to 9.',
     columnSpan: 'Number of columns the tile covers.',
-    productTile: '_INTERNAL USE ONLY._',
+    productTile: 'Set to **true** to mark component as a product tile.',
     rowSpan: 'Number of rows the tile covers.'
 };
 

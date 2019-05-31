@@ -37,7 +37,6 @@ export { default as Pagination } from './Pagination/Pagination';
 export { default as Panel } from './Panel/Panel';
 export { default as PanelGrid } from './Panel/PanelGrid';
 export { default as Popover } from './Popover/Popover';
-export { default as ProductTile } from './Tile/ProductTile';
 export { default as SearchInput } from './SearchInput/SearchInput';
 export { default as SideNav } from './SideNavigation/SideNav';
 export { default as Tab } from './Tabs/Tab';

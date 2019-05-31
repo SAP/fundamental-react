@@ -7,9 +7,9 @@ import { Identifier } from '../../../';
 import { Image } from '../../../';
 import { ListGroup } from '../../../';
 import PropTypes from 'prop-types';
+import { Tile } from '../../../';
 import { Badge, Label, Status } from '../../../';
 import { FormGroup, FormItem, FormLabel, InputGroup } from '../../../';
-import { ProductTile, Tile } from '../../../';
 import React, { Component } from 'react';
 
 class Playground extends Component {
@@ -533,9 +533,9 @@ class Playground extends Component {
               } else if (this.state.component === 'product') {
                   componentToGenerate = (
                       <Tile>
-                          <ProductTile>
-                              <ProductTile.Media image='https://techne.yaas.io/images/product-thumbnail-wide.png' />
-                              <ProductTile.Content
+                          <Tile>
+                              <Tile.Media backgroundImage='https://techne.yaas.io/images/product-thumbnail-wide.png' />
+                              <Tile.Content
                                   title={this.retrieveValue(
                                       'title',
                                       this.state.childs.children.props.title,
@@ -548,8 +548,8 @@ class Playground extends Component {
                                           this.state.currentValues
                                       )}
                                   </p>
-                              </ProductTile.Content>
-                          </ProductTile>
+                              </Tile.Content>
+                          </Tile>
                       </Tile>
                   );
               }
