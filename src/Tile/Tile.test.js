@@ -162,9 +162,17 @@ describe('<Tile />', () => {
     });
 
     test('className is correct', () => {
-        const wrapper = mount(<Tile productTile />);
+        const wrapper = mount(<Tile productTile>
+            <Tile.Media backgroundImage='https://techne.yaas.io/images/product-thumbnail-wide.png' />
+            <Tile.Content title='Tile Title'>
+            </Tile.Content>
+        </Tile>);
 
         expect(wrapper.find('.fd-product-tile').length).toEqual(1);
+        expect(wrapper.find('.fd-product-tile__media').length).toEqual(1);
+        expect(wrapper.find('.fd-product-tile__content').length).toEqual(1);
         expect(wrapper.find('.fd-tile').length).toEqual(0);
+        expect(wrapper.find('.fd-tile__media').length).toEqual(0);
+        expect(wrapper.find('.fd-tile__content').length).toEqual(0);
     });
 });
