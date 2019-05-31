@@ -75,6 +75,32 @@ export const TileComponent = () => {
             </Example>
 
             <Example
+                title='Media with Actions Tile'>
+                <Tile>
+                    <Tile.Media>
+                        <Image photo='https://placeimg.com/400/400/nature' size='l'
+                            type='circle' />
+                    </Tile.Media>
+                    <Tile.Content title='Tile Title' />
+                    <Tile.Actions>
+                        <Popover
+                            body={
+                                <Menu>
+                                    <Menu.List>
+                                        <Menu.Item url='/'>Option 1</Menu.Item>
+                                        <Menu.Item url='/'>Option 2</Menu.Item>
+                                        <Menu.Item url='/'>Option 3</Menu.Item>
+                                        <Menu.Item url='/'>Option 4</Menu.Item>
+                                    </Menu.List>
+                                </Menu>
+                            }
+                            control={<Button glyph='vertical-grip' option='light' />}
+                            placement='bottom-end' />
+                    </Tile.Actions>
+                </Tile>
+            </Example>
+
+            <Example
                 title='Product Tile'>
                 <div>
                     <Tile productTile role='button'>

@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Tile.Media /> create tile media component 1`] = `
+<div
+  className="fd-tile__media green"
+  style={
+    Object {
+      "backgroundImage": "url(undefined)",
+    }
+  }
+>
+  <span
+    className="fd-identifier--m sap-icon--home fd-has-background-color-accent-3"
+    role="presentation"
+  />
+</div>
+`;
+
+exports[`<Tile.Media /> create tile media component 2`] = `
+<div
+  className="fd-tile__media"
+  style={
+    Object {
+      "backgroundImage": "url(https://techne.yaas.io/images/product-thumbnail-wide.png)",
+    }
+  }
+/>
+`;

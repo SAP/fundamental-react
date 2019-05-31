@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Tile.Actions /> create Tile.Actions component 1`] = `
+<div
+  className="fd-tile__actions yellow"
+>
+  <div
+    className="fd-popover"
+  >
+    <div
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      onTouchStart={[Function]}
+    >
+      <div
+        className="fd-popover__control"
+      >
+        <button
+          className="fd-button fd-button--standard sap-icon--vertical-grip"
+          onClick={[Function]}
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;

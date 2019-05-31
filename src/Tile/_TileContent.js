@@ -14,11 +14,19 @@ const TileContent = props => {
         className
     );
 
+    const tileContentHeadingClass = classnames(
+        {
+            'fd-tile__title': !productTile,
+            'fd-product-tile__title': productTile
+        },
+        className
+    );
+
     const HeadingTag = `h${headingLevel}`;
 
     return (
         <div {...rest} className={tileContentClasses}>
-            <HeadingTag {...titleProps} className={productTile ? 'fd-product-tile__title' : 'fd-tile__title'}>{title}</HeadingTag>
+            <HeadingTag {...titleProps} className={tileContentHeadingClass}>{title}</HeadingTag>
             {children}
         </div>
     );
