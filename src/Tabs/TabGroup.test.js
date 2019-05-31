@@ -85,7 +85,7 @@ describe('<Tabs />', () => {
             const element = mount(<TabGroup data-sample='Sample' />);
 
             expect(
-                element.getDOMNode().attributes['data-sample'].value
+                element.find('ul').getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
         });
     });
