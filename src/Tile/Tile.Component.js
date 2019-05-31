@@ -1,6 +1,6 @@
 import path from 'path';
 import React from 'react';
-import { Button, Identifier, Image, Menu, Popover, ProductTile, Tile, TileGrid } from '../';
+import { Button, Identifier, Image, Menu, Popover, Tile, TileGrid } from '../';
 import { ComponentPage, Example, Playground, Separator } from '../_playground';
 
 export const TileComponent = () => {
@@ -77,21 +77,21 @@ export const TileComponent = () => {
             <Example
                 title='Product Tile'>
                 <div>
-                    <ProductTile role='button'>
-                        <ProductTile.Media image='https://placeimg.com/820/480/any' />
-                        <ProductTile.Content title='Tile Title'>
+                    <Tile productTile role='button'>
+                        <Tile.Media backgroundImage='https://placeimg.com/820/480/any' productTile />
+                        <Tile.Content productTile title='Tile Title'>
                             <p>Tile Description</p>
-                        </ProductTile.Content>
-                    </ProductTile>
+                        </Tile.Content>
+                    </Tile>
 
                     <br />
 
-                    <ProductTile disabled>
-                        <ProductTile.Media image='https://placeimg.com/820/480/any' />
-                        <ProductTile.Content title='Tile Title'>
+                    <Tile disabled productTile>
+                        <Tile.Media backgroundImage='https://placeimg.com/820/480/any' productTile />
+                        <Tile.Content productTile title='Tile Title' >
                             <p>Tile Description</p>
-                        </ProductTile.Content>
-                    </ProductTile>
+                        </Tile.Content>
+                    </Tile>
                 </div>
             </Example>
 

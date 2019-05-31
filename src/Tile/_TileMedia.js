@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 const TileMedia = props => {
-    const { children, className, productTile, ...rest } = props;
+    const { children, className, productTile, backgroundImage, ...rest } = props;
 
     const tileMediaClasses = classnames(
         {
@@ -13,12 +13,14 @@ const TileMedia = props => {
         className
     );
 
-    return (<div {...rest} className={tileMediaClasses}>{children}</div>);
+    return (<div {...rest} className={tileMediaClasses}
+        style={{ backgroundImage: 'url(' + backgroundImage + ')' }}>{children}</div>);
 };
 
 TileMedia.displayName = 'Tile.Media';
 
 TileMedia.propTypes = {
+    backgroundImage: PropTypes.string,
     children: PropTypes.node,
     className: PropTypes.string
 };
