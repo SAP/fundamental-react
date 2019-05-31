@@ -89,6 +89,26 @@ describe('<Tile />', () => {
         </Tile>
     );
 
+    const productTile = (
+        <Tile className='pink' isButton
+            productTile>
+            <Tile.Media backgroundImage='https://techne.yaas.io/images/product-thumbnail-wide.png' />
+            <Tile.Content title='Tile Title'>
+                <p>Tile Description</p>
+            </Tile.Content>
+        </Tile>
+    );
+
+    const disabledProductTile = (
+        <Tile disabled productTile>
+            <Tile.Media backgroundImage='https://techne.yaas.io/images/product-thumbnail-wide.png'
+                className='blue' />
+            <Tile.Content className='blue' title='Tile Title'>
+                <p>Tile Description</p>
+            </Tile.Content>
+        </Tile>
+    );
+
     test('create tile component', () => {
         // simple tile
         let component = renderer.create(simpleTile);
@@ -119,6 +139,16 @@ describe('<Tile />', () => {
         component = renderer.create(actionTileNoClass);
         tree = component.toJSON();
         expect(tree).toMatchSnapshot();
+
+        // product tile
+        component = renderer.create(productTile);
+        tree = component.toJSON();
+        expect(tree).toMatchSnapshot();
+
+        // disabled product tile
+        component = renderer.create(disabledProductTile);
+        tree = component.toJSON();
+        expect(tree).toMatchSnapshot();
     });
 
     describe('Prop spreading', () => {
@@ -129,5 +159,12 @@ describe('<Tile />', () => {
                 element.getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
         });
+    });
+
+    test('className is correct', () => {
+        const wrapper = mount(<Tile productTile />);
+
+        expect(wrapper.find('.fd-product-tile').length).toEqual(1);
+        expect(wrapper.find('.fd-tile').length).toEqual(0);
     });
 });
