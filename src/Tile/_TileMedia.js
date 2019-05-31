@@ -27,4 +27,8 @@ TileMedia.propTypes = {
     className: PropTypes.string
 };
 
+TileMedia.propDescriptions = {
+    backgroundImage: 'URL of the background image for product tile.'
+};
+
 export default TileMedia;
