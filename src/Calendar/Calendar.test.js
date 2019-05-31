@@ -299,6 +299,24 @@ describe('<Calendar />', () => {
         expect(newYearDisplayed.getFullYear()).toEqual(2031);
     });
 
+    // broken test for 31st of month -> needs to be tested once calendar is refactored.
+    xtest('click next button on the 31st of month', () => {
+        let wrapper = mount(defaultCalendar);
+
+        let initialDate = new Date('5/31/2019');
+        wrapper.setState({ currentDateDisplayed: initialDate });
+
+        wrapper
+            .find(
+                'header.fd-calendar__header button.fd-button--light.fd-button--compact'
+            )
+            .at(3)
+            .simulate('click');
+        const newDateDisplayed = wrapper.state('currentDateDisplayed');
+
+        expect(newDateDisplayed.getMonth()).toEqual(5);
+    });
+
     test('click on day', () => {
         const wrapper = mount(defaultCalendar);
         // select first day of month
