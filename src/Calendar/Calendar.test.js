@@ -263,7 +263,9 @@ describe('<Calendar />', () => {
 
     test('click next button', () => {
         let wrapper = mount(defaultCalendar);
-        const currentDateDisplayed = Object.assign(new Date(), wrapper.state('currentDateDisplayed'));
+
+        let initialDate = new Date('3/28/2019');
+        wrapper.setState({ currentDateDisplayed: initialDate });
 
         wrapper
             .find(
@@ -273,9 +275,7 @@ describe('<Calendar />', () => {
             .simulate('click');
         const newDateDisplayed = wrapper.state('currentDateDisplayed');
 
-        expect(newDateDisplayed.getMonth()).toEqual(
-            currentDateDisplayed.getMonth() + 1
-        );
+        expect(newDateDisplayed.getMonth()).toEqual(3);
 
         // previous button when year shown
         wrapper
@@ -296,9 +296,7 @@ describe('<Calendar />', () => {
 
         const newYearDisplayed = wrapper.state('currentDateDisplayed');
 
-        expect(newYearDisplayed.getFullYear()).toEqual(
-            currentDateDisplayed.getFullYear() + 12
-        );
+        expect(newYearDisplayed.getFullYear()).toEqual(2031);
     });
 
     test('click on day', () => {
