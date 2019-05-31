@@ -78,8 +78,8 @@ export const TileComponent = () => {
                 title='Product Tile'>
                 <div>
                     <Tile productTile role='button'>
-                        <Tile.Media backgroundImage='https://placeimg.com/820/480/any' productTile />
-                        <Tile.Content productTile title='Tile Title'>
+                        <Tile.Media backgroundImage='https://placeimg.com/820/480/any' />
+                        <Tile.Content title='Tile Title'>
                             <p>Tile Description</p>
                         </Tile.Content>
                     </Tile>
@@ -87,8 +87,8 @@ export const TileComponent = () => {
                     <br />
 
                     <Tile disabled productTile>
-                        <Tile.Media backgroundImage='https://placeimg.com/820/480/any' productTile />
-                        <Tile.Content productTile title='Tile Title' >
+                        <Tile.Media backgroundImage='https://placeimg.com/820/480/any' />
+                        <Tile.Content title='Tile Title' >
                             <p>Tile Description</p>
                         </Tile.Content>
                     </Tile>

@@ -36,7 +36,11 @@ const Tile = props => {
         <div
             {...rest}
             className={tileClasses}>
-            {children}
+            {React.Children.toArray(children).map(child => {
+                return React.cloneElement(child, {
+                    productTile: productTile
+                });
+            })}
         </div>
     );
 };
