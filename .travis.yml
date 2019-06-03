@@ -32,8 +32,5 @@ jobs:
       skip_cleanup: true
       on:
         all_branches: true
-notifications:
-  email:
-    on_failure: always
-    on_success: change
+
 
