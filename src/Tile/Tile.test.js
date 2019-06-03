@@ -90,9 +90,9 @@ describe('<Tile />', () => {
     );
 
     const productTile = (
-        <Tile className='pink' isButton
+        <Tile className='pink'
             productTile>
-            <Tile.Media backgroundImage='https://techne.yaas.io/images/product-thumbnail-wide.png' />
+            <Tile.Media backgroundImage='www.image.com' />
             <Tile.Content title='Tile Title'>
                 <p>Tile Description</p>
             </Tile.Content>
@@ -101,7 +101,7 @@ describe('<Tile />', () => {
 
     const disabledProductTile = (
         <Tile disabled productTile>
-            <Tile.Media backgroundImage='https://techne.yaas.io/images/product-thumbnail-wide.png'
+            <Tile.Media backgroundImage='www.image.com'
                 className='blue' />
             <Tile.Content className='blue' title='Tile Title'>
                 <p>Tile Description</p>
