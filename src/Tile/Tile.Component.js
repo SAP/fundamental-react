@@ -102,8 +102,8 @@ export const TileComponent = () => {
 
             <Example
                 title='Product Tile'>
-                <Tile productTile role='button'>
-                    <Tile.Media backgroundImage='https://placeimg.com/1600/400/nature' />
+                <Tile backgroundImage='https://placeimg.com/1600/400/nature' productTile
+                    role='button'>
                     <Tile.Content title='Tile Title'>
                         <p>Tile Description</p>
                     </Tile.Content>
@@ -112,8 +112,8 @@ export const TileComponent = () => {
 
             <Example
                 title='Disabled Product Tile'>
-                <Tile disabled productTile>
-                    <Tile.Media backgroundImage='https://placeimg.com/1600/400/nature' />
+                <Tile backgroundImage='https://placeimg.com/1600/400/nature' disabled
+                    productTile>
                     <Tile.Content title='Tile Title' >
                         <p>Tile Description</p>
                     </Tile.Content>

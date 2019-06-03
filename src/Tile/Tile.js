@@ -13,6 +13,7 @@ const Tile = props => {
         columnSpan,
         colorAccent,
         backgroundColor,
+        backgroundImage,
         children,
         className,
         productTile,
@@ -36,14 +37,19 @@ const Tile = props => {
         <div
             {...rest}
             className={tileClasses}>
+            {productTile &&
+                <div className='fd-product-tile__media' style={{ backgroundImage: 'url(' + backgroundImage + ')' }} />
+            }
             {React.Children.toArray(children).map(child => {
-                if (child.type !== TileActions) {
-                    return React.cloneElement(child, {
-                        productTile: productTile
-                    });
-                } else {
+                const isAction = child.type && child.type.displayName === 'Tile.Actions';
+
+                if (isAction) {
                     return child;
                 }
+
+                return React.cloneElement(child, {
+                    productTile: productTile
+                });
             })}
         </div>
     );
@@ -53,6 +59,7 @@ Tile.displayName = 'Tile';
 
 Tile.propTypes = {
     backgroundColor: PropTypes.number,
+    backgroundImage: PropTypes.string,
     className: PropTypes.string,
     colorAccent: PropTypes.number,
     columnSpan: CustomPropTypes.range(1, 6),
@@ -63,6 +70,7 @@ Tile.propTypes = {
 
 Tile.propDescriptions = {
     backgroundColor: 'Sets a background color class.',
+    backgroundImage: 'URL of the background image for product tile.',
     colorAccent: 'Sets a background color accent class. Options include numbers from 1 to 9.',
     columnSpan: 'Number of columns the tile covers.',
     productTile: 'Set to **true** to mark component as a product tile.',
