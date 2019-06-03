@@ -1,7 +1,7 @@
 import path from 'path';
 import React from 'react';
 import { Button, Identifier, Image, Menu, Popover, Tile, TileGrid } from '../';
-import { ComponentPage, Example, Playground, Separator } from '../_playground';
+import { ComponentPage, Example } from '../_playground';
 
 export const TileComponent = () => {
     return (
@@ -162,33 +162,6 @@ export const TileComponent = () => {
                     </Tile>
                 </TileGrid>
             </Example>
-
-            <Separator />
-
-            <Playground
-                component='tile'
-                schema={[
-                    {
-                        attribute: 'type',
-                        typeOfAttribute: 'component',
-                        'enum': ['simple', 'media', 'product']
-                    },
-                    {
-                        attribute: 'title',
-                        typeOfAttribute: 'string'
-                    },
-                    {
-                        attribute: 'children',
-                        typeOfAttribute: 'string'
-                    }
-                ]}>
-                <Tile>
-                    <Tile.Content title='Tile Title'>
-                        <p>Tile Description</p>
-                    </Tile.Content>
-                </Tile>
-            </Playground>
-
         </ComponentPage>
     );
 };

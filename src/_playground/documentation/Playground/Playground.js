@@ -7,7 +7,6 @@ import { Identifier } from '../../../';
 import { Image } from '../../../';
 import { ListGroup } from '../../../';
 import PropTypes from 'prop-types';
-import { Tile } from '../../../';
 import { Badge, Label, Status } from '../../../';
 import { FormGroup, FormItem, FormLabel, InputGroup } from '../../../';
 import React, { Component } from 'react';
@@ -489,70 +488,6 @@ class Playground extends Component {
                       </ListGroup.Item>
                   </ListGroup>
               );
-              break;
-          case 'tile':
-              if (this.state.component === '' || this.state.component === 'simple') {
-                  componentToGenerate = (
-                      <Tile>
-                          <Tile.Content
-                              title={this.retrieveValue(
-                                  'title',
-                                  this.state.childs.children.props.title,
-                                  this.state.currentValues
-                              )}>
-                              <p>
-                                  {this.retrieveValue(
-                                      'children',
-                                      this.state.childs.children.props.children.props.children,
-                                      this.state.currentValues
-                                  )}
-                              </p>
-                          </Tile.Content>
-                          <Tile.Actions>
-                              <Dropdown size='m' />
-                          </Tile.Actions>
-                      </Tile>
-                  );
-              } else if (this.state.component === 'media') {
-                  componentToGenerate = (
-                      <Tile>
-                          <Tile.Media>
-                              <Image photo='https://placeimg.com/400/400/nature' size='m' />
-                          </Tile.Media>
-                          <Tile.Content
-                              title={this.retrieveValue(
-                                  'title',
-                                  this.state.childs.children.props.title,
-                                  this.state.currentValues
-                              )} />
-                          <Tile.Actions>
-                              <Dropdown size='m' />
-                          </Tile.Actions>
-                      </Tile>
-                  );
-              } else if (this.state.component === 'product') {
-                  componentToGenerate = (
-                      <Tile>
-                          <Tile>
-                              <Tile.Media backgroundImage='https://techne.yaas.io/images/product-thumbnail-wide.png' />
-                              <Tile.Content
-                                  title={this.retrieveValue(
-                                      'title',
-                                      this.state.childs.children.props.title,
-                                      this.state.currentValues
-                                  )}>
-                                  <p>
-                                      {this.retrieveValue(
-                                          'children',
-                                          this.state.childs.children.props.children.props.children,
-                                          this.state.currentValues
-                                      )}
-                                  </p>
-                              </Tile.Content>
-                          </Tile>
-                      </Tile>
-                  );
-              }
               break;
 
           default:

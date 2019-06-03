@@ -26,7 +26,7 @@ describe('<Tile />', () => {
     );
 
     const mediaTile = (
-        <Tile isButton>
+        <Tile>
             <Tile.Media className='green'>
                 <Identifier color={3} glyph='home'
                     size='m' />
@@ -58,7 +58,7 @@ describe('<Tile />', () => {
     );
 
     const mediaTileNoClass = (
-        <Tile isButton>
+        <Tile>
             <Tile.Media>
                 <Identifier color={3} glyph='home'
                     size='m' />
@@ -90,9 +90,9 @@ describe('<Tile />', () => {
     );
 
     const productTile = (
-        <Tile className='pink'
+        <Tile backgroundImage='www.image.com' className='pink'
             productTile>
-            <Tile.Media backgroundImage='www.image.com' />
+            <Tile.Media />
             <Tile.Content title='Tile Title'>
                 <p>Tile Description</p>
             </Tile.Content>
@@ -100,8 +100,9 @@ describe('<Tile />', () => {
     );
 
     const disabledProductTile = (
-        <Tile disabled productTile>
-            <Tile.Media backgroundImage='www.image.com'
+        <Tile backgroundImage='www.image.com' disabled
+            productTile>
+            <Tile.Media
                 className='blue' />
             <Tile.Content className='blue' title='Tile Title'>
                 <p>Tile Description</p>
@@ -161,18 +162,15 @@ describe('<Tile />', () => {
         });
     });
 
-    test('className is correct', () => {
+    test('classnames are correct on product tile', () => {
         const wrapper = mount(<Tile productTile>
-            <Tile.Media backgroundImage='https://techne.yaas.io/images/product-thumbnail-wide.png' />
             <Tile.Content title='Tile Title'>
             </Tile.Content>
         </Tile>);
 
         expect(wrapper.find('.fd-product-tile').length).toEqual(1);
-        expect(wrapper.find('.fd-product-tile__media').length).toEqual(1);
         expect(wrapper.find('.fd-product-tile__content').length).toEqual(1);
         expect(wrapper.find('.fd-tile').length).toEqual(0);
-        expect(wrapper.find('.fd-tile__media').length).toEqual(0);
         expect(wrapper.find('.fd-tile__content').length).toEqual(0);
     });
 });

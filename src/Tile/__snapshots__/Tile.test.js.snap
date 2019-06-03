@@ -41,15 +41,9 @@ exports[`<Tile /> create tile component 2`] = `
 exports[`<Tile /> create tile component 3`] = `
 <div
   className="fd-tile"
-  isButton={true}
 >
   <div
     className="fd-tile__media green"
-    style={
-      Object {
-        "backgroundImage": "url(undefined)",
-      }
-    }
   >
     <span
       className="fd-identifier--m sap-icon--home fd-has-background-color-accent-3"
@@ -112,15 +106,9 @@ exports[`<Tile /> create tile component 4`] = `
 exports[`<Tile /> create tile component 5`] = `
 <div
   className="fd-tile"
-  isButton={true}
 >
   <div
     className="fd-tile__media"
-    style={
-      Object {
-        "backgroundImage": "url(undefined)",
-      }
-    }
   >
     <span
       className="fd-identifier--m sap-icon--home fd-has-background-color-accent-3"
@@ -183,15 +171,17 @@ exports[`<Tile /> create tile component 6`] = `
 exports[`<Tile /> create tile component 7`] = `
 <div
   className="fd-product-tile pink"
-  isButton={true}
 >
   <div
     className="fd-product-tile__media"
     style={
       Object {
-        "backgroundImage": "url(https://techne.yaas.io/images/product-thumbnail-wide.png)",
+        "backgroundImage": "url(www.image.com)",
       }
     }
+  />
+  <div
+    className="fd-tile__media"
   />
   <div
     className="fd-product-tile__content"
@@ -213,12 +203,15 @@ exports[`<Tile /> create tile component 8`] = `
   className="fd-product-tile is-disabled"
 >
   <div
-    className="fd-product-tile__media blue"
+    className="fd-product-tile__media"
     style={
       Object {
-        "backgroundImage": "url(https://techne.yaas.io/images/product-thumbnail-wide.png)",
+        "backgroundImage": "url(www.image.com)",
       }
     }
+  />
+  <div
+    className="fd-tile__media blue"
   />
   <div
     className="fd-product-tile__content blue"

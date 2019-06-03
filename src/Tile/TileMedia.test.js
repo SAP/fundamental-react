@@ -12,17 +12,9 @@ describe('<Tile.Media />', () => {
         </Tile.Media>
     );
 
-    const productTileMedia = (
-        <Tile.Media backgroundImage='https://techne.yaas.io/images/product-thumbnail-wide.png' />
-    );
-
     test('create tile media component', () => {
         let component = renderer.create(tileMedia);
         let tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-
-        component = renderer.create(productTileMedia);
-        tree = component.toJSON();
         expect(tree).toMatchSnapshot();
     });
 
