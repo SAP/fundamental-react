@@ -102,23 +102,22 @@ export const TileComponent = () => {
 
             <Example
                 title='Product Tile'>
-                <div>
-                    <Tile productTile role='button'>
-                        <Tile.Media backgroundImage='https://placeimg.com/820/480/any' />
-                        <Tile.Content title='Tile Title'>
-                            <p>Tile Description</p>
-                        </Tile.Content>
-                    </Tile>
+                <Tile productTile role='button'>
+                    <Tile.Media backgroundImage='https://placeimg.com/1600/400/nature' />
+                    <Tile.Content title='Tile Title'>
+                        <p>Tile Description</p>
+                    </Tile.Content>
+                </Tile>
+            </Example>
 
-                    <br />
-
-                    <Tile disabled productTile>
-                        <Tile.Media backgroundImage='https://placeimg.com/820/480/any' />
-                        <Tile.Content title='Tile Title' >
-                            <p>Tile Description</p>
-                        </Tile.Content>
-                    </Tile>
-                </div>
+            <Example
+                title='Disabled Product Tile'>
+                <Tile disabled productTile>
+                    <Tile.Media backgroundImage='https://placeimg.com/1600/400/nature' />
+                    <Tile.Content title='Tile Title' >
+                        <p>Tile Description</p>
+                    </Tile.Content>
+                </Tile>
             </Example>
 
             <Example
