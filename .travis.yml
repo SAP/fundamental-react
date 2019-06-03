@@ -36,6 +36,4 @@ notifications:
   email:
     on_failure: always
     on_success: change
-  slack: 
-    rooms:
-      - ui-fundamentals:zVRyxlqkYnQFD7p8QHkWM8Fd#react-automated
+
