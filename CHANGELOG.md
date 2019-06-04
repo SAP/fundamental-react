@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.6.0-rc.0"></a>
+# [0.6.0-rc.0](https://github.com/SAP/fundamental-react/compare/v0.5.4-rc.0...v0.6.0-rc.0) (2019-06-04)
+
+
+### Features
+
+* refactor Tile removing ProductTile component ([#548](https://github.com/SAP/fundamental-react/issues/548)) ([21613bd](https://github.com/SAP/fundamental-react/commit/21613bd))
+
+
+
 <a name="0.5.4-rc.0"></a>
 ## [0.5.4-rc.0](https://github.com/SAP/fundamental-react/compare/v0.5.3...v0.5.4-rc.0) (2019-06-03)
 
