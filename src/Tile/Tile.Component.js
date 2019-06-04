@@ -30,7 +30,7 @@ export const TileComponent = () => {
                         <Tile.Content title='Tile Title' />
                     </Tile>
                     <br />
-                    <Tile role='button'>
+                    <Tile>
                         <Tile.Media>
                             <Image photo='https://placeimg.com/400/400/nature' size='l'
                                 type='circle' />
@@ -40,7 +40,7 @@ export const TileComponent = () => {
                         </Tile.Content>
                     </Tile>
                     <br />
-                    <Tile role='button'>
+                    <Tile>
                         <Tile.Media>
                             <Identifier color={3} glyph='home'
                                 size='m' />
@@ -102,19 +102,8 @@ export const TileComponent = () => {
 
             <Example
                 title='Product Tile'>
-                <Tile backgroundImage='https://placeimg.com/1600/400/nature' productTile
-                    role='button'>
+                <Tile backgroundImage='https://placeimg.com/1600/400/nature' productTile>
                     <Tile.Content title='Tile Title'>
-                        <p>Tile Description</p>
-                    </Tile.Content>
-                </Tile>
-            </Example>
-
-            <Example
-                title='Disabled Product Tile'>
-                <Tile backgroundImage='https://placeimg.com/1600/400/nature' disabled
-                    productTile>
-                    <Tile.Content title='Tile Title' >
                         <p>Tile Description</p>
                     </Tile.Content>
                 </Tile>
@@ -143,7 +132,7 @@ export const TileComponent = () => {
                             <p>Tile Description</p>
                         </Tile.Content>
                     </Tile>
-                    <Tile role='button'>
+                    <Tile>
                         <Tile.Media>
                             <Identifier color={3} glyph='home'
                                 size='l' />
