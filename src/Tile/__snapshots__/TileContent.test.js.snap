@@ -5,7 +5,7 @@ exports[`<Tile.Content /> create Tile.Content component 1`] = `
   className="fd-tile__content red"
 >
   <h3
-    className="fd-tile__title"
+    className="fd-tile__title red"
   >
     Tile Title
   </h3>

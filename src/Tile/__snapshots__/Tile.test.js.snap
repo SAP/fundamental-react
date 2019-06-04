@@ -8,7 +8,7 @@ exports[`<Tile /> create tile component 1`] = `
     className="fd-tile__content red"
   >
     <h3
-      className="fd-tile__title"
+      className="fd-tile__title red"
     >
       Tile Title
     </h3>
@@ -41,7 +41,6 @@ exports[`<Tile /> create tile component 2`] = `
 exports[`<Tile /> create tile component 3`] = `
 <div
   className="fd-tile"
-  isButton={true}
 >
   <div
     className="fd-tile__media green"
@@ -107,7 +106,6 @@ exports[`<Tile /> create tile component 4`] = `
 exports[`<Tile /> create tile component 5`] = `
 <div
   className="fd-tile"
-  isButton={true}
 >
   <div
     className="fd-tile__media"
@@ -166,6 +164,66 @@ exports[`<Tile /> create tile component 6`] = `
         </div>
       </div>
     </div>
+  </div>
+</div>
+`;
+
+exports[`<Tile /> create tile component 7`] = `
+<div
+  className="fd-product-tile pink"
+>
+  <div
+    className="fd-product-tile__media"
+    style={
+      Object {
+        "backgroundImage": "url(www.image.com)",
+      }
+    }
+  />
+  <div
+    className="fd-tile__media"
+  />
+  <div
+    className="fd-product-tile__content"
+  >
+    <h3
+      className="fd-product-tile__title"
+    >
+      Tile Title
+    </h3>
+    <p>
+      Tile Description
+    </p>
+  </div>
+</div>
+`;
+
+exports[`<Tile /> create tile component 8`] = `
+<div
+  className="fd-product-tile is-disabled"
+>
+  <div
+    className="fd-product-tile__media"
+    style={
+      Object {
+        "backgroundImage": "url(www.image.com)",
+      }
+    }
+  />
+  <div
+    className="fd-tile__media blue"
+  />
+  <div
+    className="fd-product-tile__content blue"
+  >
+    <h3
+      className="fd-product-tile__title blue"
+    >
+      Tile Title
+    </h3>
+    <p>
+      Tile Description
+    </p>
   </div>
 </div>
 `;

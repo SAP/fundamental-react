@@ -1,7 +1,7 @@
 import path from 'path';
 import React from 'react';
-import { Button, Identifier, Image, Menu, Popover, ProductTile, Tile, TileGrid } from '../';
-import { ComponentPage, Example, Playground, Separator } from '../_playground';
+import { Button, Identifier, Image, Menu, Popover, Tile, TileGrid } from '../';
+import { ComponentPage, Example } from '../_playground';
 
 export const TileComponent = () => {
     return (
@@ -30,7 +30,7 @@ export const TileComponent = () => {
                         <Tile.Content title='Tile Title' />
                     </Tile>
                     <br />
-                    <Tile role='button'>
+                    <Tile>
                         <Tile.Media>
                             <Image photo='https://placeimg.com/400/400/nature' size='l'
                                 type='circle' />
@@ -40,7 +40,7 @@ export const TileComponent = () => {
                         </Tile.Content>
                     </Tile>
                     <br />
-                    <Tile role='button'>
+                    <Tile>
                         <Tile.Media>
                             <Identifier color={3} glyph='home'
                                 size='m' />
@@ -75,24 +75,38 @@ export const TileComponent = () => {
             </Example>
 
             <Example
+                title='Media with Actions Tile'>
+                <Tile>
+                    <Tile.Media>
+                        <Image photo='https://placeimg.com/400/400/nature' size='l'
+                            type='circle' />
+                    </Tile.Media>
+                    <Tile.Content title='Tile Title' />
+                    <Tile.Actions>
+                        <Popover
+                            body={
+                                <Menu>
+                                    <Menu.List>
+                                        <Menu.Item url='/'>Option 1</Menu.Item>
+                                        <Menu.Item url='/'>Option 2</Menu.Item>
+                                        <Menu.Item url='/'>Option 3</Menu.Item>
+                                        <Menu.Item url='/'>Option 4</Menu.Item>
+                                    </Menu.List>
+                                </Menu>
+                            }
+                            control={<Button glyph='vertical-grip' option='light' />}
+                            placement='bottom-end' />
+                    </Tile.Actions>
+                </Tile>
+            </Example>
+
+            <Example
                 title='Product Tile'>
-                <div>
-                    <ProductTile role='button'>
-                        <ProductTile.Media image='https://techne.yaas.io/images/product-thumbnail-wide.png' />
-                        <ProductTile.Content title='Tile Title'>
-                            <p>Tile Description</p>
-                        </ProductTile.Content>
-                    </ProductTile>
-
-                    <br />
-
-                    <ProductTile disabled>
-                        <ProductTile.Media image='https://techne.yaas.io/images/product-thumbnail-wide.png' />
-                        <ProductTile.Content title='Tile Title'>
-                            <p>Tile Description</p>
-                        </ProductTile.Content>
-                    </ProductTile>
-                </div>
+                <Tile backgroundImage='https://placeimg.com/1600/400/nature' productTile>
+                    <Tile.Content title='Tile Title'>
+                        <p>Tile Description</p>
+                    </Tile.Content>
+                </Tile>
             </Example>
 
             <Example
@@ -118,7 +132,7 @@ export const TileComponent = () => {
                             <p>Tile Description</p>
                         </Tile.Content>
                     </Tile>
-                    <Tile role='button'>
+                    <Tile>
                         <Tile.Media>
                             <Identifier color={3} glyph='home'
                                 size='l' />
@@ -137,33 +151,6 @@ export const TileComponent = () => {
                     </Tile>
                 </TileGrid>
             </Example>
-
-            <Separator />
-
-            <Playground
-                component='tile'
-                schema={[
-                    {
-                        attribute: 'type',
-                        typeOfAttribute: 'component',
-                        'enum': ['simple', 'media', 'product']
-                    },
-                    {
-                        attribute: 'title',
-                        typeOfAttribute: 'string'
-                    },
-                    {
-                        attribute: 'children',
-                        typeOfAttribute: 'string'
-                    }
-                ]}>
-                <Tile>
-                    <Tile.Content title='Tile Title'>
-                        <p>Tile Description</p>
-                    </Tile.Content>
-                </Tile>
-            </Playground>
-
         </ComponentPage>
     );
 };

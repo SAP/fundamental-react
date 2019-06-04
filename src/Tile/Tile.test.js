@@ -26,7 +26,7 @@ describe('<Tile />', () => {
     );
 
     const mediaTile = (
-        <Tile isButton>
+        <Tile>
             <Tile.Media className='green'>
                 <Identifier color={3} glyph='home'
                     size='m' />
@@ -58,7 +58,7 @@ describe('<Tile />', () => {
     );
 
     const mediaTileNoClass = (
-        <Tile isButton>
+        <Tile>
             <Tile.Media>
                 <Identifier color={3} glyph='home'
                     size='m' />
@@ -86,6 +86,27 @@ describe('<Tile />', () => {
                     }
                     control={<Button glyph='vertical-grip' type='standard' />} />
             </Tile.Actions>
+        </Tile>
+    );
+
+    const productTile = (
+        <Tile backgroundImage='www.image.com' className='pink'
+            productTile>
+            <Tile.Media />
+            <Tile.Content title='Tile Title'>
+                <p>Tile Description</p>
+            </Tile.Content>
+        </Tile>
+    );
+
+    const disabledProductTile = (
+        <Tile backgroundImage='www.image.com' disabled
+            productTile>
+            <Tile.Media
+                className='blue' />
+            <Tile.Content className='blue' title='Tile Title'>
+                <p>Tile Description</p>
+            </Tile.Content>
         </Tile>
     );
 
@@ -119,6 +140,16 @@ describe('<Tile />', () => {
         component = renderer.create(actionTileNoClass);
         tree = component.toJSON();
         expect(tree).toMatchSnapshot();
+
+        // product tile
+        component = renderer.create(productTile);
+        tree = component.toJSON();
+        expect(tree).toMatchSnapshot();
+
+        // disabled product tile
+        component = renderer.create(disabledProductTile);
+        tree = component.toJSON();
+        expect(tree).toMatchSnapshot();
     });
 
     describe('Prop spreading', () => {
@@ -129,5 +160,17 @@ describe('<Tile />', () => {
                 element.getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
         });
+    });
+
+    test('classnames are correct on product tile', () => {
+        const wrapper = mount(<Tile productTile>
+            <Tile.Content title='Tile Title'>
+            </Tile.Content>
+        </Tile>);
+
+        expect(wrapper.find('.fd-product-tile').length).toEqual(1);
+        expect(wrapper.find('.fd-product-tile__content').length).toEqual(1);
+        expect(wrapper.find('.fd-tile').length).toEqual(0);
+        expect(wrapper.find('.fd-tile__content').length).toEqual(0);
     });
 });

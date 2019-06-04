@@ -19,7 +19,6 @@ describe('<Tile.Media />', () => {
     });
 
     describe('Prop spreading', () => {
-
         test('should allow props to be spread to the TileMedia component', () => {
             const element = mount(<Tile.Media data-sample='Sample' />);
 
