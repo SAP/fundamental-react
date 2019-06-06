@@ -1,5 +1,5 @@
 import getSourceModule from '../utils/getSourceModule';
-import { googlecode } from 'react-syntax-highlighter/styles/hljs';
+import { googlecode } from 'react-syntax-highlighter/dist/styles/hljs';
 import packageJson from '../../../../package.json';
 import PropTypes from 'prop-types';
 import React from 'react';
