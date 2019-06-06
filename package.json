@@ -2,7 +2,7 @@
   "name": "fundamental-react",
   "version": "0.6.0-rc.3",
   "private": false,
-  "description": "SAP Fiori Fundamentals, implemented in React",
+  "description": "SAP Fundamentals, implemented in React",
   "license": "Apache-2.0",
   "main": "lib/index.js",
   "homepage": "https://sap.github.io/fundamental-react",
@@ -96,9 +96,9 @@
     "eslint-plugin-loosely-restrict-imports": "^0.1.15",
     "eslint-plugin-react": "7.11.1",
     "file-loader": "2.0.0",
-    "fiori-fundamentals": "^1.5.0",
     "fork-ts-checker-webpack-plugin-alt": "0.4.14",
     "fs-extra": "7.0.0",
+    "fundamental-styles": "^0.1.0",
     "gh-pages": "^2.0.1",
     "github-assistant": "^0.3.0",
     "group-array": "^0.3.3",
@@ -144,7 +144,7 @@
     "workbox-webpack-plugin": "3.6.3"
   },
   "peerDependencies": {
-    "fiori-fundamentals": "^1.5.0",
+    "fundamental-styles": "^0.1.0",
     "react": "^16.6.3",
     "react-dom": "^16.6.3"
   },
