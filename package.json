@@ -98,7 +98,7 @@
     "file-loader": "2.0.0",
     "fiori-fundamentals": "^1.5.0",
     "fork-ts-checker-webpack-plugin-alt": "0.4.14",
-    "fs-extra": "7.0.0",
+    "fs-extra": "8.0.1",
     "gh-pages": "^2.0.1",
     "github-assistant": "^0.3.0",
     "group-array": "^0.3.3",
