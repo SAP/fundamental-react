@@ -12,7 +12,7 @@ exports[`<Shellbar /> create shellbar 1`] = `
     >
       <img
         alt="SAP"
-        src="//unpkg.com/fiori-fundamentals/dist/images/sap-logo.png"
+        src="//unpkg.com/fundamental-styles/dist/images/sap-logo.png"
       />
     </a>
     <div
@@ -77,7 +77,7 @@ exports[`<Shellbar /> create shellbar 2`] = `
     >
       <img
         alt="SAP"
-        src="//unpkg.com/fiori-fundamentals/dist/images/sap-logo.png"
+        src="//unpkg.com/fundamental-styles/dist/images/sap-logo.png"
       />
     </a>
     <div
@@ -142,7 +142,7 @@ exports[`<Shellbar /> create shellbar 3`] = `
     >
       <img
         alt="SAP"
-        src="//unpkg.com/fiori-fundamentals/dist/images/sap-logo.png"
+        src="//unpkg.com/fundamental-styles/dist/images/sap-logo.png"
       />
     </a>
     <div
@@ -189,7 +189,7 @@ exports[`<Shellbar /> create shellbar 3`] = `
     <img
       alt="CoPilot"
       height="30"
-      src="//unpkg.com/fiori-fundamentals/dist/images/copilot.png"
+      src="//unpkg.com/fundamental-styles/dist/images/copilot.png"
       width="30"
     />
   </div>
@@ -413,7 +413,7 @@ exports[`<Shellbar /> create shellbar 4`] = `
     >
       <img
         alt="SAP"
-        src="//unpkg.com/fiori-fundamentals/dist/images/sap-logo.png"
+        src="//unpkg.com/fundamental-styles/dist/images/sap-logo.png"
       />
     </a>
     <div
@@ -460,7 +460,7 @@ exports[`<Shellbar /> create shellbar 4`] = `
     <img
       alt="CoPilot"
       height="30"
-      src="//unpkg.com/fiori-fundamentals/dist/images/copilot.png"
+      src="//unpkg.com/fundamental-styles/dist/images/copilot.png"
       width="30"
     />
   </div>
@@ -677,7 +677,7 @@ exports[`<Shellbar /> create shellbar 5`] = `
     >
       <img
         alt="SAP"
-        src="//unpkg.com/fiori-fundamentals/dist/images/sap-logo.png"
+        src="//unpkg.com/fundamental-styles/dist/images/sap-logo.png"
       />
     </a>
     <div
@@ -724,7 +724,7 @@ exports[`<Shellbar /> create shellbar 5`] = `
     <img
       alt="CoPilot"
       height="30"
-      src="//unpkg.com/fiori-fundamentals/dist/images/copilot.png"
+      src="//unpkg.com/fundamental-styles/dist/images/copilot.png"
       width="30"
     />
   </div>
@@ -927,7 +927,7 @@ exports[`<Shellbar /> create shellbar 6`] = `
     >
       <img
         alt="SAP"
-        src="//unpkg.com/fiori-fundamentals/dist/images/sap-logo.png"
+        src="//unpkg.com/fundamental-styles/dist/images/sap-logo.png"
       />
     </a>
     <div
@@ -974,7 +974,7 @@ exports[`<Shellbar /> create shellbar 6`] = `
     <img
       alt="CoPilot"
       height="30"
-      src="//unpkg.com/fiori-fundamentals/dist/images/copilot.png"
+      src="//unpkg.com/fundamental-styles/dist/images/copilot.png"
       width="30"
     />
   </div>
@@ -1135,7 +1135,7 @@ exports[`<Shellbar /> create shellbar 6`] = `
                   role="presentation"
                   style={
                     Object {
-                      "backgroundImage": "url(//unpkg.com/fiori-fundamentals/dist/images/sap-logo.png)",
+                      "backgroundImage": "url(//unpkg.com/fundamental-styles/dist/images/sap-logo.png)",
                     }
                   }
                 />
