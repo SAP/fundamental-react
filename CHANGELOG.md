@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.6.0-rc.11"></a>
+# [0.6.0-rc.11](https://github.com/SAP/fundamental-react/compare/v0.6.0-rc.10...v0.6.0-rc.11) (2019-06-07)
+
+
+### Features
+
+* switch to using Fundamental Styles repo ([#566](https://github.com/SAP/fundamental-react/issues/566)) ([66a7cec](https://github.com/SAP/fundamental-react/commit/66a7cec))
+
+
+
 <a name="0.6.0-rc.10"></a>
 # [0.6.0-rc.10](https://github.com/SAP/fundamental-react/compare/v0.6.0-rc.9...v0.6.0-rc.10) (2019-06-07)
 
