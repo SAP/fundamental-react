@@ -15,7 +15,11 @@ echo "$std_ver"
 
 git push --follow-tags "https://$GH_TOKEN@github.com/$TRAVIS_REPO_SLUG" master > /dev/null 2>&1;
 
+cd lib
+
 npm publish
+
+cd ..
 
 # run this after publish to make sure GitHub finishes updating from the push
 npm run release:create -- --repo $TRAVIS_REPO_SLUG --tag $release_tag --branch master
