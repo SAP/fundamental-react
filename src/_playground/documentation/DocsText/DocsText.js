@@ -1,5 +1,5 @@
 import { Button } from '../../../';
-import { googlecode } from 'react-syntax-highlighter/styles/hljs';
+import { googlecode } from 'react-syntax-highlighter/dist/styles/hljs';
 import PropTypes from 'prop-types';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import React, { Component } from 'react';
