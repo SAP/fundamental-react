@@ -3,7 +3,7 @@
 
 ### Versions
 **fundamental-react:**
-**fiori-fundamentals:**
+**fundamental-styles:**
 
 ---
 

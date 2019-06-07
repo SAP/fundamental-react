@@ -31,7 +31,7 @@ describe('<Shellbar />', () => {
             logo={
                 <img
                     alt='SAP'
-                    src='//unpkg.com/fiori-fundamentals/dist/images/sap-logo.png' />
+                    src='//unpkg.com/fundamental-styles/dist/images/sap-logo.png' />
             }
             productTitle='Corporate Portal'
             profile={profile1}
@@ -44,7 +44,7 @@ describe('<Shellbar />', () => {
             logo={
                 <img
                     alt='SAP'
-                    src='//unpkg.com/fiori-fundamentals/dist/images/sap-logo.png' />
+                    src='//unpkg.com/fundamental-styles/dist/images/sap-logo.png' />
             }
             productTitle='Corporate Portal'
             profile={profile1}
@@ -147,7 +147,7 @@ describe('<Shellbar />', () => {
         initials: 'JS',
         userName: 'John Snow',
         colorAccent: 8,
-        image: '//unpkg.com/fiori-fundamentals/dist/images/sap-logo.png'
+        image: '//unpkg.com/fundamental-styles/dist/images/sap-logo.png'
     };
 
     const productMenu = [

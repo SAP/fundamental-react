@@ -115,7 +115,7 @@ class Shellbar extends Component {
                     {logo && <a className='fd-shellbar__logo'>{logo}</a>}
                     {logoSAP && (
                         <a className='fd-shellbar__logo'>
-                            <img alt='SAP' src='//unpkg.com/fiori-fundamentals/dist/images/sap-logo.png' />
+                            <img alt='SAP' src='//unpkg.com/fundamental-styles/dist/images/sap-logo.png' />
                         </a>
                     )}
                     <div className='fd-shellbar__product'>
@@ -166,7 +166,7 @@ class Shellbar extends Component {
                         <img
                             alt='CoPilot'
                             height='30'
-                            src='//unpkg.com/fiori-fundamentals/dist/images/copilot.png'
+                            src='//unpkg.com/fundamental-styles/dist/images/copilot.png'
                             width='30' />
                     </div>
                 ) : null}
