@@ -25,7 +25,7 @@ You will need to install [Node and Node Package Manager](https://www.npmjs.com/g
 
 For an existing react application, follow the steps below:
 
-1. Install Fundamental-react and Fundamental Styles.
+1. Install `fundamental-react` and `fundamental-styles`.
 
     ```
     npm install fundamental-styles fundamental-react
