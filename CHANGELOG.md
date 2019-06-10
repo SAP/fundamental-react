@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.6.0-rc.13"></a>
+# [0.6.0-rc.13](https://github.com/SAP/fundamental-react/compare/v0.6.0-rc.11...v0.6.0-rc.13) (2019-06-10)
+
+
+### Bug Fixes
+
+* updated publish scripts to copy files after standard versioning ([#574](https://github.com/SAP/fundamental-react/issues/574)) ([7a9af94](https://github.com/SAP/fundamental-react/commit/7a9af94))
+
+
+### Features
+
+* removing lib from import statement ([#573](https://github.com/SAP/fundamental-react/issues/573)) ([52e2614](https://github.com/SAP/fundamental-react/commit/52e2614))
+
+
+
 <a name="0.6.0-rc.12"></a>
 # [0.6.0-rc.12](https://github.com/SAP/fundamental-react/compare/v0.6.0-rc.11...v0.6.0-rc.12) (2019-06-07)
 
