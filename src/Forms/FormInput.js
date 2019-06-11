@@ -3,7 +3,18 @@ import { INPUT_TYPES } from '../utils/constants';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-const FormInput = ({ state, className, disabled, id, name, placeholder, readOnly, type, value, ...props }) => {
+const FormInput = React.forwardRef(({
+    className,
+    disabled,
+    id,
+    name,
+    placeholder,
+    readOnly,
+    state,
+    type,
+    value,
+    ...props
+}, ref) => {
     const formInputClasses = classnames(
         'fd-form__control',
         {
@@ -21,10 +32,11 @@ const FormInput = ({ state, className, disabled, id, name, placeholder, readOnly
             name={name}
             placeholder={placeholder}
             readOnly={readOnly}
+            ref={ref}
             type={type}
             value={value} />
     );
-};
+});
 
 FormInput.displayName = 'FormInput';
 

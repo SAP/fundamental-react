@@ -2,7 +2,17 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-const FormRadioItem = ({ checked, children, className, disabled, id, inline, name, value, ...props }) => {
+const FormRadioItem = React.forwardRef(({
+    checked,
+    children,
+    className,
+    disabled,
+    id,
+    inline,
+    name,
+    value,
+    ...props
+}, ref) => {
     const classes = classnames(
         className,
         'fd-form__item',
@@ -22,13 +32,14 @@ const FormRadioItem = ({ checked, children, className, disabled, id, inline, nam
                     disabled={disabled}
                     id={id}
                     name={name}
+                    ref={ref}
                     type='radio'
                     value={value} />
                 {children}
             </label>
         </div>
     );
-};
+});
 
 FormRadioItem.displayName = 'FormRadioItem';
 

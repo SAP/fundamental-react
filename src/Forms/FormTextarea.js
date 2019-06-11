@@ -2,7 +2,7 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-const FormTextarea = ({ children, className, ...props }) => {
+const FormTextarea = React.forwardRef(({ children, className, ...props }, ref) => {
     const formTextAreaClasses = classnames(
         'fd-form__control',
         className
@@ -11,11 +11,12 @@ const FormTextarea = ({ children, className, ...props }) => {
     return (
         <textarea
             {...props}
-            className={formTextAreaClasses}>
+            className={formTextAreaClasses}
+            ref={ref}>
             {children}
         </textarea>
     );
-};
+});
 
 FormTextarea.displayName = 'FormTextarea';
 

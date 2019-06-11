@@ -2,7 +2,12 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-const FormSelect = ({ disabled, children, className, ...props }) => {
+const FormSelect = React.forwardRef(({
+    children,
+    className,
+    disabled,
+    ...props
+}, ref) => {
     const formSelectClasses = classnames(
         'fd-form__control',
         className
@@ -12,11 +17,12 @@ const FormSelect = ({ disabled, children, className, ...props }) => {
         <select
             {...props}
             className={formSelectClasses}
-            disabled={disabled}>
+            disabled={disabled}
+            ref={ref}>
             {children}
         </select>
     );
-};
+});
 
 FormSelect.displayName = 'FormSelect';
 
