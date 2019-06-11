@@ -1,5 +1,5 @@
 import getSourceModule from '../utils/getSourceModule';
-import { googlecode } from 'react-syntax-highlighter/styles/hljs';
+import { googlecode } from 'react-syntax-highlighter/dist/styles/hljs';
 import packageJson from '../../../../package.json';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -18,7 +18,7 @@ const Import = ({ sourceModulePath }) => {
             customStyle={{ padding: 0, whiteSpace: 'pre-wrap' }}
             language='javascript'
             style={googlecode}>
-            {`import { ${Object.keys(getSourceModule(sourceModulePath)).sort().join(', ')} } from '${packageJson.name}/lib/${importPath}';`}
+            {`import { ${Object.keys(getSourceModule(sourceModulePath)).sort().join(', ')} } from '${packageJson.name}/${importPath}';`}
         </SyntaxHighlighter>
     );
 };

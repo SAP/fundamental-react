@@ -2,6 +2,76 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.6.0-rc.16"></a>
+# [0.6.0-rc.16](https://github.com/SAP/fundamental-react/compare/v0.6.0-rc.15...v0.6.0-rc.16) (2019-06-11)
+
+
+
+<a name="0.6.0-rc.15"></a>
+# [0.6.0-rc.15](https://github.com/SAP/fundamental-react/compare/v0.6.0-rc.14...v0.6.0-rc.15) (2019-06-10)
+
+
+
+<a name="0.6.0-rc.14"></a>
+# [0.6.0-rc.14](https://github.com/SAP/fundamental-react/compare/v0.6.0-rc.13...v0.6.0-rc.14) (2019-06-10)
+
+
+
+<a name="0.6.0-rc.13"></a>
+# [0.6.0-rc.13](https://github.com/SAP/fundamental-react/compare/v0.6.0-rc.11...v0.6.0-rc.13) (2019-06-10)
+
+
+### Bug Fixes
+
+* updated publish scripts to copy files after standard versioning ([#574](https://github.com/SAP/fundamental-react/issues/574)) ([7a9af94](https://github.com/SAP/fundamental-react/commit/7a9af94))
+
+
+### Features
+
+* removing lib from import statement ([#573](https://github.com/SAP/fundamental-react/issues/573)) ([52e2614](https://github.com/SAP/fundamental-react/commit/52e2614))
+
+
+
+<a name="0.6.0-rc.12"></a>
+# [0.6.0-rc.12](https://github.com/SAP/fundamental-react/compare/v0.6.0-rc.11...v0.6.0-rc.12) (2019-06-07)
+
+
+### Features
+
+* removing lib from import statement ([#573](https://github.com/SAP/fundamental-react/issues/573)) ([52e2614](https://github.com/SAP/fundamental-react/commit/52e2614))
+
+
+
+<a name="0.6.0-rc.11"></a>
+# [0.6.0-rc.11](https://github.com/SAP/fundamental-react/compare/v0.6.0-rc.10...v0.6.0-rc.11) (2019-06-07)
+
+
+### Features
+
+* switch to using Fundamental Styles repo ([#566](https://github.com/SAP/fundamental-react/issues/566)) ([66a7cec](https://github.com/SAP/fundamental-react/commit/66a7cec))
+
+
+
+<a name="0.6.0-rc.10"></a>
+# [0.6.0-rc.10](https://github.com/SAP/fundamental-react/compare/v0.6.0-rc.9...v0.6.0-rc.10) (2019-06-07)
+
+
+
+<a name="0.6.0-rc.9"></a>
+# [0.6.0-rc.9](https://github.com/SAP/fundamental-react/compare/v0.6.0-rc.8...v0.6.0-rc.9) (2019-06-07)
+
+
+
+<a name="0.6.0-rc.8"></a>
+# [0.6.0-rc.8](https://github.com/SAP/fundamental-react/compare/v0.6.0-rc.7...v0.6.0-rc.8) (2019-06-07)
+
+
+
+<a name="0.6.0-rc.7"></a>
+# [0.6.0-rc.7](https://github.com/SAP/fundamental-react/compare/v0.6.0-rc.6...v0.6.0-rc.7) (2019-06-07)
+
+
+
 <a name="0.6.0-rc.6"></a>
 # [0.6.0-rc.6](https://github.com/SAP/fundamental-react/compare/v0.6.0-rc.5...v0.6.0-rc.6) (2019-06-06)
 

@@ -1,9 +1,9 @@
 $breakpoint-lg: 1280px;
 $breakpoint-md: 1024px;
 $breakpoint-sm: 600px;
-$fd-icons-path: '../../node_modules/fiori-fundamentals/scss/icons/';
-$fd-fonts-path: '../../node_modules/fiori-fundamentals/dist/fonts/';
-@import '~fiori-fundamentals/scss/all.scss';
+$fd-icons-path: '../../node_modules/fundamental-styles/scss/icons/';
+$fd-fonts-path: '../../node_modules/fundamental-styles/dist/fonts/';
+@import '~fundamental-styles/scss/fundamental-styles-ie11.scss';
 @import '~tocbot/src/scss/tocbot-core';
 @import '~tocbot/src/scss/tocbot-default-theme';
 
@@ -305,7 +305,7 @@ h6 {
     padding-bottom: 10px;
 }
 
-// possible addition to fiori fundamentals side nav component?
+// possible addition to fundamental-styles fundamentals side nav component?
 .fd-side-nav {
     overflow: auto;
 }

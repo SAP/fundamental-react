@@ -9,9 +9,9 @@
 
 ## Description
 
-The `fundamental-react` library is a set of [React](https://reactjs.org/) components built using [SAP Fiori Fundamentals](https://sap.github.io/fundamental/).
+The `fundamental-react` library is a set of [React](https://reactjs.org/) components built using [SAP Fundamental Styles](https://sap.github.io/fundamental-styles/).
 
-The SAP Fiori Fundamentals library is a design system and HTML/CSS component library used to build modern product user experiences with the SAP look and feel.
+The SAP Fundamental Styles library is a design system and HTML/CSS component library used to build modern product user experiences with the SAP look and feel.
 
 ## API Reference
 
@@ -25,28 +25,28 @@ You will need to install [Node and Node Package Manager](https://www.npmjs.com/g
 
 For an existing react application, follow the steps below:
 
-1. Install Fundamental-react and Fiori Fundamentals.
+1. Install `fundamental-react` and `fundamental-styles`.
 
     ```
-    npm install fiori-fundamentals fundamental-react
+    npm install fundamental-styles fundamental-react
     ```
 
-1. Load the fiori-fundamentals styles. If using create-react-app, this will be in `App.css`.
+1. Load the `fundamental-styles` styles. If using create-react-app, this will be in `App.css`.
 
     ```scss
-    @import '~fiori-fundamentals/dist/fiori-fundamentals-ie11.min.css';
+    @import '~fundamental-styles/dist/fundamental-styles-ie11.min.css';
     ```
 
 1. Import components as needed. See [Component Documentation](https://sap.github.io/fundamental-react/) for examples and API details.
     ```javascript
-    import { Alert } from 'fundamental-react/lib/Alert';
+    import { Alert } from 'fundamental-react/Alert';
     ```
     or
     ```javascript
     import { Alert } from 'fundamental-react';
     ```
 
-    > **NOTE:** Importing from `lib` is recommended. Doing so will bring in only the component you are using instead of the whole library, which will reduce your bundle size significantly.
+    > **NOTE:** Importing from specific component is recommended. Doing so will bring in only the component you are using instead of the whole library, which will reduce your bundle size significantly.
 
 
 ## Versioning
@@ -74,5 +74,5 @@ This library is licensed under the Apache Software License, v. 2 except as noted
 
 ## Similar Projects
 
--   [Angular implementation of SAP Fiori Fundamentals](https://github.com/SAP/fundamental-ngx)
--   [Vue implementation of SAP Fiori Fundamentals](https://github.com/SAP/fundamental-vue)
+-   [Angular implementation of SAP Fundamental Styles](https://github.com/SAP/fundamental-ngx)
+-   [Vue implementation of SAP Fundamental Styles](https://github.com/SAP/fundamental-vue)

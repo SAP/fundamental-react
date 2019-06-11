@@ -193,7 +193,7 @@ export class ShellbarComponent extends Component {
                         no user thumbnail is available then display initials.`}
                     title='Basic Shellbar'>
                     <Shellbar
-                        logo={<img alt='SAP' src='//unpkg.com/fiori-fundamentals/dist/images/sap-logo.png' />}
+                        logo={<img alt='SAP' src='//unpkg.com/fundamental-styles/dist/images/sap-logo.png' />}
                         productTitle='Corporate Portal'
                         profile={this.profile1}
                         profileMenu={this.profileMenu} />
