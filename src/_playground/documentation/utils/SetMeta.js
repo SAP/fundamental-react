@@ -1,4 +1,4 @@
-import Helmet from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async';
 import PropTypes from 'prop-types';
 import React from 'react';
 
