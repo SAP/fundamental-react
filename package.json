@@ -72,7 +72,7 @@
     "annotated-prop-types": "^0.3.0",
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "9.0.0",
-    "babel-jest": "23.6.0",
+    "babel-jest": "24.8.0",
     "babel-loader": "8.0.4",
     "babel-plugin-named-asset-import": "^0.2.3",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.23",
