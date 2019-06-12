@@ -76,7 +76,7 @@
     "babel-loader": "8.0.4",
     "babel-plugin-named-asset-import": "^0.2.3",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.23",
-    "babel-preset-react-app": "^6.1.0",
+    "babel-preset-react-app": "^9.0.0",
     "bfj": "6.1.1",
     "case-sensitive-paths-webpack-plugin": "2.1.2",
     "chalk": "2.4.1",
