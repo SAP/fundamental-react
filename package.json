@@ -130,7 +130,7 @@
     "serve": "^10.1.2",
     "size-limit": "^1.3.6",
     "sort-by": "^1.2.0",
-    "standard-version": "^4.4.0",
+    "standard-version": "^6.0.1",
     "style-loader": "0.23.0",
     "stylelint": "^9.10.1",
     "terser-webpack-plugin": "1.3.0",
