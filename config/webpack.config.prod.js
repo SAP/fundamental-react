@@ -5,7 +5,6 @@
 'use strict';
 const path = require('path');
 const webpack = require('webpack');
-const PnpWebpackPlugin = require('pnp-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const InlineChunkHtmlPlugin = require('react-dev-utils/InlineChunkHtmlPlugin');
 const TerserPlugin = require('terser-webpack-plugin');
@@ -176,11 +175,6 @@ module.exports = {
     },
     resolve: {
         extensions: ['.js', '.jsx', '.json', '.es6']
-    },
-    resolveLoader: {
-        plugins: [
-            PnpWebpackPlugin.moduleLoader(module)
-        ]
     },
     module: {
         strictExportPresence: true,

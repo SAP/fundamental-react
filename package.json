@@ -41,8 +41,8 @@
     "test:coverage": "jest --coverage",
     "test:coverage:watch": "jest --coverage --watch",
     "test:coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js || echo -e \"Coveralls failed.\"",
-    "test:dev": "jest",
-    "test:watch": "jest --watch",
+    "test:dev": "jest --config=./config/jest/jest.config.js",
+    "test:watch": "jest --config=./config/jest/jest.config.js --watch",
     "test": "npm run test:watch",
     "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive"
   },
@@ -71,6 +71,7 @@
     "@babel/preset-react": "^7.0.0",
     "annotated-prop-types": "^0.3.0",
     "babel-eslint": "9.0.0",
+    "babel-jest": "^24.8.0",
     "babel-loader": "8.0.6",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.23",
     "babel-preset-react-app": "^6.1.0",
@@ -87,6 +88,7 @@
     "eslint-config-react-app": "^3.0.5",
     "eslint-loader": "2.1.2",
     "eslint-plugin-compat": "^2.6.3",
+    "eslint-plugin-flowtype": "2.50.3",
     "eslint-plugin-ie11": "^1.0.0",
     "eslint-plugin-import": "2.17.3",
     "eslint-plugin-jsx-a11y": "6.2.1",
@@ -103,7 +105,6 @@
     "node-sass-chokidar": "^1.3.4",
     "npm-run-all": "^4.1.5",
     "optimize-css-assets-webpack-plugin": "5.0.1",
-    "pnp-webpack-plugin": "1.5.0",
     "postcss-clean": "^1.1.0",
     "postcss-flexbugs-fixes": "4.1.0",
     "postcss-loader": "3.0.0",
@@ -152,10 +153,5 @@
     "not dead",
     "not ie < 11",
     "not op_mini all"
-  ],
-  "jest": {
-    "setupFiles": [
-      "./config/jest/jest.config.js"
-    ]
-  }
+  ]
 }

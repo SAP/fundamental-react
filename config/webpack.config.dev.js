@@ -4,7 +4,6 @@
 'use strict';
 const path = require('path');
 const webpack = require('webpack');
-const PnpWebpackPlugin = require('pnp-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
 const InterpolateHtmlPlugin = require('react-dev-utils/InterpolateHtmlPlugin');
@@ -82,11 +81,6 @@ module.exports = {
     resolve: {
         extensions: ['.js', '.jsx', '.json', '.es6'],
         symlinks: false
-    },
-    resolveLoader: {
-        plugins: [
-            PnpWebpackPlugin.moduleLoader(module)
-        ]
     },
     module: {
         strictExportPresence: true,
