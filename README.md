@@ -25,17 +25,21 @@ You will need to install [Node and Node Package Manager](https://www.npmjs.com/g
 
 For an existing react application, follow the steps below:
 
-1. Install `fundamental-react` and `fundamental-styles`.
+1. Install `fundamental-react`.
 
     ```
-    npm install fundamental-styles fundamental-react
+    npm install fundamental-react
     ```
 
-1. Load the `fundamental-styles` styles. If using create-react-app, this will be in `App.css`.
+1. As some components are currently packaged together with their respective `scss`, you will need to edit your webpack configuration to handle these files. See [sass-loader](https://github.com/webpack-contrib/sass-loader).
 
-    ```scss
-    @import '~fundamental-styles/dist/fundamental-styles-ie11.min.css';
+1. Load the `fundamental-styles` styles. This is now packaged as a dependency with `fundamental-react`. If using create-react-app, this will be in `App.css`.
+
+    ```css
+    @import '~fundamental-styles/scss/fundamental-styles-ie11.css';
     ```
+
+    > **NOTE:** Once all components are packaged with their respective `scss`, this step will not be needed.
 
 1. Import components as needed. See [Component Documentation](https://sap.github.io/fundamental-react/) for examples and API details.
     ```javascript
@@ -47,6 +51,7 @@ For an existing react application, follow the steps below:
     ```
 
     > **NOTE:** Importing from specific component is recommended. Doing so will bring in only the component you are using instead of the whole library, which will reduce your bundle size significantly.
+
 
 
 ## Versioning
