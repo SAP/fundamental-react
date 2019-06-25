@@ -1,5 +1,6 @@
 import './App.scss';
-import '@babel/polyfill';
+import 'core-js/stable';
+import 'regenerator-runtime/runtime';
 import { HelmetProvider } from 'react-helmet-async';
 import { Routes } from './Routes';
 import React, { Component } from 'react';

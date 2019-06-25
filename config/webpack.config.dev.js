@@ -18,6 +18,26 @@ const env = getClientEnvironment(publicUrl);
 const cssRegex = /\.css$/;
 const sassRegex = /\.(scss|sass)$/;
 
+
+const getLintingRule = () => {
+    return process.env.FUNDAMENTAL_REACT_PLAYGROUND ?
+        {} : {
+            test: /\.(js|mjs|jsx)$/,
+            enforce: 'pre',
+            use: [
+                {
+                    options: {
+                        formatter: require.resolve('react-dev-utils/eslintFormatter'),
+                        eslintPath: require.resolve('eslint')
+
+                    },
+                    loader: require.resolve('eslint-loader')
+                }
+            ],
+            include: paths.appSrc
+        };
+};
+
 // common function to get style loaders
 const getStyleLoaders = (cssOptions, preProcessor) => {
     const loaders = [
@@ -85,20 +105,7 @@ module.exports = {
     module: {
         strictExportPresence: true,
         rules: [
-            {
-                test: /\.(js|mjs|jsx)$/,
-                enforce: 'pre',
-                use: [
-                    {
-                        options: {
-                            formatter: require.resolve('react-dev-utils/eslintFormatter'),
-                            eslintPath: require.resolve('eslint')
-                        },
-                        loader: require.resolve('eslint-loader')
-                    }
-                ],
-                include: paths.appSrc
-            },
+            getLintingRule(),
             {
                 oneOf: [
                     {
