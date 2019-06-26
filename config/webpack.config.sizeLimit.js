@@ -1,10 +1,15 @@
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const CompressionPlugin = require('compression-webpack-plugin');
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 module.exports = {
     mode: 'production',
     entry: './lib/index.js',
     output: {
-        filename: 'size-limit.js'
+        filename: 'fundamental-react.js'
+    },
+    optimization: {
+        concatenateModules: true
     },
     module: {
         rules: [
@@ -24,7 +29,6 @@ module.exports = {
                         annotations: false,
                         sourcesContent: true,
                         plugins: () => [
-                            require('postcss-flexbugs-fixes'),
                             require('postcss-preset-env')({
                                 autoprefixer: {
                                     flexbox: 'no-2009',
@@ -52,6 +56,12 @@ module.exports = {
         ]
     },
     plugins: [
-        new BundleAnalyzerPlugin()
+        new OptimizeCSSAssetsPlugin(),
+        new CompressionPlugin(),
+        new BundleAnalyzerPlugin({
+            analyzerMode: 'static',
+            defaultSizes: 'gzip'
+            // openAnalyzer: true
+        })
     ]
 };
