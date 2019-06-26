@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.6.0-rc.36"></a>
+# [0.6.0-rc.36](https://github.com/SAP/fundamental-react/compare/v0.6.0-rc.35...v0.6.0-rc.36) (2019-06-26)
+
+
+
 <a name="0.6.0-rc.35"></a>
 # [0.6.0-rc.35](https://github.com/SAP/fundamental-react/compare/v0.6.0-rc.34...v0.6.0-rc.35) (2019-06-25)
 
