@@ -25,6 +25,7 @@ Menu.displayName = 'Menu';
 
 Menu.propTypes = {
     addonBefore: PropTypes.bool,
+    children: PropTypes.node,
     className: PropTypes.string
 };
 

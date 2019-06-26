@@ -38,6 +38,7 @@ Identifier.displayName = 'Identifier';
 
 Identifier.propTypes = {
     backgroundImageUrl: PropTypes.string,
+    children: PropTypes.node,
     className: PropTypes.string,
     color: CustomPropTypes.range(1, 9),
     glyph: PropTypes.string,

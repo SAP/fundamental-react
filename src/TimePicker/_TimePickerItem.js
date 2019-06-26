@@ -260,7 +260,8 @@ TimePickerItem.propTypes = {
     style: PropTypes.string,
     updateValue: PropTypes.func,
     value: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-    onChange: PropTypes.func
+    onChange: PropTypes.func,
+    onClick: PropTypes.func
 };
 
 export default TimePickerItem;

@@ -16,6 +16,7 @@ const PanelActions = props => {
 PanelActions.displayName = 'Panel.Actions';
 
 PanelActions.propTypes = {
+    children: PropTypes.node,
     className: PropTypes.string
 };
 

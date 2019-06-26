@@ -80,6 +80,7 @@ Alert.displayName = 'Alert';
 
 Alert.propTypes = {
     buttonProps: PropTypes.object,
+    children: PropTypes.node,
     className: PropTypes.string,
     dismissible: PropTypes.bool,
     link: PropTypes.string,

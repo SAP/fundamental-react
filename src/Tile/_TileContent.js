@@ -36,8 +36,10 @@ TileContent.displayName = 'Tile.Content';
 
 TileContent.propTypes = {
     title: PropTypes.string.isRequired,
+    children: PropTypes.node,
     className: PropTypes.string,
     headingLevel: CustomPropTypes.range(2, 6),
+    productTile: PropTypes.bool,
     titleProps: PropTypes.object
 };
 
