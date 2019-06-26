@@ -32,7 +32,7 @@
     "serve": "BUILD_ENV=development npm run build-doc && serve -s build",
     "scripts:lint": "eslint 'scripts/**' --ext .js,.jsx --env browser,node",
     "scripts:lint:fix": "npm run scripts:lint -- --fix",
-    "size": "size-limit",
+    "size": "npm run build && size-limit",
     "size:debug": "DEBUG=true npm run size",
     "start": "npm run build && node scripts/start.js",
     "start:playground": "FUNDAMENTAL_REACT_PLAYGROUND=true npm start",
