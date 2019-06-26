@@ -12,6 +12,9 @@
 # Readme copy for github pages site
 /src/_playground/documentation/Home/README.md
 
+#size-limit output
+/dist
+
 # misc
 .DS_Store
 .env.local

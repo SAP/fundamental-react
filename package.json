@@ -32,7 +32,7 @@
     "serve": "BUILD_ENV=development npm run build-doc && serve -s build",
     "scripts:lint": "eslint 'scripts/**' --ext .js,.jsx --env browser,node",
     "scripts:lint:fix": "npm run scripts:lint -- --fix",
-    "size": "npm run build && size-limit",
+    "size": "size-limit --why",
     "size:debug": "npm run size -- --why",
     "start": "npm run build && node scripts/start.js",
     "start:playground": "FUNDAMENTAL_REACT_PLAYGROUND=true npm start",
@@ -134,6 +134,7 @@
     "tocbot": "^4.5.0",
     "url-loader": "2.0.0",
     "webpack": "4.35.0",
+    "webpack-bundle-analyzer": "^3.3.2",
     "webpack-dev-server": "^3.1.11",
     "webpack-manifest-plugin": "2.0.4",
     "workbox-webpack-plugin": "4.3.1"

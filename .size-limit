@@ -1,9 +1,7 @@
 [
   {
     name: "Fundamental-React Size",
-    webpack: true,
-    config: "config/webpack.config.prod.js",
-    path: "lib/index.js",
-    limit: "70 KB"
+    config: "config/webpack.config.babel.js",
+    limit: "700 KB"
   }
 ]
