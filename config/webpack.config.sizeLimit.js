@@ -60,8 +60,8 @@ module.exports = {
         new CompressionPlugin(),
         new BundleAnalyzerPlugin({
             analyzerMode: 'static',
-            defaultSizes: 'gzip'
-            // openAnalyzer: true
+            defaultSizes: 'gzip',
+            openAnalyzer: process.env.DEBUG ? true : false
         })
     ]
 };
