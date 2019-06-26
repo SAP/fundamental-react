@@ -58,10 +58,10 @@ MenuItem.propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,
     isLink: PropTypes.bool,
+    onclick: PropTypes.func,
     separator: PropTypes.bool,
     url: PropTypes.string,
-    urlProps: PropTypes.object,
-    onClick: PropTypes.func
+    urlProps: PropTypes.object
 };
 
 MenuItem.propDescriptions = {
