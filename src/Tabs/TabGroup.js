@@ -101,6 +101,7 @@ TabGroup.propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,
     selectedIndex: PropTypes.number,
+    tabGroupProps: PropTypes.object,
     onTabClick: PropTypes.func
 };
 

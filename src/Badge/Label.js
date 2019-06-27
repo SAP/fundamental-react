@@ -17,6 +17,7 @@ const Label = ({ type, children, className, ...props }) => {
 Label.displayName = 'Label';
 
 Label.propTypes = {
+    children: PropTypes.node,
     className: PropTypes.string,
     type: PropTypes.oneOf(LABEL_TYPES)
 };

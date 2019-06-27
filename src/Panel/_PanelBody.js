@@ -16,6 +16,7 @@ const PanelBody = props => {
 PanelBody.displayName = 'Panel.Body';
 
 PanelBody.propTypes = {
+    children: PropTypes.node,
     className: PropTypes.string
 };
 

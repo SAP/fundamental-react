@@ -24,6 +24,7 @@ const Status = ({ type, glyph, children, className, ...props }) => {
 Status.displayName = 'Status';
 
 Status.propTypes = {
+    children: PropTypes.node,
     className: PropTypes.string,
     glyph: PropTypes.string,
     type: PropTypes.oneOf(STATUS_TYPES)

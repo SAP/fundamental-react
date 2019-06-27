@@ -23,6 +23,7 @@ MenuGroup.displayName = 'Menu.Group';
 
 MenuGroup.propTypes = {
     title: PropTypes.string.isRequired,
+    children: PropTypes.node,
     className: PropTypes.string,
     headingLevel: CustomPropTypes.range(2, 6),
     titleProps: PropTypes.object

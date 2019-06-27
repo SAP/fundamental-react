@@ -104,6 +104,8 @@ Modal.propTypes = {
     title: PropTypes.string.isRequired,
     actions: PropTypes.node,
     bodyProps: PropTypes.object,
+    children: PropTypes.node,
+    className: PropTypes.string,
     closeProps: PropTypes.object,
     contentProps: PropTypes.object,
     footerProps: PropTypes.object,

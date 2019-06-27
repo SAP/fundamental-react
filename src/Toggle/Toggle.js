@@ -65,6 +65,7 @@ Toggle.displayName = 'Toggle';
 
 Toggle.propTypes = {
     checked: PropTypes.bool,
+    children: PropTypes.node,
     className: PropTypes.string,
     disabled: PropTypes.bool,
     id: PropTypes.string,

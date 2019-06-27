@@ -27,6 +27,7 @@ const ActionBar = ({ mobile, width, children, className, ...props }) => {
 ActionBar.displayName = 'ActionBar';
 
 ActionBar.propTypes = {
+    children: PropTypes.node,
     className: PropTypes.string,
     mobile: PropTypes.bool,
     width: PropTypes.string

@@ -182,6 +182,7 @@ exports[`<Tile /> create tile component 7`] = `
   />
   <div
     className="fd-tile__media"
+    productTile={true}
   />
   <div
     className="fd-product-tile__content"
@@ -212,6 +213,7 @@ exports[`<Tile /> create tile component 8`] = `
   />
   <div
     className="fd-tile__media blue"
+    productTile={true}
   />
   <div
     className="fd-product-tile__content blue"

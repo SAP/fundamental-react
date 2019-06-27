@@ -144,6 +144,7 @@ Pagination.propTypes = {
     onClick: PropTypes.func.isRequired,
     className: PropTypes.string,
     displayTotal: PropTypes.bool,
+    displayTotalProps: PropTypes.object,
     initialPage: PropTypes.number,
     itemsPerPage: PropTypes.number,
     linkProps: PropTypes.object,
