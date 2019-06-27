@@ -22,28 +22,6 @@ module.exports = {
                     loader: 'css-loader'
                 },
                 {
-                    loader: require.resolve('postcss-loader'),
-                    options: {
-                        ident: 'postcss',
-                        inline: false,
-                        annotations: false,
-                        sourcesContent: true,
-                        plugins: () => [
-                            require('postcss-preset-env')({
-                                autoprefixer: {
-                                    flexbox: 'no-2009',
-                                    cascade: true
-                                },
-                                stage: 3
-                            }),
-                            require('postcss-clean')({
-                                format: 'beautify',
-                                level: 1
-                            })
-                        ]
-                    }
-                },
-                {
                     loader: 'sass-loader'
                 }]
             },
