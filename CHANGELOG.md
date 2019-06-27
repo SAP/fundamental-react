@@ -2,6 +2,36 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.6.0-rc.37"></a>
+# [0.6.0-rc.37](https://github.com/SAP/fundamental-react/compare/v0.6.0-rc.36...v0.6.0-rc.37) (2019-06-27)
+
+
+
+<a name="0.6.0-rc.36"></a>
+# [0.6.0-rc.36](https://github.com/SAP/fundamental-react/compare/v0.6.0-rc.35...v0.6.0-rc.36) (2019-06-26)
+
+
+
+<a name="0.6.0-rc.35"></a>
+# [0.6.0-rc.35](https://github.com/SAP/fundamental-react/compare/v0.6.0-rc.34...v0.6.0-rc.35) (2019-06-25)
+
+
+
+<a name="0.6.0-rc.34"></a>
+# [0.6.0-rc.34](https://github.com/SAP/fundamental-react/compare/v0.6.0-rc.33...v0.6.0-rc.34) (2019-06-25)
+
+
+
+<a name="0.6.0-rc.33"></a>
+# [0.6.0-rc.33](https://github.com/SAP/fundamental-react/compare/v0.6.0-rc.32...v0.6.0-rc.33) (2019-06-24)
+
+
+
+<a name="0.6.0-rc.32"></a>
+# [0.6.0-rc.32](https://github.com/SAP/fundamental-react/compare/v0.6.0-rc.31...v0.6.0-rc.32) (2019-06-24)
+
+
+
 <a name="0.6.0-rc.31"></a>
 # [0.6.0-rc.31](https://github.com/SAP/fundamental-react/compare/v0.6.0-rc.30...v0.6.0-rc.31) (2019-06-20)
 
