@@ -16,6 +16,7 @@ const PanelHeader = props => {
 PanelHeader.displayName = 'Panel.Header';
 
 PanelHeader.propTypes = {
+    children: PropTypes.node,
     className: PropTypes.string
 };
 

@@ -55,8 +55,10 @@ MenuItem.displayName = 'Menu.Item';
 MenuItem.propTypes = {
     addon: PropTypes.string,
     addonProps: PropTypes.object,
+    children: PropTypes.node,
     className: PropTypes.string,
     isLink: PropTypes.bool,
+    onclick: PropTypes.func,
     separator: PropTypes.bool,
     url: PropTypes.string,
     urlProps: PropTypes.object

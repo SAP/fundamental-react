@@ -23,6 +23,7 @@ const Badge = ({ type, modifier, children, className, ...props }) => {
 Badge.displayName = 'Badge';
 
 Badge.propTypes = {
+    children: PropTypes.node,
     className: PropTypes.string,
     modifier: PropTypes.oneOf(BADGE_MODIFIERS),
     type: PropTypes.oneOf(BADGE_TYPES)

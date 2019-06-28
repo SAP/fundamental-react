@@ -30,6 +30,8 @@ const BreadcrumbItem = ({ url, name, className, children, ...props }) => {
 BreadcrumbItem.displayName = 'Breadcrumb.Item';
 
 BreadcrumbItem.propTypes = {
+    children: PropTypes.node,
+    className: PropTypes.string,
     name: PropTypes.string,
     url: PropTypes.string
 };

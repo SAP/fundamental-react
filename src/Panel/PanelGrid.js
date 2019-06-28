@@ -27,6 +27,7 @@ const PanelGrid = props => {
 PanelGrid.displayName = 'PanelGrid';
 
 PanelGrid.propTypes = {
+    children: PropTypes.node,
     className: PropTypes.string,
     cols: CustomPropTypes.range(1, 6),
     nogap: PropTypes.bool

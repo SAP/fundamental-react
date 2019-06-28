@@ -22,6 +22,7 @@ const Counter = ({ localizedText, notification, children, className, ...props })
 Counter.displayName = 'Counter';
 
 Counter.propTypes = {
+    children: PropTypes.node,
     className: PropTypes.string,
     localizedText: CustomPropTypes.i18n({
         counterLabel: PropTypes.string

@@ -20,6 +20,7 @@ const PanelFilters = props => {
 PanelFilters.displayName = 'Panel.Filters';
 
 PanelFilters.propTypes = {
+    children: PropTypes.node,
     className: PropTypes.string
 };
 

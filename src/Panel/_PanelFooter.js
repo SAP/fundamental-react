@@ -16,6 +16,7 @@ const PanelFooter = props => {
 PanelFooter.displayName = 'Panel.Footer';
 
 PanelFooter.propTypes = {
+    children: PropTypes.node,
     className: PropTypes.string
 };
 

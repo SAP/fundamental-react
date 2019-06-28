@@ -26,6 +26,7 @@ const Panel = props => {
 Panel.displayName = 'Panel';
 
 Panel.propTypes = {
+    children: PropTypes.node,
     className: PropTypes.string,
     colSpan: CustomPropTypes.range(1, 6)
 };

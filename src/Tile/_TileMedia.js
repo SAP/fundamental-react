@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 const TileMedia = props => {
-    const { children, className, productTile, ...rest } = props;
+    const { children, className, ...rest } = props;
 
     const tileMediaClasses = classnames(
         'fd-tile__media',

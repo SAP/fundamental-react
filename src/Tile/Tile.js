@@ -60,6 +60,7 @@ Tile.displayName = 'Tile';
 Tile.propTypes = {
     backgroundColor: PropTypes.number,
     backgroundImage: PropTypes.string,
+    children: PropTypes.node,
     className: PropTypes.string,
     colorAccent: PropTypes.number,
     columnSpan: CustomPropTypes.range(1, 6),
