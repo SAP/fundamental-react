@@ -18,6 +18,10 @@ plugins:
     - loosely-restrict-imports
     - react
 
+settings:
+    react: 
+        version: 'detect'  
+
 rules:
     brace-style: 2
     camelcase: 2

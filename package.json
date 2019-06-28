@@ -116,7 +116,7 @@
     "postcss-safe-parser": "4.0.1",
     "pre-commit": "^1.2.2",
     "react": "^16.6.3",
-    "react-dev-utils": "^8.0.0",
+    "react-dev-utils": "^6.1.1",
     "react-dom": "^16.6.3",
     "react-element-to-jsx-string": "^14.0.2",
     "react-helmet-async": "^1.0.2",
