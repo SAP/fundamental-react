@@ -1,6 +1,6 @@
 {
   "name": "fundamental-react",
-  "version": "0.6.1-rc.0",
+  "version": "0.6.1",
   "private": false,
   "description": "SAP Fundamentals, implemented in React",
   "license": "Apache-2.0",
@@ -120,7 +120,7 @@
     "react-markdown": "^4.0.6",
     "react-router": "^5.0.1",
     "react-router-dom": "^5.0.1",
-    "react-syntax-highlighter": "^10.3.0",
+    "react-syntax-highlighter": "^11.0.1",
     "react-test-renderer": "^16.6.3",
     "regenerator-runtime": "^0.13.2",
     "resolve": "1.11.1",
