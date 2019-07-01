@@ -25,6 +25,11 @@ const componentDirs = readdirSync(srcPath).map(name => path.join(srcPath, name))
     };
 });
 
+//ignore scss imports
+require.extensions['.scss'] = function(module, filename) {
+    console.info(`Ignoring ${filename} import`);  // eslint-disable-line
+};
+
 // For every component directory.
 componentDirs.map((directory) => {
     let fileContents = '';

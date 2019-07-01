@@ -1,8 +1,7 @@
 [
   {
     name: "Fundamental-React Size",
-    webpack: true,
-    path: "lib/index.js",
-    limit: "50 KB"
+    config: "config/webpack.config.sizeLimit.js",
+    limit: "400 KB"
   }
 ]

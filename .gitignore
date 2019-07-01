@@ -9,9 +9,14 @@
 # production
 /build
 /lib
-/src/**/index.js
 # Readme copy for github pages site
 /src/_playground/documentation/Home/README.md
+
+#index files
+/src/**/index.js
+
+#size-limit output
+/dist
 
 # misc
 .DS_Store

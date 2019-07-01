@@ -1,20 +1,12 @@
-import Adapter from 'enzyme-adapter-react-16';
-import { configure } from 'enzyme';
-
-configure({ adapter: new Adapter() });
-
-//https://github.com/FezVrasta/popper.js/issues/478
-if (global.document) {
-    document.createRange = () => ({
-        setStart: () => { },
-        setEnd: () => { },
-        commonAncestorContainer: {
-            nodeName: 'BODY',
-            ownerDocument: document
-        }
-    });
-}
 
 module.exports = {
-    'testURL': 'http://localhost/'
+    'rootDir': '../../',
+    'verbose': true,
+    'testURL': 'http://localhost/',
+    'testMatch': ['**/*.test.js'],
+    'setupFiles': ['./config/jest/setup.js'],
+    'moduleFileExtensions': ['js', 'json', 'jsx', 'scss', 'node'],
+    'moduleNameMapper': {
+        '^.+\\.(css|scss)$': 'babel-jest'
+    }
 };
