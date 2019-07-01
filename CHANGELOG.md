@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.7.0-rc.0"></a>
+# [0.7.0-rc.0](https://github.com/SAP/fundamental-react/compare/v0.6.1...v0.7.0-rc.0) (2019-07-01)
+
+
+### Features
+
+* work needed to bring in self contained styles ([#632](https://github.com/SAP/fundamental-react/issues/632)) ([d27dfd4](https://github.com/SAP/fundamental-react/commit/d27dfd4))
+
+
+
 <a name="0.6.1"></a>
 ## [0.6.1](https://github.com/SAP/fundamental-react/compare/v0.6.1-rc.2...v0.6.1) (2019-06-28)
 
