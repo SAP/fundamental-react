@@ -3,7 +3,10 @@
 /* eslint-disable no-undefined */
 
 'use strict';
+
 const path = require('path');
+const webpack = require('webpack');
+const PnpWebpackPlugin = require('pnp-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const InlineChunkHtmlPlugin = require('react-dev-utils/InlineChunkHtmlPlugin');
 const TerserPlugin = require('terser-webpack-plugin');
@@ -11,8 +14,12 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const safePostCssParser = require('postcss-safe-parser');
 const ManifestPlugin = require('webpack-manifest-plugin');
+const InterpolateHtmlPlugin = require('react-dev-utils/InterpolateHtmlPlugin');
 const WorkboxWebpackPlugin = require('workbox-webpack-plugin');
+const ModuleScopePlugin = require('react-dev-utils/ModuleScopePlugin');
 const paths = require('./paths');
+const getClientEnvironment = require('./env');
+const ModuleNotFoundPlugin = require('react-dev-utils/ModuleNotFoundPlugin');
 
 
 // Webpack uses `publicPath` to determine where the app is being served from.
@@ -30,6 +37,8 @@ const shouldInlineRuntimeChunk = process.env.INLINE_RUNTIME_CHUNK !== 'false';
 // as %PUBLIC_URL% in `index.html` and `process.env.PUBLIC_URL` in JavaScript.
 // Omit trailing slash as %PUBLIC_URL%/xyz looks better than %PUBLIC_URL%xyz.
 const publicUrl = publicPath.slice(0, -1);
+// Get environment variables to inject into our app.
+const env = getClientEnvironment(publicUrl);
 
 // style files regexes
 const cssRegex = /\.css$/;
@@ -50,13 +59,8 @@ const getStyleLoaders = (cssOptions, preProcessor) => {
             options: cssOptions
         },
         {
-            // Options for PostCSS as we reference these options twice
-            // Adds vendor prefixing based on your specified browser support in
-            // package.json
             loader: require.resolve('postcss-loader'),
             options: {
-                // Necessary for external CSS imports to work
-                // https://github.com/facebook/create-react-app/issues/2677
                 ident: 'postcss',
                 plugins: () => [
                     require('postcss-flexbugs-fixes'),
@@ -112,15 +116,7 @@ module.exports = {
                     compress: {
                         ecma: 5,
                         warnings: false,
-                        // Disabled because of an issue with Uglify breaking seemingly valid code:
-                        // https://github.com/facebook/create-react-app/issues/2376
-                        // Pending further investigation:
-                        // https://github.com/mishoo/UglifyJS2/issues/2011
                         comparisons: false,
-                        // Disabled because of an issue with Terser breaking valid code:
-                        // https://github.com/facebook/create-react-app/issues/5250
-                        // Pending futher investigation:
-                        // https://github.com/terser-js/terser/issues/120
                         inline: 2
                     },
                     mangle: {
@@ -129,8 +125,6 @@ module.exports = {
                     output: {
                         ecma: 5,
                         comments: false,
-                        // Turned on because emoji and regex is not minified properly using default
-                        // https://github.com/facebook/create-react-app/issues/2488
                         ascii_only: true
                     }
                 },
@@ -157,23 +151,33 @@ module.exports = {
                 }
             })
         ],
-        // Automatically split vendor and commons
-        // https://twitter.com/wSokra/status/969633336732905474
-        // https://medium.com/webpack/webpack-4-code-splitting-chunk-graph-and-the-splitchunks-optimization-be739a861366
         splitChunks: {
             chunks: 'all',
             name: false
         },
-        // Keep the runtime chunk seperated to enable long term caching
-        // https://twitter.com/wSokra/status/969679223278505985
         runtimeChunk: true
     },
     resolve: {
-        extensions: ['.js', '.jsx', '.json', '.es6']
+        modules: ['node_modules'].concat(
+            process.env.NODE_PATH.split(path.delimiter).filter(Boolean)
+        ),
+        extensions: paths.moduleFileExtensions
+            .map(ext => `.${ext}`),
+        plugins: [
+            PnpWebpackPlugin,
+            new ModuleScopePlugin(paths.appSrc, [paths.appPackageJson])
+        ]
+    },
+    resolveLoader: {
+        plugins: [
+            PnpWebpackPlugin.moduleLoader(module)
+        ]
     },
     module: {
         strictExportPresence: true,
         rules: [
+            // Disable require.ensure as it's not a standard language feature.
+            { parser: { requireEnsure: false } },
             {
                 test: /\.(js|mjs|jsx)$/,
                 enforce: 'pre',
@@ -199,16 +203,50 @@ module.exports = {
                         }
                     },
                     {
-                        test: /\.(js|jsx)$/,
-                        exclude: /node_modules/,
-                        use: {
-                            loader: 'babel-loader',
-                            options: {
-                                presets: [
-                                    '@babel/preset-env',
-                                    '@babel/preset-react'
+                        test: /\.(js|mjs|jsx|ts|tsx)$/,
+                        include: paths.appSrc,
+
+                        loader: require.resolve('babel-loader'),
+                        options: {
+                            customize: require.resolve(
+                                'babel-preset-react-app/webpack-overrides'
+                            ),
+                            plugins: [
+                                [
+                                    require.resolve('babel-plugin-named-asset-import'),
+                                    {
+                                        loaderMap: {
+                                            svg: {
+                                                ReactComponent: '@svgr/webpack?-prettier,-svgo![path]'
+                                            }
+                                        }
+                                    }
                                 ]
-                            }
+                            ],
+                            cacheDirectory: true,
+                            // Save disk space when time isn't as important
+                            cacheCompression: true,
+                            compact: true
+                        }
+                    },
+                    {
+                        test: /\.(js|mjs)$/,
+                        exclude: /@babel(?:\/|\\{1,2})runtime/,
+                        loader: require.resolve('babel-loader'),
+                        options: {
+                            babelrc: false,
+                            configFile: false,
+                            compact: false,
+                            presets: [
+                                [
+                                    require.resolve('babel-preset-react-app/dependencies'),
+                                    { helpers: true }
+                                ]
+                            ],
+                            cacheDirectory: true,
+                            // Save disk space when time isn't as important
+                            cacheCompression: true,
+                            sourceMaps: false
                         }
                     },
                     {
@@ -221,15 +259,14 @@ module.exports = {
                     },
                     {
                         test: sassRegex,
-                        use: [{
-                            loader: 'style-loader'
-                        },
-                        {
-                            loader: 'css-loader'
-                        },
-                        {
-                            loader: 'sass-loader'
-                        }]
+                        loader: getStyleLoaders(
+                            {
+                                importLoaders: 2,
+                                sourceMap: shouldUseSourceMap
+                            },
+                            'sass-loader'
+                        ),
+                        sideEffects: true
                     },
                     {
                         loader: require.resolve('file-loader'),
@@ -269,6 +306,15 @@ module.exports = {
         // <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
         // In production, it will be an empty string unless you specify "homepage"
         // in `package.json`, in which case it will be the pathname of that URL.
+        new InterpolateHtmlPlugin(HtmlWebpackPlugin, env.raw),
+        // This gives some necessary context to module not found errors, such as
+        // the requesting resource.
+        new ModuleNotFoundPlugin(paths.appPath),
+        // Makes some environment variables available to the JS code, for example:
+        // if (process.env.NODE_ENV === 'production') { ... }. See `./env.js`.
+        // It is absolutely essential that NODE_ENV was set to production here.
+        // Otherwise React will be compiled in the very slow development mode.
+        new webpack.DefinePlugin(env.stringified),
         new MiniCssExtractPlugin({
             // Options similar to the same options in webpackOptions.output
             // both options are optional
