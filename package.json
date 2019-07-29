@@ -100,7 +100,7 @@
     "fs-extra": "8.1.0",
     "gh-pages": "^2.0.1",
     "github-assistant": "^0.3.0",
-    "group-array": "^0.3.3",
+    "group-array": "^1.0.0",
     "html-webpack-plugin": "4.0.0-alpha.2",
     "jest": "24.8.0",
     "mini-css-extract-plugin": "0.8.0",
