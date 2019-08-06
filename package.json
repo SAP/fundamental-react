@@ -96,7 +96,7 @@
     "eslint-plugin-jsx-a11y": "6.2.3",
     "eslint-plugin-loosely-restrict-imports": "^0.1.15",
     "eslint-plugin-react": "7.14.2",
-    "file-loader": "4.0.0",
+    "file-loader": "4.1.0",
     "fs-extra": "8.1.0",
     "gh-pages": "^2.0.1",
     "github-assistant": "^0.3.0",
