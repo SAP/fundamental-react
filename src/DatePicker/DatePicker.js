@@ -367,7 +367,8 @@ DatePicker.defaultProps = {
 
 DatePicker.propDescriptions = {
     ...Calendar.propDescriptions,
-    enableRangeSelection: 'Set to **true** to enable the selection of a date range (begin and end).'
+    enableRangeSelection: 'Set to **true** to enable the selection of a date range (begin and end).',
+    onBlur: 'Callback function for onBlur events. In the object returned, date is the date object and formattedDate is the formatted date.'
 };
 
 export default DatePicker;
