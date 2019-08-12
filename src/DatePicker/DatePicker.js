@@ -207,12 +207,17 @@ class DatePicker extends Component {
 
     clickOutside = () => {
         this.validateDates();
-        this.setState({ hidden: true });
+        this.setState({
+            hidden: true
+        }, () => {
+            this.props.onBlur({
+                date: this.state.selectedDate,
+                formattedDate: this.state.formattedDate
+            });
+        });
     };
 
     updateDate = (date) => {
-        // console.log('Inside updateDate function. The event is: ', date);
-
         if (this.props.enableRangeSelection) {
             if (date.length === 2) {
                 let firstDateMonth = date[0].getMonth() + 1;
@@ -269,7 +274,7 @@ class DatePicker extends Component {
     render() {
         const { enableRangeSelection, disableWeekends, disableBeforeDate, disableAfterDate,
             disableWeekday, disablePastDates, disableFutureDates, blockedDates, disabledDates,
-            compact, className, inputProps, buttonProps, ...props } = this.props;
+            compact, className, inputProps, buttonProps, onBlur, ...props } = this.props;
 
         const datePickerClasses = classnames(
             'fd-date-picker',
@@ -303,6 +308,8 @@ class DatePicker extends Component {
                             <input
                                 {...inputProps}
                                 className={datePickerInputClasses}
+                                onBlur={() => onBlur({ date: this.state.selectedDate,
+                                    formattedDate: this.state.formattedDate })}
                                 onChange={this.modifyDate}
                                 onClick={() => this.openCalendar('input')}
                                 onKeyPress={this.sendUpdate}
@@ -350,7 +357,12 @@ DatePicker.propTypes = {
     buttonProps: PropTypes.object,
     compact: PropTypes.bool,
     enableRangeSelection: PropTypes.bool,
-    inputProps: PropTypes.object
+    inputProps: PropTypes.object,
+    onBlur: PropTypes.func
+};
+
+DatePicker.defaultProps = {
+    onBlur: () => {}
 };
 
 DatePicker.propDescriptions = {
