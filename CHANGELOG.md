@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.7.0-rc.42"></a>
+# [0.7.0-rc.42](https://github.com/SAP/fundamental-react/compare/v0.7.0-rc.41...v0.7.0-rc.42) (2019-08-13)
+
+
+### Bug Fixes
+
+* CORUI-6949: add onBlur callback to DatePicker ([#712](https://github.com/SAP/fundamental-react/issues/712)) ([5070d2b](https://github.com/SAP/fundamental-react/commit/5070d2b))
+
+
+
 <a name="0.7.0-rc.41"></a>
 # [0.7.0-rc.41](https://github.com/SAP/fundamental-react/compare/v0.7.0-rc.40...v0.7.0-rc.41) (2019-08-12)
 
