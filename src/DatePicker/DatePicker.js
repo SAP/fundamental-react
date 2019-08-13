@@ -271,6 +271,13 @@ class DatePicker extends Component {
         }
     }
 
+    _handleBlur = () => {
+        this.props.onBlur({
+            date: this.state.selectedDate,
+            formattedDate: this.state.formattedDate
+        });
+    };
+
     render() {
         const { enableRangeSelection, disableWeekends, disableBeforeDate, disableAfterDate,
             disableWeekday, disablePastDates, disableFutureDates, blockedDates, disabledDates,
@@ -308,8 +315,7 @@ class DatePicker extends Component {
                             <input
                                 {...inputProps}
                                 className={datePickerInputClasses}
-                                onBlur={() => onBlur({ date: this.state.selectedDate,
-                                    formattedDate: this.state.formattedDate })}
+                                onBlur={this._handleBlur}
                                 onChange={this.modifyDate}
                                 onClick={() => this.openCalendar('input')}
                                 onKeyPress={this.sendUpdate}
@@ -368,7 +374,7 @@ DatePicker.defaultProps = {
 DatePicker.propDescriptions = {
     ...Calendar.propDescriptions,
     enableRangeSelection: 'Set to **true** to enable the selection of a date range (begin and end).',
-    onBlur: 'Callback function for onBlur events. In the object returned, date is the date object and formattedDate is the formatted date.'
+    onBlur: 'Callback function for onBlur events. In the object returned, `date` is the date object and `formattedDate` is the formatted date.'
 };
 
 export default DatePicker;

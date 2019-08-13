@@ -367,6 +367,37 @@ describe('<DatePicker />', () => {
         expect(wrapper.state('formattedDate')).toEqual('05/04/2018');
     });
 
+    describe('onBlur callback', () => {
+        test('should call onBlur after clicking outside calendar overlay', () => {
+            const blur = jest.fn();
+            const element = mount(<DatePicker onBlur={blur} />);
+
+            element.find('button.fd-popover__control.fd-button--light.sap-icon--calendar').simulate('click', { type: 'input' });
+
+            element.find('table.fd-calendar__table tbody.fd-calendar__group tr.fd-calendar__row td.fd-calendar__item:not(.fd-calendar__item--other-month)')
+                .at(0)
+                .simulate('click');
+
+            let event = new MouseEvent('mousedown', { target: document.querySelector('body') });
+            document.dispatchEvent(event);
+
+            expect(blur).toHaveBeenCalledTimes(1);
+
+            expect(blur).toHaveBeenCalledWith(expect.objectContaining({ date: expect.any(Date) }));
+        });
+        test('should call onBlur after leaving input', () => {
+            const blur = jest.fn();
+            const element = mount(<DatePicker onBlur={blur} />);
+
+            element.find('input[type="text"]').simulate('click', { type: 'input' });
+
+            let event = new MouseEvent('mousedown', { target: document.querySelector('body') });
+            document.dispatchEvent(event);
+
+            expect(blur).toHaveBeenCalledTimes(1);
+        });
+    });
+
     describe('Prop spreading', () => {
         test('should allow props to be spread to the DatePicker component', () => {
             const element = mount(<DatePicker data-sample='Sample' />);
