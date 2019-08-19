@@ -14,7 +14,7 @@ class MarkdownImporter extends React.Component {
         this.props.onUpdate();
     }
 
-    componentWillMount() {
+    componentDidMount() {
         // Get the contents from the Markdown file and put them in the React state, so we can reference it in render() below.
         fetch(this.props.sourceFile).then(res => res.text()).then(text => this.setState({ markdown: text }));
     }

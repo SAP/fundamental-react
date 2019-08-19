@@ -68,7 +68,7 @@ describe('<DatePicker />', () => {
         // check to make sure calendar is shown
         expect(wrapper.state('hidden')).toBeFalsy();
 
-        wrapper.instance().componentWillMount();
+        wrapper.instance().componentDidMount();
 
         // click on body element
         let event = new MouseEvent('mousedown', {

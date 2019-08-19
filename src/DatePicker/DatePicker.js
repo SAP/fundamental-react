@@ -72,7 +72,7 @@ class DatePicker extends Component {
         }
     }
 
-    componentWillMount() {
+    componentDidMount() {
         document.addEventListener('mousedown', this.click, false);
     }
 

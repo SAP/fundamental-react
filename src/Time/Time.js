@@ -23,7 +23,7 @@ class Time extends Component {
         };
     }
 
-    componentWillReceiveProps(nextProps) {
+    getDerivedStateFromProps(nextProps) {
         // check if props are different than the current state to prevent an unneeded render
         if (nextProps.time !== this.state.time) {
             this.setState({ time: nextProps.time });
