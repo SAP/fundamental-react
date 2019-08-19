@@ -1,6 +1,6 @@
 {
   "name": "fundamental-react",
-  "version": "0.7.0-rc.43",
+  "version": "0.7.0-rc.44",
   "private": false,
   "description": "SAP Fundamentals, implemented in React",
   "license": "Apache-2.0",
