@@ -136,7 +136,7 @@
     "terser-webpack-plugin": "1.4.1",
     "tocbot": "^4.5.0",
     "url-loader": "2.1.0",
-    "webpack": "4.39.2",
+    "webpack": "4.39.3",
     "webpack-bundle-analyzer": "^3.3.2",
     "webpack-dev-server": "^3.1.11",
     "webpack-manifest-plugin": "2.0.4",
