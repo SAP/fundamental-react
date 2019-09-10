@@ -1,10 +1,11 @@
+import 'fundamental-styles/dist/form-label.css';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 
 const FormLabel = ({ required, children, className, ...props }) => {
     const formLabelClasses = classnames(
-        'fd-form__label',
+        'fd-form-label',
         className
     );
     return (

@@ -1,24 +1,26 @@
+import 'fundamental-styles/dist/form-item.css';
+import 'fundamental-styles/dist/form-label.css';
+import 'fundamental-styles/dist/radio.css';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-const FormRadioItem = ({ checked, children, className, disabled, id, inline, name, value, ...props }) => {
+const FormRadioItem = ({ checked, children, className, defaultChecked, disabled, id, inline, name, value, ...props }) => {
     const classes = classnames(
         className,
-        'fd-form__item',
-        'fd-form__item--check',
+        'fd-form-item',
         {
-            'fd-form__item--inline': inline
+            'fd-form-item--inline': inline
         }
     );
 
     return (
         <div className={classes} key={id}>
-            <label className='fd-form__label'>
+            <label className='fd-form-label'>
                 <input
                     {...props}
                     checked={checked}
-                    className='fd-form__control'
+                    className='fd-radio'
                     disabled={disabled}
                     id={id}
                     name={name}

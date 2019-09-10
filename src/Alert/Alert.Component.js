@@ -1,7 +1,7 @@
 import path from 'path';
 import React from 'react';
 import { Alert, Icon } from '../';
-import { ComponentPage, Example, Playground, Separator } from '../_playground';
+import { ComponentPage, Example } from '../_playground';
 
 export const AlertComponent = () => {
     return (
@@ -63,28 +63,6 @@ export const AlertComponent = () => {
                     </a>
                 </Alert>
             </Example>
-
-            <Separator />
-
-            <Playground
-                component='alert'
-                schema={[
-                    {
-                        attribute: 'type',
-                        typeOfAttribute: 'string',
-                        'enum': ['', 'warning', 'error', 'information', 'success']
-                    },
-                    {
-                        attribute: 'dismissible',
-                        typeOfAttribute: 'boolean'
-                    }
-                ]}>
-                <Alert dismissible={false} link='#'
-                    linkText='link'>
-                    Default alert with a{' '}
-                </Alert>
-            </Playground>
-
         </ComponentPage>
     );
 };

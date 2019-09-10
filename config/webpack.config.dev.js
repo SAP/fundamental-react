@@ -61,10 +61,6 @@ const getStyleLoaders = (cssOptions, preProcessor) => {
                             cascade: true
                         },
                         stage: 3
-                    }),
-                    require('postcss-clean')({
-                        format: 'beautify',
-                        level: 1
                     })
                 ]
             }

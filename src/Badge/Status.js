@@ -1,3 +1,5 @@
+import 'fundamental-styles/dist/badge.css';
+import 'fundamental-styles/dist/status-label.css';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';

@@ -1,3 +1,4 @@
+import 'fundamental-styles/dist/input.css';
 import classnames from 'classnames';
 import { INPUT_TYPES } from '../utils/constants';
 import PropTypes from 'prop-types';
@@ -5,7 +6,7 @@ import React from 'react';
 
 const FormInput = ({ state, className, disabled, id, name, placeholder, readOnly, type, value, ...props }) => {
     const formInputClasses = classnames(
-        'fd-form__control',
+        'fd-input',
         {
             [`is-${state}`]: !!state
         },

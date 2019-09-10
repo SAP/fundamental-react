@@ -63,53 +63,30 @@ export const ActionBarComponent = () => {
             </Example>
 
             <Example
-                title='Action bar mobile view'>
-                <ActionBar mobile>
-                    <ActionBar.Back />
-                    <ActionBar.Header
-                        description={'Action Bar Description'}
-                        title={'Action Bar with description and back button'} />
-                    <ActionBar.Actions>
-                        <Popover
-                            body={
-                                <Menu>
-                                    <Menu.List>
-                                        <Menu.Item url='/'>Option 1</Menu.Item>
-                                        <Menu.Item url='/'>Option 2</Menu.Item>
-                                        <Menu.Item url='/'>Option 3</Menu.Item>
-                                        <Menu.Item url='/'>Option 4</Menu.Item>
-                                    </Menu.List>
-                                </Menu>
-                            }
-                            control={<Button glyph='vertical-grip' option='light' />}
-                            placement='bottom-end' />
-                    </ActionBar.Actions>
-                </ActionBar>
-            </Example>
-
-            <Example
-                title='Action bar mobile view with custom width'>
-                <ActionBar mobile width='768px'>
-                    <ActionBar.Back />
-                    <ActionBar.Header
-                        description={'Action Bar Description'}
-                        title={'Action Bar with description and back button'} />
-                    <ActionBar.Actions>
-                        <Popover
-                            body={
-                                <Menu>
-                                    <Menu.List>
-                                        <Menu.Item url='/'>Option 1</Menu.Item>
-                                        <Menu.Item url='/'>Option 2</Menu.Item>
-                                        <Menu.Item url='/'>Option 3</Menu.Item>
-                                        <Menu.Item url='/'>Option 4</Menu.Item>
-                                    </Menu.List>
-                                </Menu>
-                            }
-                            control={<Button glyph='vertical-grip' option='light' />}
-                            placement='bottom-end' />
-                    </ActionBar.Actions>
-                </ActionBar>
+                title='Action bar responsive width'>
+                <div style={{ 'width': '319px' }}>
+                    <ActionBar>
+                        <ActionBar.Back />
+                        <ActionBar.Header
+                            description={'Action Bar Description'}
+                            title={'Action Bar with description and back button'} />
+                        <ActionBar.Actions>
+                            <Popover
+                                body={
+                                    <Menu>
+                                        <Menu.List>
+                                            <Menu.Item url='/'>Option 1</Menu.Item>
+                                            <Menu.Item url='/'>Option 2</Menu.Item>
+                                            <Menu.Item url='/'>Option 3</Menu.Item>
+                                            <Menu.Item url='/'>Option 4</Menu.Item>
+                                        </Menu.List>
+                                    </Menu>
+                                }
+                                control={<Button glyph='vertical-grip' option='light' />}
+                                placement='bottom-end' />
+                        </ActionBar.Actions>
+                    </ActionBar>
+                </div>
             </Example>
 
         </ComponentPage>

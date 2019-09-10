@@ -1,10 +1,11 @@
+import 'fundamental-styles/dist/form-group.css';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 
 const FormSet = ({ children, className, ...props }) => {
     const formSetClasses = classnames(
-        'fd-form__set',
+        'fd-form-group',
         className
     );
 

@@ -1,3 +1,4 @@
+import 'fundamental-styles/dist/label.css';
 import classnames from 'classnames';
 import { LABEL_TYPES } from '../utils/constants';
 import PropTypes from 'prop-types';

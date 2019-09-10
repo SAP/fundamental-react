@@ -5,8 +5,8 @@ module.exports = {
     'testURL': 'http://localhost/',
     'testMatch': ['**/*.test.js'],
     'setupFiles': ['./config/jest/setup.js'],
-    'moduleFileExtensions': ['js', 'json', 'jsx', 'scss', 'node'],
+    'moduleFileExtensions': ['js', 'json', 'jsx', 'css', 'node'],
     'moduleNameMapper': {
-        '^.+\\.(css|scss)$': 'babel-jest'
+        '^.+\\.(css)$': 'babel-jest'
     }
 };

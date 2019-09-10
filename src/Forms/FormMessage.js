@@ -1,3 +1,4 @@
+import 'fundamental-styles/dist/form-message.css';
 import classnames from 'classnames';
 import { FORM_MESSAGE_TYPES } from '../utils/constants';
 import PropTypes from 'prop-types';
@@ -5,9 +6,9 @@ import React from 'react';
 
 const FormMessage = ({ type, children, className, ...props }) => {
     const formMessageClasses = classnames(
-        'fd-form__message',
+        'fd-form-message',
         {
-            [`fd-form__message--${type}`]: !!type
+            [`fd-form-message--${type}`]: !!type
         },
         className
     );

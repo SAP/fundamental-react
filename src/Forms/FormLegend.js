@@ -1,10 +1,11 @@
+import 'fundamental-styles/dist/fieldset.css';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 
 const FormLegend = ({ children, className, ...props }) => {
     const formLegendClasses = classnames(
-        'fd-form__legend',
+        'fd-fieldset__legend',
         className
     );
 

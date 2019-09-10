@@ -1,3 +1,4 @@
+import 'fundamental-styles/dist/breadcrumb.css';
 import BreadcrumbItem from './_BreadcrumbItem';
 import PropTypes from 'prop-types';
 import React from 'react';

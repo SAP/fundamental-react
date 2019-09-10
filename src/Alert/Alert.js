@@ -1,3 +1,5 @@
+import 'fundamental-styles/dist/alert.css';
+import 'fundamental-styles/dist/link.css';
 import { ALERT_TYPES } from '../utils/constants';
 import classnames from 'classnames';
 import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
@@ -59,16 +61,18 @@ class Alert extends Component {
                                 className='fd-alert__close'
                                 onClick={this.closeAlertHandler} />
                         )}
-                        {children}
-                        {link && (
-                            <a
-                                {...linkProps}
-                                className='fd-link'
-                                href={link}>
-                                {linkText}{' '}
-                                <span className='sap-icon--arrow-right sap-icon--s' />
-                            </a>
-                        )}
+                        <div className='fd-alert__text'>
+                            {children}
+                            {link && (
+                                <a
+                                    {...linkProps}
+                                    className='fd-link'
+                                    href={link}>
+                                    {linkText}{' '}
+                                    <span className='sap-icon--arrow-right sap-icon--s' />
+                                </a>
+                            )}
+                        </div>
                     </div>
                 )}
             </div>

@@ -1,3 +1,5 @@
+import 'fundamental-styles/dist/badge.css';
+import 'fundamental-styles/dist/counter.css';
 import classnames from 'classnames';
 import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import PropTypes from 'prop-types';

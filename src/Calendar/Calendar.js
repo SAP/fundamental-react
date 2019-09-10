@@ -1,3 +1,4 @@
+import 'fundamental-styles/dist/calendar.css';
 import classnames from 'classnames';
 import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import PropTypes from 'prop-types';

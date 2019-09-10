@@ -15,9 +15,6 @@
 #index files
 /src/**/index.js
 
-#size-limit output
-/dist
-
 # misc
 .DS_Store
 .env.local

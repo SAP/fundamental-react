@@ -1,10 +1,11 @@
+import 'fundamental-styles/dist/fieldset.css';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 
 const FormFieldset = ({ children, className, ...props }) => {
     const formFieldsetClasses = classnames(
-        'fd-form__set',
+        'fd-fieldset',
         className
     );
 

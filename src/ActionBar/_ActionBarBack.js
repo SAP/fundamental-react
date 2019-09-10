@@ -1,3 +1,4 @@
+import Button from '../Button/Button';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -10,10 +11,12 @@ const ActionBarBack = ({ onClick, className, buttonProps, ...props }) => {
 
     return (
         <div {...props} className={actionBarBackClasses}>
-            <button
+            <Button
                 {...buttonProps}
-                className='fd-button--light fd-button--compact sap-icon--nav-back'
-                onClick={onClick} />
+                compact
+                glyph='nav-back'
+                onClick={onClick}
+                option='light' />
         </div>
     );
 };

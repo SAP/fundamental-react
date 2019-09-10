@@ -1,9 +1,6 @@
 $breakpoint-lg: 1280px;
 $breakpoint-md: 1024px;
 $breakpoint-sm: 600px;
-$fd-icons-path: '../../node_modules/fundamental-styles/scss/icons/';
-$fd-fonts-path: '../../node_modules/fundamental-styles/dist/fonts/';
-@import '~fundamental-styles/scss/fundamental-styles-ie11.scss';
 @import '~tocbot/src/scss/tocbot-core';
 @import '~tocbot/src/scss/tocbot-default-theme';
 

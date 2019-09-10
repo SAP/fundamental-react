@@ -31,15 +31,7 @@ For an existing react application, follow the steps below:
     npm install fundamental-react
     ```
 
-1. As some components are currently packaged together with their respective `scss`, you will need to edit your webpack configuration to handle these files. See [sass-loader](https://github.com/webpack-contrib/sass-loader).
-
-1. Load the `fundamental-styles` styles. This is now packaged as a dependency with `fundamental-react`. If using create-react-app, this will be in `App.css`.
-
-    ```css
-    @import '~fundamental-styles/scss/fundamental-styles-ie11.css';
-    ```
-
-    > **NOTE:** Once all components are packaged with their respective `scss`, this step will not be needed.
+1. All components are currently packaged together with their respective `css`, you will need to edit your webpack configuration to handle these files. See [css-loader](https://github.com/webpack-contrib/css-loader).
 
 1. Import components as needed. See [Component Documentation](https://sap.github.io/fundamental-react/) for examples and API details.
     ```javascript

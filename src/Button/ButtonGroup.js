@@ -1,3 +1,4 @@
+import 'fundamental-styles/dist/button-group.css';
 import PropTypes from 'prop-types';
 import React from 'react';
 

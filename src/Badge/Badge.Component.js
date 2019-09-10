@@ -1,8 +1,7 @@
-import { listOfIcons } from '../utils/listOfIcons';
 import path from 'path';
 import React from 'react';
 import { Badge, Button, Counter, Label, Status } from '../';
-import { ComponentPage, Example, Playground, Separator } from '../_playground';
+import { ComponentPage, Example } from '../_playground';
 
 export const BadgeComponent = () => {
     return (
@@ -139,43 +138,6 @@ export const BadgeComponent = () => {
                     </Button>
                 </div>
             </Example>
-
-            <Separator />
-
-            <Playground
-                component='badge'
-                schema={[
-                    {
-                        attribute: 'children',
-                        typeOfAttribute: 'string'
-                    },
-                    {
-                        attribute: 'component',
-                        typeOfAttribute: 'string',
-                        'enum': ['badge', 'label', 'status']
-                    },
-                    {
-                        attribute: 'type',
-                        typeOfAttribute: 'string',
-                        'enum': ['default', 'success', 'warning', 'error', 'available', 'away', 'busy', 'offline']
-                    },
-                    {
-                        attribute: 'modifier',
-                        typeOfAttribute: 'string',
-                        'enum': ['', 'pill', 'filled']
-                    },
-                    {
-                        attribute: 'glyph',
-                        typeOfAttribute: 'string',
-                        'enum': listOfIcons
-                    }
-                ]}>
-                <Badge glyph='message-error' modifier='filled'
-                    type='success'>
-                    Default
-                </Badge>
-            </Playground>
-
         </ComponentPage>
     );
 };
