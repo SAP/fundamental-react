@@ -2,7 +2,9 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-const MenuItem = ({ url, isLink, separator, addon, children, onclick, className, addonProps, urlProps, ...props }) => {
+const MenuItem = ({ url, isLink, separator, addon, children, onclick, className, addonProps, urlProps, uniqueKey, ...props }) => {
+
+
     const menuItemLinkClasses = classnames(
         'fd-menu__item',
         {
@@ -39,7 +41,8 @@ const MenuItem = ({ url, isLink, separator, addon, children, onclick, className,
 
     return (
         <React.Fragment>
-            <li {...props} className={className}>
+            <li {...props} className={className}
+                key={uniqueKey}>
                 {addon &&
                     <div {...addonProps} className='fd-menu__addon-before'>{<span className={'sap-icon--' + addon} />}</div>
                 }
@@ -60,6 +63,7 @@ MenuItem.propTypes = {
     isLink: PropTypes.bool,
     onclick: PropTypes.func,
     separator: PropTypes.bool,
+    uniqueKey: PropTypes.any,
     url: PropTypes.string,
     urlProps: PropTypes.object
 };
