@@ -74,6 +74,7 @@ MenuItem.propDescriptions = {
     children: 'component - can be used to pass React Router <Link> or any other component which emits an <a>.',
     isLink: 'Set to **true** to style as a link.',
     separator: 'Set to **true** to add a horizontal line (separator).',
+    uniqueKey: 'A value that is used as React\'s `key` property in the inner `<li>` element.',
     url: 'Enables use of `<a>` element. Value to be applied to the anchor\'s `href` attribute. Should use either `link` or `url`, but not both.',
     urlProps: 'Additional props to be spread to the Menu Item links (when using `url`).'
 };
