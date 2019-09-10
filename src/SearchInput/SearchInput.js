@@ -171,6 +171,7 @@ class SearchInput extends Component {
                                 aria-expanded={this.state.searchExpanded}
                                 aria-haspopup='true'
                                 className='sap-icon--search fd-button--shell'
+                                key='search-in-shellbar'
                                 onClick={this.onSearchBtnHandler} />
                             <div
                                 aria-hidden={!this.state.searchExpanded}
