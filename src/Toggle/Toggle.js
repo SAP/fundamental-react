@@ -50,6 +50,7 @@ class Toggle extends React.Component {
                             checked={this.state.checked}
                             disabled={disabled}
                             id={id}
+                            key='toggle-checkbox'
                             onChange={this.handleChange}
                             type='checkbox' />
                         <span className='fd-toggle__switch' role='presentation' />
