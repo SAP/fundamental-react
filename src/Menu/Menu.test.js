@@ -141,6 +141,15 @@ describe('<Menu />', () => {
         });
     });
 
+    describe('MenuItem', () => {
+        test('create menu item with uniqueKey', () => {
+            const key = 'testkey';
+            const component = mount(<Menu.Item uniqueKey={key}></Menu.Item>).find('li');
+
+            expect(component.at(0).key()).toBe(key);
+        });
+    });
+
     describe('Prop spreading', () => {
         test('should allow props to be spread to the Menu component', () => {
             const element = mount(<Menu data-sample='Sample' />);
