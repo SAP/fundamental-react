@@ -1,3 +1,4 @@
+import 'fundamental-styles/dist/inline-help.css';
 import classnames from 'classnames';
 import { INLINE_HELP_PLACEMENTS } from '../utils/constants';
 import PropTypes from 'prop-types';

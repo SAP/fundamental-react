@@ -1,3 +1,4 @@
+import 'fundamental-styles/dist/menu.css';
 import classnames from 'classnames';
 import MenuGroup from './_MenuGroup';
 import MenuItem from './_MenuItem';

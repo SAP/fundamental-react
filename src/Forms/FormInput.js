@@ -4,10 +4,11 @@ import { INPUT_TYPES } from '../utils/constants';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-const FormInput = ({ state, className, disabled, id, name, placeholder, readOnly, type, value, ...props }) => {
+const FormInput = ({ state, className, compact, disabled, id, name, placeholder, readOnly, type, value, ...props }) => {
     const formInputClasses = classnames(
         'fd-input',
         {
+            'fd-input--compact': !!compact,
             [`is-${state}`]: !!state
         },
         className
@@ -31,6 +32,7 @@ FormInput.displayName = 'FormInput';
 
 FormInput.propTypes = {
     className: PropTypes.string,
+    compact: PropTypes.bool,
     disabled: PropTypes.bool,
     id: PropTypes.string,
     name: PropTypes.string,
@@ -39,6 +41,10 @@ FormInput.propTypes = {
     state: PropTypes.oneOf(INPUT_TYPES),
     type: PropTypes.string,
     value: PropTypes.string
+};
+
+FormInput.defaultProps = {
+    type: 'text'
 };
 
 FormInput.propDescriptions = {

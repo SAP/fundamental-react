@@ -3,54 +3,30 @@ import classnames from 'classnames';
 import FormItem from './FormItem';
 import FormLabel from './FormLabel';
 import PropTypes from 'prop-types';
-import ReactDOM from 'react-dom';
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 
-const getCheckStatus = (checked, indeterminate) => {
-    if (indeterminate) {
-        return 'mixed';
-    } else if (checked) {
-        return 'true';
-    } else {
-        return 'false';
-    }
-};
-
-const Checkbox = ({ checked, className, defaultChecked, disabled, id, inline, indeterminate, name, onChange, value, ...props }) => {
-
-    const inputEl = useRef();
-
-    useEffect(() => {
-        if (indeterminate) {
-            let node = ReactDOM.findDOMNode(inputEl);
-            node.indeterminate = true;
-        }
-    });
-
+const Checkbox = ({ checked, className, defaultChecked, disabled, id, inline, name, onChange, value, ...props }) => {
     const classes = classnames(
         className,
-        'fd-form-checkbox'
-    );
-
-    const formItemClasses = classnames(
-        { 'fd-form-item--inline': inline }
+        'fd-checkbox'
     );
 
     return (
-        <FormItem className={formItemClasses}>
-            <FormLabel>
+        <FormItem
+            disabled={disabled}
+            inline={inline}>
+            <FormLabel disabled={disabled}>
                 <input
                     {...props}
-                    aria-checked={getCheckStatus(checked, indeterminate)}
+                    aria-checked={checked}
                     checked={checked}
                     className={classes}
                     disabled={disabled}
                     id={id}
                     name={name}
                     onChange={(e) => {
-                        onChange(!checked, e);
+                        onChange(e, !checked);
                     }}
-                    ref={inputEl}
                     type='checkbox' />
                 {value}
             </FormLabel>
@@ -66,7 +42,6 @@ Checkbox.propTypes = {
     defaultChecked: PropTypes.bool,
     disabled: PropTypes.bool,
     id: PropTypes.string,
-    indeterminate: PropTypes.bool,
     inline: PropTypes.bool,
     name: PropTypes.string,
     value: PropTypes.string,

@@ -277,12 +277,14 @@ export const FormsComponent = () => {
                 <div>
                     <FormFieldset>
                         <FormLegend>Checkboxes</FormLegend>
-                        <Checkbox checked
+                        <Checkbox
+                            checked
                             id='checkbox-1'
                             name='checkbox-name-1'
                             value='Option One' />
-                        <Checkbox id='checkbox-2'
-                            indeterminate
+                        <Checkbox
+                            disabled
+                            id='checkbox-2'
                             name='checkbox-name-2'
                             value='Option Two' />
                         <Checkbox id='checkbox-3' name='checkbox-name-3'

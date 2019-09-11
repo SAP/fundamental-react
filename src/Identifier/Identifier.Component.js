@@ -1,8 +1,7 @@
 import { Identifier } from '../';
-import { listOfIcons } from '../utils/listOfIcons';
 import path from 'path';
 import React from 'react';
-import { ComponentPage, Example, Playground, Separator } from '../_playground';
+import { ComponentPage, Example } from '../_playground';
 
 export const IdentifierComponent = () => {
     return (
@@ -116,39 +115,6 @@ export const IdentifierComponent = () => {
                         size='m' />
                 </div>
             </Example>
-
-            <Separator />
-
-            <Playground component='identifier' schema={[
-                {
-                    attribute: 'size',
-                    typeOfAttribute: 'string',
-                    'enum': ['xxs', 'xs', 's', 'm', 'l', 'xl', 'xxl']
-                },
-                {
-                    attribute: 'glyph',
-                    typeOfAttribute: 'string',
-                    'enum': listOfIcons
-                },
-                {
-                    attribute: 'color',
-                    typeOfAttribute: 'number',
-                    'enum': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-                },
-                {
-                    attribute: 'children',
-                    typeOfAttribute: 'string'
-                },
-                {
-                    attribute: 'modifier',
-                    typeOfAttribute: 'string',
-                    'enum': ['circle', 'transparent']
-                }]}>
-                <Identifier color={1} glyph='money-bills'
-                    label='Wendy Wallace' modifier='circle'
-                    size='s' />
-            </Playground>
-
         </ComponentPage>
     );
 };

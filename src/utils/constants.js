@@ -104,8 +104,7 @@ export const INPUT_GROUP_ADDON_POSITIONS = [
 
 export const INPUT_GROUP_TYPES = [
     'text',
-    'number',
-    'search'
+    'number'
 ];
 
 export const POPOVER_ALIGNMENTS = [
