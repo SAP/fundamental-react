@@ -14,7 +14,7 @@ export const DatePickerComponent = () => {
             <Example
                 centered
                 title='Simple Date Picker'>
-                <div className='fd-doc__margin--datePicker'>
+                <div className='fd-doc__margin'>
                     <DatePicker disableBeforeDate={new Date(2018, 11, 24, 0, 0, 0, 0)} disableWeekends />
                     <DatePicker
                         blockedDates={[new Date(2018, 11, 1, 0, 0, 0, 0), new Date(2018, 11, 23, 0, 0, 0, 0)]}
@@ -26,7 +26,7 @@ export const DatePickerComponent = () => {
             <Example
                 centered
                 title='Range Date Picker'>
-                <div className='fd-doc__margin--datePicker'>
+                <div className='fd-doc__margin'>
                     <DatePicker disableFutureDates enableRangeSelection />
                     <DatePicker compact disablePastDates
                         enableRangeSelection />

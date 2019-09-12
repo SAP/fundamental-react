@@ -1,4 +1,5 @@
 import 'fundamental-styles/dist/calendar.css';
+import Button from '../Button/Button';
 import classnames from 'classnames';
 import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import PropTypes from 'prop-types';
@@ -401,25 +402,39 @@ class Calendar extends Component {
             <header className='fd-calendar__header'>
                 <div className='fd-calendar__navigation'>
                     <div className='fd-calendar__action'>
-                        <button className='fd-button--standard fd-button--light fd-button--compact sap-icon--slim-arrow-left' onClick={this.previous} />
+                        <Button
+                            compact
+                            glyph='slim-arrow-left'
+                            onClick={this.previous}
+                            option='light' />
                     </div>
                     <div className='fd-calendar__action'>
-                        <button className='fd-button--light fd-button--compact' onClick={this.showMonths}>
+                        <Button
+                            compact
+                            onClick={this.showMonths}
+                            option='light'>
                             <span>
                                 {months[this.state.currentDateDisplayed.getMonth()]}
                             </span>
-                        </button>
+                        </Button>
                     </div>
                     <div className='fd-calendar__action'>
-                        <button className='fd-button--light fd-button--compact' onClick={this.showYears}>
+                        <Button
+                            compact
+                            onClick={this.showYears}
+                            option='light'>
                             <span>
                                 {this.state.currentDateDisplayed.getFullYear()}
                             </span>
-                        </button>
+                        </Button>
                     </div>
 
-                    <div className='fd-calendar__action' onClick={this.next}>
-                        <button className='fd-button--standard fd-button--light fd-button--compact sap-icon--slim-arrow-right' />
+                    <div className='fd-calendar__action'>
+                        <Button
+                            compact
+                            glyph='slim-arrow-right'
+                            onClick={this.next}
+                            option='light' />
                     </div>
                 </div>
             </header>

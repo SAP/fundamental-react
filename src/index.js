@@ -29,6 +29,7 @@ export { default as Image } from './Image/Image';
 export { default as InlineHelp } from './InlineHelp/InlineHelp';
 export { default as InputGroup } from './InputGroup/InputGroup';
 export { default as FormGroup } from './InputGroup/FormGroup';
+export { default as Link} from './Link/Link';
 export { default as ListGroup } from './ListGroup/ListGroup';
 export { default as LocalizationEditor } from './LocalizationEditor/LocalizationEditor';
 export { default as Menu } from './Menu/Menu';

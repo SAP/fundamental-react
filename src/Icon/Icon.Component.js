@@ -6,7 +6,7 @@ import { ComponentPage, Example, Playground, Separator } from '../_playground';
 
 export const IconComponent = () => {
     let icons = (
-        <div className='fd-doc__margin--icon'>
+        <div className='fd-doc__margin'>
             {listOfIcons.map((icon, index) => {
                 return (
                     <div className='demo-icon-wrapper' key={index}>
@@ -30,7 +30,7 @@ export const IconComponent = () => {
             <Example
                 centered
                 title='Sizes'>
-                <div className='fd-doc__margin--icon'>
+                <div className='fd-doc__margin'>
                     <Icon glyph='cart' size='s' />
                     <Icon glyph='cart' />
                     <Icon glyph='cart' size='m' />

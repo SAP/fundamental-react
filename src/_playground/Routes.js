@@ -19,6 +19,7 @@ import { ImageComponent } from '../Image/Image.Component';
 import { InlineHelpComponent } from '../InlineHelp/InlineHelp.Component';
 import InputGroup from '../InputGroup/InputGroup';
 import { InputGroupComponent } from '../InputGroup/InputGroup.Component';
+import { LinkComponent } from '../Link/Link.Component';
 import { ListGroupComponent } from '../ListGroup/ListGroup.Component';
 import { LocalizationEditorComponent } from '../LocalizationEditor/LocalizationEditor.Component';
 import { MenuComponent } from '../Menu/Menu.Component';
@@ -154,6 +155,12 @@ const routes = [
         url: '/inputGroup',
         name: 'Input Group',
         component: InputGroupComponent,
+        section: 'Components'
+    },
+    {
+        url: '/link',
+        name: 'Link',
+        component: LinkComponent,
         section: 'Components'
     },
     {

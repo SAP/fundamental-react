@@ -13,7 +13,7 @@ export const IdentifierComponent = () => {
             <Example
                 centered
                 title='Icon'>
-                <div className='fd-doc__margin--identifier'>
+                <div className='fd-doc__margin'>
                     <Identifier glyph='washing-machine' size='xxs' />
                     <Identifier glyph='washing-machine' size='xs' />
                     <Identifier glyph='washing-machine' size='s' />
@@ -27,7 +27,7 @@ export const IdentifierComponent = () => {
             <Example
                 centered
                 title='Initials'>
-                <div className='fd-doc__margin--identifier'>
+                <div className='fd-doc__margin'>
                     <Identifier label='Wendy Wallace' size='xxs'>WW</Identifier>
                     <Identifier label='Wendy Wallace' size='xs'>WW</Identifier>
                     <Identifier label='Wendy Wallace' size='s'>WW</Identifier>
@@ -41,7 +41,7 @@ export const IdentifierComponent = () => {
             <Example
                 centered
                 title='Circle'>
-                <div className='fd-doc__margin--identifier'>
+                <div className='fd-doc__margin'>
                     <Identifier glyph='washing-machine' modifier='circle'
                         size='xxs' />
                     <Identifier glyph='washing-machine' modifier='circle'
@@ -62,7 +62,7 @@ export const IdentifierComponent = () => {
             <Example
                 centered
                 title='Background Image'>
-                <div className='fd-doc__margin--identifier'>
+                <div className='fd-doc__margin'>
                     <Identifier backgroundImageUrl='https://placeimg.com/400/400/nature' modifier='circle'
                         size='xxs' />
                     <Identifier backgroundImageUrl='https://placeimg.com/400/400/nature' modifier='circle'
@@ -83,7 +83,7 @@ export const IdentifierComponent = () => {
             <Example
                 centered
                 title='Transparent'>
-                <div className='fd-doc__margin--identifier'>
+                <div className='fd-doc__margin'>
                     <Identifier label='Wendy Wallace' modifier='transparent'
                         size='m'>WW</Identifier>
                     <Identifier glyph='washing-machine' modifier='transparent'
@@ -94,7 +94,7 @@ export const IdentifierComponent = () => {
             <Example
                 centered
                 title='Accent Colors'>
-                <div className='fd-doc__margin--identifier'>
+                <div className='fd-doc__margin'>
                     <Identifier color={1} glyph='money-bills'
                         size='m' />
                     <Identifier color={2} glyph='money-bills'

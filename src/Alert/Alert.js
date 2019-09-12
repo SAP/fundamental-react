@@ -1,8 +1,9 @@
 import 'fundamental-styles/dist/alert.css';
-import 'fundamental-styles/dist/link.css';
 import { ALERT_TYPES } from '../utils/constants';
 import classnames from 'classnames';
 import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
+import Icon from '../Icon/Icon';
+import Link from '../Link/Link';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 
@@ -64,13 +65,12 @@ class Alert extends Component {
                         <div className='fd-alert__text'>
                             {children}
                             {link && (
-                                <a
+                                <Link
                                     {...linkProps}
-                                    className='fd-link'
                                     href={link}>
                                     {linkText}{' '}
-                                    <span className='sap-icon--arrow-right sap-icon--s' />
-                                </a>
+                                    <Icon glyph='arrow-right' size='s' />
+                                </Link>
                             )}
                         </div>
                     </div>

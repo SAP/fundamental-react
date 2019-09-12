@@ -265,161 +265,142 @@ h6 {
 }
 
 // Fundamental React Component Overrides
-.fd-counter--notification {
-    position: relative;
-}
+// .fd-counter--notification {
+//     position: relative;
+// }
 
 .fd-tile__content {
 
-    .fd-button--grouped {
-        margin-right: 0;
+//     .fd-button--grouped {
+//         margin-right: 0;
+//     }
+
+//     // .fd-input-group {
+//     //     [class*='fd-button'] {
+//     //         margin-right: 0;
+//     //     }
+//     // }
+
+    .fd-doc__margin > * {
+        margin: 10px;
     }
 
-    .fd-input-group {
-        [class*='fd-button'] {
-            margin-right: 0;
-        }
-    }
-
-    .fd-doc__margin--popover .fd-popover,
-    .fd-doc__margin--datePicker .fd-date-picker,
-    .fd-doc__margin--token .fd-token,
-    .fd-doc__margin--buttonGroup .fd-button-group,
-    .fd-doc__margin--button button,
-    .fd-doc__margin--panel .fd-token,
-    .fd-doc__margin--panel .fd-button,
-    .fd-doc__margin--dropdown .fd-dropdown,
-    .fd-doc__margin--icon span,
-    .fd-doc__margin--identifier span,
-    .fd-doc__margin--image span,
-    .fd-doc__margin--statusIndicator span {
-        margin-right: 20px;
+    .fd-calendar {
+        display: inline-block;
     }
 }
 
-.fd-tabs__content {
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
+// .fd-tabs__content {
+//     padding-top: 10px;
+//     padding-bottom: 10px;
+// }
 
-// possible addition to fundamental-styles fundamentals side nav component?
-.fd-side-nav {
-    overflow: auto;
-}
+// .property-header {
+//     text-align: left;
+//     padding-right: 15px;
+// }
 
-.property-header {
-    text-align: left;
-    padding-right: 15px;
-}
+// .row {
+//     display: flex;
+// }
 
-.row {
-    display: flex;
-}
+// .col {
+//     padding-right: 15px;
+//     padding-left: 15px;
+//     -webkit-box-flex: 1;
+//     flex: 1;
+// }
 
-.col {
-    padding-right: 15px;
-    padding-left: 15px;
-    -webkit-box-flex: 1;
-    flex: 1;
-}
+// .form-group {
+//     max-height: 500px;
+//     overflow-y: scroll;
+//     display: block;
+//     padding: 20px;
+//     border: 1px #eee solid;
+// }
 
-.form-group {
-    max-height: 500px;
-    overflow-y: scroll;
-    display: block;
-    padding: 20px;
-    border: 1px #eee solid;
-}
+// .schema {
+//     display: block;
+//     padding: 20px;
+//     border: 1px #eee solid;
+// }
 
-.schema {
-    display: block;
-    padding: 20px;
-    border: 1px #eee solid;
-}
+// .form-group-sublevel {
+//     display: block;
+//     padding: 20px;
+//     border: 1px #eee solid;
+// }
 
-.form-group-sublevel {
-    display: block;
-    padding: 20px;
-    border: 1px #eee solid;
-}
+// .tn-form__label {
+//     padding-left: 25px;
+// }
 
-.tn-form__label {
-    padding-left: 25px;
-}
+// .fd-calendar__content {
+//     background: white;
+// }
 
-.fd-calendar__content {
-    background: white;
-}
 
-.fd-date-picker {
-    display: inline-block;
-}
+// .demo-icon-wrapper {
+//     padding: 10px;
+//     float: left;
+//     width: 16%;
+//     text-align: center;
+//     height: 120px;
+// }
 
-.fd-calendar {
-    display: inline-block;
-}
+// .fd-table {
 
-.demo-icon-wrapper {
-    padding: 10px;
-    float: left;
-    width: 16%;
-    text-align: center;
-    height: 120px;
-}
+//     &.property-table {
+//         border: 0;
 
-.fd-table {
+//         thead {
+//             background: transparent;
 
-    &.property-table {
-        border: 0;
+//             >tr {
+//                 >th {
+//                     padding: inherit 0;
+//                 }
+//             }
+//         }
 
-        thead {
-            background: transparent;
+//         tbody {
+//             >tr {
+//                 >td {
+//                     &:first-child {
+//                         font-weight: bold;
+//                     }
+//                 }
+//             }
+//         }
 
-            >tr {
-                >th {
-                    padding: inherit 0;
-                }
-            }
-        }
+//         thead,
+//         tbody {
+//             >tr {
+//                 vertical-align: top;
 
-        tbody {
-            >tr {
-                >td {
-                    &:first-child {
-                        font-weight: bold;
-                    }
-                }
-            }
-        }
+//                 >th,
+//                 >td {
+//                     width: 20%;
+//                     padding-top: 4px;
+//                     padding-bottom: 4px;
 
-        thead,
-        tbody {
-            >tr {
-                vertical-align: top;
+//                     &:first-child {
+//                         padding-left: 0;
+//                     }
 
-                >th,
-                >td {
-                    width: 20%;
-                    padding-top: 4px;
-                    padding-bottom: 4px;
+//                     &:last-child {
+//                         width: 40%;
+//                         padding-right: 0;
+//                     }
+//                 }
+//             }
+//         }
 
-                    &:first-child {
-                        padding-left: 0;
-                    }
-
-                    &:last-child {
-                        width: 40%;
-                        padding-right: 0;
-                    }
-                }
-            }
-        }
-
-        .prop-required {
-            color: var(--fd-color-status-3);
-        }
-    }
-}
+//         .prop-required {
+//             color: var(--fd-color-status-3);
+//         }
+//     }
+// }
 
 // table of contents (tocbot) overrides
 .toc {
@@ -503,11 +484,17 @@ a.toc-link {
 
         > .toc-list {
             padding-left: 14px;
+            &:last-child {
+                margin-bottom: 0;
+            }
         }
     }
 
     .toc-link {
+        display: inline-block;
         margin: 4px 0;
+        text-decoration: none;
+        transition: all 0.125s ease-in;
 
         &:before {
             width: 4px;

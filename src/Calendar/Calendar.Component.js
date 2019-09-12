@@ -21,7 +21,7 @@ export const CalendarComponent = () => {
                 centered
                 title='Calendar with disabled weekends and disabled before a date'>
                 <Calendar
-                    disableBeforeDate={new Date(2018, 7, 3, 0, 0, 0, 0)}
+                    disableBeforeDate={new Date(Date.now())}
                     disableWeekends />
             </Example>
 

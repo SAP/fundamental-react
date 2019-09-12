@@ -135,7 +135,7 @@ export class PopoverComponent extends React.Component {
                 <Example
                     centered
                     title='No Arrow'>
-                    <div className='fd-doc__margin--popover'>
+                    <div className='fd-doc__margin'>
                         <Popover
                             body={bodyContent}
                             control={<Icon glyph='cart' size='xl' />}
@@ -167,7 +167,7 @@ export class PopoverComponent extends React.Component {
                 <Example
                     centered
                     title='Disable Edge Detection'>
-                    <div className='fd-doc__margin--popover'>
+                    <div className='fd-doc__margin'>
                         <Popover
                             body={bodyContent}
                             control={<Button glyph='navigation-up-arrow' option='light' />}

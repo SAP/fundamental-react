@@ -1,25 +1,23 @@
 import classnames from 'classnames';
+import Link from '../Link/Link';
 import PropTypes from 'prop-types';
 import React from 'react';
 
 const MenuItem = ({ url, isLink, addon, children, onclick, className, addonProps, urlProps, ...props }) => {
-    const menuItemLinkClasses = classnames(
-        'fd-menu__item'
-    );
 
     const renderLink = () => {
         if (url) {
             return (
-                <a {...urlProps}
-                    className={menuItemLinkClasses}
+                <Link {...urlProps}
+                    className='fd-menu__item'
                     href={url}
                     onClick={onclick}>
                     {children}
-                </a>
+                </Link>
             );
         } else if (children && React.isValidElement(children)) {
             const childrenClassnames = classnames(
-                menuItemLinkClasses,
+                'fd-menu__item',
                 children.props.className
             );
 

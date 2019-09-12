@@ -13,7 +13,7 @@ export const BadgeComponent = () => {
             <Example
                 centered
                 title='Default Badge'>
-                <div className='fd-doc__margin--statusIndicator'>
+                <div className='fd-doc__margin'>
                     <Badge>Default</Badge>
                     <Badge type='success'>Default</Badge>
                     <Badge type='warning'>Default</Badge>
@@ -25,7 +25,7 @@ export const BadgeComponent = () => {
                 centered
                 description='Apply `modifier="pill"` to render a pill version of the badge.'
                 title='Pill Badge'>
-                <div className='fd-doc__margin--statusIndicator'>
+                <div className='fd-doc__margin'>
                     <Badge modifier='pill'>Default</Badge>
                     <Badge modifier='pill' type='success'>
                         Default
@@ -43,7 +43,7 @@ export const BadgeComponent = () => {
                 centered
                 description='Apply `modifier="filled"` to render a filled version of the badge.'
                 title='Filled Badge'>
-                <div className='fd-doc__margin--statusIndicator'>
+                <div className='fd-doc__margin'>
                     <Badge modifier='filled'>Default</Badge>
                     <Badge modifier='filled' type='success'>
                         Default
@@ -60,7 +60,7 @@ export const BadgeComponent = () => {
             <Example
                 centered
                 title='Default Label'>
-                <div className='fd-doc__margin--statusIndicator'>
+                <div className='fd-doc__margin'>
                     <Label>Default</Label>
                     <Label type='success'>Default</Label>
                     <Label type='warning'>Default</Label>
@@ -72,7 +72,7 @@ export const BadgeComponent = () => {
                 centered
                 description=''
                 title='Status Indicator Label with build in status icons'>
-                <div className='fd-doc__margin--statusIndicator'>
+                <div className='fd-doc__margin'>
                     <Status>Default</Status>
                     <Status type='success'>Default</Status>
                     <Status type='warning'>Default</Status>
@@ -89,7 +89,7 @@ export const BadgeComponent = () => {
             <Example
                 centered
                 title='Status Indicator Label with any icons'>
-                <div className='fd-doc__margin--statusIndicator'>
+                <div className='fd-doc__margin'>
                     <Status glyph='history'>Custom Icon</Status>
                     <Status glyph='message-success'>Success</Status>
                     <Status glyph='message-warning'>Warning</Status>
@@ -101,7 +101,7 @@ export const BadgeComponent = () => {
                 centered
                 description='Counter has a minimum value 1. Maximum display is 999+'
                 title='Default Counter'>
-                <div className='fd-doc__margin--statusIndicator'>
+                <div className='fd-doc__margin'>
                     <Counter>5</Counter>
                     <Counter>25</Counter>
                     <Counter>101</Counter>
@@ -112,7 +112,7 @@ export const BadgeComponent = () => {
             <Example
                 centered
                 title='Counter inline with a paragraph'>
-                <div className='fd-doc__margin--statusIndicator'>
+                <div className='fd-doc__margin'>
                     <p>
                         Lorem ipsum <Counter>5</Counter>
                     </p>
@@ -123,7 +123,7 @@ export const BadgeComponent = () => {
                 centered
                 description='Use the property `notification` to enable notification counter.'
                 title='Notification counter'>
-                <div className='fd-doc__margin--statusIndicator'>
+                <div className='fd-doc__margin'>
                     <Button glyph='bell' option='light'>
                         <Counter notification>5</Counter>
                     </Button>

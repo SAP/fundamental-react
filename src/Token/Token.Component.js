@@ -16,7 +16,7 @@ export const TokenComponent = () => {
             <Example
                 centered
                 title='Token'>
-                <div className='fd-doc__margin--token'>
+                <div className='fd-doc__margin'>
                     <Token onClick={(e) => closeAction('Bibendum', e)}>Bibendum</Token>
                     <Token onClick={(e) => closeAction('Lorem', e)}>Lorem</Token>
                     <Token onClick={(e) => closeAction('Dolor', e)}>Dolor</Token>

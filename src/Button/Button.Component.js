@@ -1,8 +1,7 @@
-import { listOfIcons } from '../utils/listOfIcons';
 import path from 'path';
 import React from 'react';
 import { Button, ButtonGroup } from '../';
-import { ComponentPage, Example, Playground, Separator } from '../_playground';
+import { ComponentPage, Example } from '../_playground';
 
 export const ButtonComponent = () => {
     const clickBtnHandler = btn => {
@@ -27,7 +26,7 @@ export const ButtonComponent = () => {
                     lowest priority button and most often used with page content like appearing in a table or list.
                     There may be more than one on the page.`}
                 title='Button Options'>
-                <div className='fd-doc__margin--button'>
+                <div className='fd-doc__margin'>
                     <Button onClick={() => clickBtnHandler('Emphasized')} option='emphasized'>
                         Emphasized Button
                     </Button>
@@ -43,7 +42,7 @@ export const ButtonComponent = () => {
                     such as approved, ok, yes. \n\n* **Medium Button**: Used for warnings or 
                     alert \n\n* **Negative Button**: Used for negative actions such as decline, cancel, no.`}
                 title='Button Types'>
-                <div className='fd-doc__margin--button'>
+                <div className='fd-doc__margin'>
                     <Button>Action Button</Button>
                     <Button type='standard'>Standard Button</Button>
                     <Button type='positive'>Positive Button</Button>
@@ -57,7 +56,7 @@ export const ButtonComponent = () => {
                 description={`Button can have an icon with text or just and icon. You can use \`glyph="icon-name"\` to
                     attach an icon to the button.`}
                 title='Buttons with Icon'>
-                <div className='fd-doc__margin--button'>
+                <div className='fd-doc__margin'>
                     <Button glyph='cart' option='emphasized'>
                         Add to Cart
                     </Button>
@@ -113,7 +112,7 @@ export const ButtonComponent = () => {
                 description={`There are two sizes. The \`compact\` size is only used on desktop and it is full size when used
                     on a touch device.`}
                 title='Button Sizes'>
-                <div className='fd-doc__margin--button'>
+                <div className='fd-doc__margin'>
                     <Button>Default</Button>
                     <Button compact>Compact</Button>
                 </div>
@@ -124,7 +123,7 @@ export const ButtonComponent = () => {
                 description={`There are three states: \`normal\` (default), \`selected\`,
                     and \`disabled\`.`}
                 title='Button States'>
-                <div className='fd-doc__margin--button'>
+                <div className='fd-doc__margin'>
                     <Button option='emphasized'>Normal State</Button>
                     <Button option='emphasized' selected>
                         Selected State
@@ -188,7 +187,7 @@ export const ButtonComponent = () => {
             <Example
                 centered
                 title='Button Group'>
-                <div className='fd-doc__margin--buttonGroup'>
+                <div className='fd-doc__margin'>
                     <ButtonGroup>
                         <Button glyph='survey' />
                         <Button glyph='pie-chart' selected />
@@ -204,51 +203,6 @@ export const ButtonComponent = () => {
                     </ButtonGroup>
                 </div>
             </Example>
-
-            <Separator />
-
-            <Playground
-                component='button'
-                schema={[
-                    {
-                        attribute: 'children',
-                        typeOfAttribute: 'string'
-                    },
-                    {
-                        attribute: 'option',
-                        typeOfAttribute: 'string',
-                        'enum': ['', 'emphasized', 'light']
-                    },
-                    {
-                        attribute: 'type',
-                        typeOfAttribute: 'string',
-                        'enum': ['', 'standard', 'positive', 'medium', 'negative']
-                    },
-                    {
-                        attribute: 'compact',
-                        typeOfAttribute: 'boolean'
-                    },
-                    {
-                        attribute: 'glyph',
-                        typeOfAttribute: 'string',
-                        'enum': listOfIcons
-                    },
-                    {
-                        attribute: 'selected',
-                        typeOfAttribute: 'boolean'
-                    },
-                    {
-                        attribute: 'disabled',
-                        typeOfAttribute: 'boolean'
-                    }
-                ]}>
-                <Button compact={false} disabled={false}
-                    glyph='' option='light'
-                    selected={false} type='standard'>
-                    BUTTON
-                </Button>
-            </Playground>
-
         </ComponentPage>
     );
 };

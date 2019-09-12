@@ -11,7 +11,7 @@ export const PanelComponent = () => {
 
             <Example
                 title='Single Panel'>
-                <div className='fd-doc__margin--panel'>
+                <div className='fd-doc__margin'>
                     <Panel>
                         <Panel.Header>
                             <Panel.Head description='Panel Description' title={'Panel Header with Actions'} />

@@ -14,7 +14,7 @@ export const DropdownComponent = () => {
             <Example
                 centered
                 title='Default Dropdown'>
-                <div className='fd-doc__margin--dropdown'>
+                <div className='fd-doc__margin'>
                     <Dropdown>
                         <Popover
                             body={
@@ -59,7 +59,7 @@ export const DropdownComponent = () => {
                 centered
                 description='It can also include complementary information like an icon.'
                 title='Dropdown with Icon'>
-                <div className='fd-doc__margin--dropdown'>
+                <div className='fd-doc__margin'>
                     <Dropdown>
                         <Popover
                             body={
@@ -108,7 +108,7 @@ export const DropdownComponent = () => {
             <Example
                 centered
                 title='Toolbar Dropdown'>
-                <div className='fd-doc__margin--dropdown'>
+                <div className='fd-doc__margin'>
                     <Dropdown standard>
                         <Popover
                             body={
@@ -157,7 +157,7 @@ export const DropdownComponent = () => {
             <Example
                 centered
                 title='Disabled State'>
-                <div className='fd-doc__margin--dropdown'>
+                <div className='fd-doc__margin'>
                     <Dropdown>
                         <Popover
                             body={
