@@ -95,7 +95,7 @@ module.exports = {
         runtimeChunk: true
     },
     resolve: {
-        extensions: ['.js', '.jsx', '.json', '.es6'],
+        extensions: ['.js', '.jsx', '.json', '.es6', '.css'],
         symlinks: false
     },
     module: {

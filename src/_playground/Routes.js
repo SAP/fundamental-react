@@ -369,12 +369,10 @@ export class Routes extends Component {
                             <Button
                                 aria-expanded={this.state.showSideNav}
                                 aria-label='Toggle Navigation'
-                                className='fd-button__navToggle'
                                 glyph='menu2'
-                                navbar
+                                id='navToggle'
                                 onClick={this.toggleNavVis}
-                                option='light'
-                                type='standard' />
+                                option='light' />
                             <a
                                 aria-label='Home'
                                 className='frDocs-Menu__logo'

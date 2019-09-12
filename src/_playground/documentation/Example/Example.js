@@ -14,7 +14,7 @@ class Example extends React.Component {
             title
         } = this.props;
 
-        const element = React.Children.only(children);
+        const element = <React.Fragment>{children}</React.Fragment>;
 
         return (
             <React.Fragment>

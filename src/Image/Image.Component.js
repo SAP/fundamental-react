@@ -13,24 +13,20 @@ export const ImageComponent = () => {
             <Example
                 centered
                 title='Sizes'>
-                <div className='fd-doc__margin'>
-                    <Image photo='https://placeimg.com/400/400/nature' size='s' />
-                    <Image photo='https://placeimg.com/400/400/nature' size='m' />
-                    <Image photo='https://placeimg.com/400/400/nature' size='l' />
-                </div>
+                <Image photo='https://placeimg.com/400/400/nature' size='s' />
+                <Image photo='https://placeimg.com/400/400/nature' size='m' />
+                <Image photo='https://placeimg.com/400/400/nature' size='l' />
             </Example>
 
             <Example
                 centered
                 title='Shapes'>
-                <div className='fd-doc__margin'>
-                    <Image photo='https://placeimg.com/400/400/nature' size='s'
-                        type='circle' />
-                    <Image photo='https://placeimg.com/400/400/nature' size='m'
-                        type='circle' />
-                    <Image photo='https://placeimg.com/400/400/nature' size='l'
-                        type='circle' />
-                </div>
+                <Image photo='https://placeimg.com/400/400/nature' size='s'
+                    type='circle' />
+                <Image photo='https://placeimg.com/400/400/nature' size='m'
+                    type='circle' />
+                <Image photo='https://placeimg.com/400/400/nature' size='l'
+                    type='circle' />
             </Example>
         </ComponentPage>
     );

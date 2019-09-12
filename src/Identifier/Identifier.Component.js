@@ -13,107 +13,95 @@ export const IdentifierComponent = () => {
             <Example
                 centered
                 title='Icon'>
-                <div className='fd-doc__margin'>
-                    <Identifier glyph='washing-machine' size='xxs' />
-                    <Identifier glyph='washing-machine' size='xs' />
-                    <Identifier glyph='washing-machine' size='s' />
-                    <Identifier glyph='washing-machine' size='m' />
-                    <Identifier glyph='washing-machine' size='l' />
-                    <Identifier glyph='washing-machine' size='xl' />
-                    <Identifier glyph='washing-machine' size='xxl' />
-                </div>
+                <Identifier glyph='washing-machine' size='xxs' />
+                <Identifier glyph='washing-machine' size='xs' />
+                <Identifier glyph='washing-machine' size='s' />
+                <Identifier glyph='washing-machine' size='m' />
+                <Identifier glyph='washing-machine' size='l' />
+                <Identifier glyph='washing-machine' size='xl' />
+                <Identifier glyph='washing-machine' size='xxl' />
             </Example>
 
             <Example
                 centered
                 title='Initials'>
-                <div className='fd-doc__margin'>
-                    <Identifier label='Wendy Wallace' size='xxs'>WW</Identifier>
-                    <Identifier label='Wendy Wallace' size='xs'>WW</Identifier>
-                    <Identifier label='Wendy Wallace' size='s'>WW</Identifier>
-                    <Identifier label='Wendy Wallace' size='m'>WW</Identifier>
-                    <Identifier label='Wendy Wallace' size='l'>WW</Identifier>
-                    <Identifier label='Wendy Wallace' size='xl'>WW</Identifier>
-                    <Identifier label='Wendy Wallace' size='xxl'>WW</Identifier>
-                </div>
+                <Identifier label='Wendy Wallace' size='xxs'>WW</Identifier>
+                <Identifier label='Wendy Wallace' size='xs'>WW</Identifier>
+                <Identifier label='Wendy Wallace' size='s'>WW</Identifier>
+                <Identifier label='Wendy Wallace' size='m'>WW</Identifier>
+                <Identifier label='Wendy Wallace' size='l'>WW</Identifier>
+                <Identifier label='Wendy Wallace' size='xl'>WW</Identifier>
+                <Identifier label='Wendy Wallace' size='xxl'>WW</Identifier>
             </Example>
 
             <Example
                 centered
                 title='Circle'>
-                <div className='fd-doc__margin'>
-                    <Identifier glyph='washing-machine' modifier='circle'
-                        size='xxs' />
-                    <Identifier glyph='washing-machine' modifier='circle'
-                        size='xs' />
-                    <Identifier glyph='washing-machine' modifier='circle'
-                        size='s' />
-                    <Identifier glyph='washing-machine' modifier='circle'
-                        size='m' />
-                    <Identifier glyph='washing-machine' modifier='circle'
-                        size='l' />
-                    <Identifier glyph='washing-machine' modifier='circle'
-                        size='xl' />
-                    <Identifier glyph='washing-machine' modifier='circle'
-                        size='xxl' />
-                </div>
+                <Identifier glyph='washing-machine' modifier='circle'
+                    size='xxs' />
+                <Identifier glyph='washing-machine' modifier='circle'
+                    size='xs' />
+                <Identifier glyph='washing-machine' modifier='circle'
+                    size='s' />
+                <Identifier glyph='washing-machine' modifier='circle'
+                    size='m' />
+                <Identifier glyph='washing-machine' modifier='circle'
+                    size='l' />
+                <Identifier glyph='washing-machine' modifier='circle'
+                    size='xl' />
+                <Identifier glyph='washing-machine' modifier='circle'
+                    size='xxl' />
             </Example>
 
             <Example
                 centered
                 title='Background Image'>
-                <div className='fd-doc__margin'>
-                    <Identifier backgroundImageUrl='https://placeimg.com/400/400/nature' modifier='circle'
-                        size='xxs' />
-                    <Identifier backgroundImageUrl='https://placeimg.com/400/400/nature' modifier='circle'
-                        size='xs' />
-                    <Identifier backgroundImageUrl='https://placeimg.com/400/400/nature' modifier='circle'
-                        size='s' />
-                    <Identifier backgroundImageUrl='https://placeimg.com/400/400/nature' modifier='circle'
-                        size='m' />
-                    <Identifier backgroundImageUrl='https://placeimg.com/400/400/nature' modifier='circle'
-                        size='l' />
-                    <Identifier backgroundImageUrl='https://placeimg.com/400/400/nature' modifier='circle'
-                        size='xl' />
-                    <Identifier backgroundImageUrl='https://placeimg.com/400/400/nature' modifier='circle'
-                        size='xxl' />
-                </div>
+                <Identifier backgroundImageUrl='https://placeimg.com/400/400/nature' modifier='circle'
+                    size='xxs' />
+                <Identifier backgroundImageUrl='https://placeimg.com/400/400/nature' modifier='circle'
+                    size='xs' />
+                <Identifier backgroundImageUrl='https://placeimg.com/400/400/nature' modifier='circle'
+                    size='s' />
+                <Identifier backgroundImageUrl='https://placeimg.com/400/400/nature' modifier='circle'
+                    size='m' />
+                <Identifier backgroundImageUrl='https://placeimg.com/400/400/nature' modifier='circle'
+                    size='l' />
+                <Identifier backgroundImageUrl='https://placeimg.com/400/400/nature' modifier='circle'
+                    size='xl' />
+                <Identifier backgroundImageUrl='https://placeimg.com/400/400/nature' modifier='circle'
+                    size='xxl' />
             </Example>
 
             <Example
                 centered
                 title='Transparent'>
-                <div className='fd-doc__margin'>
-                    <Identifier label='Wendy Wallace' modifier='transparent'
-                        size='m'>WW</Identifier>
-                    <Identifier glyph='washing-machine' modifier='transparent'
-                        size='l' />
-                </div>
+                <Identifier label='Wendy Wallace' modifier='transparent'
+                    size='m'>WW</Identifier>
+                <Identifier glyph='washing-machine' modifier='transparent'
+                    size='l' />
             </Example>
 
             <Example
                 centered
                 title='Accent Colors'>
-                <div className='fd-doc__margin'>
-                    <Identifier color={1} glyph='money-bills'
-                        size='m' />
-                    <Identifier color={2} glyph='money-bills'
-                        size='m' />
-                    <Identifier color={3} glyph='money-bills'
-                        size='m' />
-                    <Identifier color={4} glyph='money-bills'
-                        size='m' />
-                    <Identifier color={5} glyph='money-bills'
-                        size='m' />
-                    <Identifier color={6} glyph='money-bills'
-                        size='m' />
-                    <Identifier color={7} glyph='money-bills'
-                        size='m' />
-                    <Identifier color={8} glyph='money-bills'
-                        size='m' />
-                    <Identifier color={9} glyph='money-bills'
-                        size='m' />
-                </div>
+                <Identifier color={1} glyph='money-bills'
+                    size='m' />
+                <Identifier color={2} glyph='money-bills'
+                    size='m' />
+                <Identifier color={3} glyph='money-bills'
+                    size='m' />
+                <Identifier color={4} glyph='money-bills'
+                    size='m' />
+                <Identifier color={5} glyph='money-bills'
+                    size='m' />
+                <Identifier color={6} glyph='money-bills'
+                    size='m' />
+                <Identifier color={7} glyph='money-bills'
+                    size='m' />
+                <Identifier color={8} glyph='money-bills'
+                    size='m' />
+                <Identifier color={9} glyph='money-bills'
+                    size='m' />
             </Example>
         </ComponentPage>
     );

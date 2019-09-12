@@ -45,7 +45,7 @@ describe('<Dropdown />', () => {
             <Popover
                 body={defaultMenu}
                 control={
-                    <Button dropdown type='standard'>
+                    <Button dropdown>
                         Select
                     </Button>
                 }

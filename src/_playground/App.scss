@@ -3,6 +3,7 @@ $breakpoint-md: 1024px;
 $breakpoint-sm: 600px;
 @import '~tocbot/src/scss/tocbot-core';
 @import '~tocbot/src/scss/tocbot-default-theme';
+@import '~fundamental-styles/dist/helpers.css';
 
 $shell-color: #354A5F;
 $library-color: #61dafb;
@@ -44,8 +45,8 @@ $menu-spacing: 20px;
         line-height: 1.5;
         font-weight: 700;
         margin: 0;
-        text-align: center;
         color: #fff;
+        text-decoration: none;
 
         &:hover,
         &:focus {
@@ -157,8 +158,16 @@ $menu-spacing: 20px;
 
         .frDocs-tile__centered {
             display: flex;
-            justify-content: center;
             align-items: center;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            width: 100%;
+        }
+
+        .frDocs-tile__break {
+            flex-basis: 100%;
+            height: 20px;
         }
     }
 
@@ -193,7 +202,7 @@ $menu-spacing: 20px;
     }
 }
 
-.fd-button__navToggle {
+#navToggle {
     margin-left: -($menu-spacing/2);
     margin-right: $menu-spacing/2;
     color: #fff;
@@ -204,7 +213,7 @@ $menu-spacing: 20px;
 }
 
 @media (min-width: $breakpoint-lg) {
-    .fd-button__navToggle {
+    #navToggle {
         display: none;
     }
 }
@@ -264,143 +273,68 @@ h6 {
     }
 }
 
-// Fundamental React Component Overrides
-// .fd-counter--notification {
-//     position: relative;
-// }
-
-.fd-tile__content {
-
-//     .fd-button--grouped {
-//         margin-right: 0;
-//     }
-
-//     // .fd-input-group {
-//     //     [class*='fd-button'] {
-//     //         margin-right: 0;
-//     //     }
-//     // }
-
-    .fd-doc__margin > * {
-        margin: 10px;
-    }
-
-    .fd-calendar {
-        display: inline-block;
-    }
+.demo-icon-wrapper {
+    padding: 10px;
+    float: left;
+    width: 16%;
+    text-align: center;
+    height: 120px;
 }
 
-// .fd-tabs__content {
-//     padding-top: 10px;
-//     padding-bottom: 10px;
-// }
+//Prop table styles
+.fd-table {
 
-// .property-header {
-//     text-align: left;
-//     padding-right: 15px;
-// }
+    &.property-table {
+        border: 0;
 
-// .row {
-//     display: flex;
-// }
+        thead {
+            background: transparent;
 
-// .col {
-//     padding-right: 15px;
-//     padding-left: 15px;
-//     -webkit-box-flex: 1;
-//     flex: 1;
-// }
+            >tr {
+                >th {
+                    padding: inherit 0;
+                }
+            }
+        }
 
-// .form-group {
-//     max-height: 500px;
-//     overflow-y: scroll;
-//     display: block;
-//     padding: 20px;
-//     border: 1px #eee solid;
-// }
+        tbody {
+            >tr {
+                >td {
+                    &:first-child {
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
 
-// .schema {
-//     display: block;
-//     padding: 20px;
-//     border: 1px #eee solid;
-// }
+        thead,
+        tbody {
+            >tr {
+                vertical-align: top;
 
-// .form-group-sublevel {
-//     display: block;
-//     padding: 20px;
-//     border: 1px #eee solid;
-// }
+                >th,
+                >td {
+                    width: 20%;
+                    padding-top: 4px;
+                    padding-bottom: 4px;
 
-// .tn-form__label {
-//     padding-left: 25px;
-// }
+                    &:first-child {
+                        padding-left: 0;
+                    }
 
-// .fd-calendar__content {
-//     background: white;
-// }
+                    &:last-child {
+                        width: 40%;
+                        padding-right: 0;
+                    }
+                }
+            }
+        }
 
-
-// .demo-icon-wrapper {
-//     padding: 10px;
-//     float: left;
-//     width: 16%;
-//     text-align: center;
-//     height: 120px;
-// }
-
-// .fd-table {
-
-//     &.property-table {
-//         border: 0;
-
-//         thead {
-//             background: transparent;
-
-//             >tr {
-//                 >th {
-//                     padding: inherit 0;
-//                 }
-//             }
-//         }
-
-//         tbody {
-//             >tr {
-//                 >td {
-//                     &:first-child {
-//                         font-weight: bold;
-//                     }
-//                 }
-//             }
-//         }
-
-//         thead,
-//         tbody {
-//             >tr {
-//                 vertical-align: top;
-
-//                 >th,
-//                 >td {
-//                     width: 20%;
-//                     padding-top: 4px;
-//                     padding-bottom: 4px;
-
-//                     &:first-child {
-//                         padding-left: 0;
-//                     }
-
-//                     &:last-child {
-//                         width: 40%;
-//                         padding-right: 0;
-//                     }
-//                 }
-//             }
-//         }
-
-//         .prop-required {
-//             color: var(--fd-color-status-3);
-//         }
-//     }
-// }
+        .prop-required {
+            color: var(--fd-color-status-3);
+        }
+    }
+}
 
 // table of contents (tocbot) overrides
 .toc {
@@ -475,7 +409,7 @@ a.toc-link {
     }
 
     .toc {
-        width: 250px;
+        width: 225px;
         position: fixed;
         top: 0;
         right: 0;

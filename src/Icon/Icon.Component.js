@@ -2,11 +2,11 @@ import { Icon } from '../';
 import { listOfIcons } from '../utils/listOfIcons';
 import path from 'path';
 import React from 'react';
-import { ComponentPage, Example, Playground, Separator } from '../_playground';
+import { ComponentPage, Example } from '../_playground';
 
 export const IconComponent = () => {
     let icons = (
-        <div className='fd-doc__margin'>
+        <div>
             {listOfIcons.map((icon, index) => {
                 return (
                     <div className='demo-icon-wrapper' key={index}>
@@ -30,13 +30,11 @@ export const IconComponent = () => {
             <Example
                 centered
                 title='Sizes'>
-                <div className='fd-doc__margin'>
-                    <Icon glyph='cart' size='s' />
-                    <Icon glyph='cart' />
-                    <Icon glyph='cart' size='m' />
-                    <Icon glyph='cart' size='l' />
-                    <Icon glyph='cart' size='xl' />
-                </div>
+                <Icon glyph='cart' size='s' />
+                <Icon glyph='cart' />
+                <Icon glyph='cart' size='m' />
+                <Icon glyph='cart' size='l' />
+                <Icon glyph='cart' size='xl' />
             </Example>
 
             <Example
@@ -45,25 +43,6 @@ export const IconComponent = () => {
                 title='Available Icons'>
                 {icons}
             </Example>
-
-            <Separator />
-
-            <Playground
-                component='icon'
-                schema={[
-                    {
-                        attribute: 'glyph',
-                        typeOfAttribute: 'string',
-                        'enum': listOfIcons
-                    },
-                    {
-                        attribute: 'size',
-                        typeOfAttribute: 'string',
-                        'enum': ['s', '', 'm', 'l', 'xl']
-                    }
-                ]}>
-                <Icon glyph='cart' size='s' />
-            </Playground>
 
         </ComponentPage>
     );

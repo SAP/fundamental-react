@@ -26,13 +26,11 @@ export const ButtonComponent = () => {
                     lowest priority button and most often used with page content like appearing in a table or list.
                     There may be more than one on the page.`}
                 title='Button Options'>
-                <div className='fd-doc__margin'>
-                    <Button onClick={() => clickBtnHandler('Emphasized')} option='emphasized'>
+                <Button onClick={() => clickBtnHandler('Emphasized')} option='emphasized'>
                         Emphasized Button
-                    </Button>
-                    <Button onClick={() => clickBtnHandler('Regular')}>Regular Button</Button>
-                    <Button onClick={() => clickBtnHandler('Light')} option='light'>Light Button</Button>
-                </div>
+                </Button>
+                <Button onClick={() => clickBtnHandler('Regular')}>Regular Button</Button>
+                <Button onClick={() => clickBtnHandler('Light')} option='light'>Light Button</Button>
             </Example>
 
             <Example
@@ -42,13 +40,11 @@ export const ButtonComponent = () => {
                     such as approved, ok, yes. \n\n* **Medium Button**: Used for warnings or 
                     alert \n\n* **Negative Button**: Used for negative actions such as decline, cancel, no.`}
                 title='Button Types'>
-                <div className='fd-doc__margin'>
-                    <Button>Action Button</Button>
-                    <Button type='standard'>Standard Button</Button>
-                    <Button type='positive'>Positive Button</Button>
-                    <Button type='medium'>Medium Button</Button>
-                    <Button type='negative'>Negative Button</Button>
-                </div>
+                <Button>Action Button</Button>
+                <Button>Standard Button</Button>
+                <Button type='positive'>Positive Button</Button>
+                <Button type='medium'>Medium Button</Button>
+                <Button type='negative'>Negative Button</Button>
             </Example>
 
             <Example
@@ -56,55 +52,49 @@ export const ButtonComponent = () => {
                 description={`Button can have an icon with text or just and icon. You can use \`glyph="icon-name"\` to
                     attach an icon to the button.`}
                 title='Buttons with Icon'>
-                <div className='fd-doc__margin'>
-                    <Button glyph='cart' option='emphasized'>
+                <Button glyph='cart' option='emphasized'>
                         Add to Cart
-                    </Button>
+                </Button>
 
-                    <Button glyph='cart'>Add to Cart</Button>
+                <Button glyph='cart'>Add to Cart</Button>
 
-                    <Button glyph='filter' option='light'>
+                <Button glyph='filter' option='light'>
                         Add to Cart
-                    </Button>
+                </Button>
 
-                    <Button glyph='accept' option='emphasized'
-                        type='positive'>
+                <Button glyph='accept' option='emphasized'
+                    type='positive'>
                         Approve
-                    </Button>
+                </Button>
 
-                    <Button glyph='decline' option='emphasized'
-                        type='negative'>
+                <Button glyph='decline' option='emphasized'
+                    type='negative'>
                         Reject
-                    </Button>
+                </Button>
 
-                    <Button
-                        glyph='alert'
-                        option='emphasized'
-                        type='medium'>
+                <Button
+                    glyph='alert'
+                    option='emphasized'
+                    type='medium'>
                         Review
-                    </Button>
+                </Button>
 
-                    <br />
-                    <br />
-                    <br />
+                <Button glyph='cart' option='emphasized' />
 
-                    <Button glyph='cart' option='emphasized' />
+                <Button glyph='cart' />
 
-                    <Button glyph='cart' />
+                <Button glyph='filter' option='light' />
 
-                    <Button glyph='filter' option='light' />
+                <Button glyph='accept' option='emphasized'
+                    type='positive' />
 
-                    <Button glyph='accept' option='emphasized'
-                        type='positive' />
+                <Button
+                    glyph='decline'
+                    option='emphasized'
+                    type='negative' />
 
-                    <Button
-                        glyph='decline'
-                        option='emphasized'
-                        type='negative' />
-
-                    <Button glyph='alert' option='emphasized'
-                        type='medium' />
-                </div>
+                <Button glyph='alert' option='emphasized'
+                    type='medium' />
             </Example>
 
             <Example
@@ -112,74 +102,68 @@ export const ButtonComponent = () => {
                 description={`There are two sizes. The \`compact\` size is only used on desktop and it is full size when used
                     on a touch device.`}
                 title='Button Sizes'>
-                <div className='fd-doc__margin'>
-                    <Button>Default</Button>
-                    <Button compact>Compact</Button>
-                </div>
+                <Button>Default</Button>
+                <Button compact>Compact</Button>
             </Example>
 
             <Example
                 centered
-                description={`There are three states: \`normal\` (default), \`selected\`,
+                description={`There are three states: default, \`selected\`,
                     and \`disabled\`.`}
                 title='Button States'>
-                <div className='fd-doc__margin'>
-                    <Button option='emphasized'>Normal State</Button>
+                <div className='frDocs-tile__centered'>
+                    <Button>Default</Button>
+                    <Button selected>Selected</Button>
+                    <Button disabled>Disabled</Button>
+                </div>
+                <div className='frDocs-tile__break' />
+                <div className='frDocs-tile__centered'>
+                    <Button option='emphasized'>Emphasized</Button>
                     <Button option='emphasized' selected>
-                        Selected State
+                            Selected
                     </Button>
                     <Button disabled option='emphasized'>
-                        Disabled State
+                            Disabled
                     </Button>
-                    <br />
-                    <br />
-                    <Button>Normal State</Button>
-                    <Button selected>Selected State</Button>
-                    <Button disabled>Disabled State</Button>
-                    <br />
-                    <br />
-                    <Button option='light'>Normal State</Button>
+                </div>
+                <div className='frDocs-tile__break' />
+                <div className='frDocs-tile__centered'>
+                    <Button option='light'>Light</Button>
                     <Button option='light' selected>
-                        Selected State
+                    Selected
                     </Button>
                     <Button disabled option='light'>
-                        Disabled State
+                    Disabled
                     </Button>
-                    <br />
-                    <br />
-                    <Button type='standard'>Normal State</Button>
-                    <Button selected type='standard'>
-                        Selected State
-                    </Button>
-                    <Button disabled type='standard'>
-                        Disabled State
-                    </Button>
-                    <br />
-                    <br />
-                    <Button type='positive'>Normal State</Button>
+                </div>
+                <div className='frDocs-tile__break' />
+                <div className='frDocs-tile__centered'>
+                    <Button type='positive'>Positive</Button>
                     <Button selected type='positive'>
-                        Selected State
+                    Selected
                     </Button>
                     <Button disabled type='positive'>
-                        Disabled State
+                    Disabled
                     </Button>
-                    <br />
-                    <br />
-                    <Button type='medium'>Normal State</Button>
+                </div>
+                <div className='frDocs-tile__break' />
+                <div className='frDocs-tile__centered'>
+                    <Button type='medium'>Medium</Button>
                     <Button selected type='medium'>
-                        Selected State
+                    Selected
                     </Button>
                     <Button disabled type='medium'>
-                        Disabled State
+                    Disabled
                     </Button>
-                    <br />
-                    <br />
-                    <Button type='negative'>Normal State</Button>
+                </div>
+                <div className='frDocs-tile__break' />
+                <div className='frDocs-tile__centered'>
+                    <Button type='negative'>Negative</Button>
                     <Button selected type='negative'>
-                        Selected State
+                    Selected
                     </Button>
                     <Button disabled type='negative'>
-                        Disabled State
+                    Disabled
                     </Button>
                 </div>
             </Example>
@@ -187,21 +171,19 @@ export const ButtonComponent = () => {
             <Example
                 centered
                 title='Button Group'>
-                <div className='fd-doc__margin'>
-                    <ButtonGroup>
-                        <Button glyph='survey' />
-                        <Button glyph='pie-chart' selected />
-                        <Button glyph='pool' />
-                    </ButtonGroup>
+                <ButtonGroup>
+                    <Button glyph='survey' />
+                    <Button glyph='pie-chart' selected />
+                    <Button glyph='pool' />
+                </ButtonGroup>
 
-                    <ButtonGroup>
-                        <Button compact>Left</Button>
-                        <Button compact selected>
+                <ButtonGroup>
+                    <Button compact>Left</Button>
+                    <Button compact selected>
                             Middle
-                        </Button>
-                        <Button compact>Right</Button>
-                    </ButtonGroup>
-                </div>
+                    </Button>
+                    <Button compact>Right</Button>
+                </ButtonGroup>
             </Example>
         </ComponentPage>
     );

@@ -17,7 +17,7 @@ export const AlertComponent = () => {
                 <Alert
                     dismissible
                     link='#'
-                    linkText=' link'>
+                    linkText='link'>
                     Default alert with a{' '}
                 </Alert>
             </Example>
@@ -36,31 +36,31 @@ export const AlertComponent = () => {
                     should interrupt the user. A final action such as Submit cannot be carried out until the user has
                     rectified the error. The user will need to dismiss the message.`}
                 title='Error Alert'>
-                <Alert dismissible type='error'>
+                <Alert dismissible
+                    link='#'
+                    linkText='Learn More'
+                    type='error'>
                     <Icon glyph='message-error' /> Error Message.{' '}
-                    <a className='fd-link' href='#'>
-                        Learn More
-                    </a>
                 </Alert>
             </Example>
 
             <Example
                 title='Success Alert'>
-                <Alert dismissible type='success'>
+                <Alert dismissible
+                    link='#'
+                    linkText='Learn More'
+                    type='success'>
                     <Icon glyph='message-success' /> Message Success.{' '}
-                    <a className='fd-link' href='#'>
-                        Learn More
-                    </a>
                 </Alert>
             </Example>
 
             <Example
                 title='Information Alert'>
-                <Alert dismissible type='information'>
+                <Alert dismissible
+                    link='#'
+                    linkText='Learn More'
+                    type='information'>
                     <Icon glyph='message-information' /> Information Message.{' '}
-                    <a className='fd-link' href='#'>
-                        Learn More
-                    </a>
                 </Alert>
             </Example>
         </ComponentPage>

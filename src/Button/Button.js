@@ -9,7 +9,6 @@ const Button = ({
     type,
     compact,
     glyph,
-    dropdown,
     selected,
     disabled,
     typeAttr,
@@ -23,7 +22,6 @@ const Button = ({
             'fd-button': !option,
             [`fd-button--${option}`]: !!option,
             [`fd-button--${type}`]: !!type,
-            'fd-dropdown__control': dropdown,
             'fd-button--compact': compact,
             [`sap-icon--${glyph}`]: !!glyph,
             'is-selected': selected,
@@ -46,7 +44,6 @@ Button.propTypes = {
     className: PropTypes.string,
     compact: PropTypes.bool,
     disabled: PropTypes.bool,
-    dropdown: PropTypes.bool,
     glyph: PropTypes.string,
     option: PropTypes.oneOf(BUTTON_OPTIONS),
     selected: PropTypes.bool,
@@ -56,7 +53,6 @@ Button.propTypes = {
 };
 
 Button.propDescriptions = {
-    dropdown: 'Set to **true** if button triggers a dropdown list. ',
     option: 'Indicates the importance of the button.',
     selected: 'Set to **true** to set state of the button to "selected".',
     typeAttr: 'Value for the `type` attribute on the `<button>` element.'
