@@ -1,3 +1,4 @@
+import 'fundamental-styles/dist/layout.css'; //needed for layout container class for examples
 import path from 'path';
 import React from 'react';
 import { Button, Icon, Identifier, Image, Menu, Modal, Popover } from '../';

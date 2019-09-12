@@ -1,3 +1,4 @@
+import 'fundamental-styles/dist/input-group.css'; //remove when replaced with InputGroup component
 import 'fundamental-styles/dist/multi-input.css';
 import Button from '../Button/Button';
 import Checkbox from '../Forms/Checkbox';

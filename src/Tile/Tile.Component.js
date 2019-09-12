@@ -1,13 +1,13 @@
 import path from 'path';
 import React from 'react';
-import { Button, Identifier, Image, Menu, Popover, Tile, TileGrid } from '../';
+import { Button, Identifier, Image, Menu, Popover, Tile } from '../';
 import { ComponentPage, Example } from '../_playground';
 
 export const TileComponent = () => {
     return (
         <ComponentPage
             description={`A **Tile** can be used to display information in a simple container format.
-                A collection of tiles can be displayed using **TileGrid**.`}
+                A collection of tiles can be displayed using **LayoutGrid**.`}
             sourceModulePath={path.join(__dirname, './Tile')}
             title='Tile'>
 
@@ -107,49 +107,6 @@ export const TileComponent = () => {
                         <p>Tile Description</p>
                     </Tile.Content>
                 </Tile>
-            </Example>
-
-            <Example
-                description='A **Tile Grid** is a collection of **Tiles** in a grid layout.'
-                title='Tile Grid'>
-                <TileGrid col={4}>
-                    <Tile colorAccent={7} rowSpan={2}>
-                        <Tile.Content title='Tile Title'>
-                            <p>Tile Description</p>
-                        </Tile.Content>
-                    </Tile>
-                    <Tile>
-                        <Tile.Media>
-                            <Image photo='https://placeimg.com/400/400/nature' size='l'
-                                type='circle' />
-                        </Tile.Media>
-                        <Tile.Content title='Tile Title'>
-                            <p>Tile Description</p>
-                        </Tile.Content>
-                    </Tile>
-                    <Tile>
-                        <Tile.Content title='Tile Title'>
-                            <p>Tile Description</p>
-                        </Tile.Content>
-                    </Tile>
-                    <Tile>
-                        <Tile.Media>
-                            <Identifier color={3} glyph='home'
-                                size='l' />
-                        </Tile.Media>
-                        <Tile.Content title='Tile Title' />
-                    </Tile>
-                    <Tile>
-                        <Tile.Content title='Tile Title'>
-                            <p>Tile Description</p>
-                        </Tile.Content>
-                    </Tile>
-                    <Tile colorAccent={4} columnSpan={2}>
-                        <Tile.Content title='Tile Title'>
-                            <p>Tile Description</p>
-                        </Tile.Content>
-                    </Tile>
-                </TileGrid>
             </Example>
         </ComponentPage>
     );

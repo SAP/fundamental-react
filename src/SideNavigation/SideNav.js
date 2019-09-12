@@ -1,3 +1,4 @@
+import 'fundamental-styles/dist/side-nav.css';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import SideNavList from './_SideNavList';

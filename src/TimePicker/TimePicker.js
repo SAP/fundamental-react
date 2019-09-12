@@ -49,9 +49,7 @@ class TimePicker extends Component {
             return { time: time, value: value };
         });
     };
-    // updateTime = time => {
-    //   this.setState({ time: time });
-    // };
+
     updateValue = value => {
         this.setState({ value: value });
     };
@@ -111,46 +109,43 @@ class TimePicker extends Component {
         return (
             <div
                 {...props}
-                className='fd-time-picker'
                 id={id}>
-                <div className='fd-popover fd-popover--no-arrow'>
-                    <Popover
-                        {...popoverProps}
-                        body={
-                            <Time
-                                {...timeProps}
-                                disabled={this.state.disabled}
-                                format12Hours={this.state.format12Hours}
-                                id={timeId}
-                                onChange={this.onChange}
-                                onUpdateTime={this.updateTime}
-                                showHour={this.state.showHour}
-                                showMinute={this.state.showMinute}
-                                showSecond={this.state.showSecond}
-                                time={this.state.time} />
-                        }
-                        control={
-                            <TimePickerItem
-                                {...props}
-                                buttonProps={buttonProps}
-                                disabled={this.state.disabled}
-                                format12Hours={format12Hours}
-                                id={id}
-                                inputProps={inputProps}
-                                localizedText={localizedText}
-                                onChange={this.onChange}
-                                placeholder={this.state.placeholder}
-                                showHour={showHour}
-                                showMinute={showMinute}
-                                showSecond={showSecond}
-                                time={this.state.time}
-                                updateTime={this.updateTime}
-                                updateValue={this.updateValue}
-                                value={this.state.value} />
-                        }
-                        id={popoverId}
-                        noArrow />
-                </div>
+                <Popover
+                    {...popoverProps}
+                    body={
+                        <Time
+                            {...timeProps}
+                            disabled={this.state.disabled}
+                            format12Hours={this.state.format12Hours}
+                            id={timeId}
+                            onChange={this.onChange}
+                            onUpdateTime={this.updateTime}
+                            showHour={this.state.showHour}
+                            showMinute={this.state.showMinute}
+                            showSecond={this.state.showSecond}
+                            time={this.state.time} />
+                    }
+                    control={
+                        <TimePickerItem
+                            {...props}
+                            buttonProps={buttonProps}
+                            disabled={this.state.disabled}
+                            format12Hours={format12Hours}
+                            id={id}
+                            inputProps={inputProps}
+                            localizedText={localizedText}
+                            onChange={this.onChange}
+                            placeholder={this.state.placeholder}
+                            showHour={showHour}
+                            showMinute={showMinute}
+                            showSecond={showSecond}
+                            time={this.state.time}
+                            updateTime={this.updateTime}
+                            updateValue={this.updateValue}
+                            value={this.state.value} />
+                    }
+                    id={popoverId}
+                    noArrow />
             </div>
         );
     }

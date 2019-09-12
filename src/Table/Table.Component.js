@@ -1,6 +1,6 @@
 import path from 'path';
 import React from 'react';
-import { Button, Image, Menu, Popover, Table } from '../';
+import { Button, Checkbox, Image, Menu, Popover, Table } from '../';
 import { ComponentPage, Example } from '../_playground';
 
 export const TableComponent = () => {
@@ -31,11 +31,11 @@ export const TableComponent = () => {
                     actions, a contextual menu can be substituted in order to display all actions in one menu.`}
                 title='Rich Table'>
                 <Table
-                    headers={[<input type='checkbox' />, 'Avatar', 'email', 'First Name', 'Last Name', 'Date', ' ']}
+                    headers={[<Checkbox />, 'Avatar', 'email', 'First Name', 'Last Name', 'Date', ' ']}
                     tableData={[
                         {
                             rowData: [
-                                <input type='checkbox' />,
+                                <Checkbox />,
                                 <Image photo='https://robohash.org/green?size=50x50' size='m' />,
                                 <a className='fd-has-font-weight-semi' href='#'>
                                     user.name@email.com
@@ -60,7 +60,7 @@ export const TableComponent = () => {
                         },
                         {
                             rowData: [
-                                <input type='checkbox' />,
+                                <Checkbox />,
                                 <Image photo='https://robohash.org/brown?size=50x50' size='m' />,
                                 <a className='fd-has-font-weight-semi' href='#'>
                                     florence.garcia@qwerty.io
@@ -85,7 +85,7 @@ export const TableComponent = () => {
                         },
                         {
                             rowData: [
-                                <input type='checkbox' />,
+                                <Checkbox />,
                                 <Image photo='https://robohash.org/Q27.png?set=set1&size=50x50' size='m' />,
                                 <a className='fd-has-font-weight-semi' href='#'>
                                     mark.helper@qwerty.io
@@ -110,7 +110,7 @@ export const TableComponent = () => {
                         },
                         {
                             rowData: [
-                                <input type='checkbox' />,
+                                <Checkbox />,
                                 <Image photo='https://robohash.org/water?&size=50x50' size='m' />,
                                 <a className='fd-has-font-weight-semi' href='#'>
                                     user.name@email.com

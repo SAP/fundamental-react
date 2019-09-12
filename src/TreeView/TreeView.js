@@ -1,3 +1,4 @@
+import 'fundamental-styles/dist/tree.css';
 import PropTypes from 'prop-types';
 import Tree from './_Tree';
 import TreeBranch from './_TreeBranch';

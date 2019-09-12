@@ -1,3 +1,5 @@
+
+import 'fundamental-styles/dist/input-group.css'; //remove when replaced with InputGroup component
 import 'fundamental-styles/dist/localization-editor.css';
 import Button from '../Button/Button';
 import classnames from 'classnames';
@@ -67,8 +69,7 @@ const LocalizationEditor = ({ control, menu, id, compact, textarea, className, l
                     </Menu>
                 }
                 control={
-                    <div
-                        className='fd-input-group fd-input-group--after'>
+                    <div className='fd-input-group fd-input-group--after'>
                         {textarea ? (
                             <FormTextArea
                                 {...control.inputProps}

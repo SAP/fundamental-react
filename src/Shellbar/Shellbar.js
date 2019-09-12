@@ -1,3 +1,4 @@
+import 'fundamental-styles/dist/shellbar.css';
 import classnames from 'classnames';
 import Counter from '../Badge/Counter';
 import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';

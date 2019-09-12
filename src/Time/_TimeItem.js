@@ -1,3 +1,5 @@
+import Button from '../Button/Button';
+import FormInput from '../Forms/FormInput';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 
@@ -22,7 +24,7 @@ class TimeItem extends Component {
 
         this.state = {
             value: this.props.value,
-            style: 'fd-form__control ',
+            style: 'fd-time__input ',
             arialabel: aria
         };
         if (this.props.disabled) {
@@ -203,37 +205,36 @@ class TimeItem extends Component {
             <div className='fd-time__item'>
                 {spinners ? (
                     <div className='fd-time__control'>
-                        <button
+                        <Button
                             {...upButtonProps}
                             aria-label={arialabel.buttonUp}
-                            className=' fd-button--light fd-button--xs sap-icon--navigation-up-arrow '
                             disabled={disabled}
-                            onClick={this._onUp} />
+                            glyph='navigation-up-arrow'
+                            onClick={this._onUp}
+                            option='light' />
                     </div>
                 ) : (
                     ''
                 )}
-                <div className='fd-time__input'>
-                    <input
-                        {...inputProps}
-                        aria-label={type}
-                        className={style}
-                        maxLength='2'
-                        name={this.props.name}
-                        onChange={this.onChange}
-                        placeholder={placeholder}
-                        readOnly={disabled}
-                        type='text'
-                        value={this.props.value} />
-                </div>
+                <FormInput
+                    {...inputProps}
+                    aria-label={type}
+                    className={style}
+                    maxLength='2'
+                    name={this.props.name}
+                    onChange={this.onChange}
+                    placeholder={placeholder}
+                    readOnly={disabled}
+                    value={this.props.value} />
                 {spinners ? (
                     <div className='fd-time__control'>
-                        <button
+                        <Button
                             {...downButtonProps}
                             aria-label={arialabel.buttonDown}
-                            className=' fd-button--light fd-button--xs sap-icon--navigation-down-arrow'
                             disabled={disabled}
-                            onClick={this._onDown} />
+                            glyph='navigation-down-arrow'
+                            onClick={this._onDown}
+                            option='light' />
                     </div>
                 ) : (
                     ''

@@ -1,3 +1,4 @@
+import 'fundamental-styles/dist/popover.css';
 import chain from 'chain-function';
 import classnames from 'classnames';
 import Popper from '../utils/_Popper';

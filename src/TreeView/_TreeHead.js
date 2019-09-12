@@ -19,6 +19,11 @@ class TreeHead extends Component {
             className
         );
 
+        const buttonClassName = classnames(
+            'fd-tree__control',
+            { 'is-pressed': !!isExpanded }
+        );
+
         return (
             <div {...rest} className={headerClassName}>
                 <div className='fd-tree__row fd-tree__row--header'>
@@ -38,7 +43,7 @@ class TreeHead extends Component {
                                         {...buttonProps}
                                         aria-label={isExpanded ? 'collapse all' : 'expand all'}
                                         aria-pressed={isExpanded}
-                                        className='fd-tree__control'
+                                        className={buttonClassName}
                                         onClick={onExpandAll} />
                                     {child.props && child.props.children}
                                 </div>

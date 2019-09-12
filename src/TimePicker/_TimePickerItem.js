@@ -1,3 +1,6 @@
+import 'fundamental-styles/dist/input-group.css'; //remove when rebuilt with inputgroup
+import Button from '../Button/Button';
+import FormInput from '../Forms/FormInput';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 
@@ -13,7 +16,7 @@ class TimePickerItem extends Component {
             value: this.props.value,
             inputId: this.props.id && this.props.id + '-input',
             buttonID: this.props.id && this.props.id + '-button',
-            style: 'fd-input',
+            style: '',
             isValid: false,
             length: length
         };
@@ -106,7 +109,7 @@ class TimePickerItem extends Component {
         const { length } = this.state;
         const { showHour, showMinute, showSecond, format12Hours } = this.props;
         if (length === 11) {
-            // this means the time forma is hh:mm:ss am convert string into corresponding
+            // this means the time format is hh:mm:ss am convert string into corresponding
             // time format
             let timeValues = value.split(' ');
             if (timeValues.length === 2) {
@@ -207,34 +210,31 @@ class TimePickerItem extends Component {
         this.setState({ style: VALID });
     };
     render() {
-        // the 'onClick' prop is coming from Popover's modification of the control prop
-        // it needs to be added the outer div so React processes it
         const { disabled, inputProps, buttonProps, onClick } = this.props;
         return (
-            <div className='fd-popover__control' onClick={onClick}>
-                <div className='fd-input-group fd-input-group--after'>
-                    <input
-                        {...inputProps}
-                        className={this.state.style}
-                        id={this.state.inputId}
-                        onBlur={this.onBlur}
-                        onChange={this.onChange}
-                        onFocus={this.onFocus}
-                        placeholder={this.props.placeholder}
-                        readOnly={disabled}
-                        type='text'
-                        value={this.props.value} />
-                    <span className='fd-input-group__addon fd-input-group__addon--after fd-input-group__addon--button '>
-                        <button
-                            {...buttonProps}
-                            aria-controls='rthHR811'
-                            aria-expanded='false'
-                            aria-haspopup='true'
-                            className='fd-button--light fd-button--compact sap-icon--fob-watch fd-popover__control'
-                            disabled={disabled}
-                            id={this.state.buttonID} />
-                    </span>
-                </div>
+            <div className='fd-input-group' onClick={onClick}>
+                <FormInput
+                    {...inputProps}
+                    className={this.state.style}
+                    id={this.state.inputId}
+                    onBlur={this.onBlur}
+                    onChange={this.onChange}
+                    onFocus={this.onFocus}
+                    placeholder={this.props.placeholder}
+                    readOnly={disabled}
+                    value={this.props.value} />
+                <span className='fd-input-group__addon fd-input-group__addon--button '>
+                    <Button
+                        {...buttonProps}
+                        aria-controls='rthHR811'
+                        aria-expanded='false'
+                        aria-haspopup='true'
+                        compact
+                        disabled={disabled}
+                        glyph='fob-watch'
+                        id={this.state.buttonID}
+                        option='light' />
+                </span>
             </div>
         );
     }

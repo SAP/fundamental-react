@@ -1,8 +1,7 @@
-import Checkbox from './Checkbox';
 import path from 'path';
 import React from 'react';
 import { ComponentPage, Example } from '../_playground';
-import { FormFieldset, FormInput, FormItem, FormLabel, FormLegend, FormMessage, FormRadioGroup, FormRadioItem, FormSelect, FormSet, FormTextarea } from '../';
+import { Checkbox, FormFieldset, FormInput, FormItem, FormLabel, FormLegend, FormMessage, FormRadioGroup, FormRadioItem, FormSelect, FormSet, FormTextarea } from '../';
 
 export const FormsComponent = () => {
     return (
