@@ -17,7 +17,6 @@ import { IconComponent } from '../Icon/Icon.Component';
 import { IdentifierComponent } from '../Identifier/Identifier.Component';
 import { ImageComponent } from '../Image/Image.Component';
 import { InlineHelpComponent } from '../InlineHelp/InlineHelp.Component';
-import InputGroup from '../InputGroup/InputGroup';
 import { InputGroupComponent } from '../InputGroup/InputGroup.Component';
 import { LinkComponent } from '../Link/Link.Component';
 import { ListGroupComponent } from '../ListGroup/ListGroup.Component';
@@ -30,6 +29,7 @@ import { PanelComponent } from '../Panel/Panel.Component';
 import { PopoverComponent } from '../Popover/Popover.Component';
 import RouteNotFound from './_RouteNotFound';
 import ScrollToTop from './_ScrollToTop';
+import SearchInput from '../SearchInput/SearchInput';
 import { SearchInputComponent } from '../SearchInput/SearchInput.Component';
 import { ShellbarComponent } from '../Shellbar/Shellbar.Component';
 import { SideNav } from '../SideNavigation/';
@@ -392,8 +392,8 @@ export class Routes extends Component {
                         </header>
                         <div className={sideBarClasses}>
                             <div className='frDocs-Search'>
-                                <InputGroup
-                                    inputPlaceholder='Search'
+                                <SearchInput
+                                    placeholder='Search'
                                     inputProps={{ 'aria-label': 'Search' }}
                                     inputType='search'
                                     inputValue={this.state.query}
