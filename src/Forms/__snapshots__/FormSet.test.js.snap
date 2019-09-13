@@ -6,7 +6,6 @@ exports[`<FormSet /> create form item 1`] = `
 >
   <div
     className="fd-form-item fd-form-item--inline"
-    isCheck={true}
   >
     <label
       className="fd-form-label"
@@ -102,7 +101,6 @@ exports[`<FormSet /> create form item 2`] = `
 >
   <div
     className="fd-form-item fd-form-item--inline"
-    isCheck={true}
   >
     <label
       className="fd-form-label"

@@ -253,7 +253,6 @@ exports[`<FormFieldset /> create form field set 1`] = `
   />
   <div
     className="fd-form-item blue"
-    isCheck={true}
   >
     <input
       className="fd-input blue"
