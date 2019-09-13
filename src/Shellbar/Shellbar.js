@@ -17,7 +17,8 @@ class Shellbar extends Component {
         this.state = {
             collapsedActions: this.getCollapsedActions(),
             totalNotifications: this.getNotificationsSum(),
-            showCollapsedProductSwitcherMenu: false        };
+            showCollapsedProductSwitcherMenu: false
+        };
     }
 
     backBtnHandler = () => {
