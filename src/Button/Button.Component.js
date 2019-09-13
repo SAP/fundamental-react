@@ -41,7 +41,7 @@ export const ButtonComponent = () => {
                     alert \n\n* **Negative Button**: Used for negative actions such as decline, cancel, no.`}
                 title='Button Types'>
                 <Button>Action Button</Button>
-                <Button>Standard Button</Button>
+                <Button type='standard'>Standard Button</Button>
                 <Button type='positive'>Positive Button</Button>
                 <Button type='medium'>Medium Button</Button>
                 <Button type='negative'>Negative Button</Button>

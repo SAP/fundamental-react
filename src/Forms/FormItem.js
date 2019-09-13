@@ -25,7 +25,6 @@ FormItem.displayName = 'FormItem';
 FormItem.propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,
-    isCheck: PropTypes.bool,
     isInline: PropTypes.bool
 };
 
