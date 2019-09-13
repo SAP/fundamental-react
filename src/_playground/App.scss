@@ -15,6 +15,7 @@ $menu-spacing: 20px;
 // Fundamental React Docs Styles
 .frDocs-App {
     background-color: white;
+    font-family: '72', sans-serif;
 }
 
 .frDocs-Container {
@@ -410,6 +411,7 @@ a.toc-link {
         right: 0;
         padding: 25px + $menu-height 25px 25px;
         height: 100%;
+        font-size: 14px;
 
         > .toc-list {
             padding-left: 14px;

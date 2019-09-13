@@ -1,4 +1,5 @@
 import 'fundamental-styles/dist/shellbar.css';
+import Button from '../Button/Button';
 import classnames from 'classnames';
 import Counter from '../Badge/Counter';
 import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
@@ -16,8 +17,7 @@ class Shellbar extends Component {
         this.state = {
             collapsedActions: this.getCollapsedActions(),
             totalNotifications: this.getNotificationsSum(),
-            showCollapsedProductSwitcherMenu: false
-        };
+            showCollapsedProductSwitcherMenu: false        };
     }
 
     backBtnHandler = () => {
@@ -112,23 +112,222 @@ class Shellbar extends Component {
 
         return (
             <div className={shellbarClasses}>
-                <div className='fd-shellbar__group fd-shellbar__group--start'>
+                <div className='fd-shellbar__group fd-shellbar__group--product'>
                     {logo && <a className='fd-shellbar__logo'>{logo}</a>}
                     {logoSAP && (
                         <a className='fd-shellbar__logo'>
                             <img alt='SAP' src='//unpkg.com/fundamental-styles/dist/images/sap-logo.png' />
                         </a>
                     )}
-                    <div className='fd-shellbar__product'>
-                        {productTitle && !productMenu && <span className='fd-shellbar__title'>{productTitle}</span>}
-                        {productMenu && (
-                            <div className='fd-product-menu'>
+                    {productTitle && !productMenu && <span className='fd-shellbar__title'>{productTitle}</span>}
+                    {productMenu && (
+                        <div className='fd-product-menu'>
+                            <Popover
+                                body={
+                                    productMenu && (
+                                        <Menu>
+                                            <Menu.List>
+                                                {productMenu.map((item, index) => {
+                                                    return (
+                                                        <Menu.Item
+                                                            key={index}
+                                                            link={item.link}
+                                                            onClick={item.callback}
+                                                            url={item.url} >
+                                                            {item.glyph && (
+                                                                <React.Fragment>
+                                                                    <Icon glyph={item.glyph} size={item.size} />
+                                                                        &nbsp;&nbsp;&nbsp;
+                                                                </React.Fragment>
+                                                            )}
+                                                            {item.name}
+                                                        </Menu.Item>
+                                                    );
+                                                })}
+                                            </Menu.List>
+                                        </Menu>
+                                    )
+                                }
+                                control={
+                                    <button className='fd-product-menu__control'>
+                                        <span className='fd-shellbar__title'>
+                                            {productTitle}
+                                        </span>
+                                    </button>
+                                }
+                                noArrow />
+                        </div>
+                    )}
+                    {subtitle && <div className='fd-shellbar__subtitle'>{subtitle}</div>}
+                </div>
+                {copilot ? (
+                    <div className='fd-shellbar__group fd-shellbar__group--copilot'>
+                        <img
+                            alt='CoPilot'
+                            height='30'
+                            src='//unpkg.com/fundamental-styles/dist/images/copilot.png'
+                            width='30' />
+                    </div>
+                ) : null}
+                <div className='fd-shellbar__group fd-shellbar__group--actions'>
+                    {searchInput && (
+                        <div className='fd-shellbar__action fd-shellbar__action--desktop'>
+                            <SearchInput
+                                className='fd-search-input'
+                                onEnter={searchInput.onSearch}
+                                placeholder={searchInput.placeholder}
+                                searchList={searchInput.searchList}
+                                shellbar />
+                        </div>
+                    )}
+                    {actions &&
+                            actions.map((action, index) => {
+                                return (
+                                    <div className='fd-shellbar__action fd-shellbar__action--desktop' key={index}>
+                                        {action.menu ? (
+                                            <Popover
+                                                body={action.menu}
+                                                control={
+                                                    <Button
+                                                        aria-label={action.label}
+                                                        className='fd-shellbar__button'
+                                                        glyph={action.glyph}>
+                                                        {action.notificationCount > 0 && (
+                                                            <Counter
+                                                                aria-label={localizedText.counterLabel}
+                                                                notification>
+                                                                {action.notificationCount}
+                                                            </Counter>
+                                                        )}
+                                                    </Button>
+                                                }
+                                                placement='bottom-end' />
+                                        ) : (
+                                            <Button
+                                                aria-label={action.label}
+                                                className='fd-shellbar__button'
+                                                glyph={action.glyph}
+                                                key={index}
+                                                onClick={action.callback} >
+                                                {action.notificationCount > 0 && (
+                                                    <Counter
+                                                        aria-label={localizedText.counterLabel}
+                                                        notification>
+                                                        {action.notificationCount}
+                                                    </Counter>
+                                                )}
+                                            </Button>
+                                        )}
+                                    </div>
+                                );
+                            })}
+                    {notifications && (
+                        (notifications.notificationsBody || notifications.noNotificationsBody) ? (
+                            <Popover
+                                body={
+                                    ((notifications.notificationCount > 0) && notifications.notificationsBody) ||
+                                        ((notifications.notificationCount <= 0) && notifications.noNotificationsBody)
+                                }
+                                control={
+                                    <div className='fd-shellbar__action fd-shellbar__action--desktop'>
+                                        <Button
+                                            aria-label={localizedText.notificationsButton}
+                                            className='fd-shellbar__button'
+                                            glyph='bell'>
+                                            {notifications.notificationCount > 0 && (
+                                                <Counter
+                                                    aria-label={localizedText.counterLabel}
+                                                    notification>
+                                                    {notifications.notificationCount}
+                                                </Counter>
+                                            )}
+                                        </Button>
+                                    </div>
+                                }
+                                placement='bottom-end' />
+                        ) : (
+                            <div className='fd-shellbar__action fd-shellbar__action--desktop'>
+                                <Button
+                                    aria-label={localizedText.notificationsButton}
+                                    className='fd-shellbar__button'
+                                    glyph='bell'
+                                    onClick={notifications.callback}>
+                                    {notifications.notificationCount > 0 && (
+                                        <Counter
+                                            aria-label={localizedText.counterLabel}
+                                            notification>
+                                            {notifications.notificationCount}
+                                        </Counter>
+                                    )}
+                                </Button>
+                            </div>
+                        )
+                    )}
+                    {
+                        (actions || searchInput || notifications) && <div className='fd-shellbar__action fd-shellbar__action--mobile'>
+                            <Popover
+                                body={
+                                    <Menu>
+                                        {!this.state.showCollapsedProductSwitcherMenu ? (
+                                            <Menu.List>
+                                                {this.state.collapsedActions.map((item, index) => {
+                                                    return (
+                                                        <Menu.Item
+                                                            key={index}
+                                                            link={item.link}
+                                                            onClick={item.callback}
+                                                            url={item.url} >
+                                                            <Icon glyph={item.glyph}>
+                                                                {item.notificationCount > 0 && <Counter notification>{item.notificationCount}</Counter>}
+                                                            </Icon> {item.label}
+                                                        </Menu.Item>
+                                                    );
+                                                })}
+                                            </Menu.List>
+                                        ) : (
+                                            <Menu.List>
+                                                <Menu.Item>
+                                                    <span
+                                                        className='fd-menu sap-icon--nav-back'
+                                                        onClick={this.backBtnHandler} />
+                                                </Menu.Item>
+                                                {productSwitcherList.map((item, index) => {
+                                                    return (
+                                                        <Menu.Item
+                                                            key={index}
+                                                            link={item.link}
+                                                            onClick={item.callback}
+                                                            url={item.url} >
+                                                            <Icon glyph={item.glyph} /> {item.title}
+                                                        </Menu.Item>
+                                                    );
+                                                })}
+                                            </Menu.List>
+                                        )}
+                                    </Menu>
+                                }
+                                control={
+                                    <div className='fd-shellbar-collapse--control' role='button'>
+                                        <Button className='fd-shellbar__button' glyph='overflow'>
+                                            <Counter
+                                                aria-label={localizedText.counterLabel}
+                                                notification> {this.state.totalNotifications > 0 && this.state.totalNotifications} </Counter>
+                                        </Button>
+                                    </div>
+                                }
+                                placement='bottom-end' />
+                        </div>
+                    }
+                    {profile && (
+                        <div className='fd-shellbar__action fd-shellbar__action--show-always'>
+                            <div className='fd-user-menu'>
                                 <Popover
                                     body={
-                                        productMenu && (
+                                        profileMenu && (
                                             <Menu>
                                                 <Menu.List>
-                                                    {productMenu.map((item, index) => {
+                                                    <Menu.Item>{profile.userName}</Menu.Item>
+                                                    {profileMenu.map((item, index) => {
                                                         return (
                                                             <Menu.Item
                                                                 key={index}
@@ -138,7 +337,7 @@ class Shellbar extends Component {
                                                                 {item.glyph && (
                                                                     <React.Fragment>
                                                                         <Icon glyph={item.glyph} size={item.size} />
-                                                                        &nbsp;&nbsp;&nbsp;
+                                                                            &nbsp;&nbsp;&nbsp;
                                                                     </React.Fragment>
                                                                 )}
                                                                 {item.name}
@@ -150,240 +349,56 @@ class Shellbar extends Component {
                                         )
                                     }
                                     control={
-                                        <button className='fd-product-menu__control'>
-                                            <span className='fd-shellbar__title fd-product-menu__title'>
-                                                {productTitle}
-                                            </span>
-                                        </button>
-                                    }
-                                    noArrow />
-                            </div>
-                        )}
-                    </div>
-                    {subtitle && <div className='fd-shellbar__subtitle'>{subtitle}</div>}
-                </div>
-                {copilot ? (
-                    <div className='fd-shellbar__group fd-shellbar__group--middle'>
-                        <img
-                            alt='CoPilot'
-                            height='30'
-                            src='//unpkg.com/fundamental-styles/dist/images/copilot.png'
-                            width='30' />
-                    </div>
-                ) : null}
-                <div className='fd-shellbar__group fd-shellbar__group--end'>
-                    <div className='fd-shellbar__actions'>
-                        {searchInput && (
-                            <div className='fd-shellbar__action fd-shellbar__action--collapsible'>
-                                <SearchInput
-                                    inShellbar
-                                    onEnter={searchInput.onSearch}
-                                    placeholder={searchInput.placeholder}
-                                    searchList={searchInput.searchList} />
-                            </div>
-                        )}
-                        {actions &&
-                            actions.map((action, index) => {
-                                return (
-                                    <div className='fd-shellbar__action fd-shellbar__action--collapsible' key={index}>
-                                        {action.menu ? (
-                                            <Popover
-                                                body={action.menu}
-                                                control={
-                                                    <button
-                                                        aria-label={action.label}
-                                                        className={` fd-button--shell sap-icon--${action.glyph}`} >
-                                                        {action.notificationCount > 0 && (
-                                                            <span
-                                                                aria-label={localizedText.counterLabel}
-                                                                className='fd-counter fd-counter--notification' >
-                                                                {action.notificationCount}
-                                                            </span>
-                                                        )}
-                                                    </button>
-                                                }
-                                                placement='bottom-end' />
+                                        profile.image ? (
+                                            <Identifier
+                                                backgroundImageUrl={profile.image}
+                                                modifier='circle'
+                                                size='xs' />
                                         ) : (
-                                            <button
-                                                aria-label={action.label}
-                                                className={` fd-button--shell sap-icon--${action.glyph}`}
-                                                key={index}
-                                                onClick={action.callback} >
-                                                {action.notificationCount > 0 && (
-                                                    <span
-                                                        aria-label={localizedText.counterLabel}
-                                                        className='fd-counter fd-counter--notification' >
-                                                        {action.notificationCount}
-                                                    </span>
-                                                )}
-                                            </button>
-                                        )}
-                                    </div>
-                                );
-                            })}
-                        {notifications && (
-                            (notifications.notificationsBody || notifications.noNotificationsBody) ? (
-                                <Popover
-                                    body={
-                                        ((notifications.notificationCount > 0) && notifications.notificationsBody) ||
-                                        ((notifications.notificationCount <= 0) && notifications.noNotificationsBody)
-                                    }
-                                    control={
-                                        <div className='fd-shellbar__action fd-shellbar__action--collapsible'>
-                                            <button aria-label={localizedText.notificationsButton} className=' fd-button--shell sap-icon--bell'>
-                                                {(notifications.notificationCount > 0) && <span aria-label={localizedText.counterLabel} className='fd-counter fd-counter--notification'>
-                                                    {notifications.notificationCount}
-                                                </span>}
-                                            </button>
-                                        </div>
+                                            <Identifier color={profile.colorAccent}
+                                                modifier='circle'
+                                                size='xs'>
+                                                {profile.initials}
+                                            </Identifier>
+                                        )
                                     }
                                     placement='bottom-end' />
-                            ) : (
-                                <div className='fd-shellbar__action fd-shellbar__action--collapsible'>
-                                    <button aria-label={localizedText.notificationsButton} className=' fd-button--shell sap-icon--bell'
-                                        onClick={notifications.callback}>
-                                        {(notifications.notificationCount > 0) && <span aria-label={localizedText.counterLabel} className='fd-counter fd-counter--notification'>
-                                            {notifications.notificationCount}
-                                        </span>}
-                                    </button>
-                                </div>
-                            )
-                        )}
-                        {
-                            (actions || searchInput || notifications) && <div className='fd-shellbar__action fd-shellbar__action--collapse'>
-                                <div className='fd-shellbar-collapse'>
-                                    <Popover
-                                        body={
-                                            <Menu>
-                                                {!this.state.showCollapsedProductSwitcherMenu ? (
-                                                    <Menu.List>
-                                                        {this.state.collapsedActions.map((item, index) => {
-                                                            return (
-                                                                <Menu.Item
-                                                                    key={index}
-                                                                    link={item.link}
-                                                                    onClick={item.callback}
-                                                                    url={item.url} >
-                                                                    <Icon glyph={item.glyph}>
-                                                                        {item.notificationCount > 0 && <Counter notification>{item.notificationCount}</Counter>}
-                                                                    </Icon> {item.label}
-                                                                </Menu.Item>
-                                                            );
-                                                        })}
-                                                    </Menu.List>
-                                                ) : (
-                                                    <Menu.List>
-                                                        <Menu.Item>
-                                                            <span
-                                                                className='fd-menu sap-icon--nav-back'
-                                                                onClick={this.backBtnHandler} />
-                                                        </Menu.Item>
-                                                        {productSwitcherList.map((item, index) => {
-                                                            return (
-                                                                <Menu.Item
-                                                                    key={index}
-                                                                    link={item.link}
-                                                                    onClick={item.callback}
-                                                                    url={item.url} >
-                                                                    <Icon glyph={item.glyph} /> {item.title}
-                                                                </Menu.Item>
-                                                            );
-                                                        })}
-                                                    </Menu.List>
-                                                )}
-                                            </Menu>
-                                        }
-                                        control={
-                                            <div className='fd-shellbar-collapse--control' role='button'>
-                                                <button className=' fd-button--shell sap-icon--overflow'>
-                                                    <span
-                                                        aria-label={localizedText.counterLabel}
-                                                        className='fd-counter fd-counter--notification'> {this.state.totalNotifications > 0 && this.state.totalNotifications} </span>
-                                                </button>
-                                            </div>
-                                        }
-                                        placement='bottom-end' />
-                                </div>
                             </div>
-                        }
-                        {profile && (
-                            <div className='fd-shellbar__action fd-shellbar__action--show-always'>
-                                <div className='fd-user-menu'>
-                                    <Popover
-                                        body={
-                                            profileMenu && (
-                                                <Menu>
-                                                    <Menu.List>
-                                                        <Menu.Item>{profile.userName}</Menu.Item>
-                                                        {profileMenu.map((item, index) => {
-                                                            return (
-                                                                <Menu.Item
-                                                                    key={index}
-                                                                    link={item.link}
-                                                                    onClick={item.callback}
-                                                                    url={item.url} >
-                                                                    {item.glyph && (
-                                                                        <React.Fragment>
-                                                                            <Icon glyph={item.glyph} size={item.size} />
-                                                                            &nbsp;&nbsp;&nbsp;
-                                                                        </React.Fragment>
-                                                                    )}
-                                                                    {item.name}
-                                                                </Menu.Item>
-                                                            );
-                                                        })}
-                                                    </Menu.List>
-                                                </Menu>
-                                            )
-                                        }
-                                        control={
-                                            profile.image ? (
-                                                <Identifier
-                                                    backgroundImageUrl={profile.image}
-                                                    modifier='circle'
-                                                    size='xs' />
-                                            ) : (
-                                                <Identifier color={profile.colorAccent}
-                                                    modifier='circle'
-                                                    size='xs'>
-                                                    {profile.initials}
-                                                </Identifier>
-                                            )
-                                        }
-                                        placement='bottom-end' />
-                                </div>
+                        </div>
+                    )}
+                    {productSwitcher && (
+                        <div className='fd-shellbar__action fd-shellbar__action--desktop'>
+                            <div className='fd-product-switcher'>
+                                <Popover
+                                    body={
+                                        <div className='fd-product-switcher__body'>
+                                            <nav>
+                                                <ul className='fd-product-switcher__body--list'>
+                                                    {productSwitcherList.map((item, index) => {
+                                                        return (
+                                                            <li
+                                                                className='fd-product-switcher__body--list-item'
+                                                                key={index}
+                                                                onClick={item.callback}>
+                                                                <span className='fd-product-switcher__product-icon'>
+                                                                    <img alt={item.title} src={item.image} />
+                                                                </span>
+                                                                <span className='fd-product-switcher__product-title'>
+                                                                    {item.title}
+                                                                </span>
+                                                            </li>
+                                                        );
+                                                    })}
+                                                </ul>
+                                            </nav>
+                                        </div>
+                                    }
+                                    control={<Button className='fd-shellbar__button' glyph='grid' />}
+                                    disableEdgeDetection
+                                    placement='bottom-end' />
                             </div>
-                        )}
-                        {productSwitcher && (
-                            <div className='fd-shellbar__action fd-shellbar__action--collapsible'>
-                                <div className='fd-product-switcher'>
-                                    <Popover
-                                        body={
-                                            <div className='fd-product-switcher__body'>
-                                                <nav>
-                                                    <ul>
-                                                        {productSwitcherList.map((item, index) => {
-                                                            return (
-                                                                <li key={index} onClick={item.callback}>
-                                                                    <span className='fd-product-switcher__product-icon'>
-                                                                        <img alt={item.title} src={item.image} />
-                                                                    </span>
-                                                                    <span className='fd-product-switcher__product-title'>
-                                                                        {item.title}
-                                                                    </span>
-                                                                </li>
-                                                            );
-                                                        })}
-                                                    </ul>
-                                                </nav>
-                                            </div>
-                                        }
-                                        control={<button className=' fd-button--shell sap-icon--grid' />}
-                                        placement='bottom-end' />
-                                </div>
-                            </div>
-                        )}
-                    </div>
+                        </div>
+                    )}
                 </div>
             </div>
         );
