@@ -32,7 +32,8 @@ const Button = ({
 
     return (<button {...props} className={buttonClasses}
         disabled={disabled} onClick={onClick}
-        selected={selected} type={typeAttr}>
+        selected={selected}
+        type={typeAttr}>
         {children}
     </button>);
 };

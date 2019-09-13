@@ -24,8 +24,8 @@ class SearchInput extends Component {
         }
     };
 
-    listItemClickHandler = item => {
-        item.callback();
+    listItemClickHandler = (event, item) => {
+        item.callback ? item.callback() : null;
     };
 
     onChangeHandler = event => {
@@ -40,7 +40,7 @@ class SearchInput extends Component {
             isExpanded: true,
             filteredResult: filteredResult
         }, () => {
-            this.props.onChange(event);
+            this.props.onChange(event, filteredResult);
         });
     };
 
@@ -135,15 +135,15 @@ class SearchInput extends Component {
                 <Popover
                     {...popoverProps}
                     body={
-                        {/*<Menu>
+                        (<Menu>
                             <Menu.List {...listProps}>
-                                {this.state.filteredResult.length > 0 ? (
+                                {this.state.filteredResult && this.state.filteredResult.length > 0 ? (
                                     this.state.filteredResult.map((item, index) => {
                                         return (
                                             <li
                                                 className='fd-menu__item'
                                                 key={index}
-                                                onClick={() => this.listItemClickHandler(item)}>
+                                                onClick={(e) => this.listItemClickHandler(e, item)}>
                                                 <strong>{this.state.value}</strong>
                                                 {this.state.value && this.state.value.length
                                                     ? item.text.substring(this.state.value.length)
@@ -155,7 +155,7 @@ class SearchInput extends Component {
                                     <li className='fd-menu__item'>No result</li>
                                 )}
                             </Menu.List>
-                                </Menu>*/}
+                        </Menu>)
                     }
                     control={
                         <div className='fd-input-group fd-input-group--after'>
@@ -196,7 +196,12 @@ SearchInput.propTypes = {
     placeholder: PropTypes.string,
     popoverProps: PropTypes.object,
     searchBtnProps: PropTypes.object,
-    searchList: PropTypes.array,
+    searchList: PropTypes.arrayOf(
+        PropTypes.shape({
+            text: PropTypes.string.isRequired,
+            callback: PropTypes.func
+        })
+    ),
     onChange: PropTypes.func,
     onEnter: PropTypes.func
 };

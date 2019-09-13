@@ -8,6 +8,7 @@ import FormInput from '../Forms/FormInput';
 import Menu from '../Menu/Menu';
 import Popover from '../Popover/Popover';
 import PropTypes from 'prop-types';
+import shortid from '../utils/shortId';
 import Token from '../Token/Token';
 import React, { Component } from 'react';
 
@@ -23,13 +24,12 @@ class MultiInput extends Component {
 
     // create tags to display in dropdown list
     createTagList = data => {
-        const randNum = Math.floor(Math.random() * 1000000 + 1);
         return data.map((item, index) => (
             <li className='fd-menu__item' key={index}>
                 <Checkbox
                     checked={this.isChecked(item)}
-                    id={index + `_${randNum}`}
-                    onChange={this.updateSelectedTags}
+                    id={index + `_${shortid.generate()}`}
+                    onChange={() => this.updateSelectedTags(item)}
                     value={item} />
             </li>
         ));
@@ -47,8 +47,7 @@ class MultiInput extends Component {
     };
 
     // add/remove tag to tag collection
-    updateSelectedTags = event => {
-        const tag = event.target.value;
+    updateSelectedTags = (tag) => {
 
         if (this.state.tags.indexOf(tag) === -1) {
             this.setState(

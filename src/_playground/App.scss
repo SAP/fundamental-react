@@ -3,6 +3,7 @@ $breakpoint-md: 1024px;
 $breakpoint-sm: 600px;
 @import '~tocbot/src/scss/tocbot-core';
 @import '~tocbot/src/scss/tocbot-default-theme';
+//@import '~fundamental-styles/dist/fonts.css'; uncomment once fs is publishing this
 @import '~fundamental-styles/dist/helpers.css';
 
 $shell-color: #354A5F;
@@ -289,12 +290,6 @@ h6 {
 
         thead {
             background: transparent;
-
-            >tr {
-                >th {
-                    padding: inherit 0;
-                }
-            }
         }
 
         tbody {
@@ -331,7 +326,7 @@ h6 {
         }
 
         .prop-required {
-            color: var(--fd-color-status-3);
+            color: var(--fd-color-status-3, #b00);
         }
     }
 }

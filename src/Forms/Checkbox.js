@@ -5,7 +5,17 @@ import FormLabel from './FormLabel';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-const Checkbox = ({ checked, className, defaultChecked, disabled, id, inline, name, onChange, value, ...props }) => {
+const getCheckStatus = (checked, indeterminate) => {
+    if (indeterminate) {
+        return 'mixed';
+    } else if (checked) {
+        return 'true';
+    } else {
+        return 'false';
+    }
+};
+
+const Checkbox = ({ checked, className, defaultChecked, disabled, id, indeterminate, inline, name, onChange, value, ...props }) => {
     const classes = classnames(
         className,
         'fd-checkbox'
@@ -18,7 +28,7 @@ const Checkbox = ({ checked, className, defaultChecked, disabled, id, inline, na
             <FormLabel disabled={disabled}>
                 <input
                     {...props}
-                    aria-checked={checked}
+                    aria-checked={getCheckStatus(checked, indeterminate)}
                     checked={checked}
                     className={classes}
                     disabled={disabled}
@@ -27,6 +37,7 @@ const Checkbox = ({ checked, className, defaultChecked, disabled, id, inline, na
                     onChange={(e) => {
                         onChange(e, !checked);
                     }}
+                    ref={el => el && (el.indeterminate = indeterminate)}
                     type='checkbox' />
                 {value}
             </FormLabel>
@@ -42,6 +53,7 @@ Checkbox.propTypes = {
     defaultChecked: PropTypes.bool,
     disabled: PropTypes.bool,
     id: PropTypes.string,
+    indeterminate: PropTypes.bool,
     inline: PropTypes.bool,
     name: PropTypes.string,
     value: PropTypes.string,
@@ -55,6 +67,7 @@ Checkbox.defaultProps = {
 Checkbox.propDescriptions = {
     checked: 'Set to **true** when checkbox input is checked and a controlled component.',
     defaultChecked: 'Set to **true** when the checkbox input is checked and an uncontrolled component.',
+    indeterminate: 'When true, the checkbox renders a "mixed" state.',
     inline: '_INTERNAL USE ONLY._',
     name: 'Sets the `name` for the checkbox input.',
     value: 'Sets the `value` for the checkbox input.'

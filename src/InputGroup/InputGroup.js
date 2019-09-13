@@ -20,14 +20,14 @@ class InputGroup extends Component {
     handleUp = e => {
         e.preventDefault();
         this.setState({
-            value: this.state.value + 1
+            value: parseInt(this.state.value, 10) + 1
         });
     };
 
     handleDown = e => {
         e.preventDefault();
         this.setState({
-            value: this.state.value - 1
+            value: parseInt(this.state.value, 10) - 1
         });
     };
 

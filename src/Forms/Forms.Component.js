@@ -285,7 +285,10 @@ export const FormsComponent = () => {
                             id='checkbox-2'
                             name='checkbox-name-2'
                             value='Option Two' />
-                        <Checkbox id='checkbox-3' name='checkbox-name-3'
+                        <Checkbox
+                            id='checkbox-3'
+                            indeterminate
+                            name='checkbox-name-3'
                             value='Option Three' />
                     </FormFieldset>
 

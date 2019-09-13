@@ -14,7 +14,7 @@ class Example extends React.Component {
             title
         } = this.props;
 
-        const element = <React.Fragment>{children}</React.Fragment>;
+        const element = React.Children.count(children) === 1 ? children : <React.Fragment>{children}</React.Fragment>;
 
         return (
             <React.Fragment>
