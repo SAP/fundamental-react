@@ -2,7 +2,7 @@
 
 exports[`<FormGroup /> create snapshot 1`] = `
 <div
-  className="fd-form__group"
+  className="fd-form-group"
 >
   Test Form Group
 </div>

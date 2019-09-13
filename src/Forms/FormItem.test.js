@@ -17,8 +17,7 @@ describe('<FormItem />', () => {
             <FormInput
                 id='input-1'
                 placeholder='Field placeholder text'
-                state='warning'
-                type='text' />
+                state='warning' />
             <FormTextarea className='blue' id='textarea-1'>
                 Pellentesque metus lacus commodo eget justo ut rutrum varius nunc.
             </FormTextarea>
@@ -47,6 +46,16 @@ describe('<FormItem />', () => {
         let component = renderer.create(formItem);
         let tree = component.toJSON();
         expect(tree).toMatchSnapshot();
+    });
+
+    describe('Rendering', () => {
+        test('should add inline class when isInline prop passed', () => {
+            const element = mount(<FormItem isInline />);
+
+            expect(
+                element.find('div').hasClass('fd-form-item--inline')
+            ).toBe(true);
+        });
     });
 
     describe('Prop spreading', () => {

@@ -62,7 +62,23 @@ describe('<Checkbox />', () => {
             const element = mount(<Checkbox data-sample='Sample' />);
 
             expect(
+                element.find('.fd-form-item').getDOMNode().attributes['data-sample'].value
+            ).toBe('Sample');
+        });
+
+        test('should allow props to be spread to the Checkbox component input', () => {
+            const element = mount(<Checkbox inputProps={{ 'data-sample': 'Sample' }} />);
+
+            expect(
                 element.find('.fd-checkbox').getDOMNode().attributes['data-sample'].value
+            ).toBe('Sample');
+        });
+
+        test('should allow props to be spread to the Checkbox component label', () => {
+            const element = mount(<Checkbox labelProps={{ 'data-sample': 'Sample' }} />);
+
+            expect(
+                element.find('.fd-form-label').getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
         });
     });

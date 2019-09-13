@@ -2,7 +2,7 @@
 
 exports[`<FormLegend /> create form legend 1`] = `
 <legend
-  className="fd-form__legend blue"
+  className="fd-fieldset__legend blue"
 >
   Radio buttons
 </legend>

@@ -15,7 +15,7 @@ const getCheckStatus = (checked, indeterminate) => {
     }
 };
 
-const Checkbox = ({ checked, className, defaultChecked, disabled, id, indeterminate, inline, name, onChange, value, ...props }) => {
+const Checkbox = ({ checked, className, defaultChecked, disabled, id, indeterminate, inline, inputProps, labelProps, name, onChange, value, ...props }) => {
     const classes = classnames(
         className,
         'fd-checkbox'
@@ -23,11 +23,12 @@ const Checkbox = ({ checked, className, defaultChecked, disabled, id, indetermin
 
     return (
         <FormItem
+            {...props}
             disabled={disabled}
-            inline={inline}>
-            <FormLabel disabled={disabled}>
+            isInline={inline}>
+            <FormLabel {...labelProps} disabled={disabled}>
                 <input
-                    {...props}
+                    {...inputProps}
                     aria-checked={getCheckStatus(checked, indeterminate)}
                     checked={checked}
                     className={classes}
@@ -55,6 +56,8 @@ Checkbox.propTypes = {
     id: PropTypes.string,
     indeterminate: PropTypes.bool,
     inline: PropTypes.bool,
+    inputProps: PropTypes.object,
+    labelProps: PropTypes.object,
     name: PropTypes.string,
     value: PropTypes.string,
     onChange: PropTypes.func
@@ -69,6 +72,8 @@ Checkbox.propDescriptions = {
     defaultChecked: 'Set to **true** when the checkbox input is checked and an uncontrolled component.',
     indeterminate: 'When true, the checkbox renders a "mixed" state.',
     inline: '_INTERNAL USE ONLY._',
+    inputProps: 'Props to be spread to the component `<input>` element.',
+    labelProps: 'Props to be spread to the component `<label>` element.',
     name: 'Sets the `name` for the checkbox input.',
     value: 'Sets the `value` for the checkbox input.'
 };

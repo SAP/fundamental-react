@@ -99,8 +99,7 @@ describe('<LocalizationEditor />', () => {
             const control = {
                 ...defaultControl,
                 inputProps: {
-                    'data-sample': 'Sample',
-                    id: 'controlTextArea'
+                    'data-sample': 'Sample'
                 }
             };
             const element = mount(
@@ -111,7 +110,7 @@ describe('<LocalizationEditor />', () => {
             );
 
             expect(
-                element.find('#controlTextArea').getDOMNode().attributes['data-sample'].value
+                element.find('textarea').getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
         });
 
@@ -130,7 +129,7 @@ describe('<LocalizationEditor />', () => {
             );
 
             expect(
-                element.find('#controlInput').getDOMNode().attributes['data-sample'].value
+                element.find('input').getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
         });
 
@@ -167,7 +166,7 @@ describe('<LocalizationEditor />', () => {
             );
 
             expect(
-                element.find('#controlButton').getDOMNode().attributes['data-sample'].value
+                element.find('button').getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
         });
 
@@ -184,7 +183,7 @@ describe('<LocalizationEditor />', () => {
             element.find('.fd-popover__control > div').simulate('click');
 
             expect(
-                element.find('nav > ul').getDOMNode().attributes['data-sample'].value
+                element.find('.fd-menu__list').getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
         });
 
@@ -202,7 +201,7 @@ describe('<LocalizationEditor />', () => {
 
             element.find('.fd-popover__control > div').simulate('click');
 
-            const listItems = element.find('nav > ul > li');
+            const listItems = element.find('.fd-menu__item');
 
             expect(listItems).toHaveLength(3);
             expect(

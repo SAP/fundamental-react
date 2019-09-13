@@ -2,7 +2,7 @@
 
 exports[`<FormSelect /> create form item 1`] = `
 <select
-  className="fd-form__control blue"
+  className="fd-form-select blue"
   disabled={true}
   id="select-1"
 >

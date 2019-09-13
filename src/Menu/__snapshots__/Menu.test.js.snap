@@ -9,7 +9,7 @@ exports[`<Menu /> create basic menu component 1`] = `
   >
     <li>
       <a
-        className="fd-menu__item"
+        className="fd-link fd-menu__item"
         href="/"
       >
         Option 1
@@ -17,7 +17,7 @@ exports[`<Menu /> create basic menu component 1`] = `
     </li>
     <li>
       <a
-        className="fd-menu__item fd-menu__link"
+        className="fd-link fd-menu__item"
         href="/"
       >
         Option 2
@@ -25,7 +25,7 @@ exports[`<Menu /> create basic menu component 1`] = `
     </li>
     <li>
       <a
-        className="fd-menu__item"
+        className="fd-link fd-menu__item"
         href="/"
       >
         Option 3
@@ -33,7 +33,7 @@ exports[`<Menu /> create basic menu component 1`] = `
     </li>
     <li>
       <a
-        className="fd-menu__item"
+        className="fd-link fd-menu__item"
         href="/"
       >
         Option 4
@@ -124,7 +124,7 @@ exports[`<Menu /> create menu group component 1`] = `
       className="blue"
     >
       <a
-        className="fd-menu__item fd-menu__link"
+        className="fd-menu__item"
         href="/"
         onClick={[Function]}
       >
@@ -231,7 +231,9 @@ exports[`<Menu /> create menu with separator component 1`] = `
   <ul
     className="fd-menu__list"
   >
-    <li>
+    <li
+      separator={true}
+    >
       <a
         className="fd-menu__item"
         href="/"
@@ -240,8 +242,9 @@ exports[`<Menu /> create menu with separator component 1`] = `
         Option 1
       </a>
     </li>
-    <hr />
-    <li>
+    <li
+      separator={true}
+    >
       <a
         className="fd-menu__item"
         href="/"
@@ -250,8 +253,9 @@ exports[`<Menu /> create menu with separator component 1`] = `
         Option 2
       </a>
     </li>
-    <hr />
-    <li>
+    <li
+      separator={true}
+    >
       <a
         className="fd-menu__item"
         href="/"
@@ -260,7 +264,6 @@ exports[`<Menu /> create menu with separator component 1`] = `
         Option 3
       </a>
     </li>
-    <hr />
     <li>
       <a
         className="fd-menu__item"

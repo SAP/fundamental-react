@@ -89,7 +89,7 @@ describe('<FormRadioGroup />', () => {
             });
 
             element
-                .find('input.fd-form__control[type="radio"]')
+                .find('input')
                 .at(0)
                 .simulate('change', { currentTarget: { value: 'radio-1' } });
 

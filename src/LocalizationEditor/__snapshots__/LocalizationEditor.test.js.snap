@@ -5,9 +5,10 @@ exports[`<LocalizationEditor /> create localization editor 1`] = `
   className="fd-localization-editor"
 >
   <label
-    className="fd-form__label"
+    className="fd-form-label"
   >
     Localization Editor Label
+    
   </label>
   <div
     className="fd-popover"
@@ -25,15 +26,15 @@ exports[`<LocalizationEditor /> create localization editor 1`] = `
           onClick={[Function]}
         >
           <input
-            className=""
+            className="fd-input"
             placeholder="Enter Label"
             type="text"
           />
           <span
-            className="fd-input-group__addon fd-input-group__addon--after fd-input-group__addon--button"
+            className="fd-input-group__addon fd-input-group__addon--button"
           >
             <button
-              className="fd-button--light fd-localization-editor__button"
+              className="fd-button--light"
             >
               EN*
             </button>
@@ -50,54 +51,10 @@ exports[`<LocalizationEditor /> create localization editor 2`] = `
   className="fd-localization-editor blue"
 >
   <label
-    className="fd-form__label"
+    className="fd-form-label"
   >
     Localization Editor Compact Mode
-  </label>
-  <div
-    className="fd-popover"
-  >
-    <div
-      onFocus={[Function]}
-      onMouseDown={[Function]}
-      onTouchStart={[Function]}
-    >
-      <div
-        className="fd-popover__control"
-      >
-        <div
-          className="fd-input-group fd-input-group--compact fd-input-group--after"
-          onClick={[Function]}
-        >
-          <input
-            className="fd-input fd-input--compact"
-            placeholder="Enter Label"
-            type="text"
-          />
-          <span
-            className="fd-input-group__addon fd-input-group__addon--after fd-input-group__addon--button"
-          >
-            <button
-              className="fd-button--light fd-localization-editor__button"
-            >
-              EN*
-            </button>
-          </span>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`<LocalizationEditor /> create localization editor 3`] = `
-<div
-  className="fd-localization-editor"
->
-  <label
-    className="fd-form__label"
-  >
-    Localization Editor Label
+    
   </label>
   <div
     className="fd-popover"
@@ -114,12 +71,60 @@ exports[`<LocalizationEditor /> create localization editor 3`] = `
           className="fd-input-group fd-input-group--after"
           onClick={[Function]}
         >
-          <textarea />
+          <input
+            className="fd-input fd-input--compact"
+            placeholder="Enter Label"
+            type="text"
+          />
           <span
-            className="fd-input-group__addon fd-input-group__addon--after fd-input-group__addon--button fd-input-group__addon--textarea"
+            className="fd-input-group__addon fd-input-group__addon--button"
           >
             <button
-              className="fd-button--light fd-localization-editor__button"
+              className="fd-button--light fd-button--compact"
+            >
+              EN*
+            </button>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<LocalizationEditor /> create localization editor 3`] = `
+<div
+  className="fd-localization-editor"
+>
+  <label
+    className="fd-form-label"
+  >
+    Localization Editor Label
+    
+  </label>
+  <div
+    className="fd-popover"
+  >
+    <div
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      onTouchStart={[Function]}
+    >
+      <div
+        className="fd-popover__control"
+      >
+        <div
+          className="fd-input-group fd-input-group--after"
+          onClick={[Function]}
+        >
+          <textarea
+            className="fd-textarea"
+          />
+          <span
+            className="fd-input-group__addon fd-input-group__addon--button"
+          >
+            <button
+              className="fd-button--light"
             >
               EN*
             </button>

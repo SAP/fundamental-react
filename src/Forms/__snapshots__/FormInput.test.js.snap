@@ -2,7 +2,7 @@
 
 exports[`<FormInput /> create form input item 1`] = `
 <input
-  className="fd-form__control is-warning"
+  className="fd-input is-warning"
   id="input-1"
   placeholder="Field placeholder text"
   type="text"

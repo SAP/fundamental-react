@@ -27,7 +27,7 @@ describe('<DatePicker />', () => {
         expect(wrapper.state('hidden')).toBeTruthy();
 
         wrapper
-            .find('button.fd-popover__control.fd-button--light.sap-icon--calendar')
+            .find('button.fd-button--light.sap-icon--calendar')
             .simulate('click', { type: 'input' });
 
         expect(wrapper.state('hidden')).toBeFalsy();
@@ -372,7 +372,7 @@ describe('<DatePicker />', () => {
             const blur = jest.fn();
             const element = mount(<DatePicker onBlur={blur} />);
 
-            element.find('button.fd-popover__control.fd-button--light.sap-icon--calendar').simulate('click', { type: 'input' });
+            element.find('button.fd-button--light.sap-icon--calendar').simulate('click', { type: 'input' });
 
             element.find('table.fd-calendar__table tbody.fd-calendar__group tr.fd-calendar__row td.fd-calendar__item:not(.fd-calendar__item--other-month)')
                 .at(0)
@@ -419,7 +419,7 @@ describe('<DatePicker />', () => {
             const element = mount(<DatePicker buttonProps={{ 'data-sample': 'Sample' }} />);
 
             expect(
-                element.find('button.fd-popover__control.fd-button--light.sap-icon--calendar').getDOMNode().attributes['data-sample'].value
+                element.find('button.fd-button--light.sap-icon--calendar').getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
         });
 

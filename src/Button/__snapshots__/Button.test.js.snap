@@ -57,19 +57,3 @@ exports[`<Button /> create buttons 7`] = `
   Disabled State
 </button>
 `;
-
-exports[`<Button /> create buttons 8`] = `
-<button
-  className="fd-button fd-dropdown__control"
->
-  Dropdown Button
-</button>
-`;
-
-exports[`<Button /> create buttons 9`] = `
-<button
-  className="fd-button fd-global-nav__btn"
->
-  Navbar button
-</button>
-`;

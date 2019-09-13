@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Image /> create image 1`] = `
+<a
+  className="fd-link blue"
+  photo="https://placeimg.com/400/400/nature"
+  size="s"
+/>
+`;
+
+exports[`<Image /> create image 2`] = `
+<a
+  className="fd-link"
+  photo="https://placeimg.com/400/400/nature"
+  size="m"
+  type="circle"
+/>
+`;

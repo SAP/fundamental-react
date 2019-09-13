@@ -40,16 +40,7 @@ describe('<InputGroup />', () => {
         <InputGroup compact inputType='number'
             inputValue={100} />
     );
-    const searchText = (
-        <InputGroup inputPlaceholder='Search Term' inputType='search' />
-    );
-    const searchTextCompact = (
-        <InputGroup
-            compact
-            inputPlaceholder='Search Term'
-            inputType='search'
-            inputValue='search me' />
-    );
+
     const inputWithIcon = (
         <InputGroup
             addonPos='before'
@@ -116,14 +107,6 @@ describe('<InputGroup />', () => {
             inputValue={100} />
     );
 
-    const searchInputWithCustomClassName = (
-        <InputGroup
-            className='custom-div-class-number'
-            inputClassName='custom-input-class-number'
-            inputPlaceholder='Search'
-            inputType='search' />
-    );
-
     const beforeInputWithCustomClassName = (
         <InputGroup
             addon='$'
@@ -175,16 +158,6 @@ describe('<InputGroup />', () => {
         tree = component.toJSON();
         expect(tree).toMatchSnapshot();
 
-        // create input search
-        component = renderer.create(searchText);
-        tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-
-        // create input search compact
-        component = renderer.create(searchTextCompact);
-        tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-
         // create input icon
         component = renderer.create(inputWithIcon);
         tree = component.toJSON();
@@ -225,11 +198,6 @@ describe('<InputGroup />', () => {
         tree = component.toJSON();
         expect(tree).toMatchSnapshot();
 
-        // search input with group custom class name
-        component = renderer.create(searchInputWithCustomClassName);
-        tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-
         // before-class input with group custom class name
         component = renderer.create(beforeInputWithCustomClassName);
         tree = component.toJSON();
@@ -259,24 +227,6 @@ describe('<InputGroup />', () => {
         expect(wrapper.state('value')).toEqual('hello');
     });
 
-    test('search input then clear button click', () => {
-        const wrapper = mount(searchText);
-
-        // enter text into search box
-        wrapper
-            .find('input[type="search"]')
-            .simulate('change', { target: { value: 'hello' } });
-
-        expect(wrapper.state('searchValue')).toEqual('hello');
-
-        // clear search box
-        wrapper
-            .find('.fd-input-group__button.fd-input-group__button--clear')
-            .simulate('click');
-
-        expect(wrapper.state('searchValue')).toEqual('');
-    });
-
     test('number input handle up and down', () => {
         const wrapper = mount(numberInput);
 
@@ -284,14 +234,14 @@ describe('<InputGroup />', () => {
         wrapper.setState({ value: 0 });
         wrapper
             .find(
-                'button.fd-input-group__button.fd-input-group__button--step-up.sap-icon--slim-arrow-up'
+                'button.fd-button--half.sap-icon--slim-arrow-up'
             )
             .simulate('click');
         expect(wrapper.state('value')).toEqual(1);
 
         wrapper
             .find(
-                'button.fd-input-group__button.fd-input-group__button--step-down.sap-icon--slim-arrow-down'
+                'button.fd-button--half.sap-icon--slim-arrow-down'
             )
             .simulate('click');
         expect(wrapper.state('value')).toEqual(0);
@@ -359,30 +309,6 @@ describe('<InputGroup />', () => {
 
             expect(
                 element.find('button.sap-icon--slim-arrow-down').getDOMNode().attributes['data-sample'].value
-            ).toBe('Sample');
-        });
-
-        test('should allow props to be spread to the InputGroup component for type search', () => {
-            const element = mount(<InputGroup data-sample='Sample' inputType='search' />);
-
-            expect(
-                element.getDOMNode().attributes['data-sample'].value
-            ).toBe('Sample');
-        });
-
-        test('should allow props to be spread to the InputGroup component for type search\'s input element', () => {
-            const element = mount(<InputGroup inputProps={{ 'data-sample': 'Sample' }} inputType='search' />);
-
-            expect(
-                element.find('input').getDOMNode().attributes['data-sample'].value
-            ).toBe('Sample');
-        });
-
-        test('should allow props to be spread to the InputGroup component for type search\'s button element', () => {
-            const element = mount(<InputGroup inputType='search' searchButtonProps={{ 'data-sample': 'Sample' }} />);
-
-            expect(
-                element.find('button').getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
         });
     });

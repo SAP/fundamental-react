@@ -16,7 +16,8 @@ exports[`<Dropdown /> create dropdown component 1`] = `
         className="fd-popover__control"
       >
         <button
-          className="fd-button fd-dropdown__control"
+          className="fd-button"
+          dropdown={true}
           onClick={[Function]}
         >
           Select
@@ -43,7 +44,8 @@ exports[`<Dropdown /> create dropdown component 2`] = `
         className="fd-popover__control"
       >
         <button
-          className="fd-button fd-dropdown__control fd-button--compact"
+          className="fd-button fd-button--compact"
+          dropdown={true}
           onClick={[Function]}
         >
           Select
@@ -70,7 +72,8 @@ exports[`<Dropdown /> create dropdown component 3`] = `
         className="fd-popover__control"
       >
         <button
-          className="fd-button fd-button--standard fd-dropdown__control"
+          className="fd-button"
+          dropdown={true}
           onClick={[Function]}
         >
           Select
@@ -98,7 +101,8 @@ exports[`<Dropdown /> create dropdown component 4`] = `
         className="fd-popover__control"
       >
         <button
-          className="fd-button fd-dropdown__control sap-icon--filter"
+          className="fd-button sap-icon--filter"
+          dropdown={true}
           onClick={[Function]}
         >
           Select
@@ -126,8 +130,9 @@ exports[`<Dropdown /> create dropdown component 5`] = `
         className="fd-popover__control"
       >
         <button
-          className="fd-button fd-dropdown__control sap-icon--filter is-disabled"
+          className="fd-button sap-icon--filter is-disabled"
           disabled={true}
+          dropdown={true}
           onClick={[Function]}
         >
           Select

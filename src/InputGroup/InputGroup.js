@@ -71,7 +71,6 @@ class InputGroup extends Component {
             localizedText,
             numberDownButtonProps,
             numberUpButtonProps,
-            searchButtonProps,
             ...props
         } = this.props;
 
@@ -215,8 +214,7 @@ InputGroup.propTypes = {
         up: PropTypes.string
     }),
     numberDownButtonProps: PropTypes.object,
-    numberUpButtonProps: PropTypes.object,
-    searchButtonProps: PropTypes.object
+    numberUpButtonProps: PropTypes.object
 };
 
 InputGroup.defaultProps = {
@@ -246,8 +244,7 @@ InputGroup.propDescriptions = {
         up: 'Value for aria-label on the up <button> element.'
     },
     numberDownButtonProps: 'Additional props to be spread to the down `<button>` element (for inputType=\'number\').',
-    numberUpButtonProps: 'Additional props to be spread to the up `<button>` element (for inputType=\'number\').',
-    searchButtonProps: 'Additional props to be spread to the `<button>` element.'
+    numberUpButtonProps: 'Additional props to be spread to the up `<button>` element (for inputType=\'number\').'
 };
 
 export default InputGroup;

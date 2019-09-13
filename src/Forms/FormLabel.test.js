@@ -16,6 +16,16 @@ describe('<FormLabel />', () => {
         expect(tree).toMatchSnapshot();
     });
 
+    describe('rendering', () => {
+        test('should add is-disabled class when disabled', () => {
+            const element = mount(<FormLabel disabled />);
+
+            expect(
+                element.find('label').hasClass('is-disabled')
+            ).toBe(true);
+        });
+    });
+
     describe('Prop spreading', () => {
         test('should allow props to be spread to the FormLabel component', () => {
             const element = mount(<FormLabel data-sample='Sample' />);

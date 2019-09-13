@@ -57,7 +57,7 @@ describe('<FormRadioItem />', () => {
                 inline: true
             });
 
-            expect(element.find('div').hasClass('fd-form__item--inline')).toBe(true);
+            expect(element.find('div').hasClass('fd-form-item--inline')).toBe(true);
         });
 
         test('should trigger onChange FormRadioItem is clicked', () => {
@@ -67,7 +67,7 @@ describe('<FormRadioItem />', () => {
             });
 
             element
-                .find('input.fd-form__control[type="radio"]')
+                .find('input')
                 .at(0)
                 .simulate('change', { currentTarget: { value: 'radio-1' } });
 

@@ -212,22 +212,22 @@ describe('<TimePicker />', () => {
                 showSecond />
         );
 
-        wrapper.find('.fd-popover__control').at(1).simulate('click');
+        wrapper.find('button').simulate('click');
 
         wrapper
-            .find('input[type="text"]')
+            .find('.fd-input')
             .at(1)
             .simulate('change', { target: { value: fullTime.hour } });
         expect(wrapper.state('time').hour).toEqual(fullTime.hour);
 
         wrapper
-            .find('input[type="text"]')
+            .find('.fd-input')
             .at(2)
             .simulate('change', { target: { value: fullTime.minute } });
         expect(wrapper.state('time').minute).toEqual(fullTime.minute);
 
         wrapper
-            .find('input[type="text"]')
+            .find('.fd-input')
             .at(3)
             .simulate('change', { target: { value: fullTime.second } });
         expect(wrapper.state('time').second).toEqual(fullTime.second);
@@ -277,18 +277,18 @@ describe('<TimePicker />', () => {
         test('should allow props to be spread to the TimePicker component\'s Time component', () => {
             const element = mount(<TimePicker id='id' timeProps={{ 'data-sample': 'Sample' }} />);
 
-            element.find('.fd-popover__control').at(1).simulate('click');
+            element.find('button').simulate('click');
 
             expect(
-                element.find('div.fd-popover__popper div.fd-time').getDOMNode().attributes['data-sample'].value
+                element.find('.fd-time').getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
         });
 
         test('should allow props to be spread to the TimePicker component\'s Popover component', () => {
             const element = mount(<TimePicker id='testId' popoverProps={{ 'data-sample': 'Sample' }} />);
-
+            element.find('button').simulate('click');
             expect(
-                element.find('div.fd-popover').at(1).getDOMNode().attributes['data-sample'].value
+                element.find('div.fd-popover').getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
         });
     });

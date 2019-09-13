@@ -7,7 +7,7 @@ describe('TimePicker Item', () => {
         const element = mount(<TimePicker id='id' inputProps={{ 'data-sample': 'Sample' }} />);
 
         expect(
-            element.find('#id-input').getDOMNode().attributes['data-sample'].value
+            element.find('.fd-input').getDOMNode().attributes['data-sample'].value
         ).toBe('Sample');
     });
 
@@ -15,7 +15,7 @@ describe('TimePicker Item', () => {
         const element = mount(<TimePicker buttonProps={{ 'data-sample': 'Sample' }} id='id' />);
 
         expect(
-            element.find('#id-button').getDOMNode().attributes['data-sample'].value
+            element.find('button').getDOMNode().attributes['data-sample'].value
         ).toBe('Sample');
     });
 });

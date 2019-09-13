@@ -12,17 +12,21 @@ exports[`<Alert /> create basic alert 1`] = `
       className="fd-alert__close"
       onClick={[Function]}
     />
-    Default alert with a
-    <a
-      className="fd-link"
-      href="#"
+    <div
+      className="fd-alert__text"
     >
-      link
-       
-      <span
-        className="sap-icon--arrow-right sap-icon--s"
-      />
-    </a>
+      Default alert with a
+      <a
+        className="fd-link"
+        href="#"
+      >
+        link
+         
+        <span
+          className="sap-icon--arrow-right sap-icon--s"
+        />
+      </a>
+    </div>
   </div>
 </div>
 `;
@@ -39,7 +43,11 @@ exports[`<Alert /> create basic alert 2`] = `
       className="fd-alert__close"
       onClick={[Function]}
     />
-    Error message with a
+    <div
+      className="fd-alert__text"
+    >
+      Error message with a
+    </div>
   </div>
 </div>
 `;
@@ -50,17 +58,21 @@ exports[`<Alert /> create non-dismissible alert 1`] = `
     className="fd-alert blue"
     role="alert"
   >
-    Default alert that cannot be dismissed
-    <a
-      className="fd-link"
-      href="#"
+    <div
+      className="fd-alert__text"
     >
-      link
-       
-      <span
-        className="sap-icon--arrow-right sap-icon--s"
-      />
-    </a>
+      Default alert that cannot be dismissed
+      <a
+        className="fd-link"
+        href="#"
+      >
+        link
+         
+        <span
+          className="sap-icon--arrow-right sap-icon--s"
+        />
+      </a>
+    </div>
   </div>
 </div>
 `;
