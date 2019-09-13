@@ -9,7 +9,7 @@ const isComponentDirectory = (source) => {
 };
 
 const isComponentFile = (source) => {
-    const ignoredFiles = ['test', 'Component', 'index', 'snapshots', 'example'];
+    const ignoredFiles = ['test', 'Component', 'index', 'snapshots'];
     return !ignoredFiles.some(ignored => source.includes(ignored));
 };
 

@@ -17,6 +17,7 @@ import { IconComponent } from '../Icon/Icon.Component';
 import { IdentifierComponent } from '../Identifier/Identifier.Component';
 import { ImageComponent } from '../Image/Image.Component';
 import { InlineHelpComponent } from '../InlineHelp/InlineHelp.Component';
+import InputGroup from '../InputGroup/InputGroup';
 import { InputGroupComponent } from '../InputGroup/InputGroup.Component';
 import { LinkComponent } from '../Link/Link.Component';
 import { ListGroupComponent } from '../ListGroup/ListGroup.Component';
@@ -29,7 +30,6 @@ import { PanelComponent } from '../Panel/Panel.Component';
 import { PopoverComponent } from '../Popover/Popover.Component';
 import RouteNotFound from './_RouteNotFound';
 import ScrollToTop from './_ScrollToTop';
-import SearchInput from '../SearchInput/SearchInput';
 import { SearchInputComponent } from '../SearchInput/SearchInput.Component';
 import { ShellbarComponent } from '../Shellbar/Shellbar.Component';
 import { SideNav } from '../SideNavigation/';
@@ -49,11 +49,11 @@ import React, { Component } from 'react';
 
 const sections = [
     {
-        text: 'Getting Started',
+        name: 'Getting Started',
         sortOrder: 1
     },
     {
-        text: 'Components',
+        name: 'Components',
         sortOrder: 2
     }
 ];
@@ -61,7 +61,7 @@ const sections = [
 const routes = [
     {
         url: '/home',
-        text: 'Home',
+        name: 'Home',
         component: Home,
         section: 'Getting Started',
         sortOrder: 1, // this one should always come first
@@ -69,217 +69,217 @@ const routes = [
     },
     {
         url: '/actionBar',
-        text: 'Action Bar',
+        name: 'Action Bar',
         component: ActionBarComponent,
         section: 'Components'
     },
     {
         url: '/alert',
-        text: 'Alert',
+        name: 'Alert',
         component: AlertComponent,
         section: 'Components'
     },
     {
         url: '/breadcrumb',
-        text: 'Breadcrumb',
+        name: 'Breadcrumb',
         component: BreadcrumbComponent,
         section: 'Components'
     },
     {
         url: '/button',
-        text: 'Button',
+        name: 'Button',
         component: ButtonComponent,
         section: 'Components'
     },
     {
         url: '/calendar',
-        text: 'Calendar',
+        name: 'Calendar',
         component: CalendarComponent,
         section: 'Components'
     },
     {
         url: '/comboboxInput',
-        text: 'Combobox Input',
+        name: 'Combobox Input',
         component: ComboboxInputComponent,
         section: 'Components'
     },
     {
         url: '/contextualMenu',
-        text: 'Contextual Menu',
+        name: 'Contextual Menu',
         component: ContextualMenuComponent,
         section: 'Components'
     },
     {
         url: '/datepicker',
-        text: 'Date Picker',
+        name: 'Date Picker',
         component: DatePickerComponent,
         section: 'Components'
     },
     {
         url: '/dropdown',
-        text: 'Dropdown',
+        name: 'Dropdown',
         component: DropdownComponent,
         section: 'Components'
     },
     {
         url: '/forms',
-        text: 'Forms',
+        name: 'Forms',
         component: FormsComponent,
         section: 'Components'
     },
     {
         url: '/icon',
-        text: 'Icon',
+        name: 'Icon',
         component: IconComponent,
         section: 'Components'
     },
     {
         url: '/identifier',
-        text: 'Identifier',
+        name: 'Identifier',
         component: IdentifierComponent,
         section: 'Components'
     },
     {
         url: '/image',
-        text: 'Image',
+        name: 'Image',
         component: ImageComponent,
         section: 'Components'
     },
     {
         url: '/inlineHelp',
-        text: 'Inline Help',
+        name: 'Inline Help',
         component: InlineHelpComponent,
         section: 'Components'
     },
     {
         url: '/inputGroup',
-        text: 'Input Group',
+        name: 'Input Group',
         component: InputGroupComponent,
         section: 'Components'
     },
     {
         url: '/link',
-        text: 'Link',
+        name: 'Link',
         component: LinkComponent,
         section: 'Components'
     },
     {
         url: '/listGroup',
-        text: 'List Group',
+        name: 'List Group',
         component: ListGroupComponent,
         section: 'Components'
     },
     {
         url: '/localizationEditor',
-        text: 'Localization Editor',
+        name: 'Localization Editor',
         component: LocalizationEditorComponent,
         section: 'Components'
     },
     {
         url: '/menu',
-        text: 'Menu',
+        name: 'Menu',
         component: MenuComponent,
         section: 'Components'
     },
     {
         url: '/modal',
-        text: 'Modal',
+        name: 'Modal',
         component: ModalComponent,
         section: 'Components'
     },
     {
         url: '/multiInput',
-        text: 'Multi Input',
+        name: 'Multi Input',
         component: MultiInputComponent,
         section: 'Components'
     },
     {
         url: '/pagination',
-        text: 'Pagination',
+        name: 'Pagination',
         component: PaginationComponent,
         section: 'Components'
     },
     {
         url: '/panel',
-        text: 'Panel',
+        name: 'Panel',
         component: PanelComponent,
         section: 'Components'
     },
     {
         url: '/popover',
-        text: 'Popover',
+        name: 'Popover',
         component: PopoverComponent,
         section: 'Components'
     },
     {
         url: '/searchInput',
-        text: 'Search Input',
+        name: 'Search Input',
         component: SearchInputComponent,
         section: 'Components'
     },
     {
         url: '/shellbar',
-        text: 'Shellbar',
+        name: 'Shellbar',
         component: ShellbarComponent,
         section: 'Components'
     },
     {
         url: '/sideNavigation',
-        text: 'Side Navigation',
+        name: 'Side Navigation',
         component: SideNavigationComponent,
         section: 'Components'
     },
     {
         url: '/statusIndicators',
-        text: 'Status Indicators',
+        name: 'Status Indicators',
         component: BadgeComponent,
         section: 'Components'
     },
     {
         url: '/table',
-        text: 'Table',
+        name: 'Table',
         component: TableComponent,
         section: 'Components'
     },
     {
         url: '/tabs',
-        text: 'Tab Group',
+        name: 'Tab Group',
         component: TabsComponent,
         section: 'Components'
     },
     {
         url: '/tile',
-        text: 'Tile',
+        name: 'Tile',
         component: TileComponent,
         section: 'Components'
     },
     {
         url: '/time',
-        text: 'Time',
+        name: 'Time',
         component: TimeComponent,
         section: 'Components'
     },
     {
         url: '/timepicker',
-        text: 'Time Picker',
+        name: 'Time Picker',
         component: TimePickerComponent,
         section: 'Components'
     },
     {
         url: '/toggle',
-        text: 'Toggle',
+        name: 'Toggle',
         component: ToggleComponent,
         section: 'Components'
     },
     {
         url: '/token',
-        text: 'Token',
+        name: 'Token',
         component: TokenComponent,
         section: 'Components'
     },
     {
         url: '/treeview',
-        text: 'Tree View',
+        name: 'Tree View',
         component: TreeViewComponent,
         section: 'Components'
     }
@@ -289,21 +289,20 @@ export class Routes extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            query: '',
             filteredItems: routes,
             showSideNav: false, //for css media queries, default is invisible-'false'
             currentPage: 'Home'
         };
     }
 
-    getSearchList = () => {
-        return routes.filter((navItem) => {
-            return navItem.omitSearch ? navItem : navItem.text.toLowerCase();
+    onChangeHandler = (event) => {
+        let searchResults = routes.filter((navItem) => {
+            return navItem.omitSearch ? navItem : navItem.name.toLowerCase().includes(event.target.value.toLowerCase());
         });
-    }
-
-    onChangeHandler = (event, results) => {
         this.setState({
-            filteredItems: [...results]
+            query: event.target.value,
+            filteredItems: [...searchResults]
         });
     };
 
@@ -329,23 +328,23 @@ export class Routes extends Component {
         let sectionRoutes;
         const groupedRoutes = groupArray(this.state.filteredItems, 'section');
 
-        let navItems = sections.sort(sortBy('sortOrder', 'text')).map(section => {
-            if (!groupedRoutes[section.text]) {
+        let navItems = sections.sort(sortBy('sortOrder', 'name')).map(section => {
+            if (!groupedRoutes[section.name]) {
                 return;
             }
 
-            sectionRoutes = groupedRoutes[section.text].sort(sortBy('sortOrder', 'text'));
+            sectionRoutes = groupedRoutes[section.name].sort(sortBy('sortOrder', 'name'));
             return (
-                <SideNav.List key={section.text} title={section.text}>
+                <SideNav.List key={section.name} title={section.name}>
                     {sectionRoutes.map(route => (
                         <SideNav.ListItem
-                            id={route.text}
-                            key={route.text}
+                            id={route.name}
+                            key={route.name}
                             onClick={this.resetNavState}>
                             <NavLink
-                                key={route.text}
+                                key={route.name}
                                 to={{ pathname: route.url }}>
-                                {route.text}
+                                {route.name}
                             </NavLink>
                         </SideNav.ListItem>
                     ))}
@@ -373,7 +372,8 @@ export class Routes extends Component {
                                 glyph='menu2'
                                 id='navToggle'
                                 onClick={this.toggleNavVis}
-                                option='light' />
+                                option='light'
+                                type='standard' />
                             <a
                                 aria-label='Home'
                                 className='frDocs-Menu__logo'
@@ -393,12 +393,12 @@ export class Routes extends Component {
                         </header>
                         <div className={sideBarClasses}>
                             <div className='frDocs-Search'>
-                                <SearchInput
-                                    disablePopover
-                                    inputProps={{ ariaLabel: 'Search' }}
-                                    onChange={this.onChangeHandler}
-                                    placeholder='Search'
-                                    searchList={this.getSearchList()} />
+                                <InputGroup
+                                    inputPlaceholder='Search'
+                                    inputProps={{ 'aria-label': 'Search' }}
+                                    inputType='search'
+                                    inputValue={this.state.query}
+                                    onChange={this.onChangeHandler} />
                             </div>
                             <SideNav onItemSelect={this.updateCurrentPage} selectedId={this.state.currentPage}>
                                 {navItems}
