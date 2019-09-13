@@ -394,9 +394,9 @@ export class Routes extends Component {
                         <div className={sideBarClasses}>
                             <div className='frDocs-Search'>
                                 <InputGroup
+                                    glyph='search'
                                     inputPlaceholder='Search'
                                     inputProps={{ 'aria-label': 'Search' }}
-                                    inputType='search'
                                     inputValue={this.state.query}
                                     onChange={this.onChangeHandler} />
                             </div>
