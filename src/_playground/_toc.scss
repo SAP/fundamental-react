@@ -4,6 +4,7 @@
 
 // table of contents (tocbot) overrides
 .toc {
+    box-sizing: border-box;
     > .toc-list {
         padding-left: 0;
     }
@@ -26,6 +27,10 @@ a.toc-link {
     &:focus {
         color: #085CAF;
     }
+}
+
+.is-active-link {
+    font-weight: 400;
 }
 
 @media (min-width: $breakpoint-md) {
@@ -64,5 +69,28 @@ a.toc-link {
         &:focus {
             color: #32363A;
         }
+    }
+
+    .is-active-link {
+        font-weight: 700;
+
+        &:before {
+            background-color: $library-color;
+        }
+    }
+
+    #toc-separator {
+        display: none;
+    }
+
+    .toc-heading {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0,0,0,0);
+        border: 0;
     }
 }

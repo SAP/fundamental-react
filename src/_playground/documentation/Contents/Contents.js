@@ -8,8 +8,8 @@ const Contents = ({ className }) => {
 
     return (
         <React.Fragment>
-            <Separator id='contents-separator' />
-            <h2 className='heading__contents'>Contents</h2>
+            <Separator id='toc-separator' />
+            <h2 className='toc-heading'>Contents</h2>
             <nav className={classes} />
         </React.Fragment>
     );

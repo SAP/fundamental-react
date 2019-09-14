@@ -1,25 +1,39 @@
 //@import '~fundamental-styles/dist/fonts.css'; uncomment once fs is publishing this
 @import '~fundamental-styles/dist/helpers.css';
-
 @import '_variables.scss';
-@import '_toc.scss';
+
+@import '_markdown.scss';
 @import '_menu.scss';
+@import '_properties.scss';
 @import '_sidebar.scss';
+@import '_toc.scss';
 
-body, html {
-    padding: 0;
+body {
     margin: 0;
-    box-sizing: border-box;
-}
-
-*, :after, :before {
-    box-sizing: inherit;
-}
-
-// Fundamental React Docs Styles
-.frDocs-App {
     background-color: white;
     font-family: '72', sans-serif;
+}
+
+// used to keep headings in view with the fixed header
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    &:target {
+        &:before {
+            display: block;
+            content: ' ';
+            height: $menu-height + 25px;
+            margin-top: -$menu-height + 25px;
+            visibility: hidden;
+        }
+    }
+
+    &:focus {
+        outline: 0;
+    }
 }
 
 .frDocs-Container {
@@ -39,6 +53,7 @@ body, html {
 }
 
 .frDocs-Content {
+    box-sizing: border-box;
     flex-grow: 1;
     overflow-y: scroll;
     background-color: white;
@@ -141,124 +156,12 @@ body, html {
     }
 }
 
-.frDocs-markdown {
-    ol,
-    ul {
-        padding-left: 2rem;
-    }
-
-    pre {
-        margin: 25px 0;
-        background-color: #fff !important;
-        white-space: pre-wrap;
-        white-space: -moz-pre-wrap;
-        white-space: -pre-wrap;
-        white-space: -o-pre-wrap;
-        word-wrap: break-word;
-        display: flex;
-        padding: 1rem;
-        font-size: 13px;
-        line-height: 1.42857143;
-        color: #333;
-        word-break: break-all;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-
-        code {
-            display: block;
-        }
-    }
-}
-
-.frDocs-Properties__shape {
-    margin: 0 50px 30px;
-}
-
-// used to keep headings in view with the fixed header
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    &:target {
-        &:before {
-            display: block;
-            content: ' ';
-            height: $menu-height + 25px;
-            margin-top: -$menu-height + 25px;
-            visibility: hidden;
-        }
-    }
-
-    &:focus {
-        outline: 0;
-    }
-}
-
 .demo-icon-wrapper {
     padding: 10px;
     float: left;
     width: 16%;
     text-align: center;
     height: 120px;
-}
-
-//Prop table styles
-.fd-table {
-
-    &.property-table {
-        border: 0;
-
-        thead {
-            background: transparent;
-        }
-
-        tbody {
-            >tr {
-                >td {
-                    &:first-child {
-                        font-weight: bold;
-                    }
-                }
-            }
-        }
-
-        thead,
-        tbody {
-            >tr {
-                vertical-align: top;
-
-                >th,
-                >td {
-                    width: 20%;
-                    padding-top: 4px;
-                    padding-bottom: 4px;
-
-                    &:first-child {
-                        padding-left: 0;
-                    }
-
-                    &:last-child {
-                        width: 40%;
-                        padding-right: 0;
-                    }
-                }
-            }
-        }
-
-        .prop-required {
-            color: var(--fd-color-status-3, #b00);
-        }
-    }
-}
-
-.is-active-link {
-    font-weight: 400;
-}
-
-.node-name--H2 {
-    font-size: 1.2rem;
 }
 
 .screen-reader-only--focusable {
@@ -284,29 +187,6 @@ h6 {
 }
 
 @media (min-width: $breakpoint-md) {
-    #contents-separator {
-        display: none;
-    }
-
-    .heading__contents {
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        padding: 0;
-        margin: -1px;
-        overflow: hidden;
-        clip: rect(0,0,0,0);
-        border: 0;
-    }
-
-    .is-active-link {
-        font-weight: 700;
-
-        &:before {
-            background-color: $library-color;
-        }
-    }
-
     .frDocs-Content {
         padding-right: 225px;
         padding-bottom: 1000px;
