@@ -1,6 +1,12 @@
-/node-modules
-/scripts
-/src
-/config
-/ci-scripts
-.github
+ __mocks__
+.*
+assets
+babel.config.js 
+ci-scripts
+config
+devtools
+netlify.toml 
+node-modules
+public
+scripts
+src
