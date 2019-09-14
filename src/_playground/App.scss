@@ -1,16 +1,20 @@
-$breakpoint-lg: 1280px;
-$breakpoint-md: 1024px;
-$breakpoint-sm: 600px;
-@import '~tocbot/src/scss/tocbot-core';
-@import '~tocbot/src/scss/tocbot-default-theme';
 //@import '~fundamental-styles/dist/fonts.css'; uncomment once fs is publishing this
 @import '~fundamental-styles/dist/helpers.css';
 
-$shell-color: #354A5F;
-$library-color: #61dafb;
-$menu-height: 50px;
-$nav-width: 265px;
-$menu-spacing: 20px;
+@import '_variables.scss';
+@import '_toc.scss';
+@import '_menu.scss';
+@import '_sidebar.scss';
+
+body, html {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+*, :after, :before {
+    box-sizing: inherit;
+}
 
 // Fundamental React Docs Styles
 .frDocs-App {
@@ -24,89 +28,6 @@ $menu-spacing: 20px;
     height: 100vh;
     overflow: hidden;
     width: 100%;
-}
-
-.frDocs-Menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: $shell-color;
-    color: #fff;
-    padding: 8px $menu-spacing;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-    z-index: 10;
-
-    &__logo {
-        flex: 0 0 auto;
-        font-size: 20px;
-        line-height: 1.5;
-        font-weight: 700;
-        margin: 0;
-        color: #fff;
-        text-decoration: none;
-
-        &:hover,
-        &:focus {
-            color: #fff;
-        }
-
-        &--library {
-            color: $library-color;
-        }
-    }
-
-    &__spacer {
-        flex: 1 1 auto;
-    }
-
-    &__version {
-        flex: 0 0 auto;
-        margin-left: $menu-spacing;
-        font-size: 1.2rem;
-        display: none;
-    }
-
-    &__githubLogo {
-        flex: 0 0 auto;
-        width: 2rem;
-        height: 2rem;
-        font-size: 1rem;
-        display: block;
-        margin-left: $menu-spacing;
-
-        svg {
-            width: 2rem;
-            height: 2rem;
-        }
-    }
-}
-
-.frDocs-Sidebar {
-    padding-top: $menu-height;
-    color: #21262c;
-    min-width: $nav-width;
-    width: $nav-width;
-    background-color: #EDEFF0;
-    display: flex;
-    flex-direction: column;
-    transition: 0.3s margin ease-in-out, 0.3s box-shadow ease-in-out;
-}
-
-.frDocs-Sidebar--isHidable {
-    margin-left: -$nav-width;
-    overflow-x: hidden;
-}
-
-@media (min-width: $breakpoint-lg) {
-    .frDocs-Sidebar--isHidable {
-        margin-left: 0;
-        overflow-x: auto;
-    }
 }
 
 .frDocs-Search {
@@ -332,32 +253,6 @@ h6 {
     }
 }
 
-// table of contents (tocbot) overrides
-.toc {
-    > .toc-list {
-        padding-left: 0;
-    }
-}
-
-.toc-link {
-    margin: 2px 0;
-    padding-left: 15px;
-    text-indent: -15px;
-
-    &:before {
-        width: 0;
-    }
-}
-
-a.toc-link {
-    color: #0A6ED1;
-
-    &:hover,
-    &:focus {
-        color: #085CAF;
-    }
-}
-
 .is-active-link {
     font-weight: 400;
 }
@@ -404,43 +299,6 @@ a.toc-link {
         border: 0;
     }
 
-    .toc {
-        width: 225px;
-        position: fixed;
-        top: 0;
-        right: 0;
-        padding: 25px + $menu-height 25px 25px;
-        height: 100%;
-        font-size: 14px;
-
-        > .toc-list {
-            padding-left: 14px;
-            &:last-child {
-                margin-bottom: 0;
-            }
-        }
-    }
-
-    .toc-link {
-        display: inline-block;
-        margin: 4px 0;
-        text-decoration: none;
-        transition: all 0.125s ease-in;
-
-        &:before {
-            width: 4px;
-        }
-    }
-
-    a.toc-link {
-        color: #32363A;
-
-        &:hover,
-        &:focus {
-            color: #32363A;
-        }
-    }
-
     .is-active-link {
         font-weight: 700;
 
@@ -450,19 +308,7 @@ a.toc-link {
     }
 
     .frDocs-Content {
-        padding-right: 250px;
+        padding-right: 225px;
         padding-bottom: 1000px;
-    }
-}
-
-@media (min-width: $breakpoint-sm) {
-    .frDocs-Menu {
-        &__logo {
-            font-size: 24px;
-        }
-
-        &__version {
-            display: block;
-        }
     }
 }

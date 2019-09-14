@@ -1,0 +1,68 @@
+@import '_variables.scss';
+@import '~tocbot/src/scss/tocbot-core';
+@import '~tocbot/src/scss/tocbot-default-theme';
+
+// table of contents (tocbot) overrides
+.toc {
+    > .toc-list {
+        padding-left: 0;
+    }
+}
+
+.toc-link {
+    margin: 2px 0;
+    padding-left: 15px;
+    text-indent: -15px;
+
+    &:before {
+        width: 0;
+    }
+}
+
+a.toc-link {
+    color: #0A6ED1;
+
+    &:hover,
+    &:focus {
+        color: #085CAF;
+    }
+}
+
+@media (min-width: $breakpoint-md) {
+    .toc {
+        width: 225px;
+        position: fixed;
+        top: 0;
+        right: 0;
+        padding: 25px + $menu-height 25px 25px;
+        height: 100%;
+        font-size: 14px;
+
+        > .toc-list {
+            padding-left: 14px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .toc-link {
+        display: inline-block;
+        margin: 4px 0;
+        text-decoration: none;
+        transition: all 0.125s ease-in;
+
+        &:before {
+            width: 4px;
+        }
+    }
+
+    a.toc-link {
+        color: #32363A;
+
+        &:hover,
+        &:focus {
+            color: #32363A;
+        }
+    }
+}
