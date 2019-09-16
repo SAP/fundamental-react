@@ -2,6 +2,51 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.7.0-rc.61"></a>
+# [0.7.0-rc.61](https://github.com/SAP/fundamental-react/compare/v0.7.0-rc.60...v0.7.0-rc.61) (2019-09-16)
+
+
+### Bug Fixes
+
+* remove react-inline-elements transform ([#741](https://github.com/SAP/fundamental-react/issues/741)) ([cdd802f](https://github.com/SAP/fundamental-react/commit/cdd802f))
+
+
+
+<a name="0.7.0-rc.60"></a>
+# [0.7.0-rc.60](https://github.com/SAP/fundamental-react/compare/v0.7.0-rc.59...v0.7.0-rc.60) (2019-09-14)
+
+
+
+<a name="0.7.0-rc.59"></a>
+# [0.7.0-rc.59](https://github.com/SAP/fundamental-react/compare/v0.7.0-rc.58...v0.7.0-rc.59) (2019-09-09)
+
+
+
+<a name="0.7.0-rc.58"></a>
+# [0.7.0-rc.58](https://github.com/SAP/fundamental-react/compare/v0.7.0-rc.57...v0.7.0-rc.58) (2019-09-09)
+
+
+
+<a name="0.7.0-rc.57"></a>
+# [0.7.0-rc.57](https://github.com/SAP/fundamental-react/compare/v0.7.0-rc.56...v0.7.0-rc.57) (2019-09-09)
+
+
+
+<a name="0.7.0-rc.56"></a>
+# [0.7.0-rc.56](https://github.com/SAP/fundamental-react/compare/v0.7.0-rc.55...v0.7.0-rc.56) (2019-09-09)
+
+
+
+<a name="0.7.0-rc.55"></a>
+# [0.7.0-rc.55](https://github.com/SAP/fundamental-react/compare/v0.7.0-rc.54...v0.7.0-rc.55) (2019-09-09)
+
+
+
+<a name="0.7.0-rc.54"></a>
+# [0.7.0-rc.54](https://github.com/SAP/fundamental-react/compare/v0.7.0-rc.53...v0.7.0-rc.54) (2019-09-08)
+
+
+
 <a name="0.7.0-rc.53"></a>
 # [0.7.0-rc.53](https://github.com/SAP/fundamental-react/compare/v0.7.0-rc.52...v0.7.0-rc.53) (2019-09-02)
 
