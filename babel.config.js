@@ -23,9 +23,6 @@ const productionPlugins = [
             mode: 'unsafe-wrap'
         }
     ],
-    [
-        '@babel/plugin-transform-react-inline-elements'
-    ],
     path.resolve(__dirname, './devtools/removePropDescriptions.js')
 ];
 
