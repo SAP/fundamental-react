@@ -81,13 +81,18 @@ class InputGroup extends Component {
                     'fd-input-group'
                 );
 
+                const inputNumberClasses = classnames(
+                    inputClassName,
+                    'fd-input--no-number-spinner'
+                );
+
                 return (
                     <div
                         {...props}
                         className={inputGroupNumberClasses}>
                         <FormInput
                             {...inputProps}
-                            className={inputClassName}
+                            className={inputNumberClasses}
                             compact={compact}
                             id={inputId}
                             name={inputName}
