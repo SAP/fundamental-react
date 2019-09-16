@@ -48,13 +48,5 @@ describe('<ActionBar />', () => {
                 element.getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
         });
-
-        test('should allow props to be spread to the ActionBar component for mobile', () => {
-            const element = mount(<ActionBar data-sample='Sample' mobile />);
-
-            expect(
-                element.getDOMNode().attributes['data-sample'].value
-            ).toBe('Sample');
-        });
     });
 });

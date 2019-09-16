@@ -20,7 +20,7 @@ exports[`<SearchInput /> create SearchInput 1`] = `
           onClick={[Function]}
         >
           <input
-            className="fd-input"
+            className="fd-input fd-input-group__input"
             onChange={[Function]}
             onClick={[Function]}
             onKeyPress={[Function]}
@@ -61,7 +61,7 @@ exports[`<SearchInput /> create SearchInput 2`] = `
           onClick={[Function]}
         >
           <input
-            className="fd-input"
+            className="fd-input fd-input-group__input"
             onChange={[Function]}
             onClick={[Function]}
             onKeyPress={[Function]}
@@ -102,7 +102,7 @@ exports[`<SearchInput /> create SearchInput 3`] = `
           onClick={[Function]}
         >
           <input
-            className="fd-input"
+            className="fd-input fd-input-group__input"
             onChange={[Function]}
             onClick={[Function]}
             onKeyPress={[Function]}
@@ -143,7 +143,7 @@ exports[`<SearchInput /> create SearchInput 4`] = `
           onClick={[Function]}
         >
           <input
-            className="fd-input"
+            className="fd-input fd-input-group__input"
             onChange={[Function]}
             onClick={[Function]}
             onKeyPress={[Function]}
