@@ -131,7 +131,6 @@ export class ModalComponent extends Component {
                                     <FormLabel required>Email</FormLabel>
                                     <FormInput
                                         onChange={this.updateEmailAddress}
-                                        ref={this.txtEmailRef}
                                         value={this.state.emailAddress} />
                                 </FormItem>
                             </FormSet>

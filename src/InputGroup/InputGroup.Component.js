@@ -72,7 +72,7 @@ export const InputGroupComponent = () => {
                     <FormGroup>
                         <FormLabel>Right Aligned Text Addon</FormLabel>
                         <FormItem>
-                            <InputGroup inputType='number' inputValue='100' />
+                            <InputGroup inputType='number' inputValue={100} />
                         </FormItem>
                     </FormGroup>
 
@@ -83,7 +83,7 @@ export const InputGroupComponent = () => {
                         <FormLabel>Right Aligned Text Addon</FormLabel>
                         <FormItem>
                             <InputGroup compact inputType='number'
-                                inputValue='100' />
+                                inputValue={100} />
                         </FormItem>
                     </FormGroup>
                 </div>

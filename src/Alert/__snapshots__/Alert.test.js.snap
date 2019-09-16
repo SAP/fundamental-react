@@ -22,9 +22,6 @@ exports[`<Alert /> create basic alert 1`] = `
       >
         link
          
-        <span
-          className="sap-icon--arrow-right sap-icon--s"
-        />
       </a>
     </div>
   </div>
@@ -46,6 +43,9 @@ exports[`<Alert /> create basic alert 2`] = `
     <div
       className="fd-alert__text"
     >
+      <span
+        className="sap-icon--mesage-error"
+      />
       Error message with a
     </div>
   </div>
@@ -68,9 +68,6 @@ exports[`<Alert /> create non-dismissible alert 1`] = `
       >
         link
          
-        <span
-          className="sap-icon--arrow-right sap-icon--s"
-        />
       </a>
     </div>
   </div>

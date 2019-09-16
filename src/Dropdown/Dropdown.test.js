@@ -22,7 +22,7 @@ describe('<Dropdown />', () => {
         <Dropdown>
             <Popover
                 body={defaultMenu}
-                control={<Button dropdown>Select</Button>}
+                control={<Button className='fd-dropdown__control'>Select</Button>}
                 noArrow />
         </Dropdown>
     );
@@ -32,7 +32,7 @@ describe('<Dropdown />', () => {
             <Popover
                 body={defaultMenu}
                 control={
-                    <Button compact dropdown>
+                    <Button className='fd-dropdown__control' compact>
                         Select
                     </Button>
                 }
@@ -45,7 +45,7 @@ describe('<Dropdown />', () => {
             <Popover
                 body={defaultMenu}
                 control={
-                    <Button dropdown>
+                    <Button className='fd-dropdown__control'>
                         Select
                     </Button>
                 }
@@ -58,7 +58,7 @@ describe('<Dropdown />', () => {
             <Popover
                 body={defaultMenu}
                 control={
-                    <Button dropdown glyph='filter'>
+                    <Button className='fd-dropdown__control' glyph='filter'>
                         Select
                     </Button>
                 }
@@ -72,7 +72,8 @@ describe('<Dropdown />', () => {
             <Popover
                 body={defaultMenu}
                 control={
-                    <Button disabled dropdown
+                    <Button className='fd-dropdown__control'
+                        disabled
                         glyph='filter'>
                         Select
                     </Button>
@@ -116,7 +117,7 @@ describe('<Dropdown />', () => {
                 <Dropdown data-sample='Sample'>
                     <Popover
                         body={defaultMenu}
-                        control={<Button dropdown>Select</Button>}
+                        control={<Button className='fd-dropdown__control'>Select</Button>}
                         noArrow />
                 </Dropdown>
             );

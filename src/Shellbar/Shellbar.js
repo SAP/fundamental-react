@@ -177,8 +177,8 @@ class Shellbar extends Component {
                                 className='fd-search-input'
                                 onEnter={searchInput.onSearch}
                                 placeholder={searchInput.placeholder}
-                                searchList={searchInput.searchList}
-                                shellbar />
+                                searchBtnProps={{ className: 'fd-shellbar__button' }}
+                                searchList={searchInput.searchList} />
                         </div>
                     )}
                     {actions &&

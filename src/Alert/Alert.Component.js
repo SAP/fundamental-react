@@ -1,6 +1,6 @@
+import { Alert } from '../';
 import path from 'path';
 import React from 'react';
-import { Alert, Icon } from '../';
 import { ComponentPage, Example } from '../_playground';
 
 export const AlertComponent = () => {
@@ -40,7 +40,7 @@ export const AlertComponent = () => {
                     link='#'
                     linkText='Learn More'
                     type='error'>
-                    <Icon glyph='message-error' /> Error Message.{' '}
+                    Error Message.{' '}
                 </Alert>
             </Example>
 
@@ -50,7 +50,7 @@ export const AlertComponent = () => {
                     link='#'
                     linkText='Learn More'
                     type='success'>
-                    <Icon glyph='message-success' /> Message Success.{' '}
+                    Message Success.{' '}
                 </Alert>
             </Example>
 
@@ -60,7 +60,7 @@ export const AlertComponent = () => {
                     link='#'
                     linkText='Learn More'
                     type='information'>
-                    <Icon glyph='message-information' /> Information Message.{' '}
+                    Information Message.{' '}
                 </Alert>
             </Example>
         </ComponentPage>

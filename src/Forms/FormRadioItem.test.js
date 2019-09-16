@@ -74,9 +74,22 @@ describe('<FormRadioItem />', () => {
             expect(mockCallback.mock.calls.length).toBe(1);
         });
 
-        test('should allow props to be spread to the FormRadioItem component', () => {
-            // TODO: placeholder for this test description once that functionality is built
+        test('should allow props to be spread to the FormRadioItem FormItem component', () => {
             const element = mount(<FormRadioItem data-sample='Sample'>Label</FormRadioItem>);
+
+            expect(
+                element.find('div').getDOMNode().attributes['data-sample'].value
+            ).toBe('Sample');
+        });
+        test('should allow props to be spread to the FormRadioItem FormLabel component', () => {
+            const element = mount(<FormRadioItem labelProps={{ 'data-sample': 'Sample' }}>Label</FormRadioItem>);
+
+            expect(
+                element.find('label').getDOMNode().attributes['data-sample'].value
+            ).toBe('Sample');
+        });
+        test('should allow props to be spread to the FormRadioItem component', () => {
+            const element = mount(<FormRadioItem inputProps={{ 'data-sample': 'Sample' }}>Label</FormRadioItem>);
 
             expect(
                 element.find('input').getDOMNode().attributes['data-sample'].value

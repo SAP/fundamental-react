@@ -5,7 +5,7 @@ import renderer from 'react-test-renderer';
 
 describe('<ListGroupItemCheckbox />', () => {
     const listGroupItemCheckbox = (
-        <ListGroup.ItemCheckbox>List item 1</ListGroup.ItemCheckbox>
+        <ListGroup.ItemCheckbox id='foo'>List item 1</ListGroup.ItemCheckbox>
     );
 
     test('create list group', () => {

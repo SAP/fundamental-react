@@ -33,10 +33,14 @@ const InlineHelp = ({ text, placement, className, contentClassName, ...props }) 
 InlineHelp.displayName = 'InlineHelp';
 
 InlineHelp.propTypes = {
-    placement: PropTypes.oneOf(INLINE_HELP_PLACEMENTS).isRequired,
     text: PropTypes.string.isRequired,
     className: PropTypes.string,
-    contentClassName: PropTypes.string
+    contentClassName: PropTypes.string,
+    placement: PropTypes.oneOf(INLINE_HELP_PLACEMENTS)
+};
+
+InlineHelp.defaultProps = {
+    placement: 'bottom-right'
 };
 
 InlineHelp.propDescriptions = {

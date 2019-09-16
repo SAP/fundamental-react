@@ -126,7 +126,6 @@ class SearchInput extends Component {
             inputProps,
             listProps,
             searchBtnProps,
-            shellbar,
             popoverProps,
             ...rest
         } = this.props;
@@ -172,7 +171,6 @@ class SearchInput extends Component {
                             {!noSearchBtn && (
                                 <span className='fd-input-group__addon fd-input-group__addon--button'>
                                     <Button {...searchBtnProps}
-                                        className={shellbar ? 'fd-shellbar__button' : ''}
                                         compact={compact}
                                         glyph='search'
                                         onClick={() => this.onClickHandler()}
@@ -204,7 +202,6 @@ SearchInput.propTypes = {
             callback: PropTypes.func
         })
     ),
-    shellbar: PropTypes.bool,
     onChange: PropTypes.func,
     onEnter: PropTypes.func
 };
@@ -218,8 +215,7 @@ SearchInput.propDescriptions = {
     noSearchBtn: 'Set to **true** to render without a search button.',
     onEnter: 'Callback function when the user hits the <Enter> key.',
     searchBtnProps: 'Additional props to be spread to the search `<button>` element.',
-    searchList: 'Collection of items to display in the dropdown list.',
-    shellbar: '_INTERNAL USE ONLY._'
+    searchList: 'Collection of items to display in the dropdown list.'
 };
 
 export default SearchInput;

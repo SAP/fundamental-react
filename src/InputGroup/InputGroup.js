@@ -55,6 +55,7 @@ class InputGroup extends Component {
     render() {
         const {
             actions,
+            addonClassNames,
             addonPos,
             addon,
             children,
@@ -74,12 +75,20 @@ class InputGroup extends Component {
             ...props
         } = this.props;
 
+        const inputGroupClasses = classnames(
+            className,
+            'fd-input-group'
+        );
+
+        const addonClasses = classnames(
+            addonClassNames,
+            'fd-input-group__addon',
+            [{ 'fd-input-group__addon--button': !!actions || inputType === 'number' }]
+        );
+
+
         switch (inputType) {
             case 'number':
-                const inputGroupNumberClasses = classnames(
-                    className,
-                    'fd-input-group'
-                );
 
                 const inputNumberClasses = classnames(
                     inputClassName,
@@ -89,7 +98,7 @@ class InputGroup extends Component {
                 return (
                     <div
                         {...props}
-                        className={inputGroupNumberClasses}>
+                        className={inputGroupClasses}>
                         <FormInput
                             {...inputProps}
                             className={inputNumberClasses}
@@ -97,8 +106,9 @@ class InputGroup extends Component {
                             id={inputId}
                             name={inputName}
                             onChange={this.handleTextChange}
+                            type='number'
                             value={this.state.value} />
-                        <span className='fd-input-group__addon fd-input-group__addon--button'>
+                        <span className={addonClasses}>
                             <Button
                                 {...numberUpButtonProps}
                                 aria-label={localizedText.up}
@@ -121,21 +131,16 @@ class InputGroup extends Component {
             case 'text':
             default: {
                 if (addonPos === 'before') {
-                    const inputGroupBeforeClasses = classnames(
-                        className,
-                        'fd-input-group'
-                    );
-
                     return (
                         <div
                             {...props}
-                            className={inputGroupBeforeClasses}>
+                            className={inputGroupClasses}>
                             {actions ? (
-                                <span className='fd-input-group__addon fd-input-group__addon--button'>
+                                <span className={addonClasses}>
                                     {children}
                                 </span>
                             ) : (
-                                <span className='fd-input-group__addon'>
+                                <span className={addonClasses}>
                                     {glyph ? (
                                         <span
                                             className={`sap-icon--${glyph}`}
@@ -156,15 +161,10 @@ class InputGroup extends Component {
                         </div>
                     );
                 } else {
-                    const inputGroupAfterClasses = classnames(
-                        className,
-                        'fd-input-group'
-                    );
-
                     return (
                         <div
                             {...props}
-                            className={inputGroupAfterClasses}>
+                            className={inputGroupClasses}>
                             <FormInput
                                 {...inputProps}
                                 className={inputClassName}
@@ -174,11 +174,11 @@ class InputGroup extends Component {
                                 onChange={this.handleTextChange}
                                 value={this.state.value} />
                             {actions ? (
-                                <span className='fd-input-group__addon fd-input-group__addon--button'>
+                                <span className={addonClasses}>
                                     {children}
                                 </span>
                             ) : (
-                                <span className='fd-input-group__addon'>
+                                <span className={addonClasses}>
                                     {glyph ? (
                                         <span
                                             className={`sap-icon--${glyph}`}
@@ -201,6 +201,7 @@ InputGroup.displayName = 'InputGroup';
 InputGroup.propTypes = {
     actions: PropTypes.bool,
     addon: PropTypes.string,
+    addonClassNames: PropTypes.string,
     addonPos: PropTypes.oneOf(INPUT_GROUP_ADDON_POSITIONS),
     children: PropTypes.node,
     className: PropTypes.string,
@@ -236,6 +237,7 @@ InputGroup.defaultProps = {
 InputGroup.propDescriptions = {
     actions: 'Set to **true** to enable an input with actions. Actions can be shown with a text label or icon.',
     addon: 'The value of the add-on.',
+    addonClassNames: 'CSS class(es) to add to the addon element.',
     addonPos: 'Location of the add-on relative to the input.',
     inputId: 'Value for the `id` attribute on the `<input>` element.',
     inputClassName: 'CSS class(es) to add to the `<input>` element.',

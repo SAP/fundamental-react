@@ -1,8 +1,7 @@
 import path from 'path';
 import React from 'react';
-import { ComponentPage, Example } from '../_playground';
-// eslint-disable-next-line sort-imports
 import { Checkbox, FormFieldset, FormInput, FormItem, FormLabel, FormLegend, FormMessage, FormRadioGroup, FormRadioItem, FormSelect, FormSet, FormTextarea, InlineHelp } from '../';
+import { ComponentPage, Example } from '../_playground';
 
 export const FormsComponent = () => {
     return (
@@ -71,6 +70,7 @@ export const FormsComponent = () => {
                                 Input with inline help
                                 <InlineHelp
                                     className='fd-has-float-right'
+                                    placement='bottom-left'
                                     text='Lorem ipsum dolor sit amet, consectetur adipiscing.' />
                             </FormLabel>
                             <FormInput id='input-4' type='text' />

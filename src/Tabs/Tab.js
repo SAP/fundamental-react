@@ -75,8 +75,8 @@ Tab.propDescriptions = {
     index: '_INTERNAL USE ONLY._',
     selected: '_INTERNAL USE ONLY._',
     title: 'Localized text to display on the tab.',
-    tabContentProps: 'Additional props to be spread to the tab content\'s <div> element.',
-    linkProps: 'Additional props to be spread to the tab\'s <a> element.',
+    tabContentProps: 'Additional props to be spread to the tab content\'s `<div>` element.',
+    linkProps: 'Additional props to be spread to the tab\'s `<a>` element.',
     onClick: '_INTERNAL USE ONLY._'
 };
 

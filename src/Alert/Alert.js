@@ -63,13 +63,15 @@ class Alert extends Component {
                                 onClick={this.closeAlertHandler} />
                         )}
                         <div className='fd-alert__text'>
+                            {type && (
+                                <Icon glyph={`mesage-${type}`} />
+                            )}
                             {children}
                             {link && (
                                 <Link
                                     {...linkProps}
                                     href={link}>
                                     {linkText}{' '}
-                                    <Icon glyph='arrow-right' size='s' />
                                 </Link>
                             )}
                         </div>

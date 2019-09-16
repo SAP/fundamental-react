@@ -79,7 +79,7 @@ exports[`<InputGroup /> create input group items 5`] = `
   <input
     className="fd-input fd-input--no-number-spinner"
     onChange={[Function]}
-    type="text"
+    type="number"
     value={100}
   />
   <span
@@ -106,7 +106,7 @@ exports[`<InputGroup /> create input group items 6`] = `
   <input
     className="fd-input fd-input--compact fd-input--no-number-spinner"
     onChange={[Function]}
-    type="text"
+    type="number"
     value={100}
   />
   <span
@@ -277,7 +277,7 @@ exports[`<InputGroup /> create input group items 14`] = `
   <input
     className="fd-input custom-input-class-search fd-input--no-number-spinner"
     onChange={[Function]}
-    type="text"
+    type="number"
     value={100}
   />
   <span

@@ -40,7 +40,7 @@ FormInput.propTypes = {
     readOnly: PropTypes.bool,
     state: PropTypes.oneOf(INPUT_TYPES),
     type: PropTypes.string,
-    value: PropTypes.string
+    value: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
 };
 
 FormInput.defaultProps = {

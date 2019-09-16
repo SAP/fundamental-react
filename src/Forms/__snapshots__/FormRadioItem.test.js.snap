@@ -15,6 +15,7 @@ exports[`<FormRadioItem /> create form radio item 1`] = `
       value="radio-1"
     />
     Option 1
+    
   </label>
 </div>
 `;
