@@ -30,7 +30,7 @@ const Checkbox = ({ checked, className, defaultChecked, disabled, id, indetermin
                 <input
                     {...inputProps}
                     aria-checked={getCheckStatus(checked, indeterminate)}
-                    checked={checked}
+                    checked={checked || defaultChecked}
                     className={classes}
                     disabled={disabled}
                     id={id}

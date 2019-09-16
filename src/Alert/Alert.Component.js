@@ -26,8 +26,7 @@ export const AlertComponent = () => {
                 description='The alert warns of potential issues, but the user can still continue. The user will need to dismiss the message.'
                 title='Warning Alert'>
                 <Alert dismissible type='warning'>
-                    <h3>A dismissible error type alert with template.</h3>
-                    <p>More information...</p>
+                    Warning Message.
                 </Alert>
             </Example>
 

@@ -272,38 +272,36 @@ export const FormsComponent = () => {
                 description={`With checkboxes, all options are visible and the user can make one or more selections.
                     This component can also be disabled and displayed in a row.`}
                 title='Checkboxes'>
-                <div>
-                    <FormFieldset>
-                        <FormLegend>Checkboxes</FormLegend>
-                        <Checkbox
-                            checked
-                            id='checkbox-1'
-                            name='checkbox-name-1'
-                            value='Option One' />
-                        <Checkbox
-                            disabled
-                            id='checkbox-2'
-                            name='checkbox-name-2'
-                            value='Option Two' />
-                        <Checkbox
-                            id='checkbox-3'
-                            indeterminate
-                            name='checkbox-name-3'
-                            value='Option Three' />
-                    </FormFieldset>
+                <FormFieldset>
+                    <FormLegend>Checkboxes</FormLegend>
+                    <Checkbox
+                        defaultChecked
+                        id='checkbox-1'
+                        name='checkbox-name-1'
+                        value='Option One' />
+                    <Checkbox
+                        disabled
+                        id='checkbox-2'
+                        name='checkbox-name-2'
+                        value='Option Two' />
+                    <Checkbox
+                        id='checkbox-3'
+                        indeterminate
+                        name='checkbox-name-3'
+                        value='Option Three' />
+                </FormFieldset>
 
-                    <FormFieldset>
-                        <FormLegend>Inline Checkbox buttons</FormLegend>
-                        <FormRadioGroup inline>
-                            <Checkbox id='checkbox-4' name='checkbox-name-4'
-                                value='Option One' />
-                            <Checkbox id='checkbox-5' name='checkbox-name-5'
-                                value='Option Two' />
-                            <Checkbox id='checkbox-6' name='checkbox-name-6'
-                                value='Option Three' />
-                        </FormRadioGroup>
-                    </FormFieldset>
-                </div>
+                <FormFieldset>
+                    <FormLegend>Inline Checkbox buttons</FormLegend>
+                    <FormRadioGroup inline>
+                        <Checkbox id='checkbox-4' name='checkbox-name-4'
+                            value='Option One' />
+                        <Checkbox id='checkbox-5' name='checkbox-name-5'
+                            value='Option Two' />
+                        <Checkbox id='checkbox-6' name='checkbox-name-6'
+                            value='Option Three' />
+                    </FormRadioGroup>
+                </FormFieldset>
             </Example>
 
         </ComponentPage>

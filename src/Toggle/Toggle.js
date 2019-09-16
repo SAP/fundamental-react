@@ -36,12 +36,14 @@ class Toggle extends React.Component {
                 {...rest}
                 className={className}>
                 <FormLabel
+                    disabled={disabled}
                     {...labelProps}
                     htmlFor={id}>
                     <span className={spanClasses}>
                         <input
                             {...inputProps}
                             checked={this.state.checked}
+                            className='fd-toggle__input'
                             disabled={disabled}
                             id={id}
                             onChange={this.handleChange}
