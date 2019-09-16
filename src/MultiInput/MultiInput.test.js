@@ -163,7 +163,7 @@ describe('<MultiInput />', () => {
         expect(wrapper.state(['tags'])).toHaveLength(0);
     });
 
-    xtest('remove tag from taglist by clicking on tag', () => {
+    test('remove tag from taglist by clicking on tag', () => {
         wrapper = mount(multiInput);
         wrapper.find('.fd-input').simulate('click');
 
@@ -186,10 +186,7 @@ describe('<MultiInput />', () => {
         expect(wrapper.state(['tags'])).toHaveLength(2);
 
         // simulate clicking on tag in tag collection under input box
-        wrapper
-            .find('.fd-token')
-            .at(1)
-            .simulate('click', { target: { innerText: data[2] } });
+        wrapper.find('.fd-token').first().simulate('click');
 
         // check that no tags exist
         expect(wrapper.state(['tags'])).toHaveLength(1);

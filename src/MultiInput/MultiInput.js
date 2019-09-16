@@ -40,7 +40,7 @@ class MultiInput extends Component {
         return this.state.tags.map((tag, index) => (
             <Token
                 key={index}
-                onClick={this.removeTag}>
+                onClick={() => this.removeTag(tag)}>
                 {tag}
             </Token>
         ));
@@ -83,8 +83,7 @@ class MultiInput extends Component {
     };
 
     // remove/close tag
-    removeTag = event => {
-        const tag = event.target.innerText;
+    removeTag = (tag) => {
 
         this.setState(
             prevState => {

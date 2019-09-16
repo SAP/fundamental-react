@@ -90,7 +90,7 @@ exports[`<ListGroup /> create list group 3`] = `
         <input
           aria-checked="false"
           className="fd-checkbox"
-          id="fd-HKH9z3v"
+          id="foo2"
           onChange={[Function]}
           type="checkbox"
         />
