@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.7.0-rc.61"></a>
+# [0.7.0-rc.61](https://github.com/SAP/fundamental-react/compare/v0.7.0-rc.60...v0.7.0-rc.61) (2019-09-16)
+
+
+### Bug Fixes
+
+* remove react-inline-elements transform ([#741](https://github.com/SAP/fundamental-react/issues/741)) ([cdd802f](https://github.com/SAP/fundamental-react/commit/cdd802f))
+
+
+
 <a name="0.7.0-rc.60"></a>
 # [0.7.0-rc.60](https://github.com/SAP/fundamental-react/compare/v0.7.0-rc.59...v0.7.0-rc.60) (2019-09-14)
 
