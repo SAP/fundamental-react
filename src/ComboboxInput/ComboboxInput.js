@@ -20,6 +20,7 @@ const ComboboxInput = ({ placeholder, menu, compact, className, popoverProps, in
                     <div className={comboboxPopoverClasses}>
                         <FormInput
                             {...inputProps}
+                            className='fd-input-group__input'
                             compact={compact}
                             placeholder={placeholder}
                             type='text' />

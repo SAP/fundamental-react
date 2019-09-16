@@ -161,6 +161,7 @@ class SearchInput extends Component {
                         <div className='fd-input-group fd-input-group--after'>
                             <FormInput
                                 {...inputProps}
+                                className='fd-input-group__input'
                                 compact={compact}
                                 onChange={this.onChangeHandler}
                                 onClick={() => this.onClickHandler()}

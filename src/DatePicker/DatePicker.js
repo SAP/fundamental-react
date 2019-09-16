@@ -295,7 +295,8 @@ class DatePicker extends Component {
             'fd-input',
             {
                 'fd-input--compact': compact
-            }
+            },
+            'fd-input-group__input'
         );
 
         return (

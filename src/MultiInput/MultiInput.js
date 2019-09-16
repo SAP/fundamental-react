@@ -145,6 +145,7 @@ class MultiInput extends Component {
                                 className='fd-input-group'>
                                 <FormInput
                                     {...inputProps}
+                                    className='fd-input-group__input'
                                     compact={compact}
                                     onClick={this.showHideTagList}
                                     placeholder={placeHolder} />

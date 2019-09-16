@@ -86,12 +86,17 @@ class InputGroup extends Component {
             [{ 'fd-input-group__addon--button': !!actions || inputType === 'number' }]
         );
 
+        const inputClasses = classnames(
+            inputClassName,
+            'fd-input-group__input'
+        );
+
 
         switch (inputType) {
             case 'number':
 
                 const inputNumberClasses = classnames(
-                    inputClassName,
+                    inputClasses,
                     'fd-input--no-number-spinner'
                 );
 
@@ -152,7 +157,7 @@ class InputGroup extends Component {
                             )}
                             <FormInput
                                 {...inputProps}
-                                className={inputClassName}
+                                className={inputClasses}
                                 compact={compact}
                                 id={inputId}
                                 name={inputName}
@@ -167,7 +172,7 @@ class InputGroup extends Component {
                             className={inputGroupClasses}>
                             <FormInput
                                 {...inputProps}
-                                className={inputClassName}
+                                className={inputClasses}
                                 compact={compact}
                                 id={inputId}
                                 name={inputName}

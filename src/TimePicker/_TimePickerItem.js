@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 
 const INVALID = 'is-invalid';
-const VALID = 'fd-input';
+const VALID = 'fd-input-group__input';
 
 class TimePickerItem extends Component {
     constructor(props) {
