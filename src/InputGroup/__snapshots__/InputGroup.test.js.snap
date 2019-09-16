@@ -10,7 +10,7 @@ exports[`<InputGroup /> create input group items 1`] = `
     $
   </span>
   <input
-    className="fd-input"
+    className="fd-input fd-input-group__input"
     onChange={[Function]}
     type="text"
     value="1234567890"
@@ -23,7 +23,7 @@ exports[`<InputGroup /> create input group items 2`] = `
   className="fd-input-group"
 >
   <input
-    className="fd-input"
+    className="fd-input fd-input-group__input"
     onChange={[Function]}
     type="text"
     value="1234567890"
@@ -46,7 +46,7 @@ exports[`<InputGroup /> create input group items 3`] = `
     $
   </span>
   <input
-    className="fd-input fd-input--compact"
+    className="fd-input fd-input--compact fd-input-group__input"
     onChange={[Function]}
     type="text"
     value="1234567890"
@@ -59,7 +59,7 @@ exports[`<InputGroup /> create input group items 4`] = `
   className="fd-input-group"
 >
   <input
-    className="fd-input fd-input--compact"
+    className="fd-input fd-input--compact fd-input-group__input"
     onChange={[Function]}
     type="text"
     value="1234567890"
@@ -77,7 +77,7 @@ exports[`<InputGroup /> create input group items 5`] = `
   className="fd-input-group"
 >
   <input
-    className="fd-input fd-input--no-number-spinner"
+    className="fd-input fd-input-group__input fd-input--no-number-spinner"
     onChange={[Function]}
     type="number"
     value={100}
@@ -104,7 +104,7 @@ exports[`<InputGroup /> create input group items 6`] = `
   className="fd-input-group"
 >
   <input
-    className="fd-input fd-input--compact fd-input--no-number-spinner"
+    className="fd-input fd-input--compact fd-input-group__input fd-input--no-number-spinner"
     onChange={[Function]}
     type="number"
     value={100}
@@ -139,7 +139,7 @@ exports[`<InputGroup /> create input group items 7`] = `
     />
   </span>
   <input
-    className="fd-input"
+    className="fd-input fd-input-group__input"
     onChange={[Function]}
     type="text"
     value="1234567890"
@@ -160,7 +160,7 @@ exports[`<InputGroup /> create input group items 8`] = `
     />
   </span>
   <input
-    className="fd-input fd-input--compact"
+    className="fd-input fd-input--compact fd-input-group__input"
     onChange={[Function]}
     type="text"
     value="1234567890"
@@ -173,7 +173,7 @@ exports[`<InputGroup /> create input group items 9`] = `
   className="fd-input-group"
 >
   <input
-    className="fd-input"
+    className="fd-input fd-input-group__input"
     onChange={[Function]}
     type="text"
     value="1234567890"
@@ -194,7 +194,7 @@ exports[`<InputGroup /> create input group items 10`] = `
   className="fd-input-group"
 >
   <input
-    className="fd-input fd-input--compact"
+    className="fd-input fd-input--compact fd-input-group__input"
     onChange={[Function]}
     type="text"
     value="1234567890"
@@ -215,7 +215,7 @@ exports[`<InputGroup /> create input group items 11`] = `
   className="fd-input-group"
 >
   <input
-    className="fd-input"
+    className="fd-input fd-input-group__input"
     onChange={[Function]}
     type="text"
     value="1234567890"
@@ -237,7 +237,7 @@ exports[`<InputGroup /> create input group items 12`] = `
   className="fd-input-group"
 >
   <input
-    className="fd-input fd-input--compact"
+    className="fd-input fd-input--compact fd-input-group__input"
     onChange={[Function]}
     type="text"
     value="1234567890"
@@ -262,7 +262,7 @@ exports[`<InputGroup /> create input group items 13`] = `
     className="fd-input-group__addon fd-input-group__addon--button"
   />
   <input
-    className="fd-input"
+    className="fd-input fd-input-group__input"
     onChange={[Function]}
     type="text"
     value="1234567890"
@@ -275,7 +275,7 @@ exports[`<InputGroup /> create input group items 14`] = `
   className="custom-div-class-search fd-input-group"
 >
   <input
-    className="fd-input custom-input-class-search fd-input--no-number-spinner"
+    className="fd-input custom-input-class-search fd-input-group__input fd-input--no-number-spinner"
     onChange={[Function]}
     type="number"
     value={100}
@@ -307,7 +307,7 @@ exports[`<InputGroup /> create input group items 15`] = `
     $
   </span>
   <input
-    className="fd-input custom-input-class-before"
+    className="fd-input custom-input-class-before fd-input-group__input"
     onChange={[Function]}
     type="text"
     value="1234567890"
@@ -320,7 +320,7 @@ exports[`<InputGroup /> create input group items 16`] = `
   className="custom-div-class-after fd-input-group"
 >
   <input
-    className="fd-input custom-input-class-after"
+    className="fd-input custom-input-class-after fd-input-group__input"
     onChange={[Function]}
     type="text"
     value="1234567890"

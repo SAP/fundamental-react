@@ -26,7 +26,7 @@ exports[`<LocalizationEditor /> create localization editor 1`] = `
           onClick={[Function]}
         >
           <input
-            className="fd-input"
+            className="fd-input fd-input-group__input"
             placeholder="Enter Label"
             type="text"
           />
@@ -72,7 +72,7 @@ exports[`<LocalizationEditor /> create localization editor 2`] = `
           onClick={[Function]}
         >
           <input
-            className="fd-input fd-input--compact"
+            className="fd-input fd-input--compact fd-input-group__input"
             placeholder="Enter Label"
             type="text"
           />
@@ -118,7 +118,7 @@ exports[`<LocalizationEditor /> create localization editor 3`] = `
           onClick={[Function]}
         >
           <textarea
-            className="fd-textarea"
+            className="fd-textarea fd-input-group__input"
           />
           <span
             className="fd-input-group__addon fd-input-group__addon--button"

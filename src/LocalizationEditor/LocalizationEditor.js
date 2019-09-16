@@ -1,4 +1,4 @@
-/* eslint-disable sort-imports */
+import 'fundamental-styles/dist/input-group.css'; //remove when replaced with InputGroup component
 import 'fundamental-styles/dist/localization-editor.css';
 import Button from '../Button/Button';
 import classnames from 'classnames';
@@ -9,14 +9,18 @@ import Menu from '../Menu/Menu';
 import Popover from '../Popover/Popover';
 import PropTypes from 'prop-types';
 import React from 'react';
-import 'fundamental-styles/dist/input-group.css'; //remove when replaced with InputGroup component
 
 
-const LocalizationEditor = ({ control, menu, id, compact, textarea, className, listProps, popoverProps, ...props }) => {
+const LocalizationEditor = ({ control, menu, id, compact, textarea, className, inputClassName, listProps, popoverProps, ...props }) => {
 
     const localizationEditorClasses = classnames(
         'fd-localization-editor',
         className
+    );
+
+    const localizationInputClasses = classnames(
+        'fd-input-group__input',
+        inputClassName
     );
 
     return (
@@ -45,11 +49,11 @@ const LocalizationEditor = ({ control, menu, id, compact, textarea, className, l
                                         key={index}>
                                         <div className='fd-input-group fd-input-group--after'>
                                             {textarea ? (
-                                                <FormTextArea className='fd-input-group__input' {...inputProps} />
+                                                <FormTextArea className={localizationInputClasses} {...inputProps} />
                                             ) : (
                                                 <FormInput
                                                     {...inputProps}
-                                                    className='fd-input-group__input'
+                                                    className={localizationInputClasses}
                                                     compact={compact}
                                                     placeholder={placeholder} />
                                             )}
@@ -74,12 +78,12 @@ const LocalizationEditor = ({ control, menu, id, compact, textarea, className, l
                         {textarea ? (
                             <FormTextArea
                                 {...control.inputProps}
-                                className='fd-input-group__input'
+                                className={localizationInputClasses}
                                 compact={compact} />
                         ) : (
                             <FormInput
                                 {...control.inputProps}
-                                className='fd-input-group__input'
+                                className={localizationInputClasses}
                                 compact={compact}
                                 placeholder={control.placeholder} />
                         )}
@@ -121,6 +125,7 @@ LocalizationEditor.propTypes = {
     className: PropTypes.string,
     compact: PropTypes.bool,
     id: PropTypes.string,
+    inputClassName: PropTypes.string,
     listProps: PropTypes.object,
     popoverProps: PropTypes.object,
     textarea: PropTypes.bool
