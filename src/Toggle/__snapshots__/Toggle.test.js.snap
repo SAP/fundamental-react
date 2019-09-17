@@ -12,6 +12,7 @@ exports[`<Toggle /> create toggle component 1`] = `
     >
       <input
         checked={false}
+        className="fd-toggle__input"
         onChange={[Function]}
         type="checkbox"
       />
@@ -38,6 +39,7 @@ exports[`<Toggle /> create toggle component 2`] = `
     >
       <input
         checked={true}
+        className="fd-toggle__input"
         onChange={[Function]}
         type="checkbox"
       />
@@ -57,13 +59,14 @@ exports[`<Toggle /> create toggle component 3`] = `
   className="fd-form-item"
 >
   <label
-    className="fd-form-label"
+    className="fd-form-label is-disabled"
   >
     <span
       className="fd-toggle"
     >
       <input
         checked={false}
+        className="fd-toggle__input"
         disabled={true}
         onChange={[Function]}
         type="checkbox"
@@ -84,13 +87,14 @@ exports[`<Toggle /> create toggle component 4`] = `
   className="fd-form-item"
 >
   <label
-    className="fd-form-label"
+    className="fd-form-label is-disabled"
   >
     <span
       className="fd-toggle"
     >
       <input
         checked={true}
+        className="fd-toggle__input"
         disabled={true}
         onChange={[Function]}
         type="checkbox"
