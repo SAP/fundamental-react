@@ -1,8 +1,7 @@
-import { listOfIcons } from '../utils/listOfIcons';
 import path from 'path';
 import React from 'react';
 import { Button, FormGroup, FormItem, FormLabel, InputGroup } from '../';
-import { ComponentPage, Example, Playground, Separator } from '../_playground';
+import { ComponentPage, Example } from '../_playground';
 
 export const InputGroupComponent = () => {
     return (
@@ -24,7 +23,6 @@ export const InputGroupComponent = () => {
                             <InputGroup
                                 addon='$'
                                 addonPos='before'
-                                inputType='text'
                                 inputValue='1234567890' />
                         </FormItem>
                     </FormGroup>
@@ -35,7 +33,6 @@ export const InputGroupComponent = () => {
                             <InputGroup
                                 addon='€'
                                 addonPos='after'
-                                inputType='text'
                                 inputValue='1234567890' />
                         </FormItem>
                     </FormGroup>
@@ -50,7 +47,6 @@ export const InputGroupComponent = () => {
                                 addon='$'
                                 addonPos='before'
                                 compact
-                                inputType='text'
                                 inputValue='1234567890' />
                         </FormItem>
                     </FormGroup>
@@ -62,7 +58,6 @@ export const InputGroupComponent = () => {
                                 addon='€'
                                 addonPos='after'
                                 compact
-                                inputType='text'
                                 inputValue='1234567890' />
                         </FormItem>
                     </FormGroup>
@@ -99,31 +94,11 @@ export const InputGroupComponent = () => {
                 title='Input with icons'>
                 <div>
                     <FormGroup>
-                        <FormLabel>Search Input</FormLabel>
-                        <FormItem>
-                            <InputGroup inputPlaceholder='Search Term' inputType='search' />
-                        </FormItem>
-                    </FormGroup>
-                    <br />
-                    <p>Compact mode</p>
-                    <FormGroup>
-                        <FormLabel>Search Input</FormLabel>
-                        <FormItem>
-                            <InputGroup
-                                compact
-                                inputPlaceholder='Search Term'
-                                inputType='search' />
-                        </FormItem>
-                    </FormGroup>
-                    <br />
-                    <br />
-                    <FormGroup>
                         <FormLabel>Input with icon on the left</FormLabel>
                         <FormItem>
                             <InputGroup
                                 addonPos='before'
                                 glyph='globe'
-                                inputType='text'
                                 inputValue='1234567890' />
                         </FormItem>
                     </FormGroup>
@@ -136,7 +111,6 @@ export const InputGroupComponent = () => {
                                 addonPos='before'
                                 compact
                                 glyph='globe'
-                                inputType='text'
                                 inputValue='1234567890' />
                         </FormItem>
                     </FormGroup>
@@ -161,7 +135,6 @@ export const InputGroupComponent = () => {
                                 addonPos='after'
                                 compact
                                 glyph='hide'
-                                inputType='text'
                                 inputValue='1234567890' />
                         </FormItem>
                     </FormGroup>
@@ -179,7 +152,6 @@ export const InputGroupComponent = () => {
                             <InputGroup
                                 actions
                                 addonPos='after'
-                                inputType='text'
                                 inputValue='1234567890'>
                                 <Button option='light'>Button</Button>
                             </InputGroup>
@@ -194,9 +166,10 @@ export const InputGroupComponent = () => {
                                 actions
                                 addonPos='after'
                                 compact
-                                inputType='text'
                                 inputValue='1234567890'>
-                                <Button option='light'>Button</Button>
+                                <Button
+                                    compact
+                                    option='light'>Button</Button>
                             </InputGroup>
                         </FormItem>
                     </FormGroup>
@@ -205,8 +178,7 @@ export const InputGroupComponent = () => {
                     <FormGroup>
                         <FormLabel>Input with icon text action</FormLabel>
                         <FormItem>
-                            <InputGroup actions addonPos='after'
-                                inputType='text'>
+                            <InputGroup actions addonPos='after'>
                                 <Button glyph='navigation-down-arrow' option='light' />
                             </InputGroup>
                         </FormItem>
@@ -217,55 +189,16 @@ export const InputGroupComponent = () => {
                         <FormLabel>Input with icon text action</FormLabel>
                         <FormItem>
                             <InputGroup actions addonPos='after'
-                                compact inputType='text'>
-                                <Button glyph='navigation-down-arrow' option='light' />
+                                compact>
+                                <Button
+                                    compact
+                                    glyph='navigation-down-arrow'
+                                    option='light' />
                             </InputGroup>
                         </FormItem>
                     </FormGroup>
                 </div>
             </Example>
-
-            <Separator />
-
-            <Playground
-                component='inputgroup'
-                schema={[
-                    {
-                        attribute: 'addonPos',
-                        typeOfAttribute: 'string',
-                        'enum': ['after', 'before']
-                    },
-                    {
-                        attribute: 'inputValue',
-                        typeOfAttribute: 'string'
-                    },
-                    {
-                        attribute: 'glyph',
-                        typeOfAttribute: 'string',
-                        'enum': listOfIcons
-                    },
-                    {
-                        attribute: 'children',
-                        typeOfAttribute: 'string'
-                    }
-                ]}>
-                <FormGroup>
-                    <FormLabel>Input with text action</FormLabel>
-                    <FormItem>
-                        <InputGroup
-                            actions
-                            addon='$'
-                            addonPos='after'
-                            inputType='text'
-                            inputValue='1234567890'>
-                            <Button glyph='navigation-down-arrow' option='light'>
-                                Button
-                            </Button>
-                        </InputGroup>
-                    </FormItem>
-                </FormGroup>
-            </Playground>
-
         </ComponentPage>
     );
 };

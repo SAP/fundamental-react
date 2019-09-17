@@ -7,6 +7,7 @@ export const defaultPropDescriptions = {
     glyph: 'The icon to include. See the icon page for the list of icons.',
     id: 'Value for the `id` attribute on the element.',
     inputProps: 'Additional props to be spread to the `<input>` element.',
+    inputClassName: 'CSS class(es) to add to the `<input>` element.',
     labelProps: 'Additional props to be spread to the `<label>` element.',
     headingLevel: 'Heading level. `<h1>` is reserved for the page title. It should not appear in components.',
     listProps: 'Additional props to be spread to the `<ul>` element.',

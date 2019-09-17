@@ -4,48 +4,80 @@ exports[`<Table /> create table component 1`] = `
 <table
   className="fd-table"
 >
-  <thead>
-    <tr>
-      <th>
+  <thead
+    className="fd-table__header"
+  >
+    <tr
+      className="fd-table__row"
+    >
+      <th
+        className="fd-table__cell"
+      >
         Column Header 1
       </th>
-      <th>
+      <th
+        className="fd-table__cell"
+      >
         Column Header 2
       </th>
-      <th>
+      <th
+        className="fd-table__cell"
+      >
         Column Header 3
       </th>
-      <th>
+      <th
+        className="fd-table__cell"
+      >
         Column Header 4
       </th>
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td>
+    <tr
+      className="fd-table__row"
+    >
+      <td
+        className="fd-table__cell"
+      >
         Data 1
       </td>
-      <td>
+      <td
+        className="fd-table__cell"
+      >
         Data 2
       </td>
-      <td>
+      <td
+        className="fd-table__cell"
+      >
         Data 3
       </td>
-      <td>
+      <td
+        className="fd-table__cell"
+      >
         Data 4
       </td>
     </tr>
-    <tr>
-      <td>
+    <tr
+      className="fd-table__row"
+    >
+      <td
+        className="fd-table__cell"
+      >
         Data 5
       </td>
-      <td>
+      <td
+        className="fd-table__cell"
+      >
         Data 6
       </td>
-      <td>
+      <td
+        className="fd-table__cell"
+      >
         Data 7
       </td>
-      <td>
+      <td
+        className="fd-table__cell"
+      >
         Data 8
       </td>
     </tr>
@@ -57,48 +89,80 @@ exports[`<Table /> create table component 2`] = `
 <table
   className="fd-table blue"
 >
-  <thead>
-    <tr>
-      <th>
+  <thead
+    className="fd-table__header"
+  >
+    <tr
+      className="fd-table__row"
+    >
+      <th
+        className="fd-table__cell"
+      >
         Column Header 1
       </th>
-      <th>
+      <th
+        className="fd-table__cell"
+      >
         Column Header 2
       </th>
-      <th>
+      <th
+        className="fd-table__cell"
+      >
         Column Header 3
       </th>
-      <th>
+      <th
+        className="fd-table__cell"
+      >
         Column Header 4
       </th>
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td>
+    <tr
+      className="fd-table__row"
+    >
+      <td
+        className="fd-table__cell"
+      >
         Data 1
       </td>
-      <td>
+      <td
+        className="fd-table__cell"
+      >
         Data 2
       </td>
-      <td>
+      <td
+        className="fd-table__cell"
+      >
         Data 3
       </td>
-      <td>
+      <td
+        className="fd-table__cell"
+      >
         Data 4
       </td>
     </tr>
-    <tr>
-      <td>
+    <tr
+      className="fd-table__row"
+    >
+      <td
+        className="fd-table__cell"
+      >
         Data 5
       </td>
-      <td>
+      <td
+        className="fd-table__cell"
+      >
         Data 6
       </td>
-      <td>
+      <td
+        className="fd-table__cell"
+      >
         Data 7
       </td>
-      <td>
+      <td
+        className="fd-table__cell"
+      >
         Data 8
       </td>
     </tr>

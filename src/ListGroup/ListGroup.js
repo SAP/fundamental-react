@@ -1,3 +1,4 @@
+import 'fundamental-styles/dist/list-group.css';
 import classnames from 'classnames';
 import ListGroupItem from './_ListGroupItem';
 import ListGroupItemActions from './_ListGroupItemActions';

@@ -50,10 +50,10 @@ exports[`<InlineHelp /> create Right InlineHelp component 1`] = `
 
 exports[`<InlineHelp /> create default InlineHelp component 1`] = `
 <span
-  className="fd-inline-help"
+  className="fd-inline-help blue"
 >
   <span
-    className="fd-inline-help__content fd-inline-help__content--bottom-right blue"
+    className="fd-inline-help__content fd-inline-help__content--bottom-right"
   >
     Lorem ipsum dolor sit amet, consectetur adipiscing.
   </span>

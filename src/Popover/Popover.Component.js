@@ -1,3 +1,4 @@
+import 'fundamental-styles/dist/layout.css'; //needed for layout container class for placement example
 import path from 'path';
 import React from 'react';
 import { Button, Icon, Identifier, Image, Menu, Modal, Popover } from '../';
@@ -6,10 +7,10 @@ import { ComponentPage, Example } from '../_playground';
 const bodyContent = (
     <Menu>
         <Menu.List>
-            <Menu.Item url='/'>Option 1</Menu.Item>
-            <Menu.Item url='/'>Option 2</Menu.Item>
-            <Menu.Item url='/'>Option 3</Menu.Item>
-            <Menu.Item url='/'>Option 4</Menu.Item>
+            <Menu.Item url='#'>Option 1</Menu.Item>
+            <Menu.Item url='#'>Option 2</Menu.Item>
+            <Menu.Item url='#'>Option 3</Menu.Item>
+            <Menu.Item url='#'>Option 4</Menu.Item>
         </Menu.List>
     </Menu>
 );
@@ -134,51 +135,47 @@ export class PopoverComponent extends React.Component {
                 <Example
                     centered
                     title='No Arrow'>
-                    <div className='fd-doc__margin--popover'>
-                        <Popover
-                            body={bodyContent}
-                            control={<Icon glyph='cart' size='xl' />}
-                            noArrow
-                            placement='left' />
+                    <Popover
+                        body={bodyContent}
+                        control={<Icon glyph='cart' size='xl' />}
+                        noArrow
+                        placement='left' />
 
-                        <Popover
-                            body={bodyContent}
-                            control={<Image photo='https://placeimg.com/400/400/nature' size='m'
-                                type='circle' />}
-                            noArrow
-                            placement='top' />
+                    <Popover
+                        body={bodyContent}
+                        control={<Image photo='https://placeimg.com/400/400/nature' size='m'
+                            type='circle' />}
+                        noArrow
+                        placement='top' />
 
-                        <Popover
-                            body={bodyContent}
-                            control={<Identifier color={6} glyph='money-bills'
-                                size='m' />}
-                            noArrow
-                            placement='bottom' />
+                    <Popover
+                        body={bodyContent}
+                        control={<Identifier color={6} glyph='money-bills'
+                            size='m' />}
+                        noArrow
+                        placement='bottom' />
 
-                        <Popover
-                            body={bodyContent}
-                            control={<Icon glyph='menu2' size='xl' />}
-                            noArrow
-                            placement='right' />
-                    </div>
+                    <Popover
+                        body={bodyContent}
+                        control={<Icon glyph='menu2' size='xl' />}
+                        noArrow
+                        placement='right' />
                 </Example>
 
                 <Example
                     centered
                     title='Disable Edge Detection'>
-                    <div className='fd-doc__margin--popover'>
-                        <Popover
-                            body={bodyContent}
-                            control={<Button glyph='navigation-up-arrow' option='light' />}
-                            disableEdgeDetection
-                            placement='top' />
+                    <Popover
+                        body={bodyContent}
+                        control={<Button glyph='navigation-up-arrow' option='light' />}
+                        disableEdgeDetection
+                        placement='top' />
 
-                        <Popover
-                            body={bodyContent}
-                            control={<Button glyph='navigation-down-arrow' option='light' />}
-                            disableEdgeDetection
-                            placement='bottom' />
-                    </div>
+                    <Popover
+                        body={bodyContent}
+                        control={<Button glyph='navigation-down-arrow' option='light' />}
+                        disableEdgeDetection
+                        placement='bottom' />
                 </Example>
 
                 <Example
@@ -187,43 +184,41 @@ export class PopoverComponent extends React.Component {
                         element must be tracked because if it overflows from its boundaries, the overlay
                         will be hidden as well.`}
                     title='Out Of Boundaries'>
-                    <div>
-                        <Button onClick={this.toggleModal}>Show Modal</Button>
-                        <Modal
-                            bodyProps={{
-                                style: {
-                                    width: '400px',
-                                    height: '200px',
-                                    textAlign: 'center',
-                                    overflowY: 'auto'
-                                }
-                            }}
-                            onClose={this.toggleModal}
-                            show={this.state.showModal}
-                            title='Overflow Example'>
-                            <p>Click the icon to show the popover and then scroll within the modal body...</p>
-                            <br />
-                            <br />
-                            <Popover
-                                body={bodyContent}
-                                control={<Icon glyph='menu2' size='xl' />}
-                                placement='bottom' />
-                            <br />
-                            <br />
-                            <br />
-                            <br />
-                            <br />
-                            <br />
-                            <br />
-                            <br />
-                            <br />
-                            <br />
-                            <br />
-                            <br />
-                            <br />
-                            <br />
-                        </Modal>
-                    </div>
+                    <Button onClick={this.toggleModal}>Show Modal</Button>
+                    <Modal
+                        bodyProps={{
+                            style: {
+                                width: '400px',
+                                height: '200px',
+                                textAlign: 'center',
+                                overflowY: 'auto'
+                            }
+                        }}
+                        onClose={this.toggleModal}
+                        show={this.state.showModal}
+                        title='Overflow Example'>
+                        <p>Click the icon to show the popover and then scroll within the modal body...</p>
+                        <br />
+                        <br />
+                        <Popover
+                            body={bodyContent}
+                            control={<Icon glyph='menu2' size='xl' />}
+                            placement='bottom' />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                    </Modal>
                 </Example>
 
             </ComponentPage>

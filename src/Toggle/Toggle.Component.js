@@ -20,15 +20,15 @@ export const ToggleComponent = () => {
                     consistent.`}
                 title='Sizes'>
                 <div>
-                    <Toggle id='Yj07w604' size='xs'>
+                    <Toggle size='xs'>
                         Extra Small toggle
                     </Toggle>
-                    <Toggle checked id='Yj07w605'
+                    <Toggle checked
                         size='s'>
                         Small toggle
                     </Toggle>
-                    <Toggle id='Yj07w606'>Normal toggle</Toggle>
-                    <Toggle checked id='Yj07w607'
+                    <Toggle>Normal toggle</Toggle>
+                    <Toggle checked
                         size='l'>
                         Large toggle
                     </Toggle>
@@ -38,19 +38,19 @@ export const ToggleComponent = () => {
             <Example
                 title='Disabled State'>
                 <div>
-                    <Toggle disabled id='Yj07w608'
+                    <Toggle disabled
                         size='xs'>
                         Extra Small toggle
                     </Toggle>
                     <Toggle checked disabled
-                        id='Yj07w609' size='s'>
+                        size='s'>
                         Small toggle
                     </Toggle>
-                    <Toggle disabled id='Yj07w610'>
+                    <Toggle disabled>
                         Normal toggle
                     </Toggle>
                     <Toggle checked disabled
-                        id='Yj07w611' size='l'>
+                        size='l'>
                         Large toggle
                     </Toggle>
                 </div>

@@ -1,3 +1,4 @@
+import 'fundamental-styles/dist/badge.css';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';

@@ -47,24 +47,21 @@ export class SearchInputComponent extends Component {
                 title='Search Input'>
 
                 <Example
+                    centered
                     title='Search Inputs'>
-                    <div>
-                        <SearchInput
-                            onEnter={term => this.getInputValue(term)}
-                            placeholder='Enter a fruit'
-                            searchList={this.searchData} />
-                        <br />
-                        <SearchInput
-                            noSearchBtn
-                            onChange={this.onChangeCallback}
-                            placeholder='Enter a fruit' />
-                        <br />
-                        <SearchInput
-                            compact
-                            onEnter={term => this.getInputValue(term)}
-                            placeholder='Enter a fruit'
-                            searchList={this.searchData} />
-                    </div>
+                    <SearchInput
+                        onEnter={term => this.getInputValue(term)}
+                        placeholder='Enter a fruit'
+                        searchList={this.searchData} />
+                    <SearchInput
+                        noSearchBtn
+                        onChange={this.onChangeCallback}
+                        placeholder='Enter a fruit' />
+                    <SearchInput
+                        compact
+                        onEnter={term => this.getInputValue(term)}
+                        placeholder='Enter a fruit'
+                        searchList={this.searchData} />
                 </Example>
 
             </ComponentPage>

@@ -2,7 +2,7 @@
 
 exports[`<FormMessage /> create form message 1`] = `
 <span
-  className="fd-form__message fd-form__message--help"
+  className="fd-form-message fd-form-message--help"
 >
   Pellentesque metus lacus commodo eget justo ut rutrum varius nunc
 </span>

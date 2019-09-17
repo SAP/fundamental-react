@@ -2,66 +2,66 @@
 
 exports[`<FormSet /> create form item 1`] = `
 <div
-  className="fd-form__set"
+  className="fd-form-group"
 >
   <div
-    className="fd-form__item fd-form__item--inline fd-form__item--check"
+    className="fd-form-item fd-form-item--inline"
   >
     <label
-      className="fd-form__label"
+      className="fd-form-label"
       forAttr="input-1"
     >
       Default Input
       
     </label>
     <input
-      className="fd-form__control"
+      className="fd-input"
       id="input-1"
       placeholder="Field placeholder text"
       type="text"
     />
   </div>
   <div
-    className="fd-form__item"
+    className="fd-form-item"
   >
     <label
       aria-required={true}
-      className="fd-form__label"
+      className="fd-form-label"
       forAttr="input-1"
     >
       Default Input
       *
     </label>
     <input
-      className="fd-form__control is-warning"
+      className="fd-input is-warning"
       id="input-1"
       placeholder="Field placeholder text"
       type="text"
     />
     <textarea
-      className="fd-form__control blue"
+      className="fd-textarea blue"
       id="textarea-1"
     >
       Pellentesque metus lacus commodo eget justo ut rutrum varius nunc.
     </textarea>
     <textarea
-      className="fd-form__control"
+      className="fd-textarea"
       id="textarea-2"
     >
       Pellentesque metus lacus commodo eget justo ut rutrum varius nunc.
     </textarea>
     <span
-      className="fd-form__message fd-form__message--help"
+      className="fd-form-message fd-form-message--help"
     >
       Pellentesque metus lacus commodo eget justo ut rutrum varius nunc
     </span>
     <span
-      className="fd-form__message blue"
+      className="fd-form-message blue"
     >
       Pellentesque metus lacus commodo eget justo ut rutrum varius nunc
     </span>
     <select
-      className="fd-form__control"
+      className="fd-form-select"
       id="select-1"
     >
       <option
@@ -81,7 +81,7 @@ exports[`<FormSet /> create form item 1`] = `
       </option>
     </select>
     <select
-      className="fd-form__control blue"
+      className="fd-form-select blue"
       disabled={true}
       id="select-1"
     >
@@ -97,20 +97,20 @@ exports[`<FormSet /> create form item 1`] = `
 
 exports[`<FormSet /> create form item 2`] = `
 <div
-  className="fd-form__set blue"
+  className="fd-form-group blue"
 >
   <div
-    className="fd-form__item fd-form__item--inline fd-form__item--check"
+    className="fd-form-item fd-form-item--inline"
   >
     <label
-      className="fd-form__label"
+      className="fd-form-label"
       forAttr="input-1"
     >
       Default Input
       
     </label>
     <input
-      className="fd-form__control"
+      className="fd-input"
       id="input-1"
       placeholder="Field placeholder text"
       type="text"

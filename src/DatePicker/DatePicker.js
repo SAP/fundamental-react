@@ -1,3 +1,7 @@
+import 'fundamental-styles/dist/popover.css';
+import 'fundamental-styles/dist/input-group.css';
+import 'fundamental-styles/dist/input.css';
+import Button from '../Button/Button';
 import Calendar from '../Calendar/Calendar';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
@@ -283,30 +287,22 @@ class DatePicker extends Component {
             disableWeekday, disablePastDates, disableFutureDates, blockedDates, disabledDates,
             compact, className, inputProps, buttonProps, onBlur, ...props } = this.props;
 
-        const datePickerClasses = classnames(
-            'fd-date-picker',
-            className
-        );
-
         const datePickerInputGroupClasses = classnames(
-            'fd-input-group',
-            'fd-input-group--after',
-            {
-                'fd-input-group--compact': compact
-            }
+            'fd-input-group'
         );
 
         const datePickerInputClasses = classnames(
             'fd-input',
             {
                 'fd-input--compact': compact
-            }
+            },
+            'fd-input-group__input'
         );
 
         return (
             <div
                 {...props}
-                className={datePickerClasses}
+                className={className}
                 ref={component => (this.component = component)}>
                 <div className='fd-popover'>
                     <div className='fd-popover__control'>
@@ -323,9 +319,11 @@ class DatePicker extends Component {
                                 type='text'
                                 value={this.state.formattedDate} />
                             <span className='fd-input-group__addon fd-input-group__addon--after fd-input-group__addon--button'>
-                                <button {...buttonProps}
-                                    className='fd-popover__control fd-button--light sap-icon--calendar'
-                                    onClick={() => this.openCalendar()} />
+                                <Button {...buttonProps}
+                                    compact={compact}
+                                    glyph='calendar'
+                                    onClick={() => this.openCalendar()}
+                                    option='light' />
                             </span>
                         </div>
                     </div>

@@ -1,3 +1,4 @@
+import 'fundamental-styles/dist/identifier.css';
 import classnames from 'classnames';
 import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import PropTypes from 'prop-types';
@@ -9,8 +10,8 @@ const Identifier = ({ glyph, size, modifier, color, label, backgroundImageUrl, c
         backgroundImage: `url(${backgroundImageUrl})`
     };
     const identifierClasses = classnames(
+        'fd-identifier',
         {
-            'fd-identifier': !size,
             [`fd-identifier--${size}`]: !!size,
             [`sap-icon--${glyph}`]: !!glyph,
             [`fd-identifier--${modifier}`]: !!modifier,

@@ -2,15 +2,15 @@
 
 exports[`<InputGroup /> create input group items 1`] = `
 <div
-  className="fd-input-group fd-input-group--before"
+  className="fd-input-group"
 >
   <span
-    className="fd-input-group__addon fd-input-group__addon--before"
+    className="fd-input-group__addon"
   >
     $
   </span>
   <input
-    className=""
+    className="fd-input fd-input-group__input"
     onChange={[Function]}
     type="text"
     value="1234567890"
@@ -20,16 +20,16 @@ exports[`<InputGroup /> create input group items 1`] = `
 
 exports[`<InputGroup /> create input group items 2`] = `
 <div
-  className="fd-input-group fd-input-group--after"
+  className="fd-input-group"
 >
   <input
-    className=""
+    className="fd-input fd-input-group__input"
     onChange={[Function]}
     type="text"
     value="1234567890"
   />
   <span
-    className="fd-input-group__addon fd-input-group__addon--after"
+    className="fd-input-group__addon"
   >
     €
   </span>
@@ -38,15 +38,15 @@ exports[`<InputGroup /> create input group items 2`] = `
 
 exports[`<InputGroup /> create input group items 3`] = `
 <div
-  className="fd-input-group fd-input-group--before fd-input-group--compact"
+  className="fd-input-group"
 >
   <span
-    className="fd-input-group__addon fd-input-group__addon--before"
+    className="fd-input-group__addon"
   >
     $
   </span>
   <input
-    className="fd-input fd-input--compact"
+    className="fd-input fd-input--compact fd-input-group__input"
     onChange={[Function]}
     type="text"
     value="1234567890"
@@ -56,16 +56,16 @@ exports[`<InputGroup /> create input group items 3`] = `
 
 exports[`<InputGroup /> create input group items 4`] = `
 <div
-  className="fd-input-group fd-input-group--after fd-input-group--compact"
+  className="fd-input-group"
 >
   <input
-    className="fd-input fd-input--compact"
+    className="fd-input fd-input--compact fd-input-group__input"
     onChange={[Function]}
     type="text"
     value="1234567890"
   />
   <span
-    className="fd-input-group__addon fd-input-group__addon--after"
+    className="fd-input-group__addon"
   >
     €
   </span>
@@ -74,25 +74,25 @@ exports[`<InputGroup /> create input group items 4`] = `
 
 exports[`<InputGroup /> create input group items 5`] = `
 <div
-  className="fd-input-group fd-input-group--after"
+  className="fd-input-group"
 >
   <input
-    className=""
+    className="fd-input fd-input-group__input fd-input--no-number-spinner"
     onChange={[Function]}
     type="number"
     value={100}
   />
   <span
-    className="fd-input-group__addon fd-input-group__addon--button fd-input-group__addon--after"
+    className="fd-input-group__addon fd-input-group__addon--button"
   >
     <button
       aria-label="Step up"
-      className="fd-input-group__button fd-input-group__button--step-up sap-icon--slim-arrow-up"
+      className="fd-button--light sap-icon--slim-arrow-up fd-button--half"
       onClick={[Function]}
     />
     <button
       aria-label="Step down"
-      className="fd-input-group__button fd-input-group__button--step-down sap-icon--slim-arrow-down"
+      className="fd-button--light sap-icon--slim-arrow-down fd-button--half"
       onClick={[Function]}
     />
   </span>
@@ -101,25 +101,25 @@ exports[`<InputGroup /> create input group items 5`] = `
 
 exports[`<InputGroup /> create input group items 6`] = `
 <div
-  className="fd-input-group fd-input-group--after fd-input-group--compact"
+  className="fd-input-group"
 >
   <input
-    className="fd-input fd-input--compact"
+    className="fd-input fd-input--compact fd-input-group__input fd-input--no-number-spinner"
     onChange={[Function]}
     type="number"
     value={100}
   />
   <span
-    className="fd-input-group__addon fd-input-group__addon--button fd-input-group__addon--after"
+    className="fd-input-group__addon fd-input-group__addon--button"
   >
     <button
       aria-label="Step up"
-      className="fd-input-group__button fd-input-group__button--step-up sap-icon--slim-arrow-up"
+      className="fd-button--light fd-button--compact sap-icon--slim-arrow-up fd-button--half"
       onClick={[Function]}
     />
     <button
       aria-label="Step down"
-      className="fd-input-group__button fd-input-group__button--step-down sap-icon--slim-arrow-down"
+      className="fd-button--light fd-button--compact sap-icon--slim-arrow-down fd-button--half"
       onClick={[Function]}
     />
   </span>
@@ -130,185 +130,184 @@ exports[`<InputGroup /> create input group items 7`] = `
 <div
   className="fd-input-group"
 >
-  <input
-    className=""
-    onChange={[Function]}
-    placeholder="Search Term"
-    type="search"
-    value=""
-  />
   <span
-    className="fd-input-group__addon fd-input-group__addon--button"
+    className="fd-input-group__addon"
   >
-    <button
-      aria-label="Clear"
-      className="fd-input-group__button fd-input-group__button--clear"
-      onClick={[Function]}
+    <span
+      className="sap-icon--globe"
+      role="presentation"
     />
   </span>
+  <input
+    className="fd-input fd-input-group__input"
+    onChange={[Function]}
+    type="text"
+    value="1234567890"
+  />
 </div>
 `;
 
 exports[`<InputGroup /> create input group items 8`] = `
 <div
-  className="fd-input-group fd-input-group--compact"
+  className="fd-input-group"
 >
-  <input
-    className="fd-input fd-input--compact"
-    onChange={[Function]}
-    placeholder="Search Term"
-    type="search"
-    value="search me"
-  />
   <span
-    className="fd-input-group__addon fd-input-group__addon--button"
+    className="fd-input-group__addon"
   >
-    <button
-      aria-label="Clear"
-      className="fd-input-group__button fd-input-group__button--clear"
-      onClick={[Function]}
+    <span
+      className="sap-icon--globe"
+      role="presentation"
     />
   </span>
+  <input
+    className="fd-input fd-input--compact fd-input-group__input"
+    onChange={[Function]}
+    type="text"
+    value="1234567890"
+  />
 </div>
 `;
 
 exports[`<InputGroup /> create input group items 9`] = `
 <div
-  className="fd-input-group fd-input-group--before"
->
-  <span
-    className="fd-input-group__addon fd-input-group__addon--before"
-  >
-    <span
-      className="sap-icon--globe"
-      role="presentation"
-    />
-  </span>
-  <input
-    className=""
-    onChange={[Function]}
-    type="text"
-    value="1234567890"
-  />
-</div>
-`;
-
-exports[`<InputGroup /> create input group items 10`] = `
-<div
-  className="fd-input-group fd-input-group--before fd-input-group--compact"
->
-  <span
-    className="fd-input-group__addon fd-input-group__addon--before"
-  >
-    <span
-      className="sap-icon--globe"
-      role="presentation"
-    />
-  </span>
-  <input
-    className="fd-input fd-input--compact"
-    onChange={[Function]}
-    type="text"
-    value="1234567890"
-  />
-</div>
-`;
-
-exports[`<InputGroup /> create input group items 11`] = `
-<div
-  className="fd-input-group fd-input-group--after"
+  className="fd-input-group"
 >
   <input
-    className=""
+    className="fd-input fd-input-group__input"
     onChange={[Function]}
     type="text"
     value="1234567890"
   />
   <span
-    className="fd-input-group__addon fd-input-group__addon--after"
+    className="fd-input-group__addon"
   >
     <span
       className="sap-icon--hide"
       role="presentation"
     />
+  </span>
+</div>
+`;
+
+exports[`<InputGroup /> create input group items 10`] = `
+<div
+  className="fd-input-group"
+>
+  <input
+    className="fd-input fd-input--compact fd-input-group__input"
+    onChange={[Function]}
+    type="text"
+    value="1234567890"
+  />
+  <span
+    className="fd-input-group__addon"
+  >
+    <span
+      className="sap-icon--hide"
+      role="presentation"
+    />
+  </span>
+</div>
+`;
+
+exports[`<InputGroup /> create input group items 11`] = `
+<div
+  className="fd-input-group"
+>
+  <input
+    className="fd-input fd-input-group__input"
+    onChange={[Function]}
+    type="text"
+    value="1234567890"
+  />
+  <span
+    className="fd-input-group__addon fd-input-group__addon--button"
+  >
+    <button
+      className="fd-button--light"
+    >
+      Button
+    </button>
   </span>
 </div>
 `;
 
 exports[`<InputGroup /> create input group items 12`] = `
 <div
-  className="fd-input-group fd-input-group--after fd-input-group--compact"
+  className="fd-input-group"
 >
   <input
-    className="fd-input fd-input--compact"
+    className="fd-input fd-input--compact fd-input-group__input"
     onChange={[Function]}
     type="text"
     value="1234567890"
   />
   <span
-    className="fd-input-group__addon fd-input-group__addon--after"
+    className="fd-input-group__addon fd-input-group__addon--button"
   >
-    <span
-      className="sap-icon--hide"
-      role="presentation"
-    />
+    <button
+      className="fd-button--light"
+    >
+      Button
+    </button>
   </span>
 </div>
 `;
 
 exports[`<InputGroup /> create input group items 13`] = `
 <div
-  className="fd-input-group fd-input-group--after"
+  className="fd-input-group"
 >
+  <span
+    className="fd-input-group__addon fd-input-group__addon--button"
+  />
   <input
-    className=""
+    className="fd-input fd-input-group__input"
     onChange={[Function]}
     type="text"
     value="1234567890"
   />
-  <span
-    className="fd-input-group__addon fd-input-group__addon--button fd-input-group__addon--after"
-  >
-    <button
-      className="fd-button--light"
-    >
-      Button
-    </button>
-  </span>
 </div>
 `;
 
 exports[`<InputGroup /> create input group items 14`] = `
 <div
-  className="fd-input-group fd-input-group--after fd-input-group--compact"
+  className="custom-div-class-search fd-input-group"
 >
   <input
-    className="fd-input fd-input--compact"
+    className="fd-input custom-input-class-search fd-input-group__input fd-input--no-number-spinner"
     onChange={[Function]}
-    type="text"
-    value="1234567890"
+    type="number"
+    value={100}
   />
   <span
-    className="fd-input-group__addon fd-input-group__addon--button fd-input-group__addon--after"
+    className="fd-input-group__addon fd-input-group__addon--button"
   >
     <button
-      className="fd-button--light"
-    >
-      Button
-    </button>
+      aria-label="Step up"
+      className="fd-button--light sap-icon--slim-arrow-up fd-button--half"
+      onClick={[Function]}
+    />
+    <button
+      aria-label="Step down"
+      className="fd-button--light sap-icon--slim-arrow-down fd-button--half"
+      onClick={[Function]}
+    />
   </span>
 </div>
 `;
 
 exports[`<InputGroup /> create input group items 15`] = `
 <div
-  className="fd-input-group fd-input-group--before"
+  className="custom-div-class-before fd-input-group"
 >
   <span
-    className="fd-input-group__addon fd-input-group__addon--button fd-input-group__addon--before"
-  />
+    className="fd-input-group__addon"
+  >
+    $
+  </span>
   <input
-    className=""
+    className="fd-input custom-input-class-before fd-input-group__input"
     onChange={[Function]}
     type="text"
     value="1234567890"
@@ -318,88 +317,20 @@ exports[`<InputGroup /> create input group items 15`] = `
 
 exports[`<InputGroup /> create input group items 16`] = `
 <div
-  className="custom-div-class-search fd-input-group fd-input-group--after"
+  className="custom-div-class-after fd-input-group"
 >
   <input
-    className="custom-input-class-search"
-    onChange={[Function]}
-    type="number"
-    value={100}
-  />
-  <span
-    className="fd-input-group__addon fd-input-group__addon--button fd-input-group__addon--after"
-  >
-    <button
-      aria-label="Step up"
-      className="fd-input-group__button fd-input-group__button--step-up sap-icon--slim-arrow-up"
-      onClick={[Function]}
-    />
-    <button
-      aria-label="Step down"
-      className="fd-input-group__button fd-input-group__button--step-down sap-icon--slim-arrow-down"
-      onClick={[Function]}
-    />
-  </span>
-</div>
-`;
-
-exports[`<InputGroup /> create input group items 17`] = `
-<div
-  className="custom-div-class-number fd-input-group"
->
-  <input
-    className="custom-input-class-number"
-    onChange={[Function]}
-    placeholder="Search"
-    type="search"
-    value=""
-  />
-  <span
-    className="fd-input-group__addon fd-input-group__addon--button"
-  >
-    <button
-      aria-label="Clear"
-      className="fd-input-group__button fd-input-group__button--clear"
-      onClick={[Function]}
-    />
-  </span>
-</div>
-`;
-
-exports[`<InputGroup /> create input group items 18`] = `
-<div
-  className="custom-div-class-before fd-input-group fd-input-group--before"
->
-  <span
-    className="fd-input-group__addon fd-input-group__addon--before"
-  >
-    $
-  </span>
-  <input
-    className="custom-input-class-before"
-    onChange={[Function]}
-    type="text"
-    value="1234567890"
-  />
-</div>
-`;
-
-exports[`<InputGroup /> create input group items 19`] = `
-<div
-  className="custom-div-class-after fd-input-group fd-input-group--after"
->
-  <input
-    className="custom-input-class-after"
+    className="fd-input custom-input-class-after fd-input-group__input"
     onChange={[Function]}
     type="text"
     value="1234567890"
   />
   <span
-    className="fd-input-group__addon fd-input-group__addon--after"
+    className="fd-input-group__addon"
   >
     €
   </span>
 </div>
 `;
 
-exports[`<InputGroup /> create input group items 20`] = `"<InputGroup />"`;
+exports[`<InputGroup /> create input group items 17`] = `"<InputGroup />"`;

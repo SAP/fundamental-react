@@ -113,7 +113,7 @@ describe('<FormFieldset />', () => {
                 </FormRadioItem>
             </FormRadioGroup>
             <FormLegend legendText='Checkboxes' />
-            <FormItem className='blue' isCheck>
+            <FormItem className='blue'>
                 <FormInput
                     className='blue'
                     id='checkbox-1'

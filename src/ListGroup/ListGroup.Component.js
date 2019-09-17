@@ -1,8 +1,7 @@
-import { listOfIcons } from '../utils/listOfIcons';
 import path from 'path';
 import React from 'react';
 import { Button, ListGroup } from '../';
-import { ComponentPage, Example, Playground, Separator } from '../_playground';
+import { ComponentPage, Example } from '../_playground';
 
 export const ListGroupComponent = () => {
     return (
@@ -61,31 +60,6 @@ export const ListGroupComponent = () => {
                     <ListGroup.Item><ListGroup.ItemCheckbox>List item 4</ListGroup.ItemCheckbox></ListGroup.Item>
                 </ListGroup>
             </Example>
-
-            <Separator />
-
-            <Playground component='listgroup' schema={[
-                {
-                    attribute: 'children',
-                    typeOfAttribute: 'string'
-                },
-                {
-                    attribute: 'glyph',
-                    typeOfAttribute: 'string',
-                    'enum': listOfIcons
-                }
-            ]}>
-
-                <ListGroup>
-                    <ListGroup.Item>List item 1
-                        <ListGroup.ItemActions>
-                            <Button glyph='edit' />
-                        </ListGroup.ItemActions>
-                    </ListGroup.Item>
-                </ListGroup>
-
-            </Playground>
-
         </ComponentPage>
     );
 };

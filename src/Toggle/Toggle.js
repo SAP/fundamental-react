@@ -1,4 +1,7 @@
+import 'fundamental-styles/dist/toggle.css';
 import classnames from 'classnames';
+import FormItem from '../Forms/FormItem';
+import FormLabel from '../Forms/FormLabel';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { TOGGLE_SIZES } from '../utils/constants';
@@ -20,34 +23,27 @@ class Toggle extends React.Component {
     render() {
         const { size, id, checked, disabled, children, className, labelProps, inputProps, onChange, ...rest } = this.props;
 
-        const toggleClasses = classnames(
-            'fd-form__item',
-            'fd-form__item--check',
-            className
-        );
-
         const spanClasses = classnames(
             'fd-toggle',
             {
                 // There is no `m` technically, but if you provide size m, you get the default size.
                 [`fd-toggle--${size}`]: !!size && size !== 'm'
-            },
-            'fd-form__control'
+            }
         );
 
         return (
-            <div
+            <FormItem
                 {...rest}
-                className={toggleClasses}>
-                <label
+                className={className}>
+                <FormLabel
+                    disabled={disabled}
                     {...labelProps}
-                    className='fd-form__label'
                     htmlFor={id}>
-                    <span
-                        className={spanClasses}>
+                    <span className={spanClasses}>
                         <input
                             {...inputProps}
                             checked={this.state.checked}
+                            className='fd-toggle__input'
                             disabled={disabled}
                             id={id}
                             onChange={this.handleChange}
@@ -55,8 +51,8 @@ class Toggle extends React.Component {
                         <span className='fd-toggle__switch' role='presentation' />
                     </span>
                     {children}
-                </label>
-            </div>
+                </FormLabel>
+            </FormItem>
         );
     }
 }

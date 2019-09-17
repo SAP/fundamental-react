@@ -1,3 +1,4 @@
+import 'fundamental-styles/dist/image.css';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';

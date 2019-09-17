@@ -1,28 +1,23 @@
 import classnames from 'classnames';
+import Link from '../Link/Link';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-const MenuItem = ({ url, isLink, separator, addon, children, onclick, className, addonProps, urlProps, ...props }) => {
-    const menuItemLinkClasses = classnames(
-        'fd-menu__item',
-        {
-            'fd-menu__link': isLink
-        }
-    );
+const MenuItem = ({ url, isLink, addon, children, onclick, className, separator, addonProps, urlProps, ...props }) => {
 
     const renderLink = () => {
         if (url) {
             return (
-                <a {...urlProps}
-                    className={menuItemLinkClasses}
+                <Link {...urlProps}
+                    className='fd-menu__item'
                     href={url}
                     onClick={onclick}>
                     {children}
-                </a>
+                </Link>
             );
         } else if (children && React.isValidElement(children)) {
             const childrenClassnames = classnames(
-                menuItemLinkClasses,
+                'fd-menu__item',
                 children.props.className
             );
 
@@ -69,7 +64,7 @@ MenuItem.propDescriptions = {
     addonProps: 'Additional props to be spread to the add-on section.',
     children: 'component - can be used to pass React Router <Link> or any other component which emits an <a>.',
     isLink: 'Set to **true** to style as a link.',
-    separator: 'Set to **true** to add a horizontal line (separator).',
+    separator: 'Set to true to add a horizontal line (separator).',
     url: 'Enables use of `<a>` element. Value to be applied to the anchor\'s `href` attribute. Should use either `link` or `url`, but not both.',
     urlProps: 'Additional props to be spread to the Menu Item links (when using `url`).'
 };

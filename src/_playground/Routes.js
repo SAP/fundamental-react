@@ -19,6 +19,8 @@ import { ImageComponent } from '../Image/Image.Component';
 import { InlineHelpComponent } from '../InlineHelp/InlineHelp.Component';
 import InputGroup from '../InputGroup/InputGroup';
 import { InputGroupComponent } from '../InputGroup/InputGroup.Component';
+import { LayoutGridComponent } from '../LayoutGrid/LayoutGrid.Component';
+import { LinkComponent } from '../Link/Link.Component';
 import { ListGroupComponent } from '../ListGroup/ListGroup.Component';
 import { LocalizationEditorComponent } from '../LocalizationEditor/LocalizationEditor.Component';
 import { MenuComponent } from '../Menu/Menu.Component';
@@ -154,6 +156,18 @@ const routes = [
         url: '/inputGroup',
         name: 'Input Group',
         component: InputGroupComponent,
+        section: 'Components'
+    },
+    {
+        url: '/layout-grid',
+        name: 'Layout Grid',
+        component: LayoutGridComponent,
+        section: 'Components'
+    },
+    {
+        url: '/link',
+        name: 'Link',
+        component: LinkComponent,
         section: 'Components'
     },
     {
@@ -362,9 +376,8 @@ export class Routes extends Component {
                             <Button
                                 aria-expanded={this.state.showSideNav}
                                 aria-label='Toggle Navigation'
-                                className='fd-button__navToggle'
                                 glyph='menu2'
-                                navbar
+                                id='navToggle'
                                 onClick={this.toggleNavVis}
                                 option='light'
                                 type='standard' />
@@ -388,9 +401,9 @@ export class Routes extends Component {
                         <div className={sideBarClasses}>
                             <div className='frDocs-Search'>
                                 <InputGroup
+                                    glyph='search'
                                     inputPlaceholder='Search'
                                     inputProps={{ 'aria-label': 'Search' }}
-                                    inputType='search'
                                     inputValue={this.state.query}
                                     onChange={this.onChangeHandler} />
                             </div>

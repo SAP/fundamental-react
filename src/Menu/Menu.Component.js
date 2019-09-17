@@ -18,10 +18,10 @@ export const MenuComponent = () => {
                 title='Basic Menu'>
                 <Menu>
                     <Menu.List>
-                        <Menu.Item url='/'>Option 1</Menu.Item>
-                        <Menu.Item url='/'>Option 2</Menu.Item>
-                        <Menu.Item url='/'>Option 3</Menu.Item>
-                        <Menu.Item url='/'>Option 4</Menu.Item>
+                        <Menu.Item url='#'>Option 1</Menu.Item>
+                        <Menu.Item url='#'>Option 2</Menu.Item>
+                        <Menu.Item url='#'>Option 3</Menu.Item>
+                        <Menu.Item url='#'>Option 4</Menu.Item>
                     </Menu.List>
                 </Menu>
             </Example>
@@ -32,25 +32,25 @@ export const MenuComponent = () => {
                 <Menu>
                     <Menu.List>
                         <Menu.Item>
-                            <Link to='/'>Option 1</Link>
+                            <Link to='#'>Option 1</Link>
                         </Menu.Item>
                         <Menu.Item>
-                            <Link to='/'>Option 2</Link>
+                            <Link to='#'>Option 2</Link>
                         </Menu.Item>
                         <Menu.Item>
-                            <Link to='/'>Option 3</Link>
+                            <Link to='#'>Option 3</Link>
                         </Menu.Item>
                     </Menu.List>
                     <Menu.Group title='Group Header'>
                         <Menu.List>
                             <Menu.Item>
-                                <Link to='/'>Option 4</Link>
+                                <Link to='#'>Option 4</Link>
                             </Menu.Item>
                             <Menu.Item>
-                                <Link to='/'>Option 5</Link>
+                                <Link to='#'>Option 5</Link>
                             </Menu.Item>
                             <Menu.Item>
-                                <Link to='/'>Option 6</Link>
+                                <Link to='#'>Option 6</Link>
                             </Menu.Item>
                         </Menu.List>
                     </Menu.Group>
@@ -63,16 +63,16 @@ export const MenuComponent = () => {
                 <Menu>
                     <Menu.List>
                         <Menu.Item separator>
-                            <Link to='/'>Option 1</Link>
-                        </Menu.Item>
-                        <Menu.Item separator>
-                            <Link to='/'>Option 2</Link>
-                        </Menu.Item>
-                        <Menu.Item separator>
-                            <Link to='/'>Option 3</Link>
+                            <Link to='#'>Option 1</Link>
                         </Menu.Item>
                         <Menu.Item>
-                            <Link to='/'>Option 4</Link>
+                            <Link to='#'>Option 2</Link>
+                        </Menu.Item>
+                        <Menu.Item separator>
+                            <Link to='#'>Option 3</Link>
+                        </Menu.Item>
+                        <Menu.Item>
+                            <Link to='#'>Option 4</Link>
                         </Menu.Item>
                     </Menu.List>
                 </Menu>
@@ -84,16 +84,16 @@ export const MenuComponent = () => {
                 <Menu addonBefore>
                     <Menu.List>
                         <Menu.Item>
-                            <Link to='/'>Option 1</Link>
+                            <Link to='#'>Option 1</Link>
                         </Menu.Item>
                         <Menu.Item addon='accept'>
-                            <Link to='/'>Option 2</Link>
+                            <Link to='#'>Option 2</Link>
                         </Menu.Item>
                         <Menu.Item>
-                            <Link to='/'>Option 3</Link>
+                            <Link to='#'>Option 3</Link>
                         </Menu.Item>
                         <Menu.Item>
-                            <Link to='/'>Option 4</Link>
+                            <Link to='#'>Option 4</Link>
                         </Menu.Item>
                     </Menu.List>
                 </Menu>

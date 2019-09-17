@@ -1,3 +1,4 @@
+import 'fundamental-styles/dist/token.css';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';

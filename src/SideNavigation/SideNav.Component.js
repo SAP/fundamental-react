@@ -227,32 +227,34 @@ export const SideNavigationComponent = () => {
                     navigation is collapsed. Note that the suggested use is when there is only one level of navigation as
                     the user can only see one level of navigation when collapsed.`}
                 title='Side navigation collapsed with icon'>
-                <SideNav
-                    icons
-                    selectedId='item-2'>
-                    <SideNav.List>
-                        <SideNav.ListItem
-                            glyph='home'
-                            id='item-1'
-                            url='#' />
-                        <SideNav.ListItem
-                            glyph='home'
-                            id='item-2'
-                            url='#' />
-                        <SideNav.ListItem
-                            glyph='home'
-                            id='item-3'
-                            url='#' />
-                        <SideNav.ListItem
-                            glyph='home'
-                            id='item-4'
-                            url='#' />
-                        <SideNav.ListItem
-                            glyph='home'
-                            id='item-5'
-                            url='#' />
-                    </SideNav.List>
-                </SideNav>
+                <div style={{ 'maxWidth': '65px' }}>
+                    <SideNav
+                        icons
+                        selectedId='item-2'>
+                        <SideNav.List>
+                            <SideNav.ListItem
+                                glyph='home'
+                                id='item-1'
+                                url='#' />
+                            <SideNav.ListItem
+                                glyph='home'
+                                id='item-2'
+                                url='#' />
+                            <SideNav.ListItem
+                                glyph='home'
+                                id='item-3'
+                                url='#' />
+                            <SideNav.ListItem
+                                glyph='home'
+                                id='item-4'
+                                url='#' />
+                            <SideNav.ListItem
+                                glyph='home'
+                                id='item-5'
+                                url='#' />
+                        </SideNav.List>
+                    </SideNav>
+                </div>
             </Example>
 
         </ComponentPage>

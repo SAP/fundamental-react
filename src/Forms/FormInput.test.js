@@ -8,8 +8,7 @@ describe('<FormInput />', () => {
         <FormInput
             id='input-1'
             placeholder='Field placeholder text'
-            state='warning'
-            type='text' />
+            state='warning' />
     );
 
     test('create form input item', () => {
@@ -17,6 +16,16 @@ describe('<FormInput />', () => {
         let component = renderer.create(formInput);
         let tree = component.toJSON();
         expect(tree).toMatchSnapshot();
+    });
+
+    describe('rendering', () => {
+        test('should add compact class when compact prop added', () => {
+            const element = mount(<FormInput compact />);
+
+            expect(
+                element.find('input').hasClass('fd-input--compact')
+            ).toBe(true);
+        });
     });
 
     describe('Prop spreading', () => {

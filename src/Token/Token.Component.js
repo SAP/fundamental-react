@@ -16,12 +16,10 @@ export const TokenComponent = () => {
             <Example
                 centered
                 title='Token'>
-                <div className='fd-doc__margin--token'>
-                    <Token onClick={(e) => closeAction('Bibendum', e)}>Bibendum</Token>
-                    <Token onClick={(e) => closeAction('Lorem', e)}>Lorem</Token>
-                    <Token onClick={(e) => closeAction('Dolor', e)}>Dolor</Token>
-                    <Token onClick={(e) => closeAction('Filter', e)}>Filter</Token>
-                </div>
+                <Token onClick={(e) => closeAction('Bibendum', e)}>Bibendum</Token>
+                <Token onClick={(e) => closeAction('Lorem', e)}>Lorem</Token>
+                <Token onClick={(e) => closeAction('Dolor', e)}>Dolor</Token>
+                <Token onClick={(e) => closeAction('Filter', e)}>Filter</Token>
             </Example>
 
         </ComponentPage>

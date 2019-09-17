@@ -1,6 +1,9 @@
+import 'fundamental-styles/dist/alert.css';
 import { ALERT_TYPES } from '../utils/constants';
 import classnames from 'classnames';
 import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
+import Icon from '../Icon/Icon';
+import Link from '../Link/Link';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 
@@ -59,16 +62,19 @@ class Alert extends Component {
                                 className='fd-alert__close'
                                 onClick={this.closeAlertHandler} />
                         )}
-                        {children}
-                        {link && (
-                            <a
-                                {...linkProps}
-                                className='fd-link'
-                                href={link}>
-                                {linkText}{' '}
-                                <span className='sap-icon--arrow-right sap-icon--s' />
-                            </a>
-                        )}
+                        <div className='fd-alert__text'>
+                            {type && (
+                                <Icon glyph={`mesage-${type}`} />
+                            )}
+                            {children}
+                            {link && (
+                                <Link
+                                    {...linkProps}
+                                    href={link}>
+                                    {linkText}{' '}
+                                </Link>
+                            )}
+                        </div>
                     </div>
                 )}
             </div>

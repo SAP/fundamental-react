@@ -1,3 +1,4 @@
+import 'fundamental-styles/dist/icon.css';
 import classnames from 'classnames';
 import { ICON_SIZES } from '../utils/constants';
 import PropTypes from 'prop-types';

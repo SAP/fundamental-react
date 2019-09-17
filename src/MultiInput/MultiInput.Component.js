@@ -28,10 +28,6 @@ export class MultiInputComponent extends Component {
         };
     }
 
-    performTagsUpdate = aTags => {
-        alert(aTags);
-    };
-
     render() {
         return (
             <ComponentPage
@@ -43,7 +39,6 @@ export class MultiInputComponent extends Component {
                     title='Default'>
                     <MultiInput
                         data={this.data}
-                        onTagsUpdate={this.performTagsUpdate}
                         placeHolder='Select a Fruit' />
                 </Example>
 
@@ -52,7 +47,6 @@ export class MultiInputComponent extends Component {
                     <MultiInput
                         compact
                         data={this.data}
-                        onTagsUpdate={this.performTagsUpdate}
                         placeHolder='Select a Fruit' />
                 </Example>
 

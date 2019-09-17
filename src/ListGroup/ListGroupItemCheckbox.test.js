@@ -5,7 +5,7 @@ import renderer from 'react-test-renderer';
 
 describe('<ListGroupItemCheckbox />', () => {
     const listGroupItemCheckbox = (
-        <ListGroup.ItemCheckbox>List item 1</ListGroup.ItemCheckbox>
+        <ListGroup.ItemCheckbox id='foo'>List item 1</ListGroup.ItemCheckbox>
     );
 
     test('create list group', () => {
@@ -17,7 +17,6 @@ describe('<ListGroupItemCheckbox />', () => {
 
     describe('Prop spreading', () => {
         test('should allow props to be spread to the ListGroupItemCheckbox component', () => {
-            // TODO: placeholder for this test description once that functionality is built
             const element = mount(<ListGroup.ItemCheckbox data-sample='Sample' />);
 
             expect(

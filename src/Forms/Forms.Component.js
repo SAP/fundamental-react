@@ -1,7 +1,7 @@
 import path from 'path';
 import React from 'react';
+import { Checkbox, FormFieldset, FormInput, FormItem, FormLabel, FormLegend, FormMessage, FormRadioGroup, FormRadioItem, FormSelect, FormSet, FormTextarea, InlineHelp } from '../';
 import { ComponentPage, Example } from '../_playground';
-import { FormFieldset, FormInput, FormItem, FormLabel, FormLegend, FormMessage, FormRadioGroup, FormRadioItem, FormSelect, FormSet, FormTextarea } from '../';
 
 export const FormsComponent = () => {
     return (
@@ -68,11 +68,10 @@ export const FormsComponent = () => {
                         <FormItem>
                             <FormLabel htmlFor='input-4'>
                                 Input with inline help
-                                <span className='fd-inline-help fd-has-float-right'>
-                                    <span className='fd-inline-help__content fd-inline-help__content--bottom-right'>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing.
-                                    </span>
-                                </span>
+                                <InlineHelp
+                                    className='fd-has-float-right'
+                                    placement='bottom-left'
+                                    text='Lorem ipsum dolor sit amet, consectetur adipiscing.' />
                             </FormLabel>
                             <FormInput id='input-4' type='text' />
                         </FormItem>
@@ -273,51 +272,36 @@ export const FormsComponent = () => {
                 description={`With checkboxes, all options are visible and the user can make one or more selections.
                     This component can also be disabled and displayed in a row.`}
                 title='Checkboxes'>
-                <div>
-                    <FormFieldset>
-                        <FormLegend>Checkboxes</FormLegend>
-                        <FormItem isCheck>
-                            <FormInput id='checkbox-1' name='checkbox-name-1'
-                                type='checkbox' value='' />
-                            <FormLabel htmlFor='checkbox-1'>Option One</FormLabel>
-                        </FormItem>
-                        <FormItem isCheck>
-                            <FormInput id='checkbox-2' name='checkbox-name-2'
-                                type='checkbox' value='' />
-                            <FormLabel htmlFor='checkbox-2'>Option Two</FormLabel>
-                        </FormItem>
-                        <FormItem isCheck>
-                            <FormInput id='checkbox-3' name='checkbox-name-3'
-                                type='checkbox' value='' />
-                            <FormLabel htmlFor='checkbox-3'>Option Three</FormLabel>
-                        </FormItem>
-                    </FormFieldset>
+                <FormFieldset>
+                    <FormLegend>Checkboxes</FormLegend>
+                    <Checkbox
+                        defaultChecked
+                        id='checkbox-1'
+                        name='checkbox-name-1'
+                        value='Option One' />
+                    <Checkbox
+                        disabled
+                        id='checkbox-2'
+                        name='checkbox-name-2'
+                        value='Option Two' />
+                    <Checkbox
+                        id='checkbox-3'
+                        indeterminate
+                        name='checkbox-name-3'
+                        value='Option Three' />
+                </FormFieldset>
 
-                    <FormFieldset>
-                        <FormLegend>Inline Checkbox buttons</FormLegend>
-                        <FormItem isCheck isInline>
-                            <FormLabel htmlFor='checkbox-4'>
-                                <FormInput id='checkbox-4' name='checkbox-name-4'
-                                    type='checkbox' value='' />
-                                Option One
-                            </FormLabel>
-                        </FormItem>
-                        <FormItem isCheck isInline>
-                            <FormLabel htmlFor='checkbox-5'>
-                                <FormInput id='checkbox-5' name='checkbox-name-5'
-                                    type='checkbox' value='' />
-                                Option Two
-                            </FormLabel>
-                        </FormItem>
-                        <FormItem isCheck isInline>
-                            <FormLabel htmlFor='checkbox-6'>
-                                <FormInput id='checkbox-6' name='checkbox-name-6'
-                                    type='checkbox' value='' />
-                                Option Three
-                            </FormLabel>
-                        </FormItem>
-                    </FormFieldset>
-                </div>
+                <FormFieldset>
+                    <FormLegend>Inline Checkbox buttons</FormLegend>
+                    <FormRadioGroup inline>
+                        <Checkbox id='checkbox-4' name='checkbox-name-4'
+                            value='Option One' />
+                        <Checkbox id='checkbox-5' name='checkbox-name-5'
+                            value='Option Two' />
+                        <Checkbox id='checkbox-6' name='checkbox-name-6'
+                            value='Option Three' />
+                    </FormRadioGroup>
+                </FormFieldset>
             </Example>
 
         </ComponentPage>

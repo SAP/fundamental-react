@@ -26,7 +26,7 @@ const componentDirs = readdirSync(srcPath).map(name => path.join(srcPath, name))
 });
 
 //ignore scss imports
-require.extensions['.scss'] = function(module, filename) {
+require.extensions['.css'] = function(module, filename) {
     console.info(`Ignoring ${filename} import`);  // eslint-disable-line
 };
 

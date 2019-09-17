@@ -38,7 +38,7 @@ describe('<ListGroup />', () => {
     const listGroupCheckbox = (
         <ListGroup>
             <ListGroup.Item>
-                <ListGroup.ItemCheckbox>List item 1</ListGroup.ItemCheckbox>
+                <ListGroup.ItemCheckbox id='foo2'>List item 1</ListGroup.ItemCheckbox>
             </ListGroup.Item>
         </ListGroup>
     );

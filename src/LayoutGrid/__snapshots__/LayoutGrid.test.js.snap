@@ -1,0 +1,169 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<LayoutGrid /> layoutGrid snapshots 1`] = `
+<div
+  className="fd-layout-grid blue"
+>
+  <div
+    className="fd-panel fd-layout-grid__span-column-2"
+  >
+    <div
+      className="fd-panel__head"
+    >
+      <h3
+        className="fd-panel__title"
+      >
+        Panel Header with Actions
+      </h3>
+    </div>
+    <div
+      className="fd-panel__body"
+    >
+      Panel
+    </div>
+  </div>
+  <div
+    className="fd-panel"
+  >
+    <div
+      className="fd-panel__head"
+    >
+      <p
+        className="fd-panel__description"
+      >
+        Panel Description
+      </p>
+    </div>
+    <div
+      className="fd-panel__body"
+    >
+      Panel
+    </div>
+  </div>
+  <div
+    className="fd-panel"
+  >
+    <div
+      className="fd-panel__head"
+    />
+    <div
+      className="fd-panel__body"
+    >
+      Panel
+    </div>
+  </div>
+  <div
+    className="fd-panel"
+  >
+    <div
+      className="fd-panel__body"
+    >
+      Panel
+    </div>
+  </div>
+  <div
+    className="fd-panel"
+  >
+    <div
+      className="fd-panel__body"
+    >
+      Panel
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<LayoutGrid /> layoutGrid snapshots 2`] = `
+<div
+  className="fd-layout-grid fd-layout-grid--col-2"
+>
+  <div
+    className="fd-panel"
+  >
+    <div
+      className="fd-panel__body"
+    >
+      Panel
+    </div>
+  </div>
+  <div
+    className="fd-panel"
+  >
+    <div
+      className="fd-panel__body"
+    >
+      Panel
+    </div>
+  </div>
+  <div
+    className="fd-panel"
+  >
+    <div
+      className="fd-panel__body"
+    >
+      Panel
+    </div>
+  </div>
+  <div
+    className="fd-panel"
+  >
+    <div
+      className="fd-panel__body"
+    >
+      Panel
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<LayoutGrid /> layoutGrid snapshots 3`] = `
+<div
+  className="fd-layout-grid fd-layout-grid--nogap"
+>
+  <div
+    className="fd-panel"
+  >
+    <div
+      className="fd-panel__body"
+    >
+      Panel
+    </div>
+  </div>
+  <div
+    className="fd-panel"
+  >
+    <div
+      className="fd-panel__body"
+    >
+      Panel
+    </div>
+  </div>
+  <div
+    className="fd-panel"
+  >
+    <div
+      className="fd-panel__body"
+    >
+      Panel
+    </div>
+  </div>
+  <div
+    className="fd-panel"
+  >
+    <div
+      className="fd-panel__body"
+    >
+      Panel
+    </div>
+  </div>
+  <div
+    className="fd-panel"
+  >
+    <div
+      className="fd-panel__body"
+    >
+      Panel
+    </div>
+  </div>
+</div>
+`;

@@ -1,7 +1,7 @@
+import { mount } from 'enzyme';
 import React from 'react';
 import renderer from 'react-test-renderer';
 import SearchInput from './SearchInput';
-import { mount, shallow } from 'enzyme';
 
 describe('<SearchInput />', () => {
     const searchInput = 'input[type="text"].fd-input';
@@ -45,14 +45,6 @@ describe('<SearchInput />', () => {
             searchList={searchData} />
     );
 
-    const shellBarSearchInput = (
-        <SearchInput
-            inShellbar
-            onEnter={term => getInputValue(term)}
-            placeholder='Enter a fruit'
-            searchList={searchData} />
-    );
-
     const noListSearchInput = (
         <SearchInput
             onEnter={term => getInputValue(term)}
@@ -70,10 +62,6 @@ describe('<SearchInput />', () => {
         let tree = component.toJSON();
         expect(tree).toMatchSnapshot();
 
-        component = renderer.create(shellBarSearchInput);
-        tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-
         component = renderer.create(noListSearchInput);
         tree = component.toJSON();
         expect(tree).toMatchSnapshot();
@@ -89,7 +77,7 @@ describe('<SearchInput />', () => {
 
     describe('onChange handler', () => {
         test('calling parent onChange event', () => {
-            const wrapper = shallow(searchOnChange);
+            const wrapper = mount(searchOnChange);
 
             // enter text into search input
             wrapper
@@ -116,7 +104,7 @@ describe('<SearchInput />', () => {
     });
 
     test('check for enter key press on search input', () => {
-        const wrapper = shallow(defaultSearchInput);
+        const wrapper = mount(defaultSearchInput);
 
         // enter text into search input
         wrapper
@@ -150,39 +138,8 @@ describe('<SearchInput />', () => {
         expect(wrapper.state(['value'])).toBe(searchData[0].text);
     });
 
-    test('click outside ShellBar search input with NO text to close list', () => {
-        const wrapper = mount(shellBarSearchInput);
-        let event = new MouseEvent('click', {});
-
-        // outside click, search list not shown
-        document.dispatchEvent(event);
-
-        // click in search box to show
-        wrapper.find(searchInput).simulate('click');
-        wrapper.find('button.sap-icon--search.fd-button--shell').simulate('click');
-
-        // click outside to close list
-        document.dispatchEvent(event);
-
-        expect(wrapper.state(['value'])).toBe('');
-    });
-
     test('show/hide auto complete list', () => {
-        const wrapper = shallow(defaultSearchInput);
-
-        // click in search box to show
-        wrapper.find(searchInput).simulate('click');
-
-        expect(wrapper.state('isExpanded')).toBeTruthy();
-
-        // click in search box to hide
-        wrapper.find(searchInput).simulate('click');
-
-        expect(wrapper.state('isExpanded')).toBeFalsy();
-    });
-
-    test('show/hide auto complete list for inShellBar', () => {
-        const wrapper = shallow(shellBarSearchInput);
+        const wrapper = mount(defaultSearchInput);
 
         // click in search box to show
         wrapper.find(searchInput).simulate('click');
@@ -196,7 +153,7 @@ describe('<SearchInput />', () => {
     });
 
     test('check for enter key press on search input without autocomplete', () => {
-        const wrapper = shallow(noListSearchInput);
+        const wrapper = mount(noListSearchInput);
 
         // click in search box
         wrapper.find(searchInput).simulate('click');
@@ -213,7 +170,7 @@ describe('<SearchInput />', () => {
     });
 
     test('click on result in autocomplete', () => {
-        const wrapper = shallow(defaultSearchInput);
+        const wrapper = mount(defaultSearchInput);
 
         // click in search box to show
         wrapper.find(searchInput).simulate('click');
@@ -232,53 +189,8 @@ describe('<SearchInput />', () => {
         expect(wrapper.state('isExpanded')).toBeFalsy();
     });
 
-    test('check search results in shellbar with NO results', () => {
-        const wrapper = shallow(shellBarSearchInput);
-
-        wrapper
-            .find(searchInput)
-            .simulate('change', { target: { value: 'HELLO WORLD' } });
-
-        // check if searchTerm state is updated
-        expect(wrapper.state(['value'])).toBe('HELLO WORLD');
-    });
-
-    test('check search executed on search button click in shellbar', () => {
-        const wrapper = shallow(shellBarSearchInput);
-
-        wrapper
-            .find(searchInput)
-            .simulate('change', { target: { value: searchData[0].text } });
-
-        // check if searchTerm state is updated
-        expect(wrapper.state(['value'])).toBe(searchData[0].text);
-
-        wrapper.find('.sap-icon--search.fd-button--shell').simulate('click');
-
-        expect(wrapper.state(['value'])).toBe(searchData[0].text);
-    });
-
-    test('check search executed on search button click in shellbar with list expanded', () => {
-        const wrapper = shallow(shellBarSearchInput);
-
-        wrapper
-            .find(searchInput)
-            .simulate('change', { target: { value: searchData[0].text } });
-
-
-        // click in search box to show
-        wrapper.find(searchInput).simulate('click');
-
-        // check if searchTerm state is updated
-        expect(wrapper.state(['value'])).toBe(searchData[0].text);
-
-        wrapper.find('.sap-icon--search.fd-button--shell').simulate('click');
-
-        expect(wrapper.state(['value'])).toBe(searchData[0].text);
-    });
-
     test('check search executed on search button click', () => {
-        const wrapper = shallow(defaultSearchInput);
+        const wrapper = mount(defaultSearchInput);
 
         wrapper
             .find(searchInput)
@@ -293,7 +205,7 @@ describe('<SearchInput />', () => {
     });
 
     test('pressing Esc key to close search list', () => {
-        const wrapper = shallow(shellBarSearchInput);
+        const wrapper = mount(defaultSearchInput);
 
         // click in search box to show
         wrapper.find(searchInput).simulate('click');
@@ -346,6 +258,8 @@ describe('<SearchInput />', () => {
 
         test('should allow props to be spread to the SearchInput component\'s ul element', () => {
             const element = mount(<SearchInput listProps={{ 'data-sample': 'Sample' }} searchList={searchData} />);
+
+            element.find('.fd-input').simulate('click');
 
             expect(
                 element.find('ul').getDOMNode().attributes['data-sample'].value

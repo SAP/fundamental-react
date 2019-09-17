@@ -1,12 +1,15 @@
+import 'fundamental-styles/dist/form-label.css';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-const FormLabel = ({ required, children, className, ...props }) => {
+const FormLabel = ({ required, children, className, disabled, ...props }) => {
     const formLabelClasses = classnames(
-        'fd-form__label',
+        'fd-form-label',
+        { 'is-disabled': disabled },
         className
     );
+
     return (
         <label
             {...props}
@@ -23,6 +26,7 @@ FormLabel.displayName = 'FormLabel';
 FormLabel.propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,
+    disabled: PropTypes.bool,
     required: PropTypes.bool
 };
 

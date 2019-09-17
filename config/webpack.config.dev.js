@@ -61,10 +61,6 @@ const getStyleLoaders = (cssOptions, preProcessor) => {
                             cascade: true
                         },
                         stage: 3
-                    }),
-                    require('postcss-clean')({
-                        format: 'beautify',
-                        level: 1
                     })
                 ]
             }
@@ -99,7 +95,7 @@ module.exports = {
         runtimeChunk: true
     },
     resolve: {
-        extensions: ['.js', '.jsx', '.json', '.es6'],
+        extensions: ['.js', '.jsx', '.json', '.es6', '.css'],
         symlinks: false
     },
     module: {

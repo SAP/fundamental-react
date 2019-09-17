@@ -18,10 +18,10 @@ export const ContextualMenuComponent = () => {
                     body={
                         <Menu>
                             <Menu.List>
-                                <Menu.Item url='/'>Option 1</Menu.Item>
-                                <Menu.Item url='/'>Option 2</Menu.Item>
-                                <Menu.Item url='/'>Option 3</Menu.Item>
-                                <Menu.Item url='/'>Option 4</Menu.Item>
+                                <Menu.Item url='#'>Option 1</Menu.Item>
+                                <Menu.Item url='#'>Option 2</Menu.Item>
+                                <Menu.Item url='#'>Option 3</Menu.Item>
+                                <Menu.Item url='#'>Option 4</Menu.Item>
                             </Menu.List>
                         </Menu>
                     }
@@ -32,35 +32,33 @@ export const ContextualMenuComponent = () => {
             <Example
                 centered
                 title='With Text Button'>
-                <div>
-                    <Popover
-                        body={
-                            <Menu>
-                                <Menu.List>
-                                    <Menu.Item url='/'>Option 1</Menu.Item>
-                                    <Menu.Item url='/'>Option 2</Menu.Item>
-                                    <Menu.Item url='/'>Option 3</Menu.Item>
-                                    <Menu.Item url='/'>Option 4</Menu.Item>
-                                </Menu.List>
-                            </Menu>
-                        }
-                        control={<Button>More</Button>}
-                        noArrow />
+                <Popover
+                    body={
+                        <Menu>
+                            <Menu.List>
+                                <Menu.Item url='#'>Option 1</Menu.Item>
+                                <Menu.Item url='#'>Option 2</Menu.Item>
+                                <Menu.Item url='#'>Option 3</Menu.Item>
+                                <Menu.Item url='#'>Option 4</Menu.Item>
+                            </Menu.List>
+                        </Menu>
+                    }
+                    control={<Button>More</Button>}
+                    noArrow />
 
-                    <Popover
-                        body={
-                            <Menu>
-                                <Menu.List>
-                                    <Menu.Item url='/'>Option 1</Menu.Item>
-                                    <Menu.Item url='/'>Option 2</Menu.Item>
-                                    <Menu.Item url='/'>Option 3</Menu.Item>
-                                    <Menu.Item url='/'>Option 4</Menu.Item>
-                                </Menu.List>
-                            </Menu>
-                        }
-                        control={<Button option='light'>More</Button>}
-                        noArrow />
-                </div>
+                <Popover
+                    body={
+                        <Menu>
+                            <Menu.List>
+                                <Menu.Item url='#'>Option 1</Menu.Item>
+                                <Menu.Item url='#'>Option 2</Menu.Item>
+                                <Menu.Item url='#'>Option 3</Menu.Item>
+                                <Menu.Item url='#'>Option 4</Menu.Item>
+                            </Menu.List>
+                        </Menu>
+                    }
+                    control={<Button option='light'>More</Button>}
+                    noArrow />
             </Example>
 
         </ComponentPage>

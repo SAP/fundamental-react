@@ -2,16 +2,17 @@
 
 exports[`<Toggle /> create toggle component 1`] = `
 <div
-  className="fd-form__item fd-form__item--check"
+  className="fd-form-item"
 >
   <label
-    className="fd-form__label"
+    className="fd-form-label"
   >
     <span
-      className="fd-toggle fd-form__control"
+      className="fd-toggle"
     >
       <input
         checked={false}
+        className="fd-toggle__input"
         onChange={[Function]}
         type="checkbox"
       />
@@ -21,22 +22,24 @@ exports[`<Toggle /> create toggle component 1`] = `
       />
     </span>
     Normal toggle
+    
   </label>
 </div>
 `;
 
 exports[`<Toggle /> create toggle component 2`] = `
 <div
-  className="fd-form__item fd-form__item--check blue"
+  className="fd-form-item blue"
 >
   <label
-    className="fd-form__label"
+    className="fd-form-label"
   >
     <span
-      className="fd-toggle fd-toggle--s fd-form__control"
+      className="fd-toggle fd-toggle--s"
     >
       <input
         checked={true}
+        className="fd-toggle__input"
         onChange={[Function]}
         type="checkbox"
       />
@@ -46,22 +49,24 @@ exports[`<Toggle /> create toggle component 2`] = `
       />
     </span>
     Small toggle
+    
   </label>
 </div>
 `;
 
 exports[`<Toggle /> create toggle component 3`] = `
 <div
-  className="fd-form__item fd-form__item--check"
+  className="fd-form-item"
 >
   <label
-    className="fd-form__label"
+    className="fd-form-label is-disabled"
   >
     <span
-      className="fd-toggle fd-form__control"
+      className="fd-toggle"
     >
       <input
         checked={false}
+        className="fd-toggle__input"
         disabled={true}
         onChange={[Function]}
         type="checkbox"
@@ -72,22 +77,24 @@ exports[`<Toggle /> create toggle component 3`] = `
       />
     </span>
     Normal toggle
+    
   </label>
 </div>
 `;
 
 exports[`<Toggle /> create toggle component 4`] = `
 <div
-  className="fd-form__item fd-form__item--check"
+  className="fd-form-item"
 >
   <label
-    className="fd-form__label"
+    className="fd-form-label is-disabled"
   >
     <span
-      className="fd-toggle fd-form__control"
+      className="fd-toggle"
     >
       <input
         checked={true}
+        className="fd-toggle__input"
         disabled={true}
         onChange={[Function]}
         type="checkbox"
@@ -98,6 +105,7 @@ exports[`<Toggle /> create toggle component 4`] = `
       />
     </span>
     Normal toggle
+    
   </label>
 </div>
 `;

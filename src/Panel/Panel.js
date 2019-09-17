@@ -1,3 +1,5 @@
+import 'fundamental-styles/dist/layout-grid.css'; //needed for fd-layout-grid__span-column
+import 'fundamental-styles/dist/panel.css';
 import classnames from 'classnames';
 import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import PanelActions from './_PanelActions';
@@ -15,7 +17,7 @@ const Panel = props => {
     const panelClasses = classnames(
         'fd-panel',
         {
-            [`fd-has-grid-column-span-${colSpan}`]: !!colSpan
+            [`fd-layout-grid__span-column-${colSpan}`]: !!colSpan
         },
         className
     );
@@ -28,11 +30,11 @@ Panel.displayName = 'Panel';
 Panel.propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,
-    colSpan: CustomPropTypes.range(1, 6)
+    colSpan: CustomPropTypes.range(2, 6)
 };
 
 Panel.propDescriptions = {
-    colSpan: 'The number of columns to span inside a `PanelGrid`.'
+    colSpan: 'The number of columns to span inside a `LayoutGrid`.'
 };
 
 Panel.Actions = PanelActions;

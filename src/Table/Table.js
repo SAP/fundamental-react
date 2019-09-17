@@ -1,3 +1,4 @@
+import 'fundamental-styles/dist/table.css';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -7,10 +8,15 @@ const Table = props => {
         headers,
         tableData,
         className,
+        tableBodyClassName,
         tableBodyProps,
         tableBodyRowProps,
+        tableCellClassName,
+        tableHeaderClassName,
         tableHeaderProps,
+        tableHeaderRowClassName,
         tableHeaderRowProps,
+        tableRowClassName,
         ...rest
     } = props;
 
@@ -19,12 +25,32 @@ const Table = props => {
         className
     );
 
+    const tableHeaderClasses = classnames(
+        'fd-table__header',
+        tableHeaderClassName
+    );
+
+    const tableHeaderRowClasses = classnames(
+        'fd-table__row',
+        tableHeaderRowClassName
+    );
+
+    const tableRowClasses = classnames(
+        'fd-table__row',
+        tableRowClassName
+    );
+
+    const tableCellClasses = classnames(
+        'fd-table__cell',
+        tableCellClassName
+    );
+
     return (
         <table {...rest} className={tableClasses}>
-            <thead {...tableHeaderProps}>
-                <tr {...tableHeaderRowProps}>
+            <thead className={tableHeaderClasses} {...tableHeaderProps}>
+                <tr className={tableHeaderRowClasses} {...tableHeaderRowProps}>
                     {headers.map((header, index) => {
-                        return <th key={index}>{header}</th>;
+                        return <th className={tableCellClasses} key={index}>{header}</th>;
                     })}
                 </tr>
             </thead>
@@ -37,9 +63,12 @@ const Table = props => {
                             : tableBodyRowProps);
                     }
                     return (
-                        <tr {...rowProps} key={index}>
+                        <tr
+                            className={tableRowClasses}
+                            {...rowProps}
+                            key={index}>
                             {row.rowData.map((rowData, cellIndex) => {
-                                return <td key={cellIndex}>{rowData}</td>;
+                                return <td className={tableCellClasses} key={cellIndex}>{rowData}</td>;
                             })}
                         </tr>
                     );
@@ -59,22 +88,32 @@ Table.propTypes = {
         }).isRequired
     ).isRequired,
     className: PropTypes.string,
+    tableBodyClassName: PropTypes.string,
     tableBodyProps: PropTypes.object,
     tableBodyRowProps: PropTypes.oneOfType([
         PropTypes.object,
         PropTypes.func
     ]),
+    tableCellClassName: PropTypes.string,
+    tableHeaderClassName: PropTypes.string,
     tableHeaderProps: PropTypes.object,
-    tableHeaderRowProps: PropTypes.object
+    tableHeaderRowClassName: PropTypes.string,
+    tableHeaderRowProps: PropTypes.object,
+    tableRowClassName: PropTypes.string
 };
 
 Table.propDescriptions = {
     tableData: 'Array of objects that contain one property: `rowData` (an array of strings containing data for each column in the row).',
     headers: 'Array of localized text strings for the column headers.',
+    tableBodyClassName: 'Additional classes to be added to the `<tbody>` element.',
     tableBodyProps: 'Additional props to be spread to the `<tbody>` element.',
     tableBodyRowProps: 'Additional props to be spread to the `<tr>` elements within `<tbody>`. If using a function, the parameters passed will be an object representing the row (from `tableData`) and the row index.',
+    tableCellClassName: 'Additional classes to be added to the `<td>` elements.',
+    tableHeaderClassName: 'Additional classes to be added to the `<thead>` element.',
     tableHeaderProps: 'Additional props to be spread to the `<thead>` element.',
-    tableHeaderRowProps: 'Additional props to be spread to the `<tr>` element within `<thead>`.'
+    tableHeaderRowClassName: 'Additional classes to the `<tr>` element within `<thead>`.',
+    tableHeaderRowProps: 'Additional props to be spread to the `<tr>` element within `<thead>`.',
+    tableRowClassName: 'Additional classes to be added to the `<tr>` elements.'
 };
 
 export default Table;

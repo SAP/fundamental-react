@@ -1,0 +1,30 @@
+@import '_variables.scss';
+
+.frDocs-markdown {
+    ol,
+    ul {
+        padding-left: 2rem;
+    }
+
+    pre {
+        margin: 25px 0;
+        background-color: #fff !important;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -pre-wrap;
+        white-space: -o-pre-wrap;
+        word-wrap: break-word;
+        display: flex;
+        padding: 1rem;
+        font-size: 13px;
+        line-height: 1.42857143;
+        color: #333;
+        word-break: break-all;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+
+        code {
+            display: block;
+        }
+    }
+}

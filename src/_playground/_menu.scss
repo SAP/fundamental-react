@@ -1,0 +1,74 @@
+@import '_variables.scss';
+
+.frDocs-Menu {
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: $shell-color;
+    color: #fff;
+    padding: 8px $menu-spacing;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+
+    &__logo {
+        flex: 0 0 auto;
+        font-size: 20px;
+        line-height: 1.5;
+        font-weight: 700;
+        margin: 0;
+        color: #fff;
+        text-decoration: none;
+
+        &:hover,
+        &:focus {
+            color: #fff;
+        }
+
+        &--library {
+            color: $library-color;
+        }
+    }
+
+    &__spacer {
+        flex: 1 1 auto;
+    }
+
+    &__version {
+        flex: 0 0 auto;
+        margin-left: $menu-spacing;
+        font-size: 1.2rem;
+        display: none;
+    }
+
+    &__githubLogo {
+        flex: 0 0 auto;
+        width: 2rem;
+        height: 2rem;
+        font-size: 1rem;
+        display: block;
+        margin-left: $menu-spacing;
+
+        svg {
+            width: 2rem;
+            height: 2rem;
+        }
+    }
+}
+
+@media (min-width: $breakpoint-sm) {
+    .frDocs-Menu {
+        &__logo {
+            font-size: 24px;
+        }
+
+        &__version {
+            display: block;
+        }
+    }
+}

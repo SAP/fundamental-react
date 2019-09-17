@@ -23,6 +23,11 @@ class TreeRow extends Component {
                 'fd-tree__col--control': isFirstTreeCol
             });
 
+            const buttonClassName = classnames(
+                'fd-tree__control',
+                { 'is-pressed': !!isExpanded }
+            );
+
             // Add expand button to first TableCell if parent list
             const newChildren = isFirstTreeCol && isParent ? (
                 <div>
@@ -30,7 +35,7 @@ class TreeRow extends Component {
                         aria-controls={rowId}
                         aria-label={isExpanded ? 'collapse' : 'expand'}
                         aria-pressed={isExpanded}
-                        className='fd-tree__control'
+                        className={buttonClassName}
                         onClick={onExpandClick} />
                     {child.props && child.props.children}
                 </div>

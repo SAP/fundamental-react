@@ -1,7 +1,7 @@
+import { Alert } from '../';
 import path from 'path';
 import React from 'react';
-import { Alert, Icon } from '../';
-import { ComponentPage, Example, Playground, Separator } from '../_playground';
+import { ComponentPage, Example } from '../_playground';
 
 export const AlertComponent = () => {
     return (
@@ -17,7 +17,7 @@ export const AlertComponent = () => {
                 <Alert
                     dismissible
                     link='#'
-                    linkText=' link'>
+                    linkText='link'>
                     Default alert with a{' '}
                 </Alert>
             </Example>
@@ -26,8 +26,7 @@ export const AlertComponent = () => {
                 description='The alert warns of potential issues, but the user can still continue. The user will need to dismiss the message.'
                 title='Warning Alert'>
                 <Alert dismissible type='warning'>
-                    <h3>A dismissible error type alert with template.</h3>
-                    <p>More information...</p>
+                    Warning Message.
                 </Alert>
             </Example>
 
@@ -36,55 +35,33 @@ export const AlertComponent = () => {
                     should interrupt the user. A final action such as Submit cannot be carried out until the user has
                     rectified the error. The user will need to dismiss the message.`}
                 title='Error Alert'>
-                <Alert dismissible type='error'>
-                    <Icon glyph='message-error' /> Error Message.{' '}
-                    <a className='fd-link' href='#'>
-                        Learn More
-                    </a>
+                <Alert dismissible
+                    link='#'
+                    linkText='Learn More'
+                    type='error'>
+                    Error Message.{' '}
                 </Alert>
             </Example>
 
             <Example
                 title='Success Alert'>
-                <Alert dismissible type='success'>
-                    <Icon glyph='message-success' /> Message Success.{' '}
-                    <a className='fd-link' href='#'>
-                        Learn More
-                    </a>
+                <Alert dismissible
+                    link='#'
+                    linkText='Learn More'
+                    type='success'>
+                    Message Success.{' '}
                 </Alert>
             </Example>
 
             <Example
                 title='Information Alert'>
-                <Alert dismissible type='information'>
-                    <Icon glyph='message-information' /> Information Message.{' '}
-                    <a className='fd-link' href='#'>
-                        Learn More
-                    </a>
+                <Alert dismissible
+                    link='#'
+                    linkText='Learn More'
+                    type='information'>
+                    Information Message.{' '}
                 </Alert>
             </Example>
-
-            <Separator />
-
-            <Playground
-                component='alert'
-                schema={[
-                    {
-                        attribute: 'type',
-                        typeOfAttribute: 'string',
-                        'enum': ['', 'warning', 'error', 'information', 'success']
-                    },
-                    {
-                        attribute: 'dismissible',
-                        typeOfAttribute: 'boolean'
-                    }
-                ]}>
-                <Alert dismissible={false} link='#'
-                    linkText='link'>
-                    Default alert with a{' '}
-                </Alert>
-            </Playground>
-
         </ComponentPage>
     );
 };

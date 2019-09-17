@@ -1,10 +1,11 @@
+import 'fundamental-styles/dist/form-select.css';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 
 const FormSelect = ({ disabled, children, className, ...props }) => {
     const formSelectClasses = classnames(
-        'fd-form__control',
+        'fd-form-select',
         className
     );
 

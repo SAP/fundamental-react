@@ -1,22 +1,29 @@
+import 'fundamental-styles/dist/inline-help.css';
 import classnames from 'classnames';
 import { INLINE_HELP_PLACEMENTS } from '../utils/constants';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-const InlineHelp = ({ text, placement, className, ...props }) => {
+const InlineHelp = ({ text, placement, className, contentClassName, ...props }) => {
+
     const inlineHelpClasses = classnames(
+        'fd-inline-help',
+        className
+    );
+
+    const inlineHelpContentClasses = classnames(
         'fd-inline-help__content',
         {
             [`fd-inline-help__content--${placement}`]: !!placement
         },
-        className
+        contentClassName
     );
 
     return (
-        <span className='fd-inline-help'>
+        <span className={inlineHelpClasses}>
             <span
                 {...props}
-                className={inlineHelpClasses}>
+                className={inlineHelpContentClasses}>
                 {text}
             </span>
         </span>
@@ -26,12 +33,18 @@ const InlineHelp = ({ text, placement, className, ...props }) => {
 InlineHelp.displayName = 'InlineHelp';
 
 InlineHelp.propTypes = {
-    placement: PropTypes.oneOf(INLINE_HELP_PLACEMENTS).isRequired,
     text: PropTypes.string.isRequired,
-    className: PropTypes.string
+    className: PropTypes.string,
+    contentClassName: PropTypes.string,
+    placement: PropTypes.oneOf(INLINE_HELP_PLACEMENTS)
+};
+
+InlineHelp.defaultProps = {
+    placement: 'bottom-right'
 };
 
 InlineHelp.propDescriptions = {
+    contentClassName: 'Class names to be added to the `<span>` element.',
     placement: 'Location to display the inline help pop-up relative to the image.',
     text: 'Localized text to display in the inline help pop-up.'
 };

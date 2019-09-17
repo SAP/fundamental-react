@@ -5,7 +5,7 @@ exports[`<Tile.Media /> create tile media component 1`] = `
   className="fd-tile__media green"
 >
   <span
-    className="fd-identifier--m sap-icon--home fd-has-background-color-accent-3"
+    className="fd-identifier fd-identifier--m sap-icon--home fd-has-background-color-accent-3"
     role="presentation"
   />
 </div>

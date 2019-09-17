@@ -9,8 +9,6 @@ describe('<Button />', () => {
     const typeButton = <Button type='positive'>Positive Button</Button>;
     const iconButton = <Button glyph='cart'>Icon Button</Button>;
     const compactButton = <Button compact>Compact</Button>;
-    const dropdownButton = <Button dropdown>Dropdown Button</Button>;
-    const navBarButton = <Button navbar>Navbar button</Button>;
 
     const selectedButton = (
         <Button option='emphasized' selected>
@@ -56,16 +54,6 @@ describe('<Button />', () => {
 
         // disabled button
         component = renderer.create(disabledButton);
-        tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-
-        // dropdown button
-        component = renderer.create(dropdownButton);
-        tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-
-        // nav bar button
-        component = renderer.create(navBarButton);
         tree = component.toJSON();
         expect(tree).toMatchSnapshot();
     });

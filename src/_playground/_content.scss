@@ -1,0 +1,96 @@
+@import '_variables.scss';
+
+.frDocs-Content {
+    box-sizing: border-box;
+    flex-grow: 1;
+    overflow-y: scroll;
+    background-color: white;
+    padding: 2rem;
+    padding-top: $menu-height + 25px;
+
+    &__header,
+    .frDocs-markdown>h1 {
+        margin: 0 0 12px;
+        font-size: 2.2rem;
+        line-height: 1;
+    }
+
+    &__header:empty {
+        display: none;
+    }
+
+    &__description,
+    .frDocs-markdown>p {
+        margin-bottom: 1.5rem;
+        font-size: 1rem;
+        font-weight: 300;
+    }
+
+    &__tile {
+        border-radius: 4px 4px 0 0;
+        border: 1px solid #ccc;
+        border-bottom: none;
+        padding: 10px 0;
+
+        .frDocs-tile__features {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .frDocs-tile__feature {
+            display: flex;
+            margin: 15px;
+        }
+
+        .frDocs-tile__centered {
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            width: 100%;
+        }
+
+        .frDocs-tile__break {
+            flex-basis: 100%;
+            height: 20px;
+        }
+    }
+
+    &__tile-background {
+        background: #F3F4F5;
+        transition: background-color 0.25s;
+    }
+
+    &__separator {
+        display: block;
+        margin: 2rem 0;
+        border-bottom: 1px solid #E3E3E3;
+    }
+
+    &__docsText {
+        padding: 15px;
+        font-size: 13px;
+        border: 1px solid #ccc;
+        border-top: none;
+        border-radius: 0 0 4px 4px;
+        margin: 0;
+    }
+
+    .frDocs-docsText__button {
+        padding: 5px;
+        border: 1px solid #ccc;
+        text-align: center;
+    }
+
+    .frDocs-docsText__buttonCopy {
+        margin-left: 5px;
+    }
+}
+
+@media (min-width: $breakpoint-md) {
+    .frDocs-Content {
+        padding-right: 225px;
+        padding-bottom: 1000px;
+    }
+}

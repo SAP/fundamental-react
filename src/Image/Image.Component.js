@@ -1,7 +1,7 @@
 import { Image } from '../';
 import path from 'path';
 import React from 'react';
-import { ComponentPage, Example, Playground, Separator } from '../_playground';
+import { ComponentPage, Example } from '../_playground';
 
 export const ImageComponent = () => {
     return (
@@ -13,48 +13,21 @@ export const ImageComponent = () => {
             <Example
                 centered
                 title='Sizes'>
-                <div className='fd-doc__margin--image'>
-                    <Image photo='https://placeimg.com/400/400/nature' size='s' />
-                    <Image photo='https://placeimg.com/400/400/nature' size='m' />
-                    <Image photo='https://placeimg.com/400/400/nature' size='l' />
-                </div>
+                <Image photo='https://placeimg.com/400/400/nature' size='s' />
+                <Image photo='https://placeimg.com/400/400/nature' size='m' />
+                <Image photo='https://placeimg.com/400/400/nature' size='l' />
             </Example>
 
             <Example
                 centered
                 title='Shapes'>
-                <div className='fd-doc__margin--image'>
-                    <Image photo='https://placeimg.com/400/400/nature' size='s'
-                        type='circle' />
-                    <Image photo='https://placeimg.com/400/400/nature' size='m'
-                        type='circle' />
-                    <Image photo='https://placeimg.com/400/400/nature' size='l'
-                        type='circle' />
-                </div>
+                <Image photo='https://placeimg.com/400/400/nature' size='s'
+                    type='circle' />
+                <Image photo='https://placeimg.com/400/400/nature' size='m'
+                    type='circle' />
+                <Image photo='https://placeimg.com/400/400/nature' size='l'
+                    type='circle' />
             </Example>
-
-            <Separator />
-
-            <Playground
-                component='image'
-                schema={[
-                    {
-                        attribute: 'size',
-                        typeOfAttribute: 'string',
-                        'enum': ['s', 'm', 'l']
-                    },
-                    {
-                        attribute: 'photo',
-                        typeOfAttribute: 'string'
-                    },
-                    {
-                        attribute: 'type',
-                        typeOfAttribute: 'string',
-                        'enum': ['', 'circle']
-                    }
-                ]}>
-                <Image photo='https://placeimg.com/400/400/nature' size='s' />
-            </Playground>
         </ComponentPage>
     );
 };

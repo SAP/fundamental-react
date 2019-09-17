@@ -21,7 +21,9 @@ exports[`<Tile /> create tile component 1`] = `
 
 exports[`<Tile /> create tile component 2`] = `
 <div
-  className="fd-tile is-disabled fd-has-grid-column-span-3 fd-has-background-color-background-8"
+  backgroundColor={8}
+  className="fd-tile is-disabled"
+  columnSpan={3}
 >
   <div
     className="fd-tile__content"
@@ -46,7 +48,7 @@ exports[`<Tile /> create tile component 3`] = `
     className="fd-tile__media green"
   >
     <span
-      className="fd-identifier--m sap-icon--home fd-has-background-color-accent-3"
+      className="fd-identifier fd-identifier--m sap-icon--home fd-has-background-color-accent-3"
       role="presentation"
     />
   </div>
@@ -111,7 +113,7 @@ exports[`<Tile /> create tile component 5`] = `
     className="fd-tile__media"
   >
     <span
-      className="fd-identifier--m sap-icon--home fd-has-background-color-accent-3"
+      className="fd-identifier fd-identifier--m sap-icon--home fd-has-background-color-accent-3"
       role="presentation"
     />
   </div>
@@ -182,7 +184,6 @@ exports[`<Tile /> create tile component 7`] = `
   />
   <div
     className="fd-tile__media"
-    productTile={true}
   />
   <div
     className="fd-product-tile__content"
@@ -213,7 +214,6 @@ exports[`<Tile /> create tile component 8`] = `
   />
   <div
     className="fd-tile__media blue"
-    productTile={true}
   />
   <div
     className="fd-product-tile__content blue"

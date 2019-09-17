@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Link /> create link 1`] = `
+<a
+  className="fd-link blue"
+  href="#"
+>
+  Foo
+</a>
+`;
+
+exports[`<Link /> create link 2`] = `
+<a
+  aria-disabled={true}
+  className="fd-link is-disabled"
+  href="#"
+>
+  Disabled Link
+</a>
+`;

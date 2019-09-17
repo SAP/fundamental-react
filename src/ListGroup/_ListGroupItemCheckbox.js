@@ -1,21 +1,12 @@
+import Checkbox from '../Forms/Checkbox';
 import PropTypes from 'prop-types';
 import React from 'react';
+import shortid from '../utils/shortId';
 
-const ListGroupItemCheckbox = ({ children, labelProps, inputProps, ...props }) => {
+const ListGroupItemCheckbox = ({ children, id, ...props }) => {
     return (
-        <div {...props} className='fd-form__item fd-form__item--check'>
-            <label
-                {...labelProps}
-                className='fd-form__label'
-                htmlFor='CndSd399'>
-                <input
-                    {...inputProps}
-                    className='fd-form__control'
-                    id='CndSd399'
-                    type='checkbox' />
-                {children}
-            </label>
-        </div>
+        <Checkbox {...props} id={id ? id : shortid.generate()}
+            value={children} />
     );
 };
 
@@ -24,8 +15,7 @@ ListGroupItemCheckbox.displayName = 'ListGroup.ItemCheckbox';
 ListGroupItemCheckbox.propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,
-    inputProps: PropTypes.object,
-    labelProps: PropTypes.object
+    id: PropTypes.string
 };
 
 export default ListGroupItemCheckbox;

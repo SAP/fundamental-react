@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Checkbox /> create checkbox 1`] = `
+<div
+  className="fd-form-item"
+>
+  <label
+    className="fd-form-label"
+  >
+    <input
+      aria-checked="false"
+      className="fd-checkbox"
+      onChange={[Function]}
+      type="checkbox"
+    />
+    Option 1
+    
+  </label>
+</div>
+`;

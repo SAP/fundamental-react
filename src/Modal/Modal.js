@@ -1,3 +1,5 @@
+import 'fundamental-styles/dist/modal.css';
+import Button from '../Button/Button';
 import classnames from 'classnames';
 import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import FocusTrap from 'focus-trap-react';
@@ -33,7 +35,6 @@ class Modal extends Component {
         const { onClose, localizedText, children, title, actions, className, headingLevel, show, titleProps, closeProps, contentProps, headerProps, footerProps, bodyProps, ...rest } = this.props;
 
         const modalClasses = classnames(
-            'fd-ui__overlay',
             'fd-overlay',
             'fd-overlay--modal',
             className
@@ -68,11 +69,13 @@ class Modal extends Component {
                                     <HeadingTag {...titleProps} className='fd-modal__title'>
                                         {title}
                                     </HeadingTag>
-                                    <button
+                                    <Button
                                         {...closeProps}
                                         aria-label={localizedText.closeButton}
-                                        className='fd-button--light fd-modal__close'
-                                        onClick={this.handleCloseClick} />
+                                        className='fd-modal__close'
+                                        glyph='decline'
+                                        onClick={this.handleCloseClick}
+                                        option='light' />
                                 </div>
                                 <div {...bodyProps} className='fd-modal__body'>
                                     {children}
@@ -81,9 +84,7 @@ class Modal extends Component {
                                     <footer
                                         {...footerProps}
                                         className='fd-modal__footer'>
-                                        <div className='fd-modal__actions'>
-                                            {actions}
-                                        </div>
+                                        {actions}
                                     </footer>
                                 ) : (
                                     ''

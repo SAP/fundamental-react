@@ -1,10 +1,11 @@
+import 'fundamental-styles/dist/textarea.css';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 
 const FormTextarea = ({ children, className, ...props }) => {
     const formTextAreaClasses = classnames(
-        'fd-form__control',
+        'fd-textarea',
         className
     );
 

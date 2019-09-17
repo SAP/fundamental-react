@@ -1,5 +1,8 @@
+import 'fundamental-styles/dist/input-group.css';
+import Button from '../Button/Button';
 import classnames from 'classnames';
 import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
+import FormInput from '../Forms/FormInput';
 import PropTypes from 'prop-types';
 import { INPUT_GROUP_ADDON_POSITIONS, INPUT_GROUP_TYPES } from '../utils/constants';
 import React, { Component } from 'react';
@@ -17,14 +20,14 @@ class InputGroup extends Component {
     handleUp = e => {
         e.preventDefault();
         this.setState({
-            value: this.state.value + 1
+            value: parseInt(this.state.value, 10) + 1
         });
     };
 
     handleDown = e => {
         e.preventDefault();
         this.setState({
-            value: this.state.value - 1
+            value: parseInt(this.state.value, 10) - 1
         });
     };
 
@@ -52,6 +55,7 @@ class InputGroup extends Component {
     render() {
         const {
             actions,
+            addonClassNames,
             addonPos,
             addon,
             children,
@@ -68,120 +72,80 @@ class InputGroup extends Component {
             localizedText,
             numberDownButtonProps,
             numberUpButtonProps,
-            searchButtonProps,
             ...props
         } = this.props;
 
+        const inputGroupClasses = classnames(
+            className,
+            'fd-input-group'
+        );
+
+        const addonClasses = classnames(
+            addonClassNames,
+            'fd-input-group__addon',
+            [{ 'fd-input-group__addon--button': !!actions || inputType === 'number' }]
+        );
+
+        const inputClasses = classnames(
+            inputClassName,
+            'fd-input-group__input'
+        );
+
+
         switch (inputType) {
             case 'number':
-                const inputGroupNumberClasses = classnames(
-                    className,
-                    'fd-input-group',
-                    'fd-input-group--after',
-                    {
-                        'fd-input-group--compact': compact
-                    }
-                );
 
                 const inputNumberClasses = classnames(
-                    inputClassName,
-                    {
-                        'fd-input fd-input--compact': compact
-                    }
+                    inputClasses,
+                    'fd-input--no-number-spinner'
                 );
+
                 return (
                     <div
                         {...props}
-                        className={inputGroupNumberClasses}>
-                        <input
+                        className={inputGroupClasses}>
+                        <FormInput
                             {...inputProps}
                             className={inputNumberClasses}
+                            compact={compact}
                             id={inputId}
                             name={inputName}
                             onChange={this.handleTextChange}
                             type='number'
                             value={this.state.value} />
-                        <span className='fd-input-group__addon fd-input-group__addon--button fd-input-group__addon--after'>
-                            <button
+                        <span className={addonClasses}>
+                            <Button
                                 {...numberUpButtonProps}
                                 aria-label={localizedText.up}
-                                className='fd-input-group__button fd-input-group__button--step-up sap-icon--slim-arrow-up'
-                                onClick={this.handleUp} />
-                            <button
+                                className='fd-button--half'
+                                compact={compact}
+                                glyph='slim-arrow-up'
+                                onClick={this.handleUp}
+                                option='light' />
+                            <Button
                                 {...numberDownButtonProps}
                                 aria-label={localizedText.down}
-                                className='fd-input-group__button fd-input-group__button--step-down sap-icon--slim-arrow-down'
-                                onClick={this.handleDown} />
-                        </span>
-                    </div>
-                );
-
-            case 'search':
-                const inputGroupSearchClasses = classnames(
-                    className,
-                    'fd-input-group',
-                    {
-                        'fd-input-group--compact': compact
-                    }
-                );
-
-                const inputSearchClasses = classnames(
-                    inputClassName,
-                    {
-                        'fd-input fd-input--compact': compact
-                    }
-                );
-                return (
-                    <div
-                        {...props}
-                        className={inputGroupSearchClasses}>
-                        <input
-                            {...inputProps}
-                            className={inputSearchClasses}
-                            id={inputId}
-                            name={inputName}
-                            onChange={this.handleChange}
-                            placeholder={inputPlaceholder}
-                            type='search'
-                            value={this.state.searchValue} />
-                        <span className='fd-input-group__addon fd-input-group__addon--button'>
-                            <button
-                                {...searchButtonProps}
-                                aria-label={localizedText.clear}
-                                className='fd-input-group__button fd-input-group__button--clear'
-                                onClick={this.handleClear} />
+                                className='fd-button--half'
+                                compact={compact}
+                                glyph='slim-arrow-down'
+                                onClick={this.handleDown}
+                                option='light' />
                         </span>
                     </div>
                 );
             case 'text':
             default: {
                 if (addonPos === 'before') {
-                    const inputGroupBeforeClasses = classnames(
-                        className,
-                        'fd-input-group',
-                        'fd-input-group--before',
-                        {
-                            'fd-input-group--compact': compact
-                        }
-                    );
-
-                    const inputBeforeClasses = classnames(
-                        inputClassName,
-                        {
-                            'fd-input fd-input--compact': compact
-                        }
-                    );
-
                     return (
                         <div
                             {...props}
-                            className={inputGroupBeforeClasses}>
+                            className={inputGroupClasses}>
                             {actions ? (
-                                <span className='fd-input-group__addon fd-input-group__addon--button fd-input-group__addon--before'>
+                                <span className={addonClasses}>
                                     {children}
                                 </span>
                             ) : (
-                                <span className='fd-input-group__addon fd-input-group__addon--before'>
+                                <span className={addonClasses}>
                                     {glyph ? (
                                         <span
                                             className={`sap-icon--${glyph}`}
@@ -191,51 +155,35 @@ class InputGroup extends Component {
                                     )}
                                 </span>
                             )}
-                            <input
+                            <FormInput
                                 {...inputProps}
-                                className={inputBeforeClasses}
+                                className={inputClasses}
+                                compact={compact}
                                 id={inputId}
                                 name={inputName}
                                 onChange={this.handleTextChange}
-                                type='text'
                                 value={this.state.value} />
                         </div>
                     );
                 } else {
-                    const inputGroupAfterClasses = classnames(
-                        className,
-                        'fd-input-group',
-                        'fd-input-group--after',
-                        {
-                            'fd-input-group--compact': compact
-                        }
-                    );
-
-                    const inputAfterClasses = classnames(
-                        inputClassName,
-                        {
-                            'fd-input fd-input--compact': compact
-                        }
-                    );
-
                     return (
                         <div
                             {...props}
-                            className={inputGroupAfterClasses}>
-                            <input
+                            className={inputGroupClasses}>
+                            <FormInput
                                 {...inputProps}
-                                className={inputAfterClasses}
+                                className={inputClasses}
+                                compact={compact}
                                 id={inputId}
                                 name={inputName}
                                 onChange={this.handleTextChange}
-                                type='text'
                                 value={this.state.value} />
                             {actions ? (
-                                <span className='fd-input-group__addon fd-input-group__addon--button fd-input-group__addon--after'>
+                                <span className={addonClasses}>
                                     {children}
                                 </span>
                             ) : (
-                                <span className='fd-input-group__addon fd-input-group__addon--after'>
+                                <span className={addonClasses}>
                                     {glyph ? (
                                         <span
                                             className={`sap-icon--${glyph}`}
@@ -258,6 +206,7 @@ InputGroup.displayName = 'InputGroup';
 InputGroup.propTypes = {
     actions: PropTypes.bool,
     addon: PropTypes.string,
+    addonClassNames: PropTypes.string,
     addonPos: PropTypes.oneOf(INPUT_GROUP_ADDON_POSITIONS),
     children: PropTypes.node,
     className: PropTypes.string,
@@ -276,8 +225,7 @@ InputGroup.propTypes = {
         up: PropTypes.string
     }),
     numberDownButtonProps: PropTypes.object,
-    numberUpButtonProps: PropTypes.object,
-    searchButtonProps: PropTypes.object
+    numberUpButtonProps: PropTypes.object
 };
 
 InputGroup.defaultProps = {
@@ -294,6 +242,7 @@ InputGroup.defaultProps = {
 InputGroup.propDescriptions = {
     actions: 'Set to **true** to enable an input with actions. Actions can be shown with a text label or icon.',
     addon: 'The value of the add-on.',
+    addonClassNames: 'CSS class(es) to add to the addon element.',
     addonPos: 'Location of the add-on relative to the input.',
     inputId: 'Value for the `id` attribute on the `<input>` element.',
     inputClassName: 'CSS class(es) to add to the `<input>` element.',
@@ -307,8 +256,7 @@ InputGroup.propDescriptions = {
         up: 'Value for aria-label on the up <button> element.'
     },
     numberDownButtonProps: 'Additional props to be spread to the down `<button>` element (for inputType=\'number\').',
-    numberUpButtonProps: 'Additional props to be spread to the up `<button>` element (for inputType=\'number\').',
-    searchButtonProps: 'Additional props to be spread to the `<button>` element.'
+    numberUpButtonProps: 'Additional props to be spread to the up `<button>` element (for inputType=\'number\').'
 };
 
 export default InputGroup;
