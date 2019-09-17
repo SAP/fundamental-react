@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.7.0-rc.66"></a>
+# [0.7.0-rc.66](https://github.com/SAP/fundamental-react/compare/v0.7.0-rc.65...v0.7.0-rc.66) (2019-09-17)
+
+
+### Bug Fixes
+
+* Pull onClick off of props in pagination before spreading ([#748](https://github.com/SAP/fundamental-react/issues/748)) ([a0adf25](https://github.com/SAP/fundamental-react/commit/a0adf25))
+
+
+
 <a name="0.7.0-rc.65"></a>
 # [0.7.0-rc.65](https://github.com/SAP/fundamental-react/compare/v0.7.0-rc.64...v0.7.0-rc.65) (2019-09-17)
 
