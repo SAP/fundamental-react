@@ -85,6 +85,7 @@ class Pagination extends Component {
             displayTotalProps,
             prevProps,
             nextProps,
+            onClick,
             initialPage,
             ...props
         } = this.props;
