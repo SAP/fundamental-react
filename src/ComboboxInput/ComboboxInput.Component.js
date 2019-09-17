@@ -16,10 +16,10 @@ export const ComboboxInputComponent = () => {
                         menu={
                             <Menu>
                                 <Menu.List>
-                                    <Menu.Item url='/'>Pear</Menu.Item>
-                                    <Menu.Item url='/'>Strawberry</Menu.Item>
-                                    <Menu.Item url='/'>Raspberry</Menu.Item>
-                                    <Menu.Item isLink url='/'>
+                                    <Menu.Item url='#'>Pear</Menu.Item>
+                                    <Menu.Item url='#'>Strawberry</Menu.Item>
+                                    <Menu.Item url='#'>Raspberry</Menu.Item>
+                                    <Menu.Item isLink url='#'>
                                         + New Item
                                     </Menu.Item>
                                 </Menu.List>
@@ -34,10 +34,10 @@ export const ComboboxInputComponent = () => {
                         menu={
                             <Menu>
                                 <Menu.List>
-                                    <Menu.Item url='/'>Pear</Menu.Item>
-                                    <Menu.Item url='/'>Strawberry</Menu.Item>
-                                    <Menu.Item url='/'>Raspberry</Menu.Item>
-                                    <Menu.Item isLink url='/'>
+                                    <Menu.Item url='#'>Pear</Menu.Item>
+                                    <Menu.Item url='#'>Strawberry</Menu.Item>
+                                    <Menu.Item url='#'>Raspberry</Menu.Item>
+                                    <Menu.Item isLink url='#'>
                                         + New Item
                                     </Menu.Item>
                                 </Menu.List>

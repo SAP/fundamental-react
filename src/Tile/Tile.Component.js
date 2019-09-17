@@ -61,10 +61,10 @@ export const TileComponent = () => {
                             body={
                                 <Menu>
                                     <Menu.List>
-                                        <Menu.Item url='/'>Option 1</Menu.Item>
-                                        <Menu.Item url='/'>Option 2</Menu.Item>
-                                        <Menu.Item url='/'>Option 3</Menu.Item>
-                                        <Menu.Item url='/'>Option 4</Menu.Item>
+                                        <Menu.Item url='#'>Option 1</Menu.Item>
+                                        <Menu.Item url='#'>Option 2</Menu.Item>
+                                        <Menu.Item url='#'>Option 3</Menu.Item>
+                                        <Menu.Item url='#'>Option 4</Menu.Item>
                                     </Menu.List>
                                 </Menu>
                             }
@@ -87,10 +87,10 @@ export const TileComponent = () => {
                             body={
                                 <Menu>
                                     <Menu.List>
-                                        <Menu.Item url='/'>Option 1</Menu.Item>
-                                        <Menu.Item url='/'>Option 2</Menu.Item>
-                                        <Menu.Item url='/'>Option 3</Menu.Item>
-                                        <Menu.Item url='/'>Option 4</Menu.Item>
+                                        <Menu.Item url='#'>Option 1</Menu.Item>
+                                        <Menu.Item url='#'>Option 2</Menu.Item>
+                                        <Menu.Item url='#'>Option 3</Menu.Item>
+                                        <Menu.Item url='#'>Option 4</Menu.Item>
                                     </Menu.List>
                                 </Menu>
                             }
