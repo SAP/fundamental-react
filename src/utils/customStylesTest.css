@@ -1,0 +1,6 @@
+.fd-alert,
+.fd-button, .fd-badge, .fd-breadcrumb, .fd-button-group,
+.fd-counter,
+.fd-label, .fd-status-label {
+    background-color: hotpink;
+}

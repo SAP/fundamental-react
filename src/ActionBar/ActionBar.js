@@ -1,12 +1,12 @@
-import 'fundamental-styles/dist/action-bar.css';
 import ActionBarActions from './_ActionBarActions';
 import ActionBarBack from './_ActionBarBack';
 import ActionBarHeader from './_ActionBarHeader';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
+import withStyles from '../utils/StyleProvider';
 
-const ActionBar = ({ children, className, ...props }) => {
+const ActionBar = ({ children, className, customStyles, disableStyles, ...props }) => {
     const actionBarClasses = classnames(
         'fd-action-bar',
         className
@@ -21,11 +21,13 @@ ActionBar.displayName = 'ActionBar';
 
 ActionBar.propTypes = {
     children: PropTypes.node,
-    className: PropTypes.string
+    className: PropTypes.string,
+    customStyles: PropTypes.object,
+    disableStyles: PropTypes.bool
 };
 
 ActionBar.Actions = ActionBarActions;
 ActionBar.Back = ActionBarBack;
 ActionBar.Header = ActionBarHeader;
 
-export default ActionBar;
+export default withStyles(ActionBar);

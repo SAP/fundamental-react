@@ -1,7 +1,7 @@
-import 'fundamental-styles/dist/badge.css';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
+import withStyles from '../utils/StyleProvider';
 import { BADGE_MODIFIERS, BADGE_TYPES } from '../utils/constants';
 
 
@@ -26,9 +26,11 @@ Badge.displayName = 'Badge';
 Badge.propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,
+    customStyles: PropTypes.object,
+    disableStyles: PropTypes.bool,
     modifier: PropTypes.oneOf(BADGE_MODIFIERS),
     type: PropTypes.oneOf(BADGE_TYPES)
 };
 
-export default Badge;
+export default withStyles(Badge);
 

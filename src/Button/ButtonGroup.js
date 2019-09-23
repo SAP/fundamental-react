@@ -1,8 +1,8 @@
-import 'fundamental-styles/dist/button-group.css';
 import PropTypes from 'prop-types';
 import React from 'react';
+import withStyles from '../utils/StyleProvider';
 
-const ButtonGroup = ({ children, ...props }) => {
+const ButtonGroup = ({ children, customStyles, disableStyles, ...props }) => {
     return (
         <div
             {...props}
@@ -17,11 +17,13 @@ const ButtonGroup = ({ children, ...props }) => {
 ButtonGroup.displayName = 'ButtonGroup';
 
 ButtonGroup.propTypes = {
-    children: PropTypes.node
+    children: PropTypes.node,
+    customStyles: PropTypes.object,
+    disableStyles: PropTypes.bool
 };
 
 ButtonGroup.propDescriptions = {
     children: '`Button` nodes to group together.'
 };
 
-export default ButtonGroup;
+export default withStyles(ButtonGroup);

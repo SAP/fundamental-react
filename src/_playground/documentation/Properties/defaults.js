@@ -3,7 +3,9 @@ export const defaultPropDescriptions = {
     children: 'Node(s) to render within the component.',
     className: 'CSS class(es) to add to the element.',
     compact: 'Set to **true** to enable compact mode.',
+    customStyles: 'Load custom stylesheet via require statement',
     disabled: 'Set to **true** to mark component as disabled and make it non-interactive.',
+    disableStyles: 'Disable loading stylesheets from fundamental-styles.',
     glyph: 'The icon to include. See the icon page for the list of icons.',
     id: 'Value for the `id` attribute on the element.',
     inputProps: 'Additional props to be spread to the `<input>` element.',
@@ -21,5 +23,6 @@ export const defaultPropDescriptions = {
     size: 'Size of the component.',
     title: 'Localized text for the heading.',
     titleProps: 'Additional props to be spread to the title\'s heading element.',
-    type: 'Sets the variation of the component. Primarily used for styling.'
+    type: 'Sets the variation of the component. Primarily used for styling.',
+    useIcons: 'Use fundamental-styles icons in this component'
 };

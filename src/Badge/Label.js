@@ -1,10 +1,10 @@
-import 'fundamental-styles/dist/label.css';
 import classnames from 'classnames';
 import { LABEL_TYPES } from '../utils/constants';
 import PropTypes from 'prop-types';
 import React from 'react';
+import withStyles from '../utils/StyleProvider';
 
-const Label = ({ type, children, className, ...props }) => {
+const Label = ({ type, children, className, customStyles, disableStyles, ...props }) => {
     const labelClasses = classnames(
         'fd-label',
         {
@@ -20,7 +20,9 @@ Label.displayName = 'Label';
 Label.propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,
+    customStyles: PropTypes.object,
+    disableStyles: PropTypes.bool,
     type: PropTypes.oneOf(LABEL_TYPES)
 };
 
-export default Label;
+export default withStyles(Label);

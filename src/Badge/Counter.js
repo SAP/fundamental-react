@@ -1,10 +1,10 @@
-import 'fundamental-styles/dist/counter.css';
 import classnames from 'classnames';
 import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import PropTypes from 'prop-types';
+import withStyles from '../utils/StyleProvider';
 import React from 'react';
 
-const Counter = ({ localizedText, notification, children, className, ...props }) => {
+const Counter = ({ localizedText, notification, children, className, customStyles, disableStyles, ...props }) => {
     const counterClasses = classnames(
         'fd-counter',
         {
@@ -25,6 +25,8 @@ Counter.displayName = 'Counter';
 Counter.propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,
+    customStyles: PropTypes.object,
+    disableStyles: PropTypes.bool,
     localizedText: CustomPropTypes.i18n({
         counterLabel: PropTypes.string
     }),
@@ -44,4 +46,4 @@ Counter.propDescriptions = {
     notification: 'Set to **true** to enable counter with notification.'
 };
 
-export default Counter;
+export default withStyles(Counter);

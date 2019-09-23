@@ -1,10 +1,10 @@
-import 'fundamental-styles/dist/alert.css';
 import { ALERT_TYPES } from '../utils/constants';
 import classnames from 'classnames';
 import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import Icon from '../Icon/Icon';
 import Link from '../Link/Link';
 import PropTypes from 'prop-types';
+import withStyles from '../utils/StyleProvider';
 import React, { Component } from 'react';
 
 class Alert extends Component {
@@ -27,6 +27,8 @@ class Alert extends Component {
         const {
             onCloseClicked,
             buttonProps,
+            customStyles,
+            disableStyles,
             type,
             link,
             linkProps,
@@ -35,6 +37,7 @@ class Alert extends Component {
             dismissible,
             children,
             className,
+            useIcons,
             ...props
         } = this.props;
 
@@ -88,6 +91,8 @@ Alert.propTypes = {
     buttonProps: PropTypes.object,
     children: PropTypes.node,
     className: PropTypes.string,
+    customStyles: PropTypes.object,
+    disableStyles: PropTypes.bool,
     dismissible: PropTypes.bool,
     link: PropTypes.string,
     linkProps: PropTypes.object,
@@ -96,6 +101,7 @@ Alert.propTypes = {
         close: PropTypes.string
     }),
     type: PropTypes.oneOf(ALERT_TYPES),
+    useIcons: PropTypes.bool,
     onCloseClicked: PropTypes.func
 };
 
@@ -103,6 +109,7 @@ Alert.defaultProps = {
     localizedText: {
         close: 'Close'
     },
+    useIcons: true,
     onCloseClicked: () => { }
 };
 
@@ -117,4 +124,4 @@ Alert.propDescriptions = {
     onCloseClicked: 'Callback function passing event when close button is clicked.'
 };
 
-export default Alert;
+export default withStyles(Alert);
