@@ -1,11 +1,11 @@
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
-import withStyles from '../utils/StyleProvider';
+import withStyles from '../utils/WithStyles';
 import { BADGE_MODIFIERS, BADGE_TYPES } from '../utils/constants';
 
 
-const Badge = ({ type, modifier, children, className, customStyles, disableStyles, ...props }) => {
+const Badge = React.forwardRef(({ type, modifier, children, className, customStyles, disableStyles, ...props }, ref) => {
     const badgeClasses = classnames(
         'fd-badge',
         {
@@ -16,11 +16,12 @@ const Badge = ({ type, modifier, children, className, customStyles, disableStyle
     );
 
     return (
-        <span {...props} className={badgeClasses}>
+        <span {...props} className={badgeClasses}
+            ref={ref}>
             {children}
         </span>
     );
-};
+});
 Badge.displayName = 'Badge';
 
 Badge.propTypes = {

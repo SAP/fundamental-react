@@ -2,9 +2,9 @@ import classnames from 'classnames';
 import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import PropTypes from 'prop-types';
 import React from 'react';
-import withStyles from '../utils/StyleProvider';
+import withStyles from '../utils/WithStyles';
 
-const Counter = ({ localizedText, notification, children, className, customStyles, disableStyles, ...props }) => {
+const Counter = React.forwardRef(({ localizedText, notification, children, className, customStyles, disableStyles, ...props }, ref) => {
     const counterClasses = classnames(
         'fd-counter',
         {
@@ -15,11 +15,12 @@ const Counter = ({ localizedText, notification, children, className, customStyle
 
     return (
         <span {...props} aria-label={localizedText.counterLabel}
-            className={counterClasses}>
+            className={counterClasses}
+            ref={ref}>
             {children}
         </span>
     );
-};
+});
 Counter.displayName = 'Counter';
 
 Counter.propTypes = {

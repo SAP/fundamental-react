@@ -1,18 +1,19 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import withStyles from '../utils/StyleProvider';
+import withStyles from '../utils/WithStyles';
 
-const ButtonGroup = ({ children, customStyles, disableStyles, ...props }) => {
+const ButtonGroup = React.forwardRef(({ children, customStyles, disableStyles, ...props }, ref) => {
     return (
         <div
             {...props}
             aria-label='Group label'
             className='fd-button-group'
+            ref={ref}
             role='group'>
             {children}
         </div>
     );
-};
+});
 
 ButtonGroup.displayName = 'ButtonGroup';
 

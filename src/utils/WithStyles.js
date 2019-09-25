@@ -38,7 +38,11 @@ export default function withStyles(WrappedComponent, defaults) {
             }
 
             return (
-                <WrappedComponent ref={forwardedRef} {...otherProps} />
+                <WrappedComponent
+                    customStyles={customStyles}
+                    disableStyles={disableStyles}
+                    ref={forwardedRef}
+                    {...otherProps} />
             );
         }
     }

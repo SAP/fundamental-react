@@ -1,11 +1,13 @@
 import BreadcrumbItem from './_BreadcrumbItem';
 import PropTypes from 'prop-types';
 import React from 'react';
-import withStyles from '../utils/StyleProvider';
+import withStyles from '../utils/WithStyles';
 
-const Breadcrumb = ({ children, customStyles, disableStyles, ...props }) => {
-    return <ul {...props} className='fd-breadcrumb'>{children}</ul>;
-};
+const Breadcrumb = React.forwardRef(({ children, customStyles, disableStyles, ...props }, ref) => {
+    return (<ul {...props}
+        className='fd-breadcrumb'
+        ref={ref}>{children}</ul>);
+});
 
 Breadcrumb.displayName = 'Breadcrumb';
 

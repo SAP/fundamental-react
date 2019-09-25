@@ -1,7 +1,7 @@
 import Alert from './Alert';
+import { mount } from 'enzyme';
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { mount, shallow } from 'enzyme';
 
 describe('<Alert />', () => {
     const basicAlert = (
@@ -34,8 +34,9 @@ describe('<Alert />', () => {
         tree = component.toJSON();
         expect(tree).toMatchSnapshot();
 
-        let wrapper = shallow(basicAlert);
-        expect(wrapper.state(['isActive'])).toBeTruthy();
+        let wrapper = mount(basicAlert);
+
+        expect(wrapper.childAt(0).state(['isActive'])).toBeTruthy();
         wrapper.find('button.fd-alert__close').simulate('click');
         expect(wrapper.state(['isActive'])).toBeFalsy();
     });

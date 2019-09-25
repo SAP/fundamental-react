@@ -4,7 +4,7 @@ import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import Icon from '../Icon/Icon';
 import Link from '../Link/Link';
 import PropTypes from 'prop-types';
-import withStyles from '../utils/StyleProvider';
+import withStyles from '../utils/WithStyles';
 import React, { Component } from 'react';
 
 class Alert extends Component {
@@ -69,7 +69,7 @@ class Alert extends Component {
                         )}
                         <div className='fd-alert__text'>
                             {type && (
-                                <Icon glyph={`mesage-${type}`} />
+                                <Icon disableStyles={disableCSS} glyph={`mesage-${type}`} />
                             )}
                             {children}
                             {link && (

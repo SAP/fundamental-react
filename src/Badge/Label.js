@@ -2,9 +2,9 @@ import classnames from 'classnames';
 import { LABEL_TYPES } from '../utils/constants';
 import PropTypes from 'prop-types';
 import React from 'react';
-import withStyles from '../utils/StyleProvider';
+import withStyles from '../utils/WithStyles';
 
-const Label = ({ type, children, className, customStyles, disableStyles, ...props }) => {
+const Label = React.forwardRef(({ type, children, className, customStyles, disableStyles, ...props }, ref) => {
     const labelClasses = classnames(
         'fd-label',
         {
@@ -13,8 +13,9 @@ const Label = ({ type, children, className, customStyles, disableStyles, ...prop
         className
     );
 
-    return <span {...props} className={labelClasses}>{children}</span>;
-};
+    return (<span {...props} className={labelClasses}
+        ref={ref}>{children}</span>);
+});
 Label.displayName = 'Label';
 
 Label.propTypes = {

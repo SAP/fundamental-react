@@ -1,4 +1,3 @@
-import 'fundamental-styles/dist/checkbox.css';
 import classnames from 'classnames';
 import FormItem from './FormItem';
 import FormLabel from './FormLabel';
@@ -15,7 +14,7 @@ const getCheckStatus = (checked, indeterminate) => {
     }
 };
 
-const Checkbox = ({ checked, className, defaultChecked, disabled, id, indeterminate, inline, inputProps, labelProps, name, onChange, value, ...props }) => {
+const Checkbox = React.forwardRef(({ checked, className, defaultChecked, disabled, id, indeterminate, inline, inputProps, labelProps, name, onChange, value, ...props }, ref) => {
     const classes = classnames(
         className,
         'fd-checkbox'
@@ -25,7 +24,8 @@ const Checkbox = ({ checked, className, defaultChecked, disabled, id, indetermin
         <FormItem
             {...props}
             disabled={disabled}
-            isInline={inline}>
+            isInline={inline}
+            ref={ref}>
             <FormLabel {...labelProps} disabled={disabled}>
                 <input
                     {...inputProps}
@@ -44,7 +44,7 @@ const Checkbox = ({ checked, className, defaultChecked, disabled, id, indetermin
             </FormLabel>
         </FormItem>
     );
-};
+});
 
 Checkbox.displayName = 'Checkbox';
 

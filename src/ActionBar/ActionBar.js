@@ -4,18 +4,22 @@ import ActionBarHeader from './_ActionBarHeader';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
-import withStyles from '../utils/StyleProvider';
+import withStyles from '../utils/WithStyles';
 
-const ActionBar = ({ children, className, customStyles, disableStyles, ...props }) => {
+const ActionBar = React.forwardRef(({ children, className, customStyles, disableStyles, ...props }, ref) => {
     const actionBarClasses = classnames(
         'fd-action-bar',
         className
     );
 
     return (
-        <div {...props} className={actionBarClasses}>{children}</div>
+        <div {...props}
+            className={actionBarClasses}
+            ref={ref}>
+            {children}
+        </div>
     );
-};
+});
 
 ActionBar.displayName = 'ActionBar';
 

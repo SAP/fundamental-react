@@ -1,10 +1,10 @@
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
-import withStyles from '../utils/StyleProvider';
+import withStyles from '../utils/WithStyles';
 import { BUTTON_OPTIONS, BUTTON_TYPES } from '../utils/constants';
 
-const Button = ({
+const Button = React.forwardRef(({
     option,
     type,
     compact,
@@ -19,7 +19,7 @@ const Button = ({
     className,
     useIcons,
     ...props
-}) => {
+}, ref) => {
     const buttonClasses = classnames(
         {
             'fd-button': !option,
@@ -35,11 +35,12 @@ const Button = ({
 
     return (<button {...props} className={buttonClasses}
         disabled={disabled} onClick={onClick}
+        ref={ref}
         selected={selected}
         type={typeAttr}>
         {children}
     </button>);
-};
+});
 
 Button.displayName = 'Button';
 

@@ -2,9 +2,9 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { STATUS_TYPES } from '../utils/constants';
-import withStyles from '../utils/StyleProvider';
+import withStyles from '../utils/WithStyles';
 
-const Status = ({ type, glyph, children, className, customStyles, disableStyles, useIcons, ...props }) => {
+const Status = React.forwardRef(({ type, glyph, children, className, customStyles, disableStyles, useIcons, ...props }, ref) => {
     const statusClasses = classnames(
         'fd-status-label',
         {
@@ -17,11 +17,12 @@ const Status = ({ type, glyph, children, className, customStyles, disableStyles,
     return (
         <span
             {...props}
-            className={statusClasses}>
+            className={statusClasses}
+            ref={ref}>
             {children}
         </span>
     );
-};
+});
 Status.displayName = 'Status';
 
 Status.propTypes = {

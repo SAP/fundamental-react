@@ -28,7 +28,7 @@ storiesOf('Components|Button', module)
             })}>Customizable</Button>
     ))
     .add('disabled styles', () => (
-        <Button disableStyles>Test with custom css</Button>
+        <Button disableStyles>Disabled Styles</Button>
     ))
     .add('dynamic requires', () => (
         <Button customStyles={require('../../utils/customStylesTest.css')}>Test with custom css</Button>

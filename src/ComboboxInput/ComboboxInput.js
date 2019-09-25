@@ -1,13 +1,12 @@
-import 'fundamental-styles/dist/input-group.css';
 import Button from '../Button/Button';
 import classnames from 'classnames';
 import FormInput from '../Forms/FormInput';
 import Popover from '../Popover/Popover';
 import PropTypes from 'prop-types';
 import React from 'react';
-import withStyles from '../utils/StyleProvider';
+import withStyles from '../utils/WithStyles';
 
-const ComboboxInput = ({ placeholder, menu, compact, className, customStyles, disableStyles, popoverProps, inputProps, buttonProps, ...props }) => {
+const ComboboxInput = React.forwardRef(({ placeholder, menu, compact, className, customStyles, disableStyles, popoverProps, inputProps, buttonProps, ...props }, ref) => {
     const comboboxPopoverClasses = classnames(
         'fd-input-group'
     );
@@ -15,7 +14,8 @@ const ComboboxInput = ({ placeholder, menu, compact, className, customStyles, di
     const disableCSS = disableStyles || customStyles;
 
     return (
-        <div {...props} className={className}>
+        <div {...props} className={className}
+            ref={ref}>
             <Popover
                 {...popoverProps}
                 body={menu}
@@ -42,7 +42,7 @@ const ComboboxInput = ({ placeholder, menu, compact, className, customStyles, di
                 noArrow />
         </div>
     );
-};
+});
 
 ComboboxInput.displayName = 'ComboboxInput';
 
@@ -62,4 +62,4 @@ ComboboxInput.propDescriptions = {
     menu: 'An object containing a `Menu` component.'
 };
 
-export default withStyles(ComboboxInput);
+export default withStyles(ComboboxInput, { cssFile: 'input-group' });
