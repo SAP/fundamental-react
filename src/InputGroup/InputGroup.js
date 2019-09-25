@@ -1,9 +1,10 @@
-import 'fundamental-styles/dist/input-group.css';
 import Button from '../Button/Button';
 import classnames from 'classnames';
 import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import FormInput from '../Forms/FormInput';
+import Icon from '../Icon/Icon';
 import PropTypes from 'prop-types';
+import withStyles from '../utils/WithStyles';
 import { INPUT_GROUP_ADDON_POSITIONS, INPUT_GROUP_TYPES } from '../utils/constants';
 import React, { Component } from 'react';
 
@@ -61,6 +62,8 @@ class InputGroup extends Component {
             children,
             className,
             compact,
+            customStyles,
+            disableStyles,
             glyph,
             inputClassName,
             inputType,
@@ -91,6 +94,8 @@ class InputGroup extends Component {
             'fd-input-group__input'
         );
 
+        const disableCSS = disableStyles || customStyles;
+
 
         switch (inputType) {
             case 'number':
@@ -108,6 +113,7 @@ class InputGroup extends Component {
                             {...inputProps}
                             className={inputNumberClasses}
                             compact={compact}
+                            disableStyles={disableCSS}
                             id={inputId}
                             name={inputName}
                             onChange={this.handleTextChange}
@@ -119,6 +125,7 @@ class InputGroup extends Component {
                                 aria-label={localizedText.up}
                                 className='fd-button--half'
                                 compact={compact}
+                                disableStyles={disableCSS}
                                 glyph='slim-arrow-up'
                                 onClick={this.handleUp}
                                 option='light' />
@@ -127,6 +134,7 @@ class InputGroup extends Component {
                                 aria-label={localizedText.down}
                                 className='fd-button--half'
                                 compact={compact}
+                                disableStyles={disableCSS}
                                 glyph='slim-arrow-down'
                                 onClick={this.handleDown}
                                 option='light' />
@@ -147,8 +155,9 @@ class InputGroup extends Component {
                             ) : (
                                 <span className={addonClasses}>
                                     {glyph ? (
-                                        <span
-                                            className={`sap-icon--${glyph}`}
+                                        <Icon
+                                            disableStyles={disableCSS}
+                                            glyph={glyph}
                                             role='presentation' />
                                     ) : (
                                         addon
@@ -159,6 +168,7 @@ class InputGroup extends Component {
                                 {...inputProps}
                                 className={inputClasses}
                                 compact={compact}
+                                disableStyles={disableCSS}
                                 id={inputId}
                                 name={inputName}
                                 onChange={this.handleTextChange}
@@ -174,6 +184,7 @@ class InputGroup extends Component {
                                 {...inputProps}
                                 className={inputClasses}
                                 compact={compact}
+                                disableStyles={disableCSS}
                                 id={inputId}
                                 name={inputName}
                                 onChange={this.handleTextChange}
@@ -185,8 +196,9 @@ class InputGroup extends Component {
                             ) : (
                                 <span className={addonClasses}>
                                     {glyph ? (
-                                        <span
-                                            className={`sap-icon--${glyph}`}
+                                        <Icon
+                                            disableStyles={disableCSS}
+                                            glyph={glyph}
                                             role='presentation' />
                                     ) : (
                                         addon
@@ -211,6 +223,8 @@ InputGroup.propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,
     compact: PropTypes.bool,
+    customStyles: PropTypes.object,
+    disableStyles: PropTypes.bool,
     glyph: PropTypes.string,
     inputClassName: PropTypes.string,
     inputId: PropTypes.string,
@@ -259,4 +273,4 @@ InputGroup.propDescriptions = {
     numberUpButtonProps: 'Additional props to be spread to the up `<button>` element (for inputType=\'number\').'
 };
 
-export default InputGroup;
+export default withStyles(InputGroup, { cssFile: 'input-group', fonts: true });

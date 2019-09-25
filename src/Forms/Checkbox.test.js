@@ -92,6 +92,7 @@ describe('<Checkbox />', () => {
             render = () => <Checkbox ref={ref} />;
         }
         mount(<Test />);
+        console.log(ref)
         expect(ref.current.tagName).toEqual('DIV');
     });
 });

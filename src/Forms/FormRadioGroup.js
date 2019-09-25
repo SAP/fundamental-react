@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import shortId from '../utils/shortId';
+import withStyles from '../utils/WithStyles';
 import React, { Component } from 'react';
 
 class FormRadioGroup extends Component {
@@ -10,7 +11,7 @@ class FormRadioGroup extends Component {
     }
 
     render() {
-        const { children, disabled, inline, onChange, ...props } = this.props;
+        const { children, customStyles, disabled, disableStyles, inline, onChange, ...props } = this.props;
 
         return (
             <div
@@ -32,7 +33,9 @@ FormRadioGroup.displayName = 'FormRadioGroup';
 
 FormRadioGroup.propTypes = {
     children: PropTypes.node,
+    customStyles: PropTypes.object,
     disabled: PropTypes.bool,
+    disableStyles: PropTypes.bool,
     inline: PropTypes.bool,
     onChange: PropTypes.func
 };
@@ -45,4 +48,4 @@ FormRadioGroup.propDescriptions = {
     inline: 'Set to **true** to display radio buttons in a row.'
 };
 
-export default FormRadioGroup;
+export default withStyles(FormRadioGroup);
