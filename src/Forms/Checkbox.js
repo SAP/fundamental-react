@@ -2,7 +2,8 @@ import classnames from 'classnames';
 import FormItem from './FormItem';
 import FormLabel from './FormLabel';
 import PropTypes from 'prop-types';
-import React from 'react';
+import withStyles from '../utils/WithStyles';
+import React, { useEffect, useRef } from 'react';
 
 const getCheckStatus = (checked, indeterminate) => {
     if (indeterminate) {
@@ -14,19 +15,31 @@ const getCheckStatus = (checked, indeterminate) => {
     }
 };
 
-const Checkbox = React.forwardRef(({ checked, className, defaultChecked, disabled, id, indeterminate, inline, inputProps, labelProps, name, onChange, value, ...props }, ref) => {
+const Checkbox = React.forwardRef(({ checked, className, customStyles, defaultChecked, disabled, disableStyles, id, indeterminate, inline, inputProps, labelProps, name, onChange, value, ...props }, ref) => {
+
+    const inputEl = useRef();
+
+    useEffect(() => {
+        return inputEl && (inputEl.current.indeterminate = indeterminate);
+    });
+
     const classes = classnames(
         className,
         'fd-checkbox'
     );
 
+    const disableCSS = disableStyles || customStyles;
+
     return (
         <FormItem
             {...props}
+            disableStyles={disableCSS}
             disabled={disabled}
             isInline={inline}
             ref={ref}>
-            <FormLabel {...labelProps} disabled={disabled}>
+            <FormLabel {...labelProps}
+                disableStyles={disableCSS}
+                disabled={disabled}>
                 <input
                     {...inputProps}
                     aria-checked={getCheckStatus(checked, indeterminate)}
@@ -38,7 +51,7 @@ const Checkbox = React.forwardRef(({ checked, className, defaultChecked, disable
                     onChange={(e) => {
                         onChange(e, !checked);
                     }}
-                    ref={el => el && (el.indeterminate = indeterminate)}
+                    ref={inputEl}
                     type='checkbox' />
                 {value}
             </FormLabel>
@@ -51,8 +64,10 @@ Checkbox.displayName = 'Checkbox';
 Checkbox.propTypes = {
     checked: PropTypes.bool,
     className: PropTypes.string,
+    customStyles: PropTypes.object,
     defaultChecked: PropTypes.bool,
     disabled: PropTypes.bool,
+    disableStyles: PropTypes.bool,
     id: PropTypes.string,
     indeterminate: PropTypes.bool,
     inline: PropTypes.bool,
@@ -78,4 +93,4 @@ Checkbox.propDescriptions = {
     value: 'Sets the `value` for the checkbox input.'
 };
 
-export default Checkbox;
+export default withStyles(Checkbox, { cssFile: 'checkbox' });

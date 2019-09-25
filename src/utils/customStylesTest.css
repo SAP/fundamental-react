@@ -1,9 +1,10 @@
 .fd-alert,
 .fd-button, .fd-badge, .fd-breadcrumb, .fd-button-group,
-.fd-counter, .fd-calendar,
+.fd-counter, .fd-calendar, .fd-checkbox,
 .fd-fieldset,
 .fd-label, .fd-status-label,
 .fd-form-input,
+.fd-input-group,
 .fd-popover {
     background-color: hotpink;
 }
