@@ -5,11 +5,14 @@ import FormInput from '../Forms/FormInput';
 import Popover from '../Popover/Popover';
 import PropTypes from 'prop-types';
 import React from 'react';
+import withStyles from '../utils/StyleProvider';
 
-const ComboboxInput = ({ placeholder, menu, compact, className, popoverProps, inputProps, buttonProps, ...props }) => {
+const ComboboxInput = ({ placeholder, menu, compact, className, customStyles, disableStyles, popoverProps, inputProps, buttonProps, ...props }) => {
     const comboboxPopoverClasses = classnames(
         'fd-input-group'
     );
+
+    const disableCSS = disableStyles || customStyles;
 
     return (
         <div {...props} className={className}>
@@ -22,17 +25,20 @@ const ComboboxInput = ({ placeholder, menu, compact, className, popoverProps, in
                             {...inputProps}
                             className='fd-input-group__input'
                             compact={compact}
+                            disableStyles={disableCSS}
                             placeholder={placeholder}
                             type='text' />
                         <span className='fd-input-group__addon fd-input-group__addon--button'>
                             <Button
                                 {...buttonProps}
                                 compact={compact}
+                                disableStyles={disableCSS}
                                 glyph='navigation-down-arrow'
                                 option='light' />
                         </span>
                     </div>
                 }
+                disableStyles={disableCSS}
                 noArrow />
         </div>
     );
@@ -45,6 +51,8 @@ ComboboxInput.propTypes = {
     buttonProps: PropTypes.object,
     className: PropTypes.string,
     compact: PropTypes.bool,
+    customStyles: PropTypes.object,
+    disableStyles: PropTypes.bool,
     inputProps: PropTypes.object,
     placeholder: PropTypes.string,
     popoverProps: PropTypes.object
@@ -54,4 +62,4 @@ ComboboxInput.propDescriptions = {
     menu: 'An object containing a `Menu` component.'
 };
 
-export default ComboboxInput;
+export default withStyles(ComboboxInput);

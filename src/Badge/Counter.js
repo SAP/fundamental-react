@@ -1,8 +1,8 @@
 import classnames from 'classnames';
 import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import PropTypes from 'prop-types';
-import withStyles from '../utils/StyleProvider';
 import React from 'react';
+import withStyles from '../utils/StyleProvider';
 
 const Counter = ({ localizedText, notification, children, className, customStyles, disableStyles, ...props }) => {
     const counterClasses = classnames(
@@ -46,4 +46,4 @@ Counter.propDescriptions = {
     notification: 'Set to **true** to enable counter with notification.'
 };
 
-export default withStyles(Counter);
+export default withStyles(Counter, { cssFile: 'counter', fonts: true });

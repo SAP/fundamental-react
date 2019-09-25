@@ -50,6 +50,8 @@ class Alert extends Component {
             className
         );
 
+        const disableCSS = disableStyles || customStyles;
+
         return (
             <div>
                 {this.state.isActive && (
@@ -73,6 +75,7 @@ class Alert extends Component {
                             {link && (
                                 <Link
                                     {...linkProps}
+                                    disableStyles={disableCSS}
                                     href={link}>
                                     {linkText}{' '}
                                 </Link>
@@ -124,4 +127,4 @@ Alert.propDescriptions = {
     onCloseClicked: 'Callback function passing event when close button is clicked.'
 };
 
-export default withStyles(Alert);
+export default withStyles(Alert, { cssFile: 'alert', fonts: true });

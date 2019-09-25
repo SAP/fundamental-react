@@ -5,7 +5,7 @@ import withStyles from '../utils/StyleProvider';
 import { BADGE_MODIFIERS, BADGE_TYPES } from '../utils/constants';
 
 
-const Badge = ({ type, modifier, children, className, ...props }) => {
+const Badge = ({ type, modifier, children, className, customStyles, disableStyles, ...props }) => {
     const badgeClasses = classnames(
         'fd-badge',
         {
@@ -32,5 +32,4 @@ Badge.propTypes = {
     type: PropTypes.oneOf(BADGE_TYPES)
 };
 
-export default withStyles(Badge);
-
+export default withStyles(Badge, { cssFile: 'badge', fonts: true });

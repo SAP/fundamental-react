@@ -1,6 +1,8 @@
 .fd-alert,
 .fd-button, .fd-badge, .fd-breadcrumb, .fd-button-group,
 .fd-counter,
-.fd-label, .fd-status-label {
+.fd-label, .fd-status-label,
+.fd-form-input,
+.fd-popover {
     background-color: hotpink;
 }

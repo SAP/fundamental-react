@@ -5,6 +5,7 @@ import Button from '../Button/Button';
 import Calendar from '../Calendar/Calendar';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
+import withStyles from '../utils/StyleProvider';
 import React, { Component } from 'react';
 
 class DatePicker extends Component {
@@ -283,9 +284,25 @@ class DatePicker extends Component {
     };
 
     render() {
-        const { enableRangeSelection, disableWeekends, disableBeforeDate, disableAfterDate,
-            disableWeekday, disablePastDates, disableFutureDates, blockedDates, disabledDates,
-            compact, className, inputProps, buttonProps, onBlur, ...props } = this.props;
+        const {
+            blockedDates,
+            buttonProps,
+            className,
+            compact,
+            customStyles,
+            disableAfterDate,
+            disableBeforeDate,
+            disabledDates,
+            disableFutureDates,
+            disablePastDates,
+            disableStyles,
+            disableWeekday,
+            disableWeekends,
+            enableRangeSelection,
+            inputProps,
+            onBlur,
+            ...props
+        } = this.props;
 
         const datePickerInputGroupClasses = classnames(
             'fd-input-group'
@@ -321,6 +338,7 @@ class DatePicker extends Component {
                             <span className='fd-input-group__addon fd-input-group__addon--after fd-input-group__addon--button'>
                                 <Button {...buttonProps}
                                     compact={compact}
+                                    disableStyles={disableStyles}
                                     glyph='calendar'
                                     onClick={() => this.openCalendar()}
                                     option='light' />
@@ -341,6 +359,7 @@ class DatePicker extends Component {
                             disableBeforeDate={disableBeforeDate}
                             disableFutureDates={disableFutureDates}
                             disablePastDates={disablePastDates}
+                            disableStyles={disableStyles}
                             disableWeekday={disableWeekday}
                             disableWeekends={disableWeekends}
                             disabledDates={disabledDates}
@@ -375,4 +394,4 @@ DatePicker.propDescriptions = {
     onBlur: 'Callback function for onBlur events. In the object returned, `date` is the date object and `formattedDate` is the formatted date.'
 };
 
-export default DatePicker;
+export default withStyles(DatePicker, { cssFile: ['popover', 'input-group', 'input'], fonts: true });

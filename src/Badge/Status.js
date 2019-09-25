@@ -38,4 +38,4 @@ Status.defaultProps = {
     useIcons: true
 };
 
-export default withStyles(Status);
+export default withStyles(Status, { cssFile: 'status-label', font: true });

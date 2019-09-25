@@ -20,7 +20,6 @@ const Button = ({
     useIcons,
     ...props
 }) => {
-    console.log('inbutton', disableStyles)
     const buttonClasses = classnames(
         {
             'fd-button': !option,
@@ -70,4 +69,4 @@ Button.propDescriptions = {
     typeAttr: 'Value for the `type` attribute on the `<button>` element.'
 };
 
-export default withStyles(Button);
+export default withStyles(Button, { cssFile: 'button', font: true });

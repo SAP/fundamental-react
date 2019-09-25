@@ -30,4 +30,4 @@ ActionBar.Actions = ActionBarActions;
 ActionBar.Back = ActionBarBack;
 ActionBar.Header = ActionBarHeader;
 
-export default withStyles(ActionBar);
+export default withStyles(ActionBar, { cssFile: 'action-bar', fonts: true });

@@ -6,35 +6,35 @@ import {
     withKnobs
 } from '@storybook/addon-knobs';
 
-// storiesOf('Components|ActionBar', module)
-//     .addDecorator(withKnobs)
-//     .add('Default', () => (
-//         <ActionBar>
-//             <ActionBar.Back />
-//             <ActionBar.Header description={'Action Bar Description'} title={'Page Title'} />
-//             <ActionBar.Actions>
-//                 <Button>Button</Button>
-//                 <Button option='emphasized'>Button</Button>
-//             </ActionBar.Actions>
-//         </ActionBar>
-//     ))
-//     .add('disable styles', () => (
-//         <ActionBar disableStyles>
-//             <ActionBar.Back />
-//             <ActionBar.Header description={'Action Bar Description'} title={'Page Title'} />
-//             <ActionBar.Actions>
-//                 <Button>Button</Button>
-//                 <Button option='emphasized'>Button</Button>
-//             </ActionBar.Actions>
-//         </ActionBar>
-//     ))
-//     .add('custom styles', () => (
-//         <ActionBar customStyles={require('../../utils/customStylesTest.css')}>
-//             <ActionBar.Back />
-//             <ActionBar.Header description={'Action Bar Description'} title={'Page Title'} />
-//             <ActionBar.Actions>
-//                 <Button>Button</Button>
-//                 <Button option='emphasized'>Button</Button>
-//             </ActionBar.Actions>
-//         </ActionBar>
-//     ));
+storiesOf('Components|ActionBar', module)
+    .addDecorator(withKnobs)
+    .add('Default', () => (
+        <ActionBar>
+            <ActionBar.Back />
+            <ActionBar.Header description={'Action Bar Description'} title={'Page Title'} />
+            <ActionBar.Actions>
+                <Button>Button</Button>
+                <Button option='emphasized'>Button</Button>
+            </ActionBar.Actions>
+        </ActionBar>
+    ))
+    .add('disable styles', () => (
+        <ActionBar disableStyles>
+            <ActionBar.Back />
+            <ActionBar.Header description={'Action Bar Description'} title={'Page Title'} />
+            <ActionBar.Actions>
+                <Button>Button</Button>
+                <Button option='emphasized'>Button</Button>
+            </ActionBar.Actions>
+        </ActionBar>
+    ))
+    .add('custom styles', () => (
+        <ActionBar customStyles={require('../../utils/customStylesTest.css')}>
+            <ActionBar.Back />
+            <ActionBar.Header description={'Action Bar Description'} title={'Page Title'} />
+            <ActionBar.Actions>
+                <Button>Button</Button>
+                <Button option='emphasized'>Button</Button>
+            </ActionBar.Actions>
+        </ActionBar>
+    ));

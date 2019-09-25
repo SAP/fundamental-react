@@ -395,7 +395,7 @@ class Calendar extends Component {
         return months;
     }
 
-    generateNavigation = (disableStyles) => {
+    generateNavigation = (disableCSS) => {
         let months = this.getMonths();
 
         return (
@@ -404,7 +404,7 @@ class Calendar extends Component {
                     <div className='fd-calendar__action'>
                         <Button
                             compact
-                            disableStyles={disableStyles}
+                            disableStyles={disableCSS}
                             glyph='slim-arrow-left'
                             onClick={this.previous}
                             option='light' />
@@ -412,7 +412,7 @@ class Calendar extends Component {
                     <div className='fd-calendar__action'>
                         <Button
                             compact
-                            disableStyles={disableStyles}
+                            disableStyles={disableCSS}
                             onClick={this.showMonths}
                             option='light'>
                             <span>
@@ -423,7 +423,7 @@ class Calendar extends Component {
                     <div className='fd-calendar__action'>
                         <Button
                             compact
-                            disableStyles={disableStyles}
+                            disableStyles={disableCSS}
                             onClick={this.showYears}
                             option='light'>
                             <span>
@@ -435,7 +435,7 @@ class Calendar extends Component {
                     <div className='fd-calendar__action'>
                         <Button
                             compact
-                            disableStyles={disableStyles}
+                            disableStyles={disableCSS}
                             glyph='slim-arrow-right'
                             onClick={this.next}
                             option='light' />
@@ -567,15 +567,16 @@ class Calendar extends Component {
             ...props
         } = this.props;
 
-        console.log(disableStyles)
-
         const calendarClasses = classnames(
             'fd-calendar',
             className
         );
+
+        const disableCSS = customStyles || disableStyles;
+
         return (
             <div {...props} className={calendarClasses}>
-                {this.generateNavigation(disableStyles)}
+                {this.generateNavigation(disableCSS)}
                 <div className='fd-calendar__content'>
                     {this._renderContent(monthListProps, yearListProps, tableProps, tableHeaderProps, tableBodyProps)}
                 </div>
@@ -589,6 +590,8 @@ Calendar.displayName = 'Calendar';
 
 Calendar.basePropTypes = {
     blockedDates: PropTypes.arrayOf(PropTypes.instanceOf(Date)),
+    customStyles: PropTypes.object,
+    disableStyles: PropTypes.bool,
     disableAfterDate: PropTypes.instanceOf(Date),
     disableBeforeDate: PropTypes.instanceOf(Date),
     disabledDates: PropTypes.arrayOf(PropTypes.instanceOf(Date)),
@@ -600,8 +603,6 @@ Calendar.basePropTypes = {
 
 Calendar.propTypes = {
     ...Calendar.basePropTypes,
-    customStyles: PropTypes.object,
-    disableStyles: PropTypes.bool,
     localizedText: CustomPropTypes.i18n({
         day1Sun: PropTypes.string,
         day2Mon: PropTypes.string,
@@ -714,4 +715,4 @@ Calendar.propDescriptions = {
     yearListProps: 'Additional props to be spread to the year\'s `<ul>` element.'
 };
 
-export default withStyles(Calendar);
+export default withStyles(Calendar, { cssFile: 'calendar', font: true });

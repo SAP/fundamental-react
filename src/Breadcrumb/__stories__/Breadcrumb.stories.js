@@ -7,25 +7,25 @@ import {
 
 storiesOf('Components|Breadcrumb', module)
     .addDecorator(withKnobs)
-    .add('Default', () => (
-        <Breadcrumb>
-            <Breadcrumb.Item name='Link Text' url='#' />
-            <Breadcrumb.Item name='Link Text' url='#' />
-            <Breadcrumb.Item name='Link Text' url='#' />
-        </Breadcrumb>
-    ))
-    .add('disable styles', () => (
-        <Breadcrumb disableStyles>
-            <Breadcrumb.Item name='Link Text' url='#' />
-            <Breadcrumb.Item name='Link Text' url='#' />
-            <Breadcrumb.Item name='Link Text' url='#' />
-        </Breadcrumb>
-    ))
-    .add('custom styles', () => (
-        <Breadcrumb
-            customStyles={require('../../utils/customStylesTest.css')}>
-            <Breadcrumb.Item name='Link Text' url='#' />
-            <Breadcrumb.Item name='Link Text' url='#' />
-            <Breadcrumb.Item name='Link Text' url='#' />
-        </Breadcrumb>
-    ));
+    // .add('Default', () => (
+    //     <Breadcrumb>
+    //         <Breadcrumb.Item name='Link Text' url='#' />
+    //         <Breadcrumb.Item name='Link Text' url='#' />
+    //         <Breadcrumb.Item name='Link Text' url='#' />
+    //     </Breadcrumb>
+    // ))
+    // .add('disable styles', () => (
+    //     <Breadcrumb disableStyles>
+    //         <Breadcrumb.Item name='Link Text' url='#' />
+    //         <Breadcrumb.Item name='Link Text' url='#' />
+    //         <Breadcrumb.Item name='Link Text' url='#' />
+    //     </Breadcrumb>
+    // ))
+    // .add('custom styles', () => (
+    //     <Breadcrumb
+    //         customStyles={require('../../utils/customStylesTest.css')}>
+    //         <Breadcrumb.Item name='Link Text' url='#' />
+    //         <Breadcrumb.Item name='Link Text' url='#' />
+    //         <Breadcrumb.Item name='Link Text' url='#' />
+    //     </Breadcrumb>
+    // ));

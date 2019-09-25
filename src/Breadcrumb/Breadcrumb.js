@@ -21,4 +21,4 @@ Breadcrumb.propDescriptions = {
 
 Breadcrumb.Item = BreadcrumbItem;
 
-export default withStyles(Breadcrumb);
+export default withStyles(Breadcrumb, { cssFile: 'breadcrumb', font: true });
