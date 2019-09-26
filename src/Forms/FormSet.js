@@ -1,26 +1,29 @@
-import 'fundamental-styles/dist/form-group.css';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
+import withStyles from '../utils/WithStyles/WithStyles';
 
-const FormSet = ({ children, className, ...props }) => {
+const FormSet = React.forwardRef(({ children, className, customStyles, disableStyles, ...props }, ref) => {
     const formSetClasses = classnames(
         'fd-form-group',
         className
     );
 
     return (
-        <div {...props} className={formSetClasses}>
+        <div {...props} className={formSetClasses}
+            ref={ref}>
             {children}
         </div>
     );
-};
+});
 
 FormSet.displayName = 'FormSet';
 
 FormSet.propTypes = {
     children: PropTypes.node,
-    className: PropTypes.string
+    className: PropTypes.string,
+    customStyles: PropTypes.object,
+    disableStyles: PropTypes.bool
 };
 
-export default FormSet;
+export default withStyles(FormSet, { cssFile: 'form-group' });

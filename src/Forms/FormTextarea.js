@@ -1,9 +1,9 @@
-import 'fundamental-styles/dist/textarea.css';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
+import withStyles from '../utils/WithStyles/WithStyles';
 
-const FormTextarea = ({ children, className, ...props }) => {
+const FormTextarea = React.forwardRef(({ children, className, customStyles, disableStyles, ...props }, ref) => {
     const formTextAreaClasses = classnames(
         'fd-textarea',
         className
@@ -12,17 +12,20 @@ const FormTextarea = ({ children, className, ...props }) => {
     return (
         <textarea
             {...props}
-            className={formTextAreaClasses}>
+            className={formTextAreaClasses}
+            ref={ref}>
             {children}
         </textarea>
     );
-};
+});
 
 FormTextarea.displayName = 'FormTextarea';
 
 FormTextarea.propTypes = {
     children: PropTypes.node,
-    className: PropTypes.string
+    className: PropTypes.string,
+    customStyles: PropTypes.object,
+    disableStyles: PropTypes.bool
 };
 
-export default FormTextarea;
+export default withStyles(FormTextarea, { cssFile: 'textarea', fonts: true });
