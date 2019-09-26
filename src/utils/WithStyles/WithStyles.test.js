@@ -1,21 +1,9 @@
 /* eslint-disable react/no-multi-comp */
 import { mount } from 'enzyme';
 import React from 'react';
+import TestComponent from './TestComponent';
 import withStyles from './WithStyles';
 
-const _SubTestComponent = () => {
-    <div>Foo</div>;
-};
-
-const TestComponent = React.forwardRef((props, ref) => {
-
-    return <div {...props} ref={ref}>Test</div>;
-});
-TestComponent.displayName = 'TestComponent';
-
-TestComponent.SubComponent = _SubTestComponent;
-
-export default withStyles(TestComponent, { cssFile: 'foo', fonts: true });
 
 describe('<withStyles', () => {
     const wrapper = mount(<TestComponent foo='foo' />);
@@ -25,7 +13,7 @@ describe('<withStyles', () => {
     });
 
     test('should retain wrapped component\'s display name', () => {
-        expect(wrapper.name()).toBe('TestComponent');
+        expect(wrapper.name()).toBe('ForwardRef(TestComponent)');
     });
 
     test('should forward wrapped component\'s props', () => {
