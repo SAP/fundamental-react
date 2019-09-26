@@ -5,7 +5,7 @@ import React from 'react';
 import withStyles from '../utils/WithStyles/WithStyles';
 import { IDENTIFIER_MODIFIERS, IDENTIFIER_SIZES } from '../utils/constants';
 
-const Identifier = React.forwardRef(({ glyph, size, modifier, color, label, backgroundImageUrl, children, className, customStyles, disableStyles, useIcons, ...props }, ref) => {
+const Identifier = React.forwardRef(({ glyph, size, modifier, color, label, backgroundImageUrl, children, className, customStyles, disableStyles, ...props }, ref) => {
     const styles = {
         backgroundImage: `url(${backgroundImageUrl})`
     };
@@ -48,12 +48,7 @@ Identifier.propTypes = {
     glyph: PropTypes.string,
     label: PropTypes.string,
     modifier: PropTypes.oneOf(IDENTIFIER_MODIFIERS),
-    size: PropTypes.oneOf(IDENTIFIER_SIZES),
-    useIcons: PropTypes.bool
-};
-
-Identifier.defaultProps = {
-    useIcons: true
+    size: PropTypes.oneOf(IDENTIFIER_SIZES)
 };
 
 Identifier.propDescriptions = {
@@ -63,4 +58,4 @@ Identifier.propDescriptions = {
     size: 'Size of the image. These sizes are available: **xxs** (extra extra small) - 20px, **xs** (extra small) - 28px, **s** (small) - 32px, **m** (medium) - 48px, **l** (large) - 64px, **xl** (extra lagre) - 88px, and **xxl** (extra extra large). Default matches the base font size (14px).'
 };
 
-export default withStyles(Identifier, { cssFile: ['helpers', 'identifier'] });
+export default withStyles(Identifier, { cssFile: ['helpers', 'identifier'], icons: true });

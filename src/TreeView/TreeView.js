@@ -111,7 +111,6 @@ class TreeView extends Component {
             isExpandAll: isExpandAllProp,
             onExpandChange,
             expandData: expandDataProp,
-            useIcons,
             ...rest
         } = this.props;
         const {
@@ -156,12 +155,10 @@ TreeView.propTypes = {
     disableStyles: PropTypes.bool,
     expandData: PropTypes.object,
     isExpandAll: PropTypes.bool,
-    useIcons: PropTypes.bool,
     onExpandChange: PropTypes.func
 };
 
 TreeView.defaultProps = {
-    useIcons: true,
     onExpandChange: () => {}
 };
 
@@ -179,4 +176,4 @@ TreeView.Head = TreeHead;
 TreeView.Item = TreeItem;
 TreeView.Row = TreeRow;
 
-export default withStyles(TreeView, { cssFiles: 'tree', fonts: true });
+export default withStyles(TreeView, { cssFiles: 'tree', fonts: true, icons: true });

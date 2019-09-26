@@ -29,7 +29,7 @@ class SideNav extends Component {
     }
 
     render() {
-        const { onItemSelect, children, className, customStyles, disableStyles, icons, selectedId, useIcons, ...rest } = this.props;
+        const { onItemSelect, children, className, customStyles, disableStyles, icons, selectedId, ...rest } = this.props;
 
         const sideNavClasses = classnames(
             className,
@@ -59,13 +59,11 @@ SideNav.propTypes = {
     disableStyles: PropTypes.bool,
     icons: PropTypes.bool,
     selectedId: PropTypes.string,
-    useIcons: PropTypes.bool,
     onItemSelect: PropTypes.func
 };
 
 SideNav.defaultProps = {
-    onItemSelect: () => { },
-    useIcons: true
+    onItemSelect: () => { }
 };
 
 SideNav.propDescriptions = {
@@ -79,4 +77,4 @@ SideNav.displayName = 'SideNav';
 SideNav.List = SideNavList;
 SideNav.ListItem = SideNavListItem;
 
-export default withStyles(SideNav, { cssFile: 'side-nav', fonts: true });
+export default withStyles(SideNav, { cssFile: 'side-nav', fonts: true, icons: true });

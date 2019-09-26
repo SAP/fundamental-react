@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import withStyles from '../utils/WithStyles/WithStyles';
 
-const InlineHelp = React.forwardRef(({ text, placement, className, contentClassName, customStyles, disableStyles, useIcons, ...props }, ref) => {
+const InlineHelp = React.forwardRef(({ text, placement, className, contentClassName, customStyles, disableStyles, ...props }, ref) => {
 
     const inlineHelpClasses = classnames(
         'fd-inline-help',
@@ -39,13 +39,11 @@ InlineHelp.propTypes = {
     contentClassName: PropTypes.string,
     customStyles: PropTypes.object,
     disableStyles: PropTypes.bool,
-    placement: PropTypes.oneOf(INLINE_HELP_PLACEMENTS),
-    useIcons: PropTypes.bool
+    placement: PropTypes.oneOf(INLINE_HELP_PLACEMENTS)
 };
 
 InlineHelp.defaultProps = {
-    placement: 'bottom-right',
-    useIcons: true
+    placement: 'bottom-right'
 };
 
 InlineHelp.propDescriptions = {
@@ -54,4 +52,4 @@ InlineHelp.propDescriptions = {
     text: 'Localized text to display in the inline help pop-up.'
 };
 
-export default withStyles(InlineHelp, { cssFile: 'inline-help', fonts: true });
+export default withStyles(InlineHelp, { cssFile: 'inline-help', fonts: true, icons: true });

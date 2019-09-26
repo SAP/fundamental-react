@@ -13,7 +13,6 @@ export default function withStyles(WrappedComponent, defaults) {
                 customStyles,
                 disableStyles,
                 forwardedRef,
-                useIcons,
                 ...otherProps
             } = this.props;
 
@@ -22,7 +21,7 @@ export default function withStyles(WrappedComponent, defaults) {
                     require('fundamental-styles/dist/fonts.css');
                 }
 
-                if (useIcons) {
+                if (defaults && defaults.icons) {
                     require('fundamental-styles/dist/icon.css');
                 }
 
@@ -55,8 +54,7 @@ export default function withStyles(WrappedComponent, defaults) {
         forwardedRef: PropTypes.oneOfType([
             PropTypes.func,
             PropTypes.shape({ current: PropTypes.any })
-        ]),
-        useIcons: PropTypes.bool
+        ])
     };
 
     //HOCs do not automatically pass refs as they are not technically props

@@ -17,7 +17,6 @@ const Button = React.forwardRef(({
     onClick,
     children,
     className,
-    useIcons,
     ...props
 }, ref) => {
     const buttonClasses = classnames(
@@ -56,12 +55,7 @@ Button.propTypes = {
     selected: PropTypes.bool,
     type: PropTypes.oneOf(BUTTON_TYPES),
     typeAttr: PropTypes.string,
-    useIcons: PropTypes.bool,
     onClick: PropTypes.func
-};
-
-Button.defaultProps = {
-    useIcons: true
 };
 
 Button.propDescriptions = {
@@ -70,4 +64,4 @@ Button.propDescriptions = {
     typeAttr: 'Value for the `type` attribute on the `<button>` element.'
 };
 
-export default withStyles(Button, { cssFile: 'button', font: true });
+export default withStyles(Button, { cssFile: 'button', font: true, icons: true });

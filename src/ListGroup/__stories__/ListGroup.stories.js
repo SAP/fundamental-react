@@ -9,23 +9,35 @@ storiesOf('Components|ListGroup', module)
     .addDecorator(withKnobs)
     .add('Default', () => (
         <ListGroup>
-            <div>Default1</div>
-            <div>Default2</div>
-            <div>Default3</div>
+            <ListGroup.Item>List item 1</ListGroup.Item>
+            <ListGroup.Item>List item 2
+                <ListGroup.ItemActions>
+                    <button>placeholder</button>
+                </ListGroup.ItemActions>
+            </ListGroup.Item>
+            <ListGroup.Item><ListGroup.ItemCheckbox>List item 1</ListGroup.ItemCheckbox></ListGroup.Item>
         </ListGroup>
     ))
     .add('disable styles', () => (
         <ListGroup disableStyles>
-            <div>Default1</div>
-            <div>Default2</div>
-            <div>Default3</div>
+            <ListGroup.Item>List item 1</ListGroup.Item>
+            <ListGroup.Item>List item 2
+                <ListGroup.ItemActions>
+                    <button>placeholder</button>
+                </ListGroup.ItemActions>
+            </ListGroup.Item>
+            <ListGroup.Item><ListGroup.ItemCheckbox disableStyles>List item 1</ListGroup.ItemCheckbox></ListGroup.Item>
         </ListGroup>
     ))
     .add('custom styles', () => (
         <ListGroup
             customStyles={require('../../utils/customStylesTest.css')}>
-            <div>Default1</div>
-            <div>Default2</div>
-            <div>Default3</div>
+            <ListGroup.Item>List item 1</ListGroup.Item>
+            <ListGroup.Item>List item 2
+                <ListGroup.ItemActions>
+                    <button>placeholder</button>
+                </ListGroup.ItemActions>
+            </ListGroup.Item>
+            <ListGroup.Item><ListGroup.ItemCheckbox disableStyles>List item 1</ListGroup.ItemCheckbox></ListGroup.Item>
         </ListGroup>
     ));

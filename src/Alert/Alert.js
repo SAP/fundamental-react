@@ -37,7 +37,6 @@ class Alert extends Component {
             dismissible,
             children,
             className,
-            useIcons,
             ...props
         } = this.props;
 
@@ -104,7 +103,6 @@ Alert.propTypes = {
         close: PropTypes.string
     }),
     type: PropTypes.oneOf(ALERT_TYPES),
-    useIcons: PropTypes.bool,
     onCloseClicked: PropTypes.func
 };
 
@@ -112,7 +110,6 @@ Alert.defaultProps = {
     localizedText: {
         close: 'Close'
     },
-    useIcons: true,
     onCloseClicked: () => { }
 };
 
@@ -127,4 +124,4 @@ Alert.propDescriptions = {
     onCloseClicked: 'Callback function passing event when close button is clicked.'
 };
 
-export default withStyles(Alert, { cssFile: 'alert', fonts: true });
+export default withStyles(Alert, { cssFile: 'alert', fonts: true, icons: true });
