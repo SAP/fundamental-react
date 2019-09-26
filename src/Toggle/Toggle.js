@@ -1,11 +1,10 @@
-import 'fundamental-styles/dist/toggle.css';
 import classnames from 'classnames';
 import FormItem from '../Forms/FormItem';
 import FormLabel from '../Forms/FormLabel';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { TOGGLE_SIZES } from '../utils/constants';
-
+import withStyles from '../utils/WithStyles/WithStyles';
 class Toggle extends React.Component {
     constructor(props) {
         super(props);
@@ -21,7 +20,7 @@ class Toggle extends React.Component {
     }
 
     render() {
-        const { size, id, checked, disabled, children, className, labelProps, inputProps, onChange, ...rest } = this.props;
+        const { size, id, checked, customStyles, disabled, disableStyles, children, className, labelProps, inputProps, onChange, useIcons, ...rest } = this.props;
 
         const spanClasses = classnames(
             'fd-toggle',
@@ -31,13 +30,17 @@ class Toggle extends React.Component {
             }
         );
 
+        const disableCSS = disableStyles || customStyles ? true : false;
+
         return (
             <FormItem
                 {...rest}
-                className={className}>
+                className={className}
+                disableStyles={disableCSS}>
                 <FormLabel
                     disabled={disabled}
                     {...labelProps}
+                    disableStyles={disableCSS}
                     htmlFor={id}>
                     <span className={spanClasses}>
                         <input
@@ -63,20 +66,24 @@ Toggle.propTypes = {
     checked: PropTypes.bool,
     children: PropTypes.node,
     className: PropTypes.string,
+    customStyles: PropTypes.object,
     disabled: PropTypes.bool,
+    disableStyles: PropTypes.bool,
     id: PropTypes.string,
     inputProps: PropTypes.object,
     labelProps: PropTypes.object,
     size: PropTypes.oneOf(TOGGLE_SIZES),
+    useIcons: PropTypes.bool,
     onChange: PropTypes.func
 };
 
 Toggle.defaultProps = {
-    onChange: () => { }
+    onChange: () => { },
+    useIcons: true
 };
 
 Toggle.propDescriptions = {
     checked: 'Set to true for component to be checked on render.'
 };
 
-export default Toggle;
+export default withStyles(Toggle, { cssFile: 'toggle', fonts: true });

@@ -1,4 +1,3 @@
-import 'fundamental-styles/dist/tree.css';
 import PropTypes from 'prop-types';
 import Tree from './_Tree';
 import TreeBranch from './_TreeBranch';
@@ -6,6 +5,7 @@ import TreeCol from './_TreeCol';
 import TreeHead from './_TreeHead';
 import TreeItem from './_TreeItem';
 import TreeRow from './_TreeRow';
+import withStyles from '../utils/WithStyles/WithStyles';
 import React, { Component } from 'react';
 
 class TreeView extends Component {
@@ -105,10 +105,13 @@ class TreeView extends Component {
 
     render() {
         const {
+            customStyles,
+            disableStyles,
             children,
             isExpandAll: isExpandAllProp,
             onExpandChange,
             expandData: expandDataProp,
+            useIcons,
             ...rest
         } = this.props;
         const {
@@ -149,12 +152,16 @@ TreeView.displayName = 'TreeView';
 
 TreeView.propTypes = {
     children: PropTypes.node,
+    customStyles: PropTypes.object,
+    disableStyles: PropTypes.bool,
     expandData: PropTypes.object,
     isExpandAll: PropTypes.bool,
+    useIcons: PropTypes.bool,
     onExpandChange: PropTypes.func
 };
 
 TreeView.defaultProps = {
+    useIcons: true,
     onExpandChange: () => {}
 };
 
@@ -172,4 +179,4 @@ TreeView.Head = TreeHead;
 TreeView.Item = TreeItem;
 TreeView.Row = TreeRow;
 
-export default TreeView;
+export default withStyles(TreeView, { cssFiles: 'tree', fonts: true });
