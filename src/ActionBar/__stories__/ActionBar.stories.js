@@ -23,18 +23,18 @@ storiesOf('Components|ActionBar', module)
             <ActionBar.Back disableStyles />
             <ActionBar.Header description={'Action Bar Description'} title={'Page Title'} />
             <ActionBar.Actions>
-                <Button>Button</Button>
-                <Button option='emphasized'>Button</Button>
+                <Button disableStyles>Button</Button>
+                <Button disableStyles option='emphasized'>Button</Button>
             </ActionBar.Actions>
         </ActionBar>
     ))
     .add('custom styles', () => (
         <ActionBar customStyles={require('../../utils/customStylesTest.css')}>
-            <ActionBar.Back />
+            <ActionBar.Back disableStyles />
             <ActionBar.Header description={'Action Bar Description'} title={'Page Title'} />
             <ActionBar.Actions>
-                <Button>Button</Button>
-                <Button option='emphasized'>Button</Button>
+                <Button disableStyles>Button</Button>
+                <Button disableStyles option='emphasized'>Button</Button>
             </ActionBar.Actions>
         </ActionBar>
     ));
