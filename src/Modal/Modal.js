@@ -1,10 +1,10 @@
-import 'fundamental-styles/dist/modal.css';
 import Button from '../Button/Button';
 import classnames from 'classnames';
 import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import FocusTrap from 'focus-trap-react';
 import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
+import withStyles from '../utils/WithStyles/WithStyles';
 import React, { Component } from 'react';
 class Modal extends Component {
     // select body element to add Modal component too
@@ -32,7 +32,25 @@ class Modal extends Component {
     }
 
     render() {
-        const { onClose, localizedText, children, title, actions, className, headingLevel, show, titleProps, closeProps, contentProps, headerProps, footerProps, bodyProps, ...rest } = this.props;
+        const {
+            actions,
+            bodyProps,
+            children,
+            className,
+            closeProps,
+            contentProps,
+            customStyles,
+            disableStyles,
+            headerProps,
+            headingLevel,
+            footerProps,
+            localizedText,
+            onClose,
+            show,
+            titleProps,
+            title,
+            ...rest
+        } = this.props;
 
         const modalClasses = classnames(
             'fd-overlay',
@@ -41,6 +59,8 @@ class Modal extends Component {
         );
 
         const HeadingTag = `h${headingLevel}`;
+
+        const disableCSS = disableStyles || customStyles ? true : false;
 
         if (!show) {
             return null;
@@ -73,6 +93,7 @@ class Modal extends Component {
                                         {...closeProps}
                                         aria-label={localizedText.closeButton}
                                         className='fd-modal__close'
+                                        disableStyles={disableCSS}
                                         glyph='decline'
                                         onClick={this.handleCloseClick}
                                         option='light' />
@@ -109,6 +130,8 @@ Modal.propTypes = {
     className: PropTypes.string,
     closeProps: PropTypes.object,
     contentProps: PropTypes.object,
+    customStyles: PropTypes.object,
+    disableStyles: PropTypes.bool,
     footerProps: PropTypes.object,
     headerProps: PropTypes.object,
     headingLevel: CustomPropTypes.range(2, 6),
@@ -142,4 +165,4 @@ Modal.propDescriptions = {
     show: 'Set to **true** to make the dialog visible.'
 };
 
-export default Modal;
+export default withStyles(Modal, { cssFile: ['modal', 'overlay'], fonts: true });

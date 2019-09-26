@@ -1,9 +1,9 @@
-import 'fundamental-styles/dist/popover.css';
 import chain from 'chain-function';
 import classnames from 'classnames';
 import Popper from '../utils/_Popper';
 import { POPPER_PLACEMENTS } from '../utils/constants';
 import PropTypes from 'prop-types';
+import withStyles from '../utils/WithStyles/WithStyles';
 import React, { Component } from 'react';
 
 class Popover extends Component {
@@ -33,7 +33,9 @@ class Popover extends Component {
 
     render() {
         const {
+            customStyles,
             disableEdgeDetection,
+            disableStyles,
             onClickOutside,
             onEscapeKey,
             disabled,
@@ -84,8 +86,10 @@ Popover.propTypes = {
     body: PropTypes.node.isRequired,
     control: PropTypes.node.isRequired,
     className: PropTypes.string,
+    customStyles: PropTypes.object,
     disabled: PropTypes.bool,
     disableEdgeDetection: PropTypes.bool,
+    disableStyles: PropTypes.bool,
     noArrow: PropTypes.bool,
     placement: PropTypes.oneOf(POPPER_PLACEMENTS),
     popperProps: PropTypes.object,
@@ -109,4 +113,4 @@ Popover.propDescriptions = {
     onEscapeKey: 'Callback when escape key is pressed when popover body is visible.'
 };
 
-export default Popover;
+export default withStyles(Popover, { cssFile: 'popover' });
