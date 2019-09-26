@@ -1,8 +1,8 @@
-import 'fundamental-styles/dist/side-nav.css';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import SideNavList from './_SideNavList';
 import SideNavListItem from './_SideNavListItem';
+import withStyles from '../utils/WithStyles/WithStyles';
 import React, { Component } from 'react';
 
 class SideNav extends Component {
@@ -29,7 +29,7 @@ class SideNav extends Component {
     }
 
     render() {
-        const { onItemSelect, children, className, icons, selectedId, ...rest } = this.props;
+        const { onItemSelect, children, className, customStyles, disableStyles, icons, selectedId, useIcons, ...rest } = this.props;
 
         const sideNavClasses = classnames(
             className,
@@ -55,13 +55,17 @@ class SideNav extends Component {
 SideNav.propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,
+    customStyles: PropTypes.object,
+    disableStyles: PropTypes.bool,
     icons: PropTypes.bool,
     selectedId: PropTypes.string,
+    useIcons: PropTypes.bool,
     onItemSelect: PropTypes.func
 };
 
 SideNav.defaultProps = {
-    onItemSelect: () => { }
+    onItemSelect: () => { },
+    useIcons: true
 };
 
 SideNav.propDescriptions = {
@@ -75,4 +79,4 @@ SideNav.displayName = 'SideNav';
 SideNav.List = SideNavList;
 SideNav.ListItem = SideNavListItem;
 
-export default SideNav;
+export default withStyles(SideNav, { cssFile: 'side-nav', fonts: true });

@@ -5,7 +5,11 @@
 .fd-label, .fd-status-label,
 .fd-identifier, .fd-inline-help, .fd-input, .fd-input-group,
 .fd-layout-grid,
+.fd-modal, .fd-multi-input,
+.fd-overlay,
 .fd-textarea,
-.fd-popover {
+.fd-pagination, .fd-popover, .fd-product-tile,
+.fd-shellbar, .fd-side-nav,
+.fd-tabs, .fd-tile {
     background-color: hotpink;
 }

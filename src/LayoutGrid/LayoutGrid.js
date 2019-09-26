@@ -32,7 +32,7 @@ LayoutGrid.propTypes = {
     className: PropTypes.string,
     cols: CustomPropTypes.range(1, 6),
     colSpan: CustomPropTypes.range(2, 6),
-    customStyles: PropTypes.object, 
+    customStyles: PropTypes.object,
     disableStyles: PropTypes.bool,
     nogap: PropTypes.bool
 };
@@ -42,4 +42,4 @@ LayoutGrid.propDescriptions = {
     nogap: 'Set to **true** to remove the margins between the panels.'
 };
 
-export default withStyles(LayoutGrid, { cssFile: 'layout-grid'});
+export default withStyles(LayoutGrid, { cssFile: 'layout-grid' });
