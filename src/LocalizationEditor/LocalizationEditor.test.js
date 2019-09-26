@@ -272,4 +272,24 @@ describe('<LocalizationEditor />', () => {
             ).toBe('Sample 3');
         });
     });
+
+    test('forwards the ref', () => {
+        const menu = [
+            { placeholder: 'Enter Label', language: 'ES', inputProps: { 'data-sample': 'Sample 1' } },
+            { placeholder: 'Enter Label', language: 'CH', inputProps: { 'data-sample': 'Sample 2' } },
+            { placeholder: 'Enter Label', language: 'PL', inputProps: { 'data-sample': 'Sample 3' } }
+        ];
+
+        let ref;
+        class Test extends React.Component {
+            constructor(props) {
+                super(props);
+                ref = React.createRef();
+            }
+            render = () => (<LocalizationEditor control={defaultControl}
+                menu={menu} ref={ref} />);
+        }
+        mount(<Test />);
+        expect(ref.current.tagName).toEqual('DIV');
+    });
 });

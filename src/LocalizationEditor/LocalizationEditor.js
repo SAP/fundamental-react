@@ -1,5 +1,3 @@
-import 'fundamental-styles/dist/input-group.css'; //remove when replaced with InputGroup component
-import 'fundamental-styles/dist/localization-editor.css';
 import Button from '../Button/Button';
 import classnames from 'classnames';
 import FormInput from '../Forms/FormInput';
@@ -9,9 +7,11 @@ import Menu from '../Menu/Menu';
 import Popover from '../Popover/Popover';
 import PropTypes from 'prop-types';
 import React from 'react';
+import withStyles from '../utils/WithStyles/WithStyles';
 
 
-const LocalizationEditor = ({ control, menu, id, compact, textarea, className, inputClassName, listProps, popoverProps, ...props }) => {
+const LocalizationEditor = React.forwardRef(({ control, menu, id, compact, textarea, className, inputClassName, listProps, popoverProps,
+    customStyles, disableStyles, ...props }, ref) => {
 
     const localizationEditorClasses = classnames(
         'fd-localization-editor',
@@ -24,7 +24,8 @@ const LocalizationEditor = ({ control, menu, id, compact, textarea, className, i
     );
 
     return (
-        <div {...props} className={localizationEditorClasses}>
+        <div {...props} className={localizationEditorClasses}
+            ref={ref}>
             <FormLabel
                 {...control.labelProps}
                 htmlFor={id}>
@@ -102,7 +103,7 @@ const LocalizationEditor = ({ control, menu, id, compact, textarea, className, i
                 noArrow />
         </div>
     );
-};
+});
 
 LocalizationEditor.displayName = 'LocalizationEditor';
 
@@ -124,6 +125,8 @@ LocalizationEditor.propTypes = {
     ).isRequired,
     className: PropTypes.string,
     compact: PropTypes.bool,
+    customStyles: PropTypes.object,
+    disableStyles: PropTypes.bool,
     id: PropTypes.string,
     inputClassName: PropTypes.string,
     listProps: PropTypes.object,
@@ -141,4 +144,4 @@ LocalizationEditor.propDescriptions = {
     textarea: 'Set to **true** to enable a Localization Editor with a textarea.'
 };
 
-export default LocalizationEditor;
+export default withStyles(LocalizationEditor, { cssFile: ['input-group', 'localization-editor'] });
