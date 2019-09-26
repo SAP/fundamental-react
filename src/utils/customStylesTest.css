@@ -7,9 +7,9 @@
 .fd-layout-grid, .fd-link, .fd-list-group, .fd-localization-editor,
 .fd-modal, .fd-multi-input,
 .fd-overlay,
-.fd-textarea,
-.fd-pagination, .fd-popover, .fd-product-tile,
+.fd-pagination, .fd-panel, .fd-popover, .fd-product-tile,
 .fd-shellbar, .fd-side-nav,
+.fd-textarea,
 .fd-tabs, .fd-tile, .fd-time, .fd-toggle, .fd-tree {
     background-color: hotpink;
 }
