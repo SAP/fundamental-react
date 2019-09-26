@@ -4,7 +4,7 @@
 .fd-fieldset,
 .fd-label, .fd-status-label,
 .fd-form-input,
-.fd-input-group,
+.fd-input, .fd-input-group,
 .fd-popover {
     background-color: hotpink;
 }
