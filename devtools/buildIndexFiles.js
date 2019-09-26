@@ -40,7 +40,13 @@ componentDirs.map((directory) => {
 
         Object.keys(components).map((component) => {
             if (component === 'default') {
-                fileContents += `export { default as ${components.default.name} } from './${fileName}';\n`;
+                //components wrapped in withStyles HOC
+                if (components.default.render) {
+                    fileContents += `export { default as ${components.default.render.displayName} } from './${fileName}';\n`;
+                } else {
+                    //components not wrapped in HOC
+                    fileContents += `export { default as ${components.default.name} } from './${fileName}';\n`;
+                }
             } else {
                 fileContents += `export { ${component} } from './${fileName}';\n`;
             }
