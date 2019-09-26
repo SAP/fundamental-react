@@ -1,11 +1,11 @@
-import 'fundamental-styles/dist/identifier.css';
 import classnames from 'classnames';
 import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import PropTypes from 'prop-types';
 import React from 'react';
+import withStyles from '../utils/WithStyles/WithStyles';
 import { IDENTIFIER_MODIFIERS, IDENTIFIER_SIZES } from '../utils/constants';
 
-const Identifier = ({ glyph, size, modifier, color, label, backgroundImageUrl, children, className, ...props }) => {
+const Identifier = React.forwardRef(({ glyph, size, modifier, color, label, backgroundImageUrl, children, className, customStyles, disableStyles, useIcons, ...props }, ref) => {
     const styles = {
         backgroundImage: `url(${backgroundImageUrl})`
     };
@@ -28,12 +28,13 @@ const Identifier = ({ glyph, size, modifier, color, label, backgroundImageUrl, c
             {...props}
             aria-label={label}
             className={identifierClasses}
+            ref={ref}
             role={ariaRole}
             style={backgroundImageUrl && styles}>
             {children}
         </span>
     );
-};
+});
 
 Identifier.displayName = 'Identifier';
 
@@ -42,10 +43,17 @@ Identifier.propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,
     color: CustomPropTypes.range(1, 9),
+    customStyles: PropTypes.object,
+    disableStyles: PropTypes.bool,
     glyph: PropTypes.string,
     label: PropTypes.string,
     modifier: PropTypes.oneOf(IDENTIFIER_MODIFIERS),
-    size: PropTypes.oneOf(IDENTIFIER_SIZES)
+    size: PropTypes.oneOf(IDENTIFIER_SIZES),
+    useIcons: PropTypes.bool
+};
+
+Identifier.defaultProps = {
+    useIcons: true
 };
 
 Identifier.propDescriptions = {
@@ -55,4 +63,4 @@ Identifier.propDescriptions = {
     size: 'Size of the image. These sizes are available: **xxs** (extra extra small) - 20px, **xs** (extra small) - 28px, **s** (small) - 32px, **m** (medium) - 48px, **l** (large) - 64px, **xl** (extra lagre) - 88px, and **xxl** (extra extra large). Default matches the base font size (14px).'
 };
 
-export default Identifier;
+export default withStyles(Identifier, { cssFile: ['helpers', 'identifier'] });
