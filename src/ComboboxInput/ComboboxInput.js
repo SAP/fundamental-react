@@ -11,7 +11,7 @@ const ComboboxInput = React.forwardRef(({ placeholder, menu, compact, className,
         'fd-input-group'
     );
 
-    const disableCSS = disableStyles || customStyles;
+    const disableCSS = disableStyles || customStyles ? true : false;
 
     return (
         <div {...props} className={className}

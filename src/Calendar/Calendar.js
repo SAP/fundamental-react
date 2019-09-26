@@ -572,7 +572,7 @@ class Calendar extends Component {
             className
         );
 
-        const disableCSS = customStyles || disableStyles;
+        const disableCSS = disableStyles || customStyles ? true : false;
 
         return (
             <div {...props} className={calendarClasses}>

@@ -94,7 +94,7 @@ class InputGroup extends Component {
             'fd-input-group__input'
         );
 
-        const disableCSS = disableStyles || customStyles;
+        const disableCSS = disableStyles || customStyles ? true : false;
 
 
         switch (inputType) {

@@ -28,7 +28,7 @@ const Checkbox = React.forwardRef(({ checked, className, customStyles, defaultCh
         'fd-checkbox'
     );
 
-    const disableCSS = disableStyles || customStyles;
+    const disableCSS = disableStyles || customStyles ? true : false;
 
     return (
         <FormItem

@@ -50,7 +50,7 @@ class Alert extends Component {
             className
         );
 
-        const disableCSS = disableStyles || customStyles;
+        const disableCSS = disableStyles || customStyles ? true : false;
 
         return (
             <div>
