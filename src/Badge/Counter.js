@@ -2,7 +2,7 @@ import classnames from 'classnames';
 import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import PropTypes from 'prop-types';
 import React from 'react';
-import withStyles from '../utils/WithStyles';
+import withStyles from '../utils/WithStyles/WithStyles';
 
 const Counter = React.forwardRef(({ localizedText, notification, children, className, customStyles, disableStyles, ...props }, ref) => {
     const counterClasses = classnames(

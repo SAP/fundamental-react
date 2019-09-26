@@ -29,9 +29,9 @@ export default function withStyles(WrappedComponent, defaults) {
                 if (!customStyles && defaults && defaults.cssFile) {
                     Array.isArray(defaults.cssFile) ?
                         defaults.cssFile.forEach(file => {
-                            require('../../node_modules/fundamental-styles/dist/' + file + '.css');
+                            require('../../../node_modules/fundamental-styles/dist/' + file + '.css');
                         }) :
-                        require('../../node_modules/fundamental-styles/dist/' + defaults.cssFile + '.css');
+                        require('../../../node_modules/fundamental-styles/dist/' + defaults.cssFile + '.css');
                 } else {
                     customStyles;
                 }

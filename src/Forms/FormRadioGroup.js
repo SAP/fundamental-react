@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import shortId from '../utils/shortId';
-import withStyles from '../utils/WithStyles';
+import withStyles from '../utils/WithStyles/WithStyles';
 import React, { Component } from 'react';
 
 class FormRadioGroup extends Component {

@@ -2,7 +2,7 @@ import classnames from 'classnames';
 import FormItem from './FormItem';
 import FormLabel from './FormLabel';
 import PropTypes from 'prop-types';
-import withStyles from '../utils/WithStyles';
+import withStyles from '../utils/WithStyles/WithStyles';
 import React, { useEffect, useRef } from 'react';
 
 const getCheckStatus = (checked, indeterminate) => {

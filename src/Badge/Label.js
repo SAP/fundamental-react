@@ -2,7 +2,7 @@ import classnames from 'classnames';
 import { LABEL_TYPES } from '../utils/constants';
 import PropTypes from 'prop-types';
 import React from 'react';
-import withStyles from '../utils/WithStyles';
+import withStyles from '../utils/WithStyles/WithStyles';
 
 const Label = React.forwardRef(({ type, children, className, customStyles, disableStyles, ...props }, ref) => {
     const labelClasses = classnames(

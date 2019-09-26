@@ -4,7 +4,7 @@ import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import Icon from '../Icon/Icon';
 import Link from '../Link/Link';
 import PropTypes from 'prop-types';
-import withStyles from '../utils/WithStyles';
+import withStyles from '../utils/WithStyles/WithStyles';
 import React, { Component } from 'react';
 
 class Alert extends Component {

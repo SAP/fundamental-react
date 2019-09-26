@@ -4,7 +4,7 @@ import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import FormInput from '../Forms/FormInput';
 import Icon from '../Icon/Icon';
 import PropTypes from 'prop-types';
-import withStyles from '../utils/WithStyles';
+import withStyles from '../utils/WithStyles/WithStyles';
 import { INPUT_GROUP_ADDON_POSITIONS, INPUT_GROUP_TYPES } from '../utils/constants';
 import React, { Component } from 'react';
 

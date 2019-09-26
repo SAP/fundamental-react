@@ -2,7 +2,7 @@ import Button from '../Button/Button';
 import Calendar from '../Calendar/Calendar';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import withStyles from '../utils/WithStyles';
+import withStyles from '../utils/WithStyles/WithStyles';
 import React, { Component } from 'react';
 
 class DatePicker extends Component {

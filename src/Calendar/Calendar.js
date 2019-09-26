@@ -2,7 +2,7 @@ import Button from '../Button/Button';
 import classnames from 'classnames';
 import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import PropTypes from 'prop-types';
-import withStyles from '../utils/WithStyles';
+import withStyles from '../utils/WithStyles/WithStyles';
 import React, { Component } from 'react';
 
 class Calendar extends Component {

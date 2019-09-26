@@ -2,7 +2,7 @@ import classnames from 'classnames';
 import { INPUT_TYPES } from '../utils/constants';
 import PropTypes from 'prop-types';
 import React from 'react';
-import withStyles from '../utils/WithStyles';
+import withStyles from '../utils/WithStyles/WithStyles';
 
 const FormInput = React.forwardRef(({ state, className, compact, disabled, id, name, placeholder, readOnly, type, value, customStyles, disableStyles, ...props }, ref) => {
     const formInputClasses = classnames(

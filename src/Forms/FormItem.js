@@ -1,7 +1,7 @@
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
-import withStyles from '../utils/WithStyles';
+import withStyles from '../utils/WithStyles/WithStyles';
 
 const FormItem = React.forwardRef(({ isInline, children, className, customStyles, disableStyles, ...props }, ref) => {
     const formItemClasses = classnames(

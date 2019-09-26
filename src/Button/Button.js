@@ -1,7 +1,7 @@
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
-import withStyles from '../utils/WithStyles';
+import withStyles from '../utils/WithStyles/WithStyles';
 import { BUTTON_OPTIONS, BUTTON_TYPES } from '../utils/constants';
 
 const Button = React.forwardRef(({

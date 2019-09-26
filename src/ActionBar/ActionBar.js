@@ -4,7 +4,7 @@ import ActionBarHeader from './_ActionBarHeader';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
-import withStyles from '../utils/WithStyles';
+import withStyles from '../utils/WithStyles/WithStyles';
 
 const ActionBar = React.forwardRef(({ children, className, customStyles, disableStyles, ...props }, ref) => {
     const actionBarClasses = classnames(

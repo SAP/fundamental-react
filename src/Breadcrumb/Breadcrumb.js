@@ -1,7 +1,7 @@
 import BreadcrumbItem from './_BreadcrumbItem';
 import PropTypes from 'prop-types';
 import React from 'react';
-import withStyles from '../utils/WithStyles';
+import withStyles from '../utils/WithStyles/WithStyles';
 
 const Breadcrumb = React.forwardRef(({ children, customStyles, disableStyles, ...props }, ref) => {
     return (<ul {...props}

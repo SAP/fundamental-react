@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import withStyles from '../utils/WithStyles';
+import withStyles from '../utils/WithStyles/WithStyles';
 
 const ButtonGroup = React.forwardRef(({ children, customStyles, disableStyles, ...props }, ref) => {
     return (

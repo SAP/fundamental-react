@@ -2,7 +2,7 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { STATUS_TYPES } from '../utils/constants';
-import withStyles from '../utils/WithStyles';
+import withStyles from '../utils/WithStyles/WithStyles';
 
 const Status = React.forwardRef(({ type, glyph, children, className, customStyles, disableStyles, useIcons, ...props }, ref) => {
     const statusClasses = classnames(
