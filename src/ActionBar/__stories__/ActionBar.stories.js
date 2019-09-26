@@ -20,7 +20,7 @@ storiesOf('Components|ActionBar', module)
     ))
     .add('disable styles', () => (
         <ActionBar disableStyles>
-            <ActionBar.Back />
+            <ActionBar.Back disableStyles />
             <ActionBar.Header description={'Action Bar Description'} title={'Page Title'} />
             <ActionBar.Actions>
                 <Button>Button</Button>

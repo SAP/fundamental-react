@@ -10,7 +10,10 @@ import {
 storiesOf('Components|Button', module)
     .addDecorator(withKnobs)
     .add('Default', () => (
-        <Button>Default</Button>
+        <React.Fragment>
+            <Button>Default</Button>
+            <Button glyph='cart'>Add to Cart</Button>
+        </React.Fragment>
     ))
     .add('props', () => (
         <Button

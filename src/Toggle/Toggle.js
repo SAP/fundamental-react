@@ -20,7 +20,7 @@ class Toggle extends React.Component {
     }
 
     render() {
-        const { size, id, checked, customStyles, disabled, disableStyles, children, className, labelProps, inputProps, onChange, useIcons, ...rest } = this.props;
+        const { size, id, checked, customStyles, disabled, disableStyles, children, className, labelProps, inputProps, onChange, ...rest } = this.props;
 
         const spanClasses = classnames(
             'fd-toggle',
@@ -73,17 +73,15 @@ Toggle.propTypes = {
     inputProps: PropTypes.object,
     labelProps: PropTypes.object,
     size: PropTypes.oneOf(TOGGLE_SIZES),
-    useIcons: PropTypes.bool,
     onChange: PropTypes.func
 };
 
 Toggle.defaultProps = {
-    onChange: () => { },
-    useIcons: true
+    onChange: () => { }
 };
 
 Toggle.propDescriptions = {
     checked: 'Set to true for component to be checked on render.'
 };
 
-export default withStyles(Toggle, { cssFile: 'toggle', fonts: true });
+export default withStyles(Toggle, { cssFile: 'toggle', fonts: true, icons: true });

@@ -23,6 +23,5 @@ export const defaultPropDescriptions = {
     size: 'Size of the component.',
     title: 'Localized text for the heading.',
     titleProps: 'Additional props to be spread to the title\'s heading element.',
-    type: 'Sets the variation of the component. Primarily used for styling.',
-    useIcons: 'Use fundamental-styles icons in this component'
+    type: 'Sets the variation of the component. Primarily used for styling.'
 };

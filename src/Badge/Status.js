@@ -4,7 +4,7 @@ import React from 'react';
 import { STATUS_TYPES } from '../utils/constants';
 import withStyles from '../utils/WithStyles/WithStyles';
 
-const Status = React.forwardRef(({ type, glyph, children, className, customStyles, disableStyles, useIcons, ...props }, ref) => {
+const Status = React.forwardRef(({ type, glyph, children, className, customStyles, disableStyles, ...props }, ref) => {
     const statusClasses = classnames(
         'fd-status-label',
         {
@@ -31,12 +31,7 @@ Status.propTypes = {
     customStyles: PropTypes.object,
     disableStyles: PropTypes.bool,
     glyph: PropTypes.string,
-    type: PropTypes.oneOf(STATUS_TYPES),
-    useIcons: PropTypes.bool
+    type: PropTypes.oneOf(STATUS_TYPES)
 };
 
-Status.defaultProps = {
-    useIcons: true
-};
-
-export default withStyles(Status, { cssFile: 'status-label', font: true });
+export default withStyles(Status, { cssFile: 'status-label', font: true, icons: true });

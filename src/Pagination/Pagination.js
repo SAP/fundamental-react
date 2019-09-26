@@ -161,8 +161,7 @@ Pagination.propTypes = {
     }),
     nextProps: PropTypes.object,
     prevProps: PropTypes.object,
-    totalText: PropTypes.string,
-    useIcons: PropTypes.bool
+    totalText: PropTypes.string
 };
 
 Pagination.defaultProps = {
@@ -173,8 +172,7 @@ Pagination.defaultProps = {
         next: 'Next',
         previous: 'Previous'
     },
-    totalText: 'items',
-    useIcons: true
+    totalText: 'items'
 };
 
 Pagination.propDescriptions = {
@@ -192,4 +190,4 @@ Pagination.propDescriptions = {
     totalText: 'Localized text to display next to the total number of items.  Used with `displayTotal`.'
 };
 
-export default withStyles(Pagination, { cssFile: 'pagination', fonts: true });
+export default withStyles(Pagination, { cssFile: 'pagination', fonts: true, icons: true });
