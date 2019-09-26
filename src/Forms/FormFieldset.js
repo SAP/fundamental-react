@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import withStyles from '../utils/WithStyles/WithStyles';
 
-const FormFieldSet = React.forwardRef(({ children, className, customStyles, disableStyles, ...props }, ref) => {
+const FormFieldset = React.forwardRef(({ children, className, customStyles, disableStyles, ...props }, ref) => {
     const formFieldsetClasses = classnames(
         'fd-fieldset',
         className
@@ -19,13 +19,13 @@ const FormFieldSet = React.forwardRef(({ children, className, customStyles, disa
     );
 });
 
-FormFieldSet.displayName = 'FormFieldset';
+FormFieldset.displayName = 'FormFieldset';
 
-FormFieldSet.propTypes = {
+FormFieldset.propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,
     customStyles: PropTypes.object,
     disableStyles: PropTypes.bool
 };
 
-export default withStyles(FormFieldSet, { cssFile: 'fieldset' });
+export default withStyles(FormFieldset, { cssFile: 'fieldset' });
