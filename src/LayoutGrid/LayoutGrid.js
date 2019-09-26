@@ -1,11 +1,10 @@
-import 'fundamental-styles/dist/layout-grid.css';
 import classnames from 'classnames';
 import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import PropTypes from 'prop-types';
 import React from 'react';
+import withStyles from '../utils/WithStyles/WithStyles';
 
-const LayoutGrid = props => {
-    const { nogap, cols, children, className, colSpan, ...rest } = props;
+const LayoutGrid = React.forwardRef(({ nogap, cols, children, className, colSpan, customStyles, disableStyles, ...props }, ref) => {
 
     const layoutGridClasses = classnames(
         'fd-layout-grid',
@@ -18,12 +17,13 @@ const LayoutGrid = props => {
 
     return (
         <div
-            {...rest}
-            className={layoutGridClasses}>
+            {...props}
+            className={layoutGridClasses}
+            ref={ref}>
             {children}
         </div>
     );
-};
+});
 
 LayoutGrid.displayName = 'LayoutGrid';
 
@@ -32,6 +32,8 @@ LayoutGrid.propTypes = {
     className: PropTypes.string,
     cols: CustomPropTypes.range(1, 6),
     colSpan: CustomPropTypes.range(2, 6),
+    customStyles: PropTypes.object,
+    disableStyles: PropTypes.bool,
     nogap: PropTypes.bool
 };
 
@@ -40,4 +42,4 @@ LayoutGrid.propDescriptions = {
     nogap: 'Set to **true** to remove the margins between the panels.'
 };
 
-export default LayoutGrid;
+export default withStyles(LayoutGrid, { cssFile: 'layout-grid' });
