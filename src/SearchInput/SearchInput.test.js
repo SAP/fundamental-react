@@ -53,10 +53,6 @@ describe('<SearchInput />', () => {
 
     let component;
 
-    afterEach(() => {
-        component.unmount();
-    });
-
     test('create SearchInput', () => {
         component = renderer.create(defaultSearchInput);
         let tree = component.toJSON();
@@ -77,7 +73,7 @@ describe('<SearchInput />', () => {
 
     describe('onChange handler', () => {
         test('calling parent onChange event', () => {
-            const wrapper = mount(searchOnChange);
+            const wrapper = mount(searchOnChange).children().children();
 
             // enter text into search input
             wrapper
@@ -117,7 +113,7 @@ describe('<SearchInput />', () => {
         // press enter key
         wrapper.find(searchInput).simulate('keypress', { key: 'Enter' });
 
-        expect(wrapper.state(['value'])).toBe(searchData[0].text);
+        expect(wrapper.children().children().state(['value'])).toBe(searchData[0].text);
     });
 
     test('click outside search input to close list', () => {
@@ -135,7 +131,7 @@ describe('<SearchInput />', () => {
         // click outside to close list
         document.dispatchEvent(event);
 
-        expect(wrapper.state(['value'])).toBe(searchData[0].text);
+        expect(wrapper.children().children().state(['value'])).toBe(searchData[0].text);
     });
 
     test('show/hide auto complete list', () => {
@@ -144,12 +140,12 @@ describe('<SearchInput />', () => {
         // click in search box to show
         wrapper.find(searchInput).simulate('click');
 
-        expect(wrapper.state('isExpanded')).toBeTruthy();
+        expect(wrapper.children().children().state('isExpanded')).toBeTruthy();
 
         // click in search box to hide
         wrapper.find(searchInput).simulate('click');
 
-        expect(wrapper.state('isExpanded')).toBeFalsy();
+        expect(wrapper.children().children().state('isExpanded')).toBeFalsy();
     });
 
     test('check for enter key press on search input without autocomplete', () => {
@@ -166,7 +162,7 @@ describe('<SearchInput />', () => {
         // press enter key
         wrapper.find(searchInput).simulate('keypress', { key: 'Enter' });
 
-        expect(wrapper.state(['value'])).toBe(searchData[2].text);
+        expect(wrapper.children().children().state(['value'])).toBe(searchData[2].text);
     });
 
     test('click on result in autocomplete', () => {
@@ -175,7 +171,7 @@ describe('<SearchInput />', () => {
         // click in search box to show
         wrapper.find(searchInput).simulate('click');
 
-        expect(wrapper.state('isExpanded')).toBeTruthy();
+        expect(wrapper.children().children().state('isExpanded')).toBeTruthy();
 
         // enter text into search input
         wrapper
@@ -186,7 +182,7 @@ describe('<SearchInput />', () => {
         // click in search box to hide
         wrapper.find(searchInput).simulate('click');
 
-        expect(wrapper.state('isExpanded')).toBeFalsy();
+        expect(wrapper.children().children().state('isExpanded')).toBeFalsy();
     });
 
     test('check search executed on search button click', () => {
@@ -197,11 +193,11 @@ describe('<SearchInput />', () => {
             .simulate('change', { target: { value: searchData[0].text } });
 
         // check if searchTerm state is updated
-        expect(wrapper.state(['value'])).toBe(searchData[0].text);
+        expect(wrapper.children().children().state(['value'])).toBe(searchData[0].text);
 
         wrapper.find('.fd-button--light.sap-icon--search').simulate('click');
 
-        expect(wrapper.state(['value'])).toBe(searchData[0].text);
+        expect(wrapper.children().children().state(['value'])).toBe(searchData[0].text);
     });
 
     test('pressing Esc key to close search list', () => {
@@ -210,13 +206,13 @@ describe('<SearchInput />', () => {
         // click in search box to show
         wrapper.find(searchInput).simulate('click');
 
-        expect(wrapper.state('isExpanded')).toBeTruthy();
+        expect(wrapper.children().children().state('isExpanded')).toBeTruthy();
 
         // handle esc key
         let event = new KeyboardEvent('keydown', { keyCode: 27 });
         document.dispatchEvent(event);
 
-        expect(wrapper.state('isExpanded')).toBeFalsy();
+        expect(wrapper.children().children().state('isExpanded')).toBeFalsy();
     });
 
     describe('Prop spreading', () => {

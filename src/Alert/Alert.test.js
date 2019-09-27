@@ -34,9 +34,9 @@ describe('<Alert />', () => {
         tree = component.toJSON();
         expect(tree).toMatchSnapshot();
 
-        let wrapper = mount(basicAlert);
+        let wrapper = mount(basicAlert).children().children();
 
-        expect(wrapper.childAt(0).state(['isActive'])).toBeTruthy();
+        expect(wrapper.state(['isActive'])).toBeTruthy();
         wrapper.find('button.fd-alert__close').simulate('click');
         expect(wrapper.state(['isActive'])).toBeFalsy();
     });
@@ -72,7 +72,7 @@ describe('<Alert />', () => {
         });
 
         test('should allow props to be spread to the Alert component\'s a element when link provided', () => {
-            const element = mount(<Alert link='javascript:void(0)' linkProps={{ 'data-sample': 'Sample' }} />);
+            const element = mount(<Alert link='#' linkProps={{ 'data-sample': 'Sample' }} />);
 
             expect(
                 element.find('a').getDOMNode().attributes['data-sample'].value

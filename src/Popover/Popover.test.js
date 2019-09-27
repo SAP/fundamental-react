@@ -119,7 +119,7 @@ describe('<Popover />', () => {
     });
 
     test('handle document click to close popover', () => {
-        const wrapper = mount(popOver);
+        const wrapper = mount(popOver).children().children();
 
         // click on popover to show
         wrapper.find('div.fd-popover__control .sap-icon--cart').simulate('click');
@@ -133,7 +133,7 @@ describe('<Popover />', () => {
     });
 
     test('handle esc key to close popover', () => {
-        const wrapper = mount(popOver);
+        const wrapper = mount(popOver).children().children();
 
         // click on popover to show
         wrapper.find('div.fd-popover__control .sap-icon--cart').simulate('click');
@@ -146,7 +146,7 @@ describe('<Popover />', () => {
     });
 
     test('handle document click to close popover', () => {
-        const wrapper = mount(popOver);
+        const wrapper = mount(popOver).children().children();
 
         // click on popover to show
         wrapper.find('div.fd-popover__control .sap-icon--cart').simulate('click');
@@ -159,7 +159,7 @@ describe('<Popover />', () => {
     });
 
     test('handle document click to close popover', () => {
-        const wrapper = mount(popOverDisabled);
+        const wrapper = mount(popOverDisabled).children().children();
 
         // click on popover to show
         wrapper.find('div.fd-popover__control .sap-icon--cart').simulate('click');

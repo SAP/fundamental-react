@@ -216,7 +216,7 @@ describe('<InputGroup />', () => {
     });
 
     test('input text entered', () => {
-        const wrapper = mount(inputTextPosBefore);
+        const wrapper = mount(inputTextPosBefore).children().children();
 
         // click up
         wrapper.setState({ value: '' });
@@ -228,7 +228,7 @@ describe('<InputGroup />', () => {
     });
 
     test('number input handle up and down', () => {
-        const wrapper = mount(numberInput);
+        const wrapper = mount(numberInput).children().children();
 
         // click up
         wrapper.setState({ value: 0 });

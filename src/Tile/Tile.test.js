@@ -181,7 +181,7 @@ describe('<Tile />', () => {
                 super(props);
                 ref = React.createRef();
             }
-            render = () => <feTile ref={ref} />;
+            render = () => <Tile ref={ref} />;
         }
         mount(<Test />);
         expect(ref.current.tagName).toEqual('DIV');

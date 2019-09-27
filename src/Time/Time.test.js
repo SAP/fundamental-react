@@ -112,7 +112,7 @@ describe('<Time />', () => {
         const wrapper = mount(meridiemTime);
 
         // hour timer click down
-        expect(wrapper.state('time').hour).toEqual('12');
+        expect(wrapper.children().children().state('time').hour).toEqual('12');
         // 3 down clicks
         for (let i = 0; i < 3; i += 1) {
             wrapper
