@@ -1,20 +1,12 @@
-import 'fundamental-styles/dist/tabs.css';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
+import withStyles from '../utils/WithStyles/WithStyles';
 
-const Tab = (props) => {
-    const { title,
-        className,
-        disabled,
-        glyph,
-        id,
-        selected,
-        onClick,
-        tabContentProps,
-        linkProps,
-        index,
-        ...rest } = props;
+
+const Tab = React.forwardRef(({ title, className, disabled, glyph, id, selected, onClick,
+    tabContentProps, linkProps, index, customStyles, disableStyles, ...props }, ref) => {
+
 
     const tabClasses = classnames(
         className,
@@ -31,9 +23,10 @@ const Tab = (props) => {
 
     return (
         <li
-            {...rest}
+            {...props}
             className={tabClasses}
-            key={id}>
+            key={id}
+            ref={ref}>
             <a
                 {...linkProps}
                 aria-controls={id}
@@ -49,7 +42,7 @@ const Tab = (props) => {
             </a>
         </li>
     );
-};
+});
 
 Tab.displayName = 'Tab';
 
@@ -59,7 +52,9 @@ Tab.defaultProps = {
 
 Tab.propTypes = {
     className: PropTypes.string,
+    customStyles: PropTypes.object,
     disabled: PropTypes.bool,
+    disableStyles: PropTypes.bool,
     glyph: PropTypes.string,
     id: PropTypes.string,
     index: PropTypes.number,
@@ -80,4 +75,4 @@ Tab.propDescriptions = {
     onClick: '_INTERNAL USE ONLY._'
 };
 
-export default Tab;
+export default withStyles(Tab, { cssFile: 'tabs', fonts: true });
