@@ -284,7 +284,7 @@ describe('<SideNav />', () => {
     });
 
     test('handle side nav list link click', () => {
-        const wrapper = mount(sideNavMultiLevel);
+        const wrapper = mount(sideNavMultiLevel).children().children();
         const Item2 = wrapper.find({ 'id': 'item_2' });
         const Item4 = wrapper.find({ 'id': 'item_4' });
 
@@ -310,7 +310,7 @@ describe('<SideNav />', () => {
     });
 
     test('handle side nav sub link click', () => {
-        const wrapper = mount(sideNavMultiLevel);
+        const wrapper = mount(sideNavMultiLevel).children().children();
         wrapper
             .find('.fd-side-nav__sublink')
             .at(0)
