@@ -13,15 +13,13 @@ class FormRadioGroup extends Component {
     render() {
         const { children, customStyles, disabled, disableStyles, inline, onChange, ...props } = this.props;
 
-        const disableCSS = disableStyles || customStyles ? true : false;
-
         return (
             <div
                 {...props}>
                 {React.Children.toArray(children).map(child => {
                     return React.cloneElement(child, {
                         disabled: child.props.disabled || disabled,
-                        disableStyles: disableCSS,
+                        disableStyles: disableStyles,
                         inline: child.props.inline || inline,
                         name: child.props.name || this.groupId,
                         onChange: child.props.onChange || onChange

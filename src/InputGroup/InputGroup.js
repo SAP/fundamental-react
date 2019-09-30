@@ -94,9 +94,6 @@ class InputGroup extends Component {
             'fd-input-group__input'
         );
 
-        const disableCSS = disableStyles || customStyles ? true : false;
-
-
         switch (inputType) {
             case 'number':
 
@@ -113,7 +110,7 @@ class InputGroup extends Component {
                             {...inputProps}
                             className={inputNumberClasses}
                             compact={compact}
-                            disableStyles={disableCSS}
+                            disableStyles={disableStyles}
                             id={inputId}
                             name={inputName}
                             onChange={this.handleTextChange}
@@ -125,7 +122,7 @@ class InputGroup extends Component {
                                 aria-label={localizedText.up}
                                 className='fd-button--half fd-input-group__button'
                                 compact={compact}
-                                disableStyles={disableCSS}
+                                disableStyles={disableStyles}
                                 glyph='slim-arrow-up'
                                 onClick={this.handleUp}
                                 option='light' />
@@ -134,7 +131,7 @@ class InputGroup extends Component {
                                 aria-label={localizedText.down}
                                 className='fd-button--half fd-input-group__button'
                                 compact={compact}
-                                disableStyles={disableCSS}
+                                disableStyles={disableStyles}
                                 glyph='slim-arrow-down'
                                 onClick={this.handleDown}
                                 option='light' />
@@ -156,7 +153,7 @@ class InputGroup extends Component {
                                 <span className={addonClasses}>
                                     {glyph ? (
                                         <Icon
-                                            disableStyles={disableCSS}
+                                            disableStyles={disableStyles}
                                             glyph={glyph}
                                             role='presentation' />
                                     ) : (
@@ -168,7 +165,7 @@ class InputGroup extends Component {
                                 {...inputProps}
                                 className={inputClasses}
                                 compact={compact}
-                                disableStyles={disableCSS}
+                                disableStyles={disableStyles}
                                 id={inputId}
                                 name={inputName}
                                 onChange={this.handleTextChange}
@@ -184,7 +181,7 @@ class InputGroup extends Component {
                                 {...inputProps}
                                 className={inputClasses}
                                 compact={compact}
-                                disableStyles={disableCSS}
+                                disableStyles={disableStyles}
                                 id={inputId}
                                 name={inputName}
                                 onChange={this.handleTextChange}
@@ -197,7 +194,7 @@ class InputGroup extends Component {
                                 <span className={addonClasses}>
                                     {glyph ? (
                                         <Icon
-                                            disableStyles={disableCSS}
+                                            disableStyles={disableStyles}
                                             glyph={glyph}
                                             role='presentation' />
                                     ) : (

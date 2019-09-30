@@ -7,18 +7,16 @@ import withStyles from '../utils/WithStyles/WithStyles';
 
 const FormRadioItem = React.forwardRef(({ checked, children, className, customStyles, defaultChecked, disabled, disableStyles, id, inline, inputProps, labelProps, name, value, ...props }, ref) => {
 
-    const disableCSS = disableStyles || customStyles ? true : false;
-
     return (
         <FormItem
             {...props}
             className={className}
-            disableStyles={disableCSS}
+            disableStyles={disableStyles}
             isInline={inline}
             key={id}>
             <FormLabel
                 {...labelProps}
-                disableStyles={disableCSS}
+                disableStyles={disableStyles}
                 disabled={disabled}>
                 <input
                     {...inputProps}

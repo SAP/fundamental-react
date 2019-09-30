@@ -110,8 +110,6 @@ class TimePicker extends Component {
         } = this.props;
         const { popoverId, timeId } = this.state;
 
-        const disableCSS = disableStyles || customStyles ? true : false;
-
         return (
             <div
                 {...props}
@@ -121,7 +119,7 @@ class TimePicker extends Component {
                     body={
                         <Time
                             {...timeProps}
-                            disableStyles={disableCSS}
+                            disableStyles={disableStyles}
                             disabled={this.state.disabled}
                             format12Hours={this.state.format12Hours}
                             id={timeId}
@@ -136,7 +134,7 @@ class TimePicker extends Component {
                         <TimePickerItem
                             {...props}
                             buttonProps={buttonProps}
-                            disableStyles={disableCSS}
+                            disableStyles={disableStyles}
                             disabled={this.state.disabled}
                             format12Hours={format12Hours}
                             id={id}
@@ -152,7 +150,7 @@ class TimePicker extends Component {
                             updateValue={this.updateValue}
                             value={this.state.value} />
                     }
-                    disableStyles={disableCSS}
+                    disableStyles={disableStyles}
                     id={popoverId}
                     noArrow />
             </div>

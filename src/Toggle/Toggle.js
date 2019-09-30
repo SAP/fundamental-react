@@ -30,17 +30,15 @@ class Toggle extends React.Component {
             }
         );
 
-        const disableCSS = disableStyles || customStyles ? true : false;
-
         return (
             <FormItem
                 {...rest}
                 className={className}
-                disableStyles={disableCSS}>
+                disableStyles={disableStyles}>
                 <FormLabel
                     disabled={disabled}
                     {...labelProps}
-                    disableStyles={disableCSS}
+                    disableStyles={disableStyles}
                     htmlFor={id}>
                     <span className={spanClasses}>
                         <input

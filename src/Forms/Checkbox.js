@@ -28,17 +28,15 @@ const Checkbox = React.forwardRef(({ checked, className, customStyles, defaultCh
         'fd-checkbox'
     );
 
-    const disableCSS = disableStyles || customStyles ? true : false;
-
     return (
         <FormItem
             {...props}
-            disableStyles={disableCSS}
+            disableStyles={disableStyles}
             disabled={disabled}
             isInline={inline}
             ref={ref}>
             <FormLabel {...labelProps}
-                disableStyles={disableCSS}
+                disableStyles={disableStyles}
                 disabled={disabled}>
                 <input
                     {...inputProps}

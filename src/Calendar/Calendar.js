@@ -395,7 +395,7 @@ class Calendar extends Component {
         return months;
     }
 
-    generateNavigation = (disableCSS) => {
+    generateNavigation = () => {
         let months = this.getMonths();
 
         return (
@@ -404,7 +404,7 @@ class Calendar extends Component {
                     <div className='fd-calendar__action'>
                         <Button
                             compact
-                            disableStyles={disableCSS}
+                            disableStyles={this.props.disableStyles}
                             glyph='slim-arrow-left'
                             onClick={this.previous}
                             option='light' />
@@ -412,7 +412,7 @@ class Calendar extends Component {
                     <div className='fd-calendar__action'>
                         <Button
                             compact
-                            disableStyles={disableCSS}
+                            disableStyles={this.props.disableStyles}
                             onClick={this.showMonths}
                             option='light'>
                             <span>
@@ -423,7 +423,7 @@ class Calendar extends Component {
                     <div className='fd-calendar__action'>
                         <Button
                             compact
-                            disableStyles={disableCSS}
+                            disableStyles={this.props.disableStyles}
                             onClick={this.showYears}
                             option='light'>
                             <span>
@@ -435,7 +435,7 @@ class Calendar extends Component {
                     <div className='fd-calendar__action'>
                         <Button
                             compact
-                            disableStyles={disableCSS}
+                            disableStyles={this.props.disableStyles}
                             glyph='slim-arrow-right'
                             onClick={this.next}
                             option='light' />
@@ -545,8 +545,8 @@ class Calendar extends Component {
 
     render() {
         const {
-            enableRangeSelection,
             customStyles,
+            enableRangeSelection,
             disableStyles,
             disableWeekends,
             disableBeforeDate,
@@ -572,11 +572,9 @@ class Calendar extends Component {
             className
         );
 
-        const disableCSS = disableStyles || customStyles ? true : false;
-
         return (
             <div {...props} className={calendarClasses}>
-                {this.generateNavigation(disableCSS)}
+                {this.generateNavigation()}
                 <div className='fd-calendar__content'>
                     {this._renderContent(monthListProps, yearListProps, tableProps, tableHeaderProps, tableBodyProps)}
                 </div>

@@ -132,14 +132,12 @@ class SearchInput extends Component {
             ...rest
         } = this.props;
 
-        const disableCSS = disableStyles || customStyles ? true : false;
-
         return (
             <div {...rest} className={className}>
                 <Popover
                     {...popoverProps}
                     body={
-                        (<Menu disableStyles={disableCSS}>
+                        (<Menu disableStyles={disableStyles}>
                             <Menu.List {...listProps}>
                                 {this.state.filteredResult && this.state.filteredResult.length > 0 ? (
                                     this.state.filteredResult.map((item, index) => {
@@ -167,7 +165,7 @@ class SearchInput extends Component {
                                 {...inputProps}
                                 className='fd-input-group__input'
                                 compact={compact}
-                                disableStyles={disableCSS}
+                                disableStyles={disableStyles}
                                 onChange={this.onChangeHandler}
                                 onClick={() => this.onClickHandler()}
                                 onKeyPress={this.onKeyPressHandler}
@@ -179,7 +177,7 @@ class SearchInput extends Component {
                                     <Button {...searchBtnProps}
                                         className='fd-input-group__button'
                                         compact={compact}
-                                        disableStyles={disableCSS}
+                                        disableStyles={disableStyles}
                                         glyph='search'
                                         onClick={() => this.onClickHandler()}
                                         option='light' />
@@ -187,7 +185,7 @@ class SearchInput extends Component {
                             )}
                         </div>
                     }
-                    disableStyles={disableCSS} />
+                    disableStyles={disableStyles} />
             </div>
         );
     }

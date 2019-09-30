@@ -89,7 +89,6 @@ class Shellbar extends Component {
 
     render() {
         const {
-            customStyles,
             disableStyles,
             localizedText,
             logo,
@@ -113,8 +112,6 @@ class Shellbar extends Component {
             className
         );
 
-        const disableCSS = disableStyles || customStyles ? true : false;
-
         return (
             <div className={shellbarClasses}>
                 <div className='fd-shellbar__group fd-shellbar__group--product'>
@@ -130,7 +127,7 @@ class Shellbar extends Component {
                             <Popover
                                 body={
                                     productMenu && (
-                                        <Menu disableStyles={disableCSS}>
+                                        <Menu disableStyles={disableStyles}>
                                             <Menu.List>
                                                 {productMenu.map((item, index) => {
                                                     return (
@@ -160,7 +157,7 @@ class Shellbar extends Component {
                                         </span>
                                     </button>
                                 }
-                                disableStyles={disableCSS}
+                                disableStyles={disableStyles}
                                 noArrow />
                         </div>
                     )}
@@ -180,7 +177,7 @@ class Shellbar extends Component {
                         <div className='fd-shellbar__action fd-shellbar__action--desktop'>
                             <SearchInput
                                 className='fd-search-input'
-                                disableStyles={disableCSS}
+                                disableStyles={disableStyles}
                                 onEnter={searchInput.onSearch}
                                 placeholder={searchInput.placeholder}
                                 searchBtnProps={{ className: 'fd-shellbar__button' }}
@@ -198,32 +195,32 @@ class Shellbar extends Component {
                                                     <Button
                                                         aria-label={action.label}
                                                         className='fd-shellbar__button'
-                                                        disableStyles={disableCSS}
+                                                        disableStyles={disableStyles}
                                                         glyph={action.glyph}>
                                                         {action.notificationCount > 0 && (
                                                             <Counter
                                                                 aria-label={localizedText.counterLabel}
-                                                                disableStyles={disableCSS}
+                                                                disableStyles={disableStyles}
                                                                 notification>
                                                                 {action.notificationCount}
                                                             </Counter>
                                                         )}
                                                     </Button>
                                                 }
-                                                disableStyles={disableCSS}
+                                                disableStyles={disableStyles}
                                                 placement='bottom-end' />
                                         ) : (
                                             <Button
                                                 aria-label={action.label}
                                                 className='fd-shellbar__button'
-                                                disableStyles={disableCSS}
+                                                disableStyles={disableStyles}
                                                 glyph={action.glyph}
                                                 key={index}
                                                 onClick={action.callback} >
                                                 {action.notificationCount > 0 && (
                                                     <Counter
                                                         aria-label={localizedText.counterLabel}
-                                                        disableStyles={disableCSS}
+                                                        disableStyles={disableStyles}
                                                         notification>
                                                         {action.notificationCount}
                                                     </Counter>
@@ -245,12 +242,12 @@ class Shellbar extends Component {
                                         <Button
                                             aria-label={localizedText.notificationsButton}
                                             className='fd-shellbar__button'
-                                            disableStyles={disableCSS}
+                                            disableStyles={disableStyles}
                                             glyph='bell'>
                                             {notifications.notificationCount > 0 && (
                                                 <Counter
                                                     aria-label={localizedText.counterLabel}
-                                                    disableStyles={disableCSS}
+                                                    disableStyles={disableStyles}
                                                     notification>
                                                     {notifications.notificationCount}
                                                 </Counter>
@@ -258,20 +255,20 @@ class Shellbar extends Component {
                                         </Button>
                                     </div>
                                 }
-                                disableStyles={disableCSS}
+                                disableStyles={disableStyles}
                                 placement='bottom-end' />
                         ) : (
                             <div className='fd-shellbar__action fd-shellbar__action--desktop'>
                                 <Button
                                     aria-label={localizedText.notificationsButton}
                                     className='fd-shellbar__button'
-                                    disableStyles={disableCSS}
+                                    disableStyles={disableStyles}
                                     glyph='bell'
                                     onClick={notifications.callback}>
                                     {notifications.notificationCount > 0 && (
                                         <Counter
                                             aria-label={localizedText.counterLabel}
-                                            disableStyles={disableCSS}
+                                            disableStyles={disableStyles}
                                             notification>
                                             {notifications.notificationCount}
                                         </Counter>
@@ -284,7 +281,7 @@ class Shellbar extends Component {
                         (actions || searchInput || notifications) && <div className='fd-shellbar__action fd-shellbar__action--mobile'>
                             <Popover
                                 body={
-                                    <Menu disableStyles={disableCSS}>
+                                    <Menu disableStyles={disableStyles}>
                                         {!this.state.showCollapsedProductSwitcherMenu ? (
                                             <Menu.List>
                                                 {this.state.collapsedActions.map((item, index) => {
@@ -295,7 +292,7 @@ class Shellbar extends Component {
                                                             onClick={item.callback}
                                                             url={item.url} >
                                                             <Icon glyph={item.glyph}>
-                                                                {item.notificationCount > 0 && <Counter disableStyles={disableCSS} notification>{item.notificationCount}</Counter>}
+                                                                {item.notificationCount > 0 && <Counter disableStyles={disableStyles} notification>{item.notificationCount}</Counter>}
                                                             </Icon> {item.label}
                                                         </Menu.Item>
                                                     );
@@ -315,7 +312,7 @@ class Shellbar extends Component {
                                                             link={item.link}
                                                             onClick={item.callback}
                                                             url={item.url} >
-                                                            <Icon disableStyles={disableCSS} glyph={item.glyph} /> {item.title}
+                                                            <Icon disableStyles={disableStyles} glyph={item.glyph} /> {item.title}
                                                         </Menu.Item>
                                                     );
                                                 })}
@@ -325,16 +322,16 @@ class Shellbar extends Component {
                                 }
                                 control={
                                     <div className='fd-shellbar-collapse--control' role='button'>
-                                        <Button className='fd-shellbar__button' disableStyles={disableCSS}
+                                        <Button className='fd-shellbar__button' disableStyles={disableStyles}
                                             glyph='overflow'>
                                             <Counter
                                                 aria-label={localizedText.counterLabel}
-                                                disableStyles={disableCSS}
+                                                disableStyles={disableStyles}
                                                 notification> {this.state.totalNotifications > 0 && this.state.totalNotifications} </Counter>
                                         </Button>
                                     </div>
                                 }
-                                disableStyles={disableCSS}
+                                disableStyles={disableStyles}
                                 placement='bottom-end' />
                         </div>
                     }
@@ -344,7 +341,7 @@ class Shellbar extends Component {
                                 <Popover
                                     body={
                                         profileMenu && (
-                                            <Menu disableStyles={disableCSS}>
+                                            <Menu disableStyles={disableStyles}>
                                                 <Menu.List>
                                                     <Menu.Item>{profile.userName}</Menu.Item>
                                                     {profileMenu.map((item, index) => {
@@ -356,7 +353,7 @@ class Shellbar extends Component {
                                                                 url={item.url} >
                                                                 {item.glyph && (
                                                                     <React.Fragment>
-                                                                        <Icon disableStyles={disableCSS}
+                                                                        <Icon disableStyles={disableStyles}
                                                                             glyph={item.glyph}
                                                                             size={item.size} />
                                                                             &nbsp;&nbsp;&nbsp;
@@ -374,19 +371,19 @@ class Shellbar extends Component {
                                         profile.image ? (
                                             <Identifier
                                                 backgroundImageUrl={profile.image}
-                                                disableStyles={disableCSS}
+                                                disableStyles={disableStyles}
                                                 modifier='circle'
                                                 size='xs' />
                                         ) : (
                                             <Identifier color={profile.colorAccent}
-                                                disableStyles={disableCSS}
+                                                disableStyles={disableStyles}
                                                 modifier='circle'
                                                 size='xs'>
                                                 {profile.initials}
                                             </Identifier>
                                         )
                                     }
-                                    disableStyles={disableCSS}
+                                    disableStyles={disableStyles}
                                     placement='bottom-end' />
                             </div>
                         </div>
@@ -419,10 +416,10 @@ class Shellbar extends Component {
                                         </div>
                                     }
                                     control={<Button className='fd-shellbar__button'
-                                        disableStyles={disableCSS}
+                                        disableStyles={disableStyles}
                                         glyph='grid' />}
                                     disableEdgeDetection
-                                    disableStyles={disableCSS}
+                                    disableStyles={disableStyles}
                                     placement='bottom-end' />
                             </div>
                         </div>

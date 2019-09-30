@@ -126,8 +126,6 @@ class MultiInput extends Component {
             className
         );
 
-        const disableCSS = disableStyles || customStyles ? true : false;
-
         return (
             <div
                 {...rest}
@@ -136,7 +134,7 @@ class MultiInput extends Component {
                     <Popover
                         {...popoverProps}
                         body={
-                            <Menu disableCSS={disableCSS}>
+                            <Menu disableStyles={disableStyles}>
                                 <Menu.List {...listProps}>{this.createTagList(data)}</Menu.List>
                             </Menu>
                         }
@@ -150,7 +148,7 @@ class MultiInput extends Component {
                                     {...inputProps}
                                     className='fd-input-group__input'
                                     compact={compact}
-                                    disableStyles={disableCSS}
+                                    disableStyles={disableStyles}
                                     onClick={this.showHideTagList}
                                     placeholder={placeHolder} />
                                 <span
@@ -159,14 +157,14 @@ class MultiInput extends Component {
                                         {...buttonProps}
                                         className='fd-input-group__button'
                                         compact={compact}
-                                        disableStyles={disableCSS}
+                                        disableStyles={disableStyles}
                                         glyph='navigation-down-arrow'
                                         onClick={this.showHideTagList}
                                         option='light' />
                                 </span>
                             </div>
                         }
-                        disableStyles={disableCSS}
+                        disableStyles={disableStyles}
                         noArrow />
                 </div>
                 {this.state.tags.length > 0 ? (

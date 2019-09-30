@@ -11,8 +11,6 @@ const ComboboxInput = React.forwardRef(({ placeholder, menu, compact, className,
         'fd-input-group'
     );
 
-    const disableCSS = disableStyles || customStyles ? true : false;
-
     return (
         <div {...props} className={className}
             ref={ref}>
@@ -25,7 +23,7 @@ const ComboboxInput = React.forwardRef(({ placeholder, menu, compact, className,
                             {...inputProps}
                             className='fd-input-group__input'
                             compact={compact}
-                            disableStyles={disableCSS}
+                            disableStyles={disableStyles}
                             placeholder={placeholder}
                             type='text' />
                         <span className='fd-input-group__addon fd-input-group__addon--button'>
@@ -33,13 +31,13 @@ const ComboboxInput = React.forwardRef(({ placeholder, menu, compact, className,
                                 {...buttonProps}
                                 className='fd-input-group__button'
                                 compact={compact}
-                                disableStyles={disableCSS}
+                                disableStyles={disableStyles}
                                 glyph='navigation-down-arrow'
                                 option='light' />
                         </span>
                     </div>
                 }
-                disableStyles={disableCSS}
+                disableStyles={disableStyles}
                 noArrow />
         </div>
     );

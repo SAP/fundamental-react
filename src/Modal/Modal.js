@@ -60,8 +60,6 @@ class Modal extends Component {
 
         const HeadingTag = `h${headingLevel}`;
 
-        const disableCSS = disableStyles || customStyles ? true : false;
-
         if (!show) {
             return null;
         }
@@ -93,7 +91,7 @@ class Modal extends Component {
                                         {...closeProps}
                                         aria-label={localizedText.closeButton}
                                         className='fd-modal__close'
-                                        disableStyles={disableCSS}
+                                        disableStyles={disableStyles}
                                         glyph='decline'
                                         onClick={this.handleCloseClick}
                                         option='light' />

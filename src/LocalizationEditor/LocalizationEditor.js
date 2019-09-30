@@ -23,21 +23,19 @@ const LocalizationEditor = React.forwardRef(({ control, menu, id, compact, texta
         inputClassName
     );
 
-    const disableCSS = disableStyles || customStyles ? true : false;
-
     return (
         <div {...props} className={localizationEditorClasses}
             ref={ref}>
             <FormLabel
                 {...control.labelProps}
-                disableStyles={disableCSS}
+                disableStyles={disableStyles}
                 htmlFor={id}>
                 {control.label}
             </FormLabel>
             <Popover
                 {...popoverProps}
                 body={
-                    <Menu disableStyles={disableCSS}>
+                    <Menu disableStyles={disableStyles}>
                         <Menu.List {...listProps}>
                             {menu.map((item, index) => {
                                 let {
@@ -56,13 +54,13 @@ const LocalizationEditor = React.forwardRef(({ control, menu, id, compact, texta
                                                 <FormTextArea
                                                     {...inputProps}
                                                     className={localizationInputClasses}
-                                                    disableStyles={disableCSS} />
+                                                    disableStyles={disableStyles} />
                                             ) : (
                                                 <FormInput
                                                     {...inputProps}
                                                     className={localizationInputClasses}
                                                     compact={compact}
-                                                    disableStyles={disableCSS}
+                                                    disableStyles={disableStyles}
                                                     placeholder={placeholder} />
                                             )}
                                             <span
@@ -70,7 +68,7 @@ const LocalizationEditor = React.forwardRef(({ control, menu, id, compact, texta
                                                 <Button
                                                     className='fd-input-group__button'
                                                     compact={compact}
-                                                    disableStyles={disableCSS}
+                                                    disableStyles={disableStyles}
                                                     option='light'>
                                                     {language}
                                                 </Button>
@@ -90,13 +88,13 @@ const LocalizationEditor = React.forwardRef(({ control, menu, id, compact, texta
                                 {...control.inputProps}
                                 className={localizationInputClasses}
                                 compact={compact}
-                                disableStyles={disableCSS} />
+                                disableStyles={disableStyles} />
                         ) : (
                             <FormInput
                                 {...control.inputProps}
                                 className={localizationInputClasses}
                                 compact={compact}
-                                disableStyles={disableCSS}
+                                disableStyles={disableStyles}
                                 placeholder={control.placeholder} />
                         )}
                         <span
@@ -105,14 +103,14 @@ const LocalizationEditor = React.forwardRef(({ control, menu, id, compact, texta
                                 {...control.buttonProps}
                                 className='fd-input-group__button'
                                 compact={compact}
-                                disableStyles={disableCSS}
+                                disableStyles={disableStyles}
                                 option='light'>
                                 {control.language}
                             </Button>
                         </span>
                     </div>
                 }
-                disableStyles={disableCSS}
+                disableStyles={disableStyles}
                 id={id}
                 noArrow />
         </div>

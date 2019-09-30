@@ -27,7 +27,6 @@ class Alert extends Component {
         const {
             onCloseClicked,
             buttonProps,
-            customStyles,
             disableStyles,
             type,
             link,
@@ -49,8 +48,6 @@ class Alert extends Component {
             className
         );
 
-        const disableCSS = disableStyles || customStyles ? true : false;
-
         return (
             <div>
                 {this.state.isActive && (
@@ -68,13 +65,13 @@ class Alert extends Component {
                         )}
                         <div className='fd-alert__text'>
                             {type && (
-                                <Icon disableStyles={disableCSS} glyph={`mesage-${type}`} />
+                                <Icon disableStyles={disableStyles} glyph={`mesage-${type}`} />
                             )}
                             {children}
                             {link && (
                                 <Link
                                     {...linkProps}
-                                    disableStyles={disableCSS}
+                                    disableStyles={disableStyles}
                                     href={link}>
                                     {linkText}{' '}
                                 </Link>

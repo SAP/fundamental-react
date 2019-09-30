@@ -4,13 +4,11 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import withStyles from '../utils/WithStyles/WithStyles';
 
-const ActionBarBack = React.forwardRef(({ onClick, className, buttonProps, customStyles, disableStyles, ...props }, ref) => {
+const ActionBarBack = React.forwardRef(({ onClick, className, buttonProps, disableStyles, ...props }, ref) => {
     const actionBarBackClasses = classnames(
         'fd-action-bar__back',
         className
     );
-
-    const disableCSS = disableStyles || customStyles ? true : false;
 
     return (
         <div {...props} className={actionBarBackClasses}
@@ -18,7 +16,7 @@ const ActionBarBack = React.forwardRef(({ onClick, className, buttonProps, custo
             <Button
                 {...buttonProps}
                 compact
-                disableStyles={disableCSS}
+                disableStyles={disableStyles}
                 glyph='nav-back'
                 onClick={onClick}
                 option='light' />

@@ -35,11 +35,11 @@ export default function withStyles(WrappedComponent, defaults) {
                     customStyles;
                 }
             }
+            const disableCSS = disableStyles || customStyles ? true : false;
 
             return (
                 <WrappedComponent
-                    customStyles={customStyles}
-                    disableStyles={disableStyles}
+                    disableStyles={disableCSS}
                     ref={forwardedRef}
                     {...otherProps} />
             );
