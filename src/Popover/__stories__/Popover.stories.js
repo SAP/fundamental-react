@@ -41,5 +41,5 @@ storiesOf('Components|Popover', module)
                 disableStyles
                 glyph='navigation-up-arrow'
                 option='light' />}
-            customStyles={require('../../utils/WithStyles/customStylesTest.css')} />
+            customStyles={require('../../../.storybook/customStylesTest.css')} />
     ));

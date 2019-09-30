@@ -27,7 +27,7 @@ storiesOf('Components|InputGroup', module)
     ))
     .add('custom styles', () => (
         <InputGroup
-            customStyles={require('../../utils/WithStyles/customStylesTest.css')}>
+            customStyles={require('../../../.storybook/customStylesTest.css')}>
             <Button
                 compact
                 glyph='navigation-down-arrow'

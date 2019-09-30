@@ -15,7 +15,7 @@ storiesOf('Components|FormLabel', module)
     ))
     .add('custom styles', () => (
         <FormLabel
-            customStyles={require('../../utils/WithStyles/customStylesTest.css')}>
+            customStyles={require('../../../.storybook/customStylesTest.css')}>
             Default
         </FormLabel>
     ));

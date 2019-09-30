@@ -35,7 +35,7 @@ storiesOf('Components|Table', module)
     ))
     .add('custom styles', () => (
         <Table
-            customStyles={require('../../utils/WithStyles/customStylesTest.css')}
+            customStyles={require('../../../.storybook/customStylesTest.css')}
             headers={defaultHeaders}
             tableData={defaultData} />
     ));

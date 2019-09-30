@@ -15,7 +15,7 @@ storiesOf('Components|Status', module)
     ))
     .add('custom styles', () => (
         <Status
-            customStyles={require('../../utils/WithStyles/customStylesTest.css')}>
+            customStyles={require('../../../.storybook/customStylesTest.css')}>
             Default
         </Status>
     ));

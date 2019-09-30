@@ -15,7 +15,7 @@ storiesOf('Components|FormTextarea', module)
     ))
     .add('custom styles', () => (
         <FormTextarea
-            customStyles={require('../../utils/WithStyles/customStylesTest.css')}>
+            customStyles={require('../../../.storybook/customStylesTest.css')}>
             Default
         </FormTextarea>
     ));

@@ -14,5 +14,5 @@ storiesOf('Components|Pagination', module)
         <Pagination disableStyles itemsTotal={101} />
     ))
     .add('custom styles', () => (
-        <Pagination customStyles={require('../../utils/WithStyles/customStylesTest.css')} itemsTotal={101} />
+        <Pagination customStyles={require('../../../.storybook/customStylesTest.css')} itemsTotal={101} />
     ));

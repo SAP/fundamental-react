@@ -25,7 +25,7 @@ storiesOf('Components|ButtonGroup', module)
     ))
     .add('custom styles', () => (
         <ButtonGroup
-            customStyles={require('../../utils/WithStyles/customStylesTest.css')}>
+            customStyles={require('../../../.storybook/customStylesTest.css')}>
             <Button glyph='survey' />
             <Button glyph='pie-chart' selected />
             <Button glyph='pool' />

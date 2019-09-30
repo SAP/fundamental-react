@@ -23,7 +23,7 @@ storiesOf('Components|Modal', module)
         </Modal>
     ))
     .add('custom styles', () => (
-        <Modal customStyles={require('../../utils/WithStyles/customStylesTest.css')} show
+        <Modal customStyles={require('../../../.storybook/customStylesTest.css')} show
             title='Product Added'>
             <p><b>The new product have been added to your catalog.</b></p>
             <p>Automatic Product ID: <b>PD-3465334</b></p>

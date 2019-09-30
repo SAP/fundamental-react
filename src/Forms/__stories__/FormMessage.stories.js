@@ -15,7 +15,7 @@ storiesOf('Components|FormMessage', module)
     ))
     .add('custom styles', () => (
         <FormMessage
-            customStyles={require('../../utils/WithStyles/customStylesTest.css')}>
+            customStyles={require('../../../.storybook/customStylesTest.css')}>
             Default
         </FormMessage>
     ));

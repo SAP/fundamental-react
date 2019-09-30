@@ -15,6 +15,6 @@ storiesOf('Components|InlineHelp', module)
     ))
     .add('custom styles', () => (
         <InlineHelp
-            customStyles={require('../../utils/WithStyles/customStylesTest.css')}
+            customStyles={require('../../../.storybook/customStylesTest.css')}
             text='default' />
     ));

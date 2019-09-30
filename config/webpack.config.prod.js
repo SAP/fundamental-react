@@ -251,7 +251,6 @@ module.exports = {
                     },
                     {
                         test: cssRegex,
-                        exclude: ['/src/utils/WithStyles/customStylesTest.css'],
                         loader: getStyleLoaders({
                             importLoaders: 1,
                             sourceMap: shouldUseSourceMap

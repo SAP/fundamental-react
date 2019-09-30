@@ -15,7 +15,7 @@ storiesOf('Components|Badge', module)
     ))
     .add('custom styles', () => (
         <Badge
-            customStyles={require('../../utils/WithStyles/customStylesTest.css')}>
+            customStyles={require('../../../.storybook/customStylesTest.css')}>
             Default
         </Badge>
     ));

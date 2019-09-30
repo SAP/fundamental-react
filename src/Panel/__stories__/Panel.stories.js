@@ -43,7 +43,7 @@ storiesOf('Components|Panel', module)
     ))
     .add('custom styles', () => (
         <Panel
-            customStyles={require('../../utils/WithStyles/customStylesTest.css')}>
+            customStyles={require('../../../.storybook/customStylesTest.css')}>
             <Panel.Header>
                 <Panel.Head description='Panel Description' title={'Panel Header with Actions'} />
                 <Panel.Actions>

@@ -15,7 +15,7 @@ storiesOf('Components|FormLegend', module)
     ))
     .add('custom styles', () => (
         <FormLegend
-            customStyles={require('../../utils/WithStyles/customStylesTest.css')}>
+            customStyles={require('../../../.storybook/customStylesTest.css')}>
             Default
         </FormLegend>
     ));

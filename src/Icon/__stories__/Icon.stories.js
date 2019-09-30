@@ -15,6 +15,6 @@ storiesOf('Components|Icon', module)
     ))
     .add('custom styles', () => (
         <Icon
-            customStyles={require('../../utils/WithStyles/customStylesTest.css')}
+            customStyles={require('../../../.storybook/customStylesTest.css')}
             glyph='cart' />
     ));
