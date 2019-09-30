@@ -59,7 +59,7 @@ describe('<FormRadioGroup />', () => {
             return mount(<FormRadioGroup {...props}>
                 <FormRadioItem>Option 1</FormRadioItem>
                 <FormRadioItem>Option 2</FormRadioItem>
-            </FormRadioGroup>);
+            </FormRadioGroup>).children().children();
         };
 
         test('should add disabled attribute to all children when disabled is passed', () => {
@@ -69,7 +69,7 @@ describe('<FormRadioGroup />', () => {
 
             let attributes = element.find('FormRadioItem').map(item => item.props().disabled);
 
-            expect(attributes).toEqual([true, true]);
+            expect(attributes).toEqual([true, true, true, true]);
         });
 
         test('should add inline class to all children when inline is passed', () => {
@@ -79,7 +79,7 @@ describe('<FormRadioGroup />', () => {
 
             let attributes = element.find('FormRadioItem').map(item => item.props().inline);
 
-            expect(attributes).toEqual([true, true]);
+            expect(attributes).toEqual([true, true, true, true]);
         });
 
         test('should trigger onChange from FormRadioGroup when FormRadioItem is clicked', () => {
@@ -97,7 +97,6 @@ describe('<FormRadioGroup />', () => {
         });
 
         test('should allow props to be spread to the FormRadioGroup component', () => {
-            // TODO: placeholder for this test description once that functionality is built
             const element = mount(<FormRadioGroup data-sample='Sample' />);
 
             expect(

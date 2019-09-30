@@ -62,7 +62,7 @@ describe('ActionBar Header', () => {
                 super(props);
                 ref = React.createRef();
             }
-            render = () => <ActionBar.Header ref={ref} />;
+            render = () => <ActionBar.Header ref={ref} title='sample' />;
         }
         mount(<Test />);
 

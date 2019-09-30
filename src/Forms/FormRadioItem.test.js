@@ -103,7 +103,7 @@ describe('<FormRadioItem />', () => {
                 super(props);
                 ref = React.createRef();
             }
-            render = () => <FormRadioItem ref={ref} />;
+            render = () => <FormRadioItem ref={ref}>foo</FormRadioItem>;
         }
         mount(<Test />);
         expect(ref.current.tagName).toEqual('INPUT');

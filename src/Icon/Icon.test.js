@@ -52,7 +52,7 @@ describe('<Icon />', () => {
                 super(props);
                 ref = React.createRef();
             }
-            render = () => <Icon ref={ref} />;
+            render = () => <Icon glyph='cart' ref={ref} />;
         }
         mount(<Test />);
         expect(ref.current.tagName).toEqual('SPAN');

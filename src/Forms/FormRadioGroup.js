@@ -19,7 +19,7 @@ class FormRadioGroup extends Component {
                 {React.Children.toArray(children).map(child => {
                     return React.cloneElement(child, {
                         disabled: child.props.disabled || disabled,
-                        disableStyles: disableStyles,
+                        disableStyles: child.props.disableStyles || disableStyles,
                         inline: child.props.inline || inline,
                         name: child.props.name || this.groupId,
                         onChange: child.props.onChange || onChange

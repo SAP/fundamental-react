@@ -34,7 +34,7 @@ const Tab = React.forwardRef(({ title, disabled, glyph, id, selected, onClick,
                 className={linkClasses}
                 href={!disabled ? `#${id}` : null}
                 onClick={!disabled ? (event) => {
-                    props.onClick(event, index);
+                    onClick(event, index);
                 } : null}
                 role='tab'>
                 {title}

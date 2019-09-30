@@ -84,7 +84,7 @@ describe('<ComboboxInput />', () => {
                 super(props);
                 ref = React.createRef();
             }
-            render = () => <ComboboxInput ref={ref} />;
+            render = () => <ComboboxInput menu={defaultMenu} ref={ref} />;
         }
         mount(<Test />);
         expect(ref.current.tagName).toEqual('DIV');
