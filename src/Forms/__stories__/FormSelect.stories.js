@@ -23,7 +23,7 @@ storiesOf('Components|FormSelect', module)
     ))
     .add('custom styles', () => (
         <FormSelect
-            customStyles={require('../../../.storybook/customStylesTest.css')}>
+            customStyles={require('../../utils/WithStyles/customStylesTest.css')}>
             <option>Duis malesuada odio volutpat elementum</option>
             <option>Suspendisse ante ligula</option>
             <option>Sed bibendum sapien at posuere interdum</option>

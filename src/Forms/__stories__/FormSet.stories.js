@@ -15,7 +15,7 @@ storiesOf('Components|FormSet', module)
     ))
     .add('custom styles', () => (
         <FormSet
-            customStyles={require('../../../.storybook/customStylesTest.css')}>
+            customStyles={require('../../utils/WithStyles/customStylesTest.css')}>
             Default
         </FormSet>
     ));

@@ -15,7 +15,7 @@ storiesOf('Components|FormItem', module)
     ))
     .add('custom styles', () => (
         <FormItem
-            customStyles={require('../../../.storybook/customStylesTest.css')}>
+            customStyles={require('../../utils/WithStyles/customStylesTest.css')}>
             Default
         </FormItem>
     ));

@@ -60,7 +60,7 @@ storiesOf('Components|Tile', module)
     ))
     .add('custom styles', () => (
         <React.Fragment>
-            <Tile customStyles={require('../../../.storybook/customStylesTest.css')}>
+            <Tile customStyles={require('../../utils/WithStyles/customStylesTest.css')}>
                 <Tile.Media>
                     <div>Tile Media here</div>
                 </Tile.Media>
@@ -73,7 +73,7 @@ storiesOf('Components|Tile', module)
             </Tile>
             <Tile
                 backgroundImage='https://placeimg.com/1600/400/nature'
-                customStyles={require('../../../.storybook/customStylesTest.css')}
+                customStyles={require('../../utils/WithStyles/customStylesTest.css')}
                 productTile>
                 <Tile.Media>
                     <div>Tile Media here</div>

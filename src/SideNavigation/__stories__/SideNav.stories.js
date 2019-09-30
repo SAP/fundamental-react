@@ -61,7 +61,7 @@ storiesOf('Components|SideNav', module)
         </SideNav>
     ))
     .add('custom styles', () => (
-        <SideNav customStyles={require('../../../.storybook/customStylesTest.css')} selectedId='item-2'>
+        <SideNav customStyles={require('../../utils/WithStyles/customStylesTest.css')} selectedId='item-2'>
             <SideNav.List>
                 <SideNav.ListItem
                     id='item-1'

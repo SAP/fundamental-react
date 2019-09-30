@@ -14,5 +14,5 @@ storiesOf('Components|TimePicker', module)
         <TimePicker disableStyles />
     ))
     .add('custom styles', () => (
-        <TimePicker customStyles={require('../../../.storybook/customStylesTest.css')} />
+        <TimePicker customStyles={require('../../utils/WithStyles/customStylesTest.css')} />
     ));

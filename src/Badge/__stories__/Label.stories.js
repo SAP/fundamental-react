@@ -15,7 +15,7 @@ storiesOf('Components|Label', module)
     ))
     .add('custom styles', () => (
         <Label
-            customStyles={require('../../../.storybook/customStylesTest.css')}>
+            customStyles={require('../../utils/WithStyles/customStylesTest.css')}>
             Default
         </Label>
     ));

@@ -32,6 +32,6 @@ storiesOf('Components|MultiInput', module)
             placeHolder='Select a Fruit' />
     ))
     .add('custom styles', () => (
-        <MultiInput customStyles={require('../../../.storybook/customStylesTest.css')} data={data}
+        <MultiInput customStyles={require('../../utils/WithStyles/customStylesTest.css')} data={data}
             placeHolder='Select a Fruit' />
     ));

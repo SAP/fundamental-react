@@ -15,5 +15,5 @@ storiesOf('Components|FormInput', module)
     ))
     .add('custom styles', () => (
         <FormInput
-            customStyles={require('../../../.storybook/customStylesTest.css')} />
+            customStyles={require('../../utils/WithStyles/customStylesTest.css')} />
     ));

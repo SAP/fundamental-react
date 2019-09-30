@@ -112,7 +112,7 @@ storiesOf('Components|TreeView', module)
         </TreeView>
     ))
     .add('custom styles', () => (
-        <TreeView customStyles={require('../../../.storybook/customStylesTest.css')}>
+        <TreeView customStyles={require('../../utils/WithStyles/customStylesTest.css')}>
             <TreeView.Tree>
                 <TreeView.Item>
                     <TreeView.Row>

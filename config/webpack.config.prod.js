@@ -205,7 +205,6 @@ module.exports = {
                     {
                         test: /\.(js|mjs|jsx|ts|tsx)$/,
                         include: paths.appSrc,
-                        exclude: /src\/(\w+\.?)\/__stories__\/(\w+\.?).stories.js/,
 
                         loader: require.resolve('babel-loader'),
                         options: {
@@ -232,7 +231,7 @@ module.exports = {
                     },
                     {
                         test: /\.(js|mjs)$/,
-                        exclude: [/@babel(?:\/|\\{1,2})runtime/, /src\/(\w+\.?)\/__stories__\/(\w+\.?).stories.js/],
+                        exclude: /@babel(?:\/|\\{1,2})runtime/,
                         loader: require.resolve('babel-loader'),
                         options: {
                             babelrc: false,
@@ -252,6 +251,7 @@ module.exports = {
                     },
                     {
                         test: cssRegex,
+                        exclude: /src\/utils\/withStyles\/customStylesTest.css/,
                         loader: getStyleLoaders({
                             importLoaders: 1,
                             sourceMap: shouldUseSourceMap

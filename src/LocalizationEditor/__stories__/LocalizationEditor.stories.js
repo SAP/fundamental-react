@@ -59,7 +59,7 @@ storiesOf('Components|LocalizationEditor', module)
                 language: 'EN*',
                 placeholder: 'Enter Label'
             }}
-            customStyles={require('../../../.storybook/customStylesTest.css')}
+            customStyles={require('../../utils/WithStyles/customStylesTest.css')}
             menu={[
                 {
                     language: 'ES',

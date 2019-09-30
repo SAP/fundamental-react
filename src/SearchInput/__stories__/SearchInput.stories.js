@@ -32,7 +32,7 @@ storiesOf('Components|SearchInput', module)
     ))
     .add('custom styles', () => (
         <SearchInput
-            customStyles={require('../../../.storybook/customStylesTest.css')}
+            customStyles={require('../../utils/WithStyles/customStylesTest.css')}
             placeholder='Enter a fruit'
             searchList={searchData} />
     ));

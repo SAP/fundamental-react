@@ -14,5 +14,5 @@ storiesOf('Components|Time', module)
         <Time disableStyles />
     ))
     .add('custom styles', () => (
-        <Time customStyles={require('../../../.storybook/customStylesTest.css')} />
+        <Time customStyles={require('../../utils/WithStyles/customStylesTest.css')} />
     ));

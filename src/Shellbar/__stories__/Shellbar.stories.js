@@ -35,7 +35,7 @@ storiesOf('Components|Shellbar', module)
     ))
     .add('custom styles', () => (
         <Shellbar
-            customStyles={require('../../../.storybook/customStylesTest.css')}
+            customStyles={require('../../utils/WithStyles/customStylesTest.css')}
             logo={<img alt='SAP' src='//unpkg.com/fundamental-styles/dist/images/sap-logo.png' />}
             productTitle='Corporate Portal'
             profile={profile}

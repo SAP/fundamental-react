@@ -37,5 +37,5 @@ storiesOf('Components|Button', module)
         </React.Fragment>
     ))
     .add('dynamic requires', () => (
-        <Button customStyles={require('../../../.storybook/customStylesTest.css')}>Test with custom css</Button>
+        <Button customStyles={require('../../utils/WithStyles/customStylesTest.css')}>Test with custom css</Button>
     ));

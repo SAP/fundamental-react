@@ -39,7 +39,7 @@ storiesOf('Components|Menu', module)
     ))
     .add('custom styles', () => (
         <Menu
-            customStyles={require('../../../.storybook/customStylesTest.css')}>
+            customStyles={require('../../utils/WithStyles/customStylesTest.css')}>
             <Menu.List>
                 <Menu.Item url='#'>
                 Option 1

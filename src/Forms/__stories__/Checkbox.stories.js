@@ -17,5 +17,5 @@ storiesOf('Components|Checkbox', module)
         <Checkbox disableStyles />
     ))
     .add('custom styles', () => (
-        <Checkbox customStyles={require('../../../.storybook/customStylesTest.css')} />
+        <Checkbox customStyles={require('../../utils/WithStyles/customStylesTest.css')} />
     ));
