@@ -199,4 +199,4 @@ TimePicker.propDescriptions = {
     value: 'Initial time value for the input.'
 };
 
-export default withStyles(TimePicker);
+export default withStyles(TimePicker, { cssFile: 'input-group' });

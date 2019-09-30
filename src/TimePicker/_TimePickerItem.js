@@ -1,11 +1,8 @@
-import 'fundamental-styles/dist/input-group.css'; //remove when rebuilt with inputgroup
 import Button from '../Button/Button';
 import FormInput from '../Forms/FormInput';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 
-
-//TO DO
 const INVALID = 'is-invalid';
 const VALID = 'fd-input-group__input';
 
