@@ -13,7 +13,7 @@ describe('<withStyles', () => {
     });
 
     test('should retain wrapped component\'s display name', () => {
-        expect(wrapper.name()).toBe('ForwardRef(TestComponent)');
+        expect(wrapper.name()).toBe('TestComponent');
     });
 
     test('should forward wrapped component\'s props', () => {
