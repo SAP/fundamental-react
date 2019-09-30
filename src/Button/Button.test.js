@@ -78,5 +78,6 @@ describe('<Button />', () => {
         }
         mount(<Test />);
         expect(ref.current.tagName).toEqual('BUTTON');
+        expect(ref.current.className).toEqual('fd-button');
     });
 });

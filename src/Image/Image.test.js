@@ -51,5 +51,6 @@ describe('<Image />', () => {
         }
         mount(<Test />);
         expect(ref.current.tagName).toEqual('SPAN');
+        expect(ref.current.className).toEqual('fd-image--m');
     });
 });

@@ -186,5 +186,6 @@ describe('<FormFieldset />', () => {
         }
         mount(<Test />);
         expect(ref.current.tagName).toEqual('FIELDSET');
+        expect(ref.current.className).toEqual('fd-fieldset');
     });
 });

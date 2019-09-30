@@ -84,6 +84,7 @@ describe('<Tabs />', () => {
             }
             mount(<Test />);
             expect(ref.current.tagName).toEqual('LI');
+            expect(ref.current.className).toEqual('fd-tabs__item');
         });
     });
 });

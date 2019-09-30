@@ -251,5 +251,6 @@ describe('<Menu />', () => {
         }
         mount(<Test />);
         expect(ref.current.tagName).toEqual('NAV');
+        expect(ref.current.className).toEqual('fd-menu');
     });
 });

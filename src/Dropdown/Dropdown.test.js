@@ -137,5 +137,6 @@ describe('<Dropdown />', () => {
         }
         mount(<Test />);
         expect(ref.current.tagName).toEqual('DIV');
+        expect(ref.current.className).toEqual('fd-dropdown');
     });
 });

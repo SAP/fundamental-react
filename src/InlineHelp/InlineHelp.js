@@ -20,11 +20,10 @@ const InlineHelp = React.forwardRef(({ text, placement, className, contentClassN
     );
 
     return (
-        <span className={inlineHelpClasses}>
+        <span className={inlineHelpClasses} ref={ref}>
             <span
                 {...props}
-                className={inlineHelpContentClasses}
-                ref={ref}>
+                className={inlineHelpContentClasses}>
                 {text}
             </span>
         </span>

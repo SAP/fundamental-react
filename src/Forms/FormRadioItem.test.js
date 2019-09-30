@@ -107,5 +107,6 @@ describe('<FormRadioItem />', () => {
         }
         mount(<Test />);
         expect(ref.current.tagName).toEqual('INPUT');
+        expect(ref.current.className).toEqual('fd-radio');
     });
 });

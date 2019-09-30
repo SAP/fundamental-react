@@ -48,5 +48,6 @@ describe('<Link />', () => {
         }
         mount(<Test />);
         expect(ref.current.tagName).toEqual('A');
+        expect(ref.current.className).toEqual('fd-link');
     });
 });

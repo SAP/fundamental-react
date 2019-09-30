@@ -39,5 +39,6 @@ describe('<FormSelect />', () => {
         }
         mount(<Test />);
         expect(ref.current.tagName).toEqual('SELECT');
+        expect(ref.current.className).toEqual('fd-form-select');
     });
 });

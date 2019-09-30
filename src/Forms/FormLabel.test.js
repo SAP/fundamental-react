@@ -47,5 +47,6 @@ describe('<FormLabel />', () => {
         }
         mount(<Test />);
         expect(ref.current.tagName).toEqual('LABEL');
+        expect(ref.current.className).toEqual('fd-form-label');
     });
 });

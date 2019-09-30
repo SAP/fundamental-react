@@ -35,5 +35,6 @@ describe('<FormLegend />', () => {
         }
         mount(<Test />);
         expect(ref.current.tagName).toEqual('LEGEND');
+        expect(ref.current.className).toEqual('fd-fieldset__legend');
     });
 });

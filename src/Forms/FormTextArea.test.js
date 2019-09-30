@@ -37,5 +37,6 @@ describe('<FormTextArea />', () => {
         }
         mount(<Test />);
         expect(ref.current.tagName).toEqual('TEXTAREA');
+        expect(ref.current.className).toEqual('fd-textarea');
     });
 });

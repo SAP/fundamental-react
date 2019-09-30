@@ -67,5 +67,6 @@ describe('<Breadcrumb />', () => {
         }
         mount(<Test />);
         expect(ref.current.tagName).toEqual('UL');
+        expect(ref.current.className).toEqual('fd-breadcrumb');
     });
 });

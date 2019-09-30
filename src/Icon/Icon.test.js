@@ -56,5 +56,6 @@ describe('<Icon />', () => {
         }
         mount(<Test />);
         expect(ref.current.tagName).toEqual('SPAN');
+        expect(ref.current.className).toEqual('sap-icon--cart');
     });
 });

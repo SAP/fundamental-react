@@ -174,5 +174,6 @@ describe('<Table />', () => {
         }
         mount(<Test />);
         expect(ref.current.tagName).toEqual('TABLE');
+        expect(ref.current.className).toEqual('fd-table');
     });
 });
