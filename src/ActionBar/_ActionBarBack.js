@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import withStyles from '../utils/WithStyles/WithStyles';
 
-const ActionBarBack = ({ onClick, className, buttonProps, customStyles, disableStyles, ...props }) => {
+const ActionBarBack = React.forwardRef(({ onClick, className, buttonProps, customStyles, disableStyles, ...props }, ref) => {
     const actionBarBackClasses = classnames(
         'fd-action-bar__back',
         className
@@ -13,7 +13,8 @@ const ActionBarBack = ({ onClick, className, buttonProps, customStyles, disableS
     const disableCSS = disableStyles || customStyles ? true : false;
 
     return (
-        <div {...props} className={actionBarBackClasses}>
+        <div {...props} className={actionBarBackClasses}
+            ref={ref}>
             <Button
                 {...buttonProps}
                 compact
@@ -23,7 +24,7 @@ const ActionBarBack = ({ onClick, className, buttonProps, customStyles, disableS
                 option='light' />
         </div>
     );
-};
+});
 
 ActionBarBack.displayName = 'ActionBar.Back';
 

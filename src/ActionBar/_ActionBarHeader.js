@@ -3,7 +3,7 @@ import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-const ActionBarHeader = ({ className, description, descriptionProps, headingLevel, title, titleProps, ...props }) => {
+const ActionBarHeader = React.forwardRef(({ className, description, descriptionProps, headingLevel, title, titleProps, ...props }, ref) => {
     const actionBarHeaderClasses = classnames(
         'fd-action-bar__header',
         className
@@ -12,7 +12,8 @@ const ActionBarHeader = ({ className, description, descriptionProps, headingLeve
     const HeadingTag = `h${headingLevel}`;
 
     return (
-        <div {...props} className={actionBarHeaderClasses}>
+        <div {...props} className={actionBarHeaderClasses}
+            ref={ref}>
             <HeadingTag
                 {...titleProps}
                 className='fd-action-bar__title'>{title}</HeadingTag>
@@ -23,7 +24,7 @@ const ActionBarHeader = ({ className, description, descriptionProps, headingLeve
             }
         </div>
     );
-};
+});
 
 ActionBarHeader.displayName = 'ActionBar.Header';
 

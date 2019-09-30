@@ -19,5 +19,18 @@ describe('ActionBarBack', () => {
             element.find('button').getDOMNode().attributes['data-sample'].value
         ).toBe('Sample');
     });
+    test('forwards the ref', () => {
+        let ref;
+        class Test extends React.Component {
+            constructor(props) {
+                super(props);
+                ref = React.createRef();
+            }
+            render = () => <ActionBar.Back ref={ref} />;
+        }
+        mount(<Test />);
+
+        expect(ref.current.tagName).toEqual('DIV');
+    });
 });
 
