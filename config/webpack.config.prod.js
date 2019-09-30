@@ -205,6 +205,7 @@ module.exports = {
                     {
                         test: /\.(js|mjs|jsx|ts|tsx)$/,
                         include: paths.appSrc,
+                        exclude: /src\/(\w+\.?)\/__stories__\/(\w+\.?).stories.js/,
 
                         loader: require.resolve('babel-loader'),
                         options: {
@@ -231,7 +232,7 @@ module.exports = {
                     },
                     {
                         test: /\.(js|mjs)$/,
-                        exclude: /@babel(?:\/|\\{1,2})runtime/,
+                        exclude: [/@babel(?:\/|\\{1,2})runtime/, /src\/(\w+\.?)\/__stories__\/(\w+\.?).stories.js/],
                         loader: require.resolve('babel-loader'),
                         options: {
                             babelrc: false,
