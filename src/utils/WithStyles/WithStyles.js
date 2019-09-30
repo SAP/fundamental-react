@@ -62,7 +62,7 @@ export default function withStyles(WrappedComponent, defaults) {
         return <WithStyles {...props} forwardedRef={ref} />;
     }
 
-    forwardRef.displayName = componentName;
+    forwardRef.displayName = WithStyles.displayName;
 
     //HOCs do not pass wrapped components the static methods from the original component
     return hoistNonReactStatic(React.forwardRef(forwardRef), WrappedComponent);
