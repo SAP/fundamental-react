@@ -20,7 +20,7 @@ const Checkbox = React.forwardRef(({ checked, className, customStyles, defaultCh
     const inputEl = useRef();
 
     useEffect(() => {
-        return inputEl && (inputEl.current.indeterminate = indeterminate);
+        inputEl && (inputEl.current.indeterminate = indeterminate);
     });
 
     const classes = classnames(

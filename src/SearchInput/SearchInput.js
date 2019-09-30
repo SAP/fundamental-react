@@ -177,6 +177,7 @@ class SearchInput extends Component {
                             {!noSearchBtn && (
                                 <span className='fd-input-group__addon fd-input-group__addon--button'>
                                     <Button {...searchBtnProps}
+                                        className='fd-input-group__button'
                                         compact={compact}
                                         disableStyles={disableCSS}
                                         glyph='search'

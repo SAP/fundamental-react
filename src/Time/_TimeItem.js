@@ -200,7 +200,7 @@ class TimeItem extends Component {
 
     render() {
         const { style, arialabel } = this.state;
-        const { type, placeholder, disabled, spinners, upButtonProps, downButtonProps, inputProps } = this.props;
+        const { type, placeholder, disableStyles, disabled, spinners, upButtonProps, downButtonProps, inputProps } = this.props;
         return (
             <div className='fd-time__item'>
                 {spinners ? (
@@ -208,6 +208,7 @@ class TimeItem extends Component {
                         <Button
                             {...upButtonProps}
                             aria-label={arialabel.buttonUp}
+                            disableStyles={disableStyles}
                             disabled={disabled}
                             glyph='navigation-up-arrow'
                             onClick={this._onUp}
@@ -220,6 +221,7 @@ class TimeItem extends Component {
                     {...inputProps}
                     aria-label={type}
                     className={style}
+                    disableStyles={disableStyles}
                     maxLength='2'
                     name={this.props.name}
                     onChange={this.onChange}
@@ -231,6 +233,7 @@ class TimeItem extends Component {
                         <Button
                             {...downButtonProps}
                             aria-label={arialabel.buttonDown}
+                            disableStyles={disableStyles}
                             disabled={disabled}
                             glyph='navigation-down-arrow'
                             onClick={this._onDown}
@@ -250,6 +253,7 @@ TimeItem.propTypes = {
     localizedText: PropTypes.object.isRequired,
     arialabel: PropTypes.string,
     disabled: PropTypes.bool,
+    disableStyles: PropTypes.bool,
     downButtonProps: PropTypes.object,
     format12Hours: PropTypes.bool,
     inputProps: PropTypes.object,

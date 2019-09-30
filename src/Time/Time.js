@@ -92,6 +92,8 @@ class Time extends Component {
         } else {
             max = 24;
         }
+        const disableCSS = disableStyles || customStyles ? true : false;
+
         return (
             <div
                 {...props}
@@ -101,6 +103,7 @@ class Time extends Component {
                 {showHour ? (
                     <TimeItem
                         defaultValue={1}
+                        disableStyles={disableCSS}
                         disabled={disabled}
                         downButtonProps={hoursDownButtonProps}
                         format12Hours={format12Hours}
@@ -122,6 +125,7 @@ class Time extends Component {
                 {showMinute ? (
                     <TimeItem
                         defaultValue={1}
+                        disableStyles={disableCSS}
                         disabled={disabled}
                         downButtonProps={minutesDownButtonProps}
                         format12Hours={format12Hours}
@@ -143,6 +147,7 @@ class Time extends Component {
                 {showSecond ? (
                     <TimeItem
                         defaultValue={1}
+                        disableStyles={disableCSS}
                         disabled={disabled}
                         downButtonProps={secondsDownButtonProps}
                         format12Hours={format12Hours}
@@ -163,6 +168,7 @@ class Time extends Component {
                 {/* Meridiem */}
                 {format12Hours ? (
                     <TimeItem
+                        disableStyles={disableCSS}
                         disabled={disabled}
                         downButtonProps={meridiemDownButtonProps}
                         inputProps={meridiemInputProps}

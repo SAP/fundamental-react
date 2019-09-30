@@ -23,26 +23,26 @@ storiesOf('Components|FormRadioGroup', module)
     ))
     .add('disable styles', () => (
         <FormRadioGroup disableStyles>
-            <FormRadioItem>
+            <FormRadioItem disableStyles>
             Option 1
             </FormRadioItem>
-            <FormRadioItem>
+            <FormRadioItem disableStyles>
             Option 2
             </FormRadioItem>
-            <FormRadioItem>
+            <FormRadioItem disableStyles>
              Option 3
             </FormRadioItem>
         </FormRadioGroup>
     ))
     .add('custom styles', () => (
         <FormRadioGroup customStyles={require('../../utils/WithStyles/customStylesTest.css')}>
-            <FormRadioItem>
+            <FormRadioItem disableStyles>
             Option 1
             </FormRadioItem>
-            <FormRadioItem>
+            <FormRadioItem disableStyles>
             Option 2
             </FormRadioItem>
-            <FormRadioItem>
+            <FormRadioItem disableStyles>
              Option 3
             </FormRadioItem>
         </FormRadioGroup>

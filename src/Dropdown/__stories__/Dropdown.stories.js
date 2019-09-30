@@ -42,7 +42,8 @@ storiesOf('Components|Dropdown', module)
                         </Menu.List>
                     </Menu>
                 }
-                control={<Button className='fd-dropdown__control'>Select</Button>}
+                control={<Button className='fd-dropdown__control' disableStyles>Select</Button>}
+                disableStyles
                 id='jhqD0555'
                 noArrow />
         </Dropdown>
@@ -61,7 +62,8 @@ storiesOf('Components|Dropdown', module)
                         </Menu.List>
                     </Menu>
                 }
-                control={<Button className='fd-dropdown__control'>Select</Button>}
+                control={<Button className='fd-dropdown__control' disableStyles>Select</Button>}
+                disableStyles
                 id='jhqD0555'
                 noArrow />
         </Dropdown>

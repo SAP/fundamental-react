@@ -10,13 +10,21 @@ storiesOf('Components|Tile', module)
     .add('Default', () => (
         <React.Fragment>
             <Tile>
+                <Tile.Media>
+                    <div>Tile Media here</div>
+                </Tile.Media>
                 <Tile.Content title='Tile Title'>
                     <p>Tile Description</p>
                 </Tile.Content>
+                <Tile.Actions>
+                    <div>Tile Actions here</div>
+                </Tile.Actions>
             </Tile>
-            <Tile>
-                <Tile.Content productTile title='Tile Title'>
-                    <p>Tile Description</p>
+            <Tile
+                backgroundImage='https://placeimg.com/1600/400/nature'
+                productTile>
+                <Tile.Content title='Product Tile Title'>
+                    <p>Product Tile Description</p>
                 </Tile.Content>
             </Tile>
         </React.Fragment>
@@ -24,28 +32,58 @@ storiesOf('Components|Tile', module)
     .add('disable styles', () => (
         <React.Fragment>
             <Tile disableStyles>
+                <Tile.Media>
+                    <div>Tile Media here</div>
+                </Tile.Media>
                 <Tile.Content title='Tile Title'>
                     <p>Tile Description</p>
                 </Tile.Content>
+                <Tile.Actions>
+                    <div>Tile Actions here</div>
+                </Tile.Actions>
             </Tile>
-            <Tile disableStyles>
-                <Tile.Content productTile title='Tile Title'>
+            <Tile
+                backgroundImage='https://placeimg.com/1600/400/nature'
+                disableStyles
+                productTile>
+                <Tile.Media>
+                    <div>Tile Media here</div>
+                </Tile.Media>
+                <Tile.Content title='Tile Title'>
                     <p>Tile Description</p>
                 </Tile.Content>
+                <Tile.Actions>
+                    <div>Tile Actions here</div>
+                </Tile.Actions>
             </Tile>
         </React.Fragment>
     ))
     .add('custom styles', () => (
         <React.Fragment>
             <Tile customStyles={require('../../utils/WithStyles/customStylesTest.css')}>
+                <Tile.Media>
+                    <div>Tile Media here</div>
+                </Tile.Media>
                 <Tile.Content title='Tile Title'>
                     <p>Tile Description</p>
                 </Tile.Content>
+                <Tile.Actions>
+                    <div>Tile Actions here</div>
+                </Tile.Actions>
             </Tile>
-            <Tile customStyles={require('../../utils/WithStyles/customStylesTest.css')}>
-                <Tile.Content productTile title='Tile Title'>
+            <Tile
+                backgroundImage='https://placeimg.com/1600/400/nature'
+                customStyles={require('../../utils/WithStyles/customStylesTest.css')}
+                productTile>
+                <Tile.Media>
+                    <div>Tile Media here</div>
+                </Tile.Media>
+                <Tile.Content title='Tile Title'>
                     <p>Tile Description</p>
                 </Tile.Content>
+                <Tile.Actions>
+                    <div>Tile Actions here</div>
+                </Tile.Actions>
             </Tile>
         </React.Fragment>
     ));

@@ -8,13 +8,13 @@ import {
 storiesOf('Components|Icon', module)
     .addDecorator(withKnobs)
     .add('Default', () => (
-        <Icon className='sap-icon--cart' />
+        <Icon glyph='cart' />
     ))
     .add('disable styles', () => (
-        <Icon className='sap-icon--cart' disableStyles />
+        <Icon disableStyles glyph='cart' />
     ))
     .add('custom styles', () => (
         <Icon
-            className='sap-icon--cart'
-            customStyles={require('../../utils/WithStyles/customStylesTest.css')} />
+            customStyles={require('../../utils/WithStyles/customStylesTest.css')}
+            glyph='cart' />
     ));

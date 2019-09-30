@@ -212,12 +212,13 @@ class TimePickerItem extends Component {
         this.setState({ style: VALID });
     };
     render() {
-        const { disabled, inputProps, buttonProps, onClick } = this.props;
+        const { disableStyles, disabled, inputProps, buttonProps, onClick } = this.props;
         return (
             <div className='fd-input-group' onClick={onClick}>
                 <FormInput
                     {...inputProps}
                     className={this.state.style}
+                    disableStyles={disableStyles}
                     id={this.state.inputId}
                     onBlur={this.onBlur}
                     onChange={this.onChange}
@@ -233,6 +234,7 @@ class TimePickerItem extends Component {
                         aria-haspopup='true'
                         className='fd-input-group__button'
                         compact
+                        disableStyles={disableStyles}
                         disabled={disabled}
                         glyph='fob-watch'
                         id={this.state.buttonID}
@@ -250,6 +252,7 @@ TimePickerItem.propTypes = {
     buttonID: PropTypes.string,
     buttonProps: PropTypes.object,
     disabled: PropTypes.bool,
+    disableStyles: PropTypes.bool,
     format12Hours: PropTypes.bool,
     id: PropTypes.string,
     inputId: PropTypes.string,

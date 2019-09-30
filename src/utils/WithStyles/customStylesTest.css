@@ -11,6 +11,8 @@
 .fd-shellbar, .fd-side-nav,
 .fd-table, .fd-table__header, .fd-table__row, .fd-table__cell,
 .fd-tabs__item, .fd-table__link, .fd-textarea,
-.fd-tabs, .fd-tile, .fd-time, .fd-toggle, .fd-token, .fd-tree {
+.fd-tabs, .fd-tile, .fd-time, .fd-toggle, .fd-token, .fd-tree,
+.sap-icon--cart {
     background-color: hotpink;
+    color: purple;
 }

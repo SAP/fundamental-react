@@ -41,4 +41,4 @@ Menu.Group = MenuGroup;
 Menu.Item = MenuItem;
 Menu.List = MenuList;
 
-export default withStyles(Menu, { cssFile: 'table', fonts: true });
+export default withStyles(Menu, { cssFile: 'menu', fonts: true });

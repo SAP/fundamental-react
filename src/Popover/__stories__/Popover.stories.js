@@ -28,12 +28,18 @@ storiesOf('Components|Popover', module)
     .add('disable styles', () => (
         <Popover
             body={bodyContent}
-            control={<Button glyph='navigation-up-arrow' option='light' />}
+            control={<Button
+                disableStyles
+                glyph='navigation-up-arrow'
+                option='light' />}
             disableStyles />
     ))
     .add('custom styles', () => (
         <Popover
             body={bodyContent}
-            control={<Button glyph='navigation-up-arrow' option='light' />}
+            control={<Button
+                disableStyles
+                glyph='navigation-up-arrow'
+                option='light' />}
             customStyles={require('../../utils/WithStyles/customStylesTest.css')} />
     ));
