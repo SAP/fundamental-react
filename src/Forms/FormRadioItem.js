@@ -1,4 +1,3 @@
-import 'fundamental-styles/dist/radio.css';
 import FormItem from './FormItem';
 import FormLabel from './FormLabel';
 import PropTypes from 'prop-types';
