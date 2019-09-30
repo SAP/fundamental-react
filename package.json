@@ -19,7 +19,7 @@
     "build:index": "babel-node devtools/buildIndexFiles.js",
     "build:lint:fix": "npm run build:lint -- --fix",
     "build:lint": "eslint 'src/**' --ext .js,.jsx --env browser,node",
-    "build": "npm run build:index && rm -rf lib && NODE_ENV=production babel src --out-dir lib --ignore \"src/**/*.spec.js\",\"src/**/*.test.js\",\"src/**/*.Component.js\",\"src/_playground/*\"",
+    "build": "npm run build:index && rm -rf lib && NODE_ENV=production babel src --out-dir lib --ignore \"src/**/*.spec.js\",\"src/**/*.test.js\",\"src/**/*.Component.js\",\"src/_playground/*\", \"src/**/*.stories.js\"",
     "config:lint:fix": "npm run config:lint -- --fix",
     "config:lint": "eslint 'config/**' --ext .js,.jsx --env browser,node",
     "deploy": "gh-pages -d build",
