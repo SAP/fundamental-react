@@ -503,7 +503,7 @@ class Calendar extends Component {
                         key={copyDate}
                         onClick={!this.displayDisabled(day) ? () => this.dateClick(copyDate, enableRangeSelection) : null}
                         role='gridcell' >
-                        <span className='fd-calendar__text'>{dateFormatted}</span>
+                        <span className='fd-calendar__text'>{dateFormatted.toString()}</span>
                     </td >
                 );
 
