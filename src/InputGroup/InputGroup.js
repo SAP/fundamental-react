@@ -123,7 +123,7 @@ class InputGroup extends Component {
                             <Button
                                 {...numberUpButtonProps}
                                 aria-label={localizedText.up}
-                                className='fd-button--half'
+                                className='fd-button--half fd-input-group__button'
                                 compact={compact}
                                 disableStyles={disableCSS}
                                 glyph='slim-arrow-up'
@@ -132,7 +132,7 @@ class InputGroup extends Component {
                             <Button
                                 {...numberDownButtonProps}
                                 aria-label={localizedText.down}
-                                className='fd-button--half'
+                                className='fd-button--half fd-input-group__button'
                                 compact={compact}
                                 disableStyles={disableCSS}
                                 glyph='slim-arrow-down'

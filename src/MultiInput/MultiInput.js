@@ -157,6 +157,7 @@ class MultiInput extends Component {
                                     className='fd-input-group__addon fd-input-group__addon--button'>
                                     <Button
                                         {...buttonProps}
+                                        className='fd-input-group__button'
                                         compact={compact}
                                         disableStyles={disableCSS}
                                         glyph='navigation-down-arrow'

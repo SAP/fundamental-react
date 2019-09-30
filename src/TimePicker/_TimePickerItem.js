@@ -4,6 +4,8 @@ import FormInput from '../Forms/FormInput';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 
+
+//TO DO
 const INVALID = 'is-invalid';
 const VALID = 'fd-input-group__input';
 
@@ -223,12 +225,13 @@ class TimePickerItem extends Component {
                     placeholder={this.props.placeholder}
                     readOnly={disabled}
                     value={this.props.value} />
-                <span className='fd-input-group__addon fd-input-group__addon--button '>
+                <span className='fd-input-group__addon fd-input-group__addon--button'>
                     <Button
                         {...buttonProps}
                         aria-controls='rthHR811'
                         aria-expanded='false'
                         aria-haspopup='true'
+                        className='fd-input-group__button'
                         compact
                         disabled={disabled}
                         glyph='fob-watch'

@@ -334,6 +334,7 @@ class DatePicker extends Component {
                                 value={this.state.formattedDate} />
                             <span className='fd-input-group__addon fd-input-group__addon--after fd-input-group__addon--button'>
                                 <Button {...buttonProps}
+                                    className='fd-input-group__button'
                                     compact={compact}
                                     disableStyles={disableStyles || customStyles}
                                     glyph='calendar'
