@@ -49,7 +49,7 @@ storiesOf('Components|Dropdown', module)
     ))
     .add('custom styles', () => (
         <Dropdown
-            customStyles={require('../../utils/customStylesTest.css')}>
+            customStyles={require('../../utils/WithStyles/customStylesTest.css')}>
             <Popover
                 body={
                     <Menu>

@@ -15,7 +15,7 @@ storiesOf('Components|Link', module)
     ))
     .add('custom styles', () => (
         <Link
-            customStyles={require('../../utils/customStylesTest.css')}
+            customStyles={require('../../utils/WithStyles/customStylesTest.css')}
             href='#'>
             Default
         </Link>

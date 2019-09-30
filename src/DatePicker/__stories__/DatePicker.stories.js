@@ -16,5 +16,5 @@ storiesOf('Components|DatePicker', module)
     ))
     .add('custom styles', () => (
         <DatePicker
-            customStyles={require('../../utils/customStylesTest.css')} />
+            customStyles={require('../../utils/WithStyles/customStylesTest.css')} />
     ));

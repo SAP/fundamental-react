@@ -18,7 +18,7 @@ storiesOf('Components|Image', module)
     ))
     .add('custom styles', () => (
         <Image
-            customStyles={require('../../utils/customStylesTest.css')}
+            customStyles={require('../../utils/WithStyles/customStylesTest.css')}
             photo='https://content.fortune.com/wp-content/uploads/2019/07/hippocorn.jpg'
             size='l' />
     ));

@@ -15,7 +15,7 @@ storiesOf('Components|Token', module)
     ))
     .add('custom styles', () => (
         <Token
-            customStyles={require('../../utils/customStylesTest.css')}>
+            customStyles={require('../../utils/WithStyles/customStylesTest.css')}>
             Default
         </Token>
     ));

@@ -31,7 +31,7 @@ storiesOf('Components|ListGroup', module)
     ))
     .add('custom styles', () => (
         <ListGroup
-            customStyles={require('../../utils/customStylesTest.css')}>
+            customStyles={require('../../utils/WithStyles/customStylesTest.css')}>
             <ListGroup.Item>List item 1</ListGroup.Item>
             <ListGroup.Item>List item 2
                 <ListGroup.ItemActions>

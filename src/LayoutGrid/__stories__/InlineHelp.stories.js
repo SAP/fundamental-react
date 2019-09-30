@@ -23,7 +23,7 @@ storiesOf('Components|LayoutGrid', module)
     ))
     .add('custom styles', () => (
         <LayoutGrid
-            customStyles={require('../../utils/customStylesTest.css')}>
+            customStyles={require('../../utils/WithStyles/customStylesTest.css')}>
             <div>Default1</div>
             <div>Default2</div>
             <div>Default3</div>

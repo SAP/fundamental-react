@@ -35,5 +35,5 @@ storiesOf('Components|Popover', module)
         <Popover
             body={bodyContent}
             control={<Button glyph='navigation-up-arrow' option='light' />}
-            customStyles={require('../../utils/customStylesTest.css')} />
+            customStyles={require('../../utils/WithStyles/customStylesTest.css')} />
     ));

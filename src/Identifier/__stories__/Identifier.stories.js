@@ -17,6 +17,6 @@ storiesOf('Components|Identifier', module)
     .add('custom styles', () => (
         <Identifier
             className='sap-Identifier--cart'
-            customStyles={require('../../utils/customStylesTest.css')}
+            customStyles={require('../../utils/WithStyles/customStylesTest.css')}
             glyph='cart' size='m' />
     ));

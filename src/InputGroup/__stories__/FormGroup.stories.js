@@ -35,7 +35,7 @@ storiesOf('Components|FormGroup', module)
     ))
     .add('custom styles', () => (
         <FormGroup
-            customStyles={require('../../utils/customStylesTest.css')}>
+            customStyles={require('../../utils/WithStyles/customStylesTest.css')}>
             <FormLabel>Left Aligned Text Addon</FormLabel>
             <FormItem>
                 <InputGroup

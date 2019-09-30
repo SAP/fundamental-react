@@ -35,7 +35,7 @@ storiesOf('Components|FormRadioGroup', module)
         </FormRadioGroup>
     ))
     .add('custom styles', () => (
-        <FormRadioGroup customStyles={require('../../utils/customStylesTest.css')}>
+        <FormRadioGroup customStyles={require('../../utils/WithStyles/customStylesTest.css')}>
             <FormRadioItem>
             Option 1
             </FormRadioItem>

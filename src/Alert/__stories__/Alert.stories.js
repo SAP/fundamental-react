@@ -26,7 +26,7 @@ storiesOf('Components|Alert', module)
     ))
     .add('custom styles', () => (
         <Alert
-            customStyles={require('../../utils/customStylesTest.css')}
+            customStyles={require('../../utils/WithStyles/customStylesTest.css')}
             dismissible
             link='#'
             linkText='link'>

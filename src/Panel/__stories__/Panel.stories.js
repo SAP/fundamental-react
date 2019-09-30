@@ -15,7 +15,7 @@ storiesOf('Components|Panel', module)
     ))
     .add('custom styles', () => (
         <Panel
-            customStyles={require('../../utils/customStylesTest.css')}>
+            customStyles={require('../../utils/WithStyles/customStylesTest.css')}>
             Default
         </Panel>
     ));

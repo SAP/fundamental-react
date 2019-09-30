@@ -14,5 +14,5 @@ storiesOf('Components|Toggle', module)
         <Toggle disableStyles>Toggle</Toggle>
     ))
     .add('custom styles', () => (
-        <Toggle customStyles={require('../../utils/customStylesTest.css')}>Toggle</Toggle>
+        <Toggle customStyles={require('../../utils/WithStyles/customStylesTest.css')}>Toggle</Toggle>
     ));

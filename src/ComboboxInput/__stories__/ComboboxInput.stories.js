@@ -43,7 +43,7 @@ storiesOf('Components|ComboboxInput', module)
     ))
     .add('custom styles', () => (
         <ComboboxInput
-            customStyles={require('../../utils/customStylesTest.css')}
+            customStyles={require('../../utils/WithStyles/customStylesTest.css')}
             menu={
                 <Menu>
                     <Menu.List>

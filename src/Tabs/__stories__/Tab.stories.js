@@ -15,7 +15,7 @@ storiesOf('Components|Tab', module)
     ))
     .add('custom styles', () => (
         <Tab
-            customStyles={require('../../utils/customStylesTest.css')}>
+            customStyles={require('../../utils/WithStyles/customStylesTest.css')}>
             Default
         </Tab>
     ));

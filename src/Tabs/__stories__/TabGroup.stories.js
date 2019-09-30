@@ -43,7 +43,7 @@ storiesOf('Components|TabGroup', module)
         </TabGroup>
     ))
     .add('custom styles', () => (
-        <TabGroup customStyles={require('../../utils/customStylesTest.css')}>
+        <TabGroup customStyles={require('../../utils/WithStyles/customStylesTest.css')}>
             <Tab disableStyles title='Tab 1'>
                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
             </Tab>

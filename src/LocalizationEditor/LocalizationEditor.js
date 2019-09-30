@@ -23,18 +23,21 @@ const LocalizationEditor = React.forwardRef(({ control, menu, id, compact, texta
         inputClassName
     );
 
+    const disableCSS = disableStyles || customStyles ? true : false;
+
     return (
         <div {...props} className={localizationEditorClasses}
             ref={ref}>
             <FormLabel
                 {...control.labelProps}
+                disableStyles={disableCSS}
                 htmlFor={id}>
                 {control.label}
             </FormLabel>
             <Popover
                 {...popoverProps}
                 body={
-                    <Menu>
+                    <Menu disableStyles={disableCSS}>
                         <Menu.List {...listProps}>
                             {menu.map((item, index) => {
                                 let {
@@ -50,18 +53,23 @@ const LocalizationEditor = React.forwardRef(({ control, menu, id, compact, texta
                                         key={index}>
                                         <div className='fd-input-group fd-input-group--after'>
                                             {textarea ? (
-                                                <FormTextArea className={localizationInputClasses} {...inputProps} />
+                                                <FormTextArea
+                                                    {...inputProps}
+                                                    className={localizationInputClasses}
+                                                    disableStyles={disableCSS} />
                                             ) : (
                                                 <FormInput
                                                     {...inputProps}
                                                     className={localizationInputClasses}
                                                     compact={compact}
+                                                    disableStyles={disableCSS}
                                                     placeholder={placeholder} />
                                             )}
                                             <span
                                                 className='fd-input-group__addon fd-input-group__addon--button'>
                                                 <Button
                                                     compact={compact}
+                                                    disableStyles={disableCSS}
                                                     option='light'>
                                                     {language}
                                                 </Button>
@@ -80,12 +88,14 @@ const LocalizationEditor = React.forwardRef(({ control, menu, id, compact, texta
                             <FormTextArea
                                 {...control.inputProps}
                                 className={localizationInputClasses}
-                                compact={compact} />
+                                compact={compact}
+                                disableStyles={disableCSS} />
                         ) : (
                             <FormInput
                                 {...control.inputProps}
                                 className={localizationInputClasses}
                                 compact={compact}
+                                disableStyles={disableCSS}
                                 placeholder={control.placeholder} />
                         )}
                         <span
@@ -93,12 +103,14 @@ const LocalizationEditor = React.forwardRef(({ control, menu, id, compact, texta
                             <Button
                                 {...control.buttonProps}
                                 compact={compact}
+                                disableStyles={disableCSS}
                                 option='light'>
                                 {control.language}
                             </Button>
                         </span>
                     </div>
                 }
+                disableStyles={disableCSS}
                 id={id}
                 noArrow />
         </div>

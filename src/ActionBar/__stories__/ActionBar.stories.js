@@ -29,7 +29,7 @@ storiesOf('Components|ActionBar', module)
         </ActionBar>
     ))
     .add('custom styles', () => (
-        <ActionBar customStyles={require('../../utils/customStylesTest.css')}>
+        <ActionBar customStyles={require('../../utils/WithStyles/customStylesTest.css')}>
             <ActionBar.Back disableStyles />
             <ActionBar.Header description={'Action Bar Description'} title={'Page Title'} />
             <ActionBar.Actions>

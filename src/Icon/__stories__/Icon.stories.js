@@ -16,5 +16,5 @@ storiesOf('Components|Icon', module)
     .add('custom styles', () => (
         <Icon
             className='sap-icon--cart'
-            customStyles={require('../../utils/customStylesTest.css')} />
+            customStyles={require('../../utils/WithStyles/customStylesTest.css')} />
     ));

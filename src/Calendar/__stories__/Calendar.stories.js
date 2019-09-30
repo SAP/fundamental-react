@@ -15,5 +15,5 @@ storiesOf('Components|Calendar', module)
     ))
     .add('custom styles', () => (
         <Calendar
-            customStyles={require('../../utils/customStylesTest.css')} />
+            customStyles={require('../../utils/WithStyles/customStylesTest.css')} />
     ));

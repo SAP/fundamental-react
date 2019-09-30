@@ -15,7 +15,7 @@ storiesOf('Components|Counter', module)
     ))
     .add('custom styles', () => (
         <Counter
-            customStyles={require('../../utils/customStylesTest.css')}>
+            customStyles={require('../../utils/WithStyles/customStylesTest.css')}>
             5
         </Counter>
     ));

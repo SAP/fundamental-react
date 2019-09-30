@@ -37,12 +37,12 @@ storiesOf('Components|Tile', module)
     ))
     .add('custom styles', () => (
         <React.Fragment>
-            <Tile customStyles={require('../../utils/customStylesTest.css')}>
+            <Tile customStyles={require('../../utils/WithStyles/customStylesTest.css')}>
                 <Tile.Content title='Tile Title'>
                     <p>Tile Description</p>
                 </Tile.Content>
             </Tile>
-            <Tile customStyles={require('../../utils/customStylesTest.css')}>
+            <Tile customStyles={require('../../utils/WithStyles/customStylesTest.css')}>
                 <Tile.Content productTile title='Tile Title'>
                     <p>Tile Description</p>
                 </Tile.Content>
