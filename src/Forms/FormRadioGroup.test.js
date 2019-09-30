@@ -59,7 +59,7 @@ describe('<FormRadioGroup />', () => {
             return mount(<FormRadioGroup {...props}>
                 <FormRadioItem>Option 1</FormRadioItem>
                 <FormRadioItem>Option 2</FormRadioItem>
-            </FormRadioGroup>).children().children();
+            </FormRadioGroup>);
         };
 
         test('should add disabled attribute to all children when disabled is passed', () => {
@@ -67,9 +67,10 @@ describe('<FormRadioGroup />', () => {
                 disabled: true
             });
 
-            let attributes = element.find('FormRadioItem').map(item => item.props().disabled);
+            const radioItems = element.find('input.fd-radio');
 
-            expect(attributes).toEqual([true, true, true, true]);
+            expect(radioItems.at(0).props().disabled).toBeTruthy();
+            expect(radioItems.at(1).props().disabled).toBeTruthy();
         });
 
         test('should add inline class to all children when inline is passed', () => {
@@ -77,9 +78,10 @@ describe('<FormRadioGroup />', () => {
                 inline: true
             });
 
-            let attributes = element.find('FormRadioItem').map(item => item.props().inline);
+            const radioItems = element.find('.fd-form-item');
 
-            expect(attributes).toEqual([true, true, true, true]);
+            expect(radioItems.at(0).hasClass('fd-form-item--inline')).toBeTruthy();
+            expect(radioItems.at(1).hasClass('fd-form-item--inline')).toBeTruthy();
         });
 
         test('should trigger onChange from FormRadioGroup when FormRadioItem is clicked', () => {
