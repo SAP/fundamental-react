@@ -180,6 +180,7 @@ module.exports = {
             { parser: { requireEnsure: false } },
             {
                 test: /\.(js|mjs|jsx)$/,
+                exclude: /\.stories.js$/,
                 enforce: 'pre',
                 use: [
                     {
@@ -204,6 +205,7 @@ module.exports = {
                     },
                     {
                         test: /\.(js|mjs|jsx|ts|tsx)$/,
+                        exclude: /\.stories.js$/,
                         include: paths.appSrc,
 
                         loader: require.resolve('babel-loader'),
@@ -231,7 +233,7 @@ module.exports = {
                     },
                     {
                         test: /\.(js|mjs)$/,
-                        exclude: /@babel(?:\/|\\{1,2})runtime/,
+                        exclude: [/@babel(?:\/|\\{1,2})runtime/, /\.stories.js$/],
                         loader: require.resolve('babel-loader'),
                         options: {
                             babelrc: false,
@@ -251,7 +253,6 @@ module.exports = {
                     },
                     {
                         test: cssRegex,
-                        exclude: /src\/utils\/withStyles\/customStylesTest.css/,
                         loader: getStyleLoaders({
                             importLoaders: 1,
                             sourceMap: shouldUseSourceMap
@@ -281,7 +282,7 @@ module.exports = {
         ]
     },
     plugins: [
-    // Generates an `index.html` file with the <script> injected.
+        // Generates an `index.html` file with the <script> injected.
         new HtmlWebpackPlugin({
             inject: true,
             template: paths.appHtml,
