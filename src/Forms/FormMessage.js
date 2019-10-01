@@ -32,4 +32,6 @@ FormMessage.propTypes = {
     type: PropTypes.oneOf(FORM_MESSAGE_TYPES)
 };
 
+export { FormMessage as __FormMessage };
+
 export default withStyles(FormMessage, { cssFile: 'form-message', fonts: true, icons: true });

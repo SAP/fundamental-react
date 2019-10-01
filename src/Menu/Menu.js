@@ -41,4 +41,6 @@ Menu.Group = MenuGroup;
 Menu.Item = MenuItem;
 Menu.List = MenuList;
 
+export { Menu as __Menu };
+
 export default withStyles(Menu, { cssFile: 'menu', fonts: true });

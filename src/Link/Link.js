@@ -30,5 +30,6 @@ Link.propTypes = {
     disableStyles: PropTypes.bool
 };
 
+export { Link as __Link };
 
 export default withStyles(Link, { cssFile: 'link', fonts: true });

@@ -190,4 +190,6 @@ Pagination.propDescriptions = {
     totalText: 'Localized text to display next to the total number of items.  Used with `displayTotal`.'
 };
 
+export { Pagination as __Pagination };
+
 export default withStyles(Pagination, { cssFile: 'pagination', fonts: true, icons: true });

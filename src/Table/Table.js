@@ -106,4 +106,6 @@ Table.propDescriptions = {
     tableRowClassName: 'Additional classes to be added to the `<tr>` elements.'
 };
 
+export { Table as __Table };
+
 export default withStyles(Table, { cssFile: 'table', fonts: true });

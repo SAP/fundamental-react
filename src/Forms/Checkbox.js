@@ -91,4 +91,6 @@ Checkbox.propDescriptions = {
     value: 'Sets the `value` for the checkbox input.'
 };
 
+export { Checkbox as __Checkbox };
+
 export default withStyles(Checkbox, { cssFile: 'checkbox' });

@@ -47,4 +47,6 @@ Counter.propDescriptions = {
     notification: 'Set to **true** to enable counter with notification.'
 };
 
+export { Counter as __Counter };
+
 export default withStyles(Counter, { cssFile: 'counter', fonts: true });

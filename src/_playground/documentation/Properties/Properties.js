@@ -11,7 +11,7 @@ const Properties = ({ sourceModulePath }) => {
 
     const sourceModule = getSourceModule(sourceModulePath);
 
-    const componentNames = Object.keys(sourceModule).sort();
+    const componentNames = Object.keys(sourceModule).filter(comp => comp.match(/^\_\_/)).sort();
 
     return (
         <React.Fragment>
@@ -19,15 +19,15 @@ const Properties = ({ sourceModulePath }) => {
             {componentNames.map((name, index) => {
                 const component = sourceModule[name];
                 const subcomponentNames = Object.keys(component)
-                    .sort()
-                    .filter(subName => component[subName] && component[subName].displayName);
+                    .filter(subName => component[subName] && component[subName].displayName)
+                    .sort();
                 return (
                     <React.Fragment key={index}>
                         <PropertyTable
                             defaultProps={component.defaultProps}
                             propDescriptions={component.propDescriptions}
                             propTypes={component.propTypes}
-                            title={name} />
+                            title={component.displayName} />
                         {subcomponentNames.map((subName, subIndex) => {
                             const subcomponent = component[subName];
                             return (
@@ -36,7 +36,7 @@ const Properties = ({ sourceModulePath }) => {
                                     key={subIndex}
                                     propDescriptions={subcomponent.propDescriptions}
                                     propTypes={subcomponent.propTypes}
-                                    title={`${name}.${subName}`} />
+                                    title={subcomponent.displayName} />
                             );
                         })}
                     </React.Fragment>

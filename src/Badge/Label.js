@@ -26,4 +26,6 @@ Label.propTypes = {
     type: PropTypes.oneOf(LABEL_TYPES)
 };
 
+export { Label as __Label };
+
 export default withStyles(Label, { cssFile: 'label', font: true });

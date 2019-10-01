@@ -34,4 +34,6 @@ Status.propTypes = {
     type: PropTypes.oneOf(STATUS_TYPES)
 };
 
+export { Status as __Status };
+
 export default withStyles(Status, { cssFile: 'status-label', font: true, icons: true });

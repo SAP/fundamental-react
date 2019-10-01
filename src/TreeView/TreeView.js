@@ -176,4 +176,6 @@ TreeView.Head = TreeHead;
 TreeView.Item = TreeItem;
 TreeView.Row = TreeRow;
 
+export { TreeView as __TreeView };
+
 export default withStyles(TreeView, { cssFiles: 'tree', fonts: true, icons: true });

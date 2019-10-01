@@ -26,4 +26,6 @@ FormSet.propTypes = {
     disableStyles: PropTypes.bool
 };
 
+export { FormSet as __FormSet };
+
 export default withStyles(FormSet, { cssFile: 'form-group' });

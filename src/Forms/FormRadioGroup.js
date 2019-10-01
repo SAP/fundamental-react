@@ -49,4 +49,6 @@ FormRadioGroup.propDescriptions = {
     inline: 'Set to **true** to display radio buttons in a row.'
 };
 
+export { FormRadioGroup as __FormRadioGroup };
+
 export default withStyles(FormRadioGroup);

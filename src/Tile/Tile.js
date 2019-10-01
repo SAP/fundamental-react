@@ -71,4 +71,6 @@ Tile.Actions = TileActions;
 Tile.Content = TileContent;
 Tile.Media = TileMedia;
 
+export { Tile as __Tile };
+
 export default withStyles(Tile, { cssFile: ['tile', 'product-tile'], fonts: true });

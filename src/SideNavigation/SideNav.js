@@ -77,4 +77,6 @@ SideNav.displayName = 'SideNav';
 SideNav.List = SideNavList;
 SideNav.ListItem = SideNavListItem;
 
+export { SideNav as __SideNav };
+
 export default withStyles(SideNav, { cssFile: 'side-nav', fonts: true, icons: true });

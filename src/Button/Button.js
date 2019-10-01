@@ -64,4 +64,6 @@ Button.propDescriptions = {
     typeAttr: 'Value for the `type` attribute on the `<button>` element.'
 };
 
+export { Button as __Button };
+
 export default withStyles(Button, { cssFile: 'button', font: true, icons: true });

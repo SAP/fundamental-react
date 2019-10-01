@@ -163,4 +163,6 @@ Modal.propDescriptions = {
     show: 'Set to **true** to make the dialog visible.'
 };
 
+export { Modal as __Modal };
+
 export default withStyles(Modal, { cssFile: ['modal', 'overlay'], fonts: true });

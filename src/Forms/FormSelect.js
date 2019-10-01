@@ -30,4 +30,6 @@ FormSelect.propTypes = {
     disableStyles: PropTypes.bool
 };
 
+export { FormSelect as __FormSelect };
+
 export default withStyles(FormSelect, { cssFile: 'form-select', fonts: true });

@@ -30,5 +30,7 @@ Token.propTypes = {
     disableStyles: PropTypes.bool
 };
 
+export { Token as __Token };
+
 export default withStyles(Token, { cssFile: 'token', fonts: true, icons: true });
 

@@ -51,4 +51,6 @@ InlineHelp.propDescriptions = {
     text: 'Localized text to display in the inline help pop-up.'
 };
 
+export { InlineHelp as __InlineHelp };
+
 export default withStyles(InlineHelp, { cssFile: 'inline-help', fonts: true, icons: true });

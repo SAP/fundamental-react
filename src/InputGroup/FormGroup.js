@@ -15,4 +15,6 @@ FormGroup.propTypes = {
     disableStyles: PropTypes.bool
 };
 
+export { FormGroup as __FormGroup };
+
 export default withStyles(FormGroup, { cssFile: 'form-group' });

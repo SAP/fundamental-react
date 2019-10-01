@@ -82,4 +82,6 @@ Toggle.propDescriptions = {
     checked: 'Set to true for component to be checked on render.'
 };
 
+export { Toggle as __Toggle };
+
 export default withStyles(Toggle, { cssFile: 'toggle', fonts: true, icons: true });

@@ -47,4 +47,6 @@ Panel.Footer = PanelFooter;
 Panel.Head = PanelHead;
 Panel.Header = PanelHeader;
 
+export { Panel as __Panel };
+
 export default withStyles(Panel, { cssFile: ['layout-grid', 'panel'], fonts: true });

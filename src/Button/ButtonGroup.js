@@ -27,4 +27,6 @@ ButtonGroup.propDescriptions = {
     children: '`Button` nodes to group together.'
 };
 
+export { ButtonGroup as __ButtonGroup };
+
 export default withStyles(ButtonGroup, { cssFile: 'button-group' });

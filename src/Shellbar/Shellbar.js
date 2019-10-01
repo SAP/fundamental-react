@@ -482,4 +482,6 @@ Shellbar.propDescriptions = {
     subtitle: 'Displays an application context. Should be used rarely.'
 };
 
+export { Shellbar as __Shellbar };
+
 export default withStyles(Shellbar, { cssFile: 'shellbar', fonts: true });

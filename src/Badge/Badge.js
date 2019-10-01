@@ -33,4 +33,6 @@ Badge.propTypes = {
     type: PropTypes.oneOf(BADGE_TYPES)
 };
 
+export { Badge as __Badge };
+
 export default withStyles(Badge, { cssFile: 'badge', fonts: true });

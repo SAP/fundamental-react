@@ -18,7 +18,7 @@ const Import = ({ sourceModulePath }) => {
             customStyle={{ padding: 0, whiteSpace: 'pre-wrap' }}
             language='javascript'
             style={googlecode}>
-            {`import { ${Object.keys(getSourceModule(sourceModulePath)).sort().join(', ')} } from '${packageJson.name}/${importPath}';`}
+            {`import { ${Object.keys(getSourceModule(sourceModulePath)).filter(comp => !comp.match(/^\_\_/)).sort().join(', ')} } from '${packageJson.name}/${importPath}';`}
         </SyntaxHighlighter>
     );
 };

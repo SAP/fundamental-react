@@ -267,4 +267,6 @@ Time.propDescriptions = {
     time: 'The time component values. Contains four properties: **hour** (with values from 01 to 12 when `format12Hours` is true or 00 to 23 when `format12Hours` is false), **minute** (with values from 00 to 59), **second** (with values from 00 to 59), **meridiem** (with values 0 for AM or 1 for PM).'
 };
 
+export { Time as __Time };
+
 export default withStyles(Time, { cssFile: 'time' });

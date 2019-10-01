@@ -74,4 +74,6 @@ Tab.propDescriptions = {
     onClick: '_INTERNAL USE ONLY._'
 };
 
+export { Tab as __Tab };
+
 export default withStyles(Tab, { cssFile: 'tabs', fonts: true });

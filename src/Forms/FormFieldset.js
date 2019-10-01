@@ -28,4 +28,6 @@ FormFieldset.propTypes = {
     disableStyles: PropTypes.bool
 };
 
+export { FormFieldset as __FormFieldset };
+
 export default withStyles(FormFieldset, { cssFile: 'fieldset' });

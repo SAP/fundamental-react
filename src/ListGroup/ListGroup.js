@@ -33,4 +33,6 @@ ListGroup.Item = ListGroupItem;
 ListGroup.ItemActions = ListGroupItemActions;
 ListGroup.ItemCheckbox = ListGroupItemCheckbox;
 
+export { ListGroup as __ListGroup };
+
 export default withStyles(ListGroup, { cssFile: 'list-group', fonts: true });

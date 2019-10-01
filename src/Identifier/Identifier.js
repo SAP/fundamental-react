@@ -58,4 +58,6 @@ Identifier.propDescriptions = {
     size: 'Size of the image. These sizes are available: **xxs** (extra extra small) - 20px, **xs** (extra small) - 28px, **s** (small) - 32px, **m** (medium) - 48px, **l** (large) - 64px, **xl** (extra lagre) - 88px, and **xxl** (extra extra large). Default matches the base font size (14px).'
 };
 
+export { Identifier as __Identifier };
+
 export default withStyles(Identifier, { cssFile: ['helpers', 'identifier'], icons: true });

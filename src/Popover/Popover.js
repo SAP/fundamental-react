@@ -113,4 +113,6 @@ Popover.propDescriptions = {
     onEscapeKey: 'Callback when escape key is pressed when popover body is visible.'
 };
 
+export { Popover as __Popover };
+
 export default withStyles(Popover, { cssFile: 'popover' });

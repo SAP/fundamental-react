@@ -42,4 +42,6 @@ LayoutGrid.propDescriptions = {
     nogap: 'Set to **true** to remove the margins between the panels.'
 };
 
+export { LayoutGrid as __LayoutGrid };
+
 export default withStyles(LayoutGrid, { cssFile: 'layout-grid' });

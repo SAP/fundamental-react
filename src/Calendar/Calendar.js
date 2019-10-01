@@ -713,4 +713,6 @@ Calendar.propDescriptions = {
     yearListProps: 'Additional props to be spread to the year\'s `<ul>` element.'
 };
 
+export { Calendar as __Calendar };
+
 export default withStyles(Calendar, { cssFile: 'calendar', font: true });

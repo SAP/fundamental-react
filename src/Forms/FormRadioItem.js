@@ -59,4 +59,6 @@ FormRadioItem.propDescriptions = {
     value: 'Sets the `value` for the radio input.'
 };
 
+export { FormRadioItem as __FormRadioItem };
+
 export default withStyles(FormRadioItem, { cssFile: 'radio' });

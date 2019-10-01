@@ -28,4 +28,6 @@ FormTextarea.propTypes = {
     disableStyles: PropTypes.bool
 };
 
+export { FormTextarea as __FormTextarea };
+
 export default withStyles(FormTextarea, { cssFile: 'textarea', fonts: true });

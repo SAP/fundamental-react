@@ -270,4 +270,6 @@ InputGroup.propDescriptions = {
     numberUpButtonProps: 'Additional props to be spread to the up `<button>` element (for inputType=\'number\').'
 };
 
+export { InputGroup as __InputGroup };
+
 export default withStyles(InputGroup, { cssFile: 'input-group', fonts: true });
