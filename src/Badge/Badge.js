@@ -5,7 +5,7 @@ import withStyles from '../utils/WithStyles/WithStyles';
 import { BADGE_MODIFIERS, BADGE_TYPES } from '../utils/constants';
 
 
-const Badge = React.forwardRef(({ type, modifier, children, className, customStyles, disableStyles, ...props }, ref) => {
+const Badge = React.forwardRef(({ type, modifier, children, className, disableStyles, ...props }, ref) => {
     const badgeClasses = classnames(
         'fd-badge',
         {

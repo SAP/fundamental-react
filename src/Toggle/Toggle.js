@@ -20,7 +20,7 @@ class Toggle extends React.Component {
     }
 
     render() {
-        const { size, id, checked, customStyles, disabled, disableStyles, children, className, labelProps, inputProps, onChange, ...rest } = this.props;
+        const { size, id, checked, disabled, disableStyles, children, className, labelProps, inputProps, onChange, ...rest } = this.props;
 
         const spanClasses = classnames(
             'fd-toggle',

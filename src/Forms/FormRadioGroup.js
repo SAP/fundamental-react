@@ -11,7 +11,7 @@ class FormRadioGroup extends Component {
     }
 
     render() {
-        const { children, customStyles, disabled, disableStyles, inline, onChange, ...props } = this.props;
+        const { children, disabled, disableStyles, inline, onChange, ...props } = this.props;
 
         return (
             <div

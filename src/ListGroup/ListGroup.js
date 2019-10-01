@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import withStyles from '../utils/WithStyles/WithStyles';
 
-const ListGroup = React.forwardRef(({ children, className, customStyles, disableStyles, ...props }, ref) => {
+const ListGroup = React.forwardRef(({ children, className, disableStyles, ...props }, ref) => {
     const listGroupClasses = classnames(
         'fd-list-group',
         className

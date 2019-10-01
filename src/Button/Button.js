@@ -8,7 +8,6 @@ const Button = React.forwardRef(({
     option,
     type,
     compact,
-    customStyles,
     disableStyles,
     glyph,
     selected,

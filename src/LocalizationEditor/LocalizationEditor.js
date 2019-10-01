@@ -11,7 +11,7 @@ import withStyles from '../utils/WithStyles/WithStyles';
 
 
 const LocalizationEditor = React.forwardRef(({ control, menu, id, compact, textarea, className, inputClassName, listProps, popoverProps,
-    customStyles, disableStyles, ...props }, ref) => {
+    disableStyles, ...props }, ref) => {
 
     const localizationEditorClasses = classnames(
         'fd-localization-editor',

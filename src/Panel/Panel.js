@@ -10,7 +10,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import withStyles from '../utils/WithStyles/WithStyles';
 
-const Panel = React.forwardRef(({ colSpan, children, className, customStyles, disableStyles, ...props }, ref) => {
+const Panel = React.forwardRef(({ colSpan, children, className, disableStyles, ...props }, ref) => {
 
     const panelClasses = classnames(
         'fd-panel',

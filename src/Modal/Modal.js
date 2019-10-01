@@ -39,7 +39,6 @@ class Modal extends Component {
             className,
             closeProps,
             contentProps,
-            customStyles,
             disableStyles,
             headerProps,
             headingLevel,

@@ -29,7 +29,7 @@ class SideNav extends Component {
     }
 
     render() {
-        const { onItemSelect, children, className, customStyles, disableStyles, icons, selectedId, ...rest } = this.props;
+        const { onItemSelect, children, className, disableStyles, icons, selectedId, ...rest } = this.props;
 
         const sideNavClasses = classnames(
             className,

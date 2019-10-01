@@ -4,7 +4,7 @@ import React from 'react';
 import { STATUS_TYPES } from '../utils/constants';
 import withStyles from '../utils/WithStyles/WithStyles';
 
-const Status = React.forwardRef(({ type, glyph, children, className, customStyles, disableStyles, ...props }, ref) => {
+const Status = React.forwardRef(({ type, glyph, children, className, disableStyles, ...props }, ref) => {
     const statusClasses = classnames(
         'fd-status-label',
         {

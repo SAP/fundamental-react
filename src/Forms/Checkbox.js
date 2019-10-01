@@ -15,7 +15,7 @@ const getCheckStatus = (checked, indeterminate) => {
     }
 };
 
-const Checkbox = React.forwardRef(({ checked, className, customStyles, defaultChecked, disabled, disableStyles, id, indeterminate, inline, inputProps, labelProps, name, onChange, value, ...props }, ref) => {
+const Checkbox = React.forwardRef(({ checked, className, defaultChecked, disabled, disableStyles, id, indeterminate, inline, inputProps, labelProps, name, onChange, value, ...props }, ref) => {
 
     const inputEl = useRef();
 

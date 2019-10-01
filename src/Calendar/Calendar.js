@@ -545,7 +545,6 @@ class Calendar extends Component {
 
     render() {
         const {
-            customStyles,
             enableRangeSelection,
             disableStyles,
             disableWeekends,

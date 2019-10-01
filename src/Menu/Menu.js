@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import withStyles from '../utils/WithStyles/WithStyles';
 
-const Menu = React.forwardRef(({ addonBefore, children, className, customStyles, disableStyles, ...props }, ref) => {
+const Menu = React.forwardRef(({ addonBefore, children, className, disableStyles, ...props }, ref) => {
     const menuClasses = classnames(
         'fd-menu',
         {

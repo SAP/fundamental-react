@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import withStyles from '../utils/WithStyles/WithStyles';
 
-const FormLegend = React.forwardRef(({ children, className, customStyles, disableStyles, ...props }, ref) => {
+const FormLegend = React.forwardRef(({ children, className, disableStyles, ...props }, ref) => {
     const formLegendClasses = classnames(
         'fd-fieldset__legend',
         className

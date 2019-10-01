@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import withStyles from '../utils/WithStyles/WithStyles';
 
-const FormRadioItem = React.forwardRef(({ checked, children, className, customStyles, defaultChecked, disabled, disableStyles, id, inline, inputProps, labelProps, name, value, ...props }, ref) => {
+const FormRadioItem = React.forwardRef(({ checked, children, className, defaultChecked, disabled, disableStyles, id, inline, inputProps, labelProps, name, value, ...props }, ref) => {
 
     return (
         <FormItem

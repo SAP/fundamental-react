@@ -4,7 +4,7 @@ import React from 'react';
 import withStyles from '../utils/WithStyles/WithStyles';
 import { IMAGE_SIZES, IMAGE_TYPES } from '../utils/constants';
 
-const Image = React.forwardRef(({ size, type, photo, className, customStyles, disableStyles, ...props }, ref) => {
+const Image = React.forwardRef(({ size, type, photo, className, disableStyles, ...props }, ref) => {
     const imageClasses = classnames(
         {
             [`fd-image--${size}`]: !!size,

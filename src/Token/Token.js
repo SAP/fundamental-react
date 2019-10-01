@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import withStyles from '../utils/WithStyles/WithStyles';
 
-const Token = React.forwardRef(({ children, className, customStyles, disableStyles, ...props }, ref) => {
+const Token = React.forwardRef(({ children, className, disableStyles, ...props }, ref) => {
 
     const tokenClasses = classnames(
         'fd-token',

@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import withStyles from '../utils/WithStyles/WithStyles';
 
-const InlineHelp = React.forwardRef(({ text, placement, className, contentClassName, customStyles, disableStyles, ...props }, ref) => {
+const InlineHelp = React.forwardRef(({ text, placement, className, contentClassName, disableStyles, ...props }, ref) => {
 
     const inlineHelpClasses = classnames(
         'fd-inline-help',

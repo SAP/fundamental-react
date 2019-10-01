@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import withStyles from '../utils/WithStyles/WithStyles';
 
-const FormLabel = React.forwardRef(({ required, children, className, disabled, customStyles, disableStyles, ...props }, ref) => {
+const FormLabel = React.forwardRef(({ required, children, className, disabled, disableStyles, ...props }, ref) => {
     const formLabelClasses = classnames(
         'fd-form-label',
         { 'is-disabled': disabled },

@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import withStyles from '../utils/WithStyles/WithStyles';
 
-const ComboboxInput = React.forwardRef(({ placeholder, menu, compact, className, customStyles, disableStyles, popoverProps, inputProps, buttonProps, ...props }, ref) => {
+const ComboboxInput = React.forwardRef(({ placeholder, menu, compact, className, disableStyles, popoverProps, inputProps, buttonProps, ...props }, ref) => {
     const comboboxPopoverClasses = classnames(
         'fd-input-group'
     );

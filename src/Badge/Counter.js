@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import withStyles from '../utils/WithStyles/WithStyles';
 
-const Counter = React.forwardRef(({ localizedText, notification, children, className, customStyles, disableStyles, ...props }, ref) => {
+const Counter = React.forwardRef(({ localizedText, notification, children, className, disableStyles, ...props }, ref) => {
     const counterClasses = classnames(
         'fd-counter',
         {

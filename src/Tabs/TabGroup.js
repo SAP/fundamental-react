@@ -69,7 +69,6 @@ class TabGroup extends Component {
         const {
             children,
             className,
-            customStyles,
             disableStyles,
             selectedIndex,
             tabGroupProps,

@@ -57,7 +57,6 @@ class Time extends Component {
     // };
     render() {
         const {
-            customStyles,
             disableStyles,
             localizedText,
             showHour,

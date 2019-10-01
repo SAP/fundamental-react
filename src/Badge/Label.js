@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import withStyles from '../utils/WithStyles/WithStyles';
 
-const Label = React.forwardRef(({ type, children, className, customStyles, disableStyles, ...props }, ref) => {
+const Label = React.forwardRef(({ type, children, className, disableStyles, ...props }, ref) => {
     const labelClasses = classnames(
         'fd-label',
         {

@@ -62,7 +62,6 @@ class InputGroup extends Component {
             children,
             className,
             compact,
-            customStyles,
             disableStyles,
             glyph,
             inputClassName,

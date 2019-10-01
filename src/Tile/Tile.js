@@ -11,7 +11,6 @@ const Tile = React.forwardRef(({
     backgroundImage,
     children,
     className,
-    customStyles,
     disableStyles,
     productTile,
     ...rest

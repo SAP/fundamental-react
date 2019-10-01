@@ -5,7 +5,7 @@ import React from 'react';
 import withStyles from '../utils/WithStyles/WithStyles';
 import { IDENTIFIER_MODIFIERS, IDENTIFIER_SIZES } from '../utils/constants';
 
-const Identifier = React.forwardRef(({ glyph, size, modifier, color, label, backgroundImageUrl, children, className, customStyles, disableStyles, ...props }, ref) => {
+const Identifier = React.forwardRef(({ glyph, size, modifier, color, label, backgroundImageUrl, children, className, disableStyles, ...props }, ref) => {
     const styles = {
         backgroundImage: `url(${backgroundImageUrl})`
     };

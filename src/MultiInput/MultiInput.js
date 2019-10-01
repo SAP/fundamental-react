@@ -109,7 +109,6 @@ class MultiInput extends Component {
             buttonProps,
             compact,
             className,
-            customStyles,
             disableStyles,
             data,
             listProps,

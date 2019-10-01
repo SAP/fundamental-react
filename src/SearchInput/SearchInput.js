@@ -115,7 +115,6 @@ class SearchInput extends Component {
 
     render() {
         const {
-            customStyles,
             disableStyles,
             placeholder,
             inShellbar,

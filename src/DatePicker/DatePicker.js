@@ -286,7 +286,6 @@ class DatePicker extends Component {
             buttonProps,
             className,
             compact,
-            customStyles,
             disableAfterDate,
             disableBeforeDate,
             disabledDates,
@@ -336,7 +335,7 @@ class DatePicker extends Component {
                                 <Button {...buttonProps}
                                     className='fd-input-group__button'
                                     compact={compact}
-                                    disableStyles={disableStyles || customStyles}
+                                    disableStyles={disableStyles}
                                     glyph='calendar'
                                     onClick={() => this.openCalendar()}
                                     option='light' />
@@ -357,7 +356,7 @@ class DatePicker extends Component {
                             disableBeforeDate={disableBeforeDate}
                             disableFutureDates={disableFutureDates}
                             disablePastDates={disablePastDates}
-                            disableStyles={disableStyles || customStyles}
+                            disableStyles={disableStyles}
                             disableWeekday={disableWeekday}
                             disableWeekends={disableWeekends}
                             disabledDates={disabledDates}

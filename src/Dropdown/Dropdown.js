@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import withStyles from '../utils/WithStyles/WithStyles';
 
-const Dropdown = React.forwardRef(({ children, className, customStyles, disableStyles, standard, ...props }, ref) => {
+const Dropdown = React.forwardRef(({ children, className, disableStyles, standard, ...props }, ref) => {
 
     const dropdownClasses = classnames(
         'fd-dropdown',

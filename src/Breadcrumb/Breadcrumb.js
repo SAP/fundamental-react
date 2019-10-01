@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import withStyles from '../utils/WithStyles/WithStyles';
 
-const Breadcrumb = React.forwardRef(({ children, customStyles, disableStyles, ...props }, ref) => {
+const Breadcrumb = React.forwardRef(({ children, disableStyles, ...props }, ref) => {
     return (<ul {...props}
         className='fd-breadcrumb'
         ref={ref}>{children}</ul>);

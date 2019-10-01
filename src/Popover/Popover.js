@@ -33,7 +33,6 @@ class Popover extends Component {
 
     render() {
         const {
-            customStyles,
             disableEdgeDetection,
             disableStyles,
             onClickOutside,

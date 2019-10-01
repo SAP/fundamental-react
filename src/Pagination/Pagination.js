@@ -81,7 +81,6 @@ class Pagination extends Component {
             displayTotal,
             totalText,
             className,
-            customStyles,
             disableStyles,
             linkProps,
             localizedText,

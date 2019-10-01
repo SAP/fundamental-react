@@ -105,7 +105,6 @@ class TreeView extends Component {
 
     render() {
         const {
-            customStyles,
             disableStyles,
             children,
             isExpandAll: isExpandAllProp,

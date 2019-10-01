@@ -5,7 +5,7 @@ import withStyles from '../utils/WithStyles/WithStyles';
 
 const Table = React.forwardRef(({ headers, tableData, className, tableBodyClassName,
     tableBodyProps, tableBodyRowProps, tableCellClassName, tableHeaderClassName, tableHeaderProps,
-    tableHeaderRowClassName, tableHeaderRowProps, tableRowClassName, customStyles, disableStyles, ...props }, ref) => {
+    tableHeaderRowClassName, tableHeaderRowProps, tableRowClassName, disableStyles, ...props }, ref) => {
 
     const tableClasses = classnames(
         'fd-table',

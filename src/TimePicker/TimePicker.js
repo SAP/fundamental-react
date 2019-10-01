@@ -90,7 +90,6 @@ class TimePicker extends Component {
     // };
     render() {
         const {
-            customStyles,
             disableStyles,
             popoverProps,
             id,

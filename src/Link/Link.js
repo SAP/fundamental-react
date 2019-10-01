@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import withStyles from '../utils/WithStyles/WithStyles';
 
-const Link = React.forwardRef(({ className, children, disabled, customStyles, disableStyles, ...props }, ref) => {
+const Link = React.forwardRef(({ className, children, disabled, disableStyles, ...props }, ref) => {
     const imageClasses = classnames(
         'fd-link',
         { 'is-disabled': !!disabled },

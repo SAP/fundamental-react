@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import withStyles from '../utils/WithStyles/WithStyles';
 
-const LayoutGrid = React.forwardRef(({ nogap, cols, children, className, colSpan, customStyles, disableStyles, ...props }, ref) => {
+const LayoutGrid = React.forwardRef(({ nogap, cols, children, className, colSpan, disableStyles, ...props }, ref) => {
 
     const layoutGridClasses = classnames(
         'fd-layout-grid',

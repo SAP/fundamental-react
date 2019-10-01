@@ -8,7 +8,6 @@ const _SubTestComponent = () => {
 
 const TestComponent = React.forwardRef((props, ref) => {
     const {
-        customStyles,
         disableStyles,
         ...otherProps
     } = props;

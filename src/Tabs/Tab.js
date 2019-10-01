@@ -5,7 +5,7 @@ import withStyles from '../utils/WithStyles/WithStyles';
 
 
 const Tab = React.forwardRef(({ title, disabled, glyph, id, selected, onClick,
-    tabContentProps, linkProps, index, className, customStyles, disableStyles, ...props }, ref) => {
+    tabContentProps, linkProps, index, className, disableStyles, ...props }, ref) => {
 
     const tabClasses = classnames(
         className,

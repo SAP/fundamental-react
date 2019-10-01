@@ -28,7 +28,6 @@ ActionBarBack.displayName = 'ActionBar.Back';
 ActionBarBack.propTypes = {
     buttonProps: PropTypes.object,
     className: PropTypes.string,
-    customStyles: PropTypes.object,
     disableStyles: PropTypes.bool,
     onClick: PropTypes.func
 };

@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import withStyles from '../utils/WithStyles/WithStyles';
 
-const Icon = React.forwardRef(({ glyph, size, className, customStyles, disableStyles, ...props }, ref) => {
+const Icon = React.forwardRef(({ glyph, size, className, disableStyles, ...props }, ref) => {
     const iconClasses = classnames(
         {
             [`sap-icon--${glyph}`]: !!glyph,

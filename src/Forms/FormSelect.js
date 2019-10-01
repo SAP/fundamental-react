@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import withStyles from '../utils/WithStyles/WithStyles';
 
-const FormSelect = React.forwardRef(({ disabled, children, className, customStyles, disableStyles, ...props }, ref) => {
+const FormSelect = React.forwardRef(({ disabled, children, className, disableStyles, ...props }, ref) => {
     const formSelectClasses = classnames(
         'fd-form-select',
         className
