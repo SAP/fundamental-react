@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.7.0-rc.70"></a>
+# [0.7.0-rc.70](https://github.com/SAP/fundamental-react/compare/v0.7.0-rc.69...v0.7.0-rc.70) (2019-10-01)
+
+
+
 <a name="0.7.0-rc.69"></a>
 # [0.7.0-rc.69](https://github.com/SAP/fundamental-react/compare/v0.7.0-rc.68...v0.7.0-rc.69) (2019-10-01)
 
