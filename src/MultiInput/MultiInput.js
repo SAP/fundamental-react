@@ -1,5 +1,3 @@
-import 'fundamental-styles/dist/input-group.css'; //remove when replaced with InputGroup component
-import 'fundamental-styles/dist/multi-input.css';
 import Button from '../Button/Button';
 import Checkbox from '../Forms/Checkbox';
 import classnames from 'classnames';
@@ -10,6 +8,7 @@ import Popover from '../Popover/Popover';
 import PropTypes from 'prop-types';
 import shortid from '../utils/shortId';
 import Token from '../Token/Token';
+import withStyles from '../utils/WithStyles/WithStyles';
 import React, { Component } from 'react';
 
 class MultiInput extends Component {
@@ -110,6 +109,7 @@ class MultiInput extends Component {
             buttonProps,
             compact,
             className,
+            disableStyles,
             data,
             listProps,
             inputProps,
@@ -133,7 +133,7 @@ class MultiInput extends Component {
                     <Popover
                         {...popoverProps}
                         body={
-                            <Menu>
+                            <Menu disableStyles={disableStyles}>
                                 <Menu.List {...listProps}>{this.createTagList(data)}</Menu.List>
                             </Menu>
                         }
@@ -147,19 +147,23 @@ class MultiInput extends Component {
                                     {...inputProps}
                                     className='fd-input-group__input'
                                     compact={compact}
+                                    disableStyles={disableStyles}
                                     onClick={this.showHideTagList}
                                     placeholder={placeHolder} />
                                 <span
                                     className='fd-input-group__addon fd-input-group__addon--button'>
                                     <Button
                                         {...buttonProps}
+                                        className='fd-input-group__button'
                                         compact={compact}
+                                        disableStyles={disableStyles}
                                         glyph='navigation-down-arrow'
                                         onClick={this.showHideTagList}
                                         option='light' />
                                 </span>
                             </div>
                         }
+                        disableStyles={disableStyles}
                         noArrow />
                 </div>
                 {this.state.tags.length > 0 ? (
@@ -179,6 +183,8 @@ MultiInput.propTypes = {
     buttonProps: PropTypes.object,
     className: PropTypes.string,
     compact: PropTypes.bool,
+    customStyles: PropTypes.object,
+    disableStyles: PropTypes.bool,
     inputProps: PropTypes.object,
     listProps: PropTypes.object,
     localizedText: CustomPropTypes.i18n({
@@ -207,4 +213,6 @@ MultiInput.propDescriptions = {
     tagProps: 'Additional props to be spread to the tags `<div>` element.'
 };
 
-export default MultiInput;
+export { MultiInput as __MultiInput };
+
+export default withStyles(MultiInput, { cssFile: ['multi-input', 'input-group'], fonts: true });

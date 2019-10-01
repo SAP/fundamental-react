@@ -1,21 +1,21 @@
-import 'fundamental-styles/dist/tile.css';
-import 'fundamental-styles/dist/product-tile.css';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 import TileActions from './_TileActions';
 import TileContent from './_TileContent';
 import TileMedia from './_TileMedia';
+import withStyles from '../utils/WithStyles/WithStyles';
 
-const Tile = props => {
-    const {
-        disabled,
-        backgroundImage,
-        children,
-        className,
-        productTile,
-        ...rest
-    } = props;
+const Tile = React.forwardRef(({
+    disabled,
+    backgroundImage,
+    children,
+    className,
+    disableStyles,
+    productTile,
+    ...rest
+
+}, ref) => {
 
     const tileClasses = classnames(
         {
@@ -29,7 +29,8 @@ const Tile = props => {
     return (
         <div
             {...rest}
-            className={tileClasses}>
+            className={tileClasses}
+            ref={ref}>
             {productTile &&
                 <div className='fd-product-tile__media' style={{ backgroundImage: 'url(' + backgroundImage + ')' }} />
             }
@@ -46,7 +47,7 @@ const Tile = props => {
             })}
         </div>
     );
-};
+});
 
 Tile.displayName = 'Tile';
 
@@ -54,7 +55,9 @@ Tile.propTypes = {
     backgroundImage: PropTypes.string,
     children: PropTypes.node,
     className: PropTypes.string,
+    customStyles: PropTypes.object,
     disabled: PropTypes.bool,
+    disableStyles: PropTypes.bool,
     productTile: PropTypes.bool
 };
 
@@ -67,4 +70,6 @@ Tile.Actions = TileActions;
 Tile.Content = TileContent;
 Tile.Media = TileMedia;
 
-export default Tile;
+export { Tile as __Tile };
+
+export default withStyles(Tile, { cssFile: ['tile', 'product-tile'], fonts: true });

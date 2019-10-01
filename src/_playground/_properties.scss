@@ -42,6 +42,12 @@
                         width: 40%;
                         padding-right: 0;
                     }
+
+                    &.fd-table__cell {
+                        >p {
+                            margin: 0;
+                        }
+                    }
                 }
             }
         }

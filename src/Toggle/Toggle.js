@@ -1,11 +1,10 @@
-import 'fundamental-styles/dist/toggle.css';
 import classnames from 'classnames';
 import FormItem from '../Forms/FormItem';
 import FormLabel from '../Forms/FormLabel';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { TOGGLE_SIZES } from '../utils/constants';
-
+import withStyles from '../utils/WithStyles/WithStyles';
 class Toggle extends React.Component {
     constructor(props) {
         super(props);
@@ -21,7 +20,7 @@ class Toggle extends React.Component {
     }
 
     render() {
-        const { size, id, checked, disabled, children, className, labelProps, inputProps, onChange, ...rest } = this.props;
+        const { size, id, checked, disabled, disableStyles, children, className, labelProps, inputProps, onChange, ...rest } = this.props;
 
         const spanClasses = classnames(
             'fd-toggle',
@@ -34,10 +33,12 @@ class Toggle extends React.Component {
         return (
             <FormItem
                 {...rest}
-                className={className}>
+                className={className}
+                disableStyles={disableStyles}>
                 <FormLabel
                     disabled={disabled}
                     {...labelProps}
+                    disableStyles={disableStyles}
                     htmlFor={id}>
                     <span className={spanClasses}>
                         <input
@@ -63,7 +64,9 @@ Toggle.propTypes = {
     checked: PropTypes.bool,
     children: PropTypes.node,
     className: PropTypes.string,
+    customStyles: PropTypes.object,
     disabled: PropTypes.bool,
+    disableStyles: PropTypes.bool,
     id: PropTypes.string,
     inputProps: PropTypes.object,
     labelProps: PropTypes.object,
@@ -79,4 +82,6 @@ Toggle.propDescriptions = {
     checked: 'Set to true for component to be checked on render.'
 };
 
-export default Toggle;
+export { Toggle as __Toggle };
+
+export default withStyles(Toggle, { cssFile: 'toggle', fonts: true, icons: true });

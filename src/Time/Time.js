@@ -1,7 +1,7 @@
-import 'fundamental-styles/dist/time.css';
 import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import PropTypes from 'prop-types';
 import TimeItem from './_TimeItem';
+import withStyles from '../utils/WithStyles/WithStyles';
 import React, { Component } from 'react';
 
 
@@ -57,6 +57,7 @@ class Time extends Component {
     // };
     render() {
         const {
+            disableStyles,
             localizedText,
             showHour,
             showMinute,
@@ -90,6 +91,7 @@ class Time extends Component {
         } else {
             max = 24;
         }
+
         return (
             <div
                 {...props}
@@ -99,6 +101,7 @@ class Time extends Component {
                 {showHour ? (
                     <TimeItem
                         defaultValue={1}
+                        disableStyles={disableStyles}
                         disabled={disabled}
                         downButtonProps={hoursDownButtonProps}
                         format12Hours={format12Hours}
@@ -120,6 +123,7 @@ class Time extends Component {
                 {showMinute ? (
                     <TimeItem
                         defaultValue={1}
+                        disableStyles={disableStyles}
                         disabled={disabled}
                         downButtonProps={minutesDownButtonProps}
                         format12Hours={format12Hours}
@@ -141,6 +145,7 @@ class Time extends Component {
                 {showSecond ? (
                     <TimeItem
                         defaultValue={1}
+                        disableStyles={disableStyles}
                         disabled={disabled}
                         downButtonProps={secondsDownButtonProps}
                         format12Hours={format12Hours}
@@ -161,6 +166,7 @@ class Time extends Component {
                 {/* Meridiem */}
                 {format12Hours ? (
                     <TimeItem
+                        disableStyles={disableStyles}
                         disabled={disabled}
                         downButtonProps={meridiemDownButtonProps}
                         inputProps={meridiemInputProps}
@@ -184,6 +190,8 @@ class Time extends Component {
 Time.displayName = 'Time';
 
 Time.basePropTypes = {
+    customStyles: PropTypes.object,
+    disableStyles: PropTypes.bool,
     format12Hours: PropTypes.bool,
     showHour: PropTypes.bool,
     showMinute: PropTypes.bool,
@@ -194,7 +202,6 @@ Time.basePropTypes = {
 
 Time.propTypes = {
     ...Time.basePropTypes,
-
     disabled: PropTypes.bool,
     hoursDownButtonProps: PropTypes.object,
     hoursInputProps: PropTypes.object,
@@ -259,4 +266,6 @@ Time.propDescriptions = {
     time: 'The time component values. Contains four properties: **hour** (with values from 01 to 12 when `format12Hours` is true or 00 to 23 when `format12Hours` is false), **minute** (with values from 00 to 59), **second** (with values from 00 to 59), **meridiem** (with values 0 for AM or 1 for PM).'
 };
 
-export default Time;
+export { Time as __Time };
+
+export default withStyles(Time, { cssFile: 'time' });

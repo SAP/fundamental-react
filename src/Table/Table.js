@@ -1,24 +1,11 @@
-import 'fundamental-styles/dist/table.css';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
+import withStyles from '../utils/WithStyles/WithStyles';
 
-const Table = props => {
-    const {
-        headers,
-        tableData,
-        className,
-        tableBodyClassName,
-        tableBodyProps,
-        tableBodyRowProps,
-        tableCellClassName,
-        tableHeaderClassName,
-        tableHeaderProps,
-        tableHeaderRowClassName,
-        tableHeaderRowProps,
-        tableRowClassName,
-        ...rest
-    } = props;
+const Table = React.forwardRef(({ headers, tableData, className, tableBodyClassName,
+    tableBodyProps, tableBodyRowProps, tableCellClassName, tableHeaderClassName, tableHeaderProps,
+    tableHeaderRowClassName, tableHeaderRowProps, tableRowClassName, disableStyles, ...props }, ref) => {
 
     const tableClasses = classnames(
         'fd-table',
@@ -46,7 +33,8 @@ const Table = props => {
     );
 
     return (
-        <table {...rest} className={tableClasses}>
+        <table {...props} className={tableClasses}
+            ref={ref}>
             <thead className={tableHeaderClasses} {...tableHeaderProps}>
                 <tr className={tableHeaderRowClasses} {...tableHeaderRowProps}>
                     {headers.map((header, index) => {
@@ -76,7 +64,7 @@ const Table = props => {
             </tbody>
         </table>
     );
-};
+});
 
 Table.displayName = 'Table';
 
@@ -88,6 +76,8 @@ Table.propTypes = {
         }).isRequired
     ).isRequired,
     className: PropTypes.string,
+    customStyles: PropTypes.object,
+    disableStyles: PropTypes.bool,
     tableBodyClassName: PropTypes.string,
     tableBodyProps: PropTypes.object,
     tableBodyRowProps: PropTypes.oneOfType([
@@ -116,4 +106,6 @@ Table.propDescriptions = {
     tableRowClassName: 'Additional classes to be added to the `<tr>` elements.'
 };
 
-export default Table;
+export { Table as __Table };
+
+export default withStyles(Table, { cssFile: 'table', fonts: true });

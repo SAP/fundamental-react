@@ -1,10 +1,9 @@
-import 'fundamental-styles/dist/token.css';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
+import withStyles from '../utils/WithStyles/WithStyles';
 
-const Token = (props) => {
-    const { children, className, ...rest } = props;
+const Token = React.forwardRef(({ children, className, disableStyles, ...props }, ref) => {
 
     const tokenClasses = classnames(
         'fd-token',
@@ -13,19 +12,25 @@ const Token = (props) => {
 
     return (
         <span
-            {...rest}
+            {...props}
             className={tokenClasses}
+            ref={ref}
             role='button'>
             {children}
         </span>
     );
-};
+});
 
 Token.displayName = 'Token';
 
 Token.propTypes = {
     children: PropTypes.node,
-    className: PropTypes.string
+    className: PropTypes.string,
+    customStyles: PropTypes.object,
+    disableStyles: PropTypes.bool
 };
 
-export default Token;
+export { Token as __Token };
+
+export default withStyles(Token, { cssFile: 'token', fonts: true, icons: true });
+

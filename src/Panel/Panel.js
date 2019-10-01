@@ -1,5 +1,3 @@
-import 'fundamental-styles/dist/layout-grid.css'; //needed for fd-layout-grid__span-column
-import 'fundamental-styles/dist/panel.css';
 import classnames from 'classnames';
 import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import PanelActions from './_PanelActions';
@@ -10,9 +8,9 @@ import PanelHead from './_PanelHead';
 import PanelHeader from './_PanelHeader';
 import PropTypes from 'prop-types';
 import React from 'react';
+import withStyles from '../utils/WithStyles/WithStyles';
 
-const Panel = props => {
-    const { colSpan, children, className, ...rest } = props;
+const Panel = React.forwardRef(({ colSpan, children, className, disableStyles, ...props }, ref) => {
 
     const panelClasses = classnames(
         'fd-panel',
@@ -22,15 +20,20 @@ const Panel = props => {
         className
     );
 
-    return <div {...rest} className={panelClasses}>{children}</div>;
-};
+    return (<div {...props} className={panelClasses}
+        ref={ref}>
+        {children}
+    </div>);
+});
 
 Panel.displayName = 'Panel';
 
 Panel.propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,
-    colSpan: CustomPropTypes.range(2, 6)
+    colSpan: CustomPropTypes.range(2, 6),
+    customStyles: PropTypes.object,
+    disableStyles: PropTypes.bool
 };
 
 Panel.propDescriptions = {
@@ -44,4 +47,6 @@ Panel.Footer = PanelFooter;
 Panel.Head = PanelHead;
 Panel.Header = PanelHeader;
 
-export default Panel;
+export { Panel as __Panel };
+
+export default withStyles(Panel, { cssFile: ['layout-grid', 'panel'], fonts: true });

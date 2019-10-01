@@ -87,12 +87,12 @@ exports[`<InputGroup /> create input group items 5`] = `
   >
     <button
       aria-label="Step up"
-      className="fd-button--light sap-icon--slim-arrow-up fd-button--half"
+      className="fd-button--light sap-icon--slim-arrow-up fd-button--half fd-input-group__button"
       onClick={[Function]}
     />
     <button
       aria-label="Step down"
-      className="fd-button--light sap-icon--slim-arrow-down fd-button--half"
+      className="fd-button--light sap-icon--slim-arrow-down fd-button--half fd-input-group__button"
       onClick={[Function]}
     />
   </span>
@@ -114,12 +114,12 @@ exports[`<InputGroup /> create input group items 6`] = `
   >
     <button
       aria-label="Step up"
-      className="fd-button--light fd-button--compact sap-icon--slim-arrow-up fd-button--half"
+      className="fd-button--light fd-button--compact sap-icon--slim-arrow-up fd-button--half fd-input-group__button"
       onClick={[Function]}
     />
     <button
       aria-label="Step down"
-      className="fd-button--light fd-button--compact sap-icon--slim-arrow-down fd-button--half"
+      className="fd-button--light fd-button--compact sap-icon--slim-arrow-down fd-button--half fd-input-group__button"
       onClick={[Function]}
     />
   </span>
@@ -285,12 +285,12 @@ exports[`<InputGroup /> create input group items 14`] = `
   >
     <button
       aria-label="Step up"
-      className="fd-button--light sap-icon--slim-arrow-up fd-button--half"
+      className="fd-button--light sap-icon--slim-arrow-up fd-button--half fd-input-group__button"
       onClick={[Function]}
     />
     <button
       aria-label="Step down"
-      className="fd-button--light sap-icon--slim-arrow-down fd-button--half"
+      className="fd-button--light sap-icon--slim-arrow-down fd-button--half fd-input-group__button"
       onClick={[Function]}
     />
   </span>

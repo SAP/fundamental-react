@@ -1,8 +1,8 @@
-import 'fundamental-styles/dist/calendar.css';
 import Button from '../Button/Button';
 import classnames from 'classnames';
 import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import PropTypes from 'prop-types';
+import withStyles from '../utils/WithStyles/WithStyles';
 import React, { Component } from 'react';
 
 class Calendar extends Component {
@@ -404,6 +404,7 @@ class Calendar extends Component {
                     <div className='fd-calendar__action'>
                         <Button
                             compact
+                            disableStyles={this.props.disableStyles}
                             glyph='slim-arrow-left'
                             onClick={this.previous}
                             option='light' />
@@ -411,6 +412,7 @@ class Calendar extends Component {
                     <div className='fd-calendar__action'>
                         <Button
                             compact
+                            disableStyles={this.props.disableStyles}
                             onClick={this.showMonths}
                             option='light'>
                             <span>
@@ -421,6 +423,7 @@ class Calendar extends Component {
                     <div className='fd-calendar__action'>
                         <Button
                             compact
+                            disableStyles={this.props.disableStyles}
                             onClick={this.showYears}
                             option='light'>
                             <span>
@@ -432,6 +435,7 @@ class Calendar extends Component {
                     <div className='fd-calendar__action'>
                         <Button
                             compact
+                            disableStyles={this.props.disableStyles}
                             glyph='slim-arrow-right'
                             onClick={this.next}
                             option='light' />
@@ -499,7 +503,7 @@ class Calendar extends Component {
                         key={copyDate}
                         onClick={!this.displayDisabled(day) ? () => this.dateClick(copyDate, enableRangeSelection) : null}
                         role='gridcell' >
-                        <span className='fd-calendar__text'>{dateFormatted}</span>
+                        <span className='fd-calendar__text'>{dateFormatted.toString()}</span>
                     </td >
                 );
 
@@ -542,6 +546,7 @@ class Calendar extends Component {
     render() {
         const {
             enableRangeSelection,
+            disableStyles,
             disableWeekends,
             disableBeforeDate,
             disableAfterDate,
@@ -565,6 +570,7 @@ class Calendar extends Component {
             'fd-calendar',
             className
         );
+
         return (
             <div {...props} className={calendarClasses}>
                 {this.generateNavigation()}
@@ -581,6 +587,8 @@ Calendar.displayName = 'Calendar';
 
 Calendar.basePropTypes = {
     blockedDates: PropTypes.arrayOf(PropTypes.instanceOf(Date)),
+    customStyles: PropTypes.object,
+    disableStyles: PropTypes.bool,
     disableAfterDate: PropTypes.instanceOf(Date),
     disableBeforeDate: PropTypes.instanceOf(Date),
     disabledDates: PropTypes.arrayOf(PropTypes.instanceOf(Date)),
@@ -704,4 +712,6 @@ Calendar.propDescriptions = {
     yearListProps: 'Additional props to be spread to the year\'s `<ul>` element.'
 };
 
-export default Calendar;
+export { Calendar as __Calendar };
+
+export default withStyles(Calendar, { cssFile: 'calendar', font: true });

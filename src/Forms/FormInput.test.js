@@ -37,4 +37,18 @@ describe('<FormInput />', () => {
             ).toBe('Sample');
         });
     });
+
+    test('forwards the ref', () => {
+        let ref;
+        class Test extends React.Component {
+            constructor(props) {
+                super(props);
+                ref = React.createRef();
+            }
+            render = () => <FormInput ref={ref} />;
+        }
+        mount(<Test />);
+        expect(ref.current.tagName).toEqual('INPUT');
+        expect(ref.current.className).toEqual('fd-input');
+    });
 });

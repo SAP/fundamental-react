@@ -1,10 +1,10 @@
-import 'fundamental-styles/dist/alert.css';
 import { ALERT_TYPES } from '../utils/constants';
 import classnames from 'classnames';
 import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import Icon from '../Icon/Icon';
 import Link from '../Link/Link';
 import PropTypes from 'prop-types';
+import withStyles from '../utils/WithStyles/WithStyles';
 import React, { Component } from 'react';
 
 class Alert extends Component {
@@ -27,6 +27,7 @@ class Alert extends Component {
         const {
             onCloseClicked,
             buttonProps,
+            disableStyles,
             type,
             link,
             linkProps,
@@ -64,12 +65,13 @@ class Alert extends Component {
                         )}
                         <div className='fd-alert__text'>
                             {type && (
-                                <Icon glyph={`mesage-${type}`} />
+                                <Icon disableStyles={disableStyles} glyph={`mesage-${type}`} />
                             )}
                             {children}
                             {link && (
                                 <Link
                                     {...linkProps}
+                                    disableStyles={disableStyles}
                                     href={link}>
                                     {linkText}{' '}
                                 </Link>
@@ -88,6 +90,8 @@ Alert.propTypes = {
     buttonProps: PropTypes.object,
     children: PropTypes.node,
     className: PropTypes.string,
+    customStyles: PropTypes.object,
+    disableStyles: PropTypes.bool,
     dismissible: PropTypes.bool,
     link: PropTypes.string,
     linkProps: PropTypes.object,
@@ -117,4 +121,6 @@ Alert.propDescriptions = {
     onCloseClicked: 'Callback function passing event when close button is clicked.'
 };
 
-export default Alert;
+export { Alert as __Alert };
+
+export default withStyles(Alert, { cssFile: 'alert', fonts: true, icons: true });

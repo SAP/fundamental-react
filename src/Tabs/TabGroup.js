@@ -1,7 +1,7 @@
-import 'fundamental-styles/dist/tabs.css';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import { TabContent } from './_TabContent';
+import withStyles from '../utils/WithStyles/WithStyles';
 import React, { Component } from 'react';
 
 class TabGroup extends Component {
@@ -69,6 +69,7 @@ class TabGroup extends Component {
         const {
             children,
             className,
+            disableStyles,
             selectedIndex,
             tabGroupProps,
             onTabClick,
@@ -101,6 +102,8 @@ TabGroup.defaultProps = {
 TabGroup.propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,
+    customStyles: PropTypes.object,
+    disableStyles: PropTypes.bool,
     selectedIndex: PropTypes.number,
     tabGroupProps: PropTypes.object,
     onTabClick: PropTypes.func
@@ -112,4 +115,6 @@ TabGroup.propDescriptions = {
     onTabClick: 'Callback function when the user clicks on a tab. Parameters passed to the function are `event` and `index`.'
 };
 
-export default TabGroup;
+export { TabGroup as __TabGroup };
+
+export default withStyles(TabGroup, { cssFile: 'tabs' });

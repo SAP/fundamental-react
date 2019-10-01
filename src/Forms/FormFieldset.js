@@ -1,9 +1,9 @@
-import 'fundamental-styles/dist/fieldset.css';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
+import withStyles from '../utils/WithStyles/WithStyles';
 
-const FormFieldset = ({ children, className, ...props }) => {
+const FormFieldset = React.forwardRef(({ children, className, disableStyles, ...props }, ref) => {
     const formFieldsetClasses = classnames(
         'fd-fieldset',
         className
@@ -12,17 +12,22 @@ const FormFieldset = ({ children, className, ...props }) => {
     return (
         <fieldset
             {...props}
-            className={formFieldsetClasses}>
+            className={formFieldsetClasses}
+            ref={ref}>
             {children}
         </fieldset>
     );
-};
+});
 
 FormFieldset.displayName = 'FormFieldset';
 
 FormFieldset.propTypes = {
     children: PropTypes.node,
-    className: PropTypes.string
+    className: PropTypes.string,
+    customStyles: PropTypes.object,
+    disableStyles: PropTypes.bool
 };
 
-export default FormFieldset;
+export { FormFieldset as __FormFieldset };
+
+export default withStyles(FormFieldset, { cssFile: 'fieldset' });

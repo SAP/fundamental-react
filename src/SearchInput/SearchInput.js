@@ -1,9 +1,9 @@
-import 'fundamental-styles/dist/input-group.css'; //remove when replaced with InputGroup component
 import Button from '../Button/Button';
 import FormInput from '../Forms/FormInput';
 import Menu from '../Menu/Menu';
 import Popover from '../Popover/Popover';
 import PropTypes from 'prop-types';
+import withStyles from '../utils/WithStyles/WithStyles';
 import React, { Component } from 'react';
 
 class SearchInput extends Component {
@@ -115,6 +115,7 @@ class SearchInput extends Component {
 
     render() {
         const {
+            disableStyles,
             placeholder,
             inShellbar,
             onEnter,
@@ -135,7 +136,7 @@ class SearchInput extends Component {
                 <Popover
                     {...popoverProps}
                     body={
-                        (<Menu>
+                        (<Menu disableStyles={disableStyles}>
                             <Menu.List {...listProps}>
                                 {this.state.filteredResult && this.state.filteredResult.length > 0 ? (
                                     this.state.filteredResult.map((item, index) => {
@@ -163,6 +164,7 @@ class SearchInput extends Component {
                                 {...inputProps}
                                 className='fd-input-group__input'
                                 compact={compact}
+                                disableStyles={disableStyles}
                                 onChange={this.onChangeHandler}
                                 onClick={() => this.onClickHandler()}
                                 onKeyPress={this.onKeyPressHandler}
@@ -172,14 +174,17 @@ class SearchInput extends Component {
                             {!noSearchBtn && (
                                 <span className='fd-input-group__addon fd-input-group__addon--button'>
                                     <Button {...searchBtnProps}
+                                        className='fd-input-group__button'
                                         compact={compact}
+                                        disableStyles={disableStyles}
                                         glyph='search'
                                         onClick={() => this.onClickHandler()}
                                         option='light' />
                                 </span>
                             )}
                         </div>
-                    } />
+                    }
+                    disableStyles={disableStyles} />
             </div>
         );
     }
@@ -190,6 +195,8 @@ SearchInput.displayName = 'SearchInput';
 SearchInput.propTypes = {
     className: PropTypes.string,
     compact: PropTypes.bool,
+    customStyles: PropTypes.object,
+    disableStyles: PropTypes.bool,
     inputProps: PropTypes.object,
     inShellbar: PropTypes.bool,
     listProps: PropTypes.object,
@@ -219,4 +226,6 @@ SearchInput.propDescriptions = {
     searchList: 'Collection of items to display in the dropdown list.'
 };
 
-export default SearchInput;
+export { SearchInput as __SearchInput };
+
+export default withStyles(SearchInput, { cssFile: 'input-group' });

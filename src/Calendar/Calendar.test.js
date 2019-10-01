@@ -47,7 +47,7 @@ describe('<Calendar />', () => {
     });
 
     test('show/hide months', () => {
-        let wrapper = mount(defaultCalendar);
+        let wrapper = mount(defaultCalendar).children().children();
         expect(wrapper.state('showMonths')).toBeFalsy();
         wrapper
             .find(
@@ -71,11 +71,11 @@ describe('<Calendar />', () => {
     test('click month from list', () => {
         let wrapper = mount(defaultCalendar);
 
-        expect(wrapper.state('showMonths')).toBeFalsy();
+        expect(wrapper.children().children().state('showMonths')).toBeFalsy();
 
         //set baseline initial date
         let initialDate = new Date('1/15/2019');
-        wrapper.setState({ currentDateDisplayed: initialDate });
+        wrapper.children().children().setState({ currentDateDisplayed: initialDate });
 
         //open month overlay
         wrapper
@@ -85,15 +85,15 @@ describe('<Calendar />', () => {
             .at(1)
             .simulate('click');
 
-        expect(wrapper.state('showMonths')).toBeTruthy();
+        expect(wrapper.children().children().state('showMonths')).toBeTruthy();
 
         wrapper
-            .find('ul.fd-calendar__list li.fd-calendar__item')
+            .find('.fd-calendar__item')
             .at(3)
             .simulate('click');
 
         // check that April was selected
-        const currentDateDisplayed = wrapper.state('currentDateDisplayed');
+        const currentDateDisplayed = wrapper.children().children().state('currentDateDisplayed');
 
         expect(currentDateDisplayed.getMonth()).toEqual(3);
 
@@ -103,11 +103,11 @@ describe('<Calendar />', () => {
 
     test('click month from list with date range', () => {
         let wrapper = mount(rangeSelect);
-        expect(wrapper.state('showMonths')).toBeFalsy();
+        expect(wrapper.children().children().state('showMonths')).toBeFalsy();
 
         //set baseline initial date
         let initialDate = new Date('1/15/2019');
-        wrapper.setState({ currentDateDisplayed: initialDate });
+        wrapper.children().children().setState({ currentDateDisplayed: initialDate });
 
         //open months view
         wrapper
@@ -117,7 +117,7 @@ describe('<Calendar />', () => {
             .at(1)
             .simulate('click');
 
-        expect(wrapper.state('showMonths')).toBeTruthy();
+        expect(wrapper.children().children().state('showMonths')).toBeTruthy();
 
         wrapper
             .find('ul.fd-calendar__list li.fd-calendar__item')
@@ -125,13 +125,13 @@ describe('<Calendar />', () => {
             .simulate('click');
 
         // check that April was selected
-        const currentDateDisplayed = wrapper.state('currentDateDisplayed');
+        const currentDateDisplayed = wrapper.children().children().state('currentDateDisplayed');
 
         expect(currentDateDisplayed.getMonth()).toEqual(3);
     });
 
     test('show/hide years', () => {
-        let wrapper = mount(defaultCalendar);
+        let wrapper = mount(defaultCalendar).children().children();
         expect(wrapper.state('showYears')).toBeFalsy();
         wrapper
             .find(
@@ -154,8 +154,8 @@ describe('<Calendar />', () => {
 
     test('click year from list', () => {
         let wrapper = mount(defaultCalendar);
-        const currentDateDisplayed = Object.assign(new Date(), wrapper.state('currentDateDisplayed'));
-        expect(wrapper.state('showYears')).toBeFalsy();
+        const currentDateDisplayed = Object.assign(new Date(), wrapper.children().children().state('currentDateDisplayed'));
+        expect(wrapper.children().children().state('showYears')).toBeFalsy();
         wrapper
             .find(
                 'header.fd-calendar__header button.fd-button--light.fd-button--compact'
@@ -163,21 +163,21 @@ describe('<Calendar />', () => {
             .at(2)
             .simulate('click');
 
-        expect(wrapper.state('showYears')).toBeTruthy();
+        expect(wrapper.children().children().state('showYears')).toBeTruthy();
 
         wrapper
             .find('ul.fd-calendar__list li.fd-calendar__item')
             .at(3)
             .simulate('click');
 
-        let newDateDisplayed = new Date(wrapper.state('currentDateDisplayed'));
+        let newDateDisplayed = new Date(wrapper.children().children().state('currentDateDisplayed'));
         expect(newDateDisplayed.getFullYear()).toEqual(
             currentDateDisplayed.getFullYear() + 3
         );
     });
 
     test('click disabled day', () => {
-        const wrapper = mount(disabledWeekEnds);
+        const wrapper = mount(disabledWeekEnds).children().children();
         // select day of month
         wrapper
             .find(
@@ -202,8 +202,8 @@ describe('<Calendar />', () => {
 
     test('click year from list from range selector', () => {
         let wrapper = mount(rangeSelect);
-        const currentDateDisplayed = Object.assign(new Date(), wrapper.state('currentDateDisplayed'));
-        expect(wrapper.state('showYears')).toBeFalsy();
+        const currentDateDisplayed = Object.assign(new Date(), wrapper.children().children().state('currentDateDisplayed'));
+        expect(wrapper.children().children().state('showYears')).toBeFalsy();
         wrapper
             .find(
                 'header.fd-calendar__header button.fd-button--light.fd-button--compact'
@@ -211,21 +211,21 @@ describe('<Calendar />', () => {
             .at(2)
             .simulate('click');
 
-        expect(wrapper.state('showYears')).toBeTruthy();
+        expect(wrapper.children().children().state('showYears')).toBeTruthy();
 
         wrapper
             .find('ul.fd-calendar__list li.fd-calendar__item')
             .at(3)
             .simulate('click');
 
-        const newDateDisplayed = new Date(wrapper.state('currentDateDisplayed'));
+        const newDateDisplayed = new Date(wrapper.children().children().state('currentDateDisplayed'));
         expect(newDateDisplayed.getFullYear()).toEqual(
             currentDateDisplayed.getFullYear() + 3
         );
     });
 
     test('click previous button', () => {
-        let wrapper = mount(defaultCalendar);
+        let wrapper = mount(defaultCalendar).children().children();
 
         let initialDate = new Date('3/28/2019');
         wrapper.setState({ currentDateDisplayed: initialDate });
@@ -262,7 +262,7 @@ describe('<Calendar />', () => {
     });
 
     test('click next button', () => {
-        let wrapper = mount(defaultCalendar);
+        let wrapper = mount(defaultCalendar).children().children();
 
         let initialDate = new Date('3/28/2019');
         wrapper.setState({ currentDateDisplayed: initialDate });
@@ -301,7 +301,7 @@ describe('<Calendar />', () => {
 
     // broken test for 31st of month -> needs to be tested once calendar is refactored.
     xtest('click next button on the 31st of month', () => {
-        let wrapper = mount(defaultCalendar);
+        let wrapper = mount(defaultCalendar).children().children();
 
         let initialDate = new Date('5/31/2019');
         wrapper.setState({ currentDateDisplayed: initialDate });
@@ -318,7 +318,7 @@ describe('<Calendar />', () => {
     });
 
     test('click on day', () => {
-        const wrapper = mount(defaultCalendar);
+        const wrapper = mount(defaultCalendar).children().children();
         // select first day of month
         wrapper
             .find(
@@ -334,7 +334,7 @@ describe('<Calendar />', () => {
     });
 
     test('click on day with range enabled', () => {
-        const wrapper = mount(rangeSelect);
+        const wrapper = mount(rangeSelect).children().children();
         // select first day of month
         wrapper
             .find(
@@ -361,7 +361,7 @@ describe('<Calendar />', () => {
     });
 
     test('click on multiple days with range enabled', () => {
-        const wrapper = mount(rangeSelect);
+        const wrapper = mount(rangeSelect).children().children();
         // select first day of month
         wrapper
             .find(

@@ -96,4 +96,17 @@ describe('<FormRadioItem />', () => {
             ).toBe('Sample');
         });
     });
+    test('forwards the ref', () => {
+        let ref;
+        class Test extends React.Component {
+            constructor(props) {
+                super(props);
+                ref = React.createRef();
+            }
+            render = () => <FormRadioItem ref={ref}>foo</FormRadioItem>;
+        }
+        mount(<Test />);
+        expect(ref.current.tagName).toEqual('INPUT');
+        expect(ref.current.className).toEqual('fd-radio');
+    });
 });

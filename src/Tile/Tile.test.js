@@ -173,4 +173,18 @@ describe('<Tile />', () => {
         expect(wrapper.find('.fd-tile').length).toEqual(0);
         expect(wrapper.find('.fd-tile__content').length).toEqual(0);
     });
+
+    test('forwards the ref', () => {
+        let ref;
+        class Test extends React.Component {
+            constructor(props) {
+                super(props);
+                ref = React.createRef();
+            }
+            render = () => <Tile ref={ref} />;
+        }
+        mount(<Test />);
+        expect(ref.current.tagName).toEqual('DIV');
+        expect(ref.current.className).toEqual('fd-tile');
+    });
 });

@@ -32,7 +32,7 @@ class DocsTile extends Component {
             'frDocs-Content__tile-background': !hideBackground
         });
 
-        const innerDivClasses = classnames('fd-tile__content', {
+        const innerDivClasses = classnames('frDocs-Content__example', {
             'frDocs-tile__centered': centered
         });
 

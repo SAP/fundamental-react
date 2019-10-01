@@ -280,7 +280,7 @@ describe('<Shellbar />', () => {
         wrapper.find('a.fd-menu__item span.sap-icon--grid').simulate('click');
         wrapper.find('span.fd-menu.sap-icon--nav-back').simulate('click');
 
-        expect(wrapper.state(['showCollapsedProductSwitcherMenu'])).toBeFalsy();
+        expect(wrapper.children().children().state(['showCollapsedProductSwitcherMenu'])).toBeFalsy();
     });
 
     describe('Prop spreading', () => {

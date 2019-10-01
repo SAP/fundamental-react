@@ -39,4 +39,17 @@ describe('<Status />', () => {
             ).toBe('Sample');
         });
     });
+    test('forwards the ref', () => {
+        let ref;
+        class Test extends React.Component {
+            constructor(props) {
+                super(props);
+                ref = React.createRef();
+            }
+            render = () => <Status ref={ref} />;
+        }
+        mount(<Test />);
+        expect(ref.current.tagName).toEqual('SPAN');
+        expect(ref.current.className).toEqual('fd-status-label');
+    });
 });

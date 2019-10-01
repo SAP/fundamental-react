@@ -69,4 +69,18 @@ describe('<ListGroup />', () => {
             ).toBe('Sample');
         });
     });
+
+    test('forwards the ref', () => {
+        let ref;
+        class Test extends React.Component {
+            constructor(props) {
+                super(props);
+                ref = React.createRef();
+            }
+            render = () => <ListGroup ref={ref} />;
+        }
+        mount(<Test />);
+        expect(ref.current.tagName).toEqual('UL');
+        expect(ref.current.className).toEqual('fd-list-group');
+    });
 });

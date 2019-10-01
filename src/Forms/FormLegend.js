@@ -1,9 +1,9 @@
-import 'fundamental-styles/dist/fieldset.css';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
+import withStyles from '../utils/WithStyles/WithStyles';
 
-const FormLegend = ({ children, className, ...props }) => {
+const FormLegend = React.forwardRef(({ children, className, disableStyles, ...props }, ref) => {
     const formLegendClasses = classnames(
         'fd-fieldset__legend',
         className
@@ -12,17 +12,22 @@ const FormLegend = ({ children, className, ...props }) => {
     return (
         <legend
             {...props}
-            className={formLegendClasses}>
+            className={formLegendClasses}
+            ref={ref}>
             {children}
         </legend>
     );
-};
+});
 
 FormLegend.displayName = 'FormLegend';
 
 FormLegend.propTypes = {
     children: PropTypes.node,
-    className: PropTypes.string
+    className: PropTypes.string,
+    customStyles: PropTypes.object,
+    disableStyles: PropTypes.bool
 };
 
-export default FormLegend;
+export { FormLegend as __FormLegend };
+
+export default withStyles(FormLegend, { cssFile: 'fieldset' });

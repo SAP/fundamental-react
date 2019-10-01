@@ -1,7 +1,7 @@
 import Icon from './Icon';
+import { mount } from 'enzyme';
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { mount, shallow } from 'enzyme';
 
 describe('<Icon />', () => {
     const mockOnClick = jest.fn();
@@ -30,7 +30,7 @@ describe('<Icon />', () => {
         wrapper.find('.sap-icon--cart').simulate('click');
         expect(wrapper.prop('onClick')).toBeCalledTimes(1);
 
-        wrapper = shallow(iconWithSize);
+        wrapper = mount(iconWithSize);
         wrapper.find('span.sap-icon--cart').simulate('click');
         expect(wrapper.prop('onClick')).toBeUndefined;
     });
@@ -43,5 +43,19 @@ describe('<Icon />', () => {
                 element.getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
         });
+    });
+
+    test('forwards the ref', () => {
+        let ref;
+        class Test extends React.Component {
+            constructor(props) {
+                super(props);
+                ref = React.createRef();
+            }
+            render = () => <Icon glyph='cart' ref={ref} />;
+        }
+        mount(<Test />);
+        expect(ref.current.tagName).toEqual('SPAN');
+        expect(ref.current.className).toEqual('sap-icon--cart');
     });
 });

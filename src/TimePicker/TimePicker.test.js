@@ -76,7 +76,7 @@ describe('<TimePicker />', () => {
     });
 
     test('changing a value', () => {
-        let wrapper = mount(defaultTimePicker);
+        let wrapper = mount(defaultTimePicker).children().children();
         wrapper
             .find('input[type="text"]')
             .at(0)
@@ -90,7 +90,7 @@ describe('<TimePicker />', () => {
                 showHour
                 showMinute
                 showSecond />
-        );
+        ).children().children();
         wrapper
             .find('input[type="text"]')
             .at(0)
@@ -104,7 +104,7 @@ describe('<TimePicker />', () => {
                 showHour={false}
                 showMinute
                 showSecond />
-        );
+        ).children().children();
         wrapper
             .find('input[type="text"]')
             .at(0)
@@ -118,7 +118,7 @@ describe('<TimePicker />', () => {
                 showHour={false}
                 showMinute
                 showSecond={false} />
-        );
+        ).children().children();
         wrapper
             .find('input[type="text"]')
             .at(0)
@@ -126,7 +126,7 @@ describe('<TimePicker />', () => {
 
         expect(wrapper.state('value')).toEqual('4:12:00 am');
 
-        wrapper = mount(twelveHourTime);
+        wrapper = mount(twelveHourTime).children().children();
         wrapper
             .find('input[type="text"]')
             .at(0)
@@ -141,7 +141,7 @@ describe('<TimePicker />', () => {
                 showHour
                 showMinute
                 showSecond={false} />
-        );
+        ).children().children();
         wrapper
             .find('input[type="text"]')
             .at(0)
@@ -156,7 +156,7 @@ describe('<TimePicker />', () => {
                 showHour={false}
                 showMinute
                 showSecond={false} />
-        );
+        ).children().children();
         wrapper
             .find('input[type="text"]')
             .at(0)
@@ -171,7 +171,7 @@ describe('<TimePicker />', () => {
                 showHour
                 showMinute
                 showSecond={false} />
-        );
+        ).children().children();
         wrapper
             .find('input[type="text"]')
             .at(0)
@@ -186,7 +186,7 @@ describe('<TimePicker />', () => {
                 showHour={false}
                 showMinute
                 showSecond />
-        );
+        ).children().children();
 
         wrapper
             .find('input[type="text"]')
@@ -218,25 +218,25 @@ describe('<TimePicker />', () => {
             .find('.fd-input')
             .at(1)
             .simulate('change', { target: { value: fullTime.hour } });
-        expect(wrapper.state('time').hour).toEqual(fullTime.hour);
+        expect(wrapper.children().children().state('time').hour).toEqual(fullTime.hour);
 
         wrapper
             .find('.fd-input')
             .at(2)
             .simulate('change', { target: { value: fullTime.minute } });
-        expect(wrapper.state('time').minute).toEqual(fullTime.minute);
+        expect(wrapper.children().children().state('time').minute).toEqual(fullTime.minute);
 
         wrapper
             .find('.fd-input')
             .at(3)
             .simulate('change', { target: { value: fullTime.second } });
-        expect(wrapper.state('time').second).toEqual(fullTime.second);
+        expect(wrapper.children().children().state('time').second).toEqual(fullTime.second);
 
-        expect(wrapper.state('value')).toEqual('12:29:34 am');
+        expect(wrapper.children().children().state('value')).toEqual('12:29:34 am');
     });
 
     test('check for onBlur of text input', () => {
-        let wrapper = mount(<TimePicker format12Hours />);
+        let wrapper = mount(<TimePicker format12Hours />).children().children();
 
         // check valid input
         wrapper

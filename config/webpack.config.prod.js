@@ -251,6 +251,7 @@ module.exports = {
                     },
                     {
                         test: cssRegex,
+                        exclude: [/customStylesTest/],
                         loader: getStyleLoaders({
                             importLoaders: 1,
                             sourceMap: shouldUseSourceMap
@@ -280,7 +281,7 @@ module.exports = {
         ]
     },
     plugins: [
-    // Generates an `index.html` file with the <script> injected.
+        // Generates an `index.html` file with the <script> injected.
         new HtmlWebpackPlugin({
             inject: true,
             template: paths.appHtml,

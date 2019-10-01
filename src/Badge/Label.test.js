@@ -32,4 +32,17 @@ describe('<Label />', () => {
             ).toBe('Sample');
         });
     });
+    test('forwards the ref', () => {
+        let ref;
+        class Test extends React.Component {
+            constructor(props) {
+                super(props);
+                ref = React.createRef();
+            }
+            render = () => <Label ref={ref} />;
+        }
+        mount(<Test />);
+        expect(ref.current.tagName).toEqual('SPAN');
+        expect(ref.current.className).toEqual('fd-label');
+    });
 });

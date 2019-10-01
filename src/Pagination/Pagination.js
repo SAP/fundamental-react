@@ -1,7 +1,8 @@
-import 'fundamental-styles/dist/pagination.css';
+
 import classnames from 'classnames';
 import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import PropTypes from 'prop-types';
+import withStyles from '../utils/WithStyles/WithStyles';
 import React, { Component } from 'react';
 
 class Pagination extends Component {
@@ -80,6 +81,7 @@ class Pagination extends Component {
             displayTotal,
             totalText,
             className,
+            disableStyles,
             linkProps,
             localizedText,
             displayTotalProps,
@@ -145,6 +147,8 @@ Pagination.propTypes = {
     itemsTotal: PropTypes.number.isRequired,
     onClick: PropTypes.func.isRequired,
     className: PropTypes.string,
+    customStyles: PropTypes.object,
+    disableStyles: PropTypes.bool,
     displayTotal: PropTypes.bool,
     displayTotalProps: PropTypes.object,
     initialPage: PropTypes.number,
@@ -185,4 +189,6 @@ Pagination.propDescriptions = {
     totalText: 'Localized text to display next to the total number of items.  Used with `displayTotal`.'
 };
 
-export default Pagination;
+export { Pagination as __Pagination };
+
+export default withStyles(Pagination, { cssFile: 'pagination', fonts: true, icons: true });

@@ -61,7 +61,7 @@ describe('<Tabs />', () => {
     });
 
     test('tab selection', () => {
-        const wrapper = mount(defaultTabsWithClass);
+        const wrapper = mount(defaultTabsWithClass).children().children();
 
         // check selected tab
         expect(wrapper.state(['selectedIndex'])).toEqual(1);

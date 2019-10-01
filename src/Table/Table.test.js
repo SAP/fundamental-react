@@ -161,4 +161,19 @@ describe('<Table />', () => {
             ).toBe('Sample 1');
         });
     });
+
+    test('forwards the ref', () => {
+        let ref;
+        class Test extends React.Component {
+            constructor(props) {
+                super(props);
+                ref = React.createRef();
+            }
+            render = () => (<Table headers={defaultHeaders}
+                ref={ref} tableData={defaultData} />);
+        }
+        mount(<Test />);
+        expect(ref.current.tagName).toEqual('TABLE');
+        expect(ref.current.className).toEqual('fd-table');
+    });
 });

@@ -21,7 +21,7 @@ class Example extends React.Component {
                 <Heading level={3}>{title}</Heading>
                 {description && <Description>{description}</Description>}
                 <DocsTile centered={centered}>
-                    {element}
+                    {children}
                 </DocsTile>
                 {!omitCodeSample &&
                     <React.Fragment>

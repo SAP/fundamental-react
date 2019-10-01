@@ -1,4 +1,3 @@
-import 'fundamental-styles/dist/input-group.css'; //remove when rebuilt with inputgroup
 import Button from '../Button/Button';
 import FormInput from '../Forms/FormInput';
 import PropTypes from 'prop-types';
@@ -210,12 +209,13 @@ class TimePickerItem extends Component {
         this.setState({ style: VALID });
     };
     render() {
-        const { disabled, inputProps, buttonProps, onClick } = this.props;
+        const { disableStyles, disabled, inputProps, buttonProps, onClick } = this.props;
         return (
             <div className='fd-input-group' onClick={onClick}>
                 <FormInput
                     {...inputProps}
                     className={this.state.style}
+                    disableStyles={disableStyles}
                     id={this.state.inputId}
                     onBlur={this.onBlur}
                     onChange={this.onChange}
@@ -223,13 +223,15 @@ class TimePickerItem extends Component {
                     placeholder={this.props.placeholder}
                     readOnly={disabled}
                     value={this.props.value} />
-                <span className='fd-input-group__addon fd-input-group__addon--button '>
+                <span className='fd-input-group__addon fd-input-group__addon--button'>
                     <Button
                         {...buttonProps}
                         aria-controls='rthHR811'
                         aria-expanded='false'
                         aria-haspopup='true'
+                        className='fd-input-group__button'
                         compact
+                        disableStyles={disableStyles}
                         disabled={disabled}
                         glyph='fob-watch'
                         id={this.state.buttonID}
@@ -247,6 +249,7 @@ TimePickerItem.propTypes = {
     buttonID: PropTypes.string,
     buttonProps: PropTypes.object,
     disabled: PropTypes.bool,
+    disableStyles: PropTypes.bool,
     format12Hours: PropTypes.bool,
     id: PropTypes.string,
     inputId: PropTypes.string,

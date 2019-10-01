@@ -1,19 +1,21 @@
-import 'fundamental-styles/dist/radio.css';
 import FormItem from './FormItem';
 import FormLabel from './FormLabel';
 import PropTypes from 'prop-types';
 import React from 'react';
+import withStyles from '../utils/WithStyles/WithStyles';
 
-const FormRadioItem = ({ checked, children, className, defaultChecked, disabled, id, inline, inputProps, labelProps, name, value, ...props }) => {
+const FormRadioItem = React.forwardRef(({ checked, children, className, defaultChecked, disabled, disableStyles, id, inline, inputProps, labelProps, name, value, ...props }, ref) => {
 
     return (
         <FormItem
             {...props}
             className={className}
+            disableStyles={disableStyles}
             isInline={inline}
             key={id}>
             <FormLabel
                 {...labelProps}
+                disableStyles={disableStyles}
                 disabled={disabled}>
                 <input
                     {...inputProps}
@@ -22,13 +24,14 @@ const FormRadioItem = ({ checked, children, className, defaultChecked, disabled,
                     disabled={disabled}
                     id={id}
                     name={name}
+                    ref={ref}
                     type='radio'
                     value={value} />
                 {children}
             </FormLabel>
         </FormItem>
     );
-};
+});
 
 FormRadioItem.displayName = 'FormRadioItem';
 
@@ -36,8 +39,10 @@ FormRadioItem.propTypes = {
     children: PropTypes.node.isRequired,
     checked: PropTypes.bool,
     className: PropTypes.string,
+    customStyles: PropTypes.object,
     defaultChecked: PropTypes.bool,
     disabled: PropTypes.bool,
+    disableStyles: PropTypes.bool,
     id: PropTypes.string,
     inline: PropTypes.bool,
     inputProps: PropTypes.object,
@@ -54,4 +59,6 @@ FormRadioItem.propDescriptions = {
     value: 'Sets the `value` for the radio input.'
 };
 
-export default FormRadioItem;
+export { FormRadioItem as __FormRadioItem };
+
+export default withStyles(FormRadioItem, { cssFile: 'radio' });

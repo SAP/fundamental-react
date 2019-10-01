@@ -3,6 +3,7 @@ import Popover from '../Popover/Popover';
 import PropTypes from 'prop-types';
 import Time from '../Time/Time';
 import TimePickerItem from './_TimePickerItem';
+import withStyles from '../utils/WithStyles/WithStyles';
 import React, { Component } from 'react';
 
 class TimePicker extends Component {
@@ -89,6 +90,7 @@ class TimePicker extends Component {
     // };
     render() {
         const {
+            disableStyles,
             popoverProps,
             id,
             inputProps,
@@ -106,6 +108,7 @@ class TimePicker extends Component {
             ...props
         } = this.props;
         const { popoverId, timeId } = this.state;
+
         return (
             <div
                 {...props}
@@ -115,6 +118,7 @@ class TimePicker extends Component {
                     body={
                         <Time
                             {...timeProps}
+                            disableStyles={disableStyles}
                             disabled={this.state.disabled}
                             format12Hours={this.state.format12Hours}
                             id={timeId}
@@ -129,6 +133,7 @@ class TimePicker extends Component {
                         <TimePickerItem
                             {...props}
                             buttonProps={buttonProps}
+                            disableStyles={disableStyles}
                             disabled={this.state.disabled}
                             format12Hours={format12Hours}
                             id={id}
@@ -144,6 +149,7 @@ class TimePicker extends Component {
                             updateValue={this.updateValue}
                             value={this.state.value} />
                     }
+                    disableStyles={disableStyles}
                     id={popoverId}
                     noArrow />
             </div>
@@ -192,4 +198,6 @@ TimePicker.propDescriptions = {
     value: 'Initial time value for the input.'
 };
 
-export default TimePicker;
+export { TimePicker as __TimePicker };
+
+export default withStyles(TimePicker, { cssFile: 'input-group' });

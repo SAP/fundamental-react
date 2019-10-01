@@ -30,13 +30,13 @@ exports[`<TimePicker /> create time picker 1`] = `
             value=""
           />
           <span
-            className="fd-input-group__addon fd-input-group__addon--button "
+            className="fd-input-group__addon fd-input-group__addon--button"
           >
             <button
               aria-controls="rthHR811"
               aria-expanded="false"
               aria-haspopup="true"
-              className="fd-button--light fd-button--compact sap-icon--fob-watch"
+              className="fd-button--light fd-button--compact sap-icon--fob-watch fd-input-group__button"
               id="myTime-button"
             />
           </span>
@@ -74,13 +74,13 @@ exports[`<TimePicker /> create time picker 2`] = `
             value=""
           />
           <span
-            className="fd-input-group__addon fd-input-group__addon--button "
+            className="fd-input-group__addon fd-input-group__addon--button"
           >
             <button
               aria-controls="rthHR811"
               aria-expanded="false"
               aria-haspopup="true"
-              className="fd-button--light fd-button--compact sap-icon--fob-watch"
+              className="fd-button--light fd-button--compact sap-icon--fob-watch fd-input-group__button"
             />
           </span>
         </div>
@@ -117,13 +117,13 @@ exports[`<TimePicker /> create time picker 3`] = `
             value=""
           />
           <span
-            className="fd-input-group__addon fd-input-group__addon--button "
+            className="fd-input-group__addon fd-input-group__addon--button"
           >
             <button
               aria-controls="rthHR811"
               aria-expanded="false"
               aria-haspopup="true"
-              className="fd-button--light fd-button--compact sap-icon--fob-watch"
+              className="fd-button--light fd-button--compact sap-icon--fob-watch fd-input-group__button"
             />
           </span>
         </div>
@@ -161,13 +161,13 @@ exports[`<TimePicker /> create time picker 4`] = `
             value=""
           />
           <span
-            className="fd-input-group__addon fd-input-group__addon--button "
+            className="fd-input-group__addon fd-input-group__addon--button"
           >
             <button
               aria-controls="rthHR811"
               aria-expanded="false"
               aria-haspopup="true"
-              className="fd-button--light fd-button--compact sap-icon--fob-watch is-disabled"
+              className="fd-button--light fd-button--compact sap-icon--fob-watch is-disabled fd-input-group__button"
               disabled={true}
             />
           </span>
@@ -205,13 +205,13 @@ exports[`<TimePicker /> create time picker 5`] = `
             value=""
           />
           <span
-            className="fd-input-group__addon fd-input-group__addon--button "
+            className="fd-input-group__addon fd-input-group__addon--button"
           >
             <button
               aria-controls="rthHR811"
               aria-expanded="false"
               aria-haspopup="true"
-              className="fd-button--light fd-button--compact sap-icon--fob-watch"
+              className="fd-button--light fd-button--compact sap-icon--fob-watch fd-input-group__button"
             />
           </span>
         </div>
@@ -248,13 +248,13 @@ exports[`<TimePicker /> create time picker 6`] = `
             value=""
           />
           <span
-            className="fd-input-group__addon fd-input-group__addon--button "
+            className="fd-input-group__addon fd-input-group__addon--button"
           >
             <button
               aria-controls="rthHR811"
               aria-expanded="false"
               aria-haspopup="true"
-              className="fd-button--light fd-button--compact sap-icon--fob-watch"
+              className="fd-button--light fd-button--compact sap-icon--fob-watch fd-input-group__button"
             />
           </span>
         </div>
@@ -291,13 +291,13 @@ exports[`<TimePicker /> create time picker 7`] = `
             value=""
           />
           <span
-            className="fd-input-group__addon fd-input-group__addon--button "
+            className="fd-input-group__addon fd-input-group__addon--button"
           >
             <button
               aria-controls="rthHR811"
               aria-expanded="false"
               aria-haspopup="true"
-              className="fd-button--light fd-button--compact sap-icon--fob-watch"
+              className="fd-button--light fd-button--compact sap-icon--fob-watch fd-input-group__button"
             />
           </span>
         </div>
@@ -334,13 +334,13 @@ exports[`<TimePicker /> create time picker 8`] = `
             value=""
           />
           <span
-            className="fd-input-group__addon fd-input-group__addon--button "
+            className="fd-input-group__addon fd-input-group__addon--button"
           >
             <button
               aria-controls="rthHR811"
               aria-expanded="false"
               aria-haspopup="true"
-              className="fd-button--light fd-button--compact sap-icon--fob-watch"
+              className="fd-button--light fd-button--compact sap-icon--fob-watch fd-input-group__button"
             />
           </span>
         </div>
@@ -377,13 +377,13 @@ exports[`<TimePicker /> create time picker 9`] = `
             value=""
           />
           <span
-            className="fd-input-group__addon fd-input-group__addon--button "
+            className="fd-input-group__addon fd-input-group__addon--button"
           >
             <button
               aria-controls="rthHR811"
               aria-expanded="false"
               aria-haspopup="true"
-              className="fd-button--light fd-button--compact sap-icon--fob-watch"
+              className="fd-button--light fd-button--compact sap-icon--fob-watch fd-input-group__button"
             />
           </span>
         </div>
@@ -420,13 +420,13 @@ exports[`<TimePicker /> create time picker 10`] = `
             value=""
           />
           <span
-            className="fd-input-group__addon fd-input-group__addon--button "
+            className="fd-input-group__addon fd-input-group__addon--button"
           >
             <button
               aria-controls="rthHR811"
               aria-expanded="false"
               aria-haspopup="true"
-              className="fd-button--light fd-button--compact sap-icon--fob-watch"
+              className="fd-button--light fd-button--compact sap-icon--fob-watch fd-input-group__button"
             />
           </span>
         </div>

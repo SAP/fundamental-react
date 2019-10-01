@@ -1,5 +1,3 @@
-import 'fundamental-styles/dist/input-group.css'; //remove when replaced with InputGroup component
-import 'fundamental-styles/dist/localization-editor.css';
 import Button from '../Button/Button';
 import classnames from 'classnames';
 import FormInput from '../Forms/FormInput';
@@ -9,9 +7,11 @@ import Menu from '../Menu/Menu';
 import Popover from '../Popover/Popover';
 import PropTypes from 'prop-types';
 import React from 'react';
+import withStyles from '../utils/WithStyles/WithStyles';
 
 
-const LocalizationEditor = ({ control, menu, id, compact, textarea, className, inputClassName, listProps, popoverProps, ...props }) => {
+const LocalizationEditor = React.forwardRef(({ control, menu, id, compact, textarea, className, inputClassName, listProps, popoverProps,
+    disableStyles, ...props }, ref) => {
 
     const localizationEditorClasses = classnames(
         'fd-localization-editor',
@@ -24,16 +24,18 @@ const LocalizationEditor = ({ control, menu, id, compact, textarea, className, i
     );
 
     return (
-        <div {...props} className={localizationEditorClasses}>
+        <div {...props} className={localizationEditorClasses}
+            ref={ref}>
             <FormLabel
                 {...control.labelProps}
+                disableStyles={disableStyles}
                 htmlFor={id}>
                 {control.label}
             </FormLabel>
             <Popover
                 {...popoverProps}
                 body={
-                    <Menu>
+                    <Menu disableStyles={disableStyles}>
                         <Menu.List {...listProps}>
                             {menu.map((item, index) => {
                                 let {
@@ -49,18 +51,24 @@ const LocalizationEditor = ({ control, menu, id, compact, textarea, className, i
                                         key={index}>
                                         <div className='fd-input-group fd-input-group--after'>
                                             {textarea ? (
-                                                <FormTextArea className={localizationInputClasses} {...inputProps} />
+                                                <FormTextArea
+                                                    {...inputProps}
+                                                    className={localizationInputClasses}
+                                                    disableStyles={disableStyles} />
                                             ) : (
                                                 <FormInput
                                                     {...inputProps}
                                                     className={localizationInputClasses}
                                                     compact={compact}
+                                                    disableStyles={disableStyles}
                                                     placeholder={placeholder} />
                                             )}
                                             <span
                                                 className='fd-input-group__addon fd-input-group__addon--button'>
                                                 <Button
+                                                    className='fd-input-group__button'
                                                     compact={compact}
+                                                    disableStyles={disableStyles}
                                                     option='light'>
                                                     {language}
                                                 </Button>
@@ -79,30 +87,35 @@ const LocalizationEditor = ({ control, menu, id, compact, textarea, className, i
                             <FormTextArea
                                 {...control.inputProps}
                                 className={localizationInputClasses}
-                                compact={compact} />
+                                compact={compact}
+                                disableStyles={disableStyles} />
                         ) : (
                             <FormInput
                                 {...control.inputProps}
                                 className={localizationInputClasses}
                                 compact={compact}
+                                disableStyles={disableStyles}
                                 placeholder={control.placeholder} />
                         )}
                         <span
                             className='fd-input-group__addon fd-input-group__addon--button'>
                             <Button
                                 {...control.buttonProps}
+                                className='fd-input-group__button'
                                 compact={compact}
+                                disableStyles={disableStyles}
                                 option='light'>
                                 {control.language}
                             </Button>
                         </span>
                     </div>
                 }
+                disableStyles={disableStyles}
                 id={id}
                 noArrow />
         </div>
     );
-};
+});
 
 LocalizationEditor.displayName = 'LocalizationEditor';
 
@@ -124,6 +137,8 @@ LocalizationEditor.propTypes = {
     ).isRequired,
     className: PropTypes.string,
     compact: PropTypes.bool,
+    customStyles: PropTypes.object,
+    disableStyles: PropTypes.bool,
     id: PropTypes.string,
     inputClassName: PropTypes.string,
     listProps: PropTypes.object,
@@ -141,4 +156,6 @@ LocalizationEditor.propDescriptions = {
     textarea: 'Set to **true** to enable a Localization Editor with a textarea.'
 };
 
-export default LocalizationEditor;
+export { LocalizationEditor as __LocalizationEditor };
+
+export default withStyles(LocalizationEditor, { cssFile: ['input-group', 'localization-editor'] });

@@ -27,4 +27,18 @@ describe('<FormSelect />', () => {
             ).toBe('Sample');
         });
     });
+
+    test('forwards the ref', () => {
+        let ref;
+        class Test extends React.Component {
+            constructor(props) {
+                super(props);
+                ref = React.createRef();
+            }
+            render = () => <FormSelect ref={ref} />;
+        }
+        mount(<Test />);
+        expect(ref.current.tagName).toEqual('SELECT');
+        expect(ref.current.className).toEqual('fd-form-select');
+    });
 });

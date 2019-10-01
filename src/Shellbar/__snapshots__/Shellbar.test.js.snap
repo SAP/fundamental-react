@@ -210,7 +210,7 @@ exports[`<Shellbar /> create shellbar 3`] = `
                   className="fd-input-group__addon fd-input-group__addon--button"
                 >
                   <button
-                    className="fd-button--light sap-icon--search fd-shellbar__button"
+                    className="fd-button--light sap-icon--search fd-input-group__button"
                     onClick={[Function]}
                   />
                 </span>
@@ -471,7 +471,7 @@ exports[`<Shellbar /> create shellbar 4`] = `
                   className="fd-input-group__addon fd-input-group__addon--button"
                 >
                   <button
-                    className="fd-button--light sap-icon--search fd-shellbar__button"
+                    className="fd-button--light sap-icon--search fd-input-group__button"
                     onClick={[Function]}
                   />
                 </span>
@@ -725,7 +725,7 @@ exports[`<Shellbar /> create shellbar 5`] = `
                   className="fd-input-group__addon fd-input-group__addon--button"
                 >
                   <button
-                    className="fd-button--light sap-icon--search fd-shellbar__button"
+                    className="fd-button--light sap-icon--search fd-input-group__button"
                     onClick={[Function]}
                   />
                 </span>
@@ -965,7 +965,7 @@ exports[`<Shellbar /> create shellbar 6`] = `
                   className="fd-input-group__addon fd-input-group__addon--button"
                 >
                   <button
-                    className="fd-button--light sap-icon--search fd-shellbar__button"
+                    className="fd-button--light sap-icon--search fd-input-group__button"
                     onClick={[Function]}
                   />
                 </span>

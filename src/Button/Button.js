@@ -1,13 +1,14 @@
-import 'fundamental-styles/dist/button.css';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
+import withStyles from '../utils/WithStyles/WithStyles';
 import { BUTTON_OPTIONS, BUTTON_TYPES } from '../utils/constants';
 
-const Button = ({
+const Button = React.forwardRef(({
     option,
     type,
     compact,
+    disableStyles,
     glyph,
     selected,
     disabled,
@@ -16,7 +17,7 @@ const Button = ({
     children,
     className,
     ...props
-}) => {
+}, ref) => {
     const buttonClasses = classnames(
         {
             'fd-button': !option,
@@ -32,11 +33,12 @@ const Button = ({
 
     return (<button {...props} className={buttonClasses}
         disabled={disabled} onClick={onClick}
+        ref={ref}
         selected={selected}
         type={typeAttr}>
         {children}
     </button>);
-};
+});
 
 Button.displayName = 'Button';
 
@@ -44,7 +46,9 @@ Button.propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,
     compact: PropTypes.bool,
+    customStyles: PropTypes.object,
     disabled: PropTypes.bool,
+    disableStyles: PropTypes.bool,
     glyph: PropTypes.string,
     option: PropTypes.oneOf(BUTTON_OPTIONS),
     selected: PropTypes.bool,
@@ -59,4 +63,6 @@ Button.propDescriptions = {
     typeAttr: 'Value for the `type` attribute on the `<button>` element.'
 };
 
-export default Button;
+export { Button as __Button };
+
+export default withStyles(Button, { cssFile: 'button', font: true, icons: true });

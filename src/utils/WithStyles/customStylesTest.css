@@ -1,0 +1,18 @@
+.fd-action-bar, .fd-alert,
+.fd-button, .fd-badge, .fd-breadcrumb, .fd-button-group,
+.fd-counter, .fd-calendar, .fd-checkbox,
+.fd-fieldset, .fd-fieldset__legend, .fd-form-group, .fd-form-input, .fd-form-item, .fd-form-label, .fd-form-message, .fd-form-select,
+.fd-label, .fd-status-label,
+.fd-identifier, .fd-inline-help, .fd-input, .fd-input-group, .fd-input-group__input,
+.fd-layout-grid, .fd-link, .fd-list-group, .fd-localization-editor,
+.fd-menu, .fd-modal, .fd-multi-input,
+.fd-overlay,
+.fd-pagination, .fd-panel, .fd-popover, .fd-product-tile,
+.fd-shellbar, .fd-side-nav,
+.fd-table, .fd-table__header, .fd-table__row, .fd-table__cell,
+.fd-tabs__item, .fd-table__link, .fd-textarea,
+.fd-tabs, .fd-tile, .fd-time, .fd-toggle, .fd-token, .fd-tree,
+.sap-icon--cart {
+    background-color: hotpink;
+    color: purple;
+}

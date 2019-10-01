@@ -1,10 +1,10 @@
-import 'fundamental-styles/dist/label.css';
 import classnames from 'classnames';
 import { LABEL_TYPES } from '../utils/constants';
 import PropTypes from 'prop-types';
 import React from 'react';
+import withStyles from '../utils/WithStyles/WithStyles';
 
-const Label = ({ type, children, className, ...props }) => {
+const Label = React.forwardRef(({ type, children, className, disableStyles, ...props }, ref) => {
     const labelClasses = classnames(
         'fd-label',
         {
@@ -13,14 +13,19 @@ const Label = ({ type, children, className, ...props }) => {
         className
     );
 
-    return <span {...props} className={labelClasses}>{children}</span>;
-};
+    return (<span {...props} className={labelClasses}
+        ref={ref}>{children}</span>);
+});
 Label.displayName = 'Label';
 
 Label.propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,
+    customStyles: PropTypes.object,
+    disableStyles: PropTypes.bool,
     type: PropTypes.oneOf(LABEL_TYPES)
 };
 
-export default Label;
+export { Label as __Label };
+
+export default withStyles(Label, { cssFile: 'label', font: true });
