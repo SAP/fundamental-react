@@ -251,7 +251,6 @@ module.exports = {
                     },
                     {
                         test: cssRegex,
-                        exclude: /src\/utils\/withStyles\/customStylesTest.css/,
                         loader: getStyleLoaders({
                             importLoaders: 1,
                             sourceMap: shouldUseSourceMap
@@ -281,7 +280,8 @@ module.exports = {
         ]
     },
     plugins: [
-    // Generates an `index.html` file with the <script> injected.
+        new webpack.IgnorePlugin(/src\/utils\/withStyles\/customStylesTest.css/),
+        // Generates an `index.html` file with the <script> injected.
         new HtmlWebpackPlugin({
             inject: true,
             template: paths.appHtml,
