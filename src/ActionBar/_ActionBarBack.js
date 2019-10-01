@@ -2,7 +2,6 @@ import Button from '../Button/Button';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
-import withStyles from '../utils/WithStyles/WithStyles';
 
 const ActionBarBack = React.forwardRef(({ onClick, className, buttonProps, disableStyles, ...props }, ref) => {
     const actionBarBackClasses = classnames(
@@ -34,4 +33,4 @@ ActionBarBack.propTypes = {
     onClick: PropTypes.func
 };
 
-export default withStyles(ActionBarBack);
+export default ActionBarBack;
