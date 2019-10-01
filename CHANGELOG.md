@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.7.0-rc.68"></a>
+# [0.7.0-rc.68](https://github.com/SAP/fundamental-react/compare/v0.7.0-rc.67...v0.7.0-rc.68) (2019-10-01)
+
+
+### Features
+
+* wrap all components with withStyles HOC ([#749](https://github.com/SAP/fundamental-react/issues/749)) ([f4f08d7](https://github.com/SAP/fundamental-react/commit/f4f08d7))
+
+
+
 <a name="0.7.0-rc.67"></a>
 # [0.7.0-rc.67](https://github.com/SAP/fundamental-react/compare/v0.7.0-rc.66...v0.7.0-rc.67) (2019-10-01)
 
