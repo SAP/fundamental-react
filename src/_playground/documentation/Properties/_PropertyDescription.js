@@ -3,11 +3,7 @@ import React from 'react';
 import ReactMarkdown from 'react-markdown/with-html';
 
 const PropertyDescription = ({ description }) => (
-    <React.Fragment>
-        <div>
-            <ReactMarkdown escapeHtml={false} source={description} />
-        </div>
-    </React.Fragment>
+    <ReactMarkdown escapeHtml={false} source={description} />
 );
 
 PropertyDescription.displayName = 'PropertyDescription';
