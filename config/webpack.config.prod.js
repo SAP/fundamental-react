@@ -180,7 +180,6 @@ module.exports = {
             { parser: { requireEnsure: false } },
             {
                 test: /\.(js|mjs|jsx)$/,
-                exclude: /\.stories.js$/,
                 enforce: 'pre',
                 use: [
                     {
@@ -205,7 +204,6 @@ module.exports = {
                     },
                     {
                         test: /\.(js|mjs|jsx|ts|tsx)$/,
-                        exclude: /\.stories.js$/,
                         include: paths.appSrc,
 
                         loader: require.resolve('babel-loader'),
@@ -233,7 +231,7 @@ module.exports = {
                     },
                     {
                         test: /\.(js|mjs)$/,
-                        exclude: [/@babel(?:\/|\\{1,2})runtime/, /\.stories.js$/],
+                        exclude: /@babel(?:\/|\\{1,2})runtime/,
                         loader: require.resolve('babel-loader'),
                         options: {
                             babelrc: false,
@@ -253,6 +251,7 @@ module.exports = {
                     },
                     {
                         test: cssRegex,
+                        exclude: [/customStylesTest/],
                         loader: getStyleLoaders({
                             importLoaders: 1,
                             sourceMap: shouldUseSourceMap
