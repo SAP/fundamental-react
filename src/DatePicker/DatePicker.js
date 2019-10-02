@@ -354,12 +354,12 @@ class DatePicker extends Component {
                             }
                             disableAfterDate={disableAfterDate}
                             disableBeforeDate={disableBeforeDate}
+                            disabledDates={disabledDates}
                             disableFutureDates={disableFutureDates}
                             disablePastDates={disablePastDates}
                             disableStyles={disableStyles}
                             disableWeekday={disableWeekday}
                             disableWeekends={disableWeekends}
-                            disabledDates={disabledDates}
                             enableRangeSelection={enableRangeSelection}
                             onChange={this.updateDate}
                             ref={this.calendarRef} />

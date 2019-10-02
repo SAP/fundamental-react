@@ -31,13 +31,13 @@ const Checkbox = React.forwardRef(({ checked, className, defaultChecked, disable
     return (
         <FormItem
             {...props}
-            disableStyles={disableStyles}
             disabled={disabled}
+            disableStyles={disableStyles}
             isInline={inline}
             ref={ref}>
             <FormLabel {...labelProps}
-                disableStyles={disableStyles}
-                disabled={disabled}>
+                disabled={disabled}
+                disableStyles={disableStyles}>
                 <input
                     {...inputProps}
                     aria-checked={getCheckStatus(checked, indeterminate)}

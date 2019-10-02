@@ -33,7 +33,7 @@ storiesOf('Components|TabGroup', module)
             <Tab disableStyles title='Tab 2'>
                 Numquam libero id corporis odit animi voluptat, Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus quia tempore eligendi tempora repellat officia rerum laudantium, veritatis officiis asperiores ipsum nam, distinctio, dolor provident culpa voluptatibus esse deserunt animi?
             </Tab>
-            <Tab disableStyles disabled
+            <Tab disabled disableStyles
                 title='Tab 3'>
                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
             </Tab>
@@ -50,7 +50,7 @@ storiesOf('Components|TabGroup', module)
             <Tab disableStyles title='Tab 2'>
                 Numquam libero id corporis odit animi voluptat, Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus quia tempore eligendi tempora repellat officia rerum laudantium, veritatis officiis asperiores ipsum nam, distinctio, dolor provident culpa voluptatibus esse deserunt animi?
             </Tab>
-            <Tab disableStyles disabled
+            <Tab disabled disableStyles
                 title='Tab 3'>
                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
             </Tab>

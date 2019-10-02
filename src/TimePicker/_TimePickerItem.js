@@ -231,8 +231,8 @@ class TimePickerItem extends Component {
                         aria-haspopup='true'
                         className='fd-input-group__button'
                         compact
-                        disableStyles={disableStyles}
                         disabled={disabled}
+                        disableStyles={disableStyles}
                         glyph='fob-watch'
                         id={this.state.buttonID}
                         option='light' />

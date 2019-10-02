@@ -101,8 +101,8 @@ class Time extends Component {
                 {showHour ? (
                     <TimeItem
                         defaultValue={1}
-                        disableStyles={disableStyles}
                         disabled={disabled}
+                        disableStyles={disableStyles}
                         downButtonProps={hoursDownButtonProps}
                         format12Hours={format12Hours}
                         inputProps={hoursInputProps}
@@ -123,8 +123,8 @@ class Time extends Component {
                 {showMinute ? (
                     <TimeItem
                         defaultValue={1}
-                        disableStyles={disableStyles}
                         disabled={disabled}
+                        disableStyles={disableStyles}
                         downButtonProps={minutesDownButtonProps}
                         format12Hours={format12Hours}
                         inputProps={minutesInputProps}
@@ -145,8 +145,8 @@ class Time extends Component {
                 {showSecond ? (
                     <TimeItem
                         defaultValue={1}
-                        disableStyles={disableStyles}
                         disabled={disabled}
+                        disableStyles={disableStyles}
                         downButtonProps={secondsDownButtonProps}
                         format12Hours={format12Hours}
                         inputProps={secondsInputProps}
@@ -166,8 +166,8 @@ class Time extends Component {
                 {/* Meridiem */}
                 {format12Hours ? (
                     <TimeItem
-                        disableStyles={disableStyles}
                         disabled={disabled}
+                        disableStyles={disableStyles}
                         downButtonProps={meridiemDownButtonProps}
                         inputProps={meridiemInputProps}
                         localizedText={localizedText}
