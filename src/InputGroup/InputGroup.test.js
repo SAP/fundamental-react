@@ -1,6 +1,7 @@
 import { Button } from '../';
 import InputGroup from './InputGroup';
 import { mount } from 'enzyme';
+import { mountComponent } from '../utils/testUtils';
 import React from 'react';
 import renderer from 'react-test-renderer';
 
@@ -216,7 +217,7 @@ describe('<InputGroup />', () => {
     });
 
     test('input text entered', () => {
-        const wrapper = mount(inputTextPosBefore).children().children();
+        const wrapper = mountComponent(inputTextPosBefore);
 
         // click up
         wrapper.setState({ value: '' });
@@ -228,7 +229,7 @@ describe('<InputGroup />', () => {
     });
 
     test('number input handle up and down', () => {
-        const wrapper = mount(numberInput).children().children();
+        const wrapper = mountComponent(numberInput);
 
         // click up
         wrapper.setState({ value: 0 });

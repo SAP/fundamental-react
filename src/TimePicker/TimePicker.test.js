@@ -1,4 +1,5 @@
 import { mount } from 'enzyme';
+import { mountComponent } from '../utils/testUtils';
 import React from 'react';
 import renderer from 'react-test-renderer';
 import TimePicker from './TimePicker';
@@ -76,7 +77,7 @@ describe('<TimePicker />', () => {
     });
 
     test('changing a value', () => {
-        let wrapper = mount(defaultTimePicker).children().children();
+        let wrapper = mountComponent(defaultTimePicker);
         wrapper
             .find('input[type="text"]')
             .at(0)
@@ -84,13 +85,13 @@ describe('<TimePicker />', () => {
 
         expect(wrapper.state('value')).toEqual('12:34:56');
 
-        wrapper = mount(
+        wrapper = mountComponent(
             <TimePicker
                 format12Hours={false}
                 showHour
                 showMinute
                 showSecond />
-        ).children().children();
+        );
         wrapper
             .find('input[type="text"]')
             .at(0)
@@ -98,13 +99,13 @@ describe('<TimePicker />', () => {
 
         expect(wrapper.state('value')).toEqual('12:34 am');
 
-        wrapper = mount(
+        wrapper = mountComponent(
             <TimePicker
                 format12Hours
                 showHour={false}
                 showMinute
                 showSecond />
-        ).children().children();
+        );
         wrapper
             .find('input[type="text"]')
             .at(0)
@@ -112,13 +113,13 @@ describe('<TimePicker />', () => {
 
         expect(wrapper.state('value')).toEqual('12:34 am');
 
-        wrapper = mount(
+        wrapper = mountComponent(
             <TimePicker
                 format12Hours
                 showHour={false}
                 showMinute
                 showSecond={false} />
-        ).children().children();
+        );
         wrapper
             .find('input[type="text"]')
             .at(0)
@@ -126,7 +127,7 @@ describe('<TimePicker />', () => {
 
         expect(wrapper.state('value')).toEqual('4:12:00 am');
 
-        wrapper = mount(twelveHourTime).children().children();
+        wrapper = mountComponent(twelveHourTime);
         wrapper
             .find('input[type="text"]')
             .at(0)
@@ -135,13 +136,13 @@ describe('<TimePicker />', () => {
         expect(wrapper.state('value')).toEqual('12:24:34 pm');
 
         // just hour and minute,  12 hr format
-        wrapper = mount(
+        wrapper = mountComponent(
             <TimePicker
                 format12Hours
                 showHour
                 showMinute
                 showSecond={false} />
-        ).children().children();
+        );
         wrapper
             .find('input[type="text"]')
             .at(0)
@@ -150,13 +151,13 @@ describe('<TimePicker />', () => {
         expect(wrapper.state('value')).toEqual('12:34 am');
 
         // just minute, 12 hr format
-        wrapper = mount(
+        wrapper = mountComponent(
             <TimePicker
                 format12Hours
                 showHour={false}
                 showMinute
                 showSecond={false} />
-        ).children().children();
+        );
         wrapper
             .find('input[type="text"]')
             .at(0)
@@ -165,13 +166,13 @@ describe('<TimePicker />', () => {
         expect(wrapper.state('value')).toEqual('00:24:00 am');
 
         // just hour and minute, no 12 hr format
-        wrapper = mount(
+        wrapper = mountComponent(
             <TimePicker
                 format12Hours={false}
                 showHour
                 showMinute
                 showSecond={false} />
-        ).children().children();
+        );
         wrapper
             .find('input[type="text"]')
             .at(0)
@@ -180,13 +181,13 @@ describe('<TimePicker />', () => {
         expect(wrapper.state('value')).toEqual('12:34');
 
         // just minute and second, no 12 hr format
-        wrapper = mount(
+        wrapper = mountComponent(
             <TimePicker
                 format12Hours={false}
                 showHour={false}
                 showMinute
                 showSecond />
-        ).children().children();
+        );
 
         wrapper
             .find('input[type="text"]')
@@ -236,7 +237,7 @@ describe('<TimePicker />', () => {
     });
 
     test('check for onBlur of text input', () => {
-        let wrapper = mount(<TimePicker format12Hours />).children().children();
+        let wrapper = mountComponent(<TimePicker format12Hours />);
 
         // check valid input
         wrapper

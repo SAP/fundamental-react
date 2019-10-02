@@ -1,5 +1,6 @@
 import Menu from '../Menu/Menu';
 import { mount } from 'enzyme';
+import { mountComponent } from '../utils/testUtils';
 import React from 'react';
 import renderer from 'react-test-renderer';
 import Shellbar from './Shellbar';

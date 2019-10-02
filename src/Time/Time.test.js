@@ -1,4 +1,5 @@
 import { mount } from 'enzyme';
+import { mountComponent } from '../utils/testUtils';
 import React from 'react';
 import renderer from 'react-test-renderer';
 import Time from './Time';
@@ -61,7 +62,7 @@ describe('<Time />', () => {
     });
 
     test('time number up click', () => {
-        const wrapper = mount(twelveHour).children().children();
+        const wrapper = mountComponent(twelveHour);
 
         // hour timer click up
         expect(wrapper.state('time').hour).toEqual('12');
@@ -85,7 +86,7 @@ describe('<Time />', () => {
     });
 
     test('time number up merdiem click', () => {
-        const wrapper = mount(timeMeridiemSet).children().children();
+        const wrapper = mountComponent(timeMeridiemSet);
 
         // hour timer click up
         expect(wrapper.state('time').hour).toEqual(22);
@@ -109,7 +110,7 @@ describe('<Time />', () => {
     });
     //TO DO: what is this test even trying to test?
     xtest('time number down click on merdiem time', () => {
-        const wrapper = mount(meridiemTime).children().children();
+        const wrapper = mountComponent(meridiemTime);
         // hour timer click down
         expect(wrapper.state('time').hour).toEqual('12');
         // 3 down clicks
@@ -135,7 +136,7 @@ describe('<Time />', () => {
     });
 
     test('time number down click', () => {
-        let wrapper = mount(twelveHour).children().children();
+        let wrapper = mountComponent(twelveHour);
 
         // hour timer click down
         expect(wrapper.state('time').hour).toEqual('12');
@@ -160,12 +161,12 @@ describe('<Time />', () => {
 
     // Down arrow clicks
     test('clicking down on meridiem', () => {
-        let wrapper = mount(
+        let wrapper = mountComponent(
             <Time
                 format12Hours
                 name='meridiem'
                 time={{ hour: 0, minute: 0, second: 0, meridiem: 0 }} />
-        ).children().children();
+        );
         expect(wrapper.state('time').hour).toEqual(0);
         wrapper
             .find(
@@ -179,12 +180,12 @@ describe('<Time />', () => {
     });
 
     test('clicking down on hours', () => {
-        let wrapper = mount(
+        let wrapper = mountComponent(
             <Time
                 format12Hours={false}
                 name='meridiem'
                 time={{ hour: 0, minute: 0, second: 0, meridiem: 0 }} />
-        ).children().children();
+        );
         expect(wrapper.state('time').hour).toEqual(0);
         wrapper
             .find(
@@ -196,12 +197,12 @@ describe('<Time />', () => {
         expect(wrapper.state('time').minute).toEqual(0);
         expect(wrapper.state('time').second).toEqual(0);
 
-        wrapper = mount(
+        wrapper = mountComponent(
             <Time
                 format12Hours
                 name='meridiem'
                 time={{ hour: 1, minute: 0, second: 0, meridiem: 0 }} />
-        ).children().children();
+        );
         expect(wrapper.state('time').hour).toEqual(1);
         wrapper
             .find(
@@ -214,12 +215,12 @@ describe('<Time />', () => {
         expect(wrapper.state('time').second).toEqual(0);
         expect(wrapper.state('time').meridiem).toEqual(0);
 
-        wrapper = mount(
+        wrapper = mountComponent(
             <Time
                 format12Hours
                 name='meridiem'
                 time={{ hour: 12, minute: 0, second: 0, meridiem: 0 }} />
-        ).children().children();
+        );
         expect(wrapper.state('time').hour).toEqual(12);
         wrapper
             .find(
@@ -234,12 +235,12 @@ describe('<Time />', () => {
     });
 
     test('clicking down on minutes', () => {
-        let wrapper = mount(
+        let wrapper = mountComponent(
             <Time
                 format12Hours={false}
                 name='meridiem'
                 time={{ hour: 1, minute: 0, second: 0, meridiem: 0 }} />
-        ).children().children();
+        );
         expect(wrapper.state('time').minute).toEqual(0);
         wrapper
             .find(
@@ -251,12 +252,12 @@ describe('<Time />', () => {
         expect(wrapper.state('time').minute).toEqual(59);
         expect(wrapper.state('time').second).toEqual(0);
 
-        wrapper = mount(
+        wrapper = mountComponent(
             <Time
                 format12Hours
                 name='meridiem'
                 time={{ hour: 1, minute: 0, second: 0, meridiem: 0 }} />
-        ).children().children();
+        );
         expect(wrapper.state('time').minute).toEqual(0);
         wrapper
             .find(
@@ -269,12 +270,12 @@ describe('<Time />', () => {
         expect(wrapper.state('time').second).toEqual(0);
         expect(wrapper.state('time').meridiem).toEqual(0);
 
-        wrapper = mount(
+        wrapper = mountComponent(
             <Time
                 format12Hours
                 name='meridiem'
                 time={{ hour: 12, minute: 0, second: 0, meridiem: 0 }} />
-        ).children().children();
+        );
         expect(wrapper.state('time').minute).toEqual(0);
         wrapper
             .find(
@@ -289,12 +290,12 @@ describe('<Time />', () => {
     });
 
     test('clicking down seconds', () => {
-        let wrapper = mount(
+        let wrapper = mountComponent(
             <Time
                 format12Hours={false}
                 name='meridiem'
                 time={{ hour: 0, minute: 0, second: 0, meridiem: 0 }} />
-        ).children().children();
+        );
         expect(wrapper.state('time').second).toEqual(0);
         wrapper
             .find(
@@ -306,12 +307,12 @@ describe('<Time />', () => {
         expect(wrapper.state('time').minute).toEqual(59);
         expect(wrapper.state('time').second).toEqual(59);
 
-        wrapper = mount(
+        wrapper = mountComponent(
             <Time
                 format12Hours
                 name='meridiem'
                 time={{ hour: 1, minute: 0, second: 0, meridiem: 0 }} />
-        ).children().children();
+        );
         expect(wrapper.state('time').second).toEqual(0);
         wrapper
             .find(
@@ -324,12 +325,12 @@ describe('<Time />', () => {
         expect(wrapper.state('time').second).toEqual(59);
         expect(wrapper.state('time').meridiem).toEqual(0);
 
-        wrapper = mount(
+        wrapper = mountComponent(
             <Time
                 format12Hours
                 name='meridiem'
                 time={{ hour: 12, minute: 0, second: 0, meridiem: 0 }} />
-        ).children().children();
+        );
         expect(wrapper.state('time').second).toEqual(0);
         wrapper
             .find(
@@ -345,12 +346,12 @@ describe('<Time />', () => {
 
     // Up arrow clicks
     test('clicking up on meridiem', () => {
-        let wrapper = mount(
+        let wrapper = mountComponent(
             <Time
                 format12Hours
                 name='meridiem'
                 time={{ hour: 0, minute: 0, second: 0, meridiem: 0 }} />
-        ).children().children();
+        );
         expect(wrapper.state('time').hour).toEqual(0);
         wrapper
             .find(
@@ -364,12 +365,12 @@ describe('<Time />', () => {
     });
 
     test('clicking up on hours', () => {
-        let wrapper = mount(
+        let wrapper = mountComponent(
             <Time
                 format12Hours={false}
                 name='meridiem'
                 time={{ hour: 0, minute: 0, second: 0, meridiem: 0 }} />
-        ).children().children();
+        );
         expect(wrapper.state('time').hour).toEqual(0);
         wrapper
             .find(
@@ -381,12 +382,12 @@ describe('<Time />', () => {
         expect(wrapper.state('time').minute).toEqual(0);
         expect(wrapper.state('time').second).toEqual(0);
 
-        wrapper = mount(
+        wrapper = mountComponent(
             <Time
                 format12Hours={false}
                 name='meridiem'
                 time={{ hour: 23, minute: 0, second: 0, meridiem: 0 }} />
-        ).children().children();
+        );
         expect(wrapper.state('time').hour).toEqual(23);
         wrapper
             .find(
@@ -396,12 +397,12 @@ describe('<Time />', () => {
             .simulate('click');
         expect(wrapper.state('time').hour).toEqual('00');
 
-        wrapper = mount(
+        wrapper = mountComponent(
             <Time
                 format12Hours
                 name='meridiem'
                 time={{ hour: 1, minute: 0, second: 0, meridiem: 0 }} />
-        ).children().children();
+        );
         expect(wrapper.state('time').hour).toEqual(1);
         wrapper
             .find(
@@ -414,12 +415,12 @@ describe('<Time />', () => {
         expect(wrapper.state('time').second).toEqual(0);
         expect(wrapper.state('time').meridiem).toEqual(0);
 
-        wrapper = mount(
+        wrapper = mountComponent(
             <Time
                 format12Hours
                 name='meridiem'
                 time={{ hour: 12, minute: 0, second: 0, meridiem: 0 }} />
-        ).children().children();
+        );
         expect(wrapper.state('time').hour).toEqual(12);
         wrapper
             .find(
@@ -432,12 +433,12 @@ describe('<Time />', () => {
         expect(wrapper.state('time').second).toEqual(0);
         expect(wrapper.state('time').meridiem).toEqual(0);
 
-        wrapper = mount(
+        wrapper = mountComponent(
             <Time
                 format12Hours
                 name='meridiem'
                 time={{ hour: 11, minute: 0, second: 0, meridiem: 0 }} />
-        ).children().children();
+        );
         expect(wrapper.state('time').hour).toEqual(11);
         wrapper
             .find(
@@ -450,12 +451,12 @@ describe('<Time />', () => {
     });
 
     test('clicking up on minutes', () => {
-        let wrapper = mount(
+        let wrapper = mountComponent(
             <Time
                 format12Hours={false}
                 name='meridiem'
                 time={{ hour: 1, minute: 0, second: 0, meridiem: 0 }} />
-        ).children().children();
+        );
         expect(wrapper.state('time').minute).toEqual(0);
         wrapper
             .find(
@@ -467,12 +468,12 @@ describe('<Time />', () => {
         expect(wrapper.state('time').minute).toEqual('01');
         expect(wrapper.state('time').second).toEqual(0);
 
-        wrapper = mount(
+        wrapper = mountComponent(
             <Time
                 format12Hours={false}
                 name='meridiem'
                 time={{ hour: 24, minute: 59, second: 0, meridiem: 0 }} />
-        ).children().children();
+        );
         expect(wrapper.state('time').minute).toEqual(59);
         wrapper
             .find(
@@ -483,12 +484,12 @@ describe('<Time />', () => {
         expect(wrapper.state('time').hour).toEqual('00');
         expect(wrapper.state('time').minute).toEqual('00');
 
-        wrapper = mount(
+        wrapper = mountComponent(
             <Time
                 format12Hours
                 name='meridiem'
                 time={{ hour: 1, minute: 0, second: 0, meridiem: 0 }} />
-        ).children().children();
+        );
         expect(wrapper.state('time').minute).toEqual(0);
         wrapper
             .find(
@@ -501,12 +502,12 @@ describe('<Time />', () => {
         expect(wrapper.state('time').second).toEqual(0);
         expect(wrapper.state('time').meridiem).toEqual(0);
 
-        wrapper = mount(
+        wrapper = mountComponent(
             <Time
                 format12Hours
                 name='meridiem'
                 time={{ hour: 1, minute: 59, second: 0, meridiem: 0 }} />
-        ).children().children();
+        );
         expect(wrapper.state('time').hour).toEqual(1);
         expect(wrapper.state('time').minute).toEqual(59);
 
@@ -519,12 +520,12 @@ describe('<Time />', () => {
         expect(wrapper.state('time').hour).toEqual('01');
         expect(wrapper.state('time').minute).toEqual('00');
 
-        wrapper = mount(
+        wrapper = mountComponent(
             <Time
                 format12Hours
                 name='meridiem'
                 time={{ hour: 11, minute: 59, second: 0, meridiem: 0 }} />
-        ).children().children();
+        );
         expect(wrapper.state('time').hour).toEqual(11);
         expect(wrapper.state('time').minute).toEqual(59);
 
@@ -538,12 +539,12 @@ describe('<Time />', () => {
         expect(wrapper.state('time').minute).toEqual('00');
         expect(wrapper.state('time').meridiem).toEqual(1);
 
-        wrapper = mount(
+        wrapper = mountComponent(
             <Time
                 format12Hours
                 name='meridiem'
                 time={{ hour: 12, minute: 0, second: 0, meridiem: 0 }} />
-        ).children().children();
+        );
         expect(wrapper.state('time').minute).toEqual(0);
         wrapper
             .find(
@@ -556,12 +557,12 @@ describe('<Time />', () => {
         expect(wrapper.state('time').second).toEqual(0);
         expect(wrapper.state('time').meridiem).toEqual(0);
 
-        wrapper = mount(
+        wrapper = mountComponent(
             <Time
                 format12Hours
                 name='meridiem'
                 time={{ hour: 12, minute: 59, second: 0, meridiem: 0 }} />
-        ).children().children();
+        );
         expect(wrapper.state('time').minute).toEqual(59);
         wrapper
             .find(
@@ -576,12 +577,12 @@ describe('<Time />', () => {
     });
 
     test('clicking up seconds', () => {
-        let wrapper = mount(
+        let wrapper = mountComponent(
             <Time
                 format12Hours={false}
                 name='meridiem'
                 time={{ hour: 0, minute: 58, second: 59, meridiem: 0 }} />
-        ).children().children();
+        );
         expect(wrapper.state('time').second).toEqual(59);
         wrapper
             .find(
@@ -593,12 +594,12 @@ describe('<Time />', () => {
         expect(wrapper.state('time').minute).toEqual(59);
         expect(wrapper.state('time').second).toEqual('00');
 
-        wrapper = mount(
+        wrapper = mountComponent(
             <Time
                 format12Hours={false}
                 name='meridiem'
                 time={{ hour: 0, minute: 59, second: 59, meridiem: 0 }} />
-        ).children().children();
+        );
         expect(wrapper.state('time').second).toEqual(59);
         wrapper
             .find(
@@ -610,30 +611,24 @@ describe('<Time />', () => {
         expect(wrapper.state('time').minute).toEqual('00');
         expect(wrapper.state('time').second).toEqual('00');
 
-        wrapper = mount(
-            <Time
-                format12Hours
-                name='meridiem'
-                time={{ hour: 1, minute: 0, second: 0, meridiem: 0 }} />
-        ).children().children();
-        expect(wrapper.state('time').second).toEqual(0);
+        // expect(wrapper.state('time').second).toEqual(0);
         wrapper
             .find(
                 'button.fd-button--light.sap-icon--navigation-up-arrow'
             )
             .at(2)
             .simulate('click');
-        expect(wrapper.state('time').hour).toEqual(1);
-        expect(wrapper.state('time').minute).toEqual(0);
+        expect(wrapper.state('time').hour).toEqual('01');
+        expect(wrapper.state('time').minute).toEqual('00');
         expect(wrapper.state('time').second).toEqual('01');
         expect(wrapper.state('time').meridiem).toEqual(0);
 
-        wrapper = mount(
+        wrapper = mountComponent(
             <Time
                 format12Hours
                 name='meridiem'
                 time={{ hour: 12, minute: 0, second: 0, meridiem: 0 }} />
-        ).children().children();
+        );
         expect(wrapper.state('time').second).toEqual(0);
         wrapper
             .find(
@@ -648,7 +643,7 @@ describe('<Time />', () => {
     });
 
     test('enter in time value', () => {
-        const wrapper = mount(defaultTime).children().children();
+        const wrapper = mountComponent(defaultTime);
         wrapper
             .find('.fd-input')
             .at(0)

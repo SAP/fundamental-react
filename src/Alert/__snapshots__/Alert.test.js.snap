@@ -44,7 +44,7 @@ exports[`<Alert /> create basic alert 2`] = `
       className="fd-alert__text"
     >
       <span
-        className="sap-icon--mesage-error"
+        className="sap-icon--message-error"
       />
       Error message with a
     </div>
