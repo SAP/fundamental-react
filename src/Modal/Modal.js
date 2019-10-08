@@ -1,38 +1,37 @@
-import Button from "../Button/Button";
-import classnames from "classnames";
-import CustomPropTypes from "../utils/CustomPropTypes/CustomPropTypes";
+import Button from '../Button/Button';
+import classnames from 'classnames';
+import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import FocusLock from 'react-focus-lock';
-import PropTypes from "prop-types";
-import ReactDOM from "react-dom";
-import withStyles from "../utils/WithStyles/WithStyles";
-import React, { Component } from "react";
+import PropTypes from 'prop-types';
+import ReactDOM from 'react-dom';
+import withStyles from '../utils/WithStyles/WithStyles';
+import React, { Component } from 'react';
 class Modal extends Component {
     // select body element to add Modal component too
-    bodyElm = document.querySelector("body");
+    bodyElm = document.querySelector('body');
 
-    handleCloseClick = e => {
+    handleCloseClick = (e) => {
         this.props.onClose(e);
     };
 
     // check for Escape key press
     handleKeyPress = event => {
-        if (event.key === "Escape" || event.key === "Esc") {
+        if (event.key === 'Escape' || event.key === 'Esc') {
             this.handleCloseClick();
         }
     };
 
     // add event listener for escape key
     componentDidMount() {
-        document.addEventListener("keydown", this.handleKeyPress, false);
+        document.addEventListener('keydown', this.handleKeyPress, false);
     }
 
     // remove event listener for escape key
     componentWillUnmount() {
-        document.removeEventListener("keydown", this.handleKeyPress, false);
+        document.removeEventListener('keydown', this.handleKeyPress, false);
     }
 
     render() {
-
         const {
             actions,
             bodyProps,
@@ -53,8 +52,8 @@ class Modal extends Component {
         } = this.props;
 
         const modalClasses = classnames(
-            "fd-overlay",
-            "fd-overlay--modal",
+            'fd-overlay',
+            'fd-overlay--modal',
             className
         );
 
@@ -65,56 +64,45 @@ class Modal extends Component {
         }
 
         return ReactDOM.createPortal(
-            <FocusLock
-
-
-            >
-                <div {...rest} className={modalClasses}>
-                    <div className="modal-demo-bg">
-                        <span tabIndex="-1" data-autofocus/>
+            <FocusLock>
+                <div
+                    {...rest}
+                    className={modalClasses}>
+                    <div className='modal-demo-bg'>
+                        <span data-autofocus tabIndex='-1' />
                         <div
                             aria-label={title}
-                            aria-modal="true"
-                            className="fd-modal"
-                            role="dialog"
-                        >
+                            aria-modal='true'
+                            className='fd-modal'
+                            role='dialog'>
                             <div
                                 {...contentProps}
-                                className="fd-modal__content"
-                                role="document"
-                            >
-                                <div
-                                    {...headerProps}
-                                    className="fd-modal__header"
-                                >
-                                    <HeadingTag
-                                        {...titleProps}
-                                        className="fd-modal__title"
-                                    >
+                                className='fd-modal__content'
+                                role='document'>
+                                <div {...headerProps} className='fd-modal__header'>
+                                    <HeadingTag {...titleProps} className='fd-modal__title'>
                                         {title}
                                     </HeadingTag>
                                     <Button
                                         {...closeProps}
                                         aria-label={localizedText.closeButton}
-                                        className="fd-modal__close"
+                                        className='fd-modal__close'
                                         disableStyles={disableStyles}
-                                        glyph="decline"
+                                        glyph='decline'
                                         onClick={this.handleCloseClick}
-                                        option="light"
-                                    />
+                                        option='light' />
                                 </div>
-                                <div {...bodyProps} className="fd-modal__body">
+                                <div {...bodyProps} className='fd-modal__body'>
                                     {children}
                                 </div>
                                 {actions ? (
                                     <footer
                                         {...footerProps}
-                                        className="fd-modal__footer"
-                                    >
+                                        className='fd-modal__footer'>
                                         {actions}
                                     </footer>
                                 ) : (
-                                    ""
+                                    ''
                                 )}
                             </div>
                         </div>
@@ -126,7 +114,7 @@ class Modal extends Component {
     }
 }
 
-Modal.displayName = "Modal";
+Modal.displayName = 'Modal';
 
 Modal.propTypes = {
     title: PropTypes.string.isRequired,
@@ -152,31 +140,25 @@ Modal.propTypes = {
 Modal.defaultProps = {
     headingLevel: 3,
     localizedText: {
-        closeButton: "Close"
+        closeButton: 'Close'
     },
-    onClose: () => {}
+    onClose: () => { }
 };
 
 Modal.propDescriptions = {
-    actions: "Node(s) to render within the footer of the dialog.",
-    bodyProps:
-        "Additional props to be spread to the body section of the dialog.",
-    closeProps:
-        "Additional props to be spread to the close `<button>` element.",
-    contentProps:
-        "Additional props to be spread to the content section of the dialog.",
-    footerProps: "Additional props to be spread to the footer of the dialog.",
-    headerProps: "Additional props to be spread to the header of the dialog.",
+    actions: 'Node(s) to render within the footer of the dialog.',
+    bodyProps: 'Additional props to be spread to the body section of the dialog.',
+    closeProps: 'Additional props to be spread to the close `<button>` element.',
+    contentProps: 'Additional props to be spread to the content section of the dialog.',
+    footerProps: 'Additional props to be spread to the footer of the dialog.',
+    headerProps: 'Additional props to be spread to the header of the dialog.',
     localizedTextShape: {
-        closeButton: "Aria-label for <button> element."
+        closeButton: 'Aria-label for <button> element.'
     },
-    onClose: "Callback function passing event when close button is clicked.",
-    show: "Set to **true** to make the dialog visible."
+    onClose: 'Callback function passing event when close button is clicked.',
+    show: 'Set to **true** to make the dialog visible.'
 };
 
 export { Modal as __Modal };
 
-export default withStyles(Modal, {
-    cssFile: ["modal", "overlay"],
-    fonts: true
-});
+export default withStyles(Modal, { cssFile: ['modal', 'overlay'], fonts: true });
