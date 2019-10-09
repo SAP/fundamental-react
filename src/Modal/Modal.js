@@ -66,7 +66,6 @@ class Modal extends Component {
         return ReactDOM.createPortal(
             <FocusLock as='div' className={modalClasses}
                 lockProps={{ ...rest }}>
-
                 <div className='modal-demo-bg'>
                     <span data-autofocus tabIndex='-1' />
                     <div
@@ -106,7 +105,6 @@ class Modal extends Component {
                         </div>
                     </div>
                 </div>
-
             </FocusLock>,
             this.bodyElm
         );
