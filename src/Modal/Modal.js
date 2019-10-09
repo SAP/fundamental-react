@@ -64,50 +64,49 @@ class Modal extends Component {
         }
 
         return ReactDOM.createPortal(
-            <FocusLock>
-                <div
-                    {...rest}
-                    className={modalClasses}>
-                    <div className='modal-demo-bg'>
-                        <span data-autofocus tabIndex='-1' />
+            <FocusLock as='div' className={modalClasses}
+                lockProps={{ ...rest }}>
+
+                <div className='modal-demo-bg'>
+                    <span data-autofocus tabIndex='-1' />
+                    <div
+                        aria-label={title}
+                        aria-modal='true'
+                        className='fd-modal'
+                        role='dialog'>
                         <div
-                            aria-label={title}
-                            aria-modal='true'
-                            className='fd-modal'
-                            role='dialog'>
-                            <div
-                                {...contentProps}
-                                className='fd-modal__content'
-                                role='document'>
-                                <div {...headerProps} className='fd-modal__header'>
-                                    <HeadingTag {...titleProps} className='fd-modal__title'>
-                                        {title}
-                                    </HeadingTag>
-                                    <Button
-                                        {...closeProps}
-                                        aria-label={localizedText.closeButton}
-                                        className='fd-modal__close'
-                                        disableStyles={disableStyles}
-                                        glyph='decline'
-                                        onClick={this.handleCloseClick}
-                                        option='light' />
-                                </div>
-                                <div {...bodyProps} className='fd-modal__body'>
-                                    {children}
-                                </div>
-                                {actions ? (
-                                    <footer
-                                        {...footerProps}
-                                        className='fd-modal__footer'>
-                                        {actions}
-                                    </footer>
-                                ) : (
-                                    ''
-                                )}
+                            {...contentProps}
+                            className='fd-modal__content'
+                            role='document'>
+                            <div {...headerProps} className='fd-modal__header'>
+                                <HeadingTag {...titleProps} className='fd-modal__title'>
+                                    {title}
+                                </HeadingTag>
+                                <Button
+                                    {...closeProps}
+                                    aria-label={localizedText.closeButton}
+                                    className='fd-modal__close'
+                                    disableStyles={disableStyles}
+                                    glyph='decline'
+                                    onClick={this.handleCloseClick}
+                                    option='light' />
                             </div>
+                            <div {...bodyProps} className='fd-modal__body'>
+                                {children}
+                            </div>
+                            {actions ? (
+                                <footer
+                                    {...footerProps}
+                                    className='fd-modal__footer'>
+                                    {actions}
+                                </footer>
+                            ) : (
+                                ''
+                            )}
                         </div>
                     </div>
                 </div>
+
             </FocusLock>,
             this.bodyElm
         );
