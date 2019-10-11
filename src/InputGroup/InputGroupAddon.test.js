@@ -1,4 +1,4 @@
-import InputGroupAddon from './InputGroupAddon';
+import InputGroupAddon from './_InputGroupAddon';
 import { mount } from 'enzyme';
 import React from 'react';
 import renderer from 'react-test-renderer';
