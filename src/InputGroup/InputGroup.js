@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import withStyles from '../utils/WithStyles/WithStyles';
 import { INPUT_GROUP_ADDON_POSITIONS, INPUT_GROUP_TYPES } from '../utils/constants';
 import React, { Component } from 'react';
-/*eslint-disable*/
+
 class InputGroup extends Component {
     constructor(props) {
         super(props);
@@ -16,7 +16,6 @@ class InputGroup extends Component {
     }
 
     handleUp = e => {
-        console.log('handle up!');
         e.preventDefault();
         this.setState({
             value: parseInt(this.state.value, 10) + 1

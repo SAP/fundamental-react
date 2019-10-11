@@ -5,14 +5,10 @@ import Icon from '../Icon/Icon';
 import PropTypes from 'prop-types';
 import withStyles from '../utils/WithStyles/WithStyles';
 import React, { Component } from 'react';
-/*eslint-disable*/
+
 class InputGroupAddon extends Component {
     constructor(props) {
         super(props);
-    }
-
-    handleDown = () => {
-        console.log("I made it to handle down");
     }
 
     render() {
