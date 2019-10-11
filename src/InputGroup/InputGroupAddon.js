@@ -8,26 +8,32 @@ import withStyles from '../utils/WithStyles/WithStyles';
 
 const InputGroupAddon = ({
     addon,
+    compact,
+    actions,
+    glyph,
     addonClassNames,
     children,
     className,
     disableStyles,
+    inputType,
+    numberDownCallback,
+    numberUpCallback,
     localizedText,
     numberDownButtonProps,
     numberUpButtonProps,
     onClick,
-    ...props
+    ...otherProps
 }) => {
 
     let returnObject = addon;
 
-    if (props.actions) {
+    if (actions) {
         returnObject = children;
-    } else if (props.glyph) {
+    } else if (glyph) {
         returnObject = (
             <Icon
                 disableStyles={disableStyles}
-                glyph={props.glyph}
+                glyph={glyph}
                 role='presentation' />
         );
     }
@@ -35,37 +41,36 @@ const InputGroupAddon = ({
     const addonClasses = classnames(
         addonClassNames,
         'fd-input-group__addon',
-        [{ 'fd-input-group__addon--button': !!props.actions || props.inputType === 'number' }],
-        [{ 'fd-input-group__addon--button--compact': props.compact }],
+        [{ 'fd-input-group__addon--button': !!actions || inputType === 'number' }],
+        [{ 'fd-input-group__addon--button--compact': compact }],
     );
 
-
-    if (props.inputType === 'number') {
+    if (inputType === 'number') {
         return (
-            <span className={addonClasses}>
+            <span {...otherProps} className={addonClasses}>
                 <Button
                     {...numberUpButtonProps}
                     aria-label={localizedText.up}
                     className='fd-button--half fd-input-group__button'
-                    compact={props.compact}
+                    compact={compact}
                     disableStyles={disableStyles}
                     glyph='slim-arrow-up'
-                    onClick={props.numberUpCallback}
+                    onClick={numberUpCallback}
                     option='light' />
                 <Button
                     {...numberDownButtonProps}
                     aria-label={localizedText.down}
                     className='fd-button--half fd-input-group__button'
-                    compact={props.compact}
+                    compact={compact}
                     disableStyles={disableStyles}
                     glyph='slim-arrow-down'
-                    onClick={props.numberDownCallback}
+                    onClick={numberDownCallback}
                     option='light' />
             </span>
         );
     } else {
         return (
-            <span className={addonClasses} {...props} >
+            <span className={addonClasses} {...otherProps} >
                 {returnObject}
             </span>
         );
