@@ -1,6 +1,7 @@
+import { InputGroupAddOn } from '/';
 import path from 'path';
 import React from 'react';
-import { Button, FormGroup, FormItem, FormLabel, InputGroup } from '../';
+import { Button, FormGroup, FormInput, FormItem, FormLabel, InputGroup } from '../';
 import { ComponentPage, Example } from '../_playground';
 
 export const InputGroupComponent = () => {
@@ -20,45 +21,43 @@ export const InputGroupComponent = () => {
                     <FormGroup>
                         <FormLabel>Left Aligned Text Addon</FormLabel>
                         <FormItem>
-                            <InputGroup
-                                addon='$'
-                                addonPos='before'
-                                inputValue='1234567890' />
+                            <InputGroup>
+                                <InputGroupAddOn>$</InputGroupAddOn>
+                                <FormInput
+                                    placeholder='Type text here' />
+                            </InputGroup>
                         </FormItem>
                     </FormGroup>
                     <br />
                     <FormGroup>
                         <FormLabel>Right Aligned Text Addon</FormLabel>
                         <FormItem>
-                            <InputGroup
-                                addon='€'
-                                addonPos='after'
-                                inputValue='1234567890' />
+                            <InputGroup>
+                                <FormInput placeholder='Type text here' />
+                                <InputGroupAddOn>€</InputGroupAddOn>
+                            </InputGroup>
                         </FormItem>
                     </FormGroup>
-
                     <br />
                     <p>Compact mode</p>
-
                     <FormGroup>
                         <FormLabel>Left Aligned Text Addon</FormLabel>
                         <FormItem>
-                            <InputGroup
-                                addon='$'
-                                addonPos='before'
-                                compact
-                                inputValue='1234567890' />
+                            <InputGroup compact>
+                                <InputGroupAddOn>$</InputGroupAddOn>
+                                <FormInput placeholder='Type text here' />
+                            </InputGroup>
                         </FormItem>
                     </FormGroup>
                     <br />
                     <FormGroup>
                         <FormLabel>Right Aligned Text Addon</FormLabel>
                         <FormItem>
-                            <InputGroup
-                                addon='€'
-                                addonPos='after'
-                                compact
-                                inputValue='1234567890' />
+                            <InputGroup compact>
+                                <FormInput
+                                    placeholder='Type text here' />
+                                <InputGroupAddOn>€</InputGroupAddOn>
+                            </InputGroup>
                         </FormItem>
                     </FormGroup>
                 </div>
@@ -72,18 +71,22 @@ export const InputGroupComponent = () => {
                     <FormGroup>
                         <FormLabel>Right Aligned Text Addon</FormLabel>
                         <FormItem>
-                            <InputGroup inputType='number' inputValue={100} />
+                            <InputGroup inputType='number'>
+                                <FormInput type='number' />
+                                <InputGroupAddOn />
+                            </InputGroup>
                         </FormItem>
                     </FormGroup>
 
                     <br />
                     <p>Compact mode</p>
-
                     <FormGroup>
-                        <FormLabel>Right Aligned Text Addon</FormLabel>
+                        <FormLabel>Hannah Right Aligned Text Addon</FormLabel>
                         <FormItem>
-                            <InputGroup compact inputType='number'
-                                inputValue={100} />
+                            <InputGroup compact inputType='number'>
+                                <FormInput type='number' />
+                                <InputGroupAddOn />
+                            </InputGroup>
                         </FormItem>
                     </FormGroup>
                 </div>
@@ -96,22 +99,22 @@ export const InputGroupComponent = () => {
                     <FormGroup>
                         <FormLabel>Input with icon on the left</FormLabel>
                         <FormItem>
-                            <InputGroup
-                                addonPos='before'
-                                glyph='globe'
-                                inputValue='1234567890' />
+                            <InputGroup>
+                                <InputGroupAddOn glyph='globe' />
+                                <FormInput placeholder='Type text here' />
+                            </InputGroup>
                         </FormItem>
                     </FormGroup>
+
                     <br />
                     <p>Compact mode</p>
                     <FormGroup>
                         <FormLabel>Input with icon on the left</FormLabel>
                         <FormItem>
-                            <InputGroup
-                                addonPos='before'
-                                compact
-                                glyph='globe'
-                                inputValue='1234567890' />
+                            <InputGroup compact>
+                                <InputGroupAddOn glyph='globe' />
+                                <FormInput placeholder='Type text here' />
+                            </InputGroup>
                         </FormItem>
                     </FormGroup>
                     <br />
@@ -119,11 +122,10 @@ export const InputGroupComponent = () => {
                     <FormGroup>
                         <FormLabel>Input with icon on the right</FormLabel>
                         <FormItem>
-                            <InputGroup
-                                addonPos='after'
-                                glyph='hide'
-                                inputType='text'
-                                inputValue='1234567890' />
+                            <InputGroup>
+                                <FormInput placeholder='Type text here' />
+                                <InputGroupAddOn glyph='hide' />
+                            </InputGroup>
                         </FormItem>
                     </FormGroup>
                     <br />
@@ -131,11 +133,10 @@ export const InputGroupComponent = () => {
                     <FormGroup>
                         <FormLabel>Input with icon on the right</FormLabel>
                         <FormItem>
-                            <InputGroup
-                                addonPos='after'
-                                compact
-                                glyph='hide'
-                                inputValue='1234567890' />
+                            <InputGroup compact>
+                                <FormInput placeholder='Type text here' />
+                                <InputGroupAddOn glyph='hide' />
+                            </InputGroup>
                         </FormItem>
                     </FormGroup>
                 </div>
@@ -145,31 +146,29 @@ export const InputGroupComponent = () => {
                 description={`The Input with add-on supports actions. Actions can be shown with a text
                     label or icon.`}
                 title='Input with actions'>
+                {/* ACTIONS NEEDS TO BE FIXED TO BE GIVEN TO CHILD FROM PARENT */}
                 <div>
                     <FormGroup>
-                        <FormLabel>Input with text action</FormLabel>
+                        <FormLabel>Input text with action</FormLabel>
                         <FormItem>
-                            <InputGroup
-                                actions
-                                addonPos='after'
-                                inputValue='1234567890'>
-                                <Button option='light'>Button</Button>
+                            <InputGroup actions>
+                                <FormInput placeholder='Type text here' />
+                                <InputGroupAddOn>
+                                    <Button option='light'>Button</Button>
+                                </InputGroupAddOn>
                             </InputGroup>
                         </FormItem>
                     </FormGroup>
                     <br />
                     <p>Compact mode</p>
                     <FormGroup>
-                        <FormLabel>Input with text action</FormLabel>
+                        <FormLabel>Input text with action</FormLabel>
                         <FormItem>
-                            <InputGroup
-                                actions
-                                addonPos='after'
-                                compact
-                                inputValue='1234567890'>
-                                <Button
-                                    compact
-                                    option='light'>Button</Button>
+                            <InputGroup actions compact>
+                                <FormInput placeholder='Type text here' />
+                                <InputGroupAddOn>
+                                    <Button compact option='light'>Button</Button>
+                                </InputGroupAddOn>
                             </InputGroup>
                         </FormItem>
                     </FormGroup>
@@ -178,8 +177,11 @@ export const InputGroupComponent = () => {
                     <FormGroup>
                         <FormLabel>Input with icon text action</FormLabel>
                         <FormItem>
-                            <InputGroup actions addonPos='after'>
-                                <Button glyph='navigation-down-arrow' option='light' />
+                            <InputGroup actions>
+                                <FormInput />
+                                <InputGroupAddOn>
+                                    <Button glyph='navigation-down-arrow' option='light' />
+                                </InputGroupAddOn>
                             </InputGroup>
                         </FormItem>
                     </FormGroup>
@@ -188,12 +190,13 @@ export const InputGroupComponent = () => {
                     <FormGroup>
                         <FormLabel>Input with icon text action</FormLabel>
                         <FormItem>
-                            <InputGroup actions addonPos='after'
-                                compact>
-                                <Button
-                                    compact
-                                    glyph='navigation-down-arrow'
-                                    option='light' />
+                            <InputGroup actions compact>
+                                <FormInput placeholder='Type text here' />
+                                <InputGroupAddOn>
+                                    <Button compact
+                                        glyph='navigation-down-arrow'
+                                        option='light' />
+                                </InputGroupAddOn>
                             </InputGroup>
                         </FormItem>
                     </FormGroup>
