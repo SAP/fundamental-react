@@ -111,15 +111,15 @@ class InputGroup extends Component {
             return (
                 <div {...props}
                     className={inputGroupClasses}>
-                    { inputGroupAddon }
-                    { input }
+                    {inputGroupAddon}
+                    {input}
                 </div>
             );
         } else {
             return (
                 <div {...props}
                     className={inputGroupClasses}>
-                    { input }
+                    {input}
                     {inputGroupAddon}
                 </div>
             );
