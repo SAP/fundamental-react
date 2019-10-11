@@ -1,24 +1,22 @@
-import Button from '../Button/Button';
 import classnames from 'classnames';
-import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import FormInput from '../Forms/FormInput';
-import Icon from '../Icon/Icon';
+import InputGroupAddon from './InputGroupAddon';
 import PropTypes from 'prop-types';
 import withStyles from '../utils/WithStyles/WithStyles';
 import { INPUT_GROUP_ADDON_POSITIONS, INPUT_GROUP_TYPES } from '../utils/constants';
 import React, { Component } from 'react';
-
+/*eslint-disable*/
 class InputGroup extends Component {
     constructor(props) {
         super(props);
 
         this.state = {
-            value: this.props.inputValue,
-            searchValue: this.props.inputValue
+            value: this.props.inputValue
         };
     }
 
     handleUp = e => {
+        console.log('handle up!');
         e.preventDefault();
         this.setState({
             value: parseInt(this.state.value, 10) + 1
@@ -32,20 +30,6 @@ class InputGroup extends Component {
         });
     };
 
-    handleClear = e => {
-        e.preventDefault();
-        this.setState({
-            searchValue: ''
-        });
-    };
-
-    handleChange = e => {
-        e.preventDefault();
-        this.setState({
-            searchValue: e.target.value
-        });
-    };
-
     handleTextChange = e => {
         e.preventDefault();
         this.setState({
@@ -54,7 +38,7 @@ class InputGroup extends Component {
     };
 
     render() {
-        const {
+        let {
             actions,
             addonClassNames,
             addonPos,
@@ -71,11 +55,16 @@ class InputGroup extends Component {
             inputPlaceholder,
             inputProps,
             inputValue,
-            localizedText,
-            numberDownButtonProps,
-            numberUpButtonProps,
+            numberDownCallback,
+            numberUpCallback,
             ...props
         } = this.props;
+
+        children = React.Children.map(children, (child) => {
+            return React.cloneElement(child, {
+                compact: compact
+            });
+        });
 
         const inputGroupClasses = classnames(
             className,
@@ -90,121 +79,51 @@ class InputGroup extends Component {
 
         const inputClasses = classnames(
             inputClassName,
-            'fd-input-group__input'
+            'fd-input-group__input',
+            [{ 'fd-input--no-number-spinner': inputType === 'number' }]
         );
 
-        switch (inputType) {
-            case 'number':
+        const input = (
+            <FormInput
+                {...inputProps}
+                className={inputClasses}
+                compact={compact}
+                disableStyles={disableStyles}
+                id={inputId}
+                name={inputName}
+                onChange={this.handleTextChange}
+                type={inputType}
+                value={this.state.value} />
+        );
 
-                const inputNumberClasses = classnames(
-                    inputClasses,
-                    'fd-input--no-number-spinner'
-                );
+        const inputGroupAddon = (
+            <InputGroupAddon actions={actions} addon={addon}
+                className={addonClasses}
+                compact={compact}
+                glyph={glyph}
+                inputType={inputType}
+                numberDownCallback={this.handleDown}
+                numberUpCallback={this.handleUp} >
+                {children}
+            </InputGroupAddon>
+        );
 
-                return (
-                    <div
-                        {...props}
-                        className={inputGroupClasses}>
-                        <FormInput
-                            {...inputProps}
-                            className={inputNumberClasses}
-                            compact={compact}
-                            disableStyles={disableStyles}
-                            id={inputId}
-                            name={inputName}
-                            onChange={this.handleTextChange}
-                            type='number'
-                            value={this.state.value} />
-                        <span className={addonClasses}>
-                            <Button
-                                {...numberUpButtonProps}
-                                aria-label={localizedText.up}
-                                className='fd-button--half fd-input-group__button'
-                                compact={compact}
-                                disableStyles={disableStyles}
-                                glyph='slim-arrow-up'
-                                onClick={this.handleUp}
-                                option='light' />
-                            <Button
-                                {...numberDownButtonProps}
-                                aria-label={localizedText.down}
-                                className='fd-button--half fd-input-group__button'
-                                compact={compact}
-                                disableStyles={disableStyles}
-                                glyph='slim-arrow-down'
-                                onClick={this.handleDown}
-                                option='light' />
-                        </span>
-                    </div>
-                );
-            case 'text':
-            default: {
-                if (addonPos === 'before') {
-                    return (
-                        <div
-                            {...props}
-                            className={inputGroupClasses}>
-                            {actions ? (
-                                <span className={addonClasses}>
-                                    {children}
-                                </span>
-                            ) : (
-                                <span className={addonClasses}>
-                                    {glyph ? (
-                                        <Icon
-                                            disableStyles={disableStyles}
-                                            glyph={glyph}
-                                            role='presentation' />
-                                    ) : (
-                                        addon
-                                    )}
-                                </span>
-                            )}
-                            <FormInput
-                                {...inputProps}
-                                className={inputClasses}
-                                compact={compact}
-                                disableStyles={disableStyles}
-                                id={inputId}
-                                name={inputName}
-                                onChange={this.handleTextChange}
-                                value={this.state.value} />
-                        </div>
-                    );
-                } else {
-                    return (
-                        <div
-                            {...props}
-                            className={inputGroupClasses}>
-                            <FormInput
-                                {...inputProps}
-                                className={inputClasses}
-                                compact={compact}
-                                disableStyles={disableStyles}
-                                id={inputId}
-                                name={inputName}
-                                onChange={this.handleTextChange}
-                                value={this.state.value} />
-                            {actions ? (
-                                <span className={addonClasses}>
-                                    {children}
-                                </span>
-                            ) : (
-                                <span className={addonClasses}>
-                                    {glyph ? (
-                                        <Icon
-                                            disableStyles={disableStyles}
-                                            glyph={glyph}
-                                            role='presentation' />
-                                    ) : (
-                                        addon
-                                    )}
-                                </span>
-                            )}
-                        </div>
-                    );
-                }
-            }
+        if (addonPos === 'before') {
+            return (
+                <div {...props}
+                    className={inputGroupClasses}>
+                    { inputGroupAddon }
+                    { input }
+                </div>
+            );
+        } else {
+            return (
+                <div {...props}
+                    className={inputGroupClasses}>
+                    { input }
+                    {inputGroupAddon}
+                </div>
+            );
         }
     }
 }
@@ -229,24 +148,15 @@ InputGroup.propTypes = {
     inputProps: PropTypes.object,
     inputType: PropTypes.oneOf(INPUT_GROUP_TYPES),
     inputValue: PropTypes.any,
-    localizedText: CustomPropTypes.i18n({
-        clear: PropTypes.string,
-        down: PropTypes.string,
-        up: PropTypes.string
-    }),
-    numberDownButtonProps: PropTypes.object,
-    numberUpButtonProps: PropTypes.object
+    numberDownCallback: PropTypes.func,
+    numberUpCallback: PropTypes.func
 };
 
 InputGroup.defaultProps = {
     addonPos: 'after',
     inputType: 'text',
-    inputValue: '',
-    localizedText: {
-        clear: 'Clear',
-        down: 'Step down',
-        up: 'Step up'
-    }
+    inputValue: ''
+
 };
 
 InputGroup.propDescriptions = {
@@ -259,14 +169,7 @@ InputGroup.propDescriptions = {
     inputName: 'Value for the `name` attribute on the `<input>` element.',
     inputPlaceholder: 'Value for the `placeholder` attribute on the `<input>` element.',
     inputType: 'Value for the `type` attribute on the `<input>` element.',
-    inputValue: 'Value for the `value` attribute on the `<input>` element.',
-    localizedTextShape: {
-        clear: 'Value for aria-label on the clear <button> element.',
-        down: 'Value for aria-label on the down <button> element.',
-        up: 'Value for aria-label on the up <button> element.'
-    },
-    numberDownButtonProps: 'Additional props to be spread to the down `<button>` element (for inputType=\'number\').',
-    numberUpButtonProps: 'Additional props to be spread to the up `<button>` element (for inputType=\'number\').'
+    inputValue: 'Value for the `value` attribute on the `<input>` element.'
 };
 
 export { InputGroup as __InputGroup };
