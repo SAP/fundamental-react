@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<InputGroupAddon /> create list group item actions 1`] = `
+<span
+  className="fd-input-group__addon"
+>
+  $
+</span>
+`;

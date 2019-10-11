@@ -295,21 +295,5 @@ describe('<InputGroup />', () => {
                 element.find('input').getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
         });
-
-        test('should allow props to be spread to the InputGroup component for type number\'s up button element', () => {
-            const element = mount(<InputGroup inputType='number' numberUpButtonProps={{ 'data-sample': 'Sample' }} />);
-
-            expect(
-                element.find('button.sap-icon--slim-arrow-up').getDOMNode().attributes['data-sample'].value
-            ).toBe('Sample');
-        });
-
-        test('should allow props to be spread to the InputGroup component for type number\'s down button element', () => {
-            const element = mount(<InputGroup inputType='number' numberDownButtonProps={{ 'data-sample': 'Sample' }} />);
-
-            expect(
-                element.find('button.sap-icon--slim-arrow-down').getDOMNode().attributes['data-sample'].value
-            ).toBe('Sample');
-        });
     });
 });
