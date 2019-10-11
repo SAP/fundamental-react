@@ -3,81 +3,74 @@ import classnames from 'classnames';
 import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import Icon from '../Icon/Icon';
 import PropTypes from 'prop-types';
+import React from 'react';
 import withStyles from '../utils/WithStyles/WithStyles';
-import React, { Component } from 'react';
 
-class InputGroupAddon extends Component {
-    constructor(props) {
-        super(props);
-    }
+const InputGroupAddon = ({
+    addon,
+    addonClassNames,
+    children,
+    className,
+    disableStyles,
+    localizedText,
+    numberDownButtonProps,
+    numberUpButtonProps,
+    onClick,
+    ...props
+}) => {
 
-    render() {
-        let {
-            addon,
-            addonClassNames,
-            children,
-            className,
-            disableStyles,
-            localizedText,
-            numberDownButtonProps,
-            numberUpButtonProps,
-            onClick,
-            ...props
-        } = this.props;
+    let returnObject = addon;
 
-        let returnObject = addon;
-
-        if (props.actions) {
-            returnObject = children;
-        } else if (props.glyph) {
-            returnObject = (
-                <Icon
-                    disableStyles={disableStyles}
-                    glyph={props.glyph}
-                    role='presentation' />
-            );
-        }
-
-        const addonClasses = classnames(
-            addonClassNames,
-            'fd-input-group__addon',
-            [{ 'fd-input-group__addon--button': !!props.actions || props.inputType === 'number' }],
-            [{ 'fd-input-group__addon--button--compact': props.compact }],
+    if (props.actions) {
+        returnObject = children;
+    } else if (props.glyph) {
+        returnObject = (
+            <Icon
+                disableStyles={disableStyles}
+                glyph={props.glyph}
+                role='presentation' />
         );
-
-
-        if (props.inputType === 'number') {
-            return (
-                <span className={addonClasses}>
-                    <Button
-                        {...numberUpButtonProps}
-                        aria-label={localizedText.up}
-                        className='fd-button--half fd-input-group__button'
-                        compact={props.compact}
-                        disableStyles={disableStyles}
-                        glyph='slim-arrow-up'
-                        onClick={props.numberUpCallback}
-                        option='light' />
-                    <Button
-                        {...numberDownButtonProps}
-                        aria-label={localizedText.down}
-                        className='fd-button--half fd-input-group__button'
-                        compact={props.compact}
-                        disableStyles={disableStyles}
-                        glyph='slim-arrow-down'
-                        onClick={props.numberDownCallback}
-                        option='light' />
-                </span>
-            );
-        } else {
-            return (
-                <span className={addonClasses} {...props} >
-                    {returnObject}
-                </span>
-            );
-        }
     }
-}
+
+    const addonClasses = classnames(
+        addonClassNames,
+        'fd-input-group__addon',
+        [{ 'fd-input-group__addon--button': !!props.actions || props.inputType === 'number' }],
+        [{ 'fd-input-group__addon--button--compact': props.compact }],
+    );
+
+
+    if (props.inputType === 'number') {
+        return (
+            <span className={addonClasses}>
+                <Button
+                    {...numberUpButtonProps}
+                    aria-label={localizedText.up}
+                    className='fd-button--half fd-input-group__button'
+                    compact={props.compact}
+                    disableStyles={disableStyles}
+                    glyph='slim-arrow-up'
+                    onClick={props.numberUpCallback}
+                    option='light' />
+                <Button
+                    {...numberDownButtonProps}
+                    aria-label={localizedText.down}
+                    className='fd-button--half fd-input-group__button'
+                    compact={props.compact}
+                    disableStyles={disableStyles}
+                    glyph='slim-arrow-down'
+                    onClick={props.numberDownCallback}
+                    option='light' />
+            </span>
+        );
+    } else {
+        return (
+            <span className={addonClasses} {...props} >
+                {returnObject}
+            </span>
+        );
+    }
+};
 
 
 InputGroupAddon.displayName = 'InputGroupAddon';
