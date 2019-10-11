@@ -6,6 +6,9 @@ exports[`<InputGroup /> create input group items 1`] = `
 >
   <span
     className="fd-input-group__addon"
+    inputType="text"
+    numberDownCallback={[Function]}
+    numberUpCallback={[Function]}
   >
     $
   </span>
@@ -30,6 +33,9 @@ exports[`<InputGroup /> create input group items 2`] = `
   />
   <span
     className="fd-input-group__addon"
+    inputType="text"
+    numberDownCallback={[Function]}
+    numberUpCallback={[Function]}
   >
     €
   </span>
@@ -41,7 +47,11 @@ exports[`<InputGroup /> create input group items 3`] = `
   className="fd-input-group"
 >
   <span
-    className="fd-input-group__addon"
+    className="fd-input-group__addon fd-input-group__addon--button--compact"
+    compact={true}
+    inputType="text"
+    numberDownCallback={[Function]}
+    numberUpCallback={[Function]}
   >
     $
   </span>
@@ -65,7 +75,11 @@ exports[`<InputGroup /> create input group items 4`] = `
     value="1234567890"
   />
   <span
-    className="fd-input-group__addon"
+    className="fd-input-group__addon fd-input-group__addon--button--compact"
+    compact={true}
+    inputType="text"
+    numberDownCallback={[Function]}
+    numberUpCallback={[Function]}
   >
     €
   </span>
@@ -110,7 +124,7 @@ exports[`<InputGroup /> create input group items 6`] = `
     value={100}
   />
   <span
-    className="fd-input-group__addon fd-input-group__addon--button"
+    className="fd-input-group__addon fd-input-group__addon--button fd-input-group__addon--button--compact"
   >
     <button
       aria-label="Step up"
@@ -132,6 +146,10 @@ exports[`<InputGroup /> create input group items 7`] = `
 >
   <span
     className="fd-input-group__addon"
+    glyph="globe"
+    inputType="text"
+    numberDownCallback={[Function]}
+    numberUpCallback={[Function]}
   >
     <span
       className="sap-icon--globe"
@@ -152,7 +170,12 @@ exports[`<InputGroup /> create input group items 8`] = `
   className="fd-input-group"
 >
   <span
-    className="fd-input-group__addon"
+    className="fd-input-group__addon fd-input-group__addon--button--compact"
+    compact={true}
+    glyph="globe"
+    inputType="text"
+    numberDownCallback={[Function]}
+    numberUpCallback={[Function]}
   >
     <span
       className="sap-icon--globe"
@@ -180,6 +203,10 @@ exports[`<InputGroup /> create input group items 9`] = `
   />
   <span
     className="fd-input-group__addon"
+    glyph="hide"
+    inputType="text"
+    numberDownCallback={[Function]}
+    numberUpCallback={[Function]}
   >
     <span
       className="sap-icon--hide"
@@ -200,7 +227,12 @@ exports[`<InputGroup /> create input group items 10`] = `
     value="1234567890"
   />
   <span
-    className="fd-input-group__addon"
+    className="fd-input-group__addon fd-input-group__addon--button--compact"
+    compact={true}
+    glyph="hide"
+    inputType="text"
+    numberDownCallback={[Function]}
+    numberUpCallback={[Function]}
   >
     <span
       className="sap-icon--hide"
@@ -221,7 +253,11 @@ exports[`<InputGroup /> create input group items 11`] = `
     value="1234567890"
   />
   <span
+    actions={true}
     className="fd-input-group__addon fd-input-group__addon--button"
+    inputType="text"
+    numberDownCallback={[Function]}
+    numberUpCallback={[Function]}
   >
     <button
       className="fd-button--light"
@@ -243,10 +279,15 @@ exports[`<InputGroup /> create input group items 12`] = `
     value="1234567890"
   />
   <span
-    className="fd-input-group__addon fd-input-group__addon--button"
+    actions={true}
+    className="fd-input-group__addon fd-input-group__addon--button fd-input-group__addon--button--compact"
+    compact={true}
+    inputType="text"
+    numberDownCallback={[Function]}
+    numberUpCallback={[Function]}
   >
     <button
-      className="fd-button--light"
+      className="fd-button--light fd-button--compact"
     >
       Button
     </button>
@@ -259,7 +300,11 @@ exports[`<InputGroup /> create input group items 13`] = `
   className="fd-input-group"
 >
   <span
+    actions={true}
     className="fd-input-group__addon fd-input-group__addon--button"
+    inputType="text"
+    numberDownCallback={[Function]}
+    numberUpCallback={[Function]}
   />
   <input
     className="fd-input fd-input-group__input"
@@ -303,6 +348,9 @@ exports[`<InputGroup /> create input group items 15`] = `
 >
   <span
     className="fd-input-group__addon"
+    inputType="text"
+    numberDownCallback={[Function]}
+    numberUpCallback={[Function]}
   >
     $
   </span>
@@ -327,6 +375,9 @@ exports[`<InputGroup /> create input group items 16`] = `
   />
   <span
     className="fd-input-group__addon"
+    inputType="text"
+    numberDownCallback={[Function]}
+    numberUpCallback={[Function]}
   >
     €
   </span>
