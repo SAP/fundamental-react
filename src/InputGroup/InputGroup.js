@@ -19,8 +19,6 @@ class InputGroup extends Component {
         e.preventDefault();
         this.setState({
             value: parseInt(this.state.value, 10) + 1
-        }, () => {
-            this.props.numberUpCallback(event, this.state.value);
         });
     };
 
@@ -28,8 +26,6 @@ class InputGroup extends Component {
         e.preventDefault();
         this.setState({
             value: parseInt(this.state.value, 10) - 1
-        }, () => {
-            this.props.numberDownCallback(event, this.state.value);
         });
     };
 
