@@ -33,4 +33,37 @@ storiesOf('Components|InputGroup', module)
                 glyph='navigation-down-arrow'
                 option='light' />
         </InputGroup>
+    ))
+    .add('with addon', () => (
+        <InputGroup
+            addon='$'
+            addonPos='before'
+            inputValue='1234567890' />
+    ))
+    .add('with icon', () => (
+        <InputGroup
+            addonPos='before'
+            glyph='globe'
+            inputValue='1234567890' />
+    ))
+    .add('with number input', () => (
+        <InputGroup inputType='number' inputValue={100} />
+    ))
+    .add('with actions', () => (
+        <InputGroup
+            actions
+            addonPos='after'
+            compact
+            inputValue='1234567890'>
+            <Button
+                compact
+                option='light'>Button</Button>
+        </InputGroup>
+    ))
+    .add('compact', () => (
+        <InputGroup
+            addon='$'
+            addonPos='before'
+            compact
+            inputValue='1234567890' />
     ));
