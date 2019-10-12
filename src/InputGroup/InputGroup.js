@@ -19,6 +19,8 @@ class InputGroup extends Component {
         e.preventDefault();
         this.setState({
             value: parseInt(this.state.value, 10) + 1
+        }, () => {
+            this.props.numberUpCallback(e, this.state.value);
         });
     };
 
@@ -26,6 +28,8 @@ class InputGroup extends Component {
         e.preventDefault();
         this.setState({
             value: parseInt(this.state.value, 10) - 1
+        }, () => {
+            this.props.numberDownCallback(e, this.state.value);
         });
     };
 
@@ -154,8 +158,9 @@ InputGroup.propTypes = {
 InputGroup.defaultProps = {
     addonPos: 'after',
     inputType: 'text',
-    inputValue: ''
-
+    inputValue: '',
+    numberDownCallback: () => {},
+    numberUpCallback: () => {}
 };
 
 InputGroup.propDescriptions = {

@@ -247,6 +247,19 @@ describe('<InputGroup />', () => {
         expect(wrapper.state('value')).toEqual(0);
     });
 
+    test('should dispatch the numberUpCallback and numberDownCallback with the event', () => {
+        let f = jest.fn();
+        let h = jest.fn();
+        const element = mount(<InputGroup inputType='number' inputValue={100}
+            numberDownCallback={h} numberUpCallback={f} />);
+
+        element.find('button.fd-button--half.sap-icon--slim-arrow-up').simulate('click');
+        expect(f).toHaveBeenCalledTimes(1);
+
+        element.find('button.fd-button--half.sap-icon--slim-arrow-down').simulate('click');
+        expect(h).toHaveBeenCalledTimes(1);
+    });
+
     describe('Prop spreading', () => {
         test('should allow props to be spread to the InputGroup component (type text, addonPos after)', () => {
             const element = mount(<InputGroup data-sample='Sample' />);
