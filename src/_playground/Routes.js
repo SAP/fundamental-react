@@ -400,12 +400,12 @@ export class Routes extends Component {
                         </header>
                         <div className={sideBarClasses}>
                             <div className='frDocs-Search'>
-                                <InputGroup
-                                    glyph='search'
-                                    inputPlaceholder='Search'
-                                    inputProps={{ 'aria-label': 'Search' }}
-                                    inputValue={this.state.query}
-                                    onChange={this.onChangeHandler} />
+                                <InputGroup type='icon'>
+                                    <InputGroup.Addon>$</InputGroup.Addon>
+                                    <InputGroup.Input
+                                        onChange={this.onChangeHandler} placeholder='Search'
+                                        value={this.state.query} />
+                                </InputGroup>
                             </div>
                             <SideNav onItemSelect={this.updateCurrentPage} selectedId={this.state.currentPage}>
                                 {navItems}

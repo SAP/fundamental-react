@@ -1,6 +1,7 @@
 import classnames from 'classnames';
 import FormInput from '../Forms/FormInput';
-import { INPUT_GROUP_TYPES } from '../utils/constants';
+import { INPUT_GROUP_ADDON_TYPES } from '../utils/constants';
+import InputGroupAddon from './_InputGroupAddon';
 import PropTypes from 'prop-types';
 import withStyles from '../utils/WithStyles/WithStyles';
 import React, { Component } from 'react';
@@ -13,34 +14,32 @@ class InputGroup extends Component {
     render() {
         let {
             actions,
+            addon, 
             children,
             className,
             compact,
             disableStyles,
-            inputType,
             ...props
         } = this.props;
 
         const inputClasses = classnames(
-            'fd-input-group__input',
-            [{ 'fd-input--no-number-spinner': inputType === 'number' }],
+            'fd-input-group__input'
         );
 
         const inputGroupClasses = classnames(
             className,
-            'fd-input-group'
+            'fd-input-group',
+            [{ 'fd-input-group--compact': compact }]
         );
 
         children = React.Children.map(children, (child) => {
             return React.cloneElement(child, {
                 actions: actions,
+                addon: addon,
                 compact: compact,
                 className: (child.type === FormInput) ? inputClasses : '',
-                inputType: inputType
             });
         });
-
-        console.log(this.props);
 
         return (
             <div
@@ -53,25 +52,28 @@ class InputGroup extends Component {
     }
 }
 
+InputGroup.Addon = InputGroupAddon;
+InputGroup.Input = FormInput;
+
 InputGroup.displayName = 'InputGroup';
 
 InputGroup.propTypes = {
     actions: PropTypes.bool,
+    addon: PropTypes.oneOf(INPUT_GROUP_ADDON_TYPES),
     children: PropTypes.node,
     className: PropTypes.string,
     compact: PropTypes.bool,
     customStyles: PropTypes.object,
     disableStyles: PropTypes.bool,
-    inputType: PropTypes.oneOf(INPUT_GROUP_TYPES)
 };
 
 InputGroup.defaultProps = {
-    inputType: 'text'
+    addon: 'text'
 };
 
 InputGroup.propDescriptions = {
     actions: 'Set to **true** to enable an input with actions. Actions can be shown with a text label or icon.',
-    inputType: 'Value for the `type` attribute on the `<input>` element.'
+    addon: 'Type of addon to be displayed next to the input field.'
 };
 
 export { InputGroup as __InputGroup };
