@@ -401,7 +401,7 @@ export class Routes extends Component {
                         <div className={sideBarClasses}>
                             <div className='frDocs-Search'>
                                 <InputGroup type='icon'>
-                                    <InputGroup.Addon>$</InputGroup.Addon>
+                                    <InputGroup.Addon glyph='search' />
                                     <InputGroup.Input
                                         onChange={this.onChangeHandler} placeholder='Search'
                                         value={this.state.query} />

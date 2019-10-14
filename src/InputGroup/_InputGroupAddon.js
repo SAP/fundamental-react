@@ -3,7 +3,6 @@ import Icon from '../Icon/Icon';
 import { INPUT_GROUP_ADDON_TYPES } from '../utils/constants';
 import PropTypes from 'prop-types';
 import React from 'react';
-import withStyles from '../utils/WithStyles/WithStyles';
 
 const InputGroupAddon = ({
     addon,
@@ -71,4 +70,4 @@ InputGroupAddon.propDescriptions = {
 
 export { InputGroupAddon as __InputGroupAddon };
 
-export default withStyles(InputGroupAddon, { cssFile: 'input-group', fonts: true });
+export default InputGroupAddon;

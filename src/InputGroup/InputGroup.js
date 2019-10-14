@@ -5,7 +5,7 @@ import InputGroupAddon from './_InputGroupAddon';
 import PropTypes from 'prop-types';
 import withStyles from '../utils/WithStyles/WithStyles';
 import React, { Component } from 'react';
-/*eslint-disable*/
+
 class InputGroup extends Component {
     constructor(props) {
         super(props);
@@ -14,7 +14,7 @@ class InputGroup extends Component {
     render() {
         let {
             actions,
-            addon, 
+            addon,
             children,
             className,
             compact,
@@ -37,15 +37,14 @@ class InputGroup extends Component {
                 actions: actions,
                 addon: addon,
                 compact: compact,
-                className: (child.type === FormInput) ? inputClasses : '',
+                className: (child.type === InputGroup.InputGroupAddon) ? '' : inputClasses
             });
         });
 
         return (
             <div
                 {...props}
-                className={inputGroupClasses}
-                compact={compact}>
+                className={inputGroupClasses}>
                 {children}
             </div>
         );
@@ -64,7 +63,7 @@ InputGroup.propTypes = {
     className: PropTypes.string,
     compact: PropTypes.bool,
     customStyles: PropTypes.object,
-    disableStyles: PropTypes.bool,
+    disableStyles: PropTypes.bool
 };
 
 InputGroup.defaultProps = {

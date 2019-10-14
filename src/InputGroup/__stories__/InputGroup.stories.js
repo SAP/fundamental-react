@@ -1,4 +1,5 @@
 import Button from '../../Button/Button';
+import FormInput from '../../Forms/FormInput';
 import InputGroup from '../InputGroup';
 import React from 'react';
 import { storiesOf } from '@storybook/react';
@@ -10,28 +11,37 @@ storiesOf('Components|InputGroup', module)
     .addDecorator(withKnobs)
     .add('Default', () => (
         <InputGroup>
-            <Button
-                compact
-                glyph='navigation-down-arrow'
-                option='light' />
+            <FormInput />
+            <InputGroup.Addon>
+                <Button
+                    compact
+                    glyph='navigation-down-arrow'
+                    option='light' />
+            </InputGroup.Addon>
         </InputGroup>
     ))
     .add('disable styles', () => (
         <InputGroup
             disableStyles>
-            <Button
-                compact
-                glyph='navigation-down-arrow'
-                option='light' />
+            <FormInput />
+            <InputGroup.Addon>
+                <Button
+                    compact
+                    glyph='navigation-down-arrow'
+                    option='light' />
+            </InputGroup.Addon>
         </InputGroup>
     ))
     .add('custom styles', () => (
         <InputGroup
             customStyles={require('../../utils/WithStyles/customStylesTest.css')}>
-            <Button
-                compact
-                glyph='navigation-down-arrow'
-                option='light' />
+            <FormInput />
+            <InputGroup.Addon>
+                <Button
+                    compact
+                    glyph='navigation-down-arrow'
+                    option='light' />
+            </InputGroup.Addon>
         </InputGroup>
     ))
     .add('addon text before', () => (
