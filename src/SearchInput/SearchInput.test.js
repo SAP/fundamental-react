@@ -1,5 +1,5 @@
 import { mount } from 'enzyme';
-import { mountComponent } from '../utils/testUtils';
+import { mountComponentWithStyles } from '../utils/testUtils';
 import React from 'react';
 import renderer from 'react-test-renderer';
 import SearchInput from './SearchInput';
@@ -74,7 +74,7 @@ describe('<SearchInput />', () => {
 
     describe('onChange handler', () => {
         test('calling parent onChange event', () => {
-            const wrapper = mountComponent(searchOnChange);
+            const wrapper = mountComponentWithStyles(searchOnChange);
 
             // enter text into search input
             wrapper
@@ -101,7 +101,7 @@ describe('<SearchInput />', () => {
     });
 
     test('check for enter key press on search input', () => {
-        const wrapper = mountComponent(defaultSearchInput);
+        const wrapper = mountComponentWithStyles(defaultSearchInput);
 
         // enter text into search input
         wrapper
@@ -118,7 +118,7 @@ describe('<SearchInput />', () => {
     });
 
     test('click outside search input to close list', () => {
-        const wrapper = mountComponent(defaultSearchInput);
+        const wrapper = mountComponentWithStyles(defaultSearchInput);
         let event = new MouseEvent('click', {});
 
         // outside click, search list not shown
@@ -136,7 +136,7 @@ describe('<SearchInput />', () => {
     });
 
     test('show/hide auto complete list', () => {
-        const wrapper = mountComponent(defaultSearchInput);
+        const wrapper = mountComponentWithStyles(defaultSearchInput);
 
         // click in search box to show
         wrapper.find(searchInput).simulate('click');
@@ -232,7 +232,7 @@ describe('<SearchInput />', () => {
                 element.find('input').getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
 
-            element = mount(<SearchInput inputProps={{ 'data-sample': 'Sample1' }} inShellbar />);
+            element = mount(<SearchInput inShellbar inputProps={{ 'data-sample': 'Sample1' }} />);
 
             expect(
                 element.find('input').getDOMNode().attributes['data-sample'].value

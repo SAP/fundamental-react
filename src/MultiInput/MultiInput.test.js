@@ -1,5 +1,5 @@
 import { mount } from 'enzyme';
-import { mountComponent } from '../utils/testUtils';
+import { mountComponentWithStyles } from '../utils/testUtils';
 import MultiInput from './MultiInput';
 import React from 'react';
 
@@ -66,7 +66,7 @@ describe('<MultiInput />', () => {
 
     // check that the tag list is hidden
     test('check that tag list is hidden', () => {
-        wrapper = mountComponent(multiInput);
+        wrapper = mountComponentWithStyles(multiInput);
 
         // check if bShowList state is changed
         expect(wrapper.state(['bShowList'])).toBe(false);

@@ -1,6 +1,6 @@
 import DatePicker from '../DatePicker/DatePicker';
 import { mount } from 'enzyme';
-import { mountComponent } from '../utils/testUtils';
+import { mountComponentWithStyles } from '../utils/testUtils';
 import React from 'react';
 
 describe('<DatePicker />', () => {
@@ -24,7 +24,7 @@ describe('<DatePicker />', () => {
     });
 
     test('open/close by calendar icon button', () => {
-        wrapper = mountComponent(defaultDatePicker);
+        wrapper = mountComponentWithStyles(defaultDatePicker);
         expect(wrapper.state('hidden')).toBeTruthy();
 
         wrapper
@@ -35,7 +35,7 @@ describe('<DatePicker />', () => {
     });
 
     test('open/close calendar', () => {
-        wrapper = mountComponent(defaultDatePicker);
+        wrapper = mountComponentWithStyles(defaultDatePicker);
         // check to make sure calendar is hidden
         expect(wrapper.state('hidden')).toBeTruthy();
 
@@ -59,7 +59,7 @@ describe('<DatePicker />', () => {
     });
 
     test('open/close range calendar', () => {
-        wrapper = mountComponent(rangeDatePicker);
+        wrapper = mountComponentWithStyles(rangeDatePicker);
         //open date picker calendar
         expect(wrapper.state('hidden')).toBeTruthy();
 
@@ -88,7 +88,7 @@ describe('<DatePicker />', () => {
     });
 
     test('start date and end date range', () => {
-        wrapper = mountComponent(rangeDatePicker);
+        wrapper = mountComponentWithStyles(rangeDatePicker);
         // set dates
         let startRangeDate = new Date();
         let endRangeDate = new Date();
@@ -110,7 +110,7 @@ describe('<DatePicker />', () => {
     });
 
     test('check start date greater than end date for range', () => {
-        wrapper = mountComponent(rangeDatePicker);
+        wrapper = mountComponentWithStyles(rangeDatePicker);
         // set dates
         let startRangeDate = new Date();
         let endRangeDate = new Date();
@@ -140,7 +140,7 @@ describe('<DatePicker />', () => {
     });
 
     test('entering start date and disabled end range dates', () => {
-        wrapper = mountComponent(disabledFutureRangePicker);
+        wrapper = mountComponentWithStyles(disabledFutureRangePicker);
         // set dates
         let startRangeDate = new Date();
         let endRangeDate = new Date();
@@ -160,7 +160,7 @@ describe('<DatePicker />', () => {
     });
 
     test('entering invalid range dates', () => {
-        wrapper = mountComponent(rangeDatePicker);
+        wrapper = mountComponentWithStyles(rangeDatePicker);
         // set dates
         let startRangeDate = new Date();
         let endRangeDate = new Date();
@@ -181,7 +181,7 @@ describe('<DatePicker />', () => {
 
     test('updateDate method', () => {
         // choose one day in default picker
-        wrapper = mountComponent(defaultDatePicker);
+        wrapper = mountComponentWithStyles(defaultDatePicker);
         const date = new Date();
         wrapper.instance().updateDate(date);
         expect(wrapper.state('selectedDate')).toEqual(date);
@@ -190,7 +190,7 @@ describe('<DatePicker />', () => {
         expect(wrapper.state('formattedDate')).toEqual(formattedDate);
 
         // choose 1 day in range picker
-        wrapper = mountComponent(rangeDatePicker);
+        wrapper = mountComponentWithStyles(rangeDatePicker);
         let startRangeDate = new Date();
 
         let arrDates = [startRangeDate];
@@ -202,7 +202,7 @@ describe('<DatePicker />', () => {
         expect(wrapper.state('arrSelectedDates').length).toEqual(1);
 
         // choose 2 days in range picker
-        wrapper = mountComponent(rangeDatePicker);
+        wrapper = mountComponentWithStyles(rangeDatePicker);
         startRangeDate = new Date();
         let endRangeDate = new Date();
         endRangeDate.setDate(endRangeDate.getDate() + 3);
@@ -219,7 +219,7 @@ describe('<DatePicker />', () => {
     });
 
     test('pressing enter key on date input', () => {
-        wrapper = mountComponent(rangeDatePicker);
+        wrapper = mountComponentWithStyles(rangeDatePicker);
 
         let startRangeDate = new Date();
         let endRangeDate = new Date();
@@ -239,7 +239,7 @@ describe('<DatePicker />', () => {
     });
 
     test('pressing enter key on date input where start date > than end date', () => {
-        wrapper = mountComponent(rangeDatePicker);
+        wrapper = mountComponentWithStyles(rangeDatePicker);
 
         let startRangeDate = new Date();
         let endRangeDate = new Date();
@@ -260,7 +260,7 @@ describe('<DatePicker />', () => {
 
     test('enter a valid date string', () => {
         // enter a valid date input
-        wrapper = mountComponent(defaultDatePicker);
+        wrapper = mountComponentWithStyles(defaultDatePicker);
         let date = new Date();
         let formattedDate = `${date.getMonth() +
             1}/${date.getDate()}/${date.getFullYear()}`;
@@ -275,7 +275,7 @@ describe('<DatePicker />', () => {
 
     test('enter a disabled date string', () => {
         // enter a valid date input
-        wrapper = mountComponent(disabledFuturePicker);
+        wrapper = mountComponentWithStyles(disabledFuturePicker);
         let date = new Date();
         let formattedDate = `${date.getMonth() +
             1}/${date.getDate() + 1}/${date.getFullYear()}`;
@@ -289,7 +289,7 @@ describe('<DatePicker />', () => {
     });
 
     test('enter an invalid date string', () => {
-        wrapper = mountComponent(defaultDatePicker);
+        wrapper = mountComponentWithStyles(defaultDatePicker);
         let date = new Date();
         let formattedDate = `${date.getMonth() +
             1}/${date.getDate()}/${date.getFullYear() + 4000}`;
@@ -302,7 +302,7 @@ describe('<DatePicker />', () => {
     });
 
     test('formatDate method', () => {
-        wrapper = mountComponent(rangeDatePicker);
+        wrapper = mountComponentWithStyles(rangeDatePicker);
         let startRangeDate = new Date();
         let endRangeDate = new Date();
         endRangeDate.setDate(endRangeDate.getDate() + 3);
@@ -317,7 +317,7 @@ describe('<DatePicker />', () => {
         expect(wrapper.instance().formatDate([])).toEqual('');
 
         // enter end year of 3001
-        wrapper = mountComponent(rangeDatePicker);
+        wrapper = mountComponentWithStyles(rangeDatePicker);
 
         startRangeDate = new Date();
         endRangeDate = new Date();
@@ -329,7 +329,7 @@ describe('<DatePicker />', () => {
         expect(wrapper.instance().formatDate([])).toEqual('');
 
         // default date picker format date
-        wrapper = mountComponent(defaultDatePicker);
+        wrapper = mountComponentWithStyles(defaultDatePicker);
         startRangeDate = new Date();
 
         formattedDate = `${startRangeDate.getMonth() +
@@ -339,7 +339,7 @@ describe('<DatePicker />', () => {
     });
 
     test('enter text string for date', () => {
-        wrapper = mountComponent(defaultDatePicker);
+        wrapper = mountComponentWithStyles(defaultDatePicker);
 
         wrapper.find('input[type="text"]')
             .simulate('change', { target: { value: 'May 14th, 2018' } });
@@ -350,7 +350,7 @@ describe('<DatePicker />', () => {
     });
 
     test('enter text string for date on date range component', () => {
-        wrapper = mountComponent(rangeDatePicker);
+        wrapper = mountComponentWithStyles(rangeDatePicker);
 
         wrapper.find('input[type="text"]')
             .simulate('change', { target: { value: 'May 14th, 2018-May 15th, 2018' } });
@@ -361,7 +361,7 @@ describe('<DatePicker />', () => {
     });
 
     test('modify date on change', () => {
-        wrapper = mountComponent(defaultDatePicker);
+        wrapper = mountComponentWithStyles(defaultDatePicker);
         wrapper
             .find('input[type="text"]')
             .simulate('change', { target: { value: '05/04/2018' } });

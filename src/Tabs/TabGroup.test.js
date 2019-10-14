@@ -1,5 +1,5 @@
 import { mount } from 'enzyme';
-import { mountComponent } from '../utils/testUtils';
+import { mountComponentWithStyles } from '../utils/testUtils';
 import React from 'react';
 import renderer from 'react-test-renderer';
 import Tab from './Tab';
@@ -62,7 +62,7 @@ describe('<Tabs />', () => {
     });
 
     test('tab selection', () => {
-        const wrapper = mountComponent(defaultTabsWithClass);
+        const wrapper = mountComponentWithStyles(defaultTabsWithClass);
 
         // check selected tab
         expect(wrapper.state(['selectedIndex'])).toEqual(1);

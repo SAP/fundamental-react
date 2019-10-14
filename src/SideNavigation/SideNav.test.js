@@ -1,5 +1,5 @@
 import { mount } from 'enzyme';
-import { mountComponent } from '../utils/testUtils';
+import { mountComponentWithStyles } from '../utils/testUtils';
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { SideNav } from '../';
@@ -285,7 +285,7 @@ describe('<SideNav />', () => {
     });
 
     test('handle side nav list link click', () => {
-        const wrapper = mountComponent(sideNavMultiLevel);
+        const wrapper = mountComponentWithStyles(sideNavMultiLevel);
         const Item2 = wrapper.find({ 'id': 'item_2' });
         const Item4 = wrapper.find({ 'id': 'item_4' });
 
@@ -311,7 +311,7 @@ describe('<SideNav />', () => {
     });
 
     test('handle side nav sub link click', () => {
-        const wrapper = mountComponent(sideNavMultiLevel);
+        const wrapper = mountComponentWithStyles(sideNavMultiLevel);
         wrapper
             .find('.fd-side-nav__sublink')
             .at(0)
