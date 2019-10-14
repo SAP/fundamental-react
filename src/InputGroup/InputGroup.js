@@ -19,28 +19,24 @@ class InputGroup extends Component {
             ...props
         } = this.props;
 
-        const inputClasses = classnames(
-            'fd-input-group__input'
-        );
+        const inputClasses = 'fd-input-group__input';
 
         const inputGroupClasses = classnames(
             className,
             'fd-input-group',
-            [{ 'fd-input-group--compact': compact }]
+            { 'fd-input-group--compact': compact }
         );
-
-        children = React.Children.map(children, (child) => {
-            return React.cloneElement(child, {
-                compact: compact,
-                className: (child.type === InputGroup.InputGroupAddon) ? '' : inputClasses
-            });
-        });
 
         return (
             <div
                 {...props}
                 className={inputGroupClasses}>
-                {children}
+                {React.Children.map(children, (child) => (
+                    React.cloneElement(child, {
+                        compact,
+                        className: (child.type === InputGroup.InputGroupAddon) ? '' : inputClasses
+                    })
+                ))}
             </div>
         );
     }

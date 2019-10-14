@@ -129,9 +129,9 @@ export const InputGroupComponent = () => {
                     <FormGroup>
                         <FormLabel>Input text with action</FormLabel>
                         <FormItem>
-                            <InputGroup actions addon='button'>
+                            <InputGroup >
                                 <InputGroup.Input placeholder='Type text here' />
-                                <InputGroup.Addon>
+                                <InputGroup.Addon isButton>
                                     <Button option='light'>Button</Button>
                                 </InputGroup.Addon>
                             </InputGroup>
@@ -142,10 +142,9 @@ export const InputGroupComponent = () => {
                     <FormGroup>
                         <FormLabel>Input text with action</FormLabel>
                         <FormItem>
-                            <InputGroup actions addon='button'
-                                compact>
+                            <InputGroup compact>
                                 <InputGroup.Input placeholder='Type text here' />
-                                <InputGroup.Addon>
+                                <InputGroup.Addon isButton>
                                     <Button compact option='light'>Button</Button>
                                 </InputGroup.Addon>
                             </InputGroup>
@@ -156,9 +155,9 @@ export const InputGroupComponent = () => {
                     <FormGroup>
                         <FormLabel>Input with icon text action</FormLabel>
                         <FormItem>
-                            <InputGroup actions addon='button'>
+                            <InputGroup>
                                 <InputGroup.Input />
-                                <InputGroup.Addon>
+                                <InputGroup.Addon isButton>
                                     <Button glyph='navigation-down-arrow' option='light' />
                                 </InputGroup.Addon>
                             </InputGroup>
@@ -169,10 +168,9 @@ export const InputGroupComponent = () => {
                     <FormGroup>
                         <FormLabel>Input with icon text action</FormLabel>
                         <FormItem>
-                            <InputGroup actions addon='button'
-                                compact>
+                            <InputGroup compact>
                                 <InputGroup.Input placeholder='Type text here' />
-                                <InputGroup.Addon>
+                                <InputGroup.Addon isButton>
                                     <Button compact
                                         glyph='navigation-down-arrow'
                                         option='light' />

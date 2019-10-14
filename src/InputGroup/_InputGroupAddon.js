@@ -12,24 +12,16 @@ const InputGroupAddon = ({
     ...otherProps
 }) => {
 
-    let returnObject = children;
-
-    children = React.Children.map(children, (child) => {
-        return React.cloneElement(child, {
-            compact: compact
-        });
-    });
-
     const addonClasses = classnames(
         addonClassNames,
         'fd-input-group__addon',
-        [{ 'fd-input-group__addon--button': isButton }],
-        [{ 'fd-input-group__addon--button--compact': compact && isButton }],
+        { 'fd-input-group__addon--button': isButton },
+        { 'fd-input-group__addon--button--compact': compact && isButton }
     );
 
     return (
         <span className={addonClasses} {...otherProps} >
-            {returnObject}
+            {children}
         </span>
     );
 };
