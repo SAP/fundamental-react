@@ -6,125 +6,71 @@ import renderer from 'react-test-renderer';
 
 describe('<InputGroup />', () => {
     const inputTextPosBefore = (
-        <InputGroup
-            addon='$'
-            addonPos='before'
-            inputType='text'
-            inputValue='1234567890' />
+        <InputGroup>
+            <InputGroup.Addon>$</InputGroup.Addon>
+            <InputGroup.Input
+                placeholder='Type text here' />
+        </InputGroup>
     );
     const inputTextPosAfter = (
-        <InputGroup
-            addon='€'
-            addonPos='after'
-            inputType='text'
-            inputValue='1234567890' />
+        <InputGroup>
+            <InputGroup.Input placeholder='Type text here' />
+            <InputGroup.Addon>€</InputGroup.Addon>
+        </InputGroup>
     );
     const inputTextPosBeforeCompact = (
-        <InputGroup
-            addon='$'
-            addonPos='before'
-            compact
-            inputType='text'
-            inputValue='1234567890' />
+        <InputGroup compact>
+            <InputGroup.Addon>$</InputGroup.Addon>
+            <InputGroup.Input placeholder='Type text here' />
+        </InputGroup>
     );
     const inputTextPosAfterCompact = (
-        <InputGroup
-            addon='€'
-            addonPos='after'
-            compact
-            inputType='text'
-            inputValue='1234567890' />
+        <InputGroup compact>
+            <InputGroup.Input
+                placeholder='Type text here' />
+            <InputGroup.Addon>€</InputGroup.Addon>
+        </InputGroup>
     );
-    const numberInput = <InputGroup inputType='number' inputValue={100} />;
-    const numberInputCompact = (
-        <InputGroup compact inputType='number'
-            inputValue={100} />
-    );
-
     const inputWithIcon = (
-        <InputGroup
-            addonPos='before'
-            glyph='globe'
-            inputType='text'
-            inputValue='1234567890' />
+        <InputGroup addon='icon'>
+            <InputGroup.Addon glyph='globe' />
+            <InputGroup.Input placeholder='Type text here' />
+        </InputGroup>
     );
     const inputWithIconCompact = (
-        <InputGroup
-            addonPos='before'
-            compact
-            glyph='globe'
-            inputType='text'
-            inputValue='1234567890' />
+        <InputGroup addon='icon' compact>
+            <InputGroup.Addon glyph='globe' />
+            <InputGroup.Input placeholder='Type text here' />
+        </InputGroup>
     );
     const inputWithIconAfter = (
-        <InputGroup
-            addonPos='after'
-            glyph='hide'
-            inputType='text'
-            inputValue='1234567890' />
+        <InputGroup addon='icon'>
+            <InputGroup.Input placeholder='Type text here' />
+            <InputGroup.Addon glyph='hide' />
+        </InputGroup>
     );
     const inputWithIconAfterCompact = (
-        <InputGroup
-            addonPos='after'
-            compact
-            glyph='hide'
-            inputType='text'
-            inputValue='1234567890' />
+        <InputGroup addon='icon' compact>
+            <InputGroup.Input placeholder='Type text here' />
+            <InputGroup.Addon glyph='hide' />
+        </InputGroup>
     );
     const inputWithActions = (
-        <InputGroup
-            actions
-            addonPos='after'
-            inputType='text'
-            inputValue='1234567890'>
-            <Button option='light'>Button</Button>
+        <InputGroup actions addon='button'>
+            <InputGroup.Input placeholder='Type text here' />
+            <InputGroup.Addon>
+                <Button option='light'>Button</Button>
+            </InputGroup.Addon>
         </InputGroup>
     );
     const inputWithActionsCompact = (
-        <InputGroup
-            actions
-            addonPos='after'
-            compact
-            inputType='text'
-            inputValue='1234567890'>
-            <Button option='light'>Button</Button>
+        <InputGroup actions addon='button'
+            compact>
+            <InputGroup.Input placeholder='Type text here' />
+            <InputGroup.Addon>
+                <Button compact option='light'>Button</Button>
+            </InputGroup.Addon>
         </InputGroup>
-    );
-
-    const inputWithActionsNoButtons = (
-        <InputGroup
-            actions
-            addonPos='before'
-            inputType='text'
-            inputValue='1234567890' />
-    );
-
-    const numberInputWithCustomClassName = (
-        <InputGroup
-            className='custom-div-class-search'
-            inputClassName='custom-input-class-search'
-            inputType='number'
-            inputValue={100} />
-    );
-
-    const beforeInputWithCustomClassName = (
-        <InputGroup
-            addon='$'
-            addonPos='before'
-            className='custom-div-class-before'
-            inputClassName='custom-input-class-before'
-            inputType='text'
-            inputValue='1234567890' />
-    );
-
-    const afterInputWithCustomClassName = (
-        <InputGroup
-            addon='€'
-            addonPos='after'
-            className='custom-div-class-after'
-            inputClassName='custom-input-class-after'
-            inputType='text'
-            inputValue='1234567890' />
     );
 
     test('create input group items', () => {
@@ -145,16 +91,6 @@ describe('<InputGroup />', () => {
 
         // create input text after compact
         component = renderer.create(inputTextPosAfterCompact);
-        tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-
-        // create input number
-        component = renderer.create(numberInput);
-        tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-
-        // create input number compact
-        component = renderer.create(numberInputCompact);
         tree = component.toJSON();
         expect(tree).toMatchSnapshot();
 
@@ -188,25 +124,6 @@ describe('<InputGroup />', () => {
         tree = component.toJSON();
         expect(tree).toMatchSnapshot();
 
-        // create input actions but no buttons
-        component = renderer.create(inputWithActionsNoButtons);
-        tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-
-        // number input with group custom class name
-        component = renderer.create(numberInputWithCustomClassName);
-        tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-
-        // before-class input with group custom class name
-        component = renderer.create(beforeInputWithCustomClassName);
-        tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-
-        // after-class input with group custom class name
-        component = renderer.create(afterInputWithCustomClassName);
-        tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
 
         // default input group
         component = renderer.create('<InputGroup />');
@@ -215,100 +132,54 @@ describe('<InputGroup />', () => {
 
     });
 
-    test('input text entered', () => {
-        const wrapper = mount(inputTextPosBefore).children().children();
+    let setup = (props) => {
+        return mount(<InputGroup {...props}>
+            <InputGroup.Addon>$</InputGroup.Addon>
+            <InputGroup.Input />
+        </InputGroup>);
+    };
 
-        // click up
-        wrapper.setState({ value: '' });
-        wrapper
-            .find('input[type="text"]')
-            .simulate('change', { target: { value: 'hello' } });
+    describe('Default Rendering', () => {
+        let element = setup({
+            children: 'foo' //prop children is required
+        });
 
-        expect(wrapper.state('value')).toEqual('hello');
+        it('should render', () => {
+            expect(
+                element
+            ).toBeDefined();
+        });
+
+        it('should render a div tag by default', () => {
+            expect(
+                element.getDOMNode().tagName
+            ).toBe('DIV');
+        });
+
+        it('should have a default class of "fd-input-group"', () => {
+            expect(
+                element.getDOMNode().className
+            ).toContain('fd-input-group');
+        });
     });
 
-    test('number input handle up and down', () => {
-        const wrapper = mount(numberInput).children().children();
+    describe('Rendering with Props', () => {
+        it('should not throw error if child.type is undefined', () => {
+            let element = setup({
+                children: <div>This is a test</div>
+            });
 
-        // click up
-        wrapper.setState({ value: 0 });
-        wrapper
-            .find(
-                'button.fd-button--half.sap-icon--slim-arrow-up'
-            )
-            .simulate('click');
-        expect(wrapper.state('value')).toEqual(1);
+            expect(() => element).not.toThrow();
+        });
 
-        wrapper
-            .find(
-                'button.fd-button--half.sap-icon--slim-arrow-down'
-            )
-            .simulate('click');
-        expect(wrapper.state('value')).toEqual(0);
-    });
-
-    describe('Prop spreading', () => {
-        test('should allow props to be spread to the InputGroup component (type text, addonPos after)', () => {
-            const element = mount(<InputGroup data-sample='Sample' />);
+        it('should allow data attribute to be passed to span element', () => {
+            const element = setup({
+                children: [<InputGroup.Input />, <InputGroup.Addon>@</InputGroup.Addon>],
+                'data-sample': 'Sample'
+            });
 
             expect(
                 element.getDOMNode().attributes['data-sample'].value
-            ).toBe('Sample');
-        });
-
-        test('should allow props to be spread to the InputGroup component\'s (type text, addonPos after) input element', () => {
-            const element = mount(<InputGroup inputProps={{ 'data-sample': 'Sample' }} />);
-
-            expect(
-                element.find('input').getDOMNode().attributes['data-sample'].value
-            ).toBe('Sample');
-        });
-
-        test('should allow props to be spread to the InputGroup component for addonPos before (type text)', () => {
-            const element = mount(<InputGroup addonPos='before' data-sample='Sample' />);
-
-            expect(
-                element.getDOMNode().attributes['data-sample'].value
-            ).toBe('Sample');
-        });
-
-        test('should allow props to be spread to the InputGroup component for addonPos before\'s (type text) input element', () => {
-            const element = mount(<InputGroup addonPos='before' inputProps={{ 'data-sample': 'Sample' }} />);
-
-            expect(
-                element.find('input').getDOMNode().attributes['data-sample'].value
-            ).toBe('Sample');
-        });
-
-        test('should allow props to be spread to the InputGroup component for type number', () => {
-            const element = mount(<InputGroup data-sample='Sample' inputType='number' />);
-
-            expect(
-                element.getDOMNode().attributes['data-sample'].value
-            ).toBe('Sample');
-        });
-
-        test('should allow props to be spread to the InputGroup component for type number\'s input element', () => {
-            const element = mount(<InputGroup inputProps={{ 'data-sample': 'Sample' }} inputType='number' />);
-
-            expect(
-                element.find('input').getDOMNode().attributes['data-sample'].value
-            ).toBe('Sample');
-        });
-
-        test('should allow props to be spread to the InputGroup component for type number\'s up button element', () => {
-            const element = mount(<InputGroup inputType='number' numberUpButtonProps={{ 'data-sample': 'Sample' }} />);
-
-            expect(
-                element.find('button.sap-icon--slim-arrow-up').getDOMNode().attributes['data-sample'].value
-            ).toBe('Sample');
-        });
-
-        test('should allow props to be spread to the InputGroup component for type number\'s down button element', () => {
-            const element = mount(<InputGroup inputType='number' numberDownButtonProps={{ 'data-sample': 'Sample' }} />);
-
-            expect(
-                element.find('button.sap-icon--slim-arrow-down').getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
         });
     });
