@@ -1,6 +1,7 @@
 import Icon from '../Icon/Icon';
 import Menu from '../Menu/Menu';
 import { mount } from 'enzyme';
+import { mountComponentWithStyles } from '../utils/testUtils';
 import Popover from './Popover';
 import React from 'react';
 import renderer from 'react-test-renderer';
@@ -119,7 +120,7 @@ describe('<Popover />', () => {
     });
 
     test('handle document click to close popover', () => {
-        const wrapper = mount(popOver).children().children();
+        const wrapper = mountComponentWithStyles(popOver);
 
         // click on popover to show
         wrapper.find('div.fd-popover__control .sap-icon--cart').simulate('click');
@@ -133,7 +134,7 @@ describe('<Popover />', () => {
     });
 
     test('handle esc key to close popover', () => {
-        const wrapper = mount(popOver).children().children();
+        const wrapper = mountComponentWithStyles(popOver);
 
         // click on popover to show
         wrapper.find('div.fd-popover__control .sap-icon--cart').simulate('click');
@@ -146,7 +147,7 @@ describe('<Popover />', () => {
     });
 
     test('handle document click to close popover', () => {
-        const wrapper = mount(popOver).children().children();
+        const wrapper = mountComponentWithStyles(popOver);
 
         // click on popover to show
         wrapper.find('div.fd-popover__control .sap-icon--cart').simulate('click');
@@ -159,7 +160,7 @@ describe('<Popover />', () => {
     });
 
     test('handle document click to close popover', () => {
-        const wrapper = mount(popOverDisabled).children().children();
+        const wrapper = mountComponentWithStyles(popOverDisabled);
 
         // click on popover to show
         wrapper.find('div.fd-popover__control .sap-icon--cart').simulate('click');

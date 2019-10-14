@@ -1,5 +1,6 @@
 import Alert from './Alert';
 import { mount } from 'enzyme';
+import { mountComponentWithStyles } from '../utils/testUtils';
 import React from 'react';
 import renderer from 'react-test-renderer';
 
@@ -34,7 +35,7 @@ describe('<Alert />', () => {
         tree = component.toJSON();
         expect(tree).toMatchSnapshot();
 
-        let wrapper = mount(basicAlert).children().children();
+        let wrapper = mountComponentWithStyles(basicAlert);
 
         expect(wrapper.state(['isActive'])).toBeTruthy();
         wrapper.find('button.fd-alert__close').simulate('click');
