@@ -13,6 +13,7 @@ import { DropdownComponent } from '../Dropdown/Dropdown.Component';
 import { FormsComponent } from '../Forms/Forms.Component';
 import groupArray from 'group-array';
 import Home from './documentation/Home/Home';
+import Icon from '../Icon/Icon';
 import { IconComponent } from '../Icon/Icon.Component';
 import { IdentifierComponent } from '../Identifier/Identifier.Component';
 import { ImageComponent } from '../Image/Image.Component';
@@ -401,7 +402,9 @@ export class Routes extends Component {
                         <div className={sideBarClasses}>
                             <div className='frDocs-Search'>
                                 <InputGroup type='icon'>
-                                    <InputGroup.Addon glyph='search' />
+                                    <InputGroup.Addon>
+                                        <Icon glyph='search' />
+                                    </InputGroup.Addon>
                                     <InputGroup.Input
                                         onChange={this.onChangeHandler} placeholder='Search'
                                         value={this.state.query} />

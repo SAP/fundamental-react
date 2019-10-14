@@ -1,6 +1,6 @@
 import path from 'path';
 import React from 'react';
-import { Button, FormGroup, FormItem, FormLabel, InputGroup } from '../';
+import { Button, FormGroup, FormItem, FormLabel, Icon, InputGroup } from '../';
 import { ComponentPage, Example } from '../_playground';
 
 export const InputGroupComponent = () => {
@@ -69,8 +69,10 @@ export const InputGroupComponent = () => {
                     <FormGroup>
                         <FormLabel>Input with icon on the left</FormLabel>
                         <FormItem>
-                            <InputGroup addon='icon'>
-                                <InputGroup.Addon glyph='globe' />
+                            <InputGroup>
+                                <InputGroup.Addon>
+                                    <Icon glyph='globe' />
+                                </InputGroup.Addon>
                                 <InputGroup.Input placeholder='Type text here' />
                             </InputGroup>
                         </FormItem>
@@ -81,8 +83,10 @@ export const InputGroupComponent = () => {
                     <FormGroup>
                         <FormLabel>Input with icon on the left</FormLabel>
                         <FormItem>
-                            <InputGroup addon='icon' compact>
-                                <InputGroup.Addon glyph='globe' />
+                            <InputGroup compact>
+                                <InputGroup.Addon>
+                                    <Icon glyph='globe' />
+                                </InputGroup.Addon>
                                 <InputGroup.Input placeholder='Type text here' />
                             </InputGroup>
                         </FormItem>
@@ -92,9 +96,11 @@ export const InputGroupComponent = () => {
                     <FormGroup>
                         <FormLabel>Input with icon on the right</FormLabel>
                         <FormItem>
-                            <InputGroup addon='icon'>
+                            <InputGroup>
                                 <InputGroup.Input placeholder='Type text here' />
-                                <InputGroup.Addon glyph='hide' />
+                                <InputGroup.Addon>
+                                    <Icon glyph='hide' />
+                                </InputGroup.Addon>
                             </InputGroup>
                         </FormItem>
                     </FormGroup>
@@ -103,9 +109,11 @@ export const InputGroupComponent = () => {
                     <FormGroup>
                         <FormLabel>Input with icon on the right</FormLabel>
                         <FormItem>
-                            <InputGroup addon='icon' compact>
+                            <InputGroup compact>
                                 <InputGroup.Input placeholder='Type text here' />
-                                <InputGroup.Addon glyph='hide' />
+                                <InputGroup.Addon>
+                                    <Icon glyph='hide' />
+                                </InputGroup.Addon>
                             </InputGroup>
                         </FormItem>
                     </FormGroup>

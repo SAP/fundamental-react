@@ -1,8 +1,8 @@
-import { Button } from '../';
 import InputGroup from './InputGroup';
 import { mount } from 'enzyme';
 import React from 'react';
 import renderer from 'react-test-renderer';
+import { Button, Icon } from '../';
 
 describe('<InputGroup />', () => {
     const inputTextPosBefore = (
@@ -32,42 +32,49 @@ describe('<InputGroup />', () => {
         </InputGroup>
     );
     const inputWithIcon = (
-        <InputGroup addon='icon'>
-            <InputGroup.Addon glyph='globe' />
+        <InputGroup>
+            <InputGroup.Addon>
+                <Icon glyph='globe' />
+            </InputGroup.Addon>
             <InputGroup.Input placeholder='Type text here' />
         </InputGroup>
     );
     const inputWithIconCompact = (
-        <InputGroup addon='icon' compact>
-            <InputGroup.Addon glyph='globe' />
+        <InputGroup compact>
+            <InputGroup.Addon>
+                <Icon glyph='globe' />
+            </InputGroup.Addon>
             <InputGroup.Input placeholder='Type text here' />
         </InputGroup>
     );
     const inputWithIconAfter = (
-        <InputGroup addon='icon'>
+        <InputGroup>
             <InputGroup.Input placeholder='Type text here' />
-            <InputGroup.Addon glyph='hide' />
+            <InputGroup.Addon>
+                <Icon glyph='hide' />
+            </InputGroup.Addon>
         </InputGroup>
     );
     const inputWithIconAfterCompact = (
-        <InputGroup addon='icon' compact>
-            <InputGroup.Input placeholder='Type text here' />
-            <InputGroup.Addon glyph='hide' />
-        </InputGroup>
-    );
-    const inputWithActions = (
-        <InputGroup actions addon='button'>
+        <InputGroup compact>
             <InputGroup.Input placeholder='Type text here' />
             <InputGroup.Addon>
+                <Icon glyph='hide' />
+            </InputGroup.Addon>
+        </InputGroup>
+    );
+    const inputWithButton = (
+        <InputGroup>
+            <InputGroup.Input placeholder='Type text here' />
+            <InputGroup.Addon isButton>
                 <Button option='light'>Button</Button>
             </InputGroup.Addon>
         </InputGroup>
     );
-    const inputWithActionsCompact = (
-        <InputGroup actions addon='button'
-            compact>
+    const inputWithButtonCompact = (
+        <InputGroup compact>
             <InputGroup.Input placeholder='Type text here' />
-            <InputGroup.Addon>
+            <InputGroup.Addon isButton>
                 <Button compact option='light'>Button</Button>
             </InputGroup.Addon>
         </InputGroup>
@@ -114,13 +121,13 @@ describe('<InputGroup />', () => {
         tree = component.toJSON();
         expect(tree).toMatchSnapshot();
 
-        // create input actions
-        component = renderer.create(inputWithActions);
+        // create input with button
+        component = renderer.create(inputWithButton);
         tree = component.toJSON();
         expect(tree).toMatchSnapshot();
 
-        // create input actions compact
-        component = renderer.create(inputWithActionsCompact);
+        // create input with button compact
+        component = renderer.create(inputWithButtonCompact);
         tree = component.toJSON();
         expect(tree).toMatchSnapshot();
 
