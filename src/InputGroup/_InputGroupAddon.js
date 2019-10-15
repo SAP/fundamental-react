@@ -7,7 +7,6 @@ const InputGroupAddon = ({
     children,
     className,
     compact,
-    disableStyles,
     isButton,
     ...otherProps
 }) => {
@@ -33,8 +32,6 @@ InputGroupAddon.propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,
     compact: PropTypes.bool,
-    customStyles: PropTypes.object,
-    disableStyles: PropTypes.bool,
     isButton: PropTypes.bool
 };
 
