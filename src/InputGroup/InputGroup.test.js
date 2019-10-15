@@ -191,5 +191,15 @@ describe('<InputGroup />', () => {
                 element.getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
         });
+
+        it('should pass correct classnames if child.type is an input', () => {
+            let element = setup({
+                children: [<InputGroup.Addon>@</InputGroup.Addon>, <FormInput />]
+            });
+
+            expect(
+                element.getDOMNode().children[1].className
+            ).toContain('fd-input-group__input');
+        });
     });
 });
