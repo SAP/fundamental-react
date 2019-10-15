@@ -63,7 +63,8 @@ export const InputGroupComponent = () => {
             </Example>
 
             <Example
-                description='The Input with add-on supports icons.'
+
+                description='The consumer can add an Icon as a child of InputGroup.Addon.'
                 title='Input with icons'>
                 <div>
                     <FormGroup>
@@ -121,10 +122,9 @@ export const InputGroupComponent = () => {
             </Example>
 
             <Example
-                description={`The Input with add-on supports actions. Actions can be shown with a text
-                    label or icon.`}
-                title='Input with actions'>
-                {/* ACTIONS NEEDS TO BE FIXED TO BE GIVEN TO CHILD FROM PARENT */}
+                description={`The InputGroup.Addon isButton supports buttons by providing the correct styling. Buttons can be shown with a text
+                label or icon.`}
+                title='Input with Buttons'>
                 <div>
                     <FormGroup>
                         <FormLabel>Input text with action</FormLabel>

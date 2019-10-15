@@ -141,15 +141,16 @@ describe('<InputGroup />', () => {
     });
 
     let setup = (props) => {
-        return mount(<InputGroup {...props}>
-            <InputGroup.Addon>$</InputGroup.Addon>
-            <FormInput />
-        </InputGroup>);
+        return mount(
+            <InputGroup {...props}>
+                <InputGroup.Addon>$</InputGroup.Addon>
+                <FormInput />
+            </InputGroup>);
     };
 
     describe('Default Rendering', () => {
         let element = setup({
-            children: 'foo' //prop children is required
+            children: [<FormInput />, <InputGroup.Addon>@</InputGroup.Addon>]
         });
 
         it('should render', () => {

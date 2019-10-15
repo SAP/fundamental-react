@@ -25,7 +25,7 @@ const InputGroupAddon = ({
     );
 };
 
-InputGroupAddon.displayName = 'InputGroupAddon';
+InputGroupAddon.displayName = 'InputGroup.Addon';
 
 InputGroupAddon.propTypes = {
     addonClassNames: PropTypes.string,
