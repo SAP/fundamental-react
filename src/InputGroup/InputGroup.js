@@ -34,7 +34,7 @@ class InputGroup extends Component {
                 {React.Children.map(children, (child) => (
                     React.cloneElement(child, {
                         compact,
-                        className: (child.type === InputGroup.InputGroupAddon) ? '' : inputClasses
+                        className: (child.type === InputGroup.Addon) ? '' : inputClasses
                     })
                 ))}
             </div>
