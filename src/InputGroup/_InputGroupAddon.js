@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 const InputGroupAddon = ({
-    addonClassNames,
     children,
     className,
     compact,
@@ -12,10 +11,8 @@ const InputGroupAddon = ({
 }) => {
 
     const addonClasses = classnames(
-        addonClassNames,
         'fd-input-group__addon',
-        { 'fd-input-group__addon--button': isButton },
-        { 'fd-input-group__addon--button--compact': compact && isButton }
+        { 'fd-input-group__addon--button': isButton }
     );
 
     return (
@@ -26,6 +23,7 @@ const InputGroupAddon = ({
                 }
 
                 return React.cloneElement(child, {
+                    compact,
                     className: 'fd-input-group__button'
                 });
             })}
@@ -36,7 +34,6 @@ const InputGroupAddon = ({
 InputGroupAddon.displayName = 'InputGroup.Addon';
 
 InputGroupAddon.propTypes = {
-    addonClassNames: PropTypes.string,
     children: PropTypes.node,
     className: PropTypes.string,
     compact: PropTypes.bool,
@@ -44,7 +41,6 @@ InputGroupAddon.propTypes = {
 };
 
 InputGroupAddon.propDescriptions = {
-    addonClassNames: 'CSS class(es) to add to the addon element.',
     isButton: 'Set to **true** if add on is button.'
 };
 

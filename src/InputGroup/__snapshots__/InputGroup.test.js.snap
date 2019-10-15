@@ -36,7 +36,7 @@ exports[`<InputGroup /> create input group items 2`] = `
 
 exports[`<InputGroup /> create input group items 3`] = `
 <div
-  className="fd-input-group fd-input-group--compact"
+  className="fd-input-group"
 >
   <span
     className="fd-input-group__addon"
@@ -53,7 +53,7 @@ exports[`<InputGroup /> create input group items 3`] = `
 
 exports[`<InputGroup /> create input group items 4`] = `
 <div
-  className="fd-input-group fd-input-group--compact"
+  className="fd-input-group"
 >
   <input
     className="fd-input fd-input--compact fd-input-group__input"
@@ -89,7 +89,7 @@ exports[`<InputGroup /> create input group items 5`] = `
 
 exports[`<InputGroup /> create input group items 6`] = `
 <div
-  className="fd-input-group fd-input-group--compact"
+  className="fd-input-group"
 >
   <span
     className="fd-input-group__addon"
@@ -127,7 +127,7 @@ exports[`<InputGroup /> create input group items 7`] = `
 
 exports[`<InputGroup /> create input group items 8`] = `
 <div
-  className="fd-input-group fd-input-group--compact"
+  className="fd-input-group"
 >
   <input
     className="fd-input fd-input--compact fd-input-group__input"
@@ -157,7 +157,7 @@ exports[`<InputGroup /> create input group items 9`] = `
     className="fd-input-group__addon fd-input-group__addon--button"
   >
     <button
-      className="fd-button--light"
+      className="fd-button--light fd-input-group__button"
     >
       Button
     </button>
@@ -167,7 +167,7 @@ exports[`<InputGroup /> create input group items 9`] = `
 
 exports[`<InputGroup /> create input group items 10`] = `
 <div
-  className="fd-input-group fd-input-group--compact"
+  className="fd-input-group"
 >
   <input
     className="fd-input fd-input--compact fd-input-group__input"
@@ -175,10 +175,10 @@ exports[`<InputGroup /> create input group items 10`] = `
     type="text"
   />
   <span
-    className="fd-input-group__addon fd-input-group__addon--button fd-input-group__addon--button--compact"
+    className="fd-input-group__addon fd-input-group__addon--button"
   >
     <button
-      className="fd-button--light fd-button--compact"
+      className="fd-button--light fd-button--compact fd-input-group__button"
     >
       Button
     </button>

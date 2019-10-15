@@ -402,12 +402,13 @@ export class Routes extends Component {
                         </header>
                         <div className={sideBarClasses}>
                             <div className='frDocs-Search'>
-                                <InputGroup type='icon'>
+                                <InputGroup>
                                     <InputGroup.Addon>
                                         <Icon glyph='search' />
                                     </InputGroup.Addon>
                                     <FormInput
-                                        onChange={this.onChangeHandler} placeholder='Search'
+                                        onChange={this.onChangeHandler}
+                                        placeholder='Search'
                                         value={this.state.query} />
                                 </InputGroup>
                             </div>

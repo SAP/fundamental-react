@@ -10,10 +10,11 @@ class InputGroup extends Component {
     }
 
     render() {
-        let {
+        const {
             children,
             className,
             compact,
+            customStyles,
             disableStyles,
             ...props
         } = this.props;
@@ -22,8 +23,7 @@ class InputGroup extends Component {
 
         const inputGroupClasses = classnames(
             className,
-            'fd-input-group',
-            { 'fd-input-group--compact': compact }
+            'fd-input-group'
         );
 
         return (
@@ -33,7 +33,7 @@ class InputGroup extends Component {
                 {React.Children.map(children, (child) => (
                     React.cloneElement(child, {
                         compact,
-                        className: (child.type === InputGroup.Addon) ? '' : inputClasses
+                        className: (child.type.displayname === InputGroup.Addon) ? '' : inputClasses
                     })
                 ))}
             </div>
