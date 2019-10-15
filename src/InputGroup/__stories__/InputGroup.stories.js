@@ -5,6 +5,7 @@ import InputGroup from '../InputGroup';
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import {
+    boolean,
     withKnobs
 } from '@storybook/addon-knobs';
 
@@ -45,71 +46,57 @@ storiesOf('Components|InputGroup', module)
             </InputGroup.Addon>
         </InputGroup>
     ))
+    .add('addon button before', () => (
+        <InputGroup
+            compact={boolean('compact', false)}>
+            <InputGroup.Addon isButton>
+                <Button
+                    compact
+                    glyph='navigation-down-arrow'
+                    option='light' />
+            </InputGroup.Addon>
+            <FormInput />
+        </InputGroup>
+    ))
+    .add('addon button after', () => (
+        <InputGroup
+            compact={boolean('compact', false)}>
+            <FormInput />
+            <InputGroup.Addon isButton>
+                <Button
+                    compact
+                    glyph='navigation-down-arrow'
+                    option='light' />
+            </InputGroup.Addon>
+        </InputGroup>
+    ))
     .add('addon text before', () => (
-        <InputGroup>
-            <InputGroup.Addon>$</InputGroup.Addon>
-            <FormInput
-                placeholder='Type text here' />
+        <InputGroup
+            compact={boolean('compact', false)}>
+            <InputGroup.Addon isButton={boolean('isButton', false)}>€</InputGroup.Addon>
+            <FormInput placeholder='Type text here' />
         </InputGroup>
     ))
     .add('addon text after', () => (
-        <InputGroup>
+        <InputGroup
+            compact={boolean('compact', false)}>
             <FormInput placeholder='Type text here' />
-            <InputGroup.Addon>€</InputGroup.Addon>
-        </InputGroup>
-    ))
-    .add('addon text compact', () => (
-        <InputGroup compact>
-            <FormInput
-                placeholder='Type text here' />
-            <InputGroup.Addon>€</InputGroup.Addon>
+            <InputGroup.Addon isButton={boolean('isButton', false)}>€</InputGroup.Addon>
         </InputGroup>
     ))
     .add('addon icon before', () => (
-        <InputGroup>
-            <InputGroup.Addon>
+        <InputGroup compact={boolean('compact', false)}>
+            <InputGroup.Addon isButton={boolean('isButton', false)}>
                 <Icon glyph='globe' />
             </InputGroup.Addon>
             <FormInput placeholder='Type text here' />
         </InputGroup>
     ))
     .add('addon icon after', () => (
-        <InputGroup>
+        <InputGroup compact={boolean('compact', false)}>
             <FormInput placeholder='Type text here' />
-            <InputGroup.Addon>
+            <InputGroup.Addon isButton={boolean('isButton', false)}>
                 <Icon glyph='hide' />
-            </InputGroup.Addon>
-        </InputGroup>
-    ))
-    .add('addon icon compact', () => (
-        <InputGroup compact>
-            <FormInput placeholder='Type text here' />
-            <InputGroup.Addon>
-                <Icon glyph='hide' />
-            </InputGroup.Addon>
-        </InputGroup>
-    ))
-    .add('addon button before', () => (
-        <InputGroup>
-            <InputGroup.Addon isButton>
-                <Button option='light'>Button</Button>
-            </InputGroup.Addon>
-            <FormInput placeholder='Type text here' />
-        </InputGroup>
-    ))
-    .add('addon button after', () => (
-        <InputGroup>
-            <FormInput placeholder='Type text here' />
-            <InputGroup.Addon isButton>
-                <Button option='light'>Button</Button>
-            </InputGroup.Addon>
-        </InputGroup>
-    ))
-    .add('addon button compact', () => (
-        <InputGroup compact>
-            <FormInput placeholder='Type text here' />
-            <InputGroup.Addon isButton>
-                <Button compact option='light'>Button</Button>
             </InputGroup.Addon>
         </InputGroup>
     ));
