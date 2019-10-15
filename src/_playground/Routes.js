@@ -10,6 +10,7 @@ import { ComboboxInputComponent } from '../ComboboxInput/ComboboxInput.Component
 import { ContextualMenuComponent } from '../ContextualMenu/ContextualMenu.Component';
 import { DatePickerComponent } from '../DatePicker/DatePicker.Component';
 import { DropdownComponent } from '../Dropdown/Dropdown.Component';
+import { FormInput } from '..';
 import { FormsComponent } from '../Forms/Forms.Component';
 import groupArray from 'group-array';
 import Home from './documentation/Home/Home';
@@ -405,7 +406,7 @@ export class Routes extends Component {
                                     <InputGroup.Addon>
                                         <Icon glyph='search' />
                                     </InputGroup.Addon>
-                                    <InputGroup.Input
+                                    <FormInput
                                         onChange={this.onChangeHandler} placeholder='Search'
                                         value={this.state.query} />
                                 </InputGroup>

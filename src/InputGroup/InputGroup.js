@@ -1,5 +1,4 @@
 import classnames from 'classnames';
-import FormInput from '../Forms/FormInput';
 import InputGroupAddon from './_InputGroupAddon';
 import PropTypes from 'prop-types';
 import withStyles from '../utils/WithStyles/WithStyles';
@@ -43,7 +42,6 @@ class InputGroup extends Component {
 }
 
 InputGroup.Addon = InputGroupAddon;
-InputGroup.Input = FormInput;
 
 InputGroup.displayName = 'InputGroup';
 

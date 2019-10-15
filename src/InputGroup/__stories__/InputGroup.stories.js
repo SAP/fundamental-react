@@ -1,5 +1,6 @@
 import Button from '../../Button/Button';
 import FormInput from '../../Forms/FormInput';
+import FormTextarea from '../../Forms/FormTextarea';
 import Icon from '../../Icon/Icon';
 import InputGroup from '../InputGroup';
 import React from 'react';
@@ -95,6 +96,14 @@ storiesOf('Components|InputGroup', module)
     .add('addon icon after', () => (
         <InputGroup compact={boolean('compact', false)}>
             <FormInput placeholder='Type text here' />
+            <InputGroup.Addon>
+                <Icon glyph='hide' />
+            </InputGroup.Addon>
+        </InputGroup>
+    ))
+    .add('textarea', () => (
+        <InputGroup>
+            <FormTextarea>Default</FormTextarea>
             <InputGroup.Addon>
                 <Icon glyph='hide' />
             </InputGroup.Addon>

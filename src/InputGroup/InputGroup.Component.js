@@ -1,6 +1,6 @@
 import path from 'path';
 import React from 'react';
-import { Button, FormGroup, FormItem, FormLabel, Icon, InputGroup } from '../';
+import { Button, FormGroup, FormInput, FormItem, FormLabel, Icon, InputGroup } from '../';
 import { ComponentPage, Example } from '../_playground';
 
 export const InputGroupComponent = () => {
@@ -22,7 +22,7 @@ export const InputGroupComponent = () => {
                         <FormItem>
                             <InputGroup>
                                 <InputGroup.Addon>$</InputGroup.Addon>
-                                <InputGroup.Input
+                                <FormInput
                                     placeholder='Type text here' />
                             </InputGroup>
                         </FormItem>
@@ -32,7 +32,7 @@ export const InputGroupComponent = () => {
                         <FormLabel>Right Aligned Text Addon</FormLabel>
                         <FormItem>
                             <InputGroup>
-                                <InputGroup.Input placeholder='Type text here' />
+                                <FormInput placeholder='Type text here' />
                                 <InputGroup.Addon>€</InputGroup.Addon>
                             </InputGroup>
                         </FormItem>
@@ -44,7 +44,7 @@ export const InputGroupComponent = () => {
                         <FormItem>
                             <InputGroup compact>
                                 <InputGroup.Addon>$</InputGroup.Addon>
-                                <InputGroup.Input placeholder='Type text here' />
+                                <FormInput placeholder='Type text here' />
                             </InputGroup>
                         </FormItem>
                     </FormGroup>
@@ -53,7 +53,7 @@ export const InputGroupComponent = () => {
                         <FormLabel>Right Aligned Text Addon</FormLabel>
                         <FormItem>
                             <InputGroup compact>
-                                <InputGroup.Input
+                                <FormInput
                                     placeholder='Type text here' />
                                 <InputGroup.Addon>€</InputGroup.Addon>
                             </InputGroup>
@@ -73,7 +73,7 @@ export const InputGroupComponent = () => {
                                 <InputGroup.Addon>
                                     <Icon glyph='globe' />
                                 </InputGroup.Addon>
-                                <InputGroup.Input placeholder='Type text here' />
+                                <FormInput placeholder='Type text here' />
                             </InputGroup>
                         </FormItem>
                     </FormGroup>
@@ -87,7 +87,7 @@ export const InputGroupComponent = () => {
                                 <InputGroup.Addon>
                                     <Icon glyph='globe' />
                                 </InputGroup.Addon>
-                                <InputGroup.Input placeholder='Type text here' />
+                                <FormInput placeholder='Type text here' />
                             </InputGroup>
                         </FormItem>
                     </FormGroup>
@@ -97,7 +97,7 @@ export const InputGroupComponent = () => {
                         <FormLabel>Input with icon on the right</FormLabel>
                         <FormItem>
                             <InputGroup>
-                                <InputGroup.Input placeholder='Type text here' />
+                                <FormInput placeholder='Type text here' />
                                 <InputGroup.Addon>
                                     <Icon glyph='hide' />
                                 </InputGroup.Addon>
@@ -110,7 +110,7 @@ export const InputGroupComponent = () => {
                         <FormLabel>Input with icon on the right</FormLabel>
                         <FormItem>
                             <InputGroup compact>
-                                <InputGroup.Input placeholder='Type text here' />
+                                <FormInput placeholder='Type text here' />
                                 <InputGroup.Addon>
                                     <Icon glyph='hide' />
                                 </InputGroup.Addon>
@@ -130,7 +130,7 @@ export const InputGroupComponent = () => {
                         <FormLabel>Input text with action</FormLabel>
                         <FormItem>
                             <InputGroup >
-                                <InputGroup.Input placeholder='Type text here' />
+                                <FormInput placeholder='Type text here' />
                                 <InputGroup.Addon isButton>
                                     <Button option='light'>Button</Button>
                                 </InputGroup.Addon>
@@ -143,7 +143,7 @@ export const InputGroupComponent = () => {
                         <FormLabel>Input text with action</FormLabel>
                         <FormItem>
                             <InputGroup compact>
-                                <InputGroup.Input placeholder='Type text here' />
+                                <FormInput placeholder='Type text here' />
                                 <InputGroup.Addon isButton>
                                     <Button compact option='light'>Button</Button>
                                 </InputGroup.Addon>
@@ -156,7 +156,7 @@ export const InputGroupComponent = () => {
                         <FormLabel>Input with icon text action</FormLabel>
                         <FormItem>
                             <InputGroup>
-                                <InputGroup.Input />
+                                <FormInput />
                                 <InputGroup.Addon isButton>
                                     <Button glyph='navigation-down-arrow' option='light' />
                                 </InputGroup.Addon>
@@ -169,7 +169,7 @@ export const InputGroupComponent = () => {
                         <FormLabel>Input with icon text action</FormLabel>
                         <FormItem>
                             <InputGroup compact>
-                                <InputGroup.Input placeholder='Type text here' />
+                                <FormInput placeholder='Type text here' />
                                 <InputGroup.Addon isButton>
                                     <Button compact
                                         glyph='navigation-down-arrow'

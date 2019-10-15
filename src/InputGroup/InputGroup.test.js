@@ -1,3 +1,4 @@
+import FormInput from '../Forms/FormInput';
 import InputGroup from './InputGroup';
 import { mount } from 'enzyme';
 import React from 'react';
@@ -8,25 +9,25 @@ describe('<InputGroup />', () => {
     const inputTextPosBefore = (
         <InputGroup>
             <InputGroup.Addon>$</InputGroup.Addon>
-            <InputGroup.Input
+            <FormInput
                 placeholder='Type text here' />
         </InputGroup>
     );
     const inputTextPosAfter = (
         <InputGroup>
-            <InputGroup.Input placeholder='Type text here' />
+            <FormInput placeholder='Type text here' />
             <InputGroup.Addon>€</InputGroup.Addon>
         </InputGroup>
     );
     const inputTextPosBeforeCompact = (
         <InputGroup compact>
             <InputGroup.Addon>$</InputGroup.Addon>
-            <InputGroup.Input placeholder='Type text here' />
+            <FormInput placeholder='Type text here' />
         </InputGroup>
     );
     const inputTextPosAfterCompact = (
         <InputGroup compact>
-            <InputGroup.Input
+            <FormInput
                 placeholder='Type text here' />
             <InputGroup.Addon>€</InputGroup.Addon>
         </InputGroup>
@@ -36,7 +37,7 @@ describe('<InputGroup />', () => {
             <InputGroup.Addon>
                 <Icon glyph='globe' />
             </InputGroup.Addon>
-            <InputGroup.Input placeholder='Type text here' />
+            <FormInput placeholder='Type text here' />
         </InputGroup>
     );
     const inputWithIconCompact = (
@@ -44,12 +45,12 @@ describe('<InputGroup />', () => {
             <InputGroup.Addon>
                 <Icon glyph='globe' />
             </InputGroup.Addon>
-            <InputGroup.Input placeholder='Type text here' />
+            <FormInput placeholder='Type text here' />
         </InputGroup>
     );
     const inputWithIconAfter = (
         <InputGroup>
-            <InputGroup.Input placeholder='Type text here' />
+            <FormInput placeholder='Type text here' />
             <InputGroup.Addon>
                 <Icon glyph='hide' />
             </InputGroup.Addon>
@@ -57,7 +58,7 @@ describe('<InputGroup />', () => {
     );
     const inputWithIconAfterCompact = (
         <InputGroup compact>
-            <InputGroup.Input placeholder='Type text here' />
+            <FormInput placeholder='Type text here' />
             <InputGroup.Addon>
                 <Icon glyph='hide' />
             </InputGroup.Addon>
@@ -65,7 +66,7 @@ describe('<InputGroup />', () => {
     );
     const inputWithButton = (
         <InputGroup>
-            <InputGroup.Input placeholder='Type text here' />
+            <FormInput placeholder='Type text here' />
             <InputGroup.Addon isButton>
                 <Button option='light'>Button</Button>
             </InputGroup.Addon>
@@ -73,7 +74,7 @@ describe('<InputGroup />', () => {
     );
     const inputWithButtonCompact = (
         <InputGroup compact>
-            <InputGroup.Input placeholder='Type text here' />
+            <FormInput placeholder='Type text here' />
             <InputGroup.Addon isButton>
                 <Button compact option='light'>Button</Button>
             </InputGroup.Addon>
@@ -142,7 +143,7 @@ describe('<InputGroup />', () => {
     let setup = (props) => {
         return mount(<InputGroup {...props}>
             <InputGroup.Addon>$</InputGroup.Addon>
-            <InputGroup.Input />
+            <FormInput />
         </InputGroup>);
     };
 
@@ -181,7 +182,7 @@ describe('<InputGroup />', () => {
 
         it('should allow data attribute to be passed to span element', () => {
             const element = setup({
-                children: [<InputGroup.Input />, <InputGroup.Addon>@</InputGroup.Addon>],
+                children: [<FormInput />, <InputGroup.Addon>@</InputGroup.Addon>],
                 'data-sample': 'Sample'
             });
 
