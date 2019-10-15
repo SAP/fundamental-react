@@ -1,7 +1,7 @@
 import FormGroup from '../FormGroup';
 import FormItem from '../../Forms/FormItem';
 import FormLabel from '../../Forms/FormLabel';
-import InputGroup from '../InputGroup';
+import InputGroup from '../../InputGroup/InputGroup';
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import {
