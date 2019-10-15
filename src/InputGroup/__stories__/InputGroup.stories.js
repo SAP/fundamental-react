@@ -73,7 +73,7 @@ storiesOf('Components|InputGroup', module)
     .add('addon text before', () => (
         <InputGroup
             compact={boolean('compact', false)}>
-            <InputGroup.Addon isButton={boolean('isButton', false)}>€</InputGroup.Addon>
+            <InputGroup.Addon>€</InputGroup.Addon>
             <FormInput placeholder='Type text here' />
         </InputGroup>
     ))
@@ -81,12 +81,12 @@ storiesOf('Components|InputGroup', module)
         <InputGroup
             compact={boolean('compact', false)}>
             <FormInput placeholder='Type text here' />
-            <InputGroup.Addon isButton={boolean('isButton', false)}>€</InputGroup.Addon>
+            <InputGroup.Addon>€</InputGroup.Addon>
         </InputGroup>
     ))
     .add('addon icon before', () => (
         <InputGroup compact={boolean('compact', false)}>
-            <InputGroup.Addon isButton={boolean('isButton', false)}>
+            <InputGroup.Addon>
                 <Icon glyph='globe' />
             </InputGroup.Addon>
             <FormInput placeholder='Type text here' />
@@ -95,7 +95,7 @@ storiesOf('Components|InputGroup', module)
     .add('addon icon after', () => (
         <InputGroup compact={boolean('compact', false)}>
             <FormInput placeholder='Type text here' />
-            <InputGroup.Addon isButton={boolean('isButton', false)}>
+            <InputGroup.Addon>
                 <Icon glyph='hide' />
             </InputGroup.Addon>
         </InputGroup>
