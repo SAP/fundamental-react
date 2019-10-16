@@ -47,7 +47,7 @@ componentDirs.map((directory) => {
                     //components not wrapped in HOC
                     fileContents += `export { default as ${components.default.name} } from './${fileName}';\n`;
                 }
-            } else if (!component.includes('__')) {
+            } else {
                 fileContents += `export { ${component} } from './${fileName}';\n`;
             }
         });
