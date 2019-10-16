@@ -1,0 +1,7 @@
+{
+  "lib/umd/fundamental-react.production.min.js": {
+    "bundled": 529221,
+    "minified": 160901,
+    "gzipped": 42835
+  }
+}
