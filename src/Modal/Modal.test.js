@@ -149,7 +149,9 @@ describe('<Modal />', () => {
                     title='Title' />
             );
 
-            expect(component.getDOMNode().attributes['data-sample'].value).toBe(
+            expect( component.find('div.fd-overlay--modal').getDOMNode().attributes[
+                'data-sample'
+            ].value).toBe(
                 'Sample'
             );
         });

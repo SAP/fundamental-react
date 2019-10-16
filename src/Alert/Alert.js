@@ -65,7 +65,7 @@ class Alert extends Component {
                         )}
                         <div className='fd-alert__text'>
                             {type && (
-                                <Icon disableStyles={disableStyles} glyph={`mesage-${type}`} />
+                                <Icon disableStyles={disableStyles} glyph={`message-${type}`} />
                             )}
                             {children}
                             {link && (

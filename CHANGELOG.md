@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.7.0-rc.75"></a>
+# [0.7.0-rc.75](https://github.com/SAP/fundamental-react/compare/v0.7.0-rc.74...v0.7.0-rc.75) (2019-10-14)
+
+
+### Bug Fixes
+
+* withStyles followup including typo fix and new test utility ([#761](https://github.com/SAP/fundamental-react/issues/761)) ([4f41b1a](https://github.com/SAP/fundamental-react/commit/4f41b1a))
+
+
+
+<a name="0.7.0-rc.74"></a>
+# [0.7.0-rc.74](https://github.com/SAP/fundamental-react/compare/v0.7.0-rc.73...v0.7.0-rc.74) (2019-10-14)
+
+
+### Bug Fixes
+
+* Change focus lock library ([#764](https://github.com/SAP/fundamental-react/issues/764)) ([6108cd7](https://github.com/SAP/fundamental-react/commit/6108cd7))
+
+
+
 <a name="0.7.0-rc.73"></a>
 # [0.7.0-rc.73](https://github.com/SAP/fundamental-react/compare/v0.7.0-rc.72...v0.7.0-rc.73) (2019-10-01)
 

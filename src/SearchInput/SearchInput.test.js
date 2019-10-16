@@ -1,4 +1,5 @@
 import { mount } from 'enzyme';
+import { mountComponentWithStyles } from '../utils/testUtils';
 import React from 'react';
 import renderer from 'react-test-renderer';
 import SearchInput from './SearchInput';
@@ -73,7 +74,7 @@ describe('<SearchInput />', () => {
 
     describe('onChange handler', () => {
         test('calling parent onChange event', () => {
-            const wrapper = mount(searchOnChange).children().children();
+            const wrapper = mountComponentWithStyles(searchOnChange);
 
             // enter text into search input
             wrapper
@@ -100,7 +101,7 @@ describe('<SearchInput />', () => {
     });
 
     test('check for enter key press on search input', () => {
-        const wrapper = mount(defaultSearchInput);
+        const wrapper = mountComponentWithStyles(defaultSearchInput);
 
         // enter text into search input
         wrapper
@@ -113,11 +114,11 @@ describe('<SearchInput />', () => {
         // press enter key
         wrapper.find(searchInput).simulate('keypress', { key: 'Enter' });
 
-        expect(wrapper.children().children().state(['value'])).toBe(searchData[0].text);
+        expect(wrapper.state(['value'])).toBe(searchData[0].text);
     });
 
     test('click outside search input to close list', () => {
-        const wrapper = mount(defaultSearchInput);
+        const wrapper = mountComponentWithStyles(defaultSearchInput);
         let event = new MouseEvent('click', {});
 
         // outside click, search list not shown
@@ -131,21 +132,21 @@ describe('<SearchInput />', () => {
         // click outside to close list
         document.dispatchEvent(event);
 
-        expect(wrapper.children().children().state(['value'])).toBe(searchData[0].text);
+        expect(wrapper.state(['value'])).toBe(searchData[0].text);
     });
 
     test('show/hide auto complete list', () => {
-        const wrapper = mount(defaultSearchInput);
+        const wrapper = mountComponentWithStyles(defaultSearchInput);
 
         // click in search box to show
         wrapper.find(searchInput).simulate('click');
 
-        expect(wrapper.children().children().state('isExpanded')).toBeTruthy();
+        expect(wrapper.state('isExpanded')).toBeTruthy();
 
         // click in search box to hide
         wrapper.find(searchInput).simulate('click');
 
-        expect(wrapper.children().children().state('isExpanded')).toBeFalsy();
+        expect(wrapper.state('isExpanded')).toBeFalsy();
     });
 
     test('check for enter key press on search input without autocomplete', () => {
