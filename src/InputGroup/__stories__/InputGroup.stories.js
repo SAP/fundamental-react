@@ -13,11 +13,10 @@ import {
 storiesOf('Components|InputGroup', module)
     .addDecorator(withKnobs)
     .add('Default', () => (
-        <InputGroup>
+        <InputGroup compact={boolean('compact', false)}>
             <FormInput />
-            <InputGroup.Addon>
+            <InputGroup.Addon isButton>
                 <Button
-                    compact
                     glyph='navigation-down-arrow'
                     option='light' />
             </InputGroup.Addon>
@@ -25,11 +24,11 @@ storiesOf('Components|InputGroup', module)
     ))
     .add('disable styles', () => (
         <InputGroup
+            compact={boolean('compact', false)}
             disableStyles>
             <FormInput />
-            <InputGroup.Addon>
+            <InputGroup.Addon isButton>
                 <Button
-                    compact
                     glyph='navigation-down-arrow'
                     option='light' />
             </InputGroup.Addon>
@@ -37,11 +36,11 @@ storiesOf('Components|InputGroup', module)
     ))
     .add('custom styles', () => (
         <InputGroup
+            compact={boolean('compact', false)}
             customStyles={require('../../utils/WithStyles/customStylesTest.css')}>
             <FormInput />
-            <InputGroup.Addon>
+            <InputGroup.Addon isButton>
                 <Button
-                    compact
                     glyph='navigation-down-arrow'
                     option='light' />
             </InputGroup.Addon>
@@ -52,7 +51,6 @@ storiesOf('Components|InputGroup', module)
             compact={boolean('compact', false)}>
             <InputGroup.Addon isButton>
                 <Button
-                    compact
                     glyph='navigation-down-arrow'
                     option='light' />
             </InputGroup.Addon>
@@ -65,7 +63,6 @@ storiesOf('Components|InputGroup', module)
             <FormInput />
             <InputGroup.Addon isButton>
                 <Button
-                    compact
                     glyph='navigation-down-arrow'
                     option='light' />
             </InputGroup.Addon>

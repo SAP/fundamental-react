@@ -200,6 +200,9 @@ describe('<InputGroup />', () => {
             expect(
                 element.getDOMNode().children[1].className
             ).toContain('fd-input-group__input');
+            expect(
+                element.getDOMNode().children[0].className
+            ).not.toContain('fd-input-group__input');
         });
     });
 });

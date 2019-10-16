@@ -11,6 +11,7 @@ const InputGroupAddon = ({
 }) => {
 
     const addonClasses = classnames(
+        className,
         'fd-input-group__addon',
         { 'fd-input-group__addon--button': isButton }
     );
@@ -41,7 +42,8 @@ InputGroupAddon.propTypes = {
 };
 
 InputGroupAddon.propDescriptions = {
-    isButton: 'Set to **true** if add on is button.'
+    compact: '_INTERNAL USER ONLY._',
+    isButton: 'Set to **true** if add-on is a button.'
 };
 
 export { InputGroupAddon as __InputGroupAddon };

@@ -30,12 +30,12 @@ class InputGroup extends Component {
             <div
                 {...props}
                 className={inputGroupClasses}>
-                {React.Children.map(children, (child) => (
-                    React.cloneElement(child, {
+                {React.Children.toArray(children).map(child => {
+                    return React.cloneElement(child, {
                         compact,
-                        className: (child.type.displayname === InputGroup.Addon) ? '' : inputClasses
-                    })
-                ))}
+                        className: (child.type.displayName === 'InputGroup.Addon') ? '' : inputClasses
+                    });
+                })}
             </div>
         );
     }
