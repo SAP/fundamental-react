@@ -1,9 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<InputGroupAddon /> create inputgroupaddon itemsu 1`] = `
+exports[`<InputGroupAddon /> create input group add-on items 1`] = `
 <span
   className="fd-input-group__addon"
 >
   $
+</span>
+`;
+
+exports[`<InputGroupAddon /> create input group add-on items 2`] = `
+<span
+  className="fd-input-group__addon fd-input-group__addon--button"
+>
+  <button
+    className="fd-button fd-input-group__button"
+  >
+    Text Here
+  </button>
 </span>
 `;

@@ -1,3 +1,4 @@
+import { Button } from '../';
 import InputGroupAddon from './_InputGroupAddon';
 import { mount } from 'enzyme';
 import React from 'react';
@@ -8,10 +9,23 @@ describe('<InputGroupAddon />', () => {
     const inputGroupAddonText = (
         <InputGroupAddon>$</InputGroupAddon>
     );
+    const inputGroupAddonButton = (
+        <InputGroupAddon isButton>
+            <Button>
+                Text Here
+            </Button>
+        </InputGroupAddon>
+    );
 
-    test('create inputgroupaddon itemsu', () => {
+    test('create input group add-on items', () => {
+        // add-on with text
         let component = renderer.create(inputGroupAddonText);
         let tree = component.toJSON();
+        expect(tree).toMatchSnapshot();
+
+        // add-on with button
+        component = renderer.create(inputGroupAddonButton);
+        tree = component.toJSON();
         expect(tree).toMatchSnapshot();
     });
 
