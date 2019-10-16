@@ -44,6 +44,12 @@ For an existing react application, follow the steps below:
 
     > **NOTE:** Importing from specific component is recommended. Doing so will bring in only the component you are using instead of the whole library, which will reduce your bundle size significantly.
 
+## UMD releases
+
+We are providing two Universal Module Definition (UMD) files:
+
+- one for development: https://unpkg.com/fundamental-react@latest/umd/fundamental-react.development.js
+- one for production: https://unpkg.com/fundamental-react@latest/umd/fundamental-react.production.min.js
 
 
 ## Versioning
