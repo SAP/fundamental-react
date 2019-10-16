@@ -1,5 +1,6 @@
 const path = require('path');
 
+
 const defaultPresets = [
     '@babel/preset-react',
     [
@@ -17,6 +18,8 @@ const defaultPlugins = [
 ];
 
 const productionPlugins = [
+    'babel-plugin-transform-react-constant-elements',
+    ['@babel/plugin-transform-runtime', { useESModules: true }],
     [
         'transform-react-remove-prop-types',
         {
