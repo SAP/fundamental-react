@@ -97,16 +97,6 @@ export const INLINE_HELP_PLACEMENTS = [
     'bottom-center'
 ];
 
-export const INPUT_GROUP_ADDON_POSITIONS = [
-    'before',
-    'after'
-];
-
-export const INPUT_GROUP_TYPES = [
-    'text',
-    'number'
-];
-
 export const POPOVER_ALIGNMENTS = [
     'right'
 ];

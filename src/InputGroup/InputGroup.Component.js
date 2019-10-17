@@ -1,6 +1,6 @@
 import path from 'path';
 import React from 'react';
-import { Button, FormGroup, FormItem, FormLabel, InputGroup } from '../';
+import { Button, FormGroup, FormInput, FormItem, FormLabel, Icon, InputGroup } from '../';
 import { ComponentPage, Example } from '../_playground';
 
 export const InputGroupComponent = () => {
@@ -20,98 +20,76 @@ export const InputGroupComponent = () => {
                     <FormGroup>
                         <FormLabel>Left Aligned Text Addon</FormLabel>
                         <FormItem>
-                            <InputGroup
-                                addon='$'
-                                addonPos='before'
-                                inputValue='1234567890' />
+                            <InputGroup>
+                                <InputGroup.Addon>$</InputGroup.Addon>
+                                <FormInput
+                                    placeholder='Type text here' />
+                            </InputGroup>
                         </FormItem>
                     </FormGroup>
                     <br />
                     <FormGroup>
                         <FormLabel>Right Aligned Text Addon</FormLabel>
                         <FormItem>
-                            <InputGroup
-                                addon='€'
-                                addonPos='after'
-                                inputValue='1234567890' />
+                            <InputGroup>
+                                <FormInput placeholder='Type text here' />
+                                <InputGroup.Addon>€</InputGroup.Addon>
+                            </InputGroup>
                         </FormItem>
                     </FormGroup>
-
                     <br />
                     <p>Compact mode</p>
-
                     <FormGroup>
                         <FormLabel>Left Aligned Text Addon</FormLabel>
                         <FormItem>
-                            <InputGroup
-                                addon='$'
-                                addonPos='before'
-                                compact
-                                inputValue='1234567890' />
+                            <InputGroup compact>
+                                <InputGroup.Addon>$</InputGroup.Addon>
+                                <FormInput placeholder='Type text here' />
+                            </InputGroup>
                         </FormItem>
                     </FormGroup>
                     <br />
                     <FormGroup>
                         <FormLabel>Right Aligned Text Addon</FormLabel>
                         <FormItem>
-                            <InputGroup
-                                addon='€'
-                                addonPos='after'
-                                compact
-                                inputValue='1234567890' />
+                            <InputGroup compact>
+                                <FormInput
+                                    placeholder='Type text here' />
+                                <InputGroup.Addon>€</InputGroup.Addon>
+                            </InputGroup>
                         </FormItem>
                     </FormGroup>
                 </div>
             </Example>
 
             <Example
-                description={`For an integer value input, a spinner can be added allowing the user to
-                    increase or decrease the value.`}
-                title='Number input'>
-                <div>
-                    <FormGroup>
-                        <FormLabel>Right Aligned Text Addon</FormLabel>
-                        <FormItem>
-                            <InputGroup inputType='number' inputValue={100} />
-                        </FormItem>
-                    </FormGroup>
 
-                    <br />
-                    <p>Compact mode</p>
-
-                    <FormGroup>
-                        <FormLabel>Right Aligned Text Addon</FormLabel>
-                        <FormItem>
-                            <InputGroup compact inputType='number'
-                                inputValue={100} />
-                        </FormItem>
-                    </FormGroup>
-                </div>
-            </Example>
-
-            <Example
-                description='The Input with add-on supports icons.'
+                description='The consumer can add an Icon as a child of InputGroup.Addon.'
                 title='Input with icons'>
                 <div>
                     <FormGroup>
                         <FormLabel>Input with icon on the left</FormLabel>
                         <FormItem>
-                            <InputGroup
-                                addonPos='before'
-                                glyph='globe'
-                                inputValue='1234567890' />
+                            <InputGroup>
+                                <InputGroup.Addon>
+                                    <Icon glyph='globe' />
+                                </InputGroup.Addon>
+                                <FormInput placeholder='Type text here' />
+                            </InputGroup>
                         </FormItem>
                     </FormGroup>
+
                     <br />
                     <p>Compact mode</p>
                     <FormGroup>
                         <FormLabel>Input with icon on the left</FormLabel>
                         <FormItem>
-                            <InputGroup
-                                addonPos='before'
-                                compact
-                                glyph='globe'
-                                inputValue='1234567890' />
+                            <InputGroup compact>
+                                <InputGroup.Addon>
+                                    <Icon glyph='globe' />
+                                </InputGroup.Addon>
+                                <FormInput placeholder='Type text here' />
+                            </InputGroup>
                         </FormItem>
                     </FormGroup>
                     <br />
@@ -119,11 +97,12 @@ export const InputGroupComponent = () => {
                     <FormGroup>
                         <FormLabel>Input with icon on the right</FormLabel>
                         <FormItem>
-                            <InputGroup
-                                addonPos='after'
-                                glyph='hide'
-                                inputType='text'
-                                inputValue='1234567890' />
+                            <InputGroup>
+                                <FormInput placeholder='Type text here' />
+                                <InputGroup.Addon>
+                                    <Icon glyph='hide' />
+                                </InputGroup.Addon>
+                            </InputGroup>
                         </FormItem>
                     </FormGroup>
                     <br />
@@ -131,45 +110,43 @@ export const InputGroupComponent = () => {
                     <FormGroup>
                         <FormLabel>Input with icon on the right</FormLabel>
                         <FormItem>
-                            <InputGroup
-                                addonPos='after'
-                                compact
-                                glyph='hide'
-                                inputValue='1234567890' />
+                            <InputGroup compact>
+                                <FormInput placeholder='Type text here' />
+                                <InputGroup.Addon>
+                                    <Icon glyph='hide' />
+                                </InputGroup.Addon>
+                            </InputGroup>
                         </FormItem>
                     </FormGroup>
                 </div>
             </Example>
 
             <Example
-                description={`The Input with add-on supports actions. Actions can be shown with a text
-                    label or icon.`}
-                title='Input with actions'>
+                description={`The InputGroup.Addon isButton supports buttons by providing the correct styling. Buttons can be shown with a text
+                label or icon.`}
+                title='Input with Buttons'>
                 <div>
                     <FormGroup>
-                        <FormLabel>Input with text action</FormLabel>
+                        <FormLabel>Input text with action</FormLabel>
                         <FormItem>
-                            <InputGroup
-                                actions
-                                addonPos='after'
-                                inputValue='1234567890'>
-                                <Button option='light'>Button</Button>
+                            <InputGroup >
+                                <FormInput placeholder='Type text here' />
+                                <InputGroup.Addon isButton>
+                                    <Button option='light'>Button</Button>
+                                </InputGroup.Addon>
                             </InputGroup>
                         </FormItem>
                     </FormGroup>
                     <br />
                     <p>Compact mode</p>
                     <FormGroup>
-                        <FormLabel>Input with text action</FormLabel>
+                        <FormLabel>Input text with action</FormLabel>
                         <FormItem>
-                            <InputGroup
-                                actions
-                                addonPos='after'
-                                compact
-                                inputValue='1234567890'>
-                                <Button
-                                    compact
-                                    option='light'>Button</Button>
+                            <InputGroup compact>
+                                <FormInput placeholder='Type text here' />
+                                <InputGroup.Addon isButton>
+                                    <Button option='light'>Button</Button>
+                                </InputGroup.Addon>
                             </InputGroup>
                         </FormItem>
                     </FormGroup>
@@ -178,8 +155,13 @@ export const InputGroupComponent = () => {
                     <FormGroup>
                         <FormLabel>Input with icon text action</FormLabel>
                         <FormItem>
-                            <InputGroup actions addonPos='after'>
-                                <Button glyph='navigation-down-arrow' option='light' />
+                            <InputGroup>
+                                <FormInput />
+                                <InputGroup.Addon isButton>
+                                    <Button
+                                        glyph='navigation-down-arrow'
+                                        option='light' />
+                                </InputGroup.Addon>
                             </InputGroup>
                         </FormItem>
                     </FormGroup>
@@ -188,12 +170,13 @@ export const InputGroupComponent = () => {
                     <FormGroup>
                         <FormLabel>Input with icon text action</FormLabel>
                         <FormItem>
-                            <InputGroup actions addonPos='after'
-                                compact>
-                                <Button
-                                    compact
-                                    glyph='navigation-down-arrow'
-                                    option='light' />
+                            <InputGroup compact>
+                                <FormInput placeholder='Type text here' />
+                                <InputGroup.Addon isButton>
+                                    <Button
+                                        glyph='navigation-down-arrow'
+                                        option='light' />
+                                </InputGroup.Addon>
                             </InputGroup>
                         </FormItem>
                     </FormGroup>

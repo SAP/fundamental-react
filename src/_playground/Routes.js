@@ -10,9 +10,11 @@ import { ComboboxInputComponent } from '../ComboboxInput/ComboboxInput.Component
 import { ContextualMenuComponent } from '../ContextualMenu/ContextualMenu.Component';
 import { DatePickerComponent } from '../DatePicker/DatePicker.Component';
 import { DropdownComponent } from '../Dropdown/Dropdown.Component';
+import { FormInput } from '..';
 import { FormsComponent } from '../Forms/Forms.Component';
 import groupArray from 'group-array';
 import Home from './documentation/Home/Home';
+import Icon from '../Icon/Icon';
 import { IconComponent } from '../Icon/Icon.Component';
 import { IdentifierComponent } from '../Identifier/Identifier.Component';
 import { ImageComponent } from '../Image/Image.Component';
@@ -400,12 +402,15 @@ export class Routes extends Component {
                         </header>
                         <div className={sideBarClasses}>
                             <div className='frDocs-Search'>
-                                <InputGroup
-                                    glyph='search'
-                                    inputPlaceholder='Search'
-                                    inputProps={{ 'aria-label': 'Search' }}
-                                    inputValue={this.state.query}
-                                    onChange={this.onChangeHandler} />
+                                <InputGroup>
+                                    <InputGroup.Addon>
+                                        <Icon glyph='search' />
+                                    </InputGroup.Addon>
+                                    <FormInput
+                                        onChange={this.onChangeHandler}
+                                        placeholder='Search'
+                                        value={this.state.query} />
+                                </InputGroup>
                             </div>
                             <SideNav onItemSelect={this.updateCurrentPage} selectedId={this.state.currentPage}>
                                 {navItems}
