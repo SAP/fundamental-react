@@ -42,7 +42,7 @@ InputGroupAddon.propTypes = {
 };
 
 InputGroupAddon.propDescriptions = {
-    compact: '_INTERNAL USER ONLY._',
+    compact: '_INTERNAL USE ONLY._',
     isButton: 'Set to **true** if add-on is a button.'
 };
 
