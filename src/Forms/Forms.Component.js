@@ -1,6 +1,6 @@
 import path from 'path';
 import React from 'react';
-import { Checkbox, FormFieldset, FormInput, FormItem, FormLabel, FormLegend, FormMessage, FormRadioGroup, FormRadioItem, FormSelect, FormSet, FormTextarea, InlineHelp } from '../';
+import { Checkbox, FormFieldset, FormGroup, FormInput, FormItem, FormLabel, FormLegend, FormMessage, FormRadioGroup, FormRadioItem, FormSelect, FormSet, FormTextarea, InlineHelp } from '../';
 import { ComponentPage, Example } from '../_playground';
 
 export const FormsComponent = () => {
@@ -16,15 +16,15 @@ export const FormsComponent = () => {
                     and noted by an asterisk (*).`}
                 title='Inputs'>
                 <div>
-                    <FormSet>
+                    <FormGroup>
                         <FormItem>
                             <FormLabel htmlFor='input-1'>Default Input</FormLabel>
                             <FormInput id='input-1' placeholder='Field placeholder text'
                                 type='text' />
                         </FormItem>
-                    </FormSet>
+                    </FormGroup>
 
-                    <FormSet>
+                    <FormGroup>
                         <FormItem>
                             <FormLabel htmlFor='input-2' required>
                                 Required Input
@@ -32,9 +32,9 @@ export const FormsComponent = () => {
                             <FormInput id='input-2' placeholder='Field placeholder text'
                                 type='text' />
                         </FormItem>
-                    </FormSet>
+                    </FormGroup>
 
-                    <FormSet>
+                    <FormGroup>
                         <FormItem>
                             <FormLabel htmlFor='input-3' required>
                                 Password
@@ -42,16 +42,16 @@ export const FormsComponent = () => {
                             <FormInput id='input-3' placeholder='Field placeholder text'
                                 type='password' />
                         </FormItem>
-                    </FormSet>
+                    </FormGroup>
 
-                    <FormSet>
+                    <FormGroup>
                         <FormItem>
                             <FormLabel htmlFor='textarea-1' required>
                                 Text area
                             </FormLabel>
                             <FormTextarea defaultValue=' Pellentesque metus lacus commodo eget justo ut rutrum varius nunc.' id='textarea-1' />
                         </FormItem>
-                    </FormSet>
+                    </FormGroup>
                 </div>
             </Example>
 
