@@ -171,7 +171,7 @@ describe('<InputGroup />', () => {
     });
 
     describe('Rendering with Props', () => {
-        it('should allow data attribute to be passed to span element', () => {
+        it('should allow data attribute to be passed to the element', () => {
             const element = setup({
                 'data-sample': 'Sample'
             });
