@@ -17,7 +17,11 @@ describe('<InputGroupAddon />', () => {
         </InputGroupAddon>
     );
     const inputGroupAddonCompact = (
-        <InputGroupAddon compact>$</InputGroupAddon>
+        <InputGroupAddon compact isButton>
+            <Button>
+                Text Here
+            </Button>
+        </InputGroupAddon>
     );
 
     test('create input group add-on items', () => {

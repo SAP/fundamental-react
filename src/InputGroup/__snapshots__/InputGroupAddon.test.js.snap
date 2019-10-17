@@ -22,8 +22,12 @@ exports[`<InputGroupAddon /> create input group add-on items 2`] = `
 
 exports[`<InputGroupAddon /> create input group add-on items 3`] = `
 <span
-  className="fd-input-group__addon"
+  className="fd-input-group__addon fd-input-group__addon--button"
 >
-  $
+  <button
+    className="fd-button fd-button--compact fd-input-group__button"
+  >
+    Text Here
+  </button>
 </span>
 `;
