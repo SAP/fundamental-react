@@ -149,9 +149,7 @@ describe('<InputGroup />', () => {
     };
 
     describe('Default Rendering', () => {
-        let element = setup({
-            children: [<FormInput />, <InputGroup.Addon>@</InputGroup.Addon>]
-        });
+        let element = setup();
 
         it('should render', () => {
             expect(
