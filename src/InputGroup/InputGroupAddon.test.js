@@ -16,6 +16,9 @@ describe('<InputGroupAddon />', () => {
             </Button>
         </InputGroupAddon>
     );
+    const inputGroupAddonCompact = (
+        <InputGroupAddon compact>$</InputGroupAddon>
+    );
 
     test('create input group add-on items', () => {
         // add-on with text
@@ -25,6 +28,11 @@ describe('<InputGroupAddon />', () => {
 
         // add-on with button
         component = renderer.create(inputGroupAddonButton);
+        tree = component.toJSON();
+        expect(tree).toMatchSnapshot();
+
+        // add-on with compact prop
+        component = renderer.create(inputGroupAddonCompact);
         tree = component.toJSON();
         expect(tree).toMatchSnapshot();
     });
