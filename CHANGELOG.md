@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.7.0-rc.77"></a>
+# [0.7.0-rc.77](https://github.com/SAP/fundamental-react/compare/v0.7.0-rc.76...v0.7.0-rc.77) (2019-10-17)
+
+
+### Features
+
+* Move FormGroup to forms ([#769](https://github.com/SAP/fundamental-react/issues/769)) ([d4d5448](https://github.com/SAP/fundamental-react/commit/d4d5448))
+
+
+
 <a name="0.7.0-rc.76"></a>
 # [0.7.0-rc.76](https://github.com/SAP/fundamental-react/compare/v0.7.0-rc.75...v0.7.0-rc.76) (2019-10-15)
 
