@@ -171,17 +171,8 @@ describe('<InputGroup />', () => {
     });
 
     describe('Rendering with Props', () => {
-        it('should not throw error if child.type is undefined', () => {
-            let element = setup({
-                children: <div>This is a test</div>
-            });
-
-            expect(() => element).not.toThrow();
-        });
-
         it('should allow data attribute to be passed to span element', () => {
             const element = setup({
-                children: [<FormInput />, <InputGroup.Addon>@</InputGroup.Addon>],
                 'data-sample': 'Sample'
             });
 
@@ -191,9 +182,7 @@ describe('<InputGroup />', () => {
         });
 
         it('should pass correct classnames if child.type is an input', () => {
-            let element = setup({
-                children: [<InputGroup.Addon>@</InputGroup.Addon>, <FormInput />]
-            });
+            let element = setup();
 
             expect(
                 element.getDOMNode().children[1].className
