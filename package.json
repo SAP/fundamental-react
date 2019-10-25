@@ -11,21 +11,19 @@
     "url": "https://github.com/SAP/fundamental-react"
   },
   "scripts": {
-    "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
     "build-doc:netlify": "npm run build && NETLIFY=true npm run build-doc",
     "build-doc": "node scripts/build.js && cp build/index.html build/404.html",
-    "build-js": "node scripts/build.js",
     "build:copy-files": "cp -rf package.json README.md NOTICE.txt LICENSE.txt CHANGELOG.md lib",
     "build:index": "babel-node devtools/buildIndexFiles.js",
     "build:lint:fix": "npm run build:lint -- --fix",
     "build:lint": "eslint 'src/**' --ext .js,.jsx --env browser,node",
-    "build": "npm run build:index && rm -rf lib && NODE_ENV=production babel src --out-dir lib --ignore \"src/**/*.spec.js\",\"src/**/*.test.js\",\"src/**/*.Component.js\",\"src/_playground/*\",\"src/**/*.stories.js\"",
-    "config:lint:fix": "npm run config:lint -- --fix",
+    "build:cjs": "cross-env NODE_ENV=production BABEL_ENV=cjs babel src --out-dir lib --ignore \"src/**/*.spec.js\",\"src/**/*.test.js\",\"src/**/*.Component.js\",\"src/_playground/*\",\"src/**/*.stories.js\"",
+    "build": "npm run build:index && rm -rf lib && npm run build:cjs && npm run build:copy-files",
     "config:lint": "eslint 'config/**' --ext .js,.jsx --env browser,node",
     "deploy": "gh-pages -d build",
     "devtools:lint": "eslint 'devtools/**' --ext .js,.jsx --env browser,node",
     "docs:dev": "FUNDAMENTAL_REACT_PLAYGROUND=true npm start",
-    "dry-run": "npm run build && npm publish --dry-run",
+    "dry-run": "npm run build && npm publish lib --dry-run",
     "lint:fix": "npm run build:lint:fix  && npm run scripts:lint:fix && npm run config:lint:fix",
     "lint:pre-commit": "printf \"running pre-commit lint...\"  && npm run lint && printf \"done!\n\"",
     "lint": "npm run build:lint && npm run scripts:lint && npm run config:lint && npm run devtools:lint && npm run style:lint",
@@ -49,14 +47,15 @@
     "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive"
   },
   "dependencies": {
+    "@babel/runtime": "^7.6.3",
     "chain-function": "^1.0.1",
     "classnames": "^2.2.6",
-    "react-focus-lock": "^2.1.1",
     "fundamental-styles": "~0.3.0-rc.4",
     "hoist-non-react-statics": "^3.3.0",
     "keycode": "^2.2.0",
     "prop-types": "^15.7.1",
     "react-foco": "^1.3.0",
+    "react-focus-lock": "^2.1.1",
     "react-overlays": "^1.1.2",
     "react-popper": "^1.3.3",
     "shortid": "^2.2.14"
@@ -68,6 +67,7 @@
     "@babel/plugin-proposal-class-properties": "^7.3.0",
     "@babel/plugin-proposal-object-rest-spread": "^7.3.1",
     "@babel/plugin-transform-object-assign": "^7.2.0",
+    "@babel/plugin-transform-runtime": "^7.6.2",
     "@babel/preset-env": "^7.3.1",
     "@babel/preset-react": "^7.0.0",
     "@storybook/addon-a11y": "^5.2.1",
@@ -81,6 +81,7 @@
     "babel-jest": "^24.8.0",
     "babel-loader": "8.0.6",
     "babel-plugin-named-asset-import": "^0.3.2",
+    "babel-plugin-transform-react-constant-elements": "^6.23.0",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.23",
     "babel-preset-react-app": "^9.0.0",
     "bfj": "7.0.1",
@@ -88,6 +89,7 @@
     "chalk": "2.4.2",
     "core-js": "^3.1.4",
     "coveralls": "^3.0.2",
+    "cross-env": "^6.0.3",
     "css-loader": "3.2.0",
     "dotenv": "8.1.0",
     "dotenv-expand": "5.1.0",
@@ -163,8 +165,5 @@
     "not dead",
     "not ie < 11",
     "not op_mini all"
-  ],
-  "files": [
-    "/lib"
   ]
 }
