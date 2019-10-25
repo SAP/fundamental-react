@@ -23,7 +23,7 @@
     "deploy": "gh-pages -d build",
     "devtools:lint": "eslint 'devtools/**' --ext .js,.jsx --env browser,node",
     "docs:dev": "FUNDAMENTAL_REACT_PLAYGROUND=true npm start",
-    "dry-run": "npm run build && npm publish lib --dry-run",
+    "dry-run": "npm run build && npm run build:copy-files && npm publish lib --dry-run",
     "lint:fix": "npm run build:lint:fix  && npm run scripts:lint:fix && npm run config:lint:fix",
     "lint:pre-commit": "printf \"running pre-commit lint...\"  && npm run lint && printf \"done!\n\"",
     "lint": "npm run build:lint && npm run scripts:lint && npm run config:lint && npm run devtools:lint && npm run style:lint",
