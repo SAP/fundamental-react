@@ -1,7 +1,6 @@
 const path = require('path');
 
 const defaultPresets = [
-    '@babel/preset-react',
     [
         '@babel/preset-env',
         {
@@ -13,10 +12,12 @@ const defaultPresets = [
 const defaultPlugins = [
     ['@babel/plugin-proposal-class-properties', { loose: true }],
     ['@babel/plugin-proposal-object-rest-spread', { loose: true }],
+    '@babel/plugin-transform-runtime',
     '@babel/plugin-transform-object-assign'
 ];
 
 const productionPlugins = [
+    'babel-plugin-transform-react-constant-elements',
     [
         'transform-react-remove-prop-types',
         {
@@ -27,15 +28,10 @@ const productionPlugins = [
 ];
 
 module.exports = {
-    presets: defaultPresets,
+    presets: defaultPresets.concat(['@babel/preset-react']),
     plugins: defaultPlugins,
     env: {
-        production: {
-            presets: [
-                [
-                    '@babel/preset-env'
-                ]
-            ],
+        cjs: {
             plugins: productionPlugins
         }
     }
