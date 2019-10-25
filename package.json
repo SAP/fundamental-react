@@ -18,7 +18,7 @@
     "build:lint:fix": "npm run build:lint -- --fix",
     "build:lint": "eslint 'src/**' --ext .js,.jsx --env browser,node",
     "build:cjs": "cross-env NODE_ENV=production BABEL_ENV=cjs babel src --out-dir lib --ignore \"src/**/*.spec.js\",\"src/**/*.test.js\",\"src/**/*.Component.js\",\"src/_playground/*\",\"src/**/*.stories.js\"",
-    "build": "npm run build:index && rm -rf lib && npm run build:cjs && npm run build:copy-files",
+    "build": "npm run build:index && rm -rf lib && npm run build:cjs",
     "config:lint": "eslint 'config/**' --ext .js,.jsx --env browser,node",
     "deploy": "gh-pages -d build",
     "devtools:lint": "eslint 'devtools/**' --ext .js,.jsx --env browser,node",
