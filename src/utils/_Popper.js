@@ -98,7 +98,7 @@ class Popper extends React.Component {
                     const currentParentElement = parentElement && parentElement.current;
                     if (currentParentElement) {
                         const { offsetWidth, offsetHeight, offsetLeft, offsetTop } = currentParentElement;
-                        style = { ...style, left: offsetLeft, top: offsetTop + offsetHeight, width: offsetWidth }
+                        style = { ...style, left: offsetLeft, top: offsetTop + offsetHeight, width: offsetWidth };
                     }
 
                     return (

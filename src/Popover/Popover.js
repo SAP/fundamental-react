@@ -56,7 +56,6 @@ class Popover extends Component {
         const referenceComponent = React.cloneElement(control, {
             onClick: onClickFunctions
         });
-
         const popoverClasses = classnames('fd-popover', className);
 
         return (
