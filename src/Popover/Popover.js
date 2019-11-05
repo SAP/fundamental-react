@@ -91,7 +91,7 @@ Popover.propTypes = {
     disableEdgeDetection: PropTypes.bool,
     disableStyles: PropTypes.bool,
     noArrow: PropTypes.bool,
-    parentElement: PropTypes.node,
+    parentElement: PropTypes.shape({ current: PropTypes.any }),
     placement: PropTypes.oneOf(POPPER_PLACEMENTS),
     popperProps: PropTypes.object,
     onClickOutside: PropTypes.func,

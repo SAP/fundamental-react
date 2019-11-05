@@ -97,8 +97,8 @@ class Popper extends React.Component {
                     }
                     const currentParentElement = parentElement && parentElement.current;
                     if (currentParentElement) {
-                        const { offsetWidth, offsetHeight, offsetLeft, offsetTop } = currentParentElement;
-                        style = { ...style, left: offsetLeft, top: offsetTop + offsetHeight, width: offsetWidth };
+                        const { x: left, bottom: top, width } = currentParentElement.getBoundingClientRect();
+                        style = { ...style, left, top, width };
                     }
 
                     return (
@@ -155,7 +155,7 @@ Popper.propTypes = {
     referenceComponent: PropTypes.element.isRequired,
     disableEdgeDetection: PropTypes.bool,
     noArrow: PropTypes.bool,
-    parentElement: PropTypes.node,
+    parentElement: PropTypes.shape({ current: PropTypes.any }),
     popperClassName: PropTypes.string,
     popperModifiers: PropTypes.object,
     popperPlacement: PropTypes.oneOf(POPPER_PLACEMENTS),
