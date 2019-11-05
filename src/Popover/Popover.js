@@ -108,7 +108,7 @@ Popover.propDescriptions = {
     control: 'Node to render as the reference element (that the `body` will be placed in relation to).',
     disableEdgeDetection: 'Set to **true** to render popover without edge detection so popover will not flip from top to bottom with scroll.',
     noArrow: 'Set to **true** to render a popover without an arrow.',
-    parentElement: 'A reference to an element of which the Popover will be positioned and sized relatively. Leave it empty to let it be done automatically.',
+    parentElement: 'A reference (useRef) to an element of which the Popover will be positioned and sized relatively. Leave it empty to let it be done automatically.',
     placement: 'Initial position of the `body` (overlay) related to the `control`.',
     popperProps: 'Additional props to be spread to the overlay element, supported by <a href="https://popper.js.org" target="_blank">popper.js</a>.',
     onClickOutside: 'Callback for consumer clicking outside of popover body.',

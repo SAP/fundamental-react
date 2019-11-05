@@ -1,9 +1,13 @@
 import path from 'path';
 import React from 'react';
+import { useRef } from 'react';
 import { Button, Dropdown, Menu, Popover } from '../';
 import { ComponentPage, Example } from '../_playground';
 
+
 export const DropdownComponent = () => {
+    const dropdownRef = useRef(null);
+
     return (
         <ComponentPage
             description={`The **Dropdown** component lets the user select one of the different options.
@@ -45,7 +49,7 @@ export const DropdownComponent = () => {
                         }
                         control={
                             <Button className='fd-dropdown__control' compact>
-                                    Select
+                                Select
                             </Button>
                         }
                         id='jhqD0556'
@@ -71,7 +75,7 @@ export const DropdownComponent = () => {
                         }
                         control={
                             <Button className='fd-dropdown__control' glyph='filter'>
-                                    Select
+                                Select
                             </Button>
                         }
                         id='jhqD0557'
@@ -93,7 +97,7 @@ export const DropdownComponent = () => {
                         control={
                             <Button className='fd-dropdown__control' compact
                                 glyph='filter'>
-                                    Select
+                                Select
                             </Button>
                         }
                         id='jhqD0558'
@@ -118,7 +122,7 @@ export const DropdownComponent = () => {
                         }
                         control={
                             <Button className='fd-dropdown__control'>
-                                    Select
+                                Select
                             </Button>
                         }
                         id='jhqD0559'
@@ -139,13 +143,36 @@ export const DropdownComponent = () => {
                         }
                         control={
                             <Button className='fd-dropdown__control' compact>
-                                    Select
+                                Select
                             </Button>
                         }
                         id='jhqD0560'
                         noArrow />
                 </Dropdown>
             </Example>
+            <Example
+                centered
+                description="Assign a reference (useRef) to <Dropdown> and use it as the 'parentElement' property of <Popover>"
+                title="Width limited to parent's">
+                <Dropdown ref={dropdownRef}>
+                    <Popover
+                        body={
+                            <Menu>
+                                <Menu.List>
+                                    <Menu.Item url='#'>Option 1</Menu.Item>
+                                    <Menu.Item url='#'>Option 2</Menu.Item>
+                                    <Menu.Item url='#'>Option 3</Menu.Item>
+                                    <Menu.Item url='#'>Option 4</Menu.Item>
+                                </Menu.List>
+                            </Menu>
+                        }
+                        control={<Button className='fd-dropdown__control'>Select</Button>}
+                        id='jhqD0555'
+                        noArrow
+                        parentElement={dropdownRef} />
+                </Dropdown>
+            </Example>
+
 
             <Example
                 centered
@@ -165,7 +192,7 @@ export const DropdownComponent = () => {
                         control={
                             <Button className='fd-dropdown__control' disabled
                                 glyph='filter'>
-                                    Select
+                                Select
                             </Button>
                         }
                         disabled
