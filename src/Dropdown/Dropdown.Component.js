@@ -159,10 +159,10 @@ export const DropdownComponent = () => {
                         body={
                             <Menu>
                                 <Menu.List>
-                                    <Menu.Item url='#'>Option 1</Menu.Item>
-                                    <Menu.Item url='#'>Option 2</Menu.Item>
-                                    <Menu.Item url='#'>Option 3</Menu.Item>
-                                    <Menu.Item url='#'>Option 4</Menu.Item>
+                                    <Menu.Item url='#'>One</Menu.Item>
+                                    <Menu.Item url='#'>Two</Menu.Item>
+                                    <Menu.Item url='#'>Three</Menu.Item>
+                                    <Menu.Item url='#'>Four</Menu.Item>
                                 </Menu.List>
                             </Menu>
                         }
