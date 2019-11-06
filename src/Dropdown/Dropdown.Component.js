@@ -152,7 +152,7 @@ export const DropdownComponent = () => {
             </Example>
             <Example
                 centered
-                description="Assign a reference (useRef) to <Dropdown> and use it as the 'parentElement' property of <Popover>"
+                description="Assign a reference (useRef) to <Dropdown> and use it as the 'parentRef' property of <Popover>"
                 title="Width limited to parent's">
                 <Dropdown ref={dropdownRef}>
                     <Popover
@@ -169,7 +169,7 @@ export const DropdownComponent = () => {
                         control={<Button className='fd-dropdown__control'>Select</Button>}
                         id='jhqD0555'
                         noArrow
-                        parentElement={dropdownRef} />
+                        parentRef={dropdownRef} />
                 </Dropdown>
             </Example>
 

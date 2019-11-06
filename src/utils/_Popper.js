@@ -65,7 +65,7 @@ class Popper extends React.Component {
             disableEdgeDetection,
             noArrow,
             onClickOutside,
-            parentElement,
+            parentRef,
             popperClassName,
             popperModifiers,
             popperPlacement,
@@ -95,9 +95,9 @@ class Popper extends React.Component {
                     if (!show) {
                         return null;
                     }
-                    const currentParentElement = parentElement && parentElement.current;
-                    if (currentParentElement) {
-                        const { x: left, bottom: top, width } = currentParentElement.getBoundingClientRect();
+                    const currentParentRef = parentRef && parentRef.current;
+                    if (currentParentRef) {
+                        const { x: left, bottom: top, width } = currentParentRef.getBoundingClientRect();
                         style = { ...style, left, top, width };
                     }
 
@@ -155,7 +155,7 @@ Popper.propTypes = {
     referenceComponent: PropTypes.element.isRequired,
     disableEdgeDetection: PropTypes.bool,
     noArrow: PropTypes.bool,
-    parentElement: PropTypes.shape({ current: PropTypes.any }),
+    parentRef: PropTypes.shape({ current: PropTypes.any }),
     popperClassName: PropTypes.string,
     popperModifiers: PropTypes.object,
     popperPlacement: PropTypes.oneOf(POPPER_PLACEMENTS),
