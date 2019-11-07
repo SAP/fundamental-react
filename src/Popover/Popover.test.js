@@ -167,6 +167,20 @@ describe('<Popover />', () => {
         expect(wrapper.state('isExpanded')).toBeFalsy();
     });
 
+    test('position and size is set when "parentRef" is set', () => {
+        const parentBoundaries = { x: 123, bottom: 456, width: 789 };
+        const popoverWithParent = mount(popOver).setProps(
+            { parentRef: { current: { getBoundingClientRect: () => parentBoundaries } } }
+        );
+        popoverWithParent.find('.sap-icon--cart').simulate('click');
+        const popoverStyle = popoverWithParent.find('.fd-popover__popper').prop('style');
+
+        expect(popoverStyle).toHaveProperty('left', parentBoundaries.x);
+        expect(popoverStyle).toHaveProperty('top', parentBoundaries.bottom);
+        expect(popoverStyle).toHaveProperty('width', parentBoundaries.width);
+    });
+
+
     describe('Prop spreading', () => {
         test('should allow props to be spread to the Popover component', () => {
             const element = mount(
