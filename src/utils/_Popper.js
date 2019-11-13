@@ -99,7 +99,6 @@ class Popper extends React.Component {
                         <div
                             {...popperProps}
                             className={popperClasses}
-                            data-placement={placement}
                             ref={ref}
                             style={style}
                             // eslint-disable-next-line no-undefined
