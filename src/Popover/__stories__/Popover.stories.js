@@ -18,12 +18,58 @@ const bodyContent = (
     </Menu>
 );
 
+const someText = <p style={{ padding: '0.5em' }}>This is a simple popover.</p>;
+
 storiesOf('Components|Popover', module)
     .addDecorator(withKnobs)
     .add('Default', () => (
         <Popover
             body={bodyContent}
             control={<Button glyph='navigation-up-arrow' option='light' />} />
+    ))
+    .add('Placement', () => (
+        <>
+            <Popover
+                body={someText}
+                control={<Button glyph='navigation-up-arrow' option='light' >Pop to Top</Button>}
+                placement='top'
+                style={{ position: 'fixed', top: '10em', left: '50em' }} />
+            <Popover
+                body={someText}
+                control={<Button glyph='navigation-right-arrow' option='light' >Pop to Right-Top</Button>}
+                placement='right-start'
+                style={{ position: 'fixed', top: '15em', left: '60em' }} />
+            <Popover
+                body={someText}
+                control={<Button glyph='navigation-right-arrow' option='light' >Pop to Right</Button>}
+                placement='right'
+                style={{ position: 'fixed', top: '20em', left: '60em' }} />
+            <Popover
+                body={someText}
+                control={<Button glyph='navigation-right-arrow' option='light' >Pop to Right-End</Button>}
+                placement='right-end'
+                style={{ position: 'fixed', top: '25em', left: '60em' }} />
+            <Popover
+                body={someText}
+                control={<Button glyph='navigation-down-arrow' option='light' >Pop to Bottom</Button>}
+                placement='bottom'
+                style={{ position: 'fixed', top: '30em', left: '50em' }} />
+            <Popover
+                body={someText}
+                control={<Button glyph='navigation-left-arrow' option='light' >Pop to Left-End</Button>}
+                placement='left-end'
+                style={{ position: 'fixed', top: '25em', left: '40em' }} />
+            <Popover
+                body={someText}
+                control={<Button glyph='navigation-left-arrow' option='light' >Pop to Left</Button>}
+                placement='left'
+                style={{ position: 'fixed', top: '20em', left: '40em' }} />
+            <Popover
+                body={someText}
+                control={<Button glyph='navigation-left-arrow' option='light' >Pop to Left-Start</Button>}
+                placement='left-start'
+                style={{ position: 'fixed', top: '15em', left: '40em' }} />
+        </>
     ))
     .add('disable styles', () => (
         <Popover
