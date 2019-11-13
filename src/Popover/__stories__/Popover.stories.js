@@ -31,24 +31,39 @@ storiesOf('Components|Popover', module)
         <>
             <Popover
                 body={someText}
+                control={<Button glyph='navigation-up-arrow' option='light' >Pop to Top-Start</Button>}
+                placement='top-start'
+                style={{ position: 'fixed', top: '10em', left: '35em' }} />
+            <Popover
+                body={someText}
                 control={<Button glyph='navigation-up-arrow' option='light' >Pop to Top</Button>}
                 placement='top'
                 style={{ position: 'fixed', top: '10em', left: '50em' }} />
             <Popover
                 body={someText}
+                control={<Button glyph='navigation-up-arrow' option='light' >Pop to Top-End</Button>}
+                placement='top-end'
+                style={{ position: 'fixed', top: '10em', left: '65em' }} />
+            <Popover
+                body={someText}
                 control={<Button glyph='navigation-right-arrow' option='light' >Pop to Right-Top</Button>}
                 placement='right-start'
-                style={{ position: 'fixed', top: '15em', left: '60em' }} />
+                style={{ position: 'fixed', top: '15em', left: '65em' }} />
             <Popover
                 body={someText}
                 control={<Button glyph='navigation-right-arrow' option='light' >Pop to Right</Button>}
                 placement='right'
-                style={{ position: 'fixed', top: '20em', left: '60em' }} />
+                style={{ position: 'fixed', top: '20em', left: '65em' }} />
             <Popover
                 body={someText}
                 control={<Button glyph='navigation-right-arrow' option='light' >Pop to Right-End</Button>}
                 placement='right-end'
-                style={{ position: 'fixed', top: '25em', left: '60em' }} />
+                style={{ position: 'fixed', top: '25em', left: '65em' }} />
+            <Popover
+                body={someText}
+                control={<Button glyph='navigation-down-arrow' option='light' >Pop to Bottom-End</Button>}
+                placement='bottom-end'
+                style={{ position: 'fixed', top: '30em', left: '65em' }} />
             <Popover
                 body={someText}
                 control={<Button glyph='navigation-down-arrow' option='light' >Pop to Bottom</Button>}
@@ -56,19 +71,24 @@ storiesOf('Components|Popover', module)
                 style={{ position: 'fixed', top: '30em', left: '50em' }} />
             <Popover
                 body={someText}
+                control={<Button glyph='navigation-down-arrow' option='light' >Pop to Bottom-Start</Button>}
+                placement='bottom-start'
+                style={{ position: 'fixed', top: '30em', left: '35em' }} />
+            <Popover
+                body={someText}
                 control={<Button glyph='navigation-left-arrow' option='light' >Pop to Left-End</Button>}
                 placement='left-end'
-                style={{ position: 'fixed', top: '25em', left: '40em' }} />
+                style={{ position: 'fixed', top: '25em', left: '35em' }} />
             <Popover
                 body={someText}
                 control={<Button glyph='navigation-left-arrow' option='light' >Pop to Left</Button>}
                 placement='left'
-                style={{ position: 'fixed', top: '20em', left: '40em' }} />
+                style={{ position: 'fixed', top: '20em', left: '35em' }} />
             <Popover
                 body={someText}
                 control={<Button glyph='navigation-left-arrow' option='light' >Pop to Left-Start</Button>}
                 placement='left-start'
-                style={{ position: 'fixed', top: '15em', left: '40em' }} />
+                style={{ position: 'fixed', top: '15em', left: '35em' }} />
         </>
     ))
     .add('disable styles', () => (
