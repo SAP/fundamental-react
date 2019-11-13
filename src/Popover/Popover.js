@@ -1,5 +1,6 @@
 import chain from 'chain-function';
 import classnames from 'classnames';
+import keycode from 'keycode';
 import Popper from '../utils/_Popper';
 import { POPPER_PLACEMENTS } from '../utils/constants';
 import PropTypes from 'prop-types';
@@ -14,6 +15,18 @@ class Popover extends Component {
             isExpanded: false
         };
     }
+
+    isButton = (node) => {
+        if (!node) {
+            return false;
+        }
+        if (typeof node.type === 'string') {
+            return node.type.toLowerCase() === 'button';
+        } else if (node.type.displayName) {
+            return node.type.displayName.toLowerCase() === 'button';
+        }
+        return false;
+    };
 
     triggerBody = () => {
         if (!this.props.disabled) {
@@ -30,6 +43,19 @@ class Popover extends Component {
             });
         }
     };
+
+    handleKeyPress = (event, node, onClickFunctions) => {
+        if (!this.isButton(node)) {
+            switch (keycode(event)) {
+                case 'enter':
+                case 'space':
+                    event.preventDefault();
+                    onClickFunctions();
+                    break;
+                default:
+            }
+        }
+    }
 
     render() {
         const {
@@ -53,7 +79,11 @@ class Popover extends Component {
         }
 
         const referenceComponent = React.cloneElement(control, {
-            onClick: onClickFunctions
+            onClick: onClickFunctions,
+            tabIndex: 0,
+            role: 'button',
+            'aria-haspopup': true,
+            onKeyPress: (event) => this.handleKeyPress(event, control, onClickFunctions)
         });
 
         const popoverClasses = classnames('fd-popover', className);

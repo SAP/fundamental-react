@@ -22,8 +22,12 @@ exports[`<LocalizationEditor /> create localization editor 1`] = `
         className="fd-popover__control"
       >
         <div
+          aria-haspopup={true}
           className="fd-input-group fd-input-group--after"
           onClick={[Function]}
+          onKeyPress={[Function]}
+          role="button"
+          tabIndex={0}
         >
           <input
             className="fd-input fd-input-group__input"
@@ -68,8 +72,12 @@ exports[`<LocalizationEditor /> create localization editor 2`] = `
         className="fd-popover__control"
       >
         <div
+          aria-haspopup={true}
           className="fd-input-group fd-input-group--after"
           onClick={[Function]}
+          onKeyPress={[Function]}
+          role="button"
+          tabIndex={0}
         >
           <input
             className="fd-input fd-input--compact fd-input-group__input"
@@ -114,8 +122,12 @@ exports[`<LocalizationEditor /> create localization editor 3`] = `
         className="fd-popover__control"
       >
         <div
+          aria-haspopup={true}
           className="fd-input-group fd-input-group--after"
           onClick={[Function]}
+          onKeyPress={[Function]}
+          role="button"
+          tabIndex={0}
         >
           <textarea
             className="fd-textarea fd-input-group__input"
