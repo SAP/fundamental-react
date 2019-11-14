@@ -1,5 +1,7 @@
 import chain from 'chain-function';
 import classnames from 'classnames';
+import { findDOMNode } from 'react-dom';
+import FocusManager from '../utils/focusManager';
 import Popper from '../utils/_Popper';
 import { POPPER_PLACEMENTS } from '../utils/constants';
 import PropTypes from 'prop-types';
@@ -23,16 +25,29 @@ class Popover extends Component {
         }
     };
 
+    handleFocusManager = () => {
+        if (this.state.isExpanded && this.popover) {
+            this.focusManager = new FocusManager(this.popover);
+        }
+    }
+
     handleOutsideClick = () => {
         if (this.state.isExpanded) {
             this.setState({
                 isExpanded: false
             });
+            if (this.focusManager) {
+                this.focusManager.remove();
+            }
+
+            if (this.controlRef) {
+                this.controlRef.focus();
+            }
         }
     };
 
     render() {
-        const {
+        let {
             disableEdgeDetection,
             disableStyles,
             onClickOutside,
@@ -52,8 +67,19 @@ class Popover extends Component {
             onClickFunctions = chain(this.triggerBody, control.props.onClick);
         }
 
+        popperProps = {
+            innerRef: (c) => {
+                this.popover = findDOMNode(c);
+                this.handleFocusManager();
+            },
+            ...popperProps
+        };
+
         const referenceComponent = React.cloneElement(control, {
-            onClick: onClickFunctions
+            onClick: onClickFunctions,
+            ref: (c) => {
+                this.controlRef = findDOMNode(c);
+            }
         });
 
         const popoverClasses = classnames('fd-popover', className);

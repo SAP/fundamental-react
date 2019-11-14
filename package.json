@@ -58,7 +58,8 @@
     "react-focus-lock": "^2.1.1",
     "react-overlays": "^1.1.2",
     "react-popper": "^1.3.3",
-    "shortid": "^2.2.14"
+    "shortid": "^2.2.14",
+    "tabbable": "^4.0.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.1.5",

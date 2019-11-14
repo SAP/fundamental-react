@@ -88,6 +88,7 @@ class Popper extends React.Component {
 
         let popper = (
             <ReactPopper
+                {...popperProps}
                 modifiers={modifiers}
                 placement={popperPlacement}>
                 {({ ref, style, placement, outOfBoundaries, arrowProps }) => {
@@ -97,7 +98,6 @@ class Popper extends React.Component {
 
                     return (
                         <div
-                            {...popperProps}
                             className={popperClasses}
                             data-placement={placement}
                             data-x-out-of-boundaries={!!outOfBoundaries || undefined} // eslint-disable-line
