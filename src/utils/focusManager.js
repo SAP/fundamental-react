@@ -2,23 +2,18 @@ import keycode from 'keycode';
 import tabbable from 'tabbable';
 
 export default class FocusManager {
-    constructor(trapNode, enableTrapNode = true) {
+    constructor(trapNode) {
         this.container = trapNode;
         this.tabbableNodes = tabbable(this.container);
-        this.enableTrapNode = enableTrapNode;
 
-        if (this.enableTrapNode) {
-            this.setupTrapListeners();
-            this.trapElement = this.injectTrapElement();
-            this.tryFocus(this.trapElement);
-        } else {
-            this.tryFocus(this.tabbableNodes[0]);
-        }
+        document.addEventListener('keydown', this.keyHandler, true);
+
+        this.tryFocus(this.tabbableNodes[0]);
     }
 
-    checkTrapNode = () => {
+    checkTrapNodeExists = () => {
         if (!document.body.contains(this.container)) {
-            this.remove();
+            document.removeEventListener('keydown', this.keyHandler, true);
         }
     }
 
@@ -36,12 +31,10 @@ export default class FocusManager {
         }
     }
 
-    focusHander = () => {
-        this.checkTrapNode();
-    };
-
     handleTab = (e) => {
-        this.update();
+        e.preventDefault();
+
+        this.tabbableNodes = tabbable(this.container);
         const currentIndex = this.findParentTabbableElement(e.target);
         const lastNode = this.tabbableNodes[this.tabbableNodes.length - 1];
         const firstNode = this.tabbableNodes[0];
@@ -59,57 +52,22 @@ export default class FocusManager {
                 this.tryFocus(this.tabbableNodes[currentIndex + 1]);
             }
         }
-        e.preventDefault();
-    }
-
-    injectTrapElement = () => {
-        const trapElement = document.createElement('span');
-        trapElement.tabIndex = '-1';
-        trapElement.className = 'cnqr-trap-element';
-        trapElement.style.outline = 'none';
-
-        this.container.insertBefore(trapElement, this.container.childNodes[0]);
-
-        return trapElement;
     }
 
     keyHandler = (e) => {
-        this.checkTrapNode();
+        this.checkTrapNodeExists();
 
         if (e.keyCode === keycode.codes.tab) {
             this.handleTab(e);
         }
     };
 
-    remove = () => {
-        this.removeTrapListeners();
-
-        if (this.trapElement && this.container.contains(this.trapElement)) {
-            this.container.removeChild(this.trapElement);
-        }
-    }
-
-    removeTrapListeners = () => {
-        window.removeEventListener('focus', this.ensureFocusTrapped, true);
-        document.removeEventListener('focus', this.focusHander, true);
-        document.removeEventListener('keydown', this.keyHandler, true);
-    }
-
-    setupTrapListeners = () => {
-        window.addEventListener('focus', this.ensureFocusTrapped, true);
-        document.addEventListener('focus', this.focusHander, true);
-        document.addEventListener('keydown', this.keyHandler, true);
-    }
-
     tryFocus = (node) => {
         if (node) {
-            let posX = window.pageXOffset, posY = window.pageYOffset;
+            const posX = window.pageXOffset;
+            const posY = window.pageYOffset;
             node.focus();
             window.scrollTo(posX, posY);
         }
-    }
-
-    update = () => {
-        this.tabbableNodes = tabbable(this.container);
     }
 }

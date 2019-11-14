@@ -36,9 +36,6 @@ class Popover extends Component {
             this.setState({
                 isExpanded: false
             });
-            if (this.focusManager) {
-                this.focusManager.remove();
-            }
 
             if (this.controlRef) {
                 this.controlRef.focus();
