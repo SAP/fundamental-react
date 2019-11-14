@@ -6,7 +6,6 @@ export default class FocusManager {
         this.container = trapNode;
         this.tabbableNodes = tabbable(this.container);
         this.enableTrapNode = enableTrapNode;
-        this.focusElm;
 
         if (this.enableTrapNode) {
             this.setupTrapListeners();
@@ -43,25 +42,28 @@ export default class FocusManager {
 
     handleTab = (e) => {
         this.update();
-        let currentIndex = this.findParentTabbableElement(e.target),
-            lastNode = this.tabbableNodes[this.tabbableNodes.length - 1],
-            firstNode = this.tabbableNodes[0];
+        const currentIndex = this.findParentTabbableElement(e.target);
+        const lastNode = this.tabbableNodes[this.tabbableNodes.length - 1];
+        const firstNode = this.tabbableNodes[0];
 
-        // loop focus to last node from first for shift + tab
-        // regular tabbing allowed to pass through browser UI and forced
-        // to first node with ensureFocusTrapped()
         if (e.shiftKey) {
             if (this.tabbableNodes[currentIndex] === firstNode) {
                 this.tryFocus(lastNode);
             } else {
                 this.tryFocus(this.tabbableNodes[currentIndex - 1]);
             }
-            e.preventDefault();
+        } else {
+            if (this.tabbableNodes[currentIndex] === lastNode) {
+                this.tryFocus(firstNode);
+            } else {
+                this.tryFocus(this.tabbableNodes[currentIndex + 1]);
+            }
         }
+        e.preventDefault();
     }
 
     injectTrapElement = () => {
-        let trapElement = document.createElement('span');
+        const trapElement = document.createElement('span');
         trapElement.tabIndex = '-1';
         trapElement.className = 'cnqr-trap-element';
         trapElement.style.outline = 'none';
@@ -78,13 +80,6 @@ export default class FocusManager {
             this.handleTab(e);
         }
     };
-
-    ensureFocusTrapped = (e) => {
-        // re-entering page from browser UI
-        if (e.target === window && this.container && !this.container.contains(document.activeElement)) {
-            this.tryFocus(this.tabbableNodes[0]);
-        }
-    }
 
     remove = () => {
         this.removeTrapListeners();
@@ -110,7 +105,6 @@ export default class FocusManager {
         if (node) {
             let posX = window.pageXOffset, posY = window.pageYOffset;
             node.focus();
-            this.focusElm = node;
             window.scrollTo(posX, posY);
         }
     }
