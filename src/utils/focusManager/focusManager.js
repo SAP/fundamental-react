@@ -5,14 +5,13 @@ export default class FocusManager {
     constructor(trapNode) {
         this.container = trapNode;
         this.tabbableNodes = tabbable(this.container);
-
         this.container.addEventListener('keydown', this.keyHandler, true);
 
         this.tryFocus(this.tabbableNodes[0]);
     }
 
     findParentTabbableElement = (target) => {
-        let index = this.tabbableNodes.indexOf(target);
+        const index = this.tabbableNodes.indexOf(target);
 
         if (index >= 0) {
             return index;

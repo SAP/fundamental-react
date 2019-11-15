@@ -1,6 +1,6 @@
 import FocusManager from './focusManager';
 
-let ce = global.document.createElement;
+const ce = global.document.createElement;
 
 // limitation with jest and 'offsetParent': https://github.com/jsdom/jsdom/issues/1261#issuecomment-362928131
 Object.defineProperty(HTMLElement.prototype, 'offsetParent', {
@@ -12,8 +12,8 @@ Object.defineProperty(HTMLElement.prototype, 'offsetParent', {
 describe('focus manager', () => {
     beforeAll(() => {
         global.document.createElement = function() {
-            let [type] = arguments;
-            let element = ce.apply(this, arguments);
+            const [type] = arguments;
+            const element = ce.apply(this, arguments);
             if (type === 'a') {
                 element.setAttribute('tabIndex', 0);
             }
@@ -26,12 +26,12 @@ describe('focus manager', () => {
     });
 
     const createNode = () => {
-        let div = document.createElement('div');
-        let a1 = document.createElement('a');
-        let a2 = document.createElement('a');
-        let a3 = document.createElement('a');
-        let a4 = document.createElement('a');
-        let span = document.createElement('span');
+        const div = document.createElement('div');
+        const a1 = document.createElement('a');
+        const a2 = document.createElement('a');
+        const a3 = document.createElement('a');
+        const a4 = document.createElement('a');
+        const span = document.createElement('span');
 
         div.id = 'mainDiv';
 
