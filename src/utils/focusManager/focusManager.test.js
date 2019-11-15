@@ -45,12 +45,6 @@ describe('focus manager', () => {
     };
 
     describe('Default Behavior', () => {
-        it('should setup', () => {
-            const manager = new FocusManager(createNode());
-
-            expect(manager).toBeTruthy();
-        });
-
         it('should have tabbable elements', () => {
             const manager = new FocusManager(createNode());
 

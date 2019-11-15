@@ -6,15 +6,9 @@ export default class FocusManager {
         this.container = trapNode;
         this.tabbableNodes = tabbable(this.container);
 
-        document.addEventListener('keydown', this.keyHandler, true);
+        this.container.addEventListener('keydown', this.keyHandler, true);
 
         this.tryFocus(this.tabbableNodes[0]);
-    }
-
-    checkTrapNodeExists = () => {
-        if (!document.body.contains(this.container)) {
-            document.removeEventListener('keydown', this.keyHandler, true);
-        }
     }
 
     findParentTabbableElement = (target) => {
@@ -55,8 +49,6 @@ export default class FocusManager {
     }
 
     keyHandler = (e) => {
-        this.checkTrapNodeExists();
-
         if (e.keyCode === keycode.codes.tab) {
             this.handleTab(e);
         }
