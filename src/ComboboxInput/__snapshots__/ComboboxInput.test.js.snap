@@ -14,12 +14,8 @@ exports[`<ComboboxInput /> create combobox input 1`] = `
         className="fd-popover__control"
       >
         <div
-          aria-haspopup={true}
           className="fd-input-group"
           onClick={[Function]}
-          onKeyPress={[Function]}
-          role="button"
-          tabIndex={0}
         >
           <input
             className="fd-input fd-input-group__input"
@@ -56,12 +52,8 @@ exports[`<ComboboxInput /> create combobox input 2`] = `
         className="fd-popover__control"
       >
         <div
-          aria-haspopup={true}
           className="fd-input-group"
           onClick={[Function]}
-          onKeyPress={[Function]}
-          role="button"
-          tabIndex={0}
         >
           <input
             className="fd-input fd-input--compact fd-input-group__input"

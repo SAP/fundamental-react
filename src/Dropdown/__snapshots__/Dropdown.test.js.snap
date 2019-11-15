@@ -17,6 +17,7 @@ exports[`<Dropdown /> create dropdown component 1`] = `
       >
         <button
           aria-haspopup={true}
+          ariaRole="button"
           className="fd-button fd-dropdown__control"
           onClick={[Function]}
           onKeyPress={[Function]}
@@ -48,6 +49,7 @@ exports[`<Dropdown /> create dropdown component 2`] = `
       >
         <button
           aria-haspopup={true}
+          ariaRole="button"
           className="fd-button fd-button--compact fd-dropdown__control"
           onClick={[Function]}
           onKeyPress={[Function]}
@@ -79,6 +81,7 @@ exports[`<Dropdown /> create dropdown component 3`] = `
       >
         <button
           aria-haspopup={true}
+          ariaRole="button"
           className="fd-button fd-dropdown__control"
           onClick={[Function]}
           onKeyPress={[Function]}
@@ -111,6 +114,7 @@ exports[`<Dropdown /> create dropdown component 4`] = `
       >
         <button
           aria-haspopup={true}
+          ariaRole="button"
           className="fd-button sap-icon--filter fd-dropdown__control"
           onClick={[Function]}
           onKeyPress={[Function]}
@@ -143,6 +147,7 @@ exports[`<Dropdown /> create dropdown component 5`] = `
       >
         <button
           aria-haspopup={true}
+          ariaRole="button"
           className="fd-button sap-icon--filter is-disabled fd-dropdown__control"
           disabled={true}
           onClick={[Function]}

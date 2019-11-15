@@ -96,6 +96,7 @@ exports[`<Tile /> create tile component 4`] = `
         >
           <button
             aria-haspopup={true}
+            ariaRole="button"
             className="fd-button fd-button--standard sap-icon--vertical-grip"
             onClick={[Function]}
             onKeyPress={[Function]}
@@ -165,6 +166,7 @@ exports[`<Tile /> create tile component 6`] = `
         >
           <button
             aria-haspopup={true}
+            ariaRole="button"
             className="fd-button fd-button--standard sap-icon--vertical-grip"
             onClick={[Function]}
             onKeyPress={[Function]}

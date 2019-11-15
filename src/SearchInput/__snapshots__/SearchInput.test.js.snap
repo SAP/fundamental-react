@@ -16,12 +16,8 @@ exports[`<SearchInput /> create SearchInput 1`] = `
         className="fd-popover__control"
       >
         <div
-          aria-haspopup={true}
           className="fd-input-group fd-input-group--after"
           onClick={[Function]}
-          onKeyPress={[Function]}
-          role="button"
-          tabIndex={0}
         >
           <input
             className="fd-input fd-input-group__input"
@@ -61,12 +57,8 @@ exports[`<SearchInput /> create SearchInput 2`] = `
         className="fd-popover__control"
       >
         <div
-          aria-haspopup={true}
           className="fd-input-group fd-input-group--after"
           onClick={[Function]}
-          onKeyPress={[Function]}
-          role="button"
-          tabIndex={0}
         >
           <input
             className="fd-input fd-input-group__input"
@@ -106,12 +98,8 @@ exports[`<SearchInput /> create SearchInput 3`] = `
         className="fd-popover__control"
       >
         <div
-          aria-haspopup={true}
           className="fd-input-group fd-input-group--after"
           onClick={[Function]}
-          onKeyPress={[Function]}
-          role="button"
-          tabIndex={0}
         >
           <input
             className="fd-input fd-input-group__input"
@@ -151,12 +139,8 @@ exports[`<SearchInput /> create SearchInput 4`] = `
         className="fd-popover__control"
       >
         <div
-          aria-haspopup={true}
           className="fd-input-group fd-input-group--after"
           onClick={[Function]}
-          onKeyPress={[Function]}
-          role="button"
-          tabIndex={0}
         >
           <input
             className="fd-input fd-input-group__input"

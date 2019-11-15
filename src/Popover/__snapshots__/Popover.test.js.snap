@@ -14,6 +14,7 @@ exports[`<Popover /> create Popover 1`] = `
     >
       <span
         aria-haspopup={true}
+        ariaRole="button"
         className="sap-icon--cart sap-icon--xl"
         onClick={[Function]}
         onKeyPress={[Function]}
@@ -39,6 +40,7 @@ exports[`<Popover /> create Popover 2`] = `
     >
       <span
         aria-haspopup={true}
+        ariaRole="button"
         className="sap-icon--cart sap-icon--xl"
         onClick={[Function]}
         onKeyPress={[Function]}
@@ -64,6 +66,7 @@ exports[`<Popover /> create Popover 3`] = `
     >
       <span
         aria-haspopup={true}
+        ariaRole="button"
         className="sap-icon--cart sap-icon--xl"
         onClick={[Function]}
         onKeyPress={[Function]}
@@ -89,6 +92,7 @@ exports[`<Popover /> create Popover 4`] = `
     >
       <span
         aria-haspopup={true}
+        ariaRole="button"
         className="sap-icon--cart sap-icon--xl"
         onClick={[Function]}
         onKeyPress={[Function]}

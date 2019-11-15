@@ -60,6 +60,7 @@ class Popover extends Component {
     render() {
         const {
             disableEdgeDetection,
+            disableKeyPressHandler,
             disableStyles,
             onClickOutside,
             onEscapeKey,
@@ -78,13 +79,22 @@ class Popover extends Component {
             onClickFunctions = chain(this.triggerBody, control.props.onClick);
         }
 
-        const referenceComponent = React.cloneElement(control, {
-            onClick: onClickFunctions,
-            tabIndex: 0,
-            role: 'button',
-            'aria-haspopup': true,
-            onKeyPress: (event) => this.handleKeyPress(event, control, onClickFunctions)
-        });
+        let controlProps = {
+            onClick: onClickFunctions
+        };
+
+        if (!disableKeyPressHandler) {
+            controlProps = {
+                ...controlProps,
+                tabIndex: 0,
+                role: 'button',
+                ariaRole: 'button',
+                'aria-haspopup': true,
+                onKeyPress: (event) => this.handleKeyPress(event, control, onClickFunctions)
+            };
+        }
+
+        const referenceComponent = React.cloneElement(control, controlProps);
 
         const popoverClasses = classnames('fd-popover', className);
 
@@ -118,6 +128,7 @@ Popover.propTypes = {
     customStyles: PropTypes.object,
     disabled: PropTypes.bool,
     disableEdgeDetection: PropTypes.bool,
+    disableKeyPressHandler: PropTypes.bool,
     disableStyles: PropTypes.bool,
     noArrow: PropTypes.bool,
     placement: PropTypes.oneOf(POPPER_PLACEMENTS),

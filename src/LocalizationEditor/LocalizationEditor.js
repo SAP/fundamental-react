@@ -110,6 +110,7 @@ const LocalizationEditor = React.forwardRef(({ control, menu, id, compact, texta
                         </span>
                     </div>
                 }
+                disableKeyPressHandler
                 disableStyles={disableStyles}
                 id={id}
                 noArrow />
