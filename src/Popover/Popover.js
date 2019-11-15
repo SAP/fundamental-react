@@ -1,7 +1,7 @@
 import chain from 'chain-function';
 import classnames from 'classnames';
 import { findDOMNode } from 'react-dom';
-import FocusManager from '../utils/focusManager';
+import FocusManager from '../utils/focusManager/focusManager';
 import Popper from '../utils/_Popper';
 import { POPPER_PLACEMENTS } from '../utils/constants';
 import PropTypes from 'prop-types';
