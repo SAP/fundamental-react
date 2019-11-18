@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.7.2-rc.1"></a>
+## [0.7.2-rc.1](https://github.com/SAP/fundamental-react/compare/v0.7.2-rc.0...v0.7.2-rc.1) (2019-11-18)
+
+
+### Bug Fixes
+
+* No Popover Arrow ([#790](https://github.com/SAP/fundamental-react/issues/790)) ([9b79b81](https://github.com/SAP/fundamental-react/commit/9b79b81))
+
+
+
 <a name="0.7.2-rc.0"></a>
 ## [0.7.2-rc.0](https://github.com/SAP/fundamental-react/compare/v0.7.1...v0.7.2-rc.0) (2019-11-12)
 
