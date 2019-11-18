@@ -29,66 +29,143 @@ storiesOf('Components|Popover', module)
     ))
     .add('Placement', () => (
         <>
-            <Popover
-                body={someText}
-                control={<Button glyph='navigation-up-arrow' option='light' >Pop to Top-Start</Button>}
-                placement='top-start'
-                style={{ position: 'fixed', top: '10em', left: '35em' }} />
-            <Popover
-                body={someText}
-                control={<Button glyph='navigation-up-arrow' option='light' >Pop to Top</Button>}
-                placement='top'
-                style={{ position: 'fixed', top: '10em', left: '50em' }} />
-            <Popover
-                body={someText}
-                control={<Button glyph='navigation-up-arrow' option='light' >Pop to Top-End</Button>}
-                placement='top-end'
-                style={{ position: 'fixed', top: '10em', left: '65em' }} />
-            <Popover
-                body={someText}
-                control={<Button glyph='navigation-right-arrow' option='light' >Pop to Right-Top</Button>}
-                placement='right-start'
-                style={{ position: 'fixed', top: '15em', left: '65em' }} />
-            <Popover
-                body={someText}
-                control={<Button glyph='navigation-right-arrow' option='light' >Pop to Right</Button>}
-                placement='right'
-                style={{ position: 'fixed', top: '20em', left: '65em' }} />
-            <Popover
-                body={someText}
-                control={<Button glyph='navigation-right-arrow' option='light' >Pop to Right-End</Button>}
-                placement='right-end'
-                style={{ position: 'fixed', top: '25em', left: '65em' }} />
-            <Popover
-                body={someText}
-                control={<Button glyph='navigation-down-arrow' option='light' >Pop to Bottom-End</Button>}
-                placement='bottom-end'
-                style={{ position: 'fixed', top: '30em', left: '65em' }} />
-            <Popover
-                body={someText}
-                control={<Button glyph='navigation-down-arrow' option='light' >Pop to Bottom</Button>}
-                placement='bottom'
-                style={{ position: 'fixed', top: '30em', left: '50em' }} />
-            <Popover
-                body={someText}
-                control={<Button glyph='navigation-down-arrow' option='light' >Pop to Bottom-Start</Button>}
-                placement='bottom-start'
-                style={{ position: 'fixed', top: '30em', left: '35em' }} />
-            <Popover
-                body={someText}
-                control={<Button glyph='navigation-left-arrow' option='light' >Pop to Left-End</Button>}
-                placement='left-end'
-                style={{ position: 'fixed', top: '25em', left: '35em' }} />
-            <Popover
-                body={someText}
-                control={<Button glyph='navigation-left-arrow' option='light' >Pop to Left</Button>}
-                placement='left'
-                style={{ position: 'fixed', top: '20em', left: '35em' }} />
-            <Popover
-                body={someText}
-                control={<Button glyph='navigation-left-arrow' option='light' >Pop to Left-Start</Button>}
-                placement='left-start'
-                style={{ position: 'fixed', top: '15em', left: '35em' }} />
+            <style dangerouslySetInnerHTML={{ __html: `
+            td {
+                min-width: 3em;
+                min-height: 3em;
+            }
+            ` }} />
+            <table>
+                {/* start top padding for popover */}
+                <tr ><td>&nbsp;</td></tr>
+                <tr ><td>&nbsp;</td></tr>
+                <tr ><td>&nbsp;</td></tr>
+                <tr ><td>&nbsp;</td></tr>
+                <tr ><td>&nbsp;</td></tr>
+                {/* end top padding for popover */}
+                <tr>
+                    <td />
+                    <td />
+                    <td />
+                    <td />
+                    <td />
+                    <td>
+                        <Popover
+                            body={someText}
+                            control={<Button glyph='navigation-up-arrow' option='light' >Pop to Top-Start</Button>}
+                            placement='top-start' />
+                    </td>
+                    <td>
+                        <Popover
+                            body={someText}
+                            control={<Button glyph='navigation-up-arrow' option='light' >Pop to Top</Button>}
+                            placement='top' />
+                    </td>
+                    <td>
+                        <Popover
+                            body={someText}
+                            control={<Button glyph='navigation-up-arrow' option='light' >Pop to Top-End</Button>}
+                            placement='top-end' />
+                    </td>
+                    <td />
+                </tr>
+                <tr>
+                    <td />
+                    <td />
+                    <td />
+                    <td />
+                    <td>
+                        <Popover
+                            body={someText}
+                            control={<Button glyph='navigation-left-arrow' option='light' >Pop to Left-Start</Button>}
+                            placement='left-start' />
+                    </td>
+                    <td />
+                    <td />
+                    <td />
+                    <td>
+                        <Popover
+                            body={someText}
+                            control={<Button glyph='navigation-right-arrow' option='light' >Pop to Right-Top</Button>}
+                            placement='right-start' />
+                    </td>
+                </tr>
+                <tr>
+                    <td />
+                    <td />
+                    <td />
+                    <td />
+                    <td>
+                        <Popover
+                            body={someText}
+                            control={<Button glyph='navigation-left-arrow' option='light' >Pop to Left</Button>}
+                            placement='left' />
+                    </td>
+                    <td />
+                    <td />
+                    <td />
+                    <td>
+                        <Popover
+                            body={someText}
+                            control={<Button glyph='navigation-right-arrow' option='light' >Pop to Right</Button>}
+                            placement='right' />
+                    </td>
+                </tr>
+                <tr>
+                    <td />
+                    <td />
+                    <td />
+                    <td />
+                    <td>
+                        <Popover
+                            body={someText}
+                            control={<Button glyph='navigation-left-arrow' option='light' >Pop to Left-End</Button>}
+                            placement='left-end' />
+                    </td>
+                    <td />
+                    <td />
+                    <td />
+                    <td>
+                        <Popover
+                            body={someText}
+                            control={<Button glyph='navigation-right-arrow' option='light' >Pop to Right-End</Button>}
+                            placement='right-end' />
+                    </td>
+                </tr>
+                <tr>
+                    <td />
+                    <td />
+                    <td />
+                    <td />
+                    <td />
+                    <td>
+                        <Popover
+                            body={someText}
+                            control={<Button glyph='navigation-down-arrow' option='light' >Pop to Bottom-Start</Button>}
+                            placement='bottom-start' />
+                    </td>
+                    <td>
+                        <Popover
+                            body={someText}
+                            control={<Button glyph='navigation-down-arrow' option='light' >Pop to Bottom</Button>}
+                            placement='bottom' />
+                    </td>
+                    <td>
+                        <Popover
+                            body={someText}
+                            control={<Button glyph='navigation-down-arrow' option='light' >Pop to Bottom-End</Button>}
+                            placement='bottom-end' />
+                    </td>
+                    <td />
+                </tr>
+                {/* start bottom padding for popover */}
+                <tr ><td>&nbsp;</td></tr>
+                <tr ><td>&nbsp;</td></tr>
+                <tr ><td>&nbsp;</td></tr>
+                <tr ><td>&nbsp;</td></tr>
+                <tr ><td>&nbsp;</td></tr>
+                {/* end bottom padding for popover */}
+            </table>
         </>
     ))
     .add('disable styles', () => (
