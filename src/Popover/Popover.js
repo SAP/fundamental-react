@@ -64,12 +64,9 @@ class Popover extends Component {
             onClickFunctions = chain(this.triggerBody, control.props.onClick);
         }
 
-        popperProps = {
-            innerRef: (c) => {
-                this.popover = findDOMNode(c);
-                this.handleFocusManager();
-            },
-            ...popperProps
+        const innerRef = (c) => {
+            this.popover = findDOMNode(c);
+            this.handleFocusManager();
         };
 
         const referenceComponent = React.cloneElement(control, {
@@ -86,6 +83,7 @@ class Popover extends Component {
                 <Popper
                     cssBlock='fd-popover'
                     disableEdgeDetection={disableEdgeDetection}
+                    innerRef={innerRef}
                     noArrow={noArrow}
                     onClickOutside={chain(this.handleOutsideClick, onClickOutside)}
                     onEscapeKey={chain(this.handleOutsideClick, onEscapeKey)}
