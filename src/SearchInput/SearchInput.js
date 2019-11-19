@@ -184,6 +184,7 @@ class SearchInput extends Component {
                             )}
                         </div>
                     }
+                    disableKeyPressHandler
                     disableStyles={disableStyles} />
             </div>
         );
