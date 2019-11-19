@@ -88,7 +88,6 @@ class Popover extends Component {
                 ...controlProps,
                 tabIndex: 0,
                 role: 'button',
-                ariaRole: 'button',
                 'aria-haspopup': true,
                 onKeyPress: (event) => this.handleKeyPress(event, control, onClickFunctions)
             };
@@ -146,6 +145,7 @@ Popover.propDescriptions = {
     body: 'Node(s) to render in the overlay.',
     control: 'Node to render as the reference element (that the `body` will be placed in relation to).',
     disableEdgeDetection: 'Set to **true** to render popover without edge detection so popover will not flip from top to bottom with scroll.',
+    disableKeyPressHandler: 'Set to **true** to remove onKeyPress handler and aria-* roles. Only do so if the control is a complex component such as a FormInput with Button.',
     noArrow: 'Set to **true** to render a popover without an arrow.',
     placement: 'Initial position of the `body` (overlay) related to the `control`.',
     popperProps: 'Additional props to be spread to the overlay element, supported by <a href="https://popper.js.org" target="_blank">popper.js</a>.',

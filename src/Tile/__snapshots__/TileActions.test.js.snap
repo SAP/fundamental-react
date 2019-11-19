@@ -17,7 +17,6 @@ exports[`<Tile.Actions /> create Tile.Actions component 1`] = `
       >
         <button
           aria-haspopup={true}
-          ariaRole="button"
           className="fd-button fd-button--standard sap-icon--vertical-grip"
           onClick={[Function]}
           onKeyPress={[Function]}

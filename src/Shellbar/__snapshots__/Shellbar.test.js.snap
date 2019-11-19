@@ -43,11 +43,10 @@ exports[`<Shellbar /> create shellbar 1`] = `
             >
               <span
                 aria-haspopup={true}
-                ariaRole="button"
                 className="fd-identifier fd-identifier--xs fd-identifier--circle fd-has-background-color-accent-8"
                 onClick={[Function]}
                 onKeyPress={[Function]}
-                role=""
+                role="button"
                 tabIndex={0}
               >
                 JS
@@ -104,11 +103,10 @@ exports[`<Shellbar /> create shellbar 2`] = `
             >
               <span
                 aria-haspopup={true}
-                ariaRole="button"
                 className="fd-identifier fd-identifier--xs fd-identifier--circle fd-has-background-color-accent-8"
                 onClick={[Function]}
                 onKeyPress={[Function]}
-                role=""
+                role="button"
                 tabIndex={0}
               >
                 JS
@@ -153,7 +151,6 @@ exports[`<Shellbar /> create shellbar 3`] = `
           >
             <button
               aria-haspopup={true}
-              ariaRole="button"
               className="fd-product-menu__control"
               onClick={[Function]}
               onKeyPress={[Function]}
@@ -250,7 +247,6 @@ exports[`<Shellbar /> create shellbar 3`] = `
             <button
               aria-haspopup={true}
               aria-label="Settings"
-              ariaRole="button"
               className="fd-button sap-icon--settings fd-shellbar__button"
               onClick={[Function]}
               onKeyPress={[Function]}
@@ -281,7 +277,6 @@ exports[`<Shellbar /> create shellbar 3`] = `
         >
           <div
             aria-haspopup={true}
-            ariaRole="button"
             className="fd-shellbar__action fd-shellbar__action--desktop"
             onClick={[Function]}
             onKeyPress={[Function]}
@@ -319,7 +314,6 @@ exports[`<Shellbar /> create shellbar 3`] = `
           >
             <div
               aria-haspopup={true}
-              ariaRole="button"
               className="fd-shellbar-collapse--control"
               onClick={[Function]}
               onKeyPress={[Function]}
@@ -362,11 +356,10 @@ exports[`<Shellbar /> create shellbar 3`] = `
             >
               <span
                 aria-haspopup={true}
-                ariaRole="button"
                 className="fd-identifier fd-identifier--xs fd-identifier--circle fd-has-background-color-accent-8"
                 onClick={[Function]}
                 onKeyPress={[Function]}
-                role=""
+                role="button"
                 tabIndex={0}
               >
                 JS
@@ -395,7 +388,6 @@ exports[`<Shellbar /> create shellbar 3`] = `
             >
               <button
                 aria-haspopup={true}
-                ariaRole="button"
                 className="fd-button sap-icon--grid fd-shellbar__button"
                 onClick={[Function]}
                 onKeyPress={[Function]}
@@ -442,7 +434,6 @@ exports[`<Shellbar /> create shellbar 4`] = `
           >
             <button
               aria-haspopup={true}
-              ariaRole="button"
               className="fd-product-menu__control"
               onClick={[Function]}
               onKeyPress={[Function]}
@@ -539,7 +530,6 @@ exports[`<Shellbar /> create shellbar 4`] = `
             <button
               aria-haspopup={true}
               aria-label="Settings"
-              ariaRole="button"
               className="fd-button sap-icon--settings fd-shellbar__button"
               onClick={[Function]}
               onKeyPress={[Function]}
@@ -570,7 +560,6 @@ exports[`<Shellbar /> create shellbar 4`] = `
         >
           <div
             aria-haspopup={true}
-            ariaRole="button"
             className="fd-shellbar__action fd-shellbar__action--desktop"
             onClick={[Function]}
             onKeyPress={[Function]}
@@ -601,7 +590,6 @@ exports[`<Shellbar /> create shellbar 4`] = `
           >
             <div
               aria-haspopup={true}
-              ariaRole="button"
               className="fd-shellbar-collapse--control"
               onClick={[Function]}
               onKeyPress={[Function]}
@@ -644,11 +632,10 @@ exports[`<Shellbar /> create shellbar 4`] = `
             >
               <span
                 aria-haspopup={true}
-                ariaRole="button"
                 className="fd-identifier fd-identifier--xs fd-identifier--circle fd-has-background-color-accent-8"
                 onClick={[Function]}
                 onKeyPress={[Function]}
-                role=""
+                role="button"
                 tabIndex={0}
               >
                 JS
@@ -677,7 +664,6 @@ exports[`<Shellbar /> create shellbar 4`] = `
             >
               <button
                 aria-haspopup={true}
-                ariaRole="button"
                 className="fd-button sap-icon--grid fd-shellbar__button"
                 onClick={[Function]}
                 onKeyPress={[Function]}
@@ -724,7 +710,6 @@ exports[`<Shellbar /> create shellbar 5`] = `
           >
             <button
               aria-haspopup={true}
-              ariaRole="button"
               className="fd-product-menu__control"
               onClick={[Function]}
               onKeyPress={[Function]}
@@ -833,7 +818,6 @@ exports[`<Shellbar /> create shellbar 5`] = `
         >
           <div
             aria-haspopup={true}
-            ariaRole="button"
             className="fd-shellbar__action fd-shellbar__action--desktop"
             onClick={[Function]}
             onKeyPress={[Function]}
@@ -864,7 +848,6 @@ exports[`<Shellbar /> create shellbar 5`] = `
           >
             <div
               aria-haspopup={true}
-              ariaRole="button"
               className="fd-shellbar-collapse--control"
               onClick={[Function]}
               onKeyPress={[Function]}
@@ -907,11 +890,10 @@ exports[`<Shellbar /> create shellbar 5`] = `
             >
               <span
                 aria-haspopup={true}
-                ariaRole="button"
                 className="fd-identifier fd-identifier--xs fd-identifier--circle fd-has-background-color-accent-8"
                 onClick={[Function]}
                 onKeyPress={[Function]}
-                role=""
+                role="button"
                 tabIndex={0}
               >
                 JS
@@ -940,7 +922,6 @@ exports[`<Shellbar /> create shellbar 5`] = `
             >
               <button
                 aria-haspopup={true}
-                ariaRole="button"
                 className="fd-button sap-icon--grid fd-shellbar__button"
                 onClick={[Function]}
                 onKeyPress={[Function]}
@@ -987,7 +968,6 @@ exports[`<Shellbar /> create shellbar 6`] = `
           >
             <button
               aria-haspopup={true}
-              ariaRole="button"
               className="fd-product-menu__control"
               onClick={[Function]}
               onKeyPress={[Function]}
@@ -1084,7 +1064,6 @@ exports[`<Shellbar /> create shellbar 6`] = `
             <button
               aria-haspopup={true}
               aria-label="Settings"
-              ariaRole="button"
               className="fd-button sap-icon--settings fd-shellbar__button"
               onClick={[Function]}
               onKeyPress={[Function]}
@@ -1134,7 +1113,6 @@ exports[`<Shellbar /> create shellbar 6`] = `
           >
             <div
               aria-haspopup={true}
-              ariaRole="button"
               className="fd-shellbar-collapse--control"
               onClick={[Function]}
               onKeyPress={[Function]}
@@ -1177,11 +1155,10 @@ exports[`<Shellbar /> create shellbar 6`] = `
             >
               <span
                 aria-haspopup={true}
-                ariaRole="button"
                 className="fd-identifier fd-identifier--xs fd-identifier--circle fd-identifier--thumbnail"
                 onClick={[Function]}
                 onKeyPress={[Function]}
-                role="presentation"
+                role="button"
                 style={
                   Object {
                     "backgroundImage": "url(//unpkg.com/fundamental-styles/dist/images/sap-logo.png)",
@@ -1213,7 +1190,6 @@ exports[`<Shellbar /> create shellbar 6`] = `
             >
               <button
                 aria-haspopup={true}
-                ariaRole="button"
                 className="fd-button sap-icon--grid fd-shellbar__button"
                 onClick={[Function]}
                 onKeyPress={[Function]}
