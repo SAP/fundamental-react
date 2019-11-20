@@ -101,10 +101,11 @@ class Popper extends React.Component {
                         <div
                             {...popperProps}
                             className={popperClasses}
-                            data-placement={placement}
-                            data-x-out-of-boundaries={!!outOfBoundaries || undefined} // eslint-disable-line
                             ref={ref}
-                            style={style}>
+                            style={style}
+                            // eslint-disable-next-line no-undefined
+                            x-out-of-boundaries={!!outOfBoundaries || undefined}
+                            x-placement={placement}>
                             {children}
                             <span
                                 className={`${cssBlock}__arrow`}
@@ -178,8 +179,8 @@ Popper.defaultProps = {
         }
     },
     popperPlacement: 'bottom-start',
-    onClickOutside: () => {},
-    onKeyDown: () => {}
+    onClickOutside: () => { },
+    onKeyDown: () => { }
 };
 
 export default Popper;

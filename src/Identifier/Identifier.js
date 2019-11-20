@@ -5,7 +5,7 @@ import React from 'react';
 import withStyles from '../utils/WithStyles/WithStyles';
 import { IDENTIFIER_MODIFIERS, IDENTIFIER_SIZES } from '../utils/constants';
 
-const Identifier = React.forwardRef(({ glyph, size, modifier, color, label, backgroundImageUrl, children, className, disableStyles, ...props }, ref) => {
+const Identifier = React.forwardRef(({ glyph, size, modifier, color, label, backgroundImageUrl, children, className, disableStyles, role, ...props }, ref) => {
     const styles = {
         backgroundImage: `url(${backgroundImageUrl})`
     };
@@ -21,7 +21,12 @@ const Identifier = React.forwardRef(({ glyph, size, modifier, color, label, back
         className
     );
 
-    const ariaRole = !children ? 'presentation' : '';
+    let ariaRole;
+    if (role) {
+        ariaRole = role;
+    } else {
+        ariaRole = !children ? 'presentation' : '';
+    }
 
     return (
         <span
@@ -48,6 +53,7 @@ Identifier.propTypes = {
     glyph: PropTypes.string,
     label: PropTypes.string,
     modifier: PropTypes.oneOf(IDENTIFIER_MODIFIERS),
+    role: PropTypes.string,
     size: PropTypes.oneOf(IDENTIFIER_SIZES)
 };
 
@@ -55,6 +61,7 @@ Identifier.propDescriptions = {
     backgroundImageUrl: 'Image URL.',
     color: 'Applies a background color.',
     label: 'Localized text for label.',
+    role: 'Applies an aria-role. Set to button if Identifier opens a Popover or Modal.',
     size: 'Size of the image. These sizes are available: **xxs** (extra extra small) - 20px, **xs** (extra small) - 28px, **s** (small) - 32px, **m** (medium) - 48px, **l** (large) - 64px, **xl** (extra lagre) - 88px, and **xxl** (extra extra large). Default matches the base font size (14px).'
 };
 
