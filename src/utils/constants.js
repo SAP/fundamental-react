@@ -109,6 +109,7 @@ export const TOGGLE_SIZES = [
 ];
 
 export const POPOVER_TYPES = [
+    true,
     'dialog',
     'grid',
     'listbox',
