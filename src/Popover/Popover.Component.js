@@ -1,8 +1,10 @@
 import 'fundamental-styles/dist/layout.css'; //needed for layout container class for placement example
 import path from 'path';
+import { POPPER_SIZING_TYPES } from '../utils/constants';
 import React from 'react';
 import { Button, Icon, Identifier, Image, Menu, Modal, Popover } from '../';
 import { ComponentPage, Example } from '../_playground';
+
 
 const bodyContent = (
     <Menu>
@@ -11,6 +13,17 @@ const bodyContent = (
             <Menu.Item url='#'>Option 2</Menu.Item>
             <Menu.Item url='#'>Option 3</Menu.Item>
             <Menu.Item url='#'>Option 4</Menu.Item>
+        </Menu.List>
+    </Menu>
+);
+
+const longBodyContent = (
+    <Menu>
+        <Menu.List>
+            <Menu.Item url='#'>Lorem ipsum dolor sit amet</Menu.Item>
+            <Menu.Item url='#'>consectetur adipiscing elit</Menu.Item>
+            <Menu.Item url='#'>sed do eiusmod tempor</Menu.Item>
+            <Menu.Item url='#'>incididunt ut labore et dolore</Menu.Item>
         </Menu.List>
     </Menu>
 );
@@ -176,6 +189,20 @@ export class PopoverComponent extends React.Component {
                         control={<Button glyph='navigation-down-arrow' option='light' />}
                         disableEdgeDetection
                         placement='bottom' />
+                </Example>
+
+                <Example
+                    centered
+                    title='Width Sizing Type'>
+                    {POPPER_SIZING_TYPES.map(type =>
+                        (<Popover
+                            body={longBodyContent}
+                            control={<Button>widthizingType: <strong>'{type}'</strong></Button>}
+                            disableEdgeDetection
+                            placement='bottom'
+                            widthSizingType={type} />)
+                    )}
+
                 </Example>
 
                 <Example

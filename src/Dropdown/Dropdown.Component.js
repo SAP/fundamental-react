@@ -1,12 +1,10 @@
 import path from 'path';
 import React from 'react';
-import { useRef } from 'react';
 import { Button, Dropdown, Menu, Popover } from '../';
 import { ComponentPage, Example } from '../_playground';
 
 
 export const DropdownComponent = () => {
-    const dropdownRef = useRef(null);
 
     return (
         <ComponentPage
@@ -150,29 +148,33 @@ export const DropdownComponent = () => {
                         noArrow />
                 </Dropdown>
             </Example>
+
             <Example
                 centered
-                description="Assign a reference (useRef) to <Dropdown> and use it as the 'parentRef' property of <Popover>"
-                title="Width limited to parent's">
-                <Dropdown ref={dropdownRef}>
+                title='Popover width limited to Dropdown'>
+                <Dropdown>
                     <Popover
                         body={
                             <Menu>
                                 <Menu.List>
-                                    <Menu.Item url='#'>One</Menu.Item>
-                                    <Menu.Item url='#'>Two</Menu.Item>
-                                    <Menu.Item url='#'>Three</Menu.Item>
-                                    <Menu.Item url='#'>Four</Menu.Item>
+                                    <Menu.Item url='#'>Option 1</Menu.Item>
+                                    <Menu.Item url='#'>Option 2</Menu.Item>
+                                    <Menu.Item url='#'>Option 3</Menu.Item>
+                                    <Menu.Item url='#'>Option 4</Menu.Item>
                                 </Menu.List>
                             </Menu>
                         }
-                        control={<Button className='fd-dropdown__control'>Select</Button>}
-                        id='jhqD0555'
+                        control={
+                            <Button className='fd-dropdown__control'
+                                glyph='navigation-down-arrow'>
+                                Open the dropdown
+                            </Button>
+                        }
+                        id='jhqD0561'
                         noArrow
-                        parentRef={dropdownRef} />
+                        widthSizingType='matchTarget' />
                 </Dropdown>
             </Example>
-
 
             <Example
                 centered

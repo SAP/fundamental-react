@@ -2,11 +2,11 @@ import classnames from 'classnames';
 import Foco from 'react-foco';
 import keycode from 'keycode';
 import { modalManager } from './modalManager';
-import { POPPER_PLACEMENTS } from './constants';
 import PropTypes from 'prop-types';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Manager, Popper as ReactPopper, Reference } from 'react-popper';
+import { POPPER_PLACEMENTS, POPPER_SIZING_TYPES } from './constants';
 
 class Popper extends React.Component {
     constructor(props) {
@@ -65,7 +65,7 @@ class Popper extends React.Component {
             disableEdgeDetection,
             noArrow,
             onClickOutside,
-            parentRef,
+            placementTargetRef,
             popperClassName,
             popperModifiers,
             popperPlacement,
@@ -74,7 +74,8 @@ class Popper extends React.Component {
             referenceComponent,
             referenceProps,
             show,
-            usePortal
+            usePortal,
+            widthSizingType
         } = this.props;
 
         const flipModifier = disableEdgeDetection ? { flip: { enabled: false } } : {};
@@ -95,10 +96,20 @@ class Popper extends React.Component {
                     if (!show) {
                         return null;
                     }
-                    const currentParentRef = parentRef && parentRef.current;
-                    if (currentParentRef) {
-                        const { x: left, bottom: top, width } = currentParentRef.getBoundingClientRect();
-                        style = { ...style, left, top, width };
+
+                    const currentPlacementTarget = placementTargetRef && placementTargetRef.current;
+                    if (widthSizingType !== 'none' && currentPlacementTarget) {
+                        const { right: targetRight, left: targetLeft } = typeof currentPlacementTarget.getBoundingClientRectTest === 'function' ?
+                            currentPlacementTarget.getBoundingClientRectTest() : // for test purpose. getBoundingClientRect cannot be redefined.
+                            currentPlacementTarget.getBoundingClientRect();
+
+                        const { left: popperLeft } = style;
+
+                        let funMap = new Map();
+                        funMap.set('matchTarget', { width: targetRight - targetLeft, left: targetLeft });
+                        funMap.set('minTarget', { minWidth: targetRight - popperLeft });
+                        funMap.set('maxTarget', { maxWidth: targetRight - popperLeft });
+                        style = { ...style, ...funMap.get(widthSizingType) };
                     }
 
                     return (
@@ -155,7 +166,7 @@ Popper.propTypes = {
     referenceComponent: PropTypes.element.isRequired,
     disableEdgeDetection: PropTypes.bool,
     noArrow: PropTypes.bool,
-    parentRef: PropTypes.shape({ current: PropTypes.any }),
+    placementTargetRef: PropTypes.shape({ current: PropTypes.any }),
     popperClassName: PropTypes.string,
     popperModifiers: PropTypes.object,
     popperPlacement: PropTypes.oneOf(POPPER_PLACEMENTS),
@@ -164,6 +175,7 @@ Popper.propTypes = {
     referenceProps: PropTypes.object,
     show: PropTypes.bool,
     usePortal: PropTypes.bool,
+    widthSizingType: PropTypes.oneOf(POPPER_SIZING_TYPES),
     onClickOutside: PropTypes.func,
     onEscapeKey: PropTypes.func,
     onKeyDown: PropTypes.func

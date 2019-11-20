@@ -1,9 +1,9 @@
 import chain from 'chain-function';
 import classnames from 'classnames';
 import Popper from '../utils/_Popper';
-import { POPPER_PLACEMENTS } from '../utils/constants';
 import PropTypes from 'prop-types';
 import withStyles from '../utils/WithStyles/WithStyles';
+import { POPPER_PLACEMENTS, POPPER_SIZING_TYPES, POPPER_SIZING_TYPES_DESCRIPTION } from '../utils/constants';
 import React, { Component } from 'react';
 
 class Popover extends Component {
@@ -13,6 +13,7 @@ class Popover extends Component {
         this.state = {
             isExpanded: false
         };
+        this.placementTargetRef = React.createRef();
     }
 
     triggerBody = () => {
@@ -44,7 +45,7 @@ class Popover extends Component {
             className,
             placement,
             popperProps,
-            parentRef,
+            widthSizingType,
             ...rest
         } = this.props;
 
@@ -54,8 +55,10 @@ class Popover extends Component {
         }
 
         const referenceComponent = React.cloneElement(control, {
-            onClick: onClickFunctions
+            onClick: onClickFunctions,
+            ref: this.placementTargetRef
         });
+
         const popoverClasses = classnames('fd-popover', className);
 
         return (
@@ -66,13 +69,14 @@ class Popover extends Component {
                     noArrow={noArrow}
                     onClickOutside={chain(this.handleOutsideClick, onClickOutside)}
                     onEscapeKey={chain(this.handleOutsideClick, onEscapeKey)}
-                    parentRef={parentRef}
+                    placementTargetRef={this.placementTargetRef}
                     popperPlacement={placement}
                     popperProps={popperProps}
                     referenceClassName='fd-popover__control'
                     referenceComponent={referenceComponent}
                     show={this.state.isExpanded && !disabled}
-                    usePortal>
+                    usePortal
+                    widthSizingType={widthSizingType}>
                     {body}
                 </Popper>
             </div>
@@ -91,14 +95,15 @@ Popover.propTypes = {
     disableEdgeDetection: PropTypes.bool,
     disableStyles: PropTypes.bool,
     noArrow: PropTypes.bool,
-    parentRef: PropTypes.shape({ current: PropTypes.any }),
     placement: PropTypes.oneOf(POPPER_PLACEMENTS),
     popperProps: PropTypes.object,
+    widthSizingType: PropTypes.oneOf(POPPER_SIZING_TYPES),
     onClickOutside: PropTypes.func,
     onEscapeKey: PropTypes.func
 };
 
 Popover.defaultProps = {
+    widthSizingType: 'none',
     onClickOutside: () => { },
     onEscapeKey: () => { }
 };
@@ -108,9 +113,9 @@ Popover.propDescriptions = {
     control: 'Node to render as the reference element (that the `body` will be placed in relation to).',
     disableEdgeDetection: 'Set to **true** to render popover without edge detection so popover will not flip from top to bottom with scroll.',
     noArrow: 'Set to **true** to render a popover without an arrow.',
-    parentRef: 'A reference (useRef) to an element of which the Popover will be positioned and sized relatively. Leave it empty to let it be done automatically.',
     placement: 'Initial position of the `body` (overlay) related to the `control`.',
     popperProps: 'Additional props to be spread to the overlay element, supported by <a href="https://popper.js.org" target="_blank">popper.js</a>.',
+    widthSizingType: POPPER_SIZING_TYPES_DESCRIPTION,
     onClickOutside: 'Callback for consumer clicking outside of popover body.',
     onEscapeKey: 'Callback when escape key is pressed when popover body is visible.'
 };
