@@ -19,7 +19,7 @@ describe('<Popover />', () => {
                     </Menu.List>
                 </Menu>
             }
-            control={<Icon glyph='cart' size='xl' />} />
+            control={<Icon glyph='cart' size='xl' />} popperProps={{ id: 'fd-default-popover' }} />
     );
 
     const popOverDisabled = (
@@ -36,7 +36,7 @@ describe('<Popover />', () => {
             }
             className='blue'
             control={<Icon glyph='cart' size='xl' />}
-            disabled />
+            disabled popperProps={{ id: 'fd-disabled-popover' }} />
     );
 
     const popOverWithAlignment = (
@@ -52,7 +52,7 @@ describe('<Popover />', () => {
                 </Menu>
             }
             control={<Icon glyph='cart' size='xl' />}
-            placement='right' />
+            placement='right' popperProps={{ id: 'fd-aligned-popover' }} />
     );
 
     const popOverNoArrow = (
@@ -68,7 +68,7 @@ describe('<Popover />', () => {
                 </Menu>
             }
             control={<Icon glyph='cart' size='xl' />}
-            noArrow />
+            noArrow popperProps={{ id: 'fd-arrowless-popover' }} />
     );
 
     const popOverDisableEdgeDetection = (
@@ -84,7 +84,7 @@ describe('<Popover />', () => {
                 </Menu>
             }
             control={<Icon glyph='cart' size='xl' />}
-            disableEdgeDetection />
+            disableEdgeDetection popperProps={{ id: 'fd-edge-undetected-popover' }} />
     );
 
     test('create Popover', () => {

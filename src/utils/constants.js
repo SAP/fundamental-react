@@ -108,6 +108,14 @@ export const TOGGLE_SIZES = [
     'l'
 ];
 
+export const POPOVER_TYPES = [
+    'dialog',
+    'grid',
+    'listbox',
+    'menu',
+    'tree'
+];
+
 export const POPPER_PLACEMENTS = [
     'bottom-start',
     'bottom',

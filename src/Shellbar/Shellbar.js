@@ -158,7 +158,8 @@ class Shellbar extends Component {
                                     </button>
                                 }
                                 disableStyles={disableStyles}
-                                noArrow />
+                                noArrow
+                                popperProps={{ id: 'fd-shellbar-product-popover' }} />
                         </div>
                     )}
                     {subtitle && <div className='fd-shellbar__subtitle'>{subtitle}</div>}
@@ -208,7 +209,8 @@ class Shellbar extends Component {
                                                     </Button>
                                                 }
                                                 disableStyles={disableStyles}
-                                                placement='bottom-end' />
+                                                placement='bottom-end'
+                                                popperProps={{ id: `fd-shellbar-actions-popover-${index}` }} />
                                         ) : (
                                             <Button
                                                 aria-label={action.label}
@@ -256,7 +258,8 @@ class Shellbar extends Component {
                                     </div>
                                 }
                                 disableStyles={disableStyles}
-                                placement='bottom-end' />
+                                placement='bottom-end'
+                                popperProps={{ id: 'fd-shellbar-notifications-popover' }} />
                         ) : (
                             <div className='fd-shellbar__action fd-shellbar__action--desktop'>
                                 <Button
@@ -332,7 +335,8 @@ class Shellbar extends Component {
                                     </div>
                                 }
                                 disableStyles={disableStyles}
-                                placement='bottom-end' />
+                                placement='bottom-end'
+                                popperProps={{ id: 'fd-shellbar-mobile-action-popover' }} />
                         </div>
                     }
                     {profile && (
@@ -384,7 +388,8 @@ class Shellbar extends Component {
                                         )
                                     }
                                     disableStyles={disableStyles}
-                                    placement='bottom-end' />
+                                    placement='bottom-end'
+                                    popperProps={{ id: 'fd-shellbar-profile-popover' }} />
                             </div>
                         </div>
                     )}
@@ -420,7 +425,8 @@ class Shellbar extends Component {
                                         glyph='grid' />}
                                     disableEdgeDetection
                                     disableStyles={disableStyles}
-                                    placement='bottom-end' />
+                                    placement='bottom-end'
+                                    popperProps={{ id: 'fd-shellbar-product-switcher-popover' }} />
                             </div>
                         </div>
                     )}
