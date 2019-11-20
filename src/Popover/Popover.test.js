@@ -190,11 +190,47 @@ describe('<Popover />', () => {
             expect(button.props().tabIndex).toEqual(0);
         });
 
-        test('adds aria-haspopup to the control', () => {
-            const wrapper = mountComponentWithStyles(popOver);
-            const button = wrapper.find('Icon').at(0);
-
+        test('adds appropriate aria-haspopup to the control', () => {
+            //check unset type
+            let wrapper = mountComponentWithStyles(popOver);
+            let button = wrapper.find('Icon').at(0);
             expect(button.props()['aria-haspopup']).toEqual(true);
+
+            //check valid string type
+            const dialogPopover = React.cloneElement(popOver, { type: 'dialog' });
+            wrapper = mountComponentWithStyles(dialogPopover);
+            button = wrapper.find('Icon').at(0);
+            expect(button.props()['aria-haspopup']).toEqual('dialog');
+        });
+
+        test('adds appropriate aria-expanded to the control, and updates it on state change', () => {
+            const wrapper = mountComponentWithStyles(popOver);
+            let button = wrapper.find('Icon').at(0);
+            expect(button.props()['aria-expanded']).toEqual(false);
+            wrapper.setState({ isExpanded: true }, () => {
+                button = wrapper.find('Icon').at(0);
+                expect(button.getDOMNode().getAttribute('aria-expanded')).toEqual('true');
+            });
+            wrapper.setState({ isExpanded: false }, () => {
+                button = wrapper.find('Icon').at(0);
+                expect(button.getDOMNode().getAttribute('aria-expanded')).toEqual('false');
+            });
+        });
+
+        test('adds appropriate aria-controls to the control', () => {
+            let wrapper = mountComponentWithStyles(popOver);
+            let button = wrapper.find('Icon').at(0);
+            expect(button.props()['aria-controls']).toEqual('fd-default-popover');
+
+            //check undefined popperProps
+            // eslint-disable-next-line no-undefined
+            const propLessPopover = React.cloneElement(popOver, { popperProps: undefined } );
+            wrapper = mountComponentWithStyles(propLessPopover);
+            wrapper.setState({ isExpanded: true }, () => {
+                const popoverContentId = document.querySelector('div.fd-popover__popper').id;
+                button = wrapper.find('Icon').at(0);
+                expect(button.props()['aria-controls']).toEqual(popoverContentId);
+            });
         });
 
         test('adds a role of button to the control', () => {
