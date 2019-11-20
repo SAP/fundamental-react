@@ -95,8 +95,12 @@ exports[`<Tile /> create tile component 4`] = `
           className="fd-popover__control"
         >
           <button
+            aria-haspopup={true}
             className="fd-button fd-button--standard sap-icon--vertical-grip"
             onClick={[Function]}
+            onKeyPress={[Function]}
+            role="button"
+            tabIndex={0}
           />
         </div>
       </div>
@@ -160,8 +164,12 @@ exports[`<Tile /> create tile component 6`] = `
           className="fd-popover__control"
         >
           <button
+            aria-haspopup={true}
             className="fd-button fd-button--standard sap-icon--vertical-grip"
             onClick={[Function]}
+            onKeyPress={[Function]}
+            role="button"
+            tabIndex={0}
           />
         </div>
       </div>

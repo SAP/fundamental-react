@@ -229,6 +229,53 @@ describe('<Popover />', () => {
         });
     });
 
+    describe('control accessibility', () => {
+        test('adds a tabindex of 0 to the control', () => {
+            const wrapper = mountComponentWithStyles(popOver);
+            const button = wrapper.find('Icon').at(0);
+
+            expect(button.props().tabIndex).toEqual(0);
+        });
+
+        test('adds aria-haspopup to the control', () => {
+            const wrapper = mountComponentWithStyles(popOver);
+            const button = wrapper.find('Icon').at(0);
+
+            expect(button.props()['aria-haspopup']).toEqual(true);
+        });
+
+        test('adds a role of button to the control', () => {
+            const wrapper = mountComponentWithStyles(popOver);
+            const button = wrapper.find('Icon').at(0);
+
+            expect(button.props().role).toEqual('button');
+        });
+
+        test('handle space key to open popover', () => {
+            const syntheticEvent = {
+                keyCode: 32,
+                preventDefault: () => {}
+            };
+            const wrapper = mountComponentWithStyles(popOver);
+            const button = wrapper.find('Icon').at(0);
+            button.prop('onKeyPress')(syntheticEvent, 'Icon', wrapper.triggerBody);
+
+            expect(wrapper.state('isExpanded')).toBeTruthy();
+        });
+
+        test('handle enter key to open popover', () => {
+            const syntheticEvent = {
+                keyCode: 13,
+                preventDefault: () => {}
+            };
+            const wrapper = mountComponentWithStyles(popOver);
+            const button = wrapper.find('Icon').at(0);
+            button.prop('onKeyPress')(syntheticEvent, 'Icon', wrapper.triggerBody);
+
+            expect(wrapper.state('isExpanded')).toBeTruthy();
+        });
+    });
+
     describe('Callback handler', () => {
         test('should dispatch the onClickOutside callback with the event', () => {
             let f = jest.fn();

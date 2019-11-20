@@ -1,5 +1,6 @@
 import chain from 'chain-function';
 import classnames from 'classnames';
+import keycode from 'keycode';
 import Popper from '../utils/_Popper';
 import PropTypes from 'prop-types';
 import withStyles from '../utils/WithStyles/WithStyles';
@@ -15,6 +16,18 @@ class Popover extends Component {
         };
         this.placementTargetRef = React.createRef();
     }
+
+    isButton = (node) => {
+        if (!node) {
+            return false;
+        }
+        if (typeof node.type === 'string') {
+            return node.type.toLowerCase() === 'button';
+        } else if (node.type.displayName) {
+            return node.type.displayName.toLowerCase() === 'button';
+        }
+        return false;
+    };
 
     triggerBody = () => {
         if (!this.props.disabled) {
@@ -32,9 +45,23 @@ class Popover extends Component {
         }
     };
 
+    handleKeyPress = (event, node, onClickFunctions) => {
+        if (!this.isButton(node)) {
+            switch (keycode(event)) {
+                case 'enter':
+                case 'space':
+                    event.preventDefault();
+                    onClickFunctions();
+                    break;
+                default:
+            }
+        }
+    }
+
     render() {
         const {
             disableEdgeDetection,
+            disableKeyPressHandler,
             disableStyles,
             onClickOutside,
             onEscapeKey,
@@ -54,8 +81,22 @@ class Popover extends Component {
             onClickFunctions = chain(this.triggerBody, control.props.onClick);
         }
 
+        let controlProps = {
+            onClick: onClickFunctions
+        };
+
+        if (!disableKeyPressHandler) {
+            controlProps = {
+                ...controlProps,
+                tabIndex: 0,
+                role: 'button',
+                'aria-haspopup': true,
+                onKeyPress: (event) => this.handleKeyPress(event, control, onClickFunctions)
+            };
+        }
+
         const referenceComponent = React.cloneElement(control, {
-            onClick: onClickFunctions,
+            ...controlProps,
             ref: this.placementTargetRef
         });
 
@@ -93,6 +134,7 @@ Popover.propTypes = {
     customStyles: PropTypes.object,
     disabled: PropTypes.bool,
     disableEdgeDetection: PropTypes.bool,
+    disableKeyPressHandler: PropTypes.bool,
     disableStyles: PropTypes.bool,
     noArrow: PropTypes.bool,
     placement: PropTypes.oneOf(POPPER_PLACEMENTS),
@@ -112,6 +154,7 @@ Popover.propDescriptions = {
     body: 'Node(s) to render in the overlay.',
     control: 'Node to render as the reference element (that the `body` will be placed in relation to).',
     disableEdgeDetection: 'Set to **true** to render popover without edge detection so popover will not flip from top to bottom with scroll.',
+    disableKeyPressHandler: 'Set to **true** to remove onKeyPress handler and aria-* roles. Only do so if the control is a complex component such as a FormInput with Button.',
     noArrow: 'Set to **true** to render a popover without an arrow.',
     placement: 'Initial position of the `body` (overlay) related to the `control`.',
     popperProps: 'Additional props to be spread to the overlay element, supported by <a href="https://popper.js.org" target="_blank">popper.js</a>.',
