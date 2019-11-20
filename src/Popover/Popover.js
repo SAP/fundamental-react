@@ -85,11 +85,7 @@ class Popover extends Component {
             onClickFunctions = chain(this.triggerBody, control.props.onClick);
         }
 
-        let newPopperProps = !!popperProps ? popperProps : {};
-        // eslint-disable-next-line no-undefined
-        if (newPopperProps.id === undefined || newPopperProps.id === null) {
-            Object.assign(newPopperProps, { id: this.ariaControls });
-        }
+        const id = popperProps.id || this.ariaControls;
 
         let controlProps = {
             onClick: onClickFunctions
@@ -100,7 +96,7 @@ class Popover extends Component {
                 ...controlProps,
                 tabIndex: 0,
                 role: 'button',
-                'aria-controls': newPopperProps.id,
+                'aria-controls': id,
                 'aria-expanded': this.state.isExpanded,
                 'aria-haspopup': !!type ? type : true,
                 onKeyPress: (event) => this.handleKeyPress(event, control, onClickFunctions)
@@ -120,7 +116,7 @@ class Popover extends Component {
                     onClickOutside={chain(this.handleOutsideClick, onClickOutside)}
                     onEscapeKey={chain(this.handleOutsideClick, onEscapeKey)}
                     popperPlacement={placement}
-                    popperProps={newPopperProps}
+                    popperProps={{ ...popperProps, id }}
                     referenceClassName='fd-popover__control'
                     referenceComponent={referenceComponent}
                     show={this.state.isExpanded && !disabled}
@@ -152,6 +148,7 @@ Popover.propTypes = {
 };
 
 Popover.defaultProps = {
+    popperProps: {},
     onClickOutside: () => {},
     onEscapeKey: () => {}
 };
@@ -166,7 +163,7 @@ Popover.propDescriptions = {
     popperProps: 'Additional props to be spread to the overlay element, supported by <a href="https://popper.js.org" target="_blank">popper.js</a>.',
     onClickOutside: 'Callback for consumer clicking outside of popover body.',
     onEscapeKey: 'Callback when escape key is pressed when popover body is visible.',
-    type: 'Indicates the type of popup - "dialog", "grid", "listbox", "menu", or "tree". This value is attached to aria-haspopup and is useful to assistive tech.'
+    type: 'Indicates the type of popup - "dialog", "grid", "listbox", "menu", or "tree". This value is attached to aria-haspopup and is useful to assistive tech. Defaulted to boolean true.'
 };
 
 export { Popover as __Popover };
