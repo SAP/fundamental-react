@@ -5,6 +5,7 @@ import FocusManager from '../utils/focusManager/focusManager';
 import Popper from '../utils/_Popper';
 import { POPPER_PLACEMENTS } from '../utils/constants';
 import PropTypes from 'prop-types';
+import tabbable from 'tabbable';
 import withStyles from '../utils/WithStyles/WithStyles';
 import React, { Component } from 'react';
 
@@ -27,7 +28,7 @@ class Popover extends Component {
 
     handleFocusManager = () => {
         if (this.state.isExpanded && this.popover) {
-            this.focusManager = new FocusManager(this.popover);
+            this.focusManager = new FocusManager(this.popover, this.props.useArrowKeyNavigation);
         }
     }
 
@@ -38,13 +39,18 @@ class Popover extends Component {
             });
 
             if (this.controlRef) {
-                this.controlRef.focus();
+                if (tabbable.isTabbable(this.controlRef)) {
+                    this.controlRef.focus();
+                } else {
+                    const firstTabbableNode = tabbable(this.controlRef)[0];
+                    firstTabbableNode && firstTabbableNode.focus();
+                }
             }
         }
     };
 
     render() {
-        let {
+        const {
             disableEdgeDetection,
             disableStyles,
             onClickOutside,
@@ -56,6 +62,7 @@ class Popover extends Component {
             className,
             placement,
             popperProps,
+            useArrowKeyNavigation,
             ...rest
         } = this.props;
 
@@ -113,6 +120,7 @@ Popover.propTypes = {
     noArrow: PropTypes.bool,
     placement: PropTypes.oneOf(POPPER_PLACEMENTS),
     popperProps: PropTypes.object,
+    useArrowKeyNavigation: PropTypes.bool,
     onClickOutside: PropTypes.func,
     onEscapeKey: PropTypes.func
 };

@@ -23,7 +23,8 @@ storiesOf('Components|Popover', module)
     .add('Default', () => (
         <Popover
             body={bodyContent}
-            control={<Button glyph='navigation-up-arrow' option='light' />} />
+            control={<Button glyph='navigation-up-arrow' option='light' />}
+            useArrowKeyNavigation />
     ))
     .add('disable styles', () => (
         <Popover
@@ -32,7 +33,8 @@ storiesOf('Components|Popover', module)
                 disableStyles
                 glyph='navigation-up-arrow'
                 option='light' />}
-            disableStyles />
+            disableStyles
+            useArrowKeyNavigation />
     ))
     .add('custom styles', () => (
         <Popover
@@ -41,5 +43,6 @@ storiesOf('Components|Popover', module)
                 disableStyles
                 glyph='navigation-up-arrow'
                 option='light' />}
-            customStyles={require('../../utils/WithStyles/customStylesTest.css')} />
+            customStyles={require('../../utils/WithStyles/customStylesTest.css')}
+            useArrowKeyNavigation />
     ));

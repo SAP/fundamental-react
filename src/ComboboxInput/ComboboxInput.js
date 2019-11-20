@@ -38,7 +38,8 @@ const ComboboxInput = React.forwardRef(({ placeholder, menu, compact, className,
                     </div>
                 }
                 disableStyles={disableStyles}
-                noArrow />
+                noArrow
+                useArrowKeyNavigation />
         </div>
     );
 });
