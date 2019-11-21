@@ -16,9 +16,9 @@ class Popover extends Component {
             isExpanded: false
         };
 
-        //A generated shortId as fallback, incase props.popperProps.id is unset.
-        //This ID binds the popover and it's control by 'aria-controls'.
-        this.ariaControls = shortId.generate();
+        //A generated shortId as fallback, in case props.popperProps.id is unset.
+        //This ID binds the popover and its control by 'aria-controls'.
+        this.popoverId = shortId.generate();
     }
 
     isButton = (node) => {
@@ -85,7 +85,7 @@ class Popover extends Component {
             onClickFunctions = chain(this.triggerBody, control.props.onClick);
         }
 
-        const id = popperProps.id || this.ariaControls;
+        const id = popperProps.id || this.popoverId;
 
         let controlProps = {
             onClick: onClickFunctions
