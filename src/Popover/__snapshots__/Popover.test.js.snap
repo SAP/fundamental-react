@@ -13,6 +13,8 @@ exports[`<Popover /> create Popover 1`] = `
       className="fd-popover__control"
     >
       <span
+        aria-controls="fd-default-popover"
+        aria-expanded={false}
         aria-haspopup={true}
         className="sap-icon--cart sap-icon--xl"
         onClick={[Function]}
@@ -38,6 +40,8 @@ exports[`<Popover /> create Popover 2`] = `
       className="fd-popover__control"
     >
       <span
+        aria-controls="fd-disabled-popover"
+        aria-expanded={false}
         aria-haspopup={true}
         className="sap-icon--cart sap-icon--xl"
         onClick={[Function]}
@@ -63,6 +67,8 @@ exports[`<Popover /> create Popover 3`] = `
       className="fd-popover__control"
     >
       <span
+        aria-controls="fd-aligned-popover"
+        aria-expanded={false}
         aria-haspopup={true}
         className="sap-icon--cart sap-icon--xl"
         onClick={[Function]}
@@ -88,6 +94,8 @@ exports[`<Popover /> create Popover 4`] = `
       className="fd-popover__control"
     >
       <span
+        aria-controls="fd-arrowless-popover"
+        aria-expanded={false}
         aria-haspopup={true}
         className="sap-icon--cart sap-icon--xl"
         onClick={[Function]}
