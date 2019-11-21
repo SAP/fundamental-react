@@ -20,7 +20,8 @@ describe('<Tile.Actions />', () => {
                         </Menu.List>
                     </Menu>
                 }
-                control={<Button glyph='vertical-grip' type='standard' />} />
+                control={<Button glyph='vertical-grip' type='standard' />}
+                popperProps={{ id: 'fd-tile-actions' }} />
         </Tile.Actions>
     );
 

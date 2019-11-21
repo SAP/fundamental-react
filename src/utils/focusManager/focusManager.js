@@ -1,7 +1,5 @@
 import keycode from 'keycode';
 import tabbable from 'tabbable';
-/* eslint-disable */
-
 
 export default class FocusManager {
     constructor(trapNode, controlNode, useArrowKeys = false) {
@@ -54,7 +52,7 @@ export default class FocusManager {
                     this.tryFocus(this.tabbableNodes[currentIndex + 1]);
                 }
             }
-        } else if (this.useArrowKeys && e.keyCode === keycode.codes.tab) { 
+        } else if (this.useArrowKeys && e.keyCode === keycode.codes.tab) {
             // navigate out of component with tab when arrow-key navigation enabled
             e.preventDefault();
 

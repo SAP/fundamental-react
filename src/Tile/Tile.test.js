@@ -52,7 +52,8 @@ describe('<Tile />', () => {
                             </Menu.List>
                         </Menu>
                     }
-                    control={<Button glyph='vertical-grip' type='standard' />} />
+                    control={<Button glyph='vertical-grip' type='standard' />}
+                    popperProps={{ id: 'fd-tile-actions' }} />
             </Tile.Actions>
         </Tile>
     );
@@ -84,7 +85,8 @@ describe('<Tile />', () => {
                             </Menu.List>
                         </Menu>
                     }
-                    control={<Button glyph='vertical-grip' type='standard' />} />
+                    control={<Button glyph='vertical-grip' type='standard' />}
+                    popperProps={{ id: 'fd-tile-actions-no-class' }} />
             </Tile.Actions>
         </Tile>
     );

@@ -16,6 +16,8 @@ exports[`<Dropdown /> create dropdown component 1`] = `
         className="fd-popover__control"
       >
         <button
+          aria-controls="fd-default-dropdown-popover"
+          aria-expanded={false}
           aria-haspopup={true}
           className="fd-button fd-dropdown__control"
           onClick={[Function]}
@@ -47,6 +49,8 @@ exports[`<Dropdown /> create dropdown component 2`] = `
         className="fd-popover__control"
       >
         <button
+          aria-controls="fd-compact-dropdown-popover"
+          aria-expanded={false}
           aria-haspopup={true}
           className="fd-button fd-button--compact fd-dropdown__control"
           onClick={[Function]}
@@ -78,6 +82,8 @@ exports[`<Dropdown /> create dropdown component 3`] = `
         className="fd-popover__control"
       >
         <button
+          aria-controls="fd-toolbar-dropdown-popover"
+          aria-expanded={false}
           aria-haspopup={true}
           className="fd-button fd-dropdown__control"
           onClick={[Function]}
@@ -110,6 +116,8 @@ exports[`<Dropdown /> create dropdown component 4`] = `
         className="fd-popover__control"
       >
         <button
+          aria-controls="fd-icon-dropdown-popover"
+          aria-expanded={false}
           aria-haspopup={true}
           className="fd-button sap-icon--filter fd-dropdown__control"
           onClick={[Function]}
@@ -142,6 +150,8 @@ exports[`<Dropdown /> create dropdown component 5`] = `
         className="fd-popover__control"
       >
         <button
+          aria-controls="fd-disable-dropdown-popover"
+          aria-expanded={false}
           aria-haspopup={true}
           className="fd-button sap-icon--filter is-disabled fd-dropdown__control"
           disabled={true}
