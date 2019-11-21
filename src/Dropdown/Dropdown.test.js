@@ -23,7 +23,7 @@ describe('<Dropdown />', () => {
             <Popover
                 body={defaultMenu}
                 control={<Button className='fd-dropdown__control'>Select</Button>}
-                noArrow />
+                noArrow popperProps={{ id: 'fd-default-dropdown-popover' }} />
         </Dropdown>
     );
 
@@ -36,7 +36,7 @@ describe('<Dropdown />', () => {
                         Select
                     </Button>
                 }
-                noArrow />
+                noArrow popperProps={{ id: 'fd-compact-dropdown-popover' }} />
         </Dropdown>
     );
 
@@ -49,7 +49,7 @@ describe('<Dropdown />', () => {
                         Select
                     </Button>
                 }
-                noArrow />
+                noArrow popperProps={{ id: 'fd-toolbar-dropdown-popover' }} />
         </Dropdown>
     );
 
@@ -63,7 +63,7 @@ describe('<Dropdown />', () => {
                     </Button>
                 }
                 id='jhqD0557'
-                noArrow />
+                noArrow popperProps={{ id: 'fd-icon-dropdown-popover' }} />
         </Dropdown>
     );
 
@@ -80,7 +80,7 @@ describe('<Dropdown />', () => {
                 }
                 disabled
                 id='jhqD0561'
-                noArrow />
+                noArrow popperProps={{ id: 'fd-disable-dropdown-popover' }} />
         </Dropdown>
     );
 

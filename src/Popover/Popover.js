@@ -3,8 +3,9 @@ import classnames from 'classnames';
 import keycode from 'keycode';
 import Popper from '../utils/_Popper';
 import PropTypes from 'prop-types';
+import shortId from '../utils/shortId';
 import withStyles from '../utils/WithStyles/WithStyles';
-import { POPPER_PLACEMENTS, POPPER_SIZING_TYPES, POPPER_SIZING_TYPES_DESCRIPTION } from '../utils/constants';
+import { POPOVER_TYPES, POPPER_PLACEMENTS, POPPER_SIZING_TYPES, POPPER_SIZING_TYPES_DESCRIPTION } from '../utils/constants';
 import React, { Component } from 'react';
 
 class Popover extends Component {
@@ -15,6 +16,10 @@ class Popover extends Component {
             isExpanded: false
         };
         this.placementTargetRef = React.createRef();
+
+        //A generated shortId as fallback, in case props.popperProps.id is unset.
+        //This ID binds the popover and its control by 'aria-controls'.
+        this.popoverId = shortId.generate();
     }
 
     isButton = (node) => {
@@ -72,6 +77,7 @@ class Popover extends Component {
             className,
             placement,
             popperProps,
+            type,
             widthSizingType,
             ...rest
         } = this.props;
@@ -80,6 +86,8 @@ class Popover extends Component {
         if (control.props.onClick) {
             onClickFunctions = chain(this.triggerBody, control.props.onClick);
         }
+
+        const id = popperProps.id || this.popoverId;
 
         let controlProps = {
             onClick: onClickFunctions
@@ -90,7 +98,9 @@ class Popover extends Component {
                 ...controlProps,
                 tabIndex: 0,
                 role: 'button',
-                'aria-haspopup': true,
+                'aria-controls': id,
+                'aria-expanded': this.state.isExpanded,
+                'aria-haspopup': !!type ? type : true,
                 onKeyPress: (event) => this.handleKeyPress(event, control, onClickFunctions)
             };
         }
@@ -112,7 +122,7 @@ class Popover extends Component {
                     onEscapeKey={chain(this.handleOutsideClick, onEscapeKey)}
                     placementTargetRef={this.placementTargetRef}
                     popperPlacement={placement}
-                    popperProps={popperProps}
+                    popperProps={{ ...popperProps, id }}
                     referenceClassName='fd-popover__control'
                     referenceComponent={referenceComponent}
                     show={this.state.isExpanded && !disabled}
@@ -139,6 +149,7 @@ Popover.propTypes = {
     noArrow: PropTypes.bool,
     placement: PropTypes.oneOf(POPPER_PLACEMENTS),
     popperProps: PropTypes.object,
+    type: PropTypes.oneOf(POPOVER_TYPES),
     widthSizingType: PropTypes.oneOf(POPPER_SIZING_TYPES),
     onClickOutside: PropTypes.func,
     onEscapeKey: PropTypes.func
@@ -146,6 +157,7 @@ Popover.propTypes = {
 
 Popover.defaultProps = {
     widthSizingType: 'none',
+    popperProps: {},
     onClickOutside: () => { },
     onEscapeKey: () => { }
 };
@@ -160,7 +172,8 @@ Popover.propDescriptions = {
     popperProps: 'Additional props to be spread to the overlay element, supported by <a href="https://popper.js.org" target="_blank">popper.js</a>.',
     widthSizingType: POPPER_SIZING_TYPES_DESCRIPTION,
     onClickOutside: 'Callback for consumer clicking outside of popover body.',
-    onEscapeKey: 'Callback when escape key is pressed when popover body is visible.'
+    onEscapeKey: 'Callback when escape key is pressed when popover body is visible.',
+    type: 'Indicates the type of popup - "dialog", "grid", "listbox", "menu", or "tree". This value is attached to aria-haspopup and is useful to assistive tech. Defaulted to boolean true.'
 };
 
 export { Popover as __Popover };
