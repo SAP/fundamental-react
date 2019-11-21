@@ -63,6 +63,7 @@ class Popper extends React.Component {
             children,
             cssBlock,
             disableEdgeDetection,
+            innerRef,
             noArrow,
             onClickOutside,
             popperClassName,
@@ -88,6 +89,7 @@ class Popper extends React.Component {
 
         let popper = (
             <ReactPopper
+                innerRef={innerRef}
                 modifiers={modifiers}
                 placement={popperPlacement}>
                 {({ ref, style, placement, outOfBoundaries, arrowProps }) => {
@@ -147,6 +149,7 @@ Popper.displayName = 'Popper';
 Popper.propTypes = {
     children: PropTypes.node.isRequired,
     cssBlock: PropTypes.string.isRequired,
+    innerRef: PropTypes.func.isRequired,
     referenceComponent: PropTypes.element.isRequired,
     disableEdgeDetection: PropTypes.bool,
     noArrow: PropTypes.bool,

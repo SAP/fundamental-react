@@ -1,9 +1,12 @@
 import chain from 'chain-function';
 import classnames from 'classnames';
+import { findDOMNode } from 'react-dom';
+import FocusManager from '../utils/focusManager/focusManager';
 import keycode from 'keycode';
 import Popper from '../utils/_Popper';
 import PropTypes from 'prop-types';
 import shortId from '../utils/shortId';
+import tabbable from 'tabbable';
 import withStyles from '../utils/WithStyles/WithStyles';
 import { POPOVER_TYPES, POPPER_PLACEMENTS } from '../utils/constants';
 import React, { Component } from 'react';
@@ -41,6 +44,12 @@ class Popover extends Component {
         }
     };
 
+    handleFocusManager = () => {
+        if (this.state.isExpanded && this.popover) {
+            this.focusManager = new FocusManager(this.popover, this.controlRef, this.props.useArrowKeyNavigation);
+        }
+    }
+
     handleOutsideClick = () => {
         if (this.state.isExpanded) {
             this.setState({
@@ -48,6 +57,19 @@ class Popover extends Component {
             });
         }
     };
+
+    handleEscapeKey = () => {
+        this.handleOutsideClick();
+
+        if (this.controlRef) {
+            if (tabbable.isTabbable(this.controlRef)) {
+                this.controlRef.focus();
+            } else {
+                const firstTabbableNode = tabbable(this.controlRef)[0];
+                firstTabbableNode && firstTabbableNode.focus();
+            }
+        }
+    }
 
     handleKeyPress = (event, node, onClickFunctions) => {
         if (!this.isButton(node)) {
@@ -76,6 +98,7 @@ class Popover extends Component {
             className,
             placement,
             popperProps,
+            useArrowKeyNavigation,
             type,
             ...rest
         } = this.props;
@@ -88,7 +111,15 @@ class Popover extends Component {
         const id = popperProps.id || this.popoverId;
 
         let controlProps = {
-            onClick: onClickFunctions
+            onClick: onClickFunctions,
+            ref: (c) => {
+                this.controlRef = findDOMNode(c);
+            }
+        };
+
+        const innerRef = (c) => {
+            this.popover = findDOMNode(c);
+            this.handleFocusManager();
         };
 
         if (!disableKeyPressHandler) {
@@ -112,9 +143,10 @@ class Popover extends Component {
                 <Popper
                     cssBlock='fd-popover'
                     disableEdgeDetection={disableEdgeDetection}
+                    innerRef={innerRef}
                     noArrow={noArrow}
                     onClickOutside={chain(this.handleOutsideClick, onClickOutside)}
-                    onEscapeKey={chain(this.handleOutsideClick, onEscapeKey)}
+                    onEscapeKey={chain(this.handleEscapeKey, onEscapeKey)}
                     popperPlacement={placement}
                     popperProps={{ ...popperProps, id }}
                     referenceClassName='fd-popover__control'
@@ -143,6 +175,7 @@ Popover.propTypes = {
     placement: PropTypes.oneOf(POPPER_PLACEMENTS),
     popperProps: PropTypes.object,
     type: PropTypes.oneOf(POPOVER_TYPES),
+    useArrowKeyNavigation: PropTypes.bool,
     onClickOutside: PropTypes.func,
     onEscapeKey: PropTypes.func
 };

@@ -22,8 +22,10 @@ storiesOf('Components|Popover', module)
     .addDecorator(withKnobs)
     .add('Default', () => (
         <Popover
-            body={someMenu} control={<Button glyph='navigation-up-arrow' option='light' />}
-            type='menu' />
+            body={someMenu}
+            control={<Button glyph='navigation-up-arrow' option='light' />}
+            type='menu'
+            useArrowKeyNavigation />
     ))
     .add('Placement', () => (
         <>
@@ -176,14 +178,17 @@ storiesOf('Components|Popover', module)
                 glyph='navigation-up-arrow'
                 option='light' />}
             disableStyles
-            type='menu' />
+            type='menu'
+            useArrowKeyNavigation />
     ))
     .add('custom styles', () => (
         <Popover
-            body={someMenu} control={<Button
+            body={someMenu}
+            control={<Button
                 disableStyles
                 glyph='navigation-up-arrow'
                 option='light' />}
             customStyles={require('../../utils/WithStyles/customStylesTest.css')}
-            type='menu' />
+            type='menu'
+            useArrowKeyNavigation />
     ));
