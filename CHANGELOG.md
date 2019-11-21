@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.8.0-rc.1"></a>
+# [0.8.0-rc.1](https://github.com/SAP/fundamental-react/compare/v0.8.0-rc.0...v0.8.0-rc.1) (2019-11-21)
+
+
+### Bug Fixes
+
+* Add aria attributes to popover control ([#796](https://github.com/SAP/fundamental-react/issues/796)) ([36f1b72](https://github.com/SAP/fundamental-react/commit/36f1b72))
+
+
+
 <a name="0.8.0-rc.0"></a>
 # [0.8.0-rc.0](https://github.com/SAP/fundamental-react/compare/v0.7.2-rc.2...v0.8.0-rc.0) (2019-11-19)
 
