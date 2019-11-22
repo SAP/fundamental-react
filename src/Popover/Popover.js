@@ -181,9 +181,9 @@ Popover.propTypes = {
     noArrow: PropTypes.bool,
     placement: PropTypes.oneOf(POPPER_PLACEMENTS),
     popperProps: PropTypes.object,
-    widthSizingType: PropTypes.oneOf(POPPER_SIZING_TYPES),
     type: PropTypes.oneOf(POPOVER_TYPES),
     useArrowKeyNavigation: PropTypes.bool,
+    widthSizingType: PropTypes.oneOf(POPPER_SIZING_TYPES),
     onClickOutside: PropTypes.func,
     onEscapeKey: PropTypes.func
 };
