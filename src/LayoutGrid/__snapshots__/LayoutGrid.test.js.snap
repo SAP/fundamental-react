@@ -118,7 +118,7 @@ exports[`<LayoutGrid /> layoutGrid snapshots 2`] = `
 
 exports[`<LayoutGrid /> layoutGrid snapshots 3`] = `
 <div
-  className="fd-layout-grid fd-layout-grid--nogap"
+  className="fd-layout-grid fd-layout-grid--no-gap"
 >
   <div
     className="fd-panel"

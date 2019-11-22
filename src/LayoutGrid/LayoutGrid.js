@@ -9,7 +9,7 @@ const LayoutGrid = React.forwardRef(({ nogap, cols, children, className, colSpan
     const layoutGridClasses = classnames(
         'fd-layout-grid',
         {
-            'fd-layout-grid--nogap': nogap,
+            'fd-layout-grid--no-gap': nogap,
             [`fd-layout-grid--col-${cols}`]: !!cols
         },
         className
