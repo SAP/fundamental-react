@@ -1,10 +1,14 @@
 import chain from 'chain-function';
 import classnames from 'classnames';
+import { findDOMNode } from 'react-dom';
+import FocusManager from '../utils/focusManager/focusManager';
 import keycode from 'keycode';
 import Popper from '../utils/_Popper';
 import PropTypes from 'prop-types';
+import shortId from '../utils/shortId';
+import tabbable from 'tabbable';
 import withStyles from '../utils/WithStyles/WithStyles';
-import { POPPER_PLACEMENTS, POPPER_SIZING_TYPES, POPPER_SIZING_TYPES_DESCRIPTION } from '../utils/constants';
+import { POPOVER_TYPES, POPPER_PLACEMENTS, POPPER_SIZING_TYPES, POPPER_SIZING_TYPES_DESCRIPTION } from '../utils/constants';
 import React, { Component } from 'react';
 
 class Popover extends Component {
@@ -15,6 +19,10 @@ class Popover extends Component {
             isExpanded: false
         };
         this.placementTargetRef = React.createRef();
+
+        //A generated shortId as fallback, in case props.popperProps.id is unset.
+        //This ID binds the popover and its control by 'aria-controls'.
+        this.popoverId = shortId.generate();
     }
 
     isButton = (node) => {
@@ -37,6 +45,12 @@ class Popover extends Component {
         }
     };
 
+    handleFocusManager = () => {
+        if (this.state.isExpanded && this.popover) {
+            this.focusManager = new FocusManager(this.popover, this.controlRef, this.props.useArrowKeyNavigation);
+        }
+    }
+
     handleOutsideClick = () => {
         if (this.state.isExpanded) {
             this.setState({
@@ -44,6 +58,19 @@ class Popover extends Component {
             });
         }
     };
+
+    handleEscapeKey = () => {
+        this.handleOutsideClick();
+
+        if (this.controlRef) {
+            if (tabbable.isTabbable(this.controlRef)) {
+                this.controlRef.focus();
+            } else {
+                const firstTabbableNode = tabbable(this.controlRef)[0];
+                firstTabbableNode && firstTabbableNode.focus();
+            }
+        }
+    }
 
     handleKeyPress = (event, node, onClickFunctions) => {
         if (!this.isButton(node)) {
@@ -73,6 +100,8 @@ class Popover extends Component {
             placement,
             popperProps,
             widthSizingType,
+            useArrowKeyNavigation,
+            type,
             ...rest
         } = this.props;
 
@@ -81,8 +110,18 @@ class Popover extends Component {
             onClickFunctions = chain(this.triggerBody, control.props.onClick);
         }
 
+        const id = popperProps.id || this.popoverId;
+
         let controlProps = {
-            onClick: onClickFunctions
+            onClick: onClickFunctions,
+            ref: (c) => {
+                this.controlRef = findDOMNode(c);
+            }
+        };
+
+        const innerRef = (c) => {
+            this.popover = findDOMNode(c);
+            this.handleFocusManager();
         };
 
         if (!disableKeyPressHandler) {
@@ -90,7 +129,9 @@ class Popover extends Component {
                 ...controlProps,
                 tabIndex: 0,
                 role: 'button',
-                'aria-haspopup': true,
+                'aria-controls': id,
+                'aria-expanded': this.state.isExpanded,
+                'aria-haspopup': !!type ? type : true,
                 onKeyPress: (event) => this.handleKeyPress(event, control, onClickFunctions)
             };
         }
@@ -107,12 +148,13 @@ class Popover extends Component {
                 <Popper
                     cssBlock='fd-popover'
                     disableEdgeDetection={disableEdgeDetection}
+                    innerRef={innerRef}
                     noArrow={noArrow}
                     onClickOutside={chain(this.handleOutsideClick, onClickOutside)}
-                    onEscapeKey={chain(this.handleOutsideClick, onEscapeKey)}
+                    onEscapeKey={chain(this.handleEscapeKey, onEscapeKey)}
                     placementTargetRef={this.placementTargetRef}
                     popperPlacement={placement}
-                    popperProps={popperProps}
+                    popperProps={{ ...popperProps, id }}
                     referenceClassName='fd-popover__control'
                     referenceComponent={referenceComponent}
                     show={this.state.isExpanded && !disabled}
@@ -140,12 +182,15 @@ Popover.propTypes = {
     placement: PropTypes.oneOf(POPPER_PLACEMENTS),
     popperProps: PropTypes.object,
     widthSizingType: PropTypes.oneOf(POPPER_SIZING_TYPES),
+    type: PropTypes.oneOf(POPOVER_TYPES),
+    useArrowKeyNavigation: PropTypes.bool,
     onClickOutside: PropTypes.func,
     onEscapeKey: PropTypes.func
 };
 
 Popover.defaultProps = {
     widthSizingType: 'none',
+    popperProps: {},
     onClickOutside: () => { },
     onEscapeKey: () => { }
 };
@@ -160,7 +205,8 @@ Popover.propDescriptions = {
     popperProps: 'Additional props to be spread to the overlay element, supported by <a href="https://popper.js.org" target="_blank">popper.js</a>.',
     widthSizingType: POPPER_SIZING_TYPES_DESCRIPTION,
     onClickOutside: 'Callback for consumer clicking outside of popover body.',
-    onEscapeKey: 'Callback when escape key is pressed when popover body is visible.'
+    onEscapeKey: 'Callback when escape key is pressed when popover body is visible.',
+    type: 'Indicates the type of popup - "dialog", "grid", "listbox", "menu", or "tree". This value is attached to aria-haspopup and is useful to assistive tech. Defaulted to boolean true.'
 };
 
 export { Popover as __Popover };

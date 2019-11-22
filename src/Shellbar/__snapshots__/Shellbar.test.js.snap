@@ -42,6 +42,8 @@ exports[`<Shellbar /> create shellbar 1`] = `
               className="fd-popover__control"
             >
               <span
+                aria-controls="fd-shellbar-profile-popover"
+                aria-expanded={false}
                 aria-haspopup={true}
                 className="fd-identifier fd-identifier--xs fd-identifier--circle fd-has-background-color-accent-8"
                 onClick={[Function]}
@@ -102,6 +104,8 @@ exports[`<Shellbar /> create shellbar 2`] = `
               className="fd-popover__control"
             >
               <span
+                aria-controls="fd-shellbar-profile-popover"
+                aria-expanded={false}
                 aria-haspopup={true}
                 className="fd-identifier fd-identifier--xs fd-identifier--circle fd-has-background-color-accent-8"
                 onClick={[Function]}
@@ -150,6 +154,8 @@ exports[`<Shellbar /> create shellbar 3`] = `
             className="fd-popover__control"
           >
             <button
+              aria-controls="fd-shellbar-product-popover"
+              aria-expanded={false}
               aria-haspopup={true}
               className="fd-product-menu__control"
               onClick={[Function]}
@@ -245,6 +251,8 @@ exports[`<Shellbar /> create shellbar 3`] = `
             className="fd-popover__control"
           >
             <button
+              aria-controls="fd-shellbar-actions-popover-0"
+              aria-expanded={false}
               aria-haspopup={true}
               aria-label="Settings"
               className="fd-button sap-icon--settings fd-shellbar__button"
@@ -276,6 +284,8 @@ exports[`<Shellbar /> create shellbar 3`] = `
           className="fd-popover__control"
         >
           <div
+            aria-controls="fd-shellbar-notifications-popover"
+            aria-expanded={false}
             aria-haspopup={true}
             className="fd-shellbar__action fd-shellbar__action--desktop"
             onClick={[Function]}
@@ -313,6 +323,8 @@ exports[`<Shellbar /> create shellbar 3`] = `
             className="fd-popover__control"
           >
             <div
+              aria-controls="fd-shellbar-mobile-action-popover"
+              aria-expanded={false}
               aria-haspopup={true}
               className="fd-shellbar-collapse--control"
               onClick={[Function]}
@@ -355,6 +367,8 @@ exports[`<Shellbar /> create shellbar 3`] = `
               className="fd-popover__control"
             >
               <span
+                aria-controls="fd-shellbar-profile-popover"
+                aria-expanded={false}
                 aria-haspopup={true}
                 className="fd-identifier fd-identifier--xs fd-identifier--circle fd-has-background-color-accent-8"
                 onClick={[Function]}
@@ -387,6 +401,8 @@ exports[`<Shellbar /> create shellbar 3`] = `
               className="fd-popover__control"
             >
               <button
+                aria-controls="fd-shellbar-product-switcher-popover"
+                aria-expanded={false}
                 aria-haspopup={true}
                 className="fd-button sap-icon--grid fd-shellbar__button"
                 onClick={[Function]}
@@ -433,6 +449,8 @@ exports[`<Shellbar /> create shellbar 4`] = `
             className="fd-popover__control"
           >
             <button
+              aria-controls="fd-shellbar-product-popover"
+              aria-expanded={false}
               aria-haspopup={true}
               className="fd-product-menu__control"
               onClick={[Function]}
@@ -528,6 +546,8 @@ exports[`<Shellbar /> create shellbar 4`] = `
             className="fd-popover__control"
           >
             <button
+              aria-controls="fd-shellbar-actions-popover-0"
+              aria-expanded={false}
               aria-haspopup={true}
               aria-label="Settings"
               className="fd-button sap-icon--settings fd-shellbar__button"
@@ -559,6 +579,8 @@ exports[`<Shellbar /> create shellbar 4`] = `
           className="fd-popover__control"
         >
           <div
+            aria-controls="fd-shellbar-notifications-popover"
+            aria-expanded={false}
             aria-haspopup={true}
             className="fd-shellbar__action fd-shellbar__action--desktop"
             onClick={[Function]}
@@ -589,6 +611,8 @@ exports[`<Shellbar /> create shellbar 4`] = `
             className="fd-popover__control"
           >
             <div
+              aria-controls="fd-shellbar-mobile-action-popover"
+              aria-expanded={false}
               aria-haspopup={true}
               className="fd-shellbar-collapse--control"
               onClick={[Function]}
@@ -631,6 +655,8 @@ exports[`<Shellbar /> create shellbar 4`] = `
               className="fd-popover__control"
             >
               <span
+                aria-controls="fd-shellbar-profile-popover"
+                aria-expanded={false}
                 aria-haspopup={true}
                 className="fd-identifier fd-identifier--xs fd-identifier--circle fd-has-background-color-accent-8"
                 onClick={[Function]}
@@ -663,6 +689,8 @@ exports[`<Shellbar /> create shellbar 4`] = `
               className="fd-popover__control"
             >
               <button
+                aria-controls="fd-shellbar-product-switcher-popover"
+                aria-expanded={false}
                 aria-haspopup={true}
                 className="fd-button sap-icon--grid fd-shellbar__button"
                 onClick={[Function]}
@@ -709,6 +737,8 @@ exports[`<Shellbar /> create shellbar 5`] = `
             className="fd-popover__control"
           >
             <button
+              aria-controls="fd-shellbar-product-popover"
+              aria-expanded={false}
               aria-haspopup={true}
               className="fd-product-menu__control"
               onClick={[Function]}
@@ -817,6 +847,8 @@ exports[`<Shellbar /> create shellbar 5`] = `
           className="fd-popover__control"
         >
           <div
+            aria-controls="fd-shellbar-notifications-popover"
+            aria-expanded={false}
             aria-haspopup={true}
             className="fd-shellbar__action fd-shellbar__action--desktop"
             onClick={[Function]}
@@ -847,6 +879,8 @@ exports[`<Shellbar /> create shellbar 5`] = `
             className="fd-popover__control"
           >
             <div
+              aria-controls="fd-shellbar-mobile-action-popover"
+              aria-expanded={false}
               aria-haspopup={true}
               className="fd-shellbar-collapse--control"
               onClick={[Function]}
@@ -889,6 +923,8 @@ exports[`<Shellbar /> create shellbar 5`] = `
               className="fd-popover__control"
             >
               <span
+                aria-controls="fd-shellbar-profile-popover"
+                aria-expanded={false}
                 aria-haspopup={true}
                 className="fd-identifier fd-identifier--xs fd-identifier--circle fd-has-background-color-accent-8"
                 onClick={[Function]}
@@ -921,6 +957,8 @@ exports[`<Shellbar /> create shellbar 5`] = `
               className="fd-popover__control"
             >
               <button
+                aria-controls="fd-shellbar-product-switcher-popover"
+                aria-expanded={false}
                 aria-haspopup={true}
                 className="fd-button sap-icon--grid fd-shellbar__button"
                 onClick={[Function]}
@@ -967,6 +1005,8 @@ exports[`<Shellbar /> create shellbar 6`] = `
             className="fd-popover__control"
           >
             <button
+              aria-controls="fd-shellbar-product-popover"
+              aria-expanded={false}
               aria-haspopup={true}
               className="fd-product-menu__control"
               onClick={[Function]}
@@ -1062,6 +1102,8 @@ exports[`<Shellbar /> create shellbar 6`] = `
             className="fd-popover__control"
           >
             <button
+              aria-controls="fd-shellbar-actions-popover-0"
+              aria-expanded={false}
               aria-haspopup={true}
               aria-label="Settings"
               className="fd-button sap-icon--settings fd-shellbar__button"
@@ -1112,6 +1154,8 @@ exports[`<Shellbar /> create shellbar 6`] = `
             className="fd-popover__control"
           >
             <div
+              aria-controls="fd-shellbar-mobile-action-popover"
+              aria-expanded={false}
               aria-haspopup={true}
               className="fd-shellbar-collapse--control"
               onClick={[Function]}
@@ -1154,6 +1198,8 @@ exports[`<Shellbar /> create shellbar 6`] = `
               className="fd-popover__control"
             >
               <span
+                aria-controls="fd-shellbar-profile-popover"
+                aria-expanded={false}
                 aria-haspopup={true}
                 className="fd-identifier fd-identifier--xs fd-identifier--circle fd-identifier--thumbnail"
                 onClick={[Function]}
@@ -1189,6 +1235,8 @@ exports[`<Shellbar /> create shellbar 6`] = `
               className="fd-popover__control"
             >
               <button
+                aria-controls="fd-shellbar-product-switcher-popover"
+                aria-expanded={false}
                 aria-haspopup={true}
                 className="fd-button sap-icon--grid fd-shellbar__button"
                 onClick={[Function]}

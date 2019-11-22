@@ -30,7 +30,8 @@ export const DropdownComponent = () => {
                         }
                         control={<Button className='fd-dropdown__control'>Select</Button>}
                         id='jhqD0555'
-                        noArrow />
+                        noArrow
+                        useArrowKeyNavigation />
                 </Dropdown>
 
                 <Dropdown>
@@ -51,7 +52,8 @@ export const DropdownComponent = () => {
                             </Button>
                         }
                         id='jhqD0556'
-                        noArrow />
+                        noArrow
+                        useArrowKeyNavigation />
                 </Dropdown>
             </Example>
 
@@ -77,7 +79,8 @@ export const DropdownComponent = () => {
                             </Button>
                         }
                         id='jhqD0557'
-                        noArrow />
+                        noArrow
+                        useArrowKeyNavigation />
                 </Dropdown>
 
                 <Dropdown>
@@ -99,7 +102,8 @@ export const DropdownComponent = () => {
                             </Button>
                         }
                         id='jhqD0558'
-                        noArrow />
+                        noArrow
+                        useArrowKeyNavigation />
                 </Dropdown>
             </Example>
 
@@ -124,7 +128,8 @@ export const DropdownComponent = () => {
                             </Button>
                         }
                         id='jhqD0559'
-                        noArrow />
+                        noArrow
+                        useArrowKeyNavigation />
                 </Dropdown>
 
                 <Dropdown standard>
@@ -145,7 +150,8 @@ export const DropdownComponent = () => {
                             </Button>
                         }
                         id='jhqD0560'
-                        noArrow />
+                        noArrow
+                        useArrowKeyNavigation />
                 </Dropdown>
             </Example>
 
@@ -199,7 +205,8 @@ export const DropdownComponent = () => {
                         }
                         disabled
                         id='jhqD0561'
-                        noArrow />
+                        noArrow
+                        useArrowKeyNavigation />
                 </Dropdown>
             </Example>
 

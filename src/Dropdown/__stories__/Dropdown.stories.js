@@ -25,7 +25,8 @@ storiesOf('Components|Dropdown', module)
                 }
                 control={<Button className='fd-dropdown__control'>Select</Button>}
                 id='jhqD0555'
-                noArrow />
+                noArrow
+                useArrowKeyNavigation />
         </Dropdown>
     ))
     .add('disable styles', () => (
@@ -45,7 +46,8 @@ storiesOf('Components|Dropdown', module)
                 control={<Button className='fd-dropdown__control' disableStyles>Select</Button>}
                 disableStyles
                 id='jhqD0555'
-                noArrow />
+                noArrow
+                useArrowKeyNavigation />
         </Dropdown>
     ))
     .add('custom styles', () => (
@@ -65,6 +67,7 @@ storiesOf('Components|Dropdown', module)
                 control={<Button className='fd-dropdown__control' disableStyles>Select</Button>}
                 disableStyles
                 id='jhqD0555'
-                noArrow />
+                noArrow
+                useArrowKeyNavigation />
         </Dropdown>
     ));
