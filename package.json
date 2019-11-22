@@ -56,7 +56,7 @@
     "prop-types": "^15.7.1",
     "react-foco": "^1.3.0",
     "react-focus-lock": "^2.1.1",
-    "react-overlays": "^1.1.2",
+    "react-overlays": "^2.1.0",
     "react-popper": "^1.3.3",
     "shortid": "^2.2.14",
     "tabbable": "^4.0.0"
