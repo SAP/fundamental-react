@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.8.0-rc.4"></a>
+# [0.8.0-rc.4](https://github.com/SAP/fundamental-react/compare/v0.8.0-rc.3...v0.8.0-rc.4) (2019-11-26)
+
+
+### Bug Fixes
+
+* align popover inside dropdown ([#804](https://github.com/SAP/fundamental-react/issues/804)) ([48e241f](https://github.com/SAP/fundamental-react/commit/48e241f))
+
+
+
 <a name="0.8.0-rc.3"></a>
 # [0.8.0-rc.3](https://github.com/SAP/fundamental-react/compare/v0.8.0-rc.2...v0.8.0-rc.3) (2019-11-22)
 
