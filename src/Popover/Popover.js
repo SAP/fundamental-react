@@ -18,7 +18,6 @@ class Popover extends Component {
         this.state = {
             isExpanded: false
         };
-        this.placementTargetRef = React.createRef();
 
         //A generated shortId as fallback, in case props.popperProps.id is unset.
         //This ID binds the popover and its control by 'aria-controls'.
@@ -136,10 +135,7 @@ class Popover extends Component {
             };
         }
 
-        const referenceComponent = React.cloneElement(control, {
-            ...controlProps,
-            ref: this.placementTargetRef
-        });
+        const referenceComponent = React.cloneElement(control, controlProps);
 
         const popoverClasses = classnames('fd-popover', className);
 
@@ -152,7 +148,7 @@ class Popover extends Component {
                     noArrow={noArrow}
                     onClickOutside={chain(this.handleOutsideClick, onClickOutside)}
                     onEscapeKey={chain(this.handleEscapeKey, onEscapeKey)}
-                    placementTargetRef={this.placementTargetRef}
+                    placementTargetRef={this.controlRef}
                     popperPlacement={placement}
                     popperProps={{ ...popperProps, id }}
                     referenceClassName='fd-popover__control'
