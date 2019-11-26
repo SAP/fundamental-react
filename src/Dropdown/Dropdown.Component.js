@@ -3,7 +3,9 @@ import React from 'react';
 import { Button, Dropdown, Menu, Popover } from '../';
 import { ComponentPage, Example } from '../_playground';
 
+
 export const DropdownComponent = () => {
+
     return (
         <ComponentPage
             description={`The **Dropdown** component lets the user select one of the different options.
@@ -46,7 +48,7 @@ export const DropdownComponent = () => {
                         }
                         control={
                             <Button className='fd-dropdown__control' compact>
-                                    Select
+                                Select
                             </Button>
                         }
                         id='jhqD0556'
@@ -73,7 +75,7 @@ export const DropdownComponent = () => {
                         }
                         control={
                             <Button className='fd-dropdown__control' glyph='filter'>
-                                    Select
+                                Select
                             </Button>
                         }
                         id='jhqD0557'
@@ -96,7 +98,7 @@ export const DropdownComponent = () => {
                         control={
                             <Button className='fd-dropdown__control' compact
                                 glyph='filter'>
-                                    Select
+                                Select
                             </Button>
                         }
                         id='jhqD0558'
@@ -122,7 +124,7 @@ export const DropdownComponent = () => {
                         }
                         control={
                             <Button className='fd-dropdown__control'>
-                                    Select
+                                Select
                             </Button>
                         }
                         id='jhqD0559'
@@ -144,12 +146,39 @@ export const DropdownComponent = () => {
                         }
                         control={
                             <Button className='fd-dropdown__control' compact>
-                                    Select
+                                Select
                             </Button>
                         }
                         id='jhqD0560'
                         noArrow
                         useArrowKeyNavigation />
+                </Dropdown>
+            </Example>
+
+            <Example
+                centered
+                title='Popover width limited to Dropdown'>
+                <Dropdown>
+                    <Popover
+                        body={
+                            <Menu>
+                                <Menu.List>
+                                    <Menu.Item url='#'>Option 1</Menu.Item>
+                                    <Menu.Item url='#'>Option 2</Menu.Item>
+                                    <Menu.Item url='#'>Option 3</Menu.Item>
+                                    <Menu.Item url='#'>Option 4</Menu.Item>
+                                </Menu.List>
+                            </Menu>
+                        }
+                        control={
+                            <Button className='fd-dropdown__control'
+                                glyph='navigation-down-arrow'>
+                                Open the dropdown
+                            </Button>
+                        }
+                        id='jhqD0561'
+                        noArrow
+                        widthSizingType='matchTarget' />
                 </Dropdown>
             </Example>
 
@@ -171,7 +200,7 @@ export const DropdownComponent = () => {
                         control={
                             <Button className='fd-dropdown__control' disabled
                                 glyph='filter'>
-                                    Select
+                                Select
                             </Button>
                         }
                         disabled

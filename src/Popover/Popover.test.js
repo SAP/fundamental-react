@@ -265,6 +265,50 @@ describe('<Popover />', () => {
         });
     });
 
+    describe('widthSizingType', () => {
+        const targetBoundaries = { left: 123, right: 456 };
+        beforeAll(()=>{
+            Object.defineProperty(window.HTMLElement.prototype, 'getBoundingClientRectTest', {
+                // because of getBoundingClientRectTest cannot be redefined
+                value: () => targetBoundaries,
+                writable: true
+            });
+        });
+
+        test('matchTarget', () => {
+            const popoverWithParent = mount(popOver).setProps({ widthSizingType: 'matchTarget' });
+            popoverWithParent.find('div.fd-popover__control .sap-icon--cart').simulate('click');
+            const popoverStyle = popoverWithParent.find('.fd-popover__popper').prop('style');
+
+            expect(popoverStyle).toHaveProperty('left', targetBoundaries.left);
+            expect(popoverStyle).toHaveProperty('width', targetBoundaries.right - targetBoundaries.left);
+        });
+
+        test('minTarget', () => {
+            const popoverWithParent = mount(popOver).setProps({ widthSizingType: 'minTarget' });
+            popoverWithParent.find('div.fd-popover__control .sap-icon--cart').simulate('click');
+            const popoverStyle = popoverWithParent.find('.fd-popover__popper').prop('style');
+
+            expect(popoverStyle).toHaveProperty('left');
+            const { left } = popoverStyle;
+            expect(popoverStyle).toHaveProperty('minWidth', targetBoundaries.right - left);
+        });
+
+        test('maxTarget', () => {
+            const popoverWithParent = mount(popOver).setProps({ widthSizingType: 'maxTarget' });
+            popoverWithParent.find('div.fd-popover__control .sap-icon--cart').simulate('click');
+            const popoverStyle = popoverWithParent.find('.fd-popover__popper').prop('style');
+
+            expect(popoverStyle).toHaveProperty('left');
+            const { left } = popoverStyle;
+            expect(popoverStyle).toHaveProperty('maxWidth', targetBoundaries.right - left);
+        });
+
+        afterAll(()=>{
+            delete window.HTMLElement.prototype.getBoundingClientRectTest;
+        });
+    });
+
     describe('Callback handler', () => {
         test('should dispatch the onClickOutside callback with the event', () => {
             let f = jest.fn();

@@ -8,7 +8,7 @@ import PropTypes from 'prop-types';
 import shortId from '../utils/shortId';
 import tabbable from 'tabbable';
 import withStyles from '../utils/WithStyles/WithStyles';
-import { POPOVER_TYPES, POPPER_PLACEMENTS } from '../utils/constants';
+import { POPOVER_TYPES, POPPER_PLACEMENTS, POPPER_SIZING_TYPES, POPPER_SIZING_TYPES_DESCRIPTION } from '../utils/constants';
 import React, { Component } from 'react';
 
 class Popover extends Component {
@@ -98,6 +98,7 @@ class Popover extends Component {
             className,
             placement,
             popperProps,
+            widthSizingType,
             useArrowKeyNavigation,
             type,
             ...rest
@@ -147,12 +148,14 @@ class Popover extends Component {
                     noArrow={noArrow}
                     onClickOutside={chain(this.handleOutsideClick, onClickOutside)}
                     onEscapeKey={chain(this.handleEscapeKey, onEscapeKey)}
+                    placementTargetRef={this.controlRef}
                     popperPlacement={placement}
                     popperProps={{ ...popperProps, id }}
                     referenceClassName='fd-popover__control'
                     referenceComponent={referenceComponent}
                     show={this.state.isExpanded && !disabled}
-                    usePortal>
+                    usePortal
+                    widthSizingType={widthSizingType}>
                     {body}
                 </Popper>
             </div>
@@ -176,14 +179,16 @@ Popover.propTypes = {
     popperProps: PropTypes.object,
     type: PropTypes.oneOf(POPOVER_TYPES),
     useArrowKeyNavigation: PropTypes.bool,
+    widthSizingType: PropTypes.oneOf(POPPER_SIZING_TYPES),
     onClickOutside: PropTypes.func,
     onEscapeKey: PropTypes.func
 };
 
 Popover.defaultProps = {
+    widthSizingType: 'none',
     popperProps: {},
-    onClickOutside: () => {},
-    onEscapeKey: () => {}
+    onClickOutside: () => { },
+    onEscapeKey: () => { }
 };
 
 Popover.propDescriptions = {
@@ -194,6 +199,7 @@ Popover.propDescriptions = {
     noArrow: 'Set to **true** to render a popover without an arrow.',
     placement: 'Initial position of the `body` (overlay) related to the `control`.',
     popperProps: 'Additional props to be spread to the overlay element, supported by <a href="https://popper.js.org" target="_blank">popper.js</a>.',
+    widthSizingType: POPPER_SIZING_TYPES_DESCRIPTION,
     onClickOutside: 'Callback for consumer clicking outside of popover body.',
     onEscapeKey: 'Callback when escape key is pressed when popover body is visible.',
     type: 'Indicates the type of popup - "dialog", "grid", "listbox", "menu", or "tree". This value is attached to aria-haspopup and is useful to assistive tech. Defaulted to boolean true.'
