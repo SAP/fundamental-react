@@ -99,7 +99,7 @@ class Popper extends React.Component {
                         return null;
                     }
 
-                    const currentPlacementTarget = placementTargetRef && placementTargetRef.current;
+                    const currentPlacementTarget = placementTargetRef;
                     if (widthSizingType !== 'none' && currentPlacementTarget) {
                         const { right: targetRight, left: targetLeft } = typeof currentPlacementTarget.getBoundingClientRectTest === 'function' ?
                             currentPlacementTarget.getBoundingClientRectTest() : // for test purpose. getBoundingClientRect cannot be redefined.
