@@ -28,4 +28,11 @@ storiesOf('Components|LayoutGrid', module)
             <div>Default2</div>
             <div>Default3</div>
         </LayoutGrid>
+    ))
+    .add('nogap', () => (
+        <LayoutGrid nogap>
+            <div>Default1</div>
+            <div>Default2</div>
+            <div>Default3</div>
+        </LayoutGrid>
     ));
