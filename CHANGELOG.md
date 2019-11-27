@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.8.0-rc.5"></a>
+# [0.8.0-rc.5](https://github.com/SAP/fundamental-react/compare/v0.8.0-rc.4...v0.8.0-rc.5) (2019-11-27)
+
+
+### Bug Fixes
+
+* layoutgrid no-gap class typo fix ([#803](https://github.com/SAP/fundamental-react/issues/803)) ([c8a487c](https://github.com/SAP/fundamental-react/commit/c8a487c))
+
+
+
 <a name="0.8.0-rc.4"></a>
 # [0.8.0-rc.4](https://github.com/SAP/fundamental-react/compare/v0.8.0-rc.3...v0.8.0-rc.4) (2019-11-26)
 
