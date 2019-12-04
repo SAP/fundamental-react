@@ -44,7 +44,7 @@
     "test:dev": "jest --config=./config/jest/jest.config.js",
     "test": "npm run test:dev -- --watch",
     "test:visual:dev": "BABEL_ENV=test jest --config=./visual-regression-testing/jest.config.js",
-    "test:visual": "server-test storybook http-get://localhost:12123 test:visual:dev"
+    "test:visual": "server-test storybook -- --ci --quiet http-get://localhost:12123 test:visual:dev"
   },
   "dependencies": {
     "@babel/runtime": "^7.6.3",
