@@ -1,6 +1,7 @@
 import Button from '../Button/Button';
 import classnames from 'classnames';
 import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
+import moment from 'moment';
 import PropTypes from 'prop-types';
 import withStyles from '../utils/WithStyles/WithStyles';
 import React, { Component } from 'react';
@@ -11,10 +12,10 @@ class Calendar extends Component {
         super(props);
 
         this.state = {
-            todayDate: new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate(), 0, 0, 0, 0),
-            currentDateDisplayed: new Date(),
+            todayDate: moment().startOf('day'),
+            currentDateDisplayed: moment(),
             arrSelectedDates: [],
-            selectedDate: new Date(0, 0, 0),
+            selectedDate: moment({ year: 0, month: 0, day: 0 }),
             showMonths: false,
             showYears: false,
             dateClick: false
@@ -37,21 +38,21 @@ class Calendar extends Component {
                     if (previousStates.dateClick) {
                         return ({ dateClick: false });
                     }
-                    return ({ currentDateDisplayed: new Date(), arrSelectedDates: [], selectedDate: new Date(0, 0, 0) });
+                    return ({ currentDateDisplayed: moment(), arrSelectedDates: [], selectedDate: moment({ year: 0, month: 0, day: 0 }) });
                 }
                 //updates the calendar if the date from date picker is correct
-                return ({ arrSelectedDates: updatedPropsParent.customDate, selectedDate: new Date(0, 0, 0) });
+                return ({ arrSelectedDates: updatedPropsParent.customDate, selectedDate: moment({ year: 0, month: 0, day: 0 }) });
             }
         } else if (updatedPropsParent.customDate !== previousStates.currentDateDisplayed) {
             if (typeof updatedPropsParent.customDate === 'undefined' || updatedPropsParent.customDate === '') {
                 return null;
             } else if (updatedPropsParent.customDate === 'undefined') {
-                if (previousStates.selectedDate.getFullYear() !== 1899 && previousStates.dateClick) {
+                if (previousStates.selectedDate.year() !== 1899 && previousStates.dateClick) {
                     return ({ dateClick: false });
                 }
                 //If date was not clicked then the date is reset
                 if (!previousStates.dateClick) {
-                    return ({ currentDateDisplayed: new Date(), selectedDate: new Date(0, 0, 0) });
+                    return ({ currentDateDisplayed: moment(), selectedDate: moment({ year: 0, month: 0, day: 0 }) });
                 }
             } else {
                 //Updates the calendar if the date from date picker is correct
@@ -74,18 +75,18 @@ class Calendar extends Component {
     }
 
     displaySelectedRangeLast = (day) => {
-        return this.props.enableRangeSelection && (typeof this.state.arrSelectedDates[1] !== 'undefined' && this.state.arrSelectedDates[1].getTime() === day.getTime());
+        return this.props.enableRangeSelection && (typeof this.state.arrSelectedDates[1] !== 'undefined' && this.state.arrSelectedDates[1].valueOf() === day.valueOf());
     }
 
     displayIsDayOtherMonth = (day) => {
-        return day.getMonth() !== this.state.currentDateDisplayed.getMonth();
+        return day.month() !== this.state.currentDateDisplayed.month();
     }
 
     displayIsSelected = (day) => {
         return (this.isSelected(day)
-            || (this.props.enableRangeSelection && ((typeof this.state.arrSelectedDates[0] !== 'undefined' ? this.state.arrSelectedDates[0].getTime() === day.getTime() : false)
-                || (typeof this.state.arrSelectedDates[1] !== 'undefined' ? this.state.arrSelectedDates[1].getTime() === day.getTime() : false))))
-            && !(this.props.disableWeekends && (day.getDay() === 0 || day.getDay() === 6))
+            || (this.props.enableRangeSelection && ((typeof this.state.arrSelectedDates[0] !== 'undefined' ? this.state.arrSelectedDates[0].valueOf() === day.valueOf() : false)
+                || (typeof this.state.arrSelectedDates[1] !== 'undefined' ? this.state.arrSelectedDates[1].valueOf() === day.valueOf() : false))))
+            && !(this.props.disableWeekends && (day.day() === 0 || day.day() === 6))
             && !(this.disableBeforeDate(day, this.props.disableBeforeDate))
             && !this.isDateBetween(day, this.props.blockedDates)
             && !(this.disableWeekday(day, this.props.disableWeekday))
@@ -95,11 +96,11 @@ class Calendar extends Component {
     }
 
     displaySelectedRangeFirst = (day) => {
-        return this.props.enableRangeSelection && (typeof this.state.arrSelectedDates[0] !== 'undefined') && this.state.arrSelectedDates[0].getTime() === day.getTime();
+        return this.props.enableRangeSelection && (typeof this.state.arrSelectedDates[0] !== 'undefined') && this.state.arrSelectedDates[0].valueOf() === day.valueOf();
     }
 
     displayDisabled = (day) => {
-        return (this.props.disableWeekends && (day.getDay() === 0 || day.getDay() === 6)) || (this.props.disablePastDates && (this.disableBeforeTodayDate(day))) || (this.props.disableFutureDates && this.disableAfterTodayDate(day)) || (this.disableWeekday(day, this.props.disableWeekday)) || this.disableBeforeDate(day, this.props.disableBeforeDate) || this.disableAfterDate(day, this.props.disableAfterDate) || this.isDateBetween(day, this.props.disabledDates) ? ' is-disabled' : '';
+        return (this.props.disableWeekends && (day.day() === 0 || day.day() === 6)) || (this.props.disablePastDates && (this.disableBeforeTodayDate(day))) || (this.props.disableFutureDates && this.disableAfterTodayDate(day)) || (this.disableWeekday(day, this.props.disableWeekday)) || this.disableBeforeDate(day, this.props.disableBeforeDate) || this.disableAfterDate(day, this.props.disableAfterDate) || this.isDateBetween(day, this.props.disabledDates) ? ' is-disabled' : '';
     }
 
 
@@ -114,9 +115,9 @@ class Calendar extends Component {
     changeMonth = (month) => {
         let date = this.state.currentDateDisplayed;
         let months = this.getMonths();
-        date.setMonth(months.indexOf(month));
+        date.month(months.indexOf(month));
         // reset date to first of month
-        date.setDate(1);
+        date.date(1);
 
         //updates month state
         if (!this.props.enableRangeSelection) {
@@ -139,7 +140,7 @@ class Calendar extends Component {
 
     changeYear = (year) => {
         let date = this.state.currentDateDisplayed;
-        date.setFullYear(year);
+        date.year(year);
         if (!this.props.enableRangeSelection) {
             this.setState({
                 currentDateDisplayed: date,
@@ -171,8 +172,8 @@ class Calendar extends Component {
             let calendarItemClasses = classnames(
                 'fd-calendar__item',
                 {
-                    'is-selected': months[this.state.currentDateDisplayed.getMonth()] === element,
-                    'fd-calendar__item--current': months[this.state.todayDate.getMonth()] === element
+                    'is-selected': months[this.state.currentDateDisplayed.month()] === element,
+                    'fd-calendar__item--current': months[this.state.todayDate.month()] === element
                 }
             );
 
@@ -195,7 +196,7 @@ class Calendar extends Component {
 
     generateYears = (yearListProps) => {
 
-        let year = this.state.currentDateDisplayed.getFullYear();
+        let year = this.state.currentDateDisplayed.year();
         let years = [year];
         for (let iterations = 1; iterations < 12; iterations++) {
             year = year + 1;
@@ -205,8 +206,8 @@ class Calendar extends Component {
             let yearClasses = classnames(
                 'fd-calendar__item',
                 {
-                    'is-selected': this.state.currentDateDisplayed.getFullYear() === element,
-                    'fd-calendar__item--current': this.state.todayDate.getFullYear() === element
+                    'is-selected': this.state.currentDateDisplayed.year() === element,
+                    'fd-calendar__item--current': this.state.todayDate.year() === element
                 }
             );
 
@@ -230,12 +231,13 @@ class Calendar extends Component {
 
         if (this.state.showYears) {
             let copyDate = this.state.currentDateDisplayed;
-            copyDate.setFullYear(copyDate.getFullYear() + 12);
+            copyDate.year(copyDate.year() + 12);
             this.setState({ currentDateDisplayed: copyDate, dateClick: true });
         } else {
             let copyDate = this.state.currentDateDisplayed;
-            let selectedDate = new Date(this.state.selectedDate.getFullYear(), this.state.selectedDate.getMonth(), this.state.selectedDate.getDate(), 0, 0, 0, 0);
-            copyDate.setMonth(copyDate.getMonth() + 1);
+            let selectedDate = moment({ year: this.state.selectedDate.year(), month: this.state.selectedDate.month(), day: this.state.selectedDate.date(),
+                hour: 0, minute: 0, second: 0, millisecond: 0 });
+            copyDate.month(copyDate.month() + 1);
             this.setState({
                 currentDateDisplayed: copyDate, selectedDate: selectedDate, dateClick: true
             });
@@ -246,12 +248,13 @@ class Calendar extends Component {
 
         if (this.state.showYears) {
             let copyDate = this.state.currentDateDisplayed;
-            copyDate.setFullYear(copyDate.getFullYear() - 12);
+            copyDate.year(copyDate.year() - 12);
             this.setState({ currentDateDisplayed: copyDate, dateClick: true });
         } else {
             let copyDate = this.state.currentDateDisplayed;
-            let selectedDate = new Date(this.state.selectedDate.getFullYear(), this.state.selectedDate.getMonth(), this.state.selectedDate.getDate(), 0, 0, 0, 0);
-            copyDate.setMonth(copyDate.getMonth() - 1);
+            let selectedDate = moment({ year: this.state.selectedDate.year(), month: this.state.selectedDate.month(), day: this.state.selectedDate.date(),
+                hour: 0, minute: 0, second: 0, millisecond: 0 });
+            copyDate.month(copyDate.month() - 1);
 
             this.setState({
                 currentDateDisplayed: copyDate, selectedDate: selectedDate, dateClick: true
@@ -265,13 +268,9 @@ class Calendar extends Component {
         if (typeof isRangeEnabled !== 'undefined' && isRangeEnabled) {
             selectedDates = this.state.arrSelectedDates;
             if (selectedDates.length === 2) {
-                selectedDates = [];
-                selectedDates.push(day);
-            } else if (typeof selectedDates[0] !== 'undefined' && day.getTime() <= selectedDates[0].getTime()) {
-                let newArr = [];
-                newArr.push(day);
-                newArr.push(selectedDates[0]);
-                selectedDates = newArr;
+                selectedDates = [day];
+            } else if (typeof selectedDates[0] !== 'undefined' && day.valueOf() <= selectedDates[0].valueOf()) {
+                selectedDates = [day, selectedDates[0]];
             } else {
                 selectedDates.push(day);
             }
@@ -291,52 +290,29 @@ class Calendar extends Component {
         });
     };
 
-    retrieveStartOfWeek = (date) => {
-        let day = date.getDay();
-        let difference = date.getDate() - day;
-        return new Date(date.setDate(difference));
-    }
-
-    returnFirstDayMonth = (date) => {
-        let firstDay = new Date(date.getFullYear(), date.getMonth(), 1);
-        return firstDay;
-    }
-
-    returnLastDayMonth = (date) => {
-        let lastDay = new Date(date.getFullYear(), date.getMonth() + 1, 0);
-        return lastDay;
-    }
-
     addDays = (date, days) => {
-        let result = new Date(date);
-        result.setDate(result.getDate() + days);
+        let result = moment(date);
+        result.date(result.date() + days);
         return result;
     }
 
-    retrieveEndOfWeek = (date) => {
-        let difference = date.getDate() + 6 - date.getDay();
-        let newDate = new Date(date.getFullYear(), date.getMonth(), difference);
-        return newDate;
-    }
-
     isDateBetween = (date, blockedDates, isRangeEnabled) => {
-
         if (typeof blockedDates === 'undefined' || typeof blockedDates[0] === 'undefined' || typeof blockedDates[1] === 'undefined') {
             return false;
         }
-
+        // firstDate = max(blockedDates[0], blockedDates[1]);
         if (typeof isRangeEnabled !== 'undefined' || isRangeEnabled) {
-            if (blockedDates[0].getTime() > blockedDates[1].getTime()) {
-                return blockedDates[1].getTime() < date.getTime() && blockedDates[0].getTime() > date.getTime();
+            if (blockedDates[0].valueOf() > blockedDates[1].valueOf()) {
+                return blockedDates[1].valueOf() < date.valueOf() && blockedDates[0].valueOf() > date.valueOf();
             }
         }
-        return blockedDates[0].getTime() < date.getTime() && blockedDates[1].getTime() > date.getTime();
+        return blockedDates[0].valueOf() < date.valueOf() && blockedDates[1].valueOf() > date.valueOf();
     }
 
     isSelected = (date) => {
-        return (this.state.selectedDate.getDate() === date.getDate() &&
-            this.state.selectedDate.getMonth() === date.getMonth() &&
-            this.state.selectedDate.getFullYear() === date.getFullYear());
+        return (this.state.selectedDate.date() === date.date() &&
+            this.state.selectedDate.month() === date.month() &&
+            this.state.selectedDate.year() === date.year());
     }
 
     disableWeekday = (date, weekDays) => {
@@ -347,7 +323,7 @@ class Calendar extends Component {
             return false;
         }
 
-        if (weekDays.indexOf(daysName[date.getDay()]) > 0) {
+        if (weekDays.indexOf(daysName[date.day()]) > 0) {
             return true;
         }
         return false;
@@ -357,7 +333,7 @@ class Calendar extends Component {
         if (typeof beforeDate === 'undefined') {
             return false;
         }
-        return (date.getTime() < beforeDate.getTime());
+        return (date.valueOf() < beforeDate.valueOf());
     }
 
     disableAfterDate = (date, afterDate) => {
@@ -365,21 +341,19 @@ class Calendar extends Component {
         if (typeof afterDate === 'undefined') {
             return false;
         }
-        return (date.getTime() > afterDate.getTime());
+        return (date.valueOf() > afterDate.valueOf());
     }
 
     disableBeforeTodayDate = (date) => {
-        let todayDate = new Date();
-        todayDate.setHours(0, 0, 0, 0);
+        let todayDate = moment({ hours: 0, minutes: 0, seconds: 0, milliseconds: 0 });
 
-        return date.getTime() < todayDate.getTime();
+        return date.valueOf() < todayDate.valueOf();
     }
 
     disableAfterTodayDate = (date) => {
-        let todayDate = new Date();
-        todayDate.setHours(0, 0, 0, 0);
+        let todayDate = moment({ hours: 0, minutes: 0, seconds: 0, milliseconds: 0 });
 
-        return date.getTime() > todayDate.getTime();
+        return date.valueOf() > todayDate.valueOf();
     }
 
     returnDateSelected = (dates) => {
@@ -416,7 +390,7 @@ class Calendar extends Component {
                             onClick={this.showMonths}
                             option='light'>
                             <span>
-                                {months[this.state.currentDateDisplayed.getMonth()]}
+                                {months[this.state.currentDateDisplayed.month()]}
                             </span>
                         </Button>
                     </div>
@@ -427,7 +401,7 @@ class Calendar extends Component {
                             onClick={this.showYears}
                             option='light'>
                             <span>
-                                {this.state.currentDateDisplayed.getFullYear()}
+                                {this.state.currentDateDisplayed.year()}
                             </span>
                         </Button>
                     </div>
@@ -464,14 +438,15 @@ class Calendar extends Component {
 
     generateDays = (tableBodyProps) => {
         //props that allows the developer to pass their preferences
-        let blockedDates = this.props.blockedDates;
-        let enableRangeSelection = this.props.enableRangeSelection;
+        const blockedDates = this.props.blockedDates;
+        const enableRangeSelection = this.props.enableRangeSelection;
 
-        let firstDayMonth = this.returnFirstDayMonth(this.state.currentDateDisplayed);
-        let endDayMonth = this.returnLastDayMonth(firstDayMonth);
-        let firstDayWeekMonth = this.retrieveStartOfWeek(firstDayMonth);
-        let lastDateEndMonth = this.retrieveEndOfWeek(endDayMonth);
-        let rows = [];
+        const firstDayMonth = moment(this.state.currentDateDisplayed).startOf('month');
+        const endDayMonth = moment(firstDayMonth).endOf('month');
+        const firstDayWeekMonth = moment(firstDayMonth).startOf('week');
+        const lastDateEndMonth = moment(endDayMonth).endOf('week');
+        const rows = [];
+
         let days = [];
         let day = firstDayWeekMonth;
         let dateFormatted = '';
@@ -480,14 +455,14 @@ class Calendar extends Component {
         while (day <= lastDateEndMonth) {
             //7 days in a week
             for (let iterations = 0; iterations < 7; iterations++) {
-                dateFormatted = day.getDate();
+                dateFormatted = day.date();
                 let copyDate = day;
 
                 let dayClasses = classnames(
                     'fd-calendar__item',
                     {
                         'fd-calendar__item--other-month': this.displayIsDayOtherMonth(day),
-                        'fd-calendar__item--current': this.state.todayDate.getTime() === copyDate.getTime(),
+                        'fd-calendar__item--current': this.state.todayDate.valueOf() === copyDate.valueOf(),
                         'is-selected': this.displayIsSelected(day),
                         'is-selected-range-first': this.displaySelectedRangeFirst(day),
                         'is-selected-range-last': this.displaySelectedRangeLast(day),
@@ -586,12 +561,12 @@ class Calendar extends Component {
 Calendar.displayName = 'Calendar';
 
 Calendar.basePropTypes = {
-    blockedDates: PropTypes.arrayOf(PropTypes.instanceOf(Date)),
+    blockedDates: PropTypes.arrayOf(PropTypes.instanceOf(moment)),
     customStyles: PropTypes.object,
     disableStyles: PropTypes.bool,
-    disableAfterDate: PropTypes.instanceOf(Date),
-    disableBeforeDate: PropTypes.instanceOf(Date),
-    disabledDates: PropTypes.arrayOf(PropTypes.instanceOf(Date)),
+    disableAfterDate: PropTypes.instanceOf(moment),
+    disableBeforeDate: PropTypes.instanceOf(moment),
+    disabledDates: PropTypes.arrayOf(PropTypes.instanceOf(moment)),
     disableFutureDates: PropTypes.bool,
     disablePastDates: PropTypes.bool,
     disableWeekday: PropTypes.arrayOf(PropTypes.string),
