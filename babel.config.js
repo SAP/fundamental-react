@@ -33,6 +33,9 @@ module.exports = {
     env: {
         cjs: {
             plugins: productionPlugins
+        },
+        test: {
+            plugins: ['require-context-hook']
         }
     }
 };

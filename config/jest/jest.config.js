@@ -1,10 +1,9 @@
-
 module.exports = {
-    'rootDir': '../../',
+    'rootDir': '../../src/',
     'verbose': true,
     'testURL': 'http://localhost/',
     'testMatch': ['**/*.test.js'],
-    'setupFiles': ['./config/jest/setup.js'],
+    'setupFiles': ['../config/jest/setup.js'],
     'moduleFileExtensions': ['js', 'json', 'jsx', 'css', 'node'],
     'moduleNameMapper': {
         '^.+\\.(css)$': 'babel-jest'
