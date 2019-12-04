@@ -113,25 +113,19 @@ class Calendar extends Component {
     }
 
     changeMonth = (month) => {
-        let date = this.state.currentDateDisplayed;
-        let months = this.getMonths();
-        date.month(months.indexOf(month));
-        // reset date to first of month
-        date.date(1);
+        const newDate = moment(this.state.currentDateDisplayed).month(month);
 
-        //updates month state
         if (!this.props.enableRangeSelection) {
             this.setState({
-                currentDateDisplayed: date,
-                selectedDate: date,
+                currentDateDisplayed: newDate,
                 showMonths: false,
                 dateClick: true
             }, function() {
-                this.returnDateSelected(date);
+                this.returnDateSelected(newDate);
             });
         } else {
             this.setState({
-                currentDateDisplayed: date,
+                currentDateDisplayed: newDate,
                 showMonths: false,
                 dateClick: true
             });
@@ -139,20 +133,19 @@ class Calendar extends Component {
     }
 
     changeYear = (year) => {
-        let date = this.state.currentDateDisplayed;
-        date.year(year);
+        const newDate = moment(this.state.currentDateDisplayed).year(year);
+
         if (!this.props.enableRangeSelection) {
             this.setState({
-                currentDateDisplayed: date,
+                currentDateDisplayed: newDate,
                 showYears: false,
-                selectedDate: date,
                 dateClick: true
             }, function() {
-                this.returnDateSelected(date);
+                this.returnDateSelected(newDate);
             });
         } else {
             this.setState({
-                currentDateDisplayed: date,
+                currentDateDisplayed: newDate,
                 showYears: false,
                 dateClick: true
             });
@@ -227,40 +220,26 @@ class Calendar extends Component {
         );
     }
 
-    next = () => {
-
+    handleNext = () => {
+        const { currentDateDisplayed } = this.state;
         if (this.state.showYears) {
-            let copyDate = this.state.currentDateDisplayed;
-            copyDate.year(copyDate.year() + 12);
-            this.setState({ currentDateDisplayed: copyDate, dateClick: true });
+            const newDate = moment(currentDateDisplayed).year(currentDateDisplayed.year() + 12);
+            this.setState({ currentDateDisplayed: newDate, dateClick: true });
         } else {
-            let copyDate = this.state.currentDateDisplayed;
-            let selectedDate = moment({ year: this.state.selectedDate.year(), month: this.state.selectedDate.month(), day: this.state.selectedDate.date(),
-                hour: 0, minute: 0, second: 0, millisecond: 0 });
-            copyDate.month(copyDate.month() + 1);
-            this.setState({
-                currentDateDisplayed: copyDate, selectedDate: selectedDate, dateClick: true
-            });
+            const newDate = moment(currentDateDisplayed).month(currentDateDisplayed.month() + 1);
+            this.setState({ currentDateDisplayed: newDate, dateClick: true });
         }
     }
 
-    previous = () => {
-
+    handlePrevious = () => {
+        const { currentDateDisplayed } = this.state;
         if (this.state.showYears) {
-            let copyDate = this.state.currentDateDisplayed;
-            copyDate.year(copyDate.year() - 12);
-            this.setState({ currentDateDisplayed: copyDate, dateClick: true });
+            const newDate = moment(currentDateDisplayed).year(currentDateDisplayed.year() - 12);
+            this.setState({ currentDateDisplayed: newDate, dateClick: true });
         } else {
-            let copyDate = this.state.currentDateDisplayed;
-            let selectedDate = moment({ year: this.state.selectedDate.year(), month: this.state.selectedDate.month(), day: this.state.selectedDate.date(),
-                hour: 0, minute: 0, second: 0, millisecond: 0 });
-            copyDate.month(copyDate.month() - 1);
-
-            this.setState({
-                currentDateDisplayed: copyDate, selectedDate: selectedDate, dateClick: true
-            });
+            const newDate = moment(currentDateDisplayed).month(currentDateDisplayed.month() - 1);
+            this.setState({ currentDateDisplayed: newDate, dateClick: true });
         }
-
     }
 
     dateClick = (day, isRangeEnabled) => {
@@ -380,7 +359,7 @@ class Calendar extends Component {
                             compact
                             disableStyles={this.props.disableStyles}
                             glyph='slim-arrow-left'
-                            onClick={this.previous}
+                            onClick={this.handlePrevious}
                             option='light' />
                     </div>
                     <div className='fd-calendar__action'>
@@ -411,7 +390,7 @@ class Calendar extends Component {
                             compact
                             disableStyles={this.props.disableStyles}
                             glyph='slim-arrow-right'
-                            onClick={this.next}
+                            onClick={this.handleNext}
                             option='light' />
                     </div>
                 </div>
