@@ -9,7 +9,7 @@ script:
 jobs:
   include:
   - stage: Lint and Test
-    script: npm run lint && npm run test:coverage && npm run test:visual && npm run size
+    script: npm run lint  && npm run size && npm run test:coverage && npm run test:visual
   - stage: Pre-release
     if: branch = master
     before_deploy:
