@@ -84,7 +84,7 @@ class DatePicker extends Component {
             ) {
                 this.setState({
                     formattedDate: '',
-                    arrSelectedDates: 'undefined',
+                    arrSelectedDates: [],
                     hidden: false
                 });
             } else {
@@ -137,15 +137,15 @@ class DatePicker extends Component {
                     } else {
                         this.setState({
                             formattedDate: '',
-                            selectedDate: 'undefined',
-                            arrSelectedDates: 'undefined'
+                            selectedDate: null,
+                            arrSelectedDates: null
                         });
                     }
                 } else {
                     this.setState({
                         formattedDate: '',
-                        selectedDate: 'undefined',
-                        arrSelectedDates: 'undefined'
+                        selectedDate: null,
+                        arrSelectedDates: null
                     });
                 }
             }
@@ -155,7 +155,7 @@ class DatePicker extends Component {
                 if (this.state.formattedDate.search(regex) !== -1) {
                     this.setState({
                         formattedDate: this.formatDate(this.state.selectedDate),
-                        selectedDate: 'undefined'
+                        selectedDate: null
                     });
                 } else {
                     const dateSeparated = this.state.formattedDate.split('/');
@@ -172,14 +172,14 @@ class DatePicker extends Component {
                         });
                     } else {
                         this.setState({
-                            selectedDate: 'undefined',
+                            selectedDate: null,
                             formattedDate: ''
                         });
                     }
                 }
             } else {
                 this.setState({
-                    selectedDate: 'undefined',
+                    selectedDate: null,
                     formattedDate: ''
                 });
             }

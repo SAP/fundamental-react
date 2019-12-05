@@ -30,25 +30,21 @@ class Calendar extends Component {
             return null;
         }
 
-        if (typeof updatedPropsParent.enableRangeSelection !== 'undefined') {
-            if (updatedPropsParent.customDate !== previousStates.arrSelectedDates) {
-                if (updatedPropsParent.customDate === 'undefined') {
-                    if (previousStates.dateClick) {
-                        return ({ dateClick: false });
+        if (!previousStates.dateClick) {
+            if (typeof updatedPropsParent.enableRangeSelection !== 'undefined') {
+                if (updatedPropsParent.customDate !== previousStates.arrSelectedDates) {
+                    if (!updatedPropsParent.customDate || !updatedPropsParent.customDate.length) {
+                        // reset calendar state when date picker input is empty and did not click on a date
+                        return ({ currentDateDisplayed: moment(), arrSelectedDates: [], selectedDate: moment({ year: 0, month: 0, day: 0 }) });
                     }
-                    return ({ currentDateDisplayed: moment(), arrSelectedDates: [], selectedDate: moment({ year: 0, month: 0, day: 0 }) });
+                    // update calendar state with date picker input
+                    return ({ arrSelectedDates: updatedPropsParent.customDate, selectedDate: moment({ year: 0, month: 0, day: 0 }) });
                 }
-                return ({ arrSelectedDates: updatedPropsParent.customDate, selectedDate: moment({ year: 0, month: 0, day: 0 }) });
-            }
-        } else if (updatedPropsParent.customDate !== previousStates.currentDateDisplayed) {
-            if (updatedPropsParent.customDate === '') {
-                return null;
-            } else if (updatedPropsParent.customDate === 'undefined') {
-                // reset calendar state when date picker input is empty and did not click on a date
-                if (!previousStates.dateClick) {
+            } else if (updatedPropsParent.customDate !== previousStates.currentDateDisplayed) {
+                if (!updatedPropsParent.customDate) {
+                    // reset calendar state when date picker input is empty and did not click on a date
                     return ({ currentDateDisplayed: moment(), selectedDate: moment({ year: 0, month: 0, day: 0 }) });
                 }
-            } else if (!previousStates.dateClick) {
                 // update calendar state with date picker input
                 return ({ currentDateDisplayed: updatedPropsParent.customDate, selectedDate: updatedPropsParent.customDate });
             }
@@ -281,7 +277,7 @@ class Calendar extends Component {
             return false;
         }
         if (typeof isRangeEnabled !== 'undefined' || isRangeEnabled) {
-            if (blockedDates[0].isBefore(blockedDates[1])) {
+            if (blockedDates[0].isAfter(blockedDates[1])) {
                 return blockedDates[1].isBefore(date) && blockedDates[0].isAfter(date);
             }
         }
