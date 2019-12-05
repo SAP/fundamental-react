@@ -1,4 +1,5 @@
 import { DatePicker } from '../';
+import moment from 'moment';
 import path from 'path';
 import React from 'react';
 import { ComponentPage, Example } from '../_playground';
@@ -14,9 +15,9 @@ export const DatePickerComponent = () => {
             <Example
                 centered
                 title='Simple Date Picker'>
-                <DatePicker disableBeforeDate={new Date(2018, 11, 24, 0, 0, 0, 0)} disableWeekends />
+                <DatePicker disableBeforeDate={moment(new Date(2018, 11, 24, 0, 0, 0, 0))} disableWeekends />
                 <DatePicker
-                    blockedDates={[new Date(2018, 11, 1, 0, 0, 0, 0), new Date(2018, 11, 23, 0, 0, 0, 0)]}
+                    blockedDates={[moment(new Date(2018, 11, 1, 0, 0, 0, 0)), moment(new Date(2018, 11, 23, 0, 0, 0, 0))]}
                     compact
                     disableWeekday={['Monday', 'Tuesday']} />
             </Example>

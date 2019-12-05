@@ -1,6 +1,7 @@
 import Button from '../Button/Button';
 import Calendar from '../Calendar/Calendar';
 import classnames from 'classnames';
+import moment from 'moment';
 import PropTypes from 'prop-types';
 import withStyles from '../utils/WithStyles/WithStyles';
 import React, { Component } from 'react';
@@ -41,29 +42,7 @@ class DatePicker extends Component {
                 return '';
             }
 
-            let firstDateMonth = date[0].getMonth() + 1;
-            let firstDateDay = date[0].getDate();
-            let firstDateYear = date[0].getFullYear();
-
-            let secondDateMonth = date[1].getMonth() + 1;
-            let secondDateDay = date[1].getDate();
-            let secondDateYear = date[1].getFullYear();
-
-            if (firstDateYear >= 3000 || secondDateYear >= 3000) {
-                return '';
-            }
-            formatDate =
-                firstDateMonth +
-                '/' +
-                firstDateDay +
-                '/' +
-                firstDateYear +
-                '-' +
-                secondDateMonth +
-                '/' +
-                secondDateDay +
-                '/' +
-                secondDateYear;
+            formatDate = date[0].format('MM/DD/YYYY') + '-' + date[1].format('MM/DD/YYYY');
         }
         return formatDate;
     }
@@ -90,11 +69,11 @@ class DatePicker extends Component {
     };
 
     isDateEnabled = (dateToCheck) => {
-        return this.calendarRef.current.displayDisabled(new Date(dateToCheck)) === '' ? true : false;
+        return this.calendarRef.current.displayDisabled(moment(dateToCheck)) === '' ? true : false;
     }
 
     validateDates = () => {
-        let regex = /[!$%^&*()_+|~=`{}\[\]:'<>?,.\a-zA-Z]/;
+        const regex = /[!$%^&*()_+|~=`{}\[\]:'<>?,.\a-zA-Z]/;
         //Checks first if range is enabled
         if (this.props.enableRangeSelection) {
             //If the formattedDate contains a list of special characters symbols then it will be reset
@@ -110,22 +89,22 @@ class DatePicker extends Component {
                 });
             } else {
                 //Breaks the input into an array
-                let dateRange = this.state.formattedDate.split('-');
+                const dateRange = this.state.formattedDate.split('-');
 
                 // check if start and end dates are enabled
                 if (this.isDateEnabled(dateRange[0]) && this.isDateEnabled(dateRange[1])) {
-                    let dateSeparatedFirstRange = dateRange[0].split('/');
-                    let dateSeparatedSecondRange = dateRange[1].split('/');
+                    const dateSeparatedFirstRange = dateRange[0].split('/');
+                    const dateSeparatedSecondRange = dateRange[1].split('/');
 
                     //First date
-                    let firstYearRange = parseInt(dateSeparatedFirstRange[2], 10);
-                    let firstDateRange = parseInt(dateSeparatedFirstRange[1], 10);
-                    let firstMonthRange = parseInt(dateSeparatedFirstRange[0], 10);
+                    const firstYearRange = parseInt(dateSeparatedFirstRange[2], 10);
+                    const firstDateRange = parseInt(dateSeparatedFirstRange[1], 10);
+                    const firstMonthRange = parseInt(dateSeparatedFirstRange[0], 10);
 
                     //Second date
-                    let secondYearRange = parseInt(dateSeparatedSecondRange[2], 10);
-                    let secondDateRange = parseInt(dateSeparatedSecondRange[1], 10);
-                    let secondMonthRange = parseInt(dateSeparatedSecondRange[0], 10);
+                    const secondYearRange = parseInt(dateSeparatedSecondRange[2], 10);
+                    const secondDateRange = parseInt(dateSeparatedSecondRange[1], 10);
+                    const secondMonthRange = parseInt(dateSeparatedSecondRange[0], 10);
 
                     //Checks if the input is actually numbers and follows the required form
                     if ((1 <= firstDateRange && firstDateRange <= 31) &&
@@ -135,19 +114,19 @@ class DatePicker extends Component {
                         (1 <= secondMonthRange && secondMonthRange <= 12) &&
                         secondYearRange <= 3000
                     ) {
-                        let firstDate = new Date(
-                            firstYearRange,
-                            firstMonthRange - 1,
-                            firstDateRange
-                        );
-                        let secondDate = new Date(
-                            secondYearRange,
-                            secondMonthRange - 1,
-                            secondDateRange
-                        );
+                        const firstDate = moment({
+                            year: firstYearRange,
+                            month: firstMonthRange - 1,
+                            date: firstDateRange
+                        });
+                        const secondDate = moment({
+                            year: secondYearRange,
+                            month: secondMonthRange - 1,
+                            date: secondDateRange
+                        });
                         let arrSelected = [];
                         //Swaps the order in case one date is bigger than the other
-                        firstDate.getTime() > secondDate.getTime()
+                        firstDate.isAfter(secondDate)
                             ? (arrSelected = [secondDate, firstDate])
                             : (arrSelected = [firstDate, secondDate]);
 
@@ -179,17 +158,17 @@ class DatePicker extends Component {
                         selectedDate: 'undefined'
                     });
                 } else {
-                    let dateSeparated = this.state.formattedDate.split('/');
-                    let year = parseInt(dateSeparated[2], 10);
-                    let date = parseInt(dateSeparated[1], 10);
-                    let month = parseInt(dateSeparated[0], 10);
+                    const dateSeparated = this.state.formattedDate.split('/');
+                    const year = parseInt(dateSeparated[2], 10);
+                    const date = parseInt(dateSeparated[1], 10);
+                    const month = parseInt(dateSeparated[0], 10);
 
                     if ((1 <= date && date <= 31) &&
                         (1 <= month && month <= 12) &&
                         year <= 3000
                     ) {
                         this.setState({
-                            selectedDate: new Date(year, month - 1, date)
+                            selectedDate: moment({ year: year, month: month - 1, date: date })
                         });
                     } else {
                         this.setState({
@@ -221,54 +200,18 @@ class DatePicker extends Component {
 
     updateDate = (date) => {
         if (this.props.enableRangeSelection) {
-            if (date.length === 2) {
-                let firstDateMonth = date[0].getMonth() + 1;
-                let firstDateDay = date[0].getDate();
-                let firstDateYear = date[0].getFullYear();
-
-                let secondDateMonth = date[1].getMonth() + 1;
-                let secondDateDay = date[1].getDate();
-                let secondDateYear = date[1].getFullYear();
-
-                let formatDate =
-                    firstDateMonth +
-                    '/' +
-                    firstDateDay +
-                    '/' +
-                    firstDateYear +
-                    '-' +
-                    secondDateMonth +
-                    '/' +
-                    secondDateDay +
-                    '/' +
-                    secondDateYear;
-                this.setState({
-                    arrSelectedDates: date,
-                    formattedDate: formatDate
-                });
-            } else {
-                let firstDateMonth = date[0].getMonth() + 1;
-                let firstDateDay = date[0].getDate();
-                let firstDateYear = date[0].getFullYear();
-
-                let formatDate =
-                    firstDateMonth + '/' + firstDateDay + '/' + firstDateYear;
-
-                this.setState({
-                    arrSelectedDates: date,
-                    formattedDate: formatDate
-                });
+            let formatDate = date[0].format('MM/DD/YYYY');
+            if (!!date[1]) {
+                formatDate += '-' + date[1].format('MM/DD/YYYY');
             }
+            this.setState({
+                arrSelectedDates: date,
+                formattedDate: formatDate
+            });
         } else {
-            let month = date.getMonth() + 1;
-            let day = date.getDate();
-            let year = date.getFullYear();
-
-            let formatDate = month + '/' + day + '/' + year;
-
             this.setState({
                 selectedDate: date,
-                formattedDate: formatDate
+                formattedDate: date.format('MM/DD/YYYY')
             });
         }
     }
