@@ -25,30 +25,38 @@ class Calendar extends Component {
 
     // sync the selected date of the calendar with the date picker
     static getDerivedStateFromProps(updatedPropsParent, previousStates) {
+        const { customDate, enableRangeSelection } = updatedPropsParent;
 
-        if (typeof updatedPropsParent.customDate === 'undefined') {
+        if (typeof customDate === 'undefined') {
             return null;
         }
 
         if (!previousStates.dateClick) {
-            if (typeof updatedPropsParent.enableRangeSelection !== 'undefined') {
-                if (updatedPropsParent.customDate !== previousStates.arrSelectedDates) {
-                    if (!updatedPropsParent.customDate || !updatedPropsParent.customDate.length) {
+            if (typeof enableRangeSelection !== 'undefined') {
+                if (customDate !== previousStates.arrSelectedDates) {
+                    if (!customDate || !customDate.length) {
+                        console.log('reset range')
                         // reset calendar state when date picker input is empty and did not click on a date
                         return ({ currentDateDisplayed: moment(), arrSelectedDates: [], selectedDate: moment({ year: 0, month: 0, day: 0 }) });
                     }
+                        console.log('sync range')
                     // update calendar state with date picker input
-                    return ({ arrSelectedDates: updatedPropsParent.customDate, selectedDate: moment({ year: 0, month: 0, day: 0 }) });
+                    return ({ currentDateDisplayed: customDate[0], arrSelectedDates: customDate, selectedDate: moment({ year: 0, month: 0, day: 0 }) });
                 }
-            } else if (updatedPropsParent.customDate !== previousStates.currentDateDisplayed) {
-                if (!updatedPropsParent.customDate) {
+            } else if (customDate !== previousStates.currentDateDisplayed) {
+                if (!customDate) {
+                        console.log('reset')
+
                     // reset calendar state when date picker input is empty and did not click on a date
                     return ({ currentDateDisplayed: moment(), selectedDate: moment({ year: 0, month: 0, day: 0 }) });
                 }
+                        console.log('sync')
+
                 // update calendar state with date picker input
-                return ({ currentDateDisplayed: updatedPropsParent.customDate, selectedDate: updatedPropsParent.customDate });
+                return ({ currentDateDisplayed: customDate, selectedDate: customDate });
             }
         }
+        console.log('dateclick false')
         return ({ dateClick: false });
     }
 
@@ -64,22 +72,39 @@ class Calendar extends Component {
         return this.props.enableRangeSelection && this.isDateBetween(day, this.state.arrSelectedDates, this.props.enableRangeSelection);
     }
 
+    isEnabledDate = (day) => {
+        const { 
+            disableWeekends,
+            disableAfterDate,
+            disableBeforeDate,
+            blockedDates,
+            disableWeekday,
+            disablePastDates,
+            disableFutureDates,
+            disabledDates 
+        } = this.props;
+        return (
+            !this.disableWeekday(day, disableWeekday) &&
+            !(disableWeekends && (day.day() === 0 || day.day() === 6)) &&
+            !(disableBeforeDate && day.isBefore(disableBeforeDate)) &&
+            !(disableAfterDate && day.isAfter(disableAfterDate)) &&
+            !(disablePastDates && day.isBefore(moment())) &&
+            !(disableFutureDates && day.isAfter(moment())) &&
+            !this.isDateBetween(day, blockedDates) &&
+            !this.isDateBetween(day, disabledDates)
+        );
+    }
+
     displayIsSelected = (day) => {
+        const { arrSelectedDates, selectedDate } = this.state;
         return (
             (
-                day.isSame(this.state.selectedDate, 'day') ||
+                day.isSame(selectedDate, 'day') ||
                 (this.props.enableRangeSelection && (
-                    (typeof this.state.arrSelectedDates[0] !== 'undefined' ? this.state.arrSelectedDates[0].isSame(day, 'day') : false) ||
-                    (typeof this.state.arrSelectedDates[1] !== 'undefined' ? this.state.arrSelectedDates[1].isSame(day, 'day') : false)
+                    (typeof arrSelectedDates[0] !== 'undefined' ? arrSelectedDates[0].isSame(day, 'day') : false) ||
+                    (typeof arrSelectedDates[1] !== 'undefined' ? arrSelectedDates[1].isSame(day, 'day') : false)
                 ))
-            ) &&
-            !(this.props.disableWeekends && (day.day() === 0 || day.day() === 6)) &&
-            !this.disableBeforeDate(day, this.props.disableBeforeDate) &&
-            !this.isDateBetween(day, this.props.blockedDates) &&
-            !this.disableWeekday(day, this.props.disableWeekday) &&
-            !(this.props.disablePastDates && day.isBefore(moment())) &&
-            !(this.props.disableFutureDates && day.isAfter(moment())) &&
-            !this.isDateBetween(day, this.props.disabledDates) ?
+            ) && this.isEnabledDate(day) ?
                 'is-selected' : ''
         );
     }
@@ -94,13 +119,7 @@ class Calendar extends Component {
 
     displayDisabled = (day) => {
         return (
-            (this.props.disableWeekends && (day.day() === 0 || day.day() === 6)) ||
-            (this.props.disablePastDates && day.isBefore(moment())) ||
-            (this.props.disableFutureDates && day.isAfter(moment())) ||
-            (this.disableWeekday(day, this.props.disableWeekday)) ||
-            this.disableBeforeDate(day, this.props.disableBeforeDate) ||
-            this.disableAfterDate(day, this.props.disableAfterDate) ||
-            this.isDateBetween(day, this.props.disabledDates) ?
+            !this.isEnabledDate(day) ?
                 ' is-disabled' : ''
         );
     }

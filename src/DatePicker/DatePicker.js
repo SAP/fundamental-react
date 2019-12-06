@@ -12,7 +12,7 @@ class DatePicker extends Component {
 
         this.state = {
             hidden: true,
-            selectedDate: '',
+            selectedDate: null,
             arrSelectedDates: [],
             formattedDate: ''
         };
@@ -131,7 +131,7 @@ class DatePicker extends Component {
                             : (arrSelected = [firstDate, secondDate]);
 
                         this.setState({
-                            selectedDate: '',
+                            selectedDate: null,
                             arrSelectedDates: arrSelected
                         });
                     } else {
