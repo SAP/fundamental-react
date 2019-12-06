@@ -117,7 +117,7 @@ class Calendar extends Component {
     }
 
     changeMonth = (month) => {
-        const newDate = moment(this.state.currentDateDisplayed).month(month);
+        const newDate = moment(this.state.currentDateDisplayed).month(month).date(1);
 
         if (!this.props.enableRangeSelection) {
             this.setState({
