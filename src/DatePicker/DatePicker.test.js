@@ -123,7 +123,7 @@ describe('<DatePicker />', () => {
         arrDates = [endRangeDate, startRangeDate];
         wrapper.instance().updateDate(arrDates);
 
-        let switchFormattedDate = `${endRangeDate.format('MM/DD/YYYY')}-${startRangeDate.format('MM/DD/YYYY')}`;
+        let switchFormattedDate = `${endRangeDate.format('L')}-${startRangeDate.format('L')}`;
 
         expect(wrapper.state('formattedDate')).toEqual(switchFormattedDate);
         expect(wrapper.state('arrSelectedDates').length).toEqual(2);
@@ -164,7 +164,7 @@ describe('<DatePicker />', () => {
         const date = moment();
         wrapper.instance().updateDate(date);
         expect(wrapper.state('selectedDate')).toEqual(date);
-        let formattedDate = date.format('MM/DD/YYYY');
+        let formattedDate = date.format('L');
         expect(wrapper.state('formattedDate')).toEqual(formattedDate);
 
         // choose 1 day in range picker
@@ -174,7 +174,7 @@ describe('<DatePicker />', () => {
         let arrDates = [startRangeDate];
         wrapper.instance().updateDate(arrDates);
 
-        formattedDate = startRangeDate.format('MM/DD/YYYY');
+        formattedDate = startRangeDate.format('L');
         expect(wrapper.state('formattedDate')).toEqual(formattedDate);
         expect(wrapper.state('arrSelectedDates').length).toEqual(1);
 
@@ -187,7 +187,7 @@ describe('<DatePicker />', () => {
         arrDates = [startRangeDate, endRangeDate];
         wrapper.instance().updateDate(arrDates);
 
-        formattedDate = `${startRangeDate.format('MM/DD/YYYY')}-${endRangeDate.format('MM/DD/YYYY')}`;
+        formattedDate = `${startRangeDate.format('L')}-${endRangeDate.format('L')}`;
 
         expect(wrapper.state('formattedDate')).toEqual(formattedDate);
         expect(wrapper.state('arrSelectedDates').length).toEqual(2);
@@ -237,7 +237,7 @@ describe('<DatePicker />', () => {
         // enter a valid date input
         wrapper = mountComponentWithStyles(defaultDatePicker);
         let date = moment().startOf('day');
-        let formattedDate = date.format('MM/DD/YYYY');
+        let formattedDate = date.format('L');
         wrapper.find('input[type="text"]')
             .simulate('change', { target: { value: formattedDate } });
 
@@ -251,7 +251,7 @@ describe('<DatePicker />', () => {
         // enter a valid date input
         wrapper = mountComponentWithStyles(disabledFuturePicker);
         let date = moment().add(1, 'days');
-        let formattedDate = date.format('MM/DD/YYYY');
+        let formattedDate = date.format('L');
         wrapper.find('input[type="text"]')
             .simulate('change', { target: { value: formattedDate } });
 

@@ -301,8 +301,7 @@ describe('<Calendar />', () => {
         expect(newYearDisplayed.year()).toEqual(2031);
     });
 
-    // broken test for 31st of month -> needs to be tested once calendar is refactored.
-    xtest('click next button on the 31st of month', () => {
+    test('click next button on the 31st of month', () => {
         let wrapper = mountComponentWithStyles(defaultCalendar);
 
         let initialDate = moment('5/31/2019');

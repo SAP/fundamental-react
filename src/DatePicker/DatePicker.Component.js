@@ -24,6 +24,13 @@ export const DatePickerComponent = () => {
 
             <Example
                 centered
+                title='Localized Date Picker'>
+                <DatePicker locale='es' />
+                <DatePicker locale='fr' />
+            </Example>
+
+            <Example
+                centered
                 title='Range Date Picker'>
                 <DatePicker disableFutureDates enableRangeSelection />
                 <DatePicker compact disablePastDates

@@ -60,10 +60,12 @@ class DatePicker extends Component {
     }
 
     validateDates = () => {
+        const longDateFormat = moment.localeData(this.props.locale).longDateFormat('L');
+
         if (this.props.enableRangeSelection) {
             const dateRange = this.state.formattedDate.split('-');
-            const firstDate = moment(dateRange[0], 'MM/DD/YYYY');
-            const secondDate = moment(dateRange[1], 'MM/DD/YYYY');
+            const firstDate = moment(dateRange[0], longDateFormat);
+            const secondDate = moment(dateRange[1], longDateFormat);
 
             if (this.isDateValid(firstDate) && this.isDateValid(secondDate)) {
                 let arrSelected = [];
@@ -79,7 +81,7 @@ class DatePicker extends Component {
                 this.resetState();
             }
         } else {
-            const newDate = moment(this.state.formattedDate, 'MM/DD/YYYY');
+            const newDate = moment(this.state.formattedDate, longDateFormat);
             if (this.isDateValid(newDate)) {
                 this.setState({
                     selectedDate: newDate
@@ -111,10 +113,12 @@ class DatePicker extends Component {
     };
 
     updateDate = (date) => {
+        const longDateFormat = moment.localeData(this.props.locale).longDateFormat('L');
+
         if (this.props.enableRangeSelection) {
-            let formatDate = date[0].format('MM/DD/YYYY');
+            let formatDate = date[0].format(longDateFormat);
             if (!!date[1]) {
-                formatDate += '-' + date[1].format('MM/DD/YYYY');
+                formatDate += '-' + date[1].format(longDateFormat);
             }
             this.setState({
                 arrSelectedDates: date,
@@ -123,7 +127,7 @@ class DatePicker extends Component {
         } else {
             this.setState({
                 selectedDate: date,
-                formattedDate: date.format('MM/DD/YYYY')
+                formattedDate: date.format(longDateFormat)
             });
         }
     }
@@ -151,6 +155,7 @@ class DatePicker extends Component {
             disableWeekends,
             enableRangeSelection,
             inputProps,
+            locale,
             onBlur,
             ...props
         } = this.props;
@@ -183,7 +188,7 @@ class DatePicker extends Component {
                                 onChange={this.modifyDate}
                                 onClick={() => this.openCalendar('input')}
                                 onKeyPress={this.sendUpdate}
-                                placeholder='mm/dd/yyyy'
+                                placeholder={moment.localeData(this.props.locale).longDateFormat('L')}
                                 type='text'
                                 value={this.state.formattedDate} />
                             <span className='fd-input-group__addon fd-input-group__addon--after fd-input-group__addon--button'>
@@ -216,6 +221,7 @@ class DatePicker extends Component {
                             disableWeekends={disableWeekends}
                             disabledDates={disabledDates}
                             enableRangeSelection={enableRangeSelection}
+                            locale={locale}
                             onChange={this.updateDate}
                             ref={this.calendarRef} />
                     </div>
@@ -233,16 +239,19 @@ DatePicker.propTypes = {
     compact: PropTypes.bool,
     enableRangeSelection: PropTypes.bool,
     inputProps: PropTypes.object,
+    locale: PropTypes.string,
     onBlur: PropTypes.func
 };
 
 DatePicker.defaultProps = {
+    locale: 'en',
     onBlur: () => {}
 };
 
 DatePicker.propDescriptions = {
     ...Calendar.propDescriptions,
     enableRangeSelection: 'Set to **true** to enable the selection of a date range (begin and end).',
+    locale: 'Language code to set the locale.',
     onBlur: 'Callback function for onBlur events. In the object returned, `date` is the date object and `formattedDate` is the formatted date.'
 };
 
