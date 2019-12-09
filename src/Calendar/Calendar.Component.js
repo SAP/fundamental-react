@@ -1,5 +1,4 @@
 import { Calendar } from '../';
-import moment from 'moment';
 import path from 'path';
 import React from 'react';
 import { ComponentPage, Example } from '../_playground';
@@ -22,7 +21,7 @@ export const CalendarComponent = () => {
                 centered
                 title='Calendar with disabled weekends and disabled before a date'>
                 <Calendar
-                    disableBeforeDate={moment()}
+                    disableBeforeDate={new Date()}
                     disableWeekends />
             </Example>
 
@@ -30,8 +29,7 @@ export const CalendarComponent = () => {
                 centered
                 title='Calendar with disabled weekdays and blocked dates'>
                 <Calendar
-                    blockedDates={[moment({ year: 2018, month: 1, day: 1, hour: 0, minute: 0, second: 0, millisecond: 0 }),
-                        moment({ year: 2018, month: 3, day: 3, hour: 0, minute: 0, second: 0, millisecond: 0 })]}
+                    blockedDates={[new Date(2018, 1, 1, 0, 0, 0, 0), new Date(2018, 3, 3, 0, 0, 0, 0)]}
                     disableWeekday={['Monday', 'Tuesday']} />
             </Example>
 

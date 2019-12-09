@@ -73,12 +73,12 @@ class Calendar extends Component {
         return (
             !this.disableWeekday(day, disableWeekday) &&
             !(disableWeekends && (day.day() === 0 || day.day() === 6)) &&
-            !(disableBeforeDate && day.isBefore(disableBeforeDate)) &&
-            !(disableAfterDate && day.isAfter(disableAfterDate)) &&
+            !(disableBeforeDate && day.isBefore(moment(disableBeforeDate))) &&
+            !(disableAfterDate && day.isAfter(moment(disableAfterDate))) &&
             !(disablePastDates && day.isBefore(moment())) &&
             !(disableFutureDates && day.isAfter(moment())) &&
-            !this.isDateBetween(day, blockedDates) &&
-            !this.isDateBetween(day, disabledDates)
+            !this.isDateBetween(day, blockedDates && blockedDates.map(date => moment(date))) &&
+            !this.isDateBetween(day, disabledDates && disabledDates.map(date => moment(date)))
         );
     }
 
@@ -365,7 +365,7 @@ class Calendar extends Component {
             todayDate
         } = this.state;
 
-        const blockedDates = this.props.blockedDates;
+        const blockedDates = this.props.blockedDates && this.props.blockedDates.map(date => moment(date));
         const enableRangeSelection = this.props.enableRangeSelection;
 
         const firstDayMonth = moment(currentDateDisplayed).startOf('month');
@@ -486,12 +486,12 @@ class Calendar extends Component {
 Calendar.displayName = 'Calendar';
 
 Calendar.basePropTypes = {
-    blockedDates: PropTypes.arrayOf(PropTypes.instanceOf(moment)),
+    blockedDates: PropTypes.arrayOf(PropTypes.instanceOf(Date)),
     customStyles: PropTypes.object,
     disableStyles: PropTypes.bool,
-    disableAfterDate: PropTypes.instanceOf(moment),
-    disableBeforeDate: PropTypes.instanceOf(moment),
-    disabledDates: PropTypes.arrayOf(PropTypes.instanceOf(moment)),
+    disableAfterDate: PropTypes.instanceOf(Date),
+    disableBeforeDate: PropTypes.instanceOf(Date),
+    disabledDates: PropTypes.arrayOf(PropTypes.instanceOf(Date)),
     disableFutureDates: PropTypes.bool,
     disablePastDates: PropTypes.bool,
     disableWeekday: PropTypes.arrayOf(PropTypes.string),
