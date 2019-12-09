@@ -37,17 +37,16 @@
     "start:playground": "npm run storybook",
     "std-version": "standard-version -m \"chore(release): version %s build ${TRAVIS_BUILD_NUMBER} [ci skip]\"",
     "storybook": "start-storybook -p 12123",
-    "storybook:ci": "start-storybook -p 12123 --ci --quiet",
+    "storybook:ci": "npm run storybook -- --ci --quiet",
     "style:lint": "stylelint 'src/**/*.scss' 'src/**/*.css'",
     "test:coverage:watch": "npm run test:coverage -- --watch",
     "test:coverage": "npm run test:dev -- --coverage",
     "test:coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js || echo -e \"Coveralls failed.\"",
     "test:dev": "jest --config=./config/jest/jest.config.js",
     "test": "npm run test:dev -- --watch",
-    "test:visual:dev": "BABEL_ENV=test jest --config=./visual-regression-testing/jest.config.js",
-    "test:visual:update:dev": "npm run test:visual:dev -- --updateSnapshot",
-    "test:visual": "server-test storybook:ci http-get://localhost:12123 test:visual:dev",
-    "test:visual:update": "server-test storybook:ci http-get://localhost:12123 test:visual:update:dev"
+    "test:visual:setup": "BABEL_ENV=test jest --config=./visual-regression-testing/jest.config.js",
+    "test:visual": "server-test storybook:ci http-get://localhost:12123 test:visual:setup",
+    "test:visual:update": "server-test storybook:ci http-get://localhost:12123 'npm run test:visual:setup -- --updateSnapshot'"
   },
   "dependencies": {
     "@babel/runtime": "^7.6.3",
