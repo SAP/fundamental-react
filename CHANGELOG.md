@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 <a name="0.8.0-rc.8"></a>
-# [1.0.0-rc.0](https://github.com/SAP/fundamental-react/compare/v0.8.0-rc.7...v0.8.0-rc.8) (2019-12-05)
+# [0.8.0-rc.8](https://github.com/SAP/fundamental-react/compare/v0.8.0-rc.7...v0.8.0-rc.8) (2019-12-05)
 
 
 ### Features
