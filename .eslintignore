@@ -7,3 +7,4 @@
 *.sh
 *.md
 node_modules/**
+*.png

@@ -1,5 +1,6 @@
 import Adapter from 'enzyme-adapter-react-16';
 import { configure } from 'enzyme';
+import registerRequireContextHook from 'babel-plugin-require-context-hook/register';
 
 configure({ adapter: new Adapter() });
 
@@ -14,3 +15,5 @@ if (global.document) {
         }
     });
 }
+
+registerRequireContextHook();
