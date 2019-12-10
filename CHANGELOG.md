@@ -2,18 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-<a name="1.0.0-rc.0"></a>
-# [1.0.0-rc.0](https://github.com/SAP/fundamental-react/compare/v0.8.0-rc.7...v1.0.0-rc.0) (2019-12-05)
+<a name="0.8.0-rc.8"></a>
+# [0.8.0-rc.8](https://github.com/SAP/fundamental-react/compare/v0.8.0-rc.7...v0.8.0-rc.8) (2019-12-10)
 
 
-### Features
+### Bug Fixes
 
-* allow adding classes to both modal body and backdrop ([#816](https://github.com/SAP/fundamental-react/issues/816)) ([fd52cf0](https://github.com/SAP/fundamental-react/commit/fd52cf0))
-
-
-### BREAKING CHANGES
-
-* * removed className prop, new className props
+* initialize visual regression testing ([#815](https://github.com/SAP/fundamental-react/issues/815)) ([39c1017](https://github.com/SAP/fundamental-react/commit/39c1017))
 
 
 
