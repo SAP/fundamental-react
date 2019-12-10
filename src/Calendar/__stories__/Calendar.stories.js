@@ -4,6 +4,7 @@ import { storiesOf } from '@storybook/react';
 import {
     boolean,
     date,
+    optionsKnob,
     withKnobs
 } from '@storybook/addon-knobs';
 
@@ -21,6 +22,16 @@ const blockedDateSecondDefault = new Date(new Date().getFullYear(), new Date().g
 const disabledDateFirstDefault = new Date(new Date().getFullYear(), new Date().getMonth() - 1, 15);
 const disabledDateSecondDefault = new Date(new Date().getFullYear(), new Date().getMonth() - 1, 25);
 
+const weekdayOptions = {
+    Sunday: 'Sunday',
+    Monday: 'Monday',
+    Tuesday: 'Tuesday',
+    Wednesday: 'Wednesday',
+    Thursday: 'Thursday',
+    Friday: 'Friday',
+    Saturday: 'Saturday'
+};
+
 storiesOf('Components|Calendar', module)
     .addDecorator(withKnobs)
     .add('Default', () => (
@@ -31,6 +42,7 @@ storiesOf('Components|Calendar', module)
             disableBeforeDate={dateKnobToDate('disable before date', beforeDateDefault)}
             disableFutureDates={boolean('disable future dates', false)}
             disablePastDates={boolean('disable past dates', false)}
+            disableWeekday={optionsKnob('disable weekdays', weekdayOptions, null, { display: 'check' })}
             disableWeekends={boolean('disable weekends', false)}
             disabledDates={[dateKnobToDate('disable between dates (1)', disabledDateFirstDefault),
                 dateKnobToDate('disable between dates (2)', disabledDateSecondDefault)]} />
@@ -44,7 +56,4 @@ storiesOf('Components|Calendar', module)
     ))
     .add('range selection', () => (
         <Calendar enableRangeSelection />
-    ))
-    .add('disabled weekdays', () => (
-        <Calendar disableWeekday={['Monday', 'Wednesday', 'Friday']} />
     ));

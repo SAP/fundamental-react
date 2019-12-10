@@ -277,18 +277,18 @@ class Calendar extends Component {
         }
         if (typeof isRangeEnabled !== 'undefined' || isRangeEnabled) {
             if (blockedDates[0].isAfter(blockedDates[1])) {
-                return blockedDates[1].isSameOrBefore(date) && blockedDates[0].isSameOrAfter(date);
+                return blockedDates[1].isBefore(date) && blockedDates[0].isAfter(date);
             }
         }
-        return blockedDates[0].isSameOrBefore(date, 'day') && blockedDates[1].isSameOrAfter(date, 'day');
+        return blockedDates[0].isBefore(date, 'day') && blockedDates[1].isAfter(date, 'day');
     }
 
     disableWeekday = (date, weekDays) => {
-        const daysName = moment.weekdays();
-
-        if (typeof weekDays === 'undefined') {
+        if (!weekDays) {
             return false;
         }
+
+        const daysName = moment.weekdays();
 
         return weekDays.indexOf(daysName[date.day()]) > -1;
     }
