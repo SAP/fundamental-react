@@ -149,9 +149,9 @@ describe('<Modal />', () => {
                     title='Title' />
             );
 
-            expect( component.find('div.fd-overlay--modal').getDOMNode().attributes[
+            expect( component.props()[
                 'data-sample'
-            ].value).toBe(
+            ]).toBe(
                 'Sample'
             );
         });
@@ -264,7 +264,7 @@ describe('<Modal />', () => {
             component = mount(<Modal modalClassName='sample' show
                 title='Title' />);
 
-            expect(component.find('div.modal-demo-bg').hasClass('sample')).toBe(true);
+            expect(component.find('div.modal-demo-bg').first().hasClass('sample')).toBe(true);
         });
     });
 });
