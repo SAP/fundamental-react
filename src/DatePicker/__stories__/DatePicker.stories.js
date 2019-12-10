@@ -5,6 +5,7 @@ import {
     boolean,
     date,
     optionsKnob,
+    text,
     withKnobs
 } from '@storybook/addon-knobs';
 
@@ -45,7 +46,8 @@ storiesOf('Components|DatePicker', module)
             disableWeekday={optionsKnob('disable weekdays', weekdayOptions, null, { display: 'check' })}
             disableWeekends={boolean('disable weekends', false)}
             disabledDates={[dateKnobToDate('disable between dates (1)', disabledDateFirstDefault),
-                dateKnobToDate('disable between dates (2)', disabledDateSecondDefault)]} />
+                dateKnobToDate('disable between dates (2)', disabledDateSecondDefault)]}
+            locale={text('locale', 'en')} />
     ))
     .add('disable styles', () => (
         <DatePicker
