@@ -10,7 +10,7 @@ describe('<Modal />', () => {
     const modalFormTitle = 'Invite User';
     const infoModal = (
         <Modal
-            backdropClassName='blue'
+            className='blue'
             onClose={mockOnClose}
             show={bShow}
             title={modalInfoTitle}>
@@ -250,22 +250,6 @@ describe('<Modal />', () => {
                 component.find('button').getDOMNode().attributes['data-sample']
                     .value
             ).toBe('Sample Button');
-        });
-    });
-
-    describe('Custom class names', () => {
-        test('should allow classes to be added to backdrop', () => {
-            component = mount(<Modal backdropClassName='sample' show
-                title='Title' />);
-
-            expect(component.find('div.fd-overlay--modal').hasClass('sample')).toBe(true);
-        });
-
-        test('should allow classes to be added to modal', () => {
-            component = mount(<Modal modalClassName='sample' show
-                title='Title' />);
-
-            expect(component.find('div.modal-demo-bg').hasClass('sample')).toBe(true);
         });
     });
 });
