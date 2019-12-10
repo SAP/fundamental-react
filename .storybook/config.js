@@ -1,5 +1,5 @@
-import { addDecorator, configure } from '@storybook/react';
 import { withA11y } from '@storybook/addon-a11y';
+import { addDecorator, configure } from '@storybook/react';
 
 addDecorator(withA11y);
 
