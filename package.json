@@ -1,10 +1,6 @@
 {
   "name": "fundamental-react",
-<<<<<<< HEAD
-  "version": "1.0.0-rc.0",
-=======
   "version": "0.8.0-rc.8",
->>>>>>> master
   "private": false,
   "description": "SAP Fundamental Library, implemented in React",
   "license": "Apache-2.0",
