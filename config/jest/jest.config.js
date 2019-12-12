@@ -1,5 +1,5 @@
 module.exports = {
-    rootDir: '../../src',
+    rootDir: '../../src/',
     verbose: true,
     testURL: 'http://localhost/',
     testMatch: ['**/*.test.js'],
