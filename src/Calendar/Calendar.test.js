@@ -1,4 +1,5 @@
 import Calendar from '../Calendar/Calendar';
+import moment from 'moment';
 import { mount } from 'enzyme';
 import { mountComponentWithStyles } from '../utils/testUtils';
 import React from 'react';
@@ -8,23 +9,23 @@ describe('<Calendar />', () => {
     const defaultCalendar = <Calendar onChange={mockOnChange} />;
     const disabledWeekEnds = <Calendar disableWeekends />;
     const disabledBeforeDay = (
-        <Calendar disableBeforeDate={new Date(2018, 7, 3, 0, 0, 0, 0)} />
+        <Calendar disableBeforeDate={moment(new Date(2018, 7, 3, 0, 0, 0, 0))} />
     );
     const disabledAfterDay = (
-        <Calendar disableAfterDate={new Date(2018, 7, 3, 0, 0, 0, 0)} />
+        <Calendar disableAfterDate={moment(new Date(2018, 7, 3, 0, 0, 0, 0))} />
     );
     const blockedDays = (
         <Calendar
             blockedDates={[
-                new Date(2018, 1, 1, 0, 0, 0, 0),
-                new Date(2018, 3, 3, 0, 0, 0, 0)
+                moment(new Date(2018, 1, 1, 0, 0, 0, 0)),
+                moment(new Date(2018, 3, 3, 0, 0, 0, 0))
             ]} />
     );
     const disabledDates = (
         <Calendar
             disabledDates={[
-                new Date(2018, 1, 1, 0, 0, 0, 0),
-                new Date(2018, 3, 3, 0, 0, 0, 0)
+                moment(new Date(2018, 1, 1, 0, 0, 0, 0)),
+                moment(new Date(2018, 3, 3, 0, 0, 0, 0))
             ]} />
     );
     const disabledWeekDay = <Calendar disableWeekday={['Monday', 'Tuesday']} />;
@@ -75,7 +76,7 @@ describe('<Calendar />', () => {
         expect(wrapper.children().children().state('showMonths')).toBeFalsy();
 
         //set baseline initial date
-        let initialDate = new Date('1/15/2019');
+        let initialDate = moment('1/15/2019');
         wrapper.children().children().setState({ currentDateDisplayed: initialDate });
 
         //open month overlay
@@ -96,10 +97,10 @@ describe('<Calendar />', () => {
         // check that April was selected
         const currentDateDisplayed = wrapper.children().children().state('currentDateDisplayed');
 
-        expect(currentDateDisplayed.getMonth()).toEqual(3);
+        expect(currentDateDisplayed.month()).toEqual(3);
 
         // check that first of month is selected
-        expect(currentDateDisplayed.getDate()).toEqual(1);
+        expect(currentDateDisplayed.date()).toEqual(1);
     });
 
     test('click month from list with date range', () => {
@@ -107,7 +108,7 @@ describe('<Calendar />', () => {
         expect(wrapper.children().children().state('showMonths')).toBeFalsy();
 
         //set baseline initial date
-        let initialDate = new Date('1/15/2019');
+        let initialDate = moment('1/15/2019');
         wrapper.children().children().setState({ currentDateDisplayed: initialDate });
 
         //open months view
@@ -128,7 +129,7 @@ describe('<Calendar />', () => {
         // check that April was selected
         const currentDateDisplayed = wrapper.children().children().state('currentDateDisplayed');
 
-        expect(currentDateDisplayed.getMonth()).toEqual(3);
+        expect(currentDateDisplayed.month()).toEqual(3);
     });
 
     test('show/hide years', () => {
@@ -155,7 +156,7 @@ describe('<Calendar />', () => {
 
     test('click year from list', () => {
         let wrapper = mount(defaultCalendar);
-        const currentDateDisplayed = Object.assign(new Date(), wrapper.children().children().state('currentDateDisplayed'));
+        const currentDateDisplayed = Object.assign(moment(), wrapper.children().children().state('currentDateDisplayed'));
         expect(wrapper.children().children().state('showYears')).toBeFalsy();
         wrapper
             .find(
@@ -171,9 +172,9 @@ describe('<Calendar />', () => {
             .at(3)
             .simulate('click');
 
-        let newDateDisplayed = new Date(wrapper.children().children().state('currentDateDisplayed'));
-        expect(newDateDisplayed.getFullYear()).toEqual(
-            currentDateDisplayed.getFullYear() + 3
+        let newDateDisplayed = moment(new Date(wrapper.children().children().state('currentDateDisplayed')));
+        expect(newDateDisplayed.year()).toEqual(
+            currentDateDisplayed.year() + 3
         );
     });
 
@@ -187,7 +188,7 @@ describe('<Calendar />', () => {
             .at(0)
             .simulate('click');
 
-        const currentDateDisplayed = new Date(wrapper.state('selectedDate'));
+        const currentDateDisplayed = moment(new Date(wrapper.state('selectedDate')));
 
         // select a disabled day of month
         wrapper
@@ -198,12 +199,12 @@ describe('<Calendar />', () => {
             .simulate('click');
 
         // previously selected date should not change
-        expect(wrapper.state('selectedDate').getDate()).toEqual(currentDateDisplayed.getDate());
+        expect(wrapper.state('selectedDate').date()).toEqual(currentDateDisplayed.date());
     });
 
     test('click year from list from range selector', () => {
         let wrapper = mount(rangeSelect);
-        const currentDateDisplayed = Object.assign(new Date(), wrapper.children().children().state('currentDateDisplayed'));
+        const currentDateDisplayed = Object.assign(moment(), wrapper.children().children().state('currentDateDisplayed'));
         expect(wrapper.children().children().state('showYears')).toBeFalsy();
         wrapper
             .find(
@@ -219,16 +220,16 @@ describe('<Calendar />', () => {
             .at(3)
             .simulate('click');
 
-        const newDateDisplayed = new Date(wrapper.children().children().state('currentDateDisplayed'));
-        expect(newDateDisplayed.getFullYear()).toEqual(
-            currentDateDisplayed.getFullYear() + 3
+        const newDateDisplayed = moment(new Date(wrapper.children().children().state('currentDateDisplayed')));
+        expect(newDateDisplayed.year()).toEqual(
+            currentDateDisplayed.year() + 3
         );
     });
 
     test('click previous button', () => {
         let wrapper = mountComponentWithStyles(defaultCalendar);
 
-        let initialDate = new Date('3/28/2019');
+        let initialDate = moment('3/28/2019');
         wrapper.setState({ currentDateDisplayed: initialDate });
 
         wrapper
@@ -239,7 +240,7 @@ describe('<Calendar />', () => {
             .simulate('click');
         const newDateDisplayed = wrapper.state('currentDateDisplayed');
 
-        expect(newDateDisplayed.getMonth()).toEqual(1);
+        expect(newDateDisplayed.month()).toEqual(1);
 
         // previous button when year shown
         wrapper
@@ -259,13 +260,13 @@ describe('<Calendar />', () => {
             .simulate('click');
         //should show 2007-2018 (12 years)
         const newYearDisplayed = wrapper.state('currentDateDisplayed');
-        expect(newYearDisplayed.getFullYear()).toEqual(2007);
+        expect(newYearDisplayed.year()).toEqual(2007);
     });
 
     test('click next button', () => {
         let wrapper = mountComponentWithStyles(defaultCalendar);
 
-        let initialDate = new Date('3/28/2019');
+        let initialDate = moment('3/28/2019');
         wrapper.setState({ currentDateDisplayed: initialDate });
 
         wrapper
@@ -276,7 +277,7 @@ describe('<Calendar />', () => {
             .simulate('click');
         const newDateDisplayed = wrapper.state('currentDateDisplayed');
 
-        expect(newDateDisplayed.getMonth()).toEqual(3);
+        expect(newDateDisplayed.month()).toEqual(3);
 
         // previous button when year shown
         wrapper
@@ -297,14 +298,13 @@ describe('<Calendar />', () => {
 
         const newYearDisplayed = wrapper.state('currentDateDisplayed');
 
-        expect(newYearDisplayed.getFullYear()).toEqual(2031);
+        expect(newYearDisplayed.year()).toEqual(2031);
     });
 
-    // broken test for 31st of month -> needs to be tested once calendar is refactored.
-    xtest('click next button on the 31st of month', () => {
+    test('click next button on the 31st of month', () => {
         let wrapper = mountComponentWithStyles(defaultCalendar);
 
-        let initialDate = new Date('5/31/2019');
+        let initialDate = moment('5/31/2019');
         wrapper.setState({ currentDateDisplayed: initialDate });
 
         wrapper
@@ -315,7 +315,7 @@ describe('<Calendar />', () => {
             .simulate('click');
         const newDateDisplayed = wrapper.state('currentDateDisplayed');
 
-        expect(newDateDisplayed.getMonth()).toEqual(5);
+        expect(newDateDisplayed.month()).toEqual(5);
     });
 
     test('click on day', () => {
@@ -328,10 +328,10 @@ describe('<Calendar />', () => {
             .at(0)
             .simulate('click');
 
-        let selectedDate = new Date(wrapper.state('selectedDate'));
-        let currentDateDisplayed = new Date(wrapper.state('currentDateDisplayed'));
+        let selectedDate = moment(new Date(wrapper.state('selectedDate')));
+        let currentDateDisplayed = moment(new Date(wrapper.state('currentDateDisplayed')));
 
-        expect(selectedDate.getDate()).toEqual(currentDateDisplayed.getDate());
+        expect(selectedDate.date()).toEqual(currentDateDisplayed.date());
     });
 
     test('click on day with range enabled', () => {
@@ -344,7 +344,7 @@ describe('<Calendar />', () => {
             .at(0)
             .simulate('click');
 
-        const currentDateDisplayed = new Date(wrapper.state('selectedDate'));
+        const currentDateDisplayed = moment(new Date(wrapper.state('selectedDate')));
 
         // select 5nd day of month
         wrapper
@@ -355,8 +355,8 @@ describe('<Calendar />', () => {
             .simulate('click');
 
         const newDateDisplayed = wrapper.state('selectedDate');
-        currentDateDisplayed.setDate(currentDateDisplayed.getDate() + 4);
-        expect(newDateDisplayed.getDate()).toEqual(currentDateDisplayed.getDate());
+        currentDateDisplayed.add(4, 'days');
+        expect(newDateDisplayed.date()).toEqual(currentDateDisplayed.date());
 
         expect(wrapper.state('arrSelectedDates').length).toEqual(2);
     });
@@ -371,9 +371,9 @@ describe('<Calendar />', () => {
             .at(0)
             .simulate('click');
 
-        let currentDateDisplayed = new Date(wrapper.state('selectedDate'));
+        let currentDateDisplayed = moment(new Date(wrapper.state('selectedDate')));
 
-        // select 5nd day of month
+        // select 5th day of month
         wrapper
             .find(
                 'table.fd-calendar__table tbody.fd-calendar__group tr.fd-calendar__row td.fd-calendar__item:not(.fd-calendar__item--other-month)'
@@ -382,8 +382,8 @@ describe('<Calendar />', () => {
             .simulate('click');
 
         let newDateDisplayed = wrapper.state('selectedDate');
-        currentDateDisplayed.setDate(currentDateDisplayed.getDate() + 4);
-        expect(newDateDisplayed.getDate()).toEqual(currentDateDisplayed.getDate());
+        currentDateDisplayed.add(4, 'days');
+        expect(newDateDisplayed.date()).toEqual(currentDateDisplayed.date());
 
         // select 15th day of month
         wrapper
@@ -394,8 +394,8 @@ describe('<Calendar />', () => {
             .simulate('click');
 
         newDateDisplayed = wrapper.state('selectedDate');
-        currentDateDisplayed.setDate(currentDateDisplayed.getDate() + 10);
-        expect(newDateDisplayed.getDate()).toEqual(currentDateDisplayed.getDate());
+        currentDateDisplayed.add(10, 'days');
+        expect(newDateDisplayed.date()).toEqual(currentDateDisplayed.date());
 
         // should clear out previous selections
         expect(wrapper.state('arrSelectedDates').length).toEqual(1);
@@ -409,8 +409,8 @@ describe('<Calendar />', () => {
             .simulate('click');
 
         newDateDisplayed = wrapper.state('selectedDate');
-        currentDateDisplayed.setDate(currentDateDisplayed.getDate() - 10);
-        expect(newDateDisplayed.getDate()).toEqual(currentDateDisplayed.getDate());
+        currentDateDisplayed.subtract(10, 'days');
+        expect(newDateDisplayed.date()).toEqual(currentDateDisplayed.date());
 
         expect(wrapper.state('arrSelectedDates').length).toEqual(2);
     });
