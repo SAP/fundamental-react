@@ -9,14 +9,16 @@ import React, { Component } from 'react';
 class DatePicker extends Component {
     constructor(props) {
         super(props);
-
+        const ISO_DATE_FORMAT = 'YYYY-MM-DD';
+        let formattedDate = props.value.length > 0 ? moment(props.value, ISO_DATE_FORMAT).format(this.getLocaleDateFormat()) : '';
         this.state = {
             hidden: true,
-            selectedDate: null,
+            selectedDate: formattedDate.length === 0 ? null : moment(formattedDate, this.getLocaleDateFormat()),
             arrSelectedDates: [],
-            formattedDate: ''
+            formattedDate
         };
 
+        this.getLocaleDateFormat = this.getLocaleDateFormat.bind(this);
         this.calendarRef = React.createRef();
     }
 
@@ -60,7 +62,7 @@ class DatePicker extends Component {
     }
 
     validateDates = () => {
-        const longDateFormat = moment.localeData(this.props.locale).longDateFormat('L');
+        const longDateFormat = this.getLocaleDateFormat();
 
         if (this.props.enableRangeSelection) {
             const dateRange = this.state.formattedDate.split('-');
@@ -113,7 +115,7 @@ class DatePicker extends Component {
     };
 
     updateDate = (date) => {
-        const longDateFormat = moment.localeData(this.props.locale).longDateFormat('L');
+        const longDateFormat = this.getLocaleDateFormat();
 
         if (this.props.enableRangeSelection) {
             let formatDate = date[0].format(longDateFormat);
@@ -138,6 +140,8 @@ class DatePicker extends Component {
             formattedDate: this.state.formattedDate
         });
     };
+
+    getLocaleDateFormat = () => moment.localeData(this.props.locale).longDateFormat('L');
 
     render() {
         const {
@@ -188,7 +192,7 @@ class DatePicker extends Component {
                                 onChange={this.modifyDate}
                                 onClick={() => this.openCalendar('input')}
                                 onKeyPress={this.sendUpdate}
-                                placeholder={moment.localeData(this.props.locale).longDateFormat('L')}
+                                placeholder={this.getLocaleDateFormat()}
                                 type='text'
                                 value={this.state.formattedDate} />
                             <span className='fd-input-group__addon fd-input-group__addon--after fd-input-group__addon--button'>
@@ -240,19 +244,22 @@ DatePicker.propTypes = {
     enableRangeSelection: PropTypes.bool,
     inputProps: PropTypes.object,
     locale: PropTypes.string,
+    value: PropTypes.string,
     onBlur: PropTypes.func
 };
 
 DatePicker.defaultProps = {
     locale: 'en',
-    onBlur: () => {}
+    onBlur: () => {},
+    value: ''
 };
 
 DatePicker.propDescriptions = {
     ...Calendar.propDescriptions,
     enableRangeSelection: 'Set to **true** to enable the selection of a date range (begin and end).',
     locale: 'Language code to set the locale.',
-    onBlur: 'Callback function for onBlur events. In the object returned, `date` is the date object and `formattedDate` is the formatted date.'
+    onBlur: 'Callback function for onBlur events. In the object returned, `date` is the date object and `formattedDate` is the formatted date.',
+    value: 'Default value to be shown in the Datepicker. The only accepted format is the ISO format, i.e. YYYY-MM-DD'
 };
 
 export { DatePicker as __DatePicker };
