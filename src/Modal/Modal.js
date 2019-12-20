@@ -34,6 +34,7 @@ class Modal extends Component {
     render() {
         const {
             actions,
+            backdropClassName,
             bodyProps,
             children,
             className,
@@ -51,9 +52,14 @@ class Modal extends Component {
             ...rest
         } = this.props;
 
-        const modalClasses = classnames(
+        const backdropClasses = classnames(
             'fd-overlay',
             'fd-overlay--modal',
+            backdropClassName
+        );
+
+        const modalClasses = classnames(
+            'modal-demo-bg',
             className
         );
 
@@ -64,9 +70,9 @@ class Modal extends Component {
         }
 
         return ReactDOM.createPortal(
-            <FocusLock as='div' className={modalClasses}
+            <FocusLock as='div' className={backdropClasses}
                 lockProps={{ ...rest }}>
-                <div className='modal-demo-bg'>
+                <div className={modalClasses}>
                     <span data-autofocus tabIndex='-1' />
                     <div
                         aria-label={title}
@@ -116,6 +122,7 @@ Modal.displayName = 'Modal';
 Modal.propTypes = {
     title: PropTypes.string.isRequired,
     actions: PropTypes.node,
+    backdropClassName: PropTypes.string,
     bodyProps: PropTypes.object,
     children: PropTypes.node,
     className: PropTypes.string,
@@ -144,6 +151,7 @@ Modal.defaultProps = {
 
 Modal.propDescriptions = {
     actions: 'Node(s) to render within the footer of the dialog.',
+    backdropClassName: 'CSS class(es) to add to the modal backdrop.',
     bodyProps: 'Additional props to be spread to the body section of the dialog.',
     closeProps: 'Additional props to be spread to the close `<button>` element.',
     contentProps: 'Additional props to be spread to the content section of the dialog.',
