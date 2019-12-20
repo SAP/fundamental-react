@@ -168,10 +168,9 @@ class DatePicker extends Component {
                 ref={component => (this.component = component)}>
                 <div className='fd-popover'>
                     <div className='fd-popover__control'>
-                        <InputGroup>
+                        <InputGroup compact={compact}>
                             <FormInput
                                 {...inputProps}
-                                compact={compact}
                                 onBlur={this._handleBlur}
                                 onChange={this.modifyDate}
                                 onClick={() => this.openCalendar('input')}
@@ -180,7 +179,6 @@ class DatePicker extends Component {
                                 value={this.state.formattedDate} />
                             <InputGroup.Addon isButton>
                                 <Button {...buttonProps}
-                                    compact={compact}
                                     disableStyles={disableStyles}
                                     glyph='calendar'
                                     onClick={() => this.openCalendar()}
