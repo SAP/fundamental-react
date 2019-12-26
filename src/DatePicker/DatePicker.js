@@ -18,7 +18,6 @@ class DatePicker extends Component {
             formattedDate
         };
 
-        this.getLocaleDateFormat = this.getLocaleDateFormat.bind(this);
         this.calendarRef = React.createRef();
     }
 
