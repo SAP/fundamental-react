@@ -41,7 +41,7 @@ const Checkbox = React.forwardRef(({ checked, className, defaultChecked, disable
                 <input
                     {...inputProps}
                     aria-checked={getCheckStatus(checked, indeterminate)}
-                    checked={checked || defaultChecked}
+                    checked={checked !== undefined ? checked : defaultChecked}
                     className={classes}
                     disabled={disabled}
                     id={id}
