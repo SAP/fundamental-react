@@ -1,6 +1,7 @@
 import Button from '../Button/Button';
 import Calendar from '../Calendar/Calendar';
-import classnames from 'classnames';
+import FormInput from '../Forms/FormInput';
+import InputGroup from '../InputGroup/InputGroup';
 import moment from 'moment';
 import PropTypes from 'prop-types';
 import withStyles from '../utils/WithStyles/WithStyles';
@@ -160,18 +161,6 @@ class DatePicker extends Component {
             ...props
         } = this.props;
 
-        const datePickerInputGroupClasses = classnames(
-            'fd-input-group'
-        );
-
-        const datePickerInputClasses = classnames(
-            'fd-input',
-            {
-                'fd-input--compact': compact
-            },
-            'fd-input-group__input'
-        );
-
         return (
             <div
                 {...props}
@@ -179,28 +168,23 @@ class DatePicker extends Component {
                 ref={component => (this.component = component)}>
                 <div className='fd-popover'>
                     <div className='fd-popover__control'>
-                        <div
-                            className={datePickerInputGroupClasses}>
-                            <input
+                        <InputGroup compact={compact}>
+                            <FormInput
                                 {...inputProps}
-                                className={datePickerInputClasses}
                                 onBlur={this._handleBlur}
                                 onChange={this.modifyDate}
                                 onClick={() => this.openCalendar('input')}
                                 onKeyPress={this.sendUpdate}
                                 placeholder={moment.localeData(this.props.locale).longDateFormat('L')}
-                                type='text'
                                 value={this.state.formattedDate} />
-                            <span className='fd-input-group__addon fd-input-group__addon--after fd-input-group__addon--button'>
+                            <InputGroup.Addon isButton>
                                 <Button {...buttonProps}
-                                    className='fd-input-group__button'
-                                    compact={compact}
                                     disableStyles={disableStyles}
                                     glyph='calendar'
                                     onClick={() => this.openCalendar()}
                                     option='light' />
-                            </span>
-                        </div>
+                            </InputGroup.Addon>
+                        </InputGroup>
                     </div>
                     <div
                         aria-hidden={this.state.hidden}
