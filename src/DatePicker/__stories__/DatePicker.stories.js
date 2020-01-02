@@ -59,4 +59,7 @@ storiesOf('Components|DatePicker', module)
     ))
     .add('range selection', () => (
         <DatePicker enableRangeSelection />
+    ))
+    .add('compact', () => (
+        <DatePicker compact />
     ));
