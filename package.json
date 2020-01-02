@@ -108,7 +108,7 @@
     "eslint-plugin-compat": "^2.6.3",
     "eslint-plugin-flowtype": "2.50.3",
     "eslint-plugin-ie11": "^1.0.0",
-    "eslint-plugin-import": "2.18.2",
+    "eslint-plugin-import": "2.19.1",
     "eslint-plugin-jsx-a11y": "6.2.3",
     "eslint-plugin-loosely-restrict-imports": "^0.1.15",
     "eslint-plugin-react": "7.14.3",
