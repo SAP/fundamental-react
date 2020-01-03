@@ -10,7 +10,7 @@ class DatePicker extends Component {
     constructor(props) {
         super(props);
         const ISO_DATE_FORMAT = 'YYYY-MM-DD';
-        let formattedDate = props.value.length > 0 ? moment(props.value, ISO_DATE_FORMAT).format(this.getLocaleDateFormat()) : '';
+        const formattedDate = props.value.length > 0 ? moment(props.value, ISO_DATE_FORMAT).format(this.getLocaleDateFormat()) : '';
         this.state = {
             hidden: true,
             selectedDate: formattedDate.length === 0 ? null : moment(formattedDate, this.getLocaleDateFormat()),
