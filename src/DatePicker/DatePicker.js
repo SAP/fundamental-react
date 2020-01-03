@@ -10,7 +10,7 @@ class DatePicker extends Component {
     constructor(props) {
         super(props);
         const ISO_DATE_FORMAT = 'YYYY-MM-DD';
-        const formattedDate = props.value.length > 0 ? moment(props.value, ISO_DATE_FORMAT).format(this.getLocaleDateFormat()) : '';
+        const formattedDate = props.defaultValue.length > 0 ? moment(props.defaultValue, ISO_DATE_FORMAT).format(this.getLocaleDateFormat()) : '';
         this.state = {
             hidden: true,
             selectedDate: formattedDate.length === 0 ? null : moment(formattedDate, this.getLocaleDateFormat()),
@@ -240,25 +240,25 @@ DatePicker.propTypes = {
     ...Calendar.basePropTypes,
     buttonProps: PropTypes.object,
     compact: PropTypes.bool,
+    defaultValue: PropTypes.string,
     enableRangeSelection: PropTypes.bool,
     inputProps: PropTypes.object,
     locale: PropTypes.string,
-    value: PropTypes.string,
     onBlur: PropTypes.func
 };
 
 DatePicker.defaultProps = {
+    defaultValue: '',
     locale: 'en',
-    onBlur: () => {},
-    value: ''
+    onBlur: () => {}
 };
 
 DatePicker.propDescriptions = {
     ...Calendar.propDescriptions,
+    defaultValue: 'Default value to be shown in the Datepicker. The only accepted format is the ISO format, i.e. YYYY-MM-DD',
     enableRangeSelection: 'Set to **true** to enable the selection of a date range (begin and end).',
     locale: 'Language code to set the locale.',
-    onBlur: 'Callback function for onBlur events. In the object returned, `date` is the date object and `formattedDate` is the formatted date.',
-    value: 'Default value to be shown in the Datepicker. The only accepted format is the ISO format, i.e. YYYY-MM-DD'
+    onBlur: 'Callback function for onBlur events. In the object returned, `date` is the date object and `formattedDate` is the formatted date.'
 };
 
 export { DatePicker as __DatePicker };
