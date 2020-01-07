@@ -18,7 +18,11 @@ const Menu = React.forwardRef(({ addonBefore, children, className, disableStyles
     return (
         <nav {...props} className={menuClasses}
             ref={ref}>
-            {children}
+            {React.Children.toArray(children).map(child => {
+                return React.cloneElement(child, {
+                    addonBefore: addonBefore
+                });
+            })}
         </nav>
     );
 });
