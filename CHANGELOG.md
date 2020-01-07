@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.8.0-rc.9"></a>
+# [0.8.0-rc.9](https://github.com/SAP/fundamental-react/compare/v0.8.0-rc.8...v0.8.0-rc.9) (2020-01-02)
+
+
+### Bug Fixes
+
+* rebuild datepicker with input group ([#825](https://github.com/SAP/fundamental-react/issues/825)) ([b5ade4c](https://github.com/SAP/fundamental-react/commit/b5ade4c))
+* use momentjs for calendar and datepicker ([#817](https://github.com/SAP/fundamental-react/issues/817)) ([8f5f738](https://github.com/SAP/fundamental-react/commit/8f5f738))
+
+
+
 <a name="0.8.0-rc.8"></a>
 # [0.8.0-rc.8](https://github.com/SAP/fundamental-react/compare/v0.8.0-rc.7...v0.8.0-rc.8) (2019-12-10)
 

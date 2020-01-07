@@ -1,6 +1,6 @@
 import Button from '../Button/Button';
 import classnames from 'classnames';
-import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
+import moment from 'moment';
 import PropTypes from 'prop-types';
 import withStyles from '../utils/WithStyles/WithStyles';
 import React, { Component } from 'react';
@@ -11,51 +11,41 @@ class Calendar extends Component {
         super(props);
 
         this.state = {
-            todayDate: new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate(), 0, 0, 0, 0),
-            currentDateDisplayed: new Date(),
+            todayDate: moment().startOf('day'),
+            currentDateDisplayed: moment(),
             arrSelectedDates: [],
-            selectedDate: new Date(0, 0, 0),
+            selectedDate: moment({ year: 0 }),
             showMonths: false,
             showYears: false,
             dateClick: false
         };
     }
 
-    //Updates the states when the props of the parent component are changed.
+    // sync the selected date of the calendar with the date picker
     static getDerivedStateFromProps(updatedPropsParent, previousStates) {
+        const { customDate, enableRangeSelection } = updatedPropsParent;
 
-        if (typeof updatedPropsParent.customDate === 'undefined') {
+        if (typeof customDate === 'undefined') {
             return null;
         }
 
-        //If range is enabled and the date from the parent component does not match the array dates of the states then states are updated
-        if (typeof updatedPropsParent.enableRangeSelection !== 'undefined') {
-            if (updatedPropsParent.customDate !== previousStates.arrSelectedDates) {
-                //This checks if the date from date picker is undefined
-                if (updatedPropsParent.customDate === 'undefined') {
-                    //DateClick allows to update the date from the date picker if it is undefined
-                    if (previousStates.dateClick) {
-                        return ({ dateClick: false });
+        if (!previousStates.dateClick) {
+            if (typeof enableRangeSelection !== 'undefined') {
+                if (customDate !== previousStates.arrSelectedDates) {
+                    if (!customDate || !customDate.length) {
+                        // reset calendar state when date picker input is empty and did not click on a date
+                        return ({ currentDateDisplayed: moment(), arrSelectedDates: [], selectedDate: moment({ year: 0 }) });
                     }
-                    return ({ currentDateDisplayed: new Date(), arrSelectedDates: [], selectedDate: new Date(0, 0, 0) });
+                    // update calendar state with date picker input
+                    return ({ currentDateDisplayed: customDate[0], arrSelectedDates: customDate, selectedDate: moment({ year: 0 }) });
                 }
-                //updates the calendar if the date from date picker is correct
-                return ({ arrSelectedDates: updatedPropsParent.customDate, selectedDate: new Date(0, 0, 0) });
-            }
-        } else if (updatedPropsParent.customDate !== previousStates.currentDateDisplayed) {
-            if (typeof updatedPropsParent.customDate === 'undefined' || updatedPropsParent.customDate === '') {
-                return null;
-            } else if (updatedPropsParent.customDate === 'undefined') {
-                if (previousStates.selectedDate.getFullYear() !== 1899 && previousStates.dateClick) {
-                    return ({ dateClick: false });
+            } else if (customDate !== previousStates.currentDateDisplayed) {
+                if (!customDate) {
+                    // reset calendar state when date picker input is empty and did not click on a date
+                    return ({ currentDateDisplayed: moment(), selectedDate: moment({ year: 0 }) });
                 }
-                //If date was not clicked then the date is reset
-                if (!previousStates.dateClick) {
-                    return ({ currentDateDisplayed: new Date(), selectedDate: new Date(0, 0, 0) });
-                }
-            } else {
-                //Updates the calendar if the date from date picker is correct
-                return ({ currentDateDisplayed: updatedPropsParent.customDate, selectedDate: updatedPropsParent.customDate, dateClick: false });
+                // update calendar state with date picker input
+                return ({ currentDateDisplayed: customDate, selectedDate: customDate });
             }
         }
         return ({ dateClick: false });
@@ -69,39 +59,53 @@ class Calendar extends Component {
         });
     }
 
-    displayBetweenRange = (day) => {
+    isEnabledDate = (day) => {
+        const {
+            disableWeekends,
+            disableAfterDate,
+            disableBeforeDate,
+            blockedDates,
+            disableWeekday,
+            disablePastDates,
+            disableFutureDates,
+            disabledDates
+        } = this.props;
+        return (
+            !this.disableWeekday(day, disableWeekday) &&
+            !(disableWeekends && (day.day() === 0 || day.day() === 6)) &&
+            !(disableBeforeDate && day.isBefore(moment(disableBeforeDate))) &&
+            !(disableAfterDate && day.isAfter(moment(disableAfterDate))) &&
+            !(disablePastDates && day.isBefore(moment(), 'day')) &&
+            !(disableFutureDates && day.isAfter(moment(), 'day')) &&
+            !this.isDateBetween(day, blockedDates && blockedDates.map(date => moment(date))) &&
+            !this.isDateBetween(day, disabledDates && disabledDates.map(date => moment(date)))
+        );
+    }
+
+    isSelected = (day) => {
+        const { arrSelectedDates, selectedDate } = this.state;
+        return (
+            (
+                day.isSame(selectedDate, 'day') ||
+                (this.props.enableRangeSelection && (
+                    (typeof arrSelectedDates[0] !== 'undefined' ? arrSelectedDates[0].isSame(day, 'day') : false) ||
+                    (typeof arrSelectedDates[1] !== 'undefined' ? arrSelectedDates[1].isSame(day, 'day') : false)
+                ))
+            ) && this.isEnabledDate(day)
+        );
+    }
+
+    isInSelectedRange = (day) => {
         return this.props.enableRangeSelection && this.isDateBetween(day, this.state.arrSelectedDates, this.props.enableRangeSelection);
     }
 
-    displaySelectedRangeLast = (day) => {
-        return this.props.enableRangeSelection && (typeof this.state.arrSelectedDates[1] !== 'undefined' && this.state.arrSelectedDates[1].getTime() === day.getTime());
+    isSelectedRangeFirst = (day) => {
+        return this.props.enableRangeSelection && (typeof this.state.arrSelectedDates[0] !== 'undefined') && this.state.arrSelectedDates[0].isSame(day);
     }
 
-    displayIsDayOtherMonth = (day) => {
-        return day.getMonth() !== this.state.currentDateDisplayed.getMonth();
+    isSelectedRangeLast = (day) => {
+        return this.props.enableRangeSelection && (typeof this.state.arrSelectedDates[1] !== 'undefined' && this.state.arrSelectedDates[1].isSame(day));
     }
-
-    displayIsSelected = (day) => {
-        return (this.isSelected(day)
-            || (this.props.enableRangeSelection && ((typeof this.state.arrSelectedDates[0] !== 'undefined' ? this.state.arrSelectedDates[0].getTime() === day.getTime() : false)
-                || (typeof this.state.arrSelectedDates[1] !== 'undefined' ? this.state.arrSelectedDates[1].getTime() === day.getTime() : false))))
-            && !(this.props.disableWeekends && (day.getDay() === 0 || day.getDay() === 6))
-            && !(this.disableBeforeDate(day, this.props.disableBeforeDate))
-            && !this.isDateBetween(day, this.props.blockedDates)
-            && !(this.disableWeekday(day, this.props.disableWeekday))
-            && !(this.props.disablePastDates && (this.disableBeforeTodayDate(day)))
-            && !(this.props.disableFutureDates && this.disableAfterTodayDate(day))
-            && !(this.isDateBetween(day, this.props.disabledDates)) ? 'is-selected' : '';
-    }
-
-    displaySelectedRangeFirst = (day) => {
-        return this.props.enableRangeSelection && (typeof this.state.arrSelectedDates[0] !== 'undefined') && this.state.arrSelectedDates[0].getTime() === day.getTime();
-    }
-
-    displayDisabled = (day) => {
-        return (this.props.disableWeekends && (day.getDay() === 0 || day.getDay() === 6)) || (this.props.disablePastDates && (this.disableBeforeTodayDate(day))) || (this.props.disableFutureDates && this.disableAfterTodayDate(day)) || (this.disableWeekday(day, this.props.disableWeekday)) || this.disableBeforeDate(day, this.props.disableBeforeDate) || this.disableAfterDate(day, this.props.disableAfterDate) || this.isDateBetween(day, this.props.disabledDates) ? ' is-disabled' : '';
-    }
-
 
     showYears = () => {
         this.setState({
@@ -112,25 +116,23 @@ class Calendar extends Component {
     }
 
     changeMonth = (month) => {
-        let date = this.state.currentDateDisplayed;
-        let months = this.getMonths();
-        date.setMonth(months.indexOf(month));
-        // reset date to first of month
-        date.setDate(1);
+        const newDate = moment(this.state.currentDateDisplayed)
+            .locale(this.props.locale)
+            .month(month)
+            .date(1);
 
-        //updates month state
         if (!this.props.enableRangeSelection) {
             this.setState({
-                currentDateDisplayed: date,
-                selectedDate: date,
+                currentDateDisplayed: newDate,
+                selectedDate: newDate,
                 showMonths: false,
                 dateClick: true
             }, function() {
-                this.returnDateSelected(date);
+                this.props.onChange(newDate);
             });
         } else {
             this.setState({
-                currentDateDisplayed: date,
+                currentDateDisplayed: newDate,
                 showMonths: false,
                 dateClick: true
             });
@@ -138,20 +140,20 @@ class Calendar extends Component {
     }
 
     changeYear = (year) => {
-        let date = this.state.currentDateDisplayed;
-        date.setFullYear(year);
+        const newDate = moment(this.state.currentDateDisplayed).year(year);
+
         if (!this.props.enableRangeSelection) {
             this.setState({
-                currentDateDisplayed: date,
+                currentDateDisplayed: newDate,
+                selectedDate: newDate,
                 showYears: false,
-                selectedDate: date,
                 dateClick: true
             }, function() {
-                this.returnDateSelected(date);
+                this.props.onChange(newDate);
             });
         } else {
             this.setState({
-                currentDateDisplayed: date,
+                currentDateDisplayed: newDate,
                 showYears: false,
                 dateClick: true
             });
@@ -159,26 +161,21 @@ class Calendar extends Component {
     }
 
     generateMonths = (monthProps) => {
-        let months = this.getMonths();
-        let listOfMonths = months.map(element => {
-            let shortenedNameMonth = '';
-            if (element.length > 3) {
-                shortenedNameMonth = element.substring(0, 3) + '.';
-            } else {
-                shortenedNameMonth = element.substring(0, 3);
-            }
+        const months = moment.localeData(this.props.locale).months();
+        const listOfMonths = months.map((month, index) => {
+            const shortenedNameMonth = moment.localeData(this.props.locale).monthsShort()[index];
 
-            let calendarItemClasses = classnames(
+            const calendarItemClasses = classnames(
                 'fd-calendar__item',
                 {
-                    'is-selected': months[this.state.currentDateDisplayed.getMonth()] === element,
-                    'fd-calendar__item--current': months[this.state.todayDate.getMonth()] === element
+                    'is-selected': months[this.state.currentDateDisplayed.month()] === month,
+                    'fd-calendar__item--current': months[this.state.todayDate.month()] === month
                 }
             );
 
             return (
-                <li className={calendarItemClasses} key={element}
-                    name={element} onClick={() => this.changeMonth(element)}>
+                <li className={calendarItemClasses} key={month}
+                    name={month} onClick={() => this.changeMonth(month)}>
                     {shortenedNameMonth}
                 </li>
             );
@@ -194,19 +191,18 @@ class Calendar extends Component {
     }
 
     generateYears = (yearListProps) => {
-
-        let year = this.state.currentDateDisplayed.getFullYear();
-        let years = [year];
+        let year = this.state.currentDateDisplayed.year();
+        const years = [year];
         for (let iterations = 1; iterations < 12; iterations++) {
             year = year + 1;
             years.push(year);
         }
-        let listOfYears = years.map(element => {
-            let yearClasses = classnames(
+        const listOfYears = years.map(element => {
+            const yearClasses = classnames(
                 'fd-calendar__item',
                 {
-                    'is-selected': this.state.currentDateDisplayed.getFullYear() === element,
-                    'fd-calendar__item--current': this.state.todayDate.getFullYear() === element
+                    'is-selected': this.state.currentDateDisplayed.year() === element,
+                    'fd-calendar__item--current': this.state.todayDate.year() === element
                 }
             );
 
@@ -226,38 +222,26 @@ class Calendar extends Component {
         );
     }
 
-    next = () => {
-
+    handleNext = () => {
+        const { currentDateDisplayed } = this.state;
         if (this.state.showYears) {
-            let copyDate = this.state.currentDateDisplayed;
-            copyDate.setFullYear(copyDate.getFullYear() + 12);
-            this.setState({ currentDateDisplayed: copyDate, dateClick: true });
+            const newDate = moment(currentDateDisplayed).add(12, 'year');
+            this.setState({ currentDateDisplayed: newDate, dateClick: true });
         } else {
-            let copyDate = this.state.currentDateDisplayed;
-            let selectedDate = new Date(this.state.selectedDate.getFullYear(), this.state.selectedDate.getMonth(), this.state.selectedDate.getDate(), 0, 0, 0, 0);
-            copyDate.setMonth(copyDate.getMonth() + 1);
-            this.setState({
-                currentDateDisplayed: copyDate, selectedDate: selectedDate, dateClick: true
-            });
+            const newDate = moment(currentDateDisplayed).add(1, 'month');
+            this.setState({ currentDateDisplayed: newDate, dateClick: true });
         }
     }
 
-    previous = () => {
-
+    handlePrevious = () => {
+        const { currentDateDisplayed } = this.state;
         if (this.state.showYears) {
-            let copyDate = this.state.currentDateDisplayed;
-            copyDate.setFullYear(copyDate.getFullYear() - 12);
-            this.setState({ currentDateDisplayed: copyDate, dateClick: true });
+            const newDate = moment(currentDateDisplayed).subtract(12, 'year');
+            this.setState({ currentDateDisplayed: newDate, dateClick: true });
         } else {
-            let copyDate = this.state.currentDateDisplayed;
-            let selectedDate = new Date(this.state.selectedDate.getFullYear(), this.state.selectedDate.getMonth(), this.state.selectedDate.getDate(), 0, 0, 0, 0);
-            copyDate.setMonth(copyDate.getMonth() - 1);
-
-            this.setState({
-                currentDateDisplayed: copyDate, selectedDate: selectedDate, dateClick: true
-            });
+            const newDate = moment(currentDateDisplayed).subtract(1, 'month');
+            this.setState({ currentDateDisplayed: newDate, dateClick: true });
         }
-
     }
 
     dateClick = (day, isRangeEnabled) => {
@@ -265,13 +249,9 @@ class Calendar extends Component {
         if (typeof isRangeEnabled !== 'undefined' && isRangeEnabled) {
             selectedDates = this.state.arrSelectedDates;
             if (selectedDates.length === 2) {
-                selectedDates = [];
-                selectedDates.push(day);
-            } else if (typeof selectedDates[0] !== 'undefined' && day.getTime() <= selectedDates[0].getTime()) {
-                let newArr = [];
-                newArr.push(day);
-                newArr.push(selectedDates[0]);
-                selectedDates = newArr;
+                selectedDates = [day];
+            } else if (typeof selectedDates[0] !== 'undefined' && day.isSameOrBefore(selectedDates[0])) {
+                selectedDates = [day, selectedDates[0]];
             } else {
                 selectedDates.push(day);
             }
@@ -284,119 +264,37 @@ class Calendar extends Component {
             dateClick: true
         }, function() {
             if (isRangeEnabled) {
-                this.returnDateSelected(selectedDates);
+                this.props.onChange(selectedDates);
             } else {
-                this.returnDateSelected(day);
+                this.props.onChange(day);
             }
         });
     };
 
-    retrieveStartOfWeek = (date) => {
-        let day = date.getDay();
-        let difference = date.getDate() - day;
-        return new Date(date.setDate(difference));
-    }
-
-    returnFirstDayMonth = (date) => {
-        let firstDay = new Date(date.getFullYear(), date.getMonth(), 1);
-        return firstDay;
-    }
-
-    returnLastDayMonth = (date) => {
-        let lastDay = new Date(date.getFullYear(), date.getMonth() + 1, 0);
-        return lastDay;
-    }
-
-    addDays = (date, days) => {
-        let result = new Date(date);
-        result.setDate(result.getDate() + days);
-        return result;
-    }
-
-    retrieveEndOfWeek = (date) => {
-        let difference = date.getDate() + 6 - date.getDay();
-        let newDate = new Date(date.getFullYear(), date.getMonth(), difference);
-        return newDate;
-    }
-
     isDateBetween = (date, blockedDates, isRangeEnabled) => {
-
         if (typeof blockedDates === 'undefined' || typeof blockedDates[0] === 'undefined' || typeof blockedDates[1] === 'undefined') {
             return false;
         }
-
         if (typeof isRangeEnabled !== 'undefined' || isRangeEnabled) {
-            if (blockedDates[0].getTime() > blockedDates[1].getTime()) {
-                return blockedDates[1].getTime() < date.getTime() && blockedDates[0].getTime() > date.getTime();
+            if (blockedDates[0].isAfter(blockedDates[1])) {
+                return blockedDates[1].isBefore(date) && blockedDates[0].isAfter(date);
             }
         }
-        return blockedDates[0].getTime() < date.getTime() && blockedDates[1].getTime() > date.getTime();
-    }
-
-    isSelected = (date) => {
-        return (this.state.selectedDate.getDate() === date.getDate() &&
-            this.state.selectedDate.getMonth() === date.getMonth() &&
-            this.state.selectedDate.getFullYear() === date.getFullYear());
+        return blockedDates[0].isBefore(date, 'day') && blockedDates[1].isAfter(date, 'day');
     }
 
     disableWeekday = (date, weekDays) => {
-        const { day1Sun, day2Mon, day3Tues, day4Wed, day5Thurs, day6Fri, day7Sat } = this.props.localizedText;
-        let daysName = [day1Sun, day2Mon, day3Tues, day4Wed, day5Thurs, day6Fri, day7Sat];
-
-        if (typeof weekDays === 'undefined') {
+        if (!weekDays) {
             return false;
         }
 
-        if (weekDays.indexOf(daysName[date.getDay()]) > 0) {
-            return true;
-        }
-        return false;
-    }
+        const daysName = moment.weekdays();
 
-    disableBeforeDate = (date, beforeDate) => {
-        if (typeof beforeDate === 'undefined') {
-            return false;
-        }
-        return (date.getTime() < beforeDate.getTime());
-    }
-
-    disableAfterDate = (date, afterDate) => {
-
-        if (typeof afterDate === 'undefined') {
-            return false;
-        }
-        return (date.getTime() > afterDate.getTime());
-    }
-
-    disableBeforeTodayDate = (date) => {
-        let todayDate = new Date();
-        todayDate.setHours(0, 0, 0, 0);
-
-        return date.getTime() < todayDate.getTime();
-    }
-
-    disableAfterTodayDate = (date) => {
-        let todayDate = new Date();
-        todayDate.setHours(0, 0, 0, 0);
-
-        return date.getTime() > todayDate.getTime();
-    }
-
-    returnDateSelected = (dates) => {
-        this.props.onChange(dates);
-    }
-
-    getMonths = () => {
-        const { month01Jan, month02Feb, month03Mar, month04Apr, month05May, month06Jun, month07Jul,
-            month08Aug, month09Sep, month10Oct, month11Nov, month12Dec } = this.props.localizedText;
-        let months = [month01Jan, month02Feb, month03Mar, month04Apr, month05May, month06Jun, month07Jul,
-            month08Aug, month09Sep, month10Oct, month11Nov, month12Dec];
-
-        return months;
+        return weekDays.indexOf(daysName[date.day()]) > -1;
     }
 
     generateNavigation = () => {
-        let months = this.getMonths();
+        const months = moment.localeData(this.props.locale).months();
 
         return (
             <header className='fd-calendar__header'>
@@ -406,7 +304,7 @@ class Calendar extends Component {
                             compact
                             disableStyles={this.props.disableStyles}
                             glyph='slim-arrow-left'
-                            onClick={this.previous}
+                            onClick={this.handlePrevious}
                             option='light' />
                     </div>
                     <div className='fd-calendar__action'>
@@ -416,7 +314,7 @@ class Calendar extends Component {
                             onClick={this.showMonths}
                             option='light'>
                             <span>
-                                {months[this.state.currentDateDisplayed.getMonth()]}
+                                {months[this.state.currentDateDisplayed.month()]}
                             </span>
                         </Button>
                     </div>
@@ -427,7 +325,7 @@ class Calendar extends Component {
                             onClick={this.showYears}
                             option='light'>
                             <span>
-                                {this.state.currentDateDisplayed.getFullYear()}
+                                {this.state.currentDateDisplayed.year()}
                             </span>
                         </Button>
                     </div>
@@ -437,7 +335,7 @@ class Calendar extends Component {
                             compact
                             disableStyles={this.props.disableStyles}
                             glyph='slim-arrow-right'
-                            onClick={this.next}
+                            onClick={this.handleNext}
                             option='light' />
                     </div>
                 </div>
@@ -446,9 +344,8 @@ class Calendar extends Component {
     }
 
     generateWeekdays = () => {
-        let weekDays = [];
-        const { dayChar1Sun, dayChar2Mon, dayChar3Tues, dayChar4Wed, dayChar5Thurs, dayChar6Fri, dayChar7Sat } = this.props.localizedText;
-        let daysName = [dayChar1Sun, dayChar2Mon, dayChar3Tues, dayChar4Wed, dayChar5Thurs, dayChar6Fri, dayChar7Sat];
+        const weekDays = [];
+        const daysName = moment.localeData(this.props.locale).weekdaysMin().map(day => day.charAt(0));
 
         for (let index = 0; index < 7; index++) {
             weekDays.push(
@@ -463,36 +360,39 @@ class Calendar extends Component {
     }
 
     generateDays = (tableBodyProps) => {
-        //props that allows the developer to pass their preferences
-        let blockedDates = this.props.blockedDates;
-        let enableRangeSelection = this.props.enableRangeSelection;
+        const {
+            currentDateDisplayed,
+            todayDate
+        } = this.state;
 
-        let firstDayMonth = this.returnFirstDayMonth(this.state.currentDateDisplayed);
-        let endDayMonth = this.returnLastDayMonth(firstDayMonth);
-        let firstDayWeekMonth = this.retrieveStartOfWeek(firstDayMonth);
-        let lastDateEndMonth = this.retrieveEndOfWeek(endDayMonth);
-        let rows = [];
+        const blockedDates = this.props.blockedDates && this.props.blockedDates.map(date => moment(date));
+        const enableRangeSelection = this.props.enableRangeSelection;
+
+        const firstDayMonth = moment(currentDateDisplayed).startOf('month');
+        const endDayMonth = moment(firstDayMonth).endOf('month');
+        const firstDayWeekMonth = moment(firstDayMonth).startOf('week');
+        const lastDateEndMonth = moment(endDayMonth).endOf('week');
+        const rows = [];
+
         let days = [];
         let day = firstDayWeekMonth;
         let dateFormatted = '';
 
-        //iterate until reach the end of the month
-        while (day <= lastDateEndMonth) {
-            //7 days in a week
+        while (day.isSameOrBefore(lastDateEndMonth)) {
             for (let iterations = 0; iterations < 7; iterations++) {
-                dateFormatted = day.getDate();
-                let copyDate = day;
+                dateFormatted = day.date();
+                const copyDate = moment(day);
 
-                let dayClasses = classnames(
+                const dayClasses = classnames(
                     'fd-calendar__item',
                     {
-                        'fd-calendar__item--other-month': this.displayIsDayOtherMonth(day),
-                        'fd-calendar__item--current': this.state.todayDate.getTime() === copyDate.getTime(),
-                        'is-selected': this.displayIsSelected(day),
-                        'is-selected-range-first': this.displaySelectedRangeFirst(day),
-                        'is-selected-range-last': this.displaySelectedRangeLast(day),
-                        'is-selected-range': this.displayBetweenRange(day),
-                        'is-disabled': this.displayDisabled(day),
+                        'fd-calendar__item--other-month': !day.isSame(currentDateDisplayed, 'month'),
+                        'fd-calendar__item--current': todayDate.isSame(copyDate),
+                        'is-selected': this.isSelected(day),
+                        'is-selected-range-first': this.isSelectedRangeFirst(day),
+                        'is-selected-range-last': this.isSelectedRangeLast(day),
+                        'is-selected-range': this.isInSelectedRange(day),
+                        'is-disabled': !this.isEnabledDate(day),
                         'is-blocked': this.isDateBetween(day, blockedDates)
                     }
                 );
@@ -501,13 +401,13 @@ class Calendar extends Component {
                     <td
                         className={dayClasses}
                         key={copyDate}
-                        onClick={!this.displayDisabled(day) ? () => this.dateClick(copyDate, enableRangeSelection) : null}
+                        onClick={this.isEnabledDate(day) ? () => this.dateClick(copyDate, enableRangeSelection) : null}
                         role='gridcell' >
                         <span className='fd-calendar__text'>{dateFormatted.toString()}</span>
                     </td >
                 );
 
-                day = this.addDays(day, 1);
+                day = moment(day).add(1, 'days');
             }
 
             rows.push(
@@ -600,34 +500,6 @@ Calendar.basePropTypes = {
 
 Calendar.propTypes = {
     ...Calendar.basePropTypes,
-    localizedText: CustomPropTypes.i18n({
-        day1Sun: PropTypes.string,
-        day2Mon: PropTypes.string,
-        day3Tues: PropTypes.string,
-        day4Wed: PropTypes.string,
-        day5Thurs: PropTypes.string,
-        day6Fri: PropTypes.string,
-        day7Sat: PropTypes.string,
-        dayChar1Sun: PropTypes.string,
-        dayChar2Mon: PropTypes.string,
-        dayChar3Tues: PropTypes.string,
-        dayChar4Wed: PropTypes.string,
-        dayChar5Thurs: PropTypes.string,
-        dayChar6Fri: PropTypes.string,
-        dayChar7Sat: PropTypes.string,
-        month01Jan: PropTypes.string,
-        month02Feb: PropTypes.string,
-        month03Mar: PropTypes.string,
-        month04Apr: PropTypes.string,
-        month05May: PropTypes.string,
-        month06Jun: PropTypes.string,
-        month07Jul: PropTypes.string,
-        month08Aug: PropTypes.string,
-        month09Sep: PropTypes.string,
-        month10Oct: PropTypes.string,
-        month11Nov: PropTypes.string,
-        month12Dec: PropTypes.string
-    }),
     monthListProps: PropTypes.object,
     tableBodyProps: PropTypes.object,
     tableHeaderProps: PropTypes.object,
@@ -637,34 +509,7 @@ Calendar.propTypes = {
 };
 
 Calendar.defaultProps = {
-    localizedText: {
-        day1Sun: 'Sunday',
-        day2Mon: 'Monday',
-        day3Tues: 'Tuesday',
-        day4Wed: 'Wednesday',
-        day5Thurs: 'Thursday',
-        day6Fri: 'Friday',
-        day7Sat: 'Saturday',
-        dayChar1Sun: 'S',
-        dayChar2Mon: 'M',
-        dayChar3Tues: 'T',
-        dayChar4Wed: 'W',
-        dayChar5Thurs: 'T',
-        dayChar6Fri: 'F',
-        dayChar7Sat: 'S',
-        month01Jan: 'January',
-        month02Feb: 'February',
-        month03Mar: 'March',
-        month04Apr: 'April',
-        month05May: 'May',
-        month06Jun: 'June',
-        month07Jul: 'July',
-        month08Aug: 'August',
-        month09Sep: 'September',
-        month10Oct: 'October',
-        month11Nov: 'November',
-        month12Dec: 'December'
-    },
+    locale: 'en',
     onChange: () => { }
 };
 
@@ -677,34 +522,6 @@ Calendar.propDescriptions = {
     disablePastDates: 'Set to **true** to disable dates before today\'s date.',
     disableWeekday: 'Disables dates that match a weekday.',
     disableWeekends: 'Set to **true** to disables dates that match a weekend.',
-    localizedTextShape: {
-        day1Sun: 'Full name for Sunday.',
-        day2Mon: 'Full name for Monday.',
-        day3Tues: 'Full name for Tuesday.',
-        day4Wed: 'Full name for Wednesday.',
-        day5Thurs: 'Full name for Thursday.',
-        day6Fri: 'Full name for Friday.',
-        day7Sat: 'Full name for Saturday.',
-        dayChar1Sun: 'Single character for Sunday.',
-        dayChar2Mon: 'Single character for Monday.',
-        dayChar3Tues: 'Single character for Tuesday.',
-        dayChar4Wed: 'Single character for Wednesday.',
-        dayChar5Thurs: 'Single character for Thursday.',
-        dayChar6Fri: 'Single character for Friday.',
-        dayChar7Sat: 'Single character for Saturday.',
-        month01Jan: 'Full name for January.',
-        month02Feb: 'Full name for February.',
-        month03Mar: 'Full name for March.',
-        month04Apr: 'Full name for April.',
-        month05May: 'Full name for May.',
-        month06Jun: 'Full name for June.',
-        month07Jul: 'Full name for July.',
-        month08Aug: 'Full name for August.',
-        month09Sep: 'Full name for September.',
-        month10Oct: 'Full name for Octobor.',
-        month11Nov: 'Full name for November.',
-        month12Dec: 'Full name for December'
-    },
     monthListProps: 'Additional props to be spread to the month\'s `<ul>` element.',
     tableBodyProps: 'Additional props to be spread to the `<tbody>` element.',
     tableHeaderProps: 'Additional props to be spread to the `<thead>` element.',

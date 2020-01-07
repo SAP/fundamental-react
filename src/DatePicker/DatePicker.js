@@ -1,6 +1,8 @@
 import Button from '../Button/Button';
 import Calendar from '../Calendar/Calendar';
-import classnames from 'classnames';
+import FormInput from '../Forms/FormInput';
+import InputGroup from '../InputGroup/InputGroup';
+import moment from 'moment';
 import PropTypes from 'prop-types';
 import withStyles from '../utils/WithStyles/WithStyles';
 import React, { Component } from 'react';
@@ -11,7 +13,7 @@ class DatePicker extends Component {
 
         this.state = {
             hidden: true,
-            selectedDate: '',
+            selectedDate: null,
             arrSelectedDates: [],
             formattedDate: ''
         };
@@ -31,41 +33,6 @@ class DatePicker extends Component {
 
     modifyDate = (e) => {
         this.setState({ formattedDate: e.target.value });
-    }
-
-    //This is being used only when the user presses enter or clicks outside of the component
-    formatDate = (date) => {
-        let formatDate = '';
-        if (this.props.enableRangeSelection) {
-            if (date.length === 0) {
-                return '';
-            }
-
-            let firstDateMonth = date[0].getMonth() + 1;
-            let firstDateDay = date[0].getDate();
-            let firstDateYear = date[0].getFullYear();
-
-            let secondDateMonth = date[1].getMonth() + 1;
-            let secondDateDay = date[1].getDate();
-            let secondDateYear = date[1].getFullYear();
-
-            if (firstDateYear >= 3000 || secondDateYear >= 3000) {
-                return '';
-            }
-            formatDate =
-                firstDateMonth +
-                '/' +
-                firstDateDay +
-                '/' +
-                firstDateYear +
-                '-' +
-                secondDateMonth +
-                '/' +
-                secondDateDay +
-                '/' +
-                secondDateYear;
-        }
-        return formatDate;
     }
 
     sendUpdate = (e) => {
@@ -89,122 +56,49 @@ class DatePicker extends Component {
         this.clickOutside();
     };
 
-    isDateEnabled = (dateToCheck) => {
-        return this.calendarRef.current.displayDisabled(new Date(dateToCheck)) === '' ? true : false;
+    isDateValid = (date) => {
+        return date.isValid() && this.calendarRef.current.isEnabledDate(date);
     }
 
     validateDates = () => {
-        let regex = /[!$%^&*()_+|~=`{}\[\]:'<>?,.\a-zA-Z]/;
-        //Checks first if range is enabled
+        const longDateFormat = moment.localeData(this.props.locale).longDateFormat('L');
+
         if (this.props.enableRangeSelection) {
-            //If the formattedDate contains a list of special characters symbols then it will be reset
-            if (
-                this.state.formattedDate.search(regex) !== -1 ||
-                this.state.formattedDate === '' ||
-                this.state.formattedDate.split('-').length < 2
-            ) {
+            const dateRange = this.state.formattedDate.split('-');
+            const firstDate = moment(dateRange[0], longDateFormat);
+            const secondDate = moment(dateRange[1], longDateFormat);
+
+            if (this.isDateValid(firstDate) && this.isDateValid(secondDate)) {
+                let arrSelected = [];
+                firstDate.isAfter(secondDate)
+                    ? (arrSelected = [secondDate, firstDate])
+                    : (arrSelected = [firstDate, secondDate]);
+
                 this.setState({
-                    formattedDate: '',
-                    arrSelectedDates: 'undefined',
-                    hidden: false
+                    selectedDate: null,
+                    arrSelectedDates: arrSelected
                 });
             } else {
-                //Breaks the input into an array
-                let dateRange = this.state.formattedDate.split('-');
-
-                // check if start and end dates are enabled
-                if (this.isDateEnabled(dateRange[0]) && this.isDateEnabled(dateRange[1])) {
-                    let dateSeparatedFirstRange = dateRange[0].split('/');
-                    let dateSeparatedSecondRange = dateRange[1].split('/');
-
-                    //First date
-                    let firstYearRange = parseInt(dateSeparatedFirstRange[2], 10);
-                    let firstDateRange = parseInt(dateSeparatedFirstRange[1], 10);
-                    let firstMonthRange = parseInt(dateSeparatedFirstRange[0], 10);
-
-                    //Second date
-                    let secondYearRange = parseInt(dateSeparatedSecondRange[2], 10);
-                    let secondDateRange = parseInt(dateSeparatedSecondRange[1], 10);
-                    let secondMonthRange = parseInt(dateSeparatedSecondRange[0], 10);
-
-                    //Checks if the input is actually numbers and follows the required form
-                    if ((1 <= firstDateRange && firstDateRange <= 31) &&
-                        (1 <= firstMonthRange && firstMonthRange <= 12) &&
-                        firstYearRange <= 3000 &&
-                        (1 <= secondDateRange && secondDateRange <= 31) &&
-                        (1 <= secondMonthRange && secondMonthRange <= 12) &&
-                        secondYearRange <= 3000
-                    ) {
-                        let firstDate = new Date(
-                            firstYearRange,
-                            firstMonthRange - 1,
-                            firstDateRange
-                        );
-                        let secondDate = new Date(
-                            secondYearRange,
-                            secondMonthRange - 1,
-                            secondDateRange
-                        );
-                        let arrSelected = [];
-                        //Swaps the order in case one date is bigger than the other
-                        firstDate.getTime() > secondDate.getTime()
-                            ? (arrSelected = [secondDate, firstDate])
-                            : (arrSelected = [firstDate, secondDate]);
-
-                        this.setState({
-                            selectedDate: '',
-                            arrSelectedDates: arrSelected
-                        });
-                    } else {
-                        this.setState({
-                            formattedDate: '',
-                            selectedDate: 'undefined',
-                            arrSelectedDates: 'undefined'
-                        });
-                    }
-                } else {
-                    this.setState({
-                        formattedDate: '',
-                        selectedDate: 'undefined',
-                        arrSelectedDates: 'undefined'
-                    });
-                }
+                this.resetState();
             }
         } else {
-            // check if entered date is enabled
-            if (this.isDateEnabled(this.state.formattedDate)) {
-                if (this.state.formattedDate.search(regex) !== -1) {
-                    this.setState({
-                        formattedDate: this.formatDate(this.state.selectedDate),
-                        selectedDate: 'undefined'
-                    });
-                } else {
-                    let dateSeparated = this.state.formattedDate.split('/');
-                    let year = parseInt(dateSeparated[2], 10);
-                    let date = parseInt(dateSeparated[1], 10);
-                    let month = parseInt(dateSeparated[0], 10);
-
-                    if ((1 <= date && date <= 31) &&
-                        (1 <= month && month <= 12) &&
-                        year <= 3000
-                    ) {
-                        this.setState({
-                            selectedDate: new Date(year, month - 1, date)
-                        });
-                    } else {
-                        this.setState({
-                            selectedDate: 'undefined',
-                            formattedDate: ''
-                        });
-                    }
-                }
-            } else {
+            const newDate = moment(this.state.formattedDate, longDateFormat);
+            if (this.isDateValid(newDate)) {
                 this.setState({
-                    selectedDate: 'undefined',
-                    formattedDate: ''
+                    selectedDate: newDate
                 });
+            } else {
+                this.resetState();
             }
         }
+    }
+
+    resetState = () => {
+        this.setState({
+            formattedDate: '',
+            selectedDate: null,
+            arrSelectedDates: []
+        });
     }
 
     clickOutside = () => {
@@ -220,55 +114,21 @@ class DatePicker extends Component {
     };
 
     updateDate = (date) => {
+        const longDateFormat = moment.localeData(this.props.locale).longDateFormat('L');
+
         if (this.props.enableRangeSelection) {
-            if (date.length === 2) {
-                let firstDateMonth = date[0].getMonth() + 1;
-                let firstDateDay = date[0].getDate();
-                let firstDateYear = date[0].getFullYear();
-
-                let secondDateMonth = date[1].getMonth() + 1;
-                let secondDateDay = date[1].getDate();
-                let secondDateYear = date[1].getFullYear();
-
-                let formatDate =
-                    firstDateMonth +
-                    '/' +
-                    firstDateDay +
-                    '/' +
-                    firstDateYear +
-                    '-' +
-                    secondDateMonth +
-                    '/' +
-                    secondDateDay +
-                    '/' +
-                    secondDateYear;
-                this.setState({
-                    arrSelectedDates: date,
-                    formattedDate: formatDate
-                });
-            } else {
-                let firstDateMonth = date[0].getMonth() + 1;
-                let firstDateDay = date[0].getDate();
-                let firstDateYear = date[0].getFullYear();
-
-                let formatDate =
-                    firstDateMonth + '/' + firstDateDay + '/' + firstDateYear;
-
-                this.setState({
-                    arrSelectedDates: date,
-                    formattedDate: formatDate
-                });
+            let formatDate = date[0].format(longDateFormat);
+            if (!!date[1]) {
+                formatDate += '-' + date[1].format(longDateFormat);
             }
+            this.setState({
+                arrSelectedDates: date,
+                formattedDate: formatDate
+            });
         } else {
-            let month = date.getMonth() + 1;
-            let day = date.getDate();
-            let year = date.getFullYear();
-
-            let formatDate = month + '/' + day + '/' + year;
-
             this.setState({
                 selectedDate: date,
-                formattedDate: formatDate
+                formattedDate: date.format(longDateFormat)
             });
         }
     }
@@ -296,21 +156,10 @@ class DatePicker extends Component {
             disableWeekends,
             enableRangeSelection,
             inputProps,
+            locale,
             onBlur,
             ...props
         } = this.props;
-
-        const datePickerInputGroupClasses = classnames(
-            'fd-input-group'
-        );
-
-        const datePickerInputClasses = classnames(
-            'fd-input',
-            {
-                'fd-input--compact': compact
-            },
-            'fd-input-group__input'
-        );
 
         return (
             <div
@@ -319,28 +168,23 @@ class DatePicker extends Component {
                 ref={component => (this.component = component)}>
                 <div className='fd-popover'>
                     <div className='fd-popover__control'>
-                        <div
-                            className={datePickerInputGroupClasses}>
-                            <input
+                        <InputGroup compact={compact}>
+                            <FormInput
                                 {...inputProps}
-                                className={datePickerInputClasses}
                                 onBlur={this._handleBlur}
                                 onChange={this.modifyDate}
                                 onClick={() => this.openCalendar('input')}
                                 onKeyPress={this.sendUpdate}
-                                placeholder='mm/dd/yyyy'
-                                type='text'
+                                placeholder={moment.localeData(this.props.locale).longDateFormat('L')}
                                 value={this.state.formattedDate} />
-                            <span className='fd-input-group__addon fd-input-group__addon--after fd-input-group__addon--button'>
+                            <InputGroup.Addon isButton>
                                 <Button {...buttonProps}
-                                    className='fd-input-group__button'
-                                    compact={compact}
                                     disableStyles={disableStyles}
                                     glyph='calendar'
                                     onClick={() => this.openCalendar()}
                                     option='light' />
-                            </span>
-                        </div>
+                            </InputGroup.Addon>
+                        </InputGroup>
                     </div>
                     <div
                         aria-hidden={this.state.hidden}
@@ -361,6 +205,7 @@ class DatePicker extends Component {
                             disableWeekends={disableWeekends}
                             disabledDates={disabledDates}
                             enableRangeSelection={enableRangeSelection}
+                            locale={locale}
                             onChange={this.updateDate}
                             ref={this.calendarRef} />
                     </div>
@@ -378,16 +223,19 @@ DatePicker.propTypes = {
     compact: PropTypes.bool,
     enableRangeSelection: PropTypes.bool,
     inputProps: PropTypes.object,
+    locale: PropTypes.string,
     onBlur: PropTypes.func
 };
 
 DatePicker.defaultProps = {
+    locale: 'en',
     onBlur: () => {}
 };
 
 DatePicker.propDescriptions = {
     ...Calendar.propDescriptions,
     enableRangeSelection: 'Set to **true** to enable the selection of a date range (begin and end).',
+    locale: 'Language code to set the locale.',
     onBlur: 'Callback function for onBlur events. In the object returned, `date` is the date object and `formattedDate` is the formatted date.'
 };
 

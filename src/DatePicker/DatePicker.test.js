@@ -1,4 +1,5 @@
 import DatePicker from '../DatePicker/DatePicker';
+import moment from 'moment';
 import { mount } from 'enzyme';
 import { mountComponentWithStyles } from '../utils/testUtils';
 import React from 'react';
@@ -90,9 +91,9 @@ describe('<DatePicker />', () => {
     test('start date and end date range', () => {
         wrapper = mountComponentWithStyles(rangeDatePicker);
         // set dates
-        let startRangeDate = new Date();
-        let endRangeDate = new Date();
-        endRangeDate.setDate(endRangeDate.getDate() + 3);
+        let startRangeDate = moment();
+        let endRangeDate = moment();
+        endRangeDate.add(3, 'day');
 
         let arrDates = [startRangeDate, endRangeDate];
         wrapper.instance().updateDate(arrDates);
@@ -112,9 +113,9 @@ describe('<DatePicker />', () => {
     test('check start date greater than end date for range', () => {
         wrapper = mountComponentWithStyles(rangeDatePicker);
         // set dates
-        let startRangeDate = new Date();
-        let endRangeDate = new Date();
-        endRangeDate.setDate(endRangeDate.getDate() + 3);
+        let startRangeDate = moment();
+        let endRangeDate = moment();
+        endRangeDate.add(3, 'day');
 
         let arrDates = [startRangeDate, endRangeDate];
 
@@ -122,9 +123,7 @@ describe('<DatePicker />', () => {
         arrDates = [endRangeDate, startRangeDate];
         wrapper.instance().updateDate(arrDates);
 
-        let switchFormattedDate = `${endRangeDate.getMonth() +
-            1}/${endRangeDate.getDate()}/${endRangeDate.getFullYear()}-${startRangeDate.getMonth() +
-            1}/${startRangeDate.getDate()}/${startRangeDate.getFullYear()}`;
+        let switchFormattedDate = `${endRangeDate.format('L')}-${startRangeDate.format('L')}`;
 
         expect(wrapper.state('formattedDate')).toEqual(switchFormattedDate);
         expect(wrapper.state('arrSelectedDates').length).toEqual(2);
@@ -142,77 +141,53 @@ describe('<DatePicker />', () => {
     test('entering start date and disabled end range dates', () => {
         wrapper = mountComponentWithStyles(disabledFutureRangePicker);
         // set dates
-        let startRangeDate = new Date();
-        let endRangeDate = new Date();
-        endRangeDate.setDate(endRangeDate.getDate() + 3);
+        let startRangeDate = moment();
+        let endRangeDate = moment();
+        endRangeDate.add(3, 'day');
 
-        let startDate = `${startRangeDate.getMonth() +
-            1}/${startRangeDate.getDate()}/${startRangeDate.getFullYear()}`;
-        let endDate = `${endRangeDate.getMonth() +
-            1}/${endRangeDate.getDate()}/${endRangeDate.getFullYear()}`;
-
-        wrapper.find('input[type="text"]')
-            .simulate('change', { target: { value: `${startDate}-${endDate}` } });
-
-        wrapper.find('input[type="text"]').simulate('keypress', { key: 'Enter' });
-
-        expect(wrapper.state('arrSelectedDates')).toEqual('undefined');
-    });
-
-    test('entering invalid range dates', () => {
-        wrapper = mountComponentWithStyles(rangeDatePicker);
-        // set dates
-        let startRangeDate = new Date();
-        let endRangeDate = new Date();
-        endRangeDate.setDate(endRangeDate.getDate() + 3);
-
-        let startDate = `${startRangeDate.getMonth() +
-            1}/${startRangeDate.getDate()}/${startRangeDate.getFullYear()}`;
-        let endDate = `${endRangeDate.getMonth() +
-            1}/${endRangeDate.getDate()}/${endRangeDate.getFullYear() + 4000}`;
+        let startDate = `${startRangeDate.month() +
+            1}/${startRangeDate.date()}/${startRangeDate.year()}`;
+        let endDate = `${endRangeDate.month() +
+            1}/${endRangeDate.date()}/${endRangeDate.year()}`;
 
         wrapper.find('input[type="text"]')
             .simulate('change', { target: { value: `${startDate}-${endDate}` } });
 
         wrapper.find('input[type="text"]').simulate('keypress', { key: 'Enter' });
 
-        expect(wrapper.state('arrSelectedDates')).toEqual('undefined');
+        expect(wrapper.state('arrSelectedDates')).toEqual([]);
     });
 
     test('updateDate method', () => {
         // choose one day in default picker
         wrapper = mountComponentWithStyles(defaultDatePicker);
-        const date = new Date();
+        const date = moment();
         wrapper.instance().updateDate(date);
         expect(wrapper.state('selectedDate')).toEqual(date);
-        let formattedDate = `${date.getMonth() +
-            1}/${date.getDate()}/${date.getFullYear()}`;
+        let formattedDate = date.format('L');
         expect(wrapper.state('formattedDate')).toEqual(formattedDate);
 
         // choose 1 day in range picker
         wrapper = mountComponentWithStyles(rangeDatePicker);
-        let startRangeDate = new Date();
+        let startRangeDate = moment();
 
         let arrDates = [startRangeDate];
         wrapper.instance().updateDate(arrDates);
 
-        formattedDate = `${startRangeDate.getMonth() +
-            1}/${startRangeDate.getDate()}/${startRangeDate.getFullYear()}`;
+        formattedDate = startRangeDate.format('L');
         expect(wrapper.state('formattedDate')).toEqual(formattedDate);
         expect(wrapper.state('arrSelectedDates').length).toEqual(1);
 
         // choose 2 days in range picker
         wrapper = mountComponentWithStyles(rangeDatePicker);
-        startRangeDate = new Date();
-        let endRangeDate = new Date();
-        endRangeDate.setDate(endRangeDate.getDate() + 3);
+        startRangeDate = moment();
+        let endRangeDate = moment();
+        endRangeDate.add(3, 'day');
 
         arrDates = [startRangeDate, endRangeDate];
         wrapper.instance().updateDate(arrDates);
 
-        formattedDate = `${startRangeDate.getMonth() +
-            1}/${startRangeDate.getDate()}/${startRangeDate.getFullYear()}-${endRangeDate.getMonth() +
-            1}/${endRangeDate.getDate()}/${endRangeDate.getFullYear()}`;
+        formattedDate = `${startRangeDate.format('L')}-${endRangeDate.format('L')}`;
 
         expect(wrapper.state('formattedDate')).toEqual(formattedDate);
         expect(wrapper.state('arrSelectedDates').length).toEqual(2);
@@ -221,13 +196,13 @@ describe('<DatePicker />', () => {
     test('pressing enter key on date input', () => {
         wrapper = mountComponentWithStyles(rangeDatePicker);
 
-        let startRangeDate = new Date();
-        let endRangeDate = new Date();
-        endRangeDate.setDate(endRangeDate.getDate() + 3);
+        let startRangeDate = moment();
+        let endRangeDate = moment();
+        endRangeDate.add(3, 'day');
 
-        let formattedDate = `${startRangeDate.getMonth() +
-            1}/${startRangeDate.getDate()}/${startRangeDate.getFullYear()}-${endRangeDate.getMonth() +
-            1}/${endRangeDate.getDate()}/${endRangeDate.getFullYear()}`;
+        let formattedDate = `${startRangeDate.month() +
+            1}/${startRangeDate.date()}/${startRangeDate.year()}-${endRangeDate.month() +
+            1}/${endRangeDate.date()}/${endRangeDate.year()}`;
 
         wrapper.find('input[type="text"]')
             .simulate('change', { target: { value: formattedDate } });
@@ -241,13 +216,13 @@ describe('<DatePicker />', () => {
     test('pressing enter key on date input where start date > than end date', () => {
         wrapper = mountComponentWithStyles(rangeDatePicker);
 
-        let startRangeDate = new Date();
-        let endRangeDate = new Date();
-        endRangeDate.setDate(endRangeDate.getDate() + 3);
+        let startRangeDate = moment();
+        let endRangeDate = moment();
+        endRangeDate.add(3, 'day');
 
-        let switchFormattedDate = `${endRangeDate.getMonth() +
-            1}/${endRangeDate.getDate()}/${endRangeDate.getFullYear()}-${startRangeDate.getMonth() +
-            1}/${startRangeDate.getDate()}/${startRangeDate.getFullYear()}`;
+        let switchFormattedDate = `${endRangeDate.month() +
+            1}/${endRangeDate.date()}/${endRangeDate.year()}-${startRangeDate.month() +
+            1}/${startRangeDate.date()}/${startRangeDate.year()}`;
 
         wrapper.find('input[type="text"]')
             .simulate('change', { target: { value: switchFormattedDate } });
@@ -261,81 +236,29 @@ describe('<DatePicker />', () => {
     test('enter a valid date string', () => {
         // enter a valid date input
         wrapper = mountComponentWithStyles(defaultDatePicker);
-        let date = new Date();
-        let formattedDate = `${date.getMonth() +
-            1}/${date.getDate()}/${date.getFullYear()}`;
+        let date = moment().startOf('day');
+        let formattedDate = date.format('L');
         wrapper.find('input[type="text"]')
             .simulate('change', { target: { value: formattedDate } });
 
         expect(wrapper.state('formattedDate')).toEqual(formattedDate);
         wrapper.find('input[type="text"]').simulate('keypress', { key: 'Enter' });
 
-        expect(wrapper.state('selectedDate')).toEqual(new Date(date.getFullYear(), date.getMonth(), date.getDate()));
+        expect(wrapper.state('selectedDate').toDate()).toEqual(date.toDate());
     });
 
     test('enter a disabled date string', () => {
         // enter a valid date input
         wrapper = mountComponentWithStyles(disabledFuturePicker);
-        let date = new Date();
-        let formattedDate = `${date.getMonth() +
-            1}/${date.getDate() + 1}/${date.getFullYear()}`;
+        let date = moment().add(1, 'days');
+        let formattedDate = date.format('L');
         wrapper.find('input[type="text"]')
             .simulate('change', { target: { value: formattedDate } });
 
         expect(wrapper.state('formattedDate')).toEqual(formattedDate);
         wrapper.find('input[type="text"]').simulate('keypress', { key: 'Enter' });
 
-        expect(wrapper.state('selectedDate')).toEqual('undefined');
-    });
-
-    test('enter an invalid date string', () => {
-        wrapper = mountComponentWithStyles(defaultDatePicker);
-        let date = new Date();
-        let formattedDate = `${date.getMonth() +
-            1}/${date.getDate()}/${date.getFullYear() + 4000}`;
-        wrapper.find('input[type="text"]')
-            .simulate('change', { target: { value: formattedDate } });
-
-        wrapper.find('input[type="text"]').simulate('keypress', { key: 'Enter' });
-
-        expect(wrapper.state('selectedDate')).toEqual('undefined');
-    });
-
-    test('formatDate method', () => {
-        wrapper = mountComponentWithStyles(rangeDatePicker);
-        let startRangeDate = new Date();
-        let endRangeDate = new Date();
-        endRangeDate.setDate(endRangeDate.getDate() + 3);
-
-        let formattedDate = `${startRangeDate.getMonth() +
-            1}/${startRangeDate.getDate()}/${startRangeDate.getFullYear()}-${endRangeDate.getMonth() +
-            1}/${endRangeDate.getDate()}/${endRangeDate.getFullYear()}`;
-
-        let arrDates = [startRangeDate, endRangeDate];
-        expect(wrapper.instance().formatDate(arrDates)).toEqual(formattedDate);
-
-        expect(wrapper.instance().formatDate([])).toEqual('');
-
-        // enter end year of 3001
-        wrapper = mountComponentWithStyles(rangeDatePicker);
-
-        startRangeDate = new Date();
-        endRangeDate = new Date();
-        endRangeDate.setFullYear(3001);
-
-        arrDates = [startRangeDate, endRangeDate];
-        expect(wrapper.instance().formatDate(arrDates)).toEqual('');
-
-        expect(wrapper.instance().formatDate([])).toEqual('');
-
-        // default date picker format date
-        wrapper = mountComponentWithStyles(defaultDatePicker);
-        startRangeDate = new Date();
-
-        formattedDate = `${startRangeDate.getMonth() +
-            1}/${startRangeDate.getDate()}/${startRangeDate.getFullYear()}`;
-
-        expect(wrapper.instance().formatDate(startRangeDate)).toEqual('');
+        expect(wrapper.state('selectedDate')).toEqual(null);
     });
 
     test('enter text string for date', () => {
@@ -384,7 +307,7 @@ describe('<DatePicker />', () => {
 
             expect(blur).toHaveBeenCalledTimes(1);
 
-            expect(blur).toHaveBeenCalledWith(expect.objectContaining({ date: expect.any(Date) }));
+            expect(blur).toHaveBeenCalledWith(expect.objectContaining({ date: expect.any(moment) }));
         });
         test('should call onBlur after leaving input', () => {
             const blur = jest.fn();
