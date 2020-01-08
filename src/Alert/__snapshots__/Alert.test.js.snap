@@ -9,7 +9,7 @@ exports[`<Alert /> create basic alert 1`] = `
     <button
       aria-controls="j2ALl423"
       aria-label="Close"
-      className="fd-button--light fd-button--compact fd-alert__close"
+      className="fd-alert__close"
       onClick={[Function]}
     />
     <div
@@ -37,7 +37,7 @@ exports[`<Alert /> create basic alert 2`] = `
     <button
       aria-controls="j2ALl423"
       aria-label="Close"
-      className="fd-button--light fd-button--compact fd-alert__close"
+      className="fd-alert__close"
       onClick={[Function]}
     />
     <div

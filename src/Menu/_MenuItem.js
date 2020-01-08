@@ -35,7 +35,7 @@ const MenuItem = ({ addonBefore, url, isLink, addon, children, onclick, classNam
                             'className': childrenClassnames,
                             ...urlProps
                         },
-                        [addonChild, ...child.props.children]);
+                        [addonChild, child.props.children]);
                     })}
                 </React.Fragment>
             );

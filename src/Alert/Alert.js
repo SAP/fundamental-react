@@ -1,5 +1,4 @@
 import { ALERT_TYPES } from '../utils/constants';
-import Button from '../Button/Button';
 import classnames from 'classnames';
 import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import Icon from '../Icon/Icon';
@@ -57,14 +56,12 @@ class Alert extends Component {
                         className={alertClasses}
                         role='alert'>
                         {dismissible && (
-                            <Button
+                            <button
                                 {...buttonProps}
                                 aria-controls='j2ALl423'
                                 aria-label={localizedText.close}
-                                className='fd-button fd-alert__close'
-                                compact
-                                onClick={this.closeAlertHandler}
-                                option='light' />
+                                className='fd-alert__close'
+                                onClick={this.closeAlertHandler} />
                         )}
                         <div className='fd-alert__text'>
                             {type && (
