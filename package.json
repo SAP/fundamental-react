@@ -52,7 +52,7 @@
     "@babel/runtime": "^7.6.3",
     "chain-function": "^1.0.1",
     "classnames": "^2.2.6",
-    "fundamental-styles": "^0.3.0-rc.16",
+    "fundamental-styles": "^0.3.0",
     "hoist-non-react-statics": "^3.3.0",
     "keycode": "^2.2.0",
     "moment": "^2.24.0",
