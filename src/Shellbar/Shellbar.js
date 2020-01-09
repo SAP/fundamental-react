@@ -456,7 +456,14 @@ Shellbar.propTypes = {
     notifications: PropTypes.object,
     productMenu: PropTypes.array,
     productSwitch: PropTypes.object,
-    productSwitchList: PropTypes.array,
+    productSwitchList: PropTypes.arrayOf(
+        PropTypes.shape({
+            callback: PropTypes.func.isRequired,
+            title: PropTypes.string.isRequired,
+            glyph: PropTypes.string.isRequired,
+            subtitle: PropTypes.string
+        })
+    ),
     productTitle: PropTypes.string,
     profile: PropTypes.object,
     profileMenu: PropTypes.array,
@@ -483,7 +490,7 @@ Shellbar.propDescriptions = {
     notifications: 'Information about pending notifications.',
     productMenu: 'Holds product titles and navigation.',
     productSwitch: 'For navigating between products.',
-    productSwitchList: 'List of the products.',
+    productSwitchList: 'Array of objects containing data about the products. Callback, title, and glyph are required; subtitle is optional.',
     productTitle: 'Displays the current application when no product menu is used.',
     profile: 'User information (_e.g._ name, initials, etc.)',
     profileMenu: 'List of items for the profile menu.',

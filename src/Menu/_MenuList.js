@@ -31,4 +31,9 @@ MenuList.propTypes = {
     separated: PropTypes.bool
 };
 
+MenuList.propDescriptions = {
+    addonBefore: 'Set to **true** enables menu items with add-on before. Passed down from the Menu component.',
+    separated: 'Set to **true** enables separators between each menu item.'
+};
+
 export default MenuList;
