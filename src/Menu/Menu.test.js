@@ -188,7 +188,7 @@ describe('<Menu />', () => {
                 </MemoryRouter>);
 
             expect(
-                element.find('div.fd-menu__addon-before').getDOMNode().attributes['data-sample'].value
+                element.find('span.sap-icon--accept').getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
         });
 

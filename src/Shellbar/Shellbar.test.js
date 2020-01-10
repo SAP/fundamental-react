@@ -157,7 +157,7 @@ describe('<Shellbar />', () => {
         { name: 'Application D', callback: () => alert('Application D selected!') }
     ];
 
-    const productSwitcherList = [
+    const productSwitchList = [
         {
             title: 'Fiori Home',
             glyph: 'home',
@@ -170,8 +170,8 @@ describe('<Shellbar />', () => {
         }
     ];
 
-    const productSwitcher = {
-        label: 'Product Switcher'
+    const productSwitch = {
+        label: 'Product Switch'
     };
 
     const coPilotShell = (
@@ -181,8 +181,8 @@ describe('<Shellbar />', () => {
             logoSAP
             notifications={notifications}
             productMenu={productMenu}
-            productSwitcher={productSwitcher}
-            productSwitcherList={productSwitcherList}
+            productSwitch={productSwitch}
+            productSwitchList={productSwitchList}
             productTitle='Corporate Portal'
             profile={profile}
             profileMenu={profileMenu}
@@ -197,8 +197,8 @@ describe('<Shellbar />', () => {
             logoSAP
             notifications={notificationsNoCount}
             productMenu={productMenu}
-            productSwitcher={productSwitcher}
-            productSwitcherList={productSwitcherList}
+            productSwitch={productSwitch}
+            productSwitchList={productSwitchList}
             productTitle='Corporate Portal'
             profile={profile}
             profileMenu={profileMenu}
@@ -213,8 +213,8 @@ describe('<Shellbar />', () => {
             logoSAP
             notifications={notificationsNoBody}
             productMenu={productMenu}
-            productSwitcher={productSwitcher}
-            productSwitcherList={productSwitcherList}
+            productSwitch={productSwitch}
+            productSwitchList={productSwitchList}
             productTitle='Corporate Portal'
             profile={profileWithImage}
             profileMenu={profileMenu}
@@ -229,8 +229,8 @@ describe('<Shellbar />', () => {
             logoSAP
             notifications={notificationsNoCount}
             productMenu={productMenu}
-            productSwitcher={productSwitcher}
-            productSwitcherList={productSwitcherList}
+            productSwitch={productSwitch}
+            productSwitchList={productSwitchList}
             productTitle='Corporate Portal'
             profile={profile}
             profileMenu={profileMenu}
@@ -272,7 +272,7 @@ describe('<Shellbar />', () => {
         expect(tree).toMatchSnapshot();
     });
 
-    test('click back button from collapsed product switcher', () => {
+    test('click back button from collapsed product switch', () => {
         const wrapper = mount(coPilotShell);
 
         wrapper.find('.fd-popover__control .fd-shellbar-collapse--control').simulate('click');
@@ -280,7 +280,7 @@ describe('<Shellbar />', () => {
         wrapper.find('a.fd-menu__item span.sap-icon--grid').simulate('click');
         wrapper.find('span.fd-menu.sap-icon--nav-back').simulate('click');
 
-        expect(wrapper.children().children().state(['showCollapsedProductSwitcherMenu'])).toBeFalsy();
+        expect(wrapper.children().children().state(['showCollapsedProductSwitchMenu'])).toBeFalsy();
     });
 
     describe('Prop spreading', () => {

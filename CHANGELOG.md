@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.8.0-rc.11"></a>
+# [0.8.0-rc.11](https://github.com/SAP/fundamental-react/compare/v0.8.0-rc.10...v0.8.0-rc.11) (2020-01-10)
+
+
+### Features
+
+* update fundamental-styles to 0.3.0 ([#846](https://github.com/SAP/fundamental-react/issues/846)) ([9b1b28b](https://github.com/SAP/fundamental-react/commit/9b1b28b))
+
+
+
+<a name="0.8.0-rc.10"></a>
+# [0.8.0-rc.10](https://github.com/SAP/fundamental-react/compare/v0.8.0-rc.9...v0.8.0-rc.10) (2020-01-10)
+
+
+### Bug Fixes
+
+* provided a 'defaultValue' prop to the DatePicker ([#844](https://github.com/SAP/fundamental-react/issues/844)) ([034011d](https://github.com/SAP/fundamental-react/commit/034011d))
+
+
+
 <a name="0.8.0-rc.9"></a>
 # [0.8.0-rc.9](https://github.com/SAP/fundamental-react/compare/v0.8.0-rc.8...v0.8.0-rc.9) (2020-01-02)
 
