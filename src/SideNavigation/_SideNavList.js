@@ -1,5 +1,4 @@
 import classnames from 'classnames';
-import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -9,20 +8,24 @@ class SideNavList extends React.Component {
     }
 
     render() {
-        const { children, className, hasParent, headingLevel, onItemSelect, open, selectedId, title, titleProps, ...rest } = this.props;
-        const sideNavListClasses = classnames({
-            'fd-side-nav__list': !hasParent,
-            'fd-side-nav__sublist': hasParent
-        },
-        className
-        );
+        const { children, className, hasParent, onItemSelect, open, selectedId, title, titleProps, isUtility, level, condensed, compact, ...rest } = this.props;
 
-        const sideNavHeaderlasses = classnames(
-            'fd-side-nav__group',
+        const sideNavListClasses = classnames(
+            {
+                'fd-nested-list--text-only': !condensed,
+                'fd-nested-list--compact': compact
+            },
+            'fd-nested-list',
+            `level-${level}`,
             className
         );
 
-        const HeadingTag = `h${headingLevel}`;
+        const sideNavContainerClass = classnames(
+            {
+                'fd-side-nav__main-navigation': !isUtility,
+                'fd-side-nav__utility': isUtility
+            }
+        );
 
         const sideNavList = (
             <ul
@@ -30,6 +33,7 @@ class SideNavList extends React.Component {
                 aria-expanded={hasParent && open}
                 aria-hidden={hasParent && !open}
                 className={sideNavListClasses}>
+                { title && <li {...titleProps} className='fd-nested-list__group-header'>{title}</li>}
                 {React.Children.toArray(children).map(child => {
                     return React.cloneElement(child, {
                         isSubItem: hasParent,
@@ -41,27 +45,27 @@ class SideNavList extends React.Component {
             </ul>
         );
 
-        if (title && !hasParent) {
-            return (
-                <div
-                    className={sideNavHeaderlasses}>
-                    <HeadingTag {...titleProps} className='fd-side-nav__title'>
-                        {title}
-                    </HeadingTag>
+        const sideNav = hasParent ?
+            sideNavList
+            :
+            (
+                <div className={sideNavContainerClass}>
                     {sideNavList}
                 </div>
             );
-        }
 
-        return sideNavList;
+        return sideNav;
     }
 }
 
 SideNavList.propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,
+    compact: PropTypes.bool,
+    condensed: PropTypes.bool,
     hasParent: PropTypes.bool,
-    headingLevel: CustomPropTypes.range(2, 6),
+    isUtility: PropTypes.bool,
+    level: PropTypes.number,
     open: PropTypes.bool,
     selectedId: PropTypes.string,
     title: PropTypes.string,
@@ -70,7 +74,7 @@ SideNavList.propTypes = {
 };
 
 SideNavList.defaultProps = {
-    headingLevel: 3
+    level: 1
 };
 
 SideNavList.propDescriptions = {
