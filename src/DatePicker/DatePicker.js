@@ -10,12 +10,14 @@ import React, { Component } from 'react';
 class DatePicker extends Component {
     constructor(props) {
         super(props);
-
+        const ISO_DATE_FORMAT = 'YYYY-MM-DD';
+        const formattedDate = props.defaultValue.length > 0 ?
+            moment(props.defaultValue, ISO_DATE_FORMAT).format(this.getLocaleDateFormat()) : '';
         this.state = {
             hidden: true,
-            selectedDate: null,
+            selectedDate: formattedDate.length === 0 ? null : moment(formattedDate, this.getLocaleDateFormat()),
             arrSelectedDates: [],
-            formattedDate: ''
+            formattedDate
         };
 
         this.calendarRef = React.createRef();
@@ -61,7 +63,7 @@ class DatePicker extends Component {
     }
 
     validateDates = () => {
-        const longDateFormat = moment.localeData(this.props.locale).longDateFormat('L');
+        const longDateFormat = this.getLocaleDateFormat();
 
         if (this.props.enableRangeSelection) {
             const dateRange = this.state.formattedDate.split('-');
@@ -114,7 +116,7 @@ class DatePicker extends Component {
     };
 
     updateDate = (date) => {
-        const longDateFormat = moment.localeData(this.props.locale).longDateFormat('L');
+        const longDateFormat = this.getLocaleDateFormat();
 
         if (this.props.enableRangeSelection) {
             let formatDate = date[0].format(longDateFormat);
@@ -132,6 +134,8 @@ class DatePicker extends Component {
             });
         }
     }
+
+    getLocaleDateFormat = () => moment.localeData(this.props.locale).longDateFormat('L');
 
     _handleBlur = () => {
         this.props.onBlur({
@@ -175,7 +179,7 @@ class DatePicker extends Component {
                                 onChange={this.modifyDate}
                                 onClick={() => this.openCalendar('input')}
                                 onKeyPress={this.sendUpdate}
-                                placeholder={moment.localeData(this.props.locale).longDateFormat('L')}
+                                placeholder={this.getLocaleDateFormat()}
                                 value={this.state.formattedDate} />
                             <InputGroup.Addon isButton>
                                 <Button {...buttonProps}
@@ -221,6 +225,7 @@ DatePicker.propTypes = {
     ...Calendar.basePropTypes,
     buttonProps: PropTypes.object,
     compact: PropTypes.bool,
+    defaultValue: PropTypes.string,
     enableRangeSelection: PropTypes.bool,
     inputProps: PropTypes.object,
     locale: PropTypes.string,
@@ -228,12 +233,14 @@ DatePicker.propTypes = {
 };
 
 DatePicker.defaultProps = {
+    defaultValue: '',
     locale: 'en',
     onBlur: () => {}
 };
 
 DatePicker.propDescriptions = {
     ...Calendar.propDescriptions,
+    defaultValue: 'Default value to be shown in the Datepicker. The only accepted format is the ISO format, i.e. YYYY-MM-DD',
     enableRangeSelection: 'Set to **true** to enable the selection of a date range (begin and end).',
     locale: 'Language code to set the locale.',
     onBlur: 'Callback function for onBlur events. In the object returned, `date` is the date object and `formattedDate` is the formatted date.'
