@@ -81,9 +81,10 @@ export class ShellbarComponent extends Component {
         { name: 'Application D', callback: () => alert('Application D selected!') }
     ];
 
-    productSwitcherList = [
+    productSwitchList = [
         {
             title: 'Fiori Home',
+            subtitle: 'Central Home',
             image: images('./01.png'),
             glyph: 'home',
             callback: () => alert('Fiori Home selected!')
@@ -96,6 +97,7 @@ export class ShellbarComponent extends Component {
         },
         {
             title: 'Analytics Cloud',
+            subtitle: 'Analytics Cloud',
             image: images('./03.png'),
             glyph: 'business-objects-experience',
             callback: () => alert('Analytics Cloud selected!')
@@ -141,8 +143,8 @@ export class ShellbarComponent extends Component {
         }
     ];
 
-    productSwitcher = {
-        label: 'Product Switcher'
+    productSwitch = {
+        label: 'Product Switch'
     };
 
     searchInput = {
@@ -217,15 +219,15 @@ export class ShellbarComponent extends Component {
                 <Example
                     description={`When a product has multiple links, the product links should collapse into an overflow menu on mobile
                         screens. All actions, except for the user menu, should be collapsed.`}
-                    title='Links with collapsible menu, CoPilot and Product Switcher'>
+                    title='Links with collapsible menu, CoPilot and Product Switch'>
                     <Shellbar
                         actions={this.actions}
                         copilot
                         logoSAP
                         notifications={this.notifications2}
                         productMenu={this.productMenu}
-                        productSwitcher={this.productSwitcher}
-                        productSwitcherList={this.productSwitcherList}
+                        productSwitch={this.productSwitch}
+                        productSwitchList={this.productSwitchList}
                         productTitle='Corporate Portal'
                         profile={this.profile}
                         profileMenu={this.profileMenu}
