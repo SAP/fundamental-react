@@ -11,6 +11,7 @@ describe('<DatePicker />', () => {
     const compactDatePicker = <DatePicker className='blue' compact />;
     const rangeDatePicker = <DatePicker enableRangeSelection />;
     const compactRangeDatepicker = <DatePicker compact enableRangeSelection />;
+    const prePopulatedDatepicker = <DatePicker defaultValue='2020-03-13' />;
     let wrapper;
 
     afterAll(() => {
@@ -289,6 +290,15 @@ describe('<DatePicker />', () => {
             .find('input[type="text"]')
             .simulate('change', { target: { value: '05/04/2018' } });
         expect(wrapper.state('formattedDate')).toEqual('05/04/2018');
+    });
+
+    test('pre-populated value for date', () => {
+        wrapper = mountComponentWithStyles(prePopulatedDatepicker);
+        expect(wrapper.state('formattedDate')).toEqual('03/13/2020');
+        wrapper
+            .find('input[type="text"]')
+            .simulate('change', { target: { value: '04/14/2020' } });
+        expect(wrapper.state('formattedDate')).toEqual('04/14/2020');
     });
 
     describe('onBlur callback', () => {
