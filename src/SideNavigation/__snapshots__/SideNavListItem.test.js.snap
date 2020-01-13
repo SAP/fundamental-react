@@ -2,14 +2,18 @@
 
 exports[`<SideNavListItem /> create side navigation 1`] = `
 <li
-  className="fd-side-nav__item"
+  className="fd-nested-list__item"
 >
   <a
-    className="fd-side-nav__link"
+    className="fd-nested-list__link"
     href="#"
     onClick={[Function]}
   >
-    Item 1
+    <span
+      className="fd-nested-list__title"
+    >
+      Item 1
+    </span>
   </a>
 </li>
 `;

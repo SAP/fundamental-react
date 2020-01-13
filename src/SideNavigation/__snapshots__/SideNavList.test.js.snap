@@ -1,52 +1,72 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<SideNavList /> create side navigation 1`] = `
-<ul
-  className="fd-side-nav__list"
+<div
+  className="fd-side-nav__main-navigation"
 >
-  <li
-    className="fd-side-nav__item"
+  <ul
+    className="fd-nested-list--text-only fd-nested-list level-1"
   >
-    <a
-      className="fd-side-nav__link"
-      href="#"
-      onClick={[Function]}
+    <li
+      className="fd-nested-list__item"
     >
-      Item 1
-    </a>
-  </li>
-  <li
-    className="fd-side-nav__item"
-  >
-    <a
-      className="fd-side-nav__link"
-      href="#"
-      onClick={[Function]}
+      <a
+        className="fd-nested-list__link"
+        href="#"
+        onClick={[Function]}
+      >
+        <span
+          className="fd-nested-list__title"
+        >
+          Item 1
+        </span>
+      </a>
+    </li>
+    <li
+      className="fd-nested-list__item"
     >
-      Item 2
-    </a>
-  </li>
-  <li
-    className="fd-side-nav__item"
-  >
-    <a
-      className="fd-side-nav__link"
-      href="#"
-      onClick={[Function]}
+      <a
+        className="fd-nested-list__link"
+        href="#"
+        onClick={[Function]}
+      >
+        <span
+          className="fd-nested-list__title"
+        >
+          Item 2
+        </span>
+      </a>
+    </li>
+    <li
+      className="fd-nested-list__item"
     >
-      Item 3
-    </a>
-  </li>
-  <li
-    className="fd-side-nav__item"
-  >
-    <a
-      className="fd-side-nav__link"
-      href="#"
-      onClick={[Function]}
+      <a
+        className="fd-nested-list__link"
+        href="#"
+        onClick={[Function]}
+      >
+        <span
+          className="fd-nested-list__title"
+        >
+          Item 3
+        </span>
+      </a>
+    </li>
+    <li
+      className="fd-nested-list__item"
     >
-      Item 4
-    </a>
-  </li>
-</ul>
+      <a
+        className="fd-nested-list__link"
+        href="#"
+        onClick={[Function]}
+      >
+        <span
+          className="fd-nested-list__title"
+        >
+          Item 4
+        </span>
+      </a>
+    </li>
+  </ul>
+</div>
 `;

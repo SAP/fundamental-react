@@ -196,7 +196,8 @@ export const SideNavigationComponent = () => {
                 title='Side navigation with icons'>
                 <SideNav
                     selectedId='item-2'>
-                    <SideNav.List>
+                    <SideNav.List
+                        data-sample='Sample'>
                         <SideNav.ListItem
                             glyph='home'
                             id='item-1'>

@@ -37,13 +37,11 @@ export const ButtonComponent = () => {
                 centered
                 description={`* **Action Button**: The default button \n\n* **Standard Button**:
                     Neutral or informative color \n\n* **Positive Button**: Used for positive actions 
-                    such as approved, ok, yes. \n\n* **Medium Button**: Used for warnings or 
-                    alert \n\n* **Negative Button**: Used for negative actions such as decline, cancel, no.`}
+                    such as approved, ok, yes. \n\n* **Negative Button**: Used for negative actions such as decline, cancel, no.`}
                 title='Button Types'>
                 <Button>Action Button</Button>
                 <Button type='standard'>Standard Button</Button>
                 <Button type='positive'>Positive Button</Button>
-                <Button type='medium'>Medium Button</Button>
                 <Button type='negative'>Negative Button</Button>
             </Example>
 
@@ -62,39 +60,31 @@ export const ButtonComponent = () => {
                         Add to Cart
                 </Button>
 
-                <Button glyph='accept' option='emphasized'
-                    type='positive'>
+                <Button glyph='accept' type='positive'>
                         Approve
                 </Button>
 
-                <Button glyph='decline' option='emphasized'
-                    type='negative'>
+                <Button glyph='decline' type='negative'>
                         Reject
                 </Button>
 
                 <Button
                     glyph='alert'
-                    option='emphasized'
-                    type='medium'>
+                    option='emphasized'>
                         Review
                 </Button>
 
-                <Button glyph='cart' option='emphasized' />
-
                 <Button glyph='cart' />
 
-                <Button glyph='filter' option='light' />
+                <Button glyph='cart' option='light' />
 
-                <Button glyph='accept' option='emphasized'
-                    type='positive' />
+                <Button glyph='filter' option='standard' />
 
-                <Button
-                    glyph='decline'
-                    option='emphasized'
-                    type='negative' />
+                <Button glyph='accept' type='positive' />
 
-                <Button glyph='alert' option='emphasized'
-                    type='medium' />
+                <Button glyph='decline' type='negative' />
+
+                <Button glyph='alert' type='negative' />
             </Example>
 
             <Example
@@ -147,15 +137,6 @@ export const ButtonComponent = () => {
                     </Button>
                 </div>
                 <div className='frDocs-tile__break' />
-                <div className='frDocs-tile__centered'>
-                    <Button type='medium'>Medium</Button>
-                    <Button selected type='medium'>
-                    Selected
-                    </Button>
-                    <Button disabled type='medium'>
-                    Disabled
-                    </Button>
-                </div>
                 <div className='frDocs-tile__break' />
                 <div className='frDocs-tile__centered'>
                     <Button type='negative'>Negative</Button>
