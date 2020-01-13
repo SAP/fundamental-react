@@ -28,9 +28,8 @@ class SideNavListItem extends React.Component {
         const { children, glyph, id, isSubItem, name, onClick, onItemSelect, selected, selectedId, url, ...props } = this.props;
         const getClasses = () => {
             return classnames(
+                'fd-nested-list__link',
                 {
-                    'fd-nested-list__link': !isSubItem,
-                    'fd-side-nav__sublink': isSubItem,
                     'is-selected': selected,
                     'has-child': hasChild,
                     'is-expanded': this.state.expanded

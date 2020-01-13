@@ -29,7 +29,7 @@ class SideNav extends Component {
     }
 
     render() {
-        const { onItemSelect, children, className, disableStyles, condensed, selectedId, ...rest } = this.props;
+        const { onItemSelect, children, className, disableStyles, condensed, compact, selectedId, ...rest } = this.props;
 
         const sideNavClasses = classnames(
             className,
@@ -45,7 +45,8 @@ class SideNav extends Component {
                     return React.cloneElement(child, {
                         onItemSelect: this.handleSelect,
                         selectedId: this.state.selectedId,
-                        condensed: condensed
+                        condensed,
+                        compact
                     });
                 })}
             </nav>
@@ -56,6 +57,7 @@ class SideNav extends Component {
 SideNav.propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,
+    compact: PropTypes.bool,
     condensed: PropTypes.bool,
     customStyles: PropTypes.object,
     disableStyles: PropTypes.bool,

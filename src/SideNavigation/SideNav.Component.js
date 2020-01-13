@@ -235,8 +235,9 @@ export const SideNavigationComponent = () => {
             <Example
                 title='Side navigation with icons in compact mode'>
                 <SideNav
+                    compact
                     selectedId='item-2'>
-                    <SideNav.List compact>
+                    <SideNav.List>
                         <SideNav.ListItem
                             glyph='home'
                             id='item-1'>
