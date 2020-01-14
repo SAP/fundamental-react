@@ -1,12 +1,11 @@
 @import '_variables.scss';
 
-
 .frDocs-Sidebar {
     padding-top: $menu-height;
     color: #21262c;
     min-width: $nav-width;
     width: $nav-width;
-    background-color: #EDEFF0;
+    background-color: #edeff0;
     display: flex;
     flex-direction: column;
     transition: 0.3s margin ease-in-out, 0.3s box-shadow ease-in-out;
