@@ -195,7 +195,7 @@ class Calendar extends Component {
             });
 
             return (
-                <tr className='fd-calendar__row'>
+                <tr className='fd-calendar__row' key={`month-row-${index}`}>
                     {monthCells}
                 </tr>
             );
@@ -223,26 +223,30 @@ class Calendar extends Component {
                 year += 1;
             }
         }
-        const listOfYears = years.map(rowOfYears => {
+        const listOfYears = years.map((rowOfYears, index) => {
             const yearCells = rowOfYears.map(element => {
+                const isSelected = this.state.currentDateDisplayed.year() === element;
                 const yearClasses = classnames(
                     'fd-calendar__item',
                     {
-                        'is-selected': this.state.currentDateDisplayed.year() === element,
+                        'is-selected': isSelected,
                         'fd-calendar__item--current': this.state.todayDate.year() === element
                     }
                 );
 
                 return (
-                    <td className={yearClasses} key={element}
+                    <td aria-selected={isSelected}
+                        className={yearClasses} key={element}
                         name={element} onClick={() => this.changeYear(element)}>
-                        {element}
+                        <span className='fd-calendar__text' role='button'>
+                            {element}
+                        </span>
                     </td>
                 );
             });
 
             return (
-                <tr className='fd-calendar__row'>
+                <tr className='fd-calendar__row' key={`year-row-${index}`}>
                     {yearCells}
                 </tr>
             );
