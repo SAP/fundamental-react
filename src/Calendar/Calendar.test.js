@@ -122,7 +122,7 @@ describe('<Calendar />', () => {
         expect(wrapper.children().children().state('showMonths')).toBeTruthy();
 
         wrapper
-            .find('ul.fd-calendar__list li.fd-calendar__item')
+            .find('.fd-calendar__item')
             .at(3)
             .simulate('click');
 
@@ -168,7 +168,7 @@ describe('<Calendar />', () => {
         expect(wrapper.children().children().state('showYears')).toBeTruthy();
 
         wrapper
-            .find('ul.fd-calendar__list li.fd-calendar__item')
+            .find('.fd-calendar__item')
             .at(3)
             .simulate('click');
 
@@ -216,7 +216,7 @@ describe('<Calendar />', () => {
         expect(wrapper.children().children().state('showYears')).toBeTruthy();
 
         wrapper
-            .find('ul.fd-calendar__list li.fd-calendar__item')
+            .find('.fd-calendar__item')
             .at(3)
             .simulate('click');
 
@@ -424,23 +424,23 @@ describe('<Calendar />', () => {
             ).toBe('Sample');
         });
 
-        test('should allow props to be spread to the Calendar component\'s month list ul element', () => {
+        test('should allow props to be spread to the Calendar component\'s month list table element', () => {
             const element = mount(<Calendar monthListProps={{ 'data-sample': 'Sample' }} />);
 
             element.find('.fd-calendar__action').at(1).childAt(0).simulate('click');
 
             expect(
-                element.find('ul').getDOMNode().attributes['data-sample'].value
+                element.find('table').getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
         });
 
-        test('should allow props to be spread to the Calendar component\'s year list ul element', () => {
+        test('should allow props to be spread to the Calendar component\'s year list table element', () => {
             const element = mount(<Calendar yearListProps={{ 'data-sample': 'Sample' }} />);
 
             element.find('.fd-calendar__action').at(2).childAt(0).simulate('click');
 
             expect(
-                element.find('ul').getDOMNode().attributes['data-sample'].value
+                element.find('table').getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
         });
 
