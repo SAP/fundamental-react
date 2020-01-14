@@ -391,7 +391,7 @@ class Calendar extends Component {
         for (let index = 0; index < 7; index++) {
             weekDays.push(
                 <th className='fd-calendar__column-header' key={index}>
-                    <span className='fd-calendar__day-of-week'>
+                    <span className='fd-calendar__day-of-week' role='button'>
                         {daysName[index]}
                     </span>
                 </th>);
@@ -440,11 +440,12 @@ class Calendar extends Component {
 
                 days.push(
                     <td
+                        aria-selected={this.isSelected(day)}
                         className={dayClasses}
                         key={copyDate}
                         onClick={this.isEnabledDate(day) ? () => this.dateClick(copyDate, enableRangeSelection) : null}
-                        role='gridcell' >
-                        <span className='fd-calendar__text'>{dateFormatted.toString()}</span>
+                        role='gridcell'>
+                        <span className='fd-calendar__text' role='button'>{dateFormatted.toString()}</span>
                     </td >
                 );
 

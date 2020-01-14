@@ -17,22 +17,9 @@ class Shellbar extends Component {
         this.state = {
             collapsedActions: this.getCollapsedActions(),
             totalNotifications: this.getNotificationsSum(),
-            showCollapsedProductSwitchMenu: false,
-            windowSize: window.innerWidth
+            showCollapsedProductSwitchMenu: false
         };
     }
-
-    componentWillMount() {
-        window.addEventListener('resize', this.handleWindowSizeChange);
-    }
-
-    componentWillUnmount() {
-        window.removeEventListener('resize', this.handleWindowSizeChange);
-    }
-
-    handleWindowSizeChange = () => {
-        this.setState({ windowSize: window.innerWidth });
-    };
 
     backBtnHandler = () => {
         this.setState({
@@ -99,16 +86,6 @@ class Shellbar extends Component {
             return additionalActionsSum;
         }
     };
-
-    getProductSwitchBodyClass = () => {
-        const isSmallMode = this.state.windowSize <= 1020;
-        return classnames(
-            'fd-product-switch__body',
-            {
-                'fd-product-switch__body--mobile': isSmallMode
-            }
-        );
-    }
 
     render() {
         const {
@@ -421,7 +398,7 @@ class Shellbar extends Component {
                             <div className='fd-product-switch'>
                                 <Popover
                                     body={
-                                        <div className={this.getProductSwitchBodyClass()}>
+                                        <div className='fd-product-switch__body'>
                                             <ul className='fd-product-switch__list'>
                                                 {productSwitchList.map((item, index) => {
                                                     return (
