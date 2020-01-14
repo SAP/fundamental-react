@@ -9,7 +9,7 @@
     padding-top: $menu-height + 25px;
 
     &__header,
-    .frDocs-markdown>h1 {
+    .frDocs-markdown > h1 {
         margin: 0 0 12px;
         font-size: 2.2rem;
         line-height: 1;
@@ -20,7 +20,7 @@
     }
 
     &__description,
-    .frDocs-markdown>p {
+    .frDocs-markdown > p {
         margin-bottom: 1.5rem;
         font-size: 1rem;
         font-weight: 300;
@@ -58,7 +58,7 @@
     }
 
     &__tile-background {
-        background: #F3F4F5;
+        background: #f3f4f5;
         transition: background-color 0.25s;
     }
 
@@ -69,7 +69,7 @@
     &__separator {
         display: block;
         margin: 2rem 0;
-        border-bottom: 1px solid #E3E3E3;
+        border-bottom: 1px solid #e3e3e3;
     }
 
     &__docsText {

@@ -1,7 +1,6 @@
 @import '_variables.scss';
 
 .fd-table {
-
     &.property-table {
         border: 0;
 
@@ -14,8 +13,8 @@
         }
 
         tbody {
-            >tr {
-                >td {
+            > tr {
+                > td {
                     &:first-child {
                         font-weight: bold;
                     }
@@ -25,11 +24,11 @@
 
         thead,
         tbody {
-            >tr {
+            > tr {
                 vertical-align: top;
 
-                >th,
-                >td {
+                > th,
+                > td {
                     width: 20%;
                     padding-top: 4px;
                     padding-bottom: 4px;
@@ -44,7 +43,7 @@
                     }
 
                     &.fd-table__cell {
-                        >p {
+                        > p {
                             margin: 0;
                         }
                     }
