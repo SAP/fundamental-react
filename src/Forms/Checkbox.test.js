@@ -25,7 +25,26 @@ describe('<Checkbox />', () => {
                 onChange: () => {}
             });
 
-            expect(element.props().checked).toBe(true);
+            expect(element.find('input').props().checked).toBe(true);
+        });
+
+        test('should add checked attribute of false to override the defaultChecked', () => {
+            let element = setup({
+                checked: false,
+                defaultChecked: true,
+                onChange: () => {}
+            });
+
+            expect(element.find('input').props().checked).toBe(false);
+        });
+
+        test('should add checked attribute if defaultChecked is true', () => {
+            let element = setup({
+                defaultChecked: true,
+                onChange: () => {}
+            });
+
+            expect(element.find('input').props().checked).toBe(true);
         });
 
         test('should set disabled to true when passed', () => {
@@ -33,7 +52,7 @@ describe('<Checkbox />', () => {
                 disabled: true
             });
 
-            expect(element.props().disabled).toBe(true);
+            expect(element.find('input').props().disabled).toBe(true);
         });
 
         test('should add inline class when inline is passed', () => {
