@@ -26,6 +26,7 @@ describe('<Checkbox />', () => {
             });
 
             expect(element.find('input').props().checked).toBe(true);
+            expect(element.find('input').props()['aria-checked']).toBe('true');
         });
 
         test('should add checked attribute of false to override the defaultChecked', () => {
@@ -36,6 +37,7 @@ describe('<Checkbox />', () => {
             });
 
             expect(element.find('input').props().checked).toBe(false);
+            expect(element.find('input').props()['aria-checked']).toBe('false');
         });
 
         test('should add checked attribute if defaultChecked is true', () => {
@@ -45,6 +47,19 @@ describe('<Checkbox />', () => {
             });
 
             expect(element.find('input').props().checked).toBe(true);
+            expect(element.find('input').props()['aria-checked']).toBe('true');
+        });
+
+        test('should add aria-checked attribute of "mixed" if indeterminate is true', () => {
+            let element = setup({
+                indeterminate: true,
+                checked: true,
+                defaultChecked: true,
+                onChange: () => {}
+            });
+
+            expect(element.find('input').props().checked).toBe(true);
+            expect(element.find('input').props()['aria-checked']).toBe('mixed');
         });
 
         test('should set disabled to true when passed', () => {

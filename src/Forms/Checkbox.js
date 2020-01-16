@@ -28,6 +28,8 @@ const Checkbox = React.forwardRef(({ checked, className, defaultChecked, disable
         'fd-checkbox'
     );
 
+    const isChecked = typeof checked === 'undefined' ? defaultChecked : checked;
+
     return (
         <FormItem
             {...props}
@@ -40,8 +42,8 @@ const Checkbox = React.forwardRef(({ checked, className, defaultChecked, disable
                 disabled={disabled}>
                 <input
                     {...inputProps}
-                    aria-checked={getCheckStatus(checked, indeterminate)}
-                    checked={typeof checked === 'undefined' ? defaultChecked : checked}
+                    aria-checked={getCheckStatus(isChecked, indeterminate)}
+                    checked={isChecked}
                     className={classes}
                     disabled={disabled}
                     id={id}
