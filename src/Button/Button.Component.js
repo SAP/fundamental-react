@@ -50,41 +50,47 @@ export const ButtonComponent = () => {
                 description={`Button can have an icon with text or just and icon. You can use \`glyph="icon-name"\` to
                     attach an icon to the button.`}
                 title='Buttons with Icon'>
-                <Button glyph='cart' option='emphasized'>
-                        Add to Cart
-                </Button>
+                <div className='fd-container'>
+                    <div className='fd-col--6'>
+                        <Button glyph='cart' option='emphasized'>
+                                Add to Cart
+                        </Button>
 
-                <Button glyph='cart'>Add to Cart</Button>
+                        <Button glyph='cart'>Add to Cart</Button>
 
-                <Button glyph='filter' option='light'>
-                        Add to Cart
-                </Button>
+                        <Button glyph='filter' option='light'>
+                                Add to Cart
+                        </Button>
 
-                <Button glyph='accept' type='positive'>
-                        Approve
-                </Button>
+                        <Button glyph='accept' type='positive'>
+                                Approve
+                        </Button>
 
-                <Button glyph='decline' type='negative'>
-                        Reject
-                </Button>
+                        <Button glyph='decline' type='negative'>
+                                Reject
+                        </Button>
 
-                <Button
-                    glyph='alert'
-                    option='emphasized'>
-                        Review
-                </Button>
+                        <Button
+                            glyph='alert'
+                            option='emphasized'>
+                                Review
+                        </Button>
+                    </div>
 
-                <Button glyph='cart' />
+                    <div className='fd-col--6'>
+                        <Button glyph='cart' />
 
-                <Button glyph='cart' option='light' />
+                        <Button glyph='cart' option='light' />
 
-                <Button glyph='filter' option='standard' />
+                        <Button glyph='filter' option='standard' />
 
-                <Button glyph='accept' type='positive' />
+                        <Button glyph='accept' type='positive' />
 
-                <Button glyph='decline' type='negative' />
+                        <Button glyph='decline' type='negative' />
 
-                <Button glyph='alert' type='negative' />
+                        <Button glyph='alert' type='negative' />
+                    </div>
+                </div>
             </Example>
 
             <Example
@@ -136,7 +142,6 @@ export const ButtonComponent = () => {
                     Disabled
                     </Button>
                 </div>
-                <div className='frDocs-tile__break' />
                 <div className='frDocs-tile__break' />
                 <div className='frDocs-tile__centered'>
                     <Button type='negative'>Negative</Button>

@@ -391,7 +391,7 @@ class Calendar extends Component {
         for (let index = 0; index < 7; index++) {
             weekDays.push(
                 <th className='fd-calendar__column-header' key={index}>
-                    <span className='fd-calendar__day-of-week' role='button'>
+                    <span className='fd-calendar__day-of-week'>
                         {daysName[index]}
                     </span>
                 </th>);

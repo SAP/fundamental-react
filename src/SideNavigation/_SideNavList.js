@@ -78,7 +78,11 @@ SideNavList.defaultProps = {
 };
 
 SideNavList.propDescriptions = {
+    compact: 'Passed down from parent SideNav. Set to **true** to enable compact (narrow row) mode.',
+    condensed: 'Passed down from parent SideNav. Set to **true** to enable condensed (icon-only) mode.',
     hasParent: '_INTERNAL USE ONLY._',
+    isUtility: 'Display a separate utility menu separated from the main menu by a horizontal line.',
+    level: 'Depth of menu. Default prop is 1 and does not need to be passed to the top level menu. Increase by 1 for every submenu and provide as a prop.',
     open: '_INTERNAL USE ONLY._',
     selectedId: '_INTERNAL USE ONLY._',
     onItemSelect: '_INTERNAL USE ONLY._'

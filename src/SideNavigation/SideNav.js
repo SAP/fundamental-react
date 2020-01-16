@@ -70,7 +70,8 @@ SideNav.defaultProps = {
 };
 
 SideNav.propDescriptions = {
-    icons: 'Set to **true** to only render icons for each `SideNavListItem`.',
+    compact: 'Set to **true** to narrow the height of each `SideNavListItem`. This mode is suggested for devices operated by mouse and keyboard.',
+    condensed: 'Set to **true** to only render icons for each `SideNavListItem`.',
     onItemSelect: 'Callback function when a navigation item is selected. Arguments passed are the event and the id of the selected item.',
     selectedId: 'The `id` of the selected `SideNavListItem`.'
 };
