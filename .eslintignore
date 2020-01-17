@@ -1,2 +1,3 @@
-!/.storybook
+build
 lib
+!/.storybook
