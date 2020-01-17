@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.8.0-rc.14"></a>
+# [0.8.0-rc.14](https://github.com/SAP/fundamental-react/compare/v0.8.0-rc.13...v0.8.0-rc.14) (2020-01-17)
+
+
+### Features
+
+* allow adding classes to both modal body (removing extraneous div) and backdrop  ([#845](https://github.com/SAP/fundamental-react/issues/845)) ([f480cbc](https://github.com/SAP/fundamental-react/commit/f480cbc))
+
+
+
 <a name="0.8.0-rc.13"></a>
 # [0.8.0-rc.13](https://github.com/SAP/fundamental-react/compare/v0.8.0-rc.12...v0.8.0-rc.13) (2020-01-17)
 
