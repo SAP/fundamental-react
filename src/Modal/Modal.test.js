@@ -154,7 +154,7 @@ describe('<Modal />', () => {
             component = mount(<Modal className='sample' show
                 title='Title' />);
 
-            expect(component.find('div.modal-demo-bg').hasClass('sample')).toBe(true);
+            expect(component.find('div.fd-modal').hasClass('sample')).toBe(true);
         });
     });
 
