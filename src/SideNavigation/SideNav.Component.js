@@ -38,6 +38,16 @@ export const SideNavigationComponent = () => {
                             name='Link Item'
                             url='#' />
                     </SideNav.List>
+                    <SideNav.List isUtility>
+                        <SideNav.ListItem
+                            id='utility-1'
+                            name='Link Item'
+                            url='#' />
+                        <SideNav.ListItem
+                            id='utility-2'
+                            name='Link Item'
+                            url='#' />
+                    </SideNav.List>
                 </SideNav>
             </Example>
 
@@ -128,7 +138,7 @@ export const SideNavigationComponent = () => {
                             id='item-2'
                             name='Link Item 2'
                             url='#'>
-                            <SideNav.List>
+                            <SideNav.List level={2}>
                                 <SideNav.ListItem
                                     id='subitem_21'
                                     name='Item 1'
@@ -155,7 +165,7 @@ export const SideNavigationComponent = () => {
                             id='item_4'
                             name='Link Item 4'
                             url='#'>
-                            <SideNav.List>
+                            <SideNav.List level={2}>
                                 <SideNav.ListItem
                                     id='subitem_41'
                                     name='Item 1'
@@ -185,6 +195,48 @@ export const SideNavigationComponent = () => {
             <Example
                 title='Side navigation with icons'>
                 <SideNav
+                    selectedId='item-2'>
+                    <SideNav.List
+                        data-sample='Sample'>
+                        <SideNav.ListItem
+                            glyph='home'
+                            id='item-1'>
+                            <Link to='/'>
+                                Link Item
+                            </Link>
+                        </SideNav.ListItem>
+                        <SideNav.ListItem
+                            glyph='home'
+                            id='item-2'>
+                            <Link to='/'>
+                                Link Item
+                            </Link>
+                        </SideNav.ListItem>
+                        <SideNav.ListItem
+                            glyph='home'
+                            id='item-3'>
+                            <Link to='/'>
+                                Link Item
+                            </Link>
+                        </SideNav.ListItem>
+                        <SideNav.ListItem
+                            glyph='home'
+                            id='item-4'
+                            name='Link Item'
+                            url='#' />
+                        <SideNav.ListItem
+                            glyph='home'
+                            id='item-5'
+                            name='Link Item'
+                            url='#' />
+                    </SideNav.List>
+                </SideNav>
+            </Example>
+
+            <Example
+                title='Side navigation with icons in compact mode'>
+                <SideNav
+                    compact
                     selectedId='item-2'>
                     <SideNav.List>
                         <SideNav.ListItem
@@ -224,12 +276,12 @@ export const SideNavigationComponent = () => {
 
             <Example
                 description={`The user can identify which level they are on based on the icon displayed as selected when the
-                    navigation is collapsed. Note that the suggested use is when there is only one level of navigation as
+                    navigation is condensed. Note that the suggested use is when there is only one level of navigation as
                     the user can only see one level of navigation when collapsed.`}
                 title='Side navigation collapsed with icon'>
                 <div style={{ 'maxWidth': '65px' }}>
                     <SideNav
-                        icons
+                        condensed
                         selectedId='item-2'>
                         <SideNav.List>
                             <SideNav.ListItem

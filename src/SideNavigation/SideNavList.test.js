@@ -33,11 +33,11 @@ describe('<SideNavList />', () => {
 
     describe('SideNavList', () => {
         test('should allow customization of header level', () => {
-            const element = mount(<SideNav.List headingLevel={2} title='test' />);
+            const element = mount(<SideNav.List title='test' />);
 
             expect(
-                element.find('.fd-side-nav__title').type()
-            ).toBe('h2');
+                element.find('.fd-nested-list__group-header').type()
+            ).toBe('li');
         });
     });
 
@@ -59,7 +59,7 @@ describe('<SideNavList />', () => {
             </SideNav.List>);
 
             expect(
-                element.getDOMNode().attributes['data-sample'].value
+                element.find('.fd-nested-list').getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
         });
 
@@ -67,7 +67,7 @@ describe('<SideNavList />', () => {
             const element = mount(<SideNav.List title='test' titleProps={{ 'data-sample': 'Sample' }} />);
 
             expect(
-                element.find('.fd-side-nav__title').getDOMNode().attributes['data-sample'].value
+                element.find('.fd-nested-list__group-header').getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
         });
     });

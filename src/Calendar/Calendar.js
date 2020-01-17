@@ -162,62 +162,103 @@ class Calendar extends Component {
 
     generateMonths = (monthProps) => {
         const months = moment.localeData(this.props.locale).months();
-        const listOfMonths = months.map((month, index) => {
-            const shortenedNameMonth = moment.localeData(this.props.locale).monthsShort()[index];
 
-            const calendarItemClasses = classnames(
-                'fd-calendar__item',
-                {
-                    'is-selected': months[this.state.currentDateDisplayed.month()] === month,
-                    'fd-calendar__item--current': months[this.state.todayDate.month()] === month
-                }
-            );
+        const gridArray = [];
+
+        let i = 0;
+
+        while (i < months.length) {
+            gridArray.push(months.slice(i, i += 4));
+        }
+
+        const listOfMonths = gridArray.map((setOfMonths, index) => {
+            const monthCells = setOfMonths.map((month, subIndex) => {
+                const shortenedNameMonth = moment.localeData(this.props.locale).monthsShort()[subIndex + (4 * index)];
+                const isSelected = months[this.state.currentDateDisplayed.month()] === month;
+                const calendarItemClasses = classnames(
+                    'fd-calendar__item',
+                    {
+                        'is-selected': isSelected,
+                        'fd-calendar__item--current': months[this.state.todayDate.month()] === month
+                    }
+                );
+
+                return (
+                    <td aria-selected={isSelected} className={calendarItemClasses}
+                        key={month} name={month}
+                        onClick={() => this.changeMonth(month)}>
+                        <span className='fd-calendar__text' role='button'>
+                            {shortenedNameMonth}
+                        </span>
+                    </td>
+                );
+            });
 
             return (
-                <li className={calendarItemClasses} key={month}
-                    name={month} onClick={() => this.changeMonth(month)}>
-                    {shortenedNameMonth}
-                </li>
+                <tr className='fd-calendar__row' key={`month-row-${index}`}>
+                    {monthCells}
+                </tr>
             );
         });
 
         return (
             <div className='fd-calendar__months'>
-                <ul {...monthProps} className='fd-calendar__list'>
-                    {listOfMonths}
-                </ul>
+                <table {...monthProps} className='fd-calendar__table'
+                    role='grid'>
+                    <tbody className='fd-calendar__group'>
+                        {listOfMonths}
+                    </tbody>
+                </table>
             </div>
         );
     }
 
     generateYears = (yearListProps) => {
         let year = this.state.currentDateDisplayed.year();
-        const years = [year];
-        for (let iterations = 1; iterations < 12; iterations++) {
-            year = year + 1;
-            years.push(year);
+        const years = [];
+        for (let row = 0; row < 3; row++) {
+            years.push([]);
+            for (let column = 0; column < 4; column++) {
+                years[row][column] = year;
+                year += 1;
+            }
         }
-        const listOfYears = years.map(element => {
-            const yearClasses = classnames(
-                'fd-calendar__item',
-                {
-                    'is-selected': this.state.currentDateDisplayed.year() === element,
-                    'fd-calendar__item--current': this.state.todayDate.year() === element
-                }
-            );
+        const listOfYears = years.map((rowOfYears, index) => {
+            const yearCells = rowOfYears.map(element => {
+                const isSelected = this.state.currentDateDisplayed.year() === element;
+                const yearClasses = classnames(
+                    'fd-calendar__item',
+                    {
+                        'is-selected': isSelected,
+                        'fd-calendar__item--current': this.state.todayDate.year() === element
+                    }
+                );
+
+                return (
+                    <td aria-selected={isSelected}
+                        className={yearClasses} key={element}
+                        name={element} onClick={() => this.changeYear(element)}>
+                        <span className='fd-calendar__text' role='button'>
+                            {element}
+                        </span>
+                    </td>
+                );
+            });
 
             return (
-                <li className={yearClasses} key={element}
-                    name={element} onClick={() => this.changeYear(element)}>
-                    {element}
-                </li>
+                <tr className='fd-calendar__row' key={`year-row-${index}`}>
+                    {yearCells}
+                </tr>
             );
         });
         return (
-            <div className='fd-calendar__months'>
-                <ul {...yearListProps} className='fd-calendar__list'>
-                    {listOfYears}
-                </ul>
+            <div className='fd-calendar__years'>
+                <table {...yearListProps} className='fd-calendar__table'
+                    role='grid'>
+                    <tbody className='fd-calendar__group'>
+                        {listOfYears}
+                    </tbody>
+                </table>
             </div>
         );
     }
@@ -399,11 +440,12 @@ class Calendar extends Component {
 
                 days.push(
                     <td
+                        aria-selected={this.isSelected(day)}
                         className={dayClasses}
                         key={copyDate}
                         onClick={this.isEnabledDate(day) ? () => this.dateClick(copyDate, enableRangeSelection) : null}
-                        role='gridcell' >
-                        <span className='fd-calendar__text'>{dateFormatted.toString()}</span>
+                        role='gridcell'>
+                        <span className='fd-calendar__text' role='button'>{dateFormatted.toString()}</span>
                     </td >
                 );
 
