@@ -29,13 +29,13 @@ class SideNav extends Component {
     }
 
     render() {
-        const { onItemSelect, children, className, disableStyles, icons, selectedId, ...rest } = this.props;
+        const { onItemSelect, children, className, disableStyles, condensed, compact, selectedId, ...rest } = this.props;
 
         const sideNavClasses = classnames(
             className,
             'fd-side-nav',
             {
-                'fd-side-nav--icons': icons
+                'fd-side-nav--condensed': condensed
             }
         );
 
@@ -44,7 +44,9 @@ class SideNav extends Component {
                 {React.Children.toArray(children).map(child => {
                     return React.cloneElement(child, {
                         onItemSelect: this.handleSelect,
-                        selectedId: this.state.selectedId
+                        selectedId: this.state.selectedId,
+                        condensed,
+                        compact
                     });
                 })}
             </nav>
@@ -55,9 +57,10 @@ class SideNav extends Component {
 SideNav.propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,
+    compact: PropTypes.bool,
+    condensed: PropTypes.bool,
     customStyles: PropTypes.object,
     disableStyles: PropTypes.bool,
-    icons: PropTypes.bool,
     selectedId: PropTypes.string,
     onItemSelect: PropTypes.func
 };
@@ -67,7 +70,8 @@ SideNav.defaultProps = {
 };
 
 SideNav.propDescriptions = {
-    icons: 'Set to **true** to only render icons for each `SideNavListItem`.',
+    compact: 'Set to **true** to narrow the height of each `SideNavListItem`. This mode is suggested for devices operated by mouse and keyboard.',
+    condensed: 'Set to **true** to only render icons for each `SideNavListItem`.',
     onItemSelect: 'Callback function when a navigation item is selected. Arguments passed are the event and the id of the selected item.',
     selectedId: 'The `id` of the selected `SideNavListItem`.'
 };

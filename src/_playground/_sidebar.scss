@@ -1,25 +1,26 @@
 @import '_variables.scss';
 
-
 .frDocs-Sidebar {
     padding-top: $menu-height;
     color: #21262c;
     min-width: $nav-width;
     width: $nav-width;
-    background-color: #EDEFF0;
+    background-color: #edeff0;
     display: flex;
     flex-direction: column;
     transition: 0.3s margin ease-in-out, 0.3s box-shadow ease-in-out;
-}
 
-.frDocs-Sidebar--isHidable {
-    margin-left: -$nav-width;
-    overflow-x: hidden;
+    &__nav {
+        overflow: auto;
+    }
+
+    &--isHidable {
+        margin-left: -$nav-width;
+    }
 }
 
 @media (min-width: $breakpoint-lg) {
     .frDocs-Sidebar--isHidable {
         margin-left: 0;
-        overflow-x: auto;
     }
 }

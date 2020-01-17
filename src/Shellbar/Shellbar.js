@@ -17,13 +17,13 @@ class Shellbar extends Component {
         this.state = {
             collapsedActions: this.getCollapsedActions(),
             totalNotifications: this.getNotificationsSum(),
-            showCollapsedProductSwitcherMenu: false
+            showCollapsedProductSwitchMenu: false
         };
     }
 
     backBtnHandler = () => {
         this.setState({
-            showCollapsedProductSwitcherMenu: false
+            showCollapsedProductSwitchMenu: false
         });
     };
 
@@ -44,20 +44,20 @@ class Shellbar extends Component {
             collapsedList.push(collapsedNotifications);
         }
 
-        //Add the grid icon to the product switcher object and add it to the list
-        //The product switcher is placed after the notifications
+        //Add the grid icon to the product switch object and add it to the list
+        //The product switch is placed after the notifications
 
-        if (this.props.productSwitcher) {
-            let collapsedProductSwitcher = this.props.productSwitcher;
+        if (this.props.productSwitch) {
+            let collapsedProductSwitch = this.props.productSwitch;
 
-            collapsedProductSwitcher.glyph = 'grid';
-            collapsedProductSwitcher.callback = () => {
+            collapsedProductSwitch.glyph = 'grid';
+            collapsedProductSwitch.callback = () => {
                 this.setState(prevState => ({
-                    showCollapsedProductSwitcherMenu: !prevState.showCollapsedProductSwitcherMenu
+                    showCollapsedProductSwitchMenu: !prevState.showCollapsedProductSwitchMenu
                 }));
             };
 
-            collapsedList.push(collapsedProductSwitcher);
+            collapsedList.push(collapsedProductSwitch);
         }
 
         //Add the search icon to the search input object and add it to the list
@@ -100,8 +100,8 @@ class Shellbar extends Component {
             searchInput,
             actions,
             notifications,
-            productSwitcher,
-            productSwitcherList,
+            productSwitch,
+            productSwitchList,
             profile,
             profileMenu,
             className
@@ -285,7 +285,7 @@ class Shellbar extends Component {
                             <Popover
                                 body={
                                     <Menu disableStyles={disableStyles}>
-                                        {!this.state.showCollapsedProductSwitcherMenu ? (
+                                        {!this.state.showCollapsedProductSwitchMenu ? (
                                             <Menu.List>
                                                 {this.state.collapsedActions.map((item, index) => {
                                                     return (
@@ -308,7 +308,7 @@ class Shellbar extends Component {
                                                         className='fd-menu sap-icon--nav-back'
                                                         onClick={this.backBtnHandler} />
                                                 </Menu.Item>
-                                                {productSwitcherList.map((item, index) => {
+                                                {productSwitchList.map((item, index) => {
                                                     return (
                                                         <Menu.Item
                                                             key={index}
@@ -393,40 +393,43 @@ class Shellbar extends Component {
                             </div>
                         </div>
                     )}
-                    {productSwitcher && (
+                    {productSwitch && (
                         <div className='fd-shellbar__action fd-shellbar__action--desktop'>
-                            <div className='fd-product-switcher'>
+                            <div className='fd-product-switch'>
                                 <Popover
                                     body={
-                                        <div className='fd-product-switcher__body'>
-                                            <nav>
-                                                <ul className='fd-product-switcher__body--list'>
-                                                    {productSwitcherList.map((item, index) => {
-                                                        return (
-                                                            <li
-                                                                className='fd-product-switcher__body--list-item'
-                                                                key={index}
-                                                                onClick={item.callback}>
-                                                                <span className='fd-product-switcher__product-icon'>
-                                                                    <img alt={item.title} src={item.image} />
-                                                                </span>
-                                                                <span className='fd-product-switcher__product-title'>
+                                        <div className='fd-product-switch__body'>
+                                            <ul className='fd-product-switch__list'>
+                                                {productSwitchList.map((item, index) => {
+                                                    return (
+                                                        <li
+                                                            className='fd-product-switch__item'
+                                                            key={index}
+                                                            onClick={item.callback}>
+                                                            <div className={`fd-product-switch__icon sap-icon--${item.glyph}`} />
+                                                            <div className='fd-product-switch__text'>
+                                                                <div className='fd-product-switch__title'>
                                                                     {item.title}
-                                                                </span>
-                                                            </li>
-                                                        );
-                                                    })}
-                                                </ul>
-                                            </nav>
+                                                                </div>
+                                                                {item.subtitle &&
+                                                                    <div className='fd-product-switch__subtitle'>
+                                                                        {item.subtitle}
+                                                                    </div>
+                                                                }
+                                                            </div>
+                                                        </li>
+                                                    );
+                                                })}
+                                            </ul>
                                         </div>
                                     }
-                                    control={<Button className='fd-shellbar__button'
+                                    control={<Button className='fd-product-switch__control'
                                         disableStyles={disableStyles}
                                         glyph='grid' />}
                                     disableEdgeDetection
                                     disableStyles={disableStyles}
                                     placement='bottom-end'
-                                    popperProps={{ id: 'fd-shellbar-product-switcher-popover' }} />
+                                    popperProps={{ id: 'fd-shellbar-product-switch-popover' }} />
                             </div>
                         </div>
                     )}
@@ -452,8 +455,15 @@ Shellbar.propTypes = {
     logoSAP: PropTypes.bool,
     notifications: PropTypes.object,
     productMenu: PropTypes.array,
-    productSwitcher: PropTypes.object,
-    productSwitcherList: PropTypes.array,
+    productSwitch: PropTypes.object,
+    productSwitchList: PropTypes.arrayOf(
+        PropTypes.shape({
+            callback: PropTypes.func.isRequired,
+            title: PropTypes.string.isRequired,
+            glyph: PropTypes.string.isRequired,
+            subtitle: PropTypes.string
+        })
+    ),
     productTitle: PropTypes.string,
     profile: PropTypes.object,
     profileMenu: PropTypes.array,
@@ -479,8 +489,8 @@ Shellbar.propDescriptions = {
     },
     notifications: 'Information about pending notifications.',
     productMenu: 'Holds product titles and navigation.',
-    productSwitcher: 'For navigating between products.',
-    productSwitcherList: 'List of the products.',
+    productSwitch: 'For navigating between products.',
+    productSwitchList: 'Array of objects containing data about the products. Callback, title, and glyph are required; subtitle is optional.',
     productTitle: 'Displays the current application when no product menu is used.',
     profile: 'User information (_e.g._ name, initials, etc.)',
     profileMenu: 'List of items for the profile menu.',
@@ -490,4 +500,4 @@ Shellbar.propDescriptions = {
 
 export { Shellbar as __Shellbar };
 
-export default withStyles(Shellbar, { cssFile: 'shellbar', fonts: true });
+export default withStyles(Shellbar, { cssFile: ['shellbar', 'product-switch'], fonts: true });

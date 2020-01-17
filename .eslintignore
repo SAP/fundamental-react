@@ -1,10 +1,2 @@
-.idea/
-*.css
-*.opts
-*.scss
-*.snap
-*.svg
-*.sh
-*.md
-node_modules/**
-*.png
+!/.storybook
+lib

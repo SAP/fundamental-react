@@ -61,14 +61,14 @@ export const MenuComponent = () => {
                 description='Menu items with horizontal line as separator.'
                 title='Menu with Separator'>
                 <Menu>
-                    <Menu.List>
-                        <Menu.Item separator>
+                    <Menu.List separated>
+                        <Menu.Item>
                             <Link to='#'>Option 1</Link>
                         </Menu.Item>
                         <Menu.Item>
                             <Link to='#'>Option 2</Link>
                         </Menu.Item>
-                        <Menu.Item separator>
+                        <Menu.Item>
                             <Link to='#'>Option 3</Link>
                         </Menu.Item>
                         <Menu.Item>

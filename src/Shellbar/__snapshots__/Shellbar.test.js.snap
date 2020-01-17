@@ -387,7 +387,7 @@ exports[`<Shellbar /> create shellbar 3`] = `
       className="fd-shellbar__action fd-shellbar__action--desktop"
     >
       <div
-        className="fd-product-switcher"
+        className="fd-product-switch"
       >
         <div
           className="fd-popover"
@@ -401,10 +401,10 @@ exports[`<Shellbar /> create shellbar 3`] = `
               className="fd-popover__control"
             >
               <button
-                aria-controls="fd-shellbar-product-switcher-popover"
+                aria-controls="fd-shellbar-product-switch-popover"
                 aria-expanded={false}
                 aria-haspopup={true}
-                className="fd-button sap-icon--grid fd-shellbar__button"
+                className="fd-button sap-icon--grid fd-product-switch__control"
                 onClick={[Function]}
                 onKeyPress={[Function]}
                 role="button"
@@ -675,7 +675,7 @@ exports[`<Shellbar /> create shellbar 4`] = `
       className="fd-shellbar__action fd-shellbar__action--desktop"
     >
       <div
-        className="fd-product-switcher"
+        className="fd-product-switch"
       >
         <div
           className="fd-popover"
@@ -689,10 +689,10 @@ exports[`<Shellbar /> create shellbar 4`] = `
               className="fd-popover__control"
             >
               <button
-                aria-controls="fd-shellbar-product-switcher-popover"
+                aria-controls="fd-shellbar-product-switch-popover"
                 aria-expanded={false}
                 aria-haspopup={true}
-                className="fd-button sap-icon--grid fd-shellbar__button"
+                className="fd-button sap-icon--grid fd-product-switch__control"
                 onClick={[Function]}
                 onKeyPress={[Function]}
                 role="button"
@@ -943,7 +943,7 @@ exports[`<Shellbar /> create shellbar 5`] = `
       className="fd-shellbar__action fd-shellbar__action--desktop"
     >
       <div
-        className="fd-product-switcher"
+        className="fd-product-switch"
       >
         <div
           className="fd-popover"
@@ -957,10 +957,10 @@ exports[`<Shellbar /> create shellbar 5`] = `
               className="fd-popover__control"
             >
               <button
-                aria-controls="fd-shellbar-product-switcher-popover"
+                aria-controls="fd-shellbar-product-switch-popover"
                 aria-expanded={false}
                 aria-haspopup={true}
-                className="fd-button sap-icon--grid fd-shellbar__button"
+                className="fd-button sap-icon--grid fd-product-switch__control"
                 onClick={[Function]}
                 onKeyPress={[Function]}
                 role="button"
@@ -1221,7 +1221,7 @@ exports[`<Shellbar /> create shellbar 6`] = `
       className="fd-shellbar__action fd-shellbar__action--desktop"
     >
       <div
-        className="fd-product-switcher"
+        className="fd-product-switch"
       >
         <div
           className="fd-popover"
@@ -1235,10 +1235,10 @@ exports[`<Shellbar /> create shellbar 6`] = `
               className="fd-popover__control"
             >
               <button
-                aria-controls="fd-shellbar-product-switcher-popover"
+                aria-controls="fd-shellbar-product-switch-popover"
                 aria-expanded={false}
                 aria-haspopup={true}
-                className="fd-button sap-icon--grid fd-shellbar__button"
+                className="fd-button sap-icon--grid fd-product-switch__control"
                 onClick={[Function]}
                 onKeyPress={[Function]}
                 role="button"
