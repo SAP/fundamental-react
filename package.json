@@ -15,7 +15,7 @@
     "build-doc": "node scripts/build.js && cp build/index.html build/404.html",
     "build:copy-files": "cp -rf package.json README.md NOTICE.txt LICENSE.txt CHANGELOG.md lib",
     "build:index": "babel-node devtools/buildIndexFiles.js",
-    "build:cjs": "cross-env NODE_ENV=production BABEL_ENV=cjs babel src --out-dir lib",
+    "build:cjs": "cross-env NODE_ENV=production BABEL_ENV=cjs babel src --ignore \"src/**/*.spec.js\",\"src/**/*.test.js\",\"src/**/*.Component.js\",\"src/_playground/*\",\"src/**/*.stories.js\" --out-dir lib",
     "build": "npm run build:index && rm -rf lib && npm run build:cjs",
     "deploy": "gh-pages -d build",
     "docs:dev": "FUNDAMENTAL_REACT_PLAYGROUND=true npm start",
