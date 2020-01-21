@@ -1,5 +1,6 @@
 import Button from '../Button/Button';
 import classnames from 'classnames';
+import GridManager from '../utils/gridManager/gridManager';
 import moment from 'moment';
 import PropTypes from 'prop-types';
 import withStyles from '../utils/WithStyles/WithStyles';
@@ -19,6 +20,9 @@ class Calendar extends Component {
             showYears: false,
             dateClick: false
         };
+
+        this.gridManager = new GridManager();
+        this.tableRef = React.createRef();
     }
 
     // sync the selected date of the calendar with the date picker
@@ -49,6 +53,16 @@ class Calendar extends Component {
             }
         }
         return ({ dateClick: false });
+    }
+
+    componentDidMount = () => {
+        this.gridManager.attachTo(this.tableRef.current);
+    }
+
+    componentDidUpdate = (prevProps, prevState) => {
+        if (this.state.showMonths !== prevState.showMonths || this.state.showYears !== prevState.showYears) {
+            this.gridManager.attachTo(this.tableRef.current);
+        }
     }
 
     showMonths = () => {
@@ -204,6 +218,7 @@ class Calendar extends Component {
         return (
             <div className='fd-calendar__months'>
                 <table {...monthProps} className='fd-calendar__table'
+                    ref={this.tableRef}
                     role='grid'>
                     <tbody className='fd-calendar__group'>
                         {listOfMonths}
@@ -254,6 +269,7 @@ class Calendar extends Component {
         return (
             <div className='fd-calendar__years'>
                 <table {...yearListProps} className='fd-calendar__table'
+                    ref={this.tableRef}
                     role='grid'>
                     <tbody className='fd-calendar__group'>
                         {listOfYears}
@@ -475,7 +491,8 @@ class Calendar extends Component {
 
         return (
             <div className='fd-calendar__dates'>
-                <table {...tableProps} className='fd-calendar__table'>
+                <table {...tableProps} className='fd-calendar__table'
+                    ref={this.tableRef}>
                     <thead {...tableHeaderProps} className='fd-calendar__group'>
                         {this.generateWeekdays()}
                     </thead>
@@ -564,11 +581,11 @@ Calendar.propDescriptions = {
     disablePastDates: 'Set to **true** to disable dates before today\'s date.',
     disableWeekday: 'Disables dates that match a weekday.',
     disableWeekends: 'Set to **true** to disables dates that match a weekend.',
-    monthListProps: 'Additional props to be spread to the month\'s `<ul>` element.',
+    monthListProps: 'Additional props to be spread to the month\'s `<table>` element.',
     tableBodyProps: 'Additional props to be spread to the `<tbody>` element.',
     tableHeaderProps: 'Additional props to be spread to the `<thead>` element.',
     tableProps: 'Additional props to be spread to the `<table>` element.',
-    yearListProps: 'Additional props to be spread to the year\'s `<ul>` element.'
+    yearListProps: 'Additional props to be spread to the year\'s `<table>` element.'
 };
 
 export { Calendar as __Calendar };
