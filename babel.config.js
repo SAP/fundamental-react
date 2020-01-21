@@ -37,5 +37,6 @@ module.exports = {
         test: {
             plugins: ['require-context-hook']
         }
-    }
+    },
+    ignore: ['src/**/*.spec.js', 'src/**/*.test.js', 'src/**/*.Component.js', 'src/_playground/*', 'src/**/*.stories.js']
 };
