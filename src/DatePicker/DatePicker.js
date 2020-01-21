@@ -186,7 +186,8 @@ class DatePicker extends Component {
                                     disableStyles={disableStyles}
                                     glyph='calendar'
                                     onClick={() => this.openCalendar()}
-                                    option='light' />
+                                    option='light'
+                                    typeAttr='button' />
                             </InputGroup.Addon>
                         </InputGroup>
                     </div>
