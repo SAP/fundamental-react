@@ -3,7 +3,6 @@
 
 ### Versions
 **fundamental-react:**
-**fundamental-styles:**
 
 ---
 
