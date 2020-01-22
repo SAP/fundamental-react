@@ -56,12 +56,15 @@ class Calendar extends Component {
     }
 
     componentDidMount = () => {
-        this.gridManager.attachTo(this.tableRef.current);
+        this.gridManager.attachTo({ gridNode: this.tableRef.current, wrapRows: true, wrapCols: true });
     }
 
     componentDidUpdate = (prevProps, prevState) => {
-        if (this.state.showMonths !== prevState.showMonths || this.state.showYears !== prevState.showYears) {
-            this.gridManager.attachTo(this.tableRef.current);
+        if (this.state.showMonths !== prevState.showMonths ||
+            this.state.showYears !== prevState.showYears ||
+            this.state.currentDateDisplayed.month() !== prevState.currentDateDisplayed.month() ||
+            this.state.currentDateDisplayed.year() !== prevState.currentDateDisplayed.year()) {
+            this.gridManager.attachTo({ gridNode: this.tableRef.current, wrapRows: true, wrapCols: true });
         }
     }
 

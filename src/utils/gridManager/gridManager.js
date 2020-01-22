@@ -8,15 +8,26 @@ if (global.Element && !Element.prototype.matches) {
 }
 
 export default class GridManager {
-    constructor(gridNode, firstFocusedRow, firstFocusedCol) {
-        this.attachTo(gridNode, firstFocusedRow, firstFocusedCol);
+    constructor() {
+        this.attachTo({});
     }
 
-    attachTo(gridNode = false, firstFocusedRow = 0, firstFocusedCol = 0) {
+    attachTo({
+        gridNode = false,
+        firstFocusedRow = 0,
+        firstFocusedCol = 0,
+        wrapRows = false,
+        wrapCols = false,
+        onPassBoundary = () => {}
+    }) {
         if (gridNode) {
             this.gridNode = gridNode;
             this.focusedRow = firstFocusedRow;
             this.focusedCol = firstFocusedCol;
+            this.wrapRows = wrapRows;
+            this.wrapCols = wrapCols;
+            this.onPassBoundary = onPassBoundary;
+
             this.editMode = false;
             this.setupFocusGrid();
             if (this.grid.length) {
@@ -266,14 +277,33 @@ export default class GridManager {
             return null;
         }
 
-        const colSpan = currentCell.element && currentCell.element.colSpan;
+        const colSpan = currentCell.element && currentCell.element.colSpan ? currentCell.element.colSpan : 1;
+        const rowSpan = currentCell.element && currentCell.element.rowSpan ? currentCell.element.rowSpan : 1;
 
         let nextCellElement = currentCell;
 
-        if (colSpan && directionX !== 0) { // multi-column cells
+        if (directionX !== 0) { // horizontal
             for (let i = 1; i <= colSpan; i++) {
-                let candidateRow = currentCell.row + directionY;
+                let candidateRow = currentCell.row;
                 let candidateCol = currentCell.col + i * directionX;
+
+                if (this.wrapRows) {
+                    if (directionX === 1 && currentCell.col >= this.grid[currentCell.row].length - 1) {
+                        candidateRow = currentCell.row + 1;
+                        candidateCol = 0;
+                        if (candidateRow >= this.grid.length) {
+                            this.onPassBoundary({ currentCell, directionX, directionY });
+                            // next month
+                        }
+                    } else if (directionX === -1 && currentCell.col === 0) {
+                        candidateRow = currentCell.row - 1;
+                        candidateCol = this.grid[currentCell.row].length - 1;
+                        if (candidateRow < 0) {
+                            this.onPassBoundary({ currentCell, directionX, directionY });
+                            // previous month
+                        }
+                    }
+                }
 
                 if (this.isValidCell({ row: candidateRow, col: candidateCol })
                     && this.grid[candidateRow][candidateCol] !== currentCell.element) {
@@ -284,15 +314,37 @@ export default class GridManager {
                     break;
                 }
             }
-        } else {
-            const candidateRow = currentCell.row + directionY;
-            const candidateCol = currentCell.col + directionX;
+        } else { // vertical
+            for (let i = 1; i <= rowSpan; i++) {
+                let candidateRow = currentCell.row + i * directionY;
+                let candidateCol = currentCell.col;
 
-            if (this.isValidCell({ row: candidateRow, col: candidateCol })) {
-                nextCellElement = this.getCellProperties(
-                    this.grid[candidateRow][candidateCol],
-                    { row: candidateRow, col: candidateCol }
-                );
+                if (this.wrapCols) {
+                    if (directionY === 1 && currentCell.row >= this.grid.length - 1) {
+                        candidateRow = 0;
+                        candidateCol = currentCell.col + 1;
+                        if (candidateCol >= this.grid[currentCell.row].length) {
+                            this.onPassBoundary({ currentCell, directionX, directionY });
+                            // next month
+                        }
+                    } else if (directionY === -1 && currentCell.row === 0) {
+                        candidateRow = this.grid.length - 1;
+                        candidateCol = currentCell.col - 1;
+                        if (candidateCol < 0) {
+                            this.onPassBoundary({ currentCell, directionX, directionY });
+                            // previous month
+                        }
+                    }
+                }
+
+                if (this.isValidCell({ row: candidateRow, col: candidateCol })
+                    && this.grid[candidateRow][candidateCol] !== currentCell.element) {
+                    nextCellElement = this.getCellProperties(
+                        this.grid[candidateRow][candidateCol],
+                        { row: candidateRow, col: candidateCol }
+                    );
+                    break;
+                }
             }
         }
 
