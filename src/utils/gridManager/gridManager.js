@@ -291,18 +291,15 @@ export default class GridManager {
                     if (directionX === 1 && currentCell.col >= this.grid[currentCell.row].length - 1) {
                         candidateRow = currentCell.row + 1;
                         candidateCol = 0;
-                        if (candidateRow >= this.grid.length) {
-                            this.onPassBoundary({ currentCell, directionX, directionY });
-                            // next month
-                        }
                     } else if (directionX === -1 && currentCell.col === 0) {
                         candidateRow = currentCell.row - 1;
                         candidateCol = this.grid[currentCell.row].length - 1;
-                        if (candidateRow < 0) {
-                            this.onPassBoundary({ currentCell, directionX, directionY });
-                            // previous month
-                        }
                     }
+                }
+
+                if ((candidateRow < 0 || candidateRow >= this.grid.length) ||
+                    (!this.wrapRows && (candidateCol < 0 || candidateCol >= this.grid[currentCell.row].length))) {
+                    this.onPassBoundary({ currentCell, directionX, directionY });
                 }
 
                 if (this.isValidCell({ row: candidateRow, col: candidateCol })
@@ -323,18 +320,15 @@ export default class GridManager {
                     if (directionY === 1 && currentCell.row >= this.grid.length - 1) {
                         candidateRow = 0;
                         candidateCol = currentCell.col + 1;
-                        if (candidateCol >= this.grid[currentCell.row].length) {
-                            this.onPassBoundary({ currentCell, directionX, directionY });
-                            // next month
-                        }
                     } else if (directionY === -1 && currentCell.row === 0) {
                         candidateRow = this.grid.length - 1;
                         candidateCol = currentCell.col - 1;
-                        if (candidateCol < 0) {
-                            this.onPassBoundary({ currentCell, directionX, directionY });
-                            // previous month
-                        }
                     }
+                }
+
+                if ((candidateCol < 0 || candidateCol >= this.grid[currentCell.row].length) ||
+                    (!this.wrapCols && (candidateRow < 0 || candidateRow >= this.grid.length))) {
+                    this.onPassBoundary({ currentCell, directionX, directionY });
                 }
 
                 if (this.isValidCell({ row: candidateRow, col: candidateCol })

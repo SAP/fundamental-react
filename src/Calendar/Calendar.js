@@ -1,6 +1,7 @@
 import Button from '../Button/Button';
 import classnames from 'classnames';
 import GridManager from '../utils/gridManager/gridManager';
+import keycode from 'keycode';
 import moment from 'moment';
 import PropTypes from 'prop-types';
 import withStyles from '../utils/WithStyles/WithStyles';
@@ -56,7 +57,7 @@ class Calendar extends Component {
     }
 
     componentDidMount = () => {
-        this.gridManager.attachTo({ gridNode: this.tableRef.current, wrapRows: true, wrapCols: true });
+        this.gridManager.attachTo({ gridNode: this.tableRef.current, wrapRows: true, wrapCols: false });
     }
 
     componentDidUpdate = (prevProps, prevState) => {
@@ -64,7 +65,7 @@ class Calendar extends Component {
             this.state.showYears !== prevState.showYears ||
             this.state.currentDateDisplayed.month() !== prevState.currentDateDisplayed.month() ||
             this.state.currentDateDisplayed.year() !== prevState.currentDateDisplayed.year()) {
-            this.gridManager.attachTo({ gridNode: this.tableRef.current, wrapRows: true, wrapCols: true });
+            this.gridManager.attachTo({ gridNode: this.tableRef.current, wrapRows: true, wrapCols: false });
         }
     }
 
@@ -177,6 +178,17 @@ class Calendar extends Component {
         }
     }
 
+    onKeyDown = (event, callback) => {
+        switch (keycode(event)) {
+            case 'enter':
+            case 'space':
+                event.preventDefault();
+                callback();
+                break;
+            default:
+        }
+    }
+
     generateMonths = (monthProps) => {
         const months = moment.localeData(this.props.locale).months();
 
@@ -202,9 +214,9 @@ class Calendar extends Component {
 
                 return (
                     <td aria-selected={isSelected} className={calendarItemClasses}
-                        key={month} name={month}
-                        onClick={() => this.changeMonth(month)}>
-                        <span className='fd-calendar__text' role='button'>
+                        key={month} name={month}>
+                        <span className='fd-calendar__text' onClick={() => this.changeMonth(month)}
+                            onKeyDown={(e) => this.onKeyDown(e, this.changeMonth.bind(this, month))} role='button'>
                             {shortenedNameMonth}
                         </span>
                     </td>
@@ -255,8 +267,9 @@ class Calendar extends Component {
                 return (
                     <td aria-selected={isSelected}
                         className={yearClasses} key={element}
-                        name={element} onClick={() => this.changeYear(element)}>
-                        <span className='fd-calendar__text' role='button'>
+                        name={element}>
+                        <span className='fd-calendar__text' onClick={() => this.changeYear(this, element)}
+                            onKeyDown={(e) => this.onKeyDown(e, this.changeYear.bind(this, element))} role='button'>
                             {element}
                         </span>
                     </td>
@@ -462,9 +475,11 @@ class Calendar extends Component {
                         aria-selected={this.isSelected(day)}
                         className={dayClasses}
                         key={copyDate}
-                        onClick={this.isEnabledDate(day) ? () => this.dateClick(copyDate, enableRangeSelection) : null}
                         role='gridcell'>
-                        <span className='fd-calendar__text' role='button'>{dateFormatted.toString()}</span>
+                        <span className='fd-calendar__text'
+                            onClick={this.isEnabledDate(day) ? () => this.dateClick(copyDate, enableRangeSelection) : null}
+                            onKeyDown={this.isEnabledDate(day) ? (e) => this.onKeyDown(e, this.dateClick.bind(this, copyDate, enableRangeSelection)) : null}
+                            role='button'>{dateFormatted.toString()}</span>
                     </td >
                 );
 
