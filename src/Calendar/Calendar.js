@@ -23,7 +23,6 @@ class Calendar extends Component {
             dateClick: false
         };
 
-        this.gridManager = new GridManager();
         this.tableRef = React.createRef();
     }
 
@@ -58,15 +57,36 @@ class Calendar extends Component {
     }
 
     componentDidMount = () => {
-        this.gridManager.attachTo({ gridNode: this.tableRef.current, wrapRows: true, wrapCols: false });
+        const tableRef = this.tableRef.current;
+        const selectedDateElement = tableRef.querySelector('.is-selected');
+        const todayDateElement = tableRef.querySelector('.fd-calendar__item--current');
+
+        this.gridManager = new GridManager({
+            gridNode: this.tableRef.current,
+            firstFocusedElement: selectedDateElement ? selectedDateElement : todayDateElement,
+            focusOnInit: true,
+            wrapRows: true,
+            wrapCols: false
+        });
     }
 
     componentDidUpdate = (prevProps, prevState) => {
+        const tableRef = this.tableRef.current;
+        const selectedDateElement = tableRef.querySelector('.is-selected');
+        const todayDateElement = tableRef.querySelector('.fd-calendar__item--current');
+
+        // if switching between month, year, or day view, reconstruct grid
         if (this.state.showMonths !== prevState.showMonths ||
             this.state.showYears !== prevState.showYears ||
             this.state.currentDateDisplayed.month() !== prevState.currentDateDisplayed.month() ||
             this.state.currentDateDisplayed.year() !== prevState.currentDateDisplayed.year()) {
-            this.gridManager.attachTo({ gridNode: this.tableRef.current, wrapRows: true, wrapCols: false });
+            this.gridManager.attachTo({
+                gridNode: this.tableRef.current,
+                firstFocusedElement: selectedDateElement ? selectedDateElement : todayDateElement,
+                focusOnInit: true,
+                wrapRows: true,
+                wrapCols: false
+            });
         }
     }
 

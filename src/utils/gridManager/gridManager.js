@@ -8,14 +8,33 @@ if (global.Element && !Element.prototype.matches) {
 }
 
 export default class GridManager {
-    constructor() {
-        this.attachTo({});
+    constructor({
+        gridNode = false,
+        firstFocusedRow = 0,
+        firstFocusedCol = 0,
+        firstFocusedElement = null,
+        focusOnInit = false,
+        wrapRows = false,
+        wrapCols = false,
+        onPassBoundary = () => {}
+    }) {
+        this.attachTo({ gridNode,
+            firstFocusedRow,
+            firstFocusedCol,
+            firstFocusedElement,
+            focusOnInit,
+            wrapRows,
+            wrapCols,
+            onPassBoundary
+        });
     }
 
     attachTo({
         gridNode = false,
         firstFocusedRow = 0,
         firstFocusedCol = 0,
+        firstFocusedElement = null,
+        focusOnInit = false,
         wrapRows = false,
         wrapCols = false,
         onPassBoundary = () => {}
@@ -31,7 +50,12 @@ export default class GridManager {
             this.editMode = false;
             this.setupFocusGrid();
             if (this.grid.length) {
-                this.setFocusPointer(this.focusedRow, this.focusedCol);
+                const firstFocusedCell = this.getCellProperties(
+                    firstFocusedElement ? firstFocusedElement : this.grid[this.focusedRow][this.focusedCol]);
+                this.setFocusPointer(firstFocusedCell.row, firstFocusedCell.col);
+                if (focusOnInit) {
+                    this.focusCell(firstFocusedCell);
+                }
                 this.registerEvents();
             }
         }
@@ -90,13 +114,16 @@ export default class GridManager {
 
     getCellProperties = (element, knownCoordinates) => {
         const cellCoordinates = knownCoordinates ? knownCoordinates : this.getCellCoordinates(element);
-        const cell = {
-            row: cellCoordinates.row,
-            col: cellCoordinates.col,
-            element: element
-        };
-        cell.focusableElements = cell.element.querySelectorAll(GridSelector.FOCUSABLE);
-        cell.editableElement = cell.element.querySelector(GridSelector.EDITABLE);
+        let cell;
+        if (cellCoordinates) {
+            cell = {
+                row: cellCoordinates.row,
+                col: cellCoordinates.col,
+                element: element
+            };
+            cell.focusableElements = cell.element.querySelectorAll(GridSelector.FOCUSABLE);
+            cell.editableElement = cell.element.querySelector(GridSelector.EDITABLE);
+        }
 
         return cell;
     }
@@ -104,7 +131,9 @@ export default class GridManager {
     getCellCoordinates = (element) => {
         for (let row = 0; row < this.grid.length; row++) {
             for (let col = 0; col < this.grid[row].length; col++) {
-                if (this.grid[row][col] === element || this.grid[row][col].contains(element)) {
+                if (this.grid[row][col] === element ||
+                    this.grid[row][col].contains(element) ||
+                    element.contains(this.grid[row][col])) {
                     return { row, col };
                 }
             }
@@ -248,7 +277,7 @@ export default class GridManager {
             { row: this.focusedRow, col: this.focusedCol }
         );
 
-        if (this.isEditableCell(currentCell) && this.editMode) {
+        if (currentCell && this.isEditableCell(currentCell) && this.editMode) {
             this.toggleEditMode(currentCell, false);
         }
 
@@ -256,17 +285,19 @@ export default class GridManager {
             this.findClosestMatch(event.target, `${GridSelector.CELL}, ${GridSelector.FOCUSABLE}`)
         );
 
-        if (this.isEditableCell(clickedGridCell)) {
-            this.toggleEditMode(clickedGridCell, true);
-        }
+        if (clickedGridCell) {
+            if (this.isEditableCell(clickedGridCell)) {
+                this.toggleEditMode(clickedGridCell, true);
+            }
 
-        this.focusCell({
-            row: clickedGridCell.row,
-            col: clickedGridCell.col,
-            element: clickedGridCell.element,
-            focusableElements: clickedGridCell.focusableElements,
-            editableElement: clickedGridCell.editableElement
-        });
+            this.focusCell({
+                row: clickedGridCell.row,
+                col: clickedGridCell.col,
+                element: clickedGridCell.element,
+                focusableElements: clickedGridCell.focusableElements,
+                editableElement: clickedGridCell.editableElement
+            });
+        }
     };
 
     getNextCell = (currentCell, directionX, directionY) => {
