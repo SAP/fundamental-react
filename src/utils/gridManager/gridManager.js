@@ -46,12 +46,13 @@ export default class GridManager {
 
                 Array.prototype.forEach.call(
                     row.querySelectorAll(GridSelector.CELL), (cell) => {
-                        const colSpan = cell.colSpan;
+                        let cellToPush = cell;
                         if (!cell.hasAttribute('tabindex')) {
                             cell.setAttribute('tabindex', -1);
                         }
 
                         const focusableElements = cell.querySelectorAll(GridSelector.FOCUSABLE);
+
                         if (focusableElements) {
                             // disable default tabbing behavior of links, buttons, etc.
                             focusableElements.forEach(element => {
@@ -59,9 +60,13 @@ export default class GridManager {
                                     element.setAttribute('tabindex', -1);
                                 }
                             });
+
+                            if (focusableElements.length === 1) {
+                                cellToPush = focusableElements[0];
+                            }
                         }
 
-                        colSpan > 0 ? rowCells.push(...this.createFilledArray(colSpan, cell)) : rowCells.push(cell);
+                        rowCells.push(cellToPush);
                     }
                 );
 
@@ -71,14 +76,6 @@ export default class GridManager {
             }
         );
     };
-
-    createFilledArray = (length, value) => {
-        const array = [];
-        while (length--) {
-            array.push(value);
-        }
-        return array;
-    }
 
     clearEvents = () => {
         this.gridNode.removeEventListener('keydown', this.handleKeyDown);
@@ -255,7 +252,9 @@ export default class GridManager {
             this.toggleEditMode(currentCell, false);
         }
 
-        const clickedGridCell = this.getCellProperties(this.findClosestMatch(event.target, GridSelector.CELL));
+        const clickedGridCell = this.getCellProperties(
+            this.findClosestMatch(event.target, `${GridSelector.CELL}, ${GridSelector.FOCUSABLE}`)
+        );
 
         if (this.isEditableCell(clickedGridCell)) {
             this.toggleEditMode(clickedGridCell, true);

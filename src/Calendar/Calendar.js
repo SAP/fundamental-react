@@ -1,5 +1,6 @@
 import Button from '../Button/Button';
 import classnames from 'classnames';
+import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import GridManager from '../utils/gridManager/gridManager';
 import keycode from 'keycode';
 import moment from 'moment';
@@ -178,12 +179,12 @@ class Calendar extends Component {
         }
     }
 
-    onKeyDown = (event, callback) => {
+    onKeyDown = (event, onKeyFunction) => {
         switch (keycode(event)) {
             case 'enter':
             case 'space':
                 event.preventDefault();
-                callback();
+                onKeyFunction();
                 break;
             default:
         }
@@ -214,8 +215,9 @@ class Calendar extends Component {
 
                 return (
                     <td aria-selected={isSelected} className={calendarItemClasses}
-                        key={month} name={month}>
-                        <span className='fd-calendar__text' onClick={() => this.changeMonth(month)}
+                        key={month} name={month}
+                        onClick={() => this.changeMonth(month)}>
+                        <span className='fd-calendar__text'
                             onKeyDown={(e) => this.onKeyDown(e, this.changeMonth.bind(this, month))} role='button'>
                             {shortenedNameMonth}
                         </span>
@@ -267,8 +269,9 @@ class Calendar extends Component {
                 return (
                     <td aria-selected={isSelected}
                         className={yearClasses} key={element}
-                        name={element}>
-                        <span className='fd-calendar__text' onClick={() => this.changeYear(this, element)}
+                        name={element}
+                        onClick={() => this.changeYear(element)}>
+                        <span className='fd-calendar__text'
                             onKeyDown={(e) => this.onKeyDown(e, this.changeYear.bind(this, element))} role='button'>
                             {element}
                         </span>
@@ -368,12 +371,17 @@ class Calendar extends Component {
 
     generateNavigation = () => {
         const months = moment.localeData(this.props.locale).months();
+        const previousButtonLabel = this.state.showYears ?
+            this.props.localizedText.show12PreviousYears : this.props.localizedText.previousMonth;
+        const nextButtonLabel = this.state.showYears ?
+            this.props.localizedText.show12NextYears : this.props.localizedText.nextMonth;
 
         return (
-            <header className='fd-calendar__header'>
+            <header aria-live='polite' className='fd-calendar__header'>
                 <div className='fd-calendar__navigation'>
                     <div className='fd-calendar__action'>
                         <Button
+                            aria-label={previousButtonLabel}
                             compact
                             disableStyles={this.props.disableStyles}
                             glyph='slim-arrow-left'
@@ -405,6 +413,7 @@ class Calendar extends Component {
 
                     <div className='fd-calendar__action'>
                         <Button
+                            aria-label={nextButtonLabel}
                             compact
                             disableStyles={this.props.disableStyles}
                             glyph='slim-arrow-right'
@@ -475,9 +484,9 @@ class Calendar extends Component {
                         aria-selected={this.isSelected(day)}
                         className={dayClasses}
                         key={copyDate}
+                        onClick={this.isEnabledDate(day) ? () => this.dateClick(copyDate, enableRangeSelection) : null}
                         role='gridcell'>
                         <span className='fd-calendar__text'
-                            onClick={this.isEnabledDate(day) ? () => this.dateClick(copyDate, enableRangeSelection) : null}
                             onKeyDown={this.isEnabledDate(day) ? (e) => this.onKeyDown(e, this.dateClick.bind(this, copyDate, enableRangeSelection)) : null}
                             role='button'>{dateFormatted.toString()}</span>
                     </td >
@@ -572,7 +581,13 @@ Calendar.basePropTypes = {
     disableFutureDates: PropTypes.bool,
     disablePastDates: PropTypes.bool,
     disableWeekday: PropTypes.arrayOf(PropTypes.string),
-    disableWeekends: PropTypes.bool
+    disableWeekends: PropTypes.bool,
+    localizedText: CustomPropTypes.i18n({
+        nextMonth: PropTypes.string,
+        previousMonth: PropTypes.string,
+        show12NextYears: PropTypes.string,
+        show12PreviousYears: PropTypes.string
+    })
 };
 
 Calendar.propTypes = {
@@ -587,6 +602,12 @@ Calendar.propTypes = {
 
 Calendar.defaultProps = {
     locale: 'en',
+    localizedText: {
+        nextMonth: 'Next month',
+        previousMonth: 'Previous month',
+        show12NextYears: 'Show 12 next years',
+        show12PreviousYears: 'Show 12 previous years'
+    },
     onChange: () => { }
 };
 
@@ -599,6 +620,12 @@ Calendar.propDescriptions = {
     disablePastDates: 'Set to **true** to disable dates before today\'s date.',
     disableWeekday: 'Disables dates that match a weekday.',
     disableWeekends: 'Set to **true** to disables dates that match a weekend.',
+    localizedTextShape: {
+        nextMonth: 'aria-label for next button',
+        previousMonth: 'aria-label for previous button',
+        show12NextYears: 'aria-label for next button when years are displayed',
+        show12PreviousYears: 'aria-label for previous button when years are displayed'
+    },
     monthListProps: 'Additional props to be spread to the month\'s `<table>` element.',
     tableBodyProps: 'Additional props to be spread to the `<tbody>` element.',
     tableHeaderProps: 'Additional props to be spread to the `<thead>` element.',
