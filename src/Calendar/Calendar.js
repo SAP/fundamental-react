@@ -60,13 +60,15 @@ class Calendar extends Component {
         const tableRef = this.tableRef.current;
         const selectedDateElement = tableRef.querySelector('.is-selected');
         const todayDateElement = tableRef.querySelector('.fd-calendar__item--current');
+        const disabledDateElements = tableRef.querySelectorAll('.is-disabled, .is-blocked, .fd-calendar__item--other-month');
 
         this.gridManager = new GridManager({
             gridNode: this.tableRef.current,
             firstFocusedElement: selectedDateElement ? selectedDateElement : todayDateElement,
             focusOnInit: true,
             wrapRows: true,
-            wrapCols: false
+            wrapCols: false,
+            disabledCells: disabledDateElements
         });
     }
 
@@ -74,6 +76,7 @@ class Calendar extends Component {
         const tableRef = this.tableRef.current;
         const selectedDateElement = tableRef.querySelector('.is-selected');
         const todayDateElement = tableRef.querySelector('.fd-calendar__item--current');
+        const disabledDateElements = tableRef.querySelectorAll('.is-disabled, .is-blocked, .fd-calendar__item--other-month');
 
         // if switching between month, year, or day view, reconstruct grid
         if (this.state.showMonths !== prevState.showMonths ||
@@ -85,7 +88,8 @@ class Calendar extends Component {
                 firstFocusedElement: selectedDateElement ? selectedDateElement : todayDateElement,
                 focusOnInit: true,
                 wrapRows: true,
-                wrapCols: false
+                wrapCols: false,
+                disabledCells: disabledDateElements
             });
         }
     }
