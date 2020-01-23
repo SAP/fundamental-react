@@ -15,6 +15,7 @@ class Calendar extends Component {
 
         this.state = {
             todayDate: moment().startOf('day'),
+            gridBoundaryContext: null,
             currentDateDisplayed: moment(),
             arrSelectedDates: [],
             selectedDate: moment({ year: 0 }),
@@ -57,41 +58,65 @@ class Calendar extends Component {
     }
 
     componentDidMount = () => {
-        const tableRef = this.tableRef.current;
-        const selectedDateElement = tableRef.querySelector('.is-selected');
-        const todayDateElement = tableRef.querySelector('.fd-calendar__item--current');
-        const disabledDateElements = tableRef.querySelectorAll('.is-disabled, .is-blocked, .fd-calendar__item--other-month');
-
-        this.gridManager = new GridManager({
-            gridNode: this.tableRef.current,
-            firstFocusedElement: selectedDateElement ? selectedDateElement : todayDateElement,
-            focusOnInit: true,
-            wrapRows: true,
-            wrapCols: false,
-            disabledCells: disabledDateElements
-        });
+        this.gridManager = new GridManager(this.getGridOptions());
     }
 
     componentDidUpdate = (prevProps, prevState) => {
+        // if switching between month, year, or day view, reconstruct grid
+        if (
+            this.state.showMonths !== prevState.showMonths ||
+            this.state.showYears !== prevState.showYears ||
+            this.state.currentDateDisplayed.month() !== prevState.currentDateDisplayed.month() ||
+            this.state.currentDateDisplayed.year() !== prevState.currentDateDisplayed.year()
+        ) {
+            this.gridManager.attachTo(this.getGridOptions());
+        }
+    }
+
+    getGridOptions = () => {
+        const { gridBoundaryContext } = this.state;
         const tableRef = this.tableRef.current;
         const selectedDateElement = tableRef.querySelector('.is-selected');
         const todayDateElement = tableRef.querySelector('.fd-calendar__item--current');
         const disabledDateElements = tableRef.querySelectorAll('.is-disabled, .is-blocked, .fd-calendar__item--other-month');
 
-        // if switching between month, year, or day view, reconstruct grid
-        if (this.state.showMonths !== prevState.showMonths ||
-            this.state.showYears !== prevState.showYears ||
-            this.state.currentDateDisplayed.month() !== prevState.currentDateDisplayed.month() ||
-            this.state.currentDateDisplayed.year() !== prevState.currentDateDisplayed.year()) {
-            this.gridManager.attachTo({
-                gridNode: this.tableRef.current,
-                firstFocusedElement: selectedDateElement ? selectedDateElement : todayDateElement,
-                focusOnInit: true,
-                wrapRows: true,
-                wrapCols: false,
-                disabledCells: disabledDateElements
-            });
+        let firstFocusedElement = selectedDateElement ? selectedDateElement : todayDateElement;
+        let firstFocusedCoordinates = { row: 0, col: 0 };
+
+        if (gridBoundaryContext) {
+            const { currentCell, directionX, directionY } = gridBoundaryContext;
+            let firstFocusedRow = currentCell.row;
+            let firstFocusedCol = currentCell.col;
+
+            // start from the bottom/top of the grid and keep searching for an available day
+            if (directionX === -1) {
+                firstFocusedRow = 5; // max 5 different weeks in view
+                firstFocusedCol = 6;
+            } else if (directionX === 1) {
+                firstFocusedRow = 0;
+                firstFocusedCol = 0;
+            } else if (directionY === -1) {
+                firstFocusedRow = 5;
+            } else if (directionY === 1) {
+                firstFocusedRow = 0;
+            }
+
+            firstFocusedCoordinates = { row: firstFocusedRow, col: firstFocusedCol };
         }
+
+        this.setState({ gridBoundaryContext: null });
+
+        return {
+            gridNode: this.tableRef.current,
+            firstFocusedElement: gridBoundaryContext ? null : firstFocusedElement,
+            firstFocusedCoordinates: firstFocusedCoordinates,
+            focusOnInit: true,
+            wrapRows: true,
+            wrapCols: false,
+            disabledCells: disabledDateElements,
+            onPassBoundary: this.onPassGridBoundary,
+            firstCellSearchDirection: gridBoundaryContext ? gridBoundaryContext : { directionX: 0, directionY: 0 }
+        };
     }
 
     showMonths = () => {
@@ -200,6 +225,18 @@ class Calendar extends Component {
                 showYears: false,
                 dateClick: true
             });
+        }
+    }
+
+    onPassGridBoundary = ({ currentCell, directionX, directionY }) => {
+        if (!this.state.showMonths && !this.state.showYears) {
+            this.setState({ gridBoundaryContext: { currentCell, directionX, directionY } });
+
+            if (directionX === -1 || directionY === -1) {
+                this.handlePrevious();
+            } else if (directionX === 1 || directionY === 1) {
+                this.handleNext();
+            }
         }
     }
 

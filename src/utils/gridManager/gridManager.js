@@ -8,66 +8,57 @@ if (global.Element && !Element.prototype.matches) {
 }
 
 export default class GridManager {
-    constructor({
-        gridNode = false,
-        firstFocusedRow = 0,
-        firstFocusedCol = 0,
-        firstFocusedElement = null,
-        focusOnInit = false,
-        wrapRows = false,
-        wrapCols = false,
-        onPassBoundary = ({ currentCell }) => {
-
-            return currentCell;
-        },
-        disabledCells = []
-    }) {
-        this.attachTo({
-            gridNode,
-            firstFocusedRow,
-            firstFocusedCol,
-            firstFocusedElement,
-            focusOnInit,
-            wrapRows,
-            wrapCols,
-            onPassBoundary,
-            disabledCells
-        });
+    constructor(options = {}) {
+        this.attachTo(options);
     }
 
     attachTo({
-        gridNode = false,
-        firstFocusedRow = 0,
-        firstFocusedCol = 0,
-        firstFocusedElement = null,
+        gridNode = null,
+        firstFocusedElement = null, // first DOM element to be focused, if it exists in the grid. Takes priority over firstFocusedCoordinates
+        firstFocusedCoordinates = { row: 0, col: 0 }, // first coordinates in the grid to attempt to focus
         focusOnInit = false,
         wrapRows = false,
         wrapCols = false,
-        onPassBoundary = ({ currentCell }) => {
-
-            return currentCell;
-        },
-        disabledCells = []
+        onPassBoundary = () => {},
+        disabledCells = [],
+        firstCellSearchDirection = { directionX: 0, directionY: 0 }
     }) {
         if (gridNode) {
             this.gridNode = gridNode;
-            this.focusedRow = firstFocusedRow;
-            this.focusedCol = firstFocusedCol;
             this.wrapRows = wrapRows;
             this.wrapCols = wrapCols;
             this.onPassBoundary = onPassBoundary;
             this.disabledCells = disabledCells;
 
             this.editMode = false;
+            this.focusedRow = 0;
+            this.focusedCol = 0;
             this.setupFocusGrid();
             if (this.grid.length) {
-                const firstFocusedCell = this.getCellProperties(
-                    firstFocusedElement ? firstFocusedElement : this.grid[this.focusedRow][this.focusedCol]);
-                this.setFocusPointer(firstFocusedCell.row, firstFocusedCell.col);
-                if (focusOnInit) {
-                    this.focusCell(firstFocusedCell);
+                let firstFocusedCell = firstFocusedElement ? this.getCellProperties(firstFocusedElement) : {
+                    row: firstFocusedCoordinates.row,
+                    col: firstFocusedCoordinates.col,
+                    element: this.grid[firstFocusedCoordinates.row] ?
+                        this.grid[firstFocusedCoordinates.row][firstFocusedCoordinates.col] : null
+                };
+
+                if (!this.isValidCell(firstFocusedCell) || this.isDisabledCell(firstFocusedCell.element)) {
+                    firstFocusedCell = this.getNextCell(
+                        firstFocusedCell,
+                        firstCellSearchDirection.directionX,
+                        firstCellSearchDirection.directionY
+                    );
                 }
-                this.registerEvents();
+
+                if (firstFocusedCell) {
+                    this.setFocusPointer(firstFocusedCell.row, firstFocusedCell.col);
+
+                    if (focusOnInit) {
+                        this.focusCell(firstFocusedCell);
+                    }
+
+                    this.registerEvents();
+                }
             }
         }
     }
@@ -322,6 +313,31 @@ export default class GridManager {
         }
     };
 
+    didPassBoundary = (rowLength, candidateRow, candidateCol, directionX, directionY) => {
+        if (directionX === -1) {
+            return (
+                (candidateRow < 0) ||
+                (!this.wrapRows && (candidateCol < 0))
+            );
+        } else if (directionX === 1) {
+            return (
+                (candidateRow >= this.grid.length) ||
+                (!this.wrapRows && (candidateCol >= rowLength))
+            );
+        } else if (directionY === -1) {
+            return (
+                (candidateCol < 0) ||
+                (!this.wrapCols && (candidateRow < 0))
+            );
+        } else if (directionY === 1) {
+            return (
+                (candidateCol >= rowLength) ||
+                (!this.wrapCols && (candidateRow >= this.grid.length))
+            );
+        }
+        return false;
+    }
+
     getNextCell = (currentCell, directionX, directionY) => {
         // directionX: 1 = right, -1 = left
         // directionY: 1 = down, -1 = up
@@ -337,28 +353,34 @@ export default class GridManager {
             do {
                 candidateCol += directionX;
 
+                while (!this.grid[candidateRow]) {
+                    candidateRow--;
+
+                    if (candidateRow < 0) {
+                        return null;
+                    }
+                }
+
+                let rowLength = this.grid[candidateRow].length;
+
                 if (this.wrapRows) {
-                    if (directionX === 1 && candidateCol >= this.grid[currentCell.row].length) {
+                    if (directionX === 1 && candidateCol >= rowLength) {
                         candidateRow++;
                         candidateCol = 0;
                     } else if (directionX === -1 && candidateCol < 0) {
                         candidateRow--;
-                        candidateCol = this.grid[currentCell.row].length - 1;
+                        candidateCol = rowLength - 1;
                     }
                 }
 
-                if ((candidateRow < 0 || candidateRow >= this.grid.length) ||
-                    (!this.wrapRows && (candidateCol < 0 || candidateCol >= this.grid[currentCell.row].length))) {
-                    // todo: fix after implement boundary function
-                    candidateRow = currentCell.row;
-                    candidateCol = currentCell.col;
+                if (this.didPassBoundary(rowLength, candidateRow, candidateCol, directionX, directionY)) {
                     this.onPassBoundary({ currentCell, directionX, directionY });
 
-                    break;
+                    return null;
                 }
             } while (
-                this.isDisabledCell(this.grid[candidateRow][candidateCol]) ||
                 !this.isValidCell({ row: candidateRow, col: candidateCol }) ||
+                this.isDisabledCell(this.grid[candidateRow][candidateCol]) ||
                 this.grid[candidateRow][candidateCol] === currentCell.element
             );
 
@@ -366,11 +388,13 @@ export default class GridManager {
                 this.grid[candidateRow][candidateCol],
                 { row: candidateRow, col: candidateCol }
             );
-        } else { // vertical
+        } else if (directionY !== 0) { // vertical
             let candidateRow = currentCell.row;
             let candidateCol = currentCell.col;
             do {
                 candidateRow += directionY;
+
+                let rowLength = this.grid[currentCell.row] ? this.grid[currentCell.row].length : 0;
 
                 if (this.wrapCols) {
                     if (directionY === 1 && candidateRow >= this.grid.length) {
@@ -382,18 +406,14 @@ export default class GridManager {
                     }
                 }
 
-                if ((candidateCol < 0 || candidateCol >= this.grid[currentCell.row].length) ||
-                    (!this.wrapCols && (candidateRow < 0 || candidateRow >= this.grid.length))) {
-                    // todo: fix after implement boundary function
-                    candidateRow = currentCell.row;
-                    candidateCol = currentCell.col;
+                if (this.didPassBoundary(rowLength, candidateRow, candidateCol, directionX, directionY)) {
                     this.onPassBoundary({ currentCell, directionX, directionY });
 
-                    break;
+                    return null;
                 }
             } while (
-                this.isDisabledCell(this.grid[candidateRow][candidateCol]) ||
                 !this.isValidCell({ row: candidateRow, col: candidateCol }) ||
+                this.isDisabledCell(this.grid[candidateRow][candidateCol]) ||
                 this.grid[candidateRow][candidateCol] === currentCell.element
             );
 
