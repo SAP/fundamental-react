@@ -142,6 +142,23 @@ describe('<Modal />', () => {
         });
     });
 
+    describe('Custom class names', () => {
+        test('should allow classes to be added to backdrop', () => {
+            component = mount(<Modal backdropClassName='sample' show
+                title='Title' />);
+
+            expect(component.find('div.fd-overlay--modal').hasClass('sample')).toBe(true);
+        });
+
+        test('should allow classes to be added to modal', () => {
+            component = mount(<Modal className='sample' show
+                title='Title' />);
+
+            expect(component.find('div.fd-modal').hasClass('sample')).toBe(true);
+        });
+    });
+
+
     describe('Prop spreading', () => {
         test('should allow props to be spread to the Modal component', () => {
             component = mount(

@@ -412,7 +412,10 @@ export class Routes extends Component {
                                         value={this.state.query} />
                                 </InputGroup>
                             </div>
-                            <SideNav onItemSelect={this.updateCurrentPage} selectedId={this.state.currentPage}>
+                            <SideNav
+                                className='frDocs-Sidebar__nav'
+                                onItemSelect={this.updateCurrentPage}
+                                selectedId={this.state.currentPage}>
                                 {navItems}
                             </SideNav>
                         </div>

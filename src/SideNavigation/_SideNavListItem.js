@@ -28,9 +28,8 @@ class SideNavListItem extends React.Component {
         const { children, glyph, id, isSubItem, name, onClick, onItemSelect, selected, selectedId, url, ...props } = this.props;
         const getClasses = () => {
             return classnames(
+                'fd-nested-list__link',
                 {
-                    'fd-side-nav__link': !isSubItem,
-                    'fd-side-nav__sublink': isSubItem,
                     'is-selected': selected,
                     'has-child': hasChild,
                     'is-expanded': this.state.expanded
@@ -56,17 +55,19 @@ class SideNavListItem extends React.Component {
                     }}>
                     {glyph ? (
                         <span
-                            className={`fd-side-nav__icon sap-icon--${glyph} sap-icon--l`}
+                            className={`fd-nested-list__icon sap-icon--${glyph}`}
                             role='presentation' />
                     ) : null}
-                    {name}
+                    <span className='fd-nested-list__title'>
+                        {name}
+                    </span>
                 </a>
             );
         };
 
         return (
             <li {...props}
-                className='fd-side-nav__item'
+                className='fd-nested-list__item'
                 key={id}>
                 {url && renderLink()}
                 {React.Children.toArray(children).map(child => {
@@ -75,10 +76,10 @@ class SideNavListItem extends React.Component {
                             children: (<React.Fragment>
                                 {glyph ? (
                                     <span
-                                        className={`fd-side-nav__icon sap-icon--${glyph} sap-icon--l`}
+                                        className={`fd-nested-list__icon sap-icon--${glyph}`}
                                         role='presentation' />
                                 ) : null}
-                                {child.props.children}
+                                <span className='fd-nested-list__title'>{child.props.children}</span>
                             </React.Fragment>),
                             className: getClasses(),
                             onClick: (e) => {

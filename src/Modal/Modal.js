@@ -34,6 +34,7 @@ class Modal extends Component {
     render() {
         const {
             actions,
+            backdropClassName,
             bodyProps,
             children,
             className,
@@ -51,9 +52,14 @@ class Modal extends Component {
             ...rest
         } = this.props;
 
-        const modalClasses = classnames(
+        const backdropClasses = classnames(
             'fd-overlay',
             'fd-overlay--modal',
+            backdropClassName
+        );
+
+        const modalClasses = classnames(
+            'fd-modal',
             className
         );
 
@@ -64,45 +70,43 @@ class Modal extends Component {
         }
 
         return ReactDOM.createPortal(
-            <FocusLock as='div' className={modalClasses}
+            <FocusLock as='div' className={backdropClasses}
                 lockProps={{ ...rest }}>
-                <div className='modal-demo-bg'>
-                    <span data-autofocus tabIndex='-1' />
+                <span data-autofocus tabIndex='-1' />
+                <div
+                    aria-label={title}
+                    aria-modal='true'
+                    className={modalClasses}
+                    role='dialog'>
                     <div
-                        aria-label={title}
-                        aria-modal='true'
-                        className='fd-modal'
-                        role='dialog'>
-                        <div
-                            {...contentProps}
-                            className='fd-modal__content'
-                            role='document'>
-                            <div {...headerProps} className='fd-modal__header'>
-                                <HeadingTag {...titleProps} className='fd-modal__title'>
-                                    {title}
-                                </HeadingTag>
-                                <Button
-                                    {...closeProps}
-                                    aria-label={localizedText.closeButton}
-                                    className='fd-modal__close'
-                                    disableStyles={disableStyles}
-                                    glyph='decline'
-                                    onClick={this.handleCloseClick}
-                                    option='light' />
-                            </div>
-                            <div {...bodyProps} className='fd-modal__body'>
-                                {children}
-                            </div>
-                            {actions ? (
-                                <footer
-                                    {...footerProps}
-                                    className='fd-modal__footer'>
-                                    {actions}
-                                </footer>
-                            ) : (
-                                ''
-                            )}
+                        {...contentProps}
+                        className='fd-modal__content'
+                        role='document'>
+                        <div {...headerProps} className='fd-modal__header'>
+                            <HeadingTag {...titleProps} className='fd-modal__title'>
+                                {title}
+                            </HeadingTag>
+                            <Button
+                                {...closeProps}
+                                aria-label={localizedText.closeButton}
+                                className='fd-modal__close'
+                                disableStyles={disableStyles}
+                                glyph='decline'
+                                onClick={this.handleCloseClick}
+                                option='light' />
                         </div>
+                        <div {...bodyProps} className='fd-modal__body'>
+                            {children}
+                        </div>
+                        {actions ? (
+                            <footer
+                                {...footerProps}
+                                className='fd-modal__footer'>
+                                {actions}
+                            </footer>
+                        ) : (
+                            ''
+                        )}
                     </div>
                 </div>
             </FocusLock>,
@@ -116,6 +120,7 @@ Modal.displayName = 'Modal';
 Modal.propTypes = {
     title: PropTypes.string.isRequired,
     actions: PropTypes.node,
+    backdropClassName: PropTypes.string,
     bodyProps: PropTypes.object,
     children: PropTypes.node,
     className: PropTypes.string,
@@ -144,6 +149,7 @@ Modal.defaultProps = {
 
 Modal.propDescriptions = {
     actions: 'Node(s) to render within the footer of the dialog.',
+    backdropClassName: 'CSS class(es) to add to the modal backdrop.',
     bodyProps: 'Additional props to be spread to the body section of the dialog.',
     closeProps: 'Additional props to be spread to the close `<button>` element.',
     contentProps: 'Additional props to be spread to the content section of the dialog.',
