@@ -24,6 +24,7 @@ exports[`<Tile.Actions /> create Tile.Actions component 1`] = `
           onKeyPress={[Function]}
           role="button"
           tabIndex={0}
+          type="button"
         />
       </div>
     </div>
