@@ -103,6 +103,7 @@ exports[`<Tile /> create tile component 4`] = `
             onKeyPress={[Function]}
             role="button"
             tabIndex={0}
+            type="button"
           />
         </div>
       </div>
@@ -174,6 +175,7 @@ exports[`<Tile /> create tile component 6`] = `
             onKeyPress={[Function]}
             role="button"
             tabIndex={0}
+            type="button"
           />
         </div>
       </div>
