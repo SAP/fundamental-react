@@ -112,6 +112,7 @@ class Calendar extends Component {
             gridNode: this.tableRef.current,
             firstFocusedElement: gridBoundaryContext ? null : firstFocusedElement,
             firstFocusedCoordinates: firstFocusedCoordinates,
+            enableHeaderCells: false,
             focusOnInit: focusOnInit,
             wrapRows: true,
             wrapCols: false,
@@ -232,6 +233,7 @@ class Calendar extends Component {
 
     onPassGridBoundary = ({ currentCell, directionX, directionY }) => {
         if (!this.state.showMonths && !this.state.showYears) {
+            currentCell.element.setAttribute('tabindex', -1);
             this.setState({ gridBoundaryContext: { currentCell, directionX, directionY } });
 
             if (directionX === -1 || directionY === -1) {

@@ -16,6 +16,7 @@ export default class GridManager {
         gridNode = null,
         firstFocusedElement = null, // first DOM element to be focused, if it exists in the grid. Takes priority over firstFocusedCoordinates
         firstFocusedCoordinates = { row: 0, col: 0 }, // first coordinates in the grid to attempt to focus
+        enableHeaderCells = true,
         focusOnInit = false,
         wrapRows = false,
         wrapCols = false,
@@ -25,6 +26,7 @@ export default class GridManager {
     }) {
         if (gridNode) {
             this.gridNode = gridNode;
+            this.enableHeaderCells = enableHeaderCells;
             this.wrapRows = wrapRows;
             this.wrapCols = wrapCols;
             this.onPassBoundary = onPassBoundary;
@@ -71,7 +73,7 @@ export default class GridManager {
                 const rowCells = [];
 
                 Array.prototype.forEach.call(
-                    row.querySelectorAll(GridSelector.CELL), (cell) => {
+                    row.querySelectorAll(`${GridSelector.CELL}, ${this.enableHeaderCells && GridSelector.HEADER}`), (cell) => {
                         let cellToPush = cell;
                         if (!cell.hasAttribute('tabindex')) {
                             cell.setAttribute('tabindex', -1);
