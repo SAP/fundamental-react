@@ -16,6 +16,7 @@ class Calendar extends Component {
         this.state = {
             todayDate: moment().startOf('day'),
             gridBoundaryContext: null,
+            refocusGrid: false,
             currentDateDisplayed: moment(),
             arrSelectedDates: [],
             selectedDate: moment({ year: 0 }),
@@ -74,25 +75,25 @@ class Calendar extends Component {
     }
 
     getGridOptions = (newView) => {
-        const { gridBoundaryContext } = this.state;
+        const { gridBoundaryContext, refocusGrid } = this.state;
         const tableRef = this.tableRef.current;
         const selectedDateElement = tableRef.querySelector('.is-selected');
         const todayDateElement = tableRef.querySelector('.fd-calendar__item--current');
         const disabledDateElements = tableRef.querySelectorAll('.fd-calendar__item--other-month');
-        const focusOnInit = newView || gridBoundaryContext;
+        const focusOnInit = newView || gridBoundaryContext || refocusGrid;
 
         let firstFocusedElement = selectedDateElement ? selectedDateElement : todayDateElement;
         let firstFocusedCoordinates = { row: 0, col: 0 };
 
         if (gridBoundaryContext) {
             const { currentCell, directionX, directionY } = gridBoundaryContext;
-            let firstFocusedRow = currentCell.row;
-            let firstFocusedCol = currentCell.col;
+            let firstFocusedRow = currentCell && currentCell.row;
+            let firstFocusedCol = currentCell && currentCell.col;
 
-            // start from the bottom/top of the grid and keep searching for an available day
+            // start from the bottom/top of the grid and keep searching for an available date in the direction used to pass the grid boundary
             if (directionX === -1) {
                 firstFocusedRow = 5; // max 5 different weeks in view
-                firstFocusedCol = 6;
+                firstFocusedCol = 7;
             } else if (directionX === 1) {
                 firstFocusedRow = 0;
                 firstFocusedCol = 0;
@@ -105,7 +106,7 @@ class Calendar extends Component {
             firstFocusedCoordinates = { row: firstFocusedRow, col: firstFocusedCol };
         }
 
-        this.setState({ gridBoundaryContext: null });
+        this.setState({ gridBoundaryContext: null, refocusGrid: false });
 
         return {
             gridNode: this.tableRef.current,
@@ -241,11 +242,47 @@ class Calendar extends Component {
         }
     }
 
-    onKeyDown = (event, onKeyFunction) => {
+    onKeyDownCalendar = (event) => {
+        let newDate;
+        switch (keycode(event)) {
+            case 'page up':
+                event.preventDefault();
+                if (event.shiftKey) {
+                    newDate = moment(this.state.currentDateDisplayed).subtract(1, 'year');
+                } else {
+                    newDate = moment(this.state.currentDateDisplayed).subtract(1, 'month');
+                }
+                this.setState({
+                    currentDateDisplayed: newDate,
+                    selectedDate: newDate,
+                    refocusGrid: true,
+                    dateClick: true
+                });
+                break;
+            case 'page down':
+                event.preventDefault();
+                if (event.shiftKey) {
+                    newDate = moment(this.state.currentDateDisplayed).add(1, 'year');
+                } else {
+                    newDate = moment(this.state.currentDateDisplayed).add(1, 'month');
+                }
+                this.setState({
+                    currentDateDisplayed: newDate,
+                    selectedDate: newDate,
+                    refocusGrid: true,
+                    dateClick: true
+                });
+                break;
+            default:
+        }
+    }
+
+    onKeyDownDay = (event, onKeyFunction) => {
         switch (keycode(event)) {
             case 'enter':
             case 'space':
                 event.preventDefault();
+                event.stopPropagation();
                 onKeyFunction();
                 break;
             default:
@@ -280,7 +317,7 @@ class Calendar extends Component {
                         key={month} name={month}
                         onClick={() => this.changeMonth(month)}>
                         <span className='fd-calendar__text'
-                            onKeyDown={(e) => this.onKeyDown(e, this.changeMonth.bind(this, month))} role='button'>
+                            onKeyDown={(e) => this.onKeyDownDay(e, this.changeMonth.bind(this, month))} role='button'>
                             {shortenedNameMonth}
                         </span>
                     </td>
@@ -334,7 +371,7 @@ class Calendar extends Component {
                         name={element}
                         onClick={() => this.changeYear(element)}>
                         <span className='fd-calendar__text'
-                            onKeyDown={(e) => this.onKeyDown(e, this.changeYear.bind(this, element))} role='button'>
+                            onKeyDown={(e) => this.onKeyDownDay(e, this.changeYear.bind(this, element))} role='button'>
                             {element}
                         </span>
                     </td>
@@ -557,7 +594,7 @@ class Calendar extends Component {
                         <span
                             aria-label={ariaLabel}
                             className='fd-calendar__text'
-                            onKeyDown={this.isEnabledDate(day) ? (e) => this.onKeyDown(e, this.dateClick.bind(this, copyDate, enableRangeSelection)) : null}
+                            onKeyDown={this.isEnabledDate(day) ? (e) => this.onKeyDownDay(e, this.dateClick.bind(this, copyDate, enableRangeSelection)) : null}
                             role='button'>{dateFormatted.toString()}</span>
                     </td >
                 );
@@ -628,7 +665,8 @@ class Calendar extends Component {
         );
 
         return (
-            <div {...props} className={calendarClasses}>
+            <div {...props} className={calendarClasses}
+                onKeyDown={(e) => this.onKeyDownCalendar(e)}>
                 {this.generateNavigation()}
                 <div className='fd-calendar__content'>
                     {this._renderContent(monthListProps, yearListProps, tableProps, tableHeaderProps, tableBodyProps)}

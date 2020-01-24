@@ -123,8 +123,10 @@ export default class GridManager {
                 col: cellCoordinates.col,
                 element: element
             };
-            cell.focusableElements = cell.element.querySelectorAll(GridSelector.FOCUSABLE);
-            cell.editableElement = cell.element.querySelector(GridSelector.EDITABLE);
+            if (element) {
+                cell.focusableElements = cell.element.querySelectorAll(GridSelector.FOCUSABLE);
+                cell.editableElement = cell.element.querySelector(GridSelector.EDITABLE);
+            }
         }
 
         return cell;
@@ -241,6 +243,22 @@ export default class GridManager {
             case keycode.codes.right:
                 nextCell = this.getNextCell(currentCell, 1, 0);
                 break;
+            case keycode.codes.home:
+                nextCell = this.getNextCell(
+                    this.getCellProperties(
+                        this.grid[this.focusedRow][this.grid[this.focusedRow].length],
+                        { row: this.focusedRow, col: -1 }
+                    ), 1, 0
+                );
+                break;
+            case keycode.codes.end:
+                nextCell = this.getNextCell(
+                    this.getCellProperties(
+                        this.grid[this.focusedRow][this.grid[this.focusedRow].length],
+                        { row: this.focusedRow, col: this.grid[this.focusedRow].length }
+                    ), -1, 0
+                );
+                break;
             case keycode.codes.enter:
                 if (this.isEditableCell(currentCell)) {
                     this.toggleEditMode(currentCell, !this.editMode);
@@ -353,12 +371,8 @@ export default class GridManager {
             do {
                 candidateCol += directionX;
 
-                while (!this.grid[candidateRow]) {
-                    candidateRow--;
-
-                    if (candidateRow < 0) {
-                        return null;
-                    }
+                if (candidateRow > this.grid.length - 1) {
+                    candidateRow = this.grid.length - 1;
                 }
 
                 let rowLength = this.grid[candidateRow].length;
