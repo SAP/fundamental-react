@@ -62,23 +62,24 @@ class Calendar extends Component {
     }
 
     componentDidUpdate = (prevProps, prevState) => {
-        // if switching between month, year, or day view, reconstruct grid
+        // if switching picker view or switching to a new month or year, reconstruct grid
+        const newView = this.state.showMonths !== prevState.showMonths || this.state.showYears !== prevState.showYears;
         if (
-            this.state.showMonths !== prevState.showMonths ||
-            this.state.showYears !== prevState.showYears ||
+            newView ||
             this.state.currentDateDisplayed.month() !== prevState.currentDateDisplayed.month() ||
             this.state.currentDateDisplayed.year() !== prevState.currentDateDisplayed.year()
         ) {
-            this.gridManager.attachTo(this.getGridOptions());
+            this.gridManager.attachTo(this.getGridOptions(newView));
         }
     }
 
-    getGridOptions = () => {
+    getGridOptions = (newView) => {
         const { gridBoundaryContext } = this.state;
         const tableRef = this.tableRef.current;
         const selectedDateElement = tableRef.querySelector('.is-selected');
         const todayDateElement = tableRef.querySelector('.fd-calendar__item--current');
         const disabledDateElements = tableRef.querySelectorAll('.fd-calendar__item--other-month');
+        const focusOnInit = newView || gridBoundaryContext;
 
         let firstFocusedElement = selectedDateElement ? selectedDateElement : todayDateElement;
         let firstFocusedCoordinates = { row: 0, col: 0 };
@@ -110,12 +111,12 @@ class Calendar extends Component {
             gridNode: this.tableRef.current,
             firstFocusedElement: gridBoundaryContext ? null : firstFocusedElement,
             firstFocusedCoordinates: firstFocusedCoordinates,
-            focusOnInit: true,
+            focusOnInit: focusOnInit,
             wrapRows: true,
             wrapCols: false,
             disabledCells: disabledDateElements,
             onPassBoundary: this.onPassGridBoundary,
-            firstCellSearchDirection: gridBoundaryContext ? gridBoundaryContext : { directionX: 0, directionY: 0 }
+            firstCellSearchDirection: gridBoundaryContext ? gridBoundaryContext : { directionX: 1, directionY: 0 }
         };
     }
 
@@ -555,7 +556,7 @@ class Calendar extends Component {
                         role='gridcell'>
                         <span
                             aria-label={ariaLabel}
-                            className={'fd-calendar__text'}
+                            className='fd-calendar__text'
                             onKeyDown={this.isEnabledDate(day) ? (e) => this.onKeyDown(e, this.dateClick.bind(this, copyDate, enableRangeSelection)) : null}
                             role='button'>{dateFormatted.toString()}</span>
                     </td >

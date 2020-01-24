@@ -439,7 +439,7 @@ export default class GridManager {
             if (element.contains(document.activeElement)) {
                 let currIndex = index;
                 while (
-                    currIndex > 0 &&
+                    currIndex >= 0 &&
                     currIndex < tabbableElements.length &&
                     this.gridNode.contains(tabbableElements[currIndex])
                 ) {
