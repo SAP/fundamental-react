@@ -78,7 +78,7 @@ class Calendar extends Component {
         const tableRef = this.tableRef.current;
         const selectedDateElement = tableRef.querySelector('.is-selected');
         const todayDateElement = tableRef.querySelector('.fd-calendar__item--current');
-        const disabledDateElements = tableRef.querySelectorAll('.is-disabled, .is-blocked, .fd-calendar__item--other-month');
+        const disabledDateElements = tableRef.querySelectorAll('.fd-calendar__item--other-month');
 
         let firstFocusedElement = selectedDateElement ? selectedDateElement : todayDateElement;
         let firstFocusedCoordinates = { row: 0, col: 0 };
@@ -438,7 +438,7 @@ class Calendar extends Component {
             this.props.localizedText.show12NextYears : this.props.localizedText.nextMonth;
 
         return (
-            <header aria-live='polite' className='fd-calendar__header'>
+            <header className='fd-calendar__header'>
                 <div className='fd-calendar__navigation'>
                     <div className='fd-calendar__action'>
                         <Button
@@ -525,6 +525,12 @@ class Calendar extends Component {
             for (let iterations = 0; iterations < 7; iterations++) {
                 dateFormatted = day.date();
                 const copyDate = moment(day);
+                const isDisabled = !this.isEnabledDate(day);
+                const isBlocked = this.isDateBetween(day, blockedDates);
+                const ariaLabel = copyDate.format(moment.localeData(this.props.locale).longDateFormat('LL'));
+                if (isDisabled || isBlocked) {
+                    ariaLabel += ' ' + moment.localeData(this.props.locale).invalidDate();
+                }
 
                 const dayClasses = classnames(
                     'fd-calendar__item',
@@ -535,8 +541,8 @@ class Calendar extends Component {
                         'is-selected-range-first': this.isSelectedRangeFirst(day),
                         'is-selected-range-last': this.isSelectedRangeLast(day),
                         'is-selected-range': this.isInSelectedRange(day),
-                        'is-disabled': !this.isEnabledDate(day),
-                        'is-blocked': this.isDateBetween(day, blockedDates)
+                        'is-disabled': isDisabled,
+                        'is-blocked': isBlocked
                     }
                 );
 
@@ -547,7 +553,9 @@ class Calendar extends Component {
                         key={copyDate}
                         onClick={this.isEnabledDate(day) ? () => this.dateClick(copyDate, enableRangeSelection) : null}
                         role='gridcell'>
-                        <span className='fd-calendar__text'
+                        <span
+                            aria-label={ariaLabel}
+                            className={'fd-calendar__text'}
                             onKeyDown={this.isEnabledDate(day) ? (e) => this.onKeyDown(e, this.dateClick.bind(this, copyDate, enableRangeSelection)) : null}
                             role='button'>{dateFormatted.toString()}</span>
                     </td >
