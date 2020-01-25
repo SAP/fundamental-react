@@ -106,8 +106,7 @@ class Calendar extends Component {
             firstFocusedCoordinates = { row: firstFocusedRow, col: firstFocusedCol };
         }
 
-        this.setState({ gridBoundaryContext: null, refocusGrid: false });
-
+        this.setState({ gridBoundaryContext: null, refocusGrid: false, dateClick: true });
         return {
             gridNode: this.tableRef.current,
             firstFocusedElement: gridBoundaryContext ? null : firstFocusedElement,
@@ -234,7 +233,7 @@ class Calendar extends Component {
     onPassGridBoundary = ({ currentCell, directionX, directionY }) => {
         if (!this.state.showMonths && !this.state.showYears) {
             currentCell.element.setAttribute('tabindex', -1);
-            this.setState({ gridBoundaryContext: { currentCell, directionX, directionY } });
+            this.setState({ gridBoundaryContext: { currentCell, directionX, directionY }, dateClick: true });
 
             if (directionX === -1 || directionY === -1) {
                 this.handlePrevious();
