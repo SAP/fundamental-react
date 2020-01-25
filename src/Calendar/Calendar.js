@@ -112,13 +112,13 @@ class Calendar extends Component {
             gridNode: this.tableRef.current,
             firstFocusedElement: gridBoundaryContext ? null : firstFocusedElement,
             firstFocusedCoordinates: firstFocusedCoordinates,
+            firstCellSearchDirection: gridBoundaryContext ? gridBoundaryContext : { directionX: 1, directionY: 0 },
             enableHeaderCells: false,
             focusOnInit: focusOnInit,
             wrapRows: true,
             wrapCols: false,
             disabledCells: disabledDateElements,
-            onPassBoundary: this.onPassGridBoundary,
-            firstCellSearchDirection: gridBoundaryContext ? gridBoundaryContext : { directionX: 1, directionY: 0 }
+            onPassBoundary: this.onPassGridBoundary
         };
     }
 
