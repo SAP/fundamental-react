@@ -105,8 +105,8 @@ class Calendar extends Component {
 
             firstFocusedCoordinates = { row: firstFocusedRow, col: firstFocusedCol };
         }
-
         this.setState({ gridBoundaryContext: null, refocusGrid: false, dateClick: true });
+
         return {
             gridNode: this.tableRef.current,
             firstFocusedElement: gridBoundaryContext ? null : firstFocusedElement,
@@ -188,8 +188,7 @@ class Calendar extends Component {
     changeMonth = (month) => {
         const newDate = moment(this.state.currentDateDisplayed)
             .locale(this.props.locale)
-            .month(month)
-            .date(1);
+            .month(month);
 
         if (!this.props.enableRangeSelection) {
             this.setState({

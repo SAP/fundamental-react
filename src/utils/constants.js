@@ -144,6 +144,5 @@ export const GridSelector = {
     ROW: 'tr, [role="row"]',
     HEADER: 'th',
     CELL: 'td, [role="gridcell"]',
-    FOCUSABLE: 'input:enabled, select, textarea, a[href], button, [tabindex], [role="button"]',
-    EDITABLE: 'input:enabled[type="text"], input:enabled[type="number"], select, textarea'
+    FOCUSABLE: 'input:enabled, select, textarea, a[href], button, [tabindex], [role="button"]'
 };
