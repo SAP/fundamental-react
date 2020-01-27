@@ -6,6 +6,7 @@ exports[`<ListGroupItemActions /> create list group item actions 1`] = `
 >
   <button
     className="fd-button fd-button--standard sap-icon--edit"
+    type="button"
   />
 </span>
 `;

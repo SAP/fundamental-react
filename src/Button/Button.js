@@ -57,6 +57,10 @@ Button.propTypes = {
     onClick: PropTypes.func
 };
 
+Button.defaultProps = {
+    typeAttr: 'button'
+};
+
 Button.propDescriptions = {
     option: 'Indicates the importance of the button.',
     selected: 'Set to **true** to set state of the button to "selected".',

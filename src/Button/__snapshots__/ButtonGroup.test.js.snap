@@ -8,13 +8,16 @@ exports[`<ButtonGroup /> create button group 1`] = `
 >
   <button
     className="fd-button sap-icon--survey blue"
+    type="button"
   />
   <button
     className="fd-button sap-icon--pie-chart is-selected"
     selected={true}
+    type="button"
   />
   <button
     className="fd-button sap-icon--pool"
+    type="button"
   />
 </div>
 `;

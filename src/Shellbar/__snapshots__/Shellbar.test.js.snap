@@ -228,6 +228,7 @@ exports[`<Shellbar /> create shellbar 3`] = `
                   <button
                     className="fd-button--light sap-icon--search fd-input-group__button"
                     onClick={[Function]}
+                    type="button"
                   />
                 </span>
               </div>
@@ -260,6 +261,7 @@ exports[`<Shellbar /> create shellbar 3`] = `
               onKeyPress={[Function]}
               role="button"
               tabIndex={0}
+              type="button"
             >
               <span
                 aria-label="Unread count"
@@ -296,6 +298,7 @@ exports[`<Shellbar /> create shellbar 3`] = `
             <button
               aria-label="Notifications"
               className="fd-button sap-icon--bell fd-shellbar__button"
+              type="button"
             >
               <span
                 aria-label="Unread count"
@@ -334,6 +337,7 @@ exports[`<Shellbar /> create shellbar 3`] = `
             >
               <button
                 className="fd-button sap-icon--overflow fd-shellbar__button"
+                type="button"
               >
                 <span
                   aria-label="Unread count"
@@ -409,6 +413,7 @@ exports[`<Shellbar /> create shellbar 3`] = `
                 onKeyPress={[Function]}
                 role="button"
                 tabIndex={0}
+                type="button"
               />
             </div>
           </div>
@@ -523,6 +528,7 @@ exports[`<Shellbar /> create shellbar 4`] = `
                   <button
                     className="fd-button--light sap-icon--search fd-input-group__button"
                     onClick={[Function]}
+                    type="button"
                   />
                 </span>
               </div>
@@ -555,6 +561,7 @@ exports[`<Shellbar /> create shellbar 4`] = `
               onKeyPress={[Function]}
               role="button"
               tabIndex={0}
+              type="button"
             >
               <span
                 aria-label="Unread count"
@@ -591,6 +598,7 @@ exports[`<Shellbar /> create shellbar 4`] = `
             <button
               aria-label="Notifications"
               className="fd-button sap-icon--bell fd-shellbar__button"
+              type="button"
             />
           </div>
         </div>
@@ -622,6 +630,7 @@ exports[`<Shellbar /> create shellbar 4`] = `
             >
               <button
                 className="fd-button sap-icon--overflow fd-shellbar__button"
+                type="button"
               >
                 <span
                   aria-label="Unread count"
@@ -697,6 +706,7 @@ exports[`<Shellbar /> create shellbar 4`] = `
                 onKeyPress={[Function]}
                 role="button"
                 tabIndex={0}
+                type="button"
               />
             </div>
           </div>
@@ -811,6 +821,7 @@ exports[`<Shellbar /> create shellbar 5`] = `
                   <button
                     className="fd-button--light sap-icon--search fd-input-group__button"
                     onClick={[Function]}
+                    type="button"
                   />
                 </span>
               </div>
@@ -826,6 +837,7 @@ exports[`<Shellbar /> create shellbar 5`] = `
         aria-label="Settings"
         className="fd-button sap-icon--settings fd-shellbar__button"
         onClick={[Function]}
+        type="button"
       >
         <span
           aria-label="Unread count"
@@ -859,6 +871,7 @@ exports[`<Shellbar /> create shellbar 5`] = `
             <button
               aria-label="Notifications"
               className="fd-button sap-icon--bell fd-shellbar__button"
+              type="button"
             />
           </div>
         </div>
@@ -890,6 +903,7 @@ exports[`<Shellbar /> create shellbar 5`] = `
             >
               <button
                 className="fd-button sap-icon--overflow fd-shellbar__button"
+                type="button"
               >
                 <span
                   aria-label="Unread count"
@@ -965,6 +979,7 @@ exports[`<Shellbar /> create shellbar 5`] = `
                 onKeyPress={[Function]}
                 role="button"
                 tabIndex={0}
+                type="button"
               />
             </div>
           </div>
@@ -1079,6 +1094,7 @@ exports[`<Shellbar /> create shellbar 6`] = `
                   <button
                     className="fd-button--light sap-icon--search fd-input-group__button"
                     onClick={[Function]}
+                    type="button"
                   />
                 </span>
               </div>
@@ -1111,6 +1127,7 @@ exports[`<Shellbar /> create shellbar 6`] = `
               onKeyPress={[Function]}
               role="button"
               tabIndex={0}
+              type="button"
             >
               <span
                 aria-label="Unread count"
@@ -1130,6 +1147,7 @@ exports[`<Shellbar /> create shellbar 6`] = `
         aria-label="Notifications"
         className="fd-button sap-icon--bell fd-shellbar__button"
         onClick={[Function]}
+        type="button"
       >
         <span
           aria-label="Unread count"
@@ -1165,6 +1183,7 @@ exports[`<Shellbar /> create shellbar 6`] = `
             >
               <button
                 className="fd-button sap-icon--overflow fd-shellbar__button"
+                type="button"
               >
                 <span
                   aria-label="Unread count"
@@ -1243,6 +1262,7 @@ exports[`<Shellbar /> create shellbar 6`] = `
                 onKeyPress={[Function]}
                 role="button"
                 tabIndex={0}
+                type="button"
               />
             </div>
           </div>
