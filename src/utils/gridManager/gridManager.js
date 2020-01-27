@@ -242,6 +242,7 @@ export default class GridManager {
                 event.preventDefault();
                 return;
             default:
+                return;
         }
 
         if (nextCell) {
