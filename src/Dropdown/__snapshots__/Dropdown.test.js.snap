@@ -24,6 +24,7 @@ exports[`<Dropdown /> create dropdown component 1`] = `
           onKeyPress={[Function]}
           role="button"
           tabIndex={0}
+          type="button"
         >
           Select
         </button>
@@ -57,6 +58,7 @@ exports[`<Dropdown /> create dropdown component 2`] = `
           onKeyPress={[Function]}
           role="button"
           tabIndex={0}
+          type="button"
         >
           Select
         </button>
@@ -90,6 +92,7 @@ exports[`<Dropdown /> create dropdown component 3`] = `
           onKeyPress={[Function]}
           role="button"
           tabIndex={0}
+          type="button"
         >
           Select
         </button>
@@ -124,6 +127,7 @@ exports[`<Dropdown /> create dropdown component 4`] = `
           onKeyPress={[Function]}
           role="button"
           tabIndex={0}
+          type="button"
         >
           Select
         </button>
@@ -159,6 +163,7 @@ exports[`<Dropdown /> create dropdown component 5`] = `
           onKeyPress={[Function]}
           role="button"
           tabIndex={0}
+          type="button"
         >
           Select
         </button>

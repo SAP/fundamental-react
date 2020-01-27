@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.8.0-rc.16"></a>
+# [0.8.0-rc.16](https://github.com/SAP/fundamental-react/compare/v0.8.0-rc.15...v0.8.0-rc.16) (2020-01-23)
+
+
+### Bug Fixes
+
+* add default type of button to Button component ([#852](https://github.com/SAP/fundamental-react/issues/852)) ([a78b4f4](https://github.com/SAP/fundamental-react/commit/a78b4f4))
+
+
+
 <a name="0.8.0-rc.15"></a>
 # [0.8.0-rc.15](https://github.com/SAP/fundamental-react/compare/v0.8.0-rc.14...v0.8.0-rc.15) (2020-01-17)
 
