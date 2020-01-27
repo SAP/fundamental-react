@@ -35,6 +35,7 @@ exports[`<LocalizationEditor /> create localization editor 1`] = `
           >
             <button
               className="fd-button--light fd-input-group__button"
+              type="button"
             >
               EN*
             </button>
@@ -81,6 +82,7 @@ exports[`<LocalizationEditor /> create localization editor 2`] = `
           >
             <button
               className="fd-button--light fd-button--compact fd-input-group__button"
+              type="button"
             >
               EN*
             </button>
@@ -125,6 +127,7 @@ exports[`<LocalizationEditor /> create localization editor 3`] = `
           >
             <button
               className="fd-button--light fd-input-group__button"
+              type="button"
             >
               EN*
             </button>

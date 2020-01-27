@@ -6,6 +6,7 @@ exports[`<PanelActions /> create panel actions 1`] = `
 >
   <button
     className="fd-button fd-button--compact sap-icon--add"
+    type="button"
   >
     Add New Button
   </button>

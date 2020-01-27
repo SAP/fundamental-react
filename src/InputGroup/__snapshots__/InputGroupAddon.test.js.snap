@@ -14,6 +14,7 @@ exports[`<InputGroupAddon /> create input group add-on items 2`] = `
 >
   <button
     className="fd-button fd-input-group__button"
+    type="button"
   >
     Text Here
   </button>
@@ -26,6 +27,7 @@ exports[`<InputGroupAddon /> create input group add-on items 3`] = `
 >
   <button
     className="fd-button fd-button--compact fd-input-group__button"
+    type="button"
   >
     Text Here
   </button>
