@@ -586,6 +586,7 @@ class Calendar extends Component {
 
                 days.push(
                     <td
+                        aria-disabled={isDisabled}
                         aria-selected={this.isSelected(day)}
                         className={dayClasses}
                         key={copyDate}
