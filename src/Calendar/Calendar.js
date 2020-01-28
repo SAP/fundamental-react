@@ -17,7 +17,7 @@ class Calendar extends Component {
             todayDate: moment().startOf('day'),
             gridBoundaryContext: null,
             refocusGrid: false,
-            currentDateDisplayed: moment(),
+            currentDateDisplayed: moment().startOf('day'),
             arrSelectedDates: [],
             selectedDate: moment({ year: 0 }),
             showMonths: false,
@@ -41,7 +41,7 @@ class Calendar extends Component {
                 if (customDate !== previousStates.arrSelectedDates) {
                     if (!customDate || !customDate.length) {
                         // reset calendar state when date picker input is empty and did not click on a date
-                        return ({ currentDateDisplayed: moment(), arrSelectedDates: [], selectedDate: moment({ year: 0 }) });
+                        return ({ currentDateDisplayed: moment().startOf('day'), arrSelectedDates: [], selectedDate: moment({ year: 0 }) });
                     }
                     // update calendar state with date picker input
                     return ({ currentDateDisplayed: customDate[0], arrSelectedDates: customDate, selectedDate: moment({ year: 0 }) });
@@ -49,7 +49,7 @@ class Calendar extends Component {
             } else if (customDate !== previousStates.currentDateDisplayed) {
                 if (!customDate) {
                     // reset calendar state when date picker input is empty and did not click on a date
-                    return ({ currentDateDisplayed: moment(), selectedDate: moment({ year: 0 }) });
+                    return ({ currentDateDisplayed: moment().startOf('day'), selectedDate: moment({ year: 0 }) });
                 }
                 // update calendar state with date picker input
                 return ({ currentDateDisplayed: customDate, selectedDate: customDate });
@@ -76,15 +76,23 @@ class Calendar extends Component {
 
     getGridOptions = (newView) => {
         const { gridBoundaryContext, refocusGrid } = this.state;
-        const tableRef = this.tableRef.current;
-        const selectedDateElement = tableRef.querySelector('.is-selected');
-        const todayDateElement = tableRef.querySelector('.fd-calendar__item--current');
-        const disabledDateElements = tableRef.querySelectorAll('.fd-calendar__item--other-month');
+        const tableElement = this.tableRef.current;
+        const focusedDateElement = tableElement.querySelector('[data-is-focused=true]');
+        const selectedDateElement = tableElement.querySelector('.is-selected');
+        const todayDateElement = tableElement.querySelector('.fd-calendar__item--current');
+        const disabledDateElements = tableElement.querySelectorAll('.fd-calendar__item--other-month');
         const focusOnInit = newView || gridBoundaryContext || refocusGrid;
 
-        let firstFocusedElement = selectedDateElement ? selectedDateElement : todayDateElement;
-        let firstFocusedCoordinates = { row: 0, col: 0 };
+        let firstFocusedElement;
+        if (focusedDateElement) {
+            firstFocusedElement = focusedDateElement;
+        } else if (selectedDateElement) {
+            firstFocusedElement = selectedDateElement;
+        } else {
+            firstFocusedElement = todayDateElement;
+        }
 
+        let firstFocusedCoordinates = { row: 0, col: 0 };
         if (gridBoundaryContext) {
             const { currentCell, directionX, directionY } = gridBoundaryContext;
             let firstFocusedRow = currentCell && currentCell.row;
@@ -105,6 +113,7 @@ class Calendar extends Component {
 
             firstFocusedCoordinates = { row: firstFocusedRow, col: firstFocusedCol };
         }
+
         this.setState({ gridBoundaryContext: null, refocusGrid: false, dateClick: true });
 
         return {
@@ -244,31 +253,27 @@ class Calendar extends Component {
 
     onKeyDownCalendar = (event) => {
         let newDate;
+
+        const focusedDateElement = this.tableRef.current && this.tableRef.current.querySelector('.fd-calendar__text:focus');
+        const focusedDate = parseInt(focusedDateElement && focusedDateElement.textContent, 10);
+
         switch (keycode(event)) {
             case 'page up':
                 event.preventDefault();
-                if (event.shiftKey) {
-                    newDate = moment(this.state.currentDateDisplayed).subtract(1, 'year');
-                } else {
-                    newDate = moment(this.state.currentDateDisplayed).subtract(1, 'month');
-                }
+                newDate = moment(this.state.currentDateDisplayed).subtract(1, event.shiftKey ? 'year' : 'month');
+                newDate.date(newDate.daysInMonth() < focusedDate ? newDate.daysInMonth() : focusedDate);
                 this.setState({
                     currentDateDisplayed: newDate,
-                    selectedDate: newDate,
                     refocusGrid: true,
                     dateClick: true
                 });
                 break;
             case 'page down':
                 event.preventDefault();
-                if (event.shiftKey) {
-                    newDate = moment(this.state.currentDateDisplayed).add(1, 'year');
-                } else {
-                    newDate = moment(this.state.currentDateDisplayed).add(1, 'month');
-                }
+                newDate = moment(this.state.currentDateDisplayed).add(1, event.shiftKey ? 'year' : 'month');
+                newDate.date(newDate.daysInMonth() < focusedDate ? newDate.daysInMonth() : focusedDate);
                 this.setState({
                     currentDateDisplayed: newDate,
-                    selectedDate: newDate,
                     refocusGrid: true,
                     dateClick: true
                 });
@@ -589,6 +594,7 @@ class Calendar extends Component {
                         aria-disabled={isDisabled}
                         aria-selected={this.isSelected(day)}
                         className={dayClasses}
+                        data-is-focused={day.isSame(currentDateDisplayed)}
                         key={copyDate}
                         onClick={this.isEnabledDate(day) ? () => this.dateClick(copyDate, enableRangeSelection) : null}
                         role='gridcell'>

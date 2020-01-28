@@ -78,17 +78,13 @@ export default class GridManager {
                 Array.prototype.forEach.call(
                     row.querySelectorAll(`${GridSelector.CELL}, ${this.enableHeaderCells && GridSelector.HEADER}`), (cell) => {
                         let cellToPush = cell;
-                        if (!cell.hasAttribute('tabindex')) {
-                            cell.setAttribute('tabindex', -1);
-                        }
+                        cell.setAttribute('tabindex', -1);
 
                         const focusableElements = cell.querySelectorAll(GridSelector.FOCUSABLE);
                         if (focusableElements) {
                             // disable default tabbing behavior of links, buttons, etc.
                             focusableElements.forEach(element => {
-                                if (!element.hasAttribute('tabindex')) {
-                                    element.setAttribute('tabindex', -1);
-                                }
+                                element.setAttribute('tabindex', -1);
                             });
 
                             if (focusableElements.length === 1) {
