@@ -3,6 +3,7 @@
 exports[`<TimePicker /> create time picker 1`] = `
 <div
   id="myTime"
+  onChange={[Function]}
 >
   <div
     className="fd-popover"
@@ -48,7 +49,9 @@ exports[`<TimePicker /> create time picker 1`] = `
 `;
 
 exports[`<TimePicker /> create time picker 2`] = `
-<div>
+<div
+  onChange={[Function]}
+>
   <div
     className="fd-popover"
     id=""
@@ -91,7 +94,9 @@ exports[`<TimePicker /> create time picker 2`] = `
 `;
 
 exports[`<TimePicker /> create time picker 3`] = `
-<div>
+<div
+  onChange={[Function]}
+>
   <div
     className="fd-popover"
     id=""
@@ -134,7 +139,9 @@ exports[`<TimePicker /> create time picker 3`] = `
 `;
 
 exports[`<TimePicker /> create time picker 4`] = `
-<div>
+<div
+  onChange={[Function]}
+>
   <div
     className="fd-popover"
     id=""
@@ -179,7 +186,9 @@ exports[`<TimePicker /> create time picker 4`] = `
 `;
 
 exports[`<TimePicker /> create time picker 5`] = `
-<div>
+<div
+  onChange={[Function]}
+>
   <div
     className="fd-popover"
     id=""
@@ -222,7 +231,9 @@ exports[`<TimePicker /> create time picker 5`] = `
 `;
 
 exports[`<TimePicker /> create time picker 6`] = `
-<div>
+<div
+  onChange={[Function]}
+>
   <div
     className="fd-popover"
     id=""
@@ -265,7 +276,9 @@ exports[`<TimePicker /> create time picker 6`] = `
 `;
 
 exports[`<TimePicker /> create time picker 7`] = `
-<div>
+<div
+  onChange={[Function]}
+>
   <div
     className="fd-popover"
     id=""
@@ -308,7 +321,9 @@ exports[`<TimePicker /> create time picker 7`] = `
 `;
 
 exports[`<TimePicker /> create time picker 8`] = `
-<div>
+<div
+  onChange={[Function]}
+>
   <div
     className="fd-popover"
     id=""
@@ -351,7 +366,9 @@ exports[`<TimePicker /> create time picker 8`] = `
 `;
 
 exports[`<TimePicker /> create time picker 9`] = `
-<div>
+<div
+  onChange={[Function]}
+>
   <div
     className="fd-popover"
     id=""
@@ -394,7 +411,9 @@ exports[`<TimePicker /> create time picker 9`] = `
 `;
 
 exports[`<TimePicker /> create time picker 10`] = `
-<div>
+<div
+  onChange={[Function]}
+>
   <div
     className="fd-popover"
     id=""
