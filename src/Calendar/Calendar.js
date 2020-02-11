@@ -555,16 +555,14 @@ class Calendar extends Component {
         const enableRangeSelection = this.props.enableRangeSelection;
 
         const firstDayMonth = moment(currentDateDisplayed).startOf('month');
-        const endDayMonth = moment(firstDayMonth).endOf('month');
         const firstDayWeekMonth = moment(firstDayMonth).startOf('week');
-        const lastDateEndMonth = moment(endDayMonth).endOf('week');
         const rows = [];
 
         let days = [];
         let day = firstDayWeekMonth;
         let dateFormatted = '';
 
-        while (day.isSameOrBefore(lastDateEndMonth)) {
+        for (let week = 0; week < 6; week++) {
             for (let iterations = 0; iterations < 7; iterations++) {
                 dateFormatted = day.date();
                 const copyDate = moment(day);
