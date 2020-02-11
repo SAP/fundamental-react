@@ -1,7 +1,7 @@
 import classnames from 'classnames';
 import Foco from 'react-foco';
+import { getModalManager } from './modalManager';
 import keycode from 'keycode';
-import { modalManager } from './modalManager';
 import PropTypes from 'prop-types';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -11,6 +11,7 @@ import { POPPER_PLACEMENTS, POPPER_SIZING_TYPES } from './constants';
 class Popper extends React.Component {
     constructor(props) {
         super(props);
+        this.modalManager = getModalManager();
     }
 
     componentDidMount() {
@@ -36,19 +37,19 @@ class Popper extends React.Component {
     _onShow() {
         const container = ReactDOM.findDOMNode(this) || document.body;
 
-        modalManager.add(this, container);
+        this.modalManager.add(this, container);
 
         document.addEventListener('keydown', this._handleDocumentKeyDown);
     }
 
     _onHide() {
-        modalManager.remove(this);
+        this.modalManager.remove(this);
 
         document.removeEventListener('keydown', this._handleDocumentKeyDown);
     }
 
     _handleDocumentKeyDown = (e) => {
-        if (modalManager.isTopModal(this)) {
+        if (this.modalManager.isTopModal(this)) {
             this.props.onKeyDown(e);
 
             if (e.keyCode === keycode.codes.esc && this.props.onEscapeKey) {
