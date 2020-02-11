@@ -6,6 +6,7 @@ import keycode from 'keycode';
 import moment from 'moment';
 import PropTypes from 'prop-types';
 import withStyles from '../utils/WithStyles/WithStyles';
+import { isDateBetween, isEnabledDate } from '../utils/dateUtils';
 import React, { Component } from 'react';
 
 class Calendar extends Component {
@@ -16,7 +17,7 @@ class Calendar extends Component {
         this.state = {
             todayDate: moment().startOf('day'),
             gridBoundaryContext: null,
-            refocusGrid: false,
+            refocusGrid: this.props.focusOnInit,
             currentDateDisplayed: moment().startOf('day'),
             arrSelectedDates: [],
             selectedDate: moment({ year: 0 }),
@@ -138,29 +139,6 @@ class Calendar extends Component {
         });
     }
 
-    isEnabledDate = (day) => {
-        const {
-            disableWeekends,
-            disableAfterDate,
-            disableBeforeDate,
-            blockedDates,
-            disableWeekday,
-            disablePastDates,
-            disableFutureDates,
-            disabledDates
-        } = this.props;
-        return (
-            !this.disableWeekday(day, disableWeekday) &&
-            !(disableWeekends && (day.day() === 0 || day.day() === 6)) &&
-            !(disableBeforeDate && day.isBefore(moment(disableBeforeDate))) &&
-            !(disableAfterDate && day.isAfter(moment(disableAfterDate))) &&
-            !(disablePastDates && day.isBefore(moment(), 'day')) &&
-            !(disableFutureDates && day.isAfter(moment(), 'day')) &&
-            !this.isDateBetween(day, blockedDates && blockedDates.map(date => moment(date))) &&
-            !this.isDateBetween(day, disabledDates && disabledDates.map(date => moment(date)))
-        );
-    }
-
     isSelected = (day) => {
         const { arrSelectedDates, selectedDate } = this.state;
         return (
@@ -170,12 +148,12 @@ class Calendar extends Component {
                     (typeof arrSelectedDates[0] !== 'undefined' ? arrSelectedDates[0].isSame(day, 'day') : false) ||
                     (typeof arrSelectedDates[1] !== 'undefined' ? arrSelectedDates[1].isSame(day, 'day') : false)
                 ))
-            ) && this.isEnabledDate(day)
+            ) && isEnabledDate(day, this.props)
         );
     }
 
     isInSelectedRange = (day) => {
-        return this.props.enableRangeSelection && this.isDateBetween(day, this.state.arrSelectedDates, this.props.enableRangeSelection);
+        return this.props.enableRangeSelection && isDateBetween(day, this.state.arrSelectedDates, this.props.enableRangeSelection);
     }
 
     isSelectedRangeFirst = (day) => {
@@ -463,16 +441,6 @@ class Calendar extends Component {
         return blockedDates[0].isBefore(date, 'day') && blockedDates[1].isAfter(date, 'day');
     }
 
-    disableWeekday = (date, weekDays) => {
-        if (!weekDays) {
-            return false;
-        }
-
-        const daysName = moment.weekdays();
-
-        return weekDays.indexOf(daysName[date.day()]) > -1;
-    }
-
     generateNavigation = () => {
         const months = moment.localeData(this.props.locale).months();
         const previousButtonLabel = this.state.showYears ?
@@ -566,8 +534,8 @@ class Calendar extends Component {
             for (let iterations = 0; iterations < 7; iterations++) {
                 dateFormatted = day.date();
                 const copyDate = moment(day);
-                const isDisabled = !this.isEnabledDate(day);
-                const isBlocked = this.isDateBetween(day, blockedDates);
+                const isDisabled = !isEnabledDate(day, this.props);
+                const isBlocked = isDateBetween(day, blockedDates);
                 const ariaLabel = copyDate.format(moment.localeData(this.props.locale).longDateFormat('LL'));
                 if (isDisabled || isBlocked) {
                     ariaLabel += ' ' + moment.localeData(this.props.locale).invalidDate();
@@ -594,12 +562,12 @@ class Calendar extends Component {
                         className={dayClasses}
                         data-is-focused={day.isSame(currentDateDisplayed)}
                         key={copyDate}
-                        onClick={this.isEnabledDate(day) ? () => this.dateClick(copyDate, enableRangeSelection) : null}
+                        onClick={isEnabledDate(day, this.props) ? () => this.dateClick(copyDate, enableRangeSelection) : null}
                         role='gridcell'>
                         <span
                             aria-label={ariaLabel}
                             className='fd-calendar__text'
-                            onKeyDown={this.isEnabledDate(day) ? (e) => this.onKeyDownDay(e, this.dateClick.bind(this, copyDate, enableRangeSelection)) : null}
+                            onKeyDown={isEnabledDate(day, this.props) ? (e) => this.onKeyDownDay(e, this.dateClick.bind(this, copyDate, enableRangeSelection)) : null}
                             role='button'>{dateFormatted.toString()}</span>
                     </td >
                 );
@@ -655,6 +623,7 @@ class Calendar extends Component {
             disabledDates,
             customDate,
             className,
+            focusOnInit,
             localizedText,
             monthListProps,
             yearListProps,
@@ -733,6 +702,7 @@ Calendar.propDescriptions = {
     disablePastDates: 'Set to **true** to disable dates before today\'s date.',
     disableWeekday: 'Disables dates that match a weekday.',
     disableWeekends: 'Set to **true** to disables dates that match a weekend.',
+    focusOnInit: 'Set to **true** to focus the calendar grid upon being mounted',
     localizedTextShape: {
         nextMonth: 'aria-label for next button',
         previousMonth: 'aria-label for previous button',
