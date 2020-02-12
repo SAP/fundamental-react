@@ -123,6 +123,7 @@ class DatePicker extends Component {
     render() {
         const {
             blockedDates,
+            buttonLabel,
             buttonProps,
             className,
             compact,
@@ -137,6 +138,7 @@ class DatePicker extends Component {
             enableRangeSelection,
             inputProps,
             locale,
+            localizedText,
             onBlur,
             ...props
         } = this.props;
@@ -166,6 +168,7 @@ class DatePicker extends Component {
                             enableRangeSelection={enableRangeSelection}
                             focusOnInit
                             locale={locale}
+                            localizedText={localizedText}
                             onChange={this.updateDate}
                             ref={this.calendarRef} />
                     }
@@ -180,6 +183,7 @@ class DatePicker extends Component {
                                 value={this.state.formattedDate} />
                             <InputGroup.Addon isButton>
                                 <Button {...buttonProps}
+                                    aria-label={buttonLabel}
                                     disableStyles={disableStyles}
                                     glyph='calendar'
                                     option='light' />
@@ -200,6 +204,7 @@ DatePicker.displayName = 'DatePicker';
 
 DatePicker.propTypes = {
     ...Calendar.basePropTypes,
+    buttonLabel: PropTypes.string,
     buttonProps: PropTypes.object,
     compact: PropTypes.bool,
     defaultValue: PropTypes.string,
@@ -210,6 +215,7 @@ DatePicker.propTypes = {
 };
 
 DatePicker.defaultProps = {
+    buttonLabel: 'Choose date',
     defaultValue: '',
     locale: 'en',
     onBlur: () => {}
@@ -217,6 +223,7 @@ DatePicker.defaultProps = {
 
 DatePicker.propDescriptions = {
     ...Calendar.propDescriptions,
+    buttonLabel: 'aria-label for datepicker button',
     defaultValue: 'Default value to be shown in the Datepicker. The only accepted format is the ISO format, i.e. YYYY-MM-DD',
     enableRangeSelection: 'Set to **true** to enable the selection of a date range (begin and end).',
     locale: 'Language code to set the locale.',
