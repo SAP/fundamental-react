@@ -56,6 +56,7 @@ class TimePickerItem extends Component {
     };
 
     onChange = event => {
+        event.stopPropagation();
         this.setState({ value: event.target.value });
         var aux = event.target.value;
         this.onInputValidation(aux);
