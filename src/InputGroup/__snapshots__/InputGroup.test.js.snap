@@ -158,6 +158,7 @@ exports[`<InputGroup /> create input group items 9`] = `
   >
     <button
       className="fd-button--light fd-input-group__button"
+      type="button"
     >
       Button
     </button>
@@ -179,6 +180,7 @@ exports[`<InputGroup /> create input group items 10`] = `
   >
     <button
       className="fd-button--light fd-button--compact fd-input-group__button"
+      type="button"
     >
       Button
     </button>

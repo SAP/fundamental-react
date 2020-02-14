@@ -4,65 +4,89 @@ exports[`<SideNav /> create side navigation 1`] = `
 <nav
   className="fd-side-nav"
 >
-  <ul
-    className="fd-side-nav__list"
+  <div
+    className="fd-side-nav__main-navigation"
   >
-    <li
-      className="fd-side-nav__item"
+    <ul
+      className="fd-nested-list--text-only fd-nested-list level-1"
     >
-      <a
-        className="fd-side-nav__link"
-        href="/"
-        onClick={[Function]}
+      <li
+        className="fd-nested-list__item"
       >
-        Link Item
-      </a>
-    </li>
-    <li
-      className="fd-side-nav__item"
-    >
-      <a
-        className="fd-side-nav__link"
-        href="/"
-        onClick={[Function]}
+        <a
+          className="fd-nested-list__link"
+          href="/"
+          onClick={[Function]}
+        >
+          <span
+            className="fd-nested-list__title"
+          >
+            Link Item
+          </span>
+        </a>
+      </li>
+      <li
+        className="fd-nested-list__item"
       >
-        Link Item
-      </a>
-    </li>
-    <li
-      className="fd-side-nav__item"
-    >
-      <a
-        className="fd-side-nav__link"
-        href="/"
-        onClick={[Function]}
+        <a
+          className="fd-nested-list__link"
+          href="/"
+          onClick={[Function]}
+        >
+          <span
+            className="fd-nested-list__title"
+          >
+            Link Item
+          </span>
+        </a>
+      </li>
+      <li
+        className="fd-nested-list__item"
       >
-        Link Item
-      </a>
-    </li>
-    <li
-      className="fd-side-nav__item"
-    >
-      <a
-        className="fd-side-nav__link"
-        href="/"
-        onClick={[Function]}
+        <a
+          className="fd-nested-list__link"
+          href="/"
+          onClick={[Function]}
+        >
+          <span
+            className="fd-nested-list__title"
+          >
+            Link Item
+          </span>
+        </a>
+      </li>
+      <li
+        className="fd-nested-list__item"
       >
-        Link Item
-      </a>
-    </li>
-    <li
-      className="fd-side-nav__item"
-    >
-      <a
-        className="fd-side-nav__link"
-        href="/"
-        onClick={[Function]}
+        <a
+          className="fd-nested-list__link"
+          href="/"
+          onClick={[Function]}
+        >
+          <span
+            className="fd-nested-list__title"
+          >
+            Link Item
+          </span>
+        </a>
+      </li>
+      <li
+        className="fd-nested-list__item"
       >
-        Link Item
-      </a>
-    </li>
-  </ul>
+        <a
+          className="fd-nested-list__link"
+          href="/"
+          onClick={[Function]}
+        >
+          <span
+            className="fd-nested-list__title"
+          >
+            Link Item
+          </span>
+        </a>
+      </li>
+    </ul>
+  </div>
 </nav>
 `;
 
@@ -71,137 +95,177 @@ exports[`<SideNav /> create side navigation 2`] = `
   className="fd-side-nav"
 >
   <div
-    className="fd-side-nav__group blue"
+    className="fd-side-nav__main-navigation"
   >
-    <h3
-      className="fd-side-nav__title"
-    >
-      Group Title
-    </h3>
     <ul
-      className="fd-side-nav__list blue"
+      className="fd-nested-list--text-only fd-nested-list level-1 blue"
     >
       <li
-        className="fd-side-nav__item"
+        className="fd-nested-list__group-header"
+      >
+        Group Title
+      </li>
+      <li
+        className="fd-nested-list__item"
       >
         <a
-          className="fd-side-nav__link"
+          className="fd-nested-list__link"
           href="/"
           onClick={[Function]}
         >
-          Link Item
+          <span
+            className="fd-nested-list__title"
+          >
+            Link Item
+          </span>
         </a>
       </li>
       <li
-        className="fd-side-nav__item"
+        className="fd-nested-list__item"
       >
         <a
-          className="fd-side-nav__link is-selected"
+          className="fd-nested-list__link is-selected"
           href="/"
           onClick={[Function]}
         >
-          Link Item
+          <span
+            className="fd-nested-list__title"
+          >
+            Link Item
+          </span>
         </a>
       </li>
       <li
-        className="fd-side-nav__item"
+        className="fd-nested-list__item"
       >
         <a
-          className="fd-side-nav__link"
+          className="fd-nested-list__link"
           href="/"
           onClick={[Function]}
         >
-          Link Item
+          <span
+            className="fd-nested-list__title"
+          >
+            Link Item
+          </span>
         </a>
       </li>
       <li
-        className="fd-side-nav__item"
+        className="fd-nested-list__item"
       >
         <a
-          className="fd-side-nav__link"
+          className="fd-nested-list__link"
           href="/"
           onClick={[Function]}
         >
-          Link Item
+          <span
+            className="fd-nested-list__title"
+          >
+            Link Item
+          </span>
         </a>
       </li>
       <li
-        className="fd-side-nav__item"
+        className="fd-nested-list__item"
       >
         <a
-          className="fd-side-nav__link"
+          className="fd-nested-list__link"
           href="/"
           onClick={[Function]}
         >
-          Link Item
+          <span
+            className="fd-nested-list__title"
+          >
+            Link Item
+          </span>
         </a>
       </li>
     </ul>
   </div>
   <div
-    className="fd-side-nav__group"
+    className="fd-side-nav__main-navigation"
   >
-    <h3
-      className="fd-side-nav__title"
-    >
-      Group Title
-    </h3>
     <ul
-      className="fd-side-nav__list"
+      className="fd-nested-list--text-only fd-nested-list level-1"
     >
       <li
-        className="fd-side-nav__item"
+        className="fd-nested-list__group-header"
+      >
+        Group Title
+      </li>
+      <li
+        className="fd-nested-list__item"
       >
         <a
-          className="fd-side-nav__link"
+          className="fd-nested-list__link"
           href="/"
           onClick={[Function]}
         >
-          Link Item
+          <span
+            className="fd-nested-list__title"
+          >
+            Link Item
+          </span>
         </a>
       </li>
       <li
-        className="fd-side-nav__item"
+        className="fd-nested-list__item"
       >
         <a
-          className="fd-side-nav__link"
+          className="fd-nested-list__link"
           href="/"
           onClick={[Function]}
         >
-          Link Item
+          <span
+            className="fd-nested-list__title"
+          >
+            Link Item
+          </span>
         </a>
       </li>
       <li
-        className="fd-side-nav__item"
+        className="fd-nested-list__item"
       >
         <a
-          className="fd-side-nav__link"
+          className="fd-nested-list__link"
           href="/"
           onClick={[Function]}
         >
-          Link Item
+          <span
+            className="fd-nested-list__title"
+          >
+            Link Item
+          </span>
         </a>
       </li>
       <li
-        className="fd-side-nav__item"
+        className="fd-nested-list__item"
       >
         <a
-          className="fd-side-nav__link"
+          className="fd-nested-list__link"
           href="/"
           onClick={[Function]}
         >
-          Link Item
+          <span
+            className="fd-nested-list__title"
+          >
+            Link Item
+          </span>
         </a>
       </li>
       <li
-        className="fd-side-nav__item"
+        className="fd-nested-list__item"
       >
         <a
-          className="fd-side-nav__link"
+          className="fd-nested-list__link"
           href="/"
           onClick={[Function]}
         >
-          Link Item
+          <span
+            className="fd-nested-list__title"
+          >
+            Link Item
+          </span>
         </a>
       </li>
     </ul>
@@ -213,176 +277,236 @@ exports[`<SideNav /> create side navigation 3`] = `
 <nav
   className="fd-side-nav"
 >
-  <ul
-    className="fd-side-nav__list"
+  <div
+    className="fd-side-nav__main-navigation"
   >
-    <li
-      className="fd-side-nav__item"
+    <ul
+      className="fd-nested-list--text-only fd-nested-list level-1"
     >
-      <a
-        className="fd-side-nav__link"
-        href="#"
-        onClick={[Function]}
+      <li
+        className="fd-nested-list__item"
       >
-        Link Item 1
-      </a>
-    </li>
-    <li
-      className="fd-side-nav__item"
-    >
-      <a
-        className="fd-side-nav__link has-child"
-        href="#"
-        onClick={[Function]}
+        <a
+          className="fd-nested-list__link"
+          href="#"
+          onClick={[Function]}
+        >
+          <span
+            className="fd-nested-list__title"
+          >
+            Link Item 1
+          </span>
+        </a>
+      </li>
+      <li
+        className="fd-nested-list__item"
       >
-        Link Item 2
-      </a>
-      <ul
-        aria-expanded={false}
-        aria-hidden={true}
-        className="fd-side-nav__sublist"
+        <a
+          className="fd-nested-list__link has-child"
+          href="#"
+          onClick={[Function]}
+        >
+          <span
+            className="fd-nested-list__title"
+          >
+            Link Item 2
+          </span>
+        </a>
+        <ul
+          aria-expanded={false}
+          aria-hidden={true}
+          className="fd-nested-list--text-only fd-nested-list level-1"
+        >
+          <li
+            className="fd-nested-list__item"
+          >
+            <a
+              className="fd-nested-list__link"
+              href="#"
+              onClick={[Function]}
+            >
+              <span
+                className="fd-nested-list__title"
+              >
+                Item 1
+              </span>
+            </a>
+          </li>
+          <li
+            className="fd-nested-list__item"
+          >
+            <a
+              className="fd-nested-list__link"
+              href="#"
+              onClick={[Function]}
+            >
+              <span
+                className="fd-nested-list__title"
+              >
+                Item 2
+              </span>
+            </a>
+          </li>
+          <li
+            className="fd-nested-list__item"
+          >
+            <a
+              className="fd-nested-list__link"
+              href="#"
+              onClick={[Function]}
+            >
+              <span
+                className="fd-nested-list__title"
+              >
+                Item 3
+              </span>
+            </a>
+          </li>
+          <li
+            className="fd-nested-list__item"
+          >
+            <a
+              className="fd-nested-list__link"
+              href="#"
+              onClick={[Function]}
+            >
+              <span
+                className="fd-nested-list__title"
+              >
+                Item 4
+              </span>
+            </a>
+          </li>
+          <li
+            className="fd-nested-list__item"
+          >
+            <a
+              className="fd-nested-list__link"
+              href="#"
+              onClick={[Function]}
+            >
+              <span
+                className="fd-nested-list__title"
+              >
+                Item 5
+              </span>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li
+        className="fd-nested-list__item"
       >
-        <li
-          className="fd-side-nav__item"
+        <a
+          className="fd-nested-list__link"
+          href="#"
+          onClick={[Function]}
         >
-          <a
-            className="fd-side-nav__sublink"
-            href="#"
-            onClick={[Function]}
+          <span
+            className="fd-nested-list__title"
           >
-            Item 1
-          </a>
-        </li>
-        <li
-          className="fd-side-nav__item"
-        >
-          <a
-            className="fd-side-nav__sublink"
-            href="#"
-            onClick={[Function]}
-          >
-            Item 2
-          </a>
-        </li>
-        <li
-          className="fd-side-nav__item"
-        >
-          <a
-            className="fd-side-nav__sublink"
-            href="#"
-            onClick={[Function]}
-          >
-            Item 3
-          </a>
-        </li>
-        <li
-          className="fd-side-nav__item"
-        >
-          <a
-            className="fd-side-nav__sublink"
-            href="#"
-            onClick={[Function]}
-          >
-            Item 4
-          </a>
-        </li>
-        <li
-          className="fd-side-nav__item"
-        >
-          <a
-            className="fd-side-nav__sublink"
-            href="#"
-            onClick={[Function]}
-          >
-            Item 5
-          </a>
-        </li>
-      </ul>
-    </li>
-    <li
-      className="fd-side-nav__item"
-    >
-      <a
-        className="fd-side-nav__link"
-        href="#"
-        onClick={[Function]}
+            Link Item 3
+          </span>
+        </a>
+      </li>
+      <li
+        className="fd-nested-list__item"
       >
-        Link Item 3
-      </a>
-    </li>
-    <li
-      className="fd-side-nav__item"
-    >
-      <a
-        className="fd-side-nav__link has-child"
-        href="#"
-        onClick={[Function]}
+        <a
+          className="fd-nested-list__link has-child"
+          href="#"
+          onClick={[Function]}
+        >
+          <span
+            className="fd-nested-list__title"
+          >
+            Link Item 4
+          </span>
+        </a>
+        <ul
+          aria-expanded={false}
+          aria-hidden={true}
+          className="fd-nested-list--text-only fd-nested-list level-1"
+        >
+          <li
+            className="fd-nested-list__item"
+          >
+            <a
+              className="fd-nested-list__link"
+              href="#"
+              onClick={[Function]}
+            >
+              <span
+                className="fd-nested-list__title"
+              >
+                Item 1
+              </span>
+            </a>
+          </li>
+          <li
+            className="fd-nested-list__item"
+          >
+            <a
+              className="fd-nested-list__link"
+              href="#"
+              onClick={[Function]}
+            >
+              <span
+                className="fd-nested-list__title"
+              >
+                Item 2
+              </span>
+            </a>
+          </li>
+          <li
+            className="fd-nested-list__item"
+          >
+            <a
+              className="fd-nested-list__link"
+              href="#"
+              onClick={[Function]}
+            >
+              <span
+                className="fd-nested-list__title"
+              >
+                Item 3
+              </span>
+            </a>
+          </li>
+          <li
+            className="fd-nested-list__item"
+          >
+            <a
+              className="fd-nested-list__link"
+              href="#"
+              onClick={[Function]}
+            >
+              <span
+                className="fd-nested-list__title"
+              >
+                Item 4
+              </span>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li
+        className="fd-nested-list__item"
       >
-        Link Item 4
-      </a>
-      <ul
-        aria-expanded={false}
-        aria-hidden={true}
-        className="fd-side-nav__sublist"
-      >
-        <li
-          className="fd-side-nav__item"
+        <a
+          className="fd-nested-list__link"
+          href="#"
+          onClick={[Function]}
         >
-          <a
-            className="fd-side-nav__sublink"
-            href="#"
-            onClick={[Function]}
+          <span
+            className="fd-nested-list__title"
           >
-            Item 1
-          </a>
-        </li>
-        <li
-          className="fd-side-nav__item"
-        >
-          <a
-            className="fd-side-nav__sublink"
-            href="#"
-            onClick={[Function]}
-          >
-            Item 2
-          </a>
-        </li>
-        <li
-          className="fd-side-nav__item"
-        >
-          <a
-            className="fd-side-nav__sublink"
-            href="#"
-            onClick={[Function]}
-          >
-            Item 3
-          </a>
-        </li>
-        <li
-          className="fd-side-nav__item"
-        >
-          <a
-            className="fd-side-nav__sublink"
-            href="#"
-            onClick={[Function]}
-          >
-            Item 4
-          </a>
-        </li>
-      </ul>
-    </li>
-    <li
-      className="fd-side-nav__item"
-    >
-      <a
-        className="fd-side-nav__link"
-        href="#"
-        onClick={[Function]}
-      >
-        Link Item
-      </a>
-    </li>
-  </ul>
+            Link Item
+          </span>
+        </a>
+      </li>
+    </ul>
+  </div>
 </nav>
 `;
 
@@ -390,338 +514,442 @@ exports[`<SideNav /> create side navigation 4`] = `
 <nav
   className="fd-side-nav"
 >
-  <ul
-    className="fd-side-nav__list"
+  <div
+    className="fd-side-nav__main-navigation"
   >
-    <li
-      className="fd-side-nav__item"
+    <ul
+      className="fd-nested-list--text-only fd-nested-list level-1"
     >
-      <a
-        className="fd-side-nav__link"
-        href="/"
-        onClick={[Function]}
+      <li
+        className="fd-nested-list__item"
       >
-        <span
-          className="fd-side-nav__icon sap-icon--home sap-icon--l"
-          role="presentation"
-        />
-        Link Item
-      </a>
-    </li>
-    <li
-      className="fd-side-nav__item"
-    >
-      <a
-        className="fd-side-nav__link is-selected"
-        href="/"
-        onClick={[Function]}
+        <a
+          className="fd-nested-list__link"
+          href="/"
+          onClick={[Function]}
+        >
+          <span
+            className="fd-nested-list__icon sap-icon--home"
+            role="presentation"
+          />
+          <span
+            className="fd-nested-list__title"
+          >
+            Link Item
+          </span>
+        </a>
+      </li>
+      <li
+        className="fd-nested-list__item"
       >
-        <span
-          className="fd-side-nav__icon sap-icon--home sap-icon--l"
-          role="presentation"
-        />
-        Link Item
-      </a>
-    </li>
-    <li
-      className="fd-side-nav__item"
-    >
-      <a
-        className="fd-side-nav__link"
-        href="/"
-        onClick={[Function]}
+        <a
+          className="fd-nested-list__link is-selected"
+          href="/"
+          onClick={[Function]}
+        >
+          <span
+            className="fd-nested-list__icon sap-icon--home"
+            role="presentation"
+          />
+          <span
+            className="fd-nested-list__title"
+          >
+            Link Item
+          </span>
+        </a>
+      </li>
+      <li
+        className="fd-nested-list__item"
       >
-        <span
-          className="fd-side-nav__icon sap-icon--home sap-icon--l"
-          role="presentation"
-        />
-        Link Item
-      </a>
-    </li>
-    <li
-      className="fd-side-nav__item"
-    >
-      <a
-        className="fd-side-nav__link"
-        href="#"
-        onClick={[Function]}
+        <a
+          className="fd-nested-list__link"
+          href="/"
+          onClick={[Function]}
+        >
+          <span
+            className="fd-nested-list__icon sap-icon--home"
+            role="presentation"
+          />
+          <span
+            className="fd-nested-list__title"
+          >
+            Link Item
+          </span>
+        </a>
+      </li>
+      <li
+        className="fd-nested-list__item"
       >
-        <span
-          className="fd-side-nav__icon sap-icon--home sap-icon--l"
-          role="presentation"
-        />
-        Link Item
-      </a>
-    </li>
-    <li
-      className="fd-side-nav__item"
-    >
-      <a
-        className="fd-side-nav__link"
-        href="#"
-        onClick={[Function]}
+        <a
+          className="fd-nested-list__link"
+          href="#"
+          onClick={[Function]}
+        >
+          <span
+            className="fd-nested-list__icon sap-icon--home"
+            role="presentation"
+          />
+          <span
+            className="fd-nested-list__title"
+          >
+            Link Item
+          </span>
+        </a>
+      </li>
+      <li
+        className="fd-nested-list__item"
       >
-        <span
-          className="fd-side-nav__icon sap-icon--home sap-icon--l"
-          role="presentation"
-        />
-        Link Item
-      </a>
-    </li>
-  </ul>
+        <a
+          className="fd-nested-list__link"
+          href="#"
+          onClick={[Function]}
+        >
+          <span
+            className="fd-nested-list__icon sap-icon--home"
+            role="presentation"
+          />
+          <span
+            className="fd-nested-list__title"
+          >
+            Link Item
+          </span>
+        </a>
+      </li>
+    </ul>
+  </div>
 </nav>
 `;
 
 exports[`<SideNav /> create side navigation 5`] = `
 <nav
-  className="fd-side-nav fd-side-nav--icons"
+  className="fd-side-nav"
+  icons={true}
 >
-  <ul
-    className="fd-side-nav__list"
+  <div
+    className="fd-side-nav__main-navigation"
   >
-    <li
-      className="fd-side-nav__item"
+    <ul
+      className="fd-nested-list--text-only fd-nested-list level-1"
     >
-      <a
-        className="fd-side-nav__link"
-        href="#"
-        onClick={[Function]}
+      <li
+        className="fd-nested-list__item"
       >
-        <span
-          className="fd-side-nav__icon sap-icon--home sap-icon--l"
-          role="presentation"
-        />
-      </a>
-    </li>
-    <li
-      className="fd-side-nav__item"
-    >
-      <a
-        className="fd-side-nav__link"
-        href="#"
-        onClick={[Function]}
+        <a
+          className="fd-nested-list__link"
+          href="#"
+          onClick={[Function]}
+        >
+          <span
+            className="fd-nested-list__icon sap-icon--home"
+            role="presentation"
+          />
+          <span
+            className="fd-nested-list__title"
+          />
+        </a>
+      </li>
+      <li
+        className="fd-nested-list__item"
       >
-        <span
-          className="fd-side-nav__icon sap-icon--home sap-icon--l"
-          role="presentation"
-        />
-      </a>
-    </li>
-    <li
-      className="fd-side-nav__item"
-    >
-      <a
-        className="fd-side-nav__link"
-        href="#"
-        onClick={[Function]}
+        <a
+          className="fd-nested-list__link"
+          href="#"
+          onClick={[Function]}
+        >
+          <span
+            className="fd-nested-list__icon sap-icon--home"
+            role="presentation"
+          />
+          <span
+            className="fd-nested-list__title"
+          />
+        </a>
+      </li>
+      <li
+        className="fd-nested-list__item"
       >
-        <span
-          className="fd-side-nav__icon sap-icon--home sap-icon--l"
-          role="presentation"
-        />
-      </a>
-    </li>
-    <li
-      className="fd-side-nav__item"
-    >
-      <a
-        className="fd-side-nav__link"
-        href="#"
-        onClick={[Function]}
+        <a
+          className="fd-nested-list__link"
+          href="#"
+          onClick={[Function]}
+        >
+          <span
+            className="fd-nested-list__icon sap-icon--home"
+            role="presentation"
+          />
+          <span
+            className="fd-nested-list__title"
+          />
+        </a>
+      </li>
+      <li
+        className="fd-nested-list__item"
       >
-        <span
-          className="fd-side-nav__icon sap-icon--home sap-icon--l"
-          role="presentation"
-        />
-      </a>
-    </li>
-    <li
-      className="fd-side-nav__item"
-    >
-      <a
-        className="fd-side-nav__link"
-        href="#"
-        onClick={[Function]}
+        <a
+          className="fd-nested-list__link"
+          href="#"
+          onClick={[Function]}
+        >
+          <span
+            className="fd-nested-list__icon sap-icon--home"
+            role="presentation"
+          />
+          <span
+            className="fd-nested-list__title"
+          />
+        </a>
+      </li>
+      <li
+        className="fd-nested-list__item"
       >
-        <span
-          className="fd-side-nav__icon sap-icon--home sap-icon--l"
-          role="presentation"
-        />
-      </a>
-    </li>
-  </ul>
+        <a
+          className="fd-nested-list__link"
+          href="#"
+          onClick={[Function]}
+        >
+          <span
+            className="fd-nested-list__icon sap-icon--home"
+            role="presentation"
+          />
+          <span
+            className="fd-nested-list__title"
+          />
+        </a>
+      </li>
+    </ul>
+  </div>
 </nav>
 `;
 
 exports[`<SideNav /> create side navigation 6`] = `
-<ul
-  className="fd-side-nav__list"
+<div
+  className="fd-side-nav__main-navigation"
 >
-  <li
-    className="fd-side-nav__item"
+  <ul
+    className="fd-nested-list--text-only fd-nested-list level-1"
   >
-    <a
-      className="fd-side-nav__link"
-      href="#"
-      onClick={[Function]}
+    <li
+      className="fd-nested-list__item"
     >
-      Link Item 1
-    </a>
-  </li>
-  <li
-    className="fd-side-nav__item"
-  >
-    <a
-      className="fd-side-nav__link has-child"
-      href="#"
-      onClick={[Function]}
+      <a
+        className="fd-nested-list__link"
+        href="#"
+        onClick={[Function]}
+      >
+        <span
+          className="fd-nested-list__title"
+        >
+          Link Item 1
+        </span>
+      </a>
+    </li>
+    <li
+      className="fd-nested-list__item"
     >
-      Link Item 2
-    </a>
-    <ul
-      aria-expanded={false}
-      aria-hidden={true}
-      className="fd-side-nav__sublist"
+      <a
+        className="fd-nested-list__link has-child"
+        href="#"
+        onClick={[Function]}
+      >
+        <span
+          className="fd-nested-list__title"
+        >
+          Link Item 2
+        </span>
+      </a>
+      <ul
+        aria-expanded={false}
+        aria-hidden={true}
+        className="fd-nested-list--text-only fd-nested-list level-1"
+      >
+        <li
+          className="fd-nested-list__item"
+        >
+          <a
+            className="fd-nested-list__link"
+            href="#"
+            onClick={[Function]}
+          >
+            <span
+              className="fd-nested-list__title"
+            >
+              Item 1
+            </span>
+          </a>
+        </li>
+        <li
+          className="fd-nested-list__item"
+        >
+          <a
+            className="fd-nested-list__link"
+            href="#"
+            onClick={[Function]}
+          >
+            <span
+              className="fd-nested-list__title"
+            >
+              Item 2
+            </span>
+          </a>
+        </li>
+        <li
+          className="fd-nested-list__item"
+        >
+          <a
+            className="fd-nested-list__link"
+            href="#"
+            onClick={[Function]}
+          >
+            <span
+              className="fd-nested-list__title"
+            >
+              Item 3
+            </span>
+          </a>
+        </li>
+        <li
+          className="fd-nested-list__item"
+        >
+          <a
+            className="fd-nested-list__link"
+            href="#"
+            onClick={[Function]}
+          >
+            <span
+              className="fd-nested-list__title"
+            >
+              Item 4
+            </span>
+          </a>
+        </li>
+        <li
+          className="fd-nested-list__item"
+        >
+          <a
+            className="fd-nested-list__link"
+            href="#"
+            onClick={[Function]}
+          >
+            <span
+              className="fd-nested-list__title"
+            >
+              Item 5
+            </span>
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li
+      className="fd-nested-list__item"
     >
-      <li
-        className="fd-side-nav__item"
+      <a
+        className="fd-nested-list__link"
+        href="#"
+        onClick={[Function]}
       >
-        <a
-          className="fd-side-nav__sublink"
-          href="#"
-          onClick={[Function]}
+        <span
+          className="fd-nested-list__title"
         >
-          Item 1
-        </a>
-      </li>
-      <li
-        className="fd-side-nav__item"
-      >
-        <a
-          className="fd-side-nav__sublink"
-          href="#"
-          onClick={[Function]}
-        >
-          Item 2
-        </a>
-      </li>
-      <li
-        className="fd-side-nav__item"
-      >
-        <a
-          className="fd-side-nav__sublink"
-          href="#"
-          onClick={[Function]}
-        >
-          Item 3
-        </a>
-      </li>
-      <li
-        className="fd-side-nav__item"
-      >
-        <a
-          className="fd-side-nav__sublink"
-          href="#"
-          onClick={[Function]}
-        >
-          Item 4
-        </a>
-      </li>
-      <li
-        className="fd-side-nav__item"
-      >
-        <a
-          className="fd-side-nav__sublink"
-          href="#"
-          onClick={[Function]}
-        >
-          Item 5
-        </a>
-      </li>
-    </ul>
-  </li>
-  <li
-    className="fd-side-nav__item"
-  >
-    <a
-      className="fd-side-nav__link"
-      href="#"
-      onClick={[Function]}
+          Link Item 3
+        </span>
+      </a>
+    </li>
+    <li
+      className="fd-nested-list__item"
     >
-      Link Item 3
-    </a>
-  </li>
-  <li
-    className="fd-side-nav__item"
-  >
-    <a
-      className="fd-side-nav__link has-child"
-      href="#"
-      onClick={[Function]}
+      <a
+        className="fd-nested-list__link has-child"
+        href="#"
+        onClick={[Function]}
+      >
+        <span
+          className="fd-nested-list__title"
+        >
+          Link Item 4
+        </span>
+      </a>
+      <ul
+        aria-expanded={false}
+        aria-hidden={true}
+        className="fd-nested-list--text-only fd-nested-list level-1"
+      >
+        <li
+          className="fd-nested-list__item"
+        >
+          <a
+            className="fd-nested-list__link"
+            href="#"
+            onClick={[Function]}
+          >
+            <span
+              className="fd-nested-list__title"
+            >
+              Item 1
+            </span>
+          </a>
+        </li>
+        <li
+          className="fd-nested-list__item"
+        >
+          <a
+            className="fd-nested-list__link"
+            href="#"
+            onClick={[Function]}
+          >
+            <span
+              className="fd-nested-list__title"
+            >
+              Item 2
+            </span>
+          </a>
+        </li>
+        <li
+          className="fd-nested-list__item"
+        >
+          <a
+            className="fd-nested-list__link"
+            href="#"
+            onClick={[Function]}
+          >
+            <span
+              className="fd-nested-list__title"
+            >
+              Item 3
+            </span>
+          </a>
+        </li>
+        <li
+          className="fd-nested-list__item"
+        >
+          <a
+            className="fd-nested-list__link"
+            href="#"
+            onClick={[Function]}
+          >
+            <span
+              className="fd-nested-list__title"
+            >
+              Item 4
+            </span>
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li
+      className="fd-nested-list__item"
     >
-      Link Item 4
-    </a>
-    <ul
-      aria-expanded={false}
-      aria-hidden={true}
-      className="fd-side-nav__sublist"
-    >
-      <li
-        className="fd-side-nav__item"
+      <a
+        className="fd-nested-list__link"
+        href="#"
+        onClick={[Function]}
       >
-        <a
-          className="fd-side-nav__sublink"
-          href="#"
-          onClick={[Function]}
+        <span
+          className="fd-nested-list__title"
         >
-          Item 1
-        </a>
-      </li>
-      <li
-        className="fd-side-nav__item"
-      >
-        <a
-          className="fd-side-nav__sublink"
-          href="#"
-          onClick={[Function]}
-        >
-          Item 2
-        </a>
-      </li>
-      <li
-        className="fd-side-nav__item"
-      >
-        <a
-          className="fd-side-nav__sublink"
-          href="#"
-          onClick={[Function]}
-        >
-          Item 3
-        </a>
-      </li>
-      <li
-        className="fd-side-nav__item"
-      >
-        <a
-          className="fd-side-nav__sublink"
-          href="#"
-          onClick={[Function]}
-        >
-          Item 4
-        </a>
-      </li>
-    </ul>
-  </li>
-  <li
-    className="fd-side-nav__item"
-  >
-    <a
-      className="fd-side-nav__link"
-      href="#"
-      onClick={[Function]}
-    >
-      Link Item
-    </a>
-  </li>
-</ul>
+          Link Item
+        </span>
+      </a>
+    </li>
+  </ul>
+</div>
 `;

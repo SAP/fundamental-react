@@ -39,6 +39,7 @@ exports[`<TimePicker /> create time picker 1`] = `
               aria-haspopup="true"
               className="fd-button--light fd-button--compact sap-icon--fob-watch fd-input-group__button"
               id="myTime-button"
+              type="button"
             />
           </span>
         </div>
@@ -84,6 +85,7 @@ exports[`<TimePicker /> create time picker 2`] = `
               aria-expanded="false"
               aria-haspopup="true"
               className="fd-button--light fd-button--compact sap-icon--fob-watch fd-input-group__button"
+              type="button"
             />
           </span>
         </div>
@@ -129,6 +131,7 @@ exports[`<TimePicker /> create time picker 3`] = `
               aria-expanded="false"
               aria-haspopup="true"
               className="fd-button--light fd-button--compact sap-icon--fob-watch fd-input-group__button"
+              type="button"
             />
           </span>
         </div>
@@ -176,6 +179,7 @@ exports[`<TimePicker /> create time picker 4`] = `
               aria-haspopup="true"
               className="fd-button--light fd-button--compact sap-icon--fob-watch is-disabled fd-input-group__button"
               disabled={true}
+              type="button"
             />
           </span>
         </div>
@@ -221,6 +225,7 @@ exports[`<TimePicker /> create time picker 5`] = `
               aria-expanded="false"
               aria-haspopup="true"
               className="fd-button--light fd-button--compact sap-icon--fob-watch fd-input-group__button"
+              type="button"
             />
           </span>
         </div>
@@ -266,6 +271,7 @@ exports[`<TimePicker /> create time picker 6`] = `
               aria-expanded="false"
               aria-haspopup="true"
               className="fd-button--light fd-button--compact sap-icon--fob-watch fd-input-group__button"
+              type="button"
             />
           </span>
         </div>
@@ -311,6 +317,7 @@ exports[`<TimePicker /> create time picker 7`] = `
               aria-expanded="false"
               aria-haspopup="true"
               className="fd-button--light fd-button--compact sap-icon--fob-watch fd-input-group__button"
+              type="button"
             />
           </span>
         </div>
@@ -356,6 +363,7 @@ exports[`<TimePicker /> create time picker 8`] = `
               aria-expanded="false"
               aria-haspopup="true"
               className="fd-button--light fd-button--compact sap-icon--fob-watch fd-input-group__button"
+              type="button"
             />
           </span>
         </div>
@@ -401,6 +409,7 @@ exports[`<TimePicker /> create time picker 9`] = `
               aria-expanded="false"
               aria-haspopup="true"
               className="fd-button--light fd-button--compact sap-icon--fob-watch fd-input-group__button"
+              type="button"
             />
           </span>
         </div>
@@ -446,6 +455,7 @@ exports[`<TimePicker /> create time picker 10`] = `
               aria-expanded="false"
               aria-haspopup="true"
               className="fd-button--light fd-button--compact sap-icon--fob-watch fd-input-group__button"
+              type="button"
             />
           </span>
         </div>

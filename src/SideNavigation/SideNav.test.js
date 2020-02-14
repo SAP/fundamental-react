@@ -294,16 +294,16 @@ describe('<SideNav />', () => {
         expect(wrapper.state('selectedId')).toBeFalsy();
 
         wrapper
-            .find('.fd-side-nav__link')
-            .at(1)
+            .find('.has-child')
+            .at(0)
             .simulate('click');
 
         expect(Item2.state('expanded')).toBeTruthy();
         expect(Item4.state('expanded')).toBeFalsy();
 
         wrapper
-            .find('.fd-side-nav__link')
-            .at(3)
+            .find('.has-child')
+            .at(1)
             .simulate('click');
 
         expect(Item2.state('expanded')).toBeTruthy();
@@ -313,15 +313,15 @@ describe('<SideNav />', () => {
     test('handle side nav sub link click', () => {
         const wrapper = mountComponentWithStyles(sideNavMultiLevel);
         wrapper
-            .find('.fd-side-nav__sublink')
-            .at(0)
+            .find('.fd-nested-list__link')
+            .at(2)
             .simulate('click');
 
         expect(wrapper.state('selectedId')).toEqual('subitem_21');
 
         wrapper
-            .find('.fd-side-nav__sublink')
-            .at(4)
+            .find('.fd-nested-list__link')
+            .at(6)
             .simulate('click');
 
         expect(wrapper.state('selectedId')).toEqual('subitem_25');
