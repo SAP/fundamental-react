@@ -37,6 +37,4 @@ FormSelect.propTypes = {
     disableStyles: PropTypes.bool
 };
 
-export { FormSelect as __FormSelect };
-
 export default FormSelect;

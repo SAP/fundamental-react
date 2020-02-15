@@ -74,6 +74,4 @@ Button.propDescriptions = {
     typeAttr: 'Value for the `type` attribute on the `<button>` element.'
 };
 
-export { Button as __Button };
-
 export default Button;

@@ -162,6 +162,4 @@ LocalizationEditor.propDescriptions = {
     textarea: 'Set to **true** to enable a Localization Editor with a textarea.'
 };
 
-export { LocalizationEditor as __LocalizationEditor };
-
 export default LocalizationEditor;

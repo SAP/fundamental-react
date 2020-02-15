@@ -65,6 +65,4 @@ FormInput.propDescriptions = {
     value: 'Value for the `value` attribute on the input.'
 };
 
-export { FormInput as __FormInput };
-
 export default FormInput;

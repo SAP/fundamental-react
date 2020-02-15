@@ -36,7 +36,5 @@ Token.propTypes = {
     disableStyles: PropTypes.bool
 };
 
-export { Token as __Token };
-
 export default Token;
 

@@ -44,6 +44,5 @@ FormLabel.propDescriptions = {
     required: 'Set to **true** for required input fields.'
 };
 
-export { FormLabel as __FormLabel };
 
 export default FormLabel;

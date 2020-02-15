@@ -119,6 +119,4 @@ Alert.propDescriptions = {
     onCloseClicked: 'Callback function passing event when close button is clicked.'
 };
 
-export { Alert as __Alert };
-
 export default Alert;

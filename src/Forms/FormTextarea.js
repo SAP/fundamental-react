@@ -34,6 +34,4 @@ FormTextarea.propTypes = {
     disableStyles: PropTypes.bool
 };
 
-export { FormTextarea as __FormTextarea };
-
 export default FormTextarea;

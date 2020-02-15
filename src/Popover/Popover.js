@@ -209,6 +209,4 @@ Popover.propDescriptions = {
     type: 'Indicates the type of popup - "dialog", "grid", "listbox", "menu", or "tree". This value is attached to aria-haspopup and is useful to assistive tech. Defaulted to boolean true.'
 };
 
-export { Popover as __Popover };
-
 export default Popover;

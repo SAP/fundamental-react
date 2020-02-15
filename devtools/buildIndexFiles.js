@@ -42,7 +42,7 @@ componentDirs.map((directory) => {
             if (component === 'default') {
                 //components wrapped in HOC
                 if (components.default.render) {
-                    fileContents += `export { default as ${components.default.render.displayName} } from './${fileName}';\n`;
+                    fileContents += `export { default as ${components.default.render.displayName || components.default.displayName} } from './${fileName}';\n`;
                 } else {
                     //components not wrapped in HOC
                     fileContents += `export { default as ${components.default.name} } from './${fileName}';\n`;

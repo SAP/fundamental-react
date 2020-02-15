@@ -68,6 +68,4 @@ ComboboxInput.propDescriptions = {
     menu: 'An object containing a `Menu` component.'
 };
 
-export { ComboboxInput as __ComboboxInput };
-
 export default ComboboxInput;

@@ -40,6 +40,4 @@ FormItem.propDescriptions = {
     isInline: 'Set to **true** to display radio buttons and checkboxes in a row.'
 };
 
-export { FormItem as __FormItem };
-
 export default FormItem;

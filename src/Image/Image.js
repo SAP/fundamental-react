@@ -41,6 +41,4 @@ Image.propDescriptions = {
     photo: 'Picture URL.'
 };
 
-export { Image as __Image };
-
 export default Image;

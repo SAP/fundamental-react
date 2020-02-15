@@ -57,6 +57,4 @@ InputGroup.propTypes = {
     disableStyles: PropTypes.bool
 };
 
-export { InputGroup as __InputGroup };
-
 export default InputGroup;

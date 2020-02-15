@@ -119,6 +119,4 @@ TabGroup.propDescriptions = {
     onTabClick: 'Callback function when the user clicks on a tab. Parameters passed to the function are `event` and `index`.'
 };
 
-export { TabGroup as __TabGroup };
-
 export default TabGroup;

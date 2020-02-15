@@ -41,6 +41,4 @@ Icon.propDescriptions = {
     size: 'Size of the icon. Options include **xs**, **s**, **compact**, and **l**. If no size is provided, default (normal) will be used.'
 };
 
-export { Icon as __Icon };
-
 export default Icon;

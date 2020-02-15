@@ -76,6 +76,4 @@ Tile.Actions = TileActions;
 Tile.Content = TileContent;
 Tile.Media = TileMedia;
 
-export { Tile as __Tile };
-
 export default Tile;

@@ -33,6 +33,4 @@ FormLegend.propTypes = {
     disableStyles: PropTypes.bool
 };
 
-export { FormLegend as __FormLegend };
-
 export default FormLegend;

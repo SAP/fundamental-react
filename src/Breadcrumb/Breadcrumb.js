@@ -29,6 +29,4 @@ Breadcrumb.propDescriptions = {
 
 Breadcrumb.Item = BreadcrumbItem;
 
-export { Breadcrumb as __Breadcrumb };
-
 export default Breadcrumb;

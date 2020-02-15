@@ -231,6 +231,4 @@ SearchInput.propDescriptions = {
     searchList: 'Collection of items to display in the dropdown list.'
 };
 
-export { SearchInput as __SearchInput };
-
 export default SearchInput;

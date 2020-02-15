@@ -40,6 +40,4 @@ ActionBar.Actions = ActionBarActions;
 ActionBar.Back = ActionBarBack;
 ActionBar.Header = ActionBarHeader;
 
-export { ActionBar as __ActionBar };
-
 export default ActionBar;

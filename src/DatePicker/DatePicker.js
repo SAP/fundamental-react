@@ -251,6 +251,4 @@ DatePicker.propDescriptions = {
     onBlur: 'Callback function for onBlur events. In the object returned, `date` is the date object and `formattedDate` is the formatted date.'
 };
 
-export { DatePicker as __DatePicker };
-
 export default DatePicker;

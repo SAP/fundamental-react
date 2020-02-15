@@ -219,6 +219,4 @@ MultiInput.propDescriptions = {
     tagProps: 'Additional props to be spread to the tags `<div>` element.'
 };
 
-export { MultiInput as __MultiInput };
-
 export default MultiInput;
