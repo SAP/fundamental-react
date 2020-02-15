@@ -266,6 +266,17 @@ describe('<TimePicker />', () => {
         expect(wrapper.state('value')).toEqual('');
     });
 
+    describe('onChange callback', () => {
+        test('should call onChange after input value change', () => {
+            const change = jest.fn();
+            let wrapper = mountComponentWithStyles(<TimePicker onChange={change} />);
+            wrapper
+                .find('input[type="text"]')
+                .at(0)
+                .simulate('change', { target: { value: '10:34:56' } });
+            expect(change).toHaveBeenCalledTimes(1);
+        });
+    });
     describe('Prop spreading', () => {
         test('should allow props to be spread to the TimePicker component', () => {
             const element = mount(<TimePicker data-sample='Sample' />);
