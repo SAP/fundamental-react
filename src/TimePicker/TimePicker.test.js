@@ -1,5 +1,4 @@
 import { mount } from 'enzyme';
-
 import React from 'react';
 import renderer from 'react-test-renderer';
 import TimePicker from './TimePicker';
@@ -269,7 +268,7 @@ describe('<TimePicker />', () => {
     describe('onChange callback', () => {
         test('should call onChange after input value change', () => {
             const change = jest.fn();
-            let wrapper = mountComponentWithStyles(<TimePicker onChange={change} />);
+            let wrapper = mount(<TimePicker onChange={change} />);
             wrapper
                 .find('input[type="text"]')
                 .at(0)
