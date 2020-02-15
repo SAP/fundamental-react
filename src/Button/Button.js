@@ -1,8 +1,7 @@
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import React from 'react';
-import withStyles from '../utils/WithStyles/WithStyles';
 import { BUTTON_OPTIONS, BUTTON_TYPES } from '../utils/constants';
+import React, { useEffect } from 'react';
 
 const Button = React.forwardRef(({
     option,
@@ -18,6 +17,15 @@ const Button = React.forwardRef(({
     className,
     ...props
 }, ref) => {
+
+    useEffect(() => {
+        if (!disableStyles) {
+            require('fundamental-styles/dist/fonts.css');
+            require('fundamental-styles/dist/icon.css');
+            require('fundamental-styles/dist/button.css');
+        }
+    }, []);
+
     const buttonClasses = classnames(
         {
             'fd-button': !option,
@@ -46,7 +54,6 @@ Button.propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,
     compact: PropTypes.bool,
-    customStyles: PropTypes.object,
     disabled: PropTypes.bool,
     disableStyles: PropTypes.bool,
     glyph: PropTypes.string,
@@ -69,4 +76,4 @@ Button.propDescriptions = {
 
 export { Button as __Button };
 
-export default withStyles(Button, { cssFile: 'button', font: true, icons: true });
+export default Button;

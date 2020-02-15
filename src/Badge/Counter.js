@@ -1,10 +1,17 @@
 import classnames from 'classnames';
 import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import PropTypes from 'prop-types';
-import React from 'react';
-import withStyles from '../utils/WithStyles/WithStyles';
+import React, { useEffect } from 'react';
 
 const Counter = React.forwardRef(({ localizedText, notification, children, className, disableStyles, ...props }, ref) => {
+
+    useEffect(() => {
+        if (!disableStyles) {
+            require('fundamental-styles/dist/fonts.css');
+            require('fundamental-styles/dist/counter.css');
+        }
+    }, []);
+
     const counterClasses = classnames(
         'fd-counter',
         {
@@ -26,7 +33,6 @@ Counter.displayName = 'Counter';
 Counter.propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,
-    customStyles: PropTypes.object,
     disableStyles: PropTypes.bool,
     localizedText: CustomPropTypes.i18n({
         counterLabel: PropTypes.string
@@ -49,4 +55,4 @@ Counter.propDescriptions = {
 
 export { Counter as __Counter };
 
-export default withStyles(Counter, { cssFile: 'counter', fonts: true });
+export default Counter;

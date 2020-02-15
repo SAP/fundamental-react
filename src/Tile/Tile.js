@@ -1,10 +1,9 @@
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import React from 'react';
 import TileActions from './_TileActions';
 import TileContent from './_TileContent';
 import TileMedia from './_TileMedia';
-import withStyles from '../utils/WithStyles/WithStyles';
+import React, { useEffect } from 'react';
 
 const Tile = React.forwardRef(({
     disabled,
@@ -16,6 +15,14 @@ const Tile = React.forwardRef(({
     ...rest
 
 }, ref) => {
+
+    useEffect(() => {
+        if (!disableStyles) {
+            require('fundamental-styles/dist/fonts.css');
+            require('fundamental-styles/dist/tile.css');
+            require('fundamental-styles/dist/product-tile.css');
+        }
+    }, []);
 
     const tileClasses = classnames(
         {
@@ -55,7 +62,6 @@ Tile.propTypes = {
     backgroundImage: PropTypes.string,
     children: PropTypes.node,
     className: PropTypes.string,
-    customStyles: PropTypes.object,
     disabled: PropTypes.bool,
     disableStyles: PropTypes.bool,
     productTile: PropTypes.bool
@@ -72,4 +78,4 @@ Tile.Media = TileMedia;
 
 export { Tile as __Tile };
 
-export default withStyles(Tile, { cssFile: ['tile', 'product-tile'], fonts: true });
+export default Tile;

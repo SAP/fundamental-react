@@ -2,7 +2,6 @@
 import classnames from 'classnames';
 import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import PropTypes from 'prop-types';
-import withStyles from '../utils/WithStyles/WithStyles';
 import React, { Component } from 'react';
 
 class Pagination extends Component {
@@ -12,6 +11,14 @@ class Pagination extends Component {
         this.state = {
             selectedPage: this.props.initialPage
         };
+    }
+
+    componentDidMount() {
+        if (!this.props.disableStyles) {
+            require('fundamental-styles/dist/icon.css');
+            require('fundamental-styles/dist/fonts.css');
+            require('fundamental-styles/dist/pagination.css');
+        }
     }
 
     // number of pages to show
@@ -147,7 +154,6 @@ Pagination.propTypes = {
     itemsTotal: PropTypes.number.isRequired,
     onClick: PropTypes.func.isRequired,
     className: PropTypes.string,
-    customStyles: PropTypes.object,
     disableStyles: PropTypes.bool,
     displayTotal: PropTypes.bool,
     displayTotalProps: PropTypes.object,
@@ -191,4 +197,4 @@ Pagination.propDescriptions = {
 
 export { Pagination as __Pagination };
 
-export default withStyles(Pagination, { cssFile: 'pagination', fonts: true, icons: true });
+export default Pagination;

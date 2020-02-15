@@ -1,10 +1,18 @@
 import classnames from 'classnames';
 import { FORM_MESSAGE_TYPES } from '../utils/constants';
 import PropTypes from 'prop-types';
-import React from 'react';
-import withStyles from '../utils/WithStyles/WithStyles';
+import React, { useEffect } from 'react';
 
 const FormMessage = React.forwardRef(({ type, children, className, disableStyles, ...props }, ref) => {
+
+    useEffect(() => {
+        if (!disableStyles) {
+            require('fundamental-styles/dist/fonts.css');
+            require('fundamental-styles/dist/icon.css');
+            require('fundamental-styles/dist/form-message.css');
+        }
+    }, []);
+
     const formMessageClasses = classnames(
         'fd-form-message',
         {
@@ -27,11 +35,11 @@ FormMessage.displayName = 'FormMessage';
 FormMessage.propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,
-    customStyles: PropTypes.object,
+
     disableStyles: PropTypes.bool,
     type: PropTypes.oneOf(FORM_MESSAGE_TYPES)
 };
 
 export { FormMessage as __FormMessage };
 
-export default withStyles(FormMessage, { cssFile: 'form-message', fonts: true, icons: true });
+export default FormMessage;

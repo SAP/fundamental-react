@@ -1,9 +1,16 @@
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import React from 'react';
-import withStyles from '../utils/WithStyles/WithStyles';
+import React, { useEffect } from 'react';
 
 const Link = React.forwardRef(({ className, children, disabled, disableStyles, ...props }, ref) => {
+
+    useEffect(() => {
+        if (!disableStyles) {
+            require('fundamental-styles/dist/fonts.css');
+            require('fundamental-styles/dist/link.css');
+        }
+    }, []);
+
     const imageClasses = classnames(
         'fd-link',
         { 'is-disabled': !!disabled },
@@ -25,11 +32,10 @@ Link.displayName = 'Link';
 Link.propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,
-    customStyles: PropTypes.object,
     disabled: PropTypes.bool,
     disableStyles: PropTypes.bool
 };
 
 export { Link as __Link };
 
-export default withStyles(Link, { cssFile: 'link', fonts: true });
+export default Link;

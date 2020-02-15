@@ -1,9 +1,16 @@
 import BreadcrumbItem from './_BreadcrumbItem';
 import PropTypes from 'prop-types';
-import React from 'react';
-import withStyles from '../utils/WithStyles/WithStyles';
+import React, { useEffect } from 'react';
 
 const Breadcrumb = React.forwardRef(({ children, disableStyles, ...props }, ref) => {
+
+    useEffect(() => {
+        if (!disableStyles) {
+            require('fundamental-styles/dist/fonts.css');
+            require('fundamental-styles/dist/breadcrumb.css');
+        }
+    }, []);
+
     return (<ul {...props}
         className='fd-breadcrumb'
         ref={ref}>{children}</ul>);
@@ -13,7 +20,6 @@ Breadcrumb.displayName = 'Breadcrumb';
 
 Breadcrumb.propTypes = {
     children: PropTypes.node,
-    customStyles: PropTypes.object,
     disableStyles: PropTypes.bool
 };
 
@@ -25,4 +31,4 @@ Breadcrumb.Item = BreadcrumbItem;
 
 export { Breadcrumb as __Breadcrumb };
 
-export default withStyles(Breadcrumb, { cssFile: 'breadcrumb', font: true });
+export default Breadcrumb;

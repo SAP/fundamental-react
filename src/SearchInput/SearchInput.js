@@ -3,7 +3,6 @@ import FormInput from '../Forms/FormInput';
 import Menu from '../Menu/Menu';
 import Popover from '../Popover/Popover';
 import PropTypes from 'prop-types';
-import withStyles from '../utils/WithStyles/WithStyles';
 import React, { Component } from 'react';
 
 class SearchInput extends Component {
@@ -16,6 +15,12 @@ class SearchInput extends Component {
             searchList: this.props.searchList,
             filteredResult: this.props.searchList
         };
+    }
+
+    componentDidMount() {
+        if (!this.props.disableStyles) {
+            require('fundamental-styles/dist/input-group.css');
+        }
     }
 
     onKeyPressHandler = event => {
@@ -196,7 +201,6 @@ SearchInput.displayName = 'SearchInput';
 SearchInput.propTypes = {
     className: PropTypes.string,
     compact: PropTypes.bool,
-    customStyles: PropTypes.object,
     disableStyles: PropTypes.bool,
     inputProps: PropTypes.object,
     inShellbar: PropTypes.bool,
@@ -229,4 +233,4 @@ SearchInput.propDescriptions = {
 
 export { SearchInput as __SearchInput };
 
-export default withStyles(SearchInput, { cssFile: 'input-group' });
+export default SearchInput;

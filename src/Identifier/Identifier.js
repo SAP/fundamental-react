@@ -1,11 +1,19 @@
 import classnames from 'classnames';
 import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import PropTypes from 'prop-types';
-import React from 'react';
-import withStyles from '../utils/WithStyles/WithStyles';
 import { IDENTIFIER_MODIFIERS, IDENTIFIER_SIZES } from '../utils/constants';
+import React, { useEffect } from 'react';
 
 const Identifier = React.forwardRef(({ glyph, size, modifier, color, label, backgroundImageUrl, children, className, disableStyles, role, ...props }, ref) => {
+
+    useEffect(() => {
+        if (!disableStyles) {
+            require('fundamental-styles/dist/icon.css');
+            require('fundamental-styles/dist/helpers.css');
+            require('fundamental-styles/dist/identifier.css');
+        }
+    }, []);
+
     const styles = {
         backgroundImage: `url(${backgroundImageUrl})`
     };
@@ -48,7 +56,7 @@ Identifier.propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,
     color: CustomPropTypes.range(1, 9),
-    customStyles: PropTypes.object,
+
     disableStyles: PropTypes.bool,
     glyph: PropTypes.string,
     label: PropTypes.string,
@@ -67,4 +75,4 @@ Identifier.propDescriptions = {
 
 export { Identifier as __Identifier };
 
-export default withStyles(Identifier, { cssFile: ['helpers', 'identifier'], icons: true });
+export default Identifier;

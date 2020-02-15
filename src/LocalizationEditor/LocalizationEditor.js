@@ -6,12 +6,18 @@ import FormTextArea from '../Forms/FormTextarea';
 import Menu from '../Menu/Menu';
 import Popover from '../Popover/Popover';
 import PropTypes from 'prop-types';
-import React from 'react';
-import withStyles from '../utils/WithStyles/WithStyles';
+import React, { useEffect } from 'react';
 
 
 const LocalizationEditor = React.forwardRef(({ control, menu, id, compact, textarea, className, inputClassName, listProps, popoverProps,
     disableStyles, ...props }, ref) => {
+
+    useEffect(() => {
+        if (!disableStyles) {
+            require('fundamental-styles/dist/localization-editor.css');
+            require('fundamental-styles/dist/input-group.css');
+        }
+    }, []);
 
     const localizationEditorClasses = classnames(
         'fd-localization-editor',
@@ -138,7 +144,6 @@ LocalizationEditor.propTypes = {
     ).isRequired,
     className: PropTypes.string,
     compact: PropTypes.bool,
-    customStyles: PropTypes.object,
     disableStyles: PropTypes.bool,
     id: PropTypes.string,
     inputClassName: PropTypes.string,
@@ -159,4 +164,4 @@ LocalizationEditor.propDescriptions = {
 
 export { LocalizationEditor as __LocalizationEditor };
 
-export default withStyles(LocalizationEditor, { cssFile: ['input-group', 'localization-editor'] });
+export default LocalizationEditor;

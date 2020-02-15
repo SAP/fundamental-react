@@ -1,11 +1,17 @@
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import React from 'react';
-import withStyles from '../utils/WithStyles/WithStyles';
+import React, { useEffect } from 'react';
 
 const Table = React.forwardRef(({ headers, tableData, className, tableBodyClassName,
     tableBodyProps, tableBodyRowProps, tableCellClassName, tableHeaderClassName, tableHeaderProps,
     tableHeaderRowClassName, tableHeaderRowProps, tableRowClassName, disableStyles, ...props }, ref) => {
+
+    useEffect(() => {
+        if (!disableStyles) {
+            require('fundamental-styles/dist/fonts.css');
+            require('fundamental-styles/dist/table.css');
+        }
+    }, []);
 
     const tableClasses = classnames(
         'fd-table',
@@ -76,7 +82,6 @@ Table.propTypes = {
         }).isRequired
     ).isRequired,
     className: PropTypes.string,
-    customStyles: PropTypes.object,
     disableStyles: PropTypes.bool,
     tableBodyClassName: PropTypes.string,
     tableBodyProps: PropTypes.object,
@@ -108,4 +113,4 @@ Table.propDescriptions = {
 
 export { Table as __Table };
 
-export default withStyles(Table, { cssFile: 'table', fonts: true });
+export default Table;

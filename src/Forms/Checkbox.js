@@ -2,7 +2,6 @@ import classnames from 'classnames';
 import FormItem from './FormItem';
 import FormLabel from './FormLabel';
 import PropTypes from 'prop-types';
-import withStyles from '../utils/WithStyles/WithStyles';
 import React, { useEffect, useRef } from 'react';
 
 const getCheckStatus = (checked, indeterminate) => {
@@ -22,6 +21,12 @@ const Checkbox = React.forwardRef(({ checked, className, defaultChecked, disable
     useEffect(() => {
         inputEl && (inputEl.current.indeterminate = indeterminate);
     });
+
+    useEffect(() => {
+        if (!disableStyles) {
+            require('fundamental-styles/dist/checkbox.css');
+        }
+    }, []);
 
     const classes = classnames(
         className,
@@ -62,7 +67,7 @@ Checkbox.displayName = 'Checkbox';
 Checkbox.propTypes = {
     checked: PropTypes.bool,
     className: PropTypes.string,
-    customStyles: PropTypes.object,
+
     defaultChecked: PropTypes.bool,
     disabled: PropTypes.bool,
     disableStyles: PropTypes.bool,
@@ -93,4 +98,4 @@ Checkbox.propDescriptions = {
 
 export { Checkbox as __Checkbox };
 
-export default withStyles(Checkbox, { cssFile: 'checkbox' });
+export default Checkbox;

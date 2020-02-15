@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import shortId from '../utils/shortId';
-import withStyles from '../utils/WithStyles/WithStyles';
 import React, { Component } from 'react';
 
 class FormRadioGroup extends Component {
@@ -34,7 +33,7 @@ FormRadioGroup.displayName = 'FormRadioGroup';
 
 FormRadioGroup.propTypes = {
     children: PropTypes.node,
-    customStyles: PropTypes.object,
+
     disabled: PropTypes.bool,
     disableStyles: PropTypes.bool,
     inline: PropTypes.bool,
@@ -51,4 +50,4 @@ FormRadioGroup.propDescriptions = {
 
 export { FormRadioGroup as __FormRadioGroup };
 
-export default withStyles(FormRadioGroup);
+export default FormRadioGroup;

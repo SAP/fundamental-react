@@ -1,11 +1,17 @@
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import React from 'react';
-import withStyles from '../utils/WithStyles/WithStyles';
 import { BADGE_MODIFIERS, BADGE_TYPES } from '../utils/constants';
-
+import React, { useEffect } from 'react';
 
 const Badge = React.forwardRef(({ type, modifier, children, className, disableStyles, ...props }, ref) => {
+
+    useEffect(() => {
+        if (!disableStyles) {
+            require('fundamental-styles/dist/fonts.css');
+            require('fundamental-styles/dist/badge.css');
+        }
+    }, []);
+
     const badgeClasses = classnames(
         'fd-badge',
         {
@@ -27,7 +33,6 @@ Badge.displayName = 'Badge';
 Badge.propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,
-    customStyles: PropTypes.object,
     disableStyles: PropTypes.bool,
     modifier: PropTypes.oneOf(BADGE_MODIFIERS),
     type: PropTypes.oneOf(BADGE_TYPES)
@@ -35,4 +40,4 @@ Badge.propTypes = {
 
 export { Badge as __Badge };
 
-export default withStyles(Badge, { cssFile: 'badge', fonts: true });
+export default Badge;

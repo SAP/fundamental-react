@@ -1,10 +1,16 @@
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import React from 'react';
-import withStyles from '../utils/WithStyles/WithStyles';
 import { IMAGE_SIZES, IMAGE_TYPES } from '../utils/constants';
+import React, { useEffect } from 'react';
 
 const Image = React.forwardRef(({ size, type, photo, className, disableStyles, ...props }, ref) => {
+
+    useEffect(() => {
+        if (!disableStyles) {
+            require('fundamental-styles/dist/image.css');
+        }
+    }, []);
+
     const imageClasses = classnames(
         {
             [`fd-image--${size}`]: !!size,
@@ -27,7 +33,6 @@ Image.propTypes = {
     photo: PropTypes.string.isRequired,
     size: PropTypes.oneOf(IMAGE_SIZES).isRequired,
     className: PropTypes.string,
-    customStyles: PropTypes.object,
     disableStyles: PropTypes.bool,
     type: PropTypes.oneOf(IMAGE_TYPES)
 };
@@ -38,4 +43,4 @@ Image.propDescriptions = {
 
 export { Image as __Image };
 
-export default withStyles(Image, { cssFile: 'image' });
+export default Image;

@@ -1,9 +1,15 @@
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import React from 'react';
-import withStyles from '../utils/WithStyles/WithStyles';
+import React, { useEffect } from 'react';
 
 const FormSet = React.forwardRef(({ children, className, disableStyles, ...props }, ref) => {
+
+    useEffect(() => {
+        if (!disableStyles) {
+            require('fundamental-styles/dist/form-group.css');
+        }
+    }, []);
+
     const formSetClasses = classnames(
         'fd-form-group',
         className
@@ -22,10 +28,10 @@ FormSet.displayName = 'FormSet';
 FormSet.propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,
-    customStyles: PropTypes.object,
+
     disableStyles: PropTypes.bool
 };
 
 export { FormSet as __FormSet };
 
-export default withStyles(FormSet, { cssFile: 'form-group' });
+export default FormSet;

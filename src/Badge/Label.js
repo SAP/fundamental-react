@@ -1,10 +1,17 @@
 import classnames from 'classnames';
 import { LABEL_TYPES } from '../utils/constants';
 import PropTypes from 'prop-types';
-import React from 'react';
-import withStyles from '../utils/WithStyles/WithStyles';
+import React, { useEffect } from 'react';
 
 const Label = React.forwardRef(({ type, children, className, disableStyles, ...props }, ref) => {
+
+    useEffect(() => {
+        if (!disableStyles) {
+            require('fundamental-styles/dist/fonts.css');
+            require('fundamental-styles/dist/label.css');
+        }
+    }, []);
+
     const labelClasses = classnames(
         'fd-label',
         {
@@ -21,11 +28,10 @@ Label.displayName = 'Label';
 Label.propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,
-    customStyles: PropTypes.object,
     disableStyles: PropTypes.bool,
     type: PropTypes.oneOf(LABEL_TYPES)
 };
 
 export { Label as __Label };
 
-export default withStyles(Label, { cssFile: 'label', font: true });
+export default Label;

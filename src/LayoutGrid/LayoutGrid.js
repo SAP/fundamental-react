@@ -1,10 +1,15 @@
 import classnames from 'classnames';
 import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import PropTypes from 'prop-types';
-import React from 'react';
-import withStyles from '../utils/WithStyles/WithStyles';
+import React, { useEffect } from 'react';
 
 const LayoutGrid = React.forwardRef(({ nogap, cols, children, className, colSpan, disableStyles, ...props }, ref) => {
+
+    useEffect(() => {
+        if (!disableStyles) {
+            require('fundamental-styles/dist/layout-grid.css');
+        }
+    }, []);
 
     const layoutGridClasses = classnames(
         'fd-layout-grid',
@@ -32,7 +37,6 @@ LayoutGrid.propTypes = {
     className: PropTypes.string,
     cols: CustomPropTypes.range(1, 6),
     colSpan: CustomPropTypes.range(2, 6),
-    customStyles: PropTypes.object,
     disableStyles: PropTypes.bool,
     nogap: PropTypes.bool
 };
@@ -44,4 +48,4 @@ LayoutGrid.propDescriptions = {
 
 export { LayoutGrid as __LayoutGrid };
 
-export default withStyles(LayoutGrid, { cssFile: 'layout-grid' });
+export default LayoutGrid;

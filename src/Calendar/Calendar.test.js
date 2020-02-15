@@ -1,7 +1,6 @@
 import Calendar from '../Calendar/Calendar';
 import moment from 'moment';
 import { mount } from 'enzyme';
-import { mountComponentWithStyles } from '../utils/testUtils';
 import React from 'react';
 
 describe('<Calendar />', () => {
@@ -49,7 +48,7 @@ describe('<Calendar />', () => {
     });
 
     test('show/hide months', () => {
-        let wrapper = mountComponentWithStyles(defaultCalendar);
+        let wrapper = mount(defaultCalendar);
         expect(wrapper.state('showMonths')).toBeFalsy();
         wrapper
             .find(
@@ -133,7 +132,7 @@ describe('<Calendar />', () => {
     });
 
     test('show/hide years', () => {
-        let wrapper = mountComponentWithStyles(defaultCalendar);
+        let wrapper = mount(defaultCalendar);
         expect(wrapper.state('showYears')).toBeFalsy();
         wrapper
             .find(
@@ -179,7 +178,7 @@ describe('<Calendar />', () => {
     });
 
     test('click disabled day', () => {
-        const wrapper = mountComponentWithStyles(disabledWeekEnds);
+        const wrapper = mount(disabledWeekEnds);
         // select day of month
         wrapper
             .find(
@@ -227,7 +226,7 @@ describe('<Calendar />', () => {
     });
 
     test('click previous button', () => {
-        let wrapper = mountComponentWithStyles(defaultCalendar);
+        let wrapper = mount(defaultCalendar);
 
         let initialDate = moment('3/28/2019');
         wrapper.setState({ currentDateDisplayed: initialDate });
@@ -264,7 +263,7 @@ describe('<Calendar />', () => {
     });
 
     test('click next button', () => {
-        let wrapper = mountComponentWithStyles(defaultCalendar);
+        let wrapper = mount(defaultCalendar);
 
         let initialDate = moment('3/28/2019');
         wrapper.setState({ currentDateDisplayed: initialDate });
@@ -302,7 +301,7 @@ describe('<Calendar />', () => {
     });
 
     test('click next button on the 31st of month', () => {
-        let wrapper = mountComponentWithStyles(defaultCalendar);
+        let wrapper = mount(defaultCalendar);
 
         let initialDate = moment('5/31/2019');
         wrapper.setState({ currentDateDisplayed: initialDate });
@@ -319,7 +318,7 @@ describe('<Calendar />', () => {
     });
 
     test('click on day', () => {
-        const wrapper = mountComponentWithStyles(defaultCalendar);
+        const wrapper = mount(defaultCalendar);
         // select first day of month
         wrapper
             .find(
@@ -335,7 +334,7 @@ describe('<Calendar />', () => {
     });
 
     test('click on day with range enabled', () => {
-        const wrapper = mountComponentWithStyles(rangeSelect);
+        const wrapper = mount(rangeSelect);
         // select first day of month
         wrapper
             .find(
@@ -362,7 +361,7 @@ describe('<Calendar />', () => {
     });
 
     test('click on multiple days with range enabled', () => {
-        const wrapper = mountComponentWithStyles(rangeSelect);
+        const wrapper = mount(rangeSelect);
         // select first day of month
         wrapper
             .find(

@@ -2,7 +2,6 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import SideNavList from './_SideNavList';
 import SideNavListItem from './_SideNavListItem';
-import withStyles from '../utils/WithStyles/WithStyles';
 import React, { Component } from 'react';
 
 class SideNav extends Component {
@@ -12,6 +11,14 @@ class SideNav extends Component {
         this.state = {
             selectedId: props.selectedId
         };
+    }
+
+    componentDidMount() {
+        if (!this.props.disableStyles) {
+            require('fundamental-styles/dist/icon.css');
+            require('fundamental-styles/dist/fonts.css');
+            require('fundamental-styles/dist/side-nav.css');
+        }
     }
 
     getDerrivedStateFromProps(updatedProps, previousState) {
@@ -59,7 +66,6 @@ SideNav.propTypes = {
     className: PropTypes.string,
     compact: PropTypes.bool,
     condensed: PropTypes.bool,
-    customStyles: PropTypes.object,
     disableStyles: PropTypes.bool,
     selectedId: PropTypes.string,
     onItemSelect: PropTypes.func
@@ -83,4 +89,4 @@ SideNav.ListItem = SideNavListItem;
 
 export { SideNav as __SideNav };
 
-export default withStyles(SideNav, { cssFile: 'side-nav', fonts: true, icons: true });
+export default SideNav;

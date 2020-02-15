@@ -12,9 +12,4 @@ storiesOf('Components|InlineHelp', module)
     ))
     .add('disable styles', () => (
         <InlineHelp disableStyles text='default' />
-    ))
-    .add('custom styles', () => (
-        <InlineHelp
-            customStyles={require('../../utils/WithStyles/customStylesTest.css')}
-            text='default' />
     ));

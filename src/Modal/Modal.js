@@ -4,7 +4,6 @@ import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import FocusLock from 'react-focus-lock';
 import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
-import withStyles from '../utils/WithStyles/WithStyles';
 import React, { Component } from 'react';
 class Modal extends Component {
     // select body element to add Modal component too
@@ -24,6 +23,12 @@ class Modal extends Component {
     // add event listener for escape key
     componentDidMount() {
         document.addEventListener('keydown', this.handleKeyPress, false);
+
+        if (!this.props.disableStyles) {
+            require('fundamental-styles/dist/fonts.css');
+            require('fundamental-styles/dist/modal.css');
+            require('fundamental-styles/dist/overlay.css');
+        }
     }
 
     // remove event listener for escape key
@@ -126,7 +131,6 @@ Modal.propTypes = {
     className: PropTypes.string,
     closeProps: PropTypes.object,
     contentProps: PropTypes.object,
-    customStyles: PropTypes.object,
     disableStyles: PropTypes.bool,
     footerProps: PropTypes.object,
     headerProps: PropTypes.object,
@@ -164,4 +168,4 @@ Modal.propDescriptions = {
 
 export { Modal as __Modal };
 
-export default withStyles(Modal, { cssFile: ['modal', 'overlay'], fonts: true });
+export default Modal;

@@ -1,10 +1,15 @@
 import FormItem from './FormItem';
 import FormLabel from './FormLabel';
 import PropTypes from 'prop-types';
-import React from 'react';
-import withStyles from '../utils/WithStyles/WithStyles';
+import React, { useEffect } from 'react';
 
 const FormRadioItem = React.forwardRef(({ checked, children, className, defaultChecked, disabled, disableStyles, id, inline, inputProps, labelProps, name, value, ...props }, ref) => {
+
+    useEffect(() => {
+        if (!disableStyles) {
+            require('fundamental-styles/dist/radio.css');
+        }
+    }, []);
 
     return (
         <FormItem
@@ -39,7 +44,7 @@ FormRadioItem.propTypes = {
     children: PropTypes.node.isRequired,
     checked: PropTypes.bool,
     className: PropTypes.string,
-    customStyles: PropTypes.object,
+
     defaultChecked: PropTypes.bool,
     disabled: PropTypes.bool,
     disableStyles: PropTypes.bool,
@@ -61,4 +66,4 @@ FormRadioItem.propDescriptions = {
 
 export { FormRadioItem as __FormRadioItem };
 
-export default withStyles(FormRadioItem, { cssFile: 'radio' });
+export default FormRadioItem;

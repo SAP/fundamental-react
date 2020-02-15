@@ -1,9 +1,15 @@
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import React from 'react';
-import withStyles from '../utils/WithStyles/WithStyles';
+import React, { useEffect } from 'react';
 
 const FormItem = React.forwardRef(({ isInline, children, className, disableStyles, ...props }, ref) => {
+
+    useEffect(() => {
+        if (!disableStyles) {
+            require('fundamental-styles/dist/form-item.css');
+        }
+    }, []);
+
     const formItemClasses = classnames(
         'fd-form-item',
         {
@@ -26,7 +32,6 @@ FormItem.displayName = 'FormItem';
 FormItem.propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,
-    customStyles: PropTypes.object,
     disableStyles: PropTypes.bool,
     isInline: PropTypes.bool
 };
@@ -37,4 +42,4 @@ FormItem.propDescriptions = {
 
 export { FormItem as __FormItem };
 
-export default withStyles(FormItem, { cssFile: 'form-item' });
+export default FormItem;

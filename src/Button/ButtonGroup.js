@@ -1,8 +1,14 @@
 import PropTypes from 'prop-types';
-import React from 'react';
-import withStyles from '../utils/WithStyles/WithStyles';
+import React, { useEffect } from 'react';
 
 const ButtonGroup = React.forwardRef(({ children, disableStyles, ...props }, ref) => {
+
+    useEffect(() => {
+        if (!disableStyles) {
+            require('fundamental-styles/dist/button-group.css');
+        }
+    }, []);
+
     return (
         <div
             {...props}
@@ -19,7 +25,6 @@ ButtonGroup.displayName = 'ButtonGroup';
 
 ButtonGroup.propTypes = {
     children: PropTypes.node,
-    customStyles: PropTypes.object,
     disableStyles: PropTypes.bool
 };
 
@@ -29,4 +34,4 @@ ButtonGroup.propDescriptions = {
 
 export { ButtonGroup as __ButtonGroup };
 
-export default withStyles(ButtonGroup, { cssFile: 'button-group' });
+export default ButtonGroup;

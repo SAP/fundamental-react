@@ -12,11 +12,4 @@ storiesOf('Components|Link', module)
     ))
     .add('disable styles', () => (
         <Link disableStyles href='#'>Default</Link>
-    ))
-    .add('custom styles', () => (
-        <Link
-            customStyles={require('../../utils/WithStyles/customStylesTest.css')}
-            href='#'>
-            Default
-        </Link>
     ));

@@ -1,5 +1,5 @@
 import { mount } from 'enzyme';
-import { mountComponentWithStyles } from '../utils/testUtils';
+
 import React from 'react';
 import renderer from 'react-test-renderer';
 import TimePicker from './TimePicker';
@@ -77,7 +77,7 @@ describe('<TimePicker />', () => {
     });
 
     test('changing a value', () => {
-        let wrapper = mountComponentWithStyles(defaultTimePicker);
+        let wrapper = mount(defaultTimePicker);
         wrapper
             .find('input[type="text"]')
             .at(0)
@@ -85,7 +85,7 @@ describe('<TimePicker />', () => {
 
         expect(wrapper.state('value')).toEqual('12:34:56');
 
-        wrapper = mountComponentWithStyles(
+        wrapper = mount(
             <TimePicker
                 format12Hours={false}
                 showHour
@@ -99,7 +99,7 @@ describe('<TimePicker />', () => {
 
         expect(wrapper.state('value')).toEqual('12:34 am');
 
-        wrapper = mountComponentWithStyles(
+        wrapper = mount(
             <TimePicker
                 format12Hours
                 showHour={false}
@@ -113,7 +113,7 @@ describe('<TimePicker />', () => {
 
         expect(wrapper.state('value')).toEqual('12:34 am');
 
-        wrapper = mountComponentWithStyles(
+        wrapper = mount(
             <TimePicker
                 format12Hours
                 showHour={false}
@@ -127,7 +127,7 @@ describe('<TimePicker />', () => {
 
         expect(wrapper.state('value')).toEqual('4:12:00 am');
 
-        wrapper = mountComponentWithStyles(twelveHourTime);
+        wrapper = mount(twelveHourTime);
         wrapper
             .find('input[type="text"]')
             .at(0)
@@ -136,7 +136,7 @@ describe('<TimePicker />', () => {
         expect(wrapper.state('value')).toEqual('12:24:34 pm');
 
         // just hour and minute,  12 hr format
-        wrapper = mountComponentWithStyles(
+        wrapper = mount(
             <TimePicker
                 format12Hours
                 showHour
@@ -151,7 +151,7 @@ describe('<TimePicker />', () => {
         expect(wrapper.state('value')).toEqual('12:34 am');
 
         // just minute, 12 hr format
-        wrapper = mountComponentWithStyles(
+        wrapper = mount(
             <TimePicker
                 format12Hours
                 showHour={false}
@@ -166,7 +166,7 @@ describe('<TimePicker />', () => {
         expect(wrapper.state('value')).toEqual('00:24:00 am');
 
         // just hour and minute, no 12 hr format
-        wrapper = mountComponentWithStyles(
+        wrapper = mount(
             <TimePicker
                 format12Hours={false}
                 showHour
@@ -181,7 +181,7 @@ describe('<TimePicker />', () => {
         expect(wrapper.state('value')).toEqual('12:34');
 
         // just minute and second, no 12 hr format
-        wrapper = mountComponentWithStyles(
+        wrapper = mount(
             <TimePicker
                 format12Hours={false}
                 showHour={false}
@@ -237,7 +237,7 @@ describe('<TimePicker />', () => {
     });
 
     test('check for onBlur of text input', () => {
-        let wrapper = mountComponentWithStyles(<TimePicker format12Hours />);
+        let wrapper = mount(<TimePicker format12Hours />);
 
         // check valid input
         wrapper

@@ -1,10 +1,16 @@
 import classnames from 'classnames';
 import { ICON_SIZES } from '../utils/constants';
 import PropTypes from 'prop-types';
-import React from 'react';
-import withStyles from '../utils/WithStyles/WithStyles';
+import React, { useEffect } from 'react';
 
 const Icon = React.forwardRef(({ glyph, size, className, disableStyles, ...props }, ref) => {
+
+    useEffect(() => {
+        if (!disableStyles) {
+            require('fundamental-styles/dist/icon.css');
+        }
+    }, []);
+
     const iconClasses = classnames(
         {
             [`sap-icon--${glyph}`]: !!glyph,
@@ -26,7 +32,7 @@ Icon.displayName = 'Icon';
 Icon.propTypes = {
     glyph: PropTypes.string.isRequired,
     className: PropTypes.string,
-    customStyles: PropTypes.object,
+
     disableStyles: PropTypes.bool,
     size: PropTypes.oneOf(ICON_SIZES)
 };
@@ -37,4 +43,4 @@ Icon.propDescriptions = {
 
 export { Icon as __Icon };
 
-export default withStyles(Icon, { cssFile: 'icon' });
+export default Icon;

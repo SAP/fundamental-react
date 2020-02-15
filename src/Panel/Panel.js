@@ -7,10 +7,17 @@ import PanelFooter from './_PanelFooter';
 import PanelHead from './_PanelHead';
 import PanelHeader from './_PanelHeader';
 import PropTypes from 'prop-types';
-import React from 'react';
-import withStyles from '../utils/WithStyles/WithStyles';
+import React, { useEffect } from 'react';
 
 const Panel = React.forwardRef(({ colSpan, children, className, disableStyles, ...props }, ref) => {
+
+    useEffect(() => {
+        if (!disableStyles) {
+            require('fundamental-styles/dist/fonts.css');
+            require('fundamental-styles/dist/layout-grid.css');
+            require('fundamental-styles/dist/panel.css');
+        }
+    }, []);
 
     const panelClasses = classnames(
         'fd-panel',
@@ -32,7 +39,6 @@ Panel.propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,
     colSpan: CustomPropTypes.range(2, 6),
-    customStyles: PropTypes.object,
     disableStyles: PropTypes.bool
 };
 
@@ -49,4 +55,4 @@ Panel.Header = PanelHeader;
 
 export { Panel as __Panel };
 
-export default withStyles(Panel, { cssFile: ['layout-grid', 'panel'], fonts: true });
+export default Panel;
