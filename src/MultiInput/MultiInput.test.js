@@ -86,7 +86,7 @@ describe('<MultiInput />', () => {
         wrapper.find('input[type="text"].fd-input').simulate('click');
 
         // check if bShowList state is changed
-        expect(wrapper.children().children().state(['bShowList'])).toBe(true);
+        expect(wrapper.state(['bShowList'])).toBe(true);
 
         // check to see if list is shown
         let results = getListStatus(true);
@@ -104,7 +104,7 @@ describe('<MultiInput />', () => {
             .simulate('click');
 
         // check if bShowList state is changed
-        expect(wrapper.children().children().state(['bShowList'])).toBe(true);
+        expect(wrapper.state(['bShowList'])).toBe(true);
 
         // check to see if list is shown
         let results = getListStatus(true);
@@ -119,7 +119,7 @@ describe('<MultiInput />', () => {
             .simulate('click');
 
         // check that no tags exist
-        expect(wrapper.children().children().state(['tags'])).toHaveLength(0);
+        expect(wrapper.state(['tags'])).toHaveLength(0);
 
         // add tag to list
         wrapper
@@ -127,7 +127,7 @@ describe('<MultiInput />', () => {
             .simulate('change', { target: { value: data[0] } });
 
         // check that tag list contains value
-        expect(wrapper.children().children().state(['tags'])).toHaveLength(1);
+        expect(wrapper.state(['tags'])).toHaveLength(1);
 
         // check to see if tag button is created
         expect(wrapper.find('span.fd-token[role="button"]')).toHaveLength(1);
@@ -145,7 +145,7 @@ describe('<MultiInput />', () => {
             .simulate('click');
 
         // check that no tags exist
-        expect(wrapper.children().children().state(['tags'])).toHaveLength(0);
+        expect(wrapper.state(['tags'])).toHaveLength(0);
 
         // add tag to list
         wrapper
@@ -153,7 +153,7 @@ describe('<MultiInput />', () => {
             .simulate('change', { target: { value: data[0] } });
 
         // check that tag list contains value
-        expect(wrapper.children().children().state(['tags'])).toHaveLength(1);
+        expect(wrapper.state(['tags'])).toHaveLength(1);
 
         // simulate unchecking tag from tag list
         wrapper
@@ -161,7 +161,7 @@ describe('<MultiInput />', () => {
             .simulate('change', { target: { value: data[0] } });
 
         // check that no tags exist
-        expect(wrapper.children().children().state(['tags'])).toHaveLength(0);
+        expect(wrapper.state(['tags'])).toHaveLength(0);
     });
 
     test('remove tag from taglist by clicking on tag', () => {
@@ -169,7 +169,7 @@ describe('<MultiInput />', () => {
         wrapper.find('.fd-input').simulate('click');
 
         // check that no tags exist
-        expect(wrapper.children().children().state(['tags'])).toHaveLength(0);
+        expect(wrapper.state(['tags'])).toHaveLength(0);
 
         // add tag to list
         wrapper
@@ -184,13 +184,13 @@ describe('<MultiInput />', () => {
             .simulate('change', { target: { value: data[2] } });
 
         // check that tag list contains value
-        expect(wrapper.children().children().state(['tags'])).toHaveLength(2);
+        expect(wrapper.state(['tags'])).toHaveLength(2);
 
         // simulate clicking on tag in tag collection under input box
         wrapper.find('.fd-token').first().simulate('click');
 
         // check that no tags exist
-        expect(wrapper.children().children().state(['tags'])).toHaveLength(1);
+        expect(wrapper.state(['tags'])).toHaveLength(1);
     });
 
     describe('Prop spreading', () => {

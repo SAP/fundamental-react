@@ -163,7 +163,7 @@ describe('<SearchInput />', () => {
         // press enter key
         wrapper.find(searchInput).simulate('keypress', { key: 'Enter' });
 
-        expect(wrapper.children().children().state(['value'])).toBe(searchData[2].text);
+        expect(wrapper.state(['value'])).toBe(searchData[2].text);
     });
 
     test('click on result in autocomplete', () => {
@@ -172,7 +172,7 @@ describe('<SearchInput />', () => {
         // click in search box to show
         wrapper.find(searchInput).simulate('click');
 
-        expect(wrapper.children().children().state('isExpanded')).toBeTruthy();
+        expect(wrapper.state('isExpanded')).toBeTruthy();
 
         // enter text into search input
         wrapper
@@ -183,7 +183,7 @@ describe('<SearchInput />', () => {
         // click in search box to hide
         wrapper.find(searchInput).simulate('click');
 
-        expect(wrapper.children().children().state('isExpanded')).toBeFalsy();
+        expect(wrapper.state('isExpanded')).toBeFalsy();
     });
 
     test('check search executed on search button click', () => {
@@ -194,11 +194,11 @@ describe('<SearchInput />', () => {
             .simulate('change', { target: { value: searchData[0].text } });
 
         // check if searchTerm state is updated
-        expect(wrapper.children().children().state(['value'])).toBe(searchData[0].text);
+        expect(wrapper.state(['value'])).toBe(searchData[0].text);
 
         wrapper.find('.fd-button--light.sap-icon--search').simulate('click');
 
-        expect(wrapper.children().children().state(['value'])).toBe(searchData[0].text);
+        expect(wrapper.state(['value'])).toBe(searchData[0].text);
     });
 
     test('pressing Esc key to close search list', () => {
@@ -207,13 +207,13 @@ describe('<SearchInput />', () => {
         // click in search box to show
         wrapper.find(searchInput).simulate('click');
 
-        expect(wrapper.children().children().state('isExpanded')).toBeTruthy();
+        expect(wrapper.state('isExpanded')).toBeTruthy();
 
         // handle esc key
         let event = new KeyboardEvent('keydown', { keyCode: 27 });
         document.dispatchEvent(event);
 
-        expect(wrapper.children().children().state('isExpanded')).toBeFalsy();
+        expect(wrapper.state('isExpanded')).toBeFalsy();
     });
 
     describe('Prop spreading', () => {

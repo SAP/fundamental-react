@@ -15,7 +15,7 @@ const ActionBar = React.forwardRef(({ children, className, disableStyles, ...pro
         if (!disableStyles) {
             require('fundamental-styles/dist/fonts.css');
             require('fundamental-styles/dist/icon.css');
-            require('fundamental-styles/dist/button.css');
+            require('fundamental-styles/dist/action-bar.css');
         }
     }, []);
 

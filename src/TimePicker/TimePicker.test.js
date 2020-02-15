@@ -219,21 +219,21 @@ describe('<TimePicker />', () => {
             .find('.fd-input')
             .at(1)
             .simulate('change', { target: { value: fullTime.hour } });
-        expect(wrapper.children().children().state('time').hour).toEqual(fullTime.hour);
+        expect(wrapper.state('time').hour).toEqual(fullTime.hour);
 
         wrapper
             .find('.fd-input')
             .at(2)
             .simulate('change', { target: { value: fullTime.minute } });
-        expect(wrapper.children().children().state('time').minute).toEqual(fullTime.minute);
+        expect(wrapper.state('time').minute).toEqual(fullTime.minute);
 
         wrapper
             .find('.fd-input')
             .at(3)
             .simulate('change', { target: { value: fullTime.second } });
-        expect(wrapper.children().children().state('time').second).toEqual(fullTime.second);
+        expect(wrapper.state('time').second).toEqual(fullTime.second);
 
-        expect(wrapper.children().children().state('value')).toEqual('12:29:34 am');
+        expect(wrapper.state('value')).toEqual('12:29:34 am');
     });
 
     test('check for onBlur of text input', () => {
