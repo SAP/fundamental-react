@@ -36,9 +36,10 @@ describe('<Alert />', () => {
 
         let wrapper = mount(basicAlert);
 
-        expect(wrapper.find('.fd-alert')).toBeDefined();
+        expect(wrapper.exists('.fd-alert')).toBe(true);
         wrapper.find('button.fd-alert__close').simulate('click');
-        expect(wrapper.find('.fd-alert')).not.toBeDefined();
+
+        expect(wrapper.exists('.fd-alert')).toBe(false);
     });
 
     test('create non-dismissible alert', () => {
