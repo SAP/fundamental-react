@@ -47,6 +47,10 @@ class TimePicker extends Component {
     onChange = time => {
         this.setState(() => {
             let value = time ? this.formatValue(time) : '';
+            this.props.onChange({
+                time: time,
+                formattedTime: value
+            });
             return { time: time, value: value };
         });
     };
@@ -172,7 +176,8 @@ TimePicker.propTypes = {
     }),
     popoverProps: PropTypes.object,
     timeProps: PropTypes.object,
-    value: PropTypes.string
+    value: PropTypes.string,
+    onChange: PropTypes.func
 };
 
 TimePicker.defaultProps = {
@@ -189,7 +194,8 @@ TimePicker.defaultProps = {
         minute: '00',
         second: '00',
         meridiem: 0
-    }
+    },
+    onChange: () => {}
 };
 
 TimePicker.propDescriptions = {
