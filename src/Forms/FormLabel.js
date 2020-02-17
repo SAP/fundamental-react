@@ -3,10 +3,14 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import withStyles from '../utils/WithStyles/WithStyles';
 
-const FormLabel = React.forwardRef(({ required, children, className, disabled, disableStyles, ...props }, ref) => {
+const FormLabel = React.forwardRef(({ required, children, className, disabled, disableStyles, isToggle, ...props }, ref) => {
     const formLabelClasses = classnames(
         'fd-form-label',
-        { 'is-disabled': disabled },
+        {
+            'is-disabled': disabled,
+            'fd-form-label--toggle': isToggle,
+            'fd-form-label--required': required
+        },
         className
     );
 
@@ -30,10 +34,12 @@ FormLabel.propTypes = {
     customStyles: PropTypes.object,
     disabled: PropTypes.bool,
     disableStyles: PropTypes.bool,
+    isToggle: PropTypes.bool,
     required: PropTypes.bool
 };
 
 FormLabel.propDescriptions = {
+    isToggle: '_INTERNAL USE ONLY._',
     required: 'Set to **true** for required input fields.'
 };
 

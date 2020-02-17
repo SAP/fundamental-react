@@ -1,9 +1,9 @@
 import classnames from 'classnames';
+import { FORM_STATES } from '../utils/constants';
 import InputGroupAddon from './_InputGroupAddon';
 import PropTypes from 'prop-types';
 import withStyles from '../utils/WithStyles/WithStyles';
 import React, { Component } from 'react';
-
 class InputGroup extends Component {
     constructor(props) {
         super(props);
@@ -16,6 +16,7 @@ class InputGroup extends Component {
             compact,
             customStyles,
             disableStyles,
+            state,
             ...props
         } = this.props;
 
@@ -23,7 +24,8 @@ class InputGroup extends Component {
 
         const inputGroupClasses = classnames(
             className,
-            'fd-input-group'
+            'fd-input-group',
+            { [`is-${state}`]: state }
         );
 
         return (
@@ -50,7 +52,8 @@ InputGroup.propTypes = {
     className: PropTypes.string,
     compact: PropTypes.bool,
     customStyles: PropTypes.object,
-    disableStyles: PropTypes.bool
+    disableStyles: PropTypes.bool,
+    state: PropTypes.oneOf(FORM_STATES)
 };
 
 export { InputGroup as __InputGroup };

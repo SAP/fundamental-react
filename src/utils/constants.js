@@ -53,9 +53,16 @@ export const BUTTON_TYPES = [
 export const FORM_MESSAGE_TYPES = [
     'error',
     'warning',
-    'help'
+    'information',
+    'success'
 ];
 
+export const FORM_STATES = [
+    'warning',
+    'invalid',
+    'valid',
+    'information'
+];
 
 export const ICON_SIZES = [
     's',

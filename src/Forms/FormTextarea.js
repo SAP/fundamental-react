@@ -3,9 +3,10 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import withStyles from '../utils/WithStyles/WithStyles';
 
-const FormTextarea = React.forwardRef(({ children, className, disableStyles, ...props }, ref) => {
+const FormTextarea = React.forwardRef(({ children, className, compact, disableStyles, ...props }, ref) => {
     const formTextAreaClasses = classnames(
         'fd-textarea',
+        { 'fd-textarea--compact': compact },
         className
     );
 
@@ -24,6 +25,7 @@ FormTextarea.displayName = 'FormTextarea';
 FormTextarea.propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,
+    compact: PropTypes.bool,
     customStyles: PropTypes.object,
     disableStyles: PropTypes.bool
 };

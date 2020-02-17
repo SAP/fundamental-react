@@ -21,6 +21,7 @@ export const defaultPropDescriptions = {
     popoverProps: 'Additional props to be spread to the [Popover](/popover) component.',
     readOnly: 'Set to **true** to mark component as readonly.',
     size: 'Size of the component.',
+    state: 'State of the form field.',
     title: 'Localized text for the heading.',
     titleProps: 'Additional props to be spread to the title\'s heading element.',
     type: 'Sets the variation of the component. Primarily used for styling.'

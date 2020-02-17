@@ -1,14 +1,16 @@
 import Button from '../Button/Button';
 import classnames from 'classnames';
+import { FORM_STATES } from '../utils/constants';
 import FormInput from '../Forms/FormInput';
 import Popover from '../Popover/Popover';
 import PropTypes from 'prop-types';
 import React from 'react';
 import withStyles from '../utils/WithStyles/WithStyles';
 
-const ComboboxInput = React.forwardRef(({ placeholder, menu, compact, className, disableStyles, popoverProps, inputProps, buttonProps, ...props }, ref) => {
+const ComboboxInput = React.forwardRef(({ placeholder, menu, compact, className, disableStyles, popoverProps, inputProps, buttonProps, state, ...props }, ref) => {
     const comboboxPopoverClasses = classnames(
-        'fd-input-group'
+        'fd-input-group',
+        { [`is-${state}`]: state }
     );
 
     return (
@@ -56,7 +58,8 @@ ComboboxInput.propTypes = {
     disableStyles: PropTypes.bool,
     inputProps: PropTypes.object,
     placeholder: PropTypes.string,
-    popoverProps: PropTypes.object
+    popoverProps: PropTypes.object,
+    state: PropTypes.oneOf(FORM_STATES)
 };
 
 ComboboxInput.propDescriptions = {

@@ -39,7 +39,8 @@ class Toggle extends React.Component {
                     disabled={disabled}
                     {...labelProps}
                     disableStyles={disableStyles}
-                    htmlFor={id}>
+                    htmlFor={id}
+                    isToggle>
                     <span className={spanClasses}>
                         <input
                             {...inputProps}

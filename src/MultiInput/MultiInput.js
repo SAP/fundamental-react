@@ -2,6 +2,7 @@ import Button from '../Button/Button';
 import Checkbox from '../Forms/Checkbox';
 import classnames from 'classnames';
 import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
+import { FORM_STATES } from '../utils/constants';
 import FormInput from '../Forms/FormInput';
 import Menu from '../Menu/Menu';
 import Popover from '../Popover/Popover';
@@ -115,6 +116,7 @@ class MultiInput extends Component {
             inputProps,
             localizedText,
             onTagsUpdate,
+            state,
             placeHolder,
             tagProps,
             ...rest
@@ -123,6 +125,11 @@ class MultiInput extends Component {
         const multiInputClasses = classnames(
             'fd-multi-input',
             className
+        );
+
+        const inputGroupClasses = classnames(
+            'fd-input-group',
+            { [`is-${state}`]: state }
         );
 
         return (
@@ -142,7 +149,7 @@ class MultiInput extends Component {
                                 aria-expanded={this.state.bShowList}
                                 aria-haspopup='true'
                                 aria-label={localizedText.imageLabel}
-                                className='fd-input-group'>
+                                className={inputGroupClasses}>
                                 <FormInput
                                     {...inputProps}
                                     className='fd-input-group__input'
@@ -192,6 +199,7 @@ MultiInput.propTypes = {
     }),
     placeHolder: PropTypes.string,
     popoverProps: PropTypes.object,
+    state: PropTypes.oneOf(FORM_STATES),
     tagProps: PropTypes.object,
     onTagsUpdate: PropTypes.func
 };

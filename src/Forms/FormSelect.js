@@ -1,11 +1,13 @@
 import classnames from 'classnames';
+import { FORM_STATES } from '../utils/constants';
 import PropTypes from 'prop-types';
 import React from 'react';
 import withStyles from '../utils/WithStyles/WithStyles';
 
-const FormSelect = React.forwardRef(({ disabled, children, className, disableStyles, ...props }, ref) => {
+const FormSelect = React.forwardRef(({ disabled, children, className, disableStyles, state, ...props }, ref) => {
     const formSelectClasses = classnames(
         'fd-form-select',
+        { [`is-${state}`]: state },
         className
     );
 
@@ -27,7 +29,8 @@ FormSelect.propTypes = {
     className: PropTypes.string,
     customStyles: PropTypes.object,
     disabled: PropTypes.bool,
-    disableStyles: PropTypes.bool
+    disableStyles: PropTypes.bool,
+    state: PropTypes.oneOf(FORM_STATES)
 };
 
 export { FormSelect as __FormSelect };
