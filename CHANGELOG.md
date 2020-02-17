@@ -2,6 +2,31 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.8.0-rc.19"></a>
+# [0.8.0-rc.19](https://github.com/SAP/fundamental-react/compare/v0.8.0-rc.18...v0.8.0-rc.19) (2020-02-14)
+
+
+### Bug Fixes
+
+* Implemented onChange method for TimePicker component to get selected time ([#870](https://github.com/SAP/fundamental-react/issues/870)) ([fc614ff](https://github.com/SAP/fundamental-react/commit/fc614ff))
+
+
+
+<a name="0.8.0-rc.18"></a>
+# [0.8.0-rc.18](https://github.com/SAP/fundamental-react/compare/v0.8.0-rc.17...v0.8.0-rc.18) (2020-01-29)
+
+
+### Bug Fixes
+
+* create modal manager, for Popover, on demand as a singleton ([#859](https://github.com/SAP/fundamental-react/issues/859)) ([7050554](https://github.com/SAP/fundamental-react/commit/7050554))
+
+
+
+<a name="0.8.0-rc.17"></a>
+# [0.8.0-rc.17](https://github.com/SAP/fundamental-react/compare/v0.8.0-rc.16...v0.8.0-rc.17) (2020-01-27)
+
+
+
 <a name="0.8.0-rc.16"></a>
 # [0.8.0-rc.16](https://github.com/SAP/fundamental-react/compare/v0.8.0-rc.15...v0.8.0-rc.16) (2020-01-23)
 
