@@ -2,7 +2,6 @@ import Button from '../Button/Button';
 import classnames from 'classnames';
 import moment from 'moment';
 import PropTypes from 'prop-types';
-import withStyles from '../utils/WithStyles/WithStyles';
 import React, { Component } from 'react';
 
 class Calendar extends Component {
@@ -19,6 +18,13 @@ class Calendar extends Component {
             showYears: false,
             dateClick: false
         };
+    }
+
+    componentDidMount() {
+        if (!this.props.disableStyles) {
+            require('fundamental-styles/dist/fonts.css');
+            require('fundamental-styles/dist/calendar.css');
+        }
     }
 
     // sync the selected date of the calendar with the date picker
@@ -529,7 +535,6 @@ Calendar.displayName = 'Calendar';
 
 Calendar.basePropTypes = {
     blockedDates: PropTypes.arrayOf(PropTypes.instanceOf(Date)),
-    customStyles: PropTypes.object,
     disableStyles: PropTypes.bool,
     disableAfterDate: PropTypes.instanceOf(Date),
     disableBeforeDate: PropTypes.instanceOf(Date),
@@ -571,6 +576,4 @@ Calendar.propDescriptions = {
     yearListProps: 'Additional props to be spread to the year\'s `<ul>` element.'
 };
 
-export { Calendar as __Calendar };
-
-export default withStyles(Calendar, { cssFile: 'calendar', font: true });
+export default Calendar;

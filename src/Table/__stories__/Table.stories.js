@@ -32,10 +32,4 @@ storiesOf('Components|Table', module)
             disableStyles
             headers={defaultHeaders}
             tableData={defaultData} />
-    ))
-    .add('custom styles', () => (
-        <Table
-            customStyles={require('../../utils/WithStyles/customStylesTest.css')}
-            headers={defaultHeaders}
-            tableData={defaultData} />
     ));

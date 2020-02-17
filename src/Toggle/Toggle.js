@@ -4,11 +4,18 @@ import FormLabel from '../Forms/FormLabel';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { TOGGLE_SIZES } from '../utils/constants';
-import withStyles from '../utils/WithStyles/WithStyles';
 class Toggle extends React.Component {
     constructor(props) {
         super(props);
         this.state = { checked: !!props.checked };
+    }
+
+    componentDidMount() {
+        if (!this.props.disableStyles) {
+            require('fundamental-styles/dist/icon.css');
+            require('fundamental-styles/dist/fonts.css');
+            require('fundamental-styles/dist/toggle.css');
+        }
     }
 
     handleChange = (e) => {
@@ -64,7 +71,6 @@ Toggle.propTypes = {
     checked: PropTypes.bool,
     children: PropTypes.node,
     className: PropTypes.string,
-    customStyles: PropTypes.object,
     disabled: PropTypes.bool,
     disableStyles: PropTypes.bool,
     id: PropTypes.string,
@@ -82,6 +88,4 @@ Toggle.propDescriptions = {
     checked: 'Set to true for component to be checked on render.'
 };
 
-export { Toggle as __Toggle };
-
-export default withStyles(Toggle, { cssFile: 'toggle', fonts: true, icons: true });
+export default Toggle;

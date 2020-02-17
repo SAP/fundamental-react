@@ -11,7 +11,7 @@ const Properties = ({ sourceModulePath }) => {
 
     const sourceModule = getSourceModule(sourceModulePath);
 
-    const componentNames = Object.keys(sourceModule).filter(comp => comp.match(/^\_\_/)).sort();
+    const componentNames = Object.keys(sourceModule).sort();
 
     return (
         <React.Fragment>

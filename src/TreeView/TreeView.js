@@ -5,7 +5,6 @@ import TreeCol from './_TreeCol';
 import TreeHead from './_TreeHead';
 import TreeItem from './_TreeItem';
 import TreeRow from './_TreeRow';
-import withStyles from '../utils/WithStyles/WithStyles';
 import React, { Component } from 'react';
 
 class TreeView extends Component {
@@ -16,6 +15,14 @@ class TreeView extends Component {
             expandData: {},
             isExpandAll: false
         };
+    }
+
+    componentDidMount() {
+        if (!this.props.disableStyles) {
+            require('fundamental-styles/dist/icon.css');
+            require('fundamental-styles/dist/fonts.css');
+            require('fundamental-styles/dist/tree.css');
+        }
     }
 
     static getDerivedStateFromProps(props, state) {
@@ -150,7 +157,6 @@ TreeView.displayName = 'TreeView';
 
 TreeView.propTypes = {
     children: PropTypes.node,
-    customStyles: PropTypes.object,
     disableStyles: PropTypes.bool,
     expandData: PropTypes.object,
     isExpandAll: PropTypes.bool,
@@ -175,6 +181,4 @@ TreeView.Head = TreeHead;
 TreeView.Item = TreeItem;
 TreeView.Row = TreeRow;
 
-export { TreeView as __TreeView };
-
-export default withStyles(TreeView, { cssFiles: 'tree', fonts: true, icons: true });
+export default TreeView;

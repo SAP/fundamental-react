@@ -4,7 +4,6 @@ import FormInput from '../Forms/FormInput';
 import InputGroup from '../InputGroup/InputGroup';
 import moment from 'moment';
 import PropTypes from 'prop-types';
-import withStyles from '../utils/WithStyles/WithStyles';
 import React, { Component } from 'react';
 
 class DatePicker extends Component {
@@ -21,6 +20,12 @@ class DatePicker extends Component {
         };
 
         this.calendarRef = React.createRef();
+    }
+
+    componentDidMount() {
+        if (!this.props.disableStyles) {
+            require('fundamental-styles/dist/popover.css');
+        }
     }
 
     openCalendar = type => {
@@ -246,6 +251,4 @@ DatePicker.propDescriptions = {
     onBlur: 'Callback function for onBlur events. In the object returned, `date` is the date object and `formattedDate` is the formatted date.'
 };
 
-export { DatePicker as __DatePicker };
-
-export default withStyles(DatePicker, { cssFile: ['popover', 'input-group', 'input'], fonts: true });
+export default DatePicker;

@@ -34,18 +34,6 @@ storiesOf('Components|InputGroup', module)
             </InputGroup.Addon>
         </InputGroup>
     ))
-    .add('custom styles', () => (
-        <InputGroup
-            compact={boolean('compact', false)}
-            customStyles={require('../../utils/WithStyles/customStylesTest.css')}>
-            <FormInput />
-            <InputGroup.Addon isButton>
-                <Button
-                    glyph='navigation-down-arrow'
-                    option='light' />
-            </InputGroup.Addon>
-        </InputGroup>
-    ))
     .add('addon button before', () => (
         <InputGroup
             compact={boolean('compact', false)}>

@@ -1,10 +1,7 @@
 import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import PropTypes from 'prop-types';
 import TimeItem from './_TimeItem';
-import withStyles from '../utils/WithStyles/WithStyles';
 import React, { Component } from 'react';
-
-
 class Time extends Component {
     constructor(props) {
         super(props);
@@ -22,6 +19,13 @@ class Time extends Component {
             },
             format12Hours: props.format12Hours
         };
+    }
+
+    componentDidMount() {
+        if (!this.props.disableStyles) {
+            require('fundamental-styles/dist/fonts.css');
+            require('fundamental-styles/dist/time.css');
+        }
     }
 
     componentWillReceiveProps(nextProps) {
@@ -190,7 +194,6 @@ class Time extends Component {
 Time.displayName = 'Time';
 
 Time.basePropTypes = {
-    customStyles: PropTypes.object,
     disableStyles: PropTypes.bool,
     format12Hours: PropTypes.bool,
     showHour: PropTypes.bool,
@@ -266,6 +269,4 @@ Time.propDescriptions = {
     time: 'The time component values. Contains four properties: **hour** (with values from 01 to 12 when `format12Hours` is true or 00 to 23 when `format12Hours` is false), **minute** (with values from 00 to 59), **second** (with values from 00 to 59), **meridiem** (with values 0 for AM or 1 for PM).'
 };
 
-export { Time as __Time };
-
-export default withStyles(Time, { cssFile: 'time' });
+export default Time;

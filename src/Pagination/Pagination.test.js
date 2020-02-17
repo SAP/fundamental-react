@@ -114,7 +114,7 @@ describe('<Pagination />', () => {
     });
 
     test('navigate to previous page', () => {
-        const wrapper = shallow(initialSetPagination).dive().dive();
+        const wrapper = shallow(initialSetPagination);
         wrapper.setState({ selectedPage: 5 });
         expect(wrapper.state(['selectedPage'])).toEqual(5);
         wrapper.find('nav>a[aria-label="Previous"]').simulate('click');
@@ -122,21 +122,21 @@ describe('<Pagination />', () => {
     });
 
     test('navigate to previous page when on first page', () => {
-        const wrapper = shallow(initialSetPagination).dive().dive();
+        const wrapper = shallow(initialSetPagination);
         expect(wrapper.state(['selectedPage'])).toEqual(1);
         wrapper.find('nav>a[aria-label="Previous"]').simulate('click');
         expect(wrapper.state(['selectedPage'])).toEqual(1);
     });
 
     test('navigate to next page', () => {
-        const wrapper = shallow(defaultPagination).dive().dive();
+        const wrapper = shallow(defaultPagination);
         expect(wrapper.state(['selectedPage'])).toEqual(1);
         wrapper.find('nav>a[aria-label="Next"]').simulate('click');
         expect(wrapper.state(['selectedPage'])).toEqual(2);
     });
 
     test('navigate to next page when on last page', () => {
-        const wrapper = shallow(defaultPagination).dive().dive();
+        const wrapper = shallow(defaultPagination);
         wrapper.setState({ selectedPage: 11 });
         expect(wrapper.state(['selectedPage'])).toEqual(11);
         wrapper.find('nav>a[aria-label="Next"]').simulate('click');
@@ -144,7 +144,7 @@ describe('<Pagination />', () => {
     });
 
     test('navigate to page clicked', () => {
-        const wrapper = shallow(defaultPagination).dive().dive();
+        const wrapper = shallow(defaultPagination);
         expect(wrapper.state(['selectedPage'])).toEqual(1);
         wrapper
             .find('a.fd-pagination__link')

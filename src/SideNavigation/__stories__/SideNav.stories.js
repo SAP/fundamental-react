@@ -59,30 +59,4 @@ storiesOf('Components|SideNav', module)
                     url='#' />
             </SideNav.List>
         </SideNav>
-    ))
-    .add('custom styles', () => (
-        <SideNav customStyles={require('../../utils/WithStyles/customStylesTest.css')} selectedId='item-2'>
-            <SideNav.List>
-                <SideNav.ListItem
-                    id='item-1'
-                    name='Link Item'
-                    url='#' />
-                <SideNav.ListItem
-                    id='item-2'
-                    name='Link Item'
-                    url='#' />
-                <SideNav.ListItem
-                    id='item-3'
-                    name='Link Item'
-                    url='#' />
-                <SideNav.ListItem
-                    id='item-4'
-                    name='Link Item'
-                    url='#' />
-                <SideNav.ListItem
-                    id='item-5'
-                    name='Link Item'
-                    url='#' />
-            </SideNav.List>
-        </SideNav>
     ));
