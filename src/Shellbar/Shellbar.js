@@ -22,7 +22,6 @@ class Shellbar extends Component {
 
     componentDidMount() {
         if (!this.props.disableStyles) {
-            require('fundamental-styles/dist/fonts.css');
             require('fundamental-styles/dist/shellbar.css');
             require('fundamental-styles/dist/product-switch.css');
         }
