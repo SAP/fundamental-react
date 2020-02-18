@@ -180,43 +180,21 @@ class Calendar extends Component {
             .locale(this.props.locale)
             .month(month);
 
-        if (!this.props.enableRangeSelection) {
-            this.setState({
-                currentDateDisplayed: newDate,
-                selectedDate: newDate,
-                showMonths: false,
-                dateClick: true
-            }, function() {
-                this.props.onChange(newDate);
-            });
-        } else {
-            this.setState({
-                currentDateDisplayed: newDate,
-                showMonths: false,
-                dateClick: true
-            });
-        }
+        this.setState({
+            currentDateDisplayed: newDate,
+            showMonths: false,
+            dateClick: true
+        });
     }
 
     changeYear = (year) => {
         const newDate = moment(this.state.currentDateDisplayed).year(year);
 
-        if (!this.props.enableRangeSelection) {
-            this.setState({
-                currentDateDisplayed: newDate,
-                selectedDate: newDate,
-                showYears: false,
-                dateClick: true
-            }, function() {
-                this.props.onChange(newDate);
-            });
-        } else {
-            this.setState({
-                currentDateDisplayed: newDate,
-                showYears: false,
-                dateClick: true
-            });
-        }
+        this.setState({
+            currentDateDisplayed: newDate,
+            showYears: false,
+            dateClick: true
+        });
     }
 
     onPassGridBoundary = ({ currentCell, directionX, directionY }) => {

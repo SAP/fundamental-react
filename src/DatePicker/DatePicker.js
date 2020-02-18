@@ -21,6 +21,7 @@ class DatePicker extends Component {
         };
 
         this.calendarRef = React.createRef();
+        this.popoverRef = React.createRef();
     }
 
     modifyDate = (e) => {
@@ -92,21 +93,29 @@ class DatePicker extends Component {
 
     updateDate = (date) => {
         const longDateFormat = this.getLocaleDateFormat();
+        let closeCalendar = false;
 
         if (this.props.enableRangeSelection) {
             let formatDate = date[0].format(longDateFormat);
             if (!!date[1]) {
                 formatDate += '-' + date[1].format(longDateFormat);
+                closeCalendar = true;
             }
             this.setState({
                 arrSelectedDates: date,
                 formattedDate: formatDate
             });
         } else {
+            closeCalendar = true;
             this.setState({
                 selectedDate: date,
                 formattedDate: date.format(longDateFormat)
             });
+        }
+
+        if (closeCalendar) {
+            const popover = this.popoverRef && this.popoverRef.current;
+            popover && popover.handleEscapeKey();
         }
     }
 
@@ -193,7 +202,8 @@ class DatePicker extends Component {
                     disableStyles={disableStyles}
                     noArrow
                     onClickOutside={this.clickOutside}
-                    placement='bottom-end' />
+                    placement='bottom-end'
+                    ref={this.popoverRef} />
             </div>
         );
     }
