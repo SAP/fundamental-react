@@ -22,12 +22,4 @@ storiesOf('Components|ButtonGroup', module)
                 selected />
             <Button disableStyles glyph='pool' />
         </ButtonGroup>
-    ))
-    .add('custom styles', () => (
-        <ButtonGroup
-            customStyles={require('../../utils/WithStyles/customStylesTest.css')}>
-            <Button glyph='survey' />
-            <Button glyph='pie-chart' selected />
-            <Button glyph='pool' />
-        </ButtonGroup>
     ));

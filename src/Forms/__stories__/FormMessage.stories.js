@@ -12,10 +12,4 @@ storiesOf('Components|FormMessage', module)
     ))
     .add('disable styles', () => (
         <FormMessage disableStyles>Default</FormMessage>
-    ))
-    .add('custom styles', () => (
-        <FormMessage
-            customStyles={require('../../utils/WithStyles/customStylesTest.css')}>
-            Default
-        </FormMessage>
     ));

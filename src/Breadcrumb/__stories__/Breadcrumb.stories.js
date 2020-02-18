@@ -20,12 +20,4 @@ storiesOf('Components|Breadcrumb', module)
             <Breadcrumb.Item name='Link Text' url='#' />
             <Breadcrumb.Item name='Link Text' url='#' />
         </Breadcrumb>
-    ))
-    .add('custom styles', () => (
-        <Breadcrumb
-            customStyles={require('../../utils/WithStyles/customStylesTest.css')}>
-            <Breadcrumb.Item name='Link Text' url='#' />
-            <Breadcrumb.Item name='Link Text' url='#' />
-            <Breadcrumb.Item name='Link Text' url='#' />
-        </Breadcrumb>
     ));

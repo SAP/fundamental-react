@@ -20,12 +20,4 @@ storiesOf('Components|FormSelect', module)
             <option>Suspendisse ante ligula</option>
             <option>Sed bibendum sapien at posuere interdum</option>
         </FormSelect>
-    ))
-    .add('custom styles', () => (
-        <FormSelect
-            customStyles={require('../../utils/WithStyles/customStylesTest.css')}>
-            <option>Duis malesuada odio volutpat elementum</option>
-            <option>Suspendisse ante ligula</option>
-            <option>Sed bibendum sapien at posuere interdum</option>
-        </FormSelect>
     ));

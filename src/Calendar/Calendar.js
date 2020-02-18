@@ -5,7 +5,6 @@ import GridManager from '../utils/gridManager/gridManager';
 import keycode from 'keycode';
 import moment from 'moment';
 import PropTypes from 'prop-types';
-import withStyles from '../utils/WithStyles/WithStyles';
 import { isDateBetween, isEnabledDate } from '../utils/dateUtils';
 import React, { Component } from 'react';
 
@@ -27,6 +26,13 @@ class Calendar extends Component {
         };
 
         this.tableRef = React.createRef();
+    }
+
+    componentDidMount() {
+        if (!this.props.disableStyles) {
+            require('fundamental-styles/dist/fonts.css');
+            require('fundamental-styles/dist/calendar.css');
+        }
     }
 
     // sync the selected date of the calendar with the date picker
@@ -655,7 +661,6 @@ Calendar.displayName = 'Calendar';
 
 Calendar.basePropTypes = {
     blockedDates: PropTypes.arrayOf(PropTypes.instanceOf(Date)),
-    customStyles: PropTypes.object,
     disableStyles: PropTypes.bool,
     disableAfterDate: PropTypes.instanceOf(Date),
     disableBeforeDate: PropTypes.instanceOf(Date),
@@ -716,6 +721,4 @@ Calendar.propDescriptions = {
     yearListProps: 'Additional props to be spread to the year\'s `<table>` element.'
 };
 
-export { Calendar as __Calendar };
-
-export default withStyles(Calendar, { cssFile: 'calendar', font: true });
+export default Calendar;

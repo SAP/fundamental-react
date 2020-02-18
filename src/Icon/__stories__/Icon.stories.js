@@ -12,9 +12,4 @@ storiesOf('Components|Icon', module)
     ))
     .add('disable styles', () => (
         <Icon disableStyles glyph='cart' />
-    ))
-    .add('custom styles', () => (
-        <Icon
-            customStyles={require('../../utils/WithStyles/customStylesTest.css')}
-            glyph='cart' />
     ));

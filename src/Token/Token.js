@@ -1,9 +1,16 @@
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import React from 'react';
-import withStyles from '../utils/WithStyles/WithStyles';
+import React, { useEffect } from 'react';
 
 const Token = React.forwardRef(({ children, className, disableStyles, ...props }, ref) => {
+
+    useEffect(() => {
+        if (!disableStyles) {
+            require('fundamental-styles/dist/fonts.css');
+            require('fundamental-styles/dist/icon.css');
+            require('fundamental-styles/dist/token.css');
+        }
+    }, []);
 
     const tokenClasses = classnames(
         'fd-token',
@@ -26,11 +33,8 @@ Token.displayName = 'Token';
 Token.propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,
-    customStyles: PropTypes.object,
     disableStyles: PropTypes.bool
 };
 
-export { Token as __Token };
-
-export default withStyles(Token, { cssFile: 'token', fonts: true, icons: true });
+export default Token;
 

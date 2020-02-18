@@ -7,7 +7,6 @@ import Popper from '../utils/_Popper';
 import PropTypes from 'prop-types';
 import shortId from '../utils/shortId';
 import tabbable from 'tabbable';
-import withStyles from '../utils/WithStyles/WithStyles';
 import { POPOVER_TYPES, POPPER_PLACEMENTS, POPPER_SIZING_TYPES, POPPER_SIZING_TYPES_DESCRIPTION } from '../utils/constants';
 import React, { Component } from 'react';
 
@@ -22,6 +21,12 @@ class Popover extends Component {
         //A generated shortId as fallback, in case props.popperProps.id is unset.
         //This ID binds the popover and its control by 'aria-controls'.
         this.popoverId = shortId.generate();
+    }
+
+    componentDidMount() {
+        if (!this.props.disableStyles) {
+            require('fundamental-styles/dist/popover.css');
+        }
     }
 
     isButton = (node) => {
@@ -169,7 +174,6 @@ Popover.propTypes = {
     body: PropTypes.node.isRequired,
     control: PropTypes.node.isRequired,
     className: PropTypes.string,
-    customStyles: PropTypes.object,
     disabled: PropTypes.bool,
     disableEdgeDetection: PropTypes.bool,
     disableKeyPressHandler: PropTypes.bool,
@@ -205,6 +209,4 @@ Popover.propDescriptions = {
     type: 'Indicates the type of popup - "dialog", "grid", "listbox", "menu", or "tree". This value is attached to aria-haspopup and is useful to assistive tech. Defaulted to boolean true.'
 };
 
-export { Popover as __Popover };
-
-export default withStyles(Popover, { cssFile: 'popover' });
+export default Popover;

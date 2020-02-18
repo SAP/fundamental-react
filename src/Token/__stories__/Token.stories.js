@@ -12,10 +12,4 @@ storiesOf('Components|Token', module)
     ))
     .add('disable styles', () => (
         <Token disableStyles>Default</Token>
-    ))
-    .add('custom styles', () => (
-        <Token
-            customStyles={require('../../utils/WithStyles/customStylesTest.css')}>
-            Default
-        </Token>
     ));

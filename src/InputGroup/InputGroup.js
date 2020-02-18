@@ -1,7 +1,6 @@
 import classnames from 'classnames';
 import InputGroupAddon from './_InputGroupAddon';
 import PropTypes from 'prop-types';
-import withStyles from '../utils/WithStyles/WithStyles';
 import React, { Component } from 'react';
 
 class InputGroup extends Component {
@@ -9,12 +8,18 @@ class InputGroup extends Component {
         super(props);
     }
 
+    componentDidMount() {
+        if (!this.props.disableStyles) {
+            require('fundamental-styles/dist/fonts.css');
+            require('fundamental-styles/dist/input-group.css');
+        }
+    }
+
     render() {
         const {
             children,
             className,
             compact,
-            customStyles,
             disableStyles,
             ...props
         } = this.props;
@@ -49,10 +54,7 @@ InputGroup.propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,
     compact: PropTypes.bool,
-    customStyles: PropTypes.object,
     disableStyles: PropTypes.bool
 };
 
-export { InputGroup as __InputGroup };
-
-export default withStyles(InputGroup, { cssFile: 'input-group', fonts: true });
+export default InputGroup;

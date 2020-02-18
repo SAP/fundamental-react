@@ -12,10 +12,4 @@ storiesOf('Components|Counter', module)
     ))
     .add('disable styles', () => (
         <Counter disableStyles>5</Counter>
-    ))
-    .add('custom styles', () => (
-        <Counter
-            customStyles={require('../../utils/WithStyles/customStylesTest.css')}>
-            5
-        </Counter>
     ));

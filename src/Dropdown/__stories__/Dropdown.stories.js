@@ -49,25 +49,4 @@ storiesOf('Components|Dropdown', module)
                 noArrow
                 useArrowKeyNavigation />
         </Dropdown>
-    ))
-    .add('custom styles', () => (
-        <Dropdown
-            customStyles={require('../../utils/WithStyles/customStylesTest.css')}>
-            <Popover
-                body={
-                    <Menu>
-                        <Menu.List>
-                            <Menu.Item url='#'>Option 1</Menu.Item>
-                            <Menu.Item url='#'>Option 2</Menu.Item>
-                            <Menu.Item url='#'>Option 3</Menu.Item>
-                            <Menu.Item url='#'>Option 4</Menu.Item>
-                        </Menu.List>
-                    </Menu>
-                }
-                control={<Button className='fd-dropdown__control' disableStyles>Select</Button>}
-                disableStyles
-                id='jhqD0555'
-                noArrow
-                useArrowKeyNavigation />
-        </Dropdown>
     ));

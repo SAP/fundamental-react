@@ -180,15 +180,4 @@ storiesOf('Components|Popover', module)
             disableStyles
             type='menu'
             useArrowKeyNavigation />
-    ))
-    .add('custom styles', () => (
-        <Popover
-            body={someMenu}
-            control={<Button
-                disableStyles
-                glyph='navigation-up-arrow'
-                option='light' />}
-            customStyles={require('../../utils/WithStyles/customStylesTest.css')}
-            type='menu'
-            useArrowKeyNavigation />
     ));

@@ -8,7 +8,6 @@ import Popover from '../Popover/Popover';
 import PropTypes from 'prop-types';
 import shortid from '../utils/shortId';
 import Token from '../Token/Token';
-import withStyles from '../utils/WithStyles/WithStyles';
 import React, { Component } from 'react';
 
 class MultiInput extends Component {
@@ -19,6 +18,14 @@ class MultiInput extends Component {
             bShowList: false,
             tags: []
         };
+    }
+
+    componentDidMount() {
+        if (!this.props.disableStyles) {
+            require('fundamental-styles/dist/fonts.css');
+            require('fundamental-styles/dist/multi-input.css');
+            require('fundamental-styles/dist/input-group.css');
+        }
     }
 
     // create tags to display in dropdown list
@@ -183,7 +190,6 @@ MultiInput.propTypes = {
     buttonProps: PropTypes.object,
     className: PropTypes.string,
     compact: PropTypes.bool,
-    customStyles: PropTypes.object,
     disableStyles: PropTypes.bool,
     inputProps: PropTypes.object,
     listProps: PropTypes.object,
@@ -213,6 +219,4 @@ MultiInput.propDescriptions = {
     tagProps: 'Additional props to be spread to the tags `<div>` element.'
 };
 
-export { MultiInput as __MultiInput };
-
-export default withStyles(MultiInput, { cssFile: ['multi-input', 'input-group'], fonts: true });
+export default MultiInput;

@@ -12,10 +12,4 @@ storiesOf('Components|Badge', module)
     ))
     .add('disable styles', () => (
         <Badge disableStyles>Default</Badge>
-    ))
-    .add('custom styles', () => (
-        <Badge
-            customStyles={require('../../utils/WithStyles/customStylesTest.css')}>
-            Default
-        </Badge>
     ));

@@ -1,11 +1,16 @@
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import React from 'react';
-import withStyles from '../utils/WithStyles/WithStyles';
-
+import React, { useEffect } from 'react';
 
 const Tab = React.forwardRef(({ title, disabled, glyph, id, selected, onClick,
     tabContentProps, linkProps, index, className, disableStyles, ...props }, ref) => {
+
+    useEffect(() => {
+        if (!disableStyles) {
+            require('fundamental-styles/dist/fonts.css');
+            require('fundamental-styles/dist/tabs.css');
+        }
+    }, []);
 
     const tabClasses = classnames(
         className,
@@ -51,7 +56,6 @@ Tab.defaultProps = {
 
 Tab.propTypes = {
     className: PropTypes.string,
-    customStyles: PropTypes.object,
     disabled: PropTypes.bool,
     disableStyles: PropTypes.bool,
     glyph: PropTypes.string,
@@ -74,6 +78,4 @@ Tab.propDescriptions = {
     onClick: '_INTERNAL USE ONLY._'
 };
 
-export { Tab as __Tab };
-
-export default withStyles(Tab, { cssFile: 'tabs', fonts: true });
+export default Tab;

@@ -6,7 +6,6 @@ import { isEnabledDate } from '../utils/dateUtils';
 import moment from 'moment';
 import Popover from '../Popover/Popover';
 import PropTypes from 'prop-types';
-import withStyles from '../utils/WithStyles/WithStyles';
 import React, { Component } from 'react';
 
 class DatePicker extends Component {
@@ -230,6 +229,4 @@ DatePicker.propDescriptions = {
     onBlur: 'Callback function for onBlur events. In the object returned, `date` is the date object and `formattedDate` is the formatted date.'
 };
 
-export { DatePicker as __DatePicker };
-
-export default withStyles(DatePicker, { cssFile: ['popover', 'input-group', 'input'], fonts: true });
+export default DatePicker;
