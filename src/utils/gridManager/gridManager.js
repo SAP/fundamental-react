@@ -133,9 +133,11 @@ export default class GridManager {
     getCellCoordinates = (element) => {
         for (let row = 0; row < this.grid.length; row++) {
             for (let col = 0; col < this.grid[row].length; col++) {
-                if (this.grid[row][col] === element ||
+                if (element && (
+                    this.grid[row][col] === element ||
                     this.grid[row][col].contains(element) ||
-                    element.contains(this.grid[row][col])) {
+                    element.contains(this.grid[row][col])
+                )) {
                     return { row, col };
                 }
             }

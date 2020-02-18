@@ -28,11 +28,12 @@ class Calendar extends Component {
         this.tableRef = React.createRef();
     }
 
-    componentDidMount() {
+    componentDidMount = () => {
         if (!this.props.disableStyles) {
             require('fundamental-styles/dist/fonts.css');
             require('fundamental-styles/dist/calendar.css');
         }
+        this.gridManager = new GridManager(this.getGridOptions());
     }
 
     // sync the selected date of the calendar with the date picker
@@ -63,10 +64,6 @@ class Calendar extends Component {
             }
         }
         return ({ dateClick: false });
-    }
-
-    componentDidMount = () => {
-        this.gridManager = new GridManager(this.getGridOptions());
     }
 
     componentDidUpdate = (prevProps, prevState) => {
