@@ -406,7 +406,7 @@ export default class GridManager {
     }
 
     findClosestMatch = (element, selector) => {
-        if (element.matches(selector)) {
+        if (element.matches && element.matches(selector)) {
             return element;
         }
 
