@@ -47,6 +47,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.8.0",
+    "@sap-theming/theming-base-content": "^11.1.16",
     "chain-function": "^1.0.1",
     "classnames": "^2.2.6",
     "fundamental-styles": "~0.4.0-rc.3",

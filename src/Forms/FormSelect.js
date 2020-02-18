@@ -32,7 +32,6 @@ FormSelect.displayName = 'FormSelect';
 FormSelect.propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,
-
     disabled: PropTypes.bool,
     disableStyles: PropTypes.bool
 };

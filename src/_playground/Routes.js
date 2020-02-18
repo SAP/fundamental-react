@@ -44,6 +44,7 @@ import { TileComponent } from '../Tile/Tile.Component';
 import { TimeComponent } from '../Time/Time.Component';
 import { TimePickerComponent } from '../TimePicker/TimePicker.Component';
 import { ToggleComponent } from '../Toggle/Toggle.Component';
+import ToggleTheme from './ToggleTheme';
 import { TokenComponent } from '../Token/Token.Component';
 import { TreeViewComponent } from '../TreeView/TreeView.Component';
 import { BrowserRouter, NavLink, Redirect, Route, Switch } from 'react-router-dom';
@@ -389,6 +390,7 @@ export class Routes extends Component {
                                 href='/home'>
                                 Fundamental <span className='frDocs-Menu__logo--library'>React</span>
                             </a>
+                            <ToggleTheme />
                             <span className='frDocs-Menu__spacer' />
                             <span className='frDocs-Menu__version'>{`v${packageVersion}`}</span>
                             <a className='frDocs-Menu__githubLogo' href={repository.url}
