@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.8.0-rc.22"></a>
+# [0.8.0-rc.22](https://github.com/SAP/fundamental-react/compare/v0.8.0-rc.21...v0.8.0-rc.22) (2020-02-20)
+
+
+### Features
+
+* keyboard navigation in calendar ([#858](https://github.com/SAP/fundamental-react/issues/858)) ([650b7b9](https://github.com/SAP/fundamental-react/commit/650b7b9))
+
+
+
 <a name="0.8.0-rc.21"></a>
 # [0.8.0-rc.21](https://github.com/SAP/fundamental-react/compare/v0.8.0-rc.20...v0.8.0-rc.21) (2020-02-17)
 
