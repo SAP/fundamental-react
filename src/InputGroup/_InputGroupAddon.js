@@ -13,7 +13,9 @@ const InputGroupAddon = ({
     const addonClasses = classnames(
         className,
         'fd-input-group__addon',
-        { 'fd-input-group__addon--button': isButton }
+        { 'fd-input-group__addon--button': isButton,
+            'fd-input-group__addon--compact': compact
+        }
     );
 
     return (

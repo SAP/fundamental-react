@@ -17,7 +17,7 @@ const FormInput = React.forwardRef(({ state, className, compact, disabled, id, n
         'fd-input',
         {
             'fd-input--compact': !!compact,
-            [`is-${state}`]: !!state
+            [`is-${state}`]: state
         },
         className
     );

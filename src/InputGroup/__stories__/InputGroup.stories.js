@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import Button from '../../Button/Button';
 import FormInput from '../../Forms/FormInput';
 import FormTextarea from '../../Forms/FormTextarea';
