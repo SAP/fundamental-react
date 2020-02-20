@@ -8,6 +8,7 @@ import {
 } from '@storybook/addon-knobs';
 
 const createProps = (overrides) => ({
+    compact: boolean('compact', false),
     disabled: boolean('disabled', false),
     indeterminate: boolean('indeterminate', false),
     state: select('Validation State', {

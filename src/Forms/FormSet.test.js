@@ -12,7 +12,7 @@ import renderer from 'react-test-renderer';
 describe('<FormSet />', () => {
     const formSet = (
         <FormSet>
-            <FormItem isInline>
+            <FormItem isHorizontal>
                 <FormLabel forAttr='input-1'>Default Input</FormLabel>
                 <FormInput
                     id='input-1'
@@ -55,7 +55,7 @@ describe('<FormSet />', () => {
 
     const formSetWithClass = (
         <FormSet className='blue'>
-            <FormItem isInline>
+            <FormItem isHorizontal>
                 <FormLabel forAttr='input-1'>Default Input</FormLabel>
                 <FormInput
                     id='input-1'

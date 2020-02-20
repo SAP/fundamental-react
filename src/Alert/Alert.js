@@ -63,7 +63,7 @@ const Alert = (props) => {
                             className='fd-alert__close'
                             onClick={closeAlertHandler} />
                     )}
-                    <div className='fd-alert__text'>
+                    <p className='fd-alert__text'>
                         {type && (
                             <Icon disableStyles={disableStyles} glyph={`message-${type}`} />
                         )}
@@ -76,7 +76,7 @@ const Alert = (props) => {
                                 {linkText}{' '}
                             </Link>
                         )}
-                    </div>
+                    </p>
                 </div>
             )}
         </div>

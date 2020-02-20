@@ -1,5 +1,7 @@
 import Button from '../Button/Button';
+import { FORM_STATES } from '../utils/constants';
 import FormInput from '../Forms/FormInput';
+import InputGroup from '../InputGroup/InputGroup';
 import Menu from '../Menu/Menu';
 import Popover from '../Popover/Popover';
 import PropTypes from 'prop-types';
@@ -15,12 +17,6 @@ class SearchInput extends Component {
             searchList: this.props.searchList,
             filteredResult: this.props.searchList
         };
-    }
-
-    componentDidMount() {
-        if (!this.props.disableStyles) {
-            require('fundamental-styles/dist/input-group.css');
-        }
     }
 
     onKeyPressHandler = event => {
@@ -133,6 +129,7 @@ class SearchInput extends Component {
             listProps,
             searchBtnProps,
             popoverProps,
+            state,
             ...rest
         } = this.props;
 
@@ -164,11 +161,12 @@ class SearchInput extends Component {
                         </Menu>)
                     }
                     control={
-                        <div className='fd-input-group fd-input-group--after'>
+                        <InputGroup
+                            compact={compact}
+                            disableStyles={disableStyles}
+                            state={state}>
                             <FormInput
                                 {...inputProps}
-                                className='fd-input-group__input'
-                                compact={compact}
                                 disableStyles={disableStyles}
                                 onChange={this.onChangeHandler}
                                 onClick={() => this.onClickHandler()}
@@ -177,17 +175,15 @@ class SearchInput extends Component {
                                 value={this.state.value} />
 
                             {!noSearchBtn && (
-                                <span className='fd-input-group__addon fd-input-group__addon--button'>
+                                <InputGroup.Addon isButton>
                                     <Button {...searchBtnProps}
-                                        className='fd-input-group__button'
-                                        compact={compact}
                                         disableStyles={disableStyles}
                                         glyph='search'
                                         onClick={() => this.onClickHandler()}
                                         option='light' />
-                                </span>
+                                </InputGroup.Addon>
                             )}
-                        </div>
+                        </InputGroup>
                     }
                     disableKeyPressHandler
                     disableStyles={disableStyles} />
@@ -215,6 +211,7 @@ SearchInput.propTypes = {
             callback: PropTypes.func
         })
     ),
+    state: PropTypes.oneOf(FORM_STATES),
     onChange: PropTypes.func,
     onEnter: PropTypes.func
 };

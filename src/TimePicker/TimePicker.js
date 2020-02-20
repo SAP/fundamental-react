@@ -43,13 +43,6 @@ class TimePicker extends Component {
         this.state.placeholder = value;
     }
 
-    // TO DO: remove when rebuilt using inputgroup
-    componentDidMount() {
-        if (!this.props.disableStyles) {
-            require('fundamental-styles/dist/input-group.css');
-        }
-    }
-
     onChange = time => {
         this.setState(() => {
             let value = time ? this.formatValue(time) : '';

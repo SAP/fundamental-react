@@ -12,8 +12,8 @@ export const FormsComponent = () => {
             title='Forms'>
 
             <Example
-                description={`Inputs are used to collect data from the user. When a field is required, the label is displayed in bold
-                    and noted by an asterisk (*).`}
+                description={`Inputs are used to collect data from the user. When a field is required,
+                the label should include an asterisk (*).`}
                 title='Inputs'>
                 <div>
                     <FormGroup>
@@ -56,6 +56,48 @@ export const FormsComponent = () => {
             </Example>
 
             <Example
+                title='Inline Labels'>
+                <div>
+                    <FormGroup>
+                        <FormItem isHorizontal>
+                            <FormLabel htmlFor='input-1'>Default Input</FormLabel>
+                            <FormInput id='input-1' placeholder='Field placeholder text'
+                                type='text' />
+                        </FormItem>
+                    </FormGroup>
+
+                    <FormGroup>
+                        <FormItem isHorizontal>
+                            <FormLabel htmlFor='input-2' required>
+                                Required Input
+                            </FormLabel>
+                            <FormInput id='input-2' placeholder='Field placeholder text'
+                                type='text' />
+                        </FormItem>
+                    </FormGroup>
+
+                    <FormGroup>
+                        <FormItem isHorizontal>
+                            <FormLabel htmlFor='input-3' required>
+                                Password
+                            </FormLabel>
+                            <FormInput id='input-3' placeholder='Field placeholder text'
+                                type='password' />
+                        </FormItem>
+                    </FormGroup>
+
+                    <FormGroup>
+                        <FormItem isHorizontal>
+                            <FormLabel htmlFor='textarea-1' required>
+                                Text area
+                            </FormLabel>
+                            <FormTextarea defaultValue=' Pellentesque metus lacus commodo eget justo ut rutrum varius nunc.' id='textarea-1' />
+                        </FormItem>
+                    </FormGroup>
+                </div>
+            </Example>
+
+            <Example
                 description={`Help elements give the user information about the input. Two types of help 
                     elements can be used. \n\n* The inline help element is displayed as a ? Icon. On hover 
                     or click, help content is displayed. \n\n* Help content can also be visible at all 
@@ -66,10 +108,9 @@ export const FormsComponent = () => {
                 <div>
                     <FormSet>
                         <FormItem>
-                            <FormLabel htmlFor='input-4'>
+                            <FormLabel htmlFor='input-4' isInlineHelp>
                                 Input with inline help
                                 <InlineHelp
-                                    className='fd-has-float-right'
                                     placement='bottom-left'
                                     text='Lorem ipsum dolor sit amet, consectetur adipiscing.' />
                             </FormLabel>
@@ -81,7 +122,7 @@ export const FormsComponent = () => {
                         <FormItem>
                             <FormLabel htmlFor='input-5'>Input with Help Message</FormLabel>
                             <FormInput id='input-5' type='text' />
-                            <FormMessage type='help'>
+                            <FormMessage type='information'>
                                 Pellentesque metus lacus commodo eget justo ut rutrum varius nunc
                             </FormMessage>
                         </FormItem>
@@ -134,6 +175,17 @@ export const FormsComponent = () => {
                             <FormInput id='OatmD555' placeholder='Field placeholder text'
                                 state='warning' type='text' />
                             <FormMessage type='warning'>
+                                Pellentesque metus lacus commodo eget justo ut rutrum varius nunc
+                            </FormMessage>
+                        </FormItem>
+                    </FormSet>
+
+                    <FormSet>
+                        <FormItem>
+                            <FormLabel htmlFor='OatmD556'>Information Input</FormLabel>
+                            <FormInput id='OatmD556' placeholder='Field placeholder text'
+                                state='information' type='text' />
+                            <FormMessage type='information'>
                                 Pellentesque metus lacus commodo eget justo ut rutrum varius nunc
                             </FormMessage>
                         </FormItem>

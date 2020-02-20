@@ -10,11 +10,10 @@ class FormRadioGroup extends Component {
     }
 
     render() {
-        const { children, disabled, disableStyles, inline, onChange, ...props } = this.props;
+        const { children, disabled, disableStyles, inline, onChange } = this.props;
 
         return (
-            <div
-                {...props}>
+            <>
                 {React.Children.toArray(children).map(child => {
                     return React.cloneElement(child, {
                         disabled: child.props.disabled || disabled,
@@ -24,7 +23,7 @@ class FormRadioGroup extends Component {
                         onChange: child.props.onChange || onChange
                     });
                 })}
-            </div>
+            </>
         );
     }
 }

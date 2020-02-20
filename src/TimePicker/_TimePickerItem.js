@@ -1,5 +1,6 @@
 import Button from '../Button/Button';
 import FormInput from '../Forms/FormInput';
+import InputGroup from '../InputGroup/InputGroup';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 
@@ -212,7 +213,9 @@ class TimePickerItem extends Component {
     render() {
         const { disableStyles, disabled, inputProps, buttonProps, onClick } = this.props;
         return (
-            <div className='fd-input-group' onClick={onClick}>
+            <InputGroup
+                disableStyles={disableStyles}
+                onClick={onClick}>
                 <FormInput
                     {...inputProps}
                     className={this.state.style}
@@ -224,21 +227,20 @@ class TimePickerItem extends Component {
                     placeholder={this.props.placeholder}
                     readOnly={disabled}
                     value={this.props.value} />
-                <span className='fd-input-group__addon fd-input-group__addon--button'>
+                <InputGroup.Addon isButton>
                     <Button
                         {...buttonProps}
                         aria-controls='rthHR811'
                         aria-expanded='false'
                         aria-haspopup='true'
-                        className='fd-input-group__button'
                         compact
                         disableStyles={disableStyles}
                         disabled={disabled}
                         glyph='fob-watch'
                         id={this.state.buttonID}
                         option='light' />
-                </span>
-            </div>
+                </InputGroup.Addon>
+            </InputGroup>
         );
     }
 }
