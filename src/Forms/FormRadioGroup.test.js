@@ -97,13 +97,5 @@ describe('<FormRadioGroup />', () => {
 
             expect(mockCallback.mock.calls.length).toBe(1);
         });
-
-        test('should allow props to be spread to the FormRadioGroup component', () => {
-            const element = mount(<FormRadioGroup data-sample='Sample' />);
-
-            expect(
-                element.getDOMNode().attributes['data-sample'].value
-            ).toBe('Sample');
-        });
     });
 });

@@ -3,10 +3,9 @@
 exports[`<FormLabel /> create form label 1`] = `
 <label
   aria-required={true}
-  className="fd-form-label"
+  className="fd-form-label fd-form-label--required"
   forAttr="input-1"
 >
   Default Input
-  *
 </label>
 `;

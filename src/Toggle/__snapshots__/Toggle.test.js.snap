@@ -5,7 +5,7 @@ exports[`<Toggle /> create toggle component 1`] = `
   className="fd-form-item"
 >
   <label
-    className="fd-form-label"
+    className="fd-form-label fd-form-label--toggle"
   >
     <span
       className="fd-toggle"
@@ -22,7 +22,6 @@ exports[`<Toggle /> create toggle component 1`] = `
       />
     </span>
     Normal toggle
-    
   </label>
 </div>
 `;
@@ -32,7 +31,7 @@ exports[`<Toggle /> create toggle component 2`] = `
   className="fd-form-item blue"
 >
   <label
-    className="fd-form-label"
+    className="fd-form-label fd-form-label--toggle"
   >
     <span
       className="fd-toggle fd-toggle--s"
@@ -49,7 +48,6 @@ exports[`<Toggle /> create toggle component 2`] = `
       />
     </span>
     Small toggle
-    
   </label>
 </div>
 `;
@@ -59,7 +57,7 @@ exports[`<Toggle /> create toggle component 3`] = `
   className="fd-form-item"
 >
   <label
-    className="fd-form-label is-disabled"
+    className="fd-form-label is-disabled fd-form-label--toggle"
   >
     <span
       className="fd-toggle"
@@ -77,7 +75,6 @@ exports[`<Toggle /> create toggle component 3`] = `
       />
     </span>
     Normal toggle
-    
   </label>
 </div>
 `;
@@ -87,7 +84,7 @@ exports[`<Toggle /> create toggle component 4`] = `
   className="fd-form-item"
 >
   <label
-    className="fd-form-label is-disabled"
+    className="fd-form-label is-disabled fd-form-label--toggle"
   >
     <span
       className="fd-toggle"
@@ -105,7 +102,6 @@ exports[`<Toggle /> create toggle component 4`] = `
       />
     </span>
     Normal toggle
-    
   </label>
 </div>
 `;

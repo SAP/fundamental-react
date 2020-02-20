@@ -39,7 +39,7 @@ exports[`<InputGroup /> create input group items 3`] = `
   className="fd-input-group"
 >
   <span
-    className="fd-input-group__addon"
+    className="fd-input-group__addon fd-input-group__addon--compact"
   >
     $
   </span>
@@ -61,7 +61,7 @@ exports[`<InputGroup /> create input group items 4`] = `
     type="text"
   />
   <span
-    className="fd-input-group__addon"
+    className="fd-input-group__addon fd-input-group__addon--compact"
   >
     €
   </span>
@@ -92,7 +92,7 @@ exports[`<InputGroup /> create input group items 6`] = `
   className="fd-input-group"
 >
   <span
-    className="fd-input-group__addon"
+    className="fd-input-group__addon fd-input-group__addon--compact"
   >
     <span
       className="sap-icon--globe"
@@ -135,7 +135,7 @@ exports[`<InputGroup /> create input group items 8`] = `
     type="text"
   />
   <span
-    className="fd-input-group__addon"
+    className="fd-input-group__addon fd-input-group__addon--compact"
   >
     <span
       className="sap-icon--hide"
@@ -176,7 +176,7 @@ exports[`<InputGroup /> create input group items 10`] = `
     type="text"
   />
   <span
-    className="fd-input-group__addon fd-input-group__addon--button"
+    className="fd-input-group__addon fd-input-group__addon--button fd-input-group__addon--compact"
   >
     <button
       className="fd-button--light fd-button--compact fd-input-group__button"

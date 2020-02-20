@@ -12,7 +12,7 @@ exports[`<Alert /> create basic alert 1`] = `
       className="fd-alert__close"
       onClick={[Function]}
     />
-    <div
+    <p
       className="fd-alert__text"
     >
       Default alert with a
@@ -23,7 +23,7 @@ exports[`<Alert /> create basic alert 1`] = `
         link
          
       </a>
-    </div>
+    </p>
   </div>
 </div>
 `;
@@ -40,14 +40,14 @@ exports[`<Alert /> create basic alert 2`] = `
       className="fd-alert__close"
       onClick={[Function]}
     />
-    <div
+    <p
       className="fd-alert__text"
     >
       <span
         className="sap-icon--message-error"
       />
       Error message with a
-    </div>
+    </p>
   </div>
 </div>
 `;
@@ -58,7 +58,7 @@ exports[`<Alert /> create non-dismissible alert 1`] = `
     className="fd-alert blue"
     role="alert"
   >
-    <div
+    <p
       className="fd-alert__text"
     >
       Default alert that cannot be dismissed
@@ -69,7 +69,7 @@ exports[`<Alert /> create non-dismissible alert 1`] = `
         link
          
       </a>
-    </div>
+    </p>
   </div>
 </div>
 `;

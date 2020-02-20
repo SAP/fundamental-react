@@ -5,7 +5,7 @@ exports[`<ListGroupItemCheckbox /> create list group 1`] = `
   className="fd-form-item"
 >
   <label
-    className="fd-form-label"
+    className="fd-form-label fd-form-label--checkbox"
   >
     <input
       aria-checked="false"
@@ -15,7 +15,6 @@ exports[`<ListGroupItemCheckbox /> create list group 1`] = `
       type="checkbox"
     />
     List item 1
-    
   </label>
 </div>
 `;
