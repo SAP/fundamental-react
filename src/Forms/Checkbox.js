@@ -44,7 +44,8 @@ const Checkbox = React.forwardRef(({ checked, className, defaultChecked, disable
             ref={ref}>
             <FormLabel {...labelProps}
                 disableStyles={disableStyles}
-                disabled={disabled}>
+                disabled={disabled}
+                isCheckbox>
                 <input
                     {...inputProps}
                     aria-checked={getCheckStatus(checked, indeterminate)}
@@ -69,7 +70,6 @@ Checkbox.displayName = 'Checkbox';
 Checkbox.propTypes = {
     checked: PropTypes.bool,
     className: PropTypes.string,
-
     defaultChecked: PropTypes.bool,
     disabled: PropTypes.bool,
     disableStyles: PropTypes.bool,

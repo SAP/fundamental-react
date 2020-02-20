@@ -13,7 +13,7 @@ const FormItem = React.forwardRef(({ isInline, children, className, disableStyle
     const formItemClasses = classnames(
         'fd-form-item',
         {
-            'fd-form-item--horizontal': isInline
+            'fd-form-item--inline': isInline
         },
         className
     );

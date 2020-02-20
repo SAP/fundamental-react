@@ -33,7 +33,6 @@ FormRadioGroup.displayName = 'FormRadioGroup';
 
 FormRadioGroup.propTypes = {
     children: PropTypes.node,
-
     disabled: PropTypes.bool,
     disableStyles: PropTypes.bool,
     inline: PropTypes.bool,

@@ -1,15 +1,40 @@
+import classnames from 'classnames';
+import { FORM_STATES } from '../utils/constants';
 import FormItem from './FormItem';
 import FormLabel from './FormLabel';
 import PropTypes from 'prop-types';
 import React, { useEffect } from 'react';
 
-const FormRadioItem = React.forwardRef(({ checked, children, className, defaultChecked, disabled, disableStyles, id, inline, inputProps, labelProps, name, value, ...props }, ref) => {
+const FormRadioItem = React.forwardRef(({
+    checked,
+    children,
+    className,
+    compact,
+    defaultChecked,
+    disabled,
+    disableStyles,
+    id,
+    inline,
+    inputProps,
+    labelProps,
+    name,
+    state,
+    value,
+    ...props }, ref) => {
 
     useEffect(() => {
         if (!disableStyles) {
             require('fundamental-styles/dist/radio.css');
         }
     }, []);
+
+    const inputClassNames = classnames(
+        'fd-radio',
+        {
+            'fd-radio--compact': compact,
+            [`is-${state}`]: state
+        }
+    );
 
     return (
         <FormItem
@@ -25,7 +50,7 @@ const FormRadioItem = React.forwardRef(({ checked, children, className, defaultC
                 <input
                     {...inputProps}
                     checked={checked}
-                    className='fd-radio'
+                    className={inputClassNames}
                     disabled={disabled}
                     id={id}
                     name={name}
@@ -44,7 +69,7 @@ FormRadioItem.propTypes = {
     children: PropTypes.node.isRequired,
     checked: PropTypes.bool,
     className: PropTypes.string,
-
+    compact: PropTypes.bool,
     defaultChecked: PropTypes.bool,
     disabled: PropTypes.bool,
     disableStyles: PropTypes.bool,
@@ -53,13 +78,14 @@ FormRadioItem.propTypes = {
     inputProps: PropTypes.object,
     labelProps: PropTypes.object,
     name: PropTypes.string,
+    state: PropTypes.oneOf(FORM_STATES),
     value: PropTypes.string
 };
 
 FormRadioItem.propDescriptions = {
     checked: 'Set to **true** when radio input is checked and a controlled component.',
     defaultChecked: 'Set to **true** when the radio input is checked and an uncontrolled component.',
-    inline: 'Set to true to display a group of checkboxes in a row.',
+    inline: '_INTERNAL USE ONLY._',
     name: 'Sets the `name` for the radio input.',
     value: 'Sets the `value` for the radio input.'
 };

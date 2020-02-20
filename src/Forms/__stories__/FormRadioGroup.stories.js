@@ -3,20 +3,40 @@ import FormRadioItem from '../FormRadioItem';
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import {
+    boolean,
+    select,
     withKnobs
 } from '@storybook/addon-knobs';
+
+
+const createRadioGroupProps = (overrides) => ({
+    inline: boolean('inline', false),
+    ...overrides
+});
+
+const createRadioProps = (overrides) => ({
+    disabled: boolean('disabled', false),
+    state: select('Validation State', {
+        'default': null,
+        'valid': 'valid',
+        'invalid': 'invalid',
+        'information': 'information',
+        'warning': 'warning'
+    }),
+    ...overrides
+});
 
 storiesOf('Components|FormRadioGroup', module)
     .addDecorator(withKnobs)
     .add('Default', () => (
-        <FormRadioGroup>
-            <FormRadioItem>
+        <FormRadioGroup {...createRadioGroupProps()}>
+            <FormRadioItem {...createRadioProps()}>
             Option 1
             </FormRadioItem>
-            <FormRadioItem>
+            <FormRadioItem {...createRadioProps()}>
             Option 2
             </FormRadioItem>
-            <FormRadioItem>
+            <FormRadioItem {...createRadioProps()}>
             Option 3
             </FormRadioItem>
         </FormRadioGroup>
