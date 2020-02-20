@@ -28,7 +28,6 @@ const FormLabel = React.forwardRef(({ required, children, className, disabled, d
             className={formLabelClasses}
             ref={ref}>
             {children}
-            {required ? '*' : ''}
         </label>
     );
 });
@@ -38,7 +37,6 @@ FormLabel.displayName = 'FormLabel';
 FormLabel.propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,
-
     disabled: PropTypes.bool,
     disableStyles: PropTypes.bool,
     isToggle: PropTypes.bool,

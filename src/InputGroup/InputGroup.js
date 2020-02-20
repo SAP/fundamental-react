@@ -20,6 +20,7 @@ class InputGroup extends Component {
             children,
             className,
             compact,
+            disabled,
             disableStyles,
             state,
             ...props
@@ -30,7 +31,10 @@ class InputGroup extends Component {
         const inputGroupClasses = classnames(
             className,
             'fd-input-group',
-            { [`is-${state}`]: state }
+            {
+                [`is-${state}`]: state,
+                'is-disabled': disabled
+            }
         );
 
         return (
@@ -40,6 +44,7 @@ class InputGroup extends Component {
                 {React.Children.toArray(children).map(child => {
                     return React.cloneElement(child, {
                         compact,
+                        disabled,
                         className: (child.type.displayName === InputGroupAddon.displayName) ? '' : inputClasses
                     });
                 })}
@@ -56,6 +61,7 @@ InputGroup.propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,
     compact: PropTypes.bool,
+    disabled: PropTypes.bool,
     disableStyles: PropTypes.bool,
     state: PropTypes.oneOf(FORM_STATES)
 };
