@@ -12,10 +12,4 @@ storiesOf('Components|Status', module)
     ))
     .add('disable styles', () => (
         <Status disableStyles>Default</Status>
-    ))
-    .add('custom styles', () => (
-        <Status
-            customStyles={require('../../utils/WithStyles/customStylesTest.css')}>
-            Default
-        </Status>
     ));

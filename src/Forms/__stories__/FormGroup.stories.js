@@ -32,17 +32,4 @@ storiesOf('Components|FormGroup', module)
                     inputValue='1234567890' />
             </FormItem>
         </FormGroup>
-    ))
-    .add('custom styles', () => (
-        <FormGroup
-            customStyles={require('../../utils/WithStyles/customStylesTest.css')}>
-            <FormLabel disableStyles>Left Aligned Text Addon</FormLabel>
-            <FormItem disableStyles>
-                <InputGroup
-                    addon='$'
-                    addonPos='before'
-                    disableStyles
-                    inputValue='1234567890' />
-            </FormItem>
-        </FormGroup>
     ));

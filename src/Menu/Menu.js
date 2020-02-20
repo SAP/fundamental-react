@@ -3,10 +3,17 @@ import MenuGroup from './_MenuGroup';
 import MenuItem from './_MenuItem';
 import MenuList from './_MenuList';
 import PropTypes from 'prop-types';
-import React from 'react';
-import withStyles from '../utils/WithStyles/WithStyles';
+import React, { useEffect } from 'react';
 
 const Menu = React.forwardRef(({ addonBefore, children, className, disableStyles, ...props }, ref) => {
+
+    useEffect(() => {
+        if (!disableStyles) {
+            require('fundamental-styles/dist/fonts.css');
+            require('fundamental-styles/dist/menu.css');
+        }
+    }, []);
+
     const menuClasses = classnames(
         'fd-menu',
         {
@@ -33,7 +40,6 @@ Menu.propTypes = {
     addonBefore: PropTypes.bool,
     children: PropTypes.node,
     className: PropTypes.string,
-    customStyles: PropTypes.object,
     disableStyles: PropTypes.bool
 };
 
@@ -45,6 +51,4 @@ Menu.Group = MenuGroup;
 Menu.Item = MenuItem;
 Menu.List = MenuList;
 
-export { Menu as __Menu };
-
-export default withStyles(Menu, { cssFile: 'menu', fonts: true });
+export default Menu;

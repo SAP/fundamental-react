@@ -1,9 +1,16 @@
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import React from 'react';
-import withStyles from '../utils/WithStyles/WithStyles';
+import React, { useEffect } from 'react';
 
 const FormTextarea = React.forwardRef(({ children, className, compact, disableStyles, ...props }, ref) => {
+
+    useEffect(() => {
+        if (!disableStyles) {
+            require('fundamental-styles/dist/fonts.css');
+            require('fundamental-styles/dist/textarea.css');
+        }
+    }, []);
+
     const formTextAreaClasses = classnames(
         'fd-textarea',
         { 'fd-textarea--compact': compact },
@@ -26,10 +33,7 @@ FormTextarea.propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,
     compact: PropTypes.bool,
-    customStyles: PropTypes.object,
     disableStyles: PropTypes.bool
 };
 
-export { FormTextarea as __FormTextarea };
-
-export default withStyles(FormTextarea, { cssFile: 'textarea', fonts: true });
+export default FormTextarea;

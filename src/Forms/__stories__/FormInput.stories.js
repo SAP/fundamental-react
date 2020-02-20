@@ -12,8 +12,4 @@ storiesOf('Components|FormInput', module)
     ))
     .add('disable styles', () => (
         <FormInput disableStyles />
-    ))
-    .add('custom styles', () => (
-        <FormInput
-            customStyles={require('../../utils/WithStyles/customStylesTest.css')} />
     ));

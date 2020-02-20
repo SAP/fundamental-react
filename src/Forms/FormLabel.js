@@ -1,9 +1,16 @@
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import React from 'react';
-import withStyles from '../utils/WithStyles/WithStyles';
+import React, { useEffect } from 'react';
 
 const FormLabel = React.forwardRef(({ required, children, className, disabled, disableStyles, isToggle, ...props }, ref) => {
+
+    useEffect(() => {
+        if (!disableStyles) {
+            require('fundamental-styles/dist/fonts.css');
+            require('fundamental-styles/dist/form-label.css');
+        }
+    }, []);
+
     const formLabelClasses = classnames(
         'fd-form-label',
         {
@@ -31,7 +38,7 @@ FormLabel.displayName = 'FormLabel';
 FormLabel.propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,
-    customStyles: PropTypes.object,
+
     disabled: PropTypes.bool,
     disableStyles: PropTypes.bool,
     isToggle: PropTypes.bool,
@@ -43,6 +50,5 @@ FormLabel.propDescriptions = {
     required: 'Set to **true** for required input fields.'
 };
 
-export { FormLabel as __FormLabel };
 
-export default withStyles(FormLabel, { cssFile: 'form-label', fonts: true });
+export default FormLabel;

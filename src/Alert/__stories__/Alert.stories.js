@@ -23,13 +23,4 @@ storiesOf('Components|Alert', module)
             linkText='link'>
                     Default alert
         </Alert>
-    ))
-    .add('custom styles', () => (
-        <Alert
-            customStyles={require('../../utils/WithStyles/customStylesTest.css')}
-            dismissible
-            link='#'
-            linkText='link'>
-                    Default alert
-        </Alert>
     ));

@@ -4,10 +4,16 @@ import { FORM_STATES } from '../utils/constants';
 import FormInput from '../Forms/FormInput';
 import Popover from '../Popover/Popover';
 import PropTypes from 'prop-types';
-import React from 'react';
-import withStyles from '../utils/WithStyles/WithStyles';
+import React, { useEffect } from 'react';
 
 const ComboboxInput = React.forwardRef(({ placeholder, menu, compact, className, disableStyles, popoverProps, inputProps, buttonProps, state, ...props }, ref) => {
+
+    useEffect(() => {
+        if (!disableStyles) {
+            require('fundamental-styles/dist/input-group.css');
+        }
+    }, []);
+
     const comboboxPopoverClasses = classnames(
         'fd-input-group',
         { [`is-${state}`]: state }
@@ -54,7 +60,6 @@ ComboboxInput.propTypes = {
     buttonProps: PropTypes.object,
     className: PropTypes.string,
     compact: PropTypes.bool,
-    customStyles: PropTypes.object,
     disableStyles: PropTypes.bool,
     inputProps: PropTypes.object,
     placeholder: PropTypes.string,
@@ -66,6 +71,4 @@ ComboboxInput.propDescriptions = {
     menu: 'An object containing a `Menu` component.'
 };
 
-export { ComboboxInput as __ComboboxInput };
-
-export default withStyles(ComboboxInput, { cssFile: 'input-group' });
+export default ComboboxInput;

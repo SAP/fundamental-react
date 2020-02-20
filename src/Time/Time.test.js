@@ -1,5 +1,5 @@
 import { mount } from 'enzyme';
-import { mountComponentWithStyles } from '../utils/testUtils';
+
 import React from 'react';
 import renderer from 'react-test-renderer';
 import Time from './Time';
@@ -62,7 +62,7 @@ describe('<Time />', () => {
     });
 
     test('time number up click', () => {
-        const wrapper = mountComponentWithStyles(twelveHour);
+        const wrapper = mount(twelveHour);
 
         // hour timer click up
         expect(wrapper.state('time').hour).toEqual('12');
@@ -86,7 +86,7 @@ describe('<Time />', () => {
     });
 
     test('time number up merdiem click', () => {
-        const wrapper = mountComponentWithStyles(timeMeridiemSet);
+        const wrapper = mount(timeMeridiemSet);
 
         // hour timer click up
         expect(wrapper.state('time').hour).toEqual(22);
@@ -110,7 +110,7 @@ describe('<Time />', () => {
     });
     //TO DO: what is this test even trying to test?
     xtest('time number down click on merdiem time', () => {
-        const wrapper = mountComponentWithStyles(meridiemTime);
+        const wrapper = mount(meridiemTime);
         // hour timer click down
         expect(wrapper.state('time').hour).toEqual('12');
         // 3 down clicks
@@ -136,7 +136,7 @@ describe('<Time />', () => {
     });
 
     test('time number down click', () => {
-        let wrapper = mountComponentWithStyles(twelveHour);
+        let wrapper = mount(twelveHour);
 
         // hour timer click down
         expect(wrapper.state('time').hour).toEqual('12');
@@ -161,7 +161,7 @@ describe('<Time />', () => {
 
     // Down arrow clicks
     test('clicking down on meridiem', () => {
-        let wrapper = mountComponentWithStyles(
+        let wrapper = mount(
             <Time
                 format12Hours
                 name='meridiem'
@@ -180,7 +180,7 @@ describe('<Time />', () => {
     });
 
     test('clicking down on hours', () => {
-        let wrapper = mountComponentWithStyles(
+        let wrapper = mount(
             <Time
                 format12Hours={false}
                 name='meridiem'
@@ -197,7 +197,7 @@ describe('<Time />', () => {
         expect(wrapper.state('time').minute).toEqual(0);
         expect(wrapper.state('time').second).toEqual(0);
 
-        wrapper = mountComponentWithStyles(
+        wrapper = mount(
             <Time
                 format12Hours
                 name='meridiem'
@@ -215,7 +215,7 @@ describe('<Time />', () => {
         expect(wrapper.state('time').second).toEqual(0);
         expect(wrapper.state('time').meridiem).toEqual(0);
 
-        wrapper = mountComponentWithStyles(
+        wrapper = mount(
             <Time
                 format12Hours
                 name='meridiem'
@@ -235,7 +235,7 @@ describe('<Time />', () => {
     });
 
     test('clicking down on minutes', () => {
-        let wrapper = mountComponentWithStyles(
+        let wrapper = mount(
             <Time
                 format12Hours={false}
                 name='meridiem'
@@ -252,7 +252,7 @@ describe('<Time />', () => {
         expect(wrapper.state('time').minute).toEqual(59);
         expect(wrapper.state('time').second).toEqual(0);
 
-        wrapper = mountComponentWithStyles(
+        wrapper = mount(
             <Time
                 format12Hours
                 name='meridiem'
@@ -270,7 +270,7 @@ describe('<Time />', () => {
         expect(wrapper.state('time').second).toEqual(0);
         expect(wrapper.state('time').meridiem).toEqual(0);
 
-        wrapper = mountComponentWithStyles(
+        wrapper = mount(
             <Time
                 format12Hours
                 name='meridiem'
@@ -290,7 +290,7 @@ describe('<Time />', () => {
     });
 
     test('clicking down seconds', () => {
-        let wrapper = mountComponentWithStyles(
+        let wrapper = mount(
             <Time
                 format12Hours={false}
                 name='meridiem'
@@ -307,7 +307,7 @@ describe('<Time />', () => {
         expect(wrapper.state('time').minute).toEqual(59);
         expect(wrapper.state('time').second).toEqual(59);
 
-        wrapper = mountComponentWithStyles(
+        wrapper = mount(
             <Time
                 format12Hours
                 name='meridiem'
@@ -325,7 +325,7 @@ describe('<Time />', () => {
         expect(wrapper.state('time').second).toEqual(59);
         expect(wrapper.state('time').meridiem).toEqual(0);
 
-        wrapper = mountComponentWithStyles(
+        wrapper = mount(
             <Time
                 format12Hours
                 name='meridiem'
@@ -346,7 +346,7 @@ describe('<Time />', () => {
 
     // Up arrow clicks
     test('clicking up on meridiem', () => {
-        let wrapper = mountComponentWithStyles(
+        let wrapper = mount(
             <Time
                 format12Hours
                 name='meridiem'
@@ -365,7 +365,7 @@ describe('<Time />', () => {
     });
 
     test('clicking up on hours', () => {
-        let wrapper = mountComponentWithStyles(
+        let wrapper = mount(
             <Time
                 format12Hours={false}
                 name='meridiem'
@@ -382,7 +382,7 @@ describe('<Time />', () => {
         expect(wrapper.state('time').minute).toEqual(0);
         expect(wrapper.state('time').second).toEqual(0);
 
-        wrapper = mountComponentWithStyles(
+        wrapper = mount(
             <Time
                 format12Hours={false}
                 name='meridiem'
@@ -397,7 +397,7 @@ describe('<Time />', () => {
             .simulate('click');
         expect(wrapper.state('time').hour).toEqual('00');
 
-        wrapper = mountComponentWithStyles(
+        wrapper = mount(
             <Time
                 format12Hours
                 name='meridiem'
@@ -415,7 +415,7 @@ describe('<Time />', () => {
         expect(wrapper.state('time').second).toEqual(0);
         expect(wrapper.state('time').meridiem).toEqual(0);
 
-        wrapper = mountComponentWithStyles(
+        wrapper = mount(
             <Time
                 format12Hours
                 name='meridiem'
@@ -433,7 +433,7 @@ describe('<Time />', () => {
         expect(wrapper.state('time').second).toEqual(0);
         expect(wrapper.state('time').meridiem).toEqual(0);
 
-        wrapper = mountComponentWithStyles(
+        wrapper = mount(
             <Time
                 format12Hours
                 name='meridiem'
@@ -451,7 +451,7 @@ describe('<Time />', () => {
     });
 
     test('clicking up on minutes', () => {
-        let wrapper = mountComponentWithStyles(
+        let wrapper = mount(
             <Time
                 format12Hours={false}
                 name='meridiem'
@@ -468,7 +468,7 @@ describe('<Time />', () => {
         expect(wrapper.state('time').minute).toEqual('01');
         expect(wrapper.state('time').second).toEqual(0);
 
-        wrapper = mountComponentWithStyles(
+        wrapper = mount(
             <Time
                 format12Hours={false}
                 name='meridiem'
@@ -484,7 +484,7 @@ describe('<Time />', () => {
         expect(wrapper.state('time').hour).toEqual('00');
         expect(wrapper.state('time').minute).toEqual('00');
 
-        wrapper = mountComponentWithStyles(
+        wrapper = mount(
             <Time
                 format12Hours
                 name='meridiem'
@@ -502,7 +502,7 @@ describe('<Time />', () => {
         expect(wrapper.state('time').second).toEqual(0);
         expect(wrapper.state('time').meridiem).toEqual(0);
 
-        wrapper = mountComponentWithStyles(
+        wrapper = mount(
             <Time
                 format12Hours
                 name='meridiem'
@@ -520,7 +520,7 @@ describe('<Time />', () => {
         expect(wrapper.state('time').hour).toEqual('01');
         expect(wrapper.state('time').minute).toEqual('00');
 
-        wrapper = mountComponentWithStyles(
+        wrapper = mount(
             <Time
                 format12Hours
                 name='meridiem'
@@ -539,7 +539,7 @@ describe('<Time />', () => {
         expect(wrapper.state('time').minute).toEqual('00');
         expect(wrapper.state('time').meridiem).toEqual(1);
 
-        wrapper = mountComponentWithStyles(
+        wrapper = mount(
             <Time
                 format12Hours
                 name='meridiem'
@@ -557,7 +557,7 @@ describe('<Time />', () => {
         expect(wrapper.state('time').second).toEqual(0);
         expect(wrapper.state('time').meridiem).toEqual(0);
 
-        wrapper = mountComponentWithStyles(
+        wrapper = mount(
             <Time
                 format12Hours
                 name='meridiem'
@@ -577,7 +577,7 @@ describe('<Time />', () => {
     });
 
     test('clicking up seconds', () => {
-        let wrapper = mountComponentWithStyles(
+        let wrapper = mount(
             <Time
                 format12Hours={false}
                 name='meridiem'
@@ -594,7 +594,7 @@ describe('<Time />', () => {
         expect(wrapper.state('time').minute).toEqual(59);
         expect(wrapper.state('time').second).toEqual('00');
 
-        wrapper = mountComponentWithStyles(
+        wrapper = mount(
             <Time
                 format12Hours={false}
                 name='meridiem'
@@ -623,7 +623,7 @@ describe('<Time />', () => {
         expect(wrapper.state('time').second).toEqual('01');
         expect(wrapper.state('time').meridiem).toEqual(0);
 
-        wrapper = mountComponentWithStyles(
+        wrapper = mount(
             <Time
                 format12Hours
                 name='meridiem'
@@ -643,7 +643,7 @@ describe('<Time />', () => {
     });
 
     test('enter in time value', () => {
-        const wrapper = mountComponentWithStyles(defaultTime);
+        const wrapper = mount(defaultTime);
         wrapper
             .find('.fd-input')
             .at(0)

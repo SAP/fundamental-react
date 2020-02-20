@@ -12,10 +12,4 @@ storiesOf('Components|FormLegend', module)
     ))
     .add('disable styles', () => (
         <FormLegend disableStyles>Default</FormLegend>
-    ))
-    .add('custom styles', () => (
-        <FormLegend
-            customStyles={require('../../utils/WithStyles/customStylesTest.css')}>
-            Default
-        </FormLegend>
     ));

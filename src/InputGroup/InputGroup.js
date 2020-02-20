@@ -2,11 +2,17 @@ import classnames from 'classnames';
 import { FORM_STATES } from '../utils/constants';
 import InputGroupAddon from './_InputGroupAddon';
 import PropTypes from 'prop-types';
-import withStyles from '../utils/WithStyles/WithStyles';
 import React, { Component } from 'react';
 class InputGroup extends Component {
     constructor(props) {
         super(props);
+    }
+
+    componentDidMount() {
+        if (!this.props.disableStyles) {
+            require('fundamental-styles/dist/fonts.css');
+            require('fundamental-styles/dist/input-group.css');
+        }
     }
 
     render() {
@@ -14,7 +20,6 @@ class InputGroup extends Component {
             children,
             className,
             compact,
-            customStyles,
             disableStyles,
             state,
             ...props
@@ -51,11 +56,8 @@ InputGroup.propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,
     compact: PropTypes.bool,
-    customStyles: PropTypes.object,
     disableStyles: PropTypes.bool,
     state: PropTypes.oneOf(FORM_STATES)
 };
 
-export { InputGroup as __InputGroup };
-
-export default withStyles(InputGroup, { cssFile: 'input-group', fonts: true });
+export default InputGroup;

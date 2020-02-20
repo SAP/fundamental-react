@@ -12,7 +12,4 @@ storiesOf('Components|TimePicker', module)
     ))
     .add('disable styles', () => (
         <TimePicker disableStyles />
-    ))
-    .add('custom styles', () => (
-        <TimePicker customStyles={require('../../utils/WithStyles/customStylesTest.css')} />
     ));

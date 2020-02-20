@@ -1,7 +1,7 @@
 import Icon from '../Icon/Icon';
 import Menu from '../Menu/Menu';
 import { mount } from 'enzyme';
-import { mountComponentWithStyles } from '../utils/testUtils';
+
 import Popover from './Popover';
 import React from 'react';
 import renderer from 'react-test-renderer';
@@ -120,7 +120,7 @@ describe('<Popover />', () => {
     });
 
     test('handle document click to close popover', () => {
-        const wrapper = mountComponentWithStyles(popOver);
+        const wrapper = mount(popOver);
 
         // click on popover to show
         wrapper.find('div.fd-popover__control .sap-icon--cart').simulate('click');
@@ -134,7 +134,7 @@ describe('<Popover />', () => {
     });
 
     test('handle esc key to close popover', () => {
-        const wrapper = mountComponentWithStyles(popOver);
+        const wrapper = mount(popOver);
 
         // click on popover to show
         wrapper.find('div.fd-popover__control .sap-icon--cart').simulate('click');
@@ -147,7 +147,7 @@ describe('<Popover />', () => {
     });
 
     test('handle document click to close popover', () => {
-        const wrapper = mountComponentWithStyles(popOver);
+        const wrapper = mount(popOver);
 
         // click on popover to show
         wrapper.find('div.fd-popover__control .sap-icon--cart').simulate('click');
@@ -160,7 +160,7 @@ describe('<Popover />', () => {
     });
 
     test('handle document click to close popover', () => {
-        const wrapper = mountComponentWithStyles(popOverDisabled);
+        const wrapper = mount(popOverDisabled);
 
         // click on popover to show
         wrapper.find('div.fd-popover__control .sap-icon--cart').simulate('click');
@@ -184,7 +184,7 @@ describe('<Popover />', () => {
 
     describe('control accessibility', () => {
         test('adds a tabindex of 0 to the control', () => {
-            const wrapper = mountComponentWithStyles(popOver);
+            const wrapper = mount(popOver);
             const button = wrapper.find('Icon').at(0);
 
             expect(button.props().tabIndex).toEqual(0);
@@ -192,19 +192,19 @@ describe('<Popover />', () => {
 
         test('adds appropriate aria-haspopup to the control', () => {
             //check unset type
-            let wrapper = mountComponentWithStyles(popOver);
+            let wrapper = mount(popOver);
             let button = wrapper.find('Icon').at(0);
             expect(button.props()['aria-haspopup']).toEqual(true);
 
             //check valid string type
             const dialogPopover = React.cloneElement(popOver, { type: 'dialog' });
-            wrapper = mountComponentWithStyles(dialogPopover);
+            wrapper = mount(dialogPopover);
             button = wrapper.find('Icon').at(0);
             expect(button.props()['aria-haspopup']).toEqual('dialog');
         });
 
         test('adds appropriate aria-expanded to the control, and updates it on state change', () => {
-            const wrapper = mountComponentWithStyles(popOver);
+            const wrapper = mount(popOver);
             let button = wrapper.find('Icon').at(0);
             expect(button.props()['aria-expanded']).toEqual(false);
             wrapper.setState({ isExpanded: true }, () => {
@@ -218,14 +218,14 @@ describe('<Popover />', () => {
         });
 
         test('adds appropriate aria-controls to the control', () => {
-            let wrapper = mountComponentWithStyles(popOver);
+            let wrapper = mount(popOver);
             let button = wrapper.find('Icon').at(0);
             expect(button.props()['aria-controls']).toEqual('fd-default-popover');
 
             //check undefined popperProps
             // eslint-disable-next-line no-undefined
             const propLessPopover = React.cloneElement(popOver, { popperProps: undefined } );
-            wrapper = mountComponentWithStyles(propLessPopover);
+            wrapper = mount(propLessPopover);
             wrapper.setState({ isExpanded: true }, () => {
                 const popoverContentId = document.querySelector('div.fd-popover__popper').id;
                 button = wrapper.find('Icon').at(0);
@@ -234,7 +234,7 @@ describe('<Popover />', () => {
         });
 
         test('adds a role of button to the control', () => {
-            const wrapper = mountComponentWithStyles(popOver);
+            const wrapper = mount(popOver);
             const button = wrapper.find('Icon').at(0);
 
             expect(button.props().role).toEqual('button');
@@ -245,7 +245,7 @@ describe('<Popover />', () => {
                 keyCode: 32,
                 preventDefault: () => {}
             };
-            const wrapper = mountComponentWithStyles(popOver);
+            const wrapper = mount(popOver);
             const button = wrapper.find('Icon').at(0);
             button.prop('onKeyPress')(syntheticEvent, 'Icon', wrapper.triggerBody);
 
@@ -257,7 +257,7 @@ describe('<Popover />', () => {
                 keyCode: 13,
                 preventDefault: () => {}
             };
-            const wrapper = mountComponentWithStyles(popOver);
+            const wrapper = mount(popOver);
             const button = wrapper.find('Icon').at(0);
             button.prop('onKeyPress')(syntheticEvent, 'Icon', wrapper.triggerBody);
 

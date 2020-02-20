@@ -1,10 +1,18 @@
 import classnames from 'classnames';
 import { INPUT_TYPES } from '../utils/constants';
 import PropTypes from 'prop-types';
-import React from 'react';
-import withStyles from '../utils/WithStyles/WithStyles';
+import React, { useEffect } from 'react';
 
 const FormInput = React.forwardRef(({ state, className, compact, disabled, id, name, placeholder, readOnly, type, value, disableStyles, ...props }, ref) => {
+
+    useEffect(() => {
+        if (!disableStyles) {
+            require('fundamental-styles/dist/fonts.css');
+            require('fundamental-styles/dist/input.css');
+        }
+    }, []);
+
+
     const formInputClasses = classnames(
         'fd-input',
         {
@@ -34,7 +42,7 @@ FormInput.displayName = 'FormInput';
 FormInput.propTypes = {
     className: PropTypes.string,
     compact: PropTypes.bool,
-    customStyles: PropTypes.object,
+
     disabled: PropTypes.bool,
     disableStyles: PropTypes.bool,
     id: PropTypes.string,
@@ -57,6 +65,4 @@ FormInput.propDescriptions = {
     value: 'Value for the `value` attribute on the input.'
 };
 
-export { FormInput as __FormInput };
-
-export default withStyles(FormInput, { cssFile: 'input', fonts: true });
+export default FormInput;

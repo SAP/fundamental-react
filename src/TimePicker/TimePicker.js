@@ -3,7 +3,6 @@ import Popover from '../Popover/Popover';
 import PropTypes from 'prop-types';
 import Time from '../Time/Time';
 import TimePickerItem from './_TimePickerItem';
-import withStyles from '../utils/WithStyles/WithStyles';
 import React, { Component } from 'react';
 
 class TimePicker extends Component {
@@ -42,6 +41,13 @@ class TimePicker extends Component {
             value = value + ' am/pm';
         }
         this.state.placeholder = value;
+    }
+
+    // TO DO: remove when rebuilt using inputgroup
+    componentDidMount() {
+        if (!this.props.disableStyles) {
+            require('fundamental-styles/dist/input-group.css');
+        }
     }
 
     onChange = time => {
@@ -165,7 +171,6 @@ TimePicker.displayName = 'TimePicker';
 
 TimePicker.propTypes = {
     ...Time.basePropTypes,
-
     buttonProps: PropTypes.object,
     disabled: PropTypes.bool,
     id: PropTypes.string,
@@ -204,6 +209,4 @@ TimePicker.propDescriptions = {
     value: 'Initial time value for the input.'
 };
 
-export { TimePicker as __TimePicker };
-
-export default withStyles(TimePicker, { cssFile: 'input-group' });
+export default TimePicker;

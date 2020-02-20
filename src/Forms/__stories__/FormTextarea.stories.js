@@ -12,10 +12,4 @@ storiesOf('Components|FormTextarea', module)
     ))
     .add('disable styles', () => (
         <FormTextarea disableStyles>Default</FormTextarea>
-    ))
-    .add('custom styles', () => (
-        <FormTextarea
-            customStyles={require('../../utils/WithStyles/customStylesTest.css')}>
-            Default
-        </FormTextarea>
     ));

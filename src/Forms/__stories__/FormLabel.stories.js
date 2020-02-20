@@ -12,10 +12,4 @@ storiesOf('Components|FormLabel', module)
     ))
     .add('disable styles', () => (
         <FormLabel disableStyles>Default</FormLabel>
-    ))
-    .add('custom styles', () => (
-        <FormLabel
-            customStyles={require('../../utils/WithStyles/customStylesTest.css')}>
-            Default
-        </FormLabel>
     ));

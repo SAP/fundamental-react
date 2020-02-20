@@ -146,3 +146,10 @@ export const POPPER_SIZING_TYPES_DESCRIPTION = `<ul>
 <li>"minTarget" - right edge aligns with target unless Popover content is bigger</li>
 <li>"maxTarget" - right edge aligns with target unless Popover content is smaller</li>
 </ul>`;
+
+export const GridSelector = {
+    ROW: 'tr, [role="row"]',
+    HEADER: 'th',
+    CELL: 'td, [role="gridcell"]',
+    FOCUSABLE: 'input:enabled, select, textarea, a[href], button, [tabindex], [role="button"]'
+};
