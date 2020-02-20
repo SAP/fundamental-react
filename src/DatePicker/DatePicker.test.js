@@ -25,70 +25,6 @@ describe('<DatePicker />', () => {
         mount(compactRangeDatepicker);
     });
 
-    test('open/close by calendar icon button', () => {
-        wrapper = mount(defaultDatePicker);
-        expect(wrapper.state('hidden')).toBeTruthy();
-
-        wrapper
-            .find('button.fd-button--light.sap-icon--calendar')
-            .simulate('click', { type: 'input' });
-
-        expect(wrapper.state('hidden')).toBeFalsy();
-    });
-
-    test('open/close calendar', () => {
-        wrapper = mount(defaultDatePicker);
-        // check to make sure calendar is hidden
-        expect(wrapper.state('hidden')).toBeTruthy();
-
-        // click to show calendar
-        wrapper.find('input[type="text"]').simulate('click', { type: 'input' });
-
-        // check to make sure calendar is shown
-        expect(wrapper.state('hidden')).toBeFalsy();
-
-        // clicking on input text should keep calendar displayed
-        wrapper.find('input[type="text"]').simulate('click', { type: 'input' });
-
-        // check to make sure calendar is shown
-        expect(wrapper.state('hidden')).toBeFalsy();
-
-        // click to show calendar
-        wrapper.find('input[type="text"]').simulate('click', { type: '' });
-
-        // check to make sure calendar is shown
-        expect(wrapper.state('hidden')).toBeFalsy();
-    });
-
-    test('open/close range calendar', () => {
-        wrapper = mount(rangeDatePicker);
-        //open date picker calendar
-        expect(wrapper.state('hidden')).toBeTruthy();
-
-        // click to show calendar
-        wrapper.find('input[type="text"]').simulate('click', { type: 'input' });
-
-        // check to make sure calendar is shown
-        expect(wrapper.state('hidden')).toBeFalsy();
-
-        wrapper.instance().componentWillMount();
-
-        // click on body element
-        let event = new MouseEvent('mousedown', {
-            target: document.querySelector('body')
-        });
-        document.dispatchEvent(event);
-
-        // check to make sure calendar is hidden
-        expect(wrapper.state('hidden')).toBeTruthy();
-
-        // show date picker, select date range then close
-        wrapper.find('input[type="text"]').simulate('click', { type: '' });
-
-        // check to make sure calendar is shown
-        expect(wrapper.state('hidden')).toBeFalsy();
-    });
-
     test('start date and end date range', () => {
         wrapper = mount(rangeDatePicker);
         // set dates
@@ -306,7 +242,7 @@ describe('<DatePicker />', () => {
             const blur = jest.fn();
             const element = mount(<DatePicker onBlur={blur} />);
 
-            element.find('button.fd-button--light.sap-icon--calendar').simulate('click', { type: 'input' });
+            element.find('button.fd-button--light.sap-icon--calendar').simulate('click');
 
             element.find('table.fd-calendar__table tbody.fd-calendar__group tr.fd-calendar__row td.fd-calendar__item:not(.fd-calendar__item--other-month)')
                 .at(0)
@@ -323,7 +259,7 @@ describe('<DatePicker />', () => {
             const blur = jest.fn();
             const element = mount(<DatePicker onBlur={blur} />);
 
-            element.find('input[type="text"]').simulate('click', { type: 'input' });
+            element.find('input[type="text"]').simulate('click');
 
             let event = new MouseEvent('mousedown', { target: document.querySelector('body') });
             document.dispatchEvent(event);

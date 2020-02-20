@@ -1,7 +1,11 @@
 import Button from '../Button/Button';
 import classnames from 'classnames';
+import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
+import GridManager from '../utils/gridManager/gridManager';
+import keycode from 'keycode';
 import moment from 'moment';
 import PropTypes from 'prop-types';
+import { isDateBetween, isEnabledDate } from '../utils/dateUtils';
 import React, { Component } from 'react';
 
 class Calendar extends Component {
@@ -11,20 +15,25 @@ class Calendar extends Component {
 
         this.state = {
             todayDate: moment().startOf('day'),
-            currentDateDisplayed: moment(),
+            gridBoundaryContext: null,
+            refocusGrid: this.props.focusOnInit,
+            currentDateDisplayed: moment().startOf('day'),
             arrSelectedDates: [],
             selectedDate: moment({ year: 0 }),
             showMonths: false,
             showYears: false,
             dateClick: false
         };
+
+        this.tableRef = React.createRef();
     }
 
-    componentDidMount() {
+    componentDidMount = () => {
         if (!this.props.disableStyles) {
             require('fundamental-styles/dist/fonts.css');
             require('fundamental-styles/dist/calendar.css');
         }
+        this.gridManager = new GridManager(this.getGridOptions());
     }
 
     // sync the selected date of the calendar with the date picker
@@ -40,7 +49,7 @@ class Calendar extends Component {
                 if (customDate !== previousStates.arrSelectedDates) {
                     if (!customDate || !customDate.length) {
                         // reset calendar state when date picker input is empty and did not click on a date
-                        return ({ currentDateDisplayed: moment(), arrSelectedDates: [], selectedDate: moment({ year: 0 }) });
+                        return ({ currentDateDisplayed: moment().startOf('day'), arrSelectedDates: [], selectedDate: moment({ year: 0 }) });
                     }
                     // update calendar state with date picker input
                     return ({ currentDateDisplayed: customDate[0], arrSelectedDates: customDate, selectedDate: moment({ year: 0 }) });
@@ -48,7 +57,7 @@ class Calendar extends Component {
             } else if (customDate !== previousStates.currentDateDisplayed) {
                 if (!customDate) {
                     // reset calendar state when date picker input is empty and did not click on a date
-                    return ({ currentDateDisplayed: moment(), selectedDate: moment({ year: 0 }) });
+                    return ({ currentDateDisplayed: moment().startOf('day'), selectedDate: moment({ year: 0 }) });
                 }
                 // update calendar state with date picker input
                 return ({ currentDateDisplayed: customDate, selectedDate: customDate });
@@ -57,35 +66,80 @@ class Calendar extends Component {
         return ({ dateClick: false });
     }
 
+    componentDidUpdate = (prevProps, prevState) => {
+        // if switching picker view or switching to a new month or year, reconstruct grid
+        const newView = this.state.showMonths !== prevState.showMonths || this.state.showYears !== prevState.showYears;
+        if (
+            newView ||
+            this.state.currentDateDisplayed.month() !== prevState.currentDateDisplayed.month() ||
+            this.state.currentDateDisplayed.year() !== prevState.currentDateDisplayed.year()
+        ) {
+            this.gridManager.attachTo(this.getGridOptions(newView));
+        }
+    }
+
+    getGridOptions = (newView) => {
+        const { gridBoundaryContext, refocusGrid } = this.state;
+        const tableElement = this.tableRef.current;
+        const focusedDateElement = tableElement.querySelector('[data-is-focused=true]');
+        const selectedDateElement = tableElement.querySelector('.is-selected');
+        const todayDateElement = tableElement.querySelector('.fd-calendar__item--current');
+        const disabledDateElements = tableElement.querySelectorAll('.fd-calendar__item--other-month');
+        const focusOnInit = newView || gridBoundaryContext || refocusGrid;
+
+        let firstFocusedElement;
+        if (focusedDateElement) {
+            firstFocusedElement = focusedDateElement;
+        } else if (selectedDateElement) {
+            firstFocusedElement = selectedDateElement;
+        } else {
+            firstFocusedElement = todayDateElement;
+        }
+
+        let firstFocusedCoordinates = { row: 0, col: 0 };
+        if (gridBoundaryContext) {
+            const { currentCell, directionX, directionY } = gridBoundaryContext;
+            let firstFocusedRow = currentCell && currentCell.row;
+            let firstFocusedCol = currentCell && currentCell.col;
+
+            // start from the bottom/top of the grid and keep searching for an available date in the direction used to pass the grid boundary
+            if (directionX === -1) {
+                firstFocusedRow = 5; // max 5 different weeks in view
+                firstFocusedCol = 7;
+            } else if (directionX === 1) {
+                firstFocusedRow = 0;
+                firstFocusedCol = 0;
+            } else if (directionY === -1) {
+                firstFocusedRow = 5;
+            } else if (directionY === 1) {
+                firstFocusedRow = 0;
+            }
+
+            firstFocusedCoordinates = { row: firstFocusedRow, col: firstFocusedCol };
+        }
+
+        this.setState({ gridBoundaryContext: null, refocusGrid: false, dateClick: true });
+
+        return {
+            gridNode: this.tableRef.current,
+            firstFocusedElement: gridBoundaryContext ? null : firstFocusedElement,
+            firstFocusedCoordinates: firstFocusedCoordinates,
+            firstCellSearchDirection: gridBoundaryContext ? gridBoundaryContext : { directionX: 1, directionY: 0 },
+            enableHeaderCells: false,
+            focusOnInit: focusOnInit,
+            wrapRows: true,
+            wrapCols: false,
+            disabledCells: disabledDateElements,
+            onPassBoundary: this.onPassGridBoundary
+        };
+    }
+
     showMonths = () => {
         this.setState({
             showMonths: !this.state.showMonths,
             showYears: false,
             dateClick: true
         });
-    }
-
-    isEnabledDate = (day) => {
-        const {
-            disableWeekends,
-            disableAfterDate,
-            disableBeforeDate,
-            blockedDates,
-            disableWeekday,
-            disablePastDates,
-            disableFutureDates,
-            disabledDates
-        } = this.props;
-        return (
-            !this.disableWeekday(day, disableWeekday) &&
-            !(disableWeekends && (day.day() === 0 || day.day() === 6)) &&
-            !(disableBeforeDate && day.isBefore(moment(disableBeforeDate))) &&
-            !(disableAfterDate && day.isAfter(moment(disableAfterDate))) &&
-            !(disablePastDates && day.isBefore(moment(), 'day')) &&
-            !(disableFutureDates && day.isAfter(moment(), 'day')) &&
-            !this.isDateBetween(day, blockedDates && blockedDates.map(date => moment(date))) &&
-            !this.isDateBetween(day, disabledDates && disabledDates.map(date => moment(date)))
-        );
     }
 
     isSelected = (day) => {
@@ -97,12 +151,12 @@ class Calendar extends Component {
                     (typeof arrSelectedDates[0] !== 'undefined' ? arrSelectedDates[0].isSame(day, 'day') : false) ||
                     (typeof arrSelectedDates[1] !== 'undefined' ? arrSelectedDates[1].isSame(day, 'day') : false)
                 ))
-            ) && this.isEnabledDate(day)
+            ) && isEnabledDate(day, this.props)
         );
     }
 
     isInSelectedRange = (day) => {
-        return this.props.enableRangeSelection && this.isDateBetween(day, this.state.arrSelectedDates, this.props.enableRangeSelection);
+        return this.props.enableRangeSelection && isDateBetween(day, this.state.arrSelectedDates, this.props.enableRangeSelection);
     }
 
     isSelectedRangeFirst = (day) => {
@@ -124,45 +178,78 @@ class Calendar extends Component {
     changeMonth = (month) => {
         const newDate = moment(this.state.currentDateDisplayed)
             .locale(this.props.locale)
-            .month(month)
-            .date(1);
+            .month(month);
 
-        if (!this.props.enableRangeSelection) {
-            this.setState({
-                currentDateDisplayed: newDate,
-                selectedDate: newDate,
-                showMonths: false,
-                dateClick: true
-            }, function() {
-                this.props.onChange(newDate);
-            });
-        } else {
-            this.setState({
-                currentDateDisplayed: newDate,
-                showMonths: false,
-                dateClick: true
-            });
-        }
+        this.setState({
+            currentDateDisplayed: newDate,
+            showMonths: false,
+            dateClick: true
+        });
     }
 
     changeYear = (year) => {
         const newDate = moment(this.state.currentDateDisplayed).year(year);
 
-        if (!this.props.enableRangeSelection) {
-            this.setState({
-                currentDateDisplayed: newDate,
-                selectedDate: newDate,
-                showYears: false,
-                dateClick: true
-            }, function() {
-                this.props.onChange(newDate);
-            });
-        } else {
-            this.setState({
-                currentDateDisplayed: newDate,
-                showYears: false,
-                dateClick: true
-            });
+        this.setState({
+            currentDateDisplayed: newDate,
+            showYears: false,
+            dateClick: true
+        });
+    }
+
+    onPassGridBoundary = ({ currentCell, directionX, directionY }) => {
+        if (!this.state.showMonths && !this.state.showYears) {
+            currentCell.element.setAttribute('tabindex', -1);
+            this.setState({ gridBoundaryContext: { currentCell, directionX, directionY }, dateClick: true });
+
+            if (directionX === -1 || directionY === -1) {
+                this.handlePrevious();
+            } else if (directionX === 1 || directionY === 1) {
+                this.handleNext();
+            }
+        }
+    }
+
+    onKeyDownCalendar = (event) => {
+        let newDate;
+
+        const focusedDateElement = this.tableRef.current && this.tableRef.current.querySelector('.fd-calendar__text:focus');
+        const focusedDate = parseInt(focusedDateElement && focusedDateElement.textContent, 10);
+
+        switch (keycode(event)) {
+            case 'page up':
+                event.preventDefault();
+                newDate = moment(this.state.currentDateDisplayed).subtract(1, event.shiftKey ? 'year' : 'month');
+                newDate.date(newDate.daysInMonth() < focusedDate ? newDate.daysInMonth() : focusedDate);
+                this.setState({
+                    currentDateDisplayed: newDate,
+                    refocusGrid: true,
+                    dateClick: true
+                });
+                break;
+            case 'page down':
+                event.preventDefault();
+                newDate = moment(this.state.currentDateDisplayed).add(1, event.shiftKey ? 'year' : 'month');
+                newDate.date(newDate.daysInMonth() < focusedDate ? newDate.daysInMonth() : focusedDate);
+                this.setState({
+                    currentDateDisplayed: newDate,
+                    refocusGrid: true,
+                    dateClick: true
+                });
+                break;
+            default:
+        }
+    }
+
+    onKeyDownDay = (event, onKeyFunction) => {
+        switch (keycode(event)) {
+            case 'enter':
+            case 'space':
+                event.preventDefault();
+                event.stopPropagation();
+                onKeyFunction();
+                break;
+            default:
         }
     }
 
@@ -193,7 +280,8 @@ class Calendar extends Component {
                     <td aria-selected={isSelected} className={calendarItemClasses}
                         key={month} name={month}
                         onClick={() => this.changeMonth(month)}>
-                        <span className='fd-calendar__text' role='button'>
+                        <span className='fd-calendar__text'
+                            onKeyDown={(e) => this.onKeyDownDay(e, this.changeMonth.bind(this, month))} role='button'>
                             {shortenedNameMonth}
                         </span>
                     </td>
@@ -210,6 +298,7 @@ class Calendar extends Component {
         return (
             <div className='fd-calendar__months'>
                 <table {...monthProps} className='fd-calendar__table'
+                    ref={this.tableRef}
                     role='grid'>
                     <tbody className='fd-calendar__group'>
                         {listOfMonths}
@@ -243,8 +332,10 @@ class Calendar extends Component {
                 return (
                     <td aria-selected={isSelected}
                         className={yearClasses} key={element}
-                        name={element} onClick={() => this.changeYear(element)}>
-                        <span className='fd-calendar__text' role='button'>
+                        name={element}
+                        onClick={() => this.changeYear(element)}>
+                        <span className='fd-calendar__text'
+                            onKeyDown={(e) => this.onKeyDownDay(e, this.changeYear.bind(this, element))} role='button'>
                             {element}
                         </span>
                     </td>
@@ -260,6 +351,7 @@ class Calendar extends Component {
         return (
             <div className='fd-calendar__years'>
                 <table {...yearListProps} className='fd-calendar__table'
+                    ref={this.tableRef}
                     role='grid'>
                     <tbody className='fd-calendar__group'>
                         {listOfYears}
@@ -330,24 +422,19 @@ class Calendar extends Component {
         return blockedDates[0].isBefore(date, 'day') && blockedDates[1].isAfter(date, 'day');
     }
 
-    disableWeekday = (date, weekDays) => {
-        if (!weekDays) {
-            return false;
-        }
-
-        const daysName = moment.weekdays();
-
-        return weekDays.indexOf(daysName[date.day()]) > -1;
-    }
-
     generateNavigation = () => {
         const months = moment.localeData(this.props.locale).months();
+        const previousButtonLabel = this.state.showYears ?
+            this.props.localizedText.show12PreviousYears : this.props.localizedText.previousMonth;
+        const nextButtonLabel = this.state.showYears ?
+            this.props.localizedText.show12NextYears : this.props.localizedText.nextMonth;
 
         return (
             <header className='fd-calendar__header'>
-                <div className='fd-calendar__navigation'>
+                <div aria-live='polite' className='fd-calendar__navigation'>
                     <div className='fd-calendar__action'>
                         <Button
+                            aria-label={previousButtonLabel}
                             compact
                             disableStyles={this.props.disableStyles}
                             glyph='slim-arrow-left'
@@ -379,6 +466,7 @@ class Calendar extends Component {
 
                     <div className='fd-calendar__action'>
                         <Button
+                            aria-label={nextButtonLabel}
                             compact
                             disableStyles={this.props.disableStyles}
                             glyph='slim-arrow-right'
@@ -416,19 +504,23 @@ class Calendar extends Component {
         const enableRangeSelection = this.props.enableRangeSelection;
 
         const firstDayMonth = moment(currentDateDisplayed).startOf('month');
-        const endDayMonth = moment(firstDayMonth).endOf('month');
         const firstDayWeekMonth = moment(firstDayMonth).startOf('week');
-        const lastDateEndMonth = moment(endDayMonth).endOf('week');
         const rows = [];
 
         let days = [];
         let day = firstDayWeekMonth;
         let dateFormatted = '';
 
-        while (day.isSameOrBefore(lastDateEndMonth)) {
+        for (let week = 0; week < 6; week++) {
             for (let iterations = 0; iterations < 7; iterations++) {
                 dateFormatted = day.date();
                 const copyDate = moment(day);
+                const isDisabled = !isEnabledDate(day, this.props);
+                const isBlocked = isDateBetween(day, blockedDates);
+                const ariaLabel = copyDate.format(moment.localeData(this.props.locale).longDateFormat('LL'));
+                if (isDisabled || isBlocked) {
+                    ariaLabel += ' ' + moment.localeData(this.props.locale).invalidDate();
+                }
 
                 const dayClasses = classnames(
                     'fd-calendar__item',
@@ -439,19 +531,25 @@ class Calendar extends Component {
                         'is-selected-range-first': this.isSelectedRangeFirst(day),
                         'is-selected-range-last': this.isSelectedRangeLast(day),
                         'is-selected-range': this.isInSelectedRange(day),
-                        'is-disabled': !this.isEnabledDate(day),
-                        'is-blocked': this.isDateBetween(day, blockedDates)
+                        'is-disabled': isDisabled,
+                        'is-blocked': isBlocked
                     }
                 );
 
                 days.push(
                     <td
+                        aria-disabled={isDisabled}
                         aria-selected={this.isSelected(day)}
                         className={dayClasses}
+                        data-is-focused={day.isSame(currentDateDisplayed)}
                         key={copyDate}
-                        onClick={this.isEnabledDate(day) ? () => this.dateClick(copyDate, enableRangeSelection) : null}
+                        onClick={isEnabledDate(day, this.props) ? () => this.dateClick(copyDate, enableRangeSelection) : null}
                         role='gridcell'>
-                        <span className='fd-calendar__text' role='button'>{dateFormatted.toString()}</span>
+                        <span
+                            aria-label={ariaLabel}
+                            className='fd-calendar__text'
+                            onKeyDown={isEnabledDate(day, this.props) ? (e) => this.onKeyDownDay(e, this.dateClick.bind(this, copyDate, enableRangeSelection)) : null}
+                            role='button'>{dateFormatted.toString()}</span>
                     </td >
                 );
 
@@ -481,7 +579,8 @@ class Calendar extends Component {
 
         return (
             <div className='fd-calendar__dates'>
-                <table {...tableProps} className='fd-calendar__table'>
+                <table {...tableProps} className='fd-calendar__table'
+                    ref={this.tableRef}>
                     <thead {...tableHeaderProps} className='fd-calendar__group'>
                         {this.generateWeekdays()}
                     </thead>
@@ -505,6 +604,7 @@ class Calendar extends Component {
             disabledDates,
             customDate,
             className,
+            focusOnInit,
             localizedText,
             monthListProps,
             yearListProps,
@@ -520,7 +620,8 @@ class Calendar extends Component {
         );
 
         return (
-            <div {...props} className={calendarClasses}>
+            <div {...props} className={calendarClasses}
+                onKeyDown={(e) => this.onKeyDownCalendar(e)}>
                 {this.generateNavigation()}
                 <div className='fd-calendar__content'>
                     {this._renderContent(monthListProps, yearListProps, tableProps, tableHeaderProps, tableBodyProps)}
@@ -542,7 +643,13 @@ Calendar.basePropTypes = {
     disableFutureDates: PropTypes.bool,
     disablePastDates: PropTypes.bool,
     disableWeekday: PropTypes.arrayOf(PropTypes.string),
-    disableWeekends: PropTypes.bool
+    disableWeekends: PropTypes.bool,
+    localizedText: CustomPropTypes.i18n({
+        nextMonth: PropTypes.string,
+        previousMonth: PropTypes.string,
+        show12NextYears: PropTypes.string,
+        show12PreviousYears: PropTypes.string
+    })
 };
 
 Calendar.propTypes = {
@@ -557,6 +664,12 @@ Calendar.propTypes = {
 
 Calendar.defaultProps = {
     locale: 'en',
+    localizedText: {
+        nextMonth: 'Next month',
+        previousMonth: 'Previous month',
+        show12NextYears: 'Show 12 next years',
+        show12PreviousYears: 'Show 12 previous years'
+    },
     onChange: () => { }
 };
 
@@ -569,11 +682,18 @@ Calendar.propDescriptions = {
     disablePastDates: 'Set to **true** to disable dates before today\'s date.',
     disableWeekday: 'Disables dates that match a weekday.',
     disableWeekends: 'Set to **true** to disables dates that match a weekend.',
-    monthListProps: 'Additional props to be spread to the month\'s `<ul>` element.',
+    focusOnInit: 'Set to **true** to focus the calendar grid upon being mounted',
+    localizedTextShape: {
+        nextMonth: 'aria-label for next button',
+        previousMonth: 'aria-label for previous button',
+        show12NextYears: 'aria-label for next button when years are displayed',
+        show12PreviousYears: 'aria-label for previous button when years are displayed'
+    },
+    monthListProps: 'Additional props to be spread to the month\'s `<table>` element.',
     tableBodyProps: 'Additional props to be spread to the `<tbody>` element.',
     tableHeaderProps: 'Additional props to be spread to the `<thead>` element.',
     tableProps: 'Additional props to be spread to the `<table>` element.',
-    yearListProps: 'Additional props to be spread to the year\'s `<ul>` element.'
+    yearListProps: 'Additional props to be spread to the year\'s `<table>` element.'
 };
 
 export default Calendar;

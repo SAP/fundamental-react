@@ -97,9 +97,6 @@ describe('<Calendar />', () => {
         const currentDateDisplayed = wrapper.state('currentDateDisplayed');
 
         expect(currentDateDisplayed.month()).toEqual(3);
-
-        // check that first of month is selected
-        expect(currentDateDisplayed.date()).toEqual(1);
     });
 
     test('click month from list with date range', () => {
