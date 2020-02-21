@@ -13,7 +13,7 @@ export const FormsComponent = () => {
 
             <Example
                 description={`Inputs are used to collect data from the user. When a field is required,
-                the label should include an asterisk (*).`}
+                the <code>required</code> prop will include an asterisk (*).`}
                 title='Inputs'>
                 <div>
                     <FormGroup>

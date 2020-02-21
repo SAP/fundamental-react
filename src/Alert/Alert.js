@@ -1,4 +1,5 @@
 import { ALERT_TYPES } from '../utils/constants';
+import Button from '../Button/Button';
 import classnames from 'classnames';
 import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import Icon from '../Icon/Icon';
@@ -56,12 +57,14 @@ const Alert = (props) => {
                     className={alertClasses}
                     role='alert'>
                     {dismissible && (
-                        <button
+                        <Button
                             {...buttonProps}
                             aria-controls='j2ALl423'
                             aria-label={localizedText.close}
                             className='fd-alert__close'
-                            onClick={closeAlertHandler} />
+                            compact
+                            onClick={closeAlertHandler}
+                            option='light' />
                     )}
                     <p className='fd-alert__text'>
                         {type && (

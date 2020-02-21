@@ -8,7 +8,7 @@ import {
     withKnobs
 } from '@storybook/addon-knobs';
 
-const menu = () => (<Menu>
+const menu = (<Menu>
     <Menu.List>
         <Menu.Item url='#'>Pear</Menu.Item>
         <Menu.Item url='#'>Strawberry</Menu.Item>
