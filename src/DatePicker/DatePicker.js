@@ -133,6 +133,8 @@ class DatePicker extends Component {
             blockedDates,
             buttonLabel,
             buttonProps,
+            popoverStyle,
+            popoverProps,
             className,
             compact,
             disableAfterDate,
@@ -157,6 +159,7 @@ class DatePicker extends Component {
                 className={className}
                 ref={component => (this.component = component)}>
                 <Popover
+                    style={popoverStyle}
                     body={
                         <Calendar
                             blockedDates={blockedDates}
@@ -215,6 +218,8 @@ DatePicker.propTypes = {
     ...Calendar.basePropTypes,
     buttonLabel: PropTypes.string,
     buttonProps: PropTypes.object,
+    popoverStyle: PropTypes.object,
+    popoverProps: PropTypes.object,
     compact: PropTypes.bool,
     defaultValue: PropTypes.string,
     enableRangeSelection: PropTypes.bool,
@@ -225,6 +230,9 @@ DatePicker.propTypes = {
 
 DatePicker.defaultProps = {
     buttonLabel: 'Choose date',
+    popoverStyle: {
+      width: '100%'
+    },
     defaultValue: '',
     locale: 'en',
     onBlur: () => {}
