@@ -21,14 +21,6 @@ storiesOf('Components|LayoutGrid', module)
             <div>Default3</div>
         </LayoutGrid>
     ))
-    .add('custom styles', () => (
-        <LayoutGrid
-            customStyles={require('../../utils/WithStyles/customStylesTest.css')}>
-            <div>Default1</div>
-            <div>Default2</div>
-            <div>Default3</div>
-        </LayoutGrid>
-    ))
     .add('nogap', () => (
         <LayoutGrid nogap>
             <div>Default1</div>

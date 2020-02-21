@@ -53,10 +53,6 @@ storiesOf('Components|Calendar', module)
     .add('disable styles', () => (
         <Calendar disableStyles />
     ))
-    .add('custom styles', () => (
-        <Calendar
-            customStyles={require('../../utils/WithStyles/customStylesTest.css')} />
-    ))
     .add('range selection', () => (
         <Calendar enableRangeSelection />
     ));

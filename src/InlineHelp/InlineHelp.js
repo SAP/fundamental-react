@@ -1,10 +1,17 @@
 import classnames from 'classnames';
 import { INLINE_HELP_PLACEMENTS } from '../utils/constants';
 import PropTypes from 'prop-types';
-import React from 'react';
-import withStyles from '../utils/WithStyles/WithStyles';
+import React, { useEffect } from 'react';
 
 const InlineHelp = React.forwardRef(({ text, placement, className, contentClassName, disableStyles, ...props }, ref) => {
+
+    useEffect(() => {
+        if (!disableStyles) {
+            require('fundamental-styles/dist/icon.css');
+            require('fundamental-styles/dist/fonts.css');
+            require('fundamental-styles/dist/inline-help.css');
+        }
+    }, []);
 
     const inlineHelpClasses = classnames(
         'fd-inline-help',
@@ -36,7 +43,6 @@ InlineHelp.propTypes = {
     text: PropTypes.string.isRequired,
     className: PropTypes.string,
     contentClassName: PropTypes.string,
-    customStyles: PropTypes.object,
     disableStyles: PropTypes.bool,
     placement: PropTypes.oneOf(INLINE_HELP_PLACEMENTS)
 };
@@ -51,6 +57,4 @@ InlineHelp.propDescriptions = {
     text: 'Localized text to display in the inline help pop-up.'
 };
 
-export { InlineHelp as __InlineHelp };
-
-export default withStyles(InlineHelp, { cssFile: 'inline-help', fonts: true, icons: true });
+export default InlineHelp;
