@@ -241,6 +241,7 @@ DatePicker.defaultProps = {
 DatePicker.propDescriptions = {
     ...Calendar.propDescriptions,
     buttonLabel: 'aria-label for datepicker button',
+    popoverStyle: 'Styles applied to child Popover',
     defaultValue: 'Default value to be shown in the Datepicker. The only accepted format is the ISO format, i.e. YYYY-MM-DD',
     enableRangeSelection: 'Set to **true** to enable the selection of a date range (begin and end).',
     locale: 'Language code to set the locale.',
