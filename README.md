@@ -66,7 +66,7 @@ If you want to contribute, please check the [Contribution Guidelines](https://gi
 
 ## License
 
-Copyright (c) 2019 SAP SE or an SAP affiliate company. All rights reserved.
+Copyright (c) 2020 SAP SE or an SAP affiliate company. All rights reserved.
 This library is licensed under the Apache Software License, v. 2 except as noted otherwise in the [License File](https://github.com/SAP/fundamental-react/blob/master/LICENSE.txt).
 
 ## Similar Projects
