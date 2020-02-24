@@ -12,10 +12,4 @@ storiesOf('Components|FormFieldset', module)
     ))
     .add('disable styles', () => (
         <FormFieldset disableStyles>Default</FormFieldset>
-    ))
-    .add('custom styles', () => (
-        <FormFieldset
-            customStyles={require('../../utils/WithStyles/customStylesTest.css')}>
-            Default
-        </FormFieldset>
     ));

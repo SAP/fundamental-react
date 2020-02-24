@@ -13,10 +13,4 @@ storiesOf('Components|Identifier', module)
     .add('disable styles', () => (
         <Identifier disableStyles
             glyph='cart' size='m' />
-    ))
-    .add('custom styles', () => (
-        <Identifier
-            className='sap-Identifier--cart'
-            customStyles={require('../../utils/WithStyles/customStylesTest.css')}
-            glyph='cart' size='m' />
     ));

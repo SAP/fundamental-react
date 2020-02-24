@@ -41,7 +41,7 @@ describe('<Toggle />', () => {
     });
 
     test('Toggle state change', () => {
-        const wrapper = shallow(defaultToggle).dive().dive();
+        const wrapper = shallow(defaultToggle);
         // check that toggle is not checked
         expect(wrapper.state(['checked'])).toBeFalsy();
 
@@ -54,12 +54,12 @@ describe('<Toggle />', () => {
 
     describe('Toggle default rendering', () => {
         test('should default to a not checked state', () => {
-            const element = shallow(<Toggle />).dive().dive();
+            const element = shallow(<Toggle />);
 
             expect(element.state(['checked'])).toBe(false);
         });
         test('should have truthy checked state when passed checked prop', () => {
-            const element = shallow(<Toggle checked />).dive().dive();
+            const element = shallow(<Toggle checked />);
 
             expect(element.state(['checked'])).toBe(true);
         });

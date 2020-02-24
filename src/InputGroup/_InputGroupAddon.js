@@ -46,6 +46,4 @@ InputGroupAddon.propDescriptions = {
     isButton: 'Set to **true** if add-on is a button.'
 };
 
-export { InputGroupAddon as __InputGroupAddon };
-
 export default InputGroupAddon;

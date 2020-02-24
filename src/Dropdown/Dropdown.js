@@ -1,9 +1,14 @@
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import React from 'react';
-import withStyles from '../utils/WithStyles/WithStyles';
+import React, { useEffect } from 'react';
 
 const Dropdown = React.forwardRef(({ children, className, disableStyles, standard, ...props }, ref) => {
+
+    useEffect(() => {
+        if (!disableStyles) {
+            require('fundamental-styles/dist/dropdown.css');
+        }
+    }, []);
 
     const dropdownClasses = classnames(
         'fd-dropdown',
@@ -26,7 +31,7 @@ Dropdown.displayName = 'Dropdown';
 Dropdown.propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,
-    customStyles: PropTypes.object,
+
     disableStyles: PropTypes.bool,
     standard: PropTypes.bool
 };
@@ -35,6 +40,4 @@ Dropdown.propDescriptions = {
     standard: 'Set to **true** to enable a dropdown for toolbar.'
 };
 
-export { Dropdown as __Dropdown };
-
-export default withStyles(Dropdown);
+export default Dropdown;

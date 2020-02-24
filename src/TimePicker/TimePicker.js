@@ -3,7 +3,6 @@ import Popover from '../Popover/Popover';
 import PropTypes from 'prop-types';
 import Time from '../Time/Time';
 import TimePickerItem from './_TimePickerItem';
-import withStyles from '../utils/WithStyles/WithStyles';
 import React, { Component } from 'react';
 
 class TimePicker extends Component {
@@ -44,9 +43,20 @@ class TimePicker extends Component {
         this.state.placeholder = value;
     }
 
+    // TO DO: remove when rebuilt using inputgroup
+    componentDidMount() {
+        if (!this.props.disableStyles) {
+            require('fundamental-styles/dist/input-group.css');
+        }
+    }
+
     onChange = time => {
         this.setState(() => {
             let value = time ? this.formatValue(time) : '';
+            this.props.onChange({
+                time: time,
+                formattedTime: value
+            });
             return { time: time, value: value };
         });
     };
@@ -161,7 +171,6 @@ TimePicker.displayName = 'TimePicker';
 
 TimePicker.propTypes = {
     ...Time.basePropTypes,
-
     buttonProps: PropTypes.object,
     disabled: PropTypes.bool,
     id: PropTypes.string,
@@ -172,7 +181,8 @@ TimePicker.propTypes = {
     }),
     popoverProps: PropTypes.object,
     timeProps: PropTypes.object,
-    value: PropTypes.string
+    value: PropTypes.string,
+    onChange: PropTypes.func
 };
 
 TimePicker.defaultProps = {
@@ -189,7 +199,8 @@ TimePicker.defaultProps = {
         minute: '00',
         second: '00',
         meridiem: 0
-    }
+    },
+    onChange: () => {}
 };
 
 TimePicker.propDescriptions = {
@@ -198,6 +209,4 @@ TimePicker.propDescriptions = {
     value: 'Initial time value for the input.'
 };
 
-export { TimePicker as __TimePicker };
-
-export default withStyles(TimePicker, { cssFile: 'input-group' });
+export default TimePicker;

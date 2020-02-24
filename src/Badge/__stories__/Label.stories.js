@@ -12,10 +12,4 @@ storiesOf('Components|Label', module)
     ))
     .add('disable styles', () => (
         <Label disableStyles>Default</Label>
-    ))
-    .add('custom styles', () => (
-        <Label
-            customStyles={require('../../utils/WithStyles/customStylesTest.css')}>
-            Default
-        </Label>
     ));

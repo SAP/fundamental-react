@@ -57,33 +57,4 @@ storiesOf('Components|Tile', module)
                 </Tile.Actions>
             </Tile>
         </React.Fragment>
-    ))
-    .add('custom styles', () => (
-        <React.Fragment>
-            <Tile customStyles={require('../../utils/WithStyles/customStylesTest.css')}>
-                <Tile.Media>
-                    <div>Tile Media here</div>
-                </Tile.Media>
-                <Tile.Content title='Tile Title'>
-                    <p>Tile Description</p>
-                </Tile.Content>
-                <Tile.Actions>
-                    <div>Tile Actions here</div>
-                </Tile.Actions>
-            </Tile>
-            <Tile
-                backgroundImage='https://placeimg.com/1600/400/nature'
-                customStyles={require('../../utils/WithStyles/customStylesTest.css')}
-                productTile>
-                <Tile.Media>
-                    <div>Tile Media here</div>
-                </Tile.Media>
-                <Tile.Content title='Tile Title'>
-                    <p>Tile Description</p>
-                </Tile.Content>
-                <Tile.Actions>
-                    <div>Tile Actions here</div>
-                </Tile.Actions>
-            </Tile>
-        </React.Fragment>
     ));

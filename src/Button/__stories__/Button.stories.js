@@ -35,7 +35,4 @@ storiesOf('Components|Button', module)
             <Button disableStyles>Default</Button>
             <Button disableStyles glyph='cart'>Add to Cart</Button>
         </React.Fragment>
-    ))
-    .add('dynamic requires', () => (
-        <Button customStyles={require('../../utils/WithStyles/customStylesTest.css')}>Test with custom css</Button>
     ));

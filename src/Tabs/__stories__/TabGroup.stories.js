@@ -41,21 +41,4 @@ storiesOf('Components|TabGroup', module)
                    Please review your shopping chart.
             </Tab>
         </TabGroup>
-    ))
-    .add('custom styles', () => (
-        <TabGroup customStyles={require('../../utils/WithStyles/customStylesTest.css')}>
-            <Tab disableStyles title='Tab 1'>
-                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            </Tab>
-            <Tab disableStyles title='Tab 2'>
-                Numquam libero id corporis odit animi voluptat, Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus quia tempore eligendi tempora repellat officia rerum laudantium, veritatis officiis asperiores ipsum nam, distinctio, dolor provident culpa voluptatibus esse deserunt animi?
-            </Tab>
-            <Tab disableStyles disabled
-                title='Tab 3'>
-                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            </Tab>
-            <Tab disableStyles glyph='cart'>
-                   Please review your shopping chart.
-            </Tab>
-        </TabGroup>
     ));

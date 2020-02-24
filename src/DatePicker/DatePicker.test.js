@@ -1,7 +1,7 @@
 import DatePicker from '../DatePicker/DatePicker';
 import moment from 'moment';
 import { mount } from 'enzyme';
-import { mountComponentWithStyles } from '../utils/testUtils';
+
 import React from 'react';
 
 describe('<DatePicker />', () => {
@@ -25,72 +25,8 @@ describe('<DatePicker />', () => {
         mount(compactRangeDatepicker);
     });
 
-    test('open/close by calendar icon button', () => {
-        wrapper = mountComponentWithStyles(defaultDatePicker);
-        expect(wrapper.state('hidden')).toBeTruthy();
-
-        wrapper
-            .find('button.fd-button--light.sap-icon--calendar')
-            .simulate('click', { type: 'input' });
-
-        expect(wrapper.state('hidden')).toBeFalsy();
-    });
-
-    test('open/close calendar', () => {
-        wrapper = mountComponentWithStyles(defaultDatePicker);
-        // check to make sure calendar is hidden
-        expect(wrapper.state('hidden')).toBeTruthy();
-
-        // click to show calendar
-        wrapper.find('input[type="text"]').simulate('click', { type: 'input' });
-
-        // check to make sure calendar is shown
-        expect(wrapper.state('hidden')).toBeFalsy();
-
-        // clicking on input text should keep calendar displayed
-        wrapper.find('input[type="text"]').simulate('click', { type: 'input' });
-
-        // check to make sure calendar is shown
-        expect(wrapper.state('hidden')).toBeFalsy();
-
-        // click to show calendar
-        wrapper.find('input[type="text"]').simulate('click', { type: '' });
-
-        // check to make sure calendar is shown
-        expect(wrapper.state('hidden')).toBeFalsy();
-    });
-
-    test('open/close range calendar', () => {
-        wrapper = mountComponentWithStyles(rangeDatePicker);
-        //open date picker calendar
-        expect(wrapper.state('hidden')).toBeTruthy();
-
-        // click to show calendar
-        wrapper.find('input[type="text"]').simulate('click', { type: 'input' });
-
-        // check to make sure calendar is shown
-        expect(wrapper.state('hidden')).toBeFalsy();
-
-        wrapper.instance().componentWillMount();
-
-        // click on body element
-        let event = new MouseEvent('mousedown', {
-            target: document.querySelector('body')
-        });
-        document.dispatchEvent(event);
-
-        // check to make sure calendar is hidden
-        expect(wrapper.state('hidden')).toBeTruthy();
-
-        // show date picker, select date range then close
-        wrapper.find('input[type="text"]').simulate('click', { type: '' });
-
-        // check to make sure calendar is shown
-        expect(wrapper.state('hidden')).toBeFalsy();
-    });
-
     test('start date and end date range', () => {
-        wrapper = mountComponentWithStyles(rangeDatePicker);
+        wrapper = mount(rangeDatePicker);
         // set dates
         let startRangeDate = moment();
         let endRangeDate = moment();
@@ -112,7 +48,7 @@ describe('<DatePicker />', () => {
     });
 
     test('check start date greater than end date for range', () => {
-        wrapper = mountComponentWithStyles(rangeDatePicker);
+        wrapper = mount(rangeDatePicker);
         // set dates
         let startRangeDate = moment();
         let endRangeDate = moment();
@@ -140,7 +76,7 @@ describe('<DatePicker />', () => {
     });
 
     test('entering start date and disabled end range dates', () => {
-        wrapper = mountComponentWithStyles(disabledFutureRangePicker);
+        wrapper = mount(disabledFutureRangePicker);
         // set dates
         let startRangeDate = moment();
         let endRangeDate = moment();
@@ -161,7 +97,7 @@ describe('<DatePicker />', () => {
 
     test('updateDate method', () => {
         // choose one day in default picker
-        wrapper = mountComponentWithStyles(defaultDatePicker);
+        wrapper = mount(defaultDatePicker);
         const date = moment();
         wrapper.instance().updateDate(date);
         expect(wrapper.state('selectedDate')).toEqual(date);
@@ -169,7 +105,7 @@ describe('<DatePicker />', () => {
         expect(wrapper.state('formattedDate')).toEqual(formattedDate);
 
         // choose 1 day in range picker
-        wrapper = mountComponentWithStyles(rangeDatePicker);
+        wrapper = mount(rangeDatePicker);
         let startRangeDate = moment();
 
         let arrDates = [startRangeDate];
@@ -180,7 +116,7 @@ describe('<DatePicker />', () => {
         expect(wrapper.state('arrSelectedDates').length).toEqual(1);
 
         // choose 2 days in range picker
-        wrapper = mountComponentWithStyles(rangeDatePicker);
+        wrapper = mount(rangeDatePicker);
         startRangeDate = moment();
         let endRangeDate = moment();
         endRangeDate.add(3, 'day');
@@ -195,7 +131,7 @@ describe('<DatePicker />', () => {
     });
 
     test('pressing enter key on date input', () => {
-        wrapper = mountComponentWithStyles(rangeDatePicker);
+        wrapper = mount(rangeDatePicker);
 
         let startRangeDate = moment();
         let endRangeDate = moment();
@@ -215,7 +151,7 @@ describe('<DatePicker />', () => {
     });
 
     test('pressing enter key on date input where start date > than end date', () => {
-        wrapper = mountComponentWithStyles(rangeDatePicker);
+        wrapper = mount(rangeDatePicker);
 
         let startRangeDate = moment();
         let endRangeDate = moment();
@@ -236,7 +172,7 @@ describe('<DatePicker />', () => {
 
     test('enter a valid date string', () => {
         // enter a valid date input
-        wrapper = mountComponentWithStyles(defaultDatePicker);
+        wrapper = mount(defaultDatePicker);
         let date = moment().startOf('day');
         let formattedDate = date.format('L');
         wrapper.find('input[type="text"]')
@@ -250,7 +186,7 @@ describe('<DatePicker />', () => {
 
     test('enter a disabled date string', () => {
         // enter a valid date input
-        wrapper = mountComponentWithStyles(disabledFuturePicker);
+        wrapper = mount(disabledFuturePicker);
         let date = moment().add(1, 'days');
         let formattedDate = date.format('L');
         wrapper.find('input[type="text"]')
@@ -263,7 +199,7 @@ describe('<DatePicker />', () => {
     });
 
     test('enter text string for date', () => {
-        wrapper = mountComponentWithStyles(defaultDatePicker);
+        wrapper = mount(defaultDatePicker);
 
         wrapper.find('input[type="text"]')
             .simulate('change', { target: { value: 'May 14th, 2018' } });
@@ -274,7 +210,7 @@ describe('<DatePicker />', () => {
     });
 
     test('enter text string for date on date range component', () => {
-        wrapper = mountComponentWithStyles(rangeDatePicker);
+        wrapper = mount(rangeDatePicker);
 
         wrapper.find('input[type="text"]')
             .simulate('change', { target: { value: 'May 14th, 2018-May 15th, 2018' } });
@@ -285,7 +221,7 @@ describe('<DatePicker />', () => {
     });
 
     test('modify date on change', () => {
-        wrapper = mountComponentWithStyles(defaultDatePicker);
+        wrapper = mount(defaultDatePicker);
         wrapper
             .find('input[type="text"]')
             .simulate('change', { target: { value: '05/04/2018' } });
@@ -293,7 +229,7 @@ describe('<DatePicker />', () => {
     });
 
     test('pre-populated value for date', () => {
-        wrapper = mountComponentWithStyles(prePopulatedDatepicker);
+        wrapper = mount(prePopulatedDatepicker);
         expect(wrapper.state('formattedDate')).toEqual('03/13/2020');
         wrapper
             .find('input[type="text"]')
@@ -306,7 +242,7 @@ describe('<DatePicker />', () => {
             const blur = jest.fn();
             const element = mount(<DatePicker onBlur={blur} />);
 
-            element.find('button.fd-button--light.sap-icon--calendar').simulate('click', { type: 'input' });
+            element.find('button.fd-button--light.sap-icon--calendar').simulate('click');
 
             element.find('table.fd-calendar__table tbody.fd-calendar__group tr.fd-calendar__row td.fd-calendar__item:not(.fd-calendar__item--other-month)')
                 .at(0)
@@ -323,7 +259,7 @@ describe('<DatePicker />', () => {
             const blur = jest.fn();
             const element = mount(<DatePicker onBlur={blur} />);
 
-            element.find('input[type="text"]').simulate('click', { type: 'input' });
+            element.find('input[type="text"]').simulate('click');
 
             let event = new MouseEvent('mousedown', { target: document.querySelector('body') });
             document.dispatchEvent(event);

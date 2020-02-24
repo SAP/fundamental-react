@@ -12,10 +12,4 @@ storiesOf('Components|FormItem', module)
     ))
     .add('disable styles', () => (
         <FormItem disableStyles>Default</FormItem>
-    ))
-    .add('custom styles', () => (
-        <FormItem
-            customStyles={require('../../utils/WithStyles/customStylesTest.css')}>
-            Default
-        </FormItem>
     ));

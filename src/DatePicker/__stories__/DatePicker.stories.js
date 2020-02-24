@@ -53,10 +53,6 @@ storiesOf('Components|DatePicker', module)
         <DatePicker
             disableStyles />
     ))
-    .add('custom styles', () => (
-        <DatePicker
-            customStyles={require('../../utils/WithStyles/customStylesTest.css')} />
-    ))
     .add('range selection', () => (
         <DatePicker enableRangeSelection />
     ))

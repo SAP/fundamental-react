@@ -1,10 +1,18 @@
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import React from 'react';
 import { STATUS_TYPES } from '../utils/constants';
-import withStyles from '../utils/WithStyles/WithStyles';
+import React, { useEffect } from 'react';
 
 const Status = React.forwardRef(({ type, glyph, children, className, disableStyles, ...props }, ref) => {
+
+    useEffect(() => {
+        if (!disableStyles) {
+            require('fundamental-styles/dist/fonts.css');
+            require('fundamental-styles/dist/icon.css');
+            require('fundamental-styles/dist/status-label.css');
+        }
+    }, []);
+
     const statusClasses = classnames(
         'fd-status-label',
         {
@@ -28,12 +36,9 @@ Status.displayName = 'Status';
 Status.propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,
-    customStyles: PropTypes.object,
     disableStyles: PropTypes.bool,
     glyph: PropTypes.string,
     type: PropTypes.oneOf(STATUS_TYPES)
 };
 
-export { Status as __Status };
-
-export default withStyles(Status, { cssFile: 'status-label', font: true, icons: true });
+export default Status;

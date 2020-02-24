@@ -8,7 +8,6 @@ import Menu from '../Menu/Menu';
 import Popover from '../Popover/Popover';
 import PropTypes from 'prop-types';
 import SearchInput from '../SearchInput/SearchInput';
-import withStyles from '../utils/WithStyles/WithStyles';
 import React, { Component } from 'react';
 
 class Shellbar extends Component {
@@ -19,6 +18,13 @@ class Shellbar extends Component {
             totalNotifications: this.getNotificationsSum(),
             showCollapsedProductSwitchMenu: false
         };
+    }
+
+    componentDidMount() {
+        if (!this.props.disableStyles) {
+            require('fundamental-styles/dist/shellbar.css');
+            require('fundamental-styles/dist/product-switch.css');
+        }
     }
 
     backBtnHandler = () => {
@@ -445,7 +451,6 @@ Shellbar.propTypes = {
     actions: PropTypes.array,
     className: PropTypes.string,
     copilot: PropTypes.bool,
-    customStyles: PropTypes.object,
     disableStyles: PropTypes.bool,
     localizedText: CustomPropTypes.i18n({
         counterLabel: PropTypes.string,
@@ -498,6 +503,4 @@ Shellbar.propDescriptions = {
     subtitle: 'Displays an application context. Should be used rarely.'
 };
 
-export { Shellbar as __Shellbar };
-
-export default withStyles(Shellbar, { cssFile: ['shellbar', 'product-switch'], fonts: true });
+export default Shellbar;

@@ -29,10 +29,4 @@ storiesOf('Components|SearchInput', module)
             disableStyles
             placeholder='Enter a fruit'
             searchList={searchData} />
-    ))
-    .add('custom styles', () => (
-        <SearchInput
-            customStyles={require('../../utils/WithStyles/customStylesTest.css')}
-            placeholder='Enter a fruit'
-            searchList={searchData} />
     ));

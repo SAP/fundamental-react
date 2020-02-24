@@ -30,8 +30,4 @@ storiesOf('Components|MultiInput', module)
     .add('disable styles', () => (
         <MultiInput data={data} disableStyles
             placeHolder='Select a Fruit' />
-    ))
-    .add('custom styles', () => (
-        <MultiInput customStyles={require('../../utils/WithStyles/customStylesTest.css')} data={data}
-            placeHolder='Select a Fruit' />
     ));

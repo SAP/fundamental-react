@@ -51,27 +51,4 @@ storiesOf('Components|LocalizationEditor', module)
                     placeholder: 'Enter Label'
                 }
             ]} />
-    ))
-    .add('custom styles', () => (
-        <LocalizationEditor
-            control={{
-                label: 'Localization Editor Label',
-                language: 'EN*',
-                placeholder: 'Enter Label'
-            }}
-            customStyles={require('../../utils/WithStyles/customStylesTest.css')}
-            menu={[
-                {
-                    language: 'ES',
-                    placeholder: 'Enter Label'
-                },
-                {
-                    language: 'CH',
-                    placeholder: 'Enter Label'
-                },
-                {
-                    language: 'PL',
-                    placeholder: 'Enter Label'
-                }
-            ]} />
     ));

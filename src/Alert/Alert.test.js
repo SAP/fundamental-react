@@ -1,6 +1,5 @@
 import Alert from './Alert';
 import { mount } from 'enzyme';
-import { mountComponentWithStyles } from '../utils/testUtils';
 import React from 'react';
 import renderer from 'react-test-renderer';
 
@@ -35,11 +34,12 @@ describe('<Alert />', () => {
         tree = component.toJSON();
         expect(tree).toMatchSnapshot();
 
-        let wrapper = mountComponentWithStyles(basicAlert);
+        let wrapper = mount(basicAlert);
 
-        expect(wrapper.state(['isActive'])).toBeTruthy();
+        expect(wrapper.exists('.fd-alert')).toBe(true);
         wrapper.find('button.fd-alert__close').simulate('click');
-        expect(wrapper.state(['isActive'])).toBeFalsy();
+
+        expect(wrapper.exists('.fd-alert')).toBe(false);
     });
 
     test('create non-dismissible alert', () => {
