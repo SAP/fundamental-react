@@ -163,9 +163,6 @@ export const FormsComponent = () => {
                             <FormLabel htmlFor='OatmD554'>Invalid Input</FormLabel>
                             <FormInput id='OatmD554' placeholder='Field placeholder text'
                                 state='invalid' type='text' />
-                            <FormMessage type='error'>
-                                Pellentesque metus lacus commodo eget justo ut rutrum varius nunc
-                            </FormMessage>
                         </FormItem>
                     </FormSet>
 
@@ -174,9 +171,6 @@ export const FormsComponent = () => {
                             <FormLabel htmlFor='OatmD555'>Warning Input</FormLabel>
                             <FormInput id='OatmD555' placeholder='Field placeholder text'
                                 state='warning' type='text' />
-                            <FormMessage type='warning'>
-                                Pellentesque metus lacus commodo eget justo ut rutrum varius nunc
-                            </FormMessage>
                         </FormItem>
                     </FormSet>
 
@@ -185,9 +179,6 @@ export const FormsComponent = () => {
                             <FormLabel htmlFor='OatmD556'>Information Input</FormLabel>
                             <FormInput id='OatmD556' placeholder='Field placeholder text'
                                 state='information' type='text' />
-                            <FormMessage type='information'>
-                                Pellentesque metus lacus commodo eget justo ut rutrum varius nunc
-                            </FormMessage>
                         </FormItem>
                     </FormSet>
                 </div>

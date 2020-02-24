@@ -1,5 +1,6 @@
 import classnames from 'classnames';
 import { FORM_STATES } from '../utils/constants';
+import FormValidationOverlay from './FormValidationOverlay';
 import PropTypes from 'prop-types';
 import React, { useEffect } from 'react';
 
@@ -22,7 +23,7 @@ const FormInput = React.forwardRef(({ state, className, compact, disabled, id, n
         className
     );
 
-    return (
+    const formInput = (
         <input
             {...props}
             className={formInputClasses}
@@ -34,6 +35,12 @@ const FormInput = React.forwardRef(({ state, className, compact, disabled, id, n
             ref={ref}
             type={type}
             value={value} />
+    );
+
+    return (
+        <FormValidationOverlay
+            control={formInput}
+            validationState={{ state: 'error', text: 'test error' }} />
     );
 });
 
