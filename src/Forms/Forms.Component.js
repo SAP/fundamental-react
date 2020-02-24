@@ -13,7 +13,7 @@ export const FormsComponent = () => {
 
             <Example
                 description={`Inputs are used to collect data from the user. When a field is required,
-                the <code>required</code> prop will include an asterisk (*).`}
+                the \`required\` property will include an asterisk (*).`}
                 title='Inputs'>
                 <div>
                     <FormGroup>
@@ -78,7 +78,7 @@ export const FormsComponent = () => {
 
                     <FormGroup>
                         <FormItem isHorizontal>
-                            <FormLabel htmlFor='input-3' required>
+                            <FormLabel htmlFor='input-3'>
                                 Password
                             </FormLabel>
                             <FormInput id='input-3' placeholder='Field placeholder text'
@@ -88,7 +88,7 @@ export const FormsComponent = () => {
 
                     <FormGroup>
                         <FormItem isHorizontal>
-                            <FormLabel htmlFor='textarea-1' required>
+                            <FormLabel htmlFor='textarea-1'>
                                 Text area
                             </FormLabel>
                             <FormTextarea defaultValue=' Pellentesque metus lacus commodo eget justo ut rutrum varius nunc.' id='textarea-1' />
