@@ -62,7 +62,7 @@ exports[`<ComboboxInput /> create combobox input 2`] = `
             type="text"
           />
           <span
-            className="fd-input-group__addon fd-input-group__addon--button"
+            className="fd-input-group__addon fd-input-group__addon--button fd-input-group__addon--compact"
           >
             <button
               className="fd-button--light fd-button--compact sap-icon--navigation-down-arrow fd-input-group__button"

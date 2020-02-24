@@ -39,7 +39,7 @@ export class MultiInputComponent extends Component {
                     title='Default'>
                     <MultiInput
                         data={this.data}
-                        placeHolder='Select a Fruit' />
+                        placeholder='Select a Fruit' />
                 </Example>
 
                 <Example
@@ -47,7 +47,7 @@ export class MultiInputComponent extends Component {
                     <MultiInput
                         compact
                         data={this.data}
-                        placeHolder='Select a Fruit' />
+                        placeholder='Select a Fruit' />
                 </Example>
 
             </ComponentPage>

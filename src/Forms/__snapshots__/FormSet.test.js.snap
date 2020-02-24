@@ -5,14 +5,13 @@ exports[`<FormSet /> create form item 1`] = `
   className="fd-form-group"
 >
   <div
-    className="fd-form-item fd-form-item--inline"
+    className="fd-form-item fd-form-item--horizontal"
   >
     <label
       className="fd-form-label"
       forAttr="input-1"
     >
       Default Input
-      
     </label>
     <input
       className="fd-input"
@@ -26,11 +25,10 @@ exports[`<FormSet /> create form item 1`] = `
   >
     <label
       aria-required={true}
-      className="fd-form-label"
+      className="fd-form-label fd-form-label--required"
       forAttr="input-1"
     >
       Default Input
-      *
     </label>
     <input
       className="fd-input is-warning"
@@ -100,14 +98,13 @@ exports[`<FormSet /> create form item 2`] = `
   className="fd-form-group blue"
 >
   <div
-    className="fd-form-item fd-form-item--inline"
+    className="fd-form-item fd-form-item--horizontal"
   >
     <label
       className="fd-form-label"
       forAttr="input-1"
     >
       Default Input
-      
     </label>
     <input
       className="fd-input"

@@ -35,7 +35,6 @@ FormMessage.displayName = 'FormMessage';
 FormMessage.propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,
-
     disableStyles: PropTypes.bool,
     type: PropTypes.oneOf(FORM_MESSAGE_TYPES)
 };

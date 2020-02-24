@@ -8,7 +8,6 @@ exports[`<LocalizationEditor /> create localization editor 1`] = `
     className="fd-form-label"
   >
     Localization Editor Label
-    
   </label>
   <div
     className="fd-popover"
@@ -55,7 +54,6 @@ exports[`<LocalizationEditor /> create localization editor 2`] = `
     className="fd-form-label"
   >
     Localization Editor Compact Mode
-    
   </label>
   <div
     className="fd-popover"
@@ -102,7 +100,6 @@ exports[`<LocalizationEditor /> create localization editor 3`] = `
     className="fd-form-label"
   >
     Localization Editor Label
-    
   </label>
   <div
     className="fd-popover"

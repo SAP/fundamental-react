@@ -1,4 +1,5 @@
 import classnames from 'classnames';
+import { FORM_STATES } from '../utils/constants';
 import FormItem from './FormItem';
 import FormLabel from './FormLabel';
 import PropTypes from 'prop-types';
@@ -14,7 +15,24 @@ const getCheckStatus = (checked, indeterminate) => {
     }
 };
 
-const Checkbox = React.forwardRef(({ checked, className, defaultChecked, disabled, disableStyles, id, indeterminate, inline, inputProps, labelProps, name, onChange, value, ...props }, ref) => {
+const Checkbox = React.forwardRef(({
+    checked,
+    className,
+    compact,
+    defaultChecked,
+    disabled,
+    disableStyles,
+    id,
+    indeterminate,
+    inline,
+    inputProps,
+    labelProps,
+    name,
+    onChange,
+    value,
+    state,
+    ...props
+}, ref) => {
 
     const inputEl = useRef();
 
@@ -30,7 +48,8 @@ const Checkbox = React.forwardRef(({ checked, className, defaultChecked, disable
 
     const classes = classnames(
         className,
-        'fd-checkbox'
+        'fd-checkbox',
+        { [`is-${state}`]: state }
     );
 
     return (
@@ -42,7 +61,8 @@ const Checkbox = React.forwardRef(({ checked, className, defaultChecked, disable
             ref={ref}>
             <FormLabel {...labelProps}
                 disableStyles={disableStyles}
-                disabled={disabled}>
+                disabled={disabled}
+                isCheckbox>
                 <input
                     {...inputProps}
                     aria-checked={getCheckStatus(checked, indeterminate)}
@@ -67,7 +87,7 @@ Checkbox.displayName = 'Checkbox';
 Checkbox.propTypes = {
     checked: PropTypes.bool,
     className: PropTypes.string,
-
+    compact: PropTypes.bool,
     defaultChecked: PropTypes.bool,
     disabled: PropTypes.bool,
     disableStyles: PropTypes.bool,
@@ -77,6 +97,7 @@ Checkbox.propTypes = {
     inputProps: PropTypes.object,
     labelProps: PropTypes.object,
     name: PropTypes.string,
+    state: PropTypes.oneOf(FORM_STATES),
     value: PropTypes.string,
     onChange: PropTypes.func
 };

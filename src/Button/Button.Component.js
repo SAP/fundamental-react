@@ -82,13 +82,11 @@ export const ButtonComponent = () => {
 
                         <Button glyph='cart' option='light' />
 
-                        <Button glyph='filter' option='standard' />
+                        <Button glyph='filter' type='standard' />
 
                         <Button glyph='accept' type='positive' />
 
                         <Button glyph='decline' type='negative' />
-
-                        <Button glyph='alert' type='negative' />
                     </div>
                 </div>
             </Example>

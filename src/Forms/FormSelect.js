@@ -1,8 +1,9 @@
 import classnames from 'classnames';
+import { FORM_STATES } from '../utils/constants';
 import PropTypes from 'prop-types';
 import React, { useEffect } from 'react';
 
-const FormSelect = React.forwardRef(({ disabled, children, className, disableStyles, ...props }, ref) => {
+const FormSelect = React.forwardRef(({ disabled, children, className, compact, disableStyles, state, ...props }, ref) => {
 
     useEffect(() => {
         if (!disableStyles) {
@@ -13,6 +14,8 @@ const FormSelect = React.forwardRef(({ disabled, children, className, disableSty
 
     const formSelectClasses = classnames(
         'fd-form-select',
+        { [`is-${state}`]: state,
+            'fd-form-select--compact': compact },
         className
     );
 
@@ -32,9 +35,10 @@ FormSelect.displayName = 'FormSelect';
 FormSelect.propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,
-
+    compact: PropTypes.bool,
     disabled: PropTypes.bool,
-    disableStyles: PropTypes.bool
+    disableStyles: PropTypes.bool,
+    state: PropTypes.oneOf(FORM_STATES)
 };
 
 export default FormSelect;

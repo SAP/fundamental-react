@@ -1,21 +1,12 @@
 import Button from '../Button/Button';
-import classnames from 'classnames';
+import { FORM_STATES } from '../utils/constants';
 import FormInput from '../Forms/FormInput';
+import InputGroup from '../InputGroup/InputGroup';
 import Popover from '../Popover/Popover';
 import PropTypes from 'prop-types';
-import React, { useEffect } from 'react';
+import React from 'react';
 
-const ComboboxInput = React.forwardRef(({ placeholder, menu, compact, className, disableStyles, popoverProps, inputProps, buttonProps, ...props }, ref) => {
-
-    useEffect(() => {
-        if (!disableStyles) {
-            require('fundamental-styles/dist/input-group.css');
-        }
-    }, []);
-
-    const comboboxPopoverClasses = classnames(
-        'fd-input-group'
-    );
+const ComboboxInput = React.forwardRef(({ placeholder, menu, compact, className, disableStyles, popoverProps, inputProps, buttonProps, state, ...props }, ref) => {
 
     return (
         <div {...props} className={className}
@@ -24,24 +15,22 @@ const ComboboxInput = React.forwardRef(({ placeholder, menu, compact, className,
                 {...popoverProps}
                 body={menu}
                 control={
-                    <div className={comboboxPopoverClasses}>
+                    <InputGroup
+                        compact={compact}
+                        disableStyles={disableStyles}
+                        state={state}>
                         <FormInput
                             {...inputProps}
-                            className='fd-input-group__input'
-                            compact={compact}
                             disableStyles={disableStyles}
-                            placeholder={placeholder}
-                            type='text' />
-                        <span className='fd-input-group__addon fd-input-group__addon--button'>
+                            placeholder={placeholder} />
+                        <InputGroup.Addon isButton>
                             <Button
                                 {...buttonProps}
-                                className='fd-input-group__button'
-                                compact={compact}
                                 disableStyles={disableStyles}
                                 glyph='navigation-down-arrow'
                                 option='light' />
-                        </span>
-                    </div>
+                        </InputGroup.Addon>
+                    </InputGroup>
                 }
                 disableKeyPressHandler
                 disableStyles={disableStyles}
@@ -61,7 +50,8 @@ ComboboxInput.propTypes = {
     disableStyles: PropTypes.bool,
     inputProps: PropTypes.object,
     placeholder: PropTypes.string,
-    popoverProps: PropTypes.object
+    popoverProps: PropTypes.object,
+    state: PropTypes.oneOf(FORM_STATES)
 };
 
 ComboboxInput.propDescriptions = {

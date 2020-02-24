@@ -210,7 +210,7 @@ exports[`<Shellbar /> create shellbar 3`] = `
               className="fd-popover__control"
             >
               <div
-                className="fd-input-group fd-input-group--after"
+                className="fd-input-group"
                 onClick={[Function]}
               >
                 <input
@@ -510,7 +510,7 @@ exports[`<Shellbar /> create shellbar 4`] = `
               className="fd-popover__control"
             >
               <div
-                className="fd-input-group fd-input-group--after"
+                className="fd-input-group"
                 onClick={[Function]}
               >
                 <input
@@ -803,7 +803,7 @@ exports[`<Shellbar /> create shellbar 5`] = `
               className="fd-popover__control"
             >
               <div
-                className="fd-input-group fd-input-group--after"
+                className="fd-input-group"
                 onClick={[Function]}
               >
                 <input
@@ -1076,7 +1076,7 @@ exports[`<Shellbar /> create shellbar 6`] = `
               className="fd-popover__control"
             >
               <div
-                className="fd-input-group fd-input-group--after"
+                className="fd-input-group"
                 onClick={[Function]}
               >
                 <input

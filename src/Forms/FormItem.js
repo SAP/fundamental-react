@@ -2,7 +2,7 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React, { useEffect } from 'react';
 
-const FormItem = React.forwardRef(({ isInline, children, className, disableStyles, ...props }, ref) => {
+const FormItem = React.forwardRef(({ isHorizontal, isInline, children, className, disableStyles, ...props }, ref) => {
 
     useEffect(() => {
         if (!disableStyles) {
@@ -13,7 +13,8 @@ const FormItem = React.forwardRef(({ isInline, children, className, disableStyle
     const formItemClasses = classnames(
         'fd-form-item',
         {
-            'fd-form-item--inline': isInline
+            'fd-form-item--inline': isInline,
+            'fd-form-item--horizontal': isHorizontal
         },
         className
     );
@@ -33,11 +34,13 @@ FormItem.propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,
     disableStyles: PropTypes.bool,
+    isHorizontal: PropTypes.bool,
     isInline: PropTypes.bool
 };
 
 FormItem.propDescriptions = {
-    isInline: 'Set to **true** to display radio buttons and checkboxes in a row.'
+    isInline: '_INTERNAL USE ONLY._',
+    isHorizontal: 'Set to **true** to display items in a row.'
 };
 
 export default FormItem;

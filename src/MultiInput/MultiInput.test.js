@@ -24,7 +24,7 @@ describe('<MultiInput />', () => {
         <MultiInput
             data={data}
             onTagsUpdate={mockOnTagsUpdate}
-            placeHolder='Select a Fruit' />
+            placeholder='Select a Fruit' />
     );
 
     const compactMultiInput = (
@@ -33,15 +33,13 @@ describe('<MultiInput />', () => {
             compact
             data={data}
             onTagsUpdate={mockOnTagsUpdate}
-            placeHolder='Select a Fruit' />
+            placeholder='Select a Fruit' />
     );
 
     let wrapper;
 
-    const getListStatus = (bIsShown) => {
-        const combobox = wrapper.find(
-            `div.fd-popover__control [aria-expanded=${bIsShown}]`
-        );
+    const getListStatus = () => {
+        const combobox = wrapper.find('.fd-input-group');
 
         const popover = wrapper.find(
             'div.fd-popover__popper'
@@ -89,7 +87,7 @@ describe('<MultiInput />', () => {
         expect(wrapper.state(['bShowList'])).toBe(true);
 
         // check to see if list is shown
-        let results = getListStatus(true);
+        let results = getListStatus();
         expect(results.combobox).toHaveLength(1);
         expect(results.popover).toHaveLength(1);
     });
@@ -107,7 +105,7 @@ describe('<MultiInput />', () => {
         expect(wrapper.state(['bShowList'])).toBe(true);
 
         // check to see if list is shown
-        let results = getListStatus(true);
+        let results = getListStatus();
         expect(results.combobox).toHaveLength(1);
         expect(results.popover).toHaveLength(1);
     });

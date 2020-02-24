@@ -2,7 +2,9 @@ import Button from '../Button/Button';
 import Checkbox from '../Forms/Checkbox';
 import classnames from 'classnames';
 import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
+import { FORM_STATES } from '../utils/constants';
 import FormInput from '../Forms/FormInput';
+import InputGroup from '../InputGroup/InputGroup';
 import Menu from '../Menu/Menu';
 import Popover from '../Popover/Popover';
 import PropTypes from 'prop-types';
@@ -24,7 +26,6 @@ class MultiInput extends Component {
         if (!this.props.disableStyles) {
             require('fundamental-styles/dist/fonts.css');
             require('fundamental-styles/dist/multi-input.css');
-            require('fundamental-styles/dist/input-group.css');
         }
     }
 
@@ -122,7 +123,8 @@ class MultiInput extends Component {
             inputProps,
             localizedText,
             onTagsUpdate,
-            placeHolder,
+            state,
+            placeholder,
             tagProps,
             ...rest
         } = this.props;
@@ -145,30 +147,26 @@ class MultiInput extends Component {
                             </Menu>
                         }
                         control={
-                            <div
+                            <InputGroup
                                 aria-expanded={this.state.bShowList}
                                 aria-haspopup='true'
                                 aria-label={localizedText.imageLabel}
-                                className='fd-input-group'>
+                                compact={compact}
+                                state={state}>
                                 <FormInput
                                     {...inputProps}
-                                    className='fd-input-group__input'
-                                    compact={compact}
                                     disableStyles={disableStyles}
                                     onClick={this.showHideTagList}
-                                    placeholder={placeHolder} />
-                                <span
-                                    className='fd-input-group__addon fd-input-group__addon--button'>
+                                    placeholder={placeholder} />
+                                <InputGroup.Addon isButton>
                                     <Button
                                         {...buttonProps}
-                                        className='fd-input-group__button'
-                                        compact={compact}
                                         disableStyles={disableStyles}
                                         glyph='navigation-down-arrow'
                                         onClick={this.showHideTagList}
                                         option='light' />
-                                </span>
-                            </div>
+                                </InputGroup.Addon>
+                            </InputGroup>
                         }
                         disableStyles={disableStyles}
                         noArrow />
@@ -196,8 +194,9 @@ MultiInput.propTypes = {
     localizedText: CustomPropTypes.i18n({
         imageLabel: PropTypes.string
     }),
-    placeHolder: PropTypes.string,
+    placeholder: PropTypes.string,
     popoverProps: PropTypes.object,
+    state: PropTypes.oneOf(FORM_STATES),
     tagProps: PropTypes.object,
     onTagsUpdate: PropTypes.func
 };
@@ -215,7 +214,7 @@ MultiInput.propDescriptions = {
         imageLabel: 'Aria-label in `<div>` element for image.'
     },
     onTagsUpdate: 'Callback function when a tag is added or removed. Returns array of tags selected.',
-    placeHolder: 'Localized placeholder text of the input.',
+    placeholder: 'Localized placeholder text of the input.',
     tagProps: 'Additional props to be spread to the tags `<div>` element.'
 };
 

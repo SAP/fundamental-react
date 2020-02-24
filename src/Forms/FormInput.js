@@ -1,5 +1,5 @@
 import classnames from 'classnames';
-import { INPUT_TYPES } from '../utils/constants';
+import { FORM_STATES } from '../utils/constants';
 import PropTypes from 'prop-types';
 import React, { useEffect } from 'react';
 
@@ -17,7 +17,7 @@ const FormInput = React.forwardRef(({ state, className, compact, disabled, id, n
         'fd-input',
         {
             'fd-input--compact': !!compact,
-            [`is-${state}`]: !!state
+            [`is-${state}`]: state
         },
         className
     );
@@ -42,14 +42,13 @@ FormInput.displayName = 'FormInput';
 FormInput.propTypes = {
     className: PropTypes.string,
     compact: PropTypes.bool,
-
     disabled: PropTypes.bool,
     disableStyles: PropTypes.bool,
     id: PropTypes.string,
     name: PropTypes.string,
     placeholder: PropTypes.string,
     readOnly: PropTypes.bool,
-    state: PropTypes.oneOf(INPUT_TYPES),
+    state: PropTypes.oneOf(FORM_STATES),
     type: PropTypes.string,
     value: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
 };

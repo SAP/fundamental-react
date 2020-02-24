@@ -2,6 +2,8 @@ import MultiInput from '../MultiInput';
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import {
+    boolean,
+    select,
     withKnobs
 } from '@storybook/addon-knobs';
 
@@ -21,13 +23,25 @@ const data = [
     'Cupuacu'
 ];
 
+const createProps = (overrides) => ({
+    compact: boolean('compact', false),
+    data: data,
+    state: select('Validation State', {
+        'default': null,
+        'valid': 'valid',
+        'invalid': 'invalid',
+        'information': 'information',
+        'warning': 'warning'
+    }),
+    placeholder: 'Select a Fruit',
+    ...overrides
+});
+
 storiesOf('Components|MultiInput', module)
     .addDecorator(withKnobs)
     .add('Default', () => (
-        <MultiInput data={data}
-            placeHolder='Select a Fruit' />
+        <MultiInput {...createProps()} />
     ))
     .add('disable styles', () => (
-        <MultiInput data={data} disableStyles
-            placeHolder='Select a Fruit' />
+        <MultiInput {...createProps()} disableStyles />
     ));

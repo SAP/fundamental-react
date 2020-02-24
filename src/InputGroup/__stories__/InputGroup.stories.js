@@ -7,13 +7,27 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import {
     boolean,
+    select,
     withKnobs
 } from '@storybook/addon-knobs';
+
+const createProps = (overrides) => ({
+    compact: boolean('compact', false),
+    disabled: boolean('disabled', false),
+    state: select('Validation State', {
+        'default': null,
+        'valid': 'valid',
+        'invalid': 'invalid',
+        'information': 'information',
+        'warning': 'warning'
+    }),
+    ...overrides
+});
 
 storiesOf('Components|InputGroup', module)
     .addDecorator(withKnobs)
     .add('Default', () => (
-        <InputGroup compact={boolean('compact', false)}>
+        <InputGroup {...createProps()}>
             <FormInput />
             <InputGroup.Addon isButton>
                 <Button
@@ -23,8 +37,7 @@ storiesOf('Components|InputGroup', module)
         </InputGroup>
     ))
     .add('disable styles', () => (
-        <InputGroup
-            compact={boolean('compact', false)}
+        <InputGroup {...createProps()}
             disableStyles>
             <FormInput />
             <InputGroup.Addon isButton>
@@ -35,8 +48,7 @@ storiesOf('Components|InputGroup', module)
         </InputGroup>
     ))
     .add('addon button before', () => (
-        <InputGroup
-            compact={boolean('compact', false)}>
+        <InputGroup {...createProps()}>
             <InputGroup.Addon isButton>
                 <Button
                     glyph='navigation-down-arrow'
@@ -46,8 +58,7 @@ storiesOf('Components|InputGroup', module)
         </InputGroup>
     ))
     .add('addon button after', () => (
-        <InputGroup
-            compact={boolean('compact', false)}>
+        <InputGroup {...createProps()}>
             <FormInput />
             <InputGroup.Addon isButton>
                 <Button
@@ -57,21 +68,19 @@ storiesOf('Components|InputGroup', module)
         </InputGroup>
     ))
     .add('addon text before', () => (
-        <InputGroup
-            compact={boolean('compact', false)}>
+        <InputGroup {...createProps()}>
             <InputGroup.Addon>€</InputGroup.Addon>
             <FormInput placeholder='Type text here' />
         </InputGroup>
     ))
     .add('addon text after', () => (
-        <InputGroup
-            compact={boolean('compact', false)}>
+        <InputGroup {...createProps()}>
             <FormInput placeholder='Type text here' />
             <InputGroup.Addon>€</InputGroup.Addon>
         </InputGroup>
     ))
     .add('addon icon before', () => (
-        <InputGroup compact={boolean('compact', false)}>
+        <InputGroup {...createProps()}>
             <InputGroup.Addon>
                 <Icon glyph='globe' />
             </InputGroup.Addon>
@@ -79,7 +88,7 @@ storiesOf('Components|InputGroup', module)
         </InputGroup>
     ))
     .add('addon icon after', () => (
-        <InputGroup compact={boolean('compact', false)}>
+        <InputGroup {...createProps()}>
             <FormInput placeholder='Type text here' />
             <InputGroup.Addon>
                 <Icon glyph='hide' />
@@ -87,7 +96,7 @@ storiesOf('Components|InputGroup', module)
         </InputGroup>
     ))
     .add('textarea', () => (
-        <InputGroup>
+        <InputGroup {...createProps()}>
             <FormTextarea>Default</FormTextarea>
             <InputGroup.Addon>
                 <Icon glyph='hide' />

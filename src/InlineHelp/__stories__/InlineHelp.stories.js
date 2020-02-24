@@ -1,3 +1,4 @@
+import FormLabel from '../../Forms/FormLabel';
 import InlineHelp from '../InlineHelp';
 import React from 'react';
 import { storiesOf } from '@storybook/react';
@@ -12,4 +13,10 @@ storiesOf('Components|InlineHelp', module)
     ))
     .add('disable styles', () => (
         <InlineHelp disableStyles text='default' />
+    ))
+    .add('with Label', () => (
+        <FormLabel isInlineHelp>
+            Label Text
+            <InlineHelp text='default' />
+        </FormLabel>
     ));
