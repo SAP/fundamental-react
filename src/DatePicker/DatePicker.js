@@ -158,7 +158,6 @@ class DatePicker extends Component {
                 className={className}
                 ref={component => (this.component = component)}>
                 <Popover
-                    style={popoverStyle}
                     body={
                         <Calendar
                             blockedDates={blockedDates}
@@ -205,7 +204,8 @@ class DatePicker extends Component {
                     noArrow
                     onClickOutside={this.clickOutside}
                     placement='bottom-end'
-                    ref={this.popoverRef} />
+                    ref={this.popoverRef}
+                    style={popoverStyle} />
             </div>
         );
     }
@@ -222,8 +222,8 @@ DatePicker.propTypes = {
     enableRangeSelection: PropTypes.bool,
     inputProps: PropTypes.object,
     locale: PropTypes.string,
-    onBlur: PropTypes.func,
-    popoverStyle: PropTypes.object
+    popoverStyle: PropTypes.object,
+    onBlur: PropTypes.func
 };
 
 DatePicker.defaultProps = {
@@ -232,8 +232,8 @@ DatePicker.defaultProps = {
     locale: 'en',
     onBlur: () => {},
     popoverStyle: {
-      width: '100%'
-    },
+        width: '100%'
+    }
 };
 
 DatePicker.propDescriptions = {

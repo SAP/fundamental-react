@@ -204,8 +204,8 @@ SearchInput.propTypes = {
     listProps: PropTypes.object,
     noSearchBtn: PropTypes.bool,
     placeholder: PropTypes.string,
-    popoverStyle: PropTypes.object,
     popoverProps: PropTypes.object,
+    popoverStyle: PropTypes.object,
     searchBtnProps: PropTypes.object,
     searchList: PropTypes.arrayOf(
         PropTypes.shape({
@@ -220,16 +220,16 @@ SearchInput.propTypes = {
 
 SearchInput.defaultProps = {
     popoverStyle: {
-      width: '100%'
+        width: '100%'
     },
     onChange: () => { },
     onEnter: () => { }
 };
 
 SearchInput.propDescriptions = {
-    popoverStyle: 'Styles applied to child Popover',
     noSearchBtn: 'Set to **true** to render without a search button.',
     onEnter: 'Callback function when the user hits the <Enter> key.',
+    popoverStyle: 'Styles applied to child Popover',
     searchBtnProps: 'Additional props to be spread to the search `<button>` element.',
     searchList: 'Collection of items to display in the dropdown list.'
 };
