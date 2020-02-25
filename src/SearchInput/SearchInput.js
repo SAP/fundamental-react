@@ -145,19 +145,18 @@ class SearchInput extends Component {
                                 {this.state.filteredResult && this.state.filteredResult.length > 0 ? (
                                     this.state.filteredResult.map((item, index) => {
                                         return (
-                                            <li
-                                                className='fd-menu__item'
+                                            <Menu.Item
                                                 key={index}
                                                 onClick={(e) => this.listItemClickHandler(e, item)}>
                                                 <strong>{this.state.value}</strong>
                                                 {this.state.value && this.state.value.length
                                                     ? item.text.substring(this.state.value.length)
                                                     : item.text}
-                                            </li>
+                                            </Menu.Item>
                                         );
                                     })
                                 ) : (
-                                    <li className='fd-menu__item'>No result</li>
+                                    <Menu.Item >No result</Menu.Item>
                                 )}
                             </Menu.List>
                         </Menu>)
