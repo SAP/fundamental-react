@@ -15,8 +15,7 @@ describe('<FormSet />', () => {
                 <FormLabel forAttr='input-1'>Default Input</FormLabel>
                 <FormInput
                     id='input-1'
-                    placeholder='Field placeholder text'
-                    type='text' />
+                    placeholder='Field placeholder text' />
             </FormItem>
             <FormItem>
                 <FormLabel forAttr='input-1' required>
@@ -25,8 +24,7 @@ describe('<FormSet />', () => {
                 <FormInput
                     id='input-1'
                     placeholder='Field placeholder text'
-                    state='warning'
-                    type='text' />
+                    validationState={{ state: 'warning', text: 'test' }} />
                 <FormTextarea className='blue' id='textarea-1'>
                     Pellentesque metus lacus commodo eget justo ut rutrum varius nunc.
                 </FormTextarea>

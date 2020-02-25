@@ -11,13 +11,38 @@ exports[`<FormItem /> create form item 1`] = `
   >
     Default Input
   </label>
-  <input
-    className="fd-input"
-    id="input-1"
-    placeholder="Field placeholder text"
-    state="warning"
-    type="text"
-  />
+  <div
+    className="fd-popover"
+    style={
+      Object {
+        "display": "block",
+      }
+    }
+  >
+    <div
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      onTouchStart={[Function]}
+    >
+      <div
+        className="fd-popover__control"
+      >
+        <input
+          aria-controls="input-1"
+          aria-expanded={false}
+          aria-haspopup={true}
+          className="fd-input is-warning"
+          id="input-1"
+          onClick={[Function]}
+          onKeyPress={[Function]}
+          placeholder="Field placeholder text"
+          role="button"
+          tabIndex={0}
+          type="text"
+        />
+      </div>
+    </div>
+  </div>
   <textarea
     className="fd-textarea blue"
     id="textarea-1"

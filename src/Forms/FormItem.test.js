@@ -16,7 +16,7 @@ describe('<FormItem />', () => {
             <FormInput
                 id='input-1'
                 placeholder='Field placeholder text'
-                state='warning' />
+                validationState={{ state: 'warning', text: 'test' }} />
             <FormTextarea className='blue' id='textarea-1'>
                 Pellentesque metus lacus commodo eget justo ut rutrum varius nunc.
             </FormTextarea>
