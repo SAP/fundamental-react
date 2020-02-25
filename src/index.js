@@ -20,7 +20,6 @@ export { default as FormInput } from './Forms/FormInput';
 export { default as FormRadioGroup } from './Forms/FormRadioGroup';
 export { default as FormRadioItem } from './Forms/FormRadioItem';
 export { default as FormTextarea } from './Forms/FormTextarea';
-export { default as FormMessage } from './Forms/FormMessage';
 export { default as FormSelect } from './Forms/FormSelect';
 export { default as FormFieldset } from './Forms/FormFieldset';
 export { default as FormLegend } from './Forms/FormLegend';

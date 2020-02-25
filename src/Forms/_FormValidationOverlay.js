@@ -1,4 +1,5 @@
-import FormMessage from './FormMessage';
+import { FORM_MESSAGE_TYPES } from '../utils/constants';
+import FormMessage from './_FormMessage';
 import Popover from '../Popover/Popover';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -23,7 +24,10 @@ FormValidationOverlay.displayName = 'FormValidationOverlay';
 FormValidationOverlay.propTypes = {
     className: PropTypes.string,
     control: PropTypes.node,
-    validationState: PropTypes.object
+    validationState: PropTypes.shape({
+        state: PropTypes.oneOf(FORM_MESSAGE_TYPES),
+        text: PropTypes.string
+    })
 };
 
 FormValidationOverlay.propDescriptions = {
