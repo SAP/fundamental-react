@@ -133,8 +133,6 @@ class DatePicker extends Component {
             blockedDates,
             buttonLabel,
             buttonProps,
-            popoverStyle,
-            popoverProps,
             className,
             compact,
             disableAfterDate,
@@ -150,6 +148,7 @@ class DatePicker extends Component {
             locale,
             localizedText,
             onBlur,
+            popoverStyle,
             ...props
         } = this.props;
 
@@ -218,34 +217,33 @@ DatePicker.propTypes = {
     ...Calendar.basePropTypes,
     buttonLabel: PropTypes.string,
     buttonProps: PropTypes.object,
-    popoverStyle: PropTypes.object,
-    popoverProps: PropTypes.object,
     compact: PropTypes.bool,
     defaultValue: PropTypes.string,
     enableRangeSelection: PropTypes.bool,
     inputProps: PropTypes.object,
     locale: PropTypes.string,
-    onBlur: PropTypes.func
+    onBlur: PropTypes.func,
+    popoverStyle: PropTypes.object
 };
 
 DatePicker.defaultProps = {
     buttonLabel: 'Choose date',
+    defaultValue: '',
+    locale: 'en',
+    onBlur: () => {},
     popoverStyle: {
       width: '100%'
     },
-    defaultValue: '',
-    locale: 'en',
-    onBlur: () => {}
 };
 
 DatePicker.propDescriptions = {
     ...Calendar.propDescriptions,
     buttonLabel: 'aria-label for datepicker button',
-    popoverStyle: 'Styles applied to child Popover',
     defaultValue: 'Default value to be shown in the Datepicker. The only accepted format is the ISO format, i.e. YYYY-MM-DD',
     enableRangeSelection: 'Set to **true** to enable the selection of a date range (begin and end).',
     locale: 'Language code to set the locale.',
-    onBlur: 'Callback function for onBlur events. In the object returned, `date` is the date object and `formattedDate` is the formatted date.'
+    onBlur: 'Callback function for onBlur events. In the object returned, `date` is the date object and `formattedDate` is the formatted date.',
+    popoverStyle: 'Styles applied to child Popover'
 };
 
 export default DatePicker;
