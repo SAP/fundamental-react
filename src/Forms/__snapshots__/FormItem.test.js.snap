@@ -12,9 +12,10 @@ exports[`<FormItem /> create form item 1`] = `
     Default Input
   </label>
   <input
-    className="fd-input is-warning"
+    className="fd-input"
     id="input-1"
     placeholder="Field placeholder text"
+    state="warning"
     type="text"
   />
   <textarea
@@ -29,16 +30,6 @@ exports[`<FormItem /> create form item 1`] = `
   >
     Pellentesque metus lacus commodo eget justo ut rutrum varius nunc.
   </textarea>
-  <span
-    className="fd-form-message fd-form-message--help"
-  >
-    Pellentesque metus lacus commodo eget justo ut rutrum varius nunc
-  </span>
-  <span
-    className="fd-form-message blue"
-  >
-    Pellentesque metus lacus commodo eget justo ut rutrum varius nunc
-  </span>
   <select
     className="fd-form-select"
     id="select-1"

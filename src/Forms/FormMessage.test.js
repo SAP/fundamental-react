@@ -1,11 +1,11 @@
-import FormMessage from './FormMessage';
+import FormMessage from './_FormMessage';
 import { mount } from 'enzyme';
 import React from 'react';
 import renderer from 'react-test-renderer';
 
 describe('<FormMessage />', () => {
     const formMessage = (
-        <FormMessage type='help'>
+        <FormMessage type='information'>
             Pellentesque metus lacus commodo eget justo ut rutrum varius nunc
         </FormMessage>
     );

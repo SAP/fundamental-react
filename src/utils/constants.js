@@ -44,7 +44,6 @@ export const BUTTON_TYPES = [
 ];
 
 export const FORM_MESSAGE_TYPES = [
-    'default',
     'error',
     'warning',
     'information',

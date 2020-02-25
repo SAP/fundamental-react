@@ -1,7 +1,6 @@
 import FormInput from './FormInput';
 import FormItem from './FormItem';
 import FormLabel from './FormLabel';
-import FormMessage from './_FormMessage';
 import FormSelect from './FormSelect';
 import FormSet from './FormSet';
 import FormTextarea from './FormTextarea';
@@ -34,12 +33,6 @@ describe('<FormSet />', () => {
                 <FormTextarea id='textarea-2'>
                     Pellentesque metus lacus commodo eget justo ut rutrum varius nunc.
                 </FormTextarea>
-                <FormMessage type='help'>
-                    Pellentesque metus lacus commodo eget justo ut rutrum varius nunc
-                </FormMessage>
-                <FormMessage className='blue'>
-                    Pellentesque metus lacus commodo eget justo ut rutrum varius nunc
-                </FormMessage>
                 <FormSelect id='select-1'>
                     <option value='1'>Duis malesuada odio volutpat elementum</option>
                     <option value='2'>Suspendisse ante ligula</option>

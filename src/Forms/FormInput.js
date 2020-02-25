@@ -12,11 +12,15 @@ const FormInput = React.forwardRef(({ className, compact, disabled, id, name, pl
         }
     }, []);
 
-
     const formInputClasses = classnames(
         'fd-input',
         {
-            'fd-input--compact': !!compact
+            'fd-input--compact': !!compact,
+            // TO DO: update with https://github.com/SAP/fundamental-styles/pull/704
+            'is-warning': validationState?.state === 'warning',
+            'is-invalid': validationState?.state === 'error',
+            'is-valid': validationState?.state === 'success',
+            'is-information': validationState?.state === 'information'
         },
         className
     );
@@ -39,6 +43,7 @@ const FormInput = React.forwardRef(({ className, compact, disabled, id, name, pl
         validationState ? (
             <FormValidationOverlay
                 control={formInput}
+                id={id}
                 validationState={validationState} />
         ) :
             formInput

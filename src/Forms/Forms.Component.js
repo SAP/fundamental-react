@@ -1,6 +1,6 @@
 import path from 'path';
 import React from 'react';
-import { Checkbox, FormFieldset, FormGroup, FormInput, FormItem, FormLabel, FormLegend, FormMessage, FormRadioGroup, FormRadioItem, FormSelect, FormSet, FormTextarea, InlineHelp } from '../';
+import { Checkbox, FormFieldset, FormGroup, FormInput, FormItem, FormLabel, FormLegend, FormRadioGroup, FormRadioItem, FormSelect, FormSet, FormTextarea, InlineHelp } from '../';
 import { ComponentPage, Example } from '../_playground';
 
 export const FormsComponent = () => {
@@ -15,12 +15,11 @@ export const FormsComponent = () => {
                 description={`Inputs are used to collect data from the user. When a field is required,
                 the \`required\` property will include an asterisk (*).`}
                 title='Inputs'>
-                <div>
+                <>
                     <FormGroup>
                         <FormItem>
                             <FormLabel htmlFor='input-1'>Default Input</FormLabel>
-                            <FormInput id='input-1' placeholder='Field placeholder text'
-                                type='text' />
+                            <FormInput id='input-1' placeholder='Field placeholder text' />
                         </FormItem>
                     </FormGroup>
 
@@ -29,8 +28,7 @@ export const FormsComponent = () => {
                             <FormLabel htmlFor='input-2' required>
                                 Required Input
                             </FormLabel>
-                            <FormInput id='input-2' placeholder='Field placeholder text'
-                                type='text' />
+                            <FormInput id='input-2' placeholder='Field placeholder text' />
                         </FormItem>
                     </FormGroup>
 
@@ -52,17 +50,16 @@ export const FormsComponent = () => {
                             <FormTextarea defaultValue=' Pellentesque metus lacus commodo eget justo ut rutrum varius nunc.' id='textarea-1' />
                         </FormItem>
                     </FormGroup>
-                </div>
+                </>
             </Example>
 
             <Example
                 title='Inline Labels'>
-                <div>
+                <>
                     <FormGroup>
                         <FormItem isHorizontal>
                             <FormLabel htmlFor='input-1'>Default Input</FormLabel>
-                            <FormInput id='input-1' placeholder='Field placeholder text'
-                                type='text' />
+                            <FormInput id='input-1' placeholder='Field placeholder text' />
                         </FormItem>
                     </FormGroup>
 
@@ -71,8 +68,7 @@ export const FormsComponent = () => {
                             <FormLabel htmlFor='input-2' required>
                                 Required Input
                             </FormLabel>
-                            <FormInput id='input-2' placeholder='Field placeholder text'
-                                type='text' />
+                            <FormInput id='input-2' placeholder='Field placeholder text' />
                         </FormItem>
                     </FormGroup>
 
@@ -94,7 +90,7 @@ export const FormsComponent = () => {
                             <FormTextarea defaultValue=' Pellentesque metus lacus commodo eget justo ut rutrum varius nunc.' id='textarea-1' />
                         </FormItem>
                     </FormGroup>
-                </div>
+                </>
             </Example>
 
             <Example
@@ -105,7 +101,7 @@ export const FormsComponent = () => {
                     the data allowed in the input field. An example is “Maximum 20 characters”. This 
                     is displayed below the input field.`}
                 title='Input Help Elements'>
-                <div>
+                <>
                     <FormSet>
                         <FormItem>
                             <FormLabel htmlFor='input-4' isInlineHelp>
@@ -114,55 +110,53 @@ export const FormsComponent = () => {
                                     placement='bottom-left'
                                     text='Lorem ipsum dolor sit amet, consectetur adipiscing.' />
                             </FormLabel>
-                            <FormInput id='input-4' type='text' />
+                            <FormInput id='input-4' />
                         </FormItem>
                     </FormSet>
 
                     <FormSet>
                         <FormItem>
                             <FormLabel htmlFor='input-5'>Input with Help Message</FormLabel>
-                            <FormInput id='input-5' type='text' />
-                            <FormMessage type='information'>
-                                Pellentesque metus lacus commodo eget justo ut rutrum varius nunc
-                            </FormMessage>
+                            <FormInput id='input-5'
+                                validationState={{ state: 'information', text: 'Pellentesque metus lacus commodo eget justo ut rutrum varius nunc' }} />
                         </FormItem>
                     </FormSet>
-                </div>
+                </>
             </Example>
 
             <Example
                 description={`The state of the input field can reflect validity of the data entered, 
-                    whether the input data is editable or disabled.\n\n* **Normal**: The field is 
-                    editable but no validation has occurred. \n\n* **Valid**: The data format entered 
-                    has been validated and it’s correct, such as an email address.\n\n* **Invalid**: The 
+                    whether the input data is editable or disabled.\n\n* **Default**: The field is 
+                    editable but no validation has occurred. \n\n* **Success**: The data format entered 
+                    has been validated and it’s correct, such as an email address.\n\n* **Error**: The 
                     data entered is not valid and must be corrected.\n\n* **Warning**: The data entered 
                     is formatted correctly but there are other issues are problematic but will not stop 
                     the user from moving forward.\n\nAlong with Invalid and Warning, error messages should 
                     be displayed below the field so the user can correct the error and move forward.`}
                 title='Input States'>
-                <div>
+                <>
                     <FormSet>
                         <FormItem>
-                            <FormLabel htmlFor='OatmD552'>Normal Input</FormLabel>
-                            <FormInput id='OatmD552' placeholder='Field placeholder text'
-                                type='text' />
-                            <FormMessage>Pellentesque metus lacus commodo eget justo ut rutrum varius nunc</FormMessage>
+                            <FormLabel htmlFor='OatmD552'>Default Input</FormLabel>
+                            <FormInput id='OatmD552' placeholder='Field placeholder text' />
                         </FormItem>
                     </FormSet>
 
                     <FormSet>
                         <FormItem>
-                            <FormLabel htmlFor='OatmD553'>Valid Input</FormLabel>
+                            <FormLabel htmlFor='OatmD553'>Success Input</FormLabel>
                             <FormInput id='OatmD553' placeholder='Field placeholder text'
-                                state='valid' type='text' />
+                                validationState={{ state: 'success', text: 'Pellentesque metus lacus commodo eget justo ut rutrum varius nunc' }} />
+
                         </FormItem>
                     </FormSet>
 
                     <FormSet>
                         <FormItem>
-                            <FormLabel htmlFor='OatmD554'>Invalid Input</FormLabel>
+                            <FormLabel htmlFor='OatmD554'>Error Input</FormLabel>
                             <FormInput id='OatmD554' placeholder='Field placeholder text'
-                                state='invalid' type='text' />
+                                validationState={{ state: 'error', text: 'Pellentesque metus lacus commodo eget justo ut rutrum varius nunc' }} />
+
                         </FormItem>
                     </FormSet>
 
@@ -170,7 +164,8 @@ export const FormsComponent = () => {
                         <FormItem>
                             <FormLabel htmlFor='OatmD555'>Warning Input</FormLabel>
                             <FormInput id='OatmD555' placeholder='Field placeholder text'
-                                state='warning' type='text' />
+                                validationState={{ state: 'warning', text: 'Pellentesque metus lacus commodo eget justo ut rutrum varius nunc' }} />
+
                         </FormItem>
                     </FormSet>
 
@@ -178,10 +173,11 @@ export const FormsComponent = () => {
                         <FormItem>
                             <FormLabel htmlFor='OatmD556'>Information Input</FormLabel>
                             <FormInput id='OatmD556' placeholder='Field placeholder text'
-                                state='information' type='text' />
+                                validationState={{ state: 'information', text: 'Pellentesque metus lacus commodo eget justo ut rutrum varius nunc' }} />
+
                         </FormItem>
                     </FormSet>
-                </div>
+                </>
             </Example>
 
             <Example
@@ -190,15 +186,14 @@ export const FormsComponent = () => {
                 selection within the form.\n\n* **Read Only**: Used to display static information 
                 in the context of a form.`}
                 title='Disabled and Read Only'>
-                <React.Fragment>
+                <>
                     <FormSet>
                         <FormItem>
                             <FormLabel htmlFor='OatmD557'>Disabled Input</FormLabel>
                             <FormInput
                                 disabled
                                 id='OatmD557'
-                                placeholder='Field placeholder text'
-                                type='text' />
+                                placeholder='Field placeholder text' />
                         </FormItem>
                     </FormSet>
 
@@ -208,17 +203,16 @@ export const FormsComponent = () => {
                             <FormInput
                                 id='OatmD558'
                                 placeholder='Field placeholder text'
-                                readOnly
-                                type='text' />
+                                readOnly />
                         </FormItem>
                     </FormSet>
-                </React.Fragment>
+                </>
             </Example>
             <Example
                 description={`The **FormSelect** component is similar to a **Dropdown** but is more commonly used within a form. It can also be
                     set to a disabled state.`}
                 title='Selects'>
-                <div>
+                <>
                     <FormSet>
                         <FormItem>
                             <FormLabel htmlFor='select-1'>Default Select</FormLabel>
@@ -240,14 +234,14 @@ export const FormsComponent = () => {
                             </FormSelect>
                         </FormItem>
                     </FormSet>
-                </div>
+                </>
             </Example>
 
             <Example
                 description={`Radio buttons allow the user to see all options and select one. Generally, this is used when there are
                     between 2-3 options. This component can also be disabled and displayed in a row.`}
                 title='Radio Buttons'>
-                <div>
+                <>
                     <FormFieldset>
                         <FormLegend>Radio buttons</FormLegend>
                         <FormRadioGroup>
@@ -308,7 +302,7 @@ export const FormsComponent = () => {
                             </FormRadioItem>
                         </FormRadioGroup>
                     </FormFieldset>
-                </div>
+                </>
             </Example>
 
             <Example

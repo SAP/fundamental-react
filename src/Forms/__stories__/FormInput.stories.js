@@ -10,8 +10,19 @@ import {
 
 storiesOf('Components|FormInput', module)
     .addDecorator(withKnobs)
-    .add('Default', () => (
-        <FormInput placeholder='Default' />
+    .add('Dev', () => (
+        <FormInput
+            compact={boolean('Compact?', false)}
+            disabled={boolean('Disabled?', false)}
+            placeholder={text('Placeholder', 'Placeholder')}
+            readOnly={boolean('Read only?', false)}
+            validationState={select('Validation State', {
+                'none': '',
+                'success': { state: 'success', text: 'placeholder text' },
+                'error': { state: 'error', text: 'placeholder text' },
+                'information': { state: 'information', text: 'placeholder text' },
+                'warning': { state: 'warning', text: 'placeholder text' }
+            })} />
     ))
     .add('Compact', () => (
         <FormInput compact placeholder='Default' />
@@ -36,13 +47,6 @@ storiesOf('Components|FormInput', module)
     ))
     .add('Validation State | Success', () => (
         <FormInput placeholder='Default' validationState={{ state: 'success', text: 'Test validation state' }} />
-    ))
-    .add('Props', () => (
-        <FormInput
-            compact={boolean('Compact?', false)}
-            disabled={boolean('Disabled?', false)}
-            placeholder={text('Placeholder', 'Placeholder')}
-            readOnly={boolean('Read only?', false)} />
     ))
     .add('disable styles', () => (
         <FormInput disableStyles />
