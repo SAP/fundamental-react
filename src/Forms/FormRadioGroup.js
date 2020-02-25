@@ -1,37 +1,53 @@
+import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import shortId from '../utils/shortId';
-import React, { Component } from 'react';
+import React, { useEffect } from 'react';
 
-class FormRadioGroup extends Component {
-    constructor(props) {
-        super(props);
+const FormRadioGroup = ({
+    children,
+    className,
+    disabled,
+    disableStyles,
+    inline,
+    onChange
+}) => {
 
-        this.groupId = shortId.generate();
-    }
+    useEffect(() => {
+        if (!disableStyles) {
+            require('fundamental-styles/dist/form-group.css');
+        }
+    }, []);
 
-    render() {
-        const { children, disabled, disableStyles, inline, onChange } = this.props;
+    const groupId = shortId.generate();
 
-        return (
-            <>
-                {React.Children.toArray(children).map(child => {
-                    return React.cloneElement(child, {
-                        disabled: child.props.disabled || disabled,
-                        disableStyles: child.props.disableStyles || disableStyles,
-                        inline: child.props.inline || inline,
-                        name: child.props.name || this.groupId,
-                        onChange: child.props.onChange || onChange
-                    });
-                })}
-            </>
-        );
-    }
-}
+    const formGroupClasses = classnames(
+        'fd-form-group',
+        {
+            'fd-form-group--inline': inline
+        },
+        className
+    );
+
+    return (
+        <div className={formGroupClasses}>
+            {React.Children.toArray(children).map(child => {
+                return React.cloneElement(child, {
+                    disabled: child.props.disabled || disabled,
+                    disableStyles: child.props.disableStyles || disableStyles,
+                    inline: child.props.inline || inline,
+                    name: child.props.name || groupId,
+                    onChange: child.props.onChange || onChange
+                });
+            })}
+        </div>
+    );
+};
 
 FormRadioGroup.displayName = 'FormRadioGroup';
 
 FormRadioGroup.propTypes = {
     children: PropTypes.node,
+    className: PropTypes.string,
     disabled: PropTypes.bool,
     disableStyles: PropTypes.bool,
     inline: PropTypes.bool,

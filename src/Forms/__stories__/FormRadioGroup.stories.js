@@ -41,6 +41,19 @@ storiesOf('Components|FormRadioGroup', module)
             </FormRadioItem>
         </FormRadioGroup>
     ))
+    .add('inline', () => (
+        <FormRadioGroup inline>
+            <FormRadioItem>
+            Option 1
+            </FormRadioItem>
+            <FormRadioItem>
+            Option 2
+            </FormRadioItem>
+            <FormRadioItem>
+            Option 3
+            </FormRadioItem>
+        </FormRadioGroup>
+    ))
     .add('disable styles', () => (
         <FormRadioGroup disableStyles>
             <FormRadioItem>

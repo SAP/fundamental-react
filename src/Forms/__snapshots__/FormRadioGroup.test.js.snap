@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<FormRadioGroup /> create form radio group 1`] = `
-Array [
+<div
+  className="fd-form-group blue"
+>
   <div
     className="fd-form-item"
     onChange={[Function]}
@@ -18,7 +20,7 @@ Array [
       />
       Option 1
     </label>
-  </div>,
+  </div>
   <div
     className="fd-form-item"
     onChange={[Function]}
@@ -36,7 +38,7 @@ Array [
       />
       Option 2
     </label>
-  </div>,
+  </div>
   <div
     className="fd-form-item"
     onChange={[Function]}
@@ -53,6 +55,6 @@ Array [
       />
       Option 3
     </label>
-  </div>,
-]
+  </div>
+</div>
 `;
