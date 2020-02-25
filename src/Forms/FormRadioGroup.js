@@ -6,6 +6,7 @@ import React, { useEffect } from 'react';
 const FormRadioGroup = ({
     children,
     className,
+    compact,
     disabled,
     disableStyles,
     inline,
@@ -32,6 +33,7 @@ const FormRadioGroup = ({
         <div className={formGroupClasses}>
             {React.Children.toArray(children).map(child => {
                 return React.cloneElement(child, {
+                    compact: child.props.compact || compact,
                     disabled: child.props.disabled || disabled,
                     disableStyles: child.props.disableStyles || disableStyles,
                     inline: child.props.inline || inline,
@@ -48,6 +50,7 @@ FormRadioGroup.displayName = 'FormRadioGroup';
 FormRadioGroup.propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,
+    compact: PropTypes.bool,
     disabled: PropTypes.bool,
     disableStyles: PropTypes.bool,
     inline: PropTypes.bool,

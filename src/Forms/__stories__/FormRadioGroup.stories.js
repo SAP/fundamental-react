@@ -11,6 +11,7 @@ import {
 
 const createRadioGroupProps = (overrides) => ({
     inline: boolean('inline', false),
+    compact: boolean('compact', false),
     ...overrides
 });
 
@@ -43,6 +44,19 @@ storiesOf('Components|FormRadioGroup', module)
     ))
     .add('inline', () => (
         <FormRadioGroup inline>
+            <FormRadioItem>
+            Option 1
+            </FormRadioItem>
+            <FormRadioItem>
+            Option 2
+            </FormRadioItem>
+            <FormRadioItem>
+            Option 3
+            </FormRadioItem>
+        </FormRadioGroup>
+    ))
+    .add('compact', () => (
+        <FormRadioGroup compact>
             <FormRadioItem>
             Option 1
             </FormRadioItem>
