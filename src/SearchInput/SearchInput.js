@@ -126,6 +126,8 @@ class SearchInput extends Component {
             compact,
             className,
             inputProps,
+            inputGroupAddonProps,
+            inputGroupProps,
             listProps,
             searchBtnProps,
             popoverProps,
@@ -162,6 +164,7 @@ class SearchInput extends Component {
                     }
                     control={
                         <InputGroup
+                            {...inputGroupProps}
                             compact={compact}
                             disableStyles={disableStyles}
                             state={state}>
@@ -175,7 +178,7 @@ class SearchInput extends Component {
                                 value={this.state.value} />
 
                             {!noSearchBtn && (
-                                <InputGroup.Addon isButton>
+                                <InputGroup.Addon {...inputGroupAddonProps} isButton>
                                     <Button {...searchBtnProps}
                                         disableStyles={disableStyles}
                                         glyph='search'
@@ -198,6 +201,8 @@ SearchInput.propTypes = {
     className: PropTypes.string,
     compact: PropTypes.bool,
     disableStyles: PropTypes.bool,
+    inputGroupAddonProps: PropTypes.object,
+    inputGroupProps: PropTypes.object,
     inputProps: PropTypes.object,
     inShellbar: PropTypes.bool,
     listProps: PropTypes.object,
@@ -222,6 +227,8 @@ SearchInput.defaultProps = {
 };
 
 SearchInput.propDescriptions = {
+    inputGroupAddonProps: 'Props to be spread to the InputGroupAddon component.',
+    inputGroupProps: 'Props to be spread to the InputGroup component.',
     noSearchBtn: 'Set to **true** to render without a search button.',
     onEnter: 'Callback function when the user hits the <Enter> key.',
     searchBtnProps: 'Additional props to be spread to the search `<button>` element.',

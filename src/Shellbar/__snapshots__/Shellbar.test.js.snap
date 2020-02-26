@@ -7,14 +7,14 @@ exports[`<Shellbar /> create shellbar 1`] = `
   <div
     className="fd-shellbar__group fd-shellbar__group--product"
   >
-    <a
+    <span
       className="fd-shellbar__logo"
     >
       <img
         alt="SAP"
         src="//unpkg.com/fundamental-styles/dist/images/sap-logo.png"
       />
-    </a>
+    </span>
     <span
       className="fd-shellbar__title"
     >
@@ -41,18 +41,23 @@ exports[`<Shellbar /> create shellbar 1`] = `
             <div
               className="fd-popover__control"
             >
-              <span
+              <div
                 aria-controls="fd-shellbar-profile-popover"
                 aria-expanded={false}
                 aria-haspopup={true}
-                className="fd-identifier fd-identifier--xs fd-identifier--circle fd-has-background-color-accent-8"
+                className="fd-button fd-shellbar__button fd-user-menu__control"
                 onClick={[Function]}
                 onKeyPress={[Function]}
                 role="button"
                 tabIndex={0}
               >
-                JS
-              </span>
+                <span
+                  className="fd-identifier fd-identifier--xs fd-identifier--circle fd-has-background-color-accent-8"
+                  role=""
+                >
+                  JS
+                </span>
+              </div>
             </div>
           </div>
         </div>
@@ -69,14 +74,14 @@ exports[`<Shellbar /> create shellbar 2`] = `
   <div
     className="fd-shellbar__group fd-shellbar__group--product"
   >
-    <a
+    <span
       className="fd-shellbar__logo"
     >
       <img
         alt="SAP"
         src="//unpkg.com/fundamental-styles/dist/images/sap-logo.png"
       />
-    </a>
+    </span>
     <span
       className="fd-shellbar__title"
     >
@@ -103,18 +108,23 @@ exports[`<Shellbar /> create shellbar 2`] = `
             <div
               className="fd-popover__control"
             >
-              <span
+              <div
                 aria-controls="fd-shellbar-profile-popover"
                 aria-expanded={false}
                 aria-haspopup={true}
-                className="fd-identifier fd-identifier--xs fd-identifier--circle fd-has-background-color-accent-8"
+                className="fd-button fd-shellbar__button fd-user-menu__control"
                 onClick={[Function]}
                 onKeyPress={[Function]}
                 role="button"
                 tabIndex={0}
               >
-                JS
-              </span>
+                <span
+                  className="fd-identifier fd-identifier--xs fd-identifier--circle fd-has-background-color-accent-8"
+                  role=""
+                >
+                  JS
+                </span>
+              </div>
             </div>
           </div>
         </div>
@@ -131,14 +141,14 @@ exports[`<Shellbar /> create shellbar 3`] = `
   <div
     className="fd-shellbar__group fd-shellbar__group--product"
   >
-    <a
+    <span
       className="fd-shellbar__logo"
     >
       <img
         alt="SAP"
         src="//unpkg.com/fundamental-styles/dist/images/sap-logo.png"
       />
-    </a>
+    </span>
     <div
       className="fd-product-menu"
     >
@@ -157,11 +167,12 @@ exports[`<Shellbar /> create shellbar 3`] = `
               aria-controls="fd-shellbar-product-popover"
               aria-expanded={false}
               aria-haspopup={true}
-              className="fd-product-menu__control"
+              className="fd-button--light fd-shellbar__button--menu fd-button--menu"
               onClick={[Function]}
               onKeyPress={[Function]}
               role="button"
               tabIndex={0}
+              type="button"
             >
               <span
                 className="fd-shellbar__title"
@@ -196,7 +207,7 @@ exports[`<Shellbar /> create shellbar 3`] = `
       className="fd-shellbar__action fd-shellbar__action--desktop"
     >
       <div
-        className="fd-search-input"
+        className="fd-shellbar__input-group"
       >
         <div
           className="fd-popover"
@@ -210,7 +221,7 @@ exports[`<Shellbar /> create shellbar 3`] = `
               className="fd-popover__control"
             >
               <div
-                className="fd-input-group"
+                className="fd-shellbar__input-group fd-input-group"
                 onClick={[Function]}
               >
                 <input
@@ -265,7 +276,7 @@ exports[`<Shellbar /> create shellbar 3`] = `
             >
               <span
                 aria-label="Unread count"
-                className="fd-counter fd-counter--notification"
+                className="fd-counter fd-counter--notification fd-shellbar__counter--notification"
               >
                 5
               </span>
@@ -370,18 +381,23 @@ exports[`<Shellbar /> create shellbar 3`] = `
             <div
               className="fd-popover__control"
             >
-              <span
+              <div
                 aria-controls="fd-shellbar-profile-popover"
                 aria-expanded={false}
                 aria-haspopup={true}
-                className="fd-identifier fd-identifier--xs fd-identifier--circle fd-has-background-color-accent-8"
+                className="fd-button fd-shellbar__button fd-user-menu__control"
                 onClick={[Function]}
                 onKeyPress={[Function]}
                 role="button"
                 tabIndex={0}
               >
-                JS
-              </span>
+                <span
+                  className="fd-identifier fd-identifier--xs fd-identifier--circle fd-has-background-color-accent-8"
+                  role=""
+                >
+                  JS
+                </span>
+              </div>
             </div>
           </div>
         </div>
@@ -431,14 +447,14 @@ exports[`<Shellbar /> create shellbar 4`] = `
   <div
     className="fd-shellbar__group fd-shellbar__group--product"
   >
-    <a
+    <span
       className="fd-shellbar__logo"
     >
       <img
         alt="SAP"
         src="//unpkg.com/fundamental-styles/dist/images/sap-logo.png"
       />
-    </a>
+    </span>
     <div
       className="fd-product-menu"
     >
@@ -457,11 +473,12 @@ exports[`<Shellbar /> create shellbar 4`] = `
               aria-controls="fd-shellbar-product-popover"
               aria-expanded={false}
               aria-haspopup={true}
-              className="fd-product-menu__control"
+              className="fd-button--light fd-shellbar__button--menu fd-button--menu"
               onClick={[Function]}
               onKeyPress={[Function]}
               role="button"
               tabIndex={0}
+              type="button"
             >
               <span
                 className="fd-shellbar__title"
@@ -496,7 +513,7 @@ exports[`<Shellbar /> create shellbar 4`] = `
       className="fd-shellbar__action fd-shellbar__action--desktop"
     >
       <div
-        className="fd-search-input"
+        className="fd-shellbar__input-group"
       >
         <div
           className="fd-popover"
@@ -510,7 +527,7 @@ exports[`<Shellbar /> create shellbar 4`] = `
               className="fd-popover__control"
             >
               <div
-                className="fd-input-group"
+                className="fd-shellbar__input-group fd-input-group"
                 onClick={[Function]}
               >
                 <input
@@ -565,7 +582,7 @@ exports[`<Shellbar /> create shellbar 4`] = `
             >
               <span
                 aria-label="Unread count"
-                className="fd-counter fd-counter--notification"
+                className="fd-counter fd-counter--notification fd-shellbar__counter--notification"
               >
                 5
               </span>
@@ -663,18 +680,23 @@ exports[`<Shellbar /> create shellbar 4`] = `
             <div
               className="fd-popover__control"
             >
-              <span
+              <div
                 aria-controls="fd-shellbar-profile-popover"
                 aria-expanded={false}
                 aria-haspopup={true}
-                className="fd-identifier fd-identifier--xs fd-identifier--circle fd-has-background-color-accent-8"
+                className="fd-button fd-shellbar__button fd-user-menu__control"
                 onClick={[Function]}
                 onKeyPress={[Function]}
                 role="button"
                 tabIndex={0}
               >
-                JS
-              </span>
+                <span
+                  className="fd-identifier fd-identifier--xs fd-identifier--circle fd-has-background-color-accent-8"
+                  role=""
+                >
+                  JS
+                </span>
+              </div>
             </div>
           </div>
         </div>
@@ -724,14 +746,14 @@ exports[`<Shellbar /> create shellbar 5`] = `
   <div
     className="fd-shellbar__group fd-shellbar__group--product"
   >
-    <a
+    <span
       className="fd-shellbar__logo"
     >
       <img
         alt="SAP"
         src="//unpkg.com/fundamental-styles/dist/images/sap-logo.png"
       />
-    </a>
+    </span>
     <div
       className="fd-product-menu"
     >
@@ -750,11 +772,12 @@ exports[`<Shellbar /> create shellbar 5`] = `
               aria-controls="fd-shellbar-product-popover"
               aria-expanded={false}
               aria-haspopup={true}
-              className="fd-product-menu__control"
+              className="fd-button--light fd-shellbar__button--menu fd-button--menu"
               onClick={[Function]}
               onKeyPress={[Function]}
               role="button"
               tabIndex={0}
+              type="button"
             >
               <span
                 className="fd-shellbar__title"
@@ -789,7 +812,7 @@ exports[`<Shellbar /> create shellbar 5`] = `
       className="fd-shellbar__action fd-shellbar__action--desktop"
     >
       <div
-        className="fd-search-input"
+        className="fd-shellbar__input-group"
       >
         <div
           className="fd-popover"
@@ -803,7 +826,7 @@ exports[`<Shellbar /> create shellbar 5`] = `
               className="fd-popover__control"
             >
               <div
-                className="fd-input-group"
+                className="fd-shellbar__input-group fd-input-group"
                 onClick={[Function]}
               >
                 <input
@@ -936,18 +959,23 @@ exports[`<Shellbar /> create shellbar 5`] = `
             <div
               className="fd-popover__control"
             >
-              <span
+              <div
                 aria-controls="fd-shellbar-profile-popover"
                 aria-expanded={false}
                 aria-haspopup={true}
-                className="fd-identifier fd-identifier--xs fd-identifier--circle fd-has-background-color-accent-8"
+                className="fd-button fd-shellbar__button fd-user-menu__control"
                 onClick={[Function]}
                 onKeyPress={[Function]}
                 role="button"
                 tabIndex={0}
               >
-                JS
-              </span>
+                <span
+                  className="fd-identifier fd-identifier--xs fd-identifier--circle fd-has-background-color-accent-8"
+                  role=""
+                >
+                  JS
+                </span>
+              </div>
             </div>
           </div>
         </div>
@@ -997,14 +1025,14 @@ exports[`<Shellbar /> create shellbar 6`] = `
   <div
     className="fd-shellbar__group fd-shellbar__group--product"
   >
-    <a
+    <span
       className="fd-shellbar__logo"
     >
       <img
         alt="SAP"
         src="//unpkg.com/fundamental-styles/dist/images/sap-logo.png"
       />
-    </a>
+    </span>
     <div
       className="fd-product-menu"
     >
@@ -1023,11 +1051,12 @@ exports[`<Shellbar /> create shellbar 6`] = `
               aria-controls="fd-shellbar-product-popover"
               aria-expanded={false}
               aria-haspopup={true}
-              className="fd-product-menu__control"
+              className="fd-button--light fd-shellbar__button--menu fd-button--menu"
               onClick={[Function]}
               onKeyPress={[Function]}
               role="button"
               tabIndex={0}
+              type="button"
             >
               <span
                 className="fd-shellbar__title"
@@ -1062,7 +1091,7 @@ exports[`<Shellbar /> create shellbar 6`] = `
       className="fd-shellbar__action fd-shellbar__action--desktop"
     >
       <div
-        className="fd-search-input"
+        className="fd-shellbar__input-group"
       >
         <div
           className="fd-popover"
@@ -1076,7 +1105,7 @@ exports[`<Shellbar /> create shellbar 6`] = `
               className="fd-popover__control"
             >
               <div
-                className="fd-input-group"
+                className="fd-shellbar__input-group fd-input-group"
                 onClick={[Function]}
               >
                 <input
@@ -1131,7 +1160,7 @@ exports[`<Shellbar /> create shellbar 6`] = `
             >
               <span
                 aria-label="Unread count"
-                className="fd-counter fd-counter--notification"
+                className="fd-counter fd-counter--notification fd-shellbar__counter--notification"
               >
                 5
               </span>
@@ -1216,21 +1245,26 @@ exports[`<Shellbar /> create shellbar 6`] = `
             <div
               className="fd-popover__control"
             >
-              <span
+              <div
                 aria-controls="fd-shellbar-profile-popover"
                 aria-expanded={false}
                 aria-haspopup={true}
-                className="fd-identifier fd-identifier--xs fd-identifier--circle fd-identifier--thumbnail"
+                className="fd-button fd-shellbar__button fd-user-menu__control"
                 onClick={[Function]}
                 onKeyPress={[Function]}
                 role="button"
-                style={
-                  Object {
-                    "backgroundImage": "url(//unpkg.com/fundamental-styles/dist/images/sap-logo.png)",
-                  }
-                }
                 tabIndex={0}
-              />
+              >
+                <span
+                  className="fd-identifier fd-identifier--xs fd-identifier--circle fd-identifier--thumbnail"
+                  role="presentation"
+                  style={
+                    Object {
+                      "backgroundImage": "url(//unpkg.com/fundamental-styles/dist/images/sap-logo.png)",
+                    }
+                  }
+                />
+              </div>
             </div>
           </div>
         </div>
