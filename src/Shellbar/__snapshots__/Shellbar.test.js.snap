@@ -200,6 +200,11 @@ exports[`<Shellbar /> create shellbar 3`] = `
       >
         <div
           className="fd-popover"
+          style={
+            Object {
+              "width": "100%",
+            }
+          }
         >
           <div
             onFocus={[Function]}
@@ -500,6 +505,11 @@ exports[`<Shellbar /> create shellbar 4`] = `
       >
         <div
           className="fd-popover"
+          style={
+            Object {
+              "width": "100%",
+            }
+          }
         >
           <div
             onFocus={[Function]}
@@ -793,6 +803,11 @@ exports[`<Shellbar /> create shellbar 5`] = `
       >
         <div
           className="fd-popover"
+          style={
+            Object {
+              "width": "100%",
+            }
+          }
         >
           <div
             onFocus={[Function]}
@@ -1066,6 +1081,11 @@ exports[`<Shellbar /> create shellbar 6`] = `
       >
         <div
           className="fd-popover"
+          style={
+            Object {
+              "width": "100%",
+            }
+          }
         >
           <div
             onFocus={[Function]}

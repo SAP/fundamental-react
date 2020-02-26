@@ -6,6 +6,11 @@ exports[`<SearchInput /> create SearchInput 1`] = `
 >
   <div
     className="fd-popover"
+    style={
+      Object {
+        "width": "100%",
+      }
+    }
   >
     <div
       onFocus={[Function]}
@@ -48,6 +53,11 @@ exports[`<SearchInput /> create SearchInput 2`] = `
 <div>
   <div
     className="fd-popover"
+    style={
+      Object {
+        "width": "100%",
+      }
+    }
   >
     <div
       onFocus={[Function]}
@@ -90,6 +100,11 @@ exports[`<SearchInput /> create SearchInput 3`] = `
 <div>
   <div
     className="fd-popover"
+    style={
+      Object {
+        "width": "100%",
+      }
+    }
   >
     <div
       onFocus={[Function]}
@@ -132,6 +147,11 @@ exports[`<SearchInput /> create SearchInput 4`] = `
 <div>
   <div
     className="fd-popover"
+    style={
+      Object {
+        "width": "100%",
+      }
+    }
   >
     <div
       onFocus={[Function]}
