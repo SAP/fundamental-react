@@ -19,13 +19,13 @@ exports[`<Tabs /> create tabs component 1`] = `
 exports[`<Tabs /> create tabs component 2`] = `
 <li
   className="fd-tabs__item"
+  disabled={true}
 >
   <a
     aria-controls="3"
-    aria-disabled={true}
     className="fd-tabs__link"
-    href={null}
-    onClick={null}
+    href="#3"
+    onClick={[Function]}
     role="tab"
   >
     Tab 3

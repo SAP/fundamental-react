@@ -2,7 +2,7 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React, { useEffect } from 'react';
 
-const Tab = React.forwardRef(({ title, disabled, glyph, id, selected, onClick,
+const Tab = React.forwardRef(({ title, glyph, id, selected, onClick,
     tabContentProps, linkProps, index, className, disableStyles, ...props }, ref) => {
 
     useEffect(() => {
@@ -34,13 +34,10 @@ const Tab = React.forwardRef(({ title, disabled, glyph, id, selected, onClick,
             <a
                 {...linkProps}
                 aria-controls={id}
-                aria-disabled={disabled}
                 aria-selected={selected}
                 className={linkClasses}
-                href={!disabled ? `#${id}` : null}
-                onClick={!disabled ? (event) => {
-                    onClick(event, index);
-                } : null}
+                href={`#${id}`}
+                onClick={(event) => onClick(event, index)}
                 role='tab'>
                 {title}
             </a>
@@ -56,7 +53,6 @@ Tab.defaultProps = {
 
 Tab.propTypes = {
     className: PropTypes.string,
-    disabled: PropTypes.bool,
     disableStyles: PropTypes.bool,
     glyph: PropTypes.string,
     id: PropTypes.string,

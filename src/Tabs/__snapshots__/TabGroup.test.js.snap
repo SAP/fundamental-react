@@ -39,11 +39,10 @@ Array [
     >
       <a
         aria-controls="3"
-        aria-disabled={true}
         aria-selected={false}
         className="fd-tabs__link"
-        href={null}
-        onClick={null}
+        href="#3"
+        onClick={[Function]}
         role="tab"
       >
         Tab 3
@@ -132,11 +131,10 @@ Array [
     >
       <a
         aria-controls="3"
-        aria-disabled={true}
         aria-selected={false}
         className="fd-tabs__link"
-        href={null}
-        onClick={null}
+        href="#3"
+        onClick={[Function]}
         role="tab"
       >
         Tab 3
