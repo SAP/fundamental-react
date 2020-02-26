@@ -38,12 +38,12 @@ import { ShellbarComponent } from '../Shellbar/Shellbar.Component';
 import { SideNav } from '../SideNavigation/';
 import { SideNavigationComponent } from '../SideNavigation/SideNav.Component';
 import sortBy from 'sort-by';
+import { SwitchComponent } from '../Switch/Switch.Component';
 import { TableComponent } from '../Table/Table.Component';
 import { TabsComponent } from '../Tabs/Tabs.Component';
 import { TileComponent } from '../Tile/Tile.Component';
 import { TimeComponent } from '../Time/Time.Component';
 import { TimePickerComponent } from '../TimePicker/TimePicker.Component';
-import { ToggleComponent } from '../Toggle/Toggle.Component';
 import { TokenComponent } from '../Token/Token.Component';
 import { TreeViewComponent } from '../TreeView/TreeView.Component';
 import { BrowserRouter, NavLink, Redirect, Route, Switch } from 'react-router-dom';
@@ -275,9 +275,9 @@ const routes = [
         section: 'Components'
     },
     {
-        url: '/toggle',
-        name: 'Toggle',
-        component: ToggleComponent,
+        url: '/Switch',
+        name: 'Switch',
+        component: SwitchComponent,
         section: 'Components'
     },
     {
@@ -379,7 +379,7 @@ export class Routes extends Component {
                                 aria-expanded={this.state.showSideNav}
                                 aria-label='Toggle Navigation'
                                 glyph='menu2'
-                                id='navToggle'
+                                id='navSwitch'
                                 onClick={this.toggleNavVis}
                                 option='light'
                                 type='standard' />

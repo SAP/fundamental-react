@@ -1,6 +1,6 @@
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import { Toggle } from '../../../';
+import { Switch } from '../../../';
 import React, { Component } from 'react';
 
 class DocsTile extends Component {
@@ -39,20 +39,20 @@ class DocsTile extends Component {
         return (
             <div className={outerDivClasses}>
                 <div className='frDocs-tile__features'>
-                    <Toggle
+                    <Switch
                         className='frDocs-tile__feature'
+                        compact
                         inputProps={{ 'aria-label': 'Show right to left' }}
-                        onChange={this.toggleRTL}
-                        size='xs'>
+                        onChange={this.toggleRTL}>
                         Show right to left
-                    </Toggle>
-                    <Toggle
+                    </Switch>
+                    <Switch
                         className='frDocs-tile__feature'
+                        compact
                         inputProps={{ 'aria-label': 'Hide background' }}
-                        onChange={this.toggleBackground}
-                        size='xs'>
+                        onChange={this.toggleBackground}>
                         Hide background
-                    </Toggle>
+                    </Switch>
                 </div>
                 <div className={innerDivClasses} dir={showRTL ? 'rtl' : ''}>{children}</div>
             </div>

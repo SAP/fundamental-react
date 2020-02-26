@@ -101,13 +101,6 @@ export const POPOVER_ALIGNMENTS = [
     'right'
 ];
 
-export const TOGGLE_SIZES = [
-    'xs',
-    's',
-    'm',
-    'l'
-];
-
 export const POPOVER_TYPES = [
     true,
     'dialog',
