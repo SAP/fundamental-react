@@ -1,4 +1,3 @@
-import { Alert } from '../../../';
 import { Button } from '../../../';
 import { Dropdown } from '../../../';
 import Heading from '../Heading/Heading';
@@ -306,17 +305,6 @@ class Playground extends Component {
 
       let componentToGenerate;
       switch (this.props.component) {
-          case 'alert':
-              componentToGenerate = (
-                  <Alert
-                      dismissible={this.state.childs.dismissible}
-                      link={this.state.childs.link}
-                      linkText={this.state.childs.linkText}
-                      type={this.state.childs.type}>
-            Default alert with a{' '}
-                  </Alert>
-              );
-              break;
           case 'badge':
               if (this.state.childs.component === 'badge') {
                   componentToGenerate = (

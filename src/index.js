@@ -1,5 +1,4 @@
 export { default as ActionBar } from './ActionBar/ActionBar';
-export { default as Alert } from './Alert/Alert';
 export { default as Badge } from './Badge/Badge';
 export { default as Label } from './Badge/Label';
 export { default as Status } from './Badge/Status';
@@ -32,6 +31,7 @@ export { default as Link } from './Link/Link';
 export { default as ListGroup } from './ListGroup/ListGroup';
 export { default as LocalizationEditor } from './LocalizationEditor/LocalizationEditor';
 export { default as Menu } from './Menu/Menu';
+export { default as MessageStrip } from './MessageStrip/MessageStrip';
 export { default as Modal } from './Modal/Modal';
 export { default as MultiInput } from './MultiInput/MultiInput';
 export { default as Pagination } from './Pagination/Pagination';

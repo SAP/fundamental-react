@@ -1,0 +1,74 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MessageStrip /> create basic MessageStrip 1`] = `
+<div>
+  <div
+    className="fd-message-strip fd-message-strip--dismissible"
+    role="alert"
+  >
+    <button
+      aria-controls="j2ALl423"
+      aria-label="Close"
+      className="fd-button--light fd-button--compact fd-message-strip__close"
+      onClick={[Function]}
+      type="button"
+    />
+    <p
+      className="fd-message-strip__text"
+    >
+      Default MessageStrip with a
+      <a
+        className="fd-link"
+        href="#"
+      >
+        link
+         
+      </a>
+    </p>
+  </div>
+</div>
+`;
+
+exports[`<MessageStrip /> create basic MessageStrip 2`] = `
+<div>
+  <div
+    className="fd-message-strip fd-message-strip--dismissible fd-message-strip--error"
+    role="alert"
+  >
+    <button
+      aria-controls="j2ALl423"
+      aria-label="Close"
+      className="fd-button--light fd-button--compact fd-message-strip__close"
+      onClick={[Function]}
+      type="button"
+    />
+    <p
+      className="fd-message-strip__text"
+    >
+      Error message with a
+    </p>
+  </div>
+</div>
+`;
+
+exports[`<MessageStrip /> create non-dismissible MessageStrip 1`] = `
+<div>
+  <div
+    className="fd-message-strip blue"
+    role="alert"
+  >
+    <p
+      className="fd-message-strip__text"
+    >
+      Default MessageStrip that cannot be dismissed
+      <a
+        className="fd-link"
+        href="#"
+      >
+        link
+         
+      </a>
+    </p>
+  </div>
+</div>
+`;

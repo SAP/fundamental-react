@@ -1,4 +1,4 @@
-export const ALERT_TYPES = [
+export const MESSAGESTRIP_TYPES = [
     'warning',
     'error',
     'success',

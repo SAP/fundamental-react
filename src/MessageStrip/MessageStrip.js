@@ -1,13 +1,12 @@
-import { ALERT_TYPES } from '../utils/constants';
 import Button from '../Button/Button';
 import classnames from 'classnames';
 import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
-import Icon from '../Icon/Icon';
 import Link from '../Link/Link';
+import { MESSAGESTRIP_TYPES } from '../utils/constants';
 import PropTypes from 'prop-types';
 import React, { useEffect, useState } from 'react';
 
-const Alert = (props) => {
+const MessageStrip = (props) => {
 
     let [active, setActive] = useState(true);
 
@@ -15,7 +14,7 @@ const Alert = (props) => {
         if (!disableStyles) {
             require('fundamental-styles/dist/fonts.css');
             require('fundamental-styles/dist/icon.css');
-            require('fundamental-styles/dist/alert.css');
+            require('fundamental-styles/dist/message-strip.css');
         }
     }, []);
 
@@ -28,23 +27,25 @@ const Alert = (props) => {
         linkProps,
         linkText,
         localizedText,
+        noGlyph,
         dismissible,
         children,
         className,
         ...otherProps
     } = props;
 
-    const closeAlertHandler = (e) => {
+    const closeMessageStripHandler = (e) => {
         setActive(false);
         onCloseClicked(e);
     };
 
 
-    const alertClasses = classnames(
-        'fd-alert',
+    const MessageStripClasses = classnames(
+        'fd-message-strip',
         {
-            'fd-alert--dismissible': dismissible,
-            [`fd-alert--${type}`]: !!type
+            'fd-message-strip--dismissible': dismissible,
+            'fd-message-strip--no-icon': noGlyph,
+            [`fd-message-strip--${type}`]: !!type
         },
         className
     );
@@ -54,22 +55,19 @@ const Alert = (props) => {
             {active && (
                 <div
                     {...otherProps}
-                    className={alertClasses}
+                    className={MessageStripClasses}
                     role='alert'>
                     {dismissible && (
                         <Button
                             {...buttonProps}
                             aria-controls='j2ALl423'
                             aria-label={localizedText.close}
-                            className='fd-alert__close'
+                            className='fd-message-strip__close'
                             compact
-                            onClick={closeAlertHandler}
+                            onClick={closeMessageStripHandler}
                             option='light' />
                     )}
-                    <p className='fd-alert__text'>
-                        {type && (
-                            <Icon disableStyles={disableStyles} glyph={`message-${type}`} />
-                        )}
+                    <p className='fd-message-strip__text'>
                         {children}
                         {link && (
                             <Link
@@ -86,9 +84,9 @@ const Alert = (props) => {
     );
 };
 
-Alert.displayName = 'Alert';
+MessageStrip.displayName = 'MessageStrip';
 
-Alert.propTypes = {
+MessageStrip.propTypes = {
     buttonProps: PropTypes.object,
     children: PropTypes.node,
     className: PropTypes.string,
@@ -100,18 +98,19 @@ Alert.propTypes = {
     localizedText: CustomPropTypes.i18n({
         close: PropTypes.string
     }),
-    type: PropTypes.oneOf(ALERT_TYPES),
+    noGlyph: PropTypes.bool,
+    type: PropTypes.oneOf(MESSAGESTRIP_TYPES),
     onCloseClicked: PropTypes.func
 };
 
-Alert.defaultProps = {
+MessageStrip.defaultProps = {
     localizedText: {
         close: 'Close'
     },
     onCloseClicked: () => { }
 };
 
-Alert.propDescriptions = {
+MessageStrip.propDescriptions = {
     dismissible: 'Set to **true** to show a dismiss button.',
     link: 'Value to be applied to the anchor\'s `href` attribute.',
     linkProps: 'Additional props to be spread to the link\'s `<a>` element.',
@@ -119,7 +118,8 @@ Alert.propDescriptions = {
     localizedTextShape: {
         close: 'Value for aria-label on the close <button> element.'
     },
+    noGlyph: 'Set to **true** to disable the state icon.',
     onCloseClicked: 'Callback function passing event when close button is clicked.'
 };
 
-export default Alert;
+export default MessageStrip;

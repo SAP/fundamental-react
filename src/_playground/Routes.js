@@ -1,5 +1,4 @@
 import { ActionBarComponent } from '../ActionBar/ActionBar.Component';
-import { AlertComponent } from '../Alert/Alert.Component';
 import { BadgeComponent } from '../Badge/Badge.Component';
 import { BreadcrumbComponent } from '../Breadcrumb/Breadcrumb.Component';
 import Button from '../Button/Button';
@@ -26,6 +25,7 @@ import { LinkComponent } from '../Link/Link.Component';
 import { ListGroupComponent } from '../ListGroup/ListGroup.Component';
 import { LocalizationEditorComponent } from '../LocalizationEditor/LocalizationEditor.Component';
 import { MenuComponent } from '../Menu/Menu.Component';
+import { MessageStripComponent } from '../MessageStrip/MessageStrip.Component';
 import { ModalComponent } from '../Modal/Modal.Component';
 import { MultiInputComponent } from '../MultiInput/MultiInput.Component';
 import { PaginationComponent } from '../Pagination/Pagination.Component';
@@ -77,9 +77,9 @@ const routes = [
         section: 'Components'
     },
     {
-        url: '/alert',
-        name: 'Alert',
-        component: AlertComponent,
+        url: '/MessageStrip',
+        name: 'MessageStrip',
+        component: MessageStripComponent,
         section: 'Components'
     },
     {
