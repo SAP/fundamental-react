@@ -3,6 +3,7 @@ import { FORM_STATES } from '../utils/constants';
 import FormItem from './FormItem';
 import FormLabel from './FormLabel';
 import PropTypes from 'prop-types';
+import shortId from '../utils/shortId';
 import React, { useEffect, useRef } from 'react';
 
 const getCheckStatus = (checked, indeterminate) => {
@@ -17,6 +18,7 @@ const getCheckStatus = (checked, indeterminate) => {
 
 const Checkbox = React.forwardRef(({
     checked,
+    children,
     className,
     compact,
     defaultChecked,
@@ -42,6 +44,7 @@ const Checkbox = React.forwardRef(({
 
     useEffect(() => {
         if (!disableStyles) {
+            require('fundamental-styles/dist/icon.css');
             require('fundamental-styles/dist/checkbox.css');
         }
     }, []);
@@ -49,8 +52,13 @@ const Checkbox = React.forwardRef(({
     const classes = classnames(
         className,
         'fd-checkbox',
-        { [`is-${state}`]: state }
+        {
+            [`is-${state}`]: state,
+            'fd-checkbox--compact': compact
+        }
     );
+
+    const checkId = id ? id : shortId.generate();
 
     return (
         <FormItem
@@ -59,24 +67,26 @@ const Checkbox = React.forwardRef(({
             disabled={disabled}
             isInline={inline}
             ref={ref}>
+            <input
+                {...inputProps}
+                aria-checked={getCheckStatus(checked, indeterminate)}
+                checked={checked || defaultChecked}
+                className={classes}
+                disabled={disabled}
+                id={checkId}
+                name={name}
+                onChange={(e) => {
+                    onChange(e, !checked);
+                }}
+                ref={inputEl}
+                type='checkbox'
+                value={value} />
             <FormLabel {...labelProps}
+                className='fd-checkbox__label'
                 disableStyles={disableStyles}
                 disabled={disabled}
-                isCheckbox>
-                <input
-                    {...inputProps}
-                    aria-checked={getCheckStatus(checked, indeterminate)}
-                    checked={checked || defaultChecked}
-                    className={classes}
-                    disabled={disabled}
-                    id={id}
-                    name={name}
-                    onChange={(e) => {
-                        onChange(e, !checked);
-                    }}
-                    ref={inputEl}
-                    type='checkbox' />
-                {value}
+                htmlFor={checkId}>
+                {children}
             </FormLabel>
         </FormItem>
     );
@@ -85,6 +95,7 @@ const Checkbox = React.forwardRef(({
 Checkbox.displayName = 'Checkbox';
 
 Checkbox.propTypes = {
+    children: PropTypes.node.isRequired,
     checked: PropTypes.bool,
     className: PropTypes.string,
     compact: PropTypes.bool,

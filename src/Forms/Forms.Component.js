@@ -245,17 +245,14 @@ export const FormsComponent = () => {
                     <FormFieldset>
                         <FormLegend>Radio buttons</FormLegend>
                         <FormRadioGroup>
-                            <FormRadioItem
-                                id='radio-1'>
+                            <FormRadioItem>
                                 Option 1
                             </FormRadioItem>
-                            <FormRadioItem
-                                id='radio-2'>
+                            <FormRadioItem>
                                 Option 2
                             </FormRadioItem>
                             <FormRadioItem
-                                defaultChecked
-                                id='radio-3'>
+                                defaultChecked>
                                 Option 3
                             </FormRadioItem>
                         </FormRadioGroup>
@@ -266,18 +263,15 @@ export const FormsComponent = () => {
                         <FormRadioGroup>
                             <FormRadioItem
                                 defaultChecked
-                                disabled
-                                id='radio-4'>
+                                disabled>
                                 Option 1
                             </FormRadioItem>
                             <FormRadioItem
-                                disabled
-                                id='radio-5'>
+                                disabled>
                                 Option 2
                             </FormRadioItem>
                             <FormRadioItem
-                                disabled
-                                id='radio-6'>
+                                disabled>
                                 Option 3
                             </FormRadioItem>
                         </FormRadioGroup>
@@ -287,17 +281,31 @@ export const FormsComponent = () => {
                         <FormLegend>Inline Radio buttons</FormLegend>
                         <FormRadioGroup
                             inline>
-                            <FormRadioItem
-                                id='radio-7'>
+                            <FormRadioItem>
                                 Option 1
                             </FormRadioItem>
                             <FormRadioItem
-                                defaultChecked
-                                id='radio-8'>
+                                defaultChecked>
                                 Option 2
                             </FormRadioItem>
+                            <FormRadioItem>
+                                Option 3
+                            </FormRadioItem>
+                        </FormRadioGroup>
+                    </FormFieldset>
+
+                    <FormFieldset>
+                        <FormLegend>Compact Radio buttons</FormLegend>
+                        <FormRadioGroup
+                            compact>
+                            <FormRadioItem>
+                                Option 1
+                            </FormRadioItem>
                             <FormRadioItem
-                                id='radio-9'>
+                                defaultChecked>
+                                Option 2
+                            </FormRadioItem>
+                            <FormRadioItem>
                                 Option 3
                             </FormRadioItem>
                         </FormRadioGroup>
@@ -312,31 +320,28 @@ export const FormsComponent = () => {
                 <FormFieldset>
                     <FormLegend>Checkboxes</FormLegend>
                     <Checkbox
-                        defaultChecked
-                        id='checkbox-1'
-                        name='checkbox-name-1'
-                        value='Option One' />
+                        defaultChecked>Option 1</Checkbox>
                     <Checkbox
-                        disabled
-                        id='checkbox-2'
-                        name='checkbox-name-2'
-                        value='Option Two' />
+                        disabled>Option 2</Checkbox>
                     <Checkbox
-                        id='checkbox-3'
-                        indeterminate
-                        name='checkbox-name-3'
-                        value='Option Three' />
+                        indeterminate>Option 3</Checkbox>
                 </FormFieldset>
 
                 <FormFieldset>
-                    <FormLegend>Inline Checkbox buttons</FormLegend>
+                    <FormLegend>Inline Checkboxes</FormLegend>
                     <FormRadioGroup inline>
-                        <Checkbox id='checkbox-4' name='checkbox-name-4'
-                            value='Option One' />
-                        <Checkbox id='checkbox-5' name='checkbox-name-5'
-                            value='Option Two' />
-                        <Checkbox id='checkbox-6' name='checkbox-name-6'
-                            value='Option Three' />
+                        <Checkbox>Option 1 </Checkbox>
+                        <Checkbox>Option 2 </Checkbox>
+                        <Checkbox>Option 3 </Checkbox>
+                    </FormRadioGroup>
+                </FormFieldset>
+
+                <FormFieldset>
+                    <FormLegend>Compact Checkboxes</FormLegend>
+                    <FormRadioGroup compact>
+                        <Checkbox>Option 1 </Checkbox>
+                        <Checkbox>Option 2 </Checkbox>
+                        <Checkbox>Option 3 </Checkbox>
                     </FormRadioGroup>
                 </FormFieldset>
             </Example>

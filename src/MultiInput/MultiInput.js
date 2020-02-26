@@ -37,7 +37,7 @@ class MultiInput extends Component {
                     checked={this.isChecked(item)}
                     id={index + `_${shortid.generate()}`}
                     onChange={() => this.updateSelectedTags(item)}
-                    value={item} />
+                    value={item}>{item}</Checkbox>
             </li>
         ));
     };

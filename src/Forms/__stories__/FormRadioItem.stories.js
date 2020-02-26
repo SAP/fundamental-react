@@ -1,4 +1,4 @@
-import Checkbox from '../Checkbox';
+import FormRadioItem from '../FormRadioItem';
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import {
@@ -10,7 +10,6 @@ import {
 const createProps = (overrides) => ({
     compact: boolean('compact', false),
     disabled: boolean('disabled', false),
-    indeterminate: boolean('indeterminate', false),
     state: select('Validation State', {
         'default': null,
         'valid': 'valid',
@@ -22,20 +21,17 @@ const createProps = (overrides) => ({
 });
 
 
-storiesOf('Components|Checkbox', module)
+storiesOf('Components|FormRadioItem', module)
     .addDecorator(withKnobs)
     .add('Default', () => (
-        <Checkbox {...createProps()}>Text Option</Checkbox>
-    ))
-    .add('indeterminate', () => (
-        <Checkbox indeterminate>Text Option</Checkbox>
+        <FormRadioItem {...createProps()}>Text Option</FormRadioItem>
     ))
     .add('disabled', () => (
-        <Checkbox disabled>Text Option</Checkbox>
+        <FormRadioItem disabled>Text Option</FormRadioItem>
     ))
     .add('compact', () => (
-        <Checkbox compact>Text Option</Checkbox>
+        <FormRadioItem compact>Text Option</FormRadioItem>
     ))
     .add('disable styles', () => (
-        <Checkbox {...createProps()} disableStyles>Text Option</Checkbox>
+        <FormRadioItem {...createProps()} disableStyles>Text Option</FormRadioItem>
     ));

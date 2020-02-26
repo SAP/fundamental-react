@@ -86,18 +86,18 @@ exports[`<ListGroup /> create list group 3`] = `
     <div
       className="fd-form-item"
     >
+      <input
+        aria-checked="false"
+        className="fd-checkbox"
+        id="foo2"
+        onChange={[Function]}
+        type="checkbox"
+        value="List item 1"
+      />
       <label
-        className="fd-form-label fd-form-label--checkbox"
-      >
-        <input
-          aria-checked="false"
-          className="fd-checkbox"
-          id="foo2"
-          onChange={[Function]}
-          type="checkbox"
-        />
-        List item 1
-      </label>
+        className="fd-form-label fd-checkbox__label"
+        htmlFor="foo2"
+      />
     </div>
   </li>
 </ul>
