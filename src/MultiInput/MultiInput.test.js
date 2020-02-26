@@ -185,7 +185,7 @@ describe('<MultiInput />', () => {
         expect(wrapper.state(['tags'])).toHaveLength(2);
 
         // simulate clicking on tag in tag collection under input box
-        wrapper.find('.fd-token').first().simulate('click');
+        wrapper.find('.fd-token__close').first().simulate('click');
 
         // check that no tags exist
         expect(wrapper.state(['tags'])).toHaveLength(1);
