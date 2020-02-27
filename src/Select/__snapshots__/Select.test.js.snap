@@ -13,10 +13,11 @@ exports[`<Select /> create Select component 1`] = `
       className="fd-popover__control"
     >
       <div
-        aria-controls="fd-7WmJd56s"
+        aria-controls="1"
         aria-expanded={false}
         aria-haspopup={true}
         className="fd-select"
+        id="1"
         onClick={[Function]}
         onKeyPress={[Function]}
         role="button"
@@ -49,10 +50,11 @@ exports[`<Select /> create Select component 2`] = `
       className="fd-popover__control"
     >
       <div
-        aria-controls="fd-ei5J6WhEr"
+        aria-controls="2"
         aria-expanded={false}
         aria-haspopup={true}
-        className="fd-select blue"
+        className="fd-select fd-select--compact"
+        id="2"
         onClick={[Function]}
         onKeyPress={[Function]}
         role="button"
@@ -85,21 +87,22 @@ exports[`<Select /> create Select component 3`] = `
       className="fd-popover__control"
     >
       <div
-        aria-controls="fd-NKhEOTR-Q"
+        aria-controls="3"
         aria-expanded={false}
         aria-haspopup={true}
         className="fd-select"
+        id="3"
         onClick={[Function]}
         onKeyPress={[Function]}
         role="button"
-        standard={true}
         tabIndex={0}
       >
         <div
-          className="fd-select__control"
+          className="fd-select__control is-disabled"
         >
           <button
-            className="fd-button--light sap-icon--slim-arrow-down fd-select__button"
+            className="fd-button--light sap-icon--slim-arrow-down is-disabled fd-select__button"
+            disabled={true}
             type="button"
           />
         </div>
@@ -122,18 +125,20 @@ exports[`<Select /> create Select component 4`] = `
       className="fd-popover__control"
     >
       <div
-        aria-controls="fd-ZAwyY_V2Z"
+        aria-controls="5"
         aria-expanded={false}
         aria-haspopup={true}
         className="fd-select"
+        id="5"
         onClick={[Function]}
         onKeyPress={[Function]}
         role="button"
         tabIndex={0}
       >
         <div
-          className="fd-select__control"
+          className="fd-select__control is-warning"
         >
+          Default
           <button
             className="fd-button--light sap-icon--slim-arrow-down fd-select__button"
             type="button"
@@ -158,18 +163,102 @@ exports[`<Select /> create Select component 5`] = `
       className="fd-popover__control"
     >
       <div
-        aria-controls="fd-Ijwr1gHMY"
+        aria-controls="4"
         aria-expanded={false}
         aria-haspopup={true}
         className="fd-select"
+        id="4"
         onClick={[Function]}
         onKeyPress={[Function]}
         role="button"
         tabIndex={0}
       >
         <div
+          className="fd-select__control is-invalid"
+        >
+          Default
+          <button
+            className="fd-button--light sap-icon--slim-arrow-down fd-select__button"
+            type="button"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Select /> create Select component 6`] = `
+<div
+  className="fd-popover"
+>
+  <div
+    onFocus={[Function]}
+    onMouseDown={[Function]}
+    onTouchStart={[Function]}
+  >
+    <div
+      className="fd-popover__control"
+    >
+      <div
+        aria-controls="6"
+        aria-expanded={false}
+        aria-haspopup={true}
+        className="fd-select"
+        id="6"
+        onClick={[Function]}
+        onKeyPress={[Function]}
+        role="button"
+        tabIndex={0}
+      >
+        <div
+          className="fd-select__control is-information"
+        >
+          Default
+          <button
+            className="fd-button--light sap-icon--slim-arrow-down fd-select__button"
+            type="button"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Select /> create Select component 7`] = `
+<div
+  className="fd-popover"
+>
+  <div
+    onFocus={[Function]}
+    onMouseDown={[Function]}
+    onTouchStart={[Function]}
+  >
+    <div
+      className="fd-popover__control"
+    >
+      <div
+        aria-controls="7"
+        aria-expanded={false}
+        aria-haspopup={true}
+        className="fd-select"
+        id="7"
+        onClick={[Function]}
+        onKeyPress={[Function]}
+        role="button"
+        tabIndex={0}
+        uvalidationState={
+          Object {
+            "state": "success",
+            "text": "Test validation state",
+          }
+        }
+      >
+        <div
           className="fd-select__control"
         >
+          Default
           <button
             className="fd-button--light sap-icon--slim-arrow-down fd-select__button"
             type="button"

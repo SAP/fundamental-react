@@ -2,6 +2,7 @@
 
 exports[`<ListItem /> create list group item 1`] = `
 <li
+  aria-selected={false}
   className="fd-list__item"
   onClick={[Function]}
   role="option"

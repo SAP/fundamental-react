@@ -5,7 +5,7 @@ import renderer from 'react-test-renderer';
 
 describe('<ListIcon />', () => {
     const ListIcon = (
-        <List.Icon gyph='accept' />
+        <List.Icon glyph='accept' />
     );
 
     test('create list Icon item', () => {

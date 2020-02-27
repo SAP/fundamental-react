@@ -10,6 +10,7 @@ exports[`<List /> create list group 1`] = `
     List Header
   </li>
   <li
+    aria-selected={false}
     className="fd-list__item"
     onClick={[Function]}
     role="option"
@@ -22,6 +23,7 @@ exports[`<List /> create list group 1`] = `
     </span>
   </li>
   <li
+    aria-selected={false}
     className="fd-list__item"
     onClick={[Function]}
     role="option"
@@ -34,6 +36,7 @@ exports[`<List /> create list group 1`] = `
     </span>
   </li>
   <li
+    aria-selected={false}
     className="fd-list__item"
     onClick={[Function]}
     role="option"
@@ -46,6 +49,7 @@ exports[`<List /> create list group 1`] = `
     </span>
   </li>
   <li
+    aria-selected={false}
     className="fd-list__item"
     onClick={[Function]}
     role="option"
@@ -75,6 +79,7 @@ exports[`<List /> create list group 2`] = `
     List Header
   </li>
   <li
+    aria-selected={false}
     className="fd-list__item"
     onClick={[Function]}
     role="option"
@@ -87,6 +92,7 @@ exports[`<List /> create list group 2`] = `
     </span>
   </li>
   <li
+    aria-selected={false}
     className="fd-list__item"
     onClick={[Function]}
     role="option"
@@ -111,6 +117,7 @@ exports[`<List /> create list group 3`] = `
   className="fd-list fd-list--no-border"
 >
   <li
+    aria-selected={false}
     className="fd-list__item"
     onClick={[Function]}
     role="option"
@@ -130,6 +137,7 @@ exports[`<List /> create list group 4`] = `
   className="fd-list fd-list--compact"
 >
   <li
+    aria-selected={false}
     className="fd-list__item"
     onClick={[Function]}
     role="option"
@@ -154,6 +162,7 @@ exports[`<List /> create list group 5`] = `
     List Header
   </li>
   <li
+    aria-selected={false}
     className="fd-list__item"
     onClick={[Function]}
     role="option"
@@ -169,6 +178,7 @@ exports[`<List /> create list group 5`] = `
     </span>
   </li>
   <li
+    aria-selected={false}
     className="fd-list__item"
     onClick={[Function]}
     role="option"
@@ -184,6 +194,7 @@ exports[`<List /> create list group 5`] = `
     </span>
   </li>
   <li
+    aria-selected={false}
     className="fd-list__item"
     onClick={[Function]}
     role="option"
@@ -199,6 +210,7 @@ exports[`<List /> create list group 5`] = `
     </span>
   </li>
   <li
+    aria-selected={false}
     className="fd-list__item"
     onClick={[Function]}
     role="option"
@@ -231,6 +243,7 @@ exports[`<List /> create list group 6`] = `
     List Header
   </li>
   <li
+    aria-selected={false}
     className="fd-list__item"
     onClick={[Function]}
     role="option"
@@ -246,6 +259,7 @@ exports[`<List /> create list group 6`] = `
     />
   </li>
   <li
+    aria-selected={false}
     className="fd-list__item"
     onClick={[Function]}
     role="option"
@@ -261,6 +275,7 @@ exports[`<List /> create list group 6`] = `
     />
   </li>
   <li
+    aria-selected={false}
     className="fd-list__item"
     onClick={[Function]}
     role="option"
@@ -276,6 +291,7 @@ exports[`<List /> create list group 6`] = `
     />
   </li>
   <li
+    aria-selected={false}
     className="fd-list__item"
     onClick={[Function]}
     role="option"
@@ -308,6 +324,7 @@ exports[`<List /> create list group 7`] = `
     List Header
   </li>
   <li
+    aria-selected={false}
     className="fd-list__item"
     onClick={[Function]}
     role="option"
@@ -325,6 +342,7 @@ exports[`<List /> create list group 7`] = `
     </span>
   </li>
   <li
+    aria-selected={false}
     className="fd-list__item"
     onClick={[Function]}
     role="option"
@@ -342,6 +360,7 @@ exports[`<List /> create list group 7`] = `
     </span>
   </li>
   <li
+    aria-selected={false}
     className="fd-list__item"
     onClick={[Function]}
     role="option"
@@ -359,6 +378,7 @@ exports[`<List /> create list group 7`] = `
     </span>
   </li>
   <li
+    aria-selected={false}
     className="fd-list__item"
     onClick={[Function]}
     role="option"

@@ -34,8 +34,4 @@ FormValidationOverlay.propTypes = {
     })
 };
 
-FormValidationOverlay.propDescriptions = {
-
-};
-
 export default FormValidationOverlay;

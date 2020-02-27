@@ -5,14 +5,23 @@ import React, { useState } from 'react';
 const ListItem = ({
     className,
     children,
+    onClick,
     selected,
     ...props
 }) => {
 
-    let { isSelected, setIsSelected } = useState(selected);
+    let [isSelected, setIsSelected] = useState(selected);
+
+    const handleClick = (e) => {
+        setIsSelected(!isSelected);
+        onClick(e);
+    };
 
     const ListItemClasses = classnames(
         'fd-list__item',
+        {
+            'is-selected': isSelected
+        },
         className
     );
 
@@ -21,7 +30,7 @@ const ListItem = ({
             {...props}
             aria-selected={isSelected}
             className={ListItemClasses}
-            onClick={() => setIsSelected(!isSelected)}
+            onClick={handleClick}
             role='option'
             tabIndex='0'>
             {children}
@@ -35,7 +44,13 @@ ListItem.displayName = 'List.Item';
 ListItem.propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,
-    selected: PropTypes.bool
+    selected: PropTypes.bool,
+    onClick: PropTypes.func
+};
+
+ListItem.defaultProps = {
+    onClick: () => {},
+    selected: false
 };
 
 ListItem.propDescriptions = {

@@ -28,7 +28,7 @@ storiesOf('Components|List', module)
             <List.Item>
                 <List.Text>List Item 1</List.Text>
             </List.Item>
-            <List.Item>
+            <List.Item selected>
                 <List.Text>List Item 2</List.Text>
             </List.Item>
             <List.Item>
