@@ -22,7 +22,7 @@ import InputGroup from '../InputGroup/InputGroup';
 import { InputGroupComponent } from '../InputGroup/InputGroup.Component';
 import { LayoutGridComponent } from '../LayoutGrid/LayoutGrid.Component';
 import { LinkComponent } from '../Link/Link.Component';
-import { ListGroupComponent } from '../ListGroup/ListGroup.Component';
+import { ListGroupComponent } from '../List/List.Component';
 import { LocalizationEditorComponent } from '../LocalizationEditor/LocalizationEditor.Component';
 import { MenuComponent } from '../Menu/Menu.Component';
 import { MessageStripComponent } from '../MessageStrip/MessageStrip.Component';

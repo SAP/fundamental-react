@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ListHeader /> create list Header item 1`] = `
+<li
+  className="fd-list__group-header"
+>
+  List item 1
+</li>
+`;

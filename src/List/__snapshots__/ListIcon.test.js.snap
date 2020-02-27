@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ListIcon /> create list Icon item 1`] = `
+<span
+  className="fd-list__icon"
+  gyph="accept"
+/>
+`;

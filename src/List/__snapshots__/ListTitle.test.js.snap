@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ListTitle /> create list Title item 1`] = `
+<span
+  className="fd-list__title"
+>
+  List item 1
+</span>
+`;

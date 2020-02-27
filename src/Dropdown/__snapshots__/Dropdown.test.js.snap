@@ -2,32 +2,34 @@
 
 exports[`<Dropdown /> create dropdown component 1`] = `
 <div
-  className="fd-dropdown"
+  className="fd-popover"
 >
   <div
-    className="fd-popover"
+    onFocus={[Function]}
+    onMouseDown={[Function]}
+    onTouchStart={[Function]}
   >
     <div
-      onFocus={[Function]}
-      onMouseDown={[Function]}
-      onTouchStart={[Function]}
+      className="fd-popover__control"
     >
       <div
-        className="fd-popover__control"
+        aria-controls="fd-1eLjY2eY"
+        aria-expanded={false}
+        aria-haspopup={true}
+        className="fd-select"
+        onClick={[Function]}
+        onKeyPress={[Function]}
+        role="button"
+        tabIndex={0}
       >
-        <button
-          aria-controls="fd-default-dropdown-popover"
-          aria-expanded={false}
-          aria-haspopup={true}
-          className="fd-button fd-dropdown__control"
-          onClick={[Function]}
-          onKeyPress={[Function]}
-          role="button"
-          tabIndex={0}
-          type="button"
+        <div
+          className="fd-select__control"
         >
-          Select
-        </button>
+          <button
+            className="fd-button--light sap-icon--slim-arrow-down fd-select__button"
+            type="button"
+          />
+        </div>
       </div>
     </div>
   </div>
@@ -36,32 +38,34 @@ exports[`<Dropdown /> create dropdown component 1`] = `
 
 exports[`<Dropdown /> create dropdown component 2`] = `
 <div
-  className="fd-dropdown blue"
+  className="fd-popover"
 >
   <div
-    className="fd-popover"
+    onFocus={[Function]}
+    onMouseDown={[Function]}
+    onTouchStart={[Function]}
   >
     <div
-      onFocus={[Function]}
-      onMouseDown={[Function]}
-      onTouchStart={[Function]}
+      className="fd-popover__control"
     >
       <div
-        className="fd-popover__control"
+        aria-controls="fd-AncL-hpMh"
+        aria-expanded={false}
+        aria-haspopup={true}
+        className="fd-select blue"
+        onClick={[Function]}
+        onKeyPress={[Function]}
+        role="button"
+        tabIndex={0}
       >
-        <button
-          aria-controls="fd-compact-dropdown-popover"
-          aria-expanded={false}
-          aria-haspopup={true}
-          className="fd-button fd-button--compact fd-dropdown__control"
-          onClick={[Function]}
-          onKeyPress={[Function]}
-          role="button"
-          tabIndex={0}
-          type="button"
+        <div
+          className="fd-select__control"
         >
-          Select
-        </button>
+          <button
+            className="fd-button--light sap-icon--slim-arrow-down fd-select__button"
+            type="button"
+          />
+        </div>
       </div>
     </div>
   </div>
@@ -70,32 +74,35 @@ exports[`<Dropdown /> create dropdown component 2`] = `
 
 exports[`<Dropdown /> create dropdown component 3`] = `
 <div
-  className="fd-dropdown fd-dropdown--standard"
+  className="fd-popover"
 >
   <div
-    className="fd-popover"
+    onFocus={[Function]}
+    onMouseDown={[Function]}
+    onTouchStart={[Function]}
   >
     <div
-      onFocus={[Function]}
-      onMouseDown={[Function]}
-      onTouchStart={[Function]}
+      className="fd-popover__control"
     >
       <div
-        className="fd-popover__control"
+        aria-controls="fd-5aH0EJv0Y"
+        aria-expanded={false}
+        aria-haspopup={true}
+        className="fd-select"
+        onClick={[Function]}
+        onKeyPress={[Function]}
+        role="button"
+        standard={true}
+        tabIndex={0}
       >
-        <button
-          aria-controls="fd-toolbar-dropdown-popover"
-          aria-expanded={false}
-          aria-haspopup={true}
-          className="fd-button fd-dropdown__control"
-          onClick={[Function]}
-          onKeyPress={[Function]}
-          role="button"
-          tabIndex={0}
-          type="button"
+        <div
+          className="fd-select__control"
         >
-          Select
-        </button>
+          <button
+            className="fd-button--light sap-icon--slim-arrow-down fd-select__button"
+            type="button"
+          />
+        </div>
       </div>
     </div>
   </div>
@@ -104,33 +111,34 @@ exports[`<Dropdown /> create dropdown component 3`] = `
 
 exports[`<Dropdown /> create dropdown component 4`] = `
 <div
-  className="fd-dropdown"
+  className="fd-popover"
 >
   <div
-    className="fd-popover"
-    id="jhqD0557"
+    onFocus={[Function]}
+    onMouseDown={[Function]}
+    onTouchStart={[Function]}
   >
     <div
-      onFocus={[Function]}
-      onMouseDown={[Function]}
-      onTouchStart={[Function]}
+      className="fd-popover__control"
     >
       <div
-        className="fd-popover__control"
+        aria-controls="fd-s2xPbHtFz"
+        aria-expanded={false}
+        aria-haspopup={true}
+        className="fd-select"
+        onClick={[Function]}
+        onKeyPress={[Function]}
+        role="button"
+        tabIndex={0}
       >
-        <button
-          aria-controls="fd-icon-dropdown-popover"
-          aria-expanded={false}
-          aria-haspopup={true}
-          className="fd-button sap-icon--filter fd-dropdown__control"
-          onClick={[Function]}
-          onKeyPress={[Function]}
-          role="button"
-          tabIndex={0}
-          type="button"
+        <div
+          className="fd-select__control"
         >
-          Select
-        </button>
+          <button
+            className="fd-button--light sap-icon--slim-arrow-down fd-select__button"
+            type="button"
+          />
+        </div>
       </div>
     </div>
   </div>
@@ -139,34 +147,34 @@ exports[`<Dropdown /> create dropdown component 4`] = `
 
 exports[`<Dropdown /> create dropdown component 5`] = `
 <div
-  className="fd-dropdown"
+  className="fd-popover"
 >
   <div
-    className="fd-popover"
-    id="jhqD0561"
+    onFocus={[Function]}
+    onMouseDown={[Function]}
+    onTouchStart={[Function]}
   >
     <div
-      onFocus={[Function]}
-      onMouseDown={[Function]}
-      onTouchStart={[Function]}
+      className="fd-popover__control"
     >
       <div
-        className="fd-popover__control"
+        aria-controls="fd-LCBg6DP4O"
+        aria-expanded={false}
+        aria-haspopup={true}
+        className="fd-select"
+        onClick={[Function]}
+        onKeyPress={[Function]}
+        role="button"
+        tabIndex={0}
       >
-        <button
-          aria-controls="fd-disable-dropdown-popover"
-          aria-expanded={false}
-          aria-haspopup={true}
-          className="fd-button sap-icon--filter is-disabled fd-dropdown__control"
-          disabled={true}
-          onClick={[Function]}
-          onKeyPress={[Function]}
-          role="button"
-          tabIndex={0}
-          type="button"
+        <div
+          className="fd-select__control"
         >
-          Select
-        </button>
+          <button
+            className="fd-button--light sap-icon--slim-arrow-down fd-select__button"
+            type="button"
+          />
+        </div>
       </div>
     </div>
   </div>
