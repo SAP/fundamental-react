@@ -8,7 +8,6 @@ import classnames from 'classnames';
 import { ComboboxInputComponent } from '../ComboboxInput/ComboboxInput.Component';
 import { ContextualMenuComponent } from '../ContextualMenu/ContextualMenu.Component';
 import { DatePickerComponent } from '../DatePicker/DatePicker.Component';
-import { DropdownComponent } from '../Dropdown/Dropdown.Component';
 import { FormInput } from '..';
 import { FormsComponent } from '../Forms/Forms.Component';
 import groupArray from 'group-array';
@@ -34,6 +33,7 @@ import { PopoverComponent } from '../Popover/Popover.Component';
 import RouteNotFound from './_RouteNotFound';
 import ScrollToTop from './_ScrollToTop';
 import { SearchInputComponent } from '../SearchInput/SearchInput.Component';
+import { SelectComponent } from '../Select/Select.Component';
 import { ShellbarComponent } from '../Shellbar/Shellbar.Component';
 import { SideNav } from '../SideNavigation/';
 import { SideNavigationComponent } from '../SideNavigation/SideNav.Component';
@@ -119,9 +119,9 @@ const routes = [
         section: 'Components'
     },
     {
-        url: '/dropdown',
-        name: 'Dropdown',
-        component: DropdownComponent,
+        url: '/Select',
+        name: 'Select',
+        component: SelectComponent,
         section: 'Components'
     },
     {

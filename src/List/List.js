@@ -3,8 +3,7 @@ import ListFooter from './_ListFooter';
 import ListHeader from './_ListHeader';
 import ListIcon from './_ListIcon';
 import ListItem from './_ListItem';
-import ListTitle from './_ListTitle';
-import ListTitleSecondary from './_ListTitleSecondary';
+import ListText from './_ListText';
 import PropTypes from 'prop-types';
 import React, { useEffect } from 'react';
 
@@ -55,8 +54,7 @@ List.Footer = ListFooter;
 List.Header = ListHeader;
 List.Item = ListItem;
 List.Icon = ListIcon;
-List.Title = ListTitle;
-List.TitleSecondary = ListTitleSecondary;
+List.Text = ListText;
 
 
 List.propDescriptions = {

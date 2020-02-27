@@ -1,10 +1,9 @@
 import List from '../List';
-import { listOfIcons } from '../../utils/listOfIcons';
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import {
     boolean,
-    select,
+    text,
     withKnobs
 } from '@storybook/addon-knobs';
 
@@ -16,10 +15,10 @@ storiesOf('Components|List', module)
             noBorder={boolean('noBorder', false)}>
             <List.Header>List Header</List.Header>
             <List.Item selected={boolean('selected', false)}>
-                <List.Icon glyph={select('icon', listOfIcons)} />
-                <List.Title>List Item 1</List.Title>
-                <List.TitleSecondary>Positive</List.TitleSecondary>
-                <List.Icon glyph={select('icon', listOfIcons)} />
+                <List.Icon glyph={text('icon', 'accept')} />
+                <List.Text
+                    noWrap={boolean('noWrap', false)}
+                    secondary={boolean('secondary', false)}>{text('text', 'List Item 1')}</List.Text>
             </List.Item>
             <List.Footer>List Footer</List.Footer>
         </List>
@@ -27,16 +26,16 @@ storiesOf('Components|List', module)
     .add('List (simple)', () => (
         <List>
             <List.Item>
-                <List.Title>List Item 1</List.Title>
+                <List.Text>List Item 1</List.Text>
             </List.Item>
             <List.Item>
-                <List.Title>List Item 2</List.Title>
+                <List.Text>List Item 2</List.Text>
             </List.Item>
             <List.Item>
-                <List.Title>List Item 3</List.Title>
+                <List.Text>List Item 3</List.Text>
             </List.Item>
             <List.Item>
-                <List.Title>List Item 4</List.Title>
+                <List.Text>List Item 4</List.Text>
             </List.Item>
         </List>
     ))
@@ -44,16 +43,16 @@ storiesOf('Components|List', module)
         <List>
             <List.Header>List Header</List.Header>
             <List.Item>
-                <List.Title>List Item 1</List.Title>
+                <List.Text>List Item 1</List.Text>
             </List.Item>
             <List.Item>
-                <List.Title>List Item 2</List.Title>
+                <List.Text>List Item 2</List.Text>
             </List.Item>
             <List.Item>
-                <List.Title>List Item 3</List.Title>
+                <List.Text>List Item 3</List.Text>
             </List.Item>
             <List.Item>
-                <List.Title>List Item 4</List.Title>
+                <List.Text>List Item 4</List.Text>
             </List.Item>
             <List.Footer>List Footer</List.Footer>
         </List>
@@ -62,16 +61,16 @@ storiesOf('Components|List', module)
         <List noBorder>
             <List.Header>List Header</List.Header>
             <List.Item>
-                <List.Title>List Item 1</List.Title>
+                <List.Text>List Item 1</List.Text>
             </List.Item>
             <List.Item>
-                <List.Title>List Item 2</List.Title>
+                <List.Text>List Item 2</List.Text>
             </List.Item>
             <List.Item>
-                <List.Title>List Item 3</List.Title>
+                <List.Text>List Item 3</List.Text>
             </List.Item>
             <List.Item>
-                <List.Title>List Item 4</List.Title>
+                <List.Text>List Item 4</List.Text>
             </List.Item>
             <List.Footer>List Footer</List.Footer>
         </List>
@@ -80,16 +79,16 @@ storiesOf('Components|List', module)
         <List compact>
             <List.Header>List Header</List.Header>
             <List.Item>
-                <List.Title>List Item 1</List.Title>
+                <List.Text>List Item 1</List.Text>
             </List.Item>
             <List.Item>
-                <List.Title>List Item 2</List.Title>
+                <List.Text>List Item 2</List.Text>
             </List.Item>
             <List.Item>
-                <List.Title>List Item 3</List.Title>
+                <List.Text>List Item 3</List.Text>
             </List.Item>
             <List.Item>
-                <List.Title>List Item 4</List.Title>
+                <List.Text>List Item 4</List.Text>
             </List.Item>
             <List.Footer>List Footer</List.Footer>
         </List>
@@ -99,19 +98,19 @@ storiesOf('Components|List', module)
             <List.Header>List Header</List.Header>
             <List.Item>
                 <List.Icon glyph='cart' />
-                <List.Title>List Item 1</List.Title>
+                <List.Text>List Item 1</List.Text>
             </List.Item>
             <List.Item>
                 <List.Icon glyph='wrench' />
-                <List.Title>List Item 2</List.Title>
+                <List.Text>List Item 2</List.Text>
             </List.Item>
             <List.Item>
                 <List.Icon glyph='lightbulb' />
-                <List.Title>List Item 3</List.Title>
+                <List.Text>List Item 3</List.Text>
             </List.Item>
             <List.Item>
                 <List.Icon glyph='history' />
-                <List.Title>List Item 4</List.Title>
+                <List.Text>List Item 4</List.Text>
             </List.Item>
             <List.Footer>List Footer</List.Footer>
         </List>
@@ -120,19 +119,19 @@ storiesOf('Components|List', module)
         <List>
             <List.Header>List Header</List.Header>
             <List.Item>
-                <List.Title>List Item 1</List.Title>
+                <List.Text>List Item 1</List.Text>
                 <List.Icon glyph='navigation-right-arrow' />
             </List.Item>
             <List.Item>
-                <List.Title>List Item 2</List.Title>
+                <List.Text>List Item 2</List.Text>
                 <List.Icon glyph='navigation-right-arrow' />
             </List.Item>
             <List.Item>
-                <List.Title>List Item 3</List.Title>
+                <List.Text>List Item 3</List.Text>
                 <List.Icon glyph='navigation-right-arrow' />
             </List.Item>
             <List.Item>
-                <List.Title>List Item 4</List.Title>
+                <List.Text>List Item 4</List.Text>
                 <List.Icon glyph='navigation-right-arrow' />
             </List.Item>
             <List.Footer>List Footer</List.Footer>
@@ -142,20 +141,20 @@ storiesOf('Components|List', module)
         <List>
             <List.Header>List Header</List.Header>
             <List.Item>
-                <List.Title>List Item 1</List.Title>
-                <List.TitleSecondary>Positive</List.TitleSecondary>
+                <List.Text>List Item 1</List.Text>
+                <List.Text secondary>Positive</List.Text>
             </List.Item>
             <List.Item>
-                <List.Title>List Item 2</List.Title>
-                <List.TitleSecondary>Negative</List.TitleSecondary>
+                <List.Text>List Item 2</List.Text>
+                <List.Text secondary>Negative</List.Text>
             </List.Item>
             <List.Item>
-                <List.Title>List Item 3</List.Title>
-                <List.TitleSecondary>Positive</List.TitleSecondary>
+                <List.Text>List Item 3</List.Text>
+                <List.Text secondary>Positive</List.Text>
             </List.Item>
             <List.Item>
-                <List.Title>List Item 4</List.Title>
-                <List.TitleSecondary>Negative</List.TitleSecondary>
+                <List.Text>List Item 4</List.Text>
+                <List.Text secondary>Negative</List.Text>
             </List.Item>
             <List.Footer>List Footer</List.Footer>
         </List>

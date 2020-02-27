@@ -8,16 +8,16 @@ describe('<List />', () => {
         <List>
             <List.Header>List Header</List.Header>
             <List.Item>
-                <List.Title>List Item 1</List.Title>
+                <List.Text>List Item 1</List.Text>
             </List.Item>
             <List.Item>
-                <List.Title>List Item 2</List.Title>
+                <List.Text>List Item 2</List.Text>
             </List.Item>
             <List.Item>
-                <List.Title>List Item 3</List.Title>
+                <List.Text>List Item 3</List.Text>
             </List.Item>
             <List.Item>
-                <List.Title>List Item 4</List.Title>
+                <List.Text>List Item 4</List.Text>
             </List.Item>
             <List.Footer>List Footer</List.Footer>
         </List>
@@ -26,10 +26,10 @@ describe('<List />', () => {
         <List>
             <List.Header>List Header</List.Header>
             <List.Item>
-                <List.Title>List Item 1</List.Title>
+                <List.Text>List Item 1</List.Text>
             </List.Item>
             <List.Item>
-                <List.Title>List Item 2</List.Title>
+                <List.Text>List Item 2</List.Text>
             </List.Item>
             <List.Footer>List Footer</List.Footer>
         </List>
@@ -38,7 +38,7 @@ describe('<List />', () => {
     const borderlessList = (
         <List noBorder>
             <List.Item>
-                <List.Title>List Item 1</List.Title>
+                <List.Text>List Item 1</List.Text>
             </List.Item>
         </List>
     );
@@ -46,7 +46,7 @@ describe('<List />', () => {
     const compactList = (
         <List compact>
             <List.Item>
-                <List.Title>List Item 1</List.Title>
+                <List.Text>List Item 1</List.Text>
             </List.Item>
         </List>
     );
@@ -56,19 +56,19 @@ describe('<List />', () => {
             <List.Header>List Header</List.Header>
             <List.Item>
                 <List.Icon glyph='cart' />
-                <List.Title>List Item 1</List.Title>
+                <List.Text>List Item 1</List.Text>
             </List.Item>
             <List.Item>
                 <List.Icon glyph='wrench' />
-                <List.Title>List Item 2</List.Title>
+                <List.Text>List Item 2</List.Text>
             </List.Item>
             <List.Item>
                 <List.Icon glyph='lightbulb' />
-                <List.Title>List Item 3</List.Title>
+                <List.Text>List Item 3</List.Text>
             </List.Item>
             <List.Item>
                 <List.Icon glyph='history' />
-                <List.Title>List Item 4</List.Title>
+                <List.Text>List Item 4</List.Text>
             </List.Item>
             <List.Footer>List Footer</List.Footer>
         </List>
@@ -78,19 +78,19 @@ describe('<List />', () => {
         <List>
             <List.Header>List Header</List.Header>
             <List.Item>
-                <List.Title>List Item 1</List.Title>
+                <List.Text>List Item 1</List.Text>
                 <List.Icon glyph='navigation-right-arrow' />
             </List.Item>
             <List.Item>
-                <List.Title>List Item 2</List.Title>
+                <List.Text>List Item 2</List.Text>
                 <List.Icon glyph='navigation-right-arrow' />
             </List.Item>
             <List.Item>
-                <List.Title>List Item 3</List.Title>
+                <List.Text>List Item 3</List.Text>
                 <List.Icon glyph='navigation-right-arrow' />
             </List.Item>
             <List.Item>
-                <List.Title>List Item 4</List.Title>
+                <List.Text>List Item 4</List.Text>
                 <List.Icon glyph='navigation-right-arrow' />
             </List.Item>
             <List.Footer>List Footer</List.Footer>
@@ -101,20 +101,20 @@ describe('<List />', () => {
         <List>
             <List.Header>List Header</List.Header>
             <List.Item>
-                <List.Title>List Item 1</List.Title>
-                <List.TitleSecondary>Positive</List.TitleSecondary>
+                <List.Text>List Item 1</List.Text>
+                <List.Text secondary>Positive</List.Text>
             </List.Item>
             <List.Item>
-                <List.Title>List Item 2</List.Title>
-                <List.TitleSecondary>Negative</List.TitleSecondary>
+                <List.Text>List Item 2</List.Text>
+                <List.Text secondary>Negative</List.Text>
             </List.Item>
             <List.Item>
-                <List.Title>List Item 3</List.Title>
-                <List.TitleSecondary>Positive</List.TitleSecondary>
+                <List.Text>List Item 3</List.Text>
+                <List.Text secondary>Positive</List.Text>
             </List.Item>
             <List.Item>
-                <List.Title>List Item 4</List.Title>
-                <List.TitleSecondary>Negative</List.TitleSecondary>
+                <List.Text>List Item 4</List.Text>
+                <List.Text secondary>Negative</List.Text>
             </List.Item>
             <List.Footer>List Footer</List.Footer>
         </List>
@@ -178,6 +178,6 @@ describe('<List />', () => {
         }
         mount(<Test />);
         expect(ref.current.tagName).toEqual('UL');
-        expect(ref.current.className).toEqual('fd-list-group');
+        expect(ref.current.className).toEqual('fd-list');
     });
 });

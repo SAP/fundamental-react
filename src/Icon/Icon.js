@@ -32,7 +32,6 @@ Icon.displayName = 'Icon';
 Icon.propTypes = {
     glyph: PropTypes.string.isRequired,
     className: PropTypes.string,
-
     disableStyles: PropTypes.bool,
     size: PropTypes.oneOf(ICON_SIZES)
 };

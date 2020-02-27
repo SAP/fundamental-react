@@ -1,12 +1,12 @@
-import { Button } from '../';
-import Dropdown from './Dropdown';
+import { Button } from '..';
+import Select from './Select';
 import Menu from '../Menu/Menu';
 import { mount } from 'enzyme';
 import Popover from '../Popover/Popover';
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-describe('<Dropdown />', () => {
+describe('<Select />', () => {
     const defaultMenu = (
         <Menu>
             <Menu.List>
@@ -18,61 +18,61 @@ describe('<Dropdown />', () => {
         </Menu>
     );
 
-    const defaultDropdown = (
-        <Dropdown>
+    const defaultSelect = (
+        <Select>
             <Popover
                 body={defaultMenu}
-                control={<Button className='fd-dropdown__control'>Select</Button>}
-                noArrow popperProps={{ id: 'fd-default-dropdown-popover' }} />
-        </Dropdown>
+                control={<Button className='fd-Select__control'>Select</Button>}
+                noArrow popperProps={{ id: 'fd-default-Select-popover' }} />
+        </Select>
     );
 
-    const compactDropdown = (
-        <Dropdown className='blue'>
+    const compactSelect = (
+        <Select className='blue'>
             <Popover
                 body={defaultMenu}
                 control={
-                    <Button className='fd-dropdown__control' compact>
+                    <Button className='fd-Select__control' compact>
                         Select
                     </Button>
                 }
-                noArrow popperProps={{ id: 'fd-compact-dropdown-popover' }} />
-        </Dropdown>
+                noArrow popperProps={{ id: 'fd-compact-Select-popover' }} />
+        </Select>
     );
 
-    const toolbarDropdown = (
-        <Dropdown standard>
+    const toolbarSelect = (
+        <Select standard>
             <Popover
                 body={defaultMenu}
                 control={
-                    <Button className='fd-dropdown__control'>
+                    <Button className='fd-Select__control'>
                         Select
                     </Button>
                 }
-                noArrow popperProps={{ id: 'fd-toolbar-dropdown-popover' }} />
-        </Dropdown>
+                noArrow popperProps={{ id: 'fd-toolbar-Select-popover' }} />
+        </Select>
     );
 
-    const iconDropdown = (
-        <Dropdown>
+    const iconSelect = (
+        <Select>
             <Popover
                 body={defaultMenu}
                 control={
-                    <Button className='fd-dropdown__control' glyph='filter'>
+                    <Button className='fd-Select__control' glyph='filter'>
                         Select
                     </Button>
                 }
                 id='jhqD0557'
-                noArrow popperProps={{ id: 'fd-icon-dropdown-popover' }} />
-        </Dropdown>
+                noArrow popperProps={{ id: 'fd-icon-Select-popover' }} />
+        </Select>
     );
 
-    const disabledDropdown = (
-        <Dropdown>
+    const disabledSelect = (
+        <Select>
             <Popover
                 body={defaultMenu}
                 control={
-                    <Button className='fd-dropdown__control'
+                    <Button className='fd-Select__control'
                         disabled
                         glyph='filter'>
                         Select
@@ -80,46 +80,46 @@ describe('<Dropdown />', () => {
                 }
                 disabled
                 id='jhqD0561'
-                noArrow popperProps={{ id: 'fd-disable-dropdown-popover' }} />
-        </Dropdown>
+                noArrow popperProps={{ id: 'fd-disable-Select-popover' }} />
+        </Select>
     );
 
-    test('create dropdown component', () => {
-        // default dropdown
-        let component = renderer.create(defaultDropdown);
+    test('create Select component', () => {
+        // default Select
+        let component = renderer.create(defaultSelect);
         let tree = component.toJSON();
         expect(tree).toMatchSnapshot();
 
-        // compact dropdown
-        component = renderer.create(compactDropdown);
+        // compact Select
+        component = renderer.create(compactSelect);
         tree = component.toJSON();
         expect(tree).toMatchSnapshot();
 
-        // toolbar dropdown
-        component = renderer.create(toolbarDropdown);
+        // toolbar Select
+        component = renderer.create(toolbarSelect);
         tree = component.toJSON();
         expect(tree).toMatchSnapshot();
 
-        // icon dropdown
-        component = renderer.create(iconDropdown);
+        // icon Select
+        component = renderer.create(iconSelect);
         tree = component.toJSON();
         expect(tree).toMatchSnapshot();
 
-        // disabled dropdown
-        component = renderer.create(disabledDropdown);
+        // disabled Select
+        component = renderer.create(disabledSelect);
         tree = component.toJSON();
         expect(tree).toMatchSnapshot();
     });
 
     describe('Prop spreading', () => {
-        test('should allow props to be spread to the Dropdown component', () => {
+        test('should allow props to be spread to the Select component', () => {
             const element = mount(
-                <Dropdown data-sample='Sample'>
+                <Select data-sample='Sample'>
                     <Popover
                         body={defaultMenu}
-                        control={<Button className='fd-dropdown__control'>Select</Button>}
+                        control={<Button className='fd-Select__control'>Select</Button>}
                         noArrow />
-                </Dropdown>
+                </Select>
             );
 
             expect(element.getDOMNode().attributes['data-sample'].value).toBe('Sample');
@@ -133,10 +133,10 @@ describe('<Dropdown />', () => {
                 super(props);
                 ref = React.createRef();
             }
-            render = () => <Dropdown ref={ref} />;
+            render = () => <Select ref={ref} />;
         }
         mount(<Test />);
         expect(ref.current.tagName).toEqual('DIV');
-        expect(ref.current.className).toEqual('fd-dropdown');
+        expect(ref.current.className).toEqual('fd-Select');
     });
 });

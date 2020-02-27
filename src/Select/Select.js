@@ -4,10 +4,13 @@ import Popover from '../Popover/Popover';
 import PropTypes from 'prop-types';
 import React, { useEffect } from 'react';
 
-const Dropdown = React.forwardRef(({
+const Select = React.forwardRef(({
     children,
     className,
+    compact,
+    disabled,
     disableStyles,
+    inline,
     placeholder,
     ...props
 }, ref) => {
@@ -19,53 +22,54 @@ const Dropdown = React.forwardRef(({
         }
     }, []);
 
-    const dropdownClasses = classnames(
+    const SelectClasses = classnames(
         'fd-select',
+        {
+            'fd-select--compact': compact,
+            'fd-select--inline': inline
+        },
         className
     );
 
-    const dropdownControl = (<div {...props} className={dropdownClasses}
+    const SelectControl = (<div {...props} className={SelectClasses}
         ref={ref}>
         <div className='fd-select__control'>
             {placeholder}
             <Button
                 className='fd-select__button'
+                disabled={disabled}
                 glyph='slim-arrow-down'
                 option='light'
                 ref={ref} />
         </div>
     </div>);
 
-    // // TO DO: replace this with List component
-    // const dropdownBody = (
-    //     <ul className='fd-list fd-list--dropdown' role='listbox'>
-    //         <li
-    //             aria-selected
-    //             className='fd-list__item is-selected'
-    //             role='option'
-    //             tabIndex='0'>
-    //             <span className='fd-list__title'>List item 1</span>
-    //         </li>
-    //     </ul>
-    // );
+    const popoverBody = () => {
+        return React.cloneElement(children, {
+            className: 'fd-list--dropdown'
+        });
+    };
 
     return (
         <Popover
-            body={children}
-            control={dropdownControl}
+            body={popoverBody()}
+            control={SelectControl}
             noArrow
             placement='bottom-end' />
     );
 });
 
-Dropdown.displayName = 'Dropdown';
+Select.displayName = 'Select';
 
-Dropdown.propTypes = {
+Select.propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,
+    compact: PropTypes.bool,
+    disabled: PropTypes.bool,
     disableStyles: PropTypes.bool,
+    inline: PropTypes.bool,
     placeholder: PropTypes.string
 };
 
 
-export default Dropdown;
+export default Select;

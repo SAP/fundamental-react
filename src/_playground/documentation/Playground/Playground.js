@@ -1,5 +1,4 @@
 import { Button } from '../../../';
-import { Dropdown } from '../../../';
 import Heading from '../Heading/Heading';
 import { Icon } from '../../../';
 import { Identifier } from '../../../';
@@ -352,31 +351,6 @@ class Playground extends Component {
                       type={this.state.childs.type}>
                       {this.state.childs.children}
                   </Button>
-              );
-              break;
-          case 'dropdown':
-              componentToGenerate = (
-                  <Dropdown
-                      buttonIcon={this.retrieveValue(
-                          'buttonIcon',
-                          this.state.childs.buttonIcon,
-                          this.state.currentValues
-                      )}
-                      buttonText={this.retrieveValue(
-                          'buttonText',
-                          this.state.childs.buttonText,
-                          this.state.currentValues
-                      )}
-                      size={this.retrieveValue(
-                          'size',
-                          this.state.childs.size,
-                          this.state.currentValues
-                      )}
-                      state={this.retrieveValue(
-                          'state',
-                          this.state.childs.state,
-                          this.state.currentValues
-                      )} />
               );
               break;
           case 'icon':
