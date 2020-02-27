@@ -22,7 +22,7 @@ import InputGroup from '../InputGroup/InputGroup';
 import { InputGroupComponent } from '../InputGroup/InputGroup.Component';
 import { LayoutGridComponent } from '../LayoutGrid/LayoutGrid.Component';
 import { LinkComponent } from '../Link/Link.Component';
-import { ListGroupComponent } from '../List/List.Component';
+import { ListComponent } from '../List/List.Component';
 import { LocalizationEditorComponent } from '../LocalizationEditor/LocalizationEditor.Component';
 import { MenuComponent } from '../Menu/Menu.Component';
 import { MessageStripComponent } from '../MessageStrip/MessageStrip.Component';
@@ -173,9 +173,9 @@ const routes = [
         section: 'Components'
     },
     {
-        url: '/listGroup',
-        name: 'List Group',
-        component: ListGroupComponent,
+        url: '/list',
+        name: 'List',
+        component: ListComponent,
         section: 'Components'
     },
     {
@@ -379,7 +379,7 @@ export class Routes extends Component {
                                 aria-expanded={this.state.showSideNav}
                                 aria-label='Toggle Navigation'
                                 glyph='menu2'
-                                id='navSwitch'
+                                id='navToggle'
                                 onClick={this.toggleNavVis}
                                 option='light'
                                 type='standard' />

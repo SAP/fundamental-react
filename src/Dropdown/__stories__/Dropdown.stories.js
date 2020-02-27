@@ -1,7 +1,4 @@
-import Button from '../../Button/Button';
 import Dropdown from '../Dropdown';
-import Menu from '../../Menu/Menu';
-import Popover from '../../Popover/Popover';
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import {

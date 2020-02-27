@@ -4,7 +4,6 @@ import Heading from '../Heading/Heading';
 import { Icon } from '../../../';
 import { Identifier } from '../../../';
 import { Image } from '../../../';
-import { ListGroup } from '../../../';
 import PropTypes from 'prop-types';
 import { Badge, Label, Status } from '../../../';
 import { FormGroup, FormItem, FormLabel, InputGroup } from '../../../';
@@ -452,29 +451,6 @@ class Playground extends Component {
                           </InputGroup>
                       </FormItem>
                   </FormGroup>
-              );
-              break;
-          case 'listgroup':
-              componentToGenerate = (
-                  <ListGroup>
-                      <ListGroup.Item>
-                          {this.retrieveValue(
-                              'children',
-                              this.state.childs.children.props.children[0],
-                              this.state.currentValues
-                          )}
-                          <ListGroup.ItemActions>
-                              <Button
-                                  glyph={this.retrieveValue(
-                                      'glyph',
-                                      this.state.childs.children.props.children[1].props.children
-                                          .props.glyph,
-                                      this.state.currentValues
-                                  )}
-                                  option='light' />
-                          </ListGroup.ItemActions>
-                      </ListGroup.Item>
-                  </ListGroup>
               );
               break;
 
