@@ -225,7 +225,7 @@ exports[`<Shellbar /> create shellbar 3`] = `
                 onClick={[Function]}
               >
                 <input
-                  className="fd-input fd-input-group__input"
+                  className="fd-input fd-input-group__input fd-shellbar__input-group__input"
                   onChange={[Function]}
                   onClick={[Function]}
                   onKeyPress={[Function]}
@@ -531,7 +531,7 @@ exports[`<Shellbar /> create shellbar 4`] = `
                 onClick={[Function]}
               >
                 <input
-                  className="fd-input fd-input-group__input"
+                  className="fd-input fd-input-group__input fd-shellbar__input-group__input"
                   onChange={[Function]}
                   onClick={[Function]}
                   onKeyPress={[Function]}
@@ -830,7 +830,7 @@ exports[`<Shellbar /> create shellbar 5`] = `
                 onClick={[Function]}
               >
                 <input
-                  className="fd-input fd-input-group__input"
+                  className="fd-input fd-input-group__input fd-shellbar__input-group__input"
                   onChange={[Function]}
                   onClick={[Function]}
                   onKeyPress={[Function]}
@@ -1109,7 +1109,7 @@ exports[`<Shellbar /> create shellbar 6`] = `
                 onClick={[Function]}
               >
                 <input
-                  className="fd-input fd-input-group__input"
+                  className="fd-input fd-input-group__input fd-shellbar__input-group__input"
                   onChange={[Function]}
                   onClick={[Function]}
                   onKeyPress={[Function]}

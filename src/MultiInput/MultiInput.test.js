@@ -52,7 +52,7 @@ describe('<MultiInput />', () => {
     test('create multi-input', () => {
         wrapper = mount(multiInput);
 
-        expect(wrapper.find('div.fd-multi-input')).toBeDefined();
+        expect(wrapper.find('.fd-list--multi-input')).toBeDefined();
     });
 
     // create a compact multi-input control
@@ -98,7 +98,7 @@ describe('<MultiInput />', () => {
 
         // simulate click on dropdown button
         wrapper
-            .find('button.fd-button--light.sap-icon--navigation-down-arrow')
+            .find('button.fd-button--light')
             .simulate('click');
 
         // check if bShowList state is changed
@@ -113,7 +113,7 @@ describe('<MultiInput />', () => {
     test('add tag to tagList', () => {
         wrapper = mount(multiInput);
         wrapper
-            .find('button.fd-button--light.sap-icon--navigation-down-arrow')
+            .find('button.fd-button--light')
             .simulate('click');
 
         // check that no tags exist
@@ -139,7 +139,7 @@ describe('<MultiInput />', () => {
     test('remove tag from taglist by unchecking', () => {
         wrapper = mount(multiInput);
         wrapper
-            .find('button.fd-button--light.sap-icon--navigation-down-arrow')
+            .find('button.fd-button--light')
             .simulate('click');
 
         // check that no tags exist
@@ -192,11 +192,11 @@ describe('<MultiInput />', () => {
     });
 
     describe('Prop spreading', () => {
-        test('should allow props to be spread to the MultiInput component', () => {
+        test('should allow props to be spread to the Input Group component', () => {
             const element = mount(<MultiInput data={data} data-sample='Sample' />);
 
             expect(
-                element.getDOMNode().attributes['data-sample'].value
+                element.find('.fd-input-group').getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
         });
 
@@ -237,7 +237,7 @@ describe('<MultiInput />', () => {
                 .simulate('change', { target: { value: data[0] } });
 
             expect(
-                element.find('.fd-multi-input-tokens').getDOMNode().attributes['data-sample'].value
+                element.find('.fd-tokenizer').getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
         });
 

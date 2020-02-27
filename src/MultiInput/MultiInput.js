@@ -1,11 +1,11 @@
 import Button from '../Button/Button';
 import Checkbox from '../Forms/Checkbox';
 import classnames from 'classnames';
-import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
-import { FORM_STATES } from '../utils/constants';
+import { FORM_MESSAGE_TYPES } from '../utils/constants';
 import FormInput from '../Forms/FormInput';
+import FormMessage from '../Forms/_FormMessage';
 import InputGroup from '../InputGroup/InputGroup';
-import Menu from '../Menu/Menu';
+import List from '../List/List';
 import Popover from '../Popover/Popover';
 import PropTypes from 'prop-types';
 import shortid from '../utils/shortId';
@@ -25,19 +25,25 @@ class MultiInput extends Component {
     componentDidMount() {
         if (!this.props.disableStyles) {
             require('fundamental-styles/dist/fonts.css');
+            require('fundamental-styles/dist/tokenizer.css');
         }
     }
 
     // create tags to display in dropdown list
     createTagList = data => {
         return data.map((item, index) => (
-            <li className='fd-menu__item' key={index}>
+            <List.Item key={index}>
                 <Checkbox
                     checked={this.isChecked(item)}
+                    className='fd-list__input'
+                    compact={this.props.compact}
                     id={index + `_${shortid.generate()}`}
+                    labelClasses='fd-list__label'
                     onChange={() => this.updateSelectedTags(item)}
-                    value={item}>{item}</Checkbox>
-            </li>
+                    value={item}>
+                    <List.Text>{item}</List.Text>
+                </Checkbox>
+            </List.Item>
         ));
     };
 
@@ -116,66 +122,98 @@ class MultiInput extends Component {
             buttonProps,
             compact,
             className,
+            disabled,
             disableStyles,
             data,
             listProps,
             inputProps,
-            localizedText,
             onTagsUpdate,
-            state,
             placeholder,
             tagProps,
+            validationState,
             ...rest
         } = this.props;
 
-        const multiInputClasses = classnames(
-            'fd-multi-input',
-            className
+
+        const tokenizerClassNames = classnames(
+            'fd-tokenizer',
+            {
+                'fd-tokenizer--compact': compact
+            }
+        );
+
+        const listClassNames = classnames(
+            'fd-list--dropdown',
+            'fd-list--multi-input',
+            {
+                'fd-list--has-message': validationState?.state
+            }
+        );
+
+        const inputGroupClasses = classnames(
+            'fd-input-group--control',
+            {
+                'is-disabled': disabled,
+                'is-warning': validationState?.state === 'warning',
+                'is-invalid': validationState?.state === 'error',
+                'is-valid': validationState?.state === 'success',
+                'is-information': validationState?.state === 'information'
+            }
+        );
+
+        const popoverBody = (
+            <List
+                className={listClassNames}
+                compact={compact}
+                disableStyles={disableStyles}
+                {...listProps}>
+                {this.createTagList(data)}
+            </List>
         );
 
         return (
-            <div
-                {...rest}
-                className={multiInputClasses}>
-                <div className='fd-multi-input-field'>
-                    <Popover
-                        {...popoverProps}
-                        body={
-                            <Menu disableStyles={disableStyles}>
-                                <Menu.List {...listProps}>{this.createTagList(data)}</Menu.List>
-                            </Menu>
-                        }
-                        control={
-                            <InputGroup
-                                aria-expanded={this.state.bShowList}
-                                aria-haspopup='true'
-                                aria-label={localizedText.imageLabel}
-                                compact={compact}
-                                state={state}>
+            <Popover
+                {...popoverProps}
+                body={
+                    validationState ? (
+                        <>
+                            <FormMessage type={validationState.state}>{validationState.text}</FormMessage>
+                            {popoverBody}
+                        </>
+                    ) : popoverBody}
+                control={
+                    <InputGroup
+                        {...rest}
+                        aria-expanded={this.state.bShowList}
+                        aria-haspopup='true'
+                        className={inputGroupClasses}
+                        compact={compact}
+                        disabled={disabled}>
+                        <div {...tagProps} className={tokenizerClassNames}>
+                            <div className='fd-tokenizer__inner'>
+                                {this.state.tags.length > 0 && this.createTags()}
                                 <FormInput
                                     {...inputProps}
+                                    className='fd-tokenizer__input'
+                                    compact={compact}
                                     disableStyles={disableStyles}
                                     onClick={this.showHideTagList}
                                     placeholder={placeholder} />
-                                <InputGroup.Addon isButton>
-                                    <Button
-                                        {...buttonProps}
-                                        disableStyles={disableStyles}
-                                        glyph='navigation-down-arrow'
-                                        onClick={this.showHideTagList}
-                                        option='light' />
-                                </InputGroup.Addon>
-                            </InputGroup>
-                        }
-                        disableStyles={disableStyles}
-                        noArrow />
-                </div>
-                {this.state.tags.length > 0 ? (
-                    <div {...tagProps} className='fd-multi-input-tokens'>{this.createTags()}</div>
-                ) : (
-                    ''
-                )}
-            </div>
+                            </div>
+                        </div>
+                        <InputGroup.Addon isButton>
+                            <Button
+                                {...buttonProps}
+                                disableStyles={disableStyles}
+                                glyph='value-help'
+                                onClick={this.showHideTagList}
+                                option='light' />
+                        </InputGroup.Addon>
+                    </InputGroup>
+                }
+                disableStyles={disableStyles}
+                disabled={disabled}
+                noArrow />
         );
     }
 }
@@ -187,31 +225,26 @@ MultiInput.propTypes = {
     buttonProps: PropTypes.object,
     className: PropTypes.string,
     compact: PropTypes.bool,
+    disabled: PropTypes.bool,
     disableStyles: PropTypes.bool,
     inputProps: PropTypes.object,
     listProps: PropTypes.object,
-    localizedText: CustomPropTypes.i18n({
-        imageLabel: PropTypes.string
-    }),
     placeholder: PropTypes.string,
     popoverProps: PropTypes.object,
-    state: PropTypes.oneOf(FORM_STATES),
     tagProps: PropTypes.object,
+    validationState: PropTypes.shape({
+        state: PropTypes.oneOf(FORM_MESSAGE_TYPES),
+        text: PropTypes.string
+    }),
     onTagsUpdate: PropTypes.func
 };
 
 MultiInput.defaultProps = {
-    localizedText: {
-        imageLabel: 'Image label'
-    },
     onTagsUpdate: () => {}
 };
 
 MultiInput.propDescriptions = {
     data: 'Collection of items to display in the list.',
-    localizedTextShape: {
-        imageLabel: 'Aria-label in `<div>` element for image.'
-    },
     onTagsUpdate: 'Callback function when a tag is added or removed. Returns array of tags selected.',
     placeholder: 'Localized placeholder text of the input.',
     tagProps: 'Additional props to be spread to the tags `<div>` element.'

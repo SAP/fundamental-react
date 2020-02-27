@@ -26,8 +26,6 @@ class InputGroup extends Component {
             ...props
         } = this.props;
 
-        const inputClasses = 'fd-input-group__input';
-
         const inputGroupClasses = classnames(
             className,
             'fd-input-group',
@@ -35,6 +33,13 @@ class InputGroup extends Component {
                 [`is-${state}`]: state,
                 'is-disabled': disabled
             }
+        );
+
+        const getClassNames = (child) => classnames(
+            {
+                'fd-input-group__input': child.type.displayName !== InputGroupAddon.displayName
+            },
+            child.props.className
         );
 
         return (
@@ -45,7 +50,7 @@ class InputGroup extends Component {
                     return React.cloneElement(child, {
                         compact,
                         disabled,
-                        className: (child.type.displayName === InputGroupAddon.displayName) ? '' : inputClasses
+                        className: getClassNames(child)
                     });
                 })}
             </div>

@@ -50,6 +50,37 @@ export class MultiInputComponent extends Component {
                         placeholder='Select a Fruit' />
                 </Example>
 
+                <Example
+                    title='Disabled'>
+                    <MultiInput
+                        data={this.data}
+                        disabled
+                        placeholder='Select a Fruit' />
+                </Example>
+
+                <Example
+                    title='Validation States'>
+                    <MultiInput
+                        data={this.data}
+                        placeholder='Default'
+                        validationState={{ state: 'error', text: 'Test validation state' }} />
+                    <br />
+                    <MultiInput
+                        data={this.data}
+                        placeholder='Default'
+                        validationState={{ state: 'warning', text: 'Test validation state' }} />
+                    <br />
+                    <MultiInput
+                        data={this.data}
+                        placeholder='Default'
+                        validationState={{ state: 'success', text: 'Test validation state' }} />
+                    <br />
+                    <MultiInput
+                        data={this.data}
+                        placeholder='Default'
+                        validationState={{ state: 'information', text: 'Test validation state' }} />
+                </Example>
+
             </ComponentPage>
         );
     }

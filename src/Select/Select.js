@@ -86,6 +86,7 @@ const Select = React.forwardRef(({
                     </>
                 ) : popoverBody()}
             control={selectControl}
+            disableStyles={disableStyles}
             disabled={disabled}
             noArrow
             placement='bottom-start'
