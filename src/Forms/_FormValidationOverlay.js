@@ -17,7 +17,7 @@ const FormValidationOverlay = ({ className, control, id, validationState, ...pro
             control={control}
             noArrow
             placement='bottom-start'
-            popperClassName='fd-popover__popper--input-messaging-group' // TO DO: this class is in 0.6.0-rc.22 - removes borders
+            popperClassName='fd-popover__popper--input-messaging-group'
             popperProps={{ id }}
             style={{ display: 'block' }} /> // TO DO: replace with class from fundamental-styles
     );

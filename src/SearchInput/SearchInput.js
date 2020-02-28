@@ -1,6 +1,7 @@
 import Button from '../Button/Button';
-import { FORM_STATES } from '../utils/constants';
+import { FORM_MESSAGE_TYPES } from '../utils/constants';
 import FormInput from '../Forms/FormInput';
+import FormMessage from '../Forms/_FormMessage';
 import InputGroup from '../InputGroup/InputGroup';
 import Menu from '../Menu/Menu';
 import Popover from '../Popover/Popover';
@@ -131,43 +132,54 @@ class SearchInput extends Component {
             listProps,
             searchBtnProps,
             popoverProps,
-            state,
+            validationState,
             ...rest
         } = this.props;
+
+
+        const popoverBody = (
+            <Menu disableStyles={disableStyles}>
+                <Menu.List {...listProps}>
+                    {this.state.filteredResult && this.state.filteredResult.length > 0 ? (
+                        this.state.filteredResult.map((item, index) => {
+                            return (
+                                <li
+                                    className='fd-menu__item'
+                                    key={index}
+                                    onClick={(e) => this.listItemClickHandler(e, item)}>
+                                    <strong>{this.state.value}</strong>
+                                    {this.state.value && this.state.value.length
+                                        ? item.text.substring(this.state.value.length)
+                                        : item.text}
+                                </li>
+                            );
+                        })
+                    ) : (
+                        <li className='fd-menu__item'>No result</li>
+                    )}
+                </Menu.List>
+            </Menu>
+        );
 
         return (
             <div {...rest} className={className}>
                 <Popover
                     {...popoverProps}
                     body={
-                        (<Menu disableStyles={disableStyles}>
-                            <Menu.List {...listProps}>
-                                {this.state.filteredResult && this.state.filteredResult.length > 0 ? (
-                                    this.state.filteredResult.map((item, index) => {
-                                        return (
-                                            <li
-                                                className='fd-menu__item'
-                                                key={index}
-                                                onClick={(e) => this.listItemClickHandler(e, item)}>
-                                                <strong>{this.state.value}</strong>
-                                                {this.state.value && this.state.value.length
-                                                    ? item.text.substring(this.state.value.length)
-                                                    : item.text}
-                                            </li>
-                                        );
-                                    })
-                                ) : (
-                                    <li className='fd-menu__item'>No result</li>
-                                )}
-                            </Menu.List>
-                        </Menu>)
-                    }
+                        validationState ? (
+                            <>
+                                <FormMessage
+                                    disableStyles={disableStyles}
+                                    type={validationState.state}>{validationState.text}</FormMessage>
+                                {popoverBody}
+                            </>
+                        ) : popoverBody}
                     control={
                         <InputGroup
                             {...inputGroupProps}
                             compact={compact}
                             disableStyles={disableStyles}
-                            state={state}>
+                            validationState={!this.state.isExpanded && validationState}>
                             <FormInput
                                 {...inputProps}
                                 disableStyles={disableStyles}
@@ -189,7 +201,9 @@ class SearchInput extends Component {
                         </InputGroup>
                     }
                     disableKeyPressHandler
-                    disableStyles={disableStyles} />
+                    disableStyles={disableStyles}
+                    noArrow
+                    widthSizingType='matchTarget' />
             </div>
         );
     }
@@ -216,7 +230,10 @@ SearchInput.propTypes = {
             callback: PropTypes.func
         })
     ),
-    state: PropTypes.oneOf(FORM_STATES),
+    validationState: PropTypes.shape({
+        state: PropTypes.oneOf(FORM_MESSAGE_TYPES),
+        text: PropTypes.string
+    }),
     onChange: PropTypes.func,
     onEnter: PropTypes.func
 };

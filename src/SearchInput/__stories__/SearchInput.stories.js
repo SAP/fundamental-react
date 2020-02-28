@@ -22,12 +22,12 @@ const searchData = [
 const createProps = (overrides) => ({
     compact: boolean('compact', false),
     searchList: searchData,
-    state: select('Validation State', {
-        'default': null,
-        'valid': 'valid',
-        'invalid': 'invalid',
-        'information': 'information',
-        'warning': 'warning'
+    validationState: select('Validation State', {
+        'none': '',
+        'success': { state: 'success', text: 'placeholder text' },
+        'error': { state: 'error', text: 'placeholder text' },
+        'information': { state: 'information', text: 'placeholder text' },
+        'warning': { state: 'warning', text: 'placeholder text' }
     }),
     placeholder: 'Select a Fruit',
     ...overrides
@@ -38,6 +38,40 @@ storiesOf('Components|SearchInput', module)
     .addDecorator(withKnobs)
     .add('Default', () => (
         <SearchInput {...createProps()} />
+    ))
+    .add('Compact', () => (
+        <SearchInput compact
+            placeholder='Placeholder'
+            searchList={searchData} />
+    ))
+    .add('Disabled', () => (
+        <SearchInput disabled
+            placeholder='Placeholder'
+            searchList={searchData} />
+    ))
+    .add('Validation State | Error', () => (
+        <SearchInput
+            placeholder='Default'
+            searchList={searchData}
+            validationState={{ state: 'error', text: 'Test validation state' }} />
+    ))
+    .add('Validation State | Warning', () => (
+        <SearchInput
+            placeholder='Default'
+            searchList={searchData}
+            validationState={{ state: 'warning', text: 'Test validation state' }} />
+    ))
+    .add('Validation State | Information', () => (
+        <SearchInput
+            placeholder='Default'
+            searchList={searchData}
+            validationState={{ state: 'information', text: 'Test validation state' }} />
+    ))
+    .add('Validation State | Success', () => (
+        <SearchInput
+            placeholder='Default'
+            searchList={searchData}
+            validationState={{ state: 'success', text: 'Test validation state' }} />
     ))
     .add('disable styles', () => (
         <SearchInput
