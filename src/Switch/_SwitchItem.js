@@ -8,7 +8,6 @@ const SwitchItem = ({ glyph, text, type }) => {
     const spanClasses = classnames(
         'fd-fd-switch__text',
         {
-            [`fd-switch__text--${type}`]: !glyph,
             [`fd-switch__icon fd-switch__icon--${type} sap-icon--${glyph}`]: glyph
         }
     );
@@ -16,9 +15,7 @@ const SwitchItem = ({ glyph, text, type }) => {
     return (
         <span
             aria-label={text}
-            className={spanClasses}>
-            {!glyph && text}
-        </span>
+            className={spanClasses} />
     );
 
 };
