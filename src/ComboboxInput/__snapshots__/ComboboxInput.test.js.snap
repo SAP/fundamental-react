@@ -1,36 +1,38 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ComboboxInput /> create combobox input 1`] = `
-<div>
+<div
+  className="fd-popover"
+>
   <div
-    className="fd-popover"
+    onFocus={[Function]}
+    onMouseDown={[Function]}
+    onTouchStart={[Function]}
   >
     <div
-      onFocus={[Function]}
-      onMouseDown={[Function]}
-      onTouchStart={[Function]}
+      className="fd-popover__control"
     >
       <div
-        className="fd-popover__control"
+        aria-expanded={false}
+        aria-haspopup="true"
+        className="fd-input-group--control fd-input-group"
+        onClick={[Function]}
       >
-        <div
-          className="fd-input-group"
+        <input
+          className="fd-input fd-input-group__input"
           onClick={[Function]}
+          placeholder="Select Fruit"
+          type="text"
+        />
+        <span
+          className="fd-input-group__addon fd-input-group__addon--button"
         >
-          <input
-            className="fd-input fd-input-group__input"
-            placeholder="Select Fruit"
-            type="text"
+          <button
+            className="fd-button--light sap-icon--navigation-down-arrow fd-input-group__button"
+            onClick={[Function]}
+            type="button"
           />
-          <span
-            className="fd-input-group__addon fd-input-group__addon--button"
-          >
-            <button
-              className="fd-button--light sap-icon--navigation-down-arrow fd-input-group__button"
-              type="button"
-            />
-          </span>
-        </div>
+        </span>
       </div>
     </div>
   </div>
@@ -39,37 +41,37 @@ exports[`<ComboboxInput /> create combobox input 1`] = `
 
 exports[`<ComboboxInput /> create combobox input 2`] = `
 <div
-  className="blue"
+  className="fd-popover"
 >
   <div
-    className="fd-popover"
+    onFocus={[Function]}
+    onMouseDown={[Function]}
+    onTouchStart={[Function]}
   >
     <div
-      onFocus={[Function]}
-      onMouseDown={[Function]}
-      onTouchStart={[Function]}
+      className="fd-popover__control"
     >
       <div
-        className="fd-popover__control"
+        aria-expanded={false}
+        aria-haspopup="true"
+        className="fd-input-group--control blue fd-input-group"
+        onClick={[Function]}
       >
-        <div
-          className="fd-input-group"
+        <input
+          className="fd-input fd-input--compact fd-input-group__input"
           onClick={[Function]}
+          placeholder="Select Fruit"
+          type="text"
+        />
+        <span
+          className="fd-input-group__addon fd-input-group__addon--button fd-input-group__addon--compact"
         >
-          <input
-            className="fd-input fd-input--compact fd-input-group__input"
-            placeholder="Select Fruit"
-            type="text"
+          <button
+            className="fd-button--light fd-button--compact sap-icon--navigation-down-arrow fd-input-group__button"
+            onClick={[Function]}
+            type="button"
           />
-          <span
-            className="fd-input-group__addon fd-input-group__addon--button fd-input-group__addon--compact"
-          >
-            <button
-              className="fd-button--light fd-button--compact sap-icon--navigation-down-arrow fd-input-group__button"
-              type="button"
-            />
-          </span>
-        </div>
+        </span>
       </div>
     </div>
   </div>

@@ -21,12 +21,12 @@ const FormMessage = React.forwardRef(({ type, children, className, disableStyles
         className
     );
     return (
-        <span
+        <div
             {...props}
             className={formMessageClasses}
             ref={ref}>
             {children}
-        </span>
+        </div>
     );
 });
 

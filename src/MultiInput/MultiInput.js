@@ -177,7 +177,9 @@ class MultiInput extends Component {
                 body={
                     validationState ? (
                         <>
-                            <FormMessage type={validationState.state}>{validationState.text}</FormMessage>
+                            <FormMessage
+                                disableStyles={disableStyles}
+                                type={validationState.state}>{validationState.text}</FormMessage>
                             {popoverBody}
                         </>
                     ) : popoverBody}
@@ -188,7 +190,9 @@ class MultiInput extends Component {
                         aria-haspopup='true'
                         className={inputGroupClasses}
                         compact={compact}
-                        disabled={disabled}>
+                        disableStyles={disableStyles}
+                        disabled={disabled}
+                        validationState={!this.state.bShowList && validationState}>
                         <div {...tagProps} className={tokenizerClassNames}>
                             <div className='fd-tokenizer__inner'>
                                 {this.state.tags.length > 0 && this.createTags()}
@@ -213,7 +217,8 @@ class MultiInput extends Component {
                 }
                 disableStyles={disableStyles}
                 disabled={disabled}
-                noArrow />
+                noArrow
+                widthSizingType='matchTarget' />
         );
     }
 }

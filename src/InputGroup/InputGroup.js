@@ -1,5 +1,6 @@
 import classnames from 'classnames';
-import { FORM_STATES } from '../utils/constants';
+import { FORM_MESSAGE_TYPES } from '../utils/constants';
+import FormMessage from '../Forms/_FormMessage';
 import InputGroupAddon from './_InputGroupAddon';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
@@ -22,7 +23,7 @@ class InputGroup extends Component {
             compact,
             disabled,
             disableStyles,
-            state,
+            validationState,
             ...props
         } = this.props;
 
@@ -30,9 +31,12 @@ class InputGroup extends Component {
             className,
             'fd-input-group',
             {
-                [`is-${state}`]: state,
-                'is-disabled': disabled
-            }
+                'is-disabled': disabled,
+                'is-warning': validationState?.state === 'warning',
+                'is-invalid': validationState?.state === 'error',
+                'is-valid': validationState?.state === 'success',
+                'is-information': validationState?.state === 'information'
+            },
         );
 
         const getClassNames = (child) => classnames(
@@ -43,17 +47,24 @@ class InputGroup extends Component {
         );
 
         return (
-            <div
-                {...props}
-                className={inputGroupClasses}>
-                {React.Children.toArray(children).map(child => {
-                    return React.cloneElement(child, {
-                        compact,
-                        disabled,
-                        className: getClassNames(child)
-                    });
-                })}
-            </div>
+            <>
+                <div
+                    {...props}
+                    className={inputGroupClasses}>
+                    {React.Children.toArray(children).map(child => {
+                        return React.cloneElement(child, {
+                            compact,
+                            disabled,
+                            className: getClassNames(child)
+                        });
+                    })}
+                </div>
+                {validationState && (<FormMessage
+                    disableStyles={disableStyles}
+                    type={validationState.state}>
+                    {validationState.text}
+                </FormMessage>)}
+            </>
         );
     }
 }
@@ -68,7 +79,10 @@ InputGroup.propTypes = {
     compact: PropTypes.bool,
     disabled: PropTypes.bool,
     disableStyles: PropTypes.bool,
-    state: PropTypes.oneOf(FORM_STATES)
+    validationState: PropTypes.shape({
+        state: PropTypes.oneOf(FORM_MESSAGE_TYPES),
+        text: PropTypes.string
+    })
 };
 
 export default InputGroup;

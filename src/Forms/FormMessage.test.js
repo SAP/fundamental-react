@@ -36,7 +36,7 @@ describe('<FormMessage />', () => {
             render = () => <FormMessage ref={ref} />;
         }
         mount(<Test />);
-        expect(ref.current.tagName).toEqual('SPAN');
+        expect(ref.current.tagName).toEqual('DIV');
         expect(ref.current.className).toEqual('fd-form-message');
     });
 });
