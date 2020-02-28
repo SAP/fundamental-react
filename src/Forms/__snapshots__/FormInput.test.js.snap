@@ -56,7 +56,7 @@ exports[`<FormInput /> Validation states should render the correct snapshots 2`]
         aria-controls="input-3"
         aria-expanded={false}
         aria-haspopup={true}
-        className="fd-input is-invalid"
+        className="fd-input is-error"
         id="input-3"
         onClick={[Function]}
         onKeyPress={[Function]}
@@ -91,7 +91,7 @@ exports[`<FormInput /> Validation states should render the correct snapshots 3`]
         aria-controls="input-4"
         aria-expanded={false}
         aria-haspopup={true}
-        className="fd-input is-valid"
+        className="fd-input is-success"
         id="input-4"
         onClick={[Function]}
         onKeyPress={[Function]}
