@@ -154,10 +154,7 @@ class MultiInput extends Component {
             'fd-input-group--control',
             {
                 'is-disabled': disabled,
-                'is-warning': validationState?.state === 'warning',
-                'is-invalid': validationState?.state === 'error',
-                'is-valid': validationState?.state === 'success',
-                'is-information': validationState?.state === 'information'
+                [`is-${validationState?.state}`]: validationState?.state
             }
         );
 

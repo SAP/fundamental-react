@@ -49,7 +49,7 @@
     "@babel/runtime": "^7.8.0",
     "chain-function": "^1.0.1",
     "classnames": "^2.2.6",
-    "fundamental-styles": "0.7.0-rc.0",
+    "fundamental-styles": "0.7.0-rc.10",
     "keycode": "^2.2.0",
     "moment": "^2.24.0",
     "prop-types": "^15.7.1",
