@@ -166,14 +166,16 @@ class SearchInput extends Component {
                 <Popover
                     {...popoverProps}
                     body={
-                        validationState ? (
-                            <>
-                                <FormMessage
-                                    disableStyles={disableStyles}
-                                    type={validationState.state}>{validationState.text}</FormMessage>
-                                {popoverBody}
-                            </>
-                        ) : popoverBody}
+                        (<>
+                            {validationState &&
+                            <FormMessage
+                                disableStyles={disableStyles}
+                                type={validationState.state}>
+                                {validationState.text}
+                            </FormMessage>
+                            }
+                            {popoverBody}
+                        </>)}
                     control={
                         <InputGroup
                             {...inputGroupProps}

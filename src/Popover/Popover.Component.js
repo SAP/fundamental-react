@@ -2,7 +2,7 @@ import 'fundamental-styles/dist/layout.css'; //needed for layout container class
 import path from 'path';
 import { POPPER_SIZING_TYPES } from '../utils/constants';
 import React from 'react';
-import { Button, Icon, Identifier, Image, Menu, Modal, Popover } from '../';
+import { Button, Dialog, Icon, Identifier, Image, Menu, Popover } from '../';
 import { ComponentPage, Example } from '../_playground';
 
 
@@ -33,13 +33,13 @@ export class PopoverComponent extends React.Component {
         super(props);
 
         this.state = {
-            showModal: false
+            showDialog: false
         };
     }
 
-    toggleModal = () => {
+    toggleDialog = () => {
         this.setState(prevState => ({
-            showModal: !prevState.showModal
+            showDialog: !prevState.showDialog
         }));
     };
 
@@ -211,8 +211,8 @@ export class PopoverComponent extends React.Component {
                         element must be tracked because if it overflows from its boundaries, the overlay
                         will be hidden as well.`}
                     title='Out Of Boundaries'>
-                    <Button onClick={this.toggleModal}>Show Modal</Button>
-                    <Modal
+                    <Button onClick={this.toggleDialog}>Show Dialog</Button>
+                    <Dialog
                         bodyProps={{
                             style: {
                                 width: '400px',
@@ -221,10 +221,10 @@ export class PopoverComponent extends React.Component {
                                 overflowY: 'auto'
                             }
                         }}
-                        onClose={this.toggleModal}
-                        show={this.state.showModal}
+                        onClose={this.toggleDialog}
+                        show={this.state.showDialog}
                         title='Overflow Example'>
-                        <p>Click the icon to show the popover and then scroll within the modal body...</p>
+                        <p>Click the icon to show the popover and then scroll within the dialog body...</p>
                         <br />
                         <br />
                         <Popover
@@ -245,7 +245,7 @@ export class PopoverComponent extends React.Component {
                         <br />
                         <br />
                         <br />
-                    </Modal>
+                    </Dialog>
                 </Example>
 
             </ComponentPage>

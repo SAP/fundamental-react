@@ -8,6 +8,7 @@ import classnames from 'classnames';
 import { ComboboxInputComponent } from '../ComboboxInput/ComboboxInput.Component';
 import { ContextualMenuComponent } from '../ContextualMenu/ContextualMenu.Component';
 import { DatePickerComponent } from '../DatePicker/DatePicker.Component';
+import { DialogComponent } from '../Dialog/Dialog.Component';
 import { FormInput } from '..';
 import { FormsComponent } from '../Forms/Forms.Component';
 import groupArray from 'group-array';
@@ -25,7 +26,6 @@ import { ListComponent } from '../List/List.Component';
 import { LocalizationEditorComponent } from '../LocalizationEditor/LocalizationEditor.Component';
 import { MenuComponent } from '../Menu/Menu.Component';
 import { MessageStripComponent } from '../MessageStrip/MessageStrip.Component';
-import { ModalComponent } from '../Modal/Modal.Component';
 import { MultiInputComponent } from '../MultiInput/MultiInput.Component';
 import { PaginationComponent } from '../Pagination/Pagination.Component';
 import { PanelComponent } from '../Panel/Panel.Component';
@@ -191,9 +191,9 @@ const routes = [
         section: 'Components'
     },
     {
-        url: '/modal',
-        name: 'Modal',
-        component: ModalComponent,
+        url: '/dialog',
+        name: 'Dialog',
+        component: DialogComponent,
         section: 'Components'
     },
     {

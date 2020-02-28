@@ -93,12 +93,16 @@ const Select = React.forwardRef(({
     return (
         <Popover
             body={
-                validationState ? (
-                    <>
-                        <FormMessage type={validationState.state}>{validationState.text}</FormMessage>
-                        {popoverBody()}
-                    </>
-                ) : popoverBody()}
+                (<>
+                    {validationState &&
+                    <FormMessage
+                        disableStyles={disableStyles}
+                        type={validationState.state}>
+                        {validationState.text}
+                    </FormMessage>
+                    }
+                    {popoverBody()}
+                </>)}
             control={selectControl}
             disableStyles={disableStyles}
             disabled={disabled}

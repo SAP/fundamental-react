@@ -31,7 +31,7 @@ export { default as List } from './List/List';
 export { default as LocalizationEditor } from './LocalizationEditor/LocalizationEditor';
 export { default as Menu } from './Menu/Menu';
 export { default as MessageStrip } from './MessageStrip/MessageStrip';
-export { default as Modal } from './Modal/Modal';
+export { default as Modal } from './Dialog/Dialog';
 export { default as MultiInput } from './MultiInput/MultiInput';
 export { default as Pagination } from './Pagination/Pagination';
 export { default as Panel } from './Panel/Panel';

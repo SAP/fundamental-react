@@ -5,8 +5,8 @@ import FocusLock from 'react-focus-lock';
 import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
 import React, { Component } from 'react';
-class Modal extends Component {
-    // select body element to add Modal component too
+class Dialog extends Component {
+    // select body element to add Dialog component too
     bodyElm = document.querySelector('body');
 
     handleCloseClick = (e) => {
@@ -26,7 +26,7 @@ class Modal extends Component {
 
         if (!this.props.disableStyles) {
             require('fundamental-styles/dist/fonts.css');
-            require('fundamental-styles/dist/modal.css');
+            require('fundamental-styles/dist/dialog.css');
             require('fundamental-styles/dist/overlay.css');
         }
     }
@@ -59,12 +59,12 @@ class Modal extends Component {
 
         const backdropClasses = classnames(
             'fd-overlay',
-            'fd-overlay--modal',
+            'fd-overlay--dialog',
             backdropClassName
         );
 
-        const modalClasses = classnames(
-            'fd-modal',
+        const dialogClasses = classnames(
+            'fd-dialog',
             className
         );
 
@@ -81,32 +81,32 @@ class Modal extends Component {
                 <div
                     aria-label={title}
                     aria-modal='true'
-                    className={modalClasses}
+                    className={dialogClasses}
                     role='dialog'>
                     <div
                         {...contentProps}
-                        className='fd-modal__content'
+                        className='fd-dialog__content'
                         role='document'>
-                        <div {...headerProps} className='fd-modal__header'>
-                            <HeadingTag {...titleProps} className='fd-modal__title'>
+                        <div {...headerProps} className='fd-dialog__header'>
+                            <HeadingTag {...titleProps} className='fd-dialog__title'>
                                 {title}
                             </HeadingTag>
                             <Button
                                 {...closeProps}
                                 aria-label={localizedText.closeButton}
-                                className='fd-modal__close'
+                                className='fd-dialog__close'
                                 disableStyles={disableStyles}
                                 glyph='decline'
                                 onClick={this.handleCloseClick}
                                 option='light' />
                         </div>
-                        <div {...bodyProps} className='fd-modal__body'>
+                        <div {...bodyProps} className='fd-dialog__body'>
                             {children}
                         </div>
                         {actions ? (
                             <footer
                                 {...footerProps}
-                                className='fd-modal__footer'>
+                                className='fd-dialog__footer'>
                                 {actions}
                             </footer>
                         ) : (
@@ -120,9 +120,9 @@ class Modal extends Component {
     }
 }
 
-Modal.displayName = 'Modal';
+Dialog.displayName = 'Dialog';
 
-Modal.propTypes = {
+Dialog.propTypes = {
     title: PropTypes.string.isRequired,
     actions: PropTypes.node,
     backdropClassName: PropTypes.string,
@@ -143,7 +143,7 @@ Modal.propTypes = {
     onClose: PropTypes.func
 };
 
-Modal.defaultProps = {
+Dialog.defaultProps = {
     headingLevel: 3,
     localizedText: {
         closeButton: 'Close'
@@ -151,9 +151,9 @@ Modal.defaultProps = {
     onClose: () => { }
 };
 
-Modal.propDescriptions = {
+Dialog.propDescriptions = {
     actions: 'Node(s) to render within the footer of the dialog.',
-    backdropClassName: 'CSS class(es) to add to the modal backdrop.',
+    backdropClassName: 'CSS class(es) to add to the dialog backdrop.',
     bodyProps: 'Additional props to be spread to the body section of the dialog.',
     closeProps: 'Additional props to be spread to the close `<button>` element.',
     contentProps: 'Additional props to be spread to the content section of the dialog.',
@@ -166,4 +166,4 @@ Modal.propDescriptions = {
     show: 'Set to **true** to make the dialog visible.'
 };
 
-export default Modal;
+export default Dialog;

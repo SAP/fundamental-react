@@ -46,16 +46,16 @@ const ComboboxInput = React.forwardRef(({
         <Popover
             {...popoverProps}
             body={
-                validationState ? (
-                    <>
-                        <FormMessage
-                            disableStyles={disableStyles}
-                            type={validationState.state}>
-                            {validationState.text}
-                        </FormMessage>
-                        {list}
-                    </>
-                ) : list}
+                (<>
+                    {validationState &&
+                    <FormMessage
+                        disableStyles={disableStyles}
+                        type={validationState.state}>
+                        {validationState.text}
+                    </FormMessage>
+                    }
+                    {list}
+                </>)}
             control={
                 <InputGroup
                     {...props}

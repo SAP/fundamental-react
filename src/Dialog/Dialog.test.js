@@ -1,19 +1,19 @@
-import Modal from './Modal';
+import Dialog from './Dialog';
 import { mount } from 'enzyme';
 import React from 'react';
 
-describe('<Modal />', () => {
+describe('<Dialog />', () => {
     const mockOnClose = jest.fn();
     const bShow = true;
-    const modalInfoTitle = 'Product Added';
-    const modalConfirmTitle = 'Delete';
-    const modalFormTitle = 'Invite User';
-    const infoModal = (
-        <Modal
+    const dialogInfoTitle = 'Product Added';
+    const dialogConfirmTitle = 'Delete';
+    const dialogFormTitle = 'Invite User';
+    const infoDialog = (
+        <Dialog
             className='blue'
             onClose={mockOnClose}
             show={bShow}
-            title={modalInfoTitle}>
+            title={dialogInfoTitle}>
             <div>
                 <b>The new product have been added to your catalog.</b>
                 <br />
@@ -25,12 +25,12 @@ describe('<Modal />', () => {
                 <br />
                 <br />
             </div>
-        </Modal>
+        </Dialog>
     );
 
-    const infoNoShowModal = (
-        <Modal onClose={mockOnClose} show={!bShow}
-            title={modalInfoTitle}>
+    const infoNoShowDialog = (
+        <Dialog onClose={mockOnClose} show={!bShow}
+            title={dialogInfoTitle}>
             <div>
                 <b>The new product have been added to your catalog.</b>
                 <br />
@@ -42,11 +42,11 @@ describe('<Modal />', () => {
                 <br />
                 <br />
             </div>
-        </Modal>
+        </Dialog>
     );
 
-    const confirmModal = (
-        <Modal
+    const confirmDialog = (
+        <Dialog
             actions={
                 <React.Fragment>
                     <button>No Way</button>
@@ -55,15 +55,15 @@ describe('<Modal />', () => {
             }
             onClose={mockOnClose}
             show={bShow}
-            title={modalConfirmTitle}>
+            title={dialogConfirmTitle}>
             <div>
                 Do you want to delete item <b>X</b>?
             </div>
-        </Modal>
+        </Dialog>
     );
 
-    const formModal = (
-        <Modal
+    const formDialog = (
+        <Dialog
             actions={
                 <React.Fragment>
                     <button>Cancel</button>
@@ -72,14 +72,14 @@ describe('<Modal />', () => {
             }
             onClose={mockOnClose}
             show={bShow}
-            title={modalFormTitle}>
+            title={dialogFormTitle}>
             <div className='fd-form__group'>
                 <div className='fd-form__item'>
                     <label className='fd-form__label is-required'>Email</label>
                     <input className='fd-form__control' type='text' />
                 </div>
             </div>
-        </Modal>
+        </Dialog>
     );
 
     let component;
@@ -88,12 +88,12 @@ describe('<Modal />', () => {
         component.unmount();
     });
 
-    test('create information modal', () => {
-        component = mount(infoModal);
-        expect(component.find('.fd-modal__title').text()).toEqual(modalInfoTitle);
+    test('create information dialog', () => {
+        component = mount(infoDialog);
+        expect(component.find('.fd-dialog__title').text()).toEqual(dialogInfoTitle);
 
-        // close modal
-        component.find('button.fd-button--light.fd-modal__close').simulate('click');
+        // close dialog
+        component.find('button.fd-button--light.fd-dialog__close').simulate('click');
         expect(component.prop('onClose')).toBeCalledTimes(1);
 
         // handle esc key
@@ -112,131 +112,131 @@ describe('<Modal />', () => {
         expect(component.prop('onClose')).toBeCalledTimes(3);
     });
 
-    test('create confirm modal', () => {
-        component = mount(confirmModal);
-        expect(component.find('.fd-modal__title').text()).toEqual(
-            modalConfirmTitle
+    test('create confirm dialog', () => {
+        component = mount(confirmDialog);
+        expect(component.find('.fd-dialog__title').text()).toEqual(
+            dialogConfirmTitle
         );
     });
 
-    test('create form modal', () => {
-        component = mount(formModal);
-        expect(component.find('.fd-modal__title').text()).toEqual(modalFormTitle);
+    test('create form dialog', () => {
+        component = mount(formDialog);
+        expect(component.find('.fd-dialog__title').text()).toEqual(dialogFormTitle);
     });
 
-    test('do not show info modal', () => {
-        component = mount(infoNoShowModal);
-        expect(component.find('.fd-modal__title').exists()).toBeFalsy();
+    test('do not show info dialog', () => {
+        component = mount(infoNoShowDialog);
+        expect(component.find('.fd-dialog__title').exists()).toBeFalsy();
     });
 
-    describe('Modal Headings', () => {
+    describe('Dialog Headings', () => {
         test('should allow customization of header level', () => {
             component = mount(
-                <Modal headingLevel={2}
+                <Dialog headingLevel={2}
                     show
                     title='Sample' />);
 
             expect(
-                component.find('.fd-modal__title').type()
+                component.find('.fd-dialog__title').type()
             ).toBe('h2');
         });
     });
 
     describe('Custom class names', () => {
         test('should allow classes to be added to backdrop', () => {
-            component = mount(<Modal backdropClassName='sample' show
+            component = mount(<Dialog backdropClassName='sample' show
                 title='Title' />);
 
-            expect(component.find('div.fd-overlay--modal').hasClass('sample')).toBe(true);
+            expect(component.find('div.fd-overlay--dialog').hasClass('sample')).toBe(true);
         });
 
-        test('should allow classes to be added to modal', () => {
-            component = mount(<Modal className='sample' show
+        test('should allow classes to be added to dialog', () => {
+            component = mount(<Dialog className='sample' show
                 title='Title' />);
 
-            expect(component.find('div.fd-modal').hasClass('sample')).toBe(true);
+            expect(component.find('div.fd-dialog').hasClass('sample')).toBe(true);
         });
     });
 
 
     describe('Prop spreading', () => {
-        test('should allow props to be spread to the Modal component', () => {
+        test('should allow props to be spread to the Dialog component', () => {
             component = mount(
-                <Modal data-sample='Sample' show
+                <Dialog data-sample='Sample' show
                     title='Title' />
             );
 
-            expect( component.find('div.fd-overlay--modal').getDOMNode().attributes[
+            expect( component.find('div.fd-overlay--dialog').getDOMNode().attributes[
                 'data-sample'
             ].value).toBe(
                 'Sample'
             );
         });
 
-        test('should allow props to be spread to the Modal component\'s content section', () => {
+        test('should allow props to be spread to the Dialog component\'s content section', () => {
             component = mount(
-                <Modal
+                <Dialog
                     contentProps={{ 'data-sample': 'Sample Title' }}
                     show
                     title='Title' />
             );
 
             expect(
-                component.find('div.fd-modal__content').getDOMNode().attributes[
+                component.find('div.fd-dialog__content').getDOMNode().attributes[
                     'data-sample'
                 ].value
             ).toBe('Sample Title');
         });
 
-        test('should allow props to be spread to the Modal component\'s header section', () => {
+        test('should allow props to be spread to the Dialog component\'s header section', () => {
             component = mount(
-                <Modal
+                <Dialog
                     headerProps={{ 'data-sample': 'Sample Title' }}
                     show
                     title='Title' />
             );
 
             expect(
-                component.find('div.fd-modal__header').getDOMNode().attributes[
+                component.find('div.fd-dialog__header').getDOMNode().attributes[
                     'data-sample'
                 ].value
             ).toBe('Sample Title');
         });
 
-        test('should allow props to be spread to the Modal component\'s header element', () => {
+        test('should allow props to be spread to the Dialog component\'s header element', () => {
             component = mount(
-                <Modal
+                <Dialog
                     show
                     title='Title'
                     titleProps={{ 'data-sample': 'Sample Title' }} />
             );
 
             expect(
-                component.find('.fd-modal__title').getDOMNode().attributes['data-sample']
+                component.find('.fd-dialog__title').getDOMNode().attributes['data-sample']
                     .value
             ).toBe('Sample Title');
         });
 
-        test('should allow props to be spread to the Modal component\'s body section', () => {
+        test('should allow props to be spread to the Dialog component\'s body section', () => {
             // TODO: placeholder for this test description once that functionality is built
             component = mount(
-                <Modal
+                <Dialog
                     bodyProps={{ 'data-sample': 'Sample Title' }}
                     show
                     title='Title' />
             );
 
             expect(
-                component.find('div.fd-modal__body').getDOMNode().attributes[
+                component.find('div.fd-dialog__body').getDOMNode().attributes[
                     'data-sample'
                 ].value
             ).toBe('Sample Title');
         });
 
-        test('should allow props to be spread to the Modal component\'s footer section', () => {
+        test('should allow props to be spread to the Dialog component\'s footer section', () => {
             // TODO: placeholder for this test description once that functionality is built
             component = mount(
-                <Modal
+                <Dialog
                     actions={
                         <React.Fragment>
                             <button>Cancel</button>
@@ -254,10 +254,10 @@ describe('<Modal />', () => {
             ).toBe('Sample Title');
         });
 
-        test('should allow props to be spread to the Modal component\'s button element', () => {
+        test('should allow props to be spread to the Dialog component\'s button element', () => {
             // TODO: placeholder for this test description once that functionality is built
             component = mount(
-                <Modal
+                <Dialog
                     closeProps={{ 'data-sample': 'Sample Button' }}
                     show
                     title='Title' />
