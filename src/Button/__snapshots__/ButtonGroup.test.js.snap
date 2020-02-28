@@ -3,7 +3,7 @@
 exports[`<ButtonGroup /> create button group 1`] = `
 <div
   aria-label="Group label"
-  className="fd-button-group"
+  className="fd-segmented-button"
   role="group"
 >
   <button

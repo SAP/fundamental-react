@@ -167,7 +167,7 @@ exports[`<Shellbar /> create shellbar 3`] = `
               aria-controls="fd-shellbar-product-popover"
               aria-expanded={false}
               aria-haspopup={true}
-              className="fd-button--light fd-shellbar__button--menu fd-button--menu"
+              className="fd-button fd-button--light fd-shellbar__button--menu fd-button--menu"
               onClick={[Function]}
               onKeyPress={[Function]}
               role="button"
@@ -237,7 +237,7 @@ exports[`<Shellbar /> create shellbar 3`] = `
                   className="fd-input-group__addon fd-input-group__addon--button"
                 >
                   <button
-                    className="fd-button--light sap-icon--search fd-input-group__button"
+                    className="fd-button fd-button--light sap-icon--search fd-input-group__button"
                     onClick={[Function]}
                     type="button"
                   />
@@ -473,7 +473,7 @@ exports[`<Shellbar /> create shellbar 4`] = `
               aria-controls="fd-shellbar-product-popover"
               aria-expanded={false}
               aria-haspopup={true}
-              className="fd-button--light fd-shellbar__button--menu fd-button--menu"
+              className="fd-button fd-button--light fd-shellbar__button--menu fd-button--menu"
               onClick={[Function]}
               onKeyPress={[Function]}
               role="button"
@@ -543,7 +543,7 @@ exports[`<Shellbar /> create shellbar 4`] = `
                   className="fd-input-group__addon fd-input-group__addon--button"
                 >
                   <button
-                    className="fd-button--light sap-icon--search fd-input-group__button"
+                    className="fd-button fd-button--light sap-icon--search fd-input-group__button"
                     onClick={[Function]}
                     type="button"
                   />
@@ -772,7 +772,7 @@ exports[`<Shellbar /> create shellbar 5`] = `
               aria-controls="fd-shellbar-product-popover"
               aria-expanded={false}
               aria-haspopup={true}
-              className="fd-button--light fd-shellbar__button--menu fd-button--menu"
+              className="fd-button fd-button--light fd-shellbar__button--menu fd-button--menu"
               onClick={[Function]}
               onKeyPress={[Function]}
               role="button"
@@ -842,7 +842,7 @@ exports[`<Shellbar /> create shellbar 5`] = `
                   className="fd-input-group__addon fd-input-group__addon--button"
                 >
                   <button
-                    className="fd-button--light sap-icon--search fd-input-group__button"
+                    className="fd-button fd-button--light sap-icon--search fd-input-group__button"
                     onClick={[Function]}
                     type="button"
                   />
@@ -1051,7 +1051,7 @@ exports[`<Shellbar /> create shellbar 6`] = `
               aria-controls="fd-shellbar-product-popover"
               aria-expanded={false}
               aria-haspopup={true}
-              className="fd-button--light fd-shellbar__button--menu fd-button--menu"
+              className="fd-button fd-button--light fd-shellbar__button--menu fd-button--menu"
               onClick={[Function]}
               onKeyPress={[Function]}
               role="button"
@@ -1121,7 +1121,7 @@ exports[`<Shellbar /> create shellbar 6`] = `
                   className="fd-input-group__addon fd-input-group__addon--button"
                 >
                   <button
-                    className="fd-button--light sap-icon--search fd-input-group__button"
+                    className="fd-button fd-button--light sap-icon--search fd-input-group__button"
                     onClick={[Function]}
                     type="button"
                   />

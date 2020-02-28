@@ -8,7 +8,7 @@ exports[`<ActionBar /> create basic Action Bar 1`] = `
     className="fd-action-bar__back blue"
   >
     <button
-      className="fd-button--light fd-button--compact sap-icon--nav-back"
+      className="fd-button fd-button--light fd-button--compact sap-icon--nav-back"
       type="button"
     />
   </div>
@@ -44,7 +44,7 @@ exports[`<ActionBar /> create basic Action Bar 2`] = `
     className="fd-action-bar__back blue"
   >
     <button
-      className="fd-button--light fd-button--compact sap-icon--nav-back"
+      className="fd-button fd-button--light fd-button--compact sap-icon--nav-back"
       type="button"
     />
   </div>
