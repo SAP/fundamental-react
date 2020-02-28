@@ -1,21 +1,76 @@
+import Button from '../../Button/Button';
 import Dialog from '../Dialog';
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import {
+    boolean,
+    text,
     withKnobs
 } from '@storybook/addon-knobs';
 
 storiesOf('Components|Dialog', module)
     .addDecorator(withKnobs)
-    .add('Default', () => (
-        <Dialog show title='Product Added'>
+    .add('Dev', () => (
+        <Dialog
+            actions={[
+                (<Button option='light'>No</Button>),
+                (<Button>Yes</Button>)
+            ]}
+            header={text('header', 'Test header')}
+            show={boolean('show', true)}
+            subheader={text('subheader', 'Test Subheader')}
+            title={text('title', 'Test title')}>
+            <p><b>The new product have been added to your catalog.</b></p>
+            <p>Automatic Product ID: <b>PD-3465334</b></p>
+            <p>Expiration date: <b>13/03/2018</b></p>
+        </Dialog>
+    ))
+    .add('Standard', () => (
+        <Dialog
+            actions={[
+                (<Button option='light'>No</Button>),
+                (<Button>Yes</Button>)
+            ]}
+            show title='Product Added'>
+            <p><b>The new product have been added to your catalog.</b></p>
+            <p>Automatic Product ID: <b>PD-3465334</b></p>
+            <p>Expiration date: <b>13/03/2018</b></p>
+        </Dialog>
+    ))
+    .add('header', () => (
+        <Dialog
+            actions={[
+                (<Button option='light'>No</Button>),
+                (<Button>Yes</Button>)
+            ]}
+            header='Test header'
+            show title='Product Added'>
+            <p><b>The new product have been added to your catalog.</b></p>
+            <p>Automatic Product ID: <b>PD-3465334</b></p>
+            <p>Expiration date: <b>13/03/2018</b></p>
+        </Dialog>
+    ))
+    .add('subheader', () => (
+        <Dialog
+            actions={[
+                (<Button option='light'>No</Button>),
+                (<Button>Yes</Button>)
+            ]}
+            show
+            subheader='Test subheader'
+            title='Product Added'>
             <p><b>The new product have been added to your catalog.</b></p>
             <p>Automatic Product ID: <b>PD-3465334</b></p>
             <p>Expiration date: <b>13/03/2018</b></p>
         </Dialog>
     ))
     .add('disable styles', () => (
-        <Dialog disableStyles show
+        <Dialog
+            actions={[
+                (<Button option='light'>No</Button>),
+                (<Button>Yes</Button>)
+            ]}
+            disableStyles show
             title='Product Added'>
             <p><b>The new product have been added to your catalog.</b></p>
             <p>Automatic Product ID: <b>PD-3465334</b></p>

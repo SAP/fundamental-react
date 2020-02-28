@@ -1,3 +1,4 @@
+import Button from '../Button/Button';
 import Dialog from './Dialog';
 import { mount } from 'enzyme';
 import React from 'react';
@@ -10,6 +11,10 @@ describe('<Dialog />', () => {
     const dialogFormTitle = 'Invite User';
     const infoDialog = (
         <Dialog
+            actions={[
+                (<Button option='light'>No</Button>),
+                (<Button>Yes</Button>)
+            ]}
             className='blue'
             onClose={mockOnClose}
             show={bShow}
@@ -29,7 +34,12 @@ describe('<Dialog />', () => {
     );
 
     const infoNoShowDialog = (
-        <Dialog onClose={mockOnClose} show={!bShow}
+        <Dialog
+            actions={[
+                (<Button option='light'>No</Button>),
+                (<Button>Yes</Button>)
+            ]}
+            onClose={mockOnClose} show={!bShow}
             title={dialogInfoTitle}>
             <div>
                 <b>The new product have been added to your catalog.</b>
@@ -47,12 +57,10 @@ describe('<Dialog />', () => {
 
     const confirmDialog = (
         <Dialog
-            actions={
-                <React.Fragment>
-                    <button>No Way</button>
-                    <button>Sure</button>
-                </React.Fragment>
-            }
+            actions={[
+                (<Button option='light'>No</Button>),
+                (<Button>Yes</Button>)
+            ]}
             onClose={mockOnClose}
             show={bShow}
             title={dialogConfirmTitle}>
@@ -64,12 +72,10 @@ describe('<Dialog />', () => {
 
     const formDialog = (
         <Dialog
-            actions={
-                <React.Fragment>
-                    <button>Cancel</button>
-                    <button>Invite</button>
-                </React.Fragment>
-            }
+            actions={[
+                (<Button option='light'>No</Button>),
+                (<Button>Yes</Button>)
+            ]}
             onClose={mockOnClose}
             show={bShow}
             title={dialogFormTitle}>
@@ -93,7 +99,7 @@ describe('<Dialog />', () => {
         expect(component.find('.fd-dialog__title').text()).toEqual(dialogInfoTitle);
 
         // close dialog
-        component.find('button.fd-button--light.fd-dialog__close').simulate('click');
+        component.find('button.fd-dialog__decisive-button').at(0).simulate('click');
         expect(component.prop('onClose')).toBeCalledTimes(1);
 
         // handle esc key
@@ -132,7 +138,12 @@ describe('<Dialog />', () => {
     describe('Dialog Headings', () => {
         test('should allow customization of header level', () => {
             component = mount(
-                <Dialog headingLevel={2}
+                <Dialog
+                    actions={[
+                        (<Button option='light'>No</Button>),
+                        (<Button>Yes</Button>)
+                    ]}
+                    headingLevel={2}
                     show
                     title='Sample' />);
 
@@ -144,14 +155,24 @@ describe('<Dialog />', () => {
 
     describe('Custom class names', () => {
         test('should allow classes to be added to backdrop', () => {
-            component = mount(<Dialog backdropClassName='sample' show
+            component = mount(<Dialog
+                actions={[
+                    (<Button option='light'>No</Button>),
+                    (<Button>Yes</Button>)
+                ]}
+                backdropClassName='sample' show
                 title='Title' />);
 
             expect(component.find('div.fd-overlay--dialog').hasClass('sample')).toBe(true);
         });
 
         test('should allow classes to be added to dialog', () => {
-            component = mount(<Dialog className='sample' show
+            component = mount(<Dialog
+                actions={[
+                    (<Button option='light'>No</Button>),
+                    (<Button>Yes</Button>)
+                ]}
+                className='sample' show
                 title='Title' />);
 
             expect(component.find('div.fd-dialog').hasClass('sample')).toBe(true);
@@ -162,7 +183,12 @@ describe('<Dialog />', () => {
     describe('Prop spreading', () => {
         test('should allow props to be spread to the Dialog component', () => {
             component = mount(
-                <Dialog data-sample='Sample' show
+                <Dialog
+                    actions={[
+                        (<Button option='light'>No</Button>),
+                        (<Button>Yes</Button>)
+                    ]}
+                    data-sample='Sample' show
                     title='Title' />
             );
 
@@ -176,6 +202,10 @@ describe('<Dialog />', () => {
         test('should allow props to be spread to the Dialog component\'s content section', () => {
             component = mount(
                 <Dialog
+                    actions={[
+                        (<Button option='light'>No</Button>),
+                        (<Button>Yes</Button>)
+                    ]}
                     contentProps={{ 'data-sample': 'Sample Title' }}
                     show
                     title='Title' />
@@ -191,6 +221,10 @@ describe('<Dialog />', () => {
         test('should allow props to be spread to the Dialog component\'s header section', () => {
             component = mount(
                 <Dialog
+                    actions={[
+                        (<Button option='light'>No</Button>),
+                        (<Button>Yes</Button>)
+                    ]}
                     headerProps={{ 'data-sample': 'Sample Title' }}
                     show
                     title='Title' />
@@ -206,6 +240,10 @@ describe('<Dialog />', () => {
         test('should allow props to be spread to the Dialog component\'s header element', () => {
             component = mount(
                 <Dialog
+                    actions={[
+                        (<Button option='light'>No</Button>),
+                        (<Button>Yes</Button>)
+                    ]}
                     show
                     title='Title'
                     titleProps={{ 'data-sample': 'Sample Title' }} />
@@ -221,6 +259,10 @@ describe('<Dialog />', () => {
             // TODO: placeholder for this test description once that functionality is built
             component = mount(
                 <Dialog
+                    actions={[
+                        (<Button option='light'>No</Button>),
+                        (<Button>Yes</Button>)
+                    ]}
                     bodyProps={{ 'data-sample': 'Sample Title' }}
                     show
                     title='Title' />
@@ -237,12 +279,10 @@ describe('<Dialog />', () => {
             // TODO: placeholder for this test description once that functionality is built
             component = mount(
                 <Dialog
-                    actions={
-                        <React.Fragment>
-                            <button>Cancel</button>
-                            <button>Invite</button>
-                        </React.Fragment>
-                    }
+                    actions={[
+                        (<Button option='light'>No</Button>),
+                        (<Button>Yes</Button>)
+                    ]}
                     footerProps={{ 'data-sample': 'Sample Title' }}
                     show
                     title='Title' />
@@ -252,21 +292,6 @@ describe('<Dialog />', () => {
                 component.find('footer').getDOMNode().attributes['data-sample']
                     .value
             ).toBe('Sample Title');
-        });
-
-        test('should allow props to be spread to the Dialog component\'s button element', () => {
-            // TODO: placeholder for this test description once that functionality is built
-            component = mount(
-                <Dialog
-                    closeProps={{ 'data-sample': 'Sample Button' }}
-                    show
-                    title='Title' />
-            );
-
-            expect(
-                component.find('button').getDOMNode().attributes['data-sample']
-                    .value
-            ).toBe('Sample Button');
         });
     });
 });

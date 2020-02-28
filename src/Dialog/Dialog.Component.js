@@ -1,5 +1,5 @@
 import path from 'path';
-import { Button, Dialog, FormInput, FormItem, FormLabel, FormSet } from '..';
+import { Button, Dialog } from '..';
 import { ComponentPage, Example } from '../_playground';
 import React, { Component } from 'react';
 
@@ -8,21 +8,9 @@ export class DialogComponent extends Component {
         super(props);
 
         this.state = {
-            bShowInfoDialog: false,
-            bShowComfirmDialog: false,
-            bShowFormDialog: false,
-            emailAddress: ''
+            bShowComfirmDialog: false
         };
-
-        this.txtEmailRef = React.createRef();
     }
-
-    // show / hide information dialog
-    showHideDialog = () => {
-        this.setState(prevState => ({
-            bShowInfoDialog: !prevState.bShowInfoDialog
-        }));
-    };
 
     // show / hide confirmation dialog
     showHideConfirmDialog = () => {
@@ -31,23 +19,6 @@ export class DialogComponent extends Component {
                 bShowComfirmDialog: !prevState.bShowComfirmDialog
             })
         );
-    };
-
-    // show / hide form dialog
-    showHideFormDialog = () => {
-        this.setState(
-            prevState => ({
-                bShowFormDialog: !prevState.bShowFormDialog
-            })
-        );
-    };
-
-    updateEmailAddress = event => {
-        const newEmail = event.target.value;
-
-        this.setState({
-            emailAddress: newEmail
-        });
     };
 
     render() {
@@ -65,77 +36,25 @@ export class DialogComponent extends Component {
                     description={`This is used to present information to the user when the **Alert** component
                         doesn’t fit all the information.`}
                     title='Informational Dialog'>
-                    <React.Fragment>
-                        <Button onClick={this.showHideDialog}>
-                            Show Information Dialog
+                    <>
+                        <Button onClick={this.showHideConfirmDialog}>
+                            Show Dialog
                         </Button>
-                        <Dialog onClose={this.showHideDialog} show={this.state.bShowInfoDialog}
+                        <Dialog
+                            actions={[
+                                (<Button onClick={() => this.showHideConfirmDialog('No')} option='light'>
+                                        No
+                                </Button>),
+                                (<Button onClick={() => this.showHideConfirmDialog('Yes')}>Yes</Button>)
+                            ]}
+                            onClose={this.showHideConfirmDialog}
+                            show={this.state.bShowComfirmDialog}
                             title='Product Added'>
                             <p><b>The new product have been added to your catalog.</b></p>
                             <p>Automatic Product ID: <b>PD-3465334</b></p>
                             <p>Expiration date: <b>13/03/2018</b></p>
                         </Dialog>
-                    </React.Fragment>
-                </Example>
-
-                <Example
-                    centered
-                    description={`This is used to confirm with the user before continuing with a destructive or
-                        complex action. In this case, the **Dialog** has action buttons at the bottom.`}
-                    title='Confirmation Dialog'>
-                    <React.Fragment>
-                        <Button onClick={this.showHideConfirmDialog}>
-                            Show Confirmation Dialog
-                        </Button>
-                        <Dialog
-                            actions={
-                                <React.Fragment>
-                                    <Button onClick={() => this.showHideConfirmDialog('No')} option='light'>
-                                        No
-                                    </Button>
-                                    <Button onClick={() => this.showHideConfirmDialog('Yes')}>
-                                        Yes
-                                    </Button>
-                                </React.Fragment>
-                            }
-                            onClose={this.showHideConfirmDialog}
-                            show={this.state.bShowComfirmDialog}
-                            title='Delete'>
-                                Do you want to delete item <b>X</b>?
-                        </Dialog>
-                    </React.Fragment>
-                </Example>
-
-                <Example
-                    centered
-                    description='This is used for short forms in order to collect information from the user.'
-                    title='Form Dialog'>
-                    <React.Fragment>
-                        <Button onClick={this.showHideFormDialog}>
-                            Show Form Dialog
-                        </Button>
-                        <Dialog
-                            actions={
-                                <React.Fragment>
-                                    <Button onClick={() => this.showHideFormDialog('Cancel')} option='light'>
-                                        Cancel
-                                    </Button>
-                                    <Button onClick={() => this.showHideFormDialog('Invite')}>Invite</Button>
-                                </React.Fragment>
-                            }
-                            onClose={this.showHideFormDialog}
-                            show={this.state.bShowFormDialog}
-                            title='Invite user'>
-                            <FormSet>
-                                <FormItem>
-                                    <FormLabel required>Email</FormLabel>
-                                    <FormInput
-                                        onChange={this.updateEmailAddress}
-                                        value={this.state.emailAddress} />
-                                </FormItem>
-                            </FormSet>
-                        </Dialog>
-                    </React.Fragment>
+                    </>
                 </Example>
 
             </ComponentPage>
