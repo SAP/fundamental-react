@@ -96,7 +96,7 @@ export const SelectComponent = () => {
                 title='Validation States'>
                 <Select
                     placeholder='Default'
-                    validationState={{ state: 'warning', text: 'Test validation state' }}>
+                    validationState={{ state: 'warning', text: 'Test' }}>
                     <List>
                         <List.Item>
                             <List.Text>List Item 1</List.Text>
@@ -115,7 +115,7 @@ export const SelectComponent = () => {
 
                 <Select
                     placeholder='Default'
-                    validationState={{ state: 'information', text: 'Test validation state' }}>
+                    validationState={{ state: 'information', text: 'Test' }}>
                     <List>
                         <List.Item>
                             <List.Text>List Item 1</List.Text>
@@ -134,7 +134,7 @@ export const SelectComponent = () => {
 
                 <Select
                     placeholder='Default'
-                    validationState={{ state: 'error', text: 'Test validation state' }}>
+                    validationState={{ state: 'error', text: 'Test' }}>
                     <List>
                         <List.Item>
                             <List.Text>List Item 1</List.Text>
@@ -153,7 +153,7 @@ export const SelectComponent = () => {
 
                 <Select
                     placeholder='Default'
-                    validationState={{ state: 'success', text: 'Test validation state' }}>
+                    validationState={{ state: 'success', text: 'Test' }}>
                     <List>
                         <List.Item>
                             <List.Text>List Item 1</List.Text>

@@ -4,7 +4,7 @@ import { FORM_MESSAGE_TYPES } from '../utils/constants';
 import FormMessage from '../Forms/_FormMessage';
 import Popover from '../Popover/Popover';
 import PropTypes from 'prop-types';
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
 const Select = React.forwardRef(({
     children,
@@ -13,6 +13,7 @@ const Select = React.forwardRef(({
     disabled,
     disableStyles,
     id,
+    onClick,
     placeholder,
     validationState,
     ...props
@@ -23,6 +24,13 @@ const Select = React.forwardRef(({
             require('fundamental-styles/dist/select.css');
         }
     }, []);
+
+    let [isExpanded, setIsExpanded] = useState(false);
+
+    const handleClick = (e) => {
+        setIsExpanded(!isExpanded);
+        onClick(e);
+    };
 
     const selectClasses = classnames(
         'fd-select',
@@ -48,6 +56,7 @@ const Select = React.forwardRef(({
             {...props}
             className={selectClasses}
             id={id}
+            onClick={handleClick}
             ref={ref}>
             <div className={selectControlClasses}>
                 {placeholder}
@@ -58,6 +67,11 @@ const Select = React.forwardRef(({
                     option='light'
                     ref={ref} />
             </div>
+            {!isExpanded && validationState && (<FormMessage
+                disableStyles={disableStyles}
+                type={validationState.state}>
+                {validationState.text}
+            </FormMessage>)}
         </div>
     );
 
@@ -90,7 +104,8 @@ const Select = React.forwardRef(({
             disabled={disabled}
             noArrow
             placement='bottom-start'
-            popperProps={{ id }} />
+            popperProps={{ id }}
+            widthSizingType='matchTarget' />
     );
 });
 
@@ -107,8 +122,12 @@ Select.propTypes = {
     validationState: PropTypes.shape({
         state: PropTypes.oneOf(FORM_MESSAGE_TYPES),
         text: PropTypes.string
-    })
+    }),
+    onClick: PropTypes.func
 };
 
+Select.defaultProps = {
+    onClick: () => {}
+};
 
 export default Select;

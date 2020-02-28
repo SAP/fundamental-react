@@ -192,6 +192,7 @@ class MultiInput extends Component {
                         compact={compact}
                         disableStyles={disableStyles}
                         disabled={disabled}
+                        onClick={this.showHideTagList}
                         validationState={!this.state.bShowList && validationState}>
                         <div {...tagProps} className={tokenizerClassNames}>
                             <div className='fd-tokenizer__inner'>
@@ -201,7 +202,6 @@ class MultiInput extends Component {
                                     className='fd-tokenizer__input'
                                     compact={compact}
                                     disableStyles={disableStyles}
-                                    onClick={this.showHideTagList}
                                     placeholder={placeholder} />
                             </div>
                         </div>
@@ -210,7 +210,6 @@ class MultiInput extends Component {
                                 {...buttonProps}
                                 disableStyles={disableStyles}
                                 glyph='value-help'
-                                onClick={this.showHideTagList}
                                 option='light' />
                         </InputGroup.Addon>
                     </InputGroup>

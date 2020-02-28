@@ -59,6 +59,7 @@ export class MultiInputComponent extends Component {
                 </Example>
 
                 <Example
+                    centered
                     title='Validation States'>
                     <MultiInput
                         data={this.data}

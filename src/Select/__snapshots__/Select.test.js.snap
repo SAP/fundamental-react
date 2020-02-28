@@ -144,6 +144,11 @@ exports[`<Select /> create Select component 4`] = `
             type="button"
           />
         </div>
+        <div
+          className="fd-form-message fd-form-message--warning"
+        >
+          Test validation state
+        </div>
       </div>
     </div>
   </div>
@@ -182,6 +187,11 @@ exports[`<Select /> create Select component 5`] = `
             type="button"
           />
         </div>
+        <div
+          className="fd-form-message fd-form-message--error"
+        >
+          Test validation state
+        </div>
       </div>
     </div>
   </div>
@@ -219,6 +229,11 @@ exports[`<Select /> create Select component 6`] = `
             className="fd-button--light sap-icon--slim-arrow-down fd-select__button"
             type="button"
           />
+        </div>
+        <div
+          className="fd-form-message fd-form-message--information"
+        >
+          Test validation state
         </div>
       </div>
     </div>

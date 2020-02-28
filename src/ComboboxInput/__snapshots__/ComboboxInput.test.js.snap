@@ -20,7 +20,6 @@ exports[`<ComboboxInput /> create combobox input 1`] = `
       >
         <input
           className="fd-input fd-input-group__input"
-          onClick={[Function]}
           placeholder="Select Fruit"
           type="text"
         />
@@ -29,7 +28,6 @@ exports[`<ComboboxInput /> create combobox input 1`] = `
         >
           <button
             className="fd-button--light sap-icon--navigation-down-arrow fd-input-group__button"
-            onClick={[Function]}
             type="button"
           />
         </span>
@@ -59,7 +57,6 @@ exports[`<ComboboxInput /> create combobox input 2`] = `
       >
         <input
           className="fd-input fd-input--compact fd-input-group__input"
-          onClick={[Function]}
           placeholder="Select Fruit"
           type="text"
         />
@@ -68,7 +65,6 @@ exports[`<ComboboxInput /> create combobox input 2`] = `
         >
           <button
             className="fd-button--light fd-button--compact sap-icon--navigation-down-arrow fd-input-group__button"
-            onClick={[Function]}
             type="button"
           />
         </span>

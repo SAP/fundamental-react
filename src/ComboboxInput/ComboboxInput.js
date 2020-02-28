@@ -65,19 +65,18 @@ const ComboboxInput = React.forwardRef(({
                     compact={compact}
                     disableStyles={disableStyles}
                     disabled={disabled}
+                    onClick={handleClick}
                     validationState={!isExpanded && validationState}>
                     <FormInput
                         {...inputProps}
                         compact={compact}
                         disableStyles={disableStyles}
-                        onClick={handleClick}
                         placeholder={placeholder} />
                     <InputGroup.Addon isButton>
                         <Button
                             {...buttonProps}
                             disableStyles={disableStyles}
                             glyph='navigation-down-arrow'
-                            onClick={handleClick}
                             option='light'
                             ref={ref} />
                     </InputGroup.Addon>
