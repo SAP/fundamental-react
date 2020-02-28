@@ -2,7 +2,6 @@
 
 exports[`<ListIcon /> create list Icon item 1`] = `
 <span
-  className="fd-list__icon"
-  gyph="accept"
+  className="fd-list__icon sap-icon--accept"
 />
 `;
