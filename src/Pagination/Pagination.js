@@ -63,19 +63,40 @@ class Pagination extends Component {
     };
 
     // create pagination links
-    createPaginationLinks = numberOfPages => {
+    createPaginationLinks = (numberOfPages) => {
+        let linksToBeAdded = numberOfPages;
+        let pageNumberOffset = 1;
+
+        //if numberOfPages is more than noOfPages
+        if (numberOfPages > this.props.visiblePageTotal) {
+            linksToBeAdded = this.props.visiblePageTotal;
+            //highest page number possible
+            let maxPageNumber = this.state.selectedPage + Math.ceil(this.props.visiblePageTotal / 2);
+            //all but the last page, selected page is the center of selection
+            if (maxPageNumber <= numberOfPages) {
+                pageNumberOffset = this.state.selectedPage - Math.floor(this.props.visiblePageTotal / 2) + 1;
+            } else {
+                //last page,selected page is to the right of the center
+                pageNumberOffset = numberOfPages - Math.floor(this.props.visiblePageTotal) + 1;
+            }
+            //prevent negative values on first page
+            if (pageNumberOffset <= 0) {
+                pageNumberOffset = 1;
+            }
+        }
+
         // create an array with number of pages and fill it with links
-        const aPages = Array(numberOfPages)
+        const aPages = Array(linksToBeAdded)
             .fill()
             .map((link, index) => (
                 <a
                     {...this.props.linkProps}
-                    aria-selected={this.state.selectedPage === index + 1}
+                    aria-selected={this.state.selectedPage === index + pageNumberOffset}
                     className='fd-pagination__link'
                     href='#'
                     key={index}
                     onClick={this.pageClicked}>
-                    {index + 1}
+                    {index + pageNumberOffset}
                 </a>
             ));
         return aPages;
@@ -96,6 +117,7 @@ class Pagination extends Component {
             nextProps,
             onClick,
             initialPage,
+            visiblePageTotal,
             ...props
         } = this.props;
 
@@ -166,7 +188,8 @@ Pagination.propTypes = {
     }),
     nextProps: PropTypes.object,
     prevProps: PropTypes.object,
-    totalText: PropTypes.string
+    totalText: PropTypes.string,
+    visiblePageTotal: PropTypes.number
 };
 
 Pagination.defaultProps = {
@@ -177,7 +200,8 @@ Pagination.defaultProps = {
         next: 'Next',
         previous: 'Previous'
     },
-    totalText: 'items'
+    totalText: 'items',
+    visiblePageTotal: 10
 };
 
 Pagination.propDescriptions = {
@@ -192,7 +216,8 @@ Pagination.propDescriptions = {
     },
     nextProps: 'Additional props to be spread to the next arrow `<a>` element.',
     prevProps: 'Additional props to be spread to the previous arrow `<a>` element.',
-    totalText: 'Localized text to display next to the total number of items.  Used with `displayTotal`.'
+    totalText: 'Localized text to display next to the total number of items.  Used with `displayTotal`.',
+    visiblePageTotal: 'Total number of visible pages.'
 };
 
 export default Pagination;

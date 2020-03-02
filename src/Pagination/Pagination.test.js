@@ -57,6 +57,24 @@ describe('<Pagination />', () => {
             onClick={handleClick} />
     );
 
+    const visibleTotalPagesPagination = (
+        <Pagination itemsTotal={221}
+            onClick={handleClick}
+            visiblePageTotal={20} />
+    );
+
+    const visibleTotalPagesWithItemTotalPagination = (
+        <Pagination itemsPerPage={1} itemsTotal={10}
+            onClick={handleClick}
+            visiblePageTotal={20} />
+    );
+
+    const visibleTotalPagesZeroPagination = (
+        <Pagination itemsPerPage={0} itemsTotal={200}
+            onClick={handleClick}
+            visiblePageTotal={20} />
+    );
+
     test('create default Pagination component', () => {
         const component = renderer.create(defaultPagination);
         const tree = component.toJSON();
@@ -113,6 +131,27 @@ describe('<Pagination />', () => {
         expect(tree).toMatchSnapshot();
     });
 
+    test('create Pagination component with visibleTotalPages set', () => {
+        const component = renderer.create(visibleTotalPagesPagination);
+        const tree = component.toJSON();
+
+        expect(tree).toMatchSnapshot();
+    });
+
+    test('create Pagination component with visibleTotalPages set to 20 and item per page set to 0', () => {
+        const component = renderer.create(visibleTotalPagesZeroPagination);
+        const tree = component.toJSON();
+
+        expect(tree).toMatchSnapshot();
+    });
+
+    test('create Pagination component with visibleTotalPages set to 20 and totaPage = 10', () => {
+        const component = renderer.create(visibleTotalPagesWithItemTotalPagination);
+        const tree = component.toJSON();
+
+        expect(tree).toMatchSnapshot();
+    });
+
     test('navigate to previous page', () => {
         const wrapper = shallow(initialSetPagination);
         wrapper.setState({ selectedPage: 5 });
@@ -151,6 +190,16 @@ describe('<Pagination />', () => {
             .at(2)
             .simulate('click', { target: { text: '4' } });
         expect(wrapper.state(['selectedPage'])).toEqual(4);
+    });
+
+    test('create Pagination component with total pages = 20', () => {
+        const wrapper = shallow(visibleTotalPagesPagination);
+        expect(wrapper.find('a.fd-pagination__link').length).toEqual(22);
+    });
+
+    test('create Pagination component with total pages = 20 and itemTotal = 10', () => {
+        const wrapper = shallow(visibleTotalPagesWithItemTotalPagination);
+        expect(wrapper.find('a.fd-pagination__link').length).toEqual(12);
     });
 
     describe('Prop spreading', () => {
