@@ -78,6 +78,18 @@ export const PaginationComponent = () => {
                     totalText='Dalmations' />
             </Example>
 
+            <Example
+                centered
+                description='Customize the total number of visible pages.'
+                title='Total Visible Pages'>
+                <Pagination
+                    initialPage={6}
+                    itemsPerPage={10}
+                    itemsTotal={200}
+                    onClick={handleClick}
+                    visiblePageTotal={15} />
+            </Example>
+
         </ComponentPage>
     );
 };
