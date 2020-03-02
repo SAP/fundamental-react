@@ -47,12 +47,6 @@ describe('<MessageStrip />', () => {
         const tree = component.toJSON();
 
         expect(tree).toMatchSnapshot();
-
-        // const wrapper = shallow(basicMessageStrip);
-        // expect(wrapper.state(['isActive'])).toBeTruthy();
-
-        // wrapper.find('button.fd-message-strip__close').simulate('click');
-        // expect(wrapper.state(['isActive'])).toBeFalsy();
     });
 
     describe('Prop spreading', () => {

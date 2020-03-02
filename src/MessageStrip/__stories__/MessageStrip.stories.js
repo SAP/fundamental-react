@@ -29,8 +29,8 @@ storiesOf('Components|MessageStrip', module)
     .add('Dev', () => (
         <MessageStrip {...createProps()}>Default MessageStrip</MessageStrip>
     ))
-    .add('Dismissable', () => (
-        <MessageStrip dismissable>MessageStrip</MessageStrip>
+    .add('Dismissible', () => (
+        <MessageStrip dismissible>MessageStrip</MessageStrip>
     ))
     .add('No Icon', () => (
         <MessageStrip noGlyph>MessageStrip</MessageStrip>
