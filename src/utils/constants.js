@@ -43,6 +43,13 @@ export const BUTTON_TYPES = [
     'medium'
 ];
 
+export const DIALOG_SIZES = [
+    's',
+    'm',
+    'l',
+    'xl'
+];
+
 export const FORM_MESSAGE_TYPES = [
     'error',
     'warning',

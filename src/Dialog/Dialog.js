@@ -1,5 +1,6 @@
 import classnames from 'classnames';
 import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
+import { DIALOG_SIZES } from '../utils/constants';
 import FocusLock from 'react-focus-lock';
 import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
@@ -52,6 +53,7 @@ class Dialog extends Component {
             footerProps,
             onClose,
             show,
+            size,
             subheader,
             titleProps,
             title,
@@ -70,6 +72,13 @@ class Dialog extends Component {
                 'fd-dialog--active': show
             },
             className
+        );
+
+        const contentClasses = classnames(
+            'fd-dialog__content',
+            {
+                [`fd-dialog__content--${size}`]: size
+            }
         );
 
         const headerClasses = classnames(
@@ -99,7 +108,7 @@ class Dialog extends Component {
                     role='dialog'>
                     <div
                         {...contentProps}
-                        className='fd-dialog__content'
+                        className={contentClasses}
                         role='document'>
                         <div {...headerProps} className={headerClasses}>
                             {header && (<div className='fd-bar__element'>
@@ -129,7 +138,7 @@ class Dialog extends Component {
                             <div className='fd-bar__right'>
                                 {React.Children.toArray(actions).map((child, index) => (
                                     <div className='fd-bar__element' key={index}>
-                                        {React.cloneElement(child, { className: 'fd-dialog__decisive-button', onClick: this.handleCloseClick })}
+                                        {React.cloneElement(child, { className: 'fd-dialog__decisive-button' })}
                                     </div>
                                 ))}
                             </div>
@@ -159,6 +168,7 @@ Dialog.propTypes = {
     headerProps: PropTypes.object,
     headingLevel: CustomPropTypes.range(2, 6),
     show: PropTypes.bool,
+    size: PropTypes.oneOf(DIALOG_SIZES),
     subheader: PropTypes.string,
     titleProps: PropTypes.object,
     onClose: PropTypes.func
@@ -179,6 +189,7 @@ Dialog.propDescriptions = {
     header: 'Text for the components header.',
     headerProps: 'Additional props to be spread to the header of the dialog.',
     onClose: 'Callback function passing event when close button is clicked.',
+    size: 'By default dialog body has no horizontal paddings. Add a size to modify the padding.',
     show: 'Set to **true** to make the dialog visible.',
     subheader: 'Text for the components subheader.'
 };

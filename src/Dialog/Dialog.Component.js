@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import path from 'path';
 import { Button, Dialog } from '..';
 import { ComponentPage, Example } from '../_playground';
@@ -7,19 +8,11 @@ export class DialogComponent extends Component {
     constructor(props) {
         super(props);
 
-        this.state = {
-            bShowComfirmDialog: false
-        };
+        this.state = {};
     }
 
-    // show / hide confirmation dialog
-    showHideConfirmDialog = () => {
-        this.setState(
-            prevState => ({
-                bShowComfirmDialog: !prevState.bShowComfirmDialog
-            })
-        );
-    };
+
+    toggleDialog = (name) => this.setState( prevState => ({ [name]: !prevState[name] }));
 
     render() {
         return (
@@ -33,27 +26,109 @@ export class DialogComponent extends Component {
 
                 <Example
                     centered
-                    description={`This is used to present information to the user when the **Alert** component
+                    description={`This is used to present information to the user when the **MessageStrip** component
                         doesn’t fit all the information.`}
                     title='Informational Dialog'>
                     <>
-                        <Button onClick={this.showHideConfirmDialog}>
+                        <Button onClick={() => this.toggleDialog('info')}>
                             Show Dialog
                         </Button>
                         <Dialog
                             actions={[
-                                (<Button onClick={() => this.showHideConfirmDialog('No')} option='light'>
+                                (<Button onClick={() => this.toggleDialog('info')} option='light'>
                                         No
                                 </Button>),
-                                (<Button onClick={() => this.showHideConfirmDialog('Yes')}>Yes</Button>)
+                                (<Button onClick={() => this.toggleDialog('info')}>Yes</Button>)
                             ]}
-                            onClose={this.showHideConfirmDialog}
-                            show={this.state.bShowComfirmDialog}
+                            onClose={() => this.toggleDialog('info')}
+                            show={this.state.info}
                             title='Product Added'>
                             <p><b>The new product have been added to your catalog.</b></p>
                             <p>Automatic Product ID: <b>PD-3465334</b></p>
                             <p>Expiration date: <b>13/03/2018</b></p>
                         </Dialog>
+                    </>
+                </Example>
+
+                <Example
+                    centered
+                    description={'By default dialog body has no horizontal paddings, use the **size** property to change the padding.'}
+                    title='Sizes'>
+                    <>
+                        <Button onClick={() => this.toggleDialog('small')}>
+                            Show Small Dialog
+                        </Button>
+                        <Dialog
+                            actions={[
+                                (<Button onClick={() => this.toggleDialog('small')} option='light'>
+                                        No
+                                </Button>),
+                                (<Button onClick={() => this.toggleDialog('small')} >Yes</Button>)
+                            ]}
+                            show={this.state.small}
+                            size='s'
+                            title='Small Dialog'>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                        </Dialog>
+
+                        <br />
+
+                        <Button onClick={() => this.toggleDialog('medium')}>
+                            Show Medium Dialog
+                        </Button>
+                        <Dialog
+                            actions={[
+                                (<Button onClick={() => this.toggleDialog('medium')} option='light'>
+                                        No
+                                </Button>),
+                                (<Button onClick={() => this.toggleDialog('medium')} >Yes</Button>)
+                            ]}
+                            show={this.state.medium}
+                            size='m'
+                            title='Medium Dialog'>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                        </Dialog>
+
+                        <br />
+
+                        <Button onClick={() => this.toggleDialog('large')}>
+                            Show Large Dialog
+                        </Button>
+                        <Dialog
+                            actions={[
+                                (<Button onClick={() => this.toggleDialog('large')} option='light'>
+                                        No
+                                </Button>),
+                                (<Button onClick={() => this.toggleDialog('large')} >Yes</Button>)
+                            ]}
+                            show={this.state.large}
+                            size='l'
+                            title='Large Dialog'>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                        </Dialog>
+
+                        <br />
+
+                        <Button onClick={() => this.toggleDialog('xl')}>
+                            Show XL Dialog
+                        </Button>
+                        <Dialog
+                            actions={[
+                                (<Button onClick={() => this.toggleDialog('xl')} option='light'>
+                                        No
+                                </Button>),
+                                (<Button onClick={() => this.toggleDialog('xl')} >Yes</Button>)
+                            ]}
+                            show={this.state.xl}
+                            size='xl'
+                            title='XL Dialog'>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                        </Dialog>
+
+                        <br />
+
+
+
                     </>
                 </Example>
 
