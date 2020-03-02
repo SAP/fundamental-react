@@ -39,6 +39,11 @@ const ComboboxInput = React.forwardRef(({
         onClick(e);
     };
 
+    const handleClickOutside = () => {
+        setIsExpanded(false);
+    };
+
+
     return (
         <Popover
             {...popoverProps}
@@ -83,6 +88,7 @@ const ComboboxInput = React.forwardRef(({
             disableStyles={disableStyles}
             disabled={disabled}
             noArrow
+            onClickOutside={handleClickOutside}
             useArrowKeyNavigation
             widthSizingType='matchTarget' />
     );

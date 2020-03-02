@@ -3,6 +3,7 @@ import Calendar from '../Calendar/Calendar';
 import classnames from 'classnames';
 import { FORM_MESSAGE_TYPES } from '../utils/constants';
 import FormInput from '../Forms/FormInput';
+import FormMessage from '../Forms/_FormMessage';
 import InputGroup from '../InputGroup/InputGroup';
 import { isEnabledDate } from '../utils/dateUtils';
 import moment from 'moment';
@@ -26,10 +27,6 @@ class DatePicker extends Component {
         this.calendarRef = React.createRef();
         this.popoverRef = React.createRef();
     }
-
-    handleClick = () => {
-        this.setState({ isExpanded: !this.state.isExpanded });
-    };
 
     modifyDate = (e) => {
         this.setState({ formattedDate: e.target.value });
@@ -86,10 +83,14 @@ class DatePicker extends Component {
         });
     }
 
-    clickOutside = () => {
+    handleClick = () => {
+        this.setState({ isExpanded: !this.state.isExpanded });
+    };
+
+    handleClickOutside = () => {
         this.validateDates();
         this.setState({
-            hidden: true
+            isExpanded: false
         }, () => {
             this.props.onBlur({
                 date: this.state.selectedDate,
@@ -174,31 +175,41 @@ class DatePicker extends Component {
                 ref={component => (this.component = component)}>
                 <Popover
                     body={
-                        <Calendar
-                            blockedDates={blockedDates}
-                            customDate={
-                                enableRangeSelection
-                                    ? this.state.arrSelectedDates
-                                    : this.state.selectedDate
+                        <>
+                            {
+                                validationState &&
+                                <FormMessage
+                                    disableStyles={disableStyles}
+                                    type={validationState.state}>
+                                    {validationState.text}
+                                </FormMessage>
                             }
-                            disableAfterDate={disableAfterDate}
-                            disableBeforeDate={disableBeforeDate}
-                            disableFutureDates={disableFutureDates}
-                            disablePastDates={disablePastDates}
-                            disableStyles={disableStyles}
-                            disableWeekday={disableWeekday}
-                            disableWeekends={disableWeekends}
-                            disabledDates={disabledDates}
-                            enableRangeSelection={enableRangeSelection}
-                            focusOnInit
-                            locale={locale}
-                            localizedText={localizedText}
-                            onChange={this.updateDate}
-                            ref={this.calendarRef} />
+                            <Calendar
+                                blockedDates={blockedDates}
+                                customDate={
+                                    enableRangeSelection
+                                        ? this.state.arrSelectedDates
+                                        : this.state.selectedDate
+                                }
+                                disableAfterDate={disableAfterDate}
+                                disableBeforeDate={disableBeforeDate}
+                                disableFutureDates={disableFutureDates}
+                                disablePastDates={disablePastDates}
+                                disableStyles={disableStyles}
+                                disableWeekday={disableWeekday}
+                                disableWeekends={disableWeekends}
+                                disabledDates={disabledDates}
+                                enableRangeSelection={enableRangeSelection}
+                                focusOnInit
+                                locale={locale}
+                                localizedText={localizedText}
+                                onChange={this.updateDate}
+                                ref={this.calendarRef} />
+                        </>
                     }
                     control={
                         <InputGroup
-                            aria-expanded={this.popoverRef}
+                            aria-expanded={this.state.isExpanded}
                             aria-haspopup='true'
                             className={inputGroupClass}
                             compact={compact}
@@ -225,7 +236,7 @@ class DatePicker extends Component {
                     disableKeyPressHandler
                     disableStyles={disableStyles}
                     noArrow
-                    onClickOutside={this.clickOutside}
+                    onClickOutside={this.handleClickOutside}
                     placement='bottom-end'
                     ref={this.popoverRef} />
             </div>
