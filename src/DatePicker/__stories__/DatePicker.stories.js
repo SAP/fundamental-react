@@ -5,6 +5,7 @@ import {
     boolean,
     date,
     optionsKnob,
+    select,
     text,
     withKnobs
 } from '@storybook/addon-knobs';
@@ -48,6 +49,18 @@ storiesOf('Components|DatePicker', module)
             disabledDates={[dateKnobToDate('disable between dates (1)', disabledDateFirstDefault),
                 dateKnobToDate('disable between dates (2)', disabledDateSecondDefault)]}
             locale={text('locale', 'en')} />
+    ))
+    .add('Validation State', () => (
+        <DatePicker
+            validationState={select('Validation State',
+                {
+                    'none': '',
+                    'success': { state: 'success', text: 'placeholder text' },
+                    'error': { state: 'error', text: 'placeholder text' },
+                    'information': { state: 'information', text: 'placeholder text' },
+                    'warning': { state: 'warning', text: 'placeholder text' }
+                }
+            )} />
     ))
     .add('disable styles', () => (
         <DatePicker

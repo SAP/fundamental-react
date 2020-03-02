@@ -1,5 +1,7 @@
 import Button from '../Button/Button';
 import Calendar from '../Calendar/Calendar';
+import classnames from 'classnames';
+import { FORM_MESSAGE_TYPES } from '../utils/constants';
 import FormInput from '../Forms/FormInput';
 import InputGroup from '../InputGroup/InputGroup';
 import { isEnabledDate } from '../utils/dateUtils';
@@ -15,6 +17,7 @@ class DatePicker extends Component {
         const formattedDate = props.defaultValue.length > 0 ?
             moment(props.defaultValue, ISO_DATE_FORMAT).format(this.getLocaleDateFormat()) : '';
         this.state = {
+            isExpanded: false,
             selectedDate: formattedDate.length === 0 ? null : moment(formattedDate, this.getLocaleDateFormat()),
             arrSelectedDates: [],
             formattedDate
@@ -23,6 +26,10 @@ class DatePicker extends Component {
         this.calendarRef = React.createRef();
         this.popoverRef = React.createRef();
     }
+
+    handleClick = () => {
+        this.setState({ isExpanded: !this.state.isExpanded });
+    };
 
     modifyDate = (e) => {
         this.setState({ formattedDate: e.target.value });
@@ -148,8 +155,17 @@ class DatePicker extends Component {
             locale,
             localizedText,
             onBlur,
+            validationState,
             ...props
         } = this.props;
+
+        const inputGroupClass = classnames(
+            'fd-input-group--control',
+            {
+                [`is-${validationState?.state}`]: validationState?.state
+            },
+            className
+        );
 
         return (
             <div
@@ -181,9 +197,17 @@ class DatePicker extends Component {
                             ref={this.calendarRef} />
                     }
                     control={
-                        <InputGroup compact={compact}>
+                        <InputGroup
+                            aria-expanded={this.popoverRef}
+                            aria-haspopup='true'
+                            className={inputGroupClass}
+                            compact={compact}
+                            disableStyles={disableStyles}
+                            onClick={this.handleClick}
+                            validationState={!this.state.isExpanded && validationState} >
                             <FormInput
                                 {...inputProps}
+                                disableStyles={disableStyles}
                                 onBlur={this._handleBlur}
                                 onChange={this.modifyDate}
                                 onKeyPress={this.sendUpdate}
@@ -220,6 +244,10 @@ DatePicker.propTypes = {
     enableRangeSelection: PropTypes.bool,
     inputProps: PropTypes.object,
     locale: PropTypes.string,
+    validationState: PropTypes.shape({
+        state: PropTypes.oneOf(FORM_MESSAGE_TYPES),
+        text: PropTypes.string
+    }),
     onBlur: PropTypes.func
 };
 
