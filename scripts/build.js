@@ -30,7 +30,7 @@ const formatWebpackMessages = require('react-dev-utils/formatWebpackMessages');
 const printHostingInstructions = require('react-dev-utils/printHostingInstructions');
 const FileSizeReporter = require('react-dev-utils/FileSizeReporter');
 const printBuildError = require('react-dev-utils/printBuildError');
-
+const { copyAssets } = require('./copy-assets');
 
 const measureFileSizesBeforeBuild =
   FileSizeReporter.measureFileSizesBeforeBuild;
@@ -48,27 +48,8 @@ if (!checkRequiredFiles([paths.appHtml, paths.appIndexJs])) {
     process.exit(1);
 }
 
-const fontPath = require.resolve('@sap-theming/theming-base-content/content/Base/baseLib/sap_base_fiori/fonts/72-Regular.woff');
-const fontPathLight = require.resolve('@sap-theming/theming-base-content/content/Base/baseLib/sap_base_fiori/fonts/72-Light.woff');
-const fontPathBold = require.resolve('@sap-theming/theming-base-content/content/Base/baseLib/sap_base_fiori/fonts/72-Bold.woff');
-const iconPath = require.resolve('@sap-theming/theming-base-content/content/Base/baseLib/sap_fiori_3/fonts/SAP-icons.woff');
-
-fs.copyFile('README.md', 'src/_playground/documentation/Home/README.md', (err) => {
-    if (err) throw err;
-});
-
-fs.copyFile(fontPath, 'src/_playground/72-Regular.woff', (err) => {
-    if (err) throw err;
-});
-fs.copyFile(fontPathLight, 'src/_playground/72-Light.woff', (err) => {
-    if (err) throw err;
-});
-fs.copyFile(fontPathBold, 'src/_playground/72-Bold.woff', (err) => {
-    if (err) throw err;
-});
-fs.copyFile(iconPath, 'src/_playground/SAP-icons.woff', (err) => {
-    if (err) throw err;
-});
+// copy fonts and readme
+copyAssets();
 
 // Process CLI arguments
 const argv = process.argv.slice(2);
