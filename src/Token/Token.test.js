@@ -12,6 +12,14 @@ describe('<Token />', () => {
         component = renderer.create(<Token className='blue'>Bibendum</Token>);
         tree = component.toJSON();
         expect(tree).toMatchSnapshot();
+
+        component = renderer.create(<Token readOnly>Bibendum</Token>);
+        tree = component.toJSON();
+        expect(tree).toMatchSnapshot();
+
+        component = renderer.create(<Token compact>Bibendum</Token>);
+        tree = component.toJSON();
+        expect(tree).toMatchSnapshot();
     });
 
     describe('Prop spreading', () => {

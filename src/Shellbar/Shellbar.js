@@ -121,11 +121,11 @@ class Shellbar extends Component {
         return (
             <div className={shellbarClasses}>
                 <div className='fd-shellbar__group fd-shellbar__group--product'>
-                    {logo && <a className='fd-shellbar__logo'>{logo}</a>}
+                    {logo && <span className='fd-shellbar__logo'>{logo}</span>}
                     {logoSAP && (
-                        <a className='fd-shellbar__logo'>
+                        <span className='fd-shellbar__logo'>
                             <img alt='SAP' src='//unpkg.com/fundamental-styles/dist/images/sap-logo.png' />
-                        </a>
+                        </span>
                     )}
                     {productTitle && !productMenu && <span className='fd-shellbar__title'>{productTitle}</span>}
                     {productMenu && (
@@ -143,10 +143,10 @@ class Shellbar extends Component {
                                                             onClick={item.callback}
                                                             url={item.url} >
                                                             {item.glyph && (
-                                                                <React.Fragment>
+                                                                <>
                                                                     <Icon glyph={item.glyph} size={item.size} />
                                                                         &nbsp;&nbsp;&nbsp;
-                                                                </React.Fragment>
+                                                                </>
                                                             )}
                                                             {item.name}
                                                         </Menu.Item>
@@ -157,11 +157,13 @@ class Shellbar extends Component {
                                     )
                                 }
                                 control={
-                                    <button className='fd-product-menu__control'>
+                                    <Button
+                                        className='fd-shellbar__button--menu fd-button--menu'
+                                        option='light'>
                                         <span className='fd-shellbar__title'>
                                             {productTitle}
                                         </span>
-                                    </button>
+                                    </Button>
                                 }
                                 disableStyles={disableStyles}
                                 noArrow
@@ -183,8 +185,11 @@ class Shellbar extends Component {
                     {searchInput && (
                         <div className='fd-shellbar__action fd-shellbar__action--desktop'>
                             <SearchInput
-                                className='fd-search-input'
+                                className='fd-shellbar__input-group'
                                 disableStyles={disableStyles}
+                                inputGroupProps={{ className: 'fd-shellbar__input-group__addon' }}
+                                inputGroupProps={{ className: 'fd-shellbar__input-group' }}
+                                inputProps={{ className: 'fd-shellbar__input-group__input' }}
                                 onEnter={searchInput.onSearch}
                                 placeholder={searchInput.placeholder}
                                 searchBtnProps={{ className: 'fd-shellbar__button' }}
@@ -207,6 +212,7 @@ class Shellbar extends Component {
                                                         {action.notificationCount > 0 && (
                                                             <Counter
                                                                 aria-label={localizedText.counterLabel}
+                                                                className='fd-shellbar__counter--notification'
                                                                 disableStyles={disableStyles}
                                                                 notification>
                                                                 {action.notificationCount}
@@ -378,23 +384,26 @@ class Shellbar extends Component {
                                         )
                                     }
                                     control={
-                                        profile.image ? (
-                                            <Identifier
-                                                backgroundImageUrl={profile.image}
-                                                disableStyles={disableStyles}
-                                                modifier='circle'
-                                                size='xs' />
-                                        ) : (
-                                            <Identifier color={profile.colorAccent}
-                                                disableStyles={disableStyles}
-                                                modifier='circle'
-                                                size='xs'>
-                                                {profile.initials}
-                                            </Identifier>
-                                        )
+                                        <div className='fd-button fd-shellbar__button fd-user-menu__control'>
+                                            {profile.image ? (
+                                                <Identifier
+                                                    backgroundImageUrl={profile.image}
+                                                    disableStyles={disableStyles}
+                                                    modifier='circle'
+                                                    size='xs' />
+                                            ) : (
+                                                <Identifier color={profile.colorAccent}
+                                                    disableStyles={disableStyles}
+                                                    modifier='circle'
+                                                    size='xs'>
+                                                    {profile.initials}
+                                                </Identifier>
+                                            )}
+                                        </div>
                                     }
                                     disableStyles={disableStyles}
-                                    placement='bottom-end'
+                                    noArrow
+                                    placement='right'
                                     popperProps={{ id: 'fd-shellbar-profile-popover' }} />
                             </div>
                         </div>

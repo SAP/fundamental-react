@@ -7,8 +7,7 @@ describe('<FormInput />', () => {
     const formInput = (
         <FormInput
             id='input-1'
-            placeholder='Field placeholder text'
-            state='warning' />
+            placeholder='Field placeholder text' />
     );
 
     test('create form input item', () => {
@@ -35,6 +34,54 @@ describe('<FormInput />', () => {
             expect(
                 element.getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
+        });
+    });
+
+    describe('Validation states', () => {
+        test('should render the correct snapshots', () => {
+            const formInputWarning = (
+                <FormInput
+                    id='input-2'
+                    placeholder='Field placeholder text'
+                    validationState={{ state: 'warning', text: 'test' }} />
+            );
+
+            let component = renderer.create(formInputWarning);
+            let tree = component.toJSON();
+            expect(tree).toMatchSnapshot();
+
+            const formInputError = (
+                <FormInput
+                    id='input-3'
+                    placeholder='Field placeholder text'
+                    validationState={{ state: 'error', text: 'test' }} />
+            );
+
+            component = renderer.create(formInputError);
+            tree = component.toJSON();
+            expect(tree).toMatchSnapshot();
+
+            const formInputSuccess = (
+                <FormInput
+                    id='input-4'
+                    placeholder='Field placeholder text'
+                    validationState={{ state: 'success', text: 'test' }} />
+            );
+
+            component = renderer.create(formInputSuccess);
+            tree = component.toJSON();
+            expect(tree).toMatchSnapshot();
+
+            const formInputInformation = (
+                <FormInput
+                    id='input-5'
+                    placeholder='Field placeholder text'
+                    validationState={{ state: 'information', text: 'test' }} />
+            );
+
+            component = renderer.create(formInputInformation);
+            tree = component.toJSON();
+            expect(tree).toMatchSnapshot();
         });
     });
 

@@ -9,6 +9,9 @@ const FormGroup = React.forwardRef(({ children, disableStyles, ...props }, ref) 
         }
     }, []);
 
+    // Note that we don't want to include the fd-form-group--inline
+    // class here because it is only for FormRadioGroup
+
     return (<div {...props} className='fd-form-group'
         ref={ref}>{children}</div>);
 });

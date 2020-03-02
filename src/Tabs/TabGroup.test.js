@@ -17,7 +17,6 @@ describe('<Tabs />', () => {
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam libero id corporis odit animi voluptat, Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus quia tempore eligendi tempora repellat officia rerum laudantium, veritatis officiis asperiores ipsum nam, distinctio, dolor provident culpa voluptatibus esse deserunt animi?
             </Tab>
             <Tab
-                disabled
                 id='3'
                 title='Tab 3'>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -40,7 +39,6 @@ describe('<Tabs />', () => {
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam libero id corporis odit animi voluptat, Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus quia tempore eligendi tempora repellat officia rerum laudantium, veritatis officiis asperiores ipsum nam, distinctio, dolor provident culpa voluptatibus esse deserunt animi?
             </Tab>
             <Tab
-                disabled
                 id='3'
                 title='Tab 3'>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.

@@ -1,7 +1,6 @@
 import FormInput from './FormInput';
 import FormItem from './FormItem';
 import FormLabel from './FormLabel';
-import FormMessage from './FormMessage';
 import FormSelect from './FormSelect';
 import FormSet from './FormSet';
 import FormTextarea from './FormTextarea';
@@ -16,8 +15,7 @@ describe('<FormSet />', () => {
                 <FormLabel forAttr='input-1'>Default Input</FormLabel>
                 <FormInput
                     id='input-1'
-                    placeholder='Field placeholder text'
-                    type='text' />
+                    placeholder='Field placeholder text' />
             </FormItem>
             <FormItem>
                 <FormLabel forAttr='input-1' required>
@@ -26,20 +24,13 @@ describe('<FormSet />', () => {
                 <FormInput
                     id='input-1'
                     placeholder='Field placeholder text'
-                    state='warning'
-                    type='text' />
+                    validationState={{ state: 'warning', text: 'test' }} />
                 <FormTextarea className='blue' id='textarea-1'>
                     Pellentesque metus lacus commodo eget justo ut rutrum varius nunc.
                 </FormTextarea>
                 <FormTextarea id='textarea-2'>
                     Pellentesque metus lacus commodo eget justo ut rutrum varius nunc.
                 </FormTextarea>
-                <FormMessage type='help'>
-                    Pellentesque metus lacus commodo eget justo ut rutrum varius nunc
-                </FormMessage>
-                <FormMessage className='blue'>
-                    Pellentesque metus lacus commodo eget justo ut rutrum varius nunc
-                </FormMessage>
                 <FormSelect id='select-1'>
                     <option value='1'>Duis malesuada odio volutpat elementum</option>
                     <option value='2'>Suspendisse ante ligula</option>

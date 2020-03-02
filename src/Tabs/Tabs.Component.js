@@ -21,7 +21,7 @@ export const TabsComponent = () => {
                     <Tab id='2' title='Tab 2'>
                         Numquam libero id corporis odit animi voluptat, Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus quia tempore eligendi tempora repellat officia rerum laudantium, veritatis officiis asperiores ipsum nam, distinctio, dolor provident culpa voluptatibus esse deserunt animi?
                     </Tab>
-                    <Tab disabled id='3'
+                    <Tab id='3'
                         title='Tab 3'>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     </Tab>

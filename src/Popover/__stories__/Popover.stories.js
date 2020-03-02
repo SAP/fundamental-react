@@ -4,6 +4,8 @@ import Popover from '../Popover';
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import {
+    boolean,
+    select,
     withKnobs
 } from '@storybook/addon-knobs';
 
@@ -20,12 +22,42 @@ const someMenu = (
 
 storiesOf('Components|Popover', module)
     .addDecorator(withKnobs)
-    .add('Default', () => (
+    .add('Dev', () => (
         <Popover
             body={someMenu}
             control={<Button glyph='navigation-up-arrow' option='light' />}
-            type='menu'
-            useArrowKeyNavigation />
+            disableEdgeDetection={boolean('disableEdgeDetection', false)}
+            disableKeyPressHandler={boolean('disableKeyPressHandler', false)}
+            disabled={boolean('disabled', false)}
+            noArrow={boolean('noArrow', false)}
+            placement={select('placement', {
+                'bottom-start': 'bottom-start',
+                'bottom': 'bottom',
+                'bottom-end': 'bottom-end',
+                'left-start': 'left-start',
+                'left': 'left',
+                'left-end': 'left-end',
+                'right-start': 'right-start',
+                'right': 'right',
+                'right-end': 'right-end',
+                'top-start': 'top-start',
+                'top': 'top',
+                'top-end': 'top-end'
+            })}
+            type={select('type', {
+                'dialog': 'dialog',
+                'grid': 'grid',
+                'listbox': 'listbox',
+                'menu': 'menu',
+                'tree': 'tree'
+            })}
+            useArrowKeyNavigation={boolean('useArrowKeyNavigation', false)}
+            widthSizingType={select('widthSizingType', {
+                'none': 'none',
+                'matchTarget': 'matchTarget',
+                'minTarget': 'minTarget',
+                'maxTarget': 'maxTarget'
+            })} />
     ))
     .add('Placement', () => (
         <>

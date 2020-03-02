@@ -102,6 +102,7 @@ class Popover extends Component {
             body,
             className,
             placement,
+            popperClassName,
             popperProps,
             widthSizingType,
             useArrowKeyNavigation,
@@ -154,6 +155,7 @@ class Popover extends Component {
                     onClickOutside={chain(this.handleOutsideClick, onClickOutside)}
                     onEscapeKey={chain(this.handleEscapeKey, onEscapeKey)}
                     placementTargetRef={this.controlRef}
+                    popperClassName={popperClassName}
                     popperPlacement={placement}
                     popperProps={{ ...popperProps, id }}
                     referenceClassName='fd-popover__control'
@@ -180,6 +182,7 @@ Popover.propTypes = {
     disableStyles: PropTypes.bool,
     noArrow: PropTypes.bool,
     placement: PropTypes.oneOf(POPPER_PLACEMENTS),
+    popperClassName: PropTypes.string,
     popperProps: PropTypes.object,
     type: PropTypes.oneOf(POPOVER_TYPES),
     useArrowKeyNavigation: PropTypes.bool,
@@ -202,6 +205,7 @@ Popover.propDescriptions = {
     disableKeyPressHandler: 'Set to **true** to remove onKeyPress handler and aria-* roles. Only do so if the control is a complex component such as a FormInput with Button.',
     noArrow: 'Set to **true** to render a popover without an arrow.',
     placement: 'Initial position of the `body` (overlay) related to the `control`.',
+    popperClassName: 'Additional classeNames to be spread to the overlay element.',
     popperProps: 'Additional props to be spread to the overlay element, supported by <a href="https://popper.js.org" target="_blank">popper.js</a>.',
     widthSizingType: POPPER_SIZING_TYPES_DESCRIPTION,
     onClickOutside: 'Callback for consumer clicking outside of popover body.',

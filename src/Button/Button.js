@@ -27,8 +27,8 @@ const Button = React.forwardRef(({
     }, []);
 
     const buttonClasses = classnames(
+        'fd-button',
         {
-            'fd-button': !option,
             [`fd-button--${option}`]: !!option,
             [`fd-button--${type}`]: !!type,
             'fd-button--compact': compact,

@@ -11,6 +11,7 @@ class Example extends React.Component {
             children,
             description,
             omitCodeSample,
+            spaceBetween,
             title
         } = this.props;
 
@@ -20,7 +21,7 @@ class Example extends React.Component {
             <React.Fragment>
                 <Heading level={3}>{title}</Heading>
                 {description && <Description>{description}</Description>}
-                <DocsTile centered={centered}>
+                <DocsTile centered={centered} spaceBetween={spaceBetween}>
                     {children}
                 </DocsTile>
                 {!omitCodeSample &&
@@ -44,7 +45,8 @@ Example.propTypes = {
     centered: PropTypes.bool,
     children: PropTypes.node,
     description: PropTypes.string,
-    omitCodeSample: PropTypes.bool
+    omitCodeSample: PropTypes.bool,
+    spaceBetween: PropTypes.bool
 };
 
 export default Example;

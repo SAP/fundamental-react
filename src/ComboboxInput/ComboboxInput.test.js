@@ -1,26 +1,30 @@
 import ComboboxInput from './ComboboxInput';
-import Menu from '../Menu/Menu';
+import List from '../List/List';
 import { mount } from 'enzyme';
 import React from 'react';
 import renderer from 'react-test-renderer';
 
 describe('<ComboboxInput />', () => {
-    const defaultMenu = (
-        <Menu>
-            <Menu.List>
-                <Menu.Item url='/'>Pear</Menu.Item>
-                <Menu.Item url='/'>Strawberry</Menu.Item>
-                <Menu.Item url='/'>Raspberry</Menu.Item>
-                <Menu.Item isLink url='/'>
-                    + New Item
-                </Menu.Item>
-            </Menu.List>
-        </Menu>
+    const defaultList = (
+        <List>
+            <List.Item>
+                <List.Text>List Item 1</List.Text>
+            </List.Item>
+            <List.Item>
+                <List.Text>List Item 2</List.Text>
+            </List.Item>
+            <List.Item>
+                <List.Text>List Item 3</List.Text>
+            </List.Item>
+            <List.Item>
+                <List.Text>List Item 4</List.Text>
+            </List.Item>
+        </List>
     );
 
     const defaultComboBoxInput = (
         <ComboboxInput
-            menu={defaultMenu}
+            list={defaultList}
             placeholder='Select Fruit' />
     );
 
@@ -28,7 +32,7 @@ describe('<ComboboxInput />', () => {
         <ComboboxInput
             className='blue'
             compact
-            menu={defaultMenu}
+            list={defaultList}
             placeholder='Select Fruit' />
     );
 
@@ -46,15 +50,15 @@ describe('<ComboboxInput />', () => {
 
     describe('Prop spreading', () => {
         test('should allow props to be spread to the ComboboxInput component', () => {
-            const element = mount(<ComboboxInput data-sample='Sample' menu={defaultMenu} />);
+            const element = mount(<ComboboxInput data-sample='Sample' list={defaultList} />);
 
             expect(
-                element.getDOMNode().attributes['data-sample'].value
+                element.find('.fd-input-group').getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
         });
 
         test('should allow props to be spread to the ComboboxInput component\'s Popover component', () => {
-            const element = mount(<ComboboxInput menu={defaultMenu} popoverProps={{ 'data-sample': 'Sample' }} />);
+            const element = mount(<ComboboxInput list={defaultList} popoverProps={{ 'data-sample': 'Sample' }} />);
 
             expect(
                 element.find('div.fd-popover').getDOMNode().attributes['data-sample'].value
@@ -62,7 +66,7 @@ describe('<ComboboxInput />', () => {
         });
 
         test('should allow props to be spread to the ComboboxInput component\'s input element', () => {
-            const element = mount(<ComboboxInput inputProps={{ 'data-sample': 'Sample' }} menu={defaultMenu} />);
+            const element = mount(<ComboboxInput inputProps={{ 'data-sample': 'Sample' }} list={defaultList} />);
 
             expect(
                 element.find('input').getDOMNode().attributes['data-sample'].value
@@ -70,7 +74,7 @@ describe('<ComboboxInput />', () => {
         });
 
         test('should allow props to be spread to the ComboboxInput component\'s button element', () => {
-            const element = mount(<ComboboxInput buttonProps={{ 'data-sample': 'Sample' }} menu={defaultMenu} />);
+            const element = mount(<ComboboxInput buttonProps={{ 'data-sample': 'Sample' }} list={defaultList} />);
 
             expect(
                 element.find('button.sap-icon--navigation-down-arrow').getDOMNode().attributes['data-sample'].value
@@ -84,9 +88,9 @@ describe('<ComboboxInput />', () => {
                 super(props);
                 ref = React.createRef();
             }
-            render = () => <ComboboxInput menu={defaultMenu} ref={ref} />;
+            render = () => <ComboboxInput list={defaultList} ref={ref} />;
         }
         mount(<Test />);
-        expect(ref.current.tagName).toEqual('DIV');
+        expect(ref.current.tagName).toEqual('BUTTON');
     });
 });

@@ -11,7 +11,11 @@ exports[`<Tabs /> create tabs component 1`] = `
     onClick={[Function]}
     role="tab"
   >
-    Tab 1
+    <span
+      className="fd-tabs__tag"
+    >
+      Tab 1
+    </span>
   </a>
 </li>
 `;
@@ -19,16 +23,20 @@ exports[`<Tabs /> create tabs component 1`] = `
 exports[`<Tabs /> create tabs component 2`] = `
 <li
   className="fd-tabs__item"
+  disabled={true}
 >
   <a
     aria-controls="3"
-    aria-disabled={true}
     className="fd-tabs__link"
-    href={null}
-    onClick={null}
+    href="#3"
+    onClick={[Function]}
     role="tab"
   >
-    Tab 3
+    <span
+      className="fd-tabs__tag"
+    >
+      Tab 3
+    </span>
   </a>
 </li>
 `;
@@ -43,6 +51,10 @@ exports[`<Tabs /> create tabs component 3`] = `
     href="#4"
     onClick={[Function]}
     role="tab"
-  />
+  >
+    <span
+      className="fd-tabs__tag"
+    />
+  </a>
 </li>
 `;

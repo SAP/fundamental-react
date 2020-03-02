@@ -14,12 +14,12 @@ import {
 const createProps = (overrides) => ({
     compact: boolean('compact', false),
     disabled: boolean('disabled', false),
-    state: select('Validation State', {
-        'default': null,
-        'valid': 'valid',
-        'invalid': 'invalid',
-        'information': 'information',
-        'warning': 'warning'
+    validationState: select('Validation State', {
+        'none': '',
+        'success': { state: 'success', text: 'placeholder text' },
+        'error': { state: 'error', text: 'placeholder text' },
+        'information': { state: 'information', text: 'placeholder text' },
+        'warning': { state: 'warning', text: 'placeholder text' }
     }),
     ...overrides
 });

@@ -1,4 +1,4 @@
-export const ALERT_TYPES = [
+export const MESSAGESTRIP_TYPES = [
     'warning',
     'error',
     'success',
@@ -41,6 +41,13 @@ export const BUTTON_TYPES = [
     'positive',
     'negative',
     'medium'
+];
+
+export const DIALOG_SIZES = [
+    's',
+    'm',
+    'l',
+    'xl'
 ];
 
 export const FORM_MESSAGE_TYPES = [
@@ -101,13 +108,6 @@ export const POPOVER_ALIGNMENTS = [
     'right'
 ];
 
-export const TOGGLE_SIZES = [
-    'xs',
-    's',
-    'm',
-    'l'
-];
-
 export const POPOVER_TYPES = [
     true,
     'dialog',
@@ -139,6 +139,15 @@ export const POPPER_SIZING_TYPES_DESCRIPTION = `<ul>
 <li>"minTarget" - right edge aligns with target unless Popover content is bigger</li>
 <li>"maxTarget" - right edge aligns with target unless Popover content is smaller</li>
 </ul>`;
+
+
+export const TAB_SIZES = [
+    's',
+    'm',
+    'l',
+    'xl',
+    'xxl'
+];
 
 export const GridSelector = {
     ROW: 'tr, [role="row"]',

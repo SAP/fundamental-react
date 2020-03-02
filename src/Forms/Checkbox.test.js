@@ -5,7 +5,7 @@ import renderer from 'react-test-renderer';
 
 describe('<Checkbox />', () => {
     const checkbox = (
-        <Checkbox value='Option 1' />
+        <Checkbox id='foo' value='Option 1' />
     );
 
     test('create checkbox', () => {
