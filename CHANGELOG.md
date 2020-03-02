@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.8.0-rc.27"></a>
+# [0.8.0-rc.27](https://github.com/SAP/fundamental-react/compare/v0.8.0-rc.26...v0.8.0-rc.27) (2020-03-02)
+
+
+### Bug Fixes
+
+* 773: Added visiblePageTotal prop to Pagination component ([#906](https://github.com/SAP/fundamental-react/issues/906)) ([4d73b9e](https://github.com/SAP/fundamental-react/commit/4d73b9e)), closes [feat#773](https://github.com/feat/issues/773)
+
+
+
 <a name="0.8.0-rc.26"></a>
 # [0.8.0-rc.26](https://github.com/SAP/fundamental-react/compare/v0.8.0-rc.25...v0.8.0-rc.26) (2020-02-24)
 
