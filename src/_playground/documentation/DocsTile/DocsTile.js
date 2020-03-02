@@ -25,7 +25,7 @@ class DocsTile extends Component {
     };
 
     render() {
-        const { centered, children } = this.props;
+        const { centered, spaceBetween, children } = this.props;
         const { hideBackground, showRTL } = this.state;
 
         const outerDivClasses = classnames('frDocs-Content__tile', {
@@ -33,7 +33,8 @@ class DocsTile extends Component {
         });
 
         const innerDivClasses = classnames('frDocs-Content__example', {
-            'frDocs-tile__centered': centered
+            'frDocs-tile__centered': centered,
+            'frDocs-tile__space-between': spaceBetween
         });
 
         return (
@@ -64,7 +65,8 @@ DocsTile.displayName = 'DocsTile';
 
 DocsTile.propTypes = {
     centered: PropTypes.bool,
-    children: PropTypes.node
+    children: PropTypes.node,
+    spaceBetween: PropTypes.bool
 };
 
 export default DocsTile;
