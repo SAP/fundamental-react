@@ -200,6 +200,9 @@ export class PopoverComponent extends React.Component {
                     title='Out Of Boundaries'>
                     <Button onClick={this.toggleDialog}>Show Dialog</Button>
                     <Dialog
+                        actions={[
+                            <Button>Close</Button>
+                        ]}
                         bodyProps={{
                             style: {
                                 width: '400px',

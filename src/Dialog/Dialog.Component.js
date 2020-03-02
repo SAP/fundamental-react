@@ -35,10 +35,10 @@ export class DialogComponent extends Component {
                         </Button>
                         <Dialog
                             actions={[
-                                (<Button onClick={() => this.toggleDialog('info')} option='light'>
+                                (<Button option='light'>
                                         No
                                 </Button>),
-                                (<Button onClick={() => this.toggleDialog('info')}>Yes</Button>)
+                                (<Button>Yes</Button>)
                             ]}
                             onClose={() => this.toggleDialog('info')}
                             show={this.state.info}
@@ -60,11 +60,12 @@ export class DialogComponent extends Component {
                         </Button>
                         <Dialog
                             actions={[
-                                (<Button onClick={() => this.toggleDialog('small')} option='light'>
+                                (<Button option='light'>
                                         No
                                 </Button>),
-                                (<Button onClick={() => this.toggleDialog('small')} >Yes</Button>)
+                                (<Button>Yes</Button>)
                             ]}
+                            onClose={() => this.toggleDialog('small')}
                             show={this.state.small}
                             size='s'
                             title='Small Dialog'>
@@ -78,11 +79,12 @@ export class DialogComponent extends Component {
                         </Button>
                         <Dialog
                             actions={[
-                                (<Button onClick={() => this.toggleDialog('medium')} option='light'>
+                                (<Button option='light'>
                                         No
                                 </Button>),
-                                (<Button onClick={() => this.toggleDialog('medium')} >Yes</Button>)
+                                (<Button>Yes</Button>)
                             ]}
+                            onClose={() => this.toggleDialog('medium')}
                             show={this.state.medium}
                             size='m'
                             title='Medium Dialog'>
@@ -96,11 +98,12 @@ export class DialogComponent extends Component {
                         </Button>
                         <Dialog
                             actions={[
-                                (<Button onClick={() => this.toggleDialog('large')} option='light'>
+                                (<Button option='light'>
                                         No
                                 </Button>),
-                                (<Button onClick={() => this.toggleDialog('large')} >Yes</Button>)
+                                (<Button>Yes</Button>)
                             ]}
+                            onClose={() => this.toggleDialog('large')}
                             show={this.state.large}
                             size='l'
                             title='Large Dialog'>
@@ -114,11 +117,12 @@ export class DialogComponent extends Component {
                         </Button>
                         <Dialog
                             actions={[
-                                (<Button onClick={() => this.toggleDialog('xl')} option='light'>
+                                (<Button option='light'>
                                         No
                                 </Button>),
-                                (<Button onClick={() => this.toggleDialog('xl')} >Yes</Button>)
+                                (<Button>Yes</Button>)
                             ]}
+                            onClose={() => this.toggleDialog('xl')}
                             show={this.state.xl}
                             size='xl'
                             title='XL Dialog'>
