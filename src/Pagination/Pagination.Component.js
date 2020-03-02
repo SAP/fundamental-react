@@ -89,6 +89,7 @@ export const PaginationComponent = () => {
                     onClick={handleClick}
                     visiblePageTotal={15} />
             </Example>
+
         </ComponentPage>
     );
 };
