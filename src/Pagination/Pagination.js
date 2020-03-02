@@ -26,6 +26,7 @@ class Pagination extends Component {
 
     // page directly clicked
     pageClicked = event => {
+        event.preventDefault();
         this.setState(
             {
                 selectedPage: +event.target.text
