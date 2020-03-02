@@ -30,7 +30,6 @@ class Calendar extends Component {
 
     componentDidMount = () => {
         if (!this.props.disableStyles) {
-            require('fundamental-styles/dist/fonts.css');
             require('fundamental-styles/dist/calendar.css');
         }
         this.gridManager = new GridManager(this.getGridOptions());

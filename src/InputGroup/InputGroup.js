@@ -11,7 +11,6 @@ class InputGroup extends Component {
 
     componentDidMount() {
         if (!this.props.disableStyles) {
-            require('fundamental-styles/dist/fonts.css');
             require('fundamental-styles/dist/input-group.css');
         }
     }
