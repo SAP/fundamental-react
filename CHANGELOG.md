@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.8.0-rc.31"></a>
+# [0.8.0-rc.31](https://github.com/SAP/fundamental-react/compare/v0.8.0-rc.30...v0.8.0-rc.31) (2020-03-02)
+
+
+### Bug Fixes
+
+* Pagination: prevent Default action on link click ([#907](https://github.com/SAP/fundamental-react/issues/907)) ([484f23e](https://github.com/SAP/fundamental-react/commit/484f23e)), closes [feat#773](https://github.com/feat/issues/773) [#762](https://github.com/SAP/fundamental-react/issues/762)
+
+
+
 <a name="0.8.0-rc.30"></a>
 # [0.8.0-rc.30](https://github.com/SAP/fundamental-react/compare/v0.8.0-rc.29...v0.8.0-rc.30) (2020-03-02)
 
