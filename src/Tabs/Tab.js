@@ -39,7 +39,7 @@ const Tab = React.forwardRef(({ title, glyph, id, selected, onClick,
                 href={`#${id}`}
                 onClick={(event) => onClick(event, index)}
                 role='tab'>
-                {title}
+                <span className='fd-tabs__tag'>{title}</span>
             </a>
         </li>
     );

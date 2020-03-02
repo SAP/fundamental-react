@@ -1,3 +1,4 @@
+import chain from 'chain-function';
 import classnames from 'classnames';
 import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import { DIALOG_SIZES } from '../utils/constants';
@@ -138,7 +139,7 @@ class Dialog extends Component {
                             <div className='fd-bar__right'>
                                 {React.Children.toArray(actions).map((child, index) => (
                                     <div className='fd-bar__element' key={index}>
-                                        {React.cloneElement(child, { className: 'fd-dialog__decisive-button' })}
+                                        {React.cloneElement(child, { className: 'fd-dialog__decisive-button', onClick: chain(this.handleCloseClick, child.props?.onClick) })}
                                     </div>
                                 ))}
                             </div>
@@ -176,6 +177,7 @@ Dialog.propTypes = {
 
 Dialog.defaultProps = {
     headingLevel: 3,
+    size: 'l',
     onClose: () => { }
 };
 

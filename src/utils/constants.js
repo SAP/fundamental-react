@@ -140,6 +140,15 @@ export const POPPER_SIZING_TYPES_DESCRIPTION = `<ul>
 <li>"maxTarget" - right edge aligns with target unless Popover content is smaller</li>
 </ul>`;
 
+
+export const TAB_SIZES = [
+    's',
+    'm',
+    'l',
+    'xl',
+    'xxl'
+];
+
 export const GridSelector = {
     ROW: 'tr, [role="row"]',
     HEADER: 'th',

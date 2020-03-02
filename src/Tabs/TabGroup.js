@@ -1,8 +1,8 @@
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
+import { TAB_SIZES } from '../utils/constants';
 import { TabContent } from './_TabContent';
 import React, { Component } from 'react';
-
 class TabGroup extends Component {
     constructor(props) {
         super(props);
@@ -76,6 +76,7 @@ class TabGroup extends Component {
             className,
             disableStyles,
             selectedIndex,
+            size,
             tabGroupProps,
             onTabClick,
             ...rest } = this.props;
@@ -83,6 +84,7 @@ class TabGroup extends Component {
         // css classes to use for tab group
         const tabGroupClasses = classnames(
             'fd-tabs',
+            { [`fd-tabs--${size}`]: size },
             className
         );
         return (
@@ -101,6 +103,7 @@ TabGroup.displayName = 'TabGroup';
 
 TabGroup.defaultProps = {
     selectedIndex: 0,
+    size: 'l',
     onTabClick: () => { }
 };
 
@@ -109,6 +112,7 @@ TabGroup.propTypes = {
     className: PropTypes.string,
     disableStyles: PropTypes.bool,
     selectedIndex: PropTypes.number,
+    size: PropTypes.oneOf(TAB_SIZES),
     tabGroupProps: PropTypes.object,
     onTabClick: PropTypes.func
 };
