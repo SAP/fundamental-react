@@ -438,7 +438,7 @@ class Shellbar extends Component {
                                             </ul>
                                         </div>
                                     }
-                                    control={<Button className='fd-product-switch__control'
+                                    control={<Button className='fd-product-switch__control fd-shellbar__button'
                                         disableStyles={disableStyles}
                                         glyph='grid' />}
                                     disableEdgeDetection
