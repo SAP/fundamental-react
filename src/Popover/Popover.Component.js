@@ -2,7 +2,7 @@ import 'fundamental-styles/dist/layout.css'; //needed for layout container class
 import path from 'path';
 import { POPPER_SIZING_TYPES } from '../utils/constants';
 import React from 'react';
-import { Button, Icon, Identifier, Image, Menu, Modal, Popover } from '../';
+import { Button, Dialog, Icon, Identifier, Image, Menu, Popover } from '../';
 import { ComponentPage, Example } from '../_playground';
 
 
@@ -33,13 +33,13 @@ export class PopoverComponent extends React.Component {
         super(props);
 
         this.state = {
-            showModal: false
+            showDialog: false
         };
     }
 
-    toggleModal = () => {
+    toggleDialog = () => {
         this.setState(prevState => ({
-            showModal: !prevState.showModal
+            showDialog: !prevState.showDialog
         }));
     };
 
@@ -59,90 +59,77 @@ export class PopoverComponent extends React.Component {
                     description={`There are four base placements: \`top\`, \`bottom\`, \`left\` and \`right\`.
                         Those can be used alone or with \`-start\` or \`-end\` modifiers.`}
                     title='Placement'>
-                    <div>
-                        <div className='fd-container'>
-                            <div className='fd-col--shift-3 fd-col--2 fd-has-text-align-center'>
-                                <Popover
-                                    body={bodyContent}
-                                    control={<Button glyph='navigation-up-arrow' option='light' />}
-                                    placement='top-start' />
-                            </div>
-                            <div className='fd-col--2 fd-has-text-align-center'>
-                                <Popover
-                                    body={bodyContent}
-                                    control={<Button glyph='navigation-up-arrow' option='light' />}
-                                    placement='top' />
-                            </div>
-                            <div className='fd-col--2 fd-has-text-align-center'>
-                                <Popover
-                                    body={bodyContent}
-                                    control={<Button glyph='navigation-up-arrow' option='light' />}
-                                    placement='top-end' />
-                            </div>
+                    <>
+                        <div className='frDocs-tile__space-between'>
+                            <Popover
+                                body={bodyContent}
+                                control={<Button glyph='navigation-up-arrow' option='light' />}
+                                placement='top-start' />
+
+                            <Popover
+                                body={bodyContent}
+                                control={<Button glyph='navigation-up-arrow' option='light' />}
+                                placement='top' />
+
+                            <Popover
+                                body={bodyContent}
+                                control={<Button glyph='navigation-up-arrow' option='light' />}
+                                placement='top-end' />
                         </div>
-                        <div className='fd-container'>
-                            <div className='fd-col--shift-2 fd-col--2'>
-                                <Popover
-                                    body={bodyContent}
-                                    control={<Button glyph='navigation-left-arrow' option='light' />}
-                                    placement='left-start' />
-                            </div>
-                            <div className='fd-col--shift-4 fd-col--2 fd-has-text-align-right'>
-                                <Popover
-                                    body={bodyContent}
-                                    control={<Button glyph='navigation-right-arrow' option='light' />}
-                                    placement='right-start' />
-                            </div>
+                        <div className='frDocs-tile__break' />
+                        <div className='frDocs-tile__space-between'>
+                            <Popover
+                                body={bodyContent}
+                                control={<Button glyph='navigation-left-arrow' option='light' />}
+                                placement='left-start' />
+                            <Popover
+                                body={bodyContent}
+                                control={<Button glyph='navigation-right-arrow' option='light' />}
+                                placement='right-start' />
                         </div>
-                        <div className='fd-container'>
-                            <div className='fd-col--shift-2 fd-col--2'>
-                                <Popover
-                                    body={bodyContent}
-                                    control={<Button glyph='navigation-left-arrow' option='light' />}
-                                    placement='left' />
-                            </div>
-                            <div className='fd-col--shift-4 fd-col--2 fd-has-text-align-right'>
-                                <Popover
-                                    body={bodyContent}
-                                    control={<Button glyph='navigation-right-arrow' option='light' />}
-                                    placement='right' />
-                            </div>
+                        <div className='frDocs-tile__break' />
+                        <div className='frDocs-tile__space-between'>
+                            <Popover
+                                body={bodyContent}
+                                control={<Button glyph='navigation-left-arrow' option='light' />}
+                                placement='left' />
+
+                            <Popover
+                                body={bodyContent}
+                                control={<Button glyph='navigation-right-arrow' option='light' />}
+                                placement='right' />
                         </div>
-                        <div className='fd-container'>
-                            <div className='fd-col--shift-2 fd-col--2'>
-                                <Popover
-                                    body={bodyContent}
-                                    control={<Button glyph='navigation-left-arrow' option='light' />}
-                                    placement='left-end' />
-                            </div>
-                            <div className='fd-col--shift-4 fd-col--2 fd-has-text-align-right'>
-                                <Popover
-                                    body={bodyContent}
-                                    control={<Button glyph='navigation-right-arrow' option='light' />}
-                                    placement='right-end' />
-                            </div>
+                        <div className='frDocs-tile__break' />
+                        <div className='frDocs-tile__space-between'>
+                            <Popover
+                                body={bodyContent}
+                                control={<Button glyph='navigation-left-arrow' option='light' />}
+                                placement='left-end' />
+
+                            <Popover
+                                body={bodyContent}
+                                control={<Button glyph='navigation-right-arrow' option='light' />}
+                                placement='right-end' />
                         </div>
-                        <div className='fd-container'>
-                            <div className='fd-col--shift-3 fd-col--2 fd-has-text-align-center'>
-                                <Popover
-                                    body={bodyContent}
-                                    control={<Button glyph='navigation-down-arrow' option='light' />}
-                                    placement='bottom-start' />
-                            </div>
-                            <div className='fd-col--2 fd-has-text-align-center'>
-                                <Popover
-                                    body={bodyContent}
-                                    control={<Button glyph='navigation-down-arrow' option='light' />}
-                                    placement='bottom' />
-                            </div>
-                            <div className='fd-col--2 fd-has-text-align-center'>
-                                <Popover
-                                    body={bodyContent}
-                                    control={<Button glyph='navigation-down-arrow' option='light' />}
-                                    placement='bottom-end' />
-                            </div>
+                        <div className='frDocs-tile__break' />
+                        <div className='frDocs-tile__space-between'>
+                            <Popover
+                                body={bodyContent}
+                                control={<Button glyph='navigation-down-arrow' option='light' />}
+                                placement='bottom-start' />
+
+
+                            <Popover
+                                body={bodyContent}
+                                control={<Button glyph='navigation-down-arrow' option='light' />}
+                                placement='bottom' />
+
+                            <Popover
+                                body={bodyContent}
+                                control={<Button glyph='navigation-down-arrow' option='light' />}
+                                placement='bottom-end' />
                         </div>
-                    </div>
+                    </>
                 </Example>
 
                 <Example
@@ -211,8 +198,11 @@ export class PopoverComponent extends React.Component {
                         element must be tracked because if it overflows from its boundaries, the overlay
                         will be hidden as well.`}
                     title='Out Of Boundaries'>
-                    <Button onClick={this.toggleModal}>Show Modal</Button>
-                    <Modal
+                    <Button onClick={this.toggleDialog}>Show Dialog</Button>
+                    <Dialog
+                        actions={[
+                            <Button>Close</Button>
+                        ]}
                         bodyProps={{
                             style: {
                                 width: '400px',
@@ -221,10 +211,10 @@ export class PopoverComponent extends React.Component {
                                 overflowY: 'auto'
                             }
                         }}
-                        onClose={this.toggleModal}
-                        show={this.state.showModal}
+                        onClose={this.toggleDialog}
+                        show={this.state.showDialog}
                         title='Overflow Example'>
-                        <p>Click the icon to show the popover and then scroll within the modal body...</p>
+                        <p>Click the icon to show the popover and then scroll within the dialog body...</p>
                         <br />
                         <br />
                         <Popover
@@ -245,7 +235,7 @@ export class PopoverComponent extends React.Component {
                         <br />
                         <br />
                         <br />
-                    </Modal>
+                    </Dialog>
                 </Example>
 
             </ComponentPage>

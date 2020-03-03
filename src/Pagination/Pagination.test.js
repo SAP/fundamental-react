@@ -188,7 +188,7 @@ describe('<Pagination />', () => {
         wrapper
             .find('a.fd-pagination__link')
             .at(2)
-            .simulate('click', { target: { text: '4' } });
+            .simulate('click', { target: { text: '4' }, preventDefault: () => {} });
         expect(wrapper.state(['selectedPage'])).toEqual(4);
     });
 

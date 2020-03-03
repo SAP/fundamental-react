@@ -2,7 +2,15 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React, { useEffect } from 'react';
 
-const Token = React.forwardRef(({ children, className, disableStyles, ...props }, ref) => {
+const Token = React.forwardRef(({
+    children,
+    className,
+    compact,
+    disableStyles,
+    onClick,
+    readOnly,
+    ...props
+}, ref) => {
 
     useEffect(() => {
         if (!disableStyles) {
@@ -14,6 +22,10 @@ const Token = React.forwardRef(({ children, className, disableStyles, ...props }
 
     const tokenClasses = classnames(
         'fd-token',
+        {
+            'fd-token--readonly': readOnly,
+            'fd-token--compact': compact
+        },
         className
     );
 
@@ -22,8 +34,13 @@ const Token = React.forwardRef(({ children, className, disableStyles, ...props }
             {...props}
             className={tokenClasses}
             ref={ref}
-            role='button'>
-            {children}
+            role='button'
+            tabIndex='0'>
+            <span className='fd-token__text'>{children}</span>
+            <button
+                className='fd-token__close'
+                onClick={onClick}
+                tabIndex='-1' />
         </span>
     );
 });
@@ -33,7 +50,14 @@ Token.displayName = 'Token';
 Token.propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,
-    disableStyles: PropTypes.bool
+    compact: PropTypes.bool,
+    disableStyles: PropTypes.bool,
+    readOnly: PropTypes.bool,
+    onClick: PropTypes.func
+};
+
+Token.defaultProps = {
+    onClick: () => {}
 };
 
 export default Token;

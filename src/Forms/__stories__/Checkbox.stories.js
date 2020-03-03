@@ -28,7 +28,13 @@ storiesOf('Components|Checkbox', module)
         <Checkbox {...createProps()}>Text Option</Checkbox>
     ))
     .add('indeterminate', () => (
-        <Checkbox {...createProps()} indeterminate>Text Option</Checkbox>
+        <Checkbox indeterminate>Text Option</Checkbox>
+    ))
+    .add('disabled', () => (
+        <Checkbox disabled>Text Option</Checkbox>
+    ))
+    .add('compact', () => (
+        <Checkbox compact>Text Option</Checkbox>
     ))
     .add('disable styles', () => (
         <Checkbox {...createProps()} disableStyles>Text Option</Checkbox>

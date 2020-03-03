@@ -5,7 +5,7 @@ const ButtonGroup = React.forwardRef(({ children, disableStyles, ...props }, ref
 
     useEffect(() => {
         if (!disableStyles) {
-            require('fundamental-styles/dist/button-group.css');
+            require('fundamental-styles/dist/segmented-button.css');
         }
     }, []);
 
@@ -13,7 +13,7 @@ const ButtonGroup = React.forwardRef(({ children, disableStyles, ...props }, ref
         <div
             {...props}
             aria-label='Group label'
-            className='fd-button-group'
+            className='fd-segmented-button'
             ref={ref}
             role='group'>
             {children}

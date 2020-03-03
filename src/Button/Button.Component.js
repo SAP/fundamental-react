@@ -11,7 +11,7 @@ export const ButtonComponent = () => {
     return (
         <ComponentPage
             description={`A **Button** allows users to perform an action. The priority of buttons within a page should be considered.
-                For instance, only use the main button once within a page or modal. Color is also important. For
+                For instance, only use the main button once within a page or dialog. Color is also important. For
                 instance, the most important button has a blue background where as a red button should only be used if
                 the action it performs is potentially destructive.`}
             sourceModulePath={path.join(__dirname, './Button')}

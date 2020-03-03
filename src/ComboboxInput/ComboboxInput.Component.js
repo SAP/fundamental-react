@@ -1,6 +1,6 @@
 import path from 'path';
 import React from 'react';
-import { ComboboxInput, Menu } from '../';
+import { ComboboxInput, List } from '../';
 import { ComponentPage, Example } from '../_playground';
 
 export const ComboboxInputComponent = () => {
@@ -13,17 +13,21 @@ export const ComboboxInputComponent = () => {
                 title='Combobox Input'>
                 <div>
                     <ComboboxInput
-                        menu={
-                            <Menu>
-                                <Menu.List>
-                                    <Menu.Item url='#'>Pear</Menu.Item>
-                                    <Menu.Item url='#'>Strawberry</Menu.Item>
-                                    <Menu.Item url='#'>Raspberry</Menu.Item>
-                                    <Menu.Item isLink url='#'>
-                                        + New Item
-                                    </Menu.Item>
-                                </Menu.List>
-                            </Menu>
+                        list={
+                            <List>
+                                <List.Item>
+                                    <List.Text>List Item 1</List.Text>
+                                </List.Item>
+                                <List.Item>
+                                    <List.Text>List Item 2</List.Text>
+                                </List.Item>
+                                <List.Item>
+                                    <List.Text>List Item 3</List.Text>
+                                </List.Item>
+                                <List.Item>
+                                    <List.Text>List Item 4</List.Text>
+                                </List.Item>
+                            </List>
                         }
                         placeholder='Select Fruit' />
 
@@ -31,17 +35,21 @@ export const ComboboxInputComponent = () => {
 
                     <ComboboxInput
                         compact
-                        menu={
-                            <Menu>
-                                <Menu.List>
-                                    <Menu.Item url='#'>Pear</Menu.Item>
-                                    <Menu.Item url='#'>Strawberry</Menu.Item>
-                                    <Menu.Item url='#'>Raspberry</Menu.Item>
-                                    <Menu.Item isLink url='#'>
-                                        + New Item
-                                    </Menu.Item>
-                                </Menu.List>
-                            </Menu>
+                        list={
+                            <List>
+                                <List.Item>
+                                    <List.Text>List Item 1</List.Text>
+                                </List.Item>
+                                <List.Item>
+                                    <List.Text>List Item 2</List.Text>
+                                </List.Item>
+                                <List.Item>
+                                    <List.Text>List Item 3</List.Text>
+                                </List.Item>
+                                <List.Item>
+                                    <List.Text>List Item 4</List.Text>
+                                </List.Item>
+                            </List>
                         }
                         placeholder='Select Fruit' />
                 </div>

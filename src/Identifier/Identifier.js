@@ -69,7 +69,7 @@ Identifier.propDescriptions = {
     backgroundImageUrl: 'Image URL.',
     color: 'Applies a background color.',
     label: 'Localized text for label.',
-    role: 'Applies an aria-role. Set to button if Identifier opens a Popover or Modal.',
+    role: 'Applies an aria-role. Set to button if Identifier opens a Popover or Dialog.',
     size: 'Size of the image. These sizes are available: **xxs** (extra extra small) - 20px, **xs** (extra small) - 28px, **s** (small) - 32px, **m** (medium) - 48px, **l** (large) - 64px, **xl** (extra lagre) - 88px, and **xxl** (extra extra large). Default matches the base font size (14px).'
 };
 

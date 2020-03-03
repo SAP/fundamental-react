@@ -10,11 +10,11 @@ exports[`<FormFieldset /> create form field set 1`] = `
     Radio buttons
   </legend>
   <div
-    className="fd-form-item"
-    onChange={[Function]}
+    className="fd-form-group blue"
   >
-    <label
-      className="fd-form-label"
+    <div
+      className="fd-form-item"
+      onChange={[Function]}
     >
       <input
         className="fd-radio"
@@ -23,15 +23,16 @@ exports[`<FormFieldset /> create form field set 1`] = `
         type="radio"
         value="radio-1"
       />
-      Option 1
-    </label>
-  </div>
-  <div
-    className="fd-form-item"
-    onChange={[Function]}
-  >
-    <label
-      className="fd-form-label"
+      <label
+        className="fd-form-label fd-radio__label"
+        htmlFor="radio-1"
+      >
+        Option 1
+      </label>
+    </div>
+    <div
+      className="fd-form-item"
+      onChange={[Function]}
     >
       <input
         checked={true}
@@ -41,15 +42,16 @@ exports[`<FormFieldset /> create form field set 1`] = `
         type="radio"
         value="radio-2"
       />
-      Option 2
-    </label>
-  </div>
-  <div
-    className="fd-form-item"
-    onChange={[Function]}
-  >
-    <label
-      className="fd-form-label"
+      <label
+        className="fd-form-label fd-radio__label"
+        htmlFor="radio-2"
+      >
+        Option 2
+      </label>
+    </div>
+    <div
+      className="fd-form-item"
+      onChange={[Function]}
     >
       <input
         className="fd-radio"
@@ -58,19 +60,24 @@ exports[`<FormFieldset /> create form field set 1`] = `
         type="radio"
         value="radio-3"
       />
-      Option 3
-    </label>
+      <label
+        className="fd-form-label fd-radio__label"
+        htmlFor="radio-3"
+      >
+        Option 3
+      </label>
+    </div>
   </div>
   <legend
     className="fd-fieldset__legend"
     legendText="Radio buttons disabled"
   />
   <div
-    className="fd-form-item fd-form-item--inline"
-    onChange={[Function]}
+    className="fd-form-group fd-form-group--inline blue"
   >
-    <label
-      className="fd-form-label is-disabled"
+    <div
+      className="fd-form-item fd-form-item--inline"
+      onChange={[Function]}
     >
       <input
         checked={true}
@@ -81,15 +88,16 @@ exports[`<FormFieldset /> create form field set 1`] = `
         type="radio"
         value="radio-4"
       />
-      Option 1
-    </label>
-  </div>
-  <div
-    className="fd-form-item fd-form-item--inline"
-    onChange={[Function]}
-  >
-    <label
-      className="fd-form-label is-disabled"
+      <label
+        className="fd-form-label is-disabled fd-radio__label"
+        htmlFor="radio-4"
+      >
+        Option 1
+      </label>
+    </div>
+    <div
+      className="fd-form-item fd-form-item--inline"
+      onChange={[Function]}
     >
       <input
         className="fd-radio"
@@ -99,15 +107,16 @@ exports[`<FormFieldset /> create form field set 1`] = `
         type="radio"
         value="radio-5"
       />
-      Option 2
-    </label>
-  </div>
-  <div
-    className="fd-form-item fd-form-item--inline"
-    onChange={[Function]}
-  >
-    <label
-      className="fd-form-label is-disabled"
+      <label
+        className="fd-form-label is-disabled fd-radio__label"
+        htmlFor="radio-5"
+      >
+        Option 2
+      </label>
+    </div>
+    <div
+      className="fd-form-item fd-form-item--inline"
+      onChange={[Function]}
     >
       <input
         className="fd-radio"
@@ -117,19 +126,24 @@ exports[`<FormFieldset /> create form field set 1`] = `
         type="radio"
         value="radio-6"
       />
-      Option 3
-    </label>
+      <label
+        className="fd-form-label is-disabled fd-radio__label"
+        htmlFor="radio-6"
+      >
+        Option 3
+      </label>
+    </div>
   </div>
   <legend
     className="fd-fieldset__legend"
     legendText="Inline Radio buttons"
   />
   <div
-    className="fd-form-item fd-form-item--inline"
-    onChange={[Function]}
+    className="fd-form-group fd-form-group--inline blue"
   >
-    <label
-      className="fd-form-label"
+    <div
+      className="fd-form-item fd-form-item--inline"
+      onChange={[Function]}
     >
       <input
         className="fd-radio"
@@ -138,15 +152,16 @@ exports[`<FormFieldset /> create form field set 1`] = `
         type="radio"
         value="radio-7"
       />
-      Option 1
-    </label>
-  </div>
-  <div
-    className="fd-form-item fd-form-item--inline"
-    onChange={[Function]}
-  >
-    <label
-      className="fd-form-label"
+      <label
+        className="fd-form-label fd-radio__label"
+        htmlFor="radio-7"
+      >
+        Option 1
+      </label>
+    </div>
+    <div
+      className="fd-form-item fd-form-item--inline"
+      onChange={[Function]}
     >
       <input
         className="fd-radio"
@@ -155,15 +170,16 @@ exports[`<FormFieldset /> create form field set 1`] = `
         type="radio"
         value="radio-8"
       />
-      Option 2
-    </label>
-  </div>
-  <div
-    className="fd-form-item fd-form-item--inline"
-    onChange={[Function]}
-  >
-    <label
-      className="fd-form-label"
+      <label
+        className="fd-form-label fd-radio__label"
+        htmlFor="radio-8"
+      >
+        Option 2
+      </label>
+    </div>
+    <div
+      className="fd-form-item fd-form-item--inline"
+      onChange={[Function]}
     >
       <input
         checked={true}
@@ -173,15 +189,20 @@ exports[`<FormFieldset /> create form field set 1`] = `
         type="radio"
         value="radio-9"
       />
-      Option 3
-    </label>
+      <label
+        className="fd-form-label fd-radio__label"
+        htmlFor="radio-9"
+      >
+        Option 3
+      </label>
+    </div>
   </div>
   <div
-    className="fd-form-item fd-form-item--inline"
-    onChange={[Function]}
+    className="fd-form-group fd-form-group--inline blue"
   >
-    <label
-      className="fd-form-label is-disabled"
+    <div
+      className="fd-form-item fd-form-item--inline"
+      onChange={[Function]}
     >
       <input
         className="fd-radio"
@@ -191,15 +212,16 @@ exports[`<FormFieldset /> create form field set 1`] = `
         type="radio"
         value="radio-7"
       />
-      Option 1
-    </label>
-  </div>
-  <div
-    className="fd-form-item fd-form-item--inline"
-    onChange={[Function]}
-  >
-    <label
-      className="fd-form-label is-disabled"
+      <label
+        className="fd-form-label is-disabled fd-radio__label"
+        htmlFor="radio-7"
+      >
+        Option 1
+      </label>
+    </div>
+    <div
+      className="fd-form-item fd-form-item--inline"
+      onChange={[Function]}
     >
       <input
         className="fd-radio"
@@ -209,15 +231,16 @@ exports[`<FormFieldset /> create form field set 1`] = `
         type="radio"
         value="radio-8"
       />
-      Option 2
-    </label>
-  </div>
-  <div
-    className="fd-form-item fd-form-item--inline"
-    onChange={[Function]}
-  >
-    <label
-      className="fd-form-label is-disabled"
+      <label
+        className="fd-form-label is-disabled fd-radio__label"
+        htmlFor="radio-8"
+      >
+        Option 2
+      </label>
+    </div>
+    <div
+      className="fd-form-item fd-form-item--inline"
+      onChange={[Function]}
     >
       <input
         checked={true}
@@ -228,8 +251,13 @@ exports[`<FormFieldset /> create form field set 1`] = `
         type="radio"
         value="radio-9"
       />
-      Option 3
-    </label>
+      <label
+        className="fd-form-label is-disabled fd-radio__label"
+        htmlFor="radio-9"
+      >
+        Option 3
+      </label>
+    </div>
   </div>
   <legend
     className="fd-fieldset__legend"
@@ -265,11 +293,11 @@ exports[`<FormFieldset /> create form field set 2`] = `
     Radio buttons
   </legend>
   <div
-    className="fd-form-item"
-    onChange={[Function]}
+    className="fd-form-group blue"
   >
-    <label
-      className="fd-form-label"
+    <div
+      className="fd-form-item"
+      onChange={[Function]}
     >
       <input
         className="fd-radio"
@@ -278,15 +306,16 @@ exports[`<FormFieldset /> create form field set 2`] = `
         type="radio"
         value="radio-1"
       />
-      Option 1
-    </label>
-  </div>
-  <div
-    className="fd-form-item"
-    onChange={[Function]}
-  >
-    <label
-      className="fd-form-label"
+      <label
+        className="fd-form-label fd-radio__label"
+        htmlFor="radio-1"
+      >
+        Option 1
+      </label>
+    </div>
+    <div
+      className="fd-form-item"
+      onChange={[Function]}
     >
       <input
         checked={true}
@@ -296,15 +325,16 @@ exports[`<FormFieldset /> create form field set 2`] = `
         type="radio"
         value="radio-2"
       />
-      Option 2
-    </label>
-  </div>
-  <div
-    className="fd-form-item"
-    onChange={[Function]}
-  >
-    <label
-      className="fd-form-label"
+      <label
+        className="fd-form-label fd-radio__label"
+        htmlFor="radio-2"
+      >
+        Option 2
+      </label>
+    </div>
+    <div
+      className="fd-form-item"
+      onChange={[Function]}
     >
       <input
         className="fd-radio"
@@ -313,8 +343,13 @@ exports[`<FormFieldset /> create form field set 2`] = `
         type="radio"
         value="radio-3"
       />
-      Option 3
-    </label>
+      <label
+        className="fd-form-label fd-radio__label"
+        htmlFor="radio-3"
+      >
+        Option 3
+      </label>
+    </div>
   </div>
 </fieldset>
 `;

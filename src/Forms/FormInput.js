@@ -1,10 +1,10 @@
 import classnames from 'classnames';
-import { FORM_STATES } from '../utils/constants';
+import { FORM_MESSAGE_TYPES } from '../utils/constants';
+import FormValidationOverlay from './_FormValidationOverlay';
 import PropTypes from 'prop-types';
 import React, { useEffect } from 'react';
 
-const FormInput = React.forwardRef(({ state, className, compact, disabled, id, name, placeholder, readOnly, type, value, disableStyles, ...props }, ref) => {
-
+const FormInput = React.forwardRef(({ className, compact, disabled, id, name, placeholder, readOnly, type, value, validationState, disableStyles, ...props }, ref) => {
     useEffect(() => {
         if (!disableStyles) {
             require('fundamental-styles/dist/fonts.css');
@@ -12,17 +12,16 @@ const FormInput = React.forwardRef(({ state, className, compact, disabled, id, n
         }
     }, []);
 
-
     const formInputClasses = classnames(
         'fd-input',
         {
             'fd-input--compact': !!compact,
-            [`is-${state}`]: state
+            [`is-${validationState?.state}`]: validationState?.state
         },
         className
     );
 
-    return (
+    const formInput = (
         <input
             {...props}
             className={formInputClasses}
@@ -34,6 +33,16 @@ const FormInput = React.forwardRef(({ state, className, compact, disabled, id, n
             ref={ref}
             type={type}
             value={value} />
+    );
+
+    return (
+        validationState ? (
+            <FormValidationOverlay
+                control={formInput}
+                id={id}
+                validationState={validationState} />
+        ) :
+            formInput
     );
 });
 
@@ -48,8 +57,11 @@ FormInput.propTypes = {
     name: PropTypes.string,
     placeholder: PropTypes.string,
     readOnly: PropTypes.bool,
-    state: PropTypes.oneOf(FORM_STATES),
     type: PropTypes.string,
+    validationState: PropTypes.shape({
+        state: PropTypes.oneOf(FORM_MESSAGE_TYPES),
+        text: PropTypes.string
+    }),
     value: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
 };
 
@@ -59,7 +71,6 @@ FormInput.defaultProps = {
 
 FormInput.propDescriptions = {
     name: 'Value for the `name` attribute on the input.',
-    state: 'Sets the state of the input. Can be left empty for default styles.',
     type: 'Value for the `type` attribute on the input.',
     value: 'Value for the `value` attribute on the input.'
 };

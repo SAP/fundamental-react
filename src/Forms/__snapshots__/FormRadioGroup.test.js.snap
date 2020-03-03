@@ -1,58 +1,63 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<FormRadioGroup /> create form radio group 1`] = `
-Array [
+<div
+  className="fd-form-group blue"
+>
   <div
     className="fd-form-item"
     onChange={[Function]}
   >
+    <input
+      className="fd-radio"
+      id="radio-1"
+      name="radio-group-5"
+      type="radio"
+      value="radio-1"
+    />
     <label
-      className="fd-form-label"
+      className="fd-form-label fd-radio__label"
+      htmlFor="radio-1"
     >
-      <input
-        className="fd-radio"
-        id="radio-1"
-        name="radio-group-5"
-        type="radio"
-        value="radio-1"
-      />
       Option 1
     </label>
-  </div>,
+  </div>
   <div
     className="fd-form-item"
     onChange={[Function]}
   >
+    <input
+      checked={true}
+      className="fd-radio"
+      id="radio-2"
+      name="radio-group-5"
+      type="radio"
+      value="radio-2"
+    />
     <label
-      className="fd-form-label"
+      className="fd-form-label fd-radio__label"
+      htmlFor="radio-2"
     >
-      <input
-        checked={true}
-        className="fd-radio"
-        id="radio-2"
-        name="radio-group-5"
-        type="radio"
-        value="radio-2"
-      />
       Option 2
     </label>
-  </div>,
+  </div>
   <div
     className="fd-form-item"
     onChange={[Function]}
   >
+    <input
+      className="fd-radio"
+      id="radio-3"
+      name="radio-group-5"
+      type="radio"
+      value="radio-3"
+    />
     <label
-      className="fd-form-label"
+      className="fd-form-label fd-radio__label"
+      htmlFor="radio-3"
     >
-      <input
-        className="fd-radio"
-        id="radio-3"
-        name="radio-group-5"
-        type="radio"
-        value="radio-3"
-      />
       Option 3
     </label>
-  </div>,
-]
+  </div>
+</div>
 `;

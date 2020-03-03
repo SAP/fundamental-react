@@ -1,5 +1,4 @@
 import { ActionBarComponent } from '../ActionBar/ActionBar.Component';
-import { AlertComponent } from '../Alert/Alert.Component';
 import { BadgeComponent } from '../Badge/Badge.Component';
 import { BreadcrumbComponent } from '../Breadcrumb/Breadcrumb.Component';
 import Button from '../Button/Button';
@@ -9,7 +8,7 @@ import classnames from 'classnames';
 import { ComboboxInputComponent } from '../ComboboxInput/ComboboxInput.Component';
 import { ContextualMenuComponent } from '../ContextualMenu/ContextualMenu.Component';
 import { DatePickerComponent } from '../DatePicker/DatePicker.Component';
-import { DropdownComponent } from '../Dropdown/Dropdown.Component';
+import { DialogComponent } from '../Dialog/Dialog.Component';
 import { FormInput } from '..';
 import { FormsComponent } from '../Forms/Forms.Component';
 import groupArray from 'group-array';
@@ -23,10 +22,10 @@ import InputGroup from '../InputGroup/InputGroup';
 import { InputGroupComponent } from '../InputGroup/InputGroup.Component';
 import { LayoutGridComponent } from '../LayoutGrid/LayoutGrid.Component';
 import { LinkComponent } from '../Link/Link.Component';
-import { ListGroupComponent } from '../ListGroup/ListGroup.Component';
+import { ListComponent } from '../List/List.Component';
 import { LocalizationEditorComponent } from '../LocalizationEditor/LocalizationEditor.Component';
 import { MenuComponent } from '../Menu/Menu.Component';
-import { ModalComponent } from '../Modal/Modal.Component';
+import { MessageStripComponent } from '../MessageStrip/MessageStrip.Component';
 import { MultiInputComponent } from '../MultiInput/MultiInput.Component';
 import { PaginationComponent } from '../Pagination/Pagination.Component';
 import { PanelComponent } from '../Panel/Panel.Component';
@@ -34,16 +33,17 @@ import { PopoverComponent } from '../Popover/Popover.Component';
 import RouteNotFound from './_RouteNotFound';
 import ScrollToTop from './_ScrollToTop';
 import { SearchInputComponent } from '../SearchInput/SearchInput.Component';
+import { SelectComponent } from '../Select/Select.Component';
 import { ShellbarComponent } from '../Shellbar/Shellbar.Component';
 import { SideNav } from '../SideNavigation/';
 import { SideNavigationComponent } from '../SideNavigation/SideNav.Component';
 import sortBy from 'sort-by';
+import { SwitchComponent } from '../Switch/Switch.Component';
 import { TableComponent } from '../Table/Table.Component';
 import { TabsComponent } from '../Tabs/Tabs.Component';
 import { TileComponent } from '../Tile/Tile.Component';
 import { TimeComponent } from '../Time/Time.Component';
 import { TimePickerComponent } from '../TimePicker/TimePicker.Component';
-import { ToggleComponent } from '../Toggle/Toggle.Component';
 import { TokenComponent } from '../Token/Token.Component';
 import { TreeViewComponent } from '../TreeView/TreeView.Component';
 import { BrowserRouter, NavLink, Redirect, Route, Switch } from 'react-router-dom';
@@ -77,9 +77,9 @@ const routes = [
         section: 'Components'
     },
     {
-        url: '/alert',
-        name: 'Alert',
-        component: AlertComponent,
+        url: '/MessageStrip',
+        name: 'MessageStrip',
+        component: MessageStripComponent,
         section: 'Components'
     },
     {
@@ -119,9 +119,9 @@ const routes = [
         section: 'Components'
     },
     {
-        url: '/dropdown',
-        name: 'Dropdown',
-        component: DropdownComponent,
+        url: '/Select',
+        name: 'Select',
+        component: SelectComponent,
         section: 'Components'
     },
     {
@@ -173,9 +173,9 @@ const routes = [
         section: 'Components'
     },
     {
-        url: '/listGroup',
-        name: 'List Group',
-        component: ListGroupComponent,
+        url: '/list',
+        name: 'List',
+        component: ListComponent,
         section: 'Components'
     },
     {
@@ -191,9 +191,9 @@ const routes = [
         section: 'Components'
     },
     {
-        url: '/modal',
-        name: 'Modal',
-        component: ModalComponent,
+        url: '/dialog',
+        name: 'Dialog',
+        component: DialogComponent,
         section: 'Components'
     },
     {
@@ -275,9 +275,9 @@ const routes = [
         section: 'Components'
     },
     {
-        url: '/toggle',
-        name: 'Toggle',
-        component: ToggleComponent,
+        url: '/Switch',
+        name: 'Switch',
+        component: SwitchComponent,
         section: 'Components'
     },
     {

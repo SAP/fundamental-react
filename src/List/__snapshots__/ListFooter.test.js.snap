@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ListFooter /> create list footer item 1`] = `
+<li
+  className="fd-list__footer"
+>
+  List item 1
+</li>
+`;

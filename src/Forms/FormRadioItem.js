@@ -3,6 +3,7 @@ import { FORM_STATES } from '../utils/constants';
 import FormItem from './FormItem';
 import FormLabel from './FormLabel';
 import PropTypes from 'prop-types';
+import shortId from '../utils/shortId';
 import React, { useEffect } from 'react';
 
 const FormRadioItem = React.forwardRef(({
@@ -36,6 +37,8 @@ const FormRadioItem = React.forwardRef(({
         }
     );
 
+    const radioId = id ? id : shortId.generate();
+
     return (
         <FormItem
             {...props}
@@ -43,20 +46,22 @@ const FormRadioItem = React.forwardRef(({
             disableStyles={disableStyles}
             isInline={inline}
             key={id}>
+            <input
+                {...inputProps}
+                checked={checked}
+                className={inputClassNames}
+                disabled={disabled}
+                id={radioId}
+                name={name}
+                ref={ref}
+                type='radio'
+                value={value} />
             <FormLabel
                 {...labelProps}
+                className='fd-radio__label'
                 disableStyles={disableStyles}
-                disabled={disabled}>
-                <input
-                    {...inputProps}
-                    checked={checked}
-                    className={inputClassNames}
-                    disabled={disabled}
-                    id={id}
-                    name={name}
-                    ref={ref}
-                    type='radio'
-                    value={value} />
+                disabled={disabled}
+                htmlFor={radioId}>
                 {children}
             </FormLabel>
         </FormItem>

@@ -1,11 +1,8 @@
-import { Alert } from '../../../';
 import { Button } from '../../../';
-import { Dropdown } from '../../../';
 import Heading from '../Heading/Heading';
 import { Icon } from '../../../';
 import { Identifier } from '../../../';
 import { Image } from '../../../';
-import { ListGroup } from '../../../';
 import PropTypes from 'prop-types';
 import { Badge, Label, Status } from '../../../';
 import { FormGroup, FormItem, FormLabel, InputGroup } from '../../../';
@@ -306,17 +303,6 @@ class Playground extends Component {
 
       let componentToGenerate;
       switch (this.props.component) {
-          case 'alert':
-              componentToGenerate = (
-                  <Alert
-                      dismissible={this.state.childs.dismissible}
-                      link={this.state.childs.link}
-                      linkText={this.state.childs.linkText}
-                      type={this.state.childs.type}>
-            Default alert with a{' '}
-                  </Alert>
-              );
-              break;
           case 'badge':
               if (this.state.childs.component === 'badge') {
                   componentToGenerate = (
@@ -365,31 +351,6 @@ class Playground extends Component {
                       type={this.state.childs.type}>
                       {this.state.childs.children}
                   </Button>
-              );
-              break;
-          case 'dropdown':
-              componentToGenerate = (
-                  <Dropdown
-                      buttonIcon={this.retrieveValue(
-                          'buttonIcon',
-                          this.state.childs.buttonIcon,
-                          this.state.currentValues
-                      )}
-                      buttonText={this.retrieveValue(
-                          'buttonText',
-                          this.state.childs.buttonText,
-                          this.state.currentValues
-                      )}
-                      size={this.retrieveValue(
-                          'size',
-                          this.state.childs.size,
-                          this.state.currentValues
-                      )}
-                      state={this.retrieveValue(
-                          'state',
-                          this.state.childs.state,
-                          this.state.currentValues
-                      )} />
               );
               break;
           case 'icon':
@@ -464,29 +425,6 @@ class Playground extends Component {
                           </InputGroup>
                       </FormItem>
                   </FormGroup>
-              );
-              break;
-          case 'listgroup':
-              componentToGenerate = (
-                  <ListGroup>
-                      <ListGroup.Item>
-                          {this.retrieveValue(
-                              'children',
-                              this.state.childs.children.props.children[0],
-                              this.state.currentValues
-                          )}
-                          <ListGroup.ItemActions>
-                              <Button
-                                  glyph={this.retrieveValue(
-                                      'glyph',
-                                      this.state.childs.children.props.children[1].props.children
-                                          .props.glyph,
-                                      this.state.currentValues
-                                  )}
-                                  option='light' />
-                          </ListGroup.ItemActions>
-                      </ListGroup.Item>
-                  </ListGroup>
               );
               break;
 

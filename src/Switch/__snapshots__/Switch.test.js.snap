@@ -1,0 +1,127 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Switch /> create Switch component 1`] = `
+<label
+  className="fd-form-label fd-switch__label"
+>
+  <span
+    className="fd-switch"
+  >
+    <input
+      aria-checked={false}
+      checked={false}
+      className="fd-switch__input"
+      onChange={[Function]}
+      type="checkbox"
+    />
+    <div
+      className="fd-switch__wrapper"
+    >
+      <div
+        className="fd-switch__track"
+      >
+        <span
+          className="fd-switch__handle"
+          role="presentation"
+        />
+      </div>
+    </div>
+  </span>
+  Normal Switch
+</label>
+`;
+
+exports[`<Switch /> create Switch component 2`] = `
+<label
+  className="fd-form-label fd-switch__label"
+>
+  <span
+    className="fd-switch fd-switch--compact"
+  >
+    <input
+      aria-checked={true}
+      checked={true}
+      className="fd-switch__input"
+      onChange={[Function]}
+      type="checkbox"
+    />
+    <div
+      className="fd-switch__wrapper"
+    >
+      <div
+        className="fd-switch__track"
+      >
+        <span
+          className="fd-switch__handle"
+          role="presentation"
+        />
+      </div>
+    </div>
+  </span>
+  Compact Switch
+</label>
+`;
+
+exports[`<Switch /> create Switch component 3`] = `
+<label
+  className="fd-form-label is-disabled fd-switch__label"
+>
+  <span
+    className="fd-switch"
+  >
+    <input
+      aria-checked={false}
+      checked={false}
+      className="fd-switch__input"
+      disabled={true}
+      onChange={[Function]}
+      type="checkbox"
+    />
+    <div
+      className="fd-switch__wrapper"
+    >
+      <div
+        className="fd-switch__track"
+      >
+        <span
+          className="fd-switch__handle"
+          role="presentation"
+        />
+      </div>
+    </div>
+  </span>
+  Normal Switch
+</label>
+`;
+
+exports[`<Switch /> create Switch component 4`] = `
+<label
+  className="fd-form-label is-disabled fd-switch__label"
+>
+  <span
+    className="fd-switch"
+  >
+    <input
+      aria-checked={true}
+      checked={true}
+      className="fd-switch__input"
+      disabled={true}
+      onChange={[Function]}
+      type="checkbox"
+    />
+    <div
+      className="fd-switch__wrapper"
+    >
+      <div
+        className="fd-switch__track"
+      >
+        <span
+          className="fd-switch__handle"
+          role="presentation"
+        />
+      </div>
+    </div>
+  </span>
+  Normal Switch
+</label>
+`;
