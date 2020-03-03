@@ -16,7 +16,7 @@ exports[`<SearchInput /> create SearchInput 1`] = `
         className="fd-popover__control"
       >
         <div
-          className="fd-input-group"
+          className="fd-input-group--control fd-input-group"
           onClick={[Function]}
         >
           <input
@@ -58,7 +58,7 @@ exports[`<SearchInput /> create SearchInput 2`] = `
         className="fd-popover__control"
       >
         <div
-          className="fd-input-group"
+          className="fd-input-group--control fd-input-group"
           onClick={[Function]}
         >
           <input
@@ -100,7 +100,7 @@ exports[`<SearchInput /> create SearchInput 3`] = `
         className="fd-popover__control"
       >
         <div
-          className="fd-input-group"
+          className="fd-input-group--control fd-input-group"
           onClick={[Function]}
         >
           <input
@@ -142,7 +142,7 @@ exports[`<SearchInput /> create SearchInput 4`] = `
         className="fd-popover__control"
       >
         <div
-          className="fd-input-group"
+          className="fd-input-group--control fd-input-group"
           onClick={[Function]}
         >
           <input

@@ -43,8 +43,8 @@ describe('<DatePicker />', () => {
         });
         document.dispatchEvent(event);
 
-        // check to make sure calendar is hidden
-        expect(wrapper.state('hidden')).toBeTruthy();
+        // check to make sure calendar is not expanded
+        expect(wrapper.state('isExpanded')).toBeFalsy();
     });
 
     test('check start date greater than end date for range', () => {
@@ -71,8 +71,8 @@ describe('<DatePicker />', () => {
         });
         document.dispatchEvent(event);
 
-        // check to make sure calendar is hidden
-        expect(wrapper.state('hidden')).toBeTruthy();
+        // check to make sure calendar is not expanded
+        expect(wrapper.state('isExpanded')).toBeFalsy();
     });
 
     test('entering start date and disabled end range dates', () => {
