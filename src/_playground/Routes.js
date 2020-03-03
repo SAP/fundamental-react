@@ -388,7 +388,7 @@ export class Routes extends Component {
                                 glyph='menu2'
                                 id='navToggle'
                                 onClick={this.toggleNavVis}
-                                option='light'
+                                option='transparent'
                                 type='standard' />
                             <a
                                 aria-label='Home'

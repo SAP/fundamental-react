@@ -7,7 +7,7 @@ export const MESSAGESTRIP_TYPES = [
 
 export const BUTTON_OPTIONS = [
     'emphasized',
-    'light'
+    'transparent'
 ];
 export const BUTTON_TYPES = [
     'standard',

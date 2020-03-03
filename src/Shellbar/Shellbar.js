@@ -159,7 +159,7 @@ class Shellbar extends Component {
                                 control={
                                     <Button
                                         className='fd-shellbar__button--menu fd-button--menu'
-                                        option='light'>
+                                        option='transparent'>
                                         <span className='fd-shellbar__title'>
                                             {productTitle}
                                         </span>

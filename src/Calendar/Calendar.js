@@ -438,14 +438,14 @@ class Calendar extends Component {
                             disableStyles={this.props.disableStyles}
                             glyph='slim-arrow-left'
                             onClick={this.handlePrevious}
-                            option='light' />
+                            option='transparent' />
                     </div>
                     <div className='fd-calendar__action'>
                         <Button
                             compact
                             disableStyles={this.props.disableStyles}
                             onClick={this.showMonths}
-                            option='light'>
+                            option='transparent'>
                             <span>
                                 {months[this.state.currentDateDisplayed.month()]}
                             </span>
@@ -456,7 +456,7 @@ class Calendar extends Component {
                             compact
                             disableStyles={this.props.disableStyles}
                             onClick={this.showYears}
-                            option='light'>
+                            option='transparent'>
                             <span>
                                 {this.state.currentDateDisplayed.year()}
                             </span>
@@ -470,7 +470,7 @@ class Calendar extends Component {
                             disableStyles={this.props.disableStyles}
                             glyph='slim-arrow-right'
                             onClick={this.handleNext}
-                            option='light' />
+                            option='transparent' />
                     </div>
                 </div>
             </header>

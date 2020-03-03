@@ -64,7 +64,7 @@ const MessageStrip = (props) => {
                             className='fd-message-strip__close'
                             compact
                             onClick={closeMessageStripHandler}
-                            option='light' />
+                            option='transparent' />
                     )}
                     <p className='fd-message-strip__text'>
                         {children}

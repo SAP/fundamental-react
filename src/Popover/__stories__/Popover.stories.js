@@ -25,7 +25,7 @@ storiesOf('Components|Popover', module)
     .add('Dev', () => (
         <Popover
             body={someMenu}
-            control={<Button glyph='navigation-up-arrow' option='light' />}
+            control={<Button glyph='navigation-up-arrow' option='transparent' />}
             disableEdgeDetection={boolean('disableEdgeDetection', false)}
             disableKeyPressHandler={boolean('disableKeyPressHandler', false)}
             disabled={boolean('disabled', false)}
@@ -84,20 +84,20 @@ storiesOf('Components|Popover', module)
                         <td />
                         <td>
                             <Popover
-                                body={someMenu} control={<Button glyph='navigation-up-arrow' option='light' >Pop to Top-Start</Button>}
+                                body={someMenu} control={<Button glyph='navigation-up-arrow' option='transparent' >Pop to Top-Start</Button>}
                                 placement='top-start'
                                 popperProps={{ id: 'fd-top-start-popover-placement-story' }}
                                 type='menu' />
                         </td>
                         <td>
                             <Popover
-                                body={someMenu} control={<Button glyph='navigation-up-arrow' option='light' >Pop to Top</Button>}
+                                body={someMenu} control={<Button glyph='navigation-up-arrow' option='transparent' >Pop to Top</Button>}
                                 placement='top'
                                 type='menu' />
                         </td>
                         <td>
                             <Popover
-                                body={someMenu} control={<Button glyph='navigation-up-arrow' option='light' >Pop to Top-End</Button>}
+                                body={someMenu} control={<Button glyph='navigation-up-arrow' option='transparent' >Pop to Top-End</Button>}
                                 placement='top-end'
                                 type='menu' />
                         </td>
@@ -110,7 +110,7 @@ storiesOf('Components|Popover', module)
                         <td />
                         <td>
                             <Popover
-                                body={someMenu} control={<Button glyph='navigation-left-arrow' option='light' >Pop to Left-Start</Button>}
+                                body={someMenu} control={<Button glyph='navigation-left-arrow' option='transparent' >Pop to Left-Start</Button>}
                                 placement='left-start'
                                 type='menu' />
                         </td>
@@ -119,7 +119,7 @@ storiesOf('Components|Popover', module)
                         <td />
                         <td>
                             <Popover
-                                body={someMenu} control={<Button glyph='navigation-right-arrow' option='light' >Pop to Right-Top</Button>}
+                                body={someMenu} control={<Button glyph='navigation-right-arrow' option='transparent' >Pop to Right-Top</Button>}
                                 placement='right-start'
                                 type='menu' />
                         </td>
@@ -131,7 +131,7 @@ storiesOf('Components|Popover', module)
                         <td />
                         <td>
                             <Popover
-                                body={someMenu} control={<Button glyph='navigation-left-arrow' option='light' >Pop to Left</Button>}
+                                body={someMenu} control={<Button glyph='navigation-left-arrow' option='transparent' >Pop to Left</Button>}
                                 placement='left'
                                 type='menu' />
                         </td>
@@ -140,7 +140,7 @@ storiesOf('Components|Popover', module)
                         <td />
                         <td>
                             <Popover
-                                body={someMenu} control={<Button glyph='navigation-right-arrow' option='light' >Pop to Right</Button>}
+                                body={someMenu} control={<Button glyph='navigation-right-arrow' option='transparent' >Pop to Right</Button>}
                                 placement='right'
                                 type='menu' />
                         </td>
@@ -152,7 +152,7 @@ storiesOf('Components|Popover', module)
                         <td />
                         <td>
                             <Popover
-                                body={someMenu} control={<Button glyph='navigation-left-arrow' option='light' >Pop to Left-End</Button>}
+                                body={someMenu} control={<Button glyph='navigation-left-arrow' option='transparent' >Pop to Left-End</Button>}
                                 placement='left-end'
                                 type='menu' />
                         </td>
@@ -161,7 +161,7 @@ storiesOf('Components|Popover', module)
                         <td />
                         <td>
                             <Popover
-                                body={someMenu} control={<Button glyph='navigation-right-arrow' option='light' >Pop to Right-End</Button>}
+                                body={someMenu} control={<Button glyph='navigation-right-arrow' option='transparent' >Pop to Right-End</Button>}
                                 placement='right-end'
                                 type='menu' />
                         </td>
@@ -174,19 +174,19 @@ storiesOf('Components|Popover', module)
                         <td />
                         <td>
                             <Popover
-                                body={someMenu} control={<Button glyph='navigation-down-arrow' option='light' >Pop to Bottom-Start</Button>}
+                                body={someMenu} control={<Button glyph='navigation-down-arrow' option='transparent' >Pop to Bottom-Start</Button>}
                                 placement='bottom-start'
                                 type='menu' />
                         </td>
                         <td>
                             <Popover
-                                body={someMenu} control={<Button glyph='navigation-down-arrow' option='light' >Pop to Bottom</Button>}
+                                body={someMenu} control={<Button glyph='navigation-down-arrow' option='transparent' >Pop to Bottom</Button>}
                                 placement='bottom'
                                 type='menu' />
                         </td>
                         <td>
                             <Popover
-                                body={someMenu} control={<Button glyph='navigation-down-arrow' option='light' >Pop to Bottom-End</Button>}
+                                body={someMenu} control={<Button glyph='navigation-down-arrow' option='transparent' >Pop to Bottom-End</Button>}
                                 placement='bottom-end'
                                 type='menu' />
                         </td>
@@ -208,7 +208,7 @@ storiesOf('Components|Popover', module)
             body={someMenu} control={<Button
                 disableStyles
                 glyph='navigation-up-arrow'
-                option='light' />}
+                option='transparent' />}
             disableStyles
             type='menu'
             useArrowKeyNavigation />

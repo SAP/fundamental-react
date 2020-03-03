@@ -377,7 +377,7 @@ class Playground extends Component {
                                           .props.glyph,
                                       this.state.currentValues
                                   )}
-                                  option='light'>
+                                  option='transparent'>
                                   {this.retrieveValue(
                                       'children',
                                       this.state.childs.children[1].props.children.props.children

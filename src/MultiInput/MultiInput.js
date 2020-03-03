@@ -208,7 +208,7 @@ class MultiInput extends Component {
                                 {...buttonProps}
                                 disableStyles={disableStyles}
                                 glyph='value-help'
-                                option='light' />
+                                option='transparent' />
                         </InputGroup.Addon>
                     </InputGroup>
                 }

@@ -30,16 +30,16 @@ export const CounterComponent = () => {
                 centered
                 description='Use the property `notification` to enable notification counter.'
                 title='Notification counter'>
-                <Button glyph='bell' option='light'>
+                <Button glyph='bell' option='transparent'>
                     <Counter notification>5</Counter>
                 </Button>
-                <Button glyph='bell' option='light'>
+                <Button glyph='bell' option='transparent'>
                     <Counter notification>25</Counter>
                 </Button>
-                <Button glyph='bell' option='light'>
+                <Button glyph='bell' option='transparent'>
                     <Counter notification>101</Counter>
                 </Button>
-                <Button glyph='bell' option='light'>
+                <Button glyph='bell' option='transparent'>
                     <Counter notification>999+</Counter>
                 </Button>
             </Example>

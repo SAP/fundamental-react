@@ -75,7 +75,7 @@ const LocalizationEditor = React.forwardRef(({ control, menu, id, compact, texta
                                                     className='fd-input-group__button'
                                                     compact={compact}
                                                     disableStyles={disableStyles}
-                                                    option='light'>
+                                                    option='transparent'>
                                                     {language}
                                                 </Button>
 
@@ -110,7 +110,7 @@ const LocalizationEditor = React.forwardRef(({ control, menu, id, compact, texta
                                 className='fd-input-group__button'
                                 compact={compact}
                                 disableStyles={disableStyles}
-                                option='light'>
+                                option='transparent'>
                                 {control.language}
                             </Button>
                         </span>
