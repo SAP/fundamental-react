@@ -43,7 +43,6 @@ const ComboboxInput = React.forwardRef(({
         setIsExpanded(false);
     };
 
-
     return (
         <Popover
             {...popoverProps}
@@ -68,7 +67,7 @@ const ComboboxInput = React.forwardRef(({
                     disableStyles={disableStyles}
                     disabled={disabled}
                     onClick={handleClick}
-                    validationState={!isExpanded && validationState}>
+                    validationState={!isExpanded ? validationState : null}>
                     <FormInput
                         {...inputProps}
                         compact={compact}

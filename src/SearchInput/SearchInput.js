@@ -170,7 +170,7 @@ class SearchInput extends Component {
                             className={inputGroupClasses}
                             compact={compact}
                             disableStyles={disableStyles}
-                            validationState={!this.state.isExpanded && validationState}>
+                            validationState={!this.state.isExpanded ? validationState : null}>
                             <FormInput
                                 {...inputProps}
                                 disableStyles={disableStyles}

@@ -49,7 +49,6 @@ export const DatePickerComponent = () => {
                     validationState={{ state: 'information', text: 'Test validation state' }} />
             </Example>
 
-
         </ComponentPage>
     );
 };

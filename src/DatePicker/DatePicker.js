@@ -212,7 +212,7 @@ class DatePicker extends Component {
                             compact={compact}
                             disableStyles={disableStyles}
                             onClick={this.handleClick}
-                            validationState={!this.state.isExpanded && validationState} >
+                            validationState={!this.state.isExpanded ? validationState : null} >
                             <FormInput
                                 {...inputProps}
                                 disableStyles={disableStyles}

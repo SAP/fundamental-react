@@ -64,11 +64,11 @@ const Select = React.forwardRef(({
                     option='light'
                     ref={ref} />
             </div>
-            {!isExpanded && validationState && (<FormMessage
+            {!isExpanded ? validationState && (<FormMessage
                 disableStyles={disableStyles}
                 type={validationState.state}>
                 {validationState.text}
-            </FormMessage>)}
+            </FormMessage>) : null}
         </div>
     );
 
