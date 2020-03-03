@@ -1,5 +1,4 @@
 import { ActionBarComponent } from '../ActionBar/ActionBar.Component';
-import { BadgeComponent } from '../Badge/Badge.Component';
 import { BreadcrumbComponent } from '../Breadcrumb/Breadcrumb.Component';
 import Button from '../Button/Button';
 import { ButtonComponent } from '../Button/Button.Component';
@@ -7,6 +6,7 @@ import { CalendarComponent } from '../Calendar/Calendar.Component';
 import classnames from 'classnames';
 import { ComboboxInputComponent } from '../ComboboxInput/ComboboxInput.Component';
 import { ContextualMenuComponent } from '../ContextualMenu/ContextualMenu.Component';
+import { CounterComponent } from '../Counter/Counter.Component';
 import { DatePickerComponent } from '../DatePicker/DatePicker.Component';
 import { DialogComponent } from '../Dialog/Dialog.Component';
 import { FormInput } from '..';
@@ -17,6 +17,7 @@ import Icon from '../Icon/Icon';
 import { IconComponent } from '../Icon/Icon.Component';
 import { IdentifierComponent } from '../Identifier/Identifier.Component';
 import { ImageComponent } from '../Image/Image.Component';
+import { InfoLabelComponent } from '../InfoLabel/InfoLabel.Component';
 import { InlineHelpComponent } from '../InlineHelp/InlineHelp.Component';
 import InputGroup from '../InputGroup/InputGroup';
 import { InputGroupComponent } from '../InputGroup/InputGroup.Component';
@@ -113,6 +114,12 @@ const routes = [
         section: 'Components'
     },
     {
+        url: '/counter',
+        name: 'Counter',
+        component: CounterComponent,
+        section: 'Components'
+    },
+    {
         url: '/datepicker',
         name: 'Date Picker',
         component: DatePickerComponent,
@@ -146,6 +153,12 @@ const routes = [
         url: '/image',
         name: 'Image',
         component: ImageComponent,
+        section: 'Components'
+    },
+    {
+        url: '/infoLabel',
+        name: 'Info Label',
+        component: InfoLabelComponent,
         section: 'Components'
     },
     {
@@ -236,12 +249,6 @@ const routes = [
         url: '/sideNavigation',
         name: 'Side Navigation',
         component: SideNavigationComponent,
-        section: 'Components'
-    },
-    {
-        url: '/statusIndicators',
-        name: 'Status Indicators',
-        component: BadgeComponent,
         section: 'Components'
     },
     {

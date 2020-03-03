@@ -1,6 +1,6 @@
 import Button from '../Button/Button';
 import classnames from 'classnames';
-import Counter from '../Badge/Counter';
+import Counter from '../Counter/Counter';
 import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import Icon from '../Icon/Icon';
 import Identifier from '../Identifier/Identifier';
