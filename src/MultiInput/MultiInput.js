@@ -116,6 +116,10 @@ class MultiInput extends Component {
         });
     };
 
+    handleClickOutside = () => {
+        this.setState({ bShowList: false });
+    }
+
     render() {
         const {
             popoverProps,
@@ -216,6 +220,7 @@ class MultiInput extends Component {
                 disableStyles={disableStyles}
                 disabled={disabled}
                 noArrow
+                onClickOutside={this.handleClickOutside}
                 widthSizingType='matchTarget' />
         );
     }

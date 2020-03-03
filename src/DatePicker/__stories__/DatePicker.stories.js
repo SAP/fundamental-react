@@ -48,10 +48,7 @@ storiesOf('Components|DatePicker', module)
             disableWeekends={boolean('disable weekends', false)}
             disabledDates={[dateKnobToDate('disable between dates (1)', disabledDateFirstDefault),
                 dateKnobToDate('disable between dates (2)', disabledDateSecondDefault)]}
-            locale={text('locale', 'en')} />
-    ))
-    .add('Validation State', () => (
-        <DatePicker
+            locale={text('locale', 'en')}
             validationState={select('Validation State',
                 {
                     'none': '',
@@ -62,9 +59,20 @@ storiesOf('Components|DatePicker', module)
                 }
             )} />
     ))
+    .add('Validation State | Error', () => (
+        <DatePicker validationState={{ state: 'error', text: 'Test validation state' }} />
+    ))
+    .add('Validation State | Warning', () => (
+        <DatePicker validationState={{ state: 'warning', text: 'Test validation state' }} />
+    ))
+    .add('Validation State | Information', () => (
+        <DatePicker validationState={{ state: 'information', text: 'Test validation state' }} />
+    ))
+    .add('Validation State | Success', () => (
+        <DatePicker validationState={{ state: 'success', text: 'Test validation state' }} />
+    ))
     .add('disable styles', () => (
-        <DatePicker
-            disableStyles />
+        <DatePicker disableStyles />
     ))
     .add('range selection', () => (
         <DatePicker enableRangeSelection />

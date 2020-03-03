@@ -87,15 +87,12 @@ class DatePicker extends Component {
         this.setState({ isExpanded: !this.state.isExpanded });
     };
 
-    handleClickOutside = () => {
+    handleOutsideClickAndEscape = () => {
         this.validateDates();
         this.setState({
             isExpanded: false
         }, () => {
-            this.props.onBlur({
-                date: this.state.selectedDate,
-                formattedDate: this.state.formattedDate
-            });
+            this._handleBlur();
         });
     };
 
@@ -124,6 +121,7 @@ class DatePicker extends Component {
         if (closeCalendar) {
             const popover = this.popoverRef && this.popoverRef.current;
             popover && popover.handleEscapeKey();
+            this.setState({ isExpanded: false });
         }
     }
 
@@ -171,8 +169,7 @@ class DatePicker extends Component {
         return (
             <div
                 {...props}
-                className={className}
-                ref={component => (this.component = component)}>
+                className={className}>
                 <Popover
                     body={
                         <>
@@ -236,8 +233,8 @@ class DatePicker extends Component {
                     disableKeyPressHandler
                     disableStyles={disableStyles}
                     noArrow
-                    onClickOutside={this.handleClickOutside}
-                    placement='bottom-end'
+                    onClickOutside={this.handleOutsideClickAndEscape}
+                    onEscapeKey={this.handleOutsideClickAndEscape}
                     ref={this.popoverRef} />
             </div>
         );
