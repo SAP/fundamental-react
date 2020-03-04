@@ -19,33 +19,7 @@ exports[`<Tile /> create Tile component with active prop set 1`] = `
   <div
     className="fd-tile__actions tile-actions"
     onClick={[Function]}
-  >
-    <div
-      className="fd-popover"
-    >
-      <div
-        onFocus={[Function]}
-        onMouseDown={[Function]}
-        onTouchStart={[Function]}
-      >
-        <div
-          className="fd-popover__control"
-        >
-          <button
-            aria-controls="fd-8k5DVBxc"
-            aria-expanded={false}
-            aria-haspopup={true}
-            className="fd-button fd-button--light sap-icon--vertical-grip"
-            onClick={[Function]}
-            onKeyPress={[Function]}
-            role="button"
-            tabIndex={0}
-            type="button"
-          />
-        </div>
-      </div>
-    </div>
-  </div>
+  />
 </div>
 `;
 
