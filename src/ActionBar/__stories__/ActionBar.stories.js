@@ -22,7 +22,7 @@ storiesOf('Components|ActionBar', module)
                 max: 3,
                 step: 1
             })}
-            onClick={() => {}}
+            onBackClick={() => {}}
             title={text('title', 'Page Title')} />
     ))
     .add('No back button', () => (

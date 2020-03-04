@@ -34,7 +34,7 @@
     "start": "npm run build && node scripts/copy-assets.js && node scripts/start.js",
     "start:playground": "npm run storybook",
     "std-version": "standard-version -m \"chore(release): version %s build ${TRAVIS_BUILD_NUMBER} [ci skip]\"",
-    "storybook": "node scripts/copy-assets.js && start-storybook -p 12123 -s src/_playground/fonts",
+    "storybook": "node scripts/copy-assets.js && start-storybook -p 12123 -s src/_playground/static/",
     "storybook:ci": "npm run storybook -- --ci --quiet",
     "test:coverage:watch": "npm run test:coverage -- --watch",
     "test:coverage": "npm run test:dev -- --coverage",

@@ -17,7 +17,7 @@ const ActionBar = React.forwardRef(({
     headingLevel,
     title,
     titleProps,
-    onClick,
+    onBackClick,
     ...props
 }, ref) => {
 
@@ -45,7 +45,7 @@ const ActionBar = React.forwardRef(({
     const actionBarDescriptionClasses = classnames(
         'fd-action-bar__description',
         {
-            'fd-action-bar__description--back': onClick
+            'fd-action-bar__description--back': onBackClick
         }
     );
 
@@ -61,13 +61,13 @@ const ActionBar = React.forwardRef(({
             className={actionBarClasses}
             ref={ref}>
             <div {...props} className={actionBarHeaderClasses}>
-                {onClick && (<div className={actionBarBackClasses}>
+                {onBackClick && (<div className={actionBarBackClasses}>
                     <Button
                         {...buttonProps}
                         compact
                         disableStyles={disableStyles}
                         glyph='navigation-left-arrow'
-                        onClick={onClick}
+                        onClick={onBackClick}
                         option='transparent' />
                 </div>)}
                 <HeadingTag {...titleProps} className='fd-action-bar__title'>{title}</HeadingTag>
@@ -99,7 +99,7 @@ ActionBar.propTypes = {
     disableStyles: PropTypes.bool,
     headingLevel: CustomPropTypes.range(2, 6),
     titleProps: PropTypes.object,
-    onClick: PropTypes.func
+    onBackClick: PropTypes.func
 };
 
 ActionBar.defaultProps = {
@@ -114,7 +114,7 @@ ActionBar.propDescriptions = {
     description: 'Localized text for the description.',
     descriptionProps: 'Additional props to be spread to the description\'s `<p>` element.',
     headingLevel: 'Heading level. `<h1>` is reserved for the page title.',
-    onClick: 'Callback to pass to the back Button.'
+    onBackClick: 'Callback to pass to the back Button.'
 };
 
 

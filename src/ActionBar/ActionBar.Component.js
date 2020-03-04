@@ -24,7 +24,7 @@ export const ActionBarComponent = () => {
                         </>
                     )}
                     description={'Action Bar Description'}
-                    onClick={clickBackBtn}
+                    onBackClick={clickBackBtn}
                     title={'Page Title'} />
             </Example>
 

@@ -13,7 +13,7 @@
 /src/_playground/documentation/Home/README.md
 
 # fonts for documentation site
-/src/_playground/fonts/
+/src/_playground/static/
 
 #index files
 /src/**/index.js

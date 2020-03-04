@@ -10,19 +10,19 @@ fs.copyFile('README.md', 'src/_playground/documentation/Home/README.md', (err) =
     if (err) throw err;
 });
 
-if (!fs.existsSync('src/_playground/fonts')) {
-    fs.mkdirSync('src/_playground/fonts');
+if (!fs.existsSync('src/_playground/static')) {
+    fs.mkdirSync('src/_playground/static');
 }
 
-fs.copyFile(fontPath, 'src/_playground/fonts/72-Regular.woff', (err) => {
+fs.copyFile(fontPath, 'src/_playground/static/72-Regular.woff', (err) => {
     if (err) throw err;
 });
-fs.copyFile(fontPathLight, 'src/_playground/fonts/72-Light.woff', (err) => {
+fs.copyFile(fontPathLight, 'src/_playground/static/72-Light.woff', (err) => {
     if (err) throw err;
 });
-fs.copyFile(fontPathBold, 'src/_playground/fonts/72-Bold.woff', (err) => {
+fs.copyFile(fontPathBold, 'src/_playground/static/72-Bold.woff', (err) => {
     if (err) throw err;
 });
-fs.copyFile(iconPath, 'src/_playground/fonts/SAP-icons.woff', (err) => {
+fs.copyFile(iconPath, 'src/_playground/static/SAP-icons.woff', (err) => {
     if (err) throw err;
 });
