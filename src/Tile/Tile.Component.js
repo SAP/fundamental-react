@@ -13,7 +13,9 @@ export const TileComponent = () => {
 
             <Example
                 title='Simple Tile'>
-                <Tile>
+                <Tile active onClick={() => {
+                    alert('tile clicked');
+                }}>
                     <Tile.Content title='Tile Title'>
                         <p>Tile Description</p>
                     </Tile.Content>
@@ -23,14 +25,18 @@ export const TileComponent = () => {
             <Example
                 title='Media Tile'>
                 <div>
-                    <Tile>
+                    <Tile active onClick={() => {
+                        alert('tile clicked');
+                    }}>
                         <Tile.Media>
                             <Image photo='https://placeimg.com/400/400/nature' size='m' />
                         </Tile.Media>
                         <Tile.Content title='Tile Title' />
                     </Tile>
                     <br />
-                    <Tile>
+                    <Tile active onClick={() => {
+                        alert('tile clicked');
+                    }}>
                         <Tile.Media>
                             <Image photo='https://placeimg.com/400/400/nature' size='l'
                                 type='circle' />
@@ -40,7 +46,9 @@ export const TileComponent = () => {
                         </Tile.Content>
                     </Tile>
                     <br />
-                    <Tile>
+                    <Tile active onClick={() => {
+                        alert('tile clicked');
+                    }}>
                         <Tile.Media>
                             <Identifier color={3} glyph='home'
                                 size='m' />
@@ -54,7 +62,9 @@ export const TileComponent = () => {
 
             <Example
                 title='Actions Tile'>
-                <Tile>
+                <Tile active onClick={() => {
+                    alert('tile clicked');
+                }}>
                     <Tile.Content title='Tile Title' />
                     <Tile.Actions>
                         <Popover
@@ -76,7 +86,9 @@ export const TileComponent = () => {
 
             <Example
                 title='Media with Actions Tile'>
-                <Tile>
+                <Tile active onClick={() => {
+                    alert('tile clicked');
+                }}>
                     <Tile.Media>
                         <Image photo='https://placeimg.com/400/400/nature' size='l'
                             type='circle' />
@@ -102,7 +114,10 @@ export const TileComponent = () => {
 
             <Example
                 title='Product Tile'>
-                <Tile backgroundImage='https://placeimg.com/1600/400/nature' productTile>
+                <Tile active backgroundImage='https://placeimg.com/1600/400/nature'
+                    onClick={() => {
+                        alert('tile clicked');
+                    }} productTile>
                     <Tile.Content title='Tile Title'>
                         <p>Tile Description</p>
                     </Tile.Content>
