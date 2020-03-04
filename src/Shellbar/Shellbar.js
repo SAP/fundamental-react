@@ -187,7 +187,8 @@ class Shellbar extends Component {
                             <SearchInput
                                 className='fd-shellbar__input-group'
                                 disableStyles={disableStyles}
-                                inputGroupProps={{ className: 'fd-shellbar__input-group__addon' }}
+                                inShellbar
+                                inputGroupAddonProps={{ className: 'fd-shellbar__input-group__addon' }}
                                 inputGroupProps={{ className: 'fd-shellbar__input-group' }}
                                 inputProps={{ className: 'fd-shellbar__input-group__input' }}
                                 onEnter={searchInput.onSearch}

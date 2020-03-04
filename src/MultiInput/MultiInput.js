@@ -115,6 +115,10 @@ class MultiInput extends Component {
         });
     };
 
+    handleClickOutside = () => {
+        this.setState({ bShowList: false });
+    }
+
     render() {
         const {
             popoverProps,
@@ -191,7 +195,7 @@ class MultiInput extends Component {
                         disableStyles={disableStyles}
                         disabled={disabled}
                         onClick={this.showHideTagList}
-                        validationState={!this.state.bShowList && validationState}>
+                        validationState={!this.state.bShowList ? validationState : null}>
                         <div {...tagProps} className={tokenizerClassNames}>
                             <div className='fd-tokenizer__inner'>
                                 {this.state.tags.length > 0 && this.createTags()}
@@ -215,6 +219,7 @@ class MultiInput extends Component {
                 disableStyles={disableStyles}
                 disabled={disabled}
                 noArrow
+                onClickOutside={this.handleClickOutside}
                 widthSizingType='matchTarget' />
         );
     }
