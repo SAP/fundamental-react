@@ -212,7 +212,7 @@ class TimeItem extends Component {
                             disabled={disabled}
                             glyph='navigation-up-arrow'
                             onClick={this._onUp}
-                            option='light' />
+                            option='transparent' />
                     </div>
                 ) : (
                     ''
@@ -237,7 +237,7 @@ class TimeItem extends Component {
                             disabled={disabled}
                             glyph='navigation-down-arrow'
                             onClick={this._onDown}
-                            option='light' />
+                            option='transparent' />
                     </div>
                 ) : (
                     ''

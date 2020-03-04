@@ -22,7 +22,7 @@ export const ButtonComponent = () => {
                 description={`There are three emphasis styles used to indicate the importance of the button on
                     the page.\n\n* **Emphasized Button**: There should only be one highlighted button on the page.
                     This is the primary call to action.\n\n* **Regular Button**: The default button style and the
-                    most common button. There may be more than one on a page.\n\n* **Light Button**: This is the
+                    most common button. There may be more than one on a page.\n\n* **Transparent Button**: This is the
                     lowest priority button and most often used with page content like appearing in a table or list.
                     There may be more than one on the page.`}
                 title='Button Options'>
@@ -30,7 +30,7 @@ export const ButtonComponent = () => {
                         Emphasized Button
                 </Button>
                 <Button onClick={() => clickBtnHandler('Regular')}>Regular Button</Button>
-                <Button onClick={() => clickBtnHandler('Light')} option='light'>Light Button</Button>
+                <Button onClick={() => clickBtnHandler('Transparent')} option='transparent'>Transparent Button</Button>
             </Example>
 
             <Example
@@ -58,7 +58,7 @@ export const ButtonComponent = () => {
 
                         <Button glyph='cart'>Add to Cart</Button>
 
-                        <Button glyph='filter' option='light'>
+                        <Button glyph='filter' option='transparent'>
                                 Add to Cart
                         </Button>
 
@@ -80,7 +80,7 @@ export const ButtonComponent = () => {
                     <div className='fd-col--6'>
                         <Button glyph='cart' />
 
-                        <Button glyph='cart' option='light' />
+                        <Button glyph='cart' option='transparent' />
 
                         <Button glyph='filter' type='standard' />
 
@@ -122,11 +122,11 @@ export const ButtonComponent = () => {
                 </div>
                 <div className='frDocs-tile__break' />
                 <div className='frDocs-tile__centered'>
-                    <Button option='light'>Light</Button>
-                    <Button option='light' selected>
+                    <Button option='transparent'>Transparent</Button>
+                    <Button option='transparent' selected>
                     Selected
                     </Button>
-                    <Button disabled option='light'>
+                    <Button disabled option='transparent'>
                     Disabled
                     </Button>
                 </div>

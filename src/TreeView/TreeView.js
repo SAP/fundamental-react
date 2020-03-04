@@ -20,7 +20,6 @@ class TreeView extends Component {
     componentDidMount() {
         if (!this.props.disableStyles) {
             require('fundamental-styles/dist/icon.css');
-            require('fundamental-styles/dist/fonts.css');
             require('fundamental-styles/dist/tree.css');
         }
     }

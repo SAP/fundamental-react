@@ -68,7 +68,7 @@ describe('<Time />', () => {
         expect(wrapper.state('time').hour).toEqual('12');
         wrapper
             .find(
-                'button.fd-button--light.sap-icon--navigation-up-arrow'
+                'button.fd-button--transparent.sap-icon--navigation-up-arrow'
             )
             .at(0)
             .simulate('click');
@@ -78,7 +78,7 @@ describe('<Time />', () => {
         expect(wrapper.state('time').minute).toEqual('00');
         wrapper
             .find(
-                'button.fd-button--light.sap-icon--navigation-up-arrow'
+                'button.fd-button--transparent.sap-icon--navigation-up-arrow'
             )
             .at(1)
             .simulate('click');
@@ -92,7 +92,7 @@ describe('<Time />', () => {
         expect(wrapper.state('time').hour).toEqual(22);
         wrapper
             .find(
-                'button.fd-button--light.sap-icon--navigation-up-arrow'
+                'button.fd-button--transparent.sap-icon--navigation-up-arrow'
             )
             .at(0)
             .simulate('click');
@@ -102,7 +102,7 @@ describe('<Time />', () => {
         expect(wrapper.state('time').minute).toEqual(34);
         wrapper
             .find(
-                'button.fd-button--light.sap-icon--navigation-up-arrow'
+                'button.fd-button--transparent.sap-icon--navigation-up-arrow'
             )
             .at(1)
             .simulate('click');
@@ -117,7 +117,7 @@ describe('<Time />', () => {
         for (let i = 0; i < 3; i += 1) {
             wrapper
                 .find(
-                    'button.fd-button--light.sap-icon--navigation-down-arrow'
+                    'button.fd-button--transparent.sap-icon--navigation-down-arrow'
                 )
                 .at(0)
                 .simulate('click');
@@ -128,7 +128,7 @@ describe('<Time />', () => {
         expect(wrapper.state('time').minute).toEqual('00');
         wrapper
             .find(
-                'button.fd-button--light.sap-icon--navigation-down-arrow'
+                'button.fd-button--transparent.sap-icon--navigation-down-arrow'
             )
             .at(1)
             .simulate('click');
@@ -142,7 +142,7 @@ describe('<Time />', () => {
         expect(wrapper.state('time').hour).toEqual('12');
         wrapper
             .find(
-                'button.fd-button--light.sap-icon--navigation-down-arrow'
+                'button.fd-button--transparent.sap-icon--navigation-down-arrow'
             )
             .at(0)
             .simulate('click');
@@ -152,7 +152,7 @@ describe('<Time />', () => {
         expect(wrapper.state('time').minute).toEqual('00');
         wrapper
             .find(
-                'button.fd-button--light.sap-icon--navigation-down-arrow'
+                'button.fd-button--transparent.sap-icon--navigation-down-arrow'
             )
             .at(1)
             .simulate('click');
@@ -170,7 +170,7 @@ describe('<Time />', () => {
         expect(wrapper.state('time').hour).toEqual(0);
         wrapper
             .find(
-                'button.fd-button--light.sap-icon--navigation-down-arrow'
+                'button.fd-button--transparent.sap-icon--navigation-down-arrow'
             )
             .at(3)
             .simulate('click');
@@ -189,7 +189,7 @@ describe('<Time />', () => {
         expect(wrapper.state('time').hour).toEqual(0);
         wrapper
             .find(
-                'button.fd-button--light.sap-icon--navigation-down-arrow'
+                'button.fd-button--transparent.sap-icon--navigation-down-arrow'
             )
             .at(0)
             .simulate('click');
@@ -206,7 +206,7 @@ describe('<Time />', () => {
         expect(wrapper.state('time').hour).toEqual(1);
         wrapper
             .find(
-                'button.fd-button--light.sap-icon--navigation-down-arrow'
+                'button.fd-button--transparent.sap-icon--navigation-down-arrow'
             )
             .at(0)
             .simulate('click');
@@ -224,7 +224,7 @@ describe('<Time />', () => {
         expect(wrapper.state('time').hour).toEqual(12);
         wrapper
             .find(
-                'button.fd-button--light.sap-icon--navigation-down-arrow'
+                'button.fd-button--transparent.sap-icon--navigation-down-arrow'
             )
             .at(0)
             .simulate('click');
@@ -244,7 +244,7 @@ describe('<Time />', () => {
         expect(wrapper.state('time').minute).toEqual(0);
         wrapper
             .find(
-                'button.fd-button--light.sap-icon--navigation-down-arrow'
+                'button.fd-button--transparent.sap-icon--navigation-down-arrow'
             )
             .at(1)
             .simulate('click');
@@ -261,7 +261,7 @@ describe('<Time />', () => {
         expect(wrapper.state('time').minute).toEqual(0);
         wrapper
             .find(
-                'button.fd-button--light.sap-icon--navigation-down-arrow'
+                'button.fd-button--transparent.sap-icon--navigation-down-arrow'
             )
             .at(1)
             .simulate('click');
@@ -279,7 +279,7 @@ describe('<Time />', () => {
         expect(wrapper.state('time').minute).toEqual(0);
         wrapper
             .find(
-                'button.fd-button--light.sap-icon--navigation-down-arrow'
+                'button.fd-button--transparent.sap-icon--navigation-down-arrow'
             )
             .at(1)
             .simulate('click');
@@ -299,7 +299,7 @@ describe('<Time />', () => {
         expect(wrapper.state('time').second).toEqual(0);
         wrapper
             .find(
-                'button.fd-button--light.sap-icon--navigation-down-arrow'
+                'button.fd-button--transparent.sap-icon--navigation-down-arrow'
             )
             .at(2)
             .simulate('click');
@@ -316,7 +316,7 @@ describe('<Time />', () => {
         expect(wrapper.state('time').second).toEqual(0);
         wrapper
             .find(
-                'button.fd-button--light.sap-icon--navigation-down-arrow'
+                'button.fd-button--transparent.sap-icon--navigation-down-arrow'
             )
             .at(2)
             .simulate('click');
@@ -334,7 +334,7 @@ describe('<Time />', () => {
         expect(wrapper.state('time').second).toEqual(0);
         wrapper
             .find(
-                'button.fd-button--light.sap-icon--navigation-down-arrow'
+                'button.fd-button--transparent.sap-icon--navigation-down-arrow'
             )
             .at(2)
             .simulate('click');
@@ -355,7 +355,7 @@ describe('<Time />', () => {
         expect(wrapper.state('time').hour).toEqual(0);
         wrapper
             .find(
-                'button.fd-button--light.sap-icon--navigation-up-arrow'
+                'button.fd-button--transparent.sap-icon--navigation-up-arrow'
             )
             .at(3)
             .simulate('click');
@@ -374,7 +374,7 @@ describe('<Time />', () => {
         expect(wrapper.state('time').hour).toEqual(0);
         wrapper
             .find(
-                'button.fd-button--light.sap-icon--navigation-up-arrow'
+                'button.fd-button--transparent.sap-icon--navigation-up-arrow'
             )
             .at(0)
             .simulate('click');
@@ -391,7 +391,7 @@ describe('<Time />', () => {
         expect(wrapper.state('time').hour).toEqual(23);
         wrapper
             .find(
-                'button.fd-button--light.sap-icon--navigation-up-arrow'
+                'button.fd-button--transparent.sap-icon--navigation-up-arrow'
             )
             .at(0)
             .simulate('click');
@@ -406,7 +406,7 @@ describe('<Time />', () => {
         expect(wrapper.state('time').hour).toEqual(1);
         wrapper
             .find(
-                'button.fd-button--light.sap-icon--navigation-up-arrow'
+                'button.fd-button--transparent.sap-icon--navigation-up-arrow'
             )
             .at(0)
             .simulate('click');
@@ -424,7 +424,7 @@ describe('<Time />', () => {
         expect(wrapper.state('time').hour).toEqual(12);
         wrapper
             .find(
-                'button.fd-button--light.sap-icon--navigation-up-arrow'
+                'button.fd-button--transparent.sap-icon--navigation-up-arrow'
             )
             .at(0)
             .simulate('click');
@@ -442,7 +442,7 @@ describe('<Time />', () => {
         expect(wrapper.state('time').hour).toEqual(11);
         wrapper
             .find(
-                'button.fd-button--light.sap-icon--navigation-up-arrow'
+                'button.fd-button--transparent.sap-icon--navigation-up-arrow'
             )
             .at(0)
             .simulate('click');
@@ -460,7 +460,7 @@ describe('<Time />', () => {
         expect(wrapper.state('time').minute).toEqual(0);
         wrapper
             .find(
-                'button.fd-button--light.sap-icon--navigation-up-arrow'
+                'button.fd-button--transparent.sap-icon--navigation-up-arrow'
             )
             .at(1)
             .simulate('click');
@@ -477,7 +477,7 @@ describe('<Time />', () => {
         expect(wrapper.state('time').minute).toEqual(59);
         wrapper
             .find(
-                'button.fd-button--light.sap-icon--navigation-up-arrow'
+                'button.fd-button--transparent.sap-icon--navigation-up-arrow'
             )
             .at(1)
             .simulate('click');
@@ -493,7 +493,7 @@ describe('<Time />', () => {
         expect(wrapper.state('time').minute).toEqual(0);
         wrapper
             .find(
-                'button.fd-button--light.sap-icon--navigation-up-arrow'
+                'button.fd-button--transparent.sap-icon--navigation-up-arrow'
             )
             .at(1)
             .simulate('click');
@@ -513,7 +513,7 @@ describe('<Time />', () => {
 
         wrapper
             .find(
-                'button.fd-button--light.sap-icon--navigation-up-arrow'
+                'button.fd-button--transparent.sap-icon--navigation-up-arrow'
             )
             .at(1)
             .simulate('click');
@@ -531,7 +531,7 @@ describe('<Time />', () => {
 
         wrapper
             .find(
-                'button.fd-button--light.sap-icon--navigation-up-arrow'
+                'button.fd-button--transparent.sap-icon--navigation-up-arrow'
             )
             .at(1)
             .simulate('click');
@@ -548,7 +548,7 @@ describe('<Time />', () => {
         expect(wrapper.state('time').minute).toEqual(0);
         wrapper
             .find(
-                'button.fd-button--light.sap-icon--navigation-up-arrow'
+                'button.fd-button--transparent.sap-icon--navigation-up-arrow'
             )
             .at(1)
             .simulate('click');
@@ -566,7 +566,7 @@ describe('<Time />', () => {
         expect(wrapper.state('time').minute).toEqual(59);
         wrapper
             .find(
-                'button.fd-button--light.sap-icon--navigation-up-arrow'
+                'button.fd-button--transparent.sap-icon--navigation-up-arrow'
             )
             .at(1)
             .simulate('click');
@@ -586,7 +586,7 @@ describe('<Time />', () => {
         expect(wrapper.state('time').second).toEqual(59);
         wrapper
             .find(
-                'button.fd-button--light.sap-icon--navigation-up-arrow'
+                'button.fd-button--transparent.sap-icon--navigation-up-arrow'
             )
             .at(2)
             .simulate('click');
@@ -603,7 +603,7 @@ describe('<Time />', () => {
         expect(wrapper.state('time').second).toEqual(59);
         wrapper
             .find(
-                'button.fd-button--light.sap-icon--navigation-up-arrow'
+                'button.fd-button--transparent.sap-icon--navigation-up-arrow'
             )
             .at(2)
             .simulate('click');
@@ -614,7 +614,7 @@ describe('<Time />', () => {
         // expect(wrapper.state('time').second).toEqual(0);
         wrapper
             .find(
-                'button.fd-button--light.sap-icon--navigation-up-arrow'
+                'button.fd-button--transparent.sap-icon--navigation-up-arrow'
             )
             .at(2)
             .simulate('click');
@@ -632,7 +632,7 @@ describe('<Time />', () => {
         expect(wrapper.state('time').second).toEqual(0);
         wrapper
             .find(
-                'button.fd-button--light.sap-icon--navigation-up-arrow'
+                'button.fd-button--transparent.sap-icon--navigation-up-arrow'
             )
             .at(2)
             .simulate('click');

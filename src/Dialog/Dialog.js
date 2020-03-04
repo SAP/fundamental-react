@@ -26,7 +26,6 @@ class Dialog extends Component {
         document.addEventListener('keydown', this.handleKeyPress, false);
 
         if (!this.props.disableStyles) {
-            require('fundamental-styles/dist/fonts.css');
             require('fundamental-styles/dist/dialog.css');
             require('fundamental-styles/dist/overlay.css');
             require('fundamental-styles/dist/bar.css');

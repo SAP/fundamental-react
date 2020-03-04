@@ -78,7 +78,7 @@ export const TileComponent = () => {
                                     </Menu.List>
                                 </Menu>
                             }
-                            control={<Button glyph='vertical-grip' option='light' />}
+                            control={<Button glyph='vertical-grip' option='transparent' />}
                             placement='bottom-end' />
                     </Tile.Actions>
                 </Tile>
@@ -106,7 +106,7 @@ export const TileComponent = () => {
                                     </Menu.List>
                                 </Menu>
                             }
-                            control={<Button glyph='vertical-grip' option='light' />}
+                            control={<Button glyph='vertical-grip' option='transparent' />}
                             placement='bottom-end' />
                     </Tile.Actions>
                 </Tile>

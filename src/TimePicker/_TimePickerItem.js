@@ -238,7 +238,7 @@ class TimePickerItem extends Component {
                         disabled={disabled}
                         glyph='fob-watch'
                         id={this.state.buttonID}
-                        option='light' />
+                        option='transparent' />
                 </InputGroup.Addon>
             </InputGroup>
         );

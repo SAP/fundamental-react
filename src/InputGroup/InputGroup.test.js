@@ -68,7 +68,7 @@ describe('<InputGroup />', () => {
         <InputGroup>
             <FormInput placeholder='Type text here' />
             <InputGroup.Addon isButton>
-                <Button option='light'>Button</Button>
+                <Button option='transparent'>Button</Button>
             </InputGroup.Addon>
         </InputGroup>
     );
@@ -76,7 +76,7 @@ describe('<InputGroup />', () => {
         <InputGroup compact>
             <FormInput placeholder='Type text here' />
             <InputGroup.Addon isButton>
-                <Button compact option='light'>Button</Button>
+                <Button compact option='transparent'>Button</Button>
             </InputGroup.Addon>
         </InputGroup>
     );

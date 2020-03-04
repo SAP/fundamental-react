@@ -14,7 +14,7 @@ storiesOf('Components|Dialog', module)
     .add('Dev', () => (
         <Dialog
             actions={[
-                (<Button option='light'>No</Button>),
+                (<Button option='transparent'>No</Button>),
                 (<Button>Yes</Button>)
             ]}
             header={text('header', 'Test header')}
@@ -36,7 +36,7 @@ storiesOf('Components|Dialog', module)
     .add('Standard', () => (
         <Dialog
             actions={[
-                (<Button option='light'>No</Button>),
+                (<Button option='transparent'>No</Button>),
                 (<Button>Yes</Button>)
             ]}
             show title='Product Added'>
@@ -48,7 +48,7 @@ storiesOf('Components|Dialog', module)
     .add('header', () => (
         <Dialog
             actions={[
-                (<Button option='light'>No</Button>),
+                (<Button option='transparent'>No</Button>),
                 (<Button>Yes</Button>)
             ]}
             header='Test header'
@@ -61,7 +61,7 @@ storiesOf('Components|Dialog', module)
     .add('subheader', () => (
         <Dialog
             actions={[
-                (<Button option='light'>No</Button>),
+                (<Button option='transparent'>No</Button>),
                 (<Button>Yes</Button>)
             ]}
             show
@@ -75,7 +75,7 @@ storiesOf('Components|Dialog', module)
     .add('Size | small', () => (
         <Dialog
             actions={[
-                (<Button option='light'>No</Button>),
+                (<Button option='transparent'>No</Button>),
                 (<Button>Yes</Button>)
             ]}
             show
@@ -89,7 +89,7 @@ storiesOf('Components|Dialog', module)
     .add('Size | medium', () => (
         <Dialog
             actions={[
-                (<Button option='light'>No</Button>),
+                (<Button option='transparent'>No</Button>),
                 (<Button>Yes</Button>)
             ]}
             show
@@ -103,7 +103,7 @@ storiesOf('Components|Dialog', module)
     .add('Size | large', () => (
         <Dialog
             actions={[
-                (<Button option='light'>No</Button>),
+                (<Button option='transparent'>No</Button>),
                 (<Button>Yes</Button>)
             ]}
             show
@@ -117,7 +117,7 @@ storiesOf('Components|Dialog', module)
     .add('Size | extra large', () => (
         <Dialog
             actions={[
-                (<Button option='light'>No</Button>),
+                (<Button option='transparent'>No</Button>),
                 (<Button>Yes</Button>)
             ]}
             show
@@ -131,7 +131,7 @@ storiesOf('Components|Dialog', module)
     .add('disable styles', () => (
         <Dialog
             actions={[
-                (<Button option='light'>No</Button>),
+                (<Button option='transparent'>No</Button>),
                 (<Button>Yes</Button>)
             ]}
             disableStyles show

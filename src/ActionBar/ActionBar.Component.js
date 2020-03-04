@@ -16,25 +16,29 @@ export const ActionBarComponent = () => {
 
             <Example
                 title='Action bar with back button, description and action buttons'>
-                <ActionBar>
-                    <ActionBar.Back onClick={clickBackBtn} />
-                    <ActionBar.Header description={'Action Bar Description'} title={'Page Title'} />
-                    <ActionBar.Actions>
-                        <Button>Button</Button>
-                        <Button option='emphasized'>Button</Button>
-                    </ActionBar.Actions>
-                </ActionBar>
+                <ActionBar
+                    actions={(
+                        <>
+                            <Button>Button</Button>
+                            <Button option='emphasized'>Button</Button>
+                        </>
+                    )}
+                    description={'Action Bar Description'}
+                    onBackClick={clickBackBtn}
+                    title={'Page Title'} />
             </Example>
 
             <Example
                 title='Action bar with no Back button'>
-                <ActionBar>
-                    <ActionBar.Header description={'Action Bar Description'} title={'Page Title'} />
-                    <ActionBar.Actions>
-                        <Button>Button</Button>
-                        <Button option='emphasized'>Button</Button>
-                    </ActionBar.Actions>
-                </ActionBar>
+                <ActionBar
+                    actions={(
+                        <>
+                            <Button>Button</Button>
+                            <Button option='emphasized'>Button</Button>
+                        </>
+                    )}
+                    description={'Action Bar Description'}
+                    title={'Page Title'} />
             </Example>
 
             <Example
@@ -42,9 +46,8 @@ export const ActionBarComponent = () => {
                     allows the user to look in the same position they are used to but avoids cluttering the action bar with
                     more than 3-4 actions. This also works well for a responsive/adaptive application.`}
                 title='Several Main Actions in a Contextual Menu'>
-                <ActionBar>
-                    <ActionBar.Header description={'Action Bar Description'} title={'Page Title'} />
-                    <ActionBar.Actions>
+                <ActionBar
+                    actions={(
                         <Popover
                             body={
                                 <Menu>
@@ -56,37 +59,11 @@ export const ActionBarComponent = () => {
                                     </Menu.List>
                                 </Menu>
                             }
-                            control={<Button glyph='vertical-grip' option='light' />}
+                            control={<Button glyph='vertical-grip' option='transparent' />}
                             placement='bottom-end' />
-                    </ActionBar.Actions>
-                </ActionBar>
-            </Example>
-
-            <Example
-                title='Action bar responsive width'>
-                <div style={{ 'width': '319px' }}>
-                    <ActionBar>
-                        <ActionBar.Back />
-                        <ActionBar.Header
-                            description={'Action Bar Description'}
-                            title={'Action Bar with description and back button'} />
-                        <ActionBar.Actions>
-                            <Popover
-                                body={
-                                    <Menu>
-                                        <Menu.List>
-                                            <Menu.Item url='#'>Option 1</Menu.Item>
-                                            <Menu.Item url='#'>Option 2</Menu.Item>
-                                            <Menu.Item url='#'>Option 3</Menu.Item>
-                                            <Menu.Item url='#'>Option 4</Menu.Item>
-                                        </Menu.List>
-                                    </Menu>
-                                }
-                                control={<Button glyph='vertical-grip' option='light' />}
-                                placement='bottom-end' />
-                        </ActionBar.Actions>
-                    </ActionBar>
-                </div>
+                    )}
+                    description={'Action Bar Description'}
+                    title={'Page Title'} />
             </Example>
 
         </ComponentPage>

@@ -196,7 +196,7 @@ describe('<SearchInput />', () => {
         // check if searchTerm state is updated
         expect(wrapper.state(['value'])).toBe(searchData[0].text);
 
-        wrapper.find('.fd-button--light.sap-icon--search').simulate('click');
+        wrapper.find('.fd-button--transparent.sap-icon--search').simulate('click');
 
         expect(wrapper.state(['value'])).toBe(searchData[0].text);
     });

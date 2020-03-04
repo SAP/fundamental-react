@@ -1,0 +1,115 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<InfoLabel /> create label 1`] = `
+<span
+  className="fd-info-label"
+>
+  Default
+</span>
+`;
+
+exports[`<InfoLabel /> create label 2`] = `
+<span
+  className="fd-info-label blue"
+>
+  Default
+</span>
+`;
+
+exports[`<InfoLabel /> create label 3`] = `
+Array [
+  <span
+    className="fd-info-label fd-info-label--accent-color-1"
+  >
+    Default
+  </span>,
+  <span
+    className="fd-info-label fd-info-label--accent-color-2"
+  >
+    Default
+  </span>,
+  <span
+    className="fd-info-label fd-info-label--accent-color-3"
+  >
+    Default
+  </span>,
+  <span
+    className="fd-info-label fd-info-label--accent-color-4"
+  >
+    Default
+  </span>,
+  <span
+    className="fd-info-label fd-info-label--accent-color-5"
+  >
+    Default
+  </span>,
+  <span
+    className="fd-info-label fd-info-label--accent-color-6"
+  >
+    Default
+  </span>,
+  <span
+    className="fd-info-label fd-info-label--accent-color-7"
+  >
+    Default
+  </span>,
+  <span
+    className="fd-info-label fd-info-label--accent-color-8"
+  >
+    Default
+  </span>,
+  <span
+    className="fd-info-label fd-info-label--accent-color-9"
+  >
+    Default
+  </span>,
+  <span
+    className="fd-info-label fd-info-label--accent-color-10"
+  >
+    Default
+  </span>,
+]
+`;
+
+exports[`<InfoLabel /> create label 4`] = `
+Array [
+  <span
+    className="fd-info-label fd-info-label--icon sap-icon--add-activity-2"
+  >
+    Default
+  </span>,
+  <span
+    className="fd-info-label fd-info-label--icon sap-icon--bar-code"
+  >
+    Default
+  </span>,
+  <span
+    className="fd-info-label fd-info-label--icon sap-icon--hide"
+  >
+    Default
+  </span>,
+  <span
+    className="fd-info-label fd-info-label--icon sap-icon--key"
+  >
+    Default
+  </span>,
+  <span
+    className="fd-info-label fd-info-label--icon sap-icon--upload-to-cloud"
+  />,
+]
+`;
+
+exports[`<InfoLabel /> create label 5`] = `
+Array [
+  <span
+    className="fd-info-label fd-info-label--numeric"
+  >
+    1
+  </span>,
+  <span
+    className="fd-info-label fd-info-label--numeric"
+  >
+    10000
+  </span>,
+]
+`;

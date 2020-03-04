@@ -44,7 +44,7 @@ class DocsText extends Component {
         return (
             <React.Fragment>
                 <div className='frDocs-docsText__button'>
-                    <Button onClick={() => this.handleBtnClick()} option='light'>
+                    <Button onClick={() => this.handleBtnClick()} option='transparent'>
                         {this.state.showCode
                             ? ('Hide Code')
                             : ('Show Code')}
@@ -54,7 +54,7 @@ class DocsText extends Component {
                             className='frDocs-docsText__buttonCopy'
                             glyph='copy'
                             onClick={() => this.copyToClipboard(children)}
-                            option='light'>Copy</Button>
+                            option='transparent'>Copy</Button>
                         : ''}
                 </div>
                 {this.state.showCode && <pre className='frDocs-Content__docsText'>

@@ -24,7 +24,6 @@ class MultiInput extends Component {
 
     componentDidMount() {
         if (!this.props.disableStyles) {
-            require('fundamental-styles/dist/fonts.css');
             require('fundamental-styles/dist/tokenizer.css');
         }
     }
@@ -209,7 +208,7 @@ class MultiInput extends Component {
                                 {...buttonProps}
                                 disableStyles={disableStyles}
                                 glyph='value-help'
-                                option='light' />
+                                option='transparent' />
                         </InputGroup.Addon>
                     </InputGroup>
                 }
