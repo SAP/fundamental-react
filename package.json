@@ -1,6 +1,6 @@
 {
   "name": "fundamental-react",
-  "version": "0.8.0-rc.32",
+  "version": "0.8.0-rc.33",
   "private": false,
   "description": "SAP Fundamental Library, implemented in React",
   "license": "Apache-2.0",
@@ -93,7 +93,7 @@
     "chalk": "2.4.2",
     "core-js": "^3.1.4",
     "coveralls": "^3.0.2",
-    "cross-env": "^6.0.3",
+    "cross-env": "^7.0.0",
     "css-loader": "3.2.0",
     "dotenv": "8.2.0",
     "dotenv-expand": "5.1.0",
