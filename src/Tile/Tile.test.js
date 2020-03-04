@@ -8,6 +8,7 @@ import renderer from 'react-test-renderer';
 import Tile from './Tile';
 
 describe('<Tile />', () => {
+    const handleClick = jest.fn();
     const simpleTile = (
         <Tile className='blue'>
             <Tile.Content className='red' title='Tile Title'>
@@ -112,6 +113,15 @@ describe('<Tile />', () => {
         </Tile>
     );
 
+    const activeTile = (
+        <Tile active onClick={handleClick}>
+            <Tile.Content title='Tile Title' />
+            <Tile.Actions className='tile-actions'>
+            </Tile.Actions>
+        </Tile>
+    );
+
+
     test('create tile component', () => {
         // simple tile
         let component = renderer.create(simpleTile);
@@ -189,4 +199,30 @@ describe('<Tile />', () => {
         expect(ref.current.tagName).toEqual('DIV');
         expect(ref.current.className).toEqual('fd-tile');
     });
+
+    test('create Tile component with active prop set', () => {
+        const component = renderer.create(activeTile);
+        const tile = component.toJSON();
+
+        expect(tile).toMatchSnapshot();
+    });
+
+    test('onClick handler should be called on active tile', () => {
+        const component = mount(activeTile);
+        component
+            .find('div.fd-tile')
+            .simulate('click', { target: { text: '4' }, stopPropagation: () => {} });
+        expect(handleClick).toHaveBeenCalled();
+    });
+
+    test('onClick handler should not be called on actions', () => {
+        const component = mount(activeTile);
+        const stopPropagationFn = jest.fn();
+        component
+            .find('.tile-actions')
+            .at(1)
+            .simulate('click', { target: { text: '4' }, stopPropagation: stopPropagationFn });
+        expect(stopPropagationFn).toHaveBeenCalled();
+    });
+
 });
