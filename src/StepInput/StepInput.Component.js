@@ -1,7 +1,7 @@
 import path from 'path';
 import React from 'react';
 import { ComponentPage, Example } from '../_playground';
-import { FormGroup, FormInput, FormItem, FormLabel, StepInput } from '../';
+import { FormGroup, FormItem, FormLabel, StepInput } from '../';
 
 export const StepInputComponent = () => {
     return (
@@ -11,16 +11,14 @@ export const StepInputComponent = () => {
             title='Step Input'>
 
             <Example
+                centered
                 description={'The Input with is typically used to enter numbers.The value can be increased or reduced with the provided controls.'}
                 title='Step Input'>
                 <div>
                     <FormGroup>
                         <FormLabel>Left Aligned Step Input</FormLabel>
                         <FormItem>
-                            <StepInput>
-                                <FormInput
-                                    placeholder='Type text here' />
-                            </StepInput>
+                            <StepInput />
                         </FormItem>
                     </FormGroup>
                 </div>
