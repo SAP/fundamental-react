@@ -6,10 +6,10 @@ import React, { useEffect } from 'react';
 
 const ActionBar = React.forwardRef(({
     actions,
-    actionClassNames,
+    actionClassName,
     actionProps,
     className,
-    buttonContainerClassNames,
+    buttonContainerClassName,
     buttonProps,
     description,
     descriptionProps,
@@ -39,7 +39,7 @@ const ActionBar = React.forwardRef(({
 
     const actionBarBackClasses = classnames(
         'fd-action-bar__back',
-        buttonContainerClassNames
+        buttonContainerClassName
     );
 
     const actionBarDescriptionClasses = classnames(
@@ -51,7 +51,7 @@ const ActionBar = React.forwardRef(({
 
     const actionBarActionsClasses = classnames(
         'fd-action-bar__actions',
-        actionClassNames
+        actionClassName
     );
 
     const HeadingTag = `h${headingLevel}`;
@@ -88,16 +88,16 @@ ActionBar.displayName = 'ActionBar';
 
 ActionBar.propTypes = {
     title: PropTypes.string.isRequired,
-    actionClassNames: PropTypes.string,
+    actionClassName: PropTypes.string,
     actionProps: PropTypes.object,
     actions: PropTypes.node,
-    buttonContainerClassNames: PropTypes.string,
+    buttonContainerClassName: PropTypes.string,
     buttonProps: PropTypes.object,
     className: PropTypes.string,
     description: PropTypes.string,
     descriptionProps: PropTypes.object,
     disableStyles: PropTypes.bool,
-    headingLevel: CustomPropTypes.range(1, 6),
+    headingLevel: CustomPropTypes.range(2, 6),
     titleProps: PropTypes.object,
     onClick: PropTypes.func
 };
@@ -107,14 +107,14 @@ ActionBar.defaultProps = {
 };
 
 ActionBar.propDescriptions = {
-    actionClassNames: 'Classnames to spread to the action Button container.',
+    actionClassName: 'Classnames to spread to the action Button container.',
     actionProps: 'Props to spread to the action Button container',
     actions: 'Button components to add to the ActionBar.',
-    buttonContainerClassNames: 'Classnames to spread to the back Button container.',
+    buttonContainerClassName: 'Classnames to spread to the back Button container.',
     description: 'Localized text for the description.',
     descriptionProps: 'Additional props to be spread to the description\'s `<p>` element.',
     headingLevel: 'Heading level. `<h1>` is reserved for the page title.',
-    onClick: 'Callback to pass to the back Button container.'
+    onClick: 'Callback to pass to the back Button.'
 };
 
 
