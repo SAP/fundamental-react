@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.8.0-rc.36"></a>
+# [0.8.0-rc.36](https://github.com/SAP/fundamental-react/compare/v0.8.0-rc.35...v0.8.0-rc.36) (2020-03-04)
+
+
+### Bug Fixes
+
+* add DatePicker validation states, fix validation states for popover-based components ([#909](https://github.com/SAP/fundamental-react/issues/909)) ([d1b4fce](https://github.com/SAP/fundamental-react/commit/d1b4fce))
+
+
+
 <a name="0.8.0-rc.35"></a>
 # [0.8.0-rc.35](https://github.com/SAP/fundamental-react/compare/v0.8.0-rc.34...v0.8.0-rc.35) (2020-03-04)
 
