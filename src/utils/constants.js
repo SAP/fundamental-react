@@ -5,36 +5,9 @@ export const MESSAGESTRIP_TYPES = [
     'information'
 ];
 
-export const BADGE_TYPES = [
-    'success',
-    'warning',
-    'error'
-];
-
-export const BADGE_MODIFIERS = [
-    'pill',
-    'filled'
-];
-
-export const LABEL_TYPES = [
-    'success',
-    'warning',
-    'error'
-];
-
-export const STATUS_TYPES = [
-    'success',
-    'warning',
-    'error',
-    'available',
-    'away',
-    'busy',
-    'offline'
-];
-
 export const BUTTON_OPTIONS = [
     'emphasized',
-    'light'
+    'transparent'
 ];
 export const BUTTON_TYPES = [
     'standard',

@@ -13,7 +13,6 @@ const Panel = React.forwardRef(({ colSpan, children, className, disableStyles, .
 
     useEffect(() => {
         if (!disableStyles) {
-            require('fundamental-styles/dist/fonts.css');
             require('fundamental-styles/dist/layout-grid.css');
             require('fundamental-styles/dist/panel.css');
         }

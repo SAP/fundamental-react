@@ -21,7 +21,7 @@ storiesOf('Components|Button', module)
             disabled={boolean('disabled'), false}
             option={select('option', {
                 'emphasized': 'emphasized',
-                'light': 'light'
+                'transparent': 'transparent'
             })}
             type={select('type', {
                 'standard': 'standard',

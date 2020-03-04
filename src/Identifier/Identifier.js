@@ -56,7 +56,6 @@ Identifier.propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,
     color: CustomPropTypes.range(1, 9),
-
     disableStyles: PropTypes.bool,
     glyph: PropTypes.string,
     label: PropTypes.string,

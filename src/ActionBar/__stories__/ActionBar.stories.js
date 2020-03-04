@@ -3,28 +3,50 @@ import Button from '../../Button/Button';
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import {
+    number,
+    text,
     withKnobs
 } from '@storybook/addon-knobs';
 
 storiesOf('Components|ActionBar', module)
     .addDecorator(withKnobs)
-    .add('Default', () => (
-        <ActionBar>
-            <ActionBar.Back />
-            <ActionBar.Header description={'Action Bar Description'} title={'Page Title'} />
-            <ActionBar.Actions>
-                <Button>Button</Button>
-                <Button option='emphasized'>Button</Button>
-            </ActionBar.Actions>
-        </ActionBar>
+    .add('Dev', () => (
+        <ActionBar
+            actions={(<><Button>Button</Button>
+                <Button option='emphasized'>Button</Button></>
+            )}
+            description={text('description', 'Action Bar description')}
+            headingLevel={number('headingLevel', 1, {
+                range: true,
+                min: 1,
+                max: 3,
+                step: 1
+            })}
+            onBackClick={() => {}}
+            title={text('title', 'Page Title')} />
+    ))
+    .add('No back button', () => (
+        <ActionBar
+            actions={(<><Button>Button</Button>
+                <Button option='emphasized'>Button</Button></>
+            )}
+            description='Description'
+            title='Page Title' />
+
+    ))
+    .add('No description', () => (
+        <ActionBar
+            actions={(<><Button>Button</Button>
+                <Button option='emphasized'>Button</Button></>
+            )}
+            title='Page Title' />
+
+    ))
+    .add('No actions', () => (
+        <ActionBar
+            title='Page Title' />
+
     ))
     .add('disable styles', () => (
-        <ActionBar disableStyles>
-            <ActionBar.Back disableStyles />
-            <ActionBar.Header description={'Action Bar Description'} title={'Page Title'} />
-            <ActionBar.Actions>
-                <Button disableStyles>Button</Button>
-                <Button disableStyles option='emphasized'>Button</Button>
-            </ActionBar.Actions>
-        </ActionBar>
+        <ActionBar disableStyles title='default' />
     ));

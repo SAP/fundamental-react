@@ -27,7 +27,7 @@ exports[`<Select /> create Select component 1`] = `
           className="fd-select__control"
         >
           <button
-            className="fd-button fd-button--light sap-icon--slim-arrow-down fd-select__button"
+            className="fd-button fd-button--transparent sap-icon--slim-arrow-down fd-select__button"
             type="button"
           />
         </div>
@@ -64,7 +64,7 @@ exports[`<Select /> create Select component 2`] = `
           className="fd-select__control"
         >
           <button
-            className="fd-button fd-button--light sap-icon--slim-arrow-down fd-select__button"
+            className="fd-button fd-button--transparent sap-icon--slim-arrow-down fd-select__button"
             type="button"
           />
         </div>
@@ -101,7 +101,7 @@ exports[`<Select /> create Select component 3`] = `
           className="fd-select__control is-disabled"
         >
           <button
-            className="fd-button fd-button--light sap-icon--slim-arrow-down is-disabled fd-select__button"
+            className="fd-button fd-button--transparent sap-icon--slim-arrow-down is-disabled fd-select__button"
             disabled={true}
             type="button"
           />
@@ -140,7 +140,7 @@ exports[`<Select /> create Select component 4`] = `
         >
           Default
           <button
-            className="fd-button fd-button--light sap-icon--slim-arrow-down fd-select__button"
+            className="fd-button fd-button--transparent sap-icon--slim-arrow-down fd-select__button"
             type="button"
           />
         </div>
@@ -183,7 +183,7 @@ exports[`<Select /> create Select component 5`] = `
         >
           Default
           <button
-            className="fd-button fd-button--light sap-icon--slim-arrow-down fd-select__button"
+            className="fd-button fd-button--transparent sap-icon--slim-arrow-down fd-select__button"
             type="button"
           />
         </div>
@@ -226,7 +226,7 @@ exports[`<Select /> create Select component 6`] = `
         >
           Default
           <button
-            className="fd-button fd-button--light sap-icon--slim-arrow-down fd-select__button"
+            className="fd-button fd-button--transparent sap-icon--slim-arrow-down fd-select__button"
             type="button"
           />
         </div>
@@ -275,7 +275,7 @@ exports[`<Select /> create Select component 7`] = `
         >
           Default
           <button
-            className="fd-button fd-button--light sap-icon--slim-arrow-down fd-select__button"
+            className="fd-button fd-button--transparent sap-icon--slim-arrow-down fd-select__button"
             type="button"
           />
         </div>

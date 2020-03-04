@@ -61,7 +61,7 @@ const Select = React.forwardRef(({
                     className='fd-select__button'
                     disabled={disabled}
                     glyph='slim-arrow-down'
-                    option='light'
+                    option='transparent'
                     ref={ref} />
             </div>
             {!isExpanded ? validationState && (<FormMessage

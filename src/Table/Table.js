@@ -8,7 +8,6 @@ const Table = React.forwardRef(({ headers, tableData, className, tableBodyClassN
 
     useEffect(() => {
         if (!disableStyles) {
-            require('fundamental-styles/dist/fonts.css');
             require('fundamental-styles/dist/table.css');
         }
     }, []);

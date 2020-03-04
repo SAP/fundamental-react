@@ -186,7 +186,7 @@ class SearchInput extends Component {
                                         disableStyles={disableStyles}
                                         glyph='search'
                                         onClick={this.handleClick}
-                                        option='light' />
+                                        option='transparent' />
                                 </InputGroup.Addon>
                             )}
                         </InputGroup>

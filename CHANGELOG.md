@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.8.0-rc.35"></a>
+# [0.8.0-rc.35](https://github.com/SAP/fundamental-react/compare/v0.8.0-rc.34...v0.8.0-rc.35) (2020-03-04)
+
+
+### Features
+
+* remove fonts from package, update ActionBar, Button and InfoLabel ([#908](https://github.com/SAP/fundamental-react/issues/908)) ([e3e6c9a](https://github.com/SAP/fundamental-react/commit/e3e6c9a))
+
+
+
+<a name="0.8.0-rc.34"></a>
+# [0.8.0-rc.34](https://github.com/SAP/fundamental-react/compare/v0.8.0-rc.33...v0.8.0-rc.34) (2020-03-04)
+
+
+
+<a name="0.8.0-rc.33"></a>
+# [0.8.0-rc.33](https://github.com/SAP/fundamental-react/compare/v0.8.0-rc.32...v0.8.0-rc.33) (2020-03-03)
+
+
+
 <a name="0.8.0-rc.32"></a>
 # [0.8.0-rc.32](https://github.com/SAP/fundamental-react/compare/v0.8.0-rc.31...v0.8.0-rc.32) (2020-03-02)
 

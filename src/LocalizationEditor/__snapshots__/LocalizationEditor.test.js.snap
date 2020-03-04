@@ -33,7 +33,7 @@ exports[`<LocalizationEditor /> create localization editor 1`] = `
             className="fd-input-group__addon fd-input-group__addon--button"
           >
             <button
-              className="fd-button fd-button--light fd-input-group__button"
+              className="fd-button fd-button--transparent fd-input-group__button"
               type="button"
             >
               EN*
@@ -79,7 +79,7 @@ exports[`<LocalizationEditor /> create localization editor 2`] = `
             className="fd-input-group__addon fd-input-group__addon--button"
           >
             <button
-              className="fd-button fd-button--light fd-button--compact fd-input-group__button"
+              className="fd-button fd-button--transparent fd-button--compact fd-input-group__button"
               type="button"
             >
               EN*
@@ -123,7 +123,7 @@ exports[`<LocalizationEditor /> create localization editor 3`] = `
             className="fd-input-group__addon fd-input-group__addon--button"
           >
             <button
-              className="fd-button fd-button--light fd-input-group__button"
+              className="fd-button fd-button--transparent fd-input-group__button"
               type="button"
             >
               EN*

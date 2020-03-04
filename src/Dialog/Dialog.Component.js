@@ -35,7 +35,7 @@ export class DialogComponent extends Component {
                         </Button>
                         <Dialog
                             actions={[
-                                (<Button option='light'>
+                                (<Button option='transparent'>
                                         No
                                 </Button>),
                                 (<Button>Yes</Button>)
@@ -60,7 +60,7 @@ export class DialogComponent extends Component {
                         </Button>
                         <Dialog
                             actions={[
-                                (<Button option='light'>
+                                (<Button option='transparent'>
                                         No
                                 </Button>),
                                 (<Button>Yes</Button>)
@@ -79,7 +79,7 @@ export class DialogComponent extends Component {
                         </Button>
                         <Dialog
                             actions={[
-                                (<Button option='light'>
+                                (<Button option='transparent'>
                                         No
                                 </Button>),
                                 (<Button>Yes</Button>)
@@ -98,7 +98,7 @@ export class DialogComponent extends Component {
                         </Button>
                         <Dialog
                             actions={[
-                                (<Button option='light'>
+                                (<Button option='transparent'>
                                         No
                                 </Button>),
                                 (<Button>Yes</Button>)
@@ -117,7 +117,7 @@ export class DialogComponent extends Component {
                         </Button>
                         <Dialog
                             actions={[
-                                (<Button option='light'>
+                                (<Button option='transparent'>
                                         No
                                 </Button>),
                                 (<Button>Yes</Button>)

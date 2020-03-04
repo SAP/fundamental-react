@@ -7,7 +7,6 @@ const FormMessage = React.forwardRef(({ type, children, className, disableStyles
 
     useEffect(() => {
         if (!disableStyles) {
-            require('fundamental-styles/dist/fonts.css');
             require('fundamental-styles/dist/icon.css');
             require('fundamental-styles/dist/form-message.css');
         }

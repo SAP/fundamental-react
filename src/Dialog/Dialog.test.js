@@ -12,7 +12,7 @@ describe('<Dialog />', () => {
     const infoDialog = (
         <Dialog
             actions={[
-                (<Button option='light'>No</Button>),
+                (<Button option='transparent'>No</Button>),
                 (<Button>Yes</Button>)
             ]}
             className='blue'
@@ -36,7 +36,7 @@ describe('<Dialog />', () => {
     const infoNoShowDialog = (
         <Dialog
             actions={[
-                (<Button option='light'>No</Button>),
+                (<Button option='transparent'>No</Button>),
                 (<Button>Yes</Button>)
             ]}
             onClose={mockOnClose} show={!bShow}
@@ -58,7 +58,7 @@ describe('<Dialog />', () => {
     const confirmDialog = (
         <Dialog
             actions={[
-                (<Button option='light'>No</Button>),
+                (<Button option='transparent'>No</Button>),
                 (<Button>Yes</Button>)
             ]}
             onClose={mockOnClose}
@@ -73,7 +73,7 @@ describe('<Dialog />', () => {
     const formDialog = (
         <Dialog
             actions={[
-                (<Button option='light'>No</Button>),
+                (<Button option='transparent'>No</Button>),
                 (<Button>Yes</Button>)
             ]}
             onClose={mockOnClose}
@@ -140,7 +140,7 @@ describe('<Dialog />', () => {
             component = mount(
                 <Dialog
                     actions={[
-                        (<Button option='light'>No</Button>),
+                        (<Button option='transparent'>No</Button>),
                         (<Button>Yes</Button>)
                     ]}
                     headingLevel={2}
@@ -157,7 +157,7 @@ describe('<Dialog />', () => {
         test('should allow classes to be added to backdrop', () => {
             component = mount(<Dialog
                 actions={[
-                    (<Button option='light'>No</Button>),
+                    (<Button option='transparent'>No</Button>),
                     (<Button>Yes</Button>)
                 ]}
                 backdropClassName='sample' show
@@ -169,7 +169,7 @@ describe('<Dialog />', () => {
         test('should allow classes to be added to dialog', () => {
             component = mount(<Dialog
                 actions={[
-                    (<Button option='light'>No</Button>),
+                    (<Button option='transparent'>No</Button>),
                     (<Button>Yes</Button>)
                 ]}
                 className='sample' show
@@ -185,7 +185,7 @@ describe('<Dialog />', () => {
             component = mount(
                 <Dialog
                     actions={[
-                        (<Button option='light'>No</Button>),
+                        (<Button option='transparent'>No</Button>),
                         (<Button>Yes</Button>)
                     ]}
                     data-sample='Sample' show
@@ -203,7 +203,7 @@ describe('<Dialog />', () => {
             component = mount(
                 <Dialog
                     actions={[
-                        (<Button option='light'>No</Button>),
+                        (<Button option='transparent'>No</Button>),
                         (<Button>Yes</Button>)
                     ]}
                     contentProps={{ 'data-sample': 'Sample Title' }}
@@ -222,7 +222,7 @@ describe('<Dialog />', () => {
             component = mount(
                 <Dialog
                     actions={[
-                        (<Button option='light'>No</Button>),
+                        (<Button option='transparent'>No</Button>),
                         (<Button>Yes</Button>)
                     ]}
                     headerProps={{ 'data-sample': 'Sample Title' }}
@@ -241,7 +241,7 @@ describe('<Dialog />', () => {
             component = mount(
                 <Dialog
                     actions={[
-                        (<Button option='light'>No</Button>),
+                        (<Button option='transparent'>No</Button>),
                         (<Button>Yes</Button>)
                     ]}
                     show
@@ -260,7 +260,7 @@ describe('<Dialog />', () => {
             component = mount(
                 <Dialog
                     actions={[
-                        (<Button option='light'>No</Button>),
+                        (<Button option='transparent'>No</Button>),
                         (<Button>Yes</Button>)
                     ]}
                     bodyProps={{ 'data-sample': 'Sample Title' }}
@@ -280,7 +280,7 @@ describe('<Dialog />', () => {
             component = mount(
                 <Dialog
                     actions={[
-                        (<Button option='light'>No</Button>),
+                        (<Button option='transparent'>No</Button>),
                         (<Button>Yes</Button>)
                     ]}
                     footerProps={{ 'data-sample': 'Sample Title' }}

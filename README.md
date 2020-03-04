@@ -1,7 +1,7 @@
 # Fundamental React
 
 [![npm version](https://badge.fury.io/js/fundamental-react.svg)](//www.npmjs.com/package/fundamental-react)
-[![Minified Size](https://badgen.net/bundlephobia/min/fundamental-react)](https://bundlephobia.com/result?p=fundamental-react)
+[![Minified Size](https://badgen.net/bundlephobia/min/fundamental-react)](https://bundlephobia.com/result?p=fundamental-react)	
 [![Minzipped Size](https://badgen.net/bundlephobia/minzip/fundamental-react)](https://bundlephobia.com/result?p=fundamental-react)
 [![Build Status](https://travis-ci.org/SAP/fundamental-react.svg?branch=master)](https://travis-ci.org/SAP/fundamental-react)
 [![Coverage Status](https://coveralls.io/repos/github/SAP/fundamental-react/badge.svg?branch=master)](https://coveralls.io/github/SAP/fundamental-react?branch=master)
@@ -45,6 +45,25 @@ For an existing react application, follow the steps below:
     > **NOTE:** Importing from specific component is recommended. Doing so will bring in only the component you are using instead of the whole library, which will reduce your bundle size significantly.
 
 
+1. This project does not contain fonts and icons - they must be added to your project separately. Fonts and icons can be found at [`@sap-theming/theming-base-content`](https://github.com/SAP/theming-base-content). After importing fonts and icons from [`@sap-theming/theming-base-content`](https://github.com/SAP/theming-base-content), add the following to your css:
+
+```
+    @font-face {
+        font-family: "72";
+        src: url("path/to/fonts") format("woff"); // Bold, Light, Regular available in woff and woff2
+        font-weight: normal;
+        font-style: normal;
+    };
+
+    @font-face {
+        font-family: "SAP-icons";
+        src: url("path/to/icons") format("woff"); // available in woff, woff2 and ttf
+        font-weight: normal;
+        font-style: normal;
+    }
+```
+
+Additionally, edit your webpack configuration to load font and icon fonts - see [file-loader](https://webpack.js.org/loaders/file-loader/).
 
 ## Versioning
 

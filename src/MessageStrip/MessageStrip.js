@@ -12,7 +12,6 @@ const MessageStrip = (props) => {
 
     useEffect(() => {
         if (!disableStyles) {
-            require('fundamental-styles/dist/fonts.css');
             require('fundamental-styles/dist/icon.css');
             require('fundamental-styles/dist/message-strip.css');
         }
@@ -65,7 +64,7 @@ const MessageStrip = (props) => {
                             className='fd-message-strip__close'
                             compact
                             onClick={closeMessageStripHandler}
-                            option='light' />
+                            option='transparent' />
                     )}
                     <p className='fd-message-strip__text'>
                         {children}

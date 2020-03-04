@@ -12,6 +12,9 @@
 # Readme copy for github pages site
 /src/_playground/documentation/Home/README.md
 
+# fonts for documentation site
+/src/_playground/static/
+
 #index files
 /src/**/index.js
 

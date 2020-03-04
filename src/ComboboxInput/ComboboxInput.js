@@ -78,7 +78,7 @@ const ComboboxInput = React.forwardRef(({
                             {...buttonProps}
                             disableStyles={disableStyles}
                             glyph='navigation-down-arrow'
-                            option='light'
+                            option='transparent'
                             ref={ref} />
                     </InputGroup.Addon>
                 </InputGroup>

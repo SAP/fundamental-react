@@ -226,7 +226,7 @@ class DatePicker extends Component {
                                     aria-label={buttonLabel}
                                     disableStyles={disableStyles}
                                     glyph='calendar'
-                                    option='light' />
+                                    option='transparent' />
                             </InputGroup.Addon>
                         </InputGroup>
                     }

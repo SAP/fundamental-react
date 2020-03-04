@@ -63,70 +63,70 @@ export class PopoverComponent extends React.Component {
                         <div className='frDocs-tile__space-between'>
                             <Popover
                                 body={bodyContent}
-                                control={<Button glyph='navigation-up-arrow' option='light' />}
+                                control={<Button glyph='navigation-up-arrow' option='transparent' />}
                                 placement='top-start' />
 
                             <Popover
                                 body={bodyContent}
-                                control={<Button glyph='navigation-up-arrow' option='light' />}
+                                control={<Button glyph='navigation-up-arrow' option='transparent' />}
                                 placement='top' />
 
                             <Popover
                                 body={bodyContent}
-                                control={<Button glyph='navigation-up-arrow' option='light' />}
+                                control={<Button glyph='navigation-up-arrow' option='transparent' />}
                                 placement='top-end' />
                         </div>
                         <div className='frDocs-tile__break' />
                         <div className='frDocs-tile__space-between'>
                             <Popover
                                 body={bodyContent}
-                                control={<Button glyph='navigation-left-arrow' option='light' />}
+                                control={<Button glyph='navigation-left-arrow' option='transparent' />}
                                 placement='left-start' />
                             <Popover
                                 body={bodyContent}
-                                control={<Button glyph='navigation-right-arrow' option='light' />}
+                                control={<Button glyph='navigation-right-arrow' option='transparent' />}
                                 placement='right-start' />
                         </div>
                         <div className='frDocs-tile__break' />
                         <div className='frDocs-tile__space-between'>
                             <Popover
                                 body={bodyContent}
-                                control={<Button glyph='navigation-left-arrow' option='light' />}
+                                control={<Button glyph='navigation-left-arrow' option='transparent' />}
                                 placement='left' />
 
                             <Popover
                                 body={bodyContent}
-                                control={<Button glyph='navigation-right-arrow' option='light' />}
+                                control={<Button glyph='navigation-right-arrow' option='transparent' />}
                                 placement='right' />
                         </div>
                         <div className='frDocs-tile__break' />
                         <div className='frDocs-tile__space-between'>
                             <Popover
                                 body={bodyContent}
-                                control={<Button glyph='navigation-left-arrow' option='light' />}
+                                control={<Button glyph='navigation-left-arrow' option='transparent' />}
                                 placement='left-end' />
 
                             <Popover
                                 body={bodyContent}
-                                control={<Button glyph='navigation-right-arrow' option='light' />}
+                                control={<Button glyph='navigation-right-arrow' option='transparent' />}
                                 placement='right-end' />
                         </div>
                         <div className='frDocs-tile__break' />
                         <div className='frDocs-tile__space-between'>
                             <Popover
                                 body={bodyContent}
-                                control={<Button glyph='navigation-down-arrow' option='light' />}
+                                control={<Button glyph='navigation-down-arrow' option='transparent' />}
                                 placement='bottom-start' />
 
 
                             <Popover
                                 body={bodyContent}
-                                control={<Button glyph='navigation-down-arrow' option='light' />}
+                                control={<Button glyph='navigation-down-arrow' option='transparent' />}
                                 placement='bottom' />
 
                             <Popover
                                 body={bodyContent}
-                                control={<Button glyph='navigation-down-arrow' option='light' />}
+                                control={<Button glyph='navigation-down-arrow' option='transparent' />}
                                 placement='bottom-end' />
                         </div>
                     </>
@@ -167,13 +167,13 @@ export class PopoverComponent extends React.Component {
                     title='Disable Edge Detection'>
                     <Popover
                         body={bodyContent}
-                        control={<Button glyph='navigation-up-arrow' option='light' />}
+                        control={<Button glyph='navigation-up-arrow' option='transparent' />}
                         disableEdgeDetection
                         placement='top' />
 
                     <Popover
                         body={bodyContent}
-                        control={<Button glyph='navigation-down-arrow' option='light' />}
+                        control={<Button glyph='navigation-down-arrow' option='transparent' />}
                         disableEdgeDetection
                         placement='bottom' />
                 </Example>

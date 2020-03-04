@@ -9,7 +9,7 @@ exports[`<MessageStrip /> create basic MessageStrip 1`] = `
     <button
       aria-controls="j2ALl423"
       aria-label="Close"
-      className="fd-button fd-button--light fd-button--compact fd-message-strip__close"
+      className="fd-button fd-button--transparent fd-button--compact fd-message-strip__close"
       onClick={[Function]}
       type="button"
     />
@@ -38,7 +38,7 @@ exports[`<MessageStrip /> create basic MessageStrip 2`] = `
     <button
       aria-controls="j2ALl423"
       aria-label="Close"
-      className="fd-button fd-button--light fd-button--compact fd-message-strip__close"
+      className="fd-button fd-button--transparent fd-button--compact fd-message-strip__close"
       onClick={[Function]}
       type="button"
     />
