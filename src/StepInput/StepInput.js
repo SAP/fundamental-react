@@ -1,9 +1,12 @@
 import Button from '../Button/Button';
+import classnames from 'classnames';
 import { FORM_MESSAGE_TYPES } from '../utils/constants';
 import FormInput from '../Forms/FormInput';
+import FormMessage from '../Forms/_FormMessage';
 import InputGroup from '../InputGroup/InputGroup';
+import keycode from 'keycode';
 import PropTypes from 'prop-types';
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 
 const StepInput = React.forwardRef(({
     children,
@@ -24,45 +27,87 @@ const StepInput = React.forwardRef(({
     }, []);
     const [inputValue, updateInputValue] = useState(value);
 
-    const decreaseValue = () => {
+    const inputGroupClasses = classnames(
+        className,
+        'fd-input-group',
+        'fd-input-group--control',
+        {
+            'is-disabled': disabled,
+            [`is-${validationState?.state}`]: validationState ?.state
+        }
+    );
+
+    const decreaseValue = useCallback(() => {
         updateInputValue(inputValue - 1);
-    };
+    });
 
-    const increaseValue = () => {
+    const increaseValue = useCallback(() => {
         updateInputValue(inputValue + 1);
-    };
+    });
 
-    const onChangeInputValue = (event) => {
+    const onChangeInputValue = useCallback((event) => {
         const currentValue = event.target.value;
-        updateInputValue(+currentValue);
-    };
+        const isNumber = !isNaN(parseInt(currentValue, 10));
+        if (isNumber) {
+            updateInputValue(parseInt(currentValue, 10));
+        } else if (currentValue === '' || currentValue === '-' || currentValue === '+') {
+            updateInputValue(currentValue);
+        }
+    });
 
-    const minusBtn = (<Button
-        glyph='less'
-        onClick={decreaseValue}
-        option='light'
-        type='standard' />);
+    const onKeyDownInput = useCallback((event) => {
+        switch (keycode(event)) {
+            case 'up':
+                increaseValue();
+                event.preventDefault();
+                event.stopPropagation();
+                break;
+            case 'down':
+                decreaseValue();
+                event.preventDefault();
+                event.stopPropagation();
+                break;
+            default:
+        }
+    });
 
-    const plusBtn = (<Button
-        glyph='add'
-        onClick={increaseValue}
-        option='light'
-        type='standard' />);
+    const minusBtn = (
+        <InputGroup.Addon isButton>
+            <Button disabled={disabled}
+                glyph='less'
+                onClick={decreaseValue}
+                option='light'
+                type='standard' />
+        </InputGroup.Addon>
+    );
+
+    const plusBtn = (
+        <InputGroup.Addon isButton>
+            <Button disabled={disabled}
+                glyph='add'
+                onClick={increaseValue}
+                option='light'
+                type='standard' />
+        </InputGroup.Addon>
+    );
 
     return (
-        <div {...rest} className={className}
-            ref={ref}>
-            <InputGroup className='fd-input-group--control'>
-                <InputGroup.Addon isButton>
-                    {minusBtn}
-                </InputGroup.Addon>
-                <FormInput onChange={onChangeInputValue} placeholder='Type number here'
+        <>
+            <InputGroup className={inputGroupClasses} disabled={disabled}
+                ref={ref} {...rest}
+                onKeyDown={onKeyDownInput}>
+                {readOnly ? null : minusBtn}
+                <FormInput disabled={disabled} onChange={onChangeInputValue}
+                    placeholder={placeholder}
                     value={inputValue} />
-                <InputGroup.Addon isButton>
-                    {plusBtn}
-                </InputGroup.Addon>
+                {readOnly ? null : plusBtn}
             </InputGroup>
-        </div>
+            {validationState && (<FormMessage
+                disableStyles={disableStyles}
+                type={validationState.state}>
+                {validationState.text}
+            </FormMessage>)}
+        </>
     );
 });
 

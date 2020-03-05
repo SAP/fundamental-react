@@ -16,12 +16,74 @@ export const StepInputComponent = () => {
                 title='Step Input'>
                 <div>
                     <FormGroup>
-                        <FormLabel>Left Aligned Step Input</FormLabel>
+                        <FormLabel>Step Input</FormLabel>
                         <FormItem>
                             <StepInput />
                         </FormItem>
                     </FormGroup>
                 </div>
+            </Example>
+
+            <Example
+                centered
+                description={''}
+                title='Disabled'>
+                <div>
+                    <FormGroup>
+                        <FormLabel>Step Input</FormLabel>
+                        <FormItem>
+                            <StepInput disabled value={10} />
+                        </FormItem>
+                    </FormGroup>
+                </div>
+            </Example>
+
+            <Example
+                centered
+                description={''}
+                title='Validation States'>
+                <FormGroup>
+                    <FormLabel>Default</FormLabel>
+                    <FormItem>
+                        <StepInput placeholder='Default'
+                            validationState={{
+                                state: 'error',
+                                text: 'Test validation state'
+                            }} />
+                    </FormItem>
+                </FormGroup>
+                <FormGroup>
+                    <FormLabel>Warning</FormLabel>
+                    <FormItem>
+                        <StepInput placeholder='Warning'
+                            validationState={{
+                                state: 'warning',
+                                text: 'Test validation state'
+                            }} />
+                    </FormItem>
+
+                </FormGroup>
+                <FormGroup>
+                    <FormLabel>Success</FormLabel>
+                    <FormItem>
+                        <StepInput placeholder='Success'
+                            validationState={{
+                                state: 'success',
+                                text: 'Test validation state'
+                            }} />
+                    </FormItem>
+
+                </FormGroup>
+                <FormGroup>
+                    <FormLabel>Information</FormLabel>
+                    <FormItem>
+                        <StepInput placeholder='Information'
+                            validationState={{
+                                state: 'information',
+                                text: 'Test validation state'
+                            }} />
+                    </FormItem>
+                </FormGroup>
             </Example>
 
         </ComponentPage>
