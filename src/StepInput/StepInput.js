@@ -6,7 +6,7 @@ import FormMessage from '../Forms/_FormMessage';
 import InputGroup from '../InputGroup/InputGroup';
 import keycode from 'keycode';
 import PropTypes from 'prop-types';
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useCallback, useState } from 'react';
 
 const StepInput = React.forwardRef(({
     children,
@@ -19,11 +19,6 @@ const StepInput = React.forwardRef(({
     value,
     ...rest
 }, ref) => {
-    useEffect(() => {
-        if (!disableStyles) {
-            require('fundamental-styles/dist/input.css');
-        }
-    }, []);
     const [inputValue, updateInputValue] = useState(value);
 
     const inputGroupClasses = classnames(
@@ -91,11 +86,16 @@ const StepInput = React.forwardRef(({
 
     return (
         <>
-            <InputGroup className={inputGroupClasses} disabled={disabled}
+            <InputGroup className={inputGroupClasses}
+                disableStyles={disableStyles}
+                disabled={disabled}
                 ref={ref} {...rest}
                 onKeyDown={onKeyDownInput}>
                 {readOnly ? null : minusBtn}
-                <FormInput disabled={disabled} onChange={onChangeInputValue}
+                <FormInput
+                    disableStyles={disableStyles}
+                    disabled={disabled}
+                    onChange={onChangeInputValue}
                     placeholder={placeholder}
                     value={inputValue} />
                 {readOnly ? null : plusBtn}
