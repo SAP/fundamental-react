@@ -30,11 +30,19 @@ const StepInput = React.forwardRef(({
         }
     );
 
+    const ifValeEqualsSign = (val) => val === '' || val === '+' || val === '-';
+
     const decreaseValue = useCallback(() => {
+        if (ifValeEqualsSign(inputValue)) {
+            return;
+        }
         updateInputValue(inputValue - 1);
     });
 
     const increaseValue = useCallback(() => {
+        if (ifValeEqualsSign(inputValue)) {
+            return;
+        }
         updateInputValue(inputValue + 1);
     });
 
@@ -43,7 +51,7 @@ const StepInput = React.forwardRef(({
         const isNumber = !isNaN(parseInt(currentValue, 10));
         if (isNumber) {
             updateInputValue(parseInt(currentValue, 10));
-        } else if (currentValue === '' || currentValue === '-' || currentValue === '+') {
+        } else if (ifValeEqualsSign(currentValue)) {
             updateInputValue(currentValue);
         }
     });
