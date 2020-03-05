@@ -1,4 +1,5 @@
 import Button from '../Button/Button';
+import classnames from 'classnames';
 import { FORM_MESSAGE_TYPES } from '../utils/constants';
 import FormInput from '../Forms/FormInput';
 import FormMessage from '../Forms/_FormMessage';
@@ -20,17 +21,17 @@ class SearchInput extends Component {
         };
     }
 
-    onKeyPressHandler = event => {
+    handleKeyPress = event => {
         if (event.key === 'Enter') {
             this.props.onEnter(this.state.value);
         }
     };
 
-    listItemClickHandler = (event, item) => {
+    handleListItemClick = (event, item) => {
         item.callback ? item.callback() : null;
     };
 
-    onChangeHandler = event => {
+    handleChange = event => {
         let filteredResult;
         if (this.state.searchList) {
             filteredResult = this.state.searchList.filter(item =>
@@ -46,18 +47,20 @@ class SearchInput extends Component {
         });
     };
 
-    onClickHandler = () => {
-        if (!this.state.isExpanded) {
-            document.addEventListener('click', this.onOutsideClickHandler, false);
-        } else {
-            document.removeEventListener('click', this.onOutsideClickHandler, false);
-        }
+    handleClick = () => {
         this.setState(prevState => ({
             isExpanded: !prevState.isExpanded
         }));
     };
 
-    onSearchBtnHandler = () => {
+    handleClickOutside = () => {
+        this.setState({
+            isExpanded: false,
+            searchExpanded: false
+        });
+    };
+
+    handleSearchBtn = () => {
         this.setState(prevState => ({
             searchExpanded: !prevState.searchExpanded
         }));
@@ -69,7 +72,7 @@ class SearchInput extends Component {
         }
     };
 
-    onEscHandler = event => {
+    handleEsc = event => {
         if (
             (event.keyCode === 27 && this.state.isExpanded === true) ||
             (event.keyCode === 27 && this.state.searchExpanded === true)
@@ -84,35 +87,11 @@ class SearchInput extends Component {
         }
     };
 
-    onOutsideClickHandler = e => {
-        e.stopPropagation();
-        if (this.node && !this.node.contains(e.target)) {
-            if (this.state.isExpanded) {
-                this.setState({
-                    isExpanded: false
-                });
-
-                if (
-                    this.props.inShellbar &&
-                    this.state.searchExpanded &&
-                    !this.state.value
-                ) {
-                    this.setState({
-                        searchExpanded: false
-                    });
-                }
-            } else {
-                return;
-            }
-        }
-    };
     componentDidMount() {
-        document.addEventListener('keydown', this.onEscHandler, false);
-        document.addEventListener('click', this.onOutsideClickHandler, false);
+        document.addEventListener('keydown', this.handleEsc, false);
     }
     componentWillUnmount() {
-        document.removeEventListener('keydown', this.onEscHandler, false);
-        document.removeEventListener('click', this.onOutsideClickHandler, false);
+        document.removeEventListener('keydown', this.handleEsc, false);
     }
 
     render() {
@@ -136,6 +115,15 @@ class SearchInput extends Component {
             ...rest
         } = this.props;
 
+        let inputGroupClasses = inputGroupProps && inputGroupProps.className;
+
+        inputGroupClasses = !inShellbar ? classnames(
+            inputGroupClasses,
+            'fd-input-group--control',
+            {
+                [`is-${validationState?.state}`]: validationState?.state
+            }
+        ) : inputGroupClasses;
 
         const popoverBody = (
             <Menu disableStyles={disableStyles}>
@@ -146,7 +134,7 @@ class SearchInput extends Component {
                                 <li
                                     className='fd-menu__item'
                                     key={index}
-                                    onClick={(e) => this.listItemClickHandler(e, item)}>
+                                    onClick={(e) => this.handleListItemClick(e, item)}>
                                     <strong>{this.state.value}</strong>
                                     {this.state.value && this.state.value.length
                                         ? item.text.substring(this.state.value.length)
@@ -179,15 +167,16 @@ class SearchInput extends Component {
                     control={
                         <InputGroup
                             {...inputGroupProps}
+                            className={inputGroupClasses}
                             compact={compact}
                             disableStyles={disableStyles}
-                            validationState={!this.state.isExpanded && validationState}>
+                            validationState={!this.state.isExpanded ? validationState : null}>
                             <FormInput
                                 {...inputProps}
                                 disableStyles={disableStyles}
-                                onChange={this.onChangeHandler}
-                                onClick={() => this.onClickHandler()}
-                                onKeyPress={this.onKeyPressHandler}
+                                onChange={this.handleChange}
+                                onClick={this.handleClick}
+                                onKeyPress={this.handleKeyPress}
                                 placeholder={placeholder}
                                 value={this.state.value} />
 
@@ -196,8 +185,8 @@ class SearchInput extends Component {
                                     <Button {...searchBtnProps}
                                         disableStyles={disableStyles}
                                         glyph='search'
-                                        onClick={() => this.onClickHandler()}
-                                        option='light' />
+                                        onClick={this.handleClick}
+                                        option='transparent' />
                                 </InputGroup.Addon>
                             )}
                         </InputGroup>
@@ -205,6 +194,7 @@ class SearchInput extends Component {
                     disableKeyPressHandler
                     disableStyles={disableStyles}
                     noArrow
+                    onClickOutside={this.handleClickOutside}
                     widthSizingType='matchTarget' />
             </div>
         );

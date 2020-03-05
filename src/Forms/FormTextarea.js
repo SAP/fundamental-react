@@ -7,7 +7,6 @@ const FormTextarea = React.forwardRef(({ children, className, compact, disabled,
 
     useEffect(() => {
         if (!disableStyles) {
-            require('fundamental-styles/dist/fonts.css');
             require('fundamental-styles/dist/textarea.css');
         }
     }, []);

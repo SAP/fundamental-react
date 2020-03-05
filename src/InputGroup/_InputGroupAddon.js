@@ -27,7 +27,10 @@ const InputGroupAddon = ({
 
                 return React.cloneElement(child, {
                     compact,
-                    className: 'fd-input-group__button'
+                    className: classnames(
+                        child.props.className,
+                        'fd-input-group__button',
+                    )
                 });
             })}
         </span>

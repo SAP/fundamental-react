@@ -7,7 +7,6 @@ import React, { useEffect } from 'react';
 const FormInput = React.forwardRef(({ className, compact, disabled, id, name, placeholder, readOnly, type, value, validationState, disableStyles, ...props }, ref) => {
     useEffect(() => {
         if (!disableStyles) {
-            require('fundamental-styles/dist/fonts.css');
             require('fundamental-styles/dist/input.css');
         }
     }, []);

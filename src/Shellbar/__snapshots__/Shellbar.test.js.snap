@@ -167,7 +167,7 @@ exports[`<Shellbar /> create shellbar 3`] = `
               aria-controls="fd-shellbar-product-popover"
               aria-expanded={false}
               aria-haspopup={true}
-              className="fd-button fd-button--light fd-shellbar__button--menu fd-button--menu"
+              className="fd-button fd-button--transparent fd-shellbar__button--menu fd-button--menu"
               onClick={[Function]}
               onKeyPress={[Function]}
               role="button"
@@ -234,10 +234,10 @@ exports[`<Shellbar /> create shellbar 3`] = `
                   value=""
                 />
                 <span
-                  className="fd-input-group__addon fd-input-group__addon--button"
+                  className="fd-shellbar__input-group__addon fd-input-group__addon fd-input-group__addon--button"
                 >
                   <button
-                    className="fd-button fd-button--light sap-icon--search fd-input-group__button"
+                    className="fd-button fd-button--transparent sap-icon--search fd-shellbar__button fd-input-group__button"
                     onClick={[Function]}
                     type="button"
                   />
@@ -424,7 +424,7 @@ exports[`<Shellbar /> create shellbar 3`] = `
                 aria-controls="fd-shellbar-product-switch-popover"
                 aria-expanded={false}
                 aria-haspopup={true}
-                className="fd-button sap-icon--grid fd-product-switch__control"
+                className="fd-button sap-icon--grid fd-product-switch__control fd-shellbar__button"
                 onClick={[Function]}
                 onKeyPress={[Function]}
                 role="button"
@@ -473,7 +473,7 @@ exports[`<Shellbar /> create shellbar 4`] = `
               aria-controls="fd-shellbar-product-popover"
               aria-expanded={false}
               aria-haspopup={true}
-              className="fd-button fd-button--light fd-shellbar__button--menu fd-button--menu"
+              className="fd-button fd-button--transparent fd-shellbar__button--menu fd-button--menu"
               onClick={[Function]}
               onKeyPress={[Function]}
               role="button"
@@ -540,10 +540,10 @@ exports[`<Shellbar /> create shellbar 4`] = `
                   value=""
                 />
                 <span
-                  className="fd-input-group__addon fd-input-group__addon--button"
+                  className="fd-shellbar__input-group__addon fd-input-group__addon fd-input-group__addon--button"
                 >
                   <button
-                    className="fd-button fd-button--light sap-icon--search fd-input-group__button"
+                    className="fd-button fd-button--transparent sap-icon--search fd-shellbar__button fd-input-group__button"
                     onClick={[Function]}
                     type="button"
                   />
@@ -723,7 +723,7 @@ exports[`<Shellbar /> create shellbar 4`] = `
                 aria-controls="fd-shellbar-product-switch-popover"
                 aria-expanded={false}
                 aria-haspopup={true}
-                className="fd-button sap-icon--grid fd-product-switch__control"
+                className="fd-button sap-icon--grid fd-product-switch__control fd-shellbar__button"
                 onClick={[Function]}
                 onKeyPress={[Function]}
                 role="button"
@@ -772,7 +772,7 @@ exports[`<Shellbar /> create shellbar 5`] = `
               aria-controls="fd-shellbar-product-popover"
               aria-expanded={false}
               aria-haspopup={true}
-              className="fd-button fd-button--light fd-shellbar__button--menu fd-button--menu"
+              className="fd-button fd-button--transparent fd-shellbar__button--menu fd-button--menu"
               onClick={[Function]}
               onKeyPress={[Function]}
               role="button"
@@ -839,10 +839,10 @@ exports[`<Shellbar /> create shellbar 5`] = `
                   value=""
                 />
                 <span
-                  className="fd-input-group__addon fd-input-group__addon--button"
+                  className="fd-shellbar__input-group__addon fd-input-group__addon fd-input-group__addon--button"
                 >
                   <button
-                    className="fd-button fd-button--light sap-icon--search fd-input-group__button"
+                    className="fd-button fd-button--transparent sap-icon--search fd-shellbar__button fd-input-group__button"
                     onClick={[Function]}
                     type="button"
                   />
@@ -1002,7 +1002,7 @@ exports[`<Shellbar /> create shellbar 5`] = `
                 aria-controls="fd-shellbar-product-switch-popover"
                 aria-expanded={false}
                 aria-haspopup={true}
-                className="fd-button sap-icon--grid fd-product-switch__control"
+                className="fd-button sap-icon--grid fd-product-switch__control fd-shellbar__button"
                 onClick={[Function]}
                 onKeyPress={[Function]}
                 role="button"
@@ -1051,7 +1051,7 @@ exports[`<Shellbar /> create shellbar 6`] = `
               aria-controls="fd-shellbar-product-popover"
               aria-expanded={false}
               aria-haspopup={true}
-              className="fd-button fd-button--light fd-shellbar__button--menu fd-button--menu"
+              className="fd-button fd-button--transparent fd-shellbar__button--menu fd-button--menu"
               onClick={[Function]}
               onKeyPress={[Function]}
               role="button"
@@ -1118,10 +1118,10 @@ exports[`<Shellbar /> create shellbar 6`] = `
                   value=""
                 />
                 <span
-                  className="fd-input-group__addon fd-input-group__addon--button"
+                  className="fd-shellbar__input-group__addon fd-input-group__addon fd-input-group__addon--button"
                 >
                   <button
-                    className="fd-button fd-button--light sap-icon--search fd-input-group__button"
+                    className="fd-button fd-button--transparent sap-icon--search fd-shellbar__button fd-input-group__button"
                     onClick={[Function]}
                     type="button"
                   />
@@ -1291,7 +1291,7 @@ exports[`<Shellbar /> create shellbar 6`] = `
                 aria-controls="fd-shellbar-product-switch-popover"
                 aria-expanded={false}
                 aria-haspopup={true}
-                className="fd-button sap-icon--grid fd-product-switch__control"
+                className="fd-button sap-icon--grid fd-product-switch__control fd-shellbar__button"
                 onClick={[Function]}
                 onKeyPress={[Function]}
                 role="button"

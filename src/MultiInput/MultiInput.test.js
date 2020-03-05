@@ -98,7 +98,7 @@ describe('<MultiInput />', () => {
 
         // simulate click on dropdown button
         wrapper
-            .find('button.fd-button--light')
+            .find('button.fd-button--transparent')
             .simulate('click');
 
         // check if bShowList state is changed
@@ -113,7 +113,7 @@ describe('<MultiInput />', () => {
     test('add tag to tagList', () => {
         wrapper = mount(multiInput);
         wrapper
-            .find('button.fd-button--light')
+            .find('button.fd-button--transparent')
             .simulate('click');
 
         // check that no tags exist
@@ -139,7 +139,7 @@ describe('<MultiInput />', () => {
     test('remove tag from taglist by unchecking', () => {
         wrapper = mount(multiInput);
         wrapper
-            .find('button.fd-button--light')
+            .find('button.fd-button--transparent')
             .simulate('click');
 
         // check that no tags exist

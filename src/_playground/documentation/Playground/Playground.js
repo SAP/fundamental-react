@@ -4,7 +4,6 @@ import { Icon } from '../../../';
 import { Identifier } from '../../../';
 import { Image } from '../../../';
 import PropTypes from 'prop-types';
-import { Badge, Label, Status } from '../../../';
 import { FormGroup, FormItem, FormLabel, InputGroup } from '../../../';
 import React, { Component } from 'react';
 
@@ -303,42 +302,6 @@ class Playground extends Component {
 
       let componentToGenerate;
       switch (this.props.component) {
-          case 'badge':
-              if (this.state.childs.component === 'badge') {
-                  componentToGenerate = (
-                      <Badge
-                          modifier={this.state.childs.modifier}
-                          type={this.state.childs.type}>
-                          {this.state.childs.children}
-                      </Badge>
-                  );
-              } else if (this.state.childs.component === 'label') {
-                  componentToGenerate = (
-                      <Label
-                          modifier={this.state.childs.modifier}
-                          type={this.state.childs.type}>
-                          {this.state.childs.children}
-                      </Label>
-                  );
-              } else if (this.state.childs.component === 'status') {
-                  componentToGenerate = (
-                      <Status
-                          glyph={this.state.childs.glyph}
-                          type={this.state.childs.type}>
-                          {this.state.childs.children}
-                      </Status>
-                  );
-              } else {
-                  componentToGenerate = (
-                      <Badge
-                          modifier={this.state.childs.modifier}
-                          type={this.state.childs.type}>
-                          {this.state.childs.children}
-                      </Badge>
-                  );
-              }
-
-              break;
 
           case 'button':
               componentToGenerate = (
@@ -414,7 +377,7 @@ class Playground extends Component {
                                           .props.glyph,
                                       this.state.currentValues
                                   )}
-                                  option='light'>
+                                  option='transparent'>
                                   {this.retrieveValue(
                                       'children',
                                       this.state.childs.children[1].props.children.props.children

@@ -43,8 +43,8 @@ describe('<DatePicker />', () => {
         });
         document.dispatchEvent(event);
 
-        // check to make sure calendar is hidden
-        expect(wrapper.state('hidden')).toBeTruthy();
+        // check to make sure calendar is not expanded
+        expect(wrapper.state('isExpanded')).toBeFalsy();
     });
 
     test('check start date greater than end date for range', () => {
@@ -71,8 +71,8 @@ describe('<DatePicker />', () => {
         });
         document.dispatchEvent(event);
 
-        // check to make sure calendar is hidden
-        expect(wrapper.state('hidden')).toBeTruthy();
+        // check to make sure calendar is not expanded
+        expect(wrapper.state('isExpanded')).toBeFalsy();
     });
 
     test('entering start date and disabled end range dates', () => {
@@ -242,7 +242,7 @@ describe('<DatePicker />', () => {
             const blur = jest.fn();
             const element = mount(<DatePicker onBlur={blur} />);
 
-            element.find('button.fd-button--light.sap-icon--calendar').simulate('click');
+            element.find('button.fd-button--transparent.sap-icon--calendar').simulate('click');
 
             element.find('table.fd-calendar__table tbody.fd-calendar__group tr.fd-calendar__row td.fd-calendar__item:not(.fd-calendar__item--other-month)')
                 .at(0)
@@ -289,7 +289,7 @@ describe('<DatePicker />', () => {
             const element = mount(<DatePicker buttonProps={{ 'data-sample': 'Sample' }} />);
 
             expect(
-                element.find('button.fd-button--light.sap-icon--calendar').getDOMNode().attributes['data-sample'].value
+                element.find('button.fd-button--transparent.sap-icon--calendar').getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
         });
 

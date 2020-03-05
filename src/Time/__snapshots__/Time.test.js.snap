@@ -12,7 +12,7 @@ exports[`<Time /> create time component 1`] = `
     >
       <button
         aria-label="Increase hours"
-        className="fd-button fd-button--light sap-icon--navigation-up-arrow"
+        className="fd-button fd-button--transparent sap-icon--navigation-up-arrow"
         onClick={[Function]}
         type="button"
       />
@@ -32,7 +32,7 @@ exports[`<Time /> create time component 1`] = `
     >
       <button
         aria-label="Decrease hours"
-        className="fd-button fd-button--light sap-icon--navigation-down-arrow"
+        className="fd-button fd-button--transparent sap-icon--navigation-down-arrow"
         onClick={[Function]}
         type="button"
       />
@@ -46,7 +46,7 @@ exports[`<Time /> create time component 1`] = `
     >
       <button
         aria-label="Increase minutes"
-        className="fd-button fd-button--light sap-icon--navigation-up-arrow"
+        className="fd-button fd-button--transparent sap-icon--navigation-up-arrow"
         onClick={[Function]}
         type="button"
       />
@@ -66,7 +66,7 @@ exports[`<Time /> create time component 1`] = `
     >
       <button
         aria-label="Decrease minutes"
-        className="fd-button fd-button--light sap-icon--navigation-down-arrow"
+        className="fd-button fd-button--transparent sap-icon--navigation-down-arrow"
         onClick={[Function]}
         type="button"
       />
@@ -80,7 +80,7 @@ exports[`<Time /> create time component 1`] = `
     >
       <button
         aria-label="Increase seconds"
-        className="fd-button fd-button--light sap-icon--navigation-up-arrow"
+        className="fd-button fd-button--transparent sap-icon--navigation-up-arrow"
         onClick={[Function]}
         type="button"
       />
@@ -100,7 +100,7 @@ exports[`<Time /> create time component 1`] = `
     >
       <button
         aria-label="Decrease seconds"
-        className="fd-button fd-button--light sap-icon--navigation-down-arrow"
+        className="fd-button fd-button--transparent sap-icon--navigation-down-arrow"
         onClick={[Function]}
         type="button"
       />
@@ -122,7 +122,7 @@ exports[`<Time /> create time component 2`] = `
     >
       <button
         aria-label="Increase hours"
-        className="fd-button fd-button--light sap-icon--navigation-up-arrow"
+        className="fd-button fd-button--transparent sap-icon--navigation-up-arrow"
         onClick={[Function]}
         type="button"
       />
@@ -142,7 +142,7 @@ exports[`<Time /> create time component 2`] = `
     >
       <button
         aria-label="Decrease hours"
-        className="fd-button fd-button--light sap-icon--navigation-down-arrow"
+        className="fd-button fd-button--transparent sap-icon--navigation-down-arrow"
         onClick={[Function]}
         type="button"
       />
@@ -156,7 +156,7 @@ exports[`<Time /> create time component 2`] = `
     >
       <button
         aria-label="Increase minutes"
-        className="fd-button fd-button--light sap-icon--navigation-up-arrow"
+        className="fd-button fd-button--transparent sap-icon--navigation-up-arrow"
         onClick={[Function]}
         type="button"
       />
@@ -176,7 +176,7 @@ exports[`<Time /> create time component 2`] = `
     >
       <button
         aria-label="Decrease minutes"
-        className="fd-button fd-button--light sap-icon--navigation-down-arrow"
+        className="fd-button fd-button--transparent sap-icon--navigation-down-arrow"
         onClick={[Function]}
         type="button"
       />
@@ -190,7 +190,7 @@ exports[`<Time /> create time component 2`] = `
     >
       <button
         aria-label="Increase seconds"
-        className="fd-button fd-button--light sap-icon--navigation-up-arrow"
+        className="fd-button fd-button--transparent sap-icon--navigation-up-arrow"
         onClick={[Function]}
         type="button"
       />
@@ -210,7 +210,7 @@ exports[`<Time /> create time component 2`] = `
     >
       <button
         aria-label="Decrease seconds"
-        className="fd-button fd-button--light sap-icon--navigation-down-arrow"
+        className="fd-button fd-button--transparent sap-icon--navigation-down-arrow"
         onClick={[Function]}
         type="button"
       />
@@ -232,7 +232,7 @@ exports[`<Time /> create time component 3`] = `
     >
       <button
         aria-label="Increase hours"
-        className="fd-button fd-button--light sap-icon--navigation-up-arrow"
+        className="fd-button fd-button--transparent sap-icon--navigation-up-arrow"
         onClick={[Function]}
         type="button"
       />
@@ -252,7 +252,7 @@ exports[`<Time /> create time component 3`] = `
     >
       <button
         aria-label="Decrease hours"
-        className="fd-button fd-button--light sap-icon--navigation-down-arrow"
+        className="fd-button fd-button--transparent sap-icon--navigation-down-arrow"
         onClick={[Function]}
         type="button"
       />
@@ -266,7 +266,7 @@ exports[`<Time /> create time component 3`] = `
     >
       <button
         aria-label="Increase minutes"
-        className="fd-button fd-button--light sap-icon--navigation-up-arrow"
+        className="fd-button fd-button--transparent sap-icon--navigation-up-arrow"
         onClick={[Function]}
         type="button"
       />
@@ -286,7 +286,7 @@ exports[`<Time /> create time component 3`] = `
     >
       <button
         aria-label="Decrease minutes"
-        className="fd-button fd-button--light sap-icon--navigation-down-arrow"
+        className="fd-button fd-button--transparent sap-icon--navigation-down-arrow"
         onClick={[Function]}
         type="button"
       />
@@ -300,7 +300,7 @@ exports[`<Time /> create time component 3`] = `
     >
       <button
         aria-label="Increase seconds"
-        className="fd-button fd-button--light sap-icon--navigation-up-arrow"
+        className="fd-button fd-button--transparent sap-icon--navigation-up-arrow"
         onClick={[Function]}
         type="button"
       />
@@ -320,7 +320,7 @@ exports[`<Time /> create time component 3`] = `
     >
       <button
         aria-label="Decrease seconds"
-        className="fd-button fd-button--light sap-icon--navigation-down-arrow"
+        className="fd-button fd-button--transparent sap-icon--navigation-down-arrow"
         onClick={[Function]}
         type="button"
       />
@@ -342,7 +342,7 @@ exports[`<Time /> create time component 4`] = `
     >
       <button
         aria-label="Increase hours"
-        className="fd-button fd-button--light sap-icon--navigation-up-arrow"
+        className="fd-button fd-button--transparent sap-icon--navigation-up-arrow"
         onClick={[Function]}
         type="button"
       />
@@ -362,7 +362,7 @@ exports[`<Time /> create time component 4`] = `
     >
       <button
         aria-label="Decrease hours"
-        className="fd-button fd-button--light sap-icon--navigation-down-arrow"
+        className="fd-button fd-button--transparent sap-icon--navigation-down-arrow"
         onClick={[Function]}
         type="button"
       />
@@ -376,7 +376,7 @@ exports[`<Time /> create time component 4`] = `
     >
       <button
         aria-label="Increase minutes"
-        className="fd-button fd-button--light sap-icon--navigation-up-arrow"
+        className="fd-button fd-button--transparent sap-icon--navigation-up-arrow"
         onClick={[Function]}
         type="button"
       />
@@ -396,7 +396,7 @@ exports[`<Time /> create time component 4`] = `
     >
       <button
         aria-label="Decrease minutes"
-        className="fd-button fd-button--light sap-icon--navigation-down-arrow"
+        className="fd-button fd-button--transparent sap-icon--navigation-down-arrow"
         onClick={[Function]}
         type="button"
       />
@@ -410,7 +410,7 @@ exports[`<Time /> create time component 4`] = `
     >
       <button
         aria-label="Increase seconds"
-        className="fd-button fd-button--light sap-icon--navigation-up-arrow"
+        className="fd-button fd-button--transparent sap-icon--navigation-up-arrow"
         onClick={[Function]}
         type="button"
       />
@@ -430,7 +430,7 @@ exports[`<Time /> create time component 4`] = `
     >
       <button
         aria-label="Decrease seconds"
-        className="fd-button fd-button--light sap-icon--navigation-down-arrow"
+        className="fd-button fd-button--transparent sap-icon--navigation-down-arrow"
         onClick={[Function]}
         type="button"
       />
@@ -452,7 +452,7 @@ exports[`<Time /> create time component 5`] = `
     >
       <button
         aria-label="Increase hours"
-        className="fd-button fd-button--light sap-icon--navigation-up-arrow"
+        className="fd-button fd-button--transparent sap-icon--navigation-up-arrow"
         onClick={[Function]}
         type="button"
       />
@@ -472,7 +472,7 @@ exports[`<Time /> create time component 5`] = `
     >
       <button
         aria-label="Decrease hours"
-        className="fd-button fd-button--light sap-icon--navigation-down-arrow"
+        className="fd-button fd-button--transparent sap-icon--navigation-down-arrow"
         onClick={[Function]}
         type="button"
       />
@@ -486,7 +486,7 @@ exports[`<Time /> create time component 5`] = `
     >
       <button
         aria-label="Increase minutes"
-        className="fd-button fd-button--light sap-icon--navigation-up-arrow"
+        className="fd-button fd-button--transparent sap-icon--navigation-up-arrow"
         onClick={[Function]}
         type="button"
       />
@@ -506,7 +506,7 @@ exports[`<Time /> create time component 5`] = `
     >
       <button
         aria-label="Decrease minutes"
-        className="fd-button fd-button--light sap-icon--navigation-down-arrow"
+        className="fd-button fd-button--transparent sap-icon--navigation-down-arrow"
         onClick={[Function]}
         type="button"
       />
@@ -520,7 +520,7 @@ exports[`<Time /> create time component 5`] = `
     >
       <button
         aria-label="Increase seconds"
-        className="fd-button fd-button--light sap-icon--navigation-up-arrow"
+        className="fd-button fd-button--transparent sap-icon--navigation-up-arrow"
         onClick={[Function]}
         type="button"
       />
@@ -540,7 +540,7 @@ exports[`<Time /> create time component 5`] = `
     >
       <button
         aria-label="Decrease seconds"
-        className="fd-button fd-button--light sap-icon--navigation-down-arrow"
+        className="fd-button fd-button--transparent sap-icon--navigation-down-arrow"
         onClick={[Function]}
         type="button"
       />
@@ -554,7 +554,7 @@ exports[`<Time /> create time component 5`] = `
     >
       <button
         aria-label="Increase period"
-        className="fd-button fd-button--light sap-icon--navigation-up-arrow"
+        className="fd-button fd-button--transparent sap-icon--navigation-up-arrow"
         onClick={[Function]}
         type="button"
       />
@@ -573,7 +573,7 @@ exports[`<Time /> create time component 5`] = `
     >
       <button
         aria-label="Decrease period"
-        className="fd-button fd-button--light sap-icon--navigation-down-arrow"
+        className="fd-button fd-button--transparent sap-icon--navigation-down-arrow"
         onClick={[Function]}
         type="button"
       />
@@ -650,7 +650,7 @@ exports[`<Time /> create time component 7`] = `
     >
       <button
         aria-label="Increase hours"
-        className="fd-button fd-button--light sap-icon--navigation-up-arrow"
+        className="fd-button fd-button--transparent sap-icon--navigation-up-arrow"
         onClick={[Function]}
         type="button"
       />
@@ -670,7 +670,7 @@ exports[`<Time /> create time component 7`] = `
     >
       <button
         aria-label="Decrease hours"
-        className="fd-button fd-button--light sap-icon--navigation-down-arrow"
+        className="fd-button fd-button--transparent sap-icon--navigation-down-arrow"
         onClick={[Function]}
         type="button"
       />
@@ -684,7 +684,7 @@ exports[`<Time /> create time component 7`] = `
     >
       <button
         aria-label="Increase minutes"
-        className="fd-button fd-button--light sap-icon--navigation-up-arrow"
+        className="fd-button fd-button--transparent sap-icon--navigation-up-arrow"
         onClick={[Function]}
         type="button"
       />
@@ -704,7 +704,7 @@ exports[`<Time /> create time component 7`] = `
     >
       <button
         aria-label="Decrease minutes"
-        className="fd-button fd-button--light sap-icon--navigation-down-arrow"
+        className="fd-button fd-button--transparent sap-icon--navigation-down-arrow"
         onClick={[Function]}
         type="button"
       />
@@ -727,7 +727,7 @@ exports[`<Time /> create time component 8`] = `
     >
       <button
         aria-label="Increase hours"
-        className="fd-button fd-button--light sap-icon--navigation-up-arrow is-disabled"
+        className="fd-button fd-button--transparent sap-icon--navigation-up-arrow is-disabled"
         disabled={true}
         onClick={[Function]}
         type="button"
@@ -749,7 +749,7 @@ exports[`<Time /> create time component 8`] = `
     >
       <button
         aria-label="Decrease hours"
-        className="fd-button fd-button--light sap-icon--navigation-down-arrow is-disabled"
+        className="fd-button fd-button--transparent sap-icon--navigation-down-arrow is-disabled"
         disabled={true}
         onClick={[Function]}
         type="button"
@@ -764,7 +764,7 @@ exports[`<Time /> create time component 8`] = `
     >
       <button
         aria-label="Increase minutes"
-        className="fd-button fd-button--light sap-icon--navigation-up-arrow is-disabled"
+        className="fd-button fd-button--transparent sap-icon--navigation-up-arrow is-disabled"
         disabled={true}
         onClick={[Function]}
         type="button"
@@ -786,7 +786,7 @@ exports[`<Time /> create time component 8`] = `
     >
       <button
         aria-label="Decrease minutes"
-        className="fd-button fd-button--light sap-icon--navigation-down-arrow is-disabled"
+        className="fd-button fd-button--transparent sap-icon--navigation-down-arrow is-disabled"
         disabled={true}
         onClick={[Function]}
         type="button"
@@ -801,7 +801,7 @@ exports[`<Time /> create time component 8`] = `
     >
       <button
         aria-label="Increase seconds"
-        className="fd-button fd-button--light sap-icon--navigation-up-arrow is-disabled"
+        className="fd-button fd-button--transparent sap-icon--navigation-up-arrow is-disabled"
         disabled={true}
         onClick={[Function]}
         type="button"
@@ -823,7 +823,7 @@ exports[`<Time /> create time component 8`] = `
     >
       <button
         aria-label="Decrease seconds"
-        className="fd-button fd-button--light sap-icon--navigation-down-arrow is-disabled"
+        className="fd-button fd-button--transparent sap-icon--navigation-down-arrow is-disabled"
         disabled={true}
         onClick={[Function]}
         type="button"

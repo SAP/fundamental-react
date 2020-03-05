@@ -1,6 +1,6 @@
 import Button from '../Button/Button';
 import classnames from 'classnames';
-import Counter from '../Badge/Counter';
+import Counter from '../Counter/Counter';
 import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import Icon from '../Icon/Icon';
 import Identifier from '../Identifier/Identifier';
@@ -159,7 +159,7 @@ class Shellbar extends Component {
                                 control={
                                     <Button
                                         className='fd-shellbar__button--menu fd-button--menu'
-                                        option='light'>
+                                        option='transparent'>
                                         <span className='fd-shellbar__title'>
                                             {productTitle}
                                         </span>
@@ -187,7 +187,8 @@ class Shellbar extends Component {
                             <SearchInput
                                 className='fd-shellbar__input-group'
                                 disableStyles={disableStyles}
-                                inputGroupProps={{ className: 'fd-shellbar__input-group__addon' }}
+                                inShellbar
+                                inputGroupAddonProps={{ className: 'fd-shellbar__input-group__addon' }}
                                 inputGroupProps={{ className: 'fd-shellbar__input-group' }}
                                 inputProps={{ className: 'fd-shellbar__input-group__input' }}
                                 onEnter={searchInput.onSearch}
@@ -438,7 +439,7 @@ class Shellbar extends Component {
                                             </ul>
                                         </div>
                                     }
-                                    control={<Button className='fd-product-switch__control'
+                                    control={<Button className='fd-product-switch__control fd-shellbar__button'
                                         disableStyles={disableStyles}
                                         glyph='grid' />}
                                     disableEdgeDetection

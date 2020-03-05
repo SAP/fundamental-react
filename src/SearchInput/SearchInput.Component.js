@@ -64,6 +64,27 @@ export class SearchInputComponent extends Component {
                         searchList={this.searchData} />
                 </Example>
 
+                <Example
+                    centered
+                    title='Validation States'>
+                    <SearchInput
+                        placeholder='Enter a fruit'
+                        searchList={this.searchData}
+                        validationState={{ state: 'error', text: 'Test validation state' }} />
+                    <SearchInput
+                        placeholder='Enter a fruit'
+                        searchList={this.searchData}
+                        validationState={{ state: 'warning', text: 'Test validation state' }} />
+                    <SearchInput
+                        placeholder='Enter a fruit'
+                        searchList={this.searchData}
+                        validationState={{ state: 'success', text: 'Test validation state' }} />
+                    <SearchInput
+                        placeholder='Enter a fruit'
+                        searchList={this.searchData}
+                        validationState={{ state: 'information', text: 'Test validation state' }} />
+                </Example>
+
             </ComponentPage>
         );
     }

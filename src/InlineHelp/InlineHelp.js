@@ -8,7 +8,6 @@ const InlineHelp = React.forwardRef(({ text, placement, className, contentClassN
     useEffect(() => {
         if (!disableStyles) {
             require('fundamental-styles/dist/icon.css');
-            require('fundamental-styles/dist/fonts.css');
             require('fundamental-styles/dist/inline-help.css');
         }
     }, []);
