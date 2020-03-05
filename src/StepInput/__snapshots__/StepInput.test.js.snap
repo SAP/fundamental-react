@@ -13,14 +13,14 @@ exports[`<InputGroup /> create input group items 1`] = `
     className="fd-form-item"
   >
     <div
-      className="fd-input-group fd-input-group--control fd-input-group"
+      className="fd-input-group--control fd-input-group"
       onKeyDown={[Function]}
     >
       <span
         className="fd-input-group__addon fd-input-group__addon--button"
       >
         <button
-          className="fd-button fd-button--light fd-button--standard sap-icon--less fd-input-group__button"
+          className="fd-button fd-button--transparent fd-button--standard sap-icon--less fd-input-group__button"
           onClick={[Function]}
           type="button"
         />
@@ -35,7 +35,7 @@ exports[`<InputGroup /> create input group items 1`] = `
         className="fd-input-group__addon fd-input-group__addon--button"
       >
         <button
-          className="fd-button fd-button--light fd-button--standard sap-icon--add fd-input-group__button"
+          className="fd-button fd-button--transparent fd-button--standard sap-icon--add fd-input-group__button"
           onClick={[Function]}
           type="button"
         />
