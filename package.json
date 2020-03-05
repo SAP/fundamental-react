@@ -1,6 +1,6 @@
 {
   "name": "fundamental-react",
-  "version": "0.8.0-rc.32",
+  "version": "0.8.0",
   "private": false,
   "description": "SAP Fundamental Library, implemented in React",
   "license": "Apache-2.0",
@@ -12,7 +12,7 @@
   },
   "scripts": {
     "build-doc:netlify": "npm run build && NETLIFY=true npm run build-doc",
-    "build-doc": "node scripts/build.js && cp build/index.html build/404.html",
+    "build-doc": "node scripts/copy-assets.js && node scripts/build.js && cp build/index.html build/404.html",
     "build:copy-files": "cp -rf package.json README.md NOTICE.txt LICENSE.txt CHANGELOG.md lib",
     "build:index": "babel-node devtools/buildIndexFiles.js",
     "build:cjs": "cross-env NODE_ENV=production BABEL_ENV=cjs babel src --ignore \"src/**/*.spec.js\",\"src/**/*.test.js\",\"src/**/*.Component.js\",\"src/_playground/*\",\"src/**/*.stories.js\" --out-dir lib",
@@ -31,10 +31,10 @@
     "release": "./scripts/publish-release.sh",
     "size": "npm run build && size-limit",
     "size:debug": "npm run build && size-limit --why",
-    "start": "npm run build && node scripts/start.js",
+    "start": "npm run build && node scripts/copy-assets.js && node scripts/start.js",
     "start:playground": "npm run storybook",
     "std-version": "standard-version -m \"chore(release): version %s build ${TRAVIS_BUILD_NUMBER} [ci skip]\"",
-    "storybook": "start-storybook -p 12123",
+    "storybook": "node scripts/copy-assets.js && start-storybook -p 12123 -s src/_playground/static/",
     "storybook:ci": "npm run storybook -- --ci --quiet",
     "test:coverage:watch": "npm run test:coverage -- --watch",
     "test:coverage": "npm run test:dev -- --coverage",
@@ -49,7 +49,7 @@
     "@babel/runtime": "^7.8.0",
     "chain-function": "^1.0.1",
     "classnames": "^2.2.6",
-    "fundamental-styles": "0.7.0-rc.13",
+    "fundamental-styles": "0.8.0-rc.10",
     "keycode": "^2.2.0",
     "moment": "^2.24.0",
     "prop-types": "^15.7.1",
@@ -70,6 +70,7 @@
     "@babel/plugin-transform-runtime": "^7.8.0",
     "@babel/preset-env": "^7.8.0",
     "@babel/preset-react": "^7.8.0",
+    "@sap-theming/theming-base-content": "^11.1.17",
     "@size-limit/preset-big-lib": "^4.0.1",
     "@storybook/addon-a11y": "^5.3.8",
     "@storybook/addon-knobs": "^5.3.8",
@@ -93,7 +94,7 @@
     "chalk": "2.4.2",
     "core-js": "^3.1.4",
     "coveralls": "^3.0.2",
-    "cross-env": "^6.0.3",
+    "cross-env": "^7.0.0",
     "css-loader": "3.2.0",
     "dotenv": "8.2.0",
     "dotenv-expand": "5.1.0",
@@ -159,7 +160,8 @@
   },
   "peerDependencies": {
     "react": "^16.8.0",
-    "react-dom": "^16.8.0"
+    "react-dom": "^16.8.0",
+    "@sap-theming/theming-base-content": "^11.1.17"
   },
   "pre-commit": {
     "colors": true,

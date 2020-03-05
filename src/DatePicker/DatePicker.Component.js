@@ -36,6 +36,19 @@ export const DatePickerComponent = () => {
                     enableRangeSelection />
             </Example>
 
+            <Example
+                centered
+                title='Validation States'>
+                <DatePicker
+                    validationState={{ state: 'error', text: 'Test validation state' }} />
+                <DatePicker
+                    validationState={{ state: 'warning', text: 'Test validation state' }} />
+                <DatePicker
+                    validationState={{ state: 'success', text: 'Test validation state' }} />
+                <DatePicker
+                    validationState={{ state: 'information', text: 'Test validation state' }} />
+            </Example>
+
         </ComponentPage>
     );
 };

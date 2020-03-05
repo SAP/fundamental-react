@@ -5,6 +5,7 @@ import {
     boolean,
     date,
     optionsKnob,
+    select,
     text,
     withKnobs
 } from '@storybook/addon-knobs';
@@ -47,11 +48,31 @@ storiesOf('Components|DatePicker', module)
             disableWeekends={boolean('disable weekends', false)}
             disabledDates={[dateKnobToDate('disable between dates (1)', disabledDateFirstDefault),
                 dateKnobToDate('disable between dates (2)', disabledDateSecondDefault)]}
-            locale={text('locale', 'en')} />
+            locale={text('locale', 'en')}
+            validationState={select('Validation State',
+                {
+                    'none': '',
+                    'success': { state: 'success', text: 'placeholder text' },
+                    'error': { state: 'error', text: 'placeholder text' },
+                    'information': { state: 'information', text: 'placeholder text' },
+                    'warning': { state: 'warning', text: 'placeholder text' }
+                }
+            )} />
+    ))
+    .add('Validation State | Error', () => (
+        <DatePicker validationState={{ state: 'error', text: 'Test validation state' }} />
+    ))
+    .add('Validation State | Warning', () => (
+        <DatePicker validationState={{ state: 'warning', text: 'Test validation state' }} />
+    ))
+    .add('Validation State | Information', () => (
+        <DatePicker validationState={{ state: 'information', text: 'Test validation state' }} />
+    ))
+    .add('Validation State | Success', () => (
+        <DatePicker validationState={{ state: 'success', text: 'Test validation state' }} />
     ))
     .add('disable styles', () => (
-        <DatePicker
-            disableStyles />
+        <DatePicker disableStyles />
     ))
     .add('range selection', () => (
         <DatePicker enableRangeSelection />

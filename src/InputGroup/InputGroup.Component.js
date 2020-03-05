@@ -132,7 +132,7 @@ export const InputGroupComponent = () => {
                             <InputGroup >
                                 <FormInput placeholder='Type text here' />
                                 <InputGroup.Addon isButton>
-                                    <Button option='light'>Button</Button>
+                                    <Button option='transparent'>Button</Button>
                                 </InputGroup.Addon>
                             </InputGroup>
                         </FormItem>
@@ -145,7 +145,7 @@ export const InputGroupComponent = () => {
                             <InputGroup compact>
                                 <FormInput placeholder='Type text here' />
                                 <InputGroup.Addon isButton>
-                                    <Button option='light'>Button</Button>
+                                    <Button option='transparent'>Button</Button>
                                 </InputGroup.Addon>
                             </InputGroup>
                         </FormItem>
@@ -160,7 +160,7 @@ export const InputGroupComponent = () => {
                                 <InputGroup.Addon isButton>
                                     <Button
                                         glyph='navigation-down-arrow'
-                                        option='light' />
+                                        option='transparent' />
                                 </InputGroup.Addon>
                             </InputGroup>
                         </FormItem>
@@ -175,7 +175,7 @@ export const InputGroupComponent = () => {
                                 <InputGroup.Addon isButton>
                                     <Button
                                         glyph='navigation-down-arrow'
-                                        option='light' />
+                                        option='transparent' />
                                 </InputGroup.Addon>
                             </InputGroup>
                         </FormItem>

@@ -25,7 +25,7 @@ export const ContextualMenuComponent = () => {
                             </Menu.List>
                         </Menu>
                     }
-                    control={<Button glyph='vertical-grip' option='light' />}
+                    control={<Button glyph='vertical-grip' option='transparent' />}
                     noArrow />
             </Example>
 
@@ -57,7 +57,7 @@ export const ContextualMenuComponent = () => {
                             </Menu.List>
                         </Menu>
                     }
-                    control={<Button option='light'>More</Button>}
+                    control={<Button option='transparent'>More</Button>}
                     noArrow />
             </Example>
 

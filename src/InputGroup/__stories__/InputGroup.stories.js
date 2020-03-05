@@ -32,7 +32,7 @@ storiesOf('Components|InputGroup', module)
             <InputGroup.Addon isButton>
                 <Button
                     glyph='navigation-down-arrow'
-                    option='light' />
+                    option='transparent' />
             </InputGroup.Addon>
         </InputGroup>
     ))
@@ -43,7 +43,7 @@ storiesOf('Components|InputGroup', module)
             <InputGroup.Addon isButton>
                 <Button
                     glyph='navigation-down-arrow'
-                    option='light' />
+                    option='transparent' />
             </InputGroup.Addon>
         </InputGroup>
     ))
@@ -52,7 +52,7 @@ storiesOf('Components|InputGroup', module)
             <InputGroup.Addon isButton>
                 <Button
                     glyph='navigation-down-arrow'
-                    option='light' />
+                    option='transparent' />
             </InputGroup.Addon>
             <FormInput />
         </InputGroup>
@@ -63,7 +63,7 @@ storiesOf('Components|InputGroup', module)
             <InputGroup.Addon isButton>
                 <Button
                     glyph='navigation-down-arrow'
-                    option='light' />
+                    option='transparent' />
             </InputGroup.Addon>
         </InputGroup>
     ))

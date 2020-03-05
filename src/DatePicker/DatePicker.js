@@ -1,6 +1,9 @@
 import Button from '../Button/Button';
 import Calendar from '../Calendar/Calendar';
+import classnames from 'classnames';
+import { FORM_MESSAGE_TYPES } from '../utils/constants';
 import FormInput from '../Forms/FormInput';
+import FormMessage from '../Forms/_FormMessage';
 import InputGroup from '../InputGroup/InputGroup';
 import { isEnabledDate } from '../utils/dateUtils';
 import moment from 'moment';
@@ -15,6 +18,7 @@ class DatePicker extends Component {
         const formattedDate = props.defaultValue.length > 0 ?
             moment(props.defaultValue, ISO_DATE_FORMAT).format(this.getLocaleDateFormat()) : '';
         this.state = {
+            isExpanded: false,
             selectedDate: formattedDate.length === 0 ? null : moment(formattedDate, this.getLocaleDateFormat()),
             arrSelectedDates: [],
             formattedDate
@@ -79,15 +83,16 @@ class DatePicker extends Component {
         });
     }
 
-    clickOutside = () => {
+    handleClick = () => {
+        this.setState({ isExpanded: !this.state.isExpanded });
+    };
+
+    handleOutsideClickAndEscape = () => {
         this.validateDates();
         this.setState({
-            hidden: true
+            isExpanded: false
         }, () => {
-            this.props.onBlur({
-                date: this.state.selectedDate,
-                formattedDate: this.state.formattedDate
-            });
+            this._handleBlur();
         });
     };
 
@@ -116,6 +121,7 @@ class DatePicker extends Component {
         if (closeCalendar) {
             const popover = this.popoverRef && this.popoverRef.current;
             popover && popover.handleEscapeKey();
+            this.setState({ isExpanded: false });
         }
     }
 
@@ -148,42 +154,68 @@ class DatePicker extends Component {
             locale,
             localizedText,
             onBlur,
+            validationState,
             ...props
         } = this.props;
+
+        const inputGroupClass = classnames(
+            'fd-input-group--control',
+            {
+                [`is-${validationState?.state}`]: validationState?.state
+            },
+            className
+        );
 
         return (
             <div
                 {...props}
-                className={className}
-                ref={component => (this.component = component)}>
+                className={className}>
                 <Popover
                     body={
-                        <Calendar
-                            blockedDates={blockedDates}
-                            customDate={
-                                enableRangeSelection
-                                    ? this.state.arrSelectedDates
-                                    : this.state.selectedDate
+                        <>
+                            {
+                                validationState &&
+                                <FormMessage
+                                    disableStyles={disableStyles}
+                                    type={validationState.state}>
+                                    {validationState.text}
+                                </FormMessage>
                             }
-                            disableAfterDate={disableAfterDate}
-                            disableBeforeDate={disableBeforeDate}
-                            disableFutureDates={disableFutureDates}
-                            disablePastDates={disablePastDates}
-                            disableStyles={disableStyles}
-                            disableWeekday={disableWeekday}
-                            disableWeekends={disableWeekends}
-                            disabledDates={disabledDates}
-                            enableRangeSelection={enableRangeSelection}
-                            focusOnInit
-                            locale={locale}
-                            localizedText={localizedText}
-                            onChange={this.updateDate}
-                            ref={this.calendarRef} />
+                            <Calendar
+                                blockedDates={blockedDates}
+                                customDate={
+                                    enableRangeSelection
+                                        ? this.state.arrSelectedDates
+                                        : this.state.selectedDate
+                                }
+                                disableAfterDate={disableAfterDate}
+                                disableBeforeDate={disableBeforeDate}
+                                disableFutureDates={disableFutureDates}
+                                disablePastDates={disablePastDates}
+                                disableStyles={disableStyles}
+                                disableWeekday={disableWeekday}
+                                disableWeekends={disableWeekends}
+                                disabledDates={disabledDates}
+                                enableRangeSelection={enableRangeSelection}
+                                focusOnInit
+                                locale={locale}
+                                localizedText={localizedText}
+                                onChange={this.updateDate}
+                                ref={this.calendarRef} />
+                        </>
                     }
                     control={
-                        <InputGroup compact={compact}>
+                        <InputGroup
+                            aria-expanded={this.state.isExpanded}
+                            aria-haspopup='true'
+                            className={inputGroupClass}
+                            compact={compact}
+                            disableStyles={disableStyles}
+                            onClick={this.handleClick}
+                            validationState={!this.state.isExpanded ? validationState : null} >
                             <FormInput
                                 {...inputProps}
+                                disableStyles={disableStyles}
                                 onBlur={this._handleBlur}
                                 onChange={this.modifyDate}
                                 onKeyPress={this.sendUpdate}
@@ -194,15 +226,15 @@ class DatePicker extends Component {
                                     aria-label={buttonLabel}
                                     disableStyles={disableStyles}
                                     glyph='calendar'
-                                    option='light' />
+                                    option='transparent' />
                             </InputGroup.Addon>
                         </InputGroup>
                     }
                     disableKeyPressHandler
                     disableStyles={disableStyles}
                     noArrow
-                    onClickOutside={this.clickOutside}
-                    placement='bottom-end'
+                    onClickOutside={this.handleOutsideClickAndEscape}
+                    onEscapeKey={this.handleOutsideClickAndEscape}
                     ref={this.popoverRef} />
             </div>
         );
@@ -220,6 +252,10 @@ DatePicker.propTypes = {
     enableRangeSelection: PropTypes.bool,
     inputProps: PropTypes.object,
     locale: PropTypes.string,
+    validationState: PropTypes.shape({
+        state: PropTypes.oneOf(FORM_MESSAGE_TYPES),
+        text: PropTypes.string
+    }),
     onBlur: PropTypes.func
 };
 

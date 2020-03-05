@@ -39,6 +39,10 @@ const ComboboxInput = React.forwardRef(({
         onClick(e);
     };
 
+    const handleClickOutside = () => {
+        setIsExpanded(false);
+    };
+
     return (
         <Popover
             {...popoverProps}
@@ -63,7 +67,7 @@ const ComboboxInput = React.forwardRef(({
                     disableStyles={disableStyles}
                     disabled={disabled}
                     onClick={handleClick}
-                    validationState={!isExpanded && validationState}>
+                    validationState={!isExpanded ? validationState : null}>
                     <FormInput
                         {...inputProps}
                         compact={compact}
@@ -74,7 +78,7 @@ const ComboboxInput = React.forwardRef(({
                             {...buttonProps}
                             disableStyles={disableStyles}
                             glyph='navigation-down-arrow'
-                            option='light'
+                            option='transparent'
                             ref={ref} />
                     </InputGroup.Addon>
                 </InputGroup>
@@ -83,6 +87,7 @@ const ComboboxInput = React.forwardRef(({
             disableStyles={disableStyles}
             disabled={disabled}
             noArrow
+            onClickOutside={handleClickOutside}
             useArrowKeyNavigation
             widthSizingType='matchTarget' />
     );

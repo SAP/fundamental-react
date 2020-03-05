@@ -47,10 +47,6 @@ if (!checkRequiredFiles([paths.appHtml, paths.appIndexJs])) {
     process.exit(1);
 }
 
-fs.copyFile('README.md', 'src/_playground/documentation/Home/README.md', (err) => {
-    if (err) throw err;
-});
-
 // Process CLI arguments
 const argv = process.argv.slice(2);
 const writeStatsJson = argv.indexOf('--stats') !== -1;

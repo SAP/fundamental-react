@@ -24,7 +24,6 @@ class MultiInput extends Component {
 
     componentDidMount() {
         if (!this.props.disableStyles) {
-            require('fundamental-styles/dist/fonts.css');
             require('fundamental-styles/dist/tokenizer.css');
         }
     }
@@ -116,6 +115,10 @@ class MultiInput extends Component {
         });
     };
 
+    handleClickOutside = () => {
+        this.setState({ bShowList: false });
+    }
+
     render() {
         const {
             popoverProps,
@@ -192,7 +195,7 @@ class MultiInput extends Component {
                         disableStyles={disableStyles}
                         disabled={disabled}
                         onClick={this.showHideTagList}
-                        validationState={!this.state.bShowList && validationState}>
+                        validationState={!this.state.bShowList ? validationState : null}>
                         <div {...tagProps} className={tokenizerClassNames}>
                             <div className='fd-tokenizer__inner'>
                                 {this.state.tags.length > 0 && this.createTags()}
@@ -209,13 +212,14 @@ class MultiInput extends Component {
                                 {...buttonProps}
                                 disableStyles={disableStyles}
                                 glyph='value-help'
-                                option='light' />
+                                option='transparent' />
                         </InputGroup.Addon>
                     </InputGroup>
                 }
                 disableStyles={disableStyles}
                 disabled={disabled}
                 noArrow
+                onClickOutside={this.handleClickOutside}
                 widthSizingType='matchTarget' />
         );
     }

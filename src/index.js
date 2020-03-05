@@ -1,9 +1,6 @@
 export { default as ActionBar } from './ActionBar/ActionBar';
-export { default as Badge } from './Badge/Badge';
-export { default as Label } from './Badge/Label';
-export { default as Status } from './Badge/Status';
 export { default as Checkbox } from './Forms/Checkbox';
-export { default as Counter } from './Badge/Counter';
+export { default as Counter } from './Counter/Counter';
 export { default as Breadcrumb } from './Breadcrumb/Breadcrumb';
 export { default as Button } from './Button/Button';
 export { default as ButtonGroup } from './Button/ButtonGroup';
@@ -25,6 +22,7 @@ export { default as FormLegend } from './Forms/FormLegend';
 export { default as Icon } from './Icon/Icon';
 export { default as Identifier } from './Identifier/Identifier';
 export { default as Image } from './Image/Image';
+export { default as InfoLabel } from './InfoLabel/InfoLabel';
 export { default as InlineHelp } from './InlineHelp/InlineHelp';
 export { default as InputGroup } from './InputGroup/InputGroup';
 export { default as Link } from './Link/Link';
