@@ -21,14 +21,13 @@ const StepInput = React.forwardRef(({
 }, ref) => {
     useEffect(() => {
         if (!disableStyles) {
-            require('fundamental-styles/dist/input-group.css');
+            require('fundamental-styles/dist/input.css');
         }
     }, []);
     const [inputValue, updateInputValue] = useState(value);
 
     const inputGroupClasses = classnames(
         className,
-        'fd-input-group',
         'fd-input-group--control',
         {
             'is-disabled': disabled,
@@ -75,7 +74,7 @@ const StepInput = React.forwardRef(({
             <Button disabled={disabled}
                 glyph='less'
                 onClick={decreaseValue}
-                option='light'
+                option='transparent'
                 type='standard' />
         </InputGroup.Addon>
     );
@@ -85,7 +84,7 @@ const StepInput = React.forwardRef(({
             <Button disabled={disabled}
                 glyph='add'
                 onClick={increaseValue}
-                option='light'
+                option='transparent'
                 type='standard' />
         </InputGroup.Addon>
     );
