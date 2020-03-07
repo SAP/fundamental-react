@@ -12,7 +12,7 @@ export const StepInputComponent = () => {
 
             <Example
                 centered
-                description={'The Input with is typically used to enter numbers.The value can be increased or reduced with the provided controls.'}
+                description={'The StepInput is typically used used to enter numbers.The value can be increased or reduced with the provided controls.'}
                 title='Step Input'>
                 <div>
                     <FormGroup>
@@ -43,9 +43,9 @@ export const StepInputComponent = () => {
                 description={''}
                 title='Validation States'>
                 <FormGroup>
-                    <FormLabel>Default</FormLabel>
+                    <FormLabel>Error</FormLabel>
                     <FormItem>
-                        <StepInput placeholder='Default'
+                        <StepInput placeholder='Error'
                             validationState={{
                                 state: 'error',
                                 text: 'Test validation state'

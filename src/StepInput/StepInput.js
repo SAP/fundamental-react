@@ -1,5 +1,6 @@
 import Button from '../Button/Button';
 import classnames from 'classnames';
+import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import { FORM_MESSAGE_TYPES } from '../utils/constants';
 import FormInput from '../Forms/FormInput';
 import FormMessage from '../Forms/_FormMessage';
@@ -15,6 +16,7 @@ const StepInput = React.forwardRef(({
     disableStyles,
     placeholder,
     readOnly,
+    localizedText,
     validationState,
     value,
     ...rest
@@ -73,7 +75,7 @@ const StepInput = React.forwardRef(({
     });
 
     const minusBtn = (
-        <InputGroup.Addon isButton>
+        <InputGroup.Addon aria-label={localizedText.stepUpLabel} isButton>
             <Button disabled={disabled}
                 glyph='less'
                 onClick={decreaseValue}
@@ -83,7 +85,7 @@ const StepInput = React.forwardRef(({
     );
 
     const plusBtn = (
-        <InputGroup.Addon isButton>
+        <InputGroup.Addon aria-label={localizedText.stepDownLabel} isButton>
             <Button disabled={disabled}
                 glyph='add'
                 onClick={increaseValue}
@@ -124,6 +126,10 @@ StepInput.propTypes = {
     className: PropTypes.string,
     disabled: PropTypes.bool,
     disableStyles: PropTypes.bool,
+    localizedText: CustomPropTypes.i18n({
+        stepUpLabel: PropTypes.string,
+        stepDownLabel: PropTypes.string
+    }),
     placeholder: PropTypes.string,
     readOnly: PropTypes.bool,
     validationState: PropTypes.shape({
@@ -134,7 +140,12 @@ StepInput.propTypes = {
 };
 
 StepInput.defaultProps = {
-    value: 0
+    value: 0,
+    localizedText: {
+        stepUpLabel: 'Step Up',
+        stepDownLabel: 'Step Down'
+    }
+
 };
 
 export default StepInput;
