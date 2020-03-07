@@ -17,6 +17,7 @@ exports[`<InputGroup /> create input group items 1`] = `
       onKeyDown={[Function]}
     >
       <span
+        aria-label="Step Up"
         className="fd-input-group__addon fd-input-group__addon--button"
       >
         <button
@@ -32,6 +33,7 @@ exports[`<InputGroup /> create input group items 1`] = `
         value={0}
       />
       <span
+        aria-label="Step Down"
         className="fd-input-group__addon fd-input-group__addon--button"
       >
         <button
