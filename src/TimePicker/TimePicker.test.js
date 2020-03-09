@@ -9,6 +9,7 @@ describe('<TimePicker />', () => {
     const showHour = <TimePicker format12Hours showHour />;
     const showMinute = <TimePicker format12Hours showMinute />;
     const showSecond = <TimePicker format12Hours showSecond />;
+    const timepickerWithInitialValue = <TimePicker value='10:30:34 pm' />;
     const showHourMinute = (
         <TimePicker format12Hours={false} showHour={false}
             showMinute />
@@ -71,6 +72,10 @@ describe('<TimePicker />', () => {
         expect(tree).toMatchSnapshot();
 
         component = renderer.create(showHourSecond);
+        tree = component.toJSON();
+        expect(tree).toMatchSnapshot();
+
+        component = renderer.create(timepickerWithInitialValue);
         tree = component.toJSON();
         expect(tree).toMatchSnapshot();
     });
@@ -263,6 +268,18 @@ describe('<TimePicker />', () => {
             .simulate('blur');
 
         expect(wrapper.state('value')).toEqual('');
+    });
+
+    test('check for initial value', () => {
+        let wrapper = mount(timepickerWithInitialValue);
+        expect(wrapper.state('value')).toEqual('10:30:34 pm');
+        // check valid input
+        wrapper
+            .find('input[type="text"]')
+            .at(0)
+            .simulate('change', { target: { value: '12:34:56 am' } });
+
+        expect(wrapper.state('value')).toEqual('12:34:56 am');
     });
 
     describe('onChange callback', () => {
