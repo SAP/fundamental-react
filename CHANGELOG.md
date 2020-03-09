@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.8.1-rc.1"></a>
+## [0.8.1-rc.1](https://github.com/SAP/fundamental-react/compare/v0.8.1-rc.0...v0.8.1-rc.1) (2020-03-09)
+
+
+### Bug Fixes
+
+* new StepInput component ([#914](https://github.com/SAP/fundamental-react/issues/914)) ([43c7340](https://github.com/SAP/fundamental-react/commit/43c7340))
+
+
+
 <a name="0.8.1-rc.0"></a>
 ## [0.8.1-rc.0](https://github.com/SAP/fundamental-react/compare/v0.8.0...v0.8.1-rc.0) (2020-03-05)
 
