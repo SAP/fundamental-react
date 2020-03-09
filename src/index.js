@@ -48,3 +48,4 @@ export { default as TreeView } from './TreeView/TreeView';
 export { default as Time } from './Time/Time';
 export { default as TimePicker } from './TimePicker/TimePicker';
 export { default as Shellbar } from './Shellbar/Shellbar';
+export { default as StepInput } from './StepInput/StepInput';
