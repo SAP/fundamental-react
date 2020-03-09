@@ -217,7 +217,7 @@ TimePicker.defaultProps = {
 TimePicker.propDescriptions = {
     ...Time.propDescriptions,
     timeProps: 'Additional props to be spread to the `Time` component.',
-    value: 'Initial time value for the input.'
+    value: 'Initial time value for the input. Accepted time format : hh:mm:ss am/pm, Eg: 10:32:30 am'
 };
 
 export default TimePicker;
