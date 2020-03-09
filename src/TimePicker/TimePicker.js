@@ -93,22 +93,7 @@ class TimePicker extends Component {
         }
         return time;
     }
-    // formatPlaceHolder = () => {
-    //   let value = '';
-    //   if (this.state.showHour) {
-    //     value = 'hh';
-    //   }
-    //   if (this.state.showMinute) {
-    //     value = value ? value + ':mm' : 'mm';
-    //   }
-    //   if (this.state.showSecond) {
-    //     value = value ? value + ':ss' : 'ss';
-    //   }
-    //   if (this.state.format12Hours) {
-    //     value = value + ' am/pm';
-    //   }
-    //   return value;
-    // };
+
     render() {
         const {
             disableStyles,
