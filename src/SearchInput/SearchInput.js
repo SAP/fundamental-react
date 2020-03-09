@@ -15,10 +15,14 @@ class SearchInput extends Component {
         this.state = {
             isExpanded: false,
             searchExpanded: false,
-            value: '',
-            searchList: this.props.searchList,
-            filteredResult: this.props.searchList
+            value: props.inputProps && props.inputProps.value ? props.inputProps.value : '',
+            searchList: props.searchList,
+            filteredResult: props.inputProps && props.inputProps.value ? this.filterList(props.searchList, props.inputProps.value) : props.searchList
         };
+    }
+
+    filterList = (list, query) => {
+        return list.filter((item) => item.text.toLowerCase().startsWith(query.toLowerCase()));
     }
 
     handleKeyPress = event => {
@@ -34,9 +38,7 @@ class SearchInput extends Component {
     handleChange = event => {
         let filteredResult;
         if (this.state.searchList) {
-            filteredResult = this.state.searchList.filter(item =>
-                item.text.toLowerCase().startsWith(event.target.value.toLowerCase())
-            );
+            filteredResult = this.filterList(this.state.searchList, event.target.value);
         }
         this.setState({
             value: event.target.value,

@@ -50,6 +50,7 @@ export class SearchInputComponent extends Component {
                     centered
                     title='Search Inputs'>
                     <SearchInput
+                        inputProps={{ value: 'apple' }}
                         onEnter={term => this.getInputValue(term)}
                         placeholder='Enter a fruit'
                         searchList={this.searchData} />
