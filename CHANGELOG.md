@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.8.1-rc.2"></a>
+## [0.8.1-rc.2](https://github.com/SAP/fundamental-react/compare/v0.8.1-rc.1...v0.8.1-rc.2) (2020-03-11)
+
+
+### Bug Fixes
+
+* set initial time value for the time picker input ([#917](https://github.com/SAP/fundamental-react/issues/917)) ([fa9e9ea](https://github.com/SAP/fundamental-react/commit/fa9e9ea))
+
+
+
 <a name="0.8.1-rc.1"></a>
 ## [0.8.1-rc.1](https://github.com/SAP/fundamental-react/compare/v0.8.1-rc.0...v0.8.1-rc.1) (2020-03-09)
 
