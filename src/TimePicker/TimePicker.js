@@ -11,18 +11,19 @@ class TimePicker extends Component {
         this.CLOCK = [this.props.localizedText.meridiemAM, this.props.localizedText.meridiemPM];
         const { time } = this.props;
         let value = '';
+        let defaultTime = typeof props.value !== 'undefined' ? this.getFormattedTime(props.value) : {};
         this.state = {
             time: {
-                hour: time.hour,
-                minute: time.minute,
-                second: time.second,
-                meridiem: time.meridiem
+                hour: typeof defaultTime.hour !== 'undefined' ? defaultTime.hour : time.hour,
+                minute: typeof defaultTime.minute !== 'undefined' ? defaultTime.minute : time.minute,
+                second: typeof defaultTime.second !== 'undefined' ? defaultTime.second : time.second,
+                meridiem: typeof defaultTime.meridiem !== 'undefined' ? defaultTime.meridiem : time.meridiem
             },
             showHour: props.showHour,
             showMinute: props.showMinute,
             showSecond: props.showSecond,
             format12Hours: props.format12Hours,
-            value: '',
+            value: typeof props.value !== 'undefined' ? props.value : '',
             disabled: props.disabled,
             placeholder: '',
             popoverId: props.id ? props.id + '-popover' : '',
@@ -75,22 +76,24 @@ class TimePicker extends Component {
         }
         return value;
     };
-    // formatPlaceHolder = () => {
-    //   let value = '';
-    //   if (this.state.showHour) {
-    //     value = 'hh';
-    //   }
-    //   if (this.state.showMinute) {
-    //     value = value ? value + ':mm' : 'mm';
-    //   }
-    //   if (this.state.showSecond) {
-    //     value = value ? value + ':ss' : 'ss';
-    //   }
-    //   if (this.state.format12Hours) {
-    //     value = value + ' am/pm';
-    //   }
-    //   return value;
-    // };
+    getFormattedTime = value => {
+        let time = {};
+        let timeArray = value.split(':');
+        if (typeof timeArray[0] !== 'undefined' && this.props.showHour) {
+            time.hour = timeArray[0];
+        }
+        if (typeof timeArray[1] !== 'undefined' && this.props.showMinute) {
+            time.minute = timeArray[1];
+        }
+        if (typeof timeArray[2] !== 'undefined' && this.props.showSecond) {
+            time.second = timeArray[2].match(/\d+/)[0];
+            if (this.props.format12Hours) {
+                time.meridiem = timeArray[2].indexOf(this.props.localizedText.meridiemAM) !== -1 ? 0 : 1;
+            }
+        }
+        return time;
+    }
+
     render() {
         const {
             disableStyles,
@@ -199,7 +202,7 @@ TimePicker.defaultProps = {
 TimePicker.propDescriptions = {
     ...Time.propDescriptions,
     timeProps: 'Additional props to be spread to the `Time` component.',
-    value: 'Initial time value for the input.'
+    value: 'Initial time value for the input. Accepted time format : hh:mm:ss am/pm, Eg: 10:32:30 am'
 };
 
 export default TimePicker;

@@ -19,6 +19,10 @@ export const TimePickerComponent = () => {
                 title='12-Hour Clock'>
                 <TimePicker format12Hours />
             </Example>
+            <Example
+                title='Time Picker with initial value'>
+                <TimePicker format12Hours value='10:30:34 am' />
+            </Example>
 
             <Example
                 title='Time Picker With No Seconds'>
