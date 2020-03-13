@@ -1,4 +1,5 @@
 import DatePicker from '../DatePicker';
+import FormLabel from '../../Forms/FormLabel';
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import {
@@ -33,6 +34,21 @@ const weekdayOptions = {
     Friday: 'Friday',
     Saturday: 'Saturday'
 };
+const dateFormatOptionsLabel = 'Date Format';
+const dateFormatOptions = {
+    'MM/DD/YYYY': 'MM/DD/YYYY',
+    'MM-DD-YYYY': 'MM-DD-YYYY',
+    'MM.DD.YYYY': 'MM.DD.YYYY',
+    'DD/MM/YYYY': 'DD/MM/YYYY',
+    'DD-MM-YYYY': 'DD-MM-YYYY',
+    'DD.MM.YYYY': 'DD.MM.YYYY',
+    'YYYY/MM/DD': 'YYYY/MM/DD',
+    'YYYY-MM-DD': 'YYYY-MM-DD',
+    'YYYY.MM.DD': 'YYYY.MM.DD',
+    None: null
+};
+const dateFormatDefaultValue = 'YYYY.MM.DD';
+const dateFormatGroupId = 'GROUP-DATE-FORMAT';
 
 storiesOf('Components|DatePicker', module)
     .addDecorator(withKnobs)
@@ -79,4 +95,19 @@ storiesOf('Components|DatePicker', module)
     ))
     .add('compact', () => (
         <DatePicker compact />
+    ))
+    .add('dateFormat', () => (
+        <>
+            <FormLabel
+                htmlFor='customDateFormatField'>
+            Custom Date Format Example
+            </FormLabel>
+            <DatePicker
+                dateFormat={
+                    select(dateFormatOptionsLabel, dateFormatOptions, dateFormatDefaultValue, dateFormatGroupId)
+                }
+                inputProps={{
+                    id: 'customDateFormatField'
+                }} />
+        </>
     ));
