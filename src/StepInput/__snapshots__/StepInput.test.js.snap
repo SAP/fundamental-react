@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<InputGroup /> create input group items 1`] = `
+<div
+  className="fd-form-group"
+>
+  <label
+    className="fd-form-label"
+  >
+    Step Input
+  </label>
+  <div
+    className="fd-form-item"
+  >
+    <div
+      className="fd-input-group--control fd-input-group"
+      onKeyDown={[Function]}
+    >
+      <span
+        aria-label="Step Up"
+        className="fd-input-group__addon fd-input-group__addon--button"
+      >
+        <button
+          className="fd-button fd-button--transparent fd-button--standard sap-icon--less fd-input-group__button"
+          onClick={[Function]}
+          type="button"
+        />
+      </span>
+      <input
+        className="fd-input fd-input-group__input"
+        onChange={[Function]}
+        type="text"
+        value={0}
+      />
+      <span
+        aria-label="Step Down"
+        className="fd-input-group__addon fd-input-group__addon--button"
+      >
+        <button
+          className="fd-button fd-button--transparent fd-button--standard sap-icon--add fd-input-group__button"
+          onClick={[Function]}
+          type="button"
+        />
+      </span>
+    </div>
+  </div>
+</div>
+`;

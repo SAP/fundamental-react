@@ -39,6 +39,7 @@ import { ShellbarComponent } from '../Shellbar/Shellbar.Component';
 import { SideNav } from '../SideNavigation/';
 import { SideNavigationComponent } from '../SideNavigation/SideNav.Component';
 import sortBy from 'sort-by';
+import { StepInputComponent } from '../StepInput/StepInput.Component';
 import { SwitchComponent } from '../Switch/Switch.Component';
 import { TableComponent } from '../Table/Table.Component';
 import { TabsComponent } from '../Tabs/Tabs.Component';
@@ -297,6 +298,12 @@ const routes = [
         url: '/treeview',
         name: 'Tree View',
         component: TreeViewComponent,
+        section: 'Components'
+    },
+    {
+        url: '/stepInput',
+        name: 'Step Input',
+        component: StepInputComponent,
         section: 'Components'
     }
 ];

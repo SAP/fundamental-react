@@ -464,3 +464,49 @@ exports[`<TimePicker /> create time picker 10`] = `
   </div>
 </div>
 `;
+
+exports[`<TimePicker /> create time picker 11`] = `
+<div
+  onChange={[Function]}
+>
+  <div
+    className="fd-popover"
+    id=""
+  >
+    <div
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      onTouchStart={[Function]}
+    >
+      <div
+        className="fd-popover__control"
+      >
+        <div
+          className="fd-input-group"
+          onClick={[Function]}
+        >
+          <input
+            className="fd-input fd-input-group__input"
+            onBlur={[Function]}
+            onChange={[Function]}
+            placeholder="hh:mm:ss"
+            type="text"
+            value="10:30:34 pm"
+          />
+          <span
+            className="fd-input-group__addon fd-input-group__addon--button"
+          >
+            <button
+              aria-controls="rthHR811"
+              aria-expanded="false"
+              aria-haspopup="true"
+              className="fd-button fd-button--transparent sap-icon--fob-watch fd-input-group__button"
+              type="button"
+            />
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
