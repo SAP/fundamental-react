@@ -15,9 +15,9 @@ class SearchInput extends Component {
         this.state = {
             isExpanded: false,
             searchExpanded: false,
-            value: props.inputProps && props.inputProps.value ? props.inputProps.value : '',
+            value: props.inputProps?.value ? props.inputProps.value : '',
             searchList: props.searchList,
-            filteredResult: props.inputProps && props.inputProps.value ? this.filterList(props.searchList, props.inputProps.value) : props.searchList
+            filteredResult: props.inputProps?.value ? this.filterList(props.searchList, props.inputProps.value) : props.searchList
         };
     }
 
