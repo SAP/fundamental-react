@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.8.1-rc.3"></a>
+## [0.8.1-rc.3](https://github.com/SAP/fundamental-react/compare/v0.8.1-rc.2...v0.8.1-rc.3) (2020-03-13)
+
+
+### Bug Fixes
+
+* added condition for default value for SearchInput ([#918](https://github.com/SAP/fundamental-react/issues/918)) ([0599b3c](https://github.com/SAP/fundamental-react/commit/0599b3c))
+
+
+
 <a name="0.8.1-rc.2"></a>
 ## [0.8.1-rc.2](https://github.com/SAP/fundamental-react/compare/v0.8.1-rc.1...v0.8.1-rc.2) (2020-03-11)
 
