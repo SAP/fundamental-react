@@ -5,13 +5,13 @@ import { mount } from 'enzyme';
 import React from 'react';
 
 describe('<DatePicker />', () => {
-    const defaultDatePicker = <DatePicker />;
+    const defaultDatePicker = <DatePicker dateFormat='MM/DD/YYYY' />;
     const disabledFuturePicker = <DatePicker disableFutureDates />;
     const disabledFutureRangePicker = <DatePicker disableFutureDates enableRangeSelection />;
     const compactDatePicker = <DatePicker className='blue' compact />;
-    const rangeDatePicker = <DatePicker enableRangeSelection />;
+    const rangeDatePicker = <DatePicker dateFormat='MM/DD/YYYY' enableRangeSelection />;
     const compactRangeDatepicker = <DatePicker compact enableRangeSelection />;
-    const prePopulatedDatepicker = <DatePicker defaultValue='2020-03-13' />;
+    const prePopulatedDatepicker = <DatePicker dateFormat='MM/DD/YYYY' defaultValue='03/13/2020' />;
     let wrapper;
 
     afterAll(() => {
