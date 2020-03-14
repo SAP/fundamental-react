@@ -9,23 +9,68 @@ import { isEnabledDate } from '../utils/dateUtils';
 import moment from 'moment';
 import Popover from '../Popover/Popover';
 import PropTypes from 'prop-types';
+import { saneDateLookup } from './saneDateLookup';
 import React, { Component } from 'react';
 
 const ISO_DATE_FORMAT = 'YYYY-MM-DD';
 class DatePicker extends Component {
     constructor(props) {
         super(props);
-        const formattedDate = props.defaultValue.length > 0 ?
-            moment(props.defaultValue, ISO_DATE_FORMAT).format(this.getConfiguredDateFormat()) : '';
+        const formattedDate = props.defaultValue.length > 0 ? this.getFormattedDateStr(props.defaultValue) : '';
         this.state = {
             isExpanded: false,
-            selectedDate: formattedDate.length === 0 ? null : moment(formattedDate, this.getConfiguredDateFormat()),
+            selectedDate: formattedDate.length === 0 ? null : moment(formattedDate, props.dateFormat),
             arrSelectedDates: [],
             formattedDate
         };
 
         this.calendarRef = React.createRef();
         this.popoverRef = React.createRef();
+    }
+
+    /**
+     * Function tries to format any date string into the format specified by
+     * props.dateFormat (or ISO_DATE_FORMAT as fallback).
+     * It will try to use multiple similar formats, defined in saneDateLookup, to
+     * create a Moment.js date object from given dateString.
+     * It will return an empty string if Moment.js is unable to create a valid
+     * date object from given string (for e.g. text only strings).
+     * @param  {String} dateString to format.
+     * @returns {String} formatted date string.
+     */
+    getFormattedDateStr = (dateString) => {
+        if (dateString) {
+            const momentDateObj = this.getMomentDateObj(dateString);
+            if (momentDateObj && momentDateObj.isValid()) {
+                const { dateFormat } = this.props;
+                return momentDateObj.format(dateFormat ? dateFormat : ISO_DATE_FORMAT);
+            } else {
+                return '';
+            }
+        }
+        return dateString;
+    }
+    /**
+     * Function to create a Moment.js date object from given dateString.
+     * It will try to use multiple similar formats, defined in saneDateLookup, to
+     * parse the given dateString and props.locale
+     * @param  {String} dateString to parse.
+     * @returns {Object} Moment.js date object.
+     */
+    getMomentDateObj(dateString) {
+        return moment(dateString, this.getSaneFormats(), this.props.locale, true);
+    }
+    /**
+     * Get the different date formats allowed for user input.
+     * These formats are based on props.dateFormat
+     * If no entry for props.dateFormat found in saneDateLookup,
+     * it returns the confiured format as string.
+     *
+     * @returns {Array} collection of date formats allowed for input.
+     */
+    getSaneFormats = () =>{
+        const { dateFormat } = this.props;
+        return saneDateLookup[dateFormat] ? saneDateLookup[dateFormat] : dateFormat;
     }
 
     modifyDate = (e) => {
@@ -43,7 +88,7 @@ class DatePicker extends Component {
     }
 
     validateDates = () => {
-        const longDateFormat = this.getConfiguredDateFormat();
+        const longDateFormat = this.getSaneFormats();
 
         if (this.props.enableRangeSelection) {
             const dateRange = this.state.formattedDate.split('-');
@@ -97,13 +142,12 @@ class DatePicker extends Component {
     };
 
     updateDate = (date) => {
-        const longDateFormat = this.getConfiguredDateFormat();
         let closeCalendar = false;
 
         if (this.props.enableRangeSelection) {
-            let formatDate = date[0].format(longDateFormat);
+            let formatDate = this.getFormattedDateStr(date[0]);
             if (!!date[1]) {
-                formatDate += '-' + date[1].format(longDateFormat);
+                formatDate += '-' + this.getFormattedDateStr(date[1]);
                 closeCalendar = true;
             }
             this.setState({
@@ -114,7 +158,7 @@ class DatePicker extends Component {
             closeCalendar = true;
             this.setState({
                 selectedDate: date,
-                formattedDate: date.format(longDateFormat)
+                formattedDate: this.getFormattedDateStr(date)
             });
         }
 
@@ -125,12 +169,13 @@ class DatePicker extends Component {
         }
     }
 
-    getConfiguredDateFormat = () =>{
-        const { dateFormat, locale } = this.props;
-        return dateFormat ? dateFormat : moment.localeData(locale).longDateFormat('L');
-    }
-
     _handleBlur = () => {
+        this.setState(
+            {
+                date: this.state.selectedDate,
+                formattedDate: this.getFormattedDateStr(this.state.formattedDate)
+            }
+        );
         this.props.onBlur({
             date: this.state.selectedDate,
             formattedDate: this.state.formattedDate
@@ -144,6 +189,7 @@ class DatePicker extends Component {
             buttonProps,
             className,
             compact,
+            dateFormat,
             disableAfterDate,
             disableBeforeDate,
             disabledDates,
@@ -222,7 +268,7 @@ class DatePicker extends Component {
                                 onBlur={this._handleBlur}
                                 onChange={this.modifyDate}
                                 onKeyPress={this.sendUpdate}
-                                placeholder={this.getConfiguredDateFormat()}
+                                placeholder={dateFormat ? dateFormat : ISO_DATE_FORMAT}
                                 value={this.state.formattedDate} />
                             <InputGroup.Addon isButton>
                                 <Button {...buttonProps}
@@ -266,6 +312,7 @@ DatePicker.propTypes = {
 DatePicker.defaultProps = {
     buttonLabel: 'Choose date',
     defaultValue: '',
+    dateFormat: ISO_DATE_FORMAT,
     locale: 'en',
     onBlur: () => {}
 };

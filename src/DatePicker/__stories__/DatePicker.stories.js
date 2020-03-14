@@ -1,5 +1,6 @@
 import DatePicker from '../DatePicker';
 import FormLabel from '../../Forms/FormLabel';
+import LayoutGrid from '../../LayoutGrid/LayoutGrid';
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import {
@@ -47,7 +48,7 @@ const dateFormatOptions = {
     'YYYY.MM.DD': 'YYYY.MM.DD',
     None: null
 };
-const dateFormatDefaultValue = 'YYYY.MM.DD';
+const dateFormatDefaultValue = null;
 const dateFormatGroupId = 'GROUP-DATE-FORMAT';
 
 storiesOf('Components|DatePicker', module)
@@ -96,18 +97,48 @@ storiesOf('Components|DatePicker', module)
     .add('compact', () => (
         <DatePicker compact />
     ))
-    .add('dateFormat', () => (
-        <>
-            <FormLabel
-                htmlFor='customDateFormatField'>
-            Custom Date Format Example
-            </FormLabel>
-            <DatePicker
-                dateFormat={
-                    select(dateFormatOptionsLabel, dateFormatOptions, dateFormatDefaultValue, dateFormatGroupId)
-                }
-                inputProps={{
-                    id: 'customDateFormatField'
-                }} />
-        </>
+    .add('date format', () => (
+        <LayoutGrid col={3}>
+            <div>
+                <FormLabel
+                    htmlFor='customDateFormatField'>
+                    Custom date format (knobs)
+                </FormLabel>
+                <DatePicker
+                    dateFormat={
+                        select(dateFormatOptionsLabel, dateFormatOptions, dateFormatDefaultValue, dateFormatGroupId)
+                    }
+                    inputProps={{
+                        id: 'customDateFormatField'
+                    }} />
+            </div>
+            <div>
+                <FormLabel
+                    htmlFor='customDateFormatField2'>
+                    Custom date format (knobs) with defaultValue
+                </FormLabel>
+                <DatePicker
+                    dateFormat={
+                        select(dateFormatOptionsLabel, dateFormatOptions, dateFormatDefaultValue, dateFormatGroupId)
+                    }
+                    dateFormat='MM/DD/YYYY'
+                    defaultValue='12/04/1993'
+                    inputProps={{
+                        id: 'customDateFormatField2'
+                    }} />
+            </div>
+            <div>
+                <FormLabel
+                    htmlFor='customDateFormatField3'>
+                    DD.MM.YYYY in Hindi with defaultValue
+                </FormLabel>
+                <DatePicker
+                    dateFormat='DD.MM.YYYY'
+                    defaultValue='4.12.1993'
+                    inputProps={{
+                        id: 'customDateFormatField3'
+                    }}
+                    locale='hi' />
+            </div>
+        </LayoutGrid>
     ));
