@@ -237,6 +237,22 @@ describe('<DatePicker />', () => {
         expect(wrapper.state('formattedDate')).toEqual('04/14/2020');
     });
 
+    test('auto format to specified dateFormat', () => {
+        wrapper = mount(defaultDatePicker); // dateFormat='MM/DD/YYYY'
+
+        //set date input value
+        wrapper
+            .find('input[type="text"]')
+            .simulate('change', { target: { value: '3.16.20' } }); // input format D.MM.YY
+
+        //trigger onBlur by clicking outside
+        let event = new MouseEvent('mousedown', { target: document.querySelector('body') });
+        document.dispatchEvent(event);
+
+        //expect date value to be auto formated
+        expect(wrapper.state('formattedDate')).toEqual('03/16/2020');
+    });
+
     describe('onBlur callback', () => {
         test('should call onBlur after clicking outside calendar overlay', () => {
             const blur = jest.fn();
