@@ -121,7 +121,6 @@ storiesOf('Components|DatePicker', module)
                     dateFormat={
                         select(dateFormatOptionsLabel, dateFormatOptions, dateFormatDefaultValue, dateFormatGroupId)
                     }
-                    dateFormat='MM/DD/YYYY'
                     defaultValue='12/04/1993'
                     inputProps={{
                         id: 'customDateFormatField2'
@@ -139,6 +138,20 @@ storiesOf('Components|DatePicker', module)
                         id: 'customDateFormatField3'
                     }}
                     locale='hi' />
+            </div>
+            <div>
+                <FormLabel
+                    htmlFor='customDateFormatField4'>
+                    Custom date format (knobs) range selection
+                </FormLabel>
+                <DatePicker
+                    dateFormat={
+                        select(dateFormatOptionsLabel, dateFormatOptions, dateFormatDefaultValue, dateFormatGroupId)
+                    }
+                    enableRangeSelection
+                    inputProps={{
+                        id: 'customDateFormatField4'
+                    }} />
             </div>
         </LayoutGrid>
     ));

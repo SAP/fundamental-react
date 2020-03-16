@@ -60,7 +60,7 @@ describe('<DatePicker />', () => {
         arrDates = [endRangeDate, startRangeDate];
         wrapper.instance().updateDate(arrDates);
 
-        let switchFormattedDate = `${endRangeDate.format('L')}-${startRangeDate.format('L')}`;
+        let switchFormattedDate = `${endRangeDate.format('L')} - ${startRangeDate.format('L')}`;
 
         expect(wrapper.state('formattedDate')).toEqual(switchFormattedDate);
         expect(wrapper.state('arrSelectedDates').length).toEqual(2);
@@ -124,7 +124,7 @@ describe('<DatePicker />', () => {
         arrDates = [startRangeDate, endRangeDate];
         wrapper.instance().updateDate(arrDates);
 
-        formattedDate = `${startRangeDate.format('L')}-${endRangeDate.format('L')}`;
+        formattedDate = `${startRangeDate.format('L')} - ${endRangeDate.format('L')}`;
 
         expect(wrapper.state('formattedDate')).toEqual(formattedDate);
         expect(wrapper.state('arrSelectedDates').length).toEqual(2);
@@ -133,40 +133,26 @@ describe('<DatePicker />', () => {
     test('pressing enter key on date input', () => {
         wrapper = mount(rangeDatePicker);
 
-        let startRangeDate = moment();
-        let endRangeDate = moment();
-        endRangeDate.add(3, 'day');
-
-        let formattedDate = `${startRangeDate.month() +
-            1}/${startRangeDate.date()}/${startRangeDate.year()}-${endRangeDate.month() +
-            1}/${endRangeDate.date()}/${endRangeDate.year()}`;
-
         wrapper.find('input[type="text"]')
-            .simulate('change', { target: { value: formattedDate } });
+            .simulate('change', { target: { value: '3.16.20 - 3.19.20' } });
 
         wrapper.find('input[type="text"]').simulate('keypress', { key: 'Enter' });
 
-        expect(wrapper.state('formattedDate')).toEqual(formattedDate);
+        expect(wrapper.state('formattedDate')).toEqual('03/16/2020 - 03/19/2020');
         expect(wrapper.state('arrSelectedDates').length).toEqual(2);
     });
 
     test('pressing enter key on date input where start date > than end date', () => {
         wrapper = mount(rangeDatePicker);
 
-        let startRangeDate = moment();
-        let endRangeDate = moment();
-        endRangeDate.add(3, 'day');
-
-        let switchFormattedDate = `${endRangeDate.month() +
-            1}/${endRangeDate.date()}/${endRangeDate.year()}-${startRangeDate.month() +
-            1}/${startRangeDate.date()}/${startRangeDate.year()}`;
-
+        // set start date greater than end date
         wrapper.find('input[type="text"]')
-            .simulate('change', { target: { value: switchFormattedDate } });
+            .simulate('change', { target: { value: '3.19.20 - 3.16.20' } });
 
         wrapper.find('input[type="text"]').simulate('keypress', { key: 'Enter' });
 
-        expect(wrapper.state('formattedDate')).toEqual(switchFormattedDate);
+        //check if date start date is less than end date i.e. switched
+        expect(wrapper.state('formattedDate')).toEqual('03/16/2020 - 03/19/2020');
         expect(wrapper.state('arrSelectedDates').length).toEqual(2);
     });
 
@@ -213,7 +199,7 @@ describe('<DatePicker />', () => {
         wrapper = mount(rangeDatePicker);
 
         wrapper.find('input[type="text"]')
-            .simulate('change', { target: { value: 'May 14th, 2018-May 15th, 2018' } });
+            .simulate('change', { target: { value: 'May 14th, 2018 - May 15th, 2018' } });
 
         wrapper.find('input[type="text"]').simulate('keypress', { key: 'Enter' });
 
@@ -262,6 +248,22 @@ describe('<DatePicker />', () => {
         );
         wrapper = mount(compToTest);
         expect(wrapper.state('formattedDate')).toEqual('०३/१६/२०२०');
+    });
+
+    test('date range selection with custom dateFormat set', () => {
+        wrapper = mount(rangeDatePicker); // dateFormat='MM/DD/YYYY'
+
+        //set date input value
+        wrapper
+            .find('input[type="text"]')
+            .simulate('change', { target: { value: '3.16.20 - 3.11.20' } }); // input format D.MM.YY
+
+        //trigger onBlur by clicking outside
+        let event = new MouseEvent('mousedown', { target: document.querySelector('body') });
+        document.dispatchEvent(event);
+
+        //expect date value to be auto formated
+        expect(wrapper.state('formattedDate')).toEqual('03/11/2020 - 03/16/2020');
     });
 
     describe('onBlur callback', () => {

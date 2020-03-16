@@ -13,6 +13,7 @@ import { saneDateLookup } from './saneDateLookup';
 import React, { Component } from 'react';
 
 const ISO_DATE_FORMAT = 'YYYY-MM-DD';
+const dateRangeSeparator = ' - ';
 class DatePicker extends Component {
     constructor(props) {
         super(props);
@@ -35,12 +36,12 @@ class DatePicker extends Component {
      * create a Moment.js date object from given dateString.
      * It will return an empty string if Moment.js is unable to create a valid
      * date object from given string (for e.g. text only strings).
-     * @param  {String} dateString to format.
+     * @param  {String|Object} date to format.
      * @returns {String} formatted date string.
      */
-    getFormattedDateStr = (dateString) => {
-        if (dateString) {
-            const momentDateObj = this.getMomentDateObj(dateString);
+    getFormattedDateStr = (date) => {
+        if (date) {
+            const momentDateObj = this.getMomentDateObj(date);
             if (momentDateObj && momentDateObj.isValid()) {
                 const { dateFormat } = this.props;
                 return momentDateObj.format(dateFormat ? dateFormat : ISO_DATE_FORMAT);
@@ -48,7 +49,19 @@ class DatePicker extends Component {
                 return '';
             }
         }
-        return dateString;
+        return date;
+    }
+    /**
+     * Function to get date range string from collection of 2 date objects.
+     * @param  {Object[]} dates array containing 2 date objects
+     * @returns {String} formatted date range string e.g. "03/16/2020 - 03/19/2020"
+     */
+    getFormattedDateRangeStr = (dates) => {
+        let str = this.getFormattedDateStr(dates[0]);
+        if (!!dates[1]) {
+            str += dateRangeSeparator + this.getFormattedDateStr(dates[1]);
+        }
+        return str;
     }
     /**
      * Function to create a Moment.js date object from given dateString.
@@ -88,12 +101,12 @@ class DatePicker extends Component {
     }
 
     validateDates = () => {
-        const longDateFormat = this.getSaneFormats();
+        const { formattedDate } = this.state;
 
         if (this.props.enableRangeSelection) {
-            const dateRange = this.state.formattedDate.split('-');
-            const firstDate = moment(dateRange[0], longDateFormat);
-            const secondDate = moment(dateRange[1], longDateFormat);
+            const dateRange = formattedDate.split(dateRangeSeparator);
+            const firstDate = this.getMomentDateObj(dateRange[0]);
+            const secondDate = this.getMomentDateObj(dateRange[1]);
 
             if (this.isDateValid(firstDate) && this.isDateValid(secondDate)) {
                 let arrSelected = [];
@@ -103,16 +116,19 @@ class DatePicker extends Component {
 
                 this.setState({
                     selectedDate: null,
-                    arrSelectedDates: arrSelected
+                    arrSelectedDates: arrSelected,
+                    formattedDate: this.getFormattedDateRangeStr(arrSelected)
                 });
             } else {
                 this.resetState();
             }
         } else {
-            const newDate = moment(this.state.formattedDate, longDateFormat);
+            const newDate = this.getMomentDateObj(formattedDate);
+
             if (this.isDateValid(newDate)) {
                 this.setState({
-                    selectedDate: newDate
+                    selectedDate: newDate,
+                    formattedDate: this.getFormattedDateStr(formattedDate)
                 });
             } else {
                 this.resetState();
@@ -145,14 +161,12 @@ class DatePicker extends Component {
         let closeCalendar = false;
 
         if (this.props.enableRangeSelection) {
-            let formatDate = this.getFormattedDateStr(date[0]);
             if (!!date[1]) {
-                formatDate += '-' + this.getFormattedDateStr(date[1]);
                 closeCalendar = true;
             }
             this.setState({
                 arrSelectedDates: date,
-                formattedDate: formatDate
+                formattedDate: this.getFormattedDateRangeStr(date)
             });
         } else {
             closeCalendar = true;
@@ -170,12 +184,7 @@ class DatePicker extends Component {
     }
 
     _handleBlur = () => {
-        this.setState(
-            {
-                date: this.state.selectedDate,
-                formattedDate: this.getFormattedDateStr(this.state.formattedDate)
-            }
-        );
+        this.validateDates();
         this.props.onBlur({
             date: this.state.selectedDate,
             formattedDate: this.state.formattedDate
@@ -268,7 +277,7 @@ class DatePicker extends Component {
                                 onBlur={this._handleBlur}
                                 onChange={this.modifyDate}
                                 onKeyPress={this.sendUpdate}
-                                placeholder={dateFormat ? dateFormat : ISO_DATE_FORMAT}
+                                placeholder={this.getPlaceHolder(dateFormat)}
                                 value={this.state.formattedDate} />
                             <InputGroup.Addon isButton>
                                 <Button {...buttonProps}
@@ -287,6 +296,16 @@ class DatePicker extends Component {
                     ref={this.popoverRef} />
             </div>
         );
+    }
+
+    getPlaceHolder(dateFormat) {
+        if (dateFormat) {
+            if (this.props.enableRangeSelection) {
+                return dateFormat + dateRangeSeparator + dateFormat;
+            }
+            return dateFormat;
+        }
+        return ISO_DATE_FORMAT;
     }
 }
 
