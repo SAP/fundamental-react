@@ -253,6 +253,17 @@ describe('<DatePicker />', () => {
         expect(wrapper.state('formattedDate')).toEqual('03/16/2020');
     });
 
+    test('default value with dateFormat and locale set', ()=>{
+        const compToTest = (
+            <DatePicker
+                dateFormat='MM/DD/YYYY'
+                defaultValue='3.16.20'
+                locale='hi' />
+        );
+        wrapper = mount(compToTest);
+        expect(wrapper.state('formattedDate')).toEqual('०३/१६/२०२०');
+    });
+
     describe('onBlur callback', () => {
         test('should call onBlur after clicking outside calendar overlay', () => {
             const blur = jest.fn();
