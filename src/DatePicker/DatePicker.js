@@ -109,6 +109,7 @@ class DatePicker extends Component {
     };
 
     _handleFocus = () => {
+        this.validateDates();
         this.props.onFocus(this.getCallbackData());
     }
 

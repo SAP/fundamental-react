@@ -287,9 +287,9 @@ describe('<DatePicker />', () => {
     describe('onFocus callback', () => {
         test('should call onFocus on entering input', () => {
             const focus = jest.fn();
-            const element = mount(<DatePicker onFocus={focus} />);
+            const element = mount(<DatePicker defaultValue='2020-03-13' onFocus={focus} />);
 
-            element.find('input[type="text"]').simulate('click');
+            element.find('input[type="text"]').prop('onFocus')();
 
             expect(focus).toHaveBeenCalledTimes(1);
             expect(focus).toHaveBeenCalledWith(expect.objectContaining({ date: expect.any(moment) }));
