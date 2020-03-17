@@ -6,7 +6,7 @@ import React, { useEffect } from 'react';
 
 const FormInput = React.forwardRef((stuff, ref) => {
     const { className, compact, disabled, id, name, placeholder, readOnly, type, value, validationState, disableStyles, ...props } = stuff;
-    console.log('form input props', stuff); /* eslint-disable-line */
+    //console.log('form input props', stuff); /* eslint-disable-line */
     useEffect(() => {
         if (!disableStyles) {
             require('fundamental-styles/dist/input.css');
@@ -21,8 +21,6 @@ const FormInput = React.forwardRef((stuff, ref) => {
         },
         className
     );
-
-    console.log('form input disabled:', disabled, 'readonly:', readOnly) /* eslint-disable-line */
 
     const formInput = (
         <input

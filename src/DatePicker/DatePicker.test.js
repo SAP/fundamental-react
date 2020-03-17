@@ -284,6 +284,18 @@ describe('<DatePicker />', () => {
         });
     });
 
+    describe('onFocus callback', () => {
+        test('should call onFocus on entering input', () => {
+            const focus = jest.fn();
+            const element = mount(<DatePicker onFocus={focus} />);
+
+            element.find('input[type="text"]').simulate('click');
+
+            expect(focus).toHaveBeenCalledTimes(1);
+            expect(focus).toHaveBeenCalledWith(expect.objectContaining({ date: expect.any(moment) }));
+        });
+    });
+
     describe('Prop spreading', () => {
         test('should allow props to be spread to the DatePicker component', () => {
             const element = mount(<DatePicker data-sample='Sample' />);

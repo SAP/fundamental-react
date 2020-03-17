@@ -45,6 +45,14 @@ class DatePicker extends Component {
         return date.isValid() && isEnabledDate(date, this.props);
     }
 
+    getCallbackData = () => {
+        return {
+            date: this.state.selectedDate,
+            formattedDate: this.state.formattedDate,
+            isoFormattedDate: this.state.isoFormattedDate
+        };
+    }
+
     validateDates = () => {
         const longDateFormat = this.getLocaleDateFormat();
 
@@ -100,6 +108,10 @@ class DatePicker extends Component {
         });
     };
 
+    _handleFocus = () => {
+        this.props.onFocus(this.getCallbackData());
+    }
+
     updateDate = (date) => {
         const longDateFormat = this.getLocaleDateFormat();
         let closeCalendar = false;
@@ -136,11 +148,7 @@ class DatePicker extends Component {
     getLocaleDateFormat = () => moment.localeData(this.props.locale).longDateFormat('L');
 
     _handleBlur = () => {
-        this.props.onBlur({
-            date: this.state.selectedDate,
-            formattedDate: this.state.formattedDate,
-            isoFormattedDate: this.state.isoFormattedDate
-        });
+        this.props.onBlur(this.getCallbackData());
     };
 
     render() {
@@ -177,8 +185,6 @@ class DatePicker extends Component {
             },
             className
         );
-
-        console.log('datepicker disabled:', disabled, 'readonly:', readOnly) /* eslint-disable-line */
 
         const disableButton = disabled || readOnly;
 
@@ -236,6 +242,7 @@ class DatePicker extends Component {
                                 disabled={disabled}
                                 onBlur={this._handleBlur}
                                 onChange={this.modifyDate}
+                                onFocus={this._handleFocus}
                                 onKeyPress={this.sendUpdate}
                                 placeholder={this.getLocaleDateFormat()}
                                 readOnly={readOnly}
@@ -286,14 +293,16 @@ DatePicker.propTypes = {
         state: PropTypes.oneOf(FORM_MESSAGE_TYPES),
         text: PropTypes.string
     }),
-    onBlur: PropTypes.func
+    onBlur: PropTypes.func,
+    onFocus: PropTypes.func
 };
 
 DatePicker.defaultProps = {
     buttonLabel: 'Choose date',
     defaultValue: '',
     locale: 'en',
-    onBlur: () => {}
+    onBlur: () => {},
+    onFocus: () => {}
 };
 
 DatePicker.propDescriptions = {
@@ -302,7 +311,8 @@ DatePicker.propDescriptions = {
     defaultValue: 'Default value to be shown in the Datepicker. The only accepted format is the ISO format, i.e. YYYY-MM-DD',
     enableRangeSelection: 'Set to **true** to enable the selection of a date range (begin and end).',
     locale: 'Language code to set the locale.',
-    onBlur: 'Callback function for onBlur events. In the object returned, `date` is the date object and `formattedDate` is the formatted date.'
+    onBlur: 'Callback function for onBlur events. In the object returned, `date` is the date object, `formattedDate` is the formatted date, and `isoFormattedDate` is the date formatted in ISO-8601 format (YYYY-MM-DD).',
+    onFocus: 'Callback function for onFocus events. In the object returned, `date` is the date object, `formattedDate` is the formatted date, and `isoFormattedDate` is the date formatted in ISO-8601 format (YYYY-MM-DD).'
 };
 
 export default DatePicker;
