@@ -31,6 +31,23 @@ class DatePicker extends Component {
         this.popoverRef = React.createRef();
     }
 
+    componentDidUpdate(prevProps) {
+        if (prevProps.defaultValue !== this.props.defaultValue) {
+            this.handleNewDefault();
+        }
+    }
+
+    handleNewDefault = () => {
+        const formattedNewDefault = this.props.defaultValue && this.props.defaultValue.length > 0 ? moment(this.props.defaultValue).format(this.getLocaleDateFormat()) : '';
+        this.setState({
+            selectedDate: formattedNewDefault.length === 0 ? null : moment(formattedNewDefault, this.getLocaleDateFormat()),
+            isoFormattedDate: moment(this.props.defaultValue).format(ISO_DATE_FORMAT),
+            formattedDate: formattedNewDefault
+        }, () => {
+            this.validateDates();
+        });
+    }
+
     modifyDate = (e) => {
         this.setState({ formattedDate: e.target.value, isoFormattedDate: moment(e.target.value).format(ISO_DATE_FORMAT) });
     }
@@ -109,7 +126,6 @@ class DatePicker extends Component {
     };
 
     _handleFocus = () => {
-        this.validateDates();
         this.props.onFocus(this.getCallbackData());
     }
 

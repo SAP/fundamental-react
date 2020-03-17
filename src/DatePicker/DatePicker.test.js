@@ -253,6 +253,14 @@ describe('<DatePicker />', () => {
         expect(wrapper.state('isoFormattedDate')).toEqual('2020-04-14');
     });
 
+    test('should update value if defaultValue prop is updated', () => {
+        wrapper = mount(prePopulatedDatepicker);
+        wrapper = wrapper.setProps({
+            defaultValue: '2016-12-21'
+        });
+        expect(wrapper.state('formattedDate')).toEqual('12/21/2016');
+    });
+
     describe('onBlur callback', () => {
         test('should call onBlur after clicking outside calendar overlay', () => {
             const blur = jest.fn();
