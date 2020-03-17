@@ -32,7 +32,7 @@ class DatePicker extends Component {
     }
 
     modifyDate = (e) => {
-        this.setState({ formattedDate: e.target.value });
+        this.setState({ formattedDate: e.target.value, isoFormattedDate: moment(e.target.value).format(ISO_DATE_FORMAT) });
     }
 
     sendUpdate = (e) => {
@@ -136,6 +136,7 @@ class DatePicker extends Component {
     getLocaleDateFormat = () => moment.localeData(this.props.locale).longDateFormat('L');
 
     _handleBlur = () => {
+        this.validateDates();
         this.props.onBlur({
             date: this.state.selectedDate,
             formattedDate: this.state.formattedDate,
@@ -228,12 +229,12 @@ class DatePicker extends Component {
                             className={inputGroupClass}
                             compact={compact}
                             disableStyles={disableStyles}
+                            disabled={disabled}
                             onClick={this.handleClick}
                             validationState={!this.state.isExpanded ? validationState : null} >
                             <FormInput
                                 {...inputProps}
                                 disableStyles={disableStyles}
-                                disabled={disabled}
                                 onBlur={this._handleBlur}
                                 onChange={this.modifyDate}
                                 onKeyPress={this.sendUpdate}
