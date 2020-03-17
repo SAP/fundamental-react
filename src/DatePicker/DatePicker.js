@@ -48,8 +48,10 @@ class DatePicker extends Component {
         });
     }
 
-    modifyDate = (e) => {
-        this.setState({ formattedDate: e.target.value, isoFormattedDate: moment(e.target.value).format(ISO_DATE_FORMAT) });
+    _handleOnChange = (e) => {
+        this.setState({ formattedDate: e.target.value, isoFormattedDate: moment(e.target.value).format(ISO_DATE_FORMAT) }, () => {
+            this.props.onChange(this.getCallbackData());
+        });
     }
 
     sendUpdate = (e) => {
@@ -259,7 +261,7 @@ class DatePicker extends Component {
                                 {...inputProps}
                                 disableStyles={disableStyles}
                                 onBlur={this._handleBlur}
-                                onChange={this.modifyDate}
+                                onChange={this._handleOnChange}
                                 onFocus={this._handleFocus}
                                 onKeyPress={this.sendUpdate}
                                 placeholder={this.getLocaleDateFormat()}
@@ -312,6 +314,7 @@ DatePicker.propTypes = {
         text: PropTypes.string
     }),
     onBlur: PropTypes.func,
+    onChange: PropTypes.func,
     onFocus: PropTypes.func
 };
 
@@ -320,6 +323,7 @@ DatePicker.defaultProps = {
     defaultValue: '',
     locale: 'en',
     onBlur: () => {},
+    onChange: () => {},
     onFocus: () => {}
 };
 
@@ -330,6 +334,7 @@ DatePicker.propDescriptions = {
     enableRangeSelection: 'Set to **true** to enable the selection of a date range (begin and end).',
     locale: 'Language code to set the locale.',
     onBlur: 'Callback function for onBlur events. In the object returned, `date` is the date object, `formattedDate` is the formatted date, and `isoFormattedDate` is the date formatted in ISO-8601 format (YYYY-MM-DD).',
+    onChange: 'Callback function for onChange events. In the object returned, `date` is the date object, `formattedDate` is the formatted date, and `isoFormattedDate` is the date formatted in ISO-8601 format (YYYY-MM-DD).',
     onFocus: 'Callback function for onFocus events. In the object returned, `date` is the date object, `formattedDate` is the formatted date, and `isoFormattedDate` is the date formatted in ISO-8601 format (YYYY-MM-DD).'
 };
 

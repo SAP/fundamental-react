@@ -292,8 +292,21 @@ describe('<DatePicker />', () => {
         });
     });
 
+    describe('onChange callback', () => {
+        test('should call onChange on focusing input', () => {
+            const change = jest.fn();
+            const element = mount(<DatePicker defaultValue='2020-03-13' onChange={change} />);
+
+            element
+                .find('input[type="text"]')
+                .simulate('change', { target: { value: '04/14/2020' } });
+
+            expect(change).toHaveBeenCalledWith(expect.objectContaining({ formattedDate: '04/14/2020' }));
+        });
+    });
+
     describe('onFocus callback', () => {
-        test('should call onFocus on entering input', () => {
+        test('should call onFocus on entering input text', () => {
             const focus = jest.fn();
             const element = mount(<DatePicker defaultValue='2020-03-13' onFocus={focus} />);
 
