@@ -9,7 +9,7 @@ import { isEnabledDate } from '../utils/dateUtils';
 import moment from 'moment';
 import Popover from '../Popover/Popover';
 import PropTypes from 'prop-types';
-import { saneDateLookup } from './saneDateLookup';
+import { validDateLookup } from './validDateLookup';
 import React, { Component } from 'react';
 
 const ISO_DATE_FORMAT = 'YYYY-MM-DD';
@@ -32,7 +32,7 @@ class DatePicker extends Component {
     /**
      * Function tries to format any date string into the format specified by
      * props.dateFormat (or ISO_DATE_FORMAT as fallback).
-     * It will try to use multiple similar formats, defined in saneDateLookup, to
+     * It will try to use multiple similar formats, defined in validDateLookup, to
      * create a Moment.js date object from given dateString.
      * It will return an empty string if Moment.js is unable to create a valid
      * date object from given string (for e.g. text only strings).
@@ -65,25 +65,25 @@ class DatePicker extends Component {
     }
     /**
      * Function to create a Moment.js date object from given dateString.
-     * It will try to use multiple similar formats, defined in saneDateLookup, to
+     * It will try to use multiple similar formats, defined in validDateLookup, to
      * parse the given dateString and props.locale
      * @param  {String} dateString to parse.
      * @returns {Object} Moment.js date object.
      */
     getMomentDateObj(dateString) {
-        return moment(dateString, this.getSaneFormats(), this.props.locale, true);
+        return moment(dateString, this.getValidFormats(), this.props.locale, true);
     }
     /**
      * Get the different date formats allowed for user input.
      * These formats are based on props.dateFormat
-     * If no entry for props.dateFormat found in saneDateLookup,
+     * If no entry for props.dateFormat found in validDateLookup,
      * it returns the confiured format as string.
      *
      * @returns {Array} collection of date formats allowed for input.
      */
-    getSaneFormats = () =>{
+    getValidFormats = () =>{
         const { dateFormat } = this.props;
-        return saneDateLookup[dateFormat] ? saneDateLookup[dateFormat] : dateFormat;
+        return validDateLookup[dateFormat] ? validDateLookup[dateFormat] : dateFormat;
     }
 
     modifyDate = (e) => {

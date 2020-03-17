@@ -1,5 +1,5 @@
 //lookup for matching accepted date formats for DatePicker component
-const saneDateLookup = {
+const validDateLookup = {
     'MM/DD/YYYY': ['MM/DD/YYYY', 'M/DD/YYYY', 'M/D/YYYY', 'MM/D/YYYY', 'MM.DD.YYYY', 'M.DD.YYYY', 'M.D.YYYY', 'MM.D.YYYY', 'MM-DD-YYYY', 'M-DD-YYYY', 'M-D-YYYY', 'MM-D-YYYY', 'MM/DD/YY', 'M/DD/YY', 'M/D/YY', 'MM/D/YY', 'MM.DD.YY', 'M.DD.YY', 'M.D.YY', 'MM.D.YY', 'MM-DD-YY', 'M-DD-YY', 'M-D-YY', 'MM-D-YY'],
     'MM-DD-YYYY': ['MM-DD-YYYY', 'M/DD/YYYY', 'M/D/YYYY', 'MM/D/YYYY', 'MM.DD.YYYY', 'M.DD.YYYY', 'M.D.YYYY', 'MM.D.YYYY', 'MM-DD-YYYY', 'M-DD-YYYY', 'M-D-YYYY', 'MM-D-YYYY', 'MM-DD-YY', 'M/DD/YY', 'M/D/YY', 'MM/D/YY', 'MM.DD.YY', 'M.DD.YY', 'M.D.YY', 'MM.D.YY', 'MM-DD-YY', 'M-DD-YY', 'M-D-YY', 'MM-D-YY'],
     'MM.DD.YYYY': ['MM.DD.YYYY', 'M/DD/YYYY', 'M/D/YYYY', 'MM/D/YYYY', 'MM.DD.YYYY', 'M.DD.YYYY', 'M.D.YYYY', 'MM.D.YYYY', 'MM-DD-YYYY', 'M-DD-YYYY', 'M-D-YYYY', 'MM-D-YYYY', 'MM.DD.YY', 'M/DD/YY', 'M/D/YY', 'MM/D/YY', 'MM.DD.YY', 'M.DD.YY', 'M.D.YY', 'MM.D.YY', 'MM-DD-YY', 'M-DD-YY', 'M-D-YY', 'MM-D-YY'],
@@ -11,4 +11,4 @@ const saneDateLookup = {
     'YYYY.MM.DD': ['YYYY.MM.DD', 'YYYY/MM/D', 'YYYY/M/DD', 'YYYY/M/D', 'YYYY/MM/DD', 'YYYY.MM.D', 'YYYY.M.DD', 'YYYY.M.D', 'YYYY-MM-DD', 'YYYY-MM-D', 'YYYY-M-DD', 'YYYY-M-D', 'YY.MM.DD', 'YY/MM/D', 'YY/M/DD', 'YY/M/D', 'YY/MM/DD', 'YY.MM.D', 'YY.M.DD', 'YY.M.D', 'YY-MM-DD', 'YY-MM-D', 'YY-M-DD', 'YY-M-D']
 };
 
-export { saneDateLookup };
+export { validDateLookup };
