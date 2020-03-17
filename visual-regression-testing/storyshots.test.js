@@ -19,16 +19,13 @@ const view = {
     }
 };
 
-const beforeScreenshot = (page) => {
-    return page
-        .emulate(view)
-        .then(resp => resp)
-        .catch(ex => console.error(ex));
-};
+const customizePage = (page) => page.emulate(view);
+const beforeScreenshot = (page) => page.emulate(view);
 
 initStoryshots({
     test: imageSnapshot({
         storybookUrl: 'http://localhost:12123/',
+        customizePage,
         getMatchOptions,
         beforeScreenshot
     })

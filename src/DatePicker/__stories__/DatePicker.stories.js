@@ -98,7 +98,7 @@ storiesOf('Components|DatePicker', module)
         <DatePicker compact />
     ))
     .add('date format', () => (
-        <LayoutGrid col={3}>
+        <LayoutGrid cols={2}>
             <div>
                 <FormLabel
                     htmlFor='customDateFormatField'>
