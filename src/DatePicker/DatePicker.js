@@ -88,9 +88,7 @@ class DatePicker extends Component {
     }
 
     handleClick = () => {
-        if (!this.props.readOnly) {
-            this.setState({ isExpanded: !this.state.isExpanded });
-        }
+        this.setState({ isExpanded: !this.state.isExpanded });
     };
 
     handleOutsideClickAndEscape = () => {
@@ -180,7 +178,7 @@ class DatePicker extends Component {
             className
         );
 
-        console.log('datepicker', disabled, readOnly) /* eslint-disable-line */
+        console.log('datepicker disabled:', disabled, 'readonly:', readOnly) /* eslint-disable-line */
 
         const disableButton = disabled || readOnly;
 
@@ -254,6 +252,7 @@ class DatePicker extends Component {
                     }
                     disableKeyPressHandler
                     disableStyles={disableStyles}
+                    disabled={disableButton}
                     noArrow
                     onClickOutside={this.handleOutsideClickAndEscape}
                     onEscapeKey={this.handleOutsideClickAndEscape}
@@ -278,9 +277,11 @@ DatePicker.propTypes = {
     }),
     compact: PropTypes.bool,
     defaultValue: PropTypes.string,
+    disabled: PropTypes.bool,
     enableRangeSelection: PropTypes.bool,
     inputProps: PropTypes.object,
     locale: PropTypes.string,
+    readOnly: PropTypes.bool,
     validationState: PropTypes.shape({
         state: PropTypes.oneOf(FORM_MESSAGE_TYPES),
         text: PropTypes.string

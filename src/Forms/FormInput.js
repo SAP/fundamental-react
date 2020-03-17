@@ -4,7 +4,9 @@ import FormValidationOverlay from './_FormValidationOverlay';
 import PropTypes from 'prop-types';
 import React, { useEffect } from 'react';
 
-const FormInput = React.forwardRef(({ className, compact, disabled, id, name, placeholder, readOnly, type, value, validationState, disableStyles, ...props }, ref) => {
+const FormInput = React.forwardRef((stuff, ref) => {
+    const { className, compact, disabled, id, name, placeholder, readOnly, type, value, validationState, disableStyles, ...props } = stuff;
+    console.log('form input props', stuff); /* eslint-disable-line */
     useEffect(() => {
         if (!disableStyles) {
             require('fundamental-styles/dist/input.css');
@@ -20,7 +22,7 @@ const FormInput = React.forwardRef(({ className, compact, disabled, id, name, pl
         className
     );
 
-    console.log(disabled, readOnly) /* eslint-disable-line */
+    console.log('form input disabled:', disabled, 'readonly:', readOnly) /* eslint-disable-line */
 
     const formInput = (
         <input
