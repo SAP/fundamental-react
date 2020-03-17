@@ -20,6 +20,8 @@ const FormInput = React.forwardRef(({ className, compact, disabled, id, name, pl
         className
     );
 
+    console.log(disabled, readOnly) /* eslint-disable-line */
+
     const formInput = (
         <input
             {...props}

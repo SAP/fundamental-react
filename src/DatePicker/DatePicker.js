@@ -11,17 +11,20 @@ import Popover from '../Popover/Popover';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 
+const ISO_DATE_FORMAT = 'YYYY-MM-DD';
+
 class DatePicker extends Component {
     constructor(props) {
         super(props);
-        const ISO_DATE_FORMAT = 'YYYY-MM-DD';
         const formattedDate = props.defaultValue.length > 0 ?
             moment(props.defaultValue, ISO_DATE_FORMAT).format(this.getLocaleDateFormat()) : '';
+        const isoFormattedDate = moment(props.defaultValue).format(ISO_DATE_FORMAT);
         this.state = {
             isExpanded: false,
             selectedDate: formattedDate.length === 0 ? null : moment(formattedDate, this.getLocaleDateFormat()),
             arrSelectedDates: [],
-            formattedDate
+            formattedDate,
+            isoFormattedDate
         };
 
         this.calendarRef = React.createRef();
@@ -78,13 +81,16 @@ class DatePicker extends Component {
     resetState = () => {
         this.setState({
             formattedDate: '',
+            isoFormattedDate: '',
             selectedDate: null,
             arrSelectedDates: []
         });
     }
 
     handleClick = () => {
-        this.setState({ isExpanded: !this.state.isExpanded });
+        if (!this.props.readOnly) {
+            this.setState({ isExpanded: !this.state.isExpanded });
+        }
     };
 
     handleOutsideClickAndEscape = () => {
@@ -102,19 +108,23 @@ class DatePicker extends Component {
 
         if (this.props.enableRangeSelection) {
             let formatDate = date[0].format(longDateFormat);
+            let isoFormatDate = date[0].format(ISO_DATE_FORMAT);
             if (!!date[1]) {
                 formatDate += '-' + date[1].format(longDateFormat);
+                isoFormatDate += '-' + date[1].format(ISO_DATE_FORMAT);
                 closeCalendar = true;
             }
             this.setState({
                 arrSelectedDates: date,
-                formattedDate: formatDate
+                formattedDate: formatDate,
+                isoFormattedDate: isoFormatDate
             });
         } else {
             closeCalendar = true;
             this.setState({
                 selectedDate: date,
-                formattedDate: date.format(longDateFormat)
+                formattedDate: date.format(longDateFormat),
+                isoFormattedDate: date.format(ISO_DATE_FORMAT)
             });
         }
 
@@ -130,7 +140,8 @@ class DatePicker extends Component {
     _handleBlur = () => {
         this.props.onBlur({
             date: this.state.selectedDate,
-            formattedDate: this.state.formattedDate
+            formattedDate: this.state.formattedDate,
+            isoFormattedDate: this.state.isoFormattedDate
         });
     };
 
@@ -139,8 +150,10 @@ class DatePicker extends Component {
             blockedDates,
             buttonLabel,
             buttonProps,
+            calendarProps,
             className,
             compact,
+            disabled,
             disableAfterDate,
             disableBeforeDate,
             disabledDates,
@@ -154,6 +167,7 @@ class DatePicker extends Component {
             locale,
             localizedText,
             onBlur,
+            readOnly,
             validationState,
             ...props
         } = this.props;
@@ -165,6 +179,10 @@ class DatePicker extends Component {
             },
             className
         );
+
+        console.log('datepicker', disabled, readOnly) /* eslint-disable-line */
+
+        const disableButton = disabled || readOnly;
 
         return (
             <div
@@ -182,6 +200,7 @@ class DatePicker extends Component {
                                 </FormMessage>
                             }
                             <Calendar
+                                {...calendarProps}
                                 blockedDates={blockedDates}
                                 customDate={
                                     enableRangeSelection
@@ -216,15 +235,18 @@ class DatePicker extends Component {
                             <FormInput
                                 {...inputProps}
                                 disableStyles={disableStyles}
+                                disabled={disabled}
                                 onBlur={this._handleBlur}
                                 onChange={this.modifyDate}
                                 onKeyPress={this.sendUpdate}
                                 placeholder={this.getLocaleDateFormat()}
+                                readOnly={readOnly}
                                 value={this.state.formattedDate} />
                             <InputGroup.Addon isButton>
                                 <Button {...buttonProps}
                                     aria-label={buttonLabel}
                                     disableStyles={disableStyles}
+                                    disabled={disableButton}
                                     glyph='calendar'
                                     option='transparent' />
                             </InputGroup.Addon>
@@ -247,6 +269,13 @@ DatePicker.propTypes = {
     ...Calendar.basePropTypes,
     buttonLabel: PropTypes.string,
     buttonProps: PropTypes.object,
+    calendarProps: PropTypes.shape({
+        monthListProps: PropTypes.object,
+        tableBodyProps: PropTypes.object,
+        tableHeaderProps: PropTypes.object,
+        tableProps: PropTypes.object,
+        yearListProps: PropTypes.object
+    }),
     compact: PropTypes.bool,
     defaultValue: PropTypes.string,
     enableRangeSelection: PropTypes.bool,

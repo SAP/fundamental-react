@@ -97,12 +97,15 @@ describe('<DatePicker />', () => {
 
     test('updateDate method', () => {
         // choose one day in default picker
+        const ISO_FORMAT = 'YYYY-MM-DD';
         wrapper = mount(defaultDatePicker);
         const date = moment();
         wrapper.instance().updateDate(date);
         expect(wrapper.state('selectedDate')).toEqual(date);
         let formattedDate = date.format('L');
         expect(wrapper.state('formattedDate')).toEqual(formattedDate);
+        let isoFormattedDate = date.format(ISO_FORMAT);
+        expect(wrapper.state('isoFormattedDate')).toEqual(isoFormattedDate);
 
         // choose 1 day in range picker
         wrapper = mount(rangeDatePicker);
@@ -112,8 +115,10 @@ describe('<DatePicker />', () => {
         wrapper.instance().updateDate(arrDates);
 
         formattedDate = startRangeDate.format('L');
+        isoFormattedDate = startRangeDate.format(ISO_FORMAT);
         expect(wrapper.state('formattedDate')).toEqual(formattedDate);
         expect(wrapper.state('arrSelectedDates').length).toEqual(1);
+        expect(wrapper.state('isoFormattedDate')).toEqual(isoFormattedDate);
 
         // choose 2 days in range picker
         wrapper = mount(rangeDatePicker);
@@ -125,9 +130,11 @@ describe('<DatePicker />', () => {
         wrapper.instance().updateDate(arrDates);
 
         formattedDate = `${startRangeDate.format('L')}-${endRangeDate.format('L')}`;
+        isoFormattedDate = `${startRangeDate.format(ISO_FORMAT)}-${endRangeDate.format(ISO_FORMAT)}`;
 
         expect(wrapper.state('formattedDate')).toEqual(formattedDate);
         expect(wrapper.state('arrSelectedDates').length).toEqual(2);
+        expect(wrapper.state('isoFormattedDate')).toEqual(isoFormattedDate);
     });
 
     test('pressing enter key on date input', () => {
@@ -237,6 +244,15 @@ describe('<DatePicker />', () => {
         expect(wrapper.state('formattedDate')).toEqual('04/14/2020');
     });
 
+    test('provide ISO-8601 format date', () => {
+        wrapper = mount(prePopulatedDatepicker);
+        expect(wrapper.state('isoFormattedDate')).toEqual('2020-03-13');
+        wrapper
+            .find('input[type="text"]')
+            .simulate('change', { target: { value: '04/14/2020' } });
+        expect(wrapper.state('isoFormattedDate')).toEqual('2020-04-14');
+    });
+
     describe('onBlur callback', () => {
         test('should call onBlur after clicking outside calendar overlay', () => {
             const blur = jest.fn();
@@ -293,24 +309,76 @@ describe('<DatePicker />', () => {
             ).toBe('Sample');
         });
 
-        xtest('should allow props to be spread to the DatePicker component\'s Calendar component\'s month list ul element', () => {
-            // TODO: placeholder for this test description once that functionality is built
+        test('should allow props to be spread to the DatePicker component\'s Calendar component\'s month list ul element', () => {
+            const calendarProps = {
+                monthListProps: {
+                    'data-sample': 'Sample'
+                }
+            };
+            wrapper = mount(<DatePicker calendarProps={calendarProps} />);
+            wrapper.find('button.fd-button--transparent.sap-icon--calendar').simulate('click');
+            wrapper.find('.fd-calendar__action').at(1).childAt(0).simulate('click');
+
+            expect(
+                wrapper.find('.fd-calendar__months').childAt(0).getDOMNode().attributes['data-sample'].value
+            ).toBe('Sample');
         });
 
-        xtest('should allow props to be spread to the DatePicker component\'s Calendar component\'s year list ul element', () => {
-            // TODO: placeholder for this test description once that functionality is built
+        test('should allow props to be spread to the DatePicker component\'s Calendar component\'s year list ul element', () => {
+            const calendarProps = {
+                yearListProps: {
+                    'data-sample': 'Sample'
+                }
+            };
+            wrapper = mount(<DatePicker calendarProps={calendarProps} />);
+            wrapper.find('button.fd-button--transparent.sap-icon--calendar').simulate('click');
+            wrapper.find('.fd-calendar__action').at(2).childAt(0).simulate('click');
+
+            expect(
+                wrapper.find('.fd-calendar__years').childAt(0).getDOMNode().attributes['data-sample'].value
+            ).toBe('Sample');
         });
 
-        xtest('should allow props to be spread to the DatePicker component\'s Calendar component\'s table element', () => {
-            // TODO: placeholder for this test description once that functionality is built
+        test('should allow props to be spread to the DatePicker component\'s Calendar component\'s table element', () => {
+            const calendarProps = {
+                tableProps: {
+                    'data-sample': 'Sample'
+                }
+            };
+            wrapper = mount(<DatePicker calendarProps={calendarProps} />);
+            wrapper.find('button.fd-button--transparent.sap-icon--calendar').simulate('click');
+
+            expect(
+                wrapper.find('.fd-calendar__dates').childAt(0).getDOMNode().attributes['data-sample'].value
+            ).toBe('Sample');
         });
 
-        xtest('should allow props to be spread to the DatePicker component\'s Calendar component\'s thead element', () => {
-            // TODO: placeholder for this test description once that functionality is built
+        test('should allow props to be spread to the DatePicker component\'s Calendar component\'s thead element', () => {
+            const calendarProps = {
+                tableHeaderProps: {
+                    'data-sample': 'Sample'
+                }
+            };
+            wrapper = mount(<DatePicker calendarProps={calendarProps} />);
+            wrapper.find('button.fd-button--transparent.sap-icon--calendar').simulate('click');
+
+            expect(
+                wrapper.find('.fd-calendar__group').at(0).getDOMNode().attributes['data-sample'].value
+            ).toBe('Sample');
         });
 
-        xtest('should allow props to be spread to the DatePicker component\'s Calendar component\'s tbody element', () => {
-            // TODO: placeholder for this test description once that functionality is built
+        test('should allow props to be spread to the DatePicker component\'s Calendar component\'s tbody element', () => {
+            const calendarProps = {
+                tableBodyProps: {
+                    'data-sample': 'Sample'
+                }
+            };
+            wrapper = mount(<DatePicker calendarProps={calendarProps} />);
+            wrapper.find('button.fd-button--transparent.sap-icon--calendar').simulate('click');
+
+            expect(
+                wrapper.find('tbody').getDOMNode().attributes['data-sample'].value
+            ).toBe('Sample');
         });
     });
 });
