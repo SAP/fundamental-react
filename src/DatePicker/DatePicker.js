@@ -299,13 +299,13 @@ class DatePicker extends Component {
     }
 
     getPlaceHolder(dateFormat) {
-        if (dateFormat) {
-            if (this.props.enableRangeSelection) {
-                return dateFormat + dateRangeSeparator + dateFormat;
-            }
-            return dateFormat;
+        let dateFormatFinal = dateFormat
+                                && dateFormat.trim()
+                                && dateFormat.trim().length ? dateFormat : ISO_DATE_FORMAT;
+        if (this.props.enableRangeSelection) {
+            return dateFormatFinal + dateRangeSeparator + dateFormatFinal;
         }
-        return ISO_DATE_FORMAT;
+        return dateFormatFinal;
     }
 }
 
