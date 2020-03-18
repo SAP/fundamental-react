@@ -293,7 +293,7 @@ describe('<DatePicker />', () => {
     });
 
     describe('onChange callback', () => {
-        test('should call onChange on focusing input', () => {
+        test('should call onChange on entering text input', () => {
             const change = jest.fn();
             const element = mount(<DatePicker defaultValue='2020-03-13' onChange={change} />);
 
@@ -306,7 +306,7 @@ describe('<DatePicker />', () => {
     });
 
     describe('onFocus callback', () => {
-        test('should call onFocus on entering input text', () => {
+        test('should call onFocus on focusing input', () => {
             const focus = jest.fn();
             const element = mount(<DatePicker defaultValue='2020-03-13' onFocus={focus} />);
 
