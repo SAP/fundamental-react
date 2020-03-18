@@ -22,8 +22,10 @@ const FormMessage = React.forwardRef(({ type, children, className, disableStyles
     return (
         <div
             {...props}
+            aria-live='assertive'
             className={formMessageClasses}
-            ref={ref}>
+            ref={ref}
+            role='alert'>
             {children}
         </div>
     );

@@ -406,7 +406,7 @@ class Calendar extends Component {
 
         return (
             <header className='fd-calendar__header'>
-                <div aria-live='polite' className='fd-calendar__navigation'>
+                <div aria-live='assertive' className='fd-calendar__navigation'>
                     <div className='fd-calendar__action'>
                         <Button
                             aria-label={previousButtonLabel}
