@@ -200,8 +200,11 @@ class DatePicker extends Component {
         });
     }
 
-    handleClick = () => {
+    handleClickButton = () => {
         this.setState({ isExpanded: !this.state.isExpanded });
+
+        const popover = this.popoverRef && this.popoverRef.current;
+        popover && popover.triggerBody();
     };
 
     handleOutsideClickAndEscape = () => {
@@ -337,7 +340,6 @@ class DatePicker extends Component {
                             compact={compact}
                             disableStyles={disableStyles}
                             disabled={disabled}
-                            onClick={this.handleClick}
                             validationState={!this.state.isExpanded ? validationState : null} >
                             <FormInput
                                 {...inputProps}
@@ -355,12 +357,14 @@ class DatePicker extends Component {
                                     disableStyles={disableStyles}
                                     disabled={disableButton}
                                     glyph='calendar'
+                                    onClick={this.handleClickButton}
                                     option='transparent' />
                             </InputGroup.Addon>
                         </InputGroup>
                     }
                     disableKeyPressHandler
                     disableStyles={disableStyles}
+                    disableTriggerOnClick
                     disabled={disableButton}
                     noArrow
                     onClickOutside={this.handleOutsideClickAndEscape}

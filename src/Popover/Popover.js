@@ -94,6 +94,7 @@ class Popover extends Component {
             disableEdgeDetection,
             disableKeyPressHandler,
             disableStyles,
+            disableTriggerOnClick,
             onClickOutside,
             onEscapeKey,
             disabled,
@@ -110,9 +111,13 @@ class Popover extends Component {
             ...rest
         } = this.props;
 
-        let onClickFunctions = this.triggerBody;
-        if (control.props.onClick) {
-            onClickFunctions = chain(this.triggerBody, control.props.onClick);
+        let onClickFunctions;
+        if (!disableTriggerOnClick) {
+            onClickFunctions = this.triggerBody;
+
+            if (control.props.onClick) {
+                onClickFunctions = chain(this.triggerBody, control.props.onClick);
+            }
         }
 
         const id = popperProps.id || this.popoverId;
@@ -180,6 +185,7 @@ Popover.propTypes = {
     disableEdgeDetection: PropTypes.bool,
     disableKeyPressHandler: PropTypes.bool,
     disableStyles: PropTypes.bool,
+    disableTriggerOnClick: PropTypes.bool,
     noArrow: PropTypes.bool,
     placement: PropTypes.oneOf(POPPER_PLACEMENTS),
     popperClassName: PropTypes.string,
@@ -203,6 +209,7 @@ Popover.propDescriptions = {
     control: 'Node to render as the reference element (that the `body` will be placed in relation to).',
     disableEdgeDetection: 'Set to **true** to render popover without edge detection so popover will not flip from top to bottom with scroll.',
     disableKeyPressHandler: 'Set to **true** to remove onKeyPress handler and aria-* roles. Only do so if the control is a complex component such as a FormInput with Button.',
+    disableTriggerOnClick: 'Set to **true** to remove default triggerBody handler used in onClick. Useful for when a custom method is desired to open the Popover.',
     noArrow: 'Set to **true** to render a popover without an arrow.',
     placement: 'Initial position of the `body` (overlay) related to the `control`.',
     popperClassName: 'Additional classeNames to be spread to the overlay element.',
