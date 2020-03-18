@@ -77,6 +77,12 @@ storiesOf('Components|DatePicker', module)
     .add('range selection', () => (
         <DatePicker enableRangeSelection />
     ))
+    .add('disabled', () => (
+        <DatePicker disabled />
+    ))
+    .add('readonly', () => (
+        <DatePicker readOnly />
+    ))
     .add('compact', () => (
         <DatePicker compact />
     ));
