@@ -14,9 +14,11 @@ class Calendar extends Component {
         super(props);
 
         let currentDateDisplayed = moment().startOf('day');
-        let selectedDateOrDates = null;
+        let selectedDateOrDates = !this.props.enableRangeSelection ? moment({ year: 0 }) : [];
 
-        if (this.props.customDate) {
+        const customDateEmpty = (!this.props.customDate || (this.props.customDate && this.props.customDate.length === 0));
+
+        if (!customDateEmpty) {
             selectedDateOrDates = this.props.customDate;
             currentDateDisplayed = this.props.customDate;
 
