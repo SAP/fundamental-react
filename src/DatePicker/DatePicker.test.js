@@ -5,13 +5,13 @@ import { mount } from 'enzyme';
 import React from 'react';
 
 describe('<DatePicker />', () => {
-    const defaultDatePicker = <DatePicker />;
+    const defaultDatePicker = <DatePicker dateFormat='MM/DD/YYYY' />;
     const disabledFuturePicker = <DatePicker disableFutureDates />;
     const disabledFutureRangePicker = <DatePicker disableFutureDates enableRangeSelection />;
     const compactDatePicker = <DatePicker className='blue' compact />;
-    const rangeDatePicker = <DatePicker enableRangeSelection />;
+    const rangeDatePicker = <DatePicker dateFormat='MM/DD/YYYY' enableRangeSelection />;
     const compactRangeDatepicker = <DatePicker compact enableRangeSelection />;
-    const prePopulatedDatepicker = <DatePicker defaultValue='2020-03-13' />;
+    const prePopulatedDatepicker = <DatePicker dateFormat='MM/DD/YYYY' defaultValue='03/13/2020' />;
     let wrapper;
 
     afterAll(() => {
@@ -37,11 +37,8 @@ describe('<DatePicker />', () => {
 
         expect(wrapper.state('arrSelectedDates').length).toEqual(2);
 
-        // click on body element
-        let event = new MouseEvent('mousedown', {
-            target: document.querySelector('body')
-        });
-        document.dispatchEvent(event);
+        //trigger onBlur by clicking outside
+        simluateOutsideMouseClick();
 
         // check to make sure calendar is not expanded
         expect(wrapper.state('isExpanded')).toBeFalsy();
@@ -60,16 +57,13 @@ describe('<DatePicker />', () => {
         arrDates = [endRangeDate, startRangeDate];
         wrapper.instance().updateDate(arrDates);
 
-        let switchFormattedDate = `${endRangeDate.format('L')}-${startRangeDate.format('L')}`;
+        let switchFormattedDate = `${endRangeDate.format('L')} - ${startRangeDate.format('L')}`;
 
         expect(wrapper.state('formattedDate')).toEqual(switchFormattedDate);
         expect(wrapper.state('arrSelectedDates').length).toEqual(2);
 
-        // click on body element to hide calendar
-        let event = new MouseEvent('mousedown', {
-            target: document.querySelector('body')
-        });
-        document.dispatchEvent(event);
+        //trigger onBlur by clicking outside
+        simluateOutsideMouseClick();
 
         // check to make sure calendar is not expanded
         expect(wrapper.state('isExpanded')).toBeFalsy();
@@ -129,8 +123,8 @@ describe('<DatePicker />', () => {
         arrDates = [startRangeDate, endRangeDate];
         wrapper.instance().updateDate(arrDates);
 
-        formattedDate = `${startRangeDate.format('L')}-${endRangeDate.format('L')}`;
-        isoFormattedDate = `${startRangeDate.format(ISO_FORMAT)}-${endRangeDate.format(ISO_FORMAT)}`;
+        formattedDate = `${startRangeDate.format('L')} - ${endRangeDate.format('L')}`;
+        isoFormattedDate = `${startRangeDate.format(ISO_FORMAT)} - ${endRangeDate.format(ISO_FORMAT)}`;
 
         expect(wrapper.state('formattedDate')).toEqual(formattedDate);
         expect(wrapper.state('arrSelectedDates').length).toEqual(2);
@@ -140,40 +134,26 @@ describe('<DatePicker />', () => {
     test('pressing enter key on date input', () => {
         wrapper = mount(rangeDatePicker);
 
-        let startRangeDate = moment();
-        let endRangeDate = moment();
-        endRangeDate.add(3, 'day');
-
-        let formattedDate = `${startRangeDate.month() +
-            1}/${startRangeDate.date()}/${startRangeDate.year()}-${endRangeDate.month() +
-            1}/${endRangeDate.date()}/${endRangeDate.year()}`;
-
         wrapper.find('input[type="text"]')
-            .simulate('change', { target: { value: formattedDate } });
+            .simulate('change', { target: { value: '3.16.20 - 3.19.20' } });
 
         wrapper.find('input[type="text"]').simulate('keypress', { key: 'Enter' });
 
-        expect(wrapper.state('formattedDate')).toEqual(formattedDate);
+        expect(wrapper.state('formattedDate')).toEqual('03/16/2020 - 03/19/2020');
         expect(wrapper.state('arrSelectedDates').length).toEqual(2);
     });
 
     test('pressing enter key on date input where start date > than end date', () => {
         wrapper = mount(rangeDatePicker);
 
-        let startRangeDate = moment();
-        let endRangeDate = moment();
-        endRangeDate.add(3, 'day');
-
-        let switchFormattedDate = `${endRangeDate.month() +
-            1}/${endRangeDate.date()}/${endRangeDate.year()}-${startRangeDate.month() +
-            1}/${startRangeDate.date()}/${startRangeDate.year()}`;
-
+        // set start date greater than end date
         wrapper.find('input[type="text"]')
-            .simulate('change', { target: { value: switchFormattedDate } });
+            .simulate('change', { target: { value: '3.19.20 - 3.16.20' } });
 
         wrapper.find('input[type="text"]').simulate('keypress', { key: 'Enter' });
 
-        expect(wrapper.state('formattedDate')).toEqual(switchFormattedDate);
+        //check if date start date is less than end date i.e. switched
+        expect(wrapper.state('formattedDate')).toEqual('03/16/2020 - 03/19/2020');
         expect(wrapper.state('arrSelectedDates').length).toEqual(2);
     });
 
@@ -220,7 +200,7 @@ describe('<DatePicker />', () => {
         wrapper = mount(rangeDatePicker);
 
         wrapper.find('input[type="text"]')
-            .simulate('change', { target: { value: 'May 14th, 2018-May 15th, 2018' } });
+            .simulate('change', { target: { value: 'May 14th, 2018 - May 15th, 2018' } });
 
         wrapper.find('input[type="text"]').simulate('keypress', { key: 'Enter' });
 
@@ -244,6 +224,62 @@ describe('<DatePicker />', () => {
         expect(wrapper.state('formattedDate')).toEqual('04/14/2020');
     });
 
+    test('auto format to specified dateFormat', () => {
+        wrapper = mount(defaultDatePicker); // dateFormat='MM/DD/YYYY'
+
+        //set date input value
+        wrapper
+            .find('input[type="text"]')
+            .simulate('change', { target: { value: '3.16.20' } }); // input format D.MM.YY
+
+        //trigger onBlur by clicking outside
+        simluateOutsideMouseClick();
+
+        //expect date value to be auto formated
+        expect(wrapper.state('formattedDate')).toEqual('03/16/2020');
+    });
+
+    test('default value with dateFormat and locale set', ()=>{
+        const compToTest = (
+            <DatePicker
+                dateFormat='MM/DD/YYYY'
+                defaultValue='3.16.20'
+                locale='hi' />
+        );
+        wrapper = mount(compToTest);
+        expect(wrapper.state('formattedDate')).toEqual('०३/१६/२०२०');
+    });
+
+    test('set defaultDate, unset dateFormat, set locale', ()=>{
+        const compToTest = (
+            <DatePicker
+                defaultValue='17.3.20'
+                locale='fr' /> //locale date format DD/MM/YYYY
+        );
+        wrapper = mount(compToTest);
+
+        //trigger onBlur by clicking outside
+        simluateOutsideMouseClick();
+
+        //expect date value to be auto formated
+        expect(wrapper.state('formattedDate')).toEqual('17/03/2020');
+    });
+
+    test('date range selection with custom dateFormat set', () => {
+        wrapper = mount(rangeDatePicker); // dateFormat='MM/DD/YYYY'
+
+        //set date input value
+        wrapper
+            .find('input[type="text"]')
+            .simulate('change', { target: { value: '3.16.20 - 3.11.20' } }); // input format D.MM.YY
+
+        //trigger onBlur by clicking outside
+        simluateOutsideMouseClick();
+
+        //expect date value to be auto formated
+        expect(wrapper.state('formattedDate')).toEqual('03/11/2020 - 03/16/2020');
+    });
+
     test('provide ISO-8601 format date', () => {
         wrapper = mount(prePopulatedDatepicker);
         expect(wrapper.state('isoFormattedDate')).toEqual('2020-03-13');
@@ -256,7 +292,7 @@ describe('<DatePicker />', () => {
     test('should update value if defaultValue prop is updated', () => {
         wrapper = mount(prePopulatedDatepicker);
         wrapper = wrapper.setProps({
-            defaultValue: '2016-12-21'
+            defaultValue: '12-21-2016'
         });
         expect(wrapper.state('formattedDate')).toEqual('12/21/2016');
     });
@@ -272,8 +308,9 @@ describe('<DatePicker />', () => {
                 .at(0)
                 .simulate('click');
 
-            let event = new MouseEvent('mousedown', { target: document.querySelector('body') });
-            document.dispatchEvent(event);
+
+            //trigger onBlur by clicking outside
+            simluateOutsideMouseClick();
 
             expect(blur).toHaveBeenCalledTimes(1);
 
@@ -285,8 +322,9 @@ describe('<DatePicker />', () => {
 
             element.find('input[type="text"]').simulate('click');
 
-            let event = new MouseEvent('mousedown', { target: document.querySelector('body') });
-            document.dispatchEvent(event);
+
+            //trigger onBlur by clicking outside
+            simluateOutsideMouseClick();
 
             expect(blur).toHaveBeenCalledTimes(1);
         });
@@ -308,7 +346,12 @@ describe('<DatePicker />', () => {
     describe('onFocus callback', () => {
         test('should call onFocus on focusing input', () => {
             const focus = jest.fn();
-            const element = mount(<DatePicker defaultValue='2020-03-13' onFocus={focus} />);
+            const element = mount(
+                <DatePicker
+                    dateFormat='YYYY-MM-DD'
+                    defaultValue='2020-03-13'
+                    onFocus={focus} />
+            );
 
             element.find('input[type="text"]').prop('onFocus')();
 
@@ -415,3 +458,8 @@ describe('<DatePicker />', () => {
         });
     });
 });
+function simluateOutsideMouseClick() {
+    let event = new MouseEvent('mousedown', { target: document.querySelector('body') });
+    document.dispatchEvent(event);
+}
+
