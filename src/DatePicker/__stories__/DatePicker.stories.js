@@ -156,13 +156,27 @@ storiesOf('Components|DatePicker', module)
             <div>
                 <FormLabel
                     htmlFor='customDateFormatField5'>
-                    No date format with default locale
+                    Unset date format, with French locale
                 </FormLabel>
                 <DatePicker
+                    buttonLabel='debugz'
                     inputProps={{
                         id: 'customDateFormatField5'
                     }}
-                    locale='en' />
+                    locale='fr' />
+            </div>
+            <div>
+                <FormLabel
+                    htmlFor='customDateFormatField5'>
+                    Unset date format, with null locale (uses ISO_DATE_FORMAT)
+                </FormLabel>
+                <DatePicker
+                    buttonLabel='debugz'
+                    defaultValue='17.3.20'
+                    inputProps={{
+                        id: 'customDateFormatField5'
+                    }}
+                    locale={null} />
             </div>
         </LayoutGrid>
     ));

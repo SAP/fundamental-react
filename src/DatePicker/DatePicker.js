@@ -30,8 +30,9 @@ class DatePicker extends Component {
     }
 
     /**
-     * Function tries to format any date string into the format specified by
-     * props.dateFormat (or ISO_DATE_FORMAT as fallback).
+     * Function tries to format any date string into the format specified by dateFormat.
+     * It will use format derived from locale if dateFormat is not specified.
+     * It will use ISO_DATE_FORMAT if locale is invalid.
      * It will try to use multiple similar formats, defined in validDateLookup, to
      * create a Moment.js date object from given dateString.
      * It will return an empty string if Moment.js is unable to create a valid
@@ -43,14 +44,25 @@ class DatePicker extends Component {
         if (date) {
             const momentDateObj = this.getMomentDateObj(date);
             if (momentDateObj && momentDateObj.isValid()) {
-                const { dateFormat } = this.props;
-                return momentDateObj.format(dateFormat ? dateFormat : ISO_DATE_FORMAT);
+                return momentDateObj.format(this.resolveFormat());
             } else {
                 return '';
             }
         }
         return date;
     }
+
+    resolveFormat = () => {
+        const { dateFormat, locale } = this.props;
+        if (dateFormat) {
+            return dateFormat;
+        } else if (locale) {
+            const localeData = moment.localeData(locale);
+            return localeData.longDateFormat('L');
+        }
+        return ISO_DATE_FORMAT;
+    }
+
     /**
      * Function to get date range string from collection of 2 date objects.
      * @param  {Object[]} dates array containing 2 date objects
@@ -82,8 +94,16 @@ class DatePicker extends Component {
      * @returns {Array} collection of date formats allowed for input.
      */
     getValidFormats = () =>{
-        const { dateFormat } = this.props;
-        return validDateLookup[dateFormat] ? validDateLookup[dateFormat] : dateFormat;
+        const format = this.resolveFormat();
+        return validDateLookup[format] ? validDateLookup[format] : format;
+    }
+
+    getPlaceHolder() {
+        let placeholderDateFormat = this.resolveFormat();
+        if (this.props.enableRangeSelection) {
+            return placeholderDateFormat + dateRangeSeparator + placeholderDateFormat;
+        }
+        return placeholderDateFormat;
     }
 
     modifyDate = (e) => {
@@ -124,7 +144,6 @@ class DatePicker extends Component {
             }
         } else {
             const newDate = this.getMomentDateObj(formattedDate);
-
             if (this.isDateValid(newDate)) {
                 this.setState({
                     selectedDate: newDate,
@@ -297,16 +316,6 @@ class DatePicker extends Component {
             </div>
         );
     }
-
-    getPlaceHolder(dateFormat) {
-        let dateFormatFinal = dateFormat
-                                && dateFormat.trim()
-                                && dateFormat.trim().length ? dateFormat : ISO_DATE_FORMAT;
-        if (this.props.enableRangeSelection) {
-            return dateFormatFinal + dateRangeSeparator + dateFormatFinal;
-        }
-        return dateFormatFinal;
-    }
 }
 
 DatePicker.displayName = 'DatePicker';
@@ -331,7 +340,7 @@ DatePicker.propTypes = {
 DatePicker.defaultProps = {
     buttonLabel: 'Choose date',
     defaultValue: '',
-    dateFormat: ISO_DATE_FORMAT,
+    dateFormat: null,
     locale: 'en',
     onBlur: () => {}
 };
