@@ -3,12 +3,14 @@
 exports[`<Switch /> create Switch component 1`] = `
 <label
   className="fd-form-label fd-switch__label"
+  onKeyDown={[Function]}
 >
   <span
     className="fd-switch"
   >
     <input
       aria-checked={false}
+      aria-label="Switch"
       checked={false}
       className="fd-switch__input"
       onChange={[Function]}
@@ -34,12 +36,14 @@ exports[`<Switch /> create Switch component 1`] = `
 exports[`<Switch /> create Switch component 2`] = `
 <label
   className="fd-form-label fd-switch__label"
+  onKeyDown={[Function]}
 >
   <span
     className="fd-switch fd-switch--compact"
   >
     <input
       aria-checked={true}
+      aria-label="Switch"
       checked={true}
       className="fd-switch__input"
       onChange={[Function]}
@@ -65,12 +69,14 @@ exports[`<Switch /> create Switch component 2`] = `
 exports[`<Switch /> create Switch component 3`] = `
 <label
   className="fd-form-label is-disabled fd-switch__label"
+  onKeyDown={[Function]}
 >
   <span
     className="fd-switch"
   >
     <input
       aria-checked={false}
+      aria-label="Switch"
       checked={false}
       className="fd-switch__input"
       disabled={true}
@@ -97,12 +103,14 @@ exports[`<Switch /> create Switch component 3`] = `
 exports[`<Switch /> create Switch component 4`] = `
 <label
   className="fd-form-label is-disabled fd-switch__label"
+  onKeyDown={[Function]}
 >
   <span
     className="fd-switch"
   >
     <input
       aria-checked={true}
+      aria-label="Switch"
       checked={true}
       className="fd-switch__input"
       disabled={true}
