@@ -21,7 +21,7 @@ class DatePicker extends Component {
         const isoFormattedDate = moment(props.defaultValue).format(ISO_DATE_FORMAT);
         this.state = {
             isExpanded: false,
-            selectedDate: formattedDate.length === 0 ? null : moment(formattedDate, props.dateFormat),
+            selectedDate: formattedDate.length === 0 ? null : this.getMomentDateObj(formattedDate),
             arrSelectedDates: [],
             formattedDate,
             isoFormattedDate
@@ -119,9 +119,9 @@ class DatePicker extends Component {
     }
 
     handleNewDefault = () => {
-        const formattedNewDefault = this.props.defaultValue && this.props.defaultValue.length > 0 ? moment(this.props.defaultValue).format(this.getLocaleDateFormat()) : '';
+        const formattedNewDefault = this.props.defaultValue && this.props.defaultValue.length > 0 ? this.getFormattedDateStr(this.props.defaultValue) : '';
         this.setState({
-            selectedDate: formattedNewDefault.length === 0 ? null : moment(formattedNewDefault, this.getLocaleDateFormat()),
+            selectedDate: formattedNewDefault.length === 0 ? null : this.getMomentDateObj(formattedNewDefault),
             isoFormattedDate: moment(this.props.defaultValue).format(ISO_DATE_FORMAT),
             formattedDate: formattedNewDefault
         }, () => {
@@ -130,7 +130,10 @@ class DatePicker extends Component {
     }
 
     _handleOnChange = (e) => {
-        this.setState({ formattedDate: e.target.value, isoFormattedDate: moment(e.target.value).format(ISO_DATE_FORMAT) }, () => {
+        this.setState({
+            formattedDate: e.target.value,
+            isoFormattedDate: moment(e.target.value).format(ISO_DATE_FORMAT) },
+        () => {
             this.props.onChange(this.getCallbackData());
         });
     }

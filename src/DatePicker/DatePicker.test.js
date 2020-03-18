@@ -292,7 +292,7 @@ describe('<DatePicker />', () => {
     test('should update value if defaultValue prop is updated', () => {
         wrapper = mount(prePopulatedDatepicker);
         wrapper = wrapper.setProps({
-            defaultValue: '2016-12-21'
+            defaultValue: '12-21-2016'
         });
         expect(wrapper.state('formattedDate')).toEqual('12/21/2016');
     });
@@ -346,7 +346,12 @@ describe('<DatePicker />', () => {
     describe('onFocus callback', () => {
         test('should call onFocus on focusing input', () => {
             const focus = jest.fn();
-            const element = mount(<DatePicker defaultValue='2020-03-13' onFocus={focus} />);
+            const element = mount(
+                <DatePicker
+                    dateFormat='YYYY-MM-DD'
+                    defaultValue='2020-03-13'
+                    onFocus={focus} />
+            );
 
             element.find('input[type="text"]').prop('onFocus')();
 
