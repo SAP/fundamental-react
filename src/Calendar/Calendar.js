@@ -18,9 +18,10 @@ class Calendar extends Component {
 
         if (this.props.customDate) {
             selectedDateOrDates = this.props.customDate;
+            currentDateDisplayed = this.props.customDate;
 
             if (this.props.customDate.length) {
-                currentDateDisplayed = !this.props.enableRangeSelection ? this.props.customDate : this.props.customDate[0];
+                currentDateDisplayed = this.props.customDate[0];
             }
         }
 
