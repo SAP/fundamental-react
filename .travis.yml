@@ -8,9 +8,8 @@ script:
   - npm run build
 jobs:
   include:
-  - stage: Lint
+  - stage: Lint & Size
     script: npm run lint
-  - stage: Size
     script: npm run size
   - stage: Test (Coverage)
     script: npm run test:coverage
