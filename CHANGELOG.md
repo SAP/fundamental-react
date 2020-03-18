@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.8.1-rc.7"></a>
+## [0.8.1-rc.7](https://github.com/SAP/fundamental-react/compare/v0.8.1-rc.6...v0.8.1-rc.7) (2020-03-18)
+
+
+### Bug Fixes
+
+* Switch: Accessibility updates ([#925](https://github.com/SAP/fundamental-react/issues/925)) ([d790fc7](https://github.com/SAP/fundamental-react/commit/d790fc7))
+
+
+
 <a name="0.8.1-rc.6"></a>
 ## [0.8.1-rc.6](https://github.com/SAP/fundamental-react/compare/v0.8.1-rc.5...v0.8.1-rc.6) (2020-03-18)
 
