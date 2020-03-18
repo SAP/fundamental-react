@@ -13,13 +13,24 @@ class Calendar extends Component {
     constructor(props) {
         super(props);
 
+        let currentDateDisplayed = moment().startOf('day');
+        let selectedDateOrDates = null;
+
+        if (this.props.customDate) {
+            selectedDateOrDates = this.props.customDate;
+
+            if (this.props.customDate.length) {
+                currentDateDisplayed = !this.props.enableRangeSelection ? this.props.customDate : this.props.customDate[0];
+            }
+        }
+
         this.state = {
             todayDate: moment().startOf('day'),
             gridBoundaryContext: null,
             refocusGrid: this.props.focusOnInit,
-            currentDateDisplayed: moment().startOf('day'),
-            arrSelectedDates: [],
-            selectedDate: moment({ year: 0 }),
+            currentDateDisplayed: currentDateDisplayed,
+            arrSelectedDates: this.props.enableRangeSelection ? selectedDateOrDates : [],
+            selectedDate: !this.props.enableRangeSelection ? selectedDateOrDates : null,
             showMonths: false,
             showYears: false,
             dateClick: false
@@ -33,36 +44,6 @@ class Calendar extends Component {
             require('fundamental-styles/dist/calendar.css');
         }
         this.gridManager = new GridManager(this.getGridOptions());
-    }
-
-    // sync the selected date of the calendar with the date picker
-    static getDerivedStateFromProps(updatedPropsParent, previousStates) {
-        const { customDate, enableRangeSelection } = updatedPropsParent;
-
-        if (typeof customDate === 'undefined') {
-            return null;
-        }
-
-        if (!previousStates.dateClick) {
-            if (typeof enableRangeSelection !== 'undefined') {
-                if (customDate !== previousStates.arrSelectedDates) {
-                    if (!customDate || !customDate.length) {
-                        // reset calendar state when date picker input is empty and did not click on a date
-                        return ({ currentDateDisplayed: moment().startOf('day'), arrSelectedDates: [], selectedDate: moment({ year: 0 }) });
-                    }
-                    // update calendar state with date picker input
-                    return ({ currentDateDisplayed: customDate[0], arrSelectedDates: customDate, selectedDate: moment({ year: 0 }) });
-                }
-            } else if (customDate !== previousStates.currentDateDisplayed) {
-                if (!customDate) {
-                    // reset calendar state when date picker input is empty and did not click on a date
-                    return ({ currentDateDisplayed: moment().startOf('day'), selectedDate: moment({ year: 0 }) });
-                }
-                // update calendar state with date picker input
-                return ({ currentDateDisplayed: customDate, selectedDate: customDate });
-            }
-        }
-        return ({ dateClick: false });
     }
 
     componentDidUpdate = (prevProps, prevState) => {
