@@ -11,25 +11,47 @@ import Popover from '../Popover/Popover';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 
+const ISO_DATE_FORMAT = 'YYYY-MM-DD';
+
 class DatePicker extends Component {
     constructor(props) {
         super(props);
-        const ISO_DATE_FORMAT = 'YYYY-MM-DD';
         const formattedDate = props.defaultValue.length > 0 ?
             moment(props.defaultValue, ISO_DATE_FORMAT).format(this.getLocaleDateFormat()) : '';
+        const isoFormattedDate = moment(props.defaultValue).format(ISO_DATE_FORMAT);
         this.state = {
             isExpanded: false,
             selectedDate: formattedDate.length === 0 ? null : moment(formattedDate, this.getLocaleDateFormat()),
             arrSelectedDates: [],
-            formattedDate
+            formattedDate,
+            isoFormattedDate
         };
 
         this.calendarRef = React.createRef();
         this.popoverRef = React.createRef();
     }
 
-    modifyDate = (e) => {
-        this.setState({ formattedDate: e.target.value });
+    componentDidUpdate(prevProps) {
+        if (prevProps.defaultValue !== this.props.defaultValue) {
+            this.handleNewDefault();
+        }
+    }
+
+    handleNewDefault = () => {
+        const formattedNewDefault = this.props.defaultValue && this.props.defaultValue.length > 0 ? moment(this.props.defaultValue).format(this.getLocaleDateFormat()) : '';
+        this.setState({
+            selectedDate: formattedNewDefault.length === 0 ? null : moment(formattedNewDefault, this.getLocaleDateFormat()),
+            isoFormattedDate: moment(this.props.defaultValue).format(ISO_DATE_FORMAT),
+            formattedDate: formattedNewDefault
+        }, () => {
+            this.validateDates();
+        });
+    }
+
+    _handleOnChange = (e) => {
+        this.setState({ formattedDate: e.target.value, isoFormattedDate: moment(e.target.value).format(ISO_DATE_FORMAT) }, () => {
+            this.props.onChange(this.getCallbackData());
+        });
     }
 
     sendUpdate = (e) => {
@@ -40,6 +62,14 @@ class DatePicker extends Component {
 
     isDateValid = (date) => {
         return date.isValid() && isEnabledDate(date, this.props);
+    }
+
+    getCallbackData = () => {
+        return {
+            date: this.state.selectedDate,
+            formattedDate: this.state.formattedDate,
+            isoFormattedDate: this.state.isoFormattedDate
+        };
     }
 
     validateDates = () => {
@@ -78,6 +108,7 @@ class DatePicker extends Component {
     resetState = () => {
         this.setState({
             formattedDate: '',
+            isoFormattedDate: '',
             selectedDate: null,
             arrSelectedDates: []
         });
@@ -96,25 +127,33 @@ class DatePicker extends Component {
         });
     };
 
+    _handleFocus = () => {
+        this.props.onFocus(this.getCallbackData());
+    }
+
     updateDate = (date) => {
         const longDateFormat = this.getLocaleDateFormat();
         let closeCalendar = false;
 
         if (this.props.enableRangeSelection) {
             let formatDate = date[0].format(longDateFormat);
+            let isoFormatDate = date[0].format(ISO_DATE_FORMAT);
             if (!!date[1]) {
                 formatDate += '-' + date[1].format(longDateFormat);
+                isoFormatDate += '-' + date[1].format(ISO_DATE_FORMAT);
                 closeCalendar = true;
             }
             this.setState({
                 arrSelectedDates: date,
-                formattedDate: formatDate
+                formattedDate: formatDate,
+                isoFormattedDate: isoFormatDate
             });
         } else {
             closeCalendar = true;
             this.setState({
                 selectedDate: date,
-                formattedDate: date.format(longDateFormat)
+                formattedDate: date.format(longDateFormat),
+                isoFormattedDate: date.format(ISO_DATE_FORMAT)
             });
         }
 
@@ -128,10 +167,8 @@ class DatePicker extends Component {
     getLocaleDateFormat = () => moment.localeData(this.props.locale).longDateFormat('L');
 
     _handleBlur = () => {
-        this.props.onBlur({
-            date: this.state.selectedDate,
-            formattedDate: this.state.formattedDate
-        });
+        this.validateDates();
+        this.props.onBlur(this.getCallbackData());
     };
 
     render() {
@@ -139,8 +176,10 @@ class DatePicker extends Component {
             blockedDates,
             buttonLabel,
             buttonProps,
+            calendarProps,
             className,
             compact,
+            disabled,
             disableAfterDate,
             disableBeforeDate,
             disabledDates,
@@ -154,6 +193,7 @@ class DatePicker extends Component {
             locale,
             localizedText,
             onBlur,
+            readOnly,
             validationState,
             ...props
         } = this.props;
@@ -165,6 +205,8 @@ class DatePicker extends Component {
             },
             className
         );
+
+        const disableButton = disabled || readOnly;
 
         return (
             <div
@@ -182,6 +224,7 @@ class DatePicker extends Component {
                                 </FormMessage>
                             }
                             <Calendar
+                                {...calendarProps}
                                 blockedDates={blockedDates}
                                 customDate={
                                     enableRangeSelection
@@ -211,20 +254,24 @@ class DatePicker extends Component {
                             className={inputGroupClass}
                             compact={compact}
                             disableStyles={disableStyles}
+                            disabled={disabled}
                             onClick={this.handleClick}
                             validationState={!this.state.isExpanded ? validationState : null} >
                             <FormInput
                                 {...inputProps}
                                 disableStyles={disableStyles}
                                 onBlur={this._handleBlur}
-                                onChange={this.modifyDate}
+                                onChange={this._handleOnChange}
+                                onFocus={this._handleFocus}
                                 onKeyPress={this.sendUpdate}
                                 placeholder={this.getLocaleDateFormat()}
+                                readOnly={readOnly}
                                 value={this.state.formattedDate} />
                             <InputGroup.Addon isButton>
                                 <Button {...buttonProps}
                                     aria-label={buttonLabel}
                                     disableStyles={disableStyles}
+                                    disabled={disableButton}
                                     glyph='calendar'
                                     option='transparent' />
                             </InputGroup.Addon>
@@ -232,6 +279,7 @@ class DatePicker extends Component {
                     }
                     disableKeyPressHandler
                     disableStyles={disableStyles}
+                    disabled={disableButton}
                     noArrow
                     onClickOutside={this.handleOutsideClickAndEscape}
                     onEscapeKey={this.handleOutsideClickAndEscape}
@@ -247,23 +295,36 @@ DatePicker.propTypes = {
     ...Calendar.basePropTypes,
     buttonLabel: PropTypes.string,
     buttonProps: PropTypes.object,
+    calendarProps: PropTypes.shape({
+        monthListProps: PropTypes.object,
+        tableBodyProps: PropTypes.object,
+        tableHeaderProps: PropTypes.object,
+        tableProps: PropTypes.object,
+        yearListProps: PropTypes.object
+    }),
     compact: PropTypes.bool,
     defaultValue: PropTypes.string,
+    disabled: PropTypes.bool,
     enableRangeSelection: PropTypes.bool,
     inputProps: PropTypes.object,
     locale: PropTypes.string,
+    readOnly: PropTypes.bool,
     validationState: PropTypes.shape({
         state: PropTypes.oneOf(FORM_MESSAGE_TYPES),
         text: PropTypes.string
     }),
-    onBlur: PropTypes.func
+    onBlur: PropTypes.func,
+    onChange: PropTypes.func,
+    onFocus: PropTypes.func
 };
 
 DatePicker.defaultProps = {
     buttonLabel: 'Choose date',
     defaultValue: '',
     locale: 'en',
-    onBlur: () => {}
+    onBlur: () => {},
+    onChange: () => {},
+    onFocus: () => {}
 };
 
 DatePicker.propDescriptions = {
@@ -272,7 +333,9 @@ DatePicker.propDescriptions = {
     defaultValue: 'Default value to be shown in the Datepicker. The only accepted format is the ISO format, i.e. YYYY-MM-DD',
     enableRangeSelection: 'Set to **true** to enable the selection of a date range (begin and end).',
     locale: 'Language code to set the locale.',
-    onBlur: 'Callback function for onBlur events. In the object returned, `date` is the date object and `formattedDate` is the formatted date.'
+    onBlur: 'Callback function for onBlur events. In the object returned, `date` is the date object, `formattedDate` is the formatted date, and `isoFormattedDate` is the date formatted in ISO-8601 format (YYYY-MM-DD).',
+    onChange: 'Callback function for onChange events. In the object returned, `date` is the date object, `formattedDate` is the formatted date, and `isoFormattedDate` is the date formatted in ISO-8601 format (YYYY-MM-DD).',
+    onFocus: 'Callback function for onFocus events. In the object returned, `date` is the date object, `formattedDate` is the formatted date, and `isoFormattedDate` is the date formatted in ISO-8601 format (YYYY-MM-DD).'
 };
 
 export default DatePicker;
