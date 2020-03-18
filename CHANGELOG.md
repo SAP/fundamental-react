@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.8.1-rc.6"></a>
+## [0.8.1-rc.6](https://github.com/SAP/fundamental-react/compare/v0.8.1-rc.5...v0.8.1-rc.6) (2020-03-18)
+
+
+### Bug Fixes
+
+* DatePicker custom formats and auto formatting ([#923](https://github.com/SAP/fundamental-react/issues/923)) ([f0bb0cf](https://github.com/SAP/fundamental-react/commit/f0bb0cf))
+
+
+
 <a name="0.8.1-rc.5"></a>
 ## [0.8.1-rc.5](https://github.com/SAP/fundamental-react/compare/v0.8.1-rc.4...v0.8.1-rc.5) (2020-03-18)
 
