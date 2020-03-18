@@ -1,8 +1,10 @@
 import classnames from 'classnames';
+import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import FormLabel from '../Forms/FormLabel';
+import keycode from 'keycode';
 import PropTypes from 'prop-types';
 import SwitchItem from './_SwitchItem';
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 
 
 const Switch = React.forwardRef(({
@@ -15,6 +17,7 @@ const Switch = React.forwardRef(({
     id,
     inputProps,
     internalLabels,
+    localizedText,
     onChange,
     semantic,
     ...props
@@ -34,6 +37,17 @@ const Switch = React.forwardRef(({
         onChange(e);
     };
 
+    const onKeyDownSwitch = useCallback((event) => {
+        switch (keycode(event)) {
+            case 'enter':
+                event.preventDefault();
+                event.stopPropagation();
+                setIsChecked(!isChecked);
+                break;
+            default:
+        }
+    });
+
     const spanClasses = classnames(
         'fd-switch',
         {
@@ -48,11 +62,13 @@ const Switch = React.forwardRef(({
             {...props}
             className='fd-switch__label'
             disableStyles={disableStyles}
-            htmlFor={id}>
+            htmlFor={id}
+            onKeyDown={onKeyDownSwitch}>
             <span className={spanClasses}>
                 <input
                     {...inputProps}
                     aria-checked={isChecked}
+                    aria-label={localizedText.switchLabel}
                     checked={isChecked}
                     className='fd-switch__input'
                     disabled={disabled}
@@ -102,11 +118,17 @@ Switch.propTypes = {
         unchecked: PropTypes.shape(SwitchItem.PropTypes)
     }),
     labelProps: PropTypes.object,
+    localizedText: CustomPropTypes.i18n({
+        switchLabel: PropTypes.string
+    }),
     semantic: PropTypes.bool,
     onChange: PropTypes.func
 };
 
 Switch.defaultProps = {
+    localizedText: {
+        switchLabel: 'Switch'
+    },
     onChange: () => { }
 };
 
