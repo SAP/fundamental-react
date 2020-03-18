@@ -77,6 +77,14 @@ export const DatePickerComponent = () => {
                     validationState={{ state: 'information', text: 'Test validation state' }} />
             </Example>
 
+            <Example
+                centered
+                title='Disabled and ReadOnly'>
+                <DatePicker disabled />
+                <DatePicker readOnly />
+            </Example>
+
+
         </ComponentPage>
     );
 };
