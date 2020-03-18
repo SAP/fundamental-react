@@ -1,4 +1,6 @@
 import DatePicker from '../DatePicker';
+import FormLabel from '../../Forms/FormLabel';
+import LayoutGrid from '../../LayoutGrid/LayoutGrid';
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import {
@@ -33,6 +35,21 @@ const weekdayOptions = {
     Friday: 'Friday',
     Saturday: 'Saturday'
 };
+const dateFormatOptionsLabel = 'Date Format';
+const dateFormatOptions = {
+    'MM/DD/YYYY': 'MM/DD/YYYY',
+    'MM-DD-YYYY': 'MM-DD-YYYY',
+    'MM.DD.YYYY': 'MM.DD.YYYY',
+    'DD/MM/YYYY': 'DD/MM/YYYY',
+    'DD-MM-YYYY': 'DD-MM-YYYY',
+    'DD.MM.YYYY': 'DD.MM.YYYY',
+    'YYYY/MM/DD': 'YYYY/MM/DD',
+    'YYYY-MM-DD': 'YYYY-MM-DD',
+    'YYYY.MM.DD': 'YYYY.MM.DD',
+    None: null
+};
+const dateFormatDefaultValue = null;
+const dateFormatGroupId = 'GROUP-DATE-FORMAT';
 
 storiesOf('Components|DatePicker', module)
     .addDecorator(withKnobs)
@@ -85,4 +102,87 @@ storiesOf('Components|DatePicker', module)
     ))
     .add('compact', () => (
         <DatePicker compact />
+    ))
+    .add('date format', () => (
+        <LayoutGrid cols={2}>
+            <div>
+                <FormLabel
+                    htmlFor='customDateFormatField'>
+                    Custom date format (knobs)
+                </FormLabel>
+                <DatePicker
+                    dateFormat={
+                        select(dateFormatOptionsLabel, dateFormatOptions, dateFormatDefaultValue, dateFormatGroupId)
+                    }
+                    inputProps={{
+                        id: 'customDateFormatField'
+                    }} />
+            </div>
+            <div>
+                <FormLabel
+                    htmlFor='customDateFormatField2'>
+                    Custom date format (knobs) with defaultValue
+                </FormLabel>
+                <DatePicker
+                    dateFormat={
+                        select(dateFormatOptionsLabel, dateFormatOptions, dateFormatDefaultValue, dateFormatGroupId)
+                    }
+                    defaultValue='12/04/1993'
+                    inputProps={{
+                        id: 'customDateFormatField2'
+                    }} />
+            </div>
+            <div>
+                <FormLabel
+                    htmlFor='customDateFormatField3'>
+                    DD.MM.YYYY in Hindi with defaultValue
+                </FormLabel>
+                <DatePicker
+                    dateFormat='DD.MM.YYYY'
+                    defaultValue='4.12.1993'
+                    inputProps={{
+                        id: 'customDateFormatField3'
+                    }}
+                    locale='hi' />
+            </div>
+            <div>
+                <FormLabel
+                    htmlFor='customDateFormatField4'>
+                    Custom date format (knobs) range selection
+                </FormLabel>
+                <DatePicker
+                    dateFormat={
+                        select(dateFormatOptionsLabel, dateFormatOptions, dateFormatDefaultValue, dateFormatGroupId)
+                    }
+                    enableRangeSelection
+                    inputProps={{
+                        id: 'customDateFormatField4'
+                    }} />
+            </div>
+            <div>
+                <FormLabel
+                    htmlFor='customDateFormatField5'>
+                    Unset date format, with French locale
+                </FormLabel>
+                <DatePicker
+                    buttonLabel='debugz'
+                    inputProps={{
+                        id: 'customDateFormatField5'
+                    }}
+                    locale='fr' />
+            </div>
+            <div>
+                <FormLabel
+                    htmlFor='customDateFormatField5'>
+                    Unset date format, with null locale (uses ISO_DATE_FORMAT)
+                </FormLabel>
+                <DatePicker
+                    buttonLabel='debugz'
+                    defaultValue='17.3.20'
+                    inputProps={{
+                        id: 'customDateFormatField5'
+                    }}
+                    locale={null} />
+            </div>
+        </LayoutGrid>
     ));

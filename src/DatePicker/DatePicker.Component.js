@@ -1,4 +1,5 @@
 import { DatePicker } from '../';
+import FormLabel from '../Forms/FormLabel';
 import path from 'path';
 import React from 'react';
 import { ComponentPage, Example } from '../_playground';
@@ -26,6 +27,33 @@ export const DatePickerComponent = () => {
                 title='Localized Date Picker'>
                 <DatePicker locale='es' />
                 <DatePicker locale='fr' />
+            </Example>
+
+            <Example
+                centered
+                title='Custom format Date Picker'>
+                <div>
+                    <FormLabel
+                        htmlFor='customDateFormatField1'>
+                    Custom Date Format 'YYYY/MM/DD'
+                    </FormLabel>
+                    <DatePicker
+                        dateFormat='YYYY/MM/DD'
+                        inputProps={{
+                            id: 'customDateFormatField1'
+                        }} />
+                </div>
+                <div>
+                    <FormLabel
+                        htmlFor='customDateFormatField2'>
+                    Custom Date Format 'DD-MM-YYYY'
+                    </FormLabel>
+                    <DatePicker
+                        dateFormat='DD-MM-YYYY'
+                        inputProps={{
+                            id: 'customDateFormatField2'
+                        }} />
+                </div>
             </Example>
 
             <Example
