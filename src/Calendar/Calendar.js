@@ -14,26 +14,26 @@ class Calendar extends Component {
         super(props);
 
         let currentDateDisplayed = moment().startOf('day');
-        let selectedDateOrDates = !this.props.enableRangeSelection ? moment({ year: 0 }) : [];
+        let selectedDateOrDates = !props.enableRangeSelection ? moment({ year: 0 }) : [];
 
-        const customDateEmpty = (!this.props.customDate || (this.props.customDate && this.props.customDate.length === 0));
+        const customDateEmpty = (!props.customDate || (props.customDate && props.customDate.length === 0));
 
         if (!customDateEmpty) {
-            selectedDateOrDates = this.props.customDate;
-            currentDateDisplayed = this.props.customDate;
+            selectedDateOrDates = props.customDate;
+            currentDateDisplayed = props.customDate;
 
-            if (this.props.customDate.length) {
-                currentDateDisplayed = this.props.customDate[0];
+            if (props.customDate.length) {
+                currentDateDisplayed = props.customDate[0];
             }
         }
 
         this.state = {
             todayDate: moment().startOf('day'),
             gridBoundaryContext: null,
-            refocusGrid: this.props.focusOnInit,
+            refocusGrid: props.focusOnInit,
             currentDateDisplayed: currentDateDisplayed,
-            arrSelectedDates: this.props.enableRangeSelection ? selectedDateOrDates : [],
-            selectedDate: !this.props.enableRangeSelection ? selectedDateOrDates : null,
+            arrSelectedDates: props.enableRangeSelection ? selectedDateOrDates : [],
+            selectedDate: !props.enableRangeSelection ? selectedDateOrDates : null,
             showMonths: false,
             showYears: false
         };
