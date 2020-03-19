@@ -13,16 +13,29 @@ class Calendar extends Component {
     constructor(props) {
         super(props);
 
+        let currentDateDisplayed = moment().startOf('day');
+        let selectedDateOrDates = !props.enableRangeSelection ? moment({ year: 0 }) : [];
+
+        const customDateEmpty = (!props.customDate || (props.customDate && props.customDate.length === 0));
+
+        if (!customDateEmpty) {
+            selectedDateOrDates = props.customDate;
+            currentDateDisplayed = props.customDate;
+
+            if (props.customDate.length) {
+                currentDateDisplayed = props.customDate[0];
+            }
+        }
+
         this.state = {
             todayDate: moment().startOf('day'),
             gridBoundaryContext: null,
-            refocusGrid: this.props.focusOnInit,
-            currentDateDisplayed: moment().startOf('day'),
-            arrSelectedDates: [],
-            selectedDate: moment({ year: 0 }),
+            refocusGrid: props.focusOnInit,
+            currentDateDisplayed: currentDateDisplayed,
+            arrSelectedDates: props.enableRangeSelection ? selectedDateOrDates : [],
+            selectedDate: !props.enableRangeSelection ? selectedDateOrDates : null,
             showMonths: false,
-            showYears: false,
-            dateClick: false
+            showYears: false
         };
 
         this.tableRef = React.createRef();
@@ -33,36 +46,6 @@ class Calendar extends Component {
             require('fundamental-styles/dist/calendar.css');
         }
         this.gridManager = new GridManager(this.getGridOptions());
-    }
-
-    // sync the selected date of the calendar with the date picker
-    static getDerivedStateFromProps(updatedPropsParent, previousStates) {
-        const { customDate, enableRangeSelection } = updatedPropsParent;
-
-        if (typeof customDate === 'undefined') {
-            return null;
-        }
-
-        if (!previousStates.dateClick) {
-            if (typeof enableRangeSelection !== 'undefined') {
-                if (customDate !== previousStates.arrSelectedDates) {
-                    if (!customDate || !customDate.length) {
-                        // reset calendar state when date picker input is empty and did not click on a date
-                        return ({ currentDateDisplayed: moment().startOf('day'), arrSelectedDates: [], selectedDate: moment({ year: 0 }) });
-                    }
-                    // update calendar state with date picker input
-                    return ({ currentDateDisplayed: customDate[0], arrSelectedDates: customDate, selectedDate: moment({ year: 0 }) });
-                }
-            } else if (customDate !== previousStates.currentDateDisplayed) {
-                if (!customDate) {
-                    // reset calendar state when date picker input is empty and did not click on a date
-                    return ({ currentDateDisplayed: moment().startOf('day'), selectedDate: moment({ year: 0 }) });
-                }
-                // update calendar state with date picker input
-                return ({ currentDateDisplayed: customDate, selectedDate: customDate });
-            }
-        }
-        return ({ dateClick: false });
     }
 
     componentDidUpdate = (prevProps, prevState) => {
@@ -117,7 +100,7 @@ class Calendar extends Component {
             firstFocusedCoordinates = { row: firstFocusedRow, col: firstFocusedCol };
         }
 
-        this.setState({ gridBoundaryContext: null, refocusGrid: false, dateClick: true });
+        this.setState({ gridBoundaryContext: null, refocusGrid: false });
 
         return {
             gridNode: this.tableRef.current,
@@ -136,8 +119,7 @@ class Calendar extends Component {
     showMonths = () => {
         this.setState({
             showMonths: !this.state.showMonths,
-            showYears: false,
-            dateClick: true
+            showYears: false
         });
     }
 
@@ -169,8 +151,7 @@ class Calendar extends Component {
     showYears = () => {
         this.setState({
             showMonths: false,
-            showYears: !this.state.showYears,
-            dateClick: true
+            showYears: !this.state.showYears
         });
     }
 
@@ -181,8 +162,7 @@ class Calendar extends Component {
 
         this.setState({
             currentDateDisplayed: newDate,
-            showMonths: false,
-            dateClick: true
+            showMonths: false
         });
     }
 
@@ -191,15 +171,14 @@ class Calendar extends Component {
 
         this.setState({
             currentDateDisplayed: newDate,
-            showYears: false,
-            dateClick: true
+            showYears: false
         });
     }
 
     onPassGridBoundary = ({ currentCell, directionX, directionY }) => {
         if (!this.state.showMonths && !this.state.showYears) {
             currentCell.element.setAttribute('tabindex', -1);
-            this.setState({ gridBoundaryContext: { currentCell, directionX, directionY }, dateClick: true });
+            this.setState({ gridBoundaryContext: { currentCell, directionX, directionY } });
 
             if (directionX === -1 || directionY === -1) {
                 this.handlePrevious();
@@ -222,8 +201,7 @@ class Calendar extends Component {
                 newDate.date(newDate.daysInMonth() < focusedDate ? newDate.daysInMonth() : focusedDate);
                 this.setState({
                     currentDateDisplayed: newDate,
-                    refocusGrid: true,
-                    dateClick: true
+                    refocusGrid: true
                 });
                 break;
             case 'page down':
@@ -232,8 +210,7 @@ class Calendar extends Component {
                 newDate.date(newDate.daysInMonth() < focusedDate ? newDate.daysInMonth() : focusedDate);
                 this.setState({
                     currentDateDisplayed: newDate,
-                    refocusGrid: true,
-                    dateClick: true
+                    refocusGrid: true
                 });
                 break;
             default:
@@ -364,10 +341,10 @@ class Calendar extends Component {
         const { currentDateDisplayed } = this.state;
         if (this.state.showYears) {
             const newDate = moment(currentDateDisplayed).add(12, 'year');
-            this.setState({ currentDateDisplayed: newDate, dateClick: true });
+            this.setState({ currentDateDisplayed: newDate });
         } else {
             const newDate = moment(currentDateDisplayed).add(1, 'month');
-            this.setState({ currentDateDisplayed: newDate, dateClick: true });
+            this.setState({ currentDateDisplayed: newDate });
         }
     }
 
@@ -375,10 +352,10 @@ class Calendar extends Component {
         const { currentDateDisplayed } = this.state;
         if (this.state.showYears) {
             const newDate = moment(currentDateDisplayed).subtract(12, 'year');
-            this.setState({ currentDateDisplayed: newDate, dateClick: true });
+            this.setState({ currentDateDisplayed: newDate });
         } else {
             const newDate = moment(currentDateDisplayed).subtract(1, 'month');
-            this.setState({ currentDateDisplayed: newDate, dateClick: true });
+            this.setState({ currentDateDisplayed: newDate });
         }
     }
 
@@ -398,8 +375,7 @@ class Calendar extends Component {
         this.setState({
             currentDateDisplayed: day,
             selectedDate: day,
-            arrSelectedDates: selectedDates,
-            dateClick: true
+            arrSelectedDates: selectedDates
         }, function() {
             if (isRangeEnabled) {
                 this.props.onChange(selectedDates);
@@ -430,7 +406,7 @@ class Calendar extends Component {
 
         return (
             <header className='fd-calendar__header'>
-                <div aria-live='polite' className='fd-calendar__navigation'>
+                <div aria-live='assertive' className='fd-calendar__navigation'>
                     <div className='fd-calendar__action'>
                         <Button
                             aria-label={previousButtonLabel}
