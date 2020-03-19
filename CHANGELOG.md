@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.8.1-rc.8"></a>
+## [0.8.1-rc.8](https://github.com/SAP/fundamental-react/compare/v0.8.1-rc.7...v0.8.1-rc.8) (2020-03-19)
+
+
+### Bug Fixes
+
+* remove derived state from Calendar, add aria-live ([#926](https://github.com/SAP/fundamental-react/issues/926)) ([eefe11d](https://github.com/SAP/fundamental-react/commit/eefe11d))
+
+
+
 <a name="0.8.1-rc.7"></a>
 ## [0.8.1-rc.7](https://github.com/SAP/fundamental-react/compare/v0.8.1-rc.6...v0.8.1-rc.7) (2020-03-18)
 
