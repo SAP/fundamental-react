@@ -2,7 +2,9 @@
 
 exports[`<FormMessage /> create form message 1`] = `
 <div
+  aria-live="assertive"
   className="fd-form-message fd-form-message--information"
+  role="alert"
 >
   Pellentesque metus lacus commodo eget justo ut rutrum varius nunc
 </div>
