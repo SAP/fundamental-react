@@ -341,6 +341,16 @@ describe('<DatePicker />', () => {
 
             expect(change).toHaveBeenCalledWith(expect.objectContaining({ formattedDate: '04/14/2020' }));
         });
+
+        test('should call onChange on selecting a calendar item', () => {
+            const change = jest.fn();
+            const element = mount(<DatePicker defaultValue='2020-03-13' onChange={change} />);
+
+            element.find('button.fd-button--transparent.sap-icon--calendar').simulate('click');
+            element.find('.fd-calendar__text').at(1).simulate('click');
+
+            expect(change).toHaveBeenCalledWith(expect.objectContaining({ formattedDate: '03/02/2020' }));
+        });
     });
 
     describe('onFocus callback', () => {
