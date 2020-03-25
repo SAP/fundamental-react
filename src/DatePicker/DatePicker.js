@@ -130,6 +130,7 @@ class DatePicker extends Component {
     }
 
     _handleOnChange = (e) => {
+        e.stopPropagation();
         this.setState({
             formattedDate: e.target.value,
             isoFormattedDate: e.target.value ? moment(e.target.value).format(ISO_DATE_FORMAT) : '' },
