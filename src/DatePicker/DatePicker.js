@@ -132,7 +132,7 @@ class DatePicker extends Component {
     _handleOnChange = (e) => {
         this.setState({
             formattedDate: e.target.value,
-            isoFormattedDate: moment(e.target.value).format(ISO_DATE_FORMAT) },
+            isoFormattedDate: e.target.value ? moment(e.target.value).format(ISO_DATE_FORMAT) : '' },
         () => {
             this.props.onChange(this.getCallbackData());
         });
@@ -233,6 +233,8 @@ class DatePicker extends Component {
                 arrSelectedDates: date,
                 formattedDate: this.getFormattedDateRangeStr(date),
                 isoFormattedDate: isoFormatDate
+            }, () => {
+                this.props.onChange(this.getCallbackData());
             });
         } else {
             closeCalendar = true;
@@ -240,6 +242,8 @@ class DatePicker extends Component {
                 selectedDate: date,
                 formattedDate: this.getFormattedDateStr(date),
                 isoFormattedDate: date.format(ISO_DATE_FORMAT)
+            }, () => {
+                this.props.onChange(this.getCallbackData());
             });
         }
 
@@ -278,6 +282,7 @@ class DatePicker extends Component {
             locale,
             localizedText,
             onBlur,
+            popoverProps,
             readOnly,
             validationState,
             ...props
@@ -298,6 +303,7 @@ class DatePicker extends Component {
                 {...props}
                 className={className}>
                 <Popover
+                    {...popoverProps}
                     body={
                         <>
                             {
@@ -395,6 +401,7 @@ DatePicker.propTypes = {
     enableRangeSelection: PropTypes.bool,
     inputProps: PropTypes.object,
     locale: PropTypes.string,
+    popoverProps: PropTypes.object,
     readOnly: PropTypes.bool,
     validationState: PropTypes.shape({
         state: PropTypes.oneOf(FORM_MESSAGE_TYPES),
