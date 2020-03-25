@@ -9,7 +9,6 @@ export { default as ComboboxInput } from './ComboboxInput/ComboboxInput';
 export { default as DatePicker } from './DatePicker/DatePicker';
 export { default as Dialog } from './Dialog/Dialog';
 export { default as FormGroup } from './Forms/FormGroup';
-export { default as FormSet } from './Forms/FormSet';
 export { default as FormItem } from './Forms/FormItem';
 export { default as FormLabel } from './Forms/FormLabel';
 export { default as FormInput } from './Forms/FormInput';
