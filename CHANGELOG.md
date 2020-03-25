@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.8.2-rc.0"></a>
+## [0.8.2-rc.0](https://github.com/SAP/fundamental-react/compare/v0.8.1...v0.8.2-rc.0) (2020-03-25)
+
+
+### Bug Fixes
+
+* datepicker onchange on calendar selection, popover props ([#933](https://github.com/SAP/fundamental-react/issues/933)) ([7ed0c2d](https://github.com/SAP/fundamental-react/commit/7ed0c2d))
+
+
+
 <a name="0.8.1"></a>
 ## [0.8.1](https://github.com/SAP/fundamental-react/compare/v0.8.1-rc.9...v0.8.1) (2020-03-25)
 
