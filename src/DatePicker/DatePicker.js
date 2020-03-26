@@ -9,7 +9,7 @@ import { isEnabledDate } from '../utils/dateUtils';
 import moment from 'moment';
 import Popover from '../Popover/Popover';
 import PropTypes from 'prop-types';
-import { validDateLookup } from './validDateLookup';
+import { validDateLookup } from './_validDateLookup';
 import React, { Component } from 'react';
 
 const ISO_DATE_FORMAT = 'YYYY-MM-DD';
