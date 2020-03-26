@@ -1,6 +1,6 @@
 import path from 'path';
 import React from 'react';
-import { Checkbox, FormFieldset, FormGroup, FormInput, FormItem, FormLabel, FormLegend, FormRadioGroup, FormRadioItem, FormSelect, FormSet, FormTextarea, InlineHelp } from '../';
+import { Checkbox, FormFieldset, FormGroup, FormInput, FormItem, FormLabel, FormLegend, FormRadioGroup, FormRadioItem, FormSelect, FormTextarea, InlineHelp } from '../';
 import { ComponentPage, Example } from '../_playground';
 
 export const FormsComponent = () => {
@@ -102,7 +102,7 @@ export const FormsComponent = () => {
                     is displayed below the input field.`}
                 title='Input Help Elements'>
                 <>
-                    <FormSet>
+                    <FormGroup>
                         <FormItem>
                             <FormLabel htmlFor='input-4' isInlineHelp>
                                 Input with inline help
@@ -112,15 +112,15 @@ export const FormsComponent = () => {
                             </FormLabel>
                             <FormInput id='input-4' />
                         </FormItem>
-                    </FormSet>
+                    </FormGroup>
 
-                    <FormSet>
+                    <FormGroup>
                         <FormItem>
                             <FormLabel htmlFor='input-5'>Input with Help Message</FormLabel>
                             <FormInput id='input-5'
                                 validationState={{ state: 'information', text: 'Pellentesque metus lacus commodo eget justo ut rutrum varius nunc' }} />
                         </FormItem>
-                    </FormSet>
+                    </FormGroup>
                 </>
             </Example>
 
@@ -135,48 +135,48 @@ export const FormsComponent = () => {
                     be displayed below the field so the user can correct the error and move forward.`}
                 title='Input States'>
                 <>
-                    <FormSet>
+                    <FormGroup>
                         <FormItem>
                             <FormLabel htmlFor='OatmD552'>Default Input</FormLabel>
                             <FormInput id='OatmD552' placeholder='Field placeholder text' />
                         </FormItem>
-                    </FormSet>
+                    </FormGroup>
 
-                    <FormSet>
+                    <FormGroup>
                         <FormItem>
                             <FormLabel htmlFor='OatmD553'>Success Input</FormLabel>
                             <FormInput id='OatmD553' placeholder='Field placeholder text'
                                 validationState={{ state: 'success', text: 'Pellentesque metus lacus commodo eget justo ut rutrum varius nunc' }} />
 
                         </FormItem>
-                    </FormSet>
+                    </FormGroup>
 
-                    <FormSet>
+                    <FormGroup>
                         <FormItem>
                             <FormLabel htmlFor='OatmD554'>Error Input</FormLabel>
                             <FormInput id='OatmD554' placeholder='Field placeholder text'
                                 validationState={{ state: 'error', text: 'Pellentesque metus lacus commodo eget justo ut rutrum varius nunc' }} />
 
                         </FormItem>
-                    </FormSet>
+                    </FormGroup>
 
-                    <FormSet>
+                    <FormGroup>
                         <FormItem>
                             <FormLabel htmlFor='OatmD555'>Warning Input</FormLabel>
                             <FormInput id='OatmD555' placeholder='Field placeholder text'
                                 validationState={{ state: 'warning', text: 'Pellentesque metus lacus commodo eget justo ut rutrum varius nunc' }} />
 
                         </FormItem>
-                    </FormSet>
+                    </FormGroup>
 
-                    <FormSet>
+                    <FormGroup>
                         <FormItem>
                             <FormLabel htmlFor='OatmD556'>Information Input</FormLabel>
                             <FormInput id='OatmD556' placeholder='Field placeholder text'
                                 validationState={{ state: 'information', text: 'Pellentesque metus lacus commodo eget justo ut rutrum varius nunc' }} />
 
                         </FormItem>
-                    </FormSet>
+                    </FormGroup>
                 </>
             </Example>
 
@@ -187,7 +187,7 @@ export const FormsComponent = () => {
                 in the context of a form.`}
                 title='Disabled and Read Only'>
                 <>
-                    <FormSet>
+                    <FormGroup>
                         <FormItem>
                             <FormLabel htmlFor='OatmD557'>Disabled Input</FormLabel>
                             <FormInput
@@ -195,9 +195,9 @@ export const FormsComponent = () => {
                                 id='OatmD557'
                                 placeholder='Field placeholder text' />
                         </FormItem>
-                    </FormSet>
+                    </FormGroup>
 
-                    <FormSet>
+                    <FormGroup>
                         <FormItem>
                             <FormLabel htmlFor='OatmD558'>Readonly Input</FormLabel>
                             <FormInput
@@ -205,7 +205,7 @@ export const FormsComponent = () => {
                                 placeholder='Field placeholder text'
                                 readOnly />
                         </FormItem>
-                    </FormSet>
+                    </FormGroup>
                 </>
             </Example>
             <Example
@@ -213,7 +213,7 @@ export const FormsComponent = () => {
                     set to a disabled state.`}
                 title='Selects'>
                 <>
-                    <FormSet>
+                    <FormGroup>
                         <FormItem>
                             <FormLabel htmlFor='select-1'>Default Select</FormLabel>
                             <FormSelect id='select-1'>
@@ -222,9 +222,9 @@ export const FormsComponent = () => {
                                 <option value='3'>Sed bibendum sapien at posuere interdum</option>
                             </FormSelect>
                         </FormItem>
-                    </FormSet>
+                    </FormGroup>
 
-                    <FormSet>
+                    <FormGroup>
                         <FormItem>
                             <FormLabel htmlFor='select-1'>Default Select</FormLabel>
                             <FormSelect disabled id='select-1'>
@@ -233,7 +233,7 @@ export const FormsComponent = () => {
                                 <option value='3'>Sed bibendum sapien at posuere interdum</option>
                             </FormSelect>
                         </FormItem>
-                    </FormSet>
+                    </FormGroup>
                 </>
             </Example>
 
