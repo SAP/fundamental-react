@@ -55,7 +55,7 @@ class InputGroup extends Component {
                         });
                     })}
                 </div>
-                {validationState && (<FormMessage
+                {validationState?.text?.length > 0 && (<FormMessage
                     disableStyles={disableStyles}
                     type={validationState.state}>
                     {validationState.text}
