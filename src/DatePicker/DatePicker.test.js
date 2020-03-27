@@ -268,10 +268,7 @@ describe('<DatePicker />', () => {
         const input = wrapper.find('input[type="text"]');
         //set date input value
         input.simulate('change', { target: { value: '3.16.20 - 3.11.20' } }); // input format D.MM.YY
-
-        //trigger onBlur by clicking outside
         input.simulate('blur');
-        simulateBlur();
 
         //expect date value to be auto formated
         expect(wrapper.state('formattedDate')).toEqual('03/11/2020 - 03/16/2020');
@@ -300,8 +297,6 @@ describe('<DatePicker />', () => {
             const element = mount(<DatePicker onBlur={blur} />).find('input[type="text"]');
             element.find('input[type="text"]').simulate('click');
             element.find('input[type="text"]').simulate('blur');
-
-            simulateBlur();
 
             expect(blur).toHaveBeenCalledTimes(1);
         });
