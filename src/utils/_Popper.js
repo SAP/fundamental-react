@@ -122,7 +122,7 @@ class Popper extends React.Component {
                             ref={ref}
                             style={{ ...style, ...popperProps.style }}
                             // eslint-disable-next-line no-undefined
-                            x-out-of-boundaries={!!outOfBoundaries || undefined}
+                            x-out-of-boundaries={!!outOfBoundaries ? 'true' : undefined}
                             x-placement={placement}>
                             {children}
                             <span
