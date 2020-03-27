@@ -132,8 +132,8 @@ class DatePicker extends Component {
     _handleOnChange = (e) => {
         this.setState({
             formattedDate: e.target.value,
-            isoFormattedDate: moment(e.target.value).format(ISO_DATE_FORMAT) },
-        () => {
+            isoFormattedDate: e.target.value ? moment(e.target.value).format(ISO_DATE_FORMAT) : ''
+        }, () => {
             this.props.onChange(this.getCallbackData());
         });
     }
@@ -208,11 +208,8 @@ class DatePicker extends Component {
     };
 
     handleOutsideClickAndEscape = () => {
-        this.validateDates();
         this.setState({
             isExpanded: false
-        }, () => {
-            this._handleBlur();
         });
     };
 
@@ -300,8 +297,7 @@ class DatePicker extends Component {
                 <Popover
                     body={
                         <>
-                            {
-                                validationState &&
+                            {validationState?.text?.length > 0 &&
                                 <FormMessage
                                     disableStyles={disableStyles}
                                     type={validationState.state}>
