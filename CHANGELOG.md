@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.9.0-rc.2"></a>
+# [0.9.0-rc.2](https://github.com/SAP/fundamental-react/compare/v0.9.0-rc.1...v0.9.0-rc.2) (2020-03-27)
+
+
+### Bug Fixes
+
+* datepicker onBlur, empty validation, empty isoFormattedDate ([#936](https://github.com/SAP/fundamental-react/issues/936)) ([e170d91](https://github.com/SAP/fundamental-react/commit/e170d91))
+
+
+
 <a name="0.9.0-rc.1"></a>
 # [0.9.0-rc.1](https://github.com/SAP/fundamental-react/compare/v0.9.0-rc.0...v0.9.0-rc.1) (2020-03-26)
 
