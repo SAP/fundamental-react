@@ -38,7 +38,7 @@ describe('<DatePicker />', () => {
         expect(wrapper.state('arrSelectedDates').length).toEqual(2);
 
         //trigger onBlur by clicking outside
-        simluateOutsideMouseClick();
+        simulateBlur();
 
         // check to make sure calendar is not expanded
         expect(wrapper.state('isExpanded')).toBeFalsy();
@@ -63,7 +63,7 @@ describe('<DatePicker />', () => {
         expect(wrapper.state('arrSelectedDates').length).toEqual(2);
 
         //trigger onBlur by clicking outside
-        simluateOutsideMouseClick();
+        simulateBlur();
 
         // check to make sure calendar is not expanded
         expect(wrapper.state('isExpanded')).toBeFalsy();
@@ -227,13 +227,10 @@ describe('<DatePicker />', () => {
     test('auto format to specified dateFormat', () => {
         wrapper = mount(defaultDatePicker); // dateFormat='MM/DD/YYYY'
 
+        const input = wrapper.find('input[type="text"]');
         //set date input value
-        wrapper
-            .find('input[type="text"]')
-            .simulate('change', { target: { value: '3.16.20' } }); // input format D.MM.YY
-
-        //trigger onBlur by clicking outside
-        simluateOutsideMouseClick();
+        input.simulate('change', { target: { value: '3.16.20' } }); // input format D.MM.YY
+        input.simulate('blur');
 
         //expect date value to be auto formated
         expect(wrapper.state('formattedDate')).toEqual('03/16/2020');
@@ -259,7 +256,7 @@ describe('<DatePicker />', () => {
         wrapper = mount(compToTest);
 
         //trigger onBlur by clicking outside
-        simluateOutsideMouseClick();
+        simulateBlur();
 
         //expect date value to be auto formated
         expect(wrapper.state('formattedDate')).toEqual('17/03/2020');
@@ -268,13 +265,13 @@ describe('<DatePicker />', () => {
     test('date range selection with custom dateFormat set', () => {
         wrapper = mount(rangeDatePicker); // dateFormat='MM/DD/YYYY'
 
+        const input = wrapper.find('input[type="text"]');
         //set date input value
-        wrapper
-            .find('input[type="text"]')
-            .simulate('change', { target: { value: '3.16.20 - 3.11.20' } }); // input format D.MM.YY
+        input.simulate('change', { target: { value: '3.16.20 - 3.11.20' } }); // input format D.MM.YY
 
         //trigger onBlur by clicking outside
-        simluateOutsideMouseClick();
+        input.simulate('blur');
+        simulateBlur();
 
         //expect date value to be auto formated
         expect(wrapper.state('formattedDate')).toEqual('03/11/2020 - 03/16/2020');
@@ -298,33 +295,13 @@ describe('<DatePicker />', () => {
     });
 
     describe('onBlur callback', () => {
-        test('should call onBlur after clicking outside calendar overlay', () => {
-            const blur = jest.fn();
-            const element = mount(<DatePicker onBlur={blur} />);
-
-            element.find('button.fd-button--transparent.sap-icon--calendar').simulate('click');
-
-            element.find('table.fd-calendar__table tbody.fd-calendar__group tr.fd-calendar__row td.fd-calendar__item:not(.fd-calendar__item--other-month)')
-                .at(0)
-                .simulate('click');
-
-
-            //trigger onBlur by clicking outside
-            simluateOutsideMouseClick();
-
-            expect(blur).toHaveBeenCalledTimes(1);
-
-            expect(blur).toHaveBeenCalledWith(expect.objectContaining({ date: expect.any(moment) }));
-        });
         test('should call onBlur after leaving input', () => {
             const blur = jest.fn();
-            const element = mount(<DatePicker onBlur={blur} />);
-
+            const element = mount(<DatePicker onBlur={blur} />).find('input[type="text"]');
             element.find('input[type="text"]').simulate('click');
+            element.find('input[type="text"]').simulate('blur');
 
-
-            //trigger onBlur by clicking outside
-            simluateOutsideMouseClick();
+            simulateBlur();
 
             expect(blur).toHaveBeenCalledTimes(1);
         });
@@ -468,7 +445,7 @@ describe('<DatePicker />', () => {
         });
     });
 });
-function simluateOutsideMouseClick() {
+function simulateBlur() {
     let event = new MouseEvent('mousedown', { target: document.querySelector('body') });
     document.dispatchEvent(event);
 }
