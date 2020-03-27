@@ -9,7 +9,7 @@ import { isEnabledDate } from '../utils/dateUtils';
 import moment from 'moment';
 import Popover from '../Popover/Popover';
 import PropTypes from 'prop-types';
-import { validDateLookup } from './validDateLookup';
+import { validDateLookup } from './_validDateLookup';
 import React, { Component } from 'react';
 
 const ISO_DATE_FORMAT = 'YYYY-MM-DD';
@@ -18,7 +18,7 @@ class DatePicker extends Component {
     constructor(props) {
         super(props);
         const formattedDate = props.defaultValue.length > 0 ? this.getFormattedDateStr(props.defaultValue) : '';
-        const isoFormattedDate = moment(props.defaultValue).format(ISO_DATE_FORMAT);
+        const isoFormattedDate = props.defaultValue.length > 0 ? moment(props.defaultValue).format(ISO_DATE_FORMAT) : '';
         this.state = {
             isExpanded: false,
             selectedDate: formattedDate.length === 0 ? null : this.getMomentDateObj(formattedDate),
@@ -119,10 +119,11 @@ class DatePicker extends Component {
     }
 
     handleNewDefault = () => {
-        const formattedNewDefault = this.props.defaultValue && this.props.defaultValue.length > 0 ? this.getFormattedDateStr(this.props.defaultValue) : '';
+        const { defaultValue } = this.props;
+        const formattedNewDefault = defaultValue && defaultValue.length > 0 ? this.getFormattedDateStr(defaultValue) : '';
         this.setState({
             selectedDate: formattedNewDefault.length === 0 ? null : this.getMomentDateObj(formattedNewDefault),
-            isoFormattedDate: moment(this.props.defaultValue).format(ISO_DATE_FORMAT),
+            isoFormattedDate: defaultValue && defaultValue.length > 0 ? moment(defaultValue).format(ISO_DATE_FORMAT) : '',
             formattedDate: formattedNewDefault
         }, () => {
             this.validateDates();
@@ -130,6 +131,7 @@ class DatePicker extends Component {
     }
 
     _handleOnChange = (e) => {
+        e.stopPropagation();
         this.setState({
             formattedDate: e.target.value,
             isoFormattedDate: e.target.value ? moment(e.target.value).format(ISO_DATE_FORMAT) : ''
@@ -230,6 +232,8 @@ class DatePicker extends Component {
                 arrSelectedDates: date,
                 formattedDate: this.getFormattedDateRangeStr(date),
                 isoFormattedDate: isoFormatDate
+            }, () => {
+                this.props.onChange(this.getCallbackData());
             });
         } else {
             closeCalendar = true;
@@ -237,6 +241,8 @@ class DatePicker extends Component {
                 selectedDate: date,
                 formattedDate: this.getFormattedDateStr(date),
                 isoFormattedDate: date.format(ISO_DATE_FORMAT)
+            }, () => {
+                this.props.onChange(this.getCallbackData());
             });
         }
 
@@ -275,6 +281,7 @@ class DatePicker extends Component {
             locale,
             localizedText,
             onBlur,
+            popoverProps,
             readOnly,
             validationState,
             ...props
@@ -295,6 +302,7 @@ class DatePicker extends Component {
                 {...props}
                 className={className}>
                 <Popover
+                    {...popoverProps}
                     body={
                         <>
                             {validationState?.text?.length > 0 &&
@@ -391,6 +399,7 @@ DatePicker.propTypes = {
     enableRangeSelection: PropTypes.bool,
     inputProps: PropTypes.object,
     locale: PropTypes.string,
+    popoverProps: PropTypes.object,
     readOnly: PropTypes.bool,
     validationState: PropTypes.shape({
         state: PropTypes.oneOf(FORM_MESSAGE_TYPES),
