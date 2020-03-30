@@ -249,10 +249,11 @@ class DatePicker extends Component {
         if (closeCalendar) {
             const popover = this.popoverRef && this.popoverRef.current;
             popover && popover.handleEscapeKey();
-            this.setState({ isExpanded: false });
+            this.setState({ isExpanded: false }, ()=> {
+                this.props.onDatePickerClose(this.getCallbackData());
+            });
         }
     }
-
     _handleBlur = () => {
         this.validateDates();
         this.props.onBlur(this.getCallbackData());
@@ -407,6 +408,7 @@ DatePicker.propTypes = {
     }),
     onBlur: PropTypes.func,
     onChange: PropTypes.func,
+    onDatePickerClose: PropTypes.func,
     onFocus: PropTypes.func
 };
 
@@ -417,6 +419,7 @@ DatePicker.defaultProps = {
     locale: 'en',
     onBlur: () => {},
     onChange: () => {},
+    onDatePickerClose: () => {},
     onFocus: () => {}
 };
 
@@ -429,6 +432,7 @@ DatePicker.propDescriptions = {
     locale: 'Language code to set the locale.',
     onBlur: 'Callback function for onBlur events. In the object returned, `date` is the date object, `formattedDate` is the formatted date, and `isoFormattedDate` is the date formatted in ISO-8601 format (YYYY-MM-DD).',
     onChange: 'Callback function for onChange events. In the object returned, `date` is the date object, `formattedDate` is the formatted date, and `isoFormattedDate` is the date formatted in ISO-8601 format (YYYY-MM-DD).',
+    onDatePickerClose: 'Callback function which triggers when datepicker closes after date selection. In the object returned, `date` is the date object, `formattedDate` is the formatted date, and `isoFormattedDate` is the date formatted in ISO-8601 format (YYYY-MM-DD).',
     onFocus: 'Callback function for onFocus events. In the object returned, `date` is the date object, `formattedDate` is the formatted date, and `isoFormattedDate` is the date formatted in ISO-8601 format (YYYY-MM-DD).'
 };
 
