@@ -302,6 +302,18 @@ describe('<DatePicker />', () => {
         });
     });
 
+    describe('onDatePickerClose callback', () => {
+        test('should call onDatePickerClose after selecting date in calendar', () => {
+            const datePickerClose = jest.fn();
+            const element = mount(<DatePicker dateFormat='YYYY-MM-DD' defaultValue='2020-03-13'
+                onDatePickerClose={datePickerClose} />);
+            element.find('button.fd-button--transparent.sap-icon--calendar').simulate('click');
+            element.find('.fd-calendar__text').at(1).simulate('click');
+            expect(datePickerClose).toHaveBeenCalledWith(expect.objectContaining({ formattedDate: '2020-03-02' }));
+            expect(datePickerClose).toHaveBeenCalledTimes(1);
+        });
+    });
+
     describe('onChange callback', () => {
         test('should call onChange on entering text input', () => {
             const change = jest.fn();
