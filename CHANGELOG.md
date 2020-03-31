@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.9.0-rc.4"></a>
+# [0.9.0-rc.4](https://github.com/SAP/fundamental-react/compare/v0.9.0-rc.3...v0.9.0-rc.4) (2020-03-31)
+
+
+### Bug Fixes
+
+* add new onDatePickerClose callback to DatePicker component ([#939](https://github.com/SAP/fundamental-react/issues/939)) ([7f7f2af](https://github.com/SAP/fundamental-react/commit/7f7f2af))
+
+
+
 <a name="0.9.0-rc.3"></a>
 # [0.9.0-rc.3](https://github.com/SAP/fundamental-react/compare/v0.9.0-rc.2...v0.9.0-rc.3) (2020-03-30)
 
