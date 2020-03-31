@@ -32,6 +32,11 @@ class SearchInput extends Component {
     };
 
     handleListItemClick = (event, item) => {
+        this.setState({
+            value: item.text,
+            isExpanded: false,
+            searchExpanded: false
+        });
         item.callback ? item.callback() : null;
     };
 
@@ -152,7 +157,7 @@ class SearchInput extends Component {
 
         return (
             <div {...rest} className={className}>
-                <Popover
+                <Popover show={this.state.isExpanded}
                     {...popoverProps}
                     body={
                         (<>

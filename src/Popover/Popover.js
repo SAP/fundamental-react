@@ -53,7 +53,7 @@ class Popover extends Component {
         if (this.state.isExpanded && this.popover) {
             this.focusManager = new FocusManager(this.popover, this.controlRef, this.props.useArrowKeyNavigation);
         }
-    }
+    };
 
     handleOutsideClick = () => {
         if (this.state.isExpanded) {
@@ -74,7 +74,7 @@ class Popover extends Component {
                 firstTabbableNode && firstTabbableNode.focus();
             }
         }
-    }
+    };
 
     handleKeyPress = (event, node, onClickFunctions) => {
         if (!this.isButton(node)) {
@@ -87,7 +87,7 @@ class Popover extends Component {
                 default:
             }
         }
-    }
+    };
 
     render() {
         const {
@@ -108,6 +108,7 @@ class Popover extends Component {
             widthSizingType,
             useArrowKeyNavigation,
             type,
+            show,
             ...rest
         } = this.props;
 
@@ -165,7 +166,7 @@ class Popover extends Component {
                     popperProps={{ ...popperProps, id }}
                     referenceClassName='fd-popover__control'
                     referenceComponent={referenceComponent}
-                    show={this.state.isExpanded && !disabled}
+                    show={typeof this.props.show === 'boolean' ? this.props.show && !disabled : this.state.isExpanded && !disabled}
                     usePortal
                     widthSizingType={widthSizingType}>
                     {body}
@@ -190,6 +191,7 @@ Popover.propTypes = {
     placement: PropTypes.oneOf(POPPER_PLACEMENTS),
     popperClassName: PropTypes.string,
     popperProps: PropTypes.object,
+    show: PropTypes.bool,
     type: PropTypes.oneOf(POPOVER_TYPES),
     useArrowKeyNavigation: PropTypes.bool,
     widthSizingType: PropTypes.oneOf(POPPER_SIZING_TYPES),
@@ -215,6 +217,7 @@ Popover.propDescriptions = {
     popperClassName: 'Additional classeNames to be spread to the overlay element.',
     popperProps: 'Additional props to be spread to the overlay element, supported by <a href="https://popper.js.org" target="_blank">popper.js</a>.',
     widthSizingType: POPPER_SIZING_TYPES_DESCRIPTION,
+    show: 'Handling for show/hide popover if true show the popover',
     onClickOutside: 'Callback for consumer clicking outside of popover body.',
     onEscapeKey: 'Callback when escape key is pressed when popover body is visible.',
     type: 'Indicates the type of popup - "dialog", "grid", "listbox", "menu", or "tree". This value is attached to aria-haspopup and is useful to assistive tech. Defaulted to boolean true.'
