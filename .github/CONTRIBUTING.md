@@ -20,33 +20,7 @@ If you meet the above criteria, you can submit issues with our [GitHub issue tra
 
 ## Feature Requests
 
-You can also use the issue tracker to request a new feature or enhancement. Even if you want to implement the feature yourself, please first submit an issue detailing your proposal so that we may discuss it with you and the community before moving forward. Please use [labels](#usage-of-labels) when creating feature requests.
-
-### Usage of Labels
-
-GitHub offers labels to categorize issues. You can use the following labels:
-
-Labels for issue categories:
-
-- bug: Something isn't working / Issues in the code.
-- documentation: Issues with the documentation (repo and website documentation).
-- enhancement: New feature or enhancement requests.
-
-Status of open issues:
-
-- (no label): The default status.
-- unconfirmed: The issue needs to be confirmed as being a bug or future enhancement.
-- approved: The issue is confirmed as being a bug to be fixed or enhancement to be developed.
-- author action: The issue's creator needs to provide additional information.
-- contribution welcome: The fix or enhancement is approved and you are invited to contribute to it.
-
-Status of closed issues:
-
-- fixed: A fix for the issue was provided.
-- duplicate: The issue is also reported in a different ticket and is being managed there.
-- invalid: The reported issue will not be addressed.
-- works: The issue cannot be reproduced, or the feature is working as expected.
-- wontfix: The issue will not be fixed.
+You can also use the issue tracker to request a new feature or enhancement. Even if you want to implement the feature yourself, please first submit an issue detailing your proposal so that we may discuss it with you and the community before moving forward.
 
 ## Contribute Code
 
@@ -79,21 +53,20 @@ The form lists all employees who are authorized to contribute on behalf of your 
 
 ### Contribution Content Guidelines
 
-You must follow the coding style as best you can when submitting code. Take note of naming conventions, separation of concerns, and formatting rules. You can use the code formatter [Prettier](https://prettier.io/) to handle some of this for you automatically.
+You must follow the coding style as best you can when submitting code. Take note of naming conventions, separation of concerns, and formatting rules. Fundamental-react uses [EsLint](https://eslint.org/) to enforce code standards. See our [Developer Guide](https://github.com/SAP/fundamental-react/wiki/Developer-Guide) for more information.
 
-### Unit testing
+### Testing Suite
 
-All components should have associated unit tests created with a code coverage score of at least 85%. Be an overachiever and shoot for 100% :) [Learn how to create unit tests](https://github.com/SAP/fundamental-react/wiki/Unit-Testing)
+All components should have associated unit tests created with a code coverage score of at least 85%. Be an overachiever and shoot for 100% :) 
+Components also have visual regression tests enabled. [Learn how to add to our testing suite](https://github.com/SAP/fundamental-react/wiki/Testing)
 
 ### How to contribute - the Process
 
 1.  Make sure the issue you've filed in the [issue tracker] has the label "contribution welcome" - otherwise, it is not ready to be worked on.
-2.  Fork the Fundamental-react repository to your GitHub account.
-3.  Create a branch for your issue or feature, and commit or push your changes on that branch.
-4.  Create a Pull Request from your forked repository to github.com/SAP/fundamental-react. In the subject of the pull request, use "fix:" to denote a bug fix, "feat:" to denote an enhancement or "chore:" for small configuration updates and briefly describe the bug fix or enhancement you're contributing. In the pull request description, please provide a link to the issue in the issue tracker. **Do not include "BREAKING CHANGE" in the subject or description.**
-5.  Follow the link posted by the CLA assistant to your pull request and accept it, as described above.
-6.  Wait for our code review and approval. We may ask you for additional commits, or make changes to your pull request ourselves.
+1.  Fork the Fundamental-react repository to your GitHub account.
+1.  Create a branch for your issue or feature, and commit or push your changes on that branch.
+1.  Create a Pull Request from your forked repository to github.com/SAP/fundamental-react. In the subject of the pull request, use "fix:" to denote a bug fix, "feat:" to denote an enhancement or "chore:" for small configuration updates and briefly describe the bug fix or enhancement you're contributing. In the pull request description, please provide a link to the issue in the issue tracker. **Do not include "BREAKING CHANGE" in the subject or description.**
+1.  Follow the link posted by the CLA assistant to your pull request and accept it, as described above.
+1.  Wait for our code review and approval. We may ask you for additional commits, or make changes to your pull request ourselves.
     - Note that the Fundamental-react developers also have their regular duties so, depending on the required effort for reviewing, testing, and clarification, this may take a while.
-7.  Once the change has been approved, we inform you in a comment.
-8.  Your pull request cannot be merged directly into the branch (internal SAP processes), but is merged internally and immediately appears in the public repository as well.
-9.  We close the pull request. You can then delete the now obsolete branch.
+1.  Once the change has been approved, an admin will merge the pull request into master on your behalf. You can then delete the now obsolete branch.
