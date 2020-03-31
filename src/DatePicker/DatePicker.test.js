@@ -300,6 +300,18 @@ describe('<DatePicker />', () => {
 
             expect(blur).toHaveBeenCalledTimes(1);
         });
+        test('should call onBlur after leaving input, with validated data', () => {
+            const blur = jest.fn();
+            const element = mount(<DatePicker onBlur={blur} />).find('input[type="text"]');
+            element.simulate('change', { target: { value: 'rubbish' } });
+            element.find('input[type="text"]').simulate('blur');
+
+            expect(blur).toHaveBeenCalledWith(expect.objectContaining({
+                date: null,
+                formattedDate: '',
+                isoFormattedDate: ''
+            }));
+        });
     });
 
     describe('onDatePickerClose callback', () => {
