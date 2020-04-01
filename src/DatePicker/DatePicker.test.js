@@ -340,8 +340,11 @@ describe('<DatePicker />', () => {
 
         test('should call onChange on selecting a calendar item', () => {
             const change = jest.fn();
-            const element = mount(<DatePicker defaultValue='2020-03-13' onChange={change} />);
-
+            let element = mount(<DatePicker dateFormat='YYYY-MM-DD' defaultValue='2020-03-13'
+                onChange={change} />);
+            element = element.setProps({
+                dateFormat: 'MM/DD/YYYY'
+            });
             element.find('button.fd-button--transparent.sap-icon--calendar').simulate('click');
             element.find('.fd-calendar__text').at(1).simulate('click');
 
