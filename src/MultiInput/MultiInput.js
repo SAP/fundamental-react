@@ -138,14 +138,14 @@ class MultiInput extends Component {
         } = this.props;
 
 
-        const tokenizerClassNames = classnames(
+        const tokenizerClassName = classnames(
             'fd-tokenizer',
             {
                 'fd-tokenizer--compact': compact
             }
         );
 
-        const listClassNames = classnames(
+        const listClassName = classnames(
             'fd-list--dropdown',
             'fd-list--multi-input',
             {
@@ -163,7 +163,7 @@ class MultiInput extends Component {
 
         const popoverBody = (
             <List
-                className={listClassNames}
+                className={listClassName}
                 compact={compact}
                 disableStyles={disableStyles}
                 {...listProps}>
@@ -196,7 +196,7 @@ class MultiInput extends Component {
                         disabled={disabled}
                         onClick={this.showHideTagList}
                         validationState={!this.state.bShowList ? validationState : null}>
-                        <div {...tagProps} className={tokenizerClassNames}>
+                        <div {...tagProps} className={tokenizerClassName}>
                             <div className='fd-tokenizer__inner'>
                                 {this.state.tags.length > 0 && this.createTags()}
                                 <FormInput

@@ -59,7 +59,7 @@ const Checkbox = React.forwardRef(({
         }
     );
 
-    const labelClassNames = classnames(
+    const labelClassName = classnames(
         'fd-checkbox__label',
         labelClasses
     );
@@ -88,7 +88,7 @@ const Checkbox = React.forwardRef(({
                 type='checkbox'
                 value={value} />
             <FormLabel {...labelProps}
-                className={labelClassNames}
+                className={labelClassName}
                 disableStyles={disableStyles}
                 disabled={disabled}
                 htmlFor={checkId}>

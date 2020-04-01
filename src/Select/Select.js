@@ -72,7 +72,7 @@ const Select = React.forwardRef(({
         </div>
     );
 
-    const listClassNames = classnames(
+    const listClassName = classnames(
         'fd-list--dropdown',
         {
             'fd-list--has-message': validationState?.state
@@ -82,7 +82,7 @@ const Select = React.forwardRef(({
     const popoverBody = () => {
         return React.cloneElement(children, {
             compact: compact,
-            className: listClassNames,
+            className: listClassName,
             role: 'listbox'
         });
     };
