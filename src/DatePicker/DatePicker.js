@@ -189,7 +189,8 @@ class DatePicker extends Component {
             if (this.isDateValid(newDate)) {
                 this.setState({
                     selectedDate: newDate,
-                    formattedDate: this.getFormattedDateStr(formattedDate)
+                    formattedDate: this.getFormattedDateStr(formattedDate),
+                    isoFormattedDate: formattedDate ? moment(formattedDate).format(ISO_DATE_FORMAT) : ''
                 }, () => {
                     postValidationCallback
                     && typeof postValidationCallback === 'function'
