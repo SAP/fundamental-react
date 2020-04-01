@@ -158,7 +158,13 @@ class DatePicker extends Component {
         };
     }
 
-    validateDates = () => {
+    executeCallback = (callbackFunction) => {
+        callbackFunction
+        && typeof callbackFunction === 'function'
+        && callbackFunction(this.getCallbackData());
+    }
+
+    validateDates = (postValidationCallback) => {
         const { formattedDate } = this.state;
 
         if (this.props.enableRangeSelection) {
@@ -176,29 +182,39 @@ class DatePicker extends Component {
                     selectedDate: null,
                     arrSelectedDates: arrSelected,
                     formattedDate: this.getFormattedDateRangeStr(arrSelected)
+                }, () => {
+                    this.executeCallback(this.props.onChange);
+                    this.executeCallback(postValidationCallback);
                 });
             } else {
-                this.resetState();
+                this.resetState(postValidationCallback);
             }
         } else {
             const newDate = this.getMomentDateObj(formattedDate);
             if (this.isDateValid(newDate)) {
                 this.setState({
                     selectedDate: newDate,
-                    formattedDate: this.getFormattedDateStr(formattedDate)
+                    formattedDate: this.getFormattedDateStr(formattedDate),
+                    isoFormattedDate: formattedDate ? moment(formattedDate).format(ISO_DATE_FORMAT) : ''
+                }, () => {
+                    this.executeCallback(this.props.onChange);
+                    this.executeCallback(postValidationCallback);
                 });
             } else {
-                this.resetState();
+                this.resetState(postValidationCallback);
             }
         }
     }
 
-    resetState = () => {
+    resetState = (postValidationCallback) => {
         this.setState({
             formattedDate: '',
             isoFormattedDate: '',
             selectedDate: null,
             arrSelectedDates: []
+        }, () => {
+            this.executeCallback(this.props.onChange);
+            this.executeCallback(postValidationCallback);
         });
     }
 
@@ -254,9 +270,16 @@ class DatePicker extends Component {
             });
         }
     }
+    /**
+     * First validates the inputted dates,
+     * then sets state,
+     * finally calls props.onBlur with callback data
+     * i.e. the  validated state
+     *
+     * @returns {undefined}
+     */
     _handleBlur = () => {
-        this.validateDates();
-        this.props.onBlur(this.getCallbackData());
+        this.validateDates(this.props.onBlur);
     };
 
     render() {

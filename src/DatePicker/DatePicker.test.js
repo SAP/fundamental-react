@@ -232,7 +232,7 @@ describe('<DatePicker />', () => {
         input.simulate('change', { target: { value: '3.16.20' } }); // input format D.MM.YY
         input.simulate('blur');
 
-        //expect date value to be auto formated
+        //expect date value to be auto formatted
         expect(wrapper.state('formattedDate')).toEqual('03/16/2020');
     });
 
@@ -258,7 +258,7 @@ describe('<DatePicker />', () => {
         //trigger onBlur by clicking outside
         simulateBlur();
 
-        //expect date value to be auto formated
+        //expect date value to be auto formatted
         expect(wrapper.state('formattedDate')).toEqual('17/03/2020');
     });
 
@@ -270,7 +270,7 @@ describe('<DatePicker />', () => {
         input.simulate('change', { target: { value: '3.16.20 - 3.11.20' } }); // input format D.MM.YY
         input.simulate('blur');
 
-        //expect date value to be auto formated
+        //expect date value to be auto formatted
         expect(wrapper.state('formattedDate')).toEqual('03/11/2020 - 03/16/2020');
     });
 
@@ -300,6 +300,18 @@ describe('<DatePicker />', () => {
 
             expect(blur).toHaveBeenCalledTimes(1);
         });
+        test('should call onBlur after leaving input, with validated data', () => {
+            const blur = jest.fn();
+            const element = mount(<DatePicker onBlur={blur} />).find('input[type="text"]');
+            element.simulate('change', { target: { value: 'rubbish' } });
+            element.find('input[type="text"]').simulate('blur');
+
+            expect(blur).toHaveBeenCalledWith(expect.objectContaining({
+                date: null,
+                formattedDate: '',
+                isoFormattedDate: ''
+            }));
+        });
     });
 
     describe('onDatePickerClose callback', () => {
@@ -328,8 +340,11 @@ describe('<DatePicker />', () => {
 
         test('should call onChange on selecting a calendar item', () => {
             const change = jest.fn();
-            const element = mount(<DatePicker defaultValue='2020-03-13' onChange={change} />);
-
+            let element = mount(<DatePicker dateFormat='YYYY-MM-DD' defaultValue='2020-03-13'
+                onChange={change} />);
+            element = element.setProps({
+                dateFormat: 'MM/DD/YYYY'
+            });
             element.find('button.fd-button--transparent.sap-icon--calendar').simulate('click');
             element.find('.fd-calendar__text').at(1).simulate('click');
 
