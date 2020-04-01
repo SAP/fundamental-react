@@ -158,6 +158,12 @@ class DatePicker extends Component {
         };
     }
 
+    executeCallback = (callbackFunction) => {
+        callbackFunction
+        && typeof callbackFunction === 'function'
+        && callbackFunction(this.getCallbackData());
+    }
+
     validateDates = (postValidationCallback) => {
         const { formattedDate } = this.state;
 
@@ -177,9 +183,8 @@ class DatePicker extends Component {
                     arrSelectedDates: arrSelected,
                     formattedDate: this.getFormattedDateRangeStr(arrSelected)
                 }, () => {
-                    postValidationCallback
-                    && typeof postValidationCallback === 'function'
-                    && postValidationCallback(this.getCallbackData());
+                    this.executeCallback(this.props.onChange);
+                    this.executeCallback(postValidationCallback);
                 });
             } else {
                 this.resetState(postValidationCallback);
@@ -192,9 +197,8 @@ class DatePicker extends Component {
                     formattedDate: this.getFormattedDateStr(formattedDate),
                     isoFormattedDate: formattedDate ? moment(formattedDate).format(ISO_DATE_FORMAT) : ''
                 }, () => {
-                    postValidationCallback
-                    && typeof postValidationCallback === 'function'
-                    && postValidationCallback(this.getCallbackData());
+                    this.executeCallback(this.props.onChange);
+                    this.executeCallback(postValidationCallback);
                 });
             } else {
                 this.resetState(postValidationCallback);
@@ -209,9 +213,8 @@ class DatePicker extends Component {
             selectedDate: null,
             arrSelectedDates: []
         }, () => {
-            postValidationCallback
-            && typeof postValidationCallback === 'function'
-            && postValidationCallback(this.getCallbackData());
+            this.executeCallback(this.props.onChange);
+            this.executeCallback(postValidationCallback);
         });
     }
 
