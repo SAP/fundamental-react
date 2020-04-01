@@ -28,7 +28,7 @@ const Checkbox = React.forwardRef(({
     indeterminate,
     inline,
     inputProps,
-    labelClasses,
+    labelClassName,
     labelProps,
     name,
     onChange,
@@ -59,9 +59,9 @@ const Checkbox = React.forwardRef(({
         }
     );
 
-    const labelClassName = classnames(
+    const labelClasses = classnames(
         'fd-checkbox__label',
-        labelClasses
+        labelClassName
     );
 
     const checkId = id ? id : shortId.generate();
@@ -88,7 +88,7 @@ const Checkbox = React.forwardRef(({
                 type='checkbox'
                 value={value} />
             <FormLabel {...labelProps}
-                className={labelClassName}
+                className={labelClasses}
                 disableStyles={disableStyles}
                 disabled={disabled}
                 htmlFor={checkId}>
@@ -112,7 +112,7 @@ Checkbox.propTypes = {
     indeterminate: PropTypes.bool,
     inline: PropTypes.bool,
     inputProps: PropTypes.object,
-    labelClasses: PropTypes.string,
+    labelClassName: PropTypes.string,
     labelProps: PropTypes.object,
     name: PropTypes.string,
     state: PropTypes.oneOf(FORM_STATES),
@@ -130,7 +130,7 @@ Checkbox.propDescriptions = {
     indeterminate: 'When true, the checkbox renders a "mixed" state.',
     inline: '_INTERNAL USE ONLY._',
     inputProps: 'Props to be spread to the component `<input>` element.',
-    labelClasses: 'Classes to be added to the component `<label>` element.',
+    labelClassName: 'Class name to be added to the component `<label>` element.',
     labelProps: 'Props to be spread to the component `<label>` element.',
     name: 'Sets the `name` for the checkbox input.',
     value: 'Sets the `value` for the checkbox input.'
