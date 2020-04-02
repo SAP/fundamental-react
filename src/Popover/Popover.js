@@ -166,7 +166,7 @@ class Popover extends Component {
                     popperProps={{ ...popperProps, id }}
                     referenceClassName='fd-popover__control'
                     referenceComponent={referenceComponent}
-                    show={typeof this.props.show === 'boolean' ? this.props.show && !disabled : this.state.isExpanded && !disabled}
+                    show={!disabled && (typeof show === 'boolean' ? show : this.state.isExpanded)}
                     usePortal
                     widthSizingType={widthSizingType}>
                     {body}
