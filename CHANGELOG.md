@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.9.0-rc.7"></a>
+# [0.9.0-rc.7](https://github.com/SAP/fundamental-react/compare/v0.9.0-rc.6...v0.9.0-rc.7) (2020-04-02)
+
+
+### Features
+
+* Standardize the plurality of className props and variables ([#954](https://github.com/SAP/fundamental-react/issues/954)) ([2922bf3](https://github.com/SAP/fundamental-react/commit/2922bf3))
+
+
+
 <a name="0.9.0-rc.6"></a>
 # [0.9.0-rc.6](https://github.com/SAP/fundamental-react/compare/v0.9.0-rc.5...v0.9.0-rc.6) (2020-04-01)
 
