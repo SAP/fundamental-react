@@ -631,6 +631,7 @@ class Calendar extends Component {
             tableProps,
             tableHeaderProps,
             tableBodyProps,
+            specialDays,
             ...props
         } = this.props;
 
@@ -645,7 +646,7 @@ class Calendar extends Component {
                     onKeyDown={(e) => this.onKeyDownCalendar(e)}>
                     {this.generateNavigation()}
                     <div className='fd-calendar__content'>
-                        {this._renderContent(monthListProps, yearListProps, tableProps, tableHeaderProps, tableBodyProps)}
+                        {this._renderContent(monthListProps, yearListProps, tableProps, tableHeaderProps, tableBodyProps, specialDays)}
                     </div>
                 </div>
                 <div aria-live='polite' className='fd-calendar__content fd-calendar__content--screen-reader-only'>
