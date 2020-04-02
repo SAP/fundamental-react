@@ -35,7 +35,10 @@ class Calendar extends Component {
             arrSelectedDates: props.enableRangeSelection ? selectedDateOrDates : [],
             selectedDate: !props.enableRangeSelection ? selectedDateOrDates : null,
             showMonths: false,
-            showYears: false
+            showYears: false,
+            currentFocusDay: moment().startOf('day'),
+            currentFocusYear: currentDateDisplayed.year(),
+            currentFocusMonth: currentDateDisplayed.month()
         };
 
         this.tableRef = React.createRef();
@@ -244,9 +247,11 @@ class Calendar extends Component {
             const monthCells = setOfMonths.map((month, subIndex) => {
                 const shortenedNameMonth = moment.localeData(this.props.locale).monthsShort()[subIndex + (4 * index)];
                 const isSelected = months[this.state.currentDateDisplayed.month()] === month;
+                const isFocused = this.state.currentFocusMonth === month;
                 const calendarItemClasses = classnames(
                     'fd-calendar__item',
                     {
+                        'is-focus': isFocused,
                         'is-selected': isSelected,
                         'fd-calendar__item--current': months[this.state.todayDate.month()] === month
                     }
@@ -255,7 +260,8 @@ class Calendar extends Component {
                 return (
                     <td aria-selected={isSelected} className={calendarItemClasses}
                         key={month} name={month}
-                        onClick={() => this.changeMonth(month)}>
+                        onClick={() => this.changeMonth(month)}
+                        onFocus={this.handleMonthFocus(month)}>
                         <span className='fd-calendar__text'
                             onKeyDown={(e) => this.onKeyDownDay(e, this.changeMonth.bind(this, month))} role='button'>
                             {shortenedNameMonth}
@@ -297,9 +303,11 @@ class Calendar extends Component {
         const listOfYears = years.map((rowOfYears, index) => {
             const yearCells = rowOfYears.map(element => {
                 const isSelected = this.state.currentDateDisplayed.year() === element;
+                const isFocused = this.state.currentFocusYear === element;
                 const yearClasses = classnames(
                     'fd-calendar__item',
                     {
+                        'is-focus': isFocused,
                         'is-selected': isSelected,
                         'fd-calendar__item--current': this.state.todayDate.year() === element
                     }
@@ -309,7 +317,8 @@ class Calendar extends Component {
                     <td aria-selected={isSelected}
                         className={yearClasses} key={element}
                         name={element}
-                        onClick={() => this.changeYear(element)}>
+                        onClick={() => this.changeYear(element)}
+                        onFocus={this.handleYearFocus(element)}>
                         <span className='fd-calendar__text'
                             onKeyDown={(e) => this.onKeyDownDay(e, this.changeYear.bind(this, element))} role='button'>
                             {element}
@@ -359,6 +368,19 @@ class Calendar extends Component {
         }
     }
 
+    handleDayFocus = date => () => {
+        this.setState({ currentFocusDay: date });
+    }
+
+    handleMonthFocus = month => () => {
+        console.log(month) /* eslint-disable-line */
+        this.setState({ currentFocusMonth: month });
+    }
+
+    handleYearFocus = year => () => {
+        this.setState({ currentFocusYear: year });
+    }
+
     dateClick = (day, isRangeEnabled) => {
         let selectedDates = [];
         if (typeof isRangeEnabled !== 'undefined' && isRangeEnabled) {
@@ -395,6 +417,26 @@ class Calendar extends Component {
             }
         }
         return blockedDates[0].isBefore(date, 'day') && blockedDates[1].isAfter(date, 'day');
+    }
+
+    isWeekend(date) {
+        return date.day() % 6 === 0;
+    }
+
+    isFocusedDay(date) {
+        return this.state.currentFocusDay.isSame(date);
+    }
+
+    isFocusedMonth(date) {
+        return this.state.currentFocusDay.isSame(date);
+    }
+
+    isFocusedYear(date) {
+        return this.state.currentFocusDay.isSame(date);
+    }
+
+    specialDayType(date) {
+        return this.props.specialDays[date.format('YYYYMMDD')] ? this.props.specialDays[date.format('YYYYMMDD')] : null;
     }
 
     generateNavigation = () => {
@@ -459,8 +501,8 @@ class Calendar extends Component {
 
         for (let index = 0; index < 7; index++) {
             weekDays.push(
-                <th className='fd-calendar__column-header' key={index}>
-                    <span className='fd-calendar__day-of-week'>
+                <th className='fd-calendar__item fd-calendar__item--side-helper' key={index}>
+                    <span className='fd-calendar__text'>
                         {daysName[index]}
                     </span>
                 </th>);
@@ -493,6 +535,7 @@ class Calendar extends Component {
                 const isDisabled = !isEnabledDate(day, this.props);
                 const isBlocked = isDateBetween(day, blockedDates);
                 const ariaLabel = copyDate.format(moment.localeData(this.props.locale).longDateFormat('LL'));
+                const specialDayType = this.specialDayType(day);
                 if (isDisabled || isBlocked) {
                     ariaLabel += ' ' + moment.localeData(this.props.locale).invalidDate();
                 }
@@ -502,12 +545,13 @@ class Calendar extends Component {
                     {
                         'fd-calendar__item--other-month': !day.isSame(currentDateDisplayed, 'month'),
                         'fd-calendar__item--current': todayDate.isSame(copyDate),
-                        'is-selected': this.isSelected(day),
-                        'is-selected-range-first': this.isSelectedRangeFirst(day),
-                        'is-selected-range-last': this.isSelectedRangeLast(day),
-                        'is-selected-range': this.isInSelectedRange(day),
+                        'fd-calendar__item--weekend': this.isWeekend(day),
+                        'fd-calendar__item--range': this.isInSelectedRange(day),
+                        [`fd-calendar__special-day--${specialDayType}`]: !!specialDayType,
+                        'is-active': this.isSelected(day) || this.isSelectedRangeFirst(day) || this.isSelectedRangeLast(day),
                         'is-disabled': isDisabled,
-                        'is-blocked': isBlocked
+                        'is-blocked': isBlocked,
+                        'is-focus': this.isFocusedDay(day)
                     }
                 );
 
@@ -519,6 +563,7 @@ class Calendar extends Component {
                         data-is-focused={day.isSame(currentDateDisplayed)}
                         key={copyDate}
                         onClick={isEnabledDate(day, this.props) ? () => this.dateClick(copyDate, enableRangeSelection) : null}
+                        onFocus={this.handleDayFocus(day)}
                         role='gridcell'>
                         <span
                             aria-label={ariaLabel}
@@ -595,13 +640,18 @@ class Calendar extends Component {
         );
 
         return (
-            <div {...props} className={calendarClasses}
-                onKeyDown={(e) => this.onKeyDownCalendar(e)}>
-                {this.generateNavigation()}
-                <div className='fd-calendar__content'>
-                    {this._renderContent(monthListProps, yearListProps, tableProps, tableHeaderProps, tableBodyProps)}
+            <>
+                <div {...props} className={calendarClasses}
+                    onKeyDown={(e) => this.onKeyDownCalendar(e)}>
+                    {this.generateNavigation()}
+                    <div className='fd-calendar__content'>
+                        {this._renderContent(monthListProps, yearListProps, tableProps, tableHeaderProps, tableBodyProps)}
+                    </div>
                 </div>
-            </div>
+                <div aria-live='polite' className='fd-calendar__content fd-calendar__content--screen-reader-only'>
+                    {localizedText.calendarInstructions}
+                </div>
+            </>
         );
     }
 
@@ -620,11 +670,13 @@ Calendar.basePropTypes = {
     disableWeekday: PropTypes.arrayOf(PropTypes.string),
     disableWeekends: PropTypes.bool,
     localizedText: CustomPropTypes.i18n({
+        calendarInstructions: PropTypes.string,
         nextMonth: PropTypes.string,
         previousMonth: PropTypes.string,
         show12NextYears: PropTypes.string,
         show12PreviousYears: PropTypes.string
-    })
+    }),
+    specialDays: PropTypes.object
 };
 
 Calendar.propTypes = {
@@ -640,12 +692,14 @@ Calendar.propTypes = {
 Calendar.defaultProps = {
     locale: 'en',
     localizedText: {
+        calendarInstructions: 'Use arrow keys to move between dates.',
         nextMonth: 'Next month',
         previousMonth: 'Previous month',
         show12NextYears: 'Show 12 next years',
         show12PreviousYears: 'Show 12 previous years'
     },
-    onChange: () => { }
+    onChange: () => { },
+    specialDays: {}
 };
 
 Calendar.propDescriptions = {
@@ -659,12 +713,14 @@ Calendar.propDescriptions = {
     disableWeekends: 'Set to **true** to disables dates that match a weekend.',
     focusOnInit: 'Set to **true** to focus the calendar grid upon being mounted',
     localizedTextShape: {
+        calendarInstructions: 'Localized string informing screen reader users the calendar can be navigated by arrow keys.',
         nextMonth: 'aria-label for next button',
         previousMonth: 'aria-label for previous button',
         show12NextYears: 'aria-label for next button when years are displayed',
         show12PreviousYears: 'aria-label for previous button when years are displayed'
     },
     monthListProps: 'Additional props to be spread to the month\'s `<table>` element.',
+    specialDays: 'Object with special dates and special date types in shape of `{moment(date).format(\'YYYYMMDD\'): type}`. Type must be a number between 1-20.',
     tableBodyProps: 'Additional props to be spread to the `<tbody>` element.',
     tableHeaderProps: 'Additional props to be spread to the `<thead>` element.',
     tableProps: 'Additional props to be spread to the `<table>` element.',

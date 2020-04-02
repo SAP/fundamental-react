@@ -1,7 +1,14 @@
 import { Calendar } from '../';
+import moment from 'moment';
 import path from 'path';
 import React from 'react';
 import { ComponentPage, Example } from '../_playground';
+
+const tomorrow = moment().add(1, 'day').endOf('day');
+const tomorrowFormatted = tomorrow.format('YYYYMMDD');
+const specialDays = {
+    [tomorrowFormatted]: 1
+};
 
 export const CalendarComponent = () => {
     return (
@@ -31,6 +38,12 @@ export const CalendarComponent = () => {
                 <Calendar
                     blockedDates={[new Date(2018, 1, 1, 0, 0, 0, 0), new Date(2018, 3, 3, 0, 0, 0, 0)]}
                     disableWeekday={['Monday', 'Tuesday']} />
+            </Example>
+
+            <Example
+                centered
+                title='Calendar with special days'>
+                <Calendar specialDays={specialDays} />
             </Example>
 
             <Example
