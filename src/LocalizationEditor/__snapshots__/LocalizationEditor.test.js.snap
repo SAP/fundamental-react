@@ -118,6 +118,7 @@ exports[`<LocalizationEditor /> create localization editor 3`] = `
         >
           <textarea
             className="fd-textarea fd-input-group__input"
+            onChange={[Function]}
           />
           <span
             className="fd-input-group__addon fd-input-group__addon--button"

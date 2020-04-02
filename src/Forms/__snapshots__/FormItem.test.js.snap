@@ -46,12 +46,14 @@ exports[`<FormItem /> create form item 1`] = `
   <textarea
     className="fd-textarea blue"
     id="textarea-1"
+    onChange={[Function]}
   >
     Pellentesque metus lacus commodo eget justo ut rutrum varius nunc.
   </textarea>
   <textarea
     className="fd-textarea"
     id="textarea-2"
+    onChange={[Function]}
   >
     Pellentesque metus lacus commodo eget justo ut rutrum varius nunc.
   </textarea>

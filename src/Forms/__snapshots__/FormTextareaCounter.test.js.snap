@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FormTextAreaCounter /> create form textareacounter 1`] = `
+<div
+  className="fd-textarea-counter"
+>
+  150 characters left
+</div>
+`;
