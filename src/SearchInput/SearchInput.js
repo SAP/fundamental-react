@@ -32,7 +32,14 @@ class SearchInput extends Component {
     };
 
     handleListItemClick = (event, item) => {
-        item.callback ? item.callback() : null;
+        this.setState((prevState) => ({
+            value: item.text,
+            isExpanded: false,
+            searchExpanded: false,
+            filteredResult: this.filterList(prevState.searchList, item.text)
+        }), () => {
+            item.callback ? item.callback() : null;
+        });
     };
 
     handleChange = event => {
@@ -152,7 +159,7 @@ class SearchInput extends Component {
 
         return (
             <div {...rest} className={className}>
-                <Popover
+                <Popover show={this.state.isExpanded}
                     {...popoverProps}
                     body={
                         (<>

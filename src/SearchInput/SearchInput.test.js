@@ -182,8 +182,7 @@ describe('<SearchInput />', () => {
 
         // click in search box to hide
         wrapper.find(searchInput).simulate('click');
-
-        expect(wrapper.state('isExpanded')).toBeFalsy();
+        expect(wrapper.state('isExpanded')).toBeTruthy();
     });
 
     test('check search executed on search button click', () => {
