@@ -35,7 +35,7 @@ class InputGroup extends Component {
             },
         );
 
-        const getClassNames = (child) => classnames(
+        const getClassName = (child) => classnames(
             {
                 'fd-input-group__input': child.type.displayName !== InputGroupAddon.displayName
             },
@@ -51,7 +51,7 @@ class InputGroup extends Component {
                         return React.cloneElement(child, {
                             compact,
                             disabled,
-                            className: getClassNames(child)
+                            className: getClassName(child)
                         });
                     })}
                 </div>
