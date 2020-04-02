@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.9.0-rc.8"></a>
+# [0.9.0-rc.8](https://github.com/SAP/fundamental-react/compare/v0.9.0-rc.7...v0.9.0-rc.8) (2020-04-02)
+
+
+### Bug Fixes
+
+* Close SearchInput popover after selecting an item. ([#941](https://github.com/SAP/fundamental-react/issues/941)) ([af687ad](https://github.com/SAP/fundamental-react/commit/af687ad))
+
+
+
 <a name="0.9.0-rc.7"></a>
 # [0.9.0-rc.7](https://github.com/SAP/fundamental-react/compare/v0.9.0-rc.6...v0.9.0-rc.7) (2020-04-02)
 
