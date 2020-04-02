@@ -32,12 +32,14 @@ class SearchInput extends Component {
     };
 
     handleListItemClick = (event, item) => {
-        this.setState({
+        this.setState((prevState) => ({
             value: item.text,
             isExpanded: false,
-            searchExpanded: false
+            searchExpanded: false,
+            filteredResult: this.filterList(prevState.searchList, item.text)
+        }), () => {
+            item.callback ? item.callback() : null;
         });
-        item.callback ? item.callback() : null;
     };
 
     handleChange = event => {
