@@ -721,7 +721,7 @@ Calendar.propDescriptions = {
         show12PreviousYears: 'aria-label for previous button when years are displayed'
     },
     monthListProps: 'Additional props to be spread to the month\'s `<table>` element.',
-    specialDays: 'Object with special dates and special date types in shape of `{moment(date).format(\'YYYYMMDD\'): type}`. Type must be a number between 1-20.',
+    specialDays: 'Object with special dates and special date types in shape of `{\'YYYYMMDD\': type}`. Type must be a number between 1-20.',
     tableBodyProps: 'Additional props to be spread to the `<tbody>` element.',
     tableHeaderProps: 'Additional props to be spread to the `<thead>` element.',
     tableProps: 'Additional props to be spread to the `<table>` element.',
