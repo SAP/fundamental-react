@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.9.0-rc.9"></a>
+# [0.9.0-rc.9](https://github.com/SAP/fundamental-react/compare/v0.9.0-rc.8...v0.9.0-rc.9) (2020-04-03)
+
+
+### Features
+
+* add onSelect callback to ComboboxInput;Select;SearchInput ([#958](https://github.com/SAP/fundamental-react/issues/958)) ([21b26cb](https://github.com/SAP/fundamental-react/commit/21b26cb))
+
+
+
 <a name="0.9.0-rc.8"></a>
 # [0.9.0-rc.8](https://github.com/SAP/fundamental-react/compare/v0.9.0-rc.7...v0.9.0-rc.8) (2020-04-02)
 
