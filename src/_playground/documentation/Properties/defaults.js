@@ -17,7 +17,7 @@ export const defaultPropDescriptions = {
     onChange: 'Callback function when the change event fires on the component.',
     onClick: 'Callback function when user clicks on the component.',
     onSelect: 'Callback function when user clicks on an option.',
-    options: 'An array of objects with a key and text to render the selectable options',
+    options: 'An array of objects with a key and text to render the selectable options.',
     placeholder: 'Localized placeholder text of the input.',
     popoverProps: 'Additional props to be spread to the [Popover](/popover) component.',
     readOnly: 'Set to **true** to mark component as readonly.',
