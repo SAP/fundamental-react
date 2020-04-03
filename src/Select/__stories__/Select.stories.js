@@ -1,4 +1,3 @@
-import List from '../../List/List';
 import React from 'react';
 import Select from '../Select';
 import { storiesOf } from '@storybook/react';
@@ -9,22 +8,12 @@ import {
     withKnobs
 } from '@storybook/addon-knobs';
 
-const list = (
-    <List>
-        <List.Item>
-            <List.Text>List Item 1</List.Text>
-        </List.Item>
-        <List.Item>
-            <List.Text>List Item 2</List.Text>
-        </List.Item>
-        <List.Item>
-            <List.Text>List Item 3</List.Text>
-        </List.Item>
-        <List.Item>
-            <List.Text>List Item 4</List.Text>
-        </List.Item>
-    </List>
-);
+const options = [
+    { key: '1', text: 'List Item 1' },
+    { key: '2', text: 'List Item 2' },
+    { key: '3', text: 'List Item 3' },
+    { key: '4', text: 'List Item 4' }
+];
 
 storiesOf('Components|Select', module)
     .addDecorator(withKnobs)
@@ -32,6 +21,7 @@ storiesOf('Components|Select', module)
         <Select
             compact={boolean('compact', false)}
             disabled={boolean('disabled', false)}
+            options={options}
             placeholder={text('placeholder', 'select')}
             validationState={select('Validation State', {
                 'none': '',
@@ -39,43 +29,46 @@ storiesOf('Components|Select', module)
                 'error': { state: 'error', text: 'placeholder text' },
                 'information': { state: 'information', text: 'placeholder text' },
                 'warning': { state: 'warning', text: 'placeholder text' }
-            })}>
-            {list}
-        </Select>
+            })} />
     ))
     .add('Compact', () => (
-        <Select compact placeholder='Select'>
-            {list}
-        </Select>
+        <Select
+            compact
+            options={options}
+            placeholder='Select' />
     ))
     .add('Disabled', () => (
-        <Select disabled placeholder='Select'>
-            {list}
-        </Select>
+        <Select
+            disabled
+            options={options}
+            placeholder='Select' />
     ))
     .add('Validation State | Error', () => (
-        <Select placeholder='Default' validationState={{ state: 'error', text: 'Test validation state' }}>
-            {list}
-        </Select>
+        <Select
+            options={options}
+            placeholder='Default'
+            validationState={{ state: 'error', text: 'Test validation state' }} />
     ))
     .add('Validation State | Warning', () => (
-        <Select placeholder='Default' validationState={{ state: 'warning', text: 'Test validation state' }}>
-            {list}
-        </Select>
+        <Select
+            options={options}
+            placeholder='Default'
+            validationState={{ state: 'warning', text: 'Test validation state' }} />
     ))
     .add('Validation State | Information', () => (
-        <Select placeholder='Default' validationState={{ state: 'information', text: 'Test validation state' }}>
-            {list}
-        </Select>
+        <Select
+            options={options}
+            placeholder='Default'
+            validationState={{ state: 'information', text: 'Test validation state' }} />
     ))
     .add('Validation State | Success', () => (
-        <Select placeholder='Default' validationState={{ state: 'success', text: 'Test validation state' }}>
-            {list}
-        </Select>
+        <Select
+            options={options}
+            placeholder='Default'
+            validationState={{ state: 'success', text: 'Test validation state' }} />
     ))
     .add('disable styles', () => (
         <Select
-            disableStyles>
-            {list}
-        </Select>
+            disableStyles
+            options={options} />
     ));
