@@ -1,6 +1,6 @@
 import path from 'path';
 import React from 'react';
-import { Checkbox, FormFieldset, FormGroup, FormInput, FormItem, FormLabel, FormLegend, FormRadioGroup, FormRadioItem, FormSelect, FormTextarea, FormTextareaCounter, InlineHelp } from '../';
+import { Checkbox, FormFieldset, FormGroup, FormInput, FormItem, FormLabel, FormLegend, FormRadioGroup, FormRadioItem, FormSelect, FormTextarea, InlineHelp } from '../';
 import { ComponentPage, Example } from '../_playground';
 
 export const FormsComponent = () => {
@@ -54,23 +54,9 @@ export const FormsComponent = () => {
                     <FormGroup>
                         <FormItem>
                             <FormLabel htmlFor='textarea-2'>
-                                Text area with counter default settings
+                                Text area with counter
                             </FormLabel>
-                            <FormTextarea id='textarea-2'>
-                                <FormTextareaCounter />
-                            </FormTextarea>
-                        </FormItem>
-                    </FormGroup>
-
-                    <FormGroup>
-                        <FormItem>
-                            <FormLabel htmlFor='textarea-3' required>
-                                Text area with counter custom settings
-                            </FormLabel>
-                            <FormTextarea counter={10}
-                                id='textarea-3'>
-                                <FormTextareaCounter>characters left #counter#</FormTextareaCounter>
-                            </FormTextarea>
+                            <FormTextarea id='textarea-2' maxLength={150} />
                         </FormItem>
                     </FormGroup>
                 </>

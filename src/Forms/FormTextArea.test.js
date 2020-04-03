@@ -1,5 +1,4 @@
 import FormTextarea from './FormTextarea';
-import FormTextareaCounter from './FormTextareaCounter';
 import { mount } from 'enzyme';
 import React from 'react';
 import renderer from 'react-test-renderer';
@@ -10,12 +9,22 @@ describe('<FormTextArea />', () => {
             Pellentesque metus lacus commodo eget justo ut rutrum varius nunc.
         </FormTextarea>
     );
+    const formTextareaCounter = (
+        <FormTextarea id='textarea-3' maxLength={ 150 } />
+    );
 
     test('create form textarea', () => {
         let component = renderer.create(formTextArea);
         let tree = component.toJSON();
         expect(tree).toMatchSnapshot();
     });
+
+    test('create form textarea with counter', () => {
+        let component = renderer.create(formTextareaCounter);
+        let tree = component.toJSON();
+        expect(tree).toMatchSnapshot();
+    });
+
 
     describe('Prop spreading', () => {
         test('should allow props to be spread to the FormTextarea component', () => {
@@ -41,66 +50,86 @@ describe('<FormTextArea />', () => {
         expect(ref.current.className).toEqual('fd-textarea');
     });
 
-    describe('Textarea tests', () => {
-        let setup = (props) => {
-            return mount(<FormTextarea {...props} />);
-        };
-        test('should add attribute when counter is passed to FormTextarea', () => {
-            let element = setup({
-                counter: 150
-            });
-            expect(element.props().counter).toBe(150);
-        });
-    });
-
-    describe('<FormTextarea><FormTextareaCounter/>', () => {
-        let textareaCounter = mount(<FormTextareaCounter />);
-        let setup = (props, children) => {
+    describe('FormTextArea counter', () => {
+        const setup = (props, children) => {
             return mount(<FormTextarea {...props}>
                 {children}
             </FormTextarea>);
         };
-        test('should not display textareacounter when disabled', () => {
-            let element = setup({
-                counter: 150,
-                disabled: true
-            }, textareaCounter);
-            expect(element.find('.fd-textarea-counter').exists()).toBeFalsy();
-        });
-        test('should not display textareacounter when readonly', () => {
-            let element = setup({
-                counter: 150,
-                disabled: false,
-                readOnly: true
-            }, textareaCounter);
-            expect(element.find('.fd-textarea-counter').exists()).toBeFalsy();
-        });
-        test('should not display textareacounter when counter is 0', () => {
-            let element = setup({
-                counter: 0
-            }, textareaCounter);
-            expect(element.find('.fd-textarea-counter').exists()).toBeFalsy();
-        });
-        test('should display textareacounter', () => {
-            let element = setup({
-                counter: 150
-            }, textareaCounter);
-            expect(element.find('.fd-textarea-counter').text()).toEqual('150 characters left');
-        });
-        test('should update counter upon typing', () => {
-            let element = setup({
-                counter: 5
-            }, textareaCounter);
-            element.find('.fd-textarea').simulate('change', { target: { value: 'aaa' } });
-            expect(element.find('.fd-textarea-counter').text()).toEqual('2 characters left');
-        });
-        test('should maintain counter 0 when count < 0', () => {
-            let element = setup({
-                counter: 5
-            }, textareaCounter);
-            element.find('.fd-textarea').simulate('change', { target: { value: 'aaaaaaaa' } });
-            expect(element.find('.fd-textarea-counter').text()).toEqual('0 characters left');
+        const counterClass = '.fd-textarea-counter';
+
+        test('should allow counterprops to be spread', () => {
+            const maxLength = 1;
+            const counterProps = { 'data-sample': 'Sample' };
+            const element = setup({ maxLength, counterProps });
+            expect(element.find(counterClass).getDOMNode().attributes['data-sample'].value).toBe('Sample');
         });
 
+        test('should get initial value from children', () => {
+            const text = 'Hello world';
+            const maxLength = 150;
+            const expected = `${maxLength - text.length} characters left`;
+            const element = setup({ maxLength }, text);
+            expect(element.find(counterClass).text()).toEqual(expected);
+        });
+
+        test('should get initial value from value prop', () => {
+            const text = 'Hello world';
+            const maxLength = 150;
+            const expected = `${maxLength - text.length} characters left`;
+            const element = setup({ maxLength, value: text });
+            expect(element.find(counterClass).text()).toEqual(expected);
+        });
+
+        test('should get initial value from default value prop', () => {
+            const text = 'Hello world';
+            const maxLength = 150;
+            const expected = `${maxLength - text.length} characters left`;
+            const element = setup({ maxLength, defaultValue: text });
+            expect(element.find(counterClass).text()).toEqual(expected);
+        });
+
+        test('should not display counter when maxLength < 0', () => {
+            const maxLength = -1;
+            const element = setup({ maxLength }, 'Some text');
+            expect(element.find(counterClass).exists()).toBeFalsy();
+        });
+
+        test('should trigger onChange Textarea', () => {
+            const mockCallback = jest.fn();
+            const element = setup({
+                maxLength: 150,
+                onChange: mockCallback
+            });
+            element.find('.fd-textarea').simulate('change', { currentTarget: { value: 'a' } });
+            expect(mockCallback.mock.calls.length).toBe(1);
+        });
+
+        test('should update counter upon typing', () => {
+            const text = 'aaa';
+            const maxLength = 10;
+            const expected = `${maxLength - text.length} characters left`;
+            const element = setup({ maxLength });
+            element.find('.fd-textarea').simulate('change', { target: { value: text } });
+            expect(element.find(counterClass).text()).toEqual(expected);
+        });
+
+        test('should maintain counter 0 when count < 0', () => {
+            const text = '012345';
+            const maxLength = 5;
+            const expected = '0 characters left';
+            const element = setup({ maxLength });
+            element.find('.fd-textarea').simulate('change', { target: { value: text } });
+            expect(element.find(counterClass).text()).toEqual(expected);
+        });
+
+        test('should account for 1 character left case', () => {
+            const text = '1234';
+            const maxLength = 5;
+            const expected = '1 character left';
+            const element = setup({ maxLength });
+            element.find('.fd-textarea').simulate('change', { target: { value: text } });
+            expect(element.find(counterClass).text()).toEqual(expected);
+        });
     });
 });
