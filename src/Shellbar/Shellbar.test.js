@@ -11,20 +11,22 @@ describe('<Shellbar />', () => {
         colorAccent: 8
     };
 
-    const profileMenu = [
-        {
-            name: 'Settings',
-            glyph: 'action-settings',
-            size: 's',
-            callback: () => alert('Settings selected!')
-        },
-        {
-            name: 'Sign Out',
-            glyph: 'log',
-            size: 's',
-            callback: () => alert('Sign Out selected!')
-        }
-    ];
+    const profileMenu = {
+        items: [
+            {
+                name: 'Settings',
+                glyph: 'action-settings',
+                size: 's',
+                callback: () => alert('Settings selected!')
+            },
+            {
+                name: 'Sign Out',
+                glyph: 'log',
+                size: 's',
+                callback: () => alert('Sign Out selected!')
+            }
+        ]
+    };
 
     const simpleShellBar = (
         <Shellbar
@@ -150,12 +152,14 @@ describe('<Shellbar />', () => {
         image: '//unpkg.com/fundamental-styles/dist/images/sap-logo.png'
     };
 
-    const productMenu = [
-        { name: 'Application A', callback: () => alert('Application A selected!'), glyph: 'log' },
-        { name: 'Application B', callback: () => alert('Application B selected!') },
-        { name: 'Application C', callback: () => alert('Application C selected!') },
-        { name: 'Application D', callback: () => alert('Application D selected!') }
-    ];
+    const productMenu = {
+        items: [
+            { name: 'Application A', callback: () => alert('Application A selected!'), glyph: 'log' },
+            { name: 'Application B', callback: () => alert('Application B selected!') },
+            { name: 'Application C', callback: () => alert('Application C selected!') },
+            { name: 'Application D', callback: () => alert('Application D selected!') }
+        ]
+    };
 
     const productSwitchList = [
         {

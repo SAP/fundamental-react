@@ -69,17 +69,21 @@ export class ShellbarComponent extends Component {
         userName: 'John Snow'
     };
 
-    profileMenu = [
-        { name: 'Settings', glyph: 'action-settings', size: 's', callback: () => alert('Settings selected!') },
-        { name: 'Sign Out', glyph: 'log', size: 's', callback: () => alert('Sign Out selected!') }
-    ];
+    profileMenu = {
+        items: [
+            { name: 'Settings', glyph: 'action-settings', size: 's', callback: () => alert('Settings selected!') },
+            { name: 'Sign Out', glyph: 'log', size: 's', callback: () => alert('Sign Out selected!') }
+        ]
+    };
 
-    productMenu = [
-        { name: 'Application A', callback: () => alert('Application A selected!') },
-        { name: 'Application B', callback: () => alert('Application B selected!') },
-        { name: 'Application C', callback: () => alert('Application C selected!') },
-        { name: 'Application D', callback: () => alert('Application D selected!') }
-    ];
+    productMenu = {
+        items: [
+            { name: 'Application A', callback: () => alert('Application A selected!') },
+            { name: 'Application B', callback: () => alert('Application B selected!') },
+            { name: 'Application C', callback: () => alert('Application C selected!') },
+            { name: 'Application D', callback: () => alert('Application D selected!') }
+        ]
+    };
 
     productSwitchList = [
         {

@@ -6,6 +6,7 @@ import Icon from '../Icon/Icon';
 import Identifier from '../Identifier/Identifier';
 import Menu from '../Menu/Menu';
 import Popover from '../Popover/Popover';
+import { POPPER_PLACEMENTS } from '../utils/constants';
 import PropTypes from 'prop-types';
 import SearchInput from '../SearchInput/SearchInput';
 import React, { Component } from 'react';
@@ -132,10 +133,10 @@ class Shellbar extends Component {
                         <div className='fd-product-menu'>
                             <Popover
                                 body={
-                                    productMenu && (
+                                    productMenu.items && (
                                         <Menu disableStyles={disableStyles}>
                                             <Menu.List>
-                                                {productMenu.map((item, index) => {
+                                                {productMenu.items.map((item, index) => {
                                                     return (
                                                         <Menu.Item
                                                             key={index}
@@ -167,6 +168,7 @@ class Shellbar extends Component {
                                 }
                                 disableStyles={disableStyles}
                                 noArrow
+                                placement={productMenu.placement}
                                 popperProps={{ id: 'fd-shellbar-product-popover' }} />
                         </div>
                     )}
@@ -357,11 +359,11 @@ class Shellbar extends Component {
                             <div className='fd-user-menu'>
                                 <Popover
                                     body={
-                                        profileMenu && (
+                                        profileMenu.items && (
                                             <Menu disableStyles={disableStyles}>
                                                 <Menu.List>
                                                     <Menu.Item>{profile.userName}</Menu.Item>
-                                                    {profileMenu.map((item, index) => {
+                                                    {profileMenu.items.map((item, index) => {
                                                         return (
                                                             <Menu.Item
                                                                 key={index}
@@ -404,7 +406,7 @@ class Shellbar extends Component {
                                     }
                                     disableStyles={disableStyles}
                                     noArrow
-                                    placement='right'
+                                    placement={profileMenu.placement || 'right'}
                                     popperProps={{ id: 'fd-shellbar-profile-popover' }} />
                             </div>
                         </div>
@@ -469,7 +471,10 @@ Shellbar.propTypes = {
     logo: PropTypes.object,
     logoSAP: PropTypes.bool,
     notifications: PropTypes.object,
-    productMenu: PropTypes.array,
+    productMenu: PropTypes.shape({
+        items: PropTypes.array,
+        placement: PropTypes.oneOf(POPPER_PLACEMENTS)
+    }),
     productSwitch: PropTypes.object,
     productSwitchList: PropTypes.arrayOf(
         PropTypes.shape({
@@ -481,7 +486,10 @@ Shellbar.propTypes = {
     ),
     productTitle: PropTypes.string,
     profile: PropTypes.object,
-    profileMenu: PropTypes.array,
+    profileMenu: PropTypes.shape({
+        items: PropTypes.array,
+        placement: PropTypes.oneOf(POPPER_PLACEMENTS)
+    }),
     searchInput: PropTypes.object,
     subtitle: PropTypes.string
 };
@@ -503,12 +511,18 @@ Shellbar.propDescriptions = {
         notificationsButton: 'Aria-label for <button> element.'
     },
     notifications: 'Information about pending notifications.',
-    productMenu: 'Holds product titles and navigation.',
+    productMenu: {
+        items: 'Holds product titles and navigation.',
+        placement: 'Popover placement for the product menu.'
+    },
     productSwitch: 'For navigating between products.',
     productSwitchList: 'Array of objects containing data about the products. Callback, title, and glyph are required; subtitle is optional.',
     productTitle: 'Displays the current application when no product menu is used.',
     profile: 'User information (_e.g._ name, initials, etc.)',
-    profileMenu: 'List of items for the profile menu.',
+    profileMenu: {
+        items: 'List of items for the profile menu.',
+        placement: 'Popover placement for the profile menu'
+    },
     searchInput: 'Holds `searchInput` properties.',
     subtitle: 'Displays an application context. Should be used rarely.'
 };
