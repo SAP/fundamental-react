@@ -1,7 +1,7 @@
 import path from 'path';
 import React from 'react';
+import { Select } from '..';
 import { ComponentPage, Example } from '../_playground';
-import { List, Select } from '..';
 
 export const SelectComponent = () => {
 
@@ -15,79 +15,50 @@ export const SelectComponent = () => {
             <Example
                 centered
                 title='Compact'>
-                <Select placeholder='Select'>
-                    <List>
-                        <List.Item>
-                            <List.Text>List Item 1</List.Text>
-                        </List.Item>
-                        <List.Item>
-                            <List.Text>List Item 2</List.Text>
-                        </List.Item>
-                        <List.Item>
-                            <List.Text>List Item 3</List.Text>
-                        </List.Item>
-                        <List.Item>
-                            <List.Text>List Item 4</List.Text>
-                        </List.Item>
-                    </List>
-                </Select>
+                <Select
+                    options={[
+                        { key: '1', text: 'List Item 1' },
+                        { key: '2', text: 'List Item 2' },
+                        { key: '3', text: 'List Item 3' },
+                        { key: '4', text: 'List Item 4' }
+                    ]}
+                    placeholder='Select' />
 
-                <Select compact placeholder='Select'>
-                    <List>
-                        <List.Item>
-                            <List.Text>List Item 1</List.Text>
-                        </List.Item>
-                        <List.Item>
-                            <List.Text>List Item 2</List.Text>
-                        </List.Item>
-                        <List.Item>
-                            <List.Text>List Item 3</List.Text>
-                        </List.Item>
-                        <List.Item>
-                            <List.Text>List Item 4</List.Text>
-                        </List.Item>
-                    </List>
-                </Select>
+                <Select
+                    compact
+                    options={[
+                        { key: '1', text: 'List Item 1' },
+                        { key: '2', text: 'List Item 2' },
+                        { key: '3', text: 'List Item 3' },
+                        { key: '4', text: 'List Item 4' }
+                    ]}
+                    placeholder='Select' />
 
             </Example>
 
             <Example
                 centered
                 title='Disabled'>
-                <Select disabled placeholder='Select'>
-                    <List>
-                        <List.Item>
-                            <List.Text>List Item 1</List.Text>
-                        </List.Item>
-                        <List.Item>
-                            <List.Text>List Item 2</List.Text>
-                        </List.Item>
-                        <List.Item>
-                            <List.Text>List Item 3</List.Text>
-                        </List.Item>
-                        <List.Item>
-                            <List.Text>List Item 4</List.Text>
-                        </List.Item>
-                    </List>
-                </Select>
+                <Select
+                    disabled
+                    options={[
+                        { key: '1', text: 'List Item 1' },
+                        { key: '2', text: 'List Item 2' },
+                        { key: '3', text: 'List Item 3' },
+                        { key: '4', text: 'List Item 4' }
+                    ]}
+                    placeholder='Select' />
 
-                <Select compact disabled
-                    placeholder='Select'>
-                    <List>
-                        <List.Item>
-                            <List.Text>List Item 1</List.Text>
-                        </List.Item>
-                        <List.Item>
-                            <List.Text>List Item 2</List.Text>
-                        </List.Item>
-                        <List.Item>
-                            <List.Text>List Item 3</List.Text>
-                        </List.Item>
-                        <List.Item>
-                            <List.Text>List Item 4</List.Text>
-                        </List.Item>
-                    </List>
-                </Select>
+                <Select
+                    compact
+                    disabled
+                    options={[
+                        { key: '1', text: 'List Item 1' },
+                        { key: '2', text: 'List Item 2' },
+                        { key: '3', text: 'List Item 3' },
+                        { key: '4', text: 'List Item 4' }
+                    ]}
+                    placeholder='Select' />
 
             </Example>
 
@@ -95,80 +66,44 @@ export const SelectComponent = () => {
                 centered
                 title='Validation States'>
                 <Select
+                    options={[
+                        { key: '1', text: 'List Item 1' },
+                        { key: '2', text: 'List Item 2' },
+                        { key: '3', text: 'List Item 3' },
+                        { key: '4', text: 'List Item 4' }
+                    ]}
                     placeholder='Default'
-                    validationState={{ state: 'warning', text: 'Test' }}>
-                    <List>
-                        <List.Item>
-                            <List.Text>List Item 1</List.Text>
-                        </List.Item>
-                        <List.Item>
-                            <List.Text>List Item 2</List.Text>
-                        </List.Item>
-                        <List.Item>
-                            <List.Text>List Item 3</List.Text>
-                        </List.Item>
-                        <List.Item>
-                            <List.Text>List Item 4</List.Text>
-                        </List.Item>
-                    </List>
-                </Select>
+                    validationState={{ state: 'warning', text: 'Test' }} />
 
                 <Select
+                    options={[
+                        { key: '1', text: 'List Item 1' },
+                        { key: '2', text: 'List Item 2' },
+                        { key: '3', text: 'List Item 3' },
+                        { key: '4', text: 'List Item 4' }
+                    ]}
                     placeholder='Default'
-                    validationState={{ state: 'information', text: 'Test' }}>
-                    <List>
-                        <List.Item>
-                            <List.Text>List Item 1</List.Text>
-                        </List.Item>
-                        <List.Item>
-                            <List.Text>List Item 2</List.Text>
-                        </List.Item>
-                        <List.Item>
-                            <List.Text>List Item 3</List.Text>
-                        </List.Item>
-                        <List.Item>
-                            <List.Text>List Item 4</List.Text>
-                        </List.Item>
-                    </List>
-                </Select>
+                    validationState={{ state: 'information', text: 'Test' }} />
 
                 <Select
+                    options={[
+                        { key: '1', text: 'List Item 1' },
+                        { key: '2', text: 'List Item 2' },
+                        { key: '3', text: 'List Item 3' },
+                        { key: '4', text: 'List Item 4' }
+                    ]}
                     placeholder='Default'
-                    validationState={{ state: 'error', text: 'Test' }}>
-                    <List>
-                        <List.Item>
-                            <List.Text>List Item 1</List.Text>
-                        </List.Item>
-                        <List.Item>
-                            <List.Text>List Item 2</List.Text>
-                        </List.Item>
-                        <List.Item>
-                            <List.Text>List Item 3</List.Text>
-                        </List.Item>
-                        <List.Item>
-                            <List.Text>List Item 4</List.Text>
-                        </List.Item>
-                    </List>
-                </Select>
+                    validationState={{ state: 'error', text: 'Test' }} />
 
                 <Select
+                    options={[
+                        { key: '1', text: 'List Item 1' },
+                        { key: '2', text: 'List Item 2' },
+                        { key: '3', text: 'List Item 3' },
+                        { key: '4', text: 'List Item 4' }
+                    ]}
                     placeholder='Default'
-                    validationState={{ state: 'success', text: 'Test' }}>
-                    <List>
-                        <List.Item>
-                            <List.Text>List Item 1</List.Text>
-                        </List.Item>
-                        <List.Item>
-                            <List.Text>List Item 2</List.Text>
-                        </List.Item>
-                        <List.Item>
-                            <List.Text>List Item 3</List.Text>
-                        </List.Item>
-                        <List.Item>
-                            <List.Text>List Item 4</List.Text>
-                        </List.Item>
-                    </List>
-                </Select>
+                    validationState={{ state: 'success', text: 'Test' }} />
 
             </Example>
 

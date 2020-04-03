@@ -2,19 +2,22 @@ import Button from '../Button/Button';
 import classnames from 'classnames';
 import { FORM_MESSAGE_TYPES } from '../utils/constants';
 import FormMessage from '../Forms/_FormMessage';
+import List from '../List/List';
 import Popover from '../Popover/Popover';
 import PropTypes from 'prop-types';
 import React, { useEffect, useState } from 'react';
 
 const Select = React.forwardRef(({
-    children,
     className,
     compact,
     disabled,
     disableStyles,
     id,
+    options,
     onClick,
+    onSelect,
     placeholder,
+    selectedKey,
     validationState,
     ...props
 }, ref) => {
@@ -26,6 +29,7 @@ const Select = React.forwardRef(({
     }, []);
 
     let [isExpanded, setIsExpanded] = useState(false);
+    let [selectedOptionKey, setSelectedOptionKey] = useState(selectedKey);
 
     const handleClick = (e) => {
         setIsExpanded(!isExpanded);
@@ -48,6 +52,9 @@ const Select = React.forwardRef(({
         }
     );
 
+    const selected = options
+        .find(option => typeof selectedOptionKey !== 'undefined' && option.key === selectedOptionKey);
+
     const selectControl = (
         <div
             {...props}
@@ -56,7 +63,7 @@ const Select = React.forwardRef(({
             onClick={handleClick}
             ref={ref}>
             <div className={selectControlClasses}>
-                {placeholder}
+                {selected ? selected.text : placeholder}
                 <Button
                     className='fd-select__button'
                     disabled={disabled}
@@ -64,11 +71,11 @@ const Select = React.forwardRef(({
                     option='transparent'
                     ref={ref} />
             </div>
-            {!isExpanded ? validationState && (<FormMessage
+            {!isExpanded && validationState && (<FormMessage
                 disableStyles={disableStyles}
                 type={validationState.state}>
                 {validationState.text}
-            </FormMessage>) : null}
+            </FormMessage>)}
         </div>
     );
 
@@ -79,12 +86,10 @@ const Select = React.forwardRef(({
         }
     );
 
-    const popoverBody = () => {
-        return React.cloneElement(children, {
-            compact: compact,
-            className: listClassName,
-            role: 'listbox'
-        });
+    const handleSelect = (e, option) => {
+        setIsExpanded(false);
+        setSelectedOptionKey(option.key);
+        onSelect(e, option);
     };
 
     return (
@@ -98,7 +103,18 @@ const Select = React.forwardRef(({
                         {validationState.text}
                     </FormMessage>
                     }
-                    {popoverBody()}
+                    <List
+                        className={listClassName}
+                        compact={compact}
+                        role='listbox'>
+                        {options.map(option => (
+                            <List.Item
+                                key={option.key}
+                                onClick={(e) => handleSelect(e, option)}>
+                                <List.Text>{option.text}</List.Text>
+                            </List.Item>
+                        ))}
+                    </List>
                 </>)}
             control={selectControl}
             disableStyles={disableStyles}
@@ -106,6 +122,7 @@ const Select = React.forwardRef(({
             noArrow
             placement='bottom-start'
             popperProps={{ id }}
+            show={isExpanded}
             widthSizingType='matchTarget' />
     );
 });
@@ -113,22 +130,29 @@ const Select = React.forwardRef(({
 Select.displayName = 'Select';
 
 Select.propTypes = {
-    children: PropTypes.node,
     className: PropTypes.string,
     compact: PropTypes.bool,
     disabled: PropTypes.bool,
     disableStyles: PropTypes.bool,
     id: PropTypes.string,
+    options: PropTypes.arrayOf(PropTypes.shape({
+        key: PropTypes.string.isRequired,
+        text: PropTypes.string.isRequired
+    })),
     placeholder: PropTypes.string,
+    selectedKey: PropTypes.string,
     validationState: PropTypes.shape({
         state: PropTypes.oneOf(FORM_MESSAGE_TYPES),
         text: PropTypes.string
     }),
-    onClick: PropTypes.func
+    onClick: PropTypes.func,
+    onSelect: PropTypes.func
 };
 
 Select.defaultProps = {
-    onClick: () => {}
+    options: [],
+    onClick: () => {},
+    onSelect: () => {}
 };
 
 export default Select;

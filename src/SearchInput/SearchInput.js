@@ -38,7 +38,8 @@ class SearchInput extends Component {
             searchExpanded: false,
             filteredResult: this.filterList(prevState.searchList, item.text)
         }), () => {
-            item.callback ? item.callback() : null;
+            item?.callback();
+            this.props.onSelect(event, item);
         });
     };
 
@@ -111,6 +112,7 @@ class SearchInput extends Component {
             onEnter,
             searchList,
             onChange,
+            onSelect,
             noSearchBtn,
             compact,
             className,
@@ -159,7 +161,7 @@ class SearchInput extends Component {
 
         return (
             <div {...rest} className={className}>
-                <Popover show={this.state.isExpanded}
+                <Popover
                     {...popoverProps}
                     body={
                         (<>
@@ -203,6 +205,7 @@ class SearchInput extends Component {
                     disableStyles={disableStyles}
                     noArrow
                     onClickOutside={this.handleClickOutside}
+                    show={this.state.isExpanded}
                     widthSizingType='matchTarget' />
             </div>
         );
@@ -235,12 +238,14 @@ SearchInput.propTypes = {
         text: PropTypes.string
     }),
     onChange: PropTypes.func,
-    onEnter: PropTypes.func
+    onEnter: PropTypes.func,
+    onSelect: PropTypes.func
 };
 
 SearchInput.defaultProps = {
     onChange: () => { },
-    onEnter: () => { }
+    onEnter: () => { },
+    onSelect: () => { }
 };
 
 SearchInput.propDescriptions = {

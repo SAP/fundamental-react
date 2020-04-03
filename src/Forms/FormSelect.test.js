@@ -41,4 +41,12 @@ describe('<FormSelect />', () => {
         expect(ref.current.tagName).toEqual('SELECT');
         expect(ref.current.className).toEqual('fd-form-select');
     });
+
+    test('onSelect', () => {
+        const onSelect = jest.fn();
+        const element = mount(<FormSelect onSelect={onSelect} />);
+        element.find('select').simulate('select', { target: { value: 'bar' } });
+        expect(onSelect).toHaveBeenCalledTimes(1);
+        expect(onSelect).toHaveBeenCalledWith(expect.objectContaining({ target: { value: 'bar' } }));
+    });
 });

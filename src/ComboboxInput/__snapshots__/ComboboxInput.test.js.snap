@@ -20,6 +20,7 @@ exports[`<ComboboxInput /> create combobox input 1`] = `
       >
         <input
           className="fd-input fd-input-group__input"
+          onChange={[Function]}
           placeholder="Select Fruit"
           type="text"
         />
@@ -57,6 +58,7 @@ exports[`<ComboboxInput /> create combobox input 2`] = `
       >
         <input
           className="fd-input fd-input--compact fd-input-group__input"
+          onChange={[Function]}
           placeholder="Select Fruit"
           type="text"
         />
