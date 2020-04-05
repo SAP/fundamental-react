@@ -153,7 +153,7 @@
     "terser-webpack-plugin": "^2.3.2",
     "tocbot": "^4.5.0",
     "url-loader": "2.1.0",
-    "webpack": "4.41.2",
+    "webpack": "4.42.1",
     "webpack-dev-server": "^3.1.11",
     "webpack-manifest-plugin": "2.1.2",
     "workbox-webpack-plugin": "4.3.1"
