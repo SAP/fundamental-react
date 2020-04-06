@@ -59,6 +59,34 @@ export const SwitchComponent = () => {
                         semantic>Semantic Switch with Icons</Switch>
                 </>
             </Example>
+            <Example title='Semantic'>
+                <>
+                    <Switch
+                        internalLabels={{
+                            checked: {
+                                text: 'on'
+                            },
+                            unchecked: {
+                                text: 'off'
+                            }
+                        }}
+                        showInternalLabels>Show Internal Labels</Switch>
+                    <Switch
+                        internalLabels={{
+                            checked: {
+                                text: 'on',
+                                glyph: 'accept'
+                            },
+                            unchecked: {
+                                text: 'off',
+                                glyph: 'decline'
+                            }
+                        }}
+                        semantic
+                        showInternalLabels>Show Internal Labels and Icons</Switch>
+                </>
+            </Example>
+
 
         </ComponentPage>
     );
