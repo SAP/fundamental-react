@@ -1,30 +1,19 @@
 import ComboboxInput from './ComboboxInput';
-import List from '../List/List';
 import { mount } from 'enzyme';
 import React from 'react';
 import renderer from 'react-test-renderer';
 
 describe('<ComboboxInput />', () => {
-    const defaultList = (
-        <List>
-            <List.Item>
-                <List.Text>List Item 1</List.Text>
-            </List.Item>
-            <List.Item>
-                <List.Text>List Item 2</List.Text>
-            </List.Item>
-            <List.Item>
-                <List.Text>List Item 3</List.Text>
-            </List.Item>
-            <List.Item>
-                <List.Text>List Item 4</List.Text>
-            </List.Item>
-        </List>
-    );
+    const defaultOptions = [
+        { key: '1', text: 'List Item 1' },
+        { key: '2', text: 'List Item 2' },
+        { key: '3', text: 'List Item 3' },
+        { key: '4', text: 'List Item 4' }
+    ];
 
     const defaultComboBoxInput = (
         <ComboboxInput
-            list={defaultList}
+            options={defaultOptions}
             placeholder='Select Fruit' />
     );
 
@@ -32,7 +21,7 @@ describe('<ComboboxInput />', () => {
         <ComboboxInput
             className='blue'
             compact
-            list={defaultList}
+            options={defaultOptions}
             placeholder='Select Fruit' />
     );
 
@@ -50,7 +39,7 @@ describe('<ComboboxInput />', () => {
 
     describe('Prop spreading', () => {
         test('should allow props to be spread to the ComboboxInput component', () => {
-            const element = mount(<ComboboxInput data-sample='Sample' list={defaultList} />);
+            const element = mount(<ComboboxInput data-sample='Sample' options={defaultOptions} />);
 
             expect(
                 element.find('.fd-input-group').getDOMNode().attributes['data-sample'].value
@@ -58,7 +47,7 @@ describe('<ComboboxInput />', () => {
         });
 
         test('should allow props to be spread to the ComboboxInput component\'s Popover component', () => {
-            const element = mount(<ComboboxInput list={defaultList} popoverProps={{ 'data-sample': 'Sample' }} />);
+            const element = mount(<ComboboxInput options={defaultOptions} popoverProps={{ 'data-sample': 'Sample' }} />);
 
             expect(
                 element.find('div.fd-popover').getDOMNode().attributes['data-sample'].value
@@ -66,7 +55,7 @@ describe('<ComboboxInput />', () => {
         });
 
         test('should allow props to be spread to the ComboboxInput component\'s input element', () => {
-            const element = mount(<ComboboxInput inputProps={{ 'data-sample': 'Sample' }} list={defaultList} />);
+            const element = mount(<ComboboxInput inputProps={{ 'data-sample': 'Sample' }} options={defaultOptions} />);
 
             expect(
                 element.find('input').getDOMNode().attributes['data-sample'].value
@@ -74,13 +63,45 @@ describe('<ComboboxInput />', () => {
         });
 
         test('should allow props to be spread to the ComboboxInput component\'s button element', () => {
-            const element = mount(<ComboboxInput buttonProps={{ 'data-sample': 'Sample' }} list={defaultList} />);
+            const element = mount(<ComboboxInput buttonProps={{ 'data-sample': 'Sample' }} options={defaultOptions} />);
 
             expect(
                 element.find('button.sap-icon--navigation-down-arrow').getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
         });
     });
+
+    describe('interaction', () => {
+        let onSelect;
+        let element;
+        beforeEach(() => {
+            onSelect = jest.fn();
+            element = mount(
+                <ComboboxInput onSelect={onSelect} options={defaultOptions} />
+            );
+            element.find('button').simulate('click');
+        });
+
+        afterEach(() => {
+            let event = new MouseEvent('mousedown', {});
+            document.dispatchEvent(event);
+        });
+
+        test('should call onSelect when the first checkbox option is clicked', () => {
+            element.find('.fd-list__item').at(0).simulate('click');
+
+            expect(onSelect).toHaveBeenCalledTimes(1);
+            expect(onSelect).toHaveBeenCalledWith(expect.anything(), defaultOptions[0]);
+        });
+
+        test('should call onSelect when the second checkbox option is clicked', () => {
+            element.find('.fd-list__item').at(1).simulate('click');
+
+            expect(onSelect).toHaveBeenCalledTimes(1);
+            expect(onSelect).toHaveBeenCalledWith(expect.anything(), defaultOptions[1]);
+        });
+    });
+
     test('forwards the ref', () => {
         let ref;
         class Test extends React.Component {
@@ -88,7 +109,7 @@ describe('<ComboboxInput />', () => {
                 super(props);
                 ref = React.createRef();
             }
-            render = () => <ComboboxInput list={defaultList} ref={ref} />;
+            render = () => <ComboboxInput options={defaultOptions} ref={ref} />;
         }
         mount(<Test />);
         expect(ref.current.tagName).toEqual('BUTTON');

@@ -2,6 +2,61 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.9.0-rc.16"></a>
+# [0.9.0-rc.16](https://github.com/SAP/fundamental-react/compare/v0.9.0-rc.15...v0.9.0-rc.16) (2020-04-06)
+
+
+
+<a name="0.9.0-rc.15"></a>
+# [0.9.0-rc.15](https://github.com/SAP/fundamental-react/compare/v0.9.0-rc.14...v0.9.0-rc.15) (2020-04-06)
+
+
+
+<a name="0.9.0-rc.14"></a>
+# [0.9.0-rc.14](https://github.com/SAP/fundamental-react/compare/v0.9.0-rc.13...v0.9.0-rc.14) (2020-04-06)
+
+
+
+<a name="0.9.0-rc.13"></a>
+# [0.9.0-rc.13](https://github.com/SAP/fundamental-react/compare/v0.9.0-rc.12...v0.9.0-rc.13) (2020-04-06)
+
+
+
+<a name="0.9.0-rc.12"></a>
+# [0.9.0-rc.12](https://github.com/SAP/fundamental-react/compare/v0.9.0-rc.11...v0.9.0-rc.12) (2020-04-05)
+
+
+
+<a name="0.9.0-rc.11"></a>
+# [0.9.0-rc.11](https://github.com/SAP/fundamental-react/compare/v0.9.0-rc.10...v0.9.0-rc.11) (2020-04-05)
+
+
+
+<a name="0.9.0-rc.10"></a>
+# [0.9.0-rc.10](https://github.com/SAP/fundamental-react/compare/v0.9.0-rc.9...v0.9.0-rc.10) (2020-04-05)
+
+
+
+<a name="0.9.0-rc.9"></a>
+# [0.9.0-rc.9](https://github.com/SAP/fundamental-react/compare/v0.9.0-rc.8...v0.9.0-rc.9) (2020-04-03)
+
+
+### Features
+
+* add onSelect callback to ComboboxInput;Select;SearchInput ([#958](https://github.com/SAP/fundamental-react/issues/958)) ([21b26cb](https://github.com/SAP/fundamental-react/commit/21b26cb))
+
+
+
+<a name="0.9.0-rc.8"></a>
+# [0.9.0-rc.8](https://github.com/SAP/fundamental-react/compare/v0.9.0-rc.7...v0.9.0-rc.8) (2020-04-02)
+
+
+### Bug Fixes
+
+* Close SearchInput popover after selecting an item. ([#941](https://github.com/SAP/fundamental-react/issues/941)) ([af687ad](https://github.com/SAP/fundamental-react/commit/af687ad))
+
+
+
 <a name="0.9.0-rc.7"></a>
 # [0.9.0-rc.7](https://github.com/SAP/fundamental-react/compare/v0.9.0-rc.6...v0.9.0-rc.7) (2020-04-02)
 
