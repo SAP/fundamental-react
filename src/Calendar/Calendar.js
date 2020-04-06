@@ -373,7 +373,6 @@ class Calendar extends Component {
     }
 
     handleMonthFocus = month => () => {
-        console.log(month) /* eslint-disable-line */
         this.setState({ currentFocusMonth: month });
     }
 
@@ -420,7 +419,7 @@ class Calendar extends Component {
     }
 
     isWeekend(date) {
-        return date.day() % 6 === 0;
+        return [0, 6].includes(date.day());
     }
 
     isFocusedDay(date) {
