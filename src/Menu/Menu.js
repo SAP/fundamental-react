@@ -4,7 +4,7 @@ import MenuList from './_MenuList';
 import PropTypes from 'prop-types';
 import React, { useEffect } from 'react';
 
-const Menu = React.forwardRef(({ addonBefore, children, className, disableStyles, ...props }, ref) => {
+const Menu = React.forwardRef(({ children, className, disableStyles, ...props }, ref) => {
 
     useEffect(() => {
         if (!disableStyles) {
@@ -28,14 +28,9 @@ const Menu = React.forwardRef(({ addonBefore, children, className, disableStyles
 Menu.displayName = 'Menu';
 
 Menu.propTypes = {
-    addonBefore: PropTypes.bool,
     children: PropTypes.node,
     className: PropTypes.string,
     disableStyles: PropTypes.bool
-};
-
-Menu.propDescriptions = {
-    addonBefore: 'Set to **true** enables menu items with add-on before.'
 };
 
 Menu.Item = MenuItem;

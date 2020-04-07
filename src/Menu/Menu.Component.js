@@ -48,6 +48,27 @@ export const MenuComponent = () => {
             </Example>
 
             <Example
+                description='Menu item states - selected, active, and disabled.'
+                title='Menu with Separator'>
+                <Menu>
+                    <Menu.List>
+                        <Menu.Item separator>
+                            <Link to='#'>Option 1</Link>
+                        </Menu.Item>
+                        <Menu.Item active>
+                            <Link to='#'>Option 2</Link>
+                        </Menu.Item>
+                        <Menu.Item selected>
+                            <Link to='#'>Option 3</Link>
+                        </Menu.Item>
+                        <Menu.Item disabled>
+                            <Link to='#'>Option 4</Link>
+                        </Menu.Item>
+                    </Menu.List>
+                </Menu>
+            </Example>
+
+            <Example
                 description='Menu items with an add-on before or after.'
                 title='Menu with Add-on'>
                 <Menu>

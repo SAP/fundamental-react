@@ -13,6 +13,9 @@ const MenuItem = ({
     addonProps,
     urlProps,
     separator,
+    active,
+    disabled,
+    selected,
     ...props
 }) => {
 
@@ -30,10 +33,19 @@ const MenuItem = ({
         }
     );
 
+    const linkClassNames = classnames(
+        'fd-menu__link',
+        {
+            'is-active': active,
+            'is-selected': selected,
+            'is-disabled': disabled
+        }
+    );
+
     const renderLink = () => {
         if (url) {
             return (<a {...urlProps}
-                className='fd-menu__link'
+                className={linkClassNames}
                 href={url}
                 onClick={onclick}>
                 {addonBefore && <span {...addonProps} className={addonBeforeClassnames} />}
@@ -42,7 +54,7 @@ const MenuItem = ({
             </a>);
         } else if (children && React.isValidElement(children)) {
             const childrenClassnames = classnames(
-                'fd-menu__link',
+                linkClassNames,
                 children.props.className
             );
 
@@ -62,7 +74,7 @@ const MenuItem = ({
             );
         } else if (children) {
             return (<a {...urlProps}
-                className='fd-menu__link'
+                className={linkClassNames}
                 onClick={onclick}>
                 {addonBefore && <span {...addonProps} className={addonBeforeClassnames} />}
                 <span className='fd-menu__title'>{children}</span>
@@ -89,25 +101,31 @@ const MenuItem = ({
 MenuItem.displayName = 'Menu.Item';
 
 MenuItem.propTypes = {
+    active: PropTypes.bool,
     addonAfter: PropTypes.string,
     addonBefore: PropTypes.string,
     addonProps: PropTypes.object,
     children: PropTypes.node,
     className: PropTypes.string,
+    disabled: PropTypes.bool,
     isLink: PropTypes.bool,
     onclick: PropTypes.func,
+    selected: PropTypes.bool,
     separator: PropTypes.bool,
     url: PropTypes.string,
     urlProps: PropTypes.object
 };
 
 MenuItem.propDescriptions = {
+    active: 'Set to **true** to apply active style.',
     addonBefore: 'Name of the SAP icon to be applied as an add-on before the text.',
     addonAfter: 'Name of the SAP icon to be applied as an add-on after the text.',
     addonProps: 'Additional props to be spread to the add-ons.',
     children: 'component - can be used to pass React Router <Link> or any other component which emits an <a>.',
+    disabled: 'Set to **true** to apply disabled style',
     isLink: 'Set to **true** to style as a link.',
-    separator: 'Set to true to place a separator after list item.',
+    selected: 'Set to **true** to apply selected style.',
+    separator: 'Set to **true** to place a separator after list item.',
     url: 'Enables use of `<a>` element. Value to be applied to the anchor\'s `href` attribute. Should use either `link` or `url`, but not both.',
     urlProps: 'Additional props to be spread to the Menu Item links (when using `url`).'
 };
