@@ -13,11 +13,7 @@ const MenuList = ({ addonBefore, children, className, separated, ...props }) => 
 
     return (
         <ul {...props} className={menuListClasses}>
-            {React.Children.toArray(children).map(child => {
-                return React.cloneElement(child, {
-                    addonBefore: addonBefore
-                });
-            })}
+            {children}
         </ul>
     );
 };

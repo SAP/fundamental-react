@@ -15,20 +15,13 @@ const Menu = React.forwardRef(({ addonBefore, children, className, disableStyles
 
     const menuClasses = classnames(
         'fd-menu',
-        {
-            'fd-menu--addon-before': addonBefore
-        },
         className
     );
 
     return (
         <nav {...props} className={menuClasses}
             ref={ref}>
-            {React.Children.toArray(children).map(child => {
-                return React.cloneElement(child, {
-                    addonBefore: addonBefore
-                });
-            })}
+            {children}
         </nav>
     );
 });

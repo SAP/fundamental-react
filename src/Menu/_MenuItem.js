@@ -2,31 +2,52 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-const MenuItem = ({ addonBefore, url, isLink, addon, children, onclick, className, addonProps, urlProps, ...props }) => {
+const MenuItem = ({
+    addonAfter,
+    addonBefore,
+    url,
+    isLink,
+    children,
+    onclick,
+    className,
+    addonProps,
+    urlProps,
+    separator,
+    ...props
+}) => {
 
-    const addonClassnames = classnames(
+    const addonBeforeClassnames = classnames(
         'fd-menu__addon-before',
         {
-            [`sap-icon--${addon}`]: !!addon
+            [`sap-icon--${addonBefore}`]: !!addonBefore
+        }
+    );
+
+    const addonAfterClassnames = classnames(
+        'fd-menu__addon-after',
+        {
+            [`sap-icon--${addonAfter}`]: !!addonAfter
         }
     );
 
     const renderLink = () => {
         if (url) {
             return (<a {...urlProps}
-                className='fd-menu__item'
+                className='fd-menu__link'
                 href={url}
                 onClick={onclick}>
-                {addonBefore && <span {...addonProps} className={addonClassnames} />}
-                {children}
+                {addonBefore && <span {...addonProps} className={addonBeforeClassnames} />}
+                <span className='fd-menu__title'>{children}</span>
+                {addonAfter && <span {...addonProps} className={addonAfterClassnames} />}
             </a>);
         } else if (children && React.isValidElement(children)) {
             const childrenClassnames = classnames(
-                'fd-menu__item',
+                'fd-menu__link',
                 children.props.className
             );
 
-            const addonChild = addonBefore ? (<span {...addonProps} className={addonClassnames} />) : null;
+            const addonChildBefore = addonBefore ? (<span {...addonProps} className={addonBeforeClassnames} />) : null;
+            const addonChildAfter = addonAfter ? (<span {...addonProps} className={addonAfterClassnames} />) : null;
 
             return (
                 <React.Fragment>
@@ -35,25 +56,32 @@ const MenuItem = ({ addonBefore, url, isLink, addon, children, onclick, classNam
                             'className': childrenClassnames,
                             ...urlProps
                         },
-                        [addonChild, child.props.children]);
+                        [addonChildBefore, (<span className='fd-menu__title'>{child.props.children}</span>), addonChildAfter]);
                     })}
                 </React.Fragment>
             );
         } else if (children) {
             return (<a {...urlProps}
-                className='fd-menu__item'
+                className='fd-menu__link'
                 onClick={onclick}>
-                {addonBefore && <span {...addonProps} className={addonClassnames} />}
-                {children}
+                {addonBefore && <span {...addonProps} className={addonBeforeClassnames} />}
+                <span className='fd-menu__title'>{children}</span>
+                {addonAfter && <span {...addonProps} className={addonAfterClassnames} />}
             </a>);
         }
     };
 
+    const listClassNames = classnames(
+        'fd-menu__item',
+        className
+    );
+
     return (
         <React.Fragment>
-            <li {...props} className={className}>
+            <li {...props} className={listClassNames}>
                 {renderLink()}
             </li>
+            {separator && <span className='fd-menu__separator' />}
         </React.Fragment>
     );
 };
@@ -61,22 +89,25 @@ const MenuItem = ({ addonBefore, url, isLink, addon, children, onclick, classNam
 MenuItem.displayName = 'Menu.Item';
 
 MenuItem.propTypes = {
-    addon: PropTypes.string,
+    addonAfter: PropTypes.string,
     addonBefore: PropTypes.string,
     addonProps: PropTypes.object,
     children: PropTypes.node,
     className: PropTypes.string,
     isLink: PropTypes.bool,
     onclick: PropTypes.func,
+    separator: PropTypes.bool,
     url: PropTypes.string,
     urlProps: PropTypes.object
 };
 
 MenuItem.propDescriptions = {
-    addon: 'Name of the SAP icon to be applied as an add-on before.',
-    addonProps: 'Additional props to be spread to the add-on section.',
+    addonBefore: 'Name of the SAP icon to be applied as an add-on before the text.',
+    addonAfter: 'Name of the SAP icon to be applied as an add-on after the text.',
+    addonProps: 'Additional props to be spread to the add-ons.',
     children: 'component - can be used to pass React Router <Link> or any other component which emits an <a>.',
     isLink: 'Set to **true** to style as a link.',
+    separator: 'Set to true to place a separator after list item.',
     url: 'Enables use of `<a>` element. Value to be applied to the anchor\'s `href` attribute. Should use either `link` or `url`, but not both.',
     urlProps: 'Additional props to be spread to the Menu Item links (when using `url`).'
 };

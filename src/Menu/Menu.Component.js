@@ -61,14 +61,14 @@ export const MenuComponent = () => {
                 description='Menu items with horizontal line as separator.'
                 title='Menu with Separator'>
                 <Menu>
-                    <Menu.List separated>
-                        <Menu.Item>
+                    <Menu.List>
+                        <Menu.Item separator>
                             <Link to='#'>Option 1</Link>
                         </Menu.Item>
                         <Menu.Item>
                             <Link to='#'>Option 2</Link>
                         </Menu.Item>
-                        <Menu.Item>
+                        <Menu.Item separator>
                             <Link to='#'>Option 3</Link>
                         </Menu.Item>
                         <Menu.Item>
@@ -79,20 +79,20 @@ export const MenuComponent = () => {
             </Example>
 
             <Example
-                description='Menu items with an add-on before.'
-                title='Menu with Addon Before'>
-                <Menu addonBefore>
+                description='Menu items with an add-on before or after.'
+                title='Menu with Add-on'>
+                <Menu>
                     <Menu.List>
-                        <Menu.Item>
+                        <Menu.Item addonBefore='accept'>
                             <Link to='#'>Option 1</Link>
                         </Menu.Item>
-                        <Menu.Item addon='accept'>
+                        <Menu.Item addonBefore='accept'>
                             <Link to='#'>Option 2</Link>
                         </Menu.Item>
-                        <Menu.Item>
+                        <Menu.Item addonAfter='accept' addonBefore='accept'>
                             <Link to='#'>Option 3</Link>
                         </Menu.Item>
-                        <Menu.Item>
+                        <Menu.Item addonBefore='accept'>
                             <Link to='#'>Option 4</Link>
                         </Menu.Item>
                     </Menu.List>
