@@ -277,7 +277,7 @@ describe('<Shellbar />', () => {
 
         wrapper.find('.fd-popover__control .fd-shellbar-collapse--control').simulate('click');
 
-        wrapper.find('a.fd-menu__item span.sap-icon--grid').simulate('click');
+        wrapper.find('a.fd-menu__link span.sap-icon--grid').simulate('click');
         wrapper.find('span.fd-menu.sap-icon--nav-back').simulate('click');
 
         expect(wrapper.state(['showCollapsedProductSwitchMenu'])).toBeFalsy();

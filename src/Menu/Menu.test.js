@@ -42,12 +42,12 @@ describe('<Menu />', () => {
 
     const menuAddonBeforeCode = (
         <MemoryRouter>
-            <Menu addonBefore>
+            <Menu>
                 <Menu.List>
                     <Menu.Item>
                         <Link to='/'>Option 1</Link>
                     </Menu.Item>
-                    <Menu.Item addon='accept'>
+                    <Menu.Item addonBefore='accept'>
                         <Link to='/'>Option 2</Link>
                     </Menu.Item>
                     <Menu.Item>
@@ -107,12 +107,12 @@ describe('<Menu />', () => {
         test('should allow props to be spread to the MenuItem component\'s addon div element', () => {
             const element = mount(
                 <MemoryRouter>
-                    <Menu addonBefore>
+                    <Menu>
                         <Menu.List>
                             <Menu.Item>
                                 <Link to='/'>Option 1</Link>
                             </Menu.Item>
-                            <Menu.Item addon='accept' addonProps={{ 'data-sample': 'Sample' }}>
+                            <Menu.Item addonBefore='accept' addonProps={{ 'data-sample': 'Sample' }}>
                                 <Link to='/'>Option 2</Link>
                             </Menu.Item>
                             <Menu.Item>
@@ -143,7 +143,7 @@ describe('<Menu />', () => {
                 </MemoryRouter>);
 
             expect(
-                element.find('a.fd-menu__item').getDOMNode().attributes['data-sample'].value
+                element.find('a.fd-menu__link').getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
         });
 
@@ -157,23 +157,7 @@ describe('<Menu />', () => {
             );
 
             expect(
-                element.find('a.fd-menu__item').getDOMNode().attributes['data-sample'].value
-            ).toBe('Sample');
-        });
-
-        test('should allow props to be spread to the MenuGroup component', () => {
-            const element = mount(<Menu.Group data-sample='Sample' title='Sample' />);
-
-            expect(
-                element.getDOMNode().attributes['data-sample'].value
-            ).toBe('Sample');
-        });
-
-        test('should allow props to be spread to the MenuGroup heading component', () => {
-            const element = mount(<Menu.Group title='Sample' titleProps={{ 'data-sample': 'Sample' }} />);
-
-            expect(
-                element.find('h3').getDOMNode().attributes['data-sample'].value
+                element.find('a.fd-menu__link').getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
         });
     });
