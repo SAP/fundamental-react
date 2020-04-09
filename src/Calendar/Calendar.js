@@ -418,23 +418,23 @@ class Calendar extends Component {
         return blockedDates[0].isBefore(date, 'day') && blockedDates[1].isAfter(date, 'day');
     }
 
-    isWeekend(date) {
+    isWeekend = (date) => {
         return [0, 6].includes(date.day());
     }
 
-    isFocusedDay(date) {
+    isFocusedDay = (date) => {
         return this.state.currentFocusDay.isSame(date);
     }
 
-    isFocusedMonth(date) {
+    isFocusedMonth = (date) => {
         return this.state.currentFocusDay.isSame(date);
     }
 
-    isFocusedYear(date) {
+    isFocusedYear = (date) => {
         return this.state.currentFocusDay.isSame(date);
     }
 
-    specialDayType(date) {
+    specialDayType = (date) => {
         return this.props.specialDays[date.format('YYYYMMDD')] ? this.props.specialDays[date.format('YYYYMMDD')] : null;
     }
 
