@@ -320,7 +320,7 @@ describe('<DatePicker />', () => {
             const element = mount(<DatePicker dateFormat='YYYY-MM-DD' defaultValue='2020-03-13'
                 onDatePickerClose={datePickerClose} />);
             element.find('button.fd-button--transparent.sap-icon--calendar').simulate('click');
-            element.find('.fd-calendar__text').at(1).simulate('click');
+            element.find('.fd-calendar__text').at(8).simulate('click');
             expect(datePickerClose).toHaveBeenCalledWith(expect.objectContaining({ formattedDate: '2020-03-02' }));
             expect(datePickerClose).toHaveBeenCalledTimes(1);
         });
@@ -346,7 +346,7 @@ describe('<DatePicker />', () => {
                 dateFormat: 'MM/DD/YYYY'
             });
             element.find('button.fd-button--transparent.sap-icon--calendar').simulate('click');
-            element.find('.fd-calendar__text').at(1).simulate('click');
+            element.find('.fd-calendar__text').at(8).simulate('click');
 
             expect(change).toHaveBeenCalledWith(expect.objectContaining({ formattedDate: '03/02/2020' }));
         });

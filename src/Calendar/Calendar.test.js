@@ -416,7 +416,7 @@ describe('<Calendar />', () => {
             const element = mount(<Calendar data-sample='Sample' />);
 
             expect(
-                element.getDOMNode().attributes['data-sample'].value
+                element.find('.fd-calendar').getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
         });
 
