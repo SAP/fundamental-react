@@ -6,14 +6,17 @@ import { withKnobs } from '@storybook/addon-knobs';
 storiesOf('Components|BusyIndicator', module)
     .addDecorator(withKnobs)
     .add('Default', () => (
-        <BusyIndicator />
+        <BusyIndicator show />
     ))
     .add('small', () => (
-        <BusyIndicator size='s' />
+        <BusyIndicator show size='s' />
     ))
     .add('large', () => (
-        <BusyIndicator size='l' />
+        <BusyIndicator show size='l' />
+    ))
+    .add('hidden', () => (
+        <BusyIndicator />
     ))
     .add('disable styles', () => (
-        <BusyIndicator disableStyles>Default</BusyIndicator>
+        <BusyIndicator disableStyles show>Default</BusyIndicator>
     ));

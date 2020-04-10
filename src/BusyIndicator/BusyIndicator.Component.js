@@ -10,16 +10,16 @@ export const BusyIndicatorComponent = () => {
             sourceModulePath={path.join(__dirname, './BusyIndicator')}
             title='Busy Indicator'>
             <Example centered title='Busy Indicator'>
-                <BusyIndicator />
+                <BusyIndicator show />
             </Example>
 
             <Example
                 centered
                 description={'There are 3 sizes for Busy Indicator: s, m & l'}
                 title='Busy Indicator Sizes'>
-                <BusyIndicator size='s' />
-                <BusyIndicator />
-                <BusyIndicator size='l' />
+                <BusyIndicator show size='s' />
+                <BusyIndicator show />
+                <BusyIndicator show size='l' />
             </Example>
         </ComponentPage>
     );

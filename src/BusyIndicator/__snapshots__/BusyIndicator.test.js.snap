@@ -47,3 +47,7 @@ exports[`<BusyIndicator /> create busy indicators 3`] = `
   />
 </div>
 `;
+
+exports[`<BusyIndicator /> create busy indicators 4`] = `null`;
+
+exports[`<BusyIndicator /> hide busy indicator 1`] = `null`;

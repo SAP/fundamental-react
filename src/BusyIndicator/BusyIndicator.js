@@ -6,6 +6,7 @@ import React, { useEffect } from 'react';
 const BusyIndicator = React.forwardRef(({
     children,
     className,
+    show,
     size,
     disableStyles,
     ...props
@@ -25,6 +26,9 @@ const BusyIndicator = React.forwardRef(({
         className
     );
 
+    if (!show)
+        return (<></>);
+
     return (
         <div
             {...props}
@@ -43,11 +47,17 @@ BusyIndicator.propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,
     disableStyles: PropTypes.bool,
+    show: PropTypes.bool,
     size: PropTypes.oneOf(BUSY_INDICATOR_SIZES)
 };
 
 BusyIndicator.defaultProps = {
-    size: 'm'
+    size: 'm',
+    show: false
+};
+
+BusyIndicator.propDescriptions = {
+    show: 'Set to **true** to make Busy Indicator visible'
 };
 
 export default BusyIndicator;
