@@ -5,6 +5,12 @@ export const MESSAGESTRIP_TYPES = [
     'information'
 ];
 
+export const BUSY_INDICATOR_SIZES = [
+    's',
+    'm',
+    'l'
+];
+
 export const BUTTON_OPTIONS = [
     'emphasized',
     'transparent'
