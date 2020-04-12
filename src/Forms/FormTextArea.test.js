@@ -51,10 +51,8 @@ describe('<FormTextArea />', () => {
     });
 
     describe('FormTextArea counter', () => {
-        const setup = (props, children) => {
-            return mount(<FormTextarea {...props}>
-                {children}
-            </FormTextarea>);
+        const setup = props => {
+            return mount(<FormTextarea {...props} />);
         };
         const counterClass = '.fd-textarea-counter';
 
@@ -63,14 +61,6 @@ describe('<FormTextArea />', () => {
             const counterProps = { 'data-sample': 'Sample' };
             const element = setup({ maxLength, counterProps });
             expect(element.find(counterClass).getDOMNode().attributes['data-sample'].value).toBe('Sample');
-        });
-
-        test('should get initial value from children', () => {
-            const text = 'Hello world';
-            const maxLength = 150;
-            const expected = `${maxLength - text.length} characters left`;
-            const element = setup({ maxLength }, text);
-            expect(element.find(counterClass).text()).toEqual(expected);
         });
 
         test('should get initial value from value prop', () => {
@@ -123,12 +113,42 @@ describe('<FormTextArea />', () => {
             expect(element.find(counterClass).text()).toEqual(expected);
         });
 
-        test('should account for 1 character left case', () => {
+        test('should account for singular character left case', () => {
             const text = '1234';
             const maxLength = 5;
             const expected = '1 character left';
             const element = setup({ maxLength });
             element.find('.fd-textarea').simulate('change', { target: { value: text } });
+            expect(element.find(counterClass).text()).toEqual(expected);
+        });
+
+        test('should use a custom plural localized text', () => {
+            const text = 'Hello world';
+            const maxLength = 150;
+            const localizedText = {
+                charactersLeftPlural: 'chars remaining',
+                charactersLeftSingular: 'char remaining'
+            };
+            const expected = `${maxLength - text.length} chars remaining`;
+            const element = setup({
+                defaultValue: text,
+                localizedText,
+                maxLength });
+            expect(element.find(counterClass).text()).toEqual(expected);
+        });
+
+        test('should use a custom plural localized text', () => {
+            const text = 'H';
+            const maxLength = 2;
+            const localizedText = {
+                charactersLeftPlural: 'chars remaining',
+                charactersLeftSingular: 'char remaining'
+            };
+            const expected = `${maxLength - text.length} char remaining`;
+            const element = setup({
+                defaultValue: text,
+                localizedText,
+                maxLength });
             expect(element.find(counterClass).text()).toEqual(expected);
         });
     });

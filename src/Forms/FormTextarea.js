@@ -1,4 +1,5 @@
 import classnames from 'classnames';
+import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import { FORM_STATES } from '../utils/constants';
 import PropTypes from 'prop-types';
 import React, { useEffect, useState } from 'react';
@@ -11,6 +12,7 @@ const FormTextarea = React.forwardRef(({
     defaultValue,
     disabled,
     disableStyles,
+    localizedText,
     maxLength,
     onChange,
     readOnly,
@@ -42,8 +44,12 @@ const FormTextarea = React.forwardRef(({
     const [charCount, setCharCount] = useState(hasMaxLength ? getInitialCharCount() : 0);
 
     const getMaxLengthText = () => {
+        const { charactersLeftPlural, charactersLeftSingular } = localizedText;
         let charsLeft = Math.max(maxLength - charCount, 0);
-        return `${charsLeft} character${charsLeft !== 1 ? 's' : ''} left`;
+        if (charsLeft !== 1) {
+            return `${charsLeft} ${charactersLeftPlural}`;
+        }
+        return `${charsLeft} ${charactersLeftSingular}`;
     };
 
     const handleOnChange = (e) => {
@@ -100,11 +106,22 @@ FormTextarea.propTypes = {
     defaultValue: PropTypes.string,
     disabled: PropTypes.bool,
     disableStyles: PropTypes.bool,
+    localizedText: CustomPropTypes.i18n({
+        charactersLeftPlural: PropTypes.string,
+        charactersLeftSingular: PropTypes.string
+    }),
     maxLength: PropTypes.number,
     readOnly: PropTypes.bool,
     state: PropTypes.oneOf(FORM_STATES),
     value: PropTypes.string,
     onChange: PropTypes.func
+};
+
+FormTextarea.defaultProps = {
+    localizedText: {
+        charactersLeftPlural: 'characters left',
+        charactersLeftSingular: 'character left'
+    }
 };
 
 FormTextarea.propDescriptions = {
