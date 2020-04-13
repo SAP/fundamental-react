@@ -2,6 +2,8 @@
 
 exports[`<BusyIndicator /> create busy indicators 1`] = `
 <div
+  aria-hidden="false"
+  aria-label="Loading"
   className="fd-busy-indicator--m"
 >
   <div
@@ -18,7 +20,9 @@ exports[`<BusyIndicator /> create busy indicators 1`] = `
 
 exports[`<BusyIndicator /> create busy indicators 2`] = `
 <div
-  className="fd-busy-indicator--s"
+  aria-hidden="false"
+  aria-label="Loading"
+  className="fd-busy-indicator"
 >
   <div
     className="fd-busy-indicator--circle-0"
@@ -34,6 +38,8 @@ exports[`<BusyIndicator /> create busy indicators 2`] = `
 
 exports[`<BusyIndicator /> create busy indicators 3`] = `
 <div
+  aria-hidden="false"
+  aria-label="Loading"
   className="fd-busy-indicator--l"
 >
   <div
