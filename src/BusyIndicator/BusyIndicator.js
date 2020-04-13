@@ -5,7 +5,6 @@ import PropTypes from 'prop-types';
 import React, { useEffect } from 'react';
 
 const BusyIndicator = React.forwardRef(({
-    children,
     className,
     show,
     size,
@@ -49,7 +48,6 @@ const BusyIndicator = React.forwardRef(({
 BusyIndicator.displayName = 'BusyIndicator';
 
 BusyIndicator.propTypes = {
-    children: PropTypes.node,
     className: PropTypes.string,
     disableStyles: PropTypes.bool,
     localizedText: CustomPropTypes.i18n({
