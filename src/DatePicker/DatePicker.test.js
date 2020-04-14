@@ -291,6 +291,44 @@ describe('<DatePicker />', () => {
         expect(wrapper.state('formattedDate')).toEqual('12/21/2016');
     });
 
+    describe('With today button', () => {
+
+        test('renders today button when valid todayLabel is specified', () => {
+            wrapper = mount(<DatePicker todayLabel='Today' />);
+            wrapper.find('button.fd-button--transparent.sap-icon--calendar').simulate('click');
+            const todayButtonWrapper = wrapper.find('button.fd-datepicker-today-button');
+            expect(todayButtonWrapper.isEmpty()).toBe(false);
+            expect(todayButtonWrapper.getDOMNode().innerHTML).toBe('Today');
+        });
+
+        test('doesn\'t render today button when valid todayLabel is specified but date range selection is enabled', () => {
+            wrapper = mount(<DatePicker enableRangeSelection todayLabel='Today' />);
+            wrapper.find('button.fd-button--transparent.sap-icon--calendar').simulate('click');
+            const todayButtonWrapper = wrapper.find('button.fd-datepicker-today-button');
+            expect(todayButtonWrapper.isEmpty()).toBe(true);
+        });
+
+        test('sets todays date when today button is pressed', () => {
+            wrapper = mount(<DatePicker todayLabel='Today' />);
+            wrapper.find('button.fd-button--transparent.sap-icon--calendar').simulate('click');
+            const todayButtonWrapper = wrapper.find('button.fd-datepicker-today-button');
+            expect(todayButtonWrapper.isEmpty()).toBe(false);
+            todayButtonWrapper.simulate('click');
+            expect(moment().isSame(wrapper.state('selectedDate'), 'day')).toBe(true);
+        });
+
+        test('calls onChange date when today button is pressed', () => {
+            const change = jest.fn();
+            wrapper = mount(<DatePicker dateFormat='YYYY/MM/DD' onChange={change}
+                todayLabel='Today' />);
+            wrapper.find('button.fd-button--transparent.sap-icon--calendar').simulate('click');
+            const todayButtonWrapper = wrapper.find('button.fd-datepicker-today-button');
+            todayButtonWrapper.simulate('click');
+            expect(change).toHaveBeenCalledWith(expect.objectContaining({ formattedDate: moment().format('YYYY/MM/DD') }));
+
+        });
+    });
+
     describe('onBlur callback', () => {
         test('should call onBlur after leaving input', () => {
             const blur = jest.fn();
