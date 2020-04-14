@@ -94,6 +94,34 @@ storiesOf('Components|DatePicker', module)
     .add('range selection', () => (
         <DatePicker enableRangeSelection />
     ))
+    .add('today button', () => (
+        <LayoutGrid cols={2}>
+            <div>
+                <FormLabel
+                    htmlFor='englishTodayButtonDP'>
+                    Datepicker with English Today button
+                </FormLabel>
+                <DatePicker
+                    inputProps={{
+                        id: 'englishTodayButtonDP'
+                    }}
+                    todayLabel='Today' />
+            </div>
+            <div>
+                <FormLabel
+                    htmlFor='hindiTodayButtonDP'>
+                    Datepicker with Hindi Today button, default value
+                </FormLabel>
+                <DatePicker
+                    defaultValue='३०/१२/१९९२'
+                    inputProps={{
+                        id: 'hindiTodayButtonDP'
+                    }}
+                    locale='hi'
+                    todayLabel='आज' />
+            </div>
+        </LayoutGrid>
+    ))
     .add('disabled', () => (
         <DatePicker disabled />
     ))
