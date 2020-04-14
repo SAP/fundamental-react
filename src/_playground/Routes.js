@@ -1,5 +1,6 @@
 import { ActionBarComponent } from '../ActionBar/ActionBar.Component';
 import { BreadcrumbComponent } from '../Breadcrumb/Breadcrumb.Component';
+import { BusyIndicatorComponent } from '../BusyIndicator/BusyIndicator.Component';
 import Button from '../Button/Button';
 import { ButtonComponent } from '../Button/Button.Component';
 import { CalendarComponent } from '../Calendar/Calendar.Component';
@@ -88,6 +89,12 @@ const routes = [
         url: '/breadcrumb',
         name: 'Breadcrumb',
         component: BreadcrumbComponent,
+        section: 'Components'
+    },
+    {
+        url: '/busyIndicator',
+        name: 'Busy Indicator',
+        component: BusyIndicatorComponent,
         section: 'Components'
     },
     {
