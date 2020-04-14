@@ -316,6 +316,7 @@ class DatePicker extends Component {
             inputProps,
             locale,
             localizedText,
+            onDatePickerClose,
             onBlur,
             popoverProps,
             readOnly,
