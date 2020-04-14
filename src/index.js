@@ -2,6 +2,7 @@ export { default as ActionBar } from './ActionBar/ActionBar';
 export { default as Checkbox } from './Forms/Checkbox';
 export { default as Counter } from './Counter/Counter';
 export { default as Breadcrumb } from './Breadcrumb/Breadcrumb';
+export { default as BusyIndicator } from './BusyIndicator/BusyIndicator';
 export { default as Button } from './Button/Button';
 export { default as ButtonGroup } from './Button/ButtonGroup';
 export { default as Calendar } from './Calendar/Calendar';
