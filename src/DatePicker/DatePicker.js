@@ -91,7 +91,7 @@ class DatePicker extends Component {
      * Get the different date formats allowed for user input.
      * These formats are based on props.dateFormat
      * If no entry for props.dateFormat found in validDateLookup,
-     * it returns the confiured format as string.
+     * it returns the configured format as string.
      *
      * @returns {Array} collection of date formats allowed for input.
      */
