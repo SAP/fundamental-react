@@ -19,52 +19,6 @@ describe('<Menu />', () => {
         </Menu>
     );
 
-    const menuGroupCode = (
-        <MemoryRouter>
-            <Menu className='blue'>
-                <Menu.List className='blue'>
-                    <Menu.Item>
-                        <Link to='/'>Option 1</Link>
-                    </Menu.Item>
-                    <Menu.Item className='blue' isLink>
-                        <Link to='/'>
-                            Option 2
-                        </Link>
-                    </Menu.Item>
-                    <Menu.Item>
-                        <Link to='/'>Option 3</Link>
-                    </Menu.Item>
-                </Menu.List>
-                <Menu.Group className='blue' title='Group Header'>
-                    <Menu.List>
-                        <Menu.Item>
-                            <Link to='/'>Option 4</Link>
-                        </Menu.Item>
-                        <Menu.Item>
-                            <Link to='/'>Option 5</Link>
-                        </Menu.Item>
-                        <Menu.Item>
-                            <Link to='/'>Option 6</Link>
-                        </Menu.Item>
-                    </Menu.List>
-                </Menu.Group>
-                <Menu.Group title='Group Header 2'>
-                    <Menu.List>
-                        <Menu.Item>
-                            <Link to='/'>Option 7</Link>
-                        </Menu.Item>
-                        <Menu.Item>
-                            <Link to='/'>Option 8</Link>
-                        </Menu.Item>
-                        <Menu.Item>
-                            <Link to='/'>Option 9</Link>
-                        </Menu.Item>
-                    </Menu.List>
-                </Menu.Group>
-            </Menu>
-        </MemoryRouter>
-    );
-
     const menuSeparatorCode = (
         <MemoryRouter>
             <Menu>
@@ -88,12 +42,12 @@ describe('<Menu />', () => {
 
     const menuAddonBeforeCode = (
         <MemoryRouter>
-            <Menu addonBefore>
+            <Menu>
                 <Menu.List>
                     <Menu.Item>
                         <Link to='/'>Option 1</Link>
                     </Menu.Item>
-                    <Menu.Item addon='accept'>
+                    <Menu.Item addonBefore='accept'>
                         <Link to='/'>Option 2</Link>
                     </Menu.Item>
                     <Menu.Item>
@@ -113,12 +67,6 @@ describe('<Menu />', () => {
         expect(tree).toMatchSnapshot();
     });
 
-    test('create menu group component', () => {
-        const component = renderer.create(menuGroupCode);
-        const tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-    });
-
     test('create menu with separator component', () => {
         const component = renderer.create(menuSeparatorCode);
         const tree = component.toJSON();
@@ -129,16 +77,6 @@ describe('<Menu />', () => {
         const component = renderer.create(menuAddonBeforeCode);
         const tree = component.toJSON();
         expect(tree).toMatchSnapshot();
-    });
-
-    describe('MenuGroup', () => {
-        test('should allow customization of header level', () => {
-            const element = mount(<Menu.Group headingLevel={2} title='Sample' />);
-
-            expect(
-                element.find('.fd-menu__title').type()
-            ).toBe('h2');
-        });
     });
 
     describe('Prop spreading', () => {
@@ -169,12 +107,12 @@ describe('<Menu />', () => {
         test('should allow props to be spread to the MenuItem component\'s addon div element', () => {
             const element = mount(
                 <MemoryRouter>
-                    <Menu addonBefore>
+                    <Menu>
                         <Menu.List>
                             <Menu.Item>
                                 <Link to='/'>Option 1</Link>
                             </Menu.Item>
-                            <Menu.Item addon='accept' addonProps={{ 'data-sample': 'Sample' }}>
+                            <Menu.Item addonBefore='accept' addonProps={{ 'data-sample': 'Sample' }}>
                                 <Link to='/'>Option 2</Link>
                             </Menu.Item>
                             <Menu.Item>
@@ -205,7 +143,7 @@ describe('<Menu />', () => {
                 </MemoryRouter>);
 
             expect(
-                element.find('a.fd-menu__item').getDOMNode().attributes['data-sample'].value
+                element.find('a.fd-menu__link').getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
         });
 
@@ -219,23 +157,7 @@ describe('<Menu />', () => {
             );
 
             expect(
-                element.find('a.fd-menu__item').getDOMNode().attributes['data-sample'].value
-            ).toBe('Sample');
-        });
-
-        test('should allow props to be spread to the MenuGroup component', () => {
-            const element = mount(<Menu.Group data-sample='Sample' title='Sample' />);
-
-            expect(
-                element.getDOMNode().attributes['data-sample'].value
-            ).toBe('Sample');
-        });
-
-        test('should allow props to be spread to the MenuGroup heading component', () => {
-            const element = mount(<Menu.Group title='Sample' titleProps={{ 'data-sample': 'Sample' }} />);
-
-            expect(
-                element.find('h3').getDOMNode().attributes['data-sample'].value
+                element.find('a.fd-menu__link').getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
         });
     });

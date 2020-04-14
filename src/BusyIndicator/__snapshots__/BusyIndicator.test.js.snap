@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<BusyIndicator /> create busy indicators 1`] = `
+<div
+  aria-hidden="false"
+  aria-label="Loading"
+  className="fd-busy-indicator--m"
+>
+  <div
+    className="fd-busy-indicator--circle-0"
+  />
+  <div
+    className="fd-busy-indicator--circle-1"
+  />
+  <div
+    className="fd-busy-indicator--circle-2"
+  />
+</div>
+`;
+
+exports[`<BusyIndicator /> create busy indicators 2`] = `
+<div
+  aria-hidden="false"
+  aria-label="Loading"
+  className="fd-busy-indicator"
+>
+  <div
+    className="fd-busy-indicator--circle-0"
+  />
+  <div
+    className="fd-busy-indicator--circle-1"
+  />
+  <div
+    className="fd-busy-indicator--circle-2"
+  />
+</div>
+`;
+
+exports[`<BusyIndicator /> create busy indicators 3`] = `
+<div
+  aria-hidden="false"
+  aria-label="Loading"
+  className="fd-busy-indicator--l"
+>
+  <div
+    className="fd-busy-indicator--circle-0"
+  />
+  <div
+    className="fd-busy-indicator--circle-1"
+  />
+  <div
+    className="fd-busy-indicator--circle-2"
+  />
+</div>
+`;
+
+exports[`<BusyIndicator /> create busy indicators 4`] = `null`;
+
+exports[`<BusyIndicator /> hide busy indicator 1`] = `null`;

@@ -319,6 +319,7 @@ class DatePicker extends Component {
             onBlur,
             popoverProps,
             readOnly,
+            specialDays,
             todayLabel,
             validationState,
             ...props
@@ -370,13 +371,14 @@ class DatePicker extends Component {
                                 locale={locale}
                                 localizedText={localizedText}
                                 onChange={this.updateDate}
-                                ref={this.calendarRef} />
+                                ref={this.calendarRef}
+                                specialDays={specialDays} />
                             { this._showTodayButton(enableRangeSelection, todayLabel) &&
-                                <Button
-                                    className='fd-button fd-button--transparent fd-input-group__button fd-datepicker-today-button'
-                                    onClick={this._setTodayDate}>
-                                    {todayLabel}
-                                </Button>
+                            <Button
+                                className='fd-button fd-button--transparent fd-input-group__button fd-datepicker-today-button'
+                                onClick={this._setTodayDate}>
+                                {todayLabel}
+                            </Button>
                             }
                         </>
                     }
@@ -445,6 +447,7 @@ DatePicker.propTypes = {
     locale: PropTypes.string,
     popoverProps: PropTypes.object,
     readOnly: PropTypes.bool,
+    specialDays: PropTypes.object,
     todayLabel: PropTypes.string,
     validationState: PropTypes.shape({
         state: PropTypes.oneOf(FORM_MESSAGE_TYPES),
@@ -478,6 +481,7 @@ DatePicker.propDescriptions = {
     onChange: 'Callback function for onChange events. In the object returned, `date` is the date object, `formattedDate` is the formatted date, and `isoFormattedDate` is the date formatted in ISO-8601 format (YYYY-MM-DD).',
     onDatePickerClose: 'Callback function which triggers when datepicker closes after date selection. In the object returned, `date` is the date object, `formattedDate` is the formatted date, and `isoFormattedDate` is the date formatted in ISO-8601 format (YYYY-MM-DD).',
     onFocus: 'Callback function for onFocus events. In the object returned, `date` is the date object, `formattedDate` is the formatted date, and `isoFormattedDate` is the date formatted in ISO-8601 format (YYYY-MM-DD).',
+    specialDays: 'Object with special dates and special date types in shape of `{\'YYYYMMDD\': type}`. Type must be a number between 1-20.',
     todayLabel: 'Localized string label for button that selects today\'s date. The button won\'t be rendered if `todayLabel` is not a valid non-empty string OR if `enableRangeSelection` is true. e.g. ```{todayLabel: \'Today\'}```'
 };
 

@@ -1,6 +1,6 @@
 {
   "name": "fundamental-react",
-  "version": "0.9.0-rc.20",
+  "version": "0.9.0-rc.22",
   "private": false,
   "description": "SAP Fundamental Library, implemented in React",
   "license": "Apache-2.0",
@@ -49,7 +49,7 @@
     "@babel/runtime": "^7.8.0",
     "chain-function": "^1.0.1",
     "classnames": "^2.2.6",
-    "fundamental-styles": "0.8.0-rc.16",
+    "fundamental-styles": "0.8.2-rc.0",
     "keycode": "^2.2.0",
     "moment": "^2.24.0",
     "prop-types": "^15.7.1",

@@ -1,8 +1,21 @@
 import { DatePicker } from '../';
 import FormLabel from '../Forms/FormLabel';
+import moment from 'moment';
 import path from 'path';
 import React from 'react';
 import { ComponentPage, Example } from '../_playground';
+
+const tomorrow = moment().add(1, 'day').endOf('day').format('YYYYMMDD');
+const nextDay = moment().add(2, 'day').endOf('day').format('YYYYMMDD');
+const dayAfter = moment().add(3, 'day').endOf('day').format('YYYYMMDD');
+const oneWeek = moment().add(7, 'day').endOf('day').format('YYYYMMDD');
+
+const specialDays = {
+    [tomorrow]: 1,
+    [nextDay]: 2,
+    [dayAfter]: 3,
+    [oneWeek]: 4
+};
 
 export const DatePickerComponent = () => {
     return (
@@ -114,7 +127,11 @@ export const DatePickerComponent = () => {
                 <DatePicker readOnly />
             </Example>
 
-
+            <Example
+                centered
+                title='With special days'>
+                <DatePicker specialDays={specialDays} />
+            </Example>
         </ComponentPage>
     );
 };
