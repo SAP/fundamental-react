@@ -284,6 +284,7 @@ class DatePicker extends Component {
 
     _showTodayButton = (enableRangeSelection, todayLabel) => (
         !enableRangeSelection
+        && isEnabledDate(moment(), this.props)
         && todayLabel
         && typeof todayLabel === 'string'
         && todayLabel.trim().length
