@@ -307,6 +307,7 @@ class DatePicker extends Component {
             onBlur,
             popoverProps,
             readOnly,
+            specialDays,
             validationState,
             ...props
         } = this.props;
@@ -357,7 +358,8 @@ class DatePicker extends Component {
                                 locale={locale}
                                 localizedText={localizedText}
                                 onChange={this.updateDate}
-                                ref={this.calendarRef} />
+                                ref={this.calendarRef}
+                                specialDays={specialDays} />
                         </>
                     }
                     control={
@@ -425,6 +427,7 @@ DatePicker.propTypes = {
     locale: PropTypes.string,
     popoverProps: PropTypes.object,
     readOnly: PropTypes.bool,
+    specialDays: PropTypes.object,
     validationState: PropTypes.shape({
         state: PropTypes.oneOf(FORM_MESSAGE_TYPES),
         text: PropTypes.string
@@ -456,7 +459,8 @@ DatePicker.propDescriptions = {
     onBlur: 'Callback function for onBlur events. In the object returned, `date` is the date object, `formattedDate` is the formatted date, and `isoFormattedDate` is the date formatted in ISO-8601 format (YYYY-MM-DD).',
     onChange: 'Callback function for onChange events. In the object returned, `date` is the date object, `formattedDate` is the formatted date, and `isoFormattedDate` is the date formatted in ISO-8601 format (YYYY-MM-DD).',
     onDatePickerClose: 'Callback function which triggers when datepicker closes after date selection. In the object returned, `date` is the date object, `formattedDate` is the formatted date, and `isoFormattedDate` is the date formatted in ISO-8601 format (YYYY-MM-DD).',
-    onFocus: 'Callback function for onFocus events. In the object returned, `date` is the date object, `formattedDate` is the formatted date, and `isoFormattedDate` is the date formatted in ISO-8601 format (YYYY-MM-DD).'
+    onFocus: 'Callback function for onFocus events. In the object returned, `date` is the date object, `formattedDate` is the formatted date, and `isoFormattedDate` is the date formatted in ISO-8601 format (YYYY-MM-DD).',
+    specialDays: 'Object with special dates and special date types in shape of `{\'YYYYMMDD\': type}`. Type must be a number between 1-20.'
 };
 
 export default DatePicker;

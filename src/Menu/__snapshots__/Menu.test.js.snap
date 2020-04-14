@@ -7,43 +7,73 @@ exports[`<Menu /> create basic menu component 1`] = `
   <ul
     className="fd-menu__list"
   >
-    <li>
+    <li
+      className="fd-menu__item"
+    >
       <a
-        className="fd-menu__item"
+        className="fd-menu__link"
         href="/"
       >
-        Option 1
+        <span
+          className="fd-menu__title"
+        >
+          Option 1
+        </span>
       </a>
     </li>
-    <li>
+    <li
+      className="fd-menu__item"
+    >
       <a
-        className="fd-menu__item"
+        className="fd-menu__link"
         href="/"
       >
-        Option 2
+        <span
+          className="fd-menu__title"
+        >
+          Option 2
+        </span>
       </a>
     </li>
-    <li>
+    <li
+      className="fd-menu__item"
+    >
       <a
-        className="fd-menu__item"
+        className="fd-menu__link"
         href="/"
       >
-        Option 3
+        <span
+          className="fd-menu__title"
+        >
+          Option 3
+        </span>
       </a>
     </li>
-    <li>
+    <li
+      className="fd-menu__item"
+    >
       <a
-        className="fd-menu__item"
+        className="fd-menu__link"
         href="/"
       >
-        Option 4
+        <span
+          className="fd-menu__title"
+        >
+          Option 4
+        </span>
       </a>
     </li>
-    <li>
+    <li
+      className="fd-menu__item"
+    >
       <a
-        className="fd-menu__item"
+        className="fd-menu__link"
       >
-        Option 5
+        <span
+          className="fd-menu__title"
+        >
+          Option 5
+        </span>
       </a>
     </li>
   </ul>
@@ -52,180 +82,75 @@ exports[`<Menu /> create basic menu component 1`] = `
 
 exports[`<Menu /> create menu add-on component 1`] = `
 <nav
-  className="fd-menu fd-menu--addon-before"
+  className="fd-menu"
 >
   <ul
     className="fd-menu__list"
   >
-    <li>
+    <li
+      className="fd-menu__item"
+    >
       <a
-        className="fd-menu__item"
+        className="fd-menu__link"
         href="/"
         onClick={[Function]}
       >
         <span
-          className="fd-menu__addon-before"
-        />
-        Option 1
+          className="fd-menu__title"
+        >
+          Option 1
+        </span>
       </a>
     </li>
-    <li>
+    <li
+      className="fd-menu__item"
+    >
       <a
-        className="fd-menu__item"
+        className="fd-menu__link"
         href="/"
         onClick={[Function]}
       >
         <span
           className="fd-menu__addon-before sap-icon--accept"
         />
-        Option 2
-      </a>
-    </li>
-    <li>
-      <a
-        className="fd-menu__item"
-        href="/"
-        onClick={[Function]}
-      >
         <span
-          className="fd-menu__addon-before"
-        />
-        Option 3
-      </a>
-    </li>
-    <li>
-      <a
-        className="fd-menu__item"
-        href="/"
-        onClick={[Function]}
-      >
-        <span
-          className="fd-menu__addon-before"
-        />
-        Option 4
-      </a>
-    </li>
-  </ul>
-</nav>
-`;
-
-exports[`<Menu /> create menu group component 1`] = `
-<nav
-  className="fd-menu blue"
->
-  <ul
-    className="fd-menu__list blue"
-  >
-    <li>
-      <a
-        className="fd-menu__item"
-        href="/"
-        onClick={[Function]}
-      >
-        Option 1
+          className="fd-menu__title"
+        >
+          Option 2
+        </span>
       </a>
     </li>
     <li
-      className="blue"
+      className="fd-menu__item"
     >
       <a
-        className="fd-menu__item"
+        className="fd-menu__link"
         href="/"
         onClick={[Function]}
       >
-        Option 2
+        <span
+          className="fd-menu__title"
+        >
+          Option 3
+        </span>
       </a>
     </li>
-    <li>
+    <li
+      className="fd-menu__item"
+    >
       <a
-        className="fd-menu__item"
+        className="fd-menu__link"
         href="/"
         onClick={[Function]}
       >
-        Option 3
+        <span
+          className="fd-menu__title"
+        >
+          Option 4
+        </span>
       </a>
     </li>
   </ul>
-  <div
-    className="fd-menu__group blue"
-  >
-    <h3
-      className="fd-menu__title"
-    >
-      Group Header
-    </h3>
-    <ul
-      className="fd-menu__list"
-    >
-      <li>
-        <a
-          className="fd-menu__item"
-          href="/"
-          onClick={[Function]}
-        >
-          Option 4
-        </a>
-      </li>
-      <li>
-        <a
-          className="fd-menu__item"
-          href="/"
-          onClick={[Function]}
-        >
-          Option 5
-        </a>
-      </li>
-      <li>
-        <a
-          className="fd-menu__item"
-          href="/"
-          onClick={[Function]}
-        >
-          Option 6
-        </a>
-      </li>
-    </ul>
-  </div>
-  <div
-    className="fd-menu__group"
-  >
-    <h3
-      className="fd-menu__title"
-    >
-      Group Header 2
-    </h3>
-    <ul
-      className="fd-menu__list"
-    >
-      <li>
-        <a
-          className="fd-menu__item"
-          href="/"
-          onClick={[Function]}
-        >
-          Option 7
-        </a>
-      </li>
-      <li>
-        <a
-          className="fd-menu__item"
-          href="/"
-          onClick={[Function]}
-        >
-          Option 8
-        </a>
-      </li>
-      <li>
-        <a
-          className="fd-menu__item"
-          href="/"
-          onClick={[Function]}
-        >
-          Option 9
-        </a>
-      </li>
-    </ul>
-  </div>
 </nav>
 `;
 
@@ -237,45 +162,72 @@ exports[`<Menu /> create menu with separator component 1`] = `
     className="fd-menu__list"
   >
     <li
-      separator={true}
+      className="fd-menu__item"
     >
       <a
-        className="fd-menu__item"
+        className="fd-menu__link"
         href="/"
         onClick={[Function]}
       >
-        Option 1
+        <span
+          className="fd-menu__title"
+        >
+          Option 1
+        </span>
       </a>
     </li>
+    <span
+      className="fd-menu__separator"
+    />
     <li
-      separator={true}
+      className="fd-menu__item"
     >
       <a
-        className="fd-menu__item"
+        className="fd-menu__link"
         href="/"
         onClick={[Function]}
       >
-        Option 2
+        <span
+          className="fd-menu__title"
+        >
+          Option 2
+        </span>
       </a>
     </li>
+    <span
+      className="fd-menu__separator"
+    />
     <li
-      separator={true}
+      className="fd-menu__item"
     >
       <a
-        className="fd-menu__item"
+        className="fd-menu__link"
         href="/"
         onClick={[Function]}
       >
-        Option 3
+        <span
+          className="fd-menu__title"
+        >
+          Option 3
+        </span>
       </a>
     </li>
-    <li>
+    <span
+      className="fd-menu__separator"
+    />
+    <li
+      className="fd-menu__item"
+    >
       <a
-        className="fd-menu__item"
+        className="fd-menu__link"
         href="/"
         onClick={[Function]}
       >
-        Option 4
+        <span
+          className="fd-menu__title"
+        >
+          Option 4
+        </span>
       </a>
     </li>
   </ul>

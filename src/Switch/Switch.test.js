@@ -17,6 +17,31 @@ describe('<Switch />', () => {
             Normal Switch
         </Switch>
     );
+    const showInternalLabelsSwitchChecked = (
+        <Switch
+            checked
+            internalLabels={{
+                checked: {
+                    text: 'on'
+                },
+                unchecked: {
+                    text: 'off'
+                }
+            }}
+            showInternalLabels>Show Internal Labels</Switch>
+    );
+    const showInternalLabelsSwitchUnchecked = (
+        <Switch
+            internalLabels={{
+                checked: {
+                    text: 'on'
+                },
+                unchecked: {
+                    text: 'off'
+                }
+            }}
+            showInternalLabels>Show Internal Labels</Switch>
+    );
 
     test('create Switch component', () => {
         // Default Switch
@@ -36,6 +61,16 @@ describe('<Switch />', () => {
 
         // checked disabled Switch
         component = renderer.create(disabledCheckedSwitch);
+        tree = component.toJSON();
+        expect(tree).toMatchSnapshot();
+
+        // show internal labels checked
+        component = renderer.create(showInternalLabelsSwitchChecked);
+        tree = component.toJSON();
+        expect(tree).toMatchSnapshot();
+
+        // show internal labels unchecked
+        component = renderer.create(showInternalLabelsSwitchUnchecked);
         tree = component.toJSON();
         expect(tree).toMatchSnapshot();
     });
@@ -85,7 +120,7 @@ describe('<Switch />', () => {
             const element = mount(<Switch data-sample='Sample' />);
 
             expect(
-                element.getDOMNode().attributes['data-sample'].value
+                element.find('label').at(0).getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
         });
 

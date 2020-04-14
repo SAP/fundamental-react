@@ -1,135 +1,265 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Switch /> create Switch component 1`] = `
-<label
-  className="fd-form-label fd-switch__label"
-  onKeyDown={[Function]}
->
-  <span
-    className="fd-switch"
+Array [
+  <label
+    className="fd-form-label"
+    onKeyDown={[Function]}
   >
-    <input
-      aria-checked={false}
-      aria-label="Switch"
-      checked={false}
-      className="fd-switch__input"
-      onChange={[Function]}
-      type="checkbox"
-    />
-    <div
-      className="fd-switch__wrapper"
+    Normal Switch
+  </label>,
+  <label
+    className="fd-switch__label"
+  >
+    <span
+      className="fd-switch"
     >
+      <input
+        aria-checked={false}
+        aria-label="Switch"
+        checked={false}
+        className="fd-switch__input"
+        onChange={[Function]}
+        type="checkbox"
+      />
       <div
-        className="fd-switch__track"
+        className="fd-switch__wrapper"
       >
-        <span
-          className="fd-switch__handle"
-          role="presentation"
-        />
+        <div
+          className="fd-switch__track"
+        >
+          <span
+            className="fd-switch__handle"
+            role="presentation"
+          />
+        </div>
       </div>
-    </div>
-  </span>
-  Normal Switch
-</label>
+    </span>
+  </label>,
+]
 `;
 
 exports[`<Switch /> create Switch component 2`] = `
-<label
-  className="fd-form-label fd-switch__label"
-  onKeyDown={[Function]}
->
-  <span
-    className="fd-switch fd-switch--compact"
+Array [
+  <label
+    className="fd-form-label"
+    onKeyDown={[Function]}
   >
-    <input
-      aria-checked={true}
-      aria-label="Switch"
-      checked={true}
-      className="fd-switch__input"
-      onChange={[Function]}
-      type="checkbox"
-    />
-    <div
-      className="fd-switch__wrapper"
+    Compact Switch
+  </label>,
+  <label
+    className="fd-switch__label"
+  >
+    <span
+      className="fd-switch fd-switch--compact"
     >
+      <input
+        aria-checked={true}
+        aria-label="Switch"
+        checked={true}
+        className="fd-switch__input"
+        onChange={[Function]}
+        type="checkbox"
+      />
       <div
-        className="fd-switch__track"
+        className="fd-switch__wrapper"
       >
-        <span
-          className="fd-switch__handle"
-          role="presentation"
-        />
+        <div
+          className="fd-switch__track"
+        >
+          <span
+            className="fd-switch__handle"
+            role="presentation"
+          />
+        </div>
       </div>
-    </div>
-  </span>
-  Compact Switch
-</label>
+    </span>
+  </label>,
+]
 `;
 
 exports[`<Switch /> create Switch component 3`] = `
-<label
-  className="fd-form-label is-disabled fd-switch__label"
-  onKeyDown={[Function]}
->
-  <span
-    className="fd-switch"
+Array [
+  <label
+    className="fd-form-label is-disabled"
+    onKeyDown={[Function]}
   >
-    <input
-      aria-checked={false}
-      aria-label="Switch"
-      checked={false}
-      className="fd-switch__input"
-      disabled={true}
-      onChange={[Function]}
-      type="checkbox"
-    />
-    <div
-      className="fd-switch__wrapper"
+    Normal Switch
+  </label>,
+  <label
+    className="fd-switch__label"
+  >
+    <span
+      className="fd-switch"
     >
+      <input
+        aria-checked={false}
+        aria-label="Switch"
+        checked={false}
+        className="fd-switch__input"
+        disabled={true}
+        onChange={[Function]}
+        type="checkbox"
+      />
       <div
-        className="fd-switch__track"
+        className="fd-switch__wrapper"
       >
-        <span
-          className="fd-switch__handle"
-          role="presentation"
-        />
+        <div
+          className="fd-switch__track"
+        >
+          <span
+            className="fd-switch__handle"
+            role="presentation"
+          />
+        </div>
       </div>
-    </div>
-  </span>
-  Normal Switch
-</label>
+    </span>
+  </label>,
+]
 `;
 
 exports[`<Switch /> create Switch component 4`] = `
-<label
-  className="fd-form-label is-disabled fd-switch__label"
-  onKeyDown={[Function]}
->
-  <span
-    className="fd-switch"
+Array [
+  <label
+    className="fd-form-label is-disabled"
+    onKeyDown={[Function]}
   >
-    <input
-      aria-checked={true}
-      aria-label="Switch"
-      checked={true}
-      className="fd-switch__input"
-      disabled={true}
-      onChange={[Function]}
-      type="checkbox"
-    />
-    <div
-      className="fd-switch__wrapper"
+    Normal Switch
+  </label>,
+  <label
+    className="fd-switch__label"
+  >
+    <span
+      className="fd-switch"
     >
+      <input
+        aria-checked={true}
+        aria-label="Switch"
+        checked={true}
+        className="fd-switch__input"
+        disabled={true}
+        onChange={[Function]}
+        type="checkbox"
+      />
       <div
-        className="fd-switch__track"
+        className="fd-switch__wrapper"
       >
-        <span
-          className="fd-switch__handle"
-          role="presentation"
-        />
+        <div
+          className="fd-switch__track"
+        >
+          <span
+            className="fd-switch__handle"
+            role="presentation"
+          />
+        </div>
       </div>
-    </div>
-  </span>
-  Normal Switch
-</label>
+    </span>
+  </label>,
+]
+`;
+
+exports[`<Switch /> create Switch component 5`] = `
+Array [
+  <label
+    className="fd-form-label"
+    onKeyDown={[Function]}
+  >
+    Show Internal Labels
+  </label>,
+  <label
+    className="fd-switch__label"
+  >
+    <span
+      aria-live="polite"
+      className="fd-switch__text"
+    >
+      on
+    </span>
+    <span
+      className="fd-switch"
+    >
+      <input
+        aria-checked={true}
+        aria-label="Switch"
+        checked={true}
+        className="fd-switch__input"
+        onChange={[Function]}
+        type="checkbox"
+      />
+      <div
+        className="fd-switch__wrapper"
+      >
+        <div
+          className="fd-switch__track"
+        >
+          <span
+            aria-label="on"
+            className="fd-fd-switch__text"
+          />
+          <span
+            className="fd-switch__handle"
+            role="presentation"
+          />
+          <span
+            aria-label="off"
+            className="fd-fd-switch__text"
+          />
+        </div>
+      </div>
+    </span>
+  </label>,
+]
+`;
+
+exports[`<Switch /> create Switch component 6`] = `
+Array [
+  <label
+    className="fd-form-label"
+    onKeyDown={[Function]}
+  >
+    Show Internal Labels
+  </label>,
+  <label
+    className="fd-switch__label"
+  >
+    <span
+      aria-live="polite"
+      className="fd-switch__text"
+    >
+      off
+    </span>
+    <span
+      className="fd-switch"
+    >
+      <input
+        aria-checked={false}
+        aria-label="Switch"
+        checked={false}
+        className="fd-switch__input"
+        onChange={[Function]}
+        type="checkbox"
+      />
+      <div
+        className="fd-switch__wrapper"
+      >
+        <div
+          className="fd-switch__track"
+        >
+          <span
+            aria-label="on"
+            className="fd-fd-switch__text"
+          />
+          <span
+            className="fd-switch__handle"
+            role="presentation"
+          />
+          <span
+            aria-label="off"
+            className="fd-fd-switch__text"
+          />
+        </div>
+      </div>
+    </span>
+  </label>,
+]
 `;
