@@ -709,7 +709,7 @@ Calendar.propDescriptions = {
     disabledDates: 'Disables dates that are in between the disabled dates.',
     disableFutureDates: 'Set to **true** to disable dates after today\'s date.',
     disablePastDates: 'Set to **true** to disable dates before today\'s date.',
-    disableWeekday: 'Disables dates that match a weekday.',
+    disableWeekday: 'Disables dates that match a weekday. For example, `disableWeekday={[\'Tuesday\', \'Thursday\', \'Friday\']}`',
     disableWeekends: 'Set to **true** to disables dates that match a weekend.',
     focusOnInit: 'Set to **true** to focus the calendar grid upon being mounted',
     localizedTextShape: {
