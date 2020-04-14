@@ -36,8 +36,8 @@ export const isEnabledDate = (day, dateProps) => {
     return (
         !isDisabledWeekday(day, disableWeekday) &&
         !(disableWeekends && (day.day() === 0 || day.day() === 6)) &&
-        !(disableBeforeDate && day.isBefore(moment(disableBeforeDate))) &&
-        !(disableAfterDate && day.isAfter(moment(disableAfterDate))) &&
+        !(disableBeforeDate && day.isBefore(moment(disableBeforeDate), 'day')) &&
+        !(disableAfterDate && day.isAfter(moment(disableAfterDate), 'day')) &&
         !(disablePastDates && day.isBefore(moment(), 'day')) &&
         !(disableFutureDates && day.isAfter(moment(), 'day')) &&
         !isDateBetween(day, blockedDates && blockedDates.map(date => moment(date))) &&
