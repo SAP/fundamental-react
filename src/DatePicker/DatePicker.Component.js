@@ -58,6 +58,36 @@ export const DatePickerComponent = () => {
 
             <Example
                 centered
+                title='Date Picker with button for today selection'>
+                <div>
+                    <FormLabel
+                        htmlFor='englishTodayButtonDP'>
+                        Datepicker with today button
+                    </FormLabel>
+                    <DatePicker
+                        inputProps={{
+                            id: 'englishTodayButtonDP'
+                        }}
+                        todayLabel='Today' />
+                </div>
+
+                <div>
+                    <FormLabel
+                        htmlFor='hindiTodayButtonDP'>
+                        Datepicker with today button, custom locale, and default date
+                    </FormLabel>
+                    <DatePicker
+                        defaultValue='३०/१२/१९९२'
+                        inputProps={{
+                            id: 'hindiTodayButtonDP'
+                        }}
+                        locale='hi'
+                        todayLabel='आज' />
+                </div>
+            </Example>
+
+            <Example
+                centered
                 title='Range Date Picker'>
                 <DatePicker disableFutureDates enableRangeSelection />
                 <DatePicker compact disablePastDates
