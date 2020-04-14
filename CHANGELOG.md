@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.9.0-rc.21"></a>
+# [0.9.0-rc.21](https://github.com/SAP/fundamental-react/compare/v0.9.0-rc.20...v0.9.0-rc.21) (2020-04-14)
+
+
+### Features
+
+* New Busy Indicator component ([#963](https://github.com/SAP/fundamental-react/issues/963)) ([510e8c9](https://github.com/SAP/fundamental-react/commit/510e8c9))
+
+
+
 <a name="0.9.0-rc.20"></a>
 # [0.9.0-rc.20](https://github.com/SAP/fundamental-react/compare/v0.9.0-rc.19...v0.9.0-rc.20) (2020-04-10)
 
