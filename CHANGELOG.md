@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.9.0-rc.23"></a>
+# [0.9.0-rc.23](https://github.com/SAP/fundamental-react/compare/v0.9.0-rc.22...v0.9.0-rc.23) (2020-04-16)
+
+
+### Features
+
+* added textarea support for maxLength prop ([#955](https://github.com/SAP/fundamental-react/issues/955)) ([c995e1a](https://github.com/SAP/fundamental-react/commit/c995e1a))
+
+
+
 <a name="0.9.0-rc.22"></a>
 # [0.9.0-rc.22](https://github.com/SAP/fundamental-react/compare/v0.9.0-rc.21...v0.9.0-rc.22) (2020-04-14)
 
