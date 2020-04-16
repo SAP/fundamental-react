@@ -50,6 +50,15 @@ export const FormsComponent = () => {
                             <FormTextarea defaultValue=' Pellentesque metus lacus commodo eget justo ut rutrum varius nunc.' id='textarea-1' />
                         </FormItem>
                     </FormGroup>
+
+                    <FormGroup>
+                        <FormItem>
+                            <FormLabel htmlFor='textarea-2'>
+                                Text area with counter
+                            </FormLabel>
+                            <FormTextarea id='textarea-2' maxLength={150} />
+                        </FormItem>
+                    </FormGroup>
                 </>
             </Example>
 

@@ -28,4 +28,7 @@ storiesOf('Components|FormTextarea', module)
     ))
     .add('disable styles', () => (
         <FormTextarea {...createProps()} disableStyles>Default</FormTextarea>
+    ))
+    .add('Max length', () => (
+        <FormTextarea {...createProps({ defaultValue: 'Max Length', maxLength: 150 })} />
     ));
