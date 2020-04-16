@@ -201,10 +201,38 @@ class TimePickerItem extends Component {
         }
     };
 
+    isValidTime = (value) => {
+        const { showHour, showMinute, showSecond, format12Hours } = this.props;
+        let regex = '';
+        let isValidTime = false;
+        if (format12Hours && showHour && showMinute && showSecond) {
+            //validate hh:mm:ss am/pm format
+            regex = new RegExp('^(1[0-2]|0?[1-9]):([0-5]?[0-9]):([0-5]?[0-9]) (●?[AaPp][Mm])?$');
+        } else if (format12Hours && showHour && showMinute) {
+            //validate hh:mm am
+            regex = new RegExp('^(1[0-2]|0?[1-9]):([0-5]?[0-9]) (●?[AaPp][Mm])?$');
+        } else if (format12Hours && showMinute && showSecond) {
+            //validate mm:ss am
+            regex = new RegExp('^([0-5]?[0-9]):([0-5]?[0-9]) (●?[AaPp][Mm])?$');
+        } else if (!format12Hours && showHour && showMinute && showSecond) {
+            //validate hh:mm:ss format
+            regex = new RegExp('^(2[0-3]|[01]?[0-9]):([0-5]?[0-9]):([0-5]?[0-9])$');
+        } else if (!format12Hours && showHour && showMinute) {
+            //validate hh:mm
+            regex = new RegExp('^(2[0-3]|[01]?[0-9]):([0-5]?[0-9])$');
+        } else if (!format12Hours && showMinute && showSecond) {
+            //validate mm:ss
+            regex = new RegExp('^([0-5]?[0-9]):([0-5]?[0-9])$');
+        }
+        if (regex.test(value) && value.length === this.state.length) {
+            isValidTime = true;
+        }
+        return isValidTime;
+    }
+
     onBlur = () => {
-        const { isValid } = this.state;
         //if the input is not the correct format then  it will be cleared
-        if (!isValid) {
+        if (!this.isValidTime(event.target.value)) {
             this.props.updateValue('');
         }
         //reset to initial style
