@@ -230,7 +230,7 @@ class TimePickerItem extends Component {
         return isValidTime;
     }
 
-    onBlur = () => {
+    onBlur = (event) => {
         //if the input is not the correct format then  it will be cleared
         if (!this.isValidTime(event.target.value)) {
             this.props.updateValue('');
