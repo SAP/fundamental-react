@@ -1,5 +1,4 @@
 import ComboboxInput from '../ComboboxInput';
-import List from '../../List/List';
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import {
@@ -9,27 +8,17 @@ import {
     withKnobs
 } from '@storybook/addon-knobs';
 
-const list = (
-    <List>
-        <List.Item>
-            <List.Text>List Item 1</List.Text>
-        </List.Item>
-        <List.Item>
-            <List.Text>List Item 2</List.Text>
-        </List.Item>
-        <List.Item>
-            <List.Text>List Item 3</List.Text>
-        </List.Item>
-        <List.Item>
-            <List.Text>List Item 4</List.Text>
-        </List.Item>
-    </List>
-);
+const options = [
+    { key: '1', text: 'List Item 1' },
+    { key: '2', text: 'List Item 2' },
+    { key: '3', text: 'List Item 3' },
+    { key: '4', text: 'List Item 4' }
+];
 
 const createProps = (overrides) => ({
     compact: boolean('compact', false),
     disabled: boolean('disabled', false),
-    list: list,
+    options,
     validationState: select('Validation State', {
         'none': '',
         'success': { state: 'success', text: 'placeholder text' },
@@ -48,33 +37,33 @@ storiesOf('Components|ComboboxInput', module)
     ))
     .add('Disabled', () => (
         <ComboboxInput disabled
-            list={list} placeholder='Placeholder' />
+            options={options} placeholder='Placeholder' />
     ))
     .add('Compact', () => (
         <ComboboxInput compact
-            list={list} placeholder='Placeholder' />
+            options={options} placeholder='Placeholder' />
     ))
     .add('Validation State | Error', () => (
         <ComboboxInput
-            list={list}
+            options={options}
             placeholder='Default'
             validationState={{ state: 'error', text: 'Test validation state' }} />
     ))
     .add('Validation State | Warning', () => (
         <ComboboxInput
-            list={list}
+            options={options}
             placeholder='Default'
             validationState={{ state: 'warning', text: 'Test validation state' }} />
     ))
     .add('Validation State | Information', () => (
         <ComboboxInput
-            list={list}
+            options={options}
             placeholder='Default'
             validationState={{ state: 'information', text: 'Test validation state' }} />
     ))
     .add('Validation State | Success', () => (
         <ComboboxInput
-            list={list}
+            options={options}
             placeholder='Default'
             validationState={{ state: 'success', text: 'Test validation state' }} />
     ))

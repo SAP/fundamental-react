@@ -29,7 +29,7 @@ const FormRadioItem = React.forwardRef(({
         }
     }, []);
 
-    const inputClassNames = classnames(
+    const inputClassName = classnames(
         'fd-radio',
         {
             'fd-radio--compact': compact,
@@ -49,7 +49,7 @@ const FormRadioItem = React.forwardRef(({
             <input
                 {...inputProps}
                 checked={checked}
-                className={inputClassNames}
+                className={inputClassName}
                 disabled={disabled}
                 id={radioId}
                 name={name}

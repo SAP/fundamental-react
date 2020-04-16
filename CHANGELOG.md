@@ -2,6 +2,151 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.9.0-rc.22"></a>
+# [0.9.0-rc.22](https://github.com/SAP/fundamental-react/compare/v0.9.0-rc.21...v0.9.0-rc.22) (2020-04-14)
+
+
+### Features
+
+* update fundamental-styles to 0.8.2-rc.0 ([#961](https://github.com/SAP/fundamental-react/issues/961)) ([7b46e33](https://github.com/SAP/fundamental-react/commit/7b46e33))
+
+
+
+<a name="0.9.0-rc.21"></a>
+# [0.9.0-rc.21](https://github.com/SAP/fundamental-react/compare/v0.9.0-rc.20...v0.9.0-rc.21) (2020-04-14)
+
+
+### Features
+
+* New Busy Indicator component ([#963](https://github.com/SAP/fundamental-react/issues/963)) ([510e8c9](https://github.com/SAP/fundamental-react/commit/510e8c9))
+
+
+
+<a name="0.9.0-rc.20"></a>
+# [0.9.0-rc.20](https://github.com/SAP/fundamental-react/compare/v0.9.0-rc.19...v0.9.0-rc.20) (2020-04-10)
+
+
+
+<a name="0.9.0-rc.19"></a>
+# [0.9.0-rc.19](https://github.com/SAP/fundamental-react/compare/v0.9.0-rc.18...v0.9.0-rc.19) (2020-04-10)
+
+
+
+<a name="0.9.0-rc.18"></a>
+# [0.9.0-rc.18](https://github.com/SAP/fundamental-react/compare/v0.9.0-rc.17...v0.9.0-rc.18) (2020-04-10)
+
+
+
+<a name="0.9.0-rc.17"></a>
+# [0.9.0-rc.17](https://github.com/SAP/fundamental-react/compare/v0.9.0-rc.16...v0.9.0-rc.17) (2020-04-09)
+
+
+### Features
+
+* upgrade fundamental-styles to 0.8.0-rc.16 ([#957](https://github.com/SAP/fundamental-react/issues/957)) ([0fbdd9b](https://github.com/SAP/fundamental-react/commit/0fbdd9b))
+
+
+
+<a name="0.9.0-rc.16"></a>
+# [0.9.0-rc.16](https://github.com/SAP/fundamental-react/compare/v0.9.0-rc.15...v0.9.0-rc.16) (2020-04-06)
+
+
+
+<a name="0.9.0-rc.15"></a>
+# [0.9.0-rc.15](https://github.com/SAP/fundamental-react/compare/v0.9.0-rc.14...v0.9.0-rc.15) (2020-04-06)
+
+
+
+<a name="0.9.0-rc.14"></a>
+# [0.9.0-rc.14](https://github.com/SAP/fundamental-react/compare/v0.9.0-rc.13...v0.9.0-rc.14) (2020-04-06)
+
+
+
+<a name="0.9.0-rc.13"></a>
+# [0.9.0-rc.13](https://github.com/SAP/fundamental-react/compare/v0.9.0-rc.12...v0.9.0-rc.13) (2020-04-06)
+
+
+
+<a name="0.9.0-rc.12"></a>
+# [0.9.0-rc.12](https://github.com/SAP/fundamental-react/compare/v0.9.0-rc.11...v0.9.0-rc.12) (2020-04-05)
+
+
+
+<a name="0.9.0-rc.11"></a>
+# [0.9.0-rc.11](https://github.com/SAP/fundamental-react/compare/v0.9.0-rc.10...v0.9.0-rc.11) (2020-04-05)
+
+
+
+<a name="0.9.0-rc.10"></a>
+# [0.9.0-rc.10](https://github.com/SAP/fundamental-react/compare/v0.9.0-rc.9...v0.9.0-rc.10) (2020-04-05)
+
+
+
+<a name="0.9.0-rc.9"></a>
+# [0.9.0-rc.9](https://github.com/SAP/fundamental-react/compare/v0.9.0-rc.8...v0.9.0-rc.9) (2020-04-03)
+
+
+### Features
+
+* add onSelect callback to ComboboxInput;Select;SearchInput ([#958](https://github.com/SAP/fundamental-react/issues/958)) ([21b26cb](https://github.com/SAP/fundamental-react/commit/21b26cb))
+
+
+
+<a name="0.9.0-rc.8"></a>
+# [0.9.0-rc.8](https://github.com/SAP/fundamental-react/compare/v0.9.0-rc.7...v0.9.0-rc.8) (2020-04-02)
+
+
+### Bug Fixes
+
+* Close SearchInput popover after selecting an item. ([#941](https://github.com/SAP/fundamental-react/issues/941)) ([af687ad](https://github.com/SAP/fundamental-react/commit/af687ad))
+
+
+
+<a name="0.9.0-rc.7"></a>
+# [0.9.0-rc.7](https://github.com/SAP/fundamental-react/compare/v0.9.0-rc.6...v0.9.0-rc.7) (2020-04-02)
+
+
+### Features
+
+* Standardize the plurality of className props and variables ([#954](https://github.com/SAP/fundamental-react/issues/954)) ([2922bf3](https://github.com/SAP/fundamental-react/commit/2922bf3))
+
+
+
+<a name="0.9.0-rc.6"></a>
+# [0.9.0-rc.6](https://github.com/SAP/fundamental-react/compare/v0.9.0-rc.5...v0.9.0-rc.6) (2020-04-01)
+
+
+### Bug Fixes
+
+* datepicker onBur callback validation ([#942](https://github.com/SAP/fundamental-react/issues/942)) ([e104c03](https://github.com/SAP/fundamental-react/commit/e104c03))
+
+
+
+<a name="0.9.0-rc.5"></a>
+# [0.9.0-rc.5](https://github.com/SAP/fundamental-react/compare/v0.9.0-rc.4...v0.9.0-rc.5) (2020-03-31)
+
+
+
+<a name="0.9.0-rc.4"></a>
+# [0.9.0-rc.4](https://github.com/SAP/fundamental-react/compare/v0.9.0-rc.3...v0.9.0-rc.4) (2020-03-31)
+
+
+### Bug Fixes
+
+* add new onDatePickerClose callback to DatePicker component ([#939](https://github.com/SAP/fundamental-react/issues/939)) ([7f7f2af](https://github.com/SAP/fundamental-react/commit/7f7f2af))
+
+
+
+<a name="0.9.0-rc.3"></a>
+# [0.9.0-rc.3](https://github.com/SAP/fundamental-react/compare/v0.9.0-rc.2...v0.9.0-rc.3) (2020-03-30)
+
+
+### Bug Fixes
+
+* searchInput addonBefore error and popover out boundaries ([#937](https://github.com/SAP/fundamental-react/issues/937)) ([b0385b8](https://github.com/SAP/fundamental-react/commit/b0385b8))
+
+
+
 <a name="0.9.0-rc.2"></a>
 # [0.9.0-rc.2](https://github.com/SAP/fundamental-react/compare/v0.9.0-rc.1...v0.9.0-rc.2) (2020-03-27)
 
