@@ -1,11 +1,11 @@
 import classnames from 'classnames';
 import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
-import { FORM_STATES } from '../utils/constants';
+import { FORM_MESSAGE_TYPES } from '../utils/constants';
+import FormValidationOverlay from './_FormValidationOverlay';
 import PropTypes from 'prop-types';
 import React, { useEffect, useState } from 'react';
 
 const FormTextarea = React.forwardRef(({
-    children,
     className,
     compact,
     counterProps,
@@ -16,7 +16,7 @@ const FormTextarea = React.forwardRef(({
     maxLength,
     onChange,
     readOnly,
-    state,
+    validationState,
     value,
     ...props }, ref) => {
 
@@ -29,9 +29,6 @@ const FormTextarea = React.forwardRef(({
     const getInitialCharCount = () => {
         if (typeof value === 'boolean' || value) {
             return Math.min(value.toString().length, maxLength);
-        }
-        if (typeof children === 'string') {
-            return Math.min(children.length, maxLength);
         }
         if (defaultValue) {
             return Math.min(defaultValue.toString().length, maxLength);
@@ -61,8 +58,9 @@ const FormTextarea = React.forwardRef(({
 
     const formTextAreaClasses = classnames(
         'fd-textarea',
-        { 'fd-textarea--compact': compact,
-            [`is-${state}`]: state
+        {
+            'fd-textarea--compact': compact,
+            [`is-${validationState?.state}`]: validationState?.state
         },
         className
     );
@@ -72,11 +70,10 @@ const FormTextarea = React.forwardRef(({
         counterProps?.className
     );
 
-    return (
-        <React.Fragment>
+    const textArea = (
+        <div>
             <textarea
                 {...props}
-                children={children}
                 className={formTextAreaClasses}
                 defaultValue={defaultValue}
                 disabled={disabled}
@@ -92,14 +89,22 @@ const FormTextarea = React.forwardRef(({
                     {getMaxLengthText()}
                 </div>
             }
-        </React.Fragment>
+        </div>
+    );
+
+    return (
+        validationState ? (
+            <FormValidationOverlay
+                control={textArea}
+                validationState={validationState} />
+        ) :
+            textArea
     );
 });
 
 FormTextarea.displayName = 'FormTextarea';
 
 FormTextarea.propTypes = {
-    children: PropTypes.node,
     className: PropTypes.string,
     compact: PropTypes.bool,
     counterProps: PropTypes.object,
@@ -112,7 +117,10 @@ FormTextarea.propTypes = {
     }),
     maxLength: PropTypes.number,
     readOnly: PropTypes.bool,
-    state: PropTypes.oneOf(FORM_STATES),
+    validationState: PropTypes.shape({
+        state: PropTypes.oneOf(FORM_MESSAGE_TYPES),
+        text: PropTypes.string
+    }),
     value: PropTypes.string,
     onChange: PropTypes.func
 };
