@@ -270,6 +270,65 @@ describe('<TimePicker />', () => {
         expect(wrapper.state('value')).toEqual('');
     });
 
+    test('check for onBlur of text input with initial value', () => {
+        // check valid input with 12 Hour Clock
+        let wrapper = mount(<TimePicker format12Hours value='10:10:10 pm' />);
+        wrapper
+            .find('input[type="text"]')
+            .at(0)
+            .simulate('blur');
+        expect(wrapper.state('value')).toEqual('10:10:10 pm');
+        // check invalid input with 12 Hour Clock
+        wrapper = mount(<TimePicker format12Hours value='13:10:10 pm' />);
+        wrapper
+            .find('input[type="text"]')
+            .at(0)
+            .simulate('blur');
+        expect(wrapper.state('value')).toEqual('');
+        // check valid input with 24 Hour Clock
+        wrapper = mount(<TimePicker value='23:10:10' />);
+        wrapper
+            .find('input[type="text"]')
+            .at(0)
+            .simulate('blur');
+        expect(wrapper.state('value')).toEqual('23:10:10');
+        // check invalid input with 24 Hour Clock
+        wrapper = mount(<TimePicker value='25:10:10' />);
+        wrapper
+            .find('input[type="text"]')
+            .at(0)
+            .simulate('blur');
+        expect(wrapper.state('value')).toEqual('');
+        // check valid input with 12 Hour Clock with Hours and Minutes
+        wrapper = mount(<TimePicker format12Hours showSecond={false} value='10:10 am' />);
+        wrapper
+            .find('input[type="text"]')
+            .at(0)
+            .simulate('blur');
+        expect(wrapper.state('value')).toEqual('10:10 am');
+        // check invalid input with 12 Hour Clock with Hours and Minutes
+        wrapper = mount(<TimePicker format12Hours showSecond={false} value='13:10 an' />);
+        wrapper
+            .find('input[type="text"]')
+            .at(0)
+            .simulate('blur');
+        expect(wrapper.state('value')).toEqual('');
+        // check valid input with 24 Hour Clock with Hours and Minutes
+        wrapper = mount(<TimePicker showSecond={false} value='23:10' />);
+        wrapper
+            .find('input[type="text"]')
+            .at(0)
+            .simulate('blur');
+        expect(wrapper.state('value')).toEqual('23:10');
+        // check invalid input with 24 Hour Clock with Hours and Minutes
+        wrapper = mount(<TimePicker showSecond={false} value='24:10' />);
+        wrapper
+            .find('input[type="text"]')
+            .at(0)
+            .simulate('blur');
+        expect(wrapper.state('value')).toEqual('');
+    });
+
     test('check for initial value', () => {
         let wrapper = mount(timepickerWithInitialValue);
         expect(wrapper.state('value')).toEqual('10:30:34 pm');
