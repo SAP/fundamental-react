@@ -53,6 +53,7 @@ describe('<Shellbar />', () => {
 
     const simpleShellBarWithBackButton = (
         <Shellbar
+            backAction={()=>{}}
             className='blue'
             logo={
                 <img
@@ -61,9 +62,7 @@ describe('<Shellbar />', () => {
             }
             productTitle='Corporate Portal'
             profile={profile1}
-            profileMenu={profileMenu} 
-            backAction={()=>{}}
-            />
+            profileMenu={profileMenu} />
     );
 
     const searchInput = {
