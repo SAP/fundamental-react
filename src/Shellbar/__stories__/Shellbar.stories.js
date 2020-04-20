@@ -25,6 +25,14 @@ storiesOf('Components|Shellbar', module)
             profile={profile}
             profileMenu={profileMenu} />
     ))
+    .add('With Backbutton', () => (
+        <Shellbar
+            backAction={() =>{}}
+            logo={<img alt='SAP' src='//unpkg.com/fundamental-styles/dist/images/sap-logo.png' />}
+            productTitle='Corporate Portal'
+            profile={profile}
+            profileMenu={profileMenu} />
+    ))
     .add('disable styles', () => (
         <Shellbar
             disableStyles

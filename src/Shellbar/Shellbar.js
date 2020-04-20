@@ -110,7 +110,8 @@ class Shellbar extends Component {
             productSwitchList,
             profile,
             profileMenu,
-            className
+            className,
+            backAction
         } = this.props;
 
         const shellbarClasses = classnames(
@@ -121,6 +122,13 @@ class Shellbar extends Component {
         return (
             <div className={shellbarClasses}>
                 <div className='fd-shellbar__group fd-shellbar__group--product'>
+                    {backAction && <Button
+                        aria-label={localizedText.backButtonLabel}
+                        className='fd-shellbar__button'
+                        glyph='nav-back'
+                        onClick={backAction}
+                        option='transparent' />
+                    }
                     {logo && <span className='fd-shellbar__logo'>{logo}</span>}
                     {logoSAP && (
                         <span className='fd-shellbar__logo'>
@@ -459,10 +467,12 @@ Shellbar.displayName = 'Shellbar';
 
 Shellbar.propTypes = {
     actions: PropTypes.array,
+    backAction: PropTypes.func,
     className: PropTypes.string,
     copilot: PropTypes.bool,
     disableStyles: PropTypes.bool,
     localizedText: CustomPropTypes.i18n({
+        backButtonLabel: PropTypes.string,
         counterLabel: PropTypes.string,
         notificationsButton: PropTypes.string
     }),
@@ -488,6 +498,7 @@ Shellbar.propTypes = {
 
 Shellbar.defaultProps = {
     localizedText: {
+        backButtonLabel: 'Back button',
         counterLabel: 'Unread count',
         notificationsButton: 'Notifications'
     }
@@ -496,9 +507,11 @@ Shellbar.defaultProps = {
 Shellbar.propDescriptions = {
     actions: 'Holds all product actions and links.',
     copilot: 'For use with applications that utilize CoPilot.',
+    backAction: 'Adds back icon to shellbar and performs the provided action.',
     logo: 'Provide an img tag for a logo other than the SAP logo. One of the two props (`logo` or `logoSAP`) should be set.',
     logoSAP: 'Renders the SAP logo in the Shellbar. One of the two props (`logo` or `logoSAP`) should be set.',
     localizedTextShape: {
+        backButtonLabel: 'Aria-label for back <button>.',
         counterLabel: 'Aria-label for <span> element within the <button> element.',
         notificationsButton: 'Aria-label for <button> element.'
     },

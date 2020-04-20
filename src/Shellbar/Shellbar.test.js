@@ -51,6 +51,20 @@ describe('<Shellbar />', () => {
             profileMenu={profileMenu} />
     );
 
+    const simpleShellBarWithBackButton = (
+        <Shellbar
+            backAction={()=>{}}
+            className='blue'
+            logo={
+                <img
+                    alt='SAP'
+                    src='//unpkg.com/fundamental-styles/dist/images/sap-logo.png' />
+            }
+            productTitle='Corporate Portal'
+            profile={profile1}
+            profileMenu={profileMenu} />
+    );
+
     const searchInput = {
         label: 'Search',
         placeholder: 'Enter a fruit',
@@ -255,6 +269,10 @@ describe('<Shellbar />', () => {
         tree = component.toJSON();
         expect(tree).toMatchSnapshot();
 
+        component = renderer.create(simpleShellBarWithBackButton);
+        tree = component.toJSON();
+        expect(tree).toMatchSnapshot();
+
         component = renderer.create(coPilotShell);
         tree = component.toJSON();
         expect(tree).toMatchSnapshot();
@@ -281,6 +299,12 @@ describe('<Shellbar />', () => {
         wrapper.find('span.fd-menu.sap-icon--nav-back').simulate('click');
 
         expect(wrapper.state(['showCollapsedProductSwitchMenu'])).toBeFalsy();
+    });
+
+    test('click back button on shellbar with back button', () => {
+        const wrapper = mount(simpleShellBarWithBackButton);
+
+        expect(wrapper.find('.fd-button--back')).toBeTruthy();
     });
 
     describe('Prop spreading', () => {
