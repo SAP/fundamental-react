@@ -106,6 +106,42 @@ describe('<Checkbox />', () => {
             ).toBe('Sample');
         });
     });
+    describe('Validation states', () => {
+        test('should render the correct snapshots', () => {
+            const checkboxWarning = (
+                <Checkbox state='warning' />
+            );
+
+            let component = renderer.create(checkboxWarning);
+            let tree = component.toJSON();
+            expect(tree).toMatchSnapshot();
+
+            const checkboxError = (
+                <Checkbox state='error' />
+            );
+
+            component = renderer.create(checkboxError);
+            tree = component.toJSON();
+            expect(tree).toMatchSnapshot();
+
+            const checkboxSuccess = (
+                <Checkbox state='success' />
+            );
+
+            component = renderer.create(checkboxSuccess);
+            tree = component.toJSON();
+            expect(tree).toMatchSnapshot();
+
+            const checkboxInformation = (
+                <Checkbox state='information' />
+            );
+
+            component = renderer.create(checkboxInformation);
+            tree = component.toJSON();
+            expect(tree).toMatchSnapshot();
+        });
+    });
+
     test('forwards the ref', () => {
         let ref;
         class Test extends React.Component {

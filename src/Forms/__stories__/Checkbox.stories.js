@@ -11,10 +11,10 @@ const createProps = (overrides) => ({
     compact: boolean('compact', false),
     disabled: boolean('disabled', false),
     indeterminate: boolean('indeterminate', false),
-    state: select('Validation State', {
-        'default': null,
-        'valid': 'valid',
-        'invalid': 'invalid',
+    state: select('State', {
+        'none': '',
+        'success': 'success',
+        'error': 'error',
         'information': 'information',
         'warning': 'warning'
     }),
@@ -35,6 +35,18 @@ storiesOf('Components|Checkbox', module)
     ))
     .add('compact', () => (
         <Checkbox compact>Text Option</Checkbox>
+    ))
+    .add('State | Error', () => (
+        <Checkbox state='error'>Text Option</Checkbox>
+    ))
+    .add('State | Warning', () => (
+        <Checkbox state='warning'>Text Option</Checkbox>
+    ))
+    .add('State | Success', () => (
+        <Checkbox state='success'>Text Option</Checkbox>
+    ))
+    .add('State | Information', () => (
+        <Checkbox state='information'>Text Option</Checkbox>
     ))
     .add('disable styles', () => (
         <Checkbox {...createProps()} disableStyles>Text Option</Checkbox>

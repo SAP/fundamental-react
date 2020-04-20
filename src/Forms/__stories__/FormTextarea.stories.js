@@ -13,12 +13,12 @@ const createProps = (overrides) => ({
     defaultValue: text('Default Value', 'Default'),
     disabled: boolean('disabled', false),
     readOnly: boolean('readOnly', false),
-    validationState: select('Validation State', {
+    state: select('State', {
         'none': '',
-        'success': { state: 'success', text: 'placeholder text' },
-        'error': { state: 'error', text: 'placeholder text' },
-        'information': { state: 'information', text: 'placeholder text' },
-        'warning': { state: 'warning', text: 'placeholder text' }
+        'success': 'success',
+        'error': 'error',
+        'information': 'information',
+        'warning': 'warning'
     }),
     ...overrides
 });
@@ -34,23 +34,23 @@ storiesOf('Components|FormTextarea', module)
     .add('Max length', () => (
         <FormTextarea {...createProps({ defaultValue: 'Max Length', maxLength: 150 })} />
     ))
-    .add('Validation State | Error', () => (
+    .add('State | Error', () => (
         <FormTextarea
             defaultValue='Error State'
-            validationState={{ state: 'error', text: 'Test validation state' }} />
+            state='error' />
     ))
-    .add('Validation State | Warning', () => (
+    .add('State | Warning', () => (
         <FormTextarea
             defaultValue='Warning State'
-            validationState={{ state: 'warning', text: 'Test validation state' }} />
+            state='warning' />
     ))
-    .add('Validation State | Information', () => (
+    .add('State | Information', () => (
         <FormTextarea
             defaultValue='Information State'
-            validationState={{ state: 'information', text: 'Test validation state' }} />
+            state='information' />
     ))
-    .add('Validation State | Success', () => (
+    .add('State | Success', () => (
         <FormTextarea
             defaultValue='Success State'
-            validationState={{ state: 'success', text: 'Test validation state' }} />
+            state='success' />
     ));

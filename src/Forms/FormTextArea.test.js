@@ -53,7 +53,7 @@ describe('<FormTextArea />', () => {
             const formTextAreaWarning = (
                 <FormTextarea
                     placeholder='Field placeholder text'
-                    validationState={{ state: 'warning', text: 'test' }} />
+                    state='warning' />
             );
 
             let component = renderer.create(formTextAreaWarning);
@@ -63,7 +63,7 @@ describe('<FormTextArea />', () => {
             const formTextAreaError = (
                 <FormTextarea
                     placeholder='Field placeholder text'
-                    validationState={{ state: 'error', text: 'test' }} />
+                    state='error' />
             );
 
             component = renderer.create(formTextAreaError);
@@ -73,7 +73,7 @@ describe('<FormTextArea />', () => {
             const formTextAreaSuccess = (
                 <FormTextarea
                     placeholder='Field placeholder text'
-                    validationState={{ state: 'success', text: 'test' }} />
+                    state='success' />
             );
 
             component = renderer.create(formTextAreaSuccess);
@@ -83,7 +83,7 @@ describe('<FormTextArea />', () => {
             const formTextAreaInformation = (
                 <FormTextarea
                     placeholder='Field placeholder text'
-                    validationState={{ state: 'information', text: 'test' }} />
+                    state='information' />
             );
 
             component = renderer.create(formTextAreaInformation);

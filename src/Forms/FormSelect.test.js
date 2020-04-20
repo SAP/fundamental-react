@@ -28,6 +28,44 @@ describe('<FormSelect />', () => {
         });
     });
 
+    describe('Validation states', () => {
+        test('should render the correct snapshots', () => {
+            const formSelectWarning = (
+                <FormSelect
+                    placeholder='Field placeholder text'
+                    state='warning' />
+            );
+
+            let component = renderer.create(formSelectWarning);
+            let tree = component.toJSON();
+            expect(tree).toMatchSnapshot();
+
+            const formSelectError = (
+                <FormSelect state='error' />
+            );
+
+            component = renderer.create(formSelectError);
+            tree = component.toJSON();
+            expect(tree).toMatchSnapshot();
+
+            const formSelectSuccess = (
+                <FormSelect state='success' />
+            );
+
+            component = renderer.create(formSelectSuccess);
+            tree = component.toJSON();
+            expect(tree).toMatchSnapshot();
+
+            const formSelectInformation = (
+                <FormSelect state='information' />
+            );
+
+            component = renderer.create(formSelectInformation);
+            tree = component.toJSON();
+            expect(tree).toMatchSnapshot();
+        });
+    });
+
     test('forwards the ref', () => {
         let ref;
         class Test extends React.Component {

@@ -1,7 +1,6 @@
 import classnames from 'classnames';
 import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import { FORM_MESSAGE_TYPES } from '../utils/constants';
-import FormValidationOverlay from './_FormValidationOverlay';
 import PropTypes from 'prop-types';
 import React, { useEffect, useState } from 'react';
 
@@ -16,7 +15,7 @@ const FormTextarea = React.forwardRef(({
     maxLength,
     onChange,
     readOnly,
-    validationState,
+    state,
     value,
     ...props }, ref) => {
 
@@ -60,7 +59,7 @@ const FormTextarea = React.forwardRef(({
         'fd-textarea',
         {
             'fd-textarea--compact': compact,
-            [`is-${validationState?.state}`]: validationState?.state
+            [`is-${state}`]: state
         },
         className
     );
@@ -70,8 +69,8 @@ const FormTextarea = React.forwardRef(({
         counterProps?.className
     );
 
-    const textArea = (
-        <div>
+    return (
+        <>
             <textarea
                 {...props}
                 className={formTextAreaClasses}
@@ -89,16 +88,7 @@ const FormTextarea = React.forwardRef(({
                     {getMaxLengthText()}
                 </div>
             }
-        </div>
-    );
-
-    return (
-        validationState ? (
-            <FormValidationOverlay
-                control={textArea}
-                validationState={validationState} />
-        ) :
-            textArea
+        </>
     );
 });
 
@@ -117,10 +107,7 @@ FormTextarea.propTypes = {
     }),
     maxLength: PropTypes.number,
     readOnly: PropTypes.bool,
-    validationState: PropTypes.shape({
-        state: PropTypes.oneOf(FORM_MESSAGE_TYPES),
-        text: PropTypes.string
-    }),
+    state: PropTypes.oneOf(FORM_MESSAGE_TYPES),
     value: PropTypes.string,
     onChange: PropTypes.func
 };
