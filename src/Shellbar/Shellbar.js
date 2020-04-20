@@ -123,12 +123,12 @@ class Shellbar extends Component {
             <div className={shellbarClasses}>
                 <div className='fd-shellbar__group fd-shellbar__group--product'>
                     {backAction && <Icon
-                                        onClick={backAction}
-                                        className='fd-shellbar__group fd-button--back'
-                                        glyph='nav-back'
-                                        size="l"
-                                        style={{color: "white", marginRight: '0.5em', flex: 'none'}}
-                                        />}
+                      onClick={backAction}
+                      className='fd-shellbar__group fd-button--back'
+                      glyph='nav-back'
+                      size="l"
+                      style={{ color: "white", marginRight: '0.5em', flex: 'none' }}/>
+                    }
                     {logo && <span className='fd-shellbar__logo'>{logo}</span>}
                     {logoSAP && (
                         <span className='fd-shellbar__logo'>
@@ -469,6 +469,7 @@ Shellbar.propTypes = {
     actions: PropTypes.array,
     className: PropTypes.string,
     copilot: PropTypes.bool,
+    backAction: Prototypes.func,
     disableStyles: PropTypes.bool,
     localizedText: CustomPropTypes.i18n({
         counterLabel: PropTypes.string,
@@ -504,6 +505,7 @@ Shellbar.defaultProps = {
 Shellbar.propDescriptions = {
     actions: 'Holds all product actions and links.',
     copilot: 'For use with applications that utilize CoPilot.',
+    backAction: 'Adds back icon to shellbar and performs the provided action.',
     logo: 'Provide an img tag for a logo other than the SAP logo. One of the two props (`logo` or `logoSAP`) should be set.',
     logoSAP: 'Renders the SAP logo in the Shellbar. One of the two props (`logo` or `logoSAP`) should be set.',
     localizedTextShape: {
