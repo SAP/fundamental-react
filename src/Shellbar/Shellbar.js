@@ -122,12 +122,11 @@ class Shellbar extends Component {
         return (
             <div className={shellbarClasses}>
                 <div className='fd-shellbar__group fd-shellbar__group--product'>
-                    {backAction && <Icon
-                        className='fd-shellbar__group fd-button--back'
+                    {backAction && <Button
+                        className='fd-shellbar__button'
                         glyph='nav-back'
                         onClick={backAction}
-                        size='l'
-                        style={{ color: 'white', marginRight: '0.5em', flex: 'none' }} />
+                        option='transparent' />
                     }
                     {logo && <span className='fd-shellbar__logo'>{logo}</span>}
                     {logoSAP && (

@@ -141,16 +141,10 @@ exports[`<Shellbar /> create shellbar 3`] = `
   <div
     className="fd-shellbar__group fd-shellbar__group--product"
   >
-    <span
-      className="sap-icon--nav-back sap-icon--l fd-shellbar__group fd-button--back"
+    <button
+      className="fd-button fd-button--transparent sap-icon--nav-back fd-shellbar__button"
       onClick={[Function]}
-      style={
-        Object {
-          "color": "white",
-          "flex": "none",
-          "marginRight": "0.5em",
-        }
-      }
+      type="button"
     />
     <span
       className="fd-shellbar__logo"
