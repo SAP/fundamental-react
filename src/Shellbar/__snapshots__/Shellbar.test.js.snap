@@ -142,6 +142,7 @@ exports[`<Shellbar /> create shellbar 3`] = `
     className="fd-shellbar__group fd-shellbar__group--product"
   >
     <button
+      aria-label="Back button"
       className="fd-button fd-button--transparent sap-icon--nav-back fd-shellbar__button"
       onClick={[Function]}
       type="button"

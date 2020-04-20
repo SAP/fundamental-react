@@ -123,6 +123,7 @@ class Shellbar extends Component {
             <div className={shellbarClasses}>
                 <div className='fd-shellbar__group fd-shellbar__group--product'>
                     {backAction && <Button
+                        aria-label={localizedText.backButtonLabel}
                         className='fd-shellbar__button'
                         glyph='nav-back'
                         onClick={backAction}
@@ -471,6 +472,7 @@ Shellbar.propTypes = {
     copilot: PropTypes.bool,
     disableStyles: PropTypes.bool,
     localizedText: CustomPropTypes.i18n({
+        backButtonLabel: PropTypes.string,
         counterLabel: PropTypes.string,
         notificationsButton: PropTypes.string
     }),
@@ -496,6 +498,7 @@ Shellbar.propTypes = {
 
 Shellbar.defaultProps = {
     localizedText: {
+        backButtonLabel: 'Back button',
         counterLabel: 'Unread count',
         notificationsButton: 'Notifications'
     }
@@ -508,6 +511,7 @@ Shellbar.propDescriptions = {
     logo: 'Provide an img tag for a logo other than the SAP logo. One of the two props (`logo` or `logoSAP`) should be set.',
     logoSAP: 'Renders the SAP logo in the Shellbar. One of the two props (`logo` or `logoSAP`) should be set.',
     localizedTextShape: {
+        backButtonLabel: 'Aria-label for back <button>.',
         counterLabel: 'Aria-label for <span> element within the <button> element.',
         notificationsButton: 'Aria-label for <button> element.'
     },
