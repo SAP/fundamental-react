@@ -123,11 +123,11 @@ class Shellbar extends Component {
             <div className={shellbarClasses}>
                 <div className='fd-shellbar__group fd-shellbar__group--product'>
                     {backAction && <Icon
-                      onClick={backAction}
-                      className='fd-shellbar__group fd-button--back'
-                      glyph='nav-back'
-                      size="l"
-                      style={{ color: "white", marginRight: '0.5em', flex: 'none' }}/>
+                        className='fd-shellbar__group fd-button--back'
+                        glyph='nav-back'
+                        onClick={backAction}
+                        size='l'
+                        style={{ color: 'white', marginRight: '0.5em', flex: 'none' }} />
                     }
                     {logo && <span className='fd-shellbar__logo'>{logo}</span>}
                     {logoSAP && (
@@ -467,9 +467,9 @@ Shellbar.displayName = 'Shellbar';
 
 Shellbar.propTypes = {
     actions: PropTypes.array,
+    backAction: PropTypes.func,
     className: PropTypes.string,
     copilot: PropTypes.bool,
-    backAction: PropTypes.func,
     disableStyles: PropTypes.bool,
     localizedText: CustomPropTypes.i18n({
         counterLabel: PropTypes.string,
