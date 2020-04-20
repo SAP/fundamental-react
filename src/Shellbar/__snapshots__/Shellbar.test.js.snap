@@ -136,6 +136,84 @@ exports[`<Shellbar /> create shellbar 2`] = `
 
 exports[`<Shellbar /> create shellbar 3`] = `
 <div
+  className="fd-shellbar blue"
+>
+  <div
+    className="fd-shellbar__group fd-shellbar__group--product"
+  >
+    <span
+      className="sap-icon--nav-back sap-icon--l fd-shellbar__group fd-button--back"
+      onClick={[Function]}
+      style={
+        Object {
+          "color": "white",
+          "flex": "none",
+          "marginRight": "0.5em",
+        }
+      }
+    />
+    <span
+      className="fd-shellbar__logo"
+    >
+      <img
+        alt="SAP"
+        src="//unpkg.com/fundamental-styles/dist/images/sap-logo.png"
+      />
+    </span>
+    <span
+      className="fd-shellbar__title"
+    >
+      Corporate Portal
+    </span>
+  </div>
+  <div
+    className="fd-shellbar__group fd-shellbar__group--actions"
+  >
+    <div
+      className="fd-shellbar__action fd-shellbar__action--show-always"
+    >
+      <div
+        className="fd-user-menu"
+      >
+        <div
+          className="fd-popover"
+        >
+          <div
+            onFocus={[Function]}
+            onMouseDown={[Function]}
+            onTouchStart={[Function]}
+          >
+            <div
+              className="fd-popover__control"
+            >
+              <div
+                aria-controls="fd-shellbar-profile-popover"
+                aria-expanded={false}
+                aria-haspopup={true}
+                className="fd-button fd-shellbar__button fd-user-menu__control"
+                onClick={[Function]}
+                onKeyPress={[Function]}
+                role="button"
+                tabIndex={0}
+              >
+                <span
+                  className="fd-identifier fd-identifier--xs fd-identifier--circle fd-has-background-color-accent-8"
+                  role=""
+                >
+                  JS
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Shellbar /> create shellbar 4`] = `
+<div
   className="fd-shellbar"
 >
   <div
@@ -440,7 +518,7 @@ exports[`<Shellbar /> create shellbar 3`] = `
 </div>
 `;
 
-exports[`<Shellbar /> create shellbar 4`] = `
+exports[`<Shellbar /> create shellbar 5`] = `
 <div
   className="fd-shellbar"
 >
@@ -739,7 +817,7 @@ exports[`<Shellbar /> create shellbar 4`] = `
 </div>
 `;
 
-exports[`<Shellbar /> create shellbar 5`] = `
+exports[`<Shellbar /> create shellbar 6`] = `
 <div
   className="fd-shellbar"
 >
@@ -1018,7 +1096,7 @@ exports[`<Shellbar /> create shellbar 5`] = `
 </div>
 `;
 
-exports[`<Shellbar /> create shellbar 6`] = `
+exports[`<Shellbar /> create shellbar 7`] = `
 <div
   className="fd-shellbar"
 >
