@@ -40,7 +40,7 @@ const Checkbox = React.forwardRef(({
     const inputEl = useRef();
 
     useEffect(() => {
-        inputEl && (inputEl.current.indeterminate = indeterminate);
+        inputEl && inputEl.current && (inputEl.current.indeterminate = indeterminate);
     });
 
     useEffect(() => {

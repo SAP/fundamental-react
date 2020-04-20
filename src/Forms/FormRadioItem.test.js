@@ -99,7 +99,7 @@ describe('<FormRadioItem />', () => {
     describe('Validation states', () => {
         test('should render the correct snapshots', () => {
             const formRadioItemWarning = (
-                <FormRadioItem state='warning'>
+                <FormRadioItem id='foo' state='warning'>
                     Option 1
                 </FormRadioItem>
             );
@@ -109,7 +109,7 @@ describe('<FormRadioItem />', () => {
             expect(tree).toMatchSnapshot();
 
             const formRadioItemError = (
-                <FormRadioItem state='error'>
+                <FormRadioItem id='foo' state='error'>
                     Option 1
                 </FormRadioItem>
             );
@@ -119,7 +119,7 @@ describe('<FormRadioItem />', () => {
             expect(tree).toMatchSnapshot();
 
             const formRadioItemSuccess = (
-                <FormRadioItem state='success'>
+                <FormRadioItem id='foo' state='success'>
                     Option 1
                 </FormRadioItem>
             );
@@ -129,7 +129,7 @@ describe('<FormRadioItem />', () => {
             expect(tree).toMatchSnapshot();
 
             const formRadioItemInformation = (
-                <FormRadioItem state='information'>
+                <FormRadioItem id='foo' state='information'>
                     Option 1
                 </FormRadioItem>
             );

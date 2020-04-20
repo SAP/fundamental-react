@@ -1,5 +1,85 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<Checkbox /> Validation states should render the correct snapshots 1`] = `
+<div
+  className="fd-form-item"
+>
+  <input
+    aria-checked="false"
+    className="fd-checkbox is-warning"
+    id="foo"
+    onChange={[Function]}
+    type="checkbox"
+  />
+  <label
+    className="fd-form-label fd-checkbox__label"
+    htmlFor="foo"
+  >
+    Label
+  </label>
+</div>
+`;
+
+exports[`<Checkbox /> Validation states should render the correct snapshots 2`] = `
+<div
+  className="fd-form-item"
+>
+  <input
+    aria-checked="false"
+    className="fd-checkbox is-error"
+    id="foo"
+    onChange={[Function]}
+    type="checkbox"
+  />
+  <label
+    className="fd-form-label fd-checkbox__label"
+    htmlFor="foo"
+  >
+    Label
+  </label>
+</div>
+`;
+
+exports[`<Checkbox /> Validation states should render the correct snapshots 3`] = `
+<div
+  className="fd-form-item"
+>
+  <input
+    aria-checked="false"
+    className="fd-checkbox is-success"
+    id="foo"
+    onChange={[Function]}
+    type="checkbox"
+  />
+  <label
+    className="fd-form-label fd-checkbox__label"
+    htmlFor="foo"
+  >
+    Label
+  </label>
+</div>
+`;
+
+exports[`<Checkbox /> Validation states should render the correct snapshots 4`] = `
+<div
+  className="fd-form-item"
+>
+  <input
+    aria-checked="false"
+    className="fd-checkbox is-information"
+    id="foo"
+    onChange={[Function]}
+    type="checkbox"
+  />
+  <label
+    className="fd-form-label fd-checkbox__label"
+    htmlFor="foo"
+  >
+    Label
+  </label>
+</div>
+`;
+
 exports[`<Checkbox /> create checkbox 1`] = `
 <div
   className="fd-form-item"
@@ -15,6 +95,8 @@ exports[`<Checkbox /> create checkbox 1`] = `
   <label
     className="fd-form-label fd-checkbox__label"
     htmlFor="foo"
-  />
+  >
+    Label
+  </label>
 </div>
 `;

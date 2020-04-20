@@ -5,7 +5,7 @@ import renderer from 'react-test-renderer';
 
 describe('<Checkbox />', () => {
     const checkbox = (
-        <Checkbox id='foo' value='Option 1' />
+        <Checkbox id='foo' value='Option 1'>Label</Checkbox>
     );
 
     test('create checkbox', () => {
@@ -17,7 +17,7 @@ describe('<Checkbox />', () => {
 
     describe('Checkbox Tests', () => {
         let setup = (props) => {
-            return mount(<Checkbox value='Label 1' {...props} />);
+            return mount(<Checkbox value='Label 1' {...props}>Label</Checkbox>);
         };
         test('should add checked attribute when checked is passed', () => {
             let element = setup({
@@ -83,7 +83,7 @@ describe('<Checkbox />', () => {
         });
 
         test('should allow props to be spread to the Checkbox component', () => {
-            const element = mount(<Checkbox data-sample='Sample' />);
+            const element = mount(<Checkbox data-sample='Sample'>Label</Checkbox>);
 
             expect(
                 element.find('.fd-form-item').getDOMNode().attributes['data-sample'].value
@@ -91,7 +91,7 @@ describe('<Checkbox />', () => {
         });
 
         test('should allow props to be spread to the Checkbox component input', () => {
-            const element = mount(<Checkbox inputProps={{ 'data-sample': 'Sample' }} />);
+            const element = mount(<Checkbox inputProps={{ 'data-sample': 'Sample' }}>Label</Checkbox>);
 
             expect(
                 element.find('.fd-checkbox').getDOMNode().attributes['data-sample'].value
@@ -99,7 +99,7 @@ describe('<Checkbox />', () => {
         });
 
         test('should allow props to be spread to the Checkbox component label', () => {
-            const element = mount(<Checkbox labelProps={{ 'data-sample': 'Sample' }} />);
+            const element = mount(<Checkbox labelProps={{ 'data-sample': 'Sample' }}>Label</Checkbox>);
 
             expect(
                 element.find('.fd-form-label').getDOMNode().attributes['data-sample'].value
@@ -109,7 +109,7 @@ describe('<Checkbox />', () => {
     describe('Validation states', () => {
         test('should render the correct snapshots', () => {
             const checkboxWarning = (
-                <Checkbox state='warning' />
+                <Checkbox id='foo' state='warning'>Label</Checkbox>
             );
 
             let component = renderer.create(checkboxWarning);
@@ -117,7 +117,7 @@ describe('<Checkbox />', () => {
             expect(tree).toMatchSnapshot();
 
             const checkboxError = (
-                <Checkbox state='error' />
+                <Checkbox id='foo' state='error'>Label</Checkbox>
             );
 
             component = renderer.create(checkboxError);
@@ -125,7 +125,7 @@ describe('<Checkbox />', () => {
             expect(tree).toMatchSnapshot();
 
             const checkboxSuccess = (
-                <Checkbox state='success' />
+                <Checkbox id='foo' state='success'>Label</Checkbox>
             );
 
             component = renderer.create(checkboxSuccess);
@@ -133,7 +133,7 @@ describe('<Checkbox />', () => {
             expect(tree).toMatchSnapshot();
 
             const checkboxInformation = (
-                <Checkbox state='information' />
+                <Checkbox id='foo' state='information'>Label</Checkbox>
             );
 
             component = renderer.create(checkboxInformation);
@@ -149,7 +149,7 @@ describe('<Checkbox />', () => {
                 super(props);
                 ref = React.createRef();
             }
-            render = () => <Checkbox ref={ref} />;
+            render = () => <Checkbox ref={ref}>Label</Checkbox>;
         }
         mount(<Test />);
 
