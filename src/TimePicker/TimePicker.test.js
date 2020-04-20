@@ -300,14 +300,16 @@ describe('<TimePicker />', () => {
             .simulate('blur');
         expect(wrapper.state('value')).toEqual('');
         // check valid input with 12 Hour Clock with Hours and Minutes
-        wrapper = mount(<TimePicker format12Hours showSecond={false} value='10:10 am' />);
+        wrapper = mount(<TimePicker format12Hours showSecond={false}
+            value='10:10 am' />);
         wrapper
             .find('input[type="text"]')
             .at(0)
             .simulate('blur');
         expect(wrapper.state('value')).toEqual('10:10 am');
         // check invalid input with 12 Hour Clock with Hours and Minutes
-        wrapper = mount(<TimePicker format12Hours showSecond={false} value='13:10 an' />);
+        wrapper = mount(<TimePicker format12Hours showSecond={false}
+            value='13:10 an' />);
         wrapper
             .find('input[type="text"]')
             .at(0)
