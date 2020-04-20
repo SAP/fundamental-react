@@ -469,7 +469,7 @@ Shellbar.propTypes = {
     actions: PropTypes.array,
     className: PropTypes.string,
     copilot: PropTypes.bool,
-    backAction: Prototypes.func,
+    backAction: PropTypes.func,
     disableStyles: PropTypes.bool,
     localizedText: CustomPropTypes.i18n({
         counterLabel: PropTypes.string,
