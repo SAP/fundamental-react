@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.9.0-rc.24"></a>
+# [0.9.0-rc.24](https://github.com/SAP/fundamental-react/compare/v0.9.0-rc.23...v0.9.0-rc.24) (2020-04-20)
+
+
+### Bug Fixes
+
+* add backbutton to shellbar ([#967](https://github.com/SAP/fundamental-react/issues/967)) ([a590bf9](https://github.com/SAP/fundamental-react/commit/a590bf9))
+
+
+
 <a name="0.9.0-rc.23"></a>
 # [0.9.0-rc.23](https://github.com/SAP/fundamental-react/compare/v0.9.0-rc.22...v0.9.0-rc.23) (2020-04-16)
 
