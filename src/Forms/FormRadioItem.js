@@ -1,5 +1,5 @@
 import classnames from 'classnames';
-import { FORM_STATES } from '../utils/constants';
+import { FORM_MESSAGE_TYPES } from '../utils/constants';
 import FormItem from './FormItem';
 import FormLabel from './FormLabel';
 import PropTypes from 'prop-types';
@@ -83,7 +83,7 @@ FormRadioItem.propTypes = {
     inputProps: PropTypes.object,
     labelProps: PropTypes.object,
     name: PropTypes.string,
-    state: PropTypes.oneOf(FORM_STATES),
+    state: PropTypes.oneOf(FORM_MESSAGE_TYPES),
     value: PropTypes.string
 };
 

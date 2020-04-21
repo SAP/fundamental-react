@@ -10,10 +10,10 @@ import {
 const createProps = (overrides) => ({
     compact: boolean('compact', false),
     disabled: boolean('disabled', false),
-    state: select('Validation State', {
-        'default': null,
-        'valid': 'valid',
-        'invalid': 'invalid',
+    state: select('State', {
+        'none': '',
+        'success': 'success',
+        'error': 'error',
         'information': 'information',
         'warning': 'warning'
     }),
@@ -24,6 +24,34 @@ storiesOf('Components|FormSelect', module)
     .addDecorator(withKnobs)
     .add('Default', () => (
         <FormSelect {...createProps()}>
+            <option>Duis malesuada odio volutpat elementum</option>
+            <option>Suspendisse ante ligula</option>
+            <option>Sed bibendum sapien at posuere interdum</option>
+        </FormSelect>
+    ))
+    .add('State | Error', () => (
+        <FormSelect state='error'>
+            <option>Duis malesuada odio volutpat elementum</option>
+            <option>Suspendisse ante ligula</option>
+            <option>Sed bibendum sapien at posuere interdum</option>
+        </FormSelect>
+    ))
+    .add('State | Warning', () => (
+        <FormSelect state='warning'>
+            <option>Duis malesuada odio volutpat elementum</option>
+            <option>Suspendisse ante ligula</option>
+            <option>Sed bibendum sapien at posuere interdum</option>
+        </FormSelect>
+    ))
+    .add('State | Information', () => (
+        <FormSelect state='information'>
+            <option>Duis malesuada odio volutpat elementum</option>
+            <option>Suspendisse ante ligula</option>
+            <option>Sed bibendum sapien at posuere interdum</option>
+        </FormSelect>
+    ))
+    .add('State | Sucess', () => (
+        <FormSelect state='success'>
             <option>Duis malesuada odio volutpat elementum</option>
             <option>Suspendisse ante ligula</option>
             <option>Sed bibendum sapien at posuere interdum</option>

@@ -4,17 +4,19 @@ import { storiesOf } from '@storybook/react';
 import {
     boolean,
     select,
+    text,
     withKnobs
 } from '@storybook/addon-knobs';
 
 const createProps = (overrides) => ({
     compact: boolean('compact', false),
+    defaultValue: text('Default Value', 'Default'),
     disabled: boolean('disabled', false),
     readOnly: boolean('readOnly', false),
-    state: select('Validation State', {
-        'default': null,
-        'valid': 'valid',
-        'invalid': 'invalid',
+    state: select('State', {
+        'none': '',
+        'success': 'success',
+        'error': 'error',
         'information': 'information',
         'warning': 'warning'
     }),
@@ -24,11 +26,31 @@ const createProps = (overrides) => ({
 storiesOf('Components|FormTextarea', module)
     .addDecorator(withKnobs)
     .add('Default', () => (
-        <FormTextarea {...createProps()}>Default</FormTextarea>
+        <FormTextarea {...createProps()} />
     ))
     .add('disable styles', () => (
-        <FormTextarea {...createProps()} disableStyles>Default</FormTextarea>
+        <FormTextarea {...createProps()} disableStyles />
     ))
     .add('Max length', () => (
         <FormTextarea {...createProps({ defaultValue: 'Max Length', maxLength: 150 })} />
+    ))
+    .add('State | Error', () => (
+        <FormTextarea
+            defaultValue='Error State'
+            state='error' />
+    ))
+    .add('State | Warning', () => (
+        <FormTextarea
+            defaultValue='Warning State'
+            state='warning' />
+    ))
+    .add('State | Information', () => (
+        <FormTextarea
+            defaultValue='Information State'
+            state='information' />
+    ))
+    .add('State | Success', () => (
+        <FormTextarea
+            defaultValue='Success State'
+            state='success' />
     ));

@@ -1,13 +1,44 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<FormTextArea /> Validation states should render the correct snapshots 1`] = `
+<textarea
+  className="fd-textarea is-warning"
+  onChange={[Function]}
+  placeholder="Field placeholder text"
+/>
+`;
+
+exports[`<FormTextArea /> Validation states should render the correct snapshots 2`] = `
+<textarea
+  className="fd-textarea is-error"
+  onChange={[Function]}
+  placeholder="Field placeholder text"
+/>
+`;
+
+exports[`<FormTextArea /> Validation states should render the correct snapshots 3`] = `
+<textarea
+  className="fd-textarea is-success"
+  onChange={[Function]}
+  placeholder="Field placeholder text"
+/>
+`;
+
+exports[`<FormTextArea /> Validation states should render the correct snapshots 4`] = `
+<textarea
+  className="fd-textarea is-information"
+  onChange={[Function]}
+  placeholder="Field placeholder text"
+/>
+`;
+
 exports[`<FormTextArea /> create form textarea 1`] = `
 <textarea
   className="fd-textarea"
   id="textarea-2"
   onChange={[Function]}
->
-  Pellentesque metus lacus commodo eget justo ut rutrum varius nunc.
-</textarea>
+  value="Pellentesque metus lacus commodo eget justo ut rutrum varius nunc."
+/>
 `;
 
 exports[`<FormTextArea /> create form textarea with counter 1`] = `

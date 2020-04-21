@@ -1,5 +1,5 @@
 import classnames from 'classnames';
-import { FORM_STATES } from '../utils/constants';
+import { FORM_MESSAGE_TYPES } from '../utils/constants';
 import PropTypes from 'prop-types';
 import React, { useEffect } from 'react';
 
@@ -37,7 +37,7 @@ FormSelect.propTypes = {
     compact: PropTypes.bool,
     disabled: PropTypes.bool,
     disableStyles: PropTypes.bool,
-    state: PropTypes.oneOf(FORM_STATES)
+    state: PropTypes.oneOf(FORM_MESSAGE_TYPES)
 };
 
 export default FormSelect;

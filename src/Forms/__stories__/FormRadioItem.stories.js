@@ -10,10 +10,10 @@ import {
 const createProps = (overrides) => ({
     compact: boolean('compact', false),
     disabled: boolean('disabled', false),
-    state: select('Validation State', {
-        'default': null,
-        'valid': 'valid',
-        'invalid': 'invalid',
+    state: select('State', {
+        'none': '',
+        'success': 'success',
+        'error': 'error',
         'information': 'information',
         'warning': 'warning'
     }),
@@ -31,6 +31,18 @@ storiesOf('Components|FormRadioItem', module)
     ))
     .add('compact', () => (
         <FormRadioItem compact>Text Option</FormRadioItem>
+    ))
+    .add('State | Error', () => (
+        <FormRadioItem state='error'>Text Option</FormRadioItem>
+    ))
+    .add('State | Warning', () => (
+        <FormRadioItem state='warning'>Text Option</FormRadioItem>
+    ))
+    .add('State | Information', () => (
+        <FormRadioItem state='information'>Text Option</FormRadioItem>
+    ))
+    .add('State | Success', () => (
+        <FormRadioItem state='success'>Text Option</FormRadioItem>
     ))
     .add('disable styles', () => (
         <FormRadioItem {...createProps()} disableStyles>Text Option</FormRadioItem>

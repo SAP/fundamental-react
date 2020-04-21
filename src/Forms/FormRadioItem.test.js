@@ -96,6 +96,49 @@ describe('<FormRadioItem />', () => {
             ).toBe('Sample');
         });
     });
+    describe('Validation states', () => {
+        test('should render the correct snapshots', () => {
+            const formRadioItemWarning = (
+                <FormRadioItem id='foo' state='warning'>
+                    Option 1
+                </FormRadioItem>
+            );
+
+            let component = renderer.create(formRadioItemWarning);
+            let tree = component.toJSON();
+            expect(tree).toMatchSnapshot();
+
+            const formRadioItemError = (
+                <FormRadioItem id='foo' state='error'>
+                    Option 1
+                </FormRadioItem>
+            );
+
+            component = renderer.create(formRadioItemError);
+            tree = component.toJSON();
+            expect(tree).toMatchSnapshot();
+
+            const formRadioItemSuccess = (
+                <FormRadioItem id='foo' state='success'>
+                    Option 1
+                </FormRadioItem>
+            );
+
+            component = renderer.create(formRadioItemSuccess);
+            tree = component.toJSON();
+            expect(tree).toMatchSnapshot();
+
+            const formRadioItemInformation = (
+                <FormRadioItem id='foo' state='information'>
+                    Option 1
+                </FormRadioItem>
+            );
+
+            component = renderer.create(formRadioItemInformation);
+            tree = component.toJSON();
+            expect(tree).toMatchSnapshot();
+        });
+    });
     test('forwards the ref', () => {
         let ref;
         class Test extends React.Component {

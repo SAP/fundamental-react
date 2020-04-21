@@ -1,11 +1,10 @@
 import classnames from 'classnames';
 import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
-import { FORM_STATES } from '../utils/constants';
+import { FORM_MESSAGE_TYPES } from '../utils/constants';
 import PropTypes from 'prop-types';
 import React, { useEffect, useState } from 'react';
 
 const FormTextarea = React.forwardRef(({
-    children,
     className,
     compact,
     counterProps,
@@ -29,9 +28,6 @@ const FormTextarea = React.forwardRef(({
     const getInitialCharCount = () => {
         if (typeof value === 'boolean' || value) {
             return Math.min(value.toString().length, maxLength);
-        }
-        if (typeof children === 'string') {
-            return Math.min(children.length, maxLength);
         }
         if (defaultValue) {
             return Math.min(defaultValue.toString().length, maxLength);
@@ -61,7 +57,8 @@ const FormTextarea = React.forwardRef(({
 
     const formTextAreaClasses = classnames(
         'fd-textarea',
-        { 'fd-textarea--compact': compact,
+        {
+            'fd-textarea--compact': compact,
             [`is-${state}`]: state
         },
         className
@@ -73,10 +70,9 @@ const FormTextarea = React.forwardRef(({
     );
 
     return (
-        <React.Fragment>
+        <>
             <textarea
                 {...props}
-                children={children}
                 className={formTextAreaClasses}
                 defaultValue={defaultValue}
                 disabled={disabled}
@@ -92,14 +88,13 @@ const FormTextarea = React.forwardRef(({
                     {getMaxLengthText()}
                 </div>
             }
-        </React.Fragment>
+        </>
     );
 });
 
 FormTextarea.displayName = 'FormTextarea';
 
 FormTextarea.propTypes = {
-    children: PropTypes.node,
     className: PropTypes.string,
     compact: PropTypes.bool,
     counterProps: PropTypes.object,
@@ -112,7 +107,7 @@ FormTextarea.propTypes = {
     }),
     maxLength: PropTypes.number,
     readOnly: PropTypes.bool,
-    state: PropTypes.oneOf(FORM_STATES),
+    state: PropTypes.oneOf(FORM_MESSAGE_TYPES),
     value: PropTypes.string,
     onChange: PropTypes.func
 };

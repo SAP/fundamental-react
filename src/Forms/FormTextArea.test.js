@@ -5,9 +5,7 @@ import renderer from 'react-test-renderer';
 
 describe('<FormTextArea />', () => {
     const formTextArea = (
-        <FormTextarea id='textarea-2'>
-            Pellentesque metus lacus commodo eget justo ut rutrum varius nunc.
-        </FormTextarea>
+        <FormTextarea id='textarea-2' value='Pellentesque metus lacus commodo eget justo ut rutrum varius nunc.' />
     );
     const formTextareaCounter = (
         <FormTextarea id='textarea-3' maxLength={ 150 } />
@@ -48,6 +46,50 @@ describe('<FormTextArea />', () => {
         mount(<Test />);
         expect(ref.current.tagName).toEqual('TEXTAREA');
         expect(ref.current.className).toEqual('fd-textarea');
+    });
+
+    describe('Validation states', () => {
+        test('should render the correct snapshots', () => {
+            const formTextAreaWarning = (
+                <FormTextarea
+                    placeholder='Field placeholder text'
+                    state='warning' />
+            );
+
+            let component = renderer.create(formTextAreaWarning);
+            let tree = component.toJSON();
+            expect(tree).toMatchSnapshot();
+
+            const formTextAreaError = (
+                <FormTextarea
+                    placeholder='Field placeholder text'
+                    state='error' />
+            );
+
+            component = renderer.create(formTextAreaError);
+            tree = component.toJSON();
+            expect(tree).toMatchSnapshot();
+
+            const formTextAreaSuccess = (
+                <FormTextarea
+                    placeholder='Field placeholder text'
+                    state='success' />
+            );
+
+            component = renderer.create(formTextAreaSuccess);
+            tree = component.toJSON();
+            expect(tree).toMatchSnapshot();
+
+            const formTextAreaInformation = (
+                <FormTextarea
+                    placeholder='Field placeholder text'
+                    state='information' />
+            );
+
+            component = renderer.create(formTextAreaInformation);
+            tree = component.toJSON();
+            expect(tree).toMatchSnapshot();
+        });
     });
 
     describe('FormTextArea counter', () => {
