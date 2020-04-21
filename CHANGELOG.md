@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.9.0-rc.26"></a>
+# [0.9.0-rc.26](https://github.com/SAP/fundamental-react/compare/v0.9.0-rc.25...v0.9.0-rc.26) (2020-04-21)
+
+
+### Bug Fixes
+
+* Blur event validates time in the TimePicker input  ([#966](https://github.com/SAP/fundamental-react/issues/966)) ([b2aa07f](https://github.com/SAP/fundamental-react/commit/b2aa07f))
+
+
+
 <a name="0.9.0-rc.25"></a>
 # [0.9.0-rc.25](https://github.com/SAP/fundamental-react/compare/v0.9.0-rc.24...v0.9.0-rc.25) (2020-04-21)
 
