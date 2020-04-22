@@ -399,8 +399,7 @@ class DatePicker extends Component {
                     noArrow
                     onClickOutside={this.handleOutsideClickAndEscape}
                     onEscapeKey={this.handleOutsideClickAndEscape}
-                    ref={this.popoverRef}
-                    role='dialog' />
+                    ref={this.popoverRef} />
             </div>
         );
     }

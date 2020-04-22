@@ -5,7 +5,6 @@ import GridManager from '../utils/gridManager/gridManager';
 import keycode from 'keycode';
 import moment from 'moment';
 import PropTypes from 'prop-types';
-import shortId from '../utils/shortId';
 import { isDateBetween, isEnabledDate } from '../utils/dateUtils';
 import React, { Component } from 'react';
 
@@ -439,7 +438,7 @@ class Calendar extends Component {
         return this.props.specialDays[date.format('YYYYMMDD')] ? this.props.specialDays[date.format('YYYYMMDD')] : null;
     }
 
-    generateNavigation = (calendarHeaderId) => {
+    generateNavigation = () => {
         const months = moment.localeData(this.props.locale).months();
         const previousButtonLabel = this.state.showYears ?
             this.props.localizedText.show12PreviousYears : this.props.localizedText.previousMonth;
@@ -447,7 +446,7 @@ class Calendar extends Component {
             this.props.localizedText.show12NextYears : this.props.localizedText.nextMonth;
 
         return (
-            <header className='fd-calendar__header' id={calendarHeaderId}>
+            <header className='fd-calendar__header'>
                 <div aria-live='assertive' className='fd-calendar__navigation'>
                     <div className='fd-calendar__action'>
                         <Button
@@ -635,9 +634,6 @@ class Calendar extends Component {
             ...props
         } = this.props;
 
-        const calendarHeaderId = this.props.id ? this.props.id : shortId.generate();
-
-
         const calendarClasses = classnames(
             'fd-calendar',
             className
@@ -646,10 +642,10 @@ class Calendar extends Component {
         return (
             <>
                 <div {...props}
-                    aria-labelledby={calendarHeaderId}
                     className={calendarClasses}
-                    onKeyDown={(e) => this.onKeyDownCalendar(e)}>
-                    {this.generateNavigation(calendarHeaderId)}
+                    onKeyDown={(e) => this.onKeyDownCalendar(e)}
+                    role='application'>
+                    {this.generateNavigation()}
                     <div className='fd-calendar__content'>
                         {this._renderContent(monthListProps, yearListProps, tableProps, tableHeaderProps, tableBodyProps)}
                     </div>
