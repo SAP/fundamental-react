@@ -5,6 +5,7 @@ import GridManager from '../utils/gridManager/gridManager';
 import keycode from 'keycode';
 import moment from 'moment';
 import PropTypes from 'prop-types';
+import shortId from '../utils/shortId';
 import { isDateBetween, isEnabledDate } from '../utils/dateUtils';
 import React, { Component } from 'react';
 
@@ -438,7 +439,7 @@ class Calendar extends Component {
         return this.props.specialDays[date.format('YYYYMMDD')] ? this.props.specialDays[date.format('YYYYMMDD')] : null;
     }
 
-    generateNavigation = () => {
+    generateNavigation = (calendarHeaderId) => {
         const months = moment.localeData(this.props.locale).months();
         const previousButtonLabel = this.state.showYears ?
             this.props.localizedText.show12PreviousYears : this.props.localizedText.previousMonth;
@@ -446,7 +447,7 @@ class Calendar extends Component {
             this.props.localizedText.show12NextYears : this.props.localizedText.nextMonth;
 
         return (
-            <header className='fd-calendar__header'>
+            <header className='fd-calendar__header' id={calendarHeaderId}>
                 <div aria-live='assertive' className='fd-calendar__navigation'>
                     <div className='fd-calendar__action'>
                         <Button
@@ -634,6 +635,9 @@ class Calendar extends Component {
             ...props
         } = this.props;
 
+        const calendarHeaderId = this.props.id ? this.props.id : shortId.generate();
+
+
         const calendarClasses = classnames(
             'fd-calendar',
             className
@@ -641,9 +645,11 @@ class Calendar extends Component {
 
         return (
             <>
-                <div {...props} className={calendarClasses}
+                <div {...props}
+                    aria-labelledby={calendarHeaderId}
+                    className={calendarClasses}
                     onKeyDown={(e) => this.onKeyDownCalendar(e)}>
-                    {this.generateNavigation()}
+                    {this.generateNavigation(calendarHeaderId)}
                     <div className='fd-calendar__content'>
                         {this._renderContent(monthListProps, yearListProps, tableProps, tableHeaderProps, tableBodyProps)}
                     </div>
@@ -681,6 +687,7 @@ Calendar.basePropTypes = {
 
 Calendar.propTypes = {
     ...Calendar.basePropTypes,
+    id: PropTypes.string,
     monthListProps: PropTypes.object,
     tableBodyProps: PropTypes.object,
     tableHeaderProps: PropTypes.object,

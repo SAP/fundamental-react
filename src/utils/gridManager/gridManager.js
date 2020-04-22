@@ -246,6 +246,8 @@ export default class GridManager {
         if (nextCell) {
             this.focusCell(nextCell);
         }
+
+        event.stopPropagation();
         event.preventDefault();
     };
 
