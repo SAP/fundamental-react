@@ -649,10 +649,8 @@ class Calendar extends Component {
         return (
             <>
                 <div {...props}
-                    aria-modal
                     className={calendarClasses}
-                    onKeyDown={(e) => this.onKeyDownCalendar(e)}
-                    role='dialog'>
+                    onKeyDown={(e) => this.onKeyDownCalendar(e)}>
                     {this.generateNavigation()}
                     <div className='fd-calendar__content'>
                         {this._renderContent(monthListProps, yearListProps, tableProps, tableHeaderProps, tableBodyProps)}
