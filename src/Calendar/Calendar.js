@@ -648,7 +648,8 @@ class Calendar extends Component {
 
         return (
             <>
-                <div {...props}
+                <div
+                    {...props}
                     className={calendarClasses}
                     onKeyDown={(e) => this.onKeyDownCalendar(e)}>
                     {this.generateNavigation()}
