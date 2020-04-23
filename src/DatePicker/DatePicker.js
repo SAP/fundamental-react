@@ -472,7 +472,7 @@ DatePicker.propDescriptions = {
     enableRangeSelection: 'Set to **true** to enable the selection of a date range (begin and end).',
     locale: 'Language code to set the locale.',
     onBlur: 'Callback function for onBlur events. In the object returned, `date` is the date object, `formattedDate` is the formatted date, and `isoFormattedDate` is the date formatted in ISO-8601 format (YYYY-MM-DD).',
-    onChange: 'Callback function for onChange events. In the object returned, `date` is the date object, `formattedDate` is the formatted date, and `isoFormattedDate` is the date formatted in ISO-8601 format (YYYY-MM-DD).',
+    onChange: 'Callback function for onChange events - every keystroke when user inputs into date text field, after auto formatting date e.g. after 3/3/20 becomes 03/03/2020, after field is cleared due to invalid input, after new date is selected from popover. In the object returned, `date` is the date object, `formattedDate` is the formatted date, and `isoFormattedDate` is the date formatted in ISO-8601 format (YYYY-MM-DD).',
     onDatePickerClose: 'Callback function which triggers when datepicker closes after date selection. In the object returned, `date` is the date object, `formattedDate` is the formatted date, and `isoFormattedDate` is the date formatted in ISO-8601 format (YYYY-MM-DD).',
     onFocus: 'Callback function for onFocus events. In the object returned, `date` is the date object, `formattedDate` is the formatted date, and `isoFormattedDate` is the date formatted in ISO-8601 format (YYYY-MM-DD).',
     specialDays: 'Object with special dates and special date types in shape of `{\'YYYYMMDD\': type}`. Type must be a number between 1-20.'
