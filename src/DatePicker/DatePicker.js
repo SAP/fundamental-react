@@ -177,13 +177,15 @@ class DatePicker extends Component {
                 firstDate.isAfter(secondDate)
                     ? (arrSelected = [secondDate, firstDate])
                     : (arrSelected = [firstDate, secondDate]);
-
+                const newFormattedDateRangeStr = this.getFormattedDateRangeStr(arrSelected);
                 this.setState({
                     selectedDate: null,
                     arrSelectedDates: arrSelected,
-                    formattedDate: this.getFormattedDateRangeStr(arrSelected)
+                    formattedDate: newFormattedDateRangeStr
                 }, () => {
-                    this.executeCallback(this.props.onChange);
+                    if (formattedDate !== newFormattedDateRangeStr) {
+                        this.executeCallback(this.props.onChange);
+                    }
                     this.executeCallback(postValidationCallback);
                 });
             } else {
@@ -192,12 +194,15 @@ class DatePicker extends Component {
         } else {
             const newDate = this.getMomentDateObj(formattedDate);
             if (this.isDateValid(newDate)) {
+                const newFormattedDateStr = this.getFormattedDateStr(formattedDate);
                 this.setState({
                     selectedDate: newDate,
-                    formattedDate: this.getFormattedDateStr(formattedDate),
+                    formattedDate: newFormattedDateStr,
                     isoFormattedDate: formattedDate ? moment(formattedDate).format(ISO_DATE_FORMAT) : ''
                 }, () => {
-                    this.executeCallback(this.props.onChange);
+                    if (formattedDate !== newFormattedDateStr) {
+                        this.executeCallback(this.props.onChange);
+                    }
                     this.executeCallback(postValidationCallback);
                 });
             } else {
@@ -207,13 +212,16 @@ class DatePicker extends Component {
     }
 
     resetState = (postValidationCallback) => {
+        const { formattedDate } = this.state;
         this.setState({
             formattedDate: '',
             isoFormattedDate: '',
             selectedDate: null,
             arrSelectedDates: []
         }, () => {
-            this.executeCallback(this.props.onChange);
+            if (formattedDate !== '') {
+                this.executeCallback(this.props.onChange);
+            }
             this.executeCallback(postValidationCallback);
         });
     }
@@ -237,6 +245,7 @@ class DatePicker extends Component {
 
     updateDate = (date) => {
         let closeCalendar = false;
+        const { formattedDate } = this.state;
 
         if (this.props.enableRangeSelection) {
             let isoFormatDate = date[0].format(ISO_DATE_FORMAT);
@@ -244,21 +253,27 @@ class DatePicker extends Component {
                 isoFormatDate += dateRangeSeparator + date[1].format(ISO_DATE_FORMAT);
                 closeCalendar = true;
             }
+            const newFormattedDateRangeStr = this.getFormattedDateRangeStr(date);
             this.setState({
                 arrSelectedDates: date,
-                formattedDate: this.getFormattedDateRangeStr(date),
+                formattedDate: newFormattedDateRangeStr,
                 isoFormattedDate: isoFormatDate
             }, () => {
-                this.props.onChange(this.getCallbackData());
+                if (formattedDate !== newFormattedDateRangeStr) {
+                    this.props.onChange(this.getCallbackData());
+                }
             });
         } else {
             closeCalendar = true;
+            const newFormattedDate = this.getFormattedDateStr(date);
             this.setState({
                 selectedDate: date,
-                formattedDate: this.getFormattedDateStr(date),
+                formattedDate: newFormattedDate,
                 isoFormattedDate: date.format(ISO_DATE_FORMAT)
             }, () => {
-                this.props.onChange(this.getCallbackData());
+                if (formattedDate !== newFormattedDate) {
+                    this.props.onChange(this.getCallbackData());
+                }
             });
         }
 
