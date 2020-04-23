@@ -279,7 +279,9 @@ class Calendar extends Component {
 
         return (
             <div className='fd-calendar__months'>
-                <table {...monthProps} className='fd-calendar__table'
+                <table
+                    {...monthProps}
+                    className='fd-calendar__table'
                     ref={this.tableRef}
                     role='grid'>
                     <tbody className='fd-calendar__group'>
@@ -335,7 +337,9 @@ class Calendar extends Component {
         });
         return (
             <div className='fd-calendar__years'>
-                <table {...yearListProps} className='fd-calendar__table'
+                <table
+                    {...yearListProps}
+                    className='fd-calendar__table'
                     ref={this.tableRef}
                     role='grid'>
                     <tbody className='fd-calendar__group'>
@@ -598,8 +602,11 @@ class Calendar extends Component {
 
         return (
             <div className='fd-calendar__dates'>
-                <table {...tableProps} className='fd-calendar__table'
-                    ref={this.tableRef}>
+                <table
+                    {...tableProps}
+                    className='fd-calendar__table'
+                    ref={this.tableRef}
+                    role='grid'>
                     <thead {...tableHeaderProps} className='fd-calendar__group'>
                         {this.generateWeekdays()}
                     </thead>
@@ -642,9 +649,10 @@ class Calendar extends Component {
         return (
             <>
                 <div {...props}
+                    aria-modal
                     className={calendarClasses}
                     onKeyDown={(e) => this.onKeyDownCalendar(e)}
-                    role='application'>
+                    role='dialog'>
                     {this.generateNavigation()}
                     <div className='fd-calendar__content'>
                         {this._renderContent(monthListProps, yearListProps, tableProps, tableHeaderProps, tableBodyProps)}
