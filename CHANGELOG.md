@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.9.1-rc.0"></a>
+## [0.9.1-rc.0](https://github.com/SAP/fundamental-react/compare/v0.9.0...v0.9.1-rc.0) (2020-04-23)
+
+
+### Bug Fixes
+
+* days table role fix ([#972](https://github.com/SAP/fundamental-react/issues/972)) ([fdb4075](https://github.com/SAP/fundamental-react/commit/fdb4075))
+
+
+
 <a name="0.9.0"></a>
 # [0.9.0](https://github.com/SAP/fundamental-react/compare/v0.9.0-rc.26...v0.9.0) (2020-04-22)
 
