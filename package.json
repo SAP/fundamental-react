@@ -47,6 +47,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.8.0",
+    "@popperjs/core": "^2.3.3",
     "chain-function": "^1.0.1",
     "classnames": "^2.2.6",
     "fundamental-styles": "0.8.2-rc.0",
@@ -56,7 +57,7 @@
     "react-foco": "^1.3.0",
     "react-focus-lock": "^2.1.1",
     "react-overlays": "^2.1.0",
-    "react-popper": "^1.3.3",
+    "react-popper": "^2.2.2",
     "shortid": "^2.2.14",
     "tabbable": "^4.0.0"
   },

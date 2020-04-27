@@ -125,10 +125,11 @@ class Popper extends React.Component {
                             x-out-of-boundaries={!!outOfBoundaries ? 'true' : undefined}
                             x-placement={placement}>
                             {children}
-                            <span
+                            {!noArrow && <span
                                 className={`${cssBlock}__arrow`}
                                 ref={arrowProps.ref}
                                 style={arrowProps.style} />
+                            }
                         </div>
                     );
                 }}

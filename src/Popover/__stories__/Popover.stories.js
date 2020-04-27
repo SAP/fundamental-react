@@ -31,6 +31,9 @@ storiesOf('Components|Popover', module)
             disabled={boolean('disabled', false)}
             noArrow={boolean('noArrow', false)}
             placement={select('placement', {
+                'auto-start': 'auto-start',
+                'auto': 'auto',
+                'auto-end': 'auto-end',
                 'bottom-start': 'bottom-start',
                 'bottom': 'bottom',
                 'bottom-end': 'bottom-end',

@@ -97,6 +97,9 @@ export const POPOVER_TYPES = [
 ];
 
 export const POPPER_PLACEMENTS = [
+    'auto-start',
+    'auto',
+    'auto-end',
     'bottom-start',
     'bottom',
     'bottom-end',
