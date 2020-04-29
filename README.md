@@ -71,6 +71,16 @@ The `fundamental-react` library follows [Semantic Versioning](https://semver.org
 
 Merges to the `master` branch will be published as a prerelease. Prereleases will include an **rc** version (_e.g._ `[MAJOR].[MINOR].[PATCH]-rc.[RC]`).
 
+The following circumstances will be considered a **BREAKING** change:
+* A component’s existing API is altered (with the exception of additions)
+* The existing underlying HTML markup of a component is altered
+* An existing unit test is altered to account for either of the above
+
+The following circumstances will NOT be considered a **BREAKING** change:
+* Additions to a component’s API
+* Non-visual HTML attribute changes/additions (such as `role`, `aria-*`, `data-*`)
+* An existing unit test is altered to account for non-visual HTML attribute changes/additions (such as `role`, `aria-*`, `data-*`)
+
 ## Known Issues
 
 Please see [Issues](https://github.com/SAP/fundamental-react/issues).
