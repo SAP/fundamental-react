@@ -19,7 +19,7 @@ fs.copyFile('README.md', introductionPath, (err) => {
     if (err) throw err;
 
     const data = fs.readFileSync(introductionPath).toString().split('\n');
-    data.splice(0, 0, 'import { Meta } from \'@storybook/addon-docs/blocks\';\n\n <Meta title=\'Overview\' />\n' );
+    data.splice(0, 0, 'import { Meta } from \'@storybook/addon-docs/blocks\';\n\n <Meta title=\'Introduction/Overview\' />\n' );
     const text = data.join('\n');
 
     fs.writeFile(introductionPath, text, function(writeErr) {

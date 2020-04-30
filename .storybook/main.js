@@ -5,10 +5,10 @@ module.exports = {
         '@storybook/addon-knobs/register',
         '@storybook/addon-a11y/register',
         '@storybook/addon-storysource/register',
-        '@storybook/addon-notes/register',
         '@storybook/addon-viewport/register',
         '@storybook/addon-docs',
-        'storybook-addon-i18n/register'
+        'storybook-addon-i18n/register',
+        './.storybook/custom/register.js'
     ],
 
     webpackFinal: async(config) => {
