@@ -7,5 +7,9 @@ module.exports = {
     'setupFilesAfterEnv': ['../config/jest/setup.js'],
     'moduleNameMapper': {
         '^.+\\.(css)$': 'babel-jest'
+    },
+    'transform': {
+        '^.+\\.[tj]sx?$': 'babel-jest',
+        '^.+\\.mdx$': '@storybook/addon-docs/jest-transform-mdx'
     }
 };

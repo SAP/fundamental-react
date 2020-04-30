@@ -49,4 +49,4 @@ storiesOf('Components|ActionBar', module)
     ))
     .add('disable styles', () => (
         <ActionBar disableStyles title='default' />
-    ));
+    ))
