@@ -87,35 +87,35 @@ const ActionBar = React.forwardRef(({
 ActionBar.displayName = 'ActionBar';
 
 ActionBar.propTypes = {
+    /** Localized text for the heading */
     title: PropTypes.string.isRequired,
+    /** Classnames to spread to the action Button container */
     actionClassName: PropTypes.string,
+    /** Props to spread to the action Button container */
     actionProps: PropTypes.object,
+    /** Button components to add to the ActionBar */
     actions: PropTypes.node,
+    /** Classnames to spread to the back Button container */
     buttonContainerClassName: PropTypes.string,
+    /** Additional props to be spread to the `<button>` element */
     buttonProps: PropTypes.object,
     className: PropTypes.string,
+    /** Localized text for the description */
     description: PropTypes.string,
+    /** Additional props to be spread to the description\'s `<p>` element */
     descriptionProps: PropTypes.object,
+    /** Internal use only */
     disableStyles: PropTypes.bool,
+    /** Heading level. `<h1>` is reserved for the page title */
     headingLevel: CustomPropTypes.range(2, 6),
+    /** Additional props to be spread to the title\'s heading element */
     titleProps: PropTypes.object,
+    /** Callback to pass to the back Button */
     onBackClick: PropTypes.func
 };
 
 ActionBar.defaultProps = {
     headingLevel: 3
 };
-
-ActionBar.propDescriptions = {
-    actionClassName: 'Classnames to spread to the action Button container.',
-    actionProps: 'Props to spread to the action Button container',
-    actions: 'Button components to add to the ActionBar.',
-    buttonContainerClassName: 'Classnames to spread to the back Button container.',
-    description: 'Localized text for the description.',
-    descriptionProps: 'Additional props to be spread to the description\'s `<p>` element.',
-    headingLevel: 'Heading level. `<h1>` is reserved for the page title.',
-    onBackClick: 'Callback to pass to the back Button.'
-};
-
 
 export default ActionBar;

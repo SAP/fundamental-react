@@ -1,4 +1,3 @@
-import { ActionBarComponent } from '../ActionBar/ActionBar.Component';
 import { BreadcrumbComponent } from '../Breadcrumb/Breadcrumb.Component';
 import { BusyIndicatorComponent } from '../BusyIndicator/BusyIndicator.Component';
 import Button from '../Button/Button';
@@ -72,12 +71,6 @@ const routes = [
         section: 'Getting Started',
         sortOrder: 1, // this one should always come first
         omitSearch: true //should not be filtered for search
-    },
-    {
-        url: '/actionBar',
-        name: 'Action Bar',
-        component: ActionBarComponent,
-        section: 'Components'
     },
     {
         url: '/MessageStrip',

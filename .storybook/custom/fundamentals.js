@@ -5,13 +5,11 @@ export default create({
     base: 'light',
 
     colorPrimary: '#1085A7',
-    colorSecondary: 'white',
+    colorSecondary: '#354A5F',
 
     // UI
     appBg: '#EAEAEA',
     appContentBg: '#F3F4F5',
-    // appBorderColor: ,
-    // appBorderRadius: ,
 
     // Typography
     fontBase: '"72", "Open Sans", sans-serif',
@@ -19,14 +17,13 @@ export default create({
 
     // Text colors
     textColor: '#404040',
-    // textInverseColor:,
 
     // Toolbar default and active colors
     barTextColor: 'white',
-    barSelectedColor: 'white',
+    barSelectedColor: '#61DAFB',
     barBg: '#354A5F',
 
     brandTitle: `Fundamental React v${packageJson.version}`,
-    brandUrl: 'https://github.com/sap/fundamental-react'
-    // brandImage: './logo.svg'
+    brandUrl: 'https://github.com/sap/fundamental-react',
+    brandImage: './logo_text.png'
 });

@@ -9,11 +9,13 @@
 # production
 /build
 /lib
-# Readme copy for github pages site
+# Readme copy
 /src/_playground/documentation/Home/README.md
+src/Docs/
 
 # fonts for documentation site
-/src/_playground/static/*.woff
+/src/_playground/static/
+.storybook/static/*.woff
 
 #index files
 /src/**/index.js

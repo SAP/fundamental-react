@@ -1,0 +1,107 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import ActionBar from '../ActionBar';
+import Button from '../../Button/Button';
+import Menu from '../../Menu/Menu';
+import Popover from '../../Popover/Popover';
+import {
+    number,
+    text
+} from '@storybook/addon-knobs';
+
+<Meta title="Component API/ActionBar" component={ActionBar} />
+
+# ActionBar
+
+The **ActionBar** is located at the top of the page and is used for page title and main actions for the page.
+
+```
+ import { ActionBar } from 'fundamental-react/ActionBar';
+ ```
+
+## Default
+
+ActionBar with back button, description and action buttons
+
+<Preview withToolbar>
+  <Story name='Default'>
+      <ActionBar
+        actions={(
+            <>
+                <Button>Button</Button>
+                <Button option='emphasized'>Button</Button>
+            </>
+        )}
+        description={'Action Bar Description'}
+        onBackClick={() => {}}
+        title={'Page Title'} />
+  </Story>
+</Preview>
+
+## No Back Button
+
+ActionBar with no back button
+
+<Preview withToolbar>
+  <Story name='Without Back Button'>
+        <ActionBar
+        actions={(<><Button>Button</Button>
+            <Button option='emphasized'>Button</Button></>
+        )}
+        description='Action Bar Description'
+        title='Page Title' />
+    </Story>
+</Preview>
+
+## Several Main Actions in a Contextual Menu
+
+When there are several main actions for a page, consider displaying them under a contextual menu. This
+allows the user to look in the same position they are used to but avoids cluttering the action bar with
+more than 3-4 actions. This also works well for a responsive/adaptive application.
+
+<Preview withToolbar>
+  <Story name='With ContextualMenu'>
+      <ActionBar
+        actions={<Popover body={<Menu><Menu.List><Menu.Item url="#">Option 1</Menu.Item><Menu.Item url="#">Option 2</Menu.Item><Menu.Item url="#">Option 3</Menu.Item><Menu.Item url="#">Option 4</Menu.Item></Menu.List></Menu>} control={<Button glyph="vertical-grip" option="transparent"/>} placement="bottom-end"/>}
+        description="Action Bar Description"
+        title="Page Title"
+        />
+  </Story>
+</Preview>
+
+
+<Props of={ActionBar} />
+
+<!-- Stories excluded from documentation page -->
+
+<Story name='Dev' parameters={{ docs: { disable: true }}}>
+    <ActionBar
+        actions={(<><Button>Button</Button>
+            <Button option='emphasized'>Button</Button></>
+        )}
+        description={text('description', 'Action Bar description')}
+        headingLevel={number('headingLevel', 1, {
+            range: true,
+            min: 1,
+            max: 3,
+            step: 1
+        })}
+        onBackClick={() => {}}
+        title={text('title', 'Page Title')} />
+</Story>
+
+<Story name='With No Description' parameters={{ docs: { disable: true }}}>
+   <ActionBar
+        actions={(<><Button>Button</Button>
+            <Button option='emphasized'>Button</Button></>
+        )}
+        title='Page Title' />
+</Story>
+
+<Story name='With No Actions' parameters={{ docs: { disable: true }}}>
+     <ActionBar
+        title='Page Title' />
+</Story>
+
+<Story name='With disableStyles' parameters={{ docs: { disable: true }}}>
+    <ActionBar disableStyles title='default' />
+</Story>
