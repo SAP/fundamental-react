@@ -23,5 +23,7 @@ module.exports = {
             loaders: [require.resolve('@storybook/source-loader')],
             enforce: 'pre'
         });
+
+        return config;
     }
 };
