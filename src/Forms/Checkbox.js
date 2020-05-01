@@ -123,7 +123,7 @@ Checkbox.propTypes = {
     /** Additional props to be spread to the `<label>` element */
     labelProps: PropTypes.object,
     name: PropTypes.string,
-    /** State of validation */
+    /** State of validation: 'error', 'warning', 'information', 'success' */
     state: PropTypes.oneOf(FORM_MESSAGE_TYPES),
     value: PropTypes.string,
     /** Callback function when the change event fires on the component */

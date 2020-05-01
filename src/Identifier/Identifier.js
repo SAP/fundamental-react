@@ -63,10 +63,16 @@ Identifier.propTypes = {
     /** The icon to include. See the icon page for the list of icons */
     glyph: PropTypes.string,
     label: PropTypes.string,
-    /** Sets a style variation for a modified appearance */
+    /** Sets a style variation for a modified appearance: 'circle', 'transparent' */
     modifier: PropTypes.oneOf(IDENTIFIER_MODIFIERS),
     role: PropTypes.string,
-    /** Size of the component */
+    /** Size of the component:  'xxs',
+    'xs',
+    's',
+    'm',
+    'l',
+    'xl',
+    'xxl' */
     size: PropTypes.oneOf(IDENTIFIER_SIZES)
 };
 

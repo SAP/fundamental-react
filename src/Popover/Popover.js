@@ -191,13 +191,35 @@ Popover.propTypes = {
     disableStyles: PropTypes.bool,
     disableTriggerOnClick: PropTypes.bool,
     noArrow: PropTypes.bool,
+    /** 'bottom-start',
+    'bottom',
+    'bottom-end',
+    'left-start',
+    'left',
+    'left-end',
+    'right-start',
+    'right',
+    'right-end',
+    'top-start',
+    'top',
+    'top-end' */
     placement: PropTypes.oneOf(POPPER_PLACEMENTS),
     popperClassName: PropTypes.string,
     popperProps: PropTypes.object,
     show: PropTypes.bool,
-    /** Sets the variation of the component. Primarily used for styling */
+    /** Sets the variation of the component. Primarily used for styling: true,
+    'dialog',
+    'grid',
+    'listbox',
+    'menu',
+    'tree' */
     type: PropTypes.oneOf(POPOVER_TYPES),
     useArrowKeyNavigation: PropTypes.bool,
+    /** `<ul>
+<li>"matchTarget" - left and right edges align with the target</li>
+<li>"minTarget" - right edge aligns with target unless Popover content is bigger</li>
+<li>"maxTarget" - right edge aligns with target unless Popover content is smaller</li>
+</ul>`'none', 'matchTarget', 'minTarget', 'maxTarget' */
     widthSizingType: PropTypes.oneOf(POPPER_SIZING_TYPES),
     onClickOutside: PropTypes.func,
     onEscapeKey: PropTypes.func

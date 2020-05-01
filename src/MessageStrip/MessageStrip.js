@@ -103,7 +103,11 @@ MessageStrip.propTypes = {
         close: PropTypes.string
     }),
     noGlyph: PropTypes.bool,
-    /** Sets the variation of the component. Primarily used for styling */
+    /** Sets the variation of the component. Primarily used for styling:
+    'warning',
+    'error',
+    'success',
+    'information'*/
     type: PropTypes.oneOf(MESSAGESTRIP_TYPES),
     onCloseClicked: PropTypes.func
 };

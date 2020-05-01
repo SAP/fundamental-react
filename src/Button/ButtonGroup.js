@@ -26,6 +26,7 @@ ButtonGroup.displayName = 'ButtonGroup';
 ButtonGroup.propTypes = {
     /** Node(s) to render within the component */
     children: PropTypes.node,
+    /** Internal use only */
     disableStyles: PropTypes.bool
 };
 

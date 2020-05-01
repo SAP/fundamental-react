@@ -45,6 +45,11 @@ InlineHelp.propTypes = {
     contentClassName: PropTypes.string,
     /** Internal use only */
     disableStyles: PropTypes.bool,
+    /** 'bottom-right',
+    'bottom-left',
+    'right',
+    'left',
+    'bottom-center' */
     placement: PropTypes.oneOf(INLINE_HELP_PLACEMENTS)
 };
 

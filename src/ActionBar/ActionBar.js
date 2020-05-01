@@ -106,12 +106,9 @@ ActionBar.propTypes = {
     /** Additional props to be spread to the description\'s `<p>` element */
     descriptionProps: PropTypes.object,
     /** Internal use only */
-    /** Internal use only */
     disableStyles: PropTypes.bool,
     /** Heading level. `<h1>` is reserved for the page title */
-    /** Heading level. `<h1>` is reserved for the page title. It should not appear in components */
     headingLevel: CustomPropTypes.range(2, 6),
-    /** Additional props to be spread to the title\'s heading element */
     /**Additional props to be spread to the title\'s heading element */
     titleProps: PropTypes.object,
     /** Callback to pass to the back Button */

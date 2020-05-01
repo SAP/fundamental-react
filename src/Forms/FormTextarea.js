@@ -113,7 +113,7 @@ FormTextarea.propTypes = {
     maxLength: PropTypes.number,
     /** Set to **true** to mark component as readonly */
     readOnly: PropTypes.bool,
-    /** State of validation */
+    /** State of validation: 'error', 'warning', 'information', 'success' */
     state: PropTypes.oneOf(FORM_MESSAGE_TYPES),
     value: PropTypes.string,
     /** Callback function when the change event fires on the component */

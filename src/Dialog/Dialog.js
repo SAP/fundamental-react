@@ -172,7 +172,7 @@ Dialog.propTypes = {
     /** Heading level. `<h1>` is reserved for the page title. It should not appear in components */
     headingLevel: CustomPropTypes.range(2, 6),
     show: PropTypes.bool,
-    /** Size of the component */
+    /** Size of the component: 's', 'm', 'l', 'xl' */
     size: PropTypes.oneOf(DIALOG_SIZES),
     subheader: PropTypes.string,
     /**Additional props to be spread to the title\'s heading element */

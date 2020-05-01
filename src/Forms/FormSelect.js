@@ -42,7 +42,7 @@ FormSelect.propTypes = {
     disabled: PropTypes.bool,
     /** Internal use only */
     disableStyles: PropTypes.bool,
-    /** State of validation */
+    /** State of validation: 'error', 'warning', 'information', 'success' */
     state: PropTypes.oneOf(FORM_MESSAGE_TYPES)
 };
 

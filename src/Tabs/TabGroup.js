@@ -115,7 +115,11 @@ TabGroup.propTypes = {
     /** Internal use only */
     disableStyles: PropTypes.bool,
     selectedIndex: PropTypes.number,
-    /** Size of the component */
+    /** Size of the component: 's',
+    'm',
+    'l',
+    'xl',
+    'xxl' */
     size: PropTypes.oneOf(TAB_SIZES),
     tabGroupProps: PropTypes.object,
     onTabClick: PropTypes.func

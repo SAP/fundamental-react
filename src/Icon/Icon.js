@@ -36,7 +36,7 @@ Icon.propTypes = {
     className: PropTypes.string,
     /** Internal use only */
     disableStyles: PropTypes.bool,
-    /** Size of the component */
+    /** Size of the component: 's', 'm', 'l', 'xl' */
     size: PropTypes.oneOf(ICON_SIZES)
 };
 

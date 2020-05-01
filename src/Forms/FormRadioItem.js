@@ -91,7 +91,7 @@ FormRadioItem.propTypes = {
     /** Additional props to be spread to the `<label>` element */
     labelProps: PropTypes.object,
     name: PropTypes.string,
-    /** State of validation */
+    /** State of validation: 'error', 'warning', 'information', 'success' */
     state: PropTypes.oneOf(FORM_MESSAGE_TYPES),
     value: PropTypes.string
 };

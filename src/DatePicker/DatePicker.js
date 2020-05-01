@@ -451,7 +451,7 @@ DatePicker.propTypes = {
     specialDays: PropTypes.object,
     /** An object identifying a validation message.  The object will include properties for `state` and `text`; _e.g._, \`{ state: \'warning\', text: \'This is your last warning\' }\` */
     validationState: PropTypes.shape({
-        /** State of validation */
+        /** State of validation: 'error', 'warning', 'information', 'success' */
         state: PropTypes.oneOf(FORM_MESSAGE_TYPES),
         /** Text of the validation message */
         text: PropTypes.string

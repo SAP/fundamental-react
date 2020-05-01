@@ -62,10 +62,16 @@ Button.propTypes = {
     disableStyles: PropTypes.bool,
     /** The icon to include. See the icon page for the list of icons */
     glyph: PropTypes.string,
+    /** Indicates the importance of the button: 'empahsized' or 'transparent' */
     option: PropTypes.oneOf(BUTTON_OPTIONS),
+    /** Set to **true** to set state of the button to "selected" */
     selected: PropTypes.bool,
-    /** Sets the variation of the component. Primarily used for styling */
+    /** Sets the variation of the component. Primarily used for styling: 'standard',
+    'positive',
+    'negative',
+    'medium' */
     type: PropTypes.oneOf(BUTTON_TYPES),
+    /** Value for the `type` attribute on the `<button>` element */
     typeAttr: PropTypes.string,
     /** Callback function when user clicks on the component*/
     onClick: PropTypes.func
@@ -73,12 +79,6 @@ Button.propTypes = {
 
 Button.defaultProps = {
     typeAttr: 'button'
-};
-
-Button.propDescriptions = {
-    option: 'Indicates the importance of the button.',
-    selected: 'Set to **true** to set state of the button to "selected".',
-    typeAttr: 'Value for the `type` attribute on the `<button>` element.'
 };
 
 export default Button;
