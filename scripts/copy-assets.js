@@ -14,6 +14,11 @@ if (fs.existsSync(introductionPath)) {
     });
 }
 
+// create Docs folder if it doesn't already exist
+if (!fs.existsSync('src/Docs')) {
+    fs.mkdirSync('src/Docs');
+}
+
 // copy readme file and prepend necessary <Meta /> tag for storybook
 fs.copyFile('README.md', introductionPath, (err) => {
     if (err) throw err;
