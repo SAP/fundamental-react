@@ -102,7 +102,7 @@
     "enzyme-adapter-react-16": "^1.7.0",
     "eslint": "5.16.0",
     "eslint-config-react-app": "^3.0.5",
-    "eslint-loader": "3.0.2",
+    "eslint-loader": "3.0.4",
     "eslint-plugin-compat": "^2.6.3",
     "eslint-plugin-flowtype": "2.50.3",
     "eslint-plugin-ie11": "^1.0.0",
