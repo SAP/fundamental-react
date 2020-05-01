@@ -9,7 +9,12 @@ globals:
 
 parser: 'babel-eslint'
 
-#extends: 'react-app'
+extends:
+    - react-app
+
+overrides:
+    - files: ["*.mdx"]
+    - extends: plugin:mdx/overrides
 
 plugins:
     - compat
