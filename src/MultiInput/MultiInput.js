@@ -192,8 +192,8 @@ class MultiInput extends Component {
                         aria-haspopup='true'
                         className={inputGroupClasses}
                         compact={compact}
-                        disableStyles={disableStyles}
                         disabled={disabled}
+                        disableStyles={disableStyles}
                         onClick={this.showHideTagList}
                         validationState={!this.state.bShowList ? validationState : null}>
                         <div {...tagProps} className={tokenizerClassName}>
@@ -216,8 +216,8 @@ class MultiInput extends Component {
                         </InputGroup.Addon>
                     </InputGroup>
                 }
-                disableStyles={disableStyles}
                 disabled={disabled}
+                disableStyles={disableStyles}
                 noArrow
                 onClickOutside={this.handleClickOutside}
                 widthSizingType='matchTarget' />

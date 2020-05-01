@@ -3,9 +3,11 @@ const ANONYMOUS = '<<anonymous>>';
 /* eslint-disable no-console */
 
 const wrapValidator = (validator, typeName, typeChecker = null) => {
+    // eslint-disable-next-line compat/compat
     return Object.assign(validator.bind(), {
         typeName,
         typeChecker,
+        // eslint-disable-next-line compat/compat
         isRequired: Object.assign(validator.isRequired.bind(), {
             typeName,
             typeChecker,

@@ -8,6 +8,7 @@ import ReactDOM from 'react-dom';
 import React, { Component } from 'react';
 class Dialog extends Component {
     // select body element to add Dialog component too
+    // eslint-disable-next-line compat/compat
     bodyElm = document.querySelector('body');
 
     handleCloseClick = (e) => {

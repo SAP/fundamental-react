@@ -124,8 +124,8 @@ class TimePicker extends Component {
                     body={
                         <Time
                             {...timeProps}
-                            disableStyles={disableStyles}
                             disabled={this.state.disabled}
+                            disableStyles={disableStyles}
                             format12Hours={this.state.format12Hours}
                             id={timeId}
                             onChange={this.onChange}
@@ -139,8 +139,8 @@ class TimePicker extends Component {
                         <TimePickerItem
                             {...props}
                             buttonProps={buttonProps}
-                            disableStyles={disableStyles}
                             disabled={this.state.disabled}
+                            disableStyles={disableStyles}
                             format12Hours={format12Hours}
                             id={id}
                             inputProps={inputProps}

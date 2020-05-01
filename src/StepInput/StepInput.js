@@ -97,14 +97,14 @@ const StepInput = React.forwardRef(({
     return (
         <>
             <InputGroup className={inputGroupClasses}
-                disableStyles={disableStyles}
                 disabled={disabled}
+                disableStyles={disableStyles}
                 ref={ref} {...rest}
                 onKeyDown={onKeyDownInput}>
                 {readOnly ? null : minusBtn}
                 <FormInput
-                    disableStyles={disableStyles}
                     disabled={disabled}
+                    disableStyles={disableStyles}
                     onChange={onChangeInputValue}
                     placeholder={placeholder}
                     value={inputValue} />

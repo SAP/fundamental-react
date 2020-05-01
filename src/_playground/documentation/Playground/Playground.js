@@ -1,3 +1,5 @@
+/* eslint-disable compat/compat */
+// disabled because this is being removed anyways
 import { Button } from '../../../';
 import Heading from '../Heading/Heading';
 import { Icon } from '../../../';

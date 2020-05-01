@@ -59,8 +59,8 @@ const FormRadioItem = React.forwardRef(({
             <FormLabel
                 {...labelProps}
                 className='fd-radio__label'
-                disableStyles={disableStyles}
                 disabled={disabled}
+                disableStyles={disableStyles}
                 htmlFor={radioId}>
                 {children}
             </FormLabel>

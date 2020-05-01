@@ -27,7 +27,7 @@ export const ButtonComponent = () => {
                     There may be more than one on the page.`}
                 title='Button Options'>
                 <Button onClick={() => clickBtnHandler('Emphasized')} option='emphasized'>
-                        Emphasized Button
+                    Emphasized Button
                 </Button>
                 <Button onClick={() => clickBtnHandler('Regular')}>Regular Button</Button>
                 <Button onClick={() => clickBtnHandler('Transparent')} option='transparent'>Transparent Button</Button>
@@ -53,27 +53,27 @@ export const ButtonComponent = () => {
                 <div className='fd-container'>
                     <div className='fd-col--6'>
                         <Button glyph='cart' option='emphasized'>
-                                Add to Cart
+                            Add to Cart
                         </Button>
 
                         <Button glyph='cart'>Add to Cart</Button>
 
                         <Button glyph='filter' option='transparent'>
-                                Add to Cart
+                            Add to Cart
                         </Button>
 
                         <Button glyph='accept' type='positive'>
-                                Approve
+                            Approve
                         </Button>
 
                         <Button glyph='decline' type='negative'>
-                                Reject
+                            Reject
                         </Button>
 
                         <Button
                             glyph='alert'
                             option='emphasized'>
-                                Review
+                            Review
                         </Button>
                     </div>
 
@@ -114,40 +114,40 @@ export const ButtonComponent = () => {
                 <div className='frDocs-tile__centered'>
                     <Button option='emphasized'>Emphasized</Button>
                     <Button option='emphasized' selected>
-                            Selected
+                        Selected
                     </Button>
                     <Button disabled option='emphasized'>
-                            Disabled
+                        Disabled
                     </Button>
                 </div>
                 <div className='frDocs-tile__break' />
                 <div className='frDocs-tile__centered'>
                     <Button option='transparent'>Transparent</Button>
                     <Button option='transparent' selected>
-                    Selected
+                        Selected
                     </Button>
                     <Button disabled option='transparent'>
-                    Disabled
+                        Disabled
                     </Button>
                 </div>
                 <div className='frDocs-tile__break' />
                 <div className='frDocs-tile__centered'>
                     <Button type='positive'>Positive</Button>
                     <Button selected type='positive'>
-                    Selected
+                        Selected
                     </Button>
                     <Button disabled type='positive'>
-                    Disabled
+                        Disabled
                     </Button>
                 </div>
                 <div className='frDocs-tile__break' />
                 <div className='frDocs-tile__centered'>
                     <Button type='negative'>Negative</Button>
                     <Button selected type='negative'>
-                    Selected
+                        Selected
                     </Button>
                     <Button disabled type='negative'>
-                    Disabled
+                        Disabled
                     </Button>
                 </div>
             </Example>
@@ -164,7 +164,7 @@ export const ButtonComponent = () => {
                 <ButtonGroup>
                     <Button compact>Left</Button>
                     <Button compact selected>
-                            Middle
+                        Middle
                     </Button>
                     <Button compact>Right</Button>
                 </ButtonGroup>

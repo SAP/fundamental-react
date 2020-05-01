@@ -231,7 +231,7 @@ describe('<SearchInput />', () => {
                 element.find('input').getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
 
-            element = mount(<SearchInput inShellbar inputProps={{ 'data-sample': 'Sample1' }} />);
+            element = mount(<SearchInput inputProps={{ 'data-sample': 'Sample1' }} inShellbar />);
 
             expect(
                 element.find('input').getDOMNode().attributes['data-sample'].value

@@ -26,9 +26,9 @@ storiesOf('Components|Popover', module)
         <Popover
             body={someMenu}
             control={<Button glyph='navigation-up-arrow' option='transparent' />}
+            disabled={boolean('disabled', false)}
             disableEdgeDetection={boolean('disableEdgeDetection', false)}
             disableKeyPressHandler={boolean('disableKeyPressHandler', false)}
-            disabled={boolean('disabled', false)}
             noArrow={boolean('noArrow', false)}
             placement={select('placement', {
                 'bottom-start': 'bottom-start',

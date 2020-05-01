@@ -16,7 +16,7 @@ export const PanelComponent = () => {
                         <Panel.Head description='Panel Description' title={'Panel Header with Actions'} />
                         <Panel.Actions>
                             <Button compact glyph='add'>
-                                    Add New Button
+                                Add New Button
                             </Button>
                         </Panel.Actions>
                     </Panel.Header>

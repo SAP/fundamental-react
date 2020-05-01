@@ -117,8 +117,8 @@ const Select = React.forwardRef(({
                     </List>
                 </>)}
             control={selectControl}
-            disableStyles={disableStyles}
             disabled={disabled}
+            disableStyles={disableStyles}
             noArrow
             placement='bottom-start'
             popperProps={{ id }}

@@ -3,3 +3,4 @@ lib
 !/.storybook
 storybook-static
 src/Docs/*
+.*

@@ -32,52 +32,52 @@ storiesOf('Components|FormRadioGroup', module)
     .add('Default', () => (
         <FormRadioGroup {...createRadioGroupProps()}>
             <FormRadioItem {...createRadioProps()}>
-            Option 1
+                Option 1
             </FormRadioItem>
             <FormRadioItem {...createRadioProps()}>
-            Option 2
+                Option 2
             </FormRadioItem>
             <FormRadioItem {...createRadioProps()}>
-            Option 3
+                Option 3
             </FormRadioItem>
         </FormRadioGroup>
     ))
     .add('inline', () => (
         <FormRadioGroup inline>
             <FormRadioItem>
-            Option 1
+                Option 1
             </FormRadioItem>
             <FormRadioItem>
-            Option 2
+                Option 2
             </FormRadioItem>
             <FormRadioItem>
-            Option 3
+                Option 3
             </FormRadioItem>
         </FormRadioGroup>
     ))
     .add('compact', () => (
         <FormRadioGroup compact>
             <FormRadioItem>
-            Option 1
+                Option 1
             </FormRadioItem>
             <FormRadioItem>
-            Option 2
+                Option 2
             </FormRadioItem>
             <FormRadioItem>
-            Option 3
+                Option 3
             </FormRadioItem>
         </FormRadioGroup>
     ))
     .add('disable styles', () => (
         <FormRadioGroup disableStyles>
             <FormRadioItem>
-            Option 1
+                Option 1
             </FormRadioItem>
             <FormRadioItem>
-            Option 2
+                Option 2
             </FormRadioItem>
             <FormRadioItem>
-             Option 3
+                Option 3
             </FormRadioItem>
         </FormRadioGroup>
     ));
