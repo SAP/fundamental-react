@@ -30,15 +30,14 @@ const BreadcrumbItem = ({ url, name, className, children, ...props }) => {
 BreadcrumbItem.displayName = 'Breadcrumb.Item';
 
 BreadcrumbItem.propTypes = {
+    /** Node(s) to render within the component */
     children: PropTypes.node,
+    /** CSS class(es) to add to the element */
     className: PropTypes.string,
+    /** Text for the internal anchor tag */
     name: PropTypes.string,
+    /** An anchor tag will be generated and set to the url prop. Name or child text must be provided */
     url: PropTypes.string
-};
-
-BreadcrumbItem.propDescriptions = {
-    name: 'Text for the internal anchor tag.',
-    url: 'An anchor tag will be generated and set to the url prop. Name or child text must be provided.'
 };
 
 export default BreadcrumbItem;

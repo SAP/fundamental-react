@@ -1,6 +1,5 @@
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
 import Breadcrumb from '../Breadcrumb';
-import { Link } from 'react-router-dom';
 
 <Meta title="Component API/Breadcrumb" component={Breadcrumb} />
 
@@ -14,8 +13,9 @@ other pages at that same level.
  import { Breadcrumb } from 'fundamental-react/Breadcrumb';
  ```
 
-## Default
+## Examples
 
+### Default 
 <Preview withToolbar>
   <Story name='Default'>
        <Breadcrumb>
@@ -26,6 +26,7 @@ other pages at that same level.
   </Story>
 </Preview>
 
+### Using Url Prop
 <Preview withToolbar>
   <Story name='Using Url Prop'>
       <Breadcrumb>
@@ -36,23 +37,13 @@ other pages at that same level.
   </Story>
 </Preview>
 
-<Preview withToolbar>
-  <Story name='Using Link from React Router'>
-      <Breadcrumb>
-        <Breadcrumb.Item>
-            <Link to='#'>Link Text</Link>
-        </Breadcrumb.Item>
-        <Breadcrumb.Item>
-            <Link to='#'>Link Text</Link>
-        </Breadcrumb.Item>
-        <Breadcrumb.Item>
-            <Link to='#'>Link Text</Link>
-        </Breadcrumb.Item>
-      </Breadcrumb>
-  </Story>
-</Preview>
+## Properties
 
+### Breadcrumb
 <Props of={Breadcrumb} />
+
+### Breadcrumb.Item
+<Props of={Breadcrumb.Item} />
 
 <!-- Stories excluded from documentation page -->
 

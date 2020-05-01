@@ -1,5 +1,3 @@
-# See https://help.github.com/ignore-files/ for more about ignoring files.
-
 # dependencies
 /node_modules
 
@@ -7,14 +5,11 @@
 /coverage
 
 # production
-/build
 /lib
 # Readme copy
-/src/_playground/documentation/Home/README.md
 src/Docs/
 
 # documentation website assets
-/src/_playground/static/
 .storybook/static/*.woff
 .storybook/static/*.css
 storybook-static

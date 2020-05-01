@@ -1,5 +1,3 @@
-const path = require('path');
-
 const defaultPresets = [
     [
         '@babel/preset-env',
@@ -23,8 +21,7 @@ const productionPlugins = [
         {
             mode: 'unsafe-wrap'
         }
-    ],
-    path.resolve(__dirname, './devtools/removePropDescriptions.js')
+    ]
 ];
 
 module.exports = {

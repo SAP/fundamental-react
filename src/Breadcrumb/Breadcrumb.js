@@ -18,12 +18,10 @@ const Breadcrumb = React.forwardRef(({ children, disableStyles, ...props }, ref)
 Breadcrumb.displayName = 'Breadcrumb';
 
 Breadcrumb.propTypes = {
+    /** List item (`Breadcrumb.Item`) nodes or React Router Link components */
     children: PropTypes.node,
+    /** Internal use only */
     disableStyles: PropTypes.bool
-};
-
-Breadcrumb.propDescriptions = {
-    children: 'List item (`BreadcrumbItem`) nodes.'
 };
 
 Breadcrumb.Item = BreadcrumbItem;
