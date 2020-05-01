@@ -4,7 +4,8 @@ import packageJson from '../../package.json';
 import React from 'react';
 import { addons, types } from '@storybook/addons';
 
-// give a unique name for the panel
+// TO DO: replace with addons-toolbar when storybook 6.0.0 released
+// https://www.npmjs.com/package/@storybook/addon-toolbars
 addons.add('fundamental-react/title', {
     title: 'Version',
     type: types.TOOL,

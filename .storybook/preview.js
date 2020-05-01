@@ -7,6 +7,7 @@ import { withI18n } from 'storybook-addon-i18n';
 import { addDecorator, addParameters } from '@storybook/react';
 import { DocsContainer, DocsPage } from '@storybook/addon-docs/blocks';
 
+// Order of folders to display
 const headers = [
     'Introduction',
     'Component API'
@@ -21,7 +22,6 @@ const storySort = (a, b) => {
         const bHeaderIndex = headers.findIndex(h => h === bHeader);
         return aHeaderIndex - bHeaderIndex;
     }
-
     return 0;
 };
 
@@ -36,7 +36,7 @@ addParameters({
         page: DocsPage
     },
     i18n: {
-        provider: ({ children }) => <React.Fragment>{children}</React.Fragment>,
+        provider: ({ children }) => <>{children}</>,
         supportedLocales: ['LTR', 'RTL'],
         providerLocaleKey: 'locale',
         getDirection: locale => locale.toLowerCase()
