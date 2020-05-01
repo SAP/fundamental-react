@@ -1,7 +1,6 @@
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
 import Breadcrumb from '../Breadcrumb';
-import {
-} from '@storybook/addon-knobs';
+import { Link } from 'react-router-dom';
 
 <Meta title="Component API/Breadcrumb" component={Breadcrumb} />
 
@@ -17,7 +16,6 @@ other pages at that same level.
 
 ## Default
 
-
 <Preview withToolbar>
   <Story name='Default'>
        <Breadcrumb>
@@ -29,37 +27,39 @@ other pages at that same level.
 </Preview>
 
 <Preview withToolbar>
-  <Story name=''>
+  <Story name='Using Url Prop'>
+      <Breadcrumb>
+        <Breadcrumb.Item name='Link Text' url='#' />
+        <Breadcrumb.Item name='Link Text' url='#' />
+        <Breadcrumb.Item name='Link Text' url='#' />
+    </Breadcrumb>
   </Story>
 </Preview>
 
 <Preview withToolbar>
-  <Story name=''>
+  <Story name='Using Link from React Router'>
+      <Breadcrumb>
+        <Breadcrumb.Item>
+            <Link to='#'>Link Text</Link>
+        </Breadcrumb.Item>
+        <Breadcrumb.Item>
+            <Link to='#'>Link Text</Link>
+        </Breadcrumb.Item>
+        <Breadcrumb.Item>
+            <Link to='#'>Link Text</Link>
+        </Breadcrumb.Item>
+      </Breadcrumb>
   </Story>
 </Preview>
 
-<Preview withToolbar>
-  <Story name=''>
-  </Story>
-</Preview>
-
-<Props of={} />
+<Props of={Breadcrumb} />
 
 <!-- Stories excluded from documentation page -->
 
 <Story name='Disabled Styles' parameters={{ docs: { disable: true }}}>
     <Breadcrumb disableStyles>
-            <Breadcrumb.Item name='Link Text' url='#' />
-            <Breadcrumb.Item name='Link Text' url='#' />
-            <Breadcrumb.Item name='Link Text' url='#' />
-        </Breadcrumb>
+        <Breadcrumb.Item name='Link Text' url='#' />
+        <Breadcrumb.Item name='Link Text' url='#' />
+        <Breadcrumb.Item name='Link Text' url='#' />
+    </Breadcrumb>
 </Story>
-
-<Story name='' parameters={{ docs: { disable: true }}}>
-    
-</Story>
-
-<Story name='' parameters={{ docs: { disable: true }}}>
-    
-</Story>
-

@@ -1,4 +1,3 @@
-/* eslint-disable mdx/no-unused-expressions */
 import Button from '../Button/Button';
 import Calendar from '../Calendar/Calendar';
 import classnames from 'classnames';
