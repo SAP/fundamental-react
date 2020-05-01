@@ -27,7 +27,7 @@ For an existing react application, follow the steps below:
 
 1. Install `fundamental-react`.
 
-    ```
+    ```javascript
     npm install fundamental-react
     ```
 
@@ -47,7 +47,7 @@ For an existing react application, follow the steps below:
 
 1. This project does not contain fonts and icons - they must be added to your project separately. Fonts and icons can be found at [`@sap-theming/theming-base-content`](https://github.com/SAP/theming-base-content). After importing fonts and icons from [`@sap-theming/theming-base-content`](https://github.com/SAP/theming-base-content), add the following to your css:
 
-```
+```css
     @font-face {
         font-family: "72";
         src: url("path/to/fonts") format("woff"); // Bold, Light, Regular available in woff and woff2
