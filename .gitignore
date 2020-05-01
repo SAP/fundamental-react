@@ -16,6 +16,7 @@ src/Docs/
 # documentation website assets
 /src/_playground/static/
 .storybook/static/*.woff
+.storybook/static/*.css
 storybook-static
 
 #index files

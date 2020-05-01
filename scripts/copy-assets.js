@@ -1,9 +1,18 @@
 const fs = require('fs-extra');
 
+// All files for Storybook documentation website
+// fonts and icons
 const fontPath = require.resolve('@sap-theming/theming-base-content/content/Base/baseLib/sap_base_fiori/fonts/72-Regular.woff');
 const fontPathLight = require.resolve('@sap-theming/theming-base-content/content/Base/baseLib/sap_base_fiori/fonts/72-Light.woff');
 const fontPathBold = require.resolve('@sap-theming/theming-base-content/content/Base/baseLib/sap_base_fiori/fonts/72-Bold.woff');
 const iconPath = require.resolve('@sap-theming/theming-base-content/content/Base/baseLib/sap_fiori_3/fonts/SAP-icons.woff');
+
+const defaultCssVariables = require.resolve('@sap-theming/theming-base-content/content/Base/baseLib/sap_fiori_3/css_variables.css');
+const darkCssVariables = require.resolve('@sap-theming/theming-base-content/content/Base/baseLib/sap_fiori_3_dark/css_variables.css');
+const lightDarkCssVariables = require.resolve('@sap-theming/theming-base-content/content/Base/baseLib/sap_fiori_3_light_dark/css_variables.css');
+const HCBCssVariables = require.resolve('@sap-theming/theming-base-content/content/Base/baseLib/sap_fiori_3_hcb/css_variables.css');
+const HCWCssVariables = require.resolve('@sap-theming/theming-base-content/content/Base/baseLib/sap_fiori_3_hcw/css_variables.css');
+
 
 const introductionPath = 'src/Docs/introduction.stories.mdx';
 
@@ -47,5 +56,20 @@ fs.copyFile(fontPathBold, '.storybook/static/72-Bold.woff', (err) => {
     if (err) throw err;
 });
 fs.copyFile(iconPath, '.storybook/static/SAP-icons.woff', (err) => {
+    if (err) throw err;
+});
+fs.copyFile(defaultCssVariables, '.storybook/static/css_variables.css', (err) => {
+    if (err) throw err;
+});
+fs.copyFile(darkCssVariables, '.storybook/static/dark_css_variables.css', (err) => {
+    if (err) throw err;
+});
+fs.copyFile(lightDarkCssVariables, '.storybook/static/light_dark_css_variables.css', (err) => {
+    if (err) throw err;
+});
+fs.copyFile(HCBCssVariables, '.storybook/static/HCB_css_variables.css', (err) => {
+    if (err) throw err;
+});
+fs.copyFile(HCWCssVariables, '.storybook/static/HCW_css_variables.css', (err) => {
     if (err) throw err;
 });
