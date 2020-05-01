@@ -36,6 +36,7 @@ const weekdayOptions = {
 
 storiesOf('Components|Calendar', module)
     .addDecorator(withKnobs)
+    .addParameters({ storyshots: { disable: true } })
     .add('Default', () => (
         <Calendar
             blockedDates={[dateKnobToDate('block between dates (1)', blockedDateFirstDefault),

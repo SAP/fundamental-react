@@ -1,32 +1,22 @@
-/* eslint-disable no-console */
-import { imageSnapshot } from '@storybook/addon-storyshots-puppeteer';
+/**
+ * @jest-environment jsdom
+ */
 import initStoryshots from '@storybook/addon-storyshots';
 
-const getMatchOptions = () => {
+// mock shortid for snapshot testing
+jest.mock('shortid', () => {
+    let id = 1;
+
     return {
-        failureThreshold: 0.2,
-        failureThresholdType: 'percent'
+        generate: () => id++
     };
-};
-
-//This is needed to keep CI from failing due to viewport differences
-const view = {
-    name: 'Desktop 800x600',
-    userAgent: 'placeholder',
-    viewport: {
-        width: 800,
-        height: 600
-    }
-};
-
-const customizePage = (page) => page.emulate(view);
-const beforeScreenshot = (page) => page.emulate(view);
-
-initStoryshots({
-    test: imageSnapshot({
-        storybookUrl: 'http://localhost:12123/',
-        customizePage,
-        getMatchOptions,
-        beforeScreenshot
-    })
 });
+
+// ReactDOM.createPortal = node => node;
+jest.mock('react-dom');
+
+
+// create jest snapshot tests from each story
+initStoryshots();
+
+

@@ -11,6 +11,7 @@ import {
 
 storiesOf('Components|Dialog', module)
     .addDecorator(withKnobs)
+    .addParameters({ storyshots: { disable: true } })
     .add('Dev', () => (
         <Dialog
             actions={[
