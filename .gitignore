@@ -13,9 +13,10 @@
 /src/_playground/documentation/Home/README.md
 src/Docs/
 
-# fonts for documentation site
+# documentation website assets
 /src/_playground/static/
 .storybook/static/*.woff
+storybook-static
 
 #index files
 /src/**/index.js
