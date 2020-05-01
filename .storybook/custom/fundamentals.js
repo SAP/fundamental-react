@@ -3,8 +3,8 @@ import packageJson from '../../package.json';
 
 export default create({
     base: 'light',
-    colorPrimary: '#1085A7',
-    colorSecondary: '#354A5F',
+    colorPrimary: '#1085A7', // Fundamental logo blue
+    colorSecondary: '#1085A7',
     // UI
     appBg: '#EAEAEA',
     appContentBg: '#F3F4F5',
@@ -13,6 +13,7 @@ export default create({
     fontCode: 'monospace',
     // Text colors
     textColor: '#404040',
+    textInverseColor: '#1085A7',
     // Toolbar default and active colors
     barTextColor: 'white',
     barSelectedColor: '#61DAFB',
