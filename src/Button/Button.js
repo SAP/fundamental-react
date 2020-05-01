@@ -50,16 +50,24 @@ const Button = React.forwardRef(({
 Button.displayName = 'Button';
 
 Button.propTypes = {
+    /** Node(s) to render within the component */
     children: PropTypes.node,
+    /** CSS class(es) to add to the element */
     className: PropTypes.string,
+    /** Set to **true** to enable compact mode */
     compact: PropTypes.bool,
+    /** Set to **true** to mark component as disabled and make it non-interactive */
     disabled: PropTypes.bool,
+    /** Internal use only */
     disableStyles: PropTypes.bool,
+    /** The icon to include. See the icon page for the list of icons */
     glyph: PropTypes.string,
     option: PropTypes.oneOf(BUTTON_OPTIONS),
     selected: PropTypes.bool,
+    /** Sets the variation of the component. Primarily used for styling */
     type: PropTypes.oneOf(BUTTON_TYPES),
     typeAttr: PropTypes.string,
+    /** Callback function when user clicks on the component*/
     onClick: PropTypes.func
 };
 

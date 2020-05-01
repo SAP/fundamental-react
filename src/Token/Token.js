@@ -47,11 +47,17 @@ const Token = React.forwardRef(({
 Token.displayName = 'Token';
 
 Token.propTypes = {
+    /** Node(s) to render within the component */
     children: PropTypes.node,
+    /** CSS class(es) to add to the element */
     className: PropTypes.string,
+    /** Set to **true** to enable compact mode */
     compact: PropTypes.bool,
+    /** Internal use only */
     disableStyles: PropTypes.bool,
+    /** Set to **true** to mark component as readonly */
     readOnly: PropTypes.bool,
+    /** Callback function when user clicks on the component*/
     onClick: PropTypes.func
 };
 

@@ -59,16 +59,22 @@ class SideNavList extends React.Component {
 }
 
 SideNavList.propTypes = {
+    /** Node(s) to render within the component */
     children: PropTypes.node,
+    /** CSS class(es) to add to the element */
     className: PropTypes.string,
+    /** Set to **true** to enable compact mode */
     compact: PropTypes.bool,
     condensed: PropTypes.bool,
     hasParent: PropTypes.bool,
     isUtility: PropTypes.bool,
     level: PropTypes.number,
     open: PropTypes.bool,
+    /** Value for the `id` attribute on the element */
     selectedId: PropTypes.string,
+    /** Localized text for the heading */
     title: PropTypes.string,
+    /**Additional props to be spread to the title\'s heading element */
     titleProps: PropTypes.object,
     onItemSelect: PropTypes.func
 };

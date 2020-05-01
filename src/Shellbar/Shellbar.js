@@ -468,9 +468,12 @@ Shellbar.displayName = 'Shellbar';
 Shellbar.propTypes = {
     actions: PropTypes.array,
     backAction: PropTypes.func,
+    /** CSS class(es) to add to the element */
     className: PropTypes.string,
     copilot: PropTypes.bool,
+    /** Internal use only */
     disableStyles: PropTypes.bool,
+    /** Localized text to be updated based on location/language */
     localizedText: CustomPropTypes.i18n({
         backButtonLabel: PropTypes.string,
         counterLabel: PropTypes.string,
@@ -484,7 +487,9 @@ Shellbar.propTypes = {
     productSwitchList: PropTypes.arrayOf(
         PropTypes.shape({
             callback: PropTypes.func.isRequired,
+            /** Localized text for the heading */
             title: PropTypes.string.isRequired,
+            /** The icon to include. See the icon page for the list of icons */
             glyph: PropTypes.string.isRequired,
             subtitle: PropTypes.string
         })

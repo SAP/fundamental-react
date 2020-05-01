@@ -107,15 +107,19 @@ class SideNavListItem extends React.Component {
 }
 
 SideNavListItem.propTypes = {
+    /** Node(s) to render within the component */
     children: PropTypes.node,
     expanded: PropTypes.bool,
+    /** The icon to include. See the icon page for the list of icons */
     glyph: PropTypes.string,
+    /** Value for the `id` attribute on the element */
     id: PropTypes.string,
     isSubItem: PropTypes.bool,
     name: PropTypes.string,
     selected: PropTypes.bool,
     selectedId: PropTypes.string,
     url: PropTypes.string,
+    /** Callback function when user clicks on the component*/
     onClick: PropTypes.func,
     onItemSelect: PropTypes.func
 };

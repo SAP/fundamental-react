@@ -181,10 +181,13 @@ Popover.displayName = 'Popover';
 Popover.propTypes = {
     body: PropTypes.node.isRequired,
     control: PropTypes.node.isRequired,
+    /** CSS class(es) to add to the element */
     className: PropTypes.string,
+    /** Set to **true** to mark component as disabled and make it non-interactive */
     disabled: PropTypes.bool,
     disableEdgeDetection: PropTypes.bool,
     disableKeyPressHandler: PropTypes.bool,
+    /** Internal use only */
     disableStyles: PropTypes.bool,
     disableTriggerOnClick: PropTypes.bool,
     noArrow: PropTypes.bool,
@@ -192,6 +195,7 @@ Popover.propTypes = {
     popperClassName: PropTypes.string,
     popperProps: PropTypes.object,
     show: PropTypes.bool,
+    /** Sets the variation of the component. Primarily used for styling */
     type: PropTypes.oneOf(POPOVER_TYPES),
     useArrowKeyNavigation: PropTypes.bool,
     widthSizingType: PropTypes.oneOf(POPPER_SIZING_TYPES),

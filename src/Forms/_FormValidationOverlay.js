@@ -25,12 +25,17 @@ const FormValidationOverlay = ({ className, control, id, validationState, ...pro
 FormValidationOverlay.displayName = 'FormValidationOverlay';
 
 FormValidationOverlay.propTypes = {
+    /** CSS class(es) to add to the element */
     className: PropTypes.string,
     control: PropTypes.node,
+    /** Value for the `id` attribute on the element */
     id: PropTypes.string,
+    /** An object identifying a validation message.  The object will include properties for `state` and `text`; _e.g._, \`{ state: \'warning\', text: \'This is your last warning\' }\` */
     validationState: PropTypes.shape({
+        /** State of validation */
         state: PropTypes.oneOf(FORM_MESSAGE_TYPES),
-        text: PropTypes.string
+        /** Text of the validation message */
+        text: PropTypes.stringng
     })
 };
 

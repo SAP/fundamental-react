@@ -128,26 +128,39 @@ LocalizationEditor.displayName = 'LocalizationEditor';
 
 LocalizationEditor.propTypes = {
     control: PropTypes.shape({
+        /** Additional props to be spread to the `<button>` element */
         buttonProps: PropTypes.object,
+        /** Additional props to be spread to the `<input>` element */
         inputProps: PropTypes.object,
+        /** Additional props to be spread to the `<label>` element */
         labelProps: PropTypes.object,
         label: PropTypes.string,
+        /** Localized placeholder text of the input */
         placeholder: PropTypes.string,
         language: PropTypes.string
     }).isRequired,
     menu: PropTypes.arrayOf(
         PropTypes.shape({
+            /** Additional props to be spread to the `<input>` element */
             inputProps: PropTypes.object,
+            /** Localized placeholder text of the input */
             placeholder: PropTypes.string,
             language: PropTypes.string
         }).isRequired
     ).isRequired,
+    /** CSS class(es) to add to the element */
     className: PropTypes.string,
+    /** Set to **true** to enable compact mode */
     compact: PropTypes.bool,
+    /** Internal use only */
     disableStyles: PropTypes.bool,
+    /** Value for the `id` attribute on the element */
     id: PropTypes.string,
+    /** CSS class(es) to add to the `<input>` element */
     inputClassName: PropTypes.string,
+    /** Additional props to be spread to the `<ul>` element */
     listProps: PropTypes.object,
+    /** Additional props to be spread to the Popover component */
     popoverProps: PropTypes.object,
     textarea: PropTypes.bool
 };

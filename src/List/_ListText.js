@@ -31,7 +31,9 @@ const ListText = ({
 ListText.displayName = 'List.Text';
 
 ListText.propTypes = {
+    /** Node(s) to render within the component */
     children: PropTypes.node,
+    /** CSS class(es) to add to the element */
     className: PropTypes.string,
     noWrap: PropTypes.bool,
     secondary: PropTypes.bool

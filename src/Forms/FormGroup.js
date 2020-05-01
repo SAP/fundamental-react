@@ -19,6 +19,7 @@ const FormGroup = React.forwardRef(({ children, disableStyles, ...props }, ref) 
 FormGroup.displayName = 'FormGroup';
 
 FormGroup.propTypes = {
+    /** Node(s) to render within the component */
     children: PropTypes.node,
     disableStyles: PropTypes.bool
 };

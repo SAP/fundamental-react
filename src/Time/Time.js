@@ -193,6 +193,7 @@ class Time extends Component {
 Time.displayName = 'Time';
 
 Time.basePropTypes = {
+    /** Internal use only */
     disableStyles: PropTypes.bool,
     format12Hours: PropTypes.bool,
     showHour: PropTypes.bool,
@@ -204,11 +205,14 @@ Time.basePropTypes = {
 
 Time.propTypes = {
     ...Time.basePropTypes,
+    /** Set to **true** to mark component as disabled and make it non-interactive */
     disabled: PropTypes.bool,
     hoursDownButtonProps: PropTypes.object,
     hoursInputProps: PropTypes.object,
     hoursUpButtonProps: PropTypes.object,
+    /** Value for the `id` attribute on the element */
     id: PropTypes.string,
+    /** Localized text to be updated based on location/language */
     localizedText: CustomPropTypes.i18n({
         meridiemAM: PropTypes.string,
         meridiemPM: PropTypes.string
@@ -222,6 +226,7 @@ Time.propTypes = {
     secondsDownButtonProps: PropTypes.object,
     secondsInputProps: PropTypes.object,
     secondsUpButtonProps: PropTypes.object,
+    /** Callback function when the change event fires on the component */
     onChange: PropTypes.func
 };
 

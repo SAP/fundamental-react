@@ -155,20 +155,27 @@ Dialog.displayName = 'Dialog';
 
 Dialog.propTypes = {
     actions: PropTypes.arrayOf(PropTypes.node).isRequired,
+    /** Localized text for the heading */
     title: PropTypes.string.isRequired,
     backdropClassName: PropTypes.string,
     bodyProps: PropTypes.object,
+    /** Node(s) to render within the component */
     children: PropTypes.node,
+    /** CSS class(es) to add to the element */
     className: PropTypes.string,
     contentProps: PropTypes.object,
+    /** Internal use only */
     disableStyles: PropTypes.bool,
     footerProps: PropTypes.object,
     header: PropTypes.string,
     headerProps: PropTypes.object,
+    /** Heading level. `<h1>` is reserved for the page title. It should not appear in components */
     headingLevel: CustomPropTypes.range(2, 6),
     show: PropTypes.bool,
+    /** Size of the component */
     size: PropTypes.oneOf(DIALOG_SIZES),
     subheader: PropTypes.string,
+    /**Additional props to be spread to the title\'s heading element */
     titleProps: PropTypes.object,
     onClose: PropTypes.func
 };

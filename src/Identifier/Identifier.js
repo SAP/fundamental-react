@@ -53,14 +53,20 @@ Identifier.displayName = 'Identifier';
 
 Identifier.propTypes = {
     backgroundImageUrl: PropTypes.string,
+    /** Node(s) to render within the component */
     children: PropTypes.node,
+    /** CSS class(es) to add to the element */
     className: PropTypes.string,
     color: CustomPropTypes.range(1, 9),
+    /** Internal use only */
     disableStyles: PropTypes.bool,
+    /** The icon to include. See the icon page for the list of icons */
     glyph: PropTypes.string,
     label: PropTypes.string,
+    /** Sets a style variation for a modified appearance */
     modifier: PropTypes.oneOf(IDENTIFIER_MODIFIERS),
     role: PropTypes.string,
+    /** Size of the component */
     size: PropTypes.oneOf(IDENTIFIER_SIZES)
 };
 

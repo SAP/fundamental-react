@@ -23,6 +23,7 @@ const ListHeader = ({
 ListHeader.displayName = 'List.Header';
 
 ListHeader.propTypes = {
+    /** Node(s) to render within the component */
     children: PropTypes.node,
     className: PropTypes.string
 };

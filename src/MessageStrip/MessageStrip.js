@@ -86,18 +86,24 @@ const MessageStrip = (props) => {
 MessageStrip.displayName = 'MessageStrip';
 
 MessageStrip.propTypes = {
+    /** Additional props to be spread to the `<button>` element */
     buttonProps: PropTypes.object,
+    /** Node(s) to render within the component */
     children: PropTypes.node,
+    /** CSS class(es) to add to the element */
     className: PropTypes.string,
+    /** Internal use only */
     disableStyles: PropTypes.bool,
     dismissible: PropTypes.bool,
     link: PropTypes.string,
     linkProps: PropTypes.object,
     linkText: PropTypes.string,
+    /** Localized text to be updated based on location/language */
     localizedText: CustomPropTypes.i18n({
         close: PropTypes.string
     }),
     noGlyph: PropTypes.bool,
+    /** Sets the variation of the component. Primarily used for styling */
     type: PropTypes.oneOf(MESSAGESTRIP_TYPES),
     onCloseClicked: PropTypes.func
 };

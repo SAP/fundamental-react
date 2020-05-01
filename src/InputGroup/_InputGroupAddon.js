@@ -40,8 +40,11 @@ const InputGroupAddon = ({
 InputGroupAddon.displayName = 'InputGroup.Addon';
 
 InputGroupAddon.propTypes = {
+    /** Node(s) to render within the component */
     children: PropTypes.node,
+    /** CSS class(es) to add to the element */
     className: PropTypes.string,
+    /** Set to **true** to enable compact mode */
     compact: PropTypes.bool,
     isButton: PropTypes.bool
 };

@@ -130,22 +130,35 @@ const Select = React.forwardRef(({
 Select.displayName = 'Select';
 
 Select.propTypes = {
+    /** CSS class(es) to add to the element */
     className: PropTypes.string,
+    /** Set to **true** to enable compact mode */
     compact: PropTypes.bool,
+    /** Set to **true** to mark component as disabled and make it non-interactive */
     disabled: PropTypes.bool,
+    /** Internal use only */
     disableStyles: PropTypes.bool,
+    /** Value for the `id` attribute on the element */
     id: PropTypes.string,
+    /** An array of objects with a key and text to render the selectable options */
     options: PropTypes.arrayOf(PropTypes.shape({
         key: PropTypes.string.isRequired,
         text: PropTypes.string.isRequired
     })),
+    /** Localized placeholder text of the input */
     placeholder: PropTypes.string,
+    /** The key corresponding to the selected option */
     selectedKey: PropTypes.string,
+    /** An object identifying a validation message.  The object will include properties for `state` and `text`; _e.g._, \`{ state: \'warning\', text: \'This is your last warning\' }\` */
     validationState: PropTypes.shape({
+        /** State of validation */
         state: PropTypes.oneOf(FORM_MESSAGE_TYPES),
+        /** Text of the validation message */
         text: PropTypes.string
     }),
+    /** Callback function when user clicks on the component*/
     onClick: PropTypes.func,
+    /** Callback function when user clicks on an option */
     onSelect: PropTypes.func
 };
 

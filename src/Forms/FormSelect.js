@@ -32,11 +32,17 @@ const FormSelect = React.forwardRef(({ disabled, children, className, compact, d
 FormSelect.displayName = 'FormSelect';
 
 FormSelect.propTypes = {
+    /** Node(s) to render within the component */
     children: PropTypes.node,
+    /** CSS class(es) to add to the element */
     className: PropTypes.string,
+    /** Set to **true** to enable compact mode */
     compact: PropTypes.bool,
+    /** Set to **true** to mark component as disabled and make it non-interactive */
     disabled: PropTypes.bool,
+    /** Internal use only */
     disableStyles: PropTypes.bool,
+    /** State of validation */
     state: PropTypes.oneOf(FORM_MESSAGE_TYPES)
 };
 

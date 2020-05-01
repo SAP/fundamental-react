@@ -16,6 +16,7 @@ const PanelActions = props => {
 PanelActions.displayName = 'Panel.Actions';
 
 PanelActions.propTypes = {
+    /** Node(s) to render within the component */
     children: PropTypes.node,
     className: PropTypes.string
 };

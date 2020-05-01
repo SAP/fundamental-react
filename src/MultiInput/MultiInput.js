@@ -229,18 +229,30 @@ MultiInput.displayName = 'MultiInput';
 
 MultiInput.propTypes = {
     data: PropTypes.array.isRequired,
+    /** Additional props to be spread to the `<button>` element */
     buttonProps: PropTypes.object,
+    /** CSS class(es) to add to the element */
     className: PropTypes.string,
+    /** Set to **true** to enable compact mode */
     compact: PropTypes.bool,
+    /** Set to **true** to mark component as disabled and make it non-interactive */
     disabled: PropTypes.bool,
+    /** Internal use only */
     disableStyles: PropTypes.bool,
+    /** Additional props to be spread to the `<input>` element */
     inputProps: PropTypes.object,
+    /** Additional props to be spread to the `<ul>` element */
     listProps: PropTypes.object,
+    /** Localized placeholder text of the input */
     placeholder: PropTypes.string,
+    /** Additional props to be spread to the Popover component */
     popoverProps: PropTypes.object,
     tagProps: PropTypes.object,
+    /** An object identifying a validation message.  The object will include properties for `state` and `text`; _e.g._, \`{ state: \'warning\', text: \'This is your last warning\' }\` */
     validationState: PropTypes.shape({
+        /** State of validation */
         state: PropTypes.oneOf(FORM_MESSAGE_TYPES),
+        /** Text of the validation message */
         text: PropTypes.string
     }),
     onTagsUpdate: PropTypes.func

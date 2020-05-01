@@ -33,10 +33,13 @@ const LayoutGrid = React.forwardRef(({ nogap, cols, children, className, colSpan
 LayoutGrid.displayName = 'LayoutGrid';
 
 LayoutGrid.propTypes = {
+    /** Node(s) to render within the component */
     children: PropTypes.node,
+    /** CSS class(es) to add to the element */
     className: PropTypes.string,
     cols: CustomPropTypes.range(1, 6),
     colSpan: CustomPropTypes.range(2, 6),
+    /** Internal use only */
     disableStyles: PropTypes.bool,
     nogap: PropTypes.bool
 };

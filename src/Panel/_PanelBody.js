@@ -16,6 +16,7 @@ const PanelBody = props => {
 PanelBody.displayName = 'Panel.Body';
 
 PanelBody.propTypes = {
+    /** Node(s) to render within the component */
     children: PropTypes.node,
     className: PropTypes.string
 };

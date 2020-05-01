@@ -23,6 +23,7 @@ const ListFooter = ({
 ListFooter.displayName = 'List.Footer';
 
 ListFooter.propTypes = {
+    /** Node(s) to render within the component */
     children: PropTypes.node,
     className: PropTypes.string
 };

@@ -25,6 +25,7 @@ SwitchItem.displayName = 'SwitchItem';
 SwitchItem.propTypes = {
     text: PropTypes.string.isRequired,
     glyph: PropTypes.oneOf(listOfIcons),
+    /** Sets the variation of the component. Primarily used for styling */
     type: PropTypes.oneOf(['on', 'off'])
 };
 

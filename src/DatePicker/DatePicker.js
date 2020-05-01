@@ -425,6 +425,7 @@ DatePicker.displayName = 'DatePicker';
 DatePicker.propTypes = {
     ...Calendar.basePropTypes,
     buttonLabel: PropTypes.string,
+    /** Additional props to be spread to the `<button>` element */
     buttonProps: PropTypes.object,
     calendarProps: PropTypes.shape({
         monthListProps: PropTypes.object,
@@ -433,21 +434,30 @@ DatePicker.propTypes = {
         tableProps: PropTypes.object,
         yearListProps: PropTypes.object
     }),
+    /** Set to **true** to enable compact mode */
     compact: PropTypes.bool,
     dateFormat: PropTypes.string,
     defaultValue: PropTypes.string,
+    /** Set to **true** to mark component as disabled and make it non-interactive */
     disabled: PropTypes.bool,
     enableRangeSelection: PropTypes.bool,
+    /** Additional props to be spread to the `<input>` element */
     inputProps: PropTypes.object,
     locale: PropTypes.string,
+    /** Additional props to be spread to the Popover component */
     popoverProps: PropTypes.object,
+    /** Set to **true** to mark component as readonly */
     readOnly: PropTypes.bool,
     specialDays: PropTypes.object,
+    /** An object identifying a validation message.  The object will include properties for `state` and `text`; _e.g._, \`{ state: \'warning\', text: \'This is your last warning\' }\` */
     validationState: PropTypes.shape({
+        /** State of validation */
         state: PropTypes.oneOf(FORM_MESSAGE_TYPES),
+        /** Text of the validation message */
         text: PropTypes.string
     }),
     onBlur: PropTypes.func,
+    /** Callback function when the change event fires on the component */
     onChange: PropTypes.func,
     onDatePickerClose: PropTypes.func,
     onFocus: PropTypes.func

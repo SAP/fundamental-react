@@ -16,6 +16,7 @@ const TileActions = props => {
 TileActions.displayName = 'Tile.Actions';
 
 TileActions.propTypes = {
+    /** Node(s) to render within the component */
     children: PropTypes.node,
     className: PropTypes.string
 };

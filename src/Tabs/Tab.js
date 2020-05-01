@@ -51,15 +51,21 @@ Tab.defaultProps = {
 };
 
 Tab.propTypes = {
+    /** CSS class(es) to add to the element */
     className: PropTypes.string,
+    /** Internal use only */
     disableStyles: PropTypes.bool,
+    /** The icon to include. See the icon page for the list of icons */
     glyph: PropTypes.string,
+    /** Value for the `id` attribute on the element */
     id: PropTypes.string,
     index: PropTypes.number,
     linkProps: PropTypes.object,
     selected: PropTypes.bool,
     tabContentProps: PropTypes.object,
+    /** Localized text for the heading */
     title: PropTypes.string,
+    /** Callback function when user clicks on the component*/
     onClick: PropTypes.func
 };
 

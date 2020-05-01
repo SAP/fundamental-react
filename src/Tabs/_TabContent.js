@@ -24,7 +24,9 @@ export const TabContent = (props) => {
 TabContent.displayName = 'TabContent';
 
 TabContent.propTypes = {
+    /** Node(s) to render within the component */
     children: PropTypes.node,
+    /** CSS class(es) to add to the element */
     className: PropTypes.string,
     selected: PropTypes.bool
 };

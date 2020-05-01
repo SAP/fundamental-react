@@ -670,6 +670,7 @@ Calendar.displayName = 'Calendar';
 
 Calendar.basePropTypes = {
     blockedDates: PropTypes.arrayOf(PropTypes.instanceOf(Date)),
+    /** Internal use only */
     disableStyles: PropTypes.bool,
     disableAfterDate: PropTypes.instanceOf(Date),
     disableBeforeDate: PropTypes.instanceOf(Date),
@@ -678,6 +679,7 @@ Calendar.basePropTypes = {
     disablePastDates: PropTypes.bool,
     disableWeekday: PropTypes.arrayOf(PropTypes.string),
     disableWeekends: PropTypes.bool,
+    /** Localized text to be updated based on location/language */
     localizedText: CustomPropTypes.i18n({
         calendarInstructions: PropTypes.string,
         nextMonth: PropTypes.string,
@@ -695,6 +697,7 @@ Calendar.propTypes = {
     tableHeaderProps: PropTypes.object,
     tableProps: PropTypes.object,
     yearListProps: PropTypes.object,
+    /** Callback function when the change event fires on the component */
     onChange: PropTypes.func
 };
 

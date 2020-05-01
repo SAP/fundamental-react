@@ -35,7 +35,9 @@ const Panel = React.forwardRef(({ colSpan, children, className, disableStyles, .
 Panel.displayName = 'Panel';
 
 Panel.propTypes = {
+    /** Node(s) to render within the component */
     children: PropTypes.node,
+    /** CSS class(es) to add to the element */
     className: PropTypes.string,
     colSpan: CustomPropTypes.range(2, 6),
     disableStyles: PropTypes.bool

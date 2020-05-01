@@ -42,9 +42,13 @@ const List = React.forwardRef(({
 List.displayName = 'List';
 
 List.propTypes = {
+    /** Node(s) to render within the component */
     children: PropTypes.node,
+    /** CSS class(es) to add to the element */
     className: PropTypes.string,
+    /** Set to **true** to enable compact mode */
     compact: PropTypes.bool,
+    /** Internal use only */
     disableStyles: PropTypes.bool,
     noBorder: PropTypes.bool
 };

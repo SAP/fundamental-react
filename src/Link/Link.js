@@ -29,8 +29,11 @@ const Link = React.forwardRef(({ className, children, disabled, disableStyles, .
 Link.displayName = 'Link';
 
 Link.propTypes = {
+    /** Node(s) to render within the component */
     children: PropTypes.node,
+    /** CSS class(es) to add to the element */
     className: PropTypes.string,
+    /** Set to **true** to mark component as disabled and make it non-interactive */
     disabled: PropTypes.bool,
     disableStyles: PropTypes.bool
 };

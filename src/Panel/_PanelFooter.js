@@ -16,6 +16,7 @@ const PanelFooter = props => {
 PanelFooter.displayName = 'Panel.Footer';
 
 PanelFooter.propTypes = {
+    /** Node(s) to render within the component */
     children: PropTypes.node,
     className: PropTypes.string
 };

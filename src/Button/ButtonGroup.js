@@ -24,6 +24,7 @@ const ButtonGroup = React.forwardRef(({ children, disableStyles, ...props }, ref
 ButtonGroup.displayName = 'ButtonGroup';
 
 ButtonGroup.propTypes = {
+    /** Node(s) to render within the component */
     children: PropTypes.node,
     disableStyles: PropTypes.bool
 };

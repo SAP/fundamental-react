@@ -167,17 +167,24 @@ TimePicker.displayName = 'TimePicker';
 
 TimePicker.propTypes = {
     ...Time.basePropTypes,
+    /** Additional props to be spread to the `<button>` element */
     buttonProps: PropTypes.object,
+    /** Set to **true** to mark component as disabled and make it non-interactive */
     disabled: PropTypes.bool,
+    /** Value for the `id` attribute on the element */
     id: PropTypes.string,
+    /** Additional props to be spread to the `<input>` element */
     inputProps: PropTypes.object,
+    /** Localized text to be updated based on location/language */
     localizedText: CustomPropTypes.i18n({
         meridiemAM: PropTypes.string,
         meridiemPM: PropTypes.string
     }),
+    /** Additional props to be spread to the Popover component */
     popoverProps: PropTypes.object,
     timeProps: PropTypes.object,
     value: PropTypes.string,
+    /** Callback function when the change event fires on the component */
     onChange: PropTypes.func
 };
 

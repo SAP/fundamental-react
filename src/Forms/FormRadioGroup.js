@@ -48,12 +48,18 @@ const FormRadioGroup = ({
 FormRadioGroup.displayName = 'FormRadioGroup';
 
 FormRadioGroup.propTypes = {
+    /** Node(s) to render within the component */
     children: PropTypes.node,
+    /** CSS class(es) to add to the element */
     className: PropTypes.string,
+    /** Set to **true** to enable compact mode */
     compact: PropTypes.bool,
+    /** Set to **true** to mark component as disabled and make it non-interactive */
     disabled: PropTypes.bool,
+    /** Internal use only */
     disableStyles: PropTypes.bool,
     inline: PropTypes.bool,
+    /** Callback function when the change event fires on the component */
     onChange: PropTypes.func
 };
 

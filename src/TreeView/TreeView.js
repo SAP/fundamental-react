@@ -156,6 +156,7 @@ TreeView.displayName = 'TreeView';
 
 TreeView.propTypes = {
     children: PropTypes.node,
+    /** Internal use only */
     disableStyles: PropTypes.bool,
     expandData: PropTypes.object,
     isExpandAll: PropTypes.bool,

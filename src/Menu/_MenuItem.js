@@ -105,10 +105,14 @@ MenuItem.propTypes = {
     addonAfter: PropTypes.string,
     addonBefore: PropTypes.string,
     addonProps: PropTypes.object,
+    /** Node(s) to render within the component */
     children: PropTypes.node,
+    /** CSS class(es) to add to the element */
     className: PropTypes.string,
+    /** Set to **true** to mark component as disabled and make it non-interactive */
     disabled: PropTypes.bool,
     isLink: PropTypes.bool,
+    /** Callback function when user clicks on the component*/
     onclick: PropTypes.func,
     selected: PropTypes.bool,
     separator: PropTypes.bool,

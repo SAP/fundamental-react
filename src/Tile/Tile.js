@@ -81,12 +81,17 @@ Tile.displayName = 'Tile';
 Tile.propTypes = {
     active: PropTypes.bool,
     backgroundImage: PropTypes.string,
+    /** Node(s) to render within the component */
     children: PropTypes.node,
+    /** CSS class(es) to add to the element */
     className: PropTypes.string,
+    /** Set to **true** to mark component as disabled and make it non-interactive */
     disabled: PropTypes.bool,
+    /** Internal use only */
     disableStyles: PropTypes.bool,
     productTile: PropTypes.bool,
     tabIndex: PropTypes.number,
+    /** Callback function when user clicks on the component*/
     onClick: PropTypes.func
 };
 

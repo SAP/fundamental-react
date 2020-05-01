@@ -66,6 +66,7 @@ TreeHead.displayName = 'TreeView.Head';
 TreeHead.propTypes = {
     buttonProps: PropTypes.object,
     children: PropTypes.node,
+    /** CSS class(es) to add to the element */
     className: PropTypes.string,
     isExpanded: PropTypes.bool,
     onExpandAll: PropTypes.func

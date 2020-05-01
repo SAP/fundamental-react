@@ -48,17 +48,28 @@ const FormInput = React.forwardRef(({ className, compact, disabled, id, name, pl
 FormInput.displayName = 'FormInput';
 
 FormInput.propTypes = {
+    /** CSS class(es) to add to the element */
     className: PropTypes.string,
+    /** Set to **true** to enable compact mode */
     compact: PropTypes.bool,
+    /** Set to **true** to mark component as disabled and make it non-interactive */
     disabled: PropTypes.bool,
+    /** Internal use only */
     disableStyles: PropTypes.bool,
+    /** Value for the `id` attribute on the element */
     id: PropTypes.string,
     name: PropTypes.string,
+    /** Localized placeholder text of the input */
     placeholder: PropTypes.string,
+    /** Set to **true** to mark component as readonly */
     readOnly: PropTypes.bool,
+    /** Sets the variation of the component. Primarily used for styling */
     type: PropTypes.string,
+    /** An object identifying a validation message.  The object will include properties for `state` and `text`; _e.g._, \`{ state: \'warning\', text: \'This is your last warning\' }\` */
     validationState: PropTypes.shape({
+        /** State of validation */
         state: PropTypes.oneOf(FORM_MESSAGE_TYPES),
+        /** Text of the validation message */
         text: PropTypes.string
     }),
     value: PropTypes.oneOfType([PropTypes.string, PropTypes.number])

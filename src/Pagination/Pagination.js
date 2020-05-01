@@ -174,8 +174,11 @@ Pagination.displayName = 'Pagination';
 
 Pagination.propTypes = {
     itemsTotal: PropTypes.number.isRequired,
+    /** Callback function when user clicks on the component*/
     onClick: PropTypes.func.isRequired,
+    /** CSS class(es) to add to the element */
     className: PropTypes.string,
+    /** Internal use only */
     disableStyles: PropTypes.bool,
     displayTotal: PropTypes.bool,
     displayTotalProps: PropTypes.object,

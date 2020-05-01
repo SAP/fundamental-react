@@ -252,17 +252,22 @@ TimeItem.displayName = 'TimeItem';
 TimeItem.propTypes = {
     localizedText: PropTypes.object.isRequired,
     arialabel: PropTypes.string,
+    /** Set to **true** to mark component as disabled and make it non-interactive */
     disabled: PropTypes.bool,
+    /** Internal use only */
     disableStyles: PropTypes.bool,
     downButtonProps: PropTypes.object,
     format12Hours: PropTypes.bool,
+    /** Additional props to be spread to the `<input>` element */
     inputProps: PropTypes.object,
     max: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
     name: PropTypes.string,
+    /** Localized placeholder text of the input */
     placeholder: PropTypes.string,
     spinners: PropTypes.bool,
     style: PropTypes.string,
     time: PropTypes.object,
+    /** Sets the variation of the component. Primarily used for styling */
     type: PropTypes.string,
     upButtonProps: PropTypes.object,
     updateTime: PropTypes.func,

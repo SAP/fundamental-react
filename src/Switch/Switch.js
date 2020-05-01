@@ -117,23 +117,33 @@ Switch.displayName = 'Switch';
 
 Switch.propTypes = {
     checked: PropTypes.bool,
+    /** Node(s) to render within the component */
     children: PropTypes.node,
+    /** CSS class(es) to add to the element */
     className: PropTypes.string,
+    /** Set to **true** to enable compact mode */
     compact: PropTypes.bool,
+    /** Set to **true** to mark component as disabled and make it non-interactive */
     disabled: PropTypes.bool,
+    /** Internal use only */
     disableStyles: PropTypes.bool,
+    /** Value for the `id` attribute on the element */
     id: PropTypes.string,
+    /** Additional props to be spread to the `<input>` element */
     inputProps: PropTypes.object,
     internalLabels: PropTypes.shape({
         checked: PropTypes.shape(SwitchItem.PropTypes),
         unchecked: PropTypes.shape(SwitchItem.PropTypes)
     }),
+    /** Additional props to be spread to the `<label>` element */
     labelProps: PropTypes.object,
+    /** Localized text to be updated based on location/language */
     localizedText: CustomPropTypes.i18n({
         switchLabel: PropTypes.string
     }),
     semantic: PropTypes.bool,
     showInternalLabels: PropTypes.bool,
+    /** Callback function when the change event fires on the component */
     onChange: PropTypes.func
 };
 

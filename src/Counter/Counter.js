@@ -30,9 +30,13 @@ const Counter = React.forwardRef(({ localizedText, notification, children, class
 Counter.displayName = 'Counter';
 
 Counter.propTypes = {
+    /** Node(s) to render within the component */
     children: PropTypes.node,
+    /** CSS class(es) to add to the element */
     className: PropTypes.string,
+    /** Internal use only */
     disableStyles: PropTypes.bool,
+    /** Localized text to be updated based on location/language */
     localizedText: CustomPropTypes.i18n({
         counterLabel: PropTypes.string
     }),

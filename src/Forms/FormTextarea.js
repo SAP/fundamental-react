@@ -95,20 +95,28 @@ const FormTextarea = React.forwardRef(({
 FormTextarea.displayName = 'FormTextarea';
 
 FormTextarea.propTypes = {
+    /** CSS class(es) to add to the element */
     className: PropTypes.string,
+    /** Set to **true** to enable compact mode */
     compact: PropTypes.bool,
     counterProps: PropTypes.object,
     defaultValue: PropTypes.string,
+    /** Set to **true** to mark component as disabled and make it non-interactive */
     disabled: PropTypes.bool,
+    /** Internal use only */
     disableStyles: PropTypes.bool,
+    /** Localized text to be updated based on location/language */
     localizedText: CustomPropTypes.i18n({
         charactersLeftPlural: PropTypes.string,
         charactersLeftSingular: PropTypes.string
     }),
     maxLength: PropTypes.number,
+    /** Set to **true** to mark component as readonly */
     readOnly: PropTypes.bool,
+    /** State of validation */
     state: PropTypes.oneOf(FORM_MESSAGE_TYPES),
     value: PropTypes.string,
+    /** Callback function when the change event fires on the component */
     onChange: PropTypes.func
 };
 

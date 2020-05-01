@@ -48,12 +48,18 @@ const BusyIndicator = React.forwardRef(({
 BusyIndicator.displayName = 'BusyIndicator';
 
 BusyIndicator.propTypes = {
+    /** CSS class(es) to add to the element */
+    /** CSS class(es) to add to the element */
     className: PropTypes.string,
+    /** Internal use only */
+    /** Internal use only */
     disableStyles: PropTypes.bool,
+    /** Localized text to be updated based on location/language */
     localizedText: CustomPropTypes.i18n({
         loading: PropTypes.string
     }),
     show: PropTypes.bool,
+    /** Size of the component */
     size: PropTypes.oneOf(BUSY_INDICATOR_SIZES)
 };
 
