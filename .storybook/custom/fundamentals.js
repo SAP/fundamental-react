@@ -19,5 +19,6 @@ export default create({
     barBg: '#354A5F',
     brandTitle: `Fundamental React v${packageJson.version}`,
     brandUrl: 'https://github.com/sap/fundamental-react',
+    // TO DO: replace with fundamental-react logo
     brandImage: './logo_text.png'
 });
