@@ -130,7 +130,7 @@
     "prettier": "^1.19.1",
     "puppeteer": "^2.0.0",
     "react": "^16.8.0",
-    "react-dev-utils": "^7.0.5",
+    "react-dev-utils": "^10.2.1",
     "react-dom": "^16.8.0",
     "react-element-to-jsx-string": "^14.0.2",
     "react-helmet-async": "^1.0.2",
