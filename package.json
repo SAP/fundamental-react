@@ -36,7 +36,7 @@
     "std-version": "standard-version -m \"chore(release): version %s build ${TRAVIS_BUILD_NUMBER} [ci skip]\"",
     "storybook": "node scripts/copy-assets.js && start-storybook -p 12123 -s .storybook/static/",
     "storybook:ci": "npm run storybook -- --ci --quiet",
-    "storybook:static": "NODE_ENV=production && rm -rf storybook-static && node scripts/copy-assets.js && build-storybook -c .storybook -o storybook-static",
+    "storybook:static": "rm -rf storybook-static && node scripts/copy-assets.js && build-storybook -c .storybook -o storybook-static",
     "test:coverage:watch": "npm run test:coverage -- --watch",
     "test:coverage": "npm run test:dev -- --coverage",
     "test:coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js || echo -e \"Coveralls failed.\"",
