@@ -69,8 +69,8 @@ const Checkbox = React.forwardRef(({
     return (
         <FormItem
             {...props}
-            disableStyles={disableStyles}
             disabled={disabled}
+            disableStyles={disableStyles}
             isInline={inline}
             ref={ref}>
             <input
@@ -89,8 +89,8 @@ const Checkbox = React.forwardRef(({
                 value={value} />
             <FormLabel {...labelProps}
                 className={labelClasses}
-                disableStyles={disableStyles}
                 disabled={disabled}
+                disableStyles={disableStyles}
                 htmlFor={checkId}>
                 {children}
             </FormLabel>

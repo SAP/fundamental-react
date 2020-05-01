@@ -11,34 +11,34 @@ storiesOf('Components|TabGroup', module)
     .add('Default', () => (
         <TabGroup>
             <Tab id='1' title='Tab 1'>
-                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
             </Tab>
             <Tab id='2' title='Tab 2'>
                 Numquam libero id corporis odit animi voluptat, Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus quia tempore eligendi tempora repellat officia rerum laudantium, veritatis officiis asperiores ipsum nam, distinctio, dolor provident culpa voluptatibus esse deserunt animi?
             </Tab>
             <Tab id='3'
                 title='Tab 3'>
-                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
             </Tab>
             <Tab glyph='cart' id='4'>
-                   Please review your shopping chart.
+                Please review your shopping chart.
             </Tab>
         </TabGroup>
     ))
     .add('disable styles', () => (
         <TabGroup disableStyles>
             <Tab disableStyles title='Tab 1'>
-                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
             </Tab>
             <Tab disableStyles title='Tab 2'>
                 Numquam libero id corporis odit animi voluptat, Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus quia tempore eligendi tempora repellat officia rerum laudantium, veritatis officiis asperiores ipsum nam, distinctio, dolor provident culpa voluptatibus esse deserunt animi?
             </Tab>
             <Tab disableStyles
                 title='Tab 3'>
-                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
             </Tab>
             <Tab disableStyles glyph='cart'>
-                   Please review your shopping chart.
+                Please review your shopping chart.
             </Tab>
         </TabGroup>
     ));

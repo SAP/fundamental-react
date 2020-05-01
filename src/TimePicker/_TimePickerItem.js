@@ -234,8 +234,8 @@ class TimePickerItem extends Component {
                         aria-expanded='false'
                         aria-haspopup='true'
                         compact
-                        disableStyles={disableStyles}
                         disabled={disabled}
+                        disableStyles={disableStyles}
                         glyph='fob-watch'
                         id={this.state.buttonID}
                         option='transparent' />

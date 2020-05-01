@@ -1,3 +1,4 @@
+/* eslint-disable compat/compat */
 import Icon from '../Icon/Icon';
 import Menu from '../Menu/Menu';
 import { mount } from 'enzyme';

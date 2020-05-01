@@ -48,7 +48,7 @@ export const DatePickerComponent = () => {
                 <div>
                     <FormLabel
                         htmlFor='customDateFormatField1'>
-                    Custom Date Format 'YYYY/MM/DD'
+                        Custom Date Format 'YYYY/MM/DD'
                     </FormLabel>
                     <DatePicker
                         dateFormat='YYYY/MM/DD'
@@ -59,7 +59,7 @@ export const DatePickerComponent = () => {
                 <div>
                     <FormLabel
                         htmlFor='customDateFormatField2'>
-                    Custom Date Format 'DD-MM-YYYY'
+                        Custom Date Format 'DD-MM-YYYY'
                     </FormLabel>
                     <DatePicker
                         dateFormat='DD-MM-YYYY'

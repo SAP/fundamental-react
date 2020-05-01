@@ -59,12 +59,12 @@ storiesOf('Components|DatePicker', module)
                 dateKnobToDate('block between dates (2)', blockedDateSecondDefault)]}
             disableAfterDate={dateKnobToDate('disable after date', afterDateDefault)}
             disableBeforeDate={dateKnobToDate('disable before date', beforeDateDefault)}
+            disabledDates={[dateKnobToDate('disable between dates (1)', disabledDateFirstDefault),
+                dateKnobToDate('disable between dates (2)', disabledDateSecondDefault)]}
             disableFutureDates={boolean('disable future dates', false)}
             disablePastDates={boolean('disable past dates', false)}
             disableWeekday={optionsKnob('disable weekdays', weekdayOptions, null, { display: 'check' })}
             disableWeekends={boolean('disable weekends', false)}
-            disabledDates={[dateKnobToDate('disable between dates (1)', disabledDateFirstDefault),
-                dateKnobToDate('disable between dates (2)', disabledDateSecondDefault)]}
             locale={text('locale', 'en')}
             validationState={select('Validation State',
                 {

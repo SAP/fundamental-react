@@ -1,3 +1,4 @@
+/* eslint-disable compat/compat */
 import Calendar from '../Calendar/Calendar';
 import moment from 'moment';
 import { mount } from 'enzyme';

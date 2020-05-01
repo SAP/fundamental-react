@@ -11,13 +11,13 @@ storiesOf('Components|Menu', module)
         <Menu>
             <Menu.List>
                 <Menu.Item url='#'>
-                Option 1
+                    Option 1
                 </Menu.Item>
                 <Menu.Item url='#'>
-                Option 2
+                    Option 2
                 </Menu.Item>
                 <Menu.Item url='#'>
-                Option 3
+                    Option 3
                 </Menu.Item>
             </Menu.List>
         </Menu>
@@ -26,13 +26,13 @@ storiesOf('Components|Menu', module)
         <Menu disableStyles>
             <Menu.List>
                 <Menu.Item url='#'>
-                Option 1
+                    Option 1
                 </Menu.Item>
                 <Menu.Item url='#'>
-                Option 2
+                    Option 2
                 </Menu.Item>
                 <Menu.Item url='#'>
-                Option 3
+                    Option 3
                 </Menu.Item>
             </Menu.List>
         </Menu>

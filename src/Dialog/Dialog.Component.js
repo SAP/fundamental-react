@@ -36,7 +36,7 @@ export class DialogComponent extends Component {
                         <Dialog
                             actions={[
                                 (<Button option='transparent'>
-                                        No
+                                    No
                                 </Button>),
                                 (<Button>Yes</Button>)
                             ]}
@@ -61,7 +61,7 @@ export class DialogComponent extends Component {
                         <Dialog
                             actions={[
                                 (<Button option='transparent'>
-                                        No
+                                    No
                                 </Button>),
                                 (<Button>Yes</Button>)
                             ]}
@@ -80,7 +80,7 @@ export class DialogComponent extends Component {
                         <Dialog
                             actions={[
                                 (<Button option='transparent'>
-                                        No
+                                    No
                                 </Button>),
                                 (<Button>Yes</Button>)
                             ]}
@@ -99,7 +99,7 @@ export class DialogComponent extends Component {
                         <Dialog
                             actions={[
                                 (<Button option='transparent'>
-                                        No
+                                    No
                                 </Button>),
                                 (<Button>Yes</Button>)
                             ]}
@@ -118,7 +118,7 @@ export class DialogComponent extends Component {
                         <Dialog
                             actions={[
                                 (<Button option='transparent'>
-                                        No
+                                    No
                                 </Button>),
                                 (<Button>Yes</Button>)
                             ]}
