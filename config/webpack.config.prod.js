@@ -1,6 +1,7 @@
 /* eslint-disable strict */
 /* eslint-disable camelcase */
 /* eslint-disable no-undefined */
+/* eslint-disable compat/compat */
 
 'use strict';
 

@@ -116,8 +116,7 @@ describe('<Tile />', () => {
     const activeTile = (
         <Tile active onClick={handleClick}>
             <Tile.Content title='Tile Title' />
-            <Tile.Actions className='tile-actions'>
-            </Tile.Actions>
+            <Tile.Actions className='tile-actions' />
         </Tile>
     );
 
@@ -176,8 +175,7 @@ describe('<Tile />', () => {
 
     test('classnames are correct on product tile', () => {
         const wrapper = mount(<Tile productTile>
-            <Tile.Content title='Tile Title'>
-            </Tile.Content>
+            <Tile.Content title='Tile Title' />
         </Tile>);
 
         expect(wrapper.find('.fd-product-tile').length).toEqual(1);

@@ -1,3 +1,4 @@
+/* eslint-disable compat/compat */
 import DatePicker from '../DatePicker/DatePicker';
 import moment from 'moment';
 import { mount } from 'enzyme';

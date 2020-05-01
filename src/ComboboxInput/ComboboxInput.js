@@ -85,8 +85,8 @@ const ComboboxInput = React.forwardRef(({
                     aria-haspopup='true'
                     className={inputGroupClass}
                     compact={compact}
-                    disableStyles={disableStyles}
                     disabled={disabled}
+                    disableStyles={disableStyles}
                     onClick={handleClick}
                     validationState={!isExpanded ? validationState : null}>
                     <FormInput
@@ -106,9 +106,9 @@ const ComboboxInput = React.forwardRef(({
                     </InputGroup.Addon>
                 </InputGroup>
             }
+            disabled={disabled}
             disableKeyPressHandler
             disableStyles={disableStyles}
-            disabled={disabled}
             noArrow
             onClickOutside={handleClickOutside}
             show={isExpanded}

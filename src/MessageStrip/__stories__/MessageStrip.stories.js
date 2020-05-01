@@ -49,6 +49,6 @@ storiesOf('Components|MessageStrip', module)
     ))
     .add('disable styles', () => (
         <MessageStrip disableStyles>
-                    Default MessageStrip
+            Default MessageStrip
         </MessageStrip>
     ));
