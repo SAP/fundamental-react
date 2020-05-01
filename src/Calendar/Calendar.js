@@ -669,33 +669,54 @@ class Calendar extends Component {
 Calendar.displayName = 'Calendar';
 
 Calendar.basePropTypes = {
+    /** Blocks dates that are in between the blocked dates */
     blockedDates: PropTypes.arrayOf(PropTypes.instanceOf(Date)),
     /** Internal use only */
     disableStyles: PropTypes.bool,
+    /** Disables dates of a calendar that come after the specified date */
     disableAfterDate: PropTypes.instanceOf(Date),
+    /** Disables dates of a calendar that come before the specified date */
     disableBeforeDate: PropTypes.instanceOf(Date),
+    /** Disables dates that are in between the disabled dates */
     disabledDates: PropTypes.arrayOf(PropTypes.instanceOf(Date)),
+    /** Set to **true** to disable dates after today\'s date */
     disableFutureDates: PropTypes.bool,
+    /** Set to **true** to disable dates before today\'s date */
     disablePastDates: PropTypes.bool,
+    /** Disables dates that match a weekday */
     disableWeekday: PropTypes.arrayOf(PropTypes.string),
+    /** Set to **true** to disables dates that match a weekend */
     disableWeekends: PropTypes.bool,
+    /** Set to **true** to focus the calendar grid upon being mounted */
+    focusOnInit: PropTypes.bool,
     /** Localized text to be updated based on location/language */
     localizedText: CustomPropTypes.i18n({
+        /** Localized string informing screen reader users the calendar can be navigated by arrow keys */
         calendarInstructions: PropTypes.string,
+        /** aria-label for next button */
         nextMonth: PropTypes.string,
+        /** aria-label for previous button */
         previousMonth: PropTypes.string,
+        /** aria-label for next button when years are displayed */
         show12NextYears: PropTypes.string,
+        /** aria-label for previous button when years are displayed */
         show12PreviousYears: PropTypes.string
     }),
+    /** Object with special dates and special date types in shape of `{\'YYYYMMDD\': type}`. Type must be a number between 1-20 */
     specialDays: PropTypes.object
 };
 
 Calendar.propTypes = {
     ...Calendar.basePropTypes,
+    /** Additional props to be spread to the month\'s `<table>` element */
     monthListProps: PropTypes.object,
+    /** Additional props to be spread to the `<tbody>` element */
     tableBodyProps: PropTypes.object,
+    /** Additional props to be spread to the `<thead>` element */
     tableHeaderProps: PropTypes.object,
+    /** Additional props to be spread to the `<table>` element */
     tableProps: PropTypes.object,
+    /** Additional props to be spread to the year\'s `<table>` element */
     yearListProps: PropTypes.object,
     /** Callback function when the change event fires on the component */
     onChange: PropTypes.func
@@ -712,31 +733,6 @@ Calendar.defaultProps = {
     },
     onChange: () => { },
     specialDays: {}
-};
-
-Calendar.propDescriptions = {
-    blockedDates: 'Blocks dates that are in between the blocked dates.',
-    disableAfterDate: 'Disables dates of a calendar that come after the specified date.',
-    disableBeforeDate: 'Disables dates of a calendar that come before the specified date.',
-    disabledDates: 'Disables dates that are in between the disabled dates.',
-    disableFutureDates: 'Set to **true** to disable dates after today\'s date.',
-    disablePastDates: 'Set to **true** to disable dates before today\'s date.',
-    disableWeekday: 'Disables dates that match a weekday.',
-    disableWeekends: 'Set to **true** to disables dates that match a weekend.',
-    focusOnInit: 'Set to **true** to focus the calendar grid upon being mounted',
-    localizedTextShape: {
-        calendarInstructions: 'Localized string informing screen reader users the calendar can be navigated by arrow keys.',
-        nextMonth: 'aria-label for next button',
-        previousMonth: 'aria-label for previous button',
-        show12NextYears: 'aria-label for next button when years are displayed',
-        show12PreviousYears: 'aria-label for previous button when years are displayed'
-    },
-    monthListProps: 'Additional props to be spread to the month\'s `<table>` element.',
-    specialDays: 'Object with special dates and special date types in shape of `{\'YYYYMMDD\': type}`. Type must be a number between 1-20.',
-    tableBodyProps: 'Additional props to be spread to the `<tbody>` element.',
-    tableHeaderProps: 'Additional props to be spread to the `<thead>` element.',
-    tableProps: 'Additional props to be spread to the `<table>` element.',
-    yearListProps: 'Additional props to be spread to the year\'s `<table>` element.'
 };
 
 export default Calendar;
