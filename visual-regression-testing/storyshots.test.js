@@ -11,8 +11,7 @@ jest.mock('shortid', () => {
         generate: () => id++
     };
 });
-
-// ReactDOM.createPortal = node => node;
+// mock react-dom for portals
 jest.mock('react-dom');
 
 
