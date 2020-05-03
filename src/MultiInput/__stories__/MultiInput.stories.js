@@ -1,12 +1,16 @@
+/* eslint-disable react/no-multi-comp */
 import MultiInput from '../MultiInput';
 import React from 'react';
-import { storiesOf } from '@storybook/react';
 import {
     boolean,
     select,
-    text,
-    withKnobs
+    text
 } from '@storybook/addon-knobs';
+
+export default {
+    title: 'Component API/MultiInput',
+    component: MultiInput
+};
 
 const data = [
     'Apple',
@@ -24,58 +28,52 @@ const data = [
     'Cupuacu'
 ];
 
-const createProps = (overrides) => ({
-    compact: boolean('compact', false),
-    disabled: boolean('disabled', false),
-    data: data,
-    placeholder: text('Placeholder', 'Select a Fruit'),
-    validationState: select('Validation State', {
-        'none': '',
-        'success': { state: 'success', text: 'placeholder text' },
-        'error': { state: 'error', text: 'placeholder text' },
-        'information': { state: 'information', text: 'placeholder text' },
-        'warning': { state: 'warning', text: 'placeholder text' }
-    }),
-    ...overrides
-});
+export const compact = () => (
+    <MultiInput compact data={data}
+        placeholder='Placeholder' />
+);
+export const disabled = () => (
+    <MultiInput data={data}
+        disabled
+        placeholder='Placeholder' />
+);
 
-storiesOf('Components|MultiInput', module)
-    .addDecorator(withKnobs)
-    .add('Dev', () => (
-        <MultiInput {...createProps()} />
-    ))
-    .add('Compact', () => (
-        <MultiInput compact data={data}
-            placeholder='Placeholder' />
-    ))
-    .add('Disabled', () => (
-        <MultiInput data={data} disabled
-            placeholder='Placeholder' />
-    ))
-    .add('Validation State | Error', () => (
+export const validationStates = () => (
+    <div className='fr-container'>
         <MultiInput
             data={data}
-            placeholder='Default'
+            placeholder='Error'
             validationState={{ state: 'error', text: 'Test validation state' }} />
-    ))
-    .add('Validation State | Warning', () => (
         <MultiInput
             data={data}
-            placeholder='Default'
+            placeholder='Warning'
             validationState={{ state: 'warning', text: 'Test validation state' }} />
-    ))
-    .add('Validation State | Information', () => (
         <MultiInput
             data={data}
-            placeholder='Default'
-            validationState={{ state: 'information', text: 'Test validation state' }} />
-    ))
-    .add('Validation State | Success', () => (
-        <MultiInput
-            data={data}
-            placeholder='Default'
+            placeholder='Success'
             validationState={{ state: 'success', text: 'Test validation state' }} />
-    ))
-    .add('disable styles', () => (
-        <MultiInput {...createProps()} disableStyles />
-    ));
+        <MultiInput
+            data={data}
+            placeholder='Information'
+            validationState={{ state: 'information', text: 'Test validation state' }} />
+    </div>
+);
+
+export const dev = () => (
+    <MultiInput
+        compact={boolean('compact', false)}
+        data={data}
+        disabled={boolean('disabled', false)}
+        placeholder={text('Placeholder', 'Select a Fruit')}
+        validationState={select('Validation State', {
+            'none': '',
+            'success': { state: 'success', text: 'placeholder text' },
+            'error': { state: 'error', text: 'placeholder text' },
+            'information': { state: 'information', text: 'placeholder text' },
+            'warning': { state: 'warning', text: 'placeholder text' }
+        })} />
+);
+
+dev.story = {
+    parameters: { docs: { disable: true } }
+};

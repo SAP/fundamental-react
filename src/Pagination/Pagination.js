@@ -4,6 +4,14 @@ import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 
+/** **Pagination** is commonly used for tables and tiles. It allows
+users to see how many pages of content exist, to navigate and
+highlights which page they are currently viewing. This control
+does not handle how many tiles or rows to display in a table.
+This control simply adds a nice user experience to handle how to
+navigate through a collection. The handling of which items to
+display needs to be handled in the function that is passed in
+the \`onClick\` method. */
 class Pagination extends Component {
     constructor(props, context) {
         super(props, context);
@@ -173,6 +181,8 @@ class Pagination extends Component {
 Pagination.displayName = 'Pagination';
 
 Pagination.propTypes = {
+    /** Total number of items. itemsTotal / itemsPerPage calculates
+     * how many navigation items should be shown in the control */
     itemsTotal: PropTypes.number.isRequired,
     /** Callback function when user clicks on the component*/
     onClick: PropTypes.func.isRequired,
@@ -180,18 +190,29 @@ Pagination.propTypes = {
     className: PropTypes.string,
     /** Internal use only */
     disableStyles: PropTypes.bool,
+    /** Set to **true** to show total number of items along with `totalText` string */
     displayTotal: PropTypes.bool,
+    /** Additional props to be spread to the display total `<span>` elements */
     displayTotalProps: PropTypes.object,
+    /** Initial page to be selected */
     initialPage: PropTypes.number,
+    /** Number of items to display on page */
     itemsPerPage: PropTypes.number,
+    /** Additional props to be spread to the page number `<a>` elements */
     linkProps: PropTypes.object,
     localizedText: CustomPropTypes.i18n({
+        /** Value for aria-label on the next <a> element */
         next: PropTypes.string,
+        /** Value for aria-label on the previous <a> element */
         previous: PropTypes.string
     }),
+    /** Additional props to be spread to the next arrow `<a>` element */
     nextProps: PropTypes.object,
+    /** Additional props to be spread to the previous arrow `<a>` element */
     prevProps: PropTypes.object,
+    /** Localized text to display next to the total number of items.  Used with `displayTotal` */
     totalText: PropTypes.string,
+    /** Total number of visible pages */
     visiblePageTotal: PropTypes.number
 };
 
@@ -205,22 +226,6 @@ Pagination.defaultProps = {
     },
     totalText: 'items',
     visiblePageTotal: 10
-};
-
-Pagination.propDescriptions = {
-    itemsTotal: 'Total number of items. itemsTotal / itemsPerPage calculates how many navigation items should be shown in the control.',
-    displayTotal: 'Set to **true** to show total number of items along with `totalText` string.',
-    initialPage: 'Initial page to be selected.',
-    itemsPerPage: 'Number of items to display on page.',
-    linkProps: 'Additional props to be spread to the page number `<a>` elements.',
-    localizedTextShape: {
-        next: 'Value for aria-label on the next <a> element.',
-        previous: 'Value for aria-label on the previous <a> element.'
-    },
-    nextProps: 'Additional props to be spread to the next arrow `<a>` element.',
-    prevProps: 'Additional props to be spread to the previous arrow `<a>` element.',
-    totalText: 'Localized text to display next to the total number of items.  Used with `displayTotal`.',
-    visiblePageTotal: 'Total number of visible pages.'
 };
 
 export default Pagination;

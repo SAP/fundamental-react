@@ -228,6 +228,7 @@ class MultiInput extends Component {
 MultiInput.displayName = 'MultiInput';
 
 MultiInput.propTypes = {
+    /** Collection of items to display in the list */
     data: PropTypes.array.isRequired,
     /** Additional props to be spread to the `<button>` element */
     buttonProps: PropTypes.object,
@@ -247,6 +248,7 @@ MultiInput.propTypes = {
     placeholder: PropTypes.string,
     /** Additional props to be spread to the Popover component */
     popoverProps: PropTypes.object,
+    /** Additional props to be spread to the tags `<div>` element */
     tagProps: PropTypes.object,
     /** An object identifying a validation message.  The object will include properties for `state` and `text`; _e.g._, \`{ state: \'warning\', text: \'This is your last warning\' }\` */
     validationState: PropTypes.shape({
@@ -255,18 +257,12 @@ MultiInput.propTypes = {
         /** Text of the validation message */
         text: PropTypes.string
     }),
+    /** Callback function when a tag is added or removed. Returns array of tags selected */
     onTagsUpdate: PropTypes.func
 };
 
 MultiInput.defaultProps = {
     onTagsUpdate: () => {}
-};
-
-MultiInput.propDescriptions = {
-    data: 'Collection of items to display in the list.',
-    onTagsUpdate: 'Callback function when a tag is added or removed. Returns array of tags selected.',
-    placeholder: 'Localized placeholder text of the input.',
-    tagProps: 'Additional props to be spread to the tags `<div>` element.'
 };
 
 export default MultiInput;
