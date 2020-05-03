@@ -1,13 +1,14 @@
+/* eslint-disable react/no-multi-comp */
 import Link from '../Link';
 import React from 'react';
 
 export default {
-    title: 'Demo/Link',
+    title: 'Component API/Link',
     component: Link
 };
 
-export const DefaultStory = () => (<Link href='#'>Default</Link>);
+export const primary = () => (<Link href='#'>Default</Link>);
 
-DefaultStory.story = {
-    parameters: { foo: 'bar' }
-};
+export const disabled = () => (
+    <Link disabled href='#'>Disabled</Link>
+);

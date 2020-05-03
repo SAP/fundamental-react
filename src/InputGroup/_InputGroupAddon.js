@@ -44,14 +44,10 @@ InputGroupAddon.propTypes = {
     children: PropTypes.node,
     /** CSS class(es) to add to the element */
     className: PropTypes.string,
-    /** Set to **true** to enable compact mode */
+    /** Internal use only */
     compact: PropTypes.bool,
+    /** Set to **true** if add-on is a button */
     isButton: PropTypes.bool
-};
-
-InputGroupAddon.propDescriptions = {
-    compact: '_INTERNAL USE ONLY._',
-    isButton: 'Set to **true** if add-on is a button.'
 };
 
 export default InputGroupAddon;

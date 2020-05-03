@@ -1,84 +1,9 @@
 import Menu from './Menu';
 import { mount } from 'enzyme';
 import React from 'react';
-import renderer from 'react-test-renderer';
 import { Link, MemoryRouter } from 'react-router-dom';
 
 describe('<Menu />', () => {
-    const basicMenuCode = (
-        <Menu>
-            <Menu.List>
-                <Menu.Item url='/'>Option 1</Menu.Item>
-                <Menu.Item isLink url='/'>
-                    Option 2
-                </Menu.Item>
-                <Menu.Item url='/'>Option 3</Menu.Item>
-                <Menu.Item url='/'>Option 4</Menu.Item>
-                <Menu.Item>Option 5</Menu.Item>
-            </Menu.List>
-        </Menu>
-    );
-
-    const menuSeparatorCode = (
-        <MemoryRouter>
-            <Menu>
-                <Menu.List>
-                    <Menu.Item separator>
-                        <Link to='/'>Option 1</Link>
-                    </Menu.Item>
-                    <Menu.Item separator>
-                        <Link to='/'>Option 2</Link>
-                    </Menu.Item>
-                    <Menu.Item separator>
-                        <Link to='/'>Option 3</Link>
-                    </Menu.Item>
-                    <Menu.Item>
-                        <Link to='/'>Option 4</Link>
-                    </Menu.Item>
-                </Menu.List>
-            </Menu>
-        </MemoryRouter>
-    );
-
-    const menuAddonBeforeCode = (
-        <MemoryRouter>
-            <Menu>
-                <Menu.List>
-                    <Menu.Item>
-                        <Link to='/'>Option 1</Link>
-                    </Menu.Item>
-                    <Menu.Item addonBefore='accept'>
-                        <Link to='/'>Option 2</Link>
-                    </Menu.Item>
-                    <Menu.Item>
-                        <Link to='/'>Option 3</Link>
-                    </Menu.Item>
-                    <Menu.Item>
-                        <Link to='/'>Option 4</Link>
-                    </Menu.Item>
-                </Menu.List>
-            </Menu>
-        </MemoryRouter>
-    );
-
-    test('create basic menu component', () => {
-        const component = renderer.create(basicMenuCode);
-        const tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-    });
-
-    test('create menu with separator component', () => {
-        const component = renderer.create(menuSeparatorCode);
-        const tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-    });
-
-    test('create menu add-on component', () => {
-        const component = renderer.create(menuAddonBeforeCode);
-        const tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-    });
-
     describe('Prop spreading', () => {
         test('should allow props to be spread to the Menu component', () => {
             const element = mount(<Menu data-sample='Sample' />);

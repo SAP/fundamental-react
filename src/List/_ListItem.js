@@ -46,6 +46,7 @@ ListItem.propTypes = {
     children: PropTypes.node,
     /** CSS class(es) to add to the element */
     className: PropTypes.string,
+    /** Set to **true** to set state of the list item to "selected". */
     selected: PropTypes.bool,
     /** Callback function when user clicks on the component*/
     onClick: PropTypes.func
@@ -54,10 +55,6 @@ ListItem.propTypes = {
 ListItem.defaultProps = {
     onClick: () => {},
     selected: false
-};
-
-ListItem.propDescriptions = {
-    selected: 'Set to **true** to set state of the list item to "selected".'
 };
 
 export default ListItem;

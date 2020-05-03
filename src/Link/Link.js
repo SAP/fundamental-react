@@ -2,6 +2,7 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React, { useEffect } from 'react';
 
+/** Use an **Link** component to display a link. */
 const Link = React.forwardRef(({ className, children, disabled, disableStyles, ...props }, ref) => {
 
     useEffect(() => {

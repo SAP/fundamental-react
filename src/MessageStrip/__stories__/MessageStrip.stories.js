@@ -1,54 +1,63 @@
+/* eslint-disable react/no-multi-comp */
 import MessageStrip from '../MessageStrip';
 import React from 'react';
-import { storiesOf } from '@storybook/react';
 import {
     boolean,
     select,
-    text,
-    withKnobs
+    text
 } from '@storybook/addon-knobs';
 
+export default {
+    title: 'Component API/MessageStrip',
+    component: MessageStrip
+};
 
-const createProps = (overrides) => ({
-    dismissible: boolean('dismissible', false),
-    noGlyph: boolean('noGlyph', false),
-    type: select('Validation State', {
-        'default': null,
-        'warning': 'warning',
-        'error': 'error',
-        'success': 'success',
-        'information': 'information'
-    }),
-    linkText: text('linkText', 'Default MessageStrip'),
-    link: text('href', ''),
-    ...overrides
-});
+export const primary = () => (
+    <MessageStrip>Default MessageStrip</MessageStrip>
+);
 
-storiesOf('Components|MessageStrip', module)
-    .addDecorator(withKnobs)
-    .add('Dev', () => (
-        <MessageStrip {...createProps()}>Default MessageStrip</MessageStrip>
-    ))
-    .add('Dismissible', () => (
-        <MessageStrip dismissible>MessageStrip</MessageStrip>
-    ))
-    .add('No Icon', () => (
-        <MessageStrip noGlyph>MessageStrip</MessageStrip>
-    ))
-    .add('Warning', () => (
-        <MessageStrip type='warning'>MessageStrip</MessageStrip>
-    ))
-    .add('Error', () => (
+export const dismissible = () => (
+    <MessageStrip dismissible>MessageStrip</MessageStrip>
+);
+
+dismissible.story = {
+    name: 'Dismissible',
+    parameters: {
+        docs: {
+            storyDescription: `The MessageStrip provides information
+            that is useful and relevant, but not critical. It can also provide
+            feedback that an action has been executed. The user will need to dismiss the message.`
+        }
+    }
+};
+export const noGlyph = () => (
+    <MessageStrip noGlyph>MessageStrip</MessageStrip>
+);
+
+export const states = () => (
+    <div className='fr-container'>
         <MessageStrip type='error'>MessageStrip</MessageStrip>
-    ))
-    .add('Success', () => (
+        <MessageStrip type='warning'>MessageStrip</MessageStrip>
         <MessageStrip type='success'>MessageStrip</MessageStrip>
-    ))
-    .add('Information', () => (
         <MessageStrip type='information'>MessageStrip</MessageStrip>
-    ))
-    .add('disable styles', () => (
-        <MessageStrip disableStyles>
-            Default MessageStrip
-        </MessageStrip>
-    ));
+    </div>
+);
+
+export const dev = () => (
+    <MessageStrip
+        dismissible={boolean('dismissible', false)}
+        link={text('href', '')}
+        linkText={text('linkText', 'Default MessageStrip')}
+        noGlyph={boolean('noGlyph', false)}
+        type={select('Validation State', {
+            'default': null,
+            'warning': 'warning',
+            'error': 'error',
+            'success': 'success',
+            'information': 'information'
+        })}>Default MessageStrip</MessageStrip>
+);
+
+dev.story = {
+    parameters: { docs: { disable: true } }
+};

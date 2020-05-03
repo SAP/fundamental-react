@@ -25,6 +25,7 @@ ListHeader.displayName = 'List.Header';
 ListHeader.propTypes = {
     /** Node(s) to render within the component */
     children: PropTypes.node,
+    /** CSS class(es) to add to the element */
     className: PropTypes.string
 };
 

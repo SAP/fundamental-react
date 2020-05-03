@@ -53,7 +53,6 @@ export const validationStates = () => (
         <FormInput placeholder='Warning' validationState={{ state: 'warning', text: 'Test validation state' }} />
         <FormInput placeholder='Information' validationState={{ state: 'information', text: 'Test validation state' }} />
         <FormInput placeholder='Success' validationState={{ state: 'success', text: 'Test validation state' }} />
-
     </div>
 );
 
