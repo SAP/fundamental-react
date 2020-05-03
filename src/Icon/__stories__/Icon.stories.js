@@ -26,7 +26,7 @@ export const iconList = () => (
             return (
                 <div className='demo-icon-wrapper' key={index}>
                     <Icon glyph={icon} size='xl' />
-                    <h5>sap-icon--{icon}</h5>
+                    <div>sap-icon--{icon}</div>
                 </div>
             );
         })}
