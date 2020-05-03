@@ -28,6 +28,10 @@ const data = [
     'Cupuacu'
 ];
 
+export const primary = () => (
+    <MultiInput data={data} placeholder='Placeholder' />
+);
+
 export const compact = () => (
     <MultiInput compact data={data}
         placeholder='Placeholder' />
