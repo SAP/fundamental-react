@@ -1,3 +1,4 @@
+/* eslint-disable valid-jsdoc */
 import Button from '../Button/Button';
 import Calendar from '../Calendar/Calendar';
 import classnames from 'classnames';
@@ -14,6 +15,9 @@ import React, { Component } from 'react';
 
 const ISO_DATE_FORMAT = 'YYYY-MM-DD';
 const dateRangeSeparator = ' - ';
+
+/** The **DatePicker** is an opinionated composition of the **Input Group**, **Popover**
+ * and **Calendar** components to accomplish the UI pattern for picking a date. */
 class DatePicker extends Component {
     constructor(props) {
         super(props);
@@ -424,6 +428,7 @@ DatePicker.displayName = 'DatePicker';
 
 DatePicker.propTypes = {
     ...Calendar.basePropTypes,
+    /** aria-label for datepicker button */
     buttonLabel: PropTypes.string,
     /** Additional props to be spread to the `<button>` element */
     buttonProps: PropTypes.object,
@@ -436,30 +441,46 @@ DatePicker.propTypes = {
     }),
     /** Set to **true** to enable compact mode */
     compact: PropTypes.bool,
+    /** Format to use for displaying the inputted or selected date. E.g. "YYYY.M.D", "DD-MM-YYYY", "MM/DD/YYYY" etc.
+     * This overrides the date format derived from any set locale. */
     dateFormat: PropTypes.string,
+    /** Default value to be shown in the Datepicker */
     defaultValue: PropTypes.string,
     /** Set to **true** to mark component as disabled and make it non-interactive */
     disabled: PropTypes.bool,
+    /** Set to **true** to enable the selection of a date range (begin and end) */
     enableRangeSelection: PropTypes.bool,
     /** Additional props to be spread to the `<input>` element */
     inputProps: PropTypes.object,
+    /** Language code to set the locale */
     locale: PropTypes.string,
     /** Additional props to be spread to the Popover component */
     popoverProps: PropTypes.object,
     /** Set to **true** to mark component as readonly */
     readOnly: PropTypes.bool,
+    /** Object with special dates and special date types in shape of `{\'YYYYMMDD\': type}`. Type must be a number between 1-20 */
     specialDays: PropTypes.object,
-    /** An object identifying a validation message.  The object will include properties for `state` and `text`; _e.g._, \`{ state: \'warning\', text: \'This is your last warning\' }\` */
+    /** An object identifying a validation message.  The object will include properties for `state` and `text`;
+     * _e.g._, \`{ state: \'warning\', text: \'This is your last warning\' }\` */
     validationState: PropTypes.shape({
         /** State of validation: 'error', 'warning', 'information', 'success' */
         state: PropTypes.oneOf(FORM_MESSAGE_TYPES),
         /** Text of the validation message */
         text: PropTypes.string
     }),
+    /** Callback function for onBlur events. In the object returned,`date` is the date object,
+     * `formattedDate` is the formatted date, and `isoFormattedDate` is the date formatted in ISO-8601 format (YYYY-MM-DD) */
     onBlur: PropTypes.func,
-    /** Callback function when the change event fires on the component */
+    /** allback function for onChange events - every keystroke when user inputs into date text field, after auto formatting date
+     * e.g. after 3/3/20 becomes 03/03/2020, after field is cleared due to invalid input, after new date is selected from popover.
+     * In the object returned, `date` is the date object, `formattedDate` is the formatted date, and `isoFormattedDate`is the date
+     * formatted in ISO-8601 format (YYYY-MM-DD) */
     onChange: PropTypes.func,
+    /** Callback function which triggers when datepicker closes after date selection. In the object returned, `date` is the date object,
+     * `formattedDate` is the formatted date, and `isoFormattedDate` is the date formatted in ISO-8601 format (YYYY-MM-DD) */
     onDatePickerClose: PropTypes.func,
+    /** Callback function for onFocus events. In the object returned, `date` is the date object, `formattedDate` is the formatted date,
+     * and `isoFormattedDate` is the date formatted in ISO-8601 format (YYYY-MM-DD). */
     onFocus: PropTypes.func
 };
 
@@ -472,20 +493,6 @@ DatePicker.defaultProps = {
     onChange: () => {},
     onDatePickerClose: () => {},
     onFocus: () => {}
-};
-
-DatePicker.propDescriptions = {
-    ...Calendar.propDescriptions,
-    buttonLabel: 'aria-label for datepicker button',
-    dateFormat: 'Format to use for displaying the inputted or selected date. E.g. "YYYY.M.D", "DD-MM-YYYY", "MM/DD/YYYY" etc. This overrides the date format derived from any set locale.',
-    defaultValue: 'Default value to be shown in the Datepicker.',
-    enableRangeSelection: 'Set to **true** to enable the selection of a date range (begin and end).',
-    locale: 'Language code to set the locale.',
-    onBlur: 'Callback function for onBlur events. In the object returned, `date` is the date object, `formattedDate` is the formatted date, and `isoFormattedDate` is the date formatted in ISO-8601 format (YYYY-MM-DD).',
-    onChange: 'Callback function for onChange events - every keystroke when user inputs into date text field, after auto formatting date e.g. after 3/3/20 becomes 03/03/2020, after field is cleared due to invalid input, after new date is selected from popover. In the object returned, `date` is the date object, `formattedDate` is the formatted date, and `isoFormattedDate` is the date formatted in ISO-8601 format (YYYY-MM-DD).',
-    onDatePickerClose: 'Callback function which triggers when datepicker closes after date selection. In the object returned, `date` is the date object, `formattedDate` is the formatted date, and `isoFormattedDate` is the date formatted in ISO-8601 format (YYYY-MM-DD).',
-    onFocus: 'Callback function for onFocus events. In the object returned, `date` is the date object, `formattedDate` is the formatted date, and `isoFormattedDate` is the date formatted in ISO-8601 format (YYYY-MM-DD).',
-    specialDays: 'Object with special dates and special date types in shape of `{\'YYYYMMDD\': type}`. Type must be a number between 1-20.'
 };
 
 export default DatePicker;
