@@ -6,7 +6,17 @@ import { withA11y } from '@storybook/addon-a11y';
 import { withCssResources } from '@storybook/addon-cssresources';
 import { withI18n } from 'storybook-addon-i18n';
 import { addDecorator, addParameters } from '@storybook/react';
-import { DocsContainer, DocsPage } from '@storybook/addon-docs/blocks';
+import Import from './custom/Import';
+// import { DocsContainer, DocsPage } from '@storybook/addon-docs/blocks';
+import {
+    DocsContainer,
+    Title,
+    Subtitle,
+    Description,
+    Primary,
+    Props,
+    Stories,
+  } from '@storybook/addon-docs/blocks';
 
 // Order of folders to display
 const headers = [
@@ -61,7 +71,29 @@ addParameters({
     ],
     docs: {
         container: DocsContainer,
-        page: DocsPage
+        page: () => {
+            return (
+                <>
+                <Title />
+                <Subtitle />
+                <Import />
+                <Description />
+                <Primary />
+                <Stories />
+                <Props />
+              </>
+            )
+        },
+        extractComponentDescription(component, storyParameters) {
+            console.log({ component, storyParameters })
+            if (
+              component.__docgenInfo?.description &&
+              typeof component.__docgenInfo.description === 'string'
+            ) {
+              return component.__docgenInfo.description
+            }
+            return null
+          },
     },
     i18n: {
         provider: ({ children }) => <>{children}</>,

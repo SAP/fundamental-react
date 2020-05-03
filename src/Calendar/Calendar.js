@@ -8,6 +8,9 @@ import PropTypes from 'prop-types';
 import { isDateBetween, isEnabledDate } from '../utils/dateUtils';
 import React, { Component } from 'react';
 
+// eslint-disable-next-line valid-jsdoc
+/** The **Calendar** is commonly used as the contents of a **Popover** when composing a **DatePicker**.
+It is rarely used on its own as a standalone component. */
 class Calendar extends Component {
 
     constructor(props) {

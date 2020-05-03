@@ -4,6 +4,7 @@ import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import PropTypes from 'prop-types';
 import React, { useEffect } from 'react';
 
+/** A **Busy Indicator** informs the user of an ongoing operation. */
 const BusyIndicator = React.forwardRef(({
     className,
     show,

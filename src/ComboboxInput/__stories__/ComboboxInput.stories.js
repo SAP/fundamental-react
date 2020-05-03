@@ -1,12 +1,16 @@
+/* eslint-disable react/no-multi-comp */
 import ComboboxInput from '../ComboboxInput';
 import React from 'react';
-import { storiesOf } from '@storybook/react';
 import {
     boolean,
     select,
-    text,
-    withKnobs
+    text
 } from '@storybook/addon-knobs';
+
+export default {
+    title: 'Component API/ComboboxInput',
+    component: ComboboxInput
+};
 
 const options = [
     { key: '1', text: 'List Item 1' },
@@ -15,60 +19,58 @@ const options = [
     { key: '4', text: 'List Item 4' }
 ];
 
-const createProps = (overrides) => ({
-    compact: boolean('compact', false),
-    disabled: boolean('disabled', false),
-    options,
-    validationState: select('Validation State', {
-        'none': '',
-        'success': { state: 'success', text: 'placeholder text' },
-        'error': { state: 'error', text: 'placeholder text' },
-        'information': { state: 'information', text: 'placeholder text' },
-        'warning': { state: 'warning', text: 'placeholder text' }
-    }),
-    placeholder: text('Placeholder', 'Placeholder'),
-    ...overrides
-});
 
-storiesOf('Components|ComboboxInput', module)
-    .addDecorator(withKnobs)
-    .add('Dev', () => (
-        <ComboboxInput {...createProps()} />
-    ))
-    .add('Disabled', () => (
-        <ComboboxInput disabled
-            options={options} placeholder='Placeholder' />
-    ))
-    .add('Compact', () => (
-        <ComboboxInput compact
-            options={options} placeholder='Placeholder' />
-    ))
-    .add('Validation State | Error', () => (
+export const primary = () => (
+    <ComboboxInput options={options} placeholder='Select an item' />
+);
+
+export const disabled = () => (
+    <ComboboxInput disabled
+        options={options} placeholder='Placeholder' />
+);
+
+export const compact = () => (
+    <ComboboxInput compact
+        options={options} placeholder='Placeholder' />
+);
+
+export const validationState = () => (
+    <div className='fr-container'>
         <ComboboxInput
             options={options}
-            placeholder='Default'
+            placeholder='Error'
             validationState={{ state: 'error', text: 'Test validation state' }} />
-    ))
-    .add('Validation State | Warning', () => (
         <ComboboxInput
             options={options}
-            placeholder='Default'
+            placeholder='Warning'
             validationState={{ state: 'warning', text: 'Test validation state' }} />
-    ))
-    .add('Validation State | Information', () => (
         <ComboboxInput
             options={options}
-            placeholder='Default'
+            placeholder='Information'
             validationState={{ state: 'information', text: 'Test validation state' }} />
-    ))
-    .add('Validation State | Success', () => (
         <ComboboxInput
             options={options}
-            placeholder='Default'
+            placeholder='Success'
             validationState={{ state: 'success', text: 'Test validation state' }} />
-    ))
-    .add('disable styles', () => (
-        <ComboboxInput
-            {...createProps()}
-            disableStyles />
-    ));
+    </div>
+);
+
+export const dev = () => (
+    <ComboboxInput
+        compact={boolean('compact', false)}
+        disabled={boolean('disabled', false)}
+        options={options}
+        placeholder={text('Placeholder', 'Placeholder')}
+        validationState={select('Validation State', {
+            'none': '',
+            'success': { state: 'success', text: 'placeholder text' },
+            'error': { state: 'error', text: 'placeholder text' },
+            'information': { state: 'information', text: 'placeholder text' },
+            'warning': { state: 'warning', text: 'placeholder text' }
+        })} />
+);
+
+
+dev.story = {
+    parameters: { docs: { disable: true } }
+};

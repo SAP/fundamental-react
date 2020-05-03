@@ -3,6 +3,11 @@ import PropTypes from 'prop-types';
 import { BUTTON_OPTIONS, BUTTON_TYPES } from '../utils/constants';
 import React, { useEffect } from 'react';
 
+/** A **Button** allows users to perform an action. The priority of buttons within a page should be considered.
+For instance, only use the main button once within a page or dialog. Color is also important. For
+instance, the most important button has a blue background where as a red button should only be used if
+the action it performs is potentially destructive. */
+
 const Button = React.forwardRef(({
     option,
     type,

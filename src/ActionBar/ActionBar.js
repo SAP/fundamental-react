@@ -4,6 +4,11 @@ import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import PropTypes from 'prop-types';
 import React, { useEffect } from 'react';
 
+/**
+ * The **Action Bar** is located at the top of the page and is used for page title
+ * and main actions for the page.
+ */
+
 const ActionBar = React.forwardRef(({
     actions,
     actionClassName,
@@ -117,6 +122,10 @@ ActionBar.propTypes = {
 
 ActionBar.defaultProps = {
     headingLevel: 3
+};
+
+ActionBar.description = {
+    foo: 'bar'
 };
 
 export default ActionBar;

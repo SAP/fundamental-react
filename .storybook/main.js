@@ -5,7 +5,7 @@ module.exports = {
         '@storybook/addon-knobs/register',
         '@storybook/addon-a11y/register',
         '@storybook/addon-cssresources/register',
-        '@storybook/addon-storysource/register', // TO DO: this is broken for mdx (fixed in ^6.0.0)
+        '@storybook/addon-storysource/register',
         '@storybook/addon-viewport/register',
         '@storybook/addon-docs',
         'storybook-addon-i18n/register',

@@ -1,15 +1,13 @@
 import Link from '../Link';
 import React from 'react';
-import { storiesOf } from '@storybook/react';
-import {
-    withKnobs
-} from '@storybook/addon-knobs';
 
-storiesOf('Components|Link', module)
-    .addDecorator(withKnobs)
-    .add('Default', () => (
-        <Link href='#'>Default</Link>
-    ))
-    .add('disable styles', () => (
-        <Link disableStyles href='#'>Default</Link>
-    ));
+export default {
+    title: 'Demo/Link',
+    component: Link
+};
+
+export const DefaultStory = () => (<Link href='#'>Default</Link>);
+
+DefaultStory.story = {
+    parameters: { foo: 'bar' }
+};

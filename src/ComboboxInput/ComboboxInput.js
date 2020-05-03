@@ -9,6 +9,9 @@ import Popover from '../Popover/Popover';
 import PropTypes from 'prop-types';
 import React, { useState } from 'react';
 
+/** `Combobox` allows users to select an item from a predefined list.
+It provides an editable input field for filtering the list, and a dropdown menu with a list of the available options.
+If the entries are not validated by the application, users can also enter custom values. */
 const ComboboxInput = React.forwardRef(({
     placeholder,
     compact,

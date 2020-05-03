@@ -3,6 +3,7 @@ import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import PropTypes from 'prop-types';
 import React, { useEffect } from 'react';
 
+/** Status Indicators are used to easily highlight the state of an object. */
 const Counter = React.forwardRef(({ localizedText, notification, children, className, disableStyles, ...props }, ref) => {
 
     useEffect(() => {
@@ -38,8 +39,10 @@ Counter.propTypes = {
     disableStyles: PropTypes.bool,
     /** Localized text to be updated based on location/language */
     localizedText: CustomPropTypes.i18n({
+        /** The aria-label for the <span> element */
         counterLabel: PropTypes.string
     }),
+    /** Set to **true** to enable counter with notification */
     notification: PropTypes.bool
 };
 
@@ -47,13 +50,6 @@ Counter.defaultProps = {
     localizedText: {
         counterLabel: 'Unread count'
     }
-};
-
-Counter.propDescriptions = {
-    localizedTextShape: {
-        counterLabel: 'The aria-label for the <span> element.'
-    },
-    notification: 'Set to **true** to enable counter with notification.'
 };
 
 export default Counter;
