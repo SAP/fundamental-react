@@ -3,6 +3,9 @@ import PropTypes from 'prop-types';
 import shortId from '../utils/shortId';
 import React, { useEffect } from 'react';
 
+/** Radio buttons allow the user to see all options and select one. Generally, this is used when there are
+between 2-3 options. This component can also be disabled and displayed in a row. */
+
 const FormRadioGroup = ({
     children,
     className,
@@ -58,6 +61,7 @@ FormRadioGroup.propTypes = {
     disabled: PropTypes.bool,
     /** Internal use only */
     disableStyles: PropTypes.bool,
+    /** Set to **true** to display radio buttons in a row */
     inline: PropTypes.bool,
     /** Callback function when the change event fires on the component */
     onChange: PropTypes.func
@@ -65,10 +69,6 @@ FormRadioGroup.propTypes = {
 
 FormRadioGroup.defaultProps = {
     onChange: () => {}
-};
-
-FormRadioGroup.propDescriptions = {
-    inline: 'Set to **true** to display radio buttons in a row.'
 };
 
 export default FormRadioGroup;

@@ -1,29 +1,8 @@
 import FormTextarea from './FormTextarea';
 import { mount } from 'enzyme';
 import React from 'react';
-import renderer from 'react-test-renderer';
 
 describe('<FormTextArea />', () => {
-    const formTextArea = (
-        <FormTextarea id='textarea-2' value='Pellentesque metus lacus commodo eget justo ut rutrum varius nunc.' />
-    );
-    const formTextareaCounter = (
-        <FormTextarea id='textarea-3' maxLength={ 150 } />
-    );
-
-    test('create form textarea', () => {
-        let component = renderer.create(formTextArea);
-        let tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-    });
-
-    test('create form textarea with counter', () => {
-        let component = renderer.create(formTextareaCounter);
-        let tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-    });
-
-
     describe('Prop spreading', () => {
         test('should allow props to be spread to the FormTextarea component', () => {
             const element = mount(<FormTextarea data-sample='Sample' />);
@@ -46,50 +25,6 @@ describe('<FormTextArea />', () => {
         mount(<Test />);
         expect(ref.current.tagName).toEqual('TEXTAREA');
         expect(ref.current.className).toEqual('fd-textarea');
-    });
-
-    describe('Validation states', () => {
-        test('should render the correct snapshots', () => {
-            const formTextAreaWarning = (
-                <FormTextarea
-                    placeholder='Field placeholder text'
-                    state='warning' />
-            );
-
-            let component = renderer.create(formTextAreaWarning);
-            let tree = component.toJSON();
-            expect(tree).toMatchSnapshot();
-
-            const formTextAreaError = (
-                <FormTextarea
-                    placeholder='Field placeholder text'
-                    state='error' />
-            );
-
-            component = renderer.create(formTextAreaError);
-            tree = component.toJSON();
-            expect(tree).toMatchSnapshot();
-
-            const formTextAreaSuccess = (
-                <FormTextarea
-                    placeholder='Field placeholder text'
-                    state='success' />
-            );
-
-            component = renderer.create(formTextAreaSuccess);
-            tree = component.toJSON();
-            expect(tree).toMatchSnapshot();
-
-            const formTextAreaInformation = (
-                <FormTextarea
-                    placeholder='Field placeholder text'
-                    state='information' />
-            );
-
-            component = renderer.create(formTextAreaInformation);
-            tree = component.toJSON();
-            expect(tree).toMatchSnapshot();
-        });
     });
 
     describe('FormTextArea counter', () => {

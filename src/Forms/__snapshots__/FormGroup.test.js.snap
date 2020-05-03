@@ -1,9 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`<FormGroup /> create snapshot 1`] = `
-<div
-  className="fd-form-group"
->
-  Test Form Group
-</div>
-`;

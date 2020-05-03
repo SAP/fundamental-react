@@ -1,4 +1,3 @@
-/* eslint-disable valid-jsdoc */
 import Button from '../Button/Button';
 import Calendar from '../Calendar/Calendar';
 import classnames from 'classnames';
@@ -18,6 +17,7 @@ const dateRangeSeparator = ' - ';
 
 /** The **DatePicker** is an opinionated composition of the **Input Group**, **Popover**
  * and **Calendar** components to accomplish the UI pattern for picking a date. */
+
 class DatePicker extends Component {
     constructor(props) {
         super(props);

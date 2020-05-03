@@ -7,12 +7,12 @@ import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
 import React, { Component } from 'react';
 
-// eslint-disable-next-line valid-jsdoc
 /** The **Dialog** is a container generally displayed in response to an action. It is used for short forms,
  * confirmation messages or to display contextual information that does not require a page.\n\nTo
  * display the **Dialog** dialog, pass a boolean value to the \`show\` property of the component. It is
  * recommended to store this value as a state property in the parent control or application.
  * This is used to present information to the user when the **MessageStrip** component doesn’t fit all the information. */
+
 class Dialog extends Component {
     // select body element to add Dialog component too
     // eslint-disable-next-line compat/compat

@@ -37,13 +37,10 @@ FormItem.propTypes = {
     className: PropTypes.string,
     /** Internal use only */
     disableStyles: PropTypes.bool,
+    /** Set to **true** to display items in a row */
     isHorizontal: PropTypes.bool,
+    /** Internal use only */
     isInline: PropTypes.bool
-};
-
-FormItem.propDescriptions = {
-    isInline: '_INTERNAL USE ONLY._',
-    isHorizontal: 'Set to **true** to display items in a row.'
 };
 
 export default FormItem;

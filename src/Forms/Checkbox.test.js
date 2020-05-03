@@ -1,19 +1,8 @@
 import Checkbox from './Checkbox';
 import { mount } from 'enzyme';
 import React from 'react';
-import renderer from 'react-test-renderer';
 
 describe('<Checkbox />', () => {
-    const checkbox = (
-        <Checkbox id='foo' value='Option 1'>Label</Checkbox>
-    );
-
-    test('create checkbox', () => {
-        // create form set with form inputs
-        let component = renderer.create(checkbox);
-        let tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-    });
 
     describe('Checkbox Tests', () => {
         let setup = (props) => {
@@ -104,41 +93,6 @@ describe('<Checkbox />', () => {
             expect(
                 element.find('.fd-form-label').getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
-        });
-    });
-    describe('Validation states', () => {
-        test('should render the correct snapshots', () => {
-            const checkboxWarning = (
-                <Checkbox id='foo' state='warning'>Label</Checkbox>
-            );
-
-            let component = renderer.create(checkboxWarning);
-            let tree = component.toJSON();
-            expect(tree).toMatchSnapshot();
-
-            const checkboxError = (
-                <Checkbox id='foo' state='error'>Label</Checkbox>
-            );
-
-            component = renderer.create(checkboxError);
-            tree = component.toJSON();
-            expect(tree).toMatchSnapshot();
-
-            const checkboxSuccess = (
-                <Checkbox id='foo' state='success'>Label</Checkbox>
-            );
-
-            component = renderer.create(checkboxSuccess);
-            tree = component.toJSON();
-            expect(tree).toMatchSnapshot();
-
-            const checkboxInformation = (
-                <Checkbox id='foo' state='information'>Label</Checkbox>
-            );
-
-            component = renderer.create(checkboxInformation);
-            tree = component.toJSON();
-            expect(tree).toMatchSnapshot();
         });
     });
 

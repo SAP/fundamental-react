@@ -3,6 +3,8 @@ import { FORM_MESSAGE_TYPES } from '../utils/constants';
 import PropTypes from 'prop-types';
 import React, { useEffect } from 'react';
 
+/** The **FormSelect** component is similar to a **Dropdown** but is more commonly used within a form. It can also be
+set to a disabled state. */
 const FormSelect = React.forwardRef(({ disabled, children, className, compact, disableStyles, state, ...props }, ref) => {
 
     useEffect(() => {

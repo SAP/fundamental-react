@@ -99,7 +99,9 @@ FormTextarea.propTypes = {
     className: PropTypes.string,
     /** Set to **true** to enable compact mode */
     compact: PropTypes.bool,
+    /** Props to pass to the counter div */
     counterProps: PropTypes.object,
+    /** Default placeholder value for the textarea */
     defaultValue: PropTypes.string,
     /** Set to **true** to mark component as disabled and make it non-interactive */
     disabled: PropTypes.bool,
@@ -110,11 +112,13 @@ FormTextarea.propTypes = {
         charactersLeftPlural: PropTypes.string,
         charactersLeftSingular: PropTypes.string
     }),
+    /** Set the max length of the textarea */
     maxLength: PropTypes.number,
     /** Set to **true** to mark component as readonly */
     readOnly: PropTypes.bool,
     /** State of validation: 'error', 'warning', 'information', 'success' */
     state: PropTypes.oneOf(FORM_MESSAGE_TYPES),
+    /** Value for the textarea */
     value: PropTypes.string,
     /** Callback function when the change event fires on the component */
     onChange: PropTypes.func
@@ -125,11 +129,6 @@ FormTextarea.defaultProps = {
         charactersLeftPlural: 'characters left',
         charactersLeftSingular: 'character left'
     }
-};
-
-FormTextarea.propDescriptions = {
-    counterProps: 'Props to pass to the counter div.',
-    maxLength: 'Set the max length of the text area.'
 };
 
 export default FormTextarea;

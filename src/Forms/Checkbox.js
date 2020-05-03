@@ -16,6 +16,9 @@ const getCheckStatus = (checked, indeterminate) => {
     }
 };
 
+/** With checkboxes, all options are visible and the user can make one or more selections.
+This component can also be disabled and displayed in a row */
+
 const Checkbox = React.forwardRef(({
     checked,
     children,
@@ -103,11 +106,13 @@ Checkbox.displayName = 'Checkbox';
 Checkbox.propTypes = {
     /** Node(s) to render within the component */
     children: PropTypes.node.isRequired,
+    /** Set to **true** when checkbox input is checked and a controlled component */
     checked: PropTypes.bool,
     /** CSS class(es) to add to the element */
     className: PropTypes.string,
     /** Set to **true** to enable compact mode */
     compact: PropTypes.bool,
+    /** Set to **true** when the checkbox input is checked and an uncontrolled component */
     defaultChecked: PropTypes.bool,
     /** Set to **true** to mark component as disabled and make it non-interactive */
     disabled: PropTypes.bool,
@@ -115,16 +120,21 @@ Checkbox.propTypes = {
     disableStyles: PropTypes.bool,
     /** Value for the `id` attribute on the element */
     id: PropTypes.string,
+    /** When true, the checkbox renders a "mixed" state */
     indeterminate: PropTypes.bool,
+    /** Internal use only */
     inline: PropTypes.bool,
     /** Additional props to be spread to the `<input>` element */
     inputProps: PropTypes.object,
+    /** Class name to be added to the component `<label>` element */
     labelClassName: PropTypes.string,
     /** Additional props to be spread to the `<label>` element */
     labelProps: PropTypes.object,
+    /** Sets the `name` for the checkbox input */
     name: PropTypes.string,
     /** State of validation: 'error', 'warning', 'information', 'success' */
     state: PropTypes.oneOf(FORM_MESSAGE_TYPES),
+    /** Sets the `value` for the checkbox input */
     value: PropTypes.string,
     /** Callback function when the change event fires on the component */
     onChange: PropTypes.func
@@ -132,18 +142,6 @@ Checkbox.propTypes = {
 
 Checkbox.defaultProps = {
     onChange: () => {}
-};
-
-Checkbox.propDescriptions = {
-    checked: 'Set to **true** when checkbox input is checked and a controlled component.',
-    defaultChecked: 'Set to **true** when the checkbox input is checked and an uncontrolled component.',
-    indeterminate: 'When true, the checkbox renders a "mixed" state.',
-    inline: '_INTERNAL USE ONLY._',
-    inputProps: 'Props to be spread to the component `<input>` element.',
-    labelClassName: 'Class name to be added to the component `<label>` element.',
-    labelProps: 'Props to be spread to the component `<label>` element.',
-    name: 'Sets the `name` for the checkbox input.',
-    value: 'Sets the `value` for the checkbox input.'
 };
 
 export default Checkbox;
