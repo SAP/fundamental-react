@@ -1,18 +1,31 @@
+/* eslint-disable react/no-multi-comp */
 import Image from '../Image';
 import React from 'react';
-import { storiesOf } from '@storybook/react';
-import {
-    withKnobs
-} from '@storybook/addon-knobs';
 
-storiesOf('Components|Image', module)
-    .addDecorator(withKnobs)
-    .add('Default', () => (
-        <Image photo='https://content.fortune.com/wp-content/uploads/2019/07/hippocorn.jpg'
-            size='l' />
-    ))
-    .add('disable styles', () => (
-        <Image disableStyles
-            photo='https://content.fortune.com/wp-content/uploads/2019/07/hippocorn.jpg'
-            size='l' />
-    ));
+export default {
+    title: 'Component API/Image',
+    component: Image
+};
+
+export const primary = () => (
+    <Image photo='https://content.fortune.com/wp-content/uploads/2019/07/hippocorn.jpg' />
+);
+
+export const sizes = () => (
+    <div className='fr-container'>
+        <Image photo='https://placeimg.com/400/400/nature' size='s' />
+        <Image photo='https://placeimg.com/400/400/nature' size='m' />
+        <Image photo='https://placeimg.com/400/400/nature' size='l' />
+    </div>
+);
+
+export const shapes = () => (
+    <div className='fr-container'>
+        <Image photo='https://placeimg.com/400/400/nature' size='s'
+            type='circle' />
+        <Image photo='https://placeimg.com/400/400/nature' size='m'
+            type='circle' />
+        <Image photo='https://placeimg.com/400/400/nature' size='l'
+            type='circle' />
+    </div>
+);

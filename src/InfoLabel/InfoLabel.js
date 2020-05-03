@@ -4,6 +4,8 @@ import { listOfIcons } from '../utils/listOfIcons';
 import PropTypes from 'prop-types';
 import React, { useEffect } from 'react';
 
+/** Info Label is a small non-interactive numeric or text-based control.
+ * Its primary use is to add user-defined characteristic to an object. */
 const InfoLabel = React.forwardRef(({
     children,
     className,
@@ -44,16 +46,14 @@ InfoLabel.propTypes = {
     children: PropTypes.node,
     /** CSS class(es) to add to the element */
     className: PropTypes.string,
+    /** In addition the the default grey, there are additional Semantic color options */
     color: CustomPropTypes.range(1, 10),
     /** Internal use only */
     disableStyles: PropTypes.bool,
+    /** See Icon component for list of icon options */
     glyph: PropTypes.oneOf(listOfIcons),
+    /** Set to **true** if using the label for only a numeric value */
     numeric: PropTypes.bool
-};
-
-InfoLabel.propDescriptions = {
-    color: 'In addition the the default grey, there are additional Semantic color options.',
-    numeric: 'Set to **true** if using the label for only a numeric value.'
 };
 
 export default InfoLabel;

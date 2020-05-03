@@ -3,6 +3,10 @@ import { ICON_SIZES } from '../utils/constants';
 import PropTypes from 'prop-types';
 import React, { useEffect } from 'react';
 
+/** Icons are used throughout the UI to save space, allow for visual clarity
+and focus, and for fun. Icons can be used adaptively if desired, but at
+this point they are used more as visual elements within other
+components. */
 const Icon = React.forwardRef(({ glyph, size, className, disableStyles, ...props }, ref) => {
 
     useEffect(() => {
@@ -38,10 +42,6 @@ Icon.propTypes = {
     disableStyles: PropTypes.bool,
     /** Size of the component: 's', 'm', 'l', 'xl' */
     size: PropTypes.oneOf(ICON_SIZES)
-};
-
-Icon.propDescriptions = {
-    size: 'Size of the icon. Options include **xs**, **s**, **compact**, and **l**. If no size is provided, default (normal) will be used.'
 };
 
 export default Icon;
