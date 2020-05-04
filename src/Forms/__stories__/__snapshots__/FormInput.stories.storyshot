@@ -91,37 +91,6 @@ exports[`Storyshots Component API/Forms/FormInput Validation States 1`] = `
             aria-controls="fd-38"
             aria-expanded={false}
             aria-haspopup={true}
-            className="fd-input is-default"
-            onClick={[Function]}
-            onKeyPress={[Function]}
-            placeholder="Default"
-            role="button"
-            tabIndex={0}
-            type="text"
-          />
-        </div>
-      </div>
-    </div>
-    <div
-      className="fd-popover"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-    >
-      <div
-        onFocus={[Function]}
-        onMouseDown={[Function]}
-        onTouchStart={[Function]}
-      >
-        <div
-          className="fd-popover__control"
-        >
-          <input
-            aria-controls="fd-39"
-            aria-expanded={false}
-            aria-haspopup={true}
             className="fd-input is-error"
             onClick={[Function]}
             onKeyPress={[Function]}
@@ -150,7 +119,7 @@ exports[`Storyshots Component API/Forms/FormInput Validation States 1`] = `
           className="fd-popover__control"
         >
           <input
-            aria-controls="fd-40"
+            aria-controls="fd-39"
             aria-expanded={false}
             aria-haspopup={true}
             className="fd-input is-warning"
@@ -181,7 +150,7 @@ exports[`Storyshots Component API/Forms/FormInput Validation States 1`] = `
           className="fd-popover__control"
         >
           <input
-            aria-controls="fd-41"
+            aria-controls="fd-40"
             aria-expanded={false}
             aria-haspopup={true}
             className="fd-input is-information"
@@ -212,7 +181,7 @@ exports[`Storyshots Component API/Forms/FormInput Validation States 1`] = `
           className="fd-popover__control"
         >
           <input
-            aria-controls="fd-42"
+            aria-controls="fd-41"
             aria-expanded={false}
             aria-haspopup={true}
             className="fd-input is-success"

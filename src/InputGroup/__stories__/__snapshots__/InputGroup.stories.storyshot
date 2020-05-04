@@ -253,26 +253,6 @@ exports[`Storyshots Component API/InputGroup Validation State 1`] = `
     className="fr-container"
   >
     <div
-      className="fd-input-group is-default"
-    >
-      <span
-        className="fd-input-group__addon"
-      >
-        $
-      </span>
-      <input
-        className="fd-input fd-input-group__input"
-        type="text"
-      />
-    </div>
-    <div
-      aria-live="assertive"
-      className="fd-form-message fd-form-message--default"
-      role="alert"
-    >
-      Test validation state
-    </div>
-    <div
       className="fd-input-group is-error"
     >
       <span

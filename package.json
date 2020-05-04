@@ -38,9 +38,9 @@
     "test:coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js || echo -e \"Coveralls failed.\"",
     "test:dev": "jest --config=./config/jest/jest.config.js",
     "test": "npm run test:dev -- --watch",
-    "test:visual:setup": "BABEL_ENV=test jest --config=./visual-regression-testing/jest.config.js",
-    "test:visual": "server-test storybook:ci http-get://localhost:12123 test:visual:setup",
-    "test:visual:update": "server-test storybook:ci http-get://localhost:12123 'npm run test:visual:setup -- --updateSnapshot'"
+    "test:snapshot:setup": "BABEL_ENV=test jest --config=./snapshot-testing/jest.config.js",
+    "test:snapshot": "server-test storybook:ci http-get://localhost:12123 test:snapshot:setup",
+    "test:snapshot:update": "server-test storybook:ci http-get://localhost:12123 'npm run test:snapshot:setup -- --updateSnapshot'"
   },
   "dependencies": {
     "@babel/runtime": "^7.8.0",
@@ -108,10 +108,10 @@
     "gh-pages": "^2.0.1",
     "github-assistant": "^0.3.1-rc.0",
     "jest": "24.9.0",
-    "jest-puppeteer": "^4.3.0",
+    "jest-puppeteer": "^4.4.0",
     "pre-commit": "^1.2.2",
     "prettier": "^1.19.1",
-    "puppeteer": "^2.0.0",
+    "puppeteer": "^3.0.0",
     "react": "^16.8.0",
     "react-dom": "^16.8.0",
     "react-router-dom": "^5.0.1",

@@ -16,7 +16,7 @@ exports[`Storyshots Component API/MultiInput Compact 1`] = `
         className="fd-popover__control"
       >
         <div
-          aria-controls="fd-99"
+          aria-controls="fd-98"
           aria-expanded={false}
           aria-haspopup={true}
           className="fd-input-group--control fd-input-group"
@@ -70,7 +70,7 @@ exports[`Storyshots Component API/MultiInput Dev 1`] = `
         className="fd-popover__control"
       >
         <div
-          aria-controls="fd-183"
+          aria-controls="fd-182"
           aria-expanded={false}
           aria-haspopup={true}
           className="fd-input-group--control fd-input-group"
@@ -126,7 +126,7 @@ exports[`Storyshots Component API/MultiInput Disabled 1`] = `
         className="fd-popover__control"
       >
         <div
-          aria-controls="fd-113"
+          aria-controls="fd-112"
           aria-expanded={false}
           aria-haspopup={true}
           className="fd-input-group--control is-disabled fd-input-group is-disabled"
@@ -181,7 +181,7 @@ exports[`Storyshots Component API/MultiInput Primary 1`] = `
         className="fd-popover__control"
       >
         <div
-          aria-controls="fd-85"
+          aria-controls="fd-84"
           aria-expanded={false}
           aria-haspopup={true}
           className="fd-input-group--control fd-input-group"
@@ -237,7 +237,7 @@ exports[`Storyshots Component API/MultiInput Validation States 1`] = `
           className="fd-popover__control"
         >
           <div
-            aria-controls="fd-127"
+            aria-controls="fd-126"
             aria-expanded={false}
             aria-haspopup={true}
             className="fd-input-group--control is-error fd-input-group is-error"
@@ -290,7 +290,7 @@ exports[`Storyshots Component API/MultiInput Validation States 1`] = `
           className="fd-popover__control"
         >
           <div
-            aria-controls="fd-141"
+            aria-controls="fd-140"
             aria-expanded={false}
             aria-haspopup={true}
             className="fd-input-group--control is-warning fd-input-group is-warning"
@@ -343,7 +343,7 @@ exports[`Storyshots Component API/MultiInput Validation States 1`] = `
           className="fd-popover__control"
         >
           <div
-            aria-controls="fd-155"
+            aria-controls="fd-154"
             aria-expanded={false}
             aria-haspopup={true}
             className="fd-input-group--control is-success fd-input-group is-success"
@@ -396,7 +396,7 @@ exports[`Storyshots Component API/MultiInput Validation States 1`] = `
           className="fd-popover__control"
         >
           <div
-            aria-controls="fd-169"
+            aria-controls="fd-168"
             aria-expanded={false}
             aria-haspopup={true}
             className="fd-input-group--control is-information fd-input-group is-information"

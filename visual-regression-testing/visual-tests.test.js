@@ -1,6 +1,7 @@
 /* eslint-disable no-console */
 import { imageSnapshot } from '@storybook/addon-storyshots-puppeteer';
 import initStoryshots from '@storybook/addon-storyshots';
+import path from 'path';
 
 const getMatchOptions = () => {
     return {
@@ -25,7 +26,7 @@ const beforeScreenshot = (page) => page.emulate(view);
 // create visual regession images from each story
 initStoryshots({
     test: imageSnapshot({
-        storybookUrl: 'http://localhost:12123/',
+        storybookUrl: `file://${path.resolve(__dirname, '../storybook-static')}`,
         customizePage,
         getMatchOptions,
         beforeScreenshot

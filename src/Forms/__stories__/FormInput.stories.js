@@ -48,7 +48,6 @@ readOnly.story = {
 
 export const validationStates = () => (
     <div className='fr-container'>
-        <FormInput placeholder='Default' validationState={{ state: 'default', text: 'Test validation state' }} />
         <FormInput placeholder='Error' validationState={{ state: 'error', text: 'Test validation state' }} />
         <FormInput placeholder='Warning' validationState={{ state: 'warning', text: 'Test validation state' }} />
         <FormInput placeholder='Information' validationState={{ state: 'information', text: 'Test validation state' }} />

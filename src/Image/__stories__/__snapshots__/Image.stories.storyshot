@@ -5,7 +5,7 @@ exports[`Storyshots Component API/Image Primary 1`] = `
   dir="ltr"
 >
   <span
-    className=""
+    className="fd-image--m"
     style={
       Object {
         "backgroundImage": "url(https://content.fortune.com/wp-content/uploads/2019/07/hippocorn.jpg)",

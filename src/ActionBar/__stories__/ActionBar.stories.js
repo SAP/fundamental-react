@@ -78,10 +78,10 @@ export const dev = () => (
             <Button option='emphasized'>Button</Button></>
         )}
         description={text('description', 'Action Bar description')}
-        headingLevel={number('headingLevel', 1, {
+        headingLevel={number('headingLevel', 2, {
             range: true,
-            min: 1,
-            max: 3,
+            min: 2,
+            max: 6,
             step: 1
         })}
         onBackClick={() => {}}

@@ -44,4 +44,8 @@ Image.propTypes = {
     type: PropTypes.oneOf(IMAGE_TYPES)
 };
 
+Image.defaultProps = {
+    size: 'm'
+};
+
 export default Image;

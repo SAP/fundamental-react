@@ -54,10 +54,6 @@ export const disabled = () => (
 
 export const validationState = () => (
     <div className='fr-container'>
-        <InputGroup validationState={{ state: 'default', text: 'Test validation state' }}>
-            <InputGroup.Addon>$</InputGroup.Addon>
-            <FormInput />
-        </InputGroup>
         <InputGroup validationState={{ state: 'error', text: 'Test validation state' }}>
             <InputGroup.Addon>$</InputGroup.Addon>
             <FormInput />
