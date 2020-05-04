@@ -64,19 +64,16 @@ class TreeHead extends Component {
 TreeHead.displayName = 'TreeView.Head';
 
 TreeHead.propTypes = {
+    /** Additional props to be spread to the header expand/collapse `<button>` element */
     buttonProps: PropTypes.object,
+    /** Node(s) to render within the component. Expecting `TreeCol` components as children */
     children: PropTypes.node,
     /** CSS class(es) to add to the element */
     className: PropTypes.string,
+    /** Internal use only */
     isExpanded: PropTypes.bool,
+    /** Internal use only */
     onExpandAll: PropTypes.func
-};
-
-TreeHead.propDescriptions = {
-    buttonProps: 'Additional props to be spread to the header expand/collapse `<button>` element.',
-    children: 'Node(s) to render within the component. Expecting `TreeCol` components as children.',
-    isExpanded: '_INTERNAL USE ONLY._',
-    onExpandAll: '_INTERNAL USE ONLY._'
 };
 
 export default TreeHead;

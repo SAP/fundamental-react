@@ -1,6 +1,5 @@
 import { mount } from 'enzyme';
 import React from 'react';
-import renderer from 'react-test-renderer';
 import TreeView from './TreeView';
 
 // mock shortid for snapshot testing
@@ -182,18 +181,6 @@ describe('<TreeView.Tree />', () => {
             </TreeView.Tree>
         </TreeView>
     );
-
-    test('create tree component', () => {
-        // multi-level tree
-        let component = renderer.create(multiLevelTreeView);
-        let tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-
-        // rich tree
-        component = renderer.create(richTreeView);
-        tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-    });
 
     test('open all tree from header', () => {
         const wrapper = mount(richTreeView);
