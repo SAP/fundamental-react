@@ -59,24 +59,18 @@ Tab.propTypes = {
     glyph: PropTypes.string,
     /** Value for the `id` attribute on the element */
     id: PropTypes.string,
+    /** Internal use only */
     index: PropTypes.number,
+    /** Additional props to be spread to the tab\'s `<a>` element */
     linkProps: PropTypes.object,
+    /** Internal use only */
     selected: PropTypes.bool,
+    /** Additional props to be spread to the tab content\'s `<div>` element */
     tabContentProps: PropTypes.object,
     /** Localized text for the heading */
     title: PropTypes.string,
-    /** Callback function when user clicks on the component*/
+    /** Internal use only */
     onClick: PropTypes.func
-};
-
-Tab.propDescriptions = {
-    glyph: 'Icon to display on the tab.',
-    index: '_INTERNAL USE ONLY._',
-    selected: '_INTERNAL USE ONLY._',
-    title: 'Localized text to display on the tab.',
-    tabContentProps: 'Additional props to be spread to the tab content\'s `<div>` element.',
-    linkProps: 'Additional props to be spread to the tab\'s `<a>` element.',
-    onClick: '_INTERNAL USE ONLY._'
 };
 
 export default Tab;

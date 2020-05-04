@@ -28,9 +28,7 @@ TabContent.propTypes = {
     children: PropTypes.node,
     /** CSS class(es) to add to the element */
     className: PropTypes.string,
+    /** Internal use only */
     selected: PropTypes.bool
 };
 
-TabContent.propDescriptions = {
-    children: 'Content to render when tab is selected.'
-};
