@@ -7,6 +7,8 @@ import Popover from '../Popover/Popover';
 import PropTypes from 'prop-types';
 import React, { useEffect, useState } from 'react';
 
+/** The **Select** component lets the user select one of the different options.
+It is more flexible than the normal Select. Use with the **List** component. */
 const Select = React.forwardRef(({
     className,
     compact,
