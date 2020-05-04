@@ -59,7 +59,7 @@ exports[`Storyshots Component API/Identifier Background Image 1`] = `
       role="presentation"
       style={
         Object {
-          "backgroundImage": "url(https://placeimg.com/400/400/nature)",
+          "backgroundImage": "url(./assets/nature.jpg)",
         }
       }
     />
@@ -68,7 +68,7 @@ exports[`Storyshots Component API/Identifier Background Image 1`] = `
       role="presentation"
       style={
         Object {
-          "backgroundImage": "url(https://placeimg.com/400/400/nature)",
+          "backgroundImage": "url(./assets/nature.jpg)",
         }
       }
     />
@@ -77,7 +77,7 @@ exports[`Storyshots Component API/Identifier Background Image 1`] = `
       role="presentation"
       style={
         Object {
-          "backgroundImage": "url(https://placeimg.com/400/400/nature)",
+          "backgroundImage": "url(./assets/nature.jpg)",
         }
       }
     />
@@ -86,7 +86,7 @@ exports[`Storyshots Component API/Identifier Background Image 1`] = `
       role="presentation"
       style={
         Object {
-          "backgroundImage": "url(https://placeimg.com/400/400/nature)",
+          "backgroundImage": "url(./assets/nature.jpg)",
         }
       }
     />
@@ -95,7 +95,7 @@ exports[`Storyshots Component API/Identifier Background Image 1`] = `
       role="presentation"
       style={
         Object {
-          "backgroundImage": "url(https://placeimg.com/400/400/nature)",
+          "backgroundImage": "url(./assets/nature.jpg)",
         }
       }
     />
@@ -104,7 +104,7 @@ exports[`Storyshots Component API/Identifier Background Image 1`] = `
       role="presentation"
       style={
         Object {
-          "backgroundImage": "url(https://placeimg.com/400/400/nature)",
+          "backgroundImage": "url(./assets/nature.jpg)",
         }
       }
     />
@@ -113,7 +113,7 @@ exports[`Storyshots Component API/Identifier Background Image 1`] = `
       role="presentation"
       style={
         Object {
-          "backgroundImage": "url(https://placeimg.com/400/400/nature)",
+          "backgroundImage": "url(./assets/nature.jpg)",
         }
       }
     />

@@ -54,19 +54,19 @@ export const circle = () => (
 
 export const backgroundImage = () => (
     <div className='fr-container'>
-        <Identifier backgroundImageUrl='https://placeimg.com/400/400/nature' modifier='circle'
+        <Identifier backgroundImageUrl='./assets/nature.jpg' modifier='circle'
             size='xxs' />
-        <Identifier backgroundImageUrl='https://placeimg.com/400/400/nature' modifier='circle'
+        <Identifier backgroundImageUrl='./assets/nature.jpg' modifier='circle'
             size='xs' />
-        <Identifier backgroundImageUrl='https://placeimg.com/400/400/nature' modifier='circle'
+        <Identifier backgroundImageUrl='./assets/nature.jpg' modifier='circle'
             size='s' />
-        <Identifier backgroundImageUrl='https://placeimg.com/400/400/nature' modifier='circle'
+        <Identifier backgroundImageUrl='./assets/nature.jpg' modifier='circle'
             size='m' />
-        <Identifier backgroundImageUrl='https://placeimg.com/400/400/nature' modifier='circle'
+        <Identifier backgroundImageUrl='./assets/nature.jpg' modifier='circle'
             size='l' />
-        <Identifier backgroundImageUrl='https://placeimg.com/400/400/nature' modifier='circle'
+        <Identifier backgroundImageUrl='./assets/nature.jpg' modifier='circle'
             size='xl' />
-        <Identifier backgroundImageUrl='https://placeimg.com/400/400/nature' modifier='circle'
+        <Identifier backgroundImageUrl='./assets/nature.jpg' modifier='circle'
             size='xxl' />
     </div>
 );

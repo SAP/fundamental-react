@@ -4,7 +4,6 @@ import { googlecode } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import React, { useContext } from 'react';
 
-// TO DO: imports for subcomponents
 const Import = () => {
     const context = useContext(DocsContext);
     let groups = context.kind.split('/');

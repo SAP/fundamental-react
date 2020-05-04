@@ -4,8 +4,6 @@ import Menu from '../../Menu/Menu';
 import React from 'react';
 import Shellbar from '../Shellbar';
 
-// TO DO: replace all placeimg for visual regression tests
-
 const profileMenu = [
     { name: 'Settings', glyph: 'action-settings', size: 's', callback: () => console.log('Settings selected!') },
     { name: 'Sign Out', glyph: 'log', size: 's', callback: () => console.log('Sign Out selected!') }
@@ -52,7 +50,7 @@ export const productMenu = () => (
         productMenu={productMenu}
         productTitle='Corporate Portal'
         profile={{
-            image: 'https://placeimg.com/200/200/people',
+            image: './assets/headshot-male.jpg',
             userName: 'John Snow'
         }}
         profileMenu={profileMenu}

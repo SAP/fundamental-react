@@ -13,19 +13,19 @@ export const primary = () => (
 
 export const sizes = () => (
     <div className='fr-container'>
-        <Image photo='https://placeimg.com/400/400/nature' size='s' />
-        <Image photo='https://placeimg.com/400/400/nature' size='m' />
-        <Image photo='https://placeimg.com/400/400/nature' size='l' />
+        <Image photo='./assets/nature.jpg' size='s' />
+        <Image photo='./assets/nature.jpg' size='m' />
+        <Image photo='./assets/nature.jpg' size='l' />
     </div>
 );
 
 export const shapes = () => (
     <div className='fr-container'>
-        <Image photo='https://placeimg.com/400/400/nature' size='s'
+        <Image photo='./assets/nature.jpg' size='s'
             type='circle' />
-        <Image photo='https://placeimg.com/400/400/nature' size='m'
+        <Image photo='./assets/nature.jpg' size='m'
             type='circle' />
-        <Image photo='https://placeimg.com/400/400/nature' size='l'
+        <Image photo='./assets/nature.jpg' size='l'
             type='circle' />
     </div>
 );

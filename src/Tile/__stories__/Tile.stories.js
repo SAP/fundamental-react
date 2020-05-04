@@ -31,7 +31,7 @@ export const primary = () => (
             </Tile.Actions>
         </Tile>
         <Tile
-            backgroundImage='https://placeimg.com/1600/400/nature'
+            backgroundImage='./assets/nature-2.jpg'
             productTile>
             <Tile.Content title='Product Tile Title'>
                 <p>Product Tile Description</p>
@@ -52,14 +52,14 @@ export const mediaTile = () => (
     <>
         <Tile active onClick={() => {}}>
             <Tile.Media>
-                <Image photo='https://placeimg.com/400/400/nature' size='m' />
+                <Image photo='./assets/nature.jpg' size='m' />
             </Tile.Media>
             <Tile.Content title='Tile Title' />
         </Tile>
         <br />
         <Tile active onClick={() => {}}>
             <Tile.Media>
-                <Image photo='https://placeimg.com/400/400/nature' size='l'
+                <Image photo='./assets/nature.jpg' size='l'
                     type='circle' />
             </Tile.Media>
             <Tile.Content title='Tile Title'>
@@ -101,7 +101,7 @@ export const actionTile = () => (
 );
 
 export const productTile = () => (
-    <Tile active backgroundImage='https://placeimg.com/1600/400/nature'
+    <Tile active backgroundImage='./assets/nature-2.jpg'
         onClick={() => {}} productTile>
         <Tile.Content title='Tile Title'>
             <p>Tile Description</p>

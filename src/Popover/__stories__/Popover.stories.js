@@ -211,7 +211,7 @@ export const noArrow = () => (
 
         <Popover
             body={bodyContent}
-            control={<Image photo='https://placeimg.com/400/400/nature' size='m'
+            control={<Image photo='./assets/nature.jpg' size='m'
                 type='circle' />}
             noArrow
             placement='top' />

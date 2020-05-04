@@ -83,7 +83,7 @@ export const singlePanel = () => (
             <br />
             <Tile>
                 <Tile.Media>
-                    <Image photo='https://placeimg.com/400/400/nature' size='l'
+                    <Image photo='./assets/nature.jpg' size='l'
                         type='circle' />
                 </Tile.Media>
                 <Tile.Content title='Tile Title'>

@@ -171,7 +171,7 @@ exports[`Storyshots Component API/Panel Single Panel 1`] = `
             className="fd-image--l fd-image--circle"
             style={
               Object {
-                "backgroundImage": "url(https://placeimg.com/400/400/nature)",
+                "backgroundImage": "url(./assets/nature.jpg)",
               }
             }
           />

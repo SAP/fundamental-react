@@ -70,7 +70,7 @@ exports[`Storyshots Component API/Tile Media Tile 1`] = `
         className="fd-image--m"
         style={
           Object {
-            "backgroundImage": "url(https://placeimg.com/400/400/nature)",
+            "backgroundImage": "url(./assets/nature.jpg)",
           }
         }
       />
@@ -99,7 +99,7 @@ exports[`Storyshots Component API/Tile Media Tile 1`] = `
         className="fd-image--l fd-image--circle"
         style={
           Object {
-            "backgroundImage": "url(https://placeimg.com/400/400/nature)",
+            "backgroundImage": "url(./assets/nature.jpg)",
           }
         }
       />
@@ -194,7 +194,7 @@ exports[`Storyshots Component API/Tile Primary 1`] = `
       className="fd-product-tile__media"
       style={
         Object {
-          "backgroundImage": "url(https://placeimg.com/1600/400/nature)",
+          "backgroundImage": "url(./assets/nature-2.jpg)",
         }
       }
     />
@@ -228,7 +228,7 @@ exports[`Storyshots Component API/Tile Product Tile 1`] = `
       className="fd-product-tile__media"
       style={
         Object {
-          "backgroundImage": "url(https://placeimg.com/1600/400/nature)",
+          "backgroundImage": "url(./assets/nature-2.jpg)",
         }
       }
     />

@@ -8,7 +8,7 @@ describe('<Image />', () => {
             const element = mount(
                 <Image
                     data-sample='Sample'
-                    photo='https://placeimg.com/400/400/nature'
+                    photo='./assets/nature.jpg'
                     size='s' />
             );
 
