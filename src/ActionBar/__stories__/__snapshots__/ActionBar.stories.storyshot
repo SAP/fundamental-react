@@ -1,0 +1,252 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Component API/ActionBar Dev 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    className="fd-action-bar"
+  >
+    <div
+      className="fd-action-bar__header"
+    >
+      <div
+        className="fd-action-bar__back"
+      >
+        <button
+          className="fd-button fd-button--transparent fd-button--compact sap-icon--navigation-left-arrow"
+          onClick={[Function]}
+          type="button"
+        />
+      </div>
+      <h1
+        className="fd-action-bar__title"
+      >
+        Page Title
+      </h1>
+      <div
+        className="fd-action-bar__actions"
+      >
+        <button
+          className="fd-button"
+          type="button"
+        >
+          Button
+        </button>
+        <button
+          className="fd-button fd-button--emphasized"
+          type="button"
+        >
+          Button
+        </button>
+      </div>
+    </div>
+    <p
+      className="fd-action-bar__description fd-action-bar__description--back"
+    >
+      Action Bar description
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Component API/ActionBar No Actions 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    className="fd-action-bar"
+  >
+    <div
+      className="fd-action-bar__header"
+    >
+      <h3
+        className="fd-action-bar__title"
+      >
+        Page Title
+      </h3>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Component API/ActionBar No Description 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    className="fd-action-bar"
+  >
+    <div
+      className="fd-action-bar__header"
+    >
+      <h3
+        className="fd-action-bar__title"
+      >
+        Page Title
+      </h3>
+      <div
+        className="fd-action-bar__actions"
+      >
+        <button
+          className="fd-button"
+          type="button"
+        >
+          Button
+        </button>
+        <button
+          className="fd-button fd-button--emphasized"
+          type="button"
+        >
+          Button
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Component API/ActionBar Primary 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    className="fd-action-bar"
+  >
+    <div
+      className="fd-action-bar__header"
+    >
+      <div
+        className="fd-action-bar__back"
+      >
+        <button
+          className="fd-button fd-button--transparent fd-button--compact sap-icon--navigation-left-arrow"
+          onClick={[Function]}
+          type="button"
+        />
+      </div>
+      <h3
+        className="fd-action-bar__title"
+      >
+        Page Title
+      </h3>
+      <div
+        className="fd-action-bar__actions"
+      >
+        <button
+          className="fd-button"
+          type="button"
+        >
+          Button
+        </button>
+        <button
+          className="fd-button fd-button--emphasized"
+          type="button"
+        >
+          Button
+        </button>
+      </div>
+    </div>
+    <p
+      className="fd-action-bar__description fd-action-bar__description--back"
+    >
+      Action Bar Description
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Component API/ActionBar With No Back Button 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    className="fd-action-bar"
+  >
+    <div
+      className="fd-action-bar__header"
+    >
+      <h3
+        className="fd-action-bar__title"
+      >
+        Page Title
+      </h3>
+      <div
+        className="fd-action-bar__actions"
+      >
+        <button
+          className="fd-button"
+          type="button"
+        >
+          Button
+        </button>
+        <button
+          className="fd-button fd-button--emphasized"
+          type="button"
+        >
+          Button
+        </button>
+      </div>
+    </div>
+    <p
+      className="fd-action-bar__description"
+    >
+      Action Bar Description
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Component API/ActionBar With a ContextualMenu 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    className="fd-action-bar"
+  >
+    <div
+      className="fd-action-bar__header"
+    >
+      <h3
+        className="fd-action-bar__title"
+      >
+        Page Title
+      </h3>
+      <div
+        className="fd-action-bar__actions"
+      >
+        <div
+          className="fd-popover"
+        >
+          <div
+            onFocus={[Function]}
+            onMouseDown={[Function]}
+            onTouchStart={[Function]}
+          >
+            <div
+              className="fd-popover__control"
+            >
+              <button
+                aria-controls="fd-1"
+                aria-expanded={false}
+                aria-haspopup={true}
+                className="fd-button fd-button--transparent sap-icon--vertical-grip"
+                onClick={[Function]}
+                onKeyPress={[Function]}
+                role="button"
+                tabIndex={0}
+                type="button"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p
+      className="fd-action-bar__description"
+    >
+      Action Bar Description
+    </p>
+  </div>
+</div>
+`;

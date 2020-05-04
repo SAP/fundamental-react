@@ -42,13 +42,15 @@ const InlineHelp = React.forwardRef(({ text, placement, className, contentClassN
 InlineHelp.displayName = 'InlineHelp';
 
 InlineHelp.propTypes = {
+    /** Localized text to display in the inline help pop-up */
     text: PropTypes.string.isRequired,
     /** CSS class(es) to add to the element */
     className: PropTypes.string,
+    /** Class names to be added to the `<span>` element */
     contentClassName: PropTypes.string,
     /** Internal use only */
     disableStyles: PropTypes.bool,
-    /** 'bottom-right',
+    /** Location to display the inline help pop-up relative to the image: 'bottom-right',
     'bottom-left',
     'right',
     'left',
@@ -58,12 +60,6 @@ InlineHelp.propTypes = {
 
 InlineHelp.defaultProps = {
     placement: 'bottom-right'
-};
-
-InlineHelp.propDescriptions = {
-    contentClassName: 'Class names to be added to the `<span>` element.',
-    placement: 'Location to display the inline help pop-up relative to the image.',
-    text: 'Localized text to display in the inline help pop-up.'
 };
 
 export default InlineHelp;

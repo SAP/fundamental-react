@@ -8,8 +8,12 @@ module.exports = {
     'moduleNameMapper': {
         '^.+\\.(css)$': 'babel-jest'
     },
+    'transformIgnorePatterns': [
+        'node_modules/?!(react-syntax-highlighter)'
+    ],
     'transform': {
         '^.+\\.?stories\\.js?$': '@storybook/addon-storyshots/injectFileName',
-        '^.+\\.js?$': 'babel-jest'
+        '^.+\\.js?$': 'babel-jest',
+        '^.+\\.mdx$': '@storybook/addon-docs/jest-transform-mdx'
     }
 };

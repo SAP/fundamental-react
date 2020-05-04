@@ -1,0 +1,124 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Component API/Counter Counter inline with a paragraph 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    className="fr-container"
+  >
+    <p>
+      Lorem ipsum 
+      <span
+        aria-label="Unread count"
+        className="fd-counter"
+      >
+        5
+      </span>
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Component API/Counter Default Counter 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    className="fr-container"
+  >
+    <span
+      aria-label="Unread count"
+      className="fd-counter"
+    >
+      5
+    </span>
+    <span
+      aria-label="Unread count"
+      className="fd-counter"
+    >
+      25
+    </span>
+    <span
+      aria-label="Unread count"
+      className="fd-counter"
+    >
+      101
+    </span>
+    <span
+      aria-label="Unread count"
+      className="fd-counter"
+    >
+      999+
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Component API/Counter Default Counter 2`] = `
+<div
+  dir="ltr"
+>
+  <div
+    className="fr-container"
+  >
+    <button
+      className="fd-button fd-button--transparent sap-icon--bell"
+      type="button"
+    >
+      <span
+        aria-label="Unread count"
+        className="fd-counter fd-counter--notification"
+      >
+        5
+      </span>
+    </button>
+    <button
+      className="fd-button fd-button--transparent sap-icon--bell"
+      type="button"
+    >
+      <span
+        aria-label="Unread count"
+        className="fd-counter fd-counter--notification"
+      >
+        25
+      </span>
+    </button>
+    <button
+      className="fd-button fd-button--transparent sap-icon--bell"
+      type="button"
+    >
+      <span
+        aria-label="Unread count"
+        className="fd-counter fd-counter--notification"
+      >
+        101
+      </span>
+    </button>
+    <button
+      className="fd-button fd-button--transparent sap-icon--bell"
+      type="button"
+    >
+      <span
+        aria-label="Unread count"
+        className="fd-counter fd-counter--notification"
+      >
+        999+
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Component API/Counter Primary 1`] = `
+<div
+  dir="ltr"
+>
+  <span
+    aria-label="Unread count"
+    className="fd-counter"
+  >
+    5
+  </span>
+</div>
+`;

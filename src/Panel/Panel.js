@@ -39,12 +39,10 @@ Panel.propTypes = {
     children: PropTypes.node,
     /** CSS class(es) to add to the element */
     className: PropTypes.string,
+    /** The number of columns to span inside a `LayoutGrid` */
     colSpan: CustomPropTypes.range(2, 6),
+    /** Internal use only */
     disableStyles: PropTypes.bool
-};
-
-Panel.propDescriptions = {
-    colSpan: 'The number of columns to span inside a `LayoutGrid`.'
 };
 
 Panel.Actions = PanelActions;

@@ -1,0 +1,357 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Component API/InputGroup Button add-on 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    className="fr-container"
+  >
+    <div
+      className="fd-input-group"
+    >
+      <input
+        className="fd-input fd-input-group__input"
+        type="text"
+      />
+      <span
+        className="fd-input-group__addon fd-input-group__addon--button"
+      >
+        <button
+          className="fd-button fd-button--transparent sap-icon--navigation-down-arrow fd-input-group__button"
+          type="button"
+        />
+      </span>
+    </div>
+    <div
+      className="fd-input-group"
+    >
+      <span
+        className="fd-input-group__addon fd-input-group__addon--button"
+      >
+        <button
+          className="fd-button fd-button--transparent sap-icon--navigation-down-arrow fd-input-group__button"
+          type="button"
+        />
+      </span>
+      <input
+        className="fd-input fd-input-group__input"
+        type="text"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Component API/InputGroup Compact 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    className="fd-input-group"
+  >
+    <span
+      className="fd-input-group__addon fd-input-group__addon--button fd-input-group__addon--compact"
+    >
+      <button
+        className="fd-button fd-button--transparent fd-button--compact sap-icon--navigation-down-arrow fd-input-group__button"
+        type="button"
+      />
+    </span>
+    <input
+      className="fd-input fd-input--compact fd-input-group__input"
+      type="text"
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots Component API/InputGroup Dev 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    className="fd-input-group"
+  >
+    <input
+      className="fd-input fd-input-group__input"
+      disabled={false}
+      type="text"
+    />
+    <span
+      className="fd-input-group__addon fd-input-group__addon--button"
+      disabled={false}
+    >
+      <button
+        className="fd-button fd-button--transparent sap-icon--navigation-down-arrow fd-input-group__button"
+        type="button"
+      />
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Component API/InputGroup Disabled 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    className="fd-input-group is-disabled"
+  >
+    <span
+      className="fd-input-group__addon fd-input-group__addon--button"
+      disabled={true}
+    >
+      <button
+        className="fd-button fd-button--transparent sap-icon--navigation-down-arrow fd-input-group__button"
+        type="button"
+      />
+    </span>
+    <input
+      className="fd-input fd-input-group__input"
+      disabled={true}
+      type="text"
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots Component API/InputGroup Icon add-on 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    className="fr-container"
+  >
+    <div
+      className="fd-input-group"
+    >
+      <span
+        className="fd-input-group__addon"
+      >
+        <span
+          className="sap-icon--globe"
+        />
+      </span>
+      <input
+        className="fd-input fd-input-group__input"
+        placeholder="Type text here"
+        type="text"
+      />
+    </div>
+    <div
+      className="fd-input-group"
+    >
+      <input
+        className="fd-input fd-input-group__input"
+        placeholder="Type text here"
+        type="text"
+      />
+      <span
+        className="fd-input-group__addon"
+      >
+        <span
+          className="sap-icon--hide"
+        />
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Component API/InputGroup Primary 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    className="fd-input-group"
+  >
+    <span
+      className="fd-input-group__addon fd-input-group__addon--button"
+    >
+      <button
+        className="fd-button fd-button--transparent sap-icon--navigation-down-arrow fd-input-group__button"
+        type="button"
+      />
+    </span>
+    <input
+      className="fd-input fd-input-group__input"
+      type="text"
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots Component API/InputGroup Text Area 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    className="fd-input-group"
+  >
+    <textarea
+      className="fd-textarea fd-input-group__input"
+      onChange={[Function]}
+    >
+      Default
+    </textarea>
+    <span
+      className="fd-input-group__addon"
+    >
+      <span
+        className="sap-icon--hide"
+      />
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Component API/InputGroup Text add-on 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    className="fr-container"
+  >
+    <div
+      className="fd-input-group"
+    >
+      <span
+        className="fd-input-group__addon"
+      >
+        €
+      </span>
+      <input
+        className="fd-input fd-input-group__input"
+        placeholder="Type text here"
+        type="text"
+      />
+    </div>
+    <div
+      className="fd-input-group"
+    >
+      <input
+        className="fd-input fd-input-group__input"
+        placeholder="Type text here"
+        type="text"
+      />
+      <span
+        className="fd-input-group__addon"
+      >
+        €
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Component API/InputGroup Validation State 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    className="fr-container"
+  >
+    <div
+      className="fd-input-group is-default"
+    >
+      <span
+        className="fd-input-group__addon"
+      >
+        $
+      </span>
+      <input
+        className="fd-input fd-input-group__input"
+        type="text"
+      />
+    </div>
+    <div
+      aria-live="assertive"
+      className="fd-form-message fd-form-message--default"
+      role="alert"
+    >
+      Test validation state
+    </div>
+    <div
+      className="fd-input-group is-error"
+    >
+      <span
+        className="fd-input-group__addon"
+      >
+        $
+      </span>
+      <input
+        className="fd-input fd-input-group__input"
+        type="text"
+      />
+    </div>
+    <div
+      aria-live="assertive"
+      className="fd-form-message fd-form-message--error"
+      role="alert"
+    >
+      Test validation state
+    </div>
+    <div
+      className="fd-input-group is-warning"
+    >
+      <span
+        className="fd-input-group__addon"
+      >
+        $
+      </span>
+      <input
+        className="fd-input fd-input-group__input"
+        type="text"
+      />
+    </div>
+    <div
+      aria-live="assertive"
+      className="fd-form-message fd-form-message--warning"
+      role="alert"
+    >
+      Test validation state
+    </div>
+    <div
+      className="fd-input-group is-information"
+    >
+      <span
+        className="fd-input-group__addon"
+      >
+        $
+      </span>
+      <input
+        className="fd-input fd-input-group__input"
+        type="text"
+      />
+    </div>
+    <div
+      aria-live="assertive"
+      className="fd-form-message fd-form-message--information"
+      role="alert"
+    >
+      Test validation state
+    </div>
+    <div
+      className="fd-input-group is-success"
+    >
+      <span
+        className="fd-input-group__addon"
+      >
+        $
+      </span>
+      <input
+        className="fd-input fd-input-group__input"
+        type="text"
+      />
+    </div>
+    <div
+      aria-live="assertive"
+      className="fd-form-message fd-form-message--success"
+      role="alert"
+    >
+      Test validation state
+    </div>
+  </div>
+</div>
+`;

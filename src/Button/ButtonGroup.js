@@ -34,8 +34,4 @@ ButtonGroup.propTypes = {
     disableStyles: PropTypes.bool
 };
 
-ButtonGroup.propDescriptions = {
-    children: '`Button` nodes to group together.'
-};
-
 export default ButtonGroup;

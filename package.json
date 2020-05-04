@@ -13,7 +13,7 @@
   "scripts": {
     "build:copy-files": "cp -rf package.json README.md NOTICE.txt LICENSE.txt CHANGELOG.md lib",
     "build:index": "babel-node devtools/buildIndexFiles.js",
-    "build:cjs": "cross-env NODE_ENV=production BABEL_ENV=cjs babel src --config-file ./config/babel.config.js --ignore \"src/**/*.test.js\",\"src/**/*.stories.mdx\" --out-dir lib",
+    "build:cjs": "cross-env NODE_ENV=production BABEL_ENV=cjs babel src --ignore \"src/**/*.test.js\",\"src/**/*.stories.js\",\"src/Docs/*.stories.mdx\" --out-dir lib",
     "build": "npm run build:index && rm -rf lib && npm run build:cjs",
     "deploy": "gh-pages -d storybook-static",
     "dry-run": "npm run build && npm run build:copy-files && npm publish lib --dry-run",
@@ -91,6 +91,7 @@
     "babel-preset-react-app": "^9.0.0",
     "core-js": "^3.1.4",
     "coveralls": "^3.0.2",
+    "cross-env": "^7.0.2",
     "enzyme": "^3.7.0",
     "enzyme-adapter-react-16": "^1.7.0",
     "eslint": "^6.8.0",

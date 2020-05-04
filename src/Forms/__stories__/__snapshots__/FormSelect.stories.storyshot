@@ -1,0 +1,155 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Component API/Forms/FormSelect Compact 1`] = `
+<div
+  dir="ltr"
+>
+  <select
+    className="fd-form-select fd-form-select--compact"
+  >
+    <option>
+      Duis malesuada odio volutpat elementum
+    </option>
+    <option>
+      Suspendisse ante ligula
+    </option>
+    <option>
+      Sed bibendum sapien at posuere interdum
+    </option>
+  </select>
+</div>
+`;
+
+exports[`Storyshots Component API/Forms/FormSelect Dev 1`] = `
+<div
+  dir="ltr"
+>
+  <select
+    className="fd-form-select"
+    disabled={false}
+  >
+    <option>
+      Duis malesuada odio volutpat elementum
+    </option>
+    <option>
+      Suspendisse ante ligula
+    </option>
+    <option>
+      Sed bibendum sapien at posuere interdum
+    </option>
+  </select>
+</div>
+`;
+
+exports[`Storyshots Component API/Forms/FormSelect Disabled 1`] = `
+<div
+  dir="ltr"
+>
+  <select
+    className="fd-form-select"
+    disabled={true}
+  >
+    <option>
+      Duis malesuada odio volutpat elementum
+    </option>
+    <option>
+      Suspendisse ante ligula
+    </option>
+    <option>
+      Sed bibendum sapien at posuere interdum
+    </option>
+  </select>
+</div>
+`;
+
+exports[`Storyshots Component API/Forms/FormSelect Primary 1`] = `
+<div
+  dir="ltr"
+>
+  <select
+    className="fd-form-select"
+  >
+    <option>
+      Duis malesuada odio volutpat elementum
+    </option>
+    <option>
+      Suspendisse ante ligula
+    </option>
+    <option>
+      Sed bibendum sapien at posuere interdum
+    </option>
+  </select>
+</div>
+`;
+
+exports[`Storyshots Component API/Forms/FormSelect Validation States 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    className="fr-container"
+  >
+    <select
+      className="fd-form-select is-error"
+    >
+      <option>
+        Duis malesuada odio volutpat elementum
+      </option>
+      <option>
+        Suspendisse ante ligula
+      </option>
+      <option>
+        Sed bibendum sapien at posuere interdum
+      </option>
+    </select>
+    <div
+      className="break"
+    />
+    <select
+      className="fd-form-select is-warning"
+    >
+      <option>
+        Duis malesuada odio volutpat elementum
+      </option>
+      <option>
+        Suspendisse ante ligula
+      </option>
+      <option>
+        Sed bibendum sapien at posuere interdum
+      </option>
+    </select>
+    <div
+      className="break"
+    />
+    <select
+      className="fd-form-select is-information"
+    >
+      <option>
+        Duis malesuada odio volutpat elementum
+      </option>
+      <option>
+        Suspendisse ante ligula
+      </option>
+      <option>
+        Sed bibendum sapien at posuere interdum
+      </option>
+    </select>
+    <div
+      className="break"
+    />
+    <select
+      className="fd-form-select is-success"
+    >
+      <option>
+        Duis malesuada odio volutpat elementum
+      </option>
+      <option>
+        Suspendisse ante ligula
+      </option>
+      <option>
+        Sed bibendum sapien at posuere interdum
+      </option>
+    </select>
+  </div>
+</div>
+`;
