@@ -5,6 +5,8 @@ import TileContent from './_TileContent';
 import TileMedia from './_TileMedia';
 import React, { useEffect } from 'react';
 
+/** A **Tile** can be used to display information in a simple container format.
+A collection of tiles can be displayed using **LayoutGrid** */
 const Tile = React.forwardRef(({
     active,
     disabled,
@@ -79,7 +81,9 @@ Tile.defaultProps = {
 Tile.displayName = 'Tile';
 
 Tile.propTypes = {
+    /** Add the attribute to make the tile clickable */
     active: PropTypes.bool,
+    /** URL of the background image for product tile */
     backgroundImage: PropTypes.string,
     /** Node(s) to render within the component */
     children: PropTypes.node,
@@ -89,18 +93,12 @@ Tile.propTypes = {
     disabled: PropTypes.bool,
     /** Internal use only */
     disableStyles: PropTypes.bool,
+    /** Set to **true** to mark component as a product tile */
     productTile: PropTypes.bool,
+    /** Tab Index to be provided for the tab root node */
     tabIndex: PropTypes.number,
     /** Callback function when user clicks on the component*/
     onClick: PropTypes.func
-};
-
-Tile.propDescriptions = {
-    active: 'Add the attribute to make the tile clickable.',
-    backgroundImage: 'URL of the background image for product tile.',
-    onClick: 'Listener to be called on tile click.',
-    productTile: 'Set to **true** to mark component as a product tile.',
-    tabIndex: 'Tab Index to be provided for the tab root node.'
 };
 
 Tile.Actions = TileActions;
