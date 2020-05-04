@@ -24,7 +24,6 @@ export const primary = () => (
         title={'Page Title'} />
 );
 
-
 export const noBackButton = () => (
     <ActionBar
         actions={(<><Button>Button</Button>
@@ -35,7 +34,6 @@ export const noBackButton = () => (
 );
 
 noBackButton.story = {
-    name: 'With No Back Button',
     parameters: {
         docs: {
             storyDescription: 'ActionBar with no back button'
@@ -60,6 +58,8 @@ export const contextualMenu = () => (
         description='Action Bar Description'
         title='Page Title' />
 );
+
+// TO DO: add link to bug about using jsdocs
 
 contextualMenu.story = {
     name: 'With a ContextualMenu',

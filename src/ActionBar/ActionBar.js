@@ -124,8 +124,4 @@ ActionBar.defaultProps = {
     headingLevel: 3
 };
 
-ActionBar.description = {
-    foo: 'bar'
-};
-
 export default ActionBar;
