@@ -8,13 +8,10 @@ script:
   - npm run build
 jobs:
   include:
-  - stage: Lint
+  - stage: Lint and Test
     script: npm run lint && npm run size
-  - stage: Unit Test
     script: npm run test:coverage && npm run test:coveralls
-  - stage: Visual Test
     script: npm run test:visual
-  - stage: Snapshot Test
     script: npm run test:snapshot
   - stage: Pre-release
     if: branch = master
