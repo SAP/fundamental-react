@@ -1,65 +1,17 @@
 import { mount } from 'enzyme';
-
 import React from 'react';
-import renderer from 'react-test-renderer';
 import Time from './Time';
 
 describe('<Time />', () => {
     const defaultTime = <Time />;
     const meridiemTime = <Time name='meridiem' />;
-    const customTime = <Time name='custom' />;
     const twelveHour = <Time format12Hours />;
-    const falseSpinners = <Time spinners={false} />;
-    const hideSeconds = <Time showSecond={false} />;
-    const disabledTime = <Time disabled />;
     const timeMeridiemSet = (
         <Time
             format12Hours={false}
             name='meridiem'
             time={{ hour: 22, minute: 34, second: 12, meridiem: 0 }} />
     );
-
-    test('create time component', () => {
-        // default time
-        let component = renderer.create(defaultTime);
-        let tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-
-        // meridiem time
-        component = renderer.create(meridiemTime);
-        tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-
-        // meridiem time, with value set
-        component = renderer.create(timeMeridiemSet);
-        tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-
-        // custom name for increase/decrease
-        component = renderer.create(customTime);
-        tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-
-        // twelve hour time
-        component = renderer.create(twelveHour);
-        tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-
-        // false spinners time
-        component = renderer.create(falseSpinners);
-        tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-
-        // hide seconds time
-        component = renderer.create(hideSeconds);
-        tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-
-        // disabled time
-        component = renderer.create(disabledTime);
-        tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-    });
 
     test('time number up click', () => {
         const wrapper = mount(twelveHour);

@@ -9,6 +9,8 @@ import keycode from 'keycode';
 import PropTypes from 'prop-types';
 import React, { useCallback, useState } from 'react';
 
+/** The **Step Input** allows numbers to be entered. It is typically used used to enter numbers.
+ * The value can be increased or reduced with the provided controls */
 const StepInput = React.forwardRef(({
     children,
     className,
@@ -122,20 +124,31 @@ const StepInput = React.forwardRef(({
 StepInput.displayName = 'StepInput';
 
 StepInput.propTypes = {
+    /** Node(s) to render within the component */
     children: PropTypes.node,
+    /** CSS class(es) to add to the element */
     className: PropTypes.string,
+    /** Set to **true** to mark component as disabled and make it non-interactive */
     disabled: PropTypes.bool,
+    /** Internal use only */
     disableStyles: PropTypes.bool,
+    /** Localized text to be updated based on location/language */
     localizedText: CustomPropTypes.i18n({
         stepUpLabel: PropTypes.string,
         stepDownLabel: PropTypes.string
     }),
+    /** Localized placeholder text of the input */
     placeholder: PropTypes.string,
+    /** Set to **true** to mark component as readonly */
     readOnly: PropTypes.bool,
+    /** An object identifying a validation message.  The object will include properties for `state` and `text`; _e.g._, \`{ state: \'warning\', text: \'This is your last warning\' }\` */
     validationState: PropTypes.shape({
+        /** State of validation: 'error', 'warning', 'information', 'success' */
         state: PropTypes.oneOf(FORM_MESSAGE_TYPES),
+        /** Text of the validation message */
         text: PropTypes.string
     }),
+    /** Value of the number input */
     value: PropTypes.number
 };
 

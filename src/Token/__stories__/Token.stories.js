@@ -1,24 +1,29 @@
+/* eslint-disable react/no-multi-comp */
+import { boolean } from '@storybook/addon-knobs';
 import React from 'react';
-import { storiesOf } from '@storybook/react';
 import Token from '../Token';
-import {
-    boolean,
-    withKnobs
-} from '@storybook/addon-knobs';
 
-storiesOf('Components|Token', module)
-    .addDecorator(withKnobs)
-    .add('Dev', () => (
-        <Token
-            compact={boolean('compact', false)}
-            readOnly={boolean('readOnly', false)}>Default</Token>
-    ))
-    .add('Compact', () => (
-        <Token compact>Compact</Token>
-    ))
-    .add('ReadOnly', () => (
-        <Token readOnly>Compact</Token>
-    ))
-    .add('disable styles', () => (
-        <Token disableStyles>Default</Token>
-    ));
+export default {
+    title: 'Component API/Token',
+    component: Token
+};
+
+export const primary = () => (
+    <Token>Default</Token>
+);
+
+export const compact = () => (
+    <Token compact>Compact</Token>
+);
+export const readOnly = () => (
+    <Token readOnly>Compact</Token>
+);
+
+export const dev = () => (
+    <Token
+        compact={boolean('compact', false)}
+        readOnly={boolean('readOnly', false)}>Default</Token>
+);
+dev.story = {
+    parameters: { docs: { disable: true } }
+};

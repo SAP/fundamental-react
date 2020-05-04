@@ -21,6 +21,7 @@ ListIcon.displayName = 'List.Icon';
 
 ListIcon.propTypes = {
     glyph: PropTypes.oneOf(listOfIcons).isRequired,
+    /** CSS class(es) to add to the element */
     className: PropTypes.string
 };
 

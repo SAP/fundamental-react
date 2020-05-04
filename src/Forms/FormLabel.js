@@ -42,18 +42,18 @@ const FormLabel = React.forwardRef(({
 FormLabel.displayName = 'FormLabel';
 
 FormLabel.propTypes = {
+    /** Node(s) to render within the component */
     children: PropTypes.node,
+    /** CSS class(es) to add to the element */
     className: PropTypes.string,
+    /** Set to **true** to mark component as disabled and make it non-interactive */
     disabled: PropTypes.bool,
+    /** Internal use only */
     disableStyles: PropTypes.bool,
+    /** Set to **true** if child is InlineHelp component */
     isInlineHelp: PropTypes.bool,
+    /** Set to **true** for required input fields */
     required: PropTypes.bool
 };
-
-FormLabel.propDescriptions = {
-    isInlineHelp: 'Set to **true** if child is InlineHelp component',
-    required: 'Set to **true** for required input fields.'
-};
-
 
 export default FormLabel;

@@ -4,6 +4,8 @@ import PropTypes from 'prop-types';
 import { IDENTIFIER_MODIFIERS, IDENTIFIER_SIZES } from '../utils/constants';
 import React, { useEffect } from 'react';
 
+/** An **Identifier** is a visual presentation option around using an icon or user initials. */
+
 const Identifier = React.forwardRef(({ glyph, size, modifier, color, label, backgroundImageUrl, children, className, disableStyles, role, ...props }, ref) => {
 
     useEffect(() => {
@@ -52,24 +54,32 @@ const Identifier = React.forwardRef(({ glyph, size, modifier, color, label, back
 Identifier.displayName = 'Identifier';
 
 Identifier.propTypes = {
+    /** Image URL */
     backgroundImageUrl: PropTypes.string,
+    /** Node(s) to render within the component */
     children: PropTypes.node,
+    /** CSS class(es) to add to the element */
     className: PropTypes.string,
+    /** Applies a background color */
     color: CustomPropTypes.range(1, 9),
+    /** Internal use only */
     disableStyles: PropTypes.bool,
+    /** The icon to include. See the icon page for the list of icons */
     glyph: PropTypes.string,
+    /** Localized text for label */
     label: PropTypes.string,
+    /** Sets a style variation for a modified appearance: 'circle', 'transparent' */
     modifier: PropTypes.oneOf(IDENTIFIER_MODIFIERS),
+    /** Applies an aria-role. Set to button if Identifier opens a Popover or Dialog */
     role: PropTypes.string,
+    /** Size of the component:  'xxs',
+    'xs',
+    's',
+    'm',
+    'l',
+    'xl',
+    'xxl' */
     size: PropTypes.oneOf(IDENTIFIER_SIZES)
-};
-
-Identifier.propDescriptions = {
-    backgroundImageUrl: 'Image URL.',
-    color: 'Applies a background color.',
-    label: 'Localized text for label.',
-    role: 'Applies an aria-role. Set to button if Identifier opens a Popover or Dialog.',
-    size: 'Size of the image. These sizes are available: **xxs** (extra extra small) - 20px, **xs** (extra small) - 28px, **s** (small) - 32px, **m** (medium) - 48px, **l** (large) - 64px, **xl** (extra lagre) - 88px, and **xxl** (extra extra large). Default matches the base font size (14px).'
 };
 
 export default Identifier;

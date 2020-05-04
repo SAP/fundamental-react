@@ -6,6 +6,13 @@ import FocusLock from 'react-focus-lock';
 import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
 import React, { Component } from 'react';
+
+/** The **Dialog** is a container generally displayed in response to an action. It is used for short forms,
+ * confirmation messages or to display contextual information that does not require a page.\n\nTo
+ * display the **Dialog** dialog, pass a boolean value to the \`show\` property of the component. It is
+ * recommended to store this value as a state property in the parent control or application.
+ * This is used to present information to the user when the **MessageStrip** component doesn’t fit all the information. */
+
 class Dialog extends Component {
     // select body element to add Dialog component too
     // eslint-disable-next-line compat/compat
@@ -154,22 +161,39 @@ class Dialog extends Component {
 Dialog.displayName = 'Dialog';
 
 Dialog.propTypes = {
+    /** Node(s) to render within the footer of the dialog */
     actions: PropTypes.arrayOf(PropTypes.node).isRequired,
+    /** Localized text for the heading */
     title: PropTypes.string.isRequired,
+    /** CSS class(es) to add to the dialog backdrop */
     backdropClassName: PropTypes.string,
+    /** Additional props to be spread to the body section of the dialog */
     bodyProps: PropTypes.object,
+    /** Node(s) to render within the component */
     children: PropTypes.node,
+    /** CSS class(es) to add to the element */
     className: PropTypes.string,
+    /** Additional props to be spread to the content section of the dialog */
     contentProps: PropTypes.object,
+    /** Internal use only */
     disableStyles: PropTypes.bool,
+    /** Additional props to be spread to the footer of the dialog */
     footerProps: PropTypes.object,
+    /** Text for the components header */
     header: PropTypes.string,
+    /** Additional props to be spread to the header of the dialog */
     headerProps: PropTypes.object,
+    /** Heading level. `<h1>` is reserved for the page title. It should not appear in components */
     headingLevel: CustomPropTypes.range(2, 6),
+    /** Set to **true** to make the dialog visible */
     show: PropTypes.bool,
+    /** By default dialog body has no horizontal paddings. Add a size to modify the padding: 's', 'm', 'l', 'xl' */
     size: PropTypes.oneOf(DIALOG_SIZES),
+    /** Text for the components subheader */
     subheader: PropTypes.string,
+    /**Additional props to be spread to the title\'s heading element */
     titleProps: PropTypes.object,
+    /** Callback function passing event when any action is clicked */
     onClose: PropTypes.func
 };
 
@@ -177,20 +201,6 @@ Dialog.defaultProps = {
     headingLevel: 3,
     size: 'l',
     onClose: () => { }
-};
-
-Dialog.propDescriptions = {
-    actions: 'Node(s) to render within the footer of the dialog.',
-    backdropClassName: 'CSS class(es) to add to the dialog backdrop.',
-    bodyProps: 'Additional props to be spread to the body section of the dialog.',
-    contentProps: 'Additional props to be spread to the content section of the dialog.',
-    footerProps: 'Additional props to be spread to the footer of the dialog.',
-    header: 'Text for the components header.',
-    headerProps: 'Additional props to be spread to the header of the dialog.',
-    onClose: 'Callback function passing event when any action is clicked.',
-    size: 'By default dialog body has no horizontal paddings. Add a size to modify the padding.',
-    show: 'Set to **true** to make the dialog visible.',
-    subheader: 'Text for the components subheader.'
 };
 
 export default Dialog;

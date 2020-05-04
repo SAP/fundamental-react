@@ -1,11 +1,10 @@
+/* eslint-disable react/no-multi-comp */
 import React from 'react';
 import Select from '../Select';
-import { storiesOf } from '@storybook/react';
 import {
     boolean,
     select,
-    text,
-    withKnobs
+    text
 } from '@storybook/addon-knobs';
 
 const options = [
@@ -15,60 +14,66 @@ const options = [
     { key: '4', text: 'List Item 4' }
 ];
 
-storiesOf('Components|Select', module)
-    .addDecorator(withKnobs)
-    .add('Dev', () => (
-        <Select
-            compact={boolean('compact', false)}
-            disabled={boolean('disabled', false)}
-            options={options}
-            placeholder={text('placeholder', 'select')}
-            validationState={select('Validation State', {
-                'none': '',
-                'success': { state: 'success', text: 'placeholder text' },
-                'error': { state: 'error', text: 'placeholder text' },
-                'information': { state: 'information', text: 'placeholder text' },
-                'warning': { state: 'warning', text: 'placeholder text' }
-            })} />
-    ))
-    .add('Compact', () => (
-        <Select
-            compact
-            options={options}
-            placeholder='Select' />
-    ))
-    .add('Disabled', () => (
-        <Select
-            disabled
-            options={options}
-            placeholder='Select' />
-    ))
-    .add('Validation State | Error', () => (
+
+export default {
+    title: 'Component API/Select',
+    component: Select
+};
+
+export const primary = () => (
+    <Select
+        options={options}
+        placeholder='Select' />
+);
+
+export const compact = () => (
+    <Select
+        compact
+        options={options}
+        placeholder='Select' />
+);
+export const disabled = () => (
+    <Select
+        disabled
+        options={options}
+        placeholder='Select' />
+);
+export const validationStates = () => (
+    <div className='fr-container'>
         <Select
             options={options}
-            placeholder='Default'
+            placeholder='Error'
             validationState={{ state: 'error', text: 'Test validation state' }} />
-    ))
-    .add('Validation State | Warning', () => (
         <Select
             options={options}
-            placeholder='Default'
+            placeholder='Warning'
             validationState={{ state: 'warning', text: 'Test validation state' }} />
-    ))
-    .add('Validation State | Information', () => (
         <Select
             options={options}
-            placeholder='Default'
-            validationState={{ state: 'information', text: 'Test validation state' }} />
-    ))
-    .add('Validation State | Success', () => (
-        <Select
-            options={options}
-            placeholder='Default'
+            placeholder='Success'
             validationState={{ state: 'success', text: 'Test validation state' }} />
-    ))
-    .add('disable styles', () => (
         <Select
-            disableStyles
-            options={options} />
-    ));
+            options={options}
+            placeholder='Information'
+            validationState={{ state: 'information', text: 'Test validation state' }} />
+    </div>
+);
+
+
+export const dev = () => (
+    <Select
+        compact={boolean('compact', false)}
+        disabled={boolean('disabled', false)}
+        options={options}
+        placeholder={text('placeholder', 'select')}
+        validationState={select('Validation State', {
+            'none': '',
+            'success': { state: 'success', text: 'placeholder text' },
+            'error': { state: 'error', text: 'placeholder text' },
+            'information': { state: 'information', text: 'placeholder text' },
+            'warning': { state: 'warning', text: 'placeholder text' }
+        })} />
+);
+dev.story = {
+    parameters: { docs: { disable: true } }
+};

@@ -101,33 +101,33 @@ const MenuItem = ({
 MenuItem.displayName = 'Menu.Item';
 
 MenuItem.propTypes = {
+    /** Set to **true** to apply active style */
     active: PropTypes.bool,
+    /** Name of the SAP icon to be applied as an add-on before the text */
     addonAfter: PropTypes.string,
+    /** Name of the SAP icon to be applied as an add-on after the text */
     addonBefore: PropTypes.string,
+    /** Additional props to be spread to the add-ons */
     addonProps: PropTypes.object,
+    /** Node(s) to render within the component */
     children: PropTypes.node,
+    /** CSS class(es) to add to the element */
     className: PropTypes.string,
+    /** Set to **true** to mark component as disabled and make it non-interactive */
     disabled: PropTypes.bool,
+    /** Set to **true** to style as a link */
     isLink: PropTypes.bool,
+    /** Callback function when user clicks on the component*/
     onclick: PropTypes.func,
+    /** Set to **true** to apply selected style */
     selected: PropTypes.bool,
+    /** Set to **true** to place a separator after list item */
     separator: PropTypes.bool,
+    /** Enables use of `<a>` element. Value to be applied to the anchor\'s `href` attribute.
+     * Should use either `link` or `url`, but not both. */
     url: PropTypes.string,
+    /** Additional props to be spread to the Menu Item links (when using `url`). */
     urlProps: PropTypes.object
-};
-
-MenuItem.propDescriptions = {
-    active: 'Set to **true** to apply active style.',
-    addonBefore: 'Name of the SAP icon to be applied as an add-on before the text.',
-    addonAfter: 'Name of the SAP icon to be applied as an add-on after the text.',
-    addonProps: 'Additional props to be spread to the add-ons.',
-    children: 'component - can be used to pass React Router <Link> or any other component which emits an <a>.',
-    disabled: 'Set to **true** to apply disabled style',
-    isLink: 'Set to **true** to style as a link.',
-    selected: 'Set to **true** to apply selected style.',
-    separator: 'Set to **true** to place a separator after list item.',
-    url: 'Enables use of `<a>` element. Value to be applied to the anchor\'s `href` attribute. Should use either `link` or `url`, but not both.',
-    urlProps: 'Additional props to be spread to the Menu Item links (when using `url`).'
 };
 
 export default MenuItem;

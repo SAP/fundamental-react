@@ -35,11 +35,16 @@ const TileContent = props => {
 TileContent.displayName = 'Tile.Content';
 
 TileContent.propTypes = {
+    /** Localized text for the heading */
     title: PropTypes.string.isRequired,
+    /** Node(s) to render within the component */
     children: PropTypes.node,
+    /** CSS class(es) to add to the element */
     className: PropTypes.string,
+    /** Heading level. `<h1>` is reserved for the page title. It should not appear in components */
     headingLevel: CustomPropTypes.range(2, 6),
     productTile: PropTypes.bool,
+    /**Additional props to be spread to the title\'s heading element */
     titleProps: PropTypes.object
 };
 

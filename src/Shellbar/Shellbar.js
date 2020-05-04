@@ -10,6 +10,11 @@ import PropTypes from 'prop-types';
 import SearchInput from '../SearchInput/SearchInput';
 import React, { Component } from 'react';
 
+/** The **Shellbar** offers consistent, responsive navigation across all products and applications. Includes
+support for branding, product navigation, search, notifications, user settings, and CoPilot. This is
+a composite component comprised of mandatory and optional elements. Before getting started, here are
+some things to know. */
+
 class Shellbar extends Component {
     constructor(props) {
         super(props);
@@ -466,33 +471,57 @@ class Shellbar extends Component {
 Shellbar.displayName = 'Shellbar';
 
 Shellbar.propTypes = {
+    /** Holds all product actions and links */
     actions: PropTypes.array,
+    /** Adds back icon to shellbar and performs the provided action */
     backAction: PropTypes.func,
+    /** CSS class(es) to add to the element */
     className: PropTypes.string,
+    /** For use with applications that utilize CoPilot */
     copilot: PropTypes.bool,
+    /** Internal use only */
     disableStyles: PropTypes.bool,
+    /** Localized text to be updated based on location/language */
     localizedText: CustomPropTypes.i18n({
+        /** Aria-label for back <button> */
         backButtonLabel: PropTypes.string,
+        /** Aria-label for <span> element within the <button> element */
         counterLabel: PropTypes.string,
+        /** Aria-label for <button> element */
         notificationsButton: PropTypes.string
     }),
+    /** Provide an img tag for a logo other than the SAP logo.
+     * One of the two props (`logo` or `logoSAP`) should be set */
     logo: PropTypes.object,
+    /** Renders the SAP logo in the Shellbar. One of the two props (`logo` or `logoSAP`) should be set */
     logoSAP: PropTypes.bool,
+    /** Information about pending notifications */
     notifications: PropTypes.object,
+    /** Holds product titles and navigation */
     productMenu: PropTypes.array,
+    /** For navigating between products */
     productSwitch: PropTypes.object,
+    /** Array of objects containing data about the products.
+     * Callback, title, and glyph are required; subtitle is optional. */
     productSwitchList: PropTypes.arrayOf(
         PropTypes.shape({
             callback: PropTypes.func.isRequired,
+            /** Localized text for the heading */
             title: PropTypes.string.isRequired,
+            /** The icon to include. See the icon page for the list of icons */
             glyph: PropTypes.string.isRequired,
             subtitle: PropTypes.string
         })
     ),
+    /** Displays the current application when no product menu is used */
     productTitle: PropTypes.string,
+    /** User information (_e.g._ name, initials, etc.) */
     profile: PropTypes.object,
+    /** List of items for the profile menu */
     profileMenu: PropTypes.array,
+    /** Holds `searchInput` properties */
     searchInput: PropTypes.object,
+    /** Displays an application context. Should be used rarely */
     subtitle: PropTypes.string
 };
 
@@ -502,28 +531,6 @@ Shellbar.defaultProps = {
         counterLabel: 'Unread count',
         notificationsButton: 'Notifications'
     }
-};
-
-Shellbar.propDescriptions = {
-    actions: 'Holds all product actions and links.',
-    copilot: 'For use with applications that utilize CoPilot.',
-    backAction: 'Adds back icon to shellbar and performs the provided action.',
-    logo: 'Provide an img tag for a logo other than the SAP logo. One of the two props (`logo` or `logoSAP`) should be set.',
-    logoSAP: 'Renders the SAP logo in the Shellbar. One of the two props (`logo` or `logoSAP`) should be set.',
-    localizedTextShape: {
-        backButtonLabel: 'Aria-label for back <button>.',
-        counterLabel: 'Aria-label for <span> element within the <button> element.',
-        notificationsButton: 'Aria-label for <button> element.'
-    },
-    notifications: 'Information about pending notifications.',
-    productMenu: 'Holds product titles and navigation.',
-    productSwitch: 'For navigating between products.',
-    productSwitchList: 'Array of objects containing data about the products. Callback, title, and glyph are required; subtitle is optional.',
-    productTitle: 'Displays the current application when no product menu is used.',
-    profile: 'User information (_e.g._ name, initials, etc.)',
-    profileMenu: 'List of items for the profile menu.',
-    searchInput: 'Holds `searchInput` properties.',
-    subtitle: 'Displays an application context. Should be used rarely.'
 };
 
 export default Shellbar;

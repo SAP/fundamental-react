@@ -7,6 +7,9 @@ import ListText from './_ListText';
 import PropTypes from 'prop-types';
 import React, { useEffect } from 'react';
 
+/** Lists and tables are similar as both usually contain a vertical list of data,
+but lists generally contain basic data and tables tend to hold more complex data.
+If the list is a complex hierarchy, it is best to use a **Tree**. */
 const List = React.forwardRef(({
     children,
     className,
@@ -42,10 +45,15 @@ const List = React.forwardRef(({
 List.displayName = 'List';
 
 List.propTypes = {
+    /** Node(s) to render within the component */
     children: PropTypes.node,
+    /** CSS class(es) to add to the element */
     className: PropTypes.string,
+    /** Set to **true** to enable compact mode */
     compact: PropTypes.bool,
+    /** Internal use only */
     disableStyles: PropTypes.bool,
+    /** Set to **true** to remove borders from the List component. */
     noBorder: PropTypes.bool
 };
 
@@ -55,10 +63,5 @@ List.Header = ListHeader;
 List.Item = ListItem;
 List.Icon = ListIcon;
 List.Text = ListText;
-
-
-List.propDescriptions = {
-    noBorder: 'Set to **true** to remove borders from the List component.'
-};
 
 export default List;

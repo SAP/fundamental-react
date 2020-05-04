@@ -31,15 +31,14 @@ const ListText = ({
 ListText.displayName = 'List.Text';
 
 ListText.propTypes = {
+    /** Node(s) to render within the component */
     children: PropTypes.node,
+    /** CSS class(es) to add to the element */
     className: PropTypes.string,
+    /** Text is wrapped by default, set to **true** to prevent the text from wrapping */
     noWrap: PropTypes.bool,
+    /** Set to **true** to right align the text in the list */
     secondary: PropTypes.bool
-};
-
-ListText.propDescriptions = {
-    noWrap: 'Text is wrapped by default, set to **true** to prevent the text from wrapping.',
-    secondary: 'Set to **true** to right align the text in the list.'
 };
 
 export default ListText;

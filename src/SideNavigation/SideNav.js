@@ -4,6 +4,9 @@ import SideNavList from './_SideNavList';
 import SideNavListItem from './_SideNavListItem';
 import React, { Component } from 'react';
 
+/** The left navigation can always display or expand/collapse using the menu icon within the global
+navigation. */
+
 class SideNav extends Component {
     constructor(props) {
         super(props);
@@ -61,24 +64,25 @@ class SideNav extends Component {
 }
 
 SideNav.propTypes = {
+    /** Node(s) to render within the component */
     children: PropTypes.node,
+    /** CSS class(es) to add to the element */
     className: PropTypes.string,
+    /** Set to **true** to narrow the height of each `SideNavListItem`.
+     * This mode is suggested for devices operated by mouse and keyboard */
     compact: PropTypes.bool,
+    /** Set to **true** to only render icons for each `SideNavListItem` */
     condensed: PropTypes.bool,
+    /** Internal use only */
     disableStyles: PropTypes.bool,
+    /** The `id` of the selected `SideNavListItem` */
     selectedId: PropTypes.string,
+    /** Callback function when a navigation item is selected. Arguments passed are the event and the id of the selected item. */
     onItemSelect: PropTypes.func
 };
 
 SideNav.defaultProps = {
     onItemSelect: () => { }
-};
-
-SideNav.propDescriptions = {
-    compact: 'Set to **true** to narrow the height of each `SideNavListItem`. This mode is suggested for devices operated by mouse and keyboard.',
-    condensed: 'Set to **true** to only render icons for each `SideNavListItem`.',
-    onItemSelect: 'Callback function when a navigation item is selected. Arguments passed are the event and the id of the selected item.',
-    selectedId: 'The `id` of the selected `SideNavListItem`.'
 };
 
 SideNav.displayName = 'SideNav';

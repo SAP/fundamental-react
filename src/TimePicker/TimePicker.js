@@ -5,6 +5,8 @@ import Time from '../Time/Time';
 import TimePickerItem from './_TimePickerItem';
 import React, { Component } from 'react';
 
+/** The **TimePicker** allows the user to easily set a time using the **Time** component. */
+
 class TimePicker extends Component {
     constructor(props) {
         super(props);
@@ -167,17 +169,26 @@ TimePicker.displayName = 'TimePicker';
 
 TimePicker.propTypes = {
     ...Time.basePropTypes,
+    /** Additional props to be spread to the `<button>` element */
     buttonProps: PropTypes.object,
+    /** Set to **true** to mark component as disabled and make it non-interactive */
     disabled: PropTypes.bool,
+    /** Value for the `id` attribute on the element */
     id: PropTypes.string,
+    /** Additional props to be spread to the `<input>` element */
     inputProps: PropTypes.object,
+    /** Localized text to be updated based on location/language */
     localizedText: CustomPropTypes.i18n({
         meridiemAM: PropTypes.string,
         meridiemPM: PropTypes.string
     }),
+    /** Additional props to be spread to the Popover component */
     popoverProps: PropTypes.object,
+    /** Additional props to be spread to the `Time` component */
     timeProps: PropTypes.object,
+    /** Initial time value for the input. Accepted time format : hh:mm:ss am/pm, Eg: 10:32:30 am */
     value: PropTypes.string,
+    /** Callback function when the change event fires on the component */
     onChange: PropTypes.func
 };
 
@@ -197,12 +208,6 @@ TimePicker.defaultProps = {
         meridiem: 0
     },
     onChange: () => {}
-};
-
-TimePicker.propDescriptions = {
-    ...Time.propDescriptions,
-    timeProps: 'Additional props to be spread to the `Time` component.',
-    value: 'Initial time value for the input. Accepted time format : hh:mm:ss am/pm, Eg: 10:32:30 am'
 };
 
 export default TimePicker;

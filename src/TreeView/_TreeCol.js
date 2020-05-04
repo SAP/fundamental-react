@@ -29,6 +29,7 @@ TreeCol.displayName = 'TreeView.Col';
 
 TreeCol.propTypes = {
     children: PropTypes.node,
+    /** CSS class(es) to add to the element */
     className: PropTypes.string
 };
 

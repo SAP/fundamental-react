@@ -4,6 +4,7 @@ import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import PropTypes from 'prop-types';
 import React, { useEffect } from 'react';
 
+/** A **Busy Indicator** informs the user of an ongoing operation. */
 const BusyIndicator = React.forwardRef(({
     className,
     show,
@@ -48,12 +49,18 @@ const BusyIndicator = React.forwardRef(({
 BusyIndicator.displayName = 'BusyIndicator';
 
 BusyIndicator.propTypes = {
+    /** CSS class(es) to add to the element */
     className: PropTypes.string,
+    /** Internal use only */
     disableStyles: PropTypes.bool,
+    /** Localized text to be updated based on location/language */
     localizedText: CustomPropTypes.i18n({
+        /** aria-label for Busy Indicator component */
         loading: PropTypes.string
     }),
+    /** Set to **true** to make Busy Indicator visible */
     show: PropTypes.bool,
+    /** Size of the component: 's', 'm' or 'l' */
     size: PropTypes.oneOf(BUSY_INDICATOR_SIZES)
 };
 
@@ -63,13 +70,6 @@ BusyIndicator.defaultProps = {
     },
     size: 'm',
     show: false
-};
-
-BusyIndicator.propDescriptions = {
-    show: 'Set to **true** to make Busy Indicator visible',
-    localizedTextShape: {
-        loading: 'aria-label for Busy Indicator component'
-    }
 };
 
 export default BusyIndicator;

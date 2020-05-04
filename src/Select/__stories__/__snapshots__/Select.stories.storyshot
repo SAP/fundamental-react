@@ -1,0 +1,342 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Component API/Select Compact 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    className="fd-popover"
+  >
+    <div
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      onTouchStart={[Function]}
+    >
+      <div
+        className="fd-popover__control"
+      >
+        <div
+          aria-controls="fd-193"
+          aria-expanded={false}
+          aria-haspopup={true}
+          className="fd-select fd-select--compact"
+          onClick={[Function]}
+          onKeyPress={[Function]}
+          role="button"
+          tabIndex={0}
+        >
+          <div
+            className="fd-select__control"
+          >
+            Select
+            <button
+              className="fd-button fd-button--transparent sap-icon--slim-arrow-down fd-select__button"
+              type="button"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Component API/Select Dev 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    className="fd-popover"
+  >
+    <div
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      onTouchStart={[Function]}
+    >
+      <div
+        className="fd-popover__control"
+      >
+        <div
+          aria-controls="fd-199"
+          aria-expanded={false}
+          aria-haspopup={true}
+          className="fd-select"
+          onClick={[Function]}
+          onKeyPress={[Function]}
+          role="button"
+          tabIndex={0}
+        >
+          <div
+            className="fd-select__control"
+          >
+            select
+            <button
+              className="fd-button fd-button--transparent sap-icon--slim-arrow-down fd-select__button"
+              disabled={false}
+              type="button"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Component API/Select Disabled 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    className="fd-popover"
+  >
+    <div
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      onTouchStart={[Function]}
+    >
+      <div
+        className="fd-popover__control"
+      >
+        <div
+          aria-controls="fd-194"
+          aria-expanded={false}
+          aria-haspopup={true}
+          className="fd-select"
+          onClick={[Function]}
+          onKeyPress={[Function]}
+          role="button"
+          tabIndex={0}
+        >
+          <div
+            className="fd-select__control is-disabled"
+          >
+            Select
+            <button
+              className="fd-button fd-button--transparent sap-icon--slim-arrow-down is-disabled fd-select__button"
+              disabled={true}
+              type="button"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Component API/Select Primary 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    className="fd-popover"
+  >
+    <div
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      onTouchStart={[Function]}
+    >
+      <div
+        className="fd-popover__control"
+      >
+        <div
+          aria-controls="fd-192"
+          aria-expanded={false}
+          aria-haspopup={true}
+          className="fd-select"
+          onClick={[Function]}
+          onKeyPress={[Function]}
+          role="button"
+          tabIndex={0}
+        >
+          <div
+            className="fd-select__control"
+          >
+            Select
+            <button
+              className="fd-button fd-button--transparent sap-icon--slim-arrow-down fd-select__button"
+              type="button"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Component API/Select Validation States 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    className="fr-container"
+  >
+    <div
+      className="fd-popover"
+    >
+      <div
+        onFocus={[Function]}
+        onMouseDown={[Function]}
+        onTouchStart={[Function]}
+      >
+        <div
+          className="fd-popover__control"
+        >
+          <div
+            aria-controls="fd-195"
+            aria-expanded={false}
+            aria-haspopup={true}
+            className="fd-select"
+            onClick={[Function]}
+            onKeyPress={[Function]}
+            role="button"
+            tabIndex={0}
+          >
+            <div
+              className="fd-select__control is-error"
+            >
+              Error
+              <button
+                className="fd-button fd-button--transparent sap-icon--slim-arrow-down fd-select__button"
+                type="button"
+              />
+            </div>
+            <div
+              aria-live="assertive"
+              className="fd-form-message fd-form-message--error"
+              role="alert"
+            >
+              Test validation state
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="fd-popover"
+    >
+      <div
+        onFocus={[Function]}
+        onMouseDown={[Function]}
+        onTouchStart={[Function]}
+      >
+        <div
+          className="fd-popover__control"
+        >
+          <div
+            aria-controls="fd-196"
+            aria-expanded={false}
+            aria-haspopup={true}
+            className="fd-select"
+            onClick={[Function]}
+            onKeyPress={[Function]}
+            role="button"
+            tabIndex={0}
+          >
+            <div
+              className="fd-select__control is-warning"
+            >
+              Warning
+              <button
+                className="fd-button fd-button--transparent sap-icon--slim-arrow-down fd-select__button"
+                type="button"
+              />
+            </div>
+            <div
+              aria-live="assertive"
+              className="fd-form-message fd-form-message--warning"
+              role="alert"
+            >
+              Test validation state
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="fd-popover"
+    >
+      <div
+        onFocus={[Function]}
+        onMouseDown={[Function]}
+        onTouchStart={[Function]}
+      >
+        <div
+          className="fd-popover__control"
+        >
+          <div
+            aria-controls="fd-197"
+            aria-expanded={false}
+            aria-haspopup={true}
+            className="fd-select"
+            onClick={[Function]}
+            onKeyPress={[Function]}
+            role="button"
+            tabIndex={0}
+          >
+            <div
+              className="fd-select__control is-success"
+            >
+              Success
+              <button
+                className="fd-button fd-button--transparent sap-icon--slim-arrow-down fd-select__button"
+                type="button"
+              />
+            </div>
+            <div
+              aria-live="assertive"
+              className="fd-form-message fd-form-message--success"
+              role="alert"
+            >
+              Test validation state
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="fd-popover"
+    >
+      <div
+        onFocus={[Function]}
+        onMouseDown={[Function]}
+        onTouchStart={[Function]}
+      >
+        <div
+          className="fd-popover__control"
+        >
+          <div
+            aria-controls="fd-198"
+            aria-expanded={false}
+            aria-haspopup={true}
+            className="fd-select"
+            onClick={[Function]}
+            onKeyPress={[Function]}
+            role="button"
+            tabIndex={0}
+          >
+            <div
+              className="fd-select__control is-information"
+            >
+              Information
+              <button
+                className="fd-button fd-button--transparent sap-icon--slim-arrow-down fd-select__button"
+                type="button"
+              />
+            </div>
+            <div
+              aria-live="assertive"
+              className="fd-form-message fd-form-message--information"
+              role="alert"
+            >
+              Test validation state
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

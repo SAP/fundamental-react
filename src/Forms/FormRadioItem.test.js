@@ -1,25 +1,8 @@
 import FormRadioItem from './FormRadioItem';
 import { mount } from 'enzyme';
 import React from 'react';
-import renderer from 'react-test-renderer';
 
 describe('<FormRadioItem />', () => {
-    const formRadioItem = (
-        <FormRadioItem
-            id='radio-1'
-            name='radio-group-1'
-            value='radio-1'>
-            Option 1
-        </FormRadioItem>
-    );
-
-    test('create form radio item', () => {
-        // create form set with form inputs
-        let component = renderer.create(formRadioItem);
-        let tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-    });
-
     describe('Radio Item Tests', () => {
         let setup = (props) => {
             return mount(<FormRadioItem {...props}>
@@ -94,49 +77,6 @@ describe('<FormRadioItem />', () => {
             expect(
                 element.find('input').getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
-        });
-    });
-    describe('Validation states', () => {
-        test('should render the correct snapshots', () => {
-            const formRadioItemWarning = (
-                <FormRadioItem id='foo' state='warning'>
-                    Option 1
-                </FormRadioItem>
-            );
-
-            let component = renderer.create(formRadioItemWarning);
-            let tree = component.toJSON();
-            expect(tree).toMatchSnapshot();
-
-            const formRadioItemError = (
-                <FormRadioItem id='foo' state='error'>
-                    Option 1
-                </FormRadioItem>
-            );
-
-            component = renderer.create(formRadioItemError);
-            tree = component.toJSON();
-            expect(tree).toMatchSnapshot();
-
-            const formRadioItemSuccess = (
-                <FormRadioItem id='foo' state='success'>
-                    Option 1
-                </FormRadioItem>
-            );
-
-            component = renderer.create(formRadioItemSuccess);
-            tree = component.toJSON();
-            expect(tree).toMatchSnapshot();
-
-            const formRadioItemInformation = (
-                <FormRadioItem id='foo' state='information'>
-                    Option 1
-                </FormRadioItem>
-            );
-
-            component = renderer.create(formRadioItemInformation);
-            tree = component.toJSON();
-            expect(tree).toMatchSnapshot();
         });
     });
     test('forwards the ref', () => {

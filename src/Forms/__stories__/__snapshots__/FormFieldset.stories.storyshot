@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Component API/Forms/FormFieldset Primary 1`] = `
+<div
+  dir="ltr"
+>
+  <fieldset
+    className="fd-fieldset"
+  >
+    Default
+  </fieldset>
+</div>
+`;

@@ -1,9 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`<FormLegend /> create form legend 1`] = `
-<legend
-  className="fd-fieldset__legend blue"
->
-  Radio buttons
-</legend>
-`;

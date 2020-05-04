@@ -1,84 +1,11 @@
 import { mount } from 'enzyme';
 import React from 'react';
-import renderer from 'react-test-renderer';
 import TimePicker from './TimePicker';
 
 describe('<TimePicker />', () => {
     const defaultTimePicker = <TimePicker id='myTime' />;
     const twelveHourTime = <TimePicker format12Hours />;
-    const showHour = <TimePicker format12Hours showHour />;
-    const showMinute = <TimePicker format12Hours showMinute />;
-    const showSecond = <TimePicker format12Hours showSecond />;
     const timepickerWithInitialValue = <TimePicker value='10:30:34 pm' />;
-    const showHourMinute = (
-        <TimePicker format12Hours={false} showHour={false}
-            showMinute />
-    );
-    const showMinuteSecond = (
-        <TimePicker
-            format12Hours
-            showHour={false}
-            showMinute
-            showSecond />
-    );
-    const showHourSecond = (
-        <TimePicker
-            format12Hours
-            showHour
-            showMinute={false}
-            showSecond />
-    );
-    const noSecondTime = <TimePicker showSecond={false} />;
-    const disabledTime = <TimePicker disabled />;
-    test('create time picker', () => {
-        // default time picker
-        let component = renderer.create(defaultTimePicker);
-        let tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-
-        // twelve hour time picker
-        component = renderer.create(twelveHourTime);
-        tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-
-        // no seconds time picker
-        component = renderer.create(noSecondTime);
-        tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-
-        // disabled time picker
-        component = renderer.create(disabledTime);
-        tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-
-        component = renderer.create(showHour);
-        tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-
-        component = renderer.create(showSecond);
-        tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-
-        component = renderer.create(showMinute);
-        tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-
-        component = renderer.create(showHourMinute);
-        tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-
-        component = renderer.create(showMinuteSecond);
-        tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-
-        component = renderer.create(showHourSecond);
-        tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-
-        component = renderer.create(timepickerWithInitialValue);
-        tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-    });
 
     test('changing a value', () => {
         let wrapper = mount(defaultTimePicker);

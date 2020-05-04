@@ -3,6 +3,8 @@ import { FORM_MESSAGE_TYPES } from '../utils/constants';
 import PropTypes from 'prop-types';
 import React, { useEffect } from 'react';
 
+/** The **FormSelect** component is similar to a **Dropdown** but is more commonly used within a form. It can also be
+set to a disabled state. */
 const FormSelect = React.forwardRef(({ disabled, children, className, compact, disableStyles, state, ...props }, ref) => {
 
     useEffect(() => {
@@ -32,11 +34,17 @@ const FormSelect = React.forwardRef(({ disabled, children, className, compact, d
 FormSelect.displayName = 'FormSelect';
 
 FormSelect.propTypes = {
+    /** Node(s) to render within the component */
     children: PropTypes.node,
+    /** CSS class(es) to add to the element */
     className: PropTypes.string,
+    /** Set to **true** to enable compact mode */
     compact: PropTypes.bool,
+    /** Set to **true** to mark component as disabled and make it non-interactive */
     disabled: PropTypes.bool,
+    /** Internal use only */
     disableStyles: PropTypes.bool,
+    /** State of validation: 'error', 'warning', 'information', 'success' */
     state: PropTypes.oneOf(FORM_MESSAGE_TYPES)
 };
 

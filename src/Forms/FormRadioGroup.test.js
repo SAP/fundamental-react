@@ -2,58 +2,8 @@ import FormRadioGroup from './FormRadioGroup';
 import FormRadioItem from './FormRadioItem';
 import { mount } from 'enzyme';
 import React from 'react';
-import renderer from 'react-test-renderer';
 
 describe('<FormRadioGroup />', () => {
-    const formRadioGroup = (
-        <FormRadioGroup
-            className='blue'>
-            <FormRadioItem
-                id='radio-1'
-                name='radio-group-5'
-                value='radio-1'>
-                Option 1
-            </FormRadioItem>
-            <FormRadioItem
-                checked
-                id='radio-2'
-                name='radio-group-5'
-                value='radio-2'>
-                Option 2
-            </FormRadioItem>
-            <FormRadioItem
-                id='radio-3'
-                name='radio-group-5'
-                value='radio-3'>
-                Option 3
-            </FormRadioItem>
-        </FormRadioGroup>
-    );
-
-    test('create form radio group', () => {
-        let component = renderer.create(formRadioGroup);
-        let tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-    });
-
-    describe('Prop spreading', () => {
-        xtest('should allow props to be spread to the FormRadio component\'s input element', () => {
-            // TODO: placeholder for this test description once that functionality is built
-        });
-
-        xtest('should allow props to be spread to the FormRadio component\'s label element', () => {
-            // TODO: placeholder for this test description once that functionality is built
-        });
-
-        xtest('should allow props to be spread to the FormRadio component\'s input element for IsInline', () => {
-            // TODO: placeholder for this test description once that functionality is built
-        });
-
-        xtest('should allow props to be spread to the FormRadio component\'s label element for IsInline', () => {
-            // TODO: placeholder for this test description once that functionality is built
-        });
-    });
-
     describe('Radio Group Tests', () => {
         let setup = (props) => {
             return mount(<FormRadioGroup {...props}>

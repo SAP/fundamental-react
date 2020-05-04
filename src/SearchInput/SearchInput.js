@@ -215,30 +215,48 @@ class SearchInput extends Component {
 SearchInput.displayName = 'SearchInput';
 
 SearchInput.propTypes = {
+    /** CSS class(es) to add to the element */
     className: PropTypes.string,
+    /** Set to **true** to enable compact mode */
     compact: PropTypes.bool,
+    /** Internal use only */
     disableStyles: PropTypes.bool,
+    /** Props to be spread to the InputGroupAddon component */
     inputGroupAddonProps: PropTypes.object,
+    /** Props to be spread to the InputGroup component */
     inputGroupProps: PropTypes.object,
+    /** Additional props to be spread to the `<input>` element */
     inputProps: PropTypes.object,
     inShellbar: PropTypes.bool,
+    /** Additional props to be spread to the `<ul>` element */
     listProps: PropTypes.object,
+    /** Set to **true** to render without a search button */
     noSearchBtn: PropTypes.bool,
+    /** Localized placeholder text of the input */
     placeholder: PropTypes.string,
+    /** Additional props to be spread to the Popover component */
     popoverProps: PropTypes.object,
+    /** Additional props to be spread to the search `<button>` element */
     searchBtnProps: PropTypes.object,
+    /** Collection of items to display in the dropdown list */
     searchList: PropTypes.arrayOf(
         PropTypes.shape({
             text: PropTypes.string.isRequired,
             callback: PropTypes.func
         })
     ),
+    /** An object identifying a validation message.  The object will include properties for `state` and `text`; _e.g._, \`{ state: \'warning\', text: \'This is your last warning\' }\` */
     validationState: PropTypes.shape({
+        /** State of validation: 'error', 'warning', 'information', 'success' */
         state: PropTypes.oneOf(FORM_MESSAGE_TYPES),
+        /** Text of the validation message */
         text: PropTypes.string
     }),
+    /** Callback function when the change event fires on the component */
     onChange: PropTypes.func,
+    /** Callback function when the user hits the <Enter> key */
     onEnter: PropTypes.func,
+    /** Callback function when user clicks on an option */
     onSelect: PropTypes.func
 };
 
@@ -246,15 +264,6 @@ SearchInput.defaultProps = {
     onChange: () => { },
     onEnter: () => { },
     onSelect: () => { }
-};
-
-SearchInput.propDescriptions = {
-    inputGroupAddonProps: 'Props to be spread to the InputGroupAddon component.',
-    inputGroupProps: 'Props to be spread to the InputGroup component.',
-    noSearchBtn: 'Set to **true** to render without a search button.',
-    onEnter: 'Callback function when the user hits the <Enter> key.',
-    searchBtnProps: 'Additional props to be spread to the search `<button>` element.',
-    searchList: 'Collection of items to display in the dropdown list.'
 };
 
 export default SearchInput;

@@ -2,10 +2,8 @@
 import Icon from '../Icon/Icon';
 import Menu from '../Menu/Menu';
 import { mount } from 'enzyme';
-
 import Popover from './Popover';
 import React from 'react';
-import renderer from 'react-test-renderer';
 
 describe('<Popover />', () => {
     const popOver = (
@@ -40,38 +38,6 @@ describe('<Popover />', () => {
             disabled popperProps={{ id: 'fd-disabled-popover' }} />
     );
 
-    const popOverWithAlignment = (
-        <Popover
-            body={
-                <Menu>
-                    <Menu.List>
-                        <Menu.Item url='/'>Option 1</Menu.Item>
-                        <Menu.Item url='/'>Option 2</Menu.Item>
-                        <Menu.Item url='/'>Option 3</Menu.Item>
-                        <Menu.Item url='/'>Option 4</Menu.Item>
-                    </Menu.List>
-                </Menu>
-            }
-            control={<Icon glyph='cart' size='xl' />}
-            placement='right' popperProps={{ id: 'fd-aligned-popover' }} />
-    );
-
-    const popOverNoArrow = (
-        <Popover
-            body={
-                <Menu>
-                    <Menu.List>
-                        <Menu.Item url='/'>Option 1</Menu.Item>
-                        <Menu.Item url='/'>Option 2</Menu.Item>
-                        <Menu.Item url='/'>Option 3</Menu.Item>
-                        <Menu.Item url='/'>Option 4</Menu.Item>
-                    </Menu.List>
-                </Menu>
-            }
-            control={<Icon glyph='cart' size='xl' />}
-            noArrow popperProps={{ id: 'fd-arrowless-popover' }} />
-    );
-
     const popOverDisableEdgeDetection = (
         <Popover
             body={
@@ -87,28 +53,6 @@ describe('<Popover />', () => {
             control={<Icon glyph='cart' size='xl' />}
             disableEdgeDetection popperProps={{ id: 'fd-edge-undetected-popover' }} />
     );
-
-    test('create Popover', () => {
-        // popover
-        let component = renderer.create(popOver);
-        let tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-
-        // popover disabled
-        component = renderer.create(popOverDisabled);
-        tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-
-        // popover with alignement
-        component = renderer.create(popOverWithAlignment);
-        tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-
-        // popover with no arrow
-        component = renderer.create(popOverNoArrow);
-        tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-    });
 
     test('popper is receiving disableEdgeDetection from popover', () => {
         // disableEdgeDetection is defaulted to false

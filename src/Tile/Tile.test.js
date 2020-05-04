@@ -1,167 +1,15 @@
-import { Button } from '../';
-import Identifier from '../Identifier/Identifier';
-import Menu from '../Menu/Menu';
 import { mount } from 'enzyme';
-import Popover from '../Popover/Popover';
 import React from 'react';
-import renderer from 'react-test-renderer';
 import Tile from './Tile';
 
 describe('<Tile />', () => {
     const handleClick = jest.fn();
-    const simpleTile = (
-        <Tile className='blue'>
-            <Tile.Content className='red' title='Tile Title'>
-                <p>Tile Description</p>
-            </Tile.Content>
-        </Tile>
-    );
-
-    const disabledSimpleTile = (
-        <Tile backgroundColor={8} columnSpan={3}
-            disabled>
-            <Tile.Content title='Tile Title'>
-                <p>Tile Description</p>
-            </Tile.Content>
-        </Tile>
-    );
-
-    const mediaTile = (
-        <Tile>
-            <Tile.Media className='green'>
-                <Identifier color={3} glyph='home'
-                    size='m' />
-            </Tile.Media>
-            <Tile.Content title='Tile Title'>
-                <p>Tile Description</p>
-            </Tile.Content>
-        </Tile>
-    );
-
-    const actionTile = (
-        <Tile>
-            <Tile.Content title='Tile Title' />
-            <Tile.Actions className='yellow'>
-                <Popover
-                    body={
-                        <Menu>
-                            <Menu.List>
-                                <Menu.Item url='/'>Option 1</Menu.Item>
-                                <Menu.Item url='/'>Option 2</Menu.Item>
-                                <Menu.Item url='/'>Option 3</Menu.Item>
-                                <Menu.Item url='/'>Option 4</Menu.Item>
-                            </Menu.List>
-                        </Menu>
-                    }
-                    control={<Button glyph='vertical-grip' type='standard' />}
-                    popperProps={{ id: 'fd-tile-actions' }} />
-            </Tile.Actions>
-        </Tile>
-    );
-
-    const mediaTileNoClass = (
-        <Tile>
-            <Tile.Media>
-                <Identifier color={3} glyph='home'
-                    size='m' />
-            </Tile.Media>
-            <Tile.Content title='Tile Title'>
-                <p>Tile Description</p>
-            </Tile.Content>
-        </Tile>
-    );
-
-    const actionTileNoClass = (
-        <Tile>
-            <Tile.Content title='Tile Title' />
-            <Tile.Actions>
-                <Popover
-                    body={
-                        <Menu>
-                            <Menu.List>
-                                <Menu.Item url='/'>Option 1</Menu.Item>
-                                <Menu.Item url='/'>Option 2</Menu.Item>
-                                <Menu.Item url='/'>Option 3</Menu.Item>
-                                <Menu.Item url='/'>Option 4</Menu.Item>
-                            </Menu.List>
-                        </Menu>
-                    }
-                    control={<Button glyph='vertical-grip' type='standard' />}
-                    popperProps={{ id: 'fd-tile-actions-no-class' }} />
-            </Tile.Actions>
-        </Tile>
-    );
-
-    const productTile = (
-        <Tile backgroundImage='www.image.com' className='pink'
-            productTile>
-            <Tile.Media />
-            <Tile.Content title='Tile Title'>
-                <p>Tile Description</p>
-            </Tile.Content>
-        </Tile>
-    );
-
-    const disabledProductTile = (
-        <Tile backgroundImage='www.image.com' disabled
-            productTile>
-            <Tile.Media
-                className='blue' />
-            <Tile.Content className='blue' title='Tile Title'>
-                <p>Tile Description</p>
-            </Tile.Content>
-        </Tile>
-    );
-
     const activeTile = (
         <Tile active onClick={handleClick}>
             <Tile.Content title='Tile Title' />
             <Tile.Actions className='tile-actions' />
         </Tile>
     );
-
-
-    test('create tile component', () => {
-        // simple tile
-        let component = renderer.create(simpleTile);
-        let tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-
-        // disabled simple tile
-        component = renderer.create(disabledSimpleTile);
-        tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-
-        // media tile
-        component = renderer.create(mediaTile);
-        tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-
-        // action tile
-        component = renderer.create(actionTile);
-        tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-
-        // media tile no class
-        component = renderer.create(mediaTileNoClass);
-        tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-
-        // action tile no class
-        component = renderer.create(actionTileNoClass);
-        tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-
-        // product tile
-        component = renderer.create(productTile);
-        tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-
-        // disabled product tile
-        component = renderer.create(disabledProductTile);
-        tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-    });
 
     describe('Prop spreading', () => {
         test('should allow props to be spread to the Tile component', () => {
@@ -196,13 +44,6 @@ describe('<Tile />', () => {
         mount(<Test />);
         expect(ref.current.tagName).toEqual('DIV');
         expect(ref.current.className).toEqual('fd-tile');
-    });
-
-    test('create Tile component with active prop set', () => {
-        const component = renderer.create(activeTile);
-        const tile = component.toJSON();
-
-        expect(tile).toMatchSnapshot();
     });
 
     test('onClick handler should be called on active tile', () => {

@@ -1,0 +1,200 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Component API/Forms/FormInput Compact 1`] = `
+<div
+  dir="ltr"
+>
+  <input
+    className="fd-input fd-input--compact"
+    placeholder="Compact"
+    type="text"
+  />
+</div>
+`;
+
+exports[`Storyshots Component API/Forms/FormInput Dev 1`] = `
+<div
+  dir="ltr"
+>
+  <input
+    className="fd-input"
+    disabled={false}
+    placeholder="Placeholder"
+    readOnly={false}
+    type="text"
+  />
+</div>
+`;
+
+exports[`Storyshots Component API/Forms/FormInput Disabled 1`] = `
+<div
+  dir="ltr"
+>
+  <input
+    className="fd-input"
+    disabled={true}
+    placeholder="Disabled"
+    type="text"
+  />
+</div>
+`;
+
+exports[`Storyshots Component API/Forms/FormInput Primary 1`] = `
+<div
+  dir="ltr"
+>
+  <input
+    className="fd-input"
+    placeholder="Default"
+    type="text"
+  />
+</div>
+`;
+
+exports[`Storyshots Component API/Forms/FormInput Read Only 1`] = `
+<div
+  dir="ltr"
+>
+  <input
+    className="fd-input"
+    placeholder="ReadOnly"
+    readOnly={true}
+    type="text"
+  />
+</div>
+`;
+
+exports[`Storyshots Component API/Forms/FormInput Validation States 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    className="fr-container"
+  >
+    <div
+      className="fd-popover"
+      style={
+        Object {
+          "display": "block",
+        }
+      }
+    >
+      <div
+        onFocus={[Function]}
+        onMouseDown={[Function]}
+        onTouchStart={[Function]}
+      >
+        <div
+          className="fd-popover__control"
+        >
+          <input
+            aria-controls="fd-38"
+            aria-expanded={false}
+            aria-haspopup={true}
+            className="fd-input is-error"
+            onClick={[Function]}
+            onKeyPress={[Function]}
+            placeholder="Error"
+            role="button"
+            tabIndex={0}
+            type="text"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      className="fd-popover"
+      style={
+        Object {
+          "display": "block",
+        }
+      }
+    >
+      <div
+        onFocus={[Function]}
+        onMouseDown={[Function]}
+        onTouchStart={[Function]}
+      >
+        <div
+          className="fd-popover__control"
+        >
+          <input
+            aria-controls="fd-39"
+            aria-expanded={false}
+            aria-haspopup={true}
+            className="fd-input is-warning"
+            onClick={[Function]}
+            onKeyPress={[Function]}
+            placeholder="Warning"
+            role="button"
+            tabIndex={0}
+            type="text"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      className="fd-popover"
+      style={
+        Object {
+          "display": "block",
+        }
+      }
+    >
+      <div
+        onFocus={[Function]}
+        onMouseDown={[Function]}
+        onTouchStart={[Function]}
+      >
+        <div
+          className="fd-popover__control"
+        >
+          <input
+            aria-controls="fd-40"
+            aria-expanded={false}
+            aria-haspopup={true}
+            className="fd-input is-information"
+            onClick={[Function]}
+            onKeyPress={[Function]}
+            placeholder="Information"
+            role="button"
+            tabIndex={0}
+            type="text"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      className="fd-popover"
+      style={
+        Object {
+          "display": "block",
+        }
+      }
+    >
+      <div
+        onFocus={[Function]}
+        onMouseDown={[Function]}
+        onTouchStart={[Function]}
+      >
+        <div
+          className="fd-popover__control"
+        >
+          <input
+            aria-controls="fd-41"
+            aria-expanded={false}
+            aria-haspopup={true}
+            className="fd-input is-success"
+            onClick={[Function]}
+            onKeyPress={[Function]}
+            placeholder="Success"
+            role="button"
+            tabIndex={0}
+            type="text"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

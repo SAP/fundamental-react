@@ -1,15 +1,9 @@
 import FormFieldset from '../FormFieldset';
 import React from 'react';
-import { storiesOf } from '@storybook/react';
-import {
-    withKnobs
-} from '@storybook/addon-knobs';
 
-storiesOf('Components|FormFieldset', module)
-    .addDecorator(withKnobs)
-    .add('Default', () => (
-        <FormFieldset>Default</FormFieldset>
-    ))
-    .add('disable styles', () => (
-        <FormFieldset disableStyles>Default</FormFieldset>
-    ));
+export default {
+    title: 'Component API/Forms/FormFieldset',
+    component: FormFieldset
+};
+
+export const primary = () => (<FormFieldset>Default</FormFieldset>);

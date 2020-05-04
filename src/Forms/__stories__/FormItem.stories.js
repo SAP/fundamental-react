@@ -1,15 +1,21 @@
+/* eslint-disable react/no-multi-comp */
+import FormInput from '../FormInput';
 import FormItem from '../FormItem';
+import FormLabel from '../FormLabel';
 import React from 'react';
-import { storiesOf } from '@storybook/react';
-import {
-    withKnobs
-} from '@storybook/addon-knobs';
 
-storiesOf('Components|FormItem', module)
-    .addDecorator(withKnobs)
-    .add('Default', () => (
-        <FormItem>Default</FormItem>
-    ))
-    .add('disable styles', () => (
-        <FormItem disableStyles>Default</FormItem>
-    ));
+
+export default {
+    title: 'Component API/Forms/FormItem',
+    component: FormItem
+};
+
+export const primary = () => (<FormItem>
+    <FormLabel htmlFor='input-1'>Default Input</FormLabel>
+    <FormInput id='input-1' placeholder='Field placeholder text' />
+</FormItem>);
+
+export const inline = () => (<FormItem isHorizontal>
+    <FormLabel htmlFor='input-1'>Default Input</FormLabel>
+    <FormInput id='input-1' placeholder='Field placeholder text' />
+</FormItem>);

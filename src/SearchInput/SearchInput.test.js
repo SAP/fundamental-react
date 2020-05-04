@@ -1,7 +1,5 @@
 import { mount } from 'enzyme';
-
 import React from 'react';
-import renderer from 'react-test-renderer';
 import SearchInput from './SearchInput';
 
 describe('<SearchInput />', () => {
@@ -39,38 +37,11 @@ describe('<SearchInput />', () => {
             searchList={searchData} />
     );
 
-    const defaultSearchNoButton = (
-        <SearchInput
-            noSearchBtn
-            placeholder='Enter a fruit'
-            searchList={searchData} />
-    );
-
     const noListSearchInput = (
         <SearchInput
             onEnter={term => getInputValue(term)}
             placeholder='Enter a fruit' />
     );
-
-    let component;
-
-    test('create SearchInput', () => {
-        component = renderer.create(defaultSearchInput);
-        let tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-
-        component = renderer.create(noListSearchInput);
-        tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-
-        component = renderer.create(searchOnChange);
-        tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-
-        component = renderer.create(defaultSearchNoButton);
-        tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-    });
 
     describe('onChange handler', () => {
         test('calling parent onChange event', () => {

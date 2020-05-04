@@ -1,0 +1,253 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Component API/TimePicker Disabled 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    onChange={[Function]}
+  >
+    <div
+      className="fd-popover"
+      id=""
+    >
+      <div
+        onFocus={[Function]}
+        onMouseDown={[Function]}
+        onTouchStart={[Function]}
+      >
+        <div
+          className="fd-popover__control"
+        >
+          <div
+            className="fd-input-group"
+            onClick={[Function]}
+          >
+            <input
+              className="fd-input fd-input-group__input"
+              onBlur={[Function]}
+              onChange={[Function]}
+              placeholder="hh:mm:ss"
+              readOnly={true}
+              type="text"
+              value=""
+            />
+            <span
+              className="fd-input-group__addon fd-input-group__addon--button"
+            >
+              <button
+                aria-controls="rthHR811"
+                aria-expanded="false"
+                aria-haspopup="true"
+                className="fd-button fd-button--transparent sap-icon--fob-watch is-disabled fd-input-group__button"
+                disabled={true}
+                type="button"
+              />
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Component API/TimePicker Format 12 Hours 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    onChange={[Function]}
+  >
+    <div
+      className="fd-popover"
+      id=""
+    >
+      <div
+        onFocus={[Function]}
+        onMouseDown={[Function]}
+        onTouchStart={[Function]}
+      >
+        <div
+          className="fd-popover__control"
+        >
+          <div
+            className="fd-input-group"
+            onClick={[Function]}
+          >
+            <input
+              className="fd-input fd-input-group__input"
+              onBlur={[Function]}
+              onChange={[Function]}
+              placeholder="hh:mm:ss am/pm"
+              type="text"
+              value=""
+            />
+            <span
+              className="fd-input-group__addon fd-input-group__addon--button"
+            >
+              <button
+                aria-controls="rthHR811"
+                aria-expanded="false"
+                aria-haspopup="true"
+                className="fd-button fd-button--transparent sap-icon--fob-watch fd-input-group__button"
+                type="button"
+              />
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Component API/TimePicker Hide Seconds 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    onChange={[Function]}
+  >
+    <div
+      className="fd-popover"
+      id=""
+    >
+      <div
+        onFocus={[Function]}
+        onMouseDown={[Function]}
+        onTouchStart={[Function]}
+      >
+        <div
+          className="fd-popover__control"
+        >
+          <div
+            className="fd-input-group"
+            onClick={[Function]}
+          >
+            <input
+              className="fd-input fd-input-group__input"
+              onBlur={[Function]}
+              onChange={[Function]}
+              placeholder="hh:mm"
+              type="text"
+              value=""
+            />
+            <span
+              className="fd-input-group__addon fd-input-group__addon--button"
+            >
+              <button
+                aria-controls="rthHR811"
+                aria-expanded="false"
+                aria-haspopup="true"
+                className="fd-button fd-button--transparent sap-icon--fob-watch fd-input-group__button"
+                type="button"
+              />
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Component API/TimePicker Initial Value 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    onChange={[Function]}
+  >
+    <div
+      className="fd-popover"
+      id=""
+    >
+      <div
+        onFocus={[Function]}
+        onMouseDown={[Function]}
+        onTouchStart={[Function]}
+      >
+        <div
+          className="fd-popover__control"
+        >
+          <div
+            className="fd-input-group"
+            onClick={[Function]}
+          >
+            <input
+              className="fd-input fd-input-group__input"
+              onBlur={[Function]}
+              onChange={[Function]}
+              placeholder="hh:mm:ss am/pm"
+              type="text"
+              value="10:30:34 am"
+            />
+            <span
+              className="fd-input-group__addon fd-input-group__addon--button"
+            >
+              <button
+                aria-controls="rthHR811"
+                aria-expanded="false"
+                aria-haspopup="true"
+                className="fd-button fd-button--transparent sap-icon--fob-watch fd-input-group__button"
+                type="button"
+              />
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Component API/TimePicker Primary 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    onChange={[Function]}
+  >
+    <div
+      className="fd-popover"
+      id=""
+    >
+      <div
+        onFocus={[Function]}
+        onMouseDown={[Function]}
+        onTouchStart={[Function]}
+      >
+        <div
+          className="fd-popover__control"
+        >
+          <div
+            className="fd-input-group"
+            onClick={[Function]}
+          >
+            <input
+              className="fd-input fd-input-group__input"
+              onBlur={[Function]}
+              onChange={[Function]}
+              placeholder="hh:mm:ss"
+              type="text"
+              value=""
+            />
+            <span
+              className="fd-input-group__addon fd-input-group__addon--button"
+            >
+              <button
+                aria-controls="rthHR811"
+                aria-expanded="false"
+                aria-haspopup="true"
+                className="fd-button fd-button--transparent sap-icon--fob-watch fd-input-group__button"
+                type="button"
+              />
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -1,14 +1,18 @@
+/* eslint-disable react/no-multi-comp */
 import Calendar from '../Calendar';
+import moment from 'moment';
 import React from 'react';
-import { storiesOf } from '@storybook/react';
 import {
     boolean,
     date,
     optionsKnob,
-    text,
-    withKnobs
+    text
 } from '@storybook/addon-knobs';
 
+export default {
+    title: 'Component API/Calendar',
+    component: Calendar
+};
 
 function dateKnobToDate(name, defaultValue) {
     const stringTimestamp = date(name, defaultValue);
@@ -34,25 +38,84 @@ const weekdayOptions = {
     Saturday: 'Saturday'
 };
 
-storiesOf('Components|Calendar', module)
-    .addDecorator(withKnobs)
-    .add('Default', () => (
-        <Calendar
-            blockedDates={[dateKnobToDate('block between dates (1)', blockedDateFirstDefault),
-                dateKnobToDate('block between dates (2)', blockedDateSecondDefault)]}
-            disableAfterDate={dateKnobToDate('disable after date', afterDateDefault)}
-            disableBeforeDate={dateKnobToDate('disable before date', beforeDateDefault)}
-            disabledDates={[dateKnobToDate('disable between dates (1)', disabledDateFirstDefault),
-                dateKnobToDate('disable between dates (2)', disabledDateSecondDefault)]}
-            disableFutureDates={boolean('disable future dates', false)}
-            disablePastDates={boolean('disable past dates', false)}
-            disableWeekday={optionsKnob('disable weekdays', weekdayOptions, null, { display: 'check' })}
-            disableWeekends={boolean('disable weekends', false)}
-            locale={text('locale', 'en')} />
-    ))
-    .add('disable styles', () => (
-        <Calendar disableStyles />
-    ))
-    .add('range selection', () => (
-        <Calendar enableRangeSelection />
-    ));
+export const primary = () => (<Calendar />);
+
+primary.story = {
+    parameters: {
+        storyshots: { disable: true }
+    }
+};
+
+export const disableWeekends = () => (
+    <Calendar
+        disableBeforeDate={new Date()}
+        disableWeekends />
+);
+
+disableWeekends.story = {
+    name: 'Disabled Weekends and Disabled Before Date',
+    parameters: {
+        storyshots: { disable: true }
+    }
+};
+
+export const blockedDates = () => (
+    <Calendar
+        blockedDates={[new Date(2018, 1, 1, 0, 0, 0, 0), new Date(2018, 3, 3, 0, 0, 0, 0)]}
+        disableWeekday={['Monday', 'Tuesday']} />
+);
+
+blockedDates.story = {
+    parameters: {
+        storyshots: { disable: true }
+    }
+};
+
+export const specialDays = () => (
+    <Calendar
+        specialDays={{
+            [moment().add(1, 'day').endOf('day').format('YYYYMMDD')]: 1,
+            [moment().add(2, 'day').endOf('day').format('YYYYMMDD')]: 2,
+            [moment().add(3, 'day').endOf('day').format('YYYYMMDD')]: 3,
+            [moment().add(7, 'day').endOf('day').format('YYYYMMDD')]: 4
+        }} />
+);
+
+specialDays.story = {
+    parameters: {
+        storyshots: { disable: true }
+    }
+};
+
+export const rangeSelection = () => (
+    <Calendar enableRangeSelection />
+);
+
+rangeSelection.story = {
+    parameters: {
+        storyshots: { disable: true }
+    }
+};
+
+
+export const dev = () => (
+    <Calendar
+        blockedDates={[dateKnobToDate('block between dates (1)', blockedDateFirstDefault),
+            dateKnobToDate('block between dates (2)', blockedDateSecondDefault)]}
+        disableAfterDate={dateKnobToDate('disable after date', afterDateDefault)}
+        disableBeforeDate={dateKnobToDate('disable before date', beforeDateDefault)}
+        disabledDates={[dateKnobToDate('disable between dates (1)', disabledDateFirstDefault),
+            dateKnobToDate('disable between dates (2)', disabledDateSecondDefault)]}
+        disableFutureDates={boolean('disable future dates', false)}
+        disablePastDates={boolean('disable past dates', false)}
+        disableWeekday={optionsKnob('disable weekdays', weekdayOptions, null, { display: 'check' })}
+        disableWeekends={boolean('disable weekends', false)}
+        locale={text('locale', 'en')} />
+);
+
+dev.story = {
+    parameters: {
+        docs: { disable: true },
+        storyshots: { disable: true }
+    }
+};

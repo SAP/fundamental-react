@@ -12,21 +12,16 @@ Tree.displayName = 'TreeView.Tree';
 
 Tree.propTypes = {
     children: PropTypes.node,
+    /** Internal use only */
     expandData: PropTypes.object,
+    /** Internal use only */
     isExpanded: PropTypes.bool,
+    /** Internal use only */
     onExpandClick: PropTypes.func
 };
 
 Tree.defaultProps = {
     expandData: {}
-};
-
-Tree.propDescriptions = {
-    children: 'Node(s) to render within the component. Expecting `TreeItem` components as children.',
-    expandData: '_INTERNAL USE ONLY._',
-    isExpanded: '_INTERNAL USE ONLY._',
-    level: '_INTERNAL USE ONLY._',
-    onExpandClick: '_INTERNAL USE ONLY._'
 };
 
 export default Tree;

@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Component API/ButtonGroup Compact 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    aria-label="Group label"
+    className="fd-segmented-button"
+    role="group"
+  >
+    <button
+      className="fd-button fd-button--compact"
+      type="button"
+    >
+      Left
+    </button>
+    <button
+      className="fd-button fd-button--compact is-selected"
+      selected={true}
+      type="button"
+    >
+      Middle
+    </button>
+    <button
+      className="fd-button fd-button--compact"
+      type="button"
+    >
+      Right
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Component API/ButtonGroup Primary 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    aria-label="Group label"
+    className="fd-segmented-button"
+    role="group"
+  >
+    <button
+      className="fd-button sap-icon--survey"
+      type="button"
+    />
+    <button
+      className="fd-button sap-icon--pie-chart is-selected"
+      selected={true}
+      type="button"
+    />
+    <button
+      className="fd-button sap-icon--pool"
+      type="button"
+    />
+  </div>
+</div>
+`;

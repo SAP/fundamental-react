@@ -1,20 +1,8 @@
 import { mount } from 'enzyme';
 import React from 'react';
-import renderer from 'react-test-renderer';
 import Tile from './Tile';
 
 describe('<Tile.Content />', () => {
-    const tileContent = (
-        <Tile.Content className='red' title='Tile Title'>
-            <p>Tile Description</p>
-        </Tile.Content>
-    );
-
-    test('create Tile.Content component', () => {
-        let component = renderer.create(tileContent);
-        let tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-    });
 
     describe('TileContent', () => {
         test('should allow customization of header level', () => {

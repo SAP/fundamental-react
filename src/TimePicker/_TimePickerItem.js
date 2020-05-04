@@ -249,16 +249,22 @@ TimePickerItem.displayName = 'TimePickerItem';
 
 TimePickerItem.propTypes = {
     localizedText: PropTypes.object.isRequired,
-    buttonID: PropTypes.string,
+    buttonId: PropTypes.string,
+    /** Additional props to be spread to the `<button>` element */
     buttonProps: PropTypes.object,
+    /** Set to **true** to mark component as disabled and make it non-interactive */
     disabled: PropTypes.bool,
+    /** Internal use only */
     disableStyles: PropTypes.bool,
     format12Hours: PropTypes.bool,
+    /** Value for the `id` attribute on the element */
     id: PropTypes.string,
     inputId: PropTypes.string,
+    /** Additional props to be spread to the `<input>` element */
     inputProps: PropTypes.object,
     isValid: PropTypes.bool,
     length: PropTypes.number,
+    /** Localized placeholder text of the input */
     placeholder: PropTypes.string,
     showHour: PropTypes.bool,
     showMinute: PropTypes.bool,
@@ -266,7 +272,9 @@ TimePickerItem.propTypes = {
     style: PropTypes.string,
     updateValue: PropTypes.func,
     value: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+    /** Callback function when the change event fires on the component */
     onChange: PropTypes.func,
+    /** Callback function when user clicks on the component*/
     onClick: PropTypes.func
 };
 

@@ -1,6 +1,5 @@
 import Pagination from './Pagination';
 import React from 'react';
-import renderer from 'react-test-renderer';
 import { mount, shallow } from 'enzyme';
 
 describe('<Pagination />', () => {
@@ -33,30 +32,6 @@ describe('<Pagination />', () => {
             onClick={handleClick} />
     );
 
-    const itemsPerPagePagination = (
-        <Pagination itemsPerPage={25} itemsTotal={101}
-            onClick={handleClick} />
-    );
-
-    const hideTotalItemsPagination = (
-        <Pagination
-            displayTotal={false}
-            itemsTotal={101}
-            onClick={handleClick} />
-    );
-
-    const totalTextPagination = (
-        <Pagination
-            itemsTotal={101}
-            onClick={handleClick}
-            totalText='Dalmations' />
-    );
-
-    const itemsPerPageZeroPagination = (
-        <Pagination itemsPerPage={0} itemsTotal={101}
-            onClick={handleClick} />
-    );
-
     const visibleTotalPagesPagination = (
         <Pagination itemsTotal={221}
             onClick={handleClick}
@@ -68,90 +43,6 @@ describe('<Pagination />', () => {
             onClick={handleClick}
             visiblePageTotal={20} />
     );
-
-    const visibleTotalPagesZeroPagination = (
-        <Pagination itemsPerPage={0} itemsTotal={200}
-            onClick={handleClick}
-            visiblePageTotal={20} />
-    );
-
-    test('create default Pagination component', () => {
-        const component = renderer.create(defaultPagination);
-        const tree = component.toJSON();
-
-        expect(tree).toMatchSnapshot();
-    });
-
-    test('create default Pagination component with displayTotalProps', () => {
-        const component = renderer.create(defaultPaginationDisplayTotalProps);
-        const tree = component.toJSON();
-
-        expect(tree).toMatchSnapshot();
-    });
-
-    test('create default Pagination component with linkProps', () => {
-        const component = renderer.create(defaultPaginationLinkProps);
-        const tree = component.toJSON();
-
-        expect(tree).toMatchSnapshot();
-    });
-
-    test('create Pagination component with initial page set', () => {
-        const component = renderer.create(initialSetPagination);
-        const tree = component.toJSON();
-
-        expect(tree).toMatchSnapshot();
-    });
-
-    test('create Pagination component with item per page set', () => {
-        const component = renderer.create(itemsPerPagePagination);
-        const tree = component.toJSON();
-
-        expect(tree).toMatchSnapshot();
-    });
-
-    test('create Pagination component with item per page set to 0', () => {
-        const component = renderer.create(itemsPerPageZeroPagination);
-        const tree = component.toJSON();
-
-        expect(tree).toMatchSnapshot();
-    });
-
-    test('create Pagination component with total item hidden', () => {
-        const component = renderer.create(hideTotalItemsPagination);
-        const tree = component.toJSON();
-
-        expect(tree).toMatchSnapshot();
-    });
-
-    test('create Pagination component with total text set', () => {
-        const component = renderer.create(totalTextPagination);
-        const tree = component.toJSON();
-
-        expect(tree).toMatchSnapshot();
-    });
-
-    test('create Pagination component with visibleTotalPages set', () => {
-        const component = renderer.create(visibleTotalPagesPagination);
-        const tree = component.toJSON();
-
-        expect(tree).toMatchSnapshot();
-    });
-
-    test('create Pagination component with visibleTotalPages set to 20 and item per page set to 0', () => {
-        const component = renderer.create(visibleTotalPagesZeroPagination);
-        const tree = component.toJSON();
-
-        expect(tree).toMatchSnapshot();
-    });
-
-    test('create Pagination component with visibleTotalPages set to 20 and totaPage = 10', () => {
-        const component = renderer.create(visibleTotalPagesWithItemTotalPagination);
-        const tree = component.toJSON();
-
-        expect(tree).toMatchSnapshot();
-    });
-
     test('navigate to previous page', () => {
         const wrapper = shallow(initialSetPagination);
         wrapper.setState({ selectedPage: 5 });

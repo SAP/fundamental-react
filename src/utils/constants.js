@@ -36,13 +36,6 @@ export const FORM_MESSAGE_TYPES = [
     'success'
 ];
 
-export const FORM_STATES = [
-    'warning',
-    'invalid',
-    'valid',
-    'information'
-];
-
 export const ICON_SIZES = [
     's',
     'm',
@@ -81,10 +74,6 @@ export const INLINE_HELP_PLACEMENTS = [
     'right',
     'left',
     'bottom-center'
-];
-
-export const POPOVER_ALIGNMENTS = [
-    'right'
 ];
 
 export const POPOVER_TYPES = [

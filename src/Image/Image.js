@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import { IMAGE_SIZES, IMAGE_TYPES } from '../utils/constants';
 import React, { useEffect } from 'react';
 
+/** Use an **Image** component to display images. */
+
 const Image = React.forwardRef(({ size, type, photo, className, disableStyles, ...props }, ref) => {
 
     useEffect(() => {
@@ -30,15 +32,20 @@ const Image = React.forwardRef(({ size, type, photo, className, disableStyles, .
 Image.displayName = 'Image';
 
 Image.propTypes = {
+    /** Picture URL */
     photo: PropTypes.string.isRequired,
+    /** Size of the component: 's', 'm', 'l' */
     size: PropTypes.oneOf(IMAGE_SIZES).isRequired,
+    /** CSS class(es) to add to the element */
     className: PropTypes.string,
+    /** Internal use only */
     disableStyles: PropTypes.bool,
+    /** Sets the variation of the component. Primarily used for styling: 'circle' */
     type: PropTypes.oneOf(IMAGE_TYPES)
 };
 
-Image.propDescriptions = {
-    photo: 'Picture URL.'
+Image.defaultProps = {
+    size: 'm'
 };
 
 export default Image;

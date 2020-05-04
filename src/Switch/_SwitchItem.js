@@ -23,14 +23,12 @@ const SwitchItem = ({ glyph, text, type }) => {
 SwitchItem.displayName = 'SwitchItem';
 
 SwitchItem.propTypes = {
+    /** Localized text for the label */
     text: PropTypes.string.isRequired,
+    /** Optional icon to include. See the icon page for the list of icons */
     glyph: PropTypes.oneOf(listOfIcons),
+    /** Sets the variation of the component. Primarily used for styling */
     type: PropTypes.oneOf(['on', 'off'])
-};
-
-SwitchItem.propDescriptions = {
-    text: 'Localized text for the label.',
-    glyph: 'Optional icon to include. See the icon page for the list of icons.'
 };
 
 export default SwitchItem;

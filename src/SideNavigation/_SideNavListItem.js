@@ -107,27 +107,28 @@ class SideNavListItem extends React.Component {
 }
 
 SideNavListItem.propTypes = {
+    /** Node(s) to render within the component */
     children: PropTypes.node,
+    /** Set to **true** to have this item initially render as expanded and its children items shown */
     expanded: PropTypes.bool,
+    /** The icon to include. See the icon page for the list of icons */
     glyph: PropTypes.string,
+    /** Value for the `id` attribute on the element */
     id: PropTypes.string,
+    /** Internal use only */
     isSubItem: PropTypes.bool,
+    /** Localized text for the item (when `url` is provided) */
     name: PropTypes.string,
+    /** Internal use only */
     selected: PropTypes.bool,
+    /** Internal use only */
     selectedId: PropTypes.string,
+    /** Enables use of `<a>` element. Value to be applied to the anchor\'s `href` attribute */
     url: PropTypes.string,
+    /** Callback function when user clicks on the component*/
     onClick: PropTypes.func,
+    /** Internal use only */
     onItemSelect: PropTypes.func
-};
-
-SideNavListItem.propDescriptions = {
-    expanded: 'Set to **true** to have this item initially render as expanded and its children items shown.',
-    isSubItem: '_INTERNAL USE ONLY._',
-    name: 'Localized text for the item (when `url` is provided).',
-    onItemSelect: '_INTERNAL USE ONLY._',
-    selected: '_INTERNAL USE ONLY._',
-    selectedId: '_INTERNAL USE ONLY._',
-    url: 'Enables use of `<a>` element. Value to be applied to the anchor\'s `href` attribute.'
 };
 
 SideNavListItem.defaultProps = {

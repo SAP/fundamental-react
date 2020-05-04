@@ -11,23 +11,20 @@ class TreeBranch extends Component {
 TreeBranch.displayName = 'TreeView.Branch';
 
 TreeBranch.propTypes = {
+    /** Node(s) to render within the component. Expecting `TreeItem` components as children */
     children: PropTypes.node,
+    /** Internal use only */
     expandData: PropTypes.object,
+    /** Internal use only */
     isExpanded: PropTypes.bool,
+    /** Internal use only */
     level: PropTypes.number,
+    /** Internal use only */
     onExpandClick: PropTypes.func
 };
 
 TreeBranch.defaultProps = {
     expandData: {}
-};
-
-TreeBranch.propDescriptions = {
-    children: 'Node(s) to render within the component. Expecting `TreeItem` components as children.',
-    expandData: '_INTERNAL USE ONLY._',
-    isExpanded: '_INTERNAL USE ONLY._',
-    level: '_INTERNAL USE ONLY._',
-    onExpandClick: '_INTERNAL USE ONLY._'
 };
 
 export default TreeBranch;

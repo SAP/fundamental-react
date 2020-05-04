@@ -44,6 +44,7 @@ BaseTree.propTypes = {
     expandData: PropTypes.object.isRequired,
     level: PropTypes.number.isRequired,
     onExpandClick: PropTypes.func.isRequired,
+    /** Node(s) to render within the component */
     children: PropTypes.node,
     isExpanded: PropTypes.bool
 };

@@ -1,22 +1,38 @@
+/* eslint-disable react/no-multi-comp */
 import FormLabel from '../../Forms/FormLabel';
 import InlineHelp from '../InlineHelp';
 import React from 'react';
-import { storiesOf } from '@storybook/react';
-import {
-    withKnobs
-} from '@storybook/addon-knobs';
 
-storiesOf('Components|InlineHelp', module)
-    .addDecorator(withKnobs)
-    .add('Default', () => (
+export default {
+    title: 'Component API/InlineHelp',
+    component: InlineHelp
+};
+
+export const primary = () => (<InlineHelp text='default' />);
+
+export const withLabel = () => (
+    <FormLabel isInlineHelp>
+        Label Text
         <InlineHelp text='default' />
-    ))
-    .add('disable styles', () => (
-        <InlineHelp disableStyles text='default' />
-    ))
-    .add('with Label', () => (
-        <FormLabel isInlineHelp>
-            Label Text
-            <InlineHelp text='default' />
-        </FormLabel>
-    ));
+    </FormLabel>
+);
+
+export const bottomRight = () => (
+    <InlineHelp placement='bottom-right' text='Lorem ipsum dolor sit amet, consectetur adipiscing.' />
+);
+
+export const bottomLeft = () => (
+    <InlineHelp placement='bottom-left' text='Lorem ipsum dolor sit amet, consectetur adipiscing.' />
+);
+
+export const bottomCenter = () => (
+    <InlineHelp placement='bottom-center' text='Lorem ipsum dolor sit amet, consectetur adipiscing.' />
+);
+
+export const right = () => (
+    <InlineHelp placement='right' text='Lorem ipsum dolor sit amet, consectetur adipiscing.' />
+);
+
+export const left = () => (
+    <InlineHelp placement='left' text='Lorem ipsum dolor sit amet, consectetur adipiscing.' />
+);

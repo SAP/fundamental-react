@@ -72,11 +72,20 @@ class TreeItem extends Component {
 TreeItem.displayName = 'TreeView.Item';
 
 TreeItem.propTypes = {
+    /** Node(s) to render within the component.
+     * Expecting `TreeRow` and `TreeBranch` components as children */
     children: PropTypes.node,
+    /** Internal use only */
     expandData: PropTypes.object,
+    /** Set to *true* for expanded tree item. This variable is handled internally,
+     * but can be overridden by the consumer through this prop */
     isExpanded: PropTypes.bool,
+    /** Internal use only */
     level: PropTypes.number,
+    /** ID used to track the expanded/collapsed state of the row. This variable is handled internally,
+     * but can be overridden by the consumer through this prop */
     rowId: PropTypes.string,
+    /** Internal use only */
     onExpandClick: PropTypes.func
 };
 
@@ -84,15 +93,6 @@ TreeItem.defaultProps = {
     expandData: {},
     level: 0,
     onExpandClick: () => {}
-};
-
-TreeItem.propDescriptions = {
-    children: 'Node(s) to render within the component. Expecting `TreeRow` and `TreeBranch` components as children.',
-    expandData: '_INTERNAL USE ONLY._',
-    isExpanded: 'Set to *true* for expanded tree item. This variable is handled internally, but can be overridden by the consumer through this prop.',
-    level: '_INTERNAL USE ONLY._',
-    rowId: 'ID used to track the expanded/collapsed state of the row. This variable is handled internally, but can be overridden by the consumer through this prop.',
-    onExpandClick: '_INTERNAL USE ONLY._'
 };
 
 export default TreeItem;

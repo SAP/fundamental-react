@@ -1,35 +1,8 @@
 import { mount } from 'enzyme';
 import React from 'react';
-import renderer from 'react-test-renderer';
 import { SideNav } from '../';
 
 describe('<SideNavList />', () => {
-    const sideNavList = (
-        <SideNav.List>
-            <SideNav.ListItem
-                id='subitem_41'
-                name='Item 1'
-                url='#' />
-            <SideNav.ListItem
-                id='subitem_41'
-                name='Item 2'
-                url='#' />
-            <SideNav.ListItem
-                id='subitem_41'
-                name='Item 3'
-                url='#' />
-            <SideNav.ListItem
-                id='subitem_41'
-                name='Item 4'
-                url='#' />
-        </SideNav.List>
-    );
-
-    test('create side navigation', () => {
-        let component = renderer.create(sideNavList);
-        let tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-    });
 
     describe('SideNavList', () => {
         test('should allow customization of header level', () => {

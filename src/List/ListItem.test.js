@@ -1,21 +1,8 @@
 import List from './List';
 import { mount } from 'enzyme';
 import React from 'react';
-import renderer from 'react-test-renderer';
 
 describe('<ListItem />', () => {
-    const ListItem = (
-        <List.Item>
-            List item 1
-        </List.Item>
-    );
-
-    test('create list group item', () => {
-        let component = renderer.create(ListItem);
-        let tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-    });
-
     describe('onClick callback', () => {
         test('should call onClick callback after click', () => {
             const click = jest.fn();

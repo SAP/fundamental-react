@@ -40,15 +40,14 @@ const InputGroupAddon = ({
 InputGroupAddon.displayName = 'InputGroup.Addon';
 
 InputGroupAddon.propTypes = {
+    /** Node(s) to render within the component */
     children: PropTypes.node,
+    /** CSS class(es) to add to the element */
     className: PropTypes.string,
+    /** Internal use only */
     compact: PropTypes.bool,
+    /** Set to **true** if add-on is a button */
     isButton: PropTypes.bool
-};
-
-InputGroupAddon.propDescriptions = {
-    compact: '_INTERNAL USE ONLY._',
-    isButton: 'Set to **true** if add-on is a button.'
 };
 
 export default InputGroupAddon;

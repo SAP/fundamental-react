@@ -4,6 +4,8 @@ import FormValidationOverlay from './_FormValidationOverlay';
 import PropTypes from 'prop-types';
 import React, { useEffect } from 'react';
 
+/** Inputs are used to collect data from the user. When a field is required,
+the \`required\` property will include an asterisk (*). */
 const FormInput = React.forwardRef(({ className, compact, disabled, id, name, placeholder, readOnly, type, value, validationState, disableStyles, ...props }, ref) => {
     useEffect(() => {
         if (!disableStyles) {
@@ -48,30 +50,37 @@ const FormInput = React.forwardRef(({ className, compact, disabled, id, name, pl
 FormInput.displayName = 'FormInput';
 
 FormInput.propTypes = {
+    /** CSS class(es) to add to the element */
     className: PropTypes.string,
+    /** Set to **true** to enable compact mode */
     compact: PropTypes.bool,
+    /** Set to **true** to mark component as disabled and make it non-interactive */
     disabled: PropTypes.bool,
+    /** Internal use only */
     disableStyles: PropTypes.bool,
+    /** Value for the `id` attribute on the element */
     id: PropTypes.string,
+    /** Value for the `name` attribute on the input */
     name: PropTypes.string,
+    /** Localized placeholder text of the input */
     placeholder: PropTypes.string,
+    /** Set to **true** to mark component as readonly */
     readOnly: PropTypes.bool,
+    /** Value for the `type` attribute on the input */
     type: PropTypes.string,
+    /** An object identifying a validation message.  The object will include properties for `state` and `text`; _e.g._, \`{ state: \'warning\', text: \'This is your last warning\' }\` */
     validationState: PropTypes.shape({
+        /** State of validation: 'error', 'warning', 'information', 'success' */
         state: PropTypes.oneOf(FORM_MESSAGE_TYPES),
+        /** Text of the validation message */
         text: PropTypes.string
     }),
+    /** Value for the `value` attribute on the input */
     value: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
 };
 
 FormInput.defaultProps = {
     type: 'text'
-};
-
-FormInput.propDescriptions = {
-    name: 'Value for the `name` attribute on the input.',
-    type: 'Value for the `type` attribute on the input.',
-    value: 'Value for the `value` attribute on the input.'
 };
 
 export default FormInput;

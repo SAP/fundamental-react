@@ -9,6 +9,9 @@ import Popover from '../Popover/Popover';
 import PropTypes from 'prop-types';
 import React, { useState } from 'react';
 
+/** `Combobox` allows users to select an item from a predefined list.
+It provides an editable input field for filtering the list, and a dropdown menu with a list of the available options.
+If the entries are not validated by the application, users can also enter custom values. */
 const ComboboxInput = React.forwardRef(({
     placeholder,
     compact,
@@ -120,24 +123,39 @@ const ComboboxInput = React.forwardRef(({
 ComboboxInput.displayName = 'ComboboxInput';
 
 ComboboxInput.propTypes = {
+    /** Additional props to be spread to the `<button>` element */
     buttonProps: PropTypes.object,
+    /** CSS class(es) to add to the element */
     className: PropTypes.string,
+    /** Set to **true** to enable compact mode */
     compact: PropTypes.bool,
+    /** Set to **true** to mark component as disabled and make it non-interactive */
     disabled: PropTypes.bool,
+    /** Internal use only */
     disableStyles: PropTypes.bool,
+    /** Additional props to be spread to the `<input>` element */
     inputProps: PropTypes.object,
+    /** An array of objects with a key and text to render the selectable options */
     options: PropTypes.arrayOf(PropTypes.shape({
         key: PropTypes.string.isRequired,
         text: PropTypes.string.isRequired
     })),
+    /** Localized placeholder text of the input */
     placeholder: PropTypes.string,
+    /** Additional props to be spread to the Popover component */
     popoverProps: PropTypes.object,
+    /** The key corresponding to the selected option */
     selectedKey: PropTypes.string,
+    /** An object identifying a validation message.  The object will include properties for `state` and `text`; _e.g._, \`{ state: \'warning\', text: \'This is your last warning\' }\` */
     validationState: PropTypes.shape({
+        /** State of validation: 'error', 'warning', 'information', 'success' */
         state: PropTypes.oneOf(FORM_MESSAGE_TYPES),
+        /** Text of the validation message */
         text: PropTypes.string
     }),
+    /** Callback function when user clicks on the component*/
     onClick: PropTypes.func,
+    /** Callback function when user clicks on an option */
     onSelect: PropTypes.func
 };
 

@@ -1,25 +1,29 @@
+/* eslint-disable react/no-multi-comp */
 import Button from '../Button';
 import ButtonGroup from '../ButtonGroup';
 import React from 'react';
-import { storiesOf } from '@storybook/react';
-import {
-    withKnobs
-} from '@storybook/addon-knobs';
 
-storiesOf('Components|ButtonGroup', module)
-    .addDecorator(withKnobs)
-    .add('Default', () => (
-        <ButtonGroup>
-            <Button glyph='survey' />
-            <Button glyph='pie-chart' selected />
-            <Button glyph='pool' />
-        </ButtonGroup>
-    ))
-    .add('disable styles', () => (
-        <ButtonGroup disableStyles>
-            <Button disableStyles glyph='survey' />
-            <Button disableStyles glyph='pie-chart'
-                selected />
-            <Button disableStyles glyph='pool' />
-        </ButtonGroup>
-    ));
+export default {
+    title: 'Component API/ButtonGroup',
+    component: ButtonGroup
+};
+
+export const primary = () => (<ButtonGroup>
+    <Button glyph='survey' />
+    <Button glyph='pie-chart' selected />
+    <Button glyph='pool' />
+</ButtonGroup>);
+
+
+export const compact = () => (
+    <ButtonGroup>
+        <Button compact>Left</Button>
+        <Button compact selected>Middle</Button>
+        <Button compact>Right</Button>
+    </ButtonGroup>
+);
+
+compact.story = {
+    name: 'Compact'
+};
+

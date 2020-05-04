@@ -3,6 +3,10 @@ import PropTypes from 'prop-types';
 import { TAB_SIZES } from '../utils/constants';
 import { TabContent } from './_TabContent';
 import React, { Component } from 'react';
+
+/** A **Tab Group** is a collection of **Tab** components.  Each **Tab** is based on a folder
+metaphor and is used to separate content into different sections.
+They should be ordered to create a visual hierarchy based on priority. */
 class TabGroup extends Component {
     constructor(props) {
         super(props);
@@ -108,19 +112,23 @@ TabGroup.defaultProps = {
 };
 
 TabGroup.propTypes = {
+    /** Node(s) to render within the component */
     children: PropTypes.node,
+    /** CSS class(es) to add to the element */
     className: PropTypes.string,
+    /** Internal use only */
     disableStyles: PropTypes.bool,
+    /** The index of the selected tab */
     selectedIndex: PropTypes.number,
+    /** Size of the component: 's',
+    'm',
+    'l',
+    'xl',
+    'xxl' */
     size: PropTypes.oneOf(TAB_SIZES),
     tabGroupProps: PropTypes.object,
+    /** Callback function when the user clicks on a tab. Parameters passed to the function are `event` and `index` */
     onTabClick: PropTypes.func
-};
-
-TabGroup.propDescriptions = {
-    children: 'One or more `Tab` components to render within the component.',
-    selectedIndex: 'The index of the selected tab.',
-    onTabClick: 'Callback function when the user clicks on a tab. Parameters passed to the function are `event` and `index`.'
 };
 
 export default TabGroup;

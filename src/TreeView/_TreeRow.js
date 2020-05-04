@@ -57,19 +57,16 @@ class TreeRow extends Component {
 TreeRow.displayName = 'TreeView.Row';
 
 TreeRow.propTypes = {
+    /** Node(s) to render within the component. Expecting `TreeCol` components as children */
     children: PropTypes.node,
+    /** Internal use only */
     isExpanded: PropTypes.bool,
+    /** Internal use only */
     isParent: PropTypes.bool,
+    /** Internal use only */
     rowId: PropTypes.string,
+    /** Internal use only */
     onExpandClick: PropTypes.func
-};
-
-TreeRow.propDescriptions = {
-    children: 'Node(s) to render within the component. Expecting `TreeCol` components as children.',
-    isExpanded: '_INTERNAL USE ONLY._',
-    isParent: '_INTERNAL USE ONLY._',
-    rowId: '_INTERNAL USE ONLY._',
-    onExpandClick: '_INTERNAL USE ONLY._'
 };
 
 export default TreeRow;
