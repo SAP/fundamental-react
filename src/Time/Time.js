@@ -2,6 +2,11 @@ import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import PropTypes from 'prop-types';
 import TimeItem from './_TimeItem';
 import React, { Component } from 'react';
+
+/** The **Time** component is used for a single time value. Multiple components can be used in the **Time Picker**
+to assemble a clock time. A max of four will account for hours, minutes, seconds and meridiem of the day.
+It is rarely used on its own as a standalone component. */
+
 class Time extends Component {
     constructor(props) {
         super(props);
@@ -195,11 +200,19 @@ Time.displayName = 'Time';
 Time.basePropTypes = {
     /** Internal use only */
     disableStyles: PropTypes.bool,
+    /** Set to **true** to use the 12-hour clock (hours ranging from 01 to 12) and to display a meridiem control */
     format12Hours: PropTypes.bool,
+    /** Enables the input for hours */
     showHour: PropTypes.bool,
+    /** Enables the input for minutes */
     showMinute: PropTypes.bool,
+    /** Enables the input for seconds */
     showSecond: PropTypes.bool,
+    /** Set to **true** to show up/down buttons for each input */
     spinners: PropTypes.bool,
+    /** The time component values. Contains four properties: **hour** (with values from 01 to 12 when `format12Hours`
+     * is true or 00 to 23 when `format12Hours` is false), **minute** (with values from 00 to 59), **second** (with values from 00 to 59),
+     * **meridiem** (with values 0 for AM or 1 for PM) */
     time: PropTypes.object
 };
 
@@ -207,24 +220,38 @@ Time.propTypes = {
     ...Time.basePropTypes,
     /** Set to **true** to mark component as disabled and make it non-interactive */
     disabled: PropTypes.bool,
+    /** Additional props to be spread to the hours down `<button>` element */
     hoursDownButtonProps: PropTypes.object,
+    /** Additional props to be spread to the hours `<input>` element */
     hoursInputProps: PropTypes.object,
+    /** Additional props to be spread to the hours up `<button>` element */
     hoursUpButtonProps: PropTypes.object,
     /** Value for the `id` attribute on the element */
     id: PropTypes.string,
     /** Localized text to be updated based on location/language */
     localizedText: CustomPropTypes.i18n({
+        /** Ante meridiem for 12 hour clock */
         meridiemAM: PropTypes.string,
+        /** Post meridiem for 12 hour clock */
         meridiemPM: PropTypes.string
     }),
+    /** Additional props to be spread to the meridiem down `<button>` element */
     meridiemDownButtonProps: PropTypes.object,
+    /** Additional props to be spread to the meridiem `<input>` element */
     meridiemInputProps: PropTypes.object,
+    /** Additional props to be spread to the meridiem up `<button>` element */
     meridiemUpButtonProps: PropTypes.object,
+    /** Additional props to be spread to the minutes down `<button>` element */
     minutesDownButtonProps: PropTypes.object,
+    /** Additional props to be spread to the minutes `<input>` element */
     minutesInputProps: PropTypes.object,
+    /** Additional props to be spread to the minutes up `<button>` element */
     minutesUpButtonProps: PropTypes.object,
+    /** Additional props to be spread to the seconds down `<button>` element */
     secondsDownButtonProps: PropTypes.object,
+    /** Additional props to be spread to the seconds `<input>` element */
     secondsInputProps: PropTypes.object,
+    /** Additional props to be spread to the seconds up `<button>` element */
     secondsUpButtonProps: PropTypes.object,
     /** Callback function when the change event fires on the component */
     onChange: PropTypes.func
@@ -248,29 +275,5 @@ Time.defaultProps = {
     }
 };
 
-Time.propDescriptions = {
-    format12Hours: 'Set to **true** to use the 12-hour clock (hours ranging from 01 to 12) and to display a meridiem control.',
-    hoursDownButtonProps: 'Additional props to be spread to the hours down `<button>` element.',
-    hoursInputProps: 'Additional props to be spread to the hours `<input>` element.',
-    hoursUpButtonProps: 'Additional props to be spread to the hours up `<button>` element.',
-    localizedTextShape: {
-        meridiemAM: 'Ante meridiem for 12 hour clock. ',
-        meridiemPM: 'Post meridiem for 12 hour clock.'
-    },
-    meridiemDownButtonProps: 'Additional props to be spread to the meridiem down `<button>` element.',
-    meridiemInputProps: 'Additional props to be spread to the meridiem `<input>` element.',
-    meridiemUpButtonProps: 'Additional props to be spread to the meridiem up `<button>` element.',
-    minutesDownButtonProps: 'Additional props to be spread to the minutes down `<button>` element.',
-    minutesInputProps: 'Additional props to be spread to the minutes `<input>` element.',
-    minutesUpButtonProps: 'Additional props to be spread to the minutes up `<button>` element.',
-    secondsDownButtonProps: 'Additional props to be spread to the seconds down `<button>` element.',
-    secondsInputProps: 'Additional props to be spread to the seconds `<input>` element.',
-    secondsUpButtonProps: 'Additional props to be spread to the seconds up `<button>` element.',
-    showHour: 'Enables the input for hours.',
-    showMinute: 'Enables the input for minutes.',
-    showSecond: 'Enables the input for seconds.',
-    spinners: 'Set to **true** to show up/down buttons for each input.',
-    time: 'The time component values. Contains four properties: **hour** (with values from 01 to 12 when `format12Hours` is true or 00 to 23 when `format12Hours` is false), **minute** (with values from 00 to 59), **second** (with values from 00 to 59), **meridiem** (with values 0 for AM or 1 for PM).'
-};
 
 export default Time;
