@@ -1,7 +1,6 @@
 import ComboboxInput from './ComboboxInput';
 import { mount } from 'enzyme';
 import React from 'react';
-import renderer from 'react-test-renderer';
 
 describe('<ComboboxInput />', () => {
     const defaultOptions = [
@@ -10,32 +9,6 @@ describe('<ComboboxInput />', () => {
         { key: '3', text: 'List Item 3' },
         { key: '4', text: 'List Item 4' }
     ];
-
-    const defaultComboBoxInput = (
-        <ComboboxInput
-            options={defaultOptions}
-            placeholder='Select Fruit' />
-    );
-
-    const compactComboBoxInput = (
-        <ComboboxInput
-            className='blue'
-            compact
-            options={defaultOptions}
-            placeholder='Select Fruit' />
-    );
-
-    test('create combobox input', () => {
-        // default combobox
-        let component = renderer.create(defaultComboBoxInput);
-        let tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-
-        // compact combobox
-        component = renderer.create(compactComboBoxInput);
-        tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-    });
 
     describe('Prop spreading', () => {
         test('should allow props to be spread to the ComboboxInput component', () => {
