@@ -1,7 +1,7 @@
 /**
  * @jest-environment jsdom
  */
-import initStoryshots from '@storybook/addon-storyshots';
+import initStoryshots, { Stories2SnapsConverter } from '@storybook/addon-storyshots';
 
 // mock shortid for snapshot testing
 jest.mock('shortid', () => {
@@ -16,7 +16,13 @@ jest.mock('react-dom');
 
 
 // create jest snapshot tests from each story
-initStoryshots();
+initStoryshots({
+    stories2snapsConverter: new Stories2SnapsConverter({
+        snapshotsDirName: '__snapshots__',
+        snapshotExtension: '.storyshot',
+        storiesExtensions: ['.js']
+    })
+});
 
 
 // TO DO: separate snapshots into individual files

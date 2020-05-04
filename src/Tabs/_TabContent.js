@@ -32,3 +32,4 @@ TabContent.propTypes = {
     selected: PropTypes.bool
 };
 
+export default TabContent;

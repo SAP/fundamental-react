@@ -39,7 +39,7 @@ export const disabled = () => (
         placeholder='Select' />
 );
 export const validationStates = () => (
-    <>
+    <div className='fr-container'>
         <Select
             options={options}
             placeholder='Error'
@@ -56,7 +56,7 @@ export const validationStates = () => (
             options={options}
             placeholder='Information'
             validationState={{ state: 'information', text: 'Test validation state' }} />
-    </>
+    </div>
 );
 
 
