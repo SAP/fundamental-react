@@ -2,6 +2,8 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React, { useEffect } from 'react';
 
+/** A **Token** is used to represent contextual information. It can be useful to show
+applied filters, selected values for a form field or object metadata. */
 const Token = React.forwardRef(({
     children,
     className,
