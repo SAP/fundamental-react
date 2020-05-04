@@ -1,7 +1,6 @@
 import Menu from '../Menu/Menu';
 import { mount } from 'enzyme';
 import React from 'react';
-import renderer from 'react-test-renderer';
 import Shellbar from './Shellbar';
 
 describe('<Shellbar />', () => {
@@ -25,31 +24,6 @@ describe('<Shellbar />', () => {
             callback: () => alert('Sign Out selected!')
         }
     ];
-
-    const simpleShellBar = (
-        <Shellbar
-            logo={
-                <img
-                    alt='SAP'
-                    src='//unpkg.com/fundamental-styles/dist/images/sap-logo.png' />
-            }
-            productTitle='Corporate Portal'
-            profile={profile1}
-            profileMenu={profileMenu} />
-    );
-
-    const simpleShellBarWithClass = (
-        <Shellbar
-            className='blue'
-            logo={
-                <img
-                    alt='SAP'
-                    src='//unpkg.com/fundamental-styles/dist/images/sap-logo.png' />
-            }
-            productTitle='Corporate Portal'
-            profile={profile1}
-            profileMenu={profileMenu} />
-    );
 
     const simpleShellBarWithBackButton = (
         <Shellbar
@@ -92,15 +66,6 @@ describe('<Shellbar />', () => {
         }
     ];
 
-    const actionsNoMenu = [
-        {
-            glyph: 'settings',
-            label: 'Settings',
-            notificationCount: 5,
-            callback: () => alert('Settings selected!')
-        }
-    ];
-
     const notifications = {
         notificationCount: 2,
         label: 'Notifications',
@@ -123,45 +88,10 @@ describe('<Shellbar />', () => {
         callback: () => alert('Notification selected!')
     };
 
-    const notificationsNoCount = {
-        notificationCount: 0,
-        label: 'Notifications',
-        notificationsBody: (
-            <Menu>
-                <Menu.List>
-                    <Menu.Item url='/'>Notification 1</Menu.Item>
-                    <Menu.Item url='/'>Notification 2</Menu.Item>
-                    <Menu.Item url='/'>Notification 3</Menu.Item>
-                </Menu.List>
-            </Menu>
-        ),
-        noNotificationsBody: (
-            <Menu>
-                <Menu.List>
-                    <Menu.Item>There are no notifications</Menu.Item>
-                </Menu.List>
-            </Menu>
-        ),
-        callback: () => alert('Notification selected!')
-    };
-
-    const notificationsNoBody = {
-        notificationCount: 2,
-        label: 'Notifications',
-        callback: () => alert('Notification selected!')
-    };
-
     const profile = {
         initials: 'JS',
         userName: 'John Snow',
         colorAccent: 8
-    };
-
-    const profileWithImage = {
-        initials: 'JS',
-        userName: 'John Snow',
-        colorAccent: 8,
-        image: '//unpkg.com/fundamental-styles/dist/images/sap-logo.png'
     };
 
     const productMenu = [
@@ -204,90 +134,12 @@ describe('<Shellbar />', () => {
             subtitle='Subtitle' />
     );
 
-    const coPilotShellNoNotificationCount = (
-        <Shellbar
-            actions={actions}
-            copilot
-            logoSAP
-            notifications={notificationsNoCount}
-            productMenu={productMenu}
-            productSwitch={productSwitch}
-            productSwitchList={productSwitchList}
-            productTitle='Corporate Portal'
-            profile={profile}
-            profileMenu={profileMenu}
-            searchInput={searchInput}
-            subtitle='Subtitle' />
-    );
-
-    const coPilotShellNoNotificationBody = (
-        <Shellbar
-            actions={actions}
-            copilot
-            logoSAP
-            notifications={notificationsNoBody}
-            productMenu={productMenu}
-            productSwitch={productSwitch}
-            productSwitchList={productSwitchList}
-            productTitle='Corporate Portal'
-            profile={profileWithImage}
-            profileMenu={profileMenu}
-            searchInput={searchInput}
-            subtitle='Subtitle' />
-    );
-
-    const coPilotShellNoActionMenu = (
-        <Shellbar
-            actions={actionsNoMenu}
-            copilot
-            logoSAP
-            notifications={notificationsNoCount}
-            productMenu={productMenu}
-            productSwitch={productSwitch}
-            productSwitchList={productSwitchList}
-            productTitle='Corporate Portal'
-            profile={profile}
-            profileMenu={profileMenu}
-            searchInput={searchInput}
-            subtitle='Subtitle' />
-    );
-
     afterEach(() => {
         document.body.innerHTML = '';
     });
 
     afterAll(() => {
         document.body.innerHTML = '';
-    });
-
-    test('create shellbar', () => {
-        let component = renderer.create(simpleShellBar);
-        let tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-
-        component = renderer.create(simpleShellBarWithClass);
-        tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-
-        component = renderer.create(simpleShellBarWithBackButton);
-        tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-
-        component = renderer.create(coPilotShell);
-        tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-
-        component = renderer.create(coPilotShellNoNotificationCount);
-        tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-
-        component = renderer.create(coPilotShellNoActionMenu);
-        tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-
-        component = renderer.create(coPilotShellNoNotificationBody);
-        tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
     });
 
     test('click back button from collapsed product switch', () => {
