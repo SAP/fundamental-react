@@ -2,7 +2,7 @@
 /* eslint-disable react/display-name */
 import fundamentals from './custom/fundamentals';
 import React from 'react';
-import { withA11y } from '@storybook/addon-a11y';
+// import { withA11y } from '@storybook/addon-a11y';
 import { withCssResources } from '@storybook/addon-cssresources';
 import { withI18n } from 'storybook-addon-i18n';
 import { addDecorator, addParameters } from '@storybook/react';
@@ -102,7 +102,7 @@ addParameters({
         getDirection: locale => locale.toLowerCase()
     }
 });
-
-addDecorator(withA11y);
+// TO DO: storybook@6 enable - there is an issue with visual regression tests
+// addDecorator(withA11y);
 addDecorator(withI18n);
 addDecorator(withCssResources);

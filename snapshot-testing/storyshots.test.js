@@ -21,6 +21,3 @@ initStoryshots({
     integrityOptions: { cwd: path.join(__dirname, 'src', 'stories') },
     test: multiSnapshotWithOptions()
 });
-
-
-// TO DO: separate snapshots into individual files
