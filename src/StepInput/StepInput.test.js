@@ -1,28 +1,8 @@
-import FormGroup from '../Forms/FormGroup';
-import FormItem from '../Forms/FormItem';
-import FormLabel from '../Forms/FormLabel';
 import { mount } from 'enzyme';
 import React from 'react';
-import renderer from 'react-test-renderer';
 import { StepInput } from '../';
 
 describe('<InputGroup />', () => {
-    const stepInputComponent = (
-        <FormGroup>
-            <FormLabel>Step Input</FormLabel>
-            <FormItem>
-                <StepInput />
-            </FormItem>
-        </FormGroup>
-    );
-
-    test('create input group items', () => {
-        // create input text before
-        let component = renderer.create(stepInputComponent);
-        let tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-    });
-
     let setup = (props) => {
         return mount( <StepInput {...props} />);
     };
