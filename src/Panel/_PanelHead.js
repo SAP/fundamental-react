@@ -26,6 +26,7 @@ PanelHead.displayName = 'Panel.Head';
 PanelHead.propTypes = {
     /** CSS class(es) to add to the element */
     className: PropTypes.string,
+    /** Localized text for the description of the panel */
     description: PropTypes.string,
     /** Heading level. `<h1>` is reserved for the page title. It should not appear in components */
     headingLevel: CustomPropTypes.range(2, 6),
@@ -35,11 +36,6 @@ PanelHead.propTypes = {
 
 PanelHead.defaultProps = {
     headingLevel: 3
-};
-
-PanelHead.propDescriptions = {
-    description: 'Localized text for the description of the panel.',
-    title: 'Localized text for the title of the panel.'
 };
 
 export default PanelHead;

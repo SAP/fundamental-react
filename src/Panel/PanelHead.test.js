@@ -1,21 +1,8 @@
 import { mount } from 'enzyme';
 import Panel from './Panel';
 import React from 'react';
-import renderer from 'react-test-renderer';
 
 describe('<PanelHead />', () => {
-    const panelHead = (
-        <Panel.Head
-            description='Panel Description'
-            title={'Panel Header with Actions'} />
-    );
-
-    test('create panel head', () => {
-        let component = renderer.create(panelHead);
-        let tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-    });
-
     describe('PanelHead', () => {
         test('should allow customization of header level', () => {
             const element = mount(<Panel.Head headingLevel={2} title='Sample' />);

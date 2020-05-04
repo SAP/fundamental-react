@@ -7,8 +7,15 @@ import Popper from '../utils/_Popper';
 import PropTypes from 'prop-types';
 import shortId from '../utils/shortId';
 import tabbable from 'tabbable';
-import { POPOVER_TYPES, POPPER_PLACEMENTS, POPPER_SIZING_TYPES, POPPER_SIZING_TYPES_DESCRIPTION } from '../utils/constants';
+import { POPOVER_TYPES, POPPER_PLACEMENTS, POPPER_SIZING_TYPES } from '../utils/constants';
 import React, { Component } from 'react';
+
+/** The **Popover** is a wrapping component that accepts a "control" as well as a "body". A control can be
+anything that you want to trigger the interaction from. The body will be the contents of what you reveal
+on the page after triggering the popover. When paired with the **Menu** component, the Popover is commonly
+used as the interaction/wrapping component for composing "dropdowns", "contextual menus", etc. As a general rule,
+it is suggested that one Popover be revealed on the page at any given time. Opening one Popover should close all
+others to prevent multiple layers and collisions of several popovers. */
 
 class Popover extends Component {
     constructor(props) {
@@ -179,17 +186,25 @@ class Popover extends Component {
 Popover.displayName = 'Popover';
 
 Popover.propTypes = {
+    /** Node(s) to render in the overlay */
     body: PropTypes.node.isRequired,
+    /** Node to render as the reference element (that the `body` will be placed in relation to) */
     control: PropTypes.node.isRequired,
     /** CSS class(es) to add to the element */
     className: PropTypes.string,
     /** Set to **true** to mark component as disabled and make it non-interactive */
     disabled: PropTypes.bool,
+    /** Set to **true** to render popover without edge detection so popover will not flip from top to bottom with scroll */
     disableEdgeDetection: PropTypes.bool,
+    /** Set to **true** to remove onKeyPress handler and aria-* roles.
+     * Only do so if the control is a complex component such as a FormInput with Button */
     disableKeyPressHandler: PropTypes.bool,
     /** Internal use only */
     disableStyles: PropTypes.bool,
+    /** Set to **true** to remove default triggerBody handler used in onClick.
+     * Useful for when a custom method is desired to open the Popover */
     disableTriggerOnClick: PropTypes.bool,
+    /** Set to **true** to render a popover without an arrow */
     noArrow: PropTypes.bool,
     /** 'bottom-start',
     'bottom',
@@ -204,15 +219,14 @@ Popover.propTypes = {
     'top',
     'top-end' */
     placement: PropTypes.oneOf(POPPER_PLACEMENTS),
+    /** Additional classeNames to be spread to the overlay element */
     popperClassName: PropTypes.string,
+    /** Additional props to be spread to the overlay element, supported by <a href="https://popper.js.org" target="_blank">popper.js</a> */
     popperProps: PropTypes.object,
+    /** Handling for show/hide popover if true show the popover */
     show: PropTypes.bool,
-    /** Sets the variation of the component. Primarily used for styling: true,
-    'dialog',
-    'grid',
-    'listbox',
-    'menu',
-    'tree' */
+    /**  Indicates the type of popup - "dialog", "grid", "listbox", "menu", or "tree".
+     * This value is attached to aria-haspopup and is useful to assistive tech. Defaulted to boolean true*/
     type: PropTypes.oneOf(POPOVER_TYPES),
     useArrowKeyNavigation: PropTypes.bool,
     /** `<ul>
@@ -221,7 +235,9 @@ Popover.propTypes = {
 <li>"maxTarget" - right edge aligns with target unless Popover content is smaller</li>
 </ul>`'none', 'matchTarget', 'minTarget', 'maxTarget' */
     widthSizingType: PropTypes.oneOf(POPPER_SIZING_TYPES),
+    /** Callback for consumer clicking outside of popover body */
     onClickOutside: PropTypes.func,
+    /** Callback when escape key is pressed when popover body is visible */
     onEscapeKey: PropTypes.func
 };
 
@@ -230,23 +246,6 @@ Popover.defaultProps = {
     popperProps: {},
     onClickOutside: () => { },
     onEscapeKey: () => { }
-};
-
-Popover.propDescriptions = {
-    body: 'Node(s) to render in the overlay.',
-    control: 'Node to render as the reference element (that the `body` will be placed in relation to).',
-    disableEdgeDetection: 'Set to **true** to render popover without edge detection so popover will not flip from top to bottom with scroll.',
-    disableKeyPressHandler: 'Set to **true** to remove onKeyPress handler and aria-* roles. Only do so if the control is a complex component such as a FormInput with Button.',
-    disableTriggerOnClick: 'Set to **true** to remove default triggerBody handler used in onClick. Useful for when a custom method is desired to open the Popover.',
-    noArrow: 'Set to **true** to render a popover without an arrow.',
-    placement: 'Initial position of the `body` (overlay) related to the `control`.',
-    popperClassName: 'Additional classeNames to be spread to the overlay element.',
-    popperProps: 'Additional props to be spread to the overlay element, supported by <a href="https://popper.js.org" target="_blank">popper.js</a>.',
-    widthSizingType: POPPER_SIZING_TYPES_DESCRIPTION,
-    show: 'Handling for show/hide popover if true show the popover',
-    onClickOutside: 'Callback for consumer clicking outside of popover body.',
-    onEscapeKey: 'Callback when escape key is pressed when popover body is visible.',
-    type: 'Indicates the type of popup - "dialog", "grid", "listbox", "menu", or "tree". This value is attached to aria-haspopup and is useful to assistive tech. Defaulted to boolean true.'
 };
 
 export default Popover;

@@ -19,3 +19,4 @@ jest.mock('react-dom');
 initStoryshots();
 
 
+// TO DO: separate snapshots into individual files
