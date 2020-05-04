@@ -16,4 +16,13 @@ if (global.document) {
     });
 }
 
+// mock shortid for snapshot testing
+jest.mock('shortid', () => {
+    let id = 1;
+
+    return {
+        generate: () => id++
+    };
+});
+
 registerRequireContextHook();

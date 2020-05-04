@@ -9,7 +9,7 @@ module.exports = {
         '^.+\\.(css)$': 'babel-jest'
     },
     'transform': {
-        '^.+\\.[tj]sx?$': 'babel-jest',
-        '^.+\\.mdx$': '@storybook/addon-docs/jest-transform-mdx'
+        '^.+\\.?stories\\.js?$': '@storybook/addon-storyshots/injectFileName',
+        '^.+\\.js?$': 'babel-jest'
     }
 };

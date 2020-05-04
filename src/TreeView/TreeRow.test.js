@@ -2,15 +2,6 @@ import { mount } from 'enzyme';
 import React from 'react';
 import TreeView from './TreeView';
 
-// mock shortid for snapshot testing
-jest.mock('shortid', () => {
-    let id = 1;
-
-    return {
-        generate: () => id++
-    };
-});
-
 describe('<TreeView.Row />', () => {
     const multiLevelTreeView = (
         <TreeView>
