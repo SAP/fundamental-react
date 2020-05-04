@@ -7,7 +7,6 @@ import { withCssResources } from '@storybook/addon-cssresources';
 import { withI18n } from 'storybook-addon-i18n';
 import { addDecorator, addParameters } from '@storybook/react';
 import Import from './custom/Import';
-// import { DocsContainer, DocsPage } from '@storybook/addon-docs/blocks';
 import {
     DocsContainer,
     Title,
@@ -84,16 +83,6 @@ addParameters({
               </>
             )
         },
-        extractComponentDescription(component, storyParameters) {
-            console.log({ component, storyParameters })
-            if (
-              component.__docgenInfo?.description &&
-              typeof component.__docgenInfo.description === 'string'
-            ) {
-              return component.__docgenInfo.description
-            }
-            return null
-          },
     },
     i18n: {
         provider: ({ children }) => <>{children}</>,
