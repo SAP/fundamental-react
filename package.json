@@ -32,19 +32,15 @@
     "std-version": "standard-version -m \"chore(release): version %s build ${TRAVIS_BUILD_NUMBER} [ci skip]\"",
     "storybook": "node scripts/copy-assets.js && start-storybook -p 12123 -s .storybook/static/",
     "storybook:ci": "npm run storybook -- --ci --quiet",
-    "storybook:static": "rm -rf storybook-static && node scripts/copy-assets.js && build-storybook -c .storybook -o storybook-static -s .storybook/static/",
-    "storybook:docs": "npm run storybook:static -- --docs",
+    "storybook:static": "rm -rf storybook-static && node scripts/copy-assets.js && build-storybook -c .storybook -o storybook-static -s .storybook/static/ --docs",
     "test:coverage:watch": "npm run test:coverage -- --watch",
     "test:coverage": "npm run test:dev -- --coverage",
     "test:coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js || echo -e \"Coveralls failed.\"",
     "test:dev": "jest --config=./config/jest/jest.config.js",
     "test": "npm run test:dev -- --watch",
-    "test:snapshot:setup": "BABEL_ENV=test jest --config=./snapshot-testing/jest.config.js",
-    "test:snapshot": "server-test storybook:ci http-get://localhost:12123 test:snapshot:setup",
-    "test:snapshot:update": "server-test storybook:ci http-get://localhost:12123 'npm run test:snapshot:setup -- --updateSnapshot'",
-    "test:visual:setup": "BABEL_ENV=test jest --config=./visual-regression-testing/jest.config.js",
-    "test:visual": "npm run storybook:static && npm run test:visual:setup",
-    "test:visual:update": "npm run storybook:static && npm run test:visual:setup -- --updateSnapshot"
+    "test:storybook:setup": "BABEL_ENV=test jest --config=./storybook-testing/jest.config.js",
+    "test:storybook": "server-test storybook:ci http-get://localhost:12123 test:storybook:setup",
+    "test:storybook:update": "server-test storybook:ci http-get://localhost:12123 'npm run test:storybook:setup -- --updateSnapshot'"
   },
   "dependencies": {
     "@babel/runtime": "^7.8.0",
