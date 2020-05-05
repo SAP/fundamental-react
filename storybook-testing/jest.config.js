@@ -1,6 +1,6 @@
 
 module.exports = {
-    'rootDir': '../visual-regression-testing/',
+    'rootDir': '../storybook-testing/',
     'verbose': true,
     'preset': 'jest-puppeteer',
     'setupFilesAfterEnv': ['../config/jest/setup.js'],

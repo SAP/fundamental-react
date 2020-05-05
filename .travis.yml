@@ -13,9 +13,7 @@ jobs:
   -
     script: npm run test:coverage && npm run test:coveralls
   -
-    script: npm run test:visual
-  -
-    script: npm run test:snapshot
+    script: npm run test:storybook
   - stage: Pre-release
     if: branch = master
     before_deploy:

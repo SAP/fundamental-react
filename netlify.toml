@@ -7,4 +7,4 @@
 
 [build]
   publish = "storybook-static"
-  command = "npm run storybook:docs"
+  command = "npm run storybook:static"
