@@ -39,8 +39,8 @@
     "test:dev": "jest --config=./config/jest/jest.config.js",
     "test": "npm run test:dev -- --watch",
     "test:storybook:setup": "BABEL_ENV=test jest --config=./storybook-testing/jest.config.js",
-    "test:snapshot": "server-test storybook:ci http-get://localhost:12123 test:storybook:setup",
-    "test:snapshot:update": "server-test storybook:ci http-get://localhost:12123 'npm run test:storybook:setup -- --updateSnapshot'"
+    "test:storybook": "server-test storybook:ci http-get://localhost:12123 test:storybook:setup",
+    "test:storybook:update": "server-test storybook:ci http-get://localhost:12123 'npm run test:storybook:setup -- --updateSnapshot'"
   },
   "dependencies": {
     "@babel/runtime": "^7.8.0",
