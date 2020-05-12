@@ -1,0 +1,792 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Component API/Popover Dev 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    className="fd-popover"
+  >
+    <div
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      onTouchStart={[Function]}
+    >
+      <div
+        className="fd-popover__control"
+      >
+        <button
+          aria-controls="fd-207"
+          aria-expanded={false}
+          aria-haspopup={true}
+          className="fd-button fd-button--transparent sap-icon--navigation-up-arrow"
+          onClick={[Function]}
+          onKeyPress={[Function]}
+          role="button"
+          tabIndex={0}
+          type="button"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Component API/Popover Disable Edge Detection 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    className="fd-popover"
+  >
+    <div
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      onTouchStart={[Function]}
+    >
+      <div
+        className="fd-popover__control"
+      >
+        <button
+          aria-controls="fd-197"
+          aria-expanded={false}
+          aria-haspopup={true}
+          className="fd-button fd-button--transparent sap-icon--navigation-up-arrow"
+          onClick={[Function]}
+          onKeyPress={[Function]}
+          role="button"
+          tabIndex={0}
+          type="button"
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    className="fd-popover"
+  >
+    <div
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      onTouchStart={[Function]}
+    >
+      <div
+        className="fd-popover__control"
+      >
+        <button
+          aria-controls="fd-198"
+          aria-expanded={false}
+          aria-haspopup={true}
+          className="fd-button fd-button--transparent sap-icon--navigation-down-arrow"
+          onClick={[Function]}
+          onKeyPress={[Function]}
+          role="button"
+          tabIndex={0}
+          type="button"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Component API/Popover No Arrow 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    className="fd-popover"
+  >
+    <div
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      onTouchStart={[Function]}
+    >
+      <div
+        className="fd-popover__control"
+      >
+        <span
+          aria-controls="fd-199"
+          aria-expanded={false}
+          aria-haspopup={true}
+          className="sap-icon--cart sap-icon--xl"
+          onClick={[Function]}
+          onKeyPress={[Function]}
+          role="button"
+          tabIndex={0}
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    className="fd-popover"
+  >
+    <div
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      onTouchStart={[Function]}
+    >
+      <div
+        className="fd-popover__control"
+      >
+        <span
+          aria-controls="fd-200"
+          aria-expanded={false}
+          aria-haspopup={true}
+          className="fd-image--m fd-image--circle"
+          onClick={[Function]}
+          onKeyPress={[Function]}
+          role="button"
+          style={
+            Object {
+              "backgroundImage": "url(./assets/nature.jpg)",
+            }
+          }
+          tabIndex={0}
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    className="fd-popover"
+  >
+    <div
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      onTouchStart={[Function]}
+    >
+      <div
+        className="fd-popover__control"
+      >
+        <span
+          aria-controls="fd-201"
+          aria-expanded={false}
+          aria-haspopup={true}
+          className="fd-identifier fd-identifier--m sap-icon--money-bills fd-has-background-color-accent-6"
+          onClick={[Function]}
+          onKeyPress={[Function]}
+          role="button"
+          tabIndex={0}
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    className="fd-popover"
+  >
+    <div
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      onTouchStart={[Function]}
+    >
+      <div
+        className="fd-popover__control"
+      >
+        <span
+          aria-controls="fd-202"
+          aria-expanded={false}
+          aria-haspopup={true}
+          className="sap-icon--menu2 sap-icon--xl"
+          onClick={[Function]}
+          onKeyPress={[Function]}
+          role="button"
+          tabIndex={0}
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Component API/Popover Placements 1`] = `
+<div
+  dir="ltr"
+>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "
+            td {
+                min-width: 3em;
+                min-height: 3em;
+            }
+            ",
+      }
+    }
+  />
+  <table>
+    <tbody>
+      <tr>
+        <td>
+           
+        </td>
+      </tr>
+      <tr>
+        <td>
+           
+        </td>
+      </tr>
+      <tr>
+        <td>
+           
+        </td>
+      </tr>
+      <tr>
+        <td>
+           
+        </td>
+      </tr>
+      <tr>
+        <td>
+           
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td />
+        <td />
+        <td />
+        <td>
+          <div
+            className="fd-popover"
+          >
+            <div
+              onFocus={[Function]}
+              onMouseDown={[Function]}
+              onTouchStart={[Function]}
+            >
+              <div
+                className="fd-popover__control"
+              >
+                <button
+                  aria-controls="fd-top-start-popover-placement-story"
+                  aria-expanded={false}
+                  aria-haspopup="menu"
+                  className="fd-button fd-button--transparent sap-icon--navigation-up-arrow"
+                  onClick={[Function]}
+                  onKeyPress={[Function]}
+                  role="button"
+                  tabIndex={0}
+                  type="button"
+                >
+                  Top-Start
+                </button>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div
+            className="fd-popover"
+          >
+            <div
+              onFocus={[Function]}
+              onMouseDown={[Function]}
+              onTouchStart={[Function]}
+            >
+              <div
+                className="fd-popover__control"
+              >
+                <button
+                  aria-controls="fd-186"
+                  aria-expanded={false}
+                  aria-haspopup="menu"
+                  className="fd-button fd-button--transparent sap-icon--navigation-up-arrow"
+                  onClick={[Function]}
+                  onKeyPress={[Function]}
+                  role="button"
+                  tabIndex={0}
+                  type="button"
+                >
+                  Top
+                </button>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div
+            className="fd-popover"
+          >
+            <div
+              onFocus={[Function]}
+              onMouseDown={[Function]}
+              onTouchStart={[Function]}
+            >
+              <div
+                className="fd-popover__control"
+              >
+                <button
+                  aria-controls="fd-187"
+                  aria-expanded={false}
+                  aria-haspopup="menu"
+                  className="fd-button fd-button--transparent sap-icon--navigation-up-arrow"
+                  onClick={[Function]}
+                  onKeyPress={[Function]}
+                  role="button"
+                  tabIndex={0}
+                  type="button"
+                >
+                  Top-End
+                </button>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td />
+      </tr>
+      <tr>
+        <td />
+        <td />
+        <td />
+        <td>
+          <div
+            className="fd-popover"
+          >
+            <div
+              onFocus={[Function]}
+              onMouseDown={[Function]}
+              onTouchStart={[Function]}
+            >
+              <div
+                className="fd-popover__control"
+              >
+                <button
+                  aria-controls="fd-188"
+                  aria-expanded={false}
+                  aria-haspopup="menu"
+                  className="fd-button fd-button--transparent sap-icon--navigation-left-arrow"
+                  onClick={[Function]}
+                  onKeyPress={[Function]}
+                  role="button"
+                  tabIndex={0}
+                  type="button"
+                >
+                  Left-Start
+                </button>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td />
+        <td />
+        <td />
+        <td>
+          <div
+            className="fd-popover"
+          >
+            <div
+              onFocus={[Function]}
+              onMouseDown={[Function]}
+              onTouchStart={[Function]}
+            >
+              <div
+                className="fd-popover__control"
+              >
+                <button
+                  aria-controls="fd-189"
+                  aria-expanded={false}
+                  aria-haspopup="menu"
+                  className="fd-button fd-button--transparent sap-icon--navigation-right-arrow"
+                  onClick={[Function]}
+                  onKeyPress={[Function]}
+                  role="button"
+                  tabIndex={0}
+                  type="button"
+                >
+                  Right-Top
+                </button>
+              </div>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td />
+        <td />
+        <td>
+          <div
+            className="fd-popover"
+          >
+            <div
+              onFocus={[Function]}
+              onMouseDown={[Function]}
+              onTouchStart={[Function]}
+            >
+              <div
+                className="fd-popover__control"
+              >
+                <button
+                  aria-controls="fd-190"
+                  aria-expanded={false}
+                  aria-haspopup="menu"
+                  className="fd-button fd-button--transparent sap-icon--navigation-left-arrow"
+                  onClick={[Function]}
+                  onKeyPress={[Function]}
+                  role="button"
+                  tabIndex={0}
+                  type="button"
+                >
+                  Left
+                </button>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td />
+        <td />
+        <td />
+        <td>
+          <div
+            className="fd-popover"
+          >
+            <div
+              onFocus={[Function]}
+              onMouseDown={[Function]}
+              onTouchStart={[Function]}
+            >
+              <div
+                className="fd-popover__control"
+              >
+                <button
+                  aria-controls="fd-191"
+                  aria-expanded={false}
+                  aria-haspopup="menu"
+                  className="fd-button fd-button--transparent sap-icon--navigation-right-arrow"
+                  onClick={[Function]}
+                  onKeyPress={[Function]}
+                  role="button"
+                  tabIndex={0}
+                  type="button"
+                >
+                  Right
+                </button>
+              </div>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td />
+        <td />
+        <td>
+          <div
+            className="fd-popover"
+          >
+            <div
+              onFocus={[Function]}
+              onMouseDown={[Function]}
+              onTouchStart={[Function]}
+            >
+              <div
+                className="fd-popover__control"
+              >
+                <button
+                  aria-controls="fd-192"
+                  aria-expanded={false}
+                  aria-haspopup="menu"
+                  className="fd-button fd-button--transparent sap-icon--navigation-left-arrow"
+                  onClick={[Function]}
+                  onKeyPress={[Function]}
+                  role="button"
+                  tabIndex={0}
+                  type="button"
+                >
+                  Left-End
+                </button>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td />
+        <td />
+        <td />
+        <td>
+          <div
+            className="fd-popover"
+          >
+            <div
+              onFocus={[Function]}
+              onMouseDown={[Function]}
+              onTouchStart={[Function]}
+            >
+              <div
+                className="fd-popover__control"
+              >
+                <button
+                  aria-controls="fd-193"
+                  aria-expanded={false}
+                  aria-haspopup="menu"
+                  className="fd-button fd-button--transparent sap-icon--navigation-right-arrow"
+                  onClick={[Function]}
+                  onKeyPress={[Function]}
+                  role="button"
+                  tabIndex={0}
+                  type="button"
+                >
+                  Right-End
+                </button>
+              </div>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td />
+        <td />
+        <td />
+        <td>
+          <div
+            className="fd-popover"
+          >
+            <div
+              onFocus={[Function]}
+              onMouseDown={[Function]}
+              onTouchStart={[Function]}
+            >
+              <div
+                className="fd-popover__control"
+              >
+                <button
+                  aria-controls="fd-194"
+                  aria-expanded={false}
+                  aria-haspopup="menu"
+                  className="fd-button fd-button--transparent sap-icon--navigation-down-arrow"
+                  onClick={[Function]}
+                  onKeyPress={[Function]}
+                  role="button"
+                  tabIndex={0}
+                  type="button"
+                >
+                  Bottom-Start
+                </button>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div
+            className="fd-popover"
+          >
+            <div
+              onFocus={[Function]}
+              onMouseDown={[Function]}
+              onTouchStart={[Function]}
+            >
+              <div
+                className="fd-popover__control"
+              >
+                <button
+                  aria-controls="fd-195"
+                  aria-expanded={false}
+                  aria-haspopup="menu"
+                  className="fd-button fd-button--transparent sap-icon--navigation-down-arrow"
+                  onClick={[Function]}
+                  onKeyPress={[Function]}
+                  role="button"
+                  tabIndex={0}
+                  type="button"
+                >
+                  Bottom
+                </button>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div
+            className="fd-popover"
+          >
+            <div
+              onFocus={[Function]}
+              onMouseDown={[Function]}
+              onTouchStart={[Function]}
+            >
+              <div
+                className="fd-popover__control"
+              >
+                <button
+                  aria-controls="fd-196"
+                  aria-expanded={false}
+                  aria-haspopup="menu"
+                  className="fd-button fd-button--transparent sap-icon--navigation-down-arrow"
+                  onClick={[Function]}
+                  onKeyPress={[Function]}
+                  role="button"
+                  tabIndex={0}
+                  type="button"
+                >
+                  Bottom-End
+                </button>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td />
+      </tr>
+      <tr>
+        <td>
+           
+        </td>
+      </tr>
+      <tr>
+        <td>
+           
+        </td>
+      </tr>
+      <tr>
+        <td>
+           
+        </td>
+      </tr>
+      <tr>
+        <td>
+           
+        </td>
+      </tr>
+      <tr>
+        <td>
+           
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`Storyshots Component API/Popover Width Sizing Types 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    className="fd-popover"
+  >
+    <div
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      onTouchStart={[Function]}
+    >
+      <div
+        className="fd-popover__control"
+      >
+        <button
+          aria-controls="fd-203"
+          aria-expanded={false}
+          aria-haspopup={true}
+          className="fd-button"
+          onClick={[Function]}
+          onKeyPress={[Function]}
+          role="button"
+          tabIndex={0}
+          type="button"
+        >
+          widthizingType: 
+          <strong>
+            '
+            none
+            '
+          </strong>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div
+    className="fd-popover"
+  >
+    <div
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      onTouchStart={[Function]}
+    >
+      <div
+        className="fd-popover__control"
+      >
+        <button
+          aria-controls="fd-204"
+          aria-expanded={false}
+          aria-haspopup={true}
+          className="fd-button"
+          onClick={[Function]}
+          onKeyPress={[Function]}
+          role="button"
+          tabIndex={0}
+          type="button"
+        >
+          widthizingType: 
+          <strong>
+            '
+            matchTarget
+            '
+          </strong>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div
+    className="fd-popover"
+  >
+    <div
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      onTouchStart={[Function]}
+    >
+      <div
+        className="fd-popover__control"
+      >
+        <button
+          aria-controls="fd-205"
+          aria-expanded={false}
+          aria-haspopup={true}
+          className="fd-button"
+          onClick={[Function]}
+          onKeyPress={[Function]}
+          role="button"
+          tabIndex={0}
+          type="button"
+        >
+          widthizingType: 
+          <strong>
+            '
+            minTarget
+            '
+          </strong>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div
+    className="fd-popover"
+  >
+    <div
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      onTouchStart={[Function]}
+    >
+      <div
+        className="fd-popover__control"
+      >
+        <button
+          aria-controls="fd-206"
+          aria-expanded={false}
+          aria-haspopup={true}
+          className="fd-button"
+          onClick={[Function]}
+          onKeyPress={[Function]}
+          role="button"
+          tabIndex={0}
+          type="button"
+        >
+          widthizingType: 
+          <strong>
+            '
+            maxTarget
+            '
+          </strong>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
