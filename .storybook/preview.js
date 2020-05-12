@@ -5,8 +5,11 @@ import React from 'react';
 // import { withA11y } from '@storybook/addon-a11y';
 import { withCssResources } from '@storybook/addon-cssresources';
 import { withI18n } from 'storybook-addon-i18n';
-import { addDecorator, addParameters } from '@storybook/react';
+import Community from './custom/Community';
+import Footer from './custom/Footer';
+import Header from './custom/Header';
 import Import from './custom/Import';
+import { addDecorator, addParameters } from '@storybook/react';
 import {
     DocsContainer,
     Title,
@@ -16,6 +19,16 @@ import {
     Props,
     Stories,
   } from '@storybook/addon-docs/blocks';
+
+
+// TO DO: investigate adding toc
+// header
+// add support link (github issues)
+// version
+// add github link
+
+//footer
+// links
 
 // Order of folders to display
 const headers = [
@@ -73,6 +86,7 @@ addParameters({
         page: () => {
             return (
                 <>
+                <Header />
                 <Title />
                 <Subtitle />
                 <Import />
@@ -80,6 +94,8 @@ addParameters({
                 <Primary />
                 <Stories />
                 <Props />
+                <Community />
+                <Footer />
               </>
             )
         },
