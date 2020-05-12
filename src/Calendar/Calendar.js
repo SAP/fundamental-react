@@ -671,11 +671,12 @@ class Calendar extends Component {
 
 Calendar.displayName = 'Calendar';
 
-Calendar.basePropTypes = {
+Calendar.propTypes = {
     /** Blocks dates that are in between the blocked dates */
     blockedDates: PropTypes.arrayOf(PropTypes.instanceOf(Date)),
-    /** Internal use only */
-    disableStyles: PropTypes.bool,
+    /** CSS class(es) to add to the element */
+    className: PropTypes.string,
+    customDate: PropTypes.string,
     /** Disables dates of a calendar that come after the specified date */
     disableAfterDate: PropTypes.instanceOf(Date),
     /** Disables dates of a calendar that come before the specified date */
@@ -686,12 +687,18 @@ Calendar.basePropTypes = {
     disableFutureDates: PropTypes.bool,
     /** Set to **true** to disable dates before today\'s date */
     disablePastDates: PropTypes.bool,
+    /** Internal use only */
+    disableStyles: PropTypes.bool,
     /** Disables dates that match a weekday */
     disableWeekday: PropTypes.arrayOf(PropTypes.string),
     /** Set to **true** to disables dates that match a weekend */
     disableWeekends: PropTypes.bool,
+    /** Set to **true** to enable the Calendar's range selection feature */
+    enableRangeSelection: PropTypes.bool,
     /** Set to **true** to focus the calendar grid upon being mounted */
     focusOnInit: PropTypes.bool,
+    /** Moment.js locale keys */
+    locale: PropTypes.string,
     /** Localized text to be updated based on location/language */
     localizedText: CustomPropTypes.i18n({
         /** Localized string informing screen reader users the calendar can be navigated by arrow keys */
@@ -705,14 +712,10 @@ Calendar.basePropTypes = {
         /** aria-label for previous button when years are displayed */
         show12PreviousYears: PropTypes.string
     }),
-    /** Object with special dates and special date types in shape of `{\'YYYYMMDD\': type}`. Type must be a number between 1-20 */
-    specialDays: PropTypes.object
-};
-
-Calendar.propTypes = {
-    ...Calendar.basePropTypes,
     /** Additional props to be spread to the month\'s `<table>` element */
     monthListProps: PropTypes.object,
+    /** Object with special dates and special date types in shape of `{\'YYYYMMDD\': type}`. Type must be a number between 1-20 */
+    specialDays: PropTypes.object,
     /** Additional props to be spread to the `<tbody>` element */
     tableBodyProps: PropTypes.object,
     /** Additional props to be spread to the `<thead>` element */
