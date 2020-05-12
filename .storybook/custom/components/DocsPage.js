@@ -5,7 +5,7 @@ import Header from './Header';
 import Import from './Import';
 import Toc from './Toc';
 import tocbot from 'tocbot';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import {
     Title,
     Subtitle,
