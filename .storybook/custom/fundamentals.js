@@ -8,8 +8,8 @@ export default create({
     colorPrimary: '#0e7290', // Fundamental logo blue
     colorSecondary: '#0e7290',
     // UI
-    appBg: '#EAEAEA',
-    appContentBg: '#F3F4F5',
+    appBg: '#fff',
+    appContentBg: '#fff',
     // Typography
     fontBase: '"72", "Open Sans", sans-serif',
     fontCode: 'monospace',

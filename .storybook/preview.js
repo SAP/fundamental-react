@@ -5,20 +5,10 @@ import React from 'react';
 // import { withA11y } from '@storybook/addon-a11y';
 import { withCssResources } from '@storybook/addon-cssresources';
 import { withI18n } from 'storybook-addon-i18n';
-import Community from './custom/Community';
-import Footer from './custom/Footer';
-import Header from './custom/Header';
-import Import from './custom/Import';
+import { DocsContainer } from '@storybook/addon-docs/blocks';
+import DocsPage from './custom/DocsPage';
 import { addDecorator, addParameters } from '@storybook/react';
-import {
-    DocsContainer,
-    Title,
-    Subtitle,
-    Description,
-    Primary,
-    Props,
-    Stories,
-  } from '@storybook/addon-docs/blocks';
+
 
 
 // TO DO: investigate adding toc
@@ -83,22 +73,7 @@ addParameters({
     ],
     docs: {
         container: DocsContainer,
-        page: () => {
-            return (
-                <>
-                <Header />
-                <Title />
-                <Subtitle />
-                <Import />
-                <Description />
-                <Primary />
-                <Stories />
-                <Props />
-                <Community />
-                <Footer />
-              </>
-            )
-        },
+        page: DocsPage
     },
     i18n: {
         provider: ({ children }) => <>{children}</>,
