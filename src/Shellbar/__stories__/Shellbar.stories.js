@@ -9,19 +9,21 @@ const profileMenu = [
     { name: 'Sign Out', glyph: 'log', size: 's', callback: () => console.log('Sign Out selected!') }
 ];
 
+const productMenu = [
+    { name: 'Application A', callback: () => console.log('Application A selected!') },
+    { name: 'Application B', callback: () => console.log('Application B selected!') }
+];
+
 const profile = {
     initials: 'JS',
     userName: 'John Snow',
     colorAccent: 8
 };
 
-export const primary = () => (
-    <Shellbar
-        logo={<img alt='SAP' src='//unpkg.com/fundamental-styles/dist/images/sap-logo.png' />}
-        productTitle='Corporate Portal'
-        profile={profile}
-        profileMenu={profileMenu} />
-);
+export default {
+    title: 'Component API/Shellbar',
+    component: Shellbar
+};
 
 export const basic = () => (
     <Shellbar
@@ -40,7 +42,7 @@ basic.story = {
     }
 };
 
-export const productMenu = () => (
+export const withProductMenu = () => (
     <Shellbar
         logoSAP
         notifications={{

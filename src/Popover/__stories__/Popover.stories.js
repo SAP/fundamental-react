@@ -12,6 +12,11 @@ import {
 } from '@storybook/addon-knobs';
 import React, { useState } from 'react';
 
+export default {
+    title: 'Component API/Popover',
+    component: Popover
+};
+
 const bodyContent = (
     <Menu>
         <Menu.List>
