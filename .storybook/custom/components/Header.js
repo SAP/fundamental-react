@@ -1,5 +1,4 @@
-import './custom.css';
-import packageJson from '../../package.json';
+import packageJson from '../../../package.json';
 import React from 'react';
 
 const Header = () => {

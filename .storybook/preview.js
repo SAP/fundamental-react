@@ -6,19 +6,8 @@ import React from 'react';
 import { withCssResources } from '@storybook/addon-cssresources';
 import { withI18n } from 'storybook-addon-i18n';
 import { DocsContainer } from '@storybook/addon-docs/blocks';
-import DocsPage from './custom/DocsPage';
+import DocsPage from './custom/components/DocsPage';
 import { addDecorator, addParameters } from '@storybook/react';
-
-
-
-// TO DO: investigate adding toc
-// header
-// add support link (github issues)
-// version
-// add github link
-
-//footer
-// links
 
 // Order of folders to display
 const headers = [
