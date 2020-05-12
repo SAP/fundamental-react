@@ -37,9 +37,9 @@ fs.copyFile('README.md', introductionPath, (err) => {
 import Community from \'../../.storybook/custom/components/Community\';
 import Header from \'../../.storybook/custom/components/Header\';
 import Footer from \'../../.storybook/custom/components/Footer\';
-import { Meta } from \'@storybook/addon-docs/blocks\';
-<Header />\n
-<Meta title=\'Introduction/Overview\' />\n` );
+import { Meta } from \'@storybook/addon-docs/blocks\';\n
+<Meta title=\'Introduction/Overview\' />\n
+<Header />\n` );
     const text = data.join('\n');
 
     fs.writeFile(introductionPath, text, function(writeErr) {
