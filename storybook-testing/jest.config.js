@@ -5,7 +5,7 @@ module.exports = {
     'preset': 'jest-puppeteer',
     'setupFilesAfterEnv': ['../config/jest/setup.js'],
     'moduleNameMapper': {
-        '^.+\\.(css)$': 'babel-jest'
+        '^.+\\.(scss)$': 'babel-jest'
     },
     'transformIgnorePatterns': [
         'node_modules/?!(react-syntax-highlighter)'
