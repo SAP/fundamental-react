@@ -7,7 +7,7 @@ import ListText from './_ListText';
 import PropTypes from 'prop-types';
 import React, { useEffect } from 'react';
 
-/** Lists and tables are similar as both usually contain a vertical list of data,
+/** **List** and **Table** are similar as both usually contain a vertical list of data,
 but lists generally contain basic data and tables tend to hold more complex data.
 If the list is a complex hierarchy, it is best to use a **Tree**. */
 const List = React.forwardRef(({

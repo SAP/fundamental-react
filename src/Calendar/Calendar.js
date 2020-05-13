@@ -8,7 +8,7 @@ import PropTypes from 'prop-types';
 import { isDateBetween, isEnabledDate } from '../utils/dateUtils';
 import React, { Component } from 'react';
 
-/** The **Calendar** is commonly used as the contents of a **Popover** when composing a **DatePicker**.
+/** A **Calendar** is commonly used as the contents of a **Popover** when composing a **DatePicker**.
 It is rarely used on its own as a standalone component. */
 
 class Calendar extends Component {
@@ -676,7 +676,10 @@ Calendar.propTypes = {
     blockedDates: PropTypes.arrayOf(PropTypes.instanceOf(Date)),
     /** CSS class(es) to add to the element */
     className: PropTypes.string,
-    customDate: PropTypes.string,
+    customDate: PropTypes.oneOfType([
+        PropTypes.object,
+        PropTypes.array
+    ]),
     /** Disables dates of a calendar that come after the specified date */
     disableAfterDate: PropTypes.instanceOf(Date),
     /** Disables dates of a calendar that come before the specified date */

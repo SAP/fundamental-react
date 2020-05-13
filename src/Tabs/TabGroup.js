@@ -4,7 +4,7 @@ import { TAB_SIZES } from '../utils/constants';
 import { TabContent } from './_TabContent';
 import React, { Component } from 'react';
 
-/** A **Tab Group** is a collection of **Tab** components.  Each **Tab** is based on a folder
+/** A **TabGroup** is a collection of **Tab** components.  Each **Tab** is based on a folder
 metaphor and is used to separate content into different sections.
 They should be ordered to create a visual hierarchy based on priority. */
 class TabGroup extends Component {

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import TimeItem from './_TimeItem';
 import React, { Component } from 'react';
 
-/** The **Time** component is used for a single time value. Multiple components can be used in the **Time Picker**
+/** A **Time** component is used for a single time value. Multiple components can be used in the **Time Picker**
 to assemble a clock time. A max of four will account for hours, minutes, seconds and meridiem of the day.
 It is rarely used on its own as a standalone component. */
 

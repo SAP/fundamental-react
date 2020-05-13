@@ -15,7 +15,7 @@ import React, { Component } from 'react';
 const ISO_DATE_FORMAT = 'YYYY-MM-DD';
 const dateRangeSeparator = ' - ';
 
-/** The **DatePicker** is an opinionated composition of the **Input Group**, **Popover**
+/** A **DatePicker** is an opinionated composition of the **Input Group**, **Popover**
  * and **Calendar** components to accomplish the UI pattern for picking a date. */
 
 class DatePicker extends Component {
@@ -324,6 +324,7 @@ class DatePicker extends Component {
             locale,
             localizedText,
             onBlur,
+            onDatePickerClose,
             popoverProps,
             readOnly,
             specialDays,
@@ -471,7 +472,7 @@ DatePicker.propTypes = {
     /** Callback function for onBlur events. In the object returned,`date` is the date object,
      * `formattedDate` is the formatted date, and `isoFormattedDate` is the date formatted in ISO-8601 format (YYYY-MM-DD) */
     onBlur: PropTypes.func,
-    /** allback function for onChange events - every keystroke when user inputs into date text field, after auto formatting date
+    /** Callback function for onChange events - every keystroke when user inputs into date text field, after auto formatting date
      * e.g. after 3/3/20 becomes 03/03/2020, after field is cleared due to invalid input, after new date is selected from popover.
      * In the object returned, `date` is the date object, `formattedDate` is the formatted date, and `isoFormattedDate`is the date
      * formatted in ISO-8601 format (YYYY-MM-DD) */

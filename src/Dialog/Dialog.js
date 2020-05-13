@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
 import React, { Component } from 'react';
 
-/** The **Dialog** is a container generally displayed in response to an action. It is used for short forms,
+/** A **Dialog** is a container generally displayed in response to an action. It is used for short forms,
  * confirmation messages or to display contextual information that does not require a page.\n\nTo
  * display the **Dialog** dialog, pass a boolean value to the \`show\` property of the component. It is
  * recommended to store this value as a state property in the parent control or application.

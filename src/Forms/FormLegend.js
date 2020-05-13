@@ -2,6 +2,7 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React, { useEffect } from 'react';
 
+/** See the **FormFieldset** component for detailed usage information. */
 const FormLegend = React.forwardRef(({ children, className, disableStyles, ...props }, ref) => {
 
     useEffect(() => {

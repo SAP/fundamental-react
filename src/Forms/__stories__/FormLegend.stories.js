@@ -7,3 +7,7 @@ export default {
 };
 
 export const primary = () => (<FormLegend>Default</FormLegend>);
+
+primary.story = {
+    parameters: { docs: { disable: true } }
+};

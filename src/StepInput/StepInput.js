@@ -9,7 +9,7 @@ import keycode from 'keycode';
 import PropTypes from 'prop-types';
 import React, { useCallback, useState } from 'react';
 
-/** The **Step Input** allows numbers to be entered. It is typically used used to enter numbers.
+/** A **StepInput** allows numbers to be entered. It is typically used used to enter numbers.
  * The value can be increased or reduced with the provided controls */
 const StepInput = React.forwardRef(({
     children,

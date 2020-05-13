@@ -3,6 +3,7 @@ import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import PropTypes from 'prop-types';
 import React, { useEffect } from 'react';
 
+/** **LayoutGrid** can be used to arrange components evenly in a grid layout. */
 const LayoutGrid = React.forwardRef(({ nogap, cols, children, className, colSpan, disableStyles, ...props }, ref) => {
 
     useEffect(() => {
