@@ -35,7 +35,7 @@ exports[`Storyshots Component API/Tile Action Tile 1`] = `
             className="fd-popover__control"
           >
             <button
-              aria-controls="fd-200"
+              aria-controls="fd-216"
               aria-expanded={false}
               aria-haspopup={true}
               className="fd-button fd-button--transparent sap-icon--vertical-grip"

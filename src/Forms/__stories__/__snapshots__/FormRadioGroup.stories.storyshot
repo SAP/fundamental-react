@@ -13,13 +13,13 @@ exports[`Storyshots Component API/Forms/FormRadioGroup Compact 1`] = `
     >
       <input
         className="fd-radio fd-radio--compact"
-        id="fd-51"
-        name="fd-50"
+        id="fd-67"
+        name="fd-66"
         type="radio"
       />
       <label
         className="fd-form-label fd-radio__label"
-        htmlFor="fd-51"
+        htmlFor="fd-67"
       >
         Option 1
       </label>
@@ -30,13 +30,13 @@ exports[`Storyshots Component API/Forms/FormRadioGroup Compact 1`] = `
     >
       <input
         className="fd-radio fd-radio--compact"
-        id="fd-52"
-        name="fd-50"
+        id="fd-68"
+        name="fd-66"
         type="radio"
       />
       <label
         className="fd-form-label fd-radio__label"
-        htmlFor="fd-52"
+        htmlFor="fd-68"
       >
         Option 2
       </label>
@@ -47,13 +47,13 @@ exports[`Storyshots Component API/Forms/FormRadioGroup Compact 1`] = `
     >
       <input
         className="fd-radio fd-radio--compact"
-        id="fd-53"
-        name="fd-50"
+        id="fd-69"
+        name="fd-66"
         type="radio"
       />
       <label
         className="fd-form-label fd-radio__label"
-        htmlFor="fd-53"
+        htmlFor="fd-69"
       >
         Option 3
       </label>
@@ -75,13 +75,13 @@ exports[`Storyshots Component API/Forms/FormRadioGroup Dev 1`] = `
     >
       <input
         className="fd-radio"
-        id="fd-65"
-        name="fd-64"
+        id="fd-81"
+        name="fd-80"
         type="radio"
       />
       <label
         className="fd-form-label fd-radio__label"
-        htmlFor="fd-65"
+        htmlFor="fd-81"
       >
         Option 1
       </label>
@@ -92,13 +92,13 @@ exports[`Storyshots Component API/Forms/FormRadioGroup Dev 1`] = `
     >
       <input
         className="fd-radio"
-        id="fd-66"
-        name="fd-64"
+        id="fd-82"
+        name="fd-80"
         type="radio"
       />
       <label
         className="fd-form-label fd-radio__label"
-        htmlFor="fd-66"
+        htmlFor="fd-82"
       >
         Option 2
       </label>
@@ -109,13 +109,13 @@ exports[`Storyshots Component API/Forms/FormRadioGroup Dev 1`] = `
     >
       <input
         className="fd-radio"
-        id="fd-67"
-        name="fd-64"
+        id="fd-83"
+        name="fd-80"
         type="radio"
       />
       <label
         className="fd-form-label fd-radio__label"
-        htmlFor="fd-67"
+        htmlFor="fd-83"
       >
         Option 3
       </label>
@@ -138,13 +138,13 @@ exports[`Storyshots Component API/Forms/FormRadioGroup Disabled 1`] = `
       <input
         className="fd-radio"
         disabled={true}
-        id="fd-55"
-        name="fd-54"
+        id="fd-71"
+        name="fd-70"
         type="radio"
       />
       <label
         className="fd-form-label is-disabled fd-radio__label"
-        htmlFor="fd-55"
+        htmlFor="fd-71"
       >
         Option 1
       </label>
@@ -156,13 +156,13 @@ exports[`Storyshots Component API/Forms/FormRadioGroup Disabled 1`] = `
       <input
         className="fd-radio"
         disabled={true}
-        id="fd-56"
-        name="fd-54"
+        id="fd-72"
+        name="fd-70"
         type="radio"
       />
       <label
         className="fd-form-label is-disabled fd-radio__label"
-        htmlFor="fd-56"
+        htmlFor="fd-72"
       >
         Option 2
       </label>
@@ -174,13 +174,13 @@ exports[`Storyshots Component API/Forms/FormRadioGroup Disabled 1`] = `
       <input
         className="fd-radio"
         disabled={true}
-        id="fd-57"
-        name="fd-54"
+        id="fd-73"
+        name="fd-70"
         type="radio"
       />
       <label
         className="fd-form-label is-disabled fd-radio__label"
-        htmlFor="fd-57"
+        htmlFor="fd-73"
       >
         Option 3
       </label>
@@ -202,13 +202,13 @@ exports[`Storyshots Component API/Forms/FormRadioGroup Inline 1`] = `
     >
       <input
         className="fd-radio"
-        id="fd-47"
-        name="fd-46"
+        id="fd-63"
+        name="fd-62"
         type="radio"
       />
       <label
         className="fd-form-label fd-radio__label"
-        htmlFor="fd-47"
+        htmlFor="fd-63"
       >
         Option 1
       </label>
@@ -219,13 +219,13 @@ exports[`Storyshots Component API/Forms/FormRadioGroup Inline 1`] = `
     >
       <input
         className="fd-radio"
-        id="fd-48"
-        name="fd-46"
+        id="fd-64"
+        name="fd-62"
         type="radio"
       />
       <label
         className="fd-form-label fd-radio__label"
-        htmlFor="fd-48"
+        htmlFor="fd-64"
       >
         Option 2
       </label>
@@ -236,13 +236,13 @@ exports[`Storyshots Component API/Forms/FormRadioGroup Inline 1`] = `
     >
       <input
         className="fd-radio"
-        id="fd-49"
-        name="fd-46"
+        id="fd-65"
+        name="fd-62"
         type="radio"
       />
       <label
         className="fd-form-label fd-radio__label"
-        htmlFor="fd-49"
+        htmlFor="fd-65"
       >
         Option 3
       </label>
@@ -264,13 +264,13 @@ exports[`Storyshots Component API/Forms/FormRadioGroup Primary 1`] = `
     >
       <input
         className="fd-radio"
-        id="fd-43"
-        name="fd-42"
+        id="fd-59"
+        name="fd-58"
         type="radio"
       />
       <label
         className="fd-form-label fd-radio__label"
-        htmlFor="fd-43"
+        htmlFor="fd-59"
       >
         Option 1
       </label>
@@ -281,13 +281,13 @@ exports[`Storyshots Component API/Forms/FormRadioGroup Primary 1`] = `
     >
       <input
         className="fd-radio"
-        id="fd-44"
-        name="fd-42"
+        id="fd-60"
+        name="fd-58"
         type="radio"
       />
       <label
         className="fd-form-label fd-radio__label"
-        htmlFor="fd-44"
+        htmlFor="fd-60"
       >
         Option 2
       </label>
@@ -298,13 +298,13 @@ exports[`Storyshots Component API/Forms/FormRadioGroup Primary 1`] = `
     >
       <input
         className="fd-radio"
-        id="fd-45"
-        name="fd-42"
+        id="fd-61"
+        name="fd-58"
         type="radio"
       />
       <label
         className="fd-form-label fd-radio__label"
-        htmlFor="fd-45"
+        htmlFor="fd-61"
       >
         Option 3
       </label>
@@ -326,13 +326,13 @@ exports[`Storyshots Component API/Forms/FormRadioGroup Validation States 1`] = `
     >
       <input
         className="fd-radio"
-        id="fd-59"
-        name="fd-58"
+        id="fd-75"
+        name="fd-74"
         type="radio"
       />
       <label
         className="fd-form-label fd-radio__label"
-        htmlFor="fd-59"
+        htmlFor="fd-75"
       >
         Default
       </label>
@@ -343,13 +343,13 @@ exports[`Storyshots Component API/Forms/FormRadioGroup Validation States 1`] = `
     >
       <input
         className="fd-radio is-error"
-        id="fd-60"
-        name="fd-58"
+        id="fd-76"
+        name="fd-74"
         type="radio"
       />
       <label
         className="fd-form-label fd-radio__label"
-        htmlFor="fd-60"
+        htmlFor="fd-76"
       >
         Error
       </label>
@@ -360,13 +360,13 @@ exports[`Storyshots Component API/Forms/FormRadioGroup Validation States 1`] = `
     >
       <input
         className="fd-radio is-warning"
-        id="fd-61"
-        name="fd-58"
+        id="fd-77"
+        name="fd-74"
         type="radio"
       />
       <label
         className="fd-form-label fd-radio__label"
-        htmlFor="fd-61"
+        htmlFor="fd-77"
       >
         Warning
       </label>
@@ -377,13 +377,13 @@ exports[`Storyshots Component API/Forms/FormRadioGroup Validation States 1`] = `
     >
       <input
         className="fd-radio is-success"
-        id="fd-62"
-        name="fd-58"
+        id="fd-78"
+        name="fd-74"
         type="radio"
       />
       <label
         className="fd-form-label fd-radio__label"
-        htmlFor="fd-62"
+        htmlFor="fd-78"
       >
         Success
       </label>
@@ -394,13 +394,13 @@ exports[`Storyshots Component API/Forms/FormRadioGroup Validation States 1`] = `
     >
       <input
         className="fd-radio is-information"
-        id="fd-63"
-        name="fd-58"
+        id="fd-79"
+        name="fd-74"
         type="radio"
       />
       <label
         className="fd-form-label fd-radio__label"
-        htmlFor="fd-63"
+        htmlFor="fd-79"
       >
         Information
       </label>
