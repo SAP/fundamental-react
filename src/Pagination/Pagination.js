@@ -74,12 +74,11 @@ class Pagination extends Component {
     createPaginationLinks = (numberOfPages) => {
         let linksToBeAdded = numberOfPages;
         let pageNumberOffset = 1;
-
+        let maxPageNumber = this.state.selectedPage + Math.ceil(this.props.visiblePageTotal / 2);
         //if numberOfPages is more than noOfPages
         if (numberOfPages > this.props.visiblePageTotal) {
             linksToBeAdded = this.props.visiblePageTotal;
             //highest page number possible
-            let maxPageNumber = this.state.selectedPage + Math.ceil(this.props.visiblePageTotal / 2);
             //all but the last page, selected page is the center of selection
             if (maxPageNumber <= numberOfPages) {
                 pageNumberOffset = this.state.selectedPage - Math.floor(this.props.visiblePageTotal / 2) + 1;
@@ -94,22 +93,39 @@ class Pagination extends Component {
         }
 
         // create an array with number of pages and fill it with links
-        const aPages = Array(linksToBeAdded)
+        let aPages = [];
+        aPages = Array(linksToBeAdded)
             .fill()
             .map((link, index) => (
-                <a
-                    {...this.props.linkProps}
-                    aria-selected={this.state.selectedPage === index + pageNumberOffset}
-                    className='fd-pagination__link'
-                    href='#'
-                    key={index}
-                    onClick={this.pageClicked}>
-                    {index + pageNumberOffset}
-                </a>
+                this.getPaginationLink(index, pageNumberOffset)
             ));
+        if (pageNumberOffset > 1) {
+            let prefix = [];
+            prefix.push(this.getPaginationLink(0, 1));
+            prefix.push(this.getPaginationMoreIndicator());
+            aPages.unshift(prefix);
+        }
+        if ((pageNumberOffset + linksToBeAdded) <= this.numberOfPages ) {
+            let postfix = [];
+            postfix.push(this.getPaginationMoreIndicator());
+            postfix.push(this.getPaginationLink(0, this.numberOfPages));
+            aPages.push(postfix);
+        }
         return aPages;
     };
 
+    getPaginationLink = (index, pageNumberOffset) => {
+        return (<a
+            {...this.props.linkProps}
+            aria-selected={this.state.selectedPage === index + pageNumberOffset}
+            className='fd-pagination__link'
+            href='#'
+            key={index}
+            onClick={this.pageClicked}>
+            {index + pageNumberOffset}
+        </a>);
+    }
+    getPaginationMoreIndicator = () => (<span className='fd-pagination__link--more' />);
     render() {
         const {
             itemsTotal,
@@ -212,7 +228,7 @@ Pagination.propTypes = {
     prevProps: PropTypes.object,
     /** Localized text to display next to the total number of items.  Used with `displayTotal` */
     totalText: PropTypes.string,
-    /** Total number of visible pages */
+    /** Total number of visible pages. Three page links will be displayed as default,along with the first and last page links*/
     visiblePageTotal: PropTypes.number
 };
 
@@ -225,7 +241,7 @@ Pagination.defaultProps = {
         previous: 'Previous'
     },
     totalText: 'items',
-    visiblePageTotal: 10
+    visiblePageTotal: 3
 };
 
 export default Pagination;
