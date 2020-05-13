@@ -24,7 +24,6 @@ const DocsPage = () => {
                 contentSelector: '.sbdocs-wrapper',
                 headingSelector: 'h2.sbdocs-h2, h3.sbdocs-h3, h4.sbdocs-h4',
                 orderedList: true,
-                scrollContainer: '.sbdocs-wrapper',
                 collapseDepth: 3,
                 hasInnerContainers: true
             }
