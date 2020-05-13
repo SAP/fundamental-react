@@ -219,8 +219,7 @@ class MultiInput extends Component {
                 disabled={disabled}
                 disableStyles={disableStyles}
                 noArrow
-                onClickOutside={this.handleClickOutside}
-                widthSizingType='matchTarget' />
+                onClickOutside={this.handleClickOutside} />
         );
     }
 }
