@@ -71,6 +71,12 @@ class Pagination extends Component {
     };
 
     // create pagination links
+    /**
+    * This function create pagination links,
+    * it returns an array of JSX.
+    * @param {number} numberOfPages Number of pages
+    * @returns {object} returns the pagination link.
+    */
     createPaginationLinks = (numberOfPages) => {
         let linksToBeAdded = numberOfPages;
         let pageNumberOffset = 1;
@@ -113,7 +119,13 @@ class Pagination extends Component {
         }
         return aPages;
     };
-
+    /**
+    * Creates pagination link JSX,
+    * it returns a JSX object.
+    * @param  {number} index index which denotes the page link position
+    * @param {number} pageNumberOffset The initial page number visible
+    * @returns {object} returns a pagination link.
+    */
     getPaginationLink = (index, pageNumberOffset) => {
         return (<a
             {...this.props.linkProps}
@@ -125,6 +137,10 @@ class Pagination extends Component {
             {index + pageNumberOffset}
         </a>);
     }
+    /**
+    * Returns the ... snippet (ellipsis) which denotes more pagination links are present,    *
+    * @returns {object} returns JSX snippet for ellipsis.
+    */
     getPaginationMoreIndicator = () => (<span className='fd-pagination__link--more' />);
     render() {
         const {
