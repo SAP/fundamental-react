@@ -1,0 +1,169 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Visual Checkbox 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    className="fd-form-item"
+  >
+    <input
+      aria-checked="false"
+      className="fd-checkbox"
+      id="fd-29"
+      onChange={[Function]}
+      type="checkbox"
+    />
+    <label
+      className="fd-form-label fd-checkbox__label"
+      htmlFor="fd-29"
+    >
+      Default Checkbox
+    </label>
+  </div>
+  <div
+    className="fd-form-item"
+  >
+    <input
+      aria-checked="mixed"
+      className="fd-checkbox"
+      id="fd-30"
+      onChange={[Function]}
+      type="checkbox"
+    />
+    <label
+      className="fd-form-label fd-checkbox__label"
+      htmlFor="fd-30"
+    >
+      Text Option
+    </label>
+  </div>
+  <div
+    className="fd-form-item"
+    disabled={true}
+  >
+    <input
+      aria-checked="false"
+      className="fd-checkbox"
+      disabled={true}
+      id="fd-31"
+      onChange={[Function]}
+      type="checkbox"
+    />
+    <label
+      className="fd-form-label is-disabled fd-checkbox__label"
+      htmlFor="fd-31"
+    >
+      Text Option
+    </label>
+  </div>
+  <div
+    className="fd-form-item"
+  >
+    <input
+      aria-checked="false"
+      className="fd-checkbox fd-checkbox--compact"
+      id="fd-32"
+      onChange={[Function]}
+      type="checkbox"
+    />
+    <label
+      className="fd-form-label fd-checkbox__label"
+      htmlFor="fd-32"
+    >
+      Text Option
+    </label>
+  </div>
+  <div
+    className="fr-container"
+  >
+    <div
+      className="fd-form-item"
+    >
+      <input
+        aria-checked="false"
+        className="fd-checkbox is-error"
+        id="fd-33"
+        onChange={[Function]}
+        type="checkbox"
+      />
+      <label
+        className="fd-form-label fd-checkbox__label"
+        htmlFor="fd-33"
+      >
+        Text Option
+      </label>
+    </div>
+    <div
+      className="fd-form-item"
+    >
+      <input
+        aria-checked="false"
+        className="fd-checkbox is-warning"
+        id="fd-34"
+        onChange={[Function]}
+        type="checkbox"
+      />
+      <label
+        className="fd-form-label fd-checkbox__label"
+        htmlFor="fd-34"
+      >
+        Text Option
+      </label>
+    </div>
+    <div
+      className="fd-form-item"
+    >
+      <input
+        aria-checked="false"
+        className="fd-checkbox is-success"
+        id="fd-35"
+        onChange={[Function]}
+        type="checkbox"
+      />
+      <label
+        className="fd-form-label fd-checkbox__label"
+        htmlFor="fd-35"
+      >
+        Text Option
+      </label>
+    </div>
+    <div
+      className="fd-form-item"
+    >
+      <input
+        aria-checked="false"
+        className="fd-checkbox is-information"
+        id="fd-36"
+        onChange={[Function]}
+        type="checkbox"
+      />
+      <label
+        className="fd-form-label fd-checkbox__label"
+        htmlFor="fd-36"
+      >
+        Text Option
+      </label>
+    </div>
+  </div>
+  <div
+    className="fd-form-item"
+    disabled={false}
+  >
+    <input
+      aria-checked="false"
+      className="fd-checkbox"
+      disabled={false}
+      id="fd-37"
+      onChange={[Function]}
+      type="checkbox"
+    />
+    <label
+      className="fd-form-label fd-checkbox__label"
+      htmlFor="fd-37"
+    >
+      Text Option
+    </label>
+  </div>
+</div>
+`;

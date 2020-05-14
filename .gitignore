@@ -3,6 +3,7 @@
 
 # testing
 /coverage
+src/*/__stories__/*.visual.js
 
 # production
 /lib

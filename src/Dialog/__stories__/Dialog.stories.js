@@ -13,9 +13,6 @@ export default {
     component: Dialog
 };
 
-// TO DO: reenable storyshots for examples using hooks in storybook@6
-// https://github.com/storybookjs/storybook/releases/tag/v6.0.0-alpha.43
-
 export const primary = () => {
     let [showDialog, setShowDialog] = useState(false);
     return (
@@ -39,11 +36,6 @@ export const primary = () => {
     );
 };
 
-primary.story = {
-    parameters: {
-        storyshots: { disable: true }
-    }
-};
 
 export const header = () => {
     let [showDialog, setShowDialog] = useState(false);
@@ -69,12 +61,6 @@ export const header = () => {
     );
 };
 
-header.story = {
-    parameters: {
-        storyshots: { disable: true }
-    }
-};
-
 export const subheader = () => {
     let [showDialog, setShowDialog] = useState(false);
     return (
@@ -97,12 +83,6 @@ export const subheader = () => {
             </Dialog>
         </>
     );
-};
-
-subheader.story = {
-    parameters: {
-        storyshots: { disable: true }
-    }
 };
 
 export const sizes = () => {
@@ -193,8 +173,7 @@ sizes.story = {
     parameters: {
         docs: {
             storyDescription: 'By default dialog body has no horizontal paddings. Add a size to modify the padding'
-        },
-        storyshots: { disable: true }
+        }
     }
 };
 
@@ -226,8 +205,7 @@ export const dev = () => (
 
 dev.story = {
     parameters: {
-        docs: { disable: true },
-        storyshots: { disable: true }
+        docs: { disable: true }
     }
 };
 
@@ -249,8 +227,7 @@ export const small = () => (
 
 small.story = {
     parameters: {
-        docs: { disable: true },
-        storyshots: { disable: true }
+        docs: { disable: true }
     }
 };
 
@@ -272,8 +249,7 @@ export const medium = () => (
 
 medium.story = {
     parameters: {
-        docs: { disable: true },
-        storyshots: { disable: true }
+        docs: { disable: true }
     }
 };
 
@@ -295,8 +271,7 @@ export const large = () => (
 
 large.story = {
     parameters: {
-        docs: { disable: true },
-        storyshots: { disable: true }
+        docs: { disable: true }
     }
 };
 
@@ -318,7 +293,6 @@ export const xl = () => (
 
 xl.story = {
     parameters: {
-        docs: { disable: true },
-        storyshots: { disable: true }
+        docs: { disable: true }
     }
 };

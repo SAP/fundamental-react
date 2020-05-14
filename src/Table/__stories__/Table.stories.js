@@ -105,11 +105,3 @@ export const richTable = () => {
             } />
     );
 };
-
-// TO DO: reenable storyshots for examples using hooks in storybook@6
-// https://github.com/storybookjs/storybook/releases/tag/v6.0.0-alpha.43
-richTable.story = {
-    parameters: {
-        storyshots: { disable: true }
-    }
-};

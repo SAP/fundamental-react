@@ -13,6 +13,7 @@
   "scripts": {
     "build:copy-files": "cp -rf package.json README.md NOTICE.txt LICENSE.txt CHANGELOG.md lib",
     "build:index": "babel-node devtools/buildIndexFiles.js",
+    "build:visual": "babel-node devtools/buildVisualStories.js",
     "build:cjs": "cross-env NODE_ENV=production BABEL_ENV=cjs babel src --ignore \"src/**/*.test.js\",\"src/**/*.stories.js\",\"src/Docs/*.stories.mdx\" --out-dir lib",
     "build": "npm run build:index && rm -rf lib && npm run build:cjs",
     "deploy": "gh-pages -d storybook-static",
@@ -38,7 +39,7 @@
     "test:coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js || echo -e \"Coveralls failed.\"",
     "test:dev": "jest --config=./config/jest/jest.config.js",
     "test": "npm run test:dev -- --watch",
-    "test:storybook:setup": "BABEL_ENV=test jest --config=./storybook-testing/jest.config.js",
+    "test:storybook:setup": "npm run build:visual && BABEL_ENV=test jest --config=./storybook-testing/jest.config.js",
     "test:storybook": "server-test storybook:ci http-get://localhost:12123 test:storybook:setup",
     "test:storybook:update": "server-test storybook:ci http-get://localhost:12123 'npm run test:storybook:setup -- --updateSnapshot'"
   },

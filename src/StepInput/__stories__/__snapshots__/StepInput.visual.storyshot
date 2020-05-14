@@ -1,0 +1,299 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Visual Step Input 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    className="fd-input-group--control fd-input-group"
+    onKeyDown={[Function]}
+  >
+    <span
+      aria-label="Step Up"
+      className="fd-input-group__addon fd-input-group__addon--button"
+    >
+      <button
+        className="fd-button fd-button--transparent fd-button--standard sap-icon--less fd-input-group__button"
+        onClick={[Function]}
+        type="button"
+      />
+    </span>
+    <input
+      className="fd-input fd-input-group__input"
+      onChange={[Function]}
+      type="text"
+      value={0}
+    />
+    <span
+      aria-label="Step Down"
+      className="fd-input-group__addon fd-input-group__addon--button"
+    >
+      <button
+        className="fd-button fd-button--transparent fd-button--standard sap-icon--add fd-input-group__button"
+        onClick={[Function]}
+        type="button"
+      />
+    </span>
+  </div>
+  <div
+    className="fd-input-group--control fd-input-group"
+    onKeyDown={[Function]}
+  >
+    <span
+      aria-label="Step Up"
+      className="fd-input-group__addon fd-input-group__addon--button fd-input-group__addon--compact"
+    >
+      <button
+        className="fd-button fd-button--transparent fd-button--standard fd-button--compact sap-icon--less fd-input-group__button"
+        onClick={[Function]}
+        type="button"
+      />
+    </span>
+    <input
+      className="fd-input fd-input--compact fd-input-group__input"
+      onChange={[Function]}
+      type="text"
+      value={0}
+    />
+    <span
+      aria-label="Step Down"
+      className="fd-input-group__addon fd-input-group__addon--button fd-input-group__addon--compact"
+    >
+      <button
+        className="fd-button fd-button--transparent fd-button--standard fd-button--compact sap-icon--add fd-input-group__button"
+        onClick={[Function]}
+        type="button"
+      />
+    </span>
+  </div>
+  <div
+    className="fd-input-group--control is-disabled fd-input-group is-disabled"
+    onKeyDown={[Function]}
+  >
+    <span
+      aria-label="Step Up"
+      className="fd-input-group__addon fd-input-group__addon--button"
+      disabled={true}
+    >
+      <button
+        className="fd-button fd-button--transparent fd-button--standard sap-icon--less is-disabled fd-input-group__button"
+        disabled={true}
+        onClick={[Function]}
+        type="button"
+      />
+    </span>
+    <input
+      className="fd-input fd-input-group__input"
+      disabled={true}
+      onChange={[Function]}
+      type="text"
+      value={0}
+    />
+    <span
+      aria-label="Step Down"
+      className="fd-input-group__addon fd-input-group__addon--button"
+      disabled={true}
+    >
+      <button
+        className="fd-button fd-button--transparent fd-button--standard sap-icon--add is-disabled fd-input-group__button"
+        disabled={true}
+        onClick={[Function]}
+        type="button"
+      />
+    </span>
+  </div>
+  <div
+    className="fd-input-group--control is-error fd-input-group"
+    onKeyDown={[Function]}
+  >
+    <span
+      aria-label="Step Up"
+      className="fd-input-group__addon fd-input-group__addon--button"
+    >
+      <button
+        className="fd-button fd-button--transparent fd-button--standard sap-icon--less fd-input-group__button"
+        onClick={[Function]}
+        type="button"
+      />
+    </span>
+    <input
+      className="fd-input fd-input-group__input"
+      onChange={[Function]}
+      placeholder="Error"
+      type="text"
+      value={0}
+    />
+    <span
+      aria-label="Step Down"
+      className="fd-input-group__addon fd-input-group__addon--button"
+    >
+      <button
+        className="fd-button fd-button--transparent fd-button--standard sap-icon--add fd-input-group__button"
+        onClick={[Function]}
+        type="button"
+      />
+    </span>
+  </div>
+  <div
+    aria-live="assertive"
+    className="fd-form-message fd-form-message--error"
+    role="alert"
+  >
+    Test validation state
+  </div>
+  <div
+    className="fd-input-group--control is-warning fd-input-group"
+    onKeyDown={[Function]}
+  >
+    <span
+      aria-label="Step Up"
+      className="fd-input-group__addon fd-input-group__addon--button"
+    >
+      <button
+        className="fd-button fd-button--transparent fd-button--standard sap-icon--less fd-input-group__button"
+        onClick={[Function]}
+        type="button"
+      />
+    </span>
+    <input
+      className="fd-input fd-input-group__input"
+      onChange={[Function]}
+      placeholder="Warning"
+      type="text"
+      value={0}
+    />
+    <span
+      aria-label="Step Down"
+      className="fd-input-group__addon fd-input-group__addon--button"
+    >
+      <button
+        className="fd-button fd-button--transparent fd-button--standard sap-icon--add fd-input-group__button"
+        onClick={[Function]}
+        type="button"
+      />
+    </span>
+  </div>
+  <div
+    aria-live="assertive"
+    className="fd-form-message fd-form-message--warning"
+    role="alert"
+  >
+    Test validation state
+  </div>
+  <div
+    className="fd-input-group--control is-success fd-input-group"
+    onKeyDown={[Function]}
+  >
+    <span
+      aria-label="Step Up"
+      className="fd-input-group__addon fd-input-group__addon--button"
+    >
+      <button
+        className="fd-button fd-button--transparent fd-button--standard sap-icon--less fd-input-group__button"
+        onClick={[Function]}
+        type="button"
+      />
+    </span>
+    <input
+      className="fd-input fd-input-group__input"
+      onChange={[Function]}
+      placeholder="Success"
+      type="text"
+      value={0}
+    />
+    <span
+      aria-label="Step Down"
+      className="fd-input-group__addon fd-input-group__addon--button"
+    >
+      <button
+        className="fd-button fd-button--transparent fd-button--standard sap-icon--add fd-input-group__button"
+        onClick={[Function]}
+        type="button"
+      />
+    </span>
+  </div>
+  <div
+    aria-live="assertive"
+    className="fd-form-message fd-form-message--success"
+    role="alert"
+  >
+    Test validation state
+  </div>
+  <div
+    className="fd-input-group--control is-information fd-input-group"
+    onKeyDown={[Function]}
+  >
+    <span
+      aria-label="Step Up"
+      className="fd-input-group__addon fd-input-group__addon--button"
+    >
+      <button
+        className="fd-button fd-button--transparent fd-button--standard sap-icon--less fd-input-group__button"
+        onClick={[Function]}
+        type="button"
+      />
+    </span>
+    <input
+      className="fd-input fd-input-group__input"
+      onChange={[Function]}
+      placeholder="Information"
+      type="text"
+      value={0}
+    />
+    <span
+      aria-label="Step Down"
+      className="fd-input-group__addon fd-input-group__addon--button"
+    >
+      <button
+        className="fd-button fd-button--transparent fd-button--standard sap-icon--add fd-input-group__button"
+        onClick={[Function]}
+        type="button"
+      />
+    </span>
+  </div>
+  <div
+    aria-live="assertive"
+    className="fd-form-message fd-form-message--information"
+    role="alert"
+  >
+    Test validation state
+  </div>
+  <div
+    className="fd-input-group--control fd-input-group"
+    onKeyDown={[Function]}
+  >
+    <span
+      aria-label="Step Up"
+      className="fd-input-group__addon fd-input-group__addon--button"
+      disabled={false}
+    >
+      <button
+        className="fd-button fd-button--transparent fd-button--standard sap-icon--less fd-input-group__button"
+        disabled={false}
+        onClick={[Function]}
+        type="button"
+      />
+    </span>
+    <input
+      className="fd-input fd-input-group__input"
+      disabled={false}
+      onChange={[Function]}
+      placeholder="Placeholder"
+      type="text"
+      value={0}
+    />
+    <span
+      aria-label="Step Down"
+      className="fd-input-group__addon fd-input-group__addon--button"
+      disabled={false}
+    >
+      <button
+        className="fd-button fd-button--transparent fd-button--standard sap-icon--add fd-input-group__button"
+        disabled={false}
+        onClick={[Function]}
+        type="button"
+      />
+    </span>
+  </div>
+</div>
+`;
