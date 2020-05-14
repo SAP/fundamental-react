@@ -42,13 +42,61 @@ exports[`Storyshots Component API/Pagination Hide Total Items Pagination 1`] = `
       >
         3
       </a>
+      <span
+        className="fd-pagination__link--more"
+      />
       <a
         aria-selected={false}
         className="fd-pagination__link"
         href="#"
         onClick={[Function]}
       >
-        4
+        11
+      </a>
+      <a
+        aria-disabled={false}
+        aria-label="Next"
+        className="fd-pagination__link fd-pagination__link--next"
+        href="#"
+        onClick={[Function]}
+      />
+    </nav>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Component API/Pagination Initial Set Pagination 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    className="fd-pagination"
+    initalPage={5}
+  >
+    <span
+      className="fd-pagination__total"
+    >
+      101
+       
+      items
+    </span>
+    <nav
+      className="fd-pagination__nav"
+    >
+      <a
+        aria-disabled={true}
+        aria-label="Previous"
+        className="fd-pagination__link fd-pagination__link--previous"
+        href="#"
+        onClick={[Function]}
+      />
+      <a
+        aria-selected={true}
+        className="fd-pagination__link"
+        href="#"
+        onClick={[Function]}
+      >
+        1
       </a>
       <a
         aria-selected={false}
@@ -56,7 +104,7 @@ exports[`Storyshots Component API/Pagination Hide Total Items Pagination 1`] = `
         href="#"
         onClick={[Function]}
       >
-        5
+        2
       </a>
       <a
         aria-selected={false}
@@ -64,39 +112,18 @@ exports[`Storyshots Component API/Pagination Hide Total Items Pagination 1`] = `
         href="#"
         onClick={[Function]}
       >
-        6
+        3
       </a>
+      <span
+        className="fd-pagination__link--more"
+      />
       <a
         aria-selected={false}
         className="fd-pagination__link"
         href="#"
         onClick={[Function]}
       >
-        7
-      </a>
-      <a
-        aria-selected={false}
-        className="fd-pagination__link"
-        href="#"
-        onClick={[Function]}
-      >
-        8
-      </a>
-      <a
-        aria-selected={false}
-        className="fd-pagination__link"
-        href="#"
-        onClick={[Function]}
-      >
-        9
-      </a>
-      <a
-        aria-selected={false}
-        className="fd-pagination__link"
-        href="#"
-        onClick={[Function]}
-      >
-        10
+        11
       </a>
       <a
         aria-disabled={false}
@@ -158,14 +185,9 @@ exports[`Storyshots Component API/Pagination Items Per Page Pagination 1`] = `
       >
         3
       </a>
-      <a
-        aria-selected={false}
-        className="fd-pagination__link"
-        href="#"
-        onClick={[Function]}
-      >
-        4
-      </a>
+      <span
+        className="fd-pagination__link--more"
+      />
       <a
         aria-selected={false}
         className="fd-pagination__link"
@@ -234,61 +256,16 @@ exports[`Storyshots Component API/Pagination Items Per Page Zero Pagination 1`] 
       >
         3
       </a>
+      <span
+        className="fd-pagination__link--more"
+      />
       <a
         aria-selected={false}
         className="fd-pagination__link"
         href="#"
         onClick={[Function]}
       >
-        4
-      </a>
-      <a
-        aria-selected={false}
-        className="fd-pagination__link"
-        href="#"
-        onClick={[Function]}
-      >
-        5
-      </a>
-      <a
-        aria-selected={false}
-        className="fd-pagination__link"
-        href="#"
-        onClick={[Function]}
-      >
-        6
-      </a>
-      <a
-        aria-selected={false}
-        className="fd-pagination__link"
-        href="#"
-        onClick={[Function]}
-      >
-        7
-      </a>
-      <a
-        aria-selected={false}
-        className="fd-pagination__link"
-        href="#"
-        onClick={[Function]}
-      >
-        8
-      </a>
-      <a
-        aria-selected={false}
-        className="fd-pagination__link"
-        href="#"
-        onClick={[Function]}
-      >
-        9
-      </a>
-      <a
-        aria-selected={false}
-        className="fd-pagination__link"
-        href="#"
-        onClick={[Function]}
-      >
-        10
+        11
       </a>
       <a
         aria-disabled={false}
@@ -350,61 +327,16 @@ exports[`Storyshots Component API/Pagination Primary 1`] = `
       >
         3
       </a>
+      <span
+        className="fd-pagination__link--more"
+      />
       <a
         aria-selected={false}
         className="fd-pagination__link"
         href="#"
         onClick={[Function]}
       >
-        4
-      </a>
-      <a
-        aria-selected={false}
-        className="fd-pagination__link"
-        href="#"
-        onClick={[Function]}
-      >
-        5
-      </a>
-      <a
-        aria-selected={false}
-        className="fd-pagination__link"
-        href="#"
-        onClick={[Function]}
-      >
-        6
-      </a>
-      <a
-        aria-selected={false}
-        className="fd-pagination__link"
-        href="#"
-        onClick={[Function]}
-      >
-        7
-      </a>
-      <a
-        aria-selected={false}
-        className="fd-pagination__link"
-        href="#"
-        onClick={[Function]}
-      >
-        8
-      </a>
-      <a
-        aria-selected={false}
-        className="fd-pagination__link"
-        href="#"
-        onClick={[Function]}
-      >
-        9
-      </a>
-      <a
-        aria-selected={false}
-        className="fd-pagination__link"
-        href="#"
-        onClick={[Function]}
-      >
-        10
+        11
       </a>
       <a
         aria-disabled={false}
@@ -466,61 +398,16 @@ exports[`Storyshots Component API/Pagination Total Text Pagination 1`] = `
       >
         3
       </a>
+      <span
+        className="fd-pagination__link--more"
+      />
       <a
         aria-selected={false}
         className="fd-pagination__link"
         href="#"
         onClick={[Function]}
       >
-        4
-      </a>
-      <a
-        aria-selected={false}
-        className="fd-pagination__link"
-        href="#"
-        onClick={[Function]}
-      >
-        5
-      </a>
-      <a
-        aria-selected={false}
-        className="fd-pagination__link"
-        href="#"
-        onClick={[Function]}
-      >
-        6
-      </a>
-      <a
-        aria-selected={false}
-        className="fd-pagination__link"
-        href="#"
-        onClick={[Function]}
-      >
-        7
-      </a>
-      <a
-        aria-selected={false}
-        className="fd-pagination__link"
-        href="#"
-        onClick={[Function]}
-      >
-        8
-      </a>
-      <a
-        aria-selected={false}
-        className="fd-pagination__link"
-        href="#"
-        onClick={[Function]}
-      >
-        9
-      </a>
-      <a
-        aria-selected={false}
-        className="fd-pagination__link"
-        href="#"
-        onClick={[Function]}
-      >
-        10
+        11
       </a>
       <a
         aria-disabled={false}
@@ -717,6 +604,17 @@ exports[`Storyshots Component API/Pagination Visible Total Pages Pagination 1`] 
         onClick={[Function]}
       >
         20
+      </a>
+      <span
+        className="fd-pagination__link--more"
+      />
+      <a
+        aria-selected={false}
+        className="fd-pagination__link"
+        href="#"
+        onClick={[Function]}
+      >
+        23
       </a>
       <a
         aria-disabled={false}

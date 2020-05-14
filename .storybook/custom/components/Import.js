@@ -1,4 +1,3 @@
-import './custom.css';
 import { DocsContext } from '@storybook/addon-docs/blocks';
 import { googlecode } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import SyntaxHighlighter from 'react-syntax-highlighter';
