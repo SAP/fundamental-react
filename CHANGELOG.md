@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.9.1-rc.11](https://github.com/SAP/fundamental-react/compare/v0.9.1-rc.10...v0.9.1-rc.11) (2020-05-14)
+
+### [0.9.1-rc.10](https://github.com/SAP/fundamental-react/compare/v0.9.1-rc.9...v0.9.1-rc.10) (2020-05-14)
+
+
+### Features
+
+* Pagination - added new interactions as defined in fundamental-styles ([#1013](https://github.com/SAP/fundamental-react/issues/1013)) ([6876cb3](https://github.com/SAP/fundamental-react/commit/6876cb3b3320c89e1b440d417ca06b2ab6cd09c0))
+
 ### [0.9.1-rc.9](https://github.com/SAP/fundamental-react/compare/v0.9.1-rc.8...v0.9.1-rc.9) (2020-05-05)
 
 ### [0.9.1-rc.8](https://github.com/SAP/fundamental-react/compare/v0.9.1-rc.7...v0.9.1-rc.8) (2020-05-04)
