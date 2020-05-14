@@ -5,6 +5,7 @@ import React, { useState } from 'react';
 const ListItem = ({
     className,
     children,
+    hasByline,
     onClick,
     selected,
     ...props
@@ -25,6 +26,12 @@ const ListItem = ({
         className
     );
 
+    const content = hasByline ? (
+        <div className='fd-list__content'>
+            {children}
+        </div>
+    ) : children;
+
     return (
         <li
             {...props}
@@ -33,7 +40,7 @@ const ListItem = ({
             onClick={handleClick}
             role='option'
             tabIndex='0'>
-            {children}
+            {content}
         </li>
 
     );
@@ -46,6 +53,8 @@ ListItem.propTypes = {
     children: PropTypes.node,
     /** CSS class(es) to add to the element */
     className: PropTypes.string,
+    /** Internal use only */
+    hasByline: PropTypes.bool,
     /** Set to **true** to set state of the list item to "selected". */
     selected: PropTypes.bool,
     /** Callback function when user clicks on the component*/

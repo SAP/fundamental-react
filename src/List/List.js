@@ -1,8 +1,10 @@
 import classnames from 'classnames';
+import ListByline from './_ListByline';
 import ListFooter from './_ListFooter';
 import ListHeader from './_ListHeader';
 import ListIcon from './_ListIcon';
 import ListItem from './_ListItem';
+import ListSelection from './_ListSelection';
 import ListText from './_ListText';
 import PropTypes from 'prop-types';
 import React, { useEffect } from 'react';
@@ -15,6 +17,7 @@ const List = React.forwardRef(({
     className,
     compact,
     disableStyles,
+    hasByline,
     noBorder,
     ...props
 }, ref) => {
@@ -29,7 +32,8 @@ const List = React.forwardRef(({
         'fd-list',
         {
             'fd-list--compact': compact,
-            'fd-list--no-border': noBorder
+            'fd-list--no-border': noBorder,
+            'fd-list--byline': hasByline
         },
         className
     );
@@ -37,7 +41,7 @@ const List = React.forwardRef(({
     return (
         <ul {...props} className={ListClasses}
             ref={ref}>
-            {children}
+            { React.Children.map(children, child => React.cloneElement(child, { hasByline })) }
         </ul>
     );
 });
@@ -53,6 +57,8 @@ List.propTypes = {
     compact: PropTypes.bool,
     /** Internal use only */
     disableStyles: PropTypes.bool,
+    /** Set to **true** if any list item has a byline. */
+    hasByline: PropTypes.bool,
     /** Set to **true** to remove borders from the List component. */
     noBorder: PropTypes.bool
 };
@@ -63,5 +69,7 @@ List.Header = ListHeader;
 List.Item = ListItem;
 List.Icon = ListIcon;
 List.Text = ListText;
+List.Byline = ListByline;
+List.Selection = ListSelection;
 
 export default List;
