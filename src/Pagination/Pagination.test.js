@@ -85,7 +85,7 @@ describe('<Pagination />', () => {
 
     test('create Pagination component with total pages = 20', () => {
         const wrapper = shallow(visibleTotalPagesPagination);
-        expect(wrapper.find('a.fd-pagination__link').length).toEqual(22);
+        expect(wrapper.find('a.fd-pagination__link').length).toEqual(23);
     });
 
     test('create Pagination component with total pages = 20 and itemTotal = 10', () => {
@@ -118,7 +118,7 @@ describe('<Pagination />', () => {
             element = mount(defaultPaginationDisplayTotalProps);
 
             expect(
-                element.find('span').getDOMNode().attributes['data-sample']
+                element.find('span.fd-pagination__total').getDOMNode().attributes['data-sample']
                     .value
             ).toBe('Sample2');
         });
