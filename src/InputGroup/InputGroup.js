@@ -40,7 +40,8 @@ class InputGroup extends Component {
 
         const getClassName = (child) => classnames(
             {
-                'fd-input-group__input': child.type.displayName !== InputGroupAddon.displayName
+                'fd-input-group__input': child.type.displayName !== InputGroupAddon.displayName &&
+                    !child.props.className?.includes('fd-tokenizer')
             },
             child.props.className
         );
