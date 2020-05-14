@@ -13,7 +13,7 @@ jobs:
   -
     script: npm run test:coverage && npm run test:coveralls
   -
-    script: defaults write com.google.Chrome NSAppSleepDisabled -bool YES npm run test:storybook
+    script: npm run test:storybook
   - stage: Pre-release
     if: branch = master
     before_deploy:
