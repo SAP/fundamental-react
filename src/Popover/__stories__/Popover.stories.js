@@ -243,6 +243,7 @@ export const widthSizingTypes = () => (
                 body={longBodyContent}
                 control={<Button>widthizingType: <strong>'{type}'</strong></Button>}
                 disableEdgeDetection
+                key={type}
                 placement='bottom'
                 widthSizingType={type} />)
         )}

@@ -128,51 +128,75 @@ export const coPilot = () => (
         }}
         productSwitchList={[
             {
+                callback: () => console.log(`${this.title} selected!`),
                 title: 'Fiori Home',
                 subtitle: 'Central Home',
                 image: './assets/01.png',
                 glyph: 'home'
             },
             {
+                callback: () => console.log(`${this.title} selected!`),
                 title: 'S/4 HANA Cloud',
                 image: './assets/02.png',
                 glyph: 'cloud'
             },
             {
+                callback: () => console.log(`${this.title} selected!`),
                 title: 'Analytics Cloud',
                 subtitle: 'Analytics Cloud',
                 image: './assets/03.png',
                 glyph: 'business-objects-experience'
             },
-            { title: 'Ariba', image: './assets/04.png', glyph: 'activate' },
             {
+                callback: () => console.log(`${this.title} selected!`),
+                title: 'Ariba',
+                image: './assets/04.png',
+                glyph: 'activate'
+            },
+            {
+                callback: () => console.log(`${this.title} selected!`),
                 title: 'SuccessFactors',
                 image: './assets/05.png',
                 glyph: 'message-success'
             },
             {
+                callback: () => console.log(`${this.title} selected!`),
                 title: 'Commerce Cloud',
                 image: './assets/06.png',
                 glyph: 'retail-store'
             },
-            { title: 'Gigya', image: './assets/07.png', glyph: 'customer-view' },
             {
+                callback: () => console.log(`${this.title} selected!`),
+                title: 'Gigya',
+                image: './assets/07.png',
+                glyph: 'customer-view'
+            },
+            {
+                callback: () => console.log(`${this.title} selected!`),
                 title: 'Callidus Cloud',
                 image: './assets/08.png',
                 glyph: 'globe'
             },
             {
+                callback: () => console.log(`${this.title} selected!`),
                 title: 'Fieldglass',
                 image: './assets/09.png',
                 glyph: 'work-history'
             },
-            { title: 'Concur', image: './10.png', glyph: 'area-chart' },
             {
+                callback: () => console.log(`${this.title} selected!`),
+                title: 'Concur',
+                image: './10.png',
+                glyph: 'area-chart'
+            },
+            {
+                callback: () => console.log(`${this.title} selected!`),
                 title: 'Cloud for Customer',
                 image: './11.png',
                 glyph: 'customer-view'
             },
             {
+                callback: () => console.log(`${this.title} selected!`),
                 title: 'Cloud Portal',
                 image: './12.png',
                 glyph: 'customer'
