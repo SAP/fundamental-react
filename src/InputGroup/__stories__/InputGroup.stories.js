@@ -158,7 +158,7 @@ addonIcon.story = {
 
 export const textArea = () => (
     <InputGroup>
-        <FormTextarea>Default</FormTextarea>
+        <FormTextarea defaultValue='Default' />
         <InputGroup.Addon>
             <Icon glyph='hide' />
         </InputGroup.Addon>

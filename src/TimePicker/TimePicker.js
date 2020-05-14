@@ -5,7 +5,7 @@ import Time from '../Time/Time';
 import TimePickerItem from './_TimePickerItem';
 import React, { Component } from 'react';
 
-/** The **TimePicker** allows the user to easily set a time using the **Time** component. */
+/** A **TimePicker** allows the user to easily set a time using the **Time** component. */
 
 class TimePicker extends Component {
     constructor(props) {

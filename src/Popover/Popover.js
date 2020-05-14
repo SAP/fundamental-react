@@ -10,7 +10,7 @@ import tabbable from 'tabbable';
 import { POPOVER_TYPES, POPPER_PLACEMENTS, POPPER_SIZING_TYPES } from '../utils/constants';
 import React, { Component } from 'react';
 
-/** The **Popover** is a wrapping component that accepts a "control" as well as a "body". A control can be
+/** A **Popover** is a wrapping component that accepts a "control" as well as a "body". A control can be
 anything that you want to trigger the interaction from. The body will be the contents of what you reveal
 on the page after triggering the popover. When paired with the **Menu** component, the Popover is commonly
 used as the interaction/wrapping component for composing "dropdowns", "contextual menus", etc. As a general rule,

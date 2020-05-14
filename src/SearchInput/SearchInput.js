@@ -26,7 +26,7 @@ class SearchInput extends Component {
     }
 
     handleKeyPress = event => {
-        if (event.key === 'Enter') {
+        if (event.key === 'enter') {
             this.props.onEnter(this.state.value);
         }
     };
@@ -254,7 +254,7 @@ SearchInput.propTypes = {
     }),
     /** Callback function when the change event fires on the component */
     onChange: PropTypes.func,
-    /** Callback function when the user hits the <Enter> key */
+    /** Callback function when the user hits the <enter> key */
     onEnter: PropTypes.func,
     /** Callback function when user clicks on an option */
     onSelect: PropTypes.func

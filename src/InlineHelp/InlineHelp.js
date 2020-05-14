@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import React, { useEffect } from 'react';
 
 
-/** **Inline Help** is used to display help text in a **Popover**, often inline with headers,
+/** **InlineHelp** is used to display help text in a **Popover**, often inline with headers,
 body text and form labels. */
 const InlineHelp = React.forwardRef(({ text, placement, className, contentClassName, disableStyles, ...props }, ref) => {
 

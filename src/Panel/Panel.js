@@ -9,6 +9,9 @@ import PanelHeader from './_PanelHeader';
 import PropTypes from 'prop-types';
 import React, { useEffect } from 'react';
 
+/** A **Panel** is used to encapsulate part of the content, form elements, lists, collections, etc., on a page.
+Place patterns and interactions within panels on your pages to achieve focus and separation for the tasks at-hand
+with the information displayed inside the panel. */
 const Panel = React.forwardRef(({ colSpan, children, className, disableStyles, ...props }, ref) => {
 
     useEffect(() => {
