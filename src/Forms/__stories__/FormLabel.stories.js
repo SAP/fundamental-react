@@ -1,5 +1,7 @@
 /* eslint-disable react/no-multi-comp */
 import { boolean } from '@storybook/addon-knobs';
+import FormInput from '../FormInput';
+import FormItem from '../FormItem';
 import FormLabel from '../FormLabel';
 import React from 'react';
 
@@ -9,17 +11,33 @@ export default {
 };
 
 export const primary = () => (
-    <FormLabel>Default</FormLabel>
+    <FormItem>
+        <FormLabel>Default Label</FormLabel>
+        <FormInput />
+    </FormItem>
 );
 
 export const required = () => (
-    <FormLabel required>Required Label</FormLabel>
+    <FormItem>
+        <FormLabel required>Required Label</FormLabel>
+        <FormInput />
+    </FormItem>
+);
+
+export const disabled = () => (
+    <FormItem>
+        <FormLabel disabled>Disabled Label</FormLabel>
+        <FormInput disabled />
+    </FormItem>
 );
 
 export const dev = () => (
-    <FormLabel
-        required={boolean('Required?', true)}>
-        Default</FormLabel>
+    <FormItem>
+        <FormLabel
+            required={boolean('Required?', true)}>
+            Default</FormLabel>
+        <FormInput />
+    </FormItem>
 );
 
 

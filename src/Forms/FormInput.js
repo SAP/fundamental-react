@@ -4,7 +4,7 @@ import FormValidationOverlay from './_FormValidationOverlay';
 import PropTypes from 'prop-types';
 import React, { useEffect } from 'react';
 
-/** Inputs are used to collect data from the user. When a field is required,
+/** A **FormInput** is used to collect data from the user. When a field is required,
 the \`required\` property will include an asterisk (*). */
 const FormInput = React.forwardRef(({ className, compact, disabled, id, name, placeholder, readOnly, type, value, validationState, disableStyles, ...props }, ref) => {
     useEffect(() => {

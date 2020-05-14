@@ -70,15 +70,14 @@ export const richTable = () => {
 
     return (
         <Table
-            headers={[<Checkbox />, 'Avatar', 'email', 'First Name', 'Last Name', 'Date', ' ']}
+            headers={[<Checkbox>Checkbox</Checkbox>, 'Avatar', 'email', 'First Name', 'Last Name', 'Date', ' ']}
             tableData={
                 tableRowData.map(item => {
                     return ({
                         rowData: [
                             <Checkbox
                                 checked={checkedItems[item.name]}
-                                name={item.name}
-                                onChange={handleChange} />,
+                                onChange={handleChange}>{item.name}</Checkbox>,
                             <Image photo={item.photoUrl} size='m' />,
                             <a className='fd-has-font-weight-semi' href='#'>
                                 {item.email}

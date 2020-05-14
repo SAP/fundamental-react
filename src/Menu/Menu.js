@@ -4,7 +4,7 @@ import MenuList from './_MenuList';
 import PropTypes from 'prop-types';
 import React, { useEffect } from 'react';
 
-/** The **Menu** is the listing structure with optional headers to create menus. Commonly used as the
+/** A **Menu** is the listing structure with optional headers to create menus. Commonly used as the
 contents when composing “dropdowns”, “contextual menus”,  etc, when paired with the **Popover**
 component. */
 const Menu = React.forwardRef(({ children, className, disableStyles, ...props }, ref) => {

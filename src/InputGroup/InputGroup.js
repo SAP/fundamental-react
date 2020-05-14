@@ -5,7 +5,7 @@ import InputGroupAddon from './_InputGroupAddon';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 
-/** The **Input Group** includes form inputs with add-ons that allow the user to
+/** An **InputGroup** includes form inputs with add-ons that allow the user to
 better understand the information being entered. */
 class InputGroup extends Component {
     constructor(props) {

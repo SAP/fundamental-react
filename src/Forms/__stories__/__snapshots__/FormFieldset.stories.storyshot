@@ -7,7 +7,406 @@ exports[`Storyshots Component API/Forms/FormFieldset Primary 1`] = `
   <fieldset
     className="fd-fieldset"
   >
-    Default
+    <legend
+      className="fd-fieldset__legend"
+    >
+      Shipping Address
+    </legend>
+    <div
+      className="fd-form-item"
+    >
+      <label
+        className="fd-form-label"
+        htmlFor="ex01"
+      >
+        Name:
+      </label>
+      <input
+        className="fd-input"
+        id="ex01"
+        type="text"
+      />
+    </div>
+    <div
+      className="fd-form-item"
+    >
+      <label
+        className="fd-form-label"
+        htmlFor="ex02"
+      >
+        Street:
+      </label>
+      <input
+        className="fd-input"
+        id="ex02"
+        type="text"
+      />
+    </div>
+    <div
+      className="fd-form-item"
+    >
+      <label
+        className="fd-form-label"
+        htmlFor="ex03"
+      >
+        City:
+      </label>
+      <input
+        className="fd-input"
+        id="ex03"
+        type="text"
+      />
+    </div>
+    <div
+      className="fd-form-item"
+    >
+      <label
+        className="fd-form-label"
+        htmlFor="ex04"
+      >
+        ZIP code:
+      </label>
+      <input
+        className="fd-input"
+        id="ex04"
+        type="text"
+      />
+    </div>
+  </fieldset>
+  <fieldset
+    className="fd-fieldset"
+  >
+    <legend
+      className="fd-fieldset__legend"
+    >
+      Billing Address
+    </legend>
+    <div
+      className="fd-form-item"
+    >
+      <label
+        className="fd-form-label"
+        htmlFor="ex05"
+      >
+        Name:
+      </label>
+      <input
+        className="fd-input"
+        id="ex05"
+        type="text"
+      />
+    </div>
+    <div
+      className="fd-form-item"
+    >
+      <label
+        className="fd-form-label"
+        htmlFor="ex06"
+      >
+        Street:
+      </label>
+      <input
+        className="fd-input"
+        id="ex06"
+        type="text"
+      />
+    </div>
+    <div
+      className="fd-form-item"
+    >
+      <label
+        className="fd-form-label"
+        htmlFor="ex07"
+      >
+        City:
+      </label>
+      <input
+        className="fd-input"
+        id="ex07"
+        type="text"
+      />
+    </div>
+    <div
+      className="fd-form-item"
+    >
+      <label
+        className="fd-form-label"
+        htmlFor="ex08"
+      >
+        ZIP code:
+      </label>
+      <input
+        className="fd-input"
+        id="ex08"
+        type="text"
+      />
+    </div>
+  </fieldset>
+</div>
+`;
+
+exports[`Storyshots Component API/Forms/FormFieldset Radio Button Groups 1`] = `
+<div
+  dir="ltr"
+>
+  <fieldset
+    className="fd-fieldset"
+  >
+    <legend
+      className="fd-fieldset__legend"
+    >
+      Radio buttons
+    </legend>
+    <div
+      className="fd-form-group"
+    >
+      <div
+        className="fd-form-item"
+        onChange={[Function]}
+      >
+        <input
+          className="fd-radio"
+          id="fd-39"
+          name="fd-38"
+          type="radio"
+        />
+        <label
+          className="fd-form-label fd-radio__label"
+          htmlFor="fd-39"
+        >
+          Option 1
+        </label>
+      </div>
+      <div
+        className="fd-form-item"
+        onChange={[Function]}
+      >
+        <input
+          className="fd-radio"
+          id="fd-40"
+          name="fd-38"
+          type="radio"
+        />
+        <label
+          className="fd-form-label fd-radio__label"
+          htmlFor="fd-40"
+        >
+          Option 2
+        </label>
+      </div>
+      <div
+        className="fd-form-item"
+        onChange={[Function]}
+      >
+        <input
+          className="fd-radio"
+          id="fd-41"
+          name="fd-38"
+          type="radio"
+        />
+        <label
+          className="fd-form-label fd-radio__label"
+          htmlFor="fd-41"
+        >
+          Option 3
+        </label>
+      </div>
+    </div>
+  </fieldset>
+  <fieldset
+    className="fd-fieldset"
+  >
+    <legend
+      className="fd-fieldset__legend"
+    >
+      Radio buttons disabled
+    </legend>
+    <div
+      className="fd-form-group"
+    >
+      <div
+        className="fd-form-item"
+        onChange={[Function]}
+      >
+        <input
+          className="fd-radio"
+          disabled={true}
+          id="fd-43"
+          name="fd-42"
+          type="radio"
+        />
+        <label
+          className="fd-form-label is-disabled fd-radio__label"
+          htmlFor="fd-43"
+        >
+          Option 1
+        </label>
+      </div>
+      <div
+        className="fd-form-item"
+        onChange={[Function]}
+      >
+        <input
+          className="fd-radio"
+          disabled={true}
+          id="fd-44"
+          name="fd-42"
+          type="radio"
+        />
+        <label
+          className="fd-form-label is-disabled fd-radio__label"
+          htmlFor="fd-44"
+        >
+          Option 2
+        </label>
+      </div>
+      <div
+        className="fd-form-item"
+        onChange={[Function]}
+      >
+        <input
+          className="fd-radio"
+          disabled={true}
+          id="fd-45"
+          name="fd-42"
+          type="radio"
+        />
+        <label
+          className="fd-form-label is-disabled fd-radio__label"
+          htmlFor="fd-45"
+        >
+          Option 3
+        </label>
+      </div>
+    </div>
+  </fieldset>
+  <fieldset
+    className="fd-fieldset"
+  >
+    <legend
+      className="fd-fieldset__legend"
+    >
+      Inline Radio buttons
+    </legend>
+    <div
+      className="fd-form-group fd-form-group--inline"
+    >
+      <div
+        className="fd-form-item fd-form-item--inline"
+        onChange={[Function]}
+      >
+        <input
+          className="fd-radio"
+          id="fd-47"
+          name="fd-46"
+          type="radio"
+        />
+        <label
+          className="fd-form-label fd-radio__label"
+          htmlFor="fd-47"
+        >
+          Option 1
+        </label>
+      </div>
+      <div
+        className="fd-form-item fd-form-item--inline"
+        onChange={[Function]}
+      >
+        <input
+          className="fd-radio"
+          id="fd-48"
+          name="fd-46"
+          type="radio"
+        />
+        <label
+          className="fd-form-label fd-radio__label"
+          htmlFor="fd-48"
+        >
+          Option 2
+        </label>
+      </div>
+      <div
+        className="fd-form-item fd-form-item--inline"
+        onChange={[Function]}
+      >
+        <input
+          className="fd-radio"
+          id="fd-49"
+          name="fd-46"
+          type="radio"
+        />
+        <label
+          className="fd-form-label fd-radio__label"
+          htmlFor="fd-49"
+        >
+          Option 3
+        </label>
+      </div>
+    </div>
+  </fieldset>
+  <fieldset
+    className="fd-fieldset"
+  >
+    <legend
+      className="fd-fieldset__legend"
+    >
+      Compact Radio buttons
+    </legend>
+    <div
+      className="fd-form-group"
+    >
+      <div
+        className="fd-form-item"
+        onChange={[Function]}
+      >
+        <input
+          className="fd-radio fd-radio--compact"
+          id="fd-51"
+          name="fd-50"
+          type="radio"
+        />
+        <label
+          className="fd-form-label fd-radio__label"
+          htmlFor="fd-51"
+        >
+          Option 1
+        </label>
+      </div>
+      <div
+        className="fd-form-item"
+        onChange={[Function]}
+      >
+        <input
+          className="fd-radio fd-radio--compact"
+          id="fd-52"
+          name="fd-50"
+          type="radio"
+        />
+        <label
+          className="fd-form-label fd-radio__label"
+          htmlFor="fd-52"
+        >
+          Option 2
+        </label>
+      </div>
+      <div
+        className="fd-form-item"
+        onChange={[Function]}
+      >
+        <input
+          className="fd-radio fd-radio--compact"
+          id="fd-53"
+          name="fd-50"
+          type="radio"
+        />
+        <label
+          className="fd-form-label fd-radio__label"
+          htmlFor="fd-53"
+        >
+          Option 3
+        </label>
+      </div>
+    </div>
   </fieldset>
 </div>
 `;
