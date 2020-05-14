@@ -71,6 +71,7 @@ class Time extends Component {
             format12Hours,
             id,
             disabled,
+            name,
             spinners,
             onChange,
             time: timeProp,
@@ -227,6 +228,7 @@ Time.propTypes = {
     minutesInputProps: PropTypes.object,
     /** Additional props to be spread to the minutes up `<button>` element */
     minutesUpButtonProps: PropTypes.object,
+    name: PropTypes.string,
     /** Additional props to be spread to the seconds down `<button>` element */
     secondsDownButtonProps: PropTypes.object,
     /** Additional props to be spread to the seconds `<input>` element */
