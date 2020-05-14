@@ -1,0 +1,375 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Visual Form Radio Group 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    className="fd-form-group"
+  >
+    <div
+      className="fd-form-item"
+      onChange={[Function]}
+    >
+      <input
+        className="fd-radio"
+        id="fd-59"
+        name="fd-58"
+        type="radio"
+      />
+      <label
+        className="fd-form-label fd-radio__label"
+        htmlFor="fd-59"
+      >
+        Option 1
+      </label>
+    </div>
+    <div
+      className="fd-form-item"
+      onChange={[Function]}
+    >
+      <input
+        className="fd-radio"
+        id="fd-60"
+        name="fd-58"
+        type="radio"
+      />
+      <label
+        className="fd-form-label fd-radio__label"
+        htmlFor="fd-60"
+      >
+        Option 2
+      </label>
+    </div>
+    <div
+      className="fd-form-item"
+      onChange={[Function]}
+    >
+      <input
+        className="fd-radio"
+        id="fd-61"
+        name="fd-58"
+        type="radio"
+      />
+      <label
+        className="fd-form-label fd-radio__label"
+        htmlFor="fd-61"
+      >
+        Option 3
+      </label>
+    </div>
+  </div>
+  <div
+    className="fd-form-group fd-form-group--inline"
+  >
+    <div
+      className="fd-form-item fd-form-item--inline"
+      onChange={[Function]}
+    >
+      <input
+        className="fd-radio"
+        id="fd-63"
+        name="fd-62"
+        type="radio"
+      />
+      <label
+        className="fd-form-label fd-radio__label"
+        htmlFor="fd-63"
+      >
+        Option 1
+      </label>
+    </div>
+    <div
+      className="fd-form-item fd-form-item--inline"
+      onChange={[Function]}
+    >
+      <input
+        className="fd-radio"
+        id="fd-64"
+        name="fd-62"
+        type="radio"
+      />
+      <label
+        className="fd-form-label fd-radio__label"
+        htmlFor="fd-64"
+      >
+        Option 2
+      </label>
+    </div>
+    <div
+      className="fd-form-item fd-form-item--inline"
+      onChange={[Function]}
+    >
+      <input
+        className="fd-radio"
+        id="fd-65"
+        name="fd-62"
+        type="radio"
+      />
+      <label
+        className="fd-form-label fd-radio__label"
+        htmlFor="fd-65"
+      >
+        Option 3
+      </label>
+    </div>
+  </div>
+  <div
+    className="fd-form-group"
+  >
+    <div
+      className="fd-form-item"
+      onChange={[Function]}
+    >
+      <input
+        className="fd-radio fd-radio--compact"
+        id="fd-67"
+        name="fd-66"
+        type="radio"
+      />
+      <label
+        className="fd-form-label fd-radio__label"
+        htmlFor="fd-67"
+      >
+        Option 1
+      </label>
+    </div>
+    <div
+      className="fd-form-item"
+      onChange={[Function]}
+    >
+      <input
+        className="fd-radio fd-radio--compact"
+        id="fd-68"
+        name="fd-66"
+        type="radio"
+      />
+      <label
+        className="fd-form-label fd-radio__label"
+        htmlFor="fd-68"
+      >
+        Option 2
+      </label>
+    </div>
+    <div
+      className="fd-form-item"
+      onChange={[Function]}
+    >
+      <input
+        className="fd-radio fd-radio--compact"
+        id="fd-69"
+        name="fd-66"
+        type="radio"
+      />
+      <label
+        className="fd-form-label fd-radio__label"
+        htmlFor="fd-69"
+      >
+        Option 3
+      </label>
+    </div>
+  </div>
+  <div
+    className="fd-form-group"
+  >
+    <div
+      className="fd-form-item"
+      onChange={[Function]}
+    >
+      <input
+        className="fd-radio"
+        disabled={true}
+        id="fd-71"
+        name="fd-70"
+        type="radio"
+      />
+      <label
+        className="fd-form-label is-disabled fd-radio__label"
+        htmlFor="fd-71"
+      >
+        Option 1
+      </label>
+    </div>
+    <div
+      className="fd-form-item"
+      onChange={[Function]}
+    >
+      <input
+        className="fd-radio"
+        disabled={true}
+        id="fd-72"
+        name="fd-70"
+        type="radio"
+      />
+      <label
+        className="fd-form-label is-disabled fd-radio__label"
+        htmlFor="fd-72"
+      >
+        Option 2
+      </label>
+    </div>
+    <div
+      className="fd-form-item"
+      onChange={[Function]}
+    >
+      <input
+        className="fd-radio"
+        disabled={true}
+        id="fd-73"
+        name="fd-70"
+        type="radio"
+      />
+      <label
+        className="fd-form-label is-disabled fd-radio__label"
+        htmlFor="fd-73"
+      >
+        Option 3
+      </label>
+    </div>
+  </div>
+  <div
+    className="fd-form-group"
+  >
+    <div
+      className="fd-form-item"
+      onChange={[Function]}
+    >
+      <input
+        className="fd-radio"
+        id="fd-75"
+        name="fd-74"
+        type="radio"
+      />
+      <label
+        className="fd-form-label fd-radio__label"
+        htmlFor="fd-75"
+      >
+        Default
+      </label>
+    </div>
+    <div
+      className="fd-form-item"
+      onChange={[Function]}
+    >
+      <input
+        className="fd-radio is-error"
+        id="fd-76"
+        name="fd-74"
+        type="radio"
+      />
+      <label
+        className="fd-form-label fd-radio__label"
+        htmlFor="fd-76"
+      >
+        Error
+      </label>
+    </div>
+    <div
+      className="fd-form-item"
+      onChange={[Function]}
+    >
+      <input
+        className="fd-radio is-warning"
+        id="fd-77"
+        name="fd-74"
+        type="radio"
+      />
+      <label
+        className="fd-form-label fd-radio__label"
+        htmlFor="fd-77"
+      >
+        Warning
+      </label>
+    </div>
+    <div
+      className="fd-form-item"
+      onChange={[Function]}
+    >
+      <input
+        className="fd-radio is-success"
+        id="fd-78"
+        name="fd-74"
+        type="radio"
+      />
+      <label
+        className="fd-form-label fd-radio__label"
+        htmlFor="fd-78"
+      >
+        Success
+      </label>
+    </div>
+    <div
+      className="fd-form-item"
+      onChange={[Function]}
+    >
+      <input
+        className="fd-radio is-information"
+        id="fd-79"
+        name="fd-74"
+        type="radio"
+      />
+      <label
+        className="fd-form-label fd-radio__label"
+        htmlFor="fd-79"
+      >
+        Information
+      </label>
+    </div>
+  </div>
+  <div
+    className="fd-form-group"
+  >
+    <div
+      className="fd-form-item"
+      onChange={[Function]}
+    >
+      <input
+        className="fd-radio"
+        id="fd-81"
+        name="fd-80"
+        type="radio"
+      />
+      <label
+        className="fd-form-label fd-radio__label"
+        htmlFor="fd-81"
+      >
+        Option 1
+      </label>
+    </div>
+    <div
+      className="fd-form-item"
+      onChange={[Function]}
+    >
+      <input
+        className="fd-radio"
+        id="fd-82"
+        name="fd-80"
+        type="radio"
+      />
+      <label
+        className="fd-form-label fd-radio__label"
+        htmlFor="fd-82"
+      >
+        Option 2
+      </label>
+    </div>
+    <div
+      className="fd-form-item"
+      onChange={[Function]}
+    >
+      <input
+        className="fd-radio"
+        id="fd-83"
+        name="fd-80"
+        type="radio"
+      />
+      <label
+        className="fd-form-label fd-radio__label"
+        htmlFor="fd-83"
+      >
+        Option 3
+      </label>
+    </div>
+  </div>
+</div>
+`;

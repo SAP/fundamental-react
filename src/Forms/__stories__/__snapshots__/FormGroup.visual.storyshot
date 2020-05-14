@@ -1,0 +1,145 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Visual Form Group 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    className="fd-form-group"
+  >
+    <label
+      className="fd-form-label"
+    >
+      InputGroup inside FormGroup
+    </label>
+    <div
+      className="fd-form-item"
+    >
+      <div
+        className="fd-input-group"
+      >
+        <span
+          className="fd-input-group__addon fd-input-group__addon--button"
+        >
+          <button
+            className="fd-button fd-button--transparent sap-icon--accept fd-input-group__button"
+            type="button"
+          />
+        </span>
+        <input
+          className="fd-input fd-input-group__input"
+          type="text"
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    className="fd-form-group"
+  >
+    <div
+      className="fd-form-item"
+    >
+      <label
+        className="fd-form-label"
+        htmlFor="input-1"
+      >
+        Default Input
+      </label>
+      <input
+        className="fd-input"
+        id="input-1"
+        placeholder="Field placeholder text"
+        type="text"
+      />
+    </div>
+  </div>
+  <div
+    className="fd-form-group"
+  >
+    <div
+      className="fd-form-item"
+    >
+      <label
+        aria-required={true}
+        className="fd-form-label fd-form-label--required"
+        htmlFor="input-2"
+      >
+        Required Input
+      </label>
+      <input
+        className="fd-input"
+        id="input-2"
+        placeholder="Field placeholder text"
+        type="text"
+      />
+    </div>
+  </div>
+  <div
+    className="fd-form-group"
+  >
+    <div
+      className="fd-form-item"
+    >
+      <label
+        aria-required={true}
+        className="fd-form-label fd-form-label--required"
+        htmlFor="input-3"
+      >
+        Password
+      </label>
+      <input
+        className="fd-input"
+        id="input-3"
+        placeholder="Field placeholder text"
+        type="password"
+      />
+    </div>
+  </div>
+  <div
+    className="fd-form-group"
+  >
+    <div
+      className="fd-form-item"
+    >
+      <label
+        aria-required={true}
+        className="fd-form-label fd-form-label--required"
+        htmlFor="textarea-1"
+      >
+        Text area
+      </label>
+      <textarea
+        className="fd-textarea"
+        defaultValue=" Pellentesque metus lacus commodo eget justo ut rutrum varius nunc."
+        id="textarea-1"
+        onChange={[Function]}
+      />
+    </div>
+  </div>
+  <div
+    className="fd-form-group"
+  >
+    <div
+      className="fd-form-item"
+    >
+      <label
+        className="fd-form-label"
+        htmlFor="textarea-2"
+      >
+        Text area with counter
+      </label>
+      <textarea
+        className="fd-textarea"
+        id="textarea-2"
+        maxLength={150}
+        onChange={[Function]}
+      />
+      <div
+        className="fd-textarea-counter"
+      >
+        150 characters left
+      </div>
+    </div>
+  </div>
+</div>
+`;

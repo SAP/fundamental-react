@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Visual Form Legend 1`] = `
+<div
+  dir="ltr"
+>
+  <legend
+    className="fd-fieldset__legend"
+  >
+    Default
+  </legend>
+</div>
+`;

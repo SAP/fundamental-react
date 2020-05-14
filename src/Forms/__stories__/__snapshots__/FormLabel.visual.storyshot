@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Visual Form Label 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    className="fd-form-item"
+  >
+    <label
+      className="fd-form-label"
+    >
+      Default Label
+    </label>
+    <input
+      className="fd-input"
+      type="text"
+    />
+  </div>
+  <div
+    className="fd-form-item"
+  >
+    <label
+      aria-required={true}
+      className="fd-form-label fd-form-label--required"
+    >
+      Required Label
+    </label>
+    <input
+      className="fd-input"
+      type="text"
+    />
+  </div>
+  <div
+    className="fd-form-item"
+  >
+    <label
+      className="fd-form-label is-disabled"
+    >
+      Disabled Label
+    </label>
+    <input
+      className="fd-input"
+      disabled={true}
+      type="text"
+    />
+  </div>
+  <div
+    className="fd-form-item"
+  >
+    <label
+      aria-required={true}
+      className="fd-form-label fd-form-label--required"
+    >
+      Default
+    </label>
+    <input
+      className="fd-input"
+      type="text"
+    />
+  </div>
+</div>
+`;
