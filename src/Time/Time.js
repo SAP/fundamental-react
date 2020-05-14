@@ -60,9 +60,7 @@ class Time extends Component {
 
         this.props.onChange(this.state.time);
     };
-    // onUpdateTime = () => {
-    //   this.props.onUpdateTime();
-    // };
+
     render() {
         const {
             disableStyles,
@@ -74,10 +72,8 @@ class Time extends Component {
             id,
             disabled,
             spinners,
-            onUpdateTime,
             onChange,
             time: timeProp,
-            name,
             hoursUpButtonProps,
             hoursDownButtonProps,
             hoursInputProps,
@@ -197,29 +193,13 @@ class Time extends Component {
 
 Time.displayName = 'Time';
 
-Time.basePropTypes = {
+Time.propTypes = {
+    /** Set to **true** to mark component as disabled and make it non-interactive */
+    disabled: PropTypes.bool,
     /** Internal use only */
     disableStyles: PropTypes.bool,
     /** Set to **true** to use the 12-hour clock (hours ranging from 01 to 12) and to display a meridiem control */
     format12Hours: PropTypes.bool,
-    /** Enables the input for hours */
-    showHour: PropTypes.bool,
-    /** Enables the input for minutes */
-    showMinute: PropTypes.bool,
-    /** Enables the input for seconds */
-    showSecond: PropTypes.bool,
-    /** Set to **true** to show up/down buttons for each input */
-    spinners: PropTypes.bool,
-    /** The time component values. Contains four properties: **hour** (with values from 01 to 12 when `format12Hours`
-     * is true or 00 to 23 when `format12Hours` is false), **minute** (with values from 00 to 59), **second** (with values from 00 to 59),
-     * **meridiem** (with values 0 for AM or 1 for PM) */
-    time: PropTypes.object
-};
-
-Time.propTypes = {
-    ...Time.basePropTypes,
-    /** Set to **true** to mark component as disabled and make it non-interactive */
-    disabled: PropTypes.bool,
     /** Additional props to be spread to the hours down `<button>` element */
     hoursDownButtonProps: PropTypes.object,
     /** Additional props to be spread to the hours `<input>` element */
@@ -253,6 +233,18 @@ Time.propTypes = {
     secondsInputProps: PropTypes.object,
     /** Additional props to be spread to the seconds up `<button>` element */
     secondsUpButtonProps: PropTypes.object,
+    /** Enables the input for hours */
+    showHour: PropTypes.bool,
+    /** Enables the input for minutes */
+    showMinute: PropTypes.bool,
+    /** Enables the input for seconds */
+    showSecond: PropTypes.bool,
+    /** Set to **true** to show up/down buttons for each input */
+    spinners: PropTypes.bool,
+    /** The time component values. Contains four properties: **hour** (with values from 01 to 12 when `format12Hours`
+      * is true or 00 to 23 when `format12Hours` is false), **minute** (with values from 00 to 59), **second** (with values from 00 to 59),
+      * **meridiem** (with values 0 for AM or 1 for PM) */
+    time: PropTypes.object,
     /** Callback function when the change event fires on the component */
     onChange: PropTypes.func
 };
