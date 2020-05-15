@@ -16,7 +16,7 @@ exports[`Storyshots Component API/Select Compact 1`] = `
         className="fd-popover__control"
       >
         <div
-          aria-controls="fd-209"
+          aria-controls="fd-232"
           aria-expanded={false}
           aria-haspopup={true}
           className="fd-select fd-select--compact"
@@ -57,7 +57,7 @@ exports[`Storyshots Component API/Select Dev 1`] = `
         className="fd-popover__control"
       >
         <div
-          aria-controls="fd-215"
+          aria-controls="fd-238"
           aria-expanded={false}
           aria-haspopup={true}
           className="fd-select"
@@ -99,7 +99,7 @@ exports[`Storyshots Component API/Select Disabled 1`] = `
         className="fd-popover__control"
       >
         <div
-          aria-controls="fd-210"
+          aria-controls="fd-233"
           aria-expanded={false}
           aria-haspopup={true}
           className="fd-select"
@@ -141,7 +141,7 @@ exports[`Storyshots Component API/Select Primary 1`] = `
         className="fd-popover__control"
       >
         <div
-          aria-controls="fd-208"
+          aria-controls="fd-231"
           aria-expanded={false}
           aria-haspopup={true}
           className="fd-select"
@@ -185,7 +185,7 @@ exports[`Storyshots Component API/Select Validation States 1`] = `
           className="fd-popover__control"
         >
           <div
-            aria-controls="fd-211"
+            aria-controls="fd-234"
             aria-expanded={false}
             aria-haspopup={true}
             className="fd-select"
@@ -226,7 +226,7 @@ exports[`Storyshots Component API/Select Validation States 1`] = `
           className="fd-popover__control"
         >
           <div
-            aria-controls="fd-212"
+            aria-controls="fd-235"
             aria-expanded={false}
             aria-haspopup={true}
             className="fd-select"
@@ -267,7 +267,7 @@ exports[`Storyshots Component API/Select Validation States 1`] = `
           className="fd-popover__control"
         >
           <div
-            aria-controls="fd-213"
+            aria-controls="fd-236"
             aria-expanded={false}
             aria-haspopup={true}
             className="fd-select"
@@ -308,7 +308,7 @@ exports[`Storyshots Component API/Select Validation States 1`] = `
           className="fd-popover__control"
         >
           <div
-            aria-controls="fd-214"
+            aria-controls="fd-237"
             aria-expanded={false}
             aria-haspopup={true}
             className="fd-select"
