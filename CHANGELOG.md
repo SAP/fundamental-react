@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.9.1-rc.14](https://github.com/SAP/fundamental-react/compare/v0.9.1-rc.13...v0.9.1-rc.14) (2020-05-15)
+
+
+### Bug Fixes
+
+* Username is cut off from Shellbar ([#1008](https://github.com/SAP/fundamental-react/issues/1008)) ([8d36439](https://github.com/SAP/fundamental-react/commit/8d36439b5e72e5b8c73cb060ea0e8c3c5e692f4e))
+
 ### [0.9.1-rc.13](https://github.com/SAP/fundamental-react/compare/v0.9.1-rc.12...v0.9.1-rc.13) (2020-05-15)
 
 
