@@ -71,7 +71,7 @@ const ComboboxInput = React.forwardRef(({
                         {validationState.text}
                     </FormMessage>
                     }
-                    <List>
+                    <List className='fd-list--dropdown'>
                         {options.map(option => (
                             <List.Item
                                 key={option.key}
@@ -116,7 +116,7 @@ const ComboboxInput = React.forwardRef(({
             onClickOutside={handleClickOutside}
             show={isExpanded}
             useArrowKeyNavigation
-            widthSizingType='matchTarget' />
+            widthSizingType='minTarget' />
     );
 });
 

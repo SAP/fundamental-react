@@ -136,6 +136,38 @@ describe('<MultiInput />', () => {
         );
     });
 
+    test('tag list is truncated when more than 3 options are selected', () => {
+        wrapper = mount(multiInput);
+        wrapper
+            .find('button.fd-button--transparent')
+            .simulate('click');
+
+        // add 4 tags to list
+        wrapper
+            .find('.fd-checkbox').first()
+            .simulate('change', { target: { value: data[0] } });
+        wrapper
+            .find('.fd-checkbox').at(1)
+            .simulate('change', { target: { value: data[0] } });
+        wrapper
+            .find('.fd-checkbox').at(2)
+            .simulate('change', { target: { value: data[0] } });
+        wrapper
+            .find('.fd-checkbox').at(3)
+            .simulate('change', { target: { value: data[0] } });
+
+        // check that tag list contains value
+        expect(wrapper.state(['tags'])).toHaveLength(4);
+
+        // check to see that only 3 tags are created
+        expect(wrapper.find('span.fd-token[role="button"]')).toHaveLength(3);
+
+        // check that truncated text is correct
+        expect(wrapper.find('span.fd-tokenizer__indicator').text()).toEqual(
+            '1 more'
+        );
+    });
+
     test('remove tag from taglist by unchecking', () => {
         wrapper = mount(multiInput);
         wrapper
