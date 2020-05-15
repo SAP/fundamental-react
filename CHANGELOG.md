@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.9.1-rc.13](https://github.com/SAP/fundamental-react/compare/v0.9.1-rc.12...v0.9.1-rc.13) (2020-05-15)
+
+
+### Features
+
+* width adjustments for popover based components, class changes, MultiInput changes ([#1016](https://github.com/SAP/fundamental-react/issues/1016)) ([55a005c](https://github.com/SAP/fundamental-react/commit/55a005c8151bedc57a7e379f6e25cc649e32a108))
+
+### [0.9.1-rc.12](https://github.com/SAP/fundamental-react/compare/v0.9.1-rc.11...v0.9.1-rc.12) (2020-05-14)
+
 ### [0.9.1-rc.11](https://github.com/SAP/fundamental-react/compare/v0.9.1-rc.10...v0.9.1-rc.11) (2020-05-14)
 
 ### [0.9.1-rc.10](https://github.com/SAP/fundamental-react/compare/v0.9.1-rc.9...v0.9.1-rc.10) (2020-05-14)

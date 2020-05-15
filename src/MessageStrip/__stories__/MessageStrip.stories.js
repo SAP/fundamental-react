@@ -35,12 +35,12 @@ export const noGlyph = () => (
 );
 
 export const states = () => (
-    <div className='fr-container'>
+    <>
         <MessageStrip type='error'>MessageStrip</MessageStrip>
         <MessageStrip type='warning'>MessageStrip</MessageStrip>
         <MessageStrip type='success'>MessageStrip</MessageStrip>
         <MessageStrip type='information'>MessageStrip</MessageStrip>
-    </div>
+    </>
 );
 
 export const dev = () => (

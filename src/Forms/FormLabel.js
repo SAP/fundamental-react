@@ -2,6 +2,8 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React, { useEffect } from 'react';
 
+/** A **FormLabel** is used to identify form components such as
+ * **FormInput**, **Checkbox** and **TextArea**. Best practice is to use this component as a child of **FormGroup**. */
 const FormLabel = React.forwardRef(({
     required,
     children,

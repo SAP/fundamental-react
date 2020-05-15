@@ -24,6 +24,7 @@ const beforeScreenshot = (page) => page.emulate(view);
 
 // create visual regession images from each story
 initStoryshots({
+    storyKindRegex: /^((?!.*?Tile).)*$/,
     test: imageSnapshot({
         storybookUrl: 'http://localhost:12123/',
         customizePage,

@@ -2,7 +2,7 @@ import BreadcrumbItem from './_BreadcrumbItem';
 import PropTypes from 'prop-types';
 import React, { useEffect } from 'react';
 
-/** The **Breadcrumb** allows users to see the current page and navigation path to that page.
+/** A **Breadcrumb** allows users to see the current page and navigation path to that page.
  * Users can navigate to previous levels in the path. When clicking on the current page,
  * a dropdown allows users to access other pages at that same level. */
 

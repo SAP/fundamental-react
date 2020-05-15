@@ -16,7 +16,7 @@ exports[`Storyshots Component API/MultiInput Compact 1`] = `
         className="fd-popover__control"
       >
         <div
-          aria-controls="fd-98"
+          aria-controls="fd-114"
           aria-expanded={false}
           aria-haspopup={true}
           className="fd-input-group--control fd-input-group"
@@ -26,14 +26,14 @@ exports[`Storyshots Component API/MultiInput Compact 1`] = `
           tabIndex={0}
         >
           <div
-            className="fd-input-group__input fd-tokenizer fd-tokenizer--compact"
+            className="fd-tokenizer fd-tokenizer--compact"
             compact={true}
           >
             <div
               className="fd-tokenizer__inner"
             >
               <input
-                className="fd-input fd-input--compact fd-tokenizer__input"
+                className="fd-input fd-input--compact fd-input-group__input fd-tokenizer__input"
                 placeholder="Placeholder"
                 type="text"
               />
@@ -70,7 +70,7 @@ exports[`Storyshots Component API/MultiInput Dev 1`] = `
         className="fd-popover__control"
       >
         <div
-          aria-controls="fd-182"
+          aria-controls="fd-198"
           aria-expanded={false}
           aria-haspopup={true}
           className="fd-input-group--control fd-input-group"
@@ -80,7 +80,7 @@ exports[`Storyshots Component API/MultiInput Dev 1`] = `
           tabIndex={0}
         >
           <div
-            className="fd-input-group__input fd-tokenizer"
+            className="fd-tokenizer"
             compact={false}
             disabled={false}
           >
@@ -88,7 +88,7 @@ exports[`Storyshots Component API/MultiInput Dev 1`] = `
               className="fd-tokenizer__inner"
             >
               <input
-                className="fd-input fd-tokenizer__input"
+                className="fd-input fd-input-group__input fd-tokenizer__input"
                 placeholder="Select a Fruit"
                 type="text"
               />
@@ -126,7 +126,7 @@ exports[`Storyshots Component API/MultiInput Disabled 1`] = `
         className="fd-popover__control"
       >
         <div
-          aria-controls="fd-112"
+          aria-controls="fd-128"
           aria-expanded={false}
           aria-haspopup={true}
           className="fd-input-group--control is-disabled fd-input-group is-disabled"
@@ -136,14 +136,14 @@ exports[`Storyshots Component API/MultiInput Disabled 1`] = `
           tabIndex={0}
         >
           <div
-            className="fd-input-group__input fd-tokenizer"
+            className="fd-tokenizer"
             disabled={true}
           >
             <div
               className="fd-tokenizer__inner"
             >
               <input
-                className="fd-input fd-tokenizer__input"
+                className="fd-input fd-input-group__input fd-tokenizer__input"
                 placeholder="Placeholder"
                 type="text"
               />
@@ -181,7 +181,7 @@ exports[`Storyshots Component API/MultiInput Primary 1`] = `
         className="fd-popover__control"
       >
         <div
-          aria-controls="fd-84"
+          aria-controls="fd-100"
           aria-expanded={false}
           aria-haspopup={true}
           className="fd-input-group--control fd-input-group"
@@ -191,13 +191,13 @@ exports[`Storyshots Component API/MultiInput Primary 1`] = `
           tabIndex={0}
         >
           <div
-            className="fd-input-group__input fd-tokenizer"
+            className="fd-tokenizer"
           >
             <div
               className="fd-tokenizer__inner"
             >
               <input
-                className="fd-input fd-tokenizer__input"
+                className="fd-input fd-input-group__input fd-tokenizer__input"
                 placeholder="Placeholder"
                 type="text"
               />
@@ -237,7 +237,7 @@ exports[`Storyshots Component API/MultiInput Validation States 1`] = `
           className="fd-popover__control"
         >
           <div
-            aria-controls="fd-126"
+            aria-controls="fd-142"
             aria-expanded={false}
             aria-haspopup={true}
             className="fd-input-group--control is-error fd-input-group is-error"
@@ -247,13 +247,13 @@ exports[`Storyshots Component API/MultiInput Validation States 1`] = `
             tabIndex={0}
           >
             <div
-              className="fd-input-group__input fd-tokenizer"
+              className="fd-tokenizer"
             >
               <div
                 className="fd-tokenizer__inner"
               >
                 <input
-                  className="fd-input fd-tokenizer__input"
+                  className="fd-input fd-input-group__input fd-tokenizer__input"
                   placeholder="Error"
                   type="text"
                 />
@@ -290,7 +290,7 @@ exports[`Storyshots Component API/MultiInput Validation States 1`] = `
           className="fd-popover__control"
         >
           <div
-            aria-controls="fd-140"
+            aria-controls="fd-156"
             aria-expanded={false}
             aria-haspopup={true}
             className="fd-input-group--control is-warning fd-input-group is-warning"
@@ -300,13 +300,13 @@ exports[`Storyshots Component API/MultiInput Validation States 1`] = `
             tabIndex={0}
           >
             <div
-              className="fd-input-group__input fd-tokenizer"
+              className="fd-tokenizer"
             >
               <div
                 className="fd-tokenizer__inner"
               >
                 <input
-                  className="fd-input fd-tokenizer__input"
+                  className="fd-input fd-input-group__input fd-tokenizer__input"
                   placeholder="Warning"
                   type="text"
                 />
@@ -343,7 +343,7 @@ exports[`Storyshots Component API/MultiInput Validation States 1`] = `
           className="fd-popover__control"
         >
           <div
-            aria-controls="fd-154"
+            aria-controls="fd-170"
             aria-expanded={false}
             aria-haspopup={true}
             className="fd-input-group--control is-success fd-input-group is-success"
@@ -353,13 +353,13 @@ exports[`Storyshots Component API/MultiInput Validation States 1`] = `
             tabIndex={0}
           >
             <div
-              className="fd-input-group__input fd-tokenizer"
+              className="fd-tokenizer"
             >
               <div
                 className="fd-tokenizer__inner"
               >
                 <input
-                  className="fd-input fd-tokenizer__input"
+                  className="fd-input fd-input-group__input fd-tokenizer__input"
                   placeholder="Success"
                   type="text"
                 />
@@ -396,7 +396,7 @@ exports[`Storyshots Component API/MultiInput Validation States 1`] = `
           className="fd-popover__control"
         >
           <div
-            aria-controls="fd-168"
+            aria-controls="fd-184"
             aria-expanded={false}
             aria-haspopup={true}
             className="fd-input-group--control is-information fd-input-group is-information"
@@ -406,13 +406,13 @@ exports[`Storyshots Component API/MultiInput Validation States 1`] = `
             tabIndex={0}
           >
             <div
-              className="fd-input-group__input fd-tokenizer"
+              className="fd-tokenizer"
             >
               <div
                 className="fd-tokenizer__inner"
               >
                 <input
-                  className="fd-input fd-tokenizer__input"
+                  className="fd-input fd-input-group__input fd-tokenizer__input"
                   placeholder="Information"
                   type="text"
                 />

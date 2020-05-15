@@ -191,10 +191,9 @@ exports[`Storyshots Component API/InputGroup Text Area 1`] = `
   >
     <textarea
       className="fd-textarea fd-input-group__input"
+      defaultValue="Default"
       onChange={[Function]}
-    >
-      Default
-    </textarea>
+    />
     <span
       className="fd-input-group__addon"
     >
