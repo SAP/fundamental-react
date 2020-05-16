@@ -2,11 +2,13 @@ body {
     font-family: '72', 'Open Sans', sans-serif;
 }
 
+/* override storybook max width */
 .sbdocs.sbdocs-content {
     width: 100%;
     max-width: none;
 }
 
+/* make room for TOCBot */
 @media (min-width: 1024px) {
     .sbdocs.sbdocs-content {
         margin-right: 200px;
@@ -31,16 +33,22 @@ body {
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
+$fr-header-tp: 10px; /* top padding */
+$fr-header-bp: 12px; /* bottom padding */
+$fr-header-ch: 28px; /* content height */
+$fr-docs-tm: 30px; /* top margin */
+$heading-toc-spacer: $fr-header-tp + $fr-header-bp + $fr-header-ch + $fr-docs-tm;
 .sbdocs-h2,
 .sbdocs-h3 {
     &:focus {
         outline: none;
     }
+
     &:before {
         content: '';
         display: block;
-        height: 90px;
-        margin-top: -90px;
+        height: $heading-toc-spacer;
+        margin-top: -$heading-toc-spacer;
         visibility: hidden;
     }
 }
@@ -53,7 +61,7 @@ body {
 /* header */
 .fr-header {
     box-sizing: border-box;
-    padding: 10px 0 12px 0;
+    padding: $fr-header-tp 0 $fr-header-bp 0;
     position: fixed;
     top: 0;
     left: 0;
