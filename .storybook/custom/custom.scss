@@ -26,6 +26,20 @@ body {
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
+.sbdocs-h2,
+.sbdocs-h3 {
+    &:focus {
+        outline: none;
+    }
+    &:before {
+        content: '';
+        display: block;
+        height: 92px;
+        margin-top: -92px;
+        visibility: hidden;
+    }
+}
+
 /* override storybook section titles for color contrast */
 .simplebar-content .sidebar-subheading {
     color: #404040;
@@ -35,7 +49,7 @@ body {
 .fr-header {
     box-sizing: border-box;
     padding: 20px 0 12px 0;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
