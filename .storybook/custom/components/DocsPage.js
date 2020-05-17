@@ -36,7 +36,7 @@ const DocsPage = () => {
         <Header />
         <Title />
         <Toc />
-        <div className='fr-docs-container'>
+        <div className='fd-docs-container'>
             <Subtitle />
             <Import />
             <Description />

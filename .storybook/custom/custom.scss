@@ -33,11 +33,11 @@ body {
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-$fr-header-tp: 10px; /* top padding */
-$fr-header-bp: 12px; /* bottom padding */
-$fr-header-ch: 28px; /* content height */
-$fr-docs-tm: 30px; /* top margin */
-$heading-toc-spacer: $fr-header-tp + $fr-header-bp + $fr-header-ch + $fr-docs-tm;
+$fd-header-tp: 10px; /* top padding */
+$fd-header-bp: 12px; /* bottom padding */
+$fd-header-ch: 28px; /* content height */
+$fd-docs-tm: 30px; /* top margin */
+$heading-toc-spacer: $fd-header-tp + $fd-header-bp + $fd-header-ch + $fd-docs-tm;
 .sbdocs-h2,
 .sbdocs-h3 {
     &:focus {
@@ -53,15 +53,20 @@ $heading-toc-spacer: $fr-header-tp + $fr-header-bp + $fr-header-ch + $fr-docs-tm
     }
 }
 
-/* override storybook section titles for color contrast */
-.simplebar-content .sidebar-subheading {
-    color: #404040;
+/* storybook iframe */
+.sb-show-main {
+    margin: 0;
+}
+
+/* storybook iframe inner wrapper */
+.sbdocs.sbdocs-wrapper {
+    padding-top: 75px;
 }
 
 /* header */
-.fr-header {
+.fd-header {
     box-sizing: border-box;
-    padding: $fr-header-tp 0 $fr-header-bp 0;
+    padding: $fd-header-tp 0 $fd-header-bp 0;
     position: fixed;
     top: 0;
     left: 0;
@@ -108,7 +113,7 @@ $heading-toc-spacer: $fr-header-tp + $fr-header-bp + $fr-header-ch + $fr-docs-tm
 }
 
 /* footer */
-.fr-footer {
+.fd-footer {
     padding: 16px 0;
     font-size: 14px;
     line-height: 1.33;
@@ -161,7 +166,7 @@ $heading-toc-spacer: $fr-header-tp + $fr-header-bp + $fr-header-ch + $fr-docs-tm
 }
 
 /* community social links */
-.fr-community {
+.fd-community {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -206,7 +211,7 @@ $heading-toc-spacer: $fr-header-tp + $fr-header-bp + $fr-header-ch + $fr-docs-tm
 }
 
 /* story example layout containers */
-.fr-container {
+.fd-container {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: row;
@@ -217,28 +222,4 @@ $heading-toc-spacer: $fr-header-tp + $fr-header-bp + $fr-header-ch + $fr-docs-tm
     justify-content: space-around;
     width: 100%;
     padding: 10px 10px;
-}
-
-.break {
-    flex-basis: 100%;
-    height: 0;
-    border-bottom: 10px solid transparent;
-}
-
-.demo-icon-wrapper {
-    padding: 10px;
-    float: left;
-    width: 16%;
-    text-align: center;
-    height: 120px;
-}
-
-/* storybook iframe */
-.sb-show-main {
-    margin: 0;
-}
-
-/* storybook iframe inner wrapper */
-.sbdocs.sbdocs-wrapper {
-    padding-top: 75px;
 }
