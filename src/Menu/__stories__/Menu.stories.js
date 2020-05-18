@@ -1,5 +1,4 @@
 /* eslint-disable react/no-multi-comp */
-import Link from '../../Link/Link';
 import Menu from '../Menu';
 import MenuItem from '../_MenuItem';
 import MenuList from '../_MenuList';
@@ -30,17 +29,17 @@ export const primary = () => (
 export const separator = () => (
     <Menu>
         <Menu.List>
-            <Menu.Item separator>
-                <Link to='#'>Option 1</Link>
+            <Menu.Item separator url='#'>
+                Option 1
             </Menu.Item>
-            <Menu.Item>
-                <Link to='#'>Option 2</Link>
+            <Menu.Item url='#'>
+                Option 2
             </Menu.Item>
-            <Menu.Item separator>
-                <Link to='#'>Option 3</Link>
+            <Menu.Item separator url='#'>
+                Option 3
             </Menu.Item>
-            <Menu.Item>
-                <Link to='#'>Option 4</Link>
+            <Menu.Item url='#'>
+                Option 4
             </Menu.Item>
         </Menu.List>
     </Menu>
@@ -58,17 +57,17 @@ separator.story = {
 export const states = () => (
     <Menu>
         <Menu.List>
-            <Menu.Item separator>
-                <Link to='#'>Option 1</Link>
+            <Menu.Item separator url='#'>
+                Option 1
             </Menu.Item>
-            <Menu.Item active>
-                <Link to='#'>Option 2</Link>
+            <Menu.Item active url='#'>
+                Option 2
             </Menu.Item>
-            <Menu.Item selected>
-                <Link to='#'>Option 3</Link>
+            <Menu.Item selected url='#'>
+                Option 3
             </Menu.Item>
-            <Menu.Item disabled>
-                <Link to='#'>Option 4</Link>
+            <Menu.Item disabled url='#'>
+                Option 4
             </Menu.Item>
         </Menu.List>
     </Menu>
@@ -86,17 +85,20 @@ states.story = {
 export const addOns = () => (
     <Menu>
         <Menu.List>
-            <Menu.Item addonBefore='grid'>
-                <Link to='#'>Option 1</Link>
+            <Menu.Item addonBefore='grid' url='#'>
+                Option 1
             </Menu.Item>
-            <Menu.Item addonBefore='wrench'>
-                <Link to='#'>Option 2</Link>
+            <Menu.Item addonBefore='wrench' url='#'>
+                Option 2
             </Menu.Item>
-            <Menu.Item addonAfter='accept' addonBefore='history'>
-                <Link to='#'>Option 3</Link>
+            <Menu.Item
+                addonAfter='accept'
+                addonBefore='history'
+                url='#'>
+                Option 3
             </Menu.Item>
-            <Menu.Item addonBefore='lightbulb'>
-                <Link to='#'>Option 4</Link>
+            <Menu.Item addonBefore='lightbulb' url='#'>
+                Option 4
             </Menu.Item>
         </Menu.List>
     </Menu>
