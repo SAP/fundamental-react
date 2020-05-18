@@ -17,15 +17,13 @@ const componentDirs = readdirSync(srcPath).map(name => path.join(srcPath, name))
 
 // For every component directory.
 componentDirs.map((directory) => {
-    let fileContents = '';
-    let componentName = '';
     // Loop through its files.
     directory.fileNames.map((fileName) => {
         // get only stories.js files
         if (fileName.includes('.stories.js')) {
         // Grab the component name
-            componentName = fileName.substr(0, fileName.indexOf('.'));
-            // TO DO: reenable storyshots for examples using hooks in storybook@6
+            const componentName = fileName.substr(0, fileName.indexOf('.'));
+            // TODO: reenable storyshots for examples using hooks in storybook@6
             // https://github.com/storybookjs/storybook/releases/tag/v6.0.0-alpha.43
             if (componentName === 'Calendar'
             || componentName === 'Dialog'
@@ -35,7 +33,7 @@ componentDirs.map((directory) => {
                 return;
             }
 
-            fileContents += `
+            const fileContents = `
 import React from 'react';
 import * as stories from './${componentName}.stories';
 
@@ -57,7 +55,6 @@ ${componentName}.story = {
             // write the visual story file into the directory.
             let visualPath = path.join(directory.path, `${componentName}.visual.js`);
             writeFileSync(visualPath, fileContents);
-            fileContents = '';
         }
     });
 });
