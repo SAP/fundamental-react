@@ -67,7 +67,7 @@ $heading-toc-spacer: $docs-hd-tp + $docs-hd-bp + $docs-hd-ch + $docs-tm;
 /* header */
 .docs-header {
     box-sizing: border-box;
-    padding: $docs-header-tp 0 $docs-header-bp 0;
+    padding: $docs-hd-tp 0 $docs-hd-bp 0;
     position: fixed;
     top: 0;
     left: 0;
