@@ -5,107 +5,117 @@ exports[`Storyshots Visual Message Strip 1`] = `
   dir="ltr"
 >
   <div>
-    <div
-      className="fd-message-strip"
-      role="alert"
-    >
-      <p
-        className="fd-message-strip__text"
+    <div>
+      <div
+        className="fd-message-strip"
+        role="alert"
       >
-        Default MessageStrip
-      </p>
+        <p
+          className="fd-message-strip__text"
+        >
+          Default MessageStrip
+        </p>
+      </div>
     </div>
   </div>
   <div>
-    <div
-      className="fd-message-strip fd-message-strip--dismissible"
-      role="alert"
-    >
-      <button
-        aria-controls="j2ALl423"
-        aria-label="Close"
-        className="fd-button fd-button--transparent fd-button--compact fd-message-strip__close"
-        onClick={[Function]}
-        type="button"
-      />
-      <p
-        className="fd-message-strip__text"
+    <div>
+      <div
+        className="fd-message-strip fd-message-strip--dismissible"
+        role="alert"
       >
-        MessageStrip
-      </p>
+        <button
+          aria-controls="j2ALl423"
+          aria-label="Close"
+          className="fd-button fd-button--transparent fd-button--compact fd-message-strip__close"
+          onClick={[Function]}
+          type="button"
+        />
+        <p
+          className="fd-message-strip__text"
+        >
+          MessageStrip
+        </p>
+      </div>
     </div>
   </div>
   <div>
-    <div
-      className="fd-message-strip fd-message-strip--no-icon"
-      role="alert"
-    >
-      <p
-        className="fd-message-strip__text"
+    <div>
+      <div
+        className="fd-message-strip fd-message-strip--no-icon"
+        role="alert"
       >
-        MessageStrip
-      </p>
+        <p
+          className="fd-message-strip__text"
+        >
+          MessageStrip
+        </p>
+      </div>
     </div>
   </div>
   <div>
-    <div
-      className="fd-message-strip fd-message-strip--error"
-      role="alert"
-    >
-      <p
-        className="fd-message-strip__text"
+    <div>
+      <div
+        className="fd-message-strip fd-message-strip--error"
+        role="alert"
       >
-        MessageStrip
-      </p>
+        <p
+          className="fd-message-strip__text"
+        >
+          MessageStrip
+        </p>
+      </div>
+    </div>
+    <div>
+      <div
+        className="fd-message-strip fd-message-strip--warning"
+        role="alert"
+      >
+        <p
+          className="fd-message-strip__text"
+        >
+          MessageStrip
+        </p>
+      </div>
+    </div>
+    <div>
+      <div
+        className="fd-message-strip fd-message-strip--success"
+        role="alert"
+      >
+        <p
+          className="fd-message-strip__text"
+        >
+          MessageStrip
+        </p>
+      </div>
+    </div>
+    <div>
+      <div
+        className="fd-message-strip fd-message-strip--information"
+        role="alert"
+      >
+        <p
+          className="fd-message-strip__text"
+        >
+          MessageStrip
+        </p>
+      </div>
     </div>
   </div>
   <div>
-    <div
-      className="fd-message-strip fd-message-strip--warning"
-      role="alert"
-    >
-      <p
-        className="fd-message-strip__text"
+    <div>
+      <div
+        className="fd-message-strip"
+        role="alert"
       >
-        MessageStrip
-      </p>
-    </div>
-  </div>
-  <div>
-    <div
-      className="fd-message-strip fd-message-strip--success"
-      role="alert"
-    >
-      <p
-        className="fd-message-strip__text"
-      >
-        MessageStrip
-      </p>
-    </div>
-  </div>
-  <div>
-    <div
-      className="fd-message-strip fd-message-strip--information"
-      role="alert"
-    >
-      <p
-        className="fd-message-strip__text"
-      >
-        MessageStrip
-      </p>
-    </div>
-  </div>
-  <div>
-    <div
-      className="fd-message-strip"
-      role="alert"
-    >
-      <p
-        className="fd-message-strip__text"
-      >
-        Default MessageStrip
-        
-      </p>
+        <p
+          className="fd-message-strip__text"
+        >
+          Default MessageStrip
+          
+        </p>
+      </div>
     </div>
   </div>
 </div>

@@ -4,116 +4,7 @@ exports[`Storyshots Visual Combobox Input 1`] = `
 <div
   dir="ltr"
 >
-  <div
-    className="fd-popover"
-  >
-    <div
-      onFocus={[Function]}
-      onMouseDown={[Function]}
-      onTouchStart={[Function]}
-    >
-      <div
-        className="fd-popover__control"
-      >
-        <div
-          aria-expanded={false}
-          aria-haspopup="true"
-          className="fd-input-group--control fd-input-group"
-          onClick={[Function]}
-        >
-          <input
-            className="fd-input fd-input-group__input"
-            onChange={[Function]}
-            placeholder="Select an item"
-            type="text"
-          />
-          <span
-            className="fd-input-group__addon fd-input-group__addon--button"
-          >
-            <button
-              className="fd-button fd-button--transparent sap-icon--navigation-down-arrow fd-input-group__button"
-              type="button"
-            />
-          </span>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div
-    className="fd-popover"
-  >
-    <div
-      onFocus={[Function]}
-      onMouseDown={[Function]}
-      onTouchStart={[Function]}
-    >
-      <div
-        className="fd-popover__control"
-      >
-        <div
-          aria-expanded={false}
-          aria-haspopup="true"
-          className="fd-input-group--control is-disabled fd-input-group is-disabled"
-          onClick={[Function]}
-        >
-          <input
-            className="fd-input fd-input-group__input"
-            disabled={true}
-            onChange={[Function]}
-            placeholder="Placeholder"
-            type="text"
-          />
-          <span
-            className="fd-input-group__addon fd-input-group__addon--button"
-            disabled={true}
-          >
-            <button
-              className="fd-button fd-button--transparent sap-icon--navigation-down-arrow fd-input-group__button"
-              type="button"
-            />
-          </span>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div
-    className="fd-popover"
-  >
-    <div
-      onFocus={[Function]}
-      onMouseDown={[Function]}
-      onTouchStart={[Function]}
-    >
-      <div
-        className="fd-popover__control"
-      >
-        <div
-          aria-expanded={false}
-          aria-haspopup="true"
-          className="fd-input-group--control fd-input-group"
-          onClick={[Function]}
-        >
-          <input
-            className="fd-input fd-input--compact fd-input-group__input"
-            onChange={[Function]}
-            placeholder="Placeholder"
-            type="text"
-          />
-          <span
-            className="fd-input-group__addon fd-input-group__addon--button fd-input-group__addon--compact"
-          >
-            <button
-              className="fd-button fd-button--transparent fd-button--compact sap-icon--navigation-down-arrow fd-input-group__button"
-              type="button"
-            />
-          </span>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div
-    className="fr-container"
-  >
+  <div>
     <div
       className="fd-popover"
     >
@@ -128,13 +19,13 @@ exports[`Storyshots Visual Combobox Input 1`] = `
           <div
             aria-expanded={false}
             aria-haspopup="true"
-            className="fd-input-group--control is-error fd-input-group is-error"
+            className="fd-input-group--control fd-input-group"
             onClick={[Function]}
           >
             <input
               className="fd-input fd-input-group__input"
               onChange={[Function]}
-              placeholder="Error"
+              placeholder="Select an item"
               type="text"
             />
             <span
@@ -145,177 +36,296 @@ exports[`Storyshots Visual Combobox Input 1`] = `
                 type="button"
               />
             </span>
-          </div>
-          <div
-            aria-live="assertive"
-            className="fd-form-message fd-form-message--error"
-            role="alert"
-          >
-            Test validation state
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      className="fd-popover"
-    >
-      <div
-        onFocus={[Function]}
-        onMouseDown={[Function]}
-        onTouchStart={[Function]}
-      >
-        <div
-          className="fd-popover__control"
-        >
-          <div
-            aria-expanded={false}
-            aria-haspopup="true"
-            className="fd-input-group--control is-warning fd-input-group is-warning"
-            onClick={[Function]}
-          >
-            <input
-              className="fd-input fd-input-group__input"
-              onChange={[Function]}
-              placeholder="Warning"
-              type="text"
-            />
-            <span
-              className="fd-input-group__addon fd-input-group__addon--button"
-            >
-              <button
-                className="fd-button fd-button--transparent sap-icon--navigation-down-arrow fd-input-group__button"
-                type="button"
-              />
-            </span>
-          </div>
-          <div
-            aria-live="assertive"
-            className="fd-form-message fd-form-message--warning"
-            role="alert"
-          >
-            Test validation state
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      className="fd-popover"
-    >
-      <div
-        onFocus={[Function]}
-        onMouseDown={[Function]}
-        onTouchStart={[Function]}
-      >
-        <div
-          className="fd-popover__control"
-        >
-          <div
-            aria-expanded={false}
-            aria-haspopup="true"
-            className="fd-input-group--control is-information fd-input-group is-information"
-            onClick={[Function]}
-          >
-            <input
-              className="fd-input fd-input-group__input"
-              onChange={[Function]}
-              placeholder="Information"
-              type="text"
-            />
-            <span
-              className="fd-input-group__addon fd-input-group__addon--button"
-            >
-              <button
-                className="fd-button fd-button--transparent sap-icon--navigation-down-arrow fd-input-group__button"
-                type="button"
-              />
-            </span>
-          </div>
-          <div
-            aria-live="assertive"
-            className="fd-form-message fd-form-message--information"
-            role="alert"
-          >
-            Test validation state
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      className="fd-popover"
-    >
-      <div
-        onFocus={[Function]}
-        onMouseDown={[Function]}
-        onTouchStart={[Function]}
-      >
-        <div
-          className="fd-popover__control"
-        >
-          <div
-            aria-expanded={false}
-            aria-haspopup="true"
-            className="fd-input-group--control is-success fd-input-group is-success"
-            onClick={[Function]}
-          >
-            <input
-              className="fd-input fd-input-group__input"
-              onChange={[Function]}
-              placeholder="Success"
-              type="text"
-            />
-            <span
-              className="fd-input-group__addon fd-input-group__addon--button"
-            >
-              <button
-                className="fd-button fd-button--transparent sap-icon--navigation-down-arrow fd-input-group__button"
-                type="button"
-              />
-            </span>
-          </div>
-          <div
-            aria-live="assertive"
-            className="fd-form-message fd-form-message--success"
-            role="alert"
-          >
-            Test validation state
           </div>
         </div>
       </div>
     </div>
   </div>
-  <div
-    className="fd-popover"
-  >
+  <div>
     <div
-      onFocus={[Function]}
-      onMouseDown={[Function]}
-      onTouchStart={[Function]}
+      className="fd-popover"
     >
       <div
-        className="fd-popover__control"
+        onFocus={[Function]}
+        onMouseDown={[Function]}
+        onTouchStart={[Function]}
       >
         <div
-          aria-expanded={false}
-          aria-haspopup="true"
-          className="fd-input-group--control fd-input-group"
-          onClick={[Function]}
+          className="fd-popover__control"
         >
-          <input
-            className="fd-input fd-input-group__input"
-            disabled={false}
-            onChange={[Function]}
-            placeholder="Placeholder"
-            type="text"
-          />
-          <span
-            className="fd-input-group__addon fd-input-group__addon--button"
-            disabled={false}
+          <div
+            aria-expanded={false}
+            aria-haspopup="true"
+            className="fd-input-group--control is-disabled fd-input-group is-disabled"
+            onClick={[Function]}
           >
-            <button
-              className="fd-button fd-button--transparent sap-icon--navigation-down-arrow fd-input-group__button"
-              type="button"
+            <input
+              className="fd-input fd-input-group__input"
+              disabled={true}
+              onChange={[Function]}
+              placeholder="Placeholder"
+              type="text"
             />
-          </span>
+            <span
+              className="fd-input-group__addon fd-input-group__addon--button"
+              disabled={true}
+            >
+              <button
+                className="fd-button fd-button--transparent sap-icon--navigation-down-arrow fd-input-group__button"
+                type="button"
+              />
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      className="fd-popover"
+    >
+      <div
+        onFocus={[Function]}
+        onMouseDown={[Function]}
+        onTouchStart={[Function]}
+      >
+        <div
+          className="fd-popover__control"
+        >
+          <div
+            aria-expanded={false}
+            aria-haspopup="true"
+            className="fd-input-group--control fd-input-group"
+            onClick={[Function]}
+          >
+            <input
+              className="fd-input fd-input--compact fd-input-group__input"
+              onChange={[Function]}
+              placeholder="Placeholder"
+              type="text"
+            />
+            <span
+              className="fd-input-group__addon fd-input-group__addon--button fd-input-group__addon--compact"
+            >
+              <button
+                className="fd-button fd-button--transparent fd-button--compact sap-icon--navigation-down-arrow fd-input-group__button"
+                type="button"
+              />
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      className="fr-container"
+    >
+      <div
+        className="fd-popover"
+      >
+        <div
+          onFocus={[Function]}
+          onMouseDown={[Function]}
+          onTouchStart={[Function]}
+        >
+          <div
+            className="fd-popover__control"
+          >
+            <div
+              aria-expanded={false}
+              aria-haspopup="true"
+              className="fd-input-group--control is-error fd-input-group is-error"
+              onClick={[Function]}
+            >
+              <input
+                className="fd-input fd-input-group__input"
+                onChange={[Function]}
+                placeholder="Error"
+                type="text"
+              />
+              <span
+                className="fd-input-group__addon fd-input-group__addon--button"
+              >
+                <button
+                  className="fd-button fd-button--transparent sap-icon--navigation-down-arrow fd-input-group__button"
+                  type="button"
+                />
+              </span>
+            </div>
+            <div
+              aria-live="assertive"
+              className="fd-form-message fd-form-message--error"
+              role="alert"
+            >
+              Test validation state
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="fd-popover"
+      >
+        <div
+          onFocus={[Function]}
+          onMouseDown={[Function]}
+          onTouchStart={[Function]}
+        >
+          <div
+            className="fd-popover__control"
+          >
+            <div
+              aria-expanded={false}
+              aria-haspopup="true"
+              className="fd-input-group--control is-warning fd-input-group is-warning"
+              onClick={[Function]}
+            >
+              <input
+                className="fd-input fd-input-group__input"
+                onChange={[Function]}
+                placeholder="Warning"
+                type="text"
+              />
+              <span
+                className="fd-input-group__addon fd-input-group__addon--button"
+              >
+                <button
+                  className="fd-button fd-button--transparent sap-icon--navigation-down-arrow fd-input-group__button"
+                  type="button"
+                />
+              </span>
+            </div>
+            <div
+              aria-live="assertive"
+              className="fd-form-message fd-form-message--warning"
+              role="alert"
+            >
+              Test validation state
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="fd-popover"
+      >
+        <div
+          onFocus={[Function]}
+          onMouseDown={[Function]}
+          onTouchStart={[Function]}
+        >
+          <div
+            className="fd-popover__control"
+          >
+            <div
+              aria-expanded={false}
+              aria-haspopup="true"
+              className="fd-input-group--control is-information fd-input-group is-information"
+              onClick={[Function]}
+            >
+              <input
+                className="fd-input fd-input-group__input"
+                onChange={[Function]}
+                placeholder="Information"
+                type="text"
+              />
+              <span
+                className="fd-input-group__addon fd-input-group__addon--button"
+              >
+                <button
+                  className="fd-button fd-button--transparent sap-icon--navigation-down-arrow fd-input-group__button"
+                  type="button"
+                />
+              </span>
+            </div>
+            <div
+              aria-live="assertive"
+              className="fd-form-message fd-form-message--information"
+              role="alert"
+            >
+              Test validation state
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="fd-popover"
+      >
+        <div
+          onFocus={[Function]}
+          onMouseDown={[Function]}
+          onTouchStart={[Function]}
+        >
+          <div
+            className="fd-popover__control"
+          >
+            <div
+              aria-expanded={false}
+              aria-haspopup="true"
+              className="fd-input-group--control is-success fd-input-group is-success"
+              onClick={[Function]}
+            >
+              <input
+                className="fd-input fd-input-group__input"
+                onChange={[Function]}
+                placeholder="Success"
+                type="text"
+              />
+              <span
+                className="fd-input-group__addon fd-input-group__addon--button"
+              >
+                <button
+                  className="fd-button fd-button--transparent sap-icon--navigation-down-arrow fd-input-group__button"
+                  type="button"
+                />
+              </span>
+            </div>
+            <div
+              aria-live="assertive"
+              className="fd-form-message fd-form-message--success"
+              role="alert"
+            >
+              Test validation state
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      className="fd-popover"
+    >
+      <div
+        onFocus={[Function]}
+        onMouseDown={[Function]}
+        onTouchStart={[Function]}
+      >
+        <div
+          className="fd-popover__control"
+        >
+          <div
+            aria-expanded={false}
+            aria-haspopup="true"
+            className="fd-input-group--control fd-input-group"
+            onClick={[Function]}
+          >
+            <input
+              className="fd-input fd-input-group__input"
+              disabled={false}
+              onChange={[Function]}
+              placeholder="Placeholder"
+              type="text"
+            />
+            <span
+              className="fd-input-group__addon fd-input-group__addon--button"
+              disabled={false}
+            >
+              <button
+                className="fd-button fd-button--transparent sap-icon--navigation-down-arrow fd-input-group__button"
+                type="button"
+              />
+            </span>
+          </div>
         </div>
       </div>
     </div>

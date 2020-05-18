@@ -4,69 +4,83 @@ exports[`Storyshots Visual Form Textarea 1`] = `
 <div
   dir="ltr"
 >
-  <textarea
-    className="fd-textarea"
-    defaultValue="Placeholder"
-    onChange={[Function]}
-  />
-  <textarea
-    className="fd-textarea fd-textarea--compact"
-    defaultValue="Compact textarea"
-    onChange={[Function]}
-  />
-  <textarea
-    className="fd-textarea"
-    defaultValue="Disabled textarea"
-    disabled={true}
-    onChange={[Function]}
-  />
-  <textarea
-    className="fd-textarea"
-    defaultValue="Placeholder"
-    onChange={[Function]}
-    readOnly={true}
-  />
-  <textarea
-    className="fd-textarea"
-    defaultValue="Max Length"
-    maxLength={150}
-    onChange={[Function]}
-  />
-  <div
-    className="fd-textarea-counter"
-  >
-    140 characters left
-  </div>
-  <div
-    className="fr-container"
-  >
+  <div>
     <textarea
-      className="fd-textarea is-error"
-      defaultValue="Error State"
-      onChange={[Function]}
-    />
-    <textarea
-      className="fd-textarea is-warning"
-      defaultValue="Warning State"
-      onChange={[Function]}
-    />
-    <textarea
-      className="fd-textarea is-information"
-      defaultValue="Information State"
-      onChange={[Function]}
-    />
-    <textarea
-      className="fd-textarea is-success"
-      defaultValue="Success State"
+      className="fd-textarea"
+      defaultValue="Placeholder"
       onChange={[Function]}
     />
   </div>
-  <textarea
-    className="fd-textarea"
-    defaultValue="Default"
-    disabled={false}
-    onChange={[Function]}
-    readOnly={false}
-  />
+  <div>
+    <textarea
+      className="fd-textarea fd-textarea--compact"
+      defaultValue="Compact textarea"
+      onChange={[Function]}
+    />
+  </div>
+  <div>
+    <textarea
+      className="fd-textarea"
+      defaultValue="Disabled textarea"
+      disabled={true}
+      onChange={[Function]}
+    />
+  </div>
+  <div>
+    <textarea
+      className="fd-textarea"
+      defaultValue="Placeholder"
+      onChange={[Function]}
+      readOnly={true}
+    />
+  </div>
+  <div>
+    <textarea
+      className="fd-textarea"
+      defaultValue="Max Length"
+      maxLength={150}
+      onChange={[Function]}
+    />
+    <div
+      className="fd-textarea-counter"
+    >
+      140 characters left
+    </div>
+  </div>
+  <div>
+    <div
+      className="fr-container"
+    >
+      <textarea
+        className="fd-textarea is-error"
+        defaultValue="Error State"
+        onChange={[Function]}
+      />
+      <textarea
+        className="fd-textarea is-warning"
+        defaultValue="Warning State"
+        onChange={[Function]}
+      />
+      <textarea
+        className="fd-textarea is-information"
+        defaultValue="Information State"
+        onChange={[Function]}
+      />
+      <textarea
+        className="fd-textarea is-success"
+        defaultValue="Success State"
+        onChange={[Function]}
+      />
+    </div>
+  </div>
+  <div>
+    <textarea
+      className="fd-textarea"
+      defaultValue="Default"
+      disabled={false}
+      onChange={[Function]}
+      readOnly={false}
+    />
+  </div>
 </div>
 `;

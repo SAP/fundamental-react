@@ -4,356 +4,366 @@ exports[`Storyshots Visual Layout Grid 1`] = `
 <div
   dir="ltr"
 >
-  <div
-    className="fd-layout-grid"
-  >
+  <div>
     <div
-      className="fd-panel"
+      className="fd-layout-grid"
     >
       <div
-        className="fd-panel__body"
+        className="fd-panel"
       >
-        Panel
+        <div
+          className="fd-panel__body"
+        >
+          Panel
+        </div>
       </div>
-    </div>
-    <div
-      className="fd-panel"
-    >
       <div
-        className="fd-panel__body"
+        className="fd-panel"
       >
-        Panel
+        <div
+          className="fd-panel__body"
+        >
+          Panel
+        </div>
       </div>
-    </div>
-    <div
-      className="fd-panel"
-    >
       <div
-        className="fd-panel__body"
+        className="fd-panel"
       >
-        Panel
+        <div
+          className="fd-panel__body"
+        >
+          Panel
+        </div>
       </div>
-    </div>
-    <div
-      className="fd-panel"
-    >
       <div
-        className="fd-panel__body"
+        className="fd-panel"
       >
-        Panel
+        <div
+          className="fd-panel__body"
+        >
+          Panel
+        </div>
       </div>
-    </div>
-    <div
-      className="fd-panel"
-    >
       <div
-        className="fd-panel__body"
+        className="fd-panel"
       >
-        Panel
-      </div>
-    </div>
-  </div>
-  <div
-    className="fd-layout-grid fd-layout-grid--no-gap"
-  >
-    <div
-      className="fd-panel"
-    >
-      <div
-        className="fd-panel__body"
-      >
-        Panel
-      </div>
-    </div>
-    <div
-      className="fd-panel"
-    >
-      <div
-        className="fd-panel__body"
-      >
-        Panel
-      </div>
-    </div>
-    <div
-      className="fd-panel"
-    >
-      <div
-        className="fd-panel__body"
-      >
-        Panel
-      </div>
-    </div>
-    <div
-      className="fd-panel"
-    >
-      <div
-        className="fd-panel__body"
-      >
-        Panel
-      </div>
-    </div>
-    <div
-      className="fd-panel"
-    >
-      <div
-        className="fd-panel__body"
-      >
-        Panel
+        <div
+          className="fd-panel__body"
+        >
+          Panel
+        </div>
       </div>
     </div>
   </div>
-  <div
-    className="fd-layout-grid fd-layout-grid--col-2"
-  >
+  <div>
     <div
-      className="fd-panel"
+      className="fd-layout-grid fd-layout-grid--no-gap"
     >
       <div
-        className="fd-panel__body"
+        className="fd-panel"
       >
-        Panel
+        <div
+          className="fd-panel__body"
+        >
+          Panel
+        </div>
       </div>
-    </div>
-    <div
-      className="fd-panel"
-    >
       <div
-        className="fd-panel__body"
+        className="fd-panel"
       >
-        Panel
+        <div
+          className="fd-panel__body"
+        >
+          Panel
+        </div>
       </div>
-    </div>
-    <div
-      className="fd-panel"
-    >
       <div
-        className="fd-panel__body"
+        className="fd-panel"
       >
-        Panel
+        <div
+          className="fd-panel__body"
+        >
+          Panel
+        </div>
       </div>
-    </div>
-    <div
-      className="fd-panel"
-    >
       <div
-        className="fd-panel__body"
+        className="fd-panel"
       >
-        Panel
+        <div
+          className="fd-panel__body"
+        >
+          Panel
+        </div>
       </div>
-    </div>
-  </div>
-  <div
-    className="fd-layout-grid fd-layout-grid--col-4"
-  >
-    <div
-      className="fd-panel"
-    >
       <div
-        className="fd-panel__body"
+        className="fd-panel"
       >
-        Panel
-      </div>
-    </div>
-    <div
-      className="fd-panel"
-    >
-      <div
-        className="fd-panel__body"
-      >
-        Panel
-      </div>
-    </div>
-    <div
-      className="fd-panel"
-    >
-      <div
-        className="fd-panel__body"
-      >
-        Panel
-      </div>
-    </div>
-    <div
-      className="fd-panel"
-    >
-      <div
-        className="fd-panel__body"
-      >
-        Panel
-      </div>
-    </div>
-    <div
-      className="fd-panel"
-    >
-      <div
-        className="fd-panel__body"
-      >
-        Panel
-      </div>
-    </div>
-    <div
-      className="fd-panel"
-    >
-      <div
-        className="fd-panel__body"
-      >
-        Panel
-      </div>
-    </div>
-    <div
-      className="fd-panel"
-    >
-      <div
-        className="fd-panel__body"
-      >
-        Panel
-      </div>
-    </div>
-    <div
-      className="fd-panel"
-    >
-      <div
-        className="fd-panel__body"
-      >
-        Panel
+        <div
+          className="fd-panel__body"
+        >
+          Panel
+        </div>
       </div>
     </div>
   </div>
-  <div
-    className="fd-layout-grid fd-layout-grid--col-6"
-  >
+  <div>
     <div
-      className="fd-panel fd-layout-grid__span-column-2"
+      className="fd-layout-grid fd-layout-grid--col-2"
     >
       <div
-        className="fd-panel__body"
+        className="fd-panel"
       >
-        Panel with colSpan=2
+        <div
+          className="fd-panel__body"
+        >
+          Panel
+        </div>
+      </div>
+      <div
+        className="fd-panel"
+      >
+        <div
+          className="fd-panel__body"
+        >
+          Panel
+        </div>
+      </div>
+      <div
+        className="fd-panel"
+      >
+        <div
+          className="fd-panel__body"
+        >
+          Panel
+        </div>
+      </div>
+      <div
+        className="fd-panel"
+      >
+        <div
+          className="fd-panel__body"
+        >
+          Panel
+        </div>
       </div>
     </div>
+  </div>
+  <div>
     <div
-      className="fd-panel"
+      className="fd-layout-grid fd-layout-grid--col-4"
     >
       <div
-        className="fd-panel__body"
+        className="fd-panel"
       >
-        Panel
+        <div
+          className="fd-panel__body"
+        >
+          Panel
+        </div>
+      </div>
+      <div
+        className="fd-panel"
+      >
+        <div
+          className="fd-panel__body"
+        >
+          Panel
+        </div>
+      </div>
+      <div
+        className="fd-panel"
+      >
+        <div
+          className="fd-panel__body"
+        >
+          Panel
+        </div>
+      </div>
+      <div
+        className="fd-panel"
+      >
+        <div
+          className="fd-panel__body"
+        >
+          Panel
+        </div>
+      </div>
+      <div
+        className="fd-panel"
+      >
+        <div
+          className="fd-panel__body"
+        >
+          Panel
+        </div>
+      </div>
+      <div
+        className="fd-panel"
+      >
+        <div
+          className="fd-panel__body"
+        >
+          Panel
+        </div>
+      </div>
+      <div
+        className="fd-panel"
+      >
+        <div
+          className="fd-panel__body"
+        >
+          Panel
+        </div>
+      </div>
+      <div
+        className="fd-panel"
+      >
+        <div
+          className="fd-panel__body"
+        >
+          Panel
+        </div>
       </div>
     </div>
+  </div>
+  <div>
     <div
-      className="fd-panel"
+      className="fd-layout-grid fd-layout-grid--col-6"
     >
       <div
-        className="fd-panel__body"
+        className="fd-panel fd-layout-grid__span-column-2"
       >
-        Panel
+        <div
+          className="fd-panel__body"
+        >
+          Panel with colSpan=2
+        </div>
       </div>
-    </div>
-    <div
-      className="fd-panel"
-    >
       <div
-        className="fd-panel__body"
+        className="fd-panel"
       >
-        Panel
+        <div
+          className="fd-panel__body"
+        >
+          Panel
+        </div>
       </div>
-    </div>
-    <div
-      className="fd-panel"
-    >
       <div
-        className="fd-panel__body"
+        className="fd-panel"
       >
-        Panel
+        <div
+          className="fd-panel__body"
+        >
+          Panel
+        </div>
       </div>
-    </div>
-    <div
-      className="fd-panel fd-layout-grid__span-column-3"
-    >
       <div
-        className="fd-panel__body"
+        className="fd-panel"
       >
-        Panel with colSpan=3
+        <div
+          className="fd-panel__body"
+        >
+          Panel
+        </div>
       </div>
-    </div>
-    <div
-      className="fd-panel"
-    >
       <div
-        className="fd-panel__body"
+        className="fd-panel"
       >
-        Panel
+        <div
+          className="fd-panel__body"
+        >
+          Panel
+        </div>
       </div>
-    </div>
-    <div
-      className="fd-panel"
-    >
       <div
-        className="fd-panel__body"
+        className="fd-panel fd-layout-grid__span-column-3"
       >
-        Panel
+        <div
+          className="fd-panel__body"
+        >
+          Panel with colSpan=3
+        </div>
       </div>
-    </div>
-    <div
-      className="fd-panel"
-    >
       <div
-        className="fd-panel__body"
+        className="fd-panel"
       >
-        Panel
+        <div
+          className="fd-panel__body"
+        >
+          Panel
+        </div>
       </div>
-    </div>
-    <div
-      className="fd-panel fd-layout-grid__span-column-4"
-    >
       <div
-        className="fd-panel__body"
+        className="fd-panel"
       >
-        Panel with colSpan=4
+        <div
+          className="fd-panel__body"
+        >
+          Panel
+        </div>
       </div>
-    </div>
-    <div
-      className="fd-panel"
-    >
       <div
-        className="fd-panel__body"
+        className="fd-panel"
       >
-        Panel
+        <div
+          className="fd-panel__body"
+        >
+          Panel
+        </div>
       </div>
-    </div>
-    <div
-      className="fd-panel"
-    >
       <div
-        className="fd-panel__body"
+        className="fd-panel fd-layout-grid__span-column-4"
       >
-        Panel
+        <div
+          className="fd-panel__body"
+        >
+          Panel with colSpan=4
+        </div>
       </div>
-    </div>
-    <div
-      className="fd-panel fd-layout-grid__span-column-5"
-    >
       <div
-        className="fd-panel__body"
+        className="fd-panel"
       >
-        Panel with colSpan=5
+        <div
+          className="fd-panel__body"
+        >
+          Panel
+        </div>
       </div>
-    </div>
-    <div
-      className="fd-panel"
-    >
       <div
-        className="fd-panel__body"
+        className="fd-panel"
       >
-        Panel
+        <div
+          className="fd-panel__body"
+        >
+          Panel
+        </div>
       </div>
-    </div>
-    <div
-      className="fd-panel fd-layout-grid__span-column-6"
-    >
       <div
-        className="fd-panel__body"
+        className="fd-panel fd-layout-grid__span-column-5"
       >
-        Panel with colSpan=6
+        <div
+          className="fd-panel__body"
+        >
+          Panel with colSpan=5
+        </div>
+      </div>
+      <div
+        className="fd-panel"
+      >
+        <div
+          className="fd-panel__body"
+        >
+          Panel
+        </div>
+      </div>
+      <div
+        className="fd-panel fd-layout-grid__span-column-6"
+      >
+        <div
+          className="fd-panel__body"
+        >
+          Panel with colSpan=6
+        </div>
       </div>
     </div>
   </div>

@@ -4,73 +4,77 @@ exports[`Storyshots Visual Breadcrumb 1`] = `
 <div
   dir="ltr"
 >
-  <ul
-    className="fd-breadcrumb"
-  >
-    <li
-      className="fd-breadcrumb__item"
+  <div>
+    <ul
+      className="fd-breadcrumb"
     >
-      <a
-        className="fd-breadcrumb__link"
-        href="#"
+      <li
+        className="fd-breadcrumb__item"
       >
-        Link Text
-      </a>
-    </li>
-    <li
-      className="fd-breadcrumb__item"
+        <a
+          className="fd-breadcrumb__link"
+          href="#"
+        >
+          Link Text
+        </a>
+      </li>
+      <li
+        className="fd-breadcrumb__item"
+      >
+        <a
+          className="fd-breadcrumb__link"
+          href="#"
+        >
+          Link Text
+        </a>
+      </li>
+      <li
+        className="fd-breadcrumb__item"
+      >
+        <a
+          className="fd-breadcrumb__link"
+          href="#"
+        >
+          Link Text
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div>
+    <ul
+      className="fd-breadcrumb"
     >
-      <a
-        className="fd-breadcrumb__link"
-        href="#"
+      <li
+        className="fd-breadcrumb__item"
       >
-        Link Text
-      </a>
-    </li>
-    <li
-      className="fd-breadcrumb__item"
-    >
-      <a
-        className="fd-breadcrumb__link"
-        href="#"
+        <a
+          className="fd-breadcrumb__link"
+          href="#"
+        >
+          Link Text
+        </a>
+      </li>
+      <li
+        className="fd-breadcrumb__item"
       >
-        Link Text
-      </a>
-    </li>
-  </ul>
-  <ul
-    className="fd-breadcrumb"
-  >
-    <li
-      className="fd-breadcrumb__item"
-    >
-      <a
-        className="fd-breadcrumb__link"
-        href="#"
+        <a
+          className="fd-breadcrumb__link"
+          href="#"
+        >
+          Link Text
+        </a>
+      </li>
+      <li
+        className="fd-breadcrumb__item"
       >
-        Link Text
-      </a>
-    </li>
-    <li
-      className="fd-breadcrumb__item"
-    >
-      <a
-        className="fd-breadcrumb__link"
-        href="#"
-      >
-        Link Text
-      </a>
-    </li>
-    <li
-      className="fd-breadcrumb__item"
-    >
-      <a
-        className="fd-breadcrumb__link"
-        href="#"
-      >
-        Link Text
-      </a>
-    </li>
-  </ul>
+        <a
+          className="fd-breadcrumb__link"
+          href="#"
+        >
+          Link Text
+        </a>
+      </li>
+    </ul>
+  </div>
 </div>
 `;

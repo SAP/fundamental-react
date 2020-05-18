@@ -4,37 +4,41 @@ exports[`Storyshots Visual Form Item 1`] = `
 <div
   dir="ltr"
 >
-  <div
-    className="fd-form-item"
-  >
-    <label
-      className="fd-form-label"
-      htmlFor="input-1"
+  <div>
+    <div
+      className="fd-form-item"
     >
-      Default Input
-    </label>
-    <input
-      className="fd-input"
-      id="input-1"
-      placeholder="Field placeholder text"
-      type="text"
-    />
+      <label
+        className="fd-form-label"
+        htmlFor="input-1"
+      >
+        Default Input
+      </label>
+      <input
+        className="fd-input"
+        id="input-1"
+        placeholder="Field placeholder text"
+        type="text"
+      />
+    </div>
   </div>
-  <div
-    className="fd-form-item fd-form-item--horizontal"
-  >
-    <label
-      className="fd-form-label"
-      htmlFor="input-1"
+  <div>
+    <div
+      className="fd-form-item fd-form-item--horizontal"
     >
-      Default Input
-    </label>
-    <input
-      className="fd-input"
-      id="input-1"
-      placeholder="Field placeholder text"
-      type="text"
-    />
+      <label
+        className="fd-form-label"
+        htmlFor="input-1"
+      >
+        Default Input
+      </label>
+      <input
+        className="fd-input"
+        id="input-1"
+        placeholder="Field placeholder text"
+        type="text"
+      />
+    </div>
   </div>
 </div>
 `;

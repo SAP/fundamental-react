@@ -4,10 +4,12 @@ exports[`Storyshots Visual Form Legend 1`] = `
 <div
   dir="ltr"
 >
-  <legend
-    className="fd-fieldset__legend"
-  >
-    Default
-  </legend>
+  <div>
+    <legend
+      className="fd-fieldset__legend"
+    >
+      Default
+    </legend>
+  </div>
 </div>
 `;

@@ -4,39 +4,7 @@ exports[`Storyshots Visual Busy Indicator 1`] = `
 <div
   dir="ltr"
 >
-  <div
-    aria-hidden="false"
-    aria-label="Loading"
-    className="fd-busy-indicator--m"
-  >
-    <div
-      className="fd-busy-indicator--circle-0"
-    />
-    <div
-      className="fd-busy-indicator--circle-1"
-    />
-    <div
-      className="fd-busy-indicator--circle-2"
-    />
-  </div>
-  <div
-    className="fr-container"
-  >
-    <div
-      aria-hidden="false"
-      aria-label="Loading"
-      className="fd-busy-indicator"
-    >
-      <div
-        className="fd-busy-indicator--circle-0"
-      />
-      <div
-        className="fd-busy-indicator--circle-1"
-      />
-      <div
-        className="fd-busy-indicator--circle-2"
-      />
-    </div>
+  <div>
     <div
       aria-hidden="false"
       aria-label="Loading"
@@ -52,10 +20,63 @@ exports[`Storyshots Visual Busy Indicator 1`] = `
         className="fd-busy-indicator--circle-2"
       />
     </div>
+  </div>
+  <div>
+    <div
+      className="fr-container"
+    >
+      <div
+        aria-hidden="false"
+        aria-label="Loading"
+        className="fd-busy-indicator"
+      >
+        <div
+          className="fd-busy-indicator--circle-0"
+        />
+        <div
+          className="fd-busy-indicator--circle-1"
+        />
+        <div
+          className="fd-busy-indicator--circle-2"
+        />
+      </div>
+      <div
+        aria-hidden="false"
+        aria-label="Loading"
+        className="fd-busy-indicator--m"
+      >
+        <div
+          className="fd-busy-indicator--circle-0"
+        />
+        <div
+          className="fd-busy-indicator--circle-1"
+        />
+        <div
+          className="fd-busy-indicator--circle-2"
+        />
+      </div>
+      <div
+        aria-hidden="false"
+        aria-label="Loading"
+        className="fd-busy-indicator--l"
+      >
+        <div
+          className="fd-busy-indicator--circle-0"
+        />
+        <div
+          className="fd-busy-indicator--circle-1"
+        />
+        <div
+          className="fd-busy-indicator--circle-2"
+        />
+      </div>
+    </div>
+  </div>
+  <div>
     <div
       aria-hidden="false"
       aria-label="Loading"
-      className="fd-busy-indicator--l"
+      className="fd-busy-indicator--m"
     >
       <div
         className="fd-busy-indicator--circle-0"
@@ -67,21 +88,6 @@ exports[`Storyshots Visual Busy Indicator 1`] = `
         className="fd-busy-indicator--circle-2"
       />
     </div>
-  </div>
-  <div
-    aria-hidden="false"
-    aria-label="Loading"
-    className="fd-busy-indicator--m"
-  >
-    <div
-      className="fd-busy-indicator--circle-0"
-    />
-    <div
-      className="fd-busy-indicator--circle-1"
-    />
-    <div
-      className="fd-busy-indicator--circle-2"
-    />
   </div>
 </div>
 `;

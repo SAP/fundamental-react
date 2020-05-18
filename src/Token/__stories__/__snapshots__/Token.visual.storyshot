@@ -4,69 +4,77 @@ exports[`Storyshots Visual Token 1`] = `
 <div
   dir="ltr"
 >
-  <span
-    className="fd-token"
-    role="button"
-    tabIndex="0"
-  >
+  <div>
     <span
-      className="fd-token__text"
+      className="fd-token"
+      role="button"
+      tabIndex="0"
     >
-      Default
+      <span
+        className="fd-token__text"
+      >
+        Default
+      </span>
+      <button
+        className="fd-token__close"
+        onClick={[Function]}
+        tabIndex="-1"
+      />
     </span>
-    <button
-      className="fd-token__close"
-      onClick={[Function]}
-      tabIndex="-1"
-    />
-  </span>
-  <span
-    className="fd-token fd-token--compact"
-    role="button"
-    tabIndex="0"
-  >
+  </div>
+  <div>
     <span
-      className="fd-token__text"
+      className="fd-token fd-token--compact"
+      role="button"
+      tabIndex="0"
     >
-      Compact
+      <span
+        className="fd-token__text"
+      >
+        Compact
+      </span>
+      <button
+        className="fd-token__close"
+        onClick={[Function]}
+        tabIndex="-1"
+      />
     </span>
-    <button
-      className="fd-token__close"
-      onClick={[Function]}
-      tabIndex="-1"
-    />
-  </span>
-  <span
-    className="fd-token fd-token--readonly"
-    role="button"
-    tabIndex="0"
-  >
+  </div>
+  <div>
     <span
-      className="fd-token__text"
+      className="fd-token fd-token--readonly"
+      role="button"
+      tabIndex="0"
     >
-      Compact
+      <span
+        className="fd-token__text"
+      >
+        Compact
+      </span>
+      <button
+        className="fd-token__close"
+        onClick={[Function]}
+        tabIndex="-1"
+      />
     </span>
-    <button
-      className="fd-token__close"
-      onClick={[Function]}
-      tabIndex="-1"
-    />
-  </span>
-  <span
-    className="fd-token"
-    role="button"
-    tabIndex="0"
-  >
+  </div>
+  <div>
     <span
-      className="fd-token__text"
+      className="fd-token"
+      role="button"
+      tabIndex="0"
     >
-      Default
+      <span
+        className="fd-token__text"
+      >
+        Default
+      </span>
+      <button
+        className="fd-token__close"
+        onClick={[Function]}
+        tabIndex="-1"
+      />
     </span>
-    <button
-      className="fd-token__close"
-      onClick={[Function]}
-      tabIndex="-1"
-    />
-  </span>
+  </div>
 </div>
 `;

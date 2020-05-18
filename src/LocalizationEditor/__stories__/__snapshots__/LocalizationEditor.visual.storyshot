@@ -4,129 +4,135 @@ exports[`Storyshots Visual Localization Editor 1`] = `
 <div
   dir="ltr"
 >
-  <div
-    className="fd-localization-editor"
-  >
-    <label
-      className="fd-form-label"
-    >
-      Localization Editor Label
-    </label>
+  <div>
     <div
-      className="fd-popover"
+      className="fd-localization-editor"
     >
+      <label
+        className="fd-form-label"
+      >
+        Localization Editor Label
+      </label>
       <div
-        onFocus={[Function]}
-        onMouseDown={[Function]}
-        onTouchStart={[Function]}
+        className="fd-popover"
       >
         <div
-          className="fd-popover__control"
+          onFocus={[Function]}
+          onMouseDown={[Function]}
+          onTouchStart={[Function]}
         >
           <div
-            className="fd-input-group fd-input-group--after"
-            onClick={[Function]}
+            className="fd-popover__control"
           >
-            <input
-              className="fd-input fd-input-group__input"
-              placeholder="Enter Label"
-              type="text"
-            />
-            <span
-              className="fd-input-group__addon fd-input-group__addon--button"
+            <div
+              className="fd-input-group fd-input-group--after"
+              onClick={[Function]}
             >
-              <button
-                className="fd-button fd-button--transparent fd-input-group__button"
-                type="button"
+              <input
+                className="fd-input fd-input-group__input"
+                placeholder="Enter Label"
+                type="text"
+              />
+              <span
+                className="fd-input-group__addon fd-input-group__addon--button"
               >
-                EN*
-              </button>
-            </span>
+                <button
+                  className="fd-button fd-button--transparent fd-input-group__button"
+                  type="button"
+                >
+                  EN*
+                </button>
+              </span>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <div
-    className="fd-localization-editor"
-  >
-    <label
-      className="fd-form-label"
-    >
-      Localization Editor Label
-    </label>
+  <div>
     <div
-      className="fd-popover"
+      className="fd-localization-editor"
     >
+      <label
+        className="fd-form-label"
+      >
+        Localization Editor Label
+      </label>
       <div
-        onFocus={[Function]}
-        onMouseDown={[Function]}
-        onTouchStart={[Function]}
+        className="fd-popover"
       >
         <div
-          className="fd-popover__control"
+          onFocus={[Function]}
+          onMouseDown={[Function]}
+          onTouchStart={[Function]}
         >
           <div
-            className="fd-input-group fd-input-group--after"
-            onClick={[Function]}
+            className="fd-popover__control"
           >
-            <input
-              className="fd-input fd-input--compact fd-input-group__input"
-              placeholder="Enter Label"
-              type="text"
-            />
-            <span
-              className="fd-input-group__addon fd-input-group__addon--button"
+            <div
+              className="fd-input-group fd-input-group--after"
+              onClick={[Function]}
             >
-              <button
-                className="fd-button fd-button--transparent fd-button--compact fd-input-group__button"
-                type="button"
+              <input
+                className="fd-input fd-input--compact fd-input-group__input"
+                placeholder="Enter Label"
+                type="text"
+              />
+              <span
+                className="fd-input-group__addon fd-input-group__addon--button"
               >
-                EN*
-              </button>
-            </span>
+                <button
+                  className="fd-button fd-button--transparent fd-button--compact fd-input-group__button"
+                  type="button"
+                >
+                  EN*
+                </button>
+              </span>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <div
-    className="fd-localization-editor"
-  >
-    <label
-      className="fd-form-label"
-    >
-      Localization Editor Label
-    </label>
+  <div>
     <div
-      className="fd-popover"
+      className="fd-localization-editor"
     >
+      <label
+        className="fd-form-label"
+      >
+        Localization Editor Label
+      </label>
       <div
-        onFocus={[Function]}
-        onMouseDown={[Function]}
-        onTouchStart={[Function]}
+        className="fd-popover"
       >
         <div
-          className="fd-popover__control"
+          onFocus={[Function]}
+          onMouseDown={[Function]}
+          onTouchStart={[Function]}
         >
           <div
-            className="fd-input-group fd-input-group--after"
-            onClick={[Function]}
+            className="fd-popover__control"
           >
-            <textarea
-              className="fd-textarea fd-input-group__input"
-              onChange={[Function]}
-            />
-            <span
-              className="fd-input-group__addon fd-input-group__addon--button"
+            <div
+              className="fd-input-group fd-input-group--after"
+              onClick={[Function]}
             >
-              <button
-                className="fd-button fd-button--transparent fd-input-group__button"
-                type="button"
+              <textarea
+                className="fd-textarea fd-input-group__input"
+                onChange={[Function]}
+              />
+              <span
+                className="fd-input-group__addon fd-input-group__addon--button"
               >
-                EN*
-              </button>
-            </span>
+                <button
+                  className="fd-button fd-button--transparent fd-input-group__button"
+                  type="button"
+                >
+                  EN*
+                </button>
+              </span>
+            </div>
           </div>
         </div>
       </div>

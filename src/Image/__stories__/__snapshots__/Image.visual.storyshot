@@ -4,69 +4,75 @@ exports[`Storyshots Visual Image 1`] = `
 <div
   dir="ltr"
 >
-  <span
-    className="fd-image--m"
-    style={
-      Object {
-        "backgroundImage": "url(https://content.fortune.com/wp-content/uploads/2019/07/hippocorn.jpg)",
-      }
-    }
-  />
-  <div
-    className="fr-container"
-  >
-    <span
-      className="fd-image--s"
-      style={
-        Object {
-          "backgroundImage": "url(./assets/nature.jpg)",
-        }
-      }
-    />
+  <div>
     <span
       className="fd-image--m"
       style={
         Object {
-          "backgroundImage": "url(./assets/nature.jpg)",
-        }
-      }
-    />
-    <span
-      className="fd-image--l"
-      style={
-        Object {
-          "backgroundImage": "url(./assets/nature.jpg)",
+          "backgroundImage": "url(https://content.fortune.com/wp-content/uploads/2019/07/hippocorn.jpg)",
         }
       }
     />
   </div>
-  <div
-    className="fr-container"
-  >
-    <span
-      className="fd-image--s fd-image--circle"
-      style={
-        Object {
-          "backgroundImage": "url(./assets/nature.jpg)",
+  <div>
+    <div
+      className="fr-container"
+    >
+      <span
+        className="fd-image--s"
+        style={
+          Object {
+            "backgroundImage": "url(./assets/nature.jpg)",
+          }
         }
-      }
-    />
-    <span
-      className="fd-image--m fd-image--circle"
-      style={
-        Object {
-          "backgroundImage": "url(./assets/nature.jpg)",
+      />
+      <span
+        className="fd-image--m"
+        style={
+          Object {
+            "backgroundImage": "url(./assets/nature.jpg)",
+          }
         }
-      }
-    />
-    <span
-      className="fd-image--l fd-image--circle"
-      style={
-        Object {
-          "backgroundImage": "url(./assets/nature.jpg)",
+      />
+      <span
+        className="fd-image--l"
+        style={
+          Object {
+            "backgroundImage": "url(./assets/nature.jpg)",
+          }
         }
-      }
-    />
+      />
+    </div>
+  </div>
+  <div>
+    <div
+      className="fr-container"
+    >
+      <span
+        className="fd-image--s fd-image--circle"
+        style={
+          Object {
+            "backgroundImage": "url(./assets/nature.jpg)",
+          }
+        }
+      />
+      <span
+        className="fd-image--m fd-image--circle"
+        style={
+          Object {
+            "backgroundImage": "url(./assets/nature.jpg)",
+          }
+        }
+      />
+      <span
+        className="fd-image--l fd-image--circle"
+        style={
+          Object {
+            "backgroundImage": "url(./assets/nature.jpg)",
+          }
+        }
+      />
+    </div>
   </div>
 </div>
 `;

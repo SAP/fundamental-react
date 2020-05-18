@@ -4,111 +4,121 @@ exports[`Storyshots Visual Info Label 1`] = `
 <div
   dir="ltr"
 >
-  <span
-    className="fd-info-label"
-  >
-    Default
-  </span>
-  <div
-    className="fr-container"
-  >
+  <div>
     <span
-      className="fd-info-label fd-info-label--accent-color-1"
+      className="fd-info-label"
     >
-      Color 1
-    </span>
-    <span
-      className="fd-info-label fd-info-label--accent-color-2"
-    >
-      Color 2
-    </span>
-    <span
-      className="fd-info-label fd-info-label--accent-color-3"
-    >
-      Color 3
-    </span>
-    <span
-      className="fd-info-label fd-info-label--accent-color-4"
-    >
-      Color 4
-    </span>
-    <span
-      className="fd-info-label fd-info-label--accent-color-5"
-    >
-      Color 5
-    </span>
-    <span
-      className="fd-info-label fd-info-label--accent-color-6"
-    >
-      Color 6
-    </span>
-    <span
-      className="fd-info-label fd-info-label--accent-color-7"
-    >
-      Color 7
-    </span>
-    <span
-      className="fd-info-label fd-info-label--accent-color-8"
-    >
-      Color 8
-    </span>
-    <span
-      className="fd-info-label fd-info-label--accent-color-9"
-    >
-      Color 9
-    </span>
-    <span
-      className="fd-info-label fd-info-label--accent-color-10"
-    >
-      Color 10
+      Default
     </span>
   </div>
-  <div
-    className="fr-container"
-  >
-    <span
-      className="fd-info-label fd-info-label--icon sap-icon--add-activity-2"
+  <div>
+    <div
+      className="fr-container"
     >
-      add-activity-2
-    </span>
-    <span
-      className="fd-info-label fd-info-label--icon sap-icon--bar-code"
-    >
-      bar-code
-    </span>
-    <span
-      className="fd-info-label fd-info-label--icon sap-icon--hide"
-    >
-      hide
-    </span>
-    <span
-      className="fd-info-label fd-info-label--icon sap-icon--key"
-    >
-      key
-    </span>
-    <span
-      aria-label="upload-to-cloud"
-      className="fd-info-label fd-info-label--icon sap-icon--upload-to-cloud"
-    />
+      <span
+        className="fd-info-label fd-info-label--accent-color-1"
+      >
+        Color 1
+      </span>
+      <span
+        className="fd-info-label fd-info-label--accent-color-2"
+      >
+        Color 2
+      </span>
+      <span
+        className="fd-info-label fd-info-label--accent-color-3"
+      >
+        Color 3
+      </span>
+      <span
+        className="fd-info-label fd-info-label--accent-color-4"
+      >
+        Color 4
+      </span>
+      <span
+        className="fd-info-label fd-info-label--accent-color-5"
+      >
+        Color 5
+      </span>
+      <span
+        className="fd-info-label fd-info-label--accent-color-6"
+      >
+        Color 6
+      </span>
+      <span
+        className="fd-info-label fd-info-label--accent-color-7"
+      >
+        Color 7
+      </span>
+      <span
+        className="fd-info-label fd-info-label--accent-color-8"
+      >
+        Color 8
+      </span>
+      <span
+        className="fd-info-label fd-info-label--accent-color-9"
+      >
+        Color 9
+      </span>
+      <span
+        className="fd-info-label fd-info-label--accent-color-10"
+      >
+        Color 10
+      </span>
+    </div>
   </div>
-  <div
-    className="fr-container"
-  >
-    <span
-      className="fd-info-label fd-info-label--numeric"
+  <div>
+    <div
+      className="fr-container"
     >
-      1
-    </span>
-    <span
-      className="fd-info-label fd-info-label--numeric"
+      <span
+        className="fd-info-label fd-info-label--icon sap-icon--add-activity-2"
+      >
+        add-activity-2
+      </span>
+      <span
+        className="fd-info-label fd-info-label--icon sap-icon--bar-code"
+      >
+        bar-code
+      </span>
+      <span
+        className="fd-info-label fd-info-label--icon sap-icon--hide"
+      >
+        hide
+      </span>
+      <span
+        className="fd-info-label fd-info-label--icon sap-icon--key"
+      >
+        key
+      </span>
+      <span
+        aria-label="upload-to-cloud"
+        className="fd-info-label fd-info-label--icon sap-icon--upload-to-cloud"
+      />
+    </div>
+  </div>
+  <div>
+    <div
+      className="fr-container"
     >
-      10000
+      <span
+        className="fd-info-label fd-info-label--numeric"
+      >
+        1
+      </span>
+      <span
+        className="fd-info-label fd-info-label--numeric"
+      >
+        10000
+      </span>
+    </div>
+  </div>
+  <div>
+    <span
+      className="fd-info-label fd-info-label--accent-color-1 fd-info-label--icon sap-icon--future"
+    >
+      Default
     </span>
   </div>
-  <span
-    className="fd-info-label fd-info-label--accent-color-1 fd-info-label--icon sap-icon--future"
-  >
-    Default
-  </span>
 </div>
 `;

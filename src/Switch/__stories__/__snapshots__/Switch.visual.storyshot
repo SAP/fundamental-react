@@ -4,389 +4,407 @@ exports[`Storyshots Visual Switch 1`] = `
 <div
   dir="ltr"
 >
-  <label
-    className="fd-form-label"
-    onKeyDown={[Function]}
-  >
-    Switch label
-  </label>
-  <label
-    className="fd-switch__label"
-  >
-    <span
-      className="fd-switch"
+  <div>
+    <label
+      className="fd-form-label"
+      onKeyDown={[Function]}
     >
-      <input
-        aria-checked={false}
-        aria-label="Switch"
-        checked={false}
-        className="fd-switch__input"
-        onChange={[Function]}
-        type="checkbox"
-      />
-      <div
-        className="fd-switch__wrapper"
+      Switch label
+    </label>
+    <label
+      className="fd-switch__label"
+    >
+      <span
+        className="fd-switch"
       >
+        <input
+          aria-checked={false}
+          aria-label="Switch"
+          checked={false}
+          className="fd-switch__input"
+          onChange={[Function]}
+          type="checkbox"
+        />
         <div
-          className="fd-switch__track"
+          className="fd-switch__wrapper"
         >
-          <span
-            className="fd-switch__handle"
-            role="presentation"
-          />
+          <div
+            className="fd-switch__track"
+          >
+            <span
+              className="fd-switch__handle"
+              role="presentation"
+            />
+          </div>
         </div>
-      </div>
-    </span>
-  </label>
-  <label
-    className="fd-form-label"
-    onKeyDown={[Function]}
-  >
-    Switch label
-  </label>
-  <label
-    className="fd-switch__label"
-  >
-    <span
-      className="fd-switch"
+      </span>
+    </label>
+  </div>
+  <div>
+    <label
+      className="fd-form-label"
+      onKeyDown={[Function]}
     >
-      <input
-        aria-checked={true}
-        aria-label="Switch"
-        checked={true}
-        className="fd-switch__input"
-        onChange={[Function]}
-        type="checkbox"
-      />
-      <div
-        className="fd-switch__wrapper"
+      Switch label
+    </label>
+    <label
+      className="fd-switch__label"
+    >
+      <span
+        className="fd-switch"
       >
+        <input
+          aria-checked={true}
+          aria-label="Switch"
+          checked={true}
+          className="fd-switch__input"
+          onChange={[Function]}
+          type="checkbox"
+        />
         <div
-          className="fd-switch__track"
+          className="fd-switch__wrapper"
         >
-          <span
-            className="fd-switch__handle"
-            role="presentation"
-          />
+          <div
+            className="fd-switch__track"
+          >
+            <span
+              className="fd-switch__handle"
+              role="presentation"
+            />
+          </div>
         </div>
-      </div>
-    </span>
-  </label>
-  <label
-    className="fd-form-label"
-    onKeyDown={[Function]}
-  >
-    Switch label
-  </label>
-  <label
-    className="fd-switch__label"
-  >
-    <span
-      className="fd-switch fd-switch--compact"
+      </span>
+    </label>
+  </div>
+  <div>
+    <label
+      className="fd-form-label"
+      onKeyDown={[Function]}
     >
-      <input
-        aria-checked={false}
-        aria-label="Switch"
-        checked={false}
-        className="fd-switch__input"
-        onChange={[Function]}
-        type="checkbox"
-      />
-      <div
-        className="fd-switch__wrapper"
+      Switch label
+    </label>
+    <label
+      className="fd-switch__label"
+    >
+      <span
+        className="fd-switch fd-switch--compact"
       >
+        <input
+          aria-checked={false}
+          aria-label="Switch"
+          checked={false}
+          className="fd-switch__input"
+          onChange={[Function]}
+          type="checkbox"
+        />
         <div
-          className="fd-switch__track"
+          className="fd-switch__wrapper"
         >
-          <span
-            className="fd-switch__handle"
-            role="presentation"
-          />
+          <div
+            className="fd-switch__track"
+          >
+            <span
+              className="fd-switch__handle"
+              role="presentation"
+            />
+          </div>
         </div>
-      </div>
-    </span>
-  </label>
-  <label
-    className="fd-form-label is-disabled"
-    onKeyDown={[Function]}
-  >
-    Switch label
-  </label>
-  <label
-    className="fd-switch__label"
-  >
-    <span
-      className="fd-switch"
+      </span>
+    </label>
+  </div>
+  <div>
+    <label
+      className="fd-form-label is-disabled"
+      onKeyDown={[Function]}
     >
-      <input
-        aria-checked={false}
-        aria-label="Switch"
-        checked={false}
-        className="fd-switch__input"
-        disabled={true}
-        onChange={[Function]}
-        type="checkbox"
-      />
-      <div
-        className="fd-switch__wrapper"
+      Switch label
+    </label>
+    <label
+      className="fd-switch__label"
+    >
+      <span
+        className="fd-switch"
       >
+        <input
+          aria-checked={false}
+          aria-label="Switch"
+          checked={false}
+          className="fd-switch__input"
+          disabled={true}
+          onChange={[Function]}
+          type="checkbox"
+        />
         <div
-          className="fd-switch__track"
+          className="fd-switch__wrapper"
         >
-          <span
-            className="fd-switch__handle"
-            role="presentation"
-          />
+          <div
+            className="fd-switch__track"
+          >
+            <span
+              className="fd-switch__handle"
+              role="presentation"
+            />
+          </div>
         </div>
-      </div>
-    </span>
-  </label>
-  <label
-    className="fd-form-label"
-    onKeyDown={[Function]}
-  >
-    Switch label
-  </label>
-  <label
-    className="fd-switch__label"
-  >
-    <span
-      className="fd-switch"
+      </span>
+    </label>
+  </div>
+  <div>
+    <label
+      className="fd-form-label"
+      onKeyDown={[Function]}
     >
-      <input
-        aria-checked={false}
-        aria-label="Switch"
-        checked={false}
-        className="fd-switch__input"
-        onChange={[Function]}
-        type="checkbox"
-      />
-      <div
-        className="fd-switch__wrapper"
+      Switch label
+    </label>
+    <label
+      className="fd-switch__label"
+    >
+      <span
+        className="fd-switch"
       >
+        <input
+          aria-checked={false}
+          aria-label="Switch"
+          checked={false}
+          className="fd-switch__input"
+          onChange={[Function]}
+          type="checkbox"
+        />
         <div
-          className="fd-switch__track"
+          className="fd-switch__wrapper"
         >
-          <span
-            aria-label="on"
-            className="fd-fd-switch__text fd-switch__icon fd-switch__icon--on sap-icon--accept"
-          />
-          <span
-            className="fd-switch__handle"
-            role="presentation"
-          />
-          <span
-            aria-label="off"
-            className="fd-fd-switch__text fd-switch__icon fd-switch__icon--off sap-icon--decline"
-          />
+          <div
+            className="fd-switch__track"
+          >
+            <span
+              aria-label="on"
+              className="fd-fd-switch__text fd-switch__icon fd-switch__icon--on sap-icon--accept"
+            />
+            <span
+              className="fd-switch__handle"
+              role="presentation"
+            />
+            <span
+              aria-label="off"
+              className="fd-fd-switch__text fd-switch__icon fd-switch__icon--off sap-icon--decline"
+            />
+          </div>
         </div>
-      </div>
-    </span>
-  </label>
-  <label
-    className="fd-form-label"
-    onKeyDown={[Function]}
-  >
-    Switch label
-  </label>
-  <label
-    className="fd-switch__label"
-  >
-    <span
-      className="fd-switch fd-switch--semantic"
+      </span>
+    </label>
+  </div>
+  <div>
+    <label
+      className="fd-form-label"
+      onKeyDown={[Function]}
     >
-      <input
-        aria-checked={false}
-        aria-label="Switch"
-        checked={false}
-        className="fd-switch__input"
-        onChange={[Function]}
-        type="checkbox"
-      />
-      <div
-        className="fd-switch__wrapper"
+      Switch label
+    </label>
+    <label
+      className="fd-switch__label"
+    >
+      <span
+        className="fd-switch fd-switch--semantic"
       >
+        <input
+          aria-checked={false}
+          aria-label="Switch"
+          checked={false}
+          className="fd-switch__input"
+          onChange={[Function]}
+          type="checkbox"
+        />
         <div
-          className="fd-switch__track"
+          className="fd-switch__wrapper"
         >
-          <span
-            className="fd-switch__handle"
-            role="presentation"
-          />
+          <div
+            className="fd-switch__track"
+          >
+            <span
+              className="fd-switch__handle"
+              role="presentation"
+            />
+          </div>
         </div>
-      </div>
-    </span>
-  </label>
-  <label
-    className="fd-form-label"
-    onKeyDown={[Function]}
-  />
-  <label
-    className="fd-switch__label"
-  >
-    <span
-      className="fd-switch"
+      </span>
+    </label>
+  </div>
+  <div>
+    <label
+      className="fd-form-label"
+      onKeyDown={[Function]}
+    />
+    <label
+      className="fd-switch__label"
     >
-      <input
-        aria-checked={false}
-        aria-label="Switch"
-        checked={false}
-        className="fd-switch__input"
-        onChange={[Function]}
-        type="checkbox"
-      />
-      <div
-        className="fd-switch__wrapper"
+      <span
+        className="fd-switch"
       >
+        <input
+          aria-checked={false}
+          aria-label="Switch"
+          checked={false}
+          className="fd-switch__input"
+          onChange={[Function]}
+          type="checkbox"
+        />
         <div
-          className="fd-switch__track"
+          className="fd-switch__wrapper"
         >
-          <span
-            className="fd-switch__handle"
-            role="presentation"
-          />
+          <div
+            className="fd-switch__track"
+          >
+            <span
+              className="fd-switch__handle"
+              role="presentation"
+            />
+          </div>
         </div>
-      </div>
-    </span>
-  </label>
-  <label
-    className="fd-form-label"
-    onKeyDown={[Function]}
-  >
-    Show Internal Labels
-  </label>
-  <label
-    className="fd-switch__label"
-  >
-    <span
-      aria-live="polite"
-      className="fd-switch__text"
+      </span>
+    </label>
+  </div>
+  <div>
+    <label
+      className="fd-form-label"
+      onKeyDown={[Function]}
     >
-      off
-    </span>
-    <span
-      className="fd-switch"
+      Show Internal Labels
+    </label>
+    <label
+      className="fd-switch__label"
     >
-      <input
-        aria-checked={false}
-        aria-label="Switch"
-        checked={false}
-        className="fd-switch__input"
-        onChange={[Function]}
-        type="checkbox"
-      />
-      <div
-        className="fd-switch__wrapper"
+      <span
+        aria-live="polite"
+        className="fd-switch__text"
       >
-        <div
-          className="fd-switch__track"
-        >
-          <span
-            aria-label="on"
-            className="fd-fd-switch__text"
-          />
-          <span
-            className="fd-switch__handle"
-            role="presentation"
-          />
-          <span
-            aria-label="off"
-            className="fd-fd-switch__text"
-          />
-        </div>
-      </div>
-    </span>
-  </label>
-  <label
-    className="fd-form-label"
-    onKeyDown={[Function]}
-  >
-    Show Internal Labels and Icons
-  </label>
-  <label
-    className="fd-switch__label"
-  >
-    <span
-      aria-live="polite"
-      className="fd-switch__text"
-    >
-      off
-    </span>
-    <span
-      className="fd-switch fd-switch--semantic"
-    >
-      <input
-        aria-checked={false}
-        aria-label="Switch"
-        checked={false}
-        className="fd-switch__input"
-        onChange={[Function]}
-        type="checkbox"
-      />
-      <div
-        className="fd-switch__wrapper"
+        off
+      </span>
+      <span
+        className="fd-switch"
       >
+        <input
+          aria-checked={false}
+          aria-label="Switch"
+          checked={false}
+          className="fd-switch__input"
+          onChange={[Function]}
+          type="checkbox"
+        />
         <div
-          className="fd-switch__track"
+          className="fd-switch__wrapper"
         >
-          <span
-            aria-label="on"
-            className="fd-fd-switch__text fd-switch__icon fd-switch__icon--on sap-icon--accept"
-          />
-          <span
-            className="fd-switch__handle"
-            role="presentation"
-          />
-          <span
-            aria-label="off"
-            className="fd-fd-switch__text fd-switch__icon fd-switch__icon--off sap-icon--decline"
-          />
+          <div
+            className="fd-switch__track"
+          >
+            <span
+              aria-label="on"
+              className="fd-fd-switch__text"
+            />
+            <span
+              className="fd-switch__handle"
+              role="presentation"
+            />
+            <span
+              aria-label="off"
+              className="fd-fd-switch__text"
+            />
+          </div>
         </div>
-      </div>
-    </span>
-  </label>
-  <label
-    className="fd-form-label"
-    onKeyDown={[Function]}
-  >
-    label
-  </label>
-  <label
-    className="fd-switch__label"
-  >
-    <span
-      className="fd-switch"
+      </span>
+    </label>
+    <label
+      className="fd-form-label"
+      onKeyDown={[Function]}
     >
-      <input
-        aria-checked={false}
-        aria-label="Switch"
-        checked={false}
-        className="fd-switch__input"
-        disabled={false}
-        onChange={[Function]}
-        type="checkbox"
-      />
-      <div
-        className="fd-switch__wrapper"
+      Show Internal Labels and Icons
+    </label>
+    <label
+      className="fd-switch__label"
+    >
+      <span
+        aria-live="polite"
+        className="fd-switch__text"
       >
+        off
+      </span>
+      <span
+        className="fd-switch fd-switch--semantic"
+      >
+        <input
+          aria-checked={false}
+          aria-label="Switch"
+          checked={false}
+          className="fd-switch__input"
+          onChange={[Function]}
+          type="checkbox"
+        />
         <div
-          className="fd-switch__track"
+          className="fd-switch__wrapper"
         >
-          <span
-            aria-label="on"
-            className="fd-fd-switch__text fd-switch__icon fd-switch__icon--on sap-icon--accept"
-          />
-          <span
-            className="fd-switch__handle"
-            role="presentation"
-          />
-          <span
-            aria-label="off"
-            className="fd-fd-switch__text fd-switch__icon fd-switch__icon--off sap-icon--decline"
-          />
+          <div
+            className="fd-switch__track"
+          >
+            <span
+              aria-label="on"
+              className="fd-fd-switch__text fd-switch__icon fd-switch__icon--on sap-icon--accept"
+            />
+            <span
+              className="fd-switch__handle"
+              role="presentation"
+            />
+            <span
+              aria-label="off"
+              className="fd-fd-switch__text fd-switch__icon fd-switch__icon--off sap-icon--decline"
+            />
+          </div>
         </div>
-      </div>
-    </span>
-  </label>
+      </span>
+    </label>
+  </div>
+  <div>
+    <label
+      className="fd-form-label"
+      onKeyDown={[Function]}
+    >
+      label
+    </label>
+    <label
+      className="fd-switch__label"
+    >
+      <span
+        className="fd-switch"
+      >
+        <input
+          aria-checked={false}
+          aria-label="Switch"
+          checked={false}
+          className="fd-switch__input"
+          disabled={false}
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <div
+          className="fd-switch__wrapper"
+        >
+          <div
+            className="fd-switch__track"
+          >
+            <span
+              aria-label="on"
+              className="fd-fd-switch__text fd-switch__icon fd-switch__icon--on sap-icon--accept"
+            />
+            <span
+              className="fd-switch__handle"
+              role="presentation"
+            />
+            <span
+              aria-label="off"
+              className="fd-fd-switch__text fd-switch__icon fd-switch__icon--off sap-icon--decline"
+            />
+          </div>
+        </div>
+      </span>
+    </label>
+  </div>
 </div>
 `;

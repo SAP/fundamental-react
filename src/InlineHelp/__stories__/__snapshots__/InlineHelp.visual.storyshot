@@ -4,19 +4,7 @@ exports[`Storyshots Visual Inline Help 1`] = `
 <div
   dir="ltr"
 >
-  <span
-    className="fd-inline-help"
-  >
-    <span
-      className="fd-inline-help__content fd-inline-help__content--bottom-right"
-    >
-      default
-    </span>
-  </span>
-  <label
-    className="fd-form-label fd-form-label--inline-help"
-  >
-    Label Text
+  <div>
     <span
       className="fd-inline-help"
     >
@@ -26,51 +14,77 @@ exports[`Storyshots Visual Inline Help 1`] = `
         default
       </span>
     </span>
-  </label>
-  <span
-    className="fd-inline-help"
-  >
-    <span
-      className="fd-inline-help__content fd-inline-help__content--bottom-right"
+  </div>
+  <div>
+    <label
+      className="fd-form-label fd-form-label--inline-help"
     >
-      Lorem ipsum dolor sit amet, consectetur adipiscing.
-    </span>
-  </span>
-  <span
-    className="fd-inline-help"
-  >
+      Label Text
+      <span
+        className="fd-inline-help"
+      >
+        <span
+          className="fd-inline-help__content fd-inline-help__content--bottom-right"
+        >
+          default
+        </span>
+      </span>
+    </label>
+  </div>
+  <div>
     <span
-      className="fd-inline-help__content fd-inline-help__content--bottom-left"
+      className="fd-inline-help"
     >
-      Lorem ipsum dolor sit amet, consectetur adipiscing.
+      <span
+        className="fd-inline-help__content fd-inline-help__content--bottom-right"
+      >
+        Lorem ipsum dolor sit amet, consectetur adipiscing.
+      </span>
     </span>
-  </span>
-  <span
-    className="fd-inline-help"
-  >
+  </div>
+  <div>
     <span
-      className="fd-inline-help__content fd-inline-help__content--bottom-center"
+      className="fd-inline-help"
     >
-      Lorem ipsum dolor sit amet, consectetur adipiscing.
+      <span
+        className="fd-inline-help__content fd-inline-help__content--bottom-left"
+      >
+        Lorem ipsum dolor sit amet, consectetur adipiscing.
+      </span>
     </span>
-  </span>
-  <span
-    className="fd-inline-help"
-  >
+  </div>
+  <div>
     <span
-      className="fd-inline-help__content fd-inline-help__content--right"
+      className="fd-inline-help"
     >
-      Lorem ipsum dolor sit amet, consectetur adipiscing.
+      <span
+        className="fd-inline-help__content fd-inline-help__content--bottom-center"
+      >
+        Lorem ipsum dolor sit amet, consectetur adipiscing.
+      </span>
     </span>
-  </span>
-  <span
-    className="fd-inline-help"
-  >
+  </div>
+  <div>
     <span
-      className="fd-inline-help__content fd-inline-help__content--left"
+      className="fd-inline-help"
     >
-      Lorem ipsum dolor sit amet, consectetur adipiscing.
+      <span
+        className="fd-inline-help__content fd-inline-help__content--right"
+      >
+        Lorem ipsum dolor sit amet, consectetur adipiscing.
+      </span>
     </span>
-  </span>
+  </div>
+  <div>
+    <span
+      className="fd-inline-help"
+    >
+      <span
+        className="fd-inline-help__content fd-inline-help__content--left"
+      >
+        Lorem ipsum dolor sit amet, consectetur adipiscing.
+      </span>
+    </span>
+  </div>
 </div>
 `;

@@ -4,162 +4,174 @@ exports[`Storyshots Visual Form Input 1`] = `
 <div
   dir="ltr"
 >
-  <input
-    className="fd-input"
-    placeholder="Default"
-    type="text"
-  />
-  <input
-    className="fd-input fd-input--compact"
-    placeholder="Compact"
-    type="text"
-  />
-  <input
-    className="fd-input"
-    disabled={true}
-    placeholder="Disabled"
-    type="text"
-  />
-  <input
-    className="fd-input"
-    placeholder="ReadOnly"
-    readOnly={true}
-    type="text"
-  />
-  <div
-    className="fr-container"
-  >
+  <div>
+    <input
+      className="fd-input"
+      placeholder="Default"
+      type="text"
+    />
+  </div>
+  <div>
+    <input
+      className="fd-input fd-input--compact"
+      placeholder="Compact"
+      type="text"
+    />
+  </div>
+  <div>
+    <input
+      className="fd-input"
+      disabled={true}
+      placeholder="Disabled"
+      type="text"
+    />
+  </div>
+  <div>
+    <input
+      className="fd-input"
+      placeholder="ReadOnly"
+      readOnly={true}
+      type="text"
+    />
+  </div>
+  <div>
     <div
-      className="fd-popover"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
+      className="fr-container"
     >
       <div
-        onFocus={[Function]}
-        onMouseDown={[Function]}
-        onTouchStart={[Function]}
+        className="fd-popover"
+        style={
+          Object {
+            "display": "block",
+          }
+        }
       >
         <div
-          className="fd-popover__control"
+          onFocus={[Function]}
+          onMouseDown={[Function]}
+          onTouchStart={[Function]}
         >
-          <input
-            aria-controls="fd-54"
-            aria-expanded={false}
-            aria-haspopup={true}
-            className="fd-input is-error"
-            onClick={[Function]}
-            onKeyPress={[Function]}
-            placeholder="Error"
-            role="button"
-            tabIndex={0}
-            type="text"
-          />
+          <div
+            className="fd-popover__control"
+          >
+            <input
+              aria-controls="fd-54"
+              aria-expanded={false}
+              aria-haspopup={true}
+              className="fd-input is-error"
+              onClick={[Function]}
+              onKeyPress={[Function]}
+              placeholder="Error"
+              role="button"
+              tabIndex={0}
+              type="text"
+            />
+          </div>
         </div>
       </div>
-    </div>
-    <div
-      className="fd-popover"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-    >
       <div
-        onFocus={[Function]}
-        onMouseDown={[Function]}
-        onTouchStart={[Function]}
+        className="fd-popover"
+        style={
+          Object {
+            "display": "block",
+          }
+        }
       >
         <div
-          className="fd-popover__control"
+          onFocus={[Function]}
+          onMouseDown={[Function]}
+          onTouchStart={[Function]}
         >
-          <input
-            aria-controls="fd-55"
-            aria-expanded={false}
-            aria-haspopup={true}
-            className="fd-input is-warning"
-            onClick={[Function]}
-            onKeyPress={[Function]}
-            placeholder="Warning"
-            role="button"
-            tabIndex={0}
-            type="text"
-          />
+          <div
+            className="fd-popover__control"
+          >
+            <input
+              aria-controls="fd-55"
+              aria-expanded={false}
+              aria-haspopup={true}
+              className="fd-input is-warning"
+              onClick={[Function]}
+              onKeyPress={[Function]}
+              placeholder="Warning"
+              role="button"
+              tabIndex={0}
+              type="text"
+            />
+          </div>
         </div>
       </div>
-    </div>
-    <div
-      className="fd-popover"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-    >
       <div
-        onFocus={[Function]}
-        onMouseDown={[Function]}
-        onTouchStart={[Function]}
+        className="fd-popover"
+        style={
+          Object {
+            "display": "block",
+          }
+        }
       >
         <div
-          className="fd-popover__control"
+          onFocus={[Function]}
+          onMouseDown={[Function]}
+          onTouchStart={[Function]}
         >
-          <input
-            aria-controls="fd-56"
-            aria-expanded={false}
-            aria-haspopup={true}
-            className="fd-input is-information"
-            onClick={[Function]}
-            onKeyPress={[Function]}
-            placeholder="Information"
-            role="button"
-            tabIndex={0}
-            type="text"
-          />
+          <div
+            className="fd-popover__control"
+          >
+            <input
+              aria-controls="fd-56"
+              aria-expanded={false}
+              aria-haspopup={true}
+              className="fd-input is-information"
+              onClick={[Function]}
+              onKeyPress={[Function]}
+              placeholder="Information"
+              role="button"
+              tabIndex={0}
+              type="text"
+            />
+          </div>
         </div>
       </div>
-    </div>
-    <div
-      className="fd-popover"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-    >
       <div
-        onFocus={[Function]}
-        onMouseDown={[Function]}
-        onTouchStart={[Function]}
+        className="fd-popover"
+        style={
+          Object {
+            "display": "block",
+          }
+        }
       >
         <div
-          className="fd-popover__control"
+          onFocus={[Function]}
+          onMouseDown={[Function]}
+          onTouchStart={[Function]}
         >
-          <input
-            aria-controls="fd-57"
-            aria-expanded={false}
-            aria-haspopup={true}
-            className="fd-input is-success"
-            onClick={[Function]}
-            onKeyPress={[Function]}
-            placeholder="Success"
-            role="button"
-            tabIndex={0}
-            type="text"
-          />
+          <div
+            className="fd-popover__control"
+          >
+            <input
+              aria-controls="fd-57"
+              aria-expanded={false}
+              aria-haspopup={true}
+              className="fd-input is-success"
+              onClick={[Function]}
+              onKeyPress={[Function]}
+              placeholder="Success"
+              role="button"
+              tabIndex={0}
+              type="text"
+            />
+          </div>
         </div>
       </div>
     </div>
   </div>
-  <input
-    className="fd-input"
-    disabled={false}
-    placeholder="Placeholder"
-    readOnly={false}
-    type="text"
-  />
+  <div>
+    <input
+      className="fd-input"
+      disabled={false}
+      placeholder="Placeholder"
+      readOnly={false}
+      type="text"
+    />
+  </div>
 </div>
 `;

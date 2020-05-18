@@ -4,213 +4,225 @@ exports[`Storyshots Visual Action Bar 1`] = `
 <div
   dir="ltr"
 >
-  <div
-    className="fd-action-bar"
-  >
+  <div>
     <div
-      className="fd-action-bar__header"
+      className="fd-action-bar"
     >
       <div
-        className="fd-action-bar__back"
-      >
-        <button
-          className="fd-button fd-button--transparent fd-button--compact sap-icon--navigation-left-arrow"
-          onClick={[Function]}
-          type="button"
-        />
-      </div>
-      <h3
-        className="fd-action-bar__title"
-      >
-        Page Title
-      </h3>
-      <div
-        className="fd-action-bar__actions"
-      >
-        <button
-          className="fd-button"
-          type="button"
-        >
-          Button
-        </button>
-        <button
-          className="fd-button fd-button--emphasized"
-          type="button"
-        >
-          Button
-        </button>
-      </div>
-    </div>
-    <p
-      className="fd-action-bar__description fd-action-bar__description--back"
-    >
-      Action Bar Description
-    </p>
-  </div>
-  <div
-    className="fd-action-bar"
-  >
-    <div
-      className="fd-action-bar__header"
-    >
-      <h3
-        className="fd-action-bar__title"
-      >
-        Page Title
-      </h3>
-      <div
-        className="fd-action-bar__actions"
-      >
-        <button
-          className="fd-button"
-          type="button"
-        >
-          Button
-        </button>
-        <button
-          className="fd-button fd-button--emphasized"
-          type="button"
-        >
-          Button
-        </button>
-      </div>
-    </div>
-    <p
-      className="fd-action-bar__description"
-    >
-      Action Bar Description
-    </p>
-  </div>
-  <div
-    className="fd-action-bar"
-  >
-    <div
-      className="fd-action-bar__header"
-    >
-      <h3
-        className="fd-action-bar__title"
-      >
-        Page Title
-      </h3>
-      <div
-        className="fd-action-bar__actions"
+        className="fd-action-bar__header"
       >
         <div
-          className="fd-popover"
+          className="fd-action-bar__back"
+        >
+          <button
+            className="fd-button fd-button--transparent fd-button--compact sap-icon--navigation-left-arrow"
+            onClick={[Function]}
+            type="button"
+          />
+        </div>
+        <h3
+          className="fd-action-bar__title"
+        >
+          Page Title
+        </h3>
+        <div
+          className="fd-action-bar__actions"
+        >
+          <button
+            className="fd-button"
+            type="button"
+          >
+            Button
+          </button>
+          <button
+            className="fd-button fd-button--emphasized"
+            type="button"
+          >
+            Button
+          </button>
+        </div>
+      </div>
+      <p
+        className="fd-action-bar__description fd-action-bar__description--back"
+      >
+        Action Bar Description
+      </p>
+    </div>
+  </div>
+  <div>
+    <div
+      className="fd-action-bar"
+    >
+      <div
+        className="fd-action-bar__header"
+      >
+        <h3
+          className="fd-action-bar__title"
+        >
+          Page Title
+        </h3>
+        <div
+          className="fd-action-bar__actions"
+        >
+          <button
+            className="fd-button"
+            type="button"
+          >
+            Button
+          </button>
+          <button
+            className="fd-button fd-button--emphasized"
+            type="button"
+          >
+            Button
+          </button>
+        </div>
+      </div>
+      <p
+        className="fd-action-bar__description"
+      >
+        Action Bar Description
+      </p>
+    </div>
+  </div>
+  <div>
+    <div
+      className="fd-action-bar"
+    >
+      <div
+        className="fd-action-bar__header"
+      >
+        <h3
+          className="fd-action-bar__title"
+        >
+          Page Title
+        </h3>
+        <div
+          className="fd-action-bar__actions"
         >
           <div
-            onFocus={[Function]}
-            onMouseDown={[Function]}
-            onTouchStart={[Function]}
+            className="fd-popover"
           >
             <div
-              className="fd-popover__control"
+              onFocus={[Function]}
+              onMouseDown={[Function]}
+              onTouchStart={[Function]}
             >
-              <button
-                aria-controls="fd-1"
-                aria-expanded={false}
-                aria-haspopup={true}
-                className="fd-button fd-button--transparent sap-icon--vertical-grip"
-                onClick={[Function]}
-                onKeyPress={[Function]}
-                role="button"
-                tabIndex={0}
-                type="button"
-              />
+              <div
+                className="fd-popover__control"
+              >
+                <button
+                  aria-controls="fd-1"
+                  aria-expanded={false}
+                  aria-haspopup={true}
+                  className="fd-button fd-button--transparent sap-icon--vertical-grip"
+                  onClick={[Function]}
+                  onKeyPress={[Function]}
+                  role="button"
+                  tabIndex={0}
+                  type="button"
+                />
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <p
-      className="fd-action-bar__description"
-    >
-      Action Bar Description
-    </p>
-  </div>
-  <div
-    className="fd-action-bar"
-  >
-    <div
-      className="fd-action-bar__header"
-    >
-      <div
-        className="fd-action-bar__back"
+      <p
+        className="fd-action-bar__description"
       >
-        <button
-          className="fd-button fd-button--transparent fd-button--compact sap-icon--navigation-left-arrow"
-          onClick={[Function]}
-          type="button"
-        />
-      </div>
-      <h2
-        className="fd-action-bar__title"
-      >
-        Page Title
-      </h2>
-      <div
-        className="fd-action-bar__actions"
-      >
-        <button
-          className="fd-button"
-          type="button"
-        >
-          Button
-        </button>
-        <button
-          className="fd-button fd-button--emphasized"
-          type="button"
-        >
-          Button
-        </button>
-      </div>
-    </div>
-    <p
-      className="fd-action-bar__description fd-action-bar__description--back"
-    >
-      Action Bar description
-    </p>
-  </div>
-  <div
-    className="fd-action-bar"
-  >
-    <div
-      className="fd-action-bar__header"
-    >
-      <h3
-        className="fd-action-bar__title"
-      >
-        Page Title
-      </h3>
-      <div
-        className="fd-action-bar__actions"
-      >
-        <button
-          className="fd-button"
-          type="button"
-        >
-          Button
-        </button>
-        <button
-          className="fd-button fd-button--emphasized"
-          type="button"
-        >
-          Button
-        </button>
-      </div>
+        Action Bar Description
+      </p>
     </div>
   </div>
-  <div
-    className="fd-action-bar"
-  >
+  <div>
     <div
-      className="fd-action-bar__header"
+      className="fd-action-bar"
     >
-      <h3
-        className="fd-action-bar__title"
+      <div
+        className="fd-action-bar__header"
       >
-        Page Title
-      </h3>
+        <div
+          className="fd-action-bar__back"
+        >
+          <button
+            className="fd-button fd-button--transparent fd-button--compact sap-icon--navigation-left-arrow"
+            onClick={[Function]}
+            type="button"
+          />
+        </div>
+        <h2
+          className="fd-action-bar__title"
+        >
+          Page Title
+        </h2>
+        <div
+          className="fd-action-bar__actions"
+        >
+          <button
+            className="fd-button"
+            type="button"
+          >
+            Button
+          </button>
+          <button
+            className="fd-button fd-button--emphasized"
+            type="button"
+          >
+            Button
+          </button>
+        </div>
+      </div>
+      <p
+        className="fd-action-bar__description fd-action-bar__description--back"
+      >
+        Action Bar description
+      </p>
+    </div>
+  </div>
+  <div>
+    <div
+      className="fd-action-bar"
+    >
+      <div
+        className="fd-action-bar__header"
+      >
+        <h3
+          className="fd-action-bar__title"
+        >
+          Page Title
+        </h3>
+        <div
+          className="fd-action-bar__actions"
+        >
+          <button
+            className="fd-button"
+            type="button"
+          >
+            Button
+          </button>
+          <button
+            className="fd-button fd-button--emphasized"
+            type="button"
+          >
+            Button
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      className="fd-action-bar"
+    >
+      <div
+        className="fd-action-bar__header"
+      >
+        <h3
+          className="fd-action-bar__title"
+        >
+          Page Title
+        </h3>
+      </div>
     </div>
   </div>
 </div>
