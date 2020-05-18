@@ -46,7 +46,7 @@ export default {
 export const ${componentName} = () => {
     let storyNames = Object.keys(stories).filter(story => story !== 'default');
 
-    return (<>{storyNames.map(item => stories[item]())}</>);
+    return (<>{storyNames.map(item => <div>{stories[item]()}</div>)}</>);
 };
 ${componentName}.story = {
     parameters: {
