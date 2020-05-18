@@ -45,25 +45,25 @@ disabled.story = {
 };
 
 export const validationStates = () => (
-    <div className='fr-container'>
+    <div className='fddocs-container'>
         <FormSelect state='error'>
             <option>Duis malesuada odio volutpat elementum</option>
             <option>Suspendisse ante ligula</option>
             <option>Sed bibendum sapien at posuere interdum</option>
         </FormSelect>
-        <div className='break' />
+        <div className='fddocs-container--break' />
         <FormSelect state='warning'>
             <option>Duis malesuada odio volutpat elementum</option>
             <option>Suspendisse ante ligula</option>
             <option>Sed bibendum sapien at posuere interdum</option>
         </FormSelect>
-        <div className='break' />
+        <div className='fddocs-container--break' />
         <FormSelect state='information'>
             <option>Duis malesuada odio volutpat elementum</option>
             <option>Suspendisse ante ligula</option>
             <option>Sed bibendum sapien at posuere interdum</option>
         </FormSelect>
-        <div className='break' />
+        <div className='fddocs-container--break' />
         <FormSelect state='success'>
             <option>Duis malesuada odio volutpat elementum</option>
             <option>Suspendisse ante ligula</option>

@@ -12,7 +12,7 @@ exports[`Storyshots Visual Identifier 1`] = `
   </div>
   <div>
     <div
-      className="fr-container"
+      className="fddocs-container"
     >
       <span
         className="fd-identifier fd-identifier--xxs sap-icon--washing-machine"
@@ -46,7 +46,7 @@ exports[`Storyshots Visual Identifier 1`] = `
   </div>
   <div>
     <div
-      className="fr-container"
+      className="fddocs-container"
     >
       <span
         aria-label="Wendy Wallace"
@@ -101,7 +101,7 @@ exports[`Storyshots Visual Identifier 1`] = `
   </div>
   <div>
     <div
-      className="fr-container"
+      className="fddocs-container"
     >
       <span
         className="fd-identifier fd-identifier--xxs sap-icon--washing-machine fd-identifier--circle"
@@ -135,7 +135,7 @@ exports[`Storyshots Visual Identifier 1`] = `
   </div>
   <div>
     <div
-      className="fr-container"
+      className="fddocs-container"
     >
       <span
         className="fd-identifier fd-identifier--xxs fd-identifier--circle fd-identifier--thumbnail"
@@ -204,7 +204,7 @@ exports[`Storyshots Visual Identifier 1`] = `
   </div>
   <div>
     <div
-      className="fr-container"
+      className="fddocs-container"
     >
       <span
         aria-label="Wendy Wallace"
@@ -221,7 +221,7 @@ exports[`Storyshots Visual Identifier 1`] = `
   </div>
   <div>
     <div
-      className="fr-container"
+      className="fddocs-container"
     >
       <span
         className="fd-identifier fd-identifier--m sap-icon--money-bills fd-has-background-color-accent-1"

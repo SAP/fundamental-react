@@ -11,11 +11,11 @@ const getMatchOptions = () => {
 
 //This is needed to keep CI from failing due to viewport differences
 const view = {
-    name: 'Desktop 800x600',
+    name: 'Desktop 1200x800',
     userAgent: 'placeholder',
     viewport: {
-        width: 800,
-        height: 600
+        width: 1200,
+        height: 800
     }
 };
 

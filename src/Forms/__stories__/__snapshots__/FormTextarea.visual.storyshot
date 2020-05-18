@@ -49,7 +49,7 @@ exports[`Storyshots Visual Form Textarea 1`] = `
   </div>
   <div>
     <div
-      className="fr-container"
+      className="fddocs-container"
     >
       <textarea
         className="fd-textarea is-error"

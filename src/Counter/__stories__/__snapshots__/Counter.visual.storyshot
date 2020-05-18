@@ -14,7 +14,7 @@ exports[`Storyshots Visual Counter 1`] = `
   </div>
   <div>
     <div
-      className="fr-container"
+      className="fddocs-container"
     >
       <span
         aria-label="Unread count"
@@ -44,7 +44,7 @@ exports[`Storyshots Visual Counter 1`] = `
   </div>
   <div>
     <div
-      className="fr-container"
+      className="fddocs-container"
     >
       <p>
         Lorem ipsum 
@@ -59,7 +59,7 @@ exports[`Storyshots Visual Counter 1`] = `
   </div>
   <div>
     <div
-      className="fr-container"
+      className="fddocs-container"
     >
       <button
         className="fd-button fd-button--transparent sap-icon--bell"
