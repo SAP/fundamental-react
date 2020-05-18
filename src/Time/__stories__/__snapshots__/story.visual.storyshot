@@ -1,0 +1,966 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Visual Time 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    className="fd-time"
+  >
+    <div
+      className="fd-time__item"
+    >
+      <div
+        className="fd-time__control"
+      >
+        <button
+          aria-label="Increase hours"
+          className="fd-button fd-button--transparent sap-icon--navigation-up-arrow"
+          onClick={[Function]}
+          type="button"
+        />
+      </div>
+      <input
+        aria-label="Hours"
+        className="fd-input fd-time__input "
+        maxLength="2"
+        name="hour"
+        onChange={[Function]}
+        placeholder="hh"
+        type="text"
+        value="00"
+      />
+      <div
+        className="fd-time__control"
+      >
+        <button
+          aria-label="Decrease hours"
+          className="fd-button fd-button--transparent sap-icon--navigation-down-arrow"
+          onClick={[Function]}
+          type="button"
+        />
+      </div>
+    </div>
+    <div
+      className="fd-time__item"
+    >
+      <div
+        className="fd-time__control"
+      >
+        <button
+          aria-label="Increase minutes"
+          className="fd-button fd-button--transparent sap-icon--navigation-up-arrow"
+          onClick={[Function]}
+          type="button"
+        />
+      </div>
+      <input
+        aria-label="Minutes"
+        className="fd-input fd-time__input "
+        maxLength="2"
+        name="minute"
+        onChange={[Function]}
+        placeholder="mm"
+        type="text"
+        value="00"
+      />
+      <div
+        className="fd-time__control"
+      >
+        <button
+          aria-label="Decrease minutes"
+          className="fd-button fd-button--transparent sap-icon--navigation-down-arrow"
+          onClick={[Function]}
+          type="button"
+        />
+      </div>
+    </div>
+    <div
+      className="fd-time__item"
+    >
+      <div
+        className="fd-time__control"
+      >
+        <button
+          aria-label="Increase seconds"
+          className="fd-button fd-button--transparent sap-icon--navigation-up-arrow"
+          onClick={[Function]}
+          type="button"
+        />
+      </div>
+      <input
+        aria-label="Seconds"
+        className="fd-input fd-time__input "
+        maxLength="2"
+        name="second"
+        onChange={[Function]}
+        placeholder="ss"
+        type="text"
+        value="00"
+      />
+      <div
+        className="fd-time__control"
+      >
+        <button
+          aria-label="Decrease seconds"
+          className="fd-button fd-button--transparent sap-icon--navigation-down-arrow"
+          onClick={[Function]}
+          type="button"
+        />
+      </div>
+    </div>
+    
+  </div>
+  <div
+    className="fd-time"
+  >
+    <div
+      className="fd-time__item"
+    >
+      <div
+        className="fd-time__control"
+      >
+        <button
+          aria-label="Increase hours"
+          className="fd-button fd-button--transparent sap-icon--navigation-up-arrow"
+          onClick={[Function]}
+          type="button"
+        />
+      </div>
+      <input
+        aria-label="Hours"
+        className="fd-input fd-time__input "
+        maxLength="2"
+        name="hour"
+        onChange={[Function]}
+        placeholder="hh"
+        type="text"
+        value="00"
+      />
+      <div
+        className="fd-time__control"
+      >
+        <button
+          aria-label="Decrease hours"
+          className="fd-button fd-button--transparent sap-icon--navigation-down-arrow"
+          onClick={[Function]}
+          type="button"
+        />
+      </div>
+    </div>
+    <div
+      className="fd-time__item"
+    >
+      <div
+        className="fd-time__control"
+      >
+        <button
+          aria-label="Increase minutes"
+          className="fd-button fd-button--transparent sap-icon--navigation-up-arrow"
+          onClick={[Function]}
+          type="button"
+        />
+      </div>
+      <input
+        aria-label="Minutes"
+        className="fd-input fd-time__input "
+        maxLength="2"
+        name="minute"
+        onChange={[Function]}
+        placeholder="mm"
+        type="text"
+        value="00"
+      />
+      <div
+        className="fd-time__control"
+      >
+        <button
+          aria-label="Decrease minutes"
+          className="fd-button fd-button--transparent sap-icon--navigation-down-arrow"
+          onClick={[Function]}
+          type="button"
+        />
+      </div>
+    </div>
+    <div
+      className="fd-time__item"
+    >
+      <div
+        className="fd-time__control"
+      >
+        <button
+          aria-label="Increase seconds"
+          className="fd-button fd-button--transparent sap-icon--navigation-up-arrow"
+          onClick={[Function]}
+          type="button"
+        />
+      </div>
+      <input
+        aria-label="Seconds"
+        className="fd-input fd-time__input "
+        maxLength="2"
+        name="second"
+        onChange={[Function]}
+        placeholder="ss"
+        type="text"
+        value="00"
+      />
+      <div
+        className="fd-time__control"
+      >
+        <button
+          aria-label="Decrease seconds"
+          className="fd-button fd-button--transparent sap-icon--navigation-down-arrow"
+          onClick={[Function]}
+          type="button"
+        />
+      </div>
+    </div>
+    
+  </div>
+  <div
+    className="fd-time"
+  >
+    <div
+      className="fd-time__item"
+    >
+      <div
+        className="fd-time__control"
+      >
+        <button
+          aria-label="Increase hours"
+          className="fd-button fd-button--transparent sap-icon--navigation-up-arrow is-disabled"
+          disabled={true}
+          onClick={[Function]}
+          type="button"
+        />
+      </div>
+      <input
+        aria-label="Hours"
+        className="fd-input fd-time__input is-disabled"
+        maxLength="2"
+        name="hour"
+        onChange={[Function]}
+        placeholder="hh"
+        readOnly={true}
+        type="text"
+        value="00"
+      />
+      <div
+        className="fd-time__control"
+      >
+        <button
+          aria-label="Decrease hours"
+          className="fd-button fd-button--transparent sap-icon--navigation-down-arrow is-disabled"
+          disabled={true}
+          onClick={[Function]}
+          type="button"
+        />
+      </div>
+    </div>
+    <div
+      className="fd-time__item"
+    >
+      <div
+        className="fd-time__control"
+      >
+        <button
+          aria-label="Increase minutes"
+          className="fd-button fd-button--transparent sap-icon--navigation-up-arrow is-disabled"
+          disabled={true}
+          onClick={[Function]}
+          type="button"
+        />
+      </div>
+      <input
+        aria-label="Minutes"
+        className="fd-input fd-time__input is-disabled"
+        maxLength="2"
+        name="minute"
+        onChange={[Function]}
+        placeholder="mm"
+        readOnly={true}
+        type="text"
+        value="00"
+      />
+      <div
+        className="fd-time__control"
+      >
+        <button
+          aria-label="Decrease minutes"
+          className="fd-button fd-button--transparent sap-icon--navigation-down-arrow is-disabled"
+          disabled={true}
+          onClick={[Function]}
+          type="button"
+        />
+      </div>
+    </div>
+    <div
+      className="fd-time__item"
+    >
+      <div
+        className="fd-time__control"
+      >
+        <button
+          aria-label="Increase seconds"
+          className="fd-button fd-button--transparent sap-icon--navigation-up-arrow is-disabled"
+          disabled={true}
+          onClick={[Function]}
+          type="button"
+        />
+      </div>
+      <input
+        aria-label="Seconds"
+        className="fd-input fd-time__input is-disabled"
+        maxLength="2"
+        name="second"
+        onChange={[Function]}
+        placeholder="ss"
+        readOnly={true}
+        type="text"
+        value="00"
+      />
+      <div
+        className="fd-time__control"
+      >
+        <button
+          aria-label="Decrease seconds"
+          className="fd-button fd-button--transparent sap-icon--navigation-down-arrow is-disabled"
+          disabled={true}
+          onClick={[Function]}
+          type="button"
+        />
+      </div>
+    </div>
+    
+  </div>
+  <div
+    className="fd-time"
+  >
+    <div
+      className="fd-time__item"
+    >
+      <div
+        className="fd-time__control"
+      >
+        <button
+          aria-label="Increase hours"
+          className="fd-button fd-button--transparent sap-icon--navigation-up-arrow"
+          onClick={[Function]}
+          type="button"
+        />
+      </div>
+      <input
+        aria-label="Hours"
+        className="fd-input fd-time__input "
+        maxLength="2"
+        name="hour"
+        onChange={[Function]}
+        placeholder="hh"
+        type="text"
+        value="00"
+      />
+      <div
+        className="fd-time__control"
+      >
+        <button
+          aria-label="Decrease hours"
+          className="fd-button fd-button--transparent sap-icon--navigation-down-arrow"
+          onClick={[Function]}
+          type="button"
+        />
+      </div>
+    </div>
+    <div
+      className="fd-time__item"
+    >
+      <div
+        className="fd-time__control"
+      >
+        <button
+          aria-label="Increase minutes"
+          className="fd-button fd-button--transparent sap-icon--navigation-up-arrow"
+          onClick={[Function]}
+          type="button"
+        />
+      </div>
+      <input
+        aria-label="Minutes"
+        className="fd-input fd-time__input "
+        maxLength="2"
+        name="minute"
+        onChange={[Function]}
+        placeholder="mm"
+        type="text"
+        value="00"
+      />
+      <div
+        className="fd-time__control"
+      >
+        <button
+          aria-label="Decrease minutes"
+          className="fd-button fd-button--transparent sap-icon--navigation-down-arrow"
+          onClick={[Function]}
+          type="button"
+        />
+      </div>
+    </div>
+    <div
+      className="fd-time__item"
+    >
+      <div
+        className="fd-time__control"
+      >
+        <button
+          aria-label="Increase seconds"
+          className="fd-button fd-button--transparent sap-icon--navigation-up-arrow"
+          onClick={[Function]}
+          type="button"
+        />
+      </div>
+      <input
+        aria-label="Seconds"
+        className="fd-input fd-time__input "
+        maxLength="2"
+        name="second"
+        onChange={[Function]}
+        placeholder="ss"
+        type="text"
+        value="00"
+      />
+      <div
+        className="fd-time__control"
+      >
+        <button
+          aria-label="Decrease seconds"
+          className="fd-button fd-button--transparent sap-icon--navigation-down-arrow"
+          onClick={[Function]}
+          type="button"
+        />
+      </div>
+    </div>
+    
+  </div>
+  <div
+    className="fd-time"
+  >
+    <div
+      className="fd-time__item"
+    >
+      <div
+        className="fd-time__control"
+      >
+        <button
+          aria-label="Increase hours"
+          className="fd-button fd-button--transparent sap-icon--navigation-up-arrow"
+          onClick={[Function]}
+          type="button"
+        />
+      </div>
+      <input
+        aria-label="Hours"
+        className="fd-input fd-time__input "
+        maxLength="2"
+        name="hour"
+        onChange={[Function]}
+        placeholder="hh"
+        type="text"
+        value="12"
+      />
+      <div
+        className="fd-time__control"
+      >
+        <button
+          aria-label="Decrease hours"
+          className="fd-button fd-button--transparent sap-icon--navigation-down-arrow"
+          onClick={[Function]}
+          type="button"
+        />
+      </div>
+    </div>
+    <div
+      className="fd-time__item"
+    >
+      <div
+        className="fd-time__control"
+      >
+        <button
+          aria-label="Increase minutes"
+          className="fd-button fd-button--transparent sap-icon--navigation-up-arrow"
+          onClick={[Function]}
+          type="button"
+        />
+      </div>
+      <input
+        aria-label="Minutes"
+        className="fd-input fd-time__input "
+        maxLength="2"
+        name="minute"
+        onChange={[Function]}
+        placeholder="mm"
+        type="text"
+        value="00"
+      />
+      <div
+        className="fd-time__control"
+      >
+        <button
+          aria-label="Decrease minutes"
+          className="fd-button fd-button--transparent sap-icon--navigation-down-arrow"
+          onClick={[Function]}
+          type="button"
+        />
+      </div>
+    </div>
+    <div
+      className="fd-time__item"
+    >
+      <div
+        className="fd-time__control"
+      >
+        <button
+          aria-label="Increase seconds"
+          className="fd-button fd-button--transparent sap-icon--navigation-up-arrow"
+          onClick={[Function]}
+          type="button"
+        />
+      </div>
+      <input
+        aria-label="Seconds"
+        className="fd-input fd-time__input "
+        maxLength="2"
+        name="second"
+        onChange={[Function]}
+        placeholder="ss"
+        type="text"
+        value="00"
+      />
+      <div
+        className="fd-time__control"
+      >
+        <button
+          aria-label="Decrease seconds"
+          className="fd-button fd-button--transparent sap-icon--navigation-down-arrow"
+          onClick={[Function]}
+          type="button"
+        />
+      </div>
+    </div>
+    <div
+      className="fd-time__item"
+    >
+      <div
+        className="fd-time__control"
+      >
+        <button
+          aria-label="Increase period"
+          className="fd-button fd-button--transparent sap-icon--navigation-up-arrow"
+          onClick={[Function]}
+          type="button"
+        />
+      </div>
+      <input
+        aria-label="Period"
+        className="fd-input fd-time__input "
+        maxLength="2"
+        name="meridiem"
+        onChange={[Function]}
+        type="text"
+        value="am"
+      />
+      <div
+        className="fd-time__control"
+      >
+        <button
+          aria-label="Decrease period"
+          className="fd-button fd-button--transparent sap-icon--navigation-down-arrow"
+          onClick={[Function]}
+          type="button"
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    className="fd-time"
+  >
+    <div
+      className="fd-time__item"
+    >
+      
+      <input
+        aria-label="Hours"
+        className="fd-input fd-time__input "
+        maxLength="2"
+        name="hour"
+        onChange={[Function]}
+        placeholder="hh"
+        type="text"
+        value="12"
+      />
+      
+    </div>
+    <div
+      className="fd-time__item"
+    >
+      
+      <input
+        aria-label="Minutes"
+        className="fd-input fd-time__input "
+        maxLength="2"
+        name="minute"
+        onChange={[Function]}
+        placeholder="mm"
+        type="text"
+        value="00"
+      />
+      
+    </div>
+    <div
+      className="fd-time__item"
+    >
+      
+      <input
+        aria-label="Seconds"
+        className="fd-input fd-time__input "
+        maxLength="2"
+        name="second"
+        onChange={[Function]}
+        placeholder="ss"
+        type="text"
+        value="00"
+      />
+      
+    </div>
+    
+  </div>
+  <div
+    className="fd-time"
+  >
+    <div
+      className="fd-time__item"
+    >
+      <div
+        className="fd-time__control"
+      >
+        <button
+          aria-label="Increase hours"
+          className="fd-button fd-button--transparent sap-icon--navigation-up-arrow"
+          onClick={[Function]}
+          type="button"
+        />
+      </div>
+      <input
+        aria-label="Hours"
+        className="fd-input fd-time__input "
+        maxLength="2"
+        name="hour"
+        onChange={[Function]}
+        placeholder="hh"
+        type="text"
+        value="12"
+      />
+      <div
+        className="fd-time__control"
+      >
+        <button
+          aria-label="Decrease hours"
+          className="fd-button fd-button--transparent sap-icon--navigation-down-arrow"
+          onClick={[Function]}
+          type="button"
+        />
+      </div>
+    </div>
+    <div
+      className="fd-time__item"
+    >
+      <div
+        className="fd-time__control"
+      >
+        <button
+          aria-label="Increase minutes"
+          className="fd-button fd-button--transparent sap-icon--navigation-up-arrow"
+          onClick={[Function]}
+          type="button"
+        />
+      </div>
+      <input
+        aria-label="Minutes"
+        className="fd-input fd-time__input "
+        maxLength="2"
+        name="minute"
+        onChange={[Function]}
+        placeholder="mm"
+        type="text"
+        value="00"
+      />
+      <div
+        className="fd-time__control"
+      >
+        <button
+          aria-label="Decrease minutes"
+          className="fd-button fd-button--transparent sap-icon--navigation-down-arrow"
+          onClick={[Function]}
+          type="button"
+        />
+      </div>
+    </div>
+    
+    
+  </div>
+  <div
+    className="fd-time"
+  >
+    <div
+      className="fd-time__item"
+    >
+      <div
+        className="fd-time__control"
+      >
+        <button
+          aria-label="Increase hours"
+          className="fd-button fd-button--transparent sap-icon--navigation-up-arrow"
+          onClick={[Function]}
+          type="button"
+        />
+      </div>
+      <input
+        aria-label="Hours"
+        className="fd-input fd-time__input "
+        maxLength="2"
+        name="hour"
+        onChange={[Function]}
+        placeholder="hh"
+        type="text"
+        value="12"
+      />
+      <div
+        className="fd-time__control"
+      >
+        <button
+          aria-label="Decrease hours"
+          className="fd-button fd-button--transparent sap-icon--navigation-down-arrow"
+          onClick={[Function]}
+          type="button"
+        />
+      </div>
+    </div>
+    
+    <div
+      className="fd-time__item"
+    >
+      <div
+        className="fd-time__control"
+      >
+        <button
+          aria-label="Increase seconds"
+          className="fd-button fd-button--transparent sap-icon--navigation-up-arrow"
+          onClick={[Function]}
+          type="button"
+        />
+      </div>
+      <input
+        aria-label="Seconds"
+        className="fd-input fd-time__input "
+        maxLength="2"
+        name="second"
+        onChange={[Function]}
+        placeholder="ss"
+        type="text"
+        value="00"
+      />
+      <div
+        className="fd-time__control"
+      >
+        <button
+          aria-label="Decrease seconds"
+          className="fd-button fd-button--transparent sap-icon--navigation-down-arrow"
+          onClick={[Function]}
+          type="button"
+        />
+      </div>
+    </div>
+    
+  </div>
+  <div
+    className="fd-time"
+  >
+    
+    <div
+      className="fd-time__item"
+    >
+      <div
+        className="fd-time__control"
+      >
+        <button
+          aria-label="Increase minutes"
+          className="fd-button fd-button--transparent sap-icon--navigation-up-arrow"
+          onClick={[Function]}
+          type="button"
+        />
+      </div>
+      <input
+        aria-label="Minutes"
+        className="fd-input fd-time__input "
+        maxLength="2"
+        name="minute"
+        onChange={[Function]}
+        placeholder="mm"
+        type="text"
+        value="00"
+      />
+      <div
+        className="fd-time__control"
+      >
+        <button
+          aria-label="Decrease minutes"
+          className="fd-button fd-button--transparent sap-icon--navigation-down-arrow"
+          onClick={[Function]}
+          type="button"
+        />
+      </div>
+    </div>
+    <div
+      className="fd-time__item"
+    >
+      <div
+        className="fd-time__control"
+      >
+        <button
+          aria-label="Increase seconds"
+          className="fd-button fd-button--transparent sap-icon--navigation-up-arrow"
+          onClick={[Function]}
+          type="button"
+        />
+      </div>
+      <input
+        aria-label="Seconds"
+        className="fd-input fd-time__input "
+        maxLength="2"
+        name="second"
+        onChange={[Function]}
+        placeholder="ss"
+        type="text"
+        value="00"
+      />
+      <div
+        className="fd-time__control"
+      >
+        <button
+          aria-label="Decrease seconds"
+          className="fd-button fd-button--transparent sap-icon--navigation-down-arrow"
+          onClick={[Function]}
+          type="button"
+        />
+      </div>
+    </div>
+    
+  </div>
+  <div
+    className="fd-time"
+  >
+    <div
+      className="fd-time__item"
+    >
+      <div
+        className="fd-time__control"
+      >
+        <button
+          aria-label="Increase hours"
+          className="fd-button fd-button--transparent sap-icon--navigation-up-arrow"
+          onClick={[Function]}
+          type="button"
+        />
+      </div>
+      <input
+        aria-label="Hours"
+        className="fd-input fd-time__input "
+        maxLength="2"
+        name="hour"
+        onChange={[Function]}
+        placeholder="hh"
+        type="text"
+        value={22}
+      />
+      <div
+        className="fd-time__control"
+      >
+        <button
+          aria-label="Decrease hours"
+          className="fd-button fd-button--transparent sap-icon--navigation-down-arrow"
+          onClick={[Function]}
+          type="button"
+        />
+      </div>
+    </div>
+    <div
+      className="fd-time__item"
+    >
+      <div
+        className="fd-time__control"
+      >
+        <button
+          aria-label="Increase minutes"
+          className="fd-button fd-button--transparent sap-icon--navigation-up-arrow"
+          onClick={[Function]}
+          type="button"
+        />
+      </div>
+      <input
+        aria-label="Minutes"
+        className="fd-input fd-time__input "
+        maxLength="2"
+        name="minute"
+        onChange={[Function]}
+        placeholder="mm"
+        type="text"
+        value={34}
+      />
+      <div
+        className="fd-time__control"
+      >
+        <button
+          aria-label="Decrease minutes"
+          className="fd-button fd-button--transparent sap-icon--navigation-down-arrow"
+          onClick={[Function]}
+          type="button"
+        />
+      </div>
+    </div>
+    <div
+      className="fd-time__item"
+    >
+      <div
+        className="fd-time__control"
+      >
+        <button
+          aria-label="Increase seconds"
+          className="fd-button fd-button--transparent sap-icon--navigation-up-arrow"
+          onClick={[Function]}
+          type="button"
+        />
+      </div>
+      <input
+        aria-label="Seconds"
+        className="fd-input fd-time__input "
+        maxLength="2"
+        name="second"
+        onChange={[Function]}
+        placeholder="ss"
+        type="text"
+        value={12}
+      />
+      <div
+        className="fd-time__control"
+      >
+        <button
+          aria-label="Decrease seconds"
+          className="fd-button fd-button--transparent sap-icon--navigation-down-arrow"
+          onClick={[Function]}
+          type="button"
+        />
+      </div>
+    </div>
+    
+  </div>
+</div>
+`;

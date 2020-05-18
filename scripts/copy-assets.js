@@ -24,9 +24,7 @@ if (fs.existsSync(introductionPath)) {
 }
 
 // create Docs folder if it doesn't already exist
-if (!fs.existsSync('src/Docs')) {
-    fs.mkdirSync('src/Docs');
-}
+fs.mkdirSync('src/Docs', { recursive: true });
 
 // copy readme file and prepend necessary <Meta />, <Header />, <Community /> and <Footer />
 fs.copyFile('README.md', introductionPath, (err) => {
