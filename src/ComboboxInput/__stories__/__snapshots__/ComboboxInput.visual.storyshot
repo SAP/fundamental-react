@@ -119,7 +119,7 @@ exports[`Storyshots Visual Combobox Input 1`] = `
   </div>
   <div>
     <div
-      className="docs-container"
+      className="fddocs-container"
     >
       <div
         className="fd-popover"

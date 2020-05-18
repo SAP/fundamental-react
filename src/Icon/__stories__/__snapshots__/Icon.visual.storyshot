@@ -11,7 +11,7 @@ exports[`Storyshots Visual Icon 1`] = `
   </div>
   <div>
     <div
-      className="docs-container"
+      className="fddocs-container"
     >
       <span
         className="sap-icon--cart sap-icon--s"
@@ -32,10 +32,10 @@ exports[`Storyshots Visual Icon 1`] = `
   </div>
   <div>
     <div
-      className="docs-container"
+      className="fddocs-container"
     >
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--accelerated sap-icon--xl"
@@ -46,7 +46,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--accept sap-icon--xl"
@@ -57,7 +57,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--accidental-leave sap-icon--xl"
@@ -68,7 +68,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--account sap-icon--xl"
@@ -79,7 +79,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--accounting-document-verification sap-icon--xl"
@@ -90,7 +90,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--action sap-icon--xl"
@@ -101,7 +101,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--action-settings sap-icon--xl"
@@ -112,7 +112,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--activate sap-icon--xl"
@@ -123,7 +123,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--activities sap-icon--xl"
@@ -134,7 +134,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--activity-2 sap-icon--xl"
@@ -145,7 +145,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--activity-assigned-to-goal sap-icon--xl"
@@ -156,7 +156,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--activity-individual sap-icon--xl"
@@ -167,7 +167,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--activity-items sap-icon--xl"
@@ -178,7 +178,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--add sap-icon--xl"
@@ -189,7 +189,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--add-activity sap-icon--xl"
@@ -200,7 +200,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--add-activity-2 sap-icon--xl"
@@ -211,7 +211,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--add-contact sap-icon--xl"
@@ -222,7 +222,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--add-coursebook sap-icon--xl"
@@ -233,7 +233,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--add-document sap-icon--xl"
@@ -244,7 +244,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--add-equipment sap-icon--xl"
@@ -255,7 +255,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--add-favorite sap-icon--xl"
@@ -266,7 +266,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--add-filter sap-icon--xl"
@@ -277,7 +277,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--add-photo sap-icon--xl"
@@ -288,7 +288,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--add-process sap-icon--xl"
@@ -299,7 +299,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--add-product sap-icon--xl"
@@ -310,7 +310,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--address-book sap-icon--xl"
@@ -321,7 +321,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--addresses sap-icon--xl"
@@ -332,7 +332,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--alert sap-icon--xl"
@@ -343,7 +343,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--along-stacked-chart sap-icon--xl"
@@ -354,7 +354,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--alphabetical-order sap-icon--xl"
@@ -365,7 +365,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--appointment sap-icon--xl"
@@ -376,7 +376,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--appointment-2 sap-icon--xl"
@@ -387,7 +387,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--approvals sap-icon--xl"
@@ -398,7 +398,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--area-chart sap-icon--xl"
@@ -409,7 +409,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--arobase sap-icon--xl"
@@ -420,7 +420,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--arrow-bottom sap-icon--xl"
@@ -431,7 +431,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--arrow-down sap-icon--xl"
@@ -442,7 +442,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--arrow-left sap-icon--xl"
@@ -453,7 +453,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--arrow-right sap-icon--xl"
@@ -464,7 +464,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--arrow-top sap-icon--xl"
@@ -475,7 +475,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--attachment sap-icon--xl"
@@ -486,7 +486,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--attachment-audio sap-icon--xl"
@@ -497,7 +497,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--attachment-e-pub sap-icon--xl"
@@ -508,7 +508,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--attachment-html sap-icon--xl"
@@ -519,7 +519,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--attachment-photo sap-icon--xl"
@@ -530,7 +530,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--attachment-text-file sap-icon--xl"
@@ -541,7 +541,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--attachment-video sap-icon--xl"
@@ -552,7 +552,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--attachment-zip-file sap-icon--xl"
@@ -563,7 +563,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--back-to-top sap-icon--xl"
@@ -574,7 +574,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--background sap-icon--xl"
@@ -585,7 +585,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--badge sap-icon--xl"
@@ -596,7 +596,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--bar-chart sap-icon--xl"
@@ -607,7 +607,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--bar-code sap-icon--xl"
@@ -618,7 +618,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--basket sap-icon--xl"
@@ -629,7 +629,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--batch-payments sap-icon--xl"
@@ -640,7 +640,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--bbyd-active-sales sap-icon--xl"
@@ -651,7 +651,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--bbyd-dashboard sap-icon--xl"
@@ -662,7 +662,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--bed sap-icon--xl"
@@ -673,7 +673,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--begin sap-icon--xl"
@@ -684,7 +684,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--bell sap-icon--xl"
@@ -695,7 +695,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--blank-tag sap-icon--xl"
@@ -706,7 +706,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--blank-tag-2 sap-icon--xl"
@@ -717,7 +717,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--bo-strategy-management sap-icon--xl"
@@ -728,7 +728,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--bold-text sap-icon--xl"
@@ -739,7 +739,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--bookmark sap-icon--xl"
@@ -750,7 +750,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--border sap-icon--xl"
@@ -761,7 +761,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--broken-link sap-icon--xl"
@@ -772,7 +772,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--bubble-chart sap-icon--xl"
@@ -783,7 +783,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--building sap-icon--xl"
@@ -794,7 +794,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--bullet-text sap-icon--xl"
@@ -805,7 +805,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--burglary sap-icon--xl"
@@ -816,7 +816,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--bus-public-transport sap-icon--xl"
@@ -827,7 +827,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--business-by-design sap-icon--xl"
@@ -838,7 +838,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--business-card sap-icon--xl"
@@ -849,7 +849,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--business-objects-experience sap-icon--xl"
@@ -860,7 +860,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--business-objects-explorer sap-icon--xl"
@@ -871,7 +871,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--business-objects-mobile sap-icon--xl"
@@ -882,7 +882,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--business-one sap-icon--xl"
@@ -893,7 +893,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--calendar sap-icon--xl"
@@ -904,7 +904,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--call sap-icon--xl"
@@ -915,7 +915,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--camera sap-icon--xl"
@@ -926,7 +926,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--cancel sap-icon--xl"
@@ -937,7 +937,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--cancel-maintenance sap-icon--xl"
@@ -948,7 +948,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--cancel-share sap-icon--xl"
@@ -959,7 +959,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--capital-projects sap-icon--xl"
@@ -970,7 +970,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--car-rental sap-icon--xl"
@@ -981,7 +981,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--card sap-icon--xl"
@@ -992,7 +992,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--cargo-train sap-icon--xl"
@@ -1003,7 +1003,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--cart sap-icon--xl"
@@ -1014,7 +1014,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--cart-2 sap-icon--xl"
@@ -1025,7 +1025,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--cart-3 sap-icon--xl"
@@ -1036,7 +1036,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--cart-4 sap-icon--xl"
@@ -1047,7 +1047,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--cart-5 sap-icon--xl"
@@ -1058,7 +1058,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--cart-approval sap-icon--xl"
@@ -1069,7 +1069,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--cart-full sap-icon--xl"
@@ -1080,7 +1080,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--cause sap-icon--xl"
@@ -1091,7 +1091,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--chain-link sap-icon--xl"
@@ -1102,7 +1102,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--chalkboard sap-icon--xl"
@@ -1113,7 +1113,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--chart-axis sap-icon--xl"
@@ -1124,7 +1124,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--chart-table-view sap-icon--xl"
@@ -1135,7 +1135,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--Chart-Tree-Map sap-icon--xl"
@@ -1146,7 +1146,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--check-availability sap-icon--xl"
@@ -1157,7 +1157,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--checklist sap-icon--xl"
@@ -1168,7 +1168,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--checklist-2 sap-icon--xl"
@@ -1179,7 +1179,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--checklist-item sap-icon--xl"
@@ -1190,7 +1190,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--checklist-item-2 sap-icon--xl"
@@ -1201,7 +1201,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--chevron-phase sap-icon--xl"
@@ -1212,7 +1212,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--chevron-phase-2 sap-icon--xl"
@@ -1223,7 +1223,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--choropleth-chart sap-icon--xl"
@@ -1234,7 +1234,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--circle-task sap-icon--xl"
@@ -1245,7 +1245,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--circle-task-2 sap-icon--xl"
@@ -1256,7 +1256,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--citizen-connect sap-icon--xl"
@@ -1267,7 +1267,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--clear-filter sap-icon--xl"
@@ -1278,7 +1278,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--clinical-order sap-icon--xl"
@@ -1289,7 +1289,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--clinical-tast-tracker sap-icon--xl"
@@ -1300,7 +1300,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--close-command-field sap-icon--xl"
@@ -1311,7 +1311,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--cloud sap-icon--xl"
@@ -1322,7 +1322,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--co sap-icon--xl"
@@ -1333,7 +1333,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--collaborate sap-icon--xl"
@@ -1344,7 +1344,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--collapse sap-icon--xl"
@@ -1355,7 +1355,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--collapse-group sap-icon--xl"
@@ -1366,7 +1366,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--collections-insight sap-icon--xl"
@@ -1377,7 +1377,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--collections-management sap-icon--xl"
@@ -1388,7 +1388,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--collision sap-icon--xl"
@@ -1399,7 +1399,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--color-fill sap-icon--xl"
@@ -1410,7 +1410,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--column-chart-dual-axis sap-icon--xl"
@@ -1421,7 +1421,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--comment sap-icon--xl"
@@ -1432,7 +1432,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--commission-check sap-icon--xl"
@@ -1443,7 +1443,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--company-view sap-icon--xl"
@@ -1454,7 +1454,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--compare sap-icon--xl"
@@ -1465,7 +1465,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--compare-2 sap-icon--xl"
@@ -1476,7 +1476,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--competitor sap-icon--xl"
@@ -1487,7 +1487,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--complete sap-icon--xl"
@@ -1498,7 +1498,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--connected sap-icon--xl"
@@ -1509,7 +1509,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--contacts sap-icon--xl"
@@ -1520,7 +1520,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--copy sap-icon--xl"
@@ -1531,7 +1531,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--course-book sap-icon--xl"
@@ -1542,7 +1542,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--course-program sap-icon--xl"
@@ -1553,7 +1553,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--create sap-icon--xl"
@@ -1564,7 +1564,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--create-entry-time sap-icon--xl"
@@ -1575,7 +1575,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--create-form sap-icon--xl"
@@ -1586,7 +1586,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--create-leave-request sap-icon--xl"
@@ -1597,7 +1597,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--create-session sap-icon--xl"
@@ -1608,7 +1608,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--credit-card sap-icon--xl"
@@ -1619,7 +1619,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--crm-sales sap-icon--xl"
@@ -1630,7 +1630,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--crm-service-manager sap-icon--xl"
@@ -1641,7 +1641,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--crop sap-icon--xl"
@@ -1652,7 +1652,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--crossed-line-chart sap-icon--xl"
@@ -1663,7 +1663,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--curriculum sap-icon--xl"
@@ -1674,7 +1674,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--cursor sap-icon--xl"
@@ -1685,7 +1685,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--customer sap-icon--xl"
@@ -1696,7 +1696,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--customer-and-contacts sap-icon--xl"
@@ -1707,7 +1707,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--customer-and-supplier sap-icon--xl"
@@ -1718,7 +1718,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--customer-briefing sap-icon--xl"
@@ -1729,7 +1729,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--customer-financial-fact-sheet sap-icon--xl"
@@ -1740,7 +1740,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--customer-history sap-icon--xl"
@@ -1751,7 +1751,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--customer-order-entry sap-icon--xl"
@@ -1762,7 +1762,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--customer-view sap-icon--xl"
@@ -1773,7 +1773,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--customize sap-icon--xl"
@@ -1784,7 +1784,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--database sap-icon--xl"
@@ -1795,7 +1795,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--date-time sap-icon--xl"
@@ -1806,7 +1806,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--decision sap-icon--xl"
@@ -1817,7 +1817,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--decline sap-icon--xl"
@@ -1828,7 +1828,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--decrease-line-height sap-icon--xl"
@@ -1839,7 +1839,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--delete sap-icon--xl"
@@ -1850,7 +1850,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--detail-view sap-icon--xl"
@@ -1861,7 +1861,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--developer-settings sap-icon--xl"
@@ -1872,7 +1872,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--dimension sap-icon--xl"
@@ -1883,7 +1883,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--disconnected sap-icon--xl"
@@ -1894,7 +1894,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--discussion sap-icon--xl"
@@ -1905,7 +1905,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--discussion-2 sap-icon--xl"
@@ -1916,7 +1916,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--dishwasher sap-icon--xl"
@@ -1927,7 +1927,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--display sap-icon--xl"
@@ -1938,7 +1938,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--display-more sap-icon--xl"
@@ -1949,7 +1949,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--doc-attachment sap-icon--xl"
@@ -1960,7 +1960,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--doctor sap-icon--xl"
@@ -1971,7 +1971,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--document sap-icon--xl"
@@ -1982,7 +1982,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--document-text sap-icon--xl"
@@ -1993,7 +1993,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--documents sap-icon--xl"
@@ -2004,7 +2004,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--donut-chart sap-icon--xl"
@@ -2015,7 +2015,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--down sap-icon--xl"
@@ -2026,7 +2026,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--download sap-icon--xl"
@@ -2037,7 +2037,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--download-from-cloud sap-icon--xl"
@@ -2048,7 +2048,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--draw-rectangle sap-icon--xl"
@@ -2059,7 +2059,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--drill-down sap-icon--xl"
@@ -2070,7 +2070,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--drill-up sap-icon--xl"
@@ -2081,7 +2081,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--drop-down-list sap-icon--xl"
@@ -2092,7 +2092,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--dropdown sap-icon--xl"
@@ -2103,7 +2103,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--duplicate sap-icon--xl"
@@ -2114,7 +2114,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--e-care sap-icon--xl"
@@ -2125,7 +2125,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--e-learning sap-icon--xl"
@@ -2136,7 +2136,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--eam-work-order sap-icon--xl"
@@ -2147,7 +2147,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--edit sap-icon--xl"
@@ -2158,7 +2158,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--edit-outside sap-icon--xl"
@@ -2169,7 +2169,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--education sap-icon--xl"
@@ -2180,7 +2180,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--electrocardiogram sap-icon--xl"
@@ -2191,7 +2191,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--electronic-medical-record sap-icon--xl"
@@ -2202,7 +2202,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--email sap-icon--xl"
@@ -2213,7 +2213,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--email-read sap-icon--xl"
@@ -2224,7 +2224,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--employee sap-icon--xl"
@@ -2235,7 +2235,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--employee-approvals sap-icon--xl"
@@ -2246,7 +2246,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--employee-lookup sap-icon--xl"
@@ -2257,7 +2257,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--employee-pane sap-icon--xl"
@@ -2268,7 +2268,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--employee-rejections sap-icon--xl"
@@ -2279,7 +2279,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--end-user-experience-monitoring sap-icon--xl"
@@ -2290,7 +2290,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--endoscopy sap-icon--xl"
@@ -2301,7 +2301,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--energy-saving-lightbulb sap-icon--xl"
@@ -2312,7 +2312,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--enter-more sap-icon--xl"
@@ -2323,7 +2323,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--eraser sap-icon--xl"
@@ -2334,7 +2334,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--error sap-icon--xl"
@@ -2345,7 +2345,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--example sap-icon--xl"
@@ -2356,7 +2356,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--excel-attachment sap-icon--xl"
@@ -2367,7 +2367,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--exitfullscreen sap-icon--xl"
@@ -2378,7 +2378,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--expand sap-icon--xl"
@@ -2389,7 +2389,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--expand-group sap-icon--xl"
@@ -2400,7 +2400,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--expense-report sap-icon--xl"
@@ -2411,7 +2411,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--explorer sap-icon--xl"
@@ -2422,7 +2422,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--factory sap-icon--xl"
@@ -2433,7 +2433,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--fallback sap-icon--xl"
@@ -2444,7 +2444,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--family-care sap-icon--xl"
@@ -2455,7 +2455,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--family-protection sap-icon--xl"
@@ -2466,7 +2466,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--favorite sap-icon--xl"
@@ -2477,7 +2477,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--favorite-list sap-icon--xl"
@@ -2488,7 +2488,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--fax-machine sap-icon--xl"
@@ -2499,7 +2499,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--feed sap-icon--xl"
@@ -2510,7 +2510,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--feeder-arrow sap-icon--xl"
@@ -2521,7 +2521,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--filter sap-icon--xl"
@@ -2532,7 +2532,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--filter-analytics sap-icon--xl"
@@ -2543,7 +2543,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--filter-facets sap-icon--xl"
@@ -2554,7 +2554,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--filter-fields sap-icon--xl"
@@ -2565,7 +2565,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--flag sap-icon--xl"
@@ -2576,7 +2576,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--flight sap-icon--xl"
@@ -2587,7 +2587,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--fob-watch sap-icon--xl"
@@ -2598,7 +2598,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--folder sap-icon--xl"
@@ -2609,7 +2609,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--folder-blank sap-icon--xl"
@@ -2620,7 +2620,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--folder-full sap-icon--xl"
@@ -2631,7 +2631,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--form sap-icon--xl"
@@ -2642,7 +2642,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--forward sap-icon--xl"
@@ -2653,7 +2653,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--fridge sap-icon--xl"
@@ -2664,7 +2664,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--full-screen sap-icon--xl"
@@ -2675,7 +2675,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--full-stacked-chart sap-icon--xl"
@@ -2686,7 +2686,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--full-stacked-column-chart sap-icon--xl"
@@ -2697,7 +2697,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--functional-location sap-icon--xl"
@@ -2708,7 +2708,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--future sap-icon--xl"
@@ -2719,7 +2719,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--gantt-bars sap-icon--xl"
@@ -2730,7 +2730,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--general-leave-request sap-icon--xl"
@@ -2741,7 +2741,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--generate-shortcut sap-icon--xl"
@@ -2752,7 +2752,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--geographic-bubble-chart sap-icon--xl"
@@ -2763,7 +2763,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--globe sap-icon--xl"
@@ -2774,7 +2774,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--goal sap-icon--xl"
@@ -2785,7 +2785,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--goalseek sap-icon--xl"
@@ -2796,7 +2796,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--grid sap-icon--xl"
@@ -2807,7 +2807,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--group sap-icon--xl"
@@ -2818,7 +2818,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--group-2 sap-icon--xl"
@@ -2829,7 +2829,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--header sap-icon--xl"
@@ -2840,7 +2840,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--heading-1 sap-icon--xl"
@@ -2851,7 +2851,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--heading-2 sap-icon--xl"
@@ -2862,7 +2862,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--heading-3 sap-icon--xl"
@@ -2873,7 +2873,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--headset sap-icon--xl"
@@ -2884,7 +2884,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--heating-cooling sap-icon--xl"
@@ -2895,7 +2895,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--heatmap-chart sap-icon--xl"
@@ -2906,7 +2906,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--hello-world sap-icon--xl"
@@ -2917,7 +2917,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--hide sap-icon--xl"
@@ -2928,7 +2928,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--hint sap-icon--xl"
@@ -2939,7 +2939,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--history sap-icon--xl"
@@ -2950,7 +2950,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--home sap-icon--xl"
@@ -2961,7 +2961,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--home-share sap-icon--xl"
@@ -2972,7 +2972,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--horizontal-bar-chart sap-icon--xl"
@@ -2983,7 +2983,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--horizontal-bar-chart-2 sap-icon--xl"
@@ -2994,7 +2994,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--horizontal-bullet-chart sap-icon--xl"
@@ -3005,7 +3005,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--horizontal-grip sap-icon--xl"
@@ -3016,7 +3016,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--horizontal-stacked-chart sap-icon--xl"
@@ -3027,7 +3027,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--horizontal-waterfall-chart sap-icon--xl"
@@ -3038,7 +3038,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--hr-approval sap-icon--xl"
@@ -3049,7 +3049,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--idea-wall sap-icon--xl"
@@ -3060,7 +3060,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--image-viewer sap-icon--xl"
@@ -3071,7 +3071,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--inbox sap-icon--xl"
@@ -3082,7 +3082,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--incident sap-icon--xl"
@@ -3093,7 +3093,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--incoming-call sap-icon--xl"
@@ -3104,7 +3104,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--increase-line-height sap-icon--xl"
@@ -3115,7 +3115,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--indent sap-icon--xl"
@@ -3126,7 +3126,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--initiative sap-icon--xl"
@@ -3137,7 +3137,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--inspect sap-icon--xl"
@@ -3148,7 +3148,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--inspect-down sap-icon--xl"
@@ -3159,7 +3159,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--inspection sap-icon--xl"
@@ -3170,7 +3170,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--instance sap-icon--xl"
@@ -3181,7 +3181,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--insurance-car sap-icon--xl"
@@ -3192,7 +3192,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--insurance-house sap-icon--xl"
@@ -3203,7 +3203,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--insurance-life sap-icon--xl"
@@ -3214,7 +3214,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--internet-browser sap-icon--xl"
@@ -3225,7 +3225,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--inventory sap-icon--xl"
@@ -3236,7 +3236,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--ipad sap-icon--xl"
@@ -3247,7 +3247,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--ipad-2 sap-icon--xl"
@@ -3258,7 +3258,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--iphone sap-icon--xl"
@@ -3269,7 +3269,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--iphone-2 sap-icon--xl"
@@ -3280,7 +3280,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--it-host sap-icon--xl"
@@ -3291,7 +3291,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--it-instance sap-icon--xl"
@@ -3302,7 +3302,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--it-system sap-icon--xl"
@@ -3313,7 +3313,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--italic-text sap-icon--xl"
@@ -3324,7 +3324,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--jam sap-icon--xl"
@@ -3335,7 +3335,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--journey-arrive sap-icon--xl"
@@ -3346,7 +3346,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--journey-change sap-icon--xl"
@@ -3357,7 +3357,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--journey-depart sap-icon--xl"
@@ -3368,7 +3368,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--key sap-icon--xl"
@@ -3379,7 +3379,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--key-user-settings sap-icon--xl"
@@ -3390,7 +3390,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--kpi-corporate-performance sap-icon--xl"
@@ -3401,7 +3401,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--kpi-managing-my-area sap-icon--xl"
@@ -3412,7 +3412,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--lab sap-icon--xl"
@@ -3423,7 +3423,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--laptop sap-icon--xl"
@@ -3434,7 +3434,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--lateness sap-icon--xl"
@@ -3445,7 +3445,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--lead sap-icon--xl"
@@ -3456,7 +3456,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--lead-outdated sap-icon--xl"
@@ -3467,7 +3467,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--leads sap-icon--xl"
@@ -3478,7 +3478,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--learning-assistant sap-icon--xl"
@@ -3489,7 +3489,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--legend sap-icon--xl"
@@ -3500,7 +3500,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--less sap-icon--xl"
@@ -3511,7 +3511,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--letter sap-icon--xl"
@@ -3522,7 +3522,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--lightbulb sap-icon--xl"
@@ -3533,7 +3533,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--line-chart sap-icon--xl"
@@ -3544,7 +3544,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--line-chart-dual-axis sap-icon--xl"
@@ -3555,7 +3555,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--line-chart-time-axis sap-icon--xl"
@@ -3566,7 +3566,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--line-charts sap-icon--xl"
@@ -3577,7 +3577,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--list sap-icon--xl"
@@ -3588,7 +3588,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--loan sap-icon--xl"
@@ -3599,7 +3599,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--locate-me sap-icon--xl"
@@ -3610,7 +3610,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--locked sap-icon--xl"
@@ -3621,7 +3621,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--log sap-icon--xl"
@@ -3632,7 +3632,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--machine sap-icon--xl"
@@ -3643,7 +3643,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--manager sap-icon--xl"
@@ -3654,7 +3654,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--manager-insight sap-icon--xl"
@@ -3665,7 +3665,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--map sap-icon--xl"
@@ -3676,7 +3676,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--map-2 sap-icon--xl"
@@ -3687,7 +3687,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--map-3 sap-icon--xl"
@@ -3698,7 +3698,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--marketing-campaign sap-icon--xl"
@@ -3709,7 +3709,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--master-task-triangle sap-icon--xl"
@@ -3720,7 +3720,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--master-task-triangle-2 sap-icon--xl"
@@ -3731,7 +3731,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--meal sap-icon--xl"
@@ -3742,7 +3742,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--measure sap-icon--xl"
@@ -3753,7 +3753,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--measurement-document sap-icon--xl"
@@ -3764,7 +3764,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--measuring-point sap-icon--xl"
@@ -3775,7 +3775,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--media-forward sap-icon--xl"
@@ -3786,7 +3786,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--media-pause sap-icon--xl"
@@ -3797,7 +3797,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--media-play sap-icon--xl"
@@ -3808,7 +3808,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--media-reverse sap-icon--xl"
@@ -3819,7 +3819,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--media-rewind sap-icon--xl"
@@ -3830,7 +3830,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--meeting-room sap-icon--xl"
@@ -3841,7 +3841,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--menu sap-icon--xl"
@@ -3852,7 +3852,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--menu2 sap-icon--xl"
@@ -3863,7 +3863,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--message-error sap-icon--xl"
@@ -3874,7 +3874,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--message-information sap-icon--xl"
@@ -3885,7 +3885,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--message-popup sap-icon--xl"
@@ -3896,7 +3896,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--message-success sap-icon--xl"
@@ -3907,7 +3907,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--message-warning sap-icon--xl"
@@ -3918,7 +3918,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--microphone sap-icon--xl"
@@ -3929,7 +3929,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--mileage sap-icon--xl"
@@ -3940,7 +3940,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--minimize sap-icon--xl"
@@ -3951,7 +3951,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--mirrored-task-circle sap-icon--xl"
@@ -3962,7 +3962,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--mirrored-task-circle-2 sap-icon--xl"
@@ -3973,7 +3973,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--money-bills sap-icon--xl"
@@ -3984,7 +3984,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--monitor-payments sap-icon--xl"
@@ -3995,7 +3995,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--move sap-icon--xl"
@@ -4006,7 +4006,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--mri-scan sap-icon--xl"
@@ -4017,7 +4017,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--multiple-bar-chart sap-icon--xl"
@@ -4028,7 +4028,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--multiple-line-chart sap-icon--xl"
@@ -4039,7 +4039,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--multiple-pie-chart sap-icon--xl"
@@ -4050,7 +4050,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--multiple-radar-chart sap-icon--xl"
@@ -4061,7 +4061,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--multiselect sap-icon--xl"
@@ -4072,7 +4072,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--multiselect-all sap-icon--xl"
@@ -4083,7 +4083,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--multiselect-none sap-icon--xl"
@@ -4094,7 +4094,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--my-sales-order sap-icon--xl"
@@ -4105,7 +4105,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--my-view sap-icon--xl"
@@ -4116,7 +4116,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--nav-back sap-icon--xl"
@@ -4127,7 +4127,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--navigation-down-arrow sap-icon--xl"
@@ -4138,7 +4138,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--navigation-left-arrow sap-icon--xl"
@@ -4149,7 +4149,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--navigation-right-arrow sap-icon--xl"
@@ -4160,7 +4160,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--navigation-up-arrow sap-icon--xl"
@@ -4171,7 +4171,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--negative sap-icon--xl"
@@ -4182,7 +4182,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--Netweaver-business-client sap-icon--xl"
@@ -4193,7 +4193,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--newspaper sap-icon--xl"
@@ -4204,7 +4204,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--notes sap-icon--xl"
@@ -4215,7 +4215,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--notification-2 sap-icon--xl"
@@ -4226,7 +4226,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--number-sign sap-icon--xl"
@@ -4237,7 +4237,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--numbered-text sap-icon--xl"
@@ -4248,7 +4248,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--nurse sap-icon--xl"
@@ -4259,7 +4259,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--nutrition-activity sap-icon--xl"
@@ -4270,7 +4270,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--official-service sap-icon--xl"
@@ -4281,7 +4281,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--offsite-work sap-icon--xl"
@@ -4292,7 +4292,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--open-command-field sap-icon--xl"
@@ -4303,7 +4303,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--open-folder sap-icon--xl"
@@ -4314,7 +4314,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--opportunities sap-icon--xl"
@@ -4325,7 +4325,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--opportunity sap-icon--xl"
@@ -4336,7 +4336,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--order-status sap-icon--xl"
@@ -4347,7 +4347,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--org-chart sap-icon--xl"
@@ -4358,7 +4358,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--outbox sap-icon--xl"
@@ -4369,7 +4369,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--outdent sap-icon--xl"
@@ -4380,7 +4380,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--outgoing-call sap-icon--xl"
@@ -4391,7 +4391,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--overflow sap-icon--xl"
@@ -4402,7 +4402,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--overlay sap-icon--xl"
@@ -4413,7 +4413,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--overview-chart sap-icon--xl"
@@ -4424,7 +4424,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--paging sap-icon--xl"
@@ -4435,7 +4435,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--paid-leave sap-icon--xl"
@@ -4446,7 +4446,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--palette sap-icon--xl"
@@ -4457,7 +4457,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--paper-plane sap-icon--xl"
@@ -4468,7 +4468,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--passenger-train sap-icon--xl"
@@ -4479,7 +4479,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--past sap-icon--xl"
@@ -4490,7 +4490,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--paste sap-icon--xl"
@@ -4501,7 +4501,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--pause sap-icon--xl"
@@ -4512,7 +4512,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--payment-approval sap-icon--xl"
@@ -4523,7 +4523,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--pdf-attachment sap-icon--xl"
@@ -4534,7 +4534,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--pdf-reader sap-icon--xl"
@@ -4545,7 +4545,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--pending sap-icon--xl"
@@ -4556,7 +4556,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--per-diem sap-icon--xl"
@@ -4567,7 +4567,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--performance sap-icon--xl"
@@ -4578,7 +4578,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--permission sap-icon--xl"
@@ -4589,7 +4589,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--person-placeholder sap-icon--xl"
@@ -4600,7 +4600,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--personnel-view sap-icon--xl"
@@ -4611,7 +4611,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--pharmacy sap-icon--xl"
@@ -4622,7 +4622,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--phone sap-icon--xl"
@@ -4633,7 +4633,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--photo-voltaic sap-icon--xl"
@@ -4644,7 +4644,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--physical-activity sap-icon--xl"
@@ -4655,7 +4655,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--picture sap-icon--xl"
@@ -4666,7 +4666,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--pie-chart sap-icon--xl"
@@ -4677,7 +4677,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--pipeline-analysis sap-icon--xl"
@@ -4688,7 +4688,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--play sap-icon--xl"
@@ -4699,7 +4699,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--pool sap-icon--xl"
@@ -4710,7 +4710,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--popup-window sap-icon--xl"
@@ -4721,7 +4721,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--positive sap-icon--xl"
@@ -4732,7 +4732,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--post sap-icon--xl"
@@ -4743,7 +4743,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--ppt-attachment sap-icon--xl"
@@ -4754,7 +4754,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--present sap-icon--xl"
@@ -4765,7 +4765,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--print sap-icon--xl"
@@ -4776,7 +4776,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--private sap-icon--xl"
@@ -4787,7 +4787,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--process sap-icon--xl"
@@ -4798,7 +4798,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--product sap-icon--xl"
@@ -4809,7 +4809,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--program-triangles sap-icon--xl"
@@ -4820,7 +4820,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--program-triangles-2 sap-icon--xl"
@@ -4831,7 +4831,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--project-definition-triangle sap-icon--xl"
@@ -4842,7 +4842,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--project-definition-triangle-2 sap-icon--xl"
@@ -4853,7 +4853,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--projector sap-icon--xl"
@@ -4864,7 +4864,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--provision sap-icon--xl"
@@ -4875,7 +4875,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--pull-down sap-icon--xl"
@@ -4886,7 +4886,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--pushpin-off sap-icon--xl"
@@ -4897,7 +4897,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--pushpin-on sap-icon--xl"
@@ -4908,7 +4908,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--puzzle sap-icon--xl"
@@ -4919,7 +4919,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--quality-issue sap-icon--xl"
@@ -4930,7 +4930,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--question-mark sap-icon--xl"
@@ -4941,7 +4941,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--radar-chart sap-icon--xl"
@@ -4952,7 +4952,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--receipt sap-icon--xl"
@@ -4963,7 +4963,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--record sap-icon--xl"
@@ -4974,7 +4974,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--redo sap-icon--xl"
@@ -4985,7 +4985,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--refresh sap-icon--xl"
@@ -4996,7 +4996,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--repost sap-icon--xl"
@@ -5007,7 +5007,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--request sap-icon--xl"
@@ -5018,7 +5018,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--reset sap-icon--xl"
@@ -5029,7 +5029,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--resize sap-icon--xl"
@@ -5040,7 +5040,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--resize-corner sap-icon--xl"
@@ -5051,7 +5051,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--resize-horizontal sap-icon--xl"
@@ -5062,7 +5062,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--resize-vertical sap-icon--xl"
@@ -5073,7 +5073,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--response sap-icon--xl"
@@ -5084,7 +5084,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--restart sap-icon--xl"
@@ -5095,7 +5095,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--retail-store sap-icon--xl"
@@ -5106,7 +5106,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--retail-store-manager sap-icon--xl"
@@ -5117,7 +5117,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--rhombus-milestone sap-icon--xl"
@@ -5128,7 +5128,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--rhombus-milestone-2 sap-icon--xl"
@@ -5139,7 +5139,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--role sap-icon--xl"
@@ -5150,7 +5150,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--sales-document sap-icon--xl"
@@ -5161,7 +5161,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--sales-notification sap-icon--xl"
@@ -5172,7 +5172,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--sales-order sap-icon--xl"
@@ -5183,7 +5183,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--sales-order-item sap-icon--xl"
@@ -5194,7 +5194,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--sales-quote sap-icon--xl"
@@ -5205,7 +5205,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--sap-box sap-icon--xl"
@@ -5216,7 +5216,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--sap-logo-shape sap-icon--xl"
@@ -5227,7 +5227,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--sap-ui5 sap-icon--xl"
@@ -5238,7 +5238,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--save sap-icon--xl"
@@ -5249,7 +5249,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--scatter-chart sap-icon--xl"
@@ -5260,7 +5260,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--scissors sap-icon--xl"
@@ -5271,7 +5271,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--screen-split-one sap-icon--xl"
@@ -5282,7 +5282,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--screen-split-three sap-icon--xl"
@@ -5293,7 +5293,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--screen-split-two sap-icon--xl"
@@ -5304,7 +5304,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--search sap-icon--xl"
@@ -5315,7 +5315,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--settings sap-icon--xl"
@@ -5326,7 +5326,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--share sap-icon--xl"
@@ -5337,7 +5337,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--share-2 sap-icon--xl"
@@ -5348,7 +5348,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--shelf sap-icon--xl"
@@ -5359,7 +5359,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--shield sap-icon--xl"
@@ -5370,7 +5370,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--shipping-status sap-icon--xl"
@@ -5381,7 +5381,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--shortcut sap-icon--xl"
@@ -5392,7 +5392,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--show sap-icon--xl"
@@ -5403,7 +5403,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--signature sap-icon--xl"
@@ -5414,7 +5414,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--simple-payment sap-icon--xl"
@@ -5425,7 +5425,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--simulate sap-icon--xl"
@@ -5436,7 +5436,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--slim-arrow-down sap-icon--xl"
@@ -5447,7 +5447,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--slim-arrow-left sap-icon--xl"
@@ -5458,7 +5458,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--slim-arrow-right sap-icon--xl"
@@ -5469,7 +5469,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--slim-arrow-up sap-icon--xl"
@@ -5480,7 +5480,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--soccor sap-icon--xl"
@@ -5491,7 +5491,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--sonography sap-icon--xl"
@@ -5502,7 +5502,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--sort sap-icon--xl"
@@ -5513,7 +5513,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--sort-ascending sap-icon--xl"
@@ -5524,7 +5524,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--sort-descending sap-icon--xl"
@@ -5535,7 +5535,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--sorting-ranking sap-icon--xl"
@@ -5546,7 +5546,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--sound sap-icon--xl"
@@ -5557,7 +5557,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--sound-loud sap-icon--xl"
@@ -5568,7 +5568,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--sound-off sap-icon--xl"
@@ -5579,7 +5579,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--source-code sap-icon--xl"
@@ -5590,7 +5590,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--status-critical sap-icon--xl"
@@ -5601,7 +5601,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--status-inactive sap-icon--xl"
@@ -5612,7 +5612,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--status-negative sap-icon--xl"
@@ -5623,7 +5623,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--status-positive sap-icon--xl"
@@ -5634,7 +5634,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--step sap-icon--xl"
@@ -5645,7 +5645,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--stethoscope sap-icon--xl"
@@ -5656,7 +5656,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--stop sap-icon--xl"
@@ -5667,7 +5667,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--study-leave sap-icon--xl"
@@ -5678,7 +5678,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--subway-train sap-icon--xl"
@@ -5689,7 +5689,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--suitcase sap-icon--xl"
@@ -5700,7 +5700,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--supplier sap-icon--xl"
@@ -5711,7 +5711,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--survey sap-icon--xl"
@@ -5722,7 +5722,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--switch-classes sap-icon--xl"
@@ -5733,7 +5733,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--switch-views sap-icon--xl"
@@ -5744,7 +5744,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--synchronize sap-icon--xl"
@@ -5755,7 +5755,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--syntax sap-icon--xl"
@@ -5766,7 +5766,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--syringe sap-icon--xl"
@@ -5777,7 +5777,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--sys-add sap-icon--xl"
@@ -5788,7 +5788,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--sys-back sap-icon--xl"
@@ -5799,7 +5799,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--sys-back-2 sap-icon--xl"
@@ -5810,7 +5810,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--sys-cancel sap-icon--xl"
@@ -5821,7 +5821,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--sys-cancel-2 sap-icon--xl"
@@ -5832,7 +5832,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--sys-enter sap-icon--xl"
@@ -5843,7 +5843,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--sys-enter-2 sap-icon--xl"
@@ -5854,7 +5854,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--sys-find sap-icon--xl"
@@ -5865,7 +5865,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--sys-find-next sap-icon--xl"
@@ -5876,7 +5876,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--sys-first-page sap-icon--xl"
@@ -5887,7 +5887,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--sys-help sap-icon--xl"
@@ -5898,7 +5898,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--sys-help-2 sap-icon--xl"
@@ -5909,7 +5909,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--sys-last-page sap-icon--xl"
@@ -5920,7 +5920,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--sys-minus sap-icon--xl"
@@ -5931,7 +5931,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--sys-monitor sap-icon--xl"
@@ -5942,7 +5942,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--sys-next-page sap-icon--xl"
@@ -5953,7 +5953,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--sys-prev-page sap-icon--xl"
@@ -5964,7 +5964,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--system-exit sap-icon--xl"
@@ -5975,7 +5975,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--system-exit-2 sap-icon--xl"
@@ -5986,7 +5986,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--table-chart sap-icon--xl"
@@ -5997,7 +5997,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--table-view sap-icon--xl"
@@ -6008,7 +6008,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--tag sap-icon--xl"
@@ -6019,7 +6019,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--tag-cloud-chart sap-icon--xl"
@@ -6030,7 +6030,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--tags sap-icon--xl"
@@ -6041,7 +6041,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--target-group sap-icon--xl"
@@ -6052,7 +6052,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--task sap-icon--xl"
@@ -6063,7 +6063,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--taxi sap-icon--xl"
@@ -6074,7 +6074,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--technical-object sap-icon--xl"
@@ -6085,7 +6085,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--temperature sap-icon--xl"
@@ -6096,7 +6096,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--text-align-center sap-icon--xl"
@@ -6107,7 +6107,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--text-align-justified sap-icon--xl"
@@ -6118,7 +6118,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--text-align-left sap-icon--xl"
@@ -6129,7 +6129,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--text-align-right sap-icon--xl"
@@ -6140,7 +6140,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--text-formatting sap-icon--xl"
@@ -6151,7 +6151,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--theater sap-icon--xl"
@@ -6162,7 +6162,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--thing-type sap-icon--xl"
@@ -6173,7 +6173,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--thumb-down sap-icon--xl"
@@ -6184,7 +6184,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--thumb-up sap-icon--xl"
@@ -6195,7 +6195,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--time-account sap-icon--xl"
@@ -6206,7 +6206,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--time-entry-request sap-icon--xl"
@@ -6217,7 +6217,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--time-overtime sap-icon--xl"
@@ -6228,7 +6228,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--timesheet sap-icon--xl"
@@ -6239,7 +6239,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--to-be-reviewed sap-icon--xl"
@@ -6250,7 +6250,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--toaster-down sap-icon--xl"
@@ -6261,7 +6261,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--toaster-top sap-icon--xl"
@@ -6272,7 +6272,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--toaster-up sap-icon--xl"
@@ -6283,7 +6283,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--tools-opportunity sap-icon--xl"
@@ -6294,7 +6294,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--travel-expense sap-icon--xl"
@@ -6305,7 +6305,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--travel-expense-report sap-icon--xl"
@@ -6316,7 +6316,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--travel-itinerary sap-icon--xl"
@@ -6327,7 +6327,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--travel-request sap-icon--xl"
@@ -6338,7 +6338,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--tree sap-icon--xl"
@@ -6349,7 +6349,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--trend-down sap-icon--xl"
@@ -6360,7 +6360,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--trend-up sap-icon--xl"
@@ -6371,7 +6371,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--trip-report sap-icon--xl"
@@ -6382,7 +6382,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--ui-notifications sap-icon--xl"
@@ -6393,7 +6393,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--umbrella sap-icon--xl"
@@ -6404,7 +6404,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--underline-text sap-icon--xl"
@@ -6415,7 +6415,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--undo sap-icon--xl"
@@ -6426,7 +6426,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--unfavorite sap-icon--xl"
@@ -6437,7 +6437,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--unlocked sap-icon--xl"
@@ -6448,7 +6448,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--unpaid-leave sap-icon--xl"
@@ -6459,7 +6459,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--unwired sap-icon--xl"
@@ -6470,7 +6470,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--up sap-icon--xl"
@@ -6481,7 +6481,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--upload sap-icon--xl"
@@ -6492,7 +6492,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--upload-to-cloud sap-icon--xl"
@@ -6503,7 +6503,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--upstacked-chart sap-icon--xl"
@@ -6514,7 +6514,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--user-edit sap-icon--xl"
@@ -6525,7 +6525,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--user-settings sap-icon--xl"
@@ -6536,7 +6536,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--value-help sap-icon--xl"
@@ -6547,7 +6547,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--vds-file sap-icon--xl"
@@ -6558,7 +6558,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--vehicle-repair sap-icon--xl"
@@ -6569,7 +6569,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--vertical-bar-chart sap-icon--xl"
@@ -6580,7 +6580,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--vertical-bar-chart-2 sap-icon--xl"
@@ -6591,7 +6591,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--vertical-bullet-chart sap-icon--xl"
@@ -6602,7 +6602,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--vertical-grip sap-icon--xl"
@@ -6613,7 +6613,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--vertical-stacked-chart sap-icon--xl"
@@ -6624,7 +6624,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--vertical-waterfall-chart sap-icon--xl"
@@ -6635,7 +6635,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--video sap-icon--xl"
@@ -6646,7 +6646,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--visits sap-icon--xl"
@@ -6657,7 +6657,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--waiver sap-icon--xl"
@@ -6668,7 +6668,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--wallet sap-icon--xl"
@@ -6679,7 +6679,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--warning sap-icon--xl"
@@ -6690,7 +6690,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--warning2 sap-icon--xl"
@@ -6701,7 +6701,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--washing-machine sap-icon--xl"
@@ -6712,7 +6712,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--weather-proofing sap-icon--xl"
@@ -6723,7 +6723,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--web-cam sap-icon--xl"
@@ -6734,7 +6734,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--widgets sap-icon--xl"
@@ -6745,7 +6745,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--windows-doors sap-icon--xl"
@@ -6756,7 +6756,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--work-history sap-icon--xl"
@@ -6767,7 +6767,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--workflow-tasks sap-icon--xl"
@@ -6778,7 +6778,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--world sap-icon--xl"
@@ -6789,7 +6789,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--wounds-doc sap-icon--xl"
@@ -6800,7 +6800,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--wrench sap-icon--xl"
@@ -6811,7 +6811,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--write-new sap-icon--xl"
@@ -6822,7 +6822,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--write-new-document sap-icon--xl"
@@ -6833,7 +6833,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--x-ray sap-icon--xl"
@@ -6844,7 +6844,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--zoom-in sap-icon--xl"
@@ -6855,7 +6855,7 @@ exports[`Storyshots Visual Icon 1`] = `
         </div>
       </div>
       <div
-        className="docs-container--icon"
+        className="fddocs-container--icon"
       >
         <span
           className="sap-icon--zoom-out sap-icon--xl"

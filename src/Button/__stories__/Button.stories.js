@@ -15,7 +15,7 @@ export const primary = () => (<Button>Button</Button>);
 
 
 export const options = () => (
-    <div className='docs-container'>
+    <div className='fddocs-container'>
         <Button option='emphasized'>Emphasized Button</Button>
         <Button>Default Button</Button>
         <Button option='transparent'>Transparent Button</Button>
@@ -37,7 +37,7 @@ options.story = {
 };
 
 export const types = () => (
-    <div className='docs-container'>
+    <div className='fddocs-container'>
         <Button>Default Button</Button>
         <Button type='standard'>Standard Button</Button>
         <Button type='positive'>Positive Button</Button>
@@ -57,13 +57,13 @@ types.story = {
 };
 
 export const icons = () => (
-    <div className='docs-container'>
+    <div className='fddocs-container'>
         <Button glyph='cart' option='emphasized'>Add to Cart</Button>
         <Button glyph='cart'>Add to Cart</Button>
         <Button glyph='filter' option='transparent'>Filter</Button>
         <Button glyph='accept' type='positive'>Approve</Button>
         <Button glyph='decline' type='negative'>Reject</Button>
-        <div className='docs-container--break' />
+        <div className='fddocs-container--break' />
         <Button glyph='alert' option='emphasized' />
         <Button aria-label='Add to cart' glyph='cart' />
         <Button aria-label='Filter' glyph='cart'
@@ -85,7 +85,7 @@ icons.story = {
 };
 
 export const sizes = () => (
-    <div className='docs-container'>
+    <div className='fddocs-container'>
         <Button>Default</Button>
         <Button compact>Compact</Button>
     </div>
@@ -101,23 +101,23 @@ sizes.story = {
 };
 
 export const states = () => (
-    <div className='docs-container'>
+    <div className='fddocs-container'>
         <Button>Default</Button>
         <Button selected>Selected</Button>
         <Button disabled>Disabled</Button>
-        <div className='docs-container--break' />
+        <div className='fddocs-container--break' />
         <Button option='emphasized'>Emphasized</Button>
         <Button option='emphasized' selected>Emphasized</Button>
         <Button disabled option='emphasized'>Emphasized</Button>
-        <div className='docs-container--break' />
+        <div className='fddocs-container--break' />
         <Button option='transparent'>Transparent</Button>
         <Button option='transparent' selected>Transparent</Button>
         <Button disabled option='transparent'>Transparent</Button>
-        <div className='docs-container--break' />
+        <div className='fddocs-container--break' />
         <Button type='positive'>Positive Button</Button>
         <Button selected type='positive'>Positive Button</Button>
         <Button disabled type='positive'>Positive Button</Button>
-        <div className='docs-container--break' />
+        <div className='fddocs-container--break' />
         <Button type='negative'>Negative Button</Button>
         <Button selected type='negative'>Negative Button</Button>
         <Button disabled type='negative'>Negative Button</Button>

@@ -13,7 +13,7 @@ export const primary = () => (
 );
 
 export const defaults = () => (
-    <div className='docs-container'>
+    <div className='fddocs-container'>
         <Counter>5</Counter>
         <Counter>25</Counter>
         <Counter>101</Counter>
@@ -32,7 +32,7 @@ defaults.story = {
 };
 
 export const inline = () => (
-    <div className='docs-container'>
+    <div className='fddocs-container'>
         <p>Lorem ipsum <Counter>5</Counter></p>
     </div>
 );
@@ -44,7 +44,7 @@ inline.story = {
 
 
 export const notification = () => (
-    <div className='docs-container'>
+    <div className='fddocs-container'>
         <Button glyph='bell' option='transparent'>
             <Counter notification>5</Counter>
         </Button>

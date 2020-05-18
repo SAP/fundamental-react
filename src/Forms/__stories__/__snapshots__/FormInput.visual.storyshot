@@ -36,7 +36,7 @@ exports[`Storyshots Visual Form Input 1`] = `
   </div>
   <div>
     <div
-      className="docs-container"
+      className="fddocs-container"
     >
       <div
         className="fd-popover"

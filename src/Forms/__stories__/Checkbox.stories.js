@@ -24,7 +24,7 @@ export const compact = () => (
 );
 
 export const validationState = () => (
-    <div className='docs-container'>
+    <div className='fddocs-container'>
         <Checkbox state='error'>Text Option</Checkbox>
         <Checkbox state='warning'>Text Option</Checkbox>
         <Checkbox state='success'>Text Option</Checkbox>

@@ -39,7 +39,7 @@ export const disabled = () => (
         placeholder='Select' />
 );
 export const validationStates = () => (
-    <div className='docs-container'>
+    <div className='fddocs-container'>
         <Select
             options={options}
             placeholder='Error'
