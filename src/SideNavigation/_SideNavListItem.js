@@ -1,6 +1,7 @@
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
+import shortid from '../utils/shortId';
 import SideNavList from './_SideNavList';
 
 class SideNavListItem extends React.Component {
@@ -26,12 +27,12 @@ class SideNavListItem extends React.Component {
 
     render() {
         const { children, glyph, id, isSubItem, name, onClick, onItemSelect, selected, selectedId, url, ...props } = this.props;
+        const nestedListId = shortid.generate();
         const getClasses = () => {
             return classnames(
                 'fd-nested-list__link',
                 {
                     'is-selected': selected,
-                    'has-child': hasChild,
                     'is-expanded': this.state.expanded
                 }
             );
@@ -42,17 +43,14 @@ class SideNavListItem extends React.Component {
         });
 
         const renderLink = () => {
-            return (
+            const link = (
                 <a
                     className={getClasses()}
                     href={url}
-                    onClick={(e) => {
-                        onClick(e);
-                        !hasChild && onItemSelect(e, id, hasChild);
-                        if (hasChild) {
-                            this.handleExpand();
-                        }
-                    }}>
+                    onClick={!hasChild ? (e) => {
+                        !hasChild && onClick(e);
+                        onItemSelect(e, id, hasChild);
+                    } : null}>
                     {glyph ? (
                         <span
                             className={`fd-nested-list__icon sap-icon--${glyph}`}
@@ -63,6 +61,38 @@ class SideNavListItem extends React.Component {
                     </span>
                 </a>
             );
+
+            if (hasChild) {
+                const divClasses = classnames(
+                    'fd-nested-list__content',
+                    'has-child',
+                    {
+                        'is-selected': selected
+                    }
+                );
+
+                return (
+                    <div
+                        className={divClasses}
+                        onClick={(e) => { /* eslint-disable jsx-a11y/no-noninteractive-tabindex */
+                            onClick(e);
+                            onItemSelect(e, id, hasChild);
+                            this.handleExpand();
+                        }}
+                        tabIndex='0'>
+                        {link}
+                        <a
+                            aria-controls={nestedListId}
+                            aria-expanded={this.state.expanded}
+                            aria-haspopup='true'
+                            className='fd-nested-list__expand-icon'
+                            href='#'
+                            tabIndex='-1' />
+                    </div>
+                );
+            } else {
+                return link;
+            }
         };
 
         return (
@@ -93,6 +123,7 @@ class SideNavListItem extends React.Component {
                     } else if (child.type === SideNavList) {
                         return React.cloneElement(child, {
                             hasParent: true,
+                            id: nestedListId,
                             onItemSelect: onItemSelect,
                             open: this.state.expanded,
                             selectedId: selectedId
