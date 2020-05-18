@@ -1,11 +1,12 @@
 import '../custom.scss';
 import Community from './Community';
+import { DocsContext } from '@storybook/addon-docs/blocks';
 import Footer from './Footer';
 import Header from './Header';
 import Import from './Import';
 import Toc from './Toc';
 import tocbot from 'tocbot';
-import React, { useEffect } from 'react';
+import React, { useContext, useEffect } from 'react';
 import {
     Title,
     Subtitle,
@@ -16,7 +17,10 @@ import {
   } from '@storybook/addon-docs/blocks';
 
 const DocsPage = () => {
-
+    const context = useContext(DocsContext);
+    if(context.kind === 'Visual') {
+        return null;
+    }
     useEffect(() => {
         tocbot.init(
             {
