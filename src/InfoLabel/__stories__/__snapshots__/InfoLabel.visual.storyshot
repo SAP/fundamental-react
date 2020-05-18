@@ -13,7 +13,7 @@ exports[`Storyshots Visual Info Label 1`] = `
   </div>
   <div>
     <div
-      className="fr-container"
+      className="fd-container"
     >
       <span
         className="fd-info-label fd-info-label--accent-color-1"
@@ -69,7 +69,7 @@ exports[`Storyshots Visual Info Label 1`] = `
   </div>
   <div>
     <div
-      className="fr-container"
+      className="fd-container"
     >
       <span
         className="fd-info-label fd-info-label--icon sap-icon--add-activity-2"
@@ -99,7 +99,7 @@ exports[`Storyshots Visual Info Label 1`] = `
   </div>
   <div>
     <div
-      className="fr-container"
+      className="fd-container"
     >
       <span
         className="fd-info-label fd-info-label--numeric"

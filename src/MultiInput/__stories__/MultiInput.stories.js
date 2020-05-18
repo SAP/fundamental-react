@@ -43,7 +43,7 @@ export const disabled = () => (
 );
 
 export const validationStates = () => (
-    <div className='fr-container'>
+    <div className='fd-container'>
         <MultiInput
             data={data}
             placeholder='Error'

@@ -14,7 +14,7 @@ exports[`Storyshots Visual Button 1`] = `
   </div>
   <div>
     <div
-      className="fr-container"
+      className="fd-container"
     >
       <button
         className="fd-button fd-button--emphasized"
@@ -38,7 +38,7 @@ exports[`Storyshots Visual Button 1`] = `
   </div>
   <div>
     <div
-      className="fr-container"
+      className="fd-container"
     >
       <button
         className="fd-button"
@@ -68,7 +68,7 @@ exports[`Storyshots Visual Button 1`] = `
   </div>
   <div>
     <div
-      className="fr-container"
+      className="fd-container"
     >
       <button
         className="fd-button fd-button--emphasized sap-icon--cart"
@@ -101,7 +101,7 @@ exports[`Storyshots Visual Button 1`] = `
         Reject
       </button>
       <div
-        className="break"
+        className="fd-container--break"
       />
       <button
         className="fd-button fd-button--emphasized sap-icon--alert"
@@ -131,7 +131,7 @@ exports[`Storyshots Visual Button 1`] = `
   </div>
   <div>
     <div
-      className="fr-container"
+      className="fd-container"
     >
       <button
         className="fd-button"
@@ -149,7 +149,7 @@ exports[`Storyshots Visual Button 1`] = `
   </div>
   <div>
     <div
-      className="fr-container"
+      className="fd-container"
     >
       <button
         className="fd-button"
@@ -172,7 +172,7 @@ exports[`Storyshots Visual Button 1`] = `
         Disabled
       </button>
       <div
-        className="break"
+        className="fd-container--break"
       />
       <button
         className="fd-button fd-button--emphasized"
@@ -195,7 +195,7 @@ exports[`Storyshots Visual Button 1`] = `
         Emphasized
       </button>
       <div
-        className="break"
+        className="fd-container--break"
       />
       <button
         className="fd-button fd-button--transparent"
@@ -218,7 +218,7 @@ exports[`Storyshots Visual Button 1`] = `
         Transparent
       </button>
       <div
-        className="break"
+        className="fd-container--break"
       />
       <button
         className="fd-button fd-button--positive"
@@ -241,7 +241,7 @@ exports[`Storyshots Visual Button 1`] = `
         Positive Button
       </button>
       <div
-        className="break"
+        className="fd-container--break"
       />
       <button
         className="fd-button fd-button--negative"

@@ -203,7 +203,7 @@ exports[`Storyshots Visual Date Picker 1`] = `
   </div>
   <div>
     <div
-      className="fr-container"
+      className="fd-container"
     >
       <div
         defaultValue=""
@@ -685,7 +685,7 @@ exports[`Storyshots Visual Date Picker 1`] = `
   </div>
   <div>
     <div
-      className="fr-container"
+      className="fd-container"
     >
       <div
         defaultValue=""

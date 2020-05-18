@@ -15,7 +15,7 @@ export default {
 export const primary = () => (<InfoLabel>Default</InfoLabel>);
 
 export const colors = () => (
-    <div className='fr-container'>
+    <div className='fd-container'>
         <InfoLabel color={1}>Color 1</InfoLabel>
         <InfoLabel color={2}>Color 2</InfoLabel>
         <InfoLabel color={3}>Color 3</InfoLabel>
@@ -30,7 +30,7 @@ export const colors = () => (
 );
 
 export const glyph = () => (
-    <div className='fr-container'>
+    <div className='fd-container'>
         <InfoLabel glyph='add-activity-2'>add-activity-2</InfoLabel>
         <InfoLabel glyph='bar-code'>bar-code</InfoLabel>
         <InfoLabel glyph='hide'>hide</InfoLabel>
@@ -40,7 +40,7 @@ export const glyph = () => (
 );
 
 export const numeric = () => (
-    <div className='fr-container'>
+    <div className='fd-container'>
         <InfoLabel numeric>1</InfoLabel>
         <InfoLabel numeric>10000</InfoLabel>
     </div>

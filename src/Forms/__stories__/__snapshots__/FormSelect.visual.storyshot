@@ -52,7 +52,7 @@ exports[`Storyshots Visual Form Select 1`] = `
   </div>
   <div>
     <div
-      className="fr-container"
+      className="fd-container"
     >
       <select
         className="fd-form-select is-error"
@@ -68,7 +68,7 @@ exports[`Storyshots Visual Form Select 1`] = `
         </option>
       </select>
       <div
-        className="break"
+        className="fd-container--break"
       />
       <select
         className="fd-form-select is-warning"
@@ -84,7 +84,7 @@ exports[`Storyshots Visual Form Select 1`] = `
         </option>
       </select>
       <div
-        className="break"
+        className="fd-container--break"
       />
       <select
         className="fd-form-select is-information"
@@ -100,7 +100,7 @@ exports[`Storyshots Visual Form Select 1`] = `
         </option>
       </select>
       <div
-        className="break"
+        className="fd-container--break"
       />
       <select
         className="fd-form-select is-success"

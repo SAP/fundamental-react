@@ -91,7 +91,7 @@ export const sizes = () => {
     let [showDialogLg, setShowDialogLg] = useState(false);
     let [showDialogXl, setShowDialogXl] = useState(false);
     return (
-        <div className='fr-container'>
+        <div className='fd-container'>
             <Button onClick={() => setShowDialog(true)}>
                 Show Small Dialog
             </Button>

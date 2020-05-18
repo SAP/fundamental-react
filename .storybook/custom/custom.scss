@@ -222,4 +222,18 @@ $heading-toc-spacer: $fd-header-tp + $fd-header-bp + $fd-header-ch + $fd-docs-tm
     justify-content: space-around;
     width: 100%;
     padding: 10px 10px;
+
+    &--break {
+        flex-basis: 100%;
+        height: 0;
+        border-bottom: 10px solid transparent;
+    }
+
+    &--icon {
+        padding: 10px;
+        float: left;
+        width: 16%;
+        text-align: center;
+        height: 120px;
+    }
 }

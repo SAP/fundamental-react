@@ -99,7 +99,7 @@ readOnly.story = {
 };
 
 export const localized = () => (
-    <div className='fr-container'>
+    <div className='fd-container'>
         <DatePicker locale='es' />
         <DatePicker locale='fr' />
     </div>
@@ -208,7 +208,7 @@ dateFormat.story = {
 
 
 export const validationStates = () => (
-    <div className='fr-container'>
+    <div className='fd-container'>
         <DatePicker validationState={{ state: 'error', text: 'Test validation state' }} />
         <DatePicker validationState={{ state: 'warning', text: 'Test validation state' }} />
         <DatePicker validationState={{ state: 'success', text: 'Test validation state' }} />
