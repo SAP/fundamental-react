@@ -2,16 +2,16 @@ import React from 'react';
 
 const Footer = () => {
     return (
-    <footer className='docs-footer'>
-        <section className='docs-footer--left'>
-            <span className='docs-footer__slogan'>THE BEST RUN</span>
+    <footer className='fddocs-footer'>
+        <section className='fddocs-footer--left'>
+            <span className='fddocs-footer__slogan'>THE BEST RUN</span>
             <img
                 src='./assets/sap.png'
                 alt='SAP logo'
                 height='16' />
-            <p className='docs-footer__copyright'>&copy; Copyright SAP {`${new Date().getFullYear()}`}</p>
+            <p className='fddocs-footer__copyright'>&copy; Copyright SAP {`${new Date().getFullYear()}`}</p>
         </section>
-        <section className='docs-footer--right'>
+        <section className='fddocs-footer--right'>
             <a href='https://www.sap.com/about/legal/privacy.html' target='_blank'>Privacy</a>
             <a href='https://www.sap.com/about/legal/impressum.html' target='_blank'>Legal Disclosure</a>
             <a href='https://www.sap.com/about/legal/copyright.html' target='_blank'>Copyright and Trademarks</a>

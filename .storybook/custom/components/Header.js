@@ -3,12 +3,12 @@ import React from 'react';
 
 const Header = () => {
     return (
-        <header className='docs-header'>
-            <section className='docs-header--left'>
+        <header className='fddocs-header'>
+            <section className='fddocs-header--left'>
                 <span>Fundamental React</span>
             </section>
-            <section className='docs-header--right'>
-                <a className='docs-header__anchor' href='https://github.com/SAP/fundamental-react'
+            <section className='fddocs-header--right'>
+                <a className='fddocs-header__anchor' href='https://github.com/SAP/fundamental-react'
                     target='_blank'>
                     <svg viewBox='0 0 512 499.36' xmlns='http://www.w3.org/2000/svg'>
                         <title>GitHub</title>
@@ -17,7 +17,7 @@ const Header = () => {
                     </svg>
                 </a>
                 <a
-                className='docs-header__anchor'
+                className='fddocs-header__anchor'
                 href={`https://github.com/SAP/fundamental-react/tree/v${packageJson.version}`}
                 target='_blank'>
                         {`v${packageJson.version}`}

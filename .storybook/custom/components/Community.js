@@ -2,7 +2,7 @@ import React from 'react';
 
 const Community = () => {
     return (
-    <div className='docs-community'>
+    <div className='fddocs-community'>
         <section>
             <h4>Libraries</h4>
             <ul>
