@@ -33,11 +33,11 @@ body {
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-$docs-header-tp: 10px; /* top padding */
-$docs-header-bp: 12px; /* bottom padding */
-$docs-header-ch: 28px; /* content height */
+$docs-hd-tp: 10px; /* top padding */
+$docs-hd-bp: 12px; /* bottom padding */
+$docs-hd-ch: 28px; /* content height */
 $docs-tm: 30px; /* top margin */
-$heading-toc-spacer: $docs-header-tp + $docs-header-bp + $docs-header-ch + $docs-tm;
+$heading-toc-spacer: $docs-hd-tp + $docs-hd-bp + $docs-hd-ch + $docs-tm;
 
 .sbdocs-h2,
 .sbdocs-h3 {
