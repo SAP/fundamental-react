@@ -53,7 +53,7 @@ export const disabled = () => (
 );
 
 export const validationState = () => (
-    <div className='fd-container'>
+    <div className='docs-container'>
         <InputGroup validationState={{ state: 'error', text: 'Test validation state' }}>
             <InputGroup.Addon>$</InputGroup.Addon>
             <FormInput />
@@ -74,7 +74,7 @@ export const validationState = () => (
 );
 
 export const addonButton = () => (
-    <div className='fd-container'>
+    <div className='docs-container'>
         <InputGroup>
             <FormInput />
             <InputGroup.Addon isButton>
@@ -105,7 +105,7 @@ addonButton.story = {
 };
 
 export const addonText = () => (
-    <div className='fd-container'>
+    <div className='docs-container'>
         <InputGroup>
             <InputGroup.Addon>€</InputGroup.Addon>
             <FormInput placeholder='Type text here' />
@@ -130,7 +130,7 @@ addonText.story = {
 };
 
 export const addonIcon = () => (
-    <div className='fd-container'>
+    <div className='docs-container'>
         <InputGroup>
             <InputGroup.Addon>
                 <Icon glyph='globe' />

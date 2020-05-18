@@ -62,7 +62,7 @@ exports[`Storyshots Visual Input Group 1`] = `
   </div>
   <div>
     <div
-      className="fd-container"
+      className="docs-container"
     >
       <div
         className="fd-input-group is-error"
@@ -148,7 +148,7 @@ exports[`Storyshots Visual Input Group 1`] = `
   </div>
   <div>
     <div
-      className="fd-container"
+      className="docs-container"
     >
       <div
         className="fd-input-group"
@@ -186,7 +186,7 @@ exports[`Storyshots Visual Input Group 1`] = `
   </div>
   <div>
     <div
-      className="fd-container"
+      className="docs-container"
     >
       <div
         className="fd-input-group"
@@ -220,7 +220,7 @@ exports[`Storyshots Visual Input Group 1`] = `
   </div>
   <div>
     <div
-      className="fd-container"
+      className="docs-container"
     >
       <div
         className="fd-input-group"

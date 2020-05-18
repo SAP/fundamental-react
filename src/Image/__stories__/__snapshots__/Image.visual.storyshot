@@ -16,7 +16,7 @@ exports[`Storyshots Visual Image 1`] = `
   </div>
   <div>
     <div
-      className="fd-container"
+      className="docs-container"
     >
       <span
         className="fd-image--s"
@@ -46,7 +46,7 @@ exports[`Storyshots Visual Image 1`] = `
   </div>
   <div>
     <div
-      className="fd-container"
+      className="docs-container"
     >
       <span
         className="fd-image--s fd-image--circle"

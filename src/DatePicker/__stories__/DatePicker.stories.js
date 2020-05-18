@@ -56,16 +56,6 @@ const dateFormatOptions = {
 const dateFormatDefaultValue = null;
 const dateFormatGroupId = 'GROUP-DATE-FORMAT';
 
-// types.story = {
-//     name: 'Types',
-//     parameters: {
-//         docs: {
-//             storyDescription: `* **Standard Button**:
-//             Neutral or informative color \n\n* **Positive Button**: Used for positive actions
-//             such as approved, ok, yes. \n\n* **Negative Button**: Used for negative actions such as decline, cancel, no.`
-//         }
-//     }
-// };
 
 export const primary = () => (
     <DatePicker />
@@ -99,7 +89,7 @@ readOnly.story = {
 };
 
 export const localized = () => (
-    <div className='fd-container'>
+    <div className='docs-container'>
         <DatePicker locale='es' />
         <DatePicker locale='fr' />
     </div>
@@ -208,7 +198,7 @@ dateFormat.story = {
 
 
 export const validationStates = () => (
-    <div className='fd-container'>
+    <div className='docs-container'>
         <DatePicker validationState={{ state: 'error', text: 'Test validation state' }} />
         <DatePicker validationState={{ state: 'warning', text: 'Test validation state' }} />
         <DatePicker validationState={{ state: 'success', text: 'Test validation state' }} />

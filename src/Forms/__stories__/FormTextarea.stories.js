@@ -45,7 +45,7 @@ export const maxLength = () => (
 );
 
 export const validationStates = () => (
-    <div className='fd-container'>
+    <div className='docs-container'>
         <FormTextarea
             defaultValue='Error State'
             state='error' />

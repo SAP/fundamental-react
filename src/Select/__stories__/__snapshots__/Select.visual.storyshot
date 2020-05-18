@@ -115,7 +115,7 @@ exports[`Storyshots Visual Select 1`] = `
   </div>
   <div>
     <div
-      className="fd-container"
+      className="docs-container"
     >
       <div
         className="fd-popover"

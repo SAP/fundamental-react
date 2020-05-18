@@ -11,7 +11,7 @@ export default {
 export const primary = () => (<Icon glyph='cart' />);
 
 export const sizes = () => (
-    <div className='fd-container'>
+    <div className='docs-container'>
         <Icon glyph='cart' size='s' />
         <Icon glyph='cart' />
         <Icon glyph='cart' size='m' />
@@ -21,10 +21,10 @@ export const sizes = () => (
 );
 
 export const iconList = () => (
-    <div className='fd-container'>
+    <div className='docs-container'>
         {listOfIcons.map((icon, index) => {
             return (
-                <div className='fd-container--icon' key={index}>
+                <div className='docs-container--icon' key={index}>
                     <Icon glyph={icon} size='xl' />
                     <div>sap-icon--{icon}</div>
                 </div>

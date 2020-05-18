@@ -10,7 +10,7 @@ export default {
 export const primary = () => (<Identifier glyph='cart' />);
 
 export const sizes = () => (
-    <div className='fd-container'>
+    <div className='docs-container'>
         <Identifier glyph='washing-machine' size='xxs' />
         <Identifier glyph='washing-machine' size='xs' />
         <Identifier glyph='washing-machine' size='s' />
@@ -22,7 +22,7 @@ export const sizes = () => (
 );
 
 export const initials = () => (
-    <div className='fd-container'>
+    <div className='docs-container'>
         <Identifier label='Wendy Wallace' size='xxs'>WW</Identifier>
         <Identifier label='Wendy Wallace' size='xs'>WW</Identifier>
         <Identifier label='Wendy Wallace' size='s'>WW</Identifier>
@@ -34,7 +34,7 @@ export const initials = () => (
 );
 
 export const circle = () => (
-    <div className='fd-container'>
+    <div className='docs-container'>
         <Identifier glyph='washing-machine' modifier='circle'
             size='xxs' />
         <Identifier glyph='washing-machine' modifier='circle'
@@ -53,7 +53,7 @@ export const circle = () => (
 );
 
 export const backgroundImage = () => (
-    <div className='fd-container'>
+    <div className='docs-container'>
         <Identifier backgroundImageUrl='./assets/nature.jpg' modifier='circle'
             size='xxs' />
         <Identifier backgroundImageUrl='./assets/nature.jpg' modifier='circle'
@@ -71,7 +71,7 @@ export const backgroundImage = () => (
     </div>
 );
 export const transparent = () => (
-    <div className='fd-container'>
+    <div className='docs-container'>
         <Identifier label='Wendy Wallace' modifier='transparent'
             size='m'>WW</Identifier>
         <Identifier glyph='washing-machine' modifier='transparent'
@@ -80,7 +80,7 @@ export const transparent = () => (
 );
 
 export const accentColors = () => (
-    <div className='fd-container'>
+    <div className='docs-container'>
         <Identifier color={1} glyph='money-bills'
             size='m' />
         <Identifier color={2} glyph='money-bills'

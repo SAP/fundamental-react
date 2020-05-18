@@ -84,7 +84,7 @@ exports[`Storyshots Visual Checkbox 1`] = `
   </div>
   <div>
     <div
-      className="fd-container"
+      className="docs-container"
     >
       <div
         className="fd-form-item"

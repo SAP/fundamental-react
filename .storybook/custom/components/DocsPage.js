@@ -36,17 +36,15 @@ const DocsPage = () => {
         <Header />
         <Title />
         <Toc />
-        <div className='fd-docs-container'>
-            <Subtitle />
-            <Import />
-            <Description />
-            <Primary />
-            <Stories />
-            <h2 className='sbdocs-h2' id='properties'>Properties</h2>
-            <Props />
-            <Community />
-            <Footer />
-        </div>
+        <Subtitle />
+        <Import />
+        <Description />
+        <Primary />
+        <Stories />
+        <h2 className='sbdocs-h2' id='properties'>Properties</h2>
+        <Props />
+        <Community />
+        <Footer />
       </>
     )
 }

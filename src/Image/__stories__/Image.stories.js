@@ -12,7 +12,7 @@ export const primary = () => (
 );
 
 export const sizes = () => (
-    <div className='fd-container'>
+    <div className='docs-container'>
         <Image photo='./assets/nature.jpg' size='s' />
         <Image photo='./assets/nature.jpg' size='m' />
         <Image photo='./assets/nature.jpg' size='l' />
@@ -20,7 +20,7 @@ export const sizes = () => (
 );
 
 export const shapes = () => (
-    <div className='fd-container'>
+    <div className='docs-container'>
         <Image photo='./assets/nature.jpg' size='s'
             type='circle' />
         <Image photo='./assets/nature.jpg' size='m'

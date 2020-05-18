@@ -23,7 +23,7 @@ exports[`Storyshots Visual Busy Indicator 1`] = `
   </div>
   <div>
     <div
-      className="fd-container"
+      className="docs-container"
     >
       <div
         aria-hidden="false"

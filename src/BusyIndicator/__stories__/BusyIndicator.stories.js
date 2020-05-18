@@ -15,7 +15,7 @@ export const primary = () => (<BusyIndicator show />);
 
 
 export const sizes = () => (
-    <div className='fd-container'>
+    <div className='docs-container'>
         <BusyIndicator show size='s' />
         <BusyIndicator show />
         <BusyIndicator show size='l' />
