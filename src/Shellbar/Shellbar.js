@@ -417,7 +417,7 @@ class Shellbar extends Component {
                                     }
                                     disableStyles={disableStyles}
                                     noArrow
-                                    placement='right'
+                                    placement='bottom-end'
                                     popperProps={{ id: 'fd-shellbar-profile-popover' }} />
                             </div>
                         </div>

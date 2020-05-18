@@ -206,7 +206,7 @@ class SearchInput extends Component {
                     noArrow
                     onClickOutside={this.handleClickOutside}
                     show={this.state.isExpanded}
-                    widthSizingType='matchTarget' />
+                    widthSizingType='minTarget' />
             </div>
         );
     }

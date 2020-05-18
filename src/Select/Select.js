@@ -125,7 +125,7 @@ const Select = React.forwardRef(({
             placement='bottom-start'
             popperProps={{ id }}
             show={isExpanded}
-            widthSizingType='matchTarget' />
+            widthSizingType='minTarget' />
     );
 });
 
