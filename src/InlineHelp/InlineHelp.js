@@ -25,7 +25,7 @@ const InlineHelp = React.forwardRef(({ text, placement, className, contentClassN
         <Popover
             body={
                 <div {...props}
-                    className='fd-inline-help___content fd-no-border'>
+                    className='fd-inline-help__content fd-no-border'>
                     {text}
                 </div>
             }
