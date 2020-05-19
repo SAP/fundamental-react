@@ -18,15 +18,15 @@ export const withLabel = () => (
 );
 
 export const bottomRight = () => (
-    <InlineHelp placement='bottom-right' text='Lorem ipsum dolor sit amet, consectetur adipiscing.' />
+    <InlineHelp placement='bottom-end' text='Lorem ipsum dolor sit amet, consectetur adipiscing.' />
 );
 
 export const bottomLeft = () => (
-    <InlineHelp placement='bottom-left' text='Lorem ipsum dolor sit amet, consectetur adipiscing.' />
+    <InlineHelp placement='bottom-start' text='Lorem ipsum dolor sit amet, consectetur adipiscing.' />
 );
 
 export const bottomCenter = () => (
-    <InlineHelp placement='bottom-center' text='Lorem ipsum dolor sit amet, consectetur adipiscing.' />
+    <InlineHelp placement='bottom' text='Lorem ipsum dolor sit amet, consectetur adipiscing.' />
 );
 
 export const right = () => (
