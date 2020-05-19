@@ -50,14 +50,14 @@ For an existing react application, follow the steps below:
 ```css
     @font-face {
         font-family: "72";
-        src: url("path/to/fonts") format("woff"); // Bold, Light, Regular available in woff and woff2
+        src: url("path/to/fonts") format("woff"); /* Bold, Light, Regular available in woff and woff2 */
         font-weight: normal;
         font-style: normal;
     };
 
     @font-face {
         font-family: "SAP-icons";
-        src: url("path/to/icons") format("woff"); // available in woff, woff2 and ttf
+        src: url("path/to/icons") format("woff"); /* available in woff, woff2 and ttf */
         font-weight: normal;
         font-style: normal;
     }
