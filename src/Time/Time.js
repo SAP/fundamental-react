@@ -11,10 +11,18 @@ class Time extends Component {
     constructor(props) {
         super(props);
         this.CLOCK = [this.props.localizedText.meridiemAM, this.props.localizedText.meridiemPM];
-        const { time } = this.props;
+        const { time, showHour, showMinute } = this.props;
         if (time.hour === '00') {
             time.hour = this.props.format12Hours ? '12' : '00';
         }
+
+        let active = 'second';
+        if (showHour) {
+            active = 'hour';
+        } else if (showMinute) {
+            active = 'minute';
+        }
+
         this.state = {
             time: {
                 hour: time.hour,
@@ -22,7 +30,8 @@ class Time extends Component {
                 second: time.second,
                 meridiem: time.meridiem
             },
-            format12Hours: props.format12Hours
+            format12Hours: props.format12Hours,
+            active
         };
     }
 
@@ -47,22 +56,21 @@ class Time extends Component {
         return value;
     };
     //updater function to be used in the child component TimeItem in event functions
-    updateTime = (value, name, event) => {
-        let a = this.state.time;
-        if (!event) {
-            a[name] = this.formatValue(value, name);
-        } else {
-            a[name] = value;
-        }
+    updateTime = (value, name) => {
+        this.state.time[name] = value;
+
         this.setState(prevState => ({
             ...prevState.time
         }));
 
         this.props.onChange(this.state.time);
     };
-    // onUpdateTime = () => {
-    //   this.props.onUpdateTime();
-    // };
+
+    updateActiveColumn = (activeColumn) => {
+        const newActiveColumn = this.state.active === 'meridiem' ? '' : activeColumn;
+        this.setState({ active: newActiveColumn });
+    };
+
     render() {
         const {
             disableStyles,
@@ -73,7 +81,6 @@ class Time extends Component {
             format12Hours,
             id,
             disabled,
-            spinners,
             onUpdateTime,
             onChange,
             time: timeProp,
@@ -92,7 +99,7 @@ class Time extends Component {
             meridiemInputProps,
             ...props
         } = this.props;
-        const { time } = this.state;
+        const { time, active } = this.state;
         let max;
         if (format12Hours) {
             max = 12;
@@ -107,86 +114,96 @@ class Time extends Component {
                 id={id}>
                 {/* Hours */}
                 {showHour ? (
-                    <TimeItem
-                        defaultValue={1}
-                        disabled={disabled}
-                        disableStyles={disableStyles}
-                        downButtonProps={hoursDownButtonProps}
-                        format12Hours={format12Hours}
-                        inputProps={hoursInputProps}
-                        localizedText={localizedText}
-                        max={max}
-                        name='hour'
-                        placeholder={'hh'}
-                        spinners={spinners}
-                        time={time}
-                        type={'Hours'}
-                        upButtonProps={hoursUpButtonProps}
-                        updateTime={this.updateTime}
-                        value={time.hour} />
+                    <div className='fd-time__col' onClick={() => this.updateActiveColumn('hour')}>
+                        <label className='fd-time__slider-label'>Hours</label>
+                        <TimeItem
+                            active={active}
+                            defaultValue={1}
+                            disabled={disabled}
+                            disableStyles={disableStyles}
+                            downButtonProps={hoursDownButtonProps}
+                            format12Hours={format12Hours}
+                            inputProps={hoursInputProps}
+                            localizedText={localizedText}
+                            max={max}
+                            name='hour'
+                            time={time}
+                            type={'Hours'}
+                            upButtonProps={hoursUpButtonProps}
+                            updateTime={this.updateTime}
+                            value={time.hour} />
+                    </div>
                 ) : (
                     ''
                 )}
                 {/* Minutes */}
                 {showMinute ? (
-                    <TimeItem
-                        defaultValue={1}
-                        disabled={disabled}
-                        disableStyles={disableStyles}
-                        downButtonProps={minutesDownButtonProps}
-                        format12Hours={format12Hours}
-                        inputProps={minutesInputProps}
-                        localizedText={localizedText}
-                        max={'60'}
-                        name='minute'
-                        placeholder={'mm'}
-                        spinners={spinners}
-                        time={time}
-                        type={'Minutes'}
-                        upButtonProps={minutesUpButtonProps}
-                        updateTime={this.updateTime}
-                        value={this.state.time.minute} />
+                    <div className='fd-time__col' onClick={() => this.updateActiveColumn('minute')}>
+                        <label className='fd-time__slider-label'>Minutes</label>
+                        <TimeItem
+                            active={active}
+                            defaultValue={1}
+                            disabled={disabled}
+                            disableStyles={disableStyles}
+                            downButtonProps={minutesDownButtonProps}
+                            format12Hours={format12Hours}
+                            inputProps={minutesInputProps}
+                            localizedText={localizedText}
+                            max={'60'}
+                            name='minute'
+                            time={time}
+                            type={'Minutes'}
+                            upButtonProps={minutesUpButtonProps}
+                            updateTime={this.updateTime}
+                            value={time.minute} />
+                    </div>
                 ) : (
                     ''
                 )}
                 {/* Seconds */}
                 {showSecond ? (
-                    <TimeItem
-                        defaultValue={1}
-                        disabled={disabled}
-                        disableStyles={disableStyles}
-                        downButtonProps={secondsDownButtonProps}
-                        format12Hours={format12Hours}
-                        inputProps={secondsInputProps}
-                        localizedText={localizedText}
-                        max={'60'}
-                        name='second'
-                        placeholder={'ss'}
-                        spinners={spinners}
-                        time={time}
-                        type={'Seconds'}
-                        upButtonProps={secondsUpButtonProps}
-                        updateTime={this.updateTime}
-                        value={this.state.time.second} />
+                    <div className='fd-time__col' onClick={() => this.updateActiveColumn('second')}>
+                        <label className='fd-time__slider-label'>Seconds</label>
+                        <TimeItem
+                            active={active}
+                            defaultValue={1}
+                            disabled={disabled}
+                            disableStyles={disableStyles}
+                            downButtonProps={secondsDownButtonProps}
+                            format12Hours={format12Hours}
+                            inputProps={secondsInputProps}
+                            localizedText={localizedText}
+                            max={'60'}
+                            name='second'
+                            time={time}
+                            type={'Seconds'}
+                            upButtonProps={secondsUpButtonProps}
+                            updateTime={this.updateTime}
+                            value={time.second} />
+                    </div>
                 ) : (
                     ''
                 )}
                 {/* Meridiem */}
                 {format12Hours ? (
-                    <TimeItem
-                        disabled={disabled}
-                        disableStyles={disableStyles}
-                        downButtonProps={meridiemDownButtonProps}
-                        inputProps={meridiemInputProps}
-                        localizedText={localizedText}
-                        max={'1'}
-                        name='meridiem'
-                        spinners={spinners}
-                        time={this.state.time}
-                        type={'Period'}
-                        upButtonProps={meridiemUpButtonProps}
-                        updateTime={this.updateTime}
-                        value={this.CLOCK[this.state.time.meridiem]} />
+                    <div className='fd-time__col' onClick={() => this.updateActiveColumn('meridiem')}>
+                        <label className='fd-time__slider-label'>AM/PM</label>
+                        <TimeItem
+                            active={active}
+                            disabled={disabled}
+                            disableStyles={disableStyles}
+                            downButtonProps={meridiemDownButtonProps}
+                            inputProps={meridiemInputProps}
+                            localizedText={localizedText}
+                            max={'1'}
+                            name='meridiem'
+                            time={this.state.time}
+                            type={'Period'}
+                            upButtonProps={meridiemUpButtonProps}
+                            updateActiveColumn={this.updateActiveColumn}
+                            updateTime={this.updateTime}
+                            value={this.CLOCK[this.state.time.meridiem]} />
+                    </div>
                 ) : (
                     ''
                 )}
@@ -199,7 +216,6 @@ Time.displayName = 'Time';
 
 Time.basePropTypes = {
     /** Internal use only */
-    disableStyles: PropTypes.bool,
     /** Set to **true** to use the 12-hour clock (hours ranging from 01 to 12) and to display a meridiem control */
     format12Hours: PropTypes.bool,
     /** Enables the input for hours */
