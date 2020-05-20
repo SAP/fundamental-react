@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { IMAGE_SIZES, IMAGE_TYPES } from '../utils/constants';
 import React, { useEffect } from 'react';
 
-/** Use an **Image** component to display images. */
+/** Use an **Image** component to display images. **DEPRECATED**. Use the Avatar component instead. */
 
 const Image = React.forwardRef(({ size, type, photo, className, disableStyles, ...props }, ref) => {
 

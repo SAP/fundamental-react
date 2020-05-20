@@ -242,6 +242,45 @@ export const selection = () => (
     </List>
 );
 
+export const partialNavigation = () => (
+    <List partialNavigation>
+        <List.Header>List Header</List.Header>
+        <List.Item url={'#'}>
+            <List.Text>List Item 1</List.Text>
+        </List.Item>
+        <List.Item>
+            <List.Text>List Item 2</List.Text>
+        </List.Item>
+        <List.Item>
+            <List.Text>List Item 3</List.Text>
+        </List.Item>
+        <List.Item selected url={'#'}>
+            <List.Text>List Item 4</List.Text>
+        </List.Item>
+        <List.Footer>List Footer</List.Footer>
+    </List>
+);
+
+export const navigationList = () => (
+    <List navigation>
+        <List.Header>List Header</List.Header>
+        <List.Item url={'#'}>
+            <List.Text>List Item 1</List.Text>
+        </List.Item>
+        <List.Item url={'#'}>
+            <List.Text>List Item 2</List.Text>
+        </List.Item>
+        <List.Item url={'#'}>
+            <List.Text>List Item 3</List.Text>
+        </List.Item>
+        <List.Item selected url={'#'}>
+            <List.Text>List Item 4</List.Text>
+        </List.Item>
+        <List.Footer>List Footer</List.Footer>
+    </List>
+);
+
+
 dev.story = {
     parameters: { docs: { disable: true } }
 };

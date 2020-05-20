@@ -1,45 +1,68 @@
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import React, { useState } from 'react';
+import React from 'react';
 
 const ListItem = ({
     className,
     children,
     hasByline,
     onClick,
+    navigation,
+    partialNavigation,
     selected,
+    url,
     ...props
 }) => {
 
-    let [isSelected, setIsSelected] = useState(selected);
-
     const handleClick = (e) => {
-        setIsSelected(!isSelected);
         onClick(e);
     };
+
+    const isLink = navigation || (partialNavigation && url);
 
     const ListItemClasses = classnames(
         'fd-list__item',
         {
-            'is-selected': isSelected
+            'fd-list__item--link': isLink
         },
         className
     );
 
-    const content = hasByline ? (
-        <div className='fd-list__content'>
-            {children}
-        </div>
-    ) : children;
+    let content;
+
+    if (hasByline) {
+        content = (
+            <div className='fd-list__content'>
+                {children}
+            </div>
+        );
+    } else if (isLink) {
+        const linkClassNames = classnames(
+            'fd-list__link',
+            {
+                'fd-list__link--navigation-indicator': partialNavigation,
+                'is-selected': isLink && selected
+            }
+        );
+
+        content = (
+            <a
+                className={linkClassNames}
+                href={url}
+                tabIndex='0'>
+                {children}
+            </a>
+        );
+    } else {
+        content = children;
+    }
 
     return (
         <li
             {...props}
-            aria-selected={isSelected}
             className={ListItemClasses}
-            onClick={handleClick}
-            role='option'
-            tabIndex='0'>
+            onClick={isLink ? null : handleClick}
+            tabIndex={isLink ? '-1' : '0'}>
             {content}
         </li>
 
@@ -55,9 +78,15 @@ ListItem.propTypes = {
     className: PropTypes.string,
     /** Internal use only */
     hasByline: PropTypes.bool,
-    /** Set to **true** to set state of the list item to "selected". */
+    /** Internal use only */
+    navigation: PropTypes.bool,
+    /** Interal use only */
+    partialNavigation: PropTypes.bool,
+    /** Set to **true** if list item is currently selected (only supported for links) */
     selected: PropTypes.bool,
-    /** Callback function when user clicks on the component*/
+    /** URL to navigate to if list item is a link */
+    url: PropTypes.string,
+    /** Callback function when user clicks on the component (only supported if not a link) */
     onClick: PropTypes.func
 };
 

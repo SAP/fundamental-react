@@ -18,7 +18,9 @@ const List = React.forwardRef(({
     compact,
     disableStyles,
     hasByline,
+    navigation,
     noBorder,
+    partialNavigation,
     ...props
 }, ref) => {
 
@@ -33,7 +35,9 @@ const List = React.forwardRef(({
         {
             'fd-list--compact': compact,
             'fd-list--no-border': noBorder,
-            'fd-list--byline': hasByline
+            'fd-list--byline': hasByline,
+            'fd-list--navigation': navigation || partialNavigation,
+            'fd-list--navigation-indication': navigation || partialNavigation
         },
         className
     );
@@ -41,7 +45,7 @@ const List = React.forwardRef(({
     return (
         <ul {...props} className={ListClasses}
             ref={ref}>
-            { React.Children.map(children, child => React.cloneElement(child, { hasByline })) }
+            { React.Children.map(children, child => React.cloneElement(child, { hasByline, navigation, partialNavigation })) }
         </ul>
     );
 });
@@ -59,8 +63,12 @@ List.propTypes = {
     disableStyles: PropTypes.bool,
     /** Set to **true** if any list item has a byline. */
     hasByline: PropTypes.bool,
+    /** Set to **true** if all list items are links */
+    navigation: PropTypes.bool,
     /** Set to **true** to remove borders from the List component. */
-    noBorder: PropTypes.bool
+    noBorder: PropTypes.bool,
+    /** Set to **true** if any list item is a link, but not all */
+    partialNavigation: PropTypes.bool
 };
 
 
