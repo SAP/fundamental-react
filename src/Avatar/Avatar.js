@@ -4,9 +4,9 @@ import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import PropTypes from 'prop-types';
 import React, { useEffect } from 'react';
 
-/** An **Identifier** is a visual presentation option around using an icon or user initials. */
+/** An **Avatar** is a visual presentation option around using an icon or user initials. */
 
-const Identifier = React.forwardRef(({ glyph, size, circle, transparent, border, color, label, backgroundImageUrl, children, className, disableStyles, role, placeholder, tile, zoom, ...props }, ref) => {
+const Avatar = React.forwardRef(({ glyph, size, circle, transparent, border, color, label, backgroundImageUrl, children, className, disableStyles, role, placeholder, tile, zoom, ...props }, ref) => {
 
     useEffect(() => {
         if (!disableStyles) {
@@ -56,9 +56,9 @@ const Identifier = React.forwardRef(({ glyph, size, circle, transparent, border,
     );
 });
 
-Identifier.displayName = 'Identifier';
+Avatar.displayName = 'Avatar';
 
-Identifier.propTypes = {
+Avatar.propTypes = {
     /** Image URL */
     backgroundImageUrl: PropTypes.string,
     /** Include a border */
@@ -79,7 +79,7 @@ Identifier.propTypes = {
     label: PropTypes.string,
     /** Apply placeholder background color */
     placeholder: PropTypes.bool,
-    /** Applies an aria-role. Set to button if Identifier opens a Popover or Dialog */
+    /** Applies an aria-role. Set to button if Avatar opens a Popover or Dialog */
     role: PropTypes.string,
     /** Size of the component:
     'xs',
@@ -96,4 +96,4 @@ Identifier.propTypes = {
     zoom: PropTypes.bool
 };
 
-export default Identifier;
+export default Avatar;

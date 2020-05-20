@@ -1,6 +1,6 @@
 /* eslint-disable react/no-multi-comp */
+import Avatar from '../../Avatar/Avatar';
 import Button from '../../Button/Button';
-import Identifier from '../../Identifier/Identifier';
 import Image from '../../Image/Image';
 import Menu from '../../Menu/Menu';
 import Popover from '../../Popover/Popover';
@@ -69,7 +69,7 @@ export const mediaTile = () => (
         <br />
         <Tile active onClick={() => {}}>
             <Tile.Media>
-                <Identifier color={3} glyph='home'
+                <Avatar color={3} glyph='home'
                     size='m' />
             </Tile.Media>
             <Tile.Content title='Tile Title'>
