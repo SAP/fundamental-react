@@ -11,16 +11,20 @@ class Time extends Component {
     constructor(props) {
         super(props);
         this.CLOCK = [this.props.localizedText.meridiemAM, this.props.localizedText.meridiemPM];
-        const { time, showHour, showMinute } = this.props;
+        const { time, showHour, showMinute, showSecond } = this.props;
         if (time.hour === '00') {
             time.hour = this.props.format12Hours ? '12' : '00';
         }
 
-        let active = 'second';
+        let active;
         if (showHour) {
             active = 'hour';
         } else if (showMinute) {
             active = 'minute';
+        } else if (showSecond) {
+            active = 'second';
+        } else {
+            active = 'meridiem';
         }
 
         this.state = {

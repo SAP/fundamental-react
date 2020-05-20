@@ -175,11 +175,15 @@ class TimeItem extends Component {
     }
 
     generateValues = () => {
-        const { name, max, format12Hours, placeholder, value, disabled } = this.props;
+        const { name, max, format12Hours, placeholder, value, disabled, inputProps } = this.props;
 
         if (name === 'meridiem') {
             return this.CLOCK.map((amPmValue, index) => (
-                <li className='fd-time__item' onClick={() => this.onClick(index)}>
+                <li
+                    {...inputProps}
+                    className='fd-time__item'
+                    key={index}
+                    onClick={() => this.onClick(index)}>
                     {index === 0 && <div className='fd-time__current-indicator' />}
                     <span className='fd-time__unit'>{amPmValue}</span>
                 </li>
@@ -240,6 +244,7 @@ class TimeItem extends Component {
 
         return values.map((timeValue, i) => (
             <li
+                {...inputProps}
                 className='fd-time__item'
                 key={i}
                 onClick={disabled ? null : () => this.onClick(timeValue)}>
