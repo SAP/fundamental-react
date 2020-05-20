@@ -43,19 +43,12 @@ export const ICON_SIZES = [
     'xl'
 ];
 
-export const IDENTIFIER_MODIFIERS = [
-    'circle',
-    'transparent'
-];
-
-export const IDENTIFIER_SIZES = [
-    'xxs',
+export const AVATAR_SIZES = [
     'xs',
     's',
     'm',
     'l',
-    'xl',
-    'xxl'
+    'xl'
 ];
 
 export const IMAGE_SIZES = [
