@@ -1,0 +1,909 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Visual List 1`] = `
+<div
+  dir="ltr"
+>
+  <div>
+    <ul
+      className="fd-list"
+    >
+      <li
+        className="fd-list__item"
+        tabIndex="0"
+      >
+        <span
+          className="fd-list__title"
+        >
+          List Item 1
+        </span>
+      </li>
+      <li
+        className="fd-list__item"
+        tabIndex="0"
+      >
+        <span
+          className="fd-list__title"
+        >
+          List Item 2
+        </span>
+      </li>
+      <li
+        className="fd-list__item"
+        tabIndex="0"
+      >
+        <span
+          className="fd-list__title"
+        >
+          List Item 3
+        </span>
+      </li>
+      <li
+        className="fd-list__item"
+        tabIndex="0"
+      >
+        <span
+          className="fd-list__title"
+        >
+          List Item 4
+        </span>
+      </li>
+    </ul>
+  </div>
+  <div>
+    <ul
+      className="fd-list"
+    >
+      <li
+        className="fd-list__group-header"
+      >
+        List Header
+      </li>
+      <li
+        className="fd-list__item"
+        tabIndex="0"
+      >
+        <span
+          className="fd-list__title"
+        >
+          List Item 1
+        </span>
+      </li>
+      <li
+        className="fd-list__item"
+        tabIndex="0"
+      >
+        <span
+          className="fd-list__title"
+        >
+          List Item 2
+        </span>
+      </li>
+      <li
+        className="fd-list__item"
+        tabIndex="0"
+      >
+        <span
+          className="fd-list__title"
+        >
+          List Item 3
+        </span>
+      </li>
+      <li
+        className="fd-list__item"
+        tabIndex="0"
+      >
+        <span
+          className="fd-list__title"
+        >
+          List Item 4
+        </span>
+      </li>
+      <li
+        className="fd-list__footer"
+      >
+        List Footer
+      </li>
+    </ul>
+  </div>
+  <div>
+    <ul
+      className="fd-list fd-list--no-border"
+    >
+      <li
+        className="fd-list__group-header"
+      >
+        List Header
+      </li>
+      <li
+        className="fd-list__item"
+        tabIndex="0"
+      >
+        <span
+          className="fd-list__title"
+        >
+          List Item 1
+        </span>
+      </li>
+      <li
+        className="fd-list__item"
+        tabIndex="0"
+      >
+        <span
+          className="fd-list__title"
+        >
+          List Item 2
+        </span>
+      </li>
+      <li
+        className="fd-list__item"
+        tabIndex="0"
+      >
+        <span
+          className="fd-list__title"
+        >
+          List Item 3
+        </span>
+      </li>
+      <li
+        className="fd-list__item"
+        tabIndex="0"
+      >
+        <span
+          className="fd-list__title"
+        >
+          List Item 4
+        </span>
+      </li>
+      <li
+        className="fd-list__footer"
+      >
+        List Footer
+      </li>
+    </ul>
+  </div>
+  <div>
+    <ul
+      className="fd-list fd-list--compact"
+    >
+      <li
+        className="fd-list__group-header"
+      >
+        List Header
+      </li>
+      <li
+        className="fd-list__item"
+        tabIndex="0"
+      >
+        <span
+          className="fd-list__title"
+        >
+          List Item 1
+        </span>
+      </li>
+      <li
+        className="fd-list__item"
+        tabIndex="0"
+      >
+        <span
+          className="fd-list__title"
+        >
+          List Item 2
+        </span>
+      </li>
+      <li
+        className="fd-list__item"
+        tabIndex="0"
+      >
+        <span
+          className="fd-list__title"
+        >
+          List Item 3
+        </span>
+      </li>
+      <li
+        className="fd-list__item"
+        tabIndex="0"
+      >
+        <span
+          className="fd-list__title"
+        >
+          List Item 4
+        </span>
+      </li>
+      <li
+        className="fd-list__footer"
+      >
+        List Footer
+      </li>
+    </ul>
+  </div>
+  <div>
+    <ul
+      className="fd-list"
+    >
+      <li
+        className="fd-list__group-header"
+      >
+        List Header
+      </li>
+      <li
+        className="fd-list__item"
+        tabIndex="0"
+      >
+        <span
+          className="fd-list__icon sap-icon--cart"
+        />
+        <span
+          className="fd-list__title"
+        >
+          List Item 1
+        </span>
+      </li>
+      <li
+        className="fd-list__item"
+        tabIndex="0"
+      >
+        <span
+          className="fd-list__icon sap-icon--wrench"
+        />
+        <span
+          className="fd-list__title"
+        >
+          List Item 2
+        </span>
+      </li>
+      <li
+        className="fd-list__item"
+        tabIndex="0"
+      >
+        <span
+          className="fd-list__icon sap-icon--lightbulb"
+        />
+        <span
+          className="fd-list__title"
+        >
+          List Item 3
+        </span>
+      </li>
+      <li
+        className="fd-list__item"
+        tabIndex="0"
+      >
+        <span
+          className="fd-list__icon sap-icon--history"
+        />
+        <span
+          className="fd-list__title"
+        >
+          List Item 4
+        </span>
+      </li>
+      <li
+        className="fd-list__footer"
+      >
+        List Footer
+      </li>
+    </ul>
+  </div>
+  <div>
+    <ul
+      className="fd-list"
+    >
+      <li
+        className="fd-list__group-header"
+      >
+        List Header
+      </li>
+      <li
+        className="fd-list__item"
+        tabIndex="0"
+      >
+        <span
+          className="fd-list__title"
+        >
+          List Item 1
+        </span>
+        <span
+          className="fd-list__icon sap-icon--navigation-right-arrow"
+        />
+      </li>
+      <li
+        className="fd-list__item"
+        tabIndex="0"
+      >
+        <span
+          className="fd-list__title"
+        >
+          List Item 2
+        </span>
+        <span
+          className="fd-list__icon sap-icon--navigation-right-arrow"
+        />
+      </li>
+      <li
+        className="fd-list__item"
+        tabIndex="0"
+      >
+        <span
+          className="fd-list__title"
+        >
+          List Item 3
+        </span>
+        <span
+          className="fd-list__icon sap-icon--navigation-right-arrow"
+        />
+      </li>
+      <li
+        className="fd-list__item"
+        tabIndex="0"
+      >
+        <span
+          className="fd-list__title"
+        >
+          List Item 4
+        </span>
+        <span
+          className="fd-list__icon sap-icon--navigation-right-arrow"
+        />
+      </li>
+      <li
+        className="fd-list__footer"
+      >
+        List Footer
+      </li>
+    </ul>
+  </div>
+  <div>
+    <ul
+      className="fd-list"
+    >
+      <li
+        className="fd-list__group-header"
+      >
+        List Header
+      </li>
+      <li
+        className="fd-list__item"
+        tabIndex="0"
+      >
+        <span
+          className="fd-list__title"
+        >
+          List Item 1
+        </span>
+        <span
+          className="fd-list__secondary"
+        >
+          Positive
+        </span>
+      </li>
+      <li
+        className="fd-list__item"
+        tabIndex="0"
+      >
+        <span
+          className="fd-list__title"
+        >
+          List Item 2
+        </span>
+        <span
+          className="fd-list__secondary"
+        >
+          Negative
+        </span>
+      </li>
+      <li
+        className="fd-list__item"
+        tabIndex="0"
+      >
+        <span
+          className="fd-list__title"
+        >
+          List Item 3
+        </span>
+        <span
+          className="fd-list__secondary"
+        >
+          Positive
+        </span>
+      </li>
+      <li
+        className="fd-list__item"
+        tabIndex="0"
+      >
+        <span
+          className="fd-list__title"
+        >
+          List Item 4
+        </span>
+        <span
+          className="fd-list__secondary"
+        >
+          Negative
+        </span>
+      </li>
+      <li
+        className="fd-list__footer"
+      >
+        List Footer
+      </li>
+    </ul>
+  </div>
+  <div>
+    <ul
+      className="fd-list"
+    >
+      <li
+        className="fd-list__group-header"
+      >
+        List Header
+      </li>
+      <li
+        className="fd-list__item"
+        tabIndex="0"
+      >
+        <span
+          className="fd-list__icon sap-icon--accept"
+        />
+        <span
+          className="fd-list__title"
+        >
+          List Item 1
+        </span>
+      </li>
+      <li
+        className="fd-list__footer"
+      >
+        List Footer
+      </li>
+    </ul>
+  </div>
+  <div>
+    <ul
+      className="fd-list fd-list--byline"
+    >
+      <li
+        className="fd-list__group-header"
+        hasByline={true}
+      >
+        List Header
+      </li>
+      <li
+        className="fd-list__item"
+        tabIndex="0"
+      >
+        <div
+          className="fd-list__content"
+        >
+          <span
+            className="fd-list__title"
+          >
+            List Item 1
+          </span>
+          <div
+            className="fd-list__byline"
+          >
+            Byline
+          </div>
+        </div>
+      </li>
+      <li
+        className="fd-list__item"
+        tabIndex="0"
+      >
+        <div
+          className="fd-list__content"
+        >
+          <span
+            className="fd-list__title"
+          >
+            List Item 2
+          </span>
+          <div
+            className="fd-list__byline"
+          >
+            Byline
+          </div>
+        </div>
+      </li>
+      <li
+        className="fd-list__item"
+        tabIndex="0"
+      >
+        <div
+          className="fd-list__content"
+        >
+          <span
+            className="fd-list__title"
+          >
+            List Item 3
+          </span>
+          <div
+            className="fd-list__byline"
+          >
+            Byline
+          </div>
+        </div>
+      </li>
+      <li
+        className="fd-list__item"
+        tabIndex="0"
+      >
+        <div
+          className="fd-list__content"
+        >
+          <span
+            className="fd-list__title"
+          >
+            List Item 4
+          </span>
+          <div
+            className="fd-list__byline fd-list__byline--2-col"
+          >
+            <span
+              className="fd-list__byline-left"
+            >
+              Left byline
+            </span>
+            <span
+              className="fd-list__byline-right"
+            >
+              Right byline
+            </span>
+          </div>
+        </div>
+      </li>
+      <li
+        className="fd-list__footer"
+        hasByline={true}
+      >
+        List Footer
+      </li>
+    </ul>
+  </div>
+  <div>
+    <ul
+      className="fd-list"
+    >
+      <li
+        className="fd-list__group-header"
+      >
+        List Header
+      </li>
+      <li
+        className="fd-list__item"
+        tabIndex="0"
+      >
+        <div
+          className="fd-form-item fd-list__form-item"
+        >
+          <div
+            className="fd-form-item fd-form-item--inline"
+          >
+            <input
+              aria-checked="false"
+              className="fd-checkbox"
+              id="fd-84"
+              onChange={[Function]}
+              type="checkbox"
+            />
+            <label
+              className="fd-form-label fd-checkbox__label"
+              htmlFor="fd-84"
+            />
+          </div>
+        </div>
+        <span
+          className="fd-list__title"
+        >
+          List Item 1
+        </span>
+      </li>
+      <li
+        className="fd-list__item"
+        tabIndex="0"
+      >
+        <div
+          className="fd-form-item fd-list__form-item"
+        >
+          <div
+            className="fd-form-item fd-form-item--inline"
+          >
+            <input
+              aria-checked="false"
+              className="fd-checkbox"
+              id="fd-85"
+              onChange={[Function]}
+              type="checkbox"
+            />
+            <label
+              className="fd-form-label fd-checkbox__label"
+              htmlFor="fd-85"
+            />
+          </div>
+        </div>
+        <span
+          className="fd-list__title"
+        >
+          List Item 2
+        </span>
+      </li>
+      <li
+        className="fd-list__item"
+        tabIndex="0"
+      >
+        <div
+          className="fd-form-item fd-list__form-item"
+        >
+          <div
+            className="fd-form-item fd-form-item--inline"
+          >
+            <input
+              aria-checked="false"
+              className="fd-checkbox"
+              id="fd-86"
+              onChange={[Function]}
+              type="checkbox"
+            />
+            <label
+              className="fd-form-label fd-checkbox__label"
+              htmlFor="fd-86"
+            />
+          </div>
+        </div>
+        <span
+          className="fd-list__title"
+        >
+          List Item 3
+        </span>
+      </li>
+      <li
+        className="fd-list__item"
+        tabIndex="0"
+      >
+        <div
+          className="fd-form-item fd-list__form-item"
+        >
+          <div
+            className="fd-form-item fd-form-item--inline"
+          >
+            <input
+              aria-checked="false"
+              className="fd-checkbox"
+              id="fd-87"
+              onChange={[Function]}
+              type="checkbox"
+            />
+            <label
+              className="fd-form-label fd-checkbox__label"
+              htmlFor="fd-87"
+            />
+          </div>
+        </div>
+        <span
+          className="fd-list__title"
+        >
+          List Item 4
+        </span>
+      </li>
+      <li
+        className="fd-list__footer"
+      >
+        List Footer
+      </li>
+    </ul>
+  </div>
+  <div>
+    <ul
+      className="fd-list fd-list--navigation fd-list--navigation-indication"
+    >
+      <li
+        className="fd-list__group-header"
+        partialNavigation={true}
+      >
+        List Header
+      </li>
+      <li
+        className="fd-list__item fd-list__item--link"
+        tabIndex="-1"
+      >
+        <a
+          className="fd-list__link fd-list__link--navigation-indicator"
+          href="#"
+          tabIndex="0"
+        >
+          <span
+            className="fd-list__title"
+          >
+            List Item 1
+          </span>
+        </a>
+      </li>
+      <li
+        className="fd-list__item"
+        tabIndex="0"
+      >
+        <span
+          className="fd-list__title"
+        >
+          List Item 2
+        </span>
+      </li>
+      <li
+        className="fd-list__item"
+        tabIndex="0"
+      >
+        <span
+          className="fd-list__title"
+        >
+          List Item 3
+        </span>
+      </li>
+      <li
+        className="fd-list__item fd-list__item--link"
+        tabIndex="-1"
+      >
+        <a
+          className="fd-list__link fd-list__link--navigation-indicator is-selected"
+          href="#"
+          tabIndex="0"
+        >
+          <span
+            className="fd-list__title"
+          >
+            List Item 4
+          </span>
+        </a>
+      </li>
+      <li
+        className="fd-list__footer"
+        partialNavigation={true}
+      >
+        List Footer
+      </li>
+    </ul>
+  </div>
+  <div>
+    <ul
+      className="fd-list fd-list--navigation fd-list--navigation-indication"
+    >
+      <li
+        className="fd-list__group-header"
+        navigation={true}
+      >
+        List Header
+      </li>
+      <li
+        className="fd-list__item fd-list__item--link"
+        tabIndex="-1"
+      >
+        <a
+          className="fd-list__link"
+          href="#"
+          tabIndex="0"
+        >
+          <span
+            className="fd-list__title"
+          >
+            List Item 1
+          </span>
+        </a>
+      </li>
+      <li
+        className="fd-list__item fd-list__item--link"
+        tabIndex="-1"
+      >
+        <a
+          className="fd-list__link"
+          href="#"
+          tabIndex="0"
+        >
+          <span
+            className="fd-list__title"
+          >
+            List Item 2
+          </span>
+        </a>
+      </li>
+      <li
+        className="fd-list__item fd-list__item--link"
+        tabIndex="-1"
+      >
+        <a
+          className="fd-list__link"
+          href="#"
+          tabIndex="0"
+        >
+          <span
+            className="fd-list__title"
+          >
+            List Item 3
+          </span>
+        </a>
+      </li>
+      <li
+        className="fd-list__item fd-list__item--link"
+        tabIndex="-1"
+      >
+        <a
+          className="fd-list__link is-selected"
+          href="#"
+          tabIndex="0"
+        >
+          <span
+            className="fd-list__title"
+          >
+            List Item 4
+          </span>
+        </a>
+      </li>
+      <li
+        className="fd-list__footer"
+        navigation={true}
+      >
+        List Footer
+      </li>
+    </ul>
+  </div>
+  <div>
+    <ul
+      className="fd-list"
+    >
+      <li
+        className="fd-list__group-header"
+      >
+        List Header
+      </li>
+      <li
+        className="fd-list__item"
+        tabIndex="0"
+      >
+        <span
+          className="fd-list__title"
+        >
+          List Item 1
+        </span>
+      </li>
+      <li
+        className="fd-list__item fd-list__item--action"
+        tabIndex="0"
+      >
+        <button
+          className="fd-list__title"
+          onClick={[Function]}
+        >
+          List Item 2
+        </button>
+      </li>
+      <li
+        className="fd-list__item fd-list__item--action"
+        tabIndex="0"
+      >
+        <button
+          className="fd-list__title"
+          onClick={[Function]}
+        >
+          List Item 3
+        </button>
+      </li>
+      <li
+        className="fd-list__item fd-list__item--action"
+        tabIndex="0"
+      >
+        <button
+          className="fd-list__title"
+          onClick={[Function]}
+        >
+          List Item 4
+        </button>
+      </li>
+      <li
+        className="fd-list__footer"
+      >
+        List Footer
+      </li>
+    </ul>
+  </div>
+</div>
+`;

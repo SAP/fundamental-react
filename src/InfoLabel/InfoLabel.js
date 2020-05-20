@@ -4,7 +4,7 @@ import { listOfIcons } from '../utils/listOfIcons';
 import PropTypes from 'prop-types';
 import React, { useEffect } from 'react';
 
-/** Info Label is a small non-interactive numeric or text-based control.
+/** An **InfoLabel** is a small non-interactive numeric or text-based control.
  * Its primary use is to add user-defined characteristic to an object. */
 const InfoLabel = React.forwardRef(({
     children,

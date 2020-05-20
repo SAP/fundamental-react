@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import shortId from '../utils/shortId';
 import React, { useEffect } from 'react';
 
-/** RadioGroup is a type of FormGroup that groups a collection of radio buttons or checkboxes into a single input value.
- * Radio is a specialized form control that emits an <input> with a type of radio.
+/** A **FormRadioGroup** is a type of FormGroup that groups a collection of radio buttons or checkboxes into a single input value.
+ * **FormRadioItem** is a specialized form control that emits an `<input>` with a type of radio.
  * Radios allow the user to see all options and select one. Generally, this is used when there are
 between 2-3 options. This component can also be disabled and displayed in a row. */
 

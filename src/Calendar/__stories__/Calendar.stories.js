@@ -40,12 +40,6 @@ const weekdayOptions = {
 
 export const primary = () => (<Calendar />);
 
-primary.story = {
-    parameters: {
-        storyshots: { disable: true }
-    }
-};
-
 export const disableWeekends = () => (
     <Calendar
         disableBeforeDate={new Date()}
@@ -53,10 +47,7 @@ export const disableWeekends = () => (
 );
 
 disableWeekends.story = {
-    name: 'Disabled Weekends and Disabled Before Date',
-    parameters: {
-        storyshots: { disable: true }
-    }
+    name: 'Disabled Weekends and Disabled Before Date'
 };
 
 export const blockedDates = () => (
@@ -64,12 +55,6 @@ export const blockedDates = () => (
         blockedDates={[new Date(2018, 1, 1, 0, 0, 0, 0), new Date(2018, 3, 3, 0, 0, 0, 0)]}
         disableWeekday={['Monday', 'Tuesday']} />
 );
-
-blockedDates.story = {
-    parameters: {
-        storyshots: { disable: true }
-    }
-};
 
 export const specialDays = () => (
     <Calendar
@@ -81,22 +66,9 @@ export const specialDays = () => (
         }} />
 );
 
-specialDays.story = {
-    parameters: {
-        storyshots: { disable: true }
-    }
-};
-
 export const rangeSelection = () => (
     <Calendar enableRangeSelection />
 );
-
-rangeSelection.story = {
-    parameters: {
-        storyshots: { disable: true }
-    }
-};
-
 
 export const dev = () => (
     <Calendar
@@ -115,7 +87,6 @@ export const dev = () => (
 
 dev.story = {
     parameters: {
-        docs: { disable: true },
-        storyshots: { disable: true }
+        docs: { disable: true }
     }
 };

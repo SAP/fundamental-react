@@ -1,0 +1,346 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Visual Avatar 1`] = `
+<div
+  dir="ltr"
+>
+  <div>
+    <span
+      className="fd-avatar fd-avatar--m sap-icon--cart"
+      role="presentation"
+    />
+  </div>
+  <div>
+    <div
+      className="fr-container"
+    >
+      <span
+        className="fd-avatar fd-avatar--xs sap-icon--washing-machine"
+        role="presentation"
+      />
+      <span
+        className="fd-avatar fd-avatar--s sap-icon--washing-machine"
+        role="presentation"
+      />
+      <span
+        className="fd-avatar fd-avatar--m sap-icon--washing-machine"
+        role="presentation"
+      />
+      <span
+        className="fd-avatar fd-avatar--l sap-icon--washing-machine"
+        role="presentation"
+      />
+      <span
+        className="fd-avatar fd-avatar--xl sap-icon--washing-machine"
+        role="presentation"
+      />
+    </div>
+  </div>
+  <div>
+    <div
+      className="fr-container"
+    >
+      <span
+        aria-label="Wendy Wallace"
+        className="fd-avatar fd-avatar--xs"
+        role=""
+      >
+        WW
+      </span>
+      <span
+        aria-label="Wendy Wallace"
+        className="fd-avatar fd-avatar--s"
+        role=""
+      >
+        WW
+      </span>
+      <span
+        aria-label="Wendy Wallace"
+        className="fd-avatar fd-avatar--m"
+        role=""
+      >
+        WW
+      </span>
+      <span
+        aria-label="Wendy Wallace"
+        className="fd-avatar fd-avatar--l"
+        role=""
+      >
+        WW
+      </span>
+      <span
+        aria-label="Wendy Wallace"
+        className="fd-avatar fd-avatar--xl"
+        role=""
+      >
+        WW
+      </span>
+    </div>
+  </div>
+  <div>
+    <div
+      className="fr-container"
+    >
+      <span
+        className="fd-avatar fd-avatar--xs sap-icon--washing-machine fd-avatar--circle"
+        role="presentation"
+      />
+      <span
+        className="fd-avatar fd-avatar--s sap-icon--washing-machine fd-avatar--circle"
+        role="presentation"
+      />
+      <span
+        className="fd-avatar fd-avatar--m sap-icon--washing-machine fd-avatar--circle"
+        role="presentation"
+      />
+      <span
+        className="fd-avatar fd-avatar--l sap-icon--washing-machine fd-avatar--circle"
+        role="presentation"
+      />
+      <span
+        className="fd-avatar fd-avatar--xl sap-icon--washing-machine fd-avatar--circle"
+        role="presentation"
+      />
+    </div>
+  </div>
+  <div>
+    <div
+      className="fr-container"
+    >
+      <span
+        className="fd-avatar fd-avatar--xs fd-avatar--thumbnail fd-avatar--circle"
+        role="presentation"
+        style={
+          Object {
+            "backgroundImage": "url(./assets/nature.jpg)",
+          }
+        }
+      />
+      <span
+        className="fd-avatar fd-avatar--s fd-avatar--thumbnail fd-avatar--circle"
+        role="presentation"
+        style={
+          Object {
+            "backgroundImage": "url(./assets/nature.jpg)",
+          }
+        }
+      />
+      <span
+        className="fd-avatar fd-avatar--m fd-avatar--thumbnail fd-avatar--circle"
+        role="presentation"
+        style={
+          Object {
+            "backgroundImage": "url(./assets/nature.jpg)",
+          }
+        }
+      />
+      <span
+        className="fd-avatar fd-avatar--l fd-avatar--thumbnail fd-avatar--circle"
+        role="presentation"
+        style={
+          Object {
+            "backgroundImage": "url(./assets/nature.jpg)",
+          }
+        }
+      />
+      <span
+        className="fd-avatar fd-avatar--xl fd-avatar--thumbnail fd-avatar--circle"
+        role="presentation"
+        style={
+          Object {
+            "backgroundImage": "url(./assets/nature.jpg)",
+          }
+        }
+      />
+    </div>
+  </div>
+  <div>
+    <div
+      className="fr-container"
+    >
+      <span
+        aria-label="Wendy Wallace"
+        className="fd-avatar fd-avatar--m fd-avatar--transparent"
+        role=""
+      >
+        WW
+      </span>
+      <span
+        className="fd-avatar fd-avatar--l sap-icon--washing-machine fd-avatar--transparent"
+        role="presentation"
+      />
+    </div>
+  </div>
+  <div>
+    <div
+      className="fr-container"
+    >
+      <span
+        className="fd-avatar fd-avatar--xs sap-icon--washing-machine fd-avatar--tile fd-avatar--circle"
+        role="presentation"
+      />
+      <span
+        className="fd-avatar fd-avatar--s sap-icon--washing-machine fd-avatar--tile fd-avatar--circle"
+        role="presentation"
+      />
+      <span
+        className="fd-avatar fd-avatar--m sap-icon--washing-machine fd-avatar--tile fd-avatar--circle"
+        role="presentation"
+      />
+      <span
+        className="fd-avatar fd-avatar--l sap-icon--washing-machine fd-avatar--tile fd-avatar--circle"
+        role="presentation"
+      />
+      <span
+        className="fd-avatar fd-avatar--xl sap-icon--washing-machine fd-avatar--tile fd-avatar--circle"
+        role="presentation"
+      />
+    </div>
+  </div>
+  <div>
+    <div
+      className="fr-container"
+    >
+      <span
+        className="fd-avatar fd-avatar--xs sap-icon--washing-machine fd-avatar--placeholder fd-avatar--circle"
+        role="presentation"
+      />
+      <span
+        className="fd-avatar fd-avatar--s sap-icon--washing-machine fd-avatar--placeholder fd-avatar--circle"
+        role="presentation"
+      />
+      <span
+        className="fd-avatar fd-avatar--m sap-icon--washing-machine fd-avatar--placeholder fd-avatar--circle"
+        role="presentation"
+      />
+      <span
+        className="fd-avatar fd-avatar--l sap-icon--washing-machine fd-avatar--placeholder fd-avatar--circle"
+        role="presentation"
+      />
+      <span
+        className="fd-avatar fd-avatar--xl sap-icon--washing-machine fd-avatar--placeholder fd-avatar--circle"
+        role="presentation"
+      />
+    </div>
+  </div>
+  <div>
+    <div
+      className="fr-container"
+    >
+      <span
+        className="fd-avatar fd-avatar--xs sap-icon--washing-machine fd-avatar--circle"
+        role="presentation"
+      >
+        <span
+          className="fd-avatar__zoom-icon sap-icon--edit"
+          role="presentation"
+        />
+      </span>
+      <span
+        className="fd-avatar fd-avatar--s sap-icon--washing-machine fd-avatar--circle"
+        role="presentation"
+      >
+        <span
+          className="fd-avatar__zoom-icon sap-icon--edit"
+          role="presentation"
+        />
+      </span>
+      <span
+        className="fd-avatar fd-avatar--m sap-icon--washing-machine fd-avatar--circle"
+        role="presentation"
+      >
+        <span
+          className="fd-avatar__zoom-icon sap-icon--edit"
+          role="presentation"
+        />
+      </span>
+      <span
+        className="fd-avatar fd-avatar--l sap-icon--washing-machine fd-avatar--circle"
+        role="presentation"
+      >
+        <span
+          className="fd-avatar__zoom-icon sap-icon--edit"
+          role="presentation"
+        />
+      </span>
+      <span
+        className="fd-avatar fd-avatar--xl sap-icon--washing-machine fd-avatar--circle"
+        role="presentation"
+      >
+        <span
+          className="fd-avatar__zoom-icon sap-icon--edit"
+          role="presentation"
+        />
+      </span>
+    </div>
+  </div>
+  <div>
+    <div
+      className="fr-container"
+    >
+      <span
+        className="fd-avatar fd-avatar--xs sap-icon--washing-machine fd-avatar--transparent fd-avatar--border"
+        role="presentation"
+      />
+      <span
+        className="fd-avatar fd-avatar--s sap-icon--washing-machine fd-avatar--transparent fd-avatar--border"
+        role="presentation"
+      />
+      <span
+        className="fd-avatar fd-avatar--m sap-icon--washing-machine fd-avatar--circle fd-avatar--transparent fd-avatar--border"
+        role="presentation"
+      />
+      <span
+        className="fd-avatar fd-avatar--l sap-icon--washing-machine fd-avatar--circle fd-avatar--transparent fd-avatar--border"
+        role="presentation"
+      />
+      <span
+        className="fd-avatar fd-avatar--xl sap-icon--washing-machine fd-avatar--circle fd-avatar--transparent fd-avatar--border"
+        role="presentation"
+      />
+    </div>
+  </div>
+  <div>
+    <div
+      className="fr-container"
+    >
+      <span
+        className="fd-avatar fd-avatar--m sap-icon--money-bills fd-has-background-color-accent-1"
+        role="presentation"
+      />
+      <span
+        className="fd-avatar fd-avatar--m sap-icon--money-bills fd-has-background-color-accent-2"
+        role="presentation"
+      />
+      <span
+        className="fd-avatar fd-avatar--m sap-icon--money-bills fd-has-background-color-accent-3"
+        role="presentation"
+      />
+      <span
+        className="fd-avatar fd-avatar--m sap-icon--money-bills fd-has-background-color-accent-4"
+        role="presentation"
+      />
+      <span
+        className="fd-avatar fd-avatar--m sap-icon--money-bills fd-has-background-color-accent-5"
+        role="presentation"
+      />
+      <span
+        className="fd-avatar fd-avatar--m sap-icon--money-bills fd-has-background-color-accent-6"
+        role="presentation"
+      />
+      <span
+        className="fd-avatar fd-avatar--m sap-icon--money-bills fd-has-background-color-accent-7"
+        role="presentation"
+      />
+      <span
+        className="fd-avatar fd-avatar--m sap-icon--money-bills fd-has-background-color-accent-8"
+        role="presentation"
+      />
+      <span
+        className="fd-avatar fd-avatar--m sap-icon--money-bills fd-has-background-color-accent-9"
+        role="presentation"
+      />
+    </div>
+  </div>
+</div>
+`;

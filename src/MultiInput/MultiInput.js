@@ -12,6 +12,10 @@ import shortid from '../utils/shortId';
 import Token from '../Token/Token';
 import React, { Component } from 'react';
 
+/** A **MultiInput** allows users to enter multiple values which are displayed as a tokens. It provides an editable input field for filtering the list,
+ * and a dropdown menu with a list of the available options.
+ * If the entries are not validated by the application, users can also enter custom values. */
+
 class MultiInput extends Component {
     constructor(props) {
         super(props);
@@ -48,13 +52,23 @@ class MultiInput extends Component {
 
     // create tag elements to display below input box
     createTags = () => {
-        return this.state.tags.map((tag, index) => (
-            <Token
-                key={index}
-                onClick={() => this.removeTag(tag)}>
-                {tag}
-            </Token>
-        ));
+        return this.state.tags.map((tag, index) => {
+            if (index < 3) {
+                return (
+                    <Token
+                        key={index}
+                        onClick={() => this.removeTag(tag)}>
+                        {tag}
+                    </Token>
+                );
+            } else if (index >= this.state.tags.length - 1) {
+                return (
+                    <span className='fd-tokenizer__indicator'>{this.state.tags.length - 3} more</span>
+                );
+            } else {
+                return null;
+            }
+        });
     };
 
     // add/remove tag to tag collection
@@ -95,7 +109,6 @@ class MultiInput extends Component {
 
     // remove/close tag
     removeTag = (tag) => {
-
         this.setState(
             prevState => {
                 const tags = prevState.tags.filter(item => {
@@ -201,7 +214,7 @@ class MultiInput extends Component {
                                 {this.state.tags.length > 0 && this.createTags()}
                                 <FormInput
                                     {...inputProps}
-                                    className='fd-tokenizer__input'
+                                    className='fd-input-group__input fd-tokenizer__input'
                                     compact={compact}
                                     disableStyles={disableStyles}
                                     placeholder={placeholder} />

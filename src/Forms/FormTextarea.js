@@ -4,6 +4,8 @@ import { FORM_MESSAGE_TYPES } from '../utils/constants';
 import PropTypes from 'prop-types';
 import React, { useEffect, useState } from 'react';
 
+/** A **FormTextarea** is used to gather potentially lengthy input from a user.
+ * Best practice is to use this component as a child of FormGroup. */
 const FormTextarea = React.forwardRef(({
     className,
     compact,

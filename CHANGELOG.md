@@ -2,6 +2,37 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.9.1-rc.17](https://github.com/SAP/fundamental-react/compare/v0.9.1-rc.16...v0.9.1-rc.17) (2020-05-19)
+
+### [0.9.1-rc.16](https://github.com/SAP/fundamental-react/compare/v0.9.1-rc.15...v0.9.1-rc.16) (2020-05-18)
+
+### [0.9.1-rc.15](https://github.com/SAP/fundamental-react/compare/v0.9.1-rc.14...v0.9.1-rc.15) (2020-05-18)
+
+### [0.9.1-rc.14](https://github.com/SAP/fundamental-react/compare/v0.9.1-rc.13...v0.9.1-rc.14) (2020-05-15)
+
+
+### Bug Fixes
+
+* Username is cut off from Shellbar ([#1008](https://github.com/SAP/fundamental-react/issues/1008)) ([8d36439](https://github.com/SAP/fundamental-react/commit/8d36439b5e72e5b8c73cb060ea0e8c3c5e692f4e))
+
+### [0.9.1-rc.13](https://github.com/SAP/fundamental-react/compare/v0.9.1-rc.12...v0.9.1-rc.13) (2020-05-15)
+
+
+### Features
+
+* width adjustments for popover based components, class changes, MultiInput changes ([#1016](https://github.com/SAP/fundamental-react/issues/1016)) ([55a005c](https://github.com/SAP/fundamental-react/commit/55a005c8151bedc57a7e379f6e25cc649e32a108))
+
+### [0.9.1-rc.12](https://github.com/SAP/fundamental-react/compare/v0.9.1-rc.11...v0.9.1-rc.12) (2020-05-14)
+
+### [0.9.1-rc.11](https://github.com/SAP/fundamental-react/compare/v0.9.1-rc.10...v0.9.1-rc.11) (2020-05-14)
+
+### [0.9.1-rc.10](https://github.com/SAP/fundamental-react/compare/v0.9.1-rc.9...v0.9.1-rc.10) (2020-05-14)
+
+
+### Features
+
+* Pagination - added new interactions as defined in fundamental-styles ([#1013](https://github.com/SAP/fundamental-react/issues/1013)) ([6876cb3](https://github.com/SAP/fundamental-react/commit/6876cb3b3320c89e1b440d417ca06b2ab6cd09c0))
+
 ### [0.9.1-rc.9](https://github.com/SAP/fundamental-react/compare/v0.9.1-rc.8...v0.9.1-rc.9) (2020-05-05)
 
 ### [0.9.1-rc.8](https://github.com/SAP/fundamental-react/compare/v0.9.1-rc.7...v0.9.1-rc.8) (2020-05-04)

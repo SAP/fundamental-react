@@ -1,0 +1,197 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Visual Panel 1`] = `
+<div
+  dir="ltr"
+>
+  <div>
+    <div
+      className="fd-panel"
+    >
+      <div
+        className="fd-panel__header"
+      >
+        <div
+          className="fd-panel__head"
+        >
+          <h3
+            className="fd-panel__title"
+          >
+            Panel Header with Actions
+          </h3>
+          <p
+            className="fd-panel__description"
+          >
+            Panel Description
+          </p>
+        </div>
+        <div
+          className="fd-panel__actions"
+        >
+          <div>
+            Panel actions
+          </div>
+        </div>
+      </div>
+      <div
+        className="fd-panel__filters"
+      >
+        <div>
+          Panel Filters
+        </div>
+      </div>
+      <div
+        className="fd-panel__body"
+      >
+        <div>
+          Panel Body
+        </div>
+      </div>
+      <div
+        className="fd-panel__footer"
+      >
+        Panel Footer
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      className="fd-panel"
+    >
+      <div
+        className="fd-panel__header"
+      >
+        <div
+          className="fd-panel__head"
+        >
+          <h3
+            className="fd-panel__title"
+          >
+            Panel Header with Actions
+          </h3>
+          <p
+            className="fd-panel__description"
+          >
+            Panel Description
+          </p>
+        </div>
+        <div
+          className="fd-panel__actions"
+        >
+          <button
+            className="fd-button fd-button--compact sap-icon--add"
+            type="button"
+          >
+            Add New Button
+          </button>
+        </div>
+      </div>
+      <div
+        className="fd-panel__filters"
+      >
+        <div>
+          Panel Filters
+        </div>
+        <br />
+        <div
+          className="fd-popover"
+        >
+          <div
+            onFocus={[Function]}
+            onMouseDown={[Function]}
+            onTouchStart={[Function]}
+          >
+            <div
+              className="fd-popover__control"
+            >
+              <button
+                aria-controls="fd-203"
+                aria-expanded={false}
+                aria-haspopup={true}
+                className="fd-button"
+                onClick={[Function]}
+                onKeyPress={[Function]}
+                role="button"
+                tabIndex={0}
+                type="button"
+              >
+                Color
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          className="fd-popover"
+        >
+          <div
+            onFocus={[Function]}
+            onMouseDown={[Function]}
+            onTouchStart={[Function]}
+          >
+            <div
+              className="fd-popover__control"
+            >
+              <button
+                aria-controls="fd-204"
+                aria-expanded={false}
+                aria-haspopup={true}
+                className="fd-button"
+                onClick={[Function]}
+                onKeyPress={[Function]}
+                role="button"
+                tabIndex={0}
+                type="button"
+              >
+                Size
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="fd-panel__body"
+      >
+        <div>
+          Panel Body
+        </div>
+        <br />
+        <div
+          className="fd-tile"
+          onClick={[Function]}
+          tabIndex={0}
+        >
+          <div
+            className="fd-tile__media"
+          >
+            <span
+              className="fd-image--l fd-image--circle"
+              style={
+                Object {
+                  "backgroundImage": "url(./assets/nature.jpg)",
+                }
+              }
+            />
+          </div>
+          <div
+            className="fd-tile__content"
+          >
+            <h3
+              className="fd-tile__title"
+            >
+              Tile Title
+            </h3>
+            <p>
+              Tile Description
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        className="fd-panel__footer"
+      >
+        Panel Footer
+      </div>
+    </div>
+  </div>
+</div>
+`;

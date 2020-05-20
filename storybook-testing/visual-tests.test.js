@@ -11,11 +11,11 @@ const getMatchOptions = () => {
 
 //This is needed to keep CI from failing due to viewport differences
 const view = {
-    name: 'Desktop 800x600',
+    name: 'Desktop 1200x800',
     userAgent: 'placeholder',
     viewport: {
-        width: 800,
-        height: 600
+        width: 1200,
+        height: 800
     }
 };
 
@@ -24,6 +24,7 @@ const beforeScreenshot = (page) => page.emulate(view);
 
 // create visual regession images from each story
 initStoryshots({
+    storyKindRegex: /^((?!.*?Component).)*$/,
     test: imageSnapshot({
         storybookUrl: 'http://localhost:12123/',
         customizePage,
