@@ -29,9 +29,9 @@ const InlineHelp = React.forwardRef(({ text, placement, className, contentClassN
                     {text}
                 </div>
             }
-            control={<span
+            control={<span><span
                 className={inlineHelpClasses}
-                ref={ref} />}
+                ref={ref} /></span>}
             placement={placement} />
     );
 });
