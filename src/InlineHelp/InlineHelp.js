@@ -1,6 +1,6 @@
 import classnames from 'classnames';
-import { POPPER_PLACEMENTS } from '../utils/constants';
 import Popover from '../Popover/Popover';
+import { POPPER_PLACEMENTS } from '../utils/constants';
 import PropTypes from 'prop-types';
 import React, { useEffect } from 'react';
 
