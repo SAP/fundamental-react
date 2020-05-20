@@ -8,12 +8,12 @@ describe('<InlineHelp />', () => {
             const element = mount(
                 <InlineHelp
                     data-sample='Sample'
-                    placement='bottom-center'
+                    placement='bottom-start'
                     text='Text' />
             );
-
+            element.find('.fd-inline-help').at(0).simulate('click');
             expect(
-                element.getDOMNode().querySelector('span').attributes['data-sample'].value
+                element.find('div.fd-inline-help__content').getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
         });
     });
