@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 const ListItem = ({
+    action,
+    buttonProps,
     className,
     children,
     hasByline,
@@ -23,7 +25,8 @@ const ListItem = ({
     const ListItemClasses = classnames(
         'fd-list__item',
         {
-            'fd-list__item--link': isLink
+            'fd-list__item--link': isLink,
+            'fd-list__item--action': action
         },
         className
     );
@@ -53,6 +56,14 @@ const ListItem = ({
                 {children}
             </a>
         );
+    } else if (action) {
+        content = (
+            <button {...buttonProps}
+                className='fd-list__title'
+                onClick={handleClick}>
+                {children}
+            </button>
+        );
     } else {
         content = children;
     }
@@ -61,7 +72,6 @@ const ListItem = ({
         <li
             {...props}
             className={ListItemClasses}
-            onClick={isLink ? null : handleClick}
             tabIndex={isLink ? '-1' : '0'}>
             {content}
         </li>
@@ -72,6 +82,10 @@ const ListItem = ({
 ListItem.displayName = 'List.Item';
 
 ListItem.propTypes = {
+    /** Set to true if list item is a button that will trigger an action */
+    action: PropTypes.bool,
+    /** Props to pass to the action button */
+    buttonProps: PropTypes.object,
     /** Node(s) to render within the component */
     children: PropTypes.node,
     /** CSS class(es) to add to the element */
@@ -86,7 +100,7 @@ ListItem.propTypes = {
     selected: PropTypes.bool,
     /** URL to navigate to if list item is a link */
     url: PropTypes.string,
-    /** Callback function when user clicks on the component (only supported if not a link) */
+    /** Callback function when user clicks on the component (only supported if action is true) */
     onClick: PropTypes.func
 };
 

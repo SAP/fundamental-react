@@ -280,6 +280,24 @@ export const navigationList = () => (
     </List>
 );
 
+export const actionList = () => (
+    <List>
+        <List.Header>List Header</List.Header>
+        <List.Item>
+            <List.Text>List Item 1</List.Text>
+        </List.Item>
+        <List.Item action>
+            List Item 2
+        </List.Item>
+        <List.Item action>
+            List Item 3
+        </List.Item>
+        <List.Item action>
+            List Item 4
+        </List.Item>
+        <List.Footer>List Footer</List.Footer>
+    </List>
+);
 
 dev.story = {
     parameters: { docs: { disable: true } }
