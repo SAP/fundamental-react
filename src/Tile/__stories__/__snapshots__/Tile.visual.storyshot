@@ -97,7 +97,8 @@ exports[`Storyshots Visual Tile 1`] = `
         className="fd-tile__media"
       >
         <span
-          className="fd-image--m"
+          className="fd-avatar fd-avatar--m fd-avatar--thumbnail"
+          role="presentation"
           style={
             Object {
               "backgroundImage": "url(./assets/nature.jpg)",
@@ -126,7 +127,8 @@ exports[`Storyshots Visual Tile 1`] = `
         className="fd-tile__media"
       >
         <span
-          className="fd-image--l fd-image--circle"
+          className="fd-avatar fd-avatar--l fd-avatar--thumbnail fd-avatar--circle"
+          role="presentation"
           style={
             Object {
               "backgroundImage": "url(./assets/nature.jpg)",

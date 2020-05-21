@@ -7,24 +7,8 @@ class TimeItem extends Component {
     constructor(props) {
         super(props);
         this.CLOCK = [this.props.localizedText.meridiemAM, this.props.localizedText.meridiemPM];
-        var aria = {};
-        if (this.props.name === 'meridiem') {
-            aria = {
-                buttonUp: 'Increase period',
-                buttonDown: 'Decrease period'
-            };
-        } else {
-            aria = {
-                buttonUp: 'Increase ' + this.props.name + 's',
-                buttonDown: 'Decrease ' + this.props.name + 's'
-            };
-        }
-
         this.state = {
-            value: this.props.value,
-            style: 'fd-time__input ',
-            arialabel: aria,
-            scrollTop: 0
+            value: this.props.value
         };
     }
 
@@ -255,8 +239,7 @@ class TimeItem extends Component {
     }
 
     render() {
-        const { arialabel } = this.state;
-        const { disableStyles, disabled, upButtonProps, downButtonProps, value, active } = this.props;
+        const { disableStyles, disabled, upButtonProps, downButtonProps, value, active, localizedText } = this.props;
 
         const isActive = active === this.props.name;
 
@@ -272,7 +255,7 @@ class TimeItem extends Component {
             <>
                 <Button
                     {...upButtonProps}
-                    aria-label={arialabel.buttonUp}
+                    aria-label={localizedText.buttonUp}
                     disabled={disabled}
                     disableStyles={disableStyles}
                     glyph='navigation-up-arrow'
@@ -289,7 +272,7 @@ class TimeItem extends Component {
                 </div>
                 <Button
                     {...downButtonProps}
-                    aria-label={arialabel.buttonDown}
+                    aria-label={localizedText.buttonDown}
                     disabled={disabled}
                     disableStyles={disableStyles}
                     glyph='navigation-down-arrow'

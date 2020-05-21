@@ -12,7 +12,7 @@ exports[`Storyshots Visual Avatar 1`] = `
   </div>
   <div>
     <div
-      className="fr-container"
+      className="fddocs-container"
     >
       <span
         className="fd-avatar fd-avatar--xs sap-icon--washing-machine"
@@ -38,7 +38,7 @@ exports[`Storyshots Visual Avatar 1`] = `
   </div>
   <div>
     <div
-      className="fr-container"
+      className="fddocs-container"
     >
       <span
         aria-label="Wendy Wallace"
@@ -79,7 +79,7 @@ exports[`Storyshots Visual Avatar 1`] = `
   </div>
   <div>
     <div
-      className="fr-container"
+      className="fddocs-container"
     >
       <span
         className="fd-avatar fd-avatar--xs sap-icon--washing-machine fd-avatar--circle"
@@ -105,7 +105,7 @@ exports[`Storyshots Visual Avatar 1`] = `
   </div>
   <div>
     <div
-      className="fr-container"
+      className="fddocs-container"
     >
       <span
         className="fd-avatar fd-avatar--xs fd-avatar--thumbnail fd-avatar--circle"
@@ -156,7 +156,7 @@ exports[`Storyshots Visual Avatar 1`] = `
   </div>
   <div>
     <div
-      className="fr-container"
+      className="fddocs-container"
     >
       <span
         aria-label="Wendy Wallace"
@@ -173,7 +173,7 @@ exports[`Storyshots Visual Avatar 1`] = `
   </div>
   <div>
     <div
-      className="fr-container"
+      className="fddocs-container"
     >
       <span
         className="fd-avatar fd-avatar--xs sap-icon--washing-machine fd-avatar--tile fd-avatar--circle"
@@ -199,7 +199,7 @@ exports[`Storyshots Visual Avatar 1`] = `
   </div>
   <div>
     <div
-      className="fr-container"
+      className="fddocs-container"
     >
       <span
         className="fd-avatar fd-avatar--xs sap-icon--washing-machine fd-avatar--placeholder fd-avatar--circle"
@@ -225,7 +225,7 @@ exports[`Storyshots Visual Avatar 1`] = `
   </div>
   <div>
     <div
-      className="fr-container"
+      className="fddocs-container"
     >
       <span
         className="fd-avatar fd-avatar--xs sap-icon--washing-machine fd-avatar--circle"
@@ -276,7 +276,7 @@ exports[`Storyshots Visual Avatar 1`] = `
   </div>
   <div>
     <div
-      className="fr-container"
+      className="fddocs-container"
     >
       <span
         className="fd-avatar fd-avatar--xs sap-icon--washing-machine fd-avatar--transparent fd-avatar--border"
@@ -302,7 +302,7 @@ exports[`Storyshots Visual Avatar 1`] = `
   </div>
   <div>
     <div
-      className="fr-container"
+      className="fddocs-container"
     >
       <span
         className="fd-avatar fd-avatar--m sap-icon--money-bills fd-has-background-color-accent-1"

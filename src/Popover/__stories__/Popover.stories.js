@@ -3,7 +3,6 @@ import Avatar from '../../Avatar/Avatar';
 import Button from '../../Button/Button';
 import Dialog from '../../Dialog/Dialog';
 import Icon from '../../Icon/Icon';
-import Image from '../../Image/Image';
 import Menu from '../../Menu/Menu';
 import Popover from '../Popover';
 import {
@@ -216,8 +215,8 @@ export const noArrow = () => (
 
         <Popover
             body={bodyContent}
-            control={<Image photo='./assets/nature.jpg' size='m'
-                type='circle' />}
+            control={<Avatar backgroundImageUrl='./assets/nature.jpg'
+                circle size='m' />}
             noArrow
             placement='top' />
 

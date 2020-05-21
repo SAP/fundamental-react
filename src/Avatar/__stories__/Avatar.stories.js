@@ -10,7 +10,7 @@ export default {
 export const primary = () => (<Avatar glyph='cart' size='m' />);
 
 export const sizes = () => (
-    <div className='fr-container'>
+    <div className='fddocs-container'>
         <Avatar glyph='washing-machine' size='xs' />
         <Avatar glyph='washing-machine' size='s' />
         <Avatar glyph='washing-machine' size='m' />
@@ -20,7 +20,7 @@ export const sizes = () => (
 );
 
 export const initials = () => (
-    <div className='fr-container'>
+    <div className='fddocs-container'>
         <Avatar label='Wendy Wallace' size='xs'>WW</Avatar>
         <Avatar label='Wendy Wallace' size='s'>WW</Avatar>
         <Avatar label='Wendy Wallace' size='m'>WW</Avatar>
@@ -30,7 +30,7 @@ export const initials = () => (
 );
 
 export const circle = () => (
-    <div className='fr-container'>
+    <div className='fddocs-container'>
         <Avatar circle glyph='washing-machine'
             size='xs' />
         <Avatar circle glyph='washing-machine'
@@ -45,7 +45,7 @@ export const circle = () => (
 );
 
 export const backgroundImage = () => (
-    <div className='fr-container'>
+    <div className='fddocs-container'>
         <Avatar backgroundImageUrl='./assets/nature.jpg' circle
             size='xs' />
         <Avatar backgroundImageUrl='./assets/nature.jpg' circle
@@ -60,7 +60,7 @@ export const backgroundImage = () => (
 );
 
 export const transparent = () => (
-    <div className='fr-container'>
+    <div className='fddocs-container'>
         <Avatar label='Wendy Wallace'
             size='m' transparent>WW</Avatar>
         <Avatar glyph='washing-machine'
@@ -69,7 +69,7 @@ export const transparent = () => (
 );
 
 export const tile = () => (
-    <div className='fr-container'>
+    <div className='fddocs-container'>
         <Avatar circle glyph='washing-machine'
             size='xs' tile />
         <Avatar circle glyph='washing-machine'
@@ -84,7 +84,7 @@ export const tile = () => (
 );
 
 export const placeholder = () => (
-    <div className='fr-container'>
+    <div className='fddocs-container'>
         <Avatar circle glyph='washing-machine'
             placeholder size='xs' />
         <Avatar circle glyph='washing-machine'
@@ -99,7 +99,7 @@ export const placeholder = () => (
 );
 
 export const zoom = () => (
-    <div className='fr-container'>
+    <div className='fddocs-container'>
         <Avatar circle glyph='washing-machine'
             size='xs' zoom />
         <Avatar circle glyph='washing-machine'
@@ -114,7 +114,7 @@ export const zoom = () => (
 );
 
 export const border = () => (
-    <div className='fr-container'>
+    <div className='fddocs-container'>
         <Avatar border glyph='washing-machine'
             size='xs' transparent />
         <Avatar border glyph='washing-machine'
@@ -133,7 +133,7 @@ export const border = () => (
 
 
 export const accentColors = () => (
-    <div className='fr-container'>
+    <div className='fddocs-container'>
         <Avatar color={1} glyph='money-bills'
             size='m' />
         <Avatar color={2} glyph='money-bills'

@@ -117,7 +117,7 @@ class Time extends Component {
                 {/* Hours */}
                 {showHour ? (
                     <div className='fd-time__col' onClick={() => this.updateActiveColumn('hour')}>
-                        <label className='fd-time__slider-label'>Hours</label>
+                        <label className='fd-time__slider-label'>{localizedText.hoursLabel}</label>
                         <TimeItem
                             active={active}
                             defaultValue={1}
@@ -126,11 +126,10 @@ class Time extends Component {
                             downButtonProps={hoursDownButtonProps}
                             format12Hours={format12Hours}
                             inputProps={hoursInputProps}
-                            localizedText={localizedText}
+                            localizedText={{ buttonUp: localizedText.hoursUp, buttonDown: localizedText.hoursDown }}
                             max={max}
                             name='hour'
                             time={time}
-                            type={'Hours'}
                             upButtonProps={hoursUpButtonProps}
                             updateTime={this.updateTime}
                             value={time.hour} />
@@ -141,7 +140,7 @@ class Time extends Component {
                 {/* Minutes */}
                 {showMinute ? (
                     <div className='fd-time__col' onClick={() => this.updateActiveColumn('minute')}>
-                        <label className='fd-time__slider-label'>Minutes</label>
+                        <label className='fd-time__slider-label'>{localizedText.minutesLabel}</label>
                         <TimeItem
                             active={active}
                             defaultValue={1}
@@ -150,11 +149,10 @@ class Time extends Component {
                             downButtonProps={minutesDownButtonProps}
                             format12Hours={format12Hours}
                             inputProps={minutesInputProps}
-                            localizedText={localizedText}
+                            localizedText={{ buttonUp: localizedText.minutesUp, buttonDown: localizedText.minutesDown }}
                             max={'60'}
                             name='minute'
                             time={time}
-                            type={'Minutes'}
                             upButtonProps={minutesUpButtonProps}
                             updateTime={this.updateTime}
                             value={time.minute} />
@@ -165,7 +163,7 @@ class Time extends Component {
                 {/* Seconds */}
                 {showSecond ? (
                     <div className='fd-time__col' onClick={() => this.updateActiveColumn('second')}>
-                        <label className='fd-time__slider-label'>Seconds</label>
+                        <label className='fd-time__slider-label'>{localizedText.secondsLabel}</label>
                         <TimeItem
                             active={active}
                             defaultValue={1}
@@ -174,11 +172,10 @@ class Time extends Component {
                             downButtonProps={secondsDownButtonProps}
                             format12Hours={format12Hours}
                             inputProps={secondsInputProps}
-                            localizedText={localizedText}
+                            localizedText={{ buttonUp: localizedText.secondsUp, buttonDown: localizedText.secondsDown }}
                             max={'60'}
                             name='second'
                             time={time}
-                            type={'Seconds'}
                             upButtonProps={secondsUpButtonProps}
                             updateTime={this.updateTime}
                             value={time.second} />
@@ -189,18 +186,17 @@ class Time extends Component {
                 {/* Meridiem */}
                 {format12Hours ? (
                     <div className='fd-time__col' onClick={() => this.updateActiveColumn('meridiem')}>
-                        <label className='fd-time__slider-label'>AM/PM</label>
+                        <label className='fd-time__slider-label'>{localizedText.meridiemLabel}</label>
                         <TimeItem
                             active={active}
                             disabled={disabled}
                             disableStyles={disableStyles}
                             downButtonProps={meridiemDownButtonProps}
                             inputProps={meridiemInputProps}
-                            localizedText={localizedText}
+                            localizedText={{ buttonUp: localizedText.meridiemUp, buttonDown: localizedText.meridiemDown }}
                             max={'1'}
                             name='meridiem'
                             time={this.state.time}
-                            type={'Period'}
                             upButtonProps={meridiemUpButtonProps}
                             updateActiveColumn={this.updateActiveColumn}
                             updateTime={this.updateTime}
@@ -275,7 +271,19 @@ Time.propTypes = {
 Time.defaultProps = {
     localizedText: {
         meridiemAM: 'am',
-        meridiemPM: 'pm'
+        meridiemPM: 'pm',
+        hoursLabel: 'Hours',
+        minutesLabel: 'Minutes',
+        secondsLabel: 'Seconds',
+        meridiemLabel: 'AM/PM',
+        hoursUp: 'Increase hours',
+        hoursDown: 'Decrease hours',
+        minutesUp: 'Increase minutes',
+        minutesDown: 'Decrease hours',
+        secondsUp: 'Increase seconds',
+        secondsDown: 'Decrease seconds',
+        meridiemUp: 'Increase period',
+        meridiemDown: 'Decrease period'
     },
     onChange: () => { },
     showHour: true,

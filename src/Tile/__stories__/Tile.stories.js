@@ -1,7 +1,6 @@
 /* eslint-disable react/no-multi-comp */
 import Avatar from '../../Avatar/Avatar';
 import Button from '../../Button/Button';
-import Image from '../../Image/Image';
 import Menu from '../../Menu/Menu';
 import Popover from '../../Popover/Popover';
 import React from 'react';
@@ -52,15 +51,15 @@ export const mediaTile = () => (
     <>
         <Tile active onClick={() => {}}>
             <Tile.Media>
-                <Image photo='./assets/nature.jpg' size='m' />
+                <Avatar backgroundImageUrl='./assets/nature.jpg' size='m' />
             </Tile.Media>
             <Tile.Content title='Tile Title' />
         </Tile>
         <br />
         <Tile active onClick={() => {}}>
             <Tile.Media>
-                <Image photo='./assets/nature.jpg' size='l'
-                    type='circle' />
+                <Avatar backgroundImageUrl='./assets/nature.jpg'
+                    circle size='l' />
             </Tile.Media>
             <Tile.Content title='Tile Title'>
                 <p>Tile Description</p>

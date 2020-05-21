@@ -61,7 +61,7 @@ Avatar.displayName = 'Avatar';
 Avatar.propTypes = {
     /** Image URL */
     backgroundImageUrl: PropTypes.string,
-    /** Include a border */
+    /** Set to **true** to include a border */
     border: PropTypes.bool,
     /** Node(s) to render within the component */
     children: PropTypes.node,
@@ -77,7 +77,7 @@ Avatar.propTypes = {
     glyph: PropTypes.string,
     /** Localized text for label */
     label: PropTypes.string,
-    /** Apply placeholder background color */
+    /** Set to **true** to apply placeholder background color */
     placeholder: PropTypes.bool,
     /** Applies an aria-role. Set to button if Avatar opens a Popover or Dialog */
     role: PropTypes.string,
@@ -88,11 +88,11 @@ Avatar.propTypes = {
     'l',
     'xl' */
     size: PropTypes.oneOf(AVATAR_SIZES),
-    /** Apply tile background color */
+    /** Set to **true** to apply tile background color */
     tile: PropTypes.bool,
-    /** Use transparent background */
+    /** Set to **true** to use transparent background */
     transparent: PropTypes.bool,
-    /** Include a zoom icon */
+    /** Set to **true** to include a zoom icon */
     zoom: PropTypes.bool
 };
 
