@@ -10,6 +10,7 @@ exports[`Storyshots Visual List 1`] = `
     >
       <li
         className="fd-list__item"
+        onClick={[Function]}
         tabIndex="0"
       >
         <span
@@ -20,6 +21,7 @@ exports[`Storyshots Visual List 1`] = `
       </li>
       <li
         className="fd-list__item"
+        onClick={[Function]}
         tabIndex="0"
       >
         <span
@@ -30,6 +32,7 @@ exports[`Storyshots Visual List 1`] = `
       </li>
       <li
         className="fd-list__item"
+        onClick={[Function]}
         tabIndex="0"
       >
         <span
@@ -40,6 +43,7 @@ exports[`Storyshots Visual List 1`] = `
       </li>
       <li
         className="fd-list__item"
+        onClick={[Function]}
         tabIndex="0"
       >
         <span
@@ -61,6 +65,7 @@ exports[`Storyshots Visual List 1`] = `
       </li>
       <li
         className="fd-list__item"
+        onClick={[Function]}
         tabIndex="0"
       >
         <span
@@ -71,6 +76,7 @@ exports[`Storyshots Visual List 1`] = `
       </li>
       <li
         className="fd-list__item"
+        onClick={[Function]}
         tabIndex="0"
       >
         <span
@@ -81,6 +87,7 @@ exports[`Storyshots Visual List 1`] = `
       </li>
       <li
         className="fd-list__item"
+        onClick={[Function]}
         tabIndex="0"
       >
         <span
@@ -91,6 +98,7 @@ exports[`Storyshots Visual List 1`] = `
       </li>
       <li
         className="fd-list__item"
+        onClick={[Function]}
         tabIndex="0"
       >
         <span
@@ -117,6 +125,7 @@ exports[`Storyshots Visual List 1`] = `
       </li>
       <li
         className="fd-list__item"
+        onClick={[Function]}
         tabIndex="0"
       >
         <span
@@ -127,6 +136,7 @@ exports[`Storyshots Visual List 1`] = `
       </li>
       <li
         className="fd-list__item"
+        onClick={[Function]}
         tabIndex="0"
       >
         <span
@@ -137,6 +147,7 @@ exports[`Storyshots Visual List 1`] = `
       </li>
       <li
         className="fd-list__item"
+        onClick={[Function]}
         tabIndex="0"
       >
         <span
@@ -147,6 +158,7 @@ exports[`Storyshots Visual List 1`] = `
       </li>
       <li
         className="fd-list__item"
+        onClick={[Function]}
         tabIndex="0"
       >
         <span
@@ -173,6 +185,7 @@ exports[`Storyshots Visual List 1`] = `
       </li>
       <li
         className="fd-list__item"
+        onClick={[Function]}
         tabIndex="0"
       >
         <span
@@ -183,6 +196,7 @@ exports[`Storyshots Visual List 1`] = `
       </li>
       <li
         className="fd-list__item"
+        onClick={[Function]}
         tabIndex="0"
       >
         <span
@@ -193,6 +207,7 @@ exports[`Storyshots Visual List 1`] = `
       </li>
       <li
         className="fd-list__item"
+        onClick={[Function]}
         tabIndex="0"
       >
         <span
@@ -203,6 +218,7 @@ exports[`Storyshots Visual List 1`] = `
       </li>
       <li
         className="fd-list__item"
+        onClick={[Function]}
         tabIndex="0"
       >
         <span
@@ -229,6 +245,7 @@ exports[`Storyshots Visual List 1`] = `
       </li>
       <li
         className="fd-list__item"
+        onClick={[Function]}
         tabIndex="0"
       >
         <span
@@ -242,6 +259,7 @@ exports[`Storyshots Visual List 1`] = `
       </li>
       <li
         className="fd-list__item"
+        onClick={[Function]}
         tabIndex="0"
       >
         <span
@@ -255,6 +273,7 @@ exports[`Storyshots Visual List 1`] = `
       </li>
       <li
         className="fd-list__item"
+        onClick={[Function]}
         tabIndex="0"
       >
         <span
@@ -268,6 +287,7 @@ exports[`Storyshots Visual List 1`] = `
       </li>
       <li
         className="fd-list__item"
+        onClick={[Function]}
         tabIndex="0"
       >
         <span
@@ -297,6 +317,7 @@ exports[`Storyshots Visual List 1`] = `
       </li>
       <li
         className="fd-list__item"
+        onClick={[Function]}
         tabIndex="0"
       >
         <span
@@ -310,6 +331,7 @@ exports[`Storyshots Visual List 1`] = `
       </li>
       <li
         className="fd-list__item"
+        onClick={[Function]}
         tabIndex="0"
       >
         <span
@@ -323,6 +345,7 @@ exports[`Storyshots Visual List 1`] = `
       </li>
       <li
         className="fd-list__item"
+        onClick={[Function]}
         tabIndex="0"
       >
         <span
@@ -336,6 +359,7 @@ exports[`Storyshots Visual List 1`] = `
       </li>
       <li
         className="fd-list__item"
+        onClick={[Function]}
         tabIndex="0"
       >
         <span
@@ -365,6 +389,7 @@ exports[`Storyshots Visual List 1`] = `
       </li>
       <li
         className="fd-list__item"
+        onClick={[Function]}
         tabIndex="0"
       >
         <span
@@ -380,6 +405,7 @@ exports[`Storyshots Visual List 1`] = `
       </li>
       <li
         className="fd-list__item"
+        onClick={[Function]}
         tabIndex="0"
       >
         <span
@@ -395,6 +421,7 @@ exports[`Storyshots Visual List 1`] = `
       </li>
       <li
         className="fd-list__item"
+        onClick={[Function]}
         tabIndex="0"
       >
         <span
@@ -410,6 +437,7 @@ exports[`Storyshots Visual List 1`] = `
       </li>
       <li
         className="fd-list__item"
+        onClick={[Function]}
         tabIndex="0"
       >
         <span
@@ -441,6 +469,7 @@ exports[`Storyshots Visual List 1`] = `
       </li>
       <li
         className="fd-list__item"
+        onClick={[Function]}
         tabIndex="0"
       >
         <span
@@ -471,6 +500,7 @@ exports[`Storyshots Visual List 1`] = `
       </li>
       <li
         className="fd-list__item"
+        onClick={[Function]}
         tabIndex="0"
       >
         <div
@@ -490,6 +520,7 @@ exports[`Storyshots Visual List 1`] = `
       </li>
       <li
         className="fd-list__item"
+        onClick={[Function]}
         tabIndex="0"
       >
         <div
@@ -509,6 +540,7 @@ exports[`Storyshots Visual List 1`] = `
       </li>
       <li
         className="fd-list__item"
+        onClick={[Function]}
         tabIndex="0"
       >
         <div
@@ -528,6 +560,7 @@ exports[`Storyshots Visual List 1`] = `
       </li>
       <li
         className="fd-list__item"
+        onClick={[Function]}
         tabIndex="0"
       >
         <div
@@ -573,6 +606,7 @@ exports[`Storyshots Visual List 1`] = `
       </li>
       <li
         className="fd-list__item"
+        onClick={[Function]}
         tabIndex="0"
       >
         <div
@@ -602,6 +636,7 @@ exports[`Storyshots Visual List 1`] = `
       </li>
       <li
         className="fd-list__item"
+        onClick={[Function]}
         tabIndex="0"
       >
         <div
@@ -631,6 +666,7 @@ exports[`Storyshots Visual List 1`] = `
       </li>
       <li
         className="fd-list__item"
+        onClick={[Function]}
         tabIndex="0"
       >
         <div
@@ -660,6 +696,7 @@ exports[`Storyshots Visual List 1`] = `
       </li>
       <li
         className="fd-list__item"
+        onClick={[Function]}
         tabIndex="0"
       >
         <div
@@ -706,6 +743,7 @@ exports[`Storyshots Visual List 1`] = `
       </li>
       <li
         className="fd-list__item fd-list__item--link"
+        onClick={null}
         tabIndex="-1"
       >
         <a
@@ -722,6 +760,7 @@ exports[`Storyshots Visual List 1`] = `
       </li>
       <li
         className="fd-list__item"
+        onClick={[Function]}
         tabIndex="0"
       >
         <span
@@ -732,6 +771,7 @@ exports[`Storyshots Visual List 1`] = `
       </li>
       <li
         className="fd-list__item"
+        onClick={[Function]}
         tabIndex="0"
       >
         <span
@@ -742,6 +782,7 @@ exports[`Storyshots Visual List 1`] = `
       </li>
       <li
         className="fd-list__item fd-list__item--link"
+        onClick={null}
         tabIndex="-1"
       >
         <a
@@ -776,6 +817,7 @@ exports[`Storyshots Visual List 1`] = `
       </li>
       <li
         className="fd-list__item fd-list__item--link"
+        onClick={null}
         tabIndex="-1"
       >
         <a
@@ -792,6 +834,7 @@ exports[`Storyshots Visual List 1`] = `
       </li>
       <li
         className="fd-list__item fd-list__item--link"
+        onClick={null}
         tabIndex="-1"
       >
         <a
@@ -808,6 +851,7 @@ exports[`Storyshots Visual List 1`] = `
       </li>
       <li
         className="fd-list__item fd-list__item--link"
+        onClick={null}
         tabIndex="-1"
       >
         <a
@@ -824,6 +868,7 @@ exports[`Storyshots Visual List 1`] = `
       </li>
       <li
         className="fd-list__item fd-list__item--link"
+        onClick={null}
         tabIndex="-1"
       >
         <a
@@ -857,6 +902,7 @@ exports[`Storyshots Visual List 1`] = `
       </li>
       <li
         className="fd-list__item"
+        onClick={[Function]}
         tabIndex="0"
       >
         <span
@@ -867,6 +913,7 @@ exports[`Storyshots Visual List 1`] = `
       </li>
       <li
         className="fd-list__item fd-list__item--action"
+        onClick={null}
         tabIndex="0"
       >
         <button
@@ -878,6 +925,7 @@ exports[`Storyshots Visual List 1`] = `
       </li>
       <li
         className="fd-list__item fd-list__item--action"
+        onClick={null}
         tabIndex="0"
       >
         <button
@@ -889,6 +937,7 @@ exports[`Storyshots Visual List 1`] = `
       </li>
       <li
         className="fd-list__item fd-list__item--action"
+        onClick={null}
         tabIndex="0"
       >
         <button

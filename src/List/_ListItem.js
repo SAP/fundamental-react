@@ -68,10 +68,13 @@ const ListItem = ({
         content = children;
     }
 
+    const disableListItemOnClick = isLink || action;
+
     return (
         <li
             {...props}
             className={ListItemClasses}
+            onClick={disableListItemOnClick ? null : handleClick}
             tabIndex={isLink ? '-1' : '0'}>
             {content}
         </li>
@@ -100,7 +103,7 @@ ListItem.propTypes = {
     selected: PropTypes.bool,
     /** URL to navigate to if list item is a link */
     url: PropTypes.string,
-    /** Callback function when user clicks on the component (only supported if action is true) */
+    /** Callback function when user clicks on the component (not supported for links) */
     onClick: PropTypes.func
 };
 
