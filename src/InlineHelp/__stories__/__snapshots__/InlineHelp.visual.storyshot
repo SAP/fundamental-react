@@ -5,86 +5,212 @@ exports[`Storyshots Visual Inline Help 1`] = `
   dir="ltr"
 >
   <div>
-    <span
-      className="fd-inline-help"
+    <div
+      className="fd-popover"
     >
-      <span
-        className="fd-inline-help__content fd-inline-help__content--bottom-right"
+      <div
+        onFocus={[Function]}
+        onMouseDown={[Function]}
+        onTouchStart={[Function]}
       >
-        default
-      </span>
-    </span>
+        <div
+          className="fd-popover__control"
+        >
+          <span
+            aria-controls="fd-84"
+            aria-expanded={false}
+            aria-haspopup={true}
+            onClick={[Function]}
+            onKeyPress={[Function]}
+            role="button"
+            tabIndex={0}
+          >
+            <span
+              className="fd-inline-help"
+            />
+          </span>
+        </div>
+      </div>
+    </div>
   </div>
   <div>
     <label
       className="fd-form-label fd-form-label--inline-help"
     >
       Label Text
-      <span
-        className="fd-inline-help"
+      <div
+        className="fd-popover"
       >
-        <span
-          className="fd-inline-help__content fd-inline-help__content--bottom-right"
+        <div
+          onFocus={[Function]}
+          onMouseDown={[Function]}
+          onTouchStart={[Function]}
         >
-          default
-        </span>
-      </span>
+          <div
+            className="fd-popover__control"
+          >
+            <span
+              aria-controls="fd-85"
+              aria-expanded={false}
+              aria-haspopup={true}
+              onClick={[Function]}
+              onKeyPress={[Function]}
+              role="button"
+              tabIndex={0}
+            >
+              <span
+                className="fd-inline-help"
+              />
+            </span>
+          </div>
+        </div>
+      </div>
     </label>
   </div>
   <div>
-    <span
-      className="fd-inline-help"
+    <div
+      className="fd-popover"
     >
-      <span
-        className="fd-inline-help__content fd-inline-help__content--bottom-right"
+      <div
+        onFocus={[Function]}
+        onMouseDown={[Function]}
+        onTouchStart={[Function]}
       >
-        Lorem ipsum dolor sit amet, consectetur adipiscing.
-      </span>
-    </span>
+        <div
+          className="fd-popover__control"
+        >
+          <span
+            aria-controls="fd-86"
+            aria-expanded={false}
+            aria-haspopup={true}
+            onClick={[Function]}
+            onKeyPress={[Function]}
+            role="button"
+            tabIndex={0}
+          >
+            <span
+              className="fd-inline-help"
+            />
+          </span>
+        </div>
+      </div>
+    </div>
   </div>
   <div>
-    <span
-      className="fd-inline-help"
+    <div
+      className="fd-popover"
     >
-      <span
-        className="fd-inline-help__content fd-inline-help__content--bottom-left"
+      <div
+        onFocus={[Function]}
+        onMouseDown={[Function]}
+        onTouchStart={[Function]}
       >
-        Lorem ipsum dolor sit amet, consectetur adipiscing.
-      </span>
-    </span>
+        <div
+          className="fd-popover__control"
+        >
+          <span
+            aria-controls="fd-87"
+            aria-expanded={false}
+            aria-haspopup={true}
+            onClick={[Function]}
+            onKeyPress={[Function]}
+            role="button"
+            tabIndex={0}
+          >
+            <span
+              className="fd-inline-help"
+            />
+          </span>
+        </div>
+      </div>
+    </div>
   </div>
   <div>
-    <span
-      className="fd-inline-help"
+    <div
+      className="fd-popover"
     >
-      <span
-        className="fd-inline-help__content fd-inline-help__content--bottom-center"
+      <div
+        onFocus={[Function]}
+        onMouseDown={[Function]}
+        onTouchStart={[Function]}
       >
-        Lorem ipsum dolor sit amet, consectetur adipiscing.
-      </span>
-    </span>
+        <div
+          className="fd-popover__control"
+        >
+          <span
+            aria-controls="fd-88"
+            aria-expanded={false}
+            aria-haspopup={true}
+            onClick={[Function]}
+            onKeyPress={[Function]}
+            role="button"
+            tabIndex={0}
+          >
+            <span
+              className="fd-inline-help"
+            />
+          </span>
+        </div>
+      </div>
+    </div>
   </div>
   <div>
-    <span
-      className="fd-inline-help"
+    <div
+      className="fd-popover"
     >
-      <span
-        className="fd-inline-help__content fd-inline-help__content--right"
+      <div
+        onFocus={[Function]}
+        onMouseDown={[Function]}
+        onTouchStart={[Function]}
       >
-        Lorem ipsum dolor sit amet, consectetur adipiscing.
-      </span>
-    </span>
+        <div
+          className="fd-popover__control"
+        >
+          <span
+            aria-controls="fd-89"
+            aria-expanded={false}
+            aria-haspopup={true}
+            onClick={[Function]}
+            onKeyPress={[Function]}
+            role="button"
+            tabIndex={0}
+          >
+            <span
+              className="fd-inline-help"
+            />
+          </span>
+        </div>
+      </div>
+    </div>
   </div>
   <div>
-    <span
-      className="fd-inline-help"
+    <div
+      className="fd-popover"
     >
-      <span
-        className="fd-inline-help__content fd-inline-help__content--left"
+      <div
+        onFocus={[Function]}
+        onMouseDown={[Function]}
+        onTouchStart={[Function]}
       >
-        Lorem ipsum dolor sit amet, consectetur adipiscing.
-      </span>
-    </span>
+        <div
+          className="fd-popover__control"
+        >
+          <span
+            aria-controls="fd-90"
+            aria-expanded={false}
+            aria-haspopup={true}
+            onClick={[Function]}
+            onKeyPress={[Function]}
+            role="button"
+            tabIndex={0}
+          >
+            <span
+              className="fd-inline-help"
+            />
+          </span>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 `;
