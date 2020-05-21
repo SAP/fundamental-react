@@ -12,6 +12,11 @@ import {
 } from '@storybook/addon-knobs';
 import React, { useState } from 'react';
 
+export default {
+    title: 'Component API/Popover',
+    component: Popover
+};
+
 const bodyContent = (
     <Menu>
         <Menu.List>
@@ -238,6 +243,7 @@ export const widthSizingTypes = () => (
                 body={longBodyContent}
                 control={<Button>widthizingType: <strong>'{type}'</strong></Button>}
                 disableEdgeDetection
+                key={type}
                 placement='bottom'
                 widthSizingType={type} />)
         )}
@@ -297,7 +303,11 @@ outOfBoundaries.story = {
             storyDescription: `When an overlay (\`body\`) is visible, the reference (\`control\`)
             element must be tracked because if it overflows from its boundaries, the overlay
             will be hidden as well.`
-        }
+        },
+
+        // TO DO: reenable storyshots for examples using hooks in storybook@6
+        // https://github.com/storybookjs/storybook/releases/tag/v6.0.0-alpha.43
+        storyshots: { disable: true }
     }
 };
 
@@ -339,5 +349,7 @@ export const dev = () => (
         })} />
 );
 dev.story = {
-    parameters: { docs: { disable: true } }
+    parameters: {
+        docs: { disable: true }
+    }
 };

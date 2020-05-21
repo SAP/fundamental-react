@@ -1,0 +1,80 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Visual Breadcrumb 1`] = `
+<div
+  dir="ltr"
+>
+  <div>
+    <ul
+      className="fd-breadcrumb"
+    >
+      <li
+        className="fd-breadcrumb__item"
+      >
+        <a
+          className="fd-breadcrumb__link"
+          href="#"
+        >
+          Link Text
+        </a>
+      </li>
+      <li
+        className="fd-breadcrumb__item"
+      >
+        <a
+          className="fd-breadcrumb__link"
+          href="#"
+        >
+          Link Text
+        </a>
+      </li>
+      <li
+        className="fd-breadcrumb__item"
+      >
+        <a
+          className="fd-breadcrumb__link"
+          href="#"
+        >
+          Link Text
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div>
+    <ul
+      className="fd-breadcrumb"
+    >
+      <li
+        className="fd-breadcrumb__item"
+      >
+        <a
+          className="fd-breadcrumb__link"
+          href="#"
+        >
+          Link Text
+        </a>
+      </li>
+      <li
+        className="fd-breadcrumb__item"
+      >
+        <a
+          className="fd-breadcrumb__link"
+          href="#"
+        >
+          Link Text
+        </a>
+      </li>
+      <li
+        className="fd-breadcrumb__item"
+      >
+        <a
+          className="fd-breadcrumb__link"
+          href="#"
+        >
+          Link Text
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+`;

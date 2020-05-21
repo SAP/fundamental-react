@@ -45,19 +45,19 @@ For an existing react application, follow the steps below:
     > **NOTE:** Importing from specific component is recommended. Doing so will bring in only the component you are using instead of the whole library, which will reduce your bundle size significantly.
 
 
-1. This project does not contain fonts and icons - they must be added to your project separately. Fonts and icons can be found at [`@sap-theming/theming-base-content`](https://github.com/SAP/theming-base-content). After importing fonts and icons from [`@sap-theming/theming-base-content`](https://github.com/SAP/theming-base-content), add the following to your css:
+1. This project does not contain fonts and icons - they must be added to your project separately. Download [Font 72](https://experience.sap.com/fiori-design-web/downloads/#download-font-72) and [SAP icons](https://experience.sap.com/fiori-design-web/downloads/#sap-icon-font). After adding fonts and icons to your project, include the following in your css:
 
 ```css
     @font-face {
         font-family: "72";
-        src: url("path/to/fonts") format("woff"); // Bold, Light, Regular available in woff and woff2
+        src: url("path/to/fonts") format("woff"); /* Bold, Light, Regular available in woff and woff2 */
         font-weight: normal;
         font-style: normal;
     };
 
     @font-face {
         font-family: "SAP-icons";
-        src: url("path/to/icons") format("woff"); // available in woff, woff2 and ttf
+        src: url("path/to/icons") format("woff"); /* available in woff, woff2 and ttf */
         font-weight: normal;
         font-style: normal;
     }

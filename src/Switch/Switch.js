@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import SwitchItem from './_SwitchItem';
 import React, { useCallback, useEffect, useState } from 'react';
 
-/** The **Switch** component is used to activate or deactivate an element. It uses a visual metaphor that is known
+/** A **Switch** component is used to activate or deactivate an element. It uses a visual metaphor that is known
 to the user with visible differences between on and off state. It is recommended to always display the
 Switch with a label above it as well as the label of the selected state. For example, the label above
 would be "Active", the Switch state would be “on” and the selected state label displayed to the right of

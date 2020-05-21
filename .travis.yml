@@ -15,7 +15,7 @@ jobs:
   -
     script: npm run test:storybook
   - stage: Pre-release
-    if: branch = master
+    if: branch = master AND type != pull_request
     before_deploy:
     - git checkout master
     - bash ./ci-scripts/setup-npm.sh

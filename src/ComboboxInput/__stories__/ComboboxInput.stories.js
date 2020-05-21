@@ -35,7 +35,7 @@ export const compact = () => (
 );
 
 export const validationState = () => (
-    <div className='fr-container'>
+    <div className='fddocs-container'>
         <ComboboxInput
             options={options}
             placeholder='Error'

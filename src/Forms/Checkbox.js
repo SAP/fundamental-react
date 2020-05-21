@@ -16,7 +16,7 @@ const getCheckStatus = (checked, indeterminate) => {
     }
 };
 
-/** With checkboxes, all options are visible and the user can make one or more selections.
+/** With a **Checkbox**, all options are visible and the user can make one or more selections.
 This component can also be disabled and displayed in a row */
 
 const Checkbox = React.forwardRef(({

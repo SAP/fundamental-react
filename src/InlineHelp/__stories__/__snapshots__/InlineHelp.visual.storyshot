@@ -1,0 +1,90 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Visual Inline Help 1`] = `
+<div
+  dir="ltr"
+>
+  <div>
+    <span
+      className="fd-inline-help"
+    >
+      <span
+        className="fd-inline-help__content fd-inline-help__content--bottom-right"
+      >
+        default
+      </span>
+    </span>
+  </div>
+  <div>
+    <label
+      className="fd-form-label fd-form-label--inline-help"
+    >
+      Label Text
+      <span
+        className="fd-inline-help"
+      >
+        <span
+          className="fd-inline-help__content fd-inline-help__content--bottom-right"
+        >
+          default
+        </span>
+      </span>
+    </label>
+  </div>
+  <div>
+    <span
+      className="fd-inline-help"
+    >
+      <span
+        className="fd-inline-help__content fd-inline-help__content--bottom-right"
+      >
+        Lorem ipsum dolor sit amet, consectetur adipiscing.
+      </span>
+    </span>
+  </div>
+  <div>
+    <span
+      className="fd-inline-help"
+    >
+      <span
+        className="fd-inline-help__content fd-inline-help__content--bottom-left"
+      >
+        Lorem ipsum dolor sit amet, consectetur adipiscing.
+      </span>
+    </span>
+  </div>
+  <div>
+    <span
+      className="fd-inline-help"
+    >
+      <span
+        className="fd-inline-help__content fd-inline-help__content--bottom-center"
+      >
+        Lorem ipsum dolor sit amet, consectetur adipiscing.
+      </span>
+    </span>
+  </div>
+  <div>
+    <span
+      className="fd-inline-help"
+    >
+      <span
+        className="fd-inline-help__content fd-inline-help__content--right"
+      >
+        Lorem ipsum dolor sit amet, consectetur adipiscing.
+      </span>
+    </span>
+  </div>
+  <div>
+    <span
+      className="fd-inline-help"
+    >
+      <span
+        className="fd-inline-help__content fd-inline-help__content--left"
+      >
+        Lorem ipsum dolor sit amet, consectetur adipiscing.
+      </span>
+    </span>
+  </div>
+</div>
+`;
