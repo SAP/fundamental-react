@@ -30,6 +30,7 @@ class TimeItem extends Component {
             this.increaseTimeObj(name, time, format12Hours);
         } else if (name === 'meridiem') {
             aux = this.CLOCK.indexOf(value) ? 0 : 1;
+            this.props.updateActiveColumn();
         }
         if (format12Hours && name === 'hour' && aux === 12) {
             let newMeridiem = time.meridiem ? 0 : 1;
@@ -152,6 +153,7 @@ class TimeItem extends Component {
     onClick = selectedValue => {
         this.setState({ value: selectedValue });
         this.props.updateTime(selectedValue, this.props.name);
+        this.props.name === 'meridiem' && this.props.updateActiveColumn();
     };
 
     getDisplayValue = (value) => {
@@ -239,9 +241,9 @@ class TimeItem extends Component {
     }
 
     render() {
-        const { disableStyles, disabled, upButtonProps, downButtonProps, value, active, localizedText } = this.props;
+        const { disableStyles, disabled, upButtonProps, downButtonProps, value, active, localizedText, name } = this.props;
 
-        const isActive = active === this.props.name;
+        const isActive = active === name;
 
         const wrapperClasses = classnames(
             'fd-time__wrapper',
@@ -263,7 +265,9 @@ class TimeItem extends Component {
                     option='transparent' />
                 <div className={wrapperClasses}>
                     {!isActive ? (
-                        <span className='fd-time__item fd-time__item--collapsed'>{this.getDisplayValue(value)}</span>
+                        <span
+                            className='fd-time__item fd-time__item--collapsed'
+                            onClick={name === 'meridiem' ? this.props.onCollapsedClick : null}>{this.getDisplayValue(value)}</span>
                     ) : (
                         <ul className='fd-time__list'>
                             {this.generateValues()}
@@ -303,8 +307,12 @@ TimeItem.propTypes = {
     placeholder: PropTypes.string,
     time: PropTypes.object,
     upButtonProps: PropTypes.object,
+    /* Internal use only */
+    updateActiveColumn: PropTypes.func,
     updateTime: PropTypes.func,
-    value: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
+    value: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+    /* Internal use only */
+    onCollapsedClick: PropTypes.func
 };
 
 TimeItem.defaultProps = {

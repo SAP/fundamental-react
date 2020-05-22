@@ -185,7 +185,7 @@ class Time extends Component {
                 )}
                 {/* Meridiem */}
                 {format12Hours ? (
-                    <div className='fd-time__col' onClick={() => this.updateActiveColumn('meridiem')}>
+                    <div className='fd-time__col'>
                         <label className='fd-time__slider-label'>{localizedText.meridiemLabel}</label>
                         <TimeItem
                             active={active}
@@ -193,9 +193,10 @@ class Time extends Component {
                             disableStyles={disableStyles}
                             downButtonProps={meridiemDownButtonProps}
                             inputProps={meridiemInputProps}
-                            localizedText={{ buttonUp: localizedText.meridiemUp, buttonDown: localizedText.meridiemDown }}
+                            localizedText={{ buttonUp: localizedText.meridiemUp, buttonDown: localizedText.meridiemDown, meridiemAM: localizedText.meridiemAM, meridiemPM: localizedText.meridiemPM }}
                             max={'1'}
                             name='meridiem'
+                            onCollapsedClick={() => this.updateActiveColumn('meridiem')}
                             time={this.state.time}
                             upButtonProps={meridiemUpButtonProps}
                             updateActiveColumn={this.updateActiveColumn}
@@ -232,7 +233,19 @@ Time.propTypes = {
         /** Ante meridiem for 12 hour clock */
         meridiemAM: PropTypes.string,
         /** Post meridiem for 12 hour clock */
-        meridiemPM: PropTypes.string
+        meridiemPM: PropTypes.string,
+        hoursLabel: PropTypes.string,
+        minutesLabel: PropTypes.string,
+        secondsLabel: PropTypes.string,
+        meridiemLabel: PropTypes.string,
+        hoursUp: PropTypes.string,
+        hoursDown: PropTypes.string,
+        minutesUp: PropTypes.string,
+        minutesDown: PropTypes.string,
+        secondsUp: PropTypes.string,
+        secondsDown: PropTypes.string,
+        meridiemUp: PropTypes.string,
+        meridiemDown: PropTypes.string
     }),
     /** Additional props to be spread to the meridiem down `<button>` element */
     meridiemDownButtonProps: PropTypes.object,
