@@ -2,6 +2,45 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.10.0-rc.0](https://github.com/SAP/fundamental-react/compare/v0.9.1-rc.17...v0.10.0-rc.0) (2020-05-22)
+
+
+### ⚠ BREAKING CHANGES
+
+* updated list with byline/selection
+
+* add subtle link
+
+* update menu
+
+* update side nav
+
+* refactor time picker
+
+* update tests
+
+* update identifier
+
+* rename Identifier to Avatar
+
+* update list with navigation
+
+* add action item to list
+
+* update to latest
+
+* Update .size-limit
+
+* bring back listitem onClick for non link/buttons
+
+* pr feedback
+
+* fix meridiem click handling
+
+### Features
+
+* update fundamental-styles to 0.10.0-rc.1 ([#1025](https://github.com/SAP/fundamental-react/issues/1025)) ([baf00ec](https://github.com/SAP/fundamental-react/commit/baf00ecf0d1535fd91fe10288f34fe2944e7126f))
+
 ### [0.9.1-rc.17](https://github.com/SAP/fundamental-react/compare/v0.9.1-rc.16...v0.9.1-rc.17) (2020-05-19)
 
 ### [0.9.1-rc.16](https://github.com/SAP/fundamental-react/compare/v0.9.1-rc.15...v0.9.1-rc.16) (2020-05-18)
