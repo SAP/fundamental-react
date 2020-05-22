@@ -1,38 +1,18 @@
 import Button from '../Button/Button';
-import FormInput from '../Forms/FormInput';
+import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-
-const INVALID = 'is-invalid';
 
 class TimeItem extends Component {
     constructor(props) {
         super(props);
         this.CLOCK = [this.props.localizedText.meridiemAM, this.props.localizedText.meridiemPM];
-        var aria = {};
-        if (this.props.name === 'meridiem') {
-            aria = {
-                buttonUp: 'Increase period',
-                buttonDown: 'Decrease period'
-            };
-        } else {
-            aria = {
-                buttonUp: 'Increase ' + this.props.name + 's',
-                buttonDown: 'Decrease ' + this.props.name + 's'
-            };
-        }
-
         this.state = {
-            value: this.props.value,
-            style: 'fd-time__input ',
-            arialabel: aria
+            value: this.props.value
         };
-        if (this.props.disabled) {
-            this.state.style = this.state.style + 'is-disabled';
-        }
     }
 
-    _onUp = () => {
+    _onDown = () => {
         const { value, max, name, time, format12Hours } = this.props;
         var aux;
         //find the min value
@@ -50,6 +30,7 @@ class TimeItem extends Component {
             this.increaseTimeObj(name, time, format12Hours);
         } else if (name === 'meridiem') {
             aux = this.CLOCK.indexOf(value) ? 0 : 1;
+            this.props.updateActiveColumn();
         }
         if (format12Hours && name === 'hour' && aux === 12) {
             let newMeridiem = time.meridiem ? 0 : 1;
@@ -133,7 +114,7 @@ class TimeItem extends Component {
         }
     };
 
-    _onDown = () => {
+    _onUp = () => {
         const { value, max, name, time, format12Hours } = this.props;
 
         var aux = this.setMax(name, max);
@@ -169,80 +150,139 @@ class TimeItem extends Component {
         return maxAux;
     };
 
-    onChange = event => {
-        const { style } = this.state;
-        const { name, max } = this.props;
-        let aux;
-        if (name !== 'meridiem') {
-            aux = event.target.value.replace(/\D/, '');
-            this.updateStyle(style, aux, max);
-            this.setState({ value: aux });
-        }
-
-        this.props.updateTime(aux, this.props.name, event);
+    onClick = selectedValue => {
+        this.setState({ value: selectedValue });
+        this.props.updateTime(selectedValue, this.props.name);
+        this.props.name === 'meridiem' && this.props.updateActiveColumn();
     };
 
-    updateStyle = (style, aux, max) => {
-        if (parseInt(aux, 10) > max) {
-            if (style.indexOf(INVALID) === -1) {
-                this.setState({
-                    style: style.concat(INVALID)
-                });
+    getDisplayValue = (value) => {
+        return parseInt(value, 10) < 10 ? '0' + parseInt(value, 10) : value;
+    }
+
+    generateValues = () => {
+        const { name, max, format12Hours, placeholder, value, disabled, inputProps } = this.props;
+
+        if (name === 'meridiem') {
+            return this.CLOCK.map((amPmValue, index) => (
+                <li
+                    {...inputProps}
+                    className='fd-time__item'
+                    key={index}
+                    onClick={() => this.onClick(index)}>
+                    {index === 0 && <div className='fd-time__current-indicator' />}
+                    <span className='fd-time__unit'>{amPmValue}</span>
+                </li>
+            ));
+        }
+
+        const values = [];
+
+        let before;
+        let after;
+        const center = value !== null ? parseInt(value, 10) : placeholder;
+        const intMax = parseInt(max, 10);
+        const is24HourTime = name === 'hour' && !format12Hours;
+
+        if (center < 4) {
+            before = center + intMax - 3;
+
+            if (before === 60 || is24HourTime && before === 24) {
+                before = 0;
             }
         } else {
-            if (style.indexOf(INVALID) > -1) {
-                this.setState({
-                    style: style.replace(INVALID, '')
-                });
+            before = center - 3;
+        }
+
+        for (let i = 0; i < 3; i++) {
+            values.push(before);
+            before + 1 > intMax ? before = 1 : before += 1;
+            if (before === 60 || is24HourTime && before === 24) {
+                before = 0;
             }
         }
-    };
+
+        values.push(center);
+
+        if (name === 'hour') {
+            if (format12Hours && center === 12) {
+                after = 1;
+            } else if (!format12Hours && center === 23) {
+                after = 0;
+            } else {
+                after = center + 1;
+            }
+        } else if (center === 59) {
+            after = 0;
+        } else {
+            after = center + 1;
+        }
+
+
+        for (let i = 0; i < 3; i++) {
+            values.push(after);
+
+            after += 1;
+            if (after === 60 || is24HourTime && after === 24) {
+                after = 0;
+            }
+        }
+
+        return values.map((timeValue, i) => (
+            <li
+                {...inputProps}
+                className='fd-time__item'
+                key={i}
+                onClick={disabled ? null : () => this.onClick(timeValue)}>
+                {i === 0 && <div className='fd-time__current-indicator' />}
+                <span className='fd-time__unit'>{this.getDisplayValue(timeValue)}</span>
+            </li>
+        ));
+    }
 
     render() {
-        const { style, arialabel } = this.state;
-        const { type, placeholder, disableStyles, disabled, spinners, upButtonProps, downButtonProps, inputProps } = this.props;
+        const { disableStyles, disabled, upButtonProps, downButtonProps, value, active, localizedText, name } = this.props;
+
+        const isActive = active === name;
+
+        const wrapperClasses = classnames(
+            'fd-time__wrapper',
+            {
+                'fd-time__wrapper--active': isActive,
+                'fd-time__wrapper--meridian': this.props.name === 'meridiem'
+            }
+        );
+
         return (
-            <div className='fd-time__item'>
-                {spinners ? (
-                    <div className='fd-time__control'>
-                        <Button
-                            {...upButtonProps}
-                            aria-label={arialabel.buttonUp}
-                            disabled={disabled}
-                            disableStyles={disableStyles}
-                            glyph='navigation-up-arrow'
-                            onClick={this._onUp}
-                            option='transparent' />
-                    </div>
-                ) : (
-                    ''
-                )}
-                <FormInput
-                    {...inputProps}
-                    aria-label={type}
-                    className={style}
+            <>
+                <Button
+                    {...upButtonProps}
+                    aria-label={localizedText.buttonUp}
+                    disabled={disabled}
                     disableStyles={disableStyles}
-                    maxLength='2'
-                    name={this.props.name}
-                    onChange={this.onChange}
-                    placeholder={placeholder}
-                    readOnly={disabled}
-                    value={this.props.value} />
-                {spinners ? (
-                    <div className='fd-time__control'>
-                        <Button
-                            {...downButtonProps}
-                            aria-label={arialabel.buttonDown}
-                            disabled={disabled}
-                            disableStyles={disableStyles}
-                            glyph='navigation-down-arrow'
-                            onClick={this._onDown}
-                            option='transparent' />
-                    </div>
-                ) : (
-                    ''
-                )}
-            </div>
+                    glyph='navigation-up-arrow'
+                    onClick={this._onUp}
+                    option='transparent' />
+                <div className={wrapperClasses}>
+                    {!isActive ? (
+                        <span
+                            className='fd-time__item fd-time__item--collapsed'
+                            onClick={name === 'meridiem' ? this.props.onCollapsedClick : null}>{this.getDisplayValue(value)}</span>
+                    ) : (
+                        <ul className='fd-time__list'>
+                            {this.generateValues()}
+                        </ul>
+                    )}
+                </div>
+                <Button
+                    {...downButtonProps}
+                    aria-label={localizedText.buttonDown}
+                    disabled={disabled}
+                    disableStyles={disableStyles}
+                    glyph='navigation-down-arrow'
+                    onClick={this._onDown}
+                    option='transparent' />
+            </>
         );
     }
 }
@@ -251,11 +291,12 @@ TimeItem.displayName = 'TimeItem';
 
 TimeItem.propTypes = {
     localizedText: PropTypes.object.isRequired,
+    active: PropTypes.string,
     arialabel: PropTypes.string,
     /** Set to **true** to mark component as disabled and make it non-interactive */
     disabled: PropTypes.bool,
-    /** Internal use only */
     disableStyles: PropTypes.bool,
+    /** Internal use only */
     downButtonProps: PropTypes.object,
     format12Hours: PropTypes.bool,
     /** Additional props to be spread to the `<input>` element */
@@ -264,14 +305,14 @@ TimeItem.propTypes = {
     name: PropTypes.string,
     /** Localized placeholder text of the input */
     placeholder: PropTypes.string,
-    spinners: PropTypes.bool,
-    style: PropTypes.string,
     time: PropTypes.object,
-    /** Sets the variation of the component. Primarily used for styling */
-    type: PropTypes.string,
     upButtonProps: PropTypes.object,
+    /* Internal use only */
+    updateActiveColumn: PropTypes.func,
     updateTime: PropTypes.func,
-    value: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
+    value: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+    /* Internal use only */
+    onCollapsedClick: PropTypes.func
 };
 
 TimeItem.defaultProps = {

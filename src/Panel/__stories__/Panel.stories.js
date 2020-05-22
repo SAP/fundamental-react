@@ -1,6 +1,6 @@
 /* eslint-disable react/no-multi-comp */
+import Avatar from '../../Avatar/Avatar';
 import Button from '../../Button/Button';
-import Image from '../../Image/Image';
 import Menu from '../../Menu/Menu';
 import Panel from '../Panel';
 import PanelActions from '../_PanelActions';
@@ -83,8 +83,8 @@ export const singlePanel = () => (
             <br />
             <Tile>
                 <Tile.Media>
-                    <Image photo='./assets/nature.jpg' size='l'
-                        type='circle' />
+                    <Avatar backgroundImageUrl='./assets/nature.jpg'
+                        circle size='l' />
                 </Tile.Media>
                 <Tile.Content title='Tile Title'>
                     <p>Tile Description</p>

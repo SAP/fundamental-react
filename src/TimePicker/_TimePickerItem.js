@@ -236,7 +236,7 @@ class TimePickerItem extends Component {
                         compact
                         disabled={disabled}
                         disableStyles={disableStyles}
-                        glyph='fob-watch'
+                        glyph='time-entry-request'
                         id={this.state.buttonID}
                         option='transparent' />
                 </InputGroup.Addon>

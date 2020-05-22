@@ -189,6 +189,116 @@ export const dev = () => (
     </List>
 );
 
+export const byline = () => (
+    <List hasByline>
+        <List.Header>List Header</List.Header>
+        <List.Item>
+            <List.Text>List Item 1</List.Text>
+            <List.Byline>Byline</List.Byline>
+        </List.Item>
+        <List.Item>
+            <List.Text>List Item 2</List.Text>
+            <List.Byline>Byline</List.Byline>
+        </List.Item>
+        <List.Item>
+            <List.Text>List Item 3</List.Text>
+            <List.Byline>Byline</List.Byline>
+        </List.Item>
+        <List.Item>
+            <List.Text>List Item 4</List.Text>
+            <List.Byline twoColumns>
+                <List.Text left>Left byline</List.Text>
+                <List.Text right>Right byline</List.Text>
+            </List.Byline>
+        </List.Item>
+        <List.Footer>List Footer</List.Footer>
+    </List>
+);
+
+export const selection = () => (
+    <List>
+        <List.Header>List Header</List.Header>
+        <List.Item>
+            <List.Selection>
+                <List.Text>List Item 1</List.Text>
+            </List.Selection>
+        </List.Item>
+        <List.Item>
+            <List.Selection>
+                <List.Text>List Item 2</List.Text>
+            </List.Selection>
+        </List.Item>
+        <List.Item>
+            <List.Selection>
+                <List.Text>List Item 3</List.Text>
+            </List.Selection>
+        </List.Item>
+        <List.Item>
+            <List.Selection>
+                <List.Text>List Item 4</List.Text>
+            </List.Selection>
+        </List.Item>
+        <List.Footer>List Footer</List.Footer>
+    </List>
+);
+
+export const partialNavigation = () => (
+    <List partialNavigation>
+        <List.Header>List Header</List.Header>
+        <List.Item url={'#'}>
+            <List.Text>List Item 1</List.Text>
+        </List.Item>
+        <List.Item>
+            <List.Text>List Item 2</List.Text>
+        </List.Item>
+        <List.Item>
+            <List.Text>List Item 3</List.Text>
+        </List.Item>
+        <List.Item selected url={'#'}>
+            <List.Text>List Item 4</List.Text>
+        </List.Item>
+        <List.Footer>List Footer</List.Footer>
+    </List>
+);
+
+export const navigationList = () => (
+    <List navigation>
+        <List.Header>List Header</List.Header>
+        <List.Item url={'#'}>
+            <List.Text>List Item 1</List.Text>
+        </List.Item>
+        <List.Item url={'#'}>
+            <List.Text>List Item 2</List.Text>
+        </List.Item>
+        <List.Item url={'#'}>
+            <List.Text>List Item 3</List.Text>
+        </List.Item>
+        <List.Item selected url={'#'}>
+            <List.Text>List Item 4</List.Text>
+        </List.Item>
+        <List.Footer>List Footer</List.Footer>
+    </List>
+);
+
+export const actionList = () => (
+    <List>
+        <List.Header>List Header</List.Header>
+        <List.Item>
+            <List.Text>List Item 1</List.Text>
+        </List.Item>
+        <List.Item action>
+            List Item 2
+        </List.Item>
+        <List.Item action>
+            List Item 3
+        </List.Item>
+        <List.Item action>
+            List Item 4
+        </List.Item>
+        <List.Footer>List Footer</List.Footer>
+    </List>
+);
+
 dev.story = {
     parameters: { docs: { disable: true } }
 };

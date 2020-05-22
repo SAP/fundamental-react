@@ -1,9 +1,9 @@
+import Avatar from '../Avatar/Avatar';
 import Button from '../Button/Button';
 import classnames from 'classnames';
 import Counter from '../Counter/Counter';
 import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import Icon from '../Icon/Icon';
-import Identifier from '../Identifier/Identifier';
 import Menu from '../Menu/Menu';
 import Popover from '../Popover/Popover';
 import PropTypes from 'prop-types';
@@ -400,18 +400,18 @@ class Shellbar extends Component {
                                     control={
                                         <div className='fd-button fd-shellbar__button fd-user-menu__control'>
                                             {profile.image ? (
-                                                <Identifier
+                                                <Avatar
                                                     backgroundImageUrl={profile.image}
+                                                    circle
                                                     disableStyles={disableStyles}
-                                                    modifier='circle'
                                                     size='xs' />
                                             ) : (
-                                                <Identifier color={profile.colorAccent}
+                                                <Avatar circle
+                                                    color={profile.colorAccent}
                                                     disableStyles={disableStyles}
-                                                    modifier='circle'
                                                     size='xs'>
                                                     {profile.initials}
-                                                </Identifier>
+                                                </Avatar>
                                             )}
                                         </div>
                                     }

@@ -47,7 +47,8 @@ const MenuItem = ({
             return (<a {...urlProps}
                 className={linkClassNames}
                 href={url}
-                onClick={onclick}>
+                onClick={onclick}
+                role='menuitem'>
                 {addonBefore && <span {...addonProps} className={addonBeforeClassnames} />}
                 <span className='fd-menu__title'>{children}</span>
                 {addonAfter && <span {...addonProps} className={addonAfterClassnames} />}
@@ -75,7 +76,8 @@ const MenuItem = ({
         } else if (children) {
             return (<a {...urlProps}
                 className={linkClassNames}
-                onClick={onclick}>
+                onClick={onclick}
+                role='menuitem'>
                 {addonBefore && <span {...addonProps} className={addonBeforeClassnames} />}
                 <span className='fd-menu__title'>{children}</span>
                 {addonAfter && <span {...addonProps} className={addonAfterClassnames} />}
@@ -90,7 +92,10 @@ const MenuItem = ({
 
     return (
         <React.Fragment>
-            <li {...props} className={listClassNames}>
+            <li
+                {...props}
+                className={listClassNames}
+                role='presentation'>
                 {renderLink()}
             </li>
             {separator && <span className='fd-menu__separator' />}

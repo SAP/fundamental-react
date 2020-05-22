@@ -12,3 +12,7 @@ export const primary = () => (<Link href='#'>Default</Link>);
 export const disabled = () => (
     <Link disabled href='#'>Disabled</Link>
 );
+
+export const subtle = () => (
+    <Link href='#' subtle>Subtle</Link>
+);

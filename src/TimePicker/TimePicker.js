@@ -61,17 +61,21 @@ class TimePicker extends Component {
         this.setState({ value: value });
     };
 
+    formatWithLeadingZero = value => {
+        return parseInt(value, 10) < 10 ? '0' + parseInt(value, 10) : value;
+    }
+
     formatValue = time => {
         let value = '';
 
         if (this.state.showHour) {
-            value = time.hour;
+            value = this.formatWithLeadingZero(time.hour);
         }
         if (this.state.showMinute) {
-            value = value ? value + ':' + time.minute : time.minute;
+            value = value ? value + ':' + this.formatWithLeadingZero(time.minute) : this.formatWithLeadingZero(time.minute);
         }
         if (this.state.showSecond) {
-            value = value ? value + ':' + time.second : time.second;
+            value = value ? value + ':' + this.formatWithLeadingZero(time.second) : this.formatWithLeadingZero(time.second);
         }
         if (this.state.format12Hours) {
             value = value + ' ' + this.CLOCK[time.meridiem];
@@ -82,13 +86,13 @@ class TimePicker extends Component {
         let time = {};
         let timeArray = value.split(':');
         if (typeof timeArray[0] !== 'undefined' && this.props.showHour) {
-            time.hour = timeArray[0];
+            time.hour = this.formatWithLeadingZero(timeArray[0]);
         }
         if (typeof timeArray[1] !== 'undefined' && this.props.showMinute) {
-            time.minute = timeArray[1];
+            time.minute = this.formatWithLeadingZero(timeArray[1]);
         }
         if (typeof timeArray[2] !== 'undefined' && this.props.showSecond) {
-            time.second = timeArray[2].match(/\d+/)[0];
+            time.second = this.formatWithLeadingZero(timeArray[2].match(/\d+/)[0]);
             if (this.props.format12Hours) {
                 time.meridiem = timeArray[2].indexOf(this.props.localizedText.meridiemAM) !== -1 ? 0 : 1;
             }

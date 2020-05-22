@@ -39,7 +39,7 @@ exports[`Storyshots Visual Time Picker 1`] = `
                   aria-controls="rthHR811"
                   aria-expanded="false"
                   aria-haspopup="true"
-                  className="fd-button fd-button--transparent sap-icon--fob-watch fd-input-group__button"
+                  className="fd-button fd-button--transparent sap-icon--time-entry-request fd-input-group__button"
                   type="button"
                 />
               </span>
@@ -85,7 +85,7 @@ exports[`Storyshots Visual Time Picker 1`] = `
                   aria-controls="rthHR811"
                   aria-expanded="false"
                   aria-haspopup="true"
-                  className="fd-button fd-button--transparent sap-icon--fob-watch is-disabled fd-input-group__button"
+                  className="fd-button fd-button--transparent sap-icon--time-entry-request is-disabled fd-input-group__button"
                   disabled={true}
                   type="button"
                 />
@@ -131,7 +131,7 @@ exports[`Storyshots Visual Time Picker 1`] = `
                   aria-controls="rthHR811"
                   aria-expanded="false"
                   aria-haspopup="true"
-                  className="fd-button fd-button--transparent sap-icon--fob-watch fd-input-group__button"
+                  className="fd-button fd-button--transparent sap-icon--time-entry-request fd-input-group__button"
                   type="button"
                 />
               </span>
@@ -176,7 +176,7 @@ exports[`Storyshots Visual Time Picker 1`] = `
                   aria-controls="rthHR811"
                   aria-expanded="false"
                   aria-haspopup="true"
-                  className="fd-button fd-button--transparent sap-icon--fob-watch fd-input-group__button"
+                  className="fd-button fd-button--transparent sap-icon--time-entry-request fd-input-group__button"
                   type="button"
                 />
               </span>
@@ -221,7 +221,7 @@ exports[`Storyshots Visual Time Picker 1`] = `
                   aria-controls="rthHR811"
                   aria-expanded="false"
                   aria-haspopup="true"
-                  className="fd-button fd-button--transparent sap-icon--fob-watch fd-input-group__button"
+                  className="fd-button fd-button--transparent sap-icon--time-entry-request fd-input-group__button"
                   type="button"
                 />
               </span>

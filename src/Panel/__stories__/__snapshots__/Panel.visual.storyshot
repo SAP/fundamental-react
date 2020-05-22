@@ -105,7 +105,7 @@ exports[`Storyshots Visual Panel 1`] = `
               className="fd-popover__control"
             >
               <button
-                aria-controls="fd-199"
+                aria-controls="fd-203"
                 aria-expanded={false}
                 aria-haspopup={true}
                 className="fd-button"
@@ -132,7 +132,7 @@ exports[`Storyshots Visual Panel 1`] = `
               className="fd-popover__control"
             >
               <button
-                aria-controls="fd-200"
+                aria-controls="fd-204"
                 aria-expanded={false}
                 aria-haspopup={true}
                 className="fd-button"
@@ -164,7 +164,8 @@ exports[`Storyshots Visual Panel 1`] = `
             className="fd-tile__media"
           >
             <span
-              className="fd-image--l fd-image--circle"
+              className="fd-avatar fd-avatar--l fd-avatar--thumbnail fd-avatar--circle"
+              role="presentation"
               style={
                 Object {
                   "backgroundImage": "url(./assets/nature.jpg)",
