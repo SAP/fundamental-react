@@ -9,7 +9,10 @@ const MenuList = ({ children, className, ...props }) => {
     );
 
     return (
-        <ul {...props} className={menuListClasses}>
+        <ul
+            {...props}
+            className={menuListClasses}
+            role='menu'>
             {children}
         </ul>
     );

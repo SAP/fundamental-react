@@ -1,7 +1,7 @@
 /* eslint-disable react/no-multi-comp */
+import Avatar from '../../Avatar/Avatar';
 import Button from '../../Button/Button';
 import Checkbox from '../../Forms/Checkbox';
-import Image from '../../Image/Image';
 import Menu from '../../Menu/Menu';
 import Popover from '../../Popover/Popover';
 import Table from '../Table';
@@ -78,7 +78,7 @@ export const richTable = () => {
                             <Checkbox
                                 checked={checkedItems[item.name]}
                                 onChange={handleChange}>{item.name}</Checkbox>,
-                            <Image photo={item.photoUrl} size='m' />,
+                            <Avatar backgroundImageUrl={item.photoUrl} size='m' />,
                             <a className='fd-has-font-weight-semi' href='#'>
                                 {item.email}
                             </a>,

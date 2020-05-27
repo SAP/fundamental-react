@@ -583,21 +583,36 @@ exports[`Storyshots Visual Side Nav 1`] = `
           <li
             className="fd-nested-list__item"
           >
-            <a
-              className="fd-nested-list__link has-child"
-              href="#"
+            <div
+              className="fd-nested-list__content has-child"
               onClick={[Function]}
+              tabIndex="0"
             >
-              <span
-                className="fd-nested-list__title"
+              <a
+                className="fd-nested-list__link"
+                href="#"
+                onClick={null}
               >
-                Link Item 2
-              </span>
-            </a>
+                <span
+                  className="fd-nested-list__title"
+                >
+                  Link Item 2
+                </span>
+              </a>
+              <a
+                aria-controls="fd-250"
+                aria-expanded={false}
+                aria-haspopup="true"
+                className="fd-nested-list__expand-icon"
+                href="#"
+                tabIndex="-1"
+              />
+            </div>
             <ul
               aria-expanded={false}
               aria-hidden={true}
               className="fd-nested-list--text-only fd-nested-list level-1"
+              id="fd-250"
             >
               <li
                 className="fd-nested-list__item"
@@ -694,21 +709,36 @@ exports[`Storyshots Visual Side Nav 1`] = `
           <li
             className="fd-nested-list__item"
           >
-            <a
-              className="fd-nested-list__link has-child"
-              href="#"
+            <div
+              className="fd-nested-list__content has-child"
               onClick={[Function]}
+              tabIndex="0"
             >
-              <span
-                className="fd-nested-list__title"
+              <a
+                className="fd-nested-list__link"
+                href="#"
+                onClick={null}
               >
-                Link Item 4
-              </span>
-            </a>
+                <span
+                  className="fd-nested-list__title"
+                >
+                  Link Item 4
+                </span>
+              </a>
+              <a
+                aria-controls="fd-257"
+                aria-expanded={false}
+                aria-haspopup="true"
+                className="fd-nested-list__expand-icon"
+                href="#"
+                tabIndex="-1"
+              />
+            </div>
             <ul
               aria-expanded={false}
               aria-hidden={true}
               className="fd-nested-list--text-only fd-nested-list level-1"
+              id="fd-257"
             >
               <li
                 className="fd-nested-list__item"

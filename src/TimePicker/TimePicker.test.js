@@ -129,12 +129,6 @@ describe('<TimePicker />', () => {
     });
 
     test('check value change', () => {
-        const fullTime = {
-            hour: '12',
-            minute: '29',
-            second: '34',
-            meridiem: 'pm'
-        };
         // just minute and second, no 12 hr format
         let wrapper = mount(
             <TimePicker
@@ -147,24 +141,34 @@ describe('<TimePicker />', () => {
         wrapper.find('button').simulate('click');
 
         wrapper
-            .find('.fd-input')
+            .find('.fd-time__unit')
+            .at(0)
+            .simulate('click');
+        expect(wrapper.state('time').hour).toEqual(9);
+
+        wrapper
+            .find('.fd-time__col')
             .at(1)
-            .simulate('change', { target: { value: fullTime.hour } });
-        expect(wrapper.state('time').hour).toEqual(fullTime.hour);
+            .simulate('click');
 
         wrapper
-            .find('.fd-input')
+            .find('.fd-time__unit')
+            .at(0)
+            .simulate('click');
+        expect(wrapper.state('time').minute).toEqual(57);
+
+        wrapper
+            .find('.fd-time__col')
             .at(2)
-            .simulate('change', { target: { value: fullTime.minute } });
-        expect(wrapper.state('time').minute).toEqual(fullTime.minute);
+            .simulate('click');
 
         wrapper
-            .find('.fd-input')
-            .at(3)
-            .simulate('change', { target: { value: fullTime.second } });
-        expect(wrapper.state('time').second).toEqual(fullTime.second);
+            .find('.fd-time__unit')
+            .at(0)
+            .simulate('click');
+        expect(wrapper.state('time').second).toEqual(57);
 
-        expect(wrapper.state('value')).toEqual('12:29:34 am');
+        expect(wrapper.state('value')).toEqual('09:57:57 am');
     });
 
     test('check for onBlur of text input', () => {

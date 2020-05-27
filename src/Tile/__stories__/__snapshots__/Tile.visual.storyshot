@@ -97,7 +97,8 @@ exports[`Storyshots Visual Tile 1`] = `
         className="fd-tile__media"
       >
         <span
-          className="fd-image--m"
+          className="fd-avatar fd-avatar--m fd-avatar--thumbnail"
+          role="presentation"
           style={
             Object {
               "backgroundImage": "url(./assets/nature.jpg)",
@@ -126,7 +127,8 @@ exports[`Storyshots Visual Tile 1`] = `
         className="fd-tile__media"
       >
         <span
-          className="fd-image--l fd-image--circle"
+          className="fd-avatar fd-avatar--l fd-avatar--thumbnail fd-avatar--circle"
+          role="presentation"
           style={
             Object {
               "backgroundImage": "url(./assets/nature.jpg)",
@@ -158,7 +160,7 @@ exports[`Storyshots Visual Tile 1`] = `
         className="fd-tile__media"
       >
         <span
-          className="fd-identifier fd-identifier--m sap-icon--home fd-has-background-color-accent-3"
+          className="fd-avatar fd-avatar--m sap-icon--home fd-has-background-color-accent-3"
           role="presentation"
         />
       </div>
@@ -208,7 +210,7 @@ exports[`Storyshots Visual Tile 1`] = `
               className="fd-popover__control"
             >
               <button
-                aria-controls="fd-223"
+                aria-controls="fd-268"
                 aria-expanded={false}
                 aria-haspopup={true}
                 className="fd-button fd-button--transparent sap-icon--vertical-grip"

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import React, { useEffect } from 'react';
 
 /** Use an **Link** component to display a link. */
-const Link = React.forwardRef(({ className, children, disabled, disableStyles, ...props }, ref) => {
+const Link = React.forwardRef(({ className, children, disabled, disableStyles, subtle, ...props }, ref) => {
 
     useEffect(() => {
         if (!disableStyles) {
@@ -13,7 +13,10 @@ const Link = React.forwardRef(({ className, children, disabled, disableStyles, .
 
     const imageClasses = classnames(
         'fd-link',
-        { 'is-disabled': !!disabled },
+        {
+            'is-disabled': !!disabled,
+            'fd-link--subtle': subtle
+        },
         className
     );
     return (
@@ -36,7 +39,9 @@ Link.propTypes = {
     className: PropTypes.string,
     /** Set to **true** to mark component as disabled and make it non-interactive */
     disabled: PropTypes.bool,
-    disableStyles: PropTypes.bool
+    disableStyles: PropTypes.bool,
+    /** Set to **true** to apply subtle styling */
+    subtle: PropTypes.bool
 };
 
 export default Link;

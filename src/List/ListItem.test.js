@@ -4,7 +4,7 @@ import React from 'react';
 
 describe('<ListItem />', () => {
     describe('onClick callback', () => {
-        test('should call onClick callback after click', () => {
+        test('should call onClick callback after click if link', () => {
             const click = jest.fn();
             let wrapper = mount(<List.Item onClick={click}>Test</List.Item>);
             wrapper
