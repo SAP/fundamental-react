@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.10.0](https://github.com/SAP/fundamental-react/compare/v0.10.0-rc.0...v0.10.0) (2020-05-27)
+
 ## [0.10.0-rc.0](https://github.com/SAP/fundamental-react/compare/v0.9.1-rc.17...v0.10.0-rc.0) (2020-05-22)
 
 
