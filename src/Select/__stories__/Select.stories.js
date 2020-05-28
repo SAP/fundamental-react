@@ -30,14 +30,22 @@ export const compact = () => (
     <Select
         compact
         options={options}
-        placeholder='Select' />
+        placeholder='Compact' />
 );
 export const disabled = () => (
     <Select
         disabled
         options={options}
-        placeholder='Select' />
+        placeholder='Disabled' />
 );
+
+export const readOnly = () => (
+    <Select
+        options={options}
+        placeholder='readOnly'
+        readOnly />
+);
+
 export const validationStates = () => (
     <div className='fddocs-container'>
         <Select
@@ -66,6 +74,7 @@ export const dev = () => (
         disabled={boolean('disabled', false)}
         options={options}
         placeholder={text('placeholder', 'select')}
+        readOnly={boolean('readOnly', false)}
         validationState={select('Validation State', {
             'none': '',
             'success': { state: 'success', text: 'placeholder text' },

@@ -19,6 +19,7 @@ const Select = React.forwardRef(({
     onClick,
     onSelect,
     placeholder,
+    readOnly,
     selectedKey,
     validationState,
     ...props
@@ -50,6 +51,7 @@ const Select = React.forwardRef(({
         'fd-select__control',
         {
             'is-disabled': disabled,
+            'is-readonly': readOnly,
             [`is-${validationState?.state}`]: validationState?.state
         }
     );
@@ -62,16 +64,16 @@ const Select = React.forwardRef(({
             {...props}
             className={selectClasses}
             id={id}
-            onClick={handleClick}
+            onClick={disabled || readOnly ? null : handleClick}
             ref={ref}>
             <div className={selectControlClasses}>
                 {selected ? selected.text : placeholder}
-                <Button
+                {!readOnly && <Button
                     className='fd-select__button'
                     disabled={disabled}
                     glyph='slim-arrow-down'
                     option='transparent'
-                    ref={ref} />
+                    ref={ref} />}
             </div>
             {!isExpanded && validationState && (<FormMessage
                 disableStyles={disableStyles}
@@ -149,6 +151,8 @@ Select.propTypes = {
     })),
     /** Localized placeholder text of the input */
     placeholder: PropTypes.string,
+    /** Set to **true** to mark component as readonly */
+    readOnly: PropTypes.bool,
     /** The key corresponding to the selected option */
     selectedKey: PropTypes.string,
     /** An object identifying a validation message.  The object will include properties for `state` and `text`; _e.g._, \`{ state: \'warning\', text: \'This is your last warning\' }\` */
