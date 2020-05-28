@@ -105,7 +105,7 @@ exports[`Storyshots Visual Panel 1`] = `
               className="fd-popover__control"
             >
               <button
-                aria-controls="fd-203"
+                aria-controls="fd-210"
                 aria-expanded={false}
                 aria-haspopup={true}
                 className="fd-button"
@@ -132,7 +132,7 @@ exports[`Storyshots Visual Panel 1`] = `
               className="fd-popover__control"
             >
               <button
-                aria-controls="fd-204"
+                aria-controls="fd-211"
                 aria-expanded={false}
                 aria-haspopup={true}
                 className="fd-button"

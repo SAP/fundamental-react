@@ -600,7 +600,7 @@ exports[`Storyshots Visual Side Nav 1`] = `
                 </span>
               </a>
               <a
-                aria-controls="fd-250"
+                aria-controls="fd-257"
                 aria-expanded={false}
                 aria-haspopup="true"
                 className="fd-nested-list__expand-icon"
@@ -612,7 +612,7 @@ exports[`Storyshots Visual Side Nav 1`] = `
               aria-expanded={false}
               aria-hidden={true}
               className="fd-nested-list--text-only fd-nested-list level-1"
-              id="fd-250"
+              id="fd-257"
             >
               <li
                 className="fd-nested-list__item"
@@ -726,7 +726,7 @@ exports[`Storyshots Visual Side Nav 1`] = `
                 </span>
               </a>
               <a
-                aria-controls="fd-257"
+                aria-controls="fd-264"
                 aria-expanded={false}
                 aria-haspopup="true"
                 className="fd-nested-list__expand-icon"
@@ -738,7 +738,7 @@ exports[`Storyshots Visual Side Nav 1`] = `
               aria-expanded={false}
               aria-hidden={true}
               className="fd-nested-list--text-only fd-nested-list level-1"
-              id="fd-257"
+              id="fd-264"
             >
               <li
                 className="fd-nested-list__item"
