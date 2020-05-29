@@ -46,7 +46,7 @@ const DocsPage = () => {
         <Primary />
         <Stories />
         <h2 className='sbdocs-h2' id='properties'>Properties</h2>
-        <Props />
+        <Props exclude={['disableStyles']} />
         <Community />
         <Footer />
       </>
