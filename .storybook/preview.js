@@ -9,27 +9,8 @@ import { DocsContainer } from '@storybook/addon-docs/blocks';
 import DocsPage from './custom/components/DocsPage';
 import { addDecorator, addParameters } from '@storybook/react';
 
-// Order of folders to display
-const headers = [
-    'Introduction',
-    'Component API'
-];
-
-const storySort = (a, b) => {
-    const aHeader = a[1].kind.substr(0, a[1].kind.indexOf('/'));
-    const bHeader = b[1].kind.substr(0, b[1].kind.indexOf('/'));
-
-    if (aHeader !== bHeader) {
-        const aHeaderIndex = headers.findIndex(h => h === aHeader);
-        const bHeaderIndex = headers.findIndex(h => h === bHeader);
-        return aHeaderIndex - bHeaderIndex;
-    }
-    return 0;
-};
-
 addParameters({
     options: {
-        storySort,
         showRoots: true,
         theme: fundamentals
     },
