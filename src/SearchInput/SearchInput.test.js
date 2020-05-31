@@ -21,6 +21,11 @@ describe('<SearchInput />', () => {
         { text: 'orange', callback: jest.fn() }
     ];
 
+    const searchDataAA = [
+        { text: 'aaa', callback: () => console.log('apple') },
+        { text: 'aaaaa', callback: () => console.log('apricot') },
+    ];
+
     const defaultSearchInput = (
         <SearchInput
             className='blue'
@@ -231,6 +236,42 @@ describe('<SearchInput />', () => {
             expect(
                 element.find('ul').getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
+
+        });
+
+        test('should allow props list to be changed after creation', () => {
+            let ref;
+            class Test extends React.Component {
+                constructor(props) {
+                    super(props);
+                    ref = React.createRef();
+                    this.state = {
+                        list: searchData,
+                    };
+                }
+                
+                handleChange = event => {
+                    if (ref.current.value === "aa") {
+                        this.setState({
+                            list: searchDataAA
+                        });
+                    }
+                }
+                render = () => <SearchInput searchList={this.state.list} onChange={this.handleChange}  inputProps={{ ref: ref }}/>;
+            }
+            const wrapper = mount(<Test/>);
+   
+            wrapper.find('.fd-input').simulate('click');
+            let rows = wrapper.find('li');
+            expect(rows).toHaveLength(9);
+
+            wrapper
+                .find(searchInput)
+                .simulate('change', { target: { value: "aa" } });
+
+            rows = wrapper.find('li');
+
+            expect(rows).toHaveLength(2);
 
         });
     });

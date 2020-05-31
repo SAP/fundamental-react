@@ -16,9 +16,20 @@ class SearchInput extends Component {
             isExpanded: false,
             searchExpanded: false,
             value: props.inputProps?.value ? props.inputProps.value : '',
-            searchList: props.searchList,
             filteredResult: props.inputProps?.value ? this.filterList(props.searchList, props.inputProps.value) : props.searchList
         };
+    }
+
+    componentDidUpdate(prevProps) {
+        if (this.props.searchList && this.props.searchList !== prevProps.searchList) {
+            {
+                let filteredResult = this.filterList(this.props.searchList, this.state.value);
+                this.setState({
+                    isExpanded: true,
+                    filteredResult: filteredResult
+                })
+            }
+        }
     }
 
     filterList = (list, query) => {
@@ -36,7 +47,7 @@ class SearchInput extends Component {
             value: item.text,
             isExpanded: false,
             searchExpanded: false,
-            filteredResult: this.filterList(prevState.searchList, item.text)
+            filteredResult: this.filterList(this.props.searchList, item.text)
         }), () => {
             item?.callback();
             this.props.onSelect(event, item);
@@ -45,8 +56,8 @@ class SearchInput extends Component {
 
     handleChange = event => {
         let filteredResult;
-        if (this.state.searchList) {
-            filteredResult = this.filterList(this.state.searchList, event.target.value);
+        if (this.props.searchList) {
+            filteredResult = this.filterList(this.props.searchList, event.target.value);
         }
         this.setState({
             value: event.target.value,
@@ -153,8 +164,8 @@ class SearchInput extends Component {
                             );
                         })
                     ) : (
-                        <Menu.Item>No result</Menu.Item>
-                    )}
+                            <Menu.Item>No result</Menu.Item>
+                        )}
                 </Menu.List>
             </Menu>
         );
@@ -166,11 +177,11 @@ class SearchInput extends Component {
                     body={
                         (<>
                             {validationState &&
-                            <FormMessage
-                                disableStyles={disableStyles}
-                                type={validationState.state}>
-                                {validationState.text}
-                            </FormMessage>
+                                <FormMessage
+                                    disableStyles={disableStyles}
+                                    type={validationState.state}>
+                                    {validationState.text}
+                                </FormMessage>
                             }
                             {popoverBody}
                         </>)}
