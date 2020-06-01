@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.10.2-rc.0](https://github.com/SAP/fundamental-react/compare/v0.10.1...v0.10.2-rc.0) (2020-06-01)
+
+
+### Bug Fixes
+
+* SearchInput doesn't updated when searchList property change ([#1058](https://github.com/SAP/fundamental-react/issues/1058)) ([6ebc9ff](https://github.com/SAP/fundamental-react/commit/6ebc9ffd1a5447c0623b6d190ac407066a83a734))
+
 ### [0.10.1](https://github.com/SAP/fundamental-react/compare/v0.10.1-rc.2...v0.10.1) (2020-05-29)
 
 ### [0.10.1-rc.2](https://github.com/SAP/fundamental-react/compare/v0.10.1-rc.1...v0.10.1-rc.2) (2020-05-29)
