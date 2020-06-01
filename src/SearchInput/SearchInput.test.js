@@ -21,6 +21,11 @@ describe('<SearchInput />', () => {
         { text: 'orange', callback: jest.fn() }
     ];
 
+    const searchDataNew = [
+        { text: 'peaches', callback: jest.fn() },
+        { text: 'pear', callback: jest.fn() }
+    ];
+
     const defaultSearchInput = (
         <SearchInput
             className='blue'
@@ -54,11 +59,7 @@ describe('<SearchInput />', () => {
 
             expect(wrapper.state(['value'])).toBe(searchData[0].text);
             expect(wrapper.state(['isExpanded'])).toBe(true);
-            expect(wrapper.state(['filteredResult'])).toEqual(
-                expect.arrayContaining([
-                    expect.objectContaining({ text: searchData[0].text })
-                ])
-            );
+
         });
 
         test('should dispatch the onChange callback with the event', () => {
@@ -231,6 +232,51 @@ describe('<SearchInput />', () => {
             expect(
                 element.find('ul').getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
+
+        });
+
+        test('should allow props list to be changed after creation', () => {
+            let ref;
+            class Test extends React.Component {
+                constructor(props) {
+                    super(props);
+                    ref = React.createRef();
+                    this.state = {
+                        list: searchData
+                    };
+                }
+
+                handleChange = () => {
+                    if (ref.current.value === 'pe') {
+                        this.setState({
+                            list: searchDataNew
+                        });
+                    }
+                }
+                render = () => (<SearchInput inputProps={{ ref: ref }} onChange={this.handleChange}
+                    searchList={this.state.list} />);
+            }
+            const wrapper = mount(<Test />);
+
+            wrapper.find('.fd-input').simulate('click');
+            let rows = wrapper.find('li');
+            expect(rows).toHaveLength(searchData.length);
+
+            wrapper
+                .find(searchInput)
+                .simulate('change', { target: { value: 'pe' } });
+
+            rows = wrapper.find('li');
+
+            expect(rows).toHaveLength(searchDataNew.length);
+
+            wrapper
+                .find(searchInput)
+                .simulate('change', { target: { value: searchDataNew[0].text } });
+
+            rows = wrapper.find('li');
+
+            expect(rows).toHaveLength(1);
 
         });
     });
