@@ -260,7 +260,7 @@ describe('<SearchInput />', () => {
 
             wrapper.find('.fd-input').simulate('click');
             let rows = wrapper.find('li');
-            expect(rows).toHaveLength(9);
+            expect(rows).toHaveLength(searchData.length);
 
             wrapper
                 .find(searchInput)
@@ -268,7 +268,7 @@ describe('<SearchInput />', () => {
 
             rows = wrapper.find('li');
 
-            expect(rows).toHaveLength(2);
+            expect(rows).toHaveLength(searchDataNew.length);
 
             wrapper
                 .find(searchInput)
