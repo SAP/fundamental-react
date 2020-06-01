@@ -123,7 +123,7 @@
     "regenerator-runtime": "^0.13.2",
     "sass-loader": "^8.0.2",
     "size-limit": "^4.0.1",
-    "standard-version": "^7.1.0",
+    "standard-version": "^8.0.0",
     "start-server-and-test": "^1.10.6",
     "storybook-addon-i18n": "^5.1.13",
     "style-loader": "^1.2.1",
