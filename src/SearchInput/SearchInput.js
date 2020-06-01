@@ -7,29 +7,16 @@ import InputGroup from '../InputGroup/InputGroup';
 import Menu from '../Menu/Menu';
 import Popover from '../Popover/Popover';
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 
-class SearchInput extends Component {
+class SearchInput extends PureComponent {
     constructor(props) {
         super(props);
         this.state = {
             isExpanded: false,
             searchExpanded: false,
-            value: props.inputProps?.value ? props.inputProps.value : '',
-            filteredResult: props.inputProps?.value ? this.filterList(props.searchList, props.inputProps.value) : props.searchList
+            value: props.inputProps?.value ? props.inputProps.value : ''
         };
-    }
-
-    componentDidUpdate(prevProps) {
-        if (this.props.searchList && this.props.searchList !== prevProps.searchList) {
-            {
-                let filteredResult = this.filterList(this.props.searchList, this.state.value);
-                this.setState({
-                    isExpanded: true,
-                    filteredResult: filteredResult
-                })
-            }
-        }
     }
 
     filterList = (list, query) => {
@@ -43,12 +30,11 @@ class SearchInput extends Component {
     };
 
     handleListItemClick = (event, item) => {
-        this.setState((prevState) => ({
+        this.setState({
             value: item.text,
             isExpanded: false,
-            searchExpanded: false,
-            filteredResult: this.filterList(this.props.searchList, item.text)
-        }), () => {
+            searchExpanded: false
+        }, () => {
             item?.callback();
             this.props.onSelect(event, item);
         });
@@ -61,8 +47,7 @@ class SearchInput extends Component {
         }
         this.setState({
             value: event.target.value,
-            isExpanded: true,
-            filteredResult: filteredResult
+            isExpanded: true
         }, () => {
             this.props.onChange(event, filteredResult);
         });
@@ -101,9 +86,7 @@ class SearchInput extends Component {
             this.setState({
                 isExpanded: false,
                 searchExpanded: false,
-                value: '',
-                searchList: this.props.searchList,
-                filteredResult: this.props.searchList
+                value: ''
             });
         }
     };
@@ -146,12 +129,12 @@ class SearchInput extends Component {
                 [`is-${validationState?.state}`]: validationState?.state
             }
         ) : inputGroupClasses;
-
+        let filteredResult = this.state.value && this.props.searchList ? this.filterList(this.props.searchList, this.state.value) : this.props.searchList;
         const popoverBody = (
             <Menu disableStyles={disableStyles}>
                 <Menu.List {...listProps}>
-                    {this.state.filteredResult && this.state.filteredResult.length > 0 ? (
-                        this.state.filteredResult.map((item, index) => {
+                    {filteredResult && filteredResult.length > 0 ? (
+                        filteredResult.map((item, index) => {
                             return (
                                 <Menu.Item
                                     key={index}
@@ -164,8 +147,8 @@ class SearchInput extends Component {
                             );
                         })
                     ) : (
-                            <Menu.Item>No result</Menu.Item>
-                        )}
+                        <Menu.Item>No result</Menu.Item>
+                    )}
                 </Menu.List>
             </Menu>
         );
