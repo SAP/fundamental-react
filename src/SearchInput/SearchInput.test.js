@@ -148,7 +148,7 @@ describe('<SearchInput />', () => {
 
         // enter text into search input
         wrapper
-            .find('.fd-menu__item')
+            .find('.fd-menu__link')
             .at(0)
             .simulate('click', searchData[0]);
 
