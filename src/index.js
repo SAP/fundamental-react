@@ -5,7 +5,7 @@ export { default as Counter } from './Counter/Counter';
 export { default as Breadcrumb } from './Breadcrumb/Breadcrumb';
 export { default as BusyIndicator } from './BusyIndicator/BusyIndicator';
 export { default as Button } from './Button/Button';
-export { default as ButtonGroup } from './Button/ButtonGroup';
+export { default as ButtonSegmented } from './Button/ButtonSegmented';
 export { default as Calendar } from './Calendar/Calendar';
 export { default as ComboboxInput } from './ComboboxInput/ComboboxInput';
 export { default as DatePicker } from './DatePicker/DatePicker';
