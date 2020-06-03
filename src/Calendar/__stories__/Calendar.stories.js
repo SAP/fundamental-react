@@ -5,13 +5,16 @@ import React from 'react';
 import {
     boolean,
     date,
+    number,
     optionsKnob,
-    text
+    text,
+    withKnobs
 } from '@storybook/addon-knobs';
 
 export default {
     title: 'Component API/Calendar',
-    component: Calendar
+    component: Calendar,
+    decorators: [withKnobs]
 };
 
 function dateKnobToDate(name, defaultValue) {
@@ -84,6 +87,11 @@ export const dev = () => (
         disableWeekends={boolean('disable weekends', false)}
         locale={text('locale', 'en')} />
 );
+
+export const weekDayStart = () => {
+    const _weekDayStart = number('weekDayStart', 1);
+    return <Calendar weekDayStart={_weekDayStart} />;
+};
 
 dev.story = {
     parameters: {

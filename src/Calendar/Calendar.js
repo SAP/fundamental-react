@@ -501,20 +501,40 @@ class Calendar extends Component {
         );
     }
 
+    shiftDays = (startOnDay = 1, weekdays) => {
+        const _weekdays = [...weekdays];
+        let counter = startOnDay;
+        while (counter > 1) {
+            const day = _weekdays.shift();
+            _weekdays.push(day);
+            counter = counter - 1;
+        }
+        return _weekdays;
+    }
+
     generateWeekdays = () => {
         const weekDays = [];
         const daysName = moment.localeData(this.props.locale).weekdaysMin().map(day => day.charAt(0));
+        const shiftedDaysName = this.shiftDays(this.normalizedWeekDayStart(), daysName);
 
         for (let index = 0; index < 7; index++) {
             weekDays.push(
                 <th className='fd-calendar__item fd-calendar__item--side-helper' key={index}>
                     <span className='fd-calendar__text'>
-                        {daysName[index]}
+                        {shiftedDaysName[index]}
                     </span>
                 </th>);
         }
         return <tr className='fd-calendar__row'>{weekDays}</tr>;
 
+    }
+
+    normalizedWeekDayStart = () => {
+        const weekdayStart = this.props.weekdayStart;
+        if (weekdayStart > 0 && weekdayStart <= 7) {
+            return weekdayStart;
+        }
+        return 1;
     }
 
     generateDays = (tableBodyProps) => {
@@ -527,11 +547,13 @@ class Calendar extends Component {
         const enableRangeSelection = this.props.enableRangeSelection;
 
         const firstDayMonth = moment(currentDateDisplayed).startOf('month');
-        const firstDayWeekMonth = moment(firstDayMonth).startOf('week');
+        const firstDayWeekMonth = moment(firstDayMonth).startOf('week').weekday(this.normalizedWeekDayStart() - 1);
+        const isAfterFirstDayMonth = moment(firstDayWeekMonth).isAfter(firstDayMonth);
+
         const rows = [];
 
         let days = [];
-        let day = firstDayWeekMonth;
+        let day = isAfterFirstDayMonth ? firstDayWeekMonth.subtract(7, 'days') : firstDayWeekMonth;
         let dateFormatted = '';
 
         for (let week = 0; week < 6; week++) {
@@ -725,6 +747,8 @@ Calendar.propTypes = {
     tableHeaderProps: PropTypes.object,
     /** Additional props to be spread to the `<table>` element */
     tableProps: PropTypes.object,
+    /** Number to indicate which day the week should start. 1 = Sunday, 2 = Monday, 3 = Tuesday, 4 = Wednesday, 5 = Thursday, 6 = Friday, 7 = Saturday */
+    weekdayStart: PropTypes.number,
     /** Additional props to be spread to the year\'s `<table>` element */
     yearListProps: PropTypes.object,
     /** Callback function when the change event fires on the component */
