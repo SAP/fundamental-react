@@ -258,8 +258,8 @@ class TimeItem extends Component {
                 <Button
                     {...upButtonProps}
                     aria-label={localizedText.buttonUp}
-                    disabled={disabled}
                     disableStyles={disableStyles}
+                    disabled={disabled}
                     glyph='navigation-up-arrow'
                     onClick={this._onUp}
                     option='transparent' />
@@ -277,8 +277,8 @@ class TimeItem extends Component {
                 <Button
                     {...downButtonProps}
                     aria-label={localizedText.buttonDown}
-                    disabled={disabled}
                     disableStyles={disableStyles}
+                    disabled={disabled}
                     glyph='navigation-down-arrow'
                     onClick={this._onDown}
                     option='transparent' />
