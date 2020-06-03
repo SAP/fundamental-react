@@ -16,11 +16,11 @@ const TileFooter = props => {
         </div>);
 };
 
-TileFooter.displayName = 'Tile.Header';
+TileFooter.displayName = 'Tile.Footer';
 
 TileFooter.propTypes = {
     /** Node(s) to render inside the header element */
-    children: PropTypes.node.required,
+    children: PropTypes.node,
     /** CSS class(es) to add to the element */
     className: PropTypes.string
 };

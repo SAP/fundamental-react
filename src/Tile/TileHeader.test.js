@@ -21,28 +21,14 @@ describe('<Tile.Header />', () => {
         const element = mount(<Tile.Header titleProps={{ className: 'test' }}>Sample Title</Tile.Header>);
 
         expect(
-            element.find('fd-tile__title').getDOMNode().className
+            element.find('.fd-tile__title').getDOMNode().className
         ).toContain('test');
-    });
-    test('should not render a subtitle by default', () => {
-        const element = mount(<Tile.Header>Sample Title</Tile.Header>);
-
-        expect(
-            element.find('fd-tile__subtitle')
-        ).not.toBeDefined();
-    });
-    test('should not render a subtitle when passed subtitle prop', () => {
-        const element = mount(<Tile.Header subtitle='Test subtitle'>Sample Title</Tile.Header>);
-
-        expect(
-            element.find('fd-tile__subtitle')
-        ).toBeDefined();
     });
     test('should add additional classes to the subtitle component', () => {
         const element = mount(<Tile.Header subtitle='Test subtitle' subtitleProps={{ className: 'test' }}>Sample Title</Tile.Header>);
 
         expect(
-            element.find('fd-tile__subtitle').getDOMNode().className
+            element.find('.fd-tile__subtitle').getDOMNode().className
         ).toContain('test');
     });
     describe('Prop spreading', () => {
@@ -57,14 +43,7 @@ describe('<Tile.Header />', () => {
             const element = mount(<Tile.Header titleProps={{ 'data-sample': 'Sample' }}>Sample Title</Tile.Header>);
 
             expect(
-                element.find('fd-tile__title').getDOMNode().attributes['data-sample'].value
-            ).toBe('Sample');
-        });
-        test('should allow props to be spread to the subtitle component', () => {
-            const element = mount(<Tile.Header subtitleProps={{ 'data-sample': 'Sample' }}>Sample Title</Tile.Header>);
-
-            expect(
-                element.find('fd-tile__subtitle').getDOMNode().attributes['data-sample'].value
+                element.find('.fd-tile__title').getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
         });
     });
