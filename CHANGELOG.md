@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.11.0-rc.1](https://github.com/SAP/fundamental-react/compare/v0.11.0-rc.0...v0.11.0-rc.1) (2020-06-03)
+
+
+### Bug Fixes
+
+* [DatePicker] Construct new moment objects with custom dateFormat ([#1074](https://github.com/SAP/fundamental-react/issues/1074)) ([6d919c2](https://github.com/SAP/fundamental-react/commit/6d919c206bffad5beea550efa356c296b7fcf9a2))
+
 ## [0.11.0-rc.0](https://github.com/SAP/fundamental-react/compare/v0.10.2-rc.2...v0.11.0-rc.0) (2020-06-03)
 
 
