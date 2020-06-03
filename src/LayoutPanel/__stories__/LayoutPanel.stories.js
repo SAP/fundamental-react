@@ -82,11 +82,12 @@ export const singleLayoutPanel = () => (
             <div>LayoutPanel Body</div>
             <br />
             <Tile>
-                <Tile.Media>
+                <Tile.Header>
+                    Tile Title
                     <Avatar backgroundImageUrl='./assets/nature.jpg'
                         circle size='l' />
-                </Tile.Media>
-                <Tile.Content title='Tile Title'>
+                </Tile.Header>
+                <Tile.Content>
                     <p>Tile Description</p>
                 </Tile.Content>
             </Tile>
