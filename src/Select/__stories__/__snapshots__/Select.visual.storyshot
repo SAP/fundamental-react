@@ -30,9 +30,8 @@ exports[`Storyshots Visual Select 1`] = `
               className="fd-select__control"
             >
               Select
-              <button
+              <span
                 className="fd-button fd-button--transparent sap-icon--slim-arrow-down fd-select__button"
-                type="button"
               />
             </div>
           </div>
@@ -66,9 +65,8 @@ exports[`Storyshots Visual Select 1`] = `
               className="fd-select__control"
             >
               Select
-              <button
+              <span
                 className="fd-button fd-button--transparent sap-icon--slim-arrow-down fd-select__button"
-                type="button"
               />
             </div>
           </div>
@@ -102,10 +100,8 @@ exports[`Storyshots Visual Select 1`] = `
               className="fd-select__control is-disabled"
             >
               Select
-              <button
-                className="fd-button fd-button--transparent sap-icon--slim-arrow-down is-disabled fd-select__button"
-                disabled={true}
-                type="button"
+              <span
+                className="fd-button fd-button--transparent sap-icon--slim-arrow-down fd-select__button"
               />
             </div>
           </div>
@@ -142,9 +138,8 @@ exports[`Storyshots Visual Select 1`] = `
                 className="fd-select__control is-error"
               >
                 Error
-                <button
+                <span
                   className="fd-button fd-button--transparent sap-icon--slim-arrow-down fd-select__button"
-                  type="button"
                 />
               </div>
               <div
@@ -183,9 +178,8 @@ exports[`Storyshots Visual Select 1`] = `
                 className="fd-select__control is-warning"
               >
                 Warning
-                <button
+                <span
                   className="fd-button fd-button--transparent sap-icon--slim-arrow-down fd-select__button"
-                  type="button"
                 />
               </div>
               <div
@@ -224,9 +218,8 @@ exports[`Storyshots Visual Select 1`] = `
                 className="fd-select__control is-success"
               >
                 Success
-                <button
+                <span
                   className="fd-button fd-button--transparent sap-icon--slim-arrow-down fd-select__button"
-                  type="button"
                 />
               </div>
               <div
@@ -265,9 +258,8 @@ exports[`Storyshots Visual Select 1`] = `
                 className="fd-select__control is-information"
               >
                 Information
-                <button
+                <span
                   className="fd-button fd-button--transparent sap-icon--slim-arrow-down fd-select__button"
-                  type="button"
                 />
               </div>
               <div
@@ -309,10 +301,8 @@ exports[`Storyshots Visual Select 1`] = `
               className="fd-select__control"
             >
               select
-              <button
+              <span
                 className="fd-button fd-button--transparent sap-icon--slim-arrow-down fd-select__button"
-                disabled={false}
-                type="button"
               />
             </div>
           </div>

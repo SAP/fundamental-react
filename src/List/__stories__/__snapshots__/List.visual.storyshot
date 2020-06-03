@@ -20,7 +20,7 @@ exports[`Storyshots Visual List 1`] = `
         </span>
       </li>
       <li
-        className="fd-list__item"
+        className="fd-list__item is-selected"
         onClick={[Function]}
         tabIndex="0"
       >
@@ -618,13 +618,13 @@ exports[`Storyshots Visual List 1`] = `
             <input
               aria-checked="false"
               className="fd-checkbox"
-              id="fd-84"
+              id="fd-86"
               onChange={[Function]}
               type="checkbox"
             />
             <label
               className="fd-form-label fd-checkbox__label"
-              htmlFor="fd-84"
+              htmlFor="fd-86"
             />
           </div>
         </div>
@@ -648,13 +648,13 @@ exports[`Storyshots Visual List 1`] = `
             <input
               aria-checked="false"
               className="fd-checkbox"
-              id="fd-85"
+              id="fd-87"
               onChange={[Function]}
               type="checkbox"
             />
             <label
               className="fd-form-label fd-checkbox__label"
-              htmlFor="fd-85"
+              htmlFor="fd-87"
             />
           </div>
         </div>
@@ -678,13 +678,13 @@ exports[`Storyshots Visual List 1`] = `
             <input
               aria-checked="false"
               className="fd-checkbox"
-              id="fd-86"
+              id="fd-88"
               onChange={[Function]}
               type="checkbox"
             />
             <label
               className="fd-form-label fd-checkbox__label"
-              htmlFor="fd-86"
+              htmlFor="fd-88"
             />
           </div>
         </div>
@@ -708,13 +708,13 @@ exports[`Storyshots Visual List 1`] = `
             <input
               aria-checked="false"
               className="fd-checkbox"
-              id="fd-87"
+              id="fd-89"
               onChange={[Function]}
               type="checkbox"
             />
             <label
               className="fd-form-label fd-checkbox__label"
-              htmlFor="fd-87"
+              htmlFor="fd-89"
             />
           </div>
         </div>
