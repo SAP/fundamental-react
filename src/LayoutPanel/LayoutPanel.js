@@ -17,7 +17,7 @@ const LayoutPanel = React.forwardRef(({ colSpan, children, className, disableSty
     useEffect(() => {
         if (!disableStyles) {
             require('fundamental-styles/dist/layout-grid.css');
-            require('fundamental-styles/dist/panel.css');
+            require('fundamental-styles/dist/layout-panel.css');
         }
     }, []);
 

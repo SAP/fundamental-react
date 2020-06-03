@@ -1,55 +1,55 @@
 /* eslint-disable react/no-multi-comp */
 import Avatar from '../../Avatar/Avatar';
 import Button from '../../Button/Button';
+import LayoutPanel from '../LayoutPanel';
+import LayoutPanelActions from '../_LayoutPanelActions';
+import LayoutPanelBody from '../_LayoutPanelBody';
+import LayoutPanelFilters from '../_LayoutPanelFilters';
+import LayoutPanelFooter from '../_LayoutPanelFooter';
+import LayoutPanelHead from '../_LayoutPanelHead';
+import LayoutPanelHeader from '../_LayoutPanelHeader';
 import Menu from '../../Menu/Menu';
-import Panel from '../Panel';
-import PanelActions from '../_PanelActions';
-import PanelBody from '../_PanelBody';
-import PanelFilters from '../_PanelFilters';
-import PanelFooter from '../_PanelFooter';
-import PanelHead from '../_PanelHead';
-import PanelHeader from '../_PanelHeader';
 import Popover from '../../Popover/Popover';
 import React from 'react';
 import Tile from '../../Tile/Tile';
 
 export default {
-    title: 'Component API/Panel',
-    component: Panel,
-    subcomponents: { PanelActions, PanelBody, PanelFilters, PanelFooter, PanelHead, PanelHeader }
+    title: 'Component API/LayoutPanel',
+    component: LayoutPanel,
+    subcomponents: { LayoutPanelActions, LayoutPanelBody, LayoutPanelFilters, LayoutPanelFooter, LayoutPanelHead, LayoutPanelHeader }
 };
 
 
 export const primary = () => (
-    <Panel>
-        <Panel.Header>
-            <Panel.Head description='Panel Description' title={'Panel Header with Actions'} />
-            <Panel.Actions>
-                <div>Panel actions</div>
-            </Panel.Actions>
-        </Panel.Header>
-        <Panel.Filters>
-            <div>Panel Filters</div>
-        </Panel.Filters>
-        <Panel.Body>
-            <div>Panel Body</div>
-        </Panel.Body>
-        <Panel.Footer>Panel Footer</Panel.Footer>
-    </Panel>
+    <LayoutPanel>
+        <LayoutPanel.Header>
+            <LayoutPanel.Head description='LayoutPanel Description' title={'LayoutPanel Header with Actions'} />
+            <LayoutPanel.Actions>
+                <div>LayoutPanel actions</div>
+            </LayoutPanel.Actions>
+        </LayoutPanel.Header>
+        <LayoutPanel.Filters>
+            <div>LayoutPanel Filters</div>
+        </LayoutPanel.Filters>
+        <LayoutPanel.Body>
+            <div>LayoutPanel Body</div>
+        </LayoutPanel.Body>
+        <LayoutPanel.Footer>LayoutPanel Footer</LayoutPanel.Footer>
+    </LayoutPanel>
 );
 
-export const singlePanel = () => (
-    <Panel>
-        <Panel.Header>
-            <Panel.Head description='Panel Description' title={'Panel Header with Actions'} />
-            <Panel.Actions>
+export const singleLayoutPanel = () => (
+    <LayoutPanel>
+        <LayoutPanel.Header>
+            <LayoutPanel.Head description='LayoutPanel Description' title={'LayoutPanel Header with Actions'} />
+            <LayoutPanel.Actions>
                 <Button compact glyph='add'>
                     Add New Button
                 </Button>
-            </Panel.Actions>
-        </Panel.Header>
-        <Panel.Filters>
-            <div>Panel Filters</div>
+            </LayoutPanel.Actions>
+        </LayoutPanel.Header>
+        <LayoutPanel.Filters>
+            <div>LayoutPanel Filters</div>
             <br />
             <Popover
                 body={
@@ -77,9 +77,9 @@ export const singlePanel = () => (
                 }
                 control={<Button>Size</Button>}
                 noArrow />
-        </Panel.Filters>
-        <Panel.Body>
-            <div>Panel Body</div>
+        </LayoutPanel.Filters>
+        <LayoutPanel.Body>
+            <div>LayoutPanel Body</div>
             <br />
             <Tile>
                 <Tile.Media>
@@ -90,7 +90,7 @@ export const singlePanel = () => (
                     <p>Tile Description</p>
                 </Tile.Content>
             </Tile>
-        </Panel.Body>
-        <Panel.Footer>Panel Footer</Panel.Footer>
-    </Panel>
+        </LayoutPanel.Body>
+        <LayoutPanel.Footer>LayoutPanel Footer</LayoutPanel.Footer>
+    </LayoutPanel>
 );
