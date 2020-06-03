@@ -17,6 +17,8 @@ if (global.document) {
 }
 
 // Defines window.scrollTo() as it's not defined by jsdom
-window.scrollTo = () => {};
+if (global.window) {
+    window.scrollTo = () => {};
+}
 
 registerRequireContextHook();
