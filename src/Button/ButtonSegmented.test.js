@@ -1,11 +1,11 @@
-import ButtonGroup from './ButtonGroup';
+import ButtonSegmented from './ButtonSegmented';
 import { mount } from 'enzyme';
 import React from 'react';
 
-describe('<ButtonGroup />', () => {
+describe('<ButtonSegmented />', () => {
     describe('Prop spreading', () => {
-        test('should allow props to be spread to the ButtonGroup component', () => {
-            const element = mount(<ButtonGroup data-sample='Sample' />);
+        test('should allow props to be spread to the ButtonSegmented component', () => {
+            const element = mount(<ButtonSegmented data-sample='Sample' />);
 
             expect(
                 element.getDOMNode().attributes['data-sample'].value
@@ -19,7 +19,7 @@ describe('<ButtonGroup />', () => {
                 super(props);
                 ref = React.createRef();
             }
-            render = () => <ButtonGroup ref={ref} />;
+            render = () => <ButtonSegmented ref={ref} />;
         }
         mount(<Test />);
         expect(ref.current.tagName).toEqual('DIV');

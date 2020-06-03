@@ -8,7 +8,7 @@ const MenuItem = ({
     url,
     isLink,
     children,
-    onclick,
+    onClick,
     className,
     addonProps,
     urlProps,
@@ -47,7 +47,7 @@ const MenuItem = ({
             return (<a {...urlProps}
                 className={linkClassNames}
                 href={url}
-                onClick={onclick}
+                onClick={onClick}
                 role='menuitem'>
                 {addonBefore && <span {...addonProps} className={addonBeforeClassnames} />}
                 <span className='fd-menu__title'>{children}</span>
@@ -76,7 +76,7 @@ const MenuItem = ({
         } else if (children) {
             return (<a {...urlProps}
                 className={linkClassNames}
-                onClick={onclick}
+                onClick={onClick}
                 role='menuitem'>
                 {addonBefore && <span {...addonProps} className={addonBeforeClassnames} />}
                 <span className='fd-menu__title'>{children}</span>
@@ -122,8 +122,6 @@ MenuItem.propTypes = {
     disabled: PropTypes.bool,
     /** Set to **true** to style as a link */
     isLink: PropTypes.bool,
-    /** Callback function when user clicks on the component*/
-    onclick: PropTypes.func,
     /** Set to **true** to apply selected style */
     selected: PropTypes.bool,
     /** Set to **true** to place a separator after list item */
@@ -132,7 +130,9 @@ MenuItem.propTypes = {
      * Should use either `link` or `url`, but not both. */
     url: PropTypes.string,
     /** Additional props to be spread to the Menu Item links (when using `url`). */
-    urlProps: PropTypes.object
+    urlProps: PropTypes.object,
+    /** Callback function when user clicks on the component*/
+    onClick: PropTypes.func
 };
 
 export default MenuItem;

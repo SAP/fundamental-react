@@ -22,7 +22,9 @@ class DatePicker extends Component {
     constructor(props) {
         super(props);
         const formattedDate = props.defaultValue.length > 0 ? this.getFormattedDateStr(props.defaultValue) : '';
-        const isoFormattedDate = props.defaultValue.length > 0 ? moment(props.defaultValue).format(ISO_DATE_FORMAT) : '';
+        const isoFormattedDate = props.defaultValue.length > 0
+            ? moment(props.defaultValue, props.dateFormat).format(ISO_DATE_FORMAT)
+            : '';
         this.state = {
             isExpanded: false,
             selectedDate: formattedDate.length === 0 ? null : this.getMomentDateObj(formattedDate),
@@ -123,11 +125,13 @@ class DatePicker extends Component {
     }
 
     handleNewDefault = () => {
-        const { defaultValue } = this.props;
+        const { dateFormat, defaultValue } = this.props;
         const formattedNewDefault = defaultValue && defaultValue.length > 0 ? this.getFormattedDateStr(defaultValue) : '';
         this.setState({
             selectedDate: formattedNewDefault.length === 0 ? null : this.getMomentDateObj(formattedNewDefault),
-            isoFormattedDate: defaultValue && defaultValue.length > 0 ? moment(defaultValue).format(ISO_DATE_FORMAT) : '',
+            isoFormattedDate: defaultValue && defaultValue.length > 0
+                ? moment(defaultValue, dateFormat).format(ISO_DATE_FORMAT)
+                : '',
             formattedDate: formattedNewDefault
         }, () => {
             this.validateDates();
@@ -138,7 +142,9 @@ class DatePicker extends Component {
         e.stopPropagation();
         this.setState({
             formattedDate: e.target.value,
-            isoFormattedDate: e.target.value ? moment(e.target.value).format(ISO_DATE_FORMAT) : ''
+            isoFormattedDate: e.target.value
+                ? moment(e.target.value, this.props.dateFormat).format(ISO_DATE_FORMAT)
+                : ''
         }, () => {
             this.props.onChange(this.getCallbackData());
         });
@@ -202,7 +208,9 @@ class DatePicker extends Component {
                 this.setState({
                     selectedDate: newDate,
                     formattedDate: newFormattedDateStr,
-                    isoFormattedDate: formattedDate ? moment(formattedDate).format(ISO_DATE_FORMAT) : ''
+                    isoFormattedDate: formattedDate
+                        ? moment(formattedDate, this.props.dateFormat).format(ISO_DATE_FORMAT)
+                        : ''
                 }, () => {
                     if (formattedDate !== newFormattedDateStr) {
                         this.executeCallback(this.props.onChange);
