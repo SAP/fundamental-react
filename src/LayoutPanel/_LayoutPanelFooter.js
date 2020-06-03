@@ -2,24 +2,24 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-const PanelActions = props => {
+const LayoutPanelFooter = props => {
     const { children, className, ...rest } = props;
 
-    const panelActionsClasses = classnames(
-        'fd-panel__actions',
+    const panelFooterClasses = classnames(
+        'fd-layout-panel__footer',
         className
     );
 
-    return <div {...rest} className={panelActionsClasses}>{children}</div>;
+    return <div {...rest} className={panelFooterClasses}>{children}</div>;
 };
 
-PanelActions.displayName = 'Panel.Actions';
+LayoutPanelFooter.displayName = 'LayoutPanel.Footer';
 
-PanelActions.propTypes = {
+LayoutPanelFooter.propTypes = {
     /** Node(s) to render within the component */
     children: PropTypes.node,
     /** CSS class(es) to add to the element */
     className: PropTypes.string
 };
 
-export default PanelActions;
+export default LayoutPanelFooter;

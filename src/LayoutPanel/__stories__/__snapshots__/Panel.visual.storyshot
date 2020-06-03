@@ -6,27 +6,27 @@ exports[`Storyshots Visual Panel 1`] = `
 >
   <div>
     <div
-      className="fd-panel"
+      className="fd-layout-panel"
     >
       <div
-        className="fd-panel__header"
+        className="fd-layout-panel__header"
       >
         <div
-          className="fd-panel__head"
+          className="fd-layout-panel__head"
         >
           <h3
-            className="fd-panel__title"
+            className="fd-layout-panel__title"
           >
             Panel Header with Actions
           </h3>
           <p
-            className="fd-panel__description"
+            className="fd-layout-panel__description"
           >
             Panel Description
           </p>
         </div>
         <div
-          className="fd-panel__actions"
+          className="fd-layout-panel__actions"
         >
           <div>
             Panel actions
@@ -34,21 +34,21 @@ exports[`Storyshots Visual Panel 1`] = `
         </div>
       </div>
       <div
-        className="fd-panel__filters"
+        className="fd-layout-panel__filters"
       >
         <div>
           Panel Filters
         </div>
       </div>
       <div
-        className="fd-panel__body"
+        className="fd-layout-panel__body"
       >
         <div>
           Panel Body
         </div>
       </div>
       <div
-        className="fd-panel__footer"
+        className="fd-layout-panel__footer"
       >
         Panel Footer
       </div>
@@ -56,27 +56,27 @@ exports[`Storyshots Visual Panel 1`] = `
   </div>
   <div>
     <div
-      className="fd-panel"
+      className="fd-layout-panel"
     >
       <div
-        className="fd-panel__header"
+        className="fd-layout-panel__header"
       >
         <div
-          className="fd-panel__head"
+          className="fd-layout-panel__head"
         >
           <h3
-            className="fd-panel__title"
+            className="fd-layout-panel__title"
           >
             Panel Header with Actions
           </h3>
           <p
-            className="fd-panel__description"
+            className="fd-layout-panel__description"
           >
             Panel Description
           </p>
         </div>
         <div
-          className="fd-panel__actions"
+          className="fd-layout-panel__actions"
         >
           <button
             className="fd-button fd-button--compact sap-icon--add"
@@ -87,7 +87,7 @@ exports[`Storyshots Visual Panel 1`] = `
         </div>
       </div>
       <div
-        className="fd-panel__filters"
+        className="fd-layout-panel__filters"
       >
         <div>
           Panel Filters
@@ -149,7 +149,7 @@ exports[`Storyshots Visual Panel 1`] = `
         </div>
       </div>
       <div
-        className="fd-panel__body"
+        className="fd-layout-panel__body"
       >
         <div>
           Panel Body
@@ -188,7 +188,7 @@ exports[`Storyshots Visual Panel 1`] = `
         </div>
       </div>
       <div
-        className="fd-panel__footer"
+        className="fd-layout-panel__footer"
       >
         Panel Footer
       </div>
