@@ -109,7 +109,7 @@
     "fs-extra": "9.0.0",
     "gh-pages": "^2.0.1",
     "github-assistant": "^0.3.1-rc.0",
-    "jest": "^26.0.0",
+    "jest": "^25.0.0",
     "jest-puppeteer": "^4.4.0",
     "node-sass": "^4.14.1",
     "pre-commit": "^1.2.2",

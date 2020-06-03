@@ -375,12 +375,12 @@ class DatePicker extends Component {
                                 }
                                 disableAfterDate={disableAfterDate}
                                 disableBeforeDate={disableBeforeDate}
-                                disabledDates={disabledDates}
                                 disableFutureDates={disableFutureDates}
                                 disablePastDates={disablePastDates}
                                 disableStyles={disableStyles}
                                 disableWeekday={disableWeekday}
                                 disableWeekends={disableWeekends}
+                                disabledDates={disabledDates}
                                 enableRangeSelection={enableRangeSelection}
                                 focusOnInit
                                 locale={locale}
@@ -396,8 +396,8 @@ class DatePicker extends Component {
                             aria-haspopup='true'
                             className={inputGroupClass}
                             compact={compact}
-                            disabled={disabled}
                             disableStyles={disableStyles}
+                            disabled={disabled}
                             validationState={!this.state.isExpanded ? validationState : null} >
                             <FormInput
                                 {...inputProps}
@@ -412,18 +412,18 @@ class DatePicker extends Component {
                             <InputGroup.Addon isButton>
                                 <Button {...buttonProps}
                                     aria-label={buttonLabel}
-                                    disabled={disableButton}
                                     disableStyles={disableStyles}
+                                    disabled={disableButton}
                                     glyph='calendar'
                                     onClick={this.handleClickButton}
                                     option='transparent' />
                             </InputGroup.Addon>
                         </InputGroup>
                     }
-                    disabled={disableButton}
                     disableKeyPressHandler
                     disableStyles={disableStyles}
                     disableTriggerOnClick
+                    disabled={disableButton}
                     noArrow
                     onClickOutside={this.handleOutsideClickAndEscape}
                     onEscapeKey={this.handleOutsideClickAndEscape}
