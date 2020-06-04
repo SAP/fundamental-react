@@ -766,7 +766,8 @@ Calendar.defaultProps = {
         show12PreviousYears: 'Show 12 previous years'
     },
     onChange: () => { },
-    specialDays: {}
+    specialDays: {},
+    weekdayStart: 1
 };
 
 export default Calendar;
