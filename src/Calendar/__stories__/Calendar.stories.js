@@ -73,6 +73,11 @@ export const rangeSelection = () => (
     <Calendar enableRangeSelection />
 );
 
+export const weekdayStart = () => {
+    const _weekdayStart = number('weekdayStart', 2);
+    return <Calendar weekdayStart={_weekdayStart} />;
+};
+
 export const dev = () => (
     <Calendar
         blockedDates={[dateKnobToDate('block between dates (1)', blockedDateFirstDefault),
@@ -85,13 +90,9 @@ export const dev = () => (
         disableWeekends={boolean('disable weekends', false)}
         disabledDates={[dateKnobToDate('disable between dates (1)', disabledDateFirstDefault),
             dateKnobToDate('disable between dates (2)', disabledDateSecondDefault)]}
-        locale={text('locale', 'en')} />
+        locale={text('locale', 'en')}
+        weekdayStart={number('weekdayStart', 1)} />
 );
-
-export const weekDayStart = () => {
-    const _weekDayStart = number('weekDayStart', 1);
-    return <Calendar weekDayStart={_weekDayStart} />;
-};
 
 dev.story = {
     parameters: {
