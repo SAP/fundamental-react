@@ -234,8 +234,8 @@ class TimePickerItem extends Component {
                         aria-expanded='false'
                         aria-haspopup='true'
                         compact
-                        disabled={disabled}
                         disableStyles={disableStyles}
+                        disabled={disabled}
                         glyph='time-entry-request'
                         id={this.state.buttonID}
                         option='transparent' />

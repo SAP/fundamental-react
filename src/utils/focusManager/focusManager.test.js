@@ -44,6 +44,7 @@ describe('focus manager', () => {
 
         span.appendChild(a4);
         controlNode.appendChild(trapNode);
+        document.body.append(controlNode);
     });
 
     describe('Default Behavior', () => {

@@ -54,7 +54,7 @@ describe('GridManager', () => {
         t1.type = 'text';
         t1.id = 'textinput-3-3';
         tbl.querySelector('#cell-3-3').appendChild(t1);
-
+        document.body.append(tbl);
         return tbl;
     };
 

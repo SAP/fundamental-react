@@ -5,7 +5,7 @@ import React, { useEffect } from 'react';
  * Only one of the options can be active at a time, the others remain or become inactive.
  * The option can be activated by clicking on it.
  * This type of button is comparable to a radio button group. */
-const ButtonGroup = React.forwardRef(({ children, disableStyles, ...props }, ref) => {
+const ButtonSegmented = React.forwardRef(({ children, disableStyles, ...props }, ref) => {
 
     useEffect(() => {
         if (!disableStyles) {
@@ -25,13 +25,13 @@ const ButtonGroup = React.forwardRef(({ children, disableStyles, ...props }, ref
     );
 });
 
-ButtonGroup.displayName = 'ButtonGroup';
+ButtonSegmented.displayName = 'ButtonSegmented';
 
-ButtonGroup.propTypes = {
+ButtonSegmented.propTypes = {
     /** Node(s) to render within the component */
     children: PropTypes.node,
     /** Internal use only */
     disableStyles: PropTypes.bool
 };
 
-export default ButtonGroup;
+export default ButtonSegmented;
