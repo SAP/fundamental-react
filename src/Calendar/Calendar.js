@@ -515,7 +515,7 @@ class Calendar extends Component {
     generateWeekdays = () => {
         const weekDays = [];
         const daysName = moment.localeData(this.props.locale).weekdaysMin().map(day => day.charAt(0));
-        const shiftedDaysName = this.shiftDays(this.normalizedWeekDayStart(), daysName);
+        const shiftedDaysName = this.shiftDays(this.normalizedWeekdayStart(), daysName);
 
         for (let index = 0; index < 7; index++) {
             weekDays.push(
@@ -529,9 +529,9 @@ class Calendar extends Component {
 
     }
 
-    normalizedWeekDayStart = () => {
-        const weekdayStart = this.props.weekdayStart;
-        if (weekdayStart > 0 && weekdayStart <= 7) {
+    normalizedWeekdayStart = () => {
+        const weekdayStart = parseInt(this.props.weekdayStart, 10);
+        if (!isNaN(weekdayStart) && weekdayStart > 0 && weekdayStart <= 7) {
             return weekdayStart;
         }
         return 1;
@@ -547,7 +547,7 @@ class Calendar extends Component {
         const enableRangeSelection = this.props.enableRangeSelection;
 
         const firstDayMonth = moment(currentDateDisplayed).startOf('month');
-        const firstDayWeekMonth = moment(firstDayMonth).startOf('week').weekday(this.normalizedWeekDayStart() - 1);
+        const firstDayWeekMonth = moment(firstDayMonth).startOf('week').weekday(this.normalizedWeekdayStart() - 1);
         const isAfterFirstDayMonth = moment(firstDayWeekMonth).isAfter(firstDayMonth);
 
         const rows = [];
@@ -663,6 +663,7 @@ class Calendar extends Component {
             tableHeaderProps,
             tableBodyProps,
             specialDays,
+            weekdayStart,
             ...props
         } = this.props;
 
@@ -695,7 +696,7 @@ Calendar.displayName = 'Calendar';
 
 Calendar.propTypes = {
     /** Blocks dates that are in between the blocked dates */
-    blockedDates: PropTypes.arrayOf(PropTypes.instanceOf(Date)),
+    blockedDates: PropTypes.arrayOf(PropTypes.instanceOf(moment)),
     /** CSS class(es) to add to the element */
     className: PropTypes.string,
     customDate: PropTypes.oneOfType([
@@ -703,11 +704,11 @@ Calendar.propTypes = {
         PropTypes.array
     ]),
     /** Disables dates of a calendar that come after the specified date */
-    disableAfterDate: PropTypes.instanceOf(Date),
+    disableAfterDate: PropTypes.instanceOf(moment),
     /** Disables dates of a calendar that come before the specified date */
-    disableBeforeDate: PropTypes.instanceOf(Date),
+    disableBeforeDate: PropTypes.instanceOf(moment),
     /** Disables dates that are in between the disabled dates */
-    disabledDates: PropTypes.arrayOf(PropTypes.instanceOf(Date)),
+    disabledDates: PropTypes.arrayOf(PropTypes.instanceOf(moment)),
     /** Set to **true** to disable dates after today\'s date */
     disableFutureDates: PropTypes.bool,
     /** Set to **true** to disable dates before today\'s date */
