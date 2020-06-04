@@ -234,6 +234,12 @@ specialDaysEx.story = {
     name: 'Special Days'
 };
 
+export const weekdayStartEx = () => (<DatePicker weekdayStart={number('weekdayStart', 2)} />);
+
+weekdayStartEx.story = {
+    name: 'Weekday Start (Monday Start)'
+};
+
 export const dev = () => (
     <DatePicker
         blockedDates={[dateKnobToDate('block between dates (1)', blockedDateFirstDefault),
