@@ -7,14 +7,17 @@ import React from 'react';
 import {
     boolean,
     date,
+    number,
     optionsKnob,
     select,
-    text
+    text,
+    withKnobs
 } from '@storybook/addon-knobs';
 
 export default {
     title: 'Component API/DatePicker',
-    component: DatePicker
+    component: DatePicker,
+    decorators: [withKnobs]
 };
 
 function dateKnobToDate(name, defaultValue) {
@@ -252,7 +255,8 @@ export const dev = () => (
                 'information': { state: 'information', text: 'placeholder text' },
                 'warning': { state: 'warning', text: 'placeholder text' }
             }
-        )} />
+        )}
+        weekdayStart={number('weekdayStart', 1)} />
 );
 
 dev.story = {

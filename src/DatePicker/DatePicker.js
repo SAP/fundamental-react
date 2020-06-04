@@ -337,6 +337,7 @@ class DatePicker extends Component {
             readOnly,
             specialDays,
             validationState,
+            weekdayStart,
             ...props
         } = this.props;
 
@@ -387,7 +388,8 @@ class DatePicker extends Component {
                                 localizedText={localizedText}
                                 onChange={this.updateDate}
                                 ref={this.calendarRef}
-                                specialDays={specialDays} />
+                                specialDays={specialDays}
+                                weekdayStart={weekdayStart} />
                         </>
                     }
                     control={
@@ -477,6 +479,8 @@ DatePicker.propTypes = {
         /** Text of the validation message */
         text: PropTypes.string
     }),
+    /** Number to indicate which day the week should start. 1 = Sunday, 2 = Monday, 3 = Tuesday, 4 = Wednesday, 5 = Thursday, 6 = Friday, 7 = Saturday */
+    weekdayStart: PropTypes.number,
     /** Callback function for onBlur events. In the object returned,`date` is the date object,
      * `formattedDate` is the formatted date, and `isoFormattedDate` is the date formatted in ISO-8601 format (YYYY-MM-DD) */
     onBlur: PropTypes.func,
