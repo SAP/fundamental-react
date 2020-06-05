@@ -49,7 +49,7 @@ const StepInput = React.forwardRef(({
             'fd-step-input--compact': compact,
             'is-disabled': disabled,
             'is-readonly': readOnly,
-            [`is-${validationState?.state}`]: validationState ?.state
+            [`is-${validationState?.state}`]: validationState?.state
         }
     );
 

@@ -130,7 +130,7 @@ const Select = React.forwardRef(({
                 break;
             case 'enter':
             case 'space':
-                e.stopPropagation();
+                e.preventDefault();
                 handleSelect(e, option);
                 setFocusedElement(tryFocus(divRef.current));
                 break;
