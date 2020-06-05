@@ -147,11 +147,9 @@ export const radioButtonGroups = () => (
     </>
 );
 
-radioButtonGroups.story = {
-    parameters: {
-        docs: {
-            storyDescription: 'Radio button groups should always be grouped using FormFieldset for accessibility reasons.'
-        }
+radioButtonGroups.parameters = {
+    docs: {
+        storyDescription: 'Radio button groups should always be grouped using FormFieldset for accessibility reasons.'
     }
 };
 

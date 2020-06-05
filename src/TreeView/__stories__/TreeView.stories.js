@@ -180,11 +180,9 @@ export const complex = () => (
     </TreeView>
 );
 
-complex.story = {
-    parameters: {
-        docs: {
-            storyDescription: 'This is an example of a tree view with a header, multiple levels, multiple columns and actions.'
-        }
+complex.parameters = {
+    docs: {
+        storyDescription: 'This is an example of a tree view with a header, multiple levels, multiple columns and actions.'
     }
 };
 

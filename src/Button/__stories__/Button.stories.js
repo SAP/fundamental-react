@@ -22,17 +22,16 @@ export const options = () => (
     </div>
 );
 
-options.story = {
-    name: 'Options',
-    parameters: {
-        docs: {
-            storyDescription: `There are three emphasis styles used to indicate the importance of the button on
-            the page.\n\n* **Emphasized Button**: There should only be one highlighted button on the page.
-            This is the primary call to action.\n\n* **Regular Button**: The default button style and the
-            most common button. There may be more than one on a page.\n\n* **Transparent Button**: This is the
-            lowest priority button and most often used with page content like appearing in a table or list.
-            There may be more than one on the page.`
-        }
+options.storyName = 'Options';
+
+options.parameters = {
+    docs: {
+        storyDescription: `There are three emphasis styles used to indicate the importance of the button on
+        the page.\n\n* **Emphasized Button**: There should only be one highlighted button on the page.
+        This is the primary call to action.\n\n* **Regular Button**: The default button style and the
+        most common button. There may be more than one on a page.\n\n* **Transparent Button**: This is the
+        lowest priority button and most often used with page content like appearing in a table or list.
+        There may be more than one on the page.`
     }
 };
 
@@ -45,14 +44,13 @@ export const types = () => (
     </div>
 );
 
-types.story = {
-    name: 'Types',
-    parameters: {
-        docs: {
-            storyDescription: `* **Standard Button**:
-            Neutral or informative color \n\n* **Positive Button**: Used for positive actions 
-            such as approved, ok, yes. \n\n* **Negative Button**: Used for negative actions such as decline, cancel, no.`
-        }
+types.storyName = 'Types';
+
+types.parameters = {
+    docs: {
+        storyDescription: `* **Standard Button**:
+        Neutral or informative color \n\n* **Positive Button**: Used for positive actions 
+        such as approved, ok, yes. \n\n* **Negative Button**: Used for negative actions such as decline, cancel, no.`
     }
 };
 
@@ -75,12 +73,11 @@ export const icons = () => (
     </div>
 );
 
-icons.story = {
-    name: 'Icons',
-    parameters: {
-        docs: {
-            storyDescription: 'Button can have an icon with text or just and icon.'
-        }
+icons.storyName = 'Icons';
+
+icons.parameters = {
+    docs: {
+        storyDescription: 'Button can have an icon with text or just and icon.'
     }
 };
 
@@ -91,12 +88,11 @@ export const sizes = () => (
     </div>
 );
 
-sizes.story = {
-    name: 'Sizes',
-    parameters: {
-        docs: {
-            storyDescription: 'There are two sizes. The `compact` size is only used on desktop and it is full size when used on a touch device.'
-        }
+sizes.storyName = 'Sizes';
+
+sizes.parameters = {
+    docs: {
+        storyDescription: 'There are two sizes. The `compact` size is only used on desktop and it is full size when used on a touch device.'
     }
 };
 
@@ -124,12 +120,11 @@ export const states = () => (
     </div>
 );
 
-states.story = {
-    name: 'States',
-    parameters: {
-        docs: {
-            storyDescription: 'There are three states: default, `selected`, and `disabled`.'
-        }
+states.storyName = 'States';
+
+states.parameters = {
+    docs: {
+        storyDescription: 'There are three states: default, `selected`, and `disabled`.'
     }
 };
 
@@ -137,8 +132,8 @@ states.story = {
 
 export const dev = () => (
     <Button
-        compact={boolean('compact'), false}
-        disabled={boolean('disabled'), false}
+        compact={(boolean('compact'), false)}
+        disabled={(boolean('disabled'), false)}
         option={select('option', {
             'emphasized': 'emphasized',
             'transparent': 'transparent'
@@ -152,6 +147,4 @@ export const dev = () => (
 );
 
 
-dev.story = {
-    parameters: { docs: { disable: true } }
-};
+dev.parameters = { docs: { disable: true } };

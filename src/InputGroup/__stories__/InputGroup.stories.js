@@ -94,13 +94,12 @@ export const addonButton = () => (
     </div>
 );
 
-addonButton.story = {
-    name: 'Button add-on',
-    parameters: {
-        docs: {
-            storyDescription: `The InputGroup.Addon isButton supports buttons by providing the correct styling. Buttons can be shown with a text
-            label or icon.`
-        }
+addonButton.storyName = 'Button add-on';
+
+addonButton.parameters = {
+    docs: {
+        storyDescription: `The InputGroup.Addon isButton supports buttons by providing the correct styling. Buttons can be shown with a text
+        label or icon.`
     }
 };
 
@@ -118,14 +117,13 @@ export const addonText = () => (
 
 );
 
-addonText.story = {
-    name: 'Text add-on',
-    parameters: {
-        docs: {
-            storyDescription: `The Input with text add-on component is typically used to specify the
-            type of the data being entered, such as currency or unit of measure.
-            This add-on can be placed at the left or right of the input element.`
-        }
+addonText.storyName = 'Text add-on';
+
+addonText.parameters = {
+    docs: {
+        storyDescription: `The Input with text add-on component is typically used to specify the
+        type of the data being entered, such as currency or unit of measure.
+        This add-on can be placed at the left or right of the input element.`
     }
 };
 
@@ -146,13 +144,12 @@ export const addonIcon = () => (
     </div>
 );
 
-addonIcon.story = {
-    name: 'Icon add-on',
-    parameters: {
-        docs: {
-            storyDescription: `The consumer can add an Icon as a child of InputGroup.Addon.'
-            title='Input with icons.`
-        }
+addonIcon.storyName = 'Icon add-on';
+
+addonIcon.parameters = {
+    docs: {
+        storyDescription: `The consumer can add an Icon as a child of InputGroup.Addon.'
+        title='Input with icons.`
     }
 };
 
@@ -185,6 +182,4 @@ export const dev = () => (
     </InputGroup>
 );
 
-dev.story = {
-    parameters: { docs: { disable: true } }
-};
+dev.parameters = { docs: { disable: true } };

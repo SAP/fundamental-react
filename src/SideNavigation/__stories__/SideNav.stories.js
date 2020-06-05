@@ -101,13 +101,11 @@ export const condensed = () => (
     </SideNav>
 );
 
-condensed.story = {
-    parameters: {
-        docs: {
-            storyDescription: `The user can identify which level they are on based on the icon displayed as selected when the
-            navigation is condensed. Note that the suggested use is when there is only one level of navigation as
-            the user can only see one level of navigation when collapsed.`
-        }
+condensed.parameters = {
+    docs: {
+        storyDescription: `The user can identify which level they are on based on the icon displayed as selected when the
+        navigation is condensed. Note that the suggested use is when there is only one level of navigation as
+        the user can only see one level of navigation when collapsed.`
     }
 };
 
@@ -188,11 +186,9 @@ export const withTitle = () => (
     </SideNav>
 );
 
-withTitle.story = {
-    parameters: {
-        docs: {
-            storyDescription: 'Use titles to group navigation. Titles are not clickable.'
-        }
+withTitle.parameters = {
+    docs: {
+        storyDescription: 'Use titles to group navigation. Titles are not clickable.'
     }
 };
 

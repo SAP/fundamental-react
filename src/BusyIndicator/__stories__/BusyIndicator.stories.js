@@ -22,12 +22,11 @@ export const sizes = () => (
     </div>
 );
 
-sizes.story = {
-    name: 'Sizes',
-    parameters: {
-        docs: {
-            storyDescription: 'There are 3 sizes for Busy Indicator: `s`, `m` & `l`.'
-        }
+sizes.storyName = 'Sizes';
+
+sizes.parameters = {
+    docs: {
+        storyDescription: 'There are 3 sizes for Busy Indicator: `s`, `m` & `l`.'
     }
 };
 
@@ -39,6 +38,4 @@ export const dev = () => (
 );
 
 
-dev.story = {
-    parameters: { docs: { disable: true } }
-};
+dev.parameters = { docs: { disable: true } };

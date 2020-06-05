@@ -69,13 +69,11 @@ export const disabled = () => (
     </FormRadioGroup>
 );
 
-disabled.story = {
-    parameters: {
-        docs: {
-            storyDescription: `**Disabled**: This indicates the field is not 
-            editable. A common use case is that this field is dependent on a previous entry or 
-            selection within the form.`
-        }
+disabled.parameters = {
+    docs: {
+        storyDescription: `**Disabled**: This indicates the field is not 
+        editable. A common use case is that this field is dependent on a previous entry or 
+        selection within the form.`
     }
 };
 
@@ -142,6 +140,4 @@ export const dev = () => (
 );
 
 
-dev.story = {
-    parameters: { docs: { disable: true } }
-};
+dev.parameters = { docs: { disable: true } };

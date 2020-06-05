@@ -43,7 +43,8 @@ addParameters({
     ],
     docs: {
         container: DocsContainer,
-        page: DocsPage
+        page: DocsPage,
+        theme: fundamentals,
     },
     i18n: {
         provider: ({ children }) => <>{children}</>,

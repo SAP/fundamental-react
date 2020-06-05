@@ -44,12 +44,10 @@ export default {
 export const ${componentName} = () => {
     let storyNames = Object.keys(stories).filter(story => story !== 'default');
 
-    return (<>{storyNames.map(item => <div>{stories[item]()}</div>)}</>);
+    return (<>{storyNames.map((item, index) => <div key={index}>{stories[item]()}</div>)}</>);
 };
-${componentName}.story = {
-    parameters: {
-        docs: { disable: true }
-    }
+${componentName}.parameters = {
+    docs: { disable: true }
 };
 `;
             // write the visual story file into the directory.

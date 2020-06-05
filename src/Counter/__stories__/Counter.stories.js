@@ -22,12 +22,11 @@ export const defaults = () => (
 );
 
 
-defaults.story = {
-    name: 'Default Counter',
-    parameters: {
-        docs: {
-            storyDescription: 'Counter has a minimum value 1. Maximum display is 999+.'
-        }
+defaults.storyName = 'Default Counter';
+
+defaults.parameters = {
+    docs: {
+        storyDescription: 'Counter has a minimum value 1. Maximum display is 999+.'
     }
 };
 
@@ -38,9 +37,7 @@ export const inline = () => (
 );
 
 
-inline.story = {
-    name: 'Counter inline with a paragraph'
-};
+inline.storyName = 'Counter inline with a paragraph';
 
 
 export const notification = () => (
@@ -61,11 +58,10 @@ export const notification = () => (
 );
 
 
-notification.story = {
-    name: 'Default Counter',
-    parameters: {
-        docs: {
-            storyDescription: 'Use the property `notification` to enable notification counter.'
-        }
+notification.storyName = 'Default Counter';
+
+notification.parameters = {
+    docs: {
+        storyDescription: 'Use the property `notification` to enable notification counter.'
     }
 };

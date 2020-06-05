@@ -24,6 +24,4 @@ export const dev = () => (
         compact={boolean('compact', false)}
         readOnly={boolean('readOnly', false)}>Default</Token>
 );
-dev.story = {
-    parameters: { docs: { disable: true } }
-};
+dev.parameters = { docs: { disable: true } };

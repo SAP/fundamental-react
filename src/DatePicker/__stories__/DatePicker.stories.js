@@ -66,27 +66,21 @@ export const compact = () => (
 );
 
 
-compact.story = {
-    name: 'Compact'
-};
+compact.storyName = 'Compact';
 
 export const disabled = () => (
     <DatePicker disabled />
 );
 
 
-disabled.story = {
-    name: 'Disabled'
-};
+disabled.storyName = 'Disabled';
 
 export const readOnly = () => (
     <DatePicker readOnly />
 );
 
 
-readOnly.story = {
-    name: 'ReadOnly'
-};
+readOnly.storyName = 'ReadOnly';
 
 export const localized = () => (
     <div className='fddocs-container'>
@@ -96,17 +90,13 @@ export const localized = () => (
 );
 
 
-localized.story = {
-    name: 'Localized DatePicker'
-};
+localized.storyName = 'Localized DatePicker';
 
 export const rangeSelection = () => (
     <DatePicker enableRangeSelection />
 );
 
-rangeSelection.story = {
-    name: 'Enabled Range Selection'
-};
+rangeSelection.storyName = 'Enabled Range Selection';
 
 export const dateFormat = () => (
     <LayoutGrid cols={2}>
@@ -192,9 +182,7 @@ export const dateFormat = () => (
     </LayoutGrid>
 );
 
-dateFormat.story = {
-    name: 'Date Formats'
-};
+dateFormat.storyName = 'Date Formats';
 
 
 export const validationStates = () => (
@@ -207,9 +195,7 @@ export const validationStates = () => (
     </div>
 );
 
-validationStates.story = {
-    name: 'Validation States'
-};
+validationStates.storyName = 'Validation States';
 
 const tomorrow = moment().add(1, 'day').endOf('day').format('YYYYMMDD');
 const nextDay = moment().add(2, 'day').endOf('day').format('YYYYMMDD');
@@ -227,9 +213,7 @@ export const specialDaysEx = () => (
     <DatePicker specialDays={specialDays} />
 );
 
-specialDaysEx.story = {
-    name: 'Special Days'
-};
+specialDaysEx.storyName = 'Special Days';
 
 export const dev = () => (
     <DatePicker
@@ -255,6 +239,4 @@ export const dev = () => (
         )} />
 );
 
-dev.story = {
-    parameters: { docs: { disable: true } }
-};
+dev.parameters = { docs: { disable: true } };

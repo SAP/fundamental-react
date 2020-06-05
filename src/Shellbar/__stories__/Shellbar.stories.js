@@ -33,12 +33,10 @@ export const basic = () => (
         profileMenu={profileMenu} />
 );
 
-basic.story = {
-    parameters: {
-        docs: {
-            storyDescription: `This example shows the minimum Shellbar for a single application product with only user settings. If
-            no user thumbnail is available then display initials.`
-        }
+basic.parameters = {
+    docs: {
+        storyDescription: `This example shows the minimum Shellbar for a single application product with only user settings. If
+        no user thumbnail is available then display initials.`
     }
 };
 
@@ -63,12 +61,10 @@ export const withProductMenu = () => (
         subtitle='Subtitle' />
 );
 
-productMenu.story = {
-    parameters: {
-        docs: {
-            storyDescription: `This example includes the product menu for navigating to applications within the product and shows a
-            search box.`
-        }
+productMenu.parameters = {
+    docs: {
+        storyDescription: `This example includes the product menu for navigating to applications within the product and shows a
+        search box.`
     }
 };
 
@@ -212,11 +208,9 @@ export const coPilot = () => (
         subtitle='Subtitle' />
 );
 
-coPilot.story = {
-    parameters: {
-        docs: {
-            storyDescription: `When a product has multiple links, the product links should collapse into an overflow menu on mobile
-            screens. All actions, except for the user menu, should be collapsed.`
-        }
+coPilot.parameters = {
+    docs: {
+        storyDescription: `When a product has multiple links, the product links should collapse into an overflow menu on mobile
+        screens. All actions, except for the user menu, should be collapsed.`
     }
 };
