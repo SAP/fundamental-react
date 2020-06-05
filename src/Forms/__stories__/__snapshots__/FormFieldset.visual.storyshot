@@ -162,13 +162,13 @@ exports[`Storyshots Visual Form Fieldset 1`] = `
         >
           <input
             className="fd-radio"
-            id="fd-39"
-            name="fd-38"
+            id="fd-mocked-short-id"
+            name="fd-mocked-short-id"
             type="radio"
           />
           <label
             className="fd-form-label fd-radio__label"
-            htmlFor="fd-39"
+            htmlFor="fd-mocked-short-id"
           >
             Option 1
           </label>
@@ -179,13 +179,13 @@ exports[`Storyshots Visual Form Fieldset 1`] = `
         >
           <input
             className="fd-radio"
-            id="fd-40"
-            name="fd-38"
+            id="fd-mocked-short-id"
+            name="fd-mocked-short-id"
             type="radio"
           />
           <label
             className="fd-form-label fd-radio__label"
-            htmlFor="fd-40"
+            htmlFor="fd-mocked-short-id"
           >
             Option 2
           </label>
@@ -196,13 +196,13 @@ exports[`Storyshots Visual Form Fieldset 1`] = `
         >
           <input
             className="fd-radio"
-            id="fd-41"
-            name="fd-38"
+            id="fd-mocked-short-id"
+            name="fd-mocked-short-id"
             type="radio"
           />
           <label
             className="fd-form-label fd-radio__label"
-            htmlFor="fd-41"
+            htmlFor="fd-mocked-short-id"
           >
             Option 3
           </label>
@@ -227,13 +227,13 @@ exports[`Storyshots Visual Form Fieldset 1`] = `
           <input
             className="fd-radio"
             disabled={true}
-            id="fd-43"
-            name="fd-42"
+            id="fd-mocked-short-id"
+            name="fd-mocked-short-id"
             type="radio"
           />
           <label
             className="fd-form-label is-disabled fd-radio__label"
-            htmlFor="fd-43"
+            htmlFor="fd-mocked-short-id"
           >
             Option 1
           </label>
@@ -245,13 +245,13 @@ exports[`Storyshots Visual Form Fieldset 1`] = `
           <input
             className="fd-radio"
             disabled={true}
-            id="fd-44"
-            name="fd-42"
+            id="fd-mocked-short-id"
+            name="fd-mocked-short-id"
             type="radio"
           />
           <label
             className="fd-form-label is-disabled fd-radio__label"
-            htmlFor="fd-44"
+            htmlFor="fd-mocked-short-id"
           >
             Option 2
           </label>
@@ -263,13 +263,13 @@ exports[`Storyshots Visual Form Fieldset 1`] = `
           <input
             className="fd-radio"
             disabled={true}
-            id="fd-45"
-            name="fd-42"
+            id="fd-mocked-short-id"
+            name="fd-mocked-short-id"
             type="radio"
           />
           <label
             className="fd-form-label is-disabled fd-radio__label"
-            htmlFor="fd-45"
+            htmlFor="fd-mocked-short-id"
           >
             Option 3
           </label>
@@ -293,13 +293,13 @@ exports[`Storyshots Visual Form Fieldset 1`] = `
         >
           <input
             className="fd-radio"
-            id="fd-47"
-            name="fd-46"
+            id="fd-mocked-short-id"
+            name="fd-mocked-short-id"
             type="radio"
           />
           <label
             className="fd-form-label fd-radio__label"
-            htmlFor="fd-47"
+            htmlFor="fd-mocked-short-id"
           >
             Option 1
           </label>
@@ -310,13 +310,13 @@ exports[`Storyshots Visual Form Fieldset 1`] = `
         >
           <input
             className="fd-radio"
-            id="fd-48"
-            name="fd-46"
+            id="fd-mocked-short-id"
+            name="fd-mocked-short-id"
             type="radio"
           />
           <label
             className="fd-form-label fd-radio__label"
-            htmlFor="fd-48"
+            htmlFor="fd-mocked-short-id"
           >
             Option 2
           </label>
@@ -327,13 +327,13 @@ exports[`Storyshots Visual Form Fieldset 1`] = `
         >
           <input
             className="fd-radio"
-            id="fd-49"
-            name="fd-46"
+            id="fd-mocked-short-id"
+            name="fd-mocked-short-id"
             type="radio"
           />
           <label
             className="fd-form-label fd-radio__label"
-            htmlFor="fd-49"
+            htmlFor="fd-mocked-short-id"
           >
             Option 3
           </label>
@@ -357,13 +357,13 @@ exports[`Storyshots Visual Form Fieldset 1`] = `
         >
           <input
             className="fd-radio fd-radio--compact"
-            id="fd-51"
-            name="fd-50"
+            id="fd-mocked-short-id"
+            name="fd-mocked-short-id"
             type="radio"
           />
           <label
             className="fd-form-label fd-radio__label"
-            htmlFor="fd-51"
+            htmlFor="fd-mocked-short-id"
           >
             Option 1
           </label>
@@ -374,13 +374,13 @@ exports[`Storyshots Visual Form Fieldset 1`] = `
         >
           <input
             className="fd-radio fd-radio--compact"
-            id="fd-52"
-            name="fd-50"
+            id="fd-mocked-short-id"
+            name="fd-mocked-short-id"
             type="radio"
           />
           <label
             className="fd-form-label fd-radio__label"
-            htmlFor="fd-52"
+            htmlFor="fd-mocked-short-id"
           >
             Option 2
           </label>
@@ -391,13 +391,13 @@ exports[`Storyshots Visual Form Fieldset 1`] = `
         >
           <input
             className="fd-radio fd-radio--compact"
-            id="fd-53"
-            name="fd-50"
+            id="fd-mocked-short-id"
+            name="fd-mocked-short-id"
             type="radio"
           />
           <label
             className="fd-form-label fd-radio__label"
-            htmlFor="fd-53"
+            htmlFor="fd-mocked-short-id"
           >
             Option 3
           </label>

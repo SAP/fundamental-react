@@ -20455,9 +20455,9 @@ exports[`Storyshots Visual Tree View 1`] = `
         role="tree"
       >
         <li
-          aria-expanded={false}
+          aria-expanded={true}
           className="fd-tree__item"
-          id="fd-274"
+          id="fd-mocked-short-id"
           role="treeitem"
         >
           <div
@@ -20471,9 +20471,9 @@ exports[`Storyshots Visual Tree View 1`] = `
           </div>
         </li>
         <li
-          aria-expanded={false}
+          aria-expanded={true}
           className="fd-tree__item"
-          id="fd-275"
+          id="fd-mocked-short-id"
           role="treeitem"
         >
           <div
@@ -20484,10 +20484,10 @@ exports[`Storyshots Visual Tree View 1`] = `
             >
               <div>
                 <button
-                  aria-controls="fd-275"
-                  aria-label="expand"
-                  aria-pressed={false}
-                  className="fd-tree__control"
+                  aria-controls="fd-mocked-short-id"
+                  aria-label="collapse"
+                  aria-pressed={true}
+                  className="fd-tree__control is-pressed"
                   onClick={[Function]}
                 />
                 Row 2
@@ -20495,14 +20495,14 @@ exports[`Storyshots Visual Tree View 1`] = `
             </div>
           </div>
           <ul
-            aria-hidden={true}
-            className="fd-tree__group fd-tree__group--sublevel-1 is-hidden"
+            aria-hidden={false}
+            className="fd-tree__group fd-tree__group--sublevel-1"
             role="group"
           >
             <li
-              aria-expanded={false}
+              aria-expanded={true}
               className="fd-tree__item"
-              id="fd-276"
+              id="fd-mocked-short-id"
               role="treeitem"
             >
               <div
@@ -20516,9 +20516,9 @@ exports[`Storyshots Visual Tree View 1`] = `
               </div>
             </li>
             <li
-              aria-expanded={false}
+              aria-expanded={true}
               className="fd-tree__item"
-              id="fd-277"
+              id="fd-mocked-short-id"
               role="treeitem"
             >
               <div
@@ -20534,9 +20534,9 @@ exports[`Storyshots Visual Tree View 1`] = `
           </ul>
         </li>
         <li
-          aria-expanded={false}
+          aria-expanded={true}
           className="fd-tree__item"
-          id="fd-278"
+          id="fd-mocked-short-id"
           role="treeitem"
         >
           <div
@@ -20547,10 +20547,10 @@ exports[`Storyshots Visual Tree View 1`] = `
             >
               <div>
                 <button
-                  aria-controls="fd-278"
-                  aria-label="expand"
-                  aria-pressed={false}
-                  className="fd-tree__control"
+                  aria-controls="fd-mocked-short-id"
+                  aria-label="collapse"
+                  aria-pressed={true}
+                  className="fd-tree__control is-pressed"
                   onClick={[Function]}
                 />
                 Row 3
@@ -20558,14 +20558,14 @@ exports[`Storyshots Visual Tree View 1`] = `
             </div>
           </div>
           <ul
-            aria-hidden={true}
-            className="fd-tree__group fd-tree__group--sublevel-1 is-hidden"
+            aria-hidden={false}
+            className="fd-tree__group fd-tree__group--sublevel-1"
             role="group"
           >
             <li
-              aria-expanded={false}
+              aria-expanded={true}
               className="fd-tree__item"
-              id="fd-279"
+              id="fd-mocked-short-id"
               role="treeitem"
             >
               <div
@@ -20576,10 +20576,10 @@ exports[`Storyshots Visual Tree View 1`] = `
                 >
                   <div>
                     <button
-                      aria-controls="fd-279"
-                      aria-label="expand"
-                      aria-pressed={false}
-                      className="fd-tree__control"
+                      aria-controls="fd-mocked-short-id"
+                      aria-label="collapse"
+                      aria-pressed={true}
+                      className="fd-tree__control is-pressed"
                       onClick={[Function]}
                     />
                     Child 1
@@ -20587,14 +20587,14 @@ exports[`Storyshots Visual Tree View 1`] = `
                 </div>
               </div>
               <ul
-                aria-hidden={true}
-                className="fd-tree__group fd-tree__group--sublevel-2 is-hidden"
+                aria-hidden={false}
+                className="fd-tree__group fd-tree__group--sublevel-2"
                 role="group"
               >
                 <li
-                  aria-expanded={false}
+                  aria-expanded={true}
                   className="fd-tree__item"
-                  id="fd-280"
+                  id="fd-mocked-short-id"
                   role="treeitem"
                 >
                   <div
@@ -20608,9 +20608,9 @@ exports[`Storyshots Visual Tree View 1`] = `
                   </div>
                 </li>
                 <li
-                  aria-expanded={false}
+                  aria-expanded={true}
                   className="fd-tree__item"
-                  id="fd-281"
+                  id="fd-mocked-short-id"
                   role="treeitem"
                 >
                   <div
@@ -20676,7 +20676,7 @@ exports[`Storyshots Visual Tree View 1`] = `
         <li
           aria-expanded={false}
           className="fd-tree__item"
-          id="fd-282"
+          id="fd-mocked-short-id"
           role="treeitem"
         >
           <div
@@ -20687,7 +20687,7 @@ exports[`Storyshots Visual Tree View 1`] = `
             >
               <div>
                 <button
-                  aria-controls="fd-282"
+                  aria-controls="fd-mocked-short-id"
                   aria-label="expand"
                   aria-pressed={false}
                   className="fd-tree__control"
@@ -20720,7 +20720,7 @@ exports[`Storyshots Visual Tree View 1`] = `
             <li
               aria-expanded={false}
               className="fd-tree__item"
-              id="fd-283"
+              id="fd-mocked-short-id"
               role="treeitem"
             >
               <div
@@ -20731,7 +20731,7 @@ exports[`Storyshots Visual Tree View 1`] = `
                 >
                   <div>
                     <button
-                      aria-controls="fd-283"
+                      aria-controls="fd-mocked-short-id"
                       aria-label="expand"
                       aria-pressed={false}
                       className="fd-tree__control"
@@ -20764,7 +20764,7 @@ exports[`Storyshots Visual Tree View 1`] = `
                 <li
                   aria-expanded={false}
                   className="fd-tree__item"
-                  id="fd-284"
+                  id="fd-mocked-short-id"
                   role="treeitem"
                 >
                   <div
@@ -20775,7 +20775,7 @@ exports[`Storyshots Visual Tree View 1`] = `
                     >
                       <div>
                         <button
-                          aria-controls="fd-284"
+                          aria-controls="fd-mocked-short-id"
                           aria-label="expand"
                           aria-pressed={false}
                           className="fd-tree__control"
@@ -20808,7 +20808,7 @@ exports[`Storyshots Visual Tree View 1`] = `
                     <li
                       aria-expanded={false}
                       className="fd-tree__item"
-                      id="fd-285"
+                      id="fd-mocked-short-id"
                       role="treeitem"
                     >
                       <div
@@ -20843,7 +20843,7 @@ exports[`Storyshots Visual Tree View 1`] = `
             <li
               aria-expanded={false}
               className="fd-tree__item"
-              id="fd-286"
+              id="fd-mocked-short-id"
               role="treeitem"
             >
               <div
@@ -20876,7 +20876,7 @@ exports[`Storyshots Visual Tree View 1`] = `
         <li
           aria-expanded={false}
           className="fd-tree__item"
-          id="fd-287"
+          id="fd-mocked-short-id"
           role="treeitem"
         >
           <div
@@ -20887,7 +20887,7 @@ exports[`Storyshots Visual Tree View 1`] = `
             >
               <div>
                 <button
-                  aria-controls="fd-287"
+                  aria-controls="fd-mocked-short-id"
                   aria-label="expand"
                   aria-pressed={false}
                   className="fd-tree__control"
@@ -20920,7 +20920,7 @@ exports[`Storyshots Visual Tree View 1`] = `
             <li
               aria-expanded={false}
               className="fd-tree__item"
-              id="fd-288"
+              id="fd-mocked-short-id"
               role="treeitem"
             >
               <div
@@ -20951,7 +20951,7 @@ exports[`Storyshots Visual Tree View 1`] = `
             <li
               aria-expanded={false}
               className="fd-tree__item"
-              id="fd-289"
+              id="fd-mocked-short-id"
               role="treeitem"
             >
               <div
@@ -20984,7 +20984,7 @@ exports[`Storyshots Visual Tree View 1`] = `
         <li
           aria-expanded={false}
           className="fd-tree__item"
-          id="fd-290"
+          id="fd-mocked-short-id"
           role="treeitem"
         >
           <div
@@ -21015,7 +21015,7 @@ exports[`Storyshots Visual Tree View 1`] = `
         <li
           aria-expanded={false}
           className="fd-tree__item"
-          id="fd-291"
+          id="fd-mocked-short-id"
           role="treeitem"
         >
           <div
@@ -21026,7 +21026,7 @@ exports[`Storyshots Visual Tree View 1`] = `
             >
               <div>
                 <button
-                  aria-controls="fd-291"
+                  aria-controls="fd-mocked-short-id"
                   aria-label="expand"
                   aria-pressed={false}
                   className="fd-tree__control"
@@ -21059,7 +21059,7 @@ exports[`Storyshots Visual Tree View 1`] = `
             <li
               aria-expanded={false}
               className="fd-tree__item"
-              id="fd-292"
+              id="fd-mocked-short-id"
               role="treeitem"
             >
               <div
@@ -21136,9 +21136,9 @@ exports[`Storyshots Visual Tree View 1`] = `
         role="tree"
       >
         <li
-          aria-expanded={false}
+          aria-expanded={true}
           className="fd-tree__item"
-          id="fd-293"
+          id="fd-mocked-short-id"
           role="treeitem"
         >
           <div
@@ -21149,10 +21149,10 @@ exports[`Storyshots Visual Tree View 1`] = `
             >
               <div>
                 <button
-                  aria-controls="fd-293"
-                  aria-label="expand"
-                  aria-pressed={false}
-                  className="fd-tree__control"
+                  aria-controls="fd-mocked-short-id"
+                  aria-label="collapse"
+                  aria-pressed={true}
+                  className="fd-tree__control is-pressed"
                   onClick={[Function]}
                 />
                 Row 1
@@ -21160,14 +21160,14 @@ exports[`Storyshots Visual Tree View 1`] = `
             </div>
           </div>
           <ul
-            aria-hidden={true}
-            className="fd-tree__group fd-tree__group--sublevel-1 is-hidden"
+            aria-hidden={false}
+            className="fd-tree__group fd-tree__group--sublevel-1"
             role="group"
           >
             <li
-              aria-expanded={false}
+              aria-expanded={true}
               className="fd-tree__item"
-              id="fd-294"
+              id="fd-mocked-short-id"
               role="treeitem"
             >
               <div
