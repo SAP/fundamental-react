@@ -222,8 +222,8 @@ const Select = React.forwardRef(({
                     </List>
                 </>)}
             control={selectControl}
-            disabled={disabled}
             disableStyles={disableStyles}
+            disabled={disabled}
             noArrow
             onClickOutside={() => setIsExpanded(false)}
             placement='bottom-start'

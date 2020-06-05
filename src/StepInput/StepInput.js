@@ -105,6 +105,7 @@ const StepInput = React.forwardRef(({
                     aria-label={localizedText.stepDownLabel}
                     className='fd-step-input__button'
                     compact={compact}
+                    disableStyles={disableStyles}
                     disabled={disabled}
                     glyph='less'
                     onClick={decreaseValue}
@@ -112,6 +113,7 @@ const StepInput = React.forwardRef(({
                     tabIndex='-1' />
                 <FormInput
                     className='fd-input--no-number-spinner fd-step-input__input'
+                    disableStyles={disableStyles}
                     disabled={disabled}
                     onChange={onChangeInputValue}
                     placeholder={placeholder}
@@ -119,6 +121,7 @@ const StepInput = React.forwardRef(({
                 <Button
                     aria-label={localizedText.stepUpLabel}
                     compact={compact}
+                    disableStyles={disableStyles}
                     disabled={disabled}
                     glyph='add'
                     onClick={increaseValue}

@@ -53,8 +53,8 @@ export const validationStates = () => (
 export const dev = () => (
     <StepInput
         compact={boolean('compact', false)}
-        disabled={boolean('disabled', false)}
         disableStyles={boolean('disableStyles', false)}
+        disabled={boolean('disabled', false)}
         placeholder={text('Placeholder', 'Placeholder')}
         validationState={select('Validation State', {
             'none': '',
