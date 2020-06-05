@@ -19,7 +19,9 @@ export const BUTTON_TYPES = [
     'standard',
     'positive',
     'negative',
-    'medium'
+    'medium',
+    'ghost',
+    'attention'
 ];
 
 export const DIALOG_SIZES = [
