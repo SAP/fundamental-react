@@ -17,8 +17,9 @@ import {
   } from '@storybook/addon-docs/blocks';
 
 const DocsPage = () => {
-    // TO DO: https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#new-setstories-event
     const context = useContext(DocsContext);
+
+    // do not create docs pages for visual regression image pages
     if(context.kind === 'Visual') {
         return null;
     }
