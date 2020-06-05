@@ -34,7 +34,9 @@ const Select = React.forwardRef(({
         }
     }, []);
 
-    const divRef = ref ? ref : useRef(null);
+    const internalDivRef = useRef(null);
+    const divRef = ref || internalDivRef;
+
     const ulRef = useRef(null);
 
     let [isExpanded, setIsExpanded] = useState(false);

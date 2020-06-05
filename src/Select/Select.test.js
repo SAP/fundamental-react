@@ -51,7 +51,7 @@ describe('<Select />', () => {
         });
     });
 
-    xtest('forwards the ref to the div role="button"', () => {
+    test('forwards the ref to the div role="button"', () => {
         let ref;
         class Test extends React.Component {
             constructor(props) {
