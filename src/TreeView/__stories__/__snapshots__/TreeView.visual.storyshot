@@ -112,7 +112,7 @@ exports[`Storyshots Visual Action Bar 1`] = `
                 className="fd-popover__control"
               >
                 <button
-                  aria-controls="fd-1"
+                  aria-controls="fd-mocked-short-id"
                   aria-expanded={false}
                   aria-haspopup={true}
                   className="fd-button fd-button--transparent sap-icon--vertical-grip"
@@ -1087,13 +1087,13 @@ exports[`Storyshots Visual Checkbox 1`] = `
       <input
         aria-checked="false"
         className="fd-checkbox"
-        id="fd-29"
+        id="fd-mocked-short-id"
         onChange={[Function]}
         type="checkbox"
       />
       <label
         className="fd-form-label fd-checkbox__label"
-        htmlFor="fd-29"
+        htmlFor="fd-mocked-short-id"
       >
         Default Checkbox
       </label>
@@ -1106,13 +1106,13 @@ exports[`Storyshots Visual Checkbox 1`] = `
       <input
         aria-checked="mixed"
         className="fd-checkbox"
-        id="fd-30"
+        id="fd-mocked-short-id"
         onChange={[Function]}
         type="checkbox"
       />
       <label
         className="fd-form-label fd-checkbox__label"
-        htmlFor="fd-30"
+        htmlFor="fd-mocked-short-id"
       >
         Text Option
       </label>
@@ -1127,13 +1127,13 @@ exports[`Storyshots Visual Checkbox 1`] = `
         aria-checked="false"
         className="fd-checkbox"
         disabled={true}
-        id="fd-31"
+        id="fd-mocked-short-id"
         onChange={[Function]}
         type="checkbox"
       />
       <label
         className="fd-form-label is-disabled fd-checkbox__label"
-        htmlFor="fd-31"
+        htmlFor="fd-mocked-short-id"
       >
         Text Option
       </label>
@@ -1146,13 +1146,13 @@ exports[`Storyshots Visual Checkbox 1`] = `
       <input
         aria-checked="false"
         className="fd-checkbox fd-checkbox--compact"
-        id="fd-32"
+        id="fd-mocked-short-id"
         onChange={[Function]}
         type="checkbox"
       />
       <label
         className="fd-form-label fd-checkbox__label"
-        htmlFor="fd-32"
+        htmlFor="fd-mocked-short-id"
       >
         Text Option
       </label>
@@ -1168,13 +1168,13 @@ exports[`Storyshots Visual Checkbox 1`] = `
         <input
           aria-checked="false"
           className="fd-checkbox is-error"
-          id="fd-33"
+          id="fd-mocked-short-id"
           onChange={[Function]}
           type="checkbox"
         />
         <label
           className="fd-form-label fd-checkbox__label"
-          htmlFor="fd-33"
+          htmlFor="fd-mocked-short-id"
         >
           Text Option
         </label>
@@ -1185,13 +1185,13 @@ exports[`Storyshots Visual Checkbox 1`] = `
         <input
           aria-checked="false"
           className="fd-checkbox is-warning"
-          id="fd-34"
+          id="fd-mocked-short-id"
           onChange={[Function]}
           type="checkbox"
         />
         <label
           className="fd-form-label fd-checkbox__label"
-          htmlFor="fd-34"
+          htmlFor="fd-mocked-short-id"
         >
           Text Option
         </label>
@@ -1202,13 +1202,13 @@ exports[`Storyshots Visual Checkbox 1`] = `
         <input
           aria-checked="false"
           className="fd-checkbox is-success"
-          id="fd-35"
+          id="fd-mocked-short-id"
           onChange={[Function]}
           type="checkbox"
         />
         <label
           className="fd-form-label fd-checkbox__label"
-          htmlFor="fd-35"
+          htmlFor="fd-mocked-short-id"
         >
           Text Option
         </label>
@@ -1219,13 +1219,13 @@ exports[`Storyshots Visual Checkbox 1`] = `
         <input
           aria-checked="false"
           className="fd-checkbox is-information"
-          id="fd-36"
+          id="fd-mocked-short-id"
           onChange={[Function]}
           type="checkbox"
         />
         <label
           className="fd-form-label fd-checkbox__label"
-          htmlFor="fd-36"
+          htmlFor="fd-mocked-short-id"
         >
           Text Option
         </label>
@@ -1241,13 +1241,13 @@ exports[`Storyshots Visual Checkbox 1`] = `
         aria-checked="false"
         className="fd-checkbox"
         disabled={false}
-        id="fd-37"
+        id="fd-mocked-short-id"
         onChange={[Function]}
         type="checkbox"
       />
       <label
         className="fd-form-label fd-checkbox__label"
-        htmlFor="fd-37"
+        htmlFor="fd-mocked-short-id"
       >
         Text Option
       </label>
@@ -2861,13 +2861,13 @@ exports[`Storyshots Visual Form Fieldset 1`] = `
         >
           <input
             className="fd-radio"
-            id="fd-39"
-            name="fd-38"
+            id="fd-mocked-short-id"
+            name="fd-mocked-short-id"
             type="radio"
           />
           <label
             className="fd-form-label fd-radio__label"
-            htmlFor="fd-39"
+            htmlFor="fd-mocked-short-id"
           >
             Option 1
           </label>
@@ -2878,13 +2878,13 @@ exports[`Storyshots Visual Form Fieldset 1`] = `
         >
           <input
             className="fd-radio"
-            id="fd-40"
-            name="fd-38"
+            id="fd-mocked-short-id"
+            name="fd-mocked-short-id"
             type="radio"
           />
           <label
             className="fd-form-label fd-radio__label"
-            htmlFor="fd-40"
+            htmlFor="fd-mocked-short-id"
           >
             Option 2
           </label>
@@ -2895,13 +2895,13 @@ exports[`Storyshots Visual Form Fieldset 1`] = `
         >
           <input
             className="fd-radio"
-            id="fd-41"
-            name="fd-38"
+            id="fd-mocked-short-id"
+            name="fd-mocked-short-id"
             type="radio"
           />
           <label
             className="fd-form-label fd-radio__label"
-            htmlFor="fd-41"
+            htmlFor="fd-mocked-short-id"
           >
             Option 3
           </label>
@@ -2926,13 +2926,13 @@ exports[`Storyshots Visual Form Fieldset 1`] = `
           <input
             className="fd-radio"
             disabled={true}
-            id="fd-43"
-            name="fd-42"
+            id="fd-mocked-short-id"
+            name="fd-mocked-short-id"
             type="radio"
           />
           <label
             className="fd-form-label is-disabled fd-radio__label"
-            htmlFor="fd-43"
+            htmlFor="fd-mocked-short-id"
           >
             Option 1
           </label>
@@ -2944,13 +2944,13 @@ exports[`Storyshots Visual Form Fieldset 1`] = `
           <input
             className="fd-radio"
             disabled={true}
-            id="fd-44"
-            name="fd-42"
+            id="fd-mocked-short-id"
+            name="fd-mocked-short-id"
             type="radio"
           />
           <label
             className="fd-form-label is-disabled fd-radio__label"
-            htmlFor="fd-44"
+            htmlFor="fd-mocked-short-id"
           >
             Option 2
           </label>
@@ -2962,13 +2962,13 @@ exports[`Storyshots Visual Form Fieldset 1`] = `
           <input
             className="fd-radio"
             disabled={true}
-            id="fd-45"
-            name="fd-42"
+            id="fd-mocked-short-id"
+            name="fd-mocked-short-id"
             type="radio"
           />
           <label
             className="fd-form-label is-disabled fd-radio__label"
-            htmlFor="fd-45"
+            htmlFor="fd-mocked-short-id"
           >
             Option 3
           </label>
@@ -2992,13 +2992,13 @@ exports[`Storyshots Visual Form Fieldset 1`] = `
         >
           <input
             className="fd-radio"
-            id="fd-47"
-            name="fd-46"
+            id="fd-mocked-short-id"
+            name="fd-mocked-short-id"
             type="radio"
           />
           <label
             className="fd-form-label fd-radio__label"
-            htmlFor="fd-47"
+            htmlFor="fd-mocked-short-id"
           >
             Option 1
           </label>
@@ -3009,13 +3009,13 @@ exports[`Storyshots Visual Form Fieldset 1`] = `
         >
           <input
             className="fd-radio"
-            id="fd-48"
-            name="fd-46"
+            id="fd-mocked-short-id"
+            name="fd-mocked-short-id"
             type="radio"
           />
           <label
             className="fd-form-label fd-radio__label"
-            htmlFor="fd-48"
+            htmlFor="fd-mocked-short-id"
           >
             Option 2
           </label>
@@ -3026,13 +3026,13 @@ exports[`Storyshots Visual Form Fieldset 1`] = `
         >
           <input
             className="fd-radio"
-            id="fd-49"
-            name="fd-46"
+            id="fd-mocked-short-id"
+            name="fd-mocked-short-id"
             type="radio"
           />
           <label
             className="fd-form-label fd-radio__label"
-            htmlFor="fd-49"
+            htmlFor="fd-mocked-short-id"
           >
             Option 3
           </label>
@@ -3056,13 +3056,13 @@ exports[`Storyshots Visual Form Fieldset 1`] = `
         >
           <input
             className="fd-radio fd-radio--compact"
-            id="fd-51"
-            name="fd-50"
+            id="fd-mocked-short-id"
+            name="fd-mocked-short-id"
             type="radio"
           />
           <label
             className="fd-form-label fd-radio__label"
-            htmlFor="fd-51"
+            htmlFor="fd-mocked-short-id"
           >
             Option 1
           </label>
@@ -3073,13 +3073,13 @@ exports[`Storyshots Visual Form Fieldset 1`] = `
         >
           <input
             className="fd-radio fd-radio--compact"
-            id="fd-52"
-            name="fd-50"
+            id="fd-mocked-short-id"
+            name="fd-mocked-short-id"
             type="radio"
           />
           <label
             className="fd-form-label fd-radio__label"
-            htmlFor="fd-52"
+            htmlFor="fd-mocked-short-id"
           >
             Option 2
           </label>
@@ -3090,13 +3090,13 @@ exports[`Storyshots Visual Form Fieldset 1`] = `
         >
           <input
             className="fd-radio fd-radio--compact"
-            id="fd-53"
-            name="fd-50"
+            id="fd-mocked-short-id"
+            name="fd-mocked-short-id"
             type="radio"
           />
           <label
             className="fd-form-label fd-radio__label"
-            htmlFor="fd-53"
+            htmlFor="fd-mocked-short-id"
           >
             Option 3
           </label>
@@ -3312,7 +3312,7 @@ exports[`Storyshots Visual Form Input 1`] = `
             className="fd-popover__control"
           >
             <input
-              aria-controls="fd-54"
+              aria-controls="fd-mocked-short-id"
               aria-expanded={false}
               aria-haspopup={true}
               className="fd-input is-error"
@@ -3343,7 +3343,7 @@ exports[`Storyshots Visual Form Input 1`] = `
             className="fd-popover__control"
           >
             <input
-              aria-controls="fd-55"
+              aria-controls="fd-mocked-short-id"
               aria-expanded={false}
               aria-haspopup={true}
               className="fd-input is-warning"
@@ -3374,7 +3374,7 @@ exports[`Storyshots Visual Form Input 1`] = `
             className="fd-popover__control"
           >
             <input
-              aria-controls="fd-56"
+              aria-controls="fd-mocked-short-id"
               aria-expanded={false}
               aria-haspopup={true}
               className="fd-input is-information"
@@ -3405,7 +3405,7 @@ exports[`Storyshots Visual Form Input 1`] = `
             className="fd-popover__control"
           >
             <input
-              aria-controls="fd-57"
+              aria-controls="fd-mocked-short-id"
               aria-expanded={false}
               aria-haspopup={true}
               className="fd-input is-success"
@@ -3574,13 +3574,13 @@ exports[`Storyshots Visual Form Radio Group 1`] = `
       >
         <input
           className="fd-radio"
-          id="fd-59"
-          name="fd-58"
+          id="fd-mocked-short-id"
+          name="fd-mocked-short-id"
           type="radio"
         />
         <label
           className="fd-form-label fd-radio__label"
-          htmlFor="fd-59"
+          htmlFor="fd-mocked-short-id"
         >
           Option 1
         </label>
@@ -3591,13 +3591,13 @@ exports[`Storyshots Visual Form Radio Group 1`] = `
       >
         <input
           className="fd-radio"
-          id="fd-60"
-          name="fd-58"
+          id="fd-mocked-short-id"
+          name="fd-mocked-short-id"
           type="radio"
         />
         <label
           className="fd-form-label fd-radio__label"
-          htmlFor="fd-60"
+          htmlFor="fd-mocked-short-id"
         >
           Option 2
         </label>
@@ -3608,13 +3608,13 @@ exports[`Storyshots Visual Form Radio Group 1`] = `
       >
         <input
           className="fd-radio"
-          id="fd-61"
-          name="fd-58"
+          id="fd-mocked-short-id"
+          name="fd-mocked-short-id"
           type="radio"
         />
         <label
           className="fd-form-label fd-radio__label"
-          htmlFor="fd-61"
+          htmlFor="fd-mocked-short-id"
         >
           Option 3
         </label>
@@ -3631,13 +3631,13 @@ exports[`Storyshots Visual Form Radio Group 1`] = `
       >
         <input
           className="fd-radio"
-          id="fd-63"
-          name="fd-62"
+          id="fd-mocked-short-id"
+          name="fd-mocked-short-id"
           type="radio"
         />
         <label
           className="fd-form-label fd-radio__label"
-          htmlFor="fd-63"
+          htmlFor="fd-mocked-short-id"
         >
           Option 1
         </label>
@@ -3648,13 +3648,13 @@ exports[`Storyshots Visual Form Radio Group 1`] = `
       >
         <input
           className="fd-radio"
-          id="fd-64"
-          name="fd-62"
+          id="fd-mocked-short-id"
+          name="fd-mocked-short-id"
           type="radio"
         />
         <label
           className="fd-form-label fd-radio__label"
-          htmlFor="fd-64"
+          htmlFor="fd-mocked-short-id"
         >
           Option 2
         </label>
@@ -3665,13 +3665,13 @@ exports[`Storyshots Visual Form Radio Group 1`] = `
       >
         <input
           className="fd-radio"
-          id="fd-65"
-          name="fd-62"
+          id="fd-mocked-short-id"
+          name="fd-mocked-short-id"
           type="radio"
         />
         <label
           className="fd-form-label fd-radio__label"
-          htmlFor="fd-65"
+          htmlFor="fd-mocked-short-id"
         >
           Option 3
         </label>
@@ -3688,13 +3688,13 @@ exports[`Storyshots Visual Form Radio Group 1`] = `
       >
         <input
           className="fd-radio fd-radio--compact"
-          id="fd-67"
-          name="fd-66"
+          id="fd-mocked-short-id"
+          name="fd-mocked-short-id"
           type="radio"
         />
         <label
           className="fd-form-label fd-radio__label"
-          htmlFor="fd-67"
+          htmlFor="fd-mocked-short-id"
         >
           Option 1
         </label>
@@ -3705,13 +3705,13 @@ exports[`Storyshots Visual Form Radio Group 1`] = `
       >
         <input
           className="fd-radio fd-radio--compact"
-          id="fd-68"
-          name="fd-66"
+          id="fd-mocked-short-id"
+          name="fd-mocked-short-id"
           type="radio"
         />
         <label
           className="fd-form-label fd-radio__label"
-          htmlFor="fd-68"
+          htmlFor="fd-mocked-short-id"
         >
           Option 2
         </label>
@@ -3722,13 +3722,13 @@ exports[`Storyshots Visual Form Radio Group 1`] = `
       >
         <input
           className="fd-radio fd-radio--compact"
-          id="fd-69"
-          name="fd-66"
+          id="fd-mocked-short-id"
+          name="fd-mocked-short-id"
           type="radio"
         />
         <label
           className="fd-form-label fd-radio__label"
-          htmlFor="fd-69"
+          htmlFor="fd-mocked-short-id"
         >
           Option 3
         </label>
@@ -3746,13 +3746,13 @@ exports[`Storyshots Visual Form Radio Group 1`] = `
         <input
           className="fd-radio"
           disabled={true}
-          id="fd-71"
-          name="fd-70"
+          id="fd-mocked-short-id"
+          name="fd-mocked-short-id"
           type="radio"
         />
         <label
           className="fd-form-label is-disabled fd-radio__label"
-          htmlFor="fd-71"
+          htmlFor="fd-mocked-short-id"
         >
           Option 1
         </label>
@@ -3764,13 +3764,13 @@ exports[`Storyshots Visual Form Radio Group 1`] = `
         <input
           className="fd-radio"
           disabled={true}
-          id="fd-72"
-          name="fd-70"
+          id="fd-mocked-short-id"
+          name="fd-mocked-short-id"
           type="radio"
         />
         <label
           className="fd-form-label is-disabled fd-radio__label"
-          htmlFor="fd-72"
+          htmlFor="fd-mocked-short-id"
         >
           Option 2
         </label>
@@ -3782,13 +3782,13 @@ exports[`Storyshots Visual Form Radio Group 1`] = `
         <input
           className="fd-radio"
           disabled={true}
-          id="fd-73"
-          name="fd-70"
+          id="fd-mocked-short-id"
+          name="fd-mocked-short-id"
           type="radio"
         />
         <label
           className="fd-form-label is-disabled fd-radio__label"
-          htmlFor="fd-73"
+          htmlFor="fd-mocked-short-id"
         >
           Option 3
         </label>
@@ -3805,13 +3805,13 @@ exports[`Storyshots Visual Form Radio Group 1`] = `
       >
         <input
           className="fd-radio"
-          id="fd-75"
-          name="fd-74"
+          id="fd-mocked-short-id"
+          name="fd-mocked-short-id"
           type="radio"
         />
         <label
           className="fd-form-label fd-radio__label"
-          htmlFor="fd-75"
+          htmlFor="fd-mocked-short-id"
         >
           Default
         </label>
@@ -3822,13 +3822,13 @@ exports[`Storyshots Visual Form Radio Group 1`] = `
       >
         <input
           className="fd-radio is-error"
-          id="fd-76"
-          name="fd-74"
+          id="fd-mocked-short-id"
+          name="fd-mocked-short-id"
           type="radio"
         />
         <label
           className="fd-form-label fd-radio__label"
-          htmlFor="fd-76"
+          htmlFor="fd-mocked-short-id"
         >
           Error
         </label>
@@ -3839,13 +3839,13 @@ exports[`Storyshots Visual Form Radio Group 1`] = `
       >
         <input
           className="fd-radio is-warning"
-          id="fd-77"
-          name="fd-74"
+          id="fd-mocked-short-id"
+          name="fd-mocked-short-id"
           type="radio"
         />
         <label
           className="fd-form-label fd-radio__label"
-          htmlFor="fd-77"
+          htmlFor="fd-mocked-short-id"
         >
           Warning
         </label>
@@ -3856,13 +3856,13 @@ exports[`Storyshots Visual Form Radio Group 1`] = `
       >
         <input
           className="fd-radio is-success"
-          id="fd-78"
-          name="fd-74"
+          id="fd-mocked-short-id"
+          name="fd-mocked-short-id"
           type="radio"
         />
         <label
           className="fd-form-label fd-radio__label"
-          htmlFor="fd-78"
+          htmlFor="fd-mocked-short-id"
         >
           Success
         </label>
@@ -3873,13 +3873,13 @@ exports[`Storyshots Visual Form Radio Group 1`] = `
       >
         <input
           className="fd-radio is-information"
-          id="fd-79"
-          name="fd-74"
+          id="fd-mocked-short-id"
+          name="fd-mocked-short-id"
           type="radio"
         />
         <label
           className="fd-form-label fd-radio__label"
-          htmlFor="fd-79"
+          htmlFor="fd-mocked-short-id"
         >
           Information
         </label>
@@ -3896,13 +3896,13 @@ exports[`Storyshots Visual Form Radio Group 1`] = `
       >
         <input
           className="fd-radio"
-          id="fd-81"
-          name="fd-80"
+          id="fd-mocked-short-id"
+          name="fd-mocked-short-id"
           type="radio"
         />
         <label
           className="fd-form-label fd-radio__label"
-          htmlFor="fd-81"
+          htmlFor="fd-mocked-short-id"
         >
           Option 1
         </label>
@@ -3913,13 +3913,13 @@ exports[`Storyshots Visual Form Radio Group 1`] = `
       >
         <input
           className="fd-radio"
-          id="fd-82"
-          name="fd-80"
+          id="fd-mocked-short-id"
+          name="fd-mocked-short-id"
           type="radio"
         />
         <label
           className="fd-form-label fd-radio__label"
-          htmlFor="fd-82"
+          htmlFor="fd-mocked-short-id"
         >
           Option 2
         </label>
@@ -3930,13 +3930,13 @@ exports[`Storyshots Visual Form Radio Group 1`] = `
       >
         <input
           className="fd-radio"
-          id="fd-83"
-          name="fd-80"
+          id="fd-mocked-short-id"
+          name="fd-mocked-short-id"
           type="radio"
         />
         <label
           className="fd-form-label fd-radio__label"
-          htmlFor="fd-83"
+          htmlFor="fd-mocked-short-id"
         >
           Option 3
         </label>
@@ -12566,13 +12566,13 @@ exports[`Storyshots Visual List 1`] = `
             <input
               aria-checked="false"
               className="fd-checkbox"
-              id="fd-84"
+              id="fd-mocked-short-id"
               onChange={[Function]}
               type="checkbox"
             />
             <label
               className="fd-form-label fd-checkbox__label"
-              htmlFor="fd-84"
+              htmlFor="fd-mocked-short-id"
             />
           </div>
         </div>
@@ -12596,13 +12596,13 @@ exports[`Storyshots Visual List 1`] = `
             <input
               aria-checked="false"
               className="fd-checkbox"
-              id="fd-85"
+              id="fd-mocked-short-id"
               onChange={[Function]}
               type="checkbox"
             />
             <label
               className="fd-form-label fd-checkbox__label"
-              htmlFor="fd-85"
+              htmlFor="fd-mocked-short-id"
             />
           </div>
         </div>
@@ -12626,13 +12626,13 @@ exports[`Storyshots Visual List 1`] = `
             <input
               aria-checked="false"
               className="fd-checkbox"
-              id="fd-86"
+              id="fd-mocked-short-id"
               onChange={[Function]}
               type="checkbox"
             />
             <label
               className="fd-form-label fd-checkbox__label"
-              htmlFor="fd-86"
+              htmlFor="fd-mocked-short-id"
             />
           </div>
         </div>
@@ -12656,13 +12656,13 @@ exports[`Storyshots Visual List 1`] = `
             <input
               aria-checked="false"
               className="fd-checkbox"
-              id="fd-87"
+              id="fd-mocked-short-id"
               onChange={[Function]}
               type="checkbox"
             />
             <label
               className="fd-form-label fd-checkbox__label"
-              htmlFor="fd-87"
+              htmlFor="fd-mocked-short-id"
             />
           </div>
         </div>
@@ -13499,7 +13499,7 @@ exports[`Storyshots Visual Multi Input 1`] = `
           className="fd-popover__control"
         >
           <div
-            aria-controls="fd-104"
+            aria-controls="fd-mocked-short-id"
             aria-expanded={false}
             aria-haspopup={true}
             className="fd-input-group--control fd-input-group"
@@ -13547,7 +13547,7 @@ exports[`Storyshots Visual Multi Input 1`] = `
           className="fd-popover__control"
         >
           <div
-            aria-controls="fd-118"
+            aria-controls="fd-mocked-short-id"
             aria-expanded={false}
             aria-haspopup={true}
             className="fd-input-group--control fd-input-group"
@@ -13596,7 +13596,7 @@ exports[`Storyshots Visual Multi Input 1`] = `
           className="fd-popover__control"
         >
           <div
-            aria-controls="fd-132"
+            aria-controls="fd-mocked-short-id"
             aria-expanded={false}
             aria-haspopup={true}
             className="fd-input-group--control is-disabled fd-input-group is-disabled"
@@ -13649,7 +13649,7 @@ exports[`Storyshots Visual Multi Input 1`] = `
             className="fd-popover__control"
           >
             <div
-              aria-controls="fd-146"
+              aria-controls="fd-mocked-short-id"
               aria-expanded={false}
               aria-haspopup={true}
               className="fd-input-group--control is-error fd-input-group is-error"
@@ -13702,7 +13702,7 @@ exports[`Storyshots Visual Multi Input 1`] = `
             className="fd-popover__control"
           >
             <div
-              aria-controls="fd-160"
+              aria-controls="fd-mocked-short-id"
               aria-expanded={false}
               aria-haspopup={true}
               className="fd-input-group--control is-warning fd-input-group is-warning"
@@ -13755,7 +13755,7 @@ exports[`Storyshots Visual Multi Input 1`] = `
             className="fd-popover__control"
           >
             <div
-              aria-controls="fd-174"
+              aria-controls="fd-mocked-short-id"
               aria-expanded={false}
               aria-haspopup={true}
               className="fd-input-group--control is-success fd-input-group is-success"
@@ -13808,7 +13808,7 @@ exports[`Storyshots Visual Multi Input 1`] = `
             className="fd-popover__control"
           >
             <div
-              aria-controls="fd-188"
+              aria-controls="fd-mocked-short-id"
               aria-expanded={false}
               aria-haspopup={true}
               className="fd-input-group--control is-information fd-input-group is-information"
@@ -13864,7 +13864,7 @@ exports[`Storyshots Visual Multi Input 1`] = `
           className="fd-popover__control"
         >
           <div
-            aria-controls="fd-202"
+            aria-controls="fd-mocked-short-id"
             aria-expanded={false}
             aria-haspopup={true}
             className="fd-input-group--control fd-input-group"
@@ -14912,7 +14912,7 @@ exports[`Storyshots Visual Panel 1`] = `
               className="fd-popover__control"
             >
               <button
-                aria-controls="fd-203"
+                aria-controls="fd-mocked-short-id"
                 aria-expanded={false}
                 aria-haspopup={true}
                 className="fd-button"
@@ -14939,7 +14939,7 @@ exports[`Storyshots Visual Panel 1`] = `
               className="fd-popover__control"
             >
               <button
-                aria-controls="fd-204"
+                aria-controls="fd-mocked-short-id"
                 aria-expanded={false}
                 aria-haspopup={true}
                 className="fd-button"
@@ -15339,7 +15339,7 @@ exports[`Storyshots Visual Select 1`] = `
           className="fd-popover__control"
         >
           <div
-            aria-controls="fd-212"
+            aria-controls="fd-mocked-short-id"
             aria-expanded={false}
             aria-haspopup={true}
             className="fd-select"
@@ -15375,7 +15375,7 @@ exports[`Storyshots Visual Select 1`] = `
           className="fd-popover__control"
         >
           <div
-            aria-controls="fd-213"
+            aria-controls="fd-mocked-short-id"
             aria-expanded={false}
             aria-haspopup={true}
             className="fd-select fd-select--compact"
@@ -15411,7 +15411,7 @@ exports[`Storyshots Visual Select 1`] = `
           className="fd-popover__control"
         >
           <div
-            aria-controls="fd-214"
+            aria-controls="fd-mocked-short-id"
             aria-expanded={false}
             aria-haspopup={true}
             className="fd-select"
@@ -15451,7 +15451,7 @@ exports[`Storyshots Visual Select 1`] = `
             className="fd-popover__control"
           >
             <div
-              aria-controls="fd-215"
+              aria-controls="fd-mocked-short-id"
               aria-expanded={false}
               aria-haspopup={true}
               className="fd-select"
@@ -15492,7 +15492,7 @@ exports[`Storyshots Visual Select 1`] = `
             className="fd-popover__control"
           >
             <div
-              aria-controls="fd-216"
+              aria-controls="fd-mocked-short-id"
               aria-expanded={false}
               aria-haspopup={true}
               className="fd-select"
@@ -15533,7 +15533,7 @@ exports[`Storyshots Visual Select 1`] = `
             className="fd-popover__control"
           >
             <div
-              aria-controls="fd-217"
+              aria-controls="fd-mocked-short-id"
               aria-expanded={false}
               aria-haspopup={true}
               className="fd-select"
@@ -15574,7 +15574,7 @@ exports[`Storyshots Visual Select 1`] = `
             className="fd-popover__control"
           >
             <div
-              aria-controls="fd-218"
+              aria-controls="fd-mocked-short-id"
               aria-expanded={false}
               aria-haspopup={true}
               className="fd-select"
@@ -15618,7 +15618,7 @@ exports[`Storyshots Visual Select 1`] = `
           className="fd-popover__control"
         >
           <div
-            aria-controls="fd-219"
+            aria-controls="fd-mocked-short-id"
             aria-expanded={false}
             aria-haspopup={true}
             className="fd-select"
@@ -16245,7 +16245,7 @@ exports[`Storyshots Visual Side Nav 1`] = `
                 </span>
               </a>
               <a
-                aria-controls="fd-250"
+                aria-controls="fd-mocked-short-id"
                 aria-expanded={false}
                 aria-haspopup="true"
                 className="fd-nested-list__expand-icon"
@@ -16257,7 +16257,7 @@ exports[`Storyshots Visual Side Nav 1`] = `
               aria-expanded={false}
               aria-hidden={true}
               className="fd-nested-list--text-only fd-nested-list level-1"
-              id="fd-250"
+              id="fd-mocked-short-id"
             >
               <li
                 className="fd-nested-list__item"
@@ -16371,7 +16371,7 @@ exports[`Storyshots Visual Side Nav 1`] = `
                 </span>
               </a>
               <a
-                aria-controls="fd-257"
+                aria-controls="fd-mocked-short-id"
                 aria-expanded={false}
                 aria-haspopup="true"
                 className="fd-nested-list__expand-icon"
@@ -16383,7 +16383,7 @@ exports[`Storyshots Visual Side Nav 1`] = `
               aria-expanded={false}
               aria-hidden={true}
               className="fd-nested-list--text-only fd-nested-list level-1"
-              id="fd-257"
+              id="fd-mocked-short-id"
             >
               <li
                 className="fd-nested-list__item"
@@ -18349,7 +18349,7 @@ exports[`Storyshots Visual Tile 1`] = `
               className="fd-popover__control"
             >
               <button
-                aria-controls="fd-268"
+                aria-controls="fd-mocked-short-id"
                 aria-expanded={false}
                 aria-haspopup={true}
                 className="fd-button fd-button--transparent sap-icon--vertical-grip"
