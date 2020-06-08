@@ -73,6 +73,10 @@ export const validationState = () => (
     </div>
 );
 
+/**
+ * The **InputGroup.Addon** `isButton` prop supports buttons by providing the correct styling. Buttons can be shown with a text label or icon.
+ */
+
 export const addonButton = () => (
     <div className='fddocs-container'>
         <InputGroup>
@@ -96,12 +100,10 @@ export const addonButton = () => (
 
 addonButton.storyName = 'Button add-on';
 
-addonButton.parameters = {
-    docs: {
-        storyDescription: `The InputGroup.Addon isButton supports buttons by providing the correct styling. Buttons can be shown with a text
-        label or icon.`
-    }
-};
+/**
+ * The Input with text add-on component is typically used to specify the type of the data being entered, such as currency or unit of measure.
+This add-on can be placed at the left or right of the input element.
+ */
 
 export const addonText = () => (
     <div className='fddocs-container'>
@@ -119,13 +121,7 @@ export const addonText = () => (
 
 addonText.storyName = 'Text add-on';
 
-addonText.parameters = {
-    docs: {
-        storyDescription: `The Input with text add-on component is typically used to specify the
-        type of the data being entered, such as currency or unit of measure.
-        This add-on can be placed at the left or right of the input element.`
-    }
-};
+/** The consumer can add an **Icon** as a child of **InputGroup.Addon** */
 
 export const addonIcon = () => (
     <div className='fddocs-container'>
@@ -145,13 +141,6 @@ export const addonIcon = () => (
 );
 
 addonIcon.storyName = 'Icon add-on';
-
-addonIcon.parameters = {
-    docs: {
-        storyDescription: `The consumer can add an Icon as a child of InputGroup.Addon.'
-        title='Input with icons.`
-    }
-};
 
 export const textArea = () => (
     <InputGroup>

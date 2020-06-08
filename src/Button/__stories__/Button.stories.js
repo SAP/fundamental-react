@@ -13,6 +13,13 @@ export default {
 
 export const primary = () => (<Button>Button</Button>);
 
+/**
+ * There are three emphasis styles used to indicate the importance of the button on the page.
+ * * **Emphasized Button**: There should only be one highlighted button on the page. This is the primary call to action.
+ * * **Regular Button**: The default button style and the most common button. There may be more than one on a page.
+ * * **Transparent Button**: This is the lowest priority button and most often used with page content like appearing in a table or list.
+ * There may be more than one on the page.
+ */
 
 export const options = () => (
     <div className='fddocs-container'>
@@ -24,16 +31,13 @@ export const options = () => (
 
 options.storyName = 'Options';
 
-options.parameters = {
-    docs: {
-        storyDescription: `There are three emphasis styles used to indicate the importance of the button on
-        the page.\n\n* **Emphasized Button**: There should only be one highlighted button on the page.
-        This is the primary call to action.\n\n* **Regular Button**: The default button style and the
-        most common button. There may be more than one on a page.\n\n* **Transparent Button**: This is the
-        lowest priority button and most often used with page content like appearing in a table or list.
-        There may be more than one on the page.`
-    }
-};
+/**
+ * * **Standard Button**: Neutral or informative color
+ * * **Positive Button**: Used for positive actions such as approved, ok, yes.
+ * * **Negative Button**: Used for negative actions such as decline, cancel, no.
+ * * **Ghost Button**: Used for secondary actions or primary button in cases where there is already a primary button on the page.
+ * * **Attention Button**
+ */
 
 export const types = () => (
     <div className='fddocs-container'>
@@ -48,15 +52,7 @@ export const types = () => (
 
 types.storyName = 'Types';
 
-types.parameters = {
-    docs: {
-        storyDescription: `* **Standard Button**:
-Neutral or informative color \n\n* **Positive Button**: Used for positive actions
-such as approved, ok, yes. \n\n* **Negative Button**: Used for negative actions such as decline,
-cancel, no. \n\n* **Ghost Button**: Used for secondary actions or primary button in cases where there is already a
-primary button on the page. \n\n* **Attention Button**`
-    }
-};
+/** Button can have an icon with text or just and icon. */
 
 export const icons = () => (
     <div className='fddocs-container'>
@@ -85,11 +81,7 @@ export const icons = () => (
 
 icons.storyName = 'Icons';
 
-icons.parameters = {
-    docs: {
-        storyDescription: 'Button can have an icon with text or just and icon.'
-    }
-};
+/** There are two sizes. The `compact` size is only used on desktop and it is full size when used on a touch device. */
 
 export const sizes = () => (
     <div className='fddocs-container'>
@@ -100,11 +92,7 @@ export const sizes = () => (
 
 sizes.storyName = 'Sizes';
 
-sizes.parameters = {
-    docs: {
-        storyDescription: 'There are two sizes. The `compact` size is only used on desktop and it is full size when used on a touch device.'
-    }
-};
+/** There are three states: default, `selected`, and `disabled` */
 
 export const states = () => (
     <div className='fddocs-container'>
@@ -139,14 +127,6 @@ export const states = () => (
 );
 
 states.storyName = 'States';
-
-states.parameters = {
-    docs: {
-        storyDescription: 'There are three states: default, `selected`, and `disabled`.'
-    }
-};
-
-
 
 export const dev = () => (
     <Button

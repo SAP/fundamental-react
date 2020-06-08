@@ -24,6 +24,8 @@ export const primary = () => (
         title={'Page Title'} />
 );
 
+/** ActionBar with no back button */
+
 export const noBackButton = () => (
     <ActionBar
         actions={(<><Button>Button</Button>
@@ -33,11 +35,9 @@ export const noBackButton = () => (
         title='Page Title' />
 );
 
-noBackButton.parameters = {
-    docs: {
-        storyDescription: 'ActionBar with no back button'
-    }
-};
+/** When there are several main actions for a page, consider displaying them under a contextual menu. This
+allows the user to look in the same position they are used to but avoids cluttering the action bar with
+more than 3-4 actions. This also works well for a responsive/adaptive application. */
 
 export const contextualMenu = () => (
     <ActionBar
@@ -58,14 +58,6 @@ export const contextualMenu = () => (
 );
 
 contextualMenu.storyName = 'With a ContextualMenu';
-
-contextualMenu.parameters = {
-    docs: {
-        storyDescription: `When there are several main actions for a page, consider displaying them under a contextual menu. This
-        allows the user to look in the same position they are used to but avoids cluttering the action bar with
-        more than 3-4 actions. This also works well for a responsive/adaptive application.`
-    }
-};
 
 export const dev = () => (
     <ActionBar

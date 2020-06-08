@@ -76,6 +76,8 @@ export const primary = () => (
     </>
 );
 
+/** Radio button groups should always be grouped using FormFieldset for accessibility reasons. */
+
 export const radioButtonGroups = () => (
     <>
         <FormFieldset>
@@ -146,10 +148,3 @@ export const radioButtonGroups = () => (
         </FormFieldset>
     </>
 );
-
-radioButtonGroups.parameters = {
-    docs: {
-        storyDescription: 'Radio button groups should always be grouped using FormFieldset for accessibility reasons.'
-    }
-};
-

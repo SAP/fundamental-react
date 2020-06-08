@@ -85,6 +85,8 @@ export const subheader = () => {
     );
 };
 
+/** By default dialog body has no horizontal paddings. Add a size to modify the padding. */
+
 export const sizes = () => {
     let [showDialog, setShowDialog] = useState(false);
     let [showDialogMd, setShowDialogMd] = useState(false);
@@ -167,16 +169,6 @@ export const sizes = () => {
         </div>
     );
 };
-
-sizes.storyName = 'Sizes';
-
-sizes.parameters = {
-    docs: {
-        storyDescription: 'By default dialog body has no horizontal paddings. Add a size to modify the padding'
-    }
-};
-
-
 
 export const dev = () => (
     <Dialog

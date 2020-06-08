@@ -25,6 +25,10 @@ export default {
     component: Shellbar
 };
 
+
+/** This example shows the minimum Shellbar for a single application product with only user settings. If
+no user thumbnail is available then display initials. */
+
 export const basic = () => (
     <Shellbar
         logo={<img alt='SAP' src='//unpkg.com/fundamental-styles/dist/images/sap-logo.png' />}
@@ -33,12 +37,7 @@ export const basic = () => (
         profileMenu={profileMenu} />
 );
 
-basic.parameters = {
-    docs: {
-        storyDescription: `This example shows the minimum Shellbar for a single application product with only user settings. If
-        no user thumbnail is available then display initials.`
-    }
-};
+/** This example includes the product menu for navigating to applications within the product and shows a search box. */
 
 export const withProductMenu = () => (
     <Shellbar
@@ -61,13 +60,6 @@ export const withProductMenu = () => (
         subtitle='Subtitle' />
 );
 
-productMenu.parameters = {
-    docs: {
-        storyDescription: `This example includes the product menu for navigating to applications within the product and shows a
-        search box.`
-    }
-};
-
 export const withBackButton = () => (
     <Shellbar
         backAction={() =>{}}
@@ -76,6 +68,9 @@ export const withBackButton = () => (
         profile={profile}
         profileMenu={profileMenu} />
 );
+
+/** When a product has multiple links, the product links should collapse into an overflow menu on mobile
+screens. All actions, except for the user menu, should be collapsed. */
 
 export const coPilot = () => (
     <Shellbar
@@ -207,10 +202,3 @@ export const coPilot = () => (
         }}
         subtitle='Subtitle' />
 );
-
-coPilot.parameters = {
-    docs: {
-        storyDescription: `When a product has multiple links, the product links should collapse into an overflow menu on mobile
-        screens. All actions, except for the user menu, should be collapsed.`
-    }
-};

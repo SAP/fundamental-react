@@ -13,6 +13,7 @@ export default {
 
 export const primary = () => (<BusyIndicator show />);
 
+/** There are 3 sizes for Busy Indicator: `s`, `m` & `l`. */
 
 export const sizes = () => (
     <div className='fddocs-container'>
@@ -23,13 +24,6 @@ export const sizes = () => (
 );
 
 sizes.storyName = 'Sizes';
-
-sizes.parameters = {
-    docs: {
-        storyDescription: 'There are 3 sizes for Busy Indicator: `s`, `m` & `l`.'
-    }
-};
-
 
 export const dev = () => (
     <BusyIndicator

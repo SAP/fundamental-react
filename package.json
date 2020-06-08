@@ -126,6 +126,7 @@
     "size-limit": "^4.5.0",
     "standard-version": "^8.0.0",
     "start-server-and-test": "^1.11.0",
+    "story-description-loader": "^1.0.0",
     "storybook-addon-i18n": "^5.1.13",
     "style-loader": "^1.2.1",
     "stylelint": "^13.5.0",

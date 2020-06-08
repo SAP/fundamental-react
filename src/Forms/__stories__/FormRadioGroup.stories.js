@@ -55,6 +55,11 @@ export const compact = () => (
     </FormRadioGroup>
 );
 
+/**
+ * **Disabled**: This indicates the field is not editable. A common use case is that this field is dependent on a
+ * previous entry or selection within the form.
+ */
+
 export const disabled = () => (
     <FormRadioGroup>
         <FormRadioItem disabled>
@@ -68,14 +73,6 @@ export const disabled = () => (
         </FormRadioItem>
     </FormRadioGroup>
 );
-
-disabled.parameters = {
-    docs: {
-        storyDescription: `**Disabled**: This indicates the field is not 
-        editable. A common use case is that this field is dependent on a previous entry or 
-        selection within the form.`
-    }
-};
 
 export const validationStates = () => (
     <FormRadioGroup>

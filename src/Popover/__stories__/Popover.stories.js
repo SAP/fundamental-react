@@ -249,6 +249,11 @@ export const widthSizingTypes = () => (
     </>
 );
 
+/**
+ * When an overlay (`body`) is visible, the reference (`control`)
+ * element must be tracked because if it overflows from its boundaries, the overlay will be hidden as well.
+ */
+
 export const outOfBoundaries = () => {
     let [open, setOpen] = useState(false);
 
@@ -294,14 +299,6 @@ export const outOfBoundaries = () => {
             </Dialog>
         </>
     );
-};
-
-outOfBoundaries.parameters = {
-    docs: {
-        storyDescription: `When an overlay (\`body\`) is visible, the reference (\`control\`)
-        element must be tracked because if it overflows from its boundaries, the overlay
-        will be hidden as well.`
-    }
 };
 
 export const dev = () => (

@@ -16,8 +16,7 @@ module.exports = {
     webpackFinal: async(config) => {
         config.module.rules.push({
             test: /\.stories\.js?$/,
-            loaders: [require.resolve('@storybook/source-loader')],
-            enforce: 'pre'
+            use: [{ loader: 'story-description-loader' }],
         });
 
         config.module.rules.push({

@@ -16,19 +16,16 @@ export const primary = () => (
     <MessageStrip>Default MessageStrip</MessageStrip>
 );
 
+/**
+ * The **MessageStrip** provides information that is useful and relevant, but not critical. It can also provide
+ * feedback that an action has been executed. The user will need to dismiss the message.
+ */
+
 export const dismissible = () => (
     <MessageStrip dismissible>MessageStrip</MessageStrip>
 );
 
 dismissible.storyName = 'Dismissible';
-
-dismissible.parameters = {
-    docs: {
-        storyDescription: `The MessageStrip provides information
-        that is useful and relevant, but not critical. It can also provide
-        feedback that an action has been executed. The user will need to dismiss the message.`
-    }
-};
 
 export const noGlyph = () => (
     <MessageStrip noGlyph>MessageStrip</MessageStrip>
