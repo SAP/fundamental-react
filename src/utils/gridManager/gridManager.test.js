@@ -67,6 +67,7 @@ describe('GridManager', () => {
     };
 
     beforeAll(() => {
+        global.scrollTo = jest.fn();
         global.document.createElement = function() {
             const element = ce.apply(this, arguments);
             if (element.matches(GridSelector.CELL)) {
@@ -234,6 +235,7 @@ describe('GridManager', () => {
             manager.handleKeyDown(event);
 
             expect(document.activeElement).toEqual(gridNode.querySelector('#checkbox-1-0'));
+            expect(global.scrollTo).toHaveBeenCalled();
         });
 
         it('should focus on a cell if clicked', () => {
@@ -247,6 +249,7 @@ describe('GridManager', () => {
             manager.handleClickCell(event);
 
             expect(document.activeElement).toEqual(gridNode.querySelector('#cell-2-1'));
+            expect(global.scrollTo).toHaveBeenCalled();
         });
     });
 });
