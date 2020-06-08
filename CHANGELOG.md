@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.11.0-rc.6](https://github.com/SAP/fundamental-react/compare/v0.11.0-rc.5...v0.11.0-rc.6) (2020-06-08)
+
+
+### Bug Fixes
+
+* [Datepicker] Scrolls to top of page on click ([#1080](https://github.com/SAP/fundamental-react/issues/1080)) ([7ae5781](https://github.com/SAP/fundamental-react/commit/7ae5781359709f1ebea2fb7bfbf7ed55ef5b1d13))
+
 ## [0.11.0-rc.5](https://github.com/SAP/fundamental-react/compare/v0.11.0-rc.4...v0.11.0-rc.5) (2020-06-08)
 
 
