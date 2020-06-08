@@ -1,11 +1,11 @@
+import LayoutPanel from './LayoutPanel';
 import { mount } from 'enzyme';
-import Panel from './Panel';
 import React from 'react';
 
-describe('<Panel />', () => {
+describe('<LayoutPanel />', () => {
     describe('Prop spreading', () => {
-        test('should allow props to be spread to the Panel component', () => {
-            const element = mount(<Panel data-sample='Sample' />);
+        test('should allow props to be spread to the LayoutPanel component', () => {
+            const element = mount(<LayoutPanel data-sample='Sample' />);
 
             expect(
                 element.getDOMNode().attributes['data-sample'].value
@@ -20,10 +20,10 @@ describe('<Panel />', () => {
                 super(props);
                 ref = React.createRef();
             }
-            render = () => <Panel ref={ref} />;
+            render = () => <LayoutPanel ref={ref} />;
         }
         mount(<Test />);
         expect(ref.current.tagName).toEqual('DIV');
-        expect(ref.current.className).toEqual('fd-panel');
+        expect(ref.current.className).toEqual('fd-layout-panel');
     });
 });

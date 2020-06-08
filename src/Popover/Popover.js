@@ -134,6 +134,14 @@ class Popover extends Component {
             onClick: onClickFunctions,
             ref: (c) => {
                 this.controlRef = findDOMNode(c);
+                if (control.ref) {
+                    if (typeof control.ref === 'function') {
+                        control.ref(c);
+                    } else if (typeof control.ref === 'object') {
+                        control.ref.current = c;
+                    }
+                }
+
             }
         };
 

@@ -3,11 +3,11 @@ import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-const PanelHead = props => {
+const LayoutPanelHead = props => {
     const { title, description, className, headingLevel, ...rest } = props;
 
     const panelHeadClasses = classnames(
-        'fd-panel__head',
+        'fd-layout-panel__head',
         className
     );
 
@@ -15,15 +15,15 @@ const PanelHead = props => {
 
     return (
         <div {...rest} className={panelHeadClasses}>
-            {title ? <HeadingTag className='fd-panel__title'>{title}</HeadingTag> : null}
-            {description ? <p className='fd-panel__description'>{description}</p> : null}
+            {title ? <HeadingTag className='fd-layout-panel__title'>{title}</HeadingTag> : null}
+            {description ? <p className='fd-layout-panel__description'>{description}</p> : null}
         </div>
     );
 };
 
-PanelHead.displayName = 'Panel.Head';
+LayoutPanelHead.displayName = 'LayoutPanel.Head';
 
-PanelHead.propTypes = {
+LayoutPanelHead.propTypes = {
     /** CSS class(es) to add to the element */
     className: PropTypes.string,
     /** Localized text for the description of the panel */
@@ -34,8 +34,8 @@ PanelHead.propTypes = {
     title: PropTypes.string
 };
 
-PanelHead.defaultProps = {
+LayoutPanelHead.defaultProps = {
     headingLevel: 3
 };
 
-export default PanelHead;
+export default LayoutPanelHead;
