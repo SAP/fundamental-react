@@ -11,13 +11,13 @@ exports[`Storyshots Visual Checkbox 1`] = `
       <input
         aria-checked="false"
         className="fd-checkbox"
-        id="fd-29"
+        id="fd-30"
         onChange={[Function]}
         type="checkbox"
       />
       <label
         className="fd-form-label fd-checkbox__label"
-        htmlFor="fd-29"
+        htmlFor="fd-30"
       >
         Default Checkbox
       </label>
@@ -30,13 +30,13 @@ exports[`Storyshots Visual Checkbox 1`] = `
       <input
         aria-checked="mixed"
         className="fd-checkbox"
-        id="fd-30"
+        id="fd-31"
         onChange={[Function]}
         type="checkbox"
       />
       <label
         className="fd-form-label fd-checkbox__label"
-        htmlFor="fd-30"
+        htmlFor="fd-31"
       >
         Text Option
       </label>
@@ -51,13 +51,13 @@ exports[`Storyshots Visual Checkbox 1`] = `
         aria-checked="false"
         className="fd-checkbox"
         disabled={true}
-        id="fd-31"
+        id="fd-32"
         onChange={[Function]}
         type="checkbox"
       />
       <label
         className="fd-form-label is-disabled fd-checkbox__label"
-        htmlFor="fd-31"
+        htmlFor="fd-32"
       >
         Text Option
       </label>
@@ -70,13 +70,13 @@ exports[`Storyshots Visual Checkbox 1`] = `
       <input
         aria-checked="false"
         className="fd-checkbox fd-checkbox--compact"
-        id="fd-32"
+        id="fd-33"
         onChange={[Function]}
         type="checkbox"
       />
       <label
         className="fd-form-label fd-checkbox__label"
-        htmlFor="fd-32"
+        htmlFor="fd-33"
       >
         Text Option
       </label>
@@ -92,23 +92,6 @@ exports[`Storyshots Visual Checkbox 1`] = `
         <input
           aria-checked="false"
           className="fd-checkbox is-error"
-          id="fd-33"
-          onChange={[Function]}
-          type="checkbox"
-        />
-        <label
-          className="fd-form-label fd-checkbox__label"
-          htmlFor="fd-33"
-        >
-          Text Option
-        </label>
-      </div>
-      <div
-        className="fd-form-item"
-      >
-        <input
-          aria-checked="false"
-          className="fd-checkbox is-warning"
           id="fd-34"
           onChange={[Function]}
           type="checkbox"
@@ -125,7 +108,7 @@ exports[`Storyshots Visual Checkbox 1`] = `
       >
         <input
           aria-checked="false"
-          className="fd-checkbox is-success"
+          className="fd-checkbox is-warning"
           id="fd-35"
           onChange={[Function]}
           type="checkbox"
@@ -142,7 +125,7 @@ exports[`Storyshots Visual Checkbox 1`] = `
       >
         <input
           aria-checked="false"
-          className="fd-checkbox is-information"
+          className="fd-checkbox is-success"
           id="fd-36"
           onChange={[Function]}
           type="checkbox"
@@ -150,6 +133,23 @@ exports[`Storyshots Visual Checkbox 1`] = `
         <label
           className="fd-form-label fd-checkbox__label"
           htmlFor="fd-36"
+        >
+          Text Option
+        </label>
+      </div>
+      <div
+        className="fd-form-item"
+      >
+        <input
+          aria-checked="false"
+          className="fd-checkbox is-information"
+          id="fd-37"
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <label
+          className="fd-form-label fd-checkbox__label"
+          htmlFor="fd-37"
         >
           Text Option
         </label>
@@ -165,13 +165,13 @@ exports[`Storyshots Visual Checkbox 1`] = `
         aria-checked="false"
         className="fd-checkbox"
         disabled={false}
-        id="fd-37"
+        id="fd-38"
         onChange={[Function]}
         type="checkbox"
       />
       <label
         className="fd-form-label fd-checkbox__label"
-        htmlFor="fd-37"
+        htmlFor="fd-38"
       >
         Text Option
       </label>
