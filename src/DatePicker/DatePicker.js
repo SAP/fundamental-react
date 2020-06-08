@@ -337,6 +337,7 @@ class DatePicker extends Component {
             readOnly,
             specialDays,
             validationState,
+            weekdayStart,
             ...props
         } = this.props;
 
@@ -387,7 +388,8 @@ class DatePicker extends Component {
                                 localizedText={localizedText}
                                 onChange={this.updateDate}
                                 ref={this.calendarRef}
-                                specialDays={specialDays} />
+                                specialDays={specialDays}
+                                weekdayStart={weekdayStart} />
                         </>
                     }
                     control={
@@ -436,7 +438,7 @@ class DatePicker extends Component {
 DatePicker.displayName = 'DatePicker';
 
 DatePicker.propTypes = {
-    ...Calendar.basePropTypes,
+    ...Calendar.PropTypes,
     /** aria-label for datepicker button */
     buttonLabel: PropTypes.string,
     /** Additional props to be spread to the `<button>` element */

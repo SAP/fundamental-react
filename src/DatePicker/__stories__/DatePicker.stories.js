@@ -7,14 +7,17 @@ import React from 'react';
 import {
     boolean,
     date,
+    number,
     optionsKnob,
     select,
-    text
+    text,
+    withKnobs
 } from '@storybook/addon-knobs';
 
 export default {
     title: 'Component API/DatePicker',
-    component: DatePicker
+    component: DatePicker,
+    decorators: [withKnobs]
 };
 
 function dateKnobToDate(name, defaultValue) {
@@ -231,6 +234,12 @@ specialDaysEx.story = {
     name: 'Special Days'
 };
 
+export const weekdayStartEx = () => (<DatePicker weekdayStart={number('weekdayStart', 1)} />);
+
+weekdayStartEx.story = {
+    name: 'Weekday Start (Monday Start)'
+};
+
 export const dev = () => (
     <DatePicker
         blockedDates={[dateKnobToDate('block between dates (1)', blockedDateFirstDefault),
@@ -252,7 +261,8 @@ export const dev = () => (
                 'information': { state: 'information', text: 'placeholder text' },
                 'warning': { state: 'warning', text: 'placeholder text' }
             }
-        )} />
+        )}
+        weekdayStart={number('weekdayStart', 0)} />
 );
 
 dev.story = {

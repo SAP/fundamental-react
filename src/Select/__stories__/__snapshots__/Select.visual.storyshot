@@ -17,7 +17,7 @@ exports[`Storyshots Visual Select 1`] = `
           className="fd-popover__control"
         >
           <div
-            aria-controls="fd-212"
+            aria-controls="fd-213"
             aria-expanded={false}
             aria-haspopup={true}
             className="fd-select"
@@ -52,7 +52,7 @@ exports[`Storyshots Visual Select 1`] = `
           className="fd-popover__control"
         >
           <div
-            aria-controls="fd-213"
+            aria-controls="fd-214"
             aria-expanded={false}
             aria-haspopup={true}
             className="fd-select fd-select--compact"
@@ -87,7 +87,7 @@ exports[`Storyshots Visual Select 1`] = `
           className="fd-popover__control"
         >
           <div
-            aria-controls="fd-214"
+            aria-controls="fd-215"
             aria-expanded={false}
             aria-haspopup={true}
             className="fd-select"
@@ -125,7 +125,7 @@ exports[`Storyshots Visual Select 1`] = `
             className="fd-popover__control"
           >
             <div
-              aria-controls="fd-215"
+              aria-controls="fd-216"
               aria-expanded={false}
               aria-haspopup={true}
               className="fd-select"
@@ -165,7 +165,7 @@ exports[`Storyshots Visual Select 1`] = `
             className="fd-popover__control"
           >
             <div
-              aria-controls="fd-216"
+              aria-controls="fd-217"
               aria-expanded={false}
               aria-haspopup={true}
               className="fd-select"
@@ -205,7 +205,7 @@ exports[`Storyshots Visual Select 1`] = `
             className="fd-popover__control"
           >
             <div
-              aria-controls="fd-217"
+              aria-controls="fd-218"
               aria-expanded={false}
               aria-haspopup={true}
               className="fd-select"
@@ -245,7 +245,7 @@ exports[`Storyshots Visual Select 1`] = `
             className="fd-popover__control"
           >
             <div
-              aria-controls="fd-218"
+              aria-controls="fd-219"
               aria-expanded={false}
               aria-haspopup={true}
               className="fd-select"
@@ -288,7 +288,7 @@ exports[`Storyshots Visual Select 1`] = `
           className="fd-popover__control"
         >
           <div
-            aria-controls="fd-219"
+            aria-controls="fd-220"
             aria-expanded={false}
             aria-haspopup={true}
             className="fd-select"

@@ -14,13 +14,13 @@ exports[`Storyshots Visual Form Radio Group 1`] = `
       >
         <input
           className="fd-radio"
-          id="fd-59"
-          name="fd-58"
+          id="fd-60"
+          name="fd-59"
           type="radio"
         />
         <label
           className="fd-form-label fd-radio__label"
-          htmlFor="fd-59"
+          htmlFor="fd-60"
         >
           Option 1
         </label>
@@ -31,13 +31,13 @@ exports[`Storyshots Visual Form Radio Group 1`] = `
       >
         <input
           className="fd-radio"
-          id="fd-60"
-          name="fd-58"
+          id="fd-61"
+          name="fd-59"
           type="radio"
         />
         <label
           className="fd-form-label fd-radio__label"
-          htmlFor="fd-60"
+          htmlFor="fd-61"
         >
           Option 2
         </label>
@@ -48,13 +48,13 @@ exports[`Storyshots Visual Form Radio Group 1`] = `
       >
         <input
           className="fd-radio"
-          id="fd-61"
-          name="fd-58"
+          id="fd-62"
+          name="fd-59"
           type="radio"
         />
         <label
           className="fd-form-label fd-radio__label"
-          htmlFor="fd-61"
+          htmlFor="fd-62"
         >
           Option 3
         </label>
@@ -71,32 +71,15 @@ exports[`Storyshots Visual Form Radio Group 1`] = `
       >
         <input
           className="fd-radio"
-          id="fd-63"
-          name="fd-62"
-          type="radio"
-        />
-        <label
-          className="fd-form-label fd-radio__label"
-          htmlFor="fd-63"
-        >
-          Option 1
-        </label>
-      </div>
-      <div
-        className="fd-form-item fd-form-item--inline"
-        onChange={[Function]}
-      >
-        <input
-          className="fd-radio"
           id="fd-64"
-          name="fd-62"
+          name="fd-63"
           type="radio"
         />
         <label
           className="fd-form-label fd-radio__label"
           htmlFor="fd-64"
         >
-          Option 2
+          Option 1
         </label>
       </div>
       <div
@@ -106,12 +89,29 @@ exports[`Storyshots Visual Form Radio Group 1`] = `
         <input
           className="fd-radio"
           id="fd-65"
-          name="fd-62"
+          name="fd-63"
           type="radio"
         />
         <label
           className="fd-form-label fd-radio__label"
           htmlFor="fd-65"
+        >
+          Option 2
+        </label>
+      </div>
+      <div
+        className="fd-form-item fd-form-item--inline"
+        onChange={[Function]}
+      >
+        <input
+          className="fd-radio"
+          id="fd-66"
+          name="fd-63"
+          type="radio"
+        />
+        <label
+          className="fd-form-label fd-radio__label"
+          htmlFor="fd-66"
         >
           Option 3
         </label>
@@ -128,32 +128,15 @@ exports[`Storyshots Visual Form Radio Group 1`] = `
       >
         <input
           className="fd-radio fd-radio--compact"
-          id="fd-67"
-          name="fd-66"
-          type="radio"
-        />
-        <label
-          className="fd-form-label fd-radio__label"
-          htmlFor="fd-67"
-        >
-          Option 1
-        </label>
-      </div>
-      <div
-        className="fd-form-item"
-        onChange={[Function]}
-      >
-        <input
-          className="fd-radio fd-radio--compact"
           id="fd-68"
-          name="fd-66"
+          name="fd-67"
           type="radio"
         />
         <label
           className="fd-form-label fd-radio__label"
           htmlFor="fd-68"
         >
-          Option 2
+          Option 1
         </label>
       </div>
       <div
@@ -163,12 +146,29 @@ exports[`Storyshots Visual Form Radio Group 1`] = `
         <input
           className="fd-radio fd-radio--compact"
           id="fd-69"
-          name="fd-66"
+          name="fd-67"
           type="radio"
         />
         <label
           className="fd-form-label fd-radio__label"
           htmlFor="fd-69"
+        >
+          Option 2
+        </label>
+      </div>
+      <div
+        className="fd-form-item"
+        onChange={[Function]}
+      >
+        <input
+          className="fd-radio fd-radio--compact"
+          id="fd-70"
+          name="fd-67"
+          type="radio"
+        />
+        <label
+          className="fd-form-label fd-radio__label"
+          htmlFor="fd-70"
         >
           Option 3
         </label>
@@ -186,33 +186,15 @@ exports[`Storyshots Visual Form Radio Group 1`] = `
         <input
           className="fd-radio"
           disabled={true}
-          id="fd-71"
-          name="fd-70"
-          type="radio"
-        />
-        <label
-          className="fd-form-label is-disabled fd-radio__label"
-          htmlFor="fd-71"
-        >
-          Option 1
-        </label>
-      </div>
-      <div
-        className="fd-form-item"
-        onChange={[Function]}
-      >
-        <input
-          className="fd-radio"
-          disabled={true}
           id="fd-72"
-          name="fd-70"
+          name="fd-71"
           type="radio"
         />
         <label
           className="fd-form-label is-disabled fd-radio__label"
           htmlFor="fd-72"
         >
-          Option 2
+          Option 1
         </label>
       </div>
       <div
@@ -223,12 +205,30 @@ exports[`Storyshots Visual Form Radio Group 1`] = `
           className="fd-radio"
           disabled={true}
           id="fd-73"
-          name="fd-70"
+          name="fd-71"
           type="radio"
         />
         <label
           className="fd-form-label is-disabled fd-radio__label"
           htmlFor="fd-73"
+        >
+          Option 2
+        </label>
+      </div>
+      <div
+        className="fd-form-item"
+        onChange={[Function]}
+      >
+        <input
+          className="fd-radio"
+          disabled={true}
+          id="fd-74"
+          name="fd-71"
+          type="radio"
+        />
+        <label
+          className="fd-form-label is-disabled fd-radio__label"
+          htmlFor="fd-74"
         >
           Option 3
         </label>
@@ -245,13 +245,13 @@ exports[`Storyshots Visual Form Radio Group 1`] = `
       >
         <input
           className="fd-radio"
-          id="fd-75"
-          name="fd-74"
+          id="fd-76"
+          name="fd-75"
           type="radio"
         />
         <label
           className="fd-form-label fd-radio__label"
-          htmlFor="fd-75"
+          htmlFor="fd-76"
         >
           Default
         </label>
@@ -262,13 +262,13 @@ exports[`Storyshots Visual Form Radio Group 1`] = `
       >
         <input
           className="fd-radio is-error"
-          id="fd-76"
-          name="fd-74"
+          id="fd-77"
+          name="fd-75"
           type="radio"
         />
         <label
           className="fd-form-label fd-radio__label"
-          htmlFor="fd-76"
+          htmlFor="fd-77"
         >
           Error
         </label>
@@ -279,13 +279,13 @@ exports[`Storyshots Visual Form Radio Group 1`] = `
       >
         <input
           className="fd-radio is-warning"
-          id="fd-77"
-          name="fd-74"
+          id="fd-78"
+          name="fd-75"
           type="radio"
         />
         <label
           className="fd-form-label fd-radio__label"
-          htmlFor="fd-77"
+          htmlFor="fd-78"
         >
           Warning
         </label>
@@ -296,13 +296,13 @@ exports[`Storyshots Visual Form Radio Group 1`] = `
       >
         <input
           className="fd-radio is-success"
-          id="fd-78"
-          name="fd-74"
+          id="fd-79"
+          name="fd-75"
           type="radio"
         />
         <label
           className="fd-form-label fd-radio__label"
-          htmlFor="fd-78"
+          htmlFor="fd-79"
         >
           Success
         </label>
@@ -313,13 +313,13 @@ exports[`Storyshots Visual Form Radio Group 1`] = `
       >
         <input
           className="fd-radio is-information"
-          id="fd-79"
-          name="fd-74"
+          id="fd-80"
+          name="fd-75"
           type="radio"
         />
         <label
           className="fd-form-label fd-radio__label"
-          htmlFor="fd-79"
+          htmlFor="fd-80"
         >
           Information
         </label>
@@ -336,13 +336,13 @@ exports[`Storyshots Visual Form Radio Group 1`] = `
       >
         <input
           className="fd-radio"
-          id="fd-81"
-          name="fd-80"
+          id="fd-82"
+          name="fd-81"
           type="radio"
         />
         <label
           className="fd-form-label fd-radio__label"
-          htmlFor="fd-81"
+          htmlFor="fd-82"
         >
           Option 1
         </label>
@@ -353,13 +353,13 @@ exports[`Storyshots Visual Form Radio Group 1`] = `
       >
         <input
           className="fd-radio"
-          id="fd-82"
-          name="fd-80"
+          id="fd-83"
+          name="fd-81"
           type="radio"
         />
         <label
           className="fd-form-label fd-radio__label"
-          htmlFor="fd-82"
+          htmlFor="fd-83"
         >
           Option 2
         </label>
@@ -370,13 +370,13 @@ exports[`Storyshots Visual Form Radio Group 1`] = `
       >
         <input
           className="fd-radio"
-          id="fd-83"
-          name="fd-80"
+          id="fd-84"
+          name="fd-81"
           type="radio"
         />
         <label
           className="fd-form-label fd-radio__label"
-          htmlFor="fd-83"
+          htmlFor="fd-84"
         >
           Option 3
         </label>

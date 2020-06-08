@@ -55,7 +55,7 @@ exports[`Storyshots Visual Form Input 1`] = `
             className="fd-popover__control"
           >
             <input
-              aria-controls="fd-54"
+              aria-controls="fd-55"
               aria-expanded={false}
               aria-haspopup={true}
               className="fd-input is-error"
@@ -86,7 +86,7 @@ exports[`Storyshots Visual Form Input 1`] = `
             className="fd-popover__control"
           >
             <input
-              aria-controls="fd-55"
+              aria-controls="fd-56"
               aria-expanded={false}
               aria-haspopup={true}
               className="fd-input is-warning"
@@ -117,7 +117,7 @@ exports[`Storyshots Visual Form Input 1`] = `
             className="fd-popover__control"
           >
             <input
-              aria-controls="fd-56"
+              aria-controls="fd-57"
               aria-expanded={false}
               aria-haspopup={true}
               className="fd-input is-information"
@@ -148,7 +148,7 @@ exports[`Storyshots Visual Form Input 1`] = `
             className="fd-popover__control"
           >
             <input
-              aria-controls="fd-57"
+              aria-controls="fd-58"
               aria-expanded={false}
               aria-haspopup={true}
               className="fd-input is-success"
