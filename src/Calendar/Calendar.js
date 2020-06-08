@@ -749,7 +749,7 @@ Calendar.propTypes = {
     /** Additional props to be spread to the `<table>` element */
     tableProps: PropTypes.object,
     /** Number to indicate which day the week should start. 1 = Sunday, 2 = Monday, 3 = Tuesday, 4 = Wednesday, 5 = Thursday, 6 = Friday, 7 = Saturday */
-    weekdayStart: PropTypes.number,
+    weekdayStart: CustomPropTypes.range(1, 7),
     /** Additional props to be spread to the year\'s `<table>` element */
     yearListProps: PropTypes.object,
     /** Callback function when the change event fires on the component */

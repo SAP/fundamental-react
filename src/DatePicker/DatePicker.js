@@ -438,7 +438,7 @@ class DatePicker extends Component {
 DatePicker.displayName = 'DatePicker';
 
 DatePicker.propTypes = {
-    ...Calendar.basePropTypes,
+    ...Calendar.PropTypes,
     /** aria-label for datepicker button */
     buttonLabel: PropTypes.string,
     /** Additional props to be spread to the `<button>` element */
@@ -479,8 +479,6 @@ DatePicker.propTypes = {
         /** Text of the validation message */
         text: PropTypes.string
     }),
-    /** Number to indicate which day the week should start. 1 = Sunday, 2 = Monday, 3 = Tuesday, 4 = Wednesday, 5 = Thursday, 6 = Friday, 7 = Saturday */
-    weekdayStart: PropTypes.number,
     /** Callback function for onBlur events. In the object returned,`date` is the date object,
      * `formattedDate` is the formatted date, and `isoFormattedDate` is the date formatted in ISO-8601 format (YYYY-MM-DD) */
     onBlur: PropTypes.func,
