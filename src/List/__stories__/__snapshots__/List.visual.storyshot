@@ -618,36 +618,6 @@ exports[`Storyshots Visual List 1`] = `
             <input
               aria-checked="false"
               className="fd-checkbox"
-              id="fd-86"
-              onChange={[Function]}
-              type="checkbox"
-            />
-            <label
-              className="fd-form-label fd-checkbox__label"
-              htmlFor="fd-86"
-            />
-          </div>
-        </div>
-        <span
-          className="fd-list__title"
-        >
-          List Item 1
-        </span>
-      </li>
-      <li
-        className="fd-list__item"
-        onClick={[Function]}
-        tabIndex="0"
-      >
-        <div
-          className="fd-form-item fd-list__form-item"
-        >
-          <div
-            className="fd-form-item fd-form-item--inline"
-          >
-            <input
-              aria-checked="false"
-              className="fd-checkbox"
               id="fd-87"
               onChange={[Function]}
               type="checkbox"
@@ -661,7 +631,7 @@ exports[`Storyshots Visual List 1`] = `
         <span
           className="fd-list__title"
         >
-          List Item 2
+          List Item 1
         </span>
       </li>
       <li
@@ -691,7 +661,7 @@ exports[`Storyshots Visual List 1`] = `
         <span
           className="fd-list__title"
         >
-          List Item 3
+          List Item 2
         </span>
       </li>
       <li
@@ -715,6 +685,36 @@ exports[`Storyshots Visual List 1`] = `
             <label
               className="fd-form-label fd-checkbox__label"
               htmlFor="fd-89"
+            />
+          </div>
+        </div>
+        <span
+          className="fd-list__title"
+        >
+          List Item 3
+        </span>
+      </li>
+      <li
+        className="fd-list__item"
+        onClick={[Function]}
+        tabIndex="0"
+      >
+        <div
+          className="fd-form-item fd-list__form-item"
+        >
+          <div
+            className="fd-form-item fd-form-item--inline"
+          >
+            <input
+              aria-checked="false"
+              className="fd-checkbox"
+              id="fd-90"
+              onChange={[Function]}
+              type="checkbox"
+            />
+            <label
+              className="fd-form-label fd-checkbox__label"
+              htmlFor="fd-90"
             />
           </div>
         </div>
