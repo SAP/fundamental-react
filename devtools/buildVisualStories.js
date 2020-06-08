@@ -26,10 +26,7 @@ componentDirs.map((directory) => {
             // TODO: reenable storyshots for examples using hooks in storybook@6
             // https://github.com/storybookjs/storybook/releases/tag/v6.0.0-alpha.43
             if (componentName === 'Calendar'
-            || componentName === 'Dialog'
-            || componentName === 'Table'
-            || componentName === 'Popover'
-            || componentName === 'Shellbar') {
+            || componentName === 'Dialog') {
                 return;
             }
 
