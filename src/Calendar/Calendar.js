@@ -501,10 +501,10 @@ class Calendar extends Component {
         );
     }
 
-    shiftDays = (startOnDay = 1, weekdays) => {
+    shiftDays = (startOnDay = 0, weekdays) => {
         const _weekdays = [...weekdays];
         let counter = startOnDay;
-        while (counter > 1) {
+        while (counter > 0) {
             const day = _weekdays.shift();
             _weekdays.push(day);
             counter = counter - 1;
@@ -531,10 +531,10 @@ class Calendar extends Component {
 
     normalizedWeekdayStart = () => {
         const weekdayStart = parseInt(this.props.weekdayStart, 10);
-        if (!isNaN(weekdayStart) && weekdayStart > 0 && weekdayStart <= 7) {
+        if (!isNaN(weekdayStart) && weekdayStart >= 0 && weekdayStart <= 6) {
             return weekdayStart;
         }
-        return 1;
+        return 0;
     }
 
     generateDays = (tableBodyProps) => {
@@ -547,7 +547,7 @@ class Calendar extends Component {
         const enableRangeSelection = this.props.enableRangeSelection;
 
         const firstDayMonth = moment(currentDateDisplayed).startOf('month');
-        const firstDayWeekMonth = moment(firstDayMonth).startOf('week').weekday(this.normalizedWeekdayStart() - 1);
+        const firstDayWeekMonth = moment(firstDayMonth).startOf('week').weekday(this.normalizedWeekdayStart());
         const isAfterFirstDayMonth = moment(firstDayWeekMonth).isAfter(firstDayMonth);
 
         const rows = [];
@@ -748,8 +748,8 @@ Calendar.propTypes = {
     tableHeaderProps: PropTypes.object,
     /** Additional props to be spread to the `<table>` element */
     tableProps: PropTypes.object,
-    /** Number to indicate which day the week should start. 1 = Sunday, 2 = Monday, 3 = Tuesday, 4 = Wednesday, 5 = Thursday, 6 = Friday, 7 = Saturday */
-    weekdayStart: CustomPropTypes.range(1, 7),
+    /** Number to indicate which day the week should start. 0 = Sunday, 1 = Monday, 2 = Tuesday, 3 = Wednesday, 4 = Thursday, 5 = Friday, 6 = Saturday */
+    weekdayStart: CustomPropTypes.range(0, 6),
     /** Additional props to be spread to the year\'s `<table>` element */
     yearListProps: PropTypes.object,
     /** Callback function when the change event fires on the component */
@@ -767,7 +767,7 @@ Calendar.defaultProps = {
     },
     onChange: () => { },
     specialDays: {},
-    weekdayStart: 1
+    weekdayStart: 0
 };
 
 export default Calendar;

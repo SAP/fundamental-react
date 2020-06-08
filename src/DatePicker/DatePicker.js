@@ -503,8 +503,7 @@ DatePicker.defaultProps = {
     onBlur: () => {},
     onChange: () => {},
     onDatePickerClose: () => {},
-    onFocus: () => {},
-    weekdayStart: 1
+    onFocus: () => {}
 };
 
 export default DatePicker;

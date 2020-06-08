@@ -74,7 +74,7 @@ export const rangeSelection = () => (
 );
 
 export const weekdayStart = () => {
-    const _weekdayStart = number('weekdayStart', 2);
+    const _weekdayStart = number('weekdayStart', 1);
     return <Calendar weekdayStart={_weekdayStart} />;
 };
 
@@ -91,7 +91,7 @@ export const dev = () => (
         disabledDates={[dateKnobToDate('disable between dates (1)', disabledDateFirstDefault),
             dateKnobToDate('disable between dates (2)', disabledDateSecondDefault)]}
         locale={text('locale', 'en')}
-        weekdayStart={number('weekdayStart', 1)} />
+        weekdayStart={number('weekdayStart', 0)} />
 );
 
 dev.story = {
