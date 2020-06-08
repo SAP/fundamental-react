@@ -184,6 +184,9 @@ export default class GridManager {
 
     focusCell = ({ row, col, element, focusableElements }) => {
         this.setFocusPointer(row, col);
+        const posX = window.pageXOffset;
+        const posY = window.pageYOffset;
+
         if (
             focusableElements &&
             focusableElements.length === 1
@@ -192,6 +195,8 @@ export default class GridManager {
         } else {
             element.focus();
         }
+
+        window.scrollTo(posX, posY);
     };
 
     handleKeyDown = (event) => {

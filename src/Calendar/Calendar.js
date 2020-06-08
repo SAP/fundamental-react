@@ -501,20 +501,40 @@ class Calendar extends Component {
         );
     }
 
+    shiftDays = (startOnDay = 0, weekdays) => {
+        const _weekdays = [...weekdays];
+        let counter = startOnDay;
+        while (counter > 0) {
+            const day = _weekdays.shift();
+            _weekdays.push(day);
+            counter = counter - 1;
+        }
+        return _weekdays;
+    }
+
     generateWeekdays = () => {
         const weekDays = [];
         const daysName = moment.localeData(this.props.locale).weekdaysMin().map(day => day.charAt(0));
+        const shiftedDaysName = this.shiftDays(this.normalizedWeekdayStart(), daysName);
 
         for (let index = 0; index < 7; index++) {
             weekDays.push(
                 <th className='fd-calendar__item fd-calendar__item--side-helper' key={index}>
                     <span className='fd-calendar__text'>
-                        {daysName[index]}
+                        {shiftedDaysName[index]}
                     </span>
                 </th>);
         }
         return <tr className='fd-calendar__row'>{weekDays}</tr>;
 
+    }
+
+    normalizedWeekdayStart = () => {
+        const weekdayStart = parseInt(this.props.weekdayStart, 10);
+        if (!isNaN(weekdayStart) && weekdayStart >= 0 && weekdayStart <= 6) {
+            return weekdayStart;
+        }
+        return 0;
     }
 
     generateDays = (tableBodyProps) => {
@@ -527,11 +547,13 @@ class Calendar extends Component {
         const enableRangeSelection = this.props.enableRangeSelection;
 
         const firstDayMonth = moment(currentDateDisplayed).startOf('month');
-        const firstDayWeekMonth = moment(firstDayMonth).startOf('week');
+        const firstDayWeekMonth = moment(firstDayMonth).startOf('week').weekday(this.normalizedWeekdayStart());
+        const isAfterFirstDayMonth = moment(firstDayWeekMonth).isAfter(firstDayMonth);
+
         const rows = [];
 
         let days = [];
-        let day = firstDayWeekMonth;
+        let day = isAfterFirstDayMonth ? firstDayWeekMonth.subtract(7, 'days') : firstDayWeekMonth;
         let dateFormatted = '';
 
         for (let week = 0; week < 6; week++) {
@@ -641,6 +663,7 @@ class Calendar extends Component {
             tableHeaderProps,
             tableBodyProps,
             specialDays,
+            weekdayStart,
             ...props
         } = this.props;
 
@@ -673,7 +696,7 @@ Calendar.displayName = 'Calendar';
 
 Calendar.propTypes = {
     /** Blocks dates that are in between the blocked dates */
-    blockedDates: PropTypes.arrayOf(PropTypes.instanceOf(Date)),
+    blockedDates: PropTypes.arrayOf(PropTypes.instanceOf(moment)),
     /** CSS class(es) to add to the element */
     className: PropTypes.string,
     customDate: PropTypes.oneOfType([
@@ -681,11 +704,11 @@ Calendar.propTypes = {
         PropTypes.array
     ]),
     /** Disables dates of a calendar that come after the specified date */
-    disableAfterDate: PropTypes.instanceOf(Date),
+    disableAfterDate: PropTypes.instanceOf(moment),
     /** Disables dates of a calendar that come before the specified date */
-    disableBeforeDate: PropTypes.instanceOf(Date),
+    disableBeforeDate: PropTypes.instanceOf(moment),
     /** Disables dates that are in between the disabled dates */
-    disabledDates: PropTypes.arrayOf(PropTypes.instanceOf(Date)),
+    disabledDates: PropTypes.arrayOf(PropTypes.instanceOf(moment)),
     /** Set to **true** to disable dates after today\'s date */
     disableFutureDates: PropTypes.bool,
     /** Set to **true** to disable dates before today\'s date */
@@ -725,6 +748,8 @@ Calendar.propTypes = {
     tableHeaderProps: PropTypes.object,
     /** Additional props to be spread to the `<table>` element */
     tableProps: PropTypes.object,
+    /** Number to indicate which day the week should start. 0 = Sunday, 1 = Monday, 2 = Tuesday, 3 = Wednesday, 4 = Thursday, 5 = Friday, 6 = Saturday */
+    weekdayStart: CustomPropTypes.range(0, 6),
     /** Additional props to be spread to the year\'s `<table>` element */
     yearListProps: PropTypes.object,
     /** Callback function when the change event fires on the component */
@@ -741,7 +766,8 @@ Calendar.defaultProps = {
         show12PreviousYears: 'Show 12 previous years'
     },
     onChange: () => { },
-    specialDays: {}
+    specialDays: {},
+    weekdayStart: 0
 };
 
 export default Calendar;
