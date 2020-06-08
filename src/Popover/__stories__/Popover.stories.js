@@ -39,7 +39,7 @@ const longBodyContent = (
 );
 
 const someMenu = (
-    <Menu style={{ maxWidth: '10em', padding: '1em' }}>
+    <Menu>
         <Menu.List>
             <Menu.Item url='#'>Option 1</Menu.Item>
             <Menu.Item url='#'>Option 2</Menu.Item>

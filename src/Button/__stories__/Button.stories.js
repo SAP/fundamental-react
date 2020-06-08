@@ -41,6 +41,8 @@ export const types = () => (
         <Button type='standard'>Standard Button</Button>
         <Button type='positive'>Positive Button</Button>
         <Button type='negative'>Negative Button</Button>
+        <Button type='ghost'>Ghost Button</Button>
+        <Button type='attention'>Attention Button</Button>
     </div>
 );
 
@@ -49,8 +51,10 @@ types.storyName = 'Types';
 types.parameters = {
     docs: {
         storyDescription: `* **Standard Button**:
-        Neutral or informative color \n\n* **Positive Button**: Used for positive actions 
-        such as approved, ok, yes. \n\n* **Negative Button**: Used for negative actions such as decline, cancel, no.`
+Neutral or informative color \n\n* **Positive Button**: Used for positive actions
+such as approved, ok, yes. \n\n* **Negative Button**: Used for negative actions such as decline,
+cancel, no. \n\n* **Ghost Button**: Used for secondary actions or primary button in cases where there is already a
+primary button on the page. \n\n* **Attention Button**`
     }
 };
 
@@ -61,6 +65,8 @@ export const icons = () => (
         <Button glyph='filter' option='transparent'>Filter</Button>
         <Button glyph='accept' type='positive'>Approve</Button>
         <Button glyph='decline' type='negative'>Reject</Button>
+        <Button glyph='edit' type='ghost'>Edit</Button>
+        <Button glyph='warning' type='attention'>Ignore</Button>
         <div className='fddocs-container--break' />
         <Button glyph='alert' option='emphasized' />
         <Button aria-label='Add to cart' glyph='cart' />
@@ -70,6 +76,10 @@ export const icons = () => (
             type='positive' />
         <Button aria-label='Decline' glyph='decline'
             type='negative' />
+        <Button aria-label='Edit' glyph='edit'
+            type='ghost' />
+        <Button aria-label='Ignore' glyph='warning'
+            type='attention' />
     </div>
 );
 
@@ -117,6 +127,14 @@ export const states = () => (
         <Button type='negative'>Negative Button</Button>
         <Button selected type='negative'>Negative Button</Button>
         <Button disabled type='negative'>Negative Button</Button>
+        <div className='fddocs-container--break' />
+        <Button type='ghost'>Ghost Button</Button>
+        <Button selected type='ghost'>Ghost Button</Button>
+        <Button disabled type='ghost'>Ghost Button</Button>
+        <div className='fddocs-container--break' />
+        <Button type='attention'>Attention Button</Button>
+        <Button selected type='attention'>Attention Button</Button>
+        <Button disabled type='attention'>Attention Button</Button>
     </div>
 );
 

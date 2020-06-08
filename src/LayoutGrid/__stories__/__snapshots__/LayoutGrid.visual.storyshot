@@ -9,48 +9,48 @@ exports[`Storyshots Visual Layout Grid 1`] = `
       className="fd-layout-grid"
     >
       <div
-        className="fd-panel"
+        className="fd-layout-panel"
       >
         <div
-          className="fd-panel__body"
+          className="fd-layout-panel__body"
         >
-          Panel
+          LayoutPanel
         </div>
       </div>
       <div
-        className="fd-panel"
+        className="fd-layout-panel"
       >
         <div
-          className="fd-panel__body"
+          className="fd-layout-panel__body"
         >
-          Panel
+          LayoutPanel
         </div>
       </div>
       <div
-        className="fd-panel"
+        className="fd-layout-panel"
       >
         <div
-          className="fd-panel__body"
+          className="fd-layout-panel__body"
         >
-          Panel
+          LayoutPanel
         </div>
       </div>
       <div
-        className="fd-panel"
+        className="fd-layout-panel"
       >
         <div
-          className="fd-panel__body"
+          className="fd-layout-panel__body"
         >
-          Panel
+          LayoutPanel
         </div>
       </div>
       <div
-        className="fd-panel"
+        className="fd-layout-panel"
       >
         <div
-          className="fd-panel__body"
+          className="fd-layout-panel__body"
         >
-          Panel
+          LayoutPanel
         </div>
       </div>
     </div>
@@ -60,48 +60,48 @@ exports[`Storyshots Visual Layout Grid 1`] = `
       className="fd-layout-grid fd-layout-grid--no-gap"
     >
       <div
-        className="fd-panel"
+        className="fd-layout-panel"
       >
         <div
-          className="fd-panel__body"
+          className="fd-layout-panel__body"
         >
-          Panel
+          LayoutPanel
         </div>
       </div>
       <div
-        className="fd-panel"
+        className="fd-layout-panel"
       >
         <div
-          className="fd-panel__body"
+          className="fd-layout-panel__body"
         >
-          Panel
+          LayoutPanel
         </div>
       </div>
       <div
-        className="fd-panel"
+        className="fd-layout-panel"
       >
         <div
-          className="fd-panel__body"
+          className="fd-layout-panel__body"
         >
-          Panel
+          LayoutPanel
         </div>
       </div>
       <div
-        className="fd-panel"
+        className="fd-layout-panel"
       >
         <div
-          className="fd-panel__body"
+          className="fd-layout-panel__body"
         >
-          Panel
+          LayoutPanel
         </div>
       </div>
       <div
-        className="fd-panel"
+        className="fd-layout-panel"
       >
         <div
-          className="fd-panel__body"
+          className="fd-layout-panel__body"
         >
-          Panel
+          LayoutPanel
         </div>
       </div>
     </div>
@@ -111,39 +111,39 @@ exports[`Storyshots Visual Layout Grid 1`] = `
       className="fd-layout-grid fd-layout-grid--col-2"
     >
       <div
-        className="fd-panel"
+        className="fd-layout-panel"
       >
         <div
-          className="fd-panel__body"
+          className="fd-layout-panel__body"
         >
-          Panel
+          LayoutPanel
         </div>
       </div>
       <div
-        className="fd-panel"
+        className="fd-layout-panel"
       >
         <div
-          className="fd-panel__body"
+          className="fd-layout-panel__body"
         >
-          Panel
+          LayoutPanel
         </div>
       </div>
       <div
-        className="fd-panel"
+        className="fd-layout-panel"
       >
         <div
-          className="fd-panel__body"
+          className="fd-layout-panel__body"
         >
-          Panel
+          LayoutPanel
         </div>
       </div>
       <div
-        className="fd-panel"
+        className="fd-layout-panel"
       >
         <div
-          className="fd-panel__body"
+          className="fd-layout-panel__body"
         >
-          Panel
+          LayoutPanel
         </div>
       </div>
     </div>
@@ -153,75 +153,75 @@ exports[`Storyshots Visual Layout Grid 1`] = `
       className="fd-layout-grid fd-layout-grid--col-4"
     >
       <div
-        className="fd-panel"
+        className="fd-layout-panel"
       >
         <div
-          className="fd-panel__body"
+          className="fd-layout-panel__body"
         >
-          Panel
+          LayoutPanel
         </div>
       </div>
       <div
-        className="fd-panel"
+        className="fd-layout-panel"
       >
         <div
-          className="fd-panel__body"
+          className="fd-layout-panel__body"
         >
-          Panel
+          LayoutPanel
         </div>
       </div>
       <div
-        className="fd-panel"
+        className="fd-layout-panel"
       >
         <div
-          className="fd-panel__body"
+          className="fd-layout-panel__body"
         >
-          Panel
+          LayoutPanel
         </div>
       </div>
       <div
-        className="fd-panel"
+        className="fd-layout-panel"
       >
         <div
-          className="fd-panel__body"
+          className="fd-layout-panel__body"
         >
-          Panel
+          LayoutPanel
         </div>
       </div>
       <div
-        className="fd-panel"
+        className="fd-layout-panel"
       >
         <div
-          className="fd-panel__body"
+          className="fd-layout-panel__body"
         >
-          Panel
+          LayoutPanel
         </div>
       </div>
       <div
-        className="fd-panel"
+        className="fd-layout-panel"
       >
         <div
-          className="fd-panel__body"
+          className="fd-layout-panel__body"
         >
-          Panel
+          LayoutPanel
         </div>
       </div>
       <div
-        className="fd-panel"
+        className="fd-layout-panel"
       >
         <div
-          className="fd-panel__body"
+          className="fd-layout-panel__body"
         >
-          Panel
+          LayoutPanel
         </div>
       </div>
       <div
-        className="fd-panel"
+        className="fd-layout-panel"
       >
         <div
-          className="fd-panel__body"
+          className="fd-layout-panel__body"
         >
-          Panel
+          LayoutPanel
         </div>
       </div>
     </div>
@@ -231,138 +231,138 @@ exports[`Storyshots Visual Layout Grid 1`] = `
       className="fd-layout-grid fd-layout-grid--col-6"
     >
       <div
-        className="fd-panel fd-layout-grid__span-column-2"
+        className="fd-layout-panel fd-layout-grid__span-column-2"
       >
         <div
-          className="fd-panel__body"
+          className="fd-layout-panel__body"
         >
-          Panel with colSpan=2
+          LayoutPanel with colSpan=2
         </div>
       </div>
       <div
-        className="fd-panel"
+        className="fd-layout-panel"
       >
         <div
-          className="fd-panel__body"
+          className="fd-layout-panel__body"
         >
-          Panel
+          LayoutPanel
         </div>
       </div>
       <div
-        className="fd-panel"
+        className="fd-layout-panel"
       >
         <div
-          className="fd-panel__body"
+          className="fd-layout-panel__body"
         >
-          Panel
+          LayoutPanel
         </div>
       </div>
       <div
-        className="fd-panel"
+        className="fd-layout-panel"
       >
         <div
-          className="fd-panel__body"
+          className="fd-layout-panel__body"
         >
-          Panel
+          LayoutPanel
         </div>
       </div>
       <div
-        className="fd-panel"
+        className="fd-layout-panel"
       >
         <div
-          className="fd-panel__body"
+          className="fd-layout-panel__body"
         >
-          Panel
+          LayoutPanel
         </div>
       </div>
       <div
-        className="fd-panel fd-layout-grid__span-column-3"
+        className="fd-layout-panel fd-layout-grid__span-column-3"
       >
         <div
-          className="fd-panel__body"
+          className="fd-layout-panel__body"
         >
-          Panel with colSpan=3
+          LayoutPanel with colSpan=3
         </div>
       </div>
       <div
-        className="fd-panel"
+        className="fd-layout-panel"
       >
         <div
-          className="fd-panel__body"
+          className="fd-layout-panel__body"
         >
-          Panel
+          LayoutPanel
         </div>
       </div>
       <div
-        className="fd-panel"
+        className="fd-layout-panel"
       >
         <div
-          className="fd-panel__body"
+          className="fd-layout-panel__body"
         >
-          Panel
+          LayoutPanel
         </div>
       </div>
       <div
-        className="fd-panel"
+        className="fd-layout-panel"
       >
         <div
-          className="fd-panel__body"
+          className="fd-layout-panel__body"
         >
-          Panel
+          LayoutPanel
         </div>
       </div>
       <div
-        className="fd-panel fd-layout-grid__span-column-4"
+        className="fd-layout-panel fd-layout-grid__span-column-4"
       >
         <div
-          className="fd-panel__body"
+          className="fd-layout-panel__body"
         >
-          Panel with colSpan=4
+          LayoutPanel with colSpan=4
         </div>
       </div>
       <div
-        className="fd-panel"
+        className="fd-layout-panel"
       >
         <div
-          className="fd-panel__body"
+          className="fd-layout-panel__body"
         >
-          Panel
+          LayoutPanel
         </div>
       </div>
       <div
-        className="fd-panel"
+        className="fd-layout-panel"
       >
         <div
-          className="fd-panel__body"
+          className="fd-layout-panel__body"
         >
-          Panel
+          LayoutPanel
         </div>
       </div>
       <div
-        className="fd-panel fd-layout-grid__span-column-5"
+        className="fd-layout-panel fd-layout-grid__span-column-5"
       >
         <div
-          className="fd-panel__body"
+          className="fd-layout-panel__body"
         >
-          Panel with colSpan=5
+          LayoutPanel with colSpan=5
         </div>
       </div>
       <div
-        className="fd-panel"
+        className="fd-layout-panel"
       >
         <div
-          className="fd-panel__body"
+          className="fd-layout-panel__body"
         >
-          Panel
+          LayoutPanel
         </div>
       </div>
       <div
-        className="fd-panel fd-layout-grid__span-column-6"
+        className="fd-layout-panel fd-layout-grid__span-column-6"
       >
         <div
-          className="fd-panel__body"
+          className="fd-layout-panel__body"
         >
-          Panel with colSpan=6
+          LayoutPanel with colSpan=6
         </div>
       </div>
     </div>

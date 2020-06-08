@@ -21,12 +21,6 @@ describe('<InputGroup />', () => {
                 element.getDOMNode().tagName
             ).toBe('DIV');
         });
-
-        it('should have a default class of "fd-input-group"', () => {
-            expect(
-                element.getDOMNode().className
-            ).toContain('fd-input-group');
-        });
     });
 
     describe('Rendering with Props', () => {
@@ -37,17 +31,6 @@ describe('<InputGroup />', () => {
             expect(
                 element.getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
-        });
-
-        it('should create form input', () => {
-            let element = setup();
-
-            expect(
-                element.getDOMNode().className
-            ).toContain('fd-input-group');
-            expect(
-                element.getDOMNode().className
-            ).toContain('fd-input-group--control');
         });
     });
 });

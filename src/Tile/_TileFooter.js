@@ -2,28 +2,27 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-const PanelFilters = props => {
+const TileFooter = props => {
     const { children, className, ...rest } = props;
 
-    const panelFiltersClasses = classnames(
-        'fd-panel__filters',
+    const tileFooterClasses = classnames(
+        'fd-tile__footer',
         className
     );
 
     return (
-        <div {...rest} className={panelFiltersClasses}>
+        <div {...rest} className={tileFooterClasses}>
             {children}
-        </div>
-    );
+        </div>);
 };
 
-PanelFilters.displayName = 'Panel.Filters';
+TileFooter.displayName = 'Tile.Footer';
 
-PanelFilters.propTypes = {
-    /** Node(s) to render within the component */
+TileFooter.propTypes = {
+    /** Node(s) to render inside the header element */
     children: PropTypes.node,
     /** CSS class(es) to add to the element */
     className: PropTypes.string
 };
 
-export default PanelFilters;
+export default TileFooter;
