@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.11.0-rc.7](https://github.com/SAP/fundamental-react/compare/v0.11.0-rc.6...v0.11.0-rc.7) (2020-06-08)
+
+
+### Features
+
+* weekdayStart for Calendar ([#1083](https://github.com/SAP/fundamental-react/issues/1083)) ([138653d](https://github.com/SAP/fundamental-react/commit/138653d9d1b5940a7690f8dc165d7659288f1e18))
+
 ## [0.11.0-rc.6](https://github.com/SAP/fundamental-react/compare/v0.11.0-rc.5...v0.11.0-rc.6) (2020-06-08)
 
 
