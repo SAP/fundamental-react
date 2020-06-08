@@ -64,6 +64,18 @@ exports[`Storyshots Visual Button 1`] = `
       >
         Negative Button
       </button>
+      <button
+        className="fd-button fd-button--ghost"
+        type="button"
+      >
+        Ghost Button
+      </button>
+      <button
+        className="fd-button fd-button--attention"
+        type="button"
+      >
+        Attention Button
+      </button>
     </div>
   </div>
   <div>
@@ -100,6 +112,18 @@ exports[`Storyshots Visual Button 1`] = `
       >
         Reject
       </button>
+      <button
+        className="fd-button fd-button--ghost sap-icon--edit"
+        type="button"
+      >
+        Edit
+      </button>
+      <button
+        className="fd-button fd-button--attention sap-icon--warning"
+        type="button"
+      >
+        Ignore
+      </button>
       <div
         className="fddocs-container--break"
       />
@@ -125,6 +149,16 @@ exports[`Storyshots Visual Button 1`] = `
       <button
         aria-label="Decline"
         className="fd-button fd-button--negative sap-icon--decline"
+        type="button"
+      />
+      <button
+        aria-label="Edit"
+        className="fd-button fd-button--ghost sap-icon--edit"
+        type="button"
+      />
+      <button
+        aria-label="Ignore"
+        className="fd-button fd-button--attention sap-icon--warning"
         type="button"
       />
     </div>
@@ -262,6 +296,52 @@ exports[`Storyshots Visual Button 1`] = `
         type="button"
       >
         Negative Button
+      </button>
+      <div
+        className="fddocs-container--break"
+      />
+      <button
+        className="fd-button fd-button--ghost"
+        type="button"
+      >
+        Ghost Button
+      </button>
+      <button
+        className="fd-button fd-button--ghost is-selected"
+        selected={true}
+        type="button"
+      >
+        Ghost Button
+      </button>
+      <button
+        className="fd-button fd-button--ghost is-disabled"
+        disabled={true}
+        type="button"
+      >
+        Ghost Button
+      </button>
+      <div
+        className="fddocs-container--break"
+      />
+      <button
+        className="fd-button fd-button--attention"
+        type="button"
+      >
+        Attention Button
+      </button>
+      <button
+        className="fd-button fd-button--attention is-selected"
+        selected={true}
+        type="button"
+      >
+        Attention Button
+      </button>
+      <button
+        className="fd-button fd-button--attention is-disabled"
+        disabled={true}
+        type="button"
+      >
+        Attention Button
       </button>
     </div>
   </div>

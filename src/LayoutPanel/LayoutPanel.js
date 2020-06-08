@@ -1,28 +1,28 @@
 import classnames from 'classnames';
 import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
-import PanelActions from './_PanelActions';
-import PanelBody from './_PanelBody';
-import PanelFilters from './_PanelFilters';
-import PanelFooter from './_PanelFooter';
-import PanelHead from './_PanelHead';
-import PanelHeader from './_PanelHeader';
+import LayoutPanelActions from './_LayoutPanelActions';
+import LayoutPanelBody from './_LayoutPanelBody';
+import LayoutPanelFilters from './_LayoutPanelFilters';
+import LayoutPanelFooter from './_LayoutPanelFooter';
+import LayoutPanelHead from './_LayoutPanelHead';
+import LayoutPanelHeader from './_LayoutPanelHeader';
 import PropTypes from 'prop-types';
 import React, { useEffect } from 'react';
 
-/** A **Panel** is used to encapsulate part of the content, form elements, lists, collections, etc., on a page.
+/** A **LayoutPanel** is used to encapsulate part of the content, form elements, lists, collections, etc., on a page.
 Place patterns and interactions within panels on your pages to achieve focus and separation for the tasks at-hand
 with the information displayed inside the panel. */
-const Panel = React.forwardRef(({ colSpan, children, className, disableStyles, ...props }, ref) => {
+const LayoutPanel = React.forwardRef(({ colSpan, children, className, disableStyles, ...props }, ref) => {
 
     useEffect(() => {
         if (!disableStyles) {
             require('fundamental-styles/dist/layout-grid.css');
-            require('fundamental-styles/dist/panel.css');
+            require('fundamental-styles/dist/layout-panel.css');
         }
     }, []);
 
     const panelClasses = classnames(
-        'fd-panel',
+        'fd-layout-panel',
         {
             [`fd-layout-grid__span-column-${colSpan}`]: !!colSpan
         },
@@ -35,9 +35,9 @@ const Panel = React.forwardRef(({ colSpan, children, className, disableStyles, .
     </div>);
 });
 
-Panel.displayName = 'Panel';
+LayoutPanel.displayName = 'LayoutPanel';
 
-Panel.propTypes = {
+LayoutPanel.propTypes = {
     /** Node(s) to render within the component */
     children: PropTypes.node,
     /** CSS class(es) to add to the element */
@@ -48,11 +48,11 @@ Panel.propTypes = {
     disableStyles: PropTypes.bool
 };
 
-Panel.Actions = PanelActions;
-Panel.Body = PanelBody;
-Panel.Filters = PanelFilters;
-Panel.Footer = PanelFooter;
-Panel.Head = PanelHead;
-Panel.Header = PanelHeader;
+LayoutPanel.Actions = LayoutPanelActions;
+LayoutPanel.Body = LayoutPanelBody;
+LayoutPanel.Filters = LayoutPanelFilters;
+LayoutPanel.Footer = LayoutPanelFooter;
+LayoutPanel.Head = LayoutPanelHead;
+LayoutPanel.Header = LayoutPanelHeader;
 
-export default Panel;
+export default LayoutPanel;

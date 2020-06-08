@@ -1,82 +1,82 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Visual Panel 1`] = `
+exports[`Storyshots Visual Layout Panel 1`] = `
 <div
   dir="ltr"
 >
   <div>
     <div
-      className="fd-panel"
+      className="fd-layout-panel"
     >
       <div
-        className="fd-panel__header"
+        className="fd-layout-panel__header"
       >
         <div
-          className="fd-panel__head"
+          className="fd-layout-panel__head"
         >
           <h3
-            className="fd-panel__title"
+            className="fd-layout-panel__title"
           >
-            Panel Header with Actions
+            LayoutPanel Header with Actions
           </h3>
           <p
-            className="fd-panel__description"
+            className="fd-layout-panel__description"
           >
-            Panel Description
+            LayoutPanel Description
           </p>
         </div>
         <div
-          className="fd-panel__actions"
+          className="fd-layout-panel__actions"
         >
           <div>
-            Panel actions
+            LayoutPanel actions
           </div>
         </div>
       </div>
       <div
-        className="fd-panel__filters"
+        className="fd-layout-panel__filters"
       >
         <div>
-          Panel Filters
+          LayoutPanel Filters
         </div>
       </div>
       <div
-        className="fd-panel__body"
+        className="fd-layout-panel__body"
       >
         <div>
-          Panel Body
+          LayoutPanel Body
         </div>
       </div>
       <div
-        className="fd-panel__footer"
+        className="fd-layout-panel__footer"
       >
-        Panel Footer
+        LayoutPanel Footer
       </div>
     </div>
   </div>
   <div>
     <div
-      className="fd-panel"
+      className="fd-layout-panel"
     >
       <div
-        className="fd-panel__header"
+        className="fd-layout-panel__header"
       >
         <div
-          className="fd-panel__head"
+          className="fd-layout-panel__head"
         >
           <h3
-            className="fd-panel__title"
+            className="fd-layout-panel__title"
           >
-            Panel Header with Actions
+            LayoutPanel Header with Actions
           </h3>
           <p
-            className="fd-panel__description"
+            className="fd-layout-panel__description"
           >
-            Panel Description
+            LayoutPanel Description
           </p>
         </div>
         <div
-          className="fd-panel__actions"
+          className="fd-layout-panel__actions"
         >
           <button
             className="fd-button fd-button--compact sap-icon--add"
@@ -87,10 +87,10 @@ exports[`Storyshots Visual Panel 1`] = `
         </div>
       </div>
       <div
-        className="fd-panel__filters"
+        className="fd-layout-panel__filters"
       >
         <div>
-          Panel Filters
+          LayoutPanel Filters
         </div>
         <br />
         <div
@@ -105,7 +105,7 @@ exports[`Storyshots Visual Panel 1`] = `
               className="fd-popover__control"
             >
               <button
-                aria-controls="fd-204"
+                aria-controls="fd-84"
                 aria-expanded={false}
                 aria-haspopup={true}
                 className="fd-button"
@@ -132,7 +132,7 @@ exports[`Storyshots Visual Panel 1`] = `
               className="fd-popover__control"
             >
               <button
-                aria-controls="fd-205"
+                aria-controls="fd-85"
                 aria-expanded={false}
                 aria-haspopup={true}
                 className="fd-button"
@@ -149,38 +149,38 @@ exports[`Storyshots Visual Panel 1`] = `
         </div>
       </div>
       <div
-        className="fd-panel__body"
+        className="fd-layout-panel__body"
       >
         <div>
-          Panel Body
+          LayoutPanel Body
         </div>
         <br />
         <div
           className="fd-tile"
-          onClick={[Function]}
-          tabIndex={0}
+          role="button"
+          tabIndex="0"
         >
           <div
-            className="fd-tile__media"
+            className="fd-tile__header"
           >
-            <span
-              className="fd-avatar fd-avatar--l fd-avatar--thumbnail fd-avatar--circle"
-              role="presentation"
-              style={
-                Object {
-                  "backgroundImage": "url(./assets/nature.jpg)",
+            <div
+              className="fd-tile__title"
+            >
+              Tile Title
+              <span
+                className="fd-avatar fd-avatar--l fd-avatar--thumbnail fd-avatar--circle"
+                role="presentation"
+                style={
+                  Object {
+                    "backgroundImage": "url(./assets/nature.jpg)",
+                  }
                 }
-              }
-            />
+              />
+            </div>
           </div>
           <div
             className="fd-tile__content"
           >
-            <h3
-              className="fd-tile__title"
-            >
-              Tile Title
-            </h3>
             <p>
               Tile Description
             </p>
@@ -188,9 +188,9 @@ exports[`Storyshots Visual Panel 1`] = `
         </div>
       </div>
       <div
-        className="fd-panel__footer"
+        className="fd-layout-panel__footer"
       >
-        Panel Footer
+        LayoutPanel Footer
       </div>
     </div>
   </div>

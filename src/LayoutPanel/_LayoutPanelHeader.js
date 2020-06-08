@@ -2,24 +2,24 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-const PanelFooter = props => {
+const LayoutPanelHeader = props => {
     const { children, className, ...rest } = props;
 
-    const panelFooterClasses = classnames(
-        'fd-panel__footer',
+    const panelHeaderClasses = classnames(
+        'fd-layout-panel__header',
         className
     );
 
-    return <div {...rest} className={panelFooterClasses}>{children}</div>;
+    return <div {...rest} className={panelHeaderClasses}>{children}</div>;
 };
 
-PanelFooter.displayName = 'Panel.Footer';
+LayoutPanelHeader.displayName = 'LayoutPanel.Header';
 
-PanelFooter.propTypes = {
+LayoutPanelHeader.propTypes = {
     /** Node(s) to render within the component */
     children: PropTypes.node,
     /** CSS class(es) to add to the element */
     className: PropTypes.string
 };
 
-export default PanelFooter;
+export default LayoutPanelHeader;

@@ -5,9 +5,9 @@ import Tile from './Tile';
 describe('<Tile />', () => {
     const handleClick = jest.fn();
     const activeTile = (
-        <Tile active onClick={handleClick}>
-            <Tile.Content title='Tile Title' />
-            <Tile.Actions className='tile-actions' />
+        <Tile onClick={handleClick}>
+            <Tile.Header>Test Header</Tile.Header>
+            <Tile.Content>Test Content</Tile.Content>
         </Tile>
     );
 
@@ -19,17 +19,6 @@ describe('<Tile />', () => {
                 element.getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
         });
-    });
-
-    test('classnames are correct on product tile', () => {
-        const wrapper = mount(<Tile productTile>
-            <Tile.Content title='Tile Title' />
-        </Tile>);
-
-        expect(wrapper.find('.fd-product-tile').length).toEqual(1);
-        expect(wrapper.find('.fd-product-tile__content').length).toEqual(1);
-        expect(wrapper.find('.fd-tile').length).toEqual(0);
-        expect(wrapper.find('.fd-tile__content').length).toEqual(0);
     });
 
     test('forwards the ref', () => {
@@ -46,22 +35,11 @@ describe('<Tile />', () => {
         expect(ref.current.className).toEqual('fd-tile');
     });
 
-    test('onClick handler should be called on active tile', () => {
+    test('onClick handler should be tile', () => {
         const component = mount(activeTile);
         component
             .find('div.fd-tile')
             .simulate('click', { target: { text: '4' }, stopPropagation: () => {} });
         expect(handleClick).toHaveBeenCalled();
     });
-
-    test('onClick handler should not be called on actions', () => {
-        const component = mount(activeTile);
-        const stopPropagationFn = jest.fn();
-        component
-            .find('.tile-actions')
-            .at(1)
-            .simulate('click', { target: { text: '4' }, stopPropagation: stopPropagationFn });
-        expect(stopPropagationFn).toHaveBeenCalled();
-    });
-
 });

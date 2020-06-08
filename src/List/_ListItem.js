@@ -26,7 +26,8 @@ const ListItem = ({
         'fd-list__item',
         {
             'fd-list__item--link': isLink,
-            'fd-list__item--action': action
+            'fd-list__item--action': action,
+            'is-selected': !isLink && selected
         },
         className
     );
@@ -72,10 +73,10 @@ const ListItem = ({
 
     return (
         <li
+            tabIndex={isLink ? '-1' : '0'}
             {...props}
             className={ListItemClasses}
-            onClick={disableListItemOnClick ? null : handleClick}
-            tabIndex={isLink ? '-1' : '0'}>
+            onClick={disableListItemOnClick ? null : handleClick}>
             {content}
         </li>
 

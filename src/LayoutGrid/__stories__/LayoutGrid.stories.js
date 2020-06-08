@@ -1,6 +1,6 @@
 /* eslint-disable react/no-multi-comp */
 import LayoutGrid from '../LayoutGrid';
-import Panel from '../../Panel/Panel';
+import LayoutPanel from '../../LayoutPanel/LayoutPanel';
 import React from 'react';
 
 export default {
@@ -10,141 +10,141 @@ export default {
 
 export const primary = () => (
     <LayoutGrid>
-        <Panel>
-            <Panel.Body>Panel</Panel.Body>
-        </Panel>
-        <Panel>
-            <Panel.Body>Panel</Panel.Body>
-        </Panel>
-        <Panel>
-            <Panel.Body>Panel</Panel.Body>
-        </Panel>
-        <Panel>
-            <Panel.Body>Panel</Panel.Body>
-        </Panel>
-        <Panel>
-            <Panel.Body>Panel</Panel.Body>
-        </Panel>
+        <LayoutPanel>
+            <LayoutPanel.Body>LayoutPanel</LayoutPanel.Body>
+        </LayoutPanel>
+        <LayoutPanel>
+            <LayoutPanel.Body>LayoutPanel</LayoutPanel.Body>
+        </LayoutPanel>
+        <LayoutPanel>
+            <LayoutPanel.Body>LayoutPanel</LayoutPanel.Body>
+        </LayoutPanel>
+        <LayoutPanel>
+            <LayoutPanel.Body>LayoutPanel</LayoutPanel.Body>
+        </LayoutPanel>
+        <LayoutPanel>
+            <LayoutPanel.Body>LayoutPanel</LayoutPanel.Body>
+        </LayoutPanel>
     </LayoutGrid>
 );
 
 export const noGap = () => (
     <LayoutGrid nogap>
-        <Panel>
-            <Panel.Body>Panel</Panel.Body>
-        </Panel>
-        <Panel>
-            <Panel.Body>Panel</Panel.Body>
-        </Panel>
-        <Panel>
-            <Panel.Body>Panel</Panel.Body>
-        </Panel>
-        <Panel>
-            <Panel.Body>Panel</Panel.Body>
-        </Panel>
-        <Panel>
-            <Panel.Body>Panel</Panel.Body>
-        </Panel>
+        <LayoutPanel>
+            <LayoutPanel.Body>LayoutPanel</LayoutPanel.Body>
+        </LayoutPanel>
+        <LayoutPanel>
+            <LayoutPanel.Body>LayoutPanel</LayoutPanel.Body>
+        </LayoutPanel>
+        <LayoutPanel>
+            <LayoutPanel.Body>LayoutPanel</LayoutPanel.Body>
+        </LayoutPanel>
+        <LayoutPanel>
+            <LayoutPanel.Body>LayoutPanel</LayoutPanel.Body>
+        </LayoutPanel>
+        <LayoutPanel>
+            <LayoutPanel.Body>LayoutPanel</LayoutPanel.Body>
+        </LayoutPanel>
     </LayoutGrid>
 );
 
 export const twoColumns = () => (
     <LayoutGrid cols={2}>
-        <Panel>
-            <Panel.Body>Panel</Panel.Body>
-        </Panel>
-        <Panel>
-            <Panel.Body>Panel</Panel.Body>
-        </Panel>
-        <Panel>
-            <Panel.Body>Panel</Panel.Body>
-        </Panel>
-        <Panel>
-            <Panel.Body>Panel</Panel.Body>
-        </Panel>
+        <LayoutPanel>
+            <LayoutPanel.Body>LayoutPanel</LayoutPanel.Body>
+        </LayoutPanel>
+        <LayoutPanel>
+            <LayoutPanel.Body>LayoutPanel</LayoutPanel.Body>
+        </LayoutPanel>
+        <LayoutPanel>
+            <LayoutPanel.Body>LayoutPanel</LayoutPanel.Body>
+        </LayoutPanel>
+        <LayoutPanel>
+            <LayoutPanel.Body>LayoutPanel</LayoutPanel.Body>
+        </LayoutPanel>
     </LayoutGrid>
 );
 
 export const fourColumns = () => (
     <LayoutGrid cols={4}>
-        <Panel>
-            <Panel.Body>Panel</Panel.Body>
-        </Panel>
-        <Panel>
-            <Panel.Body>Panel</Panel.Body>
-        </Panel>
-        <Panel>
-            <Panel.Body>Panel</Panel.Body>
-        </Panel>
-        <Panel>
-            <Panel.Body>Panel</Panel.Body>
-        </Panel>
-        <Panel>
-            <Panel.Body>Panel</Panel.Body>
-        </Panel>
-        <Panel>
-            <Panel.Body>Panel</Panel.Body>
-        </Panel>
-        <Panel>
-            <Panel.Body>Panel</Panel.Body>
-        </Panel>
-        <Panel>
-            <Panel.Body>Panel</Panel.Body>
-        </Panel>
+        <LayoutPanel>
+            <LayoutPanel.Body>LayoutPanel</LayoutPanel.Body>
+        </LayoutPanel>
+        <LayoutPanel>
+            <LayoutPanel.Body>LayoutPanel</LayoutPanel.Body>
+        </LayoutPanel>
+        <LayoutPanel>
+            <LayoutPanel.Body>LayoutPanel</LayoutPanel.Body>
+        </LayoutPanel>
+        <LayoutPanel>
+            <LayoutPanel.Body>LayoutPanel</LayoutPanel.Body>
+        </LayoutPanel>
+        <LayoutPanel>
+            <LayoutPanel.Body>LayoutPanel</LayoutPanel.Body>
+        </LayoutPanel>
+        <LayoutPanel>
+            <LayoutPanel.Body>LayoutPanel</LayoutPanel.Body>
+        </LayoutPanel>
+        <LayoutPanel>
+            <LayoutPanel.Body>LayoutPanel</LayoutPanel.Body>
+        </LayoutPanel>
+        <LayoutPanel>
+            <LayoutPanel.Body>LayoutPanel</LayoutPanel.Body>
+        </LayoutPanel>
     </LayoutGrid>
 );
 
 export const colSpan = () => (
     <LayoutGrid cols={6}>
-        <Panel colSpan={2}>
-            <Panel.Body>Panel with colSpan=2</Panel.Body>
-        </Panel>
-        <Panel>
-            <Panel.Body>Panel</Panel.Body>
-        </Panel>
-        <Panel>
-            <Panel.Body>Panel</Panel.Body>
-        </Panel>
-        <Panel>
-            <Panel.Body>Panel</Panel.Body>
-        </Panel>
-        <Panel>
-            <Panel.Body>Panel</Panel.Body>
-        </Panel>
+        <LayoutPanel colSpan={2}>
+            <LayoutPanel.Body>LayoutPanel with colSpan=2</LayoutPanel.Body>
+        </LayoutPanel>
+        <LayoutPanel>
+            <LayoutPanel.Body>LayoutPanel</LayoutPanel.Body>
+        </LayoutPanel>
+        <LayoutPanel>
+            <LayoutPanel.Body>LayoutPanel</LayoutPanel.Body>
+        </LayoutPanel>
+        <LayoutPanel>
+            <LayoutPanel.Body>LayoutPanel</LayoutPanel.Body>
+        </LayoutPanel>
+        <LayoutPanel>
+            <LayoutPanel.Body>LayoutPanel</LayoutPanel.Body>
+        </LayoutPanel>
 
-        <Panel colSpan={3}>
-            <Panel.Body>Panel with colSpan=3</Panel.Body>
-        </Panel>
-        <Panel>
-            <Panel.Body>Panel</Panel.Body>
-        </Panel>
-        <Panel>
-            <Panel.Body>Panel</Panel.Body>
-        </Panel>
-        <Panel>
-            <Panel.Body>Panel</Panel.Body>
-        </Panel>
+        <LayoutPanel colSpan={3}>
+            <LayoutPanel.Body>LayoutPanel with colSpan=3</LayoutPanel.Body>
+        </LayoutPanel>
+        <LayoutPanel>
+            <LayoutPanel.Body>LayoutPanel</LayoutPanel.Body>
+        </LayoutPanel>
+        <LayoutPanel>
+            <LayoutPanel.Body>LayoutPanel</LayoutPanel.Body>
+        </LayoutPanel>
+        <LayoutPanel>
+            <LayoutPanel.Body>LayoutPanel</LayoutPanel.Body>
+        </LayoutPanel>
 
-        <Panel colSpan={4}>
-            <Panel.Body>Panel with colSpan=4</Panel.Body>
-        </Panel>
-        <Panel>
-            <Panel.Body>Panel</Panel.Body>
-        </Panel>
-        <Panel>
-            <Panel.Body>Panel</Panel.Body>
-        </Panel>
+        <LayoutPanel colSpan={4}>
+            <LayoutPanel.Body>LayoutPanel with colSpan=4</LayoutPanel.Body>
+        </LayoutPanel>
+        <LayoutPanel>
+            <LayoutPanel.Body>LayoutPanel</LayoutPanel.Body>
+        </LayoutPanel>
+        <LayoutPanel>
+            <LayoutPanel.Body>LayoutPanel</LayoutPanel.Body>
+        </LayoutPanel>
 
-        <Panel colSpan={5}>
-            <Panel.Body>Panel with colSpan=5</Panel.Body>
-        </Panel>
-        <Panel>
-            <Panel.Body>Panel</Panel.Body>
-        </Panel>
+        <LayoutPanel colSpan={5}>
+            <LayoutPanel.Body>LayoutPanel with colSpan=5</LayoutPanel.Body>
+        </LayoutPanel>
+        <LayoutPanel>
+            <LayoutPanel.Body>LayoutPanel</LayoutPanel.Body>
+        </LayoutPanel>
 
-        <Panel colSpan={6}>
-            <Panel.Body>Panel with colSpan=6</Panel.Body>
-        </Panel>
+        <LayoutPanel colSpan={6}>
+            <LayoutPanel.Body>LayoutPanel with colSpan=6</LayoutPanel.Body>
+        </LayoutPanel>
     </LayoutGrid>
 );
 

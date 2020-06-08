@@ -17,7 +17,7 @@ exports[`Storyshots Visual Multi Input 1`] = `
           className="fd-popover__control"
         >
           <div
-            aria-controls="fd-105"
+            aria-controls="fd-106"
             aria-expanded={false}
             aria-haspopup={true}
             className="fd-input-group--control fd-input-group"
@@ -65,7 +65,7 @@ exports[`Storyshots Visual Multi Input 1`] = `
           className="fd-popover__control"
         >
           <div
-            aria-controls="fd-119"
+            aria-controls="fd-120"
             aria-expanded={false}
             aria-haspopup={true}
             className="fd-input-group--control fd-input-group"
@@ -114,7 +114,7 @@ exports[`Storyshots Visual Multi Input 1`] = `
           className="fd-popover__control"
         >
           <div
-            aria-controls="fd-133"
+            aria-controls="fd-134"
             aria-expanded={false}
             aria-haspopup={true}
             className="fd-input-group--control is-disabled fd-input-group is-disabled"
@@ -167,7 +167,7 @@ exports[`Storyshots Visual Multi Input 1`] = `
             className="fd-popover__control"
           >
             <div
-              aria-controls="fd-147"
+              aria-controls="fd-148"
               aria-expanded={false}
               aria-haspopup={true}
               className="fd-input-group--control is-error fd-input-group is-error"
@@ -220,7 +220,7 @@ exports[`Storyshots Visual Multi Input 1`] = `
             className="fd-popover__control"
           >
             <div
-              aria-controls="fd-161"
+              aria-controls="fd-162"
               aria-expanded={false}
               aria-haspopup={true}
               className="fd-input-group--control is-warning fd-input-group is-warning"
@@ -273,7 +273,7 @@ exports[`Storyshots Visual Multi Input 1`] = `
             className="fd-popover__control"
           >
             <div
-              aria-controls="fd-175"
+              aria-controls="fd-176"
               aria-expanded={false}
               aria-haspopup={true}
               className="fd-input-group--control is-success fd-input-group is-success"
@@ -326,7 +326,7 @@ exports[`Storyshots Visual Multi Input 1`] = `
             className="fd-popover__control"
           >
             <div
-              aria-controls="fd-189"
+              aria-controls="fd-190"
               aria-expanded={false}
               aria-haspopup={true}
               className="fd-input-group--control is-information fd-input-group is-information"
@@ -382,7 +382,7 @@ exports[`Storyshots Visual Multi Input 1`] = `
           className="fd-popover__control"
         >
           <div
-            aria-controls="fd-203"
+            aria-controls="fd-204"
             aria-expanded={false}
             aria-haspopup={true}
             className="fd-input-group--control fd-input-group"
