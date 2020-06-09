@@ -87,14 +87,8 @@ readOnly.storyName = 'ReadOnly';
 
 export const localized = () => (
     <div className='fddocs-container'>
-        <DatePicker
-            dateFormat='DD/MM/YYYY'
-            defaultValue='20/07/2020'
-            locale='es' />
-        <DatePicker
-            dateFormat='DD/MM/YYYY'
-            defaultValue='20/06/2020'
-            locale='fr' />
+        <DatePicker locale='es' />
+        <DatePicker locale='fr' />
     </div>
 );
 
