@@ -4,7 +4,7 @@ const path = require('path');
 const srcPath = path.join(__dirname, '../src');
 
 const isComponentDirectory = (source) => {
-    const ignoredDirectories = ['utils', 'Docs', 'Identifier', 'Image', 'Panel'];
+    const ignoredDirectories = ['utils', 'Docs'];
     return lstatSync(source).isDirectory() && !ignoredDirectories.some(ignored => source.includes(ignored));
 };
 
