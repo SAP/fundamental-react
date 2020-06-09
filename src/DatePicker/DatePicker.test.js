@@ -373,7 +373,7 @@ describe('<DatePicker />', () => {
             const firstDisplayedDay = document.body.querySelectorAll('.fd-calendar__item--other-month')[0].textContent;
             expect(firstDisplayedDay).toBe('28'); // June 28th is the first day shown
         });
-        test('should be the first sunday before the start of the month in locale "fr"', () => {
+        test('should be the first sunday of the start of the month, when the 1st is the start of the month in locale "fr"', () => {
             const element = mount(<DatePicker
                 dateFormat='DD/MM/YYYY'
                 defaultValue='01/11/2020'
