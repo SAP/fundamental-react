@@ -67,6 +67,12 @@ export const compact = () => (
     </SideNav>
 );
 
+/**
+ * The user can identify which level they are on based on the icon displayed as selected when the
+ * navigation is condensed. Note that the suggested use is when there is only one level of navigation as
+ * the user can only see one level of navigation when collapsed.
+ */
+
 export const condensed = () => (
     <SideNav
         condensed
@@ -100,17 +106,6 @@ export const condensed = () => (
         </SideNav.List>
     </SideNav>
 );
-
-condensed.story = {
-    parameters: {
-        docs: {
-            storyDescription: `The user can identify which level they are on based on the icon displayed as selected when the
-            navigation is condensed. Note that the suggested use is when there is only one level of navigation as
-            the user can only see one level of navigation when collapsed.`
-        }
-    }
-};
-
 
 export const oneLevel = () => (
     <SideNav
@@ -150,6 +145,8 @@ export const oneLevel = () => (
     </SideNav>
 );
 
+/** Use titles to group navigation. Titles are not clickable. */
+
 export const withTitle = () => (
     <SideNav
         selectedId='item-2'>
@@ -187,14 +184,6 @@ export const withTitle = () => (
         </SideNav.List>
     </SideNav>
 );
-
-withTitle.story = {
-    parameters: {
-        docs: {
-            storyDescription: 'Use titles to group navigation. Titles are not clickable.'
-        }
-    }
-};
 
 export const withSubList = () => (
     <SideNav>

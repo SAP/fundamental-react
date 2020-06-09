@@ -16,28 +16,16 @@ export const primary = () => (<FormTextarea defaultValue='Placeholder' />);
 
 export const compact = () => (<FormTextarea compact defaultValue='Compact textarea' />);
 
+/**
+ * **Disabled**: This indicates the field is not editable. A common use case is that this field is dependent on a previous entry or selection within the form.
+ */
+
 export const disabled = () => (<FormTextarea defaultValue='Disabled textarea' disabled />);
 
-disabled.story = {
-    parameters: {
-        docs: {
-            storyDescription: `**Disabled**: This indicates the field is not 
-            editable. A common use case is that this field is dependent on a previous entry or 
-            selection within the form.`
-        }
-    }
-};
+
+/** **Read Only**: Used to display static information in the context of a form. */
 
 export const readOnly = () => (<FormTextarea defaultValue='Placeholder' readOnly />);
-
-readOnly.story = {
-    parameters: {
-        docs: {
-            storyDescription: `**Read Only**: Used to display static information 
-            in the context of a form.`
-        }
-    }
-};
 
 export const maxLength = () => (
     <FormTextarea defaultValue='Max Length'
@@ -77,6 +65,4 @@ export const dev = () => (
 );
 
 
-dev.story = {
-    parameters: { docs: { disable: true } }
-};
+dev.parameters = { docs: { disable: true } };

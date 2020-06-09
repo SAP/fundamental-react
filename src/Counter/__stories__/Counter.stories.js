@@ -12,6 +12,8 @@ export const primary = () => (
     <Counter>5</Counter>
 );
 
+/** Counter has a minimum value 1. Maximum display is 999+. */
+
 export const defaults = () => (
     <div className='fddocs-container'>
         <Counter>5</Counter>
@@ -22,14 +24,7 @@ export const defaults = () => (
 );
 
 
-defaults.story = {
-    name: 'Default Counter',
-    parameters: {
-        docs: {
-            storyDescription: 'Counter has a minimum value 1. Maximum display is 999+.'
-        }
-    }
-};
+defaults.storyName = 'Default Counter';
 
 export const inline = () => (
     <div className='fddocs-container'>
@@ -38,10 +33,9 @@ export const inline = () => (
 );
 
 
-inline.story = {
-    name: 'Counter inline with a paragraph'
-};
+inline.storyName = 'Counter inline with a paragraph';
 
+/** Use the property `notification` to enable notification counter.  */
 
 export const notification = () => (
     <div className='fddocs-container'>
@@ -60,12 +54,5 @@ export const notification = () => (
     </div>
 );
 
+notification.storyName = 'Default Counter';
 
-notification.story = {
-    name: 'Default Counter',
-    parameters: {
-        docs: {
-            storyDescription: 'Use the property `notification` to enable notification counter.'
-        }
-    }
-};

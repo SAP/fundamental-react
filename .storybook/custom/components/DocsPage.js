@@ -11,16 +11,21 @@ import {
     Title,
     Subtitle,
     Description,
-    Primary,
+    Heading,
     Props,
-    Stories,
+    DocsStory,
   } from '@storybook/addon-docs/blocks';
 
 const DocsPage = () => {
     const context = useContext(DocsContext);
+
+    // do not create docs pages for visual regression image pages
     if(context.kind === 'Visual') {
         return null;
     }
+    // do not display disabled stories (dev only)
+    const stories = context.storyStore?.getStoriesForKind(context.kind)?.filter((s) => !s.parameters?.docs?.disable);
+
     useEffect(() => {
         tocbot.init(
             {
@@ -43,9 +48,13 @@ const DocsPage = () => {
         <Subtitle />
         <Import />
         <Description />
-        <Primary />
-        <Stories />
-        <h2 className='sbdocs-h2' id='properties'>Properties</h2>
+        <Heading>Examples</Heading>
+        {stories.map((story) => story && <DocsStory
+            key={story.id}
+            {...story}
+            expanded
+            withToolbar />)}
+        <Heading>Properties</Heading>
         <Props exclude={['disableStyles']} />
         <Community />
         <Footer />

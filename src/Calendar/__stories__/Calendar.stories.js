@@ -49,9 +49,7 @@ export const disableWeekends = () => (
         disableWeekends />
 );
 
-disableWeekends.story = {
-    name: 'Disabled Weekends and Disabled Before Date'
-};
+disableWeekends.storyName = 'Disabled Weekends and Disabled Before Date';
 
 export const blockedDates = () => (
     <Calendar
@@ -94,8 +92,6 @@ export const dev = () => (
         weekdayStart={number('weekdayStart', 0)} />
 );
 
-dev.story = {
-    parameters: {
-        docs: { disable: true }
-    }
+dev.parameters = {
+    docs: { disable: true }
 };
