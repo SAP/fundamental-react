@@ -73,7 +73,7 @@ export const rangeSelection = () => (
 
 export const weekdayStart = () => {
     const _weekdayStart = number('weekdayStart', 1);
-    return <Calendar weekdayStart={_weekdayStart} />;
+    return <Calendar locale='es' weekdayStart={_weekdayStart} />;
 };
 
 export const dev = () => (
