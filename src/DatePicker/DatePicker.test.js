@@ -351,6 +351,39 @@ describe('<DatePicker />', () => {
         });
     });
 
+    describe('first displayed day', () => {
+        afterEach(() => {
+            document.body.innerHTML = '';
+        });
+        test('should be the first sunday before the start of the month in locale "es"', () => {
+            const element = mount(<DatePicker
+                dateFormat='DD/MM/YYYY'
+                defaultValue='20/06/2020'
+                locale='es' />);
+            element.find('button').simulate('click');
+            const firstDisplayedDay = document.body.querySelectorAll('.fd-calendar__item--other-month')[0].textContent;
+            expect(firstDisplayedDay).toBe('31'); // May 31st is the first day shown
+        });
+        test('should be the first sunday before the start of the month in locale "fr"', () => {
+            const element = mount(<DatePicker
+                dateFormat='DD/MM/YYYY'
+                defaultValue='01/07/2020'
+                locale='fr' />);
+            element.find('button').simulate('click');
+            const firstDisplayedDay = document.body.querySelectorAll('.fd-calendar__item--other-month')[0].textContent;
+            expect(firstDisplayedDay).toBe('28'); // June 28th is the first day shown
+        });
+        test('should be the first sunday of the start of the month, when the 1st is the start of the month in locale "fr"', () => {
+            const element = mount(<DatePicker
+                dateFormat='DD/MM/YYYY'
+                defaultValue='01/11/2020'
+                locale='fr' />);
+            element.find('button').simulate('click');
+            const firstDisplayedDay = document.body.querySelectorAll('.fd-calendar__item--other-month')[0].textContent;
+            expect(firstDisplayedDay).toBe('1'); // In this case December 1st is the first other-month date shown
+        });
+    });
+
     describe('onChange callback', () => {
         test('should call onChange on entering text input', () => {
             const change = jest.fn();

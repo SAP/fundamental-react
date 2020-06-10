@@ -547,7 +547,7 @@ class Calendar extends Component {
         const enableRangeSelection = this.props.enableRangeSelection;
 
         const firstDayMonth = moment(currentDateDisplayed).startOf('month');
-        const firstDayWeekMonth = moment(firstDayMonth).startOf('week').weekday(this.normalizedWeekdayStart());
+        const firstDayWeekMonth = moment(firstDayMonth).day(0).day(this.normalizedWeekdayStart());
         const isAfterFirstDayMonth = moment(firstDayWeekMonth).isAfter(firstDayMonth);
 
         const rows = [];
