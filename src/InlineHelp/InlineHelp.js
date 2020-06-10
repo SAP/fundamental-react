@@ -1,12 +1,13 @@
 import classnames from 'classnames';
 import { INLINE_HELP_PLACEMENTS } from '../utils/constants';
+import Popover from '../Popover/Popover';
 import PropTypes from 'prop-types';
 import React, { useEffect } from 'react';
 
 
 /** **InlineHelp** is used to display help text in a **Popover**, often inline with headers,
 body text and form labels. */
-const InlineHelp = React.forwardRef(({ text, placement, className, contentClassName, disableStyles, ...props }, ref) => {
+const InlineHelp = React.forwardRef(({ text, placement, className, contentClassName, disableStyles, buttonLabel, ...props }, ref) => {
 
     useEffect(() => {
         if (!disableStyles) {
@@ -22,26 +23,39 @@ const InlineHelp = React.forwardRef(({ text, placement, className, contentClassN
 
     const inlineHelpContentClasses = classnames(
         'fd-inline-help__content',
-        {
-            [`fd-inline-help__content--${placement}`]: !!placement
-        },
         contentClassName
     );
 
-    return (
-        <span className={inlineHelpClasses} ref={ref}>
-            <span
-                {...props}
-                className={inlineHelpContentClasses}>
-                {text}
-            </span>
+    const control = (
+        <span
+            aria-label={buttonLabel}
+            className={inlineHelpClasses}
+            ref={ref}
+            role='button'
+            tabIndex='0' />
+    );
+
+    const body = (
+        <span
+            {...props}
+            className={inlineHelpContentClasses}>
+            {text}
         </span>
+    );
+
+    return (
+        <Popover
+            body={body}
+            control={control}
+            placement={placement} />
     );
 });
 
 InlineHelp.displayName = 'InlineHelp';
 
 InlineHelp.propTypes = {
+    /** Localized text for aria-label on button for screen readers */
+    buttonLabel: PropTypes.string.isRequired,
     /** Localized text to display in the inline help pop-up */
     text: PropTypes.string.isRequired,
     /** CSS class(es) to add to the element */

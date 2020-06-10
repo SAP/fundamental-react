@@ -1,5 +1,4 @@
 /* eslint-disable react/no-multi-comp */
-import FormLabel from '../../Forms/FormLabel';
 import InlineHelp from '../InlineHelp';
 import React from 'react';
 
@@ -9,13 +8,6 @@ export default {
 };
 
 export const primary = () => (<InlineHelp text='default' />);
-
-export const withLabel = () => (
-    <FormLabel isInlineHelp>
-        Label Text
-        <InlineHelp text='default' />
-    </FormLabel>
-);
 
 export const bottomRight = () => (
     <InlineHelp placement='bottom-right' text='Lorem ipsum dolor sit amet, consectetur adipiscing.' />
