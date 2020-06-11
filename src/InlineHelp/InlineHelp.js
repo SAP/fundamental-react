@@ -1,6 +1,6 @@
 import classnames from 'classnames';
-import { INLINE_HELP_PLACEMENTS } from '../utils/constants';
 import Popover from '../Popover/Popover';
+import { POPPER_PLACEMENTS } from '../utils/constants';
 import PropTypes from 'prop-types';
 import React, { useEffect } from 'react';
 
@@ -23,6 +23,7 @@ const InlineHelp = React.forwardRef(({ text, placement, className, contentClassN
 
     const inlineHelpContentClasses = classnames(
         'fd-inline-help__content',
+        'fd-no-border',
         contentClassName
     );
 
@@ -36,11 +37,11 @@ const InlineHelp = React.forwardRef(({ text, placement, className, contentClassN
     );
 
     const body = (
-        <span
+        <div
             {...props}
             className={inlineHelpContentClasses}>
             {text}
-        </span>
+        </div>
     );
 
     return (
@@ -69,11 +70,11 @@ InlineHelp.propTypes = {
     'right',
     'left',
     'bottom-center' */
-    placement: PropTypes.oneOf(INLINE_HELP_PLACEMENTS)
+    placement: PropTypes.oneOf(POPPER_PLACEMENTS)
 };
 
 InlineHelp.defaultProps = {
-    placement: 'bottom-right'
+    placement: 'bottom'
 };
 
 export default InlineHelp;
