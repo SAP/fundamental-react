@@ -237,11 +237,11 @@ Popover.propTypes = {
      * This value is attached to aria-haspopup and is useful to assistive tech. Defaulted to boolean true*/
     type: PropTypes.oneOf(POPOVER_TYPES),
     useArrowKeyNavigation: PropTypes.bool,
-    /** `<ul>
-<li>"matchTarget" - left and right edges align with the target</li>
-<li>"minTarget" - right edge aligns with target unless Popover content is bigger</li>
-<li>"maxTarget" - right edge aligns with target unless Popover content is smaller</li>
-</ul>`'none', 'matchTarget', 'minTarget', 'maxTarget' */
+    /** 'none', 'matchTarget', 'minTarget', 'maxTarget'
+     * - "matchTarget" - left and right edges align with the target
+     * - "minTarget" - right edge aligns with target unless Popover content is bigger
+     * - "maxTarget" - right edge aligns with target unless Popover content is smaller
+     */
     widthSizingType: PropTypes.oneOf(POPPER_SIZING_TYPES),
     /** Callback for consumer clicking outside of popover body */
     onClickOutside: PropTypes.func,

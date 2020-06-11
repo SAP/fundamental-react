@@ -61,7 +61,9 @@ class Shellbar extends Component {
         if (this.props.productSwitch) {
             let collapsedProductSwitch = this.props.productSwitch;
 
+            // eslint-disable-next-line react/prop-types
             collapsedProductSwitch.glyph = 'grid';
+            // eslint-disable-next-line react/prop-types
             collapsedProductSwitch.callback = () => {
                 this.setState(prevState => ({
                     showCollapsedProductSwitchMenu: !prevState.showCollapsedProductSwitchMenu
@@ -206,6 +208,7 @@ class Shellbar extends Component {
                                 inputProps={{ className: 'fd-shellbar__input-group__input' }}
                                 onEnter={searchInput.onSearch}
                                 placeholder={searchInput.placeholder}
+                                popoverProps={searchInput.popoverProps}
                                 searchBtnProps={{ className: 'fd-shellbar__button' }}
                                 searchList={searchInput.searchList} />
                         </div>
@@ -452,7 +455,9 @@ class Shellbar extends Component {
                                             </ul>
                                         </div>
                                     }
-                                    control={<Button className='fd-product-switch__control fd-shellbar__button'
+                                    control={<Button
+                                        aria-label={productSwitch.label}
+                                        className='fd-product-switch__control fd-shellbar__button'
                                         disableStyles={disableStyles}
                                         glyph='grid' />}
                                     disableEdgeDetection
@@ -499,8 +504,11 @@ Shellbar.propTypes = {
     notifications: PropTypes.object,
     /** Holds product titles and navigation */
     productMenu: PropTypes.array,
-    /** For navigating between products */
-    productSwitch: PropTypes.object,
+    /** For navigating between products. An object that contains an accessible label for product switch button. */
+    productSwitch: PropTypes.shape({
+        /** Accessible label for product switch button */
+        label: PropTypes.string.isRequired
+    }),
     /** Array of objects containing data about the products.
      * Callback, title, and glyph are required; subtitle is optional. */
     productSwitchList: PropTypes.arrayOf(
