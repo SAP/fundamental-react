@@ -38,7 +38,7 @@ class SideNav extends Component {
     }
 
     render() {
-        const { onItemSelect, children, className, disableStyles, condensed, compact, selectedId, ...rest } = this.props;
+        const { onItemSelect, children, className, disableStyles, condensed, compact, selectedId, skipLink, ...rest } = this.props;
 
         const sideNavClasses = classnames(
             className,
@@ -49,7 +49,8 @@ class SideNav extends Component {
         );
 
         return (
-            <nav {...rest} className={sideNavClasses}>
+            <div {...rest} className={sideNavClasses}>
+                <a className='fd-side-nav__skip-link' href={skipLink.href}>{skipLink.label}</a>
                 {React.Children.toArray(children).map(child => {
                     return React.cloneElement(child, {
                         onItemSelect: this.handleSelect,
@@ -58,12 +59,17 @@ class SideNav extends Component {
                         compact
                     });
                 })}
-            </nav>
+            </div>
         );
     }
 }
 
 SideNav.propTypes = {
+    /** Location of page content and localized label to provide as a URL for a skip link for keyboard users */
+    skipLink: PropTypes.shape({
+        href: PropTypes.string,
+        label: PropTypes.string
+    }).isRequired,
     /** Node(s) to render within the component */
     children: PropTypes.node,
     /** CSS class(es) to add to the element */
