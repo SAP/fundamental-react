@@ -17184,6 +17184,7 @@ exports[`Storyshots Visual Shellbar 1`] = `
                     aria-controls="fd-shellbar-product-switch-popover"
                     aria-expanded={false}
                     aria-haspopup={true}
+                    aria-label="Product Switch"
                     className="fd-button sap-icon--grid fd-product-switch__control fd-shellbar__button"
                     onClick={[Function]}
                     onKeyPress={[Function]}
