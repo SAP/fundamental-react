@@ -198,12 +198,7 @@ export const coPilot = () => (
         profileMenu={profileMenu}
         searchInput={{
             label: 'Search',
-            placeholder: 'Search',
-            popoverProps: {
-                //to always show search-results popup towards bottom
-                disableEdgeDetection: true,
-                placement: 'bottom'
-            }
+            placeholder: 'Search'
         }}
         subtitle='Subtitle' />
 );

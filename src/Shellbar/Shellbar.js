@@ -208,7 +208,11 @@ class Shellbar extends Component {
                                 inputProps={{ className: 'fd-shellbar__input-group__input' }}
                                 onEnter={searchInput.onSearch}
                                 placeholder={searchInput.placeholder}
-                                popoverProps={searchInput.popoverProps}
+                                popoverProps={{
+                                    placement: searchInput?.popoverProps?.placement || 'bottom',
+                                    disableEdgeDetection: searchInput?.popoverProps?.disableEdgeDetection || true,
+                                    ...searchInput.popoverProps
+                                }}
                                 searchBtnProps={{ className: 'fd-shellbar__button' }}
                                 searchList={searchInput.searchList} />
                         </div>
@@ -504,9 +508,9 @@ Shellbar.propTypes = {
     notifications: PropTypes.object,
     /** Holds product titles and navigation */
     productMenu: PropTypes.array,
-    /** For navigating between products. An object that contains an accessible label for product switch button. */
+    /** For navigating between products. An object that contains an accessible and localized label for product switch button. */
     productSwitch: PropTypes.shape({
-        /** Accessible label for product switch button */
+        /** Accessible and localized label for product switch button */
         label: PropTypes.string.isRequired
     }),
     /** Array of objects containing data about the products.
@@ -527,7 +531,7 @@ Shellbar.propTypes = {
     profile: PropTypes.object,
     /** List of items for the profile menu */
     profileMenu: PropTypes.array,
-    /** Holds `searchInput` properties */
+    /** Holds `searchInput` [properties](?id=component-api-searchinput--compact&viewMode=docs#properties) */
     searchInput: PropTypes.object,
     /** Displays an application context. Should be used rarely */
     subtitle: PropTypes.string
