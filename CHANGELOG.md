@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.11.0-rc.10](https://github.com/SAP/fundamental-react/compare/v0.11.0-rc.9...v0.11.0-rc.10) (2020-06-12)
+
+
+### Features
+
+* 1020: Shellbar pass popoverProps to SearchInput ([#1091](https://github.com/SAP/fundamental-react/issues/1091)) ([5ab3775](https://github.com/SAP/fundamental-react/commit/5ab377533679086aa9c60f388c9a8ddb662dac02))
+
 ## [0.11.0-rc.9](https://github.com/SAP/fundamental-react/compare/v0.11.0-rc.8...v0.11.0-rc.9) (2020-06-10)
 
 
