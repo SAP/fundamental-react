@@ -55,7 +55,7 @@ exports[`Storyshots Component API/Shellbar Basic 1`] = `
                   tabIndex={0}
                 >
                   <span
-                    className="fd-identifier fd-identifier--xs fd-identifier--circle fd-has-background-color-accent-8"
+                    className="fd-avatar fd-avatar--xs fd-has-background-color-accent-8 fd-avatar--circle"
                     role=""
                   >
                     JS
@@ -332,7 +332,7 @@ exports[`Storyshots Component API/Shellbar Co Pilot 1`] = `
                   tabIndex={0}
                 >
                   <span
-                    className="fd-identifier fd-identifier--xs fd-identifier--circle fd-has-background-color-accent-8"
+                    className="fd-avatar fd-avatar--xs fd-has-background-color-accent-8 fd-avatar--circle"
                     role=""
                   >
                     JS
@@ -364,6 +364,7 @@ exports[`Storyshots Component API/Shellbar Co Pilot 1`] = `
                   aria-controls="fd-shellbar-product-switch-popover"
                   aria-expanded={false}
                   aria-haspopup={true}
+                  aria-label="Product Switch"
                   className="fd-button sap-icon--grid fd-product-switch__control fd-shellbar__button"
                   onClick={[Function]}
                   onKeyPress={[Function]}
@@ -442,7 +443,7 @@ exports[`Storyshots Component API/Shellbar With Back Button 1`] = `
                   tabIndex={0}
                 >
                   <span
-                    className="fd-identifier fd-identifier--xs fd-identifier--circle fd-has-background-color-accent-8"
+                    className="fd-avatar fd-avatar--xs fd-has-background-color-accent-8 fd-avatar--circle"
                     role=""
                   >
                     JS
@@ -651,7 +652,7 @@ exports[`Storyshots Component API/Shellbar With Product Menu 1`] = `
                   tabIndex={0}
                 >
                   <span
-                    className="fd-identifier fd-identifier--xs fd-identifier--circle fd-identifier--thumbnail"
+                    className="fd-avatar fd-avatar--xs fd-avatar--thumbnail fd-avatar--circle"
                     role="presentation"
                     style={
                       Object {

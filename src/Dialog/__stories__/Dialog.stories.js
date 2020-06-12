@@ -195,7 +195,8 @@ export const dev = () => (
 
 
 dev.parameters = {
-    docs: { disable: true }
+    docs: { disable: true },
+    storyshots: { disable: true }
 };
 
 
@@ -215,7 +216,8 @@ export const small = () => (
 );
 
 small.parameters = {
-    docs: { disable: true }
+    docs: { disable: true },
+    storyshots: { disable: true }
 };
 
 
@@ -235,7 +237,8 @@ export const medium = () => (
 );
 
 medium.parameters = {
-    docs: { disable: true }
+    docs: { disable: true },
+    storyshots: { disable: true }
 };
 
 
@@ -255,7 +258,8 @@ export const large = () => (
 );
 
 large.parameters = {
-    docs: { disable: true }
+    docs: { disable: true },
+    storyshots: { disable: true }
 };
 
 
@@ -275,5 +279,6 @@ export const xl = () => (
 );
 
 xl.parameters = {
-    docs: { disable: true }
+    docs: { disable: true },
+    storyshots: { disable: true }
 };
