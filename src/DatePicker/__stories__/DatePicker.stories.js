@@ -95,6 +95,13 @@ export const localized = () => (
 
 localized.storyName = 'Localized DatePicker';
 
+export const today = () => (
+    <DatePicker showToday />
+);
+
+
+today.storyName = 'Today button';
+
 export const rangeSelection = () => (
     <DatePicker enableRangeSelection />
 );

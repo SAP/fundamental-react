@@ -21,6 +21,7 @@ const Select = React.forwardRef(({
     onClick,
     onSelect,
     placeholder,
+    readOnly,
     selectedKey,
     validationState,
     ...props
@@ -44,8 +45,10 @@ const Select = React.forwardRef(({
     let [selectedOptionKey, setSelectedOptionKey] = useState(selectedKey);
 
     const handleClick = (e) => {
-        setIsExpanded(!isExpanded);
-        onClick(e);
+        if (!disabled && !readOnly) {
+            setIsExpanded(!isExpanded);
+            onClick(e);
+        }
     };
 
     const handleSelect = (e, option) => {
@@ -158,6 +161,7 @@ const Select = React.forwardRef(({
         'fd-select__control',
         {
             'is-disabled': disabled,
+            'is-readonly': readOnly,
             [`is-${validationState?.state}`]: validationState?.state
         }
     );
@@ -172,9 +176,9 @@ const Select = React.forwardRef(({
             id={id}
             onClick={handleClick}
             ref={divRef}>
-            <div className={selectControlClasses}>
+            <div aria-disabled={disabled} className={selectControlClasses}>
                 {selected ? selected.text : placeholder}
-                <span className='fd-button fd-button--transparent sap-icon--slim-arrow-down fd-select__button' />
+                {!readOnly && <span className='fd-button fd-button--transparent sap-icon--slim-arrow-down fd-select__button' />}
             </div>
             {!isExpanded && validationState && (<FormMessage
                 disableStyles={disableStyles}
@@ -193,6 +197,7 @@ const Select = React.forwardRef(({
 
     return (
         <Popover
+            aria-disabled={disabled}
             body={
                 (<>
                     {validationState &&
@@ -206,7 +211,8 @@ const Select = React.forwardRef(({
                         className={listClassName}
                         compact={compact}
                         ref={ulRef}
-                        role='listbox'>
+                        role='listbox'
+                        tabIndex='-1'>
                         {options.map(option => (
                             <List.Item
                                 aria-selected={selected?.key === option.key}
@@ -223,7 +229,6 @@ const Select = React.forwardRef(({
                 </>)}
             control={selectControl}
             disableStyles={disableStyles}
-            disabled={disabled}
             noArrow
             onClickOutside={() => setIsExpanded(false)}
             placement='bottom-start'
@@ -253,6 +258,8 @@ Select.propTypes = {
     })),
     /** Localized placeholder text of the input */
     placeholder: PropTypes.string,
+    /** Set to **true** to enable readonly mode */
+    readOnly: PropTypes.string,
     /** The key corresponding to the selected option */
     selectedKey: PropTypes.string,
     /** An object identifying a validation message.  The object will include properties for `state` and `text`; _e.g._, \`{ state: \'warning\', text: \'This is your last warning\' }\` */
