@@ -73,6 +73,10 @@ export const validationState = () => (
     </div>
 );
 
+/**
+ * The **InputGroup.Addon** `isButton` prop supports buttons by providing the correct styling. Buttons can be shown with a text label or icon.
+ */
+
 export const addonButton = () => (
     <div className='fddocs-container'>
         <InputGroup>
@@ -94,15 +98,12 @@ export const addonButton = () => (
     </div>
 );
 
-addonButton.story = {
-    name: 'Button add-on',
-    parameters: {
-        docs: {
-            storyDescription: `The InputGroup.Addon isButton supports buttons by providing the correct styling. Buttons can be shown with a text
-            label or icon.`
-        }
-    }
-};
+addonButton.storyName = 'Button add-on';
+
+/**
+ * The Input with text add-on component is typically used to specify the type of the data being entered, such as currency or unit of measure.
+This add-on can be placed at the left or right of the input element.
+ */
 
 export const addonText = () => (
     <div className='fddocs-container'>
@@ -118,16 +119,9 @@ export const addonText = () => (
 
 );
 
-addonText.story = {
-    name: 'Text add-on',
-    parameters: {
-        docs: {
-            storyDescription: `The Input with text add-on component is typically used to specify the
-            type of the data being entered, such as currency or unit of measure.
-            This add-on can be placed at the left or right of the input element.`
-        }
-    }
-};
+addonText.storyName = 'Text add-on';
+
+/** The consumer can add an **Icon** as a child of **InputGroup.Addon** */
 
 export const addonIcon = () => (
     <div className='fddocs-container'>
@@ -146,15 +140,7 @@ export const addonIcon = () => (
     </div>
 );
 
-addonIcon.story = {
-    name: 'Icon add-on',
-    parameters: {
-        docs: {
-            storyDescription: `The consumer can add an Icon as a child of InputGroup.Addon.'
-            title='Input with icons.`
-        }
-    }
-};
+addonIcon.storyName = 'Icon add-on';
 
 export const textArea = () => (
     <InputGroup>
@@ -185,6 +171,4 @@ export const dev = () => (
     </InputGroup>
 );
 
-dev.story = {
-    parameters: { docs: { disable: true } }
-};
+dev.parameters = { docs: { disable: true } };

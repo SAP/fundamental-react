@@ -26,7 +26,5 @@ export const url = () => (
     </Breadcrumb>
 );
 
-url.story = {
-    name: 'With url property'
-};
+url.storyName = 'With url property';
 

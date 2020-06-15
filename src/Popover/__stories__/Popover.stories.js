@@ -39,7 +39,7 @@ const longBodyContent = (
 );
 
 const someMenu = (
-    <Menu style={{ maxWidth: '10em', padding: '1em' }}>
+    <Menu>
         <Menu.List>
             <Menu.Item url='#'>Option 1</Menu.Item>
             <Menu.Item url='#'>Option 2</Menu.Item>
@@ -249,6 +249,11 @@ export const widthSizingTypes = () => (
     </>
 );
 
+/**
+ * When an overlay (`body`) is visible, the reference (`control`)
+ * element must be tracked because if it overflows from its boundaries, the overlay will be hidden as well.
+ */
+
 export const outOfBoundaries = () => {
     let [open, setOpen] = useState(false);
 
@@ -296,27 +301,13 @@ export const outOfBoundaries = () => {
     );
 };
 
-outOfBoundaries.story = {
-    parameters: {
-        docs: {
-            storyDescription: `When an overlay (\`body\`) is visible, the reference (\`control\`)
-            element must be tracked because if it overflows from its boundaries, the overlay
-            will be hidden as well.`
-        },
-
-        // TO DO: reenable storyshots for examples using hooks in storybook@6
-        // https://github.com/storybookjs/storybook/releases/tag/v6.0.0-alpha.43
-        storyshots: { disable: true }
-    }
-};
-
 export const dev = () => (
     <Popover
         body={someMenu}
         control={<Button glyph='navigation-up-arrow' option='transparent' />}
-        disabled={boolean('disabled', false)}
         disableEdgeDetection={boolean('disableEdgeDetection', false)}
         disableKeyPressHandler={boolean('disableKeyPressHandler', false)}
+        disabled={boolean('disabled', false)}
         noArrow={boolean('noArrow', false)}
         placement={select('placement', {
             'bottom-start': 'bottom-start',
@@ -347,8 +338,6 @@ export const dev = () => (
             'maxTarget': 'maxTarget'
         })} />
 );
-dev.story = {
-    parameters: {
-        docs: { disable: true }
-    }
+dev.parameters = {
+    docs: { disable: true }
 };

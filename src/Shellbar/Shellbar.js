@@ -61,7 +61,9 @@ class Shellbar extends Component {
         if (this.props.productSwitch) {
             let collapsedProductSwitch = this.props.productSwitch;
 
+            // eslint-disable-next-line react/prop-types
             collapsedProductSwitch.glyph = 'grid';
+            // eslint-disable-next-line react/prop-types
             collapsedProductSwitch.callback = () => {
                 this.setState(prevState => ({
                     showCollapsedProductSwitchMenu: !prevState.showCollapsedProductSwitchMenu
@@ -200,12 +202,17 @@ class Shellbar extends Component {
                             <SearchInput
                                 className='fd-shellbar__input-group'
                                 disableStyles={disableStyles}
+                                inShellbar
                                 inputGroupAddonProps={{ className: 'fd-shellbar__input-group__addon' }}
                                 inputGroupProps={{ className: 'fd-shellbar__input-group' }}
                                 inputProps={{ className: 'fd-shellbar__input-group__input' }}
-                                inShellbar
                                 onEnter={searchInput.onSearch}
                                 placeholder={searchInput.placeholder}
+                                popoverProps={{
+                                    placement: searchInput?.popoverProps?.placement || 'bottom',
+                                    disableEdgeDetection: searchInput?.popoverProps?.disableEdgeDetection || true,
+                                    ...searchInput.popoverProps
+                                }}
                                 searchBtnProps={{ className: 'fd-shellbar__button' }}
                                 searchList={searchInput.searchList} />
                         </div>
@@ -452,7 +459,9 @@ class Shellbar extends Component {
                                             </ul>
                                         </div>
                                     }
-                                    control={<Button className='fd-product-switch__control fd-shellbar__button'
+                                    control={<Button
+                                        aria-label={productSwitch.label}
+                                        className='fd-product-switch__control fd-shellbar__button'
                                         disableStyles={disableStyles}
                                         glyph='grid' />}
                                     disableEdgeDetection
@@ -499,8 +508,11 @@ Shellbar.propTypes = {
     notifications: PropTypes.object,
     /** Holds product titles and navigation */
     productMenu: PropTypes.array,
-    /** For navigating between products */
-    productSwitch: PropTypes.object,
+    /** For navigating between products. An object that contains an accessible and localized label for product switch button. */
+    productSwitch: PropTypes.shape({
+        /** Accessible and localized label for product switch button */
+        label: PropTypes.string.isRequired
+    }),
     /** Array of objects containing data about the products.
      * Callback, title, and glyph are required; subtitle is optional. */
     productSwitchList: PropTypes.arrayOf(
@@ -519,7 +531,7 @@ Shellbar.propTypes = {
     profile: PropTypes.object,
     /** List of items for the profile menu */
     profileMenu: PropTypes.array,
-    /** Holds `searchInput` properties */
+    /** Holds `searchInput` [properties](?id=component-api-searchinput--compact&viewMode=docs#properties) */
     searchInput: PropTypes.object,
     /** Displays an application context. Should be used rarely */
     subtitle: PropTypes.string

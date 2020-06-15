@@ -5,13 +5,16 @@ import React from 'react';
 import {
     boolean,
     date,
+    number,
     optionsKnob,
-    text
+    text,
+    withKnobs
 } from '@storybook/addon-knobs';
 
 export default {
     title: 'Component API/Calendar',
-    component: Calendar
+    component: Calendar,
+    decorators: [withKnobs]
 };
 
 function dateKnobToDate(name, defaultValue) {
@@ -46,9 +49,7 @@ export const disableWeekends = () => (
         disableWeekends />
 );
 
-disableWeekends.story = {
-    name: 'Disabled Weekends and Disabled Before Date'
-};
+disableWeekends.storyName = 'Disabled Weekends and Disabled Before Date';
 
 export const blockedDates = () => (
     <Calendar
@@ -70,23 +71,27 @@ export const rangeSelection = () => (
     <Calendar enableRangeSelection />
 );
 
+export const weekdayStart = () => {
+    const _weekdayStart = number('weekdayStart', 1);
+    return <Calendar weekdayStart={_weekdayStart} />;
+};
+
 export const dev = () => (
     <Calendar
         blockedDates={[dateKnobToDate('block between dates (1)', blockedDateFirstDefault),
             dateKnobToDate('block between dates (2)', blockedDateSecondDefault)]}
         disableAfterDate={dateKnobToDate('disable after date', afterDateDefault)}
         disableBeforeDate={dateKnobToDate('disable before date', beforeDateDefault)}
-        disabledDates={[dateKnobToDate('disable between dates (1)', disabledDateFirstDefault),
-            dateKnobToDate('disable between dates (2)', disabledDateSecondDefault)]}
         disableFutureDates={boolean('disable future dates', false)}
         disablePastDates={boolean('disable past dates', false)}
         disableWeekday={optionsKnob('disable weekdays', weekdayOptions, null, { display: 'check' })}
         disableWeekends={boolean('disable weekends', false)}
-        locale={text('locale', 'en')} />
+        disabledDates={[dateKnobToDate('disable between dates (1)', disabledDateFirstDefault),
+            dateKnobToDate('disable between dates (2)', disabledDateSecondDefault)]}
+        locale={text('locale', 'en')}
+        weekdayStart={number('weekdayStart', 0)} />
 );
 
-dev.story = {
-    parameters: {
-        docs: { disable: true }
-    }
+dev.parameters = {
+    docs: { disable: true }
 };

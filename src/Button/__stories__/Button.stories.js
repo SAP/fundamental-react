@@ -13,6 +13,13 @@ export default {
 
 export const primary = () => (<Button>Button</Button>);
 
+/**
+ * There are three emphasis styles used to indicate the importance of the button on the page.
+ * * **Emphasized Button**: There should only be one highlighted button on the page. This is the primary call to action.
+ * * **Regular Button**: The default button style and the most common button. There may be more than one on a page.
+ * * **Transparent Button**: This is the lowest priority button and most often used with page content like appearing in a table or list.
+ * There may be more than one on the page.
+ */
 
 export const options = () => (
     <div className='fddocs-container'>
@@ -22,19 +29,15 @@ export const options = () => (
     </div>
 );
 
-options.story = {
-    name: 'Options',
-    parameters: {
-        docs: {
-            storyDescription: `There are three emphasis styles used to indicate the importance of the button on
-            the page.\n\n* **Emphasized Button**: There should only be one highlighted button on the page.
-            This is the primary call to action.\n\n* **Regular Button**: The default button style and the
-            most common button. There may be more than one on a page.\n\n* **Transparent Button**: This is the
-            lowest priority button and most often used with page content like appearing in a table or list.
-            There may be more than one on the page.`
-        }
-    }
-};
+options.storyName = 'Options';
+
+/**
+ * * **Standard Button**: Neutral or informative color
+ * * **Positive Button**: Used for positive actions such as approved, ok, yes.
+ * * **Negative Button**: Used for negative actions such as decline, cancel, no.
+ * * **Ghost Button**: Used for secondary actions or primary button in cases where there is already a primary button on the page.
+ * * **Attention Button**
+ */
 
 export const types = () => (
     <div className='fddocs-container'>
@@ -42,19 +45,14 @@ export const types = () => (
         <Button type='standard'>Standard Button</Button>
         <Button type='positive'>Positive Button</Button>
         <Button type='negative'>Negative Button</Button>
+        <Button type='ghost'>Ghost Button</Button>
+        <Button type='attention'>Attention Button</Button>
     </div>
 );
 
-types.story = {
-    name: 'Types',
-    parameters: {
-        docs: {
-            storyDescription: `* **Standard Button**:
-            Neutral or informative color \n\n* **Positive Button**: Used for positive actions 
-            such as approved, ok, yes. \n\n* **Negative Button**: Used for negative actions such as decline, cancel, no.`
-        }
-    }
-};
+types.storyName = 'Types';
+
+/** Button can have an icon with text or just and icon. */
 
 export const icons = () => (
     <div className='fddocs-container'>
@@ -63,6 +61,8 @@ export const icons = () => (
         <Button glyph='filter' option='transparent'>Filter</Button>
         <Button glyph='accept' type='positive'>Approve</Button>
         <Button glyph='decline' type='negative'>Reject</Button>
+        <Button glyph='edit' type='ghost'>Edit</Button>
+        <Button glyph='warning' type='attention'>Ignore</Button>
         <div className='fddocs-container--break' />
         <Button glyph='alert' option='emphasized' />
         <Button aria-label='Add to cart' glyph='cart' />
@@ -72,17 +72,16 @@ export const icons = () => (
             type='positive' />
         <Button aria-label='Decline' glyph='decline'
             type='negative' />
+        <Button aria-label='Edit' glyph='edit'
+            type='ghost' />
+        <Button aria-label='Ignore' glyph='warning'
+            type='attention' />
     </div>
 );
 
-icons.story = {
-    name: 'Icons',
-    parameters: {
-        docs: {
-            storyDescription: 'Button can have an icon with text or just and icon.'
-        }
-    }
-};
+icons.storyName = 'Icons';
+
+/** There are two sizes. The `compact` size is only used on desktop and it is full size when used on a touch device. */
 
 export const sizes = () => (
     <div className='fddocs-container'>
@@ -91,14 +90,9 @@ export const sizes = () => (
     </div>
 );
 
-sizes.story = {
-    name: 'Sizes',
-    parameters: {
-        docs: {
-            storyDescription: 'There are two sizes. The `compact` size is only used on desktop and it is full size when used on a touch device.'
-        }
-    }
-};
+sizes.storyName = 'Sizes';
+
+/** There are three states: default, `selected`, and `disabled` */
 
 export const states = () => (
     <div className='fddocs-container'>
@@ -121,24 +115,23 @@ export const states = () => (
         <Button type='negative'>Negative Button</Button>
         <Button selected type='negative'>Negative Button</Button>
         <Button disabled type='negative'>Negative Button</Button>
+        <div className='fddocs-container--break' />
+        <Button type='ghost'>Ghost Button</Button>
+        <Button selected type='ghost'>Ghost Button</Button>
+        <Button disabled type='ghost'>Ghost Button</Button>
+        <div className='fddocs-container--break' />
+        <Button type='attention'>Attention Button</Button>
+        <Button selected type='attention'>Attention Button</Button>
+        <Button disabled type='attention'>Attention Button</Button>
     </div>
 );
 
-states.story = {
-    name: 'States',
-    parameters: {
-        docs: {
-            storyDescription: 'There are three states: default, `selected`, and `disabled`.'
-        }
-    }
-};
-
-
+states.storyName = 'States';
 
 export const dev = () => (
     <Button
-        compact={boolean('compact'), false}
-        disabled={boolean('disabled'), false}
+        compact={(boolean('compact'), false)}
+        disabled={(boolean('disabled'), false)}
         option={select('option', {
             'emphasized': 'emphasized',
             'transparent': 'transparent'
@@ -152,6 +145,4 @@ export const dev = () => (
 );
 
 
-dev.story = {
-    parameters: { docs: { disable: true } }
-};
+dev.parameters = { docs: { disable: true } };

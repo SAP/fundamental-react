@@ -121,8 +121,8 @@ class Time extends Component {
                         <TimeItem
                             active={active}
                             defaultValue={1}
-                            disabled={disabled}
                             disableStyles={disableStyles}
+                            disabled={disabled}
                             downButtonProps={hoursDownButtonProps}
                             format12Hours={format12Hours}
                             inputProps={hoursInputProps}
@@ -144,8 +144,8 @@ class Time extends Component {
                         <TimeItem
                             active={active}
                             defaultValue={1}
-                            disabled={disabled}
                             disableStyles={disableStyles}
+                            disabled={disabled}
                             downButtonProps={minutesDownButtonProps}
                             format12Hours={format12Hours}
                             inputProps={minutesInputProps}
@@ -167,8 +167,8 @@ class Time extends Component {
                         <TimeItem
                             active={active}
                             defaultValue={1}
-                            disabled={disabled}
                             disableStyles={disableStyles}
+                            disabled={disabled}
                             downButtonProps={secondsDownButtonProps}
                             format12Hours={format12Hours}
                             inputProps={secondsInputProps}
@@ -189,8 +189,8 @@ class Time extends Component {
                         <label className='fd-time__slider-label'>{localizedText.meridiemLabel}</label>
                         <TimeItem
                             active={active}
-                            disabled={disabled}
                             disableStyles={disableStyles}
+                            disabled={disabled}
                             downButtonProps={meridiemDownButtonProps}
                             inputProps={meridiemInputProps}
                             localizedText={{ buttonUp: localizedText.meridiemUp, buttonDown: localizedText.meridiemDown, meridiemAM: localizedText.meridiemAM, meridiemPM: localizedText.meridiemPM }}

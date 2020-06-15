@@ -2,6 +2,9 @@
 import { imageSnapshot } from '@storybook/addon-storyshots-puppeteer';
 import initStoryshots from '@storybook/addon-storyshots';
 
+// needed to prevent failures from @storybook/components
+global.window = { ...global };
+
 const getMatchOptions = () => {
     return {
         failureThreshold: 0.2,

@@ -284,6 +284,15 @@ describe('<DatePicker />', () => {
         expect(wrapper.state('isoFormattedDate')).toEqual('2020-04-14');
     });
 
+    test('provide ISO-8601 format date with custom dateFormat in props', () => {
+        wrapper = mount(<DatePicker dateFormat='DD-MM-YYYY' defaultValue='01-06-2020' />);
+        expect(wrapper.state('isoFormattedDate')).toEqual('2020-06-01');
+        wrapper
+            .find('input[type="text"]')
+            .simulate('change', { target: { value: '14-04-2020' } });
+        expect(wrapper.state('isoFormattedDate')).toEqual('2020-04-14');
+    });
+
     test('should update value if defaultValue prop is updated', () => {
         wrapper = mount(prePopulatedDatepicker);
         wrapper = wrapper.setProps({
@@ -300,6 +309,21 @@ describe('<DatePicker />', () => {
             element.find('input[type="text"]').simulate('blur');
 
             expect(blur).toHaveBeenCalledTimes(1);
+        });
+        test('should format isoFormattedDate when a custom dateFormat is passed in props', () => {
+            const blur = jest.fn();
+            const element = mount(<DatePicker
+                dateFormat='DD-MM-YYYY'
+                defaultValue='01-06-2020'
+                onBlur={blur} />).find('input[type="text"]');
+            element.find('input[type="text"]').simulate('click');
+            element.find('input[type="text"]').simulate('change', { target: { value: '30-06-2020' } });
+            element.find('input[type="text"]').simulate('blur');
+
+            expect(blur).toHaveBeenCalledTimes(1);
+            expect(blur).toHaveBeenCalledWith(expect.objectContaining({
+                isoFormattedDate: '2020-06-30'
+            }));
         });
         test('should call onBlur after leaving input, with validated data', () => {
             const blur = jest.fn();
@@ -324,6 +348,39 @@ describe('<DatePicker />', () => {
             element.find('.fd-calendar__text').at(8).simulate('click');
             expect(datePickerClose).toHaveBeenCalledWith(expect.objectContaining({ formattedDate: '2020-03-02' }));
             expect(datePickerClose).toHaveBeenCalledTimes(1);
+        });
+    });
+
+    describe('first displayed day', () => {
+        afterEach(() => {
+            document.body.innerHTML = '';
+        });
+        test('should be the first sunday before the start of the month in locale "es"', () => {
+            const element = mount(<DatePicker
+                dateFormat='DD/MM/YYYY'
+                defaultValue='20/06/2020'
+                locale='es' />);
+            element.find('button').simulate('click');
+            const firstDisplayedDay = document.body.querySelectorAll('.fd-calendar__item--other-month')[0].textContent;
+            expect(firstDisplayedDay).toBe('31'); // May 31st is the first day shown
+        });
+        test('should be the first sunday before the start of the month in locale "fr"', () => {
+            const element = mount(<DatePicker
+                dateFormat='DD/MM/YYYY'
+                defaultValue='01/07/2020'
+                locale='fr' />);
+            element.find('button').simulate('click');
+            const firstDisplayedDay = document.body.querySelectorAll('.fd-calendar__item--other-month')[0].textContent;
+            expect(firstDisplayedDay).toBe('28'); // June 28th is the first day shown
+        });
+        test('should be the first sunday of the start of the month, when the 1st is the start of the month in locale "fr"', () => {
+            const element = mount(<DatePicker
+                dateFormat='DD/MM/YYYY'
+                defaultValue='01/11/2020'
+                locale='fr' />);
+            element.find('button').simulate('click');
+            const firstDisplayedDay = document.body.querySelectorAll('.fd-calendar__item--other-month')[0].textContent;
+            expect(firstDisplayedDay).toBe('1'); // In this case December 1st is the first other-month date shown
         });
     });
 

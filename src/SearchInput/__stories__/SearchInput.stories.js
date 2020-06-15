@@ -71,6 +71,4 @@ export const dev = () => (
             'warning': { state: 'warning', text: 'placeholder text' }
         })} />
 );
-dev.story = {
-    parameters: { docs: { disable: true } }
-};
+dev.parameters = { docs: { disable: true } };

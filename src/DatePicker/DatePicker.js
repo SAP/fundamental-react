@@ -22,7 +22,9 @@ class DatePicker extends Component {
     constructor(props) {
         super(props);
         const formattedDate = props.defaultValue.length > 0 ? this.getFormattedDateStr(props.defaultValue) : '';
-        const isoFormattedDate = props.defaultValue.length > 0 ? moment(props.defaultValue).format(ISO_DATE_FORMAT) : '';
+        const isoFormattedDate = props.defaultValue.length > 0
+            ? moment(props.defaultValue, props.dateFormat).format(ISO_DATE_FORMAT)
+            : '';
         this.state = {
             isExpanded: false,
             selectedDate: formattedDate.length === 0 ? null : this.getMomentDateObj(formattedDate),
@@ -123,11 +125,13 @@ class DatePicker extends Component {
     }
 
     handleNewDefault = () => {
-        const { defaultValue } = this.props;
+        const { dateFormat, defaultValue } = this.props;
         const formattedNewDefault = defaultValue && defaultValue.length > 0 ? this.getFormattedDateStr(defaultValue) : '';
         this.setState({
             selectedDate: formattedNewDefault.length === 0 ? null : this.getMomentDateObj(formattedNewDefault),
-            isoFormattedDate: defaultValue && defaultValue.length > 0 ? moment(defaultValue).format(ISO_DATE_FORMAT) : '',
+            isoFormattedDate: defaultValue && defaultValue.length > 0
+                ? moment(defaultValue, dateFormat).format(ISO_DATE_FORMAT)
+                : '',
             formattedDate: formattedNewDefault
         }, () => {
             this.validateDates();
@@ -138,7 +142,9 @@ class DatePicker extends Component {
         e.stopPropagation();
         this.setState({
             formattedDate: e.target.value,
-            isoFormattedDate: e.target.value ? moment(e.target.value).format(ISO_DATE_FORMAT) : ''
+            isoFormattedDate: e.target.value
+                ? moment(e.target.value, this.props.dateFormat).format(ISO_DATE_FORMAT)
+                : ''
         }, () => {
             this.props.onChange(this.getCallbackData());
         });
@@ -202,7 +208,9 @@ class DatePicker extends Component {
                 this.setState({
                     selectedDate: newDate,
                     formattedDate: newFormattedDateStr,
-                    isoFormattedDate: formattedDate ? moment(formattedDate).format(ISO_DATE_FORMAT) : ''
+                    isoFormattedDate: formattedDate
+                        ? moment(formattedDate, this.props.dateFormat).format(ISO_DATE_FORMAT)
+                        : ''
                 }, () => {
                     if (formattedDate !== newFormattedDateStr) {
                         this.executeCallback(this.props.onChange);
@@ -329,6 +337,7 @@ class DatePicker extends Component {
             readOnly,
             specialDays,
             validationState,
+            weekdayStart,
             ...props
         } = this.props;
 
@@ -367,19 +376,20 @@ class DatePicker extends Component {
                                 }
                                 disableAfterDate={disableAfterDate}
                                 disableBeforeDate={disableBeforeDate}
-                                disabledDates={disabledDates}
                                 disableFutureDates={disableFutureDates}
                                 disablePastDates={disablePastDates}
                                 disableStyles={disableStyles}
                                 disableWeekday={disableWeekday}
                                 disableWeekends={disableWeekends}
+                                disabledDates={disabledDates}
                                 enableRangeSelection={enableRangeSelection}
                                 focusOnInit
                                 locale={locale}
                                 localizedText={localizedText}
                                 onChange={this.updateDate}
                                 ref={this.calendarRef}
-                                specialDays={specialDays} />
+                                specialDays={specialDays}
+                                weekdayStart={weekdayStart} />
                         </>
                     }
                     control={
@@ -388,8 +398,8 @@ class DatePicker extends Component {
                             aria-haspopup='true'
                             className={inputGroupClass}
                             compact={compact}
-                            disabled={disabled}
                             disableStyles={disableStyles}
+                            disabled={disabled}
                             validationState={!this.state.isExpanded ? validationState : null} >
                             <FormInput
                                 {...inputProps}
@@ -404,18 +414,18 @@ class DatePicker extends Component {
                             <InputGroup.Addon isButton>
                                 <Button {...buttonProps}
                                     aria-label={buttonLabel}
-                                    disabled={disableButton}
                                     disableStyles={disableStyles}
+                                    disabled={disableButton}
                                     glyph='calendar'
                                     onClick={this.handleClickButton}
                                     option='transparent' />
                             </InputGroup.Addon>
                         </InputGroup>
                     }
-                    disabled={disableButton}
                     disableKeyPressHandler
                     disableStyles={disableStyles}
                     disableTriggerOnClick
+                    disabled={disableButton}
                     noArrow
                     onClickOutside={this.handleOutsideClickAndEscape}
                     onEscapeKey={this.handleOutsideClickAndEscape}
@@ -428,7 +438,7 @@ class DatePicker extends Component {
 DatePicker.displayName = 'DatePicker';
 
 DatePicker.propTypes = {
-    ...Calendar.basePropTypes,
+    ...Calendar.PropTypes,
     /** aria-label for datepicker button */
     buttonLabel: PropTypes.string,
     /** Additional props to be spread to the `<button>` element */

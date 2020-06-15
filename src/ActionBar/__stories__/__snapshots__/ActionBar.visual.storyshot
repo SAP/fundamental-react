@@ -112,7 +112,7 @@ exports[`Storyshots Visual Action Bar 1`] = `
                 className="fd-popover__control"
               >
                 <button
-                  aria-controls="fd-1"
+                  aria-controls="fd-mocked-short-id"
                   aria-expanded={false}
                   aria-haspopup={true}
                   className="fd-button fd-button--transparent sap-icon--vertical-grip"

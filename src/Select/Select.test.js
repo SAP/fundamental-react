@@ -28,7 +28,7 @@ describe('<Select />', () => {
             element = mount(
                 <Select onSelect={onSelect} options={options} />
             );
-            element.find('button').simulate('click');
+            element.find('.fd-select__button').simulate('click');
         });
 
         afterEach(() => {
@@ -51,7 +51,7 @@ describe('<Select />', () => {
         });
     });
 
-    test('forwards the ref to the button', () => {
+    test('forwards the ref to the div role="button"', () => {
         let ref;
         class Test extends React.Component {
             constructor(props) {
@@ -61,7 +61,8 @@ describe('<Select />', () => {
             render = () => <Select options={options} ref={ref} />;
         }
         mount(<Test />);
-        expect(ref.current.tagName).toEqual('BUTTON');
-        expect(ref.current.className).toContain('fd-select__button');
+
+        expect(ref.current.tagName).toEqual('DIV');
+        expect(ref.current.className).toContain('fd-select');
     });
 });
