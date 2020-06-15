@@ -1,19 +1,20 @@
-# See https://help.github.com/ignore-files/ for more about ignoring files.
-
 # dependencies
 /node_modules
 
 # testing
 /coverage
+src/*/__stories__/*.visual.js
+storybook-testing/__image_snapshots__/__diff_output__/*
 
 # production
-/build
 /lib
-# Readme copy for github pages site
-/src/_playground/documentation/Home/README.md
+# Readme copy
+src/Docs/
 
-# fonts for documentation site
-/src/_playground/static/
+# documentation website assets
+.storybook/static/*.woff
+.storybook/static/*.css
+storybook-static
 
 #index files
 /src/**/index.js

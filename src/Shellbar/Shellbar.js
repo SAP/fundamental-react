@@ -1,14 +1,19 @@
+import Avatar from '../Avatar/Avatar';
 import Button from '../Button/Button';
 import classnames from 'classnames';
 import Counter from '../Counter/Counter';
 import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import Icon from '../Icon/Icon';
-import Identifier from '../Identifier/Identifier';
 import Menu from '../Menu/Menu';
 import Popover from '../Popover/Popover';
 import PropTypes from 'prop-types';
 import SearchInput from '../SearchInput/SearchInput';
 import React, { Component } from 'react';
+
+/** The **Shellbar** offers consistent, responsive navigation across all products and applications. Includes
+support for branding, product navigation, search, notifications, user settings, and CoPilot. This is
+a composite component comprised of mandatory and optional elements. Before getting started, here are
+some things to know. */
 
 class Shellbar extends Component {
     constructor(props) {
@@ -56,7 +61,9 @@ class Shellbar extends Component {
         if (this.props.productSwitch) {
             let collapsedProductSwitch = this.props.productSwitch;
 
+            // eslint-disable-next-line react/prop-types
             collapsedProductSwitch.glyph = 'grid';
+            // eslint-disable-next-line react/prop-types
             collapsedProductSwitch.callback = () => {
                 this.setState(prevState => ({
                     showCollapsedProductSwitchMenu: !prevState.showCollapsedProductSwitchMenu
@@ -110,7 +117,8 @@ class Shellbar extends Component {
             productSwitchList,
             profile,
             profileMenu,
-            className
+            className,
+            backAction
         } = this.props;
 
         const shellbarClasses = classnames(
@@ -121,6 +129,13 @@ class Shellbar extends Component {
         return (
             <div className={shellbarClasses}>
                 <div className='fd-shellbar__group fd-shellbar__group--product'>
+                    {backAction && <Button
+                        aria-label={localizedText.backButtonLabel}
+                        className='fd-shellbar__button'
+                        glyph='nav-back'
+                        onClick={backAction}
+                        option='transparent' />
+                    }
                     {logo && <span className='fd-shellbar__logo'>{logo}</span>}
                     {logoSAP && (
                         <span className='fd-shellbar__logo'>
@@ -193,6 +208,11 @@ class Shellbar extends Component {
                                 inputProps={{ className: 'fd-shellbar__input-group__input' }}
                                 onEnter={searchInput.onSearch}
                                 placeholder={searchInput.placeholder}
+                                popoverProps={{
+                                    placement: searchInput?.popoverProps?.placement || 'bottom',
+                                    disableEdgeDetection: searchInput?.popoverProps?.disableEdgeDetection || true,
+                                    ...searchInput.popoverProps
+                                }}
                                 searchBtnProps={{ className: 'fd-shellbar__button' }}
                                 searchList={searchInput.searchList} />
                         </div>
@@ -387,24 +407,24 @@ class Shellbar extends Component {
                                     control={
                                         <div className='fd-button fd-shellbar__button fd-user-menu__control'>
                                             {profile.image ? (
-                                                <Identifier
+                                                <Avatar
                                                     backgroundImageUrl={profile.image}
+                                                    circle
                                                     disableStyles={disableStyles}
-                                                    modifier='circle'
                                                     size='xs' />
                                             ) : (
-                                                <Identifier color={profile.colorAccent}
+                                                <Avatar circle
+                                                    color={profile.colorAccent}
                                                     disableStyles={disableStyles}
-                                                    modifier='circle'
                                                     size='xs'>
                                                     {profile.initials}
-                                                </Identifier>
+                                                </Avatar>
                                             )}
                                         </div>
                                     }
                                     disableStyles={disableStyles}
                                     noArrow
-                                    placement='right'
+                                    placement='bottom-end'
                                     popperProps={{ id: 'fd-shellbar-profile-popover' }} />
                             </div>
                         </div>
@@ -439,7 +459,9 @@ class Shellbar extends Component {
                                             </ul>
                                         </div>
                                     }
-                                    control={<Button className='fd-product-switch__control fd-shellbar__button'
+                                    control={<Button
+                                        aria-label={productSwitch.label}
+                                        className='fd-product-switch__control fd-shellbar__button'
                                         disableStyles={disableStyles}
                                         glyph='grid' />}
                                     disableEdgeDetection
@@ -458,59 +480,69 @@ class Shellbar extends Component {
 Shellbar.displayName = 'Shellbar';
 
 Shellbar.propTypes = {
+    /** Holds all product actions and links */
     actions: PropTypes.array,
+    /** Adds back icon to shellbar and performs the provided action */
+    backAction: PropTypes.func,
+    /** CSS class(es) to add to the element */
     className: PropTypes.string,
+    /** For use with applications that utilize CoPilot */
     copilot: PropTypes.bool,
+    /** Internal use only */
     disableStyles: PropTypes.bool,
+    /** Localized text to be updated based on location/language */
     localizedText: CustomPropTypes.i18n({
+        /** Aria-label for back <button> */
+        backButtonLabel: PropTypes.string,
+        /** Aria-label for <span> element within the <button> element */
         counterLabel: PropTypes.string,
+        /** Aria-label for <button> element */
         notificationsButton: PropTypes.string
     }),
+    /** Provide an img tag for a logo other than the SAP logo.
+     * One of the two props (`logo` or `logoSAP`) should be set */
     logo: PropTypes.object,
+    /** Renders the SAP logo in the Shellbar. One of the two props (`logo` or `logoSAP`) should be set */
     logoSAP: PropTypes.bool,
+    /** Information about pending notifications */
     notifications: PropTypes.object,
+    /** Holds product titles and navigation */
     productMenu: PropTypes.array,
-    productSwitch: PropTypes.object,
+    /** For navigating between products. An object that contains an accessible and localized label for product switch button. */
+    productSwitch: PropTypes.shape({
+        /** Accessible and localized label for product switch button */
+        label: PropTypes.string.isRequired
+    }),
+    /** Array of objects containing data about the products.
+     * Callback, title, and glyph are required; subtitle is optional. */
     productSwitchList: PropTypes.arrayOf(
         PropTypes.shape({
             callback: PropTypes.func.isRequired,
+            /** Localized text for the heading */
             title: PropTypes.string.isRequired,
+            /** The icon to include. See the icon page for the list of icons */
             glyph: PropTypes.string.isRequired,
             subtitle: PropTypes.string
         })
     ),
+    /** Displays the current application when no product menu is used */
     productTitle: PropTypes.string,
+    /** User information (_e.g._ name, initials, etc.) */
     profile: PropTypes.object,
+    /** List of items for the profile menu */
     profileMenu: PropTypes.array,
+    /** Holds `searchInput` [properties](?id=component-api-searchinput--compact&viewMode=docs#properties) */
     searchInput: PropTypes.object,
+    /** Displays an application context. Should be used rarely */
     subtitle: PropTypes.string
 };
 
 Shellbar.defaultProps = {
     localizedText: {
+        backButtonLabel: 'Back button',
         counterLabel: 'Unread count',
         notificationsButton: 'Notifications'
     }
-};
-
-Shellbar.propDescriptions = {
-    actions: 'Holds all product actions and links.',
-    copilot: 'For use with applications that utilize CoPilot.',
-    logo: 'Provide an img tag for a logo other than the SAP logo. One of the two props (`logo` or `logoSAP`) should be set.',
-    logoSAP: 'Renders the SAP logo in the Shellbar. One of the two props (`logo` or `logoSAP`) should be set.',
-    localizedTextShape: {
-        counterLabel: 'Aria-label for <span> element within the <button> element.',
-        notificationsButton: 'Aria-label for <button> element.'
-    },
-    notifications: 'Information about pending notifications.',
-    productMenu: 'Holds product titles and navigation.',
-    productSwitch: 'For navigating between products.',
-    productSwitchList: 'Array of objects containing data about the products. Callback, title, and glyph are required; subtitle is optional.',
-    productTitle: 'Displays the current application when no product menu is used.',
-    profile: 'User information (_e.g._ name, initials, etc.)',
-    profileMenu: 'List of items for the profile menu.',
-    searchInput: 'Holds `searchInput` properties.',
-    subtitle: 'Displays an application context. Should be used rarely.'
 };
 
 export default Shellbar;

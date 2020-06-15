@@ -1,25 +1,8 @@
 import FormRadioItem from './FormRadioItem';
 import { mount } from 'enzyme';
 import React from 'react';
-import renderer from 'react-test-renderer';
 
 describe('<FormRadioItem />', () => {
-    const formRadioItem = (
-        <FormRadioItem
-            id='radio-1'
-            name='radio-group-1'
-            value='radio-1'>
-            Option 1
-        </FormRadioItem>
-    );
-
-    test('create form radio item', () => {
-        // create form set with form inputs
-        let component = renderer.create(formRadioItem);
-        let tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-    });
-
     describe('Radio Item Tests', () => {
         let setup = (props) => {
             return mount(<FormRadioItem {...props}>

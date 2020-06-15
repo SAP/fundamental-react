@@ -9,7 +9,10 @@ const MenuList = ({ children, className, ...props }) => {
     );
 
     return (
-        <ul {...props} className={menuListClasses}>
+        <ul
+            {...props}
+            className={menuListClasses}
+            role='menu'>
             {children}
         </ul>
     );
@@ -18,7 +21,9 @@ const MenuList = ({ children, className, ...props }) => {
 MenuList.displayName = 'Menu.List';
 
 MenuList.propTypes = {
+    /** Node(s) to render within the component */
     children: PropTypes.node,
+    /** CSS class(es) to add to the element */
     className: PropTypes.string
 };
 

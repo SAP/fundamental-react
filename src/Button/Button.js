@@ -3,6 +3,11 @@ import PropTypes from 'prop-types';
 import { BUTTON_OPTIONS, BUTTON_TYPES } from '../utils/constants';
 import React, { useEffect } from 'react';
 
+/** A **Button** allows users to perform an action. The priority of buttons within a page should be considered.
+For instance, only use the main button once within a page or dialog. Color is also important. For
+instance, the most important button has a blue background where as a red button should only be used if
+the action it performs is potentially destructive. */
+
 const Button = React.forwardRef(({
     option,
     type,
@@ -50,27 +55,35 @@ const Button = React.forwardRef(({
 Button.displayName = 'Button';
 
 Button.propTypes = {
+    /** Node(s) to render within the component */
     children: PropTypes.node,
+    /** CSS class(es) to add to the element */
     className: PropTypes.string,
+    /** Set to **true** to enable compact mode */
     compact: PropTypes.bool,
+    /** Set to **true** to mark component as disabled and make it non-interactive */
     disabled: PropTypes.bool,
+    /** Internal use only */
     disableStyles: PropTypes.bool,
+    /** The icon to include. See the icon page for the list of icons */
     glyph: PropTypes.string,
+    /** Indicates the importance of the button: 'empahsized' or 'transparent' */
     option: PropTypes.oneOf(BUTTON_OPTIONS),
+    /** Set to **true** to set state of the button to "selected" */
     selected: PropTypes.bool,
+    /** Sets the variation of the component. Primarily used for styling: 'standard',
+    'positive',
+    'negative',
+    'medium' */
     type: PropTypes.oneOf(BUTTON_TYPES),
+    /** Value for the `type` attribute on the `<button>` element */
     typeAttr: PropTypes.string,
+    /** Callback function when user clicks on the component*/
     onClick: PropTypes.func
 };
 
 Button.defaultProps = {
     typeAttr: 'button'
-};
-
-Button.propDescriptions = {
-    option: 'Indicates the importance of the button.',
-    selected: 'Set to **true** to set state of the button to "selected".',
-    typeAttr: 'Value for the `type` attribute on the `<button>` element.'
 };
 
 export default Button;

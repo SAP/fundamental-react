@@ -7,17 +7,15 @@ import InputGroup from '../InputGroup/InputGroup';
 import Menu from '../Menu/Menu';
 import Popover from '../Popover/Popover';
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 
-class SearchInput extends Component {
+class SearchInput extends PureComponent {
     constructor(props) {
         super(props);
         this.state = {
             isExpanded: false,
             searchExpanded: false,
-            value: props.inputProps?.value ? props.inputProps.value : '',
-            searchList: props.searchList,
-            filteredResult: props.inputProps?.value ? this.filterList(props.searchList, props.inputProps.value) : props.searchList
+            value: props.inputProps?.value ? props.inputProps.value : ''
         };
     }
 
@@ -26,18 +24,17 @@ class SearchInput extends Component {
     }
 
     handleKeyPress = event => {
-        if (event.key === 'Enter') {
+        if (event.key === 'enter') {
             this.props.onEnter(this.state.value);
         }
     };
 
     handleListItemClick = (event, item) => {
-        this.setState((prevState) => ({
+        this.setState({
             value: item.text,
             isExpanded: false,
-            searchExpanded: false,
-            filteredResult: this.filterList(prevState.searchList, item.text)
-        }), () => {
+            searchExpanded: false
+        }, () => {
             item?.callback();
             this.props.onSelect(event, item);
         });
@@ -45,13 +42,12 @@ class SearchInput extends Component {
 
     handleChange = event => {
         let filteredResult;
-        if (this.state.searchList) {
-            filteredResult = this.filterList(this.state.searchList, event.target.value);
+        if (this.props.searchList) {
+            filteredResult = this.filterList(this.props.searchList, event.target.value);
         }
         this.setState({
             value: event.target.value,
-            isExpanded: true,
-            filteredResult: filteredResult
+            isExpanded: true
         }, () => {
             this.props.onChange(event, filteredResult);
         });
@@ -90,9 +86,7 @@ class SearchInput extends Component {
             this.setState({
                 isExpanded: false,
                 searchExpanded: false,
-                value: '',
-                searchList: this.props.searchList,
-                filteredResult: this.props.searchList
+                value: ''
             });
         }
     };
@@ -135,12 +129,12 @@ class SearchInput extends Component {
                 [`is-${validationState?.state}`]: validationState?.state
             }
         ) : inputGroupClasses;
-
+        let filteredResult = this.state.value && this.props.searchList ? this.filterList(this.props.searchList, this.state.value) : this.props.searchList;
         const popoverBody = (
             <Menu disableStyles={disableStyles}>
                 <Menu.List {...listProps}>
-                    {this.state.filteredResult && this.state.filteredResult.length > 0 ? (
-                        this.state.filteredResult.map((item, index) => {
+                    {filteredResult && filteredResult.length > 0 ? (
+                        filteredResult.map((item, index) => {
                             return (
                                 <Menu.Item
                                     key={index}
@@ -166,11 +160,11 @@ class SearchInput extends Component {
                     body={
                         (<>
                             {validationState &&
-                            <FormMessage
-                                disableStyles={disableStyles}
-                                type={validationState.state}>
-                                {validationState.text}
-                            </FormMessage>
+                                <FormMessage
+                                    disableStyles={disableStyles}
+                                    type={validationState.state}>
+                                    {validationState.text}
+                                </FormMessage>
                             }
                             {popoverBody}
                         </>)}
@@ -206,7 +200,7 @@ class SearchInput extends Component {
                     noArrow
                     onClickOutside={this.handleClickOutside}
                     show={this.state.isExpanded}
-                    widthSizingType='matchTarget' />
+                    widthSizingType='minTarget' />
             </div>
         );
     }
@@ -215,30 +209,48 @@ class SearchInput extends Component {
 SearchInput.displayName = 'SearchInput';
 
 SearchInput.propTypes = {
+    /** CSS class(es) to add to the element */
     className: PropTypes.string,
+    /** Set to **true** to enable compact mode */
     compact: PropTypes.bool,
+    /** Internal use only */
     disableStyles: PropTypes.bool,
+    /** Props to be spread to the InputGroupAddon component */
     inputGroupAddonProps: PropTypes.object,
+    /** Props to be spread to the InputGroup component */
     inputGroupProps: PropTypes.object,
+    /** Additional props to be spread to the `<input>` element */
     inputProps: PropTypes.object,
     inShellbar: PropTypes.bool,
+    /** Additional props to be spread to the `<ul>` element */
     listProps: PropTypes.object,
+    /** Set to **true** to render without a search button */
     noSearchBtn: PropTypes.bool,
+    /** Localized placeholder text of the input */
     placeholder: PropTypes.string,
+    /** Additional props to be spread to the Popover component */
     popoverProps: PropTypes.object,
+    /** Additional props to be spread to the search `<button>` element */
     searchBtnProps: PropTypes.object,
+    /** Collection of items to display in the dropdown list */
     searchList: PropTypes.arrayOf(
         PropTypes.shape({
             text: PropTypes.string.isRequired,
             callback: PropTypes.func
         })
     ),
+    /** An object identifying a validation message.  The object will include properties for `state` and `text`; _e.g._, \`{ state: \'warning\', text: \'This is your last warning\' }\` */
     validationState: PropTypes.shape({
+        /** State of validation: 'error', 'warning', 'information', 'success' */
         state: PropTypes.oneOf(FORM_MESSAGE_TYPES),
+        /** Text of the validation message */
         text: PropTypes.string
     }),
+    /** Callback function when the change event fires on the component */
     onChange: PropTypes.func,
+    /** Callback function when the user hits the <enter> key */
     onEnter: PropTypes.func,
+    /** Callback function when user clicks on an option */
     onSelect: PropTypes.func
 };
 
@@ -246,15 +258,6 @@ SearchInput.defaultProps = {
     onChange: () => { },
     onEnter: () => { },
     onSelect: () => { }
-};
-
-SearchInput.propDescriptions = {
-    inputGroupAddonProps: 'Props to be spread to the InputGroupAddon component.',
-    inputGroupProps: 'Props to be spread to the InputGroup component.',
-    noSearchBtn: 'Set to **true** to render without a search button.',
-    onEnter: 'Callback function when the user hits the <Enter> key.',
-    searchBtnProps: 'Additional props to be spread to the search `<button>` element.',
-    searchList: 'Collection of items to display in the dropdown list.'
 };
 
 export default SearchInput;

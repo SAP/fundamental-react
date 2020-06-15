@@ -60,48 +60,49 @@ class TimePickerItem extends Component {
         event.stopPropagation();
         this.setState({ value: event.target.value });
         var aux = event.target.value;
-        this.onInputValidation(aux);
+        this.onInputValidation(aux, event);
         this.props.updateValue(aux);
     };
-
-    onInputValidation = value => {
+    onInputValidation = (value, event) => {
         const { showHour, showMinute, showSecond, format12Hours } = this.props;
-
-        if (showHour && showMinute && showSecond && format12Hours) {
+        if (format12Hours && showHour && showMinute && showSecond) {
             //validate hh:mm:ss am/pm format
-            let regex = new RegExp(
-                '((1[0-2]|0?[0-9]):([0-5][0-9]):([0-5][0-9]) ([AaPp][Mm]))'
-            );
-            this.inputCheck(regex, value);
-        } else if (
-            (format12Hours && showHour && showMinute) ||
-            (format12Hours && showMinute & showSecond)
-        ) {
-            //validate hh:mm and mm:ss am
-            let regex = new RegExp('((1[0-2]|0?[0-9]):([0-5][0-9]) ([AaPp][Mm]))');
-            this.inputCheck(regex, value);
-        } else if (
-            (!format12Hours && showHour && showMinute && showSecond) ||
-            (!format12Hours && showHour && showMinute) ||
-            (!format12Hours && showMinute & showSecond)
-        ) {
-            //validate hh:mm and mm:ss
-            let regex = new RegExp('(1[0-2]|0?[0-9]):([0-5][0-9])');
-            this.inputCheck(regex, value);
+            let regex = new RegExp('^(1[0-2]|0?[1-9]):([0-5]?[0-9]):([0-5]?[0-9]) ([AaPp][Mm])$');
+            return this.inputCheck(regex, value, event);
+        } else if (!format12Hours && showHour && showMinute && showSecond) {
+            //validate hh:mm:ss format
+            let regex = new RegExp('^(2[0-3]|[01]?[0-9]):([0-5]?[0-9]):([0-5]?[0-9])$');
+            return this.inputCheck(regex, value, event);
+        } else if (format12Hours && showHour && showMinute) {
+            //validate hh:mm am
+            let regex = new RegExp('^(1[0-2]|0?[1-9]):([0-5]?[0-9]) ([AaPp][Mm])$');
+            return this.inputCheck(regex, value, event);
+        } else if (!format12Hours && showHour && showMinute) {
+            //validate hh:mm
+            let regex = new RegExp('^(2[0-3]|[01]?[0-9]):([0-5]?[0-9])$');
+            return this.inputCheck(regex, value, event);
+        } else if (format12Hours && showMinute && showSecond) {
+            //validate mm:ss am
+            let regex = new RegExp('^([0-5]?[0-9]):([0-5]?[0-9]) ([AaPp][Mm])$');
+            return this.inputCheck(regex, value, event);
+        } else if (!format12Hours && showMinute && showSecond) {
+            //validate mm:ss
+            let regex = new RegExp('^([0-5]?[0-9]):([0-5]?[0-9])$');
+            return this.inputCheck(regex, value, event);
         }
-        // else if (showHour && showMinute && showSecond && !format12Hours) {
-        //   //validate hh:mm:ss
-        //   let regex = new RegExp('(1[0-2]|0?[0-9]):([0-5][0-9]):([0-5][0-9])');
-        //   this.inputCheck(regex, value);
-        // }
     };
-
-    inputCheck = (regex, value) => {
+    inputCheck = (regex, value, event) => {
         if (regex.test(value) && value.length === this.state.length) {
+            if (event.type === 'blur') {
+                return true;
+            }
             this.setState({ isValid: true, style: VALID });
             //send time value to Time Component
             this.updateTime(value);
         } else {
+            if (event.type === 'blur') {
+                return false;
+            }
             this.setState({ isValid: false, style: INVALID });
         }
     };
@@ -200,16 +201,15 @@ class TimePickerItem extends Component {
             this.props.onChange(time);
         }
     };
-
-    onBlur = () => {
-        const { isValid } = this.state;
+    onBlur = (event) => {
         //if the input is not the correct format then  it will be cleared
-        if (!isValid) {
+        if (!this.onInputValidation(event.target.value, event)) {
             this.props.updateValue('');
         }
         //reset to initial style
         this.setState({ style: VALID });
     };
+
     render() {
         const { disableStyles, disabled, inputProps, buttonProps, onClick } = this.props;
         return (
@@ -236,7 +236,7 @@ class TimePickerItem extends Component {
                         compact
                         disableStyles={disableStyles}
                         disabled={disabled}
-                        glyph='fob-watch'
+                        glyph='time-entry-request'
                         id={this.state.buttonID}
                         option='transparent' />
                 </InputGroup.Addon>
@@ -249,16 +249,22 @@ TimePickerItem.displayName = 'TimePickerItem';
 
 TimePickerItem.propTypes = {
     localizedText: PropTypes.object.isRequired,
-    buttonID: PropTypes.string,
+    buttonId: PropTypes.string,
+    /** Additional props to be spread to the `<button>` element */
     buttonProps: PropTypes.object,
+    /** Set to **true** to mark component as disabled and make it non-interactive */
     disabled: PropTypes.bool,
+    /** Internal use only */
     disableStyles: PropTypes.bool,
     format12Hours: PropTypes.bool,
+    /** Value for the `id` attribute on the element */
     id: PropTypes.string,
     inputId: PropTypes.string,
+    /** Additional props to be spread to the `<input>` element */
     inputProps: PropTypes.object,
     isValid: PropTypes.bool,
     length: PropTypes.number,
+    /** Localized placeholder text of the input */
     placeholder: PropTypes.string,
     showHour: PropTypes.bool,
     showMinute: PropTypes.bool,
@@ -266,7 +272,9 @@ TimePickerItem.propTypes = {
     style: PropTypes.string,
     updateValue: PropTypes.func,
     value: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+    /** Callback function when the change event fires on the component */
     onChange: PropTypes.func,
+    /** Callback function when user clicks on the component*/
     onClick: PropTypes.func
 };
 

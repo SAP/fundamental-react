@@ -1,33 +1,25 @@
 import classnames from 'classnames';
-import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import PropTypes from 'prop-types';
 import React from 'react';
 
 const TileContent = props => {
-    const { title, children, className, headingLevel, titleProps, productTile, ...rest } = props;
+    const { children, className, twoColumns, ...rest } = props;
 
     const tileContentClasses = classnames(
+        'fd-tile__content',
         {
-            'fd-tile__content': !productTile,
-            'fd-product-tile__content': productTile
+            'fd-tile__content--2-col': twoColumns
         },
         className
     );
-
-    const tileContentHeadingClass = classnames(
-        {
-            'fd-tile__title': !productTile,
-            'fd-product-tile__title': productTile
-        },
-        className
-    );
-
-    const HeadingTag = `h${headingLevel}`;
 
     return (
         <div {...rest} className={tileContentClasses}>
-            <HeadingTag {...titleProps} className={tileContentHeadingClass}>{title}</HeadingTag>
-            {children}
+            {twoColumns ? React.Children.toArray(children).map(child => {
+                return React.cloneElement(child, {
+                    className: classnames(child.className, 'fd-tile__section')
+                });
+            }) : children }
         </div>
     );
 };
@@ -35,16 +27,14 @@ const TileContent = props => {
 TileContent.displayName = 'Tile.Content';
 
 TileContent.propTypes = {
-    title: PropTypes.string.isRequired,
+    /** Node(s) to render within the component */
     children: PropTypes.node,
+    /** CSS class(es) to add to the element */
     className: PropTypes.string,
-    headingLevel: CustomPropTypes.range(2, 6),
-    productTile: PropTypes.bool,
-    titleProps: PropTypes.object
-};
-
-TileContent.defaultProps = {
-    headingLevel: 3
+    /** Set to **true** to split TileContent into two columns with a 0.25rem vertical padding.
+     * Any children must be wrapped in 2 top level `<div>` elements.
+    */
+    twoColumns: PropTypes.bool
 };
 
 export default TileContent;

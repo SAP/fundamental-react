@@ -1,0 +1,82 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Component API/Dialog Header 1`] = `
+<div
+  dir="ltr"
+>
+  <button
+    className="fd-button"
+    onClick={[Function]}
+    type="button"
+  >
+    Show Dialog
+  </button>
+</div>
+`;
+
+exports[`Storyshots Component API/Dialog Primary 1`] = `
+<div
+  dir="ltr"
+>
+  <button
+    className="fd-button"
+    onClick={[Function]}
+    type="button"
+  >
+    Show Dialog
+  </button>
+</div>
+`;
+
+exports[`Storyshots Component API/Dialog Sizes 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    className="fddocs-container"
+  >
+    <button
+      className="fd-button"
+      onClick={[Function]}
+      type="button"
+    >
+      Show Small Dialog
+    </button>
+    <button
+      className="fd-button"
+      onClick={[Function]}
+      type="button"
+    >
+      Show Medium Dialog
+    </button>
+    <button
+      className="fd-button"
+      onClick={[Function]}
+      type="button"
+    >
+      Show Large Dialog
+    </button>
+    <button
+      className="fd-button"
+      onClick={[Function]}
+      type="button"
+    >
+      Show XL Dialog
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Component API/Dialog Subheader 1`] = `
+<div
+  dir="ltr"
+>
+  <button
+    className="fd-button"
+    onClick={[Function]}
+    type="button"
+  >
+    Show Dialog
+  </button>
+</div>
+`;

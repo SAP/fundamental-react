@@ -12,6 +12,10 @@ import shortid from '../utils/shortId';
 import Token from '../Token/Token';
 import React, { Component } from 'react';
 
+/** A **MultiInput** allows users to enter multiple values which are displayed as a tokens. It provides an editable input field for filtering the list,
+ * and a dropdown menu with a list of the available options.
+ * If the entries are not validated by the application, users can also enter custom values. */
+
 class MultiInput extends Component {
     constructor(props) {
         super(props);
@@ -48,13 +52,23 @@ class MultiInput extends Component {
 
     // create tag elements to display below input box
     createTags = () => {
-        return this.state.tags.map((tag, index) => (
-            <Token
-                key={index}
-                onClick={() => this.removeTag(tag)}>
-                {tag}
-            </Token>
-        ));
+        return this.state.tags.map((tag, index) => {
+            if (index < 3) {
+                return (
+                    <Token
+                        key={index}
+                        onClick={() => this.removeTag(tag)}>
+                        {tag}
+                    </Token>
+                );
+            } else if (index >= this.state.tags.length - 1) {
+                return (
+                    <span className='fd-tokenizer__indicator'>{this.state.tags.length - 3} more</span>
+                );
+            } else {
+                return null;
+            }
+        });
     };
 
     // add/remove tag to tag collection
@@ -95,7 +109,6 @@ class MultiInput extends Component {
 
     // remove/close tag
     removeTag = (tag) => {
-
         this.setState(
             prevState => {
                 const tags = prevState.tags.filter(item => {
@@ -201,7 +214,7 @@ class MultiInput extends Component {
                                 {this.state.tags.length > 0 && this.createTags()}
                                 <FormInput
                                     {...inputProps}
-                                    className='fd-tokenizer__input'
+                                    className='fd-input-group__input fd-tokenizer__input'
                                     compact={compact}
                                     disableStyles={disableStyles}
                                     placeholder={placeholder} />
@@ -228,33 +241,41 @@ class MultiInput extends Component {
 MultiInput.displayName = 'MultiInput';
 
 MultiInput.propTypes = {
+    /** Collection of items to display in the list */
     data: PropTypes.array.isRequired,
+    /** Additional props to be spread to the `<button>` element */
     buttonProps: PropTypes.object,
+    /** CSS class(es) to add to the element */
     className: PropTypes.string,
+    /** Set to **true** to enable compact mode */
     compact: PropTypes.bool,
+    /** Set to **true** to mark component as disabled and make it non-interactive */
     disabled: PropTypes.bool,
+    /** Internal use only */
     disableStyles: PropTypes.bool,
+    /** Additional props to be spread to the `<input>` element */
     inputProps: PropTypes.object,
+    /** Additional props to be spread to the `<ul>` element */
     listProps: PropTypes.object,
+    /** Localized placeholder text of the input */
     placeholder: PropTypes.string,
+    /** Additional props to be spread to the Popover component */
     popoverProps: PropTypes.object,
+    /** Additional props to be spread to the tags `<div>` element */
     tagProps: PropTypes.object,
+    /** An object identifying a validation message.  The object will include properties for `state` and `text`; _e.g._, \`{ state: \'warning\', text: \'This is your last warning\' }\` */
     validationState: PropTypes.shape({
+        /** State of validation: 'error', 'warning', 'information', 'success' */
         state: PropTypes.oneOf(FORM_MESSAGE_TYPES),
+        /** Text of the validation message */
         text: PropTypes.string
     }),
+    /** Callback function when a tag is added or removed. Returns array of tags selected */
     onTagsUpdate: PropTypes.func
 };
 
 MultiInput.defaultProps = {
     onTagsUpdate: () => {}
-};
-
-MultiInput.propDescriptions = {
-    data: 'Collection of items to display in the list.',
-    onTagsUpdate: 'Callback function when a tag is added or removed. Returns array of tags selected.',
-    placeholder: 'Localized placeholder text of the input.',
-    tagProps: 'Additional props to be spread to the tags `<div>` element.'
 };
 
 export default MultiInput;

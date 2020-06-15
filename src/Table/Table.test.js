@@ -1,6 +1,5 @@
 import { mount } from 'enzyme';
 import React from 'react';
-import renderer from 'react-test-renderer';
 import Table from './Table';
 
 describe('<Table />', () => {
@@ -18,29 +17,6 @@ describe('<Table />', () => {
             rowData: ['Data 5', 'Data 6', 'Data 7', 'Data 8']
         }
     ];
-
-    const simpleTable = (
-        <Table
-            headers={defaultHeaders}
-            tableData={defaultData} />
-    );
-
-    const simpleTableWithClass = (
-        <Table
-            className='blue'
-            headers={defaultHeaders}
-            tableData={defaultData} />
-    );
-
-    test('create table component', () => {
-        let component = renderer.create(simpleTable);
-        let tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-
-        component = renderer.create(simpleTableWithClass);
-        tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-    });
 
     describe('Prop spreading', () => {
         test('should allow props to be spread to the Table component', () => {

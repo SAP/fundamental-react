@@ -1,31 +1,68 @@
+/* eslint-disable react/no-multi-comp */
 import FormTextarea from '../FormTextarea';
 import React from 'react';
-import { storiesOf } from '@storybook/react';
 import {
     boolean,
     select,
-    withKnobs
+    text
 } from '@storybook/addon-knobs';
 
-const createProps = (overrides) => ({
-    compact: boolean('compact', false),
-    disabled: boolean('disabled', false),
-    readOnly: boolean('readOnly', false),
-    state: select('Validation State', {
-        'default': null,
-        'valid': 'valid',
-        'invalid': 'invalid',
-        'information': 'information',
-        'warning': 'warning'
-    }),
-    ...overrides
-});
+export default {
+    title: 'Component API/Forms/FormTextarea',
+    component: FormTextarea
+};
 
-storiesOf('Components|FormTextarea', module)
-    .addDecorator(withKnobs)
-    .add('Default', () => (
-        <FormTextarea {...createProps()}>Default</FormTextarea>
-    ))
-    .add('disable styles', () => (
-        <FormTextarea {...createProps()} disableStyles>Default</FormTextarea>
-    ));
+export const primary = () => (<FormTextarea defaultValue='Placeholder' />);
+
+export const compact = () => (<FormTextarea compact defaultValue='Compact textarea' />);
+
+/**
+ * **Disabled**: This indicates the field is not editable. A common use case is that this field is dependent on a previous entry or selection within the form.
+ */
+
+export const disabled = () => (<FormTextarea defaultValue='Disabled textarea' disabled />);
+
+
+/** **Read Only**: Used to display static information in the context of a form. */
+
+export const readOnly = () => (<FormTextarea defaultValue='Placeholder' readOnly />);
+
+export const maxLength = () => (
+    <FormTextarea defaultValue='Max Length'
+        maxLength={150} />
+);
+
+export const validationStates = () => (
+    <div className='fddocs-container'>
+        <FormTextarea
+            defaultValue='Error State'
+            state='error' />
+        <FormTextarea
+            defaultValue='Warning State'
+            state='warning' />
+        <FormTextarea
+            defaultValue='Information State'
+            state='information' />
+        <FormTextarea
+            defaultValue='Success State'
+            state='success' />
+    </div>
+);
+
+export const dev = () => (
+    <FormTextarea
+        compact={boolean('compact', false)}
+        defaultValue={text('Default Value', 'Default')}
+        disabled={boolean('disabled', false)}
+        readOnly={boolean('readOnly', false)}
+        state={select('State', {
+            'none': '',
+            'success': 'success',
+            'error': 'error',
+            'information': 'information',
+            'warning': 'warning'
+        })} />
+);
+
+
+dev.parameters = { docs: { disable: true } };

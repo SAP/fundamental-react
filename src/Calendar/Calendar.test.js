@@ -1,3 +1,4 @@
+/* eslint-disable compat/compat */
 import Calendar from '../Calendar/Calendar';
 import moment from 'moment';
 import { mount } from 'enzyme';
@@ -32,6 +33,7 @@ describe('<Calendar />', () => {
     const rangeSelect = <Calendar enableRangeSelection onChange={mockOnChange} />;
     const disablePast = <Calendar disablePastDates />;
     const disableFuture = <Calendar disableFutureDates />;
+    const weekdayStart = (_weekdayStart = 0) => <Calendar weekdayStart={_weekdayStart} />;
 
     test('create calendar components', () => {
         mount(defaultCalendar);
@@ -45,6 +47,7 @@ describe('<Calendar />', () => {
         mount(disabledWeekDay);
         mount(disabledWeekDayFakeDays);
         mount(rangeSelect);
+        mount(weekdayStart());
     });
 
     test('show/hide months', () => {
@@ -409,6 +412,85 @@ describe('<Calendar />', () => {
         expect(newDateDisplayed.date()).toEqual(currentDateDisplayed.date());
 
         expect(wrapper.state('arrSelectedDates').length).toEqual(2);
+    });
+
+    describe('weekdayStart', () => {
+        // testing with specific date so we can verify our weekdays actually line up with the proper dates
+        const date = moment('6/1/2020');
+        test('should render weekday start as Sunday', () => {
+            const wrapper = mount(weekdayStart());
+            wrapper.setState({ currentDateDisplayed: date });
+            const firstWeekday = wrapper.find('th.fd-calendar__item .fd-calendar__text').first().text();
+            const firstDate = wrapper.find('td').first().text();
+            expect(firstWeekday).toBe('S');
+            expect(firstDate).toBe('31'); // May 31, 2020
+        });
+        test('should render weekday start as Monday', () => {
+            const wrapper = mount(weekdayStart(1));
+            wrapper.setState({ currentDateDisplayed: date });
+            const firstWeekday = wrapper.find('th.fd-calendar__item .fd-calendar__text').first().text();
+            const firstDate = wrapper.find('td').first().text();
+            expect(firstWeekday).toBe('M');
+            expect(firstDate).toBe('1'); // June 1, 2020
+        });
+        test('should render weekday start as Tuesday', () => {
+            const wrapper = mount(weekdayStart(2));
+            wrapper.setState({ currentDateDisplayed: date });
+            const firstWeekday = wrapper.find('th.fd-calendar__item .fd-calendar__text').first().text();
+            const firstDate = wrapper.find('td').first().text();
+            expect(firstWeekday).toBe('T');
+            expect(firstDate).toBe('26'); // May 26, 2020 because our starting weekday is now after the first day of the month
+        });
+        test('should render weekday start as Wednesday', () => {
+            const wrapper = mount(weekdayStart(3));
+            wrapper.setState({ currentDateDisplayed: date });
+            const firstWeekday = wrapper.find('th.fd-calendar__item .fd-calendar__text').first().text();
+            const firstDate = wrapper.find('td').first().text();
+            expect(firstWeekday).toBe('W');
+            expect(firstDate).toBe('27'); // May 27, 2020
+        });
+        test('should render weekday start as Thursday', () => {
+            const wrapper = mount(weekdayStart(4));
+            wrapper.setState({ currentDateDisplayed: date });
+            const firstWeekday = wrapper.find('th.fd-calendar__item .fd-calendar__text').first().text();
+            const firstDate = wrapper.find('td').first().text();
+            expect(firstWeekday).toBe('T');
+            expect(firstDate).toBe('28'); // May 28, 2020
+        });
+        test('should render weekday start as Friday', () => {
+            const wrapper = mount(weekdayStart(5));
+            wrapper.setState({ currentDateDisplayed: date });
+            const firstWeekday = wrapper.find('th.fd-calendar__item .fd-calendar__text').first().text();
+            const firstDate = wrapper.find('td').first().text();
+            expect(firstWeekday).toBe('F');
+            expect(firstDate).toBe('29'); // May 29, 2020
+        });
+        test('should render weekday start as Saturday', () => {
+            const wrapper = mount(weekdayStart(6));
+            wrapper.setState({ currentDateDisplayed: date });
+            const firstWeekday = wrapper.find('th.fd-calendar__item .fd-calendar__text').first().text();
+            const firstDate = wrapper.find('td').first().text();
+            expect(firstWeekday).toBe('S');
+            expect(firstDate).toBe('30'); // May 30, 2020
+        });
+        test('should render even when number as a string is passed in', () => {
+            const wrapper = mount(weekdayStart('6'));
+            wrapper.setState({ currentDateDisplayed: date });
+            const firstWeekday = wrapper.find('th.fd-calendar__item .fd-calendar__text').first().text();
+            const firstDate = wrapper.find('td').first().text();
+            expect(firstWeekday).toBe('S');
+            expect(firstDate).toBe('30'); // May 30, 2020
+        });
+        test('should default to Sunday view when prop is not a number or a number as a string', () => {
+            const consoleSpy = jest.spyOn(console, 'error').mockImplementation(jest.fn());
+            const wrapper = mount(weekdayStart({}));
+            wrapper.setState({ currentDateDisplayed: date });
+            const firstWeekday = wrapper.find('th.fd-calendar__item .fd-calendar__text').first().text();
+            const firstDate = wrapper.find('td').first().text();
+            expect(consoleSpy).toHaveBeenCalled();
+            expect(firstWeekday).toBe('S');
+            expect(firstDate).toBe('31'); // May 31, 2020
+        });
     });
 
     describe('Prop spreading', () => {

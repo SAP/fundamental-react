@@ -59,33 +59,35 @@ class SideNavList extends React.Component {
 }
 
 SideNavList.propTypes = {
+    /** Node(s) to render within the component */
     children: PropTypes.node,
+    /** CSS class(es) to add to the element */
     className: PropTypes.string,
+    /** Internal use only */
     compact: PropTypes.bool,
+    /** Internal use only */
     condensed: PropTypes.bool,
+    /** Internal use only */
     hasParent: PropTypes.bool,
+    /** Display a separate utility menu separated from the main menu by a horizontal line */
     isUtility: PropTypes.bool,
+    /** Depth of menu. Default prop is 1 and does not need to be passed to the top level menu.
+     * Increase by 1 for every submenu and provide as a prop */
     level: PropTypes.number,
+    /** Internal use only */
     open: PropTypes.bool,
+    /** Internal use only */
     selectedId: PropTypes.string,
+    /** Localized text for the heading */
     title: PropTypes.string,
+    /**Additional props to be spread to the title\'s heading element */
     titleProps: PropTypes.object,
+    /** Internal use only */
     onItemSelect: PropTypes.func
 };
 
 SideNavList.defaultProps = {
     level: 1
-};
-
-SideNavList.propDescriptions = {
-    compact: 'Passed down from parent SideNav. Set to **true** to enable compact (narrow row) mode.',
-    condensed: 'Passed down from parent SideNav. Set to **true** to enable condensed (icon-only) mode.',
-    hasParent: '_INTERNAL USE ONLY._',
-    isUtility: 'Display a separate utility menu separated from the main menu by a horizontal line.',
-    level: 'Depth of menu. Default prop is 1 and does not need to be passed to the top level menu. Increase by 1 for every submenu and provide as a prop.',
-    open: '_INTERNAL USE ONLY._',
-    selectedId: '_INTERNAL USE ONLY._',
-    onItemSelect: '_INTERNAL USE ONLY._'
 };
 
 SideNavList.displayName = 'SideNav.List';

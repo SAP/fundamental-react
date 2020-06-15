@@ -1,54 +1,8 @@
 import MessageStrip from './MessageStrip';
 import { mount } from 'enzyme';
 import React from 'react';
-import renderer from 'react-test-renderer';
 
 describe('<MessageStrip />', () => {
-    const basicMessageStrip = (
-        <MessageStrip dismissible link='#'
-            linkText='link'>
-            Default MessageStrip with a
-        </MessageStrip>
-    );
-
-    const basicErrorMessageStrip = (
-        <MessageStrip dismissible linkText='link'
-            type='error'>
-            Error message with a
-        </MessageStrip>
-    );
-
-    const nonDismissibleMessageStrip = (
-        <MessageStrip className='blue' link='#'
-            linkText='link'>
-            Default MessageStrip that cannot be dismissed
-        </MessageStrip>
-    );
-
-    test('create basic MessageStrip', () => {
-        let component = renderer.create(basicMessageStrip);
-        let tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-
-        component = renderer.create(basicErrorMessageStrip);
-        tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-
-        let wrapper = mount(basicMessageStrip);
-
-        expect(wrapper.exists('.fd-message-strip')).toBe(true);
-        wrapper.find('button.fd-message-strip__close').simulate('click');
-
-        expect(wrapper.exists('.fd-message-strip')).toBe(false);
-    });
-
-    test('create non-dismissible MessageStrip', () => {
-        const component = renderer.create(nonDismissibleMessageStrip);
-        const tree = component.toJSON();
-
-        expect(tree).toMatchSnapshot();
-    });
-
     describe('Prop spreading', () => {
         test('should allow props to be spread to the MessageStrip component', () => {
             const element = mount(<MessageStrip data-sample='Sample' />);

@@ -41,7 +41,7 @@ describe('Time Item', () => {
         );
 
         expect(
-            element.find('input').getDOMNode().attributes['data-sample'].value
+            element.find('li').first().getDOMNode().attributes['data-sample'].value
         ).toBe('Sample');
     });
 
@@ -83,7 +83,7 @@ describe('Time Item', () => {
         );
 
         expect(
-            element.find('input').getDOMNode().attributes['data-sample'].value
+            element.find('li').first().getDOMNode().attributes['data-sample'].value
         ).toBe('Sample');
     });
 
@@ -125,7 +125,7 @@ describe('Time Item', () => {
         );
 
         expect(
-            element.find('input').getDOMNode().attributes['data-sample'].value
+            element.find('li').first().getDOMNode().attributes['data-sample'].value
         ).toBe('Sample');
     });
 
@@ -170,7 +170,7 @@ describe('Time Item', () => {
         );
 
         expect(
-            element.find('input').getDOMNode().attributes['data-sample'].value
+            element.find('li').first().getDOMNode().attributes['data-sample'].value
         ).toBe('Sample');
     });
 });

@@ -1,6 +1,5 @@
 import { mount } from 'enzyme';
 import React from 'react';
-import renderer from 'react-test-renderer';
 import Select from './Select';
 
 describe('<Select />', () => {
@@ -10,86 +9,6 @@ describe('<Select />', () => {
         { key: '3', text: 'List Item 3' },
         { key: '4', text: 'List Item 4' }
     ];
-
-    const defaultSelect = (
-        <Select id='1' options={options} />
-    );
-
-    const compactSelect = (
-        <Select
-            compact
-            id='2'
-            options={options} />
-    );
-
-    const disabledSelect = (
-        <Select
-            disabled
-            id='3'
-            options={options} />
-    );
-
-    const errorSelect = (
-        <Select
-            id='4'
-            options={options}
-            placeholder='Default'
-            validationState={{ state: 'error', text: 'Test validation state' }} />
-    );
-
-    const warningSelect = (
-        <Select
-            id='5'
-            options={options}
-            placeholder='Default'
-            validationState={{ state: 'warning', text: 'Test validation state' }} />
-    );
-
-    const informationSelect = (
-        <Select
-            id='6'
-            options={options}
-            placeholder='Default'
-            validationState={{ state: 'information', text: 'Test validation state' }} />
-    );
-
-    const successSelect = (
-        <Select
-            id='7'
-            options={options}
-            placeholder='Default'
-            validationState={{ state: 'success', text: 'Test validation state' }} />
-    );
-
-    test('create Select component', () => {
-        let component = renderer.create(defaultSelect);
-        let tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-
-        component = renderer.create(compactSelect);
-        tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-
-        component = renderer.create(disabledSelect);
-        tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-
-        component = renderer.create(warningSelect);
-        tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-
-        component = renderer.create(errorSelect);
-        tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-
-        component = renderer.create(informationSelect);
-        tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-
-        component = renderer.create(successSelect);
-        tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-    });
 
     describe('Prop spreading', () => {
         test('should allow props to be spread to the Select component', () => {
@@ -109,7 +28,7 @@ describe('<Select />', () => {
             element = mount(
                 <Select onSelect={onSelect} options={options} />
             );
-            element.find('button').simulate('click');
+            element.find('.fd-select__button').simulate('click');
         });
 
         afterEach(() => {
@@ -132,7 +51,7 @@ describe('<Select />', () => {
         });
     });
 
-    test('forwards the ref to the button', () => {
+    test('forwards the ref to the div role="button"', () => {
         let ref;
         class Test extends React.Component {
             constructor(props) {
@@ -142,7 +61,8 @@ describe('<Select />', () => {
             render = () => <Select options={options} ref={ref} />;
         }
         mount(<Test />);
-        expect(ref.current.tagName).toEqual('BUTTON');
-        expect(ref.current.className).toContain('fd-select__button');
+
+        expect(ref.current.tagName).toEqual('DIV');
+        expect(ref.current.className).toContain('fd-select');
     });
 });

@@ -1,6 +1,5 @@
 import { mount } from 'enzyme';
 import React from 'react';
-import renderer from 'react-test-renderer';
 import Tab from './Tab';
 import { TabContent } from './_TabContent';
 import TabGroup from './TabGroup';
@@ -15,16 +14,6 @@ describe('<Tabs />', () => {
         <TabContent id='5'>
             Lorem ipsum dolor sit amet consectetur adipisicing elit.Dolore et ducimus veritatis officiis amet ? Vitae officia optio dolor exercitationem incidunt magnam non, suscipit, illo quisquam numquam fugiat ? Debitis, delectus sequi ?
         </TabContent>);
-
-    test('create TabContent component', () => {
-        let component = renderer.create(shownTabContent);
-        let tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-
-        component = renderer.create(hiddenTabContent);
-        tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-    });
 
     test('check if tab content is shown', () => {
         const wrapper = mount(shownTabContent);

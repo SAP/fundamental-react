@@ -1,65 +1,17 @@
 import { mount } from 'enzyme';
-
 import React from 'react';
-import renderer from 'react-test-renderer';
 import Time from './Time';
 
 describe('<Time />', () => {
     const defaultTime = <Time />;
     const meridiemTime = <Time name='meridiem' />;
-    const customTime = <Time name='custom' />;
     const twelveHour = <Time format12Hours />;
-    const falseSpinners = <Time spinners={false} />;
-    const hideSeconds = <Time showSecond={false} />;
-    const disabledTime = <Time disabled />;
     const timeMeridiemSet = (
         <Time
             format12Hours={false}
             name='meridiem'
             time={{ hour: 22, minute: 34, second: 12, meridiem: 0 }} />
     );
-
-    test('create time component', () => {
-        // default time
-        let component = renderer.create(defaultTime);
-        let tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-
-        // meridiem time
-        component = renderer.create(meridiemTime);
-        tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-
-        // meridiem time, with value set
-        component = renderer.create(timeMeridiemSet);
-        tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-
-        // custom name for increase/decrease
-        component = renderer.create(customTime);
-        tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-
-        // twelve hour time
-        component = renderer.create(twelveHour);
-        tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-
-        // false spinners time
-        component = renderer.create(falseSpinners);
-        tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-
-        // hide seconds time
-        component = renderer.create(hideSeconds);
-        tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-
-        // disabled time
-        component = renderer.create(disabledTime);
-        tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-    });
 
     test('time number up click', () => {
         const wrapper = mount(twelveHour);
@@ -68,21 +20,21 @@ describe('<Time />', () => {
         expect(wrapper.state('time').hour).toEqual('12');
         wrapper
             .find(
-                'button.fd-button--transparent.sap-icon--navigation-up-arrow'
+                'button.fd-button--transparent.sap-icon--navigation-down-arrow'
             )
             .at(0)
             .simulate('click');
-        expect(wrapper.state('time').hour).toEqual('01');
+        expect(wrapper.state('time').hour).toEqual(1);
 
         // minute timer click up
         expect(wrapper.state('time').minute).toEqual('00');
         wrapper
             .find(
-                'button.fd-button--transparent.sap-icon--navigation-up-arrow'
+                'button.fd-button--transparent.sap-icon--navigation-down-arrow'
             )
             .at(1)
             .simulate('click');
-        expect(wrapper.state('time').minute).toEqual('01');
+        expect(wrapper.state('time').minute).toEqual(1);
     });
 
     test('time number up merdiem click', () => {
@@ -92,7 +44,7 @@ describe('<Time />', () => {
         expect(wrapper.state('time').hour).toEqual(22);
         wrapper
             .find(
-                'button.fd-button--transparent.sap-icon--navigation-up-arrow'
+                'button.fd-button--transparent.sap-icon--navigation-down-arrow'
             )
             .at(0)
             .simulate('click');
@@ -102,7 +54,7 @@ describe('<Time />', () => {
         expect(wrapper.state('time').minute).toEqual(34);
         wrapper
             .find(
-                'button.fd-button--transparent.sap-icon--navigation-up-arrow'
+                'button.fd-button--transparent.sap-icon--navigation-down-arrow'
             )
             .at(1)
             .simulate('click');
@@ -112,23 +64,23 @@ describe('<Time />', () => {
     xtest('time number down click on merdiem time', () => {
         const wrapper = mount(meridiemTime);
         // hour timer click down
-        expect(wrapper.state('time').hour).toEqual('12');
+        expect(wrapper.state('time').hour).toEqual(12);
         // 3 down clicks
         for (let i = 0; i < 3; i += 1) {
             wrapper
                 .find(
-                    'button.fd-button--transparent.sap-icon--navigation-down-arrow'
+                    'button.fd-button--transparent.sap-icon--navigation-up-arrow'
                 )
                 .at(0)
                 .simulate('click');
         }
-        expect(wrapper.state('time').hour).toEqual('09');
+        expect(wrapper.state('time').hour).toEqual(9);
 
         // minute timer click down
-        expect(wrapper.state('time').minute).toEqual('00');
+        expect(wrapper.state('time').minute).toEqual(0);
         wrapper
             .find(
-                'button.fd-button--transparent.sap-icon--navigation-down-arrow'
+                'button.fd-button--transparent.sap-icon--navigation-up-arrow'
             )
             .at(1)
             .simulate('click');
@@ -142,7 +94,7 @@ describe('<Time />', () => {
         expect(wrapper.state('time').hour).toEqual('12');
         wrapper
             .find(
-                'button.fd-button--transparent.sap-icon--navigation-down-arrow'
+                'button.fd-button--transparent.sap-icon--navigation-up-arrow'
             )
             .at(0)
             .simulate('click');
@@ -152,7 +104,7 @@ describe('<Time />', () => {
         expect(wrapper.state('time').minute).toEqual('00');
         wrapper
             .find(
-                'button.fd-button--transparent.sap-icon--navigation-down-arrow'
+                'button.fd-button--transparent.sap-icon--navigation-up-arrow'
             )
             .at(1)
             .simulate('click');
@@ -189,7 +141,7 @@ describe('<Time />', () => {
         expect(wrapper.state('time').hour).toEqual(0);
         wrapper
             .find(
-                'button.fd-button--transparent.sap-icon--navigation-down-arrow'
+                'button.fd-button--transparent.sap-icon--navigation-up-arrow'
             )
             .at(0)
             .simulate('click');
@@ -206,7 +158,7 @@ describe('<Time />', () => {
         expect(wrapper.state('time').hour).toEqual(1);
         wrapper
             .find(
-                'button.fd-button--transparent.sap-icon--navigation-down-arrow'
+                'button.fd-button--transparent.sap-icon--navigation-up-arrow'
             )
             .at(0)
             .simulate('click');
@@ -224,7 +176,7 @@ describe('<Time />', () => {
         expect(wrapper.state('time').hour).toEqual(12);
         wrapper
             .find(
-                'button.fd-button--transparent.sap-icon--navigation-down-arrow'
+                'button.fd-button--transparent.sap-icon--navigation-up-arrow'
             )
             .at(0)
             .simulate('click');
@@ -244,11 +196,11 @@ describe('<Time />', () => {
         expect(wrapper.state('time').minute).toEqual(0);
         wrapper
             .find(
-                'button.fd-button--transparent.sap-icon--navigation-down-arrow'
+                'button.fd-button--transparent.sap-icon--navigation-up-arrow'
             )
             .at(1)
             .simulate('click');
-        expect(wrapper.state('time').hour).toEqual('00');
+        expect(wrapper.state('time').hour).toEqual(0);
         expect(wrapper.state('time').minute).toEqual(59);
         expect(wrapper.state('time').second).toEqual(0);
 
@@ -261,7 +213,7 @@ describe('<Time />', () => {
         expect(wrapper.state('time').minute).toEqual(0);
         wrapper
             .find(
-                'button.fd-button--transparent.sap-icon--navigation-down-arrow'
+                'button.fd-button--transparent.sap-icon--navigation-up-arrow'
             )
             .at(1)
             .simulate('click');
@@ -279,7 +231,7 @@ describe('<Time />', () => {
         expect(wrapper.state('time').minute).toEqual(0);
         wrapper
             .find(
-                'button.fd-button--transparent.sap-icon--navigation-down-arrow'
+                'button.fd-button--transparent.sap-icon--navigation-up-arrow'
             )
             .at(1)
             .simulate('click');
@@ -299,7 +251,7 @@ describe('<Time />', () => {
         expect(wrapper.state('time').second).toEqual(0);
         wrapper
             .find(
-                'button.fd-button--transparent.sap-icon--navigation-down-arrow'
+                'button.fd-button--transparent.sap-icon--navigation-up-arrow'
             )
             .at(2)
             .simulate('click');
@@ -316,7 +268,7 @@ describe('<Time />', () => {
         expect(wrapper.state('time').second).toEqual(0);
         wrapper
             .find(
-                'button.fd-button--transparent.sap-icon--navigation-down-arrow'
+                'button.fd-button--transparent.sap-icon--navigation-up-arrow'
             )
             .at(2)
             .simulate('click');
@@ -334,7 +286,7 @@ describe('<Time />', () => {
         expect(wrapper.state('time').second).toEqual(0);
         wrapper
             .find(
-                'button.fd-button--transparent.sap-icon--navigation-down-arrow'
+                'button.fd-button--transparent.sap-icon--navigation-up-arrow'
             )
             .at(2)
             .simulate('click');
@@ -374,11 +326,11 @@ describe('<Time />', () => {
         expect(wrapper.state('time').hour).toEqual(0);
         wrapper
             .find(
-                'button.fd-button--transparent.sap-icon--navigation-up-arrow'
+                'button.fd-button--transparent.sap-icon--navigation-down-arrow'
             )
             .at(0)
             .simulate('click');
-        expect(wrapper.state('time').hour).toEqual('01');
+        expect(wrapper.state('time').hour).toEqual(1);
         expect(wrapper.state('time').minute).toEqual(0);
         expect(wrapper.state('time').second).toEqual(0);
 
@@ -391,11 +343,11 @@ describe('<Time />', () => {
         expect(wrapper.state('time').hour).toEqual(23);
         wrapper
             .find(
-                'button.fd-button--transparent.sap-icon--navigation-up-arrow'
+                'button.fd-button--transparent.sap-icon--navigation-down-arrow'
             )
             .at(0)
             .simulate('click');
-        expect(wrapper.state('time').hour).toEqual('00');
+        expect(wrapper.state('time').hour).toEqual(0);
 
         wrapper = mount(
             <Time
@@ -406,11 +358,11 @@ describe('<Time />', () => {
         expect(wrapper.state('time').hour).toEqual(1);
         wrapper
             .find(
-                'button.fd-button--transparent.sap-icon--navigation-up-arrow'
+                'button.fd-button--transparent.sap-icon--navigation-down-arrow'
             )
             .at(0)
             .simulate('click');
-        expect(wrapper.state('time').hour).toEqual('02');
+        expect(wrapper.state('time').hour).toEqual(2);
         expect(wrapper.state('time').minute).toEqual(0);
         expect(wrapper.state('time').second).toEqual(0);
         expect(wrapper.state('time').meridiem).toEqual(0);
@@ -424,11 +376,11 @@ describe('<Time />', () => {
         expect(wrapper.state('time').hour).toEqual(12);
         wrapper
             .find(
-                'button.fd-button--transparent.sap-icon--navigation-up-arrow'
+                'button.fd-button--transparent.sap-icon--navigation-down-arrow'
             )
             .at(0)
             .simulate('click');
-        expect(wrapper.state('time').hour).toEqual('01');
+        expect(wrapper.state('time').hour).toEqual(1);
         expect(wrapper.state('time').minute).toEqual(0);
         expect(wrapper.state('time').second).toEqual(0);
         expect(wrapper.state('time').meridiem).toEqual(0);
@@ -442,7 +394,7 @@ describe('<Time />', () => {
         expect(wrapper.state('time').hour).toEqual(11);
         wrapper
             .find(
-                'button.fd-button--transparent.sap-icon--navigation-up-arrow'
+                'button.fd-button--transparent.sap-icon--navigation-down-arrow'
             )
             .at(0)
             .simulate('click');
@@ -460,29 +412,29 @@ describe('<Time />', () => {
         expect(wrapper.state('time').minute).toEqual(0);
         wrapper
             .find(
-                'button.fd-button--transparent.sap-icon--navigation-up-arrow'
+                'button.fd-button--transparent.sap-icon--navigation-down-arrow'
             )
             .at(1)
             .simulate('click');
         expect(wrapper.state('time').hour).toEqual(1);
-        expect(wrapper.state('time').minute).toEqual('01');
+        expect(wrapper.state('time').minute).toEqual(1);
         expect(wrapper.state('time').second).toEqual(0);
 
         wrapper = mount(
             <Time
                 format12Hours={false}
                 name='meridiem'
-                time={{ hour: 24, minute: 59, second: 0, meridiem: 0 }} />
+                time={{ hour: 23, minute: 59, second: 0, meridiem: 0 }} />
         );
         expect(wrapper.state('time').minute).toEqual(59);
         wrapper
             .find(
-                'button.fd-button--transparent.sap-icon--navigation-up-arrow'
+                'button.fd-button--transparent.sap-icon--navigation-down-arrow'
             )
             .at(1)
             .simulate('click');
-        expect(wrapper.state('time').hour).toEqual('00');
-        expect(wrapper.state('time').minute).toEqual('00');
+        expect(wrapper.state('time').hour).toEqual(0);
+        expect(wrapper.state('time').minute).toEqual(0);
 
         wrapper = mount(
             <Time
@@ -493,12 +445,12 @@ describe('<Time />', () => {
         expect(wrapper.state('time').minute).toEqual(0);
         wrapper
             .find(
-                'button.fd-button--transparent.sap-icon--navigation-up-arrow'
+                'button.fd-button--transparent.sap-icon--navigation-down-arrow'
             )
             .at(1)
             .simulate('click');
         expect(wrapper.state('time').hour).toEqual(1);
-        expect(wrapper.state('time').minute).toEqual('01');
+        expect(wrapper.state('time').minute).toEqual(1);
         expect(wrapper.state('time').second).toEqual(0);
         expect(wrapper.state('time').meridiem).toEqual(0);
 
@@ -513,12 +465,12 @@ describe('<Time />', () => {
 
         wrapper
             .find(
-                'button.fd-button--transparent.sap-icon--navigation-up-arrow'
+                'button.fd-button--transparent.sap-icon--navigation-down-arrow'
             )
             .at(1)
             .simulate('click');
-        expect(wrapper.state('time').hour).toEqual('01');
-        expect(wrapper.state('time').minute).toEqual('00');
+        expect(wrapper.state('time').hour).toEqual(1);
+        expect(wrapper.state('time').minute).toEqual(0);
 
         wrapper = mount(
             <Time
@@ -531,12 +483,12 @@ describe('<Time />', () => {
 
         wrapper
             .find(
-                'button.fd-button--transparent.sap-icon--navigation-up-arrow'
+                'button.fd-button--transparent.sap-icon--navigation-down-arrow'
             )
             .at(1)
             .simulate('click');
         expect(wrapper.state('time').hour).toEqual(12);
-        expect(wrapper.state('time').minute).toEqual('00');
+        expect(wrapper.state('time').minute).toEqual(0);
         expect(wrapper.state('time').meridiem).toEqual(1);
 
         wrapper = mount(
@@ -548,12 +500,12 @@ describe('<Time />', () => {
         expect(wrapper.state('time').minute).toEqual(0);
         wrapper
             .find(
-                'button.fd-button--transparent.sap-icon--navigation-up-arrow'
+                'button.fd-button--transparent.sap-icon--navigation-down-arrow'
             )
             .at(1)
             .simulate('click');
         expect(wrapper.state('time').hour).toEqual(12);
-        expect(wrapper.state('time').minute).toEqual('01');
+        expect(wrapper.state('time').minute).toEqual(1);
         expect(wrapper.state('time').second).toEqual(0);
         expect(wrapper.state('time').meridiem).toEqual(0);
 
@@ -566,12 +518,12 @@ describe('<Time />', () => {
         expect(wrapper.state('time').minute).toEqual(59);
         wrapper
             .find(
-                'button.fd-button--transparent.sap-icon--navigation-up-arrow'
+                'button.fd-button--transparent.sap-icon--navigation-down-arrow'
             )
             .at(1)
             .simulate('click');
         expect(wrapper.state('time').hour).toEqual(12);
-        expect(wrapper.state('time').minute).toEqual('00');
+        expect(wrapper.state('time').minute).toEqual(0);
         expect(wrapper.state('time').second).toEqual(0);
         expect(wrapper.state('time').meridiem).toEqual(0);
     });
@@ -591,8 +543,8 @@ describe('<Time />', () => {
             .at(2)
             .simulate('click');
         expect(wrapper.state('time').hour).toEqual(0);
-        expect(wrapper.state('time').minute).toEqual(59);
-        expect(wrapper.state('time').second).toEqual('00');
+        expect(wrapper.state('time').minute).toEqual(58);
+        expect(wrapper.state('time').second).toEqual(58);
 
         wrapper = mount(
             <Time
@@ -603,13 +555,13 @@ describe('<Time />', () => {
         expect(wrapper.state('time').second).toEqual(59);
         wrapper
             .find(
-                'button.fd-button--transparent.sap-icon--navigation-up-arrow'
+                'button.fd-button--transparent.sap-icon--navigation-down-arrow'
             )
             .at(2)
             .simulate('click');
-        expect(wrapper.state('time').hour).toEqual('01');
-        expect(wrapper.state('time').minute).toEqual('00');
-        expect(wrapper.state('time').second).toEqual('00');
+        expect(wrapper.state('time').hour).toEqual(1);
+        expect(wrapper.state('time').minute).toEqual(0);
+        expect(wrapper.state('time').second).toEqual(0);
 
         // expect(wrapper.state('time').second).toEqual(0);
         wrapper
@@ -618,9 +570,9 @@ describe('<Time />', () => {
             )
             .at(2)
             .simulate('click');
-        expect(wrapper.state('time').hour).toEqual('01');
-        expect(wrapper.state('time').minute).toEqual('00');
-        expect(wrapper.state('time').second).toEqual('01');
+        expect(wrapper.state('time').hour).toEqual(0);
+        expect(wrapper.state('time').minute).toEqual(59);
+        expect(wrapper.state('time').second).toEqual(59);
         expect(wrapper.state('time').meridiem).toEqual(0);
 
         wrapper = mount(
@@ -632,29 +584,23 @@ describe('<Time />', () => {
         expect(wrapper.state('time').second).toEqual(0);
         wrapper
             .find(
-                'button.fd-button--transparent.sap-icon--navigation-up-arrow'
+                'button.fd-button--transparent.sap-icon--navigation-down-arrow'
             )
             .at(2)
             .simulate('click');
         expect(wrapper.state('time').hour).toEqual(12);
         expect(wrapper.state('time').minute).toEqual(0);
-        expect(wrapper.state('time').second).toEqual('01');
+        expect(wrapper.state('time').second).toEqual(1);
         expect(wrapper.state('time').meridiem).toEqual(0);
     });
 
-    test('enter in time value', () => {
+    test('click a time value', () => {
         const wrapper = mount(defaultTime);
         wrapper
-            .find('.fd-input')
+            .find('.fd-time__unit')
             .at(0)
-            .simulate('change', { target: { value: '123' } });
-        expect(wrapper.state('time').hour).toEqual('123');
-
-        wrapper
-            .find('.fd-input')
-            .at(0)
-            .simulate('change', { target: { value: '12' } });
-        expect(wrapper.state('time').hour).toEqual('12');
+            .simulate('click');
+        expect(wrapper.state('time').hour).toEqual(9);
     });
 
     describe('Prop spreading', () => {

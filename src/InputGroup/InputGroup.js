@@ -4,6 +4,9 @@ import FormMessage from '../Forms/_FormMessage';
 import InputGroupAddon from './_InputGroupAddon';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
+
+/** An **InputGroup** includes form inputs with add-ons that allow the user to
+better understand the information being entered. */
 class InputGroup extends Component {
     constructor(props) {
         super(props);
@@ -37,7 +40,8 @@ class InputGroup extends Component {
 
         const getClassName = (child) => classnames(
             {
-                'fd-input-group__input': child.type.displayName !== InputGroupAddon.displayName
+                'fd-input-group__input': child.type.displayName !== InputGroupAddon.displayName &&
+                    !child.props.className?.includes('fd-tokenizer')
             },
             child.props.className
         );
@@ -70,13 +74,21 @@ InputGroup.Addon = InputGroupAddon;
 InputGroup.displayName = 'InputGroup';
 
 InputGroup.propTypes = {
+    /** Node(s) to render within the component */
     children: PropTypes.node,
+    /** CSS class(es) to add to the element */
     className: PropTypes.string,
+    /** Set to **true** to enable compact mode */
     compact: PropTypes.bool,
+    /** Set to **true** to mark component as disabled and make it non-interactive */
     disabled: PropTypes.bool,
+    /** Internal use only */
     disableStyles: PropTypes.bool,
+    /** An object identifying a validation message.  The object will include properties for `state` and `text`; _e.g._, \`{ state: \'warning\', text: \'This is your last warning\' }\` */
     validationState: PropTypes.shape({
+        /** State of validation: 'error', 'warning', 'information', 'success' */
         state: PropTypes.oneOf(FORM_MESSAGE_TYPES),
+        /** Text of the validation message */
         text: PropTypes.string
     })
 };

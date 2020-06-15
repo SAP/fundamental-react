@@ -4,14 +4,27 @@ import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import { FORM_MESSAGE_TYPES } from '../utils/constants';
 import FormInput from '../Forms/FormInput';
 import FormMessage from '../Forms/_FormMessage';
-import InputGroup from '../InputGroup/InputGroup';
 import keycode from 'keycode';
 import PropTypes from 'prop-types';
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 
+/** The **StepInput** allows the user to change the input values in predefined increments (steps).
+
+Use the step input if:
+
+* * The user needs to adjust amounts, quantities, or other values quickly.
+* * The user needs to adjust values for a specific step (for example, in a shopping cart).
+
+Do not use the step input if:
+
+* * The user needs to enter a static number (for example, postal code, phone number, or ID). In this case, use the regular input field control instead.
+* * You want to display a value that rarely needs to be adjusted and does not pertain to a particular step. In this case, use the regular input field control instead.
+* * You want the user to enter dates and times. In this case, use the date picker, date range selection, time picker, or date/time picker instead.
+ */
 const StepInput = React.forwardRef(({
     children,
     className,
+    compact,
     disabled,
     disableStyles,
     placeholder,
@@ -23,12 +36,20 @@ const StepInput = React.forwardRef(({
 }, ref) => {
     const [inputValue, updateInputValue] = useState(value);
 
-    const inputGroupClasses = classnames(
+    useEffect(() => {
+        if (!disableStyles) {
+            require('fundamental-styles/dist/step-input.css');
+        }
+    }, []);
+
+    const stepInputClasses = classnames(
         className,
-        'fd-input-group--control',
+        'fd-step-input',
         {
+            'fd-step-input--compact': compact,
             'is-disabled': disabled,
-            [`is-${validationState?.state}`]: validationState ?.state
+            'is-readonly': readOnly,
+            [`is-${validationState?.state}`]: validationState?.state
         }
     );
 
@@ -74,42 +95,39 @@ const StepInput = React.forwardRef(({
         }
     });
 
-    const minusBtn = (
-        <InputGroup.Addon aria-label={localizedText.stepUpLabel} isButton>
-            <Button disabled={disabled}
-                glyph='less'
-                onClick={decreaseValue}
-                option='transparent'
-                type='standard' />
-        </InputGroup.Addon>
-    );
-
-    const plusBtn = (
-        <InputGroup.Addon aria-label={localizedText.stepDownLabel} isButton>
-            <Button disabled={disabled}
-                glyph='add'
-                onClick={increaseValue}
-                option='transparent'
-                type='standard' />
-        </InputGroup.Addon>
-    );
-
     return (
         <>
-            <InputGroup className={inputGroupClasses}
-                disableStyles={disableStyles}
-                disabled={disabled}
-                ref={ref} {...rest}
-                onKeyDown={onKeyDownInput}>
-                {readOnly ? null : minusBtn}
+            <div className={stepInputClasses}
+                onKeyDown={onKeyDownInput}
+                ref={ref}
+                {...rest}>
+                <Button
+                    aria-label={localizedText.stepDownLabel}
+                    className='fd-step-input__button'
+                    compact={compact}
+                    disableStyles={disableStyles}
+                    disabled={disabled}
+                    glyph='less'
+                    onClick={decreaseValue}
+                    option='transparent'
+                    tabIndex='-1' />
                 <FormInput
+                    className='fd-input--no-number-spinner fd-step-input__input'
                     disableStyles={disableStyles}
                     disabled={disabled}
                     onChange={onChangeInputValue}
                     placeholder={placeholder}
                     value={inputValue} />
-                {readOnly ? null : plusBtn}
-            </InputGroup>
+                <Button
+                    aria-label={localizedText.stepUpLabel}
+                    compact={compact}
+                    disableStyles={disableStyles}
+                    disabled={disabled}
+                    glyph='add'
+                    onClick={increaseValue}
+                    option='transparent'
+                    tabIndex='-1' />
+            </div>
             {validationState && (<FormMessage
                 disableStyles={disableStyles}
                 type={validationState.state}>
@@ -122,20 +140,33 @@ const StepInput = React.forwardRef(({
 StepInput.displayName = 'StepInput';
 
 StepInput.propTypes = {
+    /** Node(s) to render within the component */
     children: PropTypes.node,
+    /** CSS class(es) to add to the element */
     className: PropTypes.string,
+    /** Set to **true** to enable compact **/
+    compact: PropTypes.bool,
+    /** Set to **true** to mark component as disabled and make it non-interactive */
     disabled: PropTypes.bool,
+    /** Internal use only */
     disableStyles: PropTypes.bool,
+    /** Localized text to be updated based on location/language */
     localizedText: CustomPropTypes.i18n({
         stepUpLabel: PropTypes.string,
         stepDownLabel: PropTypes.string
     }),
+    /** Localized placeholder text of the input */
     placeholder: PropTypes.string,
+    /** Set to **true** to mark component as readonly */
     readOnly: PropTypes.bool,
+    /** An object identifying a validation message.  The object will include properties for `state` and `text`; _e.g._, \`{ state: \'warning\', text: \'This is your last warning\' }\` */
     validationState: PropTypes.shape({
+        /** State of validation: 'error', 'warning', 'information', 'success' */
         state: PropTypes.oneOf(FORM_MESSAGE_TYPES),
+        /** Text of the validation message */
         text: PropTypes.string
     }),
+    /** Value of the number input */
     value: PropTypes.number
 };
 

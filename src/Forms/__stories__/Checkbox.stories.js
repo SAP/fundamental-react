@@ -1,41 +1,50 @@
+/* eslint-disable react/no-multi-comp */
 import Checkbox from '../Checkbox';
 import React from 'react';
-import { storiesOf } from '@storybook/react';
 import {
     boolean,
-    select,
-    withKnobs
+    select
 } from '@storybook/addon-knobs';
 
-const createProps = (overrides) => ({
-    compact: boolean('compact', false),
-    disabled: boolean('disabled', false),
-    indeterminate: boolean('indeterminate', false),
-    state: select('Validation State', {
-        'default': null,
-        'valid': 'valid',
-        'invalid': 'invalid',
-        'information': 'information',
-        'warning': 'warning'
-    }),
-    ...overrides
-});
+export default {
+    title: 'Component API/Forms/Checkbox',
+    component: Checkbox
+};
+
+export const primary = () => (<Checkbox>Default Checkbox</Checkbox>);
+
+export const indeterminate = () => (
+    <Checkbox indeterminate>Text Option</Checkbox>
+);
+export const disabled = () => (
+    <Checkbox disabled>Text Option</Checkbox>
+);
+export const compact = () => (
+    <Checkbox compact>Text Option</Checkbox>
+);
+
+export const validationState = () => (
+    <div className='fddocs-container'>
+        <Checkbox state='error'>Text Option</Checkbox>
+        <Checkbox state='warning'>Text Option</Checkbox>
+        <Checkbox state='success'>Text Option</Checkbox>
+        <Checkbox state='information'>Text Option</Checkbox>
+    </div>
+);
+
+export const dev = () => (
+    <Checkbox
+        compact={boolean('compact', false)}
+        disabled={boolean('disabled', false)}
+        indeterminate={boolean('indeterminate', false)}
+        state={select('State', {
+            'none': '',
+            'success': 'success',
+            'error': 'error',
+            'information': 'information',
+            'warning': 'warning'
+        })}>Text Option</Checkbox>
+);
 
 
-storiesOf('Components|Checkbox', module)
-    .addDecorator(withKnobs)
-    .add('Default', () => (
-        <Checkbox {...createProps()}>Text Option</Checkbox>
-    ))
-    .add('indeterminate', () => (
-        <Checkbox indeterminate>Text Option</Checkbox>
-    ))
-    .add('disabled', () => (
-        <Checkbox disabled>Text Option</Checkbox>
-    ))
-    .add('compact', () => (
-        <Checkbox compact>Text Option</Checkbox>
-    ))
-    .add('disable styles', () => (
-        <Checkbox {...createProps()} disableStyles>Text Option</Checkbox>
-    ));
+dev.parameters = { docs: { disable: true } };

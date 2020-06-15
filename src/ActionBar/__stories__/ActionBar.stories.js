@@ -1,52 +1,94 @@
+/* eslint-disable react/no-multi-comp */
 import ActionBar from '../ActionBar';
 import Button from '../../Button/Button';
+import Menu from '../../Menu/Menu';
+import Popover from '../../Popover/Popover';
 import React from 'react';
-import { storiesOf } from '@storybook/react';
-import {
-    number,
-    text,
-    withKnobs
-} from '@storybook/addon-knobs';
+import { number, text } from '@storybook/addon-knobs';
 
-storiesOf('Components|ActionBar', module)
-    .addDecorator(withKnobs)
-    .add('Dev', () => (
-        <ActionBar
-            actions={(<><Button>Button</Button>
-                <Button option='emphasized'>Button</Button></>
-            )}
-            description={text('description', 'Action Bar description')}
-            headingLevel={number('headingLevel', 1, {
-                range: true,
-                min: 1,
-                max: 3,
-                step: 1
-            })}
-            onBackClick={() => {}}
-            title={text('title', 'Page Title')} />
-    ))
-    .add('No back button', () => (
-        <ActionBar
-            actions={(<><Button>Button</Button>
-                <Button option='emphasized'>Button</Button></>
-            )}
-            description='Description'
-            title='Page Title' />
+export default {
+    title: 'Component API/ActionBar',
+    component: ActionBar
+};
 
-    ))
-    .add('No description', () => (
-        <ActionBar
-            actions={(<><Button>Button</Button>
-                <Button option='emphasized'>Button</Button></>
-            )}
-            title='Page Title' />
+export const primary = () => (
+    <ActionBar
+        actions={(
+            <>
+                <Button>Button</Button>
+                <Button option='emphasized'>Button</Button>
+            </>
+        )}
+        description={'Action Bar Description'}
+        onBackClick={() => {}}
+        title={'Page Title'} />
+);
 
-    ))
-    .add('No actions', () => (
-        <ActionBar
-            title='Page Title' />
+/** ActionBar with no back button */
 
-    ))
-    .add('disable styles', () => (
-        <ActionBar disableStyles title='default' />
-    ));
+export const noBackButton = () => (
+    <ActionBar
+        actions={(<><Button>Button</Button>
+            <Button option='emphasized'>Button</Button></>
+        )}
+        description='Action Bar Description'
+        title='Page Title' />
+);
+
+/** When there are several main actions for a page, consider displaying them under a contextual menu. This
+allows the user to look in the same position they are used to but avoids cluttering the action bar with
+more than 3-4 actions. This also works well for a responsive/adaptive application. */
+
+export const contextualMenu = () => (
+    <ActionBar
+        actions={<Popover
+            body={
+                <Menu>
+                    <Menu.List>
+                        <Menu.Item url='#'>Option 1</Menu.Item>
+                        <Menu.Item url='#'>Option 2</Menu.Item>
+                        <Menu.Item url='#'>Option 3</Menu.Item>
+                        <Menu.Item url='#'>Option 4</Menu.Item>
+                    </Menu.List>
+                </Menu>}
+            control={<Button glyph='vertical-grip' option='transparent' />}
+            placement='bottom-end' />}
+        description='Action Bar Description'
+        title='Page Title' />
+);
+
+contextualMenu.storyName = 'With a ContextualMenu';
+
+export const dev = () => (
+    <ActionBar
+        actions={(<><Button>Button</Button>
+            <Button option='emphasized'>Button</Button></>
+        )}
+        description={text('description', 'Action Bar description')}
+        headingLevel={number('headingLevel', 2, {
+            range: true,
+            min: 2,
+            max: 6,
+            step: 1
+        })}
+        onBackClick={() => {}}
+        title={text('title', 'Page Title')} />
+);
+
+dev.parameters = { docs: { disable: true } };
+
+export const noDescription = () => (
+    <ActionBar
+        actions={(<><Button>Button</Button>
+            <Button option='emphasized'>Button</Button></>
+        )}
+        title='Page Title' />
+);
+
+noDescription.parameters = { docs: { disable: true } };
+
+export const noActions = () => (
+    <ActionBar title='Page Title' />
+);
+
+noActions.parameters = { docs: { disable: true } };

@@ -136,6 +136,7 @@ class Popper extends React.Component {
         );
 
         if (usePortal) {
+            // eslint-disable-next-line compat/compat
             popper = ReactDOM.createPortal(popper, document.querySelector('body'));
         }
 

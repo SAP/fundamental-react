@@ -6,5 +6,5 @@
 #    that is where we will look for package.json/.nvmrc/etc not repo root!
 
 [build]
-  publish = "build"
-  command = "npm run build-doc:netlify"
+  publish = "storybook-static"
+  command = "npm run storybook:static"

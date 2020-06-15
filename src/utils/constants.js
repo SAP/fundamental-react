@@ -19,7 +19,9 @@ export const BUTTON_TYPES = [
     'standard',
     'positive',
     'negative',
-    'medium'
+    'medium',
+    'ghost',
+    'attention'
 ];
 
 export const DIALOG_SIZES = [
@@ -36,13 +38,6 @@ export const FORM_MESSAGE_TYPES = [
     'success'
 ];
 
-export const FORM_STATES = [
-    'warning',
-    'invalid',
-    'valid',
-    'information'
-];
-
 export const ICON_SIZES = [
     's',
     'm',
@@ -50,19 +45,12 @@ export const ICON_SIZES = [
     'xl'
 ];
 
-export const IDENTIFIER_MODIFIERS = [
-    'circle',
-    'transparent'
-];
-
-export const IDENTIFIER_SIZES = [
-    'xxs',
+export const AVATAR_SIZES = [
     'xs',
     's',
     'm',
     'l',
-    'xl',
-    'xxl'
+    'xl'
 ];
 
 export const IMAGE_SIZES = [
@@ -81,10 +69,6 @@ export const INLINE_HELP_PLACEMENTS = [
     'right',
     'left',
     'bottom-center'
-];
-
-export const POPOVER_ALIGNMENTS = [
-    'right'
 ];
 
 export const POPOVER_TYPES = [

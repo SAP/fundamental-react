@@ -1,84 +1,11 @@
 import { mount } from 'enzyme';
 import React from 'react';
-import renderer from 'react-test-renderer';
 import TimePicker from './TimePicker';
 
 describe('<TimePicker />', () => {
     const defaultTimePicker = <TimePicker id='myTime' />;
     const twelveHourTime = <TimePicker format12Hours />;
-    const showHour = <TimePicker format12Hours showHour />;
-    const showMinute = <TimePicker format12Hours showMinute />;
-    const showSecond = <TimePicker format12Hours showSecond />;
     const timepickerWithInitialValue = <TimePicker value='10:30:34 pm' />;
-    const showHourMinute = (
-        <TimePicker format12Hours={false} showHour={false}
-            showMinute />
-    );
-    const showMinuteSecond = (
-        <TimePicker
-            format12Hours
-            showHour={false}
-            showMinute
-            showSecond />
-    );
-    const showHourSecond = (
-        <TimePicker
-            format12Hours
-            showHour
-            showMinute={false}
-            showSecond />
-    );
-    const noSecondTime = <TimePicker showSecond={false} />;
-    const disabledTime = <TimePicker disabled />;
-    test('create time picker', () => {
-        // default time picker
-        let component = renderer.create(defaultTimePicker);
-        let tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-
-        // twelve hour time picker
-        component = renderer.create(twelveHourTime);
-        tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-
-        // no seconds time picker
-        component = renderer.create(noSecondTime);
-        tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-
-        // disabled time picker
-        component = renderer.create(disabledTime);
-        tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-
-        component = renderer.create(showHour);
-        tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-
-        component = renderer.create(showSecond);
-        tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-
-        component = renderer.create(showMinute);
-        tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-
-        component = renderer.create(showHourMinute);
-        tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-
-        component = renderer.create(showMinuteSecond);
-        tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-
-        component = renderer.create(showHourSecond);
-        tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-
-        component = renderer.create(timepickerWithInitialValue);
-        tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-    });
 
     test('changing a value', () => {
         let wrapper = mount(defaultTimePicker);
@@ -202,12 +129,6 @@ describe('<TimePicker />', () => {
     });
 
     test('check value change', () => {
-        const fullTime = {
-            hour: '12',
-            minute: '29',
-            second: '34',
-            meridiem: 'pm'
-        };
         // just minute and second, no 12 hr format
         let wrapper = mount(
             <TimePicker
@@ -220,24 +141,34 @@ describe('<TimePicker />', () => {
         wrapper.find('button').simulate('click');
 
         wrapper
-            .find('.fd-input')
+            .find('.fd-time__unit')
+            .at(0)
+            .simulate('click');
+        expect(wrapper.state('time').hour).toEqual(9);
+
+        wrapper
+            .find('.fd-time__col')
             .at(1)
-            .simulate('change', { target: { value: fullTime.hour } });
-        expect(wrapper.state('time').hour).toEqual(fullTime.hour);
+            .simulate('click');
 
         wrapper
-            .find('.fd-input')
+            .find('.fd-time__unit')
+            .at(0)
+            .simulate('click');
+        expect(wrapper.state('time').minute).toEqual(57);
+
+        wrapper
+            .find('.fd-time__col')
             .at(2)
-            .simulate('change', { target: { value: fullTime.minute } });
-        expect(wrapper.state('time').minute).toEqual(fullTime.minute);
+            .simulate('click');
 
         wrapper
-            .find('.fd-input')
-            .at(3)
-            .simulate('change', { target: { value: fullTime.second } });
-        expect(wrapper.state('time').second).toEqual(fullTime.second);
+            .find('.fd-time__unit')
+            .at(0)
+            .simulate('click');
+        expect(wrapper.state('time').second).toEqual(57);
 
-        expect(wrapper.state('value')).toEqual('12:29:34 am');
+        expect(wrapper.state('value')).toEqual('09:57:57 am');
     });
 
     test('check for onBlur of text input', () => {
@@ -267,6 +198,67 @@ describe('<TimePicker />', () => {
             .at(0)
             .simulate('blur');
 
+        expect(wrapper.state('value')).toEqual('');
+    });
+
+    test('check for onBlur of text input with initial value', () => {
+        // check valid input with 12 Hour Clock
+        let wrapper = mount(<TimePicker format12Hours value='10:10:10 pm' />);
+        wrapper
+            .find('input[type="text"]')
+            .at(0)
+            .simulate('blur');
+        expect(wrapper.state('value')).toEqual('10:10:10 pm');
+        // check invalid input with 12 Hour Clock
+        wrapper = mount(<TimePicker format12Hours value='13:10:10 pm' />);
+        wrapper
+            .find('input[type="text"]')
+            .at(0)
+            .simulate('blur');
+        expect(wrapper.state('value')).toEqual('');
+        // check valid input with 24 Hour Clock
+        wrapper = mount(<TimePicker value='23:10:10' />);
+        wrapper
+            .find('input[type="text"]')
+            .at(0)
+            .simulate('blur');
+        expect(wrapper.state('value')).toEqual('23:10:10');
+        // check invalid input with 24 Hour Clock
+        wrapper = mount(<TimePicker value='25:10:10' />);
+        wrapper
+            .find('input[type="text"]')
+            .at(0)
+            .simulate('blur');
+        expect(wrapper.state('value')).toEqual('');
+        // check valid input with 12 Hour Clock with Hours and Minutes
+        wrapper = mount(<TimePicker format12Hours showSecond={false}
+            value='10:10 am' />);
+        wrapper
+            .find('input[type="text"]')
+            .at(0)
+            .simulate('blur');
+        expect(wrapper.state('value')).toEqual('10:10 am');
+        // check invalid input with 12 Hour Clock with Hours and Minutes
+        wrapper = mount(<TimePicker format12Hours showSecond={false}
+            value='13:10 an' />);
+        wrapper
+            .find('input[type="text"]')
+            .at(0)
+            .simulate('blur');
+        expect(wrapper.state('value')).toEqual('');
+        // check valid input with 24 Hour Clock with Hours and Minutes
+        wrapper = mount(<TimePicker showSecond={false} value='23:10' />);
+        wrapper
+            .find('input[type="text"]')
+            .at(0)
+            .simulate('blur');
+        expect(wrapper.state('value')).toEqual('23:10');
+        // check invalid input with 24 Hour Clock with Hours and Minutes
+        wrapper = mount(<TimePicker showSecond={false} value='24:10' />);
+        wrapper
+            .find('input[type="text"]')
+            .at(0)
+            .simulate('blur');
         expect(wrapper.state('value')).toEqual('');
     });
 

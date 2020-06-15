@@ -8,6 +8,9 @@ import PropTypes from 'prop-types';
 import { isDateBetween, isEnabledDate } from '../utils/dateUtils';
 import React, { Component } from 'react';
 
+/** A **Calendar** is commonly used as the contents of a **Popover** when composing a **DatePicker**.
+It is rarely used on its own as a standalone component. */
+
 class Calendar extends Component {
 
     constructor(props) {
@@ -279,7 +282,9 @@ class Calendar extends Component {
 
         return (
             <div className='fd-calendar__months'>
-                <table {...monthProps} className='fd-calendar__table'
+                <table
+                    {...monthProps}
+                    className='fd-calendar__table'
                     ref={this.tableRef}
                     role='grid'>
                     <tbody className='fd-calendar__group'>
@@ -335,7 +340,9 @@ class Calendar extends Component {
         });
         return (
             <div className='fd-calendar__years'>
-                <table {...yearListProps} className='fd-calendar__table'
+                <table
+                    {...yearListProps}
+                    className='fd-calendar__table'
                     ref={this.tableRef}
                     role='grid'>
                     <tbody className='fd-calendar__group'>
@@ -494,20 +501,40 @@ class Calendar extends Component {
         );
     }
 
+    shiftDays = (startOnDay = 0, weekdays) => {
+        const _weekdays = [...weekdays];
+        let counter = startOnDay;
+        while (counter > 0) {
+            const day = _weekdays.shift();
+            _weekdays.push(day);
+            counter = counter - 1;
+        }
+        return _weekdays;
+    }
+
     generateWeekdays = () => {
         const weekDays = [];
         const daysName = moment.localeData(this.props.locale).weekdaysMin().map(day => day.charAt(0));
+        const shiftedDaysName = this.shiftDays(this.normalizedWeekdayStart(), daysName);
 
         for (let index = 0; index < 7; index++) {
             weekDays.push(
                 <th className='fd-calendar__item fd-calendar__item--side-helper' key={index}>
                     <span className='fd-calendar__text'>
-                        {daysName[index]}
+                        {shiftedDaysName[index]}
                     </span>
                 </th>);
         }
         return <tr className='fd-calendar__row'>{weekDays}</tr>;
 
+    }
+
+    normalizedWeekdayStart = () => {
+        const weekdayStart = parseInt(this.props.weekdayStart, 10);
+        if (!isNaN(weekdayStart) && weekdayStart >= 0 && weekdayStart <= 6) {
+            return weekdayStart;
+        }
+        return 0;
     }
 
     generateDays = (tableBodyProps) => {
@@ -520,11 +547,13 @@ class Calendar extends Component {
         const enableRangeSelection = this.props.enableRangeSelection;
 
         const firstDayMonth = moment(currentDateDisplayed).startOf('month');
-        const firstDayWeekMonth = moment(firstDayMonth).startOf('week');
+        const firstDayWeekMonth = moment(firstDayMonth).day(0).day(this.normalizedWeekdayStart());
+        const isAfterFirstDayMonth = moment(firstDayWeekMonth).isAfter(firstDayMonth);
+
         const rows = [];
 
         let days = [];
-        let day = firstDayWeekMonth;
+        let day = isAfterFirstDayMonth ? firstDayWeekMonth.subtract(7, 'days') : firstDayWeekMonth;
         let dateFormatted = '';
 
         for (let week = 0; week < 6; week++) {
@@ -598,8 +627,11 @@ class Calendar extends Component {
 
         return (
             <div className='fd-calendar__dates'>
-                <table {...tableProps} className='fd-calendar__table'
-                    ref={this.tableRef}>
+                <table
+                    {...tableProps}
+                    className='fd-calendar__table'
+                    ref={this.tableRef}
+                    role='grid'>
                     <thead {...tableHeaderProps} className='fd-calendar__group'>
                         {this.generateWeekdays()}
                     </thead>
@@ -631,6 +663,7 @@ class Calendar extends Component {
             tableHeaderProps,
             tableBodyProps,
             specialDays,
+            weekdayStart,
             ...props
         } = this.props;
 
@@ -641,7 +674,9 @@ class Calendar extends Component {
 
         return (
             <>
-                <div {...props} className={calendarClasses}
+                <div
+                    {...props}
+                    className={calendarClasses}
                     onKeyDown={(e) => this.onKeyDownCalendar(e)}>
                     {this.generateNavigation()}
                     <div className='fd-calendar__content'>
@@ -659,33 +694,65 @@ class Calendar extends Component {
 
 Calendar.displayName = 'Calendar';
 
-Calendar.basePropTypes = {
-    blockedDates: PropTypes.arrayOf(PropTypes.instanceOf(Date)),
-    disableStyles: PropTypes.bool,
-    disableAfterDate: PropTypes.instanceOf(Date),
-    disableBeforeDate: PropTypes.instanceOf(Date),
-    disabledDates: PropTypes.arrayOf(PropTypes.instanceOf(Date)),
+Calendar.propTypes = {
+    /** Blocks dates that are in between the blocked dates */
+    blockedDates: PropTypes.arrayOf(PropTypes.instanceOf(moment)),
+    /** CSS class(es) to add to the element */
+    className: PropTypes.string,
+    customDate: PropTypes.oneOfType([
+        PropTypes.object,
+        PropTypes.array
+    ]),
+    /** Disables dates of a calendar that come after the specified date */
+    disableAfterDate: PropTypes.instanceOf(moment),
+    /** Disables dates of a calendar that come before the specified date */
+    disableBeforeDate: PropTypes.instanceOf(moment),
+    /** Disables dates that are in between the disabled dates */
+    disabledDates: PropTypes.arrayOf(PropTypes.instanceOf(moment)),
+    /** Set to **true** to disable dates after today\'s date */
     disableFutureDates: PropTypes.bool,
+    /** Set to **true** to disable dates before today\'s date */
     disablePastDates: PropTypes.bool,
+    /** Internal use only */
+    disableStyles: PropTypes.bool,
+    /** Disables dates that match a weekday. For example, `disableWeekday={[\'Tuesday\', \'Thursday\', \'Friday\']}` */
     disableWeekday: PropTypes.arrayOf(PropTypes.string),
+    /** Set to **true** to disables dates that match a weekend */
     disableWeekends: PropTypes.bool,
+    /** Set to **true** to enable the Calendar's range selection feature */
+    enableRangeSelection: PropTypes.bool,
+    /** Set to **true** to focus the calendar grid upon being mounted */
+    focusOnInit: PropTypes.bool,
+    /** Moment.js locale keys */
+    locale: PropTypes.string,
+    /** Localized text to be updated based on location/language */
     localizedText: CustomPropTypes.i18n({
+        /** Localized string informing screen reader users the calendar can be navigated by arrow keys */
         calendarInstructions: PropTypes.string,
+        /** aria-label for next button */
         nextMonth: PropTypes.string,
+        /** aria-label for previous button */
         previousMonth: PropTypes.string,
+        /** aria-label for next button when years are displayed */
         show12NextYears: PropTypes.string,
+        /** aria-label for previous button when years are displayed */
         show12PreviousYears: PropTypes.string
     }),
-    specialDays: PropTypes.object
-};
-
-Calendar.propTypes = {
-    ...Calendar.basePropTypes,
+    /** Additional props to be spread to the month\'s `<table>` element */
     monthListProps: PropTypes.object,
+    /** Object with special dates and special date types in shape of `{\'YYYYMMDD\': type}`. Type must be a number between 1-20 */
+    specialDays: PropTypes.object,
+    /** Additional props to be spread to the `<tbody>` element */
     tableBodyProps: PropTypes.object,
+    /** Additional props to be spread to the `<thead>` element */
     tableHeaderProps: PropTypes.object,
+    /** Additional props to be spread to the `<table>` element */
     tableProps: PropTypes.object,
+    /** Number to indicate which day the week should start. 0 = Sunday, 1 = Monday, 2 = Tuesday, 3 = Wednesday, 4 = Thursday, 5 = Friday, 6 = Saturday */
+    weekdayStart: CustomPropTypes.range(0, 6),
+    /** Additional props to be spread to the year\'s `<table>` element */
     yearListProps: PropTypes.object,
+    /** Callback function when the change event fires on the component */
     onChange: PropTypes.func
 };
 
@@ -699,32 +766,8 @@ Calendar.defaultProps = {
         show12PreviousYears: 'Show 12 previous years'
     },
     onChange: () => { },
-    specialDays: {}
-};
-
-Calendar.propDescriptions = {
-    blockedDates: 'Blocks dates that are in between the blocked dates.',
-    disableAfterDate: 'Disables dates of a calendar that come after the specified date.',
-    disableBeforeDate: 'Disables dates of a calendar that come before the specified date.',
-    disabledDates: 'Disables dates that are in between the disabled dates.',
-    disableFutureDates: 'Set to **true** to disable dates after today\'s date.',
-    disablePastDates: 'Set to **true** to disable dates before today\'s date.',
-    disableWeekday: 'Disables dates that match a weekday. For example, `disableWeekday={[\'Tuesday\', \'Thursday\', \'Friday\']}`',
-    disableWeekends: 'Set to **true** to disables dates that match a weekend.',
-    focusOnInit: 'Set to **true** to focus the calendar grid upon being mounted',
-    localizedTextShape: {
-        calendarInstructions: 'Localized string informing screen reader users the calendar can be navigated by arrow keys.',
-        nextMonth: 'aria-label for next button',
-        previousMonth: 'aria-label for previous button',
-        show12NextYears: 'aria-label for next button when years are displayed',
-        show12PreviousYears: 'aria-label for previous button when years are displayed'
-    },
-    monthListProps: 'Additional props to be spread to the month\'s `<table>` element.',
-    specialDays: 'Object with special dates and special date types in shape of `{\'YYYYMMDD\': type}`. Type must be a number between 1-20.',
-    tableBodyProps: 'Additional props to be spread to the `<tbody>` element.',
-    tableHeaderProps: 'Additional props to be spread to the `<thead>` element.',
-    tableProps: 'Additional props to be spread to the `<table>` element.',
-    yearListProps: 'Additional props to be spread to the year\'s `<table>` element.'
+    specialDays: {},
+    weekdayStart: 0
 };
 
 export default Calendar;

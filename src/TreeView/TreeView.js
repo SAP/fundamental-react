@@ -7,6 +7,10 @@ import TreeItem from './_TreeItem';
 import TreeRow from './_TreeRow';
 import React, { Component } from 'react';
 
+/** A **TreeView** is used to display data in a visual hierarchy. Items that contain additional items
+are called nodes, while items that do not contain any other items are called leaves. If available,
+a single top-most node is called a "root" node. Apart from the hierarchical structure of its nodes
+and leaves, a tree is similar to a list. */
 class TreeView extends Component {
     constructor(props) {
         super(props);
@@ -155,22 +159,23 @@ class TreeView extends Component {
 TreeView.displayName = 'TreeView';
 
 TreeView.propTypes = {
+    /** Node(s) to render within the component. Expecting a `TreeHead` and a `Tree` component as children */
     children: PropTypes.node,
+    /** Internal use only */
     disableStyles: PropTypes.bool,
+    /** Object with rowId keys and boolean values representing whether that row is expanded.
+     * This variable is handled internally, but can be overridden by the consumer through this prop */
     expandData: PropTypes.object,
+    /** Set to *true* for an expanded tree. This variable is handled internally,
+     * but can be overridden by the consumer through this prop */
     isExpandAll: PropTypes.bool,
+    /** Callback that is called whenever the internal expand/collapse state changes.
+     * The argument is an an object with rowId keys and boolean values representing whether that row is expanded */
     onExpandChange: PropTypes.func
 };
 
 TreeView.defaultProps = {
     onExpandChange: () => {}
-};
-
-TreeView.propDescriptions = {
-    children: 'Node(s) to render within the component. Expecting a `TreeHead` and a `Tree` component as children.',
-    expandData: 'Object with rowId keys and boolean values representing whether that row is expanded. This variable is handled internally, but can be overridden by the consumer through this prop.',
-    isExpandAll: 'Set to *true* for an expanded tree. This variable is handled internally, but can be overridden by the consumer through this prop',
-    onExpandChange: 'Callback that is called whenever the internal expand/collapse state changes. The argument is an an object with rowId keys and boolean values representing whether that row is expanded.'
 };
 
 TreeView.Tree = Tree;

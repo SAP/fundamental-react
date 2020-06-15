@@ -31,16 +31,16 @@ const FormItem = React.forwardRef(({ isHorizontal, isInline, children, className
 FormItem.displayName = 'FormItem';
 
 FormItem.propTypes = {
+    /** Node(s) to render within the component */
     children: PropTypes.node,
+    /** CSS class(es) to add to the element */
     className: PropTypes.string,
+    /** Internal use only */
     disableStyles: PropTypes.bool,
+    /** Set to **true** to display items in a row */
     isHorizontal: PropTypes.bool,
+    /** Internal use only */
     isInline: PropTypes.bool
-};
-
-FormItem.propDescriptions = {
-    isInline: '_INTERNAL USE ONLY._',
-    isHorizontal: 'Set to **true** to display items in a row.'
 };
 
 export default FormItem;

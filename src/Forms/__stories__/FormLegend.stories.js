@@ -1,15 +1,11 @@
 import FormLegend from '../FormLegend';
 import React from 'react';
-import { storiesOf } from '@storybook/react';
-import {
-    withKnobs
-} from '@storybook/addon-knobs';
 
-storiesOf('Components|FormLegend', module)
-    .addDecorator(withKnobs)
-    .add('Default', () => (
-        <FormLegend>Default</FormLegend>
-    ))
-    .add('disable styles', () => (
-        <FormLegend disableStyles>Default</FormLegend>
-    ));
+export default {
+    title: 'Component API/Forms/FormLegend',
+    component: FormLegend
+};
+
+export const primary = () => (<FormLegend>Default</FormLegend>);
+
+primary.parameters = { docs: { disable: true } };

@@ -1,6 +1,241 @@
-# Change Log
+# Changelog
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+## [0.11.0-rc.11](https://github.com/SAP/fundamental-react/compare/v0.11.0-rc.10...v0.11.0-rc.11) (2020-06-15)
+
+## [0.11.0-rc.10](https://github.com/SAP/fundamental-react/compare/v0.11.0-rc.9...v0.11.0-rc.10) (2020-06-12)
+
+
+### Features
+
+* 1020: Shellbar pass popoverProps to SearchInput ([#1091](https://github.com/SAP/fundamental-react/issues/1091)) ([5ab3775](https://github.com/SAP/fundamental-react/commit/5ab377533679086aa9c60f388c9a8ddb662dac02))
+
+## [0.11.0-rc.9](https://github.com/SAP/fundamental-react/compare/v0.11.0-rc.8...v0.11.0-rc.9) (2020-06-10)
+
+
+### Bug Fixes
+
+* Use `.day(0)` instead of `.startOf("week")` for datepicker ([#1090](https://github.com/SAP/fundamental-react/issues/1090)) ([58ebe86](https://github.com/SAP/fundamental-react/commit/58ebe868f4dd41f2c88dcb422e43faca48867664))
+
+## [0.11.0-rc.8](https://github.com/SAP/fundamental-react/compare/v0.11.0-rc.7...v0.11.0-rc.8) (2020-06-09)
+
+## [0.11.0-rc.7](https://github.com/SAP/fundamental-react/compare/v0.11.0-rc.6...v0.11.0-rc.7) (2020-06-08)
+
+
+### Features
+
+* weekdayStart for Calendar ([#1083](https://github.com/SAP/fundamental-react/issues/1083)) ([138653d](https://github.com/SAP/fundamental-react/commit/138653d9d1b5940a7690f8dc165d7659288f1e18))
+
+## [0.11.0-rc.6](https://github.com/SAP/fundamental-react/compare/v0.11.0-rc.5...v0.11.0-rc.6) (2020-06-08)
+
+
+### Bug Fixes
+
+* [Datepicker] Scrolls to top of page on click ([#1080](https://github.com/SAP/fundamental-react/issues/1080)) ([7ae5781](https://github.com/SAP/fundamental-react/commit/7ae5781359709f1ebea2fb7bfbf7ed55ef5b1d13))
+
+## [0.11.0-rc.5](https://github.com/SAP/fundamental-react/compare/v0.11.0-rc.4...v0.11.0-rc.5) (2020-06-08)
+
+
+### Features
+
+* upgrade fundamental-styles to 0.11.0-rc.4 ([#1082](https://github.com/SAP/fundamental-react/issues/1082)) ([967f82b](https://github.com/SAP/fundamental-react/commit/967f82b3c8102f8b1d1495fa3f669c0bfea2ce17))
+
+## [0.11.0-rc.4](https://github.com/SAP/fundamental-react/compare/v0.11.0-rc.3...v0.11.0-rc.4) (2020-06-08)
+
+## [0.11.0-rc.3](https://github.com/SAP/fundamental-react/compare/v0.11.0-rc.2...v0.11.0-rc.3) (2020-06-05)
+
+## [0.11.0-rc.2](https://github.com/SAP/fundamental-react/compare/v0.11.0-rc.1...v0.11.0-rc.2) (2020-06-03)
+
+## [0.11.0-rc.1](https://github.com/SAP/fundamental-react/compare/v0.11.0-rc.0...v0.11.0-rc.1) (2020-06-03)
+
+
+### Bug Fixes
+
+* [DatePicker] Construct new moment objects with custom dateFormat ([#1074](https://github.com/SAP/fundamental-react/issues/1074)) ([6d919c2](https://github.com/SAP/fundamental-react/commit/6d919c206bffad5beea550efa356c296b7fcf9a2))
+
+## [0.11.0-rc.0](https://github.com/SAP/fundamental-react/compare/v0.10.2-rc.2...v0.11.0-rc.0) (2020-06-03)
+
+
+### ⚠ BREAKING CHANGES
+
+* The Component ButtonGroup is renamed as ButtonSegmented to align with fundamental-styles
+
+### Bug Fixes
+
+* [#1032](https://github.com/SAP/fundamental-react/issues/1032) Renamed ButtonGroup to ButtonSegmented ([#1072](https://github.com/SAP/fundamental-react/issues/1072)) ([f1666f7](https://github.com/SAP/fundamental-react/commit/f1666f7ff8901c6262a3f5cea32a4f386933af0f))
+
+### [0.10.2-rc.2](https://github.com/SAP/fundamental-react/compare/v0.10.2-rc.1...v0.10.2-rc.2) (2020-06-02)
+
+### [0.10.2-rc.1](https://github.com/SAP/fundamental-react/compare/v0.10.2-rc.0...v0.10.2-rc.1) (2020-06-02)
+
+### [0.10.2-rc.0](https://github.com/SAP/fundamental-react/compare/v0.10.1...v0.10.2-rc.0) (2020-06-01)
+
+
+### Bug Fixes
+
+* SearchInput doesn't updated when searchList property change ([#1058](https://github.com/SAP/fundamental-react/issues/1058)) ([6ebc9ff](https://github.com/SAP/fundamental-react/commit/6ebc9ffd1a5447c0623b6d190ac407066a83a734))
+
+### [0.10.1](https://github.com/SAP/fundamental-react/compare/v0.10.1-rc.2...v0.10.1) (2020-05-29)
+
+### [0.10.1-rc.2](https://github.com/SAP/fundamental-react/compare/v0.10.1-rc.1...v0.10.1-rc.2) (2020-05-29)
+
+### [0.10.1-rc.1](https://github.com/SAP/fundamental-react/compare/v0.10.1-rc.0...v0.10.1-rc.1) (2020-05-29)
+
+### [0.10.1-rc.0](https://github.com/SAP/fundamental-react/compare/v0.10.0...v0.10.1-rc.0) (2020-05-28)
+
+## [0.10.0](https://github.com/SAP/fundamental-react/compare/v0.10.0-rc.0...v0.10.0) (2020-05-27)
+
+## [0.10.0-rc.0](https://github.com/SAP/fundamental-react/compare/v0.9.1-rc.17...v0.10.0-rc.0) (2020-05-22)
+
+
+### ⚠ BREAKING CHANGES
+
+* updated list with byline/selection
+
+* add subtle link
+
+* update menu
+
+* update side nav
+
+* refactor time picker
+
+* update tests
+
+* update identifier
+
+* rename Identifier to Avatar
+
+* update list with navigation
+
+* add action item to list
+
+* update to latest
+
+* Update .size-limit
+
+* bring back listitem onClick for non link/buttons
+
+* pr feedback
+
+* fix meridiem click handling
+
+### Features
+
+* update fundamental-styles to 0.10.0-rc.1 ([#1025](https://github.com/SAP/fundamental-react/issues/1025)) ([baf00ec](https://github.com/SAP/fundamental-react/commit/baf00ecf0d1535fd91fe10288f34fe2944e7126f))
+
+### [0.9.1-rc.17](https://github.com/SAP/fundamental-react/compare/v0.9.1-rc.16...v0.9.1-rc.17) (2020-05-19)
+
+### [0.9.1-rc.16](https://github.com/SAP/fundamental-react/compare/v0.9.1-rc.15...v0.9.1-rc.16) (2020-05-18)
+
+### [0.9.1-rc.15](https://github.com/SAP/fundamental-react/compare/v0.9.1-rc.14...v0.9.1-rc.15) (2020-05-18)
+
+### [0.9.1-rc.14](https://github.com/SAP/fundamental-react/compare/v0.9.1-rc.13...v0.9.1-rc.14) (2020-05-15)
+
+
+### Bug Fixes
+
+* Username is cut off from Shellbar ([#1008](https://github.com/SAP/fundamental-react/issues/1008)) ([8d36439](https://github.com/SAP/fundamental-react/commit/8d36439b5e72e5b8c73cb060ea0e8c3c5e692f4e))
+
+### [0.9.1-rc.13](https://github.com/SAP/fundamental-react/compare/v0.9.1-rc.12...v0.9.1-rc.13) (2020-05-15)
+
+
+### Features
+
+* width adjustments for popover based components, class changes, MultiInput changes ([#1016](https://github.com/SAP/fundamental-react/issues/1016)) ([55a005c](https://github.com/SAP/fundamental-react/commit/55a005c8151bedc57a7e379f6e25cc649e32a108))
+
+### [0.9.1-rc.12](https://github.com/SAP/fundamental-react/compare/v0.9.1-rc.11...v0.9.1-rc.12) (2020-05-14)
+
+### [0.9.1-rc.11](https://github.com/SAP/fundamental-react/compare/v0.9.1-rc.10...v0.9.1-rc.11) (2020-05-14)
+
+### [0.9.1-rc.10](https://github.com/SAP/fundamental-react/compare/v0.9.1-rc.9...v0.9.1-rc.10) (2020-05-14)
+
+
+### Features
+
+* Pagination - added new interactions as defined in fundamental-styles ([#1013](https://github.com/SAP/fundamental-react/issues/1013)) ([6876cb3](https://github.com/SAP/fundamental-react/commit/6876cb3b3320c89e1b440d417ca06b2ab6cd09c0))
+
+### [0.9.1-rc.9](https://github.com/SAP/fundamental-react/compare/v0.9.1-rc.8...v0.9.1-rc.9) (2020-05-05)
+
+### [0.9.1-rc.8](https://github.com/SAP/fundamental-react/compare/v0.9.1-rc.7...v0.9.1-rc.8) (2020-05-04)
+
+### [0.9.1-rc.7](https://github.com/SAP/fundamental-react/compare/v0.9.1-rc.6...v0.9.1-rc.7) (2020-05-01)
+
+### [0.9.1-rc.6](https://github.com/SAP/fundamental-react/compare/v0.9.1-rc.5...v0.9.1-rc.6) (2020-05-01)
+
+### [0.9.1-rc.5](https://github.com/SAP/fundamental-react/compare/v0.9.1-rc.4...v0.9.1-rc.5) (2020-05-01)
+
+### [0.9.1-rc.4](https://github.com/SAP/fundamental-react/compare/v0.9.1-rc.3...v0.9.1-rc.4) (2020-05-01)
+
+### [0.9.1-rc.3](https://github.com/SAP/fundamental-react/compare/v0.9.1-rc.2...v0.9.1-rc.3) (2020-05-01)
+
+### [0.9.1-rc.2](https://github.com/SAP/fundamental-react/compare/v0.9.1-rc.1...v0.9.1-rc.2) (2020-04-29)
+
+<a name="0.9.1-rc.1"></a>
+## [0.9.1-rc.1](https://github.com/SAP/fundamental-react/compare/v0.9.1-rc.0...v0.9.1-rc.1) (2020-04-23)
+
+
+### Bug Fixes
+
+* call onChange only if formattedDate has changed ([#973](https://github.com/SAP/fundamental-react/issues/973)) ([7eb510b](https://github.com/SAP/fundamental-react/commit/7eb510b))
+
+
+
+<a name="0.9.1-rc.0"></a>
+## [0.9.1-rc.0](https://github.com/SAP/fundamental-react/compare/v0.9.0...v0.9.1-rc.0) (2020-04-23)
+
+
+### Bug Fixes
+
+* days table role fix ([#972](https://github.com/SAP/fundamental-react/issues/972)) ([fdb4075](https://github.com/SAP/fundamental-react/commit/fdb4075))
+
+
+
+<a name="0.9.0"></a>
+# [0.9.0](https://github.com/SAP/fundamental-react/compare/v0.9.0-rc.26...v0.9.0) (2020-04-22)
+
+
+
+<a name="0.9.0-rc.26"></a>
+# [0.9.0-rc.26](https://github.com/SAP/fundamental-react/compare/v0.9.0-rc.25...v0.9.0-rc.26) (2020-04-21)
+
+
+### Bug Fixes
+
+* Blur event validates time in the TimePicker input  ([#966](https://github.com/SAP/fundamental-react/issues/966)) ([b2aa07f](https://github.com/SAP/fundamental-react/commit/b2aa07f))
+
+
+
+<a name="0.9.0-rc.25"></a>
+# [0.9.0-rc.25](https://github.com/SAP/fundamental-react/compare/v0.9.0-rc.24...v0.9.0-rc.25) (2020-04-21)
+
+
+### Features
+
+* forms using state proptype migrated to updated options ([#968](https://github.com/SAP/fundamental-react/issues/968)) ([0aea9bd](https://github.com/SAP/fundamental-react/commit/0aea9bd))
+
+
+
+<a name="0.9.0-rc.24"></a>
+# [0.9.0-rc.24](https://github.com/SAP/fundamental-react/compare/v0.9.0-rc.23...v0.9.0-rc.24) (2020-04-20)
+
+
+### Bug Fixes
+
+* add backbutton to shellbar ([#967](https://github.com/SAP/fundamental-react/issues/967)) ([a590bf9](https://github.com/SAP/fundamental-react/commit/a590bf9))
+
+
+
+<a name="0.9.0-rc.23"></a>
+# [0.9.0-rc.23](https://github.com/SAP/fundamental-react/compare/v0.9.0-rc.22...v0.9.0-rc.23) (2020-04-16)
+
+
+### Features
+
+* added textarea support for maxLength prop ([#955](https://github.com/SAP/fundamental-react/issues/955)) ([c995e1a](https://github.com/SAP/fundamental-react/commit/c995e1a))
+
+
 
 <a name="0.9.0-rc.22"></a>
 # [0.9.0-rc.22](https://github.com/SAP/fundamental-react/compare/v0.9.0-rc.21...v0.9.0-rc.22) (2020-04-14)

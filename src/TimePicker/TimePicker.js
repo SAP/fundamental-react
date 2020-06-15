@@ -5,6 +5,8 @@ import Time from '../Time/Time';
 import TimePickerItem from './_TimePickerItem';
 import React, { Component } from 'react';
 
+/** A **TimePicker** allows the user to easily set a time using the **Time** component. */
+
 class TimePicker extends Component {
     constructor(props) {
         super(props);
@@ -59,17 +61,21 @@ class TimePicker extends Component {
         this.setState({ value: value });
     };
 
+    formatWithLeadingZero = value => {
+        return parseInt(value, 10) < 10 ? '0' + parseInt(value, 10) : value;
+    }
+
     formatValue = time => {
         let value = '';
 
         if (this.state.showHour) {
-            value = time.hour;
+            value = this.formatWithLeadingZero(time.hour);
         }
         if (this.state.showMinute) {
-            value = value ? value + ':' + time.minute : time.minute;
+            value = value ? value + ':' + this.formatWithLeadingZero(time.minute) : this.formatWithLeadingZero(time.minute);
         }
         if (this.state.showSecond) {
-            value = value ? value + ':' + time.second : time.second;
+            value = value ? value + ':' + this.formatWithLeadingZero(time.second) : this.formatWithLeadingZero(time.second);
         }
         if (this.state.format12Hours) {
             value = value + ' ' + this.CLOCK[time.meridiem];
@@ -80,13 +86,13 @@ class TimePicker extends Component {
         let time = {};
         let timeArray = value.split(':');
         if (typeof timeArray[0] !== 'undefined' && this.props.showHour) {
-            time.hour = timeArray[0];
+            time.hour = this.formatWithLeadingZero(timeArray[0]);
         }
         if (typeof timeArray[1] !== 'undefined' && this.props.showMinute) {
-            time.minute = timeArray[1];
+            time.minute = this.formatWithLeadingZero(timeArray[1]);
         }
         if (typeof timeArray[2] !== 'undefined' && this.props.showSecond) {
-            time.second = timeArray[2].match(/\d+/)[0];
+            time.second = this.formatWithLeadingZero(timeArray[2].match(/\d+/)[0]);
             if (this.props.format12Hours) {
                 time.meridiem = timeArray[2].indexOf(this.props.localizedText.meridiemAM) !== -1 ? 0 : 1;
             }
@@ -167,17 +173,26 @@ TimePicker.displayName = 'TimePicker';
 
 TimePicker.propTypes = {
     ...Time.basePropTypes,
+    /** Additional props to be spread to the `<button>` element */
     buttonProps: PropTypes.object,
+    /** Set to **true** to mark component as disabled and make it non-interactive */
     disabled: PropTypes.bool,
+    /** Value for the `id` attribute on the element */
     id: PropTypes.string,
+    /** Additional props to be spread to the `<input>` element */
     inputProps: PropTypes.object,
+    /** Localized text to be updated based on location/language */
     localizedText: CustomPropTypes.i18n({
         meridiemAM: PropTypes.string,
         meridiemPM: PropTypes.string
     }),
+    /** Additional props to be spread to the Popover component */
     popoverProps: PropTypes.object,
+    /** Additional props to be spread to the `Time` component */
     timeProps: PropTypes.object,
+    /** Initial time value for the input. Accepted time format : hh:mm:ss am/pm, Eg: 10:32:30 am */
     value: PropTypes.string,
+    /** Callback function when the change event fires on the component */
     onChange: PropTypes.func
 };
 
@@ -197,12 +212,6 @@ TimePicker.defaultProps = {
         meridiem: 0
     },
     onChange: () => {}
-};
-
-TimePicker.propDescriptions = {
-    ...Time.propDescriptions,
-    timeProps: 'Additional props to be spread to the `Time` component.',
-    value: 'Initial time value for the input. Accepted time format : hh:mm:ss am/pm, Eg: 10:32:30 am'
 };
 
 export default TimePicker;

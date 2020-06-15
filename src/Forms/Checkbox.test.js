@@ -1,23 +1,12 @@
 import Checkbox from './Checkbox';
 import { mount } from 'enzyme';
 import React from 'react';
-import renderer from 'react-test-renderer';
 
 describe('<Checkbox />', () => {
-    const checkbox = (
-        <Checkbox id='foo' value='Option 1' />
-    );
-
-    test('create checkbox', () => {
-        // create form set with form inputs
-        let component = renderer.create(checkbox);
-        let tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-    });
 
     describe('Checkbox Tests', () => {
         let setup = (props) => {
-            return mount(<Checkbox value='Label 1' {...props} />);
+            return mount(<Checkbox value='Label 1' {...props}>Label</Checkbox>);
         };
         test('should add checked attribute when checked is passed', () => {
             let element = setup({
@@ -83,7 +72,7 @@ describe('<Checkbox />', () => {
         });
 
         test('should allow props to be spread to the Checkbox component', () => {
-            const element = mount(<Checkbox data-sample='Sample' />);
+            const element = mount(<Checkbox data-sample='Sample'>Label</Checkbox>);
 
             expect(
                 element.find('.fd-form-item').getDOMNode().attributes['data-sample'].value
@@ -91,7 +80,7 @@ describe('<Checkbox />', () => {
         });
 
         test('should allow props to be spread to the Checkbox component input', () => {
-            const element = mount(<Checkbox inputProps={{ 'data-sample': 'Sample' }} />);
+            const element = mount(<Checkbox inputProps={{ 'data-sample': 'Sample' }}>Label</Checkbox>);
 
             expect(
                 element.find('.fd-checkbox').getDOMNode().attributes['data-sample'].value
@@ -99,13 +88,14 @@ describe('<Checkbox />', () => {
         });
 
         test('should allow props to be spread to the Checkbox component label', () => {
-            const element = mount(<Checkbox labelProps={{ 'data-sample': 'Sample' }} />);
+            const element = mount(<Checkbox labelProps={{ 'data-sample': 'Sample' }}>Label</Checkbox>);
 
             expect(
                 element.find('.fd-form-label').getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
         });
     });
+
     test('forwards the ref', () => {
         let ref;
         class Test extends React.Component {
@@ -113,7 +103,7 @@ describe('<Checkbox />', () => {
                 super(props);
                 ref = React.createRef();
             }
-            render = () => <Checkbox ref={ref} />;
+            render = () => <Checkbox ref={ref}>Label</Checkbox>;
         }
         mount(<Test />);
 

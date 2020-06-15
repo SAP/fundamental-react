@@ -1,79 +1,10 @@
 import { mount } from 'enzyme';
 import React from 'react';
-import renderer from 'react-test-renderer';
 import Switch from './Switch';
 
 describe('<Switch />', () => {
     const defaultSwitch = <Switch>Normal Switch</Switch>;
-    const checkedSwitch = (
-        <Switch checked className='blue'
-            compact>
-            Compact Switch
-        </Switch>
-    );
-    const disabledSwitch = <Switch disabled>Normal Switch</Switch>;
-    const disabledCheckedSwitch = (
-        <Switch checked disabled>
-            Normal Switch
-        </Switch>
-    );
-    const showInternalLabelsSwitchChecked = (
-        <Switch
-            checked
-            internalLabels={{
-                checked: {
-                    text: 'on'
-                },
-                unchecked: {
-                    text: 'off'
-                }
-            }}
-            showInternalLabels>Show Internal Labels</Switch>
-    );
-    const showInternalLabelsSwitchUnchecked = (
-        <Switch
-            internalLabels={{
-                checked: {
-                    text: 'on'
-                },
-                unchecked: {
-                    text: 'off'
-                }
-            }}
-            showInternalLabels>Show Internal Labels</Switch>
-    );
 
-    test('create Switch component', () => {
-        // Default Switch
-        let component = renderer.create(defaultSwitch);
-        let tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-
-        // checked Switch
-        component = renderer.create(checkedSwitch);
-        tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-
-        // disabled Switch
-        component = renderer.create(disabledSwitch);
-        tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-
-        // checked disabled Switch
-        component = renderer.create(disabledCheckedSwitch);
-        tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-
-        // show internal labels checked
-        component = renderer.create(showInternalLabelsSwitchChecked);
-        tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-
-        // show internal labels unchecked
-        component = renderer.create(showInternalLabelsSwitchUnchecked);
-        tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-    });
 
     test('Switch state change', () => {
         const wrapper = mount(defaultSwitch);

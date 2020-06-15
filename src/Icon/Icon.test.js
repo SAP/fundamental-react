@@ -1,7 +1,6 @@
 import Icon from './Icon';
 import { mount } from 'enzyme';
 import React from 'react';
-import renderer from 'react-test-renderer';
 
 describe('<Icon />', () => {
     const mockOnClick = jest.fn();
@@ -12,18 +11,6 @@ describe('<Icon />', () => {
             onClick={mockOnClick} />
     );
     const iconWithSize = <Icon glyph='cart' size='s' />;
-
-    test('create icon', () => {
-        // default icon
-        let component = renderer.create(defaultIcon);
-        let tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-
-        // icon with different size
-        component = renderer.create(iconWithSize);
-        tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-    });
 
     test('click on icon', () => {
         let wrapper = mount(defaultIcon);

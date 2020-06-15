@@ -6,6 +6,9 @@ import { MESSAGESTRIP_TYPES } from '../utils/constants';
 import PropTypes from 'prop-types';
 import React, { useEffect, useState } from 'react';
 
+/** A **MessageStrip** provides a message within the application that is
+ * color-coded to emphasize the level of urgency. */
+
 const MessageStrip = (props) => {
 
     let [active, setActive] = useState(true);
@@ -86,19 +89,36 @@ const MessageStrip = (props) => {
 MessageStrip.displayName = 'MessageStrip';
 
 MessageStrip.propTypes = {
+    /** Additional props to be spread to the `<button>` element */
     buttonProps: PropTypes.object,
+    /** Node(s) to render within the component */
     children: PropTypes.node,
+    /** CSS class(es) to add to the element */
     className: PropTypes.string,
+    /** Internal use only */
     disableStyles: PropTypes.bool,
+    /** Set to **true** to show a dismiss button */
     dismissible: PropTypes.bool,
+    /** Value to be applied to the anchor\'s `href` attribute */
     link: PropTypes.string,
+    /** Additional props to be spread to the link\'s `<a>` element */
     linkProps: PropTypes.object,
+    /** Localized display text of the link */
     linkText: PropTypes.string,
+    /** Localized text to be updated based on location/language */
     localizedText: CustomPropTypes.i18n({
+        /** Value for aria-label on the close <button> element */
         close: PropTypes.string
     }),
+    /** Set to **true** to disable the state icon */
     noGlyph: PropTypes.bool,
+    /** Sets the variation of the component. Primarily used for styling:
+    'warning',
+    'error',
+    'success',
+    'information'*/
     type: PropTypes.oneOf(MESSAGESTRIP_TYPES),
+    /** Callback function passing event when close button is clicked */
     onCloseClicked: PropTypes.func
 };
 
@@ -107,18 +127,6 @@ MessageStrip.defaultProps = {
         close: 'Close'
     },
     onCloseClicked: () => { }
-};
-
-MessageStrip.propDescriptions = {
-    dismissible: 'Set to **true** to show a dismiss button.',
-    link: 'Value to be applied to the anchor\'s `href` attribute.',
-    linkProps: 'Additional props to be spread to the link\'s `<a>` element.',
-    linkText: 'Localized display text of the link.',
-    localizedTextShape: {
-        close: 'Value for aria-label on the close <button> element.'
-    },
-    noGlyph: 'Set to **true** to disable the state icon.',
-    onCloseClicked: 'Callback function passing event when close button is clicked.'
 };
 
 export default MessageStrip;
