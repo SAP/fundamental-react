@@ -508,7 +508,7 @@ class Calendar extends Component {
                                 disableStyles={this.props.disableStyles}
                                 onClick={this.handleToday}
                                 option={'transparent'}>
-                                Today
+                                {this.props.localizedText.todayLabel}
                             </Button>
                         </div>
                     }
@@ -752,7 +752,9 @@ Calendar.propTypes = {
         /** aria-label for next button when years are displayed */
         show12NextYears: PropTypes.string,
         /** aria-label for previous button when years are displayed */
-        show12PreviousYears: PropTypes.string
+        show12PreviousYears: PropTypes.string,
+        /** aria-label for Today button if included */
+        todayLabel: PropTypes.string
     }),
     /** Additional props to be spread to the month\'s `<table>` element */
     monthListProps: PropTypes.object,
@@ -781,7 +783,8 @@ Calendar.defaultProps = {
         nextMonth: 'Next month',
         previousMonth: 'Previous month',
         show12NextYears: 'Show 12 next years',
-        show12PreviousYears: 'Show 12 previous years'
+        show12PreviousYears: 'Show 12 previous years',
+        todayLabel: 'Today'
     },
     onChange: () => { },
     specialDays: {},
