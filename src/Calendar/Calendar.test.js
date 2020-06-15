@@ -55,7 +55,7 @@ describe('<Calendar />', () => {
         expect(wrapper.state('showMonths')).toBeFalsy();
         wrapper
             .find(
-                'header.fd-calendar__header button.fd-button--transparent.fd-button--compact'
+                'header.fd-calendar__header button.fd-button--transparent'
             )
             .at(1)
             .simulate('click');
@@ -64,7 +64,7 @@ describe('<Calendar />', () => {
 
         wrapper
             .find(
-                'header.fd-calendar__header button.fd-button--transparent.fd-button--compact'
+                'header.fd-calendar__header button.fd-button--transparent'
             )
             .at(1)
             .simulate('click');
@@ -84,7 +84,7 @@ describe('<Calendar />', () => {
         //open month overlay
         wrapper
             .find(
-                'header.fd-calendar__header button.fd-button--transparent.fd-button--compact'
+                'header.fd-calendar__header button.fd-button--transparent'
             )
             .at(1)
             .simulate('click');
@@ -113,7 +113,7 @@ describe('<Calendar />', () => {
         //open months view
         wrapper
             .find(
-                'header.fd-calendar__header button.fd-button--transparent.fd-button--compact'
+                'header.fd-calendar__header button.fd-button--transparent'
             )
             .at(1)
             .simulate('click');
@@ -136,7 +136,7 @@ describe('<Calendar />', () => {
         expect(wrapper.state('showYears')).toBeFalsy();
         wrapper
             .find(
-                'header.fd-calendar__header button.fd-button--transparent.fd-button--compact'
+                'header.fd-calendar__header button.fd-button--transparent'
             )
             .at(2)
             .simulate('click');
@@ -145,7 +145,7 @@ describe('<Calendar />', () => {
 
         wrapper
             .find(
-                'header.fd-calendar__header button.fd-button--transparent.fd-button--compact'
+                'header.fd-calendar__header button.fd-button--transparent'
             )
             .at(2)
             .simulate('click');
@@ -159,7 +159,7 @@ describe('<Calendar />', () => {
         expect(wrapper.state('showYears')).toBeFalsy();
         wrapper
             .find(
-                'header.fd-calendar__header button.fd-button--transparent.fd-button--compact'
+                'header.fd-calendar__header button.fd-button--transparent'
             )
             .at(2)
             .simulate('click');
@@ -207,7 +207,7 @@ describe('<Calendar />', () => {
         expect(wrapper.state('showYears')).toBeFalsy();
         wrapper
             .find(
-                'header.fd-calendar__header button.fd-button--transparent.fd-button--compact'
+                'header.fd-calendar__header button.fd-button--transparent'
             )
             .at(2)
             .simulate('click');
@@ -233,7 +233,7 @@ describe('<Calendar />', () => {
 
         wrapper
             .find(
-                'header.fd-calendar__header button.fd-button--transparent.fd-button--compact'
+                'header.fd-calendar__header button.fd-button--transparent'
             )
             .at(0)
             .simulate('click');
@@ -244,7 +244,7 @@ describe('<Calendar />', () => {
         // previous button when year shown
         wrapper
             .find(
-                'header.fd-calendar__header button.fd-button--transparent.fd-button--compact'
+                'header.fd-calendar__header button.fd-button--transparent'
             )
             .at(2)
             .simulate('click');
@@ -253,7 +253,7 @@ describe('<Calendar />', () => {
 
         wrapper
             .find(
-                'header.fd-calendar__header button.fd-button--transparent.fd-button--compact'
+                'header.fd-calendar__header button.fd-button--transparent'
             )
             .at(0)
             .simulate('click');
@@ -270,7 +270,7 @@ describe('<Calendar />', () => {
 
         wrapper
             .find(
-                'header.fd-calendar__header button.fd-button--transparent.fd-button--compact'
+                'header.fd-calendar__header button.fd-button--transparent'
             )
             .at(3)
             .simulate('click');
@@ -281,7 +281,7 @@ describe('<Calendar />', () => {
         // previous button when year shown
         wrapper
             .find(
-                'header.fd-calendar__header button.fd-button--transparent.fd-button--compact'
+                'header.fd-calendar__header button.fd-button--transparent'
             )
             .at(2)
             .simulate('click');
@@ -290,7 +290,7 @@ describe('<Calendar />', () => {
 
         wrapper
             .find(
-                'header.fd-calendar__header button.fd-button--transparent.fd-button--compact'
+                'header.fd-calendar__header button.fd-button--transparent'
             )
             .at(3)
             .simulate('click');
@@ -308,7 +308,7 @@ describe('<Calendar />', () => {
 
         wrapper
             .find(
-                'header.fd-calendar__header button.fd-button--transparent.fd-button--compact'
+                'header.fd-calendar__header button.fd-button--transparent'
             )
             .at(3)
             .simulate('click');
