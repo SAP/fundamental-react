@@ -1,0 +1,272 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Component API/Tile Columns 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    className="fddocs-container"
+  >
+    <div
+      className="fd-tile fd-tile--s"
+      onClick={[Function]}
+      role="button"
+      tabIndex="0"
+    >
+      <div
+        className="fd-tile__header"
+      >
+        <div
+          className="fd-tile__title"
+        >
+          Tile Title
+        </div>
+      </div>
+      <div
+        className="fd-tile__content fd-tile__content--2-col"
+      >
+        <div
+          className="fd-tile__section"
+        >
+          <p>
+            Left side content
+          </p>
+        </div>
+        <div
+          className="fd-tile__section"
+        >
+          <p>
+            Right side content
+          </p>
+        </div>
+      </div>
+    </div>
+    <div
+      className="fd-tile fd-tile--double"
+      onClick={[Function]}
+      role="button"
+      tabIndex="0"
+    >
+      <div
+        className="fd-tile__header"
+      >
+        <div
+          className="fd-tile__title"
+        >
+          Tile Title
+        </div>
+      </div>
+      <div
+        className="fd-tile__content fd-tile__content--2-col"
+      >
+        <div
+          className="fd-tile__section"
+        >
+          <p>
+            Left side content
+          </p>
+        </div>
+        <div
+          className="fd-tile__section"
+        >
+          <p>
+            Right side content
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Component API/Tile Primary 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    className="fddocs-container"
+  >
+    <div
+      className="fd-tile"
+      onClick={[Function]}
+      role="button"
+      tabIndex="0"
+    >
+      <div
+        className="fd-tile__header"
+      >
+        <div
+          className="fd-tile__title"
+        >
+          Tile Title
+        </div>
+        <div
+          className="fd-tile__subtitle"
+        >
+          Tile Subtitle
+        </div>
+      </div>
+      <div
+        className="fd-tile__content"
+        title="Tile Title"
+      >
+        <p>
+          Tile Description
+        </p>
+      </div>
+      <div
+        className="fd-tile__footer"
+      >
+        Tile Footer
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Component API/Tile Sizes 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    className="fddocs-container"
+  >
+    <div
+      className="fd-tile fd-tile--s"
+      onClick={[Function]}
+      role="button"
+      tabIndex="0"
+    >
+      <div
+        className="fd-tile__header"
+      >
+        <div
+          className="fd-tile__title"
+        >
+          Tile Title
+        </div>
+      </div>
+      <div
+        className="fd-tile__content"
+      >
+        <p>
+          Tile Description
+        </p>
+      </div>
+    </div>
+    <div
+      className="fd-tile"
+      onClick={[Function]}
+      role="button"
+      tabIndex="0"
+    >
+      <div
+        className="fd-tile__header"
+      >
+        <div
+          className="fd-tile__title"
+        >
+          Tile Title
+        </div>
+      </div>
+      <div
+        className="fd-tile__content"
+      >
+        <p>
+          Tile Description
+        </p>
+      </div>
+    </div>
+  </div>
+  <div
+    className="fddocs-container"
+  >
+    <div
+      className="fd-tile fd-tile--s fd-tile--double"
+      onClick={[Function]}
+      role="button"
+      tabIndex="0"
+    >
+      <div
+        className="fd-tile__header"
+      >
+        <div
+          className="fd-tile__title"
+        >
+          Tile Title
+        </div>
+      </div>
+      <div
+        className="fd-tile__content"
+      >
+        <p>
+          Tile Description
+        </p>
+      </div>
+    </div>
+    <div
+      className="fd-tile fd-tile--double"
+      onClick={[Function]}
+      role="button"
+      tabIndex="0"
+    >
+      <div
+        className="fd-tile__header"
+      >
+        <div
+          className="fd-tile__title"
+        >
+          Tile Title
+        </div>
+      </div>
+      <div
+        className="fd-tile__content"
+      >
+        <p>
+          Tile Description
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Component API/Tile Subtitle 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    className="fddocs-container"
+  >
+    <div
+      className="fd-tile"
+      onClick={[Function]}
+      role="button"
+      tabIndex="0"
+    >
+      <div
+        className="fd-tile__header"
+      >
+        <div
+          className="fd-tile__title"
+        >
+          Tile Title
+        </div>
+        <div
+          className="fd-tile__subtitle"
+        >
+          Tile Subtitle
+        </div>
+      </div>
+      <div
+        className="fd-tile__content"
+        title="Tile Title"
+      >
+        <p>
+          Tile Description
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;

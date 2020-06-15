@@ -7,14 +7,15 @@ import {
     date,
     number,
     optionsKnob,
-    text,
-    withKnobs
+    text
 } from '@storybook/addon-knobs';
 
 export default {
     title: 'Component API/Calendar',
     component: Calendar,
-    decorators: [withKnobs]
+    parameters: {
+        storyshots: { disable: true }
+    }
 };
 
 function dateKnobToDate(name, defaultValue) {

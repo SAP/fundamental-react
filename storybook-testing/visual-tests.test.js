@@ -5,10 +5,11 @@ import initStoryshots from '@storybook/addon-storyshots';
 // needed to prevent failures from @storybook/components
 global.window = { ...global };
 
-const getMatchOptions = () => {
+const getMatchOptions = ({ context }) => {
     return {
         failureThreshold: 0.2,
-        failureThresholdType: 'percent'
+        failureThresholdType: 'percent',
+        customSnapshotIdentifier: () => context.name.replace(/\s/g, '')
     };
 };
 
@@ -27,7 +28,7 @@ const beforeScreenshot = (page) => page.emulate(view);
 
 // create visual regession images from each story
 initStoryshots({
-    storyKindRegex: /^((?!.*?Component).)*$/,
+    storyKindRegex: /Visual/,
     test: imageSnapshot({
         storybookUrl: 'http://localhost:12123/',
         customizePage,
