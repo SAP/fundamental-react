@@ -306,23 +306,23 @@ describe('<DatePicker />', () => {
         test('renders today button when valid todayLabel is specified', () => {
             wrapper = mount(<DatePicker todayLabel='Today' />);
             wrapper.find('button.fd-button--transparent.sap-icon--calendar').simulate('click');
-            const todayButtonWrapper = wrapper.find('button.fd-datepicker-today-button');
-            expect(todayButtonWrapper.isEmpty()).toBe(false);
+            const todayButtonWrapper = wrapper.find('button.fd-dialog__decisive-button');
+            expect(todayButtonWrapper.exists()).toBe(true);
             expect(todayButtonWrapper.getDOMNode().innerHTML).toBe('Today');
         });
 
         test('doesn\'t render today button when valid todayLabel is specified but date range selection is enabled', () => {
             wrapper = mount(<DatePicker enableRangeSelection todayLabel='Today' />);
             wrapper.find('button.fd-button--transparent.sap-icon--calendar').simulate('click');
-            const todayButtonWrapper = wrapper.find('button.fd-datepicker-today-button');
-            expect(todayButtonWrapper.isEmpty()).toBe(true);
+            const todayButtonWrapper = wrapper.find('button.fd-dialog__decisive-button');
+            expect(todayButtonWrapper.exists()).toBe(false);
         });
 
         test('sets todays date when today button is pressed', () => {
             wrapper = mount(<DatePicker todayLabel='Today' />);
             wrapper.find('button.fd-button--transparent.sap-icon--calendar').simulate('click');
-            const todayButtonWrapper = wrapper.find('button.fd-datepicker-today-button');
-            expect(todayButtonWrapper.isEmpty()).toBe(false);
+            const todayButtonWrapper = wrapper.find('button.fd-dialog__decisive-button');
+            expect(todayButtonWrapper.exists()).toBe(true);
             todayButtonWrapper.simulate('click');
             expect(moment().isSame(wrapper.state('selectedDate'), 'day')).toBe(true);
         });
@@ -332,7 +332,7 @@ describe('<DatePicker />', () => {
             wrapper = mount(<DatePicker dateFormat='YYYY/MM/DD' onChange={change}
                 todayLabel='Today' />);
             wrapper.find('button.fd-button--transparent.sap-icon--calendar').simulate('click');
-            const todayButtonWrapper = wrapper.find('button.fd-datepicker-today-button');
+            const todayButtonWrapper = wrapper.find('button.fd-dialog__decisive-button');
             todayButtonWrapper.simulate('click');
             expect(change).toHaveBeenCalledWith(expect.objectContaining({ formattedDate: moment().format('YYYY/MM/DD') }));
 
