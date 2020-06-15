@@ -37,6 +37,16 @@ class DatePicker extends Component {
         this.popoverRef = React.createRef();
     }
 
+    componentDidMount() {
+        const { disableStyles, enableRangeSelection, todayLabel } = this.props;
+
+        if (!disableStyles && this._showTodayButton(enableRangeSelection, todayLabel)) {
+            //below styles are needed for footer styling
+            require('fundamental-styles/dist/dialog.css');
+            require('fundamental-styles/dist/bar.css');
+        }
+    }
+
     /**
      * Function tries to format any date string into the format specified by dateFormat.
      * It will use format derived from locale if dateFormat is not specified.
