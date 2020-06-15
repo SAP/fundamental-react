@@ -1716,7 +1716,7 @@ exports[`Storyshots Visual Counter 1`] = `
       className="fddocs-container"
     >
       <p>
-        Lorem ipsum
+        Lorem ipsum 
         <span
           aria-label="Unread count"
           className="fd-counter"
@@ -11293,86 +11293,212 @@ exports[`Storyshots Visual Inline Help 1`] = `
   dir="ltr"
 >
   <div>
-    <span
-      className="fd-inline-help"
+    <div
+      className="fd-popover"
     >
-      <span
-        className="fd-inline-help__content fd-inline-help__content--bottom-right"
+      <div
+        onFocus={[Function]}
+        onMouseDown={[Function]}
+        onTouchStart={[Function]}
       >
-        default
-      </span>
-    </span>
+        <div
+          className="fd-popover__control"
+        >
+          <span
+            aria-controls="fd-mocked-short-id"
+            aria-expanded={false}
+            aria-haspopup={true}
+            onClick={[Function]}
+            onKeyPress={[Function]}
+            role="button"
+            tabIndex={0}
+          >
+            <span
+              className="fd-inline-help"
+            />
+          </span>
+        </div>
+      </div>
+    </div>
   </div>
   <div>
     <label
       className="fd-form-label fd-form-label--inline-help"
     >
       Label Text
-      <span
-        className="fd-inline-help"
+      <div
+        className="fd-popover"
       >
-        <span
-          className="fd-inline-help__content fd-inline-help__content--bottom-right"
+        <div
+          onFocus={[Function]}
+          onMouseDown={[Function]}
+          onTouchStart={[Function]}
         >
-          default
-        </span>
-      </span>
+          <div
+            className="fd-popover__control"
+          >
+            <span
+              aria-controls="fd-mocked-short-id"
+              aria-expanded={false}
+              aria-haspopup={true}
+              onClick={[Function]}
+              onKeyPress={[Function]}
+              role="button"
+              tabIndex={0}
+            >
+              <span
+                className="fd-inline-help"
+              />
+            </span>
+          </div>
+        </div>
+      </div>
     </label>
   </div>
   <div>
-    <span
-      className="fd-inline-help"
+    <div
+      className="fd-popover"
     >
-      <span
-        className="fd-inline-help__content fd-inline-help__content--bottom-right"
+      <div
+        onFocus={[Function]}
+        onMouseDown={[Function]}
+        onTouchStart={[Function]}
       >
-        Lorem ipsum dolor sit amet, consectetur adipiscing.
-      </span>
-    </span>
+        <div
+          className="fd-popover__control"
+        >
+          <span
+            aria-controls="fd-mocked-short-id"
+            aria-expanded={false}
+            aria-haspopup={true}
+            onClick={[Function]}
+            onKeyPress={[Function]}
+            role="button"
+            tabIndex={0}
+          >
+            <span
+              className="fd-inline-help"
+            />
+          </span>
+        </div>
+      </div>
+    </div>
   </div>
   <div>
-    <span
-      className="fd-inline-help"
+    <div
+      className="fd-popover"
     >
-      <span
-        className="fd-inline-help__content fd-inline-help__content--bottom-left"
+      <div
+        onFocus={[Function]}
+        onMouseDown={[Function]}
+        onTouchStart={[Function]}
       >
-        Lorem ipsum dolor sit amet, consectetur adipiscing.
-      </span>
-    </span>
+        <div
+          className="fd-popover__control"
+        >
+          <span
+            aria-controls="fd-mocked-short-id"
+            aria-expanded={false}
+            aria-haspopup={true}
+            onClick={[Function]}
+            onKeyPress={[Function]}
+            role="button"
+            tabIndex={0}
+          >
+            <span
+              className="fd-inline-help"
+            />
+          </span>
+        </div>
+      </div>
+    </div>
   </div>
   <div>
-    <span
-      className="fd-inline-help"
+    <div
+      className="fd-popover"
     >
-      <span
-        className="fd-inline-help__content fd-inline-help__content--bottom-center"
+      <div
+        onFocus={[Function]}
+        onMouseDown={[Function]}
+        onTouchStart={[Function]}
       >
-        Lorem ipsum dolor sit amet, consectetur adipiscing.
-      </span>
-    </span>
+        <div
+          className="fd-popover__control"
+        >
+          <span
+            aria-controls="fd-mocked-short-id"
+            aria-expanded={false}
+            aria-haspopup={true}
+            onClick={[Function]}
+            onKeyPress={[Function]}
+            role="button"
+            tabIndex={0}
+          >
+            <span
+              className="fd-inline-help"
+            />
+          </span>
+        </div>
+      </div>
+    </div>
   </div>
   <div>
-    <span
-      className="fd-inline-help"
+    <div
+      className="fd-popover"
     >
-      <span
-        className="fd-inline-help__content fd-inline-help__content--right"
+      <div
+        onFocus={[Function]}
+        onMouseDown={[Function]}
+        onTouchStart={[Function]}
       >
-        Lorem ipsum dolor sit amet, consectetur adipiscing.
-      </span>
-    </span>
+        <div
+          className="fd-popover__control"
+        >
+          <span
+            aria-controls="fd-mocked-short-id"
+            aria-expanded={false}
+            aria-haspopup={true}
+            onClick={[Function]}
+            onKeyPress={[Function]}
+            role="button"
+            tabIndex={0}
+          >
+            <span
+              className="fd-inline-help"
+            />
+          </span>
+        </div>
+      </div>
+    </div>
   </div>
   <div>
-    <span
-      className="fd-inline-help"
+    <div
+      className="fd-popover"
     >
-      <span
-        className="fd-inline-help__content fd-inline-help__content--left"
+      <div
+        onFocus={[Function]}
+        onMouseDown={[Function]}
+        onTouchStart={[Function]}
       >
-        Lorem ipsum dolor sit amet, consectetur adipiscing.
-      </span>
-    </span>
+        <div
+          className="fd-popover__control"
+        >
+          <span
+            aria-controls="fd-mocked-short-id"
+            aria-expanded={false}
+            aria-haspopup={true}
+            onClick={[Function]}
+            onKeyPress={[Function]}
+            role="button"
+            tabIndex={0}
+          >
+            <span
+              className="fd-inline-help"
+            />
+          </span>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 `;
@@ -13799,7 +13925,7 @@ exports[`Storyshots Visual Message Strip 1`] = `
           className="fd-message-strip__text"
         >
           Default MessageStrip
-
+          
         </p>
       </div>
     </div>
@@ -14242,7 +14368,7 @@ exports[`Storyshots Visual Pagination 1`] = `
         className="fd-pagination__total"
       >
         101
-
+         
         items
       </span>
       <nav
@@ -14309,7 +14435,7 @@ exports[`Storyshots Visual Pagination 1`] = `
         className="fd-pagination__total"
       >
         101
-
+         
         items
       </span>
       <nav
@@ -14375,7 +14501,7 @@ exports[`Storyshots Visual Pagination 1`] = `
         className="fd-pagination__total"
       >
         101
-
+         
         items
       </span>
       <nav
@@ -14437,7 +14563,7 @@ exports[`Storyshots Visual Pagination 1`] = `
     <div
       className="fd-pagination"
     >
-
+      
       <nav
         className="fd-pagination__nav"
       >
@@ -14501,7 +14627,7 @@ exports[`Storyshots Visual Pagination 1`] = `
         className="fd-pagination__total"
       >
         101
-
+         
         Dalmations
       </span>
       <nav
@@ -14567,7 +14693,7 @@ exports[`Storyshots Visual Pagination 1`] = `
         className="fd-pagination__total"
       >
         101
-
+         
         items
       </span>
       <nav
@@ -14633,7 +14759,7 @@ exports[`Storyshots Visual Pagination 1`] = `
         className="fd-pagination__total"
       >
         221
-
+         
         items
       </span>
       <nav
@@ -14835,7 +14961,7 @@ exports[`Storyshots Visual Pagination 1`] = `
         className="fd-pagination__total"
       >
         10
-
+         
         items
       </span>
       <nav
@@ -14946,7 +15072,7 @@ exports[`Storyshots Visual Pagination 1`] = `
         className="fd-pagination__total"
       >
         200
-
+         
         items
       </span>
       <nav
@@ -15768,7 +15894,7 @@ exports[`Storyshots Visual Popover 1`] = `
             tabIndex={0}
             type="button"
           >
-            widthizingType:
+            widthizingType: 
             <strong>
               '
               none
@@ -15800,7 +15926,7 @@ exports[`Storyshots Visual Popover 1`] = `
             tabIndex={0}
             type="button"
           >
-            widthizingType:
+            widthizingType: 
             <strong>
               '
               matchTarget
@@ -15832,7 +15958,7 @@ exports[`Storyshots Visual Popover 1`] = `
             tabIndex={0}
             type="button"
           >
-            widthizingType:
+            widthizingType: 
             <strong>
               '
               minTarget
@@ -15864,7 +15990,7 @@ exports[`Storyshots Visual Popover 1`] = `
             tabIndex={0}
             type="button"
           >
-            widthizingType:
+            widthizingType: 
             <strong>
               '
               maxTarget
@@ -16767,9 +16893,9 @@ exports[`Storyshots Visual Shellbar 1`] = `
                       aria-label="Unread count"
                       className="fd-counter fd-counter--notification"
                     >
-
+                       
                       2
-
+                       
                     </span>
                   </button>
                 </div>
@@ -17114,9 +17240,9 @@ exports[`Storyshots Visual Shellbar 1`] = `
                       aria-label="Unread count"
                       className="fd-counter fd-counter--notification"
                     >
-
+                       
                       7
-
+                       
                     </span>
                   </button>
                 </div>
@@ -19792,7 +19918,7 @@ exports[`Storyshots Visual Table 1`] = `
           <th
             className="fd-table__cell"
           >
-
+             
           </th>
         </tr>
       </thead>
@@ -20605,7 +20731,7 @@ exports[`Storyshots Visual Time 1`] = `
           type="button"
         />
       </div>
-
+      
     </div>
   </div>
   <div>
@@ -20781,7 +20907,7 @@ exports[`Storyshots Visual Time 1`] = `
           type="button"
         />
       </div>
-
+      
     </div>
   </div>
   <div>
@@ -20962,7 +21088,7 @@ exports[`Storyshots Visual Time 1`] = `
           type="button"
         />
       </div>
-
+      
     </div>
   </div>
   <div>
@@ -21138,7 +21264,7 @@ exports[`Storyshots Visual Time 1`] = `
           type="button"
         />
       </div>
-
+      
     </div>
   </div>
   <div>
@@ -21486,8 +21612,8 @@ exports[`Storyshots Visual Time 1`] = `
           type="button"
         />
       </div>
-
-
+      
+      
     </div>
   </div>
   <div>
@@ -21598,7 +21724,7 @@ exports[`Storyshots Visual Time 1`] = `
           type="button"
         />
       </div>
-
+      
       <div
         className="fd-time__col"
         onClick={[Function]}
@@ -21631,7 +21757,7 @@ exports[`Storyshots Visual Time 1`] = `
           type="button"
         />
       </div>
-
+      
     </div>
   </div>
   <div>
@@ -21639,7 +21765,7 @@ exports[`Storyshots Visual Time 1`] = `
       className="fd-time"
       spinners={true}
     >
-
+      
       <div
         className="fd-time__col"
         onClick={[Function]}
@@ -21775,7 +21901,7 @@ exports[`Storyshots Visual Time 1`] = `
           type="button"
         />
       </div>
-
+      
     </div>
   </div>
   <div>
@@ -21951,7 +22077,7 @@ exports[`Storyshots Visual Time 1`] = `
           type="button"
         />
       </div>
-
+      
     </div>
   </div>
   <div>
