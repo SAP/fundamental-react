@@ -65,7 +65,12 @@ export const validationStates = () => (
             validationState={{ state: 'information', text: 'Test validation state' }} />
     </div>
 );
-
+export const emptyOption = () => (
+    <Select
+        emptyAriaLabel='Select an option'
+        includeEmptyOption
+        options={options} />
+);
 
 export const dev = () => (
     <Select

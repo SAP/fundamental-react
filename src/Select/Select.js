@@ -16,7 +16,9 @@ const Select = React.forwardRef(({
     compact,
     disabled,
     disableStyles,
+    emptyAriaLabel,
     id,
+    includeEmptyOption,
     options,
     onClick,
     onSelect,
@@ -166,8 +168,14 @@ const Select = React.forwardRef(({
         }
     );
 
-    const selected = options
+    const displayOptions = includeEmptyOption ? [{ text: '', key: 'emptyOption', ariaLabel: emptyAriaLabel }, ...options] : options;
+
+    const selected = displayOptions
         .find(option => typeof selectedOptionKey !== 'undefined' && option.key === selectedOptionKey);
+
+    const textContent = selected ? selected.text : placeholder;
+
+    const selectAriaLabel = (includeEmptyOption && !textContent) ? emptyAriaLabel : null;
 
     const selectControl = (
         <div
@@ -177,7 +185,7 @@ const Select = React.forwardRef(({
             onClick={handleClick}
             ref={divRef}>
             <div aria-disabled={disabled} className={selectControlClasses}>
-                {selected ? selected.text : placeholder}
+                <span aria-label={selectAriaLabel} className='fd-select__text-content'>{textContent}</span>
                 {!readOnly && <span className='fd-button fd-button--transparent sap-icon--slim-arrow-down fd-select__button' />}
             </div>
             {!isExpanded && validationState && (<FormMessage
@@ -213,8 +221,9 @@ const Select = React.forwardRef(({
                         ref={ulRef}
                         role='listbox'
                         tabIndex='-1'>
-                        {options.map(option => (
+                        {displayOptions.map(option => (
                             <List.Item
+                                aria-label={option.ariaLabel}
                                 aria-selected={selected?.key === option.key}
                                 key={option.key}
                                 onClick={(e) => handleSelect(e, option)}
@@ -249,8 +258,12 @@ Select.propTypes = {
     disabled: PropTypes.bool,
     /** Internal use only */
     disableStyles: PropTypes.bool,
+    /** Localized creen reader label for an empty option if included, or if no placeholder is included */
+    emptyAriaLabel: PropTypes.string,
     /** Value for the `id` attribute on the element */
     id: PropTypes.string,
+    /** Set to **true** to include an empty option. If true, also provide an `emptyAriaLabel` */
+    includeEmptyOption: PropTypes.bool,
     /** An array of objects with a key and text to render the selectable options */
     options: PropTypes.arrayOf(PropTypes.shape({
         key: PropTypes.string.isRequired,
