@@ -362,6 +362,16 @@ class DatePicker extends Component {
             className
         );
 
+        const datepickerFooterClassName = classnames(
+            'fd-dialog__footer',
+            'fd-bar',
+            'fd-bar--footer',
+            {
+                'fd-bar--cosy': !compact,
+                'fd-bar--compact': compact
+            }
+        );
+
         const disableButton = disabled || readOnly;
 
         return (
@@ -382,6 +392,7 @@ class DatePicker extends Component {
                             <Calendar
                                 {...calendarProps}
                                 blockedDates={blockedDates}
+                                compact={compact}
                                 customDate={
                                     enableRangeSelection
                                         ? this.state.arrSelectedDates
@@ -404,11 +415,18 @@ class DatePicker extends Component {
                                 specialDays={specialDays}
                                 weekdayStart={weekdayStart} />
                             { this._showTodayButton(enableRangeSelection, todayLabel) &&
-                            <Button
-                                className='fd-button fd-button--transparent fd-input-group__button fd-datepicker-today-button'
-                                onClick={this._setTodayDate}>
-                                {todayLabel}
-                            </Button>
+                                <footer className={datepickerFooterClassName}>
+                                    <div className='fd-bar__right'>
+                                        <div className='fd-bar__element'>
+                                            <Button
+                                                className='fd-dialog__decisive-button'
+                                                compact={compact}
+                                                onClick={this._setTodayDate}>
+                                                {todayLabel}
+                                            </Button>
+                                        </div>
+                                    </div>
+                                </footer>
                             }
                         </>
                     }
@@ -489,11 +507,14 @@ DatePicker.propTypes = {
     popoverProps: PropTypes.object,
     /** Set to **true** to mark component as readonly */
     readOnly: PropTypes.bool,
-    /** Object with special dates and special date types in shape of `{\'YYYYMMDD\': type}`. Type must be a number between 1-20 */
+    /** Object with special dates and special date types in shape of `{'YYYYMMDD': type}`. Type must be a number between 1-20 */
     specialDays: PropTypes.object,
-    /** Localized string label for button that selects today\'s date. The button won\'t be rendered if:
+    /** Localized string label for button that selects today\'s date. For example, ```{todayLabel: 'Today'}```
+     *
+     * The button won\'t be rendered if:
+     *
      * - `todayLabel` is not a valid non-empty string
-     * - OR if `enableRangeSelection` is true. e.g. ```{todayLabel: \'Today\'}``` */
+     * - OR if `enableRangeSelection` is true. */
     todayLabel: PropTypes.string,
     /** An object identifying a validation message.  The object will include properties for `state` and `text`;
      * _e.g._, \`{ state: \'warning\', text: \'This is your last warning\' }\` */

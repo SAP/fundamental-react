@@ -106,7 +106,7 @@ export const dateFormat = () => (
         <div>
             <FormLabel
                 htmlFor='customDateFormatField'>
-                Custom date format (knobs)
+                Custom date format
             </FormLabel>
             <DatePicker
                 dateFormat={
@@ -119,7 +119,7 @@ export const dateFormat = () => (
         <div>
             <FormLabel
                 htmlFor='customDateFormatField2'>
-                Custom date format (knobs) with defaultValue
+                Custom date format with defaultValue
             </FormLabel>
             <DatePicker
                 dateFormat={
@@ -146,7 +146,7 @@ export const dateFormat = () => (
         <div>
             <FormLabel
                 htmlFor='customDateFormatField4'>
-                Custom date format (knobs) range selection
+                Custom date format range selection
             </FormLabel>
             <DatePicker
                 dateFormat={
@@ -171,14 +171,14 @@ export const dateFormat = () => (
         </div>
         <div>
             <FormLabel
-                htmlFor='customDateFormatField5'>
+                htmlFor='customDateFormatField6'>
                 Unset date format, with null locale (uses ISO_DATE_FORMAT)
             </FormLabel>
             <DatePicker
                 buttonLabel='debugz'
                 defaultValue='17.3.20'
                 inputProps={{
-                    id: 'customDateFormatField5'
+                    id: 'customDateFormatField6'
                 }}
                 locale={null} />
         </div>
@@ -221,6 +221,41 @@ specialDaysEx.storyName = 'Special Days';
 export const weekdayStartEx = () => (<DatePicker weekdayStart={number('weekdayStart', 1)} />);
 
 weekdayStartEx.storyName = 'Weekday Start (Monday Start)';
+
+/**
+ * Setting a localized non-empty string value for `todayLabel` will show a footer action in the DatePicker popover for selecting today's date.
+ * Clicking this button also closes the popover.
+ * */
+
+export const localizedTodayButton = () => (
+    <LayoutGrid cols={2}>
+        <div>
+            <FormLabel
+                htmlFor='englishTodayButtonDP'>
+                Compact Datepicker with today button
+            </FormLabel>
+            <DatePicker
+                compact
+                inputProps={{
+                    id: 'englishTodayButtonDP'
+                }}
+                todayLabel='Today' />
+        </div>
+        <div>
+            <FormLabel
+                htmlFor='hindiTodayButtonDP'>
+                Datepicker with today button, custom locale, and default date
+            </FormLabel>
+            <DatePicker
+                defaultValue='३०/१२/१९९२'
+                inputProps={{
+                    id: 'hindiTodayButtonDP'
+                }}
+                locale='hi'
+                todayLabel='आज' />
+        </div>
+    </LayoutGrid>
+);
 
 export const dev = () => (
     <DatePicker
