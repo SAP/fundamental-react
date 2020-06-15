@@ -44,6 +44,8 @@ const weekdayOptions = {
 
 export const primary = () => (<Calendar />);
 
+export const compact = () => (<Calendar compact />);
+
 export const disableWeekends = () => (
     <Calendar
         disableBeforeDate={new Date()}

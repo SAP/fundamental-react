@@ -451,6 +451,7 @@ class Calendar extends Component {
             this.props.localizedText.show12PreviousYears : this.props.localizedText.previousMonth;
         const nextButtonLabel = this.state.showYears ?
             this.props.localizedText.show12NextYears : this.props.localizedText.nextMonth;
+        const compact = this.props?.compact || false;
 
         return (
             <header className='fd-calendar__header'>
@@ -458,7 +459,7 @@ class Calendar extends Component {
                     <div className='fd-calendar__action'>
                         <Button
                             aria-label={previousButtonLabel}
-                            compact
+                            compact={compact}
                             disableStyles={this.props.disableStyles}
                             glyph='slim-arrow-left'
                             onClick={this.handlePrevious}
@@ -466,7 +467,7 @@ class Calendar extends Component {
                     </div>
                     <div className='fd-calendar__action'>
                         <Button
-                            compact
+                            compact={compact}
                             disableStyles={this.props.disableStyles}
                             onClick={this.showMonths}
                             option='transparent'>
@@ -477,7 +478,7 @@ class Calendar extends Component {
                     </div>
                     <div className='fd-calendar__action'>
                         <Button
-                            compact
+                            compact={compact}
                             disableStyles={this.props.disableStyles}
                             onClick={this.showYears}
                             option='transparent'>
@@ -490,7 +491,7 @@ class Calendar extends Component {
                     <div className='fd-calendar__action'>
                         <Button
                             aria-label={nextButtonLabel}
-                            compact
+                            compact={compact}
                             disableStyles={this.props.disableStyles}
                             glyph='slim-arrow-right'
                             onClick={this.handleNext}
@@ -643,6 +644,7 @@ class Calendar extends Component {
 
     render() {
         const {
+            compact,
             enableRangeSelection,
             disableStyles,
             disableWeekends,
@@ -669,7 +671,10 @@ class Calendar extends Component {
 
         const calendarClasses = classnames(
             'fd-calendar',
-            className
+            className,
+            {
+                'fd-calendar--compact': compact
+            }
         );
 
         return (
@@ -699,6 +704,8 @@ Calendar.propTypes = {
     blockedDates: PropTypes.arrayOf(PropTypes.instanceOf(moment)),
     /** CSS class(es) to add to the element */
     className: PropTypes.string,
+    /** Set to **true** to enable compact mode */
+    compact: PropTypes.bool,
     customDate: PropTypes.oneOfType([
         PropTypes.object,
         PropTypes.array
