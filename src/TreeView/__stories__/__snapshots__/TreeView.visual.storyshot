@@ -533,39 +533,39 @@ exports[`Storyshots Visual Avatar 1`] = `
       className="fddocs-container"
     >
       <span
-        className="fd-avatar fd-avatar--m sap-icon--money-bills fd-has-background-color-accent-1"
+        className="fd-avatar fd-avatar--m sap-icon--money-bills fd-avatar--accent-color-1"
         role="presentation"
       />
       <span
-        className="fd-avatar fd-avatar--m sap-icon--money-bills fd-has-background-color-accent-2"
+        className="fd-avatar fd-avatar--m sap-icon--money-bills fd-avatar--accent-color-2"
         role="presentation"
       />
       <span
-        className="fd-avatar fd-avatar--m sap-icon--money-bills fd-has-background-color-accent-3"
+        className="fd-avatar fd-avatar--m sap-icon--money-bills fd-avatar--accent-color-3"
         role="presentation"
       />
       <span
-        className="fd-avatar fd-avatar--m sap-icon--money-bills fd-has-background-color-accent-4"
+        className="fd-avatar fd-avatar--m sap-icon--money-bills fd-avatar--accent-color-4"
         role="presentation"
       />
       <span
-        className="fd-avatar fd-avatar--m sap-icon--money-bills fd-has-background-color-accent-5"
+        className="fd-avatar fd-avatar--m sap-icon--money-bills fd-avatar--accent-color-5"
         role="presentation"
       />
       <span
-        className="fd-avatar fd-avatar--m sap-icon--money-bills fd-has-background-color-accent-6"
+        className="fd-avatar fd-avatar--m sap-icon--money-bills fd-avatar--accent-color-6"
         role="presentation"
       />
       <span
-        className="fd-avatar fd-avatar--m sap-icon--money-bills fd-has-background-color-accent-7"
+        className="fd-avatar fd-avatar--m sap-icon--money-bills fd-avatar--accent-color-7"
         role="presentation"
       />
       <span
-        className="fd-avatar fd-avatar--m sap-icon--money-bills fd-has-background-color-accent-8"
+        className="fd-avatar fd-avatar--m sap-icon--money-bills fd-avatar--accent-color-8"
         role="presentation"
       />
       <span
-        className="fd-avatar fd-avatar--m sap-icon--money-bills fd-has-background-color-accent-9"
+        className="fd-avatar fd-avatar--m sap-icon--money-bills fd-avatar--accent-color-9"
         role="presentation"
       />
     </div>
@@ -2106,6 +2106,54 @@ exports[`Storyshots Visual Date Picker 1`] = `
                 onChange={[Function]}
                 onFocus={[Function]}
                 onKeyPress={[Function]}
+                placeholder="MM/DD/YYYY"
+                type="text"
+                value=""
+              />
+              <span
+                className="fd-input-group__addon fd-input-group__addon--button"
+              >
+                <button
+                  aria-label="Choose date"
+                  className="fd-button fd-button--transparent sap-icon--calendar fd-input-group__button"
+                  onClick={[Function]}
+                  type="button"
+                />
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      defaultValue=""
+      onChange={[Function]}
+      onFocus={[Function]}
+    >
+      <div
+        className="fd-popover"
+      >
+        <div
+          onFocus={[Function]}
+          onMouseDown={[Function]}
+          onTouchStart={[Function]}
+        >
+          <div
+            className="fd-popover__control"
+          >
+            <div
+              aria-expanded={false}
+              aria-haspopup="true"
+              className="fd-input-group--control fd-input-group"
+            >
+              <input
+                className="fd-input fd-input-group__input"
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                onKeyPress={[Function]}
                 placeholder="MM/DD/YYYY - MM/DD/YYYY"
                 type="text"
                 value=""
@@ -3424,7 +3472,7 @@ exports[`Storyshots Visual Form Input 1`] = `
       className="fddocs-container"
     >
       <div
-        className="fd-popover"
+        className="fd-popover fd-popover--input-message-group"
         style={
           Object {
             "display": "block",
@@ -3455,7 +3503,7 @@ exports[`Storyshots Visual Form Input 1`] = `
         </div>
       </div>
       <div
-        className="fd-popover"
+        className="fd-popover fd-popover--input-message-group"
         style={
           Object {
             "display": "block",
@@ -3486,7 +3534,7 @@ exports[`Storyshots Visual Form Input 1`] = `
         </div>
       </div>
       <div
-        className="fd-popover"
+        className="fd-popover fd-popover--input-message-group"
         style={
           Object {
             "display": "block",
@@ -3517,7 +3565,7 @@ exports[`Storyshots Visual Form Input 1`] = `
         </div>
       </div>
       <div
-        className="fd-popover"
+        className="fd-popover fd-popover--input-message-group"
         style={
           Object {
             "display": "block",
@@ -11293,86 +11341,238 @@ exports[`Storyshots Visual Inline Help 1`] = `
   dir="ltr"
 >
   <div>
-    <span
-      className="fd-inline-help"
+    <div
+      className="fd-popover"
     >
-      <span
-        className="fd-inline-help__content fd-inline-help__content--bottom-right"
+      <div
+        onFocus={[Function]}
+        onMouseDown={[Function]}
+        onTouchStart={[Function]}
       >
-        default
-      </span>
-    </span>
-  </div>
-  <div>
-    <label
-      className="fd-form-label fd-form-label--inline-help"
-    >
-      Label Text
-      <span
-        className="fd-inline-help"
-      >
-        <span
-          className="fd-inline-help__content fd-inline-help__content--bottom-right"
+        <div
+          className="fd-popover__control"
         >
-          default
-        </span>
-      </span>
-    </label>
+          <span
+            aria-controls="fd-mocked-short-id"
+            aria-expanded={false}
+            aria-haspopup={true}
+            className="fd-inline-help"
+            onClick={[Function]}
+            onKeyPress={[Function]}
+            role="button"
+            tabIndex={0}
+          />
+        </div>
+      </div>
+    </div>
   </div>
   <div>
-    <span
-      className="fd-inline-help"
+    <div
+      className="fd-popover"
     >
-      <span
-        className="fd-inline-help__content fd-inline-help__content--bottom-right"
+      <div
+        onFocus={[Function]}
+        onMouseDown={[Function]}
+        onTouchStart={[Function]}
       >
-        Lorem ipsum dolor sit amet, consectetur adipiscing.
-      </span>
-    </span>
+        <div
+          className="fd-popover__control"
+        >
+          <span
+            aria-controls="fd-mocked-short-id"
+            aria-expanded={false}
+            aria-haspopup={true}
+            className="fd-inline-help"
+            onClick={[Function]}
+            onKeyPress={[Function]}
+            role="button"
+            tabIndex={0}
+          />
+        </div>
+      </div>
+    </div>
   </div>
   <div>
-    <span
-      className="fd-inline-help"
+    <div
+      className="fd-popover"
     >
-      <span
-        className="fd-inline-help__content fd-inline-help__content--bottom-left"
+      <div
+        onFocus={[Function]}
+        onMouseDown={[Function]}
+        onTouchStart={[Function]}
       >
-        Lorem ipsum dolor sit amet, consectetur adipiscing.
-      </span>
-    </span>
+        <div
+          className="fd-popover__control"
+        >
+          <span
+            aria-controls="fd-mocked-short-id"
+            aria-expanded={false}
+            aria-haspopup={true}
+            className="fd-inline-help"
+            onClick={[Function]}
+            onKeyPress={[Function]}
+            role="button"
+            tabIndex={0}
+          />
+        </div>
+      </div>
+    </div>
   </div>
   <div>
-    <span
-      className="fd-inline-help"
+    <div
+      className="fd-popover"
     >
-      <span
-        className="fd-inline-help__content fd-inline-help__content--bottom-center"
+      <div
+        onFocus={[Function]}
+        onMouseDown={[Function]}
+        onTouchStart={[Function]}
       >
-        Lorem ipsum dolor sit amet, consectetur adipiscing.
-      </span>
-    </span>
+        <div
+          className="fd-popover__control"
+        >
+          <span
+            aria-controls="fd-mocked-short-id"
+            aria-expanded={false}
+            aria-haspopup={true}
+            className="fd-inline-help"
+            onClick={[Function]}
+            onKeyPress={[Function]}
+            role="button"
+            tabIndex={0}
+          />
+        </div>
+      </div>
+    </div>
   </div>
   <div>
-    <span
-      className="fd-inline-help"
+    <div
+      className="fd-popover"
     >
-      <span
-        className="fd-inline-help__content fd-inline-help__content--right"
+      <div
+        onFocus={[Function]}
+        onMouseDown={[Function]}
+        onTouchStart={[Function]}
       >
-        Lorem ipsum dolor sit amet, consectetur adipiscing.
-      </span>
-    </span>
+        <div
+          className="fd-popover__control"
+        >
+          <span
+            aria-controls="fd-mocked-short-id"
+            aria-expanded={false}
+            aria-haspopup={true}
+            className="fd-inline-help"
+            onClick={[Function]}
+            onKeyPress={[Function]}
+            role="button"
+            tabIndex={0}
+          />
+        </div>
+      </div>
+    </div>
   </div>
   <div>
-    <span
-      className="fd-inline-help"
+    <div
+      className="fd-popover"
     >
-      <span
-        className="fd-inline-help__content fd-inline-help__content--left"
+      <div
+        onFocus={[Function]}
+        onMouseDown={[Function]}
+        onTouchStart={[Function]}
       >
-        Lorem ipsum dolor sit amet, consectetur adipiscing.
-      </span>
-    </span>
+        <div
+          className="fd-popover__control"
+        >
+          <span
+            aria-controls="fd-mocked-short-id"
+            aria-expanded={false}
+            aria-haspopup={true}
+            className="fd-inline-help"
+            onClick={[Function]}
+            onKeyPress={[Function]}
+            role="button"
+            tabIndex={0}
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      className="fd-popover"
+    >
+      <div
+        onFocus={[Function]}
+        onMouseDown={[Function]}
+        onTouchStart={[Function]}
+      >
+        <div
+          className="fd-popover__control"
+        >
+          <span
+            aria-controls="fd-mocked-short-id"
+            aria-expanded={false}
+            aria-haspopup={true}
+            className="fd-inline-help"
+            onClick={[Function]}
+            onKeyPress={[Function]}
+            role="button"
+            tabIndex={0}
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      className="fd-popover"
+    >
+      <div
+        onFocus={[Function]}
+        onMouseDown={[Function]}
+        onTouchStart={[Function]}
+      >
+        <div
+          className="fd-popover__control"
+        >
+          <span
+            aria-controls="fd-mocked-short-id"
+            aria-expanded={false}
+            aria-haspopup={true}
+            className="fd-inline-help"
+            onClick={[Function]}
+            onKeyPress={[Function]}
+            role="button"
+            tabIndex={0}
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      className="fd-popover"
+    >
+      <div
+        onFocus={[Function]}
+        onMouseDown={[Function]}
+        onTouchStart={[Function]}
+      >
+        <div
+          className="fd-popover__control"
+        >
+          <span
+            aria-controls="fd-mocked-short-id"
+            aria-expanded={false}
+            aria-haspopup={true}
+            className="fd-inline-help"
+            onClick={[Function]}
+            onKeyPress={[Function]}
+            role="button"
+            tabIndex={0}
+          />
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 `;
@@ -14256,15 +14456,13 @@ exports[`Storyshots Visual Pagination 1`] = `
           onClick={[Function]}
         />
         <a
-          aria-selected={true}
-          className="fd-pagination__link"
+          className="fd-pagination__link is-selected"
           href="#"
           onClick={[Function]}
         >
           1
         </a>
         <a
-          aria-selected={false}
           className="fd-pagination__link"
           href="#"
           onClick={[Function]}
@@ -14272,7 +14470,6 @@ exports[`Storyshots Visual Pagination 1`] = `
           2
         </a>
         <a
-          aria-selected={false}
           className="fd-pagination__link"
           href="#"
           onClick={[Function]}
@@ -14283,7 +14480,6 @@ exports[`Storyshots Visual Pagination 1`] = `
           className="fd-pagination__link--more"
         />
         <a
-          aria-selected={false}
           className="fd-pagination__link"
           href="#"
           onClick={[Function]}
@@ -14323,15 +14519,13 @@ exports[`Storyshots Visual Pagination 1`] = `
           onClick={[Function]}
         />
         <a
-          aria-selected={true}
-          className="fd-pagination__link"
+          className="fd-pagination__link is-selected"
           href="#"
           onClick={[Function]}
         >
           1
         </a>
         <a
-          aria-selected={false}
           className="fd-pagination__link"
           href="#"
           onClick={[Function]}
@@ -14339,7 +14533,6 @@ exports[`Storyshots Visual Pagination 1`] = `
           2
         </a>
         <a
-          aria-selected={false}
           className="fd-pagination__link"
           href="#"
           onClick={[Function]}
@@ -14350,7 +14543,6 @@ exports[`Storyshots Visual Pagination 1`] = `
           className="fd-pagination__link--more"
         />
         <a
-          aria-selected={false}
           className="fd-pagination__link"
           href="#"
           onClick={[Function]}
@@ -14389,15 +14581,13 @@ exports[`Storyshots Visual Pagination 1`] = `
           onClick={[Function]}
         />
         <a
-          aria-selected={true}
-          className="fd-pagination__link"
+          className="fd-pagination__link is-selected"
           href="#"
           onClick={[Function]}
         >
           1
         </a>
         <a
-          aria-selected={false}
           className="fd-pagination__link"
           href="#"
           onClick={[Function]}
@@ -14405,7 +14595,6 @@ exports[`Storyshots Visual Pagination 1`] = `
           2
         </a>
         <a
-          aria-selected={false}
           className="fd-pagination__link"
           href="#"
           onClick={[Function]}
@@ -14416,7 +14605,6 @@ exports[`Storyshots Visual Pagination 1`] = `
           className="fd-pagination__link--more"
         />
         <a
-          aria-selected={false}
           className="fd-pagination__link"
           href="#"
           onClick={[Function]}
@@ -14449,15 +14637,13 @@ exports[`Storyshots Visual Pagination 1`] = `
           onClick={[Function]}
         />
         <a
-          aria-selected={true}
-          className="fd-pagination__link"
+          className="fd-pagination__link is-selected"
           href="#"
           onClick={[Function]}
         >
           1
         </a>
         <a
-          aria-selected={false}
           className="fd-pagination__link"
           href="#"
           onClick={[Function]}
@@ -14465,7 +14651,6 @@ exports[`Storyshots Visual Pagination 1`] = `
           2
         </a>
         <a
-          aria-selected={false}
           className="fd-pagination__link"
           href="#"
           onClick={[Function]}
@@ -14476,7 +14661,6 @@ exports[`Storyshots Visual Pagination 1`] = `
           className="fd-pagination__link--more"
         />
         <a
-          aria-selected={false}
           className="fd-pagination__link"
           href="#"
           onClick={[Function]}
@@ -14515,15 +14699,13 @@ exports[`Storyshots Visual Pagination 1`] = `
           onClick={[Function]}
         />
         <a
-          aria-selected={true}
-          className="fd-pagination__link"
+          className="fd-pagination__link is-selected"
           href="#"
           onClick={[Function]}
         >
           1
         </a>
         <a
-          aria-selected={false}
           className="fd-pagination__link"
           href="#"
           onClick={[Function]}
@@ -14531,7 +14713,6 @@ exports[`Storyshots Visual Pagination 1`] = `
           2
         </a>
         <a
-          aria-selected={false}
           className="fd-pagination__link"
           href="#"
           onClick={[Function]}
@@ -14542,7 +14723,6 @@ exports[`Storyshots Visual Pagination 1`] = `
           className="fd-pagination__link--more"
         />
         <a
-          aria-selected={false}
           className="fd-pagination__link"
           href="#"
           onClick={[Function]}
@@ -14581,15 +14761,13 @@ exports[`Storyshots Visual Pagination 1`] = `
           onClick={[Function]}
         />
         <a
-          aria-selected={true}
-          className="fd-pagination__link"
+          className="fd-pagination__link is-selected"
           href="#"
           onClick={[Function]}
         >
           1
         </a>
         <a
-          aria-selected={false}
           className="fd-pagination__link"
           href="#"
           onClick={[Function]}
@@ -14597,7 +14775,6 @@ exports[`Storyshots Visual Pagination 1`] = `
           2
         </a>
         <a
-          aria-selected={false}
           className="fd-pagination__link"
           href="#"
           onClick={[Function]}
@@ -14608,7 +14785,6 @@ exports[`Storyshots Visual Pagination 1`] = `
           className="fd-pagination__link--more"
         />
         <a
-          aria-selected={false}
           className="fd-pagination__link"
           href="#"
           onClick={[Function]}
@@ -14647,15 +14823,13 @@ exports[`Storyshots Visual Pagination 1`] = `
           onClick={[Function]}
         />
         <a
-          aria-selected={true}
-          className="fd-pagination__link"
+          className="fd-pagination__link is-selected"
           href="#"
           onClick={[Function]}
         >
           1
         </a>
         <a
-          aria-selected={false}
           className="fd-pagination__link"
           href="#"
           onClick={[Function]}
@@ -14663,7 +14837,6 @@ exports[`Storyshots Visual Pagination 1`] = `
           2
         </a>
         <a
-          aria-selected={false}
           className="fd-pagination__link"
           href="#"
           onClick={[Function]}
@@ -14671,7 +14844,6 @@ exports[`Storyshots Visual Pagination 1`] = `
           3
         </a>
         <a
-          aria-selected={false}
           className="fd-pagination__link"
           href="#"
           onClick={[Function]}
@@ -14679,7 +14851,6 @@ exports[`Storyshots Visual Pagination 1`] = `
           4
         </a>
         <a
-          aria-selected={false}
           className="fd-pagination__link"
           href="#"
           onClick={[Function]}
@@ -14687,7 +14858,6 @@ exports[`Storyshots Visual Pagination 1`] = `
           5
         </a>
         <a
-          aria-selected={false}
           className="fd-pagination__link"
           href="#"
           onClick={[Function]}
@@ -14695,7 +14865,6 @@ exports[`Storyshots Visual Pagination 1`] = `
           6
         </a>
         <a
-          aria-selected={false}
           className="fd-pagination__link"
           href="#"
           onClick={[Function]}
@@ -14703,7 +14872,6 @@ exports[`Storyshots Visual Pagination 1`] = `
           7
         </a>
         <a
-          aria-selected={false}
           className="fd-pagination__link"
           href="#"
           onClick={[Function]}
@@ -14711,7 +14879,6 @@ exports[`Storyshots Visual Pagination 1`] = `
           8
         </a>
         <a
-          aria-selected={false}
           className="fd-pagination__link"
           href="#"
           onClick={[Function]}
@@ -14719,7 +14886,6 @@ exports[`Storyshots Visual Pagination 1`] = `
           9
         </a>
         <a
-          aria-selected={false}
           className="fd-pagination__link"
           href="#"
           onClick={[Function]}
@@ -14727,7 +14893,6 @@ exports[`Storyshots Visual Pagination 1`] = `
           10
         </a>
         <a
-          aria-selected={false}
           className="fd-pagination__link"
           href="#"
           onClick={[Function]}
@@ -14735,7 +14900,6 @@ exports[`Storyshots Visual Pagination 1`] = `
           11
         </a>
         <a
-          aria-selected={false}
           className="fd-pagination__link"
           href="#"
           onClick={[Function]}
@@ -14743,7 +14907,6 @@ exports[`Storyshots Visual Pagination 1`] = `
           12
         </a>
         <a
-          aria-selected={false}
           className="fd-pagination__link"
           href="#"
           onClick={[Function]}
@@ -14751,7 +14914,6 @@ exports[`Storyshots Visual Pagination 1`] = `
           13
         </a>
         <a
-          aria-selected={false}
           className="fd-pagination__link"
           href="#"
           onClick={[Function]}
@@ -14759,7 +14921,6 @@ exports[`Storyshots Visual Pagination 1`] = `
           14
         </a>
         <a
-          aria-selected={false}
           className="fd-pagination__link"
           href="#"
           onClick={[Function]}
@@ -14767,7 +14928,6 @@ exports[`Storyshots Visual Pagination 1`] = `
           15
         </a>
         <a
-          aria-selected={false}
           className="fd-pagination__link"
           href="#"
           onClick={[Function]}
@@ -14775,7 +14935,6 @@ exports[`Storyshots Visual Pagination 1`] = `
           16
         </a>
         <a
-          aria-selected={false}
           className="fd-pagination__link"
           href="#"
           onClick={[Function]}
@@ -14783,7 +14942,6 @@ exports[`Storyshots Visual Pagination 1`] = `
           17
         </a>
         <a
-          aria-selected={false}
           className="fd-pagination__link"
           href="#"
           onClick={[Function]}
@@ -14791,7 +14949,6 @@ exports[`Storyshots Visual Pagination 1`] = `
           18
         </a>
         <a
-          aria-selected={false}
           className="fd-pagination__link"
           href="#"
           onClick={[Function]}
@@ -14799,7 +14956,6 @@ exports[`Storyshots Visual Pagination 1`] = `
           19
         </a>
         <a
-          aria-selected={false}
           className="fd-pagination__link"
           href="#"
           onClick={[Function]}
@@ -14810,7 +14966,6 @@ exports[`Storyshots Visual Pagination 1`] = `
           className="fd-pagination__link--more"
         />
         <a
-          aria-selected={false}
           className="fd-pagination__link"
           href="#"
           onClick={[Function]}
@@ -14849,15 +15004,13 @@ exports[`Storyshots Visual Pagination 1`] = `
           onClick={[Function]}
         />
         <a
-          aria-selected={true}
-          className="fd-pagination__link"
+          className="fd-pagination__link is-selected"
           href="#"
           onClick={[Function]}
         >
           1
         </a>
         <a
-          aria-selected={false}
           className="fd-pagination__link"
           href="#"
           onClick={[Function]}
@@ -14865,7 +15018,6 @@ exports[`Storyshots Visual Pagination 1`] = `
           2
         </a>
         <a
-          aria-selected={false}
           className="fd-pagination__link"
           href="#"
           onClick={[Function]}
@@ -14873,7 +15025,6 @@ exports[`Storyshots Visual Pagination 1`] = `
           3
         </a>
         <a
-          aria-selected={false}
           className="fd-pagination__link"
           href="#"
           onClick={[Function]}
@@ -14881,7 +15032,6 @@ exports[`Storyshots Visual Pagination 1`] = `
           4
         </a>
         <a
-          aria-selected={false}
           className="fd-pagination__link"
           href="#"
           onClick={[Function]}
@@ -14889,7 +15039,6 @@ exports[`Storyshots Visual Pagination 1`] = `
           5
         </a>
         <a
-          aria-selected={false}
           className="fd-pagination__link"
           href="#"
           onClick={[Function]}
@@ -14897,7 +15046,6 @@ exports[`Storyshots Visual Pagination 1`] = `
           6
         </a>
         <a
-          aria-selected={false}
           className="fd-pagination__link"
           href="#"
           onClick={[Function]}
@@ -14905,7 +15053,6 @@ exports[`Storyshots Visual Pagination 1`] = `
           7
         </a>
         <a
-          aria-selected={false}
           className="fd-pagination__link"
           href="#"
           onClick={[Function]}
@@ -14913,7 +15060,6 @@ exports[`Storyshots Visual Pagination 1`] = `
           8
         </a>
         <a
-          aria-selected={false}
           className="fd-pagination__link"
           href="#"
           onClick={[Function]}
@@ -14921,7 +15067,6 @@ exports[`Storyshots Visual Pagination 1`] = `
           9
         </a>
         <a
-          aria-selected={false}
           className="fd-pagination__link"
           href="#"
           onClick={[Function]}
@@ -14960,15 +15105,13 @@ exports[`Storyshots Visual Pagination 1`] = `
           onClick={[Function]}
         />
         <a
-          aria-selected={true}
-          className="fd-pagination__link"
+          className="fd-pagination__link is-selected"
           href="#"
           onClick={[Function]}
         >
           1
         </a>
         <a
-          aria-selected={false}
           className="fd-pagination__link"
           href="#"
           onClick={[Function]}
@@ -14976,7 +15119,6 @@ exports[`Storyshots Visual Pagination 1`] = `
           2
         </a>
         <a
-          aria-selected={false}
           className="fd-pagination__link"
           href="#"
           onClick={[Function]}
@@ -14984,7 +15126,6 @@ exports[`Storyshots Visual Pagination 1`] = `
           3
         </a>
         <a
-          aria-selected={false}
           className="fd-pagination__link"
           href="#"
           onClick={[Function]}
@@ -14992,7 +15133,6 @@ exports[`Storyshots Visual Pagination 1`] = `
           4
         </a>
         <a
-          aria-selected={false}
           className="fd-pagination__link"
           href="#"
           onClick={[Function]}
@@ -15000,7 +15140,6 @@ exports[`Storyshots Visual Pagination 1`] = `
           5
         </a>
         <a
-          aria-selected={false}
           className="fd-pagination__link"
           href="#"
           onClick={[Function]}
@@ -15008,7 +15147,6 @@ exports[`Storyshots Visual Pagination 1`] = `
           6
         </a>
         <a
-          aria-selected={false}
           className="fd-pagination__link"
           href="#"
           onClick={[Function]}
@@ -15016,7 +15154,6 @@ exports[`Storyshots Visual Pagination 1`] = `
           7
         </a>
         <a
-          aria-selected={false}
           className="fd-pagination__link"
           href="#"
           onClick={[Function]}
@@ -15024,7 +15161,6 @@ exports[`Storyshots Visual Pagination 1`] = `
           8
         </a>
         <a
-          aria-selected={false}
           className="fd-pagination__link"
           href="#"
           onClick={[Function]}
@@ -15032,7 +15168,6 @@ exports[`Storyshots Visual Pagination 1`] = `
           9
         </a>
         <a
-          aria-selected={false}
           className="fd-pagination__link"
           href="#"
           onClick={[Function]}
@@ -15040,7 +15175,6 @@ exports[`Storyshots Visual Pagination 1`] = `
           10
         </a>
         <a
-          aria-selected={false}
           className="fd-pagination__link"
           href="#"
           onClick={[Function]}
@@ -15048,7 +15182,6 @@ exports[`Storyshots Visual Pagination 1`] = `
           11
         </a>
         <a
-          aria-selected={false}
           className="fd-pagination__link"
           href="#"
           onClick={[Function]}
@@ -15056,7 +15189,6 @@ exports[`Storyshots Visual Pagination 1`] = `
           12
         </a>
         <a
-          aria-selected={false}
           className="fd-pagination__link"
           href="#"
           onClick={[Function]}
@@ -15064,7 +15196,6 @@ exports[`Storyshots Visual Pagination 1`] = `
           13
         </a>
         <a
-          aria-selected={false}
           className="fd-pagination__link"
           href="#"
           onClick={[Function]}
@@ -15072,7 +15203,6 @@ exports[`Storyshots Visual Pagination 1`] = `
           14
         </a>
         <a
-          aria-selected={false}
           className="fd-pagination__link"
           href="#"
           onClick={[Function]}
@@ -15080,7 +15210,6 @@ exports[`Storyshots Visual Pagination 1`] = `
           15
         </a>
         <a
-          aria-selected={false}
           className="fd-pagination__link"
           href="#"
           onClick={[Function]}
@@ -15088,7 +15217,6 @@ exports[`Storyshots Visual Pagination 1`] = `
           16
         </a>
         <a
-          aria-selected={false}
           className="fd-pagination__link"
           href="#"
           onClick={[Function]}
@@ -15096,7 +15224,6 @@ exports[`Storyshots Visual Pagination 1`] = `
           17
         </a>
         <a
-          aria-selected={false}
           className="fd-pagination__link"
           href="#"
           onClick={[Function]}
@@ -15104,7 +15231,6 @@ exports[`Storyshots Visual Pagination 1`] = `
           18
         </a>
         <a
-          aria-selected={false}
           className="fd-pagination__link"
           href="#"
           onClick={[Function]}
@@ -15112,7 +15238,6 @@ exports[`Storyshots Visual Pagination 1`] = `
           19
         </a>
         <a
-          aria-selected={false}
           className="fd-pagination__link"
           href="#"
           onClick={[Function]}
@@ -15711,7 +15836,7 @@ exports[`Storyshots Visual Popover 1`] = `
             aria-controls="fd-mocked-short-id"
             aria-expanded={false}
             aria-haspopup={true}
-            className="fd-avatar fd-avatar--m sap-icon--money-bills fd-has-background-color-accent-6"
+            className="fd-avatar fd-avatar--m sap-icon--money-bills fd-avatar--accent-color-6"
             onClick={[Function]}
             onKeyPress={[Function]}
             role="button"
@@ -16261,7 +16386,12 @@ exports[`Storyshots Visual Select 1`] = `
             <div
               className="fd-select__control"
             >
-              Select
+              <span
+                aria-label={null}
+                className="fd-select__text-content"
+              >
+                Select
+              </span>
               <span
                 className="fd-button fd-button--transparent sap-icon--slim-arrow-down fd-select__button"
               />
@@ -16296,7 +16426,54 @@ exports[`Storyshots Visual Select 1`] = `
             <div
               className="fd-select__control"
             >
-              Select
+              <span
+                aria-label={null}
+                className="fd-select__text-content"
+              >
+                Select
+              </span>
+              <span
+                className="fd-button fd-button--transparent sap-icon--slim-arrow-down fd-select__button"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      aria-disabled={true}
+      className="fd-popover"
+    >
+      <div
+        onFocus={[Function]}
+        onMouseDown={[Function]}
+        onTouchStart={[Function]}
+      >
+        <div
+          className="fd-popover__control"
+        >
+          <div
+            aria-controls="fd-mocked-short-id"
+            aria-expanded={false}
+            aria-haspopup={true}
+            className="fd-select"
+            onClick={[Function]}
+            onKeyPress={[Function]}
+            role="button"
+            tabIndex={0}
+          >
+            <div
+              aria-disabled={true}
+              className="fd-select__control is-disabled"
+            >
+              <span
+                aria-label={null}
+                className="fd-select__text-content"
+              >
+                Select
+              </span>
               <span
                 className="fd-button fd-button--transparent sap-icon--slim-arrow-down fd-select__button"
               />
@@ -16329,12 +16506,14 @@ exports[`Storyshots Visual Select 1`] = `
             tabIndex={0}
           >
             <div
-              className="fd-select__control is-disabled"
+              className="fd-select__control is-readonly"
             >
-              Select
               <span
-                className="fd-button fd-button--transparent sap-icon--slim-arrow-down fd-select__button"
-              />
+                aria-label={null}
+                className="fd-select__text-content"
+              >
+                List Item 1
+              </span>
             </div>
           </div>
         </div>
@@ -16369,7 +16548,12 @@ exports[`Storyshots Visual Select 1`] = `
               <div
                 className="fd-select__control is-error"
               >
-                Error
+                <span
+                  aria-label={null}
+                  className="fd-select__text-content"
+                >
+                  Error
+                </span>
                 <span
                   className="fd-button fd-button--transparent sap-icon--slim-arrow-down fd-select__button"
                 />
@@ -16409,7 +16593,12 @@ exports[`Storyshots Visual Select 1`] = `
               <div
                 className="fd-select__control is-warning"
               >
-                Warning
+                <span
+                  aria-label={null}
+                  className="fd-select__text-content"
+                >
+                  Warning
+                </span>
                 <span
                   className="fd-button fd-button--transparent sap-icon--slim-arrow-down fd-select__button"
                 />
@@ -16449,7 +16638,12 @@ exports[`Storyshots Visual Select 1`] = `
               <div
                 className="fd-select__control is-success"
               >
-                Success
+                <span
+                  aria-label={null}
+                  className="fd-select__text-content"
+                >
+                  Success
+                </span>
                 <span
                   className="fd-button fd-button--transparent sap-icon--slim-arrow-down fd-select__button"
                 />
@@ -16489,7 +16683,12 @@ exports[`Storyshots Visual Select 1`] = `
               <div
                 className="fd-select__control is-information"
               >
-                Information
+                <span
+                  aria-label={null}
+                  className="fd-select__text-content"
+                >
+                  Information
+                </span>
                 <span
                   className="fd-button fd-button--transparent sap-icon--slim-arrow-down fd-select__button"
                 />
@@ -16532,7 +16731,52 @@ exports[`Storyshots Visual Select 1`] = `
             <div
               className="fd-select__control"
             >
-              select
+              <span
+                aria-label="Select an option"
+                className="fd-select__text-content"
+              />
+              <span
+                className="fd-button fd-button--transparent sap-icon--slim-arrow-down fd-select__button"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      aria-disabled={false}
+      className="fd-popover"
+    >
+      <div
+        onFocus={[Function]}
+        onMouseDown={[Function]}
+        onTouchStart={[Function]}
+      >
+        <div
+          className="fd-popover__control"
+        >
+          <div
+            aria-controls="fd-mocked-short-id"
+            aria-expanded={false}
+            aria-haspopup={true}
+            className="fd-select"
+            onClick={[Function]}
+            onKeyPress={[Function]}
+            role="button"
+            tabIndex={0}
+          >
+            <div
+              aria-disabled={false}
+              className="fd-select__control"
+            >
+              <span
+                aria-label={null}
+                className="fd-select__text-content"
+              >
+                select
+              </span>
               <span
                 className="fd-button fd-button--transparent sap-icon--slim-arrow-down fd-select__button"
               />
@@ -16601,7 +16845,7 @@ exports[`Storyshots Visual Shellbar 1`] = `
                     tabIndex={0}
                   >
                     <span
-                      className="fd-avatar fd-avatar--xs fd-has-background-color-accent-8 fd-avatar--circle"
+                      className="fd-avatar fd-avatar--xs fd-avatar--accent-color-8 fd-avatar--circle"
                       role=""
                     >
                       JS
@@ -16880,7 +17124,7 @@ exports[`Storyshots Visual Shellbar 1`] = `
                     tabIndex={0}
                   >
                     <span
-                      className="fd-avatar fd-avatar--xs fd-has-background-color-accent-8 fd-avatar--circle"
+                      className="fd-avatar fd-avatar--xs fd-avatar--accent-color-8 fd-avatar--circle"
                       role=""
                     >
                       JS
@@ -17152,7 +17396,7 @@ exports[`Storyshots Visual Shellbar 1`] = `
                     tabIndex={0}
                   >
                     <span
-                      className="fd-avatar fd-avatar--xs fd-has-background-color-accent-8 fd-avatar--circle"
+                      className="fd-avatar fd-avatar--xs fd-avatar--accent-color-8 fd-avatar--circle"
                       role=""
                     >
                       JS
@@ -17207,10 +17451,16 @@ exports[`Storyshots Visual Side Nav 1`] = `
   dir="ltr"
 >
   <div>
-    <nav
+    <div
       className="fd-side-nav"
     >
-      <div
+      <a
+        className="fd-side-nav__skip-link"
+        href="#content"
+      >
+        Skip navigation
+      </a>
+      <nav
         className="fd-side-nav__main-navigation"
       >
         <ul
@@ -17292,14 +17542,20 @@ exports[`Storyshots Visual Side Nav 1`] = `
             </a>
           </li>
         </ul>
-      </div>
-    </nav>
+      </nav>
+    </div>
   </div>
   <div>
-    <nav
+    <div
       className="fd-side-nav"
     >
-      <div
+      <a
+        className="fd-side-nav__skip-link"
+        href="#content"
+      >
+        Skip navigation
+      </a>
+      <nav
         className="fd-side-nav__main-navigation"
       >
         <ul
@@ -17381,14 +17637,20 @@ exports[`Storyshots Visual Side Nav 1`] = `
             </a>
           </li>
         </ul>
-      </div>
-    </nav>
+      </nav>
+    </div>
   </div>
   <div>
-    <nav
+    <div
       className="fd-side-nav fd-side-nav--condensed"
     >
-      <div
+      <a
+        className="fd-side-nav__skip-link"
+        href="#content"
+      >
+        Skip navigation
+      </a>
+      <nav
         className="fd-side-nav__main-navigation"
       >
         <ul
@@ -17403,8 +17665,8 @@ exports[`Storyshots Visual Side Nav 1`] = `
               onClick={[Function]}
             >
               <span
+                aria-hidden={true}
                 className="fd-nested-list__icon sap-icon--home"
-                role="presentation"
               />
               <span
                 className="fd-nested-list__title"
@@ -17422,8 +17684,8 @@ exports[`Storyshots Visual Side Nav 1`] = `
               onClick={[Function]}
             >
               <span
+                aria-hidden={true}
                 className="fd-nested-list__icon sap-icon--cart"
-                role="presentation"
               />
               <span
                 className="fd-nested-list__title"
@@ -17441,8 +17703,8 @@ exports[`Storyshots Visual Side Nav 1`] = `
               onClick={[Function]}
             >
               <span
+                aria-hidden={true}
                 className="fd-nested-list__icon sap-icon--accept"
-                role="presentation"
               />
               <span
                 className="fd-nested-list__title"
@@ -17460,8 +17722,8 @@ exports[`Storyshots Visual Side Nav 1`] = `
               onClick={[Function]}
             >
               <span
+                aria-hidden={true}
                 className="fd-nested-list__icon sap-icon--alert"
-                role="presentation"
               />
               <span
                 className="fd-nested-list__title"
@@ -17479,8 +17741,8 @@ exports[`Storyshots Visual Side Nav 1`] = `
               onClick={[Function]}
             >
               <span
+                aria-hidden={true}
                 className="fd-nested-list__icon sap-icon--bell"
-                role="presentation"
               />
               <span
                 className="fd-nested-list__title"
@@ -17490,14 +17752,20 @@ exports[`Storyshots Visual Side Nav 1`] = `
             </a>
           </li>
         </ul>
-      </div>
-    </nav>
+      </nav>
+    </div>
   </div>
   <div>
-    <nav
+    <div
       className="fd-side-nav"
     >
-      <div
+      <a
+        className="fd-side-nav__skip-link"
+        href="#content"
+      >
+        Skip navigation
+      </a>
+      <nav
         className="fd-side-nav__main-navigation"
       >
         <ul
@@ -17579,11 +17847,12 @@ exports[`Storyshots Visual Side Nav 1`] = `
             </a>
           </li>
         </ul>
-      </div>
-      <div
+      </nav>
+      <nav
         className="fd-side-nav__utility"
       >
         <ul
+          aria-label="Utility Menu"
           className="fd-nested-list--text-only fd-nested-list level-1"
         >
           <li
@@ -17617,14 +17886,20 @@ exports[`Storyshots Visual Side Nav 1`] = `
             </a>
           </li>
         </ul>
-      </div>
-    </nav>
+      </nav>
+    </div>
   </div>
   <div>
-    <nav
+    <div
       className="fd-side-nav"
     >
-      <div
+      <a
+        className="fd-side-nav__skip-link"
+        href="#content"
+      >
+        Skip navigation
+      </a>
+      <nav
         className="fd-side-nav__main-navigation"
       >
         <ul
@@ -17711,8 +17986,8 @@ exports[`Storyshots Visual Side Nav 1`] = `
             </a>
           </li>
         </ul>
-      </div>
-      <div
+      </nav>
+      <nav
         className="fd-side-nav__main-navigation"
       >
         <ul
@@ -17754,14 +18029,20 @@ exports[`Storyshots Visual Side Nav 1`] = `
             </a>
           </li>
         </ul>
-      </div>
-    </nav>
+      </nav>
+    </div>
   </div>
   <div>
-    <nav
+    <div
       className="fd-side-nav"
     >
-      <div
+      <a
+        className="fd-side-nav__skip-link"
+        href="#content"
+      >
+        Skip navigation
+      </a>
+      <nav
         className="fd-side-nav__main-navigation"
       >
         <ul
@@ -17788,7 +18069,6 @@ exports[`Storyshots Visual Side Nav 1`] = `
             <div
               className="fd-nested-list__content has-child"
               onClick={[Function]}
-              tabIndex="0"
             >
               <a
                 className="fd-nested-list__link"
@@ -17801,19 +18081,20 @@ exports[`Storyshots Visual Side Nav 1`] = `
                   Link Item 2
                 </span>
               </a>
-              <a
+              <button
                 aria-controls="fd-mocked-short-id"
                 aria-expanded={false}
                 aria-haspopup="true"
-                className="fd-nested-list__expand-icon"
-                href="#"
-                tabIndex="-1"
+                aria-label="Expand submenu"
+                className="fd-button fd-nested-list__button"
+                onClick={[Function]}
+                type="button"
               />
             </div>
             <ul
               aria-expanded={false}
               aria-hidden={true}
-              className="fd-nested-list--text-only fd-nested-list level-1"
+              className="fd-nested-list--text-only fd-nested-list level-2"
               id="fd-mocked-short-id"
             >
               <li
@@ -17914,7 +18195,6 @@ exports[`Storyshots Visual Side Nav 1`] = `
             <div
               className="fd-nested-list__content has-child"
               onClick={[Function]}
-              tabIndex="0"
             >
               <a
                 className="fd-nested-list__link"
@@ -17927,19 +18207,20 @@ exports[`Storyshots Visual Side Nav 1`] = `
                   Link Item 4
                 </span>
               </a>
-              <a
+              <button
                 aria-controls="fd-mocked-short-id"
                 aria-expanded={false}
                 aria-haspopup="true"
-                className="fd-nested-list__expand-icon"
-                href="#"
-                tabIndex="-1"
+                aria-label="Expand submenu"
+                className="fd-button fd-nested-list__button"
+                onClick={[Function]}
+                type="button"
               />
             </div>
             <ul
               aria-expanded={false}
               aria-hidden={true}
-              className="fd-nested-list--text-only fd-nested-list level-1"
+              className="fd-nested-list--text-only fd-nested-list level-2"
               id="fd-mocked-short-id"
             >
               <li
@@ -18020,14 +18301,20 @@ exports[`Storyshots Visual Side Nav 1`] = `
             </a>
           </li>
         </ul>
-      </div>
-    </nav>
+      </nav>
+    </div>
   </div>
   <div>
-    <nav
+    <div
       className="fd-side-nav"
     >
-      <div
+      <a
+        className="fd-side-nav__skip-link"
+        href="#content"
+      >
+        Skip navigation
+      </a>
+      <nav
         className="fd-side-nav__main-navigation"
       >
         <ul
@@ -18043,8 +18330,8 @@ exports[`Storyshots Visual Side Nav 1`] = `
               onClick={[Function]}
             >
               <span
+                aria-hidden={true}
                 className="fd-nested-list__icon sap-icon--home"
-                role="presentation"
               />
               <span
                 className="fd-nested-list__title"
@@ -18062,8 +18349,8 @@ exports[`Storyshots Visual Side Nav 1`] = `
               onClick={[Function]}
             >
               <span
+                aria-hidden={true}
                 className="fd-nested-list__icon sap-icon--home"
-                role="presentation"
               />
               <span
                 className="fd-nested-list__title"
@@ -18081,8 +18368,8 @@ exports[`Storyshots Visual Side Nav 1`] = `
               onClick={[Function]}
             >
               <span
+                aria-hidden={true}
                 className="fd-nested-list__icon sap-icon--home"
-                role="presentation"
               />
               <span
                 className="fd-nested-list__title"
@@ -18100,8 +18387,8 @@ exports[`Storyshots Visual Side Nav 1`] = `
               onClick={[Function]}
             >
               <span
+                aria-hidden={true}
                 className="fd-nested-list__icon sap-icon--home"
-                role="presentation"
               />
               <span
                 className="fd-nested-list__title"
@@ -18119,8 +18406,8 @@ exports[`Storyshots Visual Side Nav 1`] = `
               onClick={[Function]}
             >
               <span
+                aria-hidden={true}
                 className="fd-nested-list__icon sap-icon--home"
-                role="presentation"
               />
               <span
                 className="fd-nested-list__title"
@@ -18130,8 +18417,8 @@ exports[`Storyshots Visual Side Nav 1`] = `
             </a>
           </li>
         </ul>
-      </div>
-    </nav>
+      </nav>
+    </div>
   </div>
 </div>
 `;
@@ -19680,7 +19967,9 @@ exports[`Storyshots Visual Table 1`] = `
           </th>
         </tr>
       </thead>
-      <tbody>
+      <tbody
+        className="fd-table__body"
+      >
         <tr
           className="fd-table__row"
         >
@@ -19743,7 +20032,7 @@ exports[`Storyshots Visual Table 1`] = `
           className="fd-table__row"
         >
           <th
-            className="fd-table__cell"
+            className="fd-table__cell fd-table__cell--checkbox"
           >
             <div
               className="fd-form-item"
@@ -19758,9 +20047,7 @@ exports[`Storyshots Visual Table 1`] = `
               <label
                 className="fd-form-label fd-checkbox__label"
                 htmlFor="fd-mocked-short-id"
-              >
-                Checkbox
-              </label>
+              />
             </div>
           </th>
           <th
@@ -19795,12 +20082,14 @@ exports[`Storyshots Visual Table 1`] = `
           </th>
         </tr>
       </thead>
-      <tbody>
+      <tbody
+        className="fd-table__body"
+      >
         <tr
           className="fd-table__row"
         >
           <td
-            className="fd-table__cell"
+            className="fd-table__cell fd-table__cell--checkbox"
           >
             <div
               className="fd-form-item"
@@ -19815,16 +20104,14 @@ exports[`Storyshots Visual Table 1`] = `
               <label
                 className="fd-form-label fd-checkbox__label"
                 htmlFor="fd-mocked-short-id"
-              >
-                User
-              </label>
+              />
             </div>
           </td>
           <td
             className="fd-table__cell"
           >
             <span
-              className="fd-avatar fd-avatar--m fd-avatar--thumbnail"
+              className="fd-avatar fd-avatar--m fd-avatar--thumbnail fd-avatar--transparent"
               role="presentation"
               style={
                 Object {
@@ -19892,7 +20179,7 @@ exports[`Storyshots Visual Table 1`] = `
           className="fd-table__row"
         >
           <td
-            className="fd-table__cell"
+            className="fd-table__cell fd-table__cell--checkbox"
           >
             <div
               className="fd-form-item"
@@ -19907,16 +20194,14 @@ exports[`Storyshots Visual Table 1`] = `
               <label
                 className="fd-form-label fd-checkbox__label"
                 htmlFor="fd-mocked-short-id"
-              >
-                Florence
-              </label>
+              />
             </div>
           </td>
           <td
             className="fd-table__cell"
           >
             <span
-              className="fd-avatar fd-avatar--m fd-avatar--thumbnail"
+              className="fd-avatar fd-avatar--m fd-avatar--thumbnail fd-avatar--transparent"
               role="presentation"
               style={
                 Object {
@@ -19984,7 +20269,7 @@ exports[`Storyshots Visual Table 1`] = `
           className="fd-table__row"
         >
           <td
-            className="fd-table__cell"
+            className="fd-table__cell fd-table__cell--checkbox"
           >
             <div
               className="fd-form-item"
@@ -19999,16 +20284,14 @@ exports[`Storyshots Visual Table 1`] = `
               <label
                 className="fd-form-label fd-checkbox__label"
                 htmlFor="fd-mocked-short-id"
-              >
-                Mark
-              </label>
+              />
             </div>
           </td>
           <td
             className="fd-table__cell"
           >
             <span
-              className="fd-avatar fd-avatar--m fd-avatar--thumbnail"
+              className="fd-avatar fd-avatar--m fd-avatar--thumbnail fd-avatar--transparent"
               role="presentation"
               style={
                 Object {
@@ -20076,7 +20359,7 @@ exports[`Storyshots Visual Table 1`] = `
           className="fd-table__row"
         >
           <td
-            className="fd-table__cell"
+            className="fd-table__cell fd-table__cell--checkbox"
           >
             <div
               className="fd-form-item"
@@ -20091,16 +20374,14 @@ exports[`Storyshots Visual Table 1`] = `
               <label
                 className="fd-form-label fd-checkbox__label"
                 htmlFor="fd-mocked-short-id"
-              >
-                Jenna
-              </label>
+              />
             </div>
           </td>
           <td
             className="fd-table__cell"
           >
             <span
-              className="fd-avatar fd-avatar--m fd-avatar--thumbnail"
+              className="fd-avatar fd-avatar--m fd-avatar--thumbnail fd-avatar--transparent"
               role="presentation"
               style={
                 Object {

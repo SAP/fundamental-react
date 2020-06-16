@@ -9,16 +9,16 @@ export default {
 
 export const primary = () => (<InlineHelp text='default' />);
 
-export const bottomRight = () => (
-    <InlineHelp placement='bottom-right' text='Lorem ipsum dolor sit amet, consectetur adipiscing.' />
+export const bottomEnd = () => (
+    <InlineHelp placement='bottom-end' text='Lorem ipsum dolor sit amet, consectetur adipiscing.' />
 );
 
-export const bottomLeft = () => (
-    <InlineHelp placement='bottom-left' text='Lorem ipsum dolor sit amet, consectetur adipiscing.' />
+export const bottomStart = () => (
+    <InlineHelp placement='bottom-start' text='Lorem ipsum dolor sit amet, consectetur adipiscing.' />
 );
 
-export const bottomCenter = () => (
-    <InlineHelp placement='bottom-center' text='Lorem ipsum dolor sit amet, consectetur adipiscing.' />
+export const bottom = () => (
+    <InlineHelp placement='bottom' text='Lorem ipsum dolor sit amet, consectetur adipiscing.' />
 );
 
 export const right = () => (
@@ -27,4 +27,16 @@ export const right = () => (
 
 export const left = () => (
     <InlineHelp placement='left' text='Lorem ipsum dolor sit amet, consectetur adipiscing.' />
+);
+
+export const topStart = () => (
+    <InlineHelp placement='top-start' text='Lorem ipsum dolor sit amet, consectetur adipiscing.' />
+);
+
+export const topEnd = () => (
+    <InlineHelp placement='top-end' text='Lorem ipsum dolor sit amet, consectetur adipiscing.' />
+);
+
+export const top = () => (
+    <InlineHelp placement='top' text='Lorem ipsum dolor sit amet, consectetur adipiscing.' />
 );

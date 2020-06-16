@@ -258,7 +258,7 @@ Select.propTypes = {
     disabled: PropTypes.bool,
     /** Internal use only */
     disableStyles: PropTypes.bool,
-    /** Localized creen reader label for an empty option if included, or if no placeholder is included */
+    /** Localized screen reader label for an empty option if included, or if no placeholder is included */
     emptyAriaLabel: PropTypes.string,
     /** Value for the `id` attribute on the element */
     id: PropTypes.string,
@@ -272,7 +272,7 @@ Select.propTypes = {
     /** Localized placeholder text of the input */
     placeholder: PropTypes.string,
     /** Set to **true** to enable readonly mode */
-    readOnly: PropTypes.string,
+    readOnly: PropTypes.bool,
     /** The key corresponding to the selected option */
     selectedKey: PropTypes.string,
     /** An object identifying a validation message.  The object will include properties for `state` and `text`; _e.g._, \`{ state: \'warning\', text: \'This is your last warning\' }\` */

@@ -759,7 +759,7 @@ Calendar.propTypes = {
     /** Additional props to be spread to the month\'s `<table>` element */
     monthListProps: PropTypes.object,
     /** Set to **true** if the Today button should be displayed */
-    showToday: PropTypes.object,
+    showToday: PropTypes.bool,
     /** Object with special dates and special date types in shape of `{\'YYYYMMDD\': type}`. Type must be a number between 1-20 */
     specialDays: PropTypes.object,
     /** Additional props to be spread to the `<tbody>` element */

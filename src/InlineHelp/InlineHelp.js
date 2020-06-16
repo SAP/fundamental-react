@@ -65,11 +65,19 @@ InlineHelp.propTypes = {
     contentClassName: PropTypes.string,
     /** Internal use only */
     disableStyles: PropTypes.bool,
-    /** Location to display the inline help pop-up relative to the image: 'bottom-right',
-    'bottom-left',
-    'right',
+    /** Location to display the inline help pop-up relative to the image:
+    'bottom-start',
+    'bottom',
+    'bottom-end',
+    'left-start',
     'left',
-    'bottom-center' */
+    'left-end',
+    'right-start',
+    'right',
+    'right-end',
+    'top-start',
+    'top',
+    'top-end' */
     placement: PropTypes.oneOf(POPPER_PLACEMENTS)
 };
 
