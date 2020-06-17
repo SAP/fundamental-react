@@ -33,6 +33,7 @@ describe('<Calendar />', () => {
     const rangeSelect = <Calendar enableRangeSelection onChange={mockOnChange} />;
     const disablePast = <Calendar disablePastDates />;
     const disableFuture = <Calendar disableFutureDates />;
+    const openToDate = <Calendar openToDate={moment().year('2000').month(0).date(1)} />;
     const weekdayStart = (_weekdayStart = 0) => <Calendar weekdayStart={_weekdayStart} />;
 
     test('create calendar components', () => {
@@ -48,6 +49,7 @@ describe('<Calendar />', () => {
         mount(disabledWeekDayFakeDays);
         mount(rangeSelect);
         mount(weekdayStart());
+        mount(openToDate);
     });
 
     test('show/hide months', () => {
@@ -412,6 +414,21 @@ describe('<Calendar />', () => {
         expect(newDateDisplayed.date()).toEqual(currentDateDisplayed.date());
 
         expect(wrapper.state('arrSelectedDates').length).toEqual(2);
+    });
+
+    describe('openToDate', () => {
+        test('should open today date if not specified', () => {
+            let wrapper = mount(defaultCalendar);
+
+            expect(wrapper.state('currentDateDisplayed')).toEqual(moment().startOf('day'));
+        });
+
+        test('should open to specified date when mounted', () => {
+            let wrapper = mount(openToDate);
+            const focusedDateElement = wrapper.find('[data-is-focused=true] span');
+
+            expect(focusedDateElement.prop('aria-label')).toEqual('January 1, 2000');
+        });
     });
 
     describe('weekdayStart', () => {
