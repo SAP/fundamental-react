@@ -28,7 +28,12 @@ exports[`Storyshots Component API/Select Compact 1`] = `
           <div
             className="fd-select__control"
           >
-            Select
+            <span
+              aria-label={null}
+              className="fd-select__text-content"
+            >
+              Select
+            </span>
             <span
               className="fd-button fd-button--transparent sap-icon--slim-arrow-down fd-select__button"
             />
@@ -41,6 +46,100 @@ exports[`Storyshots Component API/Select Compact 1`] = `
 `;
 
 exports[`Storyshots Component API/Select Dev 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    aria-disabled={false}
+    className="fd-popover"
+  >
+    <div
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      onTouchStart={[Function]}
+    >
+      <div
+        className="fd-popover__control"
+      >
+        <div
+          aria-controls="fd-mocked-short-id"
+          aria-expanded={false}
+          aria-haspopup={true}
+          className="fd-select"
+          onClick={[Function]}
+          onKeyPress={[Function]}
+          role="button"
+          tabIndex={0}
+        >
+          <div
+            aria-disabled={false}
+            className="fd-select__control"
+          >
+            <span
+              aria-label={null}
+              className="fd-select__text-content"
+            >
+              select
+            </span>
+            <span
+              className="fd-button fd-button--transparent sap-icon--slim-arrow-down fd-select__button"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Component API/Select Disabled 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    aria-disabled={true}
+    className="fd-popover"
+  >
+    <div
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      onTouchStart={[Function]}
+    >
+      <div
+        className="fd-popover__control"
+      >
+        <div
+          aria-controls="fd-mocked-short-id"
+          aria-expanded={false}
+          aria-haspopup={true}
+          className="fd-select"
+          onClick={[Function]}
+          onKeyPress={[Function]}
+          role="button"
+          tabIndex={0}
+        >
+          <div
+            aria-disabled={true}
+            className="fd-select__control is-disabled"
+          >
+            <span
+              aria-label={null}
+              className="fd-select__text-content"
+            >
+              Select
+            </span>
+            <span
+              className="fd-button fd-button--transparent sap-icon--slim-arrow-down fd-select__button"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Component API/Select Empty Option 1`] = `
 <div
   dir="ltr"
 >
@@ -68,47 +167,10 @@ exports[`Storyshots Component API/Select Dev 1`] = `
           <div
             className="fd-select__control"
           >
-            select
             <span
-              className="fd-button fd-button--transparent sap-icon--slim-arrow-down fd-select__button"
+              aria-label="Select an option"
+              className="fd-select__text-content"
             />
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Component API/Select Disabled 1`] = `
-<div
-  dir="ltr"
->
-  <div
-    className="fd-popover"
-  >
-    <div
-      onFocus={[Function]}
-      onMouseDown={[Function]}
-      onTouchStart={[Function]}
-    >
-      <div
-        className="fd-popover__control"
-      >
-        <div
-          aria-controls="fd-mocked-short-id"
-          aria-expanded={false}
-          aria-haspopup={true}
-          className="fd-select"
-          onClick={[Function]}
-          onKeyPress={[Function]}
-          role="button"
-          tabIndex={0}
-        >
-          <div
-            className="fd-select__control is-disabled"
-          >
-            Select
             <span
               className="fd-button fd-button--transparent sap-icon--slim-arrow-down fd-select__button"
             />
@@ -148,10 +210,57 @@ exports[`Storyshots Component API/Select Primary 1`] = `
           <div
             className="fd-select__control"
           >
-            Select
+            <span
+              aria-label={null}
+              className="fd-select__text-content"
+            >
+              Select
+            </span>
             <span
               className="fd-button fd-button--transparent sap-icon--slim-arrow-down fd-select__button"
             />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Component API/Select Read Only 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    className="fd-popover"
+  >
+    <div
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      onTouchStart={[Function]}
+    >
+      <div
+        className="fd-popover__control"
+      >
+        <div
+          aria-controls="fd-mocked-short-id"
+          aria-expanded={false}
+          aria-haspopup={true}
+          className="fd-select"
+          onClick={[Function]}
+          onKeyPress={[Function]}
+          role="button"
+          tabIndex={0}
+        >
+          <div
+            className="fd-select__control is-readonly"
+          >
+            <span
+              aria-label={null}
+              className="fd-select__text-content"
+            >
+              List Item 1
+            </span>
           </div>
         </div>
       </div>
@@ -191,7 +300,12 @@ exports[`Storyshots Component API/Select Validation States 1`] = `
             <div
               className="fd-select__control is-error"
             >
-              Error
+              <span
+                aria-label={null}
+                className="fd-select__text-content"
+              >
+                Error
+              </span>
               <span
                 className="fd-button fd-button--transparent sap-icon--slim-arrow-down fd-select__button"
               />
@@ -231,7 +345,12 @@ exports[`Storyshots Component API/Select Validation States 1`] = `
             <div
               className="fd-select__control is-warning"
             >
-              Warning
+              <span
+                aria-label={null}
+                className="fd-select__text-content"
+              >
+                Warning
+              </span>
               <span
                 className="fd-button fd-button--transparent sap-icon--slim-arrow-down fd-select__button"
               />
@@ -271,7 +390,12 @@ exports[`Storyshots Component API/Select Validation States 1`] = `
             <div
               className="fd-select__control is-success"
             >
-              Success
+              <span
+                aria-label={null}
+                className="fd-select__text-content"
+              >
+                Success
+              </span>
               <span
                 className="fd-button fd-button--transparent sap-icon--slim-arrow-down fd-select__button"
               />
@@ -311,7 +435,12 @@ exports[`Storyshots Component API/Select Validation States 1`] = `
             <div
               className="fd-select__control is-information"
             >
-              Information
+              <span
+                aria-label={null}
+                className="fd-select__text-content"
+              >
+                Information
+              </span>
               <span
                 className="fd-button fd-button--transparent sap-icon--slim-arrow-down fd-select__button"
               />

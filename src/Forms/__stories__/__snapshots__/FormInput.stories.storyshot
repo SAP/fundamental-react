@@ -72,7 +72,7 @@ exports[`Storyshots Component API/Forms/FormInput Validation States 1`] = `
     className="fddocs-container"
   >
     <div
-      className="fd-popover"
+      className="fd-popover fd-popover--input-message-group"
       style={
         Object {
           "display": "block",
@@ -103,7 +103,7 @@ exports[`Storyshots Component API/Forms/FormInput Validation States 1`] = `
       </div>
     </div>
     <div
-      className="fd-popover"
+      className="fd-popover fd-popover--input-message-group"
       style={
         Object {
           "display": "block",
@@ -134,7 +134,7 @@ exports[`Storyshots Component API/Forms/FormInput Validation States 1`] = `
       </div>
     </div>
     <div
-      className="fd-popover"
+      className="fd-popover fd-popover--input-message-group"
       style={
         Object {
           "display": "block",
@@ -165,7 +165,7 @@ exports[`Storyshots Component API/Forms/FormInput Validation States 1`] = `
       </div>
     </div>
     <div
-      className="fd-popover"
+      className="fd-popover fd-popover--input-message-group"
       style={
         Object {
           "display": "block",
