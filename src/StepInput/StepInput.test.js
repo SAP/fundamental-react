@@ -33,4 +33,24 @@ describe('<InputGroup />', () => {
             ).toBe('Sample');
         });
     });
+    describe('onChange handler', () => {
+        test('should dispatch the onChange callback with the event on change of input field', () => {
+            let f = jest.fn();
+            const element = mount(<StepInput onChange={f} />);
+            element.find('input[type="text"]').simulate('change');
+            expect(f).toHaveBeenCalledTimes(1);
+        });
+        test('should dispatch the onChange callback on click of step up button', () => {
+            let f = jest.fn();
+            const element = mount(<StepInput onChange={f} />);
+            element.find('button[aria-label="Step Up"]').simulate('click');
+            expect(f).toHaveBeenCalledTimes(1);
+        });
+        test('should dispatch the onChange callback on click of step down button', () => {
+            let f = jest.fn();
+            const element = mount(<StepInput onChange={f} />);
+            element.find('button[aria-label="Step Down"]').simulate('click');
+            expect(f).toHaveBeenCalledTimes(1);
+        });
+    });
 });
