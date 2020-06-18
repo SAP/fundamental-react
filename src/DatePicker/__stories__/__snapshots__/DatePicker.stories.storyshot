@@ -659,7 +659,7 @@ exports[`Storyshots Component API/DatePicker Localized DatePicker 1`] = `
 </div>
 `;
 
-exports[`Storyshots Component API/DatePicker Localized Today Button 1`] = `
+exports[`Storyshots Component API/DatePicker Localized Today Footer Button 1`] = `
 <div
   dir="ltr"
 >

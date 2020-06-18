@@ -223,11 +223,17 @@ export const weekdayStartEx = () => (<DatePicker weekdayStart={number('weekdaySt
 weekdayStartEx.storyName = 'Weekday Start (Monday Start)';
 
 /**
- * Setting a localized non-empty string value for `todayLabel` will show a footer action in the DatePicker popover for selecting today's date.
- * Clicking this button also closes the popover.
+ * Setting
+ *
+ * - `todayAction.type` to `'select'`
+ * - And localized non-empty string value for `todayAction.label`
+ *
+ * will show a footer action in the DatePicker popover.
+ *
+ * Clicking this button selects today's date and closes the popover.
  * */
 
-export const localizedTodayButton = () => (
+export const localizedTodayFooterButton = () => (
     <LayoutGrid cols={2}>
         <div>
             <FormLabel
@@ -239,7 +245,10 @@ export const localizedTodayButton = () => (
                 inputProps={{
                     id: 'englishTodayButtonDP'
                 }}
-                todayLabel='Today' />
+                todayAction={{
+                    type: 'select',
+                    label: 'Today'
+                }} />
         </div>
         <div>
             <FormLabel
@@ -252,7 +261,10 @@ export const localizedTodayButton = () => (
                     id: 'hindiTodayButtonDP'
                 }}
                 locale='hi'
-                todayLabel='आज' />
+                todayAction={{
+                    type: 'select',
+                    label: 'आज'
+                }} />
         </div>
     </LayoutGrid>
 );
@@ -270,6 +282,16 @@ export const dev = () => (
         disabledDates={[dateKnobToDate('disable between dates (1)', disabledDateFirstDefault),
             dateKnobToDate('disable between dates (2)', disabledDateSecondDefault)]}
         locale={text('locale', 'en')}
+        todayAction={{
+            type: select('Today Action Type',
+                {
+                    'none': 'none',
+                    'select': 'select',
+                    'navigate': 'navigate'
+                }
+            ),
+            label: text('Today Action Label', 'Today')
+        }}
         validationState={select('Validation State',
             {
                 'none': '',

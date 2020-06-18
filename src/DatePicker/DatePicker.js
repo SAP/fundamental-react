@@ -1,7 +1,6 @@
 import Button from '../Button/Button';
 import Calendar from '../Calendar/Calendar';
 import classnames from 'classnames';
-import { FORM_MESSAGE_TYPES } from '../utils/constants';
 import FormInput from '../Forms/FormInput';
 import FormMessage from '../Forms/_FormMessage';
 import InputGroup from '../InputGroup/InputGroup';
@@ -10,6 +9,7 @@ import moment from 'moment';
 import Popover from '../Popover/Popover';
 import PropTypes from 'prop-types';
 import { validDateLookup } from './_validDateLookup';
+import { DATEPICKER_TODAY_ACTIONS_TYPES, FORM_MESSAGE_TYPES } from '../utils/constants';
 import React, { Component } from 'react';
 
 const ISO_DATE_FORMAT = 'YYYY-MM-DD';
@@ -38,9 +38,9 @@ class DatePicker extends Component {
     }
 
     componentDidMount() {
-        const { disableStyles, enableRangeSelection, todayLabel } = this.props;
+        const { disableStyles } = this.props;
 
-        if (!disableStyles && this._showTodayButton(enableRangeSelection, todayLabel)) {
+        if (!disableStyles && this._showTodayFooter()) {
             //below styles are needed for footer styling
             require('fundamental-styles/dist/dialog.css');
             require('fundamental-styles/dist/bar.css');
@@ -319,13 +319,15 @@ class DatePicker extends Component {
         this.validateDates(this.props.onBlur);
     };
 
-    _showTodayButton = (enableRangeSelection, todayLabel) => (
-        !enableRangeSelection
-        && isEnabledDate(moment(), this.props)
-        && todayLabel
-        && typeof todayLabel === 'string'
-        && todayLabel.trim().length
-    );
+    _showTodayFooter = () => {
+        const { enableRangeSelection, todayAction: { label: todayLabel, type: todayType } } = this.props;
+        return todayType === 'select'
+                && !enableRangeSelection
+                && isEnabledDate(moment(), this.props)
+                && todayLabel
+                && typeof todayLabel === 'string'
+                && todayLabel.trim().length > 0;
+    };
 
     _setTodayDate = () => {
         this.updateDate(moment().locale(this.props.locale));
@@ -358,7 +360,7 @@ class DatePicker extends Component {
             popoverProps,
             readOnly,
             specialDays,
-            todayLabel,
+            todayAction,
             validationState,
             weekdayStart,
             ...props
@@ -424,7 +426,7 @@ class DatePicker extends Component {
                                 ref={this.calendarRef}
                                 specialDays={specialDays}
                                 weekdayStart={weekdayStart} />
-                            { this._showTodayButton(enableRangeSelection, todayLabel) &&
+                            { this._showTodayFooter() &&
                                 <footer className={datepickerFooterClassName}>
                                     <div className='fd-bar__right'>
                                         <div className='fd-bar__element'>
@@ -432,7 +434,7 @@ class DatePicker extends Component {
                                                 className='fd-dialog__decisive-button'
                                                 compact={compact}
                                                 onClick={this._setTodayDate}>
-                                                {todayLabel}
+                                                {todayAction.label}
                                             </Button>
                                         </div>
                                     </div>
@@ -519,13 +521,26 @@ DatePicker.propTypes = {
     readOnly: PropTypes.bool,
     /** Object with special dates and special date types in shape of `{'YYYYMMDD': type}`. Type must be a number between 1-20 */
     specialDays: PropTypes.object,
-    /** Localized string label for button that selects today\'s date. For example, ```{todayLabel: 'Today'}```
+    /** Config object for DatePicker's today action button.
+     *  For example, ```todayAction={type: 'select', label: 'Today'}```
      *
-     * The button won\'t be rendered if:
+     * **todayAction.type** is a string indicating the type of today button
      *
-     * - `todayLabel` is not a valid non-empty string
-     * - OR if `enableRangeSelection` is true. */
-    todayLabel: PropTypes.string,
+     * - `'none'` today button won't be shown
+     * - `'select'` today button as footer action that selects today's date and closes datepicker
+     * - `'navigate'` today button as header action that navigates (i.e. sets focus) to today's date
+     *
+     * **todayAction.label** is a localized string label for the today action button.
+     *
+     * The button will only be rendered if:
+     *
+     * - `todayAction.type` is `'select'` or `'navigate'`
+     * - AND `todayAction.label` is a valid non-empty string
+    */
+    todayAction: PropTypes.shape({
+        type: PropTypes.oneOf(DATEPICKER_TODAY_ACTIONS_TYPES),
+        label: PropTypes.string.isRequired
+    }),
     /** An object identifying a validation message.  The object will include properties for `state` and `text`;
      * _e.g._, \`{ state: \'warning\', text: \'This is your last warning\' }\` */
     validationState: PropTypes.shape({
@@ -555,6 +570,9 @@ DatePicker.defaultProps = {
     defaultValue: '',
     dateFormat: null,
     locale: 'en',
+    todayAction: {
+        type: 'none'
+    },
     onBlur: () => {},
     onChange: () => {},
     onDatePickerClose: () => {},
