@@ -1,4 +1,5 @@
 /* eslint-disable react/no-multi-comp */
+import { action } from '@storybook/addon-actions';
 import React from 'react';
 import StepInput from '../StepInput';
 import {
@@ -55,6 +56,7 @@ export const dev = () => (
         compact={boolean('compact', false)}
         disableStyles={boolean('disableStyles', false)}
         disabled={boolean('disabled', false)}
+        onChange={action('step-value-change')}
         placeholder={text('Placeholder', 'Placeholder')}
         validationState={select('Validation State', {
             'none': '',
