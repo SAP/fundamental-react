@@ -16,7 +16,7 @@ jest.mock('shortid', () => {
 
 // create jest snapshot tests from each story
 initStoryshots({
-    storyKindRegex: /^((?!.*?Component).)*$/,
+    storyKindRegex: /^((?!.*?Visual).)*$/,
     integrityOptions: { cwd: path.join(__dirname, 'src', 'stories') },
     test: multiSnapshotWithOptions()
 });

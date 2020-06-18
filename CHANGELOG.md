@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.11.0-rc.11](https://github.com/SAP/fundamental-react/compare/v0.11.0-rc.10...v0.11.0-rc.11) (2020-06-15)
+
+## [0.11.0-rc.10](https://github.com/SAP/fundamental-react/compare/v0.11.0-rc.9...v0.11.0-rc.10) (2020-06-12)
+
+
+### Features
+
+* 1020: Shellbar pass popoverProps to SearchInput ([#1091](https://github.com/SAP/fundamental-react/issues/1091)) ([5ab3775](https://github.com/SAP/fundamental-react/commit/5ab377533679086aa9c60f388c9a8ddb662dac02))
+
+## [0.11.0-rc.9](https://github.com/SAP/fundamental-react/compare/v0.11.0-rc.8...v0.11.0-rc.9) (2020-06-10)
+
+
+### Bug Fixes
+
+* Use `.day(0)` instead of `.startOf("week")` for datepicker ([#1090](https://github.com/SAP/fundamental-react/issues/1090)) ([58ebe86](https://github.com/SAP/fundamental-react/commit/58ebe868f4dd41f2c88dcb422e43faca48867664))
+
 ## [0.11.0-rc.8](https://github.com/SAP/fundamental-react/compare/v0.11.0-rc.7...v0.11.0-rc.8) (2020-06-09)
 
 ## [0.11.0-rc.7](https://github.com/SAP/fundamental-react/compare/v0.11.0-rc.6...v0.11.0-rc.7) (2020-06-08)

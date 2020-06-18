@@ -227,9 +227,7 @@ specialDaysEx.storyName = 'Special Days';
 
 export const weekdayStartEx = () => (<DatePicker weekdayStart={number('weekdayStart', 1)} />);
 
-weekdayStartEx.story = {
-    name: 'Weekday Start (Monday Start)'
-};
+weekdayStartEx.storyName = 'Weekday Start (Monday Start)';
 
 export const dev = () => (
     <DatePicker

@@ -1,0 +1,118 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Component API/InlineHelp Bottom Center 1`] = `
+<div
+  dir="ltr"
+>
+  <span
+    className="fd-inline-help"
+  >
+    <span
+      className="fd-inline-help__content fd-inline-help__content--bottom-center"
+    >
+      Lorem ipsum dolor sit amet, consectetur adipiscing.
+    </span>
+  </span>
+</div>
+`;
+
+exports[`Storyshots Component API/InlineHelp Bottom Left 1`] = `
+<div
+  dir="ltr"
+>
+  <span
+    className="fd-inline-help"
+  >
+    <span
+      className="fd-inline-help__content fd-inline-help__content--bottom-left"
+    >
+      Lorem ipsum dolor sit amet, consectetur adipiscing.
+    </span>
+  </span>
+</div>
+`;
+
+exports[`Storyshots Component API/InlineHelp Bottom Right 1`] = `
+<div
+  dir="ltr"
+>
+  <span
+    className="fd-inline-help"
+  >
+    <span
+      className="fd-inline-help__content fd-inline-help__content--bottom-right"
+    >
+      Lorem ipsum dolor sit amet, consectetur adipiscing.
+    </span>
+  </span>
+</div>
+`;
+
+exports[`Storyshots Component API/InlineHelp Left 1`] = `
+<div
+  dir="ltr"
+>
+  <span
+    className="fd-inline-help"
+  >
+    <span
+      className="fd-inline-help__content fd-inline-help__content--left"
+    >
+      Lorem ipsum dolor sit amet, consectetur adipiscing.
+    </span>
+  </span>
+</div>
+`;
+
+exports[`Storyshots Component API/InlineHelp Primary 1`] = `
+<div
+  dir="ltr"
+>
+  <span
+    className="fd-inline-help"
+  >
+    <span
+      className="fd-inline-help__content fd-inline-help__content--bottom-right"
+    >
+      default
+    </span>
+  </span>
+</div>
+`;
+
+exports[`Storyshots Component API/InlineHelp Right 1`] = `
+<div
+  dir="ltr"
+>
+  <span
+    className="fd-inline-help"
+  >
+    <span
+      className="fd-inline-help__content fd-inline-help__content--right"
+    >
+      Lorem ipsum dolor sit amet, consectetur adipiscing.
+    </span>
+  </span>
+</div>
+`;
+
+exports[`Storyshots Component API/InlineHelp With Label 1`] = `
+<div
+  dir="ltr"
+>
+  <label
+    className="fd-form-label fd-form-label--inline-help"
+  >
+    Label Text
+    <span
+      className="fd-inline-help"
+    >
+      <span
+        className="fd-inline-help__content fd-inline-help__content--bottom-right"
+      >
+        default
+      </span>
+    </span>
+  </label>
+</div>
+`;
