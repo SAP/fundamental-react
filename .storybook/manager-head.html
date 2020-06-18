@@ -2,7 +2,7 @@
     .sidebar-header {
         position: fixed !important;
         width: 210px;
-        background-color: white;
+        background-color: #fff;
         border-bottom: 2px solid #d7dbde;
         z-index: 10;
         padding: 26px 20px 12px !important;
@@ -13,6 +13,11 @@
     .sidebar-header > div {
         position: relative;
     }
+
+    .sidebar-header > div:first-child {
+        position: relative;
+        margin-right: 35px;
+    }
     
     .sidebar-container {
         padding-top: 85px;
@@ -22,20 +27,26 @@
         position: fixed;
         left: 0;
         top: 60px;
-        padding: 12px 20px;
+        padding: 12px 16px 12px 20px;
         margin-top: 0;
         border-bottom: 2px solid #d7dbde;
         width: 210px;
-        background-color: white;
+        background-color: #fff;
         z-index: 9;
     }
 
     .sidebar-container form button {
-        right: 20px;
+        right: 25px;
+    }
+
+    .sidebar-container form svg {
+        left: 25px;
     }
 
     .sidebar-container form input {
         padding-right: 0;
+        background-color: #fff;
+        border: 1px solid #d7dbde;
     }
     </style>
     
