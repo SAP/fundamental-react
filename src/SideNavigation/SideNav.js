@@ -19,6 +19,7 @@ class SideNav extends Component {
     componentDidMount() {
         if (!this.props.disableStyles) {
             require('fundamental-styles/dist/icon.css');
+            require('fundamental-styles/dist/button.css');
             require('fundamental-styles/dist/side-nav.css');
         }
     }
