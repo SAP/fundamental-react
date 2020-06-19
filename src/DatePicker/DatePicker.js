@@ -319,6 +319,14 @@ class DatePicker extends Component {
         this.validateDates(this.props.onBlur);
     };
 
+    _showTodayHeader = () => {
+        const { todayAction: { label: todayLabel, type: todayType } } = this.props;
+        return todayType === 'navigate'
+                && todayLabel
+                && typeof todayLabel === 'string'
+                && todayLabel.trim().length > 0;
+    }
+
     _showTodayFooter = () => {
         const { enableRangeSelection, todayAction: { label: todayLabel, type: todayType } } = this.props;
         return todayType === 'select'
@@ -423,11 +431,14 @@ class DatePicker extends Component {
                                 enableRangeSelection={enableRangeSelection}
                                 focusOnInit
                                 locale={locale}
-                                localizedText={localizedText}
+                                localizedText={{
+                                    ...localizedText,
+                                    todayLabel: todayAction.label
+                                }}
                                 onChange={this.updateDate}
                                 openToDate={openToDate}
                                 ref={this.calendarRef}
-                                showToday={showToday}
+                                showToday={this._showTodayHeader()}
                                 specialDays={specialDays}
                                 weekdayStart={weekdayStart} />
                             { this._showTodayFooter() &&

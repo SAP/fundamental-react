@@ -505,7 +505,7 @@ class Calendar extends Component {
                     {showToday &&
                         <div className='fd-calendar__action'>
                             <Button
-                                compact
+                                compact={compact}
                                 disableStyles={this.props.disableStyles}
                                 onClick={this.handleToday}
                                 option={'transparent'}>

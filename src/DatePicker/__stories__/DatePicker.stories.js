@@ -99,13 +99,6 @@ export const localized = () => (
 
 localized.storyName = 'Localized DatePicker';
 
-export const today = () => (
-    <DatePicker showToday />
-);
-
-
-today.storyName = 'Today button';
-
 export const rangeSelection = () => (
     <DatePicker enableRangeSelection />
 );
@@ -249,7 +242,7 @@ export const localizedTodayFooterButton = () => (
         <div>
             <FormLabel
                 htmlFor='englishTodayButtonDP'>
-                Compact Datepicker with today button
+                Compact Datepicker with today selection button
             </FormLabel>
             <DatePicker
                 compact
@@ -264,7 +257,7 @@ export const localizedTodayFooterButton = () => (
         <div>
             <FormLabel
                 htmlFor='hindiTodayButtonDP'>
-                Datepicker with today button, custom locale, and default date
+                Datepicker with today selection button, custom locale, and default date
             </FormLabel>
             <DatePicker
                 defaultValue='३०/१२/१९९२'
@@ -280,10 +273,60 @@ export const localizedTodayFooterButton = () => (
     </LayoutGrid>
 );
 
+
+/**
+ * Setting
+ *
+ * - `todayAction.type` to `'navigate'`
+ * - And localized non-empty string value for `todayAction.label`
+ *
+ * will show a header action in the DatePicker popover.
+ *
+ * Clicking this button selects today's date but does not close the popover.
+ * This might be useful for mobile use cases.
+ * */
+
+export const localizedTodayHeaderButton = () => (
+    <LayoutGrid cols={2}>
+        <div>
+            <FormLabel
+                htmlFor='englishTodayButtonDP'>
+                Compact Datepicker with today navigation button
+            </FormLabel>
+            <DatePicker
+                compact
+                inputProps={{
+                    id: 'englishTodayButtonDP'
+                }}
+                todayAction={{
+                    type: 'navigate',
+                    label: 'Today'
+                }} />
+        </div>
+        <div>
+            <FormLabel
+                htmlFor='hindiTodayButtonDP'>
+                Datepicker with today navigation button, custom locale, and default date
+            </FormLabel>
+            <DatePicker
+                defaultValue='३०/१२/१९९२'
+                inputProps={{
+                    id: 'hindiTodayButtonDP'
+                }}
+                locale='hi'
+                todayAction={{
+                    type: 'navigate',
+                    label: 'आज'
+                }} />
+        </div>
+    </LayoutGrid>
+);
+
 export const dev = () => (
     <DatePicker
         blockedDates={[dateKnobToDate('block between dates (1)', blockedDateFirstDefault),
             dateKnobToDate('block between dates (2)', blockedDateSecondDefault)]}
+        compact={boolean('compact', false)}
         disableAfterDate={dateKnobToDate('disable after date', afterDateDefault)}
         disableBeforeDate={dateKnobToDate('disable before date', beforeDateDefault)}
         disableFutureDates={boolean('disable future dates', false)}
