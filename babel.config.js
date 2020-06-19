@@ -9,13 +9,11 @@ const defaultPresets = [
 
 const defaultPlugins = [
     ['@babel/plugin-proposal-class-properties', { loose: true }],
-    ['@babel/plugin-proposal-object-rest-spread', { loose: true }],
-    '@babel/plugin-transform-runtime',
-    '@babel/plugin-transform-object-assign'
+    ['@babel/plugin-transform-runtime', { corejs: 3, proposals: true }]
 ];
 
 const productionPlugins = [
-    'babel-plugin-transform-react-constant-elements',
+    '@babel/plugin-transform-react-constant-elements',
     [
         'transform-react-remove-prop-types',
         {
