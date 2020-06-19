@@ -73,94 +73,9 @@ export const placements = () => (
                     <td />
                     <td>
                         <Popover
-                            body={someMenu} control={<Button glyph='navigation-up-arrow' option='transparent' >Top-Start</Button>}
-                            placement='top-start'
-                            popperProps={{ id: 'fd-top-start-popover-placement-story' }}
-                            type='menu' />
-                    </td>
-                    <td>
-                        <Popover
-                            body={someMenu} control={<Button glyph='navigation-up-arrow' option='transparent' >Top</Button>}
-                            placement='top'
-                            type='menu' />
-                    </td>
-                    <td>
-                        <Popover
-                            body={someMenu} control={<Button glyph='navigation-up-arrow' option='transparent' >Top-End</Button>}
-                            placement='top-end'
-                            type='menu' />
-                    </td>
-                    <td />
-                </tr>
-                <tr>
-                    <td />
-                    <td />
-                    <td />
-                    <td>
-                        <Popover
-                            body={someMenu} control={<Button glyph='navigation-left-arrow' option='transparent' >Left-Start</Button>}
-                            placement='left-start'
-                            type='menu' />
-                    </td>
-                    <td />
-                    <td />
-                    <td />
-                    <td>
-                        <Popover
-                            body={someMenu} control={<Button glyph='navigation-right-arrow' option='transparent' >Right-Top</Button>}
-                            placement='right-start'
-                            type='menu' />
-                    </td>
-                </tr>
-                <tr>
-                    <td />
-                    <td />
-                    <td />
-                    <td>
-                        <Popover
-                            body={someMenu} control={<Button glyph='navigation-left-arrow' option='transparent' >Left</Button>}
-                            placement='left'
-                            type='menu' />
-                    </td>
-                    <td />
-                    <td />
-                    <td />
-                    <td>
-                        <Popover
-                            body={someMenu} control={<Button glyph='navigation-right-arrow' option='transparent' >Right</Button>}
-                            placement='right'
-                            type='menu' />
-                    </td>
-                </tr>
-                <tr>
-                    <td />
-                    <td />
-                    <td />
-                    <td>
-                        <Popover
-                            body={someMenu} control={<Button glyph='navigation-left-arrow' option='transparent' >Left-End</Button>}
-                            placement='left-end'
-                            type='menu' />
-                    </td>
-                    <td />
-                    <td />
-                    <td />
-                    <td>
-                        <Popover
-                            body={someMenu} control={<Button glyph='navigation-right-arrow' option='transparent' >Right-End</Button>}
-                            placement='right-end'
-                            type='menu' />
-                    </td>
-                </tr>
-                <tr>
-                    <td />
-                    <td />
-                    <td />
-                    <td />
-                    <td>
-                        <Popover
                             body={someMenu} control={<Button glyph='navigation-down-arrow' option='transparent' >Bottom-Start</Button>}
                             placement='bottom-start'
+                            popperProps={{ id: 'fd-top-start-popover-placement-story' }}
                             type='menu' />
                     </td>
                     <td>
@@ -173,6 +88,91 @@ export const placements = () => (
                         <Popover
                             body={someMenu} control={<Button glyph='navigation-down-arrow' option='transparent' >Bottom-End</Button>}
                             placement='bottom-end'
+                            type='menu' />
+                    </td>
+                    <td />
+                </tr>
+                <tr>
+                    <td />
+                    <td />
+                    <td />
+                    <td>
+                        <Popover
+                            body={someMenu} control={<Button glyph='navigation-right-arrow' option='transparent' >Right-Start</Button>}
+                            placement='right-start'
+                            type='menu' />
+                    </td>
+                    <td />
+                    <td />
+                    <td />
+                    <td>
+                        <Popover
+                            body={someMenu} control={<Button glyph='navigation-left-arrow' option='transparent' >Left-Top</Button>}
+                            placement='left-start'
+                            type='menu' />
+                    </td>
+                </tr>
+                <tr>
+                    <td />
+                    <td />
+                    <td />
+                    <td>
+                        <Popover
+                            body={someMenu} control={<Button glyph='navigation-right-arrow' option='transparent' >Right</Button>}
+                            placement='right'
+                            type='menu' />
+                    </td>
+                    <td />
+                    <td />
+                    <td />
+                    <td>
+                        <Popover
+                            body={someMenu} control={<Button glyph='navigation-left-arrow' option='transparent' >Left</Button>}
+                            placement='left'
+                            type='menu' />
+                    </td>
+                </tr>
+                <tr>
+                    <td />
+                    <td />
+                    <td />
+                    <td>
+                        <Popover
+                            body={someMenu} control={<Button glyph='navigation-right-arrow' option='transparent' >Right-End</Button>}
+                            placement='right-end'
+                            type='menu' />
+                    </td>
+                    <td />
+                    <td />
+                    <td />
+                    <td>
+                        <Popover
+                            body={someMenu} control={<Button glyph='navigation-left-arrow' option='transparent' >Left-End</Button>}
+                            placement='left-end'
+                            type='menu' />
+                    </td>
+                </tr>
+                <tr>
+                    <td />
+                    <td />
+                    <td />
+                    <td />
+                    <td>
+                        <Popover
+                            body={someMenu} control={<Button glyph='navigation-up-arrow' option='transparent' >Top-Start</Button>}
+                            placement='top-start'
+                            type='menu' />
+                    </td>
+                    <td>
+                        <Popover
+                            body={someMenu} control={<Button glyph='navigation-up-arrow' option='transparent' >Top</Button>}
+                            placement='top'
+                            type='menu' />
+                    </td>
+                    <td>
+                        <Popover
+                            body={someMenu} control={<Button glyph='navigation-up-arrow' option='transparent' >Top-End</Button>}
+                            placement='top-end'
                             type='menu' />
                     </td>
                     <td />
@@ -239,8 +239,8 @@ export const widthSizingTypes = () => (
     <>
         {['none', 'matchTarget', 'minTarget', 'maxTarget'].map(type =>
             (<Popover
-                body={longBodyContent}
-                control={<Button>widthizingType: <strong>'{type}'</strong></Button>}
+                body={type === 'minTarget' ? bodyContent : longBodyContent}
+                control={<Button>widthSizingType: <strong>'{type}'</strong></Button>}
                 disableEdgeDetection
                 key={type}
                 placement='bottom'
