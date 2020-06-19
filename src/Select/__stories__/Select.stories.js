@@ -38,6 +38,13 @@ export const disabled = () => (
         options={options}
         placeholder='Select' />
 );
+export const readOnly = () => (
+    <Select
+        options={options}
+        placeholder='Select'
+        readOnly
+        selectedKey={'1'} />
+);
 export const validationStates = () => (
     <div className='fddocs-container'>
         <Select
@@ -58,7 +65,12 @@ export const validationStates = () => (
             validationState={{ state: 'information', text: 'Test validation state' }} />
     </div>
 );
-
+export const emptyOption = () => (
+    <Select
+        emptyAriaLabel='Select an option'
+        includeEmptyOption
+        options={options} />
+);
 
 export const dev = () => (
     <Select

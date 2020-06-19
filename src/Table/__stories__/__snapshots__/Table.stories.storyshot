@@ -35,7 +35,9 @@ exports[`Storyshots Component API/Table Primary 1`] = `
         </th>
       </tr>
     </thead>
-    <tbody>
+    <tbody
+      className="fd-table__body"
+    >
       <tr
         className="fd-table__row"
       >
@@ -103,7 +105,7 @@ exports[`Storyshots Component API/Table Rich Table 1`] = `
         className="fd-table__row"
       >
         <th
-          className="fd-table__cell"
+          className="fd-table__cell fd-table__cell--checkbox"
         >
           <div
             className="fd-form-item"
@@ -118,9 +120,7 @@ exports[`Storyshots Component API/Table Rich Table 1`] = `
             <label
               className="fd-form-label fd-checkbox__label"
               htmlFor="fd-mocked-short-id"
-            >
-              Checkbox
-            </label>
+            />
           </div>
         </th>
         <th
@@ -155,12 +155,14 @@ exports[`Storyshots Component API/Table Rich Table 1`] = `
         </th>
       </tr>
     </thead>
-    <tbody>
+    <tbody
+      className="fd-table__body"
+    >
       <tr
         className="fd-table__row"
       >
         <td
-          className="fd-table__cell"
+          className="fd-table__cell fd-table__cell--checkbox"
         >
           <div
             className="fd-form-item"
@@ -175,16 +177,14 @@ exports[`Storyshots Component API/Table Rich Table 1`] = `
             <label
               className="fd-form-label fd-checkbox__label"
               htmlFor="fd-mocked-short-id"
-            >
-              User
-            </label>
+            />
           </div>
         </td>
         <td
           className="fd-table__cell"
         >
           <span
-            className="fd-avatar fd-avatar--m fd-avatar--thumbnail"
+            className="fd-avatar fd-avatar--m fd-avatar--thumbnail fd-avatar--transparent"
             role="presentation"
             style={
               Object {
@@ -252,7 +252,7 @@ exports[`Storyshots Component API/Table Rich Table 1`] = `
         className="fd-table__row"
       >
         <td
-          className="fd-table__cell"
+          className="fd-table__cell fd-table__cell--checkbox"
         >
           <div
             className="fd-form-item"
@@ -267,16 +267,14 @@ exports[`Storyshots Component API/Table Rich Table 1`] = `
             <label
               className="fd-form-label fd-checkbox__label"
               htmlFor="fd-mocked-short-id"
-            >
-              Florence
-            </label>
+            />
           </div>
         </td>
         <td
           className="fd-table__cell"
         >
           <span
-            className="fd-avatar fd-avatar--m fd-avatar--thumbnail"
+            className="fd-avatar fd-avatar--m fd-avatar--thumbnail fd-avatar--transparent"
             role="presentation"
             style={
               Object {
@@ -344,7 +342,7 @@ exports[`Storyshots Component API/Table Rich Table 1`] = `
         className="fd-table__row"
       >
         <td
-          className="fd-table__cell"
+          className="fd-table__cell fd-table__cell--checkbox"
         >
           <div
             className="fd-form-item"
@@ -359,16 +357,14 @@ exports[`Storyshots Component API/Table Rich Table 1`] = `
             <label
               className="fd-form-label fd-checkbox__label"
               htmlFor="fd-mocked-short-id"
-            >
-              Mark
-            </label>
+            />
           </div>
         </td>
         <td
           className="fd-table__cell"
         >
           <span
-            className="fd-avatar fd-avatar--m fd-avatar--thumbnail"
+            className="fd-avatar fd-avatar--m fd-avatar--thumbnail fd-avatar--transparent"
             role="presentation"
             style={
               Object {
@@ -436,7 +432,7 @@ exports[`Storyshots Component API/Table Rich Table 1`] = `
         className="fd-table__row"
       >
         <td
-          className="fd-table__cell"
+          className="fd-table__cell fd-table__cell--checkbox"
         >
           <div
             className="fd-form-item"
@@ -451,16 +447,14 @@ exports[`Storyshots Component API/Table Rich Table 1`] = `
             <label
               className="fd-form-label fd-checkbox__label"
               htmlFor="fd-mocked-short-id"
-            >
-              Jenna
-            </label>
+            />
           </div>
         </td>
         <td
           className="fd-table__cell"
         >
           <span
-            className="fd-avatar fd-avatar--m fd-avatar--thumbnail"
+            className="fd-avatar fd-avatar--m fd-avatar--thumbnail fd-avatar--transparent"
             role="presentation"
             style={
               Object {

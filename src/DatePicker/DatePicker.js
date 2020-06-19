@@ -255,7 +255,7 @@ class DatePicker extends Component {
         this.props.onFocus(this.getCallbackData());
     }
 
-    updateDate = (date) => {
+    updateDate = (date, forceStayOpen) => {
         let closeCalendar = false;
         const { formattedDate } = this.state;
 
@@ -289,7 +289,7 @@ class DatePicker extends Component {
             });
         }
 
-        if (closeCalendar) {
+        if (!forceStayOpen && closeCalendar) {
             const popover = this.popoverRef && this.popoverRef.current;
             popover && popover.handleEscapeKey();
             this.setState({ isExpanded: false }, ()=> {
@@ -336,6 +336,7 @@ class DatePicker extends Component {
             openToDate,
             popoverProps,
             readOnly,
+            showToday,
             specialDays,
             validationState,
             weekdayStart,
@@ -390,6 +391,7 @@ class DatePicker extends Component {
                                 onChange={this.updateDate}
                                 openToDate={openToDate}
                                 ref={this.calendarRef}
+                                showToday={showToday}
                                 specialDays={specialDays}
                                 weekdayStart={weekdayStart} />
                         </>

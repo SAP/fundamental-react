@@ -127,10 +127,16 @@ class Pagination extends Component {
     * @returns {object} returns a pagination link.
     */
     getPaginationLink = (index, pageNumberOffset) => {
+        const isSelected = this.state.selectedPage === index + pageNumberOffset;
+        const paginationLinkClasses = classnames(
+            'fd-pagination__link',
+            {
+                'is-selected': isSelected
+            }
+        );
         return (<a
             {...this.props.linkProps}
-            aria-selected={this.state.selectedPage === index + pageNumberOffset}
-            className='fd-pagination__link'
+            className={paginationLinkClasses}
             href='#'
             key={index}
             onClick={this.pageClicked}>
