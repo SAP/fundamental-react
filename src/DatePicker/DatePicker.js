@@ -333,6 +333,7 @@ class DatePicker extends Component {
             localizedText,
             onBlur,
             onDatePickerClose,
+            openToDate,
             popoverProps,
             readOnly,
             showToday,
@@ -388,6 +389,7 @@ class DatePicker extends Component {
                                 locale={locale}
                                 localizedText={localizedText}
                                 onChange={this.updateDate}
+                                openToDate={openToDate}
                                 ref={this.calendarRef}
                                 showToday={showToday}
                                 specialDays={specialDays}

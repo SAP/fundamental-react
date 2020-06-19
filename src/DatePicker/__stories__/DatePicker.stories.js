@@ -22,7 +22,7 @@ export default {
 
 function dateKnobToDate(name, defaultValue) {
     const stringTimestamp = date(name, defaultValue);
-    return new Date(stringTimestamp);
+    return moment(stringTimestamp);
 }
 
 const afterDateDefault = new Date(new Date().getFullYear() + 1, 0, 1);
@@ -75,6 +75,10 @@ export const disabled = () => (
     <DatePicker disabled />
 );
 
+export const openToDate = () => {
+    const _openToDate = moment().year('2000').month(0).date(1);
+    return <DatePicker openToDate={_openToDate} />;
+};
 
 disabled.storyName = 'Disabled';
 
@@ -242,6 +246,7 @@ export const dev = () => (
         disabledDates={[dateKnobToDate('disable between dates (1)', disabledDateFirstDefault),
             dateKnobToDate('disable between dates (2)', disabledDateSecondDefault)]}
         locale={text('locale', 'en')}
+        openToDate={dateKnobToDate('open to date', new Date())}
         validationState={select('Validation State',
             {
                 'none': '',

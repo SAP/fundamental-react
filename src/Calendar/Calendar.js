@@ -16,7 +16,7 @@ class Calendar extends Component {
     constructor(props) {
         super(props);
 
-        let currentDateDisplayed = moment().startOf('day');
+        let currentDateDisplayed = props.openToDate || moment().startOf('day');
         let selectedDateOrDates = !props.enableRangeSelection ? moment({ year: 0 }) : [];
 
         const customDateEmpty = (!props.customDate || (props.customDate && props.customDate.length === 0));
@@ -39,7 +39,7 @@ class Calendar extends Component {
             selectedDate: !props.enableRangeSelection ? selectedDateOrDates : null,
             showMonths: false,
             showYears: false,
-            currentFocusDay: moment().startOf('day'),
+            currentFocusDay: currentDateDisplayed.startOf('day'),
             currentFocusYear: currentDateDisplayed.year(),
             currentFocusMonth: currentDateDisplayed.month()
         };
@@ -674,6 +674,7 @@ class Calendar extends Component {
             focusOnInit,
             localizedText,
             monthListProps,
+            openToDate,
             yearListProps,
             tableProps,
             tableHeaderProps,
@@ -758,6 +759,8 @@ Calendar.propTypes = {
     }),
     /** Additional props to be spread to the month\'s `<table>` element */
     monthListProps: PropTypes.object,
+    /** Date to focus when the calendar is loaded and no date is selected */
+    openToDate: PropTypes.instanceOf(moment),
     /** Set to **true** if the Today button should be displayed */
     showToday: PropTypes.bool,
     /** Object with special dates and special date types in shape of `{\'YYYYMMDD\': type}`. Type must be a number between 1-20 */
