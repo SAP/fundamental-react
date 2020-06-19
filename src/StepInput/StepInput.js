@@ -60,29 +60,30 @@ const StepInput = React.forwardRef(({
         if (ifValeEqualsSign(inputValue)) {
             return;
         }
-        updateInputValue(inputValue - 1);
-        onChange(inputValue - 1);
+        handleChange(inputValue - 1);
     });
 
     const increaseValue = useCallback(() => {
         if (ifValeEqualsSign(inputValue)) {
             return;
         }
-        updateInputValue(inputValue + 1);
-        onChange(inputValue + 1);
+        handleChange(inputValue + 1);
     });
 
     const onChangeInputValue = useCallback((event) => {
         const currentValue = event.target.value;
         const isNumber = !isNaN(parseInt(currentValue, 10));
         if (isNumber) {
-            updateInputValue(parseInt(currentValue, 10));
-            onChange(parseInt(currentValue, 10));
+            handleChange(parseInt(currentValue, 10));
         } else if (ifValeEqualsSign(currentValue)) {
-            updateInputValue(currentValue);
-            onChange(currentValue);
+            handleChange(currentValue);
         }
     });
+
+    const handleChange = useCallback((value) => {
+        updateInputValue(value);
+        onChange(value);
+    })
 
     const onKeyDownInput = useCallback((event) => {
         switch (keycode(event)) {
