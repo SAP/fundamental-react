@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.11.0-rc.15](https://github.com/SAP/fundamental-react/compare/v0.11.0-rc.14...v0.11.0-rc.15) (2020-06-19)
+
+
+### Bug Fixes
+
+* add polyfills for ie11 issues ([#1099](https://github.com/SAP/fundamental-react/issues/1099)) ([7c5bae2](https://github.com/SAP/fundamental-react/commit/7c5bae23f2f48e1238e590a25c2d9513a52d27e3))
+
 ## [0.11.0-rc.14](https://github.com/SAP/fundamental-react/compare/v0.11.0-rc.13...v0.11.0-rc.14) (2020-06-19)
 
 
