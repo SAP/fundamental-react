@@ -4,10 +4,16 @@ exports[`Storyshots Component API/SideNav Compact 1`] = `
 <div
   dir="ltr"
 >
-  <nav
+  <div
     className="fd-side-nav"
   >
-    <div
+    <a
+      className="fd-side-nav__skip-link"
+      href="#content"
+    >
+      Skip navigation
+    </a>
+    <nav
       className="fd-side-nav__main-navigation"
     >
       <ul
@@ -89,8 +95,8 @@ exports[`Storyshots Component API/SideNav Compact 1`] = `
           </a>
         </li>
       </ul>
-    </div>
-  </nav>
+    </nav>
+  </div>
 </div>
 `;
 
@@ -98,10 +104,16 @@ exports[`Storyshots Component API/SideNav Condensed 1`] = `
 <div
   dir="ltr"
 >
-  <nav
+  <div
     className="fd-side-nav fd-side-nav--condensed"
   >
-    <div
+    <a
+      className="fd-side-nav__skip-link"
+      href="#content"
+    >
+      Skip navigation
+    </a>
+    <nav
       className="fd-side-nav__main-navigation"
     >
       <ul
@@ -116,8 +128,8 @@ exports[`Storyshots Component API/SideNav Condensed 1`] = `
             onClick={[Function]}
           >
             <span
+              aria-hidden={true}
               className="fd-nested-list__icon sap-icon--home"
-              role="presentation"
             />
             <span
               className="fd-nested-list__title"
@@ -135,8 +147,8 @@ exports[`Storyshots Component API/SideNav Condensed 1`] = `
             onClick={[Function]}
           >
             <span
+              aria-hidden={true}
               className="fd-nested-list__icon sap-icon--cart"
-              role="presentation"
             />
             <span
               className="fd-nested-list__title"
@@ -154,8 +166,8 @@ exports[`Storyshots Component API/SideNav Condensed 1`] = `
             onClick={[Function]}
           >
             <span
+              aria-hidden={true}
               className="fd-nested-list__icon sap-icon--accept"
-              role="presentation"
             />
             <span
               className="fd-nested-list__title"
@@ -173,8 +185,8 @@ exports[`Storyshots Component API/SideNav Condensed 1`] = `
             onClick={[Function]}
           >
             <span
+              aria-hidden={true}
               className="fd-nested-list__icon sap-icon--alert"
-              role="presentation"
             />
             <span
               className="fd-nested-list__title"
@@ -192,8 +204,8 @@ exports[`Storyshots Component API/SideNav Condensed 1`] = `
             onClick={[Function]}
           >
             <span
+              aria-hidden={true}
               className="fd-nested-list__icon sap-icon--bell"
-              role="presentation"
             />
             <span
               className="fd-nested-list__title"
@@ -203,8 +215,8 @@ exports[`Storyshots Component API/SideNav Condensed 1`] = `
           </a>
         </li>
       </ul>
-    </div>
-  </nav>
+    </nav>
+  </div>
 </div>
 `;
 
@@ -212,10 +224,16 @@ exports[`Storyshots Component API/SideNav One Level 1`] = `
 <div
   dir="ltr"
 >
-  <nav
+  <div
     className="fd-side-nav"
   >
-    <div
+    <a
+      className="fd-side-nav__skip-link"
+      href="#content"
+    >
+      Skip navigation
+    </a>
+    <nav
       className="fd-side-nav__main-navigation"
     >
       <ul
@@ -297,11 +315,12 @@ exports[`Storyshots Component API/SideNav One Level 1`] = `
           </a>
         </li>
       </ul>
-    </div>
-    <div
+    </nav>
+    <nav
       className="fd-side-nav__utility"
     >
       <ul
+        aria-label="Utility Menu"
         className="fd-nested-list--text-only fd-nested-list level-1"
       >
         <li
@@ -335,8 +354,8 @@ exports[`Storyshots Component API/SideNav One Level 1`] = `
           </a>
         </li>
       </ul>
-    </div>
-  </nav>
+    </nav>
+  </div>
 </div>
 `;
 
@@ -344,10 +363,16 @@ exports[`Storyshots Component API/SideNav Primary 1`] = `
 <div
   dir="ltr"
 >
-  <nav
+  <div
     className="fd-side-nav"
   >
-    <div
+    <a
+      className="fd-side-nav__skip-link"
+      href="#content"
+    >
+      Skip navigation
+    </a>
+    <nav
       className="fd-side-nav__main-navigation"
     >
       <ul
@@ -429,8 +454,8 @@ exports[`Storyshots Component API/SideNav Primary 1`] = `
           </a>
         </li>
       </ul>
-    </div>
-  </nav>
+    </nav>
+  </div>
 </div>
 `;
 
@@ -438,10 +463,16 @@ exports[`Storyshots Component API/SideNav With Icons 1`] = `
 <div
   dir="ltr"
 >
-  <nav
+  <div
     className="fd-side-nav"
   >
-    <div
+    <a
+      className="fd-side-nav__skip-link"
+      href="#content"
+    >
+      Skip navigation
+    </a>
+    <nav
       className="fd-side-nav__main-navigation"
     >
       <ul
@@ -457,8 +488,8 @@ exports[`Storyshots Component API/SideNav With Icons 1`] = `
             onClick={[Function]}
           >
             <span
+              aria-hidden={true}
               className="fd-nested-list__icon sap-icon--home"
-              role="presentation"
             />
             <span
               className="fd-nested-list__title"
@@ -476,8 +507,8 @@ exports[`Storyshots Component API/SideNav With Icons 1`] = `
             onClick={[Function]}
           >
             <span
+              aria-hidden={true}
               className="fd-nested-list__icon sap-icon--home"
-              role="presentation"
             />
             <span
               className="fd-nested-list__title"
@@ -495,8 +526,8 @@ exports[`Storyshots Component API/SideNav With Icons 1`] = `
             onClick={[Function]}
           >
             <span
+              aria-hidden={true}
               className="fd-nested-list__icon sap-icon--home"
-              role="presentation"
             />
             <span
               className="fd-nested-list__title"
@@ -514,8 +545,8 @@ exports[`Storyshots Component API/SideNav With Icons 1`] = `
             onClick={[Function]}
           >
             <span
+              aria-hidden={true}
               className="fd-nested-list__icon sap-icon--home"
-              role="presentation"
             />
             <span
               className="fd-nested-list__title"
@@ -533,8 +564,8 @@ exports[`Storyshots Component API/SideNav With Icons 1`] = `
             onClick={[Function]}
           >
             <span
+              aria-hidden={true}
               className="fd-nested-list__icon sap-icon--home"
-              role="presentation"
             />
             <span
               className="fd-nested-list__title"
@@ -544,8 +575,8 @@ exports[`Storyshots Component API/SideNav With Icons 1`] = `
           </a>
         </li>
       </ul>
-    </div>
-  </nav>
+    </nav>
+  </div>
 </div>
 `;
 
@@ -553,10 +584,16 @@ exports[`Storyshots Component API/SideNav With Sub List 1`] = `
 <div
   dir="ltr"
 >
-  <nav
+  <div
     className="fd-side-nav"
   >
-    <div
+    <a
+      className="fd-side-nav__skip-link"
+      href="#content"
+    >
+      Skip navigation
+    </a>
+    <nav
       className="fd-side-nav__main-navigation"
     >
       <ul
@@ -583,7 +620,6 @@ exports[`Storyshots Component API/SideNav With Sub List 1`] = `
           <div
             className="fd-nested-list__content has-child"
             onClick={[Function]}
-            tabIndex="0"
           >
             <a
               className="fd-nested-list__link"
@@ -596,19 +632,20 @@ exports[`Storyshots Component API/SideNav With Sub List 1`] = `
                 Link Item 2
               </span>
             </a>
-            <a
+            <button
               aria-controls="fd-mocked-short-id"
               aria-expanded={false}
               aria-haspopup="true"
-              className="fd-nested-list__expand-icon"
-              href="#"
-              tabIndex="-1"
+              aria-label="Expand submenu"
+              className="fd-button fd-nested-list__button"
+              onClick={[Function]}
+              type="button"
             />
           </div>
           <ul
             aria-expanded={false}
             aria-hidden={true}
-            className="fd-nested-list--text-only fd-nested-list level-1"
+            className="fd-nested-list--text-only fd-nested-list level-2"
             id="fd-mocked-short-id"
           >
             <li
@@ -709,7 +746,6 @@ exports[`Storyshots Component API/SideNav With Sub List 1`] = `
           <div
             className="fd-nested-list__content has-child"
             onClick={[Function]}
-            tabIndex="0"
           >
             <a
               className="fd-nested-list__link"
@@ -722,19 +758,20 @@ exports[`Storyshots Component API/SideNav With Sub List 1`] = `
                 Link Item 4
               </span>
             </a>
-            <a
+            <button
               aria-controls="fd-mocked-short-id"
               aria-expanded={false}
               aria-haspopup="true"
-              className="fd-nested-list__expand-icon"
-              href="#"
-              tabIndex="-1"
+              aria-label="Expand submenu"
+              className="fd-button fd-nested-list__button"
+              onClick={[Function]}
+              type="button"
             />
           </div>
           <ul
             aria-expanded={false}
             aria-hidden={true}
-            className="fd-nested-list--text-only fd-nested-list level-1"
+            className="fd-nested-list--text-only fd-nested-list level-2"
             id="fd-mocked-short-id"
           >
             <li
@@ -815,8 +852,8 @@ exports[`Storyshots Component API/SideNav With Sub List 1`] = `
           </a>
         </li>
       </ul>
-    </div>
-  </nav>
+    </nav>
+  </div>
 </div>
 `;
 
@@ -824,10 +861,16 @@ exports[`Storyshots Component API/SideNav With Title 1`] = `
 <div
   dir="ltr"
 >
-  <nav
+  <div
     className="fd-side-nav"
   >
-    <div
+    <a
+      className="fd-side-nav__skip-link"
+      href="#content"
+    >
+      Skip navigation
+    </a>
+    <nav
       className="fd-side-nav__main-navigation"
     >
       <ul
@@ -914,8 +957,8 @@ exports[`Storyshots Component API/SideNav With Title 1`] = `
           </a>
         </li>
       </ul>
-    </div>
-    <div
+    </nav>
+    <nav
       className="fd-side-nav__main-navigation"
     >
       <ul
@@ -957,7 +1000,7 @@ exports[`Storyshots Component API/SideNav With Title 1`] = `
           </a>
         </li>
       </ul>
-    </div>
-  </nav>
+    </nav>
+  </div>
 </div>
 `;

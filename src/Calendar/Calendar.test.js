@@ -33,7 +33,9 @@ describe('<Calendar />', () => {
     const rangeSelect = <Calendar enableRangeSelection onChange={mockOnChange} />;
     const disablePast = <Calendar disablePastDates />;
     const disableFuture = <Calendar disableFutureDates />;
+    const openToDate = <Calendar openToDate={moment().year('2000').month(0).date(1)} />;
     const weekdayStart = (_weekdayStart = 0) => <Calendar weekdayStart={_weekdayStart} />;
+    const showTodayButton = <Calendar showToday />;
 
     test('create calendar components', () => {
         mount(defaultCalendar);
@@ -48,6 +50,7 @@ describe('<Calendar />', () => {
         mount(disabledWeekDayFakeDays);
         mount(rangeSelect);
         mount(weekdayStart());
+        mount(openToDate);
     });
 
     test('show/hide months', () => {
@@ -333,6 +336,30 @@ describe('<Calendar />', () => {
         expect(selectedDate.date()).toEqual(currentDateDisplayed.date());
     });
 
+    test('click on Today button', () => {
+        const wrapper = mount(showTodayButton);
+        // select a different day first
+        wrapper
+            .find(
+                'table.fd-calendar__table tbody.fd-calendar__group tr.fd-calendar__row td.fd-calendar__item:not(.fd-calendar__item--other-month)'
+            )
+            .at(0)
+            .simulate('click');
+
+        // now click Today
+        wrapper
+            .find(
+                'header.fd-calendar__header button.fd-button--transparent.fd-button--compact'
+            )
+            .at(4)
+            .simulate('click');
+
+        let selectedDate = moment(new Date(wrapper.state('selectedDate')));
+        let todayDate = moment(new Date(wrapper.state('todayDate')));
+
+        expect(selectedDate.date()).toEqual(todayDate.date());
+    });
+
     test('click on day with range enabled', () => {
         const wrapper = mount(rangeSelect);
         // select first day of month
@@ -412,6 +439,21 @@ describe('<Calendar />', () => {
         expect(newDateDisplayed.date()).toEqual(currentDateDisplayed.date());
 
         expect(wrapper.state('arrSelectedDates').length).toEqual(2);
+    });
+
+    describe('openToDate', () => {
+        test('should open today date if not specified', () => {
+            let wrapper = mount(defaultCalendar);
+
+            expect(wrapper.state('currentDateDisplayed')).toEqual(moment().startOf('day'));
+        });
+
+        test('should open to specified date when mounted', () => {
+            let wrapper = mount(openToDate);
+            const focusedDateElement = wrapper.find('[data-is-focused=true] span');
+
+            expect(focusedDateElement.prop('aria-label')).toEqual('January 1, 2000');
+        });
     });
 
     describe('weekdayStart', () => {

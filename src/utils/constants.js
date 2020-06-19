@@ -63,14 +63,6 @@ export const IMAGE_TYPES = [
     'circle'
 ];
 
-export const INLINE_HELP_PLACEMENTS = [
-    'bottom-right',
-    'bottom-left',
-    'right',
-    'left',
-    'bottom-center'
-];
-
 export const POPOVER_TYPES = [
     true,
     'dialog',
