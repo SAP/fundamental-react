@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.11.0-rc.14](https://github.com/SAP/fundamental-react/compare/v0.11.0-rc.13...v0.11.0-rc.14) (2020-06-19)
+
+
+### Features
+
+* openToDate prop for Calendar ([#1096](https://github.com/SAP/fundamental-react/issues/1096)) ([df9399e](https://github.com/SAP/fundamental-react/commit/df9399efe7f937430bc5ba33357b2e7370573706))
+
 ## [0.11.0-rc.13](https://github.com/SAP/fundamental-react/compare/v0.11.0-rc.12...v0.11.0-rc.13) (2020-06-19)
 
 
