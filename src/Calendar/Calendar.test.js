@@ -34,6 +34,7 @@ describe('<Calendar />', () => {
     const disablePast = <Calendar disablePastDates />;
     const disableFuture = <Calendar disableFutureDates />;
     const weekdayStart = (_weekdayStart = 0) => <Calendar weekdayStart={_weekdayStart} />;
+    const showTodayButton = <Calendar showToday />;
 
     test('create calendar components', () => {
         mount(defaultCalendar);
@@ -331,6 +332,30 @@ describe('<Calendar />', () => {
         let currentDateDisplayed = moment(new Date(wrapper.state('currentDateDisplayed')));
 
         expect(selectedDate.date()).toEqual(currentDateDisplayed.date());
+    });
+
+    test('click on Today button', () => {
+        const wrapper = mount(showTodayButton);
+        // select a different day first
+        wrapper
+            .find(
+                'table.fd-calendar__table tbody.fd-calendar__group tr.fd-calendar__row td.fd-calendar__item:not(.fd-calendar__item--other-month)'
+            )
+            .at(0)
+            .simulate('click');
+
+        // now click Today
+        wrapper
+            .find(
+                'header.fd-calendar__header button.fd-button--transparent.fd-button--compact'
+            )
+            .at(4)
+            .simulate('click');
+
+        let selectedDate = moment(new Date(wrapper.state('selectedDate')));
+        let todayDate = moment(new Date(wrapper.state('todayDate')));
+
+        expect(selectedDate.date()).toEqual(todayDate.date());
     });
 
     test('click on day with range enabled', () => {

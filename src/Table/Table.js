@@ -4,8 +4,8 @@ import React, { useEffect } from 'react';
 
 /** A **Table** is a set of tabular data. Line items can support `data`, `images` and `actions`. */
 const Table = React.forwardRef(({ headers, tableData, className, tableBodyClassName,
-    tableBodyProps, tableBodyRowProps, tableCellClassName, tableHeaderClassName, tableHeaderProps,
-    tableHeaderRowClassName, tableHeaderRowProps, tableRowClassName, disableStyles, ...props }, ref) => {
+    tableBodyProps, tableBodyRowProps, tableCellClassName, tableCheckboxClassName, tableHeaderClassName, tableHeaderProps,
+    tableHeaderRowClassName, tableHeaderRowProps, tableRowClassName, disableStyles, richTable, ...props }, ref) => {
 
     useEffect(() => {
         if (!disableStyles) {
@@ -28,6 +28,11 @@ const Table = React.forwardRef(({ headers, tableData, className, tableBodyClassN
         tableHeaderRowClassName
     );
 
+    const tableBodyClasses = classnames(
+        'fd-table__body',
+        tableBodyClassName
+    );
+
     const tableRowClasses = classnames(
         'fd-table__row',
         tableRowClassName
@@ -38,30 +43,53 @@ const Table = React.forwardRef(({ headers, tableData, className, tableBodyClassN
         tableCellClassName
     );
 
+    const tableCheckboxClasses = classnames(
+        'fd-table__cell',
+        'fd-table__cell--checkbox',
+        tableCheckboxClassName
+    );
+
+    let checkboxHeader;
+    let displayHeaders = headers;
+
+    if (richTable) {
+        checkboxHeader = <th className={tableCheckboxClasses}>{headers[0]}</th>;
+        displayHeaders = headers.splice(1, headers.length);
+    }
+
     return (
         <table {...props} className={tableClasses}
             ref={ref}>
             <thead className={tableHeaderClasses} {...tableHeaderProps}>
                 <tr className={tableHeaderRowClasses} {...tableHeaderRowProps}>
-                    {headers.map((header, index) => {
+                    {richTable && checkboxHeader}
+                    {displayHeaders.map((header, index) => {
                         return <th className={tableCellClasses} key={index}>{header}</th>;
                     })}
                 </tr>
             </thead>
-            <tbody {...tableBodyProps}>
+            <tbody className={tableBodyClasses} {...tableBodyProps}>
                 {tableData.map((row, index) => {
-                    let rowProps;
+                    let rowProps, checkboxCell;
+                    let displayRows = row.rowData;
                     if (tableBodyRowProps) {
                         rowProps = (typeof tableBodyRowProps === 'function'
                             ? tableBodyRowProps(row, index)
                             : tableBodyRowProps);
                     }
+
+                    if (richTable) {
+                        checkboxCell = <td className={tableCheckboxClasses}>{row.rowData[0]}</td>;
+                        displayRows = row.rowData.splice(1, row.rowData.length);
+                    }
+
                     return (
                         <tr
                             className={tableRowClasses}
                             {...rowProps}
                             key={index}>
-                            {row.rowData.map((rowData, cellIndex) => {
+                            {richTable && checkboxCell}
+                            {displayRows.map((rowData, cellIndex) => {
                                 return <td className={tableCellClasses} key={cellIndex}>{rowData}</td>;
                             })}
                         </tr>
@@ -87,6 +115,8 @@ Table.propTypes = {
     className: PropTypes.string,
     /** Internal use only */
     disableStyles: PropTypes.bool,
+    /** Set to **true** if Table contains checkboxes */
+    richTable: PropTypes.bool,
     /** Additional classes to be added to the `<tbody>` element */
     tableBodyClassName: PropTypes.string,
     /** Additional props to be spread to the `<tbody>` element */
@@ -99,6 +129,8 @@ Table.propTypes = {
     ]),
     /** Additional classes to be added to the `<td>` elements */
     tableCellClassName: PropTypes.string,
+    /** Additional classes to be added to the Checkbox in a rich table */
+    tableCheckboxClassName: PropTypes.string,
     /** Additional classes to be added to the `<thead>` element */
     tableHeaderClassName: PropTypes.string,
     /** Additional props to be spread to the `<thead>` element */

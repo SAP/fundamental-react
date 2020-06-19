@@ -820,6 +820,59 @@ exports[`Storyshots Component API/DatePicker Special Days 1`] = `
 </div>
 `;
 
+exports[`Storyshots Component API/DatePicker Today button 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    defaultValue=""
+    onChange={[Function]}
+    onFocus={[Function]}
+  >
+    <div
+      className="fd-popover"
+    >
+      <div
+        onFocus={[Function]}
+        onMouseDown={[Function]}
+        onTouchStart={[Function]}
+      >
+        <div
+          className="fd-popover__control"
+        >
+          <div
+            aria-expanded={false}
+            aria-haspopup="true"
+            className="fd-input-group--control fd-input-group"
+          >
+            <input
+              className="fd-input fd-input-group__input"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onKeyPress={[Function]}
+              placeholder="MM/DD/YYYY"
+              type="text"
+              value=""
+            />
+            <span
+              className="fd-input-group__addon fd-input-group__addon--button"
+            >
+              <button
+                aria-label="Choose date"
+                className="fd-button fd-button--transparent sap-icon--calendar fd-input-group__button"
+                onClick={[Function]}
+                type="button"
+              />
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Component API/DatePicker Validation States 1`] = `
 <div
   dir="ltr"

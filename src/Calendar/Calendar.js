@@ -375,6 +375,10 @@ class Calendar extends Component {
         }
     }
 
+    handleToday = () => {
+        this.dateClick(this.state.todayDate, this.props.enableRangeSelection, true);
+    }
+
     handleDayFocus = date => () => {
         this.setState({ currentFocusDay: date });
     }
@@ -387,7 +391,7 @@ class Calendar extends Component {
         this.setState({ currentFocusYear: year });
     }
 
-    dateClick = (day, isRangeEnabled) => {
+    dateClick = (day, isRangeEnabled, forceStayOpen) => {
         let selectedDates = [];
         if (typeof isRangeEnabled !== 'undefined' && isRangeEnabled) {
             selectedDates = this.state.arrSelectedDates;
@@ -406,9 +410,9 @@ class Calendar extends Component {
             arrSelectedDates: selectedDates
         }, function() {
             if (isRangeEnabled) {
-                this.props.onChange(selectedDates);
+                this.props.onChange(selectedDates, forceStayOpen);
             } else {
-                this.props.onChange(day);
+                this.props.onChange(day, forceStayOpen);
             }
         });
     };
@@ -451,6 +455,7 @@ class Calendar extends Component {
             this.props.localizedText.show12PreviousYears : this.props.localizedText.previousMonth;
         const nextButtonLabel = this.state.showYears ?
             this.props.localizedText.show12NextYears : this.props.localizedText.nextMonth;
+        const showToday = this.props.showToday && !this.state.showMonths && !this.state.showYears;
 
         return (
             <header className='fd-calendar__header'>
@@ -496,6 +501,17 @@ class Calendar extends Component {
                             onClick={this.handleNext}
                             option='transparent' />
                     </div>
+                    {showToday &&
+                        <div className='fd-calendar__action'>
+                            <Button
+                                compact
+                                disableStyles={this.props.disableStyles}
+                                onClick={this.handleToday}
+                                option={'transparent'}>
+                                {this.props.localizedText.todayLabel}
+                            </Button>
+                        </div>
+                    }
                 </div>
             </header>
         );
@@ -736,10 +752,14 @@ Calendar.propTypes = {
         /** aria-label for next button when years are displayed */
         show12NextYears: PropTypes.string,
         /** aria-label for previous button when years are displayed */
-        show12PreviousYears: PropTypes.string
+        show12PreviousYears: PropTypes.string,
+        /** aria-label for Today button if included */
+        todayLabel: PropTypes.string
     }),
     /** Additional props to be spread to the month\'s `<table>` element */
     monthListProps: PropTypes.object,
+    /** Set to **true** if the Today button should be displayed */
+    showToday: PropTypes.bool,
     /** Object with special dates and special date types in shape of `{\'YYYYMMDD\': type}`. Type must be a number between 1-20 */
     specialDays: PropTypes.object,
     /** Additional props to be spread to the `<tbody>` element */
@@ -763,7 +783,8 @@ Calendar.defaultProps = {
         nextMonth: 'Next month',
         previousMonth: 'Previous month',
         show12NextYears: 'Show 12 next years',
-        show12PreviousYears: 'Show 12 previous years'
+        show12PreviousYears: 'Show 12 previous years',
+        todayLabel: 'Today'
     },
     onChange: () => { },
     specialDays: {},
