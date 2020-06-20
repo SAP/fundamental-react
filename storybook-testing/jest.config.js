@@ -9,7 +9,8 @@ module.exports = {
         '^.+\\.(scss|css)$': 'babel-jest'
     },
     transformIgnorePatterns: [
-        'node_modules\/?!(react-syntax-highlighter)'
+        'node_modules\/?!(react-syntax-highlighter)',
+        'node_modules/core-js(-pure|-compat)'
     ],
     transform: {
         '^.+\\.stories\\.js$': '@storybook/addon-storyshots/injectFileName',
