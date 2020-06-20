@@ -349,7 +349,7 @@ describe('<Calendar />', () => {
         // now click Today
         wrapper
             .find(
-                'header.fd-calendar__header button.fd-button--transparent.fd-button--compact'
+                'header.fd-calendar__header button.fd-button--transparent'
             )
             .at(4)
             .simulate('click');
