@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import 'fundamental-styles/dist/segemented-button.css';
+import 'fundamental-styles/dist/segmented-button.css';
 
 /** Group a series of buttons together on a single line with the segmented button.
  * Only one of the options can be active at a time, the others remain or become inactive.
