@@ -8,7 +8,7 @@ class SideNavList extends React.Component {
     }
 
     render() {
-        const { children, className, hasParent, onItemSelect, open, selectedId, title, titleProps, isUtility, level, condensed, compact, ...rest } = this.props;
+        const { children, className, hasParent, onItemSelect, open, selectedId, title, titleProps, isUtility, level, condensed, compact, groupLabel, ...rest } = this.props;
 
         const sideNavListClasses = classnames(
             {
@@ -32,10 +32,12 @@ class SideNavList extends React.Component {
                 {...rest}
                 aria-expanded={hasParent && open}
                 aria-hidden={hasParent && !open}
+                aria-label={groupLabel}
                 className={sideNavListClasses}>
                 { title && <li {...titleProps} className='fd-nested-list__group-header'>{title}</li>}
                 {React.Children.toArray(children).map(child => {
                     return React.cloneElement(child, {
+                        condensed,
                         isSubItem: hasParent,
                         onItemSelect: onItemSelect,
                         selected: selectedId === child.props.id,
@@ -49,9 +51,9 @@ class SideNavList extends React.Component {
             sideNavList
             :
             (
-                <div className={sideNavContainerClass}>
+                <nav className={sideNavContainerClass}>
                     {sideNavList}
-                </div>
+                </nav>
             );
 
         return sideNav;
@@ -67,6 +69,8 @@ SideNavList.propTypes = {
     compact: PropTypes.bool,
     /** Internal use only */
     condensed: PropTypes.bool,
+    /** Localized label for menu group if title not included */
+    groupLabel: PropTypes.string,
     /** Internal use only */
     hasParent: PropTypes.bool,
     /** Display a separate utility menu separated from the main menu by a horizontal line */

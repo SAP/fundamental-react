@@ -16,11 +16,14 @@ const Select = React.forwardRef(({
     compact,
     disabled,
     disableStyles,
+    emptyAriaLabel,
     id,
+    includeEmptyOption,
     options,
     onClick,
     onSelect,
     placeholder,
+    readOnly,
     selectedKey,
     validationState,
     ...props
@@ -44,8 +47,10 @@ const Select = React.forwardRef(({
     let [selectedOptionKey, setSelectedOptionKey] = useState(selectedKey);
 
     const handleClick = (e) => {
-        setIsExpanded(!isExpanded);
-        onClick(e);
+        if (!disabled && !readOnly) {
+            setIsExpanded(!isExpanded);
+            onClick(e);
+        }
     };
 
     const handleSelect = (e, option) => {
@@ -158,12 +163,19 @@ const Select = React.forwardRef(({
         'fd-select__control',
         {
             'is-disabled': disabled,
+            'is-readonly': readOnly,
             [`is-${validationState?.state}`]: validationState?.state
         }
     );
 
-    const selected = options
+    const displayOptions = includeEmptyOption ? [{ text: '', key: 'emptyOption', ariaLabel: emptyAriaLabel }, ...options] : options;
+
+    const selected = displayOptions
         .find(option => typeof selectedOptionKey !== 'undefined' && option.key === selectedOptionKey);
+
+    const textContent = selected ? selected.text : placeholder;
+
+    const selectAriaLabel = (includeEmptyOption && !textContent) ? emptyAriaLabel : null;
 
     const selectControl = (
         <div
@@ -172,9 +184,9 @@ const Select = React.forwardRef(({
             id={id}
             onClick={handleClick}
             ref={divRef}>
-            <div className={selectControlClasses}>
-                {selected ? selected.text : placeholder}
-                <span className='fd-button fd-button--transparent sap-icon--slim-arrow-down fd-select__button' />
+            <div aria-disabled={disabled} className={selectControlClasses}>
+                <span aria-label={selectAriaLabel} className='fd-select__text-content'>{textContent}</span>
+                {!readOnly && <span className='fd-button fd-button--transparent sap-icon--slim-arrow-down fd-select__button' />}
             </div>
             {!isExpanded && validationState && (<FormMessage
                 disableStyles={disableStyles}
@@ -193,6 +205,7 @@ const Select = React.forwardRef(({
 
     return (
         <Popover
+            aria-disabled={disabled}
             body={
                 (<>
                     {validationState &&
@@ -206,9 +219,11 @@ const Select = React.forwardRef(({
                         className={listClassName}
                         compact={compact}
                         ref={ulRef}
-                        role='listbox'>
-                        {options.map(option => (
+                        role='listbox'
+                        tabIndex='-1'>
+                        {displayOptions.map(option => (
                             <List.Item
+                                aria-label={option.ariaLabel}
                                 aria-selected={selected?.key === option.key}
                                 key={option.key}
                                 onClick={(e) => handleSelect(e, option)}
@@ -223,7 +238,6 @@ const Select = React.forwardRef(({
                 </>)}
             control={selectControl}
             disableStyles={disableStyles}
-            disabled={disabled}
             noArrow
             onClickOutside={() => setIsExpanded(false)}
             placement='bottom-start'
@@ -244,8 +258,12 @@ Select.propTypes = {
     disabled: PropTypes.bool,
     /** Internal use only */
     disableStyles: PropTypes.bool,
+    /** Localized screen reader label for an empty option if included, or if no placeholder is included */
+    emptyAriaLabel: PropTypes.string,
     /** Value for the `id` attribute on the element */
     id: PropTypes.string,
+    /** Set to **true** to include an empty option. If true, also provide an `emptyAriaLabel` */
+    includeEmptyOption: PropTypes.bool,
     /** An array of objects with a key and text to render the selectable options */
     options: PropTypes.arrayOf(PropTypes.shape({
         key: PropTypes.string.isRequired,
@@ -253,6 +271,8 @@ Select.propTypes = {
     })),
     /** Localized placeholder text of the input */
     placeholder: PropTypes.string,
+    /** Set to **true** to enable readonly mode */
+    readOnly: PropTypes.bool,
     /** The key corresponding to the selected option */
     selectedKey: PropTypes.string,
     /** An object identifying a validation message.  The object will include properties for `state` and `text`; _e.g._, \`{ state: \'warning\', text: \'This is your last warning\' }\` */

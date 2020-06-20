@@ -1,3 +1,4 @@
+import Button from '../Button/Button';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -26,7 +27,7 @@ class SideNavListItem extends React.Component {
     };
 
     render() {
-        const { children, glyph, id, isSubItem, name, onClick, onItemSelect, selected, selectedId, url, ...props } = this.props;
+        const { children, condensed, glyph, id, isSubItem, name, onClick, onItemSelect, selected, selectedId, url, expandSubmenuLabel, ...props } = this.props;
         const nestedListId = shortid.generate();
         const getClasses = () => {
             return classnames(
@@ -53,8 +54,8 @@ class SideNavListItem extends React.Component {
                     } : null}>
                     {glyph ? (
                         <span
-                            className={`fd-nested-list__icon sap-icon--${glyph}`}
-                            role='presentation' />
+                            aria-hidden
+                            className={`fd-nested-list__icon sap-icon--${glyph}`} />
                     ) : null}
                     <span className='fd-nested-list__title'>
                         {name}
@@ -77,17 +78,18 @@ class SideNavListItem extends React.Component {
                         onClick={(e) => { /* eslint-disable jsx-a11y/no-noninteractive-tabindex */
                             onClick(e);
                             onItemSelect(e, id, hasChild);
-                            this.handleExpand();
-                        }}
-                        tabIndex='0'>
+                        }}>
                         {link}
-                        <a
+                        <Button
                             aria-controls={nestedListId}
                             aria-expanded={this.state.expanded}
                             aria-haspopup='true'
-                            className='fd-nested-list__expand-icon'
-                            href='#'
-                            tabIndex='-1' />
+                            aria-label={expandSubmenuLabel}
+                            className='fd-nested-list__button'
+                            disableStyles
+                            onClick={() => {
+                                this.handleExpand();
+                            }} />
                     </div>
                 );
             } else {
@@ -106,8 +108,8 @@ class SideNavListItem extends React.Component {
                             children: (<React.Fragment>
                                 {glyph ? (
                                     <span
-                                        className={`fd-nested-list__icon sap-icon--${glyph}`}
-                                        role='presentation' />
+                                        aria-hidden
+                                        className={`fd-nested-list__icon sap-icon--${glyph}`} />
                                 ) : null}
                                 <span className='fd-nested-list__title'>{child.props.children}</span>
                             </React.Fragment>),
@@ -140,8 +142,12 @@ class SideNavListItem extends React.Component {
 SideNavListItem.propTypes = {
     /** Node(s) to render within the component */
     children: PropTypes.node,
+    /** Internal use only */
+    condensed: PropTypes.bool,
     /** Set to **true** to have this item initially render as expanded and its children items shown */
     expanded: PropTypes.bool,
+    /** Localized text for the screen reader label for the button that expands submenus. */
+    expandSubmenuLabel: PropTypes.string,
     /** The icon to include. See the icon page for the list of icons */
     glyph: PropTypes.string,
     /** Value for the `id` attribute on the element */
@@ -163,6 +169,7 @@ SideNavListItem.propTypes = {
 };
 
 SideNavListItem.defaultProps = {
+    condensed: false,
     onClick: () => {}
 };
 

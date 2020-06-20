@@ -24,7 +24,7 @@ const Avatar = React.forwardRef(({ glyph, size, circle, transparent, border, col
         {
             [`fd-avatar--${size}`]: !!size,
             [`sap-icon--${glyph}`]: !!glyph,
-            [`fd-has-background-color-accent-${color}`]: !!color,
+            [`fd-avatar--accent-color-${color}`]: !!color,
             'fd-avatar--thumbnail': backgroundImageUrl,
             'fd-avatar--placeholder': placeholder,
             'fd-avatar--tile': tile,
