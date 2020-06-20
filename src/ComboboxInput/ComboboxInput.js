@@ -17,7 +17,6 @@ const ComboboxInput = React.forwardRef(({
     compact,
     className,
     disabled,
-    disableStyles,
     popoverProps,
     inputProps,
     buttonProps,
@@ -66,7 +65,6 @@ const ComboboxInput = React.forwardRef(({
                 (<>
                     {validationState &&
                     <FormMessage
-                        disableStyles={disableStyles}
                         type={validationState.state}>
                         {validationState.text}
                     </FormMessage>
@@ -88,21 +86,18 @@ const ComboboxInput = React.forwardRef(({
                     aria-haspopup='true'
                     className={inputGroupClass}
                     compact={compact}
-                    disableStyles={disableStyles}
                     disabled={disabled}
                     onClick={handleClick}
                     validationState={!isExpanded ? validationState : null}>
                     <FormInput
                         {...inputProps}
                         compact={compact}
-                        disableStyles={disableStyles}
                         onChange={() => null}
                         placeholder={placeholder}
                         value={selected && selected.text} />
                     <InputGroup.Addon isButton>
                         <Button
                             {...buttonProps}
-                            disableStyles={disableStyles}
                             glyph='navigation-down-arrow'
                             option='transparent'
                             ref={ref} />
@@ -110,7 +105,6 @@ const ComboboxInput = React.forwardRef(({
                 </InputGroup>
             }
             disableKeyPressHandler
-            disableStyles={disableStyles}
             disabled={disabled}
             noArrow
             onClickOutside={handleClickOutside}
@@ -131,8 +125,6 @@ ComboboxInput.propTypes = {
     compact: PropTypes.bool,
     /** Set to **true** to mark component as disabled and make it non-interactive */
     disabled: PropTypes.bool,
-    /** Internal use only */
-    disableStyles: PropTypes.bool,
     /** Additional props to be spread to the `<input>` element */
     inputProps: PropTypes.object,
     /** An array of objects with a key and text to render the selectable options */

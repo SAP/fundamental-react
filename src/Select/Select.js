@@ -8,6 +8,10 @@ import Popover from '../Popover/Popover';
 import PropTypes from 'prop-types';
 import tryFocus from '../utils/tryFocus';
 import React, { useEffect, useRef, useState } from 'react';
+import 'fundamental-styles/dist/icon.css';
+import 'fundamental-styles/dist/button.css';
+import 'fundamental-styles/dist/select.css';
+
 
 /** A **Select** component lets the user select one of the different options.
 It is more flexible than the normal Select. Use with the **List** component. */
@@ -15,7 +19,6 @@ const Select = React.forwardRef(({
     className,
     compact,
     disabled,
-    disableStyles,
     emptyAriaLabel,
     id,
     includeEmptyOption,
@@ -28,14 +31,6 @@ const Select = React.forwardRef(({
     validationState,
     ...props
 }, ref) => {
-
-    useEffect(() => {
-        if (!disableStyles) {
-            require('fundamental-styles/dist/button.css');
-            require('fundamental-styles/dist/icon.css');
-            require('fundamental-styles/dist/select.css');
-        }
-    }, []);
 
     const internalDivRef = useRef(null);
     const divRef = ref || internalDivRef;
@@ -189,7 +184,6 @@ const Select = React.forwardRef(({
                 {!readOnly && <span className='fd-button fd-button--transparent sap-icon--slim-arrow-down fd-select__button' />}
             </div>
             {!isExpanded && validationState && (<FormMessage
-                disableStyles={disableStyles}
                 type={validationState.state}>
                 {validationState.text}
             </FormMessage>)}
@@ -210,7 +204,6 @@ const Select = React.forwardRef(({
                 (<>
                     {validationState &&
                     <FormMessage
-                        disableStyles={disableStyles}
                         type={validationState.state}>
                         {validationState.text}
                     </FormMessage>
@@ -237,7 +230,6 @@ const Select = React.forwardRef(({
                     </List>
                 </>)}
             control={selectControl}
-            disableStyles={disableStyles}
             noArrow
             onClickOutside={() => setIsExpanded(false)}
             placement='bottom-start'
@@ -256,8 +248,6 @@ Select.propTypes = {
     compact: PropTypes.bool,
     /** Set to **true** to mark component as disabled and make it non-interactive */
     disabled: PropTypes.bool,
-    /** Internal use only */
-    disableStyles: PropTypes.bool,
     /** Localized screen reader label for an empty option if included, or if no placeholder is included */
     emptyAriaLabel: PropTypes.string,
     /** Value for the `id` attribute on the element */

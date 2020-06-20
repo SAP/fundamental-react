@@ -1,15 +1,10 @@
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import React, { useEffect } from 'react';
+import React from 'react';
+import 'fundamental-styles/dist/link.css';
 
 /** Use an **Link** component to display a link. */
-const Link = React.forwardRef(({ className, children, disabled, disableStyles, subtle, ...props }, ref) => {
-
-    useEffect(() => {
-        if (!disableStyles) {
-            require('fundamental-styles/dist/link.css');
-        }
-    }, []);
+const Link = React.forwardRef(({ className, children, disabled, subtle, ...props }, ref) => {
 
     const imageClasses = classnames(
         'fd-link',
@@ -39,7 +34,6 @@ Link.propTypes = {
     className: PropTypes.string,
     /** Set to **true** to mark component as disabled and make it non-interactive */
     disabled: PropTypes.bool,
-    disableStyles: PropTypes.bool,
     /** Set to **true** to apply subtle styling */
     subtle: PropTypes.bool
 };

@@ -2,24 +2,17 @@ import { BUSY_INDICATOR_SIZES } from '../utils/constants';
 import classnames from 'classnames';
 import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import PropTypes from 'prop-types';
-import React, { useEffect } from 'react';
+import React from 'react';
+import 'fundamental-styles/dist/busy-indicator.css';
 
 /** A **Busy Indicator** informs the user of an ongoing operation. */
 const BusyIndicator = React.forwardRef(({
     className,
     show,
     size,
-    disableStyles,
     localizedText,
     ...props
 }, ref) => {
-
-    useEffect(() => {
-        if (!disableStyles) {
-            require('fundamental-styles/dist/icon.css');
-            require('fundamental-styles/dist/busy-indicator.css');
-        }
-    }, []);
 
     const busyIndicatorClasses = classnames(
         {
@@ -51,8 +44,6 @@ BusyIndicator.displayName = 'BusyIndicator';
 BusyIndicator.propTypes = {
     /** CSS class(es) to add to the element */
     className: PropTypes.string,
-    /** Internal use only */
-    disableStyles: PropTypes.bool,
     /** Localized text to be updated based on location/language */
     localizedText: CustomPropTypes.i18n({
         /** aria-label for Busy Indicator component */

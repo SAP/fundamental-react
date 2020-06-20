@@ -11,6 +11,7 @@ import PropTypes from 'prop-types';
 import shortid from '../utils/shortId';
 import Token from '../Token/Token';
 import React, { Component } from 'react';
+import 'fundamental-styles/dist/tokenizer.css';
 
 /** A **MultiInput** allows users to enter multiple values which are displayed as a tokens. It provides an editable input field for filtering the list,
  * and a dropdown menu with a list of the available options.
@@ -24,12 +25,6 @@ class MultiInput extends Component {
             bShowList: false,
             tags: []
         };
-    }
-
-    componentDidMount() {
-        if (!this.props.disableStyles) {
-            require('fundamental-styles/dist/tokenizer.css');
-        }
     }
 
     // create tags to display in dropdown list
@@ -139,7 +134,6 @@ class MultiInput extends Component {
             compact,
             className,
             disabled,
-            disableStyles,
             data,
             listProps,
             inputProps,
@@ -178,7 +172,6 @@ class MultiInput extends Component {
             <List
                 className={listClassName}
                 compact={compact}
-                disableStyles={disableStyles}
                 {...listProps}>
                 {this.createTagList(data)}
             </List>
@@ -191,7 +184,6 @@ class MultiInput extends Component {
                     (<>
                         {validationState &&
                         <FormMessage
-                            disableStyles={disableStyles}
                             type={validationState.state}>
                             {validationState.text}
                         </FormMessage>
@@ -205,7 +197,6 @@ class MultiInput extends Component {
                         aria-haspopup='true'
                         className={inputGroupClasses}
                         compact={compact}
-                        disableStyles={disableStyles}
                         disabled={disabled}
                         onClick={this.showHideTagList}
                         validationState={!this.state.bShowList ? validationState : null}>
@@ -216,20 +207,17 @@ class MultiInput extends Component {
                                     {...inputProps}
                                     className='fd-input-group__input fd-tokenizer__input'
                                     compact={compact}
-                                    disableStyles={disableStyles}
                                     placeholder={placeholder} />
                             </div>
                         </div>
                         <InputGroup.Addon isButton>
                             <Button
                                 {...buttonProps}
-                                disableStyles={disableStyles}
                                 glyph='value-help'
                                 option='transparent' />
                         </InputGroup.Addon>
                     </InputGroup>
                 }
-                disableStyles={disableStyles}
                 disabled={disabled}
                 noArrow
                 onClickOutside={this.handleClickOutside}
@@ -251,8 +239,6 @@ MultiInput.propTypes = {
     compact: PropTypes.bool,
     /** Set to **true** to mark component as disabled and make it non-interactive */
     disabled: PropTypes.bool,
-    /** Internal use only */
-    disableStyles: PropTypes.bool,
     /** Additional props to be spread to the `<input>` element */
     inputProps: PropTypes.object,
     /** Additional props to be spread to the `<ul>` element */

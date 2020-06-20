@@ -100,7 +100,6 @@ class SearchInput extends PureComponent {
 
     render() {
         const {
-            disableStyles,
             placeholder,
             inShellbar,
             onEnter,
@@ -131,7 +130,7 @@ class SearchInput extends PureComponent {
         ) : inputGroupClasses;
         let filteredResult = this.state.value && this.props.searchList ? this.filterList(this.props.searchList, this.state.value) : this.props.searchList;
         const popoverBody = (
-            <Menu disableStyles={disableStyles}>
+            <Menu>
                 <Menu.List {...listProps}>
                     {filteredResult && filteredResult.length > 0 ? (
                         filteredResult.map((item, index) => {
@@ -161,7 +160,6 @@ class SearchInput extends PureComponent {
                         (<>
                             {validationState &&
                                 <FormMessage
-                                    disableStyles={disableStyles}
                                     type={validationState.state}>
                                     {validationState.text}
                                 </FormMessage>
@@ -173,11 +171,9 @@ class SearchInput extends PureComponent {
                             {...inputGroupProps}
                             className={inputGroupClasses}
                             compact={compact}
-                            disableStyles={disableStyles}
                             validationState={!this.state.isExpanded ? validationState : null}>
                             <FormInput
                                 {...inputProps}
-                                disableStyles={disableStyles}
                                 onChange={this.handleChange}
                                 onClick={this.handleClick}
                                 onKeyPress={this.handleKeyPress}
@@ -187,7 +183,6 @@ class SearchInput extends PureComponent {
                             {!noSearchBtn && (
                                 <InputGroup.Addon {...inputGroupAddonProps} isButton>
                                     <Button {...searchBtnProps}
-                                        disableStyles={disableStyles}
                                         glyph='search'
                                         onClick={this.handleClick}
                                         option='transparent' />
@@ -196,7 +191,6 @@ class SearchInput extends PureComponent {
                         </InputGroup>
                     }
                     disableKeyPressHandler
-                    disableStyles={disableStyles}
                     noArrow
                     onClickOutside={this.handleClickOutside}
                     show={this.state.isExpanded}
@@ -213,8 +207,6 @@ SearchInput.propTypes = {
     className: PropTypes.string,
     /** Set to **true** to enable compact mode */
     compact: PropTypes.bool,
-    /** Internal use only */
-    disableStyles: PropTypes.bool,
     /** Props to be spread to the InputGroupAddon component */
     inputGroupAddonProps: PropTypes.object,
     /** Props to be spread to the InputGroup component */

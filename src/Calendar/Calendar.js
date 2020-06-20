@@ -7,6 +7,7 @@ import moment from 'moment';
 import PropTypes from 'prop-types';
 import { isDateBetween, isEnabledDate } from '../utils/dateUtils';
 import React, { Component } from 'react';
+import 'fundamental-styles/dist/calendar.css';
 
 /** A **Calendar** is commonly used as the contents of a **Popover** when composing a **DatePicker**.
 It is rarely used on its own as a standalone component. */
@@ -48,9 +49,6 @@ class Calendar extends Component {
     }
 
     componentDidMount = () => {
-        if (!this.props.disableStyles) {
-            require('fundamental-styles/dist/calendar.css');
-        }
         this.gridManager = new GridManager(this.getGridOptions());
     }
 
@@ -464,7 +462,6 @@ class Calendar extends Component {
                         <Button
                             aria-label={previousButtonLabel}
                             compact
-                            disableStyles={this.props.disableStyles}
                             glyph='slim-arrow-left'
                             onClick={this.handlePrevious}
                             option='transparent' />
@@ -472,7 +469,6 @@ class Calendar extends Component {
                     <div className='fd-calendar__action'>
                         <Button
                             compact
-                            disableStyles={this.props.disableStyles}
                             onClick={this.showMonths}
                             option='transparent'>
                             <span>
@@ -483,7 +479,6 @@ class Calendar extends Component {
                     <div className='fd-calendar__action'>
                         <Button
                             compact
-                            disableStyles={this.props.disableStyles}
                             onClick={this.showYears}
                             option='transparent'>
                             <span>
@@ -496,7 +491,6 @@ class Calendar extends Component {
                         <Button
                             aria-label={nextButtonLabel}
                             compact
-                            disableStyles={this.props.disableStyles}
                             glyph='slim-arrow-right'
                             onClick={this.handleNext}
                             option='transparent' />
@@ -505,7 +499,6 @@ class Calendar extends Component {
                         <div className='fd-calendar__action'>
                             <Button
                                 compact
-                                disableStyles={this.props.disableStyles}
                                 onClick={this.handleToday}
                                 option={'transparent'}>
                                 {this.props.localizedText.todayLabel}
@@ -660,7 +653,6 @@ class Calendar extends Component {
     render() {
         const {
             enableRangeSelection,
-            disableStyles,
             disableWeekends,
             disableBeforeDate,
             disableAfterDate,
@@ -730,8 +722,6 @@ Calendar.propTypes = {
     disableFutureDates: PropTypes.bool,
     /** Set to **true** to disable dates before today\'s date */
     disablePastDates: PropTypes.bool,
-    /** Internal use only */
-    disableStyles: PropTypes.bool,
     /** Disables dates that match a weekday */
     disableWeekday: PropTypes.arrayOf(PropTypes.string),
     /** Set to **true** to disables dates that match a weekend */

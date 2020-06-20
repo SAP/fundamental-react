@@ -4,7 +4,10 @@ import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import Link from '../Link/Link';
 import { MESSAGESTRIP_TYPES } from '../utils/constants';
 import PropTypes from 'prop-types';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
+import 'fundamental-styles/dist/icon.css';
+import 'fundamental-styles/dist/message-strip.css';
+
 
 /** A **MessageStrip** provides a message within the application that is
  * color-coded to emphasize the level of urgency. */
@@ -13,17 +16,9 @@ const MessageStrip = (props) => {
 
     let [active, setActive] = useState(true);
 
-    useEffect(() => {
-        if (!disableStyles) {
-            require('fundamental-styles/dist/icon.css');
-            require('fundamental-styles/dist/message-strip.css');
-        }
-    }, []);
-
     const {
         onCloseClicked,
         buttonProps,
-        disableStyles,
         type,
         link,
         linkProps,
@@ -74,7 +69,6 @@ const MessageStrip = (props) => {
                         {link && (
                             <Link
                                 {...linkProps}
-                                disableStyles={disableStyles}
                                 href={link}>
                                 {linkText}{' '}
                             </Link>
@@ -95,8 +89,6 @@ MessageStrip.propTypes = {
     children: PropTypes.node,
     /** CSS class(es) to add to the element */
     className: PropTypes.string,
-    /** Internal use only */
-    disableStyles: PropTypes.bool,
     /** Set to **true** to show a dismiss button */
     dismissible: PropTypes.bool,
     /** Value to be applied to the anchor\'s `href` attribute */

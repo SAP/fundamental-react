@@ -3,6 +3,9 @@ import PropTypes from 'prop-types';
 import SideNavList from './_SideNavList';
 import SideNavListItem from './_SideNavListItem';
 import React, { Component } from 'react';
+import 'fundamental-styles/dist/icon.css';
+import 'fundamental-styles/dist/button.css';
+import 'fundamental-styles/dist/side-nav.css';
 
 /** The left navigation can always display or expand/collapse using the menu icon within the global
 navigation. */
@@ -14,14 +17,6 @@ class SideNav extends Component {
         this.state = {
             selectedId: props.selectedId
         };
-    }
-
-    componentDidMount() {
-        if (!this.props.disableStyles) {
-            require('fundamental-styles/dist/icon.css');
-            require('fundamental-styles/dist/button.css');
-            require('fundamental-styles/dist/side-nav.css');
-        }
     }
 
     getDerrivedStateFromProps(updatedProps, previousState) {
@@ -39,7 +34,7 @@ class SideNav extends Component {
     }
 
     render() {
-        const { onItemSelect, children, className, disableStyles, condensed, compact, selectedId, skipLink, ...rest } = this.props;
+        const { onItemSelect, children, className, condensed, compact, selectedId, skipLink, ...rest } = this.props;
 
         const sideNavClasses = classnames(
             className,
@@ -80,8 +75,6 @@ SideNav.propTypes = {
     compact: PropTypes.bool,
     /** Set to **true** to only render icons for each `SideNavListItem` */
     condensed: PropTypes.bool,
-    /** Internal use only */
-    disableStyles: PropTypes.bool,
     /** The `id` of the selected `SideNavListItem` */
     selectedId: PropTypes.string,
     /** Callback function when a navigation item is selected. Arguments passed are the event and the id of the selected item. */
