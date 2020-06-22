@@ -356,7 +356,6 @@ class DatePicker extends Component {
             disabledDates,
             disableFutureDates,
             disablePastDates,
-            disableStyles,
             disableWeekday,
             disableWeekends,
             enableRangeSelection,
@@ -406,7 +405,6 @@ class DatePicker extends Component {
                         <>
                             {validationState?.text?.length > 0 &&
                                 <FormMessage
-                                    disableStyles={disableStyles}
                                     type={validationState.state}>
                                     {validationState.text}
                                 </FormMessage>
@@ -424,7 +422,6 @@ class DatePicker extends Component {
                                 disableBeforeDate={disableBeforeDate}
                                 disableFutureDates={disableFutureDates}
                                 disablePastDates={disablePastDates}
-                                disableStyles={disableStyles}
                                 disableWeekday={disableWeekday}
                                 disableWeekends={disableWeekends}
                                 disabledDates={disabledDates}
@@ -463,12 +460,10 @@ class DatePicker extends Component {
                             aria-haspopup='true'
                             className={inputGroupClass}
                             compact={compact}
-                            disableStyles={disableStyles}
                             disabled={disabled}
                             validationState={!this.state.isExpanded ? validationState : null} >
                             <FormInput
                                 {...inputProps}
-                                disableStyles={disableStyles}
                                 onBlur={this._handleBlur}
                                 onChange={this._handleOnChange}
                                 onFocus={this._handleFocus}
@@ -479,7 +474,6 @@ class DatePicker extends Component {
                             <InputGroup.Addon isButton>
                                 <Button {...buttonProps}
                                     aria-label={buttonLabel}
-                                    disableStyles={disableStyles}
                                     disabled={disableButton}
                                     glyph='calendar'
                                     onClick={this.handleClickButton}
@@ -488,7 +482,6 @@ class DatePicker extends Component {
                         </InputGroup>
                     }
                     disableKeyPressHandler
-                    disableStyles={disableStyles}
                     disableTriggerOnClick
                     disabled={disableButton}
                     noArrow

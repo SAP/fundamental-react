@@ -4,6 +4,7 @@ import FormMessage from '../Forms/_FormMessage';
 import InputGroupAddon from './_InputGroupAddon';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
+import 'fundamental-styles/dist/input-group.css';
 
 /** An **InputGroup** includes form inputs with add-ons that allow the user to
 better understand the information being entered. */
@@ -12,19 +13,12 @@ class InputGroup extends Component {
         super(props);
     }
 
-    componentDidMount() {
-        if (!this.props.disableStyles) {
-            require('fundamental-styles/dist/input-group.css');
-        }
-    }
-
     render() {
         const {
             children,
             className,
             compact,
             disabled,
-            disableStyles,
             validationState,
             ...props
         } = this.props;
@@ -60,7 +54,6 @@ class InputGroup extends Component {
                     })}
                 </div>
                 {validationState?.text?.length > 0 && (<FormMessage
-                    disableStyles={disableStyles}
                     type={validationState.state}>
                     {validationState.text}
                 </FormMessage>)}
@@ -82,8 +75,6 @@ InputGroup.propTypes = {
     compact: PropTypes.bool,
     /** Set to **true** to mark component as disabled and make it non-interactive */
     disabled: PropTypes.bool,
-    /** Internal use only */
-    disableStyles: PropTypes.bool,
     /** An object identifying a validation message.  The object will include properties for `state` and `text`; _e.g._, \`{ state: \'warning\', text: \'This is your last warning\' }\` */
     validationState: PropTypes.shape({
         /** State of validation: 'error', 'warning', 'information', 'success' */

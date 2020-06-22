@@ -6,6 +6,8 @@ import TreeHead from './_TreeHead';
 import TreeItem from './_TreeItem';
 import TreeRow from './_TreeRow';
 import React, { Component } from 'react';
+import 'fundamental-styles/dist/icon.css';
+import 'fundamental-styles/dist/tree.css';
 
 /** A **TreeView** is used to display data in a visual hierarchy. Items that contain additional items
 are called nodes, while items that do not contain any other items are called leaves. If available,
@@ -19,13 +21,6 @@ class TreeView extends Component {
             expandData: {},
             isExpandAll: false
         };
-    }
-
-    componentDidMount() {
-        if (!this.props.disableStyles) {
-            require('fundamental-styles/dist/icon.css');
-            require('fundamental-styles/dist/tree.css');
-        }
     }
 
     static getDerivedStateFromProps(props, state) {
@@ -115,7 +110,6 @@ class TreeView extends Component {
 
     render() {
         const {
-            disableStyles,
             children,
             isExpandAll: isExpandAllProp,
             onExpandChange,
@@ -161,8 +155,6 @@ TreeView.displayName = 'TreeView';
 TreeView.propTypes = {
     /** Node(s) to render within the component. Expecting a `TreeHead` and a `Tree` component as children */
     children: PropTypes.node,
-    /** Internal use only */
-    disableStyles: PropTypes.bool,
     /** Object with rowId keys and boolean values representing whether that row is expanded.
      * This variable is handled internally, but can be overridden by the consumer through this prop */
     expandData: PropTypes.object,

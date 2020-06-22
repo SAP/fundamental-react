@@ -5,6 +5,7 @@ import FormLabel from './FormLabel';
 import PropTypes from 'prop-types';
 import shortId from '../utils/shortId';
 import React, { useEffect, useRef } from 'react';
+import 'fundamental-styles/dist/checkbox.css';
 
 const getCheckStatus = (checked, indeterminate) => {
     if (indeterminate) {
@@ -26,7 +27,6 @@ const Checkbox = React.forwardRef(({
     compact,
     defaultChecked,
     disabled,
-    disableStyles,
     id,
     indeterminate,
     inline,
@@ -46,12 +46,6 @@ const Checkbox = React.forwardRef(({
         inputEl && inputEl.current && (inputEl.current.indeterminate = indeterminate);
     });
 
-    useEffect(() => {
-        if (!disableStyles) {
-            require('fundamental-styles/dist/icon.css');
-            require('fundamental-styles/dist/checkbox.css');
-        }
-    }, []);
 
     const classes = classnames(
         className,
@@ -72,7 +66,6 @@ const Checkbox = React.forwardRef(({
     return (
         <FormItem
             {...props}
-            disableStyles={disableStyles}
             disabled={disabled}
             isInline={inline}
             ref={ref}>
@@ -92,7 +85,6 @@ const Checkbox = React.forwardRef(({
                 value={value} />
             <FormLabel {...labelProps}
                 className={labelClasses}
-                disableStyles={disableStyles}
                 disabled={disabled}
                 htmlFor={checkId}>
                 {children}
@@ -116,8 +108,6 @@ Checkbox.propTypes = {
     defaultChecked: PropTypes.bool,
     /** Set to **true** to mark component as disabled and make it non-interactive */
     disabled: PropTypes.bool,
-    /** Internal use only */
-    disableStyles: PropTypes.bool,
     /** Value for the `id` attribute on the element */
     id: PropTypes.string,
     /** When true, the checkbox renders a "mixed" state */

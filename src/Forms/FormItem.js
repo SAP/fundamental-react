@@ -1,14 +1,9 @@
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import React, { useEffect } from 'react';
+import React from 'react';
+import 'fundamental-styles/dist/form-item.css';
 
-const FormItem = React.forwardRef(({ isHorizontal, isInline, children, className, disableStyles, ...props }, ref) => {
-
-    useEffect(() => {
-        if (!disableStyles) {
-            require('fundamental-styles/dist/form-item.css');
-        }
-    }, []);
+const FormItem = React.forwardRef(({ isHorizontal, isInline, children, className, ...props }, ref) => {
 
     const formItemClasses = classnames(
         'fd-form-item',
@@ -35,8 +30,6 @@ FormItem.propTypes = {
     children: PropTypes.node,
     /** CSS class(es) to add to the element */
     className: PropTypes.string,
-    /** Internal use only */
-    disableStyles: PropTypes.bool,
     /** Set to **true** to display items in a row */
     isHorizontal: PropTypes.bool,
     /** Internal use only */

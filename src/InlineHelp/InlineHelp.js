@@ -2,19 +2,13 @@ import classnames from 'classnames';
 import Popover from '../Popover/Popover';
 import { POPPER_PLACEMENTS } from '../utils/constants';
 import PropTypes from 'prop-types';
-import React, { useEffect } from 'react';
+import React from 'react';
+import 'fundamental-styles/dist/inline-help.css';
 
 
 /** **InlineHelp** is used to display help text in a **Popover**, often inline with headers,
 body text and form labels. */
-const InlineHelp = React.forwardRef(({ text, placement, className, contentClassName, disableStyles, buttonLabel, ...props }, ref) => {
-
-    useEffect(() => {
-        if (!disableStyles) {
-            require('fundamental-styles/dist/icon.css');
-            require('fundamental-styles/dist/inline-help.css');
-        }
-    }, []);
+const InlineHelp = React.forwardRef(({ text, placement, className, contentClassName, buttonLabel, ...props }, ref) => {
 
     const inlineHelpClasses = classnames(
         'fd-inline-help',
@@ -63,8 +57,6 @@ InlineHelp.propTypes = {
     className: PropTypes.string,
     /** Class names to be added to the `<span>` element */
     contentClassName: PropTypes.string,
-    /** Internal use only */
-    disableStyles: PropTypes.bool,
     /** Location to display the inline help pop-up relative to the image:
     'bottom-start',
     'bottom',

@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.11.0-rc.17](https://github.com/SAP/fundamental-react/compare/v0.11.0-rc.16...v0.11.0-rc.17) (2020-06-22)
+
+
+### ⚠ BREAKING CHANGES
+
+* removed disableStyles prop from all components
+
+### Bug Fixes
+
+* remove disableStyles prop from all components, import css files last ([#1102](https://github.com/SAP/fundamental-react/issues/1102)) ([5482bd6](https://github.com/SAP/fundamental-react/commit/5482bd6d102eb60e9f17fa8fa01f635b587b9a23))
+
 ## [0.11.0-rc.16](https://github.com/SAP/fundamental-react/compare/v0.11.0-rc.15...v0.11.0-rc.16) (2020-06-20)
 
 ## [0.11.0-rc.15](https://github.com/SAP/fundamental-react/compare/v0.11.0-rc.14...v0.11.0-rc.15) (2020-06-19)
