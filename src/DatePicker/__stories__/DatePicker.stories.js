@@ -17,7 +17,8 @@ import {
 export default {
     title: 'Component API/DatePicker',
     component: DatePicker,
-    decorators: [withKnobs]
+    decorators: [withKnobs],
+    excludeStories: /.*VisualStoryShotOnly/
 };
 
 function dateKnobToDate(name, defaultValue) {
@@ -238,39 +239,41 @@ weekdayStartEx.storyName = 'Weekday Start (Monday Start)';
  * */
 
 export const localizedTodayFooterButton = () => (
-    <LayoutGrid cols={2}>
-        <div>
-            <FormLabel
-                htmlFor='englishTodayButtonDP'>
-                Compact Datepicker with today selection button
-            </FormLabel>
-            <DatePicker
-                compact
-                inputProps={{
-                    id: 'englishTodayButtonDP'
-                }}
-                todayAction={{
-                    type: 'select',
-                    label: 'Today'
-                }} />
-        </div>
-        <div>
-            <FormLabel
-                htmlFor='hindiTodayButtonDP'>
-                Datepicker with today selection button, custom locale, and default date
-            </FormLabel>
-            <DatePicker
-                defaultValue='३०/१२/१९९२'
-                inputProps={{
-                    id: 'hindiTodayButtonDP'
-                }}
-                locale='hi'
-                todayAction={{
-                    type: 'select',
-                    label: 'आज'
-                }} />
-        </div>
-    </LayoutGrid>
+    <>
+        <LayoutGrid cols={2}>
+            <div>
+                <FormLabel
+                    htmlFor='englishTodayButtonDP'>
+                    Compact Datepicker with today selection button
+                </FormLabel>
+                <DatePicker
+                    compact
+                    inputProps={{
+                        id: 'englishTodayButtonDP'
+                    }}
+                    todayAction={{
+                        type: 'select',
+                        label: 'Today'
+                    }} />
+            </div>
+            <div>
+                <FormLabel
+                    htmlFor='hindiTodayButtonDP'>
+                    Datepicker with today selection button, custom locale, and default date
+                </FormLabel>
+                <DatePicker
+                    defaultValue='३०/१२/१९९२'
+                    inputProps={{
+                        id: 'hindiTodayButtonDP'
+                    }}
+                    locale='hi'
+                    todayAction={{
+                        type: 'select',
+                        label: 'आज'
+                    }} />
+            </div>
+        </LayoutGrid>
+    </>
 );
 
 
@@ -359,4 +362,113 @@ export const dev = () => (
         weekdayStart={number('weekdayStart', 0)} />
 );
 
+dev.storyName = 'Dev';
+
 dev.parameters = { docs: { disable: true } };
+
+export const primaryVisualStoryShotOnly = () => (
+    <>
+        <DatePicker
+            popoverProps={{
+                show: true
+            }} />
+        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+        <hr />
+    </>
+);
+
+export const localizedTodayFooterButtonVisualStoryShotOnly = () => (
+    <>
+        <LayoutGrid cols={2}>
+            <div>
+                <FormLabel
+                    htmlFor='englishTodayButtonDP'>
+                    Compact Datepicker with today navigation button
+                </FormLabel>
+                <DatePicker
+                    compact
+                    inputProps={{
+                        id: 'englishTodayButtonDP'
+                    }}
+                    popoverProps={{
+                        show: true
+                    }}
+                    todayAction={{
+                        type: 'select',
+                        label: 'Today'
+                    }} />
+            </div>
+            <div>
+                <FormLabel
+                    htmlFor='hindiTodayButtonDP'>
+                    Datepicker with today navigation button, custom locale, and default date
+                </FormLabel>
+                <DatePicker
+                    defaultValue='३०/१२/१९९२'
+                    inputProps={{
+                        id: 'hindiTodayButtonDP'
+                    }}
+                    locale='hi'
+                    popoverProps={{
+                        show: true
+                    }}
+                    todayAction={{
+                        type: 'select',
+                        label: 'आज'
+                    }} />
+            </div>
+        </LayoutGrid>
+        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+        <hr />
+    </>
+);
+
+
+export const localizedTodayHeaderButtonVisualStoryShotOnly = () => (
+    <>
+        <LayoutGrid cols={2}>
+            <div>
+                <FormLabel
+                    htmlFor='englishTodayButtonDP'>
+                    Compact Datepicker with today navigation button
+                </FormLabel>
+                <DatePicker
+                    compact
+                    inputProps={{
+                        id: 'englishTodayButtonDP'
+                    }}
+                    popoverProps={{
+                        show: true
+                    }}
+                    todayAction={{
+                        type: 'navigate',
+                        label: 'Today'
+                    }} />
+            </div>
+            <div>
+                <FormLabel
+                    htmlFor='hindiTodayButtonDP'>
+                    Datepicker with today navigation button, custom locale, and default date
+                </FormLabel>
+                <DatePicker
+                    defaultValue='३०/१२/१९९२'
+                    inputProps={{
+                        id: 'hindiTodayButtonDP'
+                    }}
+                    locale='hi'
+                    popoverProps={{
+                        show: true
+                    }}
+                    todayAction={{
+                        type: 'navigate',
+                        label: 'आज'
+                    }} />
+            </div>
+        </LayoutGrid>
+        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+        <hr />
+    </>
+);
