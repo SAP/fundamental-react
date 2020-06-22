@@ -6,6 +6,9 @@ import FocusLock from 'react-focus-lock';
 import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
 import React, { Component } from 'react';
+import 'fundamental-styles/dist/bar.css';
+import 'fundamental-styles/dist/overlay.css';
+import 'fundamental-styles/dist/dialog.css';
 
 /** A **Dialog** is a container generally displayed in response to an action. It is used for short forms,
  * confirmation messages or to display contextual information that does not require a page.\n\nTo
@@ -32,12 +35,6 @@ class Dialog extends Component {
     // add event listener for escape key
     componentDidMount() {
         document.addEventListener('keydown', this.handleKeyPress, false);
-
-        if (!this.props.disableStyles) {
-            require('fundamental-styles/dist/dialog.css');
-            require('fundamental-styles/dist/overlay.css');
-            require('fundamental-styles/dist/bar.css');
-        }
     }
 
     // remove event listener for escape key
@@ -53,7 +50,6 @@ class Dialog extends Component {
             children,
             className,
             contentProps,
-            disableStyles,
             headerProps,
             headingLevel,
             header,
@@ -175,8 +171,6 @@ Dialog.propTypes = {
     className: PropTypes.string,
     /** Additional props to be spread to the content section of the dialog */
     contentProps: PropTypes.object,
-    /** Internal use only */
-    disableStyles: PropTypes.bool,
     /** Additional props to be spread to the footer of the dialog */
     footerProps: PropTypes.object,
     /** Text for the components header */

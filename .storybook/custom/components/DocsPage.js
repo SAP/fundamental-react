@@ -55,7 +55,7 @@ const DocsPage = () => {
             expanded
             withToolbar />)}
         <Heading>Properties</Heading>
-        <Props exclude={['disableStyles']} />
+        <Props />
         <Community />
         <Footer />
       </>

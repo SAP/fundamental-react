@@ -1,17 +1,12 @@
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import React, { useEffect } from 'react';
+import React from 'react';
+import 'fundamental-styles/dist/table.css';
 
 /** A **Table** is a set of tabular data. Line items can support `data`, `images` and `actions`. */
 const Table = React.forwardRef(({ headers, tableData, className, tableBodyClassName,
     tableBodyProps, tableBodyRowProps, tableCellClassName, tableCheckboxClassName, tableHeaderClassName, tableHeaderProps,
-    tableHeaderRowClassName, tableHeaderRowProps, tableRowClassName, disableStyles, richTable, ...props }, ref) => {
-
-    useEffect(() => {
-        if (!disableStyles) {
-            require('fundamental-styles/dist/table.css');
-        }
-    }, []);
+    tableHeaderRowClassName, tableHeaderRowProps, tableRowClassName, richTable, ...props }, ref) => {
 
     const tableClasses = classnames(
         'fd-table',
@@ -113,8 +108,6 @@ Table.propTypes = {
     ).isRequired,
     /** CSS class(es) to add to the element */
     className: PropTypes.string,
-    /** Internal use only */
-    disableStyles: PropTypes.bool,
     /** Set to **true** if Table contains checkboxes */
     richTable: PropTypes.bool,
     /** Additional classes to be added to the `<tbody>` element */

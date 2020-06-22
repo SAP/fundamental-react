@@ -157,10 +157,10 @@
           "ignoreCase": true,
           "ignoreMemberSort": false,
           "memberSyntaxSortOrder": [
-            "none",
             "single",
             "multiple",
-            "all"
+            "all",
+            "none"
           ]
         }
       ],

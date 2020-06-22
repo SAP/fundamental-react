@@ -1,6 +1,8 @@
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import React, { useEffect } from 'react';
+import React from 'react';
+import 'fundamental-styles/dist/icon.css';
+import 'fundamental-styles/dist/token.css';
 
 /** A **Token** is used to represent contextual information. It can be useful to show
 applied filters, selected values for a form field or object metadata. */
@@ -8,18 +10,10 @@ const Token = React.forwardRef(({
     children,
     className,
     compact,
-    disableStyles,
     onClick,
     readOnly,
     ...props
 }, ref) => {
-
-    useEffect(() => {
-        if (!disableStyles) {
-            require('fundamental-styles/dist/icon.css');
-            require('fundamental-styles/dist/token.css');
-        }
-    }, []);
 
     const tokenClasses = classnames(
         'fd-token',
@@ -55,8 +49,6 @@ Token.propTypes = {
     className: PropTypes.string,
     /** Set to **true** to enable compact mode */
     compact: PropTypes.bool,
-    /** Internal use only */
-    disableStyles: PropTypes.bool,
     /** Set to **true** to mark component as readonly */
     readOnly: PropTypes.bool,
     /** Callback function when user clicks on the component*/

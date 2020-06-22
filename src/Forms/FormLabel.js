@@ -1,6 +1,7 @@
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import React, { useEffect } from 'react';
+import React from 'react';
+import 'fundamental-styles/dist/form-label.css';
 
 /** A **FormLabel** is used to identify form components such as
  * **FormInput**, **Checkbox** and **TextArea**. Best practice is to use this component as a child of **FormGroup**. */
@@ -9,16 +10,9 @@ const FormLabel = React.forwardRef(({
     children,
     className,
     disabled,
-    disableStyles,
     isInlineHelp,
     ...props
 }, ref) => {
-
-    useEffect(() => {
-        if (!disableStyles) {
-            require('fundamental-styles/dist/form-label.css');
-        }
-    }, []);
 
     const formLabelClasses = classnames(
         'fd-form-label',
@@ -50,8 +44,6 @@ FormLabel.propTypes = {
     className: PropTypes.string,
     /** Set to **true** to mark component as disabled and make it non-interactive */
     disabled: PropTypes.bool,
-    /** Internal use only */
-    disableStyles: PropTypes.bool,
     /** Set to **true** if child is InlineHelp component */
     isInlineHelp: PropTypes.bool,
     /** Set to **true** for required input fields */

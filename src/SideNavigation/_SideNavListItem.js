@@ -86,7 +86,6 @@ class SideNavListItem extends React.Component {
                             aria-haspopup='true'
                             aria-label={expandSubmenuLabel}
                             className='fd-nested-list__button'
-                            disableStyles
                             onClick={() => {
                                 this.handleExpand();
                             }} />

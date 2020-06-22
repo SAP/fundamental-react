@@ -1,15 +1,10 @@
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import React, { useEffect } from 'react';
+import React from 'react';
+import 'fundamental-styles/dist/tabs.css';
 
 const Tab = React.forwardRef(({ title, glyph, id, selected, onClick,
-    tabContentProps, linkProps, index, className, disableStyles, ...props }, ref) => {
-
-    useEffect(() => {
-        if (!disableStyles) {
-            require('fundamental-styles/dist/tabs.css');
-        }
-    }, []);
+    tabContentProps, linkProps, index, className, ...props }, ref) => {
 
     const tabClasses = classnames(
         className,
@@ -53,8 +48,6 @@ Tab.defaultProps = {
 Tab.propTypes = {
     /** CSS class(es) to add to the element */
     className: PropTypes.string,
-    /** Internal use only */
-    disableStyles: PropTypes.bool,
     /** The icon to include. See the icon page for the list of icons */
     glyph: PropTypes.string,
     /** Value for the `id` attribute on the element */

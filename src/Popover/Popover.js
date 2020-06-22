@@ -9,6 +9,8 @@ import shortId from '../utils/shortId';
 import tabbable from 'tabbable';
 import { POPOVER_TYPES, POPPER_PLACEMENTS, POPPER_SIZING_TYPES } from '../utils/constants';
 import React, { Component } from 'react';
+import 'fundamental-styles/dist/popover.css';
+
 
 /** A **Popover** is a wrapping component that accepts a "control" as well as a "body". A control can be
 anything that you want to trigger the interaction from. The body will be the contents of what you reveal
@@ -28,12 +30,6 @@ class Popover extends Component {
         //A generated shortId as fallback, in case props.popperProps.id is unset.
         //This ID binds the popover and its control by 'aria-controls'.
         this.popoverId = shortId.generate();
-    }
-
-    componentDidMount() {
-        if (!this.props.disableStyles) {
-            require('fundamental-styles/dist/popover.css');
-        }
     }
 
     isButton = (node) => {
@@ -100,7 +96,6 @@ class Popover extends Component {
         const {
             disableEdgeDetection,
             disableKeyPressHandler,
-            disableStyles,
             disableTriggerOnClick,
             onClickOutside,
             onEscapeKey,
@@ -207,8 +202,6 @@ Popover.propTypes = {
     /** Set to **true** to remove onKeyPress handler and aria-* roles.
      * Only do so if the control is a complex component such as a FormInput with Button */
     disableKeyPressHandler: PropTypes.bool,
-    /** Internal use only */
-    disableStyles: PropTypes.bool,
     /** Set to **true** to remove default triggerBody handler used in onClick.
      * Useful for when a custom method is desired to open the Popover */
     disableTriggerOnClick: PropTypes.bool,

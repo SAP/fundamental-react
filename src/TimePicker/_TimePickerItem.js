@@ -211,15 +211,13 @@ class TimePickerItem extends Component {
     };
 
     render() {
-        const { disableStyles, disabled, inputProps, buttonProps, onClick } = this.props;
+        const { disabled, inputProps, buttonProps, onClick } = this.props;
         return (
             <InputGroup
-                disableStyles={disableStyles}
                 onClick={onClick}>
                 <FormInput
                     {...inputProps}
                     className={this.state.style}
-                    disableStyles={disableStyles}
                     id={this.state.inputId}
                     onBlur={this.onBlur}
                     onChange={this.onChange}
@@ -234,7 +232,6 @@ class TimePickerItem extends Component {
                         aria-expanded='false'
                         aria-haspopup='true'
                         compact
-                        disableStyles={disableStyles}
                         disabled={disabled}
                         glyph='time-entry-request'
                         id={this.state.buttonID}
@@ -254,8 +251,6 @@ TimePickerItem.propTypes = {
     buttonProps: PropTypes.object,
     /** Set to **true** to mark component as disabled and make it non-interactive */
     disabled: PropTypes.bool,
-    /** Internal use only */
-    disableStyles: PropTypes.bool,
     format12Hours: PropTypes.bool,
     /** Value for the `id` attribute on the element */
     id: PropTypes.string,

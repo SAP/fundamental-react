@@ -2,19 +2,13 @@ import { AVATAR_SIZES } from '../utils/constants';
 import classnames from 'classnames';
 import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import PropTypes from 'prop-types';
-import React, { useEffect } from 'react';
+import React from 'react';
+import 'fundamental-styles/dist/icon.css';
+import 'fundamental-styles/dist/avatar.css';
 
 /** An **Avatar** is a visual presentation option around using an icon or user initials. */
 
-const Avatar = React.forwardRef(({ glyph, size, circle, transparent, border, color, label, backgroundImageUrl, children, className, disableStyles, role, placeholder, tile, zoom, ...props }, ref) => {
-
-    useEffect(() => {
-        if (!disableStyles) {
-            require('fundamental-styles/dist/icon.css');
-            require('fundamental-styles/dist/helpers.css');
-            require('fundamental-styles/dist/avatar.css');
-        }
-    }, []);
+const Avatar = React.forwardRef(({ glyph, size, circle, transparent, border, color, label, backgroundImageUrl, children, className, role, placeholder, tile, zoom, ...props }, ref) => {
 
     const styles = {
         backgroundImage: `url(${backgroundImageUrl})`
@@ -71,8 +65,6 @@ Avatar.propTypes = {
     className: PropTypes.string,
     /** Applies a background color */
     color: CustomPropTypes.range(1, 9),
-    /** Internal use only */
-    disableStyles: PropTypes.bool,
     /** The icon to include. See the icon page for the list of icons */
     glyph: PropTypes.string,
     /** Localized text for label */
