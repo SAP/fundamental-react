@@ -6,7 +6,8 @@ import FormInput from '../Forms/FormInput';
 import FormMessage from '../Forms/_FormMessage';
 import keycode from 'keycode';
 import PropTypes from 'prop-types';
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useCallback, useState } from 'react';
+import 'fundamental-styles/dist/step-input.css';
 
 /** The **StepInput** allows the user to change the input values in predefined increments (steps).
 
@@ -26,7 +27,6 @@ const StepInput = React.forwardRef(({
     className,
     compact,
     disabled,
-    disableStyles,
     placeholder,
     readOnly,
     localizedText,
@@ -35,12 +35,6 @@ const StepInput = React.forwardRef(({
     ...rest
 }, ref) => {
     const [inputValue, updateInputValue] = useState(value);
-
-    useEffect(() => {
-        if (!disableStyles) {
-            require('fundamental-styles/dist/step-input.css');
-        }
-    }, []);
 
     const stepInputClasses = classnames(
         className,
@@ -105,7 +99,6 @@ const StepInput = React.forwardRef(({
                     aria-label={localizedText.stepDownLabel}
                     className='fd-step-input__button'
                     compact={compact}
-                    disableStyles={disableStyles}
                     disabled={disabled}
                     glyph='less'
                     onClick={decreaseValue}
@@ -113,7 +106,6 @@ const StepInput = React.forwardRef(({
                     tabIndex='-1' />
                 <FormInput
                     className='fd-input--no-number-spinner fd-step-input__input'
-                    disableStyles={disableStyles}
                     disabled={disabled}
                     onChange={onChangeInputValue}
                     placeholder={placeholder}
@@ -121,7 +113,6 @@ const StepInput = React.forwardRef(({
                 <Button
                     aria-label={localizedText.stepUpLabel}
                     compact={compact}
-                    disableStyles={disableStyles}
                     disabled={disabled}
                     glyph='add'
                     onClick={increaseValue}
@@ -129,7 +120,6 @@ const StepInput = React.forwardRef(({
                     tabIndex='-1' />
             </div>
             {validationState && (<FormMessage
-                disableStyles={disableStyles}
                 type={validationState.state}>
                 {validationState.text}
             </FormMessage>)}
@@ -148,8 +138,6 @@ StepInput.propTypes = {
     compact: PropTypes.bool,
     /** Set to **true** to mark component as disabled and make it non-interactive */
     disabled: PropTypes.bool,
-    /** Internal use only */
-    disableStyles: PropTypes.bool,
     /** Localized text to be updated based on location/language */
     localizedText: CustomPropTypes.i18n({
         stepUpLabel: PropTypes.string,

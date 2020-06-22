@@ -3,6 +3,8 @@ import classnames from 'classnames';
 import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
+import 'fundamental-styles/dist/icon.css';
+import 'fundamental-styles/dist/pagination.css';
 
 /** **Pagination** is commonly used for tables and tiles. It allows
 users to see how many pages of content exist, to navigate and
@@ -19,13 +21,6 @@ class Pagination extends Component {
         this.state = {
             selectedPage: this.props.initialPage
         };
-    }
-
-    componentDidMount() {
-        if (!this.props.disableStyles) {
-            require('fundamental-styles/dist/icon.css');
-            require('fundamental-styles/dist/pagination.css');
-        }
     }
 
     // number of pages to show
@@ -127,10 +122,16 @@ class Pagination extends Component {
     * @returns {object} returns a pagination link.
     */
     getPaginationLink = (index, pageNumberOffset) => {
+        const isSelected = this.state.selectedPage === index + pageNumberOffset;
+        const paginationLinkClasses = classnames(
+            'fd-pagination__link',
+            {
+                'is-selected': isSelected
+            }
+        );
         return (<a
             {...this.props.linkProps}
-            aria-selected={this.state.selectedPage === index + pageNumberOffset}
-            className='fd-pagination__link'
+            className={paginationLinkClasses}
             href='#'
             key={index}
             onClick={this.pageClicked}>
@@ -149,7 +150,6 @@ class Pagination extends Component {
             displayTotal,
             totalText,
             className,
-            disableStyles,
             linkProps,
             localizedText,
             displayTotalProps,
@@ -220,8 +220,6 @@ Pagination.propTypes = {
     onClick: PropTypes.func.isRequired,
     /** CSS class(es) to add to the element */
     className: PropTypes.string,
-    /** Internal use only */
-    disableStyles: PropTypes.bool,
     /** Set to **true** to show total number of items along with `totalText` string */
     displayTotal: PropTypes.bool,
     /** Additional props to be spread to the display total `<span>` elements */

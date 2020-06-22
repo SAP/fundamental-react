@@ -2,6 +2,11 @@ import { mount } from 'enzyme';
 import React from 'react';
 import { SideNav } from '../';
 
+const skipLink = {
+    href: '#content',
+    label: 'Skip navigation'
+};
+
 describe('<SideNav />', () => {
     const subSideNavList = (
         <SideNav.List>
@@ -70,7 +75,7 @@ describe('<SideNav />', () => {
         </SideNav.List>
     );
 
-    const sideNavMultiLevel = <SideNav>{subSideNavList}</SideNav>;
+    const sideNavMultiLevel = <SideNav skipLink={skipLink}>{subSideNavList}</SideNav>;
 
 
     test('handle side nav list link click', () => {
@@ -83,7 +88,7 @@ describe('<SideNav />', () => {
         expect(wrapper.state('selectedId')).toBeFalsy();
 
         wrapper
-            .find('.has-child')
+            .find('button')
             .at(0)
             .simulate('click');
 
@@ -91,7 +96,7 @@ describe('<SideNav />', () => {
         expect(Item4.state('expanded')).toBeFalsy();
 
         wrapper
-            .find('.has-child')
+            .find('button')
             .at(1)
             .simulate('click');
 
@@ -118,7 +123,7 @@ describe('<SideNav />', () => {
 
     describe('Prop spreading', () => {
         test('should allow props to be spread to the SideNav component', () => {
-            const element = mount(<SideNav data-sample='Sample' />);
+            const element = mount(<SideNav data-sample='Sample' skipLink={skipLink} />);
 
             expect(
                 element.getDOMNode().attributes['data-sample'].value
@@ -131,7 +136,10 @@ describe('<SideNav />', () => {
             let f = jest.fn();
             const mockedEvent = { target: {} };
 
-            const element = mount(<SideNav data-sample='Sample' onItemSelect={f}>
+            const element = mount(<SideNav
+                data-sample='Sample'
+                onItemSelect={f}
+                skipLink={skipLink}>
                 <SideNav.List>
                     <SideNav.ListItem
                         id='item-1'

@@ -14,10 +14,10 @@ const FormValidationOverlay = ({ className, control, id, validationState, ...pro
         <Popover
             {...props}
             body={bodyContent}
+            className='fd-popover--input-message-group'
             control={control}
             noArrow
             placement='bottom-start'
-            popperClassName='fd-popover__popper--input-messaging-group'
             popperProps={{ id }}
             style={{ display: 'block' }} /> // TO DO: replace with class from fundamental-styles
     );

@@ -1,7 +1,9 @@
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
+import React from 'react';
 import { BUTTON_OPTIONS, BUTTON_TYPES } from '../utils/constants';
-import React, { useEffect } from 'react';
+import 'fundamental-styles/dist/icon.css';
+import 'fundamental-styles/dist/button.css';
 
 /** A **Button** allows users to perform an action. The priority of buttons within a page should be considered.
 For instance, only use the main button once within a page or dialog. Color is also important. For
@@ -12,7 +14,6 @@ const Button = React.forwardRef(({
     option,
     type,
     compact,
-    disableStyles,
     glyph,
     selected,
     disabled,
@@ -22,13 +23,6 @@ const Button = React.forwardRef(({
     className,
     ...props
 }, ref) => {
-
-    useEffect(() => {
-        if (!disableStyles) {
-            require('fundamental-styles/dist/icon.css');
-            require('fundamental-styles/dist/button.css');
-        }
-    }, []);
 
     const buttonClasses = classnames(
         'fd-button',
@@ -63,8 +57,6 @@ Button.propTypes = {
     compact: PropTypes.bool,
     /** Set to **true** to mark component as disabled and make it non-interactive */
     disabled: PropTypes.bool,
-    /** Internal use only */
-    disableStyles: PropTypes.bool,
     /** The icon to include. See the icon page for the list of icons */
     glyph: PropTypes.string,
     /** Indicates the importance of the button: 'empahsized' or 'transparent' */

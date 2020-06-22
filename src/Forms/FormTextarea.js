@@ -2,7 +2,8 @@ import classnames from 'classnames';
 import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import { FORM_MESSAGE_TYPES } from '../utils/constants';
 import PropTypes from 'prop-types';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
+import 'fundamental-styles/dist/textarea.css';
 
 /** A **FormTextarea** is used to gather potentially lengthy input from a user.
  * Best practice is to use this component as a child of FormGroup. */
@@ -12,7 +13,6 @@ const FormTextarea = React.forwardRef(({
     counterProps,
     defaultValue,
     disabled,
-    disableStyles,
     localizedText,
     maxLength,
     onChange,
@@ -20,12 +20,6 @@ const FormTextarea = React.forwardRef(({
     state,
     value,
     ...props }, ref) => {
-
-    useEffect(() => {
-        if (!disableStyles) {
-            require('fundamental-styles/dist/textarea.css');
-        }
-    }, []);
 
     const getInitialCharCount = () => {
         if (typeof value === 'boolean' || value) {
@@ -107,8 +101,6 @@ FormTextarea.propTypes = {
     defaultValue: PropTypes.string,
     /** Set to **true** to mark component as disabled and make it non-interactive */
     disabled: PropTypes.bool,
-    /** Internal use only */
-    disableStyles: PropTypes.bool,
     /** Localized text to be updated based on location/language */
     localizedText: CustomPropTypes.i18n({
         charactersLeftPlural: PropTypes.string,

@@ -1,7 +1,8 @@
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
+import React from 'react';
 import shortId from '../utils/shortId';
-import React, { useEffect } from 'react';
+import 'fundamental-styles/dist/form-group.css';
 
 /** A **FormRadioGroup** is a type of FormGroup that groups a collection of radio buttons or checkboxes into a single input value.
  * **FormRadioItem** is a specialized form control that emits an `<input>` with a type of radio.
@@ -13,16 +14,9 @@ const FormRadioGroup = ({
     className,
     compact,
     disabled,
-    disableStyles,
     inline,
     onChange
 }) => {
-
-    useEffect(() => {
-        if (!disableStyles) {
-            require('fundamental-styles/dist/form-group.css');
-        }
-    }, []);
 
     const groupId = shortId.generate();
 
@@ -40,7 +34,6 @@ const FormRadioGroup = ({
                 return React.cloneElement(child, {
                     compact: child.props.compact || compact,
                     disabled: child.props.disabled || disabled,
-                    disableStyles: child.props.disableStyles || disableStyles,
                     inline: child.props.inline || inline,
                     name: child.props.name || groupId,
                     onChange: child.props.onChange || onChange
@@ -61,8 +54,6 @@ FormRadioGroup.propTypes = {
     compact: PropTypes.bool,
     /** Set to **true** to mark component as disabled and make it non-interactive */
     disabled: PropTypes.bool,
-    /** Internal use only */
-    disableStyles: PropTypes.bool,
     /** Set to **true** to display radio buttons in a row */
     inline: PropTypes.bool,
     /** Callback function when the change event fires on the component */

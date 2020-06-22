@@ -4,7 +4,9 @@ import FormLabel from '../Forms/FormLabel';
 import keycode from 'keycode';
 import PropTypes from 'prop-types';
 import SwitchItem from './_SwitchItem';
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useCallback, useState } from 'react';
+import 'fundamental-styles/dist/icon.css';
+import 'fundamental-styles/dist/switch.css';
 
 /** A **Switch** component is used to activate or deactivate an element. It uses a visual metaphor that is known
 to the user with visible differences between on and off state. It is recommended to always display the
@@ -16,7 +18,6 @@ const Switch = React.forwardRef(({
     children,
     compact,
     disabled,
-    disableStyles,
     className,
     id,
     inputProps,
@@ -27,13 +28,6 @@ const Switch = React.forwardRef(({
     showInternalLabels,
     ...props
 }, ref) => {
-
-    useEffect(() => {
-        if (!disableStyles) {
-            require('fundamental-styles/dist/icon.css');
-            require('fundamental-styles/dist/switch.css');
-        }
-    }, []);
 
     let [isChecked, setIsChecked] = useState(!!checked);
 
@@ -72,7 +66,6 @@ const Switch = React.forwardRef(({
             <FormLabel
                 disabled={disabled}
                 {...props}
-                disableStyles={disableStyles}
                 htmlFor={id}
                 onKeyDown={onKeyDownSwitch}>
                 {children}
@@ -130,8 +123,6 @@ Switch.propTypes = {
     compact: PropTypes.bool,
     /** Set to **true** to mark component as disabled and make it non-interactive */
     disabled: PropTypes.bool,
-    /** Internal use only */
-    disableStyles: PropTypes.bool,
     /** Value for the `id` attribute on the element */
     id: PropTypes.string,
     /** Additional props to be spread to the `<input>` element */

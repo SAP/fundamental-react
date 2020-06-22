@@ -1,9 +1,10 @@
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
+import React from 'react';
 import TileContent from './_TileContent';
 import TileFooter from './_TileFooter';
 import TileHeader from './_TileHeader';
-import React, { useEffect } from 'react';
+import 'fundamental-styles/dist/tile.css';
 
 /** A **Tile** can be used to represent an app similar to the SAP Fiori launchpad home page.
  * They can display different types of content, which are based on the data supplied by the app.
@@ -14,18 +15,11 @@ const Tile = React.forwardRef(({
     backgroundImage,
     children,
     className,
-    disableStyles,
     isDouble,
     onClick,
     size,
     ...rest
 }, ref) => {
-
-    useEffect(() => {
-        if (!disableStyles) {
-            require('fundamental-styles/dist/tile.css');
-        }
-    }, []);
 
     const tileClasses = classnames(
         'fd-tile',
@@ -63,8 +57,6 @@ Tile.propTypes = {
     className: PropTypes.string,
     /** Set to **true** to mark component as disabled and make it non-interactive */
     disabled: PropTypes.bool,
-    /** Internal use only */
-    disableStyles: PropTypes.bool,
     /** Set to **true** to increase tile dimensions to 2x1 */
     isDouble: PropTypes.bool,
     /** Default tiles are designed for screens larger than 374px. For smaller screens use 's' */

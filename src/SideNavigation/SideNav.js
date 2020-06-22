@@ -3,6 +3,9 @@ import PropTypes from 'prop-types';
 import SideNavList from './_SideNavList';
 import SideNavListItem from './_SideNavListItem';
 import React, { Component } from 'react';
+import 'fundamental-styles/dist/icon.css';
+import 'fundamental-styles/dist/button.css';
+import 'fundamental-styles/dist/side-nav.css';
 
 /** The left navigation can always display or expand/collapse using the menu icon within the global
 navigation. */
@@ -14,13 +17,6 @@ class SideNav extends Component {
         this.state = {
             selectedId: props.selectedId
         };
-    }
-
-    componentDidMount() {
-        if (!this.props.disableStyles) {
-            require('fundamental-styles/dist/icon.css');
-            require('fundamental-styles/dist/side-nav.css');
-        }
     }
 
     getDerrivedStateFromProps(updatedProps, previousState) {
@@ -38,7 +34,7 @@ class SideNav extends Component {
     }
 
     render() {
-        const { onItemSelect, children, className, disableStyles, condensed, compact, selectedId, ...rest } = this.props;
+        const { onItemSelect, children, className, condensed, compact, selectedId, skipLink, ...rest } = this.props;
 
         const sideNavClasses = classnames(
             className,
@@ -49,7 +45,8 @@ class SideNav extends Component {
         );
 
         return (
-            <nav {...rest} className={sideNavClasses}>
+            <div {...rest} className={sideNavClasses}>
+                <a className='fd-side-nav__skip-link' href={skipLink.href}>{skipLink.label}</a>
                 {React.Children.toArray(children).map(child => {
                     return React.cloneElement(child, {
                         onItemSelect: this.handleSelect,
@@ -58,12 +55,17 @@ class SideNav extends Component {
                         compact
                     });
                 })}
-            </nav>
+            </div>
         );
     }
 }
 
 SideNav.propTypes = {
+    /** Location of page content and localized label to provide as a URL for a skip link for keyboard users */
+    skipLink: PropTypes.shape({
+        href: PropTypes.string,
+        label: PropTypes.string
+    }).isRequired,
     /** Node(s) to render within the component */
     children: PropTypes.node,
     /** CSS class(es) to add to the element */
@@ -73,8 +75,6 @@ SideNav.propTypes = {
     compact: PropTypes.bool,
     /** Set to **true** to only render icons for each `SideNavListItem` */
     condensed: PropTypes.bool,
-    /** Internal use only */
-    disableStyles: PropTypes.bool,
     /** The `id` of the selected `SideNavListItem` */
     selectedId: PropTypes.string,
     /** Callback function when a navigation item is selected. Arguments passed are the event and the id of the selected item. */
