@@ -44,7 +44,7 @@
     "test:storybook:update": "server-test storybook:ci http-get://localhost:12123 'npm run test:storybook:setup -- --updateSnapshot'"
   },
   "dependencies": {
-      "@babel/runtime-corejs3": "^7.10.2",
+    "@babel/runtime-corejs3": "^7.10.2",
     "@popperjs/core": "^2.3.3",
     "chain-function": "^1.0.1",
     "classnames": "^2.2.6",
