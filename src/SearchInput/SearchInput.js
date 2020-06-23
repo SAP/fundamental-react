@@ -262,8 +262,7 @@ SearchInput.propTypes = {
 SearchInput.defaultProps = {
     onChange: () => { },
     onEnter: () => { },
-    onSelect: () => { },
-    subStringSearch: false
+    onSelect: () => { }    
 };
 
 export default SearchInput;
