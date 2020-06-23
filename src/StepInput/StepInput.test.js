@@ -37,7 +37,7 @@ describe('<InputGroup />', () => {
         test('should dispatch the onChange callback with the event on change of input field for numeric value', () => {
             let f = jest.fn();
             const element = mount(<StepInput onChange={f} />);
-            element.find('input[type="text"]').simulate('change', { target: { value: '123' } });
+            element.find('input[type="text"]').simulate('change', { target: { value: 4 } });
             expect(f).toHaveBeenCalledTimes(1);
         });
         test('should not dispatch the onChange callback with the event on change of input field for non-numeric value', () => {
