@@ -34,11 +34,17 @@ describe('<InputGroup />', () => {
         });
     });
     describe('onChange handler', () => {
-        test('should dispatch the onChange callback with the event on change of input field', () => {
+        test('should dispatch the onChange callback with the event on change of input field for numeric value', () => {
             let f = jest.fn();
             const element = mount(<StepInput onChange={f} />);
-            element.find('input[type="text"]').simulate('change');
+            element.find('input[type="text"]').simulate('change', { target: { value: '123' } });
             expect(f).toHaveBeenCalledTimes(1);
+        });
+        test('should not dispatch the onChange callback with the event on change of input field for non-numeric value', () => {
+            let f = jest.fn();
+            const element = mount(<StepInput onChange={f} />);
+            element.find('input[type="text"]').simulate('change', { target: { value: 'abc' } });
+            expect(f).toHaveBeenCalledTimes(0);
         });
         test('should dispatch the onChange callback on click of step up button', () => {
             let f = jest.fn();
