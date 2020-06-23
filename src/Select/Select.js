@@ -183,10 +183,6 @@ const Select = React.forwardRef(({
                 <span aria-label={selectAriaLabel} className='fd-select__text-content'>{textContent}</span>
                 {!readOnly && <span className='fd-button fd-button--transparent sap-icon--slim-arrow-down fd-select__button' />}
             </div>
-            {!isExpanded && validationState && (<FormMessage
-                type={validationState.state}>
-                {validationState.text}
-            </FormMessage>)}
         </div>
     );
 
