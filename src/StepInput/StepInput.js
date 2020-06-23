@@ -81,8 +81,10 @@ const StepInput = React.forwardRef(({
     });
 
     const handleChange = useCallback((currentValue) => {
-        updateInputValue(currentValue);
-        onChange(currentValue);
+        if ( currentValue !== inputValue ) {
+            updateInputValue(currentValue);
+            onChange(currentValue);
+        }
     });
 
     const onKeyDownInput = useCallback((event) => {
