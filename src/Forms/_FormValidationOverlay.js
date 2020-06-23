@@ -2,13 +2,20 @@ import { FORM_MESSAGE_TYPES } from '../utils/constants';
 import FormMessage from './_FormMessage';
 import Popover from '../Popover/Popover';
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, { useState } from 'react';
 
-const FormValidationOverlay = ({ className, control, id, validationState, ...props }) => {
+const FormValidationOverlay = ({ className, control, validationState, ...props }) => {
+    let [showValidationMessage, setShowValidationMessage] = useState(false);
 
-    const { state, text } = validationState;
+    const _handleBlur = () => {
+        setShowValidationMessage(false);
+    };
 
-    const bodyContent = (<FormMessage type={state}>{text}</FormMessage>);
+    const _handleFocus = () => {
+        setShowValidationMessage(true);
+    };
+
+    const bodyContent = (validationState?.text && <FormMessage type={validationState.state}>{validationState.text}</FormMessage>);
 
     return (
         <Popover
@@ -17,9 +24,12 @@ const FormValidationOverlay = ({ className, control, id, validationState, ...pro
             className='fd-popover--input-message-group'
             control={control}
             disableKeyPressHandler
+            disableTriggerOnClick
             noArrow
+            onBlur={_handleBlur}
+            onFocus={_handleFocus}
             placement='bottom-start'
-            popperProps={{ id }}
+            show={showValidationMessage}
             style={{ display: 'block' }} /> // TO DO: replace with class from fundamental-styles
     );
 };
@@ -29,8 +39,6 @@ FormValidationOverlay.propTypes = {
     /** CSS class(es) to add to the element */
     className: PropTypes.string,
     control: PropTypes.node,
-    /** Value for the `id` attribute on the element */
-    id: PropTypes.string,
     /** An object identifying a validation message.  The object will include properties for `state` and `text`; _e.g._, \`{ state: \'warning\', text: \'This is your last warning\' }\` */
     validationState: PropTypes.shape({
         /** State of validation: 'error', 'warning', 'information', 'success' */
