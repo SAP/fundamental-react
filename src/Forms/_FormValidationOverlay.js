@@ -16,6 +16,7 @@ const FormValidationOverlay = ({ className, control, id, validationState, ...pro
             body={bodyContent}
             className='fd-popover--input-message-group'
             control={control}
+            disableKeyPressHandler
             noArrow
             placement='bottom-start'
             popperProps={{ id }}

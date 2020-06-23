@@ -1,6 +1,5 @@
 import classnames from 'classnames';
 import { FORM_MESSAGE_TYPES } from '../utils/constants';
-import FormMessage from '../Forms/_FormMessage';
 import InputGroupAddon from './_InputGroupAddon';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
@@ -41,23 +40,17 @@ class InputGroup extends Component {
         );
 
         return (
-            <>
-                <div
-                    {...props}
-                    className={inputGroupClasses}>
-                    {React.Children.toArray(children).map(child => {
-                        return React.cloneElement(child, {
-                            compact,
-                            disabled,
-                            className: getClassName(child)
-                        });
-                    })}
-                </div>
-                {validationState?.text?.length > 0 && (<FormMessage
-                    type={validationState.state}>
-                    {validationState.text}
-                </FormMessage>)}
-            </>
+            <div
+                {...props}
+                className={inputGroupClasses}>
+                {React.Children.toArray(children).map(child => {
+                    return React.cloneElement(child, {
+                        compact,
+                        disabled,
+                        className: getClassName(child)
+                    });
+                })}
+            </div>
         );
     }
 }
