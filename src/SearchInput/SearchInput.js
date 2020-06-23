@@ -262,7 +262,7 @@ SearchInput.propTypes = {
 SearchInput.defaultProps = {
     onChange: () => { },
     onEnter: () => { },
-    onSelect: () => { }    
+    onSelect: () => { }
 };
 
 export default SearchInput;
