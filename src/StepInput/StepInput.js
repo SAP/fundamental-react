@@ -30,6 +30,7 @@ const StepInput = React.forwardRef(({
     placeholder,
     readOnly,
     localizedText,
+    onChange,
     validationState,
     value,
     ...rest
@@ -53,23 +54,30 @@ const StepInput = React.forwardRef(({
         if (ifValeEqualsSign(inputValue)) {
             return;
         }
-        updateInputValue(inputValue - 1);
+        handleChange(inputValue - 1);
     });
 
     const increaseValue = useCallback(() => {
         if (ifValeEqualsSign(inputValue)) {
             return;
         }
-        updateInputValue(inputValue + 1);
+        handleChange(inputValue + 1);
     });
 
     const onChangeInputValue = useCallback((event) => {
         const currentValue = event.target.value;
         const isNumber = !isNaN(parseInt(currentValue, 10));
         if (isNumber) {
-            updateInputValue(parseInt(currentValue, 10));
+            handleChange(parseInt(currentValue, 10));
         } else if (ifValeEqualsSign(currentValue)) {
+            handleChange(currentValue);
+        }
+    });
+
+    const handleChange = useCallback((currentValue) => {
+        if ( currentValue !== inputValue ) {
             updateInputValue(currentValue);
+            onChange(currentValue);
         }
     });
 
@@ -155,7 +163,9 @@ StepInput.propTypes = {
         text: PropTypes.string
     }),
     /** Value of the number input */
-    value: PropTypes.number
+    value: PropTypes.number,
+    /** Callback function when the change event fires on the component */
+    onChange: PropTypes.func
 };
 
 StepInput.defaultProps = {
@@ -163,8 +173,8 @@ StepInput.defaultProps = {
     localizedText: {
         stepUpLabel: 'Step Up',
         stepDownLabel: 'Step Down'
-    }
-
+    },
+    onChange: () => { }
 };
 
 export default StepInput;
