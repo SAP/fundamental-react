@@ -10,9 +10,15 @@ export default {
     subcomponents: { SideNavList, SideNavListItem }
 };
 
+const skipLink = {
+    href: '#content',
+    label: 'Skip navigation'
+};
+
 export const primary = () => (
     <SideNav
-        selectedId='item-2'>
+        selectedId='item-2'
+        skipLink={skipLink}>
         <SideNav.List>
             <SideNav.ListItem
                 id='item-1'
@@ -41,7 +47,8 @@ export const primary = () => (
 export const compact = () => (
     <SideNav
         compact
-        selectedId='item-2'>
+        selectedId='item-2'
+        skipLink={skipLink}>
         <SideNav.List>
             <SideNav.ListItem
                 id='item-1'
@@ -67,10 +74,17 @@ export const compact = () => (
     </SideNav>
 );
 
+/**
+ * The user can identify which level they are on based on the icon displayed as selected when the
+ * navigation is condensed. Note that the suggested use is when there is only one level of navigation as
+ * the user can only see one level of navigation when collapsed.
+ */
+
 export const condensed = () => (
     <SideNav
         condensed
-        selectedId='item-2'>
+        selectedId='item-2'
+        skipLink={skipLink}>
         <SideNav.List>
             <SideNav.ListItem
                 glyph='home'
@@ -101,20 +115,10 @@ export const condensed = () => (
     </SideNav>
 );
 
-condensed.story = {
-    parameters: {
-        docs: {
-            storyDescription: `The user can identify which level they are on based on the icon displayed as selected when the
-            navigation is condensed. Note that the suggested use is when there is only one level of navigation as
-            the user can only see one level of navigation when collapsed.`
-        }
-    }
-};
-
-
 export const oneLevel = () => (
     <SideNav
-        selectedId='item-2'>
+        selectedId='item-2'
+        skipLink={skipLink}>
         <SideNav.List>
             <SideNav.ListItem
                 id='item-1'
@@ -137,7 +141,7 @@ export const oneLevel = () => (
                 name='Link Item'
                 url='#' />
         </SideNav.List>
-        <SideNav.List isUtility>
+        <SideNav.List groupLabel='Utility Menu' isUtility>
             <SideNav.ListItem
                 id='utility-1'
                 name='Link Item'
@@ -150,9 +154,12 @@ export const oneLevel = () => (
     </SideNav>
 );
 
+/** Use titles to group navigation. Titles are not clickable. */
+
 export const withTitle = () => (
     <SideNav
-        selectedId='item-2'>
+        selectedId='item-2'
+        skipLink={skipLink}>
         <SideNav.List title='Group Title'>
             <SideNav.ListItem
                 id='item-1'
@@ -188,26 +195,20 @@ export const withTitle = () => (
     </SideNav>
 );
 
-withTitle.story = {
-    parameters: {
-        docs: {
-            storyDescription: 'Use titles to group navigation. Titles are not clickable.'
-        }
-    }
-};
-
 export const withSubList = () => (
-    <SideNav>
+    <SideNav
+        skipLink={skipLink}>
         <SideNav.List>
             <SideNav.ListItem
                 id='item_1'
                 name='Link Item 1'
                 url='#' />
             <SideNav.ListItem
+                expandSubmenuLabel='Expand submenu'
                 id='item_2'
                 name='Link Item 2'
                 url='#'>
-                <SideNav.List>
+                <SideNav.List level={2}>
                     <SideNav.ListItem
                         id='subitem_21'
                         name='Item 1'
@@ -235,10 +236,11 @@ export const withSubList = () => (
                 name='Link Item 3'
                 url='#' />
             <SideNav.ListItem
+                expandSubmenuLabel='Expand submenu'
                 id='item_4'
                 name='Link Item 4'
                 url='#'>
-                <SideNav.List>
+                <SideNav.List level={2}>
                     <SideNav.ListItem
                         id='subitem_41'
                         name='Item 1'
@@ -267,7 +269,8 @@ export const withSubList = () => (
 
 export const withIcons = () => (
     <SideNav
-        selectedId='item-2'>
+        selectedId='item-2'
+        skipLink={skipLink}>
         <SideNav.List
             data-sample='Sample'>
             <SideNav.ListItem

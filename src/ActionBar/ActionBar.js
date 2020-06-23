@@ -2,7 +2,8 @@ import Button from '../Button/Button';
 import classnames from 'classnames';
 import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import PropTypes from 'prop-types';
-import React, { useEffect } from 'react';
+import React from 'react';
+import 'fundamental-styles/dist/action-bar.css';
 
 /**
  * The **Action Bar** is located at the top of the page and is used for page title
@@ -18,7 +19,6 @@ const ActionBar = React.forwardRef(({
     buttonProps,
     description,
     descriptionProps,
-    disableStyles,
     headingLevel,
     title,
     titleProps,
@@ -30,12 +30,6 @@ const ActionBar = React.forwardRef(({
         'fd-action-bar',
         className
     );
-
-    useEffect(() => {
-        if (!disableStyles) {
-            require('fundamental-styles/dist/action-bar.css');
-        }
-    }, []);
 
     const actionBarHeaderClasses = classnames(
         'fd-action-bar__header',
@@ -70,7 +64,6 @@ const ActionBar = React.forwardRef(({
                     <Button
                         {...buttonProps}
                         compact
-                        disableStyles={disableStyles}
                         glyph='navigation-left-arrow'
                         onClick={onBackClick}
                         option='transparent' />
@@ -110,8 +103,6 @@ ActionBar.propTypes = {
     description: PropTypes.string,
     /** Additional props to be spread to the description\'s `<p>` element */
     descriptionProps: PropTypes.object,
-    /** Internal use only */
-    disableStyles: PropTypes.bool,
     /** Heading level. `<h1>` is reserved for the page title */
     headingLevel: CustomPropTypes.range(2, 6),
     /**Additional props to be spread to the title\'s heading element */

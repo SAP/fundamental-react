@@ -53,7 +53,6 @@ export const validationStates = () => (
 export const dev = () => (
     <StepInput
         compact={boolean('compact', false)}
-        disableStyles={boolean('disableStyles', false)}
         disabled={boolean('disabled', false)}
         placeholder={text('Placeholder', 'Placeholder')}
         validationState={select('Validation State', {
@@ -64,6 +63,4 @@ export const dev = () => (
             'warning': { state: 'warning', text: 'placeholder text' }
         })} />
 );
-dev.story = {
-    parameters: { docs: { disable: true } }
-};
+dev.parameters = { docs: { disable: true } };

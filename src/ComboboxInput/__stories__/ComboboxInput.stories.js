@@ -71,6 +71,4 @@ export const dev = () => (
 );
 
 
-dev.story = {
-    parameters: { docs: { disable: true } }
-};
+dev.parameters = { docs: { disable: true } };

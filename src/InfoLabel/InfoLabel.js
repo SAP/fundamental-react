@@ -2,7 +2,9 @@ import classnames from 'classnames';
 import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import { listOfIcons } from '../utils/listOfIcons';
 import PropTypes from 'prop-types';
-import React, { useEffect } from 'react';
+import React from 'react';
+import 'fundamental-styles/dist/icon.css';
+import 'fundamental-styles/dist/info-label.css';
 
 /** An **InfoLabel** is a small non-interactive numeric or text-based control.
  * Its primary use is to add user-defined characteristic to an object. */
@@ -10,18 +12,10 @@ const InfoLabel = React.forwardRef(({
     children,
     className,
     color,
-    disableStyles,
     glyph,
     numeric,
     ...props
 }, ref) => {
-
-    useEffect(() => {
-        if (!disableStyles) {
-            require('fundamental-styles/dist/icon.css');
-            require('fundamental-styles/dist/info-label.css');
-        }
-    }, []);
 
     const labelClasses = classnames(
         'fd-info-label',
@@ -48,8 +42,6 @@ InfoLabel.propTypes = {
     className: PropTypes.string,
     /** In addition the the default grey, there are additional Semantic color options */
     color: CustomPropTypes.range(1, 10),
-    /** Internal use only */
-    disableStyles: PropTypes.bool,
     /** See Icon component for list of icon options */
     glyph: PropTypes.oneOf(listOfIcons),
     /** Set to **true** if using the label for only a numeric value */

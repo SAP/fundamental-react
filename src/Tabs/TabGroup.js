@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { TAB_SIZES } from '../utils/constants';
 import { TabContent } from './_TabContent';
 import React, { Component } from 'react';
+import 'fundamental-styles/dist/tabs.css';
 
 /** A **TabGroup** is a collection of **Tab** components.  Each **Tab** is based on a folder
 metaphor and is used to separate content into different sections.
@@ -13,12 +14,6 @@ class TabGroup extends Component {
         this.state = {
             selectedIndex: props.selectedIndex
         };
-    }
-
-    componentDidMount() {
-        if (!this.props.disableStyles) {
-            require('fundamental-styles/dist/tabs.css');
-        }
     }
 
     static getDerivedStateFromProps(props, state) {
@@ -78,7 +73,6 @@ class TabGroup extends Component {
         const {
             children,
             className,
-            disableStyles,
             selectedIndex,
             size,
             tabGroupProps,
@@ -116,8 +110,6 @@ TabGroup.propTypes = {
     children: PropTypes.node,
     /** CSS class(es) to add to the element */
     className: PropTypes.string,
-    /** Internal use only */
-    disableStyles: PropTypes.bool,
     /** The index of the selected tab */
     selectedIndex: PropTypes.number,
     /** Size of the component: 's',

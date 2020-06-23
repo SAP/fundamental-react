@@ -24,6 +24,8 @@ export const primary = () => (
         title={'Page Title'} />
 );
 
+/** ActionBar with no back button */
+
 export const noBackButton = () => (
     <ActionBar
         actions={(<><Button>Button</Button>
@@ -33,13 +35,9 @@ export const noBackButton = () => (
         title='Page Title' />
 );
 
-noBackButton.story = {
-    parameters: {
-        docs: {
-            storyDescription: 'ActionBar with no back button'
-        }
-    }
-};
+/** When there are several main actions for a page, consider displaying them under a contextual menu. This
+allows the user to look in the same position they are used to but avoids cluttering the action bar with
+more than 3-4 actions. This also works well for a responsive/adaptive application. */
 
 export const contextualMenu = () => (
     <ActionBar
@@ -59,18 +57,7 @@ export const contextualMenu = () => (
         title='Page Title' />
 );
 
-// TO DO: add link to bug about using jsdocs
-
-contextualMenu.story = {
-    name: 'With a ContextualMenu',
-    parameters: {
-        docs: {
-            storyDescription: `When there are several main actions for a page, consider displaying them under a contextual menu. This
-            allows the user to look in the same position they are used to but avoids cluttering the action bar with
-            more than 3-4 actions. This also works well for a responsive/adaptive application.`
-        }
-    }
-};
+contextualMenu.storyName = 'With a ContextualMenu';
 
 export const dev = () => (
     <ActionBar
@@ -88,9 +75,7 @@ export const dev = () => (
         title={text('title', 'Page Title')} />
 );
 
-dev.story = {
-    parameters: { docs: { disable: true } }
-};
+dev.parameters = { docs: { disable: true } };
 
 export const noDescription = () => (
     <ActionBar
@@ -100,14 +85,10 @@ export const noDescription = () => (
         title='Page Title' />
 );
 
-noDescription.story = {
-    parameters: { docs: { disable: true } }
-};
+noDescription.parameters = { docs: { disable: true } };
 
 export const noActions = () => (
     <ActionBar title='Page Title' />
 );
 
-noActions.story = {
-    parameters: { docs: { disable: true } }
-};
+noActions.parameters = { docs: { disable: true } };

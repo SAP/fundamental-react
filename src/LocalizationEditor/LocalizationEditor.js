@@ -6,18 +6,12 @@ import FormTextArea from '../Forms/FormTextarea';
 import Menu from '../Menu/Menu';
 import Popover from '../Popover/Popover';
 import PropTypes from 'prop-types';
-import React, { useEffect } from 'react';
-
+import React from 'react';
+import 'fundamental-styles/dist/input-group.css';
+import 'fundamental-styles/dist/localization-editor.css';
 
 const LocalizationEditor = React.forwardRef(({ control, menu, id, compact, textarea, className, inputClassName, listProps, popoverProps,
-    disableStyles, ...props }, ref) => {
-
-    useEffect(() => {
-        if (!disableStyles) {
-            require('fundamental-styles/dist/localization-editor.css');
-            require('fundamental-styles/dist/input-group.css');
-        }
-    }, []);
+    ...props }, ref) => {
 
     const localizationEditorClasses = classnames(
         'fd-localization-editor',
@@ -34,14 +28,13 @@ const LocalizationEditor = React.forwardRef(({ control, menu, id, compact, texta
             ref={ref}>
             <FormLabel
                 {...control.labelProps}
-                disableStyles={disableStyles}
                 htmlFor={id}>
                 {control.label}
             </FormLabel>
             <Popover
                 {...popoverProps}
                 body={
-                    <Menu disableStyles={disableStyles}>
+                    <Menu>
                         <Menu.List {...listProps}>
                             {menu.map((item, index) => {
                                 let {
@@ -59,14 +52,12 @@ const LocalizationEditor = React.forwardRef(({ control, menu, id, compact, texta
                                             {textarea ? (
                                                 <FormTextArea
                                                     {...inputProps}
-                                                    className={localizationInputClasses}
-                                                    disableStyles={disableStyles} />
+                                                    className={localizationInputClasses} />
                                             ) : (
                                                 <FormInput
                                                     {...inputProps}
                                                     className={localizationInputClasses}
                                                     compact={compact}
-                                                    disableStyles={disableStyles}
                                                     placeholder={placeholder} />
                                             )}
                                             <span
@@ -74,7 +65,6 @@ const LocalizationEditor = React.forwardRef(({ control, menu, id, compact, texta
                                                 <Button
                                                     className='fd-input-group__button'
                                                     compact={compact}
-                                                    disableStyles={disableStyles}
                                                     option='transparent'>
                                                     {language}
                                                 </Button>
@@ -93,14 +83,12 @@ const LocalizationEditor = React.forwardRef(({ control, menu, id, compact, texta
                             <FormTextArea
                                 {...control.inputProps}
                                 className={localizationInputClasses}
-                                compact={compact}
-                                disableStyles={disableStyles} />
+                                compact={compact} />
                         ) : (
                             <FormInput
                                 {...control.inputProps}
                                 className={localizationInputClasses}
                                 compact={compact}
-                                disableStyles={disableStyles}
                                 placeholder={control.placeholder} />
                         )}
                         <span
@@ -109,7 +97,6 @@ const LocalizationEditor = React.forwardRef(({ control, menu, id, compact, texta
                                 {...control.buttonProps}
                                 className='fd-input-group__button'
                                 compact={compact}
-                                disableStyles={disableStyles}
                                 option='transparent'>
                                 {control.language}
                             </Button>
@@ -117,7 +104,6 @@ const LocalizationEditor = React.forwardRef(({ control, menu, id, compact, texta
                     </div>
                 }
                 disableKeyPressHandler
-                disableStyles={disableStyles}
                 id={id}
                 noArrow />
         </div>
@@ -156,8 +142,6 @@ LocalizationEditor.propTypes = {
     className: PropTypes.string,
     /** Set to **true** to enable compact mode */
     compact: PropTypes.bool,
-    /** Internal use only */
-    disableStyles: PropTypes.bool,
     /** Value for the `id` attribute on the element */
     id: PropTypes.string,
     /** CSS class(es) to add to the `<input>` element */

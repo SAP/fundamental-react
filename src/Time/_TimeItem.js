@@ -241,7 +241,7 @@ class TimeItem extends Component {
     }
 
     render() {
-        const { disableStyles, disabled, upButtonProps, downButtonProps, value, active, localizedText, name } = this.props;
+        const { disabled, upButtonProps, downButtonProps, value, active, localizedText, name } = this.props;
 
         const isActive = active === name;
 
@@ -258,7 +258,6 @@ class TimeItem extends Component {
                 <Button
                     {...upButtonProps}
                     aria-label={localizedText.buttonUp}
-                    disableStyles={disableStyles}
                     disabled={disabled}
                     glyph='navigation-up-arrow'
                     onClick={this._onUp}
@@ -277,7 +276,6 @@ class TimeItem extends Component {
                 <Button
                     {...downButtonProps}
                     aria-label={localizedText.buttonDown}
-                    disableStyles={disableStyles}
                     disabled={disabled}
                     glyph='navigation-down-arrow'
                     onClick={this._onDown}
@@ -295,7 +293,6 @@ TimeItem.propTypes = {
     arialabel: PropTypes.string,
     /** Set to **true** to mark component as disabled and make it non-interactive */
     disabled: PropTypes.bool,
-    disableStyles: PropTypes.bool,
     /** Internal use only */
     downButtonProps: PropTypes.object,
     format12Hours: PropTypes.bool,

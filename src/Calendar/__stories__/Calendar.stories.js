@@ -7,19 +7,20 @@ import {
     date,
     number,
     optionsKnob,
-    text,
-    withKnobs
+    text
 } from '@storybook/addon-knobs';
 
 export default {
     title: 'Component API/Calendar',
     component: Calendar,
-    decorators: [withKnobs]
+    parameters: {
+        storyshots: { disable: true }
+    }
 };
 
 function dateKnobToDate(name, defaultValue) {
     const stringTimestamp = date(name, defaultValue);
-    return new Date(stringTimestamp);
+    return moment(stringTimestamp);
 }
 
 const afterDateDefault = new Date(new Date().getFullYear() + 1, 0, 1);
@@ -49,15 +50,18 @@ export const disableWeekends = () => (
         disableWeekends />
 );
 
-disableWeekends.story = {
-    name: 'Disabled Weekends and Disabled Before Date'
-};
+disableWeekends.storyName = 'Disabled Weekends and Disabled Before Date';
 
 export const blockedDates = () => (
     <Calendar
         blockedDates={[new Date(2018, 1, 1, 0, 0, 0, 0), new Date(2018, 3, 3, 0, 0, 0, 0)]}
         disableWeekday={['Monday', 'Tuesday']} />
 );
+
+export const openToDate = () => {
+    const _openToDate = moment().year('2000').month(0).date(1);
+    return <Calendar openToDate={_openToDate} />;
+};
 
 export const specialDays = () => (
     <Calendar
@@ -91,11 +95,10 @@ export const dev = () => (
         disabledDates={[dateKnobToDate('disable between dates (1)', disabledDateFirstDefault),
             dateKnobToDate('disable between dates (2)', disabledDateSecondDefault)]}
         locale={text('locale', 'en')}
+        openToDate={dateKnobToDate('open to date', new Date())}
         weekdayStart={number('weekdayStart', 0)} />
 );
 
-dev.story = {
-    parameters: {
-        docs: { disable: true }
-    }
+dev.parameters = {
+    docs: { disable: true }
 };

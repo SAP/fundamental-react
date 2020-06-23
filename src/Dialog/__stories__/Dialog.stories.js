@@ -85,6 +85,8 @@ export const subheader = () => {
     );
 };
 
+/** By default dialog body has no horizontal paddings. Add a size to modify the padding. */
+
 export const sizes = () => {
     let [showDialog, setShowDialog] = useState(false);
     let [showDialogMd, setShowDialogMd] = useState(false);
@@ -168,17 +170,6 @@ export const sizes = () => {
     );
 };
 
-sizes.story = {
-    name: 'Sizes',
-    parameters: {
-        docs: {
-            storyDescription: 'By default dialog body has no horizontal paddings. Add a size to modify the padding'
-        }
-    }
-};
-
-
-
 export const dev = () => (
     <Dialog
         actions={[
@@ -203,10 +194,9 @@ export const dev = () => (
 );
 
 
-dev.story = {
-    parameters: {
-        docs: { disable: true }
-    }
+dev.parameters = {
+    docs: { disable: true },
+    storyshots: { disable: true }
 };
 
 
@@ -225,10 +215,9 @@ export const small = () => (
     </Dialog>
 );
 
-small.story = {
-    parameters: {
-        docs: { disable: true }
-    }
+small.parameters = {
+    docs: { disable: true },
+    storyshots: { disable: true }
 };
 
 
@@ -247,10 +236,9 @@ export const medium = () => (
     </Dialog>
 );
 
-medium.story = {
-    parameters: {
-        docs: { disable: true }
-    }
+medium.parameters = {
+    docs: { disable: true },
+    storyshots: { disable: true }
 };
 
 
@@ -269,10 +257,9 @@ export const large = () => (
     </Dialog>
 );
 
-large.story = {
-    parameters: {
-        docs: { disable: true }
-    }
+large.parameters = {
+    docs: { disable: true },
+    storyshots: { disable: true }
 };
 
 
@@ -291,8 +278,7 @@ export const xl = () => (
     </Dialog>
 );
 
-xl.story = {
-    parameters: {
-        docs: { disable: true }
-    }
+xl.parameters = {
+    docs: { disable: true },
+    storyshots: { disable: true }
 };

@@ -23,7 +23,5 @@ export const compact = () => (
     </ButtonSegmented>
 );
 
-compact.story = {
-    name: 'Compact'
-};
+compact.storyName = 'Compact';
 

@@ -37,9 +37,7 @@ export const simple = () => (
     </List>
 );
 
-simple.story = {
-    name: 'Simple List'
-};
+simple.storyName = 'Simple List';
 
 export const headerFooter = () => (
     <List>
@@ -60,9 +58,7 @@ export const headerFooter = () => (
     </List>
 );
 
-headerFooter.story = {
-    name: 'with Header and Footer'
-};
+headerFooter.storyName = 'with Header and Footer';
 
 export const noBorder = () => (
     <List noBorder>
@@ -83,9 +79,7 @@ export const noBorder = () => (
     </List>
 );
 
-noBorder.story = {
-    name: 'with no borders'
-};
+noBorder.storyName = 'with no borders';
 
 export const compact = () => (
     <List compact>
@@ -299,6 +293,4 @@ export const actionList = () => (
     </List>
 );
 
-dev.story = {
-    parameters: { docs: { disable: true } }
-};
+dev.parameters = { docs: { disable: true } };

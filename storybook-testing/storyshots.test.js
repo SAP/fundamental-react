@@ -9,16 +9,14 @@ jest.mock('react-dom');
 
 // mock shortid for snapshot testing
 jest.mock('shortid', () => {
-    let id = 1;
-
     return {
-        generate: () => id++
+        generate: () => 'mocked-short-id'
     };
 });
 
 // create jest snapshot tests from each story
 initStoryshots({
-    storyKindRegex: /^((?!.*?Component).)*$/,
+    storyKindRegex: /^((?!.*?Visual).)*$/,
     integrityOptions: { cwd: path.join(__dirname, 'src', 'stories') },
     test: multiSnapshotWithOptions()
 });

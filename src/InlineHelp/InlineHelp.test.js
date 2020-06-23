@@ -7,13 +7,16 @@ describe('<InlineHelp />', () => {
         test('should allow props to be spread to the InlineHelp component', () => {
             const element = mount(
                 <InlineHelp
+                    buttonLabel='Quick Help for Content'
                     data-sample='Sample'
-                    placement='bottom-center'
+                    placement='bottom'
                     text='Text' />
             );
 
+            element.find('.fd-inline-help').at(0).simulate('click');
+
             expect(
-                element.getDOMNode().querySelector('span').attributes['data-sample'].value
+                element.find('.fd-inline-help__content').at(0).getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
         });
     });
@@ -25,7 +28,12 @@ describe('<InlineHelp />', () => {
                 super(props);
                 ref = React.createRef();
             }
-            render = () => <InlineHelp ref={ref} text='hello' />;
+            render = () => (
+                <InlineHelp
+                    buttonLabel='Quick Help for Content'
+                    ref={ref}
+                    text='hello' />
+            );
         }
         mount(<Test />);
         expect(ref.current.tagName).toEqual('SPAN');
