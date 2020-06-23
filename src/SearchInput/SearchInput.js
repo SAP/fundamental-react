@@ -140,10 +140,10 @@ class SearchInput extends PureComponent {
                         filteredResult.map((item, index) => {
                             return (
                                 subStringSearch ? (<Menu.Item
-                                        key={index}
-                                        onClick={(e) => this.handleListItemClick(e, item)}>
-                                        {item.text}
-                                    </Menu.Item>) :
+                                    key={index}
+                                    onClick={(e) => this.handleListItemClick(e, item)}>
+                                    {item.text}
+                                </Menu.Item>) :
                                     (
                                         <Menu.Item
                                             key={index}
@@ -197,10 +197,10 @@ class SearchInput extends PureComponent {
                             {!noSearchBtn && (
                                 <InputGroup.Addon {...inputGroupAddonProps} isButton>
                                     <Button {...searchBtnProps}
-                                            disableStyles={disableStyles}
-                                            glyph='search'
-                                            onClick={this.handleClick}
-                                            option='transparent' />
+                                        disableStyles={disableStyles}
+                                        glyph='search'
+                                        onClick={this.handleClick}
+                                        option='transparent' />
                                 </InputGroup.Addon>
                             )}
                         </InputGroup>

@@ -286,7 +286,7 @@ describe('<SearchInput />', () => {
                     }
                 }
                 render = () => (<SearchInput inputProps={{ ref: ref }} onChange={this.handleChange}
-                                             searchList={this.state.list} />);
+                    searchList={this.state.list} />);
             }
             const wrapper = mount(<Test />);
 
