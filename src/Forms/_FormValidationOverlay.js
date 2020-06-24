@@ -1,10 +1,10 @@
 import { FORM_MESSAGE_TYPES } from '../utils/constants';
 import FormMessage from './_FormMessage';
-import Popover from '../Popover/Popover';
+import Popper from '../utils/_Popper';
 import PropTypes from 'prop-types';
 import React, { useState } from 'react';
 
-const FormValidationOverlay = ({ className, control, validationState, ...props }) => {
+const FormValidationOverlay = React.forwardRef(({ className, control, popperProps, validationState, ...props }, ref) => {
     let [showValidationMessage, setShowValidationMessage] = useState(false);
 
     const _handleBlur = () => {
@@ -15,30 +15,50 @@ const FormValidationOverlay = ({ className, control, validationState, ...props }
         setShowValidationMessage(true);
     };
 
-    const bodyContent = (validationState && <FormMessage type={validationState.state}>{validationState.text}</FormMessage>);
+    const bodyContent = (<FormMessage type={validationState?.state}>{validationState?.text}</FormMessage>);
 
     return (
-        <Popover
-            {...props}
-            body={bodyContent}
-            className='fd-popover--input-message-group'
-            control={control}
-            disableKeyPressHandler
-            disableTriggerOnClick
-            noArrow
+    // <Popover
+    //     {...props}
+    //     body={bodyContent}
+    //     className='fd-popover--input-message-group'
+    //     control={control}
+    //     disableKeyPressHandler
+    //     disableTriggerOnClick
+    //     noArrow
+    //     onBlur={_handleBlur}
+    //     onFocus={_handleFocus}
+    //     placement='bottom-start'
+    //     show={showValidationMessage}
+    //     style={{ display: 'block' }} /> // TO DO: replace with class from fundamental-styles
+
+        <div {...props}
             onBlur={_handleBlur}
             onFocus={_handleFocus}
-            placement='bottom-start'
-            show={showValidationMessage}
-            style={{ display: 'block' }} /> // TO DO: replace with class from fundamental-styles
+            ref={ref}>
+            <Popper
+                cssBlock='fd-popover'
+                // innerRef={ref}
+                noArrow
+                popperPlacement={'bottom-start'}
+                popperProps={popperProps}
+                referenceClassName='fd-popover__control'
+                referenceComponent={control}
+                show={showValidationMessage}
+                usePortal>
+                {bodyContent}
+            </Popper>
+        </div>
     );
-};
+});
 FormValidationOverlay.displayName = 'FormValidationOverlay';
 
 FormValidationOverlay.propTypes = {
     /** CSS class(es) to add to the element */
     className: PropTypes.string,
     control: PropTypes.node,
+    /** Additional props to be spread to the overlay element, supported by <a href="https://popper.js.org" target="_blank">popper.js</a> */
+    popperProps: PropTypes.object,
     /** An object identifying a validation message.  The object will include properties for `state` and `text`; _e.g._, \`{ state: \'warning\', text: \'This is your last warning\' }\` */
     validationState: PropTypes.shape({
         /** State of validation: 'error', 'warning', 'information', 'success' */
@@ -46,6 +66,10 @@ FormValidationOverlay.propTypes = {
         /** Text of the validation message */
         text: PropTypes.stringng
     })
+};
+
+FormValidationOverlay.defaultProps = {
+    popperProps: {}
 };
 
 export default FormValidationOverlay;

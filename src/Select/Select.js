@@ -36,6 +36,7 @@ const Select = React.forwardRef(({
     const internalDivRef = useRef(null);
     const divRef = ref || internalDivRef;
 
+    const popoverRef = useRef(null);
     const ulRef = useRef(null);
 
     let [isExpanded, setIsExpanded] = useState(false);
@@ -50,7 +51,9 @@ const Select = React.forwardRef(({
     };
 
     const handleSelect = (e, option) => {
-        setIsExpanded(false);
+        // setIsExpanded(false);
+        const popover = popoverRef && popoverRef.current;
+        popover && popover.handleEscapeKey();
         setSelectedOptionKey(option.key);
         onSelect(e, option);
     };
@@ -70,7 +73,9 @@ const Select = React.forwardRef(({
     };
 
 
-    const getFocusableMenuItems = () => [...ulRef.current.children];
+    const getFocusableMenuItems = () => {
+        return ulRef.current ? [...ulRef.current.children] : [];
+    };
 
     const getItemsAndActiveIndex = () => {
         const items = getFocusableMenuItems();
@@ -79,21 +84,21 @@ const Select = React.forwardRef(({
         return { items, activeIndex };
     };
 
-    const focusFirst = () => {
-        const { items } = getItemsAndActiveIndex();
-        if (items.length === 0) {
-            return;
-        }
-        if (isKeyboardEvent) {
-            let selectedItem = items.filter(listItem => listItem.className === 'fd-list__item is-selected');
-            selectedItem.length ? setFocusedElement(tryFocus(selectedItem[0])) :
-                setFocusedElement(tryFocus(items[0]));
-        }
-    };
+    // const focusFirst = () => {
+    //     const { items } = getItemsAndActiveIndex();
+    //     if (items.length === 0) {
+    //         return;
+    //     }
+    //     if (isKeyboardEvent) {
+    //         let selectedItem = items.filter(listItem => listItem.className === 'fd-list__item is-selected');
+    //         selectedItem.length ? setFocusedElement(tryFocus(selectedItem[0])) :
+    //             setFocusedElement(tryFocus(items[0]));
+    //     }
+    // };
 
-    useEffect(() => {
-        if (isExpanded) focusFirst();
-    }, [isExpanded]);
+    // useEffect(() => {
+    //     if (isExpanded) focusFirst();
+    // }, [isExpanded]);
 
     useEffect(() => {
         focusedElement && focusedElement.focus();
@@ -121,28 +126,41 @@ const Select = React.forwardRef(({
         }
     };
 
-    const handleKeyDown = (e, option) => {
+    const handleSelectKeyDown = (e) => {
         switch (keycode(e)) {
-            case 'esc':
-            case 'tab':
-                e.stopPropagation();
-                setIsExpanded(false);
-                setFocusedElement(tryFocus(divRef.current));
+            case 'enter':
+            case 'space':
+                e.preventDefault();
+                setIsExpanded(true);
                 break;
+            default:
+        }
+    };
+
+    const handleOptionKeyDown = (e, option) => {
+        switch (keycode(e)) {
+            // case 'esc':
+            // case 'tab':
+            //     e.stopPropagation();
+            //     // setIsExpanded(false);
+            //     const popover = popoverRef && popoverRef.current;
+            //     popover && popover.handleEscapeKey();
+            //     setFocusedElement(tryFocus(divRef.current));
+            //     break;
             case 'enter':
             case 'space':
                 e.preventDefault();
                 handleSelect(e, option);
                 setFocusedElement(tryFocus(divRef.current));
                 break;
-            case 'up':
-                e.preventDefault();
-                focusPrevious();
-                break;
-            case 'down':
-                e.preventDefault();
-                focusNext();
-                break;
+            // case 'up':
+            //     e.preventDefault();
+            //     focusPrevious();
+            //     break;
+            // case 'down':
+            //     e.preventDefault();
+            //     focusNext();
+            //     break;
             default:
         }
     };
@@ -169,6 +187,11 @@ const Select = React.forwardRef(({
     const selected = displayOptions
         .find(option => typeof selectedOptionKey !== 'undefined' && option.key === selectedOptionKey);
 
+    const selectedIndex = displayOptions
+        .findIndex(option => typeof selectedOptionKey !== 'undefined' && option.key === selectedOptionKey);
+
+    const firstFocusIndex = selectedIndex > -1 ? selectedIndex : 0;
+
     const textContent = selected ? selected.text : placeholder;
 
     const selectAriaLabel = (includeEmptyOption && !textContent) ? emptyAriaLabel : null;
@@ -179,6 +202,7 @@ const Select = React.forwardRef(({
             className={selectClasses}
             id={id}
             onClick={handleClick}
+            onKeyDown={handleSelectKeyDown}
             ref={divRef}>
             <div aria-disabled={disabled} className={selectControlClasses}>
                 <span aria-label={selectAriaLabel} className='fd-select__text-content'>{textContent}</span>
@@ -223,21 +247,22 @@ const Select = React.forwardRef(({
                                 aria-selected={selected?.key === option.key}
                                 key={option.key}
                                 onClick={(e) => handleSelect(e, option)}
-                                onKeyDown={(e) => handleKeyDown(e, option)}
+                                onKeyDown={(e) => handleOptionKeyDown(e, option)}
                                 role='option'
                                 selected={selected?.key === option.key}
-                                tabIndex={selected?.key === option.key ? '0' : '-1'}>
+                                tabIndex={0}>
                                 <List.Text>{option.text}</List.Text>
                             </List.Item>
                         ))}
                     </List>
                 </>)}
             control={wrappedSelectControl}
+            firstFocusIndex={firstFocusIndex}
             noArrow
-            onClickOutside={() => setIsExpanded(false)}
             placement='bottom-start'
             popperProps={{ id }}
-            show={isExpanded}
+            ref={popoverRef}
+            useArrowKeyNavigation
             widthSizingType='minTarget' />
     );
 });
