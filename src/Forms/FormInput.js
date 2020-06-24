@@ -32,12 +32,9 @@ const FormInput = React.forwardRef(({ className, compact, disabled, name, placeh
     );
 
     return (
-        validationState ? (
-            <FormValidationOverlay
-                control={formInput}
-                validationState={validationState} />
-        ) :
-            formInput
+        <FormValidationOverlay
+            control={formInput}
+            validationState={validationState} />
     );
 });
 

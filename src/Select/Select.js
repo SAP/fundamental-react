@@ -2,6 +2,7 @@ import classnames from 'classnames';
 import { detect } from 'detect-browser';
 import { FORM_MESSAGE_TYPES } from '../utils/constants';
 import FormMessage from '../Forms/_FormMessage';
+import FormValidationOverlay from '../Forms/_FormValidationOverlay';
 import keycode from 'keycode';
 import List from '../List/List';
 import Popover from '../Popover/Popover';
@@ -186,6 +187,12 @@ const Select = React.forwardRef(({
         </div>
     );
 
+    const wrappedSelectControl = (
+        <FormValidationOverlay
+            control={selectControl}
+            validationState={validationState} />
+    );
+
     const listClassName = classnames(
         'fd-list--dropdown',
         {
@@ -225,7 +232,7 @@ const Select = React.forwardRef(({
                         ))}
                     </List>
                 </>)}
-            control={selectControl}
+            control={wrappedSelectControl}
             noArrow
             onClickOutside={() => setIsExpanded(false)}
             placement='bottom-start'

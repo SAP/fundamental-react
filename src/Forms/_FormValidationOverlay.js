@@ -15,7 +15,7 @@ const FormValidationOverlay = ({ className, control, validationState, ...props }
         setShowValidationMessage(true);
     };
 
-    const bodyContent = (validationState?.text && <FormMessage type={validationState.state}>{validationState.text}</FormMessage>);
+    const bodyContent = (validationState && <FormMessage type={validationState.state}>{validationState.text}</FormMessage>);
 
     return (
         <Popover

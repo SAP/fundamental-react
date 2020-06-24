@@ -53,7 +53,7 @@ class Popover extends Component {
     };
 
     handleFocusManager = () => {
-        if (this.state.isExpanded && this.popover) {
+        if (this.state.isExpanded && this.popover && this.controlRef) {
             this.focusManager = new FocusManager(this.popover, this.controlRef, this.props.useArrowKeyNavigation);
         }
     };
@@ -114,7 +114,7 @@ class Popover extends Component {
             ...rest
         } = this.props;
 
-        let onClickFunctions;
+        let onClickFunctions = control?.props.onClick;
         if (!disableTriggerOnClick) {
             onClickFunctions = this.triggerBody;
 
