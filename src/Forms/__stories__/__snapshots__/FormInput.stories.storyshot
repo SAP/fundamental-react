@@ -4,11 +4,26 @@ exports[`Storyshots Component API/Forms/FormInput Compact 1`] = `
 <div
   dir="ltr"
 >
-  <input
-    className="fd-input fd-input--compact"
-    placeholder="Compact"
-    type="text"
-  />
+  <div
+    onBlur={[Function]}
+    onFocus={[Function]}
+  >
+    <div
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      onTouchStart={[Function]}
+    >
+      <div
+        className="fd-popover__control"
+      >
+        <input
+          className="fd-input fd-input--compact"
+          placeholder="Compact"
+          type="text"
+        />
+      </div>
+    </div>
+  </div>
 </div>
 `;
 
@@ -16,13 +31,28 @@ exports[`Storyshots Component API/Forms/FormInput Dev 1`] = `
 <div
   dir="ltr"
 >
-  <input
-    className="fd-input"
-    disabled={false}
-    placeholder="Placeholder"
-    readOnly={false}
-    type="text"
-  />
+  <div
+    onBlur={[Function]}
+    onFocus={[Function]}
+  >
+    <div
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      onTouchStart={[Function]}
+    >
+      <div
+        className="fd-popover__control"
+      >
+        <input
+          className="fd-input"
+          disabled={false}
+          placeholder="Placeholder"
+          readOnly={false}
+          type="text"
+        />
+      </div>
+    </div>
+  </div>
 </div>
 `;
 
@@ -30,12 +60,27 @@ exports[`Storyshots Component API/Forms/FormInput Disabled 1`] = `
 <div
   dir="ltr"
 >
-  <input
-    className="fd-input"
-    disabled={true}
-    placeholder="Disabled"
-    type="text"
-  />
+  <div
+    onBlur={[Function]}
+    onFocus={[Function]}
+  >
+    <div
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      onTouchStart={[Function]}
+    >
+      <div
+        className="fd-popover__control"
+      >
+        <input
+          className="fd-input"
+          disabled={true}
+          placeholder="Disabled"
+          type="text"
+        />
+      </div>
+    </div>
+  </div>
 </div>
 `;
 
@@ -43,11 +88,26 @@ exports[`Storyshots Component API/Forms/FormInput Primary 1`] = `
 <div
   dir="ltr"
 >
-  <input
-    className="fd-input"
-    placeholder="Default"
-    type="text"
-  />
+  <div
+    onBlur={[Function]}
+    onFocus={[Function]}
+  >
+    <div
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      onTouchStart={[Function]}
+    >
+      <div
+        className="fd-popover__control"
+      >
+        <input
+          className="fd-input"
+          placeholder="Default"
+          type="text"
+        />
+      </div>
+    </div>
+  </div>
 </div>
 `;
 
@@ -55,12 +115,27 @@ exports[`Storyshots Component API/Forms/FormInput Read Only 1`] = `
 <div
   dir="ltr"
 >
-  <input
-    className="fd-input"
-    placeholder="ReadOnly"
-    readOnly={true}
-    type="text"
-  />
+  <div
+    onBlur={[Function]}
+    onFocus={[Function]}
+  >
+    <div
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      onTouchStart={[Function]}
+    >
+      <div
+        className="fd-popover__control"
+      >
+        <input
+          className="fd-input"
+          placeholder="ReadOnly"
+          readOnly={true}
+          type="text"
+        />
+      </div>
+    </div>
+  </div>
 </div>
 `;
 
@@ -72,12 +147,8 @@ exports[`Storyshots Component API/Forms/FormInput Validation States 1`] = `
     className="fddocs-container"
   >
     <div
-      className="fd-popover fd-popover--input-message-group"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
+      onBlur={[Function]}
+      onFocus={[Function]}
     >
       <div
         onFocus={[Function]}
@@ -88,27 +159,16 @@ exports[`Storyshots Component API/Forms/FormInput Validation States 1`] = `
           className="fd-popover__control"
         >
           <input
-            aria-controls="fd-mocked-short-id"
-            aria-expanded={false}
-            aria-haspopup={true}
             className="fd-input is-error"
-            onClick={[Function]}
-            onKeyPress={[Function]}
             placeholder="Error"
-            role="button"
-            tabIndex={0}
             type="text"
           />
         </div>
       </div>
     </div>
     <div
-      className="fd-popover fd-popover--input-message-group"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
+      onBlur={[Function]}
+      onFocus={[Function]}
     >
       <div
         onFocus={[Function]}
@@ -119,27 +179,16 @@ exports[`Storyshots Component API/Forms/FormInput Validation States 1`] = `
           className="fd-popover__control"
         >
           <input
-            aria-controls="fd-mocked-short-id"
-            aria-expanded={false}
-            aria-haspopup={true}
             className="fd-input is-warning"
-            onClick={[Function]}
-            onKeyPress={[Function]}
             placeholder="Warning"
-            role="button"
-            tabIndex={0}
             type="text"
           />
         </div>
       </div>
     </div>
     <div
-      className="fd-popover fd-popover--input-message-group"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
+      onBlur={[Function]}
+      onFocus={[Function]}
     >
       <div
         onFocus={[Function]}
@@ -150,27 +199,16 @@ exports[`Storyshots Component API/Forms/FormInput Validation States 1`] = `
           className="fd-popover__control"
         >
           <input
-            aria-controls="fd-mocked-short-id"
-            aria-expanded={false}
-            aria-haspopup={true}
             className="fd-input is-information"
-            onClick={[Function]}
-            onKeyPress={[Function]}
             placeholder="Information"
-            role="button"
-            tabIndex={0}
             type="text"
           />
         </div>
       </div>
     </div>
     <div
-      className="fd-popover fd-popover--input-message-group"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
+      onBlur={[Function]}
+      onFocus={[Function]}
     >
       <div
         onFocus={[Function]}
@@ -181,15 +219,8 @@ exports[`Storyshots Component API/Forms/FormInput Validation States 1`] = `
           className="fd-popover__control"
         >
           <input
-            aria-controls="fd-mocked-short-id"
-            aria-expanded={false}
-            aria-haspopup={true}
             className="fd-input is-success"
-            onClick={[Function]}
-            onKeyPress={[Function]}
             placeholder="Success"
-            role="button"
-            tabIndex={0}
             type="text"
           />
         </div>

@@ -10,10 +10,25 @@ exports[`Storyshots Component API/InputGroup Button add-on 1`] = `
     <div
       className="fd-input-group"
     >
-      <input
-        className="fd-input fd-input-group__input"
-        type="text"
-      />
+      <div
+        onBlur={[Function]}
+        onFocus={[Function]}
+      >
+        <div
+          onFocus={[Function]}
+          onMouseDown={[Function]}
+          onTouchStart={[Function]}
+        >
+          <div
+            className="fd-popover__control"
+          >
+            <input
+              className="fd-input fd-input-group__input"
+              type="text"
+            />
+          </div>
+        </div>
+      </div>
       <span
         className="fd-input-group__addon fd-input-group__addon--button"
       >
@@ -34,10 +49,25 @@ exports[`Storyshots Component API/InputGroup Button add-on 1`] = `
           type="button"
         />
       </span>
-      <input
-        className="fd-input fd-input-group__input"
-        type="text"
-      />
+      <div
+        onBlur={[Function]}
+        onFocus={[Function]}
+      >
+        <div
+          onFocus={[Function]}
+          onMouseDown={[Function]}
+          onTouchStart={[Function]}
+        >
+          <div
+            className="fd-popover__control"
+          >
+            <input
+              className="fd-input fd-input-group__input"
+              type="text"
+            />
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -58,10 +88,25 @@ exports[`Storyshots Component API/InputGroup Compact 1`] = `
         type="button"
       />
     </span>
-    <input
-      className="fd-input fd-input--compact fd-input-group__input"
-      type="text"
-    />
+    <div
+      onBlur={[Function]}
+      onFocus={[Function]}
+    >
+      <div
+        onFocus={[Function]}
+        onMouseDown={[Function]}
+        onTouchStart={[Function]}
+      >
+        <div
+          className="fd-popover__control"
+        >
+          <input
+            className="fd-input fd-input--compact fd-input-group__input"
+            type="text"
+          />
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 `;
@@ -73,11 +118,26 @@ exports[`Storyshots Component API/InputGroup Dev 1`] = `
   <div
     className="fd-input-group"
   >
-    <input
-      className="fd-input fd-input-group__input"
-      disabled={false}
-      type="text"
-    />
+    <div
+      onBlur={[Function]}
+      onFocus={[Function]}
+    >
+      <div
+        onFocus={[Function]}
+        onMouseDown={[Function]}
+        onTouchStart={[Function]}
+      >
+        <div
+          className="fd-popover__control"
+        >
+          <input
+            className="fd-input fd-input-group__input"
+            disabled={false}
+            type="text"
+          />
+        </div>
+      </div>
+    </div>
     <span
       className="fd-input-group__addon fd-input-group__addon--button"
       disabled={false}
@@ -107,11 +167,26 @@ exports[`Storyshots Component API/InputGroup Disabled 1`] = `
         type="button"
       />
     </span>
-    <input
-      className="fd-input fd-input-group__input"
-      disabled={true}
-      type="text"
-    />
+    <div
+      onBlur={[Function]}
+      onFocus={[Function]}
+    >
+      <div
+        onFocus={[Function]}
+        onMouseDown={[Function]}
+        onTouchStart={[Function]}
+      >
+        <div
+          className="fd-popover__control"
+        >
+          <input
+            className="fd-input fd-input-group__input"
+            disabled={true}
+            type="text"
+          />
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 `;
@@ -133,20 +208,50 @@ exports[`Storyshots Component API/InputGroup Icon add-on 1`] = `
           className="sap-icon--globe"
         />
       </span>
-      <input
-        className="fd-input fd-input-group__input"
-        placeholder="Type text here"
-        type="text"
-      />
+      <div
+        onBlur={[Function]}
+        onFocus={[Function]}
+      >
+        <div
+          onFocus={[Function]}
+          onMouseDown={[Function]}
+          onTouchStart={[Function]}
+        >
+          <div
+            className="fd-popover__control"
+          >
+            <input
+              className="fd-input fd-input-group__input"
+              placeholder="Type text here"
+              type="text"
+            />
+          </div>
+        </div>
+      </div>
     </div>
     <div
       className="fd-input-group"
     >
-      <input
-        className="fd-input fd-input-group__input"
-        placeholder="Type text here"
-        type="text"
-      />
+      <div
+        onBlur={[Function]}
+        onFocus={[Function]}
+      >
+        <div
+          onFocus={[Function]}
+          onMouseDown={[Function]}
+          onTouchStart={[Function]}
+        >
+          <div
+            className="fd-popover__control"
+          >
+            <input
+              className="fd-input fd-input-group__input"
+              placeholder="Type text here"
+              type="text"
+            />
+          </div>
+        </div>
+      </div>
       <span
         className="fd-input-group__addon"
       >
@@ -174,10 +279,25 @@ exports[`Storyshots Component API/InputGroup Primary 1`] = `
         type="button"
       />
     </span>
-    <input
-      className="fd-input fd-input-group__input"
-      type="text"
-    />
+    <div
+      onBlur={[Function]}
+      onFocus={[Function]}
+    >
+      <div
+        onFocus={[Function]}
+        onMouseDown={[Function]}
+        onTouchStart={[Function]}
+      >
+        <div
+          className="fd-popover__control"
+        >
+          <input
+            className="fd-input fd-input-group__input"
+            type="text"
+          />
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 `;
@@ -189,11 +309,26 @@ exports[`Storyshots Component API/InputGroup Text Area 1`] = `
   <div
     className="fd-input-group"
   >
-    <textarea
-      className="fd-textarea fd-input-group__input"
-      defaultValue="Default"
-      onChange={[Function]}
-    />
+    <div
+      onBlur={[Function]}
+      onFocus={[Function]}
+    >
+      <div
+        onFocus={[Function]}
+        onMouseDown={[Function]}
+        onTouchStart={[Function]}
+      >
+        <div
+          className="fd-popover__control"
+        >
+          <textarea
+            className="fd-textarea fd-input-group__input"
+            defaultValue="Default"
+            onChange={[Function]}
+          />
+        </div>
+      </div>
+    </div>
     <span
       className="fd-input-group__addon"
     >
@@ -220,20 +355,50 @@ exports[`Storyshots Component API/InputGroup Text add-on 1`] = `
       >
         €
       </span>
-      <input
-        className="fd-input fd-input-group__input"
-        placeholder="Type text here"
-        type="text"
-      />
+      <div
+        onBlur={[Function]}
+        onFocus={[Function]}
+      >
+        <div
+          onFocus={[Function]}
+          onMouseDown={[Function]}
+          onTouchStart={[Function]}
+        >
+          <div
+            className="fd-popover__control"
+          >
+            <input
+              className="fd-input fd-input-group__input"
+              placeholder="Type text here"
+              type="text"
+            />
+          </div>
+        </div>
+      </div>
     </div>
     <div
       className="fd-input-group"
     >
-      <input
-        className="fd-input fd-input-group__input"
-        placeholder="Type text here"
-        type="text"
-      />
+      <div
+        onBlur={[Function]}
+        onFocus={[Function]}
+      >
+        <div
+          onFocus={[Function]}
+          onMouseDown={[Function]}
+          onTouchStart={[Function]}
+        >
+          <div
+            className="fd-popover__control"
+          >
+            <input
+              className="fd-input fd-input-group__input"
+              placeholder="Type text here"
+              type="text"
+            />
+          </div>
+        </div>
+      </div>
       <span
         className="fd-input-group__addon"
       >
@@ -259,17 +424,25 @@ exports[`Storyshots Component API/InputGroup Validation State 1`] = `
       >
         $
       </span>
-      <input
-        className="fd-input fd-input-group__input"
-        type="text"
-      />
-    </div>
-    <div
-      aria-live="assertive"
-      className="fd-form-message fd-form-message--error"
-      role="alert"
-    >
-      Test validation state
+      <div
+        onBlur={[Function]}
+        onFocus={[Function]}
+      >
+        <div
+          onFocus={[Function]}
+          onMouseDown={[Function]}
+          onTouchStart={[Function]}
+        >
+          <div
+            className="fd-popover__control"
+          >
+            <input
+              className="fd-input fd-input-group__input"
+              type="text"
+            />
+          </div>
+        </div>
+      </div>
     </div>
     <div
       className="fd-input-group is-warning"
@@ -279,17 +452,25 @@ exports[`Storyshots Component API/InputGroup Validation State 1`] = `
       >
         $
       </span>
-      <input
-        className="fd-input fd-input-group__input"
-        type="text"
-      />
-    </div>
-    <div
-      aria-live="assertive"
-      className="fd-form-message fd-form-message--warning"
-      role="alert"
-    >
-      Test validation state
+      <div
+        onBlur={[Function]}
+        onFocus={[Function]}
+      >
+        <div
+          onFocus={[Function]}
+          onMouseDown={[Function]}
+          onTouchStart={[Function]}
+        >
+          <div
+            className="fd-popover__control"
+          >
+            <input
+              className="fd-input fd-input-group__input"
+              type="text"
+            />
+          </div>
+        </div>
+      </div>
     </div>
     <div
       className="fd-input-group is-information"
@@ -299,17 +480,25 @@ exports[`Storyshots Component API/InputGroup Validation State 1`] = `
       >
         $
       </span>
-      <input
-        className="fd-input fd-input-group__input"
-        type="text"
-      />
-    </div>
-    <div
-      aria-live="assertive"
-      className="fd-form-message fd-form-message--information"
-      role="alert"
-    >
-      Test validation state
+      <div
+        onBlur={[Function]}
+        onFocus={[Function]}
+      >
+        <div
+          onFocus={[Function]}
+          onMouseDown={[Function]}
+          onTouchStart={[Function]}
+        >
+          <div
+            className="fd-popover__control"
+          >
+            <input
+              className="fd-input fd-input-group__input"
+              type="text"
+            />
+          </div>
+        </div>
+      </div>
     </div>
     <div
       className="fd-input-group is-success"
@@ -319,17 +508,25 @@ exports[`Storyshots Component API/InputGroup Validation State 1`] = `
       >
         $
       </span>
-      <input
-        className="fd-input fd-input-group__input"
-        type="text"
-      />
-    </div>
-    <div
-      aria-live="assertive"
-      className="fd-form-message fd-form-message--success"
-      role="alert"
-    >
-      Test validation state
+      <div
+        onBlur={[Function]}
+        onFocus={[Function]}
+      >
+        <div
+          onFocus={[Function]}
+          onMouseDown={[Function]}
+          onTouchStart={[Function]}
+        >
+          <div
+            className="fd-popover__control"
+          >
+            <input
+              className="fd-input fd-input-group__input"
+              type="text"
+            />
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

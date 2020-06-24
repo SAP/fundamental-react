@@ -23,15 +23,30 @@ exports[`Storyshots Component API/TimePicker Disabled 1`] = `
             className="fd-input-group"
             onClick={[Function]}
           >
-            <input
-              className="fd-input fd-input-group__input"
+            <div
               onBlur={[Function]}
-              onChange={[Function]}
-              placeholder="hh:mm:ss"
-              readOnly={true}
-              type="text"
-              value=""
-            />
+              onFocus={[Function]}
+            >
+              <div
+                onFocus={[Function]}
+                onMouseDown={[Function]}
+                onTouchStart={[Function]}
+              >
+                <div
+                  className="fd-popover__control"
+                >
+                  <input
+                    className="fd-input fd-input-group__input"
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    placeholder="hh:mm:ss"
+                    readOnly={true}
+                    type="text"
+                    value=""
+                  />
+                </div>
+              </div>
+            </div>
             <span
               className="fd-input-group__addon fd-input-group__addon--button"
             >
@@ -75,14 +90,29 @@ exports[`Storyshots Component API/TimePicker Format 12 Hours 1`] = `
             className="fd-input-group"
             onClick={[Function]}
           >
-            <input
-              className="fd-input fd-input-group__input"
+            <div
               onBlur={[Function]}
-              onChange={[Function]}
-              placeholder="hh:mm:ss am/pm"
-              type="text"
-              value=""
-            />
+              onFocus={[Function]}
+            >
+              <div
+                onFocus={[Function]}
+                onMouseDown={[Function]}
+                onTouchStart={[Function]}
+              >
+                <div
+                  className="fd-popover__control"
+                >
+                  <input
+                    className="fd-input fd-input-group__input"
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    placeholder="hh:mm:ss am/pm"
+                    type="text"
+                    value=""
+                  />
+                </div>
+              </div>
+            </div>
             <span
               className="fd-input-group__addon fd-input-group__addon--button"
             >
@@ -125,14 +155,29 @@ exports[`Storyshots Component API/TimePicker Hide Seconds 1`] = `
             className="fd-input-group"
             onClick={[Function]}
           >
-            <input
-              className="fd-input fd-input-group__input"
+            <div
               onBlur={[Function]}
-              onChange={[Function]}
-              placeholder="hh:mm"
-              type="text"
-              value=""
-            />
+              onFocus={[Function]}
+            >
+              <div
+                onFocus={[Function]}
+                onMouseDown={[Function]}
+                onTouchStart={[Function]}
+              >
+                <div
+                  className="fd-popover__control"
+                >
+                  <input
+                    className="fd-input fd-input-group__input"
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    placeholder="hh:mm"
+                    type="text"
+                    value=""
+                  />
+                </div>
+              </div>
+            </div>
             <span
               className="fd-input-group__addon fd-input-group__addon--button"
             >
@@ -175,14 +220,29 @@ exports[`Storyshots Component API/TimePicker Initial Value 1`] = `
             className="fd-input-group"
             onClick={[Function]}
           >
-            <input
-              className="fd-input fd-input-group__input"
+            <div
               onBlur={[Function]}
-              onChange={[Function]}
-              placeholder="hh:mm:ss am/pm"
-              type="text"
-              value="10:30:34 am"
-            />
+              onFocus={[Function]}
+            >
+              <div
+                onFocus={[Function]}
+                onMouseDown={[Function]}
+                onTouchStart={[Function]}
+              >
+                <div
+                  className="fd-popover__control"
+                >
+                  <input
+                    className="fd-input fd-input-group__input"
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    placeholder="hh:mm:ss am/pm"
+                    type="text"
+                    value="10:30:34 am"
+                  />
+                </div>
+              </div>
+            </div>
             <span
               className="fd-input-group__addon fd-input-group__addon--button"
             >
@@ -225,14 +285,29 @@ exports[`Storyshots Component API/TimePicker Primary 1`] = `
             className="fd-input-group"
             onClick={[Function]}
           >
-            <input
-              className="fd-input fd-input-group__input"
+            <div
               onBlur={[Function]}
-              onChange={[Function]}
-              placeholder="hh:mm:ss"
-              type="text"
-              value=""
-            />
+              onFocus={[Function]}
+            >
+              <div
+                onFocus={[Function]}
+                onMouseDown={[Function]}
+                onTouchStart={[Function]}
+              >
+                <div
+                  className="fd-popover__control"
+                >
+                  <input
+                    className="fd-input fd-input-group__input"
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    placeholder="hh:mm:ss"
+                    type="text"
+                    value=""
+                  />
+                </div>
+              </div>
+            </div>
             <span
               className="fd-input-group__addon fd-input-group__addon--button"
             >

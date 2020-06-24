@@ -27,11 +27,26 @@ exports[`Storyshots Component API/LocalizationEditor Compact 1`] = `
             className="fd-input-group fd-input-group--after"
             onClick={[Function]}
           >
-            <input
-              className="fd-input fd-input--compact fd-input-group__input"
-              placeholder="Enter Label"
-              type="text"
-            />
+            <div
+              onBlur={[Function]}
+              onFocus={[Function]}
+            >
+              <div
+                onFocus={[Function]}
+                onMouseDown={[Function]}
+                onTouchStart={[Function]}
+              >
+                <div
+                  className="fd-popover__control"
+                >
+                  <input
+                    className="fd-input fd-input--compact fd-input-group__input"
+                    placeholder="Enter Label"
+                    type="text"
+                  />
+                </div>
+              </div>
+            </div>
             <span
               className="fd-input-group__addon fd-input-group__addon--button"
             >
@@ -77,11 +92,26 @@ exports[`Storyshots Component API/LocalizationEditor Primary 1`] = `
             className="fd-input-group fd-input-group--after"
             onClick={[Function]}
           >
-            <input
-              className="fd-input fd-input-group__input"
-              placeholder="Enter Label"
-              type="text"
-            />
+            <div
+              onBlur={[Function]}
+              onFocus={[Function]}
+            >
+              <div
+                onFocus={[Function]}
+                onMouseDown={[Function]}
+                onTouchStart={[Function]}
+              >
+                <div
+                  className="fd-popover__control"
+                >
+                  <input
+                    className="fd-input fd-input-group__input"
+                    placeholder="Enter Label"
+                    type="text"
+                  />
+                </div>
+              </div>
+            </div>
             <span
               className="fd-input-group__addon fd-input-group__addon--button"
             >
@@ -127,10 +157,25 @@ exports[`Storyshots Component API/LocalizationEditor Text Area 1`] = `
             className="fd-input-group fd-input-group--after"
             onClick={[Function]}
           >
-            <textarea
-              className="fd-textarea fd-input-group__input"
-              onChange={[Function]}
-            />
+            <div
+              onBlur={[Function]}
+              onFocus={[Function]}
+            >
+              <div
+                onFocus={[Function]}
+                onMouseDown={[Function]}
+                onTouchStart={[Function]}
+              >
+                <div
+                  className="fd-popover__control"
+                >
+                  <textarea
+                    className="fd-textarea fd-input-group__input"
+                    onChange={[Function]}
+                  />
+                </div>
+              </div>
+            </div>
             <span
               className="fd-input-group__addon fd-input-group__addon--button"
             >

@@ -21,11 +21,26 @@ exports[`Storyshots Component API/Forms/FormFieldset Primary 1`] = `
       >
         Name:
       </label>
-      <input
-        className="fd-input"
-        id="ex01"
-        type="text"
-      />
+      <div
+        onBlur={[Function]}
+        onFocus={[Function]}
+      >
+        <div
+          onFocus={[Function]}
+          onMouseDown={[Function]}
+          onTouchStart={[Function]}
+        >
+          <div
+            className="fd-popover__control"
+          >
+            <input
+              className="fd-input"
+              id="ex01"
+              type="text"
+            />
+          </div>
+        </div>
+      </div>
     </div>
     <div
       className="fd-form-item"
@@ -36,11 +51,26 @@ exports[`Storyshots Component API/Forms/FormFieldset Primary 1`] = `
       >
         Street:
       </label>
-      <input
-        className="fd-input"
-        id="ex02"
-        type="text"
-      />
+      <div
+        onBlur={[Function]}
+        onFocus={[Function]}
+      >
+        <div
+          onFocus={[Function]}
+          onMouseDown={[Function]}
+          onTouchStart={[Function]}
+        >
+          <div
+            className="fd-popover__control"
+          >
+            <input
+              className="fd-input"
+              id="ex02"
+              type="text"
+            />
+          </div>
+        </div>
+      </div>
     </div>
     <div
       className="fd-form-item"
@@ -51,11 +81,26 @@ exports[`Storyshots Component API/Forms/FormFieldset Primary 1`] = `
       >
         City:
       </label>
-      <input
-        className="fd-input"
-        id="ex03"
-        type="text"
-      />
+      <div
+        onBlur={[Function]}
+        onFocus={[Function]}
+      >
+        <div
+          onFocus={[Function]}
+          onMouseDown={[Function]}
+          onTouchStart={[Function]}
+        >
+          <div
+            className="fd-popover__control"
+          >
+            <input
+              className="fd-input"
+              id="ex03"
+              type="text"
+            />
+          </div>
+        </div>
+      </div>
     </div>
     <div
       className="fd-form-item"
@@ -66,11 +111,26 @@ exports[`Storyshots Component API/Forms/FormFieldset Primary 1`] = `
       >
         ZIP code:
       </label>
-      <input
-        className="fd-input"
-        id="ex04"
-        type="text"
-      />
+      <div
+        onBlur={[Function]}
+        onFocus={[Function]}
+      >
+        <div
+          onFocus={[Function]}
+          onMouseDown={[Function]}
+          onTouchStart={[Function]}
+        >
+          <div
+            className="fd-popover__control"
+          >
+            <input
+              className="fd-input"
+              id="ex04"
+              type="text"
+            />
+          </div>
+        </div>
+      </div>
     </div>
   </fieldset>
   <fieldset
@@ -90,11 +150,26 @@ exports[`Storyshots Component API/Forms/FormFieldset Primary 1`] = `
       >
         Name:
       </label>
-      <input
-        className="fd-input"
-        id="ex05"
-        type="text"
-      />
+      <div
+        onBlur={[Function]}
+        onFocus={[Function]}
+      >
+        <div
+          onFocus={[Function]}
+          onMouseDown={[Function]}
+          onTouchStart={[Function]}
+        >
+          <div
+            className="fd-popover__control"
+          >
+            <input
+              className="fd-input"
+              id="ex05"
+              type="text"
+            />
+          </div>
+        </div>
+      </div>
     </div>
     <div
       className="fd-form-item"
@@ -105,11 +180,26 @@ exports[`Storyshots Component API/Forms/FormFieldset Primary 1`] = `
       >
         Street:
       </label>
-      <input
-        className="fd-input"
-        id="ex06"
-        type="text"
-      />
+      <div
+        onBlur={[Function]}
+        onFocus={[Function]}
+      >
+        <div
+          onFocus={[Function]}
+          onMouseDown={[Function]}
+          onTouchStart={[Function]}
+        >
+          <div
+            className="fd-popover__control"
+          >
+            <input
+              className="fd-input"
+              id="ex06"
+              type="text"
+            />
+          </div>
+        </div>
+      </div>
     </div>
     <div
       className="fd-form-item"
@@ -120,11 +210,26 @@ exports[`Storyshots Component API/Forms/FormFieldset Primary 1`] = `
       >
         City:
       </label>
-      <input
-        className="fd-input"
-        id="ex07"
-        type="text"
-      />
+      <div
+        onBlur={[Function]}
+        onFocus={[Function]}
+      >
+        <div
+          onFocus={[Function]}
+          onMouseDown={[Function]}
+          onTouchStart={[Function]}
+        >
+          <div
+            className="fd-popover__control"
+          >
+            <input
+              className="fd-input"
+              id="ex07"
+              type="text"
+            />
+          </div>
+        </div>
+      </div>
     </div>
     <div
       className="fd-form-item"
@@ -135,11 +240,26 @@ exports[`Storyshots Component API/Forms/FormFieldset Primary 1`] = `
       >
         ZIP code:
       </label>
-      <input
-        className="fd-input"
-        id="ex08"
-        type="text"
-      />
+      <div
+        onBlur={[Function]}
+        onFocus={[Function]}
+      >
+        <div
+          onFocus={[Function]}
+          onMouseDown={[Function]}
+          onTouchStart={[Function]}
+        >
+          <div
+            className="fd-popover__control"
+          >
+            <input
+              className="fd-input"
+              id="ex08"
+              type="text"
+            />
+          </div>
+        </div>
+      </div>
     </div>
   </fieldset>
 </div>
