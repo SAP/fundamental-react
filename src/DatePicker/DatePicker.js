@@ -4,6 +4,7 @@ import classnames from 'classnames';
 import { FORM_MESSAGE_TYPES } from '../utils/constants';
 import FormInput from '../Forms/FormInput';
 import FormMessage from '../Forms/_FormMessage';
+import FormValidationOverlay from '../Forms/_FormValidationOverlay';
 import InputGroup from '../InputGroup/InputGroup';
 import { isEnabledDate } from '../utils/dateUtils';
 import moment from 'moment';
@@ -352,6 +353,40 @@ class DatePicker extends Component {
 
         const disableButton = disabled || readOnly;
 
+        const inputGroup = (
+            <InputGroup
+                aria-expanded={this.state.isExpanded}
+                aria-haspopup='true'
+                className={inputGroupClass}
+                compact={compact}
+                disabled={disabled}
+                validationState={validationState} >
+                <FormInput
+                    {...inputProps}
+                    onBlur={this._handleBlur}
+                    onChange={this._handleOnChange}
+                    onFocus={this._handleFocus}
+                    onKeyPress={this.sendUpdate}
+                    placeholder={this.getPlaceHolder(dateFormat)}
+                    readOnly={readOnly}
+                    value={this.state.formattedDate} />
+                <InputGroup.Addon isButton>
+                    <Button {...buttonProps}
+                        aria-label={buttonLabel}
+                        disabled={disableButton}
+                        glyph='calendar'
+                        onClick={this.handleClickButton}
+                        option='transparent' />
+                </InputGroup.Addon>
+            </InputGroup>
+        );
+
+        const wrappedInputGroup = (
+            <FormValidationOverlay
+                control={inputGroup}
+                validationState={validationState} />
+        );
+
         return (
             <div
                 {...props}
@@ -393,33 +428,7 @@ class DatePicker extends Component {
                                 weekdayStart={weekdayStart} />
                         </>
                     }
-                    control={
-                        <InputGroup
-                            aria-expanded={this.state.isExpanded}
-                            aria-haspopup='true'
-                            className={inputGroupClass}
-                            compact={compact}
-                            disabled={disabled}
-                            validationState={!this.state.isExpanded ? validationState : null} >
-                            <FormInput
-                                {...inputProps}
-                                onBlur={this._handleBlur}
-                                onChange={this._handleOnChange}
-                                onFocus={this._handleFocus}
-                                onKeyPress={this.sendUpdate}
-                                placeholder={this.getPlaceHolder(dateFormat)}
-                                readOnly={readOnly}
-                                value={this.state.formattedDate} />
-                            <InputGroup.Addon isButton>
-                                <Button {...buttonProps}
-                                    aria-label={buttonLabel}
-                                    disabled={disableButton}
-                                    glyph='calendar'
-                                    onClick={this.handleClickButton}
-                                    option='transparent' />
-                            </InputGroup.Addon>
-                        </InputGroup>
-                    }
+                    control={wrappedInputGroup}
                     disableKeyPressHandler
                     disableTriggerOnClick
                     disabled={disableButton}

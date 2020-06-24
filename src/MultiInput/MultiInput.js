@@ -4,6 +4,7 @@ import classnames from 'classnames';
 import { FORM_MESSAGE_TYPES } from '../utils/constants';
 import FormInput from '../Forms/FormInput';
 import FormMessage from '../Forms/_FormMessage';
+import FormValidationOverlay from '../Forms/_FormValidationOverlay';
 import InputGroup from '../InputGroup/InputGroup';
 import List from '../List/List';
 import Popover from '../Popover/Popover';
@@ -177,6 +178,41 @@ class MultiInput extends Component {
             </List>
         );
 
+        const inputGroup = (
+            <InputGroup
+                {...rest}
+                aria-expanded={this.state.bShowList}
+                aria-haspopup='true'
+                className={inputGroupClasses}
+                compact={compact}
+                disabled={disabled}
+                onClick={this.showHideTagList}
+                validationState={validationState}>
+                <div {...tagProps} className={tokenizerClassName}>
+                    <div className='fd-tokenizer__inner'>
+                        {this.state.tags.length > 0 && this.createTags()}
+                        <FormInput
+                            {...inputProps}
+                            className='fd-input-group__input fd-tokenizer__input'
+                            compact={compact}
+                            placeholder={placeholder} />
+                    </div>
+                </div>
+                <InputGroup.Addon isButton>
+                    <Button
+                        {...buttonProps}
+                        glyph='value-help'
+                        option='transparent' />
+                </InputGroup.Addon>
+            </InputGroup>
+        );
+
+        const wrappedInputGroup = (
+            <FormValidationOverlay
+                control={inputGroup}
+                validationState={validationState} />
+        );
+
         return (
             <Popover
                 {...popoverProps}
@@ -190,37 +226,12 @@ class MultiInput extends Component {
                         }
                         {popoverBody}
                     </>)}
-                control={
-                    <InputGroup
-                        {...rest}
-                        aria-expanded={this.state.bShowList}
-                        aria-haspopup='true'
-                        className={inputGroupClasses}
-                        compact={compact}
-                        disabled={disabled}
-                        onClick={this.showHideTagList}
-                        validationState={!this.state.bShowList ? validationState : null}>
-                        <div {...tagProps} className={tokenizerClassName}>
-                            <div className='fd-tokenizer__inner'>
-                                {this.state.tags.length > 0 && this.createTags()}
-                                <FormInput
-                                    {...inputProps}
-                                    className='fd-input-group__input fd-tokenizer__input'
-                                    compact={compact}
-                                    placeholder={placeholder} />
-                            </div>
-                        </div>
-                        <InputGroup.Addon isButton>
-                            <Button
-                                {...buttonProps}
-                                glyph='value-help'
-                                option='transparent' />
-                        </InputGroup.Addon>
-                    </InputGroup>
-                }
+                control={wrappedInputGroup}
+                disableKeyPressHandler
                 disabled={disabled}
                 noArrow
                 onClickOutside={this.handleClickOutside}
+                useArrowKeyNavigation
                 widthSizingType='matchTarget' />
         );
     }

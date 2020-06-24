@@ -3,6 +3,7 @@ import classnames from 'classnames';
 import { FORM_MESSAGE_TYPES } from '../utils/constants';
 import FormInput from '../Forms/FormInput';
 import FormMessage from '../Forms/_FormMessage';
+import FormValidationOverlay from '../Forms/_FormValidationOverlay';
 import InputGroup from '../InputGroup/InputGroup';
 import Menu from '../Menu/Menu';
 import Popover from '../Popover/Popover';
@@ -152,6 +153,37 @@ class SearchInput extends PureComponent {
             </Menu>
         );
 
+        const inputGroup = (
+            <InputGroup
+                {...inputGroupProps}
+                className={inputGroupClasses}
+                compact={compact}
+                validationState={validationState}>
+                <FormInput
+                    {...inputProps}
+                    onChange={this.handleChange}
+                    onClick={this.handleClick}
+                    onKeyPress={this.handleKeyPress}
+                    placeholder={placeholder}
+                    value={this.state.value} />
+
+                {!noSearchBtn && (
+                    <InputGroup.Addon {...inputGroupAddonProps} isButton>
+                        <Button {...searchBtnProps}
+                            glyph='search'
+                            onClick={this.handleClick}
+                            option='transparent' />
+                    </InputGroup.Addon>
+                )}
+            </InputGroup>
+        );
+
+        const wrappedInputGroup = (
+            <FormValidationOverlay
+                control={inputGroup}
+                validationState={validationState} />
+        );
+
         return (
             <div {...rest} className={className}>
                 <Popover
@@ -166,34 +198,10 @@ class SearchInput extends PureComponent {
                             }
                             {popoverBody}
                         </>)}
-                    control={
-                        <InputGroup
-                            {...inputGroupProps}
-                            className={inputGroupClasses}
-                            compact={compact}
-                            validationState={!this.state.isExpanded ? validationState : null}>
-                            <FormInput
-                                {...inputProps}
-                                onChange={this.handleChange}
-                                onClick={this.handleClick}
-                                onKeyPress={this.handleKeyPress}
-                                placeholder={placeholder}
-                                value={this.state.value} />
-
-                            {!noSearchBtn && (
-                                <InputGroup.Addon {...inputGroupAddonProps} isButton>
-                                    <Button {...searchBtnProps}
-                                        glyph='search'
-                                        onClick={this.handleClick}
-                                        option='transparent' />
-                                </InputGroup.Addon>
-                            )}
-                        </InputGroup>
-                    }
+                    control={wrappedInputGroup}
                     disableKeyPressHandler
                     noArrow
                     onClickOutside={this.handleClickOutside}
-                    show={this.state.isExpanded}
                     widthSizingType='minTarget' />
             </div>
         );

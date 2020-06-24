@@ -12,33 +12,20 @@ const FormValidationOverlay = React.forwardRef(({ className, control, popperProp
     };
 
     const _handleFocus = () => {
-        setShowValidationMessage(true);
+        if (validationState?.text?.length > 0) {
+            setShowValidationMessage(true);
+        }
     };
 
     const bodyContent = (<FormMessage type={validationState?.state}>{validationState?.text}</FormMessage>);
 
     return (
-    // <Popover
-    //     {...props}
-    //     body={bodyContent}
-    //     className='fd-popover--input-message-group'
-    //     control={control}
-    //     disableKeyPressHandler
-    //     disableTriggerOnClick
-    //     noArrow
-    //     onBlur={_handleBlur}
-    //     onFocus={_handleFocus}
-    //     placement='bottom-start'
-    //     show={showValidationMessage}
-    //     style={{ display: 'block' }} /> // TO DO: replace with class from fundamental-styles
-
         <div {...props}
             onBlur={_handleBlur}
             onFocus={_handleFocus}
             ref={ref}>
             <Popper
                 cssBlock='fd-popover'
-                // innerRef={ref}
                 noArrow
                 popperPlacement={'bottom-start'}
                 popperProps={popperProps}
