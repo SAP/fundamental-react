@@ -219,8 +219,6 @@ SearchInput.propTypes = {
     className: PropTypes.string,
     /** Set to **true** to enable compact mode */
     compact: PropTypes.bool,
-    /** Internal use only */
-    disableStyles: PropTypes.bool,
     /** Props to be spread to the InputGroupAddon component */
     inputGroupAddonProps: PropTypes.object,
     /** Props to be spread to the InputGroup component */
