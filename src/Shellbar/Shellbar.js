@@ -487,7 +487,7 @@ Shellbar.propTypes = {
         label: PropTypes.string.isRequired
     }),
     /** Array of objects containing data about the products.
-     * Callback, title, and glyph are required; subtitle is optional. */
+     * Callback, title, and glyph are required; selected and subtitle are optional. */
     productSwitchList: PropTypes.arrayOf(
         PropTypes.shape({
             callback: PropTypes.func.isRequired,
@@ -495,6 +495,8 @@ Shellbar.propTypes = {
             title: PropTypes.string.isRequired,
             /** The icon to include. See the icon page for the list of icons */
             glyph: PropTypes.string.isRequired,
+            /** For pre-selecting an item in the switch list */
+            selected: PropTypes.bool,
             subtitle: PropTypes.string
         })
     ),
