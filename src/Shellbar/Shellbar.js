@@ -416,7 +416,7 @@ class Shellbar extends Component {
                                                 {productSwitchList.map((item, index) => {
                                                     return (
                                                         <li
-                                                            className='fd-product-switch__item'
+                                                            className={`fd-product-switch__item ${item.selected ? 'selected' : ''}`}
                                                             key={index}
                                                             onClick={item.callback}>
                                                             <div className={`fd-product-switch__icon sap-icon--${item.glyph}`} />
