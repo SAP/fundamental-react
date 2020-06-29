@@ -17,6 +17,7 @@ exports[`Storyshots Component API/SearchInput Compact 1`] = `
           className="fd-popover__control"
         >
           <div
+            className="fd-popover"
             onBlur={[Function]}
             onClick={[Function]}
             onFocus={[Function]}
@@ -32,30 +33,15 @@ exports[`Storyshots Component API/SearchInput Compact 1`] = `
                 <div
                   className="fd-input-group--control fd-input-group"
                 >
-                  <div
-                    onBlur={[Function]}
-                    onFocus={[Function]}
-                  >
-                    <div
-                      onFocus={[Function]}
-                      onMouseDown={[Function]}
-                      onTouchStart={[Function]}
-                    >
-                      <div
-                        className="fd-popover__control"
-                      >
-                        <input
-                          className="fd-input fd-input--compact fd-input-group__input"
-                          onChange={[Function]}
-                          onClick={[Function]}
-                          onKeyPress={[Function]}
-                          placeholder="Placeholder"
-                          type="text"
-                          value=""
-                        />
-                      </div>
-                    </div>
-                  </div>
+                  <input
+                    className="fd-input fd-input--compact fd-input-group__input"
+                    onChange={[Function]}
+                    onClick={[Function]}
+                    onKeyPress={[Function]}
+                    placeholder="Placeholder"
+                    type="text"
+                    value=""
+                  />
                   <span
                     className="fd-input-group__addon fd-input-group__addon--button fd-input-group__addon--compact"
                   >
@@ -93,6 +79,7 @@ exports[`Storyshots Component API/SearchInput Dev 1`] = `
           className="fd-popover__control"
         >
           <div
+            className="fd-popover"
             onBlur={[Function]}
             onClick={[Function]}
             onFocus={[Function]}
@@ -108,30 +95,15 @@ exports[`Storyshots Component API/SearchInput Dev 1`] = `
                 <div
                   className="fd-input-group--control fd-input-group"
                 >
-                  <div
-                    onBlur={[Function]}
-                    onFocus={[Function]}
-                  >
-                    <div
-                      onFocus={[Function]}
-                      onMouseDown={[Function]}
-                      onTouchStart={[Function]}
-                    >
-                      <div
-                        className="fd-popover__control"
-                      >
-                        <input
-                          className="fd-input fd-input-group__input"
-                          onChange={[Function]}
-                          onClick={[Function]}
-                          onKeyPress={[Function]}
-                          placeholder="Select a Fruit"
-                          type="text"
-                          value=""
-                        />
-                      </div>
-                    </div>
-                  </div>
+                  <input
+                    className="fd-input fd-input-group__input"
+                    onChange={[Function]}
+                    onClick={[Function]}
+                    onKeyPress={[Function]}
+                    placeholder="Select a Fruit"
+                    type="text"
+                    value=""
+                  />
                   <span
                     className="fd-input-group__addon fd-input-group__addon--button"
                   >
@@ -171,6 +143,7 @@ exports[`Storyshots Component API/SearchInput Disabled 1`] = `
           className="fd-popover__control"
         >
           <div
+            className="fd-popover"
             onBlur={[Function]}
             onClick={[Function]}
             onFocus={[Function]}
@@ -186,30 +159,15 @@ exports[`Storyshots Component API/SearchInput Disabled 1`] = `
                 <div
                   className="fd-input-group--control fd-input-group"
                 >
-                  <div
-                    onBlur={[Function]}
-                    onFocus={[Function]}
-                  >
-                    <div
-                      onFocus={[Function]}
-                      onMouseDown={[Function]}
-                      onTouchStart={[Function]}
-                    >
-                      <div
-                        className="fd-popover__control"
-                      >
-                        <input
-                          className="fd-input fd-input-group__input"
-                          onChange={[Function]}
-                          onClick={[Function]}
-                          onKeyPress={[Function]}
-                          placeholder="Placeholder"
-                          type="text"
-                          value=""
-                        />
-                      </div>
-                    </div>
-                  </div>
+                  <input
+                    className="fd-input fd-input-group__input"
+                    onChange={[Function]}
+                    onClick={[Function]}
+                    onKeyPress={[Function]}
+                    placeholder="Placeholder"
+                    type="text"
+                    value=""
+                  />
                   <span
                     className="fd-input-group__addon fd-input-group__addon--button"
                   >
@@ -247,6 +205,7 @@ exports[`Storyshots Component API/SearchInput Validation States 1`] = `
           className="fd-popover__control"
         >
           <div
+            className="fd-popover"
             onBlur={[Function]}
             onClick={[Function]}
             onFocus={[Function]}
@@ -260,19 +219,20 @@ exports[`Storyshots Component API/SearchInput Validation States 1`] = `
                 className="fd-popover__control"
               >
                 <div
-                  className="fd-input-group--control is-error fd-input-group is-error"
+                  className="fd-popover"
+                  onBlur={[Function]}
+                  onFocus={[Function]}
                 >
                   <div
-                    onBlur={[Function]}
                     onFocus={[Function]}
+                    onMouseDown={[Function]}
+                    onTouchStart={[Function]}
                   >
                     <div
-                      onFocus={[Function]}
-                      onMouseDown={[Function]}
-                      onTouchStart={[Function]}
+                      className="fd-popover__control"
                     >
                       <div
-                        className="fd-popover__control"
+                        className="fd-input-group--control is-error fd-input-group is-error"
                       >
                         <input
                           className="fd-input fd-input-group__input"
@@ -283,18 +243,18 @@ exports[`Storyshots Component API/SearchInput Validation States 1`] = `
                           type="text"
                           value=""
                         />
+                        <span
+                          className="fd-input-group__addon fd-input-group__addon--button"
+                        >
+                          <button
+                            className="fd-button fd-button--transparent sap-icon--search fd-input-group__button"
+                            onClick={[Function]}
+                            type="button"
+                          />
+                        </span>
                       </div>
                     </div>
                   </div>
-                  <span
-                    className="fd-input-group__addon fd-input-group__addon--button"
-                  >
-                    <button
-                      className="fd-button fd-button--transparent sap-icon--search fd-input-group__button"
-                      onClick={[Function]}
-                      type="button"
-                    />
-                  </span>
                 </div>
               </div>
             </div>
@@ -316,6 +276,7 @@ exports[`Storyshots Component API/SearchInput Validation States 1`] = `
           className="fd-popover__control"
         >
           <div
+            className="fd-popover"
             onBlur={[Function]}
             onClick={[Function]}
             onFocus={[Function]}
@@ -329,19 +290,20 @@ exports[`Storyshots Component API/SearchInput Validation States 1`] = `
                 className="fd-popover__control"
               >
                 <div
-                  className="fd-input-group--control is-warning fd-input-group is-warning"
+                  className="fd-popover"
+                  onBlur={[Function]}
+                  onFocus={[Function]}
                 >
                   <div
-                    onBlur={[Function]}
                     onFocus={[Function]}
+                    onMouseDown={[Function]}
+                    onTouchStart={[Function]}
                   >
                     <div
-                      onFocus={[Function]}
-                      onMouseDown={[Function]}
-                      onTouchStart={[Function]}
+                      className="fd-popover__control"
                     >
                       <div
-                        className="fd-popover__control"
+                        className="fd-input-group--control is-warning fd-input-group is-warning"
                       >
                         <input
                           className="fd-input fd-input-group__input"
@@ -352,18 +314,18 @@ exports[`Storyshots Component API/SearchInput Validation States 1`] = `
                           type="text"
                           value=""
                         />
+                        <span
+                          className="fd-input-group__addon fd-input-group__addon--button"
+                        >
+                          <button
+                            className="fd-button fd-button--transparent sap-icon--search fd-input-group__button"
+                            onClick={[Function]}
+                            type="button"
+                          />
+                        </span>
                       </div>
                     </div>
                   </div>
-                  <span
-                    className="fd-input-group__addon fd-input-group__addon--button"
-                  >
-                    <button
-                      className="fd-button fd-button--transparent sap-icon--search fd-input-group__button"
-                      onClick={[Function]}
-                      type="button"
-                    />
-                  </span>
                 </div>
               </div>
             </div>
@@ -385,6 +347,7 @@ exports[`Storyshots Component API/SearchInput Validation States 1`] = `
           className="fd-popover__control"
         >
           <div
+            className="fd-popover"
             onBlur={[Function]}
             onClick={[Function]}
             onFocus={[Function]}
@@ -398,19 +361,20 @@ exports[`Storyshots Component API/SearchInput Validation States 1`] = `
                 className="fd-popover__control"
               >
                 <div
-                  className="fd-input-group--control is-success fd-input-group is-success"
+                  className="fd-popover"
+                  onBlur={[Function]}
+                  onFocus={[Function]}
                 >
                   <div
-                    onBlur={[Function]}
                     onFocus={[Function]}
+                    onMouseDown={[Function]}
+                    onTouchStart={[Function]}
                   >
                     <div
-                      onFocus={[Function]}
-                      onMouseDown={[Function]}
-                      onTouchStart={[Function]}
+                      className="fd-popover__control"
                     >
                       <div
-                        className="fd-popover__control"
+                        className="fd-input-group--control is-success fd-input-group is-success"
                       >
                         <input
                           className="fd-input fd-input-group__input"
@@ -421,18 +385,18 @@ exports[`Storyshots Component API/SearchInput Validation States 1`] = `
                           type="text"
                           value=""
                         />
+                        <span
+                          className="fd-input-group__addon fd-input-group__addon--button"
+                        >
+                          <button
+                            className="fd-button fd-button--transparent sap-icon--search fd-input-group__button"
+                            onClick={[Function]}
+                            type="button"
+                          />
+                        </span>
                       </div>
                     </div>
                   </div>
-                  <span
-                    className="fd-input-group__addon fd-input-group__addon--button"
-                  >
-                    <button
-                      className="fd-button fd-button--transparent sap-icon--search fd-input-group__button"
-                      onClick={[Function]}
-                      type="button"
-                    />
-                  </span>
                 </div>
               </div>
             </div>
@@ -454,6 +418,7 @@ exports[`Storyshots Component API/SearchInput Validation States 1`] = `
           className="fd-popover__control"
         >
           <div
+            className="fd-popover"
             onBlur={[Function]}
             onClick={[Function]}
             onFocus={[Function]}
@@ -467,19 +432,20 @@ exports[`Storyshots Component API/SearchInput Validation States 1`] = `
                 className="fd-popover__control"
               >
                 <div
-                  className="fd-input-group--control is-information fd-input-group is-information"
+                  className="fd-popover"
+                  onBlur={[Function]}
+                  onFocus={[Function]}
                 >
                   <div
-                    onBlur={[Function]}
                     onFocus={[Function]}
+                    onMouseDown={[Function]}
+                    onTouchStart={[Function]}
                   >
                     <div
-                      onFocus={[Function]}
-                      onMouseDown={[Function]}
-                      onTouchStart={[Function]}
+                      className="fd-popover__control"
                     >
                       <div
-                        className="fd-popover__control"
+                        className="fd-input-group--control is-information fd-input-group is-information"
                       >
                         <input
                           className="fd-input fd-input-group__input"
@@ -490,18 +456,18 @@ exports[`Storyshots Component API/SearchInput Validation States 1`] = `
                           type="text"
                           value=""
                         />
+                        <span
+                          className="fd-input-group__addon fd-input-group__addon--button"
+                        >
+                          <button
+                            className="fd-button fd-button--transparent sap-icon--search fd-input-group__button"
+                            onClick={[Function]}
+                            type="button"
+                          />
+                        </span>
                       </div>
                     </div>
                   </div>
-                  <span
-                    className="fd-input-group__addon fd-input-group__addon--button"
-                  >
-                    <button
-                      className="fd-button fd-button--transparent sap-icon--search fd-input-group__button"
-                      onClick={[Function]}
-                      type="button"
-                    />
-                  </span>
                 </div>
               </div>
             </div>

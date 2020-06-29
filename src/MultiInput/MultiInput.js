@@ -4,7 +4,6 @@ import classnames from 'classnames';
 import { FORM_MESSAGE_TYPES } from '../utils/constants';
 import FormInput from '../Forms/FormInput';
 import FormMessage from '../Forms/_FormMessage';
-import FormValidationOverlay from '../Forms/_FormValidationOverlay';
 import InputGroup from '../InputGroup/InputGroup';
 import List from '../List/List';
 import Popover from '../Popover/Popover';
@@ -207,12 +206,6 @@ class MultiInput extends Component {
             </InputGroup>
         );
 
-        const wrappedInputGroup = (
-            <FormValidationOverlay
-                control={inputGroup}
-                validationState={validationState} />
-        );
-
         return (
             <Popover
                 {...popoverProps}
@@ -226,7 +219,7 @@ class MultiInput extends Component {
                         }
                         {popoverBody}
                     </>)}
-                control={wrappedInputGroup}
+                control={inputGroup}
                 disableKeyPressHandler
                 disabled={disabled}
                 noArrow

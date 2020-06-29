@@ -4,26 +4,11 @@ exports[`Storyshots Component API/Forms/FormTextarea Compact 1`] = `
 <div
   dir="ltr"
 >
-  <div
-    onBlur={[Function]}
-    onFocus={[Function]}
-  >
-    <div
-      onFocus={[Function]}
-      onMouseDown={[Function]}
-      onTouchStart={[Function]}
-    >
-      <div
-        className="fd-popover__control"
-      >
-        <textarea
-          className="fd-textarea fd-textarea--compact"
-          defaultValue="Compact textarea"
-          onChange={[Function]}
-        />
-      </div>
-    </div>
-  </div>
+  <textarea
+    className="fd-textarea fd-textarea--compact"
+    defaultValue="Compact textarea"
+    onChange={[Function]}
+  />
 </div>
 `;
 
@@ -31,28 +16,13 @@ exports[`Storyshots Component API/Forms/FormTextarea Dev 1`] = `
 <div
   dir="ltr"
 >
-  <div
-    onBlur={[Function]}
-    onFocus={[Function]}
-  >
-    <div
-      onFocus={[Function]}
-      onMouseDown={[Function]}
-      onTouchStart={[Function]}
-    >
-      <div
-        className="fd-popover__control"
-      >
-        <textarea
-          className="fd-textarea"
-          defaultValue="Default"
-          disabled={false}
-          onChange={[Function]}
-          readOnly={false}
-        />
-      </div>
-    </div>
-  </div>
+  <textarea
+    className="fd-textarea"
+    defaultValue="Default"
+    disabled={false}
+    onChange={[Function]}
+    readOnly={false}
+  />
 </div>
 `;
 
@@ -60,27 +30,12 @@ exports[`Storyshots Component API/Forms/FormTextarea Disabled 1`] = `
 <div
   dir="ltr"
 >
-  <div
-    onBlur={[Function]}
-    onFocus={[Function]}
-  >
-    <div
-      onFocus={[Function]}
-      onMouseDown={[Function]}
-      onTouchStart={[Function]}
-    >
-      <div
-        className="fd-popover__control"
-      >
-        <textarea
-          className="fd-textarea"
-          defaultValue="Disabled textarea"
-          disabled={true}
-          onChange={[Function]}
-        />
-      </div>
-    </div>
-  </div>
+  <textarea
+    className="fd-textarea"
+    defaultValue="Disabled textarea"
+    disabled={true}
+    onChange={[Function]}
+  />
 </div>
 `;
 
@@ -88,27 +43,12 @@ exports[`Storyshots Component API/Forms/FormTextarea Max Length 1`] = `
 <div
   dir="ltr"
 >
-  <div
-    onBlur={[Function]}
-    onFocus={[Function]}
-  >
-    <div
-      onFocus={[Function]}
-      onMouseDown={[Function]}
-      onTouchStart={[Function]}
-    >
-      <div
-        className="fd-popover__control"
-      >
-        <textarea
-          className="fd-textarea"
-          defaultValue="Max Length"
-          maxLength={150}
-          onChange={[Function]}
-        />
-      </div>
-    </div>
-  </div>
+  <textarea
+    className="fd-textarea"
+    defaultValue="Max Length"
+    maxLength={150}
+    onChange={[Function]}
+  />
   <div
     className="fd-textarea-counter"
   >
@@ -121,26 +61,11 @@ exports[`Storyshots Component API/Forms/FormTextarea Primary 1`] = `
 <div
   dir="ltr"
 >
-  <div
-    onBlur={[Function]}
-    onFocus={[Function]}
-  >
-    <div
-      onFocus={[Function]}
-      onMouseDown={[Function]}
-      onTouchStart={[Function]}
-    >
-      <div
-        className="fd-popover__control"
-      >
-        <textarea
-          className="fd-textarea"
-          defaultValue="Placeholder"
-          onChange={[Function]}
-        />
-      </div>
-    </div>
-  </div>
+  <textarea
+    className="fd-textarea"
+    defaultValue="Placeholder"
+    onChange={[Function]}
+  />
 </div>
 `;
 
@@ -148,27 +73,12 @@ exports[`Storyshots Component API/Forms/FormTextarea Read Only 1`] = `
 <div
   dir="ltr"
 >
-  <div
-    onBlur={[Function]}
-    onFocus={[Function]}
-  >
-    <div
-      onFocus={[Function]}
-      onMouseDown={[Function]}
-      onTouchStart={[Function]}
-    >
-      <div
-        className="fd-popover__control"
-      >
-        <textarea
-          className="fd-textarea"
-          defaultValue="Placeholder"
-          onChange={[Function]}
-          readOnly={true}
-        />
-      </div>
-    </div>
-  </div>
+  <textarea
+    className="fd-textarea"
+    defaultValue="Placeholder"
+    onChange={[Function]}
+    readOnly={true}
+  />
 </div>
 `;
 
@@ -180,6 +90,7 @@ exports[`Storyshots Component API/Forms/FormTextarea Validation States 1`] = `
     className="fddocs-container"
   >
     <div
+      className="fd-popover"
       onBlur={[Function]}
       onFocus={[Function]}
     >
@@ -200,6 +111,7 @@ exports[`Storyshots Component API/Forms/FormTextarea Validation States 1`] = `
       </div>
     </div>
     <div
+      className="fd-popover"
       onBlur={[Function]}
       onFocus={[Function]}
     >
@@ -220,6 +132,7 @@ exports[`Storyshots Component API/Forms/FormTextarea Validation States 1`] = `
       </div>
     </div>
     <div
+      className="fd-popover"
       onBlur={[Function]}
       onFocus={[Function]}
     >
@@ -240,6 +153,7 @@ exports[`Storyshots Component API/Forms/FormTextarea Validation States 1`] = `
       </div>
     </div>
     <div
+      className="fd-popover"
       onBlur={[Function]}
       onFocus={[Function]}
     >

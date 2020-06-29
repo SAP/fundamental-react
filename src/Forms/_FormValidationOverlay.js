@@ -1,3 +1,4 @@
+import classnames from 'classnames';
 import { FORM_MESSAGE_TYPES } from '../utils/constants';
 import FormMessage from './_FormMessage';
 import Popper from '../utils/_Popper';
@@ -17,10 +18,13 @@ const FormValidationOverlay = React.forwardRef(({ className, control, popperProp
         }
     };
 
+    const popoverClasses = classnames('fd-popover', className);
+
     const bodyContent = (<FormMessage type={validationState?.state}>{validationState?.text}</FormMessage>);
 
     return (
         <div {...props}
+            className={popoverClasses}
             onBlur={_handleBlur}
             onFocus={_handleFocus}
             ref={ref}>

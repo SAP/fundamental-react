@@ -13,27 +13,12 @@ exports[`Storyshots Component API/Forms/FormItem Inline 1`] = `
     >
       Default Input
     </label>
-    <div
-      onBlur={[Function]}
-      onFocus={[Function]}
-    >
-      <div
-        onFocus={[Function]}
-        onMouseDown={[Function]}
-        onTouchStart={[Function]}
-      >
-        <div
-          className="fd-popover__control"
-        >
-          <input
-            className="fd-input"
-            id="input-1"
-            placeholder="Field placeholder text"
-            type="text"
-          />
-        </div>
-      </div>
-    </div>
+    <input
+      className="fd-input"
+      id="input-1"
+      placeholder="Field placeholder text"
+      type="text"
+    />
   </div>
 </div>
 `;
@@ -51,27 +36,12 @@ exports[`Storyshots Component API/Forms/FormItem Primary 1`] = `
     >
       Default Input
     </label>
-    <div
-      onBlur={[Function]}
-      onFocus={[Function]}
-    >
-      <div
-        onFocus={[Function]}
-        onMouseDown={[Function]}
-        onTouchStart={[Function]}
-      >
-        <div
-          className="fd-popover__control"
-        >
-          <input
-            className="fd-input"
-            id="input-1"
-            placeholder="Field placeholder text"
-            type="text"
-          />
-        </div>
-      </div>
-    </div>
+    <input
+      className="fd-input"
+      id="input-1"
+      placeholder="Field placeholder text"
+      type="text"
+    />
   </div>
 </div>
 `;

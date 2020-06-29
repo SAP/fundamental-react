@@ -161,6 +161,7 @@ exports[`Storyshots Component API/Shellbar Co Pilot 1`] = `
                 className="fd-popover__control"
               >
                 <div
+                  className="fd-popover"
                   onBlur={[Function]}
                   onClick={[Function]}
                   onFocus={[Function]}
@@ -176,30 +177,15 @@ exports[`Storyshots Component API/Shellbar Co Pilot 1`] = `
                       <div
                         className="fd-shellbar__input-group fd-input-group"
                       >
-                        <div
-                          onBlur={[Function]}
-                          onFocus={[Function]}
-                        >
-                          <div
-                            onFocus={[Function]}
-                            onMouseDown={[Function]}
-                            onTouchStart={[Function]}
-                          >
-                            <div
-                              className="fd-popover__control"
-                            >
-                              <input
-                                className="fd-input fd-input-group__input fd-shellbar__input-group__input"
-                                onChange={[Function]}
-                                onClick={[Function]}
-                                onKeyPress={[Function]}
-                                placeholder="Search"
-                                type="text"
-                                value=""
-                              />
-                            </div>
-                          </div>
-                        </div>
+                        <input
+                          className="fd-input fd-input-group__input fd-shellbar__input-group__input"
+                          onChange={[Function]}
+                          onClick={[Function]}
+                          onKeyPress={[Function]}
+                          placeholder="Search"
+                          type="text"
+                          value=""
+                        />
                         <span
                           className="fd-shellbar__input-group__addon fd-input-group__addon fd-input-group__addon--button"
                         >
@@ -569,6 +555,7 @@ exports[`Storyshots Component API/Shellbar With Product Menu 1`] = `
                 className="fd-popover__control"
               >
                 <div
+                  className="fd-popover"
                   onBlur={[Function]}
                   onClick={[Function]}
                   onFocus={[Function]}
@@ -584,30 +571,15 @@ exports[`Storyshots Component API/Shellbar With Product Menu 1`] = `
                       <div
                         className="fd-shellbar__input-group fd-input-group"
                       >
-                        <div
-                          onBlur={[Function]}
-                          onFocus={[Function]}
-                        >
-                          <div
-                            onFocus={[Function]}
-                            onMouseDown={[Function]}
-                            onTouchStart={[Function]}
-                          >
-                            <div
-                              className="fd-popover__control"
-                            >
-                              <input
-                                className="fd-input fd-input-group__input fd-shellbar__input-group__input"
-                                onChange={[Function]}
-                                onClick={[Function]}
-                                onKeyPress={[Function]}
-                                placeholder="Search"
-                                type="text"
-                                value=""
-                              />
-                            </div>
-                          </div>
-                        </div>
+                        <input
+                          className="fd-input fd-input-group__input fd-shellbar__input-group__input"
+                          onChange={[Function]}
+                          onClick={[Function]}
+                          onKeyPress={[Function]}
+                          placeholder="Search"
+                          type="text"
+                          value=""
+                        />
                         <span
                           className="fd-shellbar__input-group__addon fd-input-group__addon fd-input-group__addon--button"
                         >

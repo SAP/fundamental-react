@@ -4,26 +4,11 @@ exports[`Storyshots Component API/Forms/FormInput Compact 1`] = `
 <div
   dir="ltr"
 >
-  <div
-    onBlur={[Function]}
-    onFocus={[Function]}
-  >
-    <div
-      onFocus={[Function]}
-      onMouseDown={[Function]}
-      onTouchStart={[Function]}
-    >
-      <div
-        className="fd-popover__control"
-      >
-        <input
-          className="fd-input fd-input--compact"
-          placeholder="Compact"
-          type="text"
-        />
-      </div>
-    </div>
-  </div>
+  <input
+    className="fd-input fd-input--compact"
+    placeholder="Compact"
+    type="text"
+  />
 </div>
 `;
 
@@ -31,28 +16,13 @@ exports[`Storyshots Component API/Forms/FormInput Dev 1`] = `
 <div
   dir="ltr"
 >
-  <div
-    onBlur={[Function]}
-    onFocus={[Function]}
-  >
-    <div
-      onFocus={[Function]}
-      onMouseDown={[Function]}
-      onTouchStart={[Function]}
-    >
-      <div
-        className="fd-popover__control"
-      >
-        <input
-          className="fd-input"
-          disabled={false}
-          placeholder="Placeholder"
-          readOnly={false}
-          type="text"
-        />
-      </div>
-    </div>
-  </div>
+  <input
+    className="fd-input"
+    disabled={false}
+    placeholder="Placeholder"
+    readOnly={false}
+    type="text"
+  />
 </div>
 `;
 
@@ -60,27 +30,12 @@ exports[`Storyshots Component API/Forms/FormInput Disabled 1`] = `
 <div
   dir="ltr"
 >
-  <div
-    onBlur={[Function]}
-    onFocus={[Function]}
-  >
-    <div
-      onFocus={[Function]}
-      onMouseDown={[Function]}
-      onTouchStart={[Function]}
-    >
-      <div
-        className="fd-popover__control"
-      >
-        <input
-          className="fd-input"
-          disabled={true}
-          placeholder="Disabled"
-          type="text"
-        />
-      </div>
-    </div>
-  </div>
+  <input
+    className="fd-input"
+    disabled={true}
+    placeholder="Disabled"
+    type="text"
+  />
 </div>
 `;
 
@@ -88,26 +43,11 @@ exports[`Storyshots Component API/Forms/FormInput Primary 1`] = `
 <div
   dir="ltr"
 >
-  <div
-    onBlur={[Function]}
-    onFocus={[Function]}
-  >
-    <div
-      onFocus={[Function]}
-      onMouseDown={[Function]}
-      onTouchStart={[Function]}
-    >
-      <div
-        className="fd-popover__control"
-      >
-        <input
-          className="fd-input"
-          placeholder="Default"
-          type="text"
-        />
-      </div>
-    </div>
-  </div>
+  <input
+    className="fd-input"
+    placeholder="Default"
+    type="text"
+  />
 </div>
 `;
 
@@ -115,27 +55,12 @@ exports[`Storyshots Component API/Forms/FormInput Read Only 1`] = `
 <div
   dir="ltr"
 >
-  <div
-    onBlur={[Function]}
-    onFocus={[Function]}
-  >
-    <div
-      onFocus={[Function]}
-      onMouseDown={[Function]}
-      onTouchStart={[Function]}
-    >
-      <div
-        className="fd-popover__control"
-      >
-        <input
-          className="fd-input"
-          placeholder="ReadOnly"
-          readOnly={true}
-          type="text"
-        />
-      </div>
-    </div>
-  </div>
+  <input
+    className="fd-input"
+    placeholder="ReadOnly"
+    readOnly={true}
+    type="text"
+  />
 </div>
 `;
 
@@ -147,6 +72,7 @@ exports[`Storyshots Component API/Forms/FormInput Validation States 1`] = `
     className="fddocs-container"
   >
     <div
+      className="fd-popover"
       onBlur={[Function]}
       onFocus={[Function]}
     >
@@ -167,6 +93,7 @@ exports[`Storyshots Component API/Forms/FormInput Validation States 1`] = `
       </div>
     </div>
     <div
+      className="fd-popover"
       onBlur={[Function]}
       onFocus={[Function]}
     >
@@ -187,6 +114,7 @@ exports[`Storyshots Component API/Forms/FormInput Validation States 1`] = `
       </div>
     </div>
     <div
+      className="fd-popover"
       onBlur={[Function]}
       onFocus={[Function]}
     >
@@ -207,6 +135,7 @@ exports[`Storyshots Component API/Forms/FormInput Validation States 1`] = `
       </div>
     </div>
     <div
+      className="fd-popover"
       onBlur={[Function]}
       onFocus={[Function]}
     >

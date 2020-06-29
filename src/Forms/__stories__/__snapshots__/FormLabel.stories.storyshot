@@ -13,25 +13,10 @@ exports[`Storyshots Component API/Forms/FormLabel Dev 1`] = `
     >
       Default
     </label>
-    <div
-      onBlur={[Function]}
-      onFocus={[Function]}
-    >
-      <div
-        onFocus={[Function]}
-        onMouseDown={[Function]}
-        onTouchStart={[Function]}
-      >
-        <div
-          className="fd-popover__control"
-        >
-          <input
-            className="fd-input"
-            type="text"
-          />
-        </div>
-      </div>
-    </div>
+    <input
+      className="fd-input"
+      type="text"
+    />
   </div>
 </div>
 `;
@@ -48,26 +33,11 @@ exports[`Storyshots Component API/Forms/FormLabel Disabled 1`] = `
     >
       Disabled Label
     </label>
-    <div
-      onBlur={[Function]}
-      onFocus={[Function]}
-    >
-      <div
-        onFocus={[Function]}
-        onMouseDown={[Function]}
-        onTouchStart={[Function]}
-      >
-        <div
-          className="fd-popover__control"
-        >
-          <input
-            className="fd-input"
-            disabled={true}
-            type="text"
-          />
-        </div>
-      </div>
-    </div>
+    <input
+      className="fd-input"
+      disabled={true}
+      type="text"
+    />
   </div>
 </div>
 `;
@@ -84,25 +54,10 @@ exports[`Storyshots Component API/Forms/FormLabel Primary 1`] = `
     >
       Default Label
     </label>
-    <div
-      onBlur={[Function]}
-      onFocus={[Function]}
-    >
-      <div
-        onFocus={[Function]}
-        onMouseDown={[Function]}
-        onTouchStart={[Function]}
-      >
-        <div
-          className="fd-popover__control"
-        >
-          <input
-            className="fd-input"
-            type="text"
-          />
-        </div>
-      </div>
-    </div>
+    <input
+      className="fd-input"
+      type="text"
+    />
   </div>
 </div>
 `;
@@ -120,25 +75,10 @@ exports[`Storyshots Component API/Forms/FormLabel Required 1`] = `
     >
       Required Label
     </label>
-    <div
-      onBlur={[Function]}
-      onFocus={[Function]}
-    >
-      <div
-        onFocus={[Function]}
-        onMouseDown={[Function]}
-        onTouchStart={[Function]}
-      >
-        <div
-          className="fd-popover__control"
-        >
-          <input
-            className="fd-input"
-            type="text"
-          />
-        </div>
-      </div>
-    </div>
+    <input
+      className="fd-input"
+      type="text"
+    />
   </div>
 </div>
 `;

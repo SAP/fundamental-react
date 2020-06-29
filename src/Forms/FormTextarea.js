@@ -81,9 +81,10 @@ const FormTextarea = React.forwardRef(({
 
     return (
         <>
-            <FormValidationOverlay
+            {validationState?.state ? <FormValidationOverlay
                 control={formTextarea}
                 validationState={validationState} />
+                : formTextarea}
             {hasMaxLength &&
                 <div
                     {...counterProps}

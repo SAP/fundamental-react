@@ -31,11 +31,11 @@ const FormInput = React.forwardRef(({ className, compact, disabled, name, placeh
             value={value} />
     );
 
-    return (
+    return validationState ? (
         <FormValidationOverlay
             control={formInput}
             validationState={validationState} />
-    );
+    ) : formInput;
 });
 
 FormInput.displayName = 'FormInput';

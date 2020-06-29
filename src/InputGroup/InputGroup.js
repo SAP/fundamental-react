@@ -1,5 +1,6 @@
 import classnames from 'classnames';
 import { FORM_MESSAGE_TYPES } from '../utils/constants';
+import FormValidationOverlay from '../Forms/_FormValidationOverlay';
 import InputGroupAddon from './_InputGroupAddon';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
@@ -39,7 +40,7 @@ class InputGroup extends Component {
             child.props.className
         );
 
-        return (
+        const inputGroup = (
             <div
                 {...props}
                 className={inputGroupClasses}>
@@ -47,11 +48,18 @@ class InputGroup extends Component {
                     return React.cloneElement(child, {
                         compact,
                         disabled,
-                        className: getClassName(child)
+                        className: getClassName(child),
+                        validationState: child.props.validationState && null // remove duplicate validation state from child component
                     });
                 })}
             </div>
         );
+
+        return validationState?.state ? (
+            <FormValidationOverlay
+                control={inputGroup}
+                validationState={validationState} />
+        ) : inputGroup;
     }
 }
 

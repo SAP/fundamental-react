@@ -3,7 +3,6 @@ import classnames from 'classnames';
 import { FORM_MESSAGE_TYPES } from '../utils/constants';
 import FormInput from '../Forms/FormInput';
 import FormMessage from '../Forms/_FormMessage';
-import FormValidationOverlay from '../Forms/_FormValidationOverlay';
 import InputGroup from '../InputGroup/InputGroup';
 import keycode from 'keycode';
 import List from '../List/List';
@@ -108,12 +107,6 @@ const ComboboxInput = React.forwardRef(({
         </InputGroup>
     );
 
-    const wrappedInputGroup = (
-        <FormValidationOverlay
-            control={inputGroup}
-            validationState={validationState} />
-    );
-
     return (
         <Popover
             {...popoverProps}
@@ -136,7 +129,7 @@ const ComboboxInput = React.forwardRef(({
                         ))}
                     </List>
                 </>)}
-            control={wrappedInputGroup}
+            control={inputGroup}
             disableKeyPressHandler
             disabled={disabled}
             firstFocusIndex={0}

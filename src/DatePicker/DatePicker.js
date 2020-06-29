@@ -4,7 +4,6 @@ import classnames from 'classnames';
 import { FORM_MESSAGE_TYPES } from '../utils/constants';
 import FormInput from '../Forms/FormInput';
 import FormMessage from '../Forms/_FormMessage';
-import FormValidationOverlay from '../Forms/_FormValidationOverlay';
 import InputGroup from '../InputGroup/InputGroup';
 import { isEnabledDate } from '../utils/dateUtils';
 import moment from 'moment';
@@ -381,12 +380,6 @@ class DatePicker extends Component {
             </InputGroup>
         );
 
-        const wrappedInputGroup = (
-            <FormValidationOverlay
-                control={inputGroup}
-                validationState={validationState} />
-        );
-
         return (
             <div
                 {...props}
@@ -428,7 +421,7 @@ class DatePicker extends Component {
                                 weekdayStart={weekdayStart} />
                         </>
                     }
-                    control={wrappedInputGroup}
+                    control={inputGroup}
                     disableKeyPressHandler
                     disableTriggerOnClick
                     disabled={disableButton}
