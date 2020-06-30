@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.11.0-rc.21](https://github.com/SAP/fundamental-react/compare/v0.11.0-rc.20...v0.11.0-rc.21) (2020-06-30)
+
+
+### Bug Fixes
+
+* use popper for form validation messages ([#1105](https://github.com/SAP/fundamental-react/issues/1105)) ([f912d9c](https://github.com/SAP/fundamental-react/commit/f912d9c9b0824990698b109a77af8e212525ab4f))
+
 ## [0.11.0-rc.20](https://github.com/SAP/fundamental-react/compare/v0.11.0-rc.19...v0.11.0-rc.20) (2020-06-30)
 
 ## [0.11.0-rc.19](https://github.com/SAP/fundamental-react/compare/v0.11.0-rc.18...v0.11.0-rc.19) (2020-06-25)
