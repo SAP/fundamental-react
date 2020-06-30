@@ -119,7 +119,6 @@ class SearchInput extends PureComponent {
             searchBtnProps,
             popoverProps,
             validationState,
-            disableStyles,
             ...rest
         } = this.props;
 
