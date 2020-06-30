@@ -170,7 +170,6 @@ class SearchInput extends PureComponent {
                         (<>
                             {validationState &&
                             <FormMessage
-                                disableStyles={disableStyles}
                                 type={validationState.state}>
                                 {validationState.text}
                             </FormMessage>
