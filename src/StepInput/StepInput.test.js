@@ -2,7 +2,7 @@ import { mount } from 'enzyme';
 import React from 'react';
 import { StepInput } from '../';
 
-describe('<InputGroup />', () => {
+describe('<StepInput />', () => {
     let setup = (props) => {
         return mount( <StepInput {...props} />);
     };
@@ -29,7 +29,7 @@ describe('<InputGroup />', () => {
                 'data-sample': 'Sample'
             });
             expect(
-                element.getDOMNode().attributes['data-sample'].value
+                element.find('.fd-step-input').getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
         });
     });

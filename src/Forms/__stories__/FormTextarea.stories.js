@@ -36,16 +36,16 @@ export const validationStates = () => (
     <div className='fddocs-container'>
         <FormTextarea
             defaultValue='Error State'
-            state='error' />
+            validationState={{ state: 'error', text: 'Test validation state' }} />
         <FormTextarea
             defaultValue='Warning State'
-            state='warning' />
+            validationState={{ state: 'warning', text: 'Test validation state' }} />
         <FormTextarea
             defaultValue='Information State'
-            state='information' />
+            validationState={{ state: 'information', text: 'Test validation state' }} />
         <FormTextarea
             defaultValue='Success State'
-            state='success' />
+            validationState={{ state: 'success', text: 'Test validation state' }} />
     </div>
 );
 
@@ -55,12 +55,12 @@ export const dev = () => (
         defaultValue={text('Default Value', 'Default')}
         disabled={boolean('disabled', false)}
         readOnly={boolean('readOnly', false)}
-        state={select('State', {
+        validationState={select('Validation State', {
             'none': '',
-            'success': 'success',
-            'error': 'error',
-            'information': 'information',
-            'warning': 'warning'
+            'success': { state: 'success', text: 'placeholder text' },
+            'error': { state: 'error', text: 'placeholder text' },
+            'information': { state: 'information', text: 'placeholder text' },
+            'warning': { state: 'warning', text: 'placeholder text' }
         })} />
 );
 

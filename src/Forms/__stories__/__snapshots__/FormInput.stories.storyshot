@@ -72,12 +72,9 @@ exports[`Storyshots Component API/Forms/FormInput Validation States 1`] = `
     className="fddocs-container"
   >
     <div
-      className="fd-popover fd-popover--input-message-group"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
+      className="fd-popover"
+      onBlur={[Function]}
+      onFocus={[Function]}
     >
       <div
         onFocus={[Function]}
@@ -88,27 +85,17 @@ exports[`Storyshots Component API/Forms/FormInput Validation States 1`] = `
           className="fd-popover__control"
         >
           <input
-            aria-controls="fd-mocked-short-id"
-            aria-expanded={false}
-            aria-haspopup={true}
             className="fd-input is-error"
-            onClick={[Function]}
-            onKeyPress={[Function]}
             placeholder="Error"
-            role="button"
-            tabIndex={0}
             type="text"
           />
         </div>
       </div>
     </div>
     <div
-      className="fd-popover fd-popover--input-message-group"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
+      className="fd-popover"
+      onBlur={[Function]}
+      onFocus={[Function]}
     >
       <div
         onFocus={[Function]}
@@ -119,27 +106,17 @@ exports[`Storyshots Component API/Forms/FormInput Validation States 1`] = `
           className="fd-popover__control"
         >
           <input
-            aria-controls="fd-mocked-short-id"
-            aria-expanded={false}
-            aria-haspopup={true}
             className="fd-input is-warning"
-            onClick={[Function]}
-            onKeyPress={[Function]}
             placeholder="Warning"
-            role="button"
-            tabIndex={0}
             type="text"
           />
         </div>
       </div>
     </div>
     <div
-      className="fd-popover fd-popover--input-message-group"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
+      className="fd-popover"
+      onBlur={[Function]}
+      onFocus={[Function]}
     >
       <div
         onFocus={[Function]}
@@ -150,27 +127,17 @@ exports[`Storyshots Component API/Forms/FormInput Validation States 1`] = `
           className="fd-popover__control"
         >
           <input
-            aria-controls="fd-mocked-short-id"
-            aria-expanded={false}
-            aria-haspopup={true}
             className="fd-input is-information"
-            onClick={[Function]}
-            onKeyPress={[Function]}
             placeholder="Information"
-            role="button"
-            tabIndex={0}
             type="text"
           />
         </div>
       </div>
     </div>
     <div
-      className="fd-popover fd-popover--input-message-group"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
+      className="fd-popover"
+      onBlur={[Function]}
+      onFocus={[Function]}
     >
       <div
         onFocus={[Function]}
@@ -181,15 +148,8 @@ exports[`Storyshots Component API/Forms/FormInput Validation States 1`] = `
           className="fd-popover__control"
         >
           <input
-            aria-controls="fd-mocked-short-id"
-            aria-expanded={false}
-            aria-haspopup={true}
             className="fd-input is-success"
-            onClick={[Function]}
-            onKeyPress={[Function]}
             placeholder="Success"
-            role="button"
-            tabIndex={0}
             type="text"
           />
         </div>
