@@ -416,7 +416,7 @@ class Shellbar extends Component {
                                                 {productSwitchList.map((item, index) => {
                                                     return (
                                                         <li
-                                                            className='fd-product-switch__item'
+                                                            className={`fd-product-switch__item ${item.selected ? 'selected' : ''}`}
                                                             key={index}
                                                             onClick={item.callback}>
                                                             <div className={`fd-product-switch__icon sap-icon--${item.glyph}`} />
@@ -487,7 +487,7 @@ Shellbar.propTypes = {
         label: PropTypes.string.isRequired
     }),
     /** Array of objects containing data about the products.
-     * Callback, title, and glyph are required; subtitle is optional. */
+     * Callback, title, and glyph are required; selected and subtitle are optional. */
     productSwitchList: PropTypes.arrayOf(
         PropTypes.shape({
             callback: PropTypes.func.isRequired,
@@ -495,6 +495,8 @@ Shellbar.propTypes = {
             title: PropTypes.string.isRequired,
             /** The icon to include. See the icon page for the list of icons */
             glyph: PropTypes.string.isRequired,
+            /** For pre-selecting an item in the product switch list */
+            selected: PropTypes.bool,
             subtitle: PropTypes.string
         })
     ),
