@@ -495,7 +495,7 @@ Shellbar.propTypes = {
             title: PropTypes.string.isRequired,
             /** The icon to include. See the icon page for the list of icons */
             glyph: PropTypes.string.isRequired,
-            /** For pre-selecting an item in the switch list */
+            /** For pre-selecting an item in the product switch list */
             selected: PropTypes.bool,
             subtitle: PropTypes.string
         })
