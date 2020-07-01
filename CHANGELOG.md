@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.11.0-rc.23](https://github.com/SAP/fundamental-react/compare/v0.11.0-rc.22...v0.11.0-rc.23) (2020-07-01)
+
+
+### Features
+
+* Upgrade to popper-2 ([#1100](https://github.com/SAP/fundamental-react/issues/1100)) ([e11e796](https://github.com/SAP/fundamental-react/commit/e11e796ff0c6872a289a4e245b1bf406ff7808de))
+
 ## [0.11.0-rc.22](https://github.com/SAP/fundamental-react/compare/v0.11.0-rc.21...v0.11.0-rc.22) (2020-07-01)
 
 
