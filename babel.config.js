@@ -9,7 +9,8 @@ const defaultPresets = [
 
 const defaultPlugins = [
     ['@babel/plugin-proposal-class-properties', { loose: true }],
-    ['@babel/plugin-transform-runtime', { corejs: 3, proposals: true }]
+    ['@babel/plugin-transform-runtime', { corejs: 3, proposals: true }],
+    ['client-only-require', { 'extensions': ['less', 'scss', 'css'] }]
 ];
 
 const productionPlugins = [
