@@ -399,7 +399,7 @@ exports[`Storyshots Component API/DatePicker Dev 1`] = `
   dir="ltr"
 >
   <div
-    defaultValue=""
+    defaultValue="20/06/2020"
     onChange={[Function]}
     onFocus={[Function]}
   >
@@ -425,9 +425,9 @@ exports[`Storyshots Component API/DatePicker Dev 1`] = `
               onChange={[Function]}
               onFocus={[Function]}
               onKeyPress={[Function]}
-              placeholder="MM/DD/YYYY"
+              placeholder="DD/MM/YYYY"
               type="text"
-              value=""
+              value="20/06/2020"
             />
             <span
               className="fd-input-group__addon fd-input-group__addon--button"
