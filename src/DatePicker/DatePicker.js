@@ -459,7 +459,7 @@ class DatePicker extends Component {
                                 specialDays={specialDays}
                                 weekdayStart={weekdayStart} />
                             { this._showTodayFooter() &&
-                                <footer className={datepickerFooterClassName}>
+                                <div className={datepickerFooterClassName}>
                                     <div className='fd-bar__right'>
                                         <div className='fd-bar__element'>
                                             <Button
@@ -470,7 +470,7 @@ class DatePicker extends Component {
                                             </Button>
                                         </div>
                                     </div>
-                                </footer>
+                                </div>
                             }
                         </>
                     }
