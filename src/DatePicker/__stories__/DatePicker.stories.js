@@ -330,6 +330,10 @@ export const dev = () => (
         blockedDates={[dateKnobToDate('block between dates (1)', blockedDateFirstDefault),
             dateKnobToDate('block between dates (2)', blockedDateSecondDefault)]}
         compact={boolean('compact', false)}
+        dateFormat={
+            select(dateFormatOptionsLabel, dateFormatOptions, 'DD/MM/YYYY')
+        }
+        defaultValue={text('Default Value', '20/06/2020')}
         disableAfterDate={dateKnobToDate('disable after date', afterDateDefault)}
         disableBeforeDate={dateKnobToDate('disable before date', beforeDateDefault)}
         disableFutureDates={boolean('disable future dates', false)}
