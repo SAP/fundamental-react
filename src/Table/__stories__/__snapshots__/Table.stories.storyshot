@@ -111,7 +111,6 @@ exports[`Storyshots Component API/Table Rich Table 1`] = `
             className="fd-form-item"
           >
             <input
-              aria-checked="false"
               className="fd-checkbox"
               id="fd-mocked-short-id"
               onChange={[Function]}
@@ -168,7 +167,6 @@ exports[`Storyshots Component API/Table Rich Table 1`] = `
             className="fd-form-item"
           >
             <input
-              aria-checked="false"
               className="fd-checkbox"
               id="fd-mocked-short-id"
               onChange={[Function]}
@@ -258,7 +256,6 @@ exports[`Storyshots Component API/Table Rich Table 1`] = `
             className="fd-form-item"
           >
             <input
-              aria-checked="false"
               className="fd-checkbox"
               id="fd-mocked-short-id"
               onChange={[Function]}
@@ -348,7 +345,6 @@ exports[`Storyshots Component API/Table Rich Table 1`] = `
             className="fd-form-item"
           >
             <input
-              aria-checked="false"
               className="fd-checkbox"
               id="fd-mocked-short-id"
               onChange={[Function]}
@@ -438,7 +434,6 @@ exports[`Storyshots Component API/Table Rich Table 1`] = `
             className="fd-form-item"
           >
             <input
-              aria-checked="false"
               className="fd-checkbox"
               id="fd-mocked-short-id"
               onChange={[Function]}

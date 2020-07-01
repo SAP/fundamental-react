@@ -14,8 +14,7 @@ describe('<Checkbox />', () => {
                 onChange: () => {}
             });
 
-            expect(element.find('input').props().checked).toBe(true);
-            expect(element.find('input').props()['aria-checked']).toBe('true');
+            expect(element.find('input').getDOMNode().checked).toBe(true);
         });
 
         test('should add checked attribute if defaultChecked is true', () => {
@@ -24,21 +23,16 @@ describe('<Checkbox />', () => {
                 onChange: () => {}
             });
 
-            expect(element.find('input').props().checked).toBe(true);
-
-            // TODO: The aria-checked does not reflect the current state of the checkbox if it is uncontrolled
-            // expect(element.find('input').props()['aria-checked']).toBe('true');
+            expect(element.find('input').getDOMNode().checked).toBe(true);
         });
 
-        test('should add aria-checked attribute of "mixed" if indeterminate is true', () => {
+        test('should add indeterminate property when indeterminate is passed', () => {
             let element = setup({
                 indeterminate: true,
-                defaultChecked: true,
                 onChange: () => {}
             });
 
-            expect(element.find('input').props().checked).toBe(true);
-            expect(element.find('input').props()['aria-checked']).toBe('mixed');
+            expect(element.find('input').getDOMNode().indeterminate).toBe(true);
         });
 
         test('should set disabled to true when passed', () => {
@@ -46,7 +40,7 @@ describe('<Checkbox />', () => {
                 disabled: true
             });
 
-            expect(element.find('input').props().disabled).toBe(true);
+            expect(element.find('input').getDOMNode().disabled).toBe(true);
         });
 
         test('should add inline class when inline is passed', () => {

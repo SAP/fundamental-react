@@ -713,7 +713,6 @@ exports[`Storyshots Component API/List Selection 1`] = `
           className="fd-form-item fd-form-item--inline"
         >
           <input
-            aria-checked="false"
             className="fd-checkbox"
             id="fd-mocked-short-id"
             onChange={[Function]}
@@ -743,7 +742,6 @@ exports[`Storyshots Component API/List Selection 1`] = `
           className="fd-form-item fd-form-item--inline"
         >
           <input
-            aria-checked="false"
             className="fd-checkbox"
             id="fd-mocked-short-id"
             onChange={[Function]}
@@ -773,7 +771,6 @@ exports[`Storyshots Component API/List Selection 1`] = `
           className="fd-form-item fd-form-item--inline"
         >
           <input
-            aria-checked="false"
             className="fd-checkbox"
             id="fd-mocked-short-id"
             onChange={[Function]}
@@ -803,7 +800,6 @@ exports[`Storyshots Component API/List Selection 1`] = `
           className="fd-form-item fd-form-item--inline"
         >
           <input
-            aria-checked="false"
             className="fd-checkbox"
             id="fd-mocked-short-id"
             onChange={[Function]}

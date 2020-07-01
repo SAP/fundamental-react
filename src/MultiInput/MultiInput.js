@@ -25,6 +25,8 @@ class MultiInput extends Component {
             bShowList: false,
             tags: []
         };
+
+        this.multiInputId = shortid.generate();
     }
 
     // create tags to display in dropdown list
@@ -35,8 +37,8 @@ class MultiInput extends Component {
                     checked={this.isChecked(item)}
                     className='fd-list__input'
                     compact={this.props.compact}
-                    id={index + `_${shortid.generate()}`}
-                    labelClasses='fd-list__label'
+                    id={index + `_${this.multiInputId}`}
+                    labelClassName='fd-list__label'
                     onChange={() => this.updateSelectedTags(item)}
                     value={item}>
                     <List.Text>{item}</List.Text>

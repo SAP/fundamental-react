@@ -7,16 +7,6 @@ import shortId from '../utils/shortId';
 import React, { useEffect, useRef } from 'react';
 import 'fundamental-styles/dist/checkbox.css';
 
-const getCheckStatus = (checked, indeterminate) => {
-    if (indeterminate) {
-        return 'mixed';
-    } else if (checked) {
-        return 'true';
-    } else {
-        return 'false';
-    }
-};
-
 /** With a **Checkbox**, all options are visible and the user can make one or more selections.
 This component can also be disabled and displayed in a row */
 
@@ -71,9 +61,9 @@ const Checkbox = React.forwardRef(({
             ref={ref}>
             <input
                 {...inputProps}
-                aria-checked={getCheckStatus(checked, indeterminate)}
-                checked={checked || defaultChecked}
+                checked={checked}
                 className={classes}
+                defaultChecked={defaultChecked}
                 disabled={disabled}
                 id={checkId}
                 name={name}
