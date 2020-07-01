@@ -23,6 +23,54 @@ exports[`Storyshots Component API/Forms/Checkbox Compact 1`] = `
 </div>
 `;
 
+exports[`Storyshots Component API/Forms/Checkbox Controlled Checked 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    className="fd-form-item"
+  >
+    <input
+      checked={false}
+      className="fd-checkbox"
+      id="fd-mocked-short-id"
+      onChange={[Function]}
+      type="checkbox"
+    />
+    <label
+      className="fd-form-label fd-checkbox__label"
+      htmlFor="fd-mocked-short-id"
+    >
+      Text Option
+    </label>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Component API/Forms/Checkbox Default Checked 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    className="fd-form-item"
+  >
+    <input
+      className="fd-checkbox"
+      defaultChecked={true}
+      id="fd-mocked-short-id"
+      onChange={[Function]}
+      type="checkbox"
+    />
+    <label
+      className="fd-form-label fd-checkbox__label"
+      htmlFor="fd-mocked-short-id"
+    >
+      Text Option
+    </label>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Component API/Forms/Checkbox Dev 1`] = `
 <div
   dir="ltr"

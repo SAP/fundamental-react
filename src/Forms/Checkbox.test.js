@@ -14,7 +14,7 @@ describe('<Checkbox />', () => {
                 onChange: () => {}
             });
 
-            expect(element.find('input').props().checked).toBe(true);
+            expect(element.find('input').getDOMNode().checked).toBe(true);
         });
 
         test('should add checked attribute if defaultChecked is true', () => {
@@ -23,7 +23,7 @@ describe('<Checkbox />', () => {
                 onChange: () => {}
             });
 
-            expect(element.find('input').props().checked).toBe(true);
+            expect(element.find('input').getDOMNode().checked).toBe(true);
         });
 
         test('should add indeterminate property when indeterminate is passed', () => {
@@ -32,8 +32,7 @@ describe('<Checkbox />', () => {
                 onChange: () => {}
             });
 
-            const checkbox = element.find('input').getDOMNode();
-            expect(checkbox.indeterminate).toBe(true);
+            expect(element.find('input').getDOMNode().indeterminate).toBe(true);
         });
 
         test('should set disabled to true when passed', () => {
@@ -41,7 +40,7 @@ describe('<Checkbox />', () => {
                 disabled: true
             });
 
-            expect(element.find('input').props().disabled).toBe(true);
+            expect(element.find('input').getDOMNode().disabled).toBe(true);
         });
 
         test('should add inline class when inline is passed', () => {
