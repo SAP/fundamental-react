@@ -26,6 +26,14 @@ describe('<SearchInput />', () => {
         { text: 'pear', callback: jest.fn() }
     ];
 
+    const substringSearchData = [
+        { text: 'who is a supplier user?', callback: jest.fn() },
+        { text: 'who is a buyer user?', callback: jest.fn() },
+        { text: 'who is a worker user?', callback: jest.fn() },
+        { text: 'how to change the pin?', callback: jest.fn() },
+        { text: 'how to set the pin?', callback: jest.fn() }
+    ];
+
     const defaultSearchInput = (
         <SearchInput
             className='blue'
@@ -46,6 +54,15 @@ describe('<SearchInput />', () => {
         <SearchInput
             onEnter={term => getInputValue(term)}
             placeholder='Enter a fruit' />
+    );
+
+    const searchOnChangeForSubstringSearch = (
+        <SearchInput
+            onChange={term => getInputValue(term)}
+            onEnter={term => getInputValue(term)}
+            placeholder='Enter a value'
+            searchList={substringSearchData}
+            subStringSearch />
     );
 
     describe('onChange handler', () => {
@@ -69,6 +86,21 @@ describe('<SearchInput />', () => {
             element.find('input').simulate('change');
 
             expect(f).toHaveBeenCalledTimes(1);
+        });
+
+        test('subString Search', () => {
+            const wrapper = mount(searchOnChangeForSubstringSearch);
+
+            expect(wrapper.find(SearchInput).prop('subStringSearch')).toBe(true);
+
+            wrapper
+                .find(searchInput)
+                .simulate('change', { target: { value: 'supp' } });
+
+            let rows = wrapper.find('li');
+
+            expect(rows).toHaveLength(1);
+
         });
     });
 
