@@ -5,8 +5,72 @@ import keycode from 'keycode';
 import PropTypes from 'prop-types';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Manager, Popper as ReactPopper, Reference } from 'react-popper';
+import { Manager, Popper as ReactPopper, Reference } from 'react-popper-2';
 import { POPPER_PLACEMENTS, POPPER_SIZING_TYPES } from './constants';
+
+const defaultModifiers = [
+    {
+        name: 'computeStyle',
+        phase: 'main',
+        options: {
+            gpuAcceleration: false
+        }
+    },
+    {
+        name: 'preventOverflow',
+        options: {
+            boundary: []
+        }
+    },
+    {
+        name: 'hide' // adds the isReferenceHidden attribute
+    },
+    {
+        name: 'flip',
+        options: {
+            boundary: [] // https://github.com/popperjs/popper-core/issues/1110
+        }
+    }
+];
+
+const disableEdgeDetectionModifier = { name: 'flip', enabled: false };
+
+const matchTargetModifier = {
+    name: 'matchTargetModifier',
+    enabled: true,
+    phase: 'beforeWrite',
+    requires: ['computeStyles'],
+    fn: ({ state }) => {
+        state.styles.popper.width = `${state.rects.reference.width}px`;
+    },
+    effect: ({ state }) => {
+        state.elements.popper.style.width = `${state.elements.reference.offsetWidth}px`;
+    }
+};
+const minTargetModifier = {
+    name: 'minTargetModifier',
+    enabled: true,
+    phase: 'beforeWrite',
+    requires: ['computeStyles'],
+    fn: ({ state }) => {
+        state.styles.popper.minWidth = `${state.rects.reference.width}px`;
+    },
+    effect: ({ state }) => {
+        state.elements.popper.style.minWidth = `${state.elements.reference.offsetWidth}px`;
+    }
+};
+const maxTargetModifier = {
+    name: 'maxTargetModifier',
+    enabled: true,
+    phase: 'beforeWrite',
+    requires: ['computeStyles'],
+    fn: ({ state }) => {
+        state.styles.popper.maxWidth = `${state.rects.reference.width}px`;
+    },
+    effect: ({ state }) => {
+        state.elements.popper.style.maxWidth = `${state.elements.reference.offsetWidth}px`;
+    }
+};
 
 class Popper extends React.Component {
     constructor(props) {
@@ -67,7 +131,6 @@ class Popper extends React.Component {
             innerRef,
             noArrow,
             onClickOutside,
-            placementTargetRef,
             popperClassName,
             popperModifiers,
             popperPlacement,
@@ -80,55 +143,57 @@ class Popper extends React.Component {
             widthSizingType
         } = this.props;
 
-        const flipModifier = disableEdgeDetection ? { flip: { enabled: false } } : {};
-        const modifiers = {
-            ...popperModifiers,
-            ...flipModifier
-        };
-
+        const modifiers = [
+            ...defaultModifiers,
+            ...popperModifiers
+        ];
+        if (disableEdgeDetection) {
+            modifiers.push(disableEdgeDetectionModifier);
+        }
+        if (widthSizingType === 'matchTarget') {
+            modifiers.push(matchTargetModifier);
+        }
+        if (widthSizingType === 'minTarget') {
+            modifiers.push(minTargetModifier);
+        }
+        if (widthSizingType === 'maxTarget') {
+            modifiers.push(maxTargetModifier);
+        }
         const popperClasses = classnames(`${cssBlock}__popper`, popperClassName, {
             [`${cssBlock}__popper--no-arrow`]: !!noArrow
         });
 
         let popper = (
             <ReactPopper
-                innerRef={innerRef}
                 modifiers={modifiers}
                 placement={popperPlacement}>
-                {({ ref, style, placement, outOfBoundaries, arrowProps }) => {
+                {({ ref, style, isReferenceHidden, arrowProps, placement }) => {
                     if (!show) {
                         return null;
                     }
-
-                    const currentPlacementTarget = placementTargetRef;
-                    if (widthSizingType !== 'none' && currentPlacementTarget) {
-                        const { right: targetRight, left: targetLeft } = typeof currentPlacementTarget.getBoundingClientRectTest === 'function' ?
-                            currentPlacementTarget.getBoundingClientRectTest() : // for test purpose. getBoundingClientRect cannot be redefined.
-                            currentPlacementTarget.getBoundingClientRect();
-
-                        const { left: popperLeft } = style;
-
-                        let funMap = new Map();
-                        funMap.set('matchTarget', { width: targetRight - targetLeft, left: targetLeft });
-                        funMap.set('minTarget', { minWidth: targetRight - popperLeft });
-                        funMap.set('maxTarget', { maxWidth: targetRight - popperLeft });
-                        style = { ...style, ...funMap.get(widthSizingType) };
-                    }
-
+                    // TODO: Temporary overrides to support popper-2
+                    const fundamentalStyleOverrides = {
+                        visibility: isReferenceHidden ? 'hidden' : 'visible'
+                    };
+                    const fundamentalStyleArrowOverrides = {
+                        margin: 0
+                    };
                     return (
                         <div
                             {...popperProps}
                             className={popperClasses}
                             ref={ref}
-                            style={{ ...style, ...popperProps.style }}
-                            // eslint-disable-next-line no-undefined
-                            x-out-of-boundaries={!!outOfBoundaries ? 'true' : undefined}
+                            style={{ ...style, ...popperProps.style, ...fundamentalStyleOverrides }}
+                            x-out-of-boundaries={isReferenceHidden}
+                            // This is needed for fundamental-styles even though popper-2 uses data-placement as well
                             x-placement={placement}>
-                            {children}
+                            <div ref={innerRef}>
+                                {children}
+                            </div>
                             <span
                                 className={`${cssBlock}__arrow`}
                                 ref={arrowProps.ref}
-                                style={arrowProps.style} />
+                                style={{ ...arrowProps.style, ...fundamentalStyleArrowOverrides }} />
                         </div>
                     );
                 }}
@@ -171,9 +236,8 @@ Popper.propTypes = {
     referenceComponent: PropTypes.element.isRequired,
     disableEdgeDetection: PropTypes.bool,
     noArrow: PropTypes.bool,
-    placementTargetRef: PropTypes.shape({ current: PropTypes.any }),
     popperClassName: PropTypes.string,
-    popperModifiers: PropTypes.object,
+    popperModifiers: PropTypes.array,
     popperPlacement: PropTypes.oneOf(POPPER_PLACEMENTS),
     popperProps: PropTypes.object,
     referenceClassName: PropTypes.string,
@@ -187,17 +251,7 @@ Popper.propTypes = {
 };
 
 Popper.defaultProps = {
-    popperModifiers: {
-        preventOverflow: {
-            enabled: true,
-            escapeWithReference: true,
-            boundariesElement: 'scrollParent'
-        },
-        computeStyle: {
-            enabled: true,
-            gpuAcceleration: false
-        }
-    },
+    popperModifiers: [],
     popperPlacement: 'bottom-start',
     onClickOutside: () => { },
     onKeyDown: () => { }

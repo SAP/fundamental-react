@@ -171,7 +171,6 @@ class Popover extends Component {
                     noArrow={noArrow}
                     onClickOutside={chain(this.handleOutsideClick, onClickOutside)}
                     onEscapeKey={chain(this.handleEscapeKey, onEscapeKey)}
-                    placementTargetRef={this.controlRef}
                     popperClassName={popperClassName}
                     popperPlacement={placement}
                     popperProps={{ ...popperProps, id }}

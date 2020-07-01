@@ -15,6 +15,7 @@ module.exports = {
     ],
 
     webpackFinal: async(config) => {
+        config.entry = ['core-js', ...config.entry];
         config.module.rules.push({
             test: /\.stories\.js?$/,
             use: [{ loader: 'story-description-loader' }],

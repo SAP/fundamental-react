@@ -239,8 +239,8 @@ export const widthSizingTypes = () => (
     <>
         {['none', 'matchTarget', 'minTarget', 'maxTarget'].map(type =>
             (<Popover
-                body={longBodyContent}
-                control={<Button>widthizingType: <strong>'{type}'</strong></Button>}
+                body={type === 'minTarget' ? bodyContent : longBodyContent}
+                control={<Button>widthSizingType: <strong>'{type}'</strong></Button>}
                 disableEdgeDetection
                 key={type}
                 placement='bottom'
