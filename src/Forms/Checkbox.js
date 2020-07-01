@@ -61,8 +61,9 @@ const Checkbox = React.forwardRef(({
             ref={ref}>
             <input
                 {...inputProps}
-                checked={checked || defaultChecked}
+                checked={checked}
                 className={classes}
+                defaultChecked={defaultChecked}
                 disabled={disabled}
                 id={checkId}
                 name={name}
