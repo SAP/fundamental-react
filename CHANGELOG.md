@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.11.0-rc.25](https://github.com/SAP/fundamental-react/compare/v0.11.0-rc.24...v0.11.0-rc.25) (2020-07-01)
+
+
+### Bug Fixes
+
+* checkbox a11y ([#1116](https://github.com/SAP/fundamental-react/issues/1116)) ([b6fad78](https://github.com/SAP/fundamental-react/commit/b6fad78e4790c89696be305ecfa2b018a11d5f5d))
+
+## [0.11.0-rc.24](https://github.com/SAP/fundamental-react/compare/v0.11.0-rc.23...v0.11.0-rc.24) (2020-07-01)
+
+
+### Features
+
+* Substring Search in SearchInput ([#1089](https://github.com/SAP/fundamental-react/issues/1089)) ([bbf4488](https://github.com/SAP/fundamental-react/commit/bbf4488e57968a13b71d8ef89033c32cfa81ba88))
+
 ## [0.11.0-rc.23](https://github.com/SAP/fundamental-react/compare/v0.11.0-rc.22...v0.11.0-rc.23) (2020-07-01)
 
 
