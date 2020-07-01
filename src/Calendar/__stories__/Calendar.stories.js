@@ -98,6 +98,7 @@ export const dev = () => (
             dateKnobToDate('disable between dates (2)', disabledDateSecondDefault)]}
         locale={text('locale', 'en')}
         openToDate={dateKnobToDate('open to date', new Date())}
+        showToday={boolean('showToday', false)}
         weekdayStart={number('weekdayStart', 0)} />
 );
 
