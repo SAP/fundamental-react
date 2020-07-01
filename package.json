@@ -1,6 +1,6 @@
 {
   "name": "fundamental-react",
-  "version": "0.11.0-rc.16",
+  "version": "0.11.0-rc.21",
   "private": false,
   "description": "SAP Fundamental Library, implemented in React",
   "license": "Apache-2.0",
@@ -74,6 +74,7 @@
     "@sap-theming/theming-base-content": "^11.1.19",
     "@size-limit/preset-big-lib": "^4.5.0",
     "@storybook/addon-a11y": "6.0.0-beta.21",
+    "@storybook/addon-actions": "6.0.0-beta.21",
     "@storybook/addon-cssresources": "6.0.0-beta.21",
     "@storybook/addon-docs": "6.0.0-beta.21",
     "@storybook/addon-knobs": "6.0.0-beta.21",

@@ -18,7 +18,7 @@ describe('<FormInput />', () => {
             const element = mount(<FormInput data-sample='Sample' />);
 
             expect(
-                element.getDOMNode().attributes['data-sample'].value
+                element.find('.fd-input').getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
         });
     });

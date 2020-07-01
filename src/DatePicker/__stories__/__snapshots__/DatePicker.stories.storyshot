@@ -950,37 +950,46 @@ exports[`Storyshots Component API/DatePicker Validation States 1`] = `
             className="fd-popover__control"
           >
             <div
-              aria-expanded={false}
-              aria-haspopup="true"
-              className="fd-input-group--control is-error fd-input-group is-error"
+              className="fd-popover"
+              onBlur={[Function]}
+              onFocus={[Function]}
             >
-              <input
-                className="fd-input fd-input-group__input"
-                onBlur={[Function]}
-                onChange={[Function]}
+              <div
                 onFocus={[Function]}
-                onKeyPress={[Function]}
-                placeholder="MM/DD/YYYY"
-                type="text"
-                value=""
-              />
-              <span
-                className="fd-input-group__addon fd-input-group__addon--button"
+                onMouseDown={[Function]}
+                onTouchStart={[Function]}
               >
-                <button
-                  aria-label="Choose date"
-                  className="fd-button fd-button--transparent sap-icon--calendar fd-input-group__button"
-                  onClick={[Function]}
-                  type="button"
-                />
-              </span>
-            </div>
-            <div
-              aria-live="assertive"
-              className="fd-form-message fd-form-message--error"
-              role="alert"
-            >
-              Test validation state
+                <div
+                  className="fd-popover__control"
+                >
+                  <div
+                    aria-expanded={false}
+                    aria-haspopup="true"
+                    className="fd-input-group--control is-error fd-input-group is-error"
+                  >
+                    <input
+                      className="fd-input fd-input-group__input"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      onFocus={[Function]}
+                      onKeyPress={[Function]}
+                      placeholder="MM/DD/YYYY"
+                      type="text"
+                      value=""
+                    />
+                    <span
+                      className="fd-input-group__addon fd-input-group__addon--button"
+                    >
+                      <button
+                        aria-label="Choose date"
+                        className="fd-button fd-button--transparent sap-icon--calendar fd-input-group__button"
+                        onClick={[Function]}
+                        type="button"
+                      />
+                    </span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -1003,37 +1012,46 @@ exports[`Storyshots Component API/DatePicker Validation States 1`] = `
             className="fd-popover__control"
           >
             <div
-              aria-expanded={false}
-              aria-haspopup="true"
-              className="fd-input-group--control is-warning fd-input-group is-warning"
+              className="fd-popover"
+              onBlur={[Function]}
+              onFocus={[Function]}
             >
-              <input
-                className="fd-input fd-input-group__input"
-                onBlur={[Function]}
-                onChange={[Function]}
+              <div
                 onFocus={[Function]}
-                onKeyPress={[Function]}
-                placeholder="MM/DD/YYYY"
-                type="text"
-                value=""
-              />
-              <span
-                className="fd-input-group__addon fd-input-group__addon--button"
+                onMouseDown={[Function]}
+                onTouchStart={[Function]}
               >
-                <button
-                  aria-label="Choose date"
-                  className="fd-button fd-button--transparent sap-icon--calendar fd-input-group__button"
-                  onClick={[Function]}
-                  type="button"
-                />
-              </span>
-            </div>
-            <div
-              aria-live="assertive"
-              className="fd-form-message fd-form-message--warning"
-              role="alert"
-            >
-              Test validation state
+                <div
+                  className="fd-popover__control"
+                >
+                  <div
+                    aria-expanded={false}
+                    aria-haspopup="true"
+                    className="fd-input-group--control is-warning fd-input-group is-warning"
+                  >
+                    <input
+                      className="fd-input fd-input-group__input"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      onFocus={[Function]}
+                      onKeyPress={[Function]}
+                      placeholder="MM/DD/YYYY"
+                      type="text"
+                      value=""
+                    />
+                    <span
+                      className="fd-input-group__addon fd-input-group__addon--button"
+                    >
+                      <button
+                        aria-label="Choose date"
+                        className="fd-button fd-button--transparent sap-icon--calendar fd-input-group__button"
+                        onClick={[Function]}
+                        type="button"
+                      />
+                    </span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -1056,37 +1074,46 @@ exports[`Storyshots Component API/DatePicker Validation States 1`] = `
             className="fd-popover__control"
           >
             <div
-              aria-expanded={false}
-              aria-haspopup="true"
-              className="fd-input-group--control is-success fd-input-group is-success"
+              className="fd-popover"
+              onBlur={[Function]}
+              onFocus={[Function]}
             >
-              <input
-                className="fd-input fd-input-group__input"
-                onBlur={[Function]}
-                onChange={[Function]}
+              <div
                 onFocus={[Function]}
-                onKeyPress={[Function]}
-                placeholder="MM/DD/YYYY"
-                type="text"
-                value=""
-              />
-              <span
-                className="fd-input-group__addon fd-input-group__addon--button"
+                onMouseDown={[Function]}
+                onTouchStart={[Function]}
               >
-                <button
-                  aria-label="Choose date"
-                  className="fd-button fd-button--transparent sap-icon--calendar fd-input-group__button"
-                  onClick={[Function]}
-                  type="button"
-                />
-              </span>
-            </div>
-            <div
-              aria-live="assertive"
-              className="fd-form-message fd-form-message--success"
-              role="alert"
-            >
-              Test validation state
+                <div
+                  className="fd-popover__control"
+                >
+                  <div
+                    aria-expanded={false}
+                    aria-haspopup="true"
+                    className="fd-input-group--control is-success fd-input-group is-success"
+                  >
+                    <input
+                      className="fd-input fd-input-group__input"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      onFocus={[Function]}
+                      onKeyPress={[Function]}
+                      placeholder="MM/DD/YYYY"
+                      type="text"
+                      value=""
+                    />
+                    <span
+                      className="fd-input-group__addon fd-input-group__addon--button"
+                    >
+                      <button
+                        aria-label="Choose date"
+                        className="fd-button fd-button--transparent sap-icon--calendar fd-input-group__button"
+                        onClick={[Function]}
+                        type="button"
+                      />
+                    </span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -1109,37 +1136,46 @@ exports[`Storyshots Component API/DatePicker Validation States 1`] = `
             className="fd-popover__control"
           >
             <div
-              aria-expanded={false}
-              aria-haspopup="true"
-              className="fd-input-group--control is-information fd-input-group is-information"
+              className="fd-popover"
+              onBlur={[Function]}
+              onFocus={[Function]}
             >
-              <input
-                className="fd-input fd-input-group__input"
-                onBlur={[Function]}
-                onChange={[Function]}
+              <div
                 onFocus={[Function]}
-                onKeyPress={[Function]}
-                placeholder="MM/DD/YYYY"
-                type="text"
-                value=""
-              />
-              <span
-                className="fd-input-group__addon fd-input-group__addon--button"
+                onMouseDown={[Function]}
+                onTouchStart={[Function]}
               >
-                <button
-                  aria-label="Choose date"
-                  className="fd-button fd-button--transparent sap-icon--calendar fd-input-group__button"
-                  onClick={[Function]}
-                  type="button"
-                />
-              </span>
-            </div>
-            <div
-              aria-live="assertive"
-              className="fd-form-message fd-form-message--information"
-              role="alert"
-            >
-              Test validation state
+                <div
+                  className="fd-popover__control"
+                >
+                  <div
+                    aria-expanded={false}
+                    aria-haspopup="true"
+                    className="fd-input-group--control is-information fd-input-group is-information"
+                  >
+                    <input
+                      className="fd-input fd-input-group__input"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      onFocus={[Function]}
+                      onKeyPress={[Function]}
+                      placeholder="MM/DD/YYYY"
+                      type="text"
+                      value=""
+                    />
+                    <span
+                      className="fd-input-group__addon fd-input-group__addon--button"
+                    >
+                      <button
+                        aria-label="Choose date"
+                        className="fd-button fd-button--transparent sap-icon--calendar fd-input-group__button"
+                        onClick={[Function]}
+                        type="button"
+                      />
+                    </span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

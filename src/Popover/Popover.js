@@ -53,8 +53,8 @@ class Popover extends Component {
     };
 
     handleFocusManager = () => {
-        if (this.state.isExpanded && this.popover) {
-            this.focusManager = new FocusManager(this.popover, this.controlRef, this.props.useArrowKeyNavigation);
+        if (this.state.isExpanded && this.popover && this.controlRef) {
+            this.focusManager = new FocusManager(this.popover, this.controlRef, this.props.useArrowKeyNavigation, this.props.firstFocusIndex);
         }
     };
 
@@ -97,6 +97,7 @@ class Popover extends Component {
             disableEdgeDetection,
             disableKeyPressHandler,
             disableTriggerOnClick,
+            firstFocusIndex,
             onClickOutside,
             onEscapeKey,
             disabled,
@@ -114,7 +115,7 @@ class Popover extends Component {
             ...rest
         } = this.props;
 
-        let onClickFunctions;
+        let onClickFunctions = control?.props.onClick;
         if (!disableTriggerOnClick) {
             onClickFunctions = this.triggerBody;
 
@@ -204,6 +205,8 @@ Popover.propTypes = {
     /** Set to **true** to remove default triggerBody handler used in onClick.
      * Useful for when a custom method is desired to open the Popover */
     disableTriggerOnClick: PropTypes.bool,
+    /** Index of the focusable item to focus first within the Popover */
+    firstFocusIndex: PropTypes.number,
     /** Set to **true** to render a popover without an arrow */
     noArrow: PropTypes.bool,
     /** 'bottom-start',

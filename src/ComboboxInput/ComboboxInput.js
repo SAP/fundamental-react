@@ -4,10 +4,11 @@ import { FORM_MESSAGE_TYPES } from '../utils/constants';
 import FormInput from '../Forms/FormInput';
 import FormMessage from '../Forms/_FormMessage';
 import InputGroup from '../InputGroup/InputGroup';
+import keycode from 'keycode';
 import List from '../List/List';
 import Popover from '../Popover/Popover';
 import PropTypes from 'prop-types';
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 
 /** A **ComboboxInput** allows users to select an item from a predefined list.
 It provides an editable input field for filtering the list, and a dropdown menu with a list of the available options.
@@ -31,6 +32,8 @@ const ComboboxInput = React.forwardRef(({
     let [isExpanded, setIsExpanded] = useState(false);
     let [selectedOptionKey, setSelectedOptionKey] = useState(selectedKey);
 
+    const popoverRef = useRef(null);
+
     const inputGroupClass = classnames(
         'fd-input-group--control',
         {
@@ -40,23 +43,69 @@ const ComboboxInput = React.forwardRef(({
         className
     );
 
-    const handleClick = (e) => {
-        setIsExpanded(!isExpanded);
-        onClick(e);
+    const closePopover = () => {
+        setIsExpanded(false);
+        const popover = popoverRef && popoverRef.current;
+        popover && popover.handleEscapeKey();
     };
 
-    const handleClickOutside = () => {
-        setIsExpanded(false);
+    const handleClick = (e) => {
+        setIsExpanded(true);
+        if (!disabled) {
+            onClick(e);
+        }
     };
 
     const handleSelect = (e, option) => {
-        setIsExpanded(false);
+        closePopover();
         setSelectedOptionKey(option.key);
         onSelect(e, option);
     };
 
+    const handleOptionKeyDown = (e, option) => {
+        switch (keycode(e)) {
+            case 'esc':
+            case 'tab':
+                e.stopPropagation();
+                closePopover();
+                break;
+            case 'enter':
+            case 'space':
+                e.preventDefault();
+                handleSelect(e, option);
+                break;
+            default:
+        }
+    };
+
     const selected = options
         .find(option => typeof selectedOptionKey !== 'undefined' && option.key === selectedOptionKey);
+
+    const inputGroup = (
+        <InputGroup
+            {...props}
+            aria-expanded={isExpanded}
+            aria-haspopup='true'
+            className={inputGroupClass}
+            compact={compact}
+            disabled={disabled}
+            onClick={handleClick}
+            validationState={validationState}>
+            <FormInput
+                {...inputProps}
+                compact={compact}
+                onChange={() => null}
+                placeholder={placeholder}
+                value={selected && selected.text} />
+            <InputGroup.Addon isButton>
+                <Button
+                    {...buttonProps}
+                    glyph='navigation-down-arrow'
+                    option='transparent'
+                    ref={ref} />
+            </InputGroup.Addon>
+        </InputGroup>
+    );
 
     return (
         <Popover
@@ -73,42 +122,19 @@ const ComboboxInput = React.forwardRef(({
                         {options.map(option => (
                             <List.Item
                                 key={option.key}
-                                onClick={(e) => handleSelect(e, option)}>
+                                onClick={(e) => handleSelect(e, option)}
+                                onKeyDown={(e) => handleOptionKeyDown(e, option)}>
                                 <List.Text>{option.text}</List.Text>
                             </List.Item>
                         ))}
                     </List>
                 </>)}
-            control={
-                <InputGroup
-                    {...props}
-                    aria-expanded={isExpanded}
-                    aria-haspopup='true'
-                    className={inputGroupClass}
-                    compact={compact}
-                    disabled={disabled}
-                    onClick={handleClick}
-                    validationState={!isExpanded ? validationState : null}>
-                    <FormInput
-                        {...inputProps}
-                        compact={compact}
-                        onChange={() => null}
-                        placeholder={placeholder}
-                        value={selected && selected.text} />
-                    <InputGroup.Addon isButton>
-                        <Button
-                            {...buttonProps}
-                            glyph='navigation-down-arrow'
-                            option='transparent'
-                            ref={ref} />
-                    </InputGroup.Addon>
-                </InputGroup>
-            }
+            control={inputGroup}
             disableKeyPressHandler
             disabled={disabled}
+            firstFocusIndex={0}
             noArrow
-            onClickOutside={handleClickOutside}
-            show={isExpanded}
+            ref={popoverRef}
             useArrowKeyNavigation
             widthSizingType='minTarget' />
     );
