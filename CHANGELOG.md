@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.11.0-rc.22](https://github.com/SAP/fundamental-react/compare/v0.11.0-rc.21...v0.11.0-rc.22) (2020-07-01)
+
+
+### Bug Fixes
+
+* Use client-only-require for css imports ([#1115](https://github.com/SAP/fundamental-react/issues/1115)) ([2b09a3b](https://github.com/SAP/fundamental-react/commit/2b09a3b3d45a2315b8b85a07c4c3b3284e0134d8))
+
 ## [0.11.0-rc.21](https://github.com/SAP/fundamental-react/compare/v0.11.0-rc.20...v0.11.0-rc.21) (2020-06-30)
 
 
