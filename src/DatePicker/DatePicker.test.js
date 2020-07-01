@@ -412,7 +412,7 @@ describe('<DatePicker />', () => {
     });
 
     describe('first displayed day', () => {
-        afterEach(() => {
+        beforeEach(() => {
             document.body.innerHTML = '';
         });
         test('should be the first sunday before the start of the month in locale "es"', () => {
