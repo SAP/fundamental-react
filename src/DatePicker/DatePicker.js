@@ -11,6 +11,8 @@ import PropTypes from 'prop-types';
 import { validDateLookup } from './_validDateLookup';
 import { DATEPICKER_TODAY_ACTIONS_TYPES, FORM_MESSAGE_TYPES } from '../utils/constants';
 import React, { Component } from 'react';
+import 'fundamental-styles/dist/dialog.css';
+import 'fundamental-styles/dist/bar.css';
 
 const ISO_DATE_FORMAT = 'YYYY-MM-DD';
 const dateRangeSeparator = ' - ';
@@ -35,16 +37,6 @@ class DatePicker extends Component {
 
         this.calendarRef = React.createRef();
         this.popoverRef = React.createRef();
-    }
-
-    componentDidMount() {
-        const { disableStyles } = this.props;
-
-        if (!disableStyles && this._showTodayFooter()) {
-            //below styles are needed for footer styling
-            require('fundamental-styles/dist/dialog.css');
-            require('fundamental-styles/dist/bar.css');
-        }
     }
 
     /**
