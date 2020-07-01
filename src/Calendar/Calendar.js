@@ -524,7 +524,7 @@ class Calendar extends Component {
 
     generateWeekdays = () => {
         const weekDays = [];
-        const daysName = moment.localeData(this.props.locale).weekdaysMin().map(day => day.charAt(0));
+        const daysName = moment.localeData(this.props.locale).weekdaysMin();
         const shiftedDaysName = this.shiftDays(this.normalizedWeekdayStart(), daysName);
 
         for (let index = 0; index < 7; index++) {

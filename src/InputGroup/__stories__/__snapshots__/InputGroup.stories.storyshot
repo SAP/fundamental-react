@@ -252,84 +252,120 @@ exports[`Storyshots Component API/InputGroup Validation State 1`] = `
     className="fddocs-container"
   >
     <div
-      className="fd-input-group is-error"
+      className="fd-popover"
+      onBlur={[Function]}
+      onFocus={[Function]}
     >
-      <span
-        className="fd-input-group__addon"
+      <div
+        onFocus={[Function]}
+        onMouseDown={[Function]}
+        onTouchStart={[Function]}
       >
-        $
-      </span>
-      <input
-        className="fd-input fd-input-group__input"
-        type="text"
-      />
+        <div
+          className="fd-popover__control"
+        >
+          <div
+            className="fd-input-group is-error"
+          >
+            <span
+              className="fd-input-group__addon"
+            >
+              $
+            </span>
+            <input
+              className="fd-input fd-input-group__input"
+              type="text"
+            />
+          </div>
+        </div>
+      </div>
     </div>
     <div
-      aria-live="assertive"
-      className="fd-form-message fd-form-message--error"
-      role="alert"
+      className="fd-popover"
+      onBlur={[Function]}
+      onFocus={[Function]}
     >
-      Test validation state
-    </div>
-    <div
-      className="fd-input-group is-warning"
-    >
-      <span
-        className="fd-input-group__addon"
+      <div
+        onFocus={[Function]}
+        onMouseDown={[Function]}
+        onTouchStart={[Function]}
       >
-        $
-      </span>
-      <input
-        className="fd-input fd-input-group__input"
-        type="text"
-      />
+        <div
+          className="fd-popover__control"
+        >
+          <div
+            className="fd-input-group is-warning"
+          >
+            <span
+              className="fd-input-group__addon"
+            >
+              $
+            </span>
+            <input
+              className="fd-input fd-input-group__input"
+              type="text"
+            />
+          </div>
+        </div>
+      </div>
     </div>
     <div
-      aria-live="assertive"
-      className="fd-form-message fd-form-message--warning"
-      role="alert"
+      className="fd-popover"
+      onBlur={[Function]}
+      onFocus={[Function]}
     >
-      Test validation state
-    </div>
-    <div
-      className="fd-input-group is-information"
-    >
-      <span
-        className="fd-input-group__addon"
+      <div
+        onFocus={[Function]}
+        onMouseDown={[Function]}
+        onTouchStart={[Function]}
       >
-        $
-      </span>
-      <input
-        className="fd-input fd-input-group__input"
-        type="text"
-      />
+        <div
+          className="fd-popover__control"
+        >
+          <div
+            className="fd-input-group is-information"
+          >
+            <span
+              className="fd-input-group__addon"
+            >
+              $
+            </span>
+            <input
+              className="fd-input fd-input-group__input"
+              type="text"
+            />
+          </div>
+        </div>
+      </div>
     </div>
     <div
-      aria-live="assertive"
-      className="fd-form-message fd-form-message--information"
-      role="alert"
+      className="fd-popover"
+      onBlur={[Function]}
+      onFocus={[Function]}
     >
-      Test validation state
-    </div>
-    <div
-      className="fd-input-group is-success"
-    >
-      <span
-        className="fd-input-group__addon"
+      <div
+        onFocus={[Function]}
+        onMouseDown={[Function]}
+        onTouchStart={[Function]}
       >
-        $
-      </span>
-      <input
-        className="fd-input fd-input-group__input"
-        type="text"
-      />
-    </div>
-    <div
-      aria-live="assertive"
-      className="fd-form-message fd-form-message--success"
-      role="alert"
-    >
-      Test validation state
+        <div
+          className="fd-popover__control"
+        >
+          <div
+            className="fd-input-group is-success"
+          >
+            <span
+              className="fd-input-group__addon"
+            >
+              $
+            </span>
+            <input
+              className="fd-input fd-input-group__input"
+              type="text"
+            />
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

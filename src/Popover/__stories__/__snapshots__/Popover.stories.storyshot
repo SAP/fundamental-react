@@ -696,7 +696,7 @@ exports[`Storyshots Component API/Popover Width Sizing Types 1`] = `
           tabIndex={0}
           type="button"
         >
-          widthizingType: 
+          widthSizingType: 
           <strong>
             '
             none
@@ -728,7 +728,7 @@ exports[`Storyshots Component API/Popover Width Sizing Types 1`] = `
           tabIndex={0}
           type="button"
         >
-          widthizingType: 
+          widthSizingType: 
           <strong>
             '
             matchTarget
@@ -760,7 +760,7 @@ exports[`Storyshots Component API/Popover Width Sizing Types 1`] = `
           tabIndex={0}
           type="button"
         >
-          widthizingType: 
+          widthSizingType: 
           <strong>
             '
             minTarget
@@ -792,7 +792,7 @@ exports[`Storyshots Component API/Popover Width Sizing Types 1`] = `
           tabIndex={0}
           type="button"
         >
-          widthizingType: 
+          widthSizingType: 
           <strong>
             '
             maxTarget

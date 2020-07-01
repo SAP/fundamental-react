@@ -161,27 +161,43 @@ exports[`Storyshots Component API/Shellbar Co Pilot 1`] = `
                 className="fd-popover__control"
               >
                 <div
-                  className="fd-shellbar__input-group fd-input-group"
+                  className="fd-popover"
+                  onBlur={[Function]}
                   onClick={[Function]}
+                  onFocus={[Function]}
                 >
-                  <input
-                    className="fd-input fd-input-group__input fd-shellbar__input-group__input"
-                    onChange={[Function]}
-                    onClick={[Function]}
-                    onKeyPress={[Function]}
-                    placeholder="Search"
-                    type="text"
-                    value=""
-                  />
-                  <span
-                    className="fd-shellbar__input-group__addon fd-input-group__addon fd-input-group__addon--button"
+                  <div
+                    onFocus={[Function]}
+                    onMouseDown={[Function]}
+                    onTouchStart={[Function]}
                   >
-                    <button
-                      className="fd-button fd-button--transparent sap-icon--search fd-shellbar__button fd-input-group__button"
-                      onClick={[Function]}
-                      type="button"
-                    />
-                  </span>
+                    <div
+                      className="fd-popover__control"
+                    >
+                      <div
+                        className="fd-shellbar__input-group fd-input-group"
+                      >
+                        <input
+                          className="fd-input fd-input-group__input fd-shellbar__input-group__input"
+                          onChange={[Function]}
+                          onClick={[Function]}
+                          onKeyPress={[Function]}
+                          placeholder="Search"
+                          type="text"
+                          value=""
+                        />
+                        <span
+                          className="fd-shellbar__input-group__addon fd-input-group__addon fd-input-group__addon--button"
+                        >
+                          <button
+                            className="fd-button fd-button--transparent sap-icon--search fd-shellbar__button fd-input-group__button"
+                            onClick={[Function]}
+                            type="button"
+                          />
+                        </span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -539,27 +555,43 @@ exports[`Storyshots Component API/Shellbar With Product Menu 1`] = `
                 className="fd-popover__control"
               >
                 <div
-                  className="fd-shellbar__input-group fd-input-group"
+                  className="fd-popover"
+                  onBlur={[Function]}
                   onClick={[Function]}
+                  onFocus={[Function]}
                 >
-                  <input
-                    className="fd-input fd-input-group__input fd-shellbar__input-group__input"
-                    onChange={[Function]}
-                    onClick={[Function]}
-                    onKeyPress={[Function]}
-                    placeholder="Search"
-                    type="text"
-                    value=""
-                  />
-                  <span
-                    className="fd-shellbar__input-group__addon fd-input-group__addon fd-input-group__addon--button"
+                  <div
+                    onFocus={[Function]}
+                    onMouseDown={[Function]}
+                    onTouchStart={[Function]}
                   >
-                    <button
-                      className="fd-button fd-button--transparent sap-icon--search fd-shellbar__button fd-input-group__button"
-                      onClick={[Function]}
-                      type="button"
-                    />
-                  </span>
+                    <div
+                      className="fd-popover__control"
+                    >
+                      <div
+                        className="fd-shellbar__input-group fd-input-group"
+                      >
+                        <input
+                          className="fd-input fd-input-group__input fd-shellbar__input-group__input"
+                          onChange={[Function]}
+                          onClick={[Function]}
+                          onKeyPress={[Function]}
+                          placeholder="Search"
+                          type="text"
+                          value=""
+                        />
+                        <span
+                          className="fd-shellbar__input-group__addon fd-input-group__addon fd-input-group__addon--button"
+                        >
+                          <button
+                            className="fd-button fd-button--transparent sap-icon--search fd-shellbar__button fd-input-group__button"
+                            onClick={[Function]}
+                            type="button"
+                          />
+                        </span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

@@ -49,7 +49,7 @@ describe('<InputGroup />', () => {
             let element = setup();
 
             expect(
-                element.getDOMNode().children[1].className
+                element.find('.fd-input').getDOMNode().className
             ).toContain('fd-input-group__input');
             expect(
                 element.getDOMNode().children[0].className

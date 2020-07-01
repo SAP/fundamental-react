@@ -19,7 +19,8 @@ const productionPlugins = [
         {
             mode: 'unsafe-wrap'
         }
-    ]
+    ],
+    ['client-only-require', { 'extensions': ['less', 'scss', 'css'] }]
 ];
 
 module.exports = {

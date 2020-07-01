@@ -6,6 +6,7 @@ module.exports = {
     addons: [
         '@storybook/addon-knobs/register',
         '@storybook/addon-a11y',
+        '@storybook/addon-actions/register',
         '@storybook/addon-cssresources/register',
         '@storybook/addon-storysource/register',
         '@storybook/addon-viewport/register',
@@ -14,6 +15,7 @@ module.exports = {
     ],
 
     webpackFinal: async(config) => {
+        config.entry = ['core-js', ...config.entry];
         config.module.rules.push({
             test: /\.stories\.js?$/,
             use: [{ loader: 'story-description-loader' }],
