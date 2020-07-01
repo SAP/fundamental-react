@@ -456,7 +456,7 @@ class Calendar extends Component {
         const showToday = this.props.showToday && !this.state.showMonths && !this.state.showYears;
 
         return (
-            <header className='fd-calendar__header'>
+            <div className='fd-calendar__header'>
                 <div aria-live='assertive' className='fd-calendar__navigation'>
                     <div className='fd-calendar__action'>
                         <Button
@@ -506,7 +506,7 @@ class Calendar extends Component {
                         </div>
                     }
                 </div>
-            </header>
+            </div>
         );
     }
 
