@@ -453,7 +453,6 @@ class Calendar extends Component {
             this.props.localizedText.show12PreviousYears : this.props.localizedText.previousMonth;
         const nextButtonLabel = this.state.showYears ?
             this.props.localizedText.show12NextYears : this.props.localizedText.nextMonth;
-        const compact = this.props?.compact || false;
         const showToday = this.props.showToday && !this.state.showMonths && !this.state.showYears;
 
         return (
@@ -462,14 +461,14 @@ class Calendar extends Component {
                     <div className='fd-calendar__action'>
                         <Button
                             aria-label={previousButtonLabel}
-                            compact={compact}
+                            compact={this.props.compact}
                             glyph='slim-arrow-left'
                             onClick={this.handlePrevious}
                             option='transparent' />
                     </div>
                     <div className='fd-calendar__action'>
                         <Button
-                            compact={compact}
+                            compact={this.props.compact}
                             onClick={this.showMonths}
                             option='transparent'>
                             <span>
@@ -479,7 +478,7 @@ class Calendar extends Component {
                     </div>
                     <div className='fd-calendar__action'>
                         <Button
-                            compact={compact}
+                            compact={this.props.compact}
                             onClick={this.showYears}
                             option='transparent'>
                             <span>
@@ -491,7 +490,7 @@ class Calendar extends Component {
                     <div className='fd-calendar__action'>
                         <Button
                             aria-label={nextButtonLabel}
-                            compact={compact}
+                            compact={this.props.compact}
                             glyph='slim-arrow-right'
                             onClick={this.handleNext}
                             option='transparent' />
@@ -499,7 +498,7 @@ class Calendar extends Component {
                     {showToday &&
                         <div className='fd-calendar__action'>
                             <Button
-                                compact={compact}
+                                compact={this.props.compact}
                                 onClick={this.handleToday}
                                 option={'transparent'}>
                                 {this.props.localizedText.todayLabel}
@@ -777,6 +776,7 @@ Calendar.propTypes = {
 };
 
 Calendar.defaultProps = {
+    compact: false,
     locale: 'en',
     localizedText: {
         calendarInstructions: 'Use arrow keys to move between dates.',
