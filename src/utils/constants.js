@@ -110,3 +110,13 @@ export const GridSelector = {
     CELL: 'td, [role="gridcell"]',
     FOCUSABLE: 'input:enabled, select, textarea, a[href], button, [tabindex], [role="button"]'
 };
+export const OBJECT_STATUS_SIZES = [
+    'l'
+];
+export const OBJECT_STATUS_TYPES = [
+    'negative',
+    'critical',
+    'positive',
+    'informative'
+];
+
