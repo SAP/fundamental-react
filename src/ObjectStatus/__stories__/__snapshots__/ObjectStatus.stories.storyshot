@@ -278,7 +278,7 @@ exports[`Storyshots Component API/ObjectStatus Inverted 1`] = `
       Negative
     </span>
     <span
-      className="fd-object-status sap-icon--status-critical fd-object-status--critical"
+      className="fd-object-status sap-icon--status-critical fd-object-status--inverted fd-object-status--critical"
     >
       Critical
     </span>
