@@ -87,7 +87,8 @@ export const inverted = () => (
         <div className='fddocs-container'>
             <ObjectStatus glyph='status-negative' inverted
                 status='negative'>Negative</ObjectStatus>
-            <ObjectStatus glyph='status-critical' status='critical'>Critical</ObjectStatus>
+            <ObjectStatus glyph='status-critical' inverted
+                status='critical'>Critical</ObjectStatus>
             <ObjectStatus indication='1' inverted>Dark Red</ObjectStatus>
             <ObjectStatus indication='2' inverted>Red</ObjectStatus>
             <ObjectStatus glyph='hint' inverted
