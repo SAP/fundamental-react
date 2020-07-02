@@ -1,0 +1,451 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Component API/ObjectStatus Clickable 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    className="fddocs-container"
+  >
+    <span
+      className="fd-object-status sap-icon--status-negative fd-object-status--negative fd-object-status--link"
+      onClick={[Function]}
+    >
+      Negative
+    </span>
+    <span
+      className="fd-object-status sap-icon--status-critical fd-object-status--critical fd-object-status--link"
+      onClick={[Function]}
+    >
+      Critical
+    </span>
+    <span
+      className="fd-object-status sap-icon--status-positive fd-object-status--positive fd-object-status--link"
+      onClick={[Function]}
+    >
+      Positive
+    </span>
+    <a
+      className="fd-object-status sap-icon--hint fd-object-status--informative fd-object-status--link"
+      href="#"
+    >
+      Info
+    </a>
+    <span
+      className="fd-object-status sap-icon--to-be-reviewed fd-object-status--link"
+      onClick={[Function]}
+    >
+      Neutral
+    </span>
+  </div>
+  <div
+    className="fddocs-container"
+  >
+    <a
+      className="fd-object-status sap-icon--status-negative fd-object-status--inverted fd-object-status--negative fd-object-status--link"
+      href="#"
+    >
+      Negative
+    </a>
+    <a
+      className="fd-object-status sap-icon--status-critical fd-object-status--inverted fd-object-status--critical fd-object-status--link"
+      href="#"
+    >
+      Critical
+    </a>
+    <a
+      className="fd-object-status fd-object-status--indication-1 fd-object-status--inverted fd-object-status--link"
+      href="#"
+    >
+      Dark Red
+    </a>
+    <a
+      className="fd-object-status fd-object-status--indication-2 fd-object-status--inverted fd-object-status--link"
+      href="#"
+    >
+      Red
+    </a>
+    <a
+      className="fd-object-status sap-icon--hint fd-object-status--inverted fd-object-status--informative fd-object-status--link"
+      href="#"
+    />
+    <a
+      className="fd-object-status sap-icon--to-be-reviewed fd-object-status--inverted fd-object-status--link"
+      href="#"
+    />
+  </div>
+  <div
+    className="fddocs-container"
+  >
+    <span
+      className="fd-object-status sap-icon--status-negative fd-object-status--large fd-object-status--negative fd-object-status--link"
+      onClick={[Function]}
+    >
+      Negative
+    </span>
+    <span
+      className="fd-object-status sap-icon--status-critical fd-object-status--large fd-object-status--critical fd-object-status--link"
+      onClick={[Function]}
+    >
+      Critical
+    </span>
+    <span
+      className="fd-object-status fd-object-status--indication-1 fd-object-status--large fd-object-status--link"
+      onClick={[Function]}
+    >
+      Dark Red
+    </span>
+    <a
+      className="fd-object-status fd-object-status--indication-2 fd-object-status--large fd-object-status--link"
+      href="#"
+    >
+      Red
+    </a>
+    <a
+      className="fd-object-status sap-icon--hint fd-object-status--large fd-object-status--informative fd-object-status--link"
+      href="#"
+    />
+    <a
+      className="fd-object-status sap-icon--to-be-reviewed fd-object-status--large fd-object-status--link"
+      href="#"
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots Component API/ObjectStatus Generic Indication Colors 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    className="fddocs-container"
+  >
+    <span
+      className="fd-object-status fd-object-status--indication-1"
+    >
+      Dark Red
+    </span>
+    <span
+      className="fd-object-status fd-object-status--indication-2"
+    >
+      Red
+    </span>
+    <span
+      className="fd-object-status fd-object-status--indication-3"
+    >
+      Yellow
+    </span>
+    <span
+      className="fd-object-status fd-object-status--indication-4"
+    >
+      Green
+    </span>
+    <span
+      className="fd-object-status fd-object-status--indication-5"
+    >
+      Blue
+    </span>
+    <span
+      className="fd-object-status fd-object-status--indication-6"
+    >
+      Teal
+    </span>
+    <span
+      className="fd-object-status fd-object-status--indication-7"
+    >
+      Purple
+    </span>
+    <span
+      className="fd-object-status fd-object-status--indication-8"
+    >
+      Pink
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Component API/ObjectStatus Icon Only 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    className="fddocs-container"
+  >
+    <span
+      className="fd-object-status sap-icon--status-negative fd-object-status--negative"
+    />
+    <span
+      className="fd-object-status sap-icon--status-critical fd-object-status--critical"
+    />
+    <span
+      className="fd-object-status sap-icon--status-positive fd-object-status--positive"
+    />
+    <span
+      className="fd-object-status sap-icon--hint fd-object-status--informative"
+    />
+    <span
+      className="fd-object-status sap-icon--to-be-reviewed"
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots Component API/ObjectStatus Icon and Text 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    className="fddocs-container"
+  >
+    <span
+      className="fd-object-status sap-icon--status-negative fd-object-status--negative"
+    >
+      Negative
+    </span>
+    <span
+      className="fd-object-status sap-icon--status-critical fd-object-status--critical"
+    >
+      Critical
+    </span>
+    <span
+      className="fd-object-status sap-icon--status-positive fd-object-status--positive"
+    >
+      Positive
+    </span>
+    <span
+      className="fd-object-status sap-icon--hint fd-object-status--informative"
+    >
+      Info
+    </span>
+    <span
+      className="fd-object-status sap-icon--to-be-reviewed"
+    >
+      Neutral
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Component API/ObjectStatus Inverted 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    className="fddocs-container"
+  >
+    <span
+      className="fd-object-status fd-object-status--inverted fd-object-status--negative"
+    >
+      Negative
+    </span>
+    <span
+      className="fd-object-status fd-object-status--inverted fd-object-status--critical"
+    >
+      Critical
+    </span>
+    <span
+      className="fd-object-status fd-object-status--inverted fd-object-status--positive"
+    >
+      Positive
+    </span>
+    <span
+      className="fd-object-status fd-object-status--inverted fd-object-status--informative"
+    >
+      Info
+    </span>
+    <span
+      className="fd-object-status fd-object-status--inverted"
+    >
+      Neutral
+    </span>
+    <span
+      className="fd-object-status fd-object-status--inverted fd-object-status--negative"
+    >
+      7
+    </span>
+    <span
+      className="fd-object-status fd-object-status--inverted fd-object-status--positive"
+    >
+      3.8
+    </span>
+  </div>
+  <div
+    className="fddocs-container"
+  >
+    <span
+      className="fd-object-status sap-icon--status-negative fd-object-status--inverted fd-object-status--negative"
+    >
+      Negative
+    </span>
+    <span
+      className="fd-object-status sap-icon--status-critical fd-object-status--critical"
+    >
+      Critical
+    </span>
+    <span
+      className="fd-object-status fd-object-status--indication-1 fd-object-status--inverted"
+    >
+      Dark Red
+    </span>
+    <span
+      className="fd-object-status fd-object-status--indication-2 fd-object-status--inverted"
+    >
+      Red
+    </span>
+    <span
+      className="fd-object-status sap-icon--hint fd-object-status--inverted fd-object-status--informative"
+    />
+    <span
+      className="fd-object-status sap-icon--to-be-reviewed fd-object-status--inverted"
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots Component API/ObjectStatus Large Design 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    className="fddocs-container"
+  >
+    <span
+      className="fd-object-status fd-object-status--large fd-object-status--negative"
+    >
+      Negative
+    </span>
+    <span
+      className="fd-object-status fd-object-status--large fd-object-status--critical"
+    >
+      Critical
+    </span>
+    <span
+      className="fd-object-status fd-object-status--large fd-object-status--positive"
+    >
+      Positive
+    </span>
+    <span
+      className="fd-object-status fd-object-status--large fd-object-status--informative"
+    >
+      Info
+    </span>
+    <span
+      className="fd-object-status fd-object-status--large"
+    >
+      Neutral
+    </span>
+    <span
+      className="fd-object-status fd-object-status--large fd-object-status--negative"
+    >
+      7
+    </span>
+    <span
+      className="fd-object-status fd-object-status--large fd-object-status--positive"
+    >
+      3.8
+    </span>
+  </div>
+  <div
+    className="fddocs-container"
+  >
+    <span
+      className="fd-object-status sap-icon--status-negative fd-object-status--large fd-object-status--negative"
+    >
+      Negative
+    </span>
+    <span
+      className="fd-object-status sap-icon--status-critical fd-object-status--large fd-object-status--critical"
+    >
+      Critical
+    </span>
+    <span
+      className="fd-object-status fd-object-status--indication-1 fd-object-status--large"
+    >
+      Dark Red
+    </span>
+    <span
+      className="fd-object-status fd-object-status--indication-2 fd-object-status--large"
+    >
+      Red
+    </span>
+    <span
+      className="fd-object-status sap-icon--hint fd-object-status--large fd-object-status--informative"
+    />
+    <span
+      className="fd-object-status sap-icon--to-be-reviewed fd-object-status--large"
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots Component API/ObjectStatus Primary 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    className="fddocs-container"
+  >
+    <span
+      className="fd-object-status sap-icon--status-negative fd-object-status--negative"
+    >
+      Negative
+    </span>
+    <span
+      className="fd-object-status sap-icon--status-critical fd-object-status--critical"
+    >
+      Critical
+    </span>
+    <span
+      className="fd-object-status sap-icon--status-positive fd-object-status--positive"
+    >
+      Positive
+    </span>
+    <span
+      className="fd-object-status sap-icon--hint fd-object-status--informative"
+    >
+      Info
+    </span>
+    <span
+      className="fd-object-status sap-icon--to-be-reviewed"
+    >
+      Neutral
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Component API/ObjectStatus Text Only 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    className="fddocs-container"
+  >
+    <span
+      className="fd-object-status fd-object-status--negative"
+    >
+      Negative
+    </span>
+    <span
+      className="fd-object-status fd-object-status--critical"
+    >
+      Critical
+    </span>
+    <span
+      className="fd-object-status fd-object-status--positive"
+    >
+      Positive
+    </span>
+    <span
+      className="fd-object-status fd-object-status--informative"
+    >
+      Info
+    </span>
+    <span
+      className="fd-object-status"
+    >
+      Neutral
+    </span>
+  </div>
+</div>
+`;
