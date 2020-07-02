@@ -44,7 +44,7 @@ class InputGroup extends Component {
                 {...props}
                 className={inputGroupClasses}>
                 {React.Children.toArray(children).map(child => {
-                    if (child && child.type && child.type.displayName === InputGroupAddon.displayName) {
+                    if (child?.type?.displayName === InputGroupAddon.displayName) {
                         return React.cloneElement(child, {
                             compact,
                             disabled
