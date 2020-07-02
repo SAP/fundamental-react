@@ -233,9 +233,9 @@ Popper.displayName = 'Popper';
 Popper.propTypes = {
     children: PropTypes.node.isRequired,
     cssBlock: PropTypes.string.isRequired,
-    innerRef: PropTypes.func.isRequired,
     referenceComponent: PropTypes.element.isRequired,
     disableEdgeDetection: PropTypes.bool,
+    innerRef: PropTypes.func,
     noArrow: PropTypes.bool,
     popperClassName: PropTypes.string,
     popperModifiers: PropTypes.array,
